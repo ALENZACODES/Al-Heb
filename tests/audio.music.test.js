@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { createMusicController, musicContextFor } from '../src/audio/music.js';
 import { MUSIC_TRACKS } from '../src/listen/catalog.js';
+import { OPPOSITE_PAIRS } from '../src/img/opposites.js';
 
 function fakeAudio() {
   const made = [];
@@ -88,6 +90,32 @@ test('mute, volume and a missing file are honest', async () => {
   assert.equal(lost.music.snapshot().phase, 'missing');
   assert.match(lost.music.snapshot().error, /not available/);
   assert.equal(MUSIC_TRACKS.length, 3);
+});
+
+test('game music controls stay in the page and off until turned on', () => {
+  const src = readFileSync(new URL('../src/audio/music-bar.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(src, /position:\s*sticky|inset-block-end:\s*0|z-index:\s*4/);
+  assert.match(src, /position:\s*static/);
+  assert.match(src, /Turn music on/);
+  assert.match(src, /data-music="mute"/);
+  assert.match(src, /data-music="track"/);
+  assert.match(src, /data-music="volume"/);
+  assert.match(src, /It stays off until you turn it on/);
+  assert.deepEqual(OPPOSITE_PAIRS.map((p) => p.id), ['OPP_expensive_cheap', 'OPP_expensive_cheap', 'OPP_near_far']);
+});
+
+test('a saved opt-in stays on and still does not play during the quiet minute', () => {
+  const stored = { want: true, muted: false, volume: 0.4, trackId: 'night_at_the_beach' };
+  const { media, music } = controller({
+    readPrefs: () => stored,
+    policy: { allowsMusic: () => false, snapshot: () => ({ quiet: true }), quiet: () => true },
+  });
+  music.usePrefs({ readPrefs: () => stored, writePrefs: () => {} });
+  music.setContext(musicContextFor({ name: 'pinball', owner: 'games' }));
+  assert.equal(music.snapshot().want, true);
+  assert.equal(music.snapshot().armed, true);
+  assert.equal(music.snapshot().phase, 'paused');
+  assert.equal(media.made.length, 0);
 });
 
 test('calm mode and audio-free keep the bed off', () => {

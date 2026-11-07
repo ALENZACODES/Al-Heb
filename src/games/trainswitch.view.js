@@ -27,19 +27,24 @@ export function mount(root,ctx){
     h('p',{},'Route the subject, verb and object carriages into the documented Hebrew sentence order.'),
     h('p',{class:'muted'},'Sentences are real course records, but teaching review is pending.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=deck.length){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Trains reached station',onAgain:()=>{round=0;chosen=[];used=[];session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));return;}
+    if(round>=deck.length){
+      status.textContent='Trains reached station.';
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Trains reached station',onAgain:()=>{round=0;chosen=[];used=[];session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));
+      return;
+    }
     const row=deck[round],cars=row.cars.map((he,i)=>({he,i}));
+    status.textContent=feedback||(chosen.length?`Switchboard has ${chosen.length} carriage(s).`:`Train ${round+1} of ${deck.length}: place the carriages in documented order.`);
     const chosenCarriages=h('div',{class:'game-train-track',dir:'rtl'},...chosen.map(x=>heSpan(x.he,'he game-he-sm')));
     const buttons=shuffled(cars).map(car=>h('button',{type:'button',class:'btn secondary game-train-car',disabled:used.includes(car.i),onclick:()=>{
       if(used.includes(car.i))return;
-      chosen.push(car);used.push(car.i);status.textContent='Switchboard has '+chosen.length+' carriage(s).';paint();
+      chosen.push(car);used.push(car.i);paint('Switchboard has '+chosen.length+' carriage(s).');
     }},heSpan(car.he,'he game-he-sm')));
     const dispatch=h('button',{type:'button',class:'btn',disabled:chosen.length!==row.cars.length,onclick:()=>{
       const ok=trainValid(row,chosen.map(x=>x.he));session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-      status.textContent=ok?'Canonical SVO route accepted.':'Wrong word order: train diverted.';
-      if(ok)round++;chosen=[];used=[];paint();
+      if(ok){round++;chosen=[];used=[];paint();}
+      else paint('Wrong word order: train diverted.');
     }},'Send train');
     const reset=h('button',{type:'button',class:'btn secondary',onclick:()=>{chosen=[];used=[];paint();}},'Reset switches');
     // The gender paradigm has no linked lesson image ID: leave the station picture absent.

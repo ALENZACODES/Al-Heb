@@ -8,7 +8,7 @@ import { loadImageResolver as loadShellResolver } from './resolve.js';
  * @param {{ fetchFn?: (url:string)=>Promise<any>, settings?: any, base?: string, indexUrl?: string, approvalsUrl?: string }} [opts]
  * fetchFn may be a fetch (returns a Response) or already return JSON.
  */
-export async function loadImageResolver({ fetchFn, settings, base, indexUrl, approvalsUrl } = {}) {
+export async function loadImageResolver({ fetchFn, settings, base, indexUrl, approvalsUrl, cuesUrl } = {}) {
   const raw = fetchFn || globalThis.fetch?.bind(globalThis);
   if (typeof raw !== 'function') throw new Error('no fetch');
   const fetchJson = async (url) => {
@@ -19,5 +19,5 @@ export async function loadImageResolver({ fetchFn, settings, base, indexUrl, app
     }
     return res;
   };
-  return loadShellResolver(fetchJson, { settings, base, indexUrl, approvalsUrl });
+  return loadShellResolver(fetchJson, { settings, base, indexUrl, approvalsUrl, cuesUrl });
 }

@@ -31,7 +31,7 @@ export function createMusicController({
   function save() { try { writePrefs({ want: prefs.want, muted: prefs.muted, volume: prefs.volume, trackId: prefs.trackId }); } catch { /* prefs are optional */ } }
   function applyStored(raw) {
     if (!raw || typeof raw !== 'object') return;
-    if (typeof raw.want === 'boolean') prefs.want = raw.want;
+    if (typeof raw.want === 'boolean') { prefs.want = raw.want; armed = raw.want; }
     if (typeof raw.muted === 'boolean') prefs.muted = raw.muted;
     if (Number.isFinite(Number(raw.volume))) prefs.volume = clamp(raw.volume);
     if (tracks.some((t) => t.id === raw.trackId)) prefs.trackId = raw.trackId;

@@ -85,21 +85,83 @@ export function imgOf(R, kind, id, opts = {}) {
 }
 
 /**
- * Speak a Hebrew line through the app audio player when it can, else no-op.
- * Uses the same clip-index contract as the letter views.
+ * Environment backdrops for the game that the picture was made for.
+ * A missing or unapproved id renders nothing. These are not word cues and not cast portraits.
  */
-export async function speak(ctx, hebrew, { tradition = 'israeli', voice = 'f' } = {}) {
+export const GAME_ENV = Object.freeze({
+  arch: 'GAME_arch_builder_env',
+  bumper: 'GAME_bumper_verbs_env',
+  laser: 'GAME_laser_maze_env',
+  palace: 'GAME_memory_palace_courtyard',
+  shabbat: 'GAME_shabbat_rush_env',
+  shadow: 'GAME_shadow_craft_env',
+  taxi: 'GAME_shuk_taxi_env',
+  sonar: 'GAME_submarine_sonar_env',
+  typewriter: 'GAME_typewriter_env',
+  vowels: 'GAME_vowel_catcher_env',
+});
+
+/** replaceChildren drops nulls, so a missing picture does not become the text "null" or throw. */
+export function placeBoard(board, ...nodes) {
+  board.replaceChildren(...nodes.filter((n) => n != null));
+}
+
+/** A visible environment picture, or null when the resolver has nothing approved for this id. */
+export function envNode(h, R, id) {
+  const image = imgOf(R, 'id', id);
+  if (!image?.src) return null;
+  return h('img', {
+    class: 'game-env', src: image.src, alt: image.alt, width: image.width, height: image.height, 'data-img-id': image.id,
+  });
+}
+
+/**
+ * The redraw owns the live status. A miss passes feedback and stays on the round.
+ * A new round passes no feedback, so the loading line and the previous success are replaced.
+ */
+export function roundStatus(node, feedback, prompt) {
+  if (node) node.textContent = feedback || prompt;
+}
+
+/**
+ * Honest line when a game cannot play a recorded Hebrew clip.
+ * Never invites the device to guess in another language.
+ */
+export function speechFallbackMessage(result) {
+  const reason = result?.reason || result?.fileError || result?.error || 'no-clip';
+  if (result?.source === 'file' && !result.fileError) return '';
+  if (result?.source === 'tts-fallback') return "Played with this device's Hebrew voice, not a recording.";
+  if (reason === 'no-hebrew-browser-voice' || reason === 'file-error') {
+    return 'No Hebrew recording played. This device will not speak another language. The words stay on screen.';
+  }
+  if (reason === 'play-rejected' || reason === 'network' || reason === 'play-threw' || reason === 'no-audio-support') {
+    return 'The recording could not be reached. Nothing was spoken in another language. The words stay on screen.';
+  }
+  return 'No recorded Hebrew clip for this line. The words stay on screen.';
+}
+
+/**
+ * Recorded clip first, through ctx.audio.play(kind, id). There is no clip-index module.
+ * A missing file, a 404, or a network error does not fall through to a non-Hebrew voice.
+ * Without a real kind and id, the line stays text. The game keeps working either way.
+ */
+export async function speak(ctx, hebrew, opts = {}) {
+  const report = (result) => {
+    const message = speechFallbackMessage(result);
+    if (message && typeof opts.onStatus === 'function') opts.onStatus(message);
+    const spoken = result?.source === 'file' || result?.source === 'tts-fallback';
+    return { ...(result || {}), spoken, message };
+  };
+  const audio = ctx?.audio;
+  if (!audio || typeof audio.play !== 'function' || !opts.kind || !opts.id) {
+    return report({ source: 'none', reason: 'no-clip' });
+  }
   try {
-    if (!ctx?.audio?.playClipFor) return false;
-    const idxMod = await import('../audio/clip-index.js');
-    const idx = await idxMod.loadClipIndex({ fetchFn: ctx.fetchFn });
-    const line = idxMod.lineFor(idx, hebrew);
-    if (!line) return false;
-    const v = idxMod.chooseVariant(line, { tradition, voice });
-    if (!v) return false;
-    await ctx.audio.playClipFor(v.clipKey, { kind: 'line', hebrew });
-    return true;
-  } catch { return false; }
+    const result = await audio.play(opts.kind, opts.id, { text: typeof hebrew === 'string' ? hebrew : '' });
+    return report(result || { source: 'none', reason: 'no-clip' });
+  } catch {
+    return report({ source: 'none', reason: 'network' });
+  }
 }
 
 /** Standard end-of-game card: score, stars, best, play again, back to Learn. */
@@ -116,9 +178,10 @@ export function resultsCard(h, heSpan, session, { title, onAgain, homeHref = '#/
       h('a', { class: 'btn secondary', href: homeHref }, 'Back to Learn')));
 }
 
-// Use only the existing app player and recorded, correctly labelled files for
-// listening-dependent game rounds. Browser TTS is not interchangeable with a clip.
-// No new audio stack, no tradition substitution, and no sound on missing media.
+// Listening rounds use one contract: kind `word`, the active voice (m or f; voices are not swapped),
+// and the active tradition (Echo passes it explicitly). status.source must be `file`, which the player
+// returns only when that exact slot's manifest status is not `missing`. A missing row, a missing file,
+// another tradition, or the browser voice does not open the round. No new clips are generated here.
 export async function playRecordedClip(ctx, kind, id, options = {}) {
   try {
     if (!ctx?.audio || typeof ctx.audio.status !== 'function' || typeof ctx.audio.play !== 'function') return false;

@@ -26,6 +26,8 @@
               linear-gradient(180deg, #0d1f33 0%, #122a17 130%); }
 .catcher-star { position: absolute; translate: -50% 0; font-size: 1.9rem; color: #e8c97a;
   text-shadow: 0 0 12px rgba(232,201,122,.8); pointer-events: none; }
+button.catcher-star { pointer-events: auto; background: transparent; border: 0; padding: 0; cursor: pointer; color: inherit; }
+.catcher-place { min-width: 8rem; min-height: 44px; accent-color: #d9a441; }
 .catcher-basket { position: absolute; bottom: 4%; translate: -50% 0; font-size: 3rem; font-weight: 700;
   color: #f6f1e7; background: rgba(217,164,65,.16); border: 2px solid #d9a441; border-radius: 12px;
   padding: .1rem .8rem; line-height: 1.15; pointer-events: none; }
@@ -72,8 +74,8 @@
 .game-arch-svg {width:100%;max-height:280px;color:#1f3a5f;border:1px solid #d9a441;border-radius:12px;}
 .game-bridge-span {font-size:2.5rem;text-align:center;color:#6b7f3a;transform-origin:center;transition:transform .2s;}
 .game-bridge-broken {color:#b0373b;transform:rotate(-13deg) translateY(.6rem);text-decoration:line-through;}
-.game-shadow-glyph {font-size:5rem;color:#2b2b2b;filter:blur(1.2px) drop-shadow(12px 9px 4px rgba(0,0,0,.65));}
-.game-shadow-reference {max-width:80px;height:auto;object-fit:contain;filter:brightness(0);}
+.game-env {display:block;width:100%;height:auto;border-radius:14px;margin:0 0 .75rem}
+.game-shadow-glyph {font-size:5rem;color:transparent;text-shadow:10px 12px 0 #2b2b2b}
 .game-train-track,.game-rush-lane,.game-karaoke-tokens {min-height:4.5rem;gap:.5rem}
 .game-train-car,.game-rush-collectible,.game-sonar-gate,.game-rhyme-tube,
 .game-rental-listing,.game-museum-shelf,.game-bumper-car {min-width:8rem;min-height:3.25rem}

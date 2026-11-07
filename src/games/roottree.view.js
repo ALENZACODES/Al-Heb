@@ -1,6 +1,6 @@
 // Game 16 — cultivated branches are sourced only from recorded root families.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.roottree.v1';
@@ -21,9 +21,10 @@ export function mount(root, ctx) {
     h('p', {}, 'Grow a branch only with a verb listed under the displayed Hebrew root.'),
     h('p', { class: 'muted' }, 'Family assignments are dictionary-derived and await Hebrew-editor review.'), status, board);
   root.replaceChildren(article);
-  function paint() {
+  function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
+      roundStatus(status, '', 'Root orchard complete.');
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Root orchard complete', onAgain: () => {
         round = 0; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
@@ -33,15 +34,15 @@ export function mount(root, ctx) {
     const correct = shuffled(family.words)[0];
     const distractor = shuffled(deck.filter(f => f !== family).flatMap(f => f.words)).find(w => !isRootLeaf(family, w));
     if (!distractor) { status.textContent = 'No distinct derivative distractor in source data.'; return; }
+    roundStatus(status, feedback, `Root ${round + 1} of 8: choose a documented derivative.`);
     const buttons = shuffled([correct, distractor]).map(w => {
       const image = imgOf(R, 'word', w.id);
       const choice = h('button', { type: 'button', class: 'btn secondary game-choice', onclick: () => {
         if (!alive) return;
         const ok = isRootLeaf(family, w);
         session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-        status.textContent = ok ? 'Real root derivative: branch grows.' : 'Not in this documented root family.';
-        if (ok) round++;
-        paint();
+        if (ok) { round++; paint(); }
+        else paint('Not in this documented root family.');
       } }, heSpan(w.he, 'he game-he-sm'), h('span', {}, w.binyan));
       if (image) choice.append(h('img', { class: 'game-card-img', src: image.src, alt: image.alt,
         width: image.width, height: image.height, 'data-img-id': image.id }));

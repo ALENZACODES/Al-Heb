@@ -13,6 +13,9 @@ import { fetchCoreManifest, fetchAudioSummary, afterPaint } from './shell/audio-
 import { h, heSpan, unavailableCard } from './shell/ui.js';
 import { loadImageResolver, img as imgEl } from './img/resolve.js';
 import { applyMotor, MOTOR_KEYS } from './shell/motor.js';
+import { gameMusic } from './audio/music.js';
+import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
+import { mountMediaPrompt } from './audio/media-prompt.js';
 
 const settings = createSettings(store);
 
@@ -185,6 +188,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   const root = document.getElementById('main');
   if (!quiet) navFocusOwed = true;
   if (quiet && root.contains(document.activeElement) && document.activeElement.id) heldFocusId = document.activeElement.id; // a quiet re-render must not drop focus the learner already has (kept across a quiet render that a second one supersedes)
+  if (!quiet) { try { ctxBase?.audio?.stop?.(); } catch { /* nothing was playing */ } }
   try { unmount(); } catch (e) { console.warn('unmount failed', e); }
   unmount = () => {};
   const { route, params, query, path } = match;
@@ -206,7 +210,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   try { mod = await loadRouteModule(route); }
   catch (err) {
     if (token !== navToken) return;
-    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message });
+    unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
     root.removeAttribute('aria-busy'); return finish();
   }
   if (token !== navToken) return;
@@ -245,6 +249,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     heldFocusId = '';
     if (!quiet) { live.textContent = document.title; if (scrollKeeper) scrollKeeper.arrive(location.hash); else window.scrollTo(0, 0); lastHashShown = location.hash; }
     document.body.dataset.route = route?.name ?? 'notfound';
+    try { syncGameMusic(route, settings); } catch (e) { console.warn('game music bar failed', e); }
     document.body.dataset.ready = '1';
     shownFirstResolve();
   }
@@ -256,6 +261,19 @@ async function boot() {
   applyTheme(); applyScript(); applyComfortNow(); applyMotor(document.documentElement, settings.all()); wireChrome();
   settings.subscribe((all, changed) => { if (changed.some((k) => MOTOR_KEYS.includes(k))) applyMotor(document.documentElement, all); if (changed.includes('theme')) applyTheme(); if (changed.includes('script')) applyScript(); if (changed.some((k) => COMFORT_KEYS.includes(k))) applyComfortNow(); });
   const audio = await makeAudio();
+  gameMusic.usePrefs({
+    readPrefs: () => ({
+      want: settings.get('gameMusic') === true,
+      muted: settings.get('gameMusicMuted') === true,
+      volume: settings.get('gameMusicVolume'),
+      trackId: settings.get('gameMusicTrack'),
+    }),
+    writePrefs: (p) => settings.set({
+      gameMusic: !!p.want, gameMusicMuted: !!p.muted, gameMusicVolume: p.volume, gameMusicTrack: p.trackId,
+    }),
+  });
+  try { mountGameMusic(document.body); } catch { /* the bar appears once a game route asks for it */ }
+  try { mountMediaPrompt(document.body, settings); } catch { /* the prompt is optional */ }
   const mainEl = document.getElementById('main');
   const gesture = (e) => { touched = true; if (!(e.target instanceof Element && e.target.closest('input, textarea, select'))) touchedOutsideField = true; };
   mainEl.addEventListener('pointerdown', gesture, true);
@@ -267,6 +285,15 @@ async function boot() {
   for (const t of ['pointerdown', 'keydown', 'touchend']) document.addEventListener(t, unlockOnce, true);
   available = availableRoutes(VIEW_FILES);
   wireSoundStatus(audio);
+  for (const btn of document.querySelectorAll('.sound-rate')) {
+    btn.addEventListener('click', () => {
+      const rate = btn.getAttribute('data-rate') === 'slow' ? 'slow' : 'normal';
+      settings.set({ clipRate: rate });
+      for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b === btn));
+    });
+  }
+  const savedRate = settings.get('clipRate') === 'slow' ? 'slow' : 'normal';
+  for (const b of document.querySelectorAll('.sound-rate')) b.setAttribute('aria-pressed', String(b.getAttribute('data-rate') === savedRate));
   import('./shell/audio-access.js').then((m) => { soundBar = m.wireSoundBar(audio); }).catch(() => {});
   let router;
   let images = null;

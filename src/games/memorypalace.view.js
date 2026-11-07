@@ -25,28 +25,36 @@ export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, pool = [], stations = [], route = [], phase = 'study', index = 0, session, R;
   const studied = new Set();
+  const wrongThisStop = new Set();
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Resolving courtyard stations…');
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'palace' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'The Memory Palace Courtyard'),
-    h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, board));
+    h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, speechNote, board));
   function start() {
-    session = createSession({ par: 5 });
+    session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 5 });
     const distinct = new Set();
     stations = shuffled(pool).filter(s => !distinct.has(s.letterId) && distinct.add(s.letterId)).slice(0, 5);
     route = shuffled(stations); phase = 'study'; index = 0; studied.clear(); paint();
   }
   function tap(s) {
     if (!alive) return;
-    void speak(ctx, s.he);
+    void speak(ctx, s.he, { kind: 'letter', id: s.letterId, onStatus: (m) => { speechNote.textContent = m; } });
     if (phase === 'study') { if (!studied.has(s.id)) sfx.play('pluck'); studied.add(s.id); paint(); return; }
     if (phase !== 'recall') return;
+    if (wrongThisStop.has(s.id)) {
+      status.textContent = 'That station was already tried for this stop.';
+      return;
+    }
     const ok = recallStation(route, index, s.id);
     session.answer(ok);
-    sfx.play(ok ? 'success' : 'error');
-    if (ok) index++;
+    sfx.play(ok ? 'success' : 'miss');
+    if (ok) { wrongThisStop.clear(); index++; }
+    else wrongThisStop.add(s.id);
     if (index === route.length) {
       phase = 'done';
+      status.textContent = 'Courtyard route recalled.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Courtyard route recalled', onAgain: start }));
     } else {
       paint();
@@ -58,10 +66,11 @@ export function mount(root, ctx) {
     const scene = imgOf(R, 'id', 'GAME_memory_palace_courtyard');
     const grid = h('div', { class: 'palace-courtyard' }, ...stations.map(s => {
       const active = phase === 'route' && route[index].id === s.id;
+      const named = phase !== 'recall';
       return h('button', { type: 'button', class: 'palace-station' + (active ? ' palace-active' : ''),
-        'data-img-id': s.id, 'aria-label': phase === 'recall' ? s.image.alt : s.name,
-        disabled: phase === 'route', onclick: () => tap(s) },
-        h('img', { src: s.image.src, alt: s.image.alt, width: 140, height: 140 }),
+        'data-img-id': s.id, 'aria-label': named ? s.name : 'Picture station',
+        disabled: phase === 'route' || wrongThisStop.has(s.id), onclick: () => tap(s) },
+        h('img', { src: s.image.src, alt: named ? s.image.alt : '', width: 140, height: 140 }),
         phase === 'study' ? h('span', {}, heSpan(s.he), ` ${s.name}${studied.has(s.id) ? ' ✓' : ''}`) : null);
     }));
     if (scene) grid.style.backgroundImage = `url("${scene.src}")`;
@@ -73,7 +82,7 @@ export function mount(root, ctx) {
     } else if (phase === 'route') {
       status.replaceChildren(`Stop ${index + 1} of ${route.length}: `, heSpan(route[index].he), ` ${route[index].name}`);
       nodes.push(h('button', { type: 'button', class: 'btn', onclick: () => {
-        void speak(ctx, route[index].he);
+        void speak(ctx, route[index].he, { kind: 'letter', id: route[index].letterId, onStatus: (m) => { speechNote.textContent = m; } });
         index++;
         if (index === route.length) { phase = 'recall'; index = 0; }
         paint();
@@ -92,5 +101,5 @@ export function mount(root, ctx) {
     start();
     sfx.play('swoosh');
   }).catch(() => { if (alive) status.textContent = 'Station data unavailable. Try again when online.'; });
-  return () => { alive = false; leaveSfx(); };
+  return () => { alive = false; try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

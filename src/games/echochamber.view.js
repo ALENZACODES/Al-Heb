@@ -1,6 +1,6 @@
 // Game 24 — exact one-consonant minimal-pair contrast, never random distractors.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY='games.echochamber.v1';
@@ -52,9 +52,12 @@ export function mount(root,ctx){
   const article=h('article',{class:'card game-card game-echochamber'},h('h1',{id:'view-title'},'Acoustic Echo Chamber'),
     h('p',{},'Hear two real words differing in one consonant; choose the exact recorded word.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=Math.min(8,deck.length)){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Echo training complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));return;}
+    if(round>=Math.min(8,deck.length)){
+      roundStatus(status,'','Echo training complete.');
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Echo training complete',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:5});paint();}}));return;}
+    roundStatus(status,feedback,`Contrast ${round+1} of ${Math.min(8,deck.length)}: play the recorded word.`);
     const pair=deck[round%deck.length],target=round%2?pair.first:pair.second;
     let played=false;
     const pics=pair.letters.map(id=>{
@@ -63,8 +66,8 @@ export function mount(root,ctx){
     }).filter(Boolean);
     const buttons=shuffled([pair.first,pair.second]).map(word=>h('button',{type:'button',class:'btn secondary game-choice',disabled:true,onclick:()=>{
       if(!played)return;const ok=echoMatch(target,word);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-      status.textContent=ok?'Recorded phoneme identified.':'Different sound: replay the clip.';
-      if(ok)round++;paint();
+      if(ok){round++;paint();}
+      else paint('Different sound: replay the clip.');
     }},heSpan(word.he,'he game-he-sm')));
     const start=h('button',{type:'button',class:'btn',onclick:async()=>{
       const ok=await playRecordedClip(ctx,'word',target.id,{tradition:pair.tradition});

@@ -11,11 +11,25 @@
 // when the stage leaves the document, and mount returns a cleanup.
 
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, speak, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, speak, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 
 /** Best score, play count, last star rating. Device-local, listed on the privacy page. */
 export const STORE_KEY = 'games.vowelcatcher.v1';
+
+/** Basket stops. Step 2 is the largest step that still lands on both 4 and 96. */
+export const BASKET_MIN = 4;
+export const BASKET_MAX = 96;
+export const BASKET_STEP = 2;
+
+/** Snap a percent onto the basket stops. 4 and 96 are both stops. */
+export function basketPosition(raw) {
+  const n = Number(raw);
+  if (!Number.isFinite(n)) return 50;
+  const steps = Math.round((n - BASKET_MIN) / BASKET_STEP);
+  const maxSteps = Math.round((BASKET_MAX - BASKET_MIN) / BASKET_STEP);
+  return BASKET_MIN + Math.max(0, Math.min(maxSteps, steps)) * BASKET_STEP;
+}
 
 // Curated game subset; actual letter and vowel data come from the authoritative JSON files.
 // Unlike the old starter tables, these are IDs, not invented syllable readings.
@@ -74,12 +88,16 @@ export function mount(root, ctx) {
   let stars = []; // {el, mark, x, y, speed}
   let raf = 0, last = 0, spawnAt = 0;
   let alive = true;
+  let paused = false;
+  const reducedMotion = !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
 
   const announce = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' });
-  const sky = h('div', { class: 'catcher-sky' });
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'catcher' });
+  const sky = h('div', { class: 'catcher-sky', role: 'group', 'aria-label': 'Vowel marks. Choose a mark, or move the basket.' });
   const basket = h('div', { class: 'catcher-basket', 'aria-hidden': 'true' });
   const hud = h('div', { class: 'game-catcher-hud' });
   sky.append(basket);
+  const envHost = h('div', { class: 'game-env-host' });
   const board = h('div', { class: 'game-board' }, sky);
 
   function newTarget() {
@@ -87,22 +105,41 @@ export function mount(root, ctx) {
     targetsDone++;
     announce.replaceChildren(`Target ${targetsDone} of ${TARGETS_PER_GAME}: catch ${target.name} for `,
       heSpan(letter.glyph + target.point, 'he game-he-sm'), '.');
-    speak(ctx, letter.glyph + target.point).catch(() => {});
+    // The syllable has no clip id. Do not speak the bare letter and call it the vowel.
+    void speak(ctx, letter.glyph + target.point, { onStatus: (m) => { if (alive) speechNote.textContent = m; } });
   }
 
   function spawn(now) {
     const mark = MARKS[Math.floor(Math.random() * MARKS.length)];
     const image = imgOf(R, mark.img.kind, mark.img.id, mark.img.opts);
-    const el = h('div', { class: 'catcher-star', 'aria-hidden': 'true' },
+    const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 22 + Math.random() * 16 };
+    if (reducedMotion) star.x = 8 + (stars.length % 5) * 18;
+    const el = h('button', { type: 'button', class: 'catcher-star', 'aria-label': `Catch ${mark.name}`, onclick: () => resolveStar(star) },
       image ? h('img', { class: 'game-catcher-mark-img', src: image.src, alt: '', width: 60, height: 60, 'data-img-id': image.id }) : heSpan(mark.glyph));
-    const x = 6 + Math.random() * 88;
+    star.el = el;
     sky.append(el);
-    stars.push({ el, mark, x, y: -8, speed: 22 + Math.random() * 16 }); // %/s
+    stars.push(star); // %/s
     spawnAt = now + 650 + Math.random() * 500;
+  }
+
+  function resolveStar(s) {
+    if (!alive || paused || !stars.includes(s) || !target) return;
+    const ok = s.mark === target;
+    session.answer(ok);
+    sfx.play(ok ? 'catch' : 'miss');
+    if (ok) sfx.play('collect');
+    if (ok && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
+    announce.replaceChildren(ok
+      ? heSpan(letter.glyph + target.point, 'he game-he-sm')
+      : `That was ${s.mark.name}. Catch ${target.name}.`,
+      ...(ok ? [` — yes! ${session.correct} caught · Score ${session.score}`] : []));
+    s.el.remove(); stars = stars.filter((x) => x !== s);
+    if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
   }
 
   function step(ts) {
     if (!alive || !sky.isConnected) { alive = false; return; }
+    if (paused) return;
     const dt = Math.min(0.05, (ts - last) / 1000 || 0); last = ts;
     if (ts >= spawnAt) spawn(ts);
     for (const s of [...stars]) {
@@ -110,18 +147,9 @@ export function mount(root, ctx) {
       s.el.style.insetInlineStart = `${s.x}%`;
       s.el.style.top = `${s.y}%`;
       // catch zone: near the bottom, close to basket x
-      if (s.y > 84 && s.y < 96 && Math.abs(s.x - basketX) < 9) {
-        const ok = s.mark === target;
-        session.answer(ok);
-        sfx.play(ok ? 'catch' : 'miss');
-        if (ok) sfx.play('collect');
-        if (ok && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
-        announce.replaceChildren(ok
-          ? heSpan(letter.glyph + target.point, 'he game-he-sm')
-          : `That was ${s.mark.name}. Catch ${target.name}.`,
-          ...(ok ? [` — yes! ${session.correct} caught · Score ${session.score}`] : []));
-        s.el.remove(); stars = stars.filter((x) => x !== s);
-        if (ok) { if (targetsDone >= TARGETS_PER_GAME) return finish(); newTarget(); }
+      if (!reducedMotion && s.y > 84 && s.y < 96 && Math.abs(s.x - basketX) < 9) {
+        resolveStar(s);
+        if (!alive) return;
       } else if (s.y >= 100) { s.el.remove(); stars = stars.filter((x) => x !== s); }
     }
     raf = requestAnimationFrame(step);
@@ -135,27 +163,52 @@ export function mount(root, ctx) {
     }));
   }
 
-  // controls: pointer + keys
+  // One position for the graphic and the native range. Pointer, arrows, and the slider all call placeAt.
+  const place = h('input', {
+    type: 'range', class: 'catcher-place', min: String(BASKET_MIN), max: String(BASKET_MAX), value: '50', step: String(BASKET_STEP),
+    'aria-label': 'Basket position', 'aria-valuemin': String(BASKET_MIN), 'aria-valuemax': String(BASKET_MAX), 'aria-valuenow': '50',
+    'aria-valuetext': 'Basket at 50 percent',
+    oninput: (e) => placeAt(e.target.value),
+  });
+  function placeAt(raw) {
+    basketX = basketPosition(raw);
+    basket.style.insetInlineStart = `${basketX}%`;
+    place.value = String(basketX);
+    place.setAttribute('value', String(basketX));
+    place.setAttribute('aria-valuenow', String(basketX));
+    place.setAttribute('aria-valuetext', `Basket at ${basketX} percent`);
+  }
   const move = (clientX) => {
     const r = sky.getBoundingClientRect();
     if (!r.width) return;
-    basketX = Math.max(4, Math.min(96, ((clientX - r.left) / r.width) * 100));
-    basket.style.insetInlineStart = `${basketX}%`;
+    placeAt(((clientX - r.left) / r.width) * 100);
   };
   const pointerMove = (e) => move(e.clientX);
+  const pointerDown = (e) => { try { sky.setPointerCapture?.(e.pointerId); } catch { /* already released */ } move(e.clientX); };
   sky.addEventListener('pointermove', pointerMove);
-  sky.addEventListener('pointerdown', pointerMove);
+  sky.addEventListener('pointerdown', pointerDown);
   const keys = (e) => {
-    if (e.key === 'ArrowLeft') { basketX = Math.max(4, basketX - 6); basket.style.insetInlineStart = `${basketX}%`; }
-    if (e.key === 'ArrowRight') { basketX = Math.min(96, basketX + 6); basket.style.insetInlineStart = `${basketX}%`; }
+    if (!alive) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    if (!article.contains(e.target) || e.target === place) return;
+    e.preventDefault();
+    placeAt(basketX + (e.key === 'ArrowLeft' ? -BASKET_STEP : BASKET_STEP));
   };
   document.addEventListener('keydown', keys);
-  basket.style.insetInlineStart = '50%';
+  placeAt(50);
 
+  const pauseBtn = h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': 'false', onclick: () => {
+    paused = !paused;
+    pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(paused));
+    if (!paused && alive && letter) { last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(step); }
+  } }, 'Pause');
   const article = h('article', { class: 'card game-card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Vowel Catcher'),
-      h('p', { class: 'muted' }, 'Catch the named niqqud mark. Move with your finger, mouse, or arrow keys.'),
-      hud, announce, board);
+      h('p', { class: 'muted' }, reducedMotion
+        ? 'Reduced motion is on. The marks stay still. Tab to a mark and press it, or move the basket and pause.'
+        : 'Catch the named niqqud mark. Tab to Move and Pause, or to a mark. Arrow keys move the basket while this game is focused.'),
+      h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, envHost, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {
     if (!alive || !article.isConnected) return;
@@ -164,6 +217,8 @@ export function mount(root, ctx) {
       announce.textContent = 'Vowel data unavailable. Try again when the course data is loaded.';
       return;
     }
+    const skyline = envNode(h, images, GAME_ENV.vowels);
+    if (skyline) envHost.replaceChildren(skyline);
     letter = LETTERS[Math.floor(Math.random() * LETTERS.length)];
     basket.replaceChildren(heSpan(letter.glyph));
     const picture = imgOf(R, letter.img.kind, letter.img.id, letter.img.opts);
@@ -180,7 +235,8 @@ export function mount(root, ctx) {
     cancelAnimationFrame(raf);
     document.removeEventListener('keydown', keys);
     sky.removeEventListener('pointermove', pointerMove);
-    sky.removeEventListener('pointerdown', pointerMove);
+    sky.removeEventListener('pointerdown', pointerDown);
+    try { ctx?.audio?.stop?.(); } catch { /* already gone */ }
     leaveSfx();
     if (liveCleanup.get(root) === stop) liveCleanup.delete(root);
   };

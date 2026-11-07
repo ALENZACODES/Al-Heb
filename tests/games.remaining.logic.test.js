@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildArchDeck, acceptStroke } from '../src/games/archbuilder.view.js';
-import { hebrewLetters, correctBeamPath, correctBeamStep, buildMazeDeck } from '../src/games/lasermaze.view.js';
+import { hebrewLetters, correctBeamPath, correctBeamStep, correctMirrorStep, buildMazeDeck } from '../src/games/lasermaze.view.js';
 import { buildRootDeck, isRootLeaf } from '../src/games/roottree.view.js';
 import { pluralSuffix, buildBridgeDeck, bridgeHolds } from '../src/games/letterbridge.view.js';
 import { buildShadowDeck, shadowMatches } from '../src/games/shadowcraft.view.js';

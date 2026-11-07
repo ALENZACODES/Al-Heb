@@ -1,6 +1,6 @@
 // Game 4 — source glyph silhouette: exactly the same Hebrew glyph, CSS-filtered.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.shadowcraft.v1';
@@ -24,18 +24,22 @@ export function mount(root,ctx) {
   const article=h('article',{class:'card game-card game-shadowcraft'},h('h1',{id:'view-title'},'Shadow Craft'),
     h('p',{},'The shadow is the real Hebrew letter shape. Identify the hidden root letter.'),status,board);
   root.replaceChildren(article);
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
-    if(round>=8){board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shadows resolved',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
+    if(round>=8){
+      roundStatus(status,'','Shadows resolved.');
+      board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shadows resolved',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paint();}}));return;}
     const target=deck[round%deck.length],wrong=shuffled(deck.filter(r=>r.id!==target.id)).slice(0,3);
+    roundStatus(status,feedback,`Shadow ${round+1} of 8: name the letter shape.`);
     const glyph=heSpan(target.he,'game-shadow-glyph');
-    const picture=imgOf(images,'letter',target.id,{variant:'print',role:'silhouette'});
+    glyph.setAttribute('aria-hidden','true');
     const stage=h('div',{class:'game-shadow-stage'},glyph);
-    if(picture) stage.append(h('img',{class:'game-shadow-reference',src:picture.src,alt:'',width:80,height:80,'data-img-id':picture.id}));
     const options=shuffled([target,...wrong]).map(x=>h('button',{type:'button',class:'btn secondary game-choice',onclick:()=>{
-      const ok=shadowMatches(target,x);session.answer(ok); sfx.play(ok ? 'success' : 'miss');status.textContent=ok?'True root-letter shape recognized.':'That is a different letter shape.';if(ok)round++;paint();
+      const ok=shadowMatches(target,x);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
+      if(ok){round++;paint();}
+      else paint('That is a different letter shape.');
     }},heSpan(x.he,'he game-he-sm'),h('span',{},x.name)));
-    board.replaceChildren(stage,h('p',{},'Which letter casts this exact shadow?'),h('div',{class:'game-choices'},...options));
+    placeBoard(board,envNode(h,images,GAME_ENV.shadow),stage,h('p',{},'Which letter casts this exact shadow?'),h('div',{class:'game-choices'},...options));
   }
   Promise.all([loadJson('data/letters/letters.json'),loadJson('data/roots/families.json'),loadGameImages(ctx)]).then(([letters,families,R])=>{
     if(!alive||!article.isConnected)return;deck=shuffled(buildShadowDeck(letters,families));images=R;

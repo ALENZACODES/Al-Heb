@@ -1,6 +1,6 @@
 // Game 20 — point-to-unpointed cipher over source-verified corpus lines.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, resultsCard } from './engine.js';
+import { createSession, shuffled, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { stripPoints } from '../typing/typing.js';
@@ -23,21 +23,24 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title' }, 'Cipher Decryption Grid'),
     h('p', {}, 'Find the authentic pointed form of this unpointed corpus line.'), status, board);
   root.replaceChildren(article);
-  function paint() {
+  function paint(feedback) {
     if (!alive || !article.isConnected) return;
-    if (round >= 8) { board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Cipher deciphered', onAgain: () => {
+    if (round >= 8) {
+      roundStatus(status, '', 'Cipher deciphered.');
+      board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Cipher deciphered', onAgain: () => {
       round = 0; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
     } })); return; }
     const row = deck[round % deck.length];
     const other = shuffled(deck.filter(r => r.id !== row.id && r.unpointed !== row.unpointed)).slice(0, 2);
     if (other.length < 2) { status.textContent = 'Not enough distinct corpus lines.'; return; }
+    roundStatus(status, feedback, `Line ${round + 1} of 8: choose the pointed source.`);
     // No manuscript asset ID exists in this index: keep an explicit text-only stage.
     const prompt = h('div', { class: 'game-cipher-prompt' }, heSpan(row.unpointed, 'he game-he'));
     const options = shuffled([row, ...other]).map(opt => h('button', {
       type: 'button', class: 'btn secondary game-choice', onclick: () => {
         const ok = matchCipher(row, opt.he); session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-        status.textContent = ok ? 'Exact pointed source restored.' : 'Those points do not match this source line.';
-        if (ok) round++; paint();
+        if (ok) { round++; paint(); }
+        else paint('Those points do not match this source line.');
       } }, heSpan(opt.he, 'he game-he-sm')));
     board.replaceChildren(prompt, h('div', { class: 'game-choices game-rtl-grid', dir: 'rtl' }, ...options));
   }

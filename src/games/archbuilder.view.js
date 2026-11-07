@@ -1,6 +1,6 @@
 // Game 1 — Hebrew Arch-Builder: authentic letter print strokes from the canonical deck.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, envNode, GAME_ENV, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 
@@ -25,15 +25,17 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title' }, 'Hebrew Arch-Builder'),
     h('p', {}, 'Build the letter by choosing its actual strokes in sequence.'), status, board);
   root.replaceChildren(article);
-  function paint() {
+  function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
+      status.textContent = 'Arch complete.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Arch complete', onAgain: () => {
         round = 0; step = 0; session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
       return;
     }
     const letter = deck[round % deck.length];
+    status.textContent = feedback || `Letter ${round + 1} of 8, stroke ${step + 1} of ${letter.strokes.length}.`;
     const reference = h('div', { class: 'game-arch-reference' },
       heSpan(letter.he, 'he game-he'), h('span', {}, letter.name));
     const picture = imgOf(images, 'letter', letter.id, { variant: 'print', role: 'mnemonic' });
@@ -71,12 +73,11 @@ export function mount(root, ctx) {
           if (!alive) return;
           const ok = acceptStroke(letter, stroke.id, step);
           session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-          if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } }
-          status.textContent = ok ? 'Correct stroke locked.' : 'Incorrect stroke: the arch cannot lock.';
-          paint();
+          if (ok) { step++; if (step === letter.strokes.length) { step = 0; round++; } paint(); }
+          else paint('Incorrect stroke: the arch cannot lock.');
         } }, miniature);
     });
-    board.replaceChildren(reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),
+    placeBoard(board, envNode(h, images, GAME_ENV.arch), reference, diagram, h('p', {}, 'Stroke ' + (step + 1) + ' of ' + letter.strokes.length),
       h('div', { class: 'game-choices' }, ...choices));
   }
   Promise.all([loadJson('data/letters/letters.json'), loadGameImages(ctx)]).then(([data, R]) => {

@@ -6,7 +6,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { createAudio } from '../src/audio/player.js';
 import { audioTruthDetail } from '../src/shell/audio-truth.js';
-import { readinessLines, loadReadinessFacts, imageInventory } from '../src/shell/readiness.js';
+import { readinessLines, loadReadinessFacts } from '../src/shell/readiness.js';
 import { audioSupport } from '../src/pronunciation/forTradition.js';
 import { plain } from '../src/shell/plain-copy.js';
 
@@ -18,25 +18,20 @@ const listOf = (m) => (Array.isArray(m) ? m : (m.entries || m.clips || Object.va
 const all = [json('data/audio/manifest.json'), ...['israeli', 'sephardi', 'ashkenazi'].map((t) => json(`data/audio/manifest-words-${t}.json`))].flatMap(listOf);
 const clips = all.filter((e) => e.status !== 'missing');
 
-test('About: picture counts name catalogue, approvals and shown separately; letter memory pictures stay their own count', async () => {
+test('About: pictures line does not deny the pictures that are shown; the count is read from data/letters/memory-chain.json', async () => {
   const chain = json('data/letters/memory-chain.json');
   const n = chain.letters.filter((l) => l.picture && l.picture.svg).length;
   assert.ok(n > 0);
   for (const l of chain.letters) assert.ok(existsSync(join(root, l.picture.svg)), `${l.id} picture file ships in the repo`);
   const facts = await loadReadinessFacts(async (u) => ({ ok: true, json: async () => json(u) }));
   assert.equal(facts.memoryPictures, n);
-  const images = imageInventory(json('data/img/index.json'), json('data/images/approvals.json'));
-  assert.deepEqual(facts.images, images);
   const text = readinessLines(facts).find((l) => l.id === 'images').text;
-  assert.match(text, new RegExp(`${images.shown} shown \\(approved and the picture file is in the app\\)`));
-  assert.match(text, new RegExp(`${images.approved} approvals`));
-  assert.match(text, new RegExp(`${images.catalogued} catalogued`));
-  if (images.pending > 0) assert.match(text, new RegExp(`${images.pending} approved but not in the app yet`));
-  assert.doesNotMatch(text, /approved by a reviewer and shown/);
+  assert.match(text, /none approved yet, so no generated picture is shown/);
   assert.ok(text.includes(`the ${n} letter memory pictures are drawings made for this app and are shown as unreviewed drafts`), text);
-  // without the memory-chain file, and with no approvals, the line stays true and carries no number
+  // the shipped data really has no approved generated picture, which is what the first sentence says
+  assert.equal(Object.values(json('data/images/approvals.json').approvals).filter((a) => a && a.status === 'approved').length, 0);
+  // without the memory-chain file the line stays true and carries no number
   const bare = readinessLines({ imagesApproved: 0 }).find((l) => l.id === 'images').text;
-  assert.match(bare, /none approved yet, so no generated picture is shown/);
   assert.ok(/the letter memory pictures are drawings/.test(bare) && !/\d/.test(bare));
 });
 
@@ -48,19 +43,24 @@ test('device-voice line: never says the learner chose it (it is on by default); 
   assert.match(read('src/shell/settings.js'), /browserVoiceAnyway: true/, 'the default is on, which is why the wording must not claim a choice');
 });
 
-test('Man/Woman: Settings and How this works say what is true, and the data proves it', () => {
-  // the data: every clip is Man + Israeli; the player gives a clip for Man + Israeli and none for Woman, Sephardi or Ashkenazi
+test('Man/Woman: a clip plays only for its own voice and tradition, and the wording does not call it a recording', () => {
   assert.ok(clips.length > 0 && clips.length === summary.tts);
-  for (const e of clips) assert.ok(e.voice === 'm' && e.tradition === 'israeli', `${e.kind}/${e.id} is ${e.voice}/${e.tradition}: update the Man/Woman wording (src/shell/audio-truth.js audioTruthDetail)`);
-  const e = clips[0];
-  const at = (voice, congregation) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status(e.kind, e.id);
-  assert.equal(at('m', 'israeli').source, 'file', 'Man + Israeli plays a clip');
-  for (const [v, c] of [['f', 'israeli'], ['m', 'sephardi'], ['m', 'ashkenazi'], ['f', 'sephardi']]) assert.notEqual(at(v, c).source, 'file', `${v}/${c} has no clip`);
-  // the words: count read from the summary, Man (Ari) named, no "does not change the sound yet"
+  for (const e of clips) {
+    assert.notEqual(e.status, 'recorded', `${e.path} is not a human recording`);
+    assert.ok(e.voice === 'm' || e.voice === 'f', e.path);
+    assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path);
+  }
+  const house = all.find((e) => e.id === 'h9c8ddecf' && e.voice === 'f' && e.tradition === 'sephardi');
+  assert.equal(house.status, 'synthetic-unreviewed');
+  const at = (voice, congregation, id) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status('word', id);
+  assert.equal(at('f', 'sephardi', 'h9c8ddecf').source, 'file', 'Woman + Sephardi plays the house clip');
+  assert.notEqual(at('m', 'sephardi', 'h9c8ddecf').source, 'file', 'Man + Sephardi has no house clip');
+  assert.equal(at('f', 'israeli', 'h9c8ddecf').source, 'file', 'the Israeli woman house clip stays on its own row');
+  assert.notEqual(at('m', 'ashkenazi', 'h9c8ddecf').source, 'file', 'Man + Ashkenazi house was not in the package');
   const d = audioTruthDetail(summary);
-  assert.ok(d.includes(`All ${summary.tts.toLocaleString('en-US')} use the Man (Ari) voice`), d);
-  assert.match(d, /only for Man with the Israeli style/);
-  assert.match(d, /device voice.*never changed by it/);
+  assert.match(d, /not swapped for a different voice or tradition/);
+  assert.match(d, /Israeli style has not been verified/);
+  assert.doesNotMatch(d, /native|recorded by|All .* use the Man \(Ari\) voice/i);
   for (const text of [plain('settingsIntro'), d, read('src/shell/how.view.js')]) {
     assert.doesNotMatch(text, /does not change the sound yet|saved for later|cannot change it yet/);
   }

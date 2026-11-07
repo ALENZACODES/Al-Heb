@@ -24,18 +24,20 @@ export function mount(root, ctx) {
   const leaveSfx = sfx.enter(ctx);
   let alive = true, deck = [], R = null, index = 0, session;
   const status = h('p', { role: 'status', 'aria-live': 'polite' }, 'Loading attested phrases…');
+  const speechNote = h('p', { class: 'muted', 'data-speech': 'prefix' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Bubble Pop Prefix Blast'),
     h('p', {}, 'Pop the prefix that gives the requested meaning. A miss leaves the phrase unfinished.'),
-    h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, board));
+    h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, speechNote, board));
   function start() {
-    session = createSession({ par: Math.min(8, deck.length) });
+    session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: Math.min(8, deck.length) });
     deck = shuffled(deck).slice(0, 10); index = 0; paint();
   }
   function paint() {
     if (!alive) return;
     if (index >= deck.length) {
+      status.textContent = 'Prefix round complete.';
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Prefix round complete', onAgain: start }));
       return;
     }
@@ -45,19 +47,27 @@ export function mount(root, ctx) {
     const prompt = h('div', { class: 'prefix-pedestal' },
       heSpan(r.baseHe, 'he game-he'), h('p', {}, `Make: ${r.meaning}`));
     if (image) prompt.prepend(h('img', { class: 'game-card-img', src: image.src, alt: image.alt, 'data-img-id': image.id }));
-    const bubbles = h('div', { class: 'prefix-bubbles' }, ...shuffled(PREFIXES).map(p =>
-      h('button', { type: 'button', class: 'prefix-bubble', onclick: () => {
-        if (!alive || deck[index] !== r) return;
+    const bubbles = h('div', { class: 'prefix-bubbles' }, ...shuffled(PREFIXES).map(p => {
+      const button = h('button', { type: 'button', class: 'prefix-bubble', onclick: () => {
+        if (!alive || deck[index] !== r || button.disabled) return;
         sfx.play('bubble_pop');
         const phrase = completePrefix(r, p.id);
-        session.answer(!!phrase);
-        sfx.play(phrase ? 'success' : 'error');
-        if (phrase && session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
-        if (!phrase) { status.textContent = 'Try another prefix. Phrase still unfinished.'; return; }
+        if (!phrase) {
+          button.disabled = true;
+          session.answer(false);
+          sfx.play('miss');
+          status.textContent = `${p.name} does not make that phrase. It stays unfinished. Score ${session.score}.`;
+          return;
+        }
+        session.answer(true);
+        sfx.play('success');
+        if (session.streak >= 3 && session.streak % 3 === 0) sfx.play('streak');
         index++;
-        void speak(ctx, phrase);
+        void speak(ctx, phrase, { onStatus: (m) => { speechNote.textContent = m; } });
         paint();
-      } }, heSpan(p.id), h('span', {}, p.name))));
+      } }, heSpan(p.id), h('span', {}, p.name));
+      return button;
+    }));
     const scene = h('div', { class: 'prefix-scene' }, bubbles, prompt);
     if (stage) scene.style.backgroundImage = `url("${stage.src}")`;
     board.replaceChildren(scene);
@@ -69,5 +79,5 @@ export function mount(root, ctx) {
     if (!deck.length) { status.textContent = 'No usable attested prefix records available.'; return; }
     start();
   }).catch(() => { if (alive) status.textContent = 'Phrase data unavailable. Try again when online.'; });
-  return () => { alive = false; leaveSfx(); };
+  return () => { alive = false; try { ctx?.audio?.stop?.(); } catch { /* already gone */ } leaveSfx(); };
 }

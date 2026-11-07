@@ -1,6 +1,6 @@
 // Game 8 — real Friday sunset countdown, recorded category cues, and timed collections.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, hasRecordedClip, playRecordedClip, resultsCard, envNode, GAME_ENV, roundStatus, placeBoard } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 import { fridayOnOrAfter, sunset } from '../curriculum/calendar.js';
@@ -43,22 +43,23 @@ export function mount(root,ctx) {
     timer.textContent='Time until local Friday sunset: '+hours+'h '+minutes+'m';
     if(seconds===0){stopClock();status.textContent='Sunset reached. Run ended.';board.replaceChildren(h('p',{},'The timed collection has ended.'));}
   }
-  function paint(){
+  function paint(feedback){
     if(!alive||!article.isConnected)return;
     if(deadline && deadline.getTime()<=Date.now()){paintTimer();return;}
-    if(round>=8){stopClock();board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shabbat collection finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paintTimer();if(deadline && deadline.getTime()>Date.now()){stopClock();clock=setInterval(paintTimer,1000);paint();}else status.textContent='Sunset has passed; no timed replay.';}}));return;}
+    if(round>=8){stopClock();roundStatus(status,'','Shabbat collection finished.');board.replaceChildren(resultsCard(h,heSpan,session,{title:'Shabbat collection finished',onAgain:()=>{round=0;session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});paintTimer();if(deadline && deadline.getTime()>Date.now()){stopClock();clock=setInterval(paintTimer,1000);paint();}else status.textContent='Sunset has passed; no timed replay.';}}));return;}
     cue=CATEGORIES[round%CATEGORIES.length];
     const correct=shuffled(deck.filter(w=>w.topic===cue.id))[0];
     const wrong=shuffled(deck.filter(w=>w.topic!==cue.id)).slice(0,2);
     if(!correct||wrong.length<2){status.textContent='Missing collectible categories.';return;}
+    roundStatus(status,feedback,`Collection ${round+1} of 8: play the recorded category.`);
     let heard=false;
     const cards=shuffled([correct,...wrong]).map(item=>{
       const picture=imgOf(R,'word',item.id);
       const button=h('button',{type:'button',class:'btn secondary game-rush-collectible',disabled:true,onclick:()=>{
         if(!heard || deadline.getTime()<=Date.now())return;
         const ok=correctCollect(cue,item);session.answer(ok); sfx.play(ok ? 'success' : 'miss');
-        status.textContent=ok?'Correct collectible.':'Not in the announced category.';
-        if(ok)round++;paint();
+        if(ok){round++;paint();}
+        else paint('Not in the announced category.');
       }},heSpan(item.he,'he game-he-sm'));
       if(picture)button.append(h('img',{class:'game-card-img',src:picture.src,alt:picture.alt,
         width:picture.width,height:picture.height,'data-img-id':picture.id}));
@@ -70,7 +71,7 @@ export function mount(root,ctx) {
       heard=success;if(success){cards.forEach(c=>{c.disabled=false;});status.textContent='Collect only matching words.';}
       else status.textContent='Category recording unavailable; collection disabled.';
     }},'Hear Hebrew category');
-    board.replaceChildren(hear,h('div',{class:'game-rush-lane'},...cards));
+    placeBoard(board,envNode(h,R,GAME_ENV.shabbat),hear,h('div',{class:'game-rush-lane'},...cards));
   }
   Promise.all([loadJson('data/vocab/index.json'),loadJson('data/calendar/locations.json'),loadGameImages(ctx)]).then(([index,places,images])=>{
     if(!alive||!article.isConnected)return;R=images;deck=buildRushItems(index);
@@ -78,7 +79,9 @@ export function mount(root,ctx) {
     deadline=nextShabbatSunset(new Date(),location);
     if(!deadline){status.textContent='Sunset calculation unavailable.';return;}
     if(!CATEGORIES.every(c=>hasRecordedClip(ctx,'word',c.clipId))){
-      status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';return;
+      status.textContent='Recorded Hebrew category call-outs unavailable. No guessing rounds.';
+      placeBoard(board, envNode(h, R, GAME_ENV.shabbat));
+      return;
     }
     if(!deck.some(r=>r.topic==='food-drink')||!deck.some(r=>r.topic==='home-things')){
       status.textContent='Collectible vocabulary missing.';return;

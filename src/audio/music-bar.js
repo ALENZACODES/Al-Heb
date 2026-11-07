@@ -4,10 +4,11 @@ import { gameMusic, musicContextFor } from './music.js';
 import { mediaPolicy } from './policy.js';
 
 const CSS = `
-#game-music{position:sticky;inset-block-end:0;z-index:4;margin:1rem 0 0;padding:.75rem 1rem;background:var(--card,#fff);border:1px solid var(--line,#d7d0c4);border-radius:.75rem;display:grid;gap:.5rem}
+#game-music{position:static;z-index:auto;clear:both;margin:1rem 0 0;padding:.75rem 1rem;background:var(--card,#fff);border:1px solid var(--line,#d7d0c4);border-radius:.75rem;display:grid;gap:.5rem;scroll-margin-block:1rem}
 #game-music[hidden]{display:none}
 #game-music .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-#game-music button,#game-music select{min-block-size:44px}
+#game-music button,#game-music select,#game-music input{min-block-size:44px}
+#game-music button:focus-visible,#game-music select:focus-visible,#game-music input:focus-visible{outline:3px solid #1F3A5F;outline-offset:2px}
 #game-music .status{margin:0}
 `;
 

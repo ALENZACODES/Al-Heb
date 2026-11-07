@@ -1,6 +1,6 @@
 // Game 17 — plural bridge: only the source-attested plural completes the span.
 import { h, heSpan } from '../shell/ui.js';
-import { createSession, shuffled, loadGameImages, imgOf, resultsCard } from './engine.js';
+import { createSession, shuffled, loadGameImages, imgOf, resultsCard, roundStatus } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.letterbridge.v1';
@@ -28,15 +28,18 @@ export function mount(root, ctx) {
     h('h1', { id: 'view-title' }, 'Letter Bridge Builder'),
     h('p', {}, 'Connect the singular noun to its source-attested plural ending. Wrong joints sag and break.'), status, board);
   root.replaceChildren(article);
-  function paint(broken = false) {
+  function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= 8) {
+      roundStatus(status, '', 'Bridge complete.');
       board.replaceChildren(resultsCard(h, heSpan, session, { title: 'Bridge complete', onAgain: () => {
         clearTimeout(nextTimer); round = 0; locked = false;
         session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 6 }); paint();
       } }));
       return;
     }
+    const broken = feedback === 'Mismatched joint: bridge collapses. This attempt is over.';
+    roundStatus(status, feedback, `Noun ${round + 1} of 8: choose the attested plural joint.`);
     const r = deck[round % deck.length], picture = imgOf(images, 'word', r.id);
     const entry = h('div', { class: 'game-bridge-entry' }, heSpan(r.singular, 'he game-he'), h('p', {}, r.gloss));
     if (picture) entry.append(h('img', { class: 'game-card-img', src: picture.src, alt: picture.alt,
@@ -47,13 +50,12 @@ export function mount(root, ctx) {
       locked = true;
       const ok = bridgeHolds(r, joint); session.answer(ok); sfx.play(ok ? 'success' : 'miss');
       if (!ok) {
-        status.textContent = 'Mismatched joint: bridge collapses. This attempt is over.';
         span.classList.add('game-bridge-broken');
         board.querySelectorAll('button.game-choice').forEach(b => { b.disabled = true; });
+        paint('Mismatched joint: bridge collapses. This attempt is over.');
         nextTimer = setTimeout(() => { if (!alive) return; round++; locked = false; paint(); }, 750);
         return;
       }
-      status.replaceChildren('Bridge holds: ', heSpan(r.plural));
       round++; locked = false; paint();
     } }, joint === 'im' ? heSpan('־ים') : heSpan('־ות')));
     board.replaceChildren(entry, span, h('p', {}, 'Which joint is present in the attested plural?'),

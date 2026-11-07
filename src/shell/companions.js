@@ -35,13 +35,30 @@ const NAMES = { noa: 'Noa', ari: 'Ari' };
 export function updateCompanions(routeName, { R = null, voice = 'f' } = {}) {
   const slot = document.getElementById('alef-companions');
   if (!slot) return;
+  // The band's shape is set inline as well as in app.css: a learner whose
+  // cached stylesheet predates the band rules must still get the slim strip,
+  // never full-size portraits stacked down the page.
+  slot.style.display = 'flex';
+  slot.style.alignItems = 'center';
+  slot.style.gap = '0.55rem';
+  slot.style.padding = '0.5rem 1rem 0';
+  slot.style.background = '#F6F1E7';
   const pose = poseForRoute(routeName);
   const order = teacherOrder(voice);
   const kids = [];
   for (const who of order) {
     const pic = R ? img(h, { R, kind: 'id', id: `CHAR_${who}_${pose}`, decorative: true, width: 300, class: 'comp-pic' }) : null;
-    if (pic) kids.push(pic);
+    if (pic) {
+      pic.style.width = '3rem';
+      pic.style.height = '3rem';
+      pic.style.objectFit = 'cover';
+      pic.style.borderRadius = '50%';
+      pic.style.flex = '0 0 auto';
+      kids.push(pic);
+    }
   }
-  kids.push(h('span', { class: 'comp-names' }, `${order.map((w) => NAMES[w]).join(' and ')} — your teachers`));
+  const names = h('span', { class: 'comp-names' }, `${order.map((w) => NAMES[w]).join(' and ')} — your teachers`);
+  names.style.color = '#1F3A5F';
+  kids.push(names);
   slot.replaceChildren(...kids);
 }

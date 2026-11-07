@@ -10,8 +10,10 @@ import { acceptAssessmentEvent, itemSatisfied, REJECTED_SOURCES } from '../src/a
 import { GAME_STORE_KEYS, observeGames } from '../src/awards/observe.js';
 import { AWARDS_KEY, cleanRecord, emptyRecord, readAwards, withEvidence, writeAwards } from '../src/awards/record.js';
 import {
-  badgeRows, certificateDecision, evaluateProposedCertificate, masterySlots, planPractice, settleAwards,
+  badgeRows, certificateDecision, evaluateProposedCertificate, masterySlots, planMilestones, planPractice, settleAwards,
 } from '../src/awards/eligibility.js';
+import { observeStreak } from '../src/awards/observe.js';
+import { dayKey } from '../src/curriculum/streak.js';
 import { TRUST_LIMITS } from '../src/awards/trust.js';
 import {
   modelNeedsWatermark, PDF_PAGE, pdfLiteral, renderCertificatePdf, sampleModel, fitName,
@@ -326,4 +328,49 @@ test('trust notes name real source files, and this lane does not award from them
   }
   const written = writeAwards(mem(), withEvidence(emptyRecord(), event()).record);
   assert.equal(written.saved, true);
+});
+
+test('milestones: streak thresholds grant by the LONGEST streak and never un-earn', () => {
+  const none = planMilestones(emptyRecord(), { anyDay: false, best: 0, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T);
+  assert.deepEqual(none.newly, []);
+  const three = planMilestones(emptyRecord(), { anyDay: true, best: 3, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T);
+  assert.deepEqual([...three.newly].sort(), ['first-day', 'streak-3']);
+  assert.equal(three.record.awards['streak-3'].basis.best, 3);
+  const month = planMilestones(emptyRecord(), { anyDay: true, best: 30, goalMet: true, goalMinutes: 10 }, { sessions: [] }, T);
+  assert.deepEqual([...month.newly].sort(), ['first-day', 'goal-met', 'streak-3', 'streak-30', 'streak-7']);
+  assert.equal(month.record.awards['goal-met'].basis.goalMinutes, 10);
+  const again = planMilestones(month.record, { anyDay: true, best: 1, goalMet: false, goalMinutes: 5 }, { sessions: [] }, T + 1000);
+  assert.deepEqual(again.newly, []);
+  assert.ok(again.record.awards['streak-30'], 'a shorter later streak does not un-earn the month medallion');
+});
+
+test('milestones: games-5 needs all five observed practice games', () => {
+  const four = planMilestones(emptyRecord(), { anyDay: false, best: 0 }, { sessions: [1, 2, 3, 4].map((i) => ({ key: 'k' + i })) }, T);
+  assert.deepEqual(four.newly, []);
+  const five = planMilestones(emptyRecord(), { anyDay: false, best: 0 }, { sessions: [1, 2, 3, 4, 5].map((i) => ({ key: 'k' + i })) }, T);
+  assert.deepEqual(five.newly, ['games-5']);
+});
+
+test('milestones: settleAwards reads the streak record and stamps the daily goal', () => {
+  const store = mem({ streak: { v: 2, count: 7, best: 7, last: '2026-11-05', todayDate: dayKey(T), todaySeconds: 660, doneDates: ['2026-11-05'] } });
+  const settled = settleAwards(store, rubric, T);
+  for (const id of ['first-day', 'streak-3', 'streak-7', 'goal-met']) {
+    assert.ok(settled.record.awards[id], id + ' earned from the streak record');
+  }
+  assert.equal(settled.record.awards['goal-met'].basis.goalMinutes, 5);
+  const rows = badgeRows(settled.record, settled.games, settled.decision);
+  const week = rows.find((r) => r.id === 'streak-7');
+  assert.equal(week.state, 'earned');
+  assert.match(week.detail, /longest recorded streak reached 7 days/);
+  const monthRow = rows.find((r) => r.id === 'streak-30');
+  assert.equal(monthRow.state, 'locked');
+});
+
+test('milestones: observeStreak honours a stored daily goal and defaults to 5', () => {
+  const withGoal = observeStreak(mem({ 'onboarding.v1.dailyGoal': 20, streak: { v: 2, count: 1, best: 1, last: '2026-11-05', todayDate: dayKey(T), todaySeconds: 660 } }), T);
+  assert.equal(withGoal.goalMinutes, 20);
+  assert.equal(withGoal.goalMet, false);
+  const noGoal = observeStreak(mem({ streak: { v: 2, count: 1, best: 1, last: '2026-11-05', todayDate: dayKey(T), todaySeconds: 660 } }), T);
+  assert.equal(noGoal.goalMinutes, 5);
+  assert.equal(noGoal.goalMet, true);
 });

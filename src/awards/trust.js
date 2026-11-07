@@ -64,4 +64,4 @@ export const TRUST_LIMITS = Object.freeze([
   },
 ]);
 
-export const EVIDENCE_SUMMARY = 'Lesson completion marks, the Mark complete control, quick-check results, self-reported hearing, tracing and reading, streaks, and points are not used. A lesson can be stored as complete after wrong answers, and several practice screens ask you to say that you heard or read something. A certificate needs objective checked answers and criteria that have been reviewed. Neither is in place, so nothing on this page is verified.';
+export const EVIDENCE_SUMMARY = 'Lesson completion marks, the Mark complete control, quick-check results, self-reported hearing, tracing and reading, and points are not used. Streaks are used only for the daily and milestone medallions, never for a certificate. A lesson can be stored as complete after wrong answers, and several practice screens ask you to say that you heard or read something. A certificate needs objective checked answers and criteria that have been reviewed. Neither is in place, so nothing on this page is verified.';

@@ -10,7 +10,9 @@ export const RECORD_VERSION = 1;
 
 /** Practice badges this record may keep. Completion and certificate ids are never kept. */
 export const PRACTICE_AWARD_IDS = Object.freeze(['game-session', 'game-return']);
-const PRACTICE = new Set(PRACTICE_AWARD_IDS);
+/** Daily/streak medallions this record may keep (src/awards/eligibility.js MILESTONE_BADGES). */
+export const MILESTONE_AWARD_IDS = Object.freeze(['first-day', 'streak-3', 'streak-7', 'streak-30', 'goal-met', 'games-5']);
+const PRACTICE = new Set([...PRACTICE_AWARD_IDS, ...MILESTONE_AWARD_IDS]);
 
 export function emptyRecord() {
   return { v: RECORD_VERSION, openedAt: null, displayName: '', nameSetAt: null, awards: {}, evidence: [] };
@@ -25,6 +27,12 @@ export function sanitizeName(input) {
 
 function cleanBasis(basis) {
   if (!basis || typeof basis !== 'object' || Array.isArray(basis)) return { kind: 'game-plays', sessions: [] };
+  if (basis.kind === 'streak-record') {
+    return { kind: 'streak-record', best: Number.isInteger(basis.best) && basis.best > 0 ? basis.best : 0 };
+  }
+  if (basis.kind === 'daily-goal') {
+    return { kind: 'daily-goal', goalMinutes: Number.isInteger(basis.goalMinutes) && basis.goalMinutes > 0 ? basis.goalMinutes : 5 };
+  }
   if (basis.kind !== 'game-plays') return { kind: 'game-plays', sessions: [] };
   const sessions = Array.isArray(basis.sessions) ? basis.sessions : [];
   return {

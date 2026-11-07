@@ -1,5 +1,8 @@
 // ALEF opening prayer veil: one sourced entry per real page load.
-// The visual never holds the application after its first-route ready event.
+// The veil holds for its full dwell (2.5 s for a returning learner, 6 s on a
+// first visit, longer while its prayer plays) so the blessing can actually be
+// read and heard; the app's ready event never dismisses it early — only the
+// dwell timer, a tap, Skip, Escape or the 12 s failsafe close it.
 export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
@@ -114,7 +117,7 @@ function initPrayerVeil() {
     veil.classList.add('prayer-veil--leaving');
     setTimeout(() => veil.remove(), 150);
   }
-  function onReady() { if (!rendered) { readySeen = true; return; } dismiss(); }
+  function onReady() { readySeen = true; }
   function onKey(e) { if (e.key === 'Escape') dismiss(true); }
   veil.addEventListener('click', () => dismiss(true));
   document.addEventListener('keydown', onKey);

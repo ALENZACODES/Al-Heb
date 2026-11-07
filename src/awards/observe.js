@@ -3,6 +3,8 @@
 // not a win, and not evidence that a word was learned. Wrong answers can still end a game
 // and increment plays (src/games/engine.js saveBest). This module only reads.
 
+import { projectStreak } from '../curriculum/streak.js';
+
 /** Keep in step with each game's STORE_KEY. Tests compare these strings to the game files. */
 export const GAME_STORE_KEYS = Object.freeze([
   { key: 'games.tugowar.v1', title: 'Antonym Tug-of-War', file: 'src/games/tugowar.view.js', href: '#/tugowar', code: 'tug' },
@@ -38,5 +40,32 @@ export function observeGames(store) {
     anyPlay: sessions.length > 0,
     returned: sessions.some((s) => s.plays >= 2),
     readErrors,
+  };
+}
+
+/** Keep in step with DAILY_GOALS in src/home/today.js. */
+export const DAILY_GOAL_STEPS = Object.freeze([5, 10, 15, 20, 30]);
+
+/**
+ * Read-only look at the streak record (store key "streak", owned by
+ * src/curriculum/streak.js) and the learner's daily goal. Everything here is
+ * what the streak engine itself counted: engaged seconds, completed days,
+ * frozen rest days. Nothing is self-reported on the Awards page.
+ * @param {{get?: Function}|null|undefined} store
+ * @param {number|Date} now
+ */
+export function observeStreak(store, now) {
+  let raw = null, goalRaw = null, readError = false;
+  try { raw = store && typeof store.get === 'function' ? store.get('streak', null) : null; } catch { readError = true; }
+  try { goalRaw = store && typeof store.get === 'function' ? store.get('onboarding.v1.dailyGoal', null) : null; } catch { readError = true; }
+  const proj = projectStreak(raw, now);
+  const goalMinutes = DAILY_GOAL_STEPS.includes(goalRaw) ? goalRaw : 5;
+  return {
+    best: proj.best,
+    count: proj.count,
+    anyDay: proj.best > 0 || !!proj.last,
+    goalMinutes,
+    goalMet: proj.todaySeconds >= goalMinutes * 60,
+    readError,
   };
 }

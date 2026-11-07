@@ -23,6 +23,7 @@ const TILES = [
   ['traditions', '#/traditions', 'Three Traditions', 'מָסוֹרֶת', 'Israeli, Sephardi, Ashkenazi — hear the difference'],
   ['morning', '#/morning', 'Start with God', 'מוֹדֶה אֲנִי', 'Modeh Ani and a verse, every morning'],
   ['torahreader', '#/torahreader', 'Torah Reader', 'תּוֹרָה', 'Read the weekly portion aloud'],
+  ['listen-shelf', '#/listen/shelf', 'Sacred Listen', 'חַזָּנוּת', 'Cantorial treasures — historic cantors, cantillation and shofar'],
   ['calendar', '#/calendar', 'Hebrew Calendar', 'לוּחַ', 'Shabbat, festivals and the weekly portion, day by day'],
 ];
 

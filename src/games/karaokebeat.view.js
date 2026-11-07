@@ -2,7 +2,7 @@
 // No prayer or cantorial recordings are used for arcade scores.
 // Syllable-to-recording timestamps are not available; the registry's audio sync gate remains open.
 import { h, heSpan } from '../shell/ui.js';
-import { shuffled, roundStatus } from './engine.js';
+import { shuffled, roundStatus, loadGameImages, envNode, GAME_ENV } from './engine.js';
 import { sfx } from '../audio/sfx.js';
 import { loadJson } from '../grammar/loader.js';
 export const STORE_KEY = 'games.karaokebeat.v1';
@@ -26,6 +26,14 @@ export function mount(root, ctx) {
     h('p', {}, 'Manual rhythm training: tap each Hebrew word in reading order while speaking aloud.'),
     h('p', { class:'muted' }, 'No syllable-timestamped recordings are supplied. This is self-paced word rhythm, not audio-synchronised karaoke. Sacred prayers and cantorial clips are excluded.'), status, board);
   root.replaceChildren(article);
+  // The listening-room picture made for this game (approved art, decorative
+  // backdrop only — never a word cue). Loads beside the deck; a missing or
+  // unapproved picture simply leaves the page as it was.
+  loadGameImages(ctx).then((R) => {
+    if (!alive) return;
+    const env = envNode(h, R, GAME_ENV.karaoke);
+    if (env) article.insertBefore(env, status);
+  }).catch(() => {});
   function paint(feedback) {
     if (!alive || !article.isConnected) return;
     if (round >= Math.min(8, deck.length)) {

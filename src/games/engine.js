@@ -99,6 +99,7 @@ export const GAME_ENV = Object.freeze({
   sonar: 'GAME_submarine_sonar_env',
   typewriter: 'GAME_typewriter_env',
   vowels: 'GAME_vowel_catcher_env',
+  karaoke: 'GAME_karaoke_listen',
 });
 
 /** replaceChildren drops nulls, so a missing picture does not become the text "null" or throw. */

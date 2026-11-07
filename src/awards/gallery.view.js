@@ -233,7 +233,7 @@ export async function mount(root, ctx) {
     ? 'You have opened Awards on this browser before. There is no account and no sign-in.'
     : 'First visit to Awards on this browser. There is no account and no sign-in.';
   const unsaved = settled.unsaved?.length
-    ? ' A practice game session was seen, but it could not be saved, so the badge was not marked earned.'
+    ? ' New activity was seen, but it could not be saved, so the badge was not marked earned.'
     : '';
   status.textContent = storageLine(settled.save) + unsaved;
 
@@ -286,6 +286,25 @@ export async function mount(root, ctx) {
         h('p', {}, row.detail))))),
       h('p', {}, 'Only these five games already save a play count. Other games are not badge sources here.'),
       h('ul', { class: 'aw-links' }, ...GAME_STORE_KEYS.map((g) => h('li', {}, h('a', { class: 'aw-link', href: g.href }, g.title))))),
+    h('section', { 'aria-labelledby': 'award-h-milestones' },
+      h('h2', { id: 'award-h-milestones' }, 'Daily and milestones'),
+      h('p', {}, 'These medallions record days the app itself counted: engaged minutes, streaks with rest days frozen, your daily goal, and the five practice games. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
+      h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones').map((row) => h('li', {
+        class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'milestones',
+      },
+      renderMedallion(h, {
+        glyph: row.state === 'earned' ? 'activity' : 'lock',
+        state: row.state,
+        finish: 'activity',
+        game: 'none',
+      }),
+      h('div', {},
+        h('h3', {}, row.name),
+        h('p', { class: 'aw-state', 'data-state': row.state },
+          h('span', { class: 'aw-state-text' }, row.stateText),
+          h('span', {}, 'Milestone')),
+        h('p', { class: 'aw-req' }, row.requirement),
+        h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-mastery' },
       h('h2', { id: 'award-h-mastery' }, 'Beginner checklist finishes'),
       h('p', {}, 'Matte, polished and foil are locked layout slots. None is unlocked. A game, a visit, or a lesson tick does not fill them. Issuance stays closed until a reviewed assessment exists.'),

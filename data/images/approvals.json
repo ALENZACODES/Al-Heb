@@ -1,6 +1,4 @@
 {
- "version": 1,
- "note": "Default for every image is UNAPPROVED (absent). Edit with: node tools/images/ingest.mjs approve|reject <id...>",
  "approvals": {
   "BG_market": {
    "status": "approved",
@@ -5670,6 +5668,461 @@
   "PLACE_galilee_09": {
    "status": "approved",
    "at": "2026-11-06T21:56:26.998Z"
+  },
+  "L01_alef_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L02_bet_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L08_chet_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L04_dalet_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L03_gimel_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L05_he_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L09_tet_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L06_vav_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L10_yod_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L07_zayin_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L16_ayin_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L23_kaf_final_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L11_kaf_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L12_lamed_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L24_mem_final_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L13_mem_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L25_nun_final_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L14_nun_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L17_pe_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L15_samekh_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L26_pe_final_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L19_qof_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L20_resh_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L21_shin_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L22_tav_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L27_tsadi_final_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "L18_tsadi_print_meet": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "SPEAK_04_table_shabbat": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "SPEAK_05_table_welcome": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "SPEAK_08_street_taxi": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_minute_one_celebration": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_letter_rush": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_sofit_sniper": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_niqqud_fade": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_tradition_detective": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_story_postcard": {
+   "status": "approved",
+   "at": "2026-11-06T12:40:29.826Z",
+   "note": "Shown on learner screens. Older letter art stays unapproved."
+  },
+  "GAME_minute_one_celebration_02": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_letter_rush_02": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_sofit_sniper_02": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_tradition_detective_02": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_karaoke_listen": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_story_seaside_market": {
+   "status": "approved",
+   "at": "2026-11-06T13:14:43.205Z",
+   "note": "Shown on learner screens. Second game/scene stills, 2026-11-06. Cast sheets and production voices unchanged. SPEAK hold is not in this set."
+  },
+  "GAME_minute_one_celebration_03": {
+   "status": "approved",
+   "at": "2026-11-06T14:04:18.100Z",
+   "note": "Shown on the Minute One celebration screen. Third ChatGPT stills, 2026-11-06. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_04": {
+   "status": "approved",
+   "at": "2026-11-06T14:04:18.100Z",
+   "note": "Shown on the Minute One celebration screen. Third ChatGPT stills, 2026-11-06. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_05": {
+   "status": "approved",
+   "at": "2026-11-06T14:04:18.100Z",
+   "note": "Shown on the Minute One celebration screen. Third ChatGPT stills, 2026-11-06. Cast sheets and production voices unchanged."
+  },
+  "GAME_letter_rush_03": {
+   "status": "approved",
+   "at": "2026-11-06T14:18:41.978Z",
+   "note": "Shown beside the earlier still. ChatGPT game stills, 2026-11-06. Cast sheets and production voices unchanged. Rimon leaf-count drift noted, not a hold."
+  },
+  "GAME_sofit_sniper_03": {
+   "status": "approved",
+   "at": "2026-11-06T14:18:41.978Z",
+   "note": "Shown beside the earlier still. ChatGPT game stills, 2026-11-06. Cast sheets and production voices unchanged. Rimon leaf-count drift noted, not a hold."
+  },
+  "GAME_niqqud_fade_02": {
+   "status": "approved",
+   "at": "2026-11-06T14:18:41.978Z",
+   "note": "Shown beside the earlier still. ChatGPT game stills, 2026-11-06. Cast sheets and production voices unchanged. Rimon leaf-count drift noted, not a hold."
+  },
+  "GAME_tradition_detective_03": {
+   "status": "approved",
+   "at": "2026-11-06T14:18:41.978Z",
+   "note": "Shown beside the earlier still. ChatGPT game stills, 2026-11-06. Cast sheets and production voices unchanged. Rimon leaf-count drift noted, not a hold."
+  },
+  "GAME_story_episode_02": {
+   "status": "approved",
+   "at": "2026-11-06T14:18:41.978Z",
+   "note": "Shown beside the earlier still. ChatGPT game stills, 2026-11-06. Cast sheets and production voices unchanged. Rimon leaf-count drift noted, not a hold."
+  },
+  "GAME_minute_one_celebration_06": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_letter_rush_04": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_sofit_sniper_04": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_niqqud_fade_03": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_tradition_detective_04": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_story_episode_03": {
+   "status": "approved",
+   "at": "2026-11-06T17:41:02.797Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_07": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_letter_rush_05": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_sofit_sniper_05": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_niqqud_fade_04": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_tradition_detective_05": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_story_episode_04": {
+   "status": "approved",
+   "at": "2026-11-06T17:47:29.100Z",
+   "note": "Shown on learner screens. Later game/scene stills, 2026-11-06. No text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_08": {
+   "status": "approved",
+   "at": "2026-11-06T17:52:56.000Z",
+   "note": "Shown on the Minute One celebration. 1312x1199 source, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_09": {
+   "status": "approved",
+   "at": "2026-11-06T17:52:56.000Z",
+   "note": "Shown on the Minute One celebration. 1312x1199 source, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_11": {
+   "status": "approved",
+   "at": "2026-11-06T17:52:56.000Z",
+   "note": "Shown on the Minute One celebration. 1312x1199 source, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_letter_rush_06": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_sofit_sniper_06": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_niqqud_fade_05": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_tradition_detective_06": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_story_episode_05": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "GAME_minute_one_celebration_12": {
+   "status": "approved",
+   "at": "2026-11-06T18:07:18.708Z",
+   "note": "Shown on learner screens. t1076u scene stills, 1254 square, no text, Hebrew, or numerals. Cast sheets and production voices unchanged."
+  },
+  "OPP_expensive_cheap": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "OPP_near_far": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_pinball_table": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_blast_stage": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_day": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_world": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_earth": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_light": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_king": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_prefix_life": {
+   "status": "approved",
+   "at": "2026-11-07T01:58:55.588Z",
+   "note": "Inspected 2026-11-07. No text, Hebrew, numerals, or cast. Noun cues stay on their own words."
+  },
+  "GAME_arch_builder_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_bumper_verbs_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_laser_maze_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_memory_palace_courtyard": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_shabbat_rush_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_shadow_craft_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_shuk_taxi_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_submarine_sonar_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_typewriter_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
+  },
+  "GAME_vowel_catcher_env": {
+   "status": "approved",
+   "at": "2026-11-07T02:40:00.000Z",
+   "note": "Visually checked environment only: no people, no writing, no cast. Not a word picture."
   }
  }
 }

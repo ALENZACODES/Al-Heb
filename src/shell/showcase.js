@@ -10,7 +10,7 @@ const TILES = [
   ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words — no Hebrew experience needed'],
   ['letters', '#/letters', 'Letters', 'אָלֶף־בֵּית', 'All 27 letters — sounded, traced, remembered'],
   ['books', '#/books', 'Little Books', 'סְפָרִים', '5 story books, 60 pages, every page voiced'],
-  ['games', '#/games', 'All 25 Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
+  ['games', '#/games', 'All the Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
   ['tugowar', '#/tugowar', 'Antonym Tug-of-War', 'מִשְׂחָק', 'Games — pull the rope with opposites'],
   ['vowelcatcher', '#/vowelcatcher', 'Vowel Catcher', 'מִשְׂחָק', 'Games — catch the falling vowel stars'],
   ['pinball', '#/pinball', 'Hebrew Pinball', 'מִשְׂחָק', 'Games — pinball with Hebrew letters'],
@@ -32,7 +32,7 @@ const TILES = [
 const PORTALS = [
   ['wordfinder', '#/wordfinder', 'Start with words', 'Hear, find, understand — 240 gentle first words', 'clay'],
   ['books', '#/books', 'Open a little book', 'Read an illustrated story at your own pace', 'wood'],
-  ['games', '#/games', 'Enter the games', 'Explore 26 games from Level 1 to 9', 'harvest'],
+  ['games', '#/games', 'Enter the games', 'Explore games across Levels 1–9', 'harvest'],
   ['read', '#/read', 'Read the prayers', 'Hebrew first, English beneath; go line by line', 'sky'],
 ];
 
@@ -124,7 +124,7 @@ export function showcaseNode(ctx) {
           h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book')))),
     portalsNode(has),
     tryPanel(),
-    h('p', { class: 'show-stats' }, '26 learning games · 240 first words · 5 story books · 3 Hebrew traditions'),
+    h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 5 story books · 3 Hebrew traditions'),
     h('details', { class: 'show-all-destinations', ...(ctx?.routeName === 'home' ? { open: true } : {}) },
       h('summary', {}, 'Explore all ALEF destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));

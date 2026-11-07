@@ -7,7 +7,7 @@ name: pages
 # The unit tests run in ci.yml, not here, so a test failure cannot block a deploy and is not reported twice.
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -16,11 +16,11 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with: { node-version: 22 }
       - name: Build dist/ (same command as Cloudflare Pages)
         run: node tools/deploy/build_site.mjs
@@ -34,7 +34,7 @@ jobs:
     needs: build
     timeout-minutes: 10
     if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write

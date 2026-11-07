@@ -7,17 +7,20 @@ permissions:
   contents: read
 concurrency:
   group: ci-${{ github.ref }}
-  cancel-in-progress: true
+  # Cancel superseded runs only for pull requests: a push to main must
+  # always run to completion, so its test/build/browser verdicts stay
+  # trustworthy (fix #3).
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       LANG: C.UTF-8
       TZ: UTC
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with: { node-version: 22 }
       # setup-python gives a pip that is not "externally managed" (the system python on the image refuses `pip install`).
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
@@ -45,18 +48,18 @@ jobs:
   build-dist:
     # Builds dist/ exactly as the Cloudflare Pages build command does, verifies every precache URL exists in it,
     # then runs the local deploy check (headers, MIME, service worker scope, fonts, CSP, size limits).
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with: { node-version: 22 }
       - run: node tools/deploy/build_site.mjs
       - run: node tools/deploy/check-deploy.mjs --root dist
   browser:
     # Browser tier (Playwright + Chromium + axe-core) as its own job, in parallel with `test`.
     # Browser regressions are required: this job must NOT be continue-on-error, so install failures and test failures stay visible.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       LANG: C.UTF-8
@@ -66,7 +69,7 @@ jobs:
       ALEF_REPORT_DIR: ${{ github.workspace }}/reports
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with: { node-version: 22 }
       - run: mkdir -p "$ALEF_REPORT_DIR"
       - name: Playwright (installed here only, never saved, not an app dependency) and Chromium with its system libraries

@@ -77,7 +77,7 @@ export function mount(root) {
             h('span', { class: 'wf-game-level' }, 'LEVEL ' + level + ' / 9'),
             h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
             h('span', { class: 'show-tile-hook' }, hook),
-            id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null))));
+            id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null)))));
   });
   root.replaceChildren(h('article', { class: 'card wf-games-hub' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),

@@ -24,17 +24,18 @@ A 1280×640 crop of the wide home screen sits at [`.github/social-preview.png`](
 
 ## Status
 
-Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio is mostly a list of scripts: no recorded teacher, and 87 short word clips with a synthetic voice that no native speaker has reviewed (count as of 2026-11-05 from `cat data/audio/summary.json`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 21,136 short clips with a synthetic voice that no native speaker has reviewed (19,453 counted by `cat data/audio/summary.json`, plus 1,488 book-page clips and 195 others that the summary does not yet count; counts as of 2026-11-07, `find audio -name '*.mp3' | wc -l`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine
 run) at phone size, unit tests, and read-through content checks written by the repo itself. What has not: any real phone or
-screen reader, any real recording (0 of 24,906 listed clips exist; sound is the browser's voice), any approved image (0 of
-1,797), and any review of the Hebrew (0 of 3,718 rows in the review packs). Today's QA and content-check results are
+screen reader, any real recording (0 of 25,122 listed clips are a person's voice; 19,453 are synthetic), any review of the
+1,231 approved images by a teacher (approved in `data/images/approvals.json` by the maintainer, 1,836 rows in the manifest,
+counts as of 2026-11-07), and any review of the Hebrew (0 of 3,718 rows in the review packs). Today's QA and content-check results are
 summarised in [docs/STATUS.md](docs/STATUS.md); the step list for going live is
 [docs/deploy/GO-LIVE-CHECKLIST.md](docs/deploy/GO-LIVE-CHECKLIST.md) (nothing on it has been done).
 
-**v0 versus preview.** The app has 86 routes. 15 are tier `v0` (the baby-steps first release: welcome, home, first day, the
+**v0 versus preview.** The app has 157 routes (counted 2026-11-07; 63 of them are games, 62 picture books share one `book` route). 19 are tier `v0` (the baby-steps first release: welcome, home, first day, the
 r01 to r10 lesson path and review, letters and atlas, progress, settings with backup/restore/delete, about, credits, privacy,
 install, offline, search). The other 71 are tier `preview`: still reachable by direct link and search, but unreviewed, labelled
 "Preview" and shown only in a collapsed group in the More sheet. The tier is the `tier` field on `ROUTES` in

@@ -1,33 +1,35 @@
-# ALEF status (counts re-run 2026-11-05 on `main` 0f0daea; prose sections below carry their own dates)
+# ALEF status (counts re-run 2026-11-07 on `main` 6334857; prose sections below carry their own dates)
 
-How to read this file. The Counts table was re-run on 2026-11-05 in a fresh clone of `main` at 0f0daea; the command is beside each figure. Anything not re-run is marked STALE and keeps its older date. Other agents and a bot push to `main` all day, so any count can already be out of date. `docs/INDEX.md` has the per-folder file counts (checked by `node tools/docs/index.mjs --check`). Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone.
+How to read this file. The Counts table was re-run on 2026-11-07 in a clone of `main` at 6334857 (the earlier pass was 2026-11-05 at 0f0daea); the command is beside each figure. Anything not re-run is marked STALE and keeps its older date. Other agents and a bot push to `main` all day, so any count can already be out of date. `docs/INDEX.md` has the per-folder file counts (checked by `node tools/docs/index.mjs --check`). Nothing here says the content is correct, reviewed, heard by a learner or run on a real phone.
 
 ## Counts
 
-All rows re-run 2026-11-05 unless marked STALE.
+All rows re-run 2026-11-07 unless marked STALE.
 
 | Fact | Value | Command |
 |---|---|---|
-| Routes in the route table | 87 (10 with a nav entry, 45 marked optional; 15 tier `v0`, 72 `preview`) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` |
-| View files | 79 | `find src -name '*.view.js' \| wc -l` |
-| JS files under src | 270 | `find src -name '*.js' \| wc -l` |
+| Routes in the route table | 157 (10 with a nav entry, 51 marked optional; 19 tier `v0`, 138 `preview`; 63 with owner `games`) | `node -e "import('./src/shell/router.js').then(m=>console.log(m.ROUTES.length, m.ROUTES.filter(r=>r.nav).length, m.ROUTES.filter(r=>r.optional).length, m.ROUTES.filter(r=>r.tier==='v0').length))"` |
+| View files | 143 | `find src -name '*.view.js' \| wc -l` |
+| JS files under src | 380 | `find src -name '*.js' \| wc -l` |
 | Core lessons | 125 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/curriculum/lessons.json')).lessons.length)"` |
 | Intermediate lessons | 50 (I-01 to I-50) | `ls data/curriculum/lessons-intermediate \| grep -c '^I-[0-9]*\.json$'` |
 | Vocabulary records | 6,303 | `node -e "console.log(JSON.parse(require('fs').readFileSync('data/vocab/meta.json')).counts.total)"` |
 | Corpus (reader) records | 70 entries in `data/corpus/registry.json`; 2 full reader texts with trope (`shema`, `priestly-blessing`) | `registry.json` `.entries.length`; `ls data/corpus/reader` |
-| Image prompts in the manifest | 1,797 rows | `wc -l data/images/manifest.csv` (1,798 lines, header included) |
-| Images by ingest status | 1,797 rows: ingested 914, approved 0, rejected 0, flagged 187, not yet generated 883 | `node tools/images/ingest.mjs status` (ALL row) |
-| Images approved | 0 (`approvals` is `{}` in `data/images/approvals.json`), so no generated image is shown to learners | read `data/images/approvals.json` |
+| Image prompts in the manifest | 1,836 rows | `wc -l data/images/manifest.csv` (1,837 lines, header included) |
+| Images by ingest status | 1,836 rows: ingested 1,096, approved 1,096, rejected 0, flagged 206, not yet generated 740 | `node tools/images/ingest.mjs status` (ALL row) |
+| Images approved | 1,231 entries in `data/images/approvals.json`, all `approved`, 0 rejected. Approved by the maintainer's own review, not by a teacher or native speaker | `node -e` over `data/images/approvals.json` |
 | Draft image review copies | 1,500 PNG files under `docs/drafts/images-review`: draft copies, not approved, not wired into the app | `find docs/drafts/images-review -type f -name '*.png' \| wc -l` |
 | Draft animation poses | 764 SVG files under `docs/drafts/animation-poses` (plus 13 JSON and 1 README): drafts, not approved, not wired into the app | `find docs/drafts/animation-poses -type f -name '*.svg' \| wc -l` |
-| Image files on disk | 1,828 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs` | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` |
-| Audio clips listed in the manifests | 24,906 (6,384 in `manifest.json`; 6,174 in each of the three `manifest-words-*.json`) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` |
-| Audio clips, by status | As of 2026-11-05: 0 recorded by a person, 87 synthetic and unreviewed (all `synthetic-unreviewed`, Israeli style only, single words, voice slot `m`), 24,819 `missing`. In words: 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. Files: 87 `.mp3` (each with a sidecar) under `audio/`; none under `assets/`. Licence of the synthetic clips: unknown, not cleared. Reports: `docs/audio/INGEST-REPORT-83.md`, `docs/audio/INGEST-REPORT-88.md`. Nobody has listened to them. | `cat data/audio/summary.json` gives `{"total":24906,"recorded":0,"tts":87}`; `find audio -name '*.mp3' \| wc -l` gives 87; `node --test tests/audio.truth.test.js` checks the summary against the manifests and the files |
-| Test files | 276 `*.test.js` in `tests/` (counts files, not passes) | `ls tests/*.test.js \| wc -l` |
-| Docs | 3,594 files under `docs/` (2,346 in `docs/drafts`, 402 in `docs/qa`, 205 in `docs/images`; the rest in `docs/INDEX.md`) | `find docs -type f \| wc -l` |
-| Metadata scan | PASS: zero findings; 914 allowlisted | `node tools/meta/scan.mjs` |
-| Text scan for tool names | PASS (7,901 tracked files, 20 allowlisted) | `node tools/meta/scan.mjs --text` |
-| Deploy build | 822 files, 46.12 MiB; install list (precache) 338 files, 3.91 MiB (version 30882f835280). A local build only: nothing is deployed; `dist/` was deleted afterwards | `node tools/deploy/build_site.mjs` |
+| Image files on disk | 2,285 in `assets/img/gen`, 797 in `assets/img/placeholders`, 54 in `assets/img/refs`; 82 book pictures of 744 pages in `assets/books`; 0 of 67 arcade pictures in `assets/games/arcade` | `for d in gen placeholders refs; do find assets/img/$d -type f \| wc -l; done` |
+| Audio clips listed in the manifests | 25,122 per `data/audio/summary.json` (`manifest.json` now holds 2,824 top-level entries; 6,174 in each of the three `manifest-words-*.json`) | `node -e` over `data/audio/manifest.json` and `data/audio/manifest-words-{ashkenazi,israeli,sephardi}.json` |
+| Audio clips, by status | As of 2026-11-07: 0 recorded by a person; 19,453 synthetic (`synthetic-unreviewed`) counted by the summary; 21,136 `.mp3` files under `audio/` in all, so 1,683 files (1,488 book-page clips under `audio/{m,f}/israeli/book/` and 195 others) are on disk but not yet in the summary, and `tests/audio.truth.test.js` fails on that gap (2 of 10). In words: a synthetic voice, unreviewed by native speakers; no recorded teacher. None under `assets/`. Licence of the synthetic clips: unknown, not cleared. Nobody has listened to them all. Arcade voice lines: 0 of 370 recorded (`docs/games/arcade-voice-lines.csv`) | `cat data/audio/summary.json` gives `{"total":25122,"recorded":0,"tts":19453}`; `find audio -name '*.mp3' \| wc -l` gives 21,136; `node --test tests/audio.truth.test.js` |
+| Picture books | 62 (`book1` to `book62`), 744 pages; 1,488 page clips recorded with a synthetic voice (`m` and `f`), 82 page pictures of 744 on disk. Text written in this repo, unreviewed by a native speaker | `ls data/books \| grep -c '^book[0-9]*\.json$'`; `find assets/books -name '*.jpg' \| wc -l` |
+| Games | 63 routes with owner `games`; the 30 newest (the Arcade, levels 1 to 5, merged 2026-11-07) are listed in `docs/games/ARCADE-30.md`; asset lists in `docs/games/ARCADE-COMMANDS.md` (0 of 67 pictures, 0 of 370 voice lines in place) | `node -e` over `ROUTES` filtering `owner==='games'` |
+| Test files | 342 `*.test.js` in `tests/` (counts files, not passes) | `ls tests/*.test.js \| wc -l` |
+| Docs | 3,815 files under `docs/` (per-folder counts in `docs/INDEX.md`) | `find docs -type f \| wc -l` |
+| Metadata scan | FAIL: 110 findings in 80 files, 1,116 allowlisted; the findings are a tool name in one `DECISIONS.json` and embedded C2PA/JUMBF blocks in generated PNGs, all inside one overnight-image folder under `assets/` whose own name is the tool name (rename it to clear both scans) | `node tools/meta/scan.mjs` |
+| Text scan for tool names | FAIL: 70 findings, 20 files allowlisted (the same overnight-image folder under `assets/`, its name and the files inside it) | `node tools/meta/scan.mjs --text` |
+| Deploy build | STALE (2026-11-05): 822 files, 46.12 MiB. Install list re-run 2026-11-07: 361 files installed, 594 on demand, version 680a7d9abb55, under the 3.95 MiB budget (`node tools/build-precache.mjs`). A local build only: nothing is deployed; `dist/` was deleted afterwards | `node tools/deploy/build_site.mjs` |
 | Deploy check | 46 of 46 pass, 3 warnings (42 files with no Cache-Control rule; two origins named in `src/photo/engines/web.js`), against that `dist/` | `node tools/deploy/check-deploy.mjs --root dist` |
 | GitHub Actions on `main` | Latest runs listed at 10:20 UTC on 2026-11-05: `pages` success (three of three), `ci` unfinished in two and cancelled in one (a newer push cancels the older run). Read with `gh run list`; not a statement that CI is green | `gh run list --limit 6` |
 

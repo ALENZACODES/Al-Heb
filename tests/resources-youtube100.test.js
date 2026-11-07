@@ -75,7 +75,7 @@ test('the note admits the caption limits', () => {
 
 test('top100.md lists 100 videos with a status each and coverage that adds up', () => {
   const md = readFileSync(new URL('top100.md', docDir), 'utf8');
-  const rows = md.split('\n').filter((l) => /^\| \d+ \| /.test(l));
+  const rows = md.split(/\r?\n/).filter((l) => /^\| \d+ \| /.test(l));
   assert.equal(rows.length, 100);
   const statuses = ['read', 'fetched, not read', 'unusable', 'no captions', 'blocked'];
   const counts = Object.fromEntries(statuses.map((s) => [s, 0]));

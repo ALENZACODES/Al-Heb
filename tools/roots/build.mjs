@@ -6,6 +6,12 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { lintString } from '../hebrew-lint/lint.mjs';
 import { rootFamilies } from '../../src/grammar/model.js'; // the stricter existing filter (letters appear in the word, gloss quality, de-duplication, 3+ words)
+import { EXPLORER_VERB_RULE } from '../../src/roots/model.js';
+
+/** True when a word-list verb is copied into data/roots/verbs.json. `inFamily` means its id is in a root family of two or more words. */
+export function inExplorer(w, inFamily) {
+  return !!(w && w.binyan && w.forms && (w.modernRank <= 5000 || inFamily));
+}
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 // Source pointing is copied as is, EXCEPT a string with two vowels (or other conflicting marks) on one letter, which the Hebrew lint (#722) rejects.
@@ -35,12 +41,12 @@ export function build(words) {
   const families = [...groups].filter(([, v]) => v.length >= 2).map(([r, v]) => ({ root: r, size: v.length, ruleChecked: checked.has(r), verified: verified.has(r), checkedIds: checked.has(r) ? v.filter((x) => checked.get(r).has(x.id)).map((x) => x.id) : [], words: v.sort(byRank) })).sort((a, b) => b.size - a.size || (a.root < b.root ? -1 : 1));
   const verbsAll = ok.filter((w) => w.pos === 'verb');
   const inFam = new Set(families.flatMap((f) => f.words.map((x) => x.id)));
-  const verbs = verbsAll.filter((w) => w.binyan && w.forms && (w.modernRank <= 5000 || inFam.has(w.id))).map((w) => ({ ...row(w, skipped), root: w.root || null })).sort(byRank);
+  const verbs = verbsAll.filter((w) => inExplorer(w, inFam.has(w.id))).map((w) => ({ ...row(w, skipped), root: w.root || null })).sort(byRank);
   const binyanCount = {};
   for (const w of verbsAll) if (w.binyan) binyanCount[w.binyan] = (binyanCount[w.binyan] || 0) + 1;
   const coverage = { verbs: verbsAll.length, verbsWithRoot: verbsAll.filter((w) => w.root).length, verbsWithBinyan: verbsAll.filter((w) => w.binyan).length, verbsWithForms: verbsAll.filter((w) => w.forms).length,
     rootsAll: groups.size, familiesOf2Plus: families.length, familiesOf3Plus: families.filter((f) => f.size >= 3).length, familiesRuleChecked: families.filter((f) => f.ruleChecked).length, familiesVerified: families.filter((f) => f.verified).length, binyanCount };
-  const note = 'Copied from data/vocab/words.json (roots and binyan labels come from its dictionary source, not checked by a Hebrew teacher; some links are loose). Unreviewed.';
+  const note = 'Copied from data/vocab/words.json (roots and binyan labels come from its dictionary source, not checked by a Hebrew teacher; some links are loose). Unreviewed. ' + EXPLORER_VERB_RULE;
   return { skipped, families: { schema: 1, source: 'data/vocab/words.json', note, coverage, families }, verbs: { schema: 1, source: 'data/vocab/words.json', note, formKeys: ['present', 'future', 'infinitive'], count: verbs.length, verbs } };
 }
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {

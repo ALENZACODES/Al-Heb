@@ -49,7 +49,7 @@ export function mount(root, ctx) {
   }
 
   function renderFamilies() {
-    const nodes = [el('p', {}, coverageText(fam.coverage)), field('rt-q', 'Find a root (Hebrew letters) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; renderList(); })];
+    const nodes = [el('p', { 'data-coverage': '1' }, coverageText(fam.coverage, verbs && verbs.verbs)), field('rt-q', 'Find a root (Hebrew letters) or a word (English or sounds-like)', q, (v) => { q = v; selRoot = null; renderList(); })];
     const list = el('div', { class: 'rt-list' }), detail = el('div', { class: 'rt-detail' });
     function renderList() {
       const res = searchFamilies(fam.families, q, 30);

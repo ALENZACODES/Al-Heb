@@ -3,7 +3,7 @@
  *               #/learn?gender=roles                    (gr-jm-02 say-as-me / hear-as-you)
  */
 import { el, heText, tr, replaceKeepingFocus, storeGet } from "./dom.js";
-import { loadGender, orderFor, buildQuiz, gradeTap, genderedForms, composeParadigm } from "./gender.js";
+import { loadGender, orderFor, buildQuiz, gradeTap, composeParadigm, genderInventory, genderCountText } from "./gender.js";
 import { GENDER_KEY, saveGender, setLearnerGender } from "./actions.js";
 import { tokenize } from "./fade.js";
 import { draftNotice, voiceSelector, voiceButton, audioStatus, settingVoice } from "./ex-ui.js";
@@ -41,7 +41,8 @@ export function mountGender(root, ctx, mode = "pairs", q = {}) {
     if (!alive) return;
     const shared = ctx?.settings?.get?.("gender"); // the shared Settings choice wins; "both" or unset only affects which form is listed first (both forms are always shown)
     let iAm = shared === "f" || shared === "m" ? shared : saved?.iAm === "f" ? "f" : "m";
-    const head = () => [draftNotice(ctx, GRAMMAR_NOTE, voiceHonesty), el("div", { class: "row" }, sel.node, iAmChooser())];
+    const countLine = () => el("p", { class: "muted", "data-gender-counts": "1" }, genderCountText(genderInventory(g.pairs, g.paradigms)));
+    const head = () => [draftNotice(ctx, GRAMMAR_NOTE, voiceHonesty), countLine(), el("div", { class: "row" }, sel.node, iAmChooser())];
     function iAmChooser() {
       return el("div", { class: "alef-iam row", role: "radiogroup", "aria-label": "I am" }, el("span", { class: "muted" }, "I am: "),
         ...["m", "f"].map((v) => el("button", { type: "button", class: "btn secondary", role: "radio", "aria-checked": String(iAm === v), "data-iam": v,

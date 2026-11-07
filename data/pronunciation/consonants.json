@@ -839,18 +839,18 @@
     "ashkenazi": "[ʃ] / [s]"
    },
    "english": {
-    "israeli": "sh with the right dot, s with the left dot",
-    "sephardi": "sh with the right dot, s with the left dot",
-    "ashkenazi": "sh with the right dot, s with the left dot",
-    "american_synagogue": "sh with the right dot, s with the left dot"
+    "israeli": "sh with the right dot (shin), s with the left dot (sin)",
+    "sephardi": "sh with the right dot (shin), s with the left dot (sin)",
+    "ashkenazi": "sh with the right dot (shin), s with the left dot (sin)",
+    "american_synagogue": "sh with the right dot (shin), s with the left dot (sin)"
    },
    "say": {
-    "israeli": "Shin says SH, like shh; left dot, S as in sit.",
-    "sephardi": "Shin says SH, like shh; left dot, S as in sit.",
-    "ashkenazi": "Shin says SH, like shh; left dot, S as in sit."
+    "israeli": "Shin says sh with the right dot; Sin says s with the left dot.",
+    "sephardi": "Shin says sh with the right dot; Sin says s with the left dot.",
+    "ashkenazi": "Shin says sh with the right dot; Sin says s with the left dot."
    },
    "changesSound": true,
-   "notes": "Lithuanian Ashkenazi historically merged both as [s] (historical).",
+   "notes": "Lithuanian Ashkenazi historically merged both as [s] (historical). The beginner sentence is a draft clarification and is native-review-needed. It is not a native-verified correction.",
    "sources": [
     {
      "label": "Wikipedia: Niqqud",

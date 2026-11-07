@@ -279,6 +279,8 @@ test("gender pairs view: own form first, voice selector passes the voice to ctx.
   const store = memStore(); const root = new Node_("div");
   const un = mountLearn(root, ctxFor(store, { gender: "pairs" }, { audio })); await waitFor(() => /No audio yet/.test(root.text), { message: "/No audio yet/.test(root.text)" });
   assert.match(root.text, /Draft/); assert.match(root.text, /No audio yet/);
+  assert.match(root.text, /pair cards:/); assert.match(root.text, /paradigms, counted separately/);
+  assert.doesNotMatch(root.text, /70\s*\+/);
   const first = root.find((n) => n.attrs["data-pair"] === "gp-04")[0];
   assert.equal(first.find((n) => n.attrs["data-form"])[0].attrs["data-form"], "m");
   assert.ok(root.find((n) => n.attrs.lang === "he" && n.attrs.dir === "rtl").length > 10);
@@ -313,6 +315,8 @@ test("gender roles view: two role choosers, swap changes both lines, no audio bu
   const store = memStore(); const root = new Node_("div");
   mountLearn(root, ctxFor(store, { gender: "roles" }, { audio: audioMock(() => false) })); await waitFor(() => /You hear/.test(root.text), { message: "/You hear/.test(root.text)" });
   assert.match(root.text, /You say/); assert.match(root.text, /You hear/); assert.match(root.text, /No audio yet/);
+  assert.match(root.text, /pair cards:/); assert.match(root.text, /composed forms/);
+  assert.doesNotMatch(root.text, /70\s*\+/);
   const before = root.text;
   await btn(root, /Swap roles/).click(); await waitFor(() => root.text !== before, { message: "root.text !== before" });
   assert.notEqual(root.text, before);

@@ -5,7 +5,8 @@
  *
  * The builder (2026-11-07): a letter tray with the whole alef-bet, opened a few letters at a time (progressive depth: the first
  * screen shows only the letters of three suggested 3-4 letter words; each word built opens more; "All letters" is one tap away).
- * Tap, keyboard (Hebrew letter keys, Backspace, Enter) or drag a tile onto the word. A word is recognised by its letters against
+ * Tap a tile or use the keyboard (Hebrew letter keys, Backspace, Enter); the motor rule (tests/motor.test.js) allows no dragging
+ * anywhere in the app. A word is recognised by its letters against
  * data/firstday/buildable-words.json (1,044 words, each with an Israeli clip for both voices on disk). On a match the pointed
  * word, its transliteration and English are shown, the clip plays in the learner's voice through ctx.audio.play (the status line
  * says what played, via playLine), a brief celebration follows (none in calm mode or with reduced motion) and the word counts
@@ -390,13 +391,11 @@ export async function mount(root, ctx) {
     const glyph = final ? L.final : L.he;
     const id = final ? L.finalId : L.id;
     const name = final ? `Final ${L.name}` : L.name;
-    const tile = h('button', {
-      type: 'button', class: `btn secondary fw-tile${needed ? ' is-needed' : ''}`, 'data-id': id, 'data-he': glyph, draggable: 'true',
+    return h('button', {
+      type: 'button', class: `btn secondary fw-tile${needed ? ' is-needed' : ''}`, 'data-id': id, 'data-he': glyph,
       'aria-label': `${name}${needed ? ', in this word' : ''}`,
       onclick: () => placeLetter(glyph),
     }, heSpan(glyph, 'he fw-tile-he'), h('span', { class: 'fw-tile-name', 'aria-hidden': 'true' }, name));
-    tile.addEventListener('dragstart', (ev) => { try { ev.dataTransfer.setData('text/plain', glyph); ev.dataTransfer.effectAllowed = 'copy'; } catch { /* ignore */ } });
-    return tile;
   }
 
   function renderBuild() {
@@ -412,8 +411,6 @@ export async function mount(root, ctx) {
     const slots = h('div', {
       class: `fw-word${built ? ' is-built' : ''}`, dir: 'rtl', lang: 'he', 'data-live': 'word',
       role: 'group', 'aria-label': 'Your word', tabindex: '0',
-      ondragover: (ev) => { ev.preventDefault(); try { ev.dataTransfer.dropEffect = 'copy'; } catch { /* ignore */ } },
-      ondrop: (ev) => { ev.preventDefault(); let he = ''; try { he = ev.dataTransfer.getData('text/plain'); } catch { /* ignore */ } if (he) placeLetter(he); },
     },
       built ? heSpan(built.he, 'he fw-word-he') : (placed.length ? heSpan(wf.text, 'he fw-word-he') : h('span', { class: 'fw-word-empty', 'aria-hidden': 'true' }, '· · ·')),
     );

@@ -25,6 +25,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |
 | `classtrack` | keep | Teacher and class use. |
 | `morning` | keep | Daily habit. |
+| `firstwin` | keep | Minute One word builder: the home page's "Try it now" leads here; 1,044 words with clips for both voices (docs/firstday/BUILDER-2026-11-07.md). |
 | `timedread` | merge | Into `read` as an option; it is a timer on the same texts. |
 | `share` | keep | Small and self-contained. |
 | `classsummary` | hide | Teacher-only view; reached from `classtrack` or by link. |

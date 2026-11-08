@@ -43,12 +43,14 @@ test('glyphFor uses letters.json record when valid, else built-in', () => {
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'ב' }]), 'ב');
   assert.equal(glyphFor('bet', [{ id: 'bet', he: 'x' }]), GLYPHS.bet);
 });
-test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', { skip: !hasSegno && 'python module segno not installed (CI installs segno==1.6.6; locally: pip install segno)' }, () => {
-  const html = buildHtml(parseArgs([]));
+test('book HTML: 27 letter pages, RTL Hebrew spans, draft opening prayer block, URL map', () => {
+  const html = buildHtml(parseArgs(hasSegno ? [] : ['--no-qr']));
   assert.equal((html.match(/<section class="letter"/g) || []).length, 27);
   assert.match(html, /lang="he" dir="rtl"/);
   assert.match(html, /Prayer for the One Who Begins/); assert.match(html, /pending clergy\/educator review/); assert.match(html, /Hineni/);
   for (const id of LETTER_IDS) assert.ok(html.includes(letterUrl('alef.example.org', id)), id);
-  assert.match(html, /Illustrations produced with an image tool and edited by the author/);
+  assert.match(html, /Colophon, sources and statuses/);
+  assert.match(html, /the opening prayer, Hebrew texts and handwriting data still need educator review/);
+  assert.match(html, /SIL Open Font License 1\.1/);
   assert.throws(() => parseArgs(['--trim', '1x1']));
 });

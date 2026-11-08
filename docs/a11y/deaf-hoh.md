@@ -16,6 +16,7 @@ Lane: Deaf and hard of hearing. Draft. Written 2026-11-04.
 
 | Where (file) | What it does with sound | Hearing needed? | What a Deaf or hard of hearing learner gets now |
 |---|---|---|---|
+| `src/home/builder.js` | Optional word and symbol playback, including slow playback; hover/hold can preview a symbol. | No | Hebrew, pronunciation and meaning stay visible. Click or keyboard activation builds the word; separate Play controls provide the same sound without holding. |
 | `src/audio/player.js`, `src/shell/audio.js`, `src/shell/audio-stub.js`, `src/shell/audio-access.js` | The sound engine: clip (synthetic, unreviewed; no recorded clip exists), else the browser's Hebrew voice, else nothing. | Engine only | Every outcome is also written as text in a status line. With `audioFree` the shared `audioButton` helper draws nothing. |
 | `src/shell/names.js`, `src/shell/ui.js` | `names.js`: the spoken form of the divine name used as speech text. `ui.js`: re-exports the shared `audioButton`. | No | Text only. |
 | `src/curriculum/audio-ui.js` (`playButton`), `src/curriculum/ex-ui.js` (`voiceButton`) | The Listen button used by lessons, review, fade-out and gender cards. | No (extra) | With `audioFree` the button is not drawn (a hidden empty span), so lessons, review and fade-out show only the written content. |

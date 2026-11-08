@@ -6,10 +6,11 @@ on: [push, pull_request]
 permissions:
   contents: read
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.event_name }}-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
   # Cancel superseded runs only for pull requests: a push to main must
   # always run to completion, so its test/build/browser verdicts stay
-  # trustworthy (fix #3).
+  # trustworthy (fix #3). Pushes need their own group: GitHub otherwise replaces
+  # the older pending run even when cancel-in-progress is false.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   test:

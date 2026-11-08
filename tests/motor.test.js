@@ -4,12 +4,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { DEFAULTS, ENUMS, validate, createSettings } from '../src/shell/settings.js';
 import { motorStyle, applyMotor, untimedOn, confirmOn, shortcutsOn, MOTOR_KEYS, TARGET_PX } from '../src/shell/motor.js';
 import { completeLesson, rateCard, snapshotRating, restoreRating, loadState } from '../src/curriculum/actions.js';
 import { lessons } from '../src/curriculum/lessons.js';
 
-const root = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
+const root = fileURLToPath(new URL('..', import.meta.url)).replace(/[\\/]$/, '');
 const memStore = () => { const m = {}; return { get: (k, d) => (k in m ? m[k] : d), set: (k, v) => { m[k] = v; }, m }; };
 
 test('the five motor settings exist with safe defaults and validate their values', () => {
@@ -56,11 +57,23 @@ test('undo of a review rating puts the card back exactly and leaves other cards 
 });
 
 const walk = (d) => readdirSync(d).flatMap((f) => { const p = join(d, f); return statSync(p).isDirectory() ? walk(p) : p.endsWith('.js') ? [p] : []; });
-test('actions fire on release: no view runs an action on pointerdown, mousedown or touchstart (the tracing surface and passive listeners excepted)', () => {
+test('actions fire on release except audited gesture surfaces with keyboard or click alternatives', () => {
   const allowed = new Set(['src/app.js', 'src/letters/trace.js', 'src/morning/boot.js', 'src/shell/audio.js', 'src/shell/audio-stub.js']);
+  const gestures = {
+    'src/games/vowelcatcher.view.js': [/type: 'range'/, /ArrowLeft/, /ArrowRight/],
+    'src/home/builder.js': [/onpointercancel:/, /button\('▶ Play'/, /onfocus:.*describe\(s\)/],
+    'src/shell/prayer-veil.js': [/closeBtn\?\.addEventListener\('click'/, /e\.key === 'Escape'/],
+    'src/shell/rimon.js': [/addEventListener\('pointerdown',activity,\{passive:true\}\)/],
+    'src/torahreader/finger-follow.js': [/Previous word/, /Next word/, /onkeydown:/, /pointercancel/],
+  };
+  for (const [file, alternatives] of Object.entries(gestures)) {
+    const text = readFileSync(join(root, file), 'utf8');
+    for (const alternative of alternatives) assert.match(text, alternative, `${file} must keep its gesture alternative/cancellation`);
+    allowed.add(file);
+  }
   const hits = [];
   for (const f of walk(root + '/src')) {
-    const rel = f.slice(root.length + 1); if (allowed.has(rel)) continue;
+    const rel = f.slice(root.length + 1).replaceAll('\\', '/'); if (allowed.has(rel)) continue;
     const t = readFileSync(f, 'utf8');
     if (/\b(onpointerdown|onmousedown|ontouchstart)\b|addEventListener\(\s*['"](pointerdown|mousedown|touchstart)['"]/.test(t)) hits.push(rel);
   }

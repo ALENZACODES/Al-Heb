@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 class N {
   constructor(tag) { this.tag = tag; this.nodeType = 1; this.children = []; this.attrs = {}; this.listeners = {}; this.parent = null; this.className = ''; }
@@ -218,13 +219,13 @@ test('silent reading guide: steps need no sound, make no sign-language or lip-re
 // ---------------------------------------------------------------------------------------------- inventory guard
 function walk(dir, out = []) { for (const n of readdirSync(dir)) { const p = join(dir, n); if (statSync(p).isDirectory()) walk(p, out); else if (p.endsWith('.js')) out.push(p); } return out; }
 test('inventory: every source file that plays, records or listens is named in docs/a11y/deaf-hoh.md', () => {
-  const root = new URL('..', import.meta.url).pathname;
+  const root = fileURLToPath(new URL('..', import.meta.url));
   const doc = read('docs/a11y/deaf-hoh.md');
   const re = /audio\??\.play|\.playSequence|speechSynthesis|MediaRecorder|SpeechRecognition|new Audio\(|audio\.has|playButton|voiceButton|audioButton/;
   const mine = new Set(['src/shell/audiofree.js', 'src/shell/silent-reading.js', 'src/pronunciation/soundtext.js']);
   const missing = [];
   for (const f of walk(join(root, 'src'))) {
-    const rel = f.slice(root.length);
+    const rel = f.slice(root.length).replaceAll('\\', '/');
     if (mine.has(rel)) continue;
     if (re.test(readFileSync(f, 'utf8')) && !doc.includes('`' + rel + '`')) missing.push(rel);
   }

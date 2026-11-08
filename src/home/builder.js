@@ -45,7 +45,6 @@ export function builderNode(ctx = {}) {
       onfocus: () => describe(s),
       onpointerdown: () => { held=false; clearTimeout(hoverTimer); hoverTimer=setTimeout(()=>{held=true;describe(s,true);},550); },
       onpointerup: () => clearTimeout(hoverTimer), onpointercancel: () => clearTimeout(hoverTimer),
-      oncontextmenu: e => e.preventDefault(),
     });
     b.append(heSpan((mark ? '◌' : '') + s.glyph), h('span', { class: 'builder-key-name' }, s.translit));
     return b;

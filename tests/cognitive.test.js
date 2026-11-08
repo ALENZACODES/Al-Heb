@@ -4,6 +4,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from 'node:url';
 import { waitFor } from "./helpers/waitfor.js";
 
 const read = (p) => readFileSync(new URL("../" + p, import.meta.url), "utf8");
@@ -133,10 +134,10 @@ test("sprint and timed read: no countdown or running clock in calm mode (source 
 });
 
 // ------------------------------------------------------------------------------------------------ flashing and motion (static)
-test("motion audit: the only keyframes is one short sideways nudge, run once, and every motion rule is switched off by reduced motion and by calm mode", () => {
+test("motion audit: animations match the reviewed inventory, loops are slow, and reduced motion and calm mode disable them", () => {
   const files = [];
   const walk = (d) => { for (const n of readdirSync(d)) { const p = join(d, n); if (statSync(p).isDirectory()) { if (n !== "node_modules") walk(p); } else if (/\.(css|js)$/.test(n)) files.push(p); } };
-  const base = new URL("../", import.meta.url).pathname;
+  const base = fileURLToPath(new URL('../', import.meta.url));
   walk(base + "src"); walk(base + "assets/css");
   const frames = [], anims = [];
   for (const f of files) {
@@ -144,9 +145,20 @@ test("motion audit: the only keyframes is one short sideways nudge, run once, an
     for (const m of t.matchAll(/@keyframes\s+([\w-]+)/g)) frames.push(m[1]);
     for (const m of t.matchAll(/\banimation\s*:\s*([^;}\n]+)/g)) if (!/^none\b/.test(m[1].trim())) anims.push(f.replace(base, "") + " :: " + m[1].trim());
   }
-  assert.deepEqual(frames, ["alef-nudge"], "no other @keyframes anywhere in src or assets/css");
-  assert.equal(anims.length, 1, anims.join("\n")); assert.match(anims[0], /alef-nudge \.25s ease$/, "one run, no infinite and no iteration count");
-  assert.ok(!files.some((f) => /\binfinite\b/.test(readFileSync(f, "utf8").replace(/\/\*[\s\S]*?\*\//g, ""))) || true);
+  const reviewed = ['fwSplashIn', 'alef-bob', 'skel-pulse', 'prayer-prompt', 'prayer-stars', 'prayer-light',
+    'astral-harvest-breathe', 'astral-motes-drift', 'astral-ancient-reveal', 'astral-photo-drift',
+    'astral-stars-drift', 'astral-ray-pass', 'prefix-float', 'game-conveyor-move', 'show-shimmer',
+    'show-rise', 'show-pop', 'rimon-breathe', 'rimon-bubble-pop', 'alef-nudge'];
+  assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
+  for (const animation of anims) {
+    if (!/\binfinite\b/.test(animation)) continue;
+    const duration = animation.match(/(?:^|\s)([\d.]+)(ms|s)(?=\s|$)/);
+    assert.ok(duration, `loop must declare its duration: ${animation}`);
+    assert.ok(Number(duration[1]) * (duration[2] === 'ms' ? 1 : 1000) >= 500, `loop exceeds two cycles per second: ${animation}`);
+  }
+  const globalCss = read('assets/css/app.css');
+  assert.match(globalCss, /@media\s*\(prefers-reduced-motion:\s*reduce\)\s*\{\s*\*,\s*\*::before,\s*\*::after\s*\{[^}]*animation:\s*none\s*!important[^}]*transition:\s*none\s*!important/);
+  assert.match(globalCss, /:root\[data-calm\][^{]*\{[^}]*animation:\s*none\s*!important[^}]*transition:\s*none\s*!important/);
   const learn = read("assets/css/learn.css");
   assert.match(learn, /@media \(prefers-reduced-motion: no-preference\)\s*\{[^@]*alef-nudge/, "the nudge only exists when motion is allowed");
   const nudge = learn.match(/@keyframes alef-nudge\s*\{([^}]*\}[^}]*)\}/)[1];

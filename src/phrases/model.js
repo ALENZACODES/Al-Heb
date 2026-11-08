@@ -17,8 +17,15 @@ export const VOICE_LABEL = { m: 'man', f: 'woman' };
 const HEBREW = /[֐-׿]/;
 const NIQQUD = /[\u0591-\u05C7]/;
 
-/** Shared playback (docs/audio/PLAYBACK-CONTRACT.md on chatgpt/games-enrich-2026-11-06, commit 8f37d4ba) is not in this checkout. */
-export const PLAYBACK_CONTRACT_LANDED = false;
+/** Playback contract: ctx.audio.play(kind, id, { voice, tradition, rate }).
+ *  The shared player in this checkout (src/audio/player.js) satisfies that
+ *  call and reports via:'exact' for the exact file; playPhraseClip's
+ *  sameSlot guard below stays as the enforcement that nothing else is ever
+ *  passed off as the chosen slot. Landed Nov 7 2026: the earlier gate (the
+ *  contract's home branch was never merged) left every phrase on this page
+ *  silent even though its clips were already in the catalogue — usability
+ *  review U-02 / journey J5. */
+export const PLAYBACK_CONTRACT_LANDED = true;
 
 export const nfc = (s) => String(s ?? '').normalize('NFC');
 
@@ -310,9 +317,11 @@ function sameSlot(result, options) {
 }
 
 /**
- * Thin adapter for the unmerged playback contract.
- * This checkout does not contain that player. Until PLAYBACK_CONTRACT_LANDED is true, nothing is played.
- * Tests pass contractLanded: true with a fake ctx.audio. A device voice, another tradition, or another voice comes back as unavailable.
+ * Thin adapter for the playback contract (landed: PLAYBACK_CONTRACT_LANDED).
+ * A result that is not the exact requested file — a device voice, another
+ * tradition, or another voice — comes back as unavailable here; the view
+ * may still OFFER those as their own honestly labelled buttons, playing
+ * each slot's own catalogue row, never passing one off as another.
  */
 export async function playPhraseClip(ctx, request, { contractLanded = PLAYBACK_CONTRACT_LANDED } = {}) {
   const call = playbackCall(request);
@@ -389,11 +398,11 @@ export function coverageMarkdown(phrases) {
   lines.push(`Phrases with no exact normal clip in any tradition or voice: **${none.length}** of ${n}.`);
   if (none.length) lines.push(none.map((p) => `- ${p.id}: ${p.en} (${p.review})`).join('\n'));
   lines.push('');
-  lines.push('Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This build does not play audio at any speed. A normal file is not entered in the slow column.');
+  lines.push('Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This page plays a listed normal clip when you tap Listen; it never plays the normal file more slowly in place of a slow recording. A normal file is not entered in the slow column.');
   lines.push('');
   lines.push('Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`, source `paid-cloud`). They are not native human recordings.');
   lines.push('');
-  lines.push('Playback: `docs/audio/PLAYBACK-CONTRACT.md` on unmerged branch `chatgpt/games-enrich-2026-11-06` (commit 8f37d4ba) is not in this checkout. This page does not call the current player, because that player can substitute a tradition or a device voice. Catalogue rows are listed. The control says audio unavailable until that contract is merged.');
+  lines.push('Playback: this page plays through the shared player (src/audio/player.js), asking for the exact catalogue row of the chosen style and voice; a result that is not that exact file is refused, and nothing else is played in its place. Where the chosen style and voice have no row, the page offers another slot\'s own row as its own button, labelled with its real voice and style. Where no row exists at all, it offers the device voice, labelled as a device voice (Israeli-style only).');
   lines.push('');
   lines.push('D-07 (audit): the gender-pair drills, the six role-play paradigms, and the seven Israel dialogues still have no clips of their own. This batch does not copy those screens. One role-play line, "Can I help you?", is referenced by id and has no catalogue row. Dialogue lines stay on the dialogues page.');
   lines.push('');

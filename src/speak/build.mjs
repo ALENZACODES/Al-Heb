@@ -60,6 +60,16 @@ export function buildSets({ words, packs, manifestTexts }) {
     if (items.length < 4) continue;
     sets.push({ schema: 'alef-speak-set/1', id: 'speak-' + p.id, title: p.title, theme: p.topic, level: p.level, track: p.track, pack: p.id, note: NOTE, items });
   }
+  // U-15: one curated first-day set, FIRST in the list, so a new learner's
+  // default Say-it set is the words the first ten minutes teach (usability
+  // review, Part 5) — not whichever pack sorts first (café). Exact pointed
+  // texts looked up in words.json; a word absent there is skipped, never
+  // invented, and glosses stay the dictionary's own.
+  const FIRST_DAY = ['שָׁלוֹם', 'תּוֹדָה', 'בְּבַקָּשָׁה', 'מַיִם', 'בֹּקֶר טוֹב', 'לַיְלָה טוֹב', 'נָעִים מְאֹד'];
+  const byText = new Map(words.filter((w) => typeof w.he === 'string').map((w) => [normalizeHe(w.he), w]));
+  const fdItems = FIRST_DAY.map((t) => byText.get(normalizeHe(t))).filter((w) => w && w.translit && w.en)
+    .map((w) => ({ id: w.id, he: w.he, translit: w.translit, en: w.en, kind: w.kind === 'phrase' ? 'phrase' : 'word', audioId: manifestTexts.get(w.he.normalize('NFC')) || null, source: 'data/vocab/words.json' }));
+  if (fdItems.length >= 4) sets.unshift({ schema: 'alef-speak-set/1', id: 'speak-first-day', title: 'First day: hello, thanks, water', theme: 'first-day', level: 'A1', track: 'israel', pack: 'first-day', note: NOTE, items: fdItems });
   return sets;
 }
 

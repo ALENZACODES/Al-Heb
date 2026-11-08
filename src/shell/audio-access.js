@@ -39,6 +39,57 @@ export function audioAccess(audio, kind, id, o = {}) {
 /** One-line status chip text for an access result ('' when nothing to say). */
 export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
 
+const VOICE_NAME = { m: 'Ari (the man’s voice)', f: 'Noa (the woman’s voice)' };
+/** Plain name of a voice slot, for honest fallback labels ("Hear Noa (the woman's voice)"). */
+export function voiceName(v) { return VOICE_NAME[v] || 'the other voice'; }
+const otherVoice = (v) => (v === 'm' ? 'f' : 'm');
+
+/**
+ * The honest fallback ladder for an item with no clip in the learner's own
+ * voice/tradition (usability review U-02: a missing recording must never be a
+ * silent dead end). Pure probing — nothing plays here.
+ *   1. the OTHER voice's file for the same item, honestly labelled as that voice;
+ *   2. the device voice, only where the text is known and the refusal was the
+ *      tradition guard (the player reads Israeli-style; the label says so).
+ * @returns {{kind:'voice', voice:string, label:string}|{kind:'device', label:string}|null}
+ */
+export function ladderStep(audio, kind, id, o = {}, ctx) {
+  if (!audio || typeof audio.status !== 'function') return null;
+  const curVoice = o.voice || (ctx && ctx.settings && typeof ctx.settings.get === 'function' ? ctx.settings.get('voice') : null) || 'f';
+  const alt = otherVoice(curVoice);
+  try {
+    const a = audioAccess(audio, kind, id, { ...o, voice: alt });
+    if (a.level === 'file') return { kind: 'voice', voice: alt, label: a.label, forVoice: curVoice };
+  } catch { /* fall through to the device step */ }
+  const primary = audioAccess(audio, kind, id, o);
+  if (primary.reason === 'tts-pronunciation-mismatch' && typeof o.text === 'string' && o.text.trim() && deviceVoiceState() !== 'no') {
+    return { kind: 'device', label: DEVICE_LABEL };
+  }
+  return null;
+}
+
+/**
+ * Play with a visible in-flight state (U-06): while the play promise is
+ * unsettled the button carries data-playing + .is-playing and a stop glyph,
+ * and a second tap stops the sound instead of stacking another play.
+ * Resolves with the play result (or null); never throws.
+ */
+export async function playWithState(ctx, btn, kind, id, opts) {
+  const audio = ctx && ctx.audio;
+  if (!audio || typeof audio.play !== 'function') return null;
+  if (btn && btn.dataset && btn.dataset.playing === '1') { try { audio.stop && audio.stop(); } catch { /* ignore */ } return null; }
+  const glyph = btn && typeof btn.querySelector === 'function' ? (btn.querySelector('[data-glyph]') || btn.querySelector('span')) : null;
+  const oldGlyph = glyph ? glyph.textContent : null;
+  if (btn && btn.dataset) { btn.dataset.playing = '1'; if (btn.classList) btn.classList.add('is-playing'); }
+  if (glyph) glyph.textContent = '■';
+  try { return await audio.play(kind, id, opts); }
+  catch { return null; }
+  finally {
+    if (btn && btn.dataset) { delete btn.dataset.playing; if (btn.classList) btn.classList.remove('is-playing'); }
+    if (glyph && oldGlyph !== null) glyph.textContent = oldGlyph;
+  }
+}
+
 /**
  * A play button that is only a button when sound is possible. Otherwise a one-line "No audio yet" with the respelling.
  * @param {Function} h element factory (src/shell/ui.js h)
@@ -57,9 +108,28 @@ export function audioButton(h, ctx, o) {
   const opt = {}; if (o.voice) opt.voice = o.voice; if (o.tradition) opt.tradition = o.tradition;
   if (typeof o.text === 'string' && o.text.trim()) opt.text = o.text;
   const a = audioAccess(ctx && ctx.audio, kind, id, opt);
-  if (a.level === 'none' && !a.checking) {
-    return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
-  }
+  // No clip in the learner's own voice/tradition: offer the ladder (U-02)
+  // before falling back to the plain "No audio yet" line.
+  const noneNode = () => {
+    const step = ladderStep(ctx && ctx.audio, kind, id, opt, ctx);
+    if (!step) return h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '');
+    const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, step.label);
+    const playOpts = step.kind === 'voice' ? { ...opt, voice: step.voice } : { ...opt, allowMismatchedTts: true };
+    const btnLabel = step.kind === 'voice' ? `Hear ${VOICE_NAME[step.voice]}` : 'Hear the device voice';
+    const lead = step.kind === 'voice' ? `No clip in ${VOICE_NAME[step.forVoice]} for this yet.` : 'No clip for this yet.';
+    const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', ...(o.buttonId ? { id: o.buttonId } : {}), ...(o.attrs || {}), 'data-audio': `${kind}/${id}`, 'data-audio-state': 'ladder', 'data-ladder': step.kind,
+      'aria-label': `${btnLabel}${o.name ? `: ${o.name}` : ''} (${step.label})`,
+      onclick: async () => {
+        try {
+          if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
+          note.textContent = step.label;
+          const r = await playWithState(ctx, btn, kind, id, playOpts);
+          if (r && r.source === 'none') note.textContent = NO_AUDIO;
+        } catch { note.textContent = NO_AUDIO; }
+      } }, h('span', { 'aria-hidden': 'true', 'data-glyph': '' }, '▶'), ' ', btnLabel);
+    return h('span', { class: 'audio-wrap' }, h('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, lead), ' ', btn, ' ', note);
+  };
+  if (a.level === 'none' && !a.checking) return noneNode();
   const note = o.note || h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, a.checking ? 'Checking audio...' : a.label);
   const btn = h('button', { type: 'button', class: o.class || 'btn secondary alef-play', ...(o.buttonId ? { id: o.buttonId } : {}), ...(o.attrs || {}), 'data-audio': `${kind}/${id}`, 'data-audio-state': a.level,
     'aria-label': `${label}${o.name ? `: ${o.name}` : ''} (${a.checking ? 'checking audio' : a.label})`,
@@ -69,10 +139,10 @@ export function audioButton(h, ctx, o) {
         const now = audioAccess(ctx.audio, kind, id, opt);
         if (now.level === 'none') { note.textContent = respelling ? `${NO_AUDIO}. Say it as written: ${respelling}` : NO_AUDIO; return; }
         note.textContent = now.label;
-        const r = await ctx.audio.play(kind, id, opt);
+        const r = await playWithState(ctx, btn, kind, id, opt);
         if (r && r.source === 'none') note.textContent = `${NO_AUDIO}${respelling ? `. Say it as written: ${respelling}` : ''}`;
       } catch { note.textContent = NO_AUDIO; }
-    } }, h('span', { 'aria-hidden': 'true' }, '▶'), ' ', label);
+    } }, h('span', { 'aria-hidden': 'true', 'data-glyph': '' }, '▶'), ' ', label);
   const wrap = h('span', { class: 'audio-wrap' }, btn, ' ', note);
   // The first answer can be "checking audio..." (the clip list loads the first time something asks). The shell re-renders a route once for
   // that, but not in the middle of an exercise (word tracing), so the button used to stay on "Checking audio..." until it was pressed.
@@ -80,7 +150,7 @@ export function audioButton(h, ctx, o) {
     Promise.resolve(ctx.audio.ensureManifest()).then(() => {
       const now = audioAccess(ctx.audio, kind, id, opt);
       if (now.checking) return;
-      if (now.level === 'none') { wrap.replaceWith(h('span', { class: o.noneClass || 'audio-none muted', 'data-audio-state': 'none' }, NO_AUDIO, respelling ? ` - say it as written: ${respelling}` : '')); return; }
+      if (now.level === 'none') { wrap.replaceWith(noneNode()); return; }
       btn.setAttribute('data-audio-state', now.level); btn.setAttribute('aria-label', `${label}${o.name ? `: ${o.name}` : ''} (${now.label})`);
       if (!o.note) note.textContent = now.label;
     }).catch(() => {});

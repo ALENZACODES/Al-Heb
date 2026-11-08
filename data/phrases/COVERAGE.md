@@ -16,10 +16,10 @@ A numerator counts a phrase when the grammatical form for that gender (or the on
 Phrases with no exact normal clip in any tradition or voice: **1** of 50.
 - role-gpar-04: Can I help you? (draft-needs-native-review)
 
-Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This build does not play audio at any speed. A normal file is not entered in the slow column.
+Separate slow files: **0**. That count is files only. It is not a claim that a shared 0.7× control could not play a normal file more slowly. This page plays a listed normal clip when you tap Listen; it never plays the normal file more slowly in place of a slow recording. A normal file is not entered in the slow column.
 
 Review status is copied from the source (`native-speaker-needed: …` on phrasebook lines, `draft-needs-native-review` on the role-play line). No line is marked human-reviewed or native-reviewed. Israeli clips that match are synthetic text-to-speech files (catalogue status `tts`, source `paid-cloud`). They are not native human recordings.
 
-Playback: `docs/audio/PLAYBACK-CONTRACT.md` on unmerged branch `chatgpt/games-enrich-2026-11-06` (commit 8f37d4ba) is not in this checkout. This page does not call the current player, because that player can substitute a tradition or a device voice. Catalogue rows are listed. The control says audio unavailable until that contract is merged.
+Playback: this page plays through the shared player (src/audio/player.js), asking for the exact catalogue row of the chosen style and voice; a result that is not that exact file is refused, and nothing else is played in its place. Where the chosen style and voice have no row, the page offers another slot's own row as its own button, labelled with its real voice and style. Where no row exists at all, it offers the device voice, labelled as a device voice (Israeli-style only).
 
 D-07 (audit): the gender-pair drills, the six role-play paradigms, and the seven Israel dialogues still have no clips of their own. This batch does not copy those screens. One role-play line, "Can I help you?", is referenced by id and has no catalogue row. Dialogue lines stay on the dialogues page.

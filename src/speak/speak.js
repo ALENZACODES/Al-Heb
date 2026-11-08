@@ -254,9 +254,11 @@ export function mount(root, ctx) {
     };
     const showVerdict = (text, extra) => { verdict.hidden = false; verdict.removeAttribute?.('hidden'); verdict.replaceChildren(el('p', {}, el('strong', {}, text)), extra || ''); say(text); };
     const selfButtons = (prefix = '') => {
+      // U-17: a self-mark is practise, not a grade — the verdict says so at
+      // the point of use, not only in the setup notes.
       const bs = [
-        el('button', { type: 'button', class: 'btn', id: 'speak-said', onclick: () => { showVerdict(`${prefix}Marked as said.`); settle({ outcome: 'said' }); } }, 'I said it'),
-        el('button', { type: 'button', class: 'btn secondary', id: 'speak-notyet', onclick: () => { showVerdict(`${prefix}Marked as not yet; it will come round again.`); settle({ outcome: 'notyet' }); } }, 'Not yet'),
+        el('button', { type: 'button', class: 'btn', id: 'speak-said', onclick: () => { showVerdict(`${prefix}Marked as said.`, el('p', { class: 'muted' }, 'Your own mark — self-check practise, not a grade.')); settle({ outcome: 'said' }); } }, 'I said it'),
+        el('button', { type: 'button', class: 'btn secondary', id: 'speak-notyet', onclick: () => { showVerdict(`${prefix}Marked as not yet; it will come round again.`, el('p', { class: 'muted' }, 'Your own mark — self-check practise, not a grade.')); settle({ outcome: 'notyet' }); } }, 'Not yet'),
       ];
       attemptButtons.push(...bs);
       return bs;
@@ -301,12 +303,12 @@ export function mount(root, ctx) {
           if (!r.ok) { showVerdict(errorText(r.error)); return; }
           if (player) player.remove?.();
           player = el('audio', { controls: true, src: r.url, 'aria-label': 'Your recording' });
-          showVerdict(`Recorded ${Math.round(r.ms / 100) / 10} seconds. Play it back, then decide.`, el('div', {}, player, el('div', { class: 'sk-opts' }, ...selfButtons())));
+          showVerdict(`Recorded ${Math.round(r.ms / 100) / 10} seconds. Play it back, then decide.`, el('div', {}, player, el('p', { class: 'muted' }, 'You grade this one yourself — self-check practise, not a grade.'), el('div', { class: 'sk-opts' }, ...selfButtons())));
         }
       } }, 'Record');
       attemptButtons.push(rec); area.append(rec);
     } else {
-      area.append(...selfButtons());
+      area.append(...selfButtons(), el('p', { class: 'muted' }, 'No microphone in this mode: you mark it yourself. Practise on your own — no grading.'));
     }
     setBody(
       el('p', { class: 'muted' }, `${set.title}: ${n} of ${items.length}`),

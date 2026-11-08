@@ -1,14 +1,17 @@
 // Common phrases and sentences (#/phrases, #/phrases/:id). Preview.
-// Playback goes through playPhraseClip, which follows the unmerged shared contract and
-// does not play on this checkout.
+// Playback goes through playPhraseClip: the exact catalogue row for the chosen
+// style and voice, or — as its own labelled button — another slot's own row,
+// or the device voice where no row exists (usability review U-02).
 import { h, heSpan } from '../shell/ui.js';
+import { DEVICE_LABEL } from '../shell/audio-access.js';
+import { speechText } from '../shell/names.js';
 import {
   TRADITIONS, VOICES, TRAD_LABEL, VOICE_LABEL, loadPhraseScreen, formLabel, addressNotices, audioHonesty, contentHonesty, cellClip, playPhraseClip,
 } from './model.js';
 
 const NO_AUDIO = 'No audio yet';
-const UNAVAILABLE = 'Audio unavailable. Shared playback is not in this build, so this clip is not played.';
-const SLOW_MISSING = 'No separate slow recording. This build does not play the normal file more slowly.';
+const SLOW_MISSING = 'No separate slow recording. This page does not play the normal file more slowly.';
+const SETTING_VOICE = { m: 'the man’s voice', f: 'the woman’s voice' };
 
 function readChoice(ctx, key, allowed, fallback) {
   const q = ctx?.query?.[key];
@@ -50,61 +53,129 @@ export function mount(root, ctx) {
     const note = h('p', { class: 'alef-audio-note', role: 'status', 'aria-live': 'polite' });
 
     const intro = () => [
-      h('p', { class: 'draft-flag', role: 'note' }, contentHonesty(phrases[0]?.review) + ' A listed clip is the catalogue row for this exact line, this pronunciation style, and this voice. This build does not play it.'),
-      h('p', { class: 'muted' }, 'This is a first set from ALEF’s phrasebook, plus one role-play line. It is not every Hebrew phrase. If the catalogue has no row for this style and voice, you will see “No audio yet”.'),
+      h('p', { class: 'draft-flag', role: 'note' }, contentHonesty(phrases[0]?.review) + ' A listed clip is the catalogue row for this exact line, this pronunciation style, and this voice. Tap Listen to hear it.'),
+      h('p', { class: 'muted' }, 'This is a first set from ALEF’s phrasebook, plus one role-play line. It is not every Hebrew phrase. If the catalogue has no row for this style and voice, the page offers another voice’s own clip, or the device voice — each labelled as what it is.'),
       h('p', { class: 'muted' }, 'Israel dialogues stay on their own page. They are not repeated here. The role-play line “Can I help you?” has no catalogue row.'),
     ];
 
     function selectors() {
+      // U-05: the page's choices start from Settings and say so; these
+      // buttons change this page only, Settings changes everywhere.
+      const sVoice = ctx?.settings?.get?.('voice'); const sTrad = ctx?.settings?.get?.('congregation');
+      const fromSettings = h('p', { class: 'muted', 'data-settings-mirror': '' },
+        `Voice and style start from your Settings (${SETTING_VOICE[VOICES.includes(sVoice) ? sVoice : 'f']}, ${TRAD_LABEL[TRADITIONS.includes(sTrad) ? sTrad : 'israeli']} style). These buttons change this page only; change them in Settings to change everywhere.`);
       return h('div', { class: 'alef-phrases-choices' },
+        fromSettings,
         choiceRow('Pronunciation style', TRADITIONS.map((t) => [t, TRAD_LABEL[t]]), tradition, (id) => { tradition = id; note.textContent = ''; draw(); }),
         choiceRow('Narrator', VOICES.map((v) => [v, v === 'f' ? 'Woman' : 'Man']), voice, (id) => { voice = id; note.textContent = ''; draw(); }));
+    }
+
+    // Other slots of this form that DO have a normal clip, best offer first:
+    // same narrator in Israeli, then the other narrator in Israeli, then the rest.
+    function ladderClips(form) {
+      const out = [];
+      for (const t of TRADITIONS) for (const v of VOICES) {
+        if (t === tradition && v === voice) continue;
+        const c = form.audio?.[t]?.[v]?.normal;
+        if (c) out.push(c);
+      }
+      const rank = (c) => (c.tradition === 'israeli' ? 0 : 2) + (c.voice === voice ? 0 : 1);
+      return out.sort((a, b) => rank(a) - rank(b));
     }
 
     function clipLine(form) {
       const normal = form.audio?.[tradition]?.[voice]?.normal || null;
       const slow = form.audio?.[tradition]?.[voice]?.slow || null;
-      const listed = normal
-        ? h('div', { class: 'row' },
-          h('p', {
-            class: 'muted alef-noaudio',
-            'data-audio-state': 'unavailable',
-            'data-clip-id': normal.id,
-            'data-audio-speed': 'normal',
-          }, UNAVAILABLE),
+      let listed;
+      if (normal) {
+        listed = h('div', { class: 'row' },
           h('button', {
             type: 'button',
             class: 'btn secondary',
             'data-act': 'listen',
-            'aria-label': `Listen: ${formLabel(form) || 'phrase'}. ${TRAD_LABEL[normal.tradition]}, ${VOICE_LABEL[normal.voice]}. Playback may be unavailable.`,
-            onclick: () => ask(normal, 'normal'),
-          }, 'Listen'))
-        : h('p', { class: 'muted alef-noaudio', 'data-audio-state': 'none' }, NO_AUDIO);
+            'data-audio-speed': 'normal',
+            'aria-label': `Listen: ${formLabel(form) || 'phrase'}. ${TRAD_LABEL[normal.tradition]}, ${VOICE_LABEL[normal.voice]}.`,
+            onclick: (e) => ask(normal, 'normal', e?.currentTarget),
+          }, 'Listen'));
+      } else {
+        const ladder = ladderClips(form);
+        if (ladder.length) {
+          // U-02 ladder, step 1: another slot's own clip, as its own button,
+          // labelled with its real voice and style — never passed off as the
+          // chosen slot.
+          const best = ladder[0];
+          listed = h('div', {},
+            h('p', { class: 'muted alef-noaudio', 'data-audio-state': 'ladder' }, `No clip in ${TRAD_LABEL[tradition]}, ${VOICE_LABEL[voice]} for this line yet.`),
+            h('div', { class: 'row' }, h('button', {
+              type: 'button',
+              class: 'btn secondary',
+              'data-act': 'listen-ladder',
+              'data-clip-id': best.id,
+              'data-audio-speed': 'normal',
+              'aria-label': `Listen: ${formLabel(form) || 'phrase'}. ${TRAD_LABEL[best.tradition]}, ${VOICE_LABEL[best.voice]}.`,
+              onclick: (e) => ask(best, 'normal', e?.currentTarget),
+            }, `Hear the ${VOICE_LABEL[best.voice]}’s voice (${TRAD_LABEL[best.tradition]})`)),
+            h('span', { class: 'muted' }, audioHonesty(best)));
+        } else if (ctx?.audio && typeof ctx.audio.play === 'function') {
+          // U-02 ladder, step 2: no catalogue row anywhere — the device voice,
+          // labelled as a device voice before it makes a sound.
+          listed = h('div', {},
+            h('p', { class: 'muted alef-noaudio', 'data-audio-state': 'device' }, 'No clip for this line yet.'),
+            h('div', { class: 'row' }, h('button', {
+              type: 'button',
+              class: 'btn secondary',
+              'data-act': 'listen-device',
+              'aria-label': `Listen with the device voice: ${formLabel(form) || 'phrase'}. ${DEVICE_LABEL}.`,
+              onclick: (e) => askDevice(form, e?.currentTarget),
+            }, 'Hear the device voice')),
+            h('span', { class: 'muted' }, DEVICE_LABEL + '.'));
+        } else {
+          listed = h('p', { class: 'muted alef-noaudio', 'data-audio-state': 'none' }, NO_AUDIO);
+        }
+      }
       const slowNode = slow
         ? h('button', {
           type: 'button',
           class: 'btn secondary',
           'data-act': 'listen-slow',
           'data-clip-id': slow.id,
-          onclick: () => ask(slow, 'slow'),
+          onclick: (e) => ask(slow, 'slow', e?.currentTarget),
         }, 'Listen slowly')
         : h('p', { class: 'muted alef-noaudio', 'data-audio-speed': 'slow', 'data-audio-state': 'none' }, SLOW_MISSING);
-      const detail = normal ? h('span', { class: 'muted' }, audioHonesty(normal)) : null;
+      const detail = normal ? h('span', { class: 'muted', 'data-clip-id': normal.id }, audioHonesty(normal)) : null;
       return h('div', {}, listed, slowNode, detail);
     }
 
-    async function ask(clip, rate) {
-      note.textContent = 'Checking playback…';
+    async function ask(clip, rate, btn) {
+      note.textContent = 'Playing…';
+      if (btn) { btn.disabled = true; if (btn.classList) btn.classList.add('is-playing'); }
       try {
         const result = await playPhraseClip(ctx, {
           kind: clip.kind, id: clip.id, voice: clip.voice, tradition: clip.tradition, rate,
         });
         if (!alive) return;
         if (result.source === 'file') note.textContent = audioHonesty(clip);
-        else if (result.reason === 'playback-contract-not-landed') note.textContent = UNAVAILABLE;
         else note.textContent = 'No audio yet. Nothing else was played.';
       } catch {
         if (alive) note.textContent = 'No audio yet. Nothing else was played.';
+      } finally {
+        if (btn) { btn.disabled = false; if (btn.classList) btn.classList.remove('is-playing'); }
+      }
+    }
+
+    async function askDevice(form, btn) {
+      note.textContent = DEVICE_LABEL + '.';
+      if (btn) { btn.disabled = true; if (btn.classList) btn.classList.add('is-playing'); }
+      try {
+        const r = await ctx.audio.play('line', 'phrase-device-voice', {
+          text: speechText(form.he), tradition: 'israeli', voice, allowMismatchedTts: true,
+        });
+        if (!alive) return;
+        note.textContent = r && r.source === 'tts-fallback' ? DEVICE_LABEL + '.' : 'No audio yet. Nothing else was played.';
+      } catch {
+        if (alive) note.textContent = 'No audio yet. Nothing else was played.';
+      } finally {
+        if (btn) { btn.disabled = false; if (btn.classList) btn.classList.remove('is-playing'); }
       }
     }
 
@@ -172,13 +243,14 @@ export function mount(root, ctx) {
       const shown = phrases.filter((p) => category === 'all' || p.category === category);
       const items = shown.map((p) => {
         const has = !!cellClip(p, tradition, voice, 'normal');
+        const anyClip = TRADITIONS.some((t) => VOICES.some((v) => cellClip(p, t, v, 'normal')));
         const q = `?tradition=${tradition}&voice=${voice}`;
         return h('li', { class: 'alef-item', 'data-phrase': p.id },
           h('div', { class: 'alef-item-body' },
             h('div', { class: 'muted' }, p.categoryLabel),
             ...p.forms.map((f) => h('div', {}, heSpan(f.he, 'alef-he alef-word'))),
             h('div', {}, p.en),
-            h('div', { class: 'muted', 'data-audio-state': has ? 'unavailable' : 'none' }, has ? 'Clip listed. Playback unavailable in this build.' : NO_AUDIO)),
+            h('div', { class: 'muted', 'data-audio-state': has ? 'file' : anyClip ? 'ladder' : 'none' }, has ? 'Clip listed — open to listen.' : anyClip ? 'No clip in this voice — open for other voices.' : NO_AUDIO)),
           h('a', { class: 'btn secondary', href: `#/phrases/${encodeURIComponent(p.id)}${q}` }, 'Open'));
       });
       wrap.replaceChildren(h1, ...intro(), selectors(), note, tabs,

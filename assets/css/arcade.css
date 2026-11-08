@@ -5,6 +5,10 @@
 .arc-blurb { margin: .25rem 0 .5rem; }
 .arc-howto { margin: .25rem 0 .75rem; }
 .arc-howto ol { margin: .25rem 0 0 1.2rem; }
+.arc-howto > summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+.arc-howto[open] { padding: .25rem .75rem .6rem; border: 1px solid var(--line, #8a8a8a66); border-radius: 10px; }
+.arc-howto li + li { margin-top: .2rem; }
+.arc-board.is-ready, .arc-board.is-paused { opacity: .55; }
 .arc-levels { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0; }
 .arc-level { min-height: 44px; min-width: 44px; padding: .35rem .6rem; border-radius: 10px; border: 1px solid var(--line, #8a8a8a66); background: var(--card, transparent); display: grid; justify-items: center; line-height: 1.15; cursor: pointer; }
 .arc-level.is-current { outline: 2px solid var(--accent, #2a6); outline-offset: 2px; }
@@ -82,3 +86,4 @@ button.arc-cell:focus-visible { outline: 3px solid var(--accent, #2a6); outline-
 .arc-cast { max-height: 96px; display: block; margin: .25rem auto; }
 .arc-host { display: flex; gap: .6rem; align-items: center; justify-content: center; }
 .arc-host .arc-cast { max-height: 72px; margin: 0; }
+.arc-board.is-paused { pointer-events: none; }

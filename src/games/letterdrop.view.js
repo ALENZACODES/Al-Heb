@@ -10,14 +10,14 @@ const spec = {
   blurb: 'Letters rain down the lanes. Ari calls the letter; you run Noa\'s basket under it and let the rest fall. The lanes multiply and the rain gets faster.',
   howTo: ['Move the basket left and right (keys, pad or tap a lane).', 'Catch the letter named at the top. Catching another letter costs a life.', 'Each catch picks a new letter to find.', 'Twelve catches finish the level.'],
   levels: [
-    { name: '3 lanes', lanes: 3, speed: 60, goal: 10, pool: 6 },
-    { name: '3 lanes, faster', lanes: 3, speed: 48, goal: 12, pool: 9 },
-    { name: '4 lanes', lanes: 4, speed: 44, goal: 12, pool: 14 },
-    { name: '5 lanes', lanes: 5, speed: 40, goal: 14, pool: 22 },
-    { name: '5 lanes, finals, fast', lanes: 5, speed: 32, goal: 16, pool: 27 },
+    { name: '3 lanes', lanes: 3, speed: 140, goal: 10, pool: 6 },
+    { name: '3 lanes, faster', lanes: 3, speed: 120, goal: 12, pool: 9 },
+    { name: '4 lanes', lanes: 4, speed: 105, goal: 12, pool: 14 },
+    { name: '5 lanes', lanes: 5, speed: 90, goal: 14, pool: 22 },
+    { name: '5 lanes, finals, fast', lanes: 5, speed: 72, goal: 16, pool: 27 },
   ],
   par: (l, cfg) => cfg.goal * 10,
-  seconds: (l, cfg) => 80,
+  seconds: (l, cfg) => 150,
   needsWords: false,
 };
 

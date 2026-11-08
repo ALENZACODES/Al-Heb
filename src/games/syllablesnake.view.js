@@ -11,14 +11,14 @@ const spec = {
   blurb: 'Rimon leads a snake of syllables. Steer it to eat the word\'s syllables in order; every bite makes the tail longer. Hit a wall, your own tail, or the wrong syllable and the run ends.',
   howTo: ['The target word is shown at the top, syllable by syllable.', 'Move with the keys, the pad, or by tapping the side of the board.', 'Eat the next syllable in the word. Others are decoys.', 'Each level has longer words and a faster snake.'],
   levels: [
-    { name: '2 syllables, slow', size: 9, syl: 2, speed: 700, words: 4 },
-    { name: '2 syllables', size: 9, syl: 2, speed: 560, words: 5 },
-    { name: '3 syllables', size: 11, syl: 3, speed: 500, words: 5 },
-    { name: '3 syllables, fast', size: 11, syl: 3, speed: 420, words: 6 },
-    { name: '4 syllables', size: 13, syl: 4, speed: 380, words: 6 },
+    { name: '2 syllables, slow', size: 9, syl: 2, speed: 850, words: 4 },
+    { name: '2 syllables', size: 9, syl: 2, speed: 720, words: 5 },
+    { name: '3 syllables', size: 11, syl: 3, speed: 640, words: 5 },
+    { name: '3 syllables, fast', size: 11, syl: 3, speed: 560, words: 6 },
+    { name: '4 syllables', size: 13, syl: 4, speed: 480, words: 6 },
   ],
   par: (l, cfg) => cfg.words * cfg.syl * 10,
-  seconds: (l, cfg) => 100,
+  seconds: (l, cfg) => 120,
   needsWords: false, needsLetters: false,
 };
 

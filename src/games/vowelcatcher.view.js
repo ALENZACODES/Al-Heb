@@ -88,8 +88,9 @@ export function mount(root, ctx) {
   let stars = []; // {el, mark, x, y, speed}
   let raf = 0, last = 0, spawnAt = 0;
   let alive = true;
-  let paused = false;
   const reducedMotion = !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+  // With motion on, nothing falls until Start, so the learner can read how to play first. Still marks need no wait.
+  let paused = !reducedMotion;
 
   const announce = h('p', { class: 'game-status', role: 'status', 'aria-live': 'polite' });
   const speechNote = h('p', { class: 'muted', 'data-speech': 'catcher' });
@@ -112,14 +113,14 @@ export function mount(root, ctx) {
   function spawn(now) {
     const mark = MARKS[Math.floor(Math.random() * MARKS.length)];
     const image = imgOf(R, mark.img.kind, mark.img.id, mark.img.opts);
-    const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 22 + Math.random() * 16 };
+    const star = { el: null, mark, x: 6 + Math.random() * 88, y: reducedMotion ? 30 : -8, speed: reducedMotion ? 0 : 12 + Math.random() * 6 };
     if (reducedMotion) star.x = 8 + (stars.length % 5) * 18;
     const el = h('button', { type: 'button', class: 'catcher-star', 'aria-label': `Catch ${mark.name}`, onclick: () => resolveStar(star) },
       image ? h('img', { class: 'game-catcher-mark-img', src: image.src, alt: '', width: 60, height: 60, 'data-img-id': image.id }) : heSpan(mark.glyph));
     star.el = el;
     sky.append(el);
     stars.push(star); // %/s
-    spawnAt = now + 650 + Math.random() * 500;
+    spawnAt = now + 1600 + Math.random() * 800;
   }
 
   function resolveStar(s) {
@@ -202,12 +203,17 @@ export function mount(root, ctx) {
     pauseBtn.textContent = paused ? 'Resume' : 'Pause';
     pauseBtn.setAttribute('aria-pressed', String(paused));
     if (!paused && alive && letter) { last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(step); }
-  } }, 'Pause');
+  } }, paused ? 'Start' : 'Pause');
   const article = h('article', { class: 'card game-card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Vowel Catcher'),
       h('p', { class: 'muted' }, reducedMotion
         ? 'Reduced motion is on. The marks stay still. Tab to a mark and press it, or move the basket and pause.'
-        : 'Catch the named niqqud mark. Tab to Move and Pause, or to a mark. Arrow keys move the basket while this game is focused.'),
+        : 'Your letter sits in the basket at the bottom. Vowel marks fall like stars.'),
+      h('ol', { class: 'game-howto' },
+        h('li', {}, 'Read (or hear) the sound you need to make, for example "SHI".'),
+        h('li', {}, 'Slide the basket under the vowel mark that makes that sound: drag, tap the sky, or use the ← → keys.'),
+        h('li', {}, 'Catch it to score. Let the other marks fall past.'),
+        h('li', {}, 'Press Start when you are ready. Pause any time.')),
       h('div', { class: 'row' }, pauseBtn, place), hud, announce, speechNote, envHost, board);
   root.replaceChildren(article);
   Promise.all([loadDeck(ctx), loadGameImages(ctx)]).then(([deck, images]) => {

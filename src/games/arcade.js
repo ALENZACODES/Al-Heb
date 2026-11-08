@@ -74,6 +74,9 @@ export async function createArcade(root, ctx, spec) {
   let level = Math.min(record.unlocked || 1, Math.max(1, Number(ctx?.route?.query?.level) || record.unlocked || 1));
   let daily = false, rnd = Math.random, roundSetup = null, alive = true;
   let score = 0, misses = 0, lives = 0, startedAt = 0, timeLeft = 0, timerId = 0, loopId = 0, loops = [];
+  // readyAt: nothing moves and the clock does not run until the get-ready countdown ends. paused: same, on demand.
+  let readyAt = 0, paused = false, countdownIds = [];
+  const COUNTDOWN_S = 3;
   const keyHandlers = new Set();
 
   // Shell
@@ -88,15 +91,17 @@ export async function createArcade(root, ctx, spec) {
   const board = h('div', { class: 'arc-board', id: `arc-${spec.id}-board` });
   const controls = h('div', { class: 'arc-controls' });
   const results = h('div', { class: 'arc-results' });
+  const pauseBtn = h('button', { type: 'button', class: 'btn secondary arc-pause', 'aria-pressed': false, hidden: true, onclick: () => setPaused(!paused) }, 'Pause');
   const dailyBtn = h('button', { type: 'button', class: 'btn secondary arc-daily', 'aria-pressed': false, onclick: () => toggleDaily() }, 'Daily challenge');
-  const howTo = h('details', { class: 'arc-howto' }, h('summary', {}, 'How to play'), h('ol', {}, ...spec.howTo.map((s) => h('li', {}, uiEnglish(ctx, s)))));
+  // Open until the learner has finished one round of this game; after that it folds away but stays one tap off.
+  const howTo = h('details', { class: 'arc-howto', open: (record.plays || 0) === 0 ? true : undefined }, h('summary', {}, 'How to play'), h('ol', {}, ...spec.howTo.map((s) => h('li', {}, uiEnglish(ctx, s)))));
   const streakEl = h('p', { class: 'arc-streak muted' });
   root.replaceChildren(h('article', { class: 'card game-card arcade', 'data-game': spec.id },
     h('div', { class: 'arc-eyebrow' }, `ARCADE · ${spec.levels.length} LEVELS`),
     titleEl,
     art(spec.id, 'env', '', 'game-env arc-env'),
     h('p', { class: 'arc-blurb' }, uiEnglish(ctx, spec.blurb)),
-    howTo, levelBar, h('div', { class: 'row arc-row' }, dailyBtn), hud, status, board, controls, results, streakEl,
+    howTo, levelBar, h('div', { class: 'row arc-row' }, dailyBtn, pauseBtn), hud, status, board, controls, results, streakEl,
     h('p', { class: 'muted arc-foot' }, 'Scores and badges are saved on this device.')));
 
   // Data
@@ -133,10 +138,31 @@ export async function createArcade(root, ctx, spec) {
   function clearLoops() {
     for (const id of loops) cancelAnimationFrame(id);
     loops = [];
+    for (const id of countdownIds) clearTimeout(id);
+    countdownIds = [];
     if (timerId) { clearInterval(timerId); timerId = 0; }
+  }
+  function setPaused(on) {
+    if (!startedAt && on) return;
+    paused = !!on;
+    pauseBtn.textContent = paused ? 'Resume' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(paused));
+    board.classList.toggle('is-paused', paused);
+    status.textContent = paused ? 'Paused. Press Resume (or Esc) when you are ready.' : 'Playing.';
+  }
+  /** 3, 2, 1, Go: the board is visible (and the instructions readable) before anything moves or the clock runs. */
+  function countdown(lead) {
+    for (let n = COUNTDOWN_S; n >= 0; n--) {
+      countdownIds.push(setTimeout(() => {
+        if (!alive || !startedAt) return;
+        status.textContent = n > 0 ? `${lead} Get ready: ${n}` : `${lead} Go!`;
+        board.classList.toggle('is-ready', n > 0);
+      }, (COUNTDOWN_S - n) * 1000));
+    }
   }
   function tickTimer() {
     if (untimed) { hudTime.textContent = ''; return; }
+    if (paused || Date.now() < readyAt) { hudTime.textContent = `⏱ ${timeLeft}s`; return; }
     hudTime.textContent = `⏱ ${timeLeft}s`;
     if (timeLeft === 10) reactRimon('nervous');
     if (timeLeft <= 0) { A.finish({ reason: 'time' }); return; }
@@ -153,6 +179,9 @@ export async function createArcade(root, ctx, spec) {
     get daily() { return daily; },
     get rnd() { return rnd; },
     get record() { return record; },
+    /** Wall-clock time the round really starts (after the countdown). Use it, not Date.now(), as a round's t0. */
+    get readyAt() { return readyAt; },
+    get paused() { return paused; },
     cast: castArt,
     announce(text) { status.textContent = text; },
     addScore(n) { if(n > 0) reactRimon('bounce'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
@@ -193,12 +222,23 @@ export async function createArcade(root, ctx, spec) {
       });
       A.keys((k) => { if (['up', 'down', 'left', 'right'].includes(k)) onDir(k); });
     },
-    /** Step loop at intervalMs; paused while the page is hidden; stops at finish. */
+    /**
+     * Step loop at intervalMs. Holds still during the get-ready countdown, while paused and while the page is
+     * hidden; stops at finish. Steps are counted against real time, so a level's speed is the same on a 60 Hz
+     * phone and a 120 Hz laptop (the old frame-rounding made several levels run at the same pace).
+     */
     loop(step, intervalMs) {
       let last = 0;
       const frame = (t) => {
         if (!alive || !startedAt) return;
-        if (!document.hidden && t - last >= intervalMs) { last = t; try { step(); } catch (e) { console.warn(spec.id, e); } }
+        if (document.hidden || paused || Date.now() < readyAt) last = 0;
+        else if (!last) last = t;
+        else {
+          let n = 0;
+          while (startedAt && t - last >= intervalMs && n < 3) { last += intervalMs; n++; try { step(); } catch (e) { console.warn(spec.id, e); } }
+          if (t - last >= intervalMs) last = t; // after a long stall, do not race to catch up
+        }
+        if (!alive || !startedAt) return;
         loops.push(requestAnimationFrame(frame));
       };
       loops.push(requestAnimationFrame(frame));
@@ -210,7 +250,7 @@ export async function createArcade(root, ctx, spec) {
     finish({ reason = 'done', won = false } = {}) {
       if (!startedAt) return;
       const timeMs = Date.now() - startedAt;
-      startedAt = 0; clearLoops();
+      startedAt = 0; clearLoops(); setPaused(false); pauseBtn.hidden = true; board.classList.remove('is-ready');
       const par = spec.par(level, A.cfg);
       const previousBest = record.best;
       const out = applyResult(record, { level, score, par, misses, timeMs, daily, day: dayKey() });
@@ -254,7 +294,11 @@ export async function createArcade(root, ctx, spec) {
     if (!alive) return;
     clearLoops();
     results.replaceChildren();
-    score = 0; misses = 0; lives = 0;
+    score = 0; misses = 0; lives = 0; paused = false;
+    pauseBtn.hidden = false; pauseBtn.textContent = 'Pause'; pauseBtn.setAttribute('aria-pressed', 'false'); board.classList.remove('is-paused');
+    // Calm mode with no clock has nothing to get ready for; every other round counts in.
+    const lead = untimed && quiet ? 0 : COUNTDOWN_S;
+    readyAt = Date.now() + lead * 1000;
     hudScore.textContent = 'Score 0'; hudLives.textContent = '';
     rnd = daily ? seededRandom(seedFrom(`${spec.id}|${dayKey()}|${level}`)) : Math.random;
     renderLevels();
@@ -262,14 +306,17 @@ export async function createArcade(root, ctx, spec) {
     timeLeft = untimed ? 0 : Math.max(20, Math.round(spec.seconds ? spec.seconds(level, A.cfg) : 90));
     hudTime.textContent = untimed ? '' : `⏱ ${timeLeft}s`;
     if (!untimed) timerId = setInterval(tickTimer, 1000);
-    status.textContent = `Level ${level}: ${A.cfg?.name || ''}. ${daily ? 'Daily challenge board.' : ''}`.trim();
+    const levelLine = `Level ${level}: ${A.cfg?.name || ''}.${daily ? ' Daily challenge board.' : ''}`;
+    status.textContent = levelLine;
     try { roundSetup?.(A); } catch (e) { console.warn(spec.id, e); status.textContent = 'This round could not be set up. Try another level.'; }
+    if (lead) countdown(levelLine);
     A.sayLine(2);
   }
   function onKey(e) {
     if (!alive || !startedAt) return;
     if (e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
     const map = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right', w: 'up', s: 'down', a: 'left', d: 'right', ' ': 'space', Enter: 'enter' };
+    if (e.key === 'Escape') { setPaused(!paused); e.preventDefault(); return; }
     const k = map[e.key] || e.key;
     let used = false;
     for (const fn of keyHandlers) { try { if (fn(k, e) !== false) used = true; } catch { /* handler error must not kill the page */ } }

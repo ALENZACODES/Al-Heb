@@ -33,7 +33,7 @@ function setup(A) {
   const items = pickSeeded([...run, ...extras], size * size, rnd);
   while (items.length < size * size) items.push(null);
   const placed = pickSeeded(items, items.length, rnd);
-  let idx = 0; const t0 = Date.now();
+  let idx = 0; const t0 = Math.max(Date.now(), A.readyAt || 0);
   const prompt = A.h('p', { class: 'arc-prompt' });
   const { el, cells } = makeGrid(size, size, { label: 'Letters', onCell: (r, c, cell) => tap(r * size + c, cell) });
   placed.forEach((it, i) => { const cell = cells[Math.floor(i / size)][i % size]; cell.textContent = it ? it.he : ''; if (!it) { cell.classList.add('is-blank'); cell.disabled = true; } cell.setAttribute('aria-label', it ? it.name : 'empty'); });

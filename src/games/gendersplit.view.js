@@ -11,11 +11,11 @@ const spec = {
   blurb: 'Every Hebrew noun is he or she. Sort each word to Ari (masculine, זָכָר) or Noa (feminine, נְקֵבָה). Words ending in ה or ת are usually feminine, but the exceptions are where the points are.',
   howTo: ['A noun appears with its meaning.', 'Tap Ari (masculine) or Noa (feminine), or press ← for Ari and → for Noa.', 'The ending hint shows on the first two levels; later you decide from memory.', 'Twenty nouns per round; a streak multiplies points.'],
   levels: [
-    { name: 'Common nouns, hints on', count: 16, hint: true, perCard: 7 },
-    { name: 'More nouns, hints on', count: 20, hint: true, perCard: 6 },
-    { name: 'Hints off', count: 20, hint: false, perCard: 5 },
-    { name: 'Tricky endings', count: 22, hint: false, perCard: 5, tricky: true },
-    { name: 'Fast, tricky', count: 26, hint: false, perCard: 3.5, tricky: true },
+    { name: 'Common nouns, hints on', count: 16, hint: true, perCard: 8 },
+    { name: 'More nouns, hints on', count: 20, hint: true, perCard: 7 },
+    { name: 'Hints off', count: 20, hint: false, perCard: 6 },
+    { name: 'Tricky endings', count: 22, hint: false, perCard: 6, tricky: true },
+    { name: 'Fast, tricky', count: 26, hint: false, perCard: 5, tricky: true },
   ],
   par: (l, cfg) => cfg.count * 10,
   seconds: (l, cfg) => Math.round(cfg.count * cfg.perCard) + 10,
@@ -37,7 +37,7 @@ function setup(A) {
   const ari = A.h('button', { type: 'button', class: 'arc-bin', 'aria-label': 'Masculine, Ari (left arrow)', onclick: () => answer('m') }, A.cast('ari-side', ''), 'Ari · זָכָר (he)');
   const noa = A.h('button', { type: 'button', class: 'arc-bin', 'aria-label': 'Feminine, Noa (right arrow)', onclick: () => answer('f') }, A.cast('noa-side', ''), 'Noa · נְקֵבָה (she)');
   A.board.replaceChildren(he, en, bar, A.h('div', { class: 'arc-two' }, ari, noa));
-  let deck = [], n = 0, card = null, streak = 0, deadline = 0;
+  let deck = [], n = 0, card = null, streak = 0, leftMs = 0;
   const endsFem = (w) => /[הת]$/.test(w.he.replace(/[֑-ׇ]/g, ''));
   loadExtra(A.ctx).then((x) => {
     const m = x.gender.m, f = x.gender.f;
@@ -51,7 +51,7 @@ function setup(A) {
     card = deck[n++];
     he.textContent = card.he;
     en.textContent = `${card.en} · "${card.translit}"${cfg.hint ? (endsFem(card) ? ' · ends in ה/ת: usually she' : ' · no ה/ת ending: usually he') : ''} · ${n} of ${deck.length}`;
-    deadline = Date.now() + cfg.perCard * 1000;
+    leftMs = cfg.perCard * 1000;
     A.sayWord(card);
   };
   const answer = (g) => {
@@ -61,7 +61,7 @@ function setup(A) {
     next();
   };
   A.keys((k) => { if (k === 'left') { answer('m'); return true; } if (k === 'right') { answer('f'); return true; } return false; });
-  if (!A.untimed) A.loop(() => { if (!card) return; const left = Math.max(0, deadline - Date.now()); bar.firstChild.style.width = `${(100 * left) / (cfg.perCard * 1000)}%`; if (left <= 0) { streak = 0; A.miss(); A.announce(`Too slow: ${card.he} is ${card.gender === 'm' ? 'masculine' : 'feminine'}.`); next(); } }, 100);
+  if (!A.untimed) A.loop(() => { if (!card) return; leftMs = Math.max(0, leftMs - 100); const left = leftMs; bar.firstChild.style.width = `${(100 * left) / (cfg.perCard * 1000)}%`; if (left <= 0) { streak = 0; A.miss(); A.announce(`Too slow: ${card.he} is ${card.gender === 'm' ? 'masculine' : 'feminine'}.`); next(); } }, 100);
   A.setLives(0);
 }
 

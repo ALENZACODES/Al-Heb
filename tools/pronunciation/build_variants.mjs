@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { speechText } from '../../src/shell/names.js';
 // Rule-generated pronunciation variants (Israeli, Sephardi, Ashkenazi) for every vocab word and corpus phrase.
 //
 //   node tools/pronunciation/build_variants.mjs            writes data/pronunciation/variants/_*.json + _review.csv
@@ -140,7 +141,15 @@ export const GEMINATE = false;
 export function renderWord(he, ctx) {
   const flags = new Set();
   const notes = [];
-  const w = stripTaamim(he);
+  const original = stripTaamim(he);
+  const spoken = speechText(original);
+  if (spoken !== original) {
+    const rendered = renderWord(spoken, ctx);
+    // Match the established conventional name respelling used for the bare name.
+    rendered.variants.ashkenazi.simple = rendered.variants.ashkenazi.simple.replace(/adoynoy/g, 'adonoy');
+    return { ...rendered, he: original, flags: [...new Set([...rendered.flags, 'divine-name'])] };
+  }
+  const w = original;
   const probe = syllabifyWord(w, { translit: false, exceptions: {}, readDivineName: true });
   const substituted = probe.length > 0 && probe[0].substituted === true;
   const readAs = substituted ? DIVINE_NAME_READING : w;

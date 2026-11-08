@@ -144,5 +144,10 @@ test('precache: Torah text and the Torah manifest are on-demand, never installed
   assert.ok(od.includes('data/audio/manifest-torah.json'));
   assert.ok(isOnDemand('data/corpus/torah/genesis/01.json'));
   assert.ok(isOnDemand('data/audio/manifest-torah.json'));
-  assert.deepEqual(J('data/audio/manifest-torah.json'), [], 'no Torah clips exist yet: the manifest starts empty');
+  const recordings = J('data/audio/manifest-torah.json');
+  assert.ok(Array.isArray(recordings));
+  for (const recording of recordings) {
+    assert.ok(['m', 'f'].includes(recording.voice), recording.id);
+    assert.ok(recording.path && fs.existsSync(new URL(recording.path, root)), recording.id + ': published clip exists');
+  }
 });

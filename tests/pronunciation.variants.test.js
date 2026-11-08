@@ -114,3 +114,15 @@ test('parseIpaStress reads stress position from an existing words.json ipa strin
   assert.deepEqual(parseIpaStress('/ˈba.jit/ [ˈbɐ.(j)it]'), { syllables: 2, fromEnd: -2, cleaned: 'ˈba.jit' });
   assert.equal(parseIpaStress('/ben/'), null);
 });
+
+test('prefixed name variants retain written Hebrew and pronounce the shared substitute', async () => {
+  const { speechText } = await import('../src/shell/names.js');
+  for (const original of ['לַיהוָה', 'שֶׁיְהוָה']) {
+    const actual = renderWord(original, ctx);
+    const spoken = renderWord(speechText(original), ctx);
+    assert.equal(actual.he, original.normalize('NFC'));
+    for (const tradition of TRADITIONS) assert.equal(actual.variants[tradition].ipa, spoken.variants[tradition].ipa);
+    assert.match(actual.variants.ashkenazi.simple, /adonoy/);
+    assert.ok(actual.flags.includes('divine-name'));
+  }
+});

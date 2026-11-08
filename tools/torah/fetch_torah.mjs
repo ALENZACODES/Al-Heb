@@ -41,8 +41,8 @@ const SNAPSHOT = path.resolve(opt('snapshot', path.join(HERE, 'snapshot')));
 const OFFLINE = args.includes('--offline');
 const BOOKS_ARG = opt('books', 'genesis');
 
-const { cleanLine, cleanEnglish, wordsOf } = await import(path.join(OUT, 'src/corpus/normalize.js'));
-const { speechText } = await import(path.join(OUT, 'src/shell/names.js'));
+const { cleanLine, cleanEnglish, wordsOf } = await import(pathToFileURL(path.join(OUT, 'src/corpus/normalize.js')).href);
+const { speechText } = await import(pathToFileURL(path.join(OUT, 'src/shell/names.js')).href);
 
 // The pinned English version. Changing this string is a licence decision, not an edit:
 // tests/torah.data.test.js asserts it verbatim and asserts every response's licence.

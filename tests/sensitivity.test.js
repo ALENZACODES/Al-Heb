@@ -183,3 +183,9 @@ test('writeGodAsGd: only the word "God" is rewritten; upper-case "GOD" (for exam
   assert.equal(englishGod('THE LORD OUR GOD', true), 'THE LORD OUR GOD');
   assert.equal(englishGod('The LORD our God', true), 'The LORD our G-d');
 });
+
+test('morning destination title honors the learner English spelling setting', async () => {
+  const { MORNING_TITLE, uiEnglish } = await import('../src/shell/names.js');
+  assert.equal(uiEnglish({ settings: { get: () => true } }, MORNING_TITLE), 'Start with G-d');
+  assert.equal(uiEnglish({ settings: { get: () => false } }, MORNING_TITLE), MORNING_TITLE);
+});

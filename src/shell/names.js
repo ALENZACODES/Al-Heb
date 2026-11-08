@@ -178,3 +178,6 @@ export function versionLabel(meta) {
   if (unknown) return { oneVersion: true, text: 'One version shown. Differences between movements have not been checked.' };
   return { oneVersion: false, text: 'Same words in the movements checked (not reviewed by clergy).' };
 }
+
+/** Shared morning destination title; views apply uiEnglish at render time. */
+export const MORNING_TITLE = 'Start with God';

@@ -8,14 +8,13 @@
   "records": 6636,
   "vocab": 6303,
   "corpus": 333,
-  "review": 388
+  "review": 385
  },
  "flags": {
   "alef-vav-mater-repaired": 71,
   "aramaic": 8,
   "ashk-final-kamatz-reduced": 1221,
-  "ashk-reduction-latin-not-applied": 4,
-  "divine-name": 61,
+  "divine-name": 64,
   "he-patach-no-mappiq": 1,
   "ipa-differs-from-words.json": 121,
   "kamatz-katan-before-chataf": 2,

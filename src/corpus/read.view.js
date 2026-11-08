@@ -9,7 +9,7 @@ import { loadCorpus, loadTorahIndex, letterInventory } from './corpus.js';
 import { versionLabel } from '../shell/names.js';
 import { silentReadingNode } from '../shell/silent-reading.js';
 import { isAudioFree } from '../shell/audiofree.js';
-import { uiEnglish } from '../shell/names.js';
+import { uiEnglish, MORNING_TITLE } from '../shell/names.js';
 import { speechText } from '../shell/names.js';
 import { audioButton } from '../shell/audio-access.js';
 import { largePositionsIn } from '../torahreader/model.js';
@@ -366,7 +366,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     for (const pr of [...secPrayers('shema-and-blessings'), ...secPrayers('amidah')]) { const id = typeof pr === 'string' ? pr : pr.id; if (id && !coreSeen.has(id)) { coreSeen.add(id); core.push(pr); } }
     box.append(door('Weekday morning', 'The daily core most people say every morning: the Shema and its blessings, and the Amidah. A full weekday service order is not in ALEF yet.', [
       linkRow(core, 'Weekday morning prayers'),
-      el('p', { class: 'crp-gl' }, 'The day itself starts with ', el('a', { href: '#/morning' }, 'Start with God — Modeh Ani and a verse'), '.')]));
+      el('p', { class: 'crp-gl' }, 'The day itself starts with ', el('a', { href: '#/morning' }, uiEnglish(ctx, MORNING_TITLE + ' — Modeh Ani and a verse')), '.')]));
     const festKids = [];
     if (han) festKids.push(linkRow(han.prayers || [], 'Hanukkah prayers'));
     festKids.push(el('p', { class: 'crp-gl' }, el('a', { href: '#/festivals' }, 'Festivals through the year'), ' — what each day is and when it falls.'));

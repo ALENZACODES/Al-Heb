@@ -40,9 +40,9 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.match(face, /Beginner Hebrew Foundations/);
   assert.match(face, /Presented to/);
   assert.match(face, /ALEF is Key Foundation/);
-  assert.match(face, /Certificate No\. SAMPLE-0001/);
+  assert.match(face, /Cert # incomplete/);
   assert.match(face, /Sample internal reference/);
-  assert.doesNotMatch(face, /CE#|Accreditation No|continuing-education|continuing education/);
+  assert.doesNotMatch(face, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
   const notes = root.querySelector('#award-sample-notes').textContent;
   assert.match(notes, /Approved artwork: 0/);
@@ -182,9 +182,17 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   assert.equal(longNode.querySelector('#aw-cert-banner').textContent, SAMPLE_MARK);
   const style = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
   assert.match(node.textContent, /ALEF is Key Foundation/);
-  assert.match(node.textContent, /Certificate No\. SAMPLE-0001/);
+  assert.match(node.textContent, /Cert # incomplete/);
   assert.match(node.textContent, /Sample internal reference/);
-  assert.doesNotMatch(node.textContent, /CE#|Accreditation No/);
+  assert.doesNotMatch(node.textContent, /CE#|Accreditation No|SAMPLE-0001/);
+  const escaped = renderCertificate(h, {
+    ...sampleModel({ now: T }),
+    displayName: 'Ada <script>alert(1)</script>',
+    nameEntered: true,
+    certNo: 'Accreditation No. 999',
+  });
+  assert.equal(escaped.querySelector('.aw-cert-no').textContent, 'Cert # SA-20261106');
+  assert.equal(escaped.querySelector('.aw-cert-no').queryAll('script').length, 0);
   assert.match(style, /Frank Ruhl Libre/);
   assert.match(style, /#f3ead5/);
   assert.match(style, /@page \{ size: A4 landscape/);

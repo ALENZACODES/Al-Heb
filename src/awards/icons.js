@@ -107,31 +107,55 @@ export function renderMedallion(_h, o = {}) {
   }, shapes.map(([tag, attrs]) => svgNode(tag, attrs)));
 }
 
-/** Temporary foil-style stamp. Original geometry, no letters. Not approved artwork. */
+function scallopD(cx, cy, radius, amp, lobes, steps) {
+  let d = '';
+  for (let i = 0; i <= steps; i++) {
+    const t = (Math.PI * 2 * i) / steps;
+    const r = radius + amp * Math.sin(lobes * t);
+    const x = (cx + r * Math.cos(t)).toFixed(2);
+    const y = (cy + r * Math.sin(t)).toFixed(2);
+    d += i === 0 ? `M${x} ${y}` : ` L${x} ${y}`;
+  }
+  return d + ' Z';
+}
+
+/** Temporary antique-gold stamp. Original key-and-block geometry. Not approved artwork. */
 export function renderSeal(_h) {
-  const beads = [];
-  for (let i = 0; i < 16; i++) {
-    const a = (Math.PI * 2 * i) / 16;
-    beads.push(svgNode('circle', {
-      cx: (60 + Math.cos(a) * 40).toFixed(2),
-      cy: (60 + Math.sin(a) * 40).toFixed(2),
-      r: '1.7', fill: '#a6843f',
+  const rays = [];
+  for (let i = 0; i < 48; i++) {
+    const a = (Math.PI * 2 * i) / 48;
+    rays.push(svgNode('line', {
+      x1: (60 + Math.cos(a) * 32).toFixed(2),
+      y1: (60 + Math.sin(a) * 32).toFixed(2),
+      x2: (60 + Math.cos(a) * 44).toFixed(2),
+      y2: (60 + Math.sin(a) * 44).toFixed(2),
+      stroke: '#4e3514', 'stroke-width': '0.45',
     }));
   }
+  const key = (dx, dy, color, width) => [
+    svgNode('rect', { x: String(53 + dx), y: String(82 + dy), width: '14', height: '2.6', fill: color }),
+    svgNode('circle', { cx: String(60 + dx), cy: String(48 + dy), r: '5.4', fill: 'none', stroke: color, 'stroke-width': width }),
+    svgNode('line', { x1: String(60 + dx), y1: String(53 + dy), x2: String(60 + dx), y2: String(80 + dy), stroke: color, 'stroke-width': width }),
+    svgNode('line', { x1: String(60 + dx), y1: String(66 + dy), x2: String(68 + dx), y2: String(66 + dy), stroke: color, 'stroke-width': width }),
+    svgNode('line', { x1: String(60 + dx), y1: String(74 + dy), x2: String(66 + dx), y2: String(74 + dy), stroke: color, 'stroke-width': width }),
+  ];
   return svgNode('svg', {
     viewBox: '0 0 120 120', width: '132', height: '132', class: 'aw-seal',
     'data-art': ART_STATUS, 'data-accepted': String(ART_ACCEPTED), 'aria-hidden': 'true', focusable: 'false',
   }, [
-    svgNode('circle', { cx: '60', cy: '60', r: '54', fill: '#e6d3ae' }),
-    svgNode('circle', { cx: '61.2', cy: '61.2', r: '48', fill: 'none', stroke: '#6b4e2e', 'stroke-width': '2.2' }),
-    svgNode('circle', { cx: '61.2', cy: '61.2', r: '42', fill: 'none', stroke: '#6b4e2e', 'stroke-width': '1.2' }),
-    svgNode('circle', { cx: '60', cy: '60', r: '48', fill: 'none', stroke: '#7a2430', 'stroke-width': '2.6' }),
-    svgNode('circle', { cx: '60', cy: '60', r: '44', fill: 'none', stroke: '#a6843f', 'stroke-width': '1.3' }),
-    ...beads,
-    svgNode('circle', { cx: '60', cy: '60', r: '32', fill: 'none', stroke: '#7a2430', 'stroke-width': '1.5' }),
-    svgNode('path', { d: 'M60 38 L78 60 L60 82 L42 60 Z', fill: 'none', stroke: '#a6843f', 'stroke-width': '1.6' }),
-    svgNode('rect', { x: '51', y: '51', width: '18', height: '18', fill: 'none', stroke: '#7a2430', 'stroke-width': '1.4' }),
-    svgNode('circle', { cx: '60', cy: '60', r: '3.2', fill: '#7a2430' }),
-    svgNode('circle', { cx: '59.2', cy: '59.2', r: '44.4', fill: 'none', stroke: '#e8d7a8', 'stroke-width': '0.7' }),
+    svgNode('circle', { cx: '60', cy: '60', r: '56', fill: '#e6d3ae' }),
+    svgNode('path', { d: scallopD(61.6, 61.6, 48, 3.1, 18, 144), fill: '#4a3010' }),
+    svgNode('path', { d: scallopD(60, 60, 48, 3.1, 18, 144), fill: '#c6a15a' }),
+    svgNode('circle', { cx: '60', cy: '60', r: '36', fill: '#9a7430' }),
+    svgNode('circle', { cx: '60.6', cy: '61', r: '30.5', fill: '#6b4a16' }),
+    ...rays,
+    svgNode('path', { d: scallopD(60, 60, 45.5, 2.7, 18, 144), fill: 'none', stroke: '#5c3e12', 'stroke-width': '1.5' }),
+    svgNode('path', { d: scallopD(59.4, 59.3, 49, 2.9, 18, 144), fill: 'none', stroke: '#f0e2b0', 'stroke-width': '0.7' }),
+    svgNode('circle', { cx: '60', cy: '60', r: '36', fill: 'none', stroke: '#5c3e12', 'stroke-width': '1.1' }),
+    svgNode('circle', { cx: '59.5', cy: '59.4', r: '35.2', fill: 'none', stroke: '#f0e2b0', 'stroke-width': '0.55' }),
+    svgNode('circle', { cx: '60', cy: '60', r: '16', fill: '#d7b56a' }),
+    ...key(0.7, 0.7, '#3a2810', '1.7'),
+    ...key(-0.45, -0.5, '#f3e6bc', '1.15'),
+    ...key(0, 0, '#2c1c0c', '1.45'),
   ]);
 }

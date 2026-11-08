@@ -57,6 +57,24 @@ VOICES = {
 RATES = [1.0, 0.9, 0.8]
 
 
+_latin = None
+
+
+def latin_hear(path):
+    """What a general (not Hebrew-tuned) Whisper writes in English letters: 'va' vs 'ba', 'pa' vs 'fa'.
+    Model: Systran/faster-whisper-medium, about 1.5 GB, downloaded on first use (ALEF_LATIN_MODEL to use a local copy)."""
+    global _latin
+    import numpy as np
+    if _latin is None:
+        from faster_whisper import WhisperModel
+        _latin = WhisperModel(os.environ.get('ALEF_LATIN_MODEL', 'Systran/faster-whisper-medium'), device='cpu', compute_type='int8')
+    au = L.load(path)
+    au = np.concatenate([np.zeros(4000, np.float32), au, np.zeros(8000, np.float32)])
+    segs, _ = _latin.transcribe(au, language='en', beam_size=5, without_timestamps=True, condition_on_previous_text=False,
+                                max_new_tokens=10, initial_prompt='Hebrew syllables: ba, va, pa, fa, ka, kha.')
+    return ' '.join(x.text.strip() for x in segs)
+
+
 def full_spelling(pointed):
     """Write the vowels in as letters (ktiv male) so a voice that guesses vowels has less to guess."""
     s = speakable(pointed)
@@ -70,6 +88,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--execute', action='store_true')
     ap.add_argument('--paths', help='comma list of clip paths to redo instead of the ones in ASR-NEEDS-HUMAN.md')
+    ap.add_argument('--latin', help="also require an English-letters hearing to match this regex, e.g. '^[vw]ah?$' for va: "
+                    "Hebrew spells b and v (and p/f) with one letter, so only Latin letters can tell them apart")
     a = ap.parse_args()
     need = os.path.join(ROOT, 'docs', 'audio', 'ASR-NEEDS-HUMAN.md')
     lines = open(need, encoding='utf-8').read().splitlines()
@@ -114,6 +134,11 @@ def main():
             s = L.score(r['pointed_hebrew'], heard)
             if is_sound and len(re.sub('[^\u05D0-\u05EA]', '', heard or '')) < 2:
                 s = 0.0  # heard as a lone letter = the voice said the letter's NAME, not its sound
+            if a.latin and isinstance(s, float) and s >= L.PASS:
+                lat = latin_hear(out)
+                heard = f'{heard} / {lat}'
+                if not re.search(a.latin, re.sub(r'[^a-z]', '', lat.lower())):
+                    s = 0.0  # right letters, wrong sound (b for v, p for f...)
             tried.append({'voice': name, 'rate': rate, 'text': text, 'heard': heard, 'score': s})
             print(f"   try {i + 1}/{len(takes)} {name} x{rate} '{text}' -> {heard or '(nothing)'} {s}", flush=True)
             if isinstance(s, float) and s >= L.PASS and (best is None or s > best[0]):

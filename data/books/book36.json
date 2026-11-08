@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book36-p01.mp3"
    },
    "illustration": "a man on the couch under a blanket, tissues",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book36-p02.mp3"
    },
    "illustration": "the man waving off his partner, sneezing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book36-p03.mp3"
    },
    "illustration": "red nose, thermometer in mouth",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book36-p04.mp3"
    },
    "illustration": "a clinic waiting room, he's slumped in a chair",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book36-p05.mp3"
    },
    "illustration": "the doctor, a woman with a stethoscope",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book36-p06.mp3"
    },
    "illustration": "the man insisting, then coughing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book36-p07.mp3"
    },
    "illustration": "the doctor with a flashlight, checking his throat",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book36-p08.mp3"
    },
    "illustration": "the doctor's flat expression",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book36-p09.mp3"
    },
    "illustration": "a prescription pad",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book36-p10.mp3"
    },
    "illustration": "three icons: bed, soup, tea",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book36-p11.mp3"
    },
    "illustration": "the man tucked in with soup and tea, partner smug",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book36-p12.mp3"
    },
    "illustration": "the man admitting it, half asleep",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

@@ -5,9 +5,8 @@
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "בַּ",
- "inputSha256": "6f9bd8c0627a86cb9587f4a3af380b7aa798c482a77c24fc7c03cdf14bd4fe49",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "2026-11-08: first 0.36 s of Ari's בַּת (audio/m/israeli/word/hcb31fc0d.mp3), cut at the silence before the t. No voice said the bare syllable correctly in 48 tries; the cut is heard as 'ba' by an English-letters check (Whisper medium) and as the right letter by the Hebrew check.",
  "inputTextKind": "hebrew"
 }

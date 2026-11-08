@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "ו",
- "inputSha256": "3a03f2d417ac6aff3a13aad94eb39f413c4d66d5521205811c2d057687fa551f",
+ "inputText": "וַ",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "2026-11-08: first 175 ms of Ari's וָדֹר (audio/m/israeli/word/kedushah-yimloch-w7.mp3), cut at the silence before the d. No voice said the bare syllable correctly in 48 tries; the cut is heard as 'va' by an English-letters check (Whisper medium) and as the right letter by the Hebrew check.",
  "inputTextKind": "hebrew"
 }

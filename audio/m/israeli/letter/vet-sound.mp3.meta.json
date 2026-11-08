@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
- "inputText": "ב",
- "inputSha256": "7c1562f2606ff62459906de2636997b4afeac4157614268ee3b0947f002dc370",
+ "inputText": "בַ",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "2026-11-08: same va as Ari's vav sound (vet and vav are both v in Israeli Hebrew): first 175 ms of his וָדֹר. No voice said the bare syllable correctly in 48 tries; the cut is heard as 'va' by an English-letters check (Whisper medium) and as the right letter by the Hebrew check.",
  "inputTextKind": "hebrew"
 }

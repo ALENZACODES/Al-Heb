@@ -6,7 +6,7 @@
  "tradition": "israeli",
  "inputText": "קַ",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Letter sound replaced 2026-11-08 by the qof-a syllable (קַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/qof-a.mp3; heard back as the syllable by tools/audio/asr-check.",
  "inputTextKind": "hebrew"
 }

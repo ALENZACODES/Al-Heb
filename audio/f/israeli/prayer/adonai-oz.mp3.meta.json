@@ -7,7 +7,7 @@
  "inputText": "אֲדֹנָי עֹז לְעַמּוֹ יִתֵּן אֲדֹנָי יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
  "inputSha256": "73d244698856273e6f447f32a099f797cac0494d27629d9b824b13894ff45bf6",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
  "inputTextKind": "hebrew"
 }

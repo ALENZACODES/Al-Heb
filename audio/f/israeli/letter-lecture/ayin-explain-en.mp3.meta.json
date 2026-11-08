@@ -7,7 +7,7 @@
  "inputText": "This is Ayin — AH-yeen. Sound: silent in modern Israeli Hebrew, like Aleph. Shape hook: a lowercase y that sits on the floor: two arms from one low join, tail bent flat, right arm taller. Tip: Both arms grow from ONE spot down near the floor and nothing continues above or below that join (the tail just bends flat along the baseline); not Tsadi, Aleph.",
  "inputSha256": "8cbee32bdea852d766ea220fb1969385eb56fb8d3cd6b926ef7de226f11ecc00",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

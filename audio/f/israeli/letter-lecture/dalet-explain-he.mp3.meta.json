@@ -7,7 +7,7 @@
  "inputText": "האות דָּלֶת. נשמעת כמו דּ בדלת. תסתכלו על הצורה: square table corner. שימו לב לא לבלבל עם ר.",
  "inputSha256": "59eaae451203b45a5418339f1d06c2a0855266fc58fd39ef5f7fc32082fa186c",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

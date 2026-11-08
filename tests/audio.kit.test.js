@@ -13,7 +13,7 @@ const manifest = loadManifestFull(R);
 for (const t of KIT_TRADITIONS) for (const v of ['m', 'f']) {
   test(`kit ${t}-${v}: every required clip appears exactly once, in session order, none optional/alias`, () => {
     const kit = buildKit(manifest, t, v);
-    const want = manifest.filter((e) => e.tradition === t && e.voice === v && !e.optional && !e.aliasOf).map((e) => e.path.replace(/\.mp3$/, '.wav')).sort();
+    const want = manifest.filter((e) => e.tradition === t && e.voice === v && !e.optional && !e.aliasOf && e.kind !== 'letter-lecture') /* letter lectures are spoken English narration, not kit clips */.map((e) => e.path.replace(/\.mp3$/, '.wav')).sort();
     assert.deepEqual(kit.rows.map((r) => r.file).sort(), want);
     assert.deepEqual(kit.rows.map((r) => r.seq), kit.rows.map((_, i) => i + 1));
     assert.ok(kit.rows.every((r, i) => i === 0 || r.session >= kit.rows[i - 1].session));

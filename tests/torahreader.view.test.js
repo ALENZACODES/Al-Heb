@@ -27,6 +27,23 @@ const words = (root) => root.queryAll('.trd-w');
 const status = (root) => root.queryAll('.trd-status')[0].textContent;
 const sel = (root, s) => root.queryAll(s)[0];
 
+test('Torah native recording starts in the tap without waiting for shared audio and supports speed and stop', async () => {
+  const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+    ? [{ kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice: 'm', tradition: 'english', status: 'tts', path: 'audio/test.mp3' }]
+    : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+  let shared = 0, starts = 0, pauses = 0;
+  const { root } = await make({ stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson,
+    audio: { stop() {}, play() { shared++; return new Promise(() => {}); } } });
+  const media = sel(root, 'audio');
+  assert.equal(media.getAttribute('src'), 'audio/test.mp3');
+  media.play = () => { starts++; return Promise.resolve(); }; media.pause = () => pauses++;
+  const clicked = sel(root, '.trd-play-chapter').click();
+  assert.equal(starts, 1); assert.equal(shared, 0); await clicked;
+  assert.equal(media.muted, false); assert.equal(media.volume, 1);
+  await sel(root, '[data-recording-rate="1.25"]').click(); assert.equal(media.playbackRate, 1.25);
+  await sel(root, '.trd-stop-chapter').click(); assert.ok(pauses > 0);
+});
+
 test('mounts: title, draft notice, Hebrew buttons are lang=he dir=rtl, tabs are toggle buttons, unmount returns', async () => {
   const { root, un } = await make();
   assert.equal(sel(root, 'h1').textContent, 'Torah reader: Priestly Blessing and Shema');

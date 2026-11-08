@@ -125,6 +125,7 @@ export function mount(root, ctx) {
   let torah = null, torahManifest = [], chapterData = null, chapterKey = '', weekPortion = undefined, calendarPrefsRaw = null;
   let chapterPlay = null, targetVerse = null;
   let chapterRequest = 0, chapterActive = false;
+  let chapterMedia = null;
   let chapterRate = 1;
   const chapterRows = new Map(), shownTranslit = new Set();
   const fingerGuide = createFingerGuide({ clock, calm: () => calmOn(ctx), announce: (text) => say(text), redraw: () => render() });
@@ -215,6 +216,7 @@ export function mount(root, ctx) {
   // ---------- full-Torah chapter audio ----------
   function stopChapterAudio(cancelPlayback = true) {
     if (cancelPlayback) {
+      try { chapterMedia?.pause?.(); } catch { /* optional */ }
       chapterRequest++;
       if (chapterActive) { try { ctx?.audio?.stop?.(); } catch { /* optional */ } }
       chapterActive = false;
@@ -234,6 +236,17 @@ export function mount(root, ctx) {
     }
   }
   async function playChapter(lang) {
+    // Start the actual media element inside the tap, before any manifest/network await.
+    if (chapterMedia && typeof chapterMedia.play === 'function') {
+      try {
+        ctx?.audio?.stop?.();
+        chapterMedia.muted = false; chapterMedia.volume = 1;
+        chapterMedia.playbackRate = chapterRate; chapterMedia.preservesPitch = true;
+        const started = chapterMedia.play();
+        if (started?.catch) started.catch(() => say('Tap Play on the audio player below. If sound is still silent, check your device’s media volume and audio output.'));
+      } catch { say('Use the audio player below to start this recording.'); }
+      return;
+    }
     if (!chapterData || !ctx?.audio || typeof ctx.audio.play !== 'function') { say('No audio for this chapter: this build has no audio player.'); return; }
     stopTimer(); stopChapterAudio();
     const request = ++chapterRequest, chapterRef = chapterData.ref;
@@ -555,6 +568,16 @@ export function mount(root, ctx) {
       && ['he', 'en'].some((language) => e.kind === torahChapterKind(language) && e.id === torahChapterId(state.book, state.chapter, language)));
     if (!anyVoiceReady) return [];
     const lang = state.audioLang;
+    const recording = torahManifest.find((e) => e.voice === voiceOf() && e.kind === torahChapterKind(lang) && e.id === torahChapterId(state.book, state.chapter, lang) && e.path && e.status !== 'missing');
+    if (chapterMedia?.getAttribute('src') !== recording?.path) {
+      try { chapterMedia?.pause?.(); } catch { /* optional */ }
+      chapterMedia = null;
+    }
+    if (recording && !chapterMedia) {
+      chapterMedia = el('audio', { controls: true, preload: 'metadata', src: recording.path, style: 'display:block;width:100%;margin-block:.6rem', 'aria-label': `${chapterData.ref} ${lang === 'en' ? 'English' : 'Hebrew'} recording` });
+      chapterMedia.addEventListener('playing', () => say(`Playing ${chapterData.ref} in ${lang === 'en' ? 'English' : 'Hebrew'}.`));
+      chapterMedia.addEventListener('error', () => say('The recording could not load. Use Open recording below to play it directly.'));
+    }
     const voiceName = voiceOf() === 'f' ? 'Noa' : 'Ari';
     const voiceBar = el('div', { class: 'trd-bar trd-chapter-voices', role: 'group', 'aria-label': 'Reading voice' }, el('span', {}, 'Voice:'),
       ...[['m', 'Ari'], ['f', 'Noa']].map(([voice, name]) => el('button', {
@@ -580,6 +603,7 @@ export function mount(root, ctx) {
         stopChapterAudio(false);
         for (const button of rateButtons) button.setAttribute('aria-pressed', String(Number(button.getAttribute('data-recording-rate')) === rate));
         ctx?.audio?.setPlaybackRate?.(rate);
+        if (chapterMedia) chapterMedia.playbackRate = rate;
         say(`Recording speed: ${rate}×. The visual finger guide has its own pace.`);
       },
     }, rate === 0.75 ? 'Slower 0.75×' : rate === 1 ? 'Normal 1×' : 'Faster 1.25×'));
@@ -590,7 +614,9 @@ export function mount(root, ctx) {
         ? el('button', { type: 'button', class: 'trd-play-chapter', 'aria-label': `Play ${chapterData.ref} read aloud in ${lang === 'en' ? 'English' : 'Hebrew'} (synthetic voice)`, onclick: () => playChapter(lang) }, `Play ${chapterData.ref} read aloud`)
         : el('span', { class: 'trd-audio-wait' }, `${lang === 'en' ? 'English' : 'Hebrew'} audio in ${voiceName}’s voice is not ready for this chapter yet.`),
       el('button', { type: 'button', class: 'trd-stop-chapter', onclick: () => { stopChapterAudio(); try { ctx?.audio?.stop?.(); } catch { /* ignore */ } say('Chapter audio stopped.'); } }, 'Stop')),
-      el('div', { class: 'trd-bar trd-recording-speeds', role: 'group', 'aria-label': 'Recording speed' }, el('span', {}, 'Recording speed:'), ...rateButtons)];
+      chapterMedia,
+      recording ? el('a', { href: recording.path, target: '_blank', rel: 'noopener' }, 'Open recording directly') : null,
+      el('div', { class: 'trd-bar trd-recording-speeds', role: 'group', 'aria-label': 'Recording speed' }, el('span', {}, 'Recording speed:'), ...rateButtons)].filter(Boolean);
   }
   function renderChapter() {
     fingerGuide.begin(`${state.book}/${state.chapter}/${state.portionId || ''}`);

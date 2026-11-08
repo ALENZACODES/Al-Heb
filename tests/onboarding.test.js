@@ -50,10 +50,11 @@ test('plans.json: draft-flagged, every href is a real route, every lesson refere
 const rec = (letters, minutes = 10, extra = {}) => ({ v: 1, letters, start: M.answerById(letters).start, askedAt: 'x', denomination: null, minutesPerDay: minutes, step: 'plan', ...extra });
 const placement = (lesson) => ({ v: 1, draft: true, answers: [], result: { lesson, asked: 12, correct: 9 } });
 test('buildPlan: 7 days, day 1 is the starting point, every item links to an existing route', () => {
-  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans });
+  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans, firstdayDone: false });
   assert.equal(p.days.length, 7); assert.equal(p.draft, true); assert.equal(p.minutesPerDay, 10);
   assert.equal(p.days[0].items[0].href, '#/firstday'); assert.equal(p.days[0].items[0].kind, 'start');
-  assert.ok(p.days[0].items.some((i) => i.lesson === 'r01')); assert.equal(p.days[1].items[0].lesson, 'r02'); // one lesson a day, same order the Today card follows
+  // day 1 is the first 10 minutes alone (it fills a 10-minute goal); lessons follow one a day, in the order the Today card follows
+  assert.ok(!p.days[0].items.some((i) => i.kind === 'lesson')); assert.equal(p.days[1].items[0].lesson, 'r01'); assert.equal(p.days[2].items[0].lesson, 'r02');
   for (const href of M.planHrefs(p)) assert.ok(routeOf(href), href);
   for (const d of p.days) { assert.ok(d.items.length >= 1, d.label); assert.equal(d.minutes, d.items.reduce((a, i) => a + i.minutes, 0)); }
   assert.equal(p.days[6].items[0].kind, 'review');
@@ -272,7 +273,7 @@ test('view, plan: an Israel goal starts with the lesson title, says so under "St
   assert.equal(root.querySelector('#ob-start').attrs.href, '#/learn?lesson=' + first.id);
   assert.match(root.textContent, new RegExp(`Starting point: ${first.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\.`));
   assert.match(root.querySelector('#ob-change-minutes').textContent, /goal or minutes/);
-  assert.match(root.querySelector('section.ob-plan').textContent, /Your goal is 10 minutes a day\. The lessons below add up to/);
+  assert.match(root.querySelector('section.ob-plan').textContent, /Your goal is 10 minutes a day\. Some lessons take longer than that: stop whenever you like, and the lesson opens where you stopped\./);
 });
 
 test('view, first screen goal: Israel sets Israeli pronunciation and skips the Sephardi/Ashkenazi step', async () => {
@@ -302,7 +303,7 @@ test('view, stage 2: the sound line follows the picked pronunciation, and "Start
   mount(root, ctx); await ready(root);
   const note = () => root.querySelector('#ob-sound-note');
   assert.equal(note().getAttribute('data-audio-support'), 'device');
-  assert.match(note().textContent, /Listen/);
+  assert.match(note().textContent, /Ari and Noa read every word aloud in Israeli Hebrew/);
   await check(root, 'pron', 'ashkenazi');
   // "Use my browser's voice anyway" is on by default: the line says the device voice will not sound Ashkenazi
   assert.equal(note().getAttribute('data-audio-support'), 'device-mismatch');

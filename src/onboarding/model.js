@@ -42,7 +42,7 @@ export const DENOMINATIONS = Object.freeze([
 export const PRONUNCIATIONS = Object.freeze([
   { id: 'sephardi',  label: 'Sephardi',  changes: 'The default. These are the vowel sounds most American synagogues use.' },
   { id: 'ashkenazi', label: 'Ashkenazi', changes: 'The older European style. For example, tav without a dot sounds like "s".' },
-  { id: 'israeli',   label: 'Israeli',   changes: 'Spoken in Israel today. Also the voice you hear when no recording exists.' },
+  { id: 'israeli',   label: 'Israeli',   changes: 'Spoken in Israel today. Best if you want to talk with Israelis or visit Israel.' },
 ]);
 export const SETTINGS_KEY_PRONUNCIATION = 'congregation';
 
@@ -118,7 +118,8 @@ export function buildPlan(o) {
     const push = (it) => { items.push(it); left -= it.minutes; };
     if (d === 0 && startDef && has(startDef.route) && (rec.letters === 'none' || needsPlacement)) push({ kind: 'start', title: startDef.title, href: startDef.href, route: startDef.route, minutes: startDef.minutes, why: startDef.why });
     if (d === 6 && has(plans.review.route)) push({ kind: 'review', ...plans.review });
-    if (parts.length) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
+    // Day 1 of a learner starting from zero is the first 10 minutes alone when that already fills the daily goal: the first day should feel small.
+    if (parts.length && !(d === 0 && o.firstdayDone === false && items.length && left <= 0)) { const p = parts.shift(); push(p); reached = Math.max(reached, order.get(p.lesson) ?? reached); }
     for (const e of extras) {
       if (left < e.minutes) break;
       if ((order.get(e.minLesson) ?? Infinity) > reached) continue;

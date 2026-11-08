@@ -2,7 +2,7 @@
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
 import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
 import { mediaPolicy } from './policy.js';
-import { SYNTH_STYLES, createSynthTrack, createGaplessTrack } from './synth-music.js';
+import { SYNTH_STYLE_LIST } from './synth-styles.js';
 
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(Number(v)) ? Number(v) : 0));
 
@@ -199,13 +199,32 @@ export function createMusicController({
 
 /** Every track the game bar offers: the styles composed live in the browser first, then the three Kenney loops. */
 export const GAME_TRACKS = [
-  ...SYNTH_STYLES.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
+  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
   ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Kenney loops' })),
 ];
+/** The music engine (src/audio/synth-music.js, ~20 KB) loads only when someone presses Play music, not at app start; until then this
+ *  stand-in records volume and listeners and hands them over. Same <audio>-like surface the controller drives. */
 function makeGameAudio(url) {
-  const m = /synth:([\w-]+)$/.exec(String(url));
-  if (m) { const st = SYNTH_STYLES.find((x) => x.id === m[1]); if (st) return createSynthTrack(st); }
-  return createGaplessTrack(url);
+  const listeners = []; let vol = 0.22; let real = null; let loading = null; let want = false;
+  const load = () => (loading ||= import('./synth-music.js').then((m) => {
+    const id = (/synth:([\w-]+)$/.exec(String(url)) || [])[1];
+    const st = id && m.SYNTH_STYLES.find((x) => x.id === id);
+    real = st ? m.createSynthTrack(st) : m.createGaplessTrack(url);
+    real.volume = vol;
+    for (const [t, fn] of listeners) real.addEventListener(t, fn);
+    return real;
+  }));
+  const node = {
+    loop: true, preload: 'none', duration: Infinity, currentTime: 0,
+    get paused() { return real ? real.paused : !want; },
+    get volume() { return real ? real.volume : vol; },
+    set volume(v) { vol = v; if (real) real.volume = v; },
+    addEventListener(t, fn) { listeners.push([t, fn]); if (real) real.addEventListener(t, fn); },
+    setAttribute() {}, getAttribute() { return null; }, removeAttribute() {}, remove() {}, load() {},
+    play() { want = true; return load().then((r) => (want ? r.play() : undefined)); },
+    pause() { want = false; if (real) real.pause(); },
+  };
+  return node;
 }
 export const gameMusic = createMusicController({ tracks: GAME_TRACKS, makeAudio: makeGameAudio });
 mediaPolicy.subscribe(() => gameMusic.notePolicy());

@@ -10,6 +10,7 @@
  */
 import { el, heText, heLabeled, storeGet, storeSet, showSaveFailure, STREAK_KEY } from '../curriculum/dom.js';
 import { recordActivity } from '../curriculum/progress.js';
+import { currentStreak } from '../curriculum/state.js';
 import { loadFirst10, loadLadder, loadOnramp } from './loader.js';
 import { DRAFT_NOTICE, PROGRESS_KEY, advance, markRead, wordById, buildCheck, gradeCheck, audioEntries, playHook, totalMinutes } from './model.js';
 import { migrateProgress, winStep, recordAnswer, stepQuestions, stepIndex, onrampDone, totalMinutes as onrampMinutes } from './onramp.model.js';
@@ -52,7 +53,7 @@ export function mount(root, ctx) {
   // after a quick-check answer or a rebuild: keep focus inside the screen (never drop it to body); only moves it if it was lost
   const focusLost = () => { const a = document.activeElement; return !a || a === document.body || !body.contains(a) || a.disabled; };
   const refocus = (sel) => { try { if (focusLost()) body.querySelector(sel)?.focus({ preventScroll: true }); } catch { /* ignore */ } };
-  const hearNote = () => (isAudioFree(ctx) ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
+  const hearNote = () => (isAudioFree(ctx) || tradition === 'israeli' ? el('span', { hidden: '' }) : el('p', { class: 'muted small fd-audio-note' }, audioNote(tradition)));
   const listen = (hook, label = 'Hear it') => isAudioFree(ctx) ? el('span', { hidden: '' }) : el('button', { class: 'btn', type: 'button', onclick: async () => {
     const r = await playHook(ctx?.audio, hook);
     say(playLine(r, tradition, 'it')); // one shared, tradition-aware sentence (never presents the Israeli device voice as the learner's style)
@@ -82,7 +83,6 @@ export function mount(root, ctx) {
     const hook = s.kind === 'letter' ? { kind: 'letter', id: s.letter } : s.kind === 'vowel' ? { kind: 'vowel', id: s.vowel } : { kind: 'word', id: `firstday-${s.id}` };
     const row = el('p', { class: 'row' }, listen(hook));
     if (s.kind === 'letter') row.append(' ', el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
-    if (s.id === 'shin') row.append(' ', el('a', { class: 'btn secondary', href: '#/letters/bet', id: 'fd-trace-bet' }, 'Trace Bet'));
     nodes.push(row);
     const post = [hearNote()]; // below the check, so the check and Next stay within one scroll of the step start
     // memory hooks and explanations stay behind "Why?"
@@ -107,7 +107,7 @@ export function mount(root, ctx) {
         if (grp && document.activeElement === opts[k]) { grp.setAttribute('tabindex', '-1'); if (status.id) grp.setAttribute('aria-describedby', status.id); grp.focus({ preventScroll: true }); } // describedby: the verdict is read with the focus move, not only by the polite status
         opts.forEach((b, j) => { b.disabled = true; b.setAttribute('disabled', ''); if (j === q.answerIndex) b.setAttribute('data-state', 'right'); else if (j === k) b.setAttribute('data-state', 'wrong'); });
         const right = q.options[q.answerIndex].text;
-        say(ok ? 'Yes.' : `Not quite: it is ${right}. Nothing is lost.`);
+        say(ok ? PRAISE[(qi + i) % PRAISE.length] : `Not quite: it is ${right}. That is how everyone learns, and nothing is lost.`);
         // No automatic jump to the next question (a timed jump can be missed by someone who reads or moves slowly): a Next question button, so the verdict stays until the learner moves on.
         if (qi + 1 < qs.length) {
           const nextQ = el('button', { type: 'button', class: 'btn', id: 'fd-next-q', onclick: () => { answered = { qi: qi + 1 }; if (alive) { renderStep(); refocus('.fd-opt'); } } }, 'Next question');
@@ -150,13 +150,26 @@ export function mount(root, ctx) {
     say(''); renderStep(); focus();
     if (err) showSaveFailed(err);
   }
+  /** Short praise for a right answer, varied so it does not feel automatic. */
+  const PRAISE = ['Yes! Well done.', 'Yes, that is right!', 'Exactly right.', 'Yes! You are reading Hebrew.'];
   function renderDone() {
     const d = onramp.done || {};
+    // Says only what the streak record says: a day counts after 5 minutes of study (src/curriculum/streak.js GOAL_SECONDS).
+    const streakLine = el('p', { class: 'fd-streak', id: 'fd-streak' }, '');
+    if (!practice) storeGet(ctx, STREAK_KEY, null).then((s) => {
+      const p = currentStreak(s, Date.now());
+      streakLine.textContent = p.activeToday && p.count > 0
+        ? (p.count === 1 ? 'Today counts: day 1 of your streak.' : `Your streak: ${p.count} days in a row.`)
+        : 'Five minutes of study today starts your streak.';
+    }).catch(() => {});
     body.replaceChildren(
-      el('p', { class: 'muted' }, practice ? 'Practice round finished. Your finished mark stays as it was — practising changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins · about ${onrampMinutes(onramp)} minutes in all (a goal, not measured)`),
+      el('p', { class: 'muted' }, practice ? 'Practice round finished. Your finished mark stays as it was — practising changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins`),
       el('h2', {}, d.title || 'Done'),
       el('p', { class: 'fd-card alef-card' }, heText(onramp.steps.find((s) => s.kind === 'word')?.he || '', 'alef-he alef-huge fd-big')),
       el('p', {}, d.body || ''),
+      practice ? null : streakLine,
+      practice ? null : el('p', {}, d.tomorrow || 'Come back tomorrow for your next letter. A few minutes a day is all it takes.',
+        ctx?.hasRoute?.('reminders') !== false ? [' ', el('a', { href: '#/reminders', id: 'fd-remind' }, 'Remind me tomorrow')] : null),
       el('p', {}, el('a', { class: 'btn', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons'),
         ' ', el('button', { class: 'btn secondary', type: 'button', id: 'fd-again', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; say(''); renderStep(); focus(); } }, 'Do the steps again')),
       d.preview ? el('p', {}, d.preview, ' ', el('a', { class: 'btn secondary', id: 'fd-preview', href: '#/firstday?part=preview' }, 'Read shalom today')) : null,

@@ -36,7 +36,7 @@ export const SIZES = [
 ];
 export const sizeScale = (id) => (SIZES.find((x) => x.id === id) || SIZES[0]).scale;
 export const DEFAULT_STATE = {
-  v: 1, passage: 'priestly-blessing', view: 'reader', screen: 'study',
+  v: 1, passage: 'priestly-blessing', view: 'reader', screen: 'home',
   book: 'genesis', chapter: 1, portionId: null,
   showTrope: true, showNiqqud: true, showEnglish: true, showPronunciation: true, audioLang: 'he', prayLang: 'he',
   speed: 'medium', size: 'normal',

@@ -88,11 +88,11 @@ test('home view: baby-step layout for a new learner (Today card, five destinatio
   assert.ok(beginnerLinks.length >= 5 && beginnerLinks.length <= 8, 'beginner actions stay compact beside the separate showcase');
   un();
 });
-test('home view: a returning learner keeps the full sections; the opening prayer card only for a reading goal', async () => {
+test('home view: a returning learner keeps the full sections; the old opening-prayer placeholder card is gone (the opening prayer opens the app)', async () => {
   const day = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
   const init = { 'curriculum.progress': { completed: { r01: 1 } }, 'srs.cards': {}, streak: { count: 2, best: 2, last: day(new Date()) } };
   const a = mk(init); mount(a.root, a.ctx); await waitFor(() => a.root.querySelector('#h-more'));
-  assert.ok(a.root.querySelector('.opening'), 'default goal read: card present');
+  assert.equal(a.root.querySelector('.opening'), null, 'reading goal: no placeholder card');
   const b = mk(init); b.ctx.settings.set({ goal: 'israel' }); mount(b.root, b.ctx); await waitFor(() => b.root.querySelector('#h-more'));
   assert.equal(b.root.querySelector('.opening'), null, 'Israel goal: no prayer card');
 });

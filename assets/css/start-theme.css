@@ -77,6 +77,14 @@ body:has(.card.onboarding) {
   color: #d8e2c4;
 }
 
+/* Cards inside the dark welcome card (the week plan): dark too, so the cream text stays readable. */
+.card.onboarding .card {
+  background: rgba(246, 241, 231, 0.06);
+  border: 1px solid rgba(217, 164, 65, 0.45);
+  color: #f6f1e7;
+}
+.card.onboarding .card strong { color: #f6f1e7; }
+
 /* Keep the first decision visible instead of placing it below a decorative banner. */
 .card.onboarding:has(#ob-form-letters)::before { display: none; }
 #ob-form-letters .opt {

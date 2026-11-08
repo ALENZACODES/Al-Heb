@@ -32,7 +32,7 @@ test('store key and state normalisation', () => {
   assert.equal(normaliseState({ prayLang: 'en' }).prayLang, 'en');
   assert.equal(normaliseState({ prayLang: 'fr' }).prayLang, 'he');
   assert.equal(normaliseState({ view: 'reader', passage: 'shema' }).screen, 'study', 'a legacy study state reopens as study');
-  assert.equal(normaliseState({}).screen, 'study', 'a fresh state opens on the study passage, as the route always has; the full-Torah home is one tap away');
+  assert.equal(normaliseState({}).screen, 'home', 'a fresh state opens on Torah home, where all five books are listed');
   assert.ok(SIZES.length === 3 && sizeScale('normal') === 1 && sizeScale('largest') > sizeScale('large') && sizeScale('bogus') === 1);
   assert.deepEqual(normaliseState({ passage: 'nope', view: 3, showTrope: 'yes', speed: 'warp' }), DEFAULT_STATE);
   assert.ok(SPEEDS.every((s) => s.ms > 0) && speedMs('slow') > speedMs('medium') && speedMs('medium') > speedMs('fast'));

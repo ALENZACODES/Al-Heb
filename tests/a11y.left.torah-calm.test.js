@@ -5,8 +5,9 @@ const { mount, CALM_NOTE, PACE_NOTE } = await import('../src/torahreader/torahre
 
 const fakeClock = () => { const timers = new Map(); let id = 0; return { setInterval: (f, ms) => { timers.set(++id, { f, ms }); return id; }, clearInterval: (h) => { timers.delete(h); }, timers, fire: () => { for (const t of [...timers.values()]) t.f(); } }; };
 async function make(calm) {
-  const root = new N('div'); const clock = fakeClock();
-  const ctx = { store: memStore(), settings: { get: (k) => (k === 'calmMode' ? calm : k === 'congregation' ? 'sephardi' : undefined) }, clock };
+  const root = new N('div'); const clock = fakeClock(); const store = memStore();
+  store.m['torahreader.v1'] = { screen: 'study' }; // calm mode is checked on the study passage; the route opens on Torah home
+  const ctx = { store, settings: { get: (k) => (k === 'calmMode' ? calm : k === 'congregation' ? 'sephardi' : undefined) }, clock };
   const un = mount(root, ctx); await un.ready; return { root, clock, un };
 }
 const q = (root, s) => root.queryAll(s);

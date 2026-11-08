@@ -35,13 +35,7 @@ export function mount(root, ctx) {
   const babyRest = () => [
     h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-more', 'aria-controls': 'nav-more', onclick: openMenu }, 'More'))];
   const fullRest = () => {
-    const goal = settings.get('goal');
     return [
-      goal === 'read' || goal === 'both' ? h('section', { class: 'card opening', 'aria-labelledby': 'h-open' },
-        h('h2', { id: 'h-open' }, t('home.opening.title')),
-        h('p', { class: 'draft-flag', role: 'note' }, t('home.opening.draft')),
-        h('p', {}, t('home.opening.body')),
-        h('a', { class: 'btn secondary', href: '#/read' }, t('home.opening.link'))) : null,
     ctx.hasRoute?.('progress') ? h('p', {}, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')) : null,
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
       // U-19: no destination twice on one screen — the quick wall skips any
@@ -67,9 +61,10 @@ export function mount(root, ctx) {
   // replaced is not announced. It is empty until a goal button is pressed, and it claims nothing about saving (the store write is best effort).
   const backupHost = h('div', { id: 'home-backup-host' }); // backup reminder after meaningful progress (src/shell/backup-reminder.js)
   const goalStatus = h('p', { id: 'today-goal-status', class: 'visually-hidden', role: 'status', 'aria-live': 'polite' });
+  const header = h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline')));
+  const showcase = showcaseNode(ctx);
   root.replaceChildren(h('div', { class: 'stack' },
-    h('header', {}, h('h1', { id: 'view-title', tabindex: '-1' }, h('span', {}, t('app.name')), ' ', heSpan('אלף')), h('p', { class: 'muted' }, t('app.tagline'))),
-    showcaseNode(ctx), destHost, todayHost, backupHost, goalStatus, restHost,
+    header, showcase, destHost, todayHost, backupHost, goalStatus, restHost,
     h('footer', { class: 'site-footer' }, h('p', {}, 'Made by John Khan · © 2026 John Khan. All rights reserved.'))));
 
   // Lane 1 data (fetch-based loaders; modules shared with the Learn screen). Best effort: a missing module leaves the placeholder.
@@ -89,6 +84,13 @@ export function mount(root, ctx) {
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
       });
       renderRest(today.firstRun);
+      // A returning learner sees their next step first: the Today card moves up under the title, and the hero's
+      // "Start your first 10 minutes" (already done) gives way to it. A first visit keeps the showcase on top.
+      if (!today.firstRun) {
+        const box = header.parentNode;
+        if (box && typeof box.insertBefore === 'function' && header.nextSibling !== todayHost) box.insertBefore(todayHost, showcase);
+        const first = showcase.querySelector?.('.show-btn[href="#/firstday"]'); if (first) { first.hidden = true; first.setAttribute('hidden', ''); }
+      }
       todayHost.replaceChildren(renderToday(today, t, (m) => { goalNow = m; try { store.set(DAILY_GOAL_KEY, m); } catch { /* best effort */ } const wasOpen = todayHost.querySelector('#today-goal-box')?.open === true; draw(); const box = todayHost.querySelector('#today-goal-box'); if (box && wasOpen) box.open = true; /* the redraw makes a new, closed <details>; a hidden button cannot take focus */ const b = todayHost.querySelector(`[data-goal="${m}"]`); b?.focus?.(); goalStatus.textContent = `Daily goal: ${m} minutes.`; }, { calm: calmOn(ctx), showStreak: streakVisible(ctx) }));
     };
     draw();

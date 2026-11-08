@@ -93,6 +93,7 @@ SIN = re.compile('\u05E9(?=[\u05B0-\u05C7]*\u05C2)')  # ש carrying the sin dot
 def core(s, drop_silent_aleph=False, sin_as_samekh=False, single_vav_as_v=True):
     s = str(s)
     if re.search('[\u05B0-\u05BC]', s):  # pointed text (the expected word): apply the sound rules above
+        s = re.sub(V + '[\u0591-\u05C7]*' + V, 'ב', s)  # two vavs in a row (עָווֹן, וַואלָה) are written for v, as the model writes them
         s = CONS_VAV_DOUBLED.sub('ב', s)
         if single_vav_as_v:
             s = CONS_VAV.sub('ב', s)

@@ -38,7 +38,7 @@ export const sizeScale = (id) => (SIZES.find((x) => x.id === id) || SIZES[0]).sc
 export const DEFAULT_STATE = {
   v: 1, passage: 'priestly-blessing', view: 'reader', screen: 'study',
   book: 'genesis', chapter: 1, portionId: null,
-  showTrope: true, showNiqqud: true, showEnglish: true, audioLang: 'he', prayLang: 'he',
+  showTrope: true, showNiqqud: true, showEnglish: true, showPronunciation: true, audioLang: 'he', prayLang: 'he',
   speed: 'medium', size: 'normal',
 };
 
@@ -63,6 +63,7 @@ export function normaliseState(raw) {
   if (typeof raw.showTrope === 'boolean') s.showTrope = raw.showTrope;
   if (typeof raw.showNiqqud === 'boolean') s.showNiqqud = raw.showNiqqud;
   if (typeof raw.showEnglish === 'boolean') s.showEnglish = raw.showEnglish;
+  if (typeof raw.showPronunciation === 'boolean') s.showPronunciation = raw.showPronunciation;
   if (AUDIO_LANGS.includes(raw.audioLang)) s.audioLang = raw.audioLang;
   if (raw.prayLang === 'he' || raw.prayLang === 'en') s.prayLang = raw.prayLang;
   if (SPEEDS.some((x) => x.id === raw.speed)) s.speed = raw.speed;

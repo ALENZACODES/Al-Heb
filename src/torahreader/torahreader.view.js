@@ -267,7 +267,7 @@ export function mount(root, ctx) {
   }
   const toggle = (label, key, onText, offText) => el('button', {
     type: 'button', class: 'trd-toggle', 'data-toggle': key, 'aria-pressed': state[key] ? 'true' : 'false',
-    onclick: () => { setState({ [key]: !state[key] }); say(state[key] ? onText : offText); render(); focusSel(`[data-toggle="${key}"]`); },
+    onclick: () => { if (key === 'showPronunciation') shownTranslit.clear(); setState({ [key]: !state[key] }); say(state[key] ? onText : offText); render(); focusSel(`[data-toggle="${key}"]`); },
   }, label);
   function focusSel(sel) { try { wrap.querySelector(sel)?.focus?.(); } catch { /* ignore */ } }
 
@@ -515,9 +515,9 @@ export function mount(root, ctx) {
         manifestHas('line', torahVerseId(state.book, state.chapter, v.n))
           ? el('button', { type: 'button', class: 'trd-hear-verse', 'aria-label': `Hear ${chapterData.ref}:${v.n} in Hebrew (synthetic voice)`, onclick: () => playTorahVerse(v) }, 'Hear')
           : null,
-        el('button', { type: 'button', class: 'trd-sounds', 'data-translit': String(v.n), 'aria-pressed': shownTranslit.has(v.n) ? 'true' : 'false',
+        el('button', { type: 'button', class: 'trd-sounds', 'data-translit': String(v.n), 'aria-pressed': (state.showPronunciation !== shownTranslit.has(v.n)) ? 'true' : 'false',
           onclick: () => { if (shownTranslit.has(v.n)) shownTranslit.delete(v.n); else shownTranslit.add(v.n); render(); } }, 'Sounds'),
-        shownTranslit.has(v.n) ? el('p', { class: 'trd-translit' }, translit(v.he), el('span', { class: 'trd-translit-note' }, ` ${TRANSLIT_LABEL}`)) : null,
+        (state.showPronunciation !== shownTranslit.has(v.n)) ? el('p', { class: 'trd-translit', lang: 'en', dir: 'ltr', 'data-pronunciation-verse': String(v.n) }, translit(v.he), el('span', { class: 'trd-translit-note' }, ` ${TRANSLIT_LABEL}`)) : null,
         study ? el('button', { type: 'button', class: 'trd-study-link', onclick: () => { setState({ passage: study, view: 'reader', screen: 'study' }); render(); } }, 'Study this passage in depth') : null),
       state.showEnglish ? el('div', { class: 'trd-cell-en' }, el('p', { class: 'trd-en' }, v.en)) : null);
     chapterRows.set(v.n, row);
@@ -568,7 +568,9 @@ export function mount(root, ctx) {
     out.push(el('div', { class: 'trd-bar', role: 'group', 'aria-label': 'Reading controls' },
       toggle('Cantillation marks', 'showTrope', 'Cantillation marks shown.', 'Cantillation marks hidden.'),
       toggle('Vowel points', 'showNiqqud', 'Vowel points shown.', 'Vowel points hidden.'),
-      toggle('English', 'showEnglish', 'English shown.', 'English hidden.')));
+      toggle('English', 'showEnglish', 'English shown.', 'English hidden.'),
+      toggle('Pronunciation guide', 'showPronunciation', 'Pronunciation guide shown.', 'Pronunciation guide hidden.')));
+    if (state.showPronunciation) out.push(el('p', { class: 'trd-hint' }, 'Reading the English letters: a as in father; e as in bed; i as in machine; o as in go (without the final glide); u as in flute. Sh as in ship; ch and kh are the throat sound in Bach; tz as in cats. This generated guide does not mark syllable stress and still needs pronunciation review.'));
     out.push(...chapterAudioBar(!!sec));
     const versesBox = el('div', { class: 'trd-chapter-verses' });
     const shown = chapterData.verses.filter((v) => !sec || (v.n >= sec.fromVerse && v.n <= sec.toVerse));

@@ -319,6 +319,12 @@ test('chapter view: Genesis 1 renders 31 side-by-side rows, toggles work, next c
   const first = rows(root)[0];
   assert.match(first.queryAll('.trd-hebrew')[0].textContent, /בְּרֵאשִׁ/);
   assert.equal(first.queryAll('.trd-en')[0].textContent, 'In the beginning God created the heaven and the earth.');
+  assert.equal(root.queryAll('[data-pronunciation-verse]').length, 31, 'every verse has the pronunciation guide by default');
+  await sel(root, '[data-toggle="showPronunciation"]').click();
+  assert.equal(root.queryAll('[data-pronunciation-verse]').length, 0);
+  assert.equal(store.m['torahreader.v1'].showPronunciation, false);
+  await sel(root, '[data-toggle="showPronunciation"]').click();
+  assert.equal(root.queryAll('[data-pronunciation-verse]').length, 31);
   assert.equal(root.queryAll('.trd-next-ch').length, 1);
   assert.equal(root.queryAll('.trd-prev-ch').length, 0);
   // English toggle hides the English column
@@ -334,6 +340,9 @@ test('chapter view: Genesis 1 renders 31 side-by-side rows, toggles work, next c
   assert.doesNotMatch(rows(root)[0].queryAll('.trd-hebrew')[0].textContent, /[֑-֯]/);
   // computed transliteration aid, labelled as computed
   await sel(root, '[data-translit="1"]').click();
+  assert.equal(rows(root)[0].queryAll('[data-pronunciation-verse]').length, 0, 'individual verse can hide its guide');
+  await sel(root, '[data-translit="1"]').click();
+  assert.equal(rows(root)[0].queryAll('[data-pronunciation-verse]').length, 1);
   assert.match(root.queryAll('.trd-translit')[0].textContent, /computed from the vowel points/);
   // next chapter
   await sel(root, '.trd-next-ch').click(); await tick();

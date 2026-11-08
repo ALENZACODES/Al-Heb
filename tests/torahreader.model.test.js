@@ -20,7 +20,7 @@ test('store key and state normalisation', () => {
   assert.deepEqual(normaliseState(null), DEFAULT_STATE);
   assert.deepEqual(normaliseState('x'), DEFAULT_STATE);
   assert.deepEqual(normaliseState({ passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' }),
-    { v: 1, passage: 'shema', view: 'legend', screen: 'legend', book: 'genesis', chapter: 1, portionId: null, showTrope: false, showNiqqud: false, showEnglish: true, audioLang: 'he', prayLang: 'he', speed: 'fast', size: 'largest' });
+    { v: 1, passage: 'shema', view: 'legend', screen: 'legend', book: 'genesis', chapter: 1, portionId: null, showTrope: false, showNiqqud: false, showEnglish: true, showPronunciation: true, audioLang: 'he', prayLang: 'he', speed: 'fast', size: 'largest' });
   assert.equal(normaliseState({ size: 'huge' }).size, 'normal');
   // full-Torah fields: screen, book/chapter (range-checked), English + audio-language switches
   assert.equal(normaliseState({ screen: 'chapter', book: 'numbers', chapter: 6 }).chapter, 6);

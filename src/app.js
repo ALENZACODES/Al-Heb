@@ -118,10 +118,11 @@ function startShardLoading(audio) {
   });
   loader.watch(() => asked);
   window.alefShards = loader;
+  let loading = null;
   audio.onNeed((kind) => {
-    if (asked || kind !== 'word') return;
-    asked = true; wasAtAsk = lastMatch;
-    loader.load();
+    if (kind !== 'word') return undefined;
+    if (!asked) { asked = true; wasAtAsk = lastMatch; loading = loader.load(); }
+    return loading; // a word play waits for this (src/shell/audio.js need), so the first tap plays the recording
   });
   // Fresh install: store the shard through the worker once it controls the page (the first load bypassed it).
   const swc = swContainer();

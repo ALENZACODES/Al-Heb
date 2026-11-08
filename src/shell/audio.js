@@ -170,8 +170,14 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   /** something asked about a clip: start the lazy load the first time, and tell the shell which kind (it may load a shard) */
   const need = (kind) => {
     if (mstate === 'idle') ensureManifest();
-    for (const f of needSubs) { try { f(kind); } catch { /* ignore */ } }
+    const waits = [];
+    for (const f of needSubs) { try { const r = f(kind); if (r && typeof r.then === 'function') waits.push(r); } catch { /* ignore */ } }
+    return waits;
   };
+  // A listener may return a promise (the word-clip shard loading): play() waits for it, at most this long, so the FIRST word a
+  // learner taps plays its recording instead of falling to the device voice (silent on a computer with no Hebrew voice).
+  const NEED_WAIT_MS = 8000;
+  const waitFor = (waits) => (waits.length ? Promise.race([Promise.allSettled(waits), new Promise((r) => setTimeout(r, NEED_WAIT_MS))]) : null);
   const checking = (kind, id) => ({ source: 'none', reason: CHECKING, kind, id });
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
@@ -226,11 +232,12 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     async play(kind, id, o) {
       const queued = kind === 'torah-chapter' || kind === 'torah-chapter-en' ? { rate: o?.rate } : null;
       if (queued) queuedChapters.add(queued);
-      need(kind);
+      const waits = need(kind);
       const epoch = playEpoch;
       playsInFlight += 1;
       try {
         await settle();
+        await waitFor(waits);
         if (queued) queuedChapters.delete(queued);
         if (epoch !== playEpoch) return { source: 'none', stopped: true, reason: 'stopped' };
         const o2 = opts(queued ? { ...o, rate: queued.rate } : o);

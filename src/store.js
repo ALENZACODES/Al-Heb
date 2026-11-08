@@ -95,10 +95,11 @@ export function createStore(opts = {}) {
   let reason = null;
   let newerSchema = false;
   if (!backend || !probe(backend)) {
-    const readable = backend;
+    // A full or read-only storage area can usually still be read: carry what is there into memory before falling back,
+    // so the learner's progress stays visible and exportable this session.
+    const readable = backend ? rawAll(backend) : {};
     backend = createMemoryStorage(); persistent = false; reason = 'unavailable';
-    // A full quota can reject the probe while saved progress remains readable.
-    if (readable) for (const [full, raw] of Object.entries(rawAll(readable))) backend.setItem(full, raw);
+    for (const [full, raw] of Object.entries(readable)) backend.setItem(full, raw);
   }
   /** @type {Set<(key:string,value:any,info?:{external?:boolean})=>void>} */
   const listeners = new Set();
@@ -238,16 +239,18 @@ export function createStore(opts = {}) {
      * All-or-nothing restore: validates first; if any write fails part-way (quota), everything is rolled back.
      * @param {string|object} input backup JSON text or object
      * @param {{mode?: 'replace'|'merge'}} [o]
-     * @returns {{ok:true,imported:number}|{ok:false,error:string}} (call previewImport first to show what will change)
+     * @returns {{ok:true,imported:number}|{ok:false,error:string,recoveryRequired?:boolean}} (call previewImport first to show what will change)
      */
     importData(input, o = {}) {
       const p = api.previewImport(input, o);
       if (!p.ok) return p;
       const before = rawAll();
+      /** @returns {boolean} true when the stored copy is back to exactly what it was */
       const rollback = () => {
-        for (const full of Object.keys(rawAll())) { if (!(full in before)) { try { backend.removeItem(full); } catch { /* ignore */ } } }
-        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { /* verify below */ } }
-        return canonicalJSON(rawAll()) === canonicalJSON(before);
+        let ok = true;
+        for (const full of Object.keys(rawAll())) { if (!(full in before)) { try { backend.removeItem(full); } catch { ok = false; } } }
+        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { ok = false; } }
+        return ok && canonicalJSON(rawAll()) === canonicalJSON(before);
       };
       try {
         for (const k of p.diff.removed) backend.removeItem(prefix + k);

@@ -8,11 +8,6 @@ import { readinessNode } from './readiness.js';
 import { audioTruthNode } from './audio-truth.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
-export function restoreFailureMessage(result) {
-  if (result.recoveryRequired) return 'Could not restore: ' + result.error + ' Download a backup now, before closing or reloading this page.';
-  return 'Could not restore: ' + result.error + '. Your progress on this device was not changed.';
-}
-
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
   // Every change says it saved, in the one status line: a silent save reads
@@ -210,3 +205,10 @@ export function mount(root, ctx) {
   return () => { try { offStatus?.(); } catch { /* ignore */ } };
 }
 void DEFAULTS;
+
+/** What to tell the learner when a restore fails. When the stored copy could not be put back, do not claim nothing changed. */
+export function restoreFailureMessage(result) {
+  return result.recoveryRequired
+    ? 'Could not restore or recover the saved copy on this device. Your previous progress is available only in this open app. Download a backup now, before closing or reloading; some saved data may have changed.'
+    : 'Could not restore: ' + String(result.error || '').replace(/\.$/, '') + '. Your progress on this device was not changed.';
+}

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book33-p01.mp3"
    },
    "illustration": "a man opening a sleek box",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book33-p02.mp3"
    },
    "illustration": "the glossy phone held up to the light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book33-p03.mp3"
    },
    "illustration": "the screen lit with dozens of apps",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book33-p04.mp3"
    },
    "illustration": "the man staring at it, finger hovering",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book33-p05.mp3"
    },
    "illustration": "turning the phone over looking for a button",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book33-p06.mp3"
    },
    "illustration": "a smooth glass slab",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book33-p07.mp3"
    },
    "illustration": "a voice assistant waveform on the screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book33-p08.mp3"
    },
    "illustration": "the man startled, holding it at arm's length",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book33-p09.mp3"
    },
    "illustration": "the man looking around the room",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book33-p10.mp3"
    },
    "illustration": "a teenager rolling her eyes affectionately",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book33-p11.mp3"
    },
    "illustration": "her hand out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book33-p12.mp3"
    },
    "illustration": "the grandfather video-calling his sister, delighted",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

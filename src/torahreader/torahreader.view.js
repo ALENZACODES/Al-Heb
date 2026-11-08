@@ -255,10 +255,11 @@ export function mount(root, ctx) {
     const text = lang === 'en' ? chapterData.verses.map((v) => v.en).join(' ') : spokenText(chapterData.verses.map((v) => v.he).join(' '));
     // Chapter-only recordings have a measured total duration but no verse timestamps.
     // Play those normally without inventing word/verse timing or highlights.
-    if (chapterRate === 1 && chapterPosition(chapterData.verses, lang, voiceOf(), 0)) {
-      const started = Date.now();
+    // At 0.75x / 1.25x the recording runs slower / faster, so the verse highlight runs at the same rate.
+    if (chapterPosition(chapterData.verses, lang, voiceOf(), 0)) {
+      const started = Date.now(), rate = chapterRate;
       const timer = clock.setInterval(() => {
-        const p = chapterPosition(chapterData.verses, lang, voiceOf(), Date.now() - started);
+        const p = chapterPosition(chapterData.verses, lang, voiceOf(), (Date.now() - started) * rate);
         if (p) markPlaying(p.verse);
         if (p?.ended) stopChapterAudio(false);
       }, 250);

@@ -471,7 +471,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
           onkeydown: (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const ks = [...tabs.querySelectorAll('[role=tab]')].map((b) => b.id.slice(8)); const d = e.key === 'ArrowRight' ? 1 : -1; state.tab = ks[(ks.indexOf(state.tab) + d + ks.length) % ks.length]; render(); wrap.querySelector(`#crp-tab-${state.tab}`)?.focus(); } } }, label)));
     const panel = el('div', { id: 'crp-panel', role: 'tabpanel', 'aria-labelledby': `crp-tab-${state.tab}` });
     if (state.tab === 'read') renderReader(panel); else if (state.tab === 'guide') renderGuide(panel); else renderPhrasebook(panel);
-    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), silentReadingNode(el, ctx), tabs, panel, live);
+    // The full Torah reader (all five books, Hebrew and English, recording speeds, finger guide) is linked first, in view.
+    const torahDoor = el('p', { class: 'crp-torahdoor' }, el('a', { href: '#/torahreader', class: 'btn' }, 'Open the Torah reader'),
+      ' All five books in Hebrew and English: slow the recording down, choose Ari or Noa, and follow with your finger.');
+    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), torahDoor, silentReadingNode(el, ctx), tabs, panel, live);
     if (keepFocus) wrap.querySelector('#' + CSS_escape(keepFocus))?.focus();
   }
   const CSS_escape = (s) => (globalThis.CSS?.escape ? globalThis.CSS.escape(s) : s.replace(/[^\w-]/g, '\\$&'));

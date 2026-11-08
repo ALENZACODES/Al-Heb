@@ -207,6 +207,12 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   renderNav(route.name);
   document.title = route.name === 'home' ? 'ALEF' : `${route.title} - ALEF`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
+  // U-24: never a blank page while a view module loads — a named skeleton
+  // stands in, replaced the moment the view mounts (or by the error card).
+  if (!quiet) root.replaceChildren(
+    h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
+      h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
+    h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
   root.setAttribute('aria-busy', 'true');
   let mod;
   try { mod = await loadRouteModule(route); }
@@ -271,7 +277,7 @@ async function boot() {
     readPrefs: () => ({
       // Music starts with the game by default, like sound effects (owner
       // order, Nov 7 2026). Only an explicit off in the music bar is kept.
-      want: settings.get('gameMusic') !== false,
+      want: settings.get('gameMusic') === true,
       muted: settings.get('gameMusicMuted') === true,
       volume: settings.get('gameMusicVolume'),
       trackId: settings.get('gameMusicTrack'),

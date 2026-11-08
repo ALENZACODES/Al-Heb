@@ -65,6 +65,27 @@ export function mount(root, ctx = {}) {
   const input = el('input', { type: 'file', accept: 'image/*', capture: 'environment', 'aria-label': 'Take or choose a photo' });
   const out = el('div', { class: 'photo-out', 'aria-live': 'polite' });
   wrap.append(modeSel, input, status, out);
+  // U-21: a first-run sample, so a beginner can see what the reader does
+  // before pointing it at a real page. The sample is one of the
+  // computer-generated benchmark images the accuracy notice cites — labelled
+  // as such, and run through the very same pipeline as a learner's photo.
+  if (!forced) {
+    const sampleBtn = el('button', { type: 'button', class: 'btn secondary', id: 'photo-sample' }, 'Try it on a sample menu page');
+    sampleBtn.addEventListener('click', async () => {
+      sampleBtn.setAttribute('disabled', '');
+      try {
+        const r = await fetch(new URL('../../data/photo/_benchmark/images/menu-1__clean.png', import.meta.url));
+        if (!r.ok) throw new Error('sample missing');
+        const blob = await r.blob();
+        modeSel.value = 'sign';
+        out.dataset.done = '';
+        await run(blob);
+        status.textContent = 'That was the sample page (a computer-made test image). Now try a photo of your own.';
+      } catch { status.textContent = 'The sample page could not be loaded on this device. You can still choose a photo above.'; }
+      sampleBtn.removeAttribute?.('disabled');
+    });
+    wrap.append(el('p', { class: 'photo-sample-row' }, 'No photo handy? ', sampleBtn, ' (a computer-made test image — the kind this reader was measured on)'));
+  }
   root.append(wrap);
 
   const speak = (text) => {

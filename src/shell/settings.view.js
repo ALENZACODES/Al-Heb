@@ -10,12 +10,24 @@ import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WO
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
+  // Every change says it saved, in the one status line: a silent save reads
+  // as a broken page to a beginner (usability review, U-20). `status` is
+  // defined below, before any of these handlers can fire.
+  const VOICE_SAY = { m: 'Ari (the man’s voice)', f: 'Noa (the woman’s voice)' };
+  const STYLE_SAY = { israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
+  const savedAbout = (key, value) => {
+    if (key === 'voice') status.textContent = `Saved ✓ You’ll hear ${VOICE_SAY[value] || 'your chosen voice'} where clips exist.`;
+    else if (key === 'congregation') status.textContent = `Saved ✓ ${STYLE_SAY[value] || value} style, where clips exist.`;
+    else if (key === 'veilOptOut') status.textContent = value ? 'Saved ✓ The opening prayer will not show again. You can turn it back on here any time.' : 'Saved ✓ The opening prayer will show again when you open ALEF.';
+    else if (key === 'gender') status.textContent = 'Saved ✓ Hebrew forms will use your choice.';
+    else status.textContent = 'Saved ✓';
+  };
   const radioGroup = (key, legendKey) => {
     const fs = h('fieldset', { class: 'field' }, h('legend', {}, t(legendKey)));
     for (const v of ENUMS[key]) {
       const id = `s-${key}-${v}`;
       const input = h('input', { type: 'radio', name: key, id, value: v, checked: settings.get(key) === v ? true : null,
-        onchange: () => settings.set({ [key]: v }) });
+        onchange: () => { settings.set({ [key]: v }); savedAbout(key, v); } });
       fs.append(h('label', { class: 'opt', for: id }, input, h('span', {}, t(`${legendKey}.${v}`))));
     }
     return fs;
@@ -25,21 +37,21 @@ export function mount(root, ctx) {
     const fs = h('fieldset', { class: 'field', id: 's-gender-set' }, h('legend', {}, 'My gender, for Hebrew forms'));
     for (const [v, label] of [[null, 'Not chosen yet'], ['m', 'I am a man'], ['f', 'I am a woman'], ['both', 'Show me both forms']]) {
       const id = `s-gender-${v ?? 'unset'}`;
-      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: 'gender', id, value: v ?? '', checked: settings.get('gender') === v ? true : null, onchange: () => settings.set({ gender: v }) }), h('span', {}, label)));
+      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: 'gender', id, value: v ?? '', checked: settings.get('gender') === v ? true : null, onchange: () => { settings.set({ gender: v }); savedAbout('gender', v); } }), h('span', {}, label)));
     }
     fs.append(h('p', { class: 'muted', id: 's-gender-help' }, 'Hebrew words change with the speaker\'s gender. "I am a student" is different for a man and a woman. The gender drill and the "Sound like a local" pages use this choice, so you only say it once. Until you choose, pages show both forms or ask you. ALEF never assumes masculine. The choice stays on this device and is included in your backup.'));
     return fs;
   };
   // one checkbox row per boolean setting (plain English labels; the i18n table is owned by another lane)
   const boolRow = (key, label, help) => h('div', { class: 'field' },
-    h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => settings.set({ [key]: e.target.checked }) }), h('span', {}, label)),
+    h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => { settings.set({ [key]: e.target.checked }); savedAbout(key, e.target.checked); } }), h('span', {}, label)),
     help ? h('p', { class: 'muted' }, help) : null);
   const toggle = h('input', { type: 'checkbox', id: 's-israel', checked: settings.get('israelTrack') ? true : null,
-    onchange: (e) => settings.set({ israelTrack: e.target.checked }) });
+    onchange: (e) => { settings.set({ israelTrack: e.target.checked }); savedAbout('israelTrack', e.target.checked); } });
   const num = (key, label, min, max) => h('label', { class: 'field' }, label,
     h('input', { type: 'number', step: 'any', min, max, inputmode: 'decimal', value: settings.get(key) ?? '', id: 's-' + key,
       onchange: (e) => { const raw = e.target.value.trim(); const v = raw === '' ? null : Number(raw);
-        if (settings.set({ [key]: v }).length) e.target.setAttribute('aria-invalid', 'true'); else e.target.removeAttribute('aria-invalid'); } }));
+        if (settings.set({ [key]: v }).length) e.target.setAttribute('aria-invalid', 'true'); else { e.target.removeAttribute('aria-invalid'); savedAbout(key, v); } } }));
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted' });
   // Restore is a two-step action: choosing a file only inspects it (nothing changes), then the learner confirms the replacement.
   const restoreBox = h('div', { class: 'field', role: 'group', 'aria-label': 'Restore confirmation', hidden: true });
@@ -94,7 +106,7 @@ export function mount(root, ctx) {
       (p) => { settings.set({ lat: +p.coords.latitude.toFixed(3), lon: +p.coords.longitude.toFixed(3) }); root.querySelector('#s-lat').value = settings.get('lat'); root.querySelector('#s-lon').value = settings.get('lon'); status.textContent = 'Location saved on this device only.'; },
       () => { status.textContent = 'Location permission was not granted.'; }, { timeout: 10000, maximumAge: 600000 });
   } }, t('settings.useLocation'));
-  const clearBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.set({ lat: null, lon: null }); root.querySelector('#s-lat').value = ''; root.querySelector('#s-lon').value = ''; } }, t('settings.clearLocation'));
+  const clearBtn = h('button', { type: 'button', class: 'btn secondary', onclick: () => { settings.set({ lat: null, lon: null }); root.querySelector('#s-lat').value = ''; root.querySelector('#s-lon').value = ''; status.textContent = 'Saved ✓ Location cleared.'; } }, t('settings.clearLocation'));
   const exportBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
     const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -117,7 +129,7 @@ export function mount(root, ctx) {
     const fs = h('fieldset', { class: 'field', id: 's-set-' + key }, h('legend', {}, legend));
     for (const v of ENUMS[key]) {
       const id = `s-${key}-${v}`;
-      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: key, id, value: v, checked: settings.get(key) === v ? true : null, onchange: () => settings.set({ [key]: v }) }), h('span', {}, labels[v])));
+      fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: key, id, value: v, checked: settings.get(key) === v ? true : null, onchange: () => { settings.set({ [key]: v }); savedAbout(key, v); } }), h('span', {}, labels[v])));
     }
     return fs;
   };
@@ -136,7 +148,7 @@ export function mount(root, ctx) {
     labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
-    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings')),
+    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how ALEF works, in plain words')),
     h('p', { class: 'muted' }, plain('settingsIntro')),
     audioTruthNode(h, { id: 'settings-audio-truth', class: 'muted', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
     readinessNode(h, { fetchFn: ctx.readinessFetch }), // plain "what is ready and what is not" (src/shell/readiness.js)
@@ -155,7 +167,10 @@ export function mount(root, ctx) {
     group('look', 'Look and sound', 'Colours, Hebrew letter style and voice', [
     radioGroup('script', 'settings.script'),
     radioGroup('theme', 'settings.theme'),
-    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => settings.set({ browserVoiceAnyway: e.target.checked }) }), h('span', {}, t('settings.browserVoiceAnyway')))),
+    h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => { settings.set({ browserVoiceAnyway: e.target.checked }); savedAbout('browserVoiceAnyway', e.target.checked); } }), h('span', {}, t('settings.browserVoiceAnyway')))),
+    ]),
+    group('opening', 'Opening prayer', 'The short blessing shown when ALEF opens', [
+    boolRow('veilOptOut', 'Don’t show the opening prayer', 'The blessing screen has its own “Don’t show again” button; this is the same switch. Untick it to bring the blessing back.'),
     ]),
     group('forms', 'Hebrew forms and names', 'Your gender for Hebrew forms and the English divine name', [
     genderRow(),

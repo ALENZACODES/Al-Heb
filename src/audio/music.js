@@ -15,7 +15,9 @@ export function createMusicController({
 } = {}) {
   let readPrefs = readArg;
   let writePrefs = writeArg;
-  const prefs = { want: false, muted: false, volume: 0.4, trackId: tracks[0]?.id || '' };
+  // Default volume 0.22 (owner report, Nov 7 2026: the bed was too loud at
+  // 0.4). A learner's own saved volume always wins via applyStored.
+  const prefs = { want: false, muted: false, volume: 0.22, trackId: tracks[0]?.id || '' };
   let audio = null;
   let audioId = '';
   let speech = false;
@@ -38,6 +40,28 @@ export function createMusicController({
   }
   applyStored(readPrefs());
   function track() { return tracks.find((t) => t.id === prefs.trackId) || tracks[0] || null; }
+  // Seamless loop (owner report: the hard loop point sounded unnatural).
+  // One node cannot overlap itself, so the seam is crossed with a short dip:
+  // the volume eases down over the last FADE_S seconds and back up over the
+  // first FADE_S after the wrap — a crossfade's shape, honestly done with
+  // the single element the design allows. Speech ducking is stronger than a
+  // dip by contract: setSpeech pauses the bed outright (never under speech).
+  const FADE_S = 1.2;
+  let seamFade = 1;
+  function applyVolume() {
+    if (!audio) return;
+    try { audio.volume = clamp(prefs.volume * seamFade * (speech ? 0.3 : 1)); } catch { /* ignore */ }
+  }
+  function onTimeUpdate(node) {
+    if (audio !== node) return;
+    const d = node.duration, t = node.currentTime;
+    let f = 1;
+    if (Number.isFinite(d) && d > 2 * FADE_S && Number.isFinite(t)) {
+      if (t > d - FADE_S) f = Math.max(0, (d - t) / FADE_S);
+      else if (t < FADE_S) f = Math.max(0.15, t / FADE_S);
+    }
+    if (Math.abs(f - seamFade) > 0.02) { seamFade = f; applyVolume(); }
+  }
   function allowed() {
     return armed && prefs.want && !prefs.muted && prefs.volume > 0 && !speech && !sacred && game && !quiet && policy.allowsMusic() && !!track();
   }
@@ -56,6 +80,7 @@ export function createMusicController({
     try { audio?.remove?.(); } catch { /* ignore */ }
     audio = created;
     audioId = row.id;
+    seamFade = 1;
     try { audio?.setAttribute?.('data-alef-audio', 'music'); globalThis.document?.body?.append?.(audio); } catch { /* off-DOM still plays */ }
     if (!audio) { phase = 'missing'; error = 'This browser could not open the music file.'; emit(); return null; }
     audio.loop = true;
@@ -74,13 +99,14 @@ export function createMusicController({
     created.addEventListener?.('pause', () => {
       if (audio === created && (phase === 'playing' || phase === 'starting') && allowed()) { phase = 'paused'; emit(); }
     });
+    created.addEventListener?.('timeupdate', () => onTimeUpdate(created));
     return audio;
   }
   function start() {
     if (!allowed()) { halt(sacred || quiet || !policy.allowsMusic() ? 'blocked' : (prefs.want ? 'paused' : 'off')); return false; }
     const node = ensure();
     if (!node) return false;
-    node.volume = prefs.volume;
+    applyVolume();
     error = '';
     // 'starting' is set before play() because the element may fire 'playing' synchronously
     // inside play(); the event listener is what may then move the phase to 'playing'.
@@ -145,7 +171,7 @@ export function createMusicController({
     volume(v) {
       prefs.volume = clamp(v);
       save();
-      if (audio) { try { audio.volume = prefs.volume; } catch { /* ignore */ } }
+      applyVolume();
       if (prefs.volume <= 0) halt('paused');
       else if (allowed()) start();
       else emit();

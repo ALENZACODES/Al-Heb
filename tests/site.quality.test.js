@@ -12,11 +12,11 @@ import { ANCIENT_TREE_SRC, ANCIENT_TREE_MOBILE_SRC } from '../src/shell/astral-t
 
 const read = p => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
 
-test('Home presents four photograph-backed beginner doorways with working routes', () => {
+test('Home presents five photograph-backed beginner doorways with working routes', () => {
   const root = showcaseNode({ hasRoute: () => true, routeName: 'home' });
   const portals = root.queryAll('a.show-portal');
   const hrefs = portals.map(node => node.attrs.href);
-  assert.deepEqual(hrefs, ['#/wordfinder', '#/books', '#/games', '#/read']);
+  assert.deepEqual(hrefs, ['#/wordfinder', '#/books', '#/games', '#/read', '#/calendar']);
   for (const hash of hrefs) assert.ok(matchRoute(hash)?.route, 'valid destination ' + hash);
   assert.ok(root.querySelector('.show-try'), 'the original word builder remains');
   assert.ok(root.querySelector('.show-grid'), 'all original destination tiles remain');

@@ -62,7 +62,7 @@ export function mountGameMusic(parent = document.body) {
       h('button', { type: 'button', class: 'btn secondary', 'data-music': 'mute', 'aria-pressed': 'false', onclick: () => gameMusic.mute(!gameMusic.snapshot().muted) }, 'Mute'),
       h('label', {}, 'Track ', h('select', { 'data-music': 'track', onchange: (e) => gameMusic.choose(e.target.value) },
         ...tracks.map((t) => h('option', { value: t.id }, t.title)))),
-      h('label', {}, 'Volume ', h('input', { 'data-music': 'volume', type: 'range', min: '0', max: '1', step: '0.05', value: '0.4', oninput: (e) => gameMusic.volume(Number(e.target.value)) })),
+      h('label', {}, 'Volume ', h('input', { 'data-music': 'volume', type: 'range', min: '0', max: '1', step: '0.05', value: '0.22', oninput: (e) => gameMusic.volume(Number(e.target.value)) })),
       h('span', { class: 'status', 'data-music': 'status', role: 'status' }, 'Music is off.')));
   parent.append(root);
   if (!wired) { wired = true; gameMusic.subscribe(paint); }

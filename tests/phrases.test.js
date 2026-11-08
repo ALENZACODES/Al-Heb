@@ -221,8 +221,8 @@ test('coverage markdown matches the cells', () => {
   }
 });
 
-test('playback adapter: exact id, voice, tradition, and rate; no call until the contract lands; substitutes and missing clips stay unavailable', async () => {
-  assert.equal(PLAYBACK_CONTRACT_LANDED, false);
+test('playback adapter: exact id, voice, tradition, and rate; the contract is landed; substitutes and missing clips stay unavailable', async () => {
+  assert.equal(PLAYBACK_CONTRACT_LANDED, true);
   const clip = phrases.find((p) => p.id === 'pb-greetings-03').forms[0].audio.israeli.f.normal;
   const request = { kind: clip.kind, id: clip.id, voice: 'f', tradition: 'israeli', rate: 'normal' };
   assert.deepEqual(playbackCall(request), {
@@ -231,12 +231,14 @@ test('playback adapter: exact id, voice, tradition, and rate; no call until the 
   assert.equal(playbackCall({ ...request, rate: 'slow' }).options.rate, 'slow');
   assert.equal(playbackCall(null), null);
 
+  // Landed (U-02): the adapter now calls the player, but a device-voice
+  // result is still refused as not-exact — substitution never passes silently.
   let calls = 0;
   const current = { audio: { play() { calls += 1; return { source: 'tts-fallback' }; } } };
   const blocked = await playPhraseClip(current, request);
-  assert.equal(calls, 0);
+  assert.equal(calls, 1);
   assert.equal(blocked.unavailable, true);
-  assert.equal(blocked.reason, 'playback-contract-not-landed');
+  assert.equal(blocked.reason, 'not-exact');
   assert.deepEqual(blocked.call.options, { voice: 'f', tradition: 'israeli', rate: 'normal' });
 
   const seen = [];
@@ -307,14 +309,14 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   for (let i = 0; i < 50 && !text.includes('Listen'); i++) { await new Promise((r) => setTimeout(r, 20)); text = detail.textContent; }
   assert.match(text, /good morning/);
   assert.match(text, /בֹּקֶר טוֹב/);
-  assert.match(text, /Audio unavailable/);
+  assert.match(text, /Normal clip/);
   assert.match(text, /No separate slow recording/);
   assert.match(text, /not a recorded teacher/i);
   assert.equal(detail.find((n) => n.attrs && n.attrs['data-clip-id'] === 'greetings-03').length, 1);
   assert.equal(/Ari|Noa|Rimon/.test(text), false);
   detail.find((n) => n.attrs && n.attrs['data-act'] === 'listen')[0].click();
   await new Promise((r) => setTimeout(r, 20));
-  assert.match(detail.textContent, /Audio unavailable/);
+  assert.match(detail.textContent, /Nothing else was played/);
   const hide = detail.find((n) => n.attrs && n.attrs['data-act'] === 'meaning')[0];
   hide.click();
   assert.equal(detail.textContent.includes('good morning'), false);

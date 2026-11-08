@@ -194,11 +194,12 @@ test('createSpeaker: he-IL utterance; unsupported without synthesis', async () =
 });
 
 // ---- data ----------------------------------------------------------------------------------------------------------------
-test('data/speak: 60 sets by theme, every item copied from words.json (no invented Hebrew), pointed, with transliteration and gloss', () => {
+test('data/speak: 61 sets by theme (60 pack sets + the curated first-day set, U-15), every item copied from words.json (no invented Hebrew), pointed, with transliteration and gloss', () => {
   const idx = rd('data/speak/sets.json');
-  assert.equal(idx.count, 60); assert.equal(idx.sets.length, 60); assert.match(idx.note, /not native-reviewed/);
+  assert.equal(idx.count, 61); assert.equal(idx.sets.length, 61); assert.match(idx.note, /not native-reviewed/);
+  assert.equal(idx.sets[0].id, 'speak-first-day', 'the first-day set leads the index: it is the default a new learner meets');
   const files = readdirSync(join(root, 'data/speak/sets')).filter((f) => f.endsWith('.json'));
-  assert.equal(files.length, 60);
+  assert.equal(files.length, 61);
   const words = new Map(rd('data/vocab/words.json').words.map((w) => [w.id, w]));
   const themes = new Set(), ids = new Set();
   let n = 0;
@@ -249,7 +250,7 @@ test('build.mjs is deterministic: rebuilding in memory gives the committed sets'
   const words = rd('data/vocab/words.json').words, packs = rd('data/vocab/packs.json').packs;
   const mt = B.manifestTextMap([rd('data/audio/manifest.json'), rd('data/audio/manifest-kind-word.json'), rd('data/audio/manifest-words-israeli.json')]);
   const built = B.buildSets({ words, packs, manifestTexts: mt });
-  assert.equal(built.length, 60);
+  assert.equal(built.length, 61);
   assert.deepEqual(built.map((s) => s.id), rd('data/speak/sets.json').sets.map((s) => s.id));
   assert.deepEqual(built[0].items, rd(`data/speak/sets/${built[0].id}.json`).items);
   assert.equal(P.buildPairs(words, mt).items.length, pairs.items.length);
@@ -261,7 +262,7 @@ test('start screen: draft flag, set select with label, mode radios (only self en
   assert.ok(root.text.includes(DRAFT));
   const sel = byId(root, 'speak-set'); assert.equal(sel.tag, 'select');
   assert.ok(root.find((n) => n.tag === 'label' && n.attrs.for === 'speak-set').length);
-  assert.equal(root.find((n) => n.tag === 'option').length, 61, '60 sets + today\'s five');
+  assert.equal(root.find((n) => n.tag === 'option').length, 62, '61 sets + today\'s five');
   const radios = root.find((n) => n.tag === 'input' && n.attrs.type === 'radio');
   assert.equal(radios.length, 3);
   assert.equal(radios.find((r) => r.attrs.value === 'self').attrs.checked, '');

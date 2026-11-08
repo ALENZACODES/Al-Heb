@@ -2,8 +2,18 @@
  "schema": "alef-speak-sets/1",
  "generated": "2026-11-07",
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
- "count": 60,
+ "count": 61,
  "sets": [
+  {
+   "id": "speak-first-day",
+   "title": "First day: hello, thanks, water",
+   "theme": "first-day",
+   "level": "A1",
+   "track": "israel",
+   "pack": "first-day",
+   "size": 7,
+   "withClip": 6
+  },
   {
    "id": "speak-survival-cafe-1",
    "title": "Survival: cafe",

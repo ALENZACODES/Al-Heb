@@ -27,7 +27,7 @@ test('hero remains a separate image; prayers, headline and activity are live DOM
   assert.match(hero, /h\('picture'/);
   assert.match(hero, /aria-hidden/);
   assert.match(showcase, /h\('p', \{ class: 'show-title' \}/);
-  assert.match(showcase, /tryPanel\(\)/);
+  assert.match(showcase, /builderNode\(ctx\)/);
   assert.match(showcase, /show-stats/);
   assert.match(showcase, /show-grid/);
   assert.match(stylesheet, /\.astral-harvest-motes/);

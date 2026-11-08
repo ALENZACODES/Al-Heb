@@ -1,0 +1,384 @@
+{
+  "letters": [
+    {
+      "glyph": "א",
+      "id": "alef",
+      "nikud": "אָלֶף",
+      "translit": "alef",
+      "meaning_en": "Letter alef",
+      "audio_ari": "audio/builder/symbol-alef_ari.mp3",
+      "audio_noa": "audio/builder/symbol-alef_noa.mp3"
+    },
+    {
+      "glyph": "ב",
+      "id": "bet",
+      "nikud": "בֵּית",
+      "translit": "bet",
+      "meaning_en": "Letter bet",
+      "audio_ari": "audio/builder/symbol-bet_ari.mp3",
+      "audio_noa": "audio/builder/symbol-bet_noa.mp3"
+    },
+    {
+      "glyph": "ג",
+      "id": "gimel",
+      "nikud": "גִּימֶל",
+      "translit": "gimel",
+      "meaning_en": "Letter gimel",
+      "audio_ari": "audio/builder/symbol-gimel_ari.mp3",
+      "audio_noa": "audio/builder/symbol-gimel_noa.mp3"
+    },
+    {
+      "glyph": "ד",
+      "id": "dalet",
+      "nikud": "דָּלֶת",
+      "translit": "dalet",
+      "meaning_en": "Letter dalet",
+      "audio_ari": "audio/builder/symbol-dalet_ari.mp3",
+      "audio_noa": "audio/builder/symbol-dalet_noa.mp3"
+    },
+    {
+      "glyph": "ה",
+      "id": "he",
+      "nikud": "הֵא",
+      "translit": "he",
+      "meaning_en": "Letter he",
+      "audio_ari": "audio/builder/symbol-he_ari.mp3",
+      "audio_noa": "audio/builder/symbol-he_noa.mp3"
+    },
+    {
+      "glyph": "ו",
+      "id": "vav",
+      "nikud": "וָו",
+      "translit": "vav",
+      "meaning_en": "Letter vav",
+      "audio_ari": "audio/builder/symbol-vav_ari.mp3",
+      "audio_noa": "audio/builder/symbol-vav_noa.mp3"
+    },
+    {
+      "glyph": "ז",
+      "id": "zayin",
+      "nikud": "זַיִן",
+      "translit": "zayin",
+      "meaning_en": "Letter zayin",
+      "audio_ari": "audio/builder/symbol-zayin_ari.mp3",
+      "audio_noa": "audio/builder/symbol-zayin_noa.mp3"
+    },
+    {
+      "glyph": "ח",
+      "id": "chet",
+      "nikud": "חֵית",
+      "translit": "chet",
+      "meaning_en": "Letter chet",
+      "audio_ari": "audio/builder/symbol-chet_ari.mp3",
+      "audio_noa": "audio/builder/symbol-chet_noa.mp3"
+    },
+    {
+      "glyph": "ט",
+      "id": "tet",
+      "nikud": "טֵית",
+      "translit": "tet",
+      "meaning_en": "Letter tet",
+      "audio_ari": "audio/builder/symbol-tet_ari.mp3",
+      "audio_noa": "audio/builder/symbol-tet_noa.mp3"
+    },
+    {
+      "glyph": "י",
+      "id": "yod",
+      "nikud": "יוֹד",
+      "translit": "yod",
+      "meaning_en": "Letter yod",
+      "audio_ari": "audio/builder/symbol-yod_ari.mp3",
+      "audio_noa": "audio/builder/symbol-yod_noa.mp3"
+    },
+    {
+      "glyph": "כ",
+      "id": "kaf",
+      "nikud": "כַּף",
+      "translit": "kaf",
+      "meaning_en": "Letter kaf",
+      "audio_ari": "audio/builder/symbol-kaf_ari.mp3",
+      "audio_noa": "audio/builder/symbol-kaf_noa.mp3"
+    },
+    {
+      "glyph": "ך",
+      "id": "kaf-final",
+      "nikud": "כַּף סוֹפִית",
+      "translit": "kaf sofit",
+      "meaning_en": "Final form of kaf",
+      "audio_ari": "audio/builder/symbol-kaf-final_ari.mp3",
+      "audio_noa": "audio/builder/symbol-kaf-final_noa.mp3"
+    },
+    {
+      "glyph": "ל",
+      "id": "lamed",
+      "nikud": "לָמֶד",
+      "translit": "lamed",
+      "meaning_en": "Letter lamed",
+      "audio_ari": "audio/builder/symbol-lamed_ari.mp3",
+      "audio_noa": "audio/builder/symbol-lamed_noa.mp3"
+    },
+    {
+      "glyph": "מ",
+      "id": "mem",
+      "nikud": "מֵם",
+      "translit": "mem",
+      "meaning_en": "Letter mem",
+      "audio_ari": "audio/builder/symbol-mem_ari.mp3",
+      "audio_noa": "audio/builder/symbol-mem_noa.mp3"
+    },
+    {
+      "glyph": "ם",
+      "id": "mem-final",
+      "nikud": "מֵם סוֹפִית",
+      "translit": "mem sofit",
+      "meaning_en": "Final form of mem",
+      "audio_ari": "audio/builder/symbol-mem-final_ari.mp3",
+      "audio_noa": "audio/builder/symbol-mem-final_noa.mp3"
+    },
+    {
+      "glyph": "נ",
+      "id": "nun",
+      "nikud": "נוּן",
+      "translit": "nun",
+      "meaning_en": "Letter nun",
+      "audio_ari": "audio/builder/symbol-nun_ari.mp3",
+      "audio_noa": "audio/builder/symbol-nun_noa.mp3"
+    },
+    {
+      "glyph": "ן",
+      "id": "nun-final",
+      "nikud": "נוּן סוֹפִית",
+      "translit": "nun sofit",
+      "meaning_en": "Final form of nun",
+      "audio_ari": "audio/builder/symbol-nun-final_ari.mp3",
+      "audio_noa": "audio/builder/symbol-nun-final_noa.mp3"
+    },
+    {
+      "glyph": "ס",
+      "id": "samekh",
+      "nikud": "סָמֶךְ",
+      "translit": "samekh",
+      "meaning_en": "Letter samekh",
+      "audio_ari": "audio/builder/symbol-samekh_ari.mp3",
+      "audio_noa": "audio/builder/symbol-samekh_noa.mp3"
+    },
+    {
+      "glyph": "ע",
+      "id": "ayin",
+      "nikud": "עַיִן",
+      "translit": "ayin",
+      "meaning_en": "Letter ayin",
+      "audio_ari": "audio/builder/symbol-ayin_ari.mp3",
+      "audio_noa": "audio/builder/symbol-ayin_noa.mp3"
+    },
+    {
+      "glyph": "פ",
+      "id": "pe",
+      "nikud": "פֵּא",
+      "translit": "pe",
+      "meaning_en": "Letter pe",
+      "audio_ari": "audio/builder/symbol-pe_ari.mp3",
+      "audio_noa": "audio/builder/symbol-pe_noa.mp3"
+    },
+    {
+      "glyph": "ף",
+      "id": "pe-final",
+      "nikud": "פֵּא סוֹפִית",
+      "translit": "pe sofit",
+      "meaning_en": "Final form of pe",
+      "audio_ari": "audio/builder/symbol-pe-final_ari.mp3",
+      "audio_noa": "audio/builder/symbol-pe-final_noa.mp3"
+    },
+    {
+      "glyph": "צ",
+      "id": "tsadi",
+      "nikud": "צָדִי",
+      "translit": "tsadi",
+      "meaning_en": "Letter tsadi",
+      "audio_ari": "audio/builder/symbol-tsadi_ari.mp3",
+      "audio_noa": "audio/builder/symbol-tsadi_noa.mp3"
+    },
+    {
+      "glyph": "ץ",
+      "id": "tsadi-final",
+      "nikud": "צָדִי סוֹפִית",
+      "translit": "tsadi sofit",
+      "meaning_en": "Final form of tsadi",
+      "audio_ari": "audio/builder/symbol-tsadi-final_ari.mp3",
+      "audio_noa": "audio/builder/symbol-tsadi-final_noa.mp3"
+    },
+    {
+      "glyph": "ק",
+      "id": "qof",
+      "nikud": "קוֹף",
+      "translit": "kof",
+      "meaning_en": "Letter kof",
+      "audio_ari": "audio/builder/symbol-qof_ari.mp3",
+      "audio_noa": "audio/builder/symbol-qof_noa.mp3"
+    },
+    {
+      "glyph": "ר",
+      "id": "resh",
+      "nikud": "רֵישׁ",
+      "translit": "resh",
+      "meaning_en": "Letter resh",
+      "audio_ari": "audio/builder/symbol-resh_ari.mp3",
+      "audio_noa": "audio/builder/symbol-resh_noa.mp3"
+    },
+    {
+      "glyph": "ש",
+      "id": "shin",
+      "nikud": "שִׁין",
+      "translit": "shin",
+      "meaning_en": "Letter shin",
+      "audio_ari": "audio/builder/symbol-shin_ari.mp3",
+      "audio_noa": "audio/builder/symbol-shin_noa.mp3"
+    },
+    {
+      "glyph": "ת",
+      "id": "tav",
+      "nikud": "תָּו",
+      "translit": "tav",
+      "meaning_en": "Letter tav",
+      "audio_ari": "audio/builder/symbol-tav_ari.mp3",
+      "audio_noa": "audio/builder/symbol-tav_noa.mp3"
+    }
+  ],
+  "marks": [
+    {
+      "glyph": "ְ",
+      "id": "sheva",
+      "nikud": "שְׁוָא",
+      "translit": "shva",
+      "meaning_en": "A short e or no vowel",
+      "audio_ari": "audio/builder/symbol-sheva_ari.mp3",
+      "audio_noa": "audio/builder/symbol-sheva_noa.mp3"
+    },
+    {
+      "glyph": "ֱ",
+      "id": "hataf-segol",
+      "nikud": "חֲטַף סֶגוֹל",
+      "translit": "chataf segol",
+      "meaning_en": "Short e vowel",
+      "audio_ari": "audio/builder/symbol-hataf-segol_ari.mp3",
+      "audio_noa": "audio/builder/symbol-hataf-segol_noa.mp3"
+    },
+    {
+      "glyph": "ֲ",
+      "id": "hataf-patah",
+      "nikud": "חֲטַף פַּתָּח",
+      "translit": "chataf patach",
+      "meaning_en": "Short a vowel",
+      "audio_ari": "audio/builder/symbol-hataf-patah_ari.mp3",
+      "audio_noa": "audio/builder/symbol-hataf-patah_noa.mp3"
+    },
+    {
+      "glyph": "ֳ",
+      "id": "hataf-qamats",
+      "nikud": "חֲטַף קָמָץ",
+      "translit": "chataf kamatz",
+      "meaning_en": "Short o vowel",
+      "audio_ari": "audio/builder/symbol-hataf-qamats_ari.mp3",
+      "audio_noa": "audio/builder/symbol-hataf-qamats_noa.mp3"
+    },
+    {
+      "glyph": "ִ",
+      "id": "hiriq",
+      "nikud": "חִירִיק",
+      "translit": "chirik",
+      "meaning_en": "i vowel",
+      "audio_ari": "audio/builder/symbol-hiriq_ari.mp3",
+      "audio_noa": "audio/builder/symbol-hiriq_noa.mp3"
+    },
+    {
+      "glyph": "ֵ",
+      "id": "tsere",
+      "nikud": "צֵירֵי",
+      "translit": "tsere",
+      "meaning_en": "e vowel",
+      "audio_ari": "audio/builder/symbol-tsere_ari.mp3",
+      "audio_noa": "audio/builder/symbol-tsere_noa.mp3"
+    },
+    {
+      "glyph": "ֶ",
+      "id": "segol",
+      "nikud": "סֶגוֹל",
+      "translit": "segol",
+      "meaning_en": "e vowel",
+      "audio_ari": "audio/builder/symbol-segol_ari.mp3",
+      "audio_noa": "audio/builder/symbol-segol_noa.mp3"
+    },
+    {
+      "glyph": "ַ",
+      "id": "patah",
+      "nikud": "פַּתָּח",
+      "translit": "patach",
+      "meaning_en": "a vowel",
+      "audio_ari": "audio/builder/symbol-patah_ari.mp3",
+      "audio_noa": "audio/builder/symbol-patah_noa.mp3"
+    },
+    {
+      "glyph": "ָ",
+      "id": "qamats",
+      "nikud": "קָמָץ",
+      "translit": "kamatz",
+      "meaning_en": "a vowel; sometimes o",
+      "audio_ari": "audio/builder/symbol-qamats_ari.mp3",
+      "audio_noa": "audio/builder/symbol-qamats_noa.mp3"
+    },
+    {
+      "glyph": "ֹ",
+      "id": "holam",
+      "nikud": "חוֹלָם",
+      "translit": "cholam",
+      "meaning_en": "o vowel",
+      "audio_ari": "audio/builder/symbol-holam_ari.mp3",
+      "audio_noa": "audio/builder/symbol-holam_noa.mp3"
+    },
+    {
+      "glyph": "ֻ",
+      "id": "qubuts",
+      "nikud": "קֻבּוּץ",
+      "translit": "kubutz",
+      "meaning_en": "u vowel",
+      "audio_ari": "audio/builder/symbol-qubuts_ari.mp3",
+      "audio_noa": "audio/builder/symbol-qubuts_noa.mp3"
+    },
+    {
+      "glyph": "ּ",
+      "id": "dagesh",
+      "nikud": "דָּגֵשׁ",
+      "translit": "dagesh",
+      "meaning_en": "Consonant dot; with vav, u",
+      "audio_ari": "audio/builder/symbol-dagesh_ari.mp3",
+      "audio_noa": "audio/builder/symbol-dagesh_noa.mp3"
+    },
+    {
+      "glyph": "ׁ",
+      "id": "shin-dot",
+      "nikud": "נְקֻדַּת שִׁין",
+      "translit": "nekudat shin",
+      "meaning_en": "Right dot: sh",
+      "audio_ari": "audio/builder/symbol-shin-dot_ari.mp3",
+      "audio_noa": "audio/builder/symbol-shin-dot_noa.mp3"
+    },
+    {
+      "glyph": "ׂ",
+      "id": "sin-dot",
+      "nikud": "נְקֻדַּת שִׂין",
+      "translit": "nekudat sin",
+      "meaning_en": "Left dot: s",
+      "audio_ari": "audio/builder/symbol-sin-dot_ari.mp3",
+      "audio_noa": "audio/builder/symbol-sin-dot_noa.mp3"
+    },
+    {
+      "glyph": "ׇ",
+      "id": "qamats-qatan",
+      "nikud": "קָמָץ קָטָן",
+      "translit": "kamatz katan",
+      "meaning_en": "o vowel",
+      "audio_ari": "audio/builder/symbol-qamats-qatan_ari.mp3",
+      "audio_noa": "audio/builder/symbol-qamats-qatan_noa.mp3"
+    }
+  ]
+}

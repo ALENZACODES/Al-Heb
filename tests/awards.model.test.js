@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createMemoryStorage, createStore } from '../src/store.js';
 import { deriveBeginnerRubric, RUBRIC_ID, REVIEW_STATUS, CRITERIA_REVIEWED } from '../src/awards/rubric.js';
 import { acceptAssessmentEvent, itemSatisfied, REJECTED_SOURCES } from '../src/awards/contract.js';
@@ -368,7 +369,7 @@ test('trust notes name real source files, and this lane does not award from them
   assert.equal(GAME_STORE_KEYS.length, 5);
   const awardFiles = readdirSync(new URL('../src/awards/', import.meta.url)).filter((n) => n.endsWith('.js') && n !== 'trust.js');
   for (const name of awardFiles) {
-    const src = readFileSync(join(ROOT.pathname, 'src/awards', name), 'utf8');
+    const src = readFileSync(join(fileURLToPath(ROOT), 'src/awards', name), 'utf8');
     assert.doesNotMatch(src, /completeLesson\s*\(|saveQuickCheck\s*\(|awardFromCompletion|grantCertificate\s*\(/);
     assert.doesNotMatch(src, /store\.get\(\s*['"]curriculum\.progress/);
   }

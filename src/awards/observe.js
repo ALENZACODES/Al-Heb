@@ -23,6 +23,7 @@ export const GAME_STORE_KEYS = Object.freeze([
  * step with each game's STORE_KEY.
  */
 export const EXTRA_GAME_STORE_KEYS = Object.freeze([
+  { key: 'games.homebuilder.v1', code: 'homebuilder' },
   { key: 'games.archbuilder.v1', code: 'arch' },
   { key: 'games.barter.v1', code: 'barter' },
   { key: 'games.bumperverbs.v1', code: 'bumper' },

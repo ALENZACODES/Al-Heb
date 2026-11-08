@@ -18,7 +18,7 @@ test('Home presents five photograph-backed beginner doorways with working routes
   const hrefs = portals.map(node => node.attrs.href);
   assert.deepEqual(hrefs, ['#/wordfinder', '#/books', '#/games', '#/read', '#/calendar']);
   for (const hash of hrefs) assert.ok(matchRoute(hash)?.route, 'valid destination ' + hash);
-  assert.ok(root.querySelector('.show-try'), 'the original word builder remains');
+  assert.ok(root.querySelector('.home-builder'), 'the front-page word builder is present');
   assert.ok(root.querySelector('.show-grid'), 'all original destination tiles remain');
   assert.ok(root.querySelector('details.show-all-destinations'));
   assert.match(root.textContent, /240 first words/);

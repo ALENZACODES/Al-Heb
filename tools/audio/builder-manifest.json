@@ -1,0 +1,3678 @@
+{
+  "languageCode": "he-IL",
+  "bitrateKbps": 48,
+  "clips": [
+    {
+      "id": "hf8c8316a",
+      "text": "שָׁלוֹם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf8c8316a_ari.mp3",
+      "fingerprint": "4eba48d3e288b8ddaa0479a00d29b339f8d67332fb173b91d4afb554b0745089",
+      "bytes": 8300,
+      "sha256": "73dfe118e47ca67e4ee9d3439eea11a46152919f2e209307401998fdec852e24"
+    },
+    {
+      "id": "hf8c8316a",
+      "text": "שָׁלוֹם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf8c8316a_noa.mp3",
+      "fingerprint": "9cdd22a609dee785ca437767c415c5be0c553165902397944d11a58f7d0e1199",
+      "bytes": 6572,
+      "sha256": "abbda77395c0d0066b42f10c851fcad2c39e2e1b5cf8cb8c8cd911d39b90096b"
+    },
+    {
+      "id": "hf63de22c",
+      "text": "כֵּן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf63de22c_ari.mp3",
+      "fingerprint": "5b369fc663a4e228d51f325224b8f99b72dd7df948d9a8a3e733b99e6267e070",
+      "bytes": 7148,
+      "sha256": "054be9f48ab545c2fc4b56954d889c874e862746ab4052eafe5f9db53897a240"
+    },
+    {
+      "id": "hf63de22c",
+      "text": "כֵּן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf63de22c_noa.mp3",
+      "fingerprint": "28cb3514c14671c2ea95d4081a8b3f71f4ac797c0a76d6586f990bec6e4ad75e",
+      "bytes": 4700,
+      "sha256": "4d4809791795e9ac0be3a0ab784821934302f226f8becf4a82b4496c8722bc65"
+    },
+    {
+      "id": "h8e3e6f50",
+      "text": "לֹא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8e3e6f50_ari.mp3",
+      "fingerprint": "8e1c23b683f36b79c989606dda33e3a77eb74136723729bd46ca5ba7a15c9fa2",
+      "bytes": 8300,
+      "sha256": "e1d27cf09871a89dc83bf84c968f4a2d808fb173995617db87f5c112c754e7ec"
+    },
+    {
+      "id": "h8e3e6f50",
+      "text": "לֹא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8e3e6f50_noa.mp3",
+      "fingerprint": "5b83092c9cc077644ae623ca99c0b7c6a2bf425601804d5b619e933850657496",
+      "bytes": 9740,
+      "sha256": "1ed3550ab5ffc69acc0c76d526c50226c23eabc69d4a860b0985bd6a33b8371e"
+    },
+    {
+      "id": "he0b2f96b",
+      "text": "תּוֹדָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he0b2f96b_ari.mp3",
+      "fingerprint": "6ff3dcea10525180c1ba3d635cc4dd993949abb5df5f261b5978a40ac85a3280",
+      "bytes": 7148,
+      "sha256": "06aaecda3f0c031442ab0d04c7520a06d4073d537600e5c6614b8b51809b651b"
+    },
+    {
+      "id": "he0b2f96b",
+      "text": "תּוֹדָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he0b2f96b_noa.mp3",
+      "fingerprint": "1bc8c999b8c0a7fb91cc48cae4b98d79d8e6fb502fa314c06069f19284ac18e5",
+      "bytes": 5420,
+      "sha256": "900f35c14a25ba5f903709a83cb762f1cd69ea361b62fdaae51ffcf02d30db4a"
+    },
+    {
+      "id": "p580df509",
+      "text": "בְּבַקָּשָׁה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/p580df509_ari.mp3",
+      "fingerprint": "51e570ad30ef99771399bf477ff0e0fe72cc1d3cd7ddeec28341ecdfebe073c4",
+      "bytes": 8012,
+      "sha256": "6b9f5b075e9a2d4f8605f6f150172b1cef56cd75e4a000b7754807abe4dedf8f"
+    },
+    {
+      "id": "p580df509",
+      "text": "בְּבַקָּשָׁה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/p580df509_noa.mp3",
+      "fingerprint": "8868fdfa0d39a5ffae041b28287396109dc4be4404ab01610efa7e3cc61c0329",
+      "bytes": 7580,
+      "sha256": "3778ddc8dd2f2855b03ce98e40403fbcf4cfa73bba636d8de78005aec56f9f10"
+    },
+    {
+      "id": "h0a70642a",
+      "text": "אַבָּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h0a70642a_ari.mp3",
+      "fingerprint": "55bf374f1a84ae7268a4448f2ed4ee23eb459e8fa536f167cb97eb049252fd02",
+      "bytes": 6140,
+      "sha256": "c6f50b3c596222d32011a907304bdcdf3bf0399f4f65a47071571b3220a2f4e4"
+    },
+    {
+      "id": "h0a70642a",
+      "text": "אַבָּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h0a70642a_noa.mp3",
+      "fingerprint": "096b48948adf9a28f971974f5428890accf860b45ec1ab59c6af83bc1b1ea57a",
+      "bytes": 6572,
+      "sha256": "9584b5d452ff204f9e90bbae4f54bcaffdbb7ba15d09bd23d5111c3ff896a34d"
+    },
+    {
+      "id": "h1306c935",
+      "text": "אִמָּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1306c935_ari.mp3",
+      "fingerprint": "7ce2539ad792c00bb3273f0aecb504dd6a917cf72f3ce91fcbfc3e4b862cc90d",
+      "bytes": 6428,
+      "sha256": "3e43a5655e56358ed11d9a0aac9d310ac8327883a1038b367a8ae1db0d71ffb4"
+    },
+    {
+      "id": "h1306c935",
+      "text": "אִמָּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1306c935_noa.mp3",
+      "fingerprint": "87eb45df9d51da8123fcf8f43c341324990e9855c1806e8b4c35888813cb19d5",
+      "bytes": 5420,
+      "sha256": "57035b6d967b3d2ec4bcafde331dfd2e93b5b6affa81e756405f2e29586c00f3"
+    },
+    {
+      "id": "p7f7d7b8f",
+      "text": "מַיִם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/p7f7d7b8f_ari.mp3",
+      "fingerprint": "250a895d5773e37e1bbb58353b35e770c26aabdf9bef0eeb687ef74fad641cd7",
+      "bytes": 7148,
+      "sha256": "7981a2b1dd86141d0743cc117c2071516e2d76ce672c48f332fee77df3fdd768"
+    },
+    {
+      "id": "p7f7d7b8f",
+      "text": "מַיִם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/p7f7d7b8f_noa.mp3",
+      "fingerprint": "5d5bc40b9e7930059971191633a2d3298e0a9234c5aa6ad772218a6e6d00b08a",
+      "bytes": 7868,
+      "sha256": "fd61383eeda759873122db5525d6a12e218c58cbdb972cbfaac956518180b266"
+    },
+    {
+      "id": "hf22f36ee",
+      "text": "לֶחֶם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf22f36ee_ari.mp3",
+      "fingerprint": "9c29b8b2eb16c9306f45a158ee0cbd7e0d473a851e80f0668c6a2ba0bf884d4a",
+      "bytes": 7580,
+      "sha256": "7f811cfa365032d27c3f7b4786d4f7e1813d941d04fb903375531d9cd1eece8c"
+    },
+    {
+      "id": "hf22f36ee",
+      "text": "לֶחֶם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf22f36ee_noa.mp3",
+      "fingerprint": "2c15820dcd8cb3b740a794720f496f85c6dfa26cb657783af937f21a84dc8faa",
+      "bytes": 6860,
+      "sha256": "f015e86c13ebfaa1a4c0ef43ee03d2940dabbafd64f53d0f4487d311b24b41c9"
+    },
+    {
+      "id": "h231c624a",
+      "text": "סֵפֶר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h231c624a_ari.mp3",
+      "fingerprint": "b92a9269c04a44e4c0c64bdafb0e840c942eec3e4e3775760d87953f37b6321e",
+      "bytes": 7292,
+      "sha256": "aae926935501121d4c423b508db38b4084e35cbb6fad7794a43ac819a1946aea"
+    },
+    {
+      "id": "h231c624a",
+      "text": "סֵפֶר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h231c624a_noa.mp3",
+      "fingerprint": "5ff0f8d05b74b0de040a6c683b6a0bed1504f512b20d6579790cb9ce8bf606a4",
+      "bytes": 9740,
+      "sha256": "9e53e89da79361d851670d890f09bd226d50364a83de7d974fea2175a418a0b1"
+    },
+    {
+      "id": "h35be21c5",
+      "text": "חָלָב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h35be21c5_ari.mp3",
+      "fingerprint": "200dcde5d11c38b1730640ae82e43dd45ef307c611abfb51f47b784d5b7de044",
+      "bytes": 8732,
+      "sha256": "d6b6c122bbd80a04628da1132b1eec8af863b050955b7b762cd215a1c9f65138"
+    },
+    {
+      "id": "h35be21c5",
+      "text": "חָלָב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h35be21c5_noa.mp3",
+      "fingerprint": "c3efa2c51c7d9fced4d9ea03c5803911aede20e744d04a50df10b2c5e1443c37",
+      "bytes": 7868,
+      "sha256": "e2808bc5a984226ce60cc7c2e35dfdd957c647355f2153f1c86574971ca685dd"
+    },
+    {
+      "id": "hf9047f4b",
+      "text": "כּוֹס",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf9047f4b_ari.mp3",
+      "fingerprint": "7c43e7aed0609735443575ef4b4541a70c93ac73b15161d1eed3768756a2edf3",
+      "bytes": 5420,
+      "sha256": "1d63e0698a4e78563f8939364832f8e9cc95bfdc37ff72c54a7c4de9af5cc516"
+    },
+    {
+      "id": "hf9047f4b",
+      "text": "כּוֹס",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf9047f4b_noa.mp3",
+      "fingerprint": "77735ec09d2542df58681897aa8103cf9e9c7c052584522decc40a4673f56dc1",
+      "bytes": 4700,
+      "sha256": "69ca781320c85251adc1067fd490fe2cca70d1ac017080de1edb95dc12ea7c78"
+    },
+    {
+      "id": "hf5bee50d",
+      "text": "לַיְלָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf5bee50d_ari.mp3",
+      "fingerprint": "571bd34a3e1d5ab9f1b62092b50abc31b84a78ff6a0274f728e7b039623dcdbe",
+      "bytes": 7580,
+      "sha256": "48bbe74fc2ec43eeea3af9d29df394c43460e7273c8bf7fb3258015bb7358a37"
+    },
+    {
+      "id": "hf5bee50d",
+      "text": "לַיְלָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf5bee50d_noa.mp3",
+      "fingerprint": "e2ae3b53ccda842385781cf1c961de60922d642b2688ed1fef0ce4d68c633ad6",
+      "bytes": 6140,
+      "sha256": "4aa60712c99790db3cbb2e083e6183e6490e4986d3ee437b50e85b60da46be4c"
+    },
+    {
+      "id": "h1643d708",
+      "text": "תֵּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1643d708_ari.mp3",
+      "fingerprint": "c5cc75dd3ef12bc72e145deb9eee2035b7e64d9d418c570ac890726c30c95120",
+      "bytes": 7868,
+      "sha256": "2dc2983a0ddc81dc8c7b0753253898906d5e99aed10d69ff83653901010acec7"
+    },
+    {
+      "id": "h1643d708",
+      "text": "תֵּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1643d708_noa.mp3",
+      "fingerprint": "1d5241b520e42486e3a1b377f5c400d67dd7a7d9398d1b5833163ec9fbf45329",
+      "bytes": 4700,
+      "sha256": "6186a7f2534537b43c497911eb9fc815087ca23a6b37093d0679329fecf3b04c"
+    },
+    {
+      "id": "h18108dff",
+      "text": "אָחוֹת",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h18108dff_ari.mp3",
+      "fingerprint": "aac7f302f91c31a54ead6021f65373521b8a96cced7644e70d4bc809ca919487",
+      "bytes": 8300,
+      "sha256": "8139d7fe2e093fc9d43fa52e3303d4281c18c08cb76177d495557c93b711a89f"
+    },
+    {
+      "id": "h18108dff",
+      "text": "אָחוֹת",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h18108dff_noa.mp3",
+      "fingerprint": "40361c740b9135ef93613d36a91a5757c3b8d63d9e10cbe038e5c949079c2de2",
+      "bytes": 7868,
+      "sha256": "d5678c84737e289d50ed4260fca337d8b84e188982ba00c3b8706cc169077749"
+    },
+    {
+      "id": "ha7545fff",
+      "text": "אָח",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/ha7545fff_ari.mp3",
+      "fingerprint": "d93762dbed0177dc8bc9ef1e918d8ecd0c3be70378e543490555c3f022324154",
+      "bytes": 5708,
+      "sha256": "babdec578d396b17c10164fda4195a6ff9e16455c6c643762cd01cae7c06ef98"
+    },
+    {
+      "id": "ha7545fff",
+      "text": "אָח",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/ha7545fff_noa.mp3",
+      "fingerprint": "49e5615adc4b45c97996d4560d9ab36d0f781fc7434d77b1dd02174f5692837c",
+      "bytes": 6428,
+      "sha256": "856aef2ac3e7ee90bb330fe864611c6de3a2e2878df65406154763d96c3cd14a"
+    },
+    {
+      "id": "h9974efdc",
+      "text": "בֵּיצָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9974efdc_ari.mp3",
+      "fingerprint": "19eb1a71eb2de12bf2ab02dde95504ae8e6887b9cba63d08b8644c0428279431",
+      "bytes": 7148,
+      "sha256": "3286e3e45cdb17487abd6e6c9f0e88865beaff864cd50cefa09f1809c7940b2f"
+    },
+    {
+      "id": "h9974efdc",
+      "text": "בֵּיצָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9974efdc_noa.mp3",
+      "fingerprint": "3a38799441abf6bd9bde5fafcc901411b017a76809a37dab93981c88fa38576c",
+      "bytes": 10460,
+      "sha256": "3b94580c06de9793c78b34f7eff22bb4625a2ba5ec866dea6ca40bb11c3a5850"
+    },
+    {
+      "id": "h4692cd32",
+      "text": "יָם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h4692cd32_ari.mp3",
+      "fingerprint": "1a14159b852cd3be1981d1e38a7413774596d2de4c1b849323b5e3e43897a06a",
+      "bytes": 7580,
+      "sha256": "d48885cabbcfa59a10fa4b74c67d0ca589ea04d88ebf641aa8431eb2c2b8ad15"
+    },
+    {
+      "id": "h4692cd32",
+      "text": "יָם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h4692cd32_noa.mp3",
+      "fingerprint": "05c1dea88463313d0969a36575b36a24423a4e91a610e66de2c98d513b6d1e74",
+      "bytes": 6428,
+      "sha256": "a4d9395b73b87ebac8f5fb11c401e60758abe2acf11d9de5781a39c63d89214f"
+    },
+    {
+      "id": "h86027352",
+      "text": "שֶׁמֶשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h86027352_ari.mp3",
+      "fingerprint": "2254dc5dace04432a10be873f31d84ac9ad35c840e3a90d78ab1148aee78bbfd",
+      "bytes": 9020,
+      "sha256": "15343795deae89cded373024729cbe06064a94009493ddb2d8a3061d29b324f8"
+    },
+    {
+      "id": "h86027352",
+      "text": "שֶׁמֶשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h86027352_noa.mp3",
+      "fingerprint": "1437b9a6ad25e6a9604f2c2498c270723b114ea1d82c6269258fec667480c2cf",
+      "bytes": 6860,
+      "sha256": "6a624cc030cc04d00564e662798e7eaeba35311691274b6270f25cabedebf6b2"
+    },
+    {
+      "id": "hc06c43b6",
+      "text": "טוֹב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc06c43b6_ari.mp3",
+      "fingerprint": "4ec0f861006b6ea5b1d635a1be326b9584f5590d42c51a4c3f5269fa7c8b01ef",
+      "bytes": 5708,
+      "sha256": "6cad82bc7cf1ad6e23e7976a0124f9cffc26f1cc94e1c6a99067238fa08bf9ff"
+    },
+    {
+      "id": "hc06c43b6",
+      "text": "טוֹב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc06c43b6_noa.mp3",
+      "fingerprint": "311f933d397e9da770a6d6670319d4d12338bf46c342889f5a2d68c26f419cbb",
+      "bytes": 6140,
+      "sha256": "deaad6ba212edf615d5643886fbd6b56d433dab5ef5bf5a5030cc03eca9454ba"
+    },
+    {
+      "id": "h9f3caed1",
+      "text": "מִשְׁפָּחָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9f3caed1_ari.mp3",
+      "fingerprint": "43f3a53c3d6634abb27215ab378b91ffb81b3de5ab5143e7e7ceb33dd679e853",
+      "bytes": 7292,
+      "sha256": "d54faa314414da075a3e5db0e75febd2b308ba82f8b7a5a46d1344b514154bbd"
+    },
+    {
+      "id": "h9f3caed1",
+      "text": "מִשְׁפָּחָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9f3caed1_noa.mp3",
+      "fingerprint": "0ab75a80be3e5ef70a5f209f3c31e0ddc223da77acda5ec684fa0606cfe456f8",
+      "bytes": 7148,
+      "sha256": "28153c45063a318bbb49dabe7254ac04b1228dac7b74b00702b984bb1440fcd6"
+    },
+    {
+      "id": "h80c0273d",
+      "text": "דֶּלֶת",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h80c0273d_ari.mp3",
+      "fingerprint": "76f3508c67bc291b415343d3e1f1878d298df4e32ffa39bc01fd8ebe175ef4ed",
+      "bytes": 8012,
+      "sha256": "ddf080a663ddfc6b66ff26fe8862945fe492b08fcd7b24f0ec64acdda9611827"
+    },
+    {
+      "id": "h80c0273d",
+      "text": "דֶּלֶת",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h80c0273d_noa.mp3",
+      "fingerprint": "94a5a163066e08aaa3bfe17ecd9263646c4aa21877d171c67214569c652b3350",
+      "bytes": 6140,
+      "sha256": "508a8d04fb5c3623a9f58e81e51c167b7dca6c30320efb02fde7b1912d46942f"
+    },
+    {
+      "id": "h155e306b",
+      "text": "אֶחָד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h155e306b_ari.mp3",
+      "fingerprint": "69eaa3304181ef9547f97a6d294f1572cdf817217703cf4983fa0d0318eb28ab",
+      "bytes": 7148,
+      "sha256": "c5cd767476236e6e03632b70bd813f8792031131c9933f7e48ed5283de4c61cd"
+    },
+    {
+      "id": "h155e306b",
+      "text": "אֶחָד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h155e306b_noa.mp3",
+      "fingerprint": "4997278d7424b50539860575fd1049694057431f3bc5fab710ebe2d6cd294eb7",
+      "bytes": 9740,
+      "sha256": "c4222d01ca3b835af80626e8624a955a898af80af39a522560b03989f6a9417b"
+    },
+    {
+      "id": "h4fed6814",
+      "text": "רֹאשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h4fed6814_ari.mp3",
+      "fingerprint": "a1e657f23d8f934ca169ebe9ffeaa1eaf3c91ef5ffcee9a2555608aea72dec71",
+      "bytes": 7148,
+      "sha256": "33cb5da24fb7932f1068b757b6c3d7e420f0af599db445bc62eb0a3710d84ff8"
+    },
+    {
+      "id": "h4fed6814",
+      "text": "רֹאשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h4fed6814_noa.mp3",
+      "fingerprint": "7e3e342ae5f5fcc77c1901bb78b99144a563c4f39cc44e5f2ab2ef935bc8495c",
+      "bytes": 7868,
+      "sha256": "285926c2377264a3b92ae3cc4f2df83c78c798707881165b16fe4c80594f99d0"
+    },
+    {
+      "id": "h9c8ddecf",
+      "text": "בַּיִת",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9c8ddecf_ari.mp3",
+      "fingerprint": "0c31caba356a5d0d17a0acef1048df096dbd5eae77034ae0173a63477a33ded2",
+      "bytes": 7292,
+      "sha256": "9d54ad5f2f71af68b4a9a062ac3c33ce55f710539f9b821e5ee1ac13e8de4373"
+    },
+    {
+      "id": "h9c8ddecf",
+      "text": "בַּיִת",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9c8ddecf_noa.mp3",
+      "fingerprint": "e1707a96afcb27a7296e6862cfef76d79b96d203fa795215cc161a871f40b2ae",
+      "bytes": 6572,
+      "sha256": "375371091601a9a373473742ea634113fe0960c710be5bab782f25f824c536ea"
+    },
+    {
+      "id": "h1a3574d3",
+      "text": "יָד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1a3574d3_ari.mp3",
+      "fingerprint": "b9f11e919815ac056835d2b1f1a0947da6ac7db1180881c3bf260072b66e96b6",
+      "bytes": 7580,
+      "sha256": "a49289d0ac5174fb9b6e7c6cba4912fd4b0c2f0ca7a6c03d3848b29c3efe6a1c"
+    },
+    {
+      "id": "h1a3574d3",
+      "text": "יָד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1a3574d3_noa.mp3",
+      "fingerprint": "11e2dc8eb4f7b62cbdf750eb7e0e39288d346136da36c0b2818a07f39df6224f",
+      "bytes": 9452,
+      "sha256": "7149d75c6e908cbb703b2c03b0f9160fdb77f8f0bf79b1962aa14b1cf4e7c3db"
+    },
+    {
+      "id": "h50cf3648",
+      "text": "יוֹם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h50cf3648_ari.mp3",
+      "fingerprint": "8b2223542e0cab0e74a994f7a4113a4ed856d046ea731a9c0ad9cc8abf72bbe8",
+      "bytes": 6140,
+      "sha256": "b6f343bf535c7579a4b39a619ebb90419a6a86308fef05105b283449faabfd07"
+    },
+    {
+      "id": "h50cf3648",
+      "text": "יוֹם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h50cf3648_noa.mp3",
+      "fingerprint": "1f6f61a61630593d4eabcaee69f8b13801f3a44d5061f8a6e06db2faf65081e6",
+      "bytes": 8732,
+      "sha256": "268aca471ba324a3479381a57b04ebfc34c57ff3fb0f13b0113167be52a0a6a1"
+    },
+    {
+      "id": "hd2fac0d2",
+      "text": "עֵץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hd2fac0d2_ari.mp3",
+      "fingerprint": "db9456b17f97f047f1b7fcab11cb451bd77a107229b7bc8ed3519353576f34e1",
+      "bytes": 7148,
+      "sha256": "f0f382fa4fcae6c0fd3133256e41cc840048d8b08034b72a985d95e0df0595cb"
+    },
+    {
+      "id": "hd2fac0d2",
+      "text": "עֵץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hd2fac0d2_noa.mp3",
+      "fingerprint": "b79be082ff3e0f9323f8f73c53a9dcb7be00133e2a39aee065d9e76861ddb079",
+      "bytes": 6572,
+      "sha256": "437a40b81379ae713617e542556ad4764bb232509523dd2c9f0e966eebe1fd28"
+    },
+    {
+      "id": "h80d6f3f0",
+      "text": "פָּרָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h80d6f3f0_ari.mp3",
+      "fingerprint": "f65a939f494a7edfa02f407667eadd7422966b0cf65549ceea132e37aa4f6da4",
+      "bytes": 5708,
+      "sha256": "536f618cde69a104e7b05c40d442ab9365c66d44e636666c32acce737d7b5a32"
+    },
+    {
+      "id": "h80d6f3f0",
+      "text": "פָּרָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h80d6f3f0_noa.mp3",
+      "fingerprint": "2c314792bc1828b07ee51c1b3678ecee877ad7cabdbf3040764075dfcf0abefa",
+      "bytes": 4988,
+      "sha256": "09c1dfc2460e31e6b95af12b8333c8e8e1d7a26e3c279e52757693e4da18015c"
+    },
+    {
+      "id": "h4f61c9d1",
+      "text": "דָּג",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h4f61c9d1_ari.mp3",
+      "fingerprint": "e94393e23ad0eaefd97b7167ee1e3d2222bcc710222cd91cd1d5ef75883569bd",
+      "bytes": 5852,
+      "sha256": "32963435ff4c51d5648f2cbe113bebf99d84e80f8d056311bca8c80c1c5de077"
+    },
+    {
+      "id": "h4f61c9d1",
+      "text": "דָּג",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h4f61c9d1_noa.mp3",
+      "fingerprint": "e401cfde2a021ccfb7ef608e51f4019853efb19d6574df72664442c8e8a4ffa2",
+      "bytes": 8732,
+      "sha256": "20e65232be9ce064aaa29083f4af4c7c6cd7940208f28ea8bc700660025a041e"
+    },
+    {
+      "id": "h95c54aba",
+      "text": "אוֹקֵי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h95c54aba_ari.mp3",
+      "fingerprint": "b30a5a23c80f3746324b196c7dea323464fce59fcc913fe9a34dc23685441dc1",
+      "bytes": 7148,
+      "sha256": "56d100a7fc7feca6fe21d4e87e80471256754b7b0362095ca755fa514c169f62"
+    },
+    {
+      "id": "h95c54aba",
+      "text": "אוֹקֵי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h95c54aba_noa.mp3",
+      "fingerprint": "cc9ce77741d7192c79dd118a8c4f8fd97df244144017a60d4850a4ffcd3f74ef",
+      "bytes": 6572,
+      "sha256": "407a85a0b94e51c059673cae446dd84661fd39f9f48ed60a1226fe032fdf685c"
+    },
+    {
+      "id": "he90efaca",
+      "text": "בַּי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he90efaca_ari.mp3",
+      "fingerprint": "64b0bbe98b60c8df0c063135ecfeda5428a1b092662f5fa3f046e495c8287f13",
+      "bytes": 6860,
+      "sha256": "93a4fe06d836f3236fd1f44a75e9b6d110c8435c985322c20dc9e23034f4bae2"
+    },
+    {
+      "id": "he90efaca",
+      "text": "בַּי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he90efaca_noa.mp3",
+      "fingerprint": "5e9c1ebb03ced4413b6fbc135920bd8bce51512b52374438698725cf7bca236f",
+      "bytes": 8732,
+      "sha256": "7170fb70ece53f2ff7dbe9e04a69831a61e7303df5fa3801757131fef910a246"
+    },
+    {
+      "id": "pae09e148",
+      "text": "אַחְלָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/pae09e148_ari.mp3",
+      "fingerprint": "57f0621a0a05f66e0b35649a16fcd31a492129e57e6921ef9c2cb5e6ac4042dd",
+      "bytes": 6860,
+      "sha256": "492ffa23657df617222b64c8eb2ab0158a3b443abb4d317388143104f123ea86"
+    },
+    {
+      "id": "pae09e148",
+      "text": "אַחְלָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/pae09e148_noa.mp3",
+      "fingerprint": "01d677a7d7d8de39c24c13cb4df7a6b46d4672a92455ce6971b9e5ffa1d18428",
+      "bytes": 6860,
+      "sha256": "2590d269f48d8d2e4c912f522d27ba68b65478dc540a9993ec16c180b1643f12"
+    },
+    {
+      "id": "pec9a400e",
+      "text": "שְׁמִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/pec9a400e_ari.mp3",
+      "fingerprint": "809b9cda019755c81e0704d1212fed33f8efebe493ddb1b1aa3afc81263173c7",
+      "bytes": 7292,
+      "sha256": "d0d6d85549d7d01d9c10163db7de11b87f2d15d3dbd1f942f2f96438e1d36ed5"
+    },
+    {
+      "id": "pec9a400e",
+      "text": "שְׁמִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/pec9a400e_noa.mp3",
+      "fingerprint": "d484ae0c1e52f24fc086ce5b536ca220ca7fb57a5a5ea05f48911a307f677183",
+      "bytes": 5852,
+      "sha256": "3c096990ba46d2b774755c14ca2266210c36d6f79779a87495e5a48dd1f6a486"
+    },
+    {
+      "id": "hd4c8080b",
+      "text": "אָנָּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hd4c8080b_ari.mp3",
+      "fingerprint": "b93de372c9a7c2753658979d7046cb1c17b2caed39798e6fca56407849703c29",
+      "bytes": 6140,
+      "sha256": "5fa481b1ddd676c12ead38aac1600f297c4c2f08fea5f3a3a5da07c064106dc1"
+    },
+    {
+      "id": "hd4c8080b",
+      "text": "אָנָּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hd4c8080b_noa.mp3",
+      "fingerprint": "ffd23210725db95e56576cee8597ca8f7f1d458831591da74469092421d1a666",
+      "bytes": 5708,
+      "sha256": "124fa4eacb29bc923b0599027a5307284717c43c8b46227170c09034e35a3326"
+    },
+    {
+      "id": "hdcd31646",
+      "text": "אוּלַי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hdcd31646_ari.mp3",
+      "fingerprint": "453c02bf35dce3d8f417d87f38201b09be3ede9991067e3ceaee0b738191b513",
+      "bytes": 7292,
+      "sha256": "39d8678db84f489ee386f8cf815533144d3ab545cc9bbc89d3362d821036b1de"
+    },
+    {
+      "id": "hdcd31646",
+      "text": "אוּלַי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hdcd31646_noa.mp3",
+      "fingerprint": "9030a3ea503bb81e7b51eadf31d7f2ab78a1b3247f4b7e59fbf34b9662222b4e",
+      "bytes": 9740,
+      "sha256": "b0b0bd44b5a74ffd4c4679b9f7ee1b272082bb1a9b4419a60ab3ed9052f34097"
+    },
+    {
+      "id": "h44404757",
+      "text": "סַבָּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h44404757_ari.mp3",
+      "fingerprint": "2c95757b3824d690f4444b00887b240ea91b831a58726c76314da3988b287209",
+      "bytes": 7148,
+      "sha256": "eaf2e18a96b524c96135f2d74b87f41176e94195c323627b2631621fcf78a6ea"
+    },
+    {
+      "id": "h44404757",
+      "text": "סַבָּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h44404757_noa.mp3",
+      "fingerprint": "127172daeed87317e91796aa75f76e97a5534570c2a55f3ab242047c1b97b358",
+      "bytes": 4412,
+      "sha256": "1f6baa30a50d03bad45fc8a29d2f8bbae76cbb2114190a8f72ee01b12210ac6d"
+    },
+    {
+      "id": "h1301ecc3",
+      "text": "יֶלֶד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1301ecc3_ari.mp3",
+      "fingerprint": "ce43c7e9a018bb235878ee907bdcf1f341bc59250ec0913b0848cafdc819eb75",
+      "bytes": 6572,
+      "sha256": "c594cec8a0933da65511d04a94e095c6129c03d19d532afd31f8665ec32c0af7"
+    },
+    {
+      "id": "h1301ecc3",
+      "text": "יֶלֶד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1301ecc3_noa.mp3",
+      "fingerprint": "1f3f0605be3e7711f810c9a6d3915be6f758653a890c02758c5397f261874f82",
+      "bytes": 9308,
+      "sha256": "5f381c8a87332c1cd2da676f1ce269f466d0f3c8518db39d7e16f2f047913e3a"
+    },
+    {
+      "id": "hb92174cf",
+      "text": "יַלְדָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hb92174cf_ari.mp3",
+      "fingerprint": "c4e4c49925d651dd5c1be623c7b0f01debe08a4a6e2e9af810a514521500bfd9",
+      "bytes": 6572,
+      "sha256": "e651cd03527376ca9e7ee313475f25e1ee1b7857ae81c811e74b080185ec3f27"
+    },
+    {
+      "id": "hb92174cf",
+      "text": "יַלְדָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hb92174cf_noa.mp3",
+      "fingerprint": "059340c38065c0bb08727371e62f12884d2e599324a521f462a5f0e7a210a4b2",
+      "bytes": 5852,
+      "sha256": "4c5efb2ce25b1de05ed07d39fca0d5deb40eb9ff9e3cf5ce68f778d4d11f99d9"
+    },
+    {
+      "id": "hc6cdec2b",
+      "text": "דּוֹד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc6cdec2b_ari.mp3",
+      "fingerprint": "886ae86e9c12382384d1246485ed989ec4d3518a2c5fa127cf9c2769e17a147c",
+      "bytes": 7580,
+      "sha256": "cf34ceaad24dfae72035fd7b69e1549d9bceb92de04dacf7713f233e0c42fb11"
+    },
+    {
+      "id": "hc6cdec2b",
+      "text": "דּוֹד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc6cdec2b_noa.mp3",
+      "fingerprint": "06bacfd7ae73bfaf5002ac1a1eba57d994308306faa13928754169452cbcf52d",
+      "bytes": 4700,
+      "sha256": "33b2361d7d5627c16692bb5d833c8715c3f67f624cf8725df8880769bc9ef408"
+    },
+    {
+      "id": "hfe4ebf2c",
+      "text": "אָדָם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hfe4ebf2c_ari.mp3",
+      "fingerprint": "58479a51929edb53eccf3ad72521e5851acd70f477fc57db50d3a897ddad29a7",
+      "bytes": 9308,
+      "sha256": "2a369d13444aa3160dd302218409b9e3c5bd5bce272dd766156eb33f2a7246e0"
+    },
+    {
+      "id": "hfe4ebf2c",
+      "text": "אָדָם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hfe4ebf2c_noa.mp3",
+      "fingerprint": "35b3b8c05926ffa76f4b214bd03aa9f3f8c7eac8f23ba3352f528a03ec4577b4",
+      "bytes": 7868,
+      "sha256": "b24423902c467649a857ef217fb2687d982f9628de7162a50d5b8317bacaf6a1"
+    },
+    {
+      "id": "h19e80411",
+      "text": "בַּחוּרָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h19e80411_ari.mp3",
+      "fingerprint": "1c52584e796f917dcd5718109510fe60354be7360748a365a386aa4c0db114e7",
+      "bytes": 7580,
+      "sha256": "f6625ef68d7529c0718813ff9582cc685a84a5101e3ea33e858275f1754a5dcb"
+    },
+    {
+      "id": "h19e80411",
+      "text": "בַּחוּרָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h19e80411_noa.mp3",
+      "fingerprint": "479154d1d7b63b0c6db4dfe609c7a2ad6b5753b391c1a7fb5b97fd29fdb9c5d9",
+      "bytes": 5852,
+      "sha256": "776face23556a4efb9ffe680288f69d55c724e339edda66cf0ad33a793f9cb51"
+    },
+    {
+      "id": "h2280b9b6",
+      "text": "חָבֵר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h2280b9b6_ari.mp3",
+      "fingerprint": "aa6572f0fbb8e014e26766044b3e2a1c2722cee53281785c6896d72b77106b2d",
+      "bytes": 6860,
+      "sha256": "8d32ce6eac711fb2ca3bea077deb242a44cc27b5720ddc31aa3a99145a45d557"
+    },
+    {
+      "id": "h2280b9b6",
+      "text": "חָבֵר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h2280b9b6_noa.mp3",
+      "fingerprint": "a2f99cfd4fa282cca3fe8671b618dd46f1feef21c9d06e6c2bbd35239386d0f0",
+      "bytes": 5420,
+      "sha256": "87afd3134591dbb385895b4df25acb506dfe98a23ff097b2513b3e6477f9ff5b"
+    },
+    {
+      "id": "h020c4fa8",
+      "text": "עַם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h020c4fa8_ari.mp3",
+      "fingerprint": "b294ca8b5af3e8a9f9f19b2dac03461ba6d9f706f08a66de903995ab9f09e71e",
+      "bytes": 6572,
+      "sha256": "046b53ae46b9ce9e1653969f3e7e379b896266fea0515ae41ca218fc2e2a7c40"
+    },
+    {
+      "id": "h020c4fa8",
+      "text": "עַם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h020c4fa8_noa.mp3",
+      "fingerprint": "351e55b5065c339aab669b9e55eacadfa7d7da2f1af7f4922e5a354d38f82bdf",
+      "bytes": 5132,
+      "sha256": "67319ab7c8c9331c14c5a1c256722b93d2d6561422a50f3b45cd5e9b957a3f49"
+    },
+    {
+      "id": "h8b8a2576",
+      "text": "נָבִיא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8b8a2576_ari.mp3",
+      "fingerprint": "8dc955547a963edc7d3839be488a729e28a3e3252dcb5a02bd203f3019479e4e",
+      "bytes": 5852,
+      "sha256": "27e18ecc73f8cd19d900e7bb694b6ff73680b4972c4f3c68513f857d673c586a"
+    },
+    {
+      "id": "h8b8a2576",
+      "text": "נָבִיא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8b8a2576_noa.mp3",
+      "fingerprint": "573abb242a2a3c38cb9896bf090636aee1aa077b8a0288051cf2074d4625cba2",
+      "bytes": 6140,
+      "sha256": "ed555e4482f2eb817d777b8a2386dc36fbbb79b6d7e77e6bc2d2530015e11306"
+    },
+    {
+      "id": "hc8e03f62",
+      "text": "רוֹפֵא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc8e03f62_ari.mp3",
+      "fingerprint": "f8dd6f081eee3366b23c47565d51dc1aae39e5a54fd84b0ea0a64ab21b7ae364",
+      "bytes": 6140,
+      "sha256": "5c87e4017b317165edfa7d4c05c7be046838dc7cc9dbc07036067660a7c39bf1"
+    },
+    {
+      "id": "hc8e03f62",
+      "text": "רוֹפֵא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc8e03f62_noa.mp3",
+      "fingerprint": "057d77a583fb3fdf8331e27487911e446502eacf50c3832e9050032d05980bc2",
+      "bytes": 7148,
+      "sha256": "32f8d544aa5e8e73bd080f32f1951b32ad4897b67848c58bec3537d577b836fe"
+    },
+    {
+      "id": "hc008b0a9",
+      "text": "דְּבַשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc008b0a9_ari.mp3",
+      "fingerprint": "c8cbc24a608ce7e96c9d4bffc832b173678023580a807bbca5134683ff0750bc",
+      "bytes": 7580,
+      "sha256": "05328ab2daae3ba73698f18f5b2ee5aba2dd5b31e1c475cfa437505192f16b8a"
+    },
+    {
+      "id": "hc008b0a9",
+      "text": "דְּבַשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc008b0a9_noa.mp3",
+      "fingerprint": "92b6b36411f7143e0ec230185d8b64437ebe02333aec84b73af54deb37815455",
+      "bytes": 6572,
+      "sha256": "b36342e101bf7a0fd4d522988a2b5c0b617ebab095d07c8b73c8ad374b3428b7"
+    },
+    {
+      "id": "h6b636d7b",
+      "text": "אֲרוּחָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h6b636d7b_ari.mp3",
+      "fingerprint": "84a461c1e9fd5020822a5f5a13ab428733dcd7187770a7fff48ec2a3554f3ebb",
+      "bytes": 6572,
+      "sha256": "7511481ad8ee87e8c597b5878c94b4c15b1eeba590ecdf7ddd8f92f9a5f0f83b"
+    },
+    {
+      "id": "h6b636d7b",
+      "text": "אֲרוּחָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h6b636d7b_noa.mp3",
+      "fingerprint": "87cf6e274d11ed1e71aa0ff810d449ed175bb415063221fbfceaab2cb1577027",
+      "bytes": 5852,
+      "sha256": "ecb1d38236ed6cc5881c9fbf16c16289fb1798c8fd53a8fa0f668ce4a37faaa1"
+    },
+    {
+      "id": "h166d92b0",
+      "text": "פְּרִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h166d92b0_ari.mp3",
+      "fingerprint": "444afe5650df658ef35c2ec2430a675022efa4766db231799140189aec9218b0",
+      "bytes": 6140,
+      "sha256": "f50398891d65bd318966a7998709bb99fb37873e80c4ab41c3ca776a479636e4"
+    },
+    {
+      "id": "h166d92b0",
+      "text": "פְּרִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h166d92b0_noa.mp3",
+      "fingerprint": "75e3803e4bfd4e75f9af1a78b540a3731d2aced0e234682bb56e549c5418d9c5",
+      "bytes": 5132,
+      "sha256": "4d93a4c45da6301a7a662041dafbe2689885d762d31a3d4391be212dc2065543"
+    },
+    {
+      "id": "h6d121ed3",
+      "text": "מִסְעָדָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h6d121ed3_ari.mp3",
+      "fingerprint": "c05d834f69170230bcd6752f158fa1a8a3060b5d5e955bc2b45ffa30d46322e8",
+      "bytes": 7580,
+      "sha256": "20d5d368daea39ef1a63416d6377eb72e8df891838203e425c16807913a8a466"
+    },
+    {
+      "id": "h6d121ed3",
+      "text": "מִסְעָדָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h6d121ed3_noa.mp3",
+      "fingerprint": "2e7f5481bfb40bd9c9fcdc1ff8bcb97b12cb2adb2607fa01e800087af1e6a9f6",
+      "bytes": 6860,
+      "sha256": "6adb24ca34a39c272f788dad95c6821a37db6206fd2ec11d8ef2465a8e030e68"
+    },
+    {
+      "id": "ha664d093",
+      "text": "עוּגָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/ha664d093_ari.mp3",
+      "fingerprint": "508c0671b596547583797506b4a5cf040d1e60826267ebc89ea42efa8d35b782",
+      "bytes": 6860,
+      "sha256": "f035cb8a1f221a9cebab0c32a4bf3a91ffc984ea9a8bd33f27822d78ca1a58ce"
+    },
+    {
+      "id": "ha664d093",
+      "text": "עוּגָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/ha664d093_noa.mp3",
+      "fingerprint": "ba4caef4b5c605793daaa801d983e6914a66c91eea897662ceb6f15cd383d9d6",
+      "bytes": 8732,
+      "sha256": "9bfdd1f3ed3c212ff93bd3ecc267d136a70ec51770a83c842ec874b9fdc0c6dd"
+    },
+    {
+      "id": "hd22f2e01",
+      "text": "בַּקְבּוּק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hd22f2e01_ari.mp3",
+      "fingerprint": "b4fe061f37b6574b80e4524c34af8a23740e843855f43fe93bdc33adf72e55e4",
+      "bytes": 7868,
+      "sha256": "0776e2be2fb0d7d333cc7044ea25b14443d9e071e3c93a265d76209041379b7e"
+    },
+    {
+      "id": "hd22f2e01",
+      "text": "בַּקְבּוּק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hd22f2e01_noa.mp3",
+      "fingerprint": "b40632905decb1f3ea9f1aa131f43e923d82f66987fb2c250b3a8fcf1c79b628",
+      "bytes": 7148,
+      "sha256": "5b73969b602e048fa2f6cfca95840cff239a3950775b12c0b5e8c612b70aa82c"
+    },
+    {
+      "id": "h9790d078",
+      "text": "מָתוֹק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9790d078_ari.mp3",
+      "fingerprint": "84b903da5652d2fdd9472ae2a118c036184161e9a9735dab3cdb8416a6965948",
+      "bytes": 8012,
+      "sha256": "0d728d9de71aebe58c0e993febc7d90b23197c7bc32f66e7db3de22147a032fa"
+    },
+    {
+      "id": "h9790d078",
+      "text": "מָתוֹק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9790d078_noa.mp3",
+      "fingerprint": "1372793cd275a8aa61632a67267ea478166752c6941c55328c4d05c4ac2ce01a",
+      "bytes": 9740,
+      "sha256": "df69e466f0bd1244c435190696369cb3d24a668d60df87e78ef5445c10fb6210"
+    },
+    {
+      "id": "h03763c94",
+      "text": "יַיִן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h03763c94_ari.mp3",
+      "fingerprint": "ff140878fb1edd0c52ca6affb545a660645ea90c187d623a2ff1835f6b81ca65",
+      "bytes": 7868,
+      "sha256": "7bca803fe365bedad1fe1c0fede5f3e2082591444e91a52bea9a774ebabfd278"
+    },
+    {
+      "id": "h03763c94",
+      "text": "יַיִן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h03763c94_noa.mp3",
+      "fingerprint": "f1d0d16a6148e6f40c2f01ea6b8d905ec7e1595a051bdcd744f190fd875cecb7",
+      "bytes": 6572,
+      "sha256": "9d3f7054f358ef81cff9fd7702af9a9e23d8f1e37f93105de143b170480958cd"
+    },
+    {
+      "id": "hbb1dc7a2",
+      "text": "תַּפּוּחַ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hbb1dc7a2_ari.mp3",
+      "fingerprint": "17d9213f21015aad709fa3c8f923e3d3cbdb4d3fe00537d44bf9c0133d2520c7",
+      "bytes": 10460,
+      "sha256": "dde1a9f3173c96a80f6a8f909956b154f2d42dcc419a33f50787fe02840eeaad"
+    },
+    {
+      "id": "hbb1dc7a2",
+      "text": "תַּפּוּחַ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hbb1dc7a2_noa.mp3",
+      "fingerprint": "8623266ec36fee1d34fd8d8e2c1ff6364fc0a5425cd0924a4c757ceb790bcf27",
+      "bytes": 5708,
+      "sha256": "61cd26d725d28592ab73b5dbf930717bcc9a23fe7ff0615ea850c49b6e84297d"
+    },
+    {
+      "id": "h568e3e03",
+      "text": "כִּסֵּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h568e3e03_ari.mp3",
+      "fingerprint": "6be65a7ca09306f14062b1801a180aeda39be8d6576a694cc1797f79cbce6d1f",
+      "bytes": 7580,
+      "sha256": "54d9174f4fafdfea14daa80880ef6dcbd533ebc0989b9c8fe56ca10e59d2076b"
+    },
+    {
+      "id": "h568e3e03",
+      "text": "כִּסֵּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h568e3e03_noa.mp3",
+      "fingerprint": "6387ff5daefad0328502e7645669a1a7f9c004dee80b5ef365075febf4d38ced",
+      "bytes": 5420,
+      "sha256": "32f2234f21a62d2baf7ae4b89e22db39040a8bb090c4215b097334e1fefe0a9f"
+    },
+    {
+      "id": "h11b6d758",
+      "text": "מִטָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h11b6d758_ari.mp3",
+      "fingerprint": "59a9df96ffeab48cac5f8e9a6fd3cea9ce9f529a3a71a272a2920a550c36a639",
+      "bytes": 7292,
+      "sha256": "09492c74a622f25c4997de94031528b6cfba7ee8331f9ab4698ea0eaf4d5f3d1"
+    },
+    {
+      "id": "h11b6d758",
+      "text": "מִטָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h11b6d758_noa.mp3",
+      "fingerprint": "2b2806c5ed16a1dd2ac6bcd4d3fae40f2358e671d3ebeb96531b579affa220f8",
+      "bytes": 5708,
+      "sha256": "f893056b3087fd2c0ed9f92b8d9bd464a583b14a05b64b09328185c6c89fb344"
+    },
+    {
+      "id": "h1c0ffa13",
+      "text": "קִיר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1c0ffa13_ari.mp3",
+      "fingerprint": "895a7dd95b2ddc1c9f32e4b0387ee9aea5cb7ca9b74e7e48b362bcad1e319e5d",
+      "bytes": 5852,
+      "sha256": "716eea3435f30dc3813216c2d49e983eba2bfb52cd451b489e17d8a4dc2acd86"
+    },
+    {
+      "id": "h1c0ffa13",
+      "text": "קִיר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1c0ffa13_noa.mp3",
+      "fingerprint": "18954d82305eca7af3e0ad3484ab32f3bd1e4ef7f93660eb81a2617bdf80334c",
+      "bytes": 5852,
+      "sha256": "4de8626e326933d1359e0fc83895b27819c2105e8b7c88be9f877c791968ea55"
+    },
+    {
+      "id": "h63142367",
+      "text": "נְיָר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h63142367_ari.mp3",
+      "fingerprint": "820f3673425d02d6499aa9fa0766bb5de57326dd066b83707bae7a0330c56f51",
+      "bytes": 8012,
+      "sha256": "c425e89662dffc7ba49c075b4514700ac39fd9765ad5c1f488418e4b5ac601be"
+    },
+    {
+      "id": "h63142367",
+      "text": "נְיָר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h63142367_noa.mp3",
+      "fingerprint": "3237503df8364fa19bf874568fe951d2d92131562fce402d67e6e83db59d9b94",
+      "bytes": 10172,
+      "sha256": "7363c59dbafcfe3ea81203d026af080dd83ce63086ce44ffdd4bb7b41ca24d84"
+    },
+    {
+      "id": "h192ef310",
+      "text": "רִצְפָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h192ef310_ari.mp3",
+      "fingerprint": "216443eea90082a83095f550bccadc8ac031a4395a62824ff85d09a7375bfc45",
+      "bytes": 8012,
+      "sha256": "701094228aff0edb139a6b2df52e2a2fa82f8dabd7e4d2821da91cccb907ac6a"
+    },
+    {
+      "id": "h192ef310",
+      "text": "רִצְפָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h192ef310_noa.mp3",
+      "fingerprint": "d0b9f3b05827ec458a9dd5f9aca8f75b1dd9d533efeaf07fbce51bfde90f605a",
+      "bytes": 6428,
+      "sha256": "4e490f1789edf9fc03a753f3a0548c6071dd4e5df014990488b52f8c049bb4ad"
+    },
+    {
+      "id": "hae5f6946",
+      "text": "סַל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hae5f6946_ari.mp3",
+      "fingerprint": "98e007aa5ff1e132ca4a55ca57f8eebbe890f7121e1b62925c093b2859071712",
+      "bytes": 7148,
+      "sha256": "6d39f167c62fd9ea5252aa8ad04efddc709b3197535f15f3a5ab45299a0d7319"
+    },
+    {
+      "id": "hae5f6946",
+      "text": "סַל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hae5f6946_noa.mp3",
+      "fingerprint": "543eb037a800dd51778e1ade54b60fa3692a8ab027e729d90be4b630b3b512f5",
+      "bytes": 9452,
+      "sha256": "d543577450bd78a2e75922d126b4a2a571682c12fd9371992d8c34786b2aaaab"
+    },
+    {
+      "id": "h470d40b1",
+      "text": "סַפָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h470d40b1_ari.mp3",
+      "fingerprint": "2290a9dd47d22a7abcef99a3eb014bec12ed08724ff73c5b1c50f4c09848071f",
+      "bytes": 6572,
+      "sha256": "ca2fa37df444b036aff47a9d88e9ce2a9595233e3fc540b8f4d5f385942d978e"
+    },
+    {
+      "id": "h470d40b1",
+      "text": "סַפָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h470d40b1_noa.mp3",
+      "fingerprint": "213eb7bceea763de40c4d29bce7920583cdc84ea3844463a3853d57e9085840f",
+      "bytes": 6572,
+      "sha256": "313faaa1f0c512dfa4c432a9978e267b2c66b58256f88b6843151fcccc5b4610"
+    },
+    {
+      "id": "hf73dc598",
+      "text": "עֵט",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf73dc598_ari.mp3",
+      "fingerprint": "e677e98109a72514fb5df97bbc6f4930d56e52efcd1b8091da5c0bad21e8339c",
+      "bytes": 5420,
+      "sha256": "75755b2aa18596e0749133006f212b44f5ebe48c76dbaa872e4a66daf1fdfd42"
+    },
+    {
+      "id": "hf73dc598",
+      "text": "עֵט",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf73dc598_noa.mp3",
+      "fingerprint": "a786d29d3523c57f07c88fd0df1bd4fed1e7a0c1cbd0015fa3d47c0e70f7c32a",
+      "bytes": 5132,
+      "sha256": "623f2174a87d24476d2b597f563b93532c882b8c1f19830e86452e3498ef22e0"
+    },
+    {
+      "id": "hc5b0c1a0",
+      "text": "מַתָּנָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc5b0c1a0_ari.mp3",
+      "fingerprint": "332b7cde75f3d7ed34071ffc7e7523bdef61c580beefc7589dd92de97a8bdbd8",
+      "bytes": 6860,
+      "sha256": "5034fc01e166723f78c2332f9e33715f25660c90e5cd0374215ed3b5aaff36ae"
+    },
+    {
+      "id": "hc5b0c1a0",
+      "text": "מַתָּנָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc5b0c1a0_noa.mp3",
+      "fingerprint": "3d7d0a5f6cd7566b79c89dab5d8f42400ca594caca1de1ee716cc21047887bcd",
+      "bytes": 5420,
+      "sha256": "c2383c21bc47bd5b17c5be3e5cd096d854969118d515818c55869915d6860658"
+    },
+    {
+      "id": "ha6e16125",
+      "text": "סַכִּין",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/ha6e16125_ari.mp3",
+      "fingerprint": "ca338207cb7dc41e420d1b76e4e59dd444d5eecc98c913db5d769d66f16bd020",
+      "bytes": 7580,
+      "sha256": "01413f72c66fc27599aefc6bc48b5a528f7a7784c0d755e806d878c21ad47ccd"
+    },
+    {
+      "id": "ha6e16125",
+      "text": "סַכִּין",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/ha6e16125_noa.mp3",
+      "fingerprint": "0b2782350948b0f6b038eae55efa61b460e3a4b83549523f4579692c58debbb9",
+      "bytes": 6572,
+      "sha256": "aa8fab163b5c449b14f1a9fbf84097aa259826099aa25e8119f55051f8568ad0"
+    },
+    {
+      "id": "h64fb7d35",
+      "text": "נֵר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h64fb7d35_ari.mp3",
+      "fingerprint": "e2f43dd4e31bf18404ae1cd91f95b40d0b609361eda0f4ca5939ff1551a7ddaa",
+      "bytes": 7580,
+      "sha256": "2a12b49c8f9d7b6102591f0e7126e7e5ef7a5f184c0fc7d531f20655546e90e2"
+    },
+    {
+      "id": "h64fb7d35",
+      "text": "נֵר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h64fb7d35_noa.mp3",
+      "fingerprint": "5a3d13bc0cdbd113944a21033002cfd0a2c1c7166f64dbe50595052fa30b5650",
+      "bytes": 5852,
+      "sha256": "c96508061245f2ca7ec75613c0ebec818cf8f05a49ca97330ca0c75137aa6841"
+    },
+    {
+      "id": "he028e6f0",
+      "text": "אַרְיֵה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he028e6f0_ari.mp3",
+      "fingerprint": "991527c819c12ac6f8c2f09bb5d096d316c573a1aa4ec08d71e73a0047ec7e41",
+      "bytes": 6860,
+      "sha256": "a65a3d86136ad65da7ae0dad300cf60fdde853aba4f24247f9a5765d008e58e2"
+    },
+    {
+      "id": "he028e6f0",
+      "text": "אַרְיֵה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he028e6f0_noa.mp3",
+      "fingerprint": "625e650c7b3ded3fc4d8acbab825043eb8f4801203d83768b085e342794ee7c0",
+      "bytes": 5708,
+      "sha256": "d218c3dce8d9303c9dc5b7d8feffbb8e1ae3f51ee2d46cc651c380b5495e697c"
+    },
+    {
+      "id": "h3a77b486",
+      "text": "גָּמָל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h3a77b486_ari.mp3",
+      "fingerprint": "1c47a5430efa298ff8290cb102ebcba1731480b6b1007e856218c75d59ffe904",
+      "bytes": 8012,
+      "sha256": "6e992ec940607dd337d71eef95d83f57375d3998f5c4d7066a453862968b3ee7"
+    },
+    {
+      "id": "h3a77b486",
+      "text": "גָּמָל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h3a77b486_noa.mp3",
+      "fingerprint": "87fb8da5b46fa68288bcd52efda86c3b5acef1e5f5afc28a3818bcce54291af1",
+      "bytes": 5132,
+      "sha256": "d39af630db2ae76d1224eb50c2a511dc6d781ec2f5a6d925f222f73012933723"
+    },
+    {
+      "id": "h16d3c412",
+      "text": "פִּיל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h16d3c412_ari.mp3",
+      "fingerprint": "8344af1b0a0aaf1c69234c701773aab50a6cec0d98948330718ba78e731ca01a",
+      "bytes": 8732,
+      "sha256": "a2a7214e48282eefffa647adb2ccebeab58f38b939eaa698b2df33f37a172f52"
+    },
+    {
+      "id": "h16d3c412",
+      "text": "פִּיל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h16d3c412_noa.mp3",
+      "fingerprint": "ea9428b09cfb1439db55e67db2bf12ca442615239628f236c037e9c745d2c960",
+      "bytes": 8588,
+      "sha256": "086572b301e6203157a580f2264d01c1573d7e6dd118ece9a6d824b67f59fc6e"
+    },
+    {
+      "id": "h55a56675",
+      "text": "נָחָשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h55a56675_ari.mp3",
+      "fingerprint": "51411a7a1f275629fbfd5a020d49e6903eceb9bfea366f7a988ce2c3481bc600",
+      "bytes": 8732,
+      "sha256": "8ede329e40a9853fedecc690634b2d88a295ed850871ec33a11506531cc24d7d"
+    },
+    {
+      "id": "h55a56675",
+      "text": "נָחָשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h55a56675_noa.mp3",
+      "fingerprint": "b55c67f576f1798ae7279e9ee31bb1df4bfb916112f00ea6eb8f66c6852ebd1c",
+      "bytes": 6428,
+      "sha256": "42fd50ce5fb2edd02089d7fc536ce90c677e3d4f59fdfc9bfce616d04659d3fa"
+    },
+    {
+      "id": "h5bd1f5e1",
+      "text": "דֹּב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5bd1f5e1_ari.mp3",
+      "fingerprint": "54a641f2bf3a6d679ab6211277802d347381d5bf45e8403f3559013012bafda4",
+      "bytes": 7148,
+      "sha256": "238620ef22c6190c7bfff273c627a08bb8820e9a07914618f662e1f3f160f8d6"
+    },
+    {
+      "id": "h5bd1f5e1",
+      "text": "דֹּב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5bd1f5e1_noa.mp3",
+      "fingerprint": "bca91c05eac02b24b16a09e28237d8e6eddcd6d6fbbb68453f29f9a2ef7c8613",
+      "bytes": 4412,
+      "sha256": "213dae64cd560cb974ab86ddee9e7868ffa3c0ebec3de7a6ee5350bd0ba267f4"
+    },
+    {
+      "id": "hb119536d",
+      "text": "קוֹף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hb119536d_ari.mp3",
+      "fingerprint": "88632a01dc39678c4ac63abc416266814c3c7cae50c4737389bdcc454fbfdb22",
+      "bytes": 6572,
+      "sha256": "575424d90b500a4d39ec983e8780fc069f02bc39911800e86643a960c1ee0591"
+    },
+    {
+      "id": "hb119536d",
+      "text": "קוֹף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hb119536d_noa.mp3",
+      "fingerprint": "b321b9ec8b0595760920081222671be72e044821c76088eee2cf774204989fc5",
+      "bytes": 5132,
+      "sha256": "61d41c1678ce5dedf6bf5d25ba5c2153b3191c05435a7e0d278248beb4bed68a"
+    },
+    {
+      "id": "h85cda534",
+      "text": "גֶּפֶן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h85cda534_ari.mp3",
+      "fingerprint": "4a8fc50f202bf6a425f3db8ba2c08019fc429338ec97ca8406bc57e7742c34de",
+      "bytes": 7868,
+      "sha256": "a8333b5d391c602f458644b205d38f1c9f721fd264363cb7eda89358fa2fd082"
+    },
+    {
+      "id": "h85cda534",
+      "text": "גֶּפֶן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h85cda534_noa.mp3",
+      "fingerprint": "832c3670dbe0ece7a24f7bf63e38c9b7537072e10c80c51154a987325348ba7a",
+      "bytes": 7580,
+      "sha256": "62c2020a481d872a629da84d38a1aa9cf435063dea48fec9cc9b044782180229"
+    },
+    {
+      "id": "h5bebb792",
+      "text": "גִּבְעָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5bebb792_ari.mp3",
+      "fingerprint": "1a5fd602d718e2f3929a2c9186d463f4aaff1328041e084b02e42ece551373a0",
+      "bytes": 7868,
+      "sha256": "dbfef90118f112d7bb9b811fbb1c43eac9d266c4554a4a24243d6b20481e5837"
+    },
+    {
+      "id": "h5bebb792",
+      "text": "גִּבְעָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5bebb792_noa.mp3",
+      "fingerprint": "9df4da400570cbe37ca43d71e7a7c26bf83617f36d2684f4302cfbf6253e0bcc",
+      "bytes": 7580,
+      "sha256": "2a14fe5ff7c93849a93f9422a5369bd7be39a16df0dcfc7a2df14b843385ff53"
+    },
+    {
+      "id": "h91ac0d37",
+      "text": "נָהָר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h91ac0d37_ari.mp3",
+      "fingerprint": "c5d41e7c793019620890d09128acea6d6db4812ccf03a80d92e1f755389dcc97",
+      "bytes": 7868,
+      "sha256": "7171d69e95a9f2d4da789f2df37f48de56464f2361eee153cdf1747e683146a7"
+    },
+    {
+      "id": "h91ac0d37",
+      "text": "נָהָר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h91ac0d37_noa.mp3",
+      "fingerprint": "8e8914b3d6a600c4af4e1356143cecd1676289c610690b613b5638ccaabb34d2",
+      "bytes": 7868,
+      "sha256": "e92189fc853d7835cfb6567ab198ebc3e02442ec7fb526824069b530a35b021e"
+    },
+    {
+      "id": "hc427aff6",
+      "text": "יָרֵחַ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc427aff6_ari.mp3",
+      "fingerprint": "8bc1279d72ee5fe02929dbe6f4034bbac841fcca4b422f85abaa1bfb3c435274",
+      "bytes": 8300,
+      "sha256": "f2cfe583617b0d39f183cf2b84245a26f4d7118068b7afe08d1c1bed47ca107c"
+    },
+    {
+      "id": "hc427aff6",
+      "text": "יָרֵחַ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc427aff6_noa.mp3",
+      "fingerprint": "c697cc0b7aa13f2421b5400ae5b825bdf43562a3d115622f4c3d19c7acd2589a",
+      "bytes": 7148,
+      "sha256": "bd3059a162467f68caac3e591979446e377c4a2a26f6e2dcda8c3feec9b55821"
+    },
+    {
+      "id": "hef745501",
+      "text": "יַעַר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hef745501_ari.mp3",
+      "fingerprint": "cdd06599c540d46375b913a4f6ab4e24d7c1fd8326d929a119a7864222e2a36d",
+      "bytes": 6572,
+      "sha256": "07ec8bb6d132583e53c72eb3b93edcb0497e01fe434e427c9b7f7df650b3cf0a"
+    },
+    {
+      "id": "hef745501",
+      "text": "יַעַר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hef745501_noa.mp3",
+      "fingerprint": "b847530be8c2bceeee9e9a6c7d7f52df7b2a0446f76811b25156b5b4393ccd04",
+      "bytes": 6572,
+      "sha256": "015f2691c9ad2419cd2abd97396fdf58ef445d69303c0e5bf306e31ecd8bf429"
+    },
+    {
+      "id": "h2d90f840",
+      "text": "אֲדָמָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h2d90f840_ari.mp3",
+      "fingerprint": "750773682aae1315d59417ff758e07abe5426d0dea251797a1f9942ceb394799",
+      "bytes": 8588,
+      "sha256": "e3972ecbdee2fe08fb82dfd575c433bb2c4bc816370cf98eb8b37ee6b5968f4e"
+    },
+    {
+      "id": "h2d90f840",
+      "text": "אֲדָמָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h2d90f840_noa.mp3",
+      "fingerprint": "4f9fd6096d534420261e2b5d26e36e64b93bfa64f4a53eb09a361dcd4d49bbfd",
+      "bytes": 9308,
+      "sha256": "e4dde29a08f85e77d4b6bea75e6780dd31cd5cb3a1028d046fc21589a91f3790"
+    },
+    {
+      "id": "hf1da5ea6",
+      "text": "אֵשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf1da5ea6_ari.mp3",
+      "fingerprint": "65db9fffeb52894215360e5176a5a01f4facae27a88a2c8abaccd4300019c417",
+      "bytes": 8300,
+      "sha256": "3d549dfef957ef76105b935cf5b3ced27c3f85445f5c9aaddd578e631cce03b3"
+    },
+    {
+      "id": "hf1da5ea6",
+      "text": "אֵשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf1da5ea6_noa.mp3",
+      "fingerprint": "c851bf23c7bf56f0b864ba48a8223849a4dc2bd50779545db86d758678a8465a",
+      "bytes": 6572,
+      "sha256": "2f6cd755bbf28ffb76e5b32c8283e212a3ed8993f15568ae884c7d5555561c35"
+    },
+    {
+      "id": "h770abeb5",
+      "text": "עָנָן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h770abeb5_ari.mp3",
+      "fingerprint": "2f5975a4d34cf162ae3b3b9ef3c38652b7f9b05395ec34a75772e57054d71d04",
+      "bytes": 7148,
+      "sha256": "cb4401b2958d82e3cee2e8e537d62d605375b1de3b10754db726ff91200b54ae"
+    },
+    {
+      "id": "h770abeb5",
+      "text": "עָנָן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h770abeb5_noa.mp3",
+      "fingerprint": "0ce5de83679cd7dae69522a83a6eca6736b799111b3acbf21655cbc1c2cb7929",
+      "bytes": 9020,
+      "sha256": "2c504205b257e86f989215250e5b8917bb85d2d2c90c1b85972bd4e56bc2c918"
+    },
+    {
+      "id": "hfb819565",
+      "text": "רוּחַ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hfb819565_ari.mp3",
+      "fingerprint": "9a42f794b782c0c0526c8b4f4bd4fc6f4358be2b72f438a12079ef538f8d4d14",
+      "bytes": 7292,
+      "sha256": "54f7f8a01779d608be57225b17f746ea1119b6f0a3b0d2adf14e7daac1264974"
+    },
+    {
+      "id": "hfb819565",
+      "text": "רוּחַ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hfb819565_noa.mp3",
+      "fingerprint": "81b840b0249d8e904c56a6da907a6d22f29be8990f77138130bb8b29553dd716",
+      "bytes": 10028,
+      "sha256": "da85586eb25ef7b15a763d536ac94baccaaa712c694356b9cc2871a87c7433be"
+    },
+    {
+      "id": "h68594418",
+      "text": "סֶלַע",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h68594418_ari.mp3",
+      "fingerprint": "24851cae129bd5c13082681045399027f0e3368fdc5adfca1198caf8e9b64bc1",
+      "bytes": 7148,
+      "sha256": "4d2f47d8ca1fdad17fd401f5fa6b3e01937f20526158e1378f6615328630104d"
+    },
+    {
+      "id": "h68594418",
+      "text": "סֶלַע",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h68594418_noa.mp3",
+      "fingerprint": "62a7f9ea430c92e39c8ffcf4ac20703420a035982396a8c87276c0e2fc361ddb",
+      "bytes": 6572,
+      "sha256": "cd2e9d6ea7f6a6ef27415af3dc3f6bbc1a78eea29faf3f7c565c88b6848c0fc2"
+    },
+    {
+      "id": "ha9b360ab",
+      "text": "קֹר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/ha9b360ab_ari.mp3",
+      "fingerprint": "a02e1f561a81268815b51de94f4c41d4d41d62ed222eadc04afce45f99ed540a",
+      "bytes": 7292,
+      "sha256": "2c88cc750eeb606fb55b00d3c4be12a747cf4cfcb47fb97ca1f237a620c0306d"
+    },
+    {
+      "id": "ha9b360ab",
+      "text": "קֹר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/ha9b360ab_noa.mp3",
+      "fingerprint": "439e93b6cfdfa13e3948a7f7bcc8a97ad87e3dba3d4c9352426cb34943305be9",
+      "bytes": 5852,
+      "sha256": "cb3f9507e0874c6de04d352bf4c54f683aed3eda42f0d5dd9893ff525e967d2a"
+    },
+    {
+      "id": "h5c2548dc",
+      "text": "חַם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5c2548dc_ari.mp3",
+      "fingerprint": "41d1a16436806e1108cd7a88f95d7a877ebab18e544d29023023678cf4ffd272",
+      "bytes": 6140,
+      "sha256": "eaa049b02dd70eadc319c35daddd51c34dea26d47b4bca9742041fd0b940eb34"
+    },
+    {
+      "id": "h5c2548dc",
+      "text": "חַם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5c2548dc_noa.mp3",
+      "fingerprint": "2c59186d2b3c3f2a700ff12b56683f155d13673fb6ae1d00540a665142a582b4",
+      "bytes": 4700,
+      "sha256": "625c604a48882d679492ebc98f7e0ffdfa1a1cd5beccb0e7c3b541a524ada46c"
+    },
+    {
+      "id": "h7d196d47",
+      "text": "מְעָרָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h7d196d47_ari.mp3",
+      "fingerprint": "b69c6feb511df00cdfb727103619921912291df616f0455108545ab3d3fb3941",
+      "bytes": 6572,
+      "sha256": "109f76963da551d8875d4e7cf4ff2b70450749c9c4b70c859cbca27d94dd281b"
+    },
+    {
+      "id": "h7d196d47",
+      "text": "מְעָרָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h7d196d47_noa.mp3",
+      "fingerprint": "d4e3cc06becb46cbcc196565895b1f7b23eacf0bc93796de7e60cee12141b4af",
+      "bytes": 7580,
+      "sha256": "bb4e20b643ba6f971f382e61c43e5fef8bdd5ede4a9e85765c9bda9464735f0b"
+    },
+    {
+      "id": "hde2302bb",
+      "text": "חוֹף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hde2302bb_ari.mp3",
+      "fingerprint": "da2c8a21e37f6b0936ce393f2694b3bd3e1246fadd4c75af9d552f3197d371f2",
+      "bytes": 6860,
+      "sha256": "106492f3c6314cd6b2d886611a5a8b0cf655bc17dbaaf35ad7fa9f47ccab1977"
+    },
+    {
+      "id": "hde2302bb",
+      "text": "חוֹף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hde2302bb_noa.mp3",
+      "fingerprint": "c63c36f64329e238e954fe5972c434050acc99f8e6346090d969593e933db6e4",
+      "bytes": 5132,
+      "sha256": "ddb315b9cc3dfee92b2b5d0fb6dcea3339043f279803557c6e31c79d8d0f19d6"
+    },
+    {
+      "id": "he3b1acbd",
+      "text": "עִיר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he3b1acbd_ari.mp3",
+      "fingerprint": "9486ed4d252d2a44b1792efeec4393990e131771b074d2cacbf3315bba451875",
+      "bytes": 6572,
+      "sha256": "68e934d9820dd4c28e22160a64a164f1381c519daf707fa73398adb003cfbe66"
+    },
+    {
+      "id": "he3b1acbd",
+      "text": "עִיר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he3b1acbd_noa.mp3",
+      "fingerprint": "5102dbb13b134d1f6e53f22ad171540c507fc4852290a34b111b9ac1d931e997",
+      "bytes": 8588,
+      "sha256": "d96fe4b07b5e61c7fc1501714317397d9fde70377450068cb887e939f4c2fb27"
+    },
+    {
+      "id": "h5ae20314",
+      "text": "דֶּרֶךְ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5ae20314_ari.mp3",
+      "fingerprint": "8a9ed5a9fdd1397e947f84224ffdbda276c79f835995a172931f6cccd0012444",
+      "bytes": 7292,
+      "sha256": "bb088d6b99c08e22cf12d0ddebdf371aac29fa067cbc13fdbba81e087b5dc60b"
+    },
+    {
+      "id": "h5ae20314",
+      "text": "דֶּרֶךְ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5ae20314_noa.mp3",
+      "fingerprint": "4e1617a9c1359631bd7455d022d2d90f683083fbbfb904f95a2f49c09fa9625a",
+      "bytes": 5132,
+      "sha256": "0cbc2f9c605e4713f5803c6c224a552868cabd301d9fbf179a9789a38bf85efa"
+    },
+    {
+      "id": "h18b1e15c",
+      "text": "רְחוֹב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h18b1e15c_ari.mp3",
+      "fingerprint": "4c5aeb7a1bde4b314cb345bbc94fb8ba52dc18bb923dfc81b1b23e167017b928",
+      "bytes": 7868,
+      "sha256": "2033babbf4bfbd47a1757954c78fe30e8c18a33f8185b3fcafba90d6f0e7b286"
+    },
+    {
+      "id": "h18b1e15c",
+      "text": "רְחוֹב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h18b1e15c_noa.mp3",
+      "fingerprint": "d686ad1f62124ba177bc5c81ba608e974fd0dc11ad0091f7aa46b811fb9a6ae8",
+      "bytes": 9452,
+      "sha256": "bdb8fc61f2ed0d19a708bc07727581685ce9b49c95e1d546eb5efab5bca651ae"
+    },
+    {
+      "id": "h5fc50b7a",
+      "text": "מְכוֹנִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5fc50b7a_ari.mp3",
+      "fingerprint": "fa2b47237d7f0471b34d69eeb3f12a455e0e1ca4bc23802ad757a999819290cb",
+      "bytes": 6860,
+      "sha256": "f2e4ff92cc61f876948d6ab6ca5e13ee1515ddd4b8350f12b605d7e547332f0f"
+    },
+    {
+      "id": "h5fc50b7a",
+      "text": "מְכוֹנִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5fc50b7a_noa.mp3",
+      "fingerprint": "e8bf46ab60c5f5fd45b0894f28a6f60f2ef010249dc25eed2672824919796e9f",
+      "bytes": 5852,
+      "sha256": "ca5b9e4bd6f5470bc43bba3108dc0c491b4644867f82c57cb8526ffdae5fc0ab"
+    },
+    {
+      "id": "hf524a1ad",
+      "text": "אוֹטוֹבּוּס",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf524a1ad_ari.mp3",
+      "fingerprint": "0bbe5c11b528a1f0c8ab7b0e38c7526ee17e11205ed0b2dc934877ec397a47d4",
+      "bytes": 7580,
+      "sha256": "78f7f4d6ddd489e903c825f11b8f7c299d0e06c19c0c89c7c1c7fa09150aa71d"
+    },
+    {
+      "id": "hf524a1ad",
+      "text": "אוֹטוֹבּוּס",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf524a1ad_noa.mp3",
+      "fingerprint": "d355cc38983d41450497efa5482f42e449a380054fe4a9d6864b9b2f48ca5e39",
+      "bytes": 7148,
+      "sha256": "7a05a35298b79ef2ec7736123452d03d513ad14cd85ce6e7427df22eeb2d39e0"
+    },
+    {
+      "id": "h85c6747d",
+      "text": "מוֹנִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h85c6747d_ari.mp3",
+      "fingerprint": "1fb3e95beae59e4b17e566b82494459e1e8ae701d92afb442dec0344edfa18d7",
+      "bytes": 7292,
+      "sha256": "aa1bb19c096c2f3ef1bc8515ed5cd8e880046c724ad45382b97bed67bf14aa22"
+    },
+    {
+      "id": "h85c6747d",
+      "text": "מוֹנִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h85c6747d_noa.mp3",
+      "fingerprint": "9a25e39dc2bf2693cdcbe33dc045ae51b31b1497f75e169858c907b83ebce66b",
+      "bytes": 7868,
+      "sha256": "83b3d98768076068bed621d40406877456941314cfdebb42ed603e2f7b0b5328"
+    },
+    {
+      "id": "hf19f0a88",
+      "text": "בַּנְק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf19f0a88_ari.mp3",
+      "fingerprint": "29996e8bbd3ec72ded60a4aed37e7b0bffcdb6b7697852b32a3211435257252d",
+      "bytes": 6572,
+      "sha256": "51b3bc3aa37f40163b437f97ce14eba24b01d231dd6cd11fe7b9974a6fcdb959"
+    },
+    {
+      "id": "hf19f0a88",
+      "text": "בַּנְק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf19f0a88_noa.mp3",
+      "fingerprint": "b1db61a1e89b0060b52e60724fff1b56138fe6feab29b05eeb4dfdbff3dfd946",
+      "bytes": 5420,
+      "sha256": "46fdaef72565c2f2a54e249cb0f94699c734f17fd4aa6dd039180b8ba4427898"
+    },
+    {
+      "id": "h8a450588",
+      "text": "פַּרְק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8a450588_ari.mp3",
+      "fingerprint": "5d6b6033650ea1aaf781ea00c809d54aa153e86813a1826f17782e9b4f667c0b",
+      "bytes": 6140,
+      "sha256": "015f9144b89ab6b5b2b92be2e081c605c797c3a1c59989df21a107fc8b08e441"
+    },
+    {
+      "id": "h8a450588",
+      "text": "פַּרְק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8a450588_noa.mp3",
+      "fingerprint": "d028f6baa2fa64bbccae0df1120e46ee7724f1907ba10cfd4f90e37362a9a690",
+      "bytes": 6572,
+      "sha256": "cbd033fdf701ee17ff064927478bc4400400b0b195ddc09cba5810e90c1b2722"
+    },
+    {
+      "id": "hd53e0a60",
+      "text": "קָרוֹב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hd53e0a60_ari.mp3",
+      "fingerprint": "48df9fc50e19a790df5ba4e23bed7c198a5060f1659770948548dc3bc0ccebbe",
+      "bytes": 7580,
+      "sha256": "6afb6c1bb82e5138dca483d2787a255f893cb7b5e6cd743ac6d7494ceee76d8d"
+    },
+    {
+      "id": "hd53e0a60",
+      "text": "קָרוֹב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hd53e0a60_noa.mp3",
+      "fingerprint": "0c550291a150d5e27e2b298a047f44d069b5dad1a15b67de67d1bbbfd734c90d",
+      "bytes": 5132,
+      "sha256": "5f6ec5cf0c468860568d401ed3a07824bfe04db8c4fe42dc05fbee8eca8616b7"
+    },
+    {
+      "id": "h372b7277",
+      "text": "רָחוֹק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h372b7277_ari.mp3",
+      "fingerprint": "53729ef4fd90d4003b149d6bd8f49be3cb5a21833db1aff7fae0a5510126914b",
+      "bytes": 7292,
+      "sha256": "fcf3a0cc3f79de5bec7326fc733424ccfb7e583d63794dcf3d39dd10f5700636"
+    },
+    {
+      "id": "h372b7277",
+      "text": "רָחוֹק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h372b7277_noa.mp3",
+      "fingerprint": "49988b63f48470f7f8960ac65b0c3c19498a043061842914f99c00e165d4f1d2",
+      "bytes": 7580,
+      "sha256": "75b2750080a8195cf8dd77fdda092a33fb0ef5e5be8e20880694b62e2f80025a"
+    },
+    {
+      "id": "h591afdf8",
+      "text": "דָּרוֹם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h591afdf8_ari.mp3",
+      "fingerprint": "f8657754a0e9c80428113fb1817f3f58cd4e83576de5221ae09a4313baebe574",
+      "bytes": 7148,
+      "sha256": "14c678a4ff745b3678b33cb1138a288eebb5b43c01524e3dfa1b659faa335b87"
+    },
+    {
+      "id": "h591afdf8",
+      "text": "דָּרוֹם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h591afdf8_noa.mp3",
+      "fingerprint": "8b0f1477f668886fc90d213feb4d8637b99acf579c836828c8b34d532dc1eec0",
+      "bytes": 5132,
+      "sha256": "ba37d0bbbca74e5fbe458c693b0eadb59d7d398f27858f75a71c2593343078df"
+    },
+    {
+      "id": "h7097c7a9",
+      "text": "צָפוֹן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h7097c7a9_ari.mp3",
+      "fingerprint": "64f1de2a6c76b37107921bb822d62381ad9ea068e636af21c4f7421a8464823e",
+      "bytes": 7580,
+      "sha256": "322b03708ac0f3cdc80e10c6853f10ad162afecde79c5d7ab80bf5c86cbb0ca8"
+    },
+    {
+      "id": "h7097c7a9",
+      "text": "צָפוֹן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h7097c7a9_noa.mp3",
+      "fingerprint": "c5c1e48d9818b55bf6dc2983bf230267b7a89bff91a35b65c251e3e87576d720",
+      "bytes": 7868,
+      "sha256": "8c79b2a7602c6a765022a1f7a495732048febf5693d90484fc29ddceacc174de"
+    },
+    {
+      "id": "p0381993d",
+      "text": "שְׂמֹאלָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/p0381993d_ari.mp3",
+      "fingerprint": "1329a6f3daabd8d816967287892c8ebe789aad763a6fbb49a82da71fd5ab1749",
+      "bytes": 7148,
+      "sha256": "73edfcba0498b28b6da3c1c2733864043f39a1e2b59ad4bf5b84db256af27bdc"
+    },
+    {
+      "id": "p0381993d",
+      "text": "שְׂמֹאלָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/p0381993d_noa.mp3",
+      "fingerprint": "e581776071115171b333b0fb3860f184d5562181ea05521a0536228a2989b860",
+      "bytes": 9308,
+      "sha256": "538b257502ec0d902aae58d8635c638a632c3369f58ec1b7d95cb7155f430754"
+    },
+    {
+      "id": "hd82a3079",
+      "text": "אֶרֶץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hd82a3079_ari.mp3",
+      "fingerprint": "5944398d8e35ac629b311ac38839d0351a351fac1c854109e007cd5ccc319465",
+      "bytes": 7868,
+      "sha256": "f3465a0dd92c7340553a9e5393323e71dec7a3ce82ed79c48846ece252315136"
+    },
+    {
+      "id": "hd82a3079",
+      "text": "אֶרֶץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hd82a3079_noa.mp3",
+      "fingerprint": "480b6e847ebb759339aa9d94d13cb3d4cf2a6bc865babc703c055e181d1b781b",
+      "bytes": 7580,
+      "sha256": "cd81198c4c418a48949eb39ffd6545abab18a0294821e98e8195a9bcf1c05a13"
+    },
+    {
+      "id": "hdd727873",
+      "text": "מָלוֹן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hdd727873_ari.mp3",
+      "fingerprint": "bf13901243ec9710c270b70d994243f632ed78e716b858296dadbf886220c08c",
+      "bytes": 7292,
+      "sha256": "2ed51cd93cf07296906a30bbfaf4080781baa98a71d2d3ec9651b44197412c32"
+    },
+    {
+      "id": "hdd727873",
+      "text": "מָלוֹן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hdd727873_noa.mp3",
+      "fingerprint": "64ac797fa6527aa62fff58411a62134a212a9d40df08b2aaf0b7f79688346a40",
+      "bytes": 5420,
+      "sha256": "a1d09e1c17eecc7f35e82a6435d61e1ab9ad34856388b2967d02d2fcba05caa3"
+    },
+    {
+      "id": "h50241e1c",
+      "text": "בֹּקֶר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h50241e1c_ari.mp3",
+      "fingerprint": "a760f54a5c7b31cb99a18f20d12c9e7c731123564514edb60136363442144c91",
+      "bytes": 7292,
+      "sha256": "b2fc4a119a96347bb9abe205ab312094b281bd165e6321b0bf3692e667af3446"
+    },
+    {
+      "id": "h50241e1c",
+      "text": "בֹּקֶר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h50241e1c_noa.mp3",
+      "fingerprint": "800e6a4ad1d90ab4670523e7e82375b1c56fa9bdced3bac1d1d48584c56039d3",
+      "bytes": 6428,
+      "sha256": "6a2312e72a41eee8c8d478b267b10345a650d252069b37e8a6fddb061e6c935a"
+    },
+    {
+      "id": "he074d347",
+      "text": "עֶרֶב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he074d347_ari.mp3",
+      "fingerprint": "907af8fbebf7cab50b6d4659d2b979a5fd6fa888c54050da66051b403c8bda48",
+      "bytes": 6572,
+      "sha256": "b4c7596e919317e43f58d83ea609ca3c91592c5a4960464c8073116a725e9048"
+    },
+    {
+      "id": "he074d347",
+      "text": "עֶרֶב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he074d347_noa.mp3",
+      "fingerprint": "c009f4f5b5fc989b3f5e9e0b33f1388d56860f38335eebb68f16fec70952f037",
+      "bytes": 6860,
+      "sha256": "e535b8d97aa426729ba58e352c4ded07159bc49fbe2c2f353478a65927119b27"
+    },
+    {
+      "id": "hf07c1580",
+      "text": "שָׁנָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf07c1580_ari.mp3",
+      "fingerprint": "2711c054e93b04bc55aaa802856c35c2e936fc0d5f2e055626b64afac382e234",
+      "bytes": 7292,
+      "sha256": "889276579f5991879c578f93b28da11c37d04caaa32551aa779260ec57ab1eda"
+    },
+    {
+      "id": "hf07c1580",
+      "text": "שָׁנָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf07c1580_noa.mp3",
+      "fingerprint": "413cc559786bb63c59627f42b40ce69e4de09e26cfa077175c9cdb466e6fd03f",
+      "bytes": 10460,
+      "sha256": "8388976f13ba91648eccebc7a89ba2eda6f36dc7d23bfeef4210b635c4dda779"
+    },
+    {
+      "id": "h92151b55",
+      "text": "שָׁבוּעַ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h92151b55_ari.mp3",
+      "fingerprint": "1c9477c801c1c2ffc6456dd43e4b14ee0447dfee09afa824c2e880e78911ef52",
+      "bytes": 8732,
+      "sha256": "042bd8f33c59a7502ff98e238324a92c05cd4a119218bf0cced9054caefeaad9"
+    },
+    {
+      "id": "h92151b55",
+      "text": "שָׁבוּעַ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h92151b55_noa.mp3",
+      "fingerprint": "ff431881f365b8f732168369657a4c785a8242f88f109df37267077d332faa90",
+      "bytes": 6572,
+      "sha256": "a717872d4eaf7ee4176080bb624d2d886033eb69826b9f83bb16c400c6eaed54"
+    },
+    {
+      "id": "hbb3bc5fd",
+      "text": "דַּקָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hbb3bc5fd_ari.mp3",
+      "fingerprint": "c29d3ba912c2dbd92fd11053f48b56e0d7a343218949db92b4d4c46dcbd7ef5f",
+      "bytes": 5852,
+      "sha256": "9cba23eda84c70ca7cc8e0344cc31cfcaa6aae3886d8aaeb4c2e7e3644f4bde5"
+    },
+    {
+      "id": "hbb3bc5fd",
+      "text": "דַּקָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hbb3bc5fd_noa.mp3",
+      "fingerprint": "1b3dfafd5061bbbc3b9e51352634d553423cf1ea8186fe0402270acc0debbc64",
+      "bytes": 5708,
+      "sha256": "5ce6216c6228265f3f6b6060eff60b561a5453b5a0d4b72d9719ae1d22bf7f7a"
+    },
+    {
+      "id": "h1b39a6b6",
+      "text": "אֶתְמוֹל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1b39a6b6_ari.mp3",
+      "fingerprint": "e0451ba5c7d35a35df2fd58c565d1bd3b0fb4d2d418c532d220cfaab84f42a49",
+      "bytes": 7292,
+      "sha256": "85783832678f938cab437915621fc144814c6f602678ecc5779ea243717b7a62"
+    },
+    {
+      "id": "h1b39a6b6",
+      "text": "אֶתְמוֹל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1b39a6b6_noa.mp3",
+      "fingerprint": "118f9229d2e08a8965e359d3cc71f6eec446fc8d2c36532c676c599febde2b94",
+      "bytes": 7580,
+      "sha256": "9c17c0ad6ff25811cfe3eb9b820d2c5d961d8d583e211d13ebe3b2a4b57481f1"
+    },
+    {
+      "id": "hcb5a058a",
+      "text": "עַכְשָׁו",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hcb5a058a_ari.mp3",
+      "fingerprint": "b50744a0964679d0e5995973f6c0626e90cc94558a8320c42b10d4f6025d65b2",
+      "bytes": 8300,
+      "sha256": "58b85878c00c6a8ca4b48b0ed5b5ae45bc4f7ce134f407aff1db18f5e26c369d"
+    },
+    {
+      "id": "hcb5a058a",
+      "text": "עַכְשָׁו",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hcb5a058a_noa.mp3",
+      "fingerprint": "f226f21b28c85fc0484d864abac0b522d625faa9c783521df827cb0423d077f7",
+      "bytes": 6428,
+      "sha256": "6593155a078a87cdb38c2166f6b0996cf0bb6b51d8f62ea64a5b882e0da12aba"
+    },
+    {
+      "id": "hf9a1a55b",
+      "text": "שְׁנַיִם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf9a1a55b_ari.mp3",
+      "fingerprint": "bccea8ddedde01f3c9dd7547c7435db0945e6cb49270af5f668dba2bef1090b0",
+      "bytes": 7580,
+      "sha256": "616a7b31bf6bff995d44634eeadadf2200be37371aa9cbc994b951cc00d6ccbf"
+    },
+    {
+      "id": "hf9a1a55b",
+      "text": "שְׁנַיִם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf9a1a55b_noa.mp3",
+      "fingerprint": "340802819023d5781d0142d093eb78f72ecb2661e250926bd2bf298c1c8e79c9",
+      "bytes": 6572,
+      "sha256": "7018ddb4bf55d89a17a96411a75958f3b150124b94136b0cf70c350f86fe5a13"
+    },
+    {
+      "id": "h3dfe9831",
+      "text": "שְׁלוֹשָׁה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h3dfe9831_ari.mp3",
+      "fingerprint": "f7ac7113493b08f36251c72338d01b6edb3d1093c2b2ae92374bbc03b6137f7f",
+      "bytes": 9740,
+      "sha256": "5c1c05ff87e9f1c956874c9386b113d710e72bc0b0d67d49508f08e4768a19bb"
+    },
+    {
+      "id": "h3dfe9831",
+      "text": "שְׁלוֹשָׁה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h3dfe9831_noa.mp3",
+      "fingerprint": "2d1f03fff9f71e7f2abbcd2a451580716454a7b5eb81ed164645a786d3b7d494",
+      "bytes": 7868,
+      "sha256": "ffe0297853ccfb142e333a8e4c70275b041e5cf3d8effe1a9aa5cf89ddfac016"
+    },
+    {
+      "id": "h769a6c3e",
+      "text": "אַרְבָּעָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h769a6c3e_ari.mp3",
+      "fingerprint": "4026942704d8532c6c23dca121cb1ac141f31ca3fd0ce9fea7ec6c775560f845",
+      "bytes": 6572,
+      "sha256": "b2a59fd49dc401dd3715e07739b959bf5295f9838927e2fd8187ee6e67e66b79"
+    },
+    {
+      "id": "h769a6c3e",
+      "text": "אַרְבָּעָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h769a6c3e_noa.mp3",
+      "fingerprint": "b9576a28807d05a0eb017133976193ad4bace52ab6763a7c3a931221c8e6a525",
+      "bytes": 7148,
+      "sha256": "7121ec4ddc7c24645da5df1341051e311411d64e813ad160409b2d9504cf7dab"
+    },
+    {
+      "id": "h29aadfe4",
+      "text": "חֲמִשָּׁה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h29aadfe4_ari.mp3",
+      "fingerprint": "6576723c37587d76972a35b753a162af15878ba006550bd81da5b587f2a41390",
+      "bytes": 8012,
+      "sha256": "707cb3ddd8d545540be3c1830284ab9c375a8e99fa79d4d3d848b290d142016c"
+    },
+    {
+      "id": "h29aadfe4",
+      "text": "חֲמִשָּׁה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h29aadfe4_noa.mp3",
+      "fingerprint": "54df61c98ccc5f4de6ccba83bf03355a100a999aa57f5e28180e6792a804f39c",
+      "bytes": 5708,
+      "sha256": "811adbf5460e20f2656fe7a9e6a60280353e4ea3bb91432ae159ea90a0d5b57c"
+    },
+    {
+      "id": "pc9b3fcc6",
+      "text": "שִׁשָּׁה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/pc9b3fcc6_ari.mp3",
+      "fingerprint": "7827f9a697935afa772b6541651acdab80f9f252fb00526e56ad5a58c1cdb088",
+      "bytes": 6572,
+      "sha256": "5e0174a8e32e910d39b2adfcdf0924031d4c8ffcfbe0762b0f2eb29dbeccbe3a"
+    },
+    {
+      "id": "pc9b3fcc6",
+      "text": "שִׁשָּׁה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/pc9b3fcc6_noa.mp3",
+      "fingerprint": "76324cdae912cfd82db5c7ba6363b0365179a697587b7b9adc1d79bd9a30e0fe",
+      "bytes": 5132,
+      "sha256": "1450cfd9c00738923178df724490c9d2fa07a37960292ee8131d050b38049613"
+    },
+    {
+      "id": "h68a92f84",
+      "text": "שִׁבְעָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h68a92f84_ari.mp3",
+      "fingerprint": "0f70363012cb70fa5a0e5ecb52aea56090c878c3b146e25f52188323daa399a5",
+      "bytes": 8300,
+      "sha256": "6df132bef481c5e326dacab10b53dd7211164460bc9b132bc77f385c0956ffb5"
+    },
+    {
+      "id": "h68a92f84",
+      "text": "שִׁבְעָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h68a92f84_noa.mp3",
+      "fingerprint": "bafae7e70b465e571bede1e96b06867844655b0e69ac7b2bbcca43acf55ac22c",
+      "bytes": 5852,
+      "sha256": "24fb289812732e7e1846ec9b88bf37a79f96ecbd23dd990f447c7ba8d8959364"
+    },
+    {
+      "id": "h1de12f34",
+      "text": "תִּשְׁעָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1de12f34_ari.mp3",
+      "fingerprint": "1a7d0e5b251c75d3fb48928de19af5642547a6e10aa0364e7db55afac47d2f7e",
+      "bytes": 5708,
+      "sha256": "29bae04fa5d959843be43c2126730342d21fe9137038bfb65c832a033ab8c490"
+    },
+    {
+      "id": "h1de12f34",
+      "text": "תִּשְׁעָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1de12f34_noa.mp3",
+      "fingerprint": "5c7db1f518824a95f6e9a177b055aae29208cc9827b96d2c0584b81c5eef84c6",
+      "bytes": 6140,
+      "sha256": "9dd1546aaba878a043a804cfe1e028f253d5282806142b4cfacaa713e3d93e17"
+    },
+    {
+      "id": "h4589871d",
+      "text": "עֲשָׂרָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h4589871d_ari.mp3",
+      "fingerprint": "308d34ab3fb50f5b09997ffcd71c6e96b950803a8d3eece20ec0d1c19fdbe899",
+      "bytes": 7868,
+      "sha256": "a4739b35fc6d48b4083207bf0803e57e1b46e1e1c963ebc7915eae4f9656a364"
+    },
+    {
+      "id": "h4589871d",
+      "text": "עֲשָׂרָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h4589871d_noa.mp3",
+      "fingerprint": "33494e32fb90fd89146930fab7ed285ac43c5525cd25f9d9f48c96768c61cb9a",
+      "bytes": 8732,
+      "sha256": "090ff0ac06d34db93e8ba7d389cca33637edd84002f0dfea2c65dd5852c8fad3"
+    },
+    {
+      "id": "h2d27796a",
+      "text": "עֶשְׂרִים",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h2d27796a_ari.mp3",
+      "fingerprint": "af18a509a548e4a937dd6522843dc31acb32a02ea89a9499c87d184c2f0d3421",
+      "bytes": 7868,
+      "sha256": "3778185a030713b3c6eef2bf6a90e97bc0b1a40fc2b5c0002f8fbfa37d77fae5"
+    },
+    {
+      "id": "h2d27796a",
+      "text": "עֶשְׂרִים",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h2d27796a_noa.mp3",
+      "fingerprint": "fc4d512f80eb2e0aa3799ae64d7d1e7879260f687f74d6057c95f96c5a929240",
+      "bytes": 5420,
+      "sha256": "e78b154b71a4aa03e3961dc414be93c1f6eabf23bbd5a43b1d5da4c7b9d667fe"
+    },
+    {
+      "id": "h83f51398",
+      "text": "אַרְבָּעִים",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h83f51398_ari.mp3",
+      "fingerprint": "a6061b19a71a1e0cda4eabd0ae3c3b97a83cd6750250cf5a3efffdd53105c8af",
+      "bytes": 8300,
+      "sha256": "968205cc72443128c8ab7c6645a035975720da92d66e7560a379eaf9211f4383"
+    },
+    {
+      "id": "h83f51398",
+      "text": "אַרְבָּעִים",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h83f51398_noa.mp3",
+      "fingerprint": "6c81132992070e5930fd31e0196050b77737793c76046adf862135f06b546c9b",
+      "bytes": 7580,
+      "sha256": "8c984e842b50d2d6462bd415864e26613b2b86eea877c506e338fcc6b4108cb2"
+    },
+    {
+      "id": "hffd9b904",
+      "text": "מֵאָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hffd9b904_ari.mp3",
+      "fingerprint": "7c79e269bda1508bbbae797bec0d17abc17d444e680e520f13b2de6ad42d4f90",
+      "bytes": 5852,
+      "sha256": "872cf17e1f0d14c8e42b531c3e9eb2d21a5ab34f945a3af03dd3d90b71cf110e"
+    },
+    {
+      "id": "hffd9b904",
+      "text": "מֵאָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hffd9b904_noa.mp3",
+      "fingerprint": "decf44bbe0961d328f8ba15907f59ab496781cb6eede3b20abb2d8d751b9500f",
+      "bytes": 6860,
+      "sha256": "3b16de32db9e1f3952e36af635664b50d99e039ed3c4f7646b8ef28750202d69"
+    },
+    {
+      "id": "h26154c1a",
+      "text": "אֶלֶף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h26154c1a_ari.mp3",
+      "fingerprint": "72e9b9a6a7881088b19943c59c718fa08a4edcaa693a80682b7f355fd2fa2fb1",
+      "bytes": 7292,
+      "sha256": "7f0ca054b00013ed302b5377c7159028cb99a912088302538dd862fd974a823b"
+    },
+    {
+      "id": "h26154c1a",
+      "text": "אֶלֶף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h26154c1a_noa.mp3",
+      "fingerprint": "f6a0ee24bc8f7c9324a8b39e8cc27a1b65b6bd463b0d4369312d7dab4ab22728",
+      "bytes": 7868,
+      "sha256": "617b3e5564d5c934b8b74be1f4c1f194addcca8554e3f4ff3b163fd9e8f25db8"
+    },
+    {
+      "id": "h3739ff77",
+      "text": "קַיִץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h3739ff77_ari.mp3",
+      "fingerprint": "4f722c0c727f49b98bba253d151b0758ca9ad1418838f5b9853d461e63b68c60",
+      "bytes": 8300,
+      "sha256": "612d757bd0318b33657873a645d51baa2f81880730cf3a8d0b5f2ddd2a471de3"
+    },
+    {
+      "id": "h3739ff77",
+      "text": "קַיִץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h3739ff77_noa.mp3",
+      "fingerprint": "92de21bfb6a910afd8cbe55362c975711b6e97931d4afbd70dcba7aa32c3239f",
+      "bytes": 6140,
+      "sha256": "35ba2623b2da340b38d942dcff5f5f94e3c3c86fa284dbbd3362a6ade861eef7"
+    },
+    {
+      "id": "h25aa368e",
+      "text": "צׇהֳרַיִם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h25aa368e_ari.mp3",
+      "fingerprint": "3543dcd65d7bfd28d75bf2af7772d6372b8d8143d5f272487005293392b1f4a7",
+      "bytes": 10460,
+      "sha256": "513c17c9af508d4aee9c2ad74699719895f175a8576562b849e8798dc70eb34c"
+    },
+    {
+      "id": "h25aa368e",
+      "text": "צׇהֳרַיִם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h25aa368e_noa.mp3",
+      "fingerprint": "514670edb971cf867588c5e01183cb69ef183c234c192d2823a9f9dcf164c4dd",
+      "bytes": 7868,
+      "sha256": "c00cbc0147ae739b82106f67c4f88c587fc9acac54b8ec6a80e6bde6c3b22bf3"
+    },
+    {
+      "id": "h47a142a6",
+      "text": "חֲצִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h47a142a6_ari.mp3",
+      "fingerprint": "6019104ce1e8d1a156b275da02a7a994cd68ea2baada00fbadaa2d70d26dea60",
+      "bytes": 7148,
+      "sha256": "2371ae978104c3d0d4f50c1a91c76358e83c8d053218d390e5e6b0fcd2784904"
+    },
+    {
+      "id": "h47a142a6",
+      "text": "חֲצִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h47a142a6_noa.mp3",
+      "fingerprint": "433e947ad5cc1467aaa124370cd209b5362efbf9bcffb54cc1b20605fd6cd897",
+      "bytes": 7868,
+      "sha256": "b9529668fbefde8ed89e6bcea246d87eb62c6b0a868aea0dc563351e1c6af786"
+    },
+    {
+      "id": "h42410d5e",
+      "text": "שֵׁנִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h42410d5e_ari.mp3",
+      "fingerprint": "e6476f2e94bf7c55c9417c7eddd3884192c94b701ce1506dbb724be0a69a9783",
+      "bytes": 8012,
+      "sha256": "60a0277a5e60f87d8c390886c811c41f6b0bd01fa77928334989360635a84182"
+    },
+    {
+      "id": "h42410d5e",
+      "text": "שֵׁנִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h42410d5e_noa.mp3",
+      "fingerprint": "6bebfc5a1aff25d8e9416310c063b8d82f813ef0df57265c194e1bd9835149ef",
+      "bytes": 5132,
+      "sha256": "8a91f252bf34c2b183867ae224c6405acc869ccacfb2e1086571a558d50c149c"
+    },
+    {
+      "id": "h0b1cfbd9",
+      "text": "שְׁלִישִׁי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h0b1cfbd9_ari.mp3",
+      "fingerprint": "163f0b512ec37b0281bc89ef181a483ff3017620bdcce7b9837f1b403ebc22a9",
+      "bytes": 8732,
+      "sha256": "cfcfbdfe23c142d9ccd0ca1f429b4310e382fc28e2c8aa34853692b68adeb1ae"
+    },
+    {
+      "id": "h0b1cfbd9",
+      "text": "שְׁלִישִׁי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h0b1cfbd9_noa.mp3",
+      "fingerprint": "b3cf05066ea41e96a399dd840b9112af0ff2342749c77d0a3969f387d32432cc",
+      "bytes": 11900,
+      "sha256": "052e49ae6815cc90c0cb2253c342fa34e3df98b617e6a61e1f5d75b15c81e087"
+    },
+    {
+      "id": "h9160d23f",
+      "text": "רְבִיעִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9160d23f_ari.mp3",
+      "fingerprint": "8455854a788fe2baa43a06426ca8d91535347ceb59834ae96088e5936d745c47",
+      "bytes": 7868,
+      "sha256": "065dc494fad623a3f790f34d36614745f3c0405528260a161207784eaf4439a2"
+    },
+    {
+      "id": "h9160d23f",
+      "text": "רְבִיעִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9160d23f_noa.mp3",
+      "fingerprint": "2199b7ac9b23d7c6f6b14f74a4fdb5793cb507abaf3561f11412e993c0c683f9",
+      "bytes": 5708,
+      "sha256": "7a2a1dcd1c787bc1a6a9bfeaf6a74ceb74f8c021328e2e0a523f0a5e763f7114"
+    },
+    {
+      "id": "h5c689c60",
+      "text": "חֲמִישִׁי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5c689c60_ari.mp3",
+      "fingerprint": "70e4705a15d564ba9c44b798b7366038a34c501ed62d49e193225bf845aadf69",
+      "bytes": 7868,
+      "sha256": "4e26ab99a345875c50d6a7608e0995c7b7686924c9fce76ef25a6c45a805cced"
+    },
+    {
+      "id": "h5c689c60",
+      "text": "חֲמִישִׁי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5c689c60_noa.mp3",
+      "fingerprint": "fe8cfda777cbf291bd1d194ce7f8e465f5c93890235b2e695a6b39cdc7528364",
+      "bytes": 6860,
+      "sha256": "de6961631f0ad9e66bbda80cb2ee7e2f829c2d67df898bb124998a64ea01f07b"
+    },
+    {
+      "id": "hdd2bd792",
+      "text": "גָּדוֹל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hdd2bd792_ari.mp3",
+      "fingerprint": "af9a6c2663941579cfe541f3241ee3ac70d5dd4b85dafc7a496e1a119967c657",
+      "bytes": 7868,
+      "sha256": "35c064401b8012c797105b208ba75eaf2fd103d980e3080389eb88c4ef6be747"
+    },
+    {
+      "id": "hdd2bd792",
+      "text": "גָּדוֹל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hdd2bd792_noa.mp3",
+      "fingerprint": "bae6e794be7d1be7a79f34a97f911dfdcbbd9b5b173ec17acfbe984969708881",
+      "bytes": 8012,
+      "sha256": "160c0a8643cc085ad24dbbbc77aad84ef88fd82b23942d15b3d4375b2ca208d0"
+    },
+    {
+      "id": "h7be38218",
+      "text": "קָטָן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h7be38218_ari.mp3",
+      "fingerprint": "549cb09b19da3ef90bf8f2bc8ef2c19be2cb1959a542d13166ff0f7dfbccf28e",
+      "bytes": 5708,
+      "sha256": "4a76c7b9b591b279d25d193b9a5dbbd76caf36791a827b198c791ed2f0b51eb0"
+    },
+    {
+      "id": "h7be38218",
+      "text": "קָטָן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h7be38218_noa.mp3",
+      "fingerprint": "e233d31af6e963ac0be94441fbab800c14cf7ba554a80b13d9d9554460ac47b5",
+      "bytes": 5852,
+      "sha256": "f3f31f4629f6c5cd0825435eda4f43e97d2e65c655716448c62163e60a8887b5"
+    },
+    {
+      "id": "hb4ac356a",
+      "text": "יָפֶה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hb4ac356a_ari.mp3",
+      "fingerprint": "dc7ea72f52917489ca0f69a390cc145a9b1b80b0a0b4575ee45c02916317f45a",
+      "bytes": 5852,
+      "sha256": "c3535bfcd4ad451c5bcb993c8169a5bd6a1845b77cfc058611ea2dc90e620e15"
+    },
+    {
+      "id": "hb4ac356a",
+      "text": "יָפֶה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hb4ac356a_noa.mp3",
+      "fingerprint": "cbe85bd764a06f6ed77dc950eea6e7160d7b74a3e10e888c27cb935331445b93",
+      "bytes": 7292,
+      "sha256": "ef748c4c2fae1ad57de9b1987174fe05215847f6ac9c898fb1a0936d23b67c2b"
+    },
+    {
+      "id": "h64e266b0",
+      "text": "אֲמִתִּי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h64e266b0_ari.mp3",
+      "fingerprint": "a8f9100cb669aa1830696e86a9bec64a3ae707bf040db7f08bd8cbfe947e5d3e",
+      "bytes": 7292,
+      "sha256": "e1ba40250f3ece8947eafdcfffb197fb48c872e2792e040ae9e8c30c99a10dc5"
+    },
+    {
+      "id": "h64e266b0",
+      "text": "אֲמִתִּי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h64e266b0_noa.mp3",
+      "fingerprint": "3acbcd1617857b50605ffa6ea46334ac533f5f993d2a98eb3d9eda304b49a7ad",
+      "bytes": 5708,
+      "sha256": "dc05c6ee6266a4cbd1c79f26d17ef47ce679404b58076c0c6aee89e461fedfb7"
+    },
+    {
+      "id": "h8349e150",
+      "text": "טָרִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8349e150_ari.mp3",
+      "fingerprint": "18a675f50b659a4a542cba69229a364dbe6bfe0498028c02e08fc56f28e4d6cf",
+      "bytes": 7148,
+      "sha256": "a5a66b057dbee28c2eecf3df3757eb580c9ea6fc724fcd2bfc76ed5c388ed35b"
+    },
+    {
+      "id": "h8349e150",
+      "text": "טָרִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8349e150_noa.mp3",
+      "fingerprint": "bbb6f353e9e5e7de33220239a3a388c90fe2924c6204c0bb8d94afdd7a7d82b1",
+      "bytes": 5852,
+      "sha256": "4d977465919cca59b454d181cae7ed77419c57e6fb79ccde26b42903bc23d3e8"
+    },
+    {
+      "id": "hb814461b",
+      "text": "יָרֹק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hb814461b_ari.mp3",
+      "fingerprint": "ff3065ad78652222208cc48b98a1afbc63656219e7c2b4c78f7282c67a6fd8d4",
+      "bytes": 8300,
+      "sha256": "f62b1f8ec08026b59e32da23842d36b0334ec3e43433d19a3d518d09e3db3399"
+    },
+    {
+      "id": "hb814461b",
+      "text": "יָרֹק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hb814461b_noa.mp3",
+      "fingerprint": "2d6dffe0c413252e35974bbb7efe2f44eebf63b5b69008a995d123306121cfed",
+      "bytes": 7580,
+      "sha256": "50ab40261668fd7708350dcab9ff9aea2e1d479d6f30d764e1fa48add481a6af"
+    },
+    {
+      "id": "hadfa84bd",
+      "text": "קַל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hadfa84bd_ari.mp3",
+      "fingerprint": "2c81e4dc552454a85a272d57aff522523d07936387070fc081a422581022f740",
+      "bytes": 7148,
+      "sha256": "9a4179c24d24b368ab9f5b62075fbdea867f4334a3617abea47103c7c13cfc6e"
+    },
+    {
+      "id": "hadfa84bd",
+      "text": "קַל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hadfa84bd_noa.mp3",
+      "fingerprint": "54eb6f05d79cdaf8feaf5596ea7e631ae68bb4e580fc03839e29146e69511b55",
+      "bytes": 5708,
+      "sha256": "049ec9ad30410b57e0c5627c1ae0a302d57be11bd11876f0fa57a9d3171e3f6e"
+    },
+    {
+      "id": "h8a9b78b8",
+      "text": "רָגוּעַ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8a9b78b8_ari.mp3",
+      "fingerprint": "937e51b20663ec7ec151d3b04bddf9d2941f8ed2041137ee5a20b291a7408a20",
+      "bytes": 7148,
+      "sha256": "e14898d068d6ba598d9e6440d90524620b8d4c4bbd9a385699c89e9246234c94"
+    },
+    {
+      "id": "h8a9b78b8",
+      "text": "רָגוּעַ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8a9b78b8_noa.mp3",
+      "fingerprint": "2431c80d2ad0d496d7cd040061e6ff9f59f68eede06de5f7b952058d882462b8",
+      "bytes": 8012,
+      "sha256": "a9634b5768d47c3e7568cd324ddc4487e3bb1debc9c3dee05d3f813f8fc1e4b9"
+    },
+    {
+      "id": "h8633259a",
+      "text": "מְאֻשָּׁר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8633259a_ari.mp3",
+      "fingerprint": "0b4b1c01f2b0d1574ffcaa5371ee4ff212c4bd9251752bd589e3652d6889053c",
+      "bytes": 6572,
+      "sha256": "756b9f6b6e91074c6014ae6aaccc57979329c35dcb01737b6a06d8e4dd311e1a"
+    },
+    {
+      "id": "h8633259a",
+      "text": "מְאֻשָּׁר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8633259a_noa.mp3",
+      "fingerprint": "94a48ceb66e662733d35c476d0c8b3050a4b18cc13ed17e9a8dac2d37a4c13a1",
+      "bytes": 10892,
+      "sha256": "7c778146952ff749c309fade66ef9ca4fbcc6774669cdd954de537f0bf6b075c"
+    },
+    {
+      "id": "h3c6a06b3",
+      "text": "חֲלוֹם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h3c6a06b3_ari.mp3",
+      "fingerprint": "f7af111d11713ac280d734524a5aaa54e98c1ae316f808acff9e999756afa30b",
+      "bytes": 7292,
+      "sha256": "7e09a06ff459deb7574eb9b3068c10fe633d909e1b60300773579247012319b0"
+    },
+    {
+      "id": "h3c6a06b3",
+      "text": "חֲלוֹם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h3c6a06b3_noa.mp3",
+      "fingerprint": "92438dc40b94694db1412fcd70fcf4222c45cb8ed746f1473291d73caa5e8d44",
+      "bytes": 5420,
+      "sha256": "08cb4582bbdb4ad7c903dc7f9df749169117f64a8b87bb6b6bbf4d3ca029c314"
+    },
+    {
+      "id": "he7f4c5c3",
+      "text": "רֶגֶשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/he7f4c5c3_ari.mp3",
+      "fingerprint": "a202001aed79ac754a89e8bec0f2df00ed37a3745a8aad5d265a9d624831e5f1",
+      "bytes": 7868,
+      "sha256": "592900b13ebe88fe927398e9f6cac82e490781c6814662e5ada5fcb38ff65edd"
+    },
+    {
+      "id": "he7f4c5c3",
+      "text": "רֶגֶשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/he7f4c5c3_noa.mp3",
+      "fingerprint": "e2eefe93456c7b15a6c4bd2597e8aec2418bfa8ee9dcd5afbecf777601483f9b",
+      "bytes": 6140,
+      "sha256": "071b691a7bb034d22270cf2cc3627ffbe68666c235fa806e7645a5342331c807"
+    },
+    {
+      "id": "hc8e59638",
+      "text": "תִּקְוָה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc8e59638_ari.mp3",
+      "fingerprint": "d7ac6b9662236c60d99fa6a53bf60e94778b7a72a760ed2541f9a7c0b65b6282",
+      "bytes": 7148,
+      "sha256": "c3ae9091d05178051d7b5bbd8e3cdca1b5db9f5305b15b59a74009519973ecfb"
+    },
+    {
+      "id": "hc8e59638",
+      "text": "תִּקְוָה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc8e59638_noa.mp3",
+      "fingerprint": "3aaf3bf66636e132fa3fb8df55d2dc371031750d5966649417ba1da6fb2cb11d",
+      "bytes": 6860,
+      "sha256": "43d75ef6069ce69d4a0e7be66cbc8177e5d3517602d766808c1091d7c2268625"
+    },
+    {
+      "id": "h7c05b190",
+      "text": "חָשׁוּב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h7c05b190_ari.mp3",
+      "fingerprint": "c7d389530c33d7bf535561d42b3a8ecc82591a8110af8060fdceb35513a982a8",
+      "bytes": 7148,
+      "sha256": "a24992433fde353495ce633770b5030998cfd98838ffb31a80c3fdafb5af5bfa"
+    },
+    {
+      "id": "h7c05b190",
+      "text": "חָשׁוּב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h7c05b190_noa.mp3",
+      "fingerprint": "6f61ff2d18b1d0b3e70aa075f5aaba4b085f7cade875a6979314f69b777a3eb4",
+      "bytes": 5852,
+      "sha256": "5c400b3075d20e3a716e8387d3123d54211d10ae7dc4dda86b6d98b82dee2196"
+    },
+    {
+      "id": "h48d3db84",
+      "text": "חַלָּשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h48d3db84_ari.mp3",
+      "fingerprint": "9ec614308f0946d31d0108415bdd254b8268115b9d54b336af7a0c233370ed1c",
+      "bytes": 7580,
+      "sha256": "340a73fa880b436dfcc96c8b5d53ecaf85c27abb75b98fbace40442fbc495b93"
+    },
+    {
+      "id": "h48d3db84",
+      "text": "חַלָּשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h48d3db84_noa.mp3",
+      "fingerprint": "43daab0a7fa37a07d7a9752e1813235003dc1e34d87b3df8514aaf3722a15710",
+      "bytes": 6428,
+      "sha256": "dea8668ee385539c09dee5d5c738fe18ff4c9cc300ad9cd94666ecd8a6075aee"
+    },
+    {
+      "id": "hba98874f",
+      "text": "נָכוֹן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hba98874f_ari.mp3",
+      "fingerprint": "e3b240333b299550fbf337e7f030acb5b5f1bc93066fd4d491db8ab7fafb34b3",
+      "bytes": 7580,
+      "sha256": "9dd7e83372b726a4e9fe3adf755b36b620fb3b9f3a30f5f14fae69d55088e5c6"
+    },
+    {
+      "id": "hba98874f",
+      "text": "נָכוֹן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hba98874f_noa.mp3",
+      "fingerprint": "b81fec37c5db91110ec66c8c8f13159764ed11ef5638fd4ca362593710e2afc7",
+      "bytes": 5852,
+      "sha256": "80f2af3b76230e6d8dc45fd79819a24dc63eb8c6687b44799a8482938288ff9f"
+    },
+    {
+      "id": "h4d766086",
+      "text": "יַחַד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h4d766086_ari.mp3",
+      "fingerprint": "29a03eca88c93f3227cf30f3890638f213a908670ea1d9a2395fe6021bf16921",
+      "bytes": 8300,
+      "sha256": "a1f4c61fba77600f5e9021146d4e0bb214591da1fff01c579384ff27bf8468d2"
+    },
+    {
+      "id": "h4d766086",
+      "text": "יַחַד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h4d766086_noa.mp3",
+      "fingerprint": "fb1f304161e33b0cab5d22f675ee0b026043c00e8a5094c890496fc309f10a25",
+      "bytes": 5852,
+      "sha256": "42bb8fda5eaef78fdd05ec87f0a707ead174b73d0e4e246431eddff9672b1db2"
+    },
+    {
+      "id": "hf2bba104",
+      "text": "שָׁם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hf2bba104_ari.mp3",
+      "fingerprint": "df24a5401d577679d611129e33836e76b409f86b9c0d8e084327ec9823d5ea37",
+      "bytes": 7292,
+      "sha256": "00cf66b26ef9c03d153ee40579cb2895bc8540c90946a17a9ca8a23a66d08732"
+    },
+    {
+      "id": "hf2bba104",
+      "text": "שָׁם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hf2bba104_noa.mp3",
+      "fingerprint": "da8247f07caa2e08b6f351a3a26f098490409a7613792678cf81a47a92f93c1f",
+      "bytes": 5132,
+      "sha256": "7eaa9cd20ca01eb339714f0c56533003c23e4d019bef069e71ae25b8a7c04ef0"
+    },
+    {
+      "id": "h0c3016b2",
+      "text": "כָּאן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h0c3016b2_ari.mp3",
+      "fingerprint": "66733deca5ff9a47371b106ac8a3d95df21444af9883636fe35aae199bfe5844",
+      "bytes": 10892,
+      "sha256": "72c591182b669e829a73404a8baa1814b1ffecd7ad627f9df83a2c713dbddcb2"
+    },
+    {
+      "id": "h0c3016b2",
+      "text": "כָּאן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h0c3016b2_noa.mp3",
+      "fingerprint": "ec6e232e07b22634eba9b35441939841aaeed47112f7b1f2aeb8172680f4b141",
+      "bytes": 7148,
+      "sha256": "fcfa4a07fab5d12249d1ad540d875a1c085d1114b6108f62b68660d17170718b"
+    },
+    {
+      "id": "h8453bf6a",
+      "text": "עַתָּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h8453bf6a_ari.mp3",
+      "fingerprint": "3acb5ead8f269e98656e684e44325e81e270c140cb66420a5f5252c85e416bfc",
+      "bytes": 6140,
+      "sha256": "17c6bd058c9f51e81398ed458487179bb1a46abf905843e2392f9a63a16b5f1c"
+    },
+    {
+      "id": "h8453bf6a",
+      "text": "עַתָּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h8453bf6a_noa.mp3",
+      "fingerprint": "e88850165b6d89a3e3e5572ea0022dac25615c6c9c1107e9306e8990994012d9",
+      "bytes": 4700,
+      "sha256": "4a4d643306da84296a69f16028e54c67159e8935ca1e6a4506af376717970077"
+    },
+    {
+      "id": "h99a070bb",
+      "text": "שׁוּב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h99a070bb_ari.mp3",
+      "fingerprint": "e41273dc26a8cd07d8d7035bfcd63f8dffbdac8a53b34a5b428b0c7c51fb19a3",
+      "bytes": 9308,
+      "sha256": "ef04f77e5d90929e2c7a0069ffad125b00f7c930fed62f135ed2387f78c76e54"
+    },
+    {
+      "id": "h99a070bb",
+      "text": "שׁוּב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h99a070bb_noa.mp3",
+      "fingerprint": "3a4f1c0bf7620214c7a1656199951e606eca37552a71dd13bc96b1d33d75d257",
+      "bytes": 5852,
+      "sha256": "5a17b045f9413e852317f2c167fb74dbc66d81f2b6c06d6e32639c91871cbf6e"
+    },
+    {
+      "id": "h81024165",
+      "text": "מְאוֹד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h81024165_ari.mp3",
+      "fingerprint": "e96f5c0a9a12c9c8ee51427c752303e882f1cd65cd8e14517d42b9b83439356d",
+      "bytes": 7292,
+      "sha256": "d047e60ea52ee536f6fbdded494faf4c0b50538d0bd2390fcac45ec9876a037b"
+    },
+    {
+      "id": "h81024165",
+      "text": "מְאוֹד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h81024165_noa.mp3",
+      "fingerprint": "64f8e035ebc6f8f1971e3ce55a97b260532ac4e4346ecefec6af7c194054fcc9",
+      "bytes": 6428,
+      "sha256": "19877715fb1a34dc49d249285b538020feab4207876ad6502d1b78cc7180ae5e"
+    },
+    {
+      "id": "h79df22f0",
+      "text": "לְאָן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h79df22f0_ari.mp3",
+      "fingerprint": "403d1a5931bd69931173a8013333917cf6b3952f1cbc87ea1d4d2c3f11a7307d",
+      "bytes": 8012,
+      "sha256": "b530e2be8983a7ad4816658eb916aa0b3033d8dd8355e40d4ee185c5544dbc00"
+    },
+    {
+      "id": "h79df22f0",
+      "text": "לְאָן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h79df22f0_noa.mp3",
+      "fingerprint": "ac91e491223dc59152b6c89e30000f0251e0662c325864299c5b7931e6674ddd",
+      "bytes": 10028,
+      "sha256": "56b0308ff7d984ab7146a8113ba56799f674f13b2e21880a1f3e40b1bceb5b9e"
+    },
+    {
+      "id": "h749f736f",
+      "text": "תָּמִיד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h749f736f_ari.mp3",
+      "fingerprint": "c45afbaf2678365be13ec347faf37dc6f13cb04324d0f9f46af24a1bef0126da",
+      "bytes": 6860,
+      "sha256": "c3a2937f65e14f99574c571b047de33895ddc97cd6bc4d5ae620e001dcf3bbc6"
+    },
+    {
+      "id": "h749f736f",
+      "text": "תָּמִיד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h749f736f_noa.mp3",
+      "fingerprint": "071b9c239e9ae66874f379e6667fb37ad76618a4ee86c9a5b7a706132a76e8c4",
+      "bytes": 5708,
+      "sha256": "06bd445ae61e605b9da7368c9fa065d0f685e82179d91b0047aeb0d50a0d3e9b"
+    },
+    {
+      "id": "h60b16793",
+      "text": "פֶּה",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h60b16793_ari.mp3",
+      "fingerprint": "a5f9bc02490fa17293b51b2e50f62c0e694e558fb0b28f751301883776fef63d",
+      "bytes": 5852,
+      "sha256": "907ec3011cdede76074da883c0b80d499105d1047b8b54f16b3c3146260a2811"
+    },
+    {
+      "id": "h60b16793",
+      "text": "פֶּה",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h60b16793_noa.mp3",
+      "fingerprint": "6e7d79eff3d0c3eba2a31761afdc32b0c0c196ba9449b89cb32fae94a5800c57",
+      "bytes": 2540,
+      "sha256": "e65820b1289d96e13a3df63adf77d5ef23dd9e2fb84497460f0748bc6d957b9b"
+    },
+    {
+      "id": "hc0616a4b",
+      "text": "אֹזֶן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/hc0616a4b_ari.mp3",
+      "fingerprint": "91be26f5902ea28345042bc240a2a0e21a6c7c54ddd9505a008c3e55fa5d49cc",
+      "bytes": 8012,
+      "sha256": "f248b1636f17e75a57a8dc95dcb81929234bbd46be0860e54b3e598c32a69202"
+    },
+    {
+      "id": "hc0616a4b",
+      "text": "אֹזֶן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/hc0616a4b_noa.mp3",
+      "fingerprint": "d29a0e8c6e9ffb202afe5e7572dfd4e3c4c84f1335be8e62e057a0ec8765ae0c",
+      "bytes": 9452,
+      "sha256": "6758ec5629364c8d57062d557859074dda86bcdf0bee64541d2c798a467e7bf6"
+    },
+    {
+      "id": "h9d6352ee",
+      "text": "עַיִן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h9d6352ee_ari.mp3",
+      "fingerprint": "00f678dcb4bce017028a3edc470ddf6392e08adf5f4dc648acdb79b1e30454da",
+      "bytes": 6428,
+      "sha256": "693bfe0b6590b98bb5ee63a0bee3d529da73cd88d5edbc2bcedd29d0be8ad3d9"
+    },
+    {
+      "id": "h9d6352ee",
+      "text": "עַיִן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h9d6352ee_noa.mp3",
+      "fingerprint": "09b61b2698d584c743719d85365617448d9a1dfc0db6cffe3406fbccd03bf628",
+      "bytes": 6860,
+      "sha256": "a77fded04d5203d28524878bf561b07687287bde7b29130717993ed460aeffa0"
+    },
+    {
+      "id": "h890d1505",
+      "text": "לֵב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h890d1505_ari.mp3",
+      "fingerprint": "fdce5facfac8108b907b77cc0b21da4b40b3034a844aafbfae4c8c231cba6983",
+      "bytes": 6572,
+      "sha256": "1e23b5bbb4b18a6cfd52dd5a237b665289aed3fe6c60bb0bc4b85acf5786613d"
+    },
+    {
+      "id": "h890d1505",
+      "text": "לֵב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h890d1505_noa.mp3",
+      "fingerprint": "8dd8a04894c292e1779c45e8c92dcc3f8caddd5e81148a534f362152121159a4",
+      "bytes": 5852,
+      "sha256": "a98fa3aafef2a0005038f714dedcc4fb55d7228a2384a1975f3830ed72a8aadb"
+    },
+    {
+      "id": "h3fc254f5",
+      "text": "גַּב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h3fc254f5_ari.mp3",
+      "fingerprint": "eca75b9f3079bf8853806bf2cafd89bd109353eee1992f4d1c50dc88258cdc04",
+      "bytes": 7580,
+      "sha256": "7ea520655aa8ec6a5c67074116d9e8c73a4a024637f6b80cccb93358b830e39f"
+    },
+    {
+      "id": "h3fc254f5",
+      "text": "גַּב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h3fc254f5_noa.mp3",
+      "fingerprint": "e4fda30f8fc3c78fb7e2784500a8edae526ce4447703d709c9dad1ed048fa29b",
+      "bytes": 5132,
+      "sha256": "929914724f481d6bc8d4617ac66c0653874d5f64369d4c48b60ed6063c992a23"
+    },
+    {
+      "id": "h06f78f5d",
+      "text": "בֶּטֶן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h06f78f5d_ari.mp3",
+      "fingerprint": "7607d5c7a18daf2db2ff019a12b812cf63865403572c94f3c3f9c15fa072fc98",
+      "bytes": 8300,
+      "sha256": "eb19a8cfce446c9c113dc81ca9402d4f0c7e0faa2a81c073cab5824d62c7c48b"
+    },
+    {
+      "id": "h06f78f5d",
+      "text": "בֶּטֶן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h06f78f5d_noa.mp3",
+      "fingerprint": "3d34e2a0d8e6844d1e6b702047917d6dfc3563f21666ae238621c86a32498676",
+      "bytes": 10460,
+      "sha256": "5025717c9c8322dbe2a98e21bbb09754f95dcb4ded21f0739902201647fbce86"
+    },
+    {
+      "id": "h1c939a81",
+      "text": "יָרֵךְ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h1c939a81_ari.mp3",
+      "fingerprint": "6d769ec44dce9c38101c090a5475d0ceaeaf456590bd191755e078d441fcea64",
+      "bytes": 6572,
+      "sha256": "284a076fce7098dc8fb6478452d25905ac825b2cc3431966f07d1f13dc9c1048"
+    },
+    {
+      "id": "h1c939a81",
+      "text": "יָרֵךְ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h1c939a81_noa.mp3",
+      "fingerprint": "3dfdecffb3abb585e30dd780871861583a57e45d610e343e01db765b75454479",
+      "bytes": 5852,
+      "sha256": "c33acc2af3a3d2abbb6c1f2ff742ebd3beaf3b8fba4aa6d8ab8feda3c2de073f"
+    },
+    {
+      "id": "h5b150aaf",
+      "text": "אוֹר",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h5b150aaf_ari.mp3",
+      "fingerprint": "55ce51d080c7a8ff82d9f01566885ffa45fe9620781acc05acc266205119558f",
+      "bytes": 6428,
+      "sha256": "164f564eebb7335eb612ec311d750e678de6a6225d5828b926fa2f0477db4673"
+    },
+    {
+      "id": "h5b150aaf",
+      "text": "אוֹר",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h5b150aaf_noa.mp3",
+      "fingerprint": "cce2eae87bbf7b3101f9596a0d1fa1811aa8c2fc828b16d15d5dff576639965f",
+      "bytes": 7148,
+      "sha256": "ffa23e4553270636166a518a1a43ce4edbf49b5d8dc8315f4d5fe03eabd74cd0"
+    },
+    {
+      "id": "h58d8d8fe",
+      "text": "מֶלֶךְ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/h58d8d8fe_ari.mp3",
+      "fingerprint": "7ecdb2981de773475183e944dfe118f8c0c8a62bd60edf922be94426523c09ab",
+      "bytes": 7148,
+      "sha256": "bd39c147e205c18ceb0dcac54643e82c37156ffaecc7eb91da5449e478ff4e0f"
+    },
+    {
+      "id": "h58d8d8fe",
+      "text": "מֶלֶךְ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/h58d8d8fe_noa.mp3",
+      "fingerprint": "aa74a04abaf97db45b5ed8131c4af868acb7cb47194e01095263a864637d6d8b",
+      "bytes": 5708,
+      "sha256": "0d3edc56722c1568eed4f921243bc6ec7d9e42d8b7165d15456cbd0fb6a841a0"
+    },
+    {
+      "id": "kelev",
+      "text": "כֶּלֶב",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/kelev_ari.mp3",
+      "fingerprint": "aea9e7a0d60a7c7222afde140feacc8ca925b0dc032b72effce2c81609d27d3d",
+      "bytes": 7580,
+      "sha256": "7d7a4341cb815dbc1e4da029bbfaedfcc0349548512eb2ff125348010d39a1f2"
+    },
+    {
+      "id": "kelev",
+      "text": "כֶּלֶב",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/kelev_noa.mp3",
+      "fingerprint": "b86996a6a3c0d52dec332185dc19c421cd7a737fd2034fdab438bebb12f63d1b",
+      "bytes": 5708,
+      "sha256": "1dd5e42515006cdf6c87fcd47de1d3519f6abf69067fe0ed741c1f5e7cbf9775"
+    },
+    {
+      "id": "chatul",
+      "text": "חָתוּל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/chatul_ari.mp3",
+      "fingerprint": "7c44c45190cc138aa4d74c7d09c7ee814717e44bf47b5b5cbd2c4336ca1ecad5",
+      "bytes": 6572,
+      "sha256": "99146075f77b1922142952f689477217b1004649a3e4509caf19e7ccf198d214"
+    },
+    {
+      "id": "chatul",
+      "text": "חָתוּל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/chatul_noa.mp3",
+      "fingerprint": "231d92c352a2e152b829af0067247cf4890dbb0e153f43bf69e953866fd11303",
+      "bytes": 6572,
+      "sha256": "bc99e4a7ad3e959eec14e8d2a93b9f3a459bcf63a79091992f17665bb1ba284f"
+    },
+    {
+      "id": "perach",
+      "text": "פֶּרַח",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/perach_ari.mp3",
+      "fingerprint": "0b57907d5e45dac373eae4320c2a2aa85a613d4a5ecba580550df0578abbf23d",
+      "bytes": 6572,
+      "sha256": "9c176a540ac73fad17d9fa6112f9d2ed851e35a5174c73f418d675018ea0dee2"
+    },
+    {
+      "id": "perach",
+      "text": "פֶּרַח",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/perach_noa.mp3",
+      "fingerprint": "f0becb2347b7d125f704bd9c9e75d3e3860c9a7da80d4ea9fb454058bafec437",
+      "bytes": 6572,
+      "sha256": "f1f381991fdb759d225094183fef5746c50d57e81e7be1f76622c0ff2f1f4ce7"
+    },
+    {
+      "id": "alef",
+      "text": "אָלֶף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-alef_ari.mp3",
+      "fingerprint": "82fffa82d0c59790e9e369c6438ea3ee9801447b51ca89f1fd50903e7956f993",
+      "bytes": 7868,
+      "sha256": "8f4e280f51136a35619c556fbfd9c73b6d71a9de9ac85a03b9cf05ebee4a6f11"
+    },
+    {
+      "id": "alef",
+      "text": "אָלֶף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-alef_noa.mp3",
+      "fingerprint": "a564533dd522ec8fab05c2b10954b993c99afa9f859cf15ed5a5a6f397520c82",
+      "bytes": 9308,
+      "sha256": "84047a260e8a110f27ee38b29c66d648475434ba2528544ab7b5a654be62f535"
+    },
+    {
+      "id": "bet",
+      "text": "בֵּית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-bet_ari.mp3",
+      "fingerprint": "39bb52a1eea471144a84cfecda004bb992514fe041749f1148d3c2e0d87d2025",
+      "bytes": 9308,
+      "sha256": "e929899c728d081f473297ca3d8570a8ebb2531d89fe4cf302731f6609674475"
+    },
+    {
+      "id": "bet",
+      "text": "בֵּית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-bet_noa.mp3",
+      "fingerprint": "f18ca22a10d98a5c11d6ef1a0d3f16e1daeff72e6d9ef20f6cd6d6cdeff8e8b6",
+      "bytes": 7148,
+      "sha256": "c22a27804ab3f13cc03001bce155825a59f0ea0a3eee062127abd7dbef80fa2b"
+    },
+    {
+      "id": "gimel",
+      "text": "גִּימֶל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-gimel_ari.mp3",
+      "fingerprint": "5654926875f286a2b64d35895ae6e07f00f65170b388d70167a63597beb7c350",
+      "bytes": 8300,
+      "sha256": "37869ebd80ffea8bd8e3b0c45a8e780efd220d1a50dfe4f272d7c9812c4d6130"
+    },
+    {
+      "id": "gimel",
+      "text": "גִּימֶל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-gimel_noa.mp3",
+      "fingerprint": "c5a849207dcff77fadbe433bd1de4ef43d4abc3c3fe155bc7bd1e4aba5e9d6ae",
+      "bytes": 7868,
+      "sha256": "e024b484cd29463cd9e1d208ac54228aef597edd4598e9982d9c1bc8740b6c46"
+    },
+    {
+      "id": "dalet",
+      "text": "דָּלֶת",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-dalet_ari.mp3",
+      "fingerprint": "955e564ffdfb131d9eda9347a4f7e7e39cea320ff72a4785f3d7b953b4bfd22c",
+      "bytes": 6572,
+      "sha256": "3f26725fe1676ad7db2b4b4fb04ae0f71d61659dc3c3d9d3b92b6bbfd67aa2e7"
+    },
+    {
+      "id": "dalet",
+      "text": "דָּלֶת",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-dalet_noa.mp3",
+      "fingerprint": "8602690ba20c6df52a1317e4239923ca96115a2540f913c19f1af7a6fe724eee",
+      "bytes": 5420,
+      "sha256": "dbfec3d93fbeae93b76361f450d334c84de20699d3ae8dab6d3a041dd9c6e42e"
+    },
+    {
+      "id": "he",
+      "text": "הֵא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-he_ari.mp3",
+      "fingerprint": "dd3fc4542557a4ed76a9cffc3282683c09905d5b607aee7ac569603578010934",
+      "bytes": 7580,
+      "sha256": "c0247399022498af819dfcb32de8d0d374f62c3ae432fe10dd54d50ecb77a4d7"
+    },
+    {
+      "id": "he",
+      "text": "הֵא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-he_noa.mp3",
+      "fingerprint": "66bbe514b29cfa97f9d25420511e368b3ddb061732fd541f5565c66533a0eb4a",
+      "bytes": 2540,
+      "sha256": "8a371e0f75dae2451d1d855a221bfc52aaae55a32017291ed321c63232ac6939"
+    },
+    {
+      "id": "vav",
+      "text": "וָו",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-vav_ari.mp3",
+      "fingerprint": "79096294d4b3927b23f047de40843f9d4ed84802c8e5705652af6ede050f6230",
+      "bytes": 6140,
+      "sha256": "518ad02fd23f2729d4e3dee99f3175335bc0d100f5af55fec02adbe3919d8539"
+    },
+    {
+      "id": "vav",
+      "text": "וָו",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-vav_noa.mp3",
+      "fingerprint": "39d57475a47659ea8b3792c714ef979e82def3a167a3271cdb83cf2f000d90e1",
+      "bytes": 8588,
+      "sha256": "78a066ddddaefbe5914515841eb7e83e046c767ca0106fc14b439cfeca413c19"
+    },
+    {
+      "id": "zayin",
+      "text": "זַיִן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-zayin_ari.mp3",
+      "fingerprint": "4e7f27fa85fb02be82b43f725c2482412777d664033a2e3ef4b1e879377009fb",
+      "bytes": 8300,
+      "sha256": "501e069742a126783272ab16f97fc12f7f42bc71b575d630a0be1f23f5603cf7"
+    },
+    {
+      "id": "zayin",
+      "text": "זַיִן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-zayin_noa.mp3",
+      "fingerprint": "c8fc737e54d858cac7e05d8ab7f1ee7199a52f85b5de64fcff5e215fc477cf8a",
+      "bytes": 7580,
+      "sha256": "558ae74f9adbadde40e416cf7bb95124270d917c81c42a28cec12133798cbc52"
+    },
+    {
+      "id": "chet",
+      "text": "חֵית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-chet_ari.mp3",
+      "fingerprint": "c7aed469839cb038add8f97626fe8b60cb174fe776d7dbc098309b939a60e792",
+      "bytes": 7580,
+      "sha256": "f170973ceab6f0f7fbfcc148a72f67e56e7b21868f32d46b2eb5f259b484c10d"
+    },
+    {
+      "id": "chet",
+      "text": "חֵית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-chet_noa.mp3",
+      "fingerprint": "310af1af80c0d34888a5ad25613c8d818311cacd111938be20152ec5ae99648a",
+      "bytes": 9740,
+      "sha256": "a33211c98cfa441cc6f8b48800a2c9f24fe335e7efd4726848bfe2fedef3cf33"
+    },
+    {
+      "id": "tet",
+      "text": "טֵית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-tet_ari.mp3",
+      "fingerprint": "4a56915857e918a0bd2283fd661a4cab5b40a68c8ba38202e2dd23c4d6fb7e87",
+      "bytes": 5708,
+      "sha256": "8527ab02fee6895b957ef61b9b782f19e431c1d54d9607588d5b4194f5b5fc8b"
+    },
+    {
+      "id": "tet",
+      "text": "טֵית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-tet_noa.mp3",
+      "fingerprint": "f07e5aca0f4a65a4b7c24a1edb7605ae525256e6aef986285ed6ed975e129b87",
+      "bytes": 5708,
+      "sha256": "ed97ffb52a160fa99c02487a036bad0612a8851a9c4e817aa27c4b639a95021b"
+    },
+    {
+      "id": "yod",
+      "text": "יוֹד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-yod_ari.mp3",
+      "fingerprint": "8e45ee20152f67f5cfe997941a62d45df69ff7a0bcaaae6cdcbbcc33d13bf1a8",
+      "bytes": 6572,
+      "sha256": "12ab1ef4242f4c5933e7784218c1a50fee707a02ea5eb69a0ccd72eb02a5807a"
+    },
+    {
+      "id": "yod",
+      "text": "יוֹד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-yod_noa.mp3",
+      "fingerprint": "9b78316faa38019055e32488b2716bc0a9cb8285098335e6c1f93c187e5c38b1",
+      "bytes": 9452,
+      "sha256": "d03026f5eb53a8c2ef569fa4adf4f5b28c2ffc334029ebb5b922bc63453eea0b"
+    },
+    {
+      "id": "kaf",
+      "text": "כַּף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-kaf_ari.mp3",
+      "fingerprint": "85d99dc37fd63d2cc9b48b396e20a9aaaf78f83afd15fdd444c7e55986595439",
+      "bytes": 7292,
+      "sha256": "318d1f5dd6e9653551ae97edfe48594a4fa970f691ca669f8fb117a792e575a7"
+    },
+    {
+      "id": "kaf",
+      "text": "כַּף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-kaf_noa.mp3",
+      "fingerprint": "ff6f0027f617b1b60ca0d1a3b02b2db0b27fd548cbf56e94360a27ec9298f50e",
+      "bytes": 5132,
+      "sha256": "8823f5ba38e960659966cd7b304e22e085a887c66f96fd31f4873f7860c5c054"
+    },
+    {
+      "id": "kaf-final",
+      "text": "כַּף סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-kaf-final_ari.mp3",
+      "fingerprint": "3e137150e21a7415b9e4423bad988f7e3183f9e351f6a6b5c2cbdbb8e8370332",
+      "bytes": 9452,
+      "sha256": "ee11ab5f8826561c4a1b3637199fcbbe21671844e413c0bfa62ae5111b7a0ff5"
+    },
+    {
+      "id": "kaf-final",
+      "text": "כַּף סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-kaf-final_noa.mp3",
+      "fingerprint": "33c8e3e3de2132146e1da2f11afa5fa7dd6c16eed43e8213b79c680b3b827d7c",
+      "bytes": 8732,
+      "sha256": "d1e8b4acf1502a517260d67c2ef1efbbacb708e0dee4048b6c85e7543edf9f0d"
+    },
+    {
+      "id": "lamed",
+      "text": "לָמֶד",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-lamed_ari.mp3",
+      "fingerprint": "247a59e21c6c2f2741d5396edb49bc9c0ee193ed8d912c2a6cbd1996ea4e600e",
+      "bytes": 6572,
+      "sha256": "6b6abd95f7469fc9d8ec0a39381a359ed2f9013cae7ffb9b240e7e43d5ddade1"
+    },
+    {
+      "id": "lamed",
+      "text": "לָמֶד",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-lamed_noa.mp3",
+      "fingerprint": "803ea5bb386c8cb81882b74cbbca4f01a78ea2886ee66833945256f85171dbcf",
+      "bytes": 9740,
+      "sha256": "969540a92d5a900d36587e4c294cca0aed89672e3a227185787dc00576503be4"
+    },
+    {
+      "id": "mem",
+      "text": "מֵם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-mem_ari.mp3",
+      "fingerprint": "1489b1ee264c2dbfa6cab9826545f560d1fedd4a4eac3e49f17089a0d109bbd4",
+      "bytes": 7148,
+      "sha256": "7c6be58fb9a23db5c43ad1df9197b49e921a6d637b0a53f19ad6a3f2eda941f9"
+    },
+    {
+      "id": "mem",
+      "text": "מֵם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-mem_noa.mp3",
+      "fingerprint": "f6021d3942bb081d7a2a4465de7b86a1b94882da332662e773c6763c077b0389",
+      "bytes": 9452,
+      "sha256": "b538a5f572051c880a274617223caeb4bcd8f89f826ebbb00b22d1f4d9ecee07"
+    },
+    {
+      "id": "mem-final",
+      "text": "מֵם סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-mem-final_ari.mp3",
+      "fingerprint": "474a6c72af2a3bbf202c08a8388dbd3b14bf5917cdd5d5c84c58d3c354e70dbb",
+      "bytes": 8012,
+      "sha256": "3aa9909b29fe91011ca1ce97aa261fa22cfe39ba880cda00f9519116dda2756f"
+    },
+    {
+      "id": "mem-final",
+      "text": "מֵם סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-mem-final_noa.mp3",
+      "fingerprint": "fee5ee4a50359094085733b2f70ee3fccb3fc5033530c5a9174cc5b033a0a3b4",
+      "bytes": 8732,
+      "sha256": "3d57a7147d8f2d7fc412be693d3bf31b0e23996f5b6feba6adc05add90233e3b"
+    },
+    {
+      "id": "nun",
+      "text": "נוּן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-nun_ari.mp3",
+      "fingerprint": "4d31471b5a4c09721811a507433aa808381db51ab82f0454320f709b5500a5ac",
+      "bytes": 5420,
+      "sha256": "638c81a66d6ab15f82ade4829d4bddc3ca67ac71f46a33bb1420a2fc654059e7"
+    },
+    {
+      "id": "nun",
+      "text": "נוּן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-nun_noa.mp3",
+      "fingerprint": "440f8de6969a3bdb3dd745f2ff7daec6b71381a7c71c6fb93d053e88160dcf44",
+      "bytes": 5708,
+      "sha256": "9b691758e56e391077a439f602e44ff3f91593ce3e494118c429d8f57394a823"
+    },
+    {
+      "id": "nun-final",
+      "text": "נוּן סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-nun-final_ari.mp3",
+      "fingerprint": "6212e63cce14f08fe9f2c81916accdc3fa8f6c08bced36f2cbc37eb4397e58f6",
+      "bytes": 7580,
+      "sha256": "0f56b9eeb9c9c75349421c7c5966847eb5ebaf84582f6aaadbe806625d8d82ac"
+    },
+    {
+      "id": "nun-final",
+      "text": "נוּן סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-nun-final_noa.mp3",
+      "fingerprint": "e297541688cf149c8410487af42233e8830dd39c61cbdf18a67eabfe20f99879",
+      "bytes": 8300,
+      "sha256": "c0d63b06da7fc8bb9b62cc5b43e63401e22969775478c7c7844b173419838194"
+    },
+    {
+      "id": "samekh",
+      "text": "סָמֶךְ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-samekh_ari.mp3",
+      "fingerprint": "6ec8646a46b58e9e877e09c40872b68184e2887d1322be60b9d9f6c5d152f74f",
+      "bytes": 10460,
+      "sha256": "50173fe71e40e6dca0eae2ae9db73fd04b347f6b16101227a867455248cd09d5"
+    },
+    {
+      "id": "samekh",
+      "text": "סָמֶךְ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-samekh_noa.mp3",
+      "fingerprint": "79807755c6367e3fa854712b24aed5c0315d2850d65b3b182fd8d82880844850",
+      "bytes": 5852,
+      "sha256": "8fafa448aaf04379e2060a05d4b77cc4fb6145cb43967e828852bff8590b97dd"
+    },
+    {
+      "id": "ayin",
+      "text": "עַיִן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-ayin_ari.mp3",
+      "fingerprint": "00f678dcb4bce017028a3edc470ddf6392e08adf5f4dc648acdb79b1e30454da",
+      "bytes": 7580,
+      "sha256": "9993d2a574816bcdc1e8547b9f9914831d345e8c4f5e2adaad6f5f17b4c229f2"
+    },
+    {
+      "id": "ayin",
+      "text": "עַיִן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-ayin_noa.mp3",
+      "fingerprint": "09b61b2698d584c743719d85365617448d9a1dfc0db6cffe3406fbccd03bf628",
+      "bytes": 6860,
+      "sha256": "d7861fec3434a3b099e95e66aa649baf9b313b1f6908fc9439d5d74bafc51c56"
+    },
+    {
+      "id": "pe",
+      "text": "פֵּא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-pe_ari.mp3",
+      "fingerprint": "8a05f1d9425b2a6322a5db3090a2a492abb3a0667fc5d1b488ff764a09a91c06",
+      "bytes": 4700,
+      "sha256": "5762c8971d1ca03a9e156fab4a3d17a11b2448f94d2ee9d6b6aad038875f2abc"
+    },
+    {
+      "id": "pe",
+      "text": "פֵּא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-pe_noa.mp3",
+      "fingerprint": "cb5d5e16cb528c83123c815e36e8bddac780e0a369a3ce87e5c5c364a23e5220",
+      "bytes": 5420,
+      "sha256": "82169f1859d2f160066346dc257e8f6c7f9607697d4fc938f283c804b2539a6d"
+    },
+    {
+      "id": "pe-final",
+      "text": "פֵּא סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-pe-final_ari.mp3",
+      "fingerprint": "c57db1e9f746fc78c48e4ad33f084abf948695313ef0dc33d7301b2425bcd181",
+      "bytes": 7580,
+      "sha256": "060c4c3475256a40ff5100f5d433deed5437e1e08a2fa00a3fa37ffc128f9eb3"
+    },
+    {
+      "id": "pe-final",
+      "text": "פֵּא סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-pe-final_noa.mp3",
+      "fingerprint": "918cbcad1d7e0a94dd8661be3842be9ac0451a6824e50ab37c64d7d76c802ad6",
+      "bytes": 7580,
+      "sha256": "acaaf1870d194c034543c840dd3d588fffd4ead5462a8852114c9f29992ca887"
+    },
+    {
+      "id": "tsadi",
+      "text": "צָדִי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-tsadi_ari.mp3",
+      "fingerprint": "412157349cfcc56c1b8e56632e922e5c736e1a6c233023e9dade9c6d7030f5fe",
+      "bytes": 7148,
+      "sha256": "7f39505e80a477eb1e23cb82134624b56fffbbe44d5749532acfe69d6d8fc867"
+    },
+    {
+      "id": "tsadi",
+      "text": "צָדִי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-tsadi_noa.mp3",
+      "fingerprint": "1b94dbb594a4858c86ef4d94d1cd95e2bd286522ccb3f5f731ebc254c8291c8f",
+      "bytes": 4412,
+      "sha256": "7dbc210c5212cd51ff61e5dd8b035c59c8cf2dc11d366ebe05ccde858e382175"
+    },
+    {
+      "id": "tsadi-final",
+      "text": "צָדִי סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-tsadi-final_ari.mp3",
+      "fingerprint": "85a300ead4dd0427a48e65ac564850458bb15ffd10c6b233972c1982ac46ad3d",
+      "bytes": 9020,
+      "sha256": "6c94cc75faf6dd43c4271dbac9f5437e4f03304bbd6c6c3f423900fb226f7f53"
+    },
+    {
+      "id": "tsadi-final",
+      "text": "צָדִי סוֹפִית",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-tsadi-final_noa.mp3",
+      "fingerprint": "ffab5799273d64bb94d7b5793b8e15441d3fb37f7d020dac64e41518fd0925de",
+      "bytes": 10172,
+      "sha256": "c109b81d1380ba3a033ebae3b496c26f35a44cbb5b43616579b910e7e9bd5e1a"
+    },
+    {
+      "id": "qof",
+      "text": "קוֹף",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-qof_ari.mp3",
+      "fingerprint": "88632a01dc39678c4ac63abc416266814c3c7cae50c4737389bdcc454fbfdb22",
+      "bytes": 5420,
+      "sha256": "8282fe682e18d532bab6923d96c399caa7c00d2648c87b8d3ac81f30257cb381"
+    },
+    {
+      "id": "qof",
+      "text": "קוֹף",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-qof_noa.mp3",
+      "fingerprint": "b321b9ec8b0595760920081222671be72e044821c76088eee2cf774204989fc5",
+      "bytes": 5852,
+      "sha256": "7005065fbd969dab88a462e273f965e352b9dddf17b0da6c6f79c788f8852ca8"
+    },
+    {
+      "id": "resh",
+      "text": "רֵישׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-resh_ari.mp3",
+      "fingerprint": "6dbc34e8ce00a72cb18b6391715a81180c7464ff15cf2883994bd8cb53129525",
+      "bytes": 7148,
+      "sha256": "245eb26442817030f15a01e804934d47feeb54e97f965eddb0e9385765b9ea6b"
+    },
+    {
+      "id": "resh",
+      "text": "רֵישׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-resh_noa.mp3",
+      "fingerprint": "48d95d820e9da147b04c7d49340357fedd9c228e4f25eb7eb808e0b5ec9c15a3",
+      "bytes": 7868,
+      "sha256": "f60be5295e59965f059364073f81f0a45b2d08a8c01b7d1d6f29ccbda1c44323"
+    },
+    {
+      "id": "shin",
+      "text": "שִׁין",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-shin_ari.mp3",
+      "fingerprint": "bd4898ce568d9842d3f89c4b9edd0458287f9ebd663eed80440b9dc281ebf5cd",
+      "bytes": 9020,
+      "sha256": "98c20940e079bbc4746f3e01d8b42d7cebf4f8e41de6bd2d1dab7cf8099f445e"
+    },
+    {
+      "id": "shin",
+      "text": "שִׁין",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-shin_noa.mp3",
+      "fingerprint": "2a802448949ed796b65dae5fb1d6d9e7feb8c00e742c8e22011fdda660dd9a2b",
+      "bytes": 8012,
+      "sha256": "a72ecab23bfc35d8de2fcf83b36c3678e8f762abf3485f7529b73d7462206426"
+    },
+    {
+      "id": "tav",
+      "text": "תָּו",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-tav_ari.mp3",
+      "fingerprint": "aef2a8d77174e2c1de33f50e742d108ea3905676b8120bcb966fbe1de0f25f01",
+      "bytes": 5420,
+      "sha256": "f90c691fcbcff2f910792043e5de4ab808e519fd35c569c1ebc26c5ff0fd3d73"
+    },
+    {
+      "id": "tav",
+      "text": "תָּו",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-tav_noa.mp3",
+      "fingerprint": "0ec283baf3b32125c37be7cad76ef5d56cc915284ee9af19bbff5649242aa3b1",
+      "bytes": 5132,
+      "sha256": "233446c840eb798bb35a2d0bfa1a173b85743e15ecc854e02d342b2d3983ad46"
+    },
+    {
+      "id": "sheva",
+      "text": "שְׁוָא",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-sheva_ari.mp3",
+      "fingerprint": "0adadc0a8914c126577322f5be021f078e2b16420550a8ca272f28749554d857",
+      "bytes": 7868,
+      "sha256": "4f07c4cc535e6493a460057d7359a40e58e62ab344096c8f531e99e49481f0f9"
+    },
+    {
+      "id": "sheva",
+      "text": "שְׁוָא",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-sheva_noa.mp3",
+      "fingerprint": "72e1cdf5c61497bad0fa91a500fe60ca7f69f8052778e231f22b65bb0a010e63",
+      "bytes": 5708,
+      "sha256": "757d873164189f3313685f644edbb0cf5c194ad6c61d7f35db8016d3c4842259"
+    },
+    {
+      "id": "hataf-segol",
+      "text": "חֲטַף סֶגוֹל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-hataf-segol_ari.mp3",
+      "fingerprint": "36d796f6a8ddc3b1202c2cc70ec37f982841bd188b9175bbcf8cdf9fad1b336c",
+      "bytes": 9020,
+      "sha256": "77e373530cb0de474a2669014eeffbea60c97c33cba2f12b69e154a26a0ddb81"
+    },
+    {
+      "id": "hataf-segol",
+      "text": "חֲטַף סֶגוֹל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-hataf-segol_noa.mp3",
+      "fingerprint": "c93566c4cc34ae098e384331799dbe792aaa60ffa1596f2bc4861eede4b5b94f",
+      "bytes": 9452,
+      "sha256": "74e36ac7489ed42acf3e618a0c17f382dd2bc44362a67f00a02df52932031700"
+    },
+    {
+      "id": "hataf-patah",
+      "text": "חֲטַף פַּתָּח",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-hataf-patah_ari.mp3",
+      "fingerprint": "7c749e029955e69e3a5002456de51f1491bf7eb96b363179bd1c74a31a2c03d5",
+      "bytes": 9308,
+      "sha256": "5879017982b8cd7c0123179f15235b81ce420fff763de5b14df5d0a17e3919d3"
+    },
+    {
+      "id": "hataf-patah",
+      "text": "חֲטַף פַּתָּח",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-hataf-patah_noa.mp3",
+      "fingerprint": "de9b8cf1ee995877fbaac61e89019850a981edf4a1cb546fd199ac7584392003",
+      "bytes": 8012,
+      "sha256": "bf8368e89ce3ac4e7cc6422344402bb57775fde9fda254b49a8d2d8546cb9575"
+    },
+    {
+      "id": "hataf-qamats",
+      "text": "חֲטַף קָמָץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-hataf-qamats_ari.mp3",
+      "fingerprint": "2f49f2bbc389c3fb782b23e51f63ae0641c8e856b735e9c8769e4a3a3dac5163",
+      "bytes": 9740,
+      "sha256": "ef64f39c8ac705dbea2730aca42315186c189692e31cfd05198bc31a2c24c6f2"
+    },
+    {
+      "id": "hataf-qamats",
+      "text": "חֲטַף קָמָץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-hataf-qamats_noa.mp3",
+      "fingerprint": "3ea19aa9bf298ec2ca1723973636e967f7db4a5c775b6b03d7606484c03101a2",
+      "bytes": 9740,
+      "sha256": "219a4edca3fa8845ebf9def9288819b628452fe0d027ad38a32d7152d948eef2"
+    },
+    {
+      "id": "hiriq",
+      "text": "חִירִיק",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-hiriq_ari.mp3",
+      "fingerprint": "83b7eb6eb3ce9211c93181966edf6ca458abad741c82aeca5b95559d2f4cfc54",
+      "bytes": 7580,
+      "sha256": "98c409cc6ce6020e3864bf5a24cb105cfc716d094eb1de5d8586ae809c2fa580"
+    },
+    {
+      "id": "hiriq",
+      "text": "חִירִיק",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-hiriq_noa.mp3",
+      "fingerprint": "776e229bc82938fe4451f0f2cf372ca485a23b2430032895ec12d7f15e95f8c3",
+      "bytes": 5852,
+      "sha256": "e8ed79d9c4898c08a4817f5cfe5e6582c0f287442ca8141449296876478cb4bf"
+    },
+    {
+      "id": "tsere",
+      "text": "צֵירֵי",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-tsere_ari.mp3",
+      "fingerprint": "2ebbca51473c74762530734729ae9280eefcab58eb531ee7b0452cbc174b2ec7",
+      "bytes": 8732,
+      "sha256": "638c50229d7d66679b4730e32804c1ee81b66e8257f1cc3ee16e7c0615c162eb"
+    },
+    {
+      "id": "tsere",
+      "text": "צֵירֵי",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-tsere_noa.mp3",
+      "fingerprint": "abfba18ae9a824da4004dcd0d507947e849d520215f03b1d4d1a3e225418866e",
+      "bytes": 6860,
+      "sha256": "c2f3a7c371e278e52574cc7d70664de441c840519540a6890108dde9a21db728"
+    },
+    {
+      "id": "segol",
+      "text": "סֶגוֹל",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-segol_ari.mp3",
+      "fingerprint": "a463a435f8a6baf0055e42606c1c4830c2e23b48f66f0369030539d5ec0f6ba5",
+      "bytes": 9452,
+      "sha256": "11a64b2834f52019aace219cdd490483557709a29f23478a77ea262d09e43379"
+    },
+    {
+      "id": "segol",
+      "text": "סֶגוֹל",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-segol_noa.mp3",
+      "fingerprint": "0682119a0b75a64a50e716e59c87b281acbc1d91c30c46a4c064a27d33fe2948",
+      "bytes": 5852,
+      "sha256": "d3e6a586bda0b203b8d92068d1d65474040637de8903a7ab484c47004f7b5458"
+    },
+    {
+      "id": "patah",
+      "text": "פַּתָּח",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-patah_ari.mp3",
+      "fingerprint": "73b56d6c803fad7984226a2b8cb561004594d6743537a398d62c0fc4508dc80b",
+      "bytes": 8588,
+      "sha256": "5aa96b20407fa818defb0e0ce1c861d8a8e0e7b91aab809614453df78db73a39"
+    },
+    {
+      "id": "patah",
+      "text": "פַּתָּח",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-patah_noa.mp3",
+      "fingerprint": "79e0b16e10a52a981573581626f0d7d6c6afdd7861645da69c6d461d7c248f97",
+      "bytes": 7292,
+      "sha256": "aaae1280736a74c5dde44650be1513460debefa6263d3a37d04fa025ad000807"
+    },
+    {
+      "id": "qamats",
+      "text": "קָמָץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-qamats_ari.mp3",
+      "fingerprint": "df09fa986c078e8ecaeeb678cb04e43c44a083d3ef8c2c0c8ac3f13d5c36c3f8",
+      "bytes": 6140,
+      "sha256": "3ef2caae6dd9a6d61e9f842e39210e9f51a9e77476fa3150343aaeaf8cedb993"
+    },
+    {
+      "id": "qamats",
+      "text": "קָמָץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-qamats_noa.mp3",
+      "fingerprint": "d2b3b7708138deb82c5239b2e155e21fc9810a52381a914c151cce53853f86f0",
+      "bytes": 7148,
+      "sha256": "670d5314668a6357388c9b38c8a583f45bbcc7254a1ffe62abbbb5255a13084e"
+    },
+    {
+      "id": "holam",
+      "text": "חוֹלָם",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-holam_ari.mp3",
+      "fingerprint": "ce53da86227348e025dbc05e792c6d7fb33910dea1715c53eb22a5d23bf46031",
+      "bytes": 6860,
+      "sha256": "34c5653304267f39a142e774bfd4927efd2760e418b8035d2bbf80e7ccd79ddc"
+    },
+    {
+      "id": "holam",
+      "text": "חוֹלָם",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-holam_noa.mp3",
+      "fingerprint": "974f2f209af2cb40093d9fe2f063b05ab342e868d97dc4e79d6ce8ee48111750",
+      "bytes": 5132,
+      "sha256": "4feee545b9f230db6ad7847813e833bac1a946569fb552523bc6b244a304acb7"
+    },
+    {
+      "id": "qubuts",
+      "text": "קֻבּוּץ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-qubuts_ari.mp3",
+      "fingerprint": "08e1241669b75dd2a5813c06a42f924268c3c0ac3e294fd9ed5e6ede88a4450d",
+      "bytes": 6428,
+      "sha256": "a7efb565ef8fd091420af099449b29601850b4931920871f2109038aa0005457"
+    },
+    {
+      "id": "qubuts",
+      "text": "קֻבּוּץ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-qubuts_noa.mp3",
+      "fingerprint": "da85b1fe94e695e0e3ed265818f31edb137b45ff53e63bc465949ddc0cc03dcd",
+      "bytes": 5708,
+      "sha256": "6cb7fe04ad3695e03ffc909b54ef9a3563a528823cd60cde31a604142bfae7b9"
+    },
+    {
+      "id": "dagesh",
+      "text": "דָּגֵשׁ",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-dagesh_ari.mp3",
+      "fingerprint": "785957d7f28c7d80520b5fa11ee3098577c948528ceb32dbe87374e0665804d1",
+      "bytes": 7868,
+      "sha256": "28bd4a9833f6e846ec9ce7c8ff926ca6fed0764d9c3eed968818efd038691c17"
+    },
+    {
+      "id": "dagesh",
+      "text": "דָּגֵשׁ",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-dagesh_noa.mp3",
+      "fingerprint": "06a4040cba7dd531562761a3a2130295c46f4474fea5329af7a7b7318fb4afe5",
+      "bytes": 8300,
+      "sha256": "16c39288d39d0e5a90033654b4976c794eaa6dac8c51693c67e958a809deb8a5"
+    },
+    {
+      "id": "shin-dot",
+      "text": "נְקֻדַּת שִׁין",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-shin-dot_ari.mp3",
+      "fingerprint": "d0ce42b9b63474c5fde014ea045523d6d61e6406fea4319f5923a5665182f2ea",
+      "bytes": 9452,
+      "sha256": "418f86ab95215115cbe50223ad780c3489887f39cccd7be0fd04998ed09c4a04"
+    },
+    {
+      "id": "shin-dot",
+      "text": "נְקֻדַּת שִׁין",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-shin-dot_noa.mp3",
+      "fingerprint": "87271101085cb5e01405f50455c39d05ec618b0c04c3708172a5343910b57a7a",
+      "bytes": 7580,
+      "sha256": "62d0661e5c38971ef3cfcc116962f9a39759b81b30063380daaf21fc15b61740"
+    },
+    {
+      "id": "sin-dot",
+      "text": "נְקֻדַּת שִׂין",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-sin-dot_ari.mp3",
+      "fingerprint": "eb549094acdce7d10b2dd56af1c0a9f01c311ad9040e24a56ebac2adfa0bce75",
+      "bytes": 9020,
+      "sha256": "1319ba7515d65927802dab258ee64f5b4ed71595d91a98d3436d8647e3cb6924"
+    },
+    {
+      "id": "sin-dot",
+      "text": "נְקֻדַּת שִׂין",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-sin-dot_noa.mp3",
+      "fingerprint": "9f838501993f820267f8a46affe5c14bde97590c49033c12c5499074c35f9830",
+      "bytes": 8732,
+      "sha256": "1b3b67925ecb3315434f913ee2e5312dca375fd06a0d152a34a842a4628fcaa9"
+    },
+    {
+      "id": "qamats-qatan",
+      "text": "קָמָץ קָטָן",
+      "voice": "he-IL-Chirp3-HD-Charon",
+      "path": "audio/builder/symbol-qamats-qatan_ari.mp3",
+      "fingerprint": "4bea187b7115479cf1d2a1978427eed957a6bfb9b919c08a06a89952644be805",
+      "bytes": 10172,
+      "sha256": "d50ebedb50206bd55a5b1c31f6cd5872b529f36666425eaa6e57a844259f04b9"
+    },
+    {
+      "id": "qamats-qatan",
+      "text": "קָמָץ קָטָן",
+      "voice": "he-IL-Chirp3-HD-Kore",
+      "path": "audio/builder/symbol-qamats-qatan_noa.mp3",
+      "fingerprint": "09fb738b7976c1cf7e029848885707860383f9444de5939ee8805a8aaf12546e",
+      "bytes": 8300,
+      "sha256": "540f3fd5cf0fb1dc416d9d59bac5a4f612a8386975b697f6985d3e8882fbf907"
+    }
+  ]
+}

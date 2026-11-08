@@ -42,7 +42,7 @@ test('home and welcome place the ancient Tree of Life above original text, panel
     assert.ok(scene.querySelector('.astral-stars'), 'night sky remains');
     const hero = root.querySelector('.show-hero');
     assert.equal(hero.children[0], scene, 'tree is above text, never covers it');
-    assert.ok(root.querySelector('.show-try'), 'first word panel unchanged');
+    assert.ok(root.querySelector('.home-builder'), 'front-page word builder present');
     assert.ok(root.querySelector('.show-grid'), 'existing destination tiles remain');
     assert.ok(root.querySelector('.show-stats'), 'existing numbers remain');
     assert.equal(root.querySelector('.show-hero a.show-btn').attrs.href, '#/firstday');

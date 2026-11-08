@@ -1,8 +1,8 @@
 # Front-page builder — Task 1
 
 Tested November 7, 2026 (America/Toronto). Implementation and automated
-checks are complete. The requested by-ear review is still pending; audio
-playback checks do not establish pronunciation quality.
+checks are complete. The user approved the ten-clip listening sample with
+“sounds fine.” Playback checks alone do not establish pronunciation quality.
 
 ## Changes
 
@@ -53,10 +53,11 @@ playback checks do not establish pronunciation quality.
 `builder-results.json` records browser counts. Screenshots are
 `builder-phone.png`, `builder-desktop.png`, and `builder-full-alphabet.png`.
 
-## Pending listening check
+## Listening check
 
-No by-ear check was performed: this session cannot consume audio input.
-Ten clips were prepared for a human listening pass, in this order:
+The user approved the combined ten-clip listening sample with “sounds fine.”
+This records user feedback on the sample, not an independent educator review.
+The sample contains these clips, in order:
 
 1. shalom — Ari
 2. shalom — Noa

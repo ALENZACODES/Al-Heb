@@ -387,7 +387,9 @@ test('portion view clips the chapter to the portion range (Bereshit ends at Gene
 });
 
 test('chapter audio is hidden while durations and clips do not exist yet (silent degradation)', async () => {
-  const { root } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1' }, audio: 'rec' });
+  // an empty Torah manifest, so the check holds whichever chapters have been recorded since
+  const loadJson = async (rel) => (rel === 'data/audio/manifest-torah.json' ? [] : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8')));
+  const { root } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1' }, audio: 'rec', loadJson });
   assert.equal(root.queryAll('.trd-play-chapter').length, 0);
   assert.equal(root.queryAll('.trd-hear-verse').length, 0);
   assert.equal(rows(root).length, 31, 'the chapter is fully usable as text');

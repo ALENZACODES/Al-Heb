@@ -163,6 +163,46 @@ export async function mount(root, ctx) {
       h('p', { class: 'small', 'data-w': 'series' }, `Oldest week to this week: ${wk.series.join(', ')} (${wk.seriesTotal} in all).`),
       h('p', { class: 'small muted' }, 'Minutes: the app keeps today\'s time and which past days reached the 5-minute goal, so past days count as 5 minutes each and the total is a floor. Review cards keep only their latest review, so cards reviewed and new words are floors too. The graph counts lessons finished, timed reads, speaking-practice attempts, checkpoints and loanword marks; review cards are left out because older reviews are not dated. Rest days appear only when your Shabbat and Yom Tov setting or you froze them. This is activity, not a measure of how well you read.')));
 
+    // 2a. tomorrow: a small plan for the next visit, computed only from what
+    // this device has already saved (U-14 interim; the fuller "Your path"
+    // card is the helper lane's design). Nothing new is tracked for it.
+    {
+      const track = goals[0] || 'read';
+      const nextLesson = (d.lessons || []).filter((l) => l.track === track && !s.completed[l.id])
+        .find((l) => (l.prerequisites || []).every((p) => s.completed[p]))
+        || (d.lessons || []).find((l) => l.track === track && !s.completed[l.id]);
+      const dueCount = [...Object.values(s.cards || {}), ...Object.values(s.vocab || {})]
+        .filter((cd) => cd && typeof cd.due === 'number' && cd.due <= now()).length;
+      const lines = [];
+      if (nextLesson) lines.push(h('li', {}, 'Next lesson: ', h('a', { href: `#/learn?lesson=${nextLesson.id}` }, nextLesson.title), h('span', { class: 'small muted' }, ` (about ${nextLesson.estMinutes} min)`)));
+      if (dueCount) lines.push(h('li', {}, `${plural(dueCount, 'review card is', 'review cards are')} due. `, h('a', { href: '#/learn?review=1' }, 'Review now')));
+      const bookSlot = h('li', {}, 'Little books: ', h('a', { href: '#/books' }, 'pick one to read'));
+      lines.push(bookSlot);
+      const tomorrowSec = h('section', { class: 'card', 'aria-labelledby': 'pg-h-tomorrow' }, h('h2', { id: 'pg-h-tomorrow' }, 'Tomorrow'),
+        h('p', { class: 'small muted' }, 'For your next visit, from what this device has saved so far:'),
+        h('ul', {}, ...lines));
+      sections.push(tomorrowSec);
+      // A book left mid-read replaces the generic books line, once its place
+      // is read back; the shelf keeps the same record (books.v1).
+      (async () => {
+        try {
+          const places = await store.get('books.v1');
+          const open = Object.entries(places || {}).find(([, v]) => v && v.lastPage > 0 && !v.finishedAt);
+          if (!open || !alive) return;
+          const [bookId, place] = open;
+          let title = 'the book you started';
+          try {
+            const r = await (ctx.fetchFn ?? fetch)('data/books/index.json');
+            const idx = r && r.ok !== false ? await r.json() : null;
+            const b = idx?.books?.find((x) => x.id === bookId);
+            if (b) title = `${b.titleTranslit} — ${b.titleEn}`;
+          } catch { /* the generic line still works */ }
+          if (!alive) return;
+          bookSlot.replaceChildren('Continue ', h('a', { href: `#/book/${bookId}` }, title), h('span', { class: 'small muted' }, ` — you left it on page ${place.lastPage + 1}`));
+        } catch { /* the generic books line stays */ }
+      })();
+    }
+
     // 2b. milestones (certificate-free); dates are kept under progress.milestones.v1
     const evals = evaluateMilestones(s, d, c);
     if (evals.length) {
@@ -181,7 +221,7 @@ export async function mount(root, ctx) {
       const p = evaluatePath(g, d, c);
       sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-path-' + g },
         h('h2', { id: 'pg-h-path-' + g }, `Your path: ${p.title}`),
-        h('p', { class: 'muted' }, `${p.done} of ${p.total} milestones. Lessons done: ${g === 'read' ? `${cnt.read.done} of ${cnt.read.total}` : `${cnt.israel.done} of ${cnt.israel.total}`}.`),
+        h('p', { class: 'muted' }, `${p.done} of ${p.total} milestones. Lessons done: ${g === 'read' ? `${cnt.read.done} of ${cnt.read.total} on the reading path` : `${cnt.israel.done} of ${cnt.israel.total} on the Israel path`}.`),
         h('progress', { max: String(p.total), value: String(p.done), 'aria-label': `${p.title}: milestones reached` }),
         h('ol', {}, ...p.items.map((m) => h('li', {}, h('span', { class: `pg-tag ${m.status}` }, m.status === 'done' ? 'Done' : m.status === 'next' ? 'Next' : 'Later'), m.label,
           m.status !== 'done' && m.measurable !== false && m.need > 1 ? h('span', { class: 'small muted' }, ` (${m.have} of ${m.need})`) : null,
@@ -214,11 +254,12 @@ export async function mount(root, ctx) {
     const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp, tr = timedReadSummary(c.timedRead);
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
+      h('p', { class: 'small muted' }, `ALEF has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
       h('dl', {},
         ...row('Letters traced', `${k.traced.size} of ${ALL_LETTERS.length}`),
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),
         ...row('Signs taught by lessons', `${k.signs.size} of ${ALL_SIGNS.length}`),
-        ...row('Lessons completed', `${cnt.read.done + cnt.israel.done} of ${cnt.read.total + cnt.israel.total}`),
+        ...row('Lessons completed (whole course)', `${cnt.read.done + cnt.israel.done} of ${cnt.read.total + cnt.israel.total}`),
         ...row('Review cards: new / learning / well known', `${c.srs.new} / ${c.srs.learning} / ${c.srs.mature}`),
         ...row('Vocabulary band', bands.reached ? `working in the first ${bands.reached.toLocaleString('en-US')}` : bands.started ? 'just started' : 'not started'),
         ...row('Spot It clean rounds', sp.cleanAtLeast === null ? 'no rounds yet' : `at least ${Math.round(sp.cleanAtLeast * 100)}% of ${sp.trials}`),

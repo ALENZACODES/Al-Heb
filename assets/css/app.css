@@ -447,3 +447,17 @@ main .alef-trace button:not(.k), main .alef-atlas .row button, main .mc .mc-btn 
 .sound-bar p { flex: 1 1 6rem; }
 /* Welcome at tablet width: "main label:has(input)" turned the two-line answers inline, so they flowed side by side with uneven widths. Keep each answer on its own row. */
 main label.opt-block:has(input) { display: flex; }
+/* Playing state for Listen buttons (usability review U-06): while a clip or the
+   device voice is sounding, the button is visibly "on" and its glyph is a stop
+   square — a second tap stops the sound. */
+button.is-playing { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button.is-playing [data-glyph] { display: inline-block; min-width: 1em; text-align: center; }
+/* Loading skeleton (U-24): shown by the shell while a view module loads, so a
+   slow connection never leaves a blank page. Quiet grey bars, no motion for
+   reduced-motion learners. */
+.alef-skeleton { display: grid; gap: .7rem; margin: 1.2rem 0 .5rem; }
+.skel-bar { height: 1rem; border-radius: .5rem; background: var(--border, #d9cdb3); opacity: .55; animation: skel-pulse 1.2s ease-in-out infinite alternate; }
+.skel-bar.skel-title { height: 1.8rem; width: 55%; }
+.skel-bar.short { width: 70%; }
+@keyframes skel-pulse { from { opacity: .35; } to { opacity: .65; } }
+@media (prefers-reduced-motion: reduce) { .skel-bar { animation: none; } }

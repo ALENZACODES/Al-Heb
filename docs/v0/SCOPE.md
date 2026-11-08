@@ -28,6 +28,7 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `calendar` (/calendar) - the Hebrew calendar: Shabbat times, festivals and the weekly portion (promoted 2026-11-07 at the owner's order: the page worked but sat buried in the Preview group, so learners could not find it).
 - `festivals` (/festivals) - this week in the Jewish year (promoted with the calendar, 2026-11-07).
 - `festival` (/festivals/:id) - one festival's words (the calendar family's detail page, promoted with it).
+- `help` (/help) - the beginner's help page: plain-word answers about starting, sound, progress and what is not finished yet (added 2026-11-07, usability review U-10: the app had no help page at all; the deep explainer stays at /how).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a
 first release cannot ship without (settings with backup/restore/delete, about, credits, privacy, install, offline, search).

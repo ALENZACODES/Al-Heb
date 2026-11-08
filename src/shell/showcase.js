@@ -10,7 +10,7 @@ const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
   ['wordfinder', '#/wordfinder', 'Hebrew Word Finder · Level 1', 'מִלָּה', 'Hear, see and find your first real words — no Hebrew experience needed'],
   ['letters', '#/letters', 'Letters', 'אָלֶף־בֵּית', 'All 27 letters — sounded, traced, remembered'],
-  ['books', '#/books', 'Little Books', 'סְפָרִים', '5 story books, 60 pages, every page voiced'],
+  ['books', '#/books', 'Little Books', 'סְפָרִים', '62 little books, 744 pages, every page voiced'],
   ['games', '#/games', 'All the Games', 'מִשְׂחָקִים', 'Every game in one place — letters, words, roots and rhymes'],
   ['tugowar', '#/tugowar', 'Antonym Tug-of-War', 'מִשְׂחָק', 'Games — pull the rope with opposites'],
   ['vowelcatcher', '#/vowelcatcher', 'Vowel Catcher', 'מִשְׂחָק', 'Games — catch the falling vowel stars'],
@@ -18,7 +18,7 @@ const TILES = [
   ['prefixblast', '#/prefixblast', 'Bubble Pop Prefix Blast', 'מִשְׂחָק', 'Games — pop the right prefix bubbles'],
   ['memorypalace', '#/memorypalace', 'Memory Palace', 'מִשְׂחָק', 'Games — a courtyard that remembers words'],
   ['sprint', '#/sprint', 'Word Sprint', 'מִלִּים', 'Fast rounds with real words'],
-  ['read', '#/read', 'Read the Prayers', 'תְּפִלָּה', 'The siddur line by line, at your pace'],
+  ['read', '#/read', 'Read the Prayers', 'תְּפִלָּה', 'The siddur (the Jewish prayer book) line by line, at your pace'],
   ['vocab', '#/vocab', 'Dictionary — 5,000 Words', 'מִלּוֹן', 'The whole vocabulary, searchable'],
   ['speak', '#/speak', 'Speak & Listen', 'דַּבֵּר', 'Say it out loud and be understood'],
   ['traditions', '#/traditions', 'Three Traditions', 'מָסוֹרֶת', 'Israeli, Sephardi, Ashkenazi — hear the difference'],
@@ -29,7 +29,7 @@ const TILES = [
 ];
 
 
-// Four photographed entrances. The same cached harvest artwork supplies four
+// Five photographed entrances. The same cached harvest artwork supplies
 // distinct, carefully chosen crops; no new requests, icon sprites or labels
 // baked into images. The links and all words remain accessible DOM content.
 const PORTALS = [
@@ -37,6 +37,7 @@ const PORTALS = [
   ['books', '#/books', 'Open a little book', 'Read an illustrated story at your own pace', 'wood'],
   ['games', '#/games', 'Enter the games', 'Explore games across Levels 1–9', 'harvest'],
   ['read', '#/read', 'Read the prayers', 'Hebrew first, English beneath; go line by line', 'sky'],
+  ['calendar', '#/calendar', 'See the Hebrew calendar', 'Shabbat times, festivals and the weekly portion', 'scroll'],
 ];
 
 function portalsNode(has) {

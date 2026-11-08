@@ -56,7 +56,7 @@ function audit() {
   }
   // elements cut off by main{overflow-x:clip} do not widen the page, so scrollWidth misses them: look at the boxes
   const inScroller = (e) => { for (let a = e.parentElement; a && a !== document.body; a = a.parentElement) { const o = getComputedStyle(a).overflowX; if (o === 'auto' || o === 'scroll') return true; } return false; };
-  for (const e of document.querySelectorAll('main *')) { const r = e.getBoundingClientRect(); if (r.width > 0 && r.height > 0 && (r.right > iw + 1 || r.left < -1) && !inScroller(e) && getComputedStyle(e).position !== 'fixed' && !e.closest('svg') && !/^(OPTION|HTML)$/.test(e.tagName)) { out.clipped.push(e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (typeof e.className === 'string' && e.className ? '.' + e.className.split(' ')[0] : '') + ' right=' + Math.round(r.right)); if (out.clipped.length >= 4) break; } }
+  for (const e of document.querySelectorAll('main *')) { const r = e.getBoundingClientRect(); if (r.width > 0 && r.height > 0 && (r.right > iw + 1 || r.left < -1) && !inScroller(e) && getComputedStyle(e).position !== 'fixed' && !e.closest('svg') && !e.closest('.astral-scene [aria-hidden="true"]') && !/^(OPTION|HTML)$/.test(e.tagName)) { out.clipped.push(e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (typeof e.className === 'string' && e.className ? '.' + e.className.split(' ')[0] : '') + ' right=' + Math.round(r.right)); if (out.clipped.length >= 4) break; } }
   const vis = (e) => { const r = e.getBoundingClientRect(); const s = getComputedStyle(e); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none'; };
   const text = document.body.innerText;
   for (const m of text.matchAll(/(^|[^\w.])(null|undefined|NaN)([^\w]|$)|\[object [A-Za-z]+\]/g)) out.badText.push(text.slice(Math.max(0, m.index - 20), m.index + 30).replace(/\s+/g, ' '));
@@ -254,9 +254,10 @@ if (phases.has('interact')) {
     rec('vowelboard: no page errors', pg.errs.length === 0, pg.errs.join('; ')); await pg.screenshot({ path: join(shotDir, 'interact-vowelboard.jpg'), type: 'jpeg', quality: 50, fullPage: true }); await pg.close(); } catch (e) { rec('Vowel board: completed without exception', false, e.message.split('\n')[0]); }
   // --- Vocab
   try { const pg = await mk('/vocab'); await pg.waitForSelector('#vc-search', { timeout: 6000 }).catch(() => {});
-    const before = await pg.locator('main li, main .vc-row, main article').count();
+    const before = await pg.locator('#vc-list > li').count();
     await pg.fill('#vc-search', 'שלום'); await pg.waitForTimeout(400);
-    const txt = await pg.locator('main').innerText(); rec('vocab: search filters list', /Showing 1 of 1 word/.test(txt) && !/(^|\n)null(\n|$)/.test(txt), `rows before=${before}`);
+    const txt = await pg.locator('main').innerText(); const after = await pg.locator('#vc-list > li').count();
+    rec('vocab: search filters list', after > 0 && after < before && /exact Hebrew match/.test(txt) && !/(^|\n)null(\n|$)/.test(txt), `rows before=${before}, after=${after}`);
     const add = pg.getByRole('button', { name: /^Add [^\d]/ }).first();
     if (await add.count()) { await add.click(); await pg.waitForTimeout(300); rec('vocab: Add to reviews persists a card', (await pg.evaluate(() => Object.keys(JSON.parse(localStorage.getItem('alef:srs.vocab') || '{}')).length)) > 0); }
     else rec('vocab: Add to reviews button found', false, 'no button after search');

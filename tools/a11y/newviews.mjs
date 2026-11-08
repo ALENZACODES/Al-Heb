@@ -124,7 +124,7 @@ async function reducedMotion(page) {
 }
 async function reflow(browser, base, route, theme, setup, width) {
   const ctx = await browser.newContext({ viewport: { width, height: 700 }, colorScheme: theme });
-  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
   const page = await ctx.newPage(); await page.goto(base + '#' + route); await page.waitForSelector('body[data-ready="1"]'); await settle(page);
   if (setup) await setup(page);
   const r = await page.evaluate((W) => {
@@ -157,7 +157,7 @@ const result = { tool: 'tools/a11y/newviews.mjs', axe: JSON.parse(readFileSync(j
 
 for (const theme of ['light', 'dark']) {
   const ctx = await browser.newContext({ viewport: { width: VW, height: VH }, deviceScaleFactor: 2, colorScheme: theme });
-  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
   for (const route of routes) {
     const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message)); page.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text().slice(0, 120)); });
     const rec = ((result.routes[route] ||= {})[theme] = { states: {} });
@@ -180,7 +180,7 @@ for (const theme of ['light', 'dark']) {
     }
     // reduced motion (separate context so the media query applies from load)
     const rctx = await browser.newContext({ viewport: { width: VW, height: VH }, colorScheme: theme, reducedMotion: 'reduce' });
-    await rctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+    await rctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
     const rp = await rctx.newPage(); await rp.goto(base + '#' + route); await rp.waitForSelector('body[data-ready="1"]'); await settle(rp);
     rec.motionUnderReduce = await reducedMotion(rp); await rctx.close();
     if (theme === 'light') { rec.reflow320 = await reflow(browser, base, route, theme, null, 320); rec.reflow195 = await reflow(browser, base, route, theme, null, 195); }

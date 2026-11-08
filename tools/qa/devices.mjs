@@ -123,7 +123,7 @@ function audit() {
   // 5. a position:fixed bar (the phone bottom nav) must not cover the end of the content once the page is scrolled to the bottom
   const main = mainEl;
   { const fixed = [...document.querySelectorAll('body *')].filter((e) => getComputedStyle(e).position === 'fixed' && vis(e));
-    if (fixed.length && main) { const y0 = scrollY; scrollTo(0, de.scrollHeight); const mb = main.getBoundingClientRect().bottom; for (const f of fixed) { const fr = f.getBoundingClientRect(); if (fr.top < mb - 1 && fr.bottom > mb && fr.width > cw / 2) { out.fixedCover = { sel: selOf(f), coversPx: Math.round(mb - fr.top), barHeight: Math.round(fr.height), bodyPadBottom: getComputedStyle(document.body).paddingBottom, rules: rulesFor(document.body, ['padding-block-end', 'padding-bottom', 'padding']) }; break; } } scrollTo(0, y0); } }
+    if (fixed.length && main) { const y0 = scrollY; scrollTo({ top: de.scrollHeight, behavior: 'instant' }); const mb = main.getBoundingClientRect().bottom; for (const f of fixed) { const fr = f.getBoundingClientRect(); if (fr.top < mb - 1 && fr.bottom > mb && fr.width > cw / 2) { out.fixedCover = { sel: selOf(f), coversPx: Math.round(mb - fr.top), barHeight: Math.round(fr.height), bodyPadBottom: getComputedStyle(document.body).paddingBottom, rules: rulesFor(document.body, ['padding-block-end', 'padding-bottom', 'padding']) }; break; } } scrollTo({ top: y0, behavior: 'instant' }); } }
   out.heading = main?.querySelector('h1')?.textContent?.trim() || ''; out.textLength = main?.innerText.length || 0; out.unavailable = !!main?.querySelector('.alef-unavailable');
   return out;
 }
@@ -152,6 +152,12 @@ for (const [name, scheme] of combos) {
     await page.goto(base + '#' + route, { waitUntil: 'load' });
     try { await page.waitForSelector('body[data-ready="1"]', { timeout: 8000 }); } catch { ready = false; }
     await page.waitForTimeout(400);
+    // Exercise the companion's existing dismiss control before measuring unobstructed content.
+    const hideRimon = page.getByRole('button', { name: 'Hide Rimon', exact: true });
+    if (await hideRimon.isVisible()) {
+      await hideRimon.click();
+      await page.locator('.rimon-bubble').waitFor({ state: 'hidden' });
+    }
     const a = await page.evaluate(audit);
     const shot = `${slug(name)}-${scheme}-${slug(route)}.jpg`;
     const sh = await page.evaluate(() => document.documentElement.scrollHeight);
@@ -185,6 +191,7 @@ const md = [];
 md.push('# Device-profile walk (P074)', '', `Run: ${result.when} · Chromium ${result.chromium} · ${result.visits.length} page visits in ${result.seconds}s${quick ? ' · QUICK run (subset)' : ''}`, '');
 md.push('## What this is, and is not', '',
   'This is Playwright **device emulation** in headless Chromium: each profile sets the viewport, device pixel ratio, touch events and user-agent string of the named phone or tablet. It is **not a real device**. Nobody held a phone; no finger tapped anything; there is no real GPU, no real font fallback, no OS keyboard, no notch, no browser chrome eating the viewport, no network throttling. In this environment WebKit is not installed, so the iPhone SE, iPhone 14 Pro and iPad Mini rows ran in Chromium too and say nothing about Safari (iOS Safari bugs with `100vh`, `env(safe-area-inset-*)`, `position: fixed`, font synthesis or niqqud placement cannot appear here). What the table can tell you is what Chromium does at those exact CSS widths and pixel densities. A real-device pass (BrowserStack, a borrowed phone, or Safari Technology Preview\'s responsive mode) is still owed before any claim that the app "works on iPhone".', '',
+  'The optional companion is dismissed using its visible Hide Rimon control before geometry checks; its speech bubble must disappear.',
   'Checks per route and profile: (1) **overflow**: `document.scrollWidth > clientWidth`, plus any box whose right edge passes the viewport even when `main { overflow-x: clip }` hides it ("clipped only"); (2) **tap**: interactive controls with a box under 44 x 44 CSS px (inline links inside running text are exempt, a checkbox or radio is measured by its label); (3) **tiny**: elements with visible text whose computed `font-size` is under 12 CSS px; (3b) **word split**: a single word (4+ letters, Latin or Hebrew) inside a box narrower than 240 px that is laid out across two lines, i.e. broken mid-word by `overflow-wrap`/`word-break`; (4) **RTL**: Hebrew text nodes that also contain Latin and wrap across lines without bidi isolation or with a fragment narrower than one glyph (a word split at the script boundary), and pointed Hebrew (niqqud) whose line box is tighter than 1.15 x font-size or sits inside an `overflow: hidden/clip` ancestor no taller than itself; (5) **nav covers**: with the page scrolled to its end, how many px of `main` sit under a `position: fixed` bar (the phone bottom nav); (6) **errors**: page errors and console errors (resource-load failures are listed but not counted). Every visit also records whether the view reached `body[data-ready="1"]`. localStorage is seeded as onboarded with 24 lessons complete, so routes show their normal state rather than the welcome screen. Screenshots are full-page (capped at 3000 CSS px), JPEG quality 40, at CSS-pixel scale (1x), so they show layout, not the device\'s pixel density. In a full-page capture the fixed bottom nav is painted once at the height of the first viewport, so it appears to float mid-page; that is a screenshot artifact, not a layout bug.', '');
 md.push('## Profiles', '', '| Profile | CSS viewport | DPR | Touch | Native engine (not used here) |', '|---|---|---|---|---|');
 for (const [name, p] of Object.entries(result.profiles)) md.push(`| ${name} | ${p.viewport.width} x ${p.viewport.height} | ${p.dpr} | ${p.touch ? 'yes' : 'no'} | ${p.nativeEngine} |`);

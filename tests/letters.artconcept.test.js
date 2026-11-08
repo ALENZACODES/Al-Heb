@@ -61,9 +61,11 @@ test('files named in the map exist on disk (older art is kept, never deleted)', 
   }
 });
 
-test('older art stays hidden: the approvals file holds no approval, as the map states', () => {
+test('map describes per-image approval without claiming all older art is hidden', () => {
+  assert.match(MAP.meta.olderArtHidden, /per image/);
+  for (const letter of MAP.letters) assert.match(letter.appShows.olderArt, /image id is approved/);
   const a = rd('data/images/approvals.json').approvals;
-  assert.deepEqual(Object.keys(a), [], 'an approval was added: update appShows.olderArt in the map');
+  for (const [id, record] of Object.entries(a)) assert.ok(['approved', 'hold', 'rejected', 'pending'].includes(record.status), id);
 });
 
 test('no displayed field contradicts the map: retired concepts are gone, the caption names the approved object', () => {

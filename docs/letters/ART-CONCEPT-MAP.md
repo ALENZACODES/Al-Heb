@@ -4,37 +4,37 @@ Status: DRAFT. Nothing here has been seen by a Hebrew teacher or a designer. Dat
 
 One row per letter: the approved picture concept (`data/letters/memory-chain.json`, art in `assets/letters/morph/`), the older concept in `data/letters/mnemonics.json`, the older art prompt in `tools/images/spec.mjs` (files in `assets/img/gen`), and what to do. The agreement columns compare prompt words only. No picture was opened.
 
-Status: **keep** = nothing older conflicts. **retire** = an older concept conflicts; displayed text was rewritten where needed, art stays on disk and is hidden. **needs decision** = a person must choose. No asset was deleted.
+Status: **keep** = nothing older conflicts. **retire** = an older concept conflicts; displayed text was rewritten where needed, art stays on disk; visibility follows each image approval. **needs decision** = a person must choose. No asset was deleted.
 
 | # | Letter | Approved concept (chain) | Older mnemonic text | Older art prompt (agreement) | Morph SVG | Older art in app | Status |
 |---|---|---|---|---|---|---|---|
-| 01 | alef | A silent mime in a handstand. The handstand body is the letter. | same | Ox head (differs) | alef.svg | hidden | **needs decision** |
-| 02 | bet | A bungalow seen from the side with a ball inside; the floor sticks out at the back. | same | Bed inside a house (differs) | bet.svg | hidden | **retire** |
-| 03 | gimel | A grumpy camel stomping forward, one foot kicked out ahead: the foot is gimel's foot. | same | Giraffe mid-stride (differs) | gimel.svg | hidden | **retire** |
-| 04 | dalet | A diving board sticking out from one post over a pool. | same | Door frame (differs) | dalet.svg | hidden | **retire** |
-| 05 | he | A small hut on a mountain with a gap in the left wall. | same | House with an open window (partial) | he.svg | hidden | **keep** |
-| 06 | vav | One straight vine hanging from a hook: the letter is the vine, the hook is the ceiling hook. | same | Vine on a stake (same) | vav.svg | hidden | **keep** |
-| 07 | zayin | A zipper pull on a zipper with gold teeth: a short bar on top and a straight stem down. | same | Zipper pull (same) | zayin.svg | hidden | **keep** |
-| 08 | chet | A closed gate at the edge of a loch (a lake), with a jug of milk standing at the gate. | changed here (was: closed garden gate with a hissing cat behind it) | Hut doorway (differs) | chet.svg | hidden | **retire** |
-| 09 | tet | A round teapot full of tea, its top curling inward. | same | Teacup with a curled handle (partial) | tet.svg | hidden | **keep** |
-| 10 | yod | A tiny hand at the top of the line flicking a yo-yo on its string. | same | Yo-yo on a short string (same) | yod.svg | hidden | **keep** |
-| 11 | kaf | A cup lying on its side: the C-shape is the letter. | changed here (was: kitchen spoon holding a popcorn kernel) | Cupped palm (differs) | kaf.svg | hidden | **retire** |
-| 12 | lamed | A tall lamp post with a bent arm reaching high, lighting the ground below. | same | Lighthouse / shepherd's staff (differs) | lamed.svg | hidden | **retire** |
-| 13 | mem | A mailbox on a post with a letter sticking out and a small flag. | changed here (was: camping tent with its door flap open) | Mountain over water (mayim) (differs) | mem.svg | hidden | **retire** |
-| 14 | nun | A cat curled up asleep, side view, with a Z for its snore. The only cat picture in the set. | same | Nail bent at the top (differs) | nun.svg | hidden | **retire** |
-| 15 | samekh | A striped swim ring floating on water: the closed ring is the letter. | changed here (was: soft round cushion with a person sitting on it) | Sun (differs) | samekh.svg | hidden | **retire** |
-| 16 | ayin | A big open eye: the sweeping lid curve is the letter. | same | Eye (ayin) (same) | ayin.svg | hidden | **keep** |
-| 17 | pe | A wide-open mouth blowing one big bubble, the curl inside the letter being the tongue. | same | Pie in an open mouth (partial) | pe.svg | hidden | **keep** |
-| 18 | tsadi | A slice of pizza with a bird perched on the pizza box; the leaning body is the letter. | changed here (was: cat sitting upright with pointed ears, beside a pizza slice) | Cat sitting (ts of 'cats') (differs) | tsadi.svg | hidden | **retire** |
-| 19 | qof | A red kite in the sky with its long string dangling below the line. | same | Kangaroo tail / monkey (kof) hanging (differs) | qof.svg | hidden | **retire** |
-| 20 | resh | A smooth round head in profile, growling; no corners. | same | Rainbow arc / head (rosh) (partial) | resh.svg | hidden | **keep** |
-| 21 | shin | A birthday shortcake with three candle flames: the three prongs are the letter. | same | Shark teeth / three flames (partial) | shin.svg | hidden | **keep** |
-| 22 | tav | A small table with a baby beside it; the leg with a little foot is the letter. | same | Table / tent (partial) | tav.svg | hidden | **keep** |
-| 23 | kaf-final | A king in a long robe whose cloak trails behind him into a loch (a lake). | same | Key hanging on a hook (differs) | kaf-final.svg | hidden | **retire** |
-| 24 | mem-final | A camping tent zipped shut beside the sea, with mom at the door. | same | Sealed box (differs) | mem-final.svg | hidden | **retire** |
-| 25 | nun-final | One tall nail hammered upright into a big stone. | same | Nail driven down (same) | nun-final.svg | hidden | **keep** |
-| 26 | pe-final | A big feather held off the tip of a nose; the long stem is the tail of the letter. | changed here (was: cartoon mouth with a long tongue blowing a feather off a spoon) | Flag on a pole (differs) | pe-final.svg | hidden | **retire** |
-| 27 | tsadi-final | A tall tree with Y-shaped branches and a long straight trunk, nuts hanging from the branches. | same | Tree with a taproot (same) | tsadi-final.svg | hidden | **keep** |
+| 01 | alef | A silent mime in a handstand. The handstand body is the letter. | same | Ox head (differs) | alef.svg | per-image approval | **needs decision** |
+| 02 | bet | A bungalow seen from the side with a ball inside; the floor sticks out at the back. | same | Bed inside a house (differs) | bet.svg | per-image approval | **retire** |
+| 03 | gimel | A grumpy camel stomping forward, one foot kicked out ahead: the foot is gimel's foot. | same | Giraffe mid-stride (differs) | gimel.svg | per-image approval | **retire** |
+| 04 | dalet | A diving board sticking out from one post over a pool. | same | Door frame (differs) | dalet.svg | per-image approval | **retire** |
+| 05 | he | A small hut on a mountain with a gap in the left wall. | same | House with an open window (partial) | he.svg | per-image approval | **keep** |
+| 06 | vav | One straight vine hanging from a hook: the letter is the vine, the hook is the ceiling hook. | same | Vine on a stake (same) | vav.svg | per-image approval | **keep** |
+| 07 | zayin | A zipper pull on a zipper with gold teeth: a short bar on top and a straight stem down. | same | Zipper pull (same) | zayin.svg | per-image approval | **keep** |
+| 08 | chet | A closed gate at the edge of a loch (a lake), with a jug of milk standing at the gate. | changed here (was: closed garden gate with a hissing cat behind it) | Hut doorway (differs) | chet.svg | per-image approval | **retire** |
+| 09 | tet | A round teapot full of tea, its top curling inward. | same | Teacup with a curled handle (partial) | tet.svg | per-image approval | **keep** |
+| 10 | yod | A tiny hand at the top of the line flicking a yo-yo on its string. | same | Yo-yo on a short string (same) | yod.svg | per-image approval | **keep** |
+| 11 | kaf | A cup lying on its side: the C-shape is the letter. | changed here (was: kitchen spoon holding a popcorn kernel) | Cupped palm (differs) | kaf.svg | per-image approval | **retire** |
+| 12 | lamed | A tall lamp post with a bent arm reaching high, lighting the ground below. | same | Lighthouse / shepherd's staff (differs) | lamed.svg | per-image approval | **retire** |
+| 13 | mem | A mailbox on a post with a letter sticking out and a small flag. | changed here (was: camping tent with its door flap open) | Mountain over water (mayim) (differs) | mem.svg | per-image approval | **retire** |
+| 14 | nun | A cat curled up asleep, side view, with a Z for its snore. The only cat picture in the set. | same | Nail bent at the top (differs) | nun.svg | per-image approval | **retire** |
+| 15 | samekh | A striped swim ring floating on water: the closed ring is the letter. | changed here (was: soft round cushion with a person sitting on it) | Sun (differs) | samekh.svg | per-image approval | **retire** |
+| 16 | ayin | A big open eye: the sweeping lid curve is the letter. | same | Eye (ayin) (same) | ayin.svg | per-image approval | **keep** |
+| 17 | pe | A wide-open mouth blowing one big bubble, the curl inside the letter being the tongue. | same | Pie in an open mouth (partial) | pe.svg | per-image approval | **keep** |
+| 18 | tsadi | A slice of pizza with a bird perched on the pizza box; the leaning body is the letter. | changed here (was: cat sitting upright with pointed ears, beside a pizza slice) | Cat sitting (ts of 'cats') (differs) | tsadi.svg | per-image approval | **retire** |
+| 19 | qof | A red kite in the sky with its long string dangling below the line. | same | Kangaroo tail / monkey (kof) hanging (differs) | qof.svg | per-image approval | **retire** |
+| 20 | resh | A smooth round head in profile, growling; no corners. | same | Rainbow arc / head (rosh) (partial) | resh.svg | per-image approval | **keep** |
+| 21 | shin | A birthday shortcake with three candle flames: the three prongs are the letter. | same | Shark teeth / three flames (partial) | shin.svg | per-image approval | **keep** |
+| 22 | tav | A small table with a baby beside it; the leg with a little foot is the letter. | same | Table / tent (partial) | tav.svg | per-image approval | **keep** |
+| 23 | kaf-final | A king in a long robe whose cloak trails behind him into a loch (a lake). | same | Key hanging on a hook (differs) | kaf-final.svg | per-image approval | **retire** |
+| 24 | mem-final | A camping tent zipped shut beside the sea, with mom at the door. | same | Sealed box (differs) | mem-final.svg | per-image approval | **retire** |
+| 25 | nun-final | One tall nail hammered upright into a big stone. | same | Nail driven down (same) | nun-final.svg | per-image approval | **keep** |
+| 26 | pe-final | A big feather held off the tip of a nose; the long stem is the tail of the letter. | changed here (was: cartoon mouth with a long tongue blowing a feather off a spoon) | Flag on a pole (differs) | pe-final.svg | per-image approval | **retire** |
+| 27 | tsadi-final | A tall tree with Y-shaped branches and a long straight trunk, nuts hanging from the branches. | same | Tree with a taproot (same) | tsadi-final.svg | per-image approval | **keep** |
 
 Variants: vet, khaf and fe share their parent picture (khaf text now says cup, as kaf); sin has its own file `assets/letters/morph/sin.svg` (28 files in all).
 
@@ -92,7 +92,7 @@ For a qualified reviewer: A qualified Hebrew reader should confirm the pointing 
 ## Needs a human decision
 
 - alef: keep the handstand mime (approved in the chain) or replace it with a Noa picture. The data shows no Noa letter picture.
-- Older art in assets/img/gen: keep hidden, rename or remove later. Nothing was deleted.
+- Older art in assets/img/gen: current visibility follows data/images/approvals.json. Owner-approved pictures may be shown; the concept decisions above remain draft. Nothing was deleted.
 - ayin and alef sound wording: reviewer to check the per-reading lines (see the ayin section).
 - garden pointing: reviewer to confirm patach + dagesh.
 - nun-final and tsadi-final alt stories still describe a cat: retire them or leave them hidden.

@@ -23,7 +23,7 @@
       "kneel",
       "\\b(a|the|kneeling|standing|praying) nuns?\\b"
     ],
-    "olderArtHidden": "data/images/approvals.json holds no approvals",
+    "olderArtHidden": "Visibility is controlled per image by data/images/approvals.json; owner-approved older art may be shown",
     "stale": "book/out, docs/workbook/html and the workbook PDFs were built before this pass and were not rebuilt"
   },
   "letters": [
@@ -87,7 +87,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "needs decision",
       "note": "Approved chain concept and older mnemonic are both the silent handstand mime. The brief lists a generic mime as conflicting with the Noa direction, but memory-chain.json (and docs/letters/RECONCILE.md) approve the mime, so nothing was retired. Human decision: keep the mime, or replace it with a Noa picture. Older art prompt is an ox head.",
@@ -154,7 +154,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a bed inside a house; approved is a bungalow with a ball.",
@@ -221,7 +221,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a giraffe; approved is a grumpy camel.",
@@ -288,7 +288,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a door frame; approved is a diving board.",
@@ -355,7 +355,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is a house with an open window; approved is a hut with a gap in the wall. Both are small buildings with an opening.",
@@ -422,7 +422,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Vine in both.",
@@ -489,7 +489,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Zipper pull in both.",
@@ -556,7 +556,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had a closed gate with a hissing cat (a second cat in the set); now the gate by a loch with a milk jug, as in the chain. Older art prompt is a hut doorway.",
@@ -626,7 +626,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is a teacup with a curled handle; approved is a teapot. Both are tea vessels.",
@@ -693,7 +693,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Yo-yo in both.",
@@ -760,7 +760,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had a kitchen spoon with a kernel; now a cup on its side, as in the chain. Older art prompt is a cupped palm.",
@@ -829,7 +829,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a lighthouse or shepherd staff; approved is a lamp post.",
@@ -896,7 +896,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had an open-flap mountain tent; now a mailbox, as in the chain. Older art prompt is a mountain over water.",
@@ -965,7 +965,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Approved and older mnemonic text are the one napping cat. Older art prompt is a bent nail, which is not the approved picture. Cat stays the only cat in the set.",
@@ -1032,7 +1032,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had a soft cushion; now a swim ring, as in the chain. Older art prompt is a sun.",
@@ -1101,7 +1101,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Eye in both. The sound wording was reconciled by reading (see the ayin section).",
@@ -1168,7 +1168,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is a pie in an open mouth; approved is a mouth blowing a bubble. Both show an open mouth.",
@@ -1235,7 +1235,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had a sitting cat with pointed ears (a second cat in the set); now a pizza slice with a bird on the box, as in the chain. Older art prompt is a sitting cat.",
@@ -1304,7 +1304,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a kangaroo tail or hanging monkey; approved is a kite.",
@@ -1371,7 +1371,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is a rainbow arc or a head; approved is a round head in profile. The head is in both.",
@@ -1438,7 +1438,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is shark teeth or three flames; approved is a birthday cake with three flames. The flames are in both.",
@@ -1505,7 +1505,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Older art prompt is a table or tent; approved is a table with a baby. The table is in both.",
@@ -1572,7 +1572,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a key on a hook; approved is a king whose cloak trails into a loch.",
@@ -1639,7 +1639,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older art prompt is a sealed box; approved is a tent zipped shut by the sea. Older text said \"Mountain tent\" (a leftover of the retired open-mem tent); now \"a tent\".",
@@ -1706,7 +1706,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Nail in both. The anchor word pointing was reconciled with the word list (see the garden section). Its alt story still has a cat; it is not displayed.",
@@ -1775,7 +1775,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "retire",
       "note": "Older mnemonic text had a mouth with a lolling tongue; now a feather held off a nose, as in the chain. Older art prompt is a flag on a pole.",
@@ -1845,7 +1845,7 @@
           "word (anchor word)",
           "caption (workbook, book)"
         ],
-        "olderArt": "hidden: data/images/approvals.json has no approved picture, so assets/img/gen is shown only when the showUnapprovedImages setting is on"
+        "olderArt": "shown only when its image id is approved in data/images/approvals.json, or showUnapprovedImages is enabled"
       },
       "status": "keep",
       "note": "Tree in both. Its alt story still has a cat on a pole; it is not displayed.",

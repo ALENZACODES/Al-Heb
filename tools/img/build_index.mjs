@@ -94,6 +94,8 @@ export function buildIndexFrom({ manifest = [], blockJ = [], inter = [], altText
   // Keep those files discoverable after rebuilding the index; the resolver
   // still requires their existing approval before displaying them.
   for (const id of Object.keys(edges).filter((id) => id.startsWith('GAME_'))) put(id, { set: '' });
+  // Approved opposite-pair gap artwork was added outside the original intake CSV.
+  for (const id of Object.keys(edges).filter((id) => /^OPP_gap_(white_black|expensive_cheap|strong_weak|happy_sad|near_far)$/.test(id))) put(id, { set: 'Opposites gap', alt: 'Opposites: ' + id.slice(8).replaceAll('_', ' and ') + '.' });
   const groups = new Map(); let order = 0;
   for (const [stem, r] of recs) {
     const g = groupOf({ stem, set: r.set, kind: r.kind, key: r.key });

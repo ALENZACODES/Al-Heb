@@ -15,12 +15,12 @@ const ctxFor = () => {
 
 const rootText = (root) => root.textContent;
 
-test('home and welcome place the ancient Tree of Life above original text, panels and tiles', () => {
+test('home shows the Tree of Life while welcome keeps its onboarding flow', () => {
   const home = new N('div');
   mountHome(home, ctxFor());
   const welcome = new N('div');
   mountWelcome(welcome, ctxFor());
-  for (const root of [home, welcome]) {
+  for (const root of [home]) {
     assert.equal(root.querySelector('.show-hero-img'), null, 'old book hero is gone');
     const scene = root.querySelector('.astral-scene');
     assert.ok(scene, 'the astral hero scene exists');

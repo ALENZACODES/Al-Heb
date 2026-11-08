@@ -31,7 +31,7 @@ const cfgReal = (over = {}) => { const c = cfgMock(); c.voices.m.voiceId = 'VOIC
 const ffTest = FF ? test : test.skip;
 
 async function mockWork(words = 3, { take2 = true } = {}) {
-  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { words });
+  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { words, includeExisting: true });
   await renderItems(plan.items, { work, take: 1, cfg: cfgMock(), mock: true });
   if (take2) await renderItems(plan.items, { work, take: 2, cfg: cfgMock(), mock: true });
   return { work, plan };
@@ -62,7 +62,7 @@ test('serviceBase accepts https or loopback http only (the key is sent there)', 
 
 // ---------- plan ----------
 test('plan: both traditions x m,f for N words, priority order first, respelling (not Hebrew) is the text, human-only kinds refused', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 20 });
+  const plan = await buildVoicePlan(REPO, { words: 20, includeExisting: true });
   assert.equal(plan.counts.words, 20); assert.equal(plan.counts.clips, 80);
   const first = plan.items.slice(0, 4).map((i) => `${i.tradition}/${i.voice}`);
   assert.deepEqual(first, ['sephardi/m', 'sephardi/f', 'ashkenazi/m', 'ashkenazi/f']);
@@ -83,11 +83,11 @@ test('plan: both traditions x m,f for N words, priority order first, respelling 
 });
 
 test('plan: --max-clips, --batch-size, --resume; the estimate comes before any call and states no price', async () => {
-  const p = await buildVoicePlan(REPO, { maxClips: 10, batchSize: 4 });
+  const p = await buildVoicePlan(REPO, { maxClips: 10, batchSize: 4, includeExisting: true });
   assert.equal(p.counts.clips, 10); assert.deepEqual([...new Set(p.items.map((i) => i.batch))], [1, 2, 3]); assert.equal(p.items[9].batch, 3);
   const { work } = await mockWork(2, { take2: false });
-  const r = await buildVoicePlan(REPO, { words: 4, resumeWork: work });
-  assert.ok(!r.items.some((i) => ['r01-w1', 'r03-w1'].includes(i.id) && i.tradition === 'sephardi' && i.voice === 'm'), 'already rendered items are left out on resume');
+  const r = await buildVoicePlan(REPO, { words: 4, resumeWork: work, includeExisting: true });
+  assert.ok(!r.items.some((i) => ['r01-w1', 'r02-w1'].includes(i.id) && i.tradition === 'sephardi' && i.voice === 'm'), 'already rendered items are left out on resume');
   assert.ok(r.counts.skipped.alreadyRendered > 0);
   const text = formatEstimate(p);
   assert.match(text, /CHARACTER BUDGET/); assert.match(text, /sephardi\/m/); assert.match(text, /ashkenazi\/f/); assert.match(text, /check your plan/i);
@@ -124,7 +124,7 @@ function stub(handler) {
 const pcmReply = (res, ms = 400) => { const n = 24 * ms; const b = Buffer.alloc(n * 2); for (let i = 0; i < n; i++) b.writeInt16LE(Math.round(Math.sin(i / 8) * 9000), i * 2); res.writeHead(200, { 'content-type': 'audio/pcm', 'request-id': `req-${Math.random().toString(16).slice(2, 8)}` }); res.end(b); };
 
 test('render: fixed settings, respelled text, voice id per slot, retries 429 (Retry-After) and 5xx with backoff, atomic files, log has provenance and no key', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 2, traditions: ['sephardi'] }); // 4 items
+  const plan = await buildVoicePlan(REPO, { words: 2, traditions: ['sephardi'], includeExisting: true }); // 4 items
   const s = await stub((c, res) => { if (c.n === 1) { res.writeHead(429, { 'retry-after': '1' }); res.end('{"detail":"rate"}'); } else if (c.n === 2) { res.writeHead(503); res.end('busy'); } else pcmReply(res); });
   const work = tmp('render');
   try {
@@ -255,7 +255,7 @@ ffTest('J2: the recogniser transcript is compared with the expected Hebrew; wron
     const rec = makeRecogniser({ cfg: cfgMock(), mode: 'mock', items: recs });
     let out = await runJudges({ work, which: ['j2'], recogniser: rec, log: () => {} }); assert.equal(out.j2.pass, 12);
     // replace one clip by the clip of another word: the "heard" text no longer matches the expected Hebrew
-    const P = workPaths(work); const a = plan.items.find((i) => i.id === 'r01-w1' && i.tradition === 'sephardi' && i.voice === 'm'); const b = plan.items.find((i) => i.id === 'r03-w1' && i.tradition === 'sephardi' && i.voice === 'm');
+    const P = workPaths(work); const a = plan.items.find((i) => i.id === 'r01-w1' && i.tradition === 'sephardi' && i.voice === 'm'); const b = plan.items.find((i) => i.id === 'r02-w1' && i.tradition === 'sephardi' && i.voice === 'm');
     fs.copyFileSync(P.clip(1, b), P.clip(1, a));
     out = await runJudges({ work, which: ['j2'], recogniser: rec, log: () => {} }); assert.equal(out.j2.fail, 1);
     const v = loadVerdicts(work, 'j2').get('m/sephardi/word/r01-w1'); assert.equal(v.verdict, 'fail'); assert.ok(v.measured.similarity < 0.7); assert.ok(v.measured.expected && v.measured.heard && v.thresholds.minSimilarity === 0.7);

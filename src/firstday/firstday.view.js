@@ -170,7 +170,8 @@ export function mount(root, ctx) {
         verdict.ok ? (combo >= 3 ? el('p', { class: 'fd-combo' }, `${combo} in a row!`) : null)
           : el('p', {}, 'Correct answer: ', right.he ? heText(right.text, 'alef-he') : el('strong', {}, right.text), el('span', { class: 'fd-kind' }, ' — that is how everyone learns.')),
         last ? el('p', { class: 'fd-win' }, el('strong', {}, s.win)) : null),
-      el('button', { class: 'btn fd-cta', type: 'button', id: last ? 'fd-next' : 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it'));
+      last ? el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next', onclick: go }, verdict.ok ? 'Continue' : 'Got it')
+        : el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it')); // a button, never a timer: nothing moves on by itself
     try { foot.querySelector('button')?.focus({ preventScroll: true }); } catch { /* ignore */ }
 
     function pick(k) { if (verdict) return; sel = k; renderStep(); try { body.querySelector(`.fd-opt[data-n="${k + 1}"]`)?.focus({ preventScroll: true }); } catch { /* ignore */ } }

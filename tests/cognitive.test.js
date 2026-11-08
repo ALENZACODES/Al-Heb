@@ -148,7 +148,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
   const reviewed = ['fwSplashIn', 'alef-bob', 'skel-pulse', 'prayer-prompt', 'prayer-stars', 'prayer-light',
     'astral-harvest-breathe', 'astral-motes-drift', 'astral-ancient-reveal', 'astral-photo-drift',
     'astral-stars-drift', 'astral-ray-pass', 'prefix-float', 'game-conveyor-move', 'show-shimmer',
-    'show-rise', 'show-pop', 'rimon-breathe', 'rimon-bubble-pop', 'alef-nudge'];
+    'show-rise', 'show-pop', 'rimon-breathe', 'rimon-bubble-pop', 'alef-nudge',
+    // first-lesson player (assets/css/player.css): one-shot, never looping; the global reduced-motion and calm rules switch them off
+    'fd-rise', 'fd-pop', 'fd-fall'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

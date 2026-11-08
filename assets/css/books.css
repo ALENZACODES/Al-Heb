@@ -11,7 +11,7 @@
 
 .book-stage { display: grid; gap: .75rem; justify-items: center; text-align: center; }
 .book-page-img { width: 100%; max-inline-size: 44rem; aspect-ratio: 7 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
-.book-page-pending { display: grid; place-items: center; }
+.book-page-pending { display: grid; place-items: center; align-content: center; gap: .5rem; }
 .book-line { font-size: 2rem; line-height: 1.5; font-weight: 700; }
 .book-translit { font-size: 1.1rem; margin: 0; }
 .book-en { margin: 0; }
@@ -23,3 +23,8 @@
 .book-dots { display: flex; gap: .4rem; justify-content: center; padding-block: .5rem; flex-wrap: wrap; }
 .book-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); background: transparent; padding: 0; cursor: pointer; }
 .book-dot.on { background: var(--accent); }
+
+/* Books whose pictures are not made yet: a gold "Coming soon" ribbon on the cover and the reader's picture space */
+.book-cover-soon { position: relative; }
+.book-soon { display: inline-block; padding: .25rem .75rem; border-radius: 999px; background: #c9a227; color: #0f2a1d; font-weight: 700; font-size: .9rem; letter-spacing: .02em; }
+.book-cover-soon .book-soon { position: absolute; top: .6rem; right: .6rem; }

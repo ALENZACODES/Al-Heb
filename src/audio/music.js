@@ -1,6 +1,6 @@
 // Optional secular game beds. Off until the learner turns them on.
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
-import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES } from '../listen/catalog.js';
+import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
 import { mediaPolicy } from './policy.js';
 import { SYNTH_STYLES, createSynthTrack, createGaplessTrack } from './synth-music.js';
 
@@ -77,7 +77,7 @@ export function createMusicController({
     if (audio && audioId === row.id) return audio;
     try { audio?.pause?.(); } catch { /* ignore */ }
     let created;
-    try { created = makeAudio(base + row.file); } catch { created = null; }
+    try { created = makeAudio(base + playableFile(row.file)); } catch { created = null; }
     try { audio?.remove?.(); } catch { /* ignore */ }
     audio = created;
     audioId = row.id;

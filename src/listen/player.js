@@ -1,6 +1,7 @@
 // One sacred-listen recording at a time. Nothing plays until the learner presses Play.
 // A missing file or a refused play() is reported; it does not throw. Playback never loops.
 import { mediaPolicy } from '../audio/policy.js';
+import { playableFile } from './catalog.js';
 
 export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(url), base = 'audio/listen/' } = {}) {
   let node = null;
@@ -36,7 +37,7 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     stop();
     currentId = item.id;
     let audio;
-    try { audio = makeAudio(base + item.file); } catch {
+    try { audio = makeAudio(base + playableFile(item.file)); } catch {
       phase = 'error';
       error = 'This browser could not open the recording.';
       emit();

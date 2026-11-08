@@ -44,7 +44,7 @@ test('game music stays off until enabled, then pauses for speech and refuses sac
   assert.equal(music.enable(), true);
   assert.equal(music.snapshot().phase, 'playing');
   assert.equal(media.made[0].loop, true);
-  assert.match(media.made[0].url, /night_at_the_beach\.ogg$/);
+  assert.match(media.made[0].url, /night_at_the_beach\.mp3$/);
   music.setSpeech(true);
   assert.equal(media.made[0].paused, true);
   assert.equal(music.snapshot().phase, 'paused');

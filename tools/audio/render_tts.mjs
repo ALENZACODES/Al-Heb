@@ -22,7 +22,7 @@
 // spokenText, madeFrom: 'respelling', voiceName, tradition, israeliRef and the tempo cap result. Only the google provider renders these.
 // Google: the default voices are the approved Israeli Hebrew pair (he-IL-Wavenet-B, he-IL-Wavenet-A); see tools/audio/tts/google.mjs.
 import { loadManifestFull } from './manifest_io.mjs';
-import { buildSidecar, LICENCE_NOT_CLEARED } from './sidecar.mjs';
+import { buildSidecar, LICENCE_NOT_CLEARED, LICENCE_PAID_CLOUD } from './sidecar.mjs';
 import { ACCENT_TRADITIONS, ACCENT_SOURCES, ACCENT_STATUS, TEMPO_CAP, respellFor, israeliRef, capClip, markAccentRows } from './accent.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -137,7 +137,14 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
     const at = now();
     const baseSidecar = (over) => buildSidecar({
       status: 'tts', source: `tts:${provider.id}`, engine: provider.id, voiceId, tradition: r.tradition, inputText: r.text,
-      ingestedAt: at, licence: LICENCE_NOT_CLEARED, note: 'TTS output redistribution rights not confirmed by counsel',
+      // Fix #22: renders through the paid-cloud provider record the vendor-terms
+      // position (customer-owned, docs/audio/CONTRACT.md); every other provider
+      // keeps 'not cleared' until its terms are recorded the same way. The
+      // licence field is not a counsel clearance: redistributionCleared stays false.
+      ingestedAt: at, licence: provider.id === 'google' ? LICENCE_PAID_CLOUD : LICENCE_NOT_CLEARED,
+      note: provider.id === 'google'
+        ? 'Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel'
+        : 'TTS output redistribution rights not confirmed by counsel',
       renderedAt: at, redistributionCleared: false,
       ...(buf.spokenText ? { spokenText: buf.spokenText } : {}),
       ...(normalize ? { normalized } : {}),
@@ -154,7 +161,7 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
         spokenText: buf.spokenText || r.spokenText, hebrew: r.text, israeliRef: r.israeliRef || null,
         tempo: tempo || { applied: false, factor: 1, cap, before: null, after: null, israeliSec: null, israeliRef: r.israeliRef || null, note: 'no Israeli counterpart on disk, so no cap was applied' },
         ...(normalize ? { normalized } : {}),
-        note: `Synthetic voice: the Israeli ${r.voice === 'm' ? 'man' : 'woman'} voice reading the ${r.tradition} English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. TTS output redistribution rights not confirmed by counsel.`,
+        note: `Synthetic voice: the Israeli ${r.voice === 'm' ? 'man' : 'woman'} voice reading the ${r.tradition} English-letter respelling, not pointed Hebrew. Not a human recording; no human has listened to it. Licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel.`,
       };
     } else {
       meta = baseSidecar({});

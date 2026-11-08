@@ -27,6 +27,16 @@ export const SIDECAR_AUDIT_FIELDS = Object.freeze(['engine', 'voiceId', 'traditi
 /** Licence value until counsel clears redistribution/sale in writing. */
 export const LICENCE_NOT_CLEARED = 'not cleared';
 
+/** Licence value for paid-cloud clips (fix #22): the customer owns the
+ * generated audio under the vendor's cloud terms — the customer retains all
+ * IP rights in generated audio (Customer Data) and the vendor's own docs
+ * permit using created audio files to power applications and augment media.
+ * No vendor indemnity attaches. Defined in full in docs/audio/CONTRACT.md;
+ * this constant is the single source of truth for the value. It does NOT
+ * mean counsel has cleared redistribution/sale: `redistributionCleared`
+ * stays false until then. */
+export const LICENCE_PAID_CLOUD = 'customer-owned';
+
 /** sha256 of the exact input text, hex. The hash is of the text, not of the audio file. */
 export function sha256Text(text) {
   return createHash('sha256').update(String(text), 'utf8').digest('hex');

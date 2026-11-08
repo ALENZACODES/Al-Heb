@@ -37,8 +37,10 @@
 //   record is never overwritten with the null-voice form.
 // - ingestedAt: null unless the existing sidecar already carries a renderedAt (the
 //   108 prayer sidecars do). The render date of the paid-cloud library was not recorded.
-// - licence: 'not cleared' everywhere until counsel clears redistribution/sale in
-//   writing (docs/audio/CONTRACT.md is fix #22's job, not this script's).
+// - licence: 'customer-owned' for paid-cloud / tts:google entries (fix #22:
+//   the vendor terms record the customer as owner of the generated audio —
+//   docs/audio/CONTRACT.md). Every other source keeps 'not cleared' until
+//   its terms are recorded the same way.
 //
 // Skipped, with counts in the report: entries with no clip (status missing), human
 // clips (status recorded — a different provenance, not this schema), entries with an
@@ -50,7 +52,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildSidecar, sidecarComplete, missingSidecarFields, LICENCE_NOT_CLEARED } from './sidecar.mjs';
+import { buildSidecar, sidecarComplete, missingSidecarFields, LICENCE_PAID_CLOUD } from './sidecar.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -154,7 +156,7 @@ export function planSidecar(entry, existing = null) {
     // Preserve a render date the clip already records (render_tts writes ingestedAt;
     // the 108 prayer sidecars carry renderedAt); otherwise null — never invented.
     ingestedAt: existing?.ingestedAt ?? existing?.renderedAt ?? null,
-    licence: LICENCE_NOT_CLEARED,
+    licence: LICENCE_PAID_CLOUD,
     note,
     inputTextKind,
     ...(existing?.renderedAt ? { renderedAt: existing.renderedAt } : {}),

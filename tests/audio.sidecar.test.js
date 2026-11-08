@@ -67,7 +67,24 @@ test('renderBatch writes the full sidecar (fake fetch, temp dir, no network)', a
     assert.equal(meta.inputSha256, sha256Text('שָׁלוֹם'));
     assert.equal(meta.ingestedAt, 'T');
     assert.equal(meta.renderedAt, 'T');
-    assert.equal(meta.licence, 'not cleared');
+    assert.equal(meta.licence, 'not cleared', 'azure terms are not recorded in this repo (fix #22 is the paid-cloud terms only)');
+    assert.ok(sidecarComplete(meta));
+  } finally { rm(root); }
+});
+
+test('renderBatch through the paid-cloud provider records the customer-owned licence (fix #22)', async () => {
+  const root = tmp('render-google');
+  const fetchImpl = async () => ({ ok: true, json: async () => ({ audioContent: Buffer.from('fake').toString('base64') }) });
+  const rows = [{ path: 'audio/m/israeli/word/a.mp3', voice: 'm', tradition: 'israeli', kind: 'word', id: 'a', text: 'שָׁלוֹם', status: 'missing' }];
+  try {
+    const w = await renderBatch({ provider: google, rows, root, fetchImpl, env: { GOOGLE_TTS_API_KEY: 'k' }, now: () => 'T', log: () => {} });
+    assert.deepEqual(w, ['audio/m/israeli/word/a.mp3']);
+    const meta = JSON.parse(fs.readFileSync(path.join(root, 'audio/m/israeli/word/a.mp3.meta.json'), 'utf8'));
+    assert.deepEqual([meta.status, meta.source, meta.redistributionCleared], ['tts', 'tts:google', false]);
+    assert.equal(meta.engine, 'google');
+    assert.equal(meta.voiceId, 'he-IL-Wavenet-B');
+    assert.equal(meta.licence, 'customer-owned');
+    assert.match(meta.note, /docs\/audio\/CONTRACT\.md/);
     assert.ok(sidecarComplete(meta));
   } finally { rm(root); }
 });
@@ -88,7 +105,7 @@ test('planSidecar: israeli paid-cloud maps to the WaveNet pair the owner passed'
   assert.equal(sidecar.inputSha256, sha256Text('שָׁב'));
   assert.equal(sidecar.inputTextKind, 'hebrew');
   assert.equal(sidecar.ingestedAt, null);
-  assert.equal(sidecar.licence, 'not cleared');
+  assert.equal(sidecar.licence, 'customer-owned', 'fix #22: the vendor terms record the customer as owner of the generated audio (docs/audio/CONTRACT.md)');
   assert.match(sidecar.note, /CASTING-REPORT/);
 });
 

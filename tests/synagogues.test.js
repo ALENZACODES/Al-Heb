@@ -56,7 +56,7 @@ test('pictures: every listed picture exists in full and thumbnail size, has alt 
       assert.ok(typeof im.alt === 'string' && im.alt.length > 10, `${c.id}/${im.file} alt`);
     }
   }
-  assert.equal(n, 33);
+  assert.equal(n, 51);
   for (const dir of readdirSync(join(root, 'assets/synagogues'))) {
     const c = D.congregations.find((x) => x.id === dir);
     assert.ok(c, `assets/synagogues/${dir} has no entry in the data file`);
@@ -90,7 +90,8 @@ test('directory: one tile per congregation, grouped by province west to east, wi
   assert.ok(hb.querySelector('img'));
   assert.equal(hb.querySelector('a').getAttribute('href'), '#/synagogues/holy-blossom-toronto');
   const ks = tiles.find((t) => t.getAttribute('data-id') === 'iyr-ha-melech-kingston');
-  assert.equal(ks.querySelector('img'), null);
+  assert.ok(ks.querySelector('img'));
+  assert.equal(tiles.filter((t) => t.querySelector('img')).length, 27);
   assert.match(text, /Legacy/);
 });
 
@@ -116,11 +117,16 @@ test('detail: story paragraphs, a gallery with one button per picture, contact f
   assert.ok(r.queryAll('nav a').length === 2);
 });
 
-test('detail: a congregation without pictures says so, and open questions are listed', async () => {
+test('detail: a one-picture congregation shows it, open questions are listed, and a picture that is not of the synagogue says so', async () => {
   const { root: r, text } = await show({ id: 'iyr-ha-melech-kingston' });
-  assert.ok(r.querySelector('[data-part="no-picture"]'));
+  assert.equal(r.querySelector('[data-part="no-picture"]'), null);
+  assert.ok(r.querySelector('.syn-hero img'));
   assert.match(text, /To confirm/);
   assert.match(text, /No telephone number found/);
+  const { text: plaza } = await show({ id: 'or-hadash-newmarket' });
+  assert.match(plaza, /the bank in the foreground is not the synagogue/);
+  const { text: shared } = await show({ id: 'neshamah-york-region' });
+  assert.match(shared, /not a synagogue building of its own/);
 });
 
 test('detail: legacy entries carry the Legacy badge and the closing story; an unknown id gives a polite notice', async () => {

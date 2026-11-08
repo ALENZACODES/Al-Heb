@@ -7,7 +7,7 @@
  "inputText": "תְּקוּפָה",
  "inputSha256": "550e863ae58395320f8b8fe6afe20722d4a683e6692be78ea2cfea9409a9eebc",
  "ingestedAt": "2026-11-08T03:23:53.008Z",
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): re-rendered 2026-11-08 with the recorded voice he-IL-Wavenet-B; the voice id and render time are taken from the render-time sidecar, not guessed.",
  "inputTextKind": "hebrew",
  "renderedAt": "2026-11-08T03:23:53.008Z",

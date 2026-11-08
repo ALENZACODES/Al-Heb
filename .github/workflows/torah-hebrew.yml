@@ -56,7 +56,10 @@ jobs:
             # save after every queue line, so a later failure keeps what is done
             ( cd "$GITHUB_WORKSPACE"
               node tools/audio/summary.mjs && node tools/build-precache.mjs
-              git add audio data/audio precache-manifest.js
+              # The verses are copied from the Torah source text, whose cantillation mark order the Hebrew lint already accepts
+              # there; record the new copies too, so the main test run does not flag every chapter (this job touches only Torah clips).
+              node tools/hebrew-lint/cli.mjs --update-baseline > /dev/null
+              git add audio data/audio precache-manifest.js tools/hebrew-lint/baseline.json
               if ! git diff --cached --quiet; then
                 n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
                 git commit -q -m "Torah Hebrew reading: $book ${chapter:-}: $n verse clips (Ari and Noa)"

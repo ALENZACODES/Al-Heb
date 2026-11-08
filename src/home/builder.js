@@ -29,7 +29,7 @@ export function builderNode(ctx = {}) {
   const button = (text, action, attrs = {}) => h('button', { type: 'button', class: 'btn secondary', onclick: action, ...attrs }, text);
   const controls = row => h('span', { class: 'builder-audio' },
     button('▶ Play', () => play(row), { 'aria-label': 'Play ' + (row.translit_israeli || row.translit) }),
-    button('Slow · 0.6×', () => play(row, 0.6), { 'aria-label': 'Play slowly ' + (row.translit_israeli || row.translit) }));
+    button('Slow · 0.6×', () => play(row, 0.6), { 'aria-label': 'Slow · 0.6× — Play slowly ' + (row.translit_israeli || row.translit) }));
   const symbolInfo = h('div', { class: 'builder-symbol-info', 'aria-live': 'polite' });
   function describe(s, speak = false) {
     symbolInfo.replaceChildren(heSpan(s.nikud), h('span', {}, s.translit + ' — ' + s.meaning_en), controls(s));
@@ -39,7 +39,7 @@ export function builderNode(ctx = {}) {
     const mark = !/[א-ת]/.test(s.glyph);
     const b = button('', () => { clearTimeout(hoverTimer); if (held) { held = false; return; } place(s.glyph); }, {
       class: 'builder-key', 'data-glyph': s.glyph, title: s.translit + ' — ' + s.meaning_en,
-      'aria-label': 'Add ' + s.translit,
+      'aria-label': (mark ? '◌' : '') + s.glyph + s.translit + ' — Add to your word',
       onmouseenter: () => { describe(s); clearTimeout(hoverTimer); hoverTimer = setTimeout(() => describe(s,true),650); },
       onmouseleave: () => clearTimeout(hoverTimer),
       onfocus: () => describe(s),

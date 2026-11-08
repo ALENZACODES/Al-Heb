@@ -18,14 +18,15 @@ async function open(hold) {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
   await ctx.addInitScript(() => localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })));
   const held = { manifest: [], shard: [] };
-  const gates = {};
-  const gate = (kind) => ((route) => { held[kind].push(route); });
+  const gates = { manifest: false, shard: false };
+  // Once released, allow dependent Israeli playback shard requests through too.
+  const gate = (kind) => ((route) => gates[kind] ? route.continue() : held[kind].push(route));
   if (hold.manifest) await ctx.route(/\/data\/audio\/manifest\.json(\?|$)/, gate('manifest'));
   if (hold.shard) await ctx.route(/\/data\/audio\/manifest-words-[a-z]+\.json(\?|$)/, gate('shard'));
   const page = await ctx.newPage(); const errs = []; page.on('pageerror', (e) => errs.push(e.message));
   await page.goto(`http://localhost:${server.address().port}/#/learn?lesson=r01`);
   await page.waitForSelector('body[data-ready="1"]');
-  const release = async (kind) => { const rs = held[kind].splice(0); await Promise.all(rs.map((r) => r.continue())); return rs.length; };
+  const release = async (kind) => { gates[kind] = true; const rs = held[kind].splice(0); await Promise.all(rs.map((r) => r.continue())); return rs.length; };
   const waitHeld = async (kind) => { for (let i = 0; i < 200 && !held[kind].length; i++) await page.waitForTimeout(25); assert.ok(held[kind].length, `${kind} request was made and is being held`); };
   const close = async () => { await browser.close(); await new Promise((r) => server.close(r)); };
   return { page, errs, release, waitHeld, close, gates };

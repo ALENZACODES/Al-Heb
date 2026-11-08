@@ -127,16 +127,21 @@ async function runPersona(cfg) {
     log('first open lands on', { hash: h });
     if (!/welcome/.test(h)) F('high', 'first-open-not-welcome', 'First open did not land on the welcome screen', ['Open the app with empty storage'], { hash: h });
     await page.waitForSelector('#ob-form-letters', { timeout: 8000 }).catch(() => {});
-    // The first choice is now preselected. Record that default before choosing
-    // this persona's answer; advancing twice would skip its first step.
-    log('Initial letters choice', { choice: await page.locator('input[name="letters"]:checked').inputValue() });
+    // Starting level is deliberately unselected: record the initial state, then
+    // make the persona's explicit choice through the real onboarding controls.
+    log('Initial letters choice', { choice: await page.locator('input[name="letters"]:checked').evaluateAll((inputs) => inputs[0]?.value ?? null) });
     // the goal question is on this first screen (preselected: read); Israel skips the pronunciation step and sets Israeli sounds
     await page.click(`label[for=ob-goal-${cfg.goal}]`).catch(() => {});
-    await page.check(`#ob-letters-${cfg.letters}`).catch(() => {});
+    await page.locator(`label[for="ob-letters-${cfg.letters}"]`).click();
+    if (!await page.locator(`#ob-letters-${cfg.letters}`).isChecked()) throw new Error("Starting level choice was not selected");
     await page.click('#ob-letters-continue');
     await page.waitForSelector(cfg.goal === 'israel' ? '.ob-plan' : '#ob-form-congregation', { timeout: 5000 }).catch(() => {});
     if (cfg.goal !== 'israel') {
-    if (cfg.denom) await page.check(`#ob-denomination-${cfg.denom}`).catch(() => {});
+    if (cfg.denom) {
+      await page.locator('#ob-form-congregation details summary').click();
+      await page.locator(`label[for="ob-denomination-${cfg.denom}"]`).click();
+      if (!await page.locator(`#ob-denomination-${cfg.denom}`).isChecked()) throw new Error("Denomination choice was not selected");
+    }
     const suggested = await page.evaluate(() => document.querySelector('input[name=pron]:checked')?.value || null);
     log('pronunciation preselected after denomination', { denom: cfg.denom, suggested, wanted: cfg.pron });
     await page.check(`#ob-pron-${cfg.pron}`).catch(() => {});

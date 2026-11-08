@@ -34,6 +34,9 @@ test('journey --quick: persona A, day 1, finishes under 90 s and records onboard
   assert.ok(res.elapsedSeconds < 90, `took ${res.elapsedSeconds}s\n${r.stdout}${r.stderr}`);
   assert.deepEqual(Object.keys(res.personas), ['A']);
   const A = res.personas.A; const what = A.steps.map((s) => s.what).join('\n');
+  assert.equal(A.steps.find((s) => s.what === 'Initial letters choice')?.choice, null, 'starting level requires an explicit answer');
+  assert.equal(A.onboardingRecord.letters, 'none');
+  assert.equal(A.onboardingRecord.denomination, 'orthodox');
   assert.match(what, /plan card/); assert.match(what, /Today card \(open\)/); assert.match(what, /first 10 minutes finished/);
   for (const t of ['speak', 'typing', 'listen', 'progress']) assert.match(what, new RegExp('tool opened: ' + t));
   assert.equal(A.steps.filter((s) => /SCRIPT PROBLEM/.test(s.what)).length, 0, 'script problems: ' + JSON.stringify(A.steps.filter((s) => /SCRIPT PROBLEM/.test(s.what))));

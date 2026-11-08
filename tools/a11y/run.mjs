@@ -31,7 +31,7 @@ const out = { axe: '4.14.0', when: new Date().toISOString(), routes: {}, keyboar
 
 async function newPage(theme, device = 'phone') {
   const ctx = await browser.newContext({ viewport: VIEWPORT[device], deviceScaleFactor: device === 'phone' ? 2 : 1, colorScheme: theme });
-  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+  await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
   return { ctx, page: await ctx.newPage() };
 }
 for (const [device, theme] of CONFIGS) {

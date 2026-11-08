@@ -486,7 +486,7 @@ export function mount(root, ctx) {
   }
 
   function renderHome() {
-    const out = [el('p', { class: 'trd-home-intro' }, 'The whole Torah, Hebrew and English side by side. Genesis is here first; the other four books follow on the same pages.')];
+    const out = [el('p', { class: 'trd-home-intro' }, 'The whole Torah, Hebrew and English side by side. All five books, every chapter.')];
     if (!torah) { out.push(el('p', { class: 'trd-error', role: 'alert' }, 'The Torah text could not be loaded. Check your connection and reload.')); return out; }
     const bookRow = torah.books.find((b) => b.id === state.book);
     if (bookRow && (bookRow.chaptersAvailable || 0) >= state.chapter) {

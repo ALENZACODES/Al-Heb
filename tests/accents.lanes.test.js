@@ -72,7 +72,8 @@ test('torah reader: respelling and the Hear-it label follow the tradition; only 
   const { mount } = await import('../src/torahreader/torahreader.view.js');
   const out = {};
   for (const t of TRADS) {
-    const root = newRoot(); const un = mount(root, { store: memStore(), settings: settingsWith(t), audio: audioFor(t), clock: { setInterval: () => 1, clearInterval() {} } });
+    const root = newRoot(); const store = memStore(); store.set('torahreader.v1', { screen: 'study' }); // the study passage; the route opens on Torah home
+    const un = mount(root, { store, settings: settingsWith(t), audio: audioFor(t), clock: { setInterval: () => 1, clearInterval() {} } });
     await un.ready;
     root.find((n) => n.tag === 'button' && n.attrs.lang === 'he')[0].click();
     const detail = () => root.find((n) => /Say it \(/.test(n.textContent) && n.tag === 'p')[0]?.textContent;

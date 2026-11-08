@@ -19,7 +19,7 @@ const SHELL = `alef-shell-${VERSION}`;
 const RUNTIME = 'alef-runtime-v1'; // audio clips only (cache first, kept across versions)
 const DATA = `alef-data-${VERSION}`;  // every other runtime-cached file (vocab shards, audio manifest, word shard, images, fonts): one cache per version
 const AUDIO = /\.(mp3|m4a|ogg|wav)$/i;
-const MAX_CLIP_BYTES = 512 * 1024; // a clip bigger than this is never cached by the worker (plain network, no offline copy)
+const MAX_CLIP_BYTES = 2048 * 1024; // 2 MiB, so the longest prayer recordings (about 1.8 MiB) also work offline; a clip bigger than this is never cached by the worker (plain network, no offline copy)
 const MAX_CLIPS = 600;             // audio entries kept in RUNTIME; past this the oldest-inserted are deleted
 
 /** Drop the oldest clips beyond MAX_CLIPS (Cache keys() is in insertion order); putClip = put + trim. */

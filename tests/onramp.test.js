@@ -107,20 +107,28 @@ test('flow: one screen per step, one letter first, the check opens Next, five wi
   assert.ok(!/Bet|Lamed|Vav/.test(root.queryAll('h2')[0].textContent));
   assert.equal(btns(root, /^Next$/).length, 0, 'Next waits for the check');
   assert.match(root.textContent, /Ashkenazi/);
+  // app-style player: learn screen -> Continue -> each question on its own screen (pick a card, Check, then Continue / Got it)
+  const byId = (id) => root.queryAll('button').find((b) => b.getAttribute('id') === id);
   for (let step = 1; step <= 5; step++) {
     await waitFor(() => new RegExp(`Step ${step} of 5`).test(root.textContent));
-    for (let guard = 0; guard < 3; guard++) {
-      const live = () => root.queryAll('.fd-check button').filter((b) => !('disabled' in b.attrs) && !/^Next question$/.test(b.textContent));
-      const nextQ = () => btns(root, /^Next question$/);
-      // the quick check no longer moves to the next question by itself: a "Next question" button does (motor lane)
-      await waitFor(() => btns(root, /^(Next|Finish)$/).length || live().length || nextQ().length, { timeout: 4000, message: 'next question or Next' });
-      if (btns(root, /^(Next|Finish)$/).length) break;
-      if (nextQ().length) { await nextQ()[0].click(); await tick(40); continue; }
-      const opts = live(); assert.ok(opts.length >= 2 && opts.length <= 3, 'a check has 2 or 3 choices');
-      await opts[0].click(); await tick(40);
+    await waitFor(() => byId('fd-continue'), { timeout: 4000, message: 'learn screen Continue' });
+    await byId('fd-continue').click(); await tick(40);
+    for (let guard = 0; guard < 4; guard++) {
+      if (byId('fd-continue') && new RegExp(`Step ${step + 1} of 5`).test(root.textContent)) break;
+      if (/Five wins/.test(root.textContent)) break;
+      const check = byId('fd-check');
+      if (check) {
+        assert.ok('disabled' in check.attrs, 'Check stays grey until a card is picked');
+        const opts = root.queryAll('.fd-check button').filter((b) => !('disabled' in b.attrs));
+        assert.ok(opts.length >= 2 && opts.length <= 3, 'a check has 2 or 3 choices');
+        await opts[0].click(); await tick(20);
+        assert.ok(!('disabled' in byId('fd-check').attrs), 'picking a card turns Check on');
+        await byId('fd-check').click(); await tick(40);
+      }
+      const nextQ = byId('fd-next-q'), next = byId('fd-next');
+      if (next) { assert.match(root.textContent, new RegExp(`Win ${step} of 5`)); await next.click(); await tick(60); break; }
+      if (nextQ) { await nextQ.click(); await tick(40); continue; }
     }
-    assert.match(root.textContent, new RegExp(`Win ${step} of 5`));
-    await btns(root, /^(Next|Finish)$/)[0].click(); await tick(60);
   }
   await waitFor(() => /Five wins/.test(root.textContent));
   const prog = store.m['firstday.progress'];

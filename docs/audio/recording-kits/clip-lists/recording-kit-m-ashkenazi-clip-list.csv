@@ -1,7 +1,4 @@
 id,kind,pointed_hebrew,take_ok
-"h53c53bdf","word","חָדָשׁ",""
-"h1eeebe32","word","פָּשַׁט",""
-"h3e5d0f9c","word","תְּקוּפָה",""
 "r09-w4","word","רָם",""
 "ha3cf2c46","word","הִוָּה",""
 "h70669df5","word","בָּרוּךְ",""
@@ -133,6 +130,7 @@ id,kind,pointed_hebrew,take_ok
 "h1be64280","word","נָא",""
 "h8eec7f08","word","אָנֹכִי",""
 "h168cf034","word","חֹדֶשׁ",""
+"h53c53bdf","word","חָדָשׁ",""
 "h78d6aa81","word","שָׂמַח",""
 "heb070da2","word","קָנָה",""
 "hc9977e17","word","יָצַר",""
@@ -580,6 +578,7 @@ id,kind,pointed_hebrew,take_ok
 "hef13f241","word","גִּלָּה",""
 "h84ac4111","word","שָׂרָה",""
 "h68cc83f7","word","טָמֵא",""
+"h1eeebe32","word","פָּשַׁט",""
 "hdf8bcf60","word","תׇּכְנִית",""
 "h57ed7970","word","מְעַט",""
 "h54cf41d4","word","פָּחוֹת",""
@@ -699,3 +698,4 @@ id,kind,pointed_hebrew,take_ok
 "h07aab9ea","word","מַלְאָךְ",""
 "h9790d078","word","מָתוֹק",""
 "hc33f7702","word","מוֹחַ",""
+"hb65cf584","word","צוּרָה",""

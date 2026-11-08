@@ -22,7 +22,9 @@ for (const slot of SLOTS) {
     const text = fs.readFileSync(path.join(root, DIR, `recording-kit-${slot}-clip-list.csv`), 'utf8');
     assert.equal(text.split('\n')[0], COLS.join(','));
     const rows = parseCsv(text);
-    assert.ok(rows.length > 0 && rows.length <= TARGET);
+    assert.ok(rows.length <= TARGET);
+    const stillMissing = cov.filter((c) => c.voice === voice && c.tradition === tradition).reduce((n, c) => n + c.missing, 0);
+    if (stillMissing > 0) assert.ok(rows.length > 0, `${slot}: ${stillMissing} clips missing but the list is empty`);
     const seen = new Set();
     for (const r of rows) {
       const e = byKey.get(`${voice}|${tradition}|${r.kind}|${r.id}`);

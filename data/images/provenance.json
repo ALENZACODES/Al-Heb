@@ -63640,6 +63640,438 @@
    },
    "flags": [],
    "humanApproved": true
+  },
+  "CTX_food_01": {
+   "id": "CTX_food_01",
+   "file": "CTX_food_01.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 1 of 10: A falafel being assembled at a stall counter. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "3e6414b6d64a7d586805ec1ad0ba79d078a18223cc9ebc05b7ecd47d3a1ccfa6",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_food_01.png",
+   "sourceFileDate": "2026-11-08T05:24:36.700Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "8515e3d63a6ed43a7eb0deab5e1969f41c1ceffe048ef046bb5983400260d0df",
+   "originalFormat": "PNG",
+   "originalBytes": 1773468,
+   "originalFile": "CTX_food_01.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_01.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 73000
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_food_01.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 161070
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_02": {
+   "id": "CTX_food_02",
+   "file": "CTX_food_02.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 2 of 10: shakshuka served in its pan at a table. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "5a03b8864d643080d8fda43f51509c469d453f36c1552fcc0f22292548982f57",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_food_02.png",
+   "sourceFileDate": "2026-11-08T05:25:03.972Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "7a9eaa9ac07a944c2d3ed385dfd26630ef4f8c6a756930bd1512cac6c963462e",
+   "originalFormat": "PNG",
+   "originalBytes": 1727514,
+   "originalFile": "CTX_food_02.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_02.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 73130
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_food_02.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 162038
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_03": {
+   "id": "CTX_food_03",
+   "file": "CTX_food_03.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 3 of 10: a sabich-style stuffed pita held in two hands over a market crate. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "78eb9f1c9444b228dd37acd20a1fd9a4a0e8db2030f3d5c86a9f93ba8c70d985",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_food_03.png",
+   "sourceFileDate": "2026-11-08T05:25:31.788Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "d818cab1d7b26c12acdea1b134dae4c84336c23a6ae0a645783c984a180dc4dd",
+   "originalFormat": "PNG",
+   "originalBytes": 1766907,
+   "originalFile": "CTX_food_03.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_03.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 73050
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_food_03.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 162856
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "CTX_food_04": {
+   "id": "CTX_food_04",
+   "file": "CTX_food_04.png",
+   "command": 230,
+   "set": "Food in context",
+   "block": "Q",
+   "prompt": "Command 230 (Food in context): A falafel being assembled at a stall counter; shakshuka served in its pan at a table; a sabich-style stuffed pita held in two hands over a market crate; soup with dumplings steaming at a family table; a mezze spread seen from above (many small bowls); olives in oil on a bakery counter; a pomegranate being opened over a bowl, seeds falling; halvah blocks stacked at a market stall; a mint-tea glass on a saucer by a window; a Friday pot of slow stew on a low flame (steam, warm light). Image 4 of 10: soup with dumplings steaming at a family table. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "7f4a98dc70a9505301fa7563d596054b1ebf3a729d116da42fe745870fdcf224",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_food_04.png",
+   "sourceFileDate": "2026-11-08T05:25:48.647Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "9a79bcaf617fe4232f45789a400c8ba54aeda9398f370e60d82815e4bf40ad06",
+   "originalFormat": "PNG",
+   "originalBytes": 1892196,
+   "originalFile": "CTX_food_04.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_food_04.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 84868
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_food_04.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 197212
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "CTX_house_02": {
+   "id": "CTX_house_02",
+   "file": "CTX_house_02.png",
+   "command": 232,
+   "set": "House in context",
+   "block": "Q",
+   "prompt": "Command 232 (House in context): A key turning in a front-door lock; a balcony with plants and a chair at evening; stairs in an old stone building with a cat asleep on a step; a roof terrace with a water tank and a view; a kitchen in morning chaos (kettle, bread, school bag); a bathroom shelf with towels and a small plant; a mezuzah angled on a doorpost, hand touching it; a shuttered window during a midday heat rest; a shared courtyard with bicycles and a bench; a moving day — boxes stacked in a small living room, one plant on top. Image 2 of 10: a balcony with plants and a chair at evening. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "ff1ebd65b454e0dd970661bb34818554856ced61d19780cac2e147c84849cc04",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_house_02.png",
+   "sourceFileDate": "2026-11-08T05:26:30.125Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "54ecbad4ed88081a8e47b8c12fc3081f58d66ff5e856b6691b835494b46443b8",
+   "originalFormat": "PNG",
+   "originalBytes": 1805022,
+   "originalFile": "CTX_house_02.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_house_02.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 78736
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_house_02.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 186912
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "CTX_house_03": {
+   "id": "CTX_house_03",
+   "file": "CTX_house_03.png",
+   "command": 232,
+   "set": "House in context",
+   "block": "Q",
+   "prompt": "Command 232 (House in context): A key turning in a front-door lock; a balcony with plants and a chair at evening; stairs in an old stone building with a cat asleep on a step; a roof terrace with a water tank and a view; a kitchen in morning chaos (kettle, bread, school bag); a bathroom shelf with towels and a small plant; a mezuzah angled on a doorpost, hand touching it; a shuttered window during a midday heat rest; a shared courtyard with bicycles and a bench; a moving day — boxes stacked in a small living room, one plant on top. Image 3 of 10: stairs in an old stone building with a cat asleep on a step. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "8e7a587d0eadb6850212a28dd562fc9920dcbb0092f5030c6635ca13954b36b7",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "CTX_house_03.png",
+   "sourceFileDate": "2026-11-08T05:26:50.545Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "b6b187de3457050451e1147337d2d5e926762f5e8daf986cf9bb09437d8c73c8",
+   "originalFormat": "PNG",
+   "originalBytes": 1805822,
+   "originalFile": "CTX_house_03.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "CTX_house_03.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 80500
+    },
+    {
+     "edge": 1600,
+     "file": "CTX_house_03.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 182120
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "PLACE_seasons_07": {
+   "id": "PLACE_seasons_07",
+   "file": "PLACE_seasons_07.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 7 of 10: winter snow on the northern hills with a single red-roof house. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "f0cee7c9d687999d66b723525b8890c219c16e67a6c3a1649da50398868d510f",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "PLACE_seasons_07.png",
+   "sourceFileDate": "2026-11-08T05:23:40.718Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "62958abade3ae91ffd7e56ebe91dc53cca7549a472bed739b7affc8a10b5dd11",
+   "originalFormat": "PNG",
+   "originalBytes": 1607745,
+   "originalFile": "PLACE_seasons_07.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "PLACE_seasons_07.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 56332
+    },
+    {
+     "edge": 1600,
+     "file": "PLACE_seasons_07.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 117428
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
+  },
+  "PLACE_seasons_08": {
+   "id": "PLACE_seasons_08",
+   "file": "PLACE_seasons_08.png",
+   "command": 209,
+   "set": "Seasons of the land",
+   "block": "N",
+   "prompt": "Command 209 (Seasons of the land): Almond blossom hills in late winter; red anemones carpeting a field in spring; a wheat field gold before harvest; summer — cicada-hot dry hills and one green oasis; the first rain darkening Jerusalem stone; autumn vineyards turning red and gold; winter snow on the northern hills with a single red-roof house; a storm sea at the Jaffa wall; migrating birds in V-formations over a valley at dawn; the land at rest — an empty field under a huge sky in the seventh-year mood (fallow, peaceful, one tree). After command 209, print the 100-place index: set, place name, file — for the app's atlas page. Image 8 of 10: a storm sea at the Jaffa wall. Wide 1792x1024. No text of any kind anywhere in the image.",
+   "promptSha256": "28bf8c4090493ccd129d885a5fc56ab72644cebf0d2e4673eba9dc339920c5cb",
+   "tool": "OpenAI built-in imagegen",
+   "model": null,
+   "ingestedAt": "2026-11-08T05:27:07.723Z",
+   "sourceFile": "PLACE_seasons_08.png",
+   "sourceFileDate": "2026-11-08T05:24:09.740Z",
+   "matchedBy": "exact-name",
+   "originalSha256": "891851c08b8b49d969b674c097ce40f992dd5cae53be28a82a54e667c8d12e7d",
+   "originalFormat": "PNG",
+   "originalBytes": 1759021,
+   "originalFile": "PLACE_seasons_08.png",
+   "width": 1659,
+   "height": 948,
+   "expected": {
+    "w": 1792,
+    "h": 1024
+   },
+   "aspect": "exact",
+   "hasAlpha": false,
+   "c2paMarker": true,
+   "metadataStripped": true,
+   "iccConvertedToSrgb": false,
+   "variants": [
+    {
+     "edge": 800,
+     "file": "PLACE_seasons_08.800.webp",
+     "width": 800,
+     "height": 457,
+     "bytes": 80172
+    },
+    {
+     "edge": 1600,
+     "file": "PLACE_seasons_08.1600.webp",
+     "width": 1600,
+     "height": 914,
+     "bytes": 181976
+    }
+   ],
+   "ocr": {
+    "ran": false,
+    "reason": "disabled"
+   },
+   "flags": [
+    "ocr_not_run"
+   ],
+   "humanApproved": true
   }
  }
 }

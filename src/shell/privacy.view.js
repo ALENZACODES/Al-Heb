@@ -32,7 +32,7 @@ export const STORE_KEYS = [
   ['profile.v1', 'When your profile record was created and by which screen', 'src/firstday/minuteone.view.js'],
   ['alef:opening-prayer:last:v1', 'Opening prayer: which prayer was shown last', 'src/shell/prayer-veil.js'],
   ['alef:opening-prayer:seen:v1', 'Opening prayer: that the opening screen has been seen', 'src/shell/prayer-veil.js'],
-  ['alef:opening-prayer:listens:v1', 'Opening prayer: how many times it was heard (read by Awards)', 'src/shell/prayer-veil.js'],
+  ['alef:opening-prayer:listens:v1', 'Opening prayer: how many clips finished playing on this device (read by Awards; not an audibility check)', 'src/shell/prayer-veil.js'],
   ['alef:settings', 'The settings record, read before the app boots for the voice choice and audio-free flag (same data as settings)', 'src/shell/prayer-veil.js'],
   ['games.bumperverbs.v1', 'Game: best score, plays and stars', 'src/games/bumperverbs.view.js'],
   ['games.echochamber.v1', 'Game: best score, plays and stars', 'src/games/echochamber.view.js'],

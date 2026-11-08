@@ -38,3 +38,11 @@ Same driver. Each line is one fresh profile.
 - Geometry: at 320 px Listen sits at y 631 to 671 and Skip at y 680 to 721 (no overlap); at 360 px they share the row without overlapping; `elementFromPoint` 4 px inside Listen's right edge is Listen at both widths.
 
 Honest limits: headless Linux Chromium with muted output; no real phone, no iOS Safari, no check of the silent switch or of a stale service-worker cache on the live site.
+
+## Completion-credit correction — 8 November 2026
+
+The earlier report accurately describes the previous implementation, which credited the Prayer Voice medallion when `play()` resolved. That is **not** evidence that a clip was heard or even played to the end: a learner may skip it, close the overlay or have a silent device.
+
+The proposed QA correction credits a prayer **only after the media element reports `ended`**, once per opening. A successful `play()` alone, early Skip/Close and failed playback do not earn credit. The existing local-storage key remains unchanged for continuity; already-saved counts may include starts made by earlier versions and cannot safely be reinterpreted as verified completions. Awards and privacy wording now describe reported completion rather than human hearing. No recordings, Hebrew text, images, voice assets or source licences were changed.
+
+This is a draft branch-only correction. It requires a genuine full-checkout precache generation, project unit/browser CI, and phone/audio verification before any release. An `ended` signal confirms media completion, not whether the learner could hear it.

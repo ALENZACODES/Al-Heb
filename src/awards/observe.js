@@ -103,9 +103,10 @@ export function observeFirstAttempt(store) {
 }
 
 /**
- * Opening prayers actually heard. The prayer veil counts a tap only after
- * playback starts, in a raw localStorage key; through the shared store that
- * is this key, and the stored value parses as a plain count.
+ * Opening-prayer clips reported as finished by the media element. The veil
+ * writes a count to localStorage, which the shared store reads here. Completion
+ * does not establish that a person heard the sound. Counts saved before the
+ * November 2026 correction may include earlier playback starts.
  */
 export const PRAYER_LISTEN_STORE_KEY = 'opening-prayer:listens:v1';
 

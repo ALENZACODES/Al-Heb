@@ -44,8 +44,8 @@ test('opening card has a hard timeout, skip controls and ready signal before the
   // counting from render alone ate the dwell (owner report, Nov 7 2026).
   assert.match(src, /rendered && readySeen && !holding && !closed/);
   assert.match(src, /rendered = true;\s*\n\s*arm\(\);/);
-  // A started Listen play counts toward the prayer-voice medallion; a failed
-  // play never counts.
+  // Only a completed clip counts toward the prayer-voice medallion; a mere
+  // start, cancelled play or failed play never counts.
   assert.match(src, /LISTEN_COUNT_KEY/);
   assert.match(src, /p\.then\(\(\) => \{\s*\n\s*\/\/ Playback started/);
   assert.match(src, /prefers-reduced-motion/);
@@ -87,9 +87,12 @@ test('veil autoplay: the clip starts as the prayer renders; a policy refusal ask
   assert.match(src, /veil\.addEventListener\('pointerdown', onFirstGesture\)/);
   assert.match(src, /if \(Date\.now\(\) < swallowClickUntil\)/);
   // the veil holds while the clip plays and closes 1 s after it ends
-  assert.match(src, /audio\.onended = \(\) => \{ setAudioState\('idle'\); releaseAfter\(1000\); \}/);
-  // the listen count moves once per prayer, only after play() resolved
-  assert.match(src, /if \(!counted\) \{ counted = true;/);
+  assert.match(src, /audio\.onended = \(\) => \{[\s\S]*?creditCompletedPlayback\(\);[\s\S]*?releaseAfter\(1000\);/);
+  assert.match(src, /if \(closed \|\| thisAttemptEnded \|\| !thisAttemptStarted\) return;/);
+  assert.match(src, /if \(closed \|\| counted\) return;/);
+  // play() resolves before a clip finishes and must not award credit.
+  const started = src.slice(src.indexOf('const started ='), src.indexOf('const failed ='));
+  assert.doesNotMatch(started, /creditCompletedPlayback|LISTEN_COUNT_KEY/);
   // the audio-free setting and the opt-out are still honoured before any clip is touched
   assert.match(src, /prefs\.audioFree \? null : prayerAudioPath/);
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');

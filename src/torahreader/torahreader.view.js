@@ -17,6 +17,7 @@ import { loadAll, loadJson, loadTorahIndex, loadTorahChapter, loadTorahManifest 
 import { uiEnglish } from '../shell/names.js';
 import { calmOn } from '../shell/comfort.js';
 import { createFingerGuide, FINGER_CSS } from './finger-follow.js';
+import { fileLabel } from '../shell/audio-labels.js';
 import { playLine, LABELS as TRAD_LABELS } from '../pronunciation/forTradition.js';
 import { parshaOnShabbat } from '../curriculum/calendar.parsha.js';
 import { saturdayOnOrAfter } from '../curriculum/calendar.js';
@@ -123,6 +124,7 @@ export function mount(root, ctx) {
   const load = ctx?.loadJson || loadJson;
   let torah = null, torahManifest = [], chapterData = null, chapterKey = '', weekPortion = undefined, calendarPrefsRaw = null;
   let chapterPlay = null, targetVerse = null;
+  let chapterRequest = 0, chapterActive = false;
   const chapterRows = new Map(), shownTranslit = new Set();
   const fingerGuide = createFingerGuide({ clock, calm: () => calmOn(ctx), announce: (text) => say(text), redraw: () => render() });
   const say = (t) => { status.textContent = t; };
@@ -210,7 +212,12 @@ export function mount(root, ctx) {
   }
 
   // ---------- full-Torah chapter audio ----------
-  function stopChapterAudio() {
+  function stopChapterAudio(cancelPlayback = true) {
+    if (cancelPlayback) {
+      chapterRequest++;
+      if (chapterActive) { try { ctx?.audio?.stop?.(); } catch { /* optional */ } }
+      chapterActive = false;
+    }
     if (chapterPlay) { try { clock.clearInterval(chapterPlay.timer); } catch { /* ignore */ } chapterPlay = null; }
     for (const row of chapterRows.values()) { row.className = row.className.replace(' trd-playing', ''); row.setAttribute('aria-current', 'false'); }
   }
@@ -228,6 +235,8 @@ export function mount(root, ctx) {
   async function playChapter(lang) {
     if (!chapterData || !ctx?.audio || typeof ctx.audio.play !== 'function') { say('No audio for this chapter: this build has no audio player.'); return; }
     stopTimer(); stopChapterAudio();
+    const request = ++chapterRequest, chapterRef = chapterData.ref;
+    chapterActive = true;
     const kind = torahChapterKind(lang), id = torahChapterId(state.book, state.chapter, lang);
     const text = lang === 'en' ? chapterData.verses.map((v) => v.en).join(' ') : spokenText(chapterData.verses.map((v) => v.he).join(' '));
     // Chapter-only recordings have a measured total duration but no verse timestamps.
@@ -237,17 +246,25 @@ export function mount(root, ctx) {
       const timer = clock.setInterval(() => {
         const p = chapterPosition(chapterData.verses, lang, voiceOf(), Date.now() - started);
         if (p) markPlaying(p.verse);
-        if (p?.ended) stopChapterAudio();
+        if (p?.ended) stopChapterAudio(false);
       }, 250);
       chapterPlay = { lang, timer };
       markPlaying(chapterData.verses[0].n);
     }
     try {
       const r = await ctx.audio.play(kind, id, { text, tradition: lang === 'en' ? 'english' : 'israeli' });
-      if (!alive) return;
-      stopChapterAudio();
-      say(playLine(r, tradition(), `${chapterData.ref} read aloud`));
-    } catch (e) { stopChapterAudio(); say(`Audio error for ${chapterData.ref}: ${e?.message || e}`); }
+      if (!alive || request !== chapterRequest) return;
+      chapterActive = false; stopChapterAudio(false);
+      if (r?.stopped) { say('Chapter audio stopped.'); return; }
+      if (lang === 'en') {
+        say(r?.source === 'file'
+          ? `${chapterRef} English reading finished. ${fileLabel(r.entryStatus, 'english', r.entrySource)}.`
+          : `The English recording for ${chapterRef} is unavailable.`);
+      } else say(playLine(r, 'israeli', `${chapterRef} read aloud`));
+    } catch (e) {
+      if (!alive || request !== chapterRequest) return;
+      chapterActive = false; stopChapterAudio(false); say(`Audio error for ${chapterRef}: ${e?.message || e}`);
+    }
   }
   async function playTorahVerse(v) {
     stopChapterAudio();

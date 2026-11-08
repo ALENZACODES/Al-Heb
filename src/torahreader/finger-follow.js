@@ -5,8 +5,9 @@ export const FINGER_CSS = `
 .alef-trd .trd-finger-panel p{margin:.25rem 0}
 .alef-trd .trd-finger-word{border-radius:.2em}
 .alef-trd .trd-finger-on{touch-action:pinch-zoom;user-select:none;-webkit-user-select:none}
-.alef-trd .trd-finger-on .trd-finger-word{cursor:pointer;display:inline-block;min-block-size:44px;padding:.08em .03em;scroll-margin-block:5rem}
-.alef-trd .trd-finger-word[aria-current="true"]{background:var(--hl,#ffe9a8);color:var(--hl-ink,#000);outline:3px solid currentColor;outline-offset:2px;text-decoration:underline;text-underline-offset:.3em}
+.alef-trd .trd-finger-on .trd-finger-word{position:relative;cursor:pointer;display:inline-block;min-block-size:44px;padding:.08em .08em .65em;scroll-margin-block:5rem}
+.alef-trd .trd-finger-word[aria-current="true"]{background:var(--hl,#ffe9a8);color:var(--hl-ink,#000);outline:3px solid currentColor;outline-offset:2px}
+.alef-trd .trd-finger-word[aria-current="true"]::after{content:'☝';position:absolute;inset-block-end:0;left:50%;transform:translateX(-50%);font-size:.6em;line-height:1;pointer-events:none}
 .alef-trd .trd-finger-word:focus-visible{outline:3px dashed currentColor}
 `;
 

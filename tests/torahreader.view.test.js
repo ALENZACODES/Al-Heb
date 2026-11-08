@@ -431,6 +431,7 @@ test('phone finger guide preserves source words and follows touch, keyboard and 
   assert.deepEqual(root.queryAll('.trd-hebrew').map((p) => p.textContent), original, 'spacing, niqqud and trope remain unchanged');
   const ws = root.queryAll('.trd-finger-word');
   assert.ok(ws.length > 100); assert.equal(sel(root, '.trd-finger-toggle').attrs['aria-pressed'], 'true');
+  assert.match(sel(root, '.trd-finger-position').textContent, new RegExp(`Word 1 of ${ws.length}`));
   assert.equal(sel(root, '.trd-hebrew').attrs.dir, 'rtl');
   const box = sel(root, '.trd-chapter-verses');
   await box.fire('pointerdown', { target: ws[2], pointerId: 7, isPrimary: true, button: 0 });
@@ -461,9 +462,32 @@ test('finger guide stops on navigation and can be switched off for normal scroll
   await sel(root, '.trd-finger-run').click();
   await sel(root, '.trd-next-ch').click(); await tick();
   assert.equal(clock.timers.size, 0); assert.equal(root.queryAll('.trd-finger-word')[0].attrs['aria-current'], 'true');
+  assert.match(sel(root, '.trd-finger-position').textContent, new RegExp(`Word 1 of ${root.queryAll('.trd-finger-word').length}`));
   const text = sel(root, '.trd-hebrew').textContent;
   await sel(root, '.trd-finger-toggle').click();
   assert.equal(root.queryAll('.trd-finger-word').length, 0);
   assert.equal(root.queryAll('.trd-finger-on').length, 0);
   assert.equal(sel(root, '.trd-hebrew').textContent, text);
+});
+
+test('English chapter Stop and navigation invalidate late audio status and stop the actual player', async () => {
+  const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+    ? [{ kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice: 'm', tradition: 'english', status: 'tts' }]
+    : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+  let release, stops = 0;
+  const { root } = await make({ stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson,
+    audio: { play: () => new Promise(resolve => { release = resolve; }), stop: () => { stops++; } } });
+  let playing = sel(root, '.trd-play-chapter').click(); await tick();
+  await sel(root, '.trd-stop-chapter').click();
+  release({source:'file',entryStatus:'tts',stopped:true}); await playing;
+  assert.equal(status(root), 'Chapter audio stopped.'); assert.ok(stops > 0);
+  playing = sel(root, '.trd-play-chapter').click(); await tick();
+  release({source:'file',entryStatus:'tts',ended:true}); await playing;
+  assert.match(status(root), /Genesis 1 English reading finished/); assert.match(status(root), /Synthetic English voice/);
+  assert.doesNotMatch(status(root), /Israeli|Playing/);
+  playing = sel(root, '.trd-play-chapter').click(); await tick();
+  const before = stops; await sel(root, '.trd-next-ch').click(); await tick();
+  const afterNavigation = status(root); assert.ok(stops > before, 'navigation stops actual audio');
+  release({source:'file',entryStatus:'tts',ended:true}); await playing;
+  assert.equal(status(root), afterNavigation, 'old chapter completion cannot change the new chapter status');
 });

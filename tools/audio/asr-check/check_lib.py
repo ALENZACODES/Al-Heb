@@ -84,10 +84,15 @@ CONS_VAV = re.compile('(?<=[\u05D0-\u05EA\u0591-\u05C7])' + V + '(?=[\u05BC]?[\u
 SILENT_ALEPH = re.compile('(?<=[\u05B0-\u05C7])\u05D0(?=[\u05D0-\u05EA])')
 
 
-def core(s, drop_silent_aleph=False):
+SIN = re.compile('\u05E9(?=[\u05B0-\u05C7]*\u05C2)')  # ש carrying the sin dot
+
+
+def core(s, drop_silent_aleph=False, sin_as_samekh=False):
     s = str(s)
     if re.search('[\u05B0-\u05BC]', s):  # pointed text (the expected word): apply the sound rules above
         s = CONS_VAV.sub('ב', s)
+        if sin_as_samekh:  # sin sounds like samekh, so the model may spell it ס (שַׂ heard as 'סה')
+            s = SIN.sub('ס', s)
         if drop_silent_aleph:
             s = SILENT_ALEPH.sub('', s)
     else:  # what the model heard: a doubled vav is the consonant v
@@ -105,7 +110,8 @@ def score(expected_hebrew, heard):
         return 'digits'  # the model wrote a number as digits: not checkable by spelling
     b = core(heard)
     best = 0.0
-    for a in {core(expected_hebrew), core(expected_hebrew, drop_silent_aleph=True)}:  # a silent aleph may be written or not
+    alts = {core(expected_hebrew, drop_silent_aleph=d, sin_as_samekh=z) for d in (False, True) for z in (False, True)}
+    for a in alts:  # a silent aleph may be written or not; a sin may be spelled ש or ס
         r = (1.0 if a == b else 0.0) if not a or not b else difflib.SequenceMatcher(None, a, b).ratio()
         best = max(best, r)
     return round(best, 3)

@@ -19,15 +19,38 @@ test('azure request: SSML he-IL voice, key header, escaped text', () => {
   assert.throws(() => azure.buildRequest({ text: TEXT, voice: 'm', env: {} }), /AZURE_SPEECH_KEY/);
   assert.match(azure.buildRequest({ text: TEXT, voice: 'm', env: { AZURE_SPEECH_KEY: 'k', AZURE_SPEECH_REGION: 'x' } }).body, /AvriNeural/);
 });
-test('google request: he-IL, pointed plain text, no phoneme/custom pronunciation payload', () => {
+test('google request: he-IL, pointed plain text, approved Israeli WaveNet voices, no phoneme/custom pronunciation payload', () => {
   const r = google.buildRequest({ text: TEXT, voice: 'm', env: { GOOGLE_TTS_API_KEY: 'k' } });
   const b = JSON.parse(r.body);
-  assert.deepEqual(b.input, { text: TEXT }); assert.equal(b.voice.languageCode, 'he-IL'); assert.match(b.voice.name, /Chirp3-HD/);
+  assert.deepEqual(b.input, { text: TEXT }); assert.equal(b.voice.languageCode, 'he-IL'); assert.equal(b.voice.name, 'he-IL-Wavenet-B');
+  assert.equal(JSON.parse(google.buildRequest({ text: TEXT, voice: 'f', env: { GOOGLE_TTS_API_KEY: 'k' } }).body).voice.name, 'he-IL-Wavenet-A');
   assert.ok(!r.body.includes('customPronunciations') && !r.body.includes('<phoneme'));
   assert.equal(r.headers['X-Goog-Api-Key'], 'k');
   const s = google.buildRequest({ text: TEXT, voice: 'f', ssml: true, env: { GOOGLE_TTS_ACCESS_TOKEN: 't' } });
-  assert.equal(s.headers.Authorization, 'Bearer t'); assert.equal(s.billedChars, `<speak>${TEXT}</speak>`.length);
+  assert.equal(s.headers.Authorization, 'Bearer t'); assert.equal(s.billedChars, [...TEXT].length);
   assert.throws(() => google.buildRequest({ text: TEXT, voice: 'm', env: {} }), /GOOGLE_TTS/);
+});
+test('google: the multilingual HD voices are refused unless asked for by name', () => {
+  const env = { GOOGLE_TTS_API_KEY: 'k' };
+  assert.throws(() => google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Charon' }), /not an approved Israeli Hebrew voice/);
+  assert.throws(() => google.buildRequest({ text: TEXT, voice: 'm', env: { ...env, GOOGLE_TTS_VOICE_M: 'he-IL-Chirp3-HD-Charon' } }), /not an approved/);
+  const ok = google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Charon', allowHd: true });
+  assert.equal(ok.usdPerMillionChars, 30); assert.equal(google.pricePerMillionChars, 16);
+  assert.ok(!('speakingRate' in JSON.parse(google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Kore', allowHd: true, speakingRate: 0.9 }).body).audioConfig));
+  assert.equal(JSON.parse(google.buildRequest({ text: TEXT, voice: 'm', env, speakingRate: 0.9 }).body).audioConfig.speakingRate, 0.9);
+});
+test('google: the text is cleaned before it is spoken (sof pasuq, maqaf, cantillation go; vowels and shin dot stay)', () => {
+  assert.equal(google.cleanHebrewForTts('יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃'), 'יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם');
+  assert.equal(google.cleanHebrewForTts('בְּכָל־לְבָבְךָ'), 'בְּכָל לְבָבְךָ');
+  assert.equal(google.cleanHebrewForTts('וְאָֽהַבְתָּ֖'), 'וְאָהַבְתָּ'); // meteg and tipcha removed
+  assert.equal(google.cleanHebrewForTts('מַה שְׁלוֹמְךָ?'), 'מַה שְׁלוֹמְךָ?');
+  assert.equal(google.cleanHebrewForTts('שָׁלוֹם'), 'שָׁלוֹם'); // unchanged
+  const r = google.buildRequest({ text: 'שָׁלוֹם׃', voice: 'm', env: { GOOGLE_TTS_API_KEY: 'k' } });
+  assert.equal(JSON.parse(r.body).input.text, 'שָׁלוֹם'); assert.equal(r.spokenText, 'שָׁלוֹם'); assert.equal(r.billedChars, [...'שָׁלוֹם'].length);
+  assert.deepEqual(google.textWarnings('שָׁלוֹם'), []);
+  assert.match(google.textWarnings('שלום')[0], /without vowel points/);
+  assert.match(google.textWarnings('הָאוֹת אָלֶף. tilted X')[0], /Latin/);
+  assert.deepEqual(google.textWarnings('א'), []); // a bare letter name is fine
 });
 test('elevenlabs request: v3 with language_code he, voice ids from env only', () => {
   const r = eleven.buildRequest({ text: TEXT, voice: 'f', env: { ELEVENLABS_API_KEY: 'k', ELEVENLABS_VOICE_F: 'VF' } });
@@ -54,7 +77,7 @@ test('selection: default kinds exclude letters/vowels, skip already-present, ref
 });
 test('estimate counts code points and prices from notes', () => {
   const e = estimate(selectEntries(manifest, { voice: 'm' }), google);
-  assert.equal(e.chars, [...'שָׁלוֹם'].length); assert.ok(Math.abs(e.usd - (e.chars / 1e6) * 30) < 1e-12);
+  assert.equal(e.chars, [...'שָׁלוֹם'].length); assert.ok(Math.abs(e.usd - (e.chars / 1e6) * 16) < 1e-12);
   assert.match(PRICE_LABEL, /list price verified on fetched pages 2026-11-03/);
 });
 test('renderBatch writes file + tts meta (fake fetch, temp dir, no network)', async () => {

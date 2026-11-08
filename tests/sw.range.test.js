@@ -26,7 +26,7 @@ function fakeCache() {
   };
 }
 
-function boot({ fetchImpl } = {}) {
+function boot({ fetchImpl, online = false } = {}) {
   const listeners = {}; const store = new Map(); const netCalls = [];
   const caches = {
     async open(n) { if (!store.has(n)) store.set(n, fakeCache()); return store.get(n); },
@@ -34,7 +34,7 @@ function boot({ fetchImpl } = {}) {
     async delete(n) { return store.delete(n); },
     async match(r) { for (const c of store.values()) { const h = await c.match(r); if (h) return h; } return undefined; },
   };
-  const self = { ALEF_VERSION: 'v2', ALEF_PRECACHE: ['index.html'], location: { origin: 'https://alef.test' }, addEventListener(t, f) { (listeners[t] ||= []).push(f); }, skipWaiting: async () => {}, clients: { claim: async () => {} }, caches };
+  const self = { ALEF_VERSION: 'v2', ALEF_PRECACHE: ['index.html'], location: { origin: 'https://alef.test' }, ...(online ? { navigator: { onLine: true } } : {}), addEventListener(t, f) { (listeners[t] ||= []).push(f); }, skipWaiting: async () => {}, clients: { claim: async () => {} }, caches };
   const net = async (req, ...rest) => { netCalls.push({ url: typeof req === 'string' ? req : req.url, range: typeof req === 'string' ? null : req.headers.get('range') }); return (fetchImpl || (async () => { throw new TypeError('offline'); }))(req, ...rest); };
   const ctx = { self, caches, importScripts() {}, fetch: net, URL, Response };
   ctx.globalThis = ctx;
@@ -174,4 +174,26 @@ test('real precache manifest: no audio clip and no audio file of any kind is ins
   const list = JSON.parse(/ALEF_PRECACHE = (\[[\s\S]*?\]);/.exec(m)[1]);
   assert.ok(list.length > 100);
   assert.deepEqual(list.filter((f) => /^audio\//.test(f) || /\.(mp3|m4a|ogg|wav)$/i.test(f)), []);
+});
+
+test('a cached clip is revalidated once in the background while online; different host bytes replace the cached copy, same bytes do not', async () => {
+  const NEW = new Uint8Array(100).map((_, i) => 255 - i);
+  let serve = BYTES; let conditional = 0;
+  const w = boot({ online: true, fetchImpl: async (req, init) => { if (init && init.headers && (init.headers['If-None-Match'] || init.headers['If-Modified-Since'])) conditional++; return new Response(serve, { status: 200, headers: { 'content-type': 'audio/mpeg', 'content-length': '100', etag: '"x"' } }); } });
+  const c = await w.caches.open('alef-runtime-v1'); await c.put(CLIP, new Response(BYTES, { status: 200, headers: { 'content-type': 'audio/mpeg', etag: '"x"' } }));
+  const first = await w.get(CLIP, { range: 'bytes=0-' });
+  assert.equal(first.response.status, 206); assert.deepEqual(await bytesOf(first.response), [...BYTES], 'the page still gets the cached answer at once');
+  assert.equal(w.netCalls.length, 1, 'one background conditional GET'); assert.equal(conditional, 1, 'sent with If-None-Match');
+  assert.deepEqual(await bytesOf(await c.match(CLIP)), [...BYTES], 'same bytes: cache untouched');
+  await w.get(CLIP, { range: 'bytes=0-' });
+  assert.equal(w.netCalls.length, 1, 'revalidated only once per worker lifetime');
+  // a fresh worker (new lifetime) finds the host has a new rendering of the same path
+  const w2 = boot({ online: true, fetchImpl: async () => new Response(NEW, { status: 200, headers: { 'content-type': 'audio/mpeg', 'content-length': '100' } }) });
+  w2.store.set('alef-runtime-v1', w.store.get('alef-runtime-v1'));
+  const r = await w2.get(CLIP, { range: 'bytes=0-' });
+  assert.deepEqual(await bytesOf(r.response), [...BYTES], 'this play still hears the old copy');
+  assert.deepEqual(await bytesOf(await (await w2.caches.open('alef-runtime-v1')).match(CLIP)), [...NEW], 'the next play gets the new rendering');
+  // offline worker: no revalidation call at all
+  const w3 = boot(); w3.store.set('alef-runtime-v1', w.store.get('alef-runtime-v1'));
+  await w3.get(CLIP, { range: 'bytes=0-' }); assert.equal(w3.netCalls.length, 0);
 });

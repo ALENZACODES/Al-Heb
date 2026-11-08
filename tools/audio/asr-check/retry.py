@@ -99,6 +99,7 @@ def main():
     key = os.environ.get('GOOGLE_TTS_API_KEY') or sys.exit('Set GOOGLE_TTS_API_KEY first.')
     tmp = tempfile.mkdtemp(prefix='alef-retry-')
     passed = set()
+    n_passed = 0
     for n, (ln, r, takes, is_sound) in enumerate(plan, 1):
         best, tried = None, []
         for i, (name, text, rate) in enumerate(takes):
@@ -125,6 +126,7 @@ def main():
                 open(os.path.join(ROOT, p), 'wb').write(best[1])
             rec.update(kept=True, score=best[0], voice=best[2], spoken=best[3], rate=best[4], heard=best[5])
             passed.add(ln)
+            n_passed += 1
             print(f"[{n}/{len(plan)}] PASSED {r['pointed_hebrew']} -> {best[5]} ({best[2]} x{best[4]}, '{best[3]}')", flush=True)
         else:
             rec['kept'] = False
@@ -135,7 +137,7 @@ def main():
         f.write('\n'.join(ln for ln in lines if ln not in passed) + '\n')
     from fix import refresh_builder_manifest
     refresh_builder_manifest()
-    print(f'done: {len(passed)} passed, {len(plan) - len(passed)} still need a human recording')
+    print(f'done: {n_passed} passed, {len(plan) - n_passed} still need a human recording')
 
 
 if __name__ == '__main__':

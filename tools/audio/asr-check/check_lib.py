@@ -74,7 +74,7 @@ FINALS = str.maketrans('ךםןףץ', 'כמנפצ')
 # Letters that sound the same in Israeli Hebrew (ח and a soft כ are both 'kh'), and the vowel letters (ו, י) that
 # spelling adds or drops. ש and ס are NOT treated as the same (the model spells a sin word the standard way, with ש),
 # so שָׁלוֹם heard as 'שסלום' (sh-salom) fails.
-SAME = str.maketrans({'ע': 'א', 'ט': 'ת', 'ק': 'כ', 'ח': 'כ', 'ו': '', 'י': ''})
+SAME = str.maketrans({'ע': 'א', 'ט': 'ת', 'ו': '', 'י': ''})
 
 
 V = '\u05D5'
@@ -84,6 +84,8 @@ CONS_VAV = re.compile('(?<=[\u05D0-\u05EA\u0591-\u05C7])' + V + '(?=[\u05BC]?[\u
 SILENT_ALEPH = re.compile('(?<=[\u05B0-\u05C7])\u05D0(?=[\u05D0-\u05EA])')
 
 
+KAF_HARD = re.compile('[\u05DB\u05DA](?=[\u05B0-\u05BB\u05C1\u05C2\u05C7]*\u05BC)')
+KAF_SOFT = re.compile('[\u05DB\u05DA](?![\u05B0-\u05BB\u05C1\u05C2\u05C7]*\u05BC)')
 SIN = re.compile('\u05E9(?=[\u05B0-\u05C7]*\u05C2)')  # ש carrying the sin dot
 
 
@@ -91,12 +93,14 @@ def core(s, drop_silent_aleph=False, sin_as_samekh=False):
     s = str(s)
     if re.search('[\u05B0-\u05BC]', s):  # pointed text (the expected word): apply the sound rules above
         s = CONS_VAV.sub('ב', s)
+        s = KAF_HARD.sub('ק', s)   # כּ is k
+        s = KAF_SOFT.sub('ח', s)   # כ / ך without dagesh is kh, like ח
         if sin_as_samekh:  # sin sounds like samekh, so the model may spell it ס (שַׂ heard as 'סה')
             s = SIN.sub('ס', s)
         if drop_silent_aleph:
             s = SILENT_ALEPH.sub('', s)
-    else:  # what the model heard: a doubled vav is the consonant v
-        s = s.replace(V + V, 'ב')
+    else:  # what the model heard: a doubled vav is the consonant v; a final ך is always kh
+        s = s.replace(V + V, 'ב').replace('ך', 'ח')
     s = NIQQUD.sub('', s.replace('־', ' ')).translate(FINALS)
     s = re.sub(r'[^א-ת\s]', '', s)
     return ''.join(re.sub(r'[אה]$', '', w.translate(SAME)) for w in s.split())
@@ -108,12 +112,14 @@ def score(expected_hebrew, heard):
         return None
     if re.fullmatch(r'[\d\s.,:-]+', str(heard).strip()):
         return 'digits'  # the model wrote a number as digits: not checkable by spelling
-    b = core(heard)
+    b0 = core(heard)
+    heard_alts = {b0.replace('כ', 'ק'), b0.replace('כ', 'ח')}  # the model spells both k and kh with כ
     best = 0.0
     alts = {core(expected_hebrew, drop_silent_aleph=d, sin_as_samekh=z) for d in (False, True) for z in (False, True)}
     for a in alts:  # a silent aleph may be written or not; a sin may be spelled ש or ס
-        r = (1.0 if a == b else 0.0) if not a or not b else difflib.SequenceMatcher(None, a, b).ratio()
-        best = max(best, r)
+        for b in heard_alts:
+            r = (1.0 if a == b else 0.0) if not a or not b else difflib.SequenceMatcher(None, a, b).ratio()
+            best = max(best, r)
     return round(best, 3)
 
 

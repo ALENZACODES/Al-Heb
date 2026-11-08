@@ -77,14 +77,15 @@ test('home view: first run shows Today with Continue -> #/firstday; existing sec
   assert.equal(JSON.stringify(store.m), before, 'mounting Home writes nothing');
   un();
 });
-test('home view: baby-step layout for a new learner (Today card, five destinations, More; no prayer card, no streak, no tile wall)', async () => {
+test('home view: baby-step layout for a new learner (Today card, five destinations, More; no prayer card or streak)', async () => {
   const { root, ctx } = mk();
   const un = mount(root, ctx); await waitFor(() => root.querySelector('#today-continue'));
   assert.deepEqual(root.queryAll('.home-dests a').map((a) => a.attrs.href), ['#/letters', '#/vocab', '#/read', '#/progress', '#/calendar']);
   assert.ok(root.querySelector('#home-more'), 'More button');
   assert.equal(root.querySelector('.opening'), null, 'opening prayer draft card is not on a new learner Home');
   assert.equal(root.querySelector('#today-streak'), null);
-  assert.ok(root.queryAll('a').length <= 8, 'few links on first screen: ' + root.queryAll('a').length);
+  const beginnerLinks = ['#home-dests-host', '#home-today-host', '#home-rest'].flatMap(id => root.querySelector(id)?.queryAll('a') || []);
+  assert.ok(beginnerLinks.length >= 5 && beginnerLinks.length <= 8, 'beginner actions stay compact beside the separate showcase');
   un();
 });
 test('home view: a returning learner keeps the full sections; the opening prayer card only for a reading goal', async () => {
@@ -229,3 +230,4 @@ test('E: a first-run Home shows Read in the destination row under the title (not
   assert.ok(row.queryAll('a').some((a) => a.attrs.href === '#/read'), 'Read tile in the row');
   assert.match(row.textContent, /Read/); un();
 });
+

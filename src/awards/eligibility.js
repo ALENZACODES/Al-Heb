@@ -1,3 +1,4 @@
+import { reactRimon } from '../shell/rimon-events.js';
 // What may be shown as earned. Practice badges come from saved game sessions.
 // The beginner certificate uses the shipped review flag, which is not reviewed,
 // so certificateDecision does not issue. evaluateProposedCertificate is the pure
@@ -449,6 +450,7 @@ export function settleAwards(store, rubric, now) {
   const changed = !sameRecord(loaded.record, next);
   const save = changed ? writeAwards(store, next) : { saved: true, persistent: store?.persistent !== false, wrote: false };
   const record = save.saved ? (changed ? next : loaded.record) : loaded.record;
+  if (save.saved && planned.newly.length) reactRimon('stretch');
   const decision = certificateDecision(record, rubric);
   return {
     loaded,

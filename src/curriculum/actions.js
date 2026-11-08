@@ -1,3 +1,4 @@
+import { reactRimon } from '../shell/rimon-events.js';
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
 import { storeGet, storeSet, storeWriteAll, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
 import { loadState } from "./state.js";
@@ -35,6 +36,7 @@ async function planCompletion(ctx, lesson, now, applyOutcomes) {
 export async function completeLesson(ctx, lesson, now = Date.now()) {
   const { added, completed, writes } = await planCompletion(ctx, lesson, now);
   await storeWriteAll(ctx, writes);
+  reactRimon('point');
   return { added, completed };
 }
 

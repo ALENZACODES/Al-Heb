@@ -52,11 +52,10 @@ test('every games-hub card has a backdrop scene that resolves approved', () => {
   }
 });
 
-test('home hero loads Rimon when the image resolver is ready (not a sync read)', () => {
-  const src = read('src/shell/showcase.js');
-  assert.match(src, /loadGameImages\(ctx\)\.then/);
-  assert.match(src, /MASCOT_rimon/);
-  assert.doesNotMatch(src, /ctx\?\.img \? ctx\.img/);
+test('home reserves Rimon placement and the shell mounts the animated companion', () => {
+  assert.match(read('src/shell/showcase.js'), /show-mascot-box/);
+  assert.match(read('src/app.js'), /mountRimon\(\)/);
+  assert.match(read('src/shell/rimon.js'), /alef:ready/);
 });
 
 test('24 audio-first headwords use existing Israeli male and female audio indices', () => {

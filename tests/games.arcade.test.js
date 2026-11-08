@@ -1,6 +1,7 @@
 // The arcade: pure model logic, and every one of the thirty games mounting and starting a round in the fake DOM.
 // Logic and wiring checks only; nothing here is visual QA or a claim about the Hebrew.
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { Doc, El } from './wordtrace.fakedom.js';
@@ -11,7 +12,7 @@ import { STORE_KEYS } from '../src/shell/privacy.view.js';
 import { NAV_EN } from '../src/shell/nav.strings.js';
 import { SECTION_ROUTES } from '../src/shell/nav-model.js';
 
-const root = new URL('..', import.meta.url).pathname;
+const root = fileURLToPath(new URL('..', import.meta.url));
 const json = (p) => JSON.parse(readFileSync(root + p, 'utf8'));
 const words = json('data/games/firstwords.json').words;
 
@@ -94,7 +95,7 @@ function environment() {
   globalThis.cancelAnimationFrame = (id) => frames.delete(id);
   return { root: doc.createElement('main'), frames, listeners, step(t = 5000) { const batch = [...frames.values()]; frames.clear(); for (const f of batch) f(t); } };
 }
-const fetchFn = async (url) => { const p = String(url).replace(/^file:\/\//, ''); return { ok: existsSync(p), status: existsSync(p) ? 200 : 404, json: async () => JSON.parse(readFileSync(p, 'utf8')) }; };
+const fetchFn = async (url) => { const p = String(url).startsWith('file:') ? fileURLToPath(url) : String(url); return { ok: existsSync(p), status: existsSync(p) ? 200 : 404, json: async () => JSON.parse(readFileSync(p, 'utf8')) }; };
 const settings = { get: (k) => (k === 'soundEffects' ? false : undefined) };
 const flush = async (f) => { for (let n = 0; n < 300 && !f(); n++) await new Promise((r) => setTimeout(r, 5)); assert.ok(f(), 'view became ready'); };
 

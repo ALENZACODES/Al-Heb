@@ -1,4 +1,6 @@
 // ALEF boot: wires store, settings, audio, router, and lazily mounted views.
+import { mountRimon } from './shell/rimon.js';
+mountRimon();
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';

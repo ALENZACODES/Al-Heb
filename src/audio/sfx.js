@@ -1,3 +1,4 @@
+import { reactRimon } from '../shell/rimon-events.js';
 // Short, opt-in game feedback only. Never touches the Hebrew/prayer voice player.
 // Public files must be supplied separately from the licensed CC0 staging pack.
 import { mediaPolicy } from './policy.js';
@@ -123,7 +124,7 @@ export const sfx = Object.freeze({
   play(name) {
     const kind = mediaPolicy.feedbackName(name);
     mediaPolicy.observe(name);
-    if (kind) showTwin(kind);
+    if (kind) { showTwin(kind); reactRimon(kind === 'success' ? 'bounce' : kind === 'miss' ? 'sad' : 'stretch'); }
     if (!kind || !mediaPolicy.allowsSfx()) return false;
     return rawSfx.play(kind);
   },

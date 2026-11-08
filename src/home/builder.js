@@ -1,3 +1,4 @@
+import { reactRimon } from '../shell/rimon-events.js';
 import { h, heSpan } from '../shell/ui.js';
 import { createSession } from '../games/engine.js';
 import { settleAwards } from '../awards/eligibility.js';
@@ -94,7 +95,7 @@ export function builderNode(ctx = {}) {
   function place(glyph) {
     if(done || !word) return;
     const tokens=tokensFor(word,withVowels);
-    if(tokens[placed]!==glyph) { mistakes++; const needed=[...symbols.letters,...symbols.marks].find(s=>s.glyph===tokens[placed]); status.textContent='Try '+(needed?.translit || 'the next mark')+' next. You can do it.'; return; }
+    if(tokens[placed]!==glyph) { reactRimon('sad'); mistakes++; const needed=[...symbols.letters,...symbols.marks].find(s=>s.glyph===tokens[placed]); status.textContent='Try '+(needed?.translit || 'the next mark')+' next. You can do it.'; return; }
     placed++; drawSlots();
     if(placed<tokens.length) { status.textContent=`Good — ${tokens.length-placed} ${withVowels?'letters or marks':'letters'} to go.`; return; }
     done=true;

@@ -1,3 +1,4 @@
+import { reactRimon } from '../shell/rimon-events.js';
 // Arcade: the shared DOM layer for the arcade games. One contract for all of them:
 //   const A = await createArcade(root, ctx, spec); A.onRound(setupFn); A.begin();
 // It gives every game the same five levels, HUD, timer, score saver with badges, daily
@@ -137,6 +138,7 @@ export async function createArcade(root, ctx, spec) {
   function tickTimer() {
     if (untimed) { hudTime.textContent = ''; return; }
     hudTime.textContent = `⏱ ${timeLeft}s`;
+    if (timeLeft === 10) reactRimon('nervous');
     if (timeLeft <= 0) { A.finish({ reason: 'time' }); return; }
     timeLeft -= 1;
   }
@@ -153,9 +155,9 @@ export async function createArcade(root, ctx, spec) {
     get record() { return record; },
     cast: castArt,
     announce(text) { status.textContent = text; },
-    addScore(n) { score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
+    addScore(n) { if(n > 0) reactRimon('bounce'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
     setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
-    miss() { misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
+    miss() { reactRimon('sad'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
     sfx(name) { try { if (!quiet) sfx.play(name); } catch { /* sound is optional */ } },
     /** Recorded Hebrew word clip when present (never a non-Hebrew voice); the text always stays on screen. */
     async sayWord(word) {
@@ -235,6 +237,7 @@ export async function createArcade(root, ctx, spec) {
           stars >= 1 && level < 5 ? h('button', { type: 'button', class: 'btn', onclick: () => { level = Math.min(5, level + 1); renderLevels(); restart(); } }, `Level ${level + 1} →`) : null,
           next ? h('a', { class: 'btn secondary', href: `#/${next.id}` }, `Next: ${next.title}`) : null,
           h('a', { class: 'btn secondary', href: '#/games' }, 'All games'))));
+      reactRimon(streakNew.length ? 'stretch' : stars >= 2 ? 'highfive' : stars ? 'laugh' : 'sad');
       renderLevels(); renderStreak();
       status.textContent = `${why} ${score} points, ${stars} of 3 stars.`;
       try { results.querySelector('h2')?.focus?.(); } catch { /* no focus in small DOM */ }

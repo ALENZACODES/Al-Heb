@@ -321,7 +321,9 @@ test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', 
 
 test('shard loader: loads only the learner tradition, re-loads on change, falls back, handles offline', async () => {
   const { createShardLoader, OFFLINE_NOTE } = await import('../src/shell/audio-shards.js');
-  const mk = (tradition, id) => [{ voice: 'f', tradition, kind: 'word', id, text: id, status: 'tts', path: `audio/f/${tradition}/word/${id}.mp3` }];
+  // This checks shard loading, using an exact-tradition human recording fixture.
+  // Generic TTS is intentionally not accepted as an Ashkenazi recording.
+  const mk = (tradition, id) => [{ voice: 'f', tradition, kind: 'word', id, text: id, status: 'recorded', source: 'fixture-human', path: `audio/f/${tradition}/word/${id}.mp3` }];
   const shards = { israeli: mk('israeli', 'a'), ashkenazi: mk('ashkenazi', 'b') }; // no sephardi shard
   const calls = []; let offline = false;
   const fakeFetch = async (u) => {
@@ -347,6 +349,10 @@ test('shard loader: loads only the learner tradition, re-loads on change, falls 
   // sephardi: shard absent -> israeli shard already loaded, state fallback, no throw
   cong = 'sephardi'; const r = await L.load();
   assert.equal(r.state, 'fallback'); assert.equal(r.loaded, 'israeli');
+  const fallback = player.status('word', 'a', { tradition: 'sephardi' });
+  assert.equal(fallback.source, 'file');
+  assert.equal(fallback.fileTradition, 'israeli', 'the current fallback policy must disclose the played tradition');
+  assert.equal(fallback.via, 'tradition');
   // offline with nothing cached: graceful note, never throws
   const L2 = createShardLoader({ fetch: fakeFetch, audio: createAudio({ settings: { voice: 'f' }, manifest: [], speech: null }), settings: { get: () => 'ashkenazi' } });
   offline = true; const r2 = await L2.load();

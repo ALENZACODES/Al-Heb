@@ -33,7 +33,7 @@ for (const r of ROUTES) {
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => { if (m.type() === 'error') consoleErrors.push(m.text()); });
   await page.goto(base + '#' + r, { waitUntil: 'load' });
-  try { await page.waitForSelector('body[data-ready="1"]', { timeout: 8000 }); } catch { errors.push('view never became ready'); }
+  try { await page.waitForSelector('body[data-ready="1"]', { timeout: 20000 }); } catch { errors.push('view never became ready'); } // 20 s: /vocab loads a 6.7 MB word list, slow on CI runners
   await page.waitForTimeout(400);
   const info = await page.evaluate(() => {
     const main = document.getElementById('main');
@@ -57,7 +57,7 @@ for (const r of ROUTES) {
     const page = await seeded.newPage(); const errors = [];
     page.on('pageerror', (e) => errors.push(e.message));
     await page.goto(base + '#' + r, { waitUntil: 'load' });
-    try { await page.waitForSelector('body[data-ready="1"]', { timeout: 8000 }); } catch { errors.push('view never became ready'); }
+    try { await page.waitForSelector('body[data-ready="1"]', { timeout: 20000 }); } catch { errors.push('view never became ready'); } // 20 s: /vocab loads a 6.7 MB word list, slow on CI runners
     await page.waitForTimeout(500);
     const name = 'seeded_' + r.slice(1).replace(/[\/?=&]+/g, '_');
     if (r.startsWith('/spotit')) {

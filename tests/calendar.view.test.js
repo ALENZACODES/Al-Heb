@@ -204,3 +204,16 @@ test("unmount removes the view and is safe to call twice; no store and no ctx fi
   un(); un();
   assert.equal(root.children.length, 0);
 });
+
+test("on a Saturday the Today card pairs THIS Shabbat's candle lighting (yesterday) with today's havdalah, not next week's candles", async () => {
+  const store = memStore({ "calendar.prefs": { locationId: "toronto" } });
+  const root = new Node_("div");
+  // Saturday 2026-11-07, 10:00 in Toronto (15:00 UTC). Before the fix the card read "2026-11-13: 16:36" beside "2026-11-07: 17:45".
+  const un = mount(root, ctxFor({ store, now: () => new Date(Date.UTC(2026, 10, 7, 15, 0)) })); await ready(root);
+  const t = root.text;
+  assert.match(t, /Saturday 2026-11-07/);
+  assert.match(t, /2026-11-06: 16:43 America\/Toronto/);
+  assert.doesNotMatch(t, /2026-11-13: 16:36/);
+  assert.match(t, /2026-11-07: 17:45 America\/Toronto/);
+  un();
+});

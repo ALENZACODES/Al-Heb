@@ -158,3 +158,43 @@ test("saturdayOnOrAfter / havdalah is on the Saturday and after candle lighting 
   const hours = (hv.havdalah - cl.candles) / 3600000;
   assert.ok(hours > 24 && hours < 26.5, String(hours));
 });
+
+// Pinned against two references that agree with each other: (a) an independent NOAA sunset implementation written for
+// the 2026-11-07 link check (tools/check/noaa-reference.mjs), (b) Hebcal's live /shabbat API fetched 2026-11-08 UTC
+// (geo=pos, b=18, M=on). Toronto 43.65,-79.38 and Richmond Hill 43.87,-79.44, America/Toronto (EST, UTC-5).
+test("candle lighting (sunset - 18) and havdalah (8.5 degrees) for Toronto and Richmond Hill, Nov 2026, within 2 minutes of the independent calculation", () => {
+  const min = (d) => Math.round(d.getTime() / 60000);
+  const close = (got, isoUTC, what) => assert.ok(Math.abs(min(got) - min(new Date(isoUTC))) <= 2, `${what}: got ${got.toISOString()} want ${isoUTC}`);
+  const cases = [
+    // city, Friday, candles (UTC), Saturday havdalah tzeit 8.5 (UTC)       local: candles 16:43 / 16:36 (Toronto), 16:43 / 16:35 (RH)
+    [{ lat: 43.65, lon: -79.38 }, "2026-11-06", "2026-11-06T21:43:46Z", "2026-11-07T22:45:15Z"],
+    [{ lat: 43.65, lon: -79.38 }, "2026-11-13", "2026-11-13T21:36:01Z", "2026-11-14T22:38:30Z"],
+    [{ lat: 43.87, lon: -79.44 }, "2026-11-06", "2026-11-06T21:43:31Z", "2026-11-07T22:45:10Z"],
+    [{ lat: 43.87, lon: -79.44 }, "2026-11-13", "2026-11-13T21:35:42Z", "2026-11-14T22:38:21Z"],
+  ];
+  for (const [loc, fri, candlesUTC, havdalahUTC] of cases) {
+    const cl = C.candleLighting(ymd(fri), loc);
+    assert.equal(C.isoDate(cl.date), fri);
+    close(cl.candles, candlesUTC, `candles ${fri}`);
+    close(C.havdalah(ymd(fri), loc).havdalah, havdalahUTC, `havdalah after ${fri}`);
+  }
+  // Hebcal's published minutes for Toronto (live API, 2026-11-08): 4:43pm / 5:45pm and 4:36pm / 5:38pm
+  const tz = "America/Toronto", tor = { lat: 43.65, lon: -79.38 };
+  assert.equal(C.formatTime(C.floorToMinute(C.candleLighting(ymd("2026-11-06"), tor).candles), tz), "16:43");
+  assert.equal(C.formatTime(C.roundToMinute(C.havdalah(ymd("2026-11-07"), tor).havdalah), tz), "17:45");
+  assert.equal(C.formatTime(C.floorToMinute(C.candleLighting(ymd("2026-11-13"), tor).candles), tz), "16:36");
+  assert.equal(C.formatTime(C.roundToMinute(C.havdalah(ymd("2026-11-14"), tor).havdalah), tz), "17:38");
+});
+
+test("shabbatFridayOf pairs with saturdayOnOrAfter: on a Saturday it is yesterday, never next week", () => {
+  assert.equal(C.isoDate(C.shabbatFridayOf(ymd("2026-11-07"))), "2026-11-06"); // Saturday -> the Friday before
+  assert.equal(C.isoDate(C.shabbatFridayOf(ymd("2026-11-06"))), "2026-11-06"); // Friday -> itself
+  assert.equal(C.isoDate(C.shabbatFridayOf(ymd("2026-11-08"))), "2026-11-13"); // Sunday -> next Friday
+  assert.equal(C.isoDate(C.shabbatFridayOf(ymd("2026-11-03"))), "2026-11-06");
+  for (let d = 1; d <= 14; d++) {
+    const g = ymd(`2026-11-${String(d).padStart(2, "0")}`);
+    assert.equal(C.toRD(C.saturdayOnOrAfter(g)) - C.toRD(C.shabbatFridayOf(g)), 1, `day ${d}: candles and havdalah must be 1 day apart`);
+  }
+  // fridayOnOrAfter is what made the Saturday card show next week's candles beside today's havdalah
+  assert.equal(C.isoDate(C.fridayOnOrAfter(ymd("2026-11-07"))), "2026-11-13");
+});

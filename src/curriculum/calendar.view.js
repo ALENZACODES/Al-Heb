@@ -11,7 +11,7 @@
  * ctx.now (optional, returns Date) is used by tests. Geolocation is never requested here.
  */
 import {
-  nextHolidays, candleLighting, havdalah, formatTime, floorToMinute, roundToMinute, isoDate, parseISO, addDays, weekday, saturdayOnOrAfter,
+  nextHolidays, candleLighting, havdalah, formatTime, floorToMinute, roundToMinute, isoDate, parseISO, addDays, weekday, saturdayOnOrAfter, shabbatFridayOf,
 } from "./calendar.js";
 import { parshaOnShabbat } from "./calendar.parsha.js";
 import { monthGrid, yearGrid, dayDetail, hebrewInfo, WEEKDAYS_EN, MONTHS_EN } from "./calendar.grid.js";
@@ -115,7 +115,9 @@ export function mount(root, ctx) {
   function timesBlock(g, l) {
     if (!l) return el("p", { class: "alef-candles" }, el("a", { href: "#/settings" }, tr(ctx, "cal.needLocation", "Set your location in Settings")), " to see candle-lighting times.");
     const tz = tzOf(l);
-    const cl = candleLighting(g, { lat: l.lat, lon: l.lon, offsetMinutes: l.candleMinutes });
+    // Both lines describe the SAME Shabbat (the one containing or following today). On a Saturday, candleLighting(g)
+    // alone would skip to next Friday's candles beside today's havdalah; the owner saw that as a 7-minute error.
+    const cl = candleLighting(shabbatFridayOf(g), { lat: l.lat, lon: l.lon, offsetMinutes: l.candleMinutes });
     const hv = havdalah(saturdayOnOrAfter(g), { lat: l.lat, lon: l.lon }, prefs.havdalah);
     const how = prefs.havdalah.mode === "minutes" ? `${prefs.havdalah.minutes} min after sunset` : `${prefs.havdalah.degrees} degrees below the horizon`;
     return el("div", {},

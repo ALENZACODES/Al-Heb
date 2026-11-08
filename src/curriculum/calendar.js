@@ -307,6 +307,15 @@ export function fridayOnOrAfter(g) {
 }
 
 /**
+ * Friday of the Shabbat that contains or follows civil date `g`: the day before when `g` is a Saturday, else the
+ * Friday on/after `g`. Pair this with saturdayOnOrAfter(g) so a candle-lighting / havdalah pair describes ONE Shabbat
+ * (fridayOnOrAfter on a Saturday skips to next week's candles while saturdayOnOrAfter still means today's havdalah).
+ */
+export function shabbatFridayOf(g) {
+  return weekday(g) === 6 ? addDays(g, -1) : fridayOnOrAfter(g);
+}
+
+/**
  * Candle lighting for the Friday on/after `g`.
  * @param {{y,m,d}} g
  * @param {{lat:number, lon:number, offsetMinutes?:number}} loc  lon east-positive (Toronto = -79.4)

@@ -1,3 +1,4 @@
+import { mountSpeechBubble } from './rimon-speech.js';
 // Twelve drawings per action: start, ten in-betweens, finish.
 export const ACTIONS = Object.freeze({
   blink:{ms:45,label:'Ready to learn',priority:0},
@@ -55,6 +56,7 @@ export function mountRimon({store,doc=document}={}) {
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
   try{hidden=sessionStorage.getItem('alef.rimon.dismissed')==='1';}catch{}
   host.hidden=hidden;restore.hidden=!hidden;
+  const speech=mountSpeechBubble(host,{doc});
   function remember(){try{sessionStorage.setItem('alef.rimon.dismissed',hidden?'1':'0');}catch{}}
   function load(name){
     if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));
@@ -66,12 +68,14 @@ export function mountRimon({store,doc=document}={}) {
     const sheet=action==='idle'?'blink':action;
     sprite.style.backgroundImage=`url("${new URL(sheet+'.png',base).href}")`;
     sprite.style.backgroundPosition=`${(frame%4)*100/3}% ${Math.floor(frame/4)*50}%`;
+    if(host.dataset.action!==action) speech.say(action);
     host.dataset.action=action;host.dataset.frame=String(frame);sprite.dataset.action=action;sprite.dataset.frame=String(frame);
     caption.textContent=ACTIONS[action]?.label || 'Ready to learn';
     sprite.setAttribute('aria-label',`Rimon: ${caption.textContent}`);
   }
   async function play(name){
-    if(!ACTIONS[name] || hidden || media?.matches || !alive) return;
+    if(!ACTIONS[name] || hidden || !alive) return;
+    if(media?.matches){speech.say(name);return;}
     const id=requestId;
     if(await load(name) && alive && id===requestId && !hidden && !media?.matches){animator.request(name,Date.now());paint();}
   }
@@ -79,7 +83,7 @@ export function mountRimon({store,doc=document}={}) {
   function place(){
     const anchor=inlineVisible ? doc.querySelector('.show-mascot-box') : null;
     const parent=anchor || doc.body;if(host.parentNode!==parent)parent.append(host);
-    host.classList.toggle('rimon-corner',!anchor);
+    host.classList.toggle('rimon-corner',!anchor);speech.refresh();
   }
   const event=e=>{
     const {action,nextHref}=e.detail || {};
@@ -102,8 +106,8 @@ export function mountRimon({store,doc=document}={}) {
     }
   };
   const reduce=()=>{reset();host.classList.toggle('rimon-static',!!media?.matches);};
-  dismiss.onclick=()=>{hidden=true;remember();reset();host.hidden=true;restore.hidden=false;restore.focus();};
-  restore.onclick=()=>{hidden=false;remember();host.hidden=false;restore.hidden=true;reset();play('wave');dismiss.focus();};
+  dismiss.onclick=()=>{hidden=true;remember();reset();host.hidden=true;speech.refresh();restore.hidden=false;restore.focus();};
+  restore.onclick=()=>{hidden=false;remember();host.hidden=false;speech.refresh();restore.hidden=true;reset();play('wave');dismiss.focus();};
   doc.addEventListener('alef:rimon',event);doc.addEventListener('alef:ready',ready);
   doc.addEventListener('pointerdown',activity,{passive:true});doc.addEventListener('keydown',activity);
   media?.addEventListener('change',reduce);
@@ -118,5 +122,5 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
-  return {element:host,play,ready:readyPromise,destroy(){observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
 }

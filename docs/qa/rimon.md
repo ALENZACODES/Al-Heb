@@ -32,3 +32,11 @@ The latest game-end results are recorded in rimon-results.json. Not every game h
 Set PLAYWRIGHT_MODULE and BROWSER_EXECUTABLE if using an external browser installation. Run tools/qa/qa-rimon.mjs; it starts a local server and saves screenshots and capture frames outside the repository. For actual game endings, start the static server, set RIMON_URL, then run tools/qa/qa-rimon-games.mjs. GIF export uses the captured frames with their recorded timing.
 
 Runtime changes are in src/shell/rimon.js, rimon-events.js, assets/css/rimon.css, the twelve named sheets under assets/img/rimon, and the shared game/lesson connections. The old rimon-model.js and rimon-sprite.png are retained for reference; the active animator uses the twelve-frame sheets.
+
+## Speech bubbles
+
+Added all ten requested encouragements in pointed Hebrew with the English directly underneath. The speech bubble sits beside Rimon, pops in when a reaction begins, and stays long enough to read. It clears the phone navigation and disappears with the mascot when dismissed. A short animation is suppressed for reduced-motion users, while the text still responds to game events.
+
+Every Friday in the visitor's local calendar, Shabbat Shalom remains in the bubble alongside any reaction message. The date is rechecked while the page is open and when the tab becomes visible, including Friday/Saturday midnight boundaries. No sound is added; these are written speech bubbles.
+
+151 focused tests pass. Browser checks cover desktop, 375px phone positioning, Hebrew/English order, reduced motion, hide/restore, and both Friday midnight transitions, with zero uncaught page errors. Reproduce with tools/qa/qa-rimon-bubbles.mjs. The phrase list and action mapping live in src/shell/rimon-speech.js.

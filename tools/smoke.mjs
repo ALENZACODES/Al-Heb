@@ -86,11 +86,11 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.waitForFunction(() => location.hash === '#/welcome', null, { timeout: 8000 }).catch(() => {});
   check('first run redirects home -> #/welcome', (await page.evaluate(() => location.hash)) === '#/welcome');
   await page.locator('#ob-letters-none').check();
-  await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await page.locator('#ob-letters-continue').click(); // by id: its label changes with the copy ("Continue to my learning plan")
   await page.waitForSelector('#ob-form-congregation');
   await page.evaluate(() => { const d = document.querySelector('details.ob-more'); if (d) d.open = true; }); // the branch-of-Judaism question is optional and collapsed
   await page.locator('#ob-denomination-reform').check(); await page.locator('#ob-pron-ashkenazi').check();
-  await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await page.locator('#ob-congregation-continue').click();
   // minutes a day is no longer its own step: the plan card appears after the pronunciation step with the default minutes
   await page.waitForSelector('section.ob-plan');
   const saved = await page.evaluate(() => ({ s: JSON.parse(localStorage.getItem('alef:settings')), o: JSON.parse(localStorage.getItem('alef:onboarding.v1')) }));
@@ -110,6 +110,9 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   } else {
     check('unavailable congregation recording is labelled honestly', await page.locator('main .audio-none').first().isVisible() && /No audio yet/.test(await page.locator('main .audio-none').first().innerText()));
   }
+  // the quick check opens once the end of the lesson has been seen (U-13): scroll there first, then wait for it to enable
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); // the button sits in a sticky bar, so scrolling to it moves nothing
+  await page.waitForFunction(() => !document.getElementById('alef-quick-start')?.disabled, null, { timeout: 8000 });
   await page.locator('#alef-quick-start').click();
   const answers = new Map();
   for (let i = 0; i < 30 && await page.locator('.alef-ex-card').count(); i++) {

@@ -90,7 +90,15 @@ export function computeManifest(root = repoRoot) {
   for (const d of INCLUDE_DIRS) { try { all.push(...walk(join(root, d), [], root).filter((r) => !SKIP(r) && DATA_ONLY_JSON(r) && statSync(join(root, r)).size <= MAX_FILE_BYTES)); } catch { /* dir missing */ } }
   const files = all.filter((f) => !isOnDemand(f)), onDemand = all.filter(isOnDemand);
   const hash = createHash('sha256'); // covers on-demand files too, so a change to them still raises the update banner as before
-  for (const f of all) { hash.update(f); hash.update(readFileSync(join(root, f))); }
+  for (const f of all) {
+    hash.update(f);
+    const bytes = readFileSync(join(root, f));
+    // Git normalizes text to LF. Existing Windows checkouts can still contain
+    // CRLF, so hash the committed text representation on every platform.
+    // Binary assets must retain their exact bytes.
+    hash.update(/\.(?:js|json|html|css|svg|webmanifest)$/i.test(f)
+      ? bytes.toString('utf8').replace(/\r\n/g, '\n') : bytes);
+  }
   return { files, onDemand, version: hash.digest('hex').slice(0, 12) };
 }
 

@@ -50,7 +50,7 @@ test('player: with the Sephardi setting, shin, bet and oseh-shalom play the Isra
   }
 });
 
-test('dictionary words under the Sephardi setting: goodbye and coffee (aliases of lesson-word clips) play the Israeli lesson clip; Shabbat keeps its own Sephardi clip', () => {
+test('dictionary words under the Sephardi setting: goodbye, coffee and Shabbat all play the Israeli lesson clip (owner decision 2026-11-07: the Sephardi files are retired)', () => {
   class El { constructor(url) { this.url = url; } play() { return Promise.resolve(); } pause() {} }
   const all = [...man, ...kindWord, ...israeliWords, ...words];
   const audio = createAudio({ settings: { voice: 'f', congregation: 'sephardi' }, manifest: all, AudioCtor: El, speech: null, UtteranceCtor: null });
@@ -60,7 +60,7 @@ test('dictionary words under the Sephardi setting: goodbye and coffee (aliases o
   const coffee = audio.status('word', 'h06440deb');
   assert.equal(coffee.source, 'file'); assert.equal(coffee.fileTradition, 'israeli'); assert.ok(existsSync(coffee.path));
   const shabbat = audio.status('word', 'h0eb811da');
-  assert.equal(shabbat.source, 'file'); assert.equal(shabbat.via, 'alias'); assert.equal(shabbat.path, 'audio/f/sephardi/word/r02-w1.mp3');
+  assert.equal(shabbat.source, 'file'); assert.equal(shabbat.fileTradition, 'israeli'); assert.match(shabbat.path, /^audio\/f\/israeli\/word\//); assert.ok(existsSync(shabbat.path));
   // every Sephardi dictionary word now resolves to some file, or has no Israeli clip either
   let silent = 0;
   for (const e of words.filter((e) => e.voice === 'f' && e.kind === 'word')) if (audio.status('word', e.id).source !== 'file') silent += 1;

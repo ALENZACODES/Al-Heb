@@ -21,6 +21,19 @@ export const isSyntheticStatus = (status) => SYNTHETIC_STATUSES.includes(status)
 const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' });
 
 /**
+ * Which tradition a playing file is, as a caption. Same file and setting: the tradition's name. A file of another tradition
+ * standing in for the setting (the Sephardi setting plays the Israeli clips, owner decision 2026-11-07, src/audio/player.js
+ * PLAYBACK_TRADITION): "Israeli voice; Sephardi reading shown in English letters".
+ * @param {string} tradition the learner's setting @param {string} [fileTradition] the file's tradition when it differs
+ */
+export function traditionCaption(tradition, fileTradition) {
+  const file = fileTradition || tradition;
+  const fileName = TRAD_STYLE[file] || file || 'Israeli';
+  if (!fileTradition || fileTradition === tradition || !TRAD_STYLE[tradition]) return fileName;
+  return `${fileName} voice; ${TRAD_STYLE[tradition]} reading shown in English letters`;
+}
+
+/**
  * Honest label for a synthetic-unreviewed/-reviewed clip. `tradition` is the tradition of the FILE (not the learner's setting);
  * `source` is the manifest source when known ('tts-respelled...' or 'tts-hebrew...'); without it, Israeli means made from
  * pointed Hebrew and the other traditions mean made from a respelling (the only way the pipeline makes them).

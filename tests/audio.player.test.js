@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { waitFor } from './helpers/waitfor.js';
-import { createAudio, normalizeId } from '../src/audio/player.js';
+import { createAudio, normalizeId, PLAYBACK_TRADITION, playbackTradition } from '../src/audio/player.js';
 import { normalizeId as toolNormalize } from '../tools/audio/hebrew_data.mjs';
 
 class FakeAudio {
@@ -42,15 +42,34 @@ test('never swaps man for woman: only female file exists, male requested -> tts-
   assert.equal(audio.has('letter', 'bet'), false);
 });
 
-test('other tradition is used only when manifest marks it equivalent', async () => {
-  const withEq = [e('f', 'sephardi', 'letter', 'bet', 'missing', { equivalentTo: ['israeli'] }), e('f', 'israeli', 'letter', 'bet', 'recorded')];
-  let { audio } = make(withEq, { voice: 'f', congregation: 'sephardi' });
+test('other tradition is used only when manifest marks it equivalent (Ashkenazi keeps its own files)', async () => {
+  const withEq = [e('f', 'ashkenazi', 'letter', 'bet', 'missing', { equivalentTo: ['israeli'] }), e('f', 'israeli', 'letter', 'bet', 'recorded')];
+  let { audio } = make(withEq, { voice: 'f', congregation: 'ashkenazi' });
   let r = await audio.play('letter', 'bet');
   assert.equal(r.source, 'file'); assert.equal(r.via, 'equivalent'); assert.equal(r.fileTradition, 'israeli');
-  const noEq = [e('f', 'sephardi', 'letter', 'bet'), e('f', 'israeli', 'letter', 'bet', 'recorded')];
-  ({ audio } = make(noEq, { voice: 'f', congregation: 'sephardi' }));
+  const noEq = [e('f', 'ashkenazi', 'letter', 'bet'), e('f', 'israeli', 'letter', 'bet', 'recorded')];
+  ({ audio } = make(noEq, { voice: 'f', congregation: 'ashkenazi' }));
   r = await audio.play('letter', 'bet');
   assert.notEqual(r.source, 'file');
+});
+
+test('the Sephardi setting plays the Israeli file of the same voice for every kind, never the retired Sephardi file (owner decision 2026-11-07)', async () => {
+  assert.deepEqual(PLAYBACK_TRADITION, { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'ashkenazi' });
+  assert.equal(playbackTradition('sephardi'), 'israeli'); assert.equal(playbackTradition('ashkenazi'), 'ashkenazi'); assert.equal(playbackTradition('x'), 'x');
+  const m = [];
+  for (const kind of ['letter', 'vowel', 'syllable', 'word', 'line', 'prayer']) m.push(e('f', 'sephardi', kind, 'k1', 'tts'), e('f', 'israeli', kind, 'k1', 'tts'), e('m', 'israeli', kind, 'k1', 'tts'));
+  const { audio, speech } = make(m, { voice: 'f', congregation: 'sephardi' });
+  for (const kind of ['letter', 'vowel', 'syllable', 'word', 'line', 'prayer']) {
+    const r = await audio.play(kind, 'k1');
+    assert.equal(r.source, 'file', kind); assert.equal(r.path, `audio/f/israeli/${kind}/k1.mp3`, kind);
+    assert.equal(r.voice, 'f'); assert.equal(r.tradition, 'sephardi', 'the result keeps the learner setting'); assert.equal(r.fileTradition, 'israeli'); assert.equal(r.via, 'tradition');
+  }
+  assert.ok(FakeAudio.log.every((u) => u.includes('/israeli/')), 'no Sephardi file was opened');
+  assert.equal(speech.spoken.length, 0);
+  // a Sephardi row whose Israeli counterpart is missing is NOT played either; the device voice (Israeli) may speak instead
+  const only = make([e('f', 'sephardi', 'word', 'lone', 'tts'), e('f', 'israeli', 'word', 'lone', 'missing')], { voice: 'f', congregation: 'sephardi' });
+  const r = only.audio.status('word', 'lone');
+  assert.notEqual(r.source, 'file'); assert.notEqual(r.reason, 'tts-pronunciation-mismatch', 'the Sephardi setting plays Israeli by rule, so the Israeli device voice is not a mismatch');
 });
 
 test('tradition override per call', async () => {
@@ -140,13 +159,13 @@ test('normalizeId matches the tool-side normalizer', () => {
 
 // ---- one id mapping: lesson-word id <-> vocab id (manifest `vocabId`, data/curriculum/word-vocab-map.json)
 test('a clip recorded under the lesson-word id r01-w1 resolves for its vocab id (synthetic manifest)', async () => {
-  const m = [e('m', 'sephardi', 'word', 'r01-w1', 'recorded', { vocabId: 'h842147e5' }), e('m', 'sephardi', 'word', 'h842147e5')];
-  const { audio, speech } = make(m, { voice: 'm', congregation: 'sephardi' });
+  const m = [e('m', 'ashkenazi', 'word', 'r01-w1', 'recorded', { vocabId: 'h842147e5' }), e('m', 'ashkenazi', 'word', 'h842147e5')];
+  const { audio, speech } = make(m, { voice: 'm', congregation: 'ashkenazi' });
   assert.equal(audio.has('word', 'h842147e5'), true);
   assert.equal(audio.has('word', 'r01-w1'), true);
   const r = await audio.play('word', 'h842147e5');
   assert.equal(r.source, 'file'); assert.equal(r.viaId, 'r01-w1'); assert.equal(r.id, 'h842147e5');
-  assert.deepEqual(FakeAudio.log, ['/app/audio/m/sephardi/word/r01-w1.mp3']);
+  assert.deepEqual(FakeAudio.log, ['/app/audio/m/ashkenazi/word/r01-w1.mp3']);
   assert.equal(speech.spoken.length, 0);
 });
 
@@ -160,10 +179,10 @@ test('a clip recorded under the vocab id resolves for the lesson-word id, and fo
 
 test('the exact id wins over a linked id; voice and tradition are never crossed by a link; links added by extend() work', () => {
   const m = [e('m', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'israeli', 'word', 'hx', 'recorded'),
-    e('f', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'sephardi', 'word', 'hx')];
+    e('f', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'ashkenazi', 'word', 'hx')];
   const { audio } = make(m, { voice: 'm', congregation: 'israeli' });
   assert.equal(audio.status('word', 'hx').path, 'audio/m/israeli/word/hx.mp3'); assert.equal(audio.status('word', 'hx').viaId, undefined);
-  assert.equal(audio.has('word', 'hx', { tradition: 'sephardi' }), false); // sephardi has no file under either id
+  assert.equal(audio.has('word', 'hx', { tradition: 'ashkenazi' }), false); // ashkenazi has no file under either id
   assert.equal(audio.status('word', 'hx', { voice: 'f' }).path, 'audio/f/israeli/word/r01-w1.mp3'); // woman's file, not the man's
   const late = make([e('m', 'israeli', 'word', 'hy', 'recorded')], { voice: 'm', congregation: 'israeli' }).audio;
   assert.equal(late.has('word', 'r09-w1'), false);

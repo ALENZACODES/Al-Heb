@@ -144,10 +144,13 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   const shalom = content.find((e) => e.lemma === 'שלום' && e.pos === 'noun');
   const fSep = lookupClip(onDisk, shalom.pointed, 'f', 'sephardi');
   const mAsh = lookupClip(onDisk, shalom.pointed, 'm', 'ashkenazi');
-  assert.ok(fSep && fSep.path.startsWith('audio/f/sephardi/'));
+  // the Sephardi setting plays the Israeli file (owner decision 2026-11-07); the clip keeps its real tradition and remembers the setting
+  assert.ok(fSep && fSep.path.startsWith('audio/f/israeli/'));
+  assert.equal(fSep.tradition, 'israeli'); assert.equal(fSep.setting, 'sephardi');
   assert.ok(mAsh && mAsh.path.startsWith('audio/m/ashkenazi/'));
-  assert.equal(fSep.tradition, 'sephardi');
+  assert.equal(mAsh.tradition, 'ashkenazi');
   assert.notEqual(fSep.path, mAsh.path);
+  assert.match(onDisk.rule, /Sephardi setting plays the Israeli file/);
   assert.ok(existsSync(new URL('../' + fSep.path, import.meta.url)));
   assert.deepEqual(CLIP_RATES, ['normal', 'slow']);
   assert.equal(planIsExactFile({ source: 'file', via: 'exact', url: '/x', voice: 'f', tradition: 'sephardi', id: fSep.id }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), true);
@@ -161,7 +164,8 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
     { id: 'b', kind: 'word', voice: 'm', tradition: 'israeli', path: 'b.mp3', status: 'tts', text: 'הִיא' },
   ];
   const small = buildClipLookup(rows, () => true);
-  assert.equal(lookupClip(small, 'הִיא', 'f', 'sephardi'), null);
+  assert.equal(lookupClip(small, 'הִיא', 'f', 'sephardi').id, 'a', 'the Sephardi setting gets the Israeli slot');
+  assert.equal(lookupClip(small, 'הִיא', 'f', 'ashkenazi'), null, 'Ashkenazi has no own slot here and no rule');
   assert.equal(lookupClip(small, 'הִיא', 'm', 'israeli').id, 'b');
 });
 
@@ -193,7 +197,7 @@ test('the player honours options.rate: slow is 0.7× on the element (the vocab s
   }
   const audio = createAudio({
     settings: { voice: 'f', congregation: 'sephardi' },
-    manifest: [{ kind: 'word', id: 'i-10-w12', voice: 'f', tradition: 'sephardi', status: 'tts', path: 'audio/f/sephardi/word/i-10-w12.mp3', text: 'שָׁלוֹם' }],
+    manifest: [{ kind: 'word', id: 'i-10-w12', voice: 'f', tradition: 'israeli', status: 'tts', path: 'audio/f/israeli/word/i-10-w12.mp3', text: 'שָׁלוֹם' }],
     AudioCtor: A,
     speech: null,
     UtteranceCtor: null,
@@ -201,6 +205,7 @@ test('the player honours options.rate: slow is 0.7× on the element (the vocab s
   const result = await audio.play('word', 'i-10-w12', { voice: 'f', tradition: 'sephardi', rate: 'slow' });
   assert.equal(result.source, 'file');
   assert.equal(result.id, 'i-10-w12');
+  assert.equal(result.fileTradition, 'israeli'); // the Sephardi setting plays the Israeli file
   assert.equal(made.length, 1);
   assert.equal(made[0].playbackRate, PLAYBACK_DEPENDENCY.slowMeans);
   assert.equal(result.rate, 0.7);

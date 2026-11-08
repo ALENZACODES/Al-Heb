@@ -2,7 +2,7 @@
 // The wrapper keeps the player's interface (play, playSequence, has, status, stop) and publishes what is actually
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
-import { fileLabel, isSyntheticStatus, STATUS_LABELS } from './audio-labels.js';
+import { fileLabel, isSyntheticStatus, STATUS_LABELS, traditionCaption } from './audio-labels.js';
 import { gameMusic } from '../audio/music.js';
 import { sfx } from '../audio/sfx.js';
 import { mediaPolicy } from '../audio/policy.js';
@@ -30,7 +30,7 @@ export function summarizeManifest(manifest) {
 export function describeResult(r, congregation = 'israeli') {
   if (!r) return { mode: 'none', text: '' };
   if (r.source === 'file') {
-    return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)} (${r.voice === 'm' ? 'man' : 'woman'}, ${TRAD[r.fileTradition || r.tradition] || r.tradition}).` };
+    return { mode: 'file', text: `Sound: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)} (${r.voice === 'm' ? 'man' : 'woman'}, ${traditionCaption(r.tradition, r.fileTradition)}).` };
   }
   if (r.source === 'tts-fallback' || r.played === true) {
     const mismatch = r.mismatch || (r.tradition && r.tradition !== 'israeli');
@@ -41,7 +41,7 @@ export function describeResult(r, congregation = 'israeli') {
 
 /** Status from a real media event. Clicking Play does not produce this line. */
 export function playbackLine(ev, plan = ev || {}) {
-  const who = `${plan.voice === 'm' ? 'man' : 'woman'}, ${TRAD[plan.fileTradition || plan.tradition] || plan.tradition || 'Israeli'}`;
+  const who = `${plan.voice === 'm' ? 'man' : 'woman'}, ${traditionCaption(plan.tradition, plan.fileTradition)}`;
   const speed = ev?.rate === 0.7 ? ' Slow, 0.7×.' : ' Normal speed.';
   if (ev?.type === 'playing' && (plan.source === 'file' || ev?.source === 'file')) {
     return { mode: 'file', text: `Playing: ${fileLabel(plan.entryStatus, plan.fileTradition || plan.tradition, plan.entrySource)} (${who}).${speed}` };

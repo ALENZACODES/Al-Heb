@@ -6,7 +6,8 @@
 // says "Playing" only after a playing event. That behavior is the unmerged contract
 // in PR #20, commit 8f37d4ba, file docs/audio/PLAYBACK-CONTRACT.md, on
 // chatgpt/games-enrich-2026-11-06. This screen does not set playbackRate itself.
-import { fileLabel } from '../shell/audio-labels.js';
+import { fileLabel, traditionCaption } from '../shell/audio-labels.js';
+import { playbackTradition } from '../audio/player.js';
 import { t } from '../shell/i18n.js';
 
 export const VOICES = Object.freeze(['m', 'f']);
@@ -70,7 +71,7 @@ export function buildClipLookup(rows, fileExists = () => true) {
   }
   return {
     schema: 'alef-vocab-clip-lookup/1',
-    rule: 'Same pointed text, same voice, same tradition, file present, status not missing. Anchor ids skipped. Lowest word id wins. No cross-tradition substitute.',
+    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose files the setting plays (src/audio/player.js PLAYBACK_TRADITION: the Sephardi setting plays the Israeli file, owner decision 2026-11-07; Ashkenazi its own); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
     clips,
   };
 }
@@ -79,7 +80,9 @@ export function buildClipLookup(rows, fileExists = () => true) {
 export function lookupClip(lookup, text, voice, tradition) {
   if (!lookup || !VOICES.includes(voice) || !TRADITIONS.includes(tradition)) return null;
   const row = lookup.clips?.[clipKey(text)];
-  return row?.[`${voice}|${tradition}`] || null;
+  const clip = row?.[`${voice}|${playbackTradition(tradition)}`] || null;
+  // `setting` is the learner's tradition; `tradition` stays the FILE's. The caption names both when they differ.
+  return clip ? { ...clip, setting: tradition } : null;
 }
 
 /**
@@ -95,9 +98,12 @@ export function alternateClip(lookup, text, voice, tradition) {
   const row = lookup.clips?.[clipKey(text)];
   if (!row) return null;
   const other = voice === 'm' ? 'f' : 'm';
-  const order = [`${other}|${tradition}`, `${voice}|israeli`, `${other}|israeli`,
-    ...TRADITIONS.filter((t) => t !== tradition && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])];
-  for (const slot of order) if (row[slot]) return row[slot];
+  const played = playbackTradition(tradition);
+  // Slots whose files a setting plays; a retired slot (Sephardi files) is never offered.
+  const live = TRADITIONS.filter((t) => playbackTradition(t) === t);
+  const order = [`${other}|${played}`, `${voice}|israeli`, `${other}|israeli`,
+    ...live.filter((t) => t !== played && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])];
+  for (const slot of order) if (row[slot]) return { ...row[slot], setting: tradition };
   return null;
 }
 
@@ -115,7 +121,8 @@ export function traditionLabel(tradition) {
  */
 export function clipCaption(clip) {
   if (!clip) return '';
-  const who = [traditionLabel(clip.tradition), voiceLabel(clip.voice)].filter(Boolean).join(', ');
+  const trad = clip.setting && clip.setting !== clip.tradition ? traditionCaption(clip.setting, clip.tradition) : traditionLabel(clip.tradition);
+  const who = [trad, voiceLabel(clip.voice)].filter(Boolean).join(', ');
   if (clip.status === 'tts' && clip.tradition !== 'israeli') {
     return `Synthetic file (${who}; not a recorded teacher).`;
   }

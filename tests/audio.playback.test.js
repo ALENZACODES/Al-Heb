@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { createAudio, clipPlaybackRate } from '../src/audio/player.js';
-import { createShellAudio, playbackLine } from '../src/shell/audio.js';
+import { createShellAudio, playbackLine, describeResult } from '../src/shell/audio.js';
+import { traditionCaption } from '../src/shell/audio-labels.js';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 
 class El {
@@ -27,17 +28,18 @@ test('clip rate is only normal or 0.7', () => {
   assert.equal(clipPlaybackRate(undefined), 1);
 });
 
-test('an exact woman Sephardi file is the one that plays, not the man Israeli file', async () => {
+test('with the Sephardi setting the woman Israeli file plays: not the retired Sephardi file, not the man Israeli file', async () => {
   El.log = [];
-  const manifest = [row('f', 'sephardi', 'alef'), row('m', 'israeli', 'alef')];
+  const manifest = [row('f', 'sephardi', 'alef'), row('f', 'israeli', 'alef'), row('m', 'israeli', 'alef')];
   const audio = createAudio({ settings: { voice: 'f', congregation: 'sephardi', clipRate: 'slow' }, manifest, AudioCtor: El, speech: speech([]), UtteranceCtor: class { constructor(t) { this.text = t; } } });
   const events = [];
   const r = await audio.play('letter', 'alef', { onMedia: (e) => events.push(e.type) });
   assert.equal(r.source, 'file');
   assert.equal(r.voice, 'f');
   assert.equal(r.tradition, 'sephardi');
+  assert.equal(r.fileTradition, 'israeli');
   assert.equal(r.rate, 0.7);
-  assert.equal(El.log[0].url, 'audio/f/sephardi/letter/alef.mp3');
+  assert.equal(El.log[0].url, 'audio/f/israeli/letter/alef.mp3');
   assert.equal(El.log[0].playbackRate, 0.7);
   assert.deepEqual(events, ['playing', 'ended']);
   assert.equal(audio.status('letter', 'alef', { voice: 'm', tradition: 'israeli' }).voice, 'm');
@@ -62,8 +64,12 @@ test('a missing file and a rejected play do not speak Dutch, and stop interrupts
 });
 
 test('the sound line comes from playing, ended, and stopped, not from the click', () => {
-  const plan = { source: 'file', voice: 'f', tradition: 'sephardi', entryStatus: 'tts', entrySource: 'paid-cloud' };
-  assert.match(playbackLine({ type: 'playing', rate: 0.7, ...plan }).text, /Playing:.*woman, Sephardi.*0\.7×/);
+  const plan = { source: 'file', voice: 'f', tradition: 'sephardi', fileTradition: 'israeli', entryStatus: 'tts', entrySource: 'paid-cloud' };
+  assert.match(playbackLine({ type: 'playing', rate: 0.7, ...plan }).text, /Playing:.*\(woman, Israeli voice; Sephardi reading shown in English letters\)\. Slow, 0\.7×/);
+  assert.match(playbackLine({ type: 'playing', rate: 1, ...plan, tradition: 'israeli', fileTradition: undefined }).text, /\(woman, Israeli\)\. Normal speed/);
+  assert.match(describeResult({ ...plan }).text, /^Sound: .*\(woman, Israeli voice; Sephardi reading shown in English letters\)\.$/);
+  assert.equal(traditionCaption('sephardi', 'israeli'), 'Israeli voice; Sephardi reading shown in English letters');
+  assert.equal(traditionCaption('israeli'), 'Israeli'); assert.equal(traditionCaption('ashkenazi', 'ashkenazi'), 'Ashkenazi');
   assert.equal(playbackLine({ type: 'ended' }).text, 'Sound finished.');
   assert.match(playbackLine({ type: 'error' }).text, /did not load/);
   assert.equal(playbackLine({ type: 'stopped' }).text, 'Sound stopped.');

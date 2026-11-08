@@ -15,7 +15,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 const json = (p) => JSON.parse(read(p));
 const summary = json('data/audio/summary.json');
 const listOf = (m) => (Array.isArray(m) ? m : (m.entries || m.clips || Object.values(m)));
-const all = [json('data/audio/manifest.json'), ...['israeli', 'sephardi', 'ashkenazi'].map((t) => json(`data/audio/manifest-words-${t}.json`))].flatMap(listOf);
+const all = [json('data/audio/manifest.json'), json('data/audio/manifest-kind-word.json'), ...['israeli', 'sephardi', 'ashkenazi'].map((t) => json(`data/audio/manifest-words-${t}.json`))].flatMap(listOf);
 const clips = all.filter((e) => e.status !== 'missing');
 
 test('About: pictures line does not deny the pictures that are shown; the count is read from data/letters/memory-chain.json', async () => {
@@ -51,12 +51,15 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
     assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition), e.path);
   }
   const house = all.find((e) => e.id === 'h9c8ddecf' && e.voice === 'f' && e.tradition === 'sephardi');
-  assert.equal(house.status, 'synthetic-unreviewed');
+  assert.ok(['tts', 'synthetic-unreviewed'].includes(house.status), `a synthetic status that no human reviewed, got ${house.status}`);
   const at = (voice, congregation, id) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status('word', id);
-  assert.equal(at('f', 'sephardi', 'h9c8ddecf').source, 'file', 'Woman + Sephardi plays the house clip');
-  assert.notEqual(at('m', 'sephardi', 'h9c8ddecf').source, 'file', 'Man + Sephardi has no house clip');
+  // Owner decision 2026-11-07: the Sephardi setting plays the Israeli clip of the same voice and says so; the Sephardi files are retired.
+  const fSep = at('f', 'sephardi', 'h9c8ddecf');
+  assert.equal(fSep.source, 'file', 'Woman + Sephardi plays a clip'); assert.equal(fSep.fileTradition, 'israeli'); assert.match(fSep.path, /audio\/f\/israeli\//);
+  const mSep = at('m', 'sephardi', 'h9c8ddecf');
+  assert.equal(mSep.source, 'file', 'Man + Sephardi plays the man Israeli clip'); assert.match(mSep.path, /audio\/m\/israeli\//);
   assert.equal(at('f', 'israeli', 'h9c8ddecf').source, 'file', 'the Israeli woman house clip stays on its own row');
-  assert.notEqual(at('m', 'ashkenazi', 'h9c8ddecf').source, 'file', 'Man + Ashkenazi house was not in the package');
+  assert.notEqual(at('m', 'ashkenazi', 'h9c8ddecf').source, 'file', 'Man + Ashkenazi house was not in the package, and Ashkenazi has no rule yet');
   const d = audioTruthDetail(summary);
   assert.match(d, /not swapped for a different voice or tradition/);
   assert.match(d, /Israeli style has not been verified/);

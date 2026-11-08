@@ -5,6 +5,7 @@
 import { h, heSpan } from '../shell/ui.js';
 import { DEVICE_LABEL } from '../shell/audio-access.js';
 import { speechText } from '../shell/names.js';
+import { playbackTradition } from '../audio/player.js';
 import {
   TRADITIONS, VOICES, TRAD_LABEL, VOICE_LABEL, loadPhraseScreen, formLabel, addressNotices, audioHonesty, contentHonesty, cellClip, playPhraseClip,
 } from './model.js';
@@ -75,7 +76,8 @@ export function mount(root, ctx) {
     function ladderClips(form) {
       const out = [];
       for (const t of TRADITIONS) for (const v of VOICES) {
-        if (t === tradition && v === voice) continue;
+        if ((t === tradition || t === playbackTradition(tradition)) && v === voice) continue;
+        if (playbackTradition(t) !== t) continue; // a retired slot (Sephardi files) is not offered
         const c = form.audio?.[t]?.[v]?.normal;
         if (c) out.push(c);
       }
@@ -84,8 +86,11 @@ export function mount(root, ctx) {
     }
 
     function clipLine(form) {
-      const normal = form.audio?.[tradition]?.[voice]?.normal || null;
-      const slow = form.audio?.[tradition]?.[voice]?.slow || null;
+      // The row that PLAYS for this style: the Sephardi style plays the Israeli row (src/audio/player.js PLAYBACK_TRADITION,
+      // owner decision 2026-11-07); the button and caption name the row's real tradition.
+      const played = playbackTradition(tradition);
+      const normal = form.audio?.[played]?.[voice]?.normal || null;
+      const slow = form.audio?.[played]?.[voice]?.slow || null;
       let listed;
       if (normal) {
         listed = h('div', { class: 'row' },
@@ -242,7 +247,7 @@ export function mount(root, ctx) {
         }));
       const shown = phrases.filter((p) => category === 'all' || p.category === category);
       const items = shown.map((p) => {
-        const has = !!cellClip(p, tradition, voice, 'normal');
+        const has = !!cellClip(p, playbackTradition(tradition), voice, 'normal');
         const anyClip = TRADITIONS.some((t) => VOICES.some((v) => cellClip(p, t, v, 'normal')));
         const q = `?tradition=${tradition}&voice=${voice}`;
         return h('li', { class: 'alef-item', 'data-phrase': p.id },

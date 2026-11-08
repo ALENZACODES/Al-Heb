@@ -228,14 +228,18 @@ export function mount(root, ctx) {
     stopTimer(); stopChapterAudio();
     const kind = torahChapterKind(lang), id = torahChapterId(state.book, state.chapter, lang);
     const text = lang === 'en' ? chapterData.verses.map((v) => v.en).join(' ') : spokenText(chapterData.verses.map((v) => v.he).join(' '));
-    const started = Date.now();
-    const timer = clock.setInterval(() => {
-      const p = chapterPosition(chapterData.verses, lang, voiceOf(), Date.now() - started);
-      if (p) markPlaying(p.verse);
-      if (p?.ended) stopChapterAudio();
-    }, 250);
-    chapterPlay = { lang, timer };
-    markPlaying(chapterData.verses[0].n);
+    // Chapter-only recordings have a measured total duration but no verse timestamps.
+    // Play those normally without inventing word/verse timing or highlights.
+    if (chapterPosition(chapterData.verses, lang, voiceOf(), 0)) {
+      const started = Date.now();
+      const timer = clock.setInterval(() => {
+        const p = chapterPosition(chapterData.verses, lang, voiceOf(), Date.now() - started);
+        if (p) markPlaying(p.verse);
+        if (p?.ended) stopChapterAudio();
+      }, 250);
+      chapterPlay = { lang, timer };
+      markPlaying(chapterData.verses[0].n);
+    }
     try {
       const r = await ctx.audio.play(kind, id, { text, tradition: lang === 'en' ? 'english' : 'israeli' });
       if (!alive) return;
@@ -526,7 +530,7 @@ export function mount(root, ctx) {
   function chapterAudioBar(inPortion) {
     if (inPortion || !chapterData) return [];
     const ready = {};
-    for (const lang of ['he', 'en']) ready[lang] = chapterPosition(chapterData.verses, lang, voiceOf(), 0) != null && manifestHas(torahChapterKind(lang), torahChapterId(state.book, state.chapter, lang));
+    for (const lang of ['he', 'en']) ready[lang] = manifestHas(torahChapterKind(lang), torahChapterId(state.book, state.chapter, lang));
     if (!ready.he && !ready.en) return [];
     const lang = state.audioLang;
     return [el('div', { class: 'trd-bar trd-audiobar', role: 'group', 'aria-label': 'Chapter audio' },

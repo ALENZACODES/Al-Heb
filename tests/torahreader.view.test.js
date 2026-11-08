@@ -13,13 +13,13 @@ function fakeClock() {
   const timers = new Map(); let id = 0;
   return { setInterval: (f, ms) => { timers.set(++id, { f, ms }); return id; }, clearInterval: (h) => { timers.delete(h); }, timers, fire: (n = 1) => { for (let i = 0; i < n; i++) for (const t of [...timers.values()]) t.f(); } };
 }
-async function make({ congregation = 'sephardi', audio, stored, loadJson, query, rawStored = false } = {}) {
+async function make({ congregation = 'sephardi', voice = 'm', audio, stored, loadJson, query, rawStored = false } = {}) {
   const root = new N('div'); const store = memStore();
   // The full-Torah home is the route's default screen now; the study tests open the study screen explicitly.
   store.m['torahreader.v1'] = rawStored ? stored : { screen: 'study', ...(stored || {}) };
   const clock = fakeClock(); const calls = [];
   const a = audio === 'rec' ? { has: () => true, play: async (k, i, o) => { calls.push([k, i, o]); return { source: 'file', entryStatus: 'recorded' }; } } : audio;
-  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : k === 'voice' ? 'm' : undefined) }, audio: a, clock, loadJson, query };
+  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : k === 'voice' ? voice : undefined) }, audio: a, clock, loadJson, query };
   const un = mount(root, ctx); await un.ready;
   return { root, store, ctx, clock, calls, un };
 }
@@ -397,4 +397,29 @@ test('chapter audio appears when durations and manifest entries exist; verse and
   assert.ok(play, 'chapter play is offered when durations and the chapter entry exist');
   await play.click(); await tick();
   assert.ok(calls.some((c) => c[0] === 'torah-chapter' && c[1] === 'torah-genesis-1'), 'chapter play uses kind torah-chapter, id torah-genesis-1');
+});
+
+test('English chapter-only audio plays for either voice without invented verse timers', async () => {
+  for (const voice of ['m', 'f']) {
+    let release;
+    const pending = new Promise(resolve => { release = resolve; });
+    const calls = [];
+    const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+      ? [{ kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice, tradition: 'english', status: 'tts', timing: 'chapter-only' }]
+      : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+    const { root, clock } = await make({ voice, rawStored: true, stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson,
+      audio: { play: (...args) => { calls.push(args); return pending; }, stop() {} } });
+    assert.ok(sel(root, '.trd-play-chapter'));
+    const playing = sel(root, '.trd-play-chapter').click();
+    await tick();
+    assert.equal(calls[0][0], 'torah-chapter-en');
+    assert.equal(calls[0][1], 'torah-en-genesis-1');
+    assert.equal(calls[0][2].tradition, 'english');
+    assert.equal(clock.timers.size, 0, 'no estimated verse timer');
+    assert.equal(root.queryAll('.trd-playing').length, 0, 'no false verse highlighting');
+    release({source:'file',entryStatus:'tts'});
+    await playing;
+    await sel(root, '[data-audiolang="he"]').click();
+    assert.equal(root.queryAll('.trd-play-chapter').length, 0, 'English availability does not imply Hebrew availability');
+  }
 });

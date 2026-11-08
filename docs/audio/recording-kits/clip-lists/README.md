@@ -4,15 +4,15 @@ One ordered CSV per slot (voice x tradition): `id,kind,pointed_hebrew,take_ok`. 
 
 Order: words of core prayers, then lines of core prayers (core = `CORE_PRAYER_RE` in `tools/audio/recording_needs.mjs`, a draft choice), then lesson and vocabulary words in the order of `tools/audio/priority.mjs` (ranked for the Israeli man voice; the same ids are used for every slot). Each list stops at 700 clips. Ids and pointed Hebrew are copied from `data/audio/manifest.json`.
 
-produced=4 (produced counts listed clips whose audio file exists on disk; it is 0 unless files exist. Nothing here is a recording.)
+produced=0 (produced counts listed clips whose audio file exists on disk; it is 0 unless files exist. Nothing here is a recording.)
 
 Reconciliation with `node tools/audio/coverage.mjs` (required clips, state missing). Listed + not listed = missing in the coverage tool, per group:
 
 | slot | listed | prayer words listed / missing | prayer lines listed / missing | lesson+vocab words listed / missing | coverage missing (all groups) |
 |---|---|---|---|---|---|
-| m-israeli | 4 | 0 / 0 | 0 / 0 | 4 / 4 | 4 |
+| m-israeli | 3 | 0 / 0 | 0 / 0 | 3 / 3 | 3 |
 | m-sephardi | 3 | 0 / 0 | 0 / 0 | 3 / 3 | 3 |
-| m-ashkenazi | 700 | 0 / 0 | 0 / 0 | 700 / 1001 | 1218 |
+| m-ashkenazi | 700 | 0 / 0 | 0 / 0 | 700 / 998 | 1215 |
 | f-israeli | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
 | f-sephardi | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
 | f-ashkenazi | 160 | 0 / 0 | 0 / 0 | 160 / 160 | 377 |

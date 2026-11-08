@@ -58,7 +58,7 @@ const recordOf = (id) => id.replace(/-(l|w)\d+$/, '');
 
 /** Ordered required clips for one voice+tradition, split into named blocks. */
 export function orderedBlocks(manifest, tradition, voice) {
-  const rows = manifest.filter((e) => e.voice === voice && e.tradition === tradition && !e.optional && !e.aliasOf);
+  const rows = manifest.filter((e) => e.voice === voice && e.tradition === tradition && !e.optional && !e.aliasOf && e.kind !== 'letter-lecture');
   const by = (names) => rows.filter((e) => names.includes(section(e)));
   const byAlpha = (list) => list.slice().sort((a, b) => alphaRank(a.id) - alphaRank(b.id));
   const bySyl = (list) => list.slice().sort((a, b) => {
@@ -75,7 +75,6 @@ export function orderedBlocks(manifest, tradition, voice) {
   })();
   const names = [...byAlpha(by(['letter', 'letter-variant'])), ...by(['vowel']).sort((a, b) => VOWEL_ORDER.indexOf(a.id) - VOWEL_ORDER.indexOf(b.id))];
   const blocks = [
-    { name: 'Letter teaching clips', cap: SESSION_CAP_MIN, clips: stable(by(['letter-lecture'])) },
     { name: 'Letter names, variant forms, vowels and marks', cap: SESSION_CAP_MIN, clips: names },
     { name: 'Isolated letter sounds (directed)', cap: SESSION_CAP_MIN, clips: byAlpha(by(['letter-sound'])) },
     { name: 'Syllable grid', cap: SESSION_CAP_MIN, clips: bySyl(by(['syllable'])) },

@@ -13,9 +13,9 @@ const manifest = loadManifestFull(R);
 
 test('script paths match manifest paths exactly', () => {
   const md = renderMarkdown(manifest, 'israeli');
-  for (const e of manifest.filter((x) => x.tradition === 'israeli' && x.voice === 'm' && !x.aliasOf)) assert.ok(md.includes(`${e.tradition}/${e.kind}/${e.id}.mp3`), e.path);
+  for (const e of manifest.filter((x) => x.tradition === 'israeli' && x.voice === 'm' && !x.aliasOf && x.kind !== 'letter-lecture')) assert.ok(md.includes(`${e.tradition}/${e.kind}/${e.id}.mp3`), e.path);
   const csv = renderCsv(manifest);
-  for (const e of manifest.filter((x) => x.tradition !== 'sephardi' && !x.aliasOf)) assert.ok(csv.includes(`"${e.path}"`), e.path);
+  for (const e of manifest.filter((x) => x.tradition !== 'sephardi' && !x.aliasOf && x.kind !== 'letter-lecture')) assert.ok(csv.includes(`"${e.path}"`), e.path);
   assert.ok(!csv.includes('/sephardi/'));
 });
 test('ashkenazi script states the human-only and open dialect decision; takes defined', () => {

@@ -91,7 +91,9 @@ test('every manifest entry has a group; required groups all populated; no group 
 });
 
 test('player + real manifest: phrasebook ignores congregation (plays the israeli file); read-track words still refuse mismatched TTS', async () => {
-  const m = manifest.map((entry) => { const e = { ...entry, status: 'missing', source: 'none' }; return (e.path === 'audio/f/israeli/word/anchor-alef.mp3' ? { ...e, status: 'recorded' } : e); });
+  // start from an all-missing copy so the rules are tested, not which clips exist today
+  const bare = manifest.map((e) => ({ ...e, status: 'missing', source: 'none' }));
+  const m = bare.map((e) => (e.path === 'audio/f/israeli/word/anchor-alef.mp3' ? { ...e, status: 'recorded' } : e));
   class A { constructor(u) { this.u = u; } play() { queueMicrotask(() => this.onended?.()); return Promise.resolve(); } pause() {} }
   const speech = { getVoices: () => [], speak(u) { queueMicrotask(() => u.onend?.()); }, cancel() {} };
   const audio = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: m, AudioCtor: A, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } });
@@ -108,10 +110,11 @@ test('player alias: one-line prayer record resolves to its line clip only when t
   const rec = manifest.find((e) => e.kind === 'prayer' && e.aliasOf && e.voice === 'm' && e.tradition === 'israeli');
   assert.ok(rec, 'at least one alias entry');
   const target = rec.aliasOf.split('/');
-  const m = manifest.map((entry) => { const e = { ...entry, status: 'missing', source: 'none' }; return (e.voice === 'm' && e.tradition === 'israeli' && e.kind === target[0] && e.id === target[1] ? { ...e, status: 'recorded' } : e); });
+  const bare = manifest.map((e) => ({ ...e, status: 'missing', source: 'none' })); // the alias rule, not today's files
+  const m = bare.map((e) => (e.voice === 'm' && e.tradition === 'israeli' && e.kind === target[0] && e.id === target[1] ? { ...e, status: 'recorded' } : e));
   const a = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: m, AudioCtor: function () {}, speech: null });
   const s = a.status('prayer', rec.id);
   assert.equal(s.source, 'file'); assert.equal(s.via, 'alias'); assert.match(s.path, new RegExp(`/${target[0]}/${target[1]}\\.mp3$`));
-  const none = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: manifest.map((e) => ({ ...e, status: 'missing', source: 'none' })), AudioCtor: function () {}, speech: null });
+  const none = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: bare, AudioCtor: function () {}, speech: null });
   assert.notEqual(none.status('prayer', rec.id).source, 'file');
 });

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { parseCsv } from '../tools/record-kit/lib.mjs';
 import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
 import { computeCoverage } from '../tools/audio/coverage.mjs';
-import { DIR, COLS, SLOTS, TARGET, build } from '../tools/audio/clip_lists.mjs';
+import { DIR, COLS, SLOTS, TARGET, build, buildSlot } from '../tools/audio/clip_lists.mjs';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = loadManifestFull(root);
@@ -23,6 +23,8 @@ for (const slot of SLOTS) {
     assert.equal(text.split('\n')[0], COLS.join(','));
     const rows = parseCsv(text);
     assert.ok(rows.length <= TARGET);
+    const stillMissing = buildSlot(manifest, voice, tradition, new Map()).picked.reduce((n, stage) => n + stage.available, 0);
+    if (stillMissing > 0) assert.ok(rows.length > 0, `${slot}: ${stillMissing} eligible clips missing but the list is empty`);
     const seen = new Set();
     for (const r of rows) {
       const e = byKey.get(`${voice}|${tradition}|${r.kind}|${r.id}`);

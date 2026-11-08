@@ -44,7 +44,8 @@ test('synthetic clips have files and explicit provenance; none is a human record
   for (const e of manifest) {
     if (e.status === 'missing') { assert.equal(e.source, 'none', e.path); assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), false, e.path); continue; }
     assert.ok(['tts', 'synthetic-unreviewed'].includes(e.status), e.path);
-    assert.notEqual(e.source, 'none', e.path);
+    assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source), `${e.path} source ${e.source}`);
+    assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
     if (e.status === 'synthetic-unreviewed') {
       assert.ok(['outside-synthetic', 'tts-respelled'].includes(e.source), e.path);
       assert.notEqual(e.synth?.reviewed, true, e.path);
@@ -115,7 +116,7 @@ test('size budget: core manifest, the kind-word shard and every word shard stay 
   assert.ok(wordShard.length > 1000 && wordShard.every((e) => e.kind === 'word'), 'kind-word shard holds only kind=word entries');
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
     const f = new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url);
-    assert.ok(fs.statSync(f).size < 2 * MiB, `${t} shard < 2 MiB`);
+    assert.ok(fs.statSync(f).size < 2.5 * MiB, `${t} shard < 2.5 MiB (tradition word shards load on demand, one tradition at a time)`);
     const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
     assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group) && e.tradition === t));
   }
@@ -143,6 +144,13 @@ test('all donor script words remain in each voice and tradition vocabulary shard
   const inScript = {};
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) inScript[t] = new Set(parseCsv(fs.readFileSync(new URL(`../docs/voices/recording-script-${t}.csv`, import.meta.url), 'utf8')).map((r) => r.id));
   const vw = manifest.filter((e) => e.group === 'vocab-word');
+  assert.ok(vw.length >= 6000);
+  const gap = new Set(fs.readFileSync(new URL('../docs/vocab/top-1000-no-audio-ids.txt', import.meta.url), 'utf8').split('\n').map((l) => l.trim().split(/\s+/)[0]).filter((x) => x && !x.startsWith('#')));
+  for (const e of vw) {
+    const ok = inScript[e.tradition].has(e.id) || (e.tradition === 'israeli' && (gap.has(e.id) || (e.status !== 'missing' && fs.existsSync(new URL('../' + e.path, import.meta.url)))));
+    assert.ok(ok, `${e.path} not in script, gap list or existing clips`);
+  }
+
   for (const t of Object.keys(inScript)) for (const v of ['m', 'f']) {
     const ids = new Set(vw.filter((e) => e.tradition === t && e.voice === v).map((e) => e.id));
     for (const id of inScript[t]) assert.ok(ids.has(id), `${t}/${v}/${id} missing donor word`);

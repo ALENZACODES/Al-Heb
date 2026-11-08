@@ -17,10 +17,6 @@ No recordings exist yet. Every file below is a request.
 - OPEN DECISION: dialect for cholam / tzere (e.g. oy vs ey) and for the vowel set generally (Litvish vs Polish/Hasidic). Choose one dialect with the talent and keep it for every clip. This is not settled by any source in the project notes.
 - No TTS can produce this tradition, so every Ashkenazi clip is a human-recording task.
 
-## Letter teaching clips
-
-_No entries yet (source data from another lane not present when generated). Re-run after data lands._
-
 ## Letter names
 
 Takes per clip: 3. Clips: 27.

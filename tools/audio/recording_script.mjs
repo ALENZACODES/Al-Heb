@@ -68,7 +68,7 @@ export function direction(e, tradition) {
 }
 
 export function buildScript(manifest, tradition) {
-  const rows = manifest.filter((e) => e.tradition === tradition && !e.aliasOf); // aliases reuse another clip's file: nothing to record
+  const rows = manifest.filter((e) => e.tradition === tradition && !e.aliasOf && e.kind !== 'letter-lecture'); // lectures are separate teaching content; aliases reuse another clip's file: nothing to record
   const bySection = new Map();
   for (const e of rows) {
     const k = section(e);
@@ -92,7 +92,7 @@ export function minimalPairs(tradition) {
   return out;
 }
 
-const SECTION_ORDER = ['letter-lecture', 'letter', 'letter-variant', 'letter-sound', 'vowel', 'syllable', 'anchor', 'lesson-word', 'phrase', 'prayer-line', 'prayer-word', 'word', 'line', 'prayer'];
+const SECTION_ORDER = ['letter', 'letter-variant', 'letter-sound', 'vowel', 'syllable', 'anchor', 'lesson-word', 'phrase', 'prayer-line', 'prayer-word', 'word', 'line', 'prayer'];
 const SECTION_TITLES = { 'letter-lecture': 'Letter teaching clips',
   letter: 'Letter names', 'letter-sound': 'Isolated letter sounds', vowel: 'Vowels and marks', syllable: 'Syllable grid (22 letters x 5 vowel sounds)',
   'letter-variant': 'Letter variant forms (vet, khaf, fe, sin)', anchor: 'Mnemonic anchor words (Israeli only)', 'lesson-word': 'Lesson vocabulary words',
@@ -143,7 +143,7 @@ export function renderCsv(manifest) {
   const head = ['tradition', 'voice', 'section', 'kind', 'id', 'takes', 'file', 'pointed_hebrew', 'ipa', 'direction', 'preferred_take', 'notes', 'optional'];
   const lines = [head.join(',')];
   for (const t of SCRIPT_TRADITIONS) {
-    for (const e of manifest.filter((x) => x.tradition === t && !x.aliasOf)) {
+    for (const e of manifest.filter((x) => x.tradition === t && !x.aliasOf && x.kind !== 'letter-lecture')) {
       const s = section(e);
       lines.push([t, e.voice, s, e.kind, e.id, TAKES[s], e.path, e.text, e.ipa || '', direction(e, t), '', '', e.optional ? 'optional' : ''].map(csvCell).join(','));
     }

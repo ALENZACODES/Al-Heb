@@ -32,12 +32,12 @@ async function open(hold) {
   return { page, errs, release, waitHeld, close, gates };
 }
 /** Focus the heading, tag it, and count how many times the tagged element is removed from the page (= quiet re-renders that replaced it). */
-const arm = (page) => page.evaluate(() => {
+const arm = async (page) => { await page.waitForSelector('#view-title', { timeout: 15000 }); return page.evaluate(() => { // slow runners: the heading may not be drawn yet
   const h = document.getElementById('view-title'); h.dataset.old = '1'; h.focus({ preventScroll: true });
   window.__replaced = 0;
   new MutationObserver(() => { if (window.__replaced === 0 && !document.querySelector('#view-title[data-old]')) window.__replaced = 1; }).observe(document.getElementById('main'), { childList: true, subtree: true });
   return document.activeElement.id;
-});
+}); };
 const settled = (page) => page.waitForFunction(() => window.__replaced === 1 && document.body.dataset.audioManifest === 'ready' && document.getElementById('main').getAttribute('aria-busy') !== 'true', null, { timeout: 15000 });
 
 test('a quiet refresh after the delayed audio manifest keeps focus on #view-title', { skip: !chromium, timeout: 60000 }, async () => {

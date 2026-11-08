@@ -111,8 +111,11 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
     check('unavailable congregation recording is labelled honestly', await page.locator('main .audio-none').first().isVisible() && /No audio yet/.test(await page.locator('main .audio-none').first().innerText()));
   }
   // the quick check opens once the end of the lesson has been seen (U-13): scroll there first, then wait for it to enable
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); // the button sits in a sticky bar, so scrolling to it moves nothing
-  await page.waitForFunction(() => !document.getElementById('alef-quick-start')?.disabled, null, { timeout: 8000 });
+  // A quiet re-render (audio manifest landing) can redraw the lesson and re-lock the check, so keep scrolling until it opens.
+  for (let i = 0; i < 40 && await page.evaluate(() => !!document.getElementById('alef-quick-start')?.disabled); i++) {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); // the button sits in a sticky bar, so scrolling to it moves nothing
+    await page.waitForTimeout(250);
+  }
   await page.locator('#alef-quick-start').click();
   const answers = new Map();
   for (let i = 0; i < 30 && await page.locator('.alef-ex-card').count(); i++) {

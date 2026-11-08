@@ -45,11 +45,11 @@ test('synthetic Ashkenazi / Israeli file: level file, honest per-tradition label
     ashkenazi: 'Synthetic voice (Ashkenazi style, made from a respelling; not a recorded teacher; unreviewed)',
     israeli: 'Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed)',
   };
-  for (const t of ['ashkenazi', 'israeli']) {
-    const a = audioAccess(mkS(t, [synthEntry(t)]), 'word', 'bayit');
-    assert.equal(a.level, 'file', t); assert.equal(a.label, want[t], t); assert.ok(!/Recorded by a human/.test(a.label), t);
-  }
-  // Owner decision 2026-11-07: the Sephardi setting plays the Israeli file; a Sephardi file with no Israeli counterpart is not played
+  const a = audioAccess(mkS('israeli', [synthEntry('israeli')]), 'word', 'bayit');
+  assert.equal(a.level, 'file'); assert.equal(a.label, want.israeli); assert.ok(!/Recorded by a human/.test(a.label));
+  // Owner decision 2026-11-07: the Sephardi and Ashkenazi settings play the Israeli file; their own files with no Israeli counterpart are not played
+  assert.equal(audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi')]), 'word', 'bayit').level, 'none');
+  assert.equal(audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi'), synthEntry('israeli')]), 'word', 'bayit').label, want.israeli);
   assert.equal(audioAccess(mkS('sephardi', [synthEntry('sephardi')]), 'word', 'bayit').level, 'none');
   const viaRule = audioAccess(mkS('sephardi', [synthEntry('sephardi'), synthEntry('israeli')]), 'word', 'bayit');
   assert.equal(viaRule.level, 'file'); assert.equal(viaRule.label, want.israeli, 'the label names the file that plays');
@@ -58,19 +58,19 @@ test('a synthetic clip is never counted or labelled as human, whichever traditio
   // learner set to Ashkenazi, only an Israeli synthetic file exists and a human-approved equivalence allows it: the label names the file's tradition
   const a = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'missing', { equivalentTo: ['israeli'] }), synthEntry('israeli')]), 'word', 'bayit');
   assert.equal(a.level, 'file'); assert.match(a.label, /^Synthetic voice \(Israeli style, made from pointed Hebrew;/); assert.match(a.label, /not a recorded teacher/);
-  const human = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'recorded', { source: 'human:record-kit' })]), 'word', 'bayit');
+  const human = audioAccess(mkS('ashkenazi', [synthEntry('israeli', 'recorded', { source: 'human:record-kit' })]), 'word', 'bayit');
   assert.equal(human.label, 'Recorded by a human reader');
 });
-test('device voice stays Israeli-only: an Ashkenazi learner with no clip gets none, even with a he-IL voice; Sephardi plays Israeli by rule, so it may use it', () => {
+test('device voice stays Israeli-only; Ashkenazi and Sephardi play Israeli by rule, so both may use it', () => {
   const a = audioAccess(mkS('ashkenazi', [{ ...synthEntry('ashkenazi', 'missing') }], speech([{ lang: 'he-IL' }])), 'word', 'bayit');
-  assert.equal(a.level, 'none'); assert.equal(a.label, NO_AUDIO);
+  assert.equal(a.level, 'device'); assert.equal(a.label, DEVICE_LABEL);
   assert.equal(audioAccess(mkS('sephardi', [{ ...synthEntry('sephardi', 'missing') }], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
   assert.equal(audioAccess(mkS('israeli', [synthEntry('israeli', 'missing')], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
   assert.match(DEVICE_LABEL, /Israeli-style only/);
 });
-test('audioButton for a synthetic Ashkenazi clip shows the honest label as the chip and in the aria-label', () => {
-  const b = audioButton(h, { audio: mkS('ashkenazi', [synthEntry('ashkenazi')]) }, { kind: 'word', id: 'bayit' });
-  const label = 'Synthetic voice (Ashkenazi style, made from a respelling; not a recorded teacher; unreviewed)';
+test('audioButton for an Ashkenazi learner shows the honest label of the Israeli clip that plays, as the chip and in the aria-label', () => {
+  const b = audioButton(h, { audio: mkS('ashkenazi', [synthEntry('israeli')]) }, { kind: 'word', id: 'bayit' });
+  const label = 'Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed)';
   assert.equal(b.kids[0].attrs['data-audio-state'], 'file'); assert.ok(b.kids[0].attrs['aria-label'].includes(label)); assert.equal(b.kids[2].kids[0], label);
 });
 
@@ -116,7 +116,7 @@ test('caller text never beats a file or the manifest text, and stays Israeli-onl
   await a.play('word', 'not-in-list', { text: 'שָׁלוֹם' });
   assert.equal(spoken[1], 'שָׁלוֹם');
   const ash = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: [], AudioCtor: class {}, speech: sp, UtteranceCtor: Utt });
-  assert.equal(ash.status('word', 'not-in-list', { text: 'שָׁלוֹם' }).reason, 'tts-pronunciation-mismatch');
+  assert.equal(ash.status('word', 'not-in-list', { text: 'שָׁלוֹם' }).source, 'tts-fallback', 'Ashkenazi plays Israeli sound by rule, so the Israeli device voice is no mismatch');
 });
 test('audioButton passes caller text through: a device button for an item missing from the list', () => {
   const ctx = { audio: mk(speech([{ lang: 'he-IL' }])) };

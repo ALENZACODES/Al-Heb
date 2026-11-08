@@ -10,8 +10,8 @@ The Sephardi setting plays the Israeli clips for everything (letters, vowels, sy
 
 ## What changed (commit "Sephardi setting plays the Israeli clips")
 
-- `src/audio/player.js`: `PLAYBACK_TRADITION = { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'ashkenazi' }` and `playbackTradition()`. `plan()` resolves files in the played tradition (same voice); the result keeps `tradition` = the learner's setting and adds `fileTradition: 'israeli'`, `via: 'tradition'`. A Sephardi file is never selected. The Web Speech mismatch rule now looks at the played tradition, so the Israeli device voice is not refused for the Sephardi setting.
-- Captions (`src/shell/audio-labels.js` `traditionCaption`, used by `describeResult` and `playbackLine` in `src/shell/audio.js`): "(woman, Israeli voice; Sephardi reading shown in English letters)". Israeli and Ashkenazi captions are unchanged ("(woman, Israeli)").
+- `src/audio/player.js`: `PLAYBACK_TRADITION = { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' }` and `playbackTradition()`. `plan()` resolves files in the played tradition (same voice); the result keeps `tradition` = the learner's setting and adds `fileTradition: 'israeli'`, `via: 'tradition'`. A Sephardi file is never selected. The Web Speech mismatch rule now looks at the played tradition, so the Israeli device voice is not refused for the Sephardi setting.
+- Captions (`src/shell/audio-labels.js` `traditionCaption`, used by `describeResult` and `playbackLine` in `src/shell/audio.js`): "(woman, Israeli voice; Sephardi reading shown in English letters)". The Israeli caption is unchanged; Ashkenazi now uses the same stand-in caption as Sephardi ("(woman, Israeli)").
 - Dictionary (`src/vocab/clips.js`): `lookupClip` and `alternateClip` read the played tradition's slot; the clip keeps its real `tradition` and carries `setting`; `clipCaption` names both; a retired slot is never offered as an alternative. `data/vocab/clip-lookup.json` regenerated (rule text).
 - Phrasebook (`src/phrases/phrases.view.js`): the Sephardi style plays the Israeli row; the ladder skips retired slots. The catalogue coverage table (`model.js`) still counts real rows.
 - Settings/onboarding line (`src/pronunciation/forTradition.js`): "No recorded audio yet. Sephardi plays the Israeli clips (a synthetic man's or woman's voice) and shows the Sephardi reading in English letters; where no clip exists, Listen uses your device's Hebrew voice if it has one: a computer voice, not a teacher."
@@ -23,13 +23,11 @@ The Sephardi setting plays the Israeli clips for everything (letters, vowels, sy
 - Sephardi words: 4,897 own files of 7,006 rows; Israeli files for 6,345 of those rows. The rule adds 1,448 word clips to the Sephardi setting; 661 word rows have no file in either tradition (device voice or silence, as before).
 - Lines: 258 Sephardi, 258 Israeli counterparts. Prayers, letters, vowels, syllables: Sephardi had no files of its own; the Israeli stand-ins already applied per id (`data/audio/equivalence.json`, commit 39ae3543). That per-id list is now redundant for Sephardi but harmless; it still documents the rule history.
 
-## Ashkenazi: not ruled on
+## Ashkenazi: same rule (owner decision, later 2026-11-07)
 
-Unchanged: an Ashkenazi file plays as itself (5,120 word clips, 258 line clips, all respelling-made), a missing Ashkenazi row with no `equivalentTo` falls to the device voice only if "Use my browser's voice anyway" is on, and the caption says "Ashkenazi". Trade-off for the owner:
+`PLAYBACK_TRADITION.ashkenazi` is now `'israeli'`. The Ashkenazi setting plays the Israeli clip of the same voice and shows the Ashkenazi reading in English letters; the caption reads "Israeli voice; Ashkenazi reading shown in English letters". The respelled `audio/<voice>/ashkenazi/*` files and their manifest rows stay on disk but are not played.
 
-- Same mechanism as Sephardi (play Israeli, show the Ashkenazi reading in English letters): natural voice everywhere, 1,225 more word clips, nothing silent; but Ashkenazi letter names and vowels differ audibly (tav/sav, cholam "oy", qamats "o"), so the clip would contradict the on-screen reading for exactly the items a beginner is learning. Sephardi does not have this problem (Modern Israeli follows the Sephardi values).
-- Keep the respelled Ashkenazi clips: they carry the Ashkenazi vowels but have the same slow, unnatural quality the owner rejected for Sephardi, and no human has listened to them.
-- Middle path: Israeli stand-in for lines, prayers and words (where the reading aid carries the tradition), own files or silence for letters, vowels and syllables. This would be one more row in `PLAYBACK_TRADITION` keyed by kind.
+Known limit, stated plainly: the sound is Modern Israeli, so for Ashkenazi-specific values (tav as "s", cholam as "oy", qamats as "o") the clip will not match the English-letter reading. The on-screen reading is the Ashkenazi one; the voice is not. This was the trade-off flagged before the decision.
 
 ## Honest limits
 

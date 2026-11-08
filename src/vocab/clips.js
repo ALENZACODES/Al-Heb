@@ -71,7 +71,7 @@ export function buildClipLookup(rows, fileExists = () => true) {
   }
   return {
     schema: 'alef-vocab-clip-lookup/1',
-    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose files the setting plays (src/audio/player.js PLAYBACK_TRADITION: the Sephardi setting plays the Israeli file, owner decision 2026-11-07; Ashkenazi its own); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
+    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose files the setting plays (src/audio/player.js PLAYBACK_TRADITION: the Sephardi and Ashkenazi settings play the Israeli file, owner decisions 2026-11-07); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
     clips,
   };
 }

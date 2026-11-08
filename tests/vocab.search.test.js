@@ -147,10 +147,10 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   // the Sephardi setting plays the Israeli file (owner decision 2026-11-07); the clip keeps its real tradition and remembers the setting
   assert.ok(fSep && fSep.path.startsWith('audio/f/israeli/'));
   assert.equal(fSep.tradition, 'israeli'); assert.equal(fSep.setting, 'sephardi');
-  assert.ok(mAsh && mAsh.path.startsWith('audio/m/ashkenazi/'));
-  assert.equal(mAsh.tradition, 'ashkenazi');
-  assert.notEqual(fSep.path, mAsh.path);
-  assert.match(onDisk.rule, /Sephardi setting plays the Israeli file/);
+  assert.ok(mAsh && mAsh.path.startsWith('audio/m/israeli/'));
+  assert.equal(mAsh.tradition, 'israeli'); assert.equal(mAsh.setting, 'ashkenazi');
+  assert.notEqual(fSep.path, mAsh.path); // different voices
+  assert.match(onDisk.rule, /Sephardi and Ashkenazi settings play the Israeli file/);
   assert.ok(existsSync(new URL('../' + fSep.path, import.meta.url)));
   assert.deepEqual(CLIP_RATES, ['normal', 'slow']);
   assert.equal(planIsExactFile({ source: 'file', via: 'exact', url: '/x', voice: 'f', tradition: 'sephardi', id: fSep.id }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), true);
@@ -165,7 +165,8 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   ];
   const small = buildClipLookup(rows, () => true);
   assert.equal(lookupClip(small, 'הִיא', 'f', 'sephardi').id, 'a', 'the Sephardi setting gets the Israeli slot');
-  assert.equal(lookupClip(small, 'הִיא', 'f', 'ashkenazi'), null, 'Ashkenazi has no own slot here and no rule');
+  assert.equal(lookupClip(small, 'הִיא', 'f', 'ashkenazi').id, 'a', 'the Ashkenazi setting gets the Israeli slot too');
+  assert.equal(lookupClip(small, 'הִיא', 'f', 'nusach-x'), null, 'an unknown setting has no slot');
   assert.equal(lookupClip(small, 'הִיא', 'm', 'israeli').id, 'b');
 });
 

@@ -15,8 +15,8 @@ const index = new Map(all.map((e) => [`${e.voice}|${e.tradition}|${e.kind}|${e.i
 const KINDS = ['letter', 'vowel', 'syllable', 'word', 'line', 'prayer'];
 const player = (voice, congregation) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null, UtteranceCtor: null });
 
-test('rule table: sephardi -> israeli, ashkenazi and israeli unchanged', () => {
-  assert.deepEqual(PLAYBACK_TRADITION, { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'ashkenazi' });
+test('rule table: sephardi and ashkenazi -> israeli, israeli unchanged', () => {
+  assert.deepEqual(PLAYBACK_TRADITION, { israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' });
 });
 
 test('real manifest, Sephardi setting: every id with an Israeli file of that voice resolves to that Israeli file, for every kind and both voices', () => {
@@ -65,18 +65,20 @@ test('real manifest: the #/read priestly blessing line and the shalom lesson wor
   }
 });
 
-test('real manifest, Ashkenazi setting: an Ashkenazi file of the requested voice still plays as itself (no ruling yet), and its caption names Ashkenazi', () => {
+test('real manifest, Ashkenazi setting: every id with an Israeli file of that voice plays that Israeli file, and the caption names both', () => {
   for (const voice of ['m', 'f']) {
     const audio = player(voice, 'ashkenazi');
-    const own = all.filter((e) => e.tradition === 'ashkenazi' && e.voice === voice && e.status !== 'missing');
-    assert.ok(own.length > 1000);
-    for (const e of own) {
+    const isr = all.filter((e) => e.tradition === 'israeli' && e.voice === voice && e.status !== 'missing');
+    assert.ok(isr.length > 1000);
+    for (const e of isr) {
       const r = audio.status(e.kind, e.id);
-      assert.equal(r.path, e.path, `${e.path} plays as itself`);
-      assert.equal(r.fileTradition, undefined);
+      assert.equal(r.path, e.path, `${e.path} plays for Ashkenazi`);
+      assert.ok(r.fileTradition === 'israeli' || r.fileTradition === undefined, 'israeli-only ids carry no stand-in note');
     }
-    const r = audio.status(own[0].kind, own[0].id);
-    assert.match(describeResult(r).text, /\((man|woman), Ashkenazi\)\.$/);
+    const sample = isr.map((e) => audio.status(e.kind, e.id)).find((r) => r.fileTradition === 'israeli');
+    assert.ok(sample, 'at least one stand-in result');
+    const r = sample;
+    assert.match(describeResult(r).text, /Israeli voice; Ashkenazi reading shown in English letters\)\.$/);
   }
 });
 

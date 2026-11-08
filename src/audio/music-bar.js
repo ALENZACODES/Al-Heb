@@ -34,7 +34,6 @@ function paint(state) {
   if (status) {
     status.textContent = state.error
       ? state.error
-      : state.want && mediaPolicy.quiet() ? 'Music starts after the first minute.'
         : state.phase === 'paused' && state.speech ? 'Paused while speech plays.'
           : '';
   }
@@ -63,7 +62,7 @@ export function mountGameMusic(parent = document.body) {
     h('button', { type: 'button', 'data-music': 'toggle', 'aria-pressed': 'false', onclick: () => {
       const now = gameMusic.snapshot();
       if (now.want && now.armed) gameMusic.disable();
-      else gameMusic.enable();
+      else { mediaPolicy.chooseMusic?.(); gameMusic.enable(); }
     } }, 'Play music'),
     h('label', { class: 'visually-hidden', for: 'gm-track' }, 'Track'),
     h('select', { id: 'gm-track', 'data-music': 'track', onchange: (e) => gameMusic.choose(e.target.value) }, ...options),

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book13-p01.mp3"
    },
    "illustration": "a man in a small bright apartment, plants everywhere",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book13-p02.mp3"
    },
    "illustration": "the man looking around his flat with quiet satisfaction",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book13-p03.mp3"
    },
    "illustration": "a grey cat on the windowsill",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book13-p04.mp3"
    },
    "illustration": "a laptop with a video call grid open",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book13-p05.mp3"
    },
    "illustration": "a wall calendar covered in notes",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book13-p06.mp3"
    },
    "illustration": "a bus pass and a helmet on a hook",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book13-p07.mp3"
    },
    "illustration": "a bicycle leaning in the hallway",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book13-p08.mp3"
    },
    "illustration": "an open wallet with a receipt and one coin",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book13-p09.mp3"
    },
    "illustration": "a phone buzzing with a group chat full of messages",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book13-p10.mp3"
    },
    "illustration": "the man in a hammock on a tiny balcony",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book13-p11.mp3"
    },
    "illustration": "the man counting on his fingers, smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book13-p12.mp3"
    },
    "illustration": "the man, the cat, the bicycle and the sunset through the window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

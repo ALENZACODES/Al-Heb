@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book14-p01.mp3"
    },
    "illustration": "a woman at a desk by a window, headphones on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book14-p02.mp3"
    },
    "illustration": "an orange cat sitting squarely on the keyboard",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book14-p03.mp3"
    },
    "illustration": "the woman lifting the cat off the keyboard",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book14-p04.mp3"
    },
    "illustration": "the cat sitting on the printed report, unbothered",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book14-p05.mp3"
    },
    "illustration": "the cat asleep across the mouse pad",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book14-p06.mp3"
    },
    "illustration": "a video call ringing on screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book14-p07.mp3"
    },
    "illustration": "the woman presenting to a grid of faces",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book14-p08.mp3"
    },
    "illustration": "the cat's face filling the webcam, mouth open mid-meow",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book14-p09.mp3"
    },
    "illustration": "the grid of coworkers laughing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book14-p10.mp3"
    },
    "illustration": "the boss's tile, a grey-haired man smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book14-p11.mp3"
    },
    "illustration": "the woman relieved, hand on chest",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book14-p12.mp3"
    },
    "illustration": "the cat curled on the warm laptop, screen dimmed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

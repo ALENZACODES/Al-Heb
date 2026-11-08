@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book15-p01.mp3"
    },
    "illustration": "a dark bedroom, a phone lighting up on the nightstand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book15-p02.mp3"
    },
    "illustration": "the phone vibrating toward the edge of the table",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book15-p03.mp3"
    },
    "illustration": "a man fumbling for the phone, squinting",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book15-p04.mp3"
    },
    "illustration": "an unknown number on the screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book15-p05.mp3"
    },
    "illustration": "the man answering with a hoarse voice",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book15-p06.mp3"
    },
    "illustration": "the man listening, nothing, a clock reading 3:12",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book15-p07.mp3"
    },
    "illustration": "the man sitting up, now alert",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book15-p08.mp3"
    },
    "illustration": "an old man's face in a thought bubble",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book15-p09.mp3"
    },
    "illustration": "the grandfather in bright sunlight far away, coffee in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book15-p10.mp3"
    },
    "illustration": "the man pointing at the dark window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book15-p11.mp3"
    },
    "illustration": "the grandfather slapping his forehead",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book15-p12.mp3"
    },
    "illustration": "the man lying back down, smiling, phone on his chest",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

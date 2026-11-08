@@ -58,7 +58,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
   { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(chatgpt-overnight|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
-  { id: "od-games", label: "Games (preview-game code and word data)", test: /^(src\/games\/|data\/games\/)/, approxMB: 0.18 },
+  { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-awards", label: "Awards gallery page", test: /^src\/awards\/gallery\.view\.js$/, approxMB: 0.02 },
   { id: "od-torahreader", label: "Torah reader page", test: /^src\/torahreader\/torahreader\.view\.js$/, approxMB: 0.05 },

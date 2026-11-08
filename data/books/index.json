@@ -139,9 +139,9 @@
    "titleEn": "Good Morning, Tel Aviv",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -151,9 +151,9 @@
    "titleEn": "I Have, I Don't Have",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -163,9 +163,9 @@
    "titleEn": "The Cat Works From Home",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -175,9 +175,9 @@
    "titleEn": "Who Is Calling?",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -187,9 +187,9 @@
    "titleEn": "Shabbat Table",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

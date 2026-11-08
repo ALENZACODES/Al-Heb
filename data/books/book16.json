@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book16-p01.mp3"
    },
    "illustration": "a kitchen bright with afternoon light, pots on every burner",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book16-p02.mp3"
    },
    "illustration": "a woman stirring a big pot, apron on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book16-p03.mp3"
    },
    "illustration": "a man at a bakery with two braided loaves",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book16-p04.mp3"
    },
    "illustration": "a white tablecloth, candles, wine, flowers",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book16-p05.mp3"
    },
    "illustration": "two candles being lit, hands circling the flames",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book16-p06.mp3"
    },
    "illustration": "a silver cup filled to the brim",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book16-p07.mp3"
    },
    "illustration": "the cover lifted off the two loaves",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book16-p08.mp3"
    },
    "illustration": "the family around the table, three generations",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book16-p09.mp3"
    },
    "illustration": "raised cups, smiles all around",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book16-p10.mp3"
    },
    "illustration": "a bowl of golden chicken soup, steam",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book16-p11.mp3"
    },
    "illustration": "the table mid-meal, hands gesturing, a child under the table",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book16-p12.mp3"
    },
    "illustration": "the candles burning low, the room warm and quiet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

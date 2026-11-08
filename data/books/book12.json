@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book12-p01.mp3"
    },
    "illustration": "an empty boulevard, pale sky, sprinklers on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book12-p02.mp3"
    },
    "illustration": "sun lifting over rooftops with water tanks and solar panels",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book12-p03.mp3"
    },
    "illustration": "flat silver sea, one swimmer",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book12-p04.mp3"
    },
    "illustration": "a man jogging along the promenade",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book12-p05.mp3"
    },
    "illustration": "a happy dog running ahead of him on a leash",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book12-p06.mp3"
    },
    "illustration": "riders on the bike lane, one with a surfboard",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book12-p07.mp3"
    },
    "illustration": "a barista raising the shutter of a corner café",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book12-p08.mp3"
    },
    "illustration": "the barista waving at the jogger",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book12-p09.mp3"
    },
    "illustration": "the jogger answering with a thumbs up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book12-p10.mp3"
    },
    "illustration": "shutters opening, a bus, a fruit stand being set up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book12-p11.mp3"
    },
    "illustration": "horns, a scooter, a man shouting into a phone, pigeons",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book12-p12.mp3"
    },
    "illustration": "the jogger and the dog at the water's edge, city behind them",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

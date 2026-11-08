@@ -42,8 +42,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/chatgpt-overnight/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
-  // Game data (word bank, prefix deck, arcade lists, the laws): fetched when a game first opens, runtime-cached.
-  'data/games/',
+  // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
+  'data/games/', 'assets/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
   'src/traditions/', 'src/vocab/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',

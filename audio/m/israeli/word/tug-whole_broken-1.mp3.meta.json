@@ -1,0 +1,16 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "שָׁלֵם",
+ "inputSha256": "501278a9373cb251495b9b6125249bf9da249e1b7940e7febabb47e5f2b7f601",
+ "ingestedAt": "2026-11-08T15:49:26.817Z",
+ "licence": "not cleared",
+ "note": "TTS output redistribution rights not confirmed by counsel",
+ "renderedAt": "2026-11-08T15:49:26.817Z",
+ "redistributionCleared": false,
+ "spokenText": "שָׁלֵם",
+ "normalized": true
+}

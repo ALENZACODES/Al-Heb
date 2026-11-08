@@ -15,7 +15,7 @@ for ch in chapters:
         clip=root/c['path'];meta=json.loads((root/(c['path']+'.json')).read_text(encoding='utf-8-sig'))
         if meta['fingerprint']!=c['fingerprint'] or meta['audioSha256']!=hashlib.sha256(clip.read_bytes()).hexdigest():raise ValueError('Chunk hash mismatch '+c['id'])
         if meta['spokenText'] not in [c['text'],c['text'].replace(';','.').replace(':','.')]:raise ValueError('Unexpected speech text alteration '+c['id'])
-        chunk_records.append({'id':c['id'],'fingerprint':c['fingerprint'],'fromVerse':c['fromVerse'],'toVerse':c['toVerse'],'spokenText':meta['spokenText'],'audioSha256':meta['audioSha256'],'generatedUtc':meta['generatedUtc'],'punctuationAdjusted':meta['spokenText']!=c['text'],'requestTextSha256':hashlib.sha256(meta['spokenText'].encode()).hexdigest()})
+        chunk_records.append({'id':c['id'],'fingerprint':c['fingerprint'],'fromVerse':c['fromVerse'],'toVerse':c['toVerse'],'spokenText':meta['spokenText'],'sourceText':c.get('sourceText',c['text']),'speechNormalization':c.get('speechNormalization','none'),'audioSha256':meta['audioSha256'],'generatedUtc':meta['generatedUtc'],'punctuationAdjusted':meta['spokenText']!=c['text'],'requestTextSha256':hashlib.sha256(meta['spokenText'].encode()).hexdigest()})
     receipt=track.with_suffix('.json')
     cached=json.loads(receipt.read_text(encoding='utf-8')) if receipt.exists() else {}
     if not track.exists() or cached.get('fingerprint')!=digest or cached.get('audioSha256')!=hashlib.sha256(track.read_bytes()).hexdigest():

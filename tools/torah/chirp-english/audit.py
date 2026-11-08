@@ -1,5 +1,5 @@
 """Final source coverage, identity, duplicate, and audio-hash gate; no ASR certification claim."""
-import pathlib,json,hashlib,sys,datetime
+import pathlib,json,hashlib,sys,datetime,re
 root=pathlib.Path(__file__).resolve().parent
 repo=pathlib.Path(sys.argv[1]).resolve()
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
@@ -16,10 +16,13 @@ for book,count in [('genesis',50),('exodus',40),('leviticus',27),('numbers',36),
         source=read(repo/'data'/'corpus'/'torah'/book/f'{n:02d}.json')
         verse_count+=len(source['verses'])
         expected=' '.join(v['en'] for v in source['verses'])
+        spoken_expected=re.sub(r'(?<![א-ת])י[֑-ׇ]*ה[֑-ׇ]*ו[֑-ׇ]*ה[֑-ׇ]*(?![א-ת])','LORD',expected)
+        assert not re.search('[א-ת]',spoken_expected)
         for speaker,voice,provider_voice in [('ari','m','en-US-Chirp3-HD-Charon'),('noa','f','en-US-Chirp3-HD-Kore')]:
             chapter=next(c for c in chapters if c['book']==book and c['chapter']==n and c['speaker']==speaker)
             chunks=[rows[cid] for cid in chapter['chunks']]
-            assert ' '.join(c['text'] for c in chunks)==expected
+            assert ' '.join(c.get('sourceText',c['text']) for c in chunks)==expected
+            assert ' '.join(c['text'] for c in chunks)==spoken_expected
             assert chunks[0]['fromVerse']==1 and chunks[-1]['toVerse']==len(source['verses'])
             for i,c in enumerate(chunks):
                 assert len(c['text'].encode())<=4800 and c['voice']==provider_voice
@@ -30,7 +33,7 @@ for book,count in [('genesis',50),('exodus',40),('leviticus',27),('numbers',36),
                 assert meta['audioSha256']==hashlib.sha256((root/c['path']).read_bytes()).hexdigest()
             entry=entries[(voice,chapter['id'])]
             assert entry['provider']=='google' and entry['providerVoice']==provider_voice and entry['timing']=='chapter-only'
-            assert entry['text']==expected and entry['durationMs']>0
+            assert entry['text']==spoken_expected and entry['durationMs']>0
             assert entry['audioSha256']==hashlib.sha256((root/'delivery'/entry['path']).read_bytes()).hexdigest()
 assert verse_count==5846
 reports=[]

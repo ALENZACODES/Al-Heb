@@ -20,3 +20,5 @@ Six short Genesis 1 pilots were checked with unprompted English ASR: five matche
 All released tracks receive source coverage, hash, and full-decode checks. ASR reports are additional evidence, not a claim that all pronunciations have received human listening review. Chapter timing is measured audio duration only. Hebrew verification is a separate pipeline; these English checks make no claims about Hebrew accuracy.
 
 The first production run also used eight disjoint later-half workers in a separate directory while the original four handled earlier requests. That temporary scheduling layout is not required for future resumptions; use one coordinated launcher over the saved plan and clip directory.
+
+English speech preserves the JPS source separately as `sourceText`. The written Hebrew divine name in Exodus 6:3 is spoken as LORD; untranslated Hebrew remaining in any English request is rejected for review. Displayed source text and its source hash are unchanged. See `docs/torah/audio-verification/exodus6-correction/`.

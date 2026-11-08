@@ -118,6 +118,29 @@ test('planSidecar: tts:google prayer clips get no invented voice id', () => {
   assert.equal(up.sidecar.renderedAt, '2026-11-07T10:00:00.000Z');
 });
 
+test('planSidecar: a tts:google clip re-rendered with a recorded voice keeps that voice', () => {
+  const word = { path: 'audio/m/israeli/word/h53c53bdf.mp3', voice: 'm', tradition: 'israeli', kind: 'word', id: 'h53c53bdf', text: 'חָדָשׁ', status: 'tts', source: 'tts:google', group: 'vocab-word' };
+  const rerendered = { status: 'tts', source: 'tts:google', renderedAt: '2026-11-08T03:23:52.488Z', redistributionCleared: false, note: 'TTS output redistribution rights not confirmed by counsel.', voiceName: 'he-IL-Wavenet-B', spokenText: 'חָדָשׁ', normalized: true };
+  const up = planSidecar(word, rerendered);
+  assert.equal(up.action, 'upgrade');
+  assert.equal(up.sidecar.voiceId, 'he-IL-Wavenet-B', 'the recorded voice is used, not the Nov 7 null-voice form');
+  assert.equal(up.sidecar.engine, 'google-cloud-tts');
+  assert.equal(up.sidecar.ingestedAt, '2026-11-08T03:23:52.488Z');
+  assert.equal(up.sidecar.renderedAt, '2026-11-08T03:23:52.488Z');
+  assert.equal(up.sidecar.spokenText, 'חָדָשׁ', 'render-time facts are kept, not dropped');
+  assert.equal(up.sidecar.normalized, true);
+  assert.equal(up.sidecar.redistributionCleared, false);
+  assert.match(up.sidecar.note, /re-rendered 2026-11-08/);
+  assert.doesNotMatch(up.sidecar.note, /ISRAELI-VOICE/, 'the Nov 7 regression note does not apply to a re-render with a recorded voice');
+  assert.ok(sidecarComplete(up.sidecar));
+  // Idempotent: the upgraded sidecar already says what the plan would say.
+  assert.equal(planSidecar(word, up.sidecar).action, 'skip');
+  // Voice recorded but no render time: the voice is kept, the date stays null.
+  const voiceless = planSidecar(word, { status: 'tts', source: 'tts:google', voiceName: 'he-IL-Wavenet-B' });
+  assert.equal(voiceless.sidecar.voiceId, 'he-IL-Wavenet-B');
+  assert.equal(voiceless.sidecar.ingestedAt, null);
+});
+
 test('planSidecar: skips are counted, not guessed', () => {
   assert.deepEqual([planSidecar(paid('m', 'israeli', { status: 'missing' })).action, planSidecar(paid('m', 'israeli', { status: 'missing' })).reason], ['skip', 'no-clip']);
   assert.equal(planSidecar(paid('m', 'israeli', { status: 'recorded' })).reason, 'human-clip');

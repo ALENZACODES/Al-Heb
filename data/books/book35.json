@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book35-p01.mp3"
    },
    "illustration": "a peeling four-storey building, laundry on balconies",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book35-p02.mp3"
    },
    "illustration": "a bare concrete roof, water tanks, pigeons",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book35-p03.mp3"
    },
    "illustration": "a woman on the roof, hands on hips, imagining",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book35-p04.mp3"
    },
    "illustration": "carrying heavy bags up the stairs",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book35-p05.mp3"
    },
    "illustration": "a row of terracotta pots",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book35-p06.mp3"
    },
    "illustration": "hands in the dirt, seedlings",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book35-p07.mp3"
    },
    "illustration": "three labelled pots",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book35-p08.mp3"
    },
    "illustration": "heads popping up from the stairwell",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book35-p09.mp3"
    },
    "illustration": "an old man with a watering can, a kid with a shovel",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book35-p10.mp3"
    },
    "illustration": "neighbours planting together, a radio playing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book35-p11.mp3"
    },
    "illustration": "ripe tomatoes, the roof green",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book35-p12.mp3"
    },
    "illustration": "the whole roof lush at sunset, neighbours eating together",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

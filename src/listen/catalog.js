@@ -5,6 +5,12 @@
 export const HELD_FILE = 'pd_barichai_bocherh_aarbi_1929.ogg';
 export const LISTEN_BASE = 'audio/listen/';
 export const MUSIC_BASE = 'audio/music/';
+/**
+ * The file a browser is handed. Each audited .ogg/.oga has an MP3 copy beside it (same audio, re-encoded with ffmpeg):
+ * Ogg Vorbis does not play in every desktop browser (owner report, Nov 8 2026: Sacred listen and the music bar were
+ * silent on a computer but played on a phone), MP3 plays in all of them. The .ogg stays the audited original.
+ */
+export const playableFile = (file) => String(file || '').replace(/\.og[ga]$/i, '.mp3');
 
 const PD = 'Public domain (US sound recording published before 1926; EU recording right treated as expired)';
 const SA3 = 'CC BY-SA 3.0';

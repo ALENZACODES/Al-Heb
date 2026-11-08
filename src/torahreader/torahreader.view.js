@@ -551,8 +551,25 @@ export function mount(root, ctx) {
     if (inPortion || !chapterData) return [];
     const ready = {};
     for (const lang of ['he', 'en']) ready[lang] = manifestHas(torahChapterKind(lang), torahChapterId(state.book, state.chapter, lang));
-    if (!ready.he && !ready.en) return [];
+    const anyVoiceReady = torahManifest.some((e) => e && ['m', 'f'].includes(e.voice) && e.status && e.status !== 'missing'
+      && ['he', 'en'].some((language) => e.kind === torahChapterKind(language) && e.id === torahChapterId(state.book, state.chapter, language)));
+    if (!anyVoiceReady) return [];
     const lang = state.audioLang;
+    const voiceName = voiceOf() === 'f' ? 'Noa' : 'Ari';
+    const voiceBar = el('div', { class: 'trd-bar trd-chapter-voices', role: 'group', 'aria-label': 'Reading voice' }, el('span', {}, 'Voice:'),
+      ...[['m', 'Ari'], ['f', 'Noa']].map(([voice, name]) => el('button', {
+        type: 'button', 'data-chapter-voice': voice, 'aria-pressed': String(voiceOf() === voice),
+        'aria-label': `${name}, ${voice === 'm' ? 'man' : 'woman'} voice`,
+        onclick: () => {
+          stopChapterAudio();
+          try { ctx?.audio?.stop?.(); } catch { /* optional */ }
+          try {
+            if (typeof ctx?.settings?.set !== 'function' || ctx.settings.set({ voice })?.length) { say('The voice could not be saved. Choose it in Settings.'); return; }
+            render(); focusSel(`[data-chapter-voice="${voice}"]`);
+            say(`${name} selected for Hebrew and English recordings. This also updates your voice in Settings.`);
+          } catch { say('The voice could not be saved. Choose it in Settings.'); }
+        },
+      }, name)));
     const rateButtons = [0.75, 1, 1.25].map((rate) => el('button', {
       type: 'button', class: 'trd-recording-rate', 'data-recording-rate': String(rate),
       'aria-label': `Recording speed ${rate} times`, 'aria-pressed': String(chapterRate === rate),
@@ -566,12 +583,12 @@ export function mount(root, ctx) {
         say(`Recording speed: ${rate}×. The visual finger guide has its own pace.`);
       },
     }, rate === 0.75 ? 'Slower 0.75×' : rate === 1 ? 'Normal 1×' : 'Faster 1.25×'));
-    return [el('div', { class: 'trd-bar trd-audiobar', role: 'group', 'aria-label': 'Chapter audio' },
+    return [voiceBar, el('div', { class: 'trd-bar trd-audiobar', role: 'group', 'aria-label': 'Chapter audio' },
       el('button', { type: 'button', 'data-audiolang': 'he', 'aria-pressed': lang === 'he' ? 'true' : 'false', onclick: () => { setState({ audioLang: 'he' }); render(); } }, 'Hebrew'),
       el('button', { type: 'button', 'data-audiolang': 'en', 'aria-pressed': lang === 'en' ? 'true' : 'false', onclick: () => { setState({ audioLang: 'en' }); render(); } }, 'English'),
       ready[lang]
         ? el('button', { type: 'button', class: 'trd-play-chapter', 'aria-label': `Play ${chapterData.ref} read aloud in ${lang === 'en' ? 'English' : 'Hebrew'} (synthetic voice)`, onclick: () => playChapter(lang) }, `Play ${chapterData.ref} read aloud`)
-        : el('span', { class: 'trd-audio-wait' }, lang === 'en' ? 'English audio is not ready for this chapter yet.' : 'Hebrew audio is not ready for this chapter yet.'),
+        : el('span', { class: 'trd-audio-wait' }, `${lang === 'en' ? 'English' : 'Hebrew'} audio in ${voiceName}’s voice is not ready for this chapter yet.`),
       el('button', { type: 'button', class: 'trd-stop-chapter', onclick: () => { stopChapterAudio(); try { ctx?.audio?.stop?.(); } catch { /* ignore */ } say('Chapter audio stopped.'); } }, 'Stop')),
       el('div', { class: 'trd-bar trd-recording-speeds', role: 'group', 'aria-label': 'Recording speed' }, el('span', {}, 'Recording speed:'), ...rateButtons)];
   }

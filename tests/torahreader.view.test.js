@@ -519,3 +519,27 @@ test('finger guide preserves standalone punctuation without counting it as Hebre
   assert.equal(line.queryAll('.trd-finger-word').length, 2);
   assert.deepEqual(line.queryAll('.trd-finger-word').map(w => w.textContent), ['בְּרֵאשִׁית', 'בָּרָא']);
 });
+
+test('chapter Ari/Noa toggle uses the global voice setting and refreshes exact-voice availability', async () => {
+  let voice = 'm', stops = 0; const heard = [], changes = [];
+  const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+    ? [
+        { kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice: 'f', tradition: 'english', status: 'tts' },
+        { kind: 'torah-chapter', id: 'torah-genesis-1', voice: 'm', tradition: 'israeli', status: 'tts' },
+      ] : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+  const { root, ctx } = await make({ stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson,
+    audio: { stop: () => stops++, play: async (kind, id, opts) => { heard.push({ kind, voice, opts }); return { source: 'file', entryStatus: 'tts', ended: true }; } } });
+  ctx.settings.get = key => key === 'voice' ? voice : 'israeli';
+  ctx.settings.set = patch => { changes.push(patch); voice = patch.voice; return []; };
+  assert.ok(sel(root, '[data-chapter-voice="f"]'), 'other voice remains reachable when selected voice has no English file');
+  assert.equal(root.queryAll('.trd-play-chapter').length, 0);
+  await sel(root, '[data-chapter-voice="f"]').click();
+  assert.deepEqual(changes, [{ voice: 'f' }]); assert.ok(stops > 0);
+  assert.equal(sel(root, '[data-chapter-voice="f"]').attrs['aria-pressed'], 'true');
+  await sel(root, '.trd-play-chapter').click(); assert.equal(heard[0].voice, 'f'); assert.equal(heard[0].kind, 'torah-chapter-en');
+  assert.equal(heard[0].opts.voice, undefined, 'player follows global setting rather than a local override');
+  await sel(root, '[data-audiolang="he"]').click(); assert.equal(root.queryAll('.trd-play-chapter').length, 0);
+  await sel(root, '[data-chapter-voice="m"]').click();
+  assert.ok(sel(root, '.trd-play-chapter'));
+  await sel(root, '.trd-play-chapter').click(); assert.equal(heard[1].voice, 'm'); assert.equal(heard[1].kind, 'torah-chapter');
+});

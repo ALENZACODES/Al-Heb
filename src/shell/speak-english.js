@@ -4,25 +4,8 @@
 // a pause/resume nudge every 10 s also keeps a long piece from being dropped (skipped on Android, where it can stop speech).
 // No recordings are involved: this is the device voice, and callers say so.
 
-/** Split text into pieces of at most `max` characters, at sentence ends, then commas / semicolons, then spaces. */
-export function chunkText(text, max = 160) {
-  const out = [];
-  const clean = String(text || '').replace(/\s+/g, ' ').trim();
-  if (!clean) return out;
-  const sentences = clean.match(/[^.!?;:]+[.!?;:]*["'”’)]*\s*/g) || [clean];
-  for (const s0 of sentences) {
-    let s = s0.trim();
-    while (s.length > max) {
-      let cut = Math.max(s.lastIndexOf(', ', max), s.lastIndexOf(' — ', max));
-      if (cut < max * 0.4) cut = s.lastIndexOf(' ', max);
-      if (cut <= 0) cut = max;
-      out.push(s.slice(0, cut + 1).trim());
-      s = s.slice(cut + 1).trim();
-    }
-    if (s) out.push(s);
-  }
-  return out;
-}
+import { chunkText } from './speech-chunker.js';
+export { chunkText };
 
 let token = 0;
 let nudge = null;

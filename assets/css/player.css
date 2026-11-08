@@ -1,6 +1,4 @@
-/* ALEF lesson player: the first lesson (#/firstday) as a full-screen, one-thing-at-a-time app screen.
-   Dark olive green and gold, like the welcome card. While it is open (body.fd-player) the shell's header, tab bar,
-   teachers strip, sound bar, mascot, music bar and fine print step aside; the X in the top bar leaves the lesson. */
+/* First-lesson player (#/firstday): full screen, dark green and gold; body.fd-player hides the shell chrome. */
 
 body.fd-player {
   background:
@@ -24,7 +22,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
 .alef-firstday a { color: var(--fd-gold-hi); }
 .alef-firstday .muted, .alef-firstday .small { color: var(--fd-sage); }
 
-/* top bar: X and progress */
 .fd-top {
   position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: .9rem;
   padding: max(.6rem, env(safe-area-inset-top)) 0 .6rem; background: transparent;
@@ -41,7 +38,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
   transition: inline-size .45s cubic-bezier(.2, .8, .2, 1);
 }
 
-/* screen content */
 .fd-body { display: grid; gap: .8rem; padding-block: .5rem 1rem; }
 .fd-steplabel { margin: 0; font-size: .8rem; color: var(--fd-sage); letter-spacing: .02em; }
 .fd-kicker { margin: .25rem 0 0; font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--fd-gold); }
@@ -63,7 +59,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
 .alef-firstday details.fd-why { border: 1px solid rgba(217, 164, 65, .35); border-radius: 14px; padding: .4rem .9rem; }
 .alef-firstday details.fd-why summary { cursor: pointer; color: var(--fd-gold-hi); font-weight: 700; min-block-size: 48px; display: flex; align-items: center; }
 
-/* question */
 .alef-firstday .fd-check { background: transparent; border: 0; box-shadow: none; padding: 0; display: grid; gap: .9rem; }
 .fd-qglyph { margin: 0; text-align: center; }
 .fd-qglyph .alef-he { font-size: clamp(4rem, 22vw, 6.5rem); line-height: 1.1; color: var(--fd-cream); }
@@ -92,7 +87,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
 .fd-tile[data-state="right"]::after { content: "✓"; color: var(--fd-ok); }
 .fd-tile[data-state="wrong"]::after { content: "✕"; color: var(--fd-bad); }
 
-/* bottom action area and the feedback sheet */
 .fd-foot {
   position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 30;
   display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: center;
@@ -121,7 +115,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
 .is-bad .fd-cta { background: var(--fd-bad); color: #2a0f09; box-shadow: 0 4px 0 #9a4c38; }
 @keyframes fd-rise { from { transform: translateY(100%); } to { transform: none; } }
 
-/* lesson complete */
 .fd-done { display: grid; gap: .9rem; text-align: center; justify-items: center; }
 .fd-done > p { margin: 0; }
 .fd-medal {
@@ -143,7 +136,6 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
 .fd-confetti i { position: absolute; inset-block-start: -12px; inline-size: 8px; block-size: 14px; border-radius: 2px; animation: fd-fall 2.6s ease-in forwards; }
 @keyframes fd-fall { to { transform: translateY(105vh) rotate(540deg); opacity: .2; } }
 
-/* the small print at the bottom of each screen */
 .fd-meta { margin-block-start: .5rem; }
 .fd-meta p { font-size: .78rem; margin: .2rem 0; }
 

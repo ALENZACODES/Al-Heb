@@ -39,7 +39,7 @@ export function mount(root, ctx) {
   const support = audioSupport(tradition, { browserVoiceAnyway: !!ctx?.settings?.get?.('browserVoiceAnyway'), audioFree: isAudioFree(ctx), recorded: ctx?.audio?.summary?.recorded || 0 });
   const styleLine = el('p', { class: 'fd-style muted small', id: 'fd-style', 'data-audio-support': support.supported },
     el('strong', {}, `Reading style: ${LABELS[tradition]}.`), ' ', support.line, ' ', el('a', { href: '#/settings' }, 'Change in Settings'));
-  // app-style frame: exit X + progress bar on top, one action area at the bottom; the shell's header, tabs and mascot step aside (CSS: body.fd-player)
+  // exit X + progress bar on top, one action area at the bottom (CSS: body.fd-player hides the shell chrome)
   const meterFill = el('span', { class: 'fd-meter-fill' });
   const meter = el('div', { class: 'fd-meter', role: 'progressbar', 'aria-label': 'Lesson progress', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': '0' }, meterFill);
   const top = el('div', { class: 'fd-top' }, el('a', { class: 'fd-x', href: '#/', 'aria-label': 'Leave the lesson. Your progress is saved.' }, '✕'), meter);
@@ -69,10 +69,7 @@ export function mount(root, ctx) {
   const wantPreview = () => ctx?.query?.part === 'preview';
 
   // ---------- on-ramp: one baby step per screen, app-style ----------
-  // Layout (docs/firstday/PLAYER.md): a top bar with the exit X and a progress bar; one thing per screen (the letter, then each question on
-  // its own screen); big answer cards; a Check button that stays grey until a card is picked; then a feedback panel slides up from the
-  // bottom (green: well done, red: the right answer) with Continue. The question stays visible above the panel. Keys: 1-4 pick, Enter
-  // checks / continues. Nothing about the order, the saving or the scoring changed: one step is still learn -> at most 2 questions -> win.
+  // App-style player: learn screen, then one question per screen (pick, Check, feedback panel, Continue). Same steps, saving and scoring.
   let stage = 'learn', sel = null, verdict = null, combo = 0;
   const startedAt = Date.now();
   const units = () => onramp.steps.reduce((a, st) => a + 1 + stepQuestions(st, lessonQs).length, 0);
@@ -157,7 +154,6 @@ export function mount(root, ctx) {
       footSet(check);
       return;
     }
-    // the feedback panel: says what happened, keeps the question visible above it, and is the only way forward
     const go = () => {
       verdict = null; sel = null;
       if (!last) { answered = { qi: qi + 1 }; renderStep(); focusFirst(); return; }
@@ -171,7 +167,7 @@ export function mount(root, ctx) {
           : el('p', {}, 'Correct answer: ', right.he ? heText(right.text, 'alef-he') : el('strong', {}, right.text), el('span', { class: 'fd-kind' }, ' — that is how everyone learns.')),
         last ? el('p', { class: 'fd-win' }, el('strong', {}, s.win)) : null),
       last ? el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next', onclick: go }, verdict.ok ? 'Continue' : 'Got it')
-        : el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it')); // a button, never a timer: nothing moves on by itself
+        : el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-next-q', onclick: go }, verdict.ok ? 'Continue' : 'Got it'));
     try { foot.querySelector('button')?.focus({ preventScroll: true }); } catch { /* ignore */ }
 
     function pick(k) { if (verdict) return; sel = k; renderStep(); try { body.querySelector(`.fd-opt[data-n="${k + 1}"]`)?.focus({ preventScroll: true }); } catch { /* ignore */ } }
@@ -187,7 +183,7 @@ export function mount(root, ctx) {
     }
   }
   const focusFirst = () => { try { (body.querySelector('.fd-opt:not([disabled])') || foot.querySelector('button'))?.focus({ preventScroll: true }); } catch { /* ignore */ } };
-  // keyboard: 1-4 pick a card, Enter presses the bottom button (Check, Continue, Got it)
+  // keys: 1-4 pick, Enter presses the bottom button
   const onKey = (e) => {
     if (!alive || e.altKey || e.ctrlKey || e.metaKey) return;
     const t = e.target; if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
@@ -223,11 +219,10 @@ export function mount(root, ctx) {
     say(''); renderStep(); focus(); focusFirst();
     if (err) showSaveFailed(err);
   }
-  /** Short praise for a right answer, varied so it does not feel automatic. */
   const PRAISE = ['Yes! Well done.', 'Yes, that is right!', 'Exactly right.', 'Yes! You are reading Hebrew.'];
   function renderDone() {
     const d = onramp.done || {};
-    // Says only what the streak record says: a day counts after 5 minutes of study (src/curriculum/streak.js GOAL_SECONDS).
+    // the streak record decides (a day counts after 5 minutes)
     const streakLine = el('p', { class: 'fd-streak', id: 'fd-streak' }, '');
     if (!practice) storeGet(ctx, STREAK_KEY, null).then((s) => {
       const p = currentStreak(s, Date.now());
@@ -235,7 +230,7 @@ export function mount(root, ctx) {
         ? (p.count === 1 ? 'Today counts: day 1 of your streak.' : `Your streak: ${p.count} days in a row.`)
         : 'Five minutes of study today starts your streak.';
     }).catch(() => {});
-    // measured, not guessed: answers in this record and minutes on this screen since it opened
+    // measured: answers in this record, minutes since this screen opened
     const vals = Object.values(progress.answers || {});
     const acc = vals.length ? Math.round((vals.filter(Boolean).length / vals.length) * 100) : null;
     const mins = Math.max(1, Math.round((Date.now() - startedAt) / 60000));
@@ -261,7 +256,6 @@ export function mount(root, ctx) {
     footSet(el('a', { class: 'btn fd-cta', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons'));
     if (!practice) { try { celebrate(); } catch { /* decoration only */ } }
   }
-  /** A short burst of gold and green confetti; skipped with reduced motion or calm mode. */
   function celebrate() {
     const doc = globalThis.document; if (!doc?.createElement || !doc.body) return;
     if (globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches || ctx?.settings?.get?.('calmMode') === true) return;

@@ -20,3 +20,19 @@ test('pieces are spoken one after another, each starting when the last ends; sto
   const p = speakEnglish('Four. Five.', { speech: slow, Utterance: U }); stopEnglish(slow);
   assert.equal(await p, false);
 });
+
+test('app-wide rule: a long utterance is spoken as pieces with the same language and voice; onend fires once, at the end', async () => {
+  const { installSpeechChunker, MAX } = await import('../src/shell/speech-chunker.js');
+  const native = [];
+  class U { constructor(t) { this.text = t; } }
+  const speech = { speak(u) { native.push(u); } };
+  assert.equal(installSpeechChunker(speech, U), true);
+  let ended = 0;
+  const long = new U('בְּרֵאשִׁית בָּרָא אֱלֹהִים, '.repeat(12)); long.lang = 'he-IL'; long.rate = 0.8; long.onend = () => { ended += 1; };
+  speech.speak(long);
+  assert.ok(native.length >= 2, 'split');
+  for (const p of native) { assert.ok(p.text.length <= MAX + 1); assert.equal(p.lang, 'he-IL'); assert.equal(p.rate, 0.8); }
+  native.slice(0, -1).forEach((p) => p.onend?.()); assert.equal(ended, 0);
+  native.at(-1).onend(); assert.equal(ended, 1);
+  const short = new U('Shalom.'); speech.speak(short); assert.equal(native.at(-1), short, 'short text is untouched');
+});

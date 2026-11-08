@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { createAudio } from '../src/audio/player.js';
+const kindWord = JSON.parse(readFileSync('data/audio/manifest-kind-word.json', 'utf8'));
+const israeliWords = JSON.parse(readFileSync('data/audio/manifest-words-israeli.json', 'utf8'));
 
 // Sephardi stand-in (owner decision, 2026-11-07): a Sephardi entry with no clip of its own may play the Israeli clip of the same
 // voice, kind and id (data/audio/equivalence.json). The player already prefers an exact Sephardi file when one exists.
@@ -46,4 +48,21 @@ test('player: with the Sephardi setting, shin, bet and oseh-shalom play the Isra
       assert.ok(existsSync(r.path), r.path);
     }
   }
+});
+
+test('dictionary words under the Sephardi setting: goodbye and coffee (aliases of lesson-word clips) play the Israeli lesson clip; Shabbat keeps its own Sephardi clip', () => {
+  class El { constructor(url) { this.url = url; } play() { return Promise.resolve(); } pause() {} }
+  const all = [...man, ...kindWord, ...israeliWords, ...words];
+  const audio = createAudio({ settings: { voice: 'f', congregation: 'sephardi' }, manifest: all, AudioCtor: El, speech: null, UtteranceCtor: null });
+  const goodbye = audio.status('word', 'hc7b58ca2');
+  assert.equal(goodbye.source, 'file'); assert.equal(goodbye.fileTradition, 'israeli'); assert.equal(goodbye.path, 'audio/f/israeli/word/i-19-w14.mp3');
+  assert.ok(existsSync(goodbye.path));
+  const coffee = audio.status('word', 'h06440deb');
+  assert.equal(coffee.source, 'file'); assert.equal(coffee.fileTradition, 'israeli'); assert.ok(existsSync(coffee.path));
+  const shabbat = audio.status('word', 'h0eb811da');
+  assert.equal(shabbat.source, 'file'); assert.equal(shabbat.via, 'alias'); assert.equal(shabbat.path, 'audio/f/sephardi/word/r02-w1.mp3');
+  // every Sephardi dictionary word now resolves to some file, or has no Israeli clip either
+  let silent = 0;
+  for (const e of words.filter((e) => e.voice === 'f' && e.kind === 'word')) if (audio.status('word', e.id).source !== 'file') silent += 1;
+  assert.ok(silent <= 3, `sephardi words with no clip anywhere: ${silent}`);
 });

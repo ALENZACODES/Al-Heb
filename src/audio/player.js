@@ -124,6 +124,14 @@ export function createAudio(opts) {
         if (alt && alt.status !== 'missing') {
           return { source: 'file', path: alt.path, url: url(alt.path), fileTradition: t, entryStatus: alt.status, entrySource: alt.source, via: 'equivalent' };
         }
+        // the stand-in tradition's entry may itself be an alias (a dictionary word that plays its lesson-word clip): follow it once
+        if (alt && alt.aliasOf) {
+          const [ak, ...rest] = String(alt.aliasOf).split('/');
+          const target = index.get(`${voice}|${t}|${ak}|${rest.join('/')}`);
+          if (target && target.status !== 'missing') {
+            return { source: 'file', path: target.path, url: url(target.path), fileTradition: t, entryStatus: target.status, entrySource: target.source, via: 'equivalent' };
+          }
+        }
       }
     }
     return null;

@@ -92,6 +92,11 @@ export const AUDIO_STATES = Object.freeze({
 
 /** Did play() fail because the browser wants a gesture first (autoplay policy), rather than because the clip is broken?
  *  Chromium, Firefox and Safari all reject with NotAllowedError; anything else is a real media failure. */
+export async function canPlayPrayerOffline(path, { online = globalThis.navigator?.onLine, cache = globalThis.caches } = {}) {
+  if (online !== false) return true;
+  try { return !!(await cache?.match(path)); } catch { return false; }
+}
+
 export function isAutoplayBlock(err) { return !!err && (err.name === 'NotAllowedError' || /not allowed|user gesture|user activation/i.test(String(err.message || ''))); }
 
 /** Should this pointer/key event start blocked playback? Buttons keep their own meaning (Close, Skip, Don't show again, Listen),
@@ -273,7 +278,9 @@ function initPrayerVeil() {
     writeLocal(LAST_KEY, prayerKey(chosen));
     try {
       const prefs = readAudioPrefs();
-      const path = prefs.audioFree ? null : prayerAudioPath(bankData, chosen, prefs.voice);
+      let path = prefs.audioFree ? null : prayerAudioPath(bankData, chosen, prefs.voice);
+      if (path && !(await canPlayPrayerOffline(path))) path = null;
+      if (closed) return;
       if (path && listenBtn) {
         audioPath = path;
         setAudioState('idle');

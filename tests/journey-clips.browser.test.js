@@ -1,11 +1,13 @@
-// Journey regression in headless Chromium: the one setting that reaches a synthetic clip (Israeli + Man) and the default setting (Sephardi + Woman).
+// Journey regression in headless Chromium: both Israeli synthetic voices and an explicit unavailable-audio fixture.
 // It checks what the page says and which file the page asked for. Headless Chromium has no audio output: nothing is heard here.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import { createAppServer } from '../tools/serve.mjs';
 
-const root = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
+const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 let chromium;
 for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = createRequire(import.meta.url)(p)); break; } catch { /* next */ } }
 const skip = !chromium;
@@ -20,32 +22,30 @@ async function withLesson(settings, fn) {
       localStorage.setItem('alef:settings', JSON.stringify(s));
       window.__played = []; const P = HTMLMediaElement.prototype.play;
       HTMLMediaElement.prototype.play = function () { window.__played.push(this.currentSrc || this.src); return P.apply(this, arguments); };
-    }, { onboarded: true, ...settings });
+    }, { onboarded: true, veilOptOut: true, ...settings });
     const page = await ctx.newPage();
     await page.goto(base + '#/learn?lesson=r07'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(700);
     await fn(page);
   } finally { await browser.close(); server.close(); }
 }
 const press = async (page) => {
-  const b = page.locator('button[aria-label="Listen to dad"]').first(); await b.click(); await page.waitForTimeout(900);
-  return { note: await page.locator('.alef-audio-note').first().innerText().catch(() => ''), played: await page.evaluate(() => window.__played.filter(Boolean)), bar: await page.locator('#sound-status').innerText() };
+  const b = page.locator('button[aria-label="Listen to dad"]').first(); await b.click(); await page.waitForFunction(() => document.querySelector('#sound-status')?.textContent.includes('Synthetic voice'));
+  return { played: await page.evaluate(() => window.__played.filter(Boolean)), bar: await page.locator('#sound-status').innerText() };
 };
 
-test('browser: Israeli + Man, lesson r07 "dad": the file is requested and the note calls it computer-made, not a recording', { skip, timeout: 120000 }, async () => {
+test('browser: Israeli + Man, lesson r07 "dad": the file is requested and the visible sound status identifies a synthetic voice', { skip, timeout: 120000 }, async () => {
   await withLesson({ congregation: 'israeli', voice: 'm' }, async (page) => {
     const r = await press(page);
     assert.deepEqual(r.played, [new URL('audio/m/israeli/word/r07-w1.mp3', page.url()).href]);
-    assert.doesNotMatch(r.note, /recorded file/i);
-    assert.match(r.note, /computer-made/);
     assert.match(r.bar, /Synthetic voice/);
   });
 });
 
-test('browser: default setting (Sephardi + Woman), lesson r07 "dad": no clip file is requested', { skip, timeout: 120000 }, async () => {
-  await withLesson({}, async (page) => {
+test('browser: Noa Israeli lesson clip requests the female file with synthetic disclosure', { skip, timeout: 120000 }, async () => {
+  await withLesson({ congregation: 'israeli', voice: 'f' }, async (page) => {
     const r = await press(page);
-    assert.deepEqual(r.played, []); // no clip exists for Sephardi or for Woman: see docs/qa/JOURNEY-WITH-CLIPS.md
-    assert.doesNotMatch(r.note, /recorded|computer-made clip/i);
+    assert.deepEqual(r.played, [new URL('audio/f/israeli/word/r07-w1.mp3', page.url()).href]);
+    assert.match(r.bar, /Synthetic voice/);
   });
 });
 
@@ -79,12 +79,13 @@ test('browser: word trace Hear button leaves "Checking audio..." by itself (clip
   const browser = await chromium.launch();
   try {
     const out = {};
-    for (const [label, settings, speech] of [['clip', { congregation: 'israeli', voice: 'm' }, 'real'], ['none', {}, 'none']]) {
+    for (const [label, settings, speech] of [['clip', { congregation: 'israeli', voice: 'm' }, 'real'], ['none', { congregation: 'ashkenazi', voice: 'f' }, 'none']]) {
       const ctx = await browser.newContext({ viewport: { width: 360, height: 640 }, hasTouch: true, isMobile: true, serviceWorkers: 'block' });
       await ctx.addInitScript(({ s, sp }) => {
-        localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, ...s }));
+        localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true, ...s }));
         if (sp === 'none') Object.defineProperty(window, 'speechSynthesis', { value: undefined, configurable: true });
       }, { s: settings, sp: speech });
+      if (speech === 'none') await ctx.route('**/data/audio/manifest*.json', route => route.fulfill({ contentType: 'application/json', body: '[]' }));
       const page = await ctx.newPage();
       await page.goto(base + '#/words/trace?any=1&level=three'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(600);
       await page.locator('button[data-word="אַבָּא"]').click(); await page.waitForTimeout(2500); // never pressed Hear

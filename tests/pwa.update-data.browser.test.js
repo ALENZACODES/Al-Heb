@@ -36,7 +36,7 @@ test('after a version bump, changed on-demand data, audio manifest, word shard, 
     srv = createAppServer({ root: site }); await new Promise((r) => srv.listen(0, r));
     const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
     const page = await ctx.newPage();
-    await page.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+    await page.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
     const base = `http://localhost:${srv.address().port}/`;
     await page.goto(base); await page.waitForSelector('body[data-ready="1"]', { timeout: 20000 });
     await page.evaluate(() => navigator.serviceWorker.ready);

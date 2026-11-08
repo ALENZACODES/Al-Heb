@@ -3,7 +3,8 @@
 // Usage: node tools/lighthouse/pwa-check.mjs [--quick] [--out file]   -> prints ok/FAIL lines, writes tools/lighthouse/pwa-run.json, exit 1 on FAIL
 // Honest limits: headless Chromium on Linux over http://localhost (a secure context); no real device, no iOS/Android install flow.
 import { createRequire } from 'node:module';
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createServer } from 'node:http';
 import { fileURLToPath } from 'node:url';
@@ -35,8 +36,15 @@ const base = `http://localhost:${front.address().port}/`;
 
 const results = [];
 const note = (name, ok, detail = '', gap = false) => { results.push({ name, ok: !!ok, gap: !!gap && !ok, detail }); console.log(ok ? 'ok  ' : gap ? 'GAP ' : 'FAIL', name, detail); };
-const browser = await chromium.launch();
-const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'allow' });
+// Installability must be checked in a normal profile; private contexts intentionally cannot install.
+const profile = mkdtempSync(join(tmpdir(), 'alef-pwa-profile-'));
+const ctx = await chromium.launchPersistentContext(profile, { viewport: { width: 390, height: 844 }, serviceWorkers: 'allow' });
+const browser = ctx;
+// Chromium versions can reset navigator.onLine on reload despite network emulation staying offline.
+// Keep both parts of the explicit offline fixture in agreement.
+await ctx.addInitScript(() => {
+  if (sessionStorage.getItem('qa-offline') === '1') Object.defineProperty(navigator, 'onLine', { configurable: true, value: false });
+});
 const page = await ctx.newPage();
 const pageErrors = []; page.on('pageerror', (e) => pageErrors.push(e.message));
 
@@ -65,6 +73,7 @@ const routes = quick ? ROUTES.slice(0, 4) : ROUTES;
 // runtime-cached files such as the audio word shard are only stored from the second load on), then each route once
 await page.goto(base + '#/'); await page.reload(); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(3500);
 for (const r of ROUTES) { await page.goto(base + '#' + r); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500); }
+await page.evaluate(() => sessionStorage.setItem('qa-offline', '1'));
 await ctx.setOffline(true);
 for (const r of routes) {
   const failed = []; const onFail = (rq) => failed.push(rq.url().replace(base, '')); page.on('requestfailed', onFail);
@@ -82,6 +91,7 @@ for (const r of routes) {
   note(`offline reload: ${r}`, ok, detail);
 }
 await ctx.setOffline(false);
+await page.evaluate(() => { sessionStorage.removeItem('qa-offline'); delete navigator.onLine; });
 
 // ---- 4. update flow: a new version of the precache list installs and waits, takes over on SKIP_WAITING, and the old cache is removed
 const oldKeys = await page.evaluate(async () => (await caches.keys()).filter((k) => k.startsWith('alef-shell-')));
@@ -141,7 +151,8 @@ const restored = await page.evaluate(() => ({ prog: JSON.parse(localStorage.getI
 note('restore: Enter on the confirm button brings the progress back', restored.prog?.completed?.length === 3 && !!restored.cards?.['c:test'], JSON.stringify(restored).slice(0, 120));
 note('restore: a status message reports how much was restored', /Restored \d+ saved items/.test(await page.textContent('main')));
 
-await browser.close(); inner.close(); front.close();
+await browser.close();
+rmSync(profile, { recursive: true, force: true }); inner.close(); front.close();
 const outArg = process.argv.includes('--out') ? process.argv[process.argv.indexOf('--out') + 1] : null;
 writeFileSync(outArg || join(here, 'pwa-run.json'), JSON.stringify({ when: new Date().toISOString(), quick, results }, null, 1));
 const bad = results.filter((r) => !r.ok && !r.gap), gaps = results.filter((r) => r.gap);

@@ -37,7 +37,7 @@ export const FACE = Object.freeze({
   course: 'Beginner Hebrew Foundations',
   sampleLine: 'Sample design \u2014 completion has not been assessed or awarded.',
   certNote: 'Sample internal reference',
-  footer: 'Independent learning programme \u00b7 Not an accredited qualification',
+  footer: 'Independent learning programme',
   temporary: 'Temporary layout',
 });
 

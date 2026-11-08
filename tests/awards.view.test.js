@@ -38,7 +38,8 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.doesNotMatch(face, /SAMPLE \/ NOT EARNED/);
   assert.match(face, /Certificate of Completion/);
   assert.doesNotMatch(face, /Temporary layout|Sample internal reference|has not been assessed|has passed/);
-  assert.match(face, /Not an accredited qualification/);
+  assert.match(face, /Independent learning programme/);
+  assert.doesNotMatch(face, /Not an accredited qualification/);
   assert.match(face, /Beginner Hebrew Foundations/);
   assert.match(face, /Presented to/);
   assert.match(face, /ALEF is Key Foundation/);

@@ -3,6 +3,9 @@
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
 import { fileLabel, isSyntheticStatus, STATUS_LABELS } from './audio-labels.js';
+import { gameMusic } from '../audio/music.js';
+import { sfx } from '../audio/sfx.js';
+import { mediaPolicy } from '../audio/policy.js';
 export const REASONS = {
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
@@ -34,6 +37,23 @@ export function describeResult(r, congregation = 'israeli') {
     return { mode: 'tts', text: `Sound: your browser's text-to-speech voice, not a recording. Gender and accent are set by your device, not by the Man/Woman choice${mismatch ? `, and it reads Israeli pronunciation, not ${TRAD[r.tradition] || r.tradition}` : ''}.` };
   }
   return { mode: 'none', text: `No sound: ${REASONS[r.reason] || r.reason || r.error || 'unavailable'}.` };
+}
+
+/** Status from a real media event. Clicking Play does not produce this line. */
+export function playbackLine(ev, plan = ev || {}) {
+  const who = `${plan.voice === 'm' ? 'man' : 'woman'}, ${TRAD[plan.fileTradition || plan.tradition] || plan.tradition || 'Israeli'}`;
+  const speed = ev?.rate === 0.7 ? ' Slow, 0.7×.' : ' Normal speed.';
+  if (ev?.type === 'playing' && (plan.source === 'file' || ev?.source === 'file')) {
+    return { mode: 'file', text: `Playing: ${fileLabel(plan.entryStatus, plan.fileTradition || plan.tradition, plan.entrySource)} (${who}).${speed}` };
+  }
+  if (ev?.type === 'playing') return { mode: 'tts', text: `Playing with this device's Hebrew voice.${speed}` };
+  if (ev?.type === 'your-turn') return { mode: 'idle', text: 'Your turn: say it.' };
+  if (ev?.type === 'ended' && ev?.step === 'your-turn') return { mode: 'idle', text: 'Sound finished. Press Play to hear it again.' };
+  if (ev?.type === 'ended' && ev?.step === 'first') return { mode: 'idle', text: 'Now slowly.' };
+  if (ev?.type === 'ended') return { mode: 'idle', text: 'Sound finished.' };
+  if (ev?.type === 'error') return { mode: 'none', text: 'No sound: the recording did not load.' };
+  if (ev?.type === 'stopped') return { mode: 'idle', text: 'Sound stopped.' };
+  return { mode: 'none', text: 'No sound: unavailable.' };
 }
 
 /**
@@ -93,7 +113,12 @@ const initialText = (summary) => (summary.recorded > 0
 export function createShellAudio({ settings, manifest, loadManifest, loadSummary, createAudio }) {
   let summary = summarizeManifest(manifest || []);
   const inner = createAudio({
-    settings: { get voice() { return settings.get('voice'); }, get congregation() { return settings.get('congregation'); } },
+    settings: {
+      get voice() { return settings.get('voice'); },
+      get congregation() { return settings.get('congregation'); },
+      get clipRate() { return settings.get('clipRate'); },
+      get echoMode() { return settings.get('echoMode'); },
+    },
     manifest: manifest || [],
   });
   const subs = new Set(), mSubs = new Set();
@@ -135,8 +160,28 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   const checking = (kind, id) => ({ source: 'none', reason: CHECKING, kind, id });
   const gate = (r, kind, id) => (mstate === 'checking' && r.source !== 'file' ? checking(kind, id) : r);
 
+  let speechDepth = 0;
+  let playEpoch = 0;
+  let playsInFlight = 0;
+  const speechBegin = () => {
+    speechDepth += 1;
+    mediaPolicy.setSpeech(true);
+    try { sfx.pause(); } catch { /* ignore */ }
+    gameMusic.setSpeech(true);
+  };
+  const speechEnd = () => {
+    speechDepth = Math.max(0, speechDepth - 1);
+    if (!speechDepth) { mediaPolicy.clearSpeech(); gameMusic.setSpeech(false); }
+  };
   return {
     ...inner,
+    stop() {
+      playEpoch += 1;
+      speechDepth = 0; mediaPolicy.clearSpeech(); gameMusic.setSpeech(false);
+      const r = inner.stop();
+      if (r?.interrupted || playsInFlight > 0) publish({ mode: 'idle', text: 'Sound stopped.' });
+      return r;
+    },
     /** call synchronously inside the first user gesture (see createAudioUnlock); safe to call again */
     unlock: createAudioUnlock(globalThis),
     get summary() { return summary; },
@@ -157,19 +202,35 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     has: (kind, id, o) => { need(kind); return inner.has(kind, id, opts(o)); },
     async play(kind, id, o) {
       need(kind);
-      await settle();
-      const o2 = opts(o);
-      publish(describeResult(inner.status(kind, id, o2)));      // what WILL be used, before it speaks
-      const r = await inner.play(kind, id, o2);
-      publish(describeResult(r));
-      return r;
+      const epoch = playEpoch;
+      playsInFlight += 1;
+      try {
+        await settle();
+        if (epoch !== playEpoch) return { source: 'none', stopped: true, reason: 'stopped' };
+        const o2 = opts(o);
+        speechBegin();
+        let fromMedia = false;
+        try {
+          const r = await inner.play(kind, id, { ...o2, onMedia(ev) {
+            fromMedia = true;
+            if (epoch !== playEpoch) return;
+            publish(playbackLine(ev));
+          } });
+          if (epoch !== playEpoch) return { ...r, stopped: true };
+          if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));
+          return r;
+        } finally { speechEnd(); }
+      } finally { playsInFlight = Math.max(0, playsInFlight - 1); }
     },
     async playSequence(items, so) {
       for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);
       await settle();
-      const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
-      if (res.length) publish(describeResult(res[res.length - 1]));
-      return res;
+      speechBegin();
+      try {
+        const res = await inner.playSequence(items.map((it) => ({ ...(Array.isArray(it) ? { kind: it[0], id: it[1] } : it), ...opts() })), so);
+        if (res.length) publish(describeResult(res[res.length - 1]));
+        return res;
+      } finally { speechEnd(); }
     },
   };
 }

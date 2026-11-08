@@ -153,7 +153,7 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   assert.equal(planIsExactFile({ source: 'file', via: 'exact', url: '/x', voice: 'f', tradition: 'sephardi', id: fSep.id }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), true);
   assert.equal(planIsExactFile({ source: 'file', via: 'equivalent', fileTradition: 'israeli', url: '/x', voice: 'f', tradition: 'sephardi', id: 'other' }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), false);
   assert.equal(planIsExactFile({ source: 'tts-fallback', voice: 'f', tradition: 'sephardi' }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), false);
-  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, false);
+  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, true);
   assert.equal(PLAYBACK_DEPENDENCY.slowMeans, 0.7);
   assert.equal(PLAYBACK_DEPENDENCY.contractCommit, '8f37d4ba');
   const rows = [
@@ -185,7 +185,7 @@ test('the screen list is 5000 minus hidden rows and word forms, with nothing pad
   assert.equal(loaded - forms.length, 4992);
 });
 
-test('this tree’s player ignores options.rate; 0.7× is only the unmerged contract', async () => {
+test('the player honours options.rate: slow is 0.7× on the element (the vocab speed buttons are live)', async () => {
   const made = [];
   class A {
     constructor(url) { this.url = url; this.playbackRate = 1; made.push(this); }
@@ -202,7 +202,7 @@ test('this tree’s player ignores options.rate; 0.7× is only the unmerged cont
   assert.equal(result.source, 'file');
   assert.equal(result.id, 'i-10-w12');
   assert.equal(made.length, 1);
-  assert.equal(made[0].playbackRate, 1);
-  assert.notEqual(made[0].playbackRate, PLAYBACK_DEPENDENCY.slowMeans);
-  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, false);
+  assert.equal(made[0].playbackRate, PLAYBACK_DEPENDENCY.slowMeans);
+  assert.equal(result.rate, 0.7);
+  assert.equal(PLAYBACK_DEPENDENCY.appliedByThisTree, true);
 });

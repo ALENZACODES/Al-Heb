@@ -13,6 +13,27 @@ import { speechSafeText } from '../shell/names.js';
 // guarantee gender or tradition (browser voices expose neither); results say so via `voiceGuaranteed`.
 // Results always carry `source`: 'file' | 'tts-fallback' | 'none'.
 
+/** Echo timing: the gap before the slow replay, and the learner's silent turn (slow clip length x factor, clamped). */
+export const ECHO_GAP_MS = 350;
+export const ECHO_TURN_FACTOR = 1.25;
+export const ECHO_TURN_MIN_MS = 900;
+export const ECHO_TURN_MAX_MS = 6000;
+
+/** Shared clip speed. Only these two rates exist: normal, and the beginner slow speed. */
+export function clipPlaybackRate(value) {
+  if (value === 'slow' || value === 0.7) return 0.7;
+  return 1;
+}
+
+/** A speechSynthesis voice that is actually Hebrew, or null. An empty list is null, not "try the default voice". */
+export function hebrewSynthesisVoice(speech) {
+  if (!speech || typeof speech.getVoices !== 'function') return null;
+  let voices;
+  try { voices = speech.getVoices(); } catch { return null; }
+  if (!Array.isArray(voices)) return null;
+  return voices.find((v) => /^he([-_]|$)/i.test(String(v?.lang || ''))) || null;
+}
+
 /** Must stay identical to normalizeId in tools/audio/hebrew_data.mjs (a test checks this). */
 export function normalizeId(s) {
   return String(s).toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '');
@@ -145,24 +166,42 @@ export function createAudio(opts) {
     };
   }
 
+  /** A listed voice whose language tag is Hebrew, or null (used to pick the utterance voice when one is listed). */
+  function hebrewVoice() { return hebrewSynthesisVoice(speech); }
+
   /** True only when the browser lists voices and none is Hebrew (an empty list is unknown, so it is not a refusal). */
   function noHebrewVoice() {
     if (!speech || typeof speech.getVoices !== 'function') return false;
-    const vs = speech.getVoices();
+    let vs; try { vs = speech.getVoices(); } catch { return false; }
     return !!(vs && vs.length && !vs.some((v) => /^he([-_]|$)/i.test(v.lang || '')));
+  }
+
+  function emitMedia(p, type) {
+    try {
+      p.onMedia?.({
+        type, rate: p.rate, source: p.source, voice: p.voice,
+        tradition: p.fileTradition || p.tradition, fileTradition: p.fileTradition,
+        entryStatus: p.entryStatus, entrySource: p.entrySource,
+      });
+    } catch { /* a listener must not break playback */ }
   }
 
   function playFile(p) {
     return new Promise((resolve) => {
       let a;
       try { a = new AudioCtor(p.url); } catch (e) { resolve({ ok: false, error: String(e) }); return; }
-      current = { stop: () => { try { a.pause(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
-      a.onended = () => resolve({ ok: true });
-      a.onerror = () => resolve({ ok: false, error: 'file-error' });
+      try { a.playbackRate = p.rate; } catch { /* a fake element may not allow the rate */ }
+      try { a.preservesPitch = true; a.mozPreservesPitch = true; } catch { /* older engines */ }
+      let settled = false;
+      const finish = (result) => { if (settled) return; settled = true; resolve(result); };
+      current = { stop: () => { try { a.pause(); } catch { /* ignore */ } emitMedia(p, 'stopped'); finish({ ok: true, stopped: true }); } };
+      a.onplaying = () => emitMedia(p, 'playing');
+      a.onended = () => { emitMedia(p, 'ended'); finish({ ok: true, ended: true }); };
+      a.onerror = () => { emitMedia(p, 'error'); finish({ ok: false, error: 'file-error' }); };
       try {
         const r = a.play();
-        if (r && typeof r.catch === 'function') r.catch(() => resolve({ ok: false, error: 'play-rejected' }));
-      } catch { resolve({ ok: false, error: 'play-threw' }); }
+        if (r && typeof r.catch === 'function') r.catch(() => { emitMedia(p, 'error'); finish({ ok: false, error: 'play-rejected' }); });
+      } catch { emitMedia(p, 'error'); finish({ ok: false, error: 'play-threw' }); }
     });
   }
 
@@ -170,38 +209,87 @@ export function createAudio(opts) {
     return new Promise((resolve) => {
       const safe = speechSafeText(p.text);
       if (!safe.ok) { resolve({ ok: false, error: safe.reason || 'unresolved-liturgical-name' }); return; }
+      const voice = hebrewVoice();
       const u = new UtteranceCtor(safe.text);
-      u.lang = 'he-IL';
-      if (typeof settings.ttsRate === 'number') u.rate = settings.ttsRate;
-      current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } resolve({ ok: true, stopped: true }); } };
-      u.onend = () => resolve({ ok: true });
-      u.onerror = () => resolve({ ok: false, error: 'speech-error' });
+      u.lang = voice && /^he([-_]|$)/i.test(voice.lang || '') ? voice.lang : 'he-IL';
+      if (voice) { try { u.voice = voice; } catch { /* a fake utterance may be frozen */ } }
+      u.rate = p.rate;
+      try { u.onstart = () => emitMedia(p, 'playing'); } catch { /* ignore */ }
+      current = { stop: () => { try { speech.cancel(); } catch { /* ignore */ } emitMedia(p, 'stopped'); resolve({ ok: true, stopped: true }); } };
+      u.onend = () => { emitMedia(p, 'ended'); resolve({ ok: true, ended: true }); };
+      u.onerror = () => { emitMedia(p, 'error'); resolve({ ok: false, error: 'speech-error' }); };
       try { speech.speak(u); } catch { resolve({ ok: false, error: 'speech-threw' }); }
     });
   }
 
+  function withRate(p, o) {
+    return { ...p, rate: clipPlaybackRate(o.rate ?? settings.clipRate ?? settings.ttsRate), onMedia: o.onMedia };
+  }
+
+  /** Kinds short enough to copy back after one hearing. Lines, prayers and sequences never echo. */
+  const ECHO_KINDS = new Set(['letter', 'vowel', 'syllable', 'word']);
+  const echoOn = (kind, o) => !!(o.echo ?? settings.echoMode) && !o.noEcho && ECHO_KINDS.has(kind);
+
   async function play(kind, id, o = {}) {
-    let p = plan(kind, id, o);
+    if (echoOn(kind, o)) return echo(kind, id, o);
+    return playOnce(kind, id, o);
+  }
+
+  /**
+   * Listen, hear it slowly, say it: the clip at the chosen speed, a short gap, the clip again at the slow speed,
+   * then a silent turn as long as the slow clip (plus a beat) for the learner to copy it. The media events carry
+   * step: 'first' | 'slow' | 'your-turn' so a screen can show whose turn it is. stop() interrupts any step.
+   * Returns the first play's result with echo: { slow, yourTurnMs, completed }.
+   */
+  async function echo(kind, id, o = {}) {
+    const gen = ++stopped;
+    const t0 = typeof o.now === 'function' ? o.now : () => Date.now();
+    const step = (name) => (ev) => o.onMedia?.({ ...ev, step: name });
+    const first = await playOnce(kind, id, { ...o, noEcho: true, onMedia: step('first') });
+    const out = { ...first, echo: { slow: null, yourTurnMs: 0, completed: false } };
+    if (gen !== stopped || first.stopped || first.source === 'none') return out;
+    await wait(o.echoGapMs ?? ECHO_GAP_MS);
+    if (gen !== stopped) return out;
+    const started = t0();
+    const slow = await playOnce(kind, id, { ...o, noEcho: true, rate: 'slow', onMedia: step('slow') });
+    out.echo.slow = slow;
+    if (gen !== stopped || slow.stopped || slow.source === 'none') return out;
+    const heardMs = Math.max(0, t0() - started);
+    const yourTurnMs = Math.min(ECHO_TURN_MAX_MS, Math.max(ECHO_TURN_MIN_MS, Math.round(heardMs * ECHO_TURN_FACTOR)));
+    out.echo.yourTurnMs = yourTurnMs;
+    o.onMedia?.({ type: 'your-turn', ms: yourTurnMs, kind, id, step: 'your-turn' });
+    current = { stop: () => { o.onMedia?.({ type: 'stopped', kind, id, step: 'your-turn' }); } };
+    await wait(yourTurnMs);
+    if (gen !== stopped) return out;
+    current = null;
+    out.echo.completed = true;
+    o.onMedia?.({ type: 'ended', kind, id, step: 'your-turn' });
+    return out;
+  }
+
+  async function playOnce(kind, id, o = {}) {
+    let p = withRate(plan(kind, id, o), o);
     if (p.source === 'file') {
       if (!AudioCtor) {
         p = { ...planWithoutFile(kind, id, o), reason: 'no-audio-support' };
       } else {
         const r = await playFile(p);
         current = null;
-        if (r.ok) return p;
+        if (r.ok) return { ...p, ...(r.stopped ? { stopped: true } : {}), ...(r.ended ? { ended: true } : {}) };
         // file failed to load: fall through to TTS, and say so
-        const alt = planWithoutFile(kind, id, o);
+        const alt = withRate(planWithoutFile(kind, id, o), o);
         return { ...alt, reason: alt.reason || r.error, fileError: r.error, triedPath: p.path, ...(alt.source === 'tts-fallback' ? await speakResult(alt) : {}) };
       }
     }
-    if (p.source === 'tts-fallback') { const r = await speakResult(p); return { ...p, ...r }; }
+    if (p.source === 'tts-fallback') { const r = await speakResult(p); return { ...p, ...r, ...(r.ended ? { ended: true } : {}) }; }
     return p;
   }
 
   async function speakResult(p) {
     const r = await speak(p);
     current = null;
-    return r.ok ? {} : { source: 'none', reason: r.error };
+    if (!r.ok) return { source: 'none', reason: r.error, stopped: !!r.stopped };
+    return { ended: !!r.ended, stopped: !!r.stopped };
   }
 
   function planWithoutFile(kind, rawId, o) {
@@ -226,7 +314,7 @@ export function createAudio(opts) {
     for (let i = 0; i < items.length; i++) {
       if (gen !== stopped) break;
       const it = Array.isArray(items[i]) ? { kind: items[i][0], id: items[i][1] } : items[i];
-      results.push(await play(it.kind, it.id, it));
+      results.push(await playOnce(it.kind, it.id, { ...it, noEcho: true }));
       if (gen !== stopped) break;
       if (i < items.length - 1 && gapMs > 0) await wait(gapMs);
     }
@@ -235,12 +323,17 @@ export function createAudio(opts) {
 
   function stop() {
     stopped++;
-    if (current) { const c = current; current = null; c.stop(); }
+    const c = current;
+    current = null;
+    if (c) c.stop();
     if (speech && typeof speech.cancel === 'function') { try { speech.cancel(); } catch { /* ignore */ } }
+    return { interrupted: !!c };
   }
 
   return {
     play,
+    /** listen, hear it slowly, then a silent turn to say it (what play() does when settings.echoMode is on) */
+    echo,
     playSequence,
     stop,
     /** true only when a real recorded/rendered file would be used (never for TTS fallback). */

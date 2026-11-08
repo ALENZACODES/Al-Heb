@@ -41,6 +41,8 @@ export const DEFAULTS = Object.freeze({
   untimed: false,       // true = no time limit anywhere (Word Sprint has no clock; Record and compare does not stop by itself)
   confirmAnswers: false, // true = choosing an answer only marks it; a "Check answer" button submits it
   keyShortcuts: true,   // false = the single-key shortcuts (1 to 4, S) are off
+  clipRate: 'normal',  // 'normal' (1×) or 'slow' (0.7×) for the shared play control. Not a voice change.
+  echoMode: false,     // true = after a letter, vowel, syllable or word plays, it plays again slowly and then leaves a silent turn for you to say it (src/audio/player.js echo)
 });
 export const ENUMS = Object.freeze({
   voice: ['m', 'f'],
@@ -54,10 +56,11 @@ export const ENUMS = Object.freeze({
   textSize: ['normal', 'large', 'larger', 'largest'],
   lineLength: ['normal', 'narrow'],
   targetSize: ['normal', 'large'],
+  clipRate: ['normal', 'slow'],
 });
 export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 
-const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'veilOptOut', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
+const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'veilOptOut', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts', 'echoMode']);
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {

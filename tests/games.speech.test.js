@@ -29,14 +29,22 @@ test('an empty voice list and a Dutch list are not Hebrew', () => {
 });
 
 test('a 404 clip and a rejected network play never call a non-Hebrew voice', async () => {
-  for (const voices of [[], [{ lang: 'nl-NL' }, { lang: 'en-GB' }]]) {
-    FakeAudio.fail = true; FakeAudio.reject = false;
-    const synth = speech(voices);
+  // Voices listed and none Hebrew: silence, never a Dutch or English voice reading Hebrew.
+  FakeAudio.fail = true; FakeAudio.reject = false;
+  {
+    const synth = speech([{ lang: 'nl-NL' }, { lang: 'en-GB' }]);
     const audio = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: [row()], AudioCtor: FakeAudio, speech: synth, UtteranceCtor: Utt });
     const heard = await speak({ audio }, 'ב', { kind: 'letter', id: 'bet' });
     assert.equal(heard.spoken, false);
     assert.equal(synth.spoken.length, 0);
     assert.match(heard.message, /will not speak another language|could not be reached/);
+  }
+  // An empty list is unknown (browsers fill it asynchronously): the utterance goes out asking for he-IL, never for another language.
+  {
+    const synth = speech([]);
+    const audio = createAudio({ settings: { voice: 'm', congregation: 'israeli' }, manifest: [row()], AudioCtor: FakeAudio, speech: synth, UtteranceCtor: Utt });
+    await speak({ audio }, 'ב', { kind: 'letter', id: 'bet' });
+    for (const u of synth.spoken) assert.equal(u.lang, 'he-IL');
   }
   FakeAudio.fail = false; FakeAudio.reject = true;
   const synth = speech([{ lang: 'ar' }]);

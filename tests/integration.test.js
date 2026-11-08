@@ -188,11 +188,11 @@ test('shell audio: a sephardi learner hears the Israeli clip for a letter with n
   const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest,
     createAudio: (o) => createAudio({ ...o, AudioCtor: El, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
   for (const anyway of [true, false]) {
-    const a = mk(anyway);
+    const a = mk(anyway); const lines = []; a.subscribe((st) => lines.push(st.text));
     const r = await a.play('letter', 'alef');
     assert.equal(r.source, 'file'); assert.equal(r.fileTradition, 'israeli'); assert.equal(r.path, 'audio/f/israeli/letter/alef.mp3');
     assert.deepEqual(spoken, [], 'no browser voice when a stand-in file exists');
-    assert.match(a.state.text, /Israeli/);
+    assert.ok(lines.some((t) => /Playing:.*Israeli/.test(t)), lines.join(' | '));
     assert.equal(a.has('letter', 'bet'), true, 'has() is true: the Israeli file is a real file');
   }
 });

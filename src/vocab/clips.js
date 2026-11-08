@@ -14,17 +14,16 @@ export const TRADITIONS = Object.freeze(['israeli', 'sephardi', 'ashkenazi']);
 /** Values this screen passes as options.rate. */
 export const CLIP_RATES = Object.freeze(['normal', 'slow']);
 /**
- * The unmerged player contract (PR #20, commit 8f37d4ba, docs/audio/PLAYBACK-CONTRACT.md
- * on chatgpt/games-enrich-2026-11-06) maps slow to 0.7× and says "Playing" only after a
- * playing event. The player in this tree does not read options.rate. appliedByThisTree stays false
- * until that player is what this branch actually runs.
+ * The player contract (commit 8f37d4ba, docs/audio/PLAYBACK-CONTRACT.md; dropped by the Nov 6 branch
+ * consolidation and restored on main 2026-11-07) maps slow to 0.7× and says "Playing" only after a
+ * playing event. The player in this tree reads options.rate and settings.clipRate.
  */
 export const PLAYBACK_DEPENDENCY = Object.freeze({
   contractCommit: '8f37d4ba',
   contractFile: 'docs/audio/PLAYBACK-CONTRACT.md',
-  branch: 'chatgpt/games-enrich-2026-11-06',
+  branch: 'main',
   slowMeans: 0.7,
-  appliedByThisTree: false,
+  appliedByThisTree: true,
 });
 export const SPEED_BUTTONS = Object.freeze([['normal', 'Normal'], ['slow', 'Slow']]);
 

@@ -90,7 +90,7 @@ export const STORE_KEYS = [
   ['games.wordfinder.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/wordfinder.model.js'],
   ['games.wordmaze.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/wordmaze.view.js'],
   ['games.wordsearch.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/wordsearch.view.js'],
-  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, your gender for Hebrew forms (optional), saved latitude and longitude', 'src/shell/settings.js'],
+  ['settings', 'Settings: language, script, theme, accessibility options (as listed on the Accessibility screen), voice, pronunciation style, clip speed (normal or slow) and the echo setting (slow replay with a pause to say it), your gender for Hebrew forms (optional), saved latitude and longitude', 'src/shell/settings.js'],
   ['onboarding.v1', 'Setup answers and plan', 'src/onboarding/model.js'],
   ['onboarding.v1.dailyGoal', 'Daily goal', 'src/home/today.js'],
   ['backup.reminder.v1', 'When you last downloaded a backup file, and "Not now" on the backup reminder', 'src/shell/backup-reminder.js'],

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "genesis-1-1-en-ari",
+    "reference": "In the beginning God created the heaven and the earth.",
+    "transcript": "In the beginning, God created the heaven and the earth.",
+    "wer": 0.0,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "6ccf83a705ad9be844918c3fc08f9fb4d8f129a8421345ea70258581effd1dad"
+  },
+  {
+    "id": "genesis-1-1-en-noa",
+    "reference": "In the beginning God created the heaven and the earth.",
+    "transcript": "In the beginning, God created the heaven and the earth.",
+    "wer": 0.0,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "34d33a9f0cb7dcaa309a17332ebf92609d4b0d97fa8b761ea2eedf082c398ad0"
+  },
+  {
+    "id": "genesis-1-2-en-ari",
+    "reference": "Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.",
+    "transcript": "Now the earth was unformed and void and darkness was upon the face of the deep and the spirit of God hovered over the face of the waters.",
+    "wer": 0.0,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "bb289ef354f0102d56e3b10e3dac62cb3da1a85c48c04582d32dbccba742534f"
+  },
+  {
+    "id": "genesis-1-2-en-noa",
+    "reference": "Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.",
+    "transcript": "Now the earth was informed and void, and darkness was upon the face of the deep, and the spirit of God hovered over the face of the waters.",
+    "wer": 0.03571428571428571,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "a65a0c248792877c6cb38f2ca5ed9edf3c114c0bfe98fb4e41dff48c770ffee3"
+  },
+  {
+    "id": "genesis-1-3-en-ari",
+    "reference": "And God said: \u2018Let there be light.\u2019 And there was light.",
+    "transcript": "And God said, let there be light, and there was light.",
+    "wer": 0.0,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "340daabfd4d151f70ee960ff3c920282afc38ce971168adc1c01260bc72731de"
+  },
+  {
+    "id": "genesis-1-3-en-noa",
+    "reference": "And God said: \u2018Let there be light.\u2019 And there was light.",
+    "transcript": "And God said, let there be light, and there was light.",
+    "wer": 0.0,
+    "model": "Systran/faster-whisper-tiny.en",
+    "audioSha256": "dbe4d39a59f489e7a8ab4b05dcc0087e2f28ddf3b4458e8947b9cd9f422d67da"
+  }
+]

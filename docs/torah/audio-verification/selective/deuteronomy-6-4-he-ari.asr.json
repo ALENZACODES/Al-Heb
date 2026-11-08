@@ -1,0 +1,24 @@
+{
+  "id": "deuteronomy-6-4-he-ari",
+  "fingerprint": "38154b9f70ebe091190c542df86f158f89c69421050e6719189bac9e99f314a7",
+  "audioSha256": "1a7faf7e7f013bd6aebde6379ad95635c531e595cf5d0abce159aac873956db9",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "שְׁמַע ישראל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אחד",
+  "transcript": "שמע ישראל אדוני עליהנו אדוני אחד.",
+  "wordEdits": 3,
+  "referenceWords": 6,
+  "wer": 0.5,
+  "asrExact": false,
+  "orthographicWordEdits": 3,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

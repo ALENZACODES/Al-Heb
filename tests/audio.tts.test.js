@@ -72,9 +72,11 @@ const manifest = [
   { path: 'audio/m/israeli/letter/c.mp3', voice: 'm', tradition: 'israeli', kind: 'letter', id: 'c', text: 'בֵּית', status: 'missing' },
   { path: 'audio/f/israeli/word/a.mp3', voice: 'f', tradition: 'israeli', kind: 'word', id: 'a', text: 'שָׁלוֹם', status: 'missing' },
 ];
-test('selection: default kinds exclude letters/vowels, skip already-present, refuse non-israeli', () => {
+test('selection: default kinds exclude letters/vowels, skip already-present, refuse an unknown tradition', () => {
   assert.deepEqual(selectEntries(manifest, { voice: 'm' }).map((r) => r.id), ['a']);
-  assert.throws(() => selectEntries(manifest, { voice: 'm', tradition: 'ashkenazi' }), /no TTS provider offers it/);
+  assert.throws(() => selectEntries(manifest, { voice: 'm', tradition: 'yemenite' }), /not one of israeli, sephardi, ashkenazi/);
+  // sephardi/ashkenazi rows are rendered from their respelling (tests/audio.accent-render.test.js)
+  assert.deepEqual(selectEntries(manifest, { voice: 'm', tradition: 'ashkenazi' }), []);
 });
 test('estimate counts code points and prices from notes', () => {
   const e = estimate(selectEntries(manifest, { voice: 'm' }), google, {});

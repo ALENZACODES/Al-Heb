@@ -15,14 +15,25 @@ export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
 }
 
 /** Fetch the core manifest plus its kind=word shard and return the combined list (the same entries the core used to hold alone). */
-export async function fetchFullManifest(fetchFn, coreUrl = MANIFEST_URL, wordUrl = WORD_MANIFEST_URL, torahUrl = TORAH_MANIFEST_URL) {
-  const [core, words, torah] = await Promise.all([
+export async function fetchFullManifest(fetchFn, coreUrl = MANIFEST_URL, wordUrl = WORD_MANIFEST_URL, torahUrl = TORAH_MANIFEST_URL, torahHeUrl = 'data/audio/manifest-torah-he.json') {
+  const [core, words, torah, torahHe] = await Promise.all([
     fetchCoreManifest(fetchFn, coreUrl),
     fetchCoreManifest(fetchFn, wordUrl),
-    // The Torah shard is additive: an absent or unreadable shard means "no Torah clips yet", never a failed load.
+    // The Torah shards are additive: an absent or unreadable shard means "no Torah clips yet", never a failed load.
     fetchCoreManifest(fetchFn, torahUrl).catch(() => []),
+    fetchTorahHebrew(fetchFn, torahHeUrl),
   ]);
-  return [...core, ...words, ...torah];
+  return [...core, ...words, ...torah, ...torahHe];
+}
+
+/** The Hebrew Torah verse index, expanded to manifest entries; [] when it is missing or unreadable. */
+export async function fetchTorahHebrew(fetchFn, url = 'data/audio/manifest-torah-he.json') {
+  try {
+    const res = await fetchFn(url);
+    if (!res || !res.ok) return [];
+    const { expandTorahHebrew } = await import('./torah-he-index.js'); // fetched on demand, outside the first-install budget
+    return expandTorahHebrew(await res.json());
+  } catch { return []; }
 }
 
 /** Fetch the tiny shipped clip-count summary; rejects on anything but {recorded:number, tts:number}. */

@@ -30,6 +30,7 @@ export const EXTRAS = [
   ['data/audio/manifest-words-israeli.json', 'lazy audio word shard'],
   ['data/audio/manifest-words-sephardi.json', 'lazy audio word shard'],
   ['data/audio/manifest-torah.json', 'lazy full-Torah recording list; ship even when both languages exceed the precache size limit'],
+  ['data/audio/manifest-torah-he.json', 'lazy index of the Hebrew Torah verse recordings (src/shell/torah-he-index.js)'],
   ['assets/img', 'illustrations: only shipped with --with-img (16 MiB of placeholders); the two hero files named literally in src/ ship always via their own entries below'],
   ['assets/img/gen/HERO_tree_of_life_realistic.webp', 'home astral-tree hero, named literally in src/shell/astral-tree.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/gen/HERO_home_tree.webp', 'Welcome hero, named literally in src/shell/home-hero.js (fix #11); runtime-cached on first view, not precached'],

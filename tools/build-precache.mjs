@@ -48,13 +48,15 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/traditions/', 'src/vocab/', 'src/wordtrace/', 'src/typing/',
   // Reform synagogues in Canada: the directory data, the view and 66 pictures (about 9 MB), fetched on first view, runtime-cached.
   'src/synagogues/', 'data/synagogues/', 'assets/synagogues/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
   'data/games/firstwords.json',
   // Awards gallery view: route code only (the router loads views lazily; its engine files stay installed), fetched when Awards first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the 25-badge engine landed).
   'src/awards/gallery.view.js',
+  // Preview routes Class track and Compare pronunciations: view code only, fetched on first view, runtime-cached (keeps first install under 3.95 MiB after the Torah verse index).
+  'src/classtrack/classtrack.view.js', 'src/pronunciation/compare.view.js',
   // Certificate drawing and its embedded PDF font are dependencies of the
   // optional Awards gallery. Cache them on first gallery visit, preserving
   // the existing 3.95 MiB first-install target and its 0.05 MiB headroom.

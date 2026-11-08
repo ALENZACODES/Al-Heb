@@ -151,3 +151,20 @@ test('precache: Torah text and the Torah manifest are on-demand, never installed
     assert.ok(recording.path && fs.existsSync(new URL(recording.path, root)), recording.id + ': published clip exists');
   }
 });
+
+test('Hebrew Torah verse recordings: the small index expands to clips that exist, and stays far under the precache cap', async () => {
+  const { expandTorahHebrew, expandRanges } = await import('../src/shell/torah-he-index.js');
+  assert.deepEqual(expandRanges('1-3,5,7-8'), [1, 2, 3, 5, 7, 8]);
+  assert.deepEqual(expandTorahHebrew(null), []);
+  const raw = fs.readFileSync(new URL('data/audio/manifest-torah-he.json', root), 'utf8');
+  assert.ok(raw.length < 200 * 1024, 'the index stays small');
+  const entries = expandTorahHebrew(JSON.parse(raw));
+  for (const e of entries) {
+    assert.ok(['m', 'f'].includes(e.voice) && e.kind === 'line' && /^torah-[a-z]+-\d+-\d+$/.test(e.id), e.id);
+    assert.ok(fs.existsSync(new URL(e.path, root)), e.path + ' exists');
+  }
+  const big = J('data/audio/manifest-torah.json');
+  assert.ok(!big.some((e) => entries.some((x) => x.id === e.id && x.voice === e.voice && x.kind === e.kind)), 'no verse is listed twice');
+  const text = fs.readFileSync(new URL('precache-manifest.js', root), 'utf8');
+  assert.ok(text.includes('"data/audio/manifest-torah-he.json"'), 'the index is fetched on demand');
+});

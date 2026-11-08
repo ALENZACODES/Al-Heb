@@ -21,6 +21,7 @@ export const TROPE_FILES = { 'priestly-blessing': 'data/corpus/trope/priestly-bl
 export const TABLE_FILE = 'data/corpus/trope/table.json';
 export const TORAH_INDEX_FILE = 'data/corpus/torah/index.json';
 export const TORAH_MANIFEST_FILE = 'data/audio/manifest-torah.json';
+import { TORAH_HE_INDEX_URL, expandTorahHebrew } from '../shell/torah-he-index.js';
 export const torahChapterFile = (book, chapter) => `data/corpus/torah/${book}/${String(chapter).padStart(2, '0')}.json`;
 /** { passages: {id: reader}, tropes: [trope passage], table } */
 export async function loadAll(load = loadJson) {
@@ -39,5 +40,9 @@ export const loadTorahIndex = (load = loadJson) => load(TORAH_INDEX_FILE);
 export const loadTorahChapter = (book, chapter, load = loadJson) => load(torahChapterFile(book, chapter));
 /** The Torah audio manifest; an absent or unreadable shard means "no Torah clips yet", never an error. */
 export async function loadTorahManifest(load = loadJson) {
-  try { const m = await load(TORAH_MANIFEST_FILE); return Array.isArray(m) ? m : []; } catch { return []; }
+  const [m, he] = await Promise.all([
+    load(TORAH_MANIFEST_FILE).then((x) => (Array.isArray(x) ? x : [])).catch(() => []),
+    load(TORAH_HE_INDEX_URL).then(expandTorahHebrew).catch(() => []),
+  ]);
+  return [...m, ...he];
 }

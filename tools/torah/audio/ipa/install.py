@@ -1,4 +1,4 @@
-"""Copies rendered verse clips into the app and lists them in data/audio/manifest-torah.json.
+"""Copies rendered verse clips into the app and rebuilds the verse index (build_index.py).
 
 Only clips whose sidecar fingerprint matches plan.json are taken. Run after listening to them.
   python install.py --book genesis --chapter 1
@@ -31,7 +31,6 @@ def main():
     a = ap.parse_args()
     plan = json.loads((HERE / 'plan.json').read_text(encoding='utf8'))
     words = {v['id']: v for v in json.loads((HERE / 'ipa.json').read_text(encoding='utf8'))}
-    manifest = json.loads(MANIFEST.read_text(encoding='utf8'))
     added, missing = 0, 0
     for r in plan:
         if (a.book and r['book'] != a.book) or (a.chapter and r['chapter'] != a.chapter):
@@ -44,20 +43,9 @@ def main():
         dest = ROOT / r['appPath']
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(clip, dest)
-        entry = {
-            'path': r['appPath'], 'voice': r['gender'], 'tradition': 'israeli', 'kind': 'line', 'id': r['verseId'],
-            'text': ' '.join(w['source'] for w in words[r['verseId']]['words']), 'sourceHebrew': r['displayText'],
-            'status': 'tts', 'source': 'paid-cloud', 'provider': 'google', 'providerVoice': r['voice'],
-            'synthesisLocale': r['languageCode'], 'intendedLanguage': 'he',
-            'speechInput': r['input']['text'], 'customPronunciations': r['input']['customPronunciations']['pronunciations'],
-            'durationMs': duration_ms(dest), 'audioSha256': hashlib.sha256(dest.read_bytes()).hexdigest(),
-            'verification': 'ipa-from-pointed-source; not-human-reviewed',
-            'verificationEvidence': 'tools/torah/audio/ipa/README.md',
-        }
-        manifest = [e for e in manifest if not (e.get('kind') == 'line' and e.get('id') == r['verseId'] and e.get('voice') == r['gender'])]
-        manifest.append(entry)
         added += 1
-    MANIFEST.write_text('[\n' + ',\n'.join(json.dumps(e, ensure_ascii=False, separators=(',', ':')) for e in manifest) + '\n]\n', encoding='utf8')
+    import build_index
+    build_index.main()
     print(json.dumps({'installed': added, 'notRenderedYet': missing}))
 
 

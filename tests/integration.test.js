@@ -181,16 +181,20 @@ test('shell audio: honest status text for tts, file and refusal; manifest summar
   assert.match(describeResult({ source: 'none', reason: 'no-hebrew-browser-voice' }).text, /no Hebrew voice/);
   const s = summarizeManifest(manifest); assert.equal(s.recorded, 0); assert.equal(s.tts, manifest.filter((e) => e.status === 'tts' || e.status === 'synthetic-unreviewed').length); assert.ok(manifest.every((e) => e.status !== 'recorded')); assert.equal(s.total, manifest.length);
 });
-test('shell audio: sephardi learner gets the labelled browser voice (not silence) unless they opt out', async () => {
+test('shell audio: a sephardi learner hears the Israeli clip for a letter with no Sephardi clip, labelled as Israeli, not the browser voice', async () => {
+  // Owner decision 2026-11-07 (data/audio/equivalence.json): the Israeli file stands in for a missing Sephardi letter, vowel, syllable, prayer or word.
   const spoken = []; const speech = { speak(u) { spoken.push(u.text); setTimeout(() => u.onend(), 0); }, cancel() {} };
+  class El { constructor(url) { this.url = url; } play() { setTimeout(() => { this.onplaying?.(); this.onended?.(); }, 0); return Promise.resolve(); } pause() {} }
   const mk = (anyway) => createShellAudio({ settings: { get: (k) => ({ voice: 'f', congregation: 'sephardi', browserVoiceAnyway: anyway })[k] }, manifest,
-    createAudio: (o) => createAudio({ ...o, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
-  const on = mk(true); const seen = []; on.subscribe((st) => seen.push(st.mode));
-  await on.play('letter', 'alef');
-  assert.deepEqual(spoken, ['אָלֶף']); assert.equal(on.state.mode, 'tts'); assert.match(on.state.text, /not Sephardi/);
-  const off = mk(false); await off.play('letter', 'bet');
-  assert.equal(off.state.mode, 'none'); assert.match(off.state.text, /only reads Israeli pronunciation/);
-  assert.equal(off.has('letter', 'alef'), false, 'has() is true only for real files');
+    createAudio: (o) => createAudio({ ...o, AudioCtor: El, speech, UtteranceCtor: class { constructor(t) { this.text = t; } } }) });
+  for (const anyway of [true, false]) {
+    const a = mk(anyway);
+    const r = await a.play('letter', 'alef');
+    assert.equal(r.source, 'file'); assert.equal(r.fileTradition, 'israeli'); assert.equal(r.path, 'audio/f/israeli/letter/alef.mp3');
+    assert.deepEqual(spoken, [], 'no browser voice when a stand-in file exists');
+    assert.match(a.state.text, /Israeli/);
+    assert.equal(a.has('letter', 'bet'), true, 'has() is true: the Israeli file is a real file');
+  }
 });
 
 // ---- fonts ----

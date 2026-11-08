@@ -54,7 +54,7 @@ test("device voice: with no clip but a he-IL voice, a line gets a device-labelle
   const audio = createAudio({ settings: { voice: "m", congregation: "israeli" }, manifest: [], AudioCtor: class {}, speech, UtteranceCtor: Utt });
   const root = new Node_("div"); const un = mount(root, { store: memStore(), audio, query: { sec: "ladder" }, settings: {} }); await ready(root);
   const plays = root.find((n) => n.tag === "button" && /Play$/.test(n.text));
-  assert.ok(plays.length >= 100); assert.match(plays[0].attrs["aria-label"], /Israeli voice/);
+  assert.ok(plays.length >= 100); assert.match(plays[0].attrs["aria-label"], /device voice/);
   assert.ok(!/sephardi|ashkenazi/i.test(plays[0].attrs["aria-label"]));
   await plays[0].click(); assert.equal(said.length, 1); assert.match(said[0], /[\u05d0-\u05ea]/); un();
 });

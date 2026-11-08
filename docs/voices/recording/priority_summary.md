@@ -10,13 +10,13 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 
 | tradition | voice | P1 letters+finals | P2 vowels+syllables | P3 core prayers | P4 words | priority total | est. donor hours (priority) | all required clips | est. donor hours (all) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4727 | 26.3 to 39.4 |
-| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4727 | 26.3 to 39.4 |
+| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5268 | 29.3 to 43.9 |
+| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 5268 | 29.3 to 43.9 |
 | ashkenazi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | ashkenazi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | sephardi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | sephardi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
-| **all** | | | | | | **4158** | **23.1 to 34.6** | **23394** | **130.0 to 194.9** |
+| **all** | | | | | | **4158** | **23.1 to 34.6** | **24476** | **136.0 to 204.0** |
 
 ## Notes and honest caveats
 
@@ -24,7 +24,7 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 - P2: all niqqud clips plus every syllable drill in the manifest. The manifest has 110 syllables per voice, not ~120, so the count is 110.
 - P3: prayer LINES whose id matches the core list in `CORE_PRAYER_RE` (Modeh Ani, Shema and V'ahavta lines, blessing formula, Torah-reading blessings, Kiddush wine, bread, candles, Shehecheyanu and a few others). This is a draft choice by the tool author, not a rabbinic or product decision; the research target was about 60 lines.
 - P4: the manifest does not contain 500 of the 500 most frequent Hebrew words. Words are ranked by frequency rank in data/vocab/words.json where the spelling matches, then by how often the word occurs in the manifest; the top 500 distinct pointed words are taken (each recorded once per voice and tradition). How many of those are inside the true frequency top 500:
-  - israeli: 2774 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
+  - israeli: 3215 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
   - sephardi: 2142 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
   - ashkenazi: 2142 distinct pointed words in the manifest; picked 500; 500 of them match the vocabulary list; 500 are inside the frequency top 500.
 - Words in P4 appear once; other manifest ids with the same pointed text are left as long tail (an equivalence rule or a re-slice could reuse the recording; not decided).

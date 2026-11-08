@@ -36,7 +36,7 @@ test('covers 31 letter forms (27 + 4 variants), 15 vowels, 22x5 syllable grid fo
     assert.equal(count('letter', v, t).filter((e) => e.id.endsWith('-sound')).length, 26, '22 sounds + 4 variant sounds');
     assert.equal(count('vowel', v, t).length, VOWELS.length);
     assert.equal(count('vowel', v, t).length, 15);
-    assert.equal(count('syllable', v, t).length, 110);
+    assert.equal(count('syllable', v, t).filter((e) => e.group !== 'dot-tile').length, 110, 'the grid; Dot Tile alias rows are extra');
   }
 });
 

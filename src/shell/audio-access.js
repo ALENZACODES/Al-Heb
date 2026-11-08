@@ -6,7 +6,7 @@
 // Pure of the DOM except audioButton(), which takes a `h` element factory.
 import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 import { isAudioFree } from './audiofree.js';
-export const DEVICE_LABEL = 'Israeli voice';
+export const DEVICE_LABEL = 'device voice, not recorded yet'; // the phone or browser reads it: say so, never a teacher's name or 'Israeli voice'
 export const NO_AUDIO = STATUS_LABELS.missing;
 
 /** 'yes' | 'no' | 'unknown' for a he-IL browser voice. getVoices() is often empty until the browser loads them: 'unknown'. */

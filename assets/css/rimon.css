@@ -28,3 +28,4 @@
 @keyframes rimon-bubble-pop{from{opacity:0;transform:scale(.88) translateX(7px)}to{opacity:1;transform:scale(1) translateX(0)}}
 @media(max-width:600px){.rimon-bubble{padding:10px 12px}.rimon-bubble-he{font-size:21px}.rimon-bubble-en{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.rimon-bubble.is-popping{animation:none!important}}
+@media(max-width:600px){.rimon-bubble{width:min(168px,calc(100vw - 100px));padding:8px 10px;border-radius:16px}.rimon-bubble-he{font-size:18px}.rimon-bubble-en{font-size:11px;margin-top:2px}}

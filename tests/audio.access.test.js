@@ -69,7 +69,7 @@ test('device voice stays Israeli-only: an Ashkenazi learner with no clip gets no
   assert.equal(a.level, 'none'); assert.equal(a.label, NO_AUDIO);
   assert.equal(audioAccess(mkS('sephardi', [{ ...synthEntry('sephardi', 'missing') }], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
   assert.equal(audioAccess(mkS('israeli', [synthEntry('israeli', 'missing')], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
-  assert.match(DEVICE_LABEL, /Israeli/);
+  assert.match(DEVICE_LABEL, /device voice/); assert.doesNotMatch(DEVICE_LABEL, /Israeli|Ari|Noa/); // the phone reads it, not a teacher
 });
 test('audioButton for a synthetic Ashkenazi clip shows the honest label as the chip and in the aria-label', () => {
   const b = audioButton(h, { audio: mkS('ashkenazi', [synthEntry('ashkenazi', 'synthetic-unreviewed', { source: 'tts-respelled-israeli-voice' })]) }, { kind: 'word', id: 'bayit' });

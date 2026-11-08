@@ -418,7 +418,7 @@ test("ladder view: 'Listen again' is the shared audio button (file, labelled dev
     const again = root.find((n) => n.tag === "button" && /^syllable\//.test(n.attrs["data-audio"] || ""));
     if (!state) { assert.equal(again.length, 0); assert.match(root.text, /No audio yet/); un(); continue; }
     assert.equal(again.length, 1, source); assert.equal(again[0].attrs["data-audio-state"], state);
-    if (state === "device") assert.match(again[0].attrs["aria-label"], /Israeli voice/);
+    if (state === "device") assert.match(again[0].attrs["aria-label"], /device voice/);
     played.length = 0; await again[0].click(); assert.equal(played.length, 1); assert.equal(played[0][0], "syllable");
     un();
   }

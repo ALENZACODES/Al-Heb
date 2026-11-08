@@ -146,7 +146,7 @@ test("audio: with no clip and a he-IL device voice, Listen is a device-labelled 
   const { root } = await boot({ audio });
   byId(root, "sprint-start").click();
   const b = btn(root, /Listen/); assert.ok(b);
-  assert.match(b.attrs["aria-label"], /Israeli voice/);
+  assert.match(b.attrs["aria-label"], /device voice/);
   b.click(); await flush(); assert.equal(said.length, 1); assert.ok(said[0][1] && /[\u05d0-\u05ea]/.test(said[0][1]));
 });
 

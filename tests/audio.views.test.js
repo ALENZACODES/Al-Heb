@@ -28,7 +28,7 @@ globalThis.document = { head: new Node_('head'), createElement: (t) => new Node_
 const realFetch = globalThis.fetch;
 globalThis.fetch = async (u) => { const url = String(u); if (!url.startsWith('file:')) return realFetch(u); try { const t = fs.readFileSync(new URL(url), 'utf8'); return { ok: true, status: 200, json: async () => JSON.parse(t), text: async () => t }; } catch { return { ok: false, status: 404 }; } };
 
-const DEVICE = /Israeli voice/;
+const DEVICE = /device voice/;
 const audios = (calls) => ({
   file: { status: () => ({ source: 'file', entryStatus: 'recorded' }), play: async (k, id, o) => { calls.push([k, id, o && o.text]); return { source: 'file' }; } },
   device: { status: () => ({ source: 'tts-fallback' }), play: async (k, id, o) => { calls.push([k, id, o && o.text]); return { source: 'tts-fallback' }; } },

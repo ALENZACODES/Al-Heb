@@ -39,7 +39,7 @@ test('hear-the-word uses the shared audio button: file clip plays, device voice 
   await waitFor(() => calls.length === 1, { message: 'play called' }); assert.deepEqual(calls[0].slice(0, 2), ['word', 'r07-w2']); clip.unmount();
   const dev = await open({ query: { word: BA, level: 'two' }, audio: mkAudio('tts-fallback') });
   const d = all(dev.root, n => n.getAttribute('data-audio') === 'word/r07-w2')[0];
-  assert.equal(d.getAttribute('data-audio-state'), 'device'); assert.match(d.getAttribute('aria-label'), /Israeli voice/); dev.unmount();
+  assert.equal(d.getAttribute('data-audio-state'), 'device'); assert.match(d.getAttribute('aria-label'), /device voice/); dev.unmount();
   const none = await open({ query: { word: BA, level: 'two' }, audio: mkAudio('none') });
   assert.equal(all(none.root, n => n.getAttribute('data-audio') === 'word/r07-w2').length, 0);
   assert.match(none.root.textContent, /No audio yet/); none.unmount();

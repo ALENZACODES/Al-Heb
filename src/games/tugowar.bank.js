@@ -134,7 +134,7 @@ export const BANK = Object.freeze([
   ["bright_dark_colour","בָּהִיר","bahir","light (colour)","כֵּהֶה","kehe","dark (colour)","adj","TUG_bright_dark_colour","h9f97835b",""],
   ["transparent_opaque","שָׁקוּף","shakuf","transparent","אָטוּם","atum","opaque","adj","TUG_transparent_opaque","",""],
   ["tired_fresh","עָיֵף","ayef","tired","רַעֲנָן","raanan","fresh","adj","TUG_tired_fresh","",""],
-  ["upper_lower","עֶלְיוֹן","elyon","upper","תַּחְתּוֹן","tachton","lower","adj","TUG_upper_lower","",""],
+  ["upper_lower","עֶלְיוֹן","elyon","upper","תַּחְתּוֹן","tachton","lower","adj","TUG_upper_lower","hd4e9002d",""],
   ["inner_outer","פְּנִימִי","pnimi","inner","חִיצוֹנִי","chitzoni","outer","adj","TUG_inner_outer","",""],
   ["satisfied_disappointed","מְרֻצֶּה","merutze","satisfied","מְאֻכְזָב","meukhzav","disappointed","adj","TUG_satisfied_disappointed","",""],
   ["polite_rude","אָדִיב","adiv","polite","גַּס","gas","rude","adj","TUG_polite_rude","",""],

@@ -128,7 +128,7 @@ test('atlas view: Hear buttons are the shared audio button (file plays, device v
     const hear = root.find(n => n.tag === 'button' && n.attrs['data-audio'] === 'letter/nun-sound');
     if (!state) { assert.equal(hear.length, 0); assert.match(body(root), /No audio yet/); un(); continue; }
     assert.equal(hear.length, 1, source); assert.equal(hear[0].attrs['data-audio-state'], state);
-    if (state === 'device') assert.match(hear[0].attrs['aria-label'], /Israeli voice/);
+    if (state === 'device') assert.match(hear[0].attrs['aria-label'], /device voice/);
     await hear[0].click(); assert.deepEqual(played[0], ['letter', 'nun-sound']);
     un();
   }

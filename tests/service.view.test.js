@@ -91,7 +91,7 @@ test('audio button appears only for a real clip and plays it', async () => {
   // no clip here, but the fake player reports a device voice: the button is offered and labelled as a device voice, never as a recording
   const dev = root.querySelector('#sv-play');
   assert.equal(dev.getAttribute('data-audio-state'), 'device');
-  assert.match(dev.getAttribute('aria-label'), /Israeli voice/);
+  assert.match(dev.getAttribute('aria-label'), /device voice/);
 });
 
 test('no clip and no usable voice: no play button, a one-line No audio yet', async () => {

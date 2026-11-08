@@ -37,6 +37,8 @@ test('sounds: schema, confidence labels, known sources, Hebrew samples in block,
   assert.equal(new Set(ids).size, ids.length);
   for (const s of sounds.sounds) {
     for (const k of ['label', 'gloss', 'israeli', 'american', 'ashkenazi', 'americanBasis']) assert.ok(nonEmpty(s[k]), `${s.id}.${k}`);
+    assert.ok(nonEmpty(s.sephardi?.say) && nonEmpty(s.sephardi?.translit), `${s.id}.sephardi (traditional reading + SephardicU spelling)`);
+    assert.ok(s.sources.includes('sephardicu'), `${s.id} cites the SephardicU guide`);
     assert.ok(inBlock(s.he) && s.he.length > 0, `${s.id} he`);
     assert.ok(Object.hasOwn(sounds.confidence, s.confidence), `${s.id} confidence`);
     assert.ok(Array.isArray(s.sources) && s.sources.length >= 1, `${s.id} has sources`);
@@ -94,6 +96,7 @@ test('sounds: alsoExists entries are marked as reference only and cite known sou
 
 test('guide: schema, valid settings, sources exist, evidence caveat present, neutral tone checks', () => {
   assert.ok(guide.situations.length >= 6);
+  assert.ok(guide.background && guide.background.paragraphs.length >= 4 && guide.background.sources.includes('harshav'), 'beginner explainer on why Israeli Hebrew sounds Sephardi');
   const ids = guide.situations.map((s) => s.id);
   assert.equal(new Set(ids).size, ids.length);
   for (const need of ['us-reform', 'us-conservative', 'us-orthodox', 'israel-travel']) assert.ok(ids.includes(need), need);

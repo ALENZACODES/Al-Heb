@@ -319,21 +319,22 @@ export function mount(root, ctx = {}) {
     body.append(
       h('h3', {}, tr('trad.soundsTitle', 'Sound by sound')),
       h('p', {}, 'Three settings the app uses, plus other communities for reference. Each row says how sure we are and where the claim comes from.'),
-      h('ul', {}, Object.entries(sounds.settings).map(([k, v]) => h('li', {}, h('strong', {}, k === 'american' ? 'American synagogue: ' : k === 'israeli' ? 'Israeli: ' : 'Ashkenazi: '), v))),
+      h('ul', {}, Object.entries(sounds.settings).map(([k, v]) => h('li', {}, h('strong', {}, k === 'american' ? 'American synagogue: ' : k === 'israeli' ? 'Israeli: ' : k === 'sephardi' ? 'Traditional Sephardi: ' : 'Ashkenazi: '), v))),
       h('details', {}, h('summary', {}, 'What the confidence labels mean'),
         h('ul', {}, Object.entries(sounds.confidence).map(([k, v]) => h('li', {}, h('strong', {}, `${CONFIDENCE_LABELS[k]}: `), v)))));
 
     const th = (t, scope = 'col') => h('th', { scope, role: scope === 'row' ? 'rowheader' : 'columnheader' }, t);
-    const cols = [['Sound'], ['Modern Israeli'], ['American synagogue'], ['Ashkenazi'], ['Also exists (reference only)'], ['How sure, and why']];
+    const cols = [['Sound'], ['Modern Israeli'], ['American synagogue'], ['Traditional Sephardi'], ['Ashkenazi'], ['Also exists (reference only)'], ['How sure, and why']];
     const trs = sounds.sounds.map((s) => {
       const ipaI = ipaFor(s, 'israeli', data), ipaA = ipaFor(s, 'ashkenazi', data);
       const row = h('tr', { role: 'row', 'data-sound': s.id, ...(focusSound === s.id ? { class: 'focus-row' } : {}) },
         h('th', { scope: 'row', role: 'rowheader' }, s.label, h('span', { class: 'muted', style: 'display:block' }, he(s.he), ' ', s.gloss)),
         h('td', { role: 'cell', 'data-label': cols[1][0] }, s.israeli, ipaI ? h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, ipaI) : null),
         h('td', { role: 'cell', 'data-label': cols[2][0] }, s.american),
-        h('td', { role: 'cell', 'data-label': cols[3][0] }, s.ashkenazi, ipaA ? h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, ipaA) : null),
-        h('td', { role: 'cell', 'data-label': cols[4][0] }, s.other.length ? h('ul', {}, s.other.map((o) => h('li', {}, h('strong', {}, `${o.who}: `), o.say))) : 'none listed'),
-        h('td', { role: 'cell', 'data-label': cols[5][0] }, confidenceBadge(s.confidence), h('div', {}, srcLinks(s.sources)),
+        h('td', { role: 'cell', 'data-label': cols[3][0] }, ...(s.sephardi ? [s.sephardi.say, h('span', { class: 'muted', style: 'display:block' }, 'Spelled: ', h('code', { lang: 'en' }, s.sephardi.translit))] : ['see Also exists'])),
+        h('td', { role: 'cell', 'data-label': cols[4][0] }, s.ashkenazi, ipaA ? h('span', { class: 'ipa', dir: 'ltr', lang: 'und-fonipa' }, ipaA) : null),
+        h('td', { role: 'cell', 'data-label': cols[5][0] }, s.other.length ? h('ul', {}, s.other.map((o) => h('li', {}, h('strong', {}, `${o.who}: `), o.say))) : 'none listed'),
+        h('td', { role: 'cell', 'data-label': cols[6][0] }, confidenceBadge(s.confidence), h('div', {}, srcLinks(s.sources)),
           s.americanBasis ? h('small', { class: 'muted', style: 'display:block' }, `American column: ${s.americanBasis}`) : null,
           s.note ? h('small', { class: 'muted', style: 'display:block' }, s.note) : null));
       return row;
@@ -358,6 +359,11 @@ export function mount(root, ctx = {}) {
       h('p', {}, 'There is no single right answer. It depends on where you will use Hebrew, and even inside one synagogue people differ. Pick the situation closest to yours.'),
       h('ul', {}, g.universalAdvice.map((a) => h('li', {}, a))),
       h('details', {}, h('summary', {}, 'What the evidence is, and how weak it is'), h('p', {}, g.evidenceNote)));
+    if (g.background) {
+      body.append(h('details', { class: 'card', id: 'trad-background' }, h('summary', {}, g.background.title),
+        ...g.background.paragraphs.map((t) => h('p', {}, t)),
+        h('p', { class: 'muted' }, g.background.note, ' Sources: ', srcLinks(g.background.sources))));
+    }
     const legend = h('legend', {}, 'Where will you use Hebrew most?');
     const result = h('div', { 'aria-live': 'polite' });
     const fs = h('fieldset', {}, legend);

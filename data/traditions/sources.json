@@ -101,6 +101,28 @@
       "fetched": "2026-11-03",
       "coverage": "n/a",
       "supports": "statements the project wrote itself and could not tie to a fetched page; always shown with low confidence"
+    },
+    {
+      "id": "sephardicu",
+      "title": "SephardicU guide to transliterating Sephardic Hebrew",
+      "url": "https://sephardicu.com/holidays/passover/sephardicu-guide-to-transliterating-sephardic-hebrew/",
+      "publisher": "Sephardic U",
+      "licence": "not openly licensed; facts paraphrased only, no wording copied",
+      "open": false,
+      "fetched": "2026-11-08",
+      "coverage": "whole page read through a fetch tool",
+      "supports": "one Latin letter or digraph per Hebrew letter: alef silent, bet b or v, gimel g (gh when the soft form is kept), dalet d (dh), he h and always written at the end of a word, vav v (w in some communities), het h, tet t, kaf k, khaf kh, samekh s, ayin an apostrophe (ng among Spanish-Portuguese and Italian Jews), pe p or f, tsadi ss, qof q, resh r, shin sh and sin s, tav t (th when the soft form is kept); patach and kamatz both a, tsere and segol e, hiriq i, holam o, shuruk and kubbutz u, vocal shva e, the ai diphthong, a dagesh shown as a doubled letter (Hanukkah), and articles and prepositions written as separate words (Ha gefen)"
+    },
+    {
+      "id": "harshav",
+      "title": "Benjamin Harshav, Language in Time of Revolution (1993), chapter 27 'Ashkenazi or Sephardi Dialect?'",
+      "url": "https://www.ucpress.edu/",
+      "publisher": "University of California Press",
+      "licence": "not openly licensed; the owner supplied the chapter; facts paraphrased only, no wording copied",
+      "open": false,
+      "fetched": "2026-11-08",
+      "coverage": "the whole chapter and the end of chapter 26 (15 pages)",
+      "supports": "why the revivers of spoken Hebrew in Palestine chose a Sephardi-style pronunciation around 1900: the prestige of the Jerusalem Sephardi community and of Ben-Yehuda's circle, the 1903 Teachers' Assembly decision, the wish to erase the Yiddish-coloured Ashkenazi subdialects and the sounds of the Diaspora, Biblical final stress; Ashkenazi immigrants found the new accent hard (Agnon, Tsemakh), handwriting stayed Ashkenazi, and old kibbutz speech kept traces such as oMARti for aMARti"
     }
   ]
 }

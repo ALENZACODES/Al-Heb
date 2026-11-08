@@ -147,9 +147,11 @@ test('sounds tab: one row per sound, each row has a confidence badge and at leas
   }
   const table = byTag(root, 'table')[0];
   assert.equal(table.getAttribute('role'), 'table');
-  assert.ok(all(table, (x) => x.tagName === 'TH' && x.getAttribute('scope') === 'col').length === 6);
+  assert.ok(all(table, (x) => x.tagName === 'TH' && x.getAttribute('scope') === 'col').length === 7, 'seven column headers: Sound, Israeli, American, Traditional Sephardi, Ashkenazi, Also exists, How sure');
   for (const a of all(root, (x) => x.tagName === 'A')) assert.match(a.getAttribute('rel'), /noopener/);
   assert.match(text(root), /Yemenite Hebrew/);
+  assert.match(text(root), /Traditional Sephardi/);
+  assert.match(text(root), /Spelled: a/, 'the SephardicU spelling shows in the Sephardi column');
   assert.match(text(root), /\[s\]/, 'Ashkenazi IPA for tav from the pronunciation data');
 });
 

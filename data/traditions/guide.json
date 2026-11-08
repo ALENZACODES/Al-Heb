@@ -21,7 +21,10 @@
       ],
       "askFirst": "Which pronunciation do the cantor and the Torah readers use, and is there a recording I can practise with?",
       "confidence": "medium",
-      "sources": ["benor", "chabad"]
+      "sources": [
+        "benor",
+        "chabad"
+      ]
     },
     {
       "id": "us-conservative",
@@ -34,7 +37,9 @@
       ],
       "askFirst": "Does the shul use Israeli-style pronunciation for Torah reading and for the siddur, or does it differ between the two?",
       "confidence": "medium",
-      "sources": ["benor"]
+      "sources": [
+        "benor"
+      ]
     },
     {
       "id": "us-modern-orthodox",
@@ -47,7 +52,9 @@
       ],
       "askFirst": "What do the rabbi and the baal koreh (Torah reader) use?",
       "confidence": "low",
-      "sources": ["benor"]
+      "sources": [
+        "benor"
+      ]
     },
     {
       "id": "us-orthodox",
@@ -60,7 +67,10 @@
       ],
       "askFirst": "Which dialect of Ashkenazi does my community use, and who can I copy?",
       "confidence": "low",
-      "sources": ["benor", "wp-ashkenazi"]
+      "sources": [
+        "benor",
+        "wp-ashkenazi"
+      ]
     },
     {
       "id": "us-sephardi-mizrahi",
@@ -73,7 +83,10 @@
       ],
       "askFirst": "Can someone from my community record or sit with me for the throat sounds and for how they say the prayers?",
       "confidence": "medium",
-      "sources": ["wp-sephardi", "chabad"]
+      "sources": [
+        "wp-sephardi",
+        "chabad"
+      ]
     },
     {
       "id": "torah-reading",
@@ -86,7 +99,10 @@
       ],
       "askFirst": "Which pronunciation and which melodies does my teacher expect?",
       "confidence": "medium",
-      "sources": ["chabad", "pealim"]
+      "sources": [
+        "chabad",
+        "pealim"
+      ]
     },
     {
       "id": "israel-travel",
@@ -99,12 +115,31 @@
       ],
       "askFirst": "Is it for travel talk (Israeli track) or for services in Israel (ask the synagogue)?",
       "confidence": "high",
-      "sources": ["wp-mhp", "pealim"]
+      "sources": [
+        "wp-mhp",
+        "pealim"
+      ]
     }
   ],
   "settingsMap": {
     "israeli": "Israeli",
     "sephardi": "American synagogue (Sephardi values)",
     "ashkenazi": "Ashkenazi"
+  },
+  "background": {
+    "id": "why-israeli-sounds-sephardi",
+    "title": "Why does Israeli Hebrew sound Sephardi? A short story for beginners",
+    "sources": [
+      "harshav",
+      "wp-sephardi"
+    ],
+    "paragraphs": [
+      "Hebrew letters have been spelled the same way for two thousand years, but Jews in different countries said them differently. Jews in Spain, North Africa and the Middle East (Sephardim) kept one set of sounds; Jews in Germany and Eastern Europe (Ashkenazim) kept another. The famous test: the vowel kamatz is ah for Sephardim and o for Ashkenazim, so the same word is Shabbat for one and Shabbos for the other, and the letter tav without a dot is t for one and s for the other.",
+      "Around 1900, when people started speaking Hebrew every day again in the land of Israel, almost all of them had grown up with the Ashkenazi sounds. They chose the Sephardi sounds anyway. Why? The old Jewish community of Jerusalem was Sephardi and was respected; Eliezer Ben-Yehuda and the first Hebrew teachers worked with them; the Bible's own stress marks put the accent at the end of most words, which is how Sephardim read; and the new settlers wanted a sound that was not the sound of the European villages they had left behind.",
+      "In 1903 the Hebrew teachers' assembly in Palestine made it official: the new schools would teach the Sephardi pronunciation. Children learned it; their parents mostly did not. Writers who arrived later, such as the novelist Agnon, kept an Ashkenazi tinge all their lives, and old kibbutz members could still be heard stressing words the Ashkenazi way.",
+      "The new Israeli accent took the Sephardi vowels and stress, but it was spoken by European mouths. Two Sephardi sounds did not survive the move: the throaty ayin and the throaty chet. Most Israelis today say ayin as a silent letter and chet like the kh in khaf, and they say resh at the back of the throat, where Sephardim roll it at the front. That is why this app has three settings and not two: Modern Israeli is the Sephardi system without the throat sounds.",
+      "What this means for you: if you will read in a Reform or Conservative synagogue in North America, the Israeli-style sounds are what you will hear most, with a few Ashkenazi words kept by habit. If your community is Sephardi or Mizrahi, add the throat sounds for ayin and chet and roll the r. If it is Orthodox Ashkenazi, expect Shabbos, Borukh and oy-sounds. None of these is wrong; each is a community's way of reading the same letters."
+    ],
+    "note": "Written for ALEF from the sources listed; no sentence was copied. History simplified for beginners; the full account is Harshav, chapter 27."
   }
 }

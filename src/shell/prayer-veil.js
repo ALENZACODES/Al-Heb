@@ -17,7 +17,7 @@ export const MODEH_ANI = Object.freeze({
 });
 const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';
-/** Count of opening prayers actually heard: the Awards engine reads this. */
+/** Count of opening-prayer clips completed on this device, not proof of audible sound. */
 export const LISTEN_COUNT_KEY = 'alef:opening-prayer:listens:v1';
 /** How often the veil shows. OWNER RULING (Nov 7 2026): 'every-visit' — the
  *  usability review's once-per-learner-ever was put to the owner and declined.
@@ -165,6 +165,15 @@ function initPrayerVeil() {
     if (audioNote) audioNote.hidden = true;
     if (audioPrompt) audioPrompt.hidden = true;
   }
+  // A resolved play() promise only means playback began. The completion
+  // credit is given by the media element's ended event, never by play().
+  function creditCompletedPlayback() {
+    if (closed || counted) return;
+    counted = true;
+    const n = Number.parseInt(readLocal(LISTEN_COUNT_KEY), 10);
+    const previous = Number.isSafeInteger(n) && n > 0 ? n : 0;
+    writeLocal(LISTEN_COUNT_KEY, String(previous + 1));
+  }
   /** Start (or resume) the chosen clip. `auto` is the attempt made as the prayer renders, before any gesture:
    *  a NotAllowedError there is the browser's autoplay policy, so the veil asks for a tap instead of giving up. */
   function startPlayback({ auto = false } = {}) {
@@ -173,15 +182,23 @@ function initPrayerVeil() {
     try {
       if (!audio) audio = new Audio();
       if (audio.getAttribute('src') !== audioPath) audio.src = audioPath;
-      audio.onended = () => { setAudioState('idle'); releaseAfter(1000); };
+      let thisAttemptStarted = false;
+      let thisAttemptEnded = false;
+      audio.onended = () => {
+        if (closed || thisAttemptEnded || !thisAttemptStarted) return;
+        thisAttemptEnded = true;
+        creditCompletedPlayback();
+        setAudioState('idle');
+        releaseAfter(1000);
+      };
       audio.onerror = () => { hideAudioControls(); setAudioState('idle'); releaseAfter(800); };
       const p = audio.play();
       const started = () => {
-        // Playback started: the learner heard this prayer. (A failed play
-        // never counts — the catch below leaves the count alone.) A pause and
-        // resume of the same prayer is still one listen.
+        // A started clip may be skipped, paused or muted. Only a completed
+        // media event can earn credit, and the browser cannot prove audibility.
+        if (closed || thisAttemptEnded) return;
+        thisAttemptStarted = true;
         setAudioState('playing');
-        if (!counted) { counted = true; try { writeLocal(LISTEN_COUNT_KEY, String((parseInt(readLocal(LISTEN_COUNT_KEY), 10) || 0) + 1)); } catch { /* private mode */ } }
       };
       const failed = (err) => {
         if (closed) return;

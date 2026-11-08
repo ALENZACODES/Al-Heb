@@ -153,8 +153,8 @@ export const MILESTONE_BADGES = Object.freeze([
     category: 'milestones',
     section: 'mastery',
     name: 'Prayer Voice',
-    requirement: 'The opening prayer on the home screen was played and heard 10 times on this device. Only a play that actually starts is counted; a failed play never counts.',
-    lockedText: 'Locked. Use Listen on the opening prayer and hear 10 prayers.',
+    requirement: 'The opening prayer clip finished playing 10 times on this device. A start, failed play or early skip does not count; completion cannot prove that sound was audible.',
+    lockedText: 'Locked. Let 10 opening prayer clips play through.',
   },
   {
     id: 'cantorial-fan',

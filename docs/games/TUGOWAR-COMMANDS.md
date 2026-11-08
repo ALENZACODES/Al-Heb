@@ -9,7 +9,7 @@ A learner can start anywhere: type a round number and press Go, tap a level butt
 | `tools/games/tugowar-bank.psv` | The 300 pairs. Edit this one (Hebrew, transliteration, English, picture scene). |
 | `tools/games/build-tugowar.mjs` | Run after editing the bank. Writes the three files below. `--check` fails if they are out of date. |
 | `src/games/tugowar.bank.js` | Generated bank the game reads. |
-| `docs/games/tugowar-images.csv` | Every picture still to make: exact path and scene (201 rows). |
+| `docs/games/tugowar-images.csv` | Pair-picture filenames and original scenes (201 completed pictures). |
 | `docs/games/tugowar-image-batches.md` | The same 201 pictures as 21 ready-to-paste batches of ten. |
 
 ## Where the pictures go
@@ -18,7 +18,7 @@ A learner can start anywhere: type a round number and press Go, tap a level butt
 | --- | --- | --- |
 | Pair picture | `assets/games/tugowar/pairs/TUG_<key>.png` (201 files) | PNG, 1024 x 1024, no text, metadata stripped |
 
-24 pairs already use the approved Opposites pictures (packs I and II and the gap fills), and the gendered and plural forms reuse their base pair's picture, so only 201 new pictures are needed. A round whose picture is not pushed yet plays as text only. Nothing needs registering: the game looks for the file by path and shows it when it exists.
+All 201 new pair pictures are present in the repo. Another 24 pairs use the approved Opposites pictures (packs I and II and the gap fills), and the gendered and plural forms reuse their base pair's picture. Nothing needs registering: the game loads each picture by its path. The prompts below are retained as an art reference.
 
 ## Master command: pictures
 

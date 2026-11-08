@@ -31,6 +31,16 @@ SOUND_TEXT = {'alef': 'אַ', 'bet': 'בַּ', 'vet': 'בַ', 'gimel': 'גַּ',
               'sin': 'שַׂ', 'tav': 'תַּ'}
 
 
+def index_row(path):
+    """Any clip listed in audio/INDEX.csv (letters were not in the scan report)."""
+    import csv
+    with open(os.path.join(ROOT, 'audio', 'INDEX.csv'), encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            if r['file'] == path:
+                return {'pointed_hebrew': r['pointed_hebrew'], 'file': path, 'same_audio_paths': path}
+    return None
+
+
 def sound_row(path):
     m = re.search(r'/letter/([a-z]+)-sound\.mp3$', path)
     if m and m.group(1) in SOUND_TEXT:
@@ -70,7 +80,7 @@ def main():
     rows = rows_by_file()
     plan = []
     for ln, path in todo:
-        r = rows.get(path) or sound_row(path)
+        r = rows.get(path) or sound_row(path) or index_row(path)
         if not r:
             print('not in asr-check.csv, skipped:', path)
             continue

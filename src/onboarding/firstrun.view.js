@@ -8,7 +8,6 @@
  * ctx used: settings.get/set(patch), store.get/set, route, t, hasRoute. Test extras: ctx.onboardingData {plans, lessons}, ctx.clock.now.
  */
 import { h, heSpan } from '../shell/ui.js';
-import { showcaseNode } from '../shell/showcase.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
   GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
@@ -29,7 +28,7 @@ export function mount(root, ctx) {
   const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to ALEF'), ' ', heSpan('אלף'));
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
-  root.replaceChildren(showcaseNode(ctx), h('article', { class: 'card onboarding' }, h1, body, status));
+  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, body, status));
   const say = (m) => { status.textContent = m; };
   const focus = (n) => { try { n?.focus?.({ preventScroll: true }); } catch { try { n?.focus?.(); } catch { /* ignore */ } } };
   const save = () => { try { store.set(STORE_KEY, rec); } catch { /* best effort */ } };
@@ -63,11 +62,22 @@ export function mount(root, ctx) {
     let picked = null;
     const prevGoal = settings.get('goal') || null;
     let goal = GOAL_CHOICES.some((g) => g.id === prevGoal) ? prevGoal : 'read'; // preselected: the current setting (default read), so a learner who skips it gets the old flow
-    const goalFs = fieldset(GOAL_QUESTION, null, ...GOAL_CHOICES.map((g) => radio('goal', g.id, g.label, '', goal === g.id, (v) => { goal = v; })));
-    const fs = fieldset(LETTERS_QUESTION, rec ? 'This replaces your saved starting point.' : null, // no intro line on first run: it kept Continue below the tab bar
-      ...LETTER_ANSWERS.map((a) => radio('letters', a.id, a.label, a.desc, false, (v) => { picked = v; })));
-    const form = h('form', { id: 'ob-form-letters', onsubmit: (e) => { e.preventDefault(); submit(); } }, goalFs, fs,
-      h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-letters-continue' }, 'Continue'),
+    const next = h('p', { class: 'muted', id: 'ob-next-step', 'aria-live': 'polite' }, 'Choose the description that feels closest. You can change your starting point later.');
+    const explainNext = () => {
+      if (!picked) return;
+      next.textContent = picked === 'none' ? 'Your starting activity: first letters and sounds. No placement check needed.'
+        : goal === 'israel' ? 'Your plan starts with everyday words and phrases. You can also review reading skills through the reading check.'
+        : 'Your starting activity: a short reading check to suggest where to begin. It is a guide, not an exam; you can choose an earlier lesson.';
+    };
+    const goalFs = fieldset(GOAL_QUESTION, 'This is your goal, not your level. You can choose any goal as a beginner.', ...GOAL_CHOICES.map((g) => radio('goal', g.id, g.label, g.desc, goal === g.id, (v) => { goal = v; explainNext(); })));
+    const fs = fieldset(LETTERS_QUESTION, 'Choose one. Vowel marks are the small dots and lines that help you pronounce Hebrew.' + (rec ? ' This replaces your saved starting point.' : ''),
+      ...LETTER_ANSWERS.map((a) => radio('letters', a.id, a.label, a.desc, false, (v) => {
+        picked = v;
+        explainNext();
+      })));
+    const form = h('form', { id: 'ob-form-letters', onsubmit: (e) => { e.preventDefault(); submit(); } }, fs,
+      h('p', { class: 'muted' }, 'Not sure? Choose “Starting from zero” for a gentle introduction.'), goalFs, next,
+      h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-letters-continue' }, 'Continue to my learning plan'),
         rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null));
     const submit = () => {
       if (!picked) { say('Choose one answer to continue.'); focus(form.querySelector('#ob-letters-none')); return; }
@@ -80,7 +90,7 @@ export function mount(root, ctx) {
       say(`Saved. Your starting point is ${answerById(picked).start === '/placement' ? 'the placement check' : 'your first 10 minutes'}.${israelNow ? ' Israeli pronunciation is set; change it in Settings.' : ''}`);
       go(israelNow ? 'plan' : 'congregation');
     };
-    body.replaceChildren(form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+    body.replaceChildren(h('p', {}, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form, h('p', { class: 'muted' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
   }
 
   // ---- Stage 2 ----
@@ -137,7 +147,7 @@ export function mount(root, ctx) {
     const placement = store.get(PLACEMENT_KEY);
     let completed = []; try { completed = Object.keys(store.get(PROGRESS_KEY)?.completed || {}); } catch { /* none */ }
     const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed, goal: settings.get('goal') }) : null;
-    const placed = plan && (plan.source === 'placement' || settings.get('goal') === 'israel') ? plan.startLesson : null;
+    const placed = rec.letters !== 'none' && plan && (plan.source === 'placement' || settings.get('goal') === 'israel') ? plan.startLesson : null;
     const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
     const placedTitle = placed ? D?.lessons?.find((l) => l.id === placed)?.title : null;
     const primaryLabel = placed ? (placedTitle ? `Start: ${placedTitle}` : `Start lesson ${placed}`) : `Start: ${startTitle()}`;

@@ -13,10 +13,10 @@ const lessonIds = new Set(D.lessons.map((l) => l.id));
 const routeOf = (href) => matchRoute(href).route;
 
 // ---------- Stage 1 model ----------
-test('stage 1: three answers map to the agreed routes and are stored under onboarding.v1', () => {
+test('stage 1: five reading levels map to the agreed routes and are stored under onboarding.v1', () => {
   assert.equal(M.STORE_KEY, 'onboarding.v1');
   assert.deepEqual(M.LETTER_ANSWERS.map((a) => [a.label, a.start]), [
-    ['No, start from the beginning', '/firstday'], ['Some', '/placement'], ['Yes, I can read with vowel marks', '/placement']]);
+    ['Starting from zero — I do not know the letters', '/firstday'], ['I recognize some letters', '/placement'], ['I know the letters, but cannot read words yet', '/placement'], ['I can read simple words with vowel marks', '/placement'], ['I can read words and sentences comfortably', '/placement']]);
   for (const a of M.LETTER_ANSWERS) assert.equal(routeOf('#' + a.start)?.name, a.start.slice(1));
   const r = M.answerLetters(null, 'none', '2026-11-04T00:00:00.000Z');
   assert.equal(r.v, 1); assert.equal(r.letters, 'none'); assert.equal(r.start, '/firstday'); assert.equal(r.step, 'congregation');
@@ -115,18 +115,18 @@ const ready = (root) => waitFor(() => !/Loading/.test(root.textContent) && (root
 const submit = (root, formId) => root.querySelector('#' + formId).fire('submit');
 const statusText = (root) => root.querySelector('#ob-status').textContent;
 
-test('view, first run: the letters question with three labelled radios; Continue without an answer saves nothing', async () => {
+test('view, first run: the letters question with five labelled radios; Continue without an answer saves nothing', async () => {
   const { root, store, settings, ctx } = mk();
   mount(root, ctx); await ready(root);
   assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף'); // t() returned the key, so the English fallback is used
-  assert.match(root.textContent, /Can you already read the Hebrew letters\?/);
+  assert.match(root.textContent, /How much Hebrew can you read today\?/);
   const rs = radios(root, 'letters');
-  assert.deepEqual(rs.map((r) => r.attrs.value), ['none', 'some', 'vowels']);
+  assert.deepEqual(rs.map((r) => r.attrs.value), ['none', 'some', 'letters', 'vowels', 'sentences']);
   for (const r of rs) { const l = labelFor(root, r.attrs.id); assert.ok(l, r.attrs.id); assert.ok(l.textContent.length > 3); }
   const labels = rs.map((r) => labelFor(root, r.attrs.id).textContent);
-  assert.ok(labels[0].startsWith('No, start from the beginning') && labels[1].startsWith('Some') && labels[2].startsWith('Yes, I can read with vowel marks'), labels.join(' | '));
-  assert.equal(root.queryAll('fieldset legend').length, 2, 'goal question then letters question');
-  assert.match(root.textContent, /What do you want to do first\?/);
+  assert.ok(labels.every((label, i) => label.startsWith(M.LETTER_ANSWERS[i].label)));
+  assert.equal(root.queryAll('fieldset legend').length, 2, 'reading level then learning goal');
+  assert.match(root.textContent, /What would you like to use Hebrew for\?/);
   assert.deepEqual(radios(root, 'goal').map((r) => r.attrs.value), ['read', 'israel', 'both']);
   assert.ok(radios(root, 'goal')[0].attrs.checked !== undefined && radios(root, 'goal')[0].attrs.checked !== null, 'the current goal (read by default) is preselected');
   await submit(root, 'ob-form-letters');
@@ -146,7 +146,7 @@ test('view: "No" stores onboarding.v1 with start /firstday, marks onboarded, and
   assert.match(root.querySelector('#ob-skip-now').attrs.href, /^#\/firstday$/);
 });
 test('view: "Some" and "Yes, I can read with vowel marks" both lead to #/placement', async () => {
-  for (const v of ['some', 'vowels']) {
+  for (const v of ['some', 'letters', 'vowels', 'sentences']) {
     const { root, store, ctx } = mk();
     mount(root, ctx); await ready(root);
     await check(root, 'letters', v); await submit(root, 'ob-form-letters');
@@ -252,7 +252,7 @@ test('view, plan: a locked placement result starts the week and the Start button
 });
 
 test('buildPlan: Israel goal plans israel-track lessons, no letters start, no read extras', () => {
-  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
+  const p = M.buildPlan({ record: rec('vowels'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
   const first = D.lessons.find((l) => l.track === 'israel');
   assert.equal(p.startLesson, first.id);
   assert.ok(p.days[0].items.every((i) => i.kind === 'lesson'));
@@ -260,12 +260,12 @@ test('buildPlan: Israel goal plans israel-track lessons, no letters start, no re
 });
 
 test('plan copy: the default note names the first lesson (not an id), and the goal line says goal vs lesson minutes', () => {
-  const p = M.buildPlan({ record: rec('none'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
+  const p = M.buildPlan({ record: rec('vowels'), lessons: D.lessons, plans: D.plans, goal: 'israel' });
   const first = D.lessons.find((l) => l.id === p.startLesson);
   assert.ok(p.note.includes(`"${first.title}"`), p.note); assert.doesNotMatch(p.note, /\b(il|r)\d\d\b/);
 });
 test('view, plan: an Israel goal starts with the lesson title, says so under "Starting point", and offers to change the goal', async () => {
-  const { root, ctx } = mk({ [M.STORE_KEY]: rec('none', 10) }, { goal: 'israel' });
+  const { root, ctx } = mk({ [M.STORE_KEY]: rec('vowels', 10) }, { goal: 'israel' });
   mount(root, ctx); await ready(root);
   const first = D.lessons.find((l) => l.track === 'israel');
   assert.equal(root.querySelector('#ob-start').textContent, `Start: ${first.title}`);
@@ -312,4 +312,35 @@ test('view, stage 2: the sound line follows the picked pronunciation, and "Start
   assert.equal(settings.get('audioFree'), true);
   assert.match(statusText(root), /Sound is off/);
   assert.equal(note().getAttribute('data-audio-support'), 'off');
+});
+
+test('new reading levels survive storage and include the reading check in their plans', () => {
+  for (const level of ['letters', 'sentences']) {
+    const saved = M.answerLetters(null, level, 'now');
+    assert.equal(M.normalize(saved).letters, level);
+    const plan = M.buildPlan({record: saved, lessons: D.lessons, plans: D.plans});
+    assert.equal(plan.days[0].items[0].href, '#/placement');
+  }
+});
+
+test('starting from zero always offers first letters, even with a speaking goal or an old placement result', async () => {
+  for (const goal of ['read', 'israel', 'both']) {
+    const saved = rec('none', 10);
+    const p = M.buildPlan({record: saved, lessons: D.lessons, plans: D.plans, goal, placement: placement('r07')});
+    assert.equal(p.days[0].items[0].href, '#/firstday');
+    const {root, ctx} = mk({[M.STORE_KEY]: saved, [M.PLACEMENT_KEY]: placement('r07')}, {goal});
+    mount(root,ctx); await ready(root);
+    assert.equal(root.querySelector('#ob-start').attrs.href, '#/firstday');
+  }
+});
+
+test('first step puts ability before purpose and explains the selected next activity', async () => {
+  const {root, ctx} = mk(); mount(root,ctx); await ready(root);
+  assert.equal(root.queryAll('fieldset legend')[0].textContent, M.LETTERS_QUESTION);
+  await check(root, 'letters', 'none');
+  assert.match(root.querySelector('#ob-next-step').textContent, /No placement check needed/);
+  await check(root, 'letters', 'letters');
+  assert.match(root.querySelector('#ob-next-step').textContent, /short reading check/);
+  await check(root, 'goal', 'israel');
+  assert.match(root.querySelector('#ob-next-step').textContent, /everyday words and phrases/);
 });

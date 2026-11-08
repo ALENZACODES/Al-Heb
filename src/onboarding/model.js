@@ -10,18 +10,20 @@ export const STORE_KEY = 'onboarding.v1';
 export const PLACEMENT_KEY = 'placement.v1'; // written by src/placement (read here, never written)
 
 /** First setup question: the goal decides the defaults (Israel -> Israeli pronunciation, no Sephardi/Ashkenazi question). Values are the existing `goal` setting. */
-export const GOAL_QUESTION = 'What do you want to do first?';
+export const GOAL_QUESTION = '2. What would you like to use Hebrew for?';
 export const GOAL_CHOICES = Object.freeze([
-  { id: 'read',   label: 'Read prayers or Torah' },
-  { id: 'israel', label: 'Speak in Israel' },
-  { id: 'both',   label: 'Both, or not sure' },
+  { id: 'read',   label: 'Prayers and Torah study', desc: 'Build toward reading prayer lines and studying Torah with support. Beginners are welcome.' },
+  { id: 'israel', label: 'Everyday Hebrew and conversation', desc: 'Learn useful words and phrases for daily life and speaking in Israel.' },
+  { id: 'both',   label: 'Explore both', desc: 'Begin with reading foundations and add everyday Hebrew along the way.' },
 ]);
-export const LETTERS_QUESTION = 'Can you already read the Hebrew letters?';
+export const LETTERS_QUESTION = '1. How much Hebrew can you read today?';
 /** Stage 1 answers. `start` is the route each answer leads to. */
 export const LETTER_ANSWERS = Object.freeze([
-  { id: 'none',   label: 'No, start from the beginning', start: '/firstday',  desc: 'Your first 10 minutes, one letter at a time.' },
-  { id: 'some',   label: 'Some',                         start: '/placement', desc: '' },
-  { id: 'vowels', label: 'Yes, I can read with vowel marks',      start: '/placement', desc: 'The draft placement check suggests a starting lesson. You can choose an earlier lesson.' },
+  { id: 'none', label: 'Starting from zero — I do not know the letters', start: '/firstday', desc: 'Meet your first letters and their sounds. No Hebrew knowledge needed.' },
+  { id: 'some', label: 'I recognize some letters', start: '/placement', desc: 'I still need help recognizing the alphabet and remembering its sounds.' },
+  { id: 'letters', label: 'I know the letters, but cannot read words yet', start: '/placement', desc: 'I want to combine letter sounds and vowel marks to sound out words.' },
+  { id: 'vowels', label: 'I can read simple words with vowel marks', start: '/placement', desc: 'I want to build vocabulary and move on to longer words and short sentences.' },
+  { id: 'sentences', label: 'I can read words and sentences comfortably', start: '/placement', desc: 'I want to understand more of what I read and work toward longer passages.' },
 ]);
 export const STEPS = Object.freeze(['letters', 'congregation', 'minutes', 'plan']);
 
@@ -95,7 +97,7 @@ export function buildPlan(o) {
   const israel = o.goal === 'israel';
   const read = o.lessons.filter((l) => l.track === (israel ? 'israel' : 'read'));
   const order = new Map(read.map((l, i) => [l.id, i]));
-  const wanted = israel ? null : placementLesson(o.placement, read);
+  const wanted = israel || rec.letters === 'none' ? null : placementLesson(o.placement, read);
   // Lessons unlock in order and placement completes none, so the plan starts at the recommended lesson only if it is open now.
   const open = wanted ? openStart(o.lessons, o.completed || [], wanted) : null;
   const placed = open ? open.id : null;
@@ -105,7 +107,7 @@ export function buildPlan(o) {
   // recommends now and each later day is what it recommends after the lessons before it are done. Rebuilt from progress on every view.
   const parts = lessonQueue({ lessons: o.lessons, completed: o.completed || [], goal: israel ? 'israel' : o.goal, first: (o.completed || []).length ? null : placed, limit: 14 })
     .map((l) => ({ kind: 'lesson', lesson: l.id, title: l.title, part: 1, parts: 1, minutes: Number(l.estMinutes) || minutes, route: 'learn', href: '#/learn?lesson=' + encodeURIComponent(l.id) }));
-  const startDef = israel ? null : plans.starts[rec.letters];
+  const startDef = israel && rec.letters !== 'none' ? null : plans.starts[rec.letters];
   const needsPlacement = !israel && rec.start === '/placement' && !placed;
   const extras = israel ? [] : plans.extras.filter((e) => has(e.route) && order.has(e.minLesson));
   const used = new Map();

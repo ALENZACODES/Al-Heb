@@ -8,8 +8,10 @@
   "lessonSplitMaxParts": 4,
   "starts": {
     "none":   { "route": "firstday",  "href": "#/firstday",  "title": "Your first 10 minutes", "minutes": 10, "why": "Five letters, two vowels, three real words. Nothing is assumed." },
-    "some":   { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "Up to 20 short questions pick a starting lesson so you skip what you already know." },
-    "vowels": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "Up to 20 short questions pick a starting lesson so you skip what you already know." }
+    "some":   { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "letters": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "sentences": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "vowels": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." }
   },
   "extras": [
     { "id": "letters",   "route": "letters",   "href": "#/letters",       "title": "Trace letters",             "minutes": 5,  "minLesson": "r01" },

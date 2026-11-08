@@ -76,3 +76,17 @@ body:has(.card.onboarding) {
 .card.onboarding .draft-flag {
   color: #d8e2c4;
 }
+
+/* Keep the first decision visible instead of placing it below a decorative banner. */
+.card.onboarding:has(#ob-form-letters)::before { display: none; }
+#ob-form-letters .opt {
+  padding: .75rem;
+  margin-block: .5rem;
+  border: 1px solid rgba(217, 164, 65, .45);
+  border-radius: .6rem;
+  gap: .65rem;
+  cursor: pointer;
+}
+#ob-form-letters .opt:focus-within { outline: 2px solid #e8c97a; outline-offset: 2px; }
+#ob-form-letters .field + .field { margin-top: 1.5rem; }
+#ob-next-step { padding: .75rem; border-inline-start: 3px solid #d9a441; }

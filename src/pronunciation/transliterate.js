@@ -37,6 +37,7 @@
 import { parseWord, MARK, stripTaamim } from './hebrew.js';
 import { classifyShvas } from './shva.js';
 import { kamatzKatanStemStart } from './kamatz-katan.js';
+import { speechText } from '../shell/names.js';
 
 /** @typedef {import('./hebrew.js').Cluster} Cluster */
 
@@ -259,7 +260,9 @@ export function transliterate(text, opts = {}) {
     out += t;
     word = '';
   };
-  for (const ch of text) {
+  // Match the spoken-name convention used by the audio pipeline, including attached
+  // prefixes. The source spelling stays untouched; only this reading aid is changed.
+  for (const ch of speechText(text)) {
     if (ch === MARK.MAQAF) { flush(); out += '-'; }
     else if (ch === MARK.PASEQ || ch === MARK.SOF_PASUQ) { flush(); }
     else if (ch >= '֐' && ch <= '׿') word += ch;

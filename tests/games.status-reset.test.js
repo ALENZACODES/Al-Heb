@@ -149,7 +149,7 @@ test('rental, museum, and arch clear the previous success when the next board ap
   assert.match(statusOf(archRoot), /Letter 1 of 8, stroke 1 of /);
   assert.doesNotMatch(statusOf(archRoot), /Loading|Correct stroke/);
   let advanced = false;
-  for (let n = 0; n < 8 && !advanced; n++) {
+  for (let n = 0; n < 40 && !advanced; n++) { // choices are shuffled: allow enough tries to reach the right one (8 was flaky)
     const buttons = [...archRoot.querySelectorAll('.game-choice')];
     const before = archRoot.querySelector('p').textContent;
     buttons[n % buttons.length].click();

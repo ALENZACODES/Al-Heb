@@ -103,14 +103,16 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   await page.goto(base + '#/learn?lesson=r01'); await page.locator('main').getByRole('heading', { name: 'Words', exact: true }).waitFor();
   const listen = page.getByRole('button', { name: 'Listen to Shin', exact: true });
   // wait until the sound state is drawn (slow runners load the audio manifest late): either the Listen button or the no-audio label
-  await page.waitForFunction(() => !!document.querySelector('button[aria-label="Listen to Shin"], main .audio-none'), null, { timeout: 15000 }).catch(() => {});
+  await page.waitForFunction(() => !!document.querySelector('button[aria-label="Listen to Shin"], main .audio-none'), null, { timeout: 30000 }).catch(() => {});
   if (await listen.count()) {
     await listen.click();
     await page.waitForTimeout(300);
     const sound = await page.locator('#sound-status').innerText();
     check('sound indicator states the real source after Listen', /browser|device voice|No sound|recorded|(Israeli|Sephardi|Ashkenazi|English) voice/i.test(sound) && !/checking/i.test(sound), sound);
   } else {
-    check('unavailable congregation recording is labelled honestly', await page.locator('main .audio-none').first().isVisible() && /No audio yet/.test(await page.locator('main .audio-none').first().innerText()));
+    const none = page.locator('main .audio-none').first();
+    const noneOk = (await none.count()) > 0 && await none.isVisible() && /No audio yet/.test(await none.innerText());
+    check('unavailable congregation recording is labelled honestly', noneOk, noneOk ? '' : 'neither a Listen to Shin button nor a No audio yet label; Words section: ' + (await page.locator('main').innerText()).replace(/\s+/g, ' ').slice(0, 300));
   }
   // the quick check opens once the end of the lesson has been seen (U-13): scroll there first, then wait for it to enable
   // A quiet re-render (audio manifest landing) can redraw the lesson and re-lock the check, so keep scrolling until it opens.

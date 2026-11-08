@@ -347,6 +347,7 @@ const SVGNS = 'http://www.w3.org/2000/svg';
  *               svg }
  * opts: leniency, markStrokeCorrectAfterMisses, showHintAfterMisses, showOutline (default true),
  *       strokeAnimationSpeed (1), delayBetweenStrokes (ms, 500), onUserStroke(points) (every raw learner stroke), onStrokeResult, onMistake, onComplete,
+ *       onInputWhileDone() (the learner tried to draw on a finished letter; nothing is drawn, the view should point to "Start over"),
  *       document (inject for tests), strict (bool: apply MODES.strict)
  * @param {any} container
  * @param {any} letter record from letters.json
@@ -363,7 +364,7 @@ export function createTracer(container, letter, script, opts = {}) {
   for (const [k, fn] of [['strokeResult', options.onStrokeResult], ['mistake', options.onMistake], ['complete', options.onComplete]]) if (typeof fn === 'function') session.on(k, fn);
 
   /** @type {any} */ let svg = null, gGuide = null, gDone = null, gUser = null, gHint = null;
-  let destroyed = false, timers = [], rafId = 0, drawing = null;
+  let destroyed = false, timers = [], rafId = 0, drawing = null, animResolve = null;
 
   function el(name, attrs) {
     const e = doc.createElementNS(SVGNS, name);
@@ -390,6 +391,9 @@ export function createTracer(container, letter, script, opts = {}) {
     svg.addEventListener('pointermove', onMove);
     svg.addEventListener('pointerup', onUp);
     svg.addEventListener('pointercancel', onCancel);
+    svg.addEventListener('lostpointercapture', onCancel);
+    // Fallback when pointer capture is unsupported or refused: the release happens off the surface and only the document sees it.
+    if (doc.addEventListener) { doc.addEventListener('pointerup', onUp); doc.addEventListener('pointercancel', onCancel); }
   }
 
   function drawGuide() {
@@ -411,9 +415,23 @@ export function createTracer(container, letter, script, opts = {}) {
     const w = r.width || 1, h = r.height || 1;
     return /** @type {Pt} */ ([((ev.clientX - r.left) / w) * 1000, ((ev.clientY - r.top) / h) * 1000]);
   }
+  // Pointer state machine. Invariant: `drawing` is non-null only between a pointerdown and the matching pointerup /
+  // pointercancel / lostpointercapture of the SAME pointer; every other path drops back to the idle (drawable) state.
   function onDown(ev) {
-    if (destroyed || session.getState().done) return;
+    if (destroyed) return;
+    if (session.getState().done) { // finished letter: nothing is drawn; tell the view so it can say "Start over" instead of staying silent
+      if (typeof options.onInputWhileDone === 'function') { try { options.onInputWhileDone(); } catch (e) { /* observer must not break tracing */ } }
+      if (ev.preventDefault) ev.preventDefault();
+      return;
+    }
     if (ev.button !== undefined && ev.button > 0) return;
+    if (drawing) {
+      // same pointer again: its release was never seen (capture refused, window lost focus): drop the stale stroke and start afresh
+      if (ev.pointerId === drawing.id) discardStroke();
+      // another pointer (second finger, palm) while a stroke is in progress: the first pointer keeps the surface
+      else return;
+    }
+    if (ev.isPrimary === false) return; // a non-primary touch never starts a stroke
     try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* not supported */ }
     cancelAnimation();
     clear(gHint);
@@ -423,6 +441,8 @@ export function createTracer(container, letter, script, opts = {}) {
   }
   function onMove(ev) {
     if (!drawing || ev.pointerId !== drawing.id) return;
+    // the button is already up (release happened where no listener saw it): finish the stroke now instead of trailing the pointer
+    if (ev.buttons === 0) { finishStroke(); return; }
     const evs = typeof ev.getCoalescedEvents === 'function' ? ev.getCoalescedEvents() : null;
     for (const e of (evs && evs.length ? evs : [ev])) drawing.pts.push(toBox(e));
     updateUser();
@@ -430,11 +450,21 @@ export function createTracer(container, letter, script, opts = {}) {
   function updateUser() { if (drawing) drawing.path.setAttribute('d', 'M' + drawing.pts.map(p => p[0].toFixed(0) + ' ' + p[1].toFixed(0)).join('L')); }
   function onUp(ev) {
     if (!drawing || ev.pointerId !== drawing.id) return;
+    finishStroke();
+  }
+  /** Score the stroke in progress and return to idle. */
+  function finishStroke() {
     const pts = drawing.pts; const path = drawing.path; drawing = null;
     if (typeof options.onUserStroke === 'function') { try { options.onUserStroke(pts); } catch (e) { /* observer must not break tracing */ } }
     handleResult(session.submit(pts), path);
   }
-  function onCancel() { if (drawing) { clear(gUser); drawing = null; } }
+  /** Drop the stroke in progress without scoring it and return to idle. */
+  function discardStroke() { if (drawing) { if (drawing.path.parentNode) drawing.path.parentNode.removeChild(drawing.path); drawing = null; } }
+  function onCancel(ev) {
+    // only the active pointer may cancel the stroke; a second finger's cancel (or its lostpointercapture) leaves it alone
+    if (!drawing || (ev && ev.pointerId !== undefined && ev.pointerId !== drawing.id)) return;
+    discardStroke();
+  }
 
   function handleResult(res, userPath) {
     if (destroyed) return res;
@@ -455,7 +485,11 @@ export function createTracer(container, letter, script, opts = {}) {
   }
 
   function schedule(fn, ms) { const t = setTimeout(fn, ms); timers.push(t); return t; }
-  function cancelAnimation() { timers.forEach(clearTimeout); timers = []; if (rafId && typeof cancelAnimationFrame === 'function') cancelAnimationFrame(rafId); rafId = 0; }
+  function cancelAnimation() {
+    timers.forEach(clearTimeout); timers = []; if (rafId && typeof cancelAnimationFrame === 'function') cancelAnimationFrame(rafId); rafId = 0;
+    // an interrupted animate() must still settle, or the view waits forever for "Your turn."
+    if (animResolve) { const r = animResolve; animResolve = null; r(undefined); }
+  }
 
   /** Animate drawing one median progressively into `node`; calls done() when finished. */
   function animateMedian(node, median, color, done) {
@@ -489,9 +523,11 @@ export function createTracer(container, letter, script, opts = {}) {
 
   /** Play the whole letter's stroke order, one stroke after another. Resolves when finished. */
   function animate() {
-    return new Promise(resolve => {
-      if (!doc || destroyed) return resolve(undefined);
+    return new Promise(resolve0 => {
+      if (!doc || destroyed) return resolve0(undefined);
       cancelAnimation(); clear(gHint);
+      animResolve = resolve0;
+      const resolve = () => { if (animResolve === resolve0) animResolve = null; resolve0(undefined); };
       let i = 0;
       const next = () => {
         if (destroyed) return resolve(undefined);
@@ -507,15 +543,16 @@ export function createTracer(container, letter, script, opts = {}) {
   }
 
   function reset() {
-    cancelAnimation(); session.reset();
+    cancelAnimation(); discardStroke(); session.reset();
     if (gDone) { clear(gDone); clear(gHint); clear(gUser); drawGuide(); }
     if (svg) svg.setAttribute('data-progress', '0');
   }
   function destroy() {
-    destroyed = true; cancelAnimation();
+    destroyed = true; cancelAnimation(); drawing = null;
+    if (doc && doc.removeEventListener) { doc.removeEventListener('pointerup', onUp); doc.removeEventListener('pointercancel', onCancel); }
     if (svg) {
       svg.removeEventListener('pointerdown', onDown); svg.removeEventListener('pointermove', onMove);
-      svg.removeEventListener('pointerup', onUp); svg.removeEventListener('pointercancel', onCancel);
+      svg.removeEventListener('pointerup', onUp); svg.removeEventListener('pointercancel', onCancel); svg.removeEventListener('lostpointercapture', onCancel);
       if (svg.parentNode === container) container.removeChild(svg);
     }
   }
@@ -529,6 +566,8 @@ export function createTracer(container, letter, script, opts = {}) {
     destroy,
     /** programmatic stroke (tests, assistive input); updates the drawing like a real pointer stroke */
     submit(points) { return handleResult(session.submit(points), null); },
+    /** true while a pointer stroke is in progress (tests) */
+    get drawing() { return !!drawing; },
     on: session.on,
     set onStrokeResult(fn) { session.on('strokeResult', fn); },
     set onMistake(fn) { session.on('mistake', fn); },

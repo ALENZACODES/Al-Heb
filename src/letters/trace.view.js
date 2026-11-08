@@ -275,6 +275,7 @@ export function mount(root, ctx = {}) {
         showOutline: state.outline,
         onStrokeResult: r => { if (r.forced) assistedRun = true; /* the correct stroke was shown for you: not independent drawing */ fb.textContent = r.forced ? t('trace.shown', 'Here is the correct stroke.') : t('trace.good', 'Good!'); setProgress(); },
         onUserStroke: pts => { attempt.push(pts); if (attempt.length > 6) attempt.shift(); },
+        onInputWhileDone: () => { fb.textContent = t('trace.finishedTap', 'This letter is finished. Press Start over to trace it again.'); },
         onMistake: m => {
           fb.textContent = t(m.feedback.key, m.feedback.text);
           if (m.totalMistakes >= 2) { // fallback: does the overall shape look like this letter even though strokes are off?
@@ -285,7 +286,7 @@ export function mount(root, ctx = {}) {
           }
         },
         onComplete: c => {
-          fb.textContent = (assistedRun ? t('trace.walked', 'Walked through. ') : c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name;
+          fb.textContent = (assistedRun ? t('trace.walked', 'Walked through. ') : c.perfect ? t('trace.perfect', 'Perfect! ') : t('trace.done', 'Done. ')) + letter.name + ' ' + t('trace.againHint', 'Press Start over to trace it again.');
           try {
             attempt = [];
             if (assistedRun) { // walked through with the buttons: recorded apart from drawn completions
@@ -313,7 +314,7 @@ export function mount(root, ctx = {}) {
         assistedRun = true; // set first: submit() can complete the letter synchronously
         tracer.submit(block.strokes[s.index].median.map(p => [p[0], p[1]]));
       } }, t('trace.nextStroke', 'Next stroke')) : null,
-      h('button', { onclick: () => { attempt = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
+      h('button', { 'data-act': 'reset', onclick: () => { attempt = []; assistedRun = false; tracer.reset(); fb.textContent = t('trace.start', 'Press Animate to see the order, then trace it.'); setProgress(); } }, t('trace.reset', 'Start over'))));
     body.appendChild(progress); setProgress();
     body.appendChild(strokeWordsPanel(letter));
     { const svg = stage.querySelector && stage.querySelector('svg'); // the drawing is drag-on-canvas: point a screen reader to the text version

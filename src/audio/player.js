@@ -44,6 +44,15 @@ export function normalizeId(s) {
 const VOICES = ['m', 'f'];
 const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 /**
+ * Manifest `source` values of Sephardi/Ashkenazi clips made by the Israeli voices (tools/audio/render_tts.mjs --tradition, tools/audio/tempo_cap.mjs).
+ * Used by the render tooling to label rows. They do NOT change playback yet: both settings still play the Israeli clip (PLAYBACK_TRADITION below).
+ */
+export const ACCENT_SOURCES = Object.freeze({ israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped' });
+const ADMITTED_ACCENT = new Set(Object.values(ACCENT_SOURCES));
+export const isAccentSource = (source) => ADMITTED_ACCENT.has(String(source || ''));
+/** True for an own-tradition manifest row that is a human recording or an Israeli-voice accent clip. Not used by playback yet. */
+export const isAccentClip = (entry) => !!entry && entry.status !== 'missing' && entry.tradition !== 'israeli' && (entry.status === 'recorded' || isAccentSource(entry.source));
+/**
  * Which tradition's files each congregation setting plays. Owner decision (John Khan, 2026-11-07): the Sephardi setting plays
  * the Israeli clips (the he-IL voices Ari and Noa) for every kind — letters, vowels, syllables, words, lines, prayers — and
  * expresses the Sephardi tradition on screen, in the English-letter reading; the respelled audio/<voice>/sephardi/* clips are

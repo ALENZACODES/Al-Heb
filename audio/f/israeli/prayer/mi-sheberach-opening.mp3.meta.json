@@ -7,7 +7,7 @@
  "inputText": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
  "inputSha256": "f0c962418f980f67a39ef5e6d35be6628b3c24eda26732928c6dd7bc2be31ba7",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
  "inputTextKind": "hebrew"
 }

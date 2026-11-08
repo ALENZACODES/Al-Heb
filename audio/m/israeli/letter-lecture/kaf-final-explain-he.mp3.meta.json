@@ -7,7 +7,7 @@
  "inputText": "האות כַּף סוֹפִית. אותו צליל כמו כף, רק בסוף מילה. תסתכלו על הצורה: long-necked hook with a straight drop. שימו לב לא לבלבל עם ן · ר.",
  "inputSha256": "d783e2bb1e828cc7528a0489dafa572796513caf7dac616011989fa8b1e83ae0",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

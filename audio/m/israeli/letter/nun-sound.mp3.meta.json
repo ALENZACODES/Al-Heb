@@ -6,7 +6,7 @@
  "tradition": "israeli",
  "inputText": "נַ",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Letter sound replaced 2026-11-08 by the nun-a syllable (נַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/m/israeli/syllable/nun-a.mp3; heard back as the syllable by tools/audio/asr-check.",
  "inputTextKind": "hebrew"
 }

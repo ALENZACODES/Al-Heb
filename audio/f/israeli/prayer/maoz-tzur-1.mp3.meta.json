@@ -7,7 +7,7 @@
  "inputText": "מָעוֹז צוּר יְשׁוּעָתִי לְךָ נָאֶה לְשַׁבֵּחַ תִּכּוֹן בֵּית תְּפִלָּתִי וְשָׁם תּוֹדָה נְזַבֵּחַ לְעֵת תָּכִין מַטְבֵּחַ מִצָּר הַמְנַבֵּחַ אָז אֶגְמוֹר בְּשִׁיר מִזְמוֹר חֲנֻכַּת הַמִּזְבֵּחַ׃",
  "inputSha256": "19bc1034104d848040c9ba062055f277e446a6aceb5e5000d289799a7f8ed9e6",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
  "inputTextKind": "hebrew"
 }

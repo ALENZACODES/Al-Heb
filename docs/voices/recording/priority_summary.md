@@ -10,13 +10,13 @@ Counts are required clips only (optional whole-prayer reads and aliases excluded
 
 | tradition | voice | P1 letters+finals | P2 vowels+syllables | P3 core prayers | P4 words | priority total | est. donor hours (priority) | all required clips | est. donor hours (all) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4286 | 23.8 to 35.7 |
-| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4286 | 23.8 to 35.7 |
+| israeli | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4394 | 24.4 to 36.6 |
+| israeli | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 4394 | 24.4 to 36.6 |
 | ashkenazi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | ashkenazi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | sephardi | f | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
 | sephardi | m | 27 | 125 | 41 | 500 | 693 | 3.9 to 5.8 | 3485 | 19.4 to 29.0 |
-| **all** | | | | | | **4158** | **23.1 to 34.6** | **22512** | **125.1 to 187.6** |
+| **all** | | | | | | **4158** | **23.1 to 34.6** | **22728** | **126.3 to 189.4** |
 
 ## Notes and honest caveats
 

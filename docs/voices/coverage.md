@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Synthetic voice (Israeli only), not a recorded teacher"; missing = "No audio yet".
 
-**Overall: 19313 of 22728 required clips exist (85.0%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19313; No audio yet: 3415.**
+**Overall: 21126 of 22728 required clips exist (93.0%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19313; No audio yet: 1602.**
 
 ## By talent and group
 
@@ -108,45 +108,45 @@ Required 4394; have 4390; missing 4.
 
 ### Sephardi-values reader (woman), pending decision  (voice=f, tradition=sephardi)
 
-Required 3485; have 2886; missing 599.
+Required 3485; have 3485; missing 0.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 0 | 5 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
+| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
 | lesson-word | 416 | 0 | 416 | 0 | 0 | 0/0 | human only |
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
 | prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 18/18 | human only |
-| vocab-word | 1000 | 0 | 618 | 0 | 382 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human only |
+| vocab-word | 1000 | 0 | 618 | 382 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 35 | 0 | 0 | 0 | 35 | 0/0 | human only |
+| vocab-extra | 35 | 0 | 0 | 35 | 0 | 0/0 | human only |
 
 ### Sephardi-values reader (man), pending decision  (voice=m, tradition=sephardi)
 
-Required 3485; have 2268; missing 1217.
+Required 3485; have 3482; missing 3.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
-| letter | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-final | 5 | 0 | 0 | 0 | 5 | 0/0 | human only |
-| letter-variant | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| letter-sound | 22 | 0 | 0 | 0 | 22 | 0/0 | human only |
-| letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
-| niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
-| syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
+| letter | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-final | 5 | 0 | 0 | 5 | 0 | 0/0 | human only |
+| letter-variant | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| letter-sound | 22 | 0 | 0 | 22 | 0 | 0/0 | human only |
+| letter-variant-sound | 4 | 0 | 0 | 4 | 0 | 0/0 | human only |
+| niqqud | 15 | 0 | 0 | 15 | 0 | 0/0 | human only |
+| syllable | 110 | 0 | 0 | 110 | 0 | 0/0 | human only |
 | lesson-word | 416 | 0 | 416 | 0 | 0 | 0/0 | human only |
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
 | prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
-| prayer-whole | 0 | 0 | 0 | 0 | 0 | 18/18 | human only |
-| vocab-word | 1000 | 0 | 0 | 0 | 1000 | 0/0 | human only |
+| prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human only |
+| vocab-word | 1000 | 0 | 0 | 997 | 3 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
-| vocab-extra | 35 | 0 | 0 | 0 | 35 | 0/0 | human only |
+| vocab-extra | 35 | 0 | 0 | 35 | 0 | 0/0 | human only |
 
 ## Notes
 

@@ -24,7 +24,10 @@
 .book-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); background: transparent; padding: 0; cursor: pointer; }
 .book-dot.on { background: var(--accent); }
 
-/* Books whose pictures are not made yet: a gold "Coming soon" ribbon on the cover and the reader's picture space */
-.book-cover-soon { position: relative; }
-.book-soon { display: inline-block; padding: .25rem .75rem; border-radius: 999px; background: #c9a227; color: #0f2a1d; font-weight: 700; font-size: .9rem; letter-spacing: .02em; }
-.book-cover-soon .book-soon { position: absolute; top: .6rem; right: .6rem; }
+/* Books whose artwork is not made yet: a gold banner straight across the front of the cover and of the reader's picture space */
+.book-cover-soon, .book-page-pending { position: relative; overflow: hidden; }
+.book-cover-soon .book-cover-title { opacity: .55; }
+.book-soon-banner { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%) rotate(-8deg) scaleX(1.15);
+  background: #c9a227; color: #0f2a1d; text-align: center; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+  font-size: .85rem; white-space: nowrap; padding: .45rem .5rem; box-shadow: 0 2px 6px rgba(0,0,0,.18); border-block: 2px solid #0f2a1d; }
+.book-page-pending .book-soon-banner { font-size: 1.4rem; padding: .8rem 1rem; }

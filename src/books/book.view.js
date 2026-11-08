@@ -69,7 +69,7 @@ export async function mount(root, ctx) {
     stage.replaceChildren();
     dots.replaceChildren();
     const pending = () => h("div", { class: "book-page-img book-page-pending" },
-      h("span", { class: "book-soon" }, "Coming soon"), h("span", { class: "muted" }, "The pictures for this book are on their way."));
+      h("span", { class: "book-soon-banner" }, "Artwork coming soon"));
     if (p.hasImg) {
       // hasImg comes from the build; if the file is still missing on the host, swap the broken picture for the notice.
       const img = h("img", { class: "book-page-img", src: p.img, alt: p.illustration || "" });

@@ -10,6 +10,10 @@
 export const NAME_SKELETON = 'יהוה';
 /** The conventional spoken substitute, pointed (the same form the audio manifest and the Torah reader use). */
 export const SPOKEN_NAME = 'אֲדֹנָי';
+/** Elohim qere: the hiriq on the name's vav distinguishes this from the usual Adonai reading.
+ * Genesis 15:2 translator note: https://classic.net.bible.org/passage.php?passage=Gen+15%3A2&theme=wiki
+ * This checks the name's final vav-he, not a vowel on an attached prefix. */
+export const spokenNameFor = (word) => /ו[\u0591-\u05C7]*\u05B4[\u0591-\u05C7]*ה/.test(word) ? 'אֱלֹהִים' : SPOKEN_NAME;
 /** Common written substitute in Hebrew text (he + geresh). */
 export const NAME_ABBREV = 'ה׳';
 /** Transliteration substitute used in learning aids. */
@@ -75,7 +79,8 @@ const TRAILING_PUNCT = /[\u05C0\u05C3\u05C6]+$/;
  * sent to a voice. Every occurrence becomes the spoken substitute: the bare word, the word inside a maqaf compound
  * (for example "glory of the Name" written with a maqaf), and prefixed forms (the prefix letters and their points stay as
  * written, then the substitute). The prefix pointing is kept from the source and not re-derived; clergy review is pending
- * (docs/sensitivity/REVIEW-FOR-CLERGY.md question 2b). The two-yod abbreviation is not the name and is left as written.
+ * (docs/sensitivity/REVIEW-FOR-CLERGY.md question 2b). A hiriq-pointed name uses the Elohim qere instead
+ * (Genesis 15:2, 15:8; Deuteronomy 3:24, 9:26). The two-yod abbreviation is not the name and is left as written.
  * Paseq and sof pasuq after the name are kept.
  */
 export function speechText(he) {
@@ -93,7 +98,7 @@ export function speechText(he) {
       head = w.word.slice(0, cut);
     }
     const tail = (TRAILING_PUNCT.exec(w.word) || [''])[0];
-    out += s.slice(last, w.index) + head + SPOKEN_NAME + tail;
+    out += s.slice(last, w.index) + head + spokenNameFor(w.word) + tail;
     last = w.index + w.word.length;
   }
   return out + s.slice(last);

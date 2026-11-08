@@ -90,6 +90,10 @@ export function buildIndexFrom({ manifest = [], blockJ = [], inter = [], altText
   for (const r of inter) put(stemOf(r.file), { set: r.set, w: r.width, h: r.height });
   for (const r of blockJ) put(r.id, { set: r.set, kind: r.kind, key: r.key, w: r.width, h: r.height, alt: r.alt });
   for (const id of Object.keys(altText)) put(id, { set: '' });
+  // Game backdrops can be shipped and approved outside the intake manifest.
+  // Keep those files discoverable after rebuilding the index; the resolver
+  // still requires their existing approval before displaying them.
+  for (const id of Object.keys(edges).filter((id) => id.startsWith('GAME_'))) put(id, { set: '' });
   const groups = new Map(); let order = 0;
   for (const [stem, r] of recs) {
     const g = groupOf({ stem, set: r.set, kind: r.kind, key: r.key });

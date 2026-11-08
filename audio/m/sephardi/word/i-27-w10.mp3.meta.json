@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "sephardi",
+ "inputText": "יִהְיוּ לְרָצוֹן",
+ "inputSha256": "e15751c4f802239e0fe1896d535f370459cd346d13fb5bcca0ed525c44949261",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair (see CASTING-REPORT.md) reading a respelling. The respelled Latin input actually sent was not recorded, so inputText is the manifest Hebrew text. Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "respelling-unrecorded"
+}

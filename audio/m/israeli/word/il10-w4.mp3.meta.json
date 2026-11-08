@@ -1,18 +1,13 @@
 {
- "status": "synthetic-unreviewed",
- "source": "outside-synthetic",
- "synth": {
-  "origin": "outside-synthetic",
-  "reviewed": false,
-  "redistributionCleared": false,
-  "licence": "unknown: not cleared",
-  "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
-  "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
-  "inputSha256": "03adbdead40e6f64c495ce8ca6e21109a79c56453b7160628f5cdf569640e1c0",
-  "ingestedAt": "2026-11-05T15:07:41.325Z",
-  "ingestedBy": "tools/audio/ingest.mjs"
- },
- "reviewed": false,
- "redistributionCleared": false,
- "note": "Synthetic clip from an outside source (provenance and licence not verified). Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept)."
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "תַּחֲנָה",
+ "inputSha256": "6d6bf4596050e8c73bfc9d25ff681ebdcfabdee6a16d88569d2e4e39fc97b38c",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
 }

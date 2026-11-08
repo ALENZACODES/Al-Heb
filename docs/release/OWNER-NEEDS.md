@@ -78,7 +78,7 @@ These come from other repository documents, not the ledger. They bear on item 38
 
 - [ ] Code licence: `docs/STATUS.md` says none is chosen (no `LICENSE` file). See `docs/legal/DECISIONS-FOR-JOHN.md` and `docs/legal/LICENCE-OPTIONS.md`.
 - [ ] Share-alike content: `docs/STATUS.md` records that the vocabulary data is share-alike and that whether this reaches the app is an open legal question (see the lawyer, section 6).
-- [ ] Hosting: `docs/STATUS.md` says no host account exists and nothing is deployed. An account is needed before any go-live (`docs/deploy/GO-LIVE-CHECKLIST.md`).
+- [x] Hosting — DONE 2026-11-07: the review site is live on Render (https://alef-review.onrender.com/, auto-deploys from `main`); no account was needed. See `docs/DEPLOY.md` and `docs/deploy/GO-LIVE-CHECKLIST.md`.
 - [ ] The licence wording asserted in `tests/torahread.view.test.js` is unresolved per `docs/release/MERGE-PLAN.md` (CC0 versus CC BY-SA); someone must check it against the source record.
 
 ---

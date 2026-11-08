@@ -1,4 +1,6 @@
-# Deploying ALEF on Cloudflare Pages (nothing has been deployed; no account exists yet)
+# Deploying ALEF on Cloudflare Pages (archived alternative — not the live host)
+
+> **Archived alternative — not the live host.** The review site is served by Render from `main` (https://alef-review.onrender.com/); see `docs/DEPLOY.md`. This document is kept as the record of the Cloudflare Pages path, its limits, and why it cannot host the full audio library (20,000-file Free cap vs about 25,000 clips). Nothing below has been set up and no Cloudflare account is needed.
 
 Why Cloudflare Pages: docs/ research (competitor analysis, item 39) picks it as the PWA host because audio clips are static files and the Free plan has no bandwidth charge for static requests. That claim comes from the research; the only Cloudflare numbers re-read for this document are in the table below.
 

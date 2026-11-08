@@ -19,8 +19,8 @@ Risk order: things that make the launch illegal or untrustworthy first, then thi
 | # | Item | Owner | Command or file to open | Done |
 |---|---|---|---|---|
 | 6 | Build and check the deploy folder locally | MAIN | `node tools/deploy/build_site.mjs && node tools/deploy/check-deploy.mjs` | [ ] |
-| 7 | Create the Cloudflare Pages account and project (build command `node tools/deploy/build_site.mjs`, output `dist`) | JOHN | `docs/deploy/CLOUDFLARE-PAGES.md`, section "Steps" | [ ] |
-| 8 | After deploy, run the "After the deploy" checks on the live URL (HTTPS, headers, service worker, manifest) | JOHN, then MAIN | `docs/deploy/CLOUDFLARE-PAGES.md`; `node tools/qa/pwa_audit.mjs` (read its header for usage) | [ ] |
+| 7 | ~~Create the Cloudflare Pages account and project~~ — SUPERSEDED 2026-11-07: the review site is live on Render (auto-deploys from `main`); no Cloudflare account is needed (nothing is ticked here: the item is moot, not run) | — | `docs/DEPLOY.md` | [ ] |
+| 8 | After deploy, run the smoke-test checks on the live URL (HTTPS, headers, service worker, manifest) | JOHN, then MAIN | `docs/deploy/GO-LIVE-CHECKLIST.md`; `node tools/qa/pwa_audit.mjs` (read its header for usage) | [ ] |
 | 9 | Confirm screenshots in the manifest load on the live URL | ANY | open `/manifest.webmanifest`, then each `assets/screens/*.png`; regenerate with `node tools/launch/shots.mjs` if the UI changed, then `node tools/meta/scan.mjs` | [ ] |
 | 10 | Read the CI notes: they were written against an older commit | MAIN | `docs/deploy/CI-GAP.md` | [ ] |
 

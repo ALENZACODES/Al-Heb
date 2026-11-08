@@ -1,6 +1,6 @@
 # Tester kit: first real learners (draft, 2026-11-05)
 
-Purpose: get 5 to 10 real people to try ALEF while the owner watches or reads their notes, so the project has evidence from learners and not only from tests. Nothing in this file says a session has happened. As of this draft no learner has used the app (`docs/STATUS.md`, section "Deployed and reviewed"), and nothing is deployed, so the owner must hand testers a working link or a local copy first.
+Purpose: get 5 to 10 real people to try ALEF while the owner watches or reads their notes, so the project has evidence from learners and not only from tests. Nothing in this file says a session has happened. As of this draft no learner has used the app (`docs/STATUS.md`, section "Deployed and reviewed"). The review site is live at https://alef-review.onrender.com/ (Render, from `main`), so the owner can hand testers that link.
 
 Things the owner fills in before sending: the link or install steps, a way for testers to reach the owner (no contact address exists in the repo yet; `docs/launch/LIMITATIONS.md` says the same), and the date window. Left as `[OWNER: ...]` below.
 

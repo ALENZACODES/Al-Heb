@@ -16,7 +16,7 @@ v0 is the intended first-release set of pages. The code for it exists; its lesso
 - **No recordings.** 0 of 24,906 listed audio clips are recorded (`docs/STATUS.md`). Sound comes from the device's own Hebrew voice, if the phone has one (`docs/audio/NO-AUDIO.md`, `docs/launch/COPY.md`).
 - **Preview pages are unreviewed.** They stay reachable by direct link and search, labelled "Preview" (`docs/v0/SCOPE.md`).
 - **No native, teacher or clergy review yet:** 0 of 3,718 rows in the review packs are reviewed (`docs/review/STATUS.md`, via `docs/STATUS.md`). No route has met the promotion bar (`docs/v0/SCOPE.md`).
-- **Nobody has used it.** No learner has used the app and nothing is deployed (`docs/STATUS.md`).
+- **Nobody has used it.** No learner has used the app. The review site is deployed (Render, from `main` — see `docs/STATUS.md`).
 
 ## Checked and not checked
 

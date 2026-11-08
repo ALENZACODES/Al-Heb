@@ -24,7 +24,7 @@ A 1280×640 crop of the wide home screen sits at [`.github/social-preview.png`](
 
 ## Status
 
-Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 21,136 short clips with a synthetic voice that no native speaker has reviewed (19,453 counted by `cat data/audio/summary.json`, plus 1,488 book-page clips and 195 others that the summary does not yet count; counts as of 2026-11-07, `find audio -name '*.mp3' | wc -l`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. Nothing is deployed, no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 21,136 short clips with a synthetic voice that no native speaker has reviewed (19,453 counted by `cat data/audio/summary.json`, plus 1,488 book-page clips and 195 others that the summary does not yet count; counts as of 2026-11-07, `find audio -name '*.mp3' | wc -l`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. The review build is deployed at https://alef-review.onrender.com/ (Render, auto-deploys from `main`), no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine
@@ -33,7 +33,7 @@ screen reader, any real recording (0 of 25,122 listed clips are a person's voice
 1,231 approved images by a teacher (approved in `data/images/approvals.json` by the maintainer, 1,836 rows in the manifest,
 counts as of 2026-11-07), and any review of the Hebrew (0 of 3,718 rows in the review packs). Today's QA and content-check results are
 summarised in [docs/STATUS.md](docs/STATUS.md); the step list for going live is
-[docs/deploy/GO-LIVE-CHECKLIST.md](docs/deploy/GO-LIVE-CHECKLIST.md) (nothing on it has been done).
+[docs/deploy/GO-LIVE-CHECKLIST.md](docs/deploy/GO-LIVE-CHECKLIST.md) (written for the Render host; the review site is already live there).
 
 **v0 versus preview.** The app has 157 routes (counted 2026-11-07; 63 of them are games, 62 picture books share one `book` route). 19 are tier `v0` (the baby-steps first release: welcome, home, first day, the
 r01 to r10 lesson path and review, letters and atlas, progress, settings with backup/restore/delete, about, credits, privacy,
@@ -89,7 +89,7 @@ Folder-by-folder guide to the docs: [docs/INDEX.md](docs/INDEX.md).
 
 Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Build contract: [docs/CONTRACT.md](docs/CONTRACT.md).
 Tooling notes: [docs/TOOLING.md](docs/TOOLING.md). Handoff: [docs/HANDOFF.md](docs/HANDOFF.md).
-Hosting: [docs/DEPLOY.md](docs/DEPLOY.md) and [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md).
+Hosting: Render serves the review site from `main` — see [docs/DEPLOY.md](docs/DEPLOY.md). The Cloudflare Pages notes in [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md) are an archived alternative, not the live host.
 
 ## Decisions needed
 

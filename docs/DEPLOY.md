@@ -1,10 +1,20 @@
-# Deploying ALEF (static hosting; nothing has been deployed)
+# Deploying ALEF (Render serves the review site from `main`)
+
+## The live host: Render
+
+The review site is https://alef-review.onrender.com/. Render publishes `main` only: every push to `main` triggers a deploy, and the served build is the one whose `precache-manifest.js` carries `ALEF_VERSION` (compare it with the committed `precache-manifest.js` to tell whether the live site has caught up with `main`). No branch is ever switched on the host; a deploy that has not flipped yet is a Render lag, not a new build.
+
+**Render ignores the repo `_headers` file.** Measured 2026-11-07 (fix #15) and again 2026-11-07 19:26 EST: every live 200 returns Render's uniform `Cache-Control: public, max-age=0, s-maxage=300`, including files the `_headers` rules mark `no-cache` or one-week. The `_headers` rules are correct and shipped, but they have no observable effect on the live site; host-native header configuration is the follow-up, not another `_headers` edit. What the live site does send (measured 2026-11-07 19:26 EST with `curl -sI`): `x-content-type-options: nosniff` and `strict-transport-security: max-age=315360000; includeSubdomains; preload` on `/`; **no `content-security-policy` response header** (the `_headers` CSP is not applied); `/manifest.webmanifest` is served as `binary/octet-stream`, not `application/manifest+json`.
+
+## Any host
 
 The app is plain static files. Any host that serves the repo root over HTTPS works (HTTPS needed for service worker,
 camera, geolocation). Run `node tools/build-precache.mjs` before publishing.
 
 Options: GitHub Pages (project sites serve under `/<repo>/`; all paths in the app are relative, so this works, but the
 hash-router means no server rewrites are needed), Cloudflare Pages, Netlify, Vercel, or any object storage + CDN.
+
+**Cloudflare Pages is an archived alternative, not the live host** (`docs/deploy/CLOUDFLARE-PAGES.md`). It cannot host the full audio library: the Free plan caps a site at 20,000 files and the library is about 25,000 clips (fix #5). The `_headers` file is Cloudflare-Pages-shaped config; it stays in the repo because the local deploy checker applies it and the rules document the intended caching, but it does not govern the live site.
 
 **Free-tier limits for these hosts are UNVERIFIED** (the research did not fetch 2026 limits). Check bandwidth and file-count limits
 before hosting audio (~1000+ mp3 files planned) and images (assets/img is several MB already).

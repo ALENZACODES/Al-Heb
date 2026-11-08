@@ -24,6 +24,7 @@ import { ROOT, readJson, vocabFor, soundFor, vowelRecords, cleanNote, drills, co
 import { firstDayChapter, FIRSTDAY_ID, FIRSTDAY_TITLE } from './firstday/section.mjs'; // hook: 'Your first 10 minutes' chapter (book/firstday/)
 import { memChainChapter, MEMCHAIN_ID, MEMCHAIN_TITLE } from './memorychain/section.mjs'; // hook: 'Letters you will never forget' (book/memorychain/)
 import { babyStepsChapter, BABY_ID, BABY_TITLE } from './babysteps/section.mjs'; // hook: v0 baby-step path, lessons r01-r10 (book/babysteps/)
+import { TORAH_PLATE_CSS, torahPlates } from './torah/plates.mjs';
 import { extraChapters } from './intermediate/chapters.mjs'; // hook: sounds reference, intermediate lessons, vocabulary appendix, answer key (book/intermediate/)
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -163,6 +164,7 @@ export function buildHtml(o, pages = {}) {
   const GEN = approvedManifest(ROOT);
   const R = createImgResolver({ base: relative(outDir, join(ROOT, 'assets/img')).replaceAll('\\', '/') || '.', files: idx?.files || [], generated: GEN });
   const EX = extraChapters({ pages, toc, binding: o.binding, img: (stem) => (R.isReal(stem) ? R.src(stem) : null), alt: GEN.altText });
+  const torahArt = torahPlates({ img: (stem) => R.src(stem), table: readJson('data/corpus/trope/table.json') });
   const lettersJson = loadLettersJson();
   const lettersSource = lettersJson ? 'data/letters/letters.json' : 'built-in glyph map (data/letters/letters.json not present)';
   const reg = registryBlessing();
@@ -183,7 +185,7 @@ export function buildHtml(o, pages = {}) {
 
   const cover = o.print ? '' : `<section class="cover"><div class="art"><img src="${R.src('BRAND_cover_a')}" alt=""/></div>
 <div class="titles">${he('אָלֶף בֵּית', 'he-big')}<h1>ALEF</h1><p>Read Hebrew. Say it. Live it.</p>
-<p class="small" style="margin-top:3in">DRAFT PROOF &middot; placeholder art &middot; not for sale</p></div></section>`;
+<p class="small" style="margin-top:3in">DRAFT PROOF &middot; not for sale</p></div></section>`;
 
   const prayerOpen = `<section class="chapter front-page"><h2>Prayer for the One Who Begins</h2>
 <p class="draft-flag">DRAFT &mdash; pending clergy/educator review</p>
@@ -201,7 +203,7 @@ export function buildHtml(o, pages = {}) {
 <p><b>Which pronunciation?</b> Hebrew is read differently in Israel, in Sephardi tradition and in Ashkenazi tradition. The next page explains the differences. The app lets you choose (in setup, or any time in Settings under &ldquo;Pronunciation style&rdquo;); American synagogues often use the Sephardi values.</p>
 <div class="slot"><b>Companion app.</b> The page for any letter is ${esc(letterUrl(o.host, '<letter>'))} and any prayer is ${esc(readUrl(o.host, '<text>'))} (prayer pages carry a &ldquo;Preview: unreviewed&rdquo; banner in the app).${ph ? ` <b style="color:#B0373B">The host &ldquo;${esc(o.host)}&rdquo; is a PLACEHOLDER: those links do not work until a real domain is chosen (one value, book/config.json).</b>` : ''}</div>
 <h3 style="margin-top:.25in">Contents</h3><ul class="toc">
-${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-class', 'How to use this book in a 10-week class') : ''}${toc(FIRSTDAY_ID, FIRSTDAY_TITLE)}${toc(BABY_ID, BABY_TITLE)}${toc(MEMCHAIN_ID, MEMCHAIN_TITLE)}${toc('ch-trad', 'Pronunciation traditions')}${EX.tocSounds}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${EX.tocInter}${wl.length ? toc('ch-wordlist', 'Word list (' + wl.length.toLocaleString('en-US') + ' words)') : ''}${EX.tocBack}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
+${toc('ch-blessing', 'The Priestly Blessing')}${ct?.weeks?.length ? toc('ch-class', 'How to use this book in a 10-week class') : ''}${toc(FIRSTDAY_ID, FIRSTDAY_TITLE)}${toc(BABY_ID, BABY_TITLE)}${toc(MEMCHAIN_ID, MEMCHAIN_TITLE)}${toc('ch-trad', 'Pronunciation traditions')}${EX.tocSounds}${toc('ch-alphabet', 'The alphabet at a glance')}${toc('letter-alef', 'The 27 letters (22 letters and 5 final forms)')}${toc('ch-remember', 'Remember every letter')}${toc('ch-vowels', 'The vowels')}${toc('ch-reading', 'Reading practice: syllables')}${toc('ch-practice', 'Reading practice: words')}${toc('ch-blessing-words', 'The Priestly Blessing, word by word')}${toc('craft-scroll-1', 'Torah craft: visual plates')}${toc('trope-plates-1', 'Cantillation: visual reference')}@@PRAYER_TOC@@${toc('ch-survival', 'Survival Hebrew')}${EX.tocInter}${wl.length ? toc('ch-wordlist', 'Word list (' + wl.length.toLocaleString('en-US') + ' words)') : ''}${EX.tocBack}${toc('ch-index', 'Index')}${toc('ch-colophon', 'Colophon, sources and statuses')}</ul></section>`;
 
 
   // ---- How to use this book in a 10-week class (original text; schedule from data/curriculum/class-track.json) ----
@@ -362,16 +364,16 @@ ${pb.situations.map((s) => { const rows = pb.entries.filter((e) => e.situation =
   const attr = [...new Set([...(blessing.attributions || []), ...regPrayers.map((e) => e.attribution)].filter(Boolean))];
   const colophon = `<section class="chapter end-page" id="ch-colophon"><h2>Colophon, sources and statuses</h2>
 <p class="small"><b>Draft proof</b> generated by book/build.mjs; letters data: ${esc(lettersSource)}. Hebrew print face: Noto Serif Hebrew; handwriting: Gveret Levin; fallback Frank Ruhl Libre (all SIL Open Font License 1.1; licence texts for all three are in assets/fonts/*-OFL.txt and docs/licenses/; the Noto Serif Hebrew text is byte-identical to google/fonts ofl/notoserifhebrew/OFL.txt, fetched 2026-11-03). QR codes made with segno (BSD-3).</p>
-<p class="small"><b>What is placeholder:</b> every illustration is a labelled placeholder (no AI images have been generated); audio recordings do not exist yet (the app says so and uses the device&rsquo;s Hebrew voice, if it has one); the opening prayer is a draft pending clergy review; prayer texts and the phrasebook are not proofread by native speakers; stroke data for handwriting is draft quality; the companion-app host ${esc(o.host)}${ph ? ' is a placeholder domain' : ''}.</p>
+<p class="small"><b>Draft status:</b> the opening prayer, Hebrew texts and handwriting data still need educator review. Companion links use the configured book host.</p>
 ${wl.length ? `<p class="small"><b>Word list attribution.</b> Word ranking derived from the OpenSubtitles-based FrequencyWords lists by Hermit Dave (CC BY-SA 4.0); lemmas, glosses and vocalisation derived from Wiktionary contributors (CC BY-SA 4.0), via Wiktextract/kaikki.org. Changes made: filtering, re-ranking, shortened glosses. The word list is shared under CC BY-SA 4.0; see docs/vocab/LICENSES.md.</p>` : ''}
 ${attr.length ? `<h3>Text attributions (from the registry)</h3>${attr.map((a) => `<p class="small">${esc(a)}</p>`).join('')}` : ''}
-<p class="small"><b>Image credit line (use once real images replace placeholders):</b> Illustrations produced with an image tool and edited by the author.</p></section>`;
+</section>`;
 
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}\n${EX.css}</style></head><body>
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>ALEF - draft proof</title><style>${pageCss(o, tw, th, bleed)}\n${fontFaces(outDir)}\n${readFileSync(join(ROOT, 'book/style.css'), 'utf8')}\n${EX.css}\n${TORAH_PLATE_CSS}</style></head><body>
 ${cover}${prayerOpen}${blessingPage}${howTo}${classSection}${firstDayChapter(pages)}${babyStepsChapter(pages)}${memChainChapter(pages)}${tradPage}${EX.sounds}${alphabet}
 ${letterPages}
 ${remember}
-${vowelChapter}${reading}${practiceWords}${blessingWords}${prayerCards}${survival}${EX.synagogue}${EX.israel}${wordList}${EX.vocab}${EX.key}${index}${colophon}
+${vowelChapter}${reading}${practiceWords}${blessingWords}${torahArt}${prayerCards}${survival}${EX.synagogue}${EX.israel}${wordList}${EX.vocab}${EX.key}${index}${colophon}
 </body></html>`;
   return html.replace('@@PRAYER_TOC@@', () => prayerToc);
 }

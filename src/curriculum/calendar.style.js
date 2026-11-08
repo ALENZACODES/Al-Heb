@@ -74,11 +74,22 @@ export const CALENDAR_CSS = `
 .alef-cal-table td { padding: 0; vertical-align: top; }
 .alef-cal-day { position: relative; display: grid; grid-template-rows: auto auto 1fr auto; gap: .1rem; inline-size: 100%; min-block-size: 4.6rem; padding: .25rem .3rem; text-align: start; font: inherit; font-size: .8rem; background: var(--cal-paper); color: var(--cal-ink); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; text-decoration: none; box-sizing: border-box; }
 a.alef-cal-day { color: var(--cal-ink); }
+.alef-say { font-style: italic; color: var(--cal-gold-deep); margin: .1rem 0 .3rem; }
 .alef-cal-day .g { font-weight: 700; font-size: .95rem; }
 .alef-cal-day .h { color: var(--muted); font-size: .72rem; }
 .alef-cal-day .l { font-size: .72rem; line-height: 1.2; overflow-wrap: normal; hyphens: auto; color: var(--cal-green-ink); }
 .alef-cal-day .m { display: flex; flex-wrap: wrap; gap: .15rem; align-self: end; }
-@media (max-width: 419.98px) { .alef-cal-day .l { overflow-wrap: anywhere; hyphens: auto; } }
+/* phones: a 7-column grid at 375px leaves about 44px per cell, where "Candles", a parsha name or "today" wrap letter by letter.
+   The label and the "today" word leave the cell (the gold outline, the markers and the aria-label still carry them);
+   the day page and the detail panel show the names in full. */
+@media (max-width: 479.98px) {
+  .alef-cal-day { min-block-size: 3.6rem; padding: .2rem .15rem; gap: .05rem; grid-template-rows: auto auto 1fr; }
+  .alef-cal-day .l { display: none; }
+  .alef-cal-day .h { font-size: .62rem; }
+  .alef-cal-day.today .g::after { content: none; }
+  .alef-cal-day .m { gap: .1rem; }
+  .alef-cal-day .m .alef-mk { padding: .12rem; border-radius: 6px; }
+}
 @media (max-width: 359.98px) { .alef-calendar section[aria-label="Calendar grid"] { overflow-x: auto; } .alef-cal-table { min-inline-size: 322px; } }
 .alef-cal-day.out { background: transparent; border-style: dashed; }
 .alef-cal-day.out, .alef-cal-day.out .g, .alef-cal-day.out .h, .alef-cal-day.out .l { color: var(--muted); font-weight: 400; }

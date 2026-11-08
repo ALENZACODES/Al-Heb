@@ -69,6 +69,8 @@ export async function mount(root, ctx) {
   const freeMode = () => rec.done || builder.count > 0; // past the first win: the builder is the whole screen
 
   const shell = h('article', { class: 'card firstwin', id: 'firstwin' });
+  // replaceChildren() stringifies a null child as the text "null" (seen on the first question screen); drop empty slots first
+  const show = (...kids) => shell.replaceChildren(...kids.filter((k) => k != null && k !== false));
   root.replaceChildren(shell);
   ensureBuilderStyle();
 
@@ -76,7 +78,7 @@ export async function mount(root, ctx) {
     const res = await fetch(DATA_URL, { cache: 'no-cache' });
     data = await res.json();
   } catch (e) {
-    shell.replaceChildren(h('p', { role: 'alert' }, 'Minute One could not load. ', h('a', { href: '#/welcome' }, 'Continue to setup')));
+    show(h('p', { role: 'alert' }, 'Minute One could not load. ', h('a', { href: '#/welcome' }, 'Continue to setup')));
     return () => { alive = false; };
   }
   // The word list: loaded alongside, never blocks the splash. Until it arrives the tray says so.
@@ -289,7 +291,7 @@ export async function mount(root, ctx) {
       class: 'fw-splash-ch',
       style: anim ? `display:inline-block;opacity:0;animation:fwSplashIn 0.35s ease forwards;animation-delay:${i * 0.12}s` : 'display:inline-block',
     }, ch));
-    shell.replaceChildren(
+    show(
       h('style', {}, `@keyframes fwSplashIn{from{opacity:0;transform:translateX(0.4em)}to{opacity:1;transform:none}}`),
       h('h1', { id: 'view-title', class: 'visually-hidden', tabindex: '-1' }, 'Shalom'),
       h('p', {
@@ -319,7 +321,7 @@ export async function mount(root, ctx) {
         render();
       },
     }, m.label));
-    shell.replaceChildren(
+    show(
       progressDots(0),
       h('h1', { id: 'view-title', tabindex: '-1' }, 'What brings you to Hebrew?'),
       h('p', { class: 'muted' }, 'One question. Your answer changes the next screen.'),
@@ -342,7 +344,7 @@ export async function mount(root, ctx) {
     const motiveHint = motivation
       ? h('p', { class: 'muted' }, `Path: ${motivation.label}. `, motivation.hint || '')
       : null;
-    shell.replaceChildren(
+    show(
       progressDots(1),
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Can you read Hebrew letters?'),
       h('p', { class: 'muted' }, 'Self-selection, not an exam. No placement test to fail on day one.'),
@@ -370,7 +372,7 @@ export async function mount(root, ctx) {
         },
       }, h('strong', {}, c.label), h('br'), h('span', { class: 'muted' }, line));
     });
-    shell.replaceChildren(
+    show(
       progressDots(2),
       h('h1', { id: 'view-title', tabindex: '-1' }, 'How much time a day?'),
       h('p', { class: 'muted' }, 'A real date, not a vague promise.'),
@@ -467,7 +469,7 @@ export async function mount(root, ctx) {
       h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'fw-status' }, statusMsg),
       built ? null : tray,
     ].filter(Boolean);
-    shell.replaceChildren(...kids);
+    show(...kids);
   }
 
   function renderCelebrate() {
@@ -530,7 +532,7 @@ export async function mount(root, ctx) {
       );
     }
     kids.push(h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'fw-status' }, statusMsg));
-    shell.replaceChildren(...kids.filter(Boolean));
+    show(...kids.filter(Boolean));
   }
 
   function render() {
@@ -543,7 +545,7 @@ export async function mount(root, ctx) {
     if (phase === 'celebrate') { renderCelebrate(); return; }
 
     // save — equal weight
-    shell.replaceChildren(
+    show(
       h('h1', { id: 'view-title', tabindex: '-1' }, data.savePrompt || 'Save your progress'),
       h('p', { class: 'muted' }, 'Same weight either way. You already won.'),
       h('div', { class: 'row', style: 'justify-content:center;gap:1rem' },

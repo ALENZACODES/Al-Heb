@@ -23,6 +23,7 @@ import { buildReminders, upcoming, itemStart, MAX_WINDOW_DAYS } from "./reminder
 import { toICS, downloadICS } from "./reminders.ics.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "./reminders.notify.js";
 import { CALENDAR_CSS } from "./calendar.style.js";
+import { respell, congregationOf } from "../pronunciation/forTradition.js";
 import { markersFor, isImportant, markerChip, MARKER_KINDS, MARKER_LABEL, artAvailable, ART_BASE } from "./calendar.markers.js";
 import { yomTovDates } from "./streak.js";
 import { el, heText, tr, storeGet, storeSet, STREAK_KEY as STREAK_RECORD_KEY } from "./dom.js";
@@ -103,10 +104,13 @@ export function mount(root, ctx) {
   // ---------- today ----------
   function cardBlock(slot, g, isNow, headingId) {
     const card = prayerCard(g, slot, { voice: ctx?.settings?.voice });
+    // how to say it: the same Latin respelling the opening prayer and the Morning screen show (owner, Nov 7)
+    const sayIt = respell(card.he, congregationOf(ctx?.settings));
     const heading = slot === "morning" ? tr(ctx, "cal.morning", "Morning prompt") : tr(ctx, "cal.evening", "Evening prompt");
     return el("section", { class: "alef-prayer" + (isNow ? " now" : ""), "aria-labelledby": headingId, "data-slot": slot },
       el("h2", { id: headingId }, heading),
       el("p", {}, heText(card.he, "alef-he alef-he-large")),
+      sayIt ? el("p", { class: "alef-say", lang: "he-Latn" }, sayIt) : null,
       el("p", {}, card.gloss),
       el("p", { class: "alef-reflect" }, card.text),
       el("p", { class: "alef-cal-draft" }, el("small", {}, `Draft, not reviewed by clergy. Hebrew line from the text registry (${card.registryRef || card.registryId}, status: ${card.registryStatus}).`)));

@@ -1,7 +1,6 @@
 import { reactRimon } from '../shell/rimon-events.js';
 import { h, heSpan } from '../shell/ui.js';
 import { createSession } from '../games/engine.js';
-import { settleAwards } from '../awards/eligibility.js';
 import { BUILDER_KEY, GAME_KEY, wordsFor, trayFor, tokensFor, phonetics, clipFor, recordWord } from './builder-model.js';
 
 export function builderNode(ctx = {}) {
@@ -107,8 +106,12 @@ export function builderNode(ctx = {}) {
       let badge='';
       if(result.fresh) {
         session.saveBest();
-        const award=settleAwards(ctx.store,null,Date.now());
-        if(award.newly.includes('yolo')) badge=' First-attempt badge earned!';
+        // The full awards rubric is only needed after a completed word, not
+        // on every first visit to the home screen.
+        import('../awards/eligibility.js').then(({ settleAwards }) => {
+          const award = settleAwards(ctx.store, null, Date.now());
+          if (!disposed && award.newly.includes('yolo')) status.textContent += ' First-attempt badge earned!';
+        }).catch(() => {});
       }
       status.textContent=`You built ${phonetics(word,tradition)} — ${word.meaning_en}. ${result.fresh?'+10 points.':'Already counted; great practice!'}${badge}`;
       drawTally();

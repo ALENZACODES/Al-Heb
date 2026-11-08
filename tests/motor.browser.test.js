@@ -3,9 +3,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { createAppServer } from '../tools/serve.mjs';
 
-const root = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
+const root = fileURLToPath(new URL('..', import.meta.url));
 let chromium;
 for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = createRequire(import.meta.url)(p)); break; } catch { /* next */ } }
 
@@ -17,9 +18,14 @@ async function withApp(fn) {
 }
 async function open(browser, base, route, settings = {}, vp = { width: 375, height: 667 }) {
   const ctx = await browser.newContext({ viewport: vp, hasTouch: true, isMobile: true });
-  await ctx.addInitScript((s) => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, ...s })); }, settings);
+  await ctx.addInitScript((s) => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true, ...s })); }, settings);
   const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message));
   await page.goto(base + '#' + route); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
+  if (route.includes('lesson=')) {
+    // The learner reaches the end of the lesson before its quick check opens.
+    await page.locator('#alef-check-gate').scrollIntoViewIfNeeded();
+    await page.keyboard.press('Control+End'); await page.waitForTimeout(300);
+  }
   return { ctx, page, errors };
 }
 const small = (page, min) => page.evaluate((MIN) => {

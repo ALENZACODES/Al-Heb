@@ -132,7 +132,7 @@ const server = createAppServer({ root }); await new Promise((r) => server.listen
 const base = `http://localhost:${server.address().port}/`;
 const browser = await chromium.launch({ executablePath });
 const seedIds = Array.from({ length: 24 }, (_, i) => 'r' + String(i + 1).padStart(2, '0'));
-const seedScript = ({ ids }) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); localStorage.setItem('alef:curriculum.progress', JSON.stringify({ completed: Object.fromEntries(ids.map((i) => [i, Date.now()])) })); } };
+const seedScript = ({ ids }) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); localStorage.setItem('alef:curriculum.progress', JSON.stringify({ completed: Object.fromEntries(ids.map((i) => [i, Date.now()])) })); } };
 
 const result = { when: new Date().toISOString(), chromium: browser.version(), engineNote: 'all profiles emulated in Chromium (WebKit not installed); iPhone/iPad rows are not Safari', quick, profiles: {}, routes, visits: [] };
 for (const [name] of combos) { const d = devices[name]; result.profiles[name] = { viewport: d.viewport, dpr: d.deviceScaleFactor, touch: !!d.hasTouch, isMobile: !!d.isMobile, nativeEngine: d.defaultBrowserType, ua: d.userAgent }; }

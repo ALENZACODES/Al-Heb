@@ -57,6 +57,8 @@ const hebrew = /[֐-׿]/;
 async function runPersona(cfg) {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, locale: 'en-CA', timezoneId: 'America/Toronto', serviceWorkers: 'block', permissions: [] });
   await ctx.addInitScript(({ start }) => {
+    const prefs = JSON.parse(localStorage.getItem('alef:settings') || '{}');
+    localStorage.setItem('alef:settings', JSON.stringify({ ...prefs, veilOptOut: true }));
     const R = Date; let off = Number(sessionStorage.getItem('__qa_off'));
     if (!Number.isFinite(off) || sessionStorage.getItem('__qa_off') === null) { off = start - R.now(); sessionStorage.setItem('__qa_off', String(off)); }
     window.__qaOff = off;
@@ -125,10 +127,9 @@ async function runPersona(cfg) {
     log('first open lands on', { hash: h });
     if (!/welcome/.test(h)) F('high', 'first-open-not-welcome', 'First open did not land on the welcome screen', ['Open the app with empty storage'], { hash: h });
     await page.waitForSelector('#ob-form-letters', { timeout: 8000 }).catch(() => {});
-    // press Continue with nothing chosen
-    await page.click('#ob-letters-continue').catch(() => {});
-    const msg = await text('#ob-status');
-    log('Continue with no answer', { status: msg });
+    // The first choice is now preselected. Record that default before choosing
+    // this persona's answer; advancing twice would skip its first step.
+    log('Initial letters choice', { choice: await page.locator('input[name="letters"]:checked').inputValue() });
     // the goal question is on this first screen (preselected: read); Israel skips the pronunciation step and sets Israeli sounds
     await page.click(`label[for=ob-goal-${cfg.goal}]`).catch(() => {});
     await page.check(`#ob-letters-${cfg.letters}`).catch(() => {});

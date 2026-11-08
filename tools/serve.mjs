@@ -17,6 +17,7 @@ export const MIME = {
 
 /** @param {{root?:string, prefix?:string}} [o] prefix e.g. "/alef/" serves the site under that path (to test project-site hosting) */
 export function createAppServer({ root = ROOT, prefix = '/' } = {}) {
+  root = resolve(root); // Normalize trailing separators before the containment check.
   const pre = prefix.replace(/\/+$/, '');
   return createServer(async (req, res) => {
     try {

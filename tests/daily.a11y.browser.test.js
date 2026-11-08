@@ -7,10 +7,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { existsSync, readFileSync } from 'node:fs';
 import { createAppServer } from '../tools/serve.mjs';
 
-const root = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
+const root = fileURLToPath(new URL('..', import.meta.url));
 let chromium;
 for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = createRequire(import.meta.url)(p)); break; } catch { /* next */ } }
 const must = process.env.ALEF_REQUIRE_BROWSER === '1';

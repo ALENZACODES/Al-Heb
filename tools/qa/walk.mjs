@@ -25,7 +25,7 @@ const executablePath = process.env.QA_CHROME || undefined;
 
 // ---- routes: every ROUTES entry with sample params, plus deep links and bad input
 const { ROUTES } = await import(pathToFileURL(join(root, 'src/shell/router.js')).href);
-const SAMPLE = { id: null, letter: 'bet', group: 'lw1', textId: 'bless-priestly-1', sec: 'ladder', section: 'ladder', week: '1', mode: 'handout', rule: 'kamatz', topic: 'article' };
+const SAMPLE = { id: null, letter: 'bet', group: 'lw1', textId: 'bless-priestly-1', sec: 'ladder', section: 'ladder', week: '1', mode: 'handout', rule: 'kamatz', topic: 'article', date: '2026-11-08' };
 const sampleFor = (r) => r.pattern.replace(/:(\w+)/g, (_, k) => (r.name === 'dialogue' ? 'd-cafe' : r.name === 'fadeline' ? 'bless-priestly-1' : r.name === 'letter' ? 'bet' : SAMPLE[k] ?? 'x'));
 const routeList = ROUTES.map((r) => ({ path: sampleFor(r), route: r.name }));
 const extras = ['/letters/alef', '/letters/final-mem', '/letters/bet?tab=drill&x=1', '/letters?tab=type', '/learn?lesson=r01', '/learn?lesson=r05&review=1', '/learn?review=1', '/learn?loanwords=1', '/read/bless-priestly-1?line=2',
@@ -42,7 +42,7 @@ const server = createAppServer({ root }); await new Promise((r) => server.listen
 const base = `http://localhost:${server.address().port}/`;
 const browser = await chromium.launch({ executablePath });
 const seedIds = Array.from({ length: 24 }, (_, i) => 'r' + String(i + 1).padStart(2, '0'));
-const seedScript = ({ ids, seeded }) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); if (seeded) localStorage.setItem('alef:curriculum.progress', JSON.stringify({ completed: Object.fromEntries(ids.map((i) => [i, Date.now()])) })); } };
+const seedScript = ({ ids, seeded }) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); if (seeded) localStorage.setItem('alef:curriculum.progress', JSON.stringify({ completed: Object.fromEntries(ids.map((i) => [i, Date.now()])) })); } };
 const newCtx = (vp, scheme, seeded, extra = {}) => browser.newContext({ viewport: vp, colorScheme: scheme, deviceScaleFactor: 1, ...extra }).then(async (c) => { await c.addInitScript(seedScript, { ids: seedIds, seeded }); return c; });
 
 // ---- in-page audit

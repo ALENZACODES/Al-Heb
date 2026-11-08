@@ -21,7 +21,7 @@ export const CSS = `
 .lp-heat { max-inline-size: 100%; display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 1.1rem); gap: 3px; overflow-x: auto; padding-block: .25rem; }
 .lp-cell { inline-size: 1.1rem; block-size: 1.1rem; font-size: .6rem; line-height: 1.1rem; text-align: center; border: 1px solid var(--border); border-radius: 3px; box-sizing: border-box; }
 .lp-cell[data-level="1"] { background: color-mix(in srgb, var(--accent) 25%, var(--card)); color: var(--fg); border-style: dotted; }
-.lp-cell[data-level="2"] { background: color-mix(in srgb, var(--accent) 70%, var(--card)); color: var(--accent-fg); }
+.lp-cell[data-level="2"] { background: color-mix(in srgb, var(--accent) 85%, var(--card)); color: var(--accent-fg); }
 .lp-cell[data-level="3"] { background: var(--accent); color: var(--accent-fg); border-width: 2px; }
 .lp-cell[data-level="none"] { border-color: transparent; }
 .lp table { border-collapse: collapse; inline-size: 100%; }

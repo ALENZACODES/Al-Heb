@@ -2,12 +2,12 @@
 .rimon-sprite{display:block;width:100%;aspect-ratio:1;background-size:400% 300%;background-repeat:no-repeat;transform-origin:50% 90%}
 .rimon-companion[data-action=idle] .rimon-sprite{animation:rimon-breathe 4s ease-in-out infinite}
 .rimon-caption{display:block;font:600 12px/1.35 system-ui;color:#29432d;background:#fff9eb;border-radius:12px;padding:5px 8px}
-.rimon-dismiss{position:absolute;right:0;top:0;width:32px;height:32px;border-radius:50%;border:1px solid #ccc;background:#fff9eb;color:#29432d;cursor:pointer;font-size:20px}
+.rimon-dismiss{position:absolute;right:0;top:0;width:48px;height:48px;border-radius:50%;border:1px solid #ccc;background:#fff9eb;color:#29432d;cursor:pointer;font-size:20px}
 .rimon-corner{position:fixed;right:12px;bottom:16px;width:112px;z-index:35}
 .rimon-restore{position:fixed;right:10px;bottom:12px;z-index:35;font-size:12px;border-radius:18px;padding:8px;background:#fff9eb;color:#29432d;border:1px solid #c6c6a8}
 .rimon-companion[hidden],.rimon-restore[hidden]{display:none!important}
 @keyframes rimon-breathe{50%{transform:scale(1.018,1.03) translateY(-1px)}}
-@media(max-width:600px){.rimon-companion{width:110px}.rimon-corner{width:78px;bottom:calc(76px + env(safe-area-inset-bottom));right:8px}.rimon-corner .rimon-caption{font-size:10px}.rimon-dismiss{width:32px;height:32px}}
+@media(max-width:600px){.rimon-companion{width:110px}.rimon-corner{width:78px;bottom:calc(76px + env(safe-area-inset-bottom));right:8px}.rimon-corner .rimon-caption{font-size:10px}.rimon-dismiss{width:48px;height:48px}}
 @media(prefers-reduced-motion:reduce){.rimon-sprite{animation:none!important;transform:none!important}}
 .rimon-static .rimon-sprite{animation:none!important;transform:none!important}
 

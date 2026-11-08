@@ -24,7 +24,10 @@ const note = (flow, name, ok, detail = '', gap = false) => { results.push({ flow
 
 async function open(hash, { fresh = false, viewport = { width: 390, height: 844 } } = {}) {
   const ctx = await browser.newContext({ viewport, deviceScaleFactor: 2 });
-  if (!fresh) await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+  // The opening-prayer controls have their own keyboard tests. Exercise the
+  // route below using the learner's supported opt-out preference.
+  await ctx.addInitScript(() => { const s = JSON.parse(localStorage.getItem('alef:settings') || '{}'); s.veilOptOut = true; localStorage.setItem('alef:settings', JSON.stringify(s)); });
+  if (!fresh) await ctx.addInitScript(() => { const s = JSON.parse(localStorage.getItem('alef:settings') || '{}'); localStorage.setItem('alef:settings', JSON.stringify({ ...s, onboarded: true, veilOptOut: true })); });
   const page = await ctx.newPage();
   const errors = []; page.on('pageerror', (e) => errors.push(e.message));
   await page.goto(base + (hash ? '#' + hash : '')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
@@ -197,7 +200,7 @@ async function tabTo(page, match, max = 120) {
   note(f, 'Tab reaches the "Preview" group heading without passing through collapsed links', nPv > 0, `${nPv} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(100);
   note(f, 'Enter expands the Preview group (details[open])', await page.evaluate(() => !!document.querySelector('#nav-more li[data-section="preview"] > details[open]')));
-  const nCal = await tabTo(page, (a) => a.inNav && /^calendar/i.test(a.name), 80);
+  const nCal = await tabTo(page, (a) => a.inNav && /calendar/i.test(a.name), 80);
   note(f, 'Tab reaches the Calendar link inside the expanded group', nCal > 0, `${nCal} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
   const a = await active(page);
@@ -234,7 +237,7 @@ async function tabTo(page, match, max = 120) {
         // a visually hidden input that stands for a visible label (file picker, radio) shows its ring on the label
         const lab = a.labels?.[0]; const lcs = lab ? getComputedStyle(lab) : null;
         const labelRing = !!lcs && ((lcs.outlineStyle !== 'none' && parseFloat(lcs.outlineWidth) > 0) || lcs.boxShadow !== 'none');
-        return { name: (a.getAttribute('aria-label') || a.textContent || a.value || a.id || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 40), tag: a.tagName.toLowerCase(), top: r.top + scrollY, left: r.left, inMain: !!a.closest('main'), floating: ['sticky', 'fixed'].includes(cs.position) || !!a.closest('.alef-actionbar'), ring: ring || labelRing || a.matches('input[type=time], input[type=date]'), hidden: r.width === 0 && r.height === 0 };
+        return { name: (a.getAttribute('aria-label') || a.textContent || a.value || a.id || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 40), tag: a.tagName.toLowerCase(), top: r.top + scrollY, left: r.left, inMain: !!a.closest('main'), floating: ['sticky', 'fixed', 'absolute'].includes(cs.position) || !!a.closest('.alef-actionbar'), ring: ring || labelRing || a.matches('input[type=time], input[type=date]'), hidden: r.width === 0 && r.height === 0 };
       });
       if (st.end) { done = true; break; }
       stops.push(st);
@@ -271,6 +274,7 @@ async function tabTo(page, match, max = 120) {
   { const { ctx, page } = await open('/learn?lesson=r01');
     await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('alef:settings') || '{}'); s.confirmAnswers = true; localStorage.setItem('alef:settings', JSON.stringify(s)); });
     await page.reload(); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(400);
+    await page.keyboard.press('Control+End'); await page.waitForTimeout(300);
     const nQ = await tabTo(page, (a) => /start quick check/i.test(a.name), 80); await page.keyboard.press('Enter'); await page.waitForTimeout(400);
     note(f, 'lesson: Tab reaches "Start quick check" and Enter starts it', nQ > 0 && (await page.locator('.alef-int-opt').count()) > 0, `${nQ} presses`);
     const nO = await tabTo(page, (a) => a.name.length > 0 && a.inMain && a.tag === 'button' && a.pressed === 'false', 30); await page.keyboard.press('Space'); await page.waitForTimeout(200);

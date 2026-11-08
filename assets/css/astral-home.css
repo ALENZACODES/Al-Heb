@@ -34,6 +34,7 @@
 .prayer-en { margin: .65rem auto 0; max-width: 37rem; font-size: clamp(.91rem, 2.2vw, 1.08rem); line-height: 1.5; color: #F6F1E7; opacity: .89; }
 .prayer-tr { margin: .55rem auto 0; max-width: 37rem; font-size: clamp(1rem, 2.6vw, 1.22rem); line-height: 1.5; font-style: italic; color: #E8C87A; }
 .prayer-skip {
+  min-height: 48px;
   position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-end: 1.2rem; z-index: 2;
   background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
   padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
@@ -52,6 +53,7 @@
 }
 .prayer-noshow:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
 .prayer-listen {
+  min-height: 48px;
   position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-start: 1.2rem; z-index: 2;
   background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
   padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;

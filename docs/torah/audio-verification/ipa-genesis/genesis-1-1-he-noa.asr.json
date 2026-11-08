@@ -1,0 +1,26 @@
+{
+  "id": "genesis-1-1-he-noa",
+  "fingerprint": "cc56efa86e702afec97945c1f7eab387ed7dccc7e5271c5584294b0b307a7127",
+  "audioSha256": "36cd4ca601d0ffce83d3ba646e0a9ac8256660d10b775cfddd1cc98cc94103a4",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "בראשית ברא אלהים את השמים ואת הארץ",
+  "speechInput": "Bereshit bara Elohim et hashamayim veet haaretz.",
+  "transcript": "בראשית ברא אלוהים את השמיים ואת הארץ.",
+  "wordEdits": 2,
+  "referenceWords": 7,
+  "wer": 0.2857142857142857,
+  "asrExact": false,
+  "orthographicWordEdits": 1,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

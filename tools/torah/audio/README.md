@@ -20,3 +20,6 @@ The Hebrew ASR model is `ivrit-ai/whisper-large-v3-turbo-ct2`, pinned to revisio
 Known uncertainties include prefixed divine names and readings where source consonants and spoken qere differ. All initial files are staged as `pending-asr-and-listening`; no utility here inserts unverified files into the learner audio manifest.
 
 Documentation: [Google Chirp 3 HD](https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd), [ivrit.ai model card](https://huggingface.co/ivrit-ai/whisper-large-v3-turbo-ct2).
+
+
+`phoneme_check_fast.py` uses the same pinned ReNikud model locally converted to CTranslate2 int8. It validates the converted model SHA256 before loading `phoneme-ct2/`; conversion provenance is in `docs/torah/audio-verification/phoneme-conversion.json`. Conversion: `ct2-transformers-converter --model phoneme-model --output_dir phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json`. Reports are supplemental evidence, not an automatic publication gate. The selected Noa Shema pilot uses Chirp with a supported alternative API locale and explicit IPA; its full request and exceptional combined assessment are recorded separately. This is not the default corpus-rendering strategy.

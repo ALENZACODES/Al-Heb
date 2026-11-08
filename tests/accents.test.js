@@ -132,7 +132,10 @@ test('no pronunciation file calls settings.set("congregation", ...) with the wro
 
 test('audioSupport: never promises recorded or non-Israeli sound that does not exist', () => {
   assert.equal(FT.audioSupport('israeli').supported, 'device');
-  for (const t of ['sephardi', 'ashkenazi']) {
+  // Sephardi plays the Israeli clips by rule (owner decision 2026-11-07), so the Israeli device voice is no mismatch for it
+  const sep = FT.audioSupport('sephardi');
+  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi plays the Israeli clips/); assert.match(sep.line, /Sephardi reading in English letters/);
+  for (const t of ['ashkenazi']) {
     const s = FT.audioSupport(t);
     assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /only Israeli Hebrew/);
     assert.equal(FT.audioSupport(t, { browserVoiceAnyway: true }).supported, 'device-mismatch');

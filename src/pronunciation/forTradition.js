@@ -137,6 +137,9 @@ export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree 
   if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off: you chose to learn without audio. Every step can be done by reading.' };
   if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have recorded audio. Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
   if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. The Hebrew clips use a synthetic voice (a man\'s and a woman\'s); where none exists, Listen uses your device\'s Hebrew voice if it has one: a computer voice, not a teacher.' };
+  // Owner decision 2026-11-07 (src/audio/player.js PLAYBACK_TRADITION): the Sephardi setting plays the Israeli clips and shows the
+  // Sephardi reading in English letters. The device voice, also Israeli, is no mismatch for it.
+  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. Sephardi plays the Israeli clips (a synthetic man\'s or woman\'s voice) and shows the Sephardi reading in English letters; where no clip exists, Listen uses your device\'s Hebrew voice if it has one: a computer voice, not a teacher.' };
   if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. The device voice is on: it speaks Israeli Hebrew, so it will not sound ${L}.` };
   return { ...base, deviceVoice: false, supported: 'none', line: `No ${L} audio yet. The device voice speaks only Israeli Hebrew, so Listen stays off for ${L}. Read the English-letter spelling instead.` };
 }

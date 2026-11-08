@@ -31,6 +31,7 @@ export function markPresent({ root = ROOT, dry = false } = {}) {
       if (!isSyntheticStatus(m.status)) { res.badSidecar.push(`${metaRel}: status ${m.status} is not a synthetic status`); continue; }
       e.status = m.status;
       e.source = m.source ? String(m.source) : 'file-present-provenance-unverified';
+      delete e.equivalentTo; // the stand-in rules are listed per id only for entries with no clip of their own (data/audio/equivalence.json)
       if (m.synth && typeof m.synth === 'object') { delete e.synth; e.synth = m.synth; } // last key, as build_manifest.mjs writes it
       res.marked.push(e.path);
       changed = true;

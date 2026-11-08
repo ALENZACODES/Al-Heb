@@ -65,3 +65,36 @@ npm test
 ## Sound
 
 131 of the 600 words already have a recorded clip (vocabulary word clips under `audio/<m|f>/israeli/word/`); the 🔊 button plays it. Every other word falls back to the device's Hebrew voice until a clip exists for its vocabulary entry.
+
+## Handoff — November 8, 2026
+
+By @john.
+
+Antonym Tug-of-War has 600 rounds and can start from any round. The implementation was pushed to `main` in ALENZACODES/al-heb with John Khan as the only author, as recorded in this handoff. No images were generated or pushed in that work; the missing pictures are listed with prompts and destination folders.
+
+### Gameplay and validation
+
+- **Levels:** 300 opposite pairs, each asked both ways, make six levels of 100 rounds. Early levels cover everyday opposites such as big/small, come/go, day/night and peace/war. Later levels include feminine and plural forms such as גְּדוֹלָה/קְטַנָּה and גְּדוֹלִים/קְטַנִּים.
+- **Start anywhere:** Enter a round and press Go, choose L1–L6, or press Surprise me. Each game lasts 10 rounds, followed by Next 10 rounds. The device remembers where the learner stopped.
+- **Fair choices:** Both wrong answers share the correct answer's ending. A test checks all 600 rounds to ensure exactly one choice is a correct opposite.
+- **Sound:** 131 of the 600 words have recorded clips; the rest use the device's Hebrew voice.
+- **Tests reported for this work:** Two previously failing Tug-of-War tests were fixed. The full suite still had 54 pre-existing, unrelated failures. This is the reported status of the implementation work, not a new test run for this documentation update.
+
+To change words, edit [the word bank](../../tools/games/tugowar-bank.psv), then run `node tools/games/build-tugowar.mjs`.
+
+### Tug-of-War picture handoff
+
+201 new pictures are needed. 24 pairs already use approved Opposites pictures; feminine and plural rounds reuse their base pair's picture.
+
+1. Paste the master prompt above once, with the Ari, Noa and Rimon character sheets attached.
+2. Use [the 21 prompt batches](tugowar-image-batches.md), with up to 10 pictures per batch.
+3. Save square 1024 × 1024 PNGs to `assets/games/tugowar/pairs/TUG_<key>.png`, using the exact filenames in each batch.
+4. Rename randomly named downloads before pushing. Until its picture exists, a round plays as text only.
+
+### Other missing images — priority order
+
+The full inventory and image intake commands are in [Missing Assets](../MISSING-ASSETS.md). **Do the eight other game pictures first.**
+
+- **Other games — 8 pictures:** Weather Studio (`PLACE_seasons_07`, `PLACE_seasons_08`), Barter (`CTX_food_01` through `CTX_food_04`), and Rental Agent (`CTX_house_02`, `CTX_house_03`). Prompts are in [MISSING-NOW.csv](../images/MISSING-NOW.csv). Add them using the image intake commands in the report.
+- **Little books 22–62 — 492 page pictures:** Use [missing-pages.csv](../books/missing-pages.csv) and the master prompt in [COMMANDS-6-62.md](../books/COMMANDS-6-62.md). Save files as `assets/books/bookN/BOOKN_pXX.jpg`, then run `node tools/books/build.mjs`.
+- **Other planned images — 666 rows:** Listed in [MISSING-NOW.csv](../images/MISSING-NOW.csv). Use the report's image intake commands. No current screen or book page uses these rows; they are planned new art rather than gaps.

@@ -85,6 +85,7 @@ export const STORE_KEYS = [
   ['games.syllablesnake.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/syllablesnake.view.js'],
   ['games.tenwords.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tenwords.view.js'],
   ['games.tugowar.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/tugowar.view.js'],
+  ['games.tugowar.next.v1', 'Game: the round number (1-600) where your next Tug-of-War game starts', 'src/games/tugowar.view.js'],
   ['games.vowelcatcher.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/vowelcatcher.view.js'],
   ['games.vowelstack.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/vowelstack.view.js'],
   ['games.wordbuilder.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/wordbuilder.view.js'],

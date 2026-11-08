@@ -1,0 +1,306 @@
+# Antonym Tug-of-War word bank. One opposite pair per line; each pair is played both ways (A -> B and B -> A),
+# so 300 pairs make the 600 numbered rounds. File order is teaching order: rounds 1-100 are level 1, and so on.
+# Columns: key|hebrew|translit|english|opposite hebrew|translit|english|pos|picture|scene for the picture
+# picture: id:<resolver id> uses an existing indexed picture; =<key> reuses another pair's picture (gendered/plural forms);
+#          empty means the pair gets its own picture at assets/games/tugowar/pairs/TUG_<key>.png (see docs/games/TUGOWAR-COMMANDS.md).
+# Edit this file, then run: node tools/games/build-tugowar.mjs
+big_small|גָּדוֹל|gadol|big|קָטָן|katan|small|adj|id:OPP_one_01|
+hot_cold|חַם|cham|hot|קַר|kar|cold|adj|id:OPP_two_01|
+white_black|לָבָן|lavan|white|שָׁחֹר|shachor|black|adj|id:OPP_gap_white_black|
+tall_low|גָּבוֹהַּ|gavoha|tall / high|נָמוּךְ|namukh|low|adj|id:OPP_one_02|
+fast_slow|מָהִיר|mahir|fast|אִטִּי|iti|slow|adj|id:OPP_two_02|
+expensive_cheap|יָקָר|yakar|expensive|זוֹל|zol|cheap|adj|id:OPP_gap_expensive_cheap|
+strong_weak|חָזָק|chazak|strong|חַלָּשׁ|chalash|weak|adj|id:OPP_gap_strong_weak|
+happy_sad|שָׂמֵחַ|sameach|happy|עָצוּב|atzuv|sad|adj|id:OPP_gap_happy_sad|
+old_new|יָשָׁן|yashan|old (thing)|חָדָשׁ|chadash|new|adj|id:OPP_two_05|
+near_far|קָרוֹב|karov|near|רָחוֹק|rachok|far|adj|id:OPP_gap_near_far|
+full_empty|מָלֵא|male|full|רֵיק|reik|empty|adj|id:OPP_one_08|
+light_dark|אוֹר|or|light|חֹשֶׁךְ|choshekh|darkness|noun|id:OPP_two_03|
+good_bad|טוֹב|tov|good|רַע|ra|bad|adj||a ripe shiny apple beside a bruised rotten apple with a worm hole
+yes_no|כֵּן|ken|yes|לֹא|lo|no|adv||Noa nodding with a warm smile beside Ari shaking his head with a raised palm
+day_night|יוֹם|yom|day|לַיְלָה|layla|night|noun|id:OPP_two_09|
+here_there|פֹּה|po|here|שָׁם|sham|there|adv||Rimon pointing down at the ground under his feet beside Rimon pointing far away to a distant hill
+morning_evening|בֹּקֶר|boker|morning|עֶרֶב|erev|evening|noun||the same balcony with a rising sun and a coffee cup beside the same balcony at dusk with a lit candle
+man_woman|אִישׁ|ish|man|אִשָּׁה|isha|woman|noun||Ari standing and waving beside Noa standing and waving, same pose, side by side
+father_mother|אַבָּא|aba|dad|אִמָּא|ima|mum|noun||a father carrying a toddler on his shoulders beside a mother holding a toddler's hand
+son_daughter|בֵּן|ben|son|בַּת|bat|daughter|noun||a small boy flying a kite beside a small girl flying a kite, parents' hands on their shoulders
+brother_sister|אָח|ach|brother|אָחוֹת|achot|sister|noun||a teenage boy and his younger sister sharing an umbrella, both smiling
+up_down|לְמַעְלָה|lemala|up|לְמַטָּה|lemata|down|adv||an arrow-shaped hot-air balloon rising beside a diver sinking down into blue water
+inside_outside|בִּפְנִים|bifnim|inside|בַּחוּץ|bachutz|outside|adv||a cat curled on a sofa inside a cosy room beside a cat sitting on a fence outside in the garden
+come_go|לָבוֹא|lavo|to come|לָלֶכֶת|lalekhet|to go|verb||Ari walking towards the viewer with open arms beside Ari walking away down a road with a backpack
+give_take|לָתֵת|latet|to give|לָקַחַת|lakachat|to take|verb||an open hand offering a pomegranate beside a hand grabbing a pomegranate off a plate
+buy_sell|לִקְנוֹת|liknot|to buy|לִמְכֹּר|limkor|to sell|verb||Noa paying coins at a fruit stall beside a stall-keeper handing a bag of fruit across the counter
+open_close|לִפְתֹּחַ|liftoach|to open|לִסְגֹּר|lisgor|to close|verb||a hand turning a key to swing a door wide open beside a hand pushing the same door shut
+sit_stand|לָשֶׁבֶת|lashevet|to sit|לַעֲמֹד|la'amod|to stand|verb||Ari sitting on a park bench beside Ari standing up next to the same bench
+summer_winter|קַיִץ|kayitz|summer|חֹרֶף|choref|winter|noun||a beach with a sun umbrella and watermelon beside a snowy hill with a sled and a scarf on a post
+before_after|לִפְנֵי|lifnei|before|אַחֲרֵי|acharei|after|adv||a whole birthday cake with candles beside the same plate with only crumbs and a fork
+with_without|עִם|im|with|בְּלִי|bli|without|adv||a cup of coffee with a spoon and sugar cubes beside the same cup alone with nothing around it
+always_never|תָּמִיד|tamid|always|אַף פַּעַם|af pa'am|never|adv||a lighthouse beam shining every night across a row of moons beside a dusty clock that has stopped
+yesterday_tomorrow|אֶתְמוֹל|etmol|yesterday|מָחָר|machar|tomorrow|adv||a setting sun over a torn calendar page lying on the ground beside a sunrise over a fresh blank calendar page
+wide_narrow|רָחָב|rachav|wide|צַר|tzar|narrow|adj|id:OPP_one_03|
+heavy_light|כָּבֵד|kaved|heavy|קַל|kal|light (weight)|adj|id:OPP_one_04|
+long_short|אָרֹךְ|arokh|long|קָצָר|katzar|short|adj|id:OPP_one_05|
+thick_thin|עָבֶה|ave|thick|דַּק|dak|thin|adj|id:OPP_one_06|
+open_closed|פָּתוּחַ|patuach|open|סָגוּר|sagur|closed|adj|id:OPP_one_07|
+clean_dirty|נָקִי|naki|clean|מְלֻכְלָךְ|melukhlakh|dirty|adj|id:OPP_one_09|
+loud_quiet|רוֹעֵשׁ|roesh|noisy|שָׁקֵט|shaket|quiet|adj|id:OPP_one_10|
+sweet_sour|מָתוֹק|matok|sweet|חָמוּץ|chamutz|sour|adj|id:OPP_two_06|
+deep_shallow|עָמֹק|amok|deep|רָדוּד|radud|shallow|adj|id:OPP_two_07|
+wet_dry|רָטֹב|ratov|wet|יָבֵשׁ|yavesh|dry|adj|id:OPP_two_10|
+much_little|הַרְבֵּה|harbe|a lot|מְעַט|me'at|a little|adv|id:OPP_two_08|
+young_old|צָעִיר|tza'ir|young|זָקֵן|zaken|old (person)|adj||a young woman jogging with earbuds beside an old man with a cane feeding pigeons on a bench
+beautiful_ugly|יָפֶה|yafe|beautiful|מְכֹעָר|mekhoar|ugly|adj||a perfect blooming red rose beside a wilted brown weed in a cracked pot
+rich_poor|עָשִׁיר|ashir|rich|עָנִי|ani|poor|adj||an overflowing treasure chest of gold coins beside an empty patched cloth purse with one coin
+hungry_full|רָעֵב|ra'ev|hungry|שָׂבֵעַ|save'a|full (after eating)|adj||Rimon holding an empty plate with a rumbling tummy beside Rimon leaning back with a round tummy and a clean plate
+awake_asleep|עֵר|er|awake|יָשֵׁן|yashen|asleep|adj||an owl with wide open eyes on a branch beside the same owl with closed eyes, a small moon above
+healthy_sick|בָּרִיא|bari|healthy|חוֹלֶה|chole|sick|adj||Ari stretching after a run in the sun beside Ari in bed with a blanket, a hot-water bottle and a mug of tea
+soft_hard|רַךְ|rakh|soft|קָשֶׁה|kashe|hard|adj||a fluffy pillow pressed by a finger beside a stone being tapped by a hammer
+easy_difficult|קַל|kal|easy|קָשֶׁה|kashe|difficult|adj||Noa stepping over a tiny pebble beside Noa climbing a steep rock wall with a rope
+first_last|רִאשׁוֹן|rishon|first|אַחֲרוֹן|acharon|last|adj||a queue of five ducklings with a gold ribbon on the front duckling and a small grey feather on the back one
+early_late|מֻקְדָּם|mukdam|early|מְאֻחָר|meuchar|late|adj||a rooster crowing at sunrise beside a sleepy man running for a bus that is already pulling away
+east_west|מִזְרָח|mizrach|east|מַעֲרָב|ma'arav|west|noun||a compass rose with the sun rising on the right side beside the same compass with the sun setting on the left side
+north_south|צָפוֹן|tzafon|north|דָּרוֹם|darom|south|noun||a snowy mountain peak at the top of a map beside a desert with palm trees at the bottom of the same map
+right_left|יָמִין|yamin|right|שְׂמֹאל|smol|left|noun||a raised right hand with a green ring beside a raised left hand with a gold ring
+friend_enemy|חָבֵר|chaver|friend|אוֹיֵב|oyev|enemy|noun||two cats curled up together asleep beside a cat and a dog arching and growling at each other
+peace_war|שָׁלוֹם|shalom|peace|מִלְחָמָה|milchama|war|noun||a white dove with an olive branch over green fields beside two toy cannons facing each other on a dark hill
+question_answer|שְׁאֵלָה|she'ela|question|תְּשׁוּבָה|tshuva|answer|noun||a student raising a hand with a puzzled face beside a teacher pointing at a lit light bulb
+beginning_end|הַתְחָלָה|hatchala|beginning|סוֹף|sof|end|noun||a runner crouched at a starting line beside a runner breaking the finishing ribbon
+sky_earth|שָׁמַיִם|shamayim|sky|אֶרֶץ|eretz|earth|noun||a wide blue sky with clouds and birds beside brown ploughed earth with a sprouting seed
+sun_moon|שֶׁמֶשׁ|shemesh|sun|יָרֵחַ|yareach|moon|noun||a big golden sun over hills beside a silver crescent moon over the same hills
+fire_water|אֵשׁ|esh|fire|מַיִם|mayim|water|noun||a crackling campfire beside a clear waterfall pouring into a pool
+sea_land|יָם|yam|sea|יַבָּשָׁה|yabasha|dry land|noun||open sea with waves and a sailboat beside a field with a tree and a stone wall
+mountain_valley|הַר|har|mountain|עֵמֶק|emek|valley|noun||a tall pointed mountain beside a green valley with a river and fields between low hills
+city_village|עִיר|ir|city|כְּפָר|kfar|village|noun||a skyline of tall buildings and a crane beside a few small houses, a well and goats
+entrance_exit|כְּנִיסָה|knisa|entrance|יְצִיאָה|yetzia|exit|noun||an arrow-shaped doormat pointing into a doorway beside a green running-figure exit sign shape over a door (no text)
+laugh_cry|לִצְחֹק|litzchok|to laugh|לִבְכּוֹת|livkot|to cry|verb||Rimon laughing with eyes squeezed shut beside Rimon crying big tears
+love_hate|לֶאֱהֹב|le'ehov|to love|לִשְׂנֹא|lisno|to hate|verb||a child hugging a puppy with hearts floating up beside a child pushing away a plate of broccoli with a scowl
+remember_forget|לִזְכֹּר|lizkor|to remember|לִשְׁכֹּחַ|lishkoach|to forget|verb||a string tied around a finger with a bright light bulb beside a man scratching his head next to keys left on a table
+win_lose|לְנַצֵּחַ|lenatzeach|to win|לְהַפְסִיד|lehafsid|to lose|verb||a runner holding up a gold trophy beside a runner sitting on the track with head in hands
+find_lose|לִמְצֹא|limtzo|to find|לְאַבֵּד|le'abed|to lose (a thing)|verb||a hand lifting a sofa cushion to reveal a lost key beside a key falling unnoticed from a hole in a pocket
+on_off|לְהַדְלִיק|lehadlik|to turn on|לְכַבּוֹת|lekhabot|to turn off|verb||a finger flipping a switch and a lamp glowing beside the same finger flipping it back and the lamp dark
+ask_answer|לִשְׁאֹל|lish'ol|to ask|לַעֲנוֹת|la'anot|to answer|verb||Noa leaning forward with a curious face and an open hand beside Ari replying with a confident gesture
+go_up_down|לַעֲלוֹת|la'alot|to go up|לָרֶדֶת|laredet|to go down|verb||Ari climbing up a staircase beside Ari walking down the same staircase
+enter_exit|לְהִכָּנֵס|lehikanes|to go in|לָצֵאת|latzet|to go out|verb||Noa stepping into a café through its door beside Noa stepping out of the same café onto the street
+start_finish|לְהַתְחִיל|lehatchil|to start|לִגְמֹר|ligmor|to finish|verb||a painter dabbing the first stroke on an empty canvas beside the painter stepping back from a finished painting
+push_pull|לִדְחֹף|lidchof|to push|לִמְשֹׁךְ|limshokh|to pull|verb||Ari pushing a shopping cart forward beside Noa pulling a wagon by its handle
+teach_learn|לְלַמֵּד|lelamed|to teach|לִלְמֹד|lilmod|to learn|verb||a teacher at a chalkboard (blank) gesturing beside a student at a desk writing in a notebook (blank pages)
+send_receive|לִשְׁלֹחַ|lishloach|to send|לְקַבֵּל|lekabel|to receive|verb||a hand dropping an envelope into a mailbox beside a hand taking an envelope from a door mail slot
+live_die|לִחְיוֹת|lichyot|to live|לָמוּת|lamut|to die|verb||a green sprouting plant in a sunny pot beside a dry brown leaf falling from a bare branch in autumn
+wake_sleep|לְהִתְעוֹרֵר|lehitorer|to wake up|לְהֵרָדֵם|leheradem|to fall asleep|verb||a woman stretching in bed as an alarm clock rings and sun shines in beside the same woman drifting off with a book on her chest under a lamp
+arrive_leave|לְהַגִּיעַ|lehagia|to arrive|לַעֲזֹב|la'azov|to leave|verb||a train pulling into a station with people waving hello beside the same train pulling away with people waving goodbye
+grandfather_grandmother|סַבָּא|saba|grandpa|סַבְתָּא|savta|grandma|noun||a grandfather with a flat cap reading on a bench beside a grandmother knitting a scarf on the same bench
+king_queen|מֶלֶךְ|melekh|king|מַלְכָּה|malka|queen|noun||a king with a gold crown and a red cloak beside a queen with a gold crown and a blue cloak
+groom_bride|חָתָן|chatan|groom|כַּלָּה|kala|bride|noun||a groom in a suit under a wedding canopy beside a bride in a white dress under the same canopy
+teacher_student|מוֹרֶה|more|teacher|תַּלְמִיד|talmid|student|noun||a teacher holding a pointer beside a student with a backpack and a pencil
+spring_autumn|אָבִיב|aviv|spring|סְתָו|stav|autumn|noun||a blossoming almond tree with pink flowers beside a tree with orange leaves falling
+truth_lie|אֱמֶת|emet|truth|שֶׁקֶר|sheker|lie|noun||a calm open hand with a clear glass of water beside a figure hiding a broken vase behind his back with a guilty grin
+life_death|חַיִּים|chayim|life|מָוֶת|mavet|death|noun||a bird hatching from a cracked egg in a nest beside an empty nest on a bare winter branch
+joy_sadness|שִׂמְחָה|simcha|joy|עֶצֶב|etzev|sadness|noun||people dancing in a circle at a party with balloons beside a lone figure under a grey rain cloud
+love_hatred|אַהֲבָה|ahava|love|שִׂנְאָה|sin'a|hatred|noun||two hands forming a heart shape beside two clenched fists facing each other
+work_vacation|עֲבוֹדָה|avoda|work|חֻפְשָׁה|chufsha|vacation|noun||a desk with a laptop and a stack of folders beside a hammock between palm trees with a cool drink
+shabbat_weekday|שַׁבָּת|shabbat|Shabbat|יוֹם חֹל|yom chol|weekday|noun||a set table with two candles, challah under a cloth and a cup of wine beside a busy desk with a ringing phone and a briefcase
+holy_everyday|קֹדֶשׁ|kodesh|holy|חֹל|chol|everyday (not holy)|noun||a Havdalah braided candle, spice box and cup beside an ordinary kitchen table with a toaster and a newspaper (no text)
+pure_impure|טָהוֹר|tahor|pure (ritually)|טָמֵא|tame|impure (ritually)|adj||a clear spring pouring into a stone basin beside a muddy puddle with a broken clay pot
+kosher_nonkosher|כָּשֵׁר|kasher|kosher|טָרֵף|taref|not kosher|adj||a plate with a fish that has fins and scales beside a plate with a lobster and a shrimp
+more_less|יוֹתֵר|yoter|more|פָּחוֹת|pachot|less|adv||a tall stack of coins beside a short stack of coins
+everything_nothing|הַכֹּל|hakol|everything|כְּלוּם|klum|nothing|pron||a suitcase overflowing with clothes and souvenirs beside an open empty suitcase
+everyone_noone|כֻּלָּם|kulam|everyone|אַף אֶחָד|af echad|no one|pron||a crowded stadium stand full of cheering fans beside the same stand with every seat empty
+quickly_slowly|מַהֵר|maher|quickly|לְאַט|le'at|slowly|adv||a cyclist racing with speed lines beside a snail creeping along a leaf
+alone_together|לְבַד|levad|alone|בְּיַחַד|beyachad|together|adv||a single person on a bench under a tree beside a group of friends sharing a picnic blanket
+above_below|מֵעַל|me'al|above|מִתַּחַת|mitachat|below|adv||a bird flying above a table beside a cat sleeping under the same table
+forward_backward|קָדִימָה|kadima|forward|אָחוֹרָה|achora|backward|adv||a car driving forward along a road beside the same car reversing into a parking space with a reversing light
+front_behind|מִלְּפָנִים|milefanim|in front|מֵאָחוֹר|me'achor|behind|adv||Rimon standing in front of a tree beside Rimon peeking out from behind the same tree
+wise_foolish|חָכָם|chakham|wise|טִפֵּשׁ|tipesh|foolish|adj||an owl with round glasses beside a figure trying to fill a bucket that has a large hole
+brave_coward|אַמִּיץ|amitz|brave|פַּחְדָן|pachdan|coward|adj||a small knight stepping toward a friendly cartoon dragon beside the same knight hiding behind a rock
+generous_stingy|נָדִיב|nadiv|generous|קַמְצָן|kamtzan|stingy|adj||a hand pouring fruit from a basket into many hands beside a man hugging a locked money box to his chest
+busy_free|עָסוּק|asuk|busy|פָּנוּי|panuy|free (available)|adj||a juggler juggling phones, folders and a coffee cup beside the same man relaxing with his feet up and an empty diary
+calm_nervous|רָגוּעַ|ragua|calm|עַצְבָּנִי|atzbani|irritable|adj||a woman meditating cross-legged by a still lake beside the same woman tapping her foot at a traffic jam with steam over her head
+fat_thin|שָׁמֵן|shamen|fat|רָזֶה|raze|thin|adj||a round plump cat on a cushion beside a slim long cat on the same cushion
+bitter_sweet|מַר|mar|bitter|מָתוֹק|matok|sweet|adj||a cup of black coffee with a puckered face beside a pot of honey with a smiling face
+sharp_blunt|חַד|chad|sharp|קֵהֶה|kehe|blunt|adj||a sharp knife slicing a tomato cleanly beside a blunt knife squashing a tomato
+smooth_rough|חָלָק|chalak|smooth|מְחֻסְפָּס|mechuspas|rough|adj||a smooth polished pebble beside a rough piece of bark
+straight_crooked|יָשָׁר|yashar|straight|עָקֹם|akom|crooked|adj||a straight new nail beside a bent crooked nail
+round_square|עָגֹל|agol|round|מְרֻבָּע|merubba|square|adj||a round orange plate beside a square blue napkin
+simple_complicated|פָּשׁוּט|pashut|simple|מְסֻבָּךְ|mesubakh|complicated|adj||a single straight piece of string beside a huge tangled knot of string
+safe_dangerous|בָּטוּחַ|batuach|safe|מְסֻכָּן|mesukan|dangerous|adj||a child on a playground swing with soft sand below beside a cliff edge with crumbling rocks
+whole_broken|שָׁלֵם|shalem|whole|שָׁבוּר|shavur|broken|adj||a whole clay vase beside the same vase in pieces on the floor
+alive_dead|חַי|chai|alive|מֵת|met|dead|adj||a buzzing bee on a flower beside a dry dead flower drooping in a vase
+hidden_visible|גָּלוּי|galuy|exposed|נִסְתָּר|nistar|hidden|adj||a gift sitting on an open table beside a gift peeking out from under a blanket
+permanent_temporary|קָבוּעַ|kavua|permanent|זְמַנִּי|zmani|temporary|adj||a stone house with a garden beside a camping tent in a field
+private_public|פְּרָטִי|prati|private|צִבּוּרִי|tziburi|public|adj||a single garden chair behind a high hedge beside a busy public park bench with many people
+interesting_boring|מְעַנְיֵן|meanyen|interesting|מְשַׁעֲמֵם|meshaamem|boring|adj||a girl gazing wide-eyed through a telescope at stars beside a girl yawning at a blank grey wall
+pleasant_disgusting|נָעִים|naim|pleasant|מַגְעִיל|magil|disgusting|adj||a woman smelling a bouquet of flowers with a smile beside a man holding his nose over a smelly rubbish bin
+loved_hated|אָהוּב|ahuv|loved|שָׂנוּא|sanu|hated|adj||a teddy bear being hugged by a child beside an alarm clock being glared at by a sleepy child
+famous_anonymous|מְפֻרְסָם|mefursam|famous|אַלְמוֹנִי|almoni|anonymous|adj||a singer on a stage under spotlights with cameras flashing beside a plain grey silhouette in a crowd
+serious_funny|רְצִינִי|ratzini|serious|מַצְחִיק|matzchik|funny|adj||a judge with a stern face and a gavel beside a clown with a red nose juggling
+bright_dark_colour|בָּהִיר|bahir|light (colour)|כֵּהֶה|kehe|dark (colour)|adj||a pale sky-blue paint swatch beside a deep navy paint swatch
+transparent_opaque|שָׁקוּף|shakuf|transparent|אָטוּם|atum|opaque|adj||a clear glass jar showing marbles inside beside a clay jar hiding what is inside
+tired_fresh|עָיֵף|ayef|tired|רַעֲנָן|raanan|fresh|adj||a man slumped on a sofa with heavy eyelids beside the same man after a shower, bright-eyed with a towel round his neck
+upper_lower|עֶלְיוֹן|elyon|upper|תַּחְתּוֹן|tachton|lower|adj||a bunk bed with a child waving from the top bunk beside the same bunk bed with a child reading on the bottom bunk
+inner_outer|פְּנִימִי|pnimi|inner|חִיצוֹנִי|chitzoni|outer|adj||a halved peach showing its stone inside beside a whole peach showing its fuzzy skin
+satisfied_disappointed|מְרֻצֶּה|merutze|satisfied|מְאֻכְזָב|meukhzav|disappointed|adj||a chef tasting soup with a pleased smile beside a child looking at a melted ice cream on the ground
+polite_rude|אָדִיב|adiv|polite|גַּס|gas|rude|adj||a man holding a door open with a small bow beside a man pushing ahead of a queue
+careful_reckless|זָהִיר|zahir|careful|פָּזִיז|paziz|reckless|adj||a man carrying a tall stack of plates slowly with both hands beside a man skateboarding while juggling plates
+hardworking_lazy|חָרוּץ|charutz|hardworking|עָצֵל|atzel|lazy|adj||an ant carrying a big crumb uphill beside a cat sprawled asleep in a sunbeam
+tidy_messy|מְסֻדָּר|mesudar|tidy|מְבֻלְגָּן|mevulgan|messy|adj||a neat bookshelf with folded clothes beside a bedroom floor covered in clothes and toys
+active_passive|פָּעִיל|pa'il|active|סָבִיל|savil|passive|adj||a woman playing tennis mid-swing beside a man sitting on a couch watching a ball roll past
+positive_negative|חִיּוּבִי|chiyuvi|positive|שְׁלִילִי|shlili|negative|adj||a bright sunflower turned toward the sun beside a drooping flower under a grey cloud
+modern_ancient|מוֹדֶרְנִי|moderni|modern|עַתִּיק|atik|ancient|adj||a glass skyscraper beside an ancient stone ruin with broken columns
+urban_rural|עִירוֹנִי|ironi|urban|כַּפְרִי|kafri|rural|adj||a busy street crossing with traffic lights beside a dirt road through wheat fields with a tractor
+local_foreign|מְקוֹמִי|mekomi|local|זָר|zar|foreign|adj||a neighbour waving from her front gate beside a tourist with a big map, a suitcase and a camera
+allowed_forbidden|מֻתָּר|mutar|allowed|אָסוּר|asur|forbidden|adj||a green circle over a bicycle on a path beside a red circle with a slash over a bicycle (symbols only)
+fresh_rotten|טָרִי|tari|fresh|רָקוּב|rakuv|rotten|adj||a crisp green lettuce with water drops beside a mouldy brown banana with flies
+married_single|נָשׂוּי|nasuy|married|רַוָּק|ravak|single (unmarried)|adj||a couple showing matching wedding rings beside a man alone with a cat reading a book
+same_different|שָׁוֶה|shave|equal|שׁוֹנֶה|shone|different|adj||two identical red apples beside a red apple next to a green pear
+happy_miserable|מְאֻשָּׁר|meushar|happy (content)|אֻמְלָל|umlal|miserable|adj||a smiling woman in a sunny garden with a cat on her lap beside a soaked man in the rain with a broken umbrella
+dark_lit|חָשׁוּךְ|chashukh|dark|מוּאָר|muar|lit|adj||a dark alley with one dim window beside the same alley lit by warm street lamps
+warm_cool|חָמִים|chamim|warm|קָרִיר|karir|cool|adj||a woolly sweater by a crackling fireplace beside a light breeze ruffling a curtain by an open window
+crowded_spacious|צָפוּף|tzafuf|crowded|מְרֻוָּח|meruvach|spacious|adj||a packed bus full of standing passengers beside an almost empty bus with sunlight on the seats
+lend_borrow|לְהַלְווֹת|lehalvot|to lend|לִלְווֹת|lilvot|to borrow|verb||Noa handing a book to Ari beside Ari receiving the book with a thank-you smile
+tie_untie|לִקְשֹׁר|likshor|to tie|לְהַתִּיר|lehatir|to untie|verb||hands tying a shoelace into a bow beside hands pulling a knot loose
+heat_cool|לְחַמֵּם|lechamem|to heat|לְקָרֵר|lekarer|to cool|verb||a pot on a lit stove with steam beside a jug of lemonade being put into a fridge
+lift_put_down|לְהָרִים|leharim|to lift|לְהַנִּיחַ|lehaniach|to put down|verb||Ari lifting a box overhead beside Ari placing the same box gently on the floor
+succeed_fail|לְהַצְלִיחַ|lehatzliach|to succeed|לְהִכָּשֵׁל|lehikashel|to fail|verb||a basketball dropping through the hoop beside a basketball bouncing off the rim
+approach_move_away|לְהִתְקָרֵב|lehitkarev|to come closer|לְהִתְרַחֵק|lehitrachek|to move away|verb||a puppy running toward a child beside a puppy trotting away into the distance
+raise_lower|לְהַעֲלוֹת|leha'alot|to raise|לְהוֹרִיד|lehorid|to lower|verb||a flag being raised up a pole beside the same flag being lowered
+add_subtract|לְהוֹסִיף|lehosif|to add|לְהַחְסִיר|lehachsir|to take away|verb||a hand adding a marble to a jar beside a hand taking a marble out of the jar
+dress_undress|לְהִתְלַבֵּשׁ|lehitlabesh|to get dressed|לְהִתְפַּשֵּׁט|lehitpashet|to get undressed|verb||a man putting on a coat at the door beside the same man hanging the coat on a hook
+get_up_lie_down|לָקוּם|lakum|to get up|לִשְׁכַּב|lishkav|to lie down|verb||Rimon jumping out of bed beside Rimon lying down on a pillow
+meet_part|לְהִפָּגֵשׁ|lehipagesh|to meet|לְהִפָּרֵד|lehipared|to part|verb||two friends hugging hello at an airport arrivals gate beside two friends waving goodbye at a departure gate
+write_erase|לִכְתֹּב|likhtov|to write|לִמְחֹק|limchok|to erase|verb||a pencil drawing a line on paper beside an eraser rubbing out the line (no letters)
+approve_reject|לְאַשֵּׁר|le'asher|to approve|לִדְחוֹת|lidchot|to reject|verb||a hand stamping a green check-mark shape on a form beside a hand stamping a red cross shape on a form (no letters)
+believe_doubt|לְהַאֲמִין|leha'amin|to believe|לְפַקְפֵּק|lefakpek|to doubt|verb||a child listening wide-eyed to a story by a campfire beside a man raising one eyebrow with crossed arms
+praise_criticize|לְשַׁבֵּחַ|leshabeach|to praise|לְבַקֵּר|levaker|to criticize|verb||a coach clapping for a player beside a coach frowning and pointing at a mistake on a board
+bless_curse|לְבָרֵךְ|levarekh|to bless|לְקַלֵּל|lekalel|to curse|verb||a parent resting hands on a child's head on a Friday night beside a storm cloud over a cracked dry field
+be_early_be_late|לְהַקְדִּים|lehakdim|to be early|לְאַחֵר|le'acher|to be late|verb||a man waiting calmly at an empty platform before the train beside a man running as the train doors close
+enlarge_shrink|לְהַגְדִּיל|lehagdil|to enlarge|לְהַקְטִין|lehaktin|to shrink|verb||a magnifying glass making a ladybug look huge beside a woollen sweater shrunk tiny after a hot wash
+allow_forbid|לְהַרְשׁוֹת|leharshot|to allow|לֶאֱסֹר|le'esor|to forbid|verb||a guard lifting a barrier for a car beside a guard holding up a palm to stop the car
+appear_disappear|לְהוֹפִיעַ|lehofia|to appear|לְהֵעָלֵם|lehe'alem|to disappear|verb||a rabbit popping out of a top hat beside an empty top hat with a puff of smoke
+catch_throw|לִתְפֹּס|litpos|to catch|לִזְרֹק|lizrok|to throw|verb||a hand catching a ball beside a hand throwing a ball
+stop_continue|לְהַפְסִיק|lehafsik|to stop|לְהַמְשִׁיךְ|lehamshikh|to continue|verb||a cyclist braking at a stop line beside the same cyclist pedalling on past a curve
+keep_throw_away|לִשְׁמֹר|lishmor|to keep|לִזְרֹק|lizrok|to throw away|verb||a hand placing a photo carefully in a keepsake box beside a hand dropping a crumpled paper in a bin
+fill_empty|לְמַלֵּא|lemale|to fill|לְרוֹקֵן|lerokem|to empty|verb||a watering can being filled at a tap beside the watering can being poured out onto plants
+connect_disconnect|לְחַבֵּר|lechaber|to connect|לְנַתֵּק|lenatek|to disconnect|verb||a plug being pushed into a socket beside the plug being pulled out
+marry_divorce|לְהִתְחַתֵּן|lehitchaten|to marry|לְהִתְגָּרֵשׁ|lehitgaresh|to divorce|verb||a couple stepping on a glass under a wedding canopy beside two separate suitcases on opposite ends of a doorstep
+build_destroy|לִבְנוֹת|livnot|to build|לַהֲרֹס|laharos|to destroy|verb||children building a tall sandcastle beside a wave washing the sandcastle away
+earn_spend|לְהַרְוִיחַ|leharviach|to earn|לְהוֹצִיא|lehotzi|to spend|verb||coins dropping into a piggy bank beside coins pouring out of the piggy bank at a shop counter
+agree_refuse|לְהַסְכִּים|lehaskim|to agree|לְסָרֵב|lesarev|to refuse|verb||two people shaking hands beside a person turning away with arms crossed
+speak_be_silent|לְדַבֵּר|ledaber|to speak|לִשְׁתֹּק|lishtok|to be silent|verb||Ari speaking into a microphone beside Ari with a finger on his lips
+run_stop|לָרוּץ|larutz|to run|לַעֲצֹר|la'atzor|to stop|verb||a dog sprinting across a park beside the same dog sitting still at the curb
+lock_open|לִנְעֹל|lin'ol|to lock|לִפְתֹּחַ|liftoach|to open|verb||a padlock clicking shut on a gate beside the padlock hanging open
+deposit_withdraw|לְהַפְקִיד|lehafkid|to deposit|לִמְשֹׁךְ|limshokh|to withdraw (money)|verb||a hand sliding banknotes into a bank machine slot beside a hand taking banknotes out of the machine
+singular_plural|יָחִיד|yachid|singular|רַבִּים|rabim|plural|noun||one single apple on a plate beside a pile of many apples on a plate
+male_female|זָכָר|zakhar|male|נְקֵבָה|nekeva|female|noun||a rooster beside a hen
+past_future|עָבָר|avar|past|עָתִיד|atid|future|noun||a sepia photo album with an old steam train beside a sleek futuristic train under a bright sky
+head_tail|רֹאשׁ|rosh|head|זָנָב|zanav|tail|noun||a lion's head with a full mane beside a lion's tail with a tuft at the end
+rain_drought|גֶּשֶׁם|geshem|rain|בַּצֹּרֶת|batzoret|drought|noun||rain falling on a green field with puddles beside cracked dry earth under a blazing sun
+heat_cold_noun|חֹם|chom|heat|קֹר|kor|cold (weather)|noun||a thermometer with red rising high in the desert beside a thermometer with blue low in a snowstorm (no numbers)
+noise_quiet|רַעַשׁ|ra'ash|noise|שֶׁקֶט|sheket|quiet|noun||a drummer pounding drums with sound waves beside a quiet library corner with one reader
+victory_defeat|נִצָּחוֹן|nitzachon|victory|תְּבוּסָה|tvusa|defeat|noun||a team lifting a cup with confetti falling beside a team walking off a muddy field with heads down
+success_failure|הַצְלָחָה|hatzlacha|success|כִּשָּׁלוֹן|kishalon|failure|noun||a climber planting a flag on a summit beside a climber sliding back down a slope
+wealth_poverty|עֹשֶׁר|osher|wealth|עֹנִי|oni|poverty|noun||a grand house with a fountain beside a small shack with a patched roof
+health_illness|בְּרִיאוּת|briut|health|מַחֲלָה|machala|illness|noun||a bowl of fruit and a skipping rope beside a box of tissues and a thermometer on a bedside table
+righteous_wicked|צַדִּיק|tzadik|righteous person|רָשָׁע|rasha|wicked person|noun||an old man sharing bread with a beggar beside a shadowy figure stealing a purse
+seller_buyer|מוֹכֵר|mokher|seller|קוֹנֶה|kone|buyer|noun||a market vendor behind a stall of oranges beside a shopper holding a basket and choosing an orange
+landlord_tenant|בַּעַל בַּיִת|ba'al bayit|landlord|שׂוֹכֵר|sokher|tenant|noun||a man handing over a house key from the doorway beside a woman carrying moving boxes into the flat
+guest_host|אוֹרֵחַ|ore'ach|guest|מְאָרֵחַ|me'are'ach|host|noun||a guest at a door holding flowers beside a host opening the door with a welcoming arm
+profit_loss|רֶוַח|revach|profit|הֶפְסֵד|hefsed|loss|noun||a green arrow climbing over a pile of coins beside a red arrow falling over a single coin (arrows only, no numbers)
+income_expense|הַכְנָסָה|hakhnasa|income|הוֹצָאָה|hotza'a|expense|noun||a wallet with banknotes flowing in beside a wallet with banknotes flying out
+blessing_curse|בְּרָכָה|bracha|blessing|קְלָלָה|klala|curse|noun||a sunny vineyard heavy with grapes beside a field of dead crops under locusts
+child_adult|יֶלֶד|yeled|child|מְבֻגָּר|mevugar|adult|noun||a small boy on a tricycle beside a grown man riding a bicycle
+sunrise_sunset|זְרִיחָה|zricha|sunrise|שְׁקִיעָה|shki'a|sunset|noun||a sun rising pink over desert hills beside an orange sun setting into the sea
+rise_set|לִזְרֹחַ|lizroach|to rise (sun)|לִשְׁקֹעַ|lishkoa|to set (sun)|verb||a sun climbing above a hilltop with rays beside a sun sinking behind a hilltop with long shadows
+shout_whisper|לִצְעֹק|litzok|to shout|לִלְחֹשׁ|lilchosh|to whisper|verb||Ari shouting with hands cupped around his mouth beside Noa whispering into a friend's ear
+turn_up_down|לְהַגְבִּיר|lehagbir|to turn up (volume)|לְהַנְמִיךְ|lehanmikh|to turn down (volume)|verb||a hand turning a radio knob with big sound waves beside the same hand turning it the other way with tiny sound waves
+lengthen_shorten|לְהַאֲרִיךְ|leha'arikh|to lengthen|לְקַצֵּר|lekatzer|to shorten|verb||a tailor letting down a trouser hem beside scissors trimming a long ribbon short
+master_slave|אָדוֹן|adon|master|עֶבֶד|eved|slave|noun||an Egyptian taskmaster with a whip pointing beside a weary labourer carrying mud bricks (Passover story style)
+freedom_slavery|חֵרוּת|cherut|freedom|עַבְדוּת|avdut|slavery|noun||people walking through a parted sea toward open sky beside heavy broken chains on the ground
+ascent_descent|עֲלִיָּה|aliya|going up|יְרִידָה|yerida|going down|noun||a road climbing steeply up toward Jerusalem stone walls beside the same road winding down to the Dead Sea
+majority_minority|רֹב|rov|majority|מִעוּט|mi'ut|minority|noun||a large flock of white sheep beside two black sheep standing apart
+order_mess|סֵדֶר|seder|order|בָּלָגָן|balagan|mess|noun||spice jars lined up neatly on a shelf beside spice jars knocked over and spilled across a counter
+memory_forgetting|זִכָּרוֹן|zikaron|memory|שִׁכְחָה|shikhcha|forgetfulness|noun||a woman smiling over a photo album beside a woman searching her pockets for her glasses that are on her head
+hope_despair|תִּקְוָה|tikva|hope|יֵאוּשׁ|ye'ush|despair|noun||a seedling pushing up through cracked concrete toward the sun beside a man slumped against a wall in the rain
+courage_fear|אֹמֶץ|ometz|courage|פַּחַד|pachad|fear|noun||a girl stepping onto a high diving board with fists clenched in determination beside a boy hiding under a blanket from a thunderstorm
+laughter_crying|צְחוֹק|tzchok|laughter|בֶּכִי|bekhi|crying|noun||a baby giggling at a toy rattle beside a baby crying with a dropped dummy
+salty_bland|מָלוּחַ|maluach|salty|תָּפֵל|tafel|bland|adj||a pretzel covered in salt crystals beside a plain white rice cake
+upright_bent|זָקוּף|zakuf|upright|כָּפוּף|kafuf|bent|adj||a tall sunflower standing straight beside a sunflower bent over toward the ground
+cruel_merciful|אַכְזָרִי|akhzari|cruel|רַחֲמָן|rachaman|merciful|adj||a boy pulling a cat's tail beside a girl bandaging a bird's wing
+flexible_rigid|גָּמִישׁ|gamish|flexible|נֻקְשֶׁה|nukshe|rigid|adj||a gymnast in a backbend beside a wooden plank lying stiff on two bricks
+ordinary_special|רָגִיל|ragil|ordinary|מְיֻחָד|meyuchad|special|adj||a plain grey pebble beside a sparkling gemstone in the same hand
+important_negligible|חָשׁוּב|chashuv|important|זָנִיחַ|zaniach|negligible|adj||a big golden key on a velvet cushion beside a tiny crumb on a table
+optimistic_pessimistic|אוֹפְּטִימִי|optimi|optimistic|פֶּסִימִי|pesimi|pessimistic|adj||a man pointing at a half-full glass with a grin beside a man frowning at the same glass as half-empty
+big_small_f|גְּדוֹלָה|gdola|big (f.)|קְטַנָּה|ktana|small (f.)|adj|=big_small|
+hot_cold_f|חַמָּה|chama|hot (f.)|קָרָה|kara|cold (f.)|adj|=hot_cold|
+tall_low_f|גְּבוֹהָה|gvoha|tall (f.)|נְמוּכָה|nemukha|low (f.)|adj|=tall_low|
+fast_slow_f|מְהִירָה|mehira|fast (f.)|אִטִּית|itit|slow (f.)|adj|=fast_slow|
+expensive_cheap_f|יְקָרָה|yekara|expensive (f.)|זוֹלָה|zola|cheap (f.)|adj|=expensive_cheap|
+strong_weak_f|חֲזָקָה|chazaka|strong (f.)|חַלָּשָׁה|chalasha|weak (f.)|adj|=strong_weak|
+happy_sad_f|שְׂמֵחָה|smecha|happy (f.)|עֲצוּבָה|atzuva|sad (f.)|adj|=happy_sad|
+old_new_f|יְשָׁנָה|yeshana|old (f., thing)|חֲדָשָׁה|chadasha|new (f.)|adj|=old_new|
+near_far_f|קְרוֹבָה|krova|near (f.)|רְחוֹקָה|rechoka|far (f.)|adj|=near_far|
+full_empty_f|מְלֵאָה|mele'a|full (f.)|רֵיקָה|reika|empty (f.)|adj|=full_empty|
+wide_narrow_f|רְחָבָה|rechava|wide (f.)|צָרָה|tzara|narrow (f.)|adj|=wide_narrow|
+heavy_light_f|כְּבֵדָה|kveda|heavy (f.)|קַלָּה|kala|light (f.)|adj|=heavy_light|
+long_short_f|אֲרֻכָּה|arukka|long (f.)|קְצָרָה|ktzara|short (f.)|adj|=long_short|
+open_closed_f|פְּתוּחָה|ptucha|open (f.)|סְגוּרָה|sgura|closed (f.)|adj|=open_closed|
+clean_dirty_f|נְקִיָּה|nekiya|clean (f.)|מְלֻכְלֶכֶת|melukhlekhet|dirty (f.)|adj|=clean_dirty|
+young_old_f|צְעִירָה|tze'ira|young (f.)|זְקֵנָה|zkena|old (f., person)|adj|=young_old|
+sweet_sour_f|מְתוּקָה|metuka|sweet (f.)|חֲמוּצָה|chamutza|sour (f.)|adj|=sweet_sour|
+good_bad_f|טוֹבָה|tova|good (f.)|רָעָה|ra'a|bad (f.)|adj|=good_bad|
+beautiful_ugly_f|יָפָה|yafa|beautiful (f.)|מְכֹעֶרֶת|mekhoeret|ugly (f.)|adj|=beautiful_ugly|
+rich_poor_f|עֲשִׁירָה|ashira|rich (f.)|עֲנִיָּה|aniya|poor (f.)|adj|=rich_poor|
+hungry_full_f|רְעֵבָה|re'eva|hungry (f.)|שְׂבֵעָה|sve'a|full (f., after eating)|adj|=hungry_full|
+healthy_sick_f|בְּרִיאָה|bri'a|healthy (f.)|חוֹלָה|chola|sick (f.)|adj|=healthy_sick|
+wise_foolish_f|חֲכָמָה|chakhama|wise (f.)|טִפְּשָׁה|tipsha|foolish (f.)|adj|=wise_foolish|
+busy_free_f|עֲסוּקָה|asuka|busy (f.)|פְּנוּיָה|pnuya|free (f., available)|adj|=busy_free|
+fat_thin_f|שְׁמֵנָה|shmena|fat (f.)|רָזָה|raza|thin (f.)|adj|=fat_thin|
+first_last_f|רִאשׁוֹנָה|rishona|first (f.)|אַחֲרוֹנָה|achrona|last (f.)|adj|=first_last|
+early_late_f|מֻקְדֶּמֶת|mukdemet|early (f.)|מְאֻחֶרֶת|meucheret|late (f.)|adj|=early_late|
+safe_dangerous_f|בְּטוּחָה|btucha|safe (f.)|מְסֻכֶּנֶת|mesukenet|dangerous (f.)|adj|=safe_dangerous|
+whole_broken_f|שְׁלֵמָה|shlema|whole (f.)|שְׁבוּרָה|shvura|broken (f.)|adj|=whole_broken|
+alive_dead_f|חַיָּה|chaya|alive (f.)|מֵתָה|meta|dead (f.)|adj|=alive_dead|
+interesting_boring_f|מְעַנְיֶנֶת|meanyenet|interesting (f.)|מְשַׁעֲמֶמֶת|meshaamemet|boring (f.)|adj|=interesting_boring|
+pleasant_disgusting_f|נְעִימָה|ne'ima|pleasant (f.)|מַגְעִילָה|magila|disgusting (f.)|adj|=pleasant_disgusting|
+wet_dry_f|רְטֻבָּה|retuba|wet (f.)|יְבֵשָׁה|yevesha|dry (f.)|adj|=wet_dry|
+deep_shallow_f|עֲמֻקָּה|amukka|deep (f.)|רְדוּדָה|reduda|shallow (f.)|adj|=deep_shallow|
+tired_fresh_f|עֲיֵפָה|ayefa|tired (f.)|רַעֲנַנָּה|raanana|fresh (f.)|adj|=tired_fresh|
+hardworking_lazy_f|חֲרוּצָה|charutza|hardworking (f.)|עֲצֵלָה|atzela|lazy (f.)|adj|=hardworking_lazy|
+married_single_f|נְשׂוּאָה|nesu'a|married (f.)|רַוָּקָה|ravaka|single (f.)|adj|=married_single|
+same_different_f|שָׁוָה|shava|equal (f.)|שׁוֹנָה|shona|different (f.)|adj|=same_different|
+loved_hated_f|אֲהוּבָה|ahuva|loved (f.)|שְׂנוּאָה|snu'a|hated (f.)|adj|=loved_hated|
+calm_nervous_f|רְגוּעָה|regu'a|calm (f.)|עַצְבָּנִית|atzbanit|irritable (f.)|adj|=calm_nervous|
+big_small_pl|גְּדוֹלִים|gdolim|big (pl.)|קְטַנִּים|ktanim|small (pl.)|adj|=big_small|
+hot_cold_pl|חַמִּים|chamim|hot (pl.)|קָרִים|karim|cold (pl.)|adj|=hot_cold|
+tall_low_pl|גְּבוֹהִים|gvohim|tall (pl.)|נְמוּכִים|nemukhim|low (pl.)|adj|=tall_low|
+fast_slow_pl|מְהִירִים|mehirim|fast (pl.)|אִטִּיִּים|itiyim|slow (pl.)|adj|=fast_slow|
+expensive_cheap_pl|יְקָרִים|yekarim|expensive (pl.)|זוֹלִים|zolim|cheap (pl.)|adj|=expensive_cheap|
+strong_weak_pl|חֲזָקִים|chazakim|strong (pl.)|חַלָּשִׁים|chalashim|weak (pl.)|adj|=strong_weak|
+happy_sad_pl|שְׂמֵחִים|smechim|happy (pl.)|עֲצוּבִים|atzuvim|sad (pl.)|adj|=happy_sad|
+old_new_pl|יְשָׁנִים|yeshanim|old (pl., things)|חֲדָשִׁים|chadashim|new (pl.)|adj|=old_new|
+near_far_pl|קְרוֹבִים|krovim|near (pl.)|רְחוֹקִים|rechokim|far (pl.)|adj|=near_far|
+full_empty_pl|מְלֵאִים|mele'im|full (pl.)|רֵיקִים|reikim|empty (pl.)|adj|=full_empty|
+heavy_light_pl|כְּבֵדִים|kvedim|heavy (pl.)|קַלִּים|kalim|light (pl.)|adj|=heavy_light|
+long_short_pl|אֲרֻכִּים|arukkim|long (pl.)|קְצָרִים|ktzarim|short (pl.)|adj|=long_short|
+open_closed_pl|פְּתוּחִים|ptuchim|open (pl.)|סְגוּרִים|sgurim|closed (pl.)|adj|=open_closed|
+clean_dirty_pl|נְקִיִּים|nekiyim|clean (pl.)|מְלֻכְלָכִים|melukhlakhim|dirty (pl.)|adj|=clean_dirty|
+young_old_pl|צְעִירִים|tze'irim|young (pl.)|זְקֵנִים|zkenim|old (pl., people)|adj|=young_old|
+good_bad_pl|טוֹבִים|tovim|good (pl.)|רָעִים|ra'im|bad (pl.)|adj|=good_bad|
+rich_poor_pl|עֲשִׁירִים|ashirim|rich (pl.)|עֲנִיִּים|aniyim|poor (pl.)|adj|=rich_poor|
+healthy_sick_pl|בְּרִיאִים|bri'im|healthy (pl.)|חוֹלִים|cholim|sick (pl.)|adj|=healthy_sick|
+first_last_pl|רִאשׁוֹנִים|rishonim|first (pl.)|אַחֲרוֹנִים|achronim|last (pl.)|adj|=first_last|
+busy_free_pl|עֲסוּקִים|asukim|busy (pl.)|פְּנוּיִים|pnuyim|free (pl., available)|adj|=busy_free|
+big_small_fpl|גְּדוֹלוֹת|gdolot|big (f. pl.)|קְטַנּוֹת|ktanot|small (f. pl.)|adj|=big_small|
+hot_cold_fpl|חַמּוֹת|chamot|hot (f. pl.)|קָרוֹת|karot|cold (f. pl.)|adj|=hot_cold|
+expensive_cheap_fpl|יְקָרוֹת|yekarot|expensive (f. pl.)|זוֹלוֹת|zolot|cheap (f. pl.)|adj|=expensive_cheap|
+old_new_fpl|יְשָׁנוֹת|yeshanot|old (f. pl., things)|חֲדָשׁוֹת|chadashot|new (f. pl.)|adj|=old_new|
+good_bad_fpl|טוֹבוֹת|tovot|good (f. pl.)|רָעוֹת|ra'ot|bad (f. pl.)|adj|=good_bad|
+full_empty_fpl|מְלֵאוֹת|mele'ot|full (f. pl.)|רֵיקוֹת|reikot|empty (f. pl.)|adj|=full_empty|
+open_closed_fpl|פְּתוּחוֹת|ptuchot|open (f. pl.)|סְגוּרוֹת|sgurot|closed (f. pl.)|adj|=open_closed|
+clean_dirty_fpl|נְקִיּוֹת|nekiyot|clean (f. pl.)|מְלֻכְלָכוֹת|melukhlakhot|dirty (f. pl.)|adj|=clean_dirty|
+long_short_fpl|אֲרֻכּוֹת|arukkot|long (f. pl.)|קְצָרוֹת|ktzarot|short (f. pl.)|adj|=long_short|
+fast_slow_fpl|מְהִירוֹת|mehirot|fast (f. pl.)|אִטִּיּוֹת|itiyot|slow (f. pl.)|adj|=fast_slow|
+happy_sad_fpl|שְׂמֵחוֹת|smechot|happy (f. pl.)|עֲצוּבוֹת|atzuvot|sad (f. pl.)|adj|=happy_sad|
+near_far_fpl|קְרוֹבוֹת|krovot|near (f. pl.)|רְחוֹקוֹת|rechokot|far (f. pl.)|adj|=near_far|
+young_old_fpl|צְעִירוֹת|tze'irot|young (f. pl.)|זְקֵנוֹת|zkenot|old (f. pl., people)|adj|=young_old|
+heavy_light_fpl|כְּבֵדוֹת|kvedot|heavy (f. pl.)|קַלּוֹת|kalot|light (f. pl.)|adj|=heavy_light|
+strong_weak_fpl|חֲזָקוֹת|chazakot|strong (f. pl.)|חַלָּשׁוֹת|chalashot|weak (f. pl.)|adj|=strong_weak|

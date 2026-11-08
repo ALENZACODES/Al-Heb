@@ -253,3 +253,10 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
 }
 .wf-game-thumb { display:block; width:100%; height:auto; border-radius:10px; margin-bottom:.55rem; }
 .wf-hub-mascot { float:right; width:88px; height:88px; margin:.25rem 0 .5rem 1rem; }
+/* Tug-of-War: start anywhere in the 600 rounds */
+.tug-picker { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .5rem; margin-block: .6rem; }
+.tug-start-input { width: 5.5rem; min-height: 44px; font: inherit; padding: .3rem .5rem; border-radius: .5rem; border: 1px solid currentColor; }
+.tug-levels { display: inline-flex; flex-wrap: wrap; gap: .3rem; }
+.tug-level { min-width: 44px; min-height: 44px; }
+.tug-help { flex-basis: 100%; margin: 0; font-size: .85rem; }
+.tug-hear { min-width: 44px; min-height: 44px; vertical-align: middle; }

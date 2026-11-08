@@ -34,6 +34,7 @@ export const DEFAULTS = Object.freeze({
   textSize: 'normal',  // 'normal' | 'large' | 'larger' | 'largest' (steps of the root font size)
   lineLength: 'normal', // 'normal' | 'narrow'
   audioFree: false,    // true = this learner does not use audio: Listen buttons are hidden and listening-only questions are replaced by reading ones (src/shell/audiofree.js)
+  veilOptOut: false,   // true = the opening prayer veil never shows; set by the veil's own "Don't show again" button, reversible here in Settings (owner ruling, Nov 7 2026: the veil otherwise stays every-visit)
   // Touch and movement (src/shell/motor.js). Lane: motor and physical.
   targetSize: 'normal', // 'normal' | 'large': bigger buttons, links and fields (CSS variable --tap)
   bottomActions: false, // true = the main buttons of a screen stay at the bottom, within thumb reach
@@ -56,7 +57,7 @@ export const ENUMS = Object.freeze({
 });
 export const GENDER_VALUES = Object.freeze(['m', 'f', 'both']);
 
-const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
+const BOOL_KEYS = new Set(['israelTrack', 'onboarded', 'browserVoiceAnyway', 'showUnapprovedImages', 'writeGodAsGd', 'haptics', 'soundEffects', 'calmMode', 'shortSession', 'showStreak', 'audioFree', 'veilOptOut', 'bottomActions', 'untimed', 'confirmAnswers', 'keyShortcuts']);
 
 /** @param {string} key @param {any} v @returns {{ok:boolean,value?:any}} */
 export function validate(key, v) {

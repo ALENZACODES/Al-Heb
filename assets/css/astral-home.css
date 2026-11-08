@@ -39,6 +39,18 @@
   padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
 }
 .prayer-skip:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-veil-close {
+  position: absolute; top: max(.7rem, env(safe-area-inset-top)); inset-inline-end: .8rem; z-index: 3;
+  width: 48px; height: 48px; border-radius: 50%; border: 2px solid #D9A441;
+  background: transparent; color: #F6F1E7; font: inherit; font-size: 1.7rem; line-height: 1; cursor: pointer;
+}
+.prayer-veil-close:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-noshow {
+  position: absolute; top: max(.7rem, env(safe-area-inset-top)); inset-inline-start: .8rem; z-index: 3;
+  min-height: 48px; background: transparent; color: #F6F1E7; border: none; text-decoration: underline; text-underline-offset: 3px;
+  padding: .55rem .7rem; font: inherit; font-size: .85rem; cursor: pointer; white-space: nowrap;
+}
+.prayer-noshow:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
 .prayer-listen {
   position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-start: 1.2rem; z-index: 2;
   background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
@@ -211,7 +223,7 @@
 }
 .show-portal-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(.55rem, 1.6vw, 1rem);
   margin: 0; padding: 0; list-style: none;
 }
@@ -240,6 +252,7 @@
 .show-portal--wood .show-portal-art { background-position: center, 36% 25%; }
 .show-portal--harvest .show-portal-art { background-position: center, 67% 95%; }
 .show-portal--sky .show-portal-art { background-position: center, 100% 35%; }
+.show-portal--scroll .show-portal-art { background-position: center, 50% 8%; }
 /* Dedicated, text-free historical-artifact photography instead of repeated scenery. */
 .show-portal--clay .show-portal-art {
   background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.22) 67%,rgba(31,58,95,.53) 100%),

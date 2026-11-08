@@ -16,6 +16,12 @@ const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';
 /** Count of opening prayers actually heard: the Awards engine reads this. */
 export const LISTEN_COUNT_KEY = 'alef:opening-prayer:listens:v1';
+/** How often the veil shows. OWNER RULING (Nov 7 2026): 'every-visit' — the
+ *  usability review's once-per-learner-ever was put to the owner and declined.
+ *  The learner's own off switch is "Don't show again" (the veilOptOut
+ *  setting, reversible in Settings). This constant is the whole frequency
+ *  policy: 'once-ever' would show the veil only until the first visit. */
+export const VEIL_FREQUENCY = 'every-visit';
 
 export function prayerKey(p) { return p.he; }
 
@@ -48,8 +54,19 @@ function readAudioPrefs() {
   try {
     const raw = localStorage.getItem('alef:settings');
     const s = raw ? JSON.parse(raw) : {};
-    return { voice: s?.voice === 'm' ? 'm' : 'f', audioFree: s?.audioFree === true };
-  } catch { return { voice: 'f', audioFree: false }; }
+    return { voice: s?.voice === 'm' ? 'm' : 'f', audioFree: s?.audioFree === true, veilOptOut: s?.veilOptOut === true };
+  } catch { return { voice: 'f', audioFree: false, veilOptOut: false }; }
+}
+
+/** "Don't show again": persist the opt-out into the same settings record the
+ *  app reads, so Settings can reverse it. The veil runs before the app boots,
+ *  so it writes the record directly, exactly as it reads it above. */
+function writeVeilOptOut() {
+  try {
+    const raw = localStorage.getItem('alef:settings');
+    const s = raw ? JSON.parse(raw) : {};
+    if (s && typeof s === 'object' && !Array.isArray(s)) { s.veilOptOut = true; localStorage.setItem('alef:settings', JSON.stringify(s)); }
+  } catch { /* private mode: the opt-out lasts this visit only */ }
 }
 
 function luckyNumber() {
@@ -70,6 +87,11 @@ function initPrayerVeil() {
   const en = document.getElementById('alef-prayer-en');
   const listenBtn = document.getElementById('alef-prayer-listen');
   const audioNote = document.getElementById('alef-prayer-audio-note');
+  const closeBtn = document.getElementById('alef-prayer-close');
+  const noShowBtn = document.getElementById('alef-prayer-noshow');
+  // The learner's own off switch wins over everything: no veil at all.
+  if (readAudioPrefs().veilOptOut) { veil.remove(); return; }
+  if (VEIL_FREQUENCY === 'once-ever' && readLocal(VISIT_KEY)) { veil.remove(); return; }
   const firstVisit = !readLocal(VISIT_KEY);
   writeLocal(VISIT_KEY, '1');
   let closed = false;
@@ -138,6 +160,8 @@ function initPrayerVeil() {
   function onReady() { readySeen = true; arm(); }
   function onKey(e) { if (e.key === 'Escape') dismiss(true); }
   veil.addEventListener('click', () => dismiss(true));
+  closeBtn?.addEventListener('click', (e) => { e.stopPropagation(); dismiss(true); });
+  noShowBtn?.addEventListener('click', (e) => { e.stopPropagation(); writeVeilOptOut(); dismiss(true); });
   document.addEventListener('keydown', onKey);
   document.addEventListener('alef:ready', onReady, { once: true });
   // Failsafe only: never trap the learner if the bank fetch hangs. The real

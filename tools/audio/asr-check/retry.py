@@ -32,12 +32,20 @@ SOUND_TEXT = {'alef': 'אַ', 'bet': 'בַּ', 'vet': 'בַ', 'gimel': 'גַּ',
 
 
 def index_row(path):
-    """Any clip listed in audio/INDEX.csv (letters were not in the scan report)."""
-    import csv
+    """Any clip listed in audio/INDEX.csv or in a data/audio manifest (letters, game words) that is not in the scan report."""
+    import csv, glob
     with open(os.path.join(ROOT, 'audio', 'INDEX.csv'), encoding='utf-8') as f:
         for r in csv.DictReader(f):
             if r['file'] == path:
                 return {'pointed_hebrew': r['pointed_hebrew'], 'file': path, 'same_audio_paths': path}
+    for m in sorted(glob.glob(os.path.join(ROOT, 'data', 'audio', 'manifest*.json'))):
+        try:
+            rows = json.load(open(m, encoding='utf-8'))
+        except (OSError, ValueError):
+            continue
+        for e in rows if isinstance(rows, list) else []:
+            if isinstance(e, dict) and e.get('path') == path and e.get('text'):
+                return {'pointed_hebrew': e['text'], 'file': path, 'same_audio_paths': path}
     return None
 
 

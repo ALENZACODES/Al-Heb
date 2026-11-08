@@ -65,6 +65,12 @@ def syllabify(word):
     return '.'.join(parts)
 
 
+def for_google(syl):
+    """de-DE accepts iː but not a bare i, and has no glottal stop (Israeli speech mostly drops it too).
+    Checked with probe.py against the live API on 2026-11-08."""
+    return syl.replace('ʔ', '').replace('i', 'iː')
+
+
 def latin(ipa):
     s = ipa
     for a, b in LATIN:
@@ -89,7 +95,7 @@ def main():
         for w in v['words']:
             for spoken in w['ipa'].split():
                 lab = latin(spoken)
-                syl = syllabify(spoken)
+                syl = for_google(syllabify(spoken))
                 if lab in seen and seen[lab] != syl:
                     conflicts += 1                 # same label, different sound: keep the label unique
                     lab = lab + 'h' * (1 + sum(1 for x in seen if x.rstrip('h') == lab))

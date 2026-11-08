@@ -1,4 +1,4 @@
 # One line per chapter to record, e.g. "genesis 1", or a whole book "exodus", or "all".
 # Saving this file on main starts the recording on GitHub (workflow torah-hebrew).
-# Genesis 1 first, to listen before the rest (run 2).
+# Genesis 1 first, to listen before the rest (run 3).
 genesis 1

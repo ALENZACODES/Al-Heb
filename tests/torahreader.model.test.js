@@ -109,11 +109,13 @@ test('full-Torah grid: navigation skips unbuilt books, portions clip chapters, c
   const index = J('data/corpus/torah/index.json');
   assert.deepEqual(TORAH_BOOKS.map((b) => b.chapters), [50, 40, 27, 36, 34]);
   const avail = availableChapters(index);
-  assert.equal(avail.length, 50, 'the Genesis pilot builds exactly the 50 Genesis chapters');
+  assert.equal(avail.length, 187, 'all five books are built: 187 chapters');
   assert.deepEqual(adjacentChapter(index, 'genesis', 1, 1), { book: 'genesis', chapter: 2 });
   assert.deepEqual(adjacentChapter(index, 'genesis', 2, -1), { book: 'genesis', chapter: 1 });
   assert.equal(adjacentChapter(index, 'genesis', 1, -1), null);
-  assert.equal(adjacentChapter(index, 'genesis', 50, 1), null, 'Exodus is not built yet, so there is no next chapter');
+  assert.deepEqual(adjacentChapter(index, 'genesis', 50, 1), { book: 'exodus', chapter: 1 }, 'Genesis 50 continues into Exodus 1');
+  assert.deepEqual(adjacentChapter(index, 'exodus', 1, -1), { book: 'genesis', chapter: 50 });
+  assert.equal(adjacentChapter(index, 'deuteronomy', 34, 1), null, 'nothing after the last chapter');
   assert.equal(gridPosition(index, 'genesis', 2, 1), 32);
   assert.equal(gridPosition(index, 'deuteronomy', 34, 12), index.counts.verses);
   const bereshit = index.parshiyot[0];

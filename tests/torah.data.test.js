@@ -29,8 +29,8 @@ test('T1.1 grid completeness: 5 books, 187 chapters in the grid; built books are
   assert.equal(index.counts.chapters, 187);
   assert.equal(index.counts.verses, index.books.reduce((s, b) => s + b.verses, 0));
   for (const b of index.books) assert.equal(b.verses, b.chapterVerses.reduce((s, n) => s + n, 0), b.id);
-  // The pilot builds Genesis only; the other books are counted in the grid, not yet shipped.
-  assert.deepEqual(builtBooks.map((b) => b.id), ['genesis']);
+  // All five books are built (Genesis 2026-11-07, Exodus to Deuteronomy 2026-11-08).
+  assert.deepEqual(builtBooks.map((b) => b.id), ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy']);
   for (const b of builtBooks) {
     assert.equal(b.chaptersAvailable, b.chapters);
     const dir = fs.readdirSync(new URL(`data/corpus/torah/${b.id}/`, root)).filter((f) => f.endsWith('.json'));
@@ -57,7 +57,11 @@ test('T1.2 alignment: every built chapter was proven against its guide, and re-s
   }
   // The only chapters in the whole Torah whose verse boundaries moved (fetch-report.json is the record).
   assert.deepEqual(report.realignments.map((r) => `${r.book} ${r.chapter}`), ['exodus 20', 'numbers 26', 'deuteronomy 5']);
-  for (const c of report.chapters) assert.equal(c.mapping, null, 'no Genesis chapter needed re-segmentation');
+  const moved = new Set(['exodus 20', 'numbers 26', 'deuteronomy 5']);
+  for (const c of report.chapters) {
+    if (moved.has(`${c.book} ${c.chapter}`)) assert.match(String(c.mapping), /re-segmented/, `${c.book} ${c.chapter}`);
+    else assert.equal(c.mapping, null, `${c.book} ${c.chapter}: no re-segmentation`);
+  }
 });
 
 test('T1.3 licence tripwires: JPS 1917 only, pinned in the tool, attributed in every chapter', () => {

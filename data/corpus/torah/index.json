@@ -1,6 +1,6 @@
 {
  "schema": "alef-torah-index/1",
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "counts": {
   "books": 5,
   "chapters": 187,
@@ -117,7 +117,7 @@
     43,
     38
    ],
-   "chaptersAvailable": 0
+   "chaptersAvailable": 40
   },
   {
    "id": "leviticus",
@@ -154,7 +154,7 @@
     46,
     34
    ],
-   "chaptersAvailable": 0
+   "chaptersAvailable": 27
   },
   {
    "id": "numbers",
@@ -200,7 +200,7 @@
     34,
     13
    ],
-   "chaptersAvailable": 0
+   "chaptersAvailable": 36
   },
   {
    "id": "deuteronomy",
@@ -244,7 +244,7 @@
     29,
     12
    ],
-   "chaptersAvailable": 0
+   "chaptersAvailable": 34
   }
  ],
  "parshiyot": [

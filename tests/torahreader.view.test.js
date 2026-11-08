@@ -301,8 +301,8 @@ test('Torah home screen: five books, 54 portions, week card, study entries, labe
   const books = root.queryAll('.trd-book');
   assert.equal(books.length, 5);
   assert.ok(sel(root, '[data-book-open="genesis"]'), 'Genesis is openable');
-  assert.equal(root.queryAll('[data-book-open="exodus"]').length, 0, 'Exodus is not openable yet');
-  assert.match(books[1].textContent, /Coming soon/);
+  for (const b of ['exodus', 'leviticus', 'numbers', 'deuteronomy']) assert.ok(sel(root, `[data-book-open="${b}"]`), `${b} is openable`);
+  assert.doesNotMatch(root.textContent, /Coming soon/);
   assert.equal(root.queryAll('.trd-portion').length, 54);
   assert.ok(root.queryAll('.trd-week').length === 1 && /parasha/.test(root.queryAll('.trd-week')[0].textContent));
   assert.ok(root.textContent.includes('Read in Israeli Hebrew.'));

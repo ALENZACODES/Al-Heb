@@ -3,6 +3,22 @@ import assert from 'node:assert/strict';
 import { createAudio } from '../src/audio/player.js';
 const kind = 'torah-chapter-en', id = 'torah-en-genesis-1';
 const row = (voice, extra = {}) => ({ kind, id, voice, tradition: 'english', status: 'tts', source: 'paid-cloud', provider: 'google', text: 'In the beginning', path: `audio/${voice}/english/${kind}/${id}.mp3`, ...extra });
+
+test('chapter speed changes live without restarting or changing pitch', async () => {
+  let media, starts = 0;
+  const events = [];
+  class Audio { constructor() { media = this; this.currentTime = 15; } play() { starts++; this.onplaying(); } pause() {} }
+  const audio = createAudio({ settings: { voice: 'm' }, manifest: [row('m')], AudioCtor: Audio });
+  const playing = audio.play(kind, id, { tradition: 'english', rate: 0.75, onMedia: e => events.push(e) });
+  assert.equal(media.playbackRate, 0.75);
+  assert.equal(audio.setPlaybackRate(1.25), 1.25);
+  assert.equal(media.playbackRate, 1.25);
+  assert.equal(media.currentTime, 15); assert.equal(starts, 1); assert.equal(media.preservesPitch, true);
+  assert.equal(events.at(-1).rate, 1.25);
+  assert.equal(audio.setPlaybackRate(9), 1.5);
+  audio.stop(); await playing;
+  assert.equal(audio.setPlaybackRate(1), null);
+});
 function player(manifest, voice, fail = false) {
   const played = [], spoken = [];
   class Audio { constructor(url) { played.push(url); } play() { queueMicrotask(() => fail ? this.onerror() : this.onended()); } pause() {} }

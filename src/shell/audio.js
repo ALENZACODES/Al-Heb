@@ -44,7 +44,7 @@ export function describeResult(r, congregation = 'israeli') {
 /** Status from a real media event. Clicking Play does not produce this line. */
 export function playbackLine(ev, plan = ev || {}) {
   const who = `${plan.voice === 'm' ? 'man' : 'woman'}, ${traditionCaption(plan.tradition, plan.fileTradition)}`;
-  const speed = ev?.rate === 0.7 ? ' Slow, 0.7×.' : ' Normal speed.';
+  const speed = ev?.rate === 0.7 ? ' Slow, 0.7×.' : ev?.rate === 1 || !Number.isFinite(ev?.rate) ? ' Normal speed.' : ` ${ev.rate}× speed.`;
   if (ev?.type === 'playing' && (plan.source === 'file' || ev?.source === 'file')) {
     return { mode: 'file', text: `Playing: ${fileLabel(plan.entryStatus, plan.fileTradition || plan.tradition, plan.entrySource)} (${who}).${speed}` };
   }

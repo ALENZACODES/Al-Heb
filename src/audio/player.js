@@ -29,6 +29,13 @@ export function clipPlaybackRate(value) {
   return 1;
 }
 
+/** Chapter recordings allow a continuous, pitch-preserving reading pace. */
+export function chapterPlaybackRate(value) {
+  if (value === 'slow') return 0.7;
+  return typeof value === 'number' && Number.isFinite(value) ? Math.max(0.5, Math.min(1.5, value)) : 1;
+}
+const isChapter = (kind) => kind === 'torah-chapter' || kind === 'torah-chapter-en';
+
 /** A speechSynthesis voice that is actually Hebrew, or null. An empty list is null, not "try the default voice". */
 export function hebrewSynthesisVoice(speech) {
   if (!speech || typeof speech.getVoices !== 'function') return null;
@@ -277,6 +284,10 @@ export function createAudio(opts) {
       let settled = false;
       const finish = (result) => { if (settled) return; settled = true; resolve(result); };
       current = { stop: () => { try { a.pause(); } catch { /* ignore */ } emitMedia(p, 'stopped'); finish({ ok: true, stopped: true }); } };
+      if (isChapter(p.kind)) current.setPlaybackRate = (value) => {
+        const rate = chapterPlaybackRate(value);
+        try { a.playbackRate = rate; p.rate = rate; emitMedia(p, 'playing'); return rate; } catch { return null; }
+      };
       a.onplaying = () => emitMedia(p, 'playing');
       a.onended = () => { emitMedia(p, 'ended'); finish({ ok: true, ended: true }); };
       a.onerror = () => { emitMedia(p, 'error'); finish({ ok: false, error: 'file-error' }); };
@@ -305,7 +316,8 @@ export function createAudio(opts) {
   }
 
   function withRate(p, o) {
-    return { ...p, rate: clipPlaybackRate(o.rate ?? settings.clipRate ?? settings.ttsRate), onMedia: o.onMedia };
+    const rateOf = isChapter(p.kind) ? chapterPlaybackRate : clipPlaybackRate;
+    return { ...p, rate: rateOf(o.rate ?? settings.clipRate ?? settings.ttsRate), onMedia: o.onMedia };
   }
 
   /** Kinds short enough to copy back after one hearing. Lines, prayers and sequences never echo. */
@@ -419,6 +431,8 @@ export function createAudio(opts) {
     echo,
     playSequence,
     stop,
+    /** Change an active chapter's pace without seeking, restarting, or changing pitch. */
+    setPlaybackRate: (rate) => current?.setPlaybackRate?.(rate) ?? null,
     /** true only when a real recorded/rendered file would be used (never for TTS fallback). */
     has: (kind, id, o) => plan(kind, id, o).source === 'file',
     /** what play() would use right now, without playing. */

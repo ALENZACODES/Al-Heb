@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book25-p01.mp3"
    },
    "illustration": "a woman in a blazer checking herself in a hallway mirror",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book25-p02.mp3"
    },
    "illustration": "a glass office tower, she looks up at it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book25-p03.mp3"
    },
    "illustration": "her hand smoothing her jacket, a deep breath",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book25-p04.mp3"
    },
    "illustration": "the elevator doors opening on a bright open office",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book25-p05.mp3"
    },
    "illustration": "a firm handshake with a woman in her fifties",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book25-p06.mp3"
    },
    "illustration": "the interviewer gesturing to a chair",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book25-p07.mp3"
    },
    "illustration": "the interviewer with a notepad",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book25-p08.mp3"
    },
    "illustration": "the woman opening a tablet of designs",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book25-p09.mp3"
    },
    "illustration": "the interviewer nodding at the screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book25-p10.mp3"
    },
    "illustration": "the interviewer leaning forward",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book25-p11.mp3"
    },
    "illustration": "the woman speaking with warmth, pointing at a poster on the wall",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book25-p12.mp3"
    },
    "illustration": "the two women laughing, coffee cups",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

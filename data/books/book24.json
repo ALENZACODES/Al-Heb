@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book24-p01.mp3"
    },
    "illustration": "a man slumped at an office desk, late afternoon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book24-p02.mp3"
    },
    "illustration": "his head on the keyboard, the screen glowing with blurred lines of type",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book24-p03.mp3"
    },
    "illustration": "a third empty cup joining two others",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book24-p04.mp3"
    },
    "illustration": "yawning at the screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book24-p05.mp3"
    },
    "illustration": "the man on a bus with his eyes closed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book24-p06.mp3"
    },
    "illustration": "eating cereal standing at the counter",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book24-p07.mp3"
    },
    "illustration": "the sofa, the glow, his eyes half shut",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book24-p08.mp3"
    },
    "illustration": "asleep in his work clothes, remote on his chest",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book24-p09.mp3"
    },
    "illustration": "the phone buzzing on the floor",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book24-p10.mp3"
    },
    "illustration": "a friend in running gear on a video call",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book24-p11.mp3"
    },
    "illustration": "the man answering with eyes closed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book24-p12.mp3"
    },
    "illustration": "the man asleep, the TV still on, the cat on his feet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

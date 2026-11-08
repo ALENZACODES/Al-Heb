@@ -26,7 +26,7 @@ def duration_ms(path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--book', required=True)
+    ap.add_argument('--book')
     ap.add_argument('--chapter', type=int)
     a = ap.parse_args()
     plan = json.loads((HERE / 'plan.json').read_text(encoding='utf8'))
@@ -34,7 +34,7 @@ def main():
     manifest = json.loads(MANIFEST.read_text(encoding='utf8'))
     added, missing = 0, 0
     for r in plan:
-        if r['book'] != a.book or (a.chapter and r['chapter'] != a.chapter):
+        if (a.book and r['book'] != a.book) or (a.chapter and r['chapter'] != a.chapter):
             continue
         clip = HERE / r['path']
         side = Path(str(clip) + '.json')

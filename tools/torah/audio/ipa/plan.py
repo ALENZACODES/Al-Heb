@@ -7,6 +7,7 @@ same Ari (Charon) and Noa (Kore) voices under de-DE, as the Deuteronomy 6:4 pilo
 
   python plan.py                       # every verse, both voices
   python plan.py --book genesis --chapter 1
+  python plan.py --skip-installed        # only what the app does not have yet
 """
 import argparse
 import hashlib
@@ -76,7 +77,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--book')
     ap.add_argument('--chapter', type=int)
+    ap.add_argument('--skip-installed', action='store_true', help='leave out verses whose clip is already in the app')
     a = ap.parse_args()
+    root = HERE.parents[3]
     verses = json.loads((HERE / 'ipa.json').read_text(encoding='utf8'))
     rows, conflicts, chars = [], 0, 0
     for v in verses:
@@ -96,6 +99,8 @@ def main():
                 labels.append(lab)
         text = ' '.join(labels) + '.'
         for speaker, (gender, voice) in VOICES.items():
+            if a.skip_installed and (root / f"audio/{gender}/israeli/line/{v['id']}.mp3").exists():
+                continue
             fid = f"{v['id']}-{speaker}"
             body = {'text': text, 'customPronunciations': {'pronunciations': prons}}
             fp = hashlib.sha256(json.dumps({'input': body, 'voice': voice, 'enc': 'MP3', 'rate': 24000}, ensure_ascii=False, sort_keys=True).encode()).hexdigest()

@@ -1,0 +1,67 @@
+name: torah-hebrew
+# Records the Hebrew Torah verses listed in tools/torah/audio/ipa/queue.txt with the Ari and Noa voices, puts them in the app
+# and commits them as John Khan. Starts when queue.txt changes on main (or by hand from the Actions tab).
+# Verses already in the app are skipped, so a rerun only pays for what is missing.
+# Needs the repository secret GOOGLE_TTS_API_KEY (Settings -> Secrets and variables -> Actions -> New repository secret).
+on:
+  push:
+    branches: [main]
+    paths: ['tools/torah/audio/ipa/queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: torah-hebrew
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      LANG: C.UTF-8
+      TZ: UTC
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version: 22 }
+      - name: Key present
+        run: if [ -z "$GOOGLE_TTS_API_KEY" ]; then echo "::notice::No GOOGLE_TTS_API_KEY secret yet, so nothing was recorded"; fi
+      - name: ffmpeg (clip length)
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: sudo apt-get update -y && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Record and install each queued chapter
+        if: env.GOOGLE_TTS_API_KEY != ''
+        shell: bash
+        run: |
+          set -eu
+          cd tools/torah/audio/ipa
+          grep -v '^\s*#' queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
+            args="--skip-installed"
+            if [ "$book" != "all" ]; then args="$args --book $book"; fi
+            if [ -n "${chapter:-}" ]; then args="$args --chapter $chapter"; fi
+            echo "== $book ${chapter:-}"
+            python3 plan.py $args
+            # four workers, each paced to about one request a second
+            for s in 0 1 2 3; do pwsh -NoProfile -File render.ps1 -Shard $s -Shards 4 & done
+            wait
+            if [ "$book" = "all" ]; then python3 install.py; else python3 install.py --book "$book" ${chapter:+--chapter "$chapter"}; fi
+          done
+      - name: Refresh audio summary and offline list; Torah tests
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: |
+          node tools/audio/summary.mjs
+          node tools/build-precache.mjs
+          node --test tests/torahreader.model.test.js tests/torahreader.view.test.js
+          node tools/audio/summary.mjs --check
+      - name: Commit and push as John Khan
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: |
+          set -eu
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          git add audio data/audio precache-manifest.js
+          if git diff --cached --quiet; then echo "nothing new to commit"; exit 0; fi
+          n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
+          git commit -m "Torah Hebrew reading: $n verse clips (Ari and Noa)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done

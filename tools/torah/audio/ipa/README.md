@@ -13,7 +13,11 @@ Google's Hebrew voices guess at Biblical words, and the earlier pilots in `docs/
 
 `ipa.json` holds the result for all 5,846 verses and 68,543 words: the source word, its IPA and a note on anything that was not read straight from a mark.
 
-## Recording (Windows, Command Prompt, from `C:\Users\user\Al-Heb`)
+## Recording on GitHub (Automatic)
+
+Add your Google key once as the repository secret `GOOGLE_TTS_API_KEY` (Settings, Secrets and variables, Actions). After that, list chapters in `queue.txt` (`genesis 1`, a whole book such as `exodus`, or `all`) and save it on main. The `torah-hebrew` workflow records the verses the app does not have yet, puts them in the app and commits them as John Khan.
+
+## Recording on Your PC (Windows, Command Prompt, from `C:\Users\user\Al-Heb`)
 
 You only need Python 3 (the `py` launcher) and the PowerShell that comes with Windows; `ipa.json` is already built. First `cd C:\Users\user\Al-Heb` and `git pull`.
 

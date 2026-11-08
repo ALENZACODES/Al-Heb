@@ -102,6 +102,20 @@ export function normalizeClip(file, { lufs = -16, tp = -1.5, lra = 11 } = {}) {
   return true;
 }
 
+/** A dropped connection ("fetch failed") is retried 4 times (2, 4, 8, 16 s) and its real cause printed; an HTTP error from the
+ *  provider (bad key, quota) is not retried. */
+export async function withRetry(fn, label = '', log = console.log, waits = [2000, 4000, 8000, 16000]) {
+  for (let i = 0; ; i++) {
+    try { return await fn(); } catch (e) {
+      const cause = e && e.cause ? (e.cause.code || e.cause.message || String(e.cause)) : '';
+      const network = /fetch failed|network|ECONN|ETIMEDOUT|ENOTFOUND|EAI_AGAIN|UND_ERR|socket/i.test(`${e && e.message} ${cause}`);
+      if (!network || i >= waits.length) { if (cause) e.message = `${e.message} (${cause})${label ? ` at ${label}` : ''}`; throw e; }
+      log(`  network error at ${label}: ${e.message}${cause ? ` (${cause})` : ''}; retrying in ${waits[i] / 1000}s`);
+      await new Promise((res) => setTimeout(res, waits[i]));
+    }
+  }
+}
+
 /**
  * Render rows. Israeli rows: file + `tts:<provider>` sidecar as before. Sephardi/ashkenazi rows (spokenText set): the respelling is
  * sent, the clip is normalized, then tempo-capped against the Israeli counterpart (cap, default 1.26; `cap: 0` skips), and the
@@ -111,7 +125,7 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
   const written = [];
   for (const r of rows) {
     const accent = typeof r.spokenText === 'string';
-    const buf = await provider.synthesize({ text: textToSend(r), voice: r.voice, env, ...(accent ? { languageCode: 'he-IL' } : {}) }, fetchImpl);
+    const buf = await withRetry(() => provider.synthesize({ text: textToSend(r), voice: r.voice, env, ...(accent ? { languageCode: 'he-IL' } : {}) }, fetchImpl), r.path, log);
     const out = path.join(root, r.path);
     fs.mkdirSync(path.dirname(out), { recursive: true });
     fs.writeFileSync(out, buf);

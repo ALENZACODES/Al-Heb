@@ -52,10 +52,9 @@ test('every games-hub card has a backdrop scene that resolves approved', () => {
   }
 });
 
-test('home hero loads Rimon when the image resolver is ready (not a sync read)', () => {
+test('home hero uses the shared animated Rimon', () => {
   const src = read('src/shell/showcase.js');
-  assert.match(src, /loadGameImages\(ctx\)\.then/);
-  assert.match(src, /MASCOT_rimon/);
+  assert.match(src, /rimonInline\(\)/);
   assert.doesNotMatch(src, /ctx\?\.img \? ctx\.img/);
 });
 

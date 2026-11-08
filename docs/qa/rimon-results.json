@@ -1,0 +1,90 @@
+{
+  "poses": 16,
+  "seen": [
+    "idle:0",
+    "wave:13",
+    "wave:14",
+    "wave:0",
+    "blink:1",
+    "blink:2",
+    "blink:0",
+    "sad:10",
+    "sad:0",
+    "laugh:7",
+    "laugh:8",
+    "bounce:9",
+    "bounce:7",
+    "bounce:0",
+    "point:11",
+    "point:12",
+    "point:0",
+    "stretch:0",
+    "stretch:6",
+    "stretch:15"
+  ],
+  "routes": [
+    "/",
+    "/awards",
+    "/progress",
+    "/daily"
+  ],
+  "phoneWidth": 375,
+  "dismissRestores": true,
+  "reducedMotionInitialAndDynamic": true,
+  "idleYawnVirtualClock": true,
+  "errors": [],
+  "badAssets": [],
+  "gameEnds": [
+    {
+      "game": "tugowar",
+      "width": 960
+    },
+    {
+      "game": "wordbuilder",
+      "width": 960
+    },
+    {
+      "game": "wordfinder",
+      "width": 960
+    },
+    {
+      "game": "tugowar",
+      "width": 375
+    },
+    {
+      "game": "wordbuilder",
+      "width": 375
+    },
+    {
+      "game": "wordfinder",
+      "width": 375
+    }
+  ],
+  "gameErrors": [],
+  "sheet": {
+    "width": 1254,
+    "height": 1254,
+    "distinct": 16,
+    "hashes": [
+      "a1878a495f0f769b029209adb976fe86038a2b3366699140d9ccbb6e15a2b689",
+      "ace0e34f9cc10cac6c6b80b30240ffec684810578425b282658adda8cdd32914",
+      "3b4efa8b58429c0484bdd7720e04f1c29a2f44408565e26f4af41b4b5d26c258",
+      "26e3a206174ad2b6fd5a914e4c9734369c31d71eeece42b5f09cc229ef2659e9",
+      "d0ea75c85a8386264948766200281cdff341ab588c840da99be47fed2d20540f",
+      "de644bfb6511fe63739360a5970823cf80e6aabe847d76e9b8e88e68333c3c8e",
+      "329051089e62cad1901fbe4c95c41de50c4f0643e3e6898ecf8f74eba0f2b569",
+      "8597ade5b4d5f0b08c8e54f6677ae86da4f356109903add7ae74935135f9add3",
+      "7969080ab8c0ea9c1521bc8b0b03014a2ec0db2cd0b4f2c882c0873c86640a4c",
+      "434f86a5e089289be39726935b702536a157a527a55b00eda632cca5d3e25e53",
+      "eacba521a670a553e8e6964828bb02cd3f6cb39bb04223e85c17bb54a85646a6",
+      "185c13f9e627fe03ead98b4948df42267d84e600f2f40d30fe269db5bad8cb13",
+      "dc114bd94d142f6d467ff1e1950b6c3e605fa1783b68e6979a50e915e4bffdb0",
+      "8ae03eebdc4aaad02cc846972db1f15fa6e7fd512def7f296254b01480648555",
+      "fa42bc02b5f95526d371d1666fde75b963439990ac13d7142cf08ccb2793d0e3",
+      "391983afd366ee7e29b78c44f0fdf155f8039ac25b9652408975d59f533a74bc"
+    ]
+  },
+  "homeConsoleErrors": [],
+  "focusedTestsPassed": 129,
+  "gifSeconds": 20
+}

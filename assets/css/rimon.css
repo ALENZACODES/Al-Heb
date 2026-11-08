@@ -1,0 +1,18 @@
+.rimon-sprite{display:block;width:160px;aspect-ratio:1;background-image:url('../img/rimon/rimon-sprite.png');background-size:400% 400%;background-position:0 0;background-repeat:no-repeat;transform-origin:50% 92%;pointer-events:none}
+.rimon-sprite[data-action=idle]{animation:rimon-breathe 4.5s ease-in-out infinite}
+.rimon-sprite[data-action=bounce]{animation:rimon-bounce .32s ease-in-out infinite}
+.rimon-sprite[data-action=sad]{animation:rimon-shake .3s ease-in-out 2}
+.rimon-dock{position:fixed;right:max(.6rem,env(safe-area-inset-right));bottom:1rem;z-index:35;display:flex;flex-direction:column;align-items:center;pointer-events:none;width:168px}
+.rimon-dock[hidden],.rimon-restore[hidden],.rimon-next[hidden]{display:none}
+.rimon-close{align-self:flex-end;width:44px;height:44px;line-height:1;font-size:1.5rem;border:1px solid #6a7d65;border-radius:50%;background:#fff9e9;color:#16301c;cursor:pointer;pointer-events:auto;margin-bottom:-12px;z-index:1}
+.rimon-next,.rimon-restore{pointer-events:auto;min-height:44px;padding:.5rem .7rem;border:1px solid #6a7d65;border-radius:.75rem;background:#fff9e9;color:#16301c;font-weight:600;text-align:center;display:flex;align-items:center;justify-content:center}
+.rimon-restore{position:fixed;right:.6rem;bottom:1rem;z-index:35;cursor:pointer}
+.rimon-inline .rimon-sprite{width:clamp(150px,24vw,280px);max-width:100%}.rimon-dismissed .rimon-inline{visibility:hidden}
+@media(min-width:701px){.rimon-inline-visible:not(.rimon-reacting) .rimon-dock{visibility:hidden}}
+@media(max-width:700px){.rimon-dock{width:92px;bottom:calc(5rem + env(safe-area-inset-bottom))}.rimon-dock .rimon-sprite{width:92px}.rimon-close{margin-bottom:-18px}.rimon-restore{bottom:calc(5rem + env(safe-area-inset-bottom))}.rimon-next{font-size:.75rem;padding:.3rem}.rimon-inline{display:none}}
+@keyframes rimon-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.015,1.025)}}
+@keyframes rimon-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes rimon-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+@media(prefers-reduced-motion:reduce){.rimon-sprite,.rimon-sprite[data-action]{animation:none!important;transition:none!important;transform:none!important;background-position:0 0!important}}
+
+.rimon-next{position:absolute;bottom:100%;right:0;max-width:168px}

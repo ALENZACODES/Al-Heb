@@ -1,3 +1,4 @@
+import { signalRimon } from '../shell/rimon-events.js';
 // ALEF games engine — shared plumbing for the mini-game views.
 // Zero-dependency ES module, written against the same ctx contract as the
 // rest of the app: mount(root, ctx) with ctx = { settings, store, audio,
@@ -37,6 +38,7 @@ export function createSession({ store = null, storeKey = '', par = 10 } = {}) {
   let score = 0, streak = 0, bestStreak = 0, rounds = 0, correct = 0;
   return {
     answer(ok) {
+      signalRimon(ok ? 'correct' : 'wrong');
       rounds++;
       if (ok) { correct++; streak++; score += 10 + Math.min(streak - 1, 5) * 2; }
       else { streak = 0; score = Math.max(0, score - 3); }
@@ -185,6 +187,7 @@ export async function speak(ctx, hebrew, opts = {}) {
 export function resultsCard(h, heSpan, session, { title, onAgain, homeHref = '#/learn' }) {
   const stars = session.stars();
   const rec = session.saveBest();
+  signalRimon(stars ? 'correct' : 'wrong');
   return h('section', { class: 'card game-results', 'aria-labelledby': 'game-results-h' },
     h('h2', { id: 'game-results-h' }, title),
     h('p', { class: 'game-stars', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),

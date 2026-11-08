@@ -1,3 +1,4 @@
+import { signalRimon } from '../shell/rimon-events.js';
 /** Store-backed learning actions shared by the Lane 1 views and the home screen. */
 import { storeGet, storeSet, storeWriteAll, PROGRESS_KEY, CARDS_KEY, STREAK_KEY } from "./dom.js";
 import { loadState } from "./state.js";
@@ -8,6 +9,11 @@ import { nextFadeLevel } from "./fade.js";
 import { memoryCardsFor, ensureMemoryCards } from "../letters/memory.core.js";
 import { loadContent } from "./content.js";
 export { loadState };
+import { available } from './lessons.js';
+function pointToNext(lesson, completed) {
+  const next = available(Object.keys(completed), lesson.track)[0];
+  signalRimon('lesson', { nextHref: next ? '#/learn?lesson=' + encodeURIComponent(next.id) : '#/learn' });
+}
 
 /**
  * Work out every write that counting a lesson as done needs, without writing anything. `old` is what each key holds now, so a failed batch can be undone.
@@ -35,6 +41,7 @@ async function planCompletion(ctx, lesson, now, applyOutcomes) {
 export async function completeLesson(ctx, lesson, now = Date.now()) {
   const { added, completed, writes } = await planCompletion(ctx, lesson, now);
   await storeWriteAll(ctx, writes);
+  pointToNext(lesson, completed);
   return { added, completed };
 }
 
@@ -239,7 +246,8 @@ export async function saveQuickCheck(ctx, lesson, questions, results, now = Date
   if (!questions.length || !Object.keys(results).length) return { added: 0, updated: 0, completed: false };
   const outcomes = questions.filter((q) => q.cardId && q.id in results).map((q) => ({ id: q.cardId, kind: q.cardKind || "word", good: !!results[q.id], create: true }));
   // One batch: the lesson's cards, the answers' effect on them, the done mark and the streak are written together or not at all (throws StoreWriteError).
-  const { added, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null);
+  const { added, completed, writes } = await planCompletion(ctx, lesson, now, outcomes.length ? (cards) => applyOutcomesToCards(cards, outcomes, now) : null);
   await storeWriteAll(ctx, writes);
+  pointToNext(lesson, completed);
   return { added, updated: outcomes.length, completed: true };
 }

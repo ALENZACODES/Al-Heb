@@ -5,7 +5,7 @@
 import { h, heSpan } from './ui.js';
 import { astralTreeNode } from './astral-tree.js';
 import { builderNode } from '../home/builder.js';
-import { loadGameImages, imgOf } from '../games/engine.js';
+import { rimonInline } from './rimon.js';
 
 const TILES = [
   ['firstday', '#/firstday', 'Your First 10 Minutes', 'עֲשָׂרָה', 'Build your first word, letter by letter'],
@@ -60,7 +60,7 @@ export function showcaseNode(ctx) {
     h('li', {}, h('a', { class: 'show-tile', href },
       h('span', { class: 'show-tile-title' }, title, ' ', heSpan(he)),
       h('span', { class: 'show-tile-hook' }, hook))));
-  const mascotBox = h('div', { class: 'show-mascot-box' });
+  const mascotBox = h('div', { class: 'show-mascot-box' }, rimonInline());
   const heroText = h('div', { class: 'show-hero-text' },
     h('div', { class: 'show-hero-copy' },
     h('p', { class: 'show-kicker' }, 'The Tree of Life'),
@@ -71,14 +71,6 @@ export function showcaseNode(ctx) {
       ' ',
       h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book'))),
     mascotBox);
-  // Rimon beside the hero copy. The image resolver loads lazily on first
-  // paint, so a synchronous ctx.img read is empty on the first visit — fetch
-  // the mascot when the resolver is ready and insert it then. A missing
-  // picture leaves the hero exactly as it was.
-  loadGameImages(ctx).then((R) => {
-    const im = R ? imgOf(R, 'id', 'MASCOT_rimon') : null;
-    if (im?.src && mascotBox.isConnected) mascotBox.appendChild(h('img', { class: 'show-mascot', src: im.src, alt: im.alt, width: im.width, height: im.height }));
-  }).catch(() => {});
   return h('section', { class: 'showcase', 'aria-label': 'Explore ALEF' },
     h('div', { class: 'show-hero' },
       astralTreeNode(),

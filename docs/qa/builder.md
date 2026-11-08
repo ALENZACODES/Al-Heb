@@ -1,8 +1,8 @@
 # Front-page builder — Task 1
 
 Tested November 7, 2026 (America/Toronto). Implementation and automated
-checks are complete. The user approved the ten-clip listening sample with
-“sounds fine.” Playback checks alone do not establish pronunciation quality.
+checks are complete. The user said the sample “sounds fine,” conditional on
+its correctness. Pronunciation still requires independent listening review.
 
 ## Changes
 
@@ -55,8 +55,8 @@ checks are complete. The user approved the ten-clip listening sample with
 
 ## Listening check
 
-The user approved the combined ten-clip listening sample with “sounds fine.”
-This records user feedback on the sample, not an independent educator review.
+The user said the sample “sounds fine,” then clarified “if its correct.”
+This is conditional feedback, not confirmation of pronunciation correctness.
 The sample contains these clips, in order:
 
 1. shalom — Ari

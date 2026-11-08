@@ -1,3 +1,4 @@
+import { signalRimon } from '../shell/rimon-events.js';
 // Arcade: the shared DOM layer for the arcade games. One contract for all of them:
 //   const A = await createArcade(root, ctx, spec); A.onRound(setupFn); A.begin();
 // It gives every game the same five levels, HUD, timer, score saver with badges, daily
@@ -153,9 +154,9 @@ export async function createArcade(root, ctx, spec) {
     get record() { return record; },
     cast: castArt,
     announce(text) { status.textContent = text; },
-    addScore(n) { score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
+    addScore(n) { if(n>0) signalRimon('correct'); score = Math.max(0, score + n); hudScore.textContent = `Score ${score}`; },
     setLives(n) { lives = n; hudLives.textContent = n > 0 ? '♥'.repeat(Math.min(n, 5)) + (n > 5 ? `+${n - 5}` : '') : ''; },
-    miss() { misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
+    miss() { signalRimon('wrong'); misses += 1; if (lives > 0) { A.setLives(lives - 1); if (lives === 0) { A.finish({ reason: 'lives' }); return true; } } return false; },
     sfx(name) { try { if (!quiet) sfx.play(name); } catch { /* sound is optional */ } },
     /** Recorded Hebrew word clip when present (never a non-Hebrew voice); the text always stays on screen. */
     async sayWord(word) {
@@ -219,6 +220,7 @@ export async function createArcade(root, ctx, spec) {
       if (streakNew.length) set(storeKey, record);
       set(ARCADE_KEY, arc.arcade);
       const stars = out.stars;
+      signalRimon(streakNew.length ? 'streak' : stars ? 'correct' : 'wrong');
       A.sfx(stars >= 2 ? 'success' : stars === 1 ? 'confirm' : 'miss');
       A.sayLine(stars >= 2 ? 3 : 4);
       const why = reason === 'time' ? 'Time is up.' : reason === 'lives' ? 'Out of lives.' : won ? 'Round complete!' : 'Round over.';

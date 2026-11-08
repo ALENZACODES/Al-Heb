@@ -1,3 +1,4 @@
+import { signalRimon } from '../shell/rimon-events.js';
 // Hebrew Word Finder: day-zero word recognition with a real sourced lexicon.
 // One tap to hear, one tap to find. No timers, typing, lives or penalties.
 import { h, heSpan } from '../shell/ui.js';
@@ -123,6 +124,7 @@ export function mount(root, ctx) {
     if (!alive || phase !== 'find' || wrong.has(word.id)) return;
     const target = current();
     if (word.id !== target.id) {
+      signalRimon('wrong');
       wrong.add(word.id);
       status.textContent = 'Good try! That is another word. You can try again, or tap “Show me”.';
       paint(false);
@@ -130,6 +132,7 @@ export function mount(root, ctx) {
       return;
     }
     persist(target);
+    signalRimon('correct');
     sfx.play('success');
     phase = 'found';
     status.textContent = 'You found it! There is no penalty for trying.';

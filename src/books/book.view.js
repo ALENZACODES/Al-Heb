@@ -66,11 +66,15 @@ export async function mount(root, ctx) {
     const p = book.pages[page];
     stage.replaceChildren();
     dots.replaceChildren();
+    const pending = () => h("div", { class: "book-page-img book-page-pending" },
+      h("span", { class: "muted" }, "Pictures for this book are still being made."));
     if (p.hasImg) {
-      stage.append(h("img", { class: "book-page-img", src: p.img, alt: p.illustration || "" }));
+      // hasImg comes from the build; if the file is still missing on the host, swap the broken picture for the notice.
+      const img = h("img", { class: "book-page-img", src: p.img, alt: p.illustration || "" });
+      img.addEventListener("error", () => { if (img.isConnected) img.replaceWith(pending()); }, { once: true });
+      stage.append(img);
     } else {
-      stage.append(h("div", { class: "book-page-img book-page-pending" },
-        h("span", { class: "muted" }, "Pictures for this book are still being made.")));
+      stage.append(pending());
     }
     stage.append(heSpan(p.he, "book-line"));
     stage.append(h("p", { class: "book-translit" }, p.translit));

@@ -1,6 +1,6 @@
 name: torah-hebrew
 # Records the Hebrew Torah verses listed in tools/torah/audio/ipa/queue.txt with the Ari and Noa voices, puts them in the app
-# and commits them as John Khan. Starts when queue.txt changes on main (or by hand from the Actions tab).
+# and commits them as John Khan on the branch john/torah-hebrew-audio (main is protected). Starts when queue.txt changes on main (or by hand from the Actions tab).
 # Verses already in the app are skipped, so a rerun only pays for what is missing.
 # Needs the repository secret GOOGLE_TTS_API_KEY (Settings -> Secrets and variables -> Actions -> New repository secret).
 on:
@@ -68,4 +68,6 @@ jobs:
           if git diff --cached --quiet; then echo "nothing new to commit"; exit 0; fi
           n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
           git commit -m "Torah Hebrew reading: $n verse clips (Ari and Noa)"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          # main is protected (required checks), so the clips go to their own branch; it is merged into main from there
+          git push --force origin HEAD:refs/heads/john/torah-hebrew-audio
+          echo "::notice::$n clips pushed to branch john/torah-hebrew-audio"

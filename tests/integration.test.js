@@ -324,7 +324,10 @@ test('shard loader: loads the learner tradition plus the Israeli shard it plays 
   // This checks shard loading, using an exact-tradition human recording fixture.
   // Generic TTS is intentionally not accepted as an Ashkenazi recording.
   const mk = (tradition, id) => [{ voice: 'f', tradition, kind: 'word', id, text: id, status: 'recorded', source: 'fixture-human', path: `audio/f/${tradition}/word/${id}.mp3` }];
-  const shards = { israeli: mk('israeli', 'a'), ashkenazi: mk('ashkenazi', 'b') }; // no sephardi shard
+  const shards = { israeli: mk('israeli', 'a'), ashkenazi: [
+    ...mk('ashkenazi', 'b'),
+    ...mk('ashkenazi', 'retired').map((e) => ({ ...e, status: 'tts', source: 'paid-cloud' })),
+  ] }; // no Sephardi shard; generic TTS is not an admitted Ashkenazi source
   const calls = []; let offline = false;
   const fakeFetch = async (u) => {
     calls.push(u);
@@ -340,8 +343,14 @@ test('shard loader: loads the learner tradition plus the Israeli shard it plays 
   assert.equal(player.status('word', 'b').source, 'none', 'before the shard loads the word is unknown');
   await L.load();
   assert.deepEqual(calls, ['data/audio/manifest-words-ashkenazi.json', 'data/audio/manifest-words-israeli.json'], 'the learner shard, then the Israeli shard the setting plays');
-  assert.notEqual(player.status('word', 'b').source, 'file', 'an own-tradition clip not admitted to playback (player.js ACCENT_SOURCES) stays retired');
-  assert.equal(player.status('word', 'a').source, 'file', 'an Israeli-only word plays its Israeli clip under the Ashkenazi setting, not the device voice');
+  const own = player.status('word', 'b');
+  assert.equal(own.source, 'file', 'a human recording is admitted for its own tradition');
+  assert.equal(own.path, 'audio/f/ashkenazi/word/b.mp3');
+  assert.notEqual(player.status('word', 'retired').source, 'file', 'generic TTS not admitted by ACCENT_SOURCES stays retired');
+  const israeliFallback = player.status('word', 'a');
+  assert.equal(israeliFallback.source, 'file', 'an Israeli-only word plays its Israeli clip under the Ashkenazi setting');
+  assert.equal(israeliFallback.fileTradition, 'israeli');
+  assert.equal(israeliFallback.via, 'tradition');
   await L.load(); assert.equal(calls.length, 2, 'already loaded: no second fetch');
   // setting change re-loads
   L.watch(); cong = 'israeli'; subs[0](null, ['congregation']); await new Promise((r) => setTimeout(r, 0));

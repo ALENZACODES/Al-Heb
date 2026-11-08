@@ -1,11 +1,13 @@
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { createImageResolver, img } from '../src/img/resolve.js';
+import { ROUTES } from '../src/shell/router.js';
 import { wordReviewCue } from '../src/img/cue.js';
 
-const root = new URL('..', import.meta.url).pathname;
+const root = fileURLToPath(new URL('..', import.meta.url));
 const read = (rel) => readFileSync(join(root, rel), 'utf8');
 const json = (rel) => JSON.parse(read(rel));
 const bare = (s) => String(s || '').normalize('NFC').replace(/[\u0591-\u05C7]/g, '');
@@ -92,9 +94,9 @@ test('held stills are not cues, and the cue file stays out of the install precac
   const raw = read('data/images/word-cues.json');
   assert.ok(held.length >= 12);
   for (const id of held) assert.equal(raw.includes(id), false, id);
-  const pre = read('precache-manifest.js');
-  assert.equal(pre.includes('word-cues.json'), false);
-  assert.equal(pre.includes('assets/img/gen/'), false);
+  const pre = JSON.parse(read('precache-manifest.js').match(/self\.ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
+  assert.equal(pre.includes('data/images/word-cues.json'), false);
+  assert.equal(pre.some(p => p.startsWith('assets/img/gen/')), false);
 });
 
 test('pinball and prefix blast use the new backgrounds and the six noun cues stay distinct', () => {
@@ -116,9 +118,11 @@ test('pinball and prefix blast use the new backgrounds and the six noun cues sta
   assert.equal(HE.test(king.alt), false);
   assert.match(king.alt, /throne/i);
   assert.equal(R.resolve('word', 'h86027352').id, 'VOC_colours_09');
-  const router = read('src/shell/router.js');
   for (const path of ['/pinball', '/prefixblast', '/memorypalace', '/vowelcatcher', '/tugowar']) {
-    assert.equal(router.includes(`pattern: '${path}'`), false, path);
+    const route = ROUTES.find(r => r.pattern === path);
+    assert.ok(route, path);
+    assert.equal(route.tier, 'preview', path + ' remains visibly labelled as preview');
+    assert.equal(route.owner, 'games');
   }
 });
 

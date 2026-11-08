@@ -2,14 +2,9 @@
 // The picture is the cue, so the Hebrew answer stays off the prompt until the learner checks.
 // Held Noa-drift stills and composites are not ids here.
 
-/** The six activity scenes used as context on their own screens, not as a separate gallery. */
+/** The activity scenes used as context on their own screens, not as a separate gallery. */
 export const SCENE_CONTEXT = Object.freeze([
   { id: 'GAME_minute_one_celebration', route: '#/firstwin', file: 'src/firstday/minuteone.view.js' },
-  { id: 'GAME_letter_rush', route: '#/letters/atlas', file: 'src/letters/atlas.view.js' },
-  { id: 'GAME_sofit_sniper', route: '#/words/trace', file: 'src/wordtrace/wordtrace.view.js' },
-  { id: 'GAME_niqqud_fade', route: '#/nikkud-fade', file: 'src/nikkudfade/nikkudfade.view.js' },
-  { id: 'GAME_tradition_detective', route: '#/tradition-quiz', file: 'src/pronunciation/tradquiz.view.js' },
-  { id: 'GAME_story_postcard', route: '#/letters/atlas', file: 'src/letters/memory.view.js' },
 ]);
 
 /**

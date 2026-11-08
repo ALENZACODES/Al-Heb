@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -6,7 +7,7 @@ import { img } from '../src/img/resolve.js';
 import { SCENE } from '../src/img/scenes.js';
 import { SCENE_CONTEXT, wordReviewCue } from '../src/img/cue.js';
 
-const root = new URL('..', import.meta.url).pathname;
+const root = fileURLToPath(new URL('..', import.meta.url));
 const read = (rel) => readFileSync(join(root, rel), 'utf8');
 
 function h(tag, attrs = {}, ...kids) {
@@ -70,16 +71,21 @@ test('held Noa-drift stills and composites are not referenced by the app', () =>
 });
 
 test('scene webps and held copies are not installed in the precache', () => {
-  const pre = read('precache-manifest.js');
-  assert.equal(pre.includes('assets/img/gen/'), false);
-  assert.equal(pre.includes('assets/chatgpt-overnight/game/hold/'), false);
-  assert.equal(pre.includes('GAME_scenes_composite_'), false);
+  const pre = JSON.parse(read('precache-manifest.js').match(/self\.ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
+  assert.equal(pre.some(p => p.startsWith('assets/img/gen/')), false);
+  assert.equal(pre.some(p => p.startsWith('assets/chatgpt-overnight/game/hold/')), false);
+  assert.equal(pre.some(p => p.includes('GAME_scenes_composite_')), false);
 });
 
-test('the six activity scenes are the ones those screens ask for', () => {
+test('activity scene metadata matches its screens and Atlas uses letter-specific artwork', () => {
+  assert.ok(SCENE_CONTEXT.length > 0, 'runtime scene inventory is not empty');
   for (const row of SCENE_CONTEXT) {
     const key = Object.entries(SCENE).find(([, id]) => id === row.id)?.[0];
     assert.ok(key, row.id);
     assert.match(read(row.file), new RegExp(`SCENE\\.${key}\\b`));
   }
+});
+
+test('Atlas renders the selected letter meet picture', () => {
+  assert.match(read('src/letters/atlas.view.js'), /letterMeet\(h, ctx, sel\.id/);
 });

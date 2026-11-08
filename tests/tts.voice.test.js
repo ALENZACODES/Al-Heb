@@ -255,10 +255,13 @@ ffTest('J2: the recogniser transcript is compared with the expected Hebrew; wron
     const rec = makeRecogniser({ cfg: cfgMock(), mode: 'mock', items: recs });
     let out = await runJudges({ work, which: ['j2'], recogniser: rec, log: () => {} }); assert.equal(out.j2.pass, 12);
     // replace one clip by the clip of another word: the "heard" text no longer matches the expected Hebrew
-    const P = workPaths(work); const a = plan.items.find((i) => i.id === 'r01-w1' && i.tradition === 'sephardi' && i.voice === 'm'); const b = plan.items.find((i) => i.id === 'r03-w1' && i.tradition === 'sephardi' && i.voice === 'm');
+    const P = workPaths(work);
+    const a = plan.items.find((i) => i.tradition === 'sephardi' && i.voice === 'm');
+    const b = plan.items.find((i) => i.tradition === a.tradition && i.voice === a.voice && i.id !== a.id && similarity(i.he, a.he) < 0.7);
+    assert.ok(b, 'fixture plan supplies a different word below the recogniser similarity threshold');
     fs.copyFileSync(P.clip(1, b), P.clip(1, a));
     out = await runJudges({ work, which: ['j2'], recogniser: rec, log: () => {} }); assert.equal(out.j2.fail, 1);
-    const v = loadVerdicts(work, 'j2').get('m/sephardi/word/r01-w1'); assert.equal(v.verdict, 'fail'); assert.ok(v.measured.similarity < 0.7); assert.ok(v.measured.expected && v.measured.heard && v.thresholds.minSimilarity === 0.7);
+    const v = loadVerdicts(work, 'j2').get(`${a.voice}/${a.tradition}/${a.kind}/${a.id}`); assert.equal(v.verdict, 'fail'); assert.ok(v.measured.similarity < 0.7); assert.ok(v.measured.expected && v.measured.heard && v.thresholds.minSimilarity === 0.7);
     // a command recogniser (a tiny script that prints a fixed Hebrew word)
     const script = path.join(tmp('cmd'), 'say.mjs'); fs.writeFileSync(script, "console.log('שלומ');");
     const cmd = makeRecogniser({ cfg: { recogniser: { mode: 'command', command: [process.execPath, script, '{file}'] } }, mode: 'command' });

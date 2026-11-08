@@ -61,7 +61,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform synagogues in Canada (directory, stories and pictures)", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
-  { id: "od-awards", label: "Awards gallery and certificate font", test: /^src\/awards\/(?:gallery\.view|proof-font)\.js$/, approxMB: 0.08 },
+  { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page", test: /^src\/torahreader\/torahreader\.view\.js$/, approxMB: 0.05 },
   { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
   { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },

@@ -38,6 +38,9 @@ jobs:
         shell: bash
         run: |
           set -eu
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          first=1
           cd tools/torah/audio/ipa
           grep -v '^\s*#' queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
             args="--skip-installed"
@@ -50,24 +53,20 @@ jobs:
             failed=0; for p in $pids; do wait $p || failed=1; done
             if [ "$book" = "all" ]; then python3 install.py; else python3 install.py --book "$book" ${chapter:+--chapter "$chapter"}; fi
             if [ "$failed" = 1 ]; then echo "::error::Some requests failed; the clips that worked were kept"; fi
+            # save after every queue line, so a later failure keeps what is done
+            ( cd "$GITHUB_WORKSPACE"
+              node tools/audio/summary.mjs && node tools/build-precache.mjs
+              git add audio data/audio precache-manifest.js
+              if ! git diff --cached --quiet; then
+                n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
+                git commit -q -m "Torah Hebrew reading: $book ${chapter:-}: $n verse clips (Ari and Noa)"
+                if [ "$first" = 1 ]; then git push --force origin HEAD:refs/heads/john/torah-hebrew-audio; else git push origin HEAD:refs/heads/john/torah-hebrew-audio; fi
+                echo "::notice::$book ${chapter:-}: $n clips pushed to john/torah-hebrew-audio"
+              fi )
+            first=0
           done
-      - name: Refresh audio summary and offline list; Torah tests
+      - name: Torah tests on the result
         if: env.GOOGLE_TTS_API_KEY != ''
         run: |
-          node tools/audio/summary.mjs
-          node tools/build-precache.mjs
           node --test tests/torahreader.model.test.js tests/torahreader.view.test.js
           node tools/audio/summary.mjs --check
-      - name: Commit and push as John Khan
-        if: env.GOOGLE_TTS_API_KEY != ''
-        run: |
-          set -eu
-          git config user.name "John Khan"
-          git config user.email "johnnykhan1@gmail.com"
-          git add audio data/audio precache-manifest.js
-          if git diff --cached --quiet; then echo "nothing new to commit"; exit 0; fi
-          n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
-          git commit -m "Torah Hebrew reading: $n verse clips (Ari and Noa)"
-          # main is protected (required checks), so the clips go to their own branch; it is merged into main from there
-          git push --force origin HEAD:refs/heads/john/torah-hebrew-audio
-          echo "::notice::$n clips pushed to branch john/torah-hebrew-audio"

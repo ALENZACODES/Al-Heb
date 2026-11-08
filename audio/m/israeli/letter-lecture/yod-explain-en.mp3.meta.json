@@ -7,7 +7,7 @@
  "inputText": "This is Yod — YOD. Sound: Y as in yes. Shape hook: tiny floating comma. Tip: It floats above the baseline; Vav and Zayin extend much farther downward; do not mix it up with Vav, Zayin.",
  "inputSha256": "f41211786a0fdeb27ad10dadd8ec4da75cfcb490e585f3da0696b6d1e9cce1a9",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

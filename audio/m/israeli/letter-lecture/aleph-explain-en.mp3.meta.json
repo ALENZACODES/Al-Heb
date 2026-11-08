@@ -7,7 +7,7 @@
  "inputText": "This is Aleph — AH-lef. Sound: almost silent — a tiny catch in the throat, like the pause in uh-oh. Shape hook: tilted X with a diagonal spine. Tip: Three strokes cross at a diagonal; unlike Tav, there is no top roof; do not mix it up with Tav, Ayin.",
  "inputSha256": "2e099e603f6b7ee54000da8c4546a035c0dbdb0d589ef209368f2a7343c6ad58",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

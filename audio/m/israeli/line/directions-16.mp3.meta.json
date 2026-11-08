@@ -7,7 +7,7 @@
  "inputText": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
  "inputSha256": "90014ee4ab1b59a7f02c7c5b6c7d64a2ce398499df277b4363d87be70e838198",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

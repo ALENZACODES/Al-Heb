@@ -7,7 +7,7 @@
  "inputText": "האות קוֹף. נשמעת כמו ק בקול. תסתכלו על הצורה: table with a leg below the floor. שימו לב לא לבלבל עם ה · ך.",
  "inputSha256": "f7c48b62eca78fe0234d165c8a6b5cec8cba9d4a0e808044926603135b799099",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

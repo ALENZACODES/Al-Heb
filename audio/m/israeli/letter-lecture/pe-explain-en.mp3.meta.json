@@ -7,7 +7,7 @@
  "inputText": "This is Pe — PEH. Sound: P as in pen with a dot; F as in fun without the dot. Shape hook: rounded mouth with one tooth. Tip: Its clearly visible internal tooth separates Pe from Kaf; curved wall separates it from Bet; do not mix it up with Kaf, Bet.",
  "inputSha256": "ed309442d8f192f8c8bf93979608e45a93a638d07cc64c9c7e77a9ece6875083",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

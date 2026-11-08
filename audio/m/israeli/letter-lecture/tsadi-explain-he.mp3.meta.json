@@ -7,7 +7,7 @@
  "inputText": "האות צָדִי. נשמעת כמו צ בציפור. תסתכלו על הצורה: hockey stick standing on its blade, with a little branch leaning on the shaft halfway up. שימו לב לא לבלבל עם ע · א.",
  "inputSha256": "4e8c1243227bf4b6eac271853fcebbb33987d87464a856848b08835a98031027",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

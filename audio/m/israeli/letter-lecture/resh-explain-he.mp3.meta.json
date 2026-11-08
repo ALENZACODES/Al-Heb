@@ -7,7 +7,7 @@
  "inputText": "האות רֵישׁ. נשמעת כמו ר גרונית רכה. תסתכלו על הצורה: rounded bent pipe. שימו לב לא לבלבל עם ד · ך.",
  "inputSha256": "dc211a9267ccffbc823bc66578c0335c0dc9c743bfcbe898c5e4725bc47f1b5f",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "hebrew"
 }

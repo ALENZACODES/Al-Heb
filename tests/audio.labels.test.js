@@ -40,7 +40,9 @@ test('synthetic statuses: honest per-tradition wording, never the human label', 
   assert.deepEqual(s, { total: 5, recorded: 1, tts: 3, missing: 1 });
   assert.equal(describeResult({ source: 'file', voice: 'f', tradition: 'sephardi', entryStatus: 'synthetic-unreviewed' }).text, `Sound: ${SEPH} (woman, Sephardi).`);
   assert.equal(describeResult({ source: 'file', voice: 'm', tradition: 'sephardi', fileTradition: 'israeli', entryStatus: 'synthetic-unreviewed' }).text,
-    'Sound: Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed) (man, Israeli).', 'the label names the FILE tradition');
+    'Sound: Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed) (man, Israeli voice; Sephardi reading shown in English letters).', 'the label names the FILE tradition and the caption names both');
+  assert.equal(describeResult({ source: 'file', voice: 'm', tradition: 'ashkenazi', fileTradition: 'israeli', entryStatus: 'synthetic-unreviewed' }).text,
+    'Sound: Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed) (man, Israeli voice; Ashkenazi reading shown in English letters).');
 });
 
 test('shell status line and access helper use the table', () => {

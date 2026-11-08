@@ -76,7 +76,9 @@ test('vowelSound / letterSound read the tradition from the pronunciation data', 
 
 test('audioNote never claims a non-Israeli voice', () => {
   assert.match(FT.audioNote('israeli'), /speaks Israeli Hebrew/);
-  for (const t of ['sephardi', 'ashkenazi']) { const n = FT.audioNote(t); assert.match(n, /Israeli/); assert.match(n, /will not match/); }
+  for (const t of ['ashkenazi']) { const n = FT.audioNote(t); assert.match(n, /Israeli/); assert.match(n, /will not match/); }
+  // the Sephardi setting plays Israeli sound by rule (owner decision 2026-11-07): the note says so and claims no Sephardi voice
+  const sep = FT.audioNote('sephardi'); assert.match(sep, /Sephardi plays the Israeli clips/); assert.doesNotMatch(sep, /Sephardi voice|Sephardi recording exists/);
   assert.equal(FT.audioNote('ashkenazi', { hasRecording: true }), '');
   assert.equal(FT.israeliOnly(), 'israeli');
 });

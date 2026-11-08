@@ -84,6 +84,8 @@ export function audioNote(tradition, { hasRecording = false } = {}) {
   const t = normalize(tradition);
   if (hasRecording) return '';
   if (t === 'israeli') return 'No recording yet: this plays the device voice, which speaks Israeli Hebrew.';
+  // Owner decision 2026-11-07: the Sephardi setting plays Israeli sound (clips and device voice) and shows the Sephardi reading in English letters.
+  if (t === 'sephardi') return 'No recording yet: Sephardi plays the Israeli clips, or the device voice, which speak Israeli Hebrew; the Sephardi reading is shown in English letters.';
   return `There is no ${LABELS[t]} recording yet. The device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the English-letter spelling instead.`;
 }
 
@@ -99,10 +101,12 @@ export const israeliOnly = () => 'israeli';
 export function playLine(r, tradition, what = 'this') {
   const t = normalize(tradition);
   if (r && r.source === 'file') {
-    const other = r.fileTradition && r.fileTradition !== t ? ` It is the ${LABELS[normalize(r.fileTradition)]} reading, used here as a stand-in for ${LABELS[t]}.` : '';
+    const other = r.fileTradition && r.fileTradition !== t
+      ? (t === 'sephardi' && normalize(r.fileTradition) === 'israeli' ? ' It is the Israeli voice; the Sephardi reading is shown in English letters.' : ` It is the ${LABELS[normalize(r.fileTradition)]} reading, used here as a stand-in for ${LABELS[t]}.`)
+      : '';
     return `Playing ${what}: ${fileLabel(r.entryStatus)}.${other}`;
   }
-  if (r && r.source === 'tts-fallback') return `Playing ${what} with the browser voice: a computer voice, not a person. ${t === 'israeli' ? 'It speaks Israeli Hebrew' : `It speaks Israeli Hebrew, not ${LABELS[t]}`} and may ignore the vowel points.`;
+  if (r && r.source === 'tts-fallback') return `Playing ${what} with the browser voice: a computer voice, not a person. ${t === 'israeli' ? 'It speaks Israeli Hebrew' : t === 'sephardi' ? 'It speaks Israeli Hebrew (Sephardi plays Israeli sound; the Sephardi reading is shown in English letters)' : `It speaks Israeli Hebrew, not ${LABELS[t]}`} and may ignore the vowel points.`;
   if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') return `Not played: ${audioNote(t)}`;
   if (r && (r.source === 'none' || r.played === false || r.ok === false)) return `No audio for ${what} (${r.reason || r.error || 'unavailable'}).`;
   return `Played ${what}.`;

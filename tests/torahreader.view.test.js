@@ -491,3 +491,19 @@ test('English chapter Stop and navigation invalidate late audio status and stop 
   release({source:'file',entryStatus:'tts',ended:true}); await playing;
   assert.equal(status(root), afterNavigation, 'old chapter completion cannot change the new chapter status');
 });
+
+test('chapter recording speed changes live player rate and is passed to subsequent playback', async () => {
+  const rates = [], calls = [];
+  const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+    ? [{ kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice: 'm', tradition: 'english', status: 'tts' }]
+    : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+  const { root } = await make({ stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson,
+    audio: { setPlaybackRate: r => rates.push(r), play: async (...args) => { calls.push(args); return { source: 'file', entryStatus: 'tts', ended: true }; }, stop() {} } });
+  await sel(root, '[data-recording-rate="0.75"]').click();
+  assert.deepEqual(rates, [0.75]); assert.equal(sel(root, '[data-recording-rate="0.75"]').attrs['aria-pressed'], 'true');
+  await sel(root, '.trd-play-chapter').click(); assert.equal(calls[0][2].rate, 0.75);
+  await sel(root, '[data-recording-rate="1.25"]').click();
+  assert.deepEqual(rates, [0.75, 1.25]); assert.equal(sel(root, '[data-recording-rate="0.75"]').attrs['aria-pressed'], 'false');
+  await sel(root, '.trd-play-chapter').click(); assert.equal(calls[1][2].rate, 1.25);
+  assert.equal(sel(root, '[data-recording-rate="1.25"]').attrs['aria-pressed'], 'true');
+});

@@ -13,11 +13,13 @@ function fakeClock() {
   const timers = new Map(); let id = 0;
   return { setInterval: (f, ms) => { timers.set(++id, { f, ms }); return id; }, clearInterval: (h) => { timers.delete(h); }, timers, fire: (n = 1) => { for (let i = 0; i < n; i++) for (const t of [...timers.values()]) t.f(); } };
 }
-async function make({ congregation = 'sephardi', audio, stored, loadJson } = {}) {
-  const root = new N('div'); const store = memStore(); if (stored) store.m['torahreader.v1'] = stored;
+async function make({ congregation = 'sephardi', audio, stored, loadJson, query, rawStored = false } = {}) {
+  const root = new N('div'); const store = memStore();
+  // The full-Torah home is the route's default screen now; the study tests open the study screen explicitly.
+  store.m['torahreader.v1'] = rawStored ? stored : { screen: 'study', ...(stored || {}) };
   const clock = fakeClock(); const calls = [];
   const a = audio === 'rec' ? { has: () => true, play: async (k, i, o) => { calls.push([k, i, o]); return { source: 'file', entryStatus: 'recorded' }; } } : audio;
-  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : undefined) }, audio: a, clock, loadJson };
+  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : k === 'voice' ? 'm' : undefined) }, audio: a, clock, loadJson, query };
   const un = mount(root, ctx); await un.ready;
   return { root, store, ctx, clock, calls, un };
 }
@@ -33,7 +35,7 @@ test('mounts: title, draft notice, Hebrew buttons are lang=he dir=rtl, tabs are 
   const w = words(root);
   assert.equal(w.length, 35);
   for (const b of w) { assert.equal(b.tag, 'button'); assert.equal(b.attrs.lang, 'he'); assert.equal(b.attrs.dir, 'rtl'); assert.match(b.attrs['aria-label'], /word \d+ of 35/); }
-  const tabs = root.queryAll('.trd-tab'); assert.equal(tabs.length, 3);
+  const tabs = root.queryAll('.trd-tab'); assert.equal(tabs.length, 5); // Torah home + the two passages + the legend (top bar and the controls copy)
   for (const t of tabs) assert.ok(['true', 'false'].includes(t.attrs['aria-pressed']));
   assert.equal(root.queryAll('.trd-verse').length, 6);
   assert.match(root.queryAll('.trd-vlabel')[0].textContent, /Numbers 6:22 \(narrative, not part of the blessing\)/);
@@ -287,4 +289,103 @@ test('text size: stored, applied as a scale on the wrapper, survives remount; wo
   const css = fs.readFileSync(new URL('../src/torahreader/torahreader.view.js', import.meta.url), 'utf8');
   assert.match(css, /\.trd-w\{[^}]*min-inline-size:max\(44px/);
   assert.match(css, /button\{min-block-size:max\(44px/);
+});
+
+// ---------- full Torah (Lane J pilot: Genesis) ----------
+const rows = (root) => root.queryAll('.trd-row');
+
+test('Torah home screen: five books, 54 portions, week card, study entries, labels', async () => {
+  const { root } = await make({ rawStored: true, stored: undefined });
+  await sel(root, '[data-screen="home"]').click();
+  assert.equal(sel(root, 'h1').textContent, 'Torah reader');
+  const books = root.queryAll('.trd-book');
+  assert.equal(books.length, 5);
+  assert.ok(sel(root, '[data-book-open="genesis"]'), 'Genesis is openable');
+  assert.equal(root.queryAll('[data-book-open="exodus"]').length, 0, 'Exodus is not openable yet');
+  assert.match(books[1].textContent, /Coming soon/);
+  assert.equal(root.queryAll('.trd-portion').length, 54);
+  assert.ok(root.queryAll('.trd-week').length === 1 && /parasha/.test(root.queryAll('.trd-week')[0].textContent));
+  assert.ok(root.textContent.includes('Read in Israeli Hebrew.'));
+  assert.match(root.textContent, /JPS 1917/);
+  assert.match(root.textContent, /not a chant/);
+  assert.match(root.textContent, /Draft, not checked by a rabbi or Hebrew teacher/);
+  assert.ok(sel(root, '[data-continue="1"]'), 'a Continue card is offered');
+});
+
+test('chapter view: Genesis 1 renders 31 side-by-side rows, toggles work, next chapter navigates', async () => {
+  const { root, store } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1' } });
+  assert.equal(sel(root, 'h1').textContent, 'Genesis 1');
+  assert.equal(rows(root).length, 31);
+  const first = rows(root)[0];
+  assert.match(first.queryAll('.trd-hebrew')[0].textContent, /בְּרֵאשִׁ/);
+  assert.equal(first.queryAll('.trd-en')[0].textContent, 'In the beginning God created the heaven and the earth.');
+  assert.equal(root.queryAll('.trd-next-ch').length, 1);
+  assert.equal(root.queryAll('.trd-prev-ch').length, 0);
+  // English toggle hides the English column
+  await sel(root, '[data-toggle="showEnglish"]').click();
+  assert.equal(root.queryAll('.trd-en').length, 0);
+  assert.equal(store.m['torahreader.v1'].showEnglish, false);
+  await sel(root, '[data-toggle="showEnglish"]').click();
+  assert.equal(root.queryAll('.trd-en').length, 31);
+  // cantillation toggle switches he/heTrope
+  const withTrope = rows(root)[0].queryAll('.trd-hebrew')[0].textContent;
+  assert.match(withTrope, /[֑-֯]/);
+  await sel(root, '[data-toggle="showTrope"]').click();
+  assert.doesNotMatch(rows(root)[0].queryAll('.trd-hebrew')[0].textContent, /[֑-֯]/);
+  // computed transliteration aid, labelled as computed
+  await sel(root, '[data-translit="1"]').click();
+  assert.match(root.queryAll('.trd-translit')[0].textContent, /computed from the vowel points/);
+  // next chapter
+  await sel(root, '.trd-next-ch').click(); await tick();
+  assert.equal(sel(root, 'h1').textContent, 'Genesis 2');
+  assert.equal(rows(root).length, 25);
+  assert.equal(store.m['torahreader.v1'].chapter, 2);
+});
+
+test('deep link: book + chapter + verse lands on the chapter with the verse marked', async () => {
+  const { root } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1', verse: '3' } });
+  const marked = root.queryAll('.trd-target');
+  assert.equal(marked.length, 1);
+  assert.equal(marked[0].attrs['data-torah-verse'], '3');
+  assert.equal(marked[0].attrs['aria-current'], 'true');
+});
+
+test('portion view clips the chapter to the portion range (Bereshit ends at Genesis 6:8)', async () => {
+  const { root } = await make({ rawStored: true, stored: { screen: 'chapter', book: 'genesis', chapter: 6, portionId: 'bereshit' } });
+  assert.equal(rows(root).length, 8);
+  assert.match(root.queryAll('.trd-portion-banner')[0].textContent, /verses 1–8/);
+  await sel(root, '.trd-portion-exit').click();
+  assert.equal(rows(root).length, 22, 'leaving the portion shows the whole chapter');
+  const ch2 = await make({ rawStored: true, stored: { screen: 'chapter', book: 'genesis', chapter: 2, portionId: 'bereshit' } });
+  assert.deepEqual(ch2.root.queryAll('.trd-aliyah').map((a) => a.attrs['data-aliyah']), ['2', '3'], 'aliyah starts inside the chapter are marked (2:4 and 2:20)');
+});
+
+test('chapter audio is hidden while durations and clips do not exist yet (silent degradation)', async () => {
+  const { root } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1' }, audio: 'rec' });
+  assert.equal(root.queryAll('.trd-play-chapter').length, 0);
+  assert.equal(root.queryAll('.trd-hear-verse').length, 0);
+  assert.equal(rows(root).length, 31, 'the chapter is fully usable as text');
+});
+
+test('chapter audio appears when durations and manifest entries exist; verse and chapter play use the Torah ids', async () => {
+  const manifest = [
+    { kind: 'line', id: 'torah-genesis-1-1', voice: 'm', tradition: 'israeli', status: 'tts' },
+    { kind: 'torah-chapter', id: 'torah-genesis-1', voice: 'm', tradition: 'israeli', status: 'tts' },
+  ];
+  const loadJson = async (rel) => {
+    if (rel === 'data/audio/manifest-torah.json') return manifest;
+    const j = JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+    if (rel === 'data/corpus/torah/genesis/01.json') for (const v of j.verses) v.durMs = { m: 1000, f: 1000 };
+    return j;
+  };
+  const { root, calls } = await make({ rawStored: true, stored: undefined, query: { book: 'genesis', chapter: '1' }, audio: 'rec', loadJson });
+  const hear = root.queryAll('.trd-hear-verse');
+  assert.equal(hear.length, 1, 'only the verse with a manifest entry gets a Hear button');
+  await hear[0].click(); await tick();
+  assert.deepEqual(calls[0].slice(0, 2), ['line', 'torah-genesis-1-1']);
+  assert.equal(calls[0][2].tradition, 'israeli');
+  const play = sel(root, '.trd-play-chapter');
+  assert.ok(play, 'chapter play is offered when durations and the chapter entry exist');
+  await play.click(); await tick();
+  assert.ok(calls.some((c) => c[0] === 'torah-chapter' && c[1] === 'torah-genesis-1'), 'chapter play uses kind torah-chapter, id torah-genesis-1');
 });

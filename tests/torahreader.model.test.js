@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   STORE_KEY, DEFAULT_STATE, SPEEDS, normaliseState, speedMs, stripNiqqud, spokenText, flatten, display, audioIndex, tropeById, tropeName, legend, markGlyph, stepIndex, spacePaseq, largePositions, displayParts, SIZES, sizeScale, largePositionsIn, bigParts, wordPartsLarge,
+  TORAH_BOOKS, availableChapters, adjacentChapter, gridPosition, portionsForCalendarIds, portionChapter, portionChapters, chapterPosition, torahVerseId, torahChapterId, torahChapterKind,
 } from '../src/torahreader/model.js';
 
 const root = new URL('../', import.meta.url);
@@ -18,8 +19,18 @@ test('store key and state normalisation', () => {
   assert.equal(STORE_KEY, 'torahreader.v1');
   assert.deepEqual(normaliseState(null), DEFAULT_STATE);
   assert.deepEqual(normaliseState('x'), DEFAULT_STATE);
-  assert.deepEqual(normaliseState({ passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' }), { v: 1, passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' });
+  assert.deepEqual(normaliseState({ passage: 'shema', view: 'legend', showTrope: false, showNiqqud: false, speed: 'fast', size: 'largest' }),
+    { v: 1, passage: 'shema', view: 'legend', screen: 'legend', book: 'genesis', chapter: 1, portionId: null, showTrope: false, showNiqqud: false, showEnglish: true, audioLang: 'he', speed: 'fast', size: 'largest' });
   assert.equal(normaliseState({ size: 'huge' }).size, 'normal');
+  // full-Torah fields: screen, book/chapter (range-checked), English + audio-language switches
+  assert.equal(normaliseState({ screen: 'chapter', book: 'numbers', chapter: 6 }).chapter, 6);
+  assert.equal(normaliseState({ screen: 'chapter', book: 'numbers', chapter: 99 }).chapter, 1);
+  assert.equal(normaliseState({ book: 'nope', chapter: 5 }).book, 'genesis');
+  assert.equal(normaliseState({ showEnglish: false }).showEnglish, false);
+  assert.equal(normaliseState({ audioLang: 'en' }).audioLang, 'en');
+  assert.equal(normaliseState({ audioLang: 'fr' }).audioLang, 'he');
+  assert.equal(normaliseState({ view: 'reader', passage: 'shema' }).screen, 'study', 'a legacy study state reopens as study');
+  assert.equal(normaliseState({}).screen, 'study', 'a fresh state opens on the study passage, as the route always has; the full-Torah home is one tap away');
   assert.ok(SIZES.length === 3 && sizeScale('normal') === 1 && sizeScale('largest') > sizeScale('large') && sizeScale('bogus') === 1);
   assert.deepEqual(normaliseState({ passage: 'nope', view: 3, showTrope: 'yes', speed: 'warp' }), DEFAULT_STATE);
   assert.ok(SPEEDS.every((s) => s.ms > 0) && speedMs('slow') > speedMs('medium') && speedMs('medium') > speedMs('fast'));
@@ -92,6 +103,42 @@ test('tropeById / tropeName / legend: every trope used in the reader has a table
   assert.ok(L.groups.flatMap((g) => g.rows).filter((r) => r.occurs > 0).length >= 14);
   assert.ok(L.groups[0].rows.every((r) => r.cls === 'disjunctive'));
   assert.match(markGlyph(m.get('tipcha')), /^◌֖$/);
+});
+
+test('full-Torah grid: navigation skips unbuilt books, portions clip chapters, chapter position is null-safe', () => {
+  const index = J('data/corpus/torah/index.json');
+  assert.deepEqual(TORAH_BOOKS.map((b) => b.chapters), [50, 40, 27, 36, 34]);
+  const avail = availableChapters(index);
+  assert.equal(avail.length, 50, 'the Genesis pilot builds exactly the 50 Genesis chapters');
+  assert.deepEqual(adjacentChapter(index, 'genesis', 1, 1), { book: 'genesis', chapter: 2 });
+  assert.deepEqual(adjacentChapter(index, 'genesis', 2, -1), { book: 'genesis', chapter: 1 });
+  assert.equal(adjacentChapter(index, 'genesis', 1, -1), null);
+  assert.equal(adjacentChapter(index, 'genesis', 50, 1), null, 'Exodus is not built yet, so there is no next chapter');
+  assert.equal(gridPosition(index, 'genesis', 2, 1), 32);
+  assert.equal(gridPosition(index, 'deuteronomy', 34, 12), index.counts.verses);
+  const bereshit = index.parshiyot[0];
+  assert.equal(bereshit.id, 'bereshit');
+  assert.deepEqual(portionsForCalendarIds(index, [1]), [bereshit]);
+  assert.deepEqual(portionChapter(index, bereshit, 'genesis', 1), { book: 'genesis', chapter: 1, fromVerse: 1, toVerse: 31, aliyot: [{ n: 1, verse: 1 }] });
+  const last = portionChapter(index, bereshit, 'genesis', 6);
+  assert.equal(last.toVerse, 8, 'Bereshit ends at Genesis 6:8, clipped from a 22-verse chapter');
+  assert.equal(portionChapter(index, bereshit, 'genesis', 7), null);
+  assert.equal(portionChapters(index, bereshit).length, 6);
+  assert.equal(torahVerseId('genesis', 1, 1), 'torah-genesis-1-1');
+  assert.equal(torahChapterId('genesis', 1), 'torah-genesis-1');
+  assert.equal(torahChapterId('genesis', 1, 'en'), 'torah-en-genesis-1');
+  assert.equal(torahChapterKind('he'), 'torah-chapter');
+  assert.equal(torahChapterKind('en'), 'torah-chapter-en');
+  const verses = [
+    { n: 1, durMs: { m: 1000, f: 900 }, durMsEn: { m: null, f: null } },
+    { n: 2, durMs: { m: 2000, f: 900 }, durMsEn: { m: null, f: null } },
+    { n: 3, durMs: { m: 3000, f: 900 }, durMsEn: { m: null, f: null } },
+  ];
+  assert.equal(chapterPosition(verses, 'en', 'm', 0), null, 'English position is null until English durations exist');
+  assert.deepEqual(chapterPosition(verses, 'he', 'm', 0), { index: 0, verse: 1, totalMs: 6000, ended: false });
+  assert.deepEqual(chapterPosition(verses, 'he', 'm', 1500), { index: 1, verse: 2, totalMs: 6000, ended: false });
+  assert.deepEqual(chapterPosition(verses, 'he', 'm', 6000), { index: 2, verse: 3, totalMs: 6000, ended: true });
+  assert.equal(chapterPosition([{ n: 1, durMs: { m: null, f: null }, durMsEn: { m: null, f: null } }], 'he', 'm', 0), null);
 });
 
 test('stepIndex', () => {

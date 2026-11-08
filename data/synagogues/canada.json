@@ -4,11 +4,26 @@
   "pictureNote": "The pictures are illustrative views built from reference photographs and street-level references, not documentary photographs. Viewpoints and small details may differ from the building as it stands today. Where no picture is held, none is shown.",
   "sourceNote": "Facts come from each congregation's own site, the Ontario Jewish Archives, community newspapers and the other pages listed under Sources. Items marked 'to confirm' were not settled by any source found.",
   "provinces": [
-    { "code": "BC", "name": "British Columbia" },
-    { "code": "AB", "name": "Alberta" },
-    { "code": "MB", "name": "Manitoba" },
-    { "code": "ON", "name": "Ontario" },
-    { "code": "QC", "name": "Quebec" }
+    {
+      "code": "BC",
+      "name": "British Columbia"
+    },
+    {
+      "code": "AB",
+      "name": "Alberta"
+    },
+    {
+      "code": "MB",
+      "name": "Manitoba"
+    },
+    {
+      "code": "ON",
+      "name": "Ontario"
+    },
+    {
+      "code": "QC",
+      "name": "Quebec"
+    }
   ],
   "congregations": [
     {
@@ -32,19 +47,49 @@
         "Rabbi Dan Moskovitz has been senior rabbi since 2013. Membership stood at more than 600 households that year and grew by more than half over the following nine years. For its 50th anniversary in 2015 the members fulfilled the 613th commandment together by scribing a new Anniversary Torah. Temple Sholom belongs to the Western Canadian Reform Collaboration with the Reform congregations of Calgary, Edmonton, Victoria and Winnipeg."
       ],
       "images": [
-        { "file": "temple-sholom-vancouver_1_exterior.jpg", "alt": "A two-storey cream stucco building with a tiled roof, a Star of David over the arched front door and a small sign beside the steps." },
-        { "file": "temple-sholom-vancouver_x100_exterior.jpg", "alt": "Front view of the cream stucco building with dark window frames and clipped shrubs flanking the entrance steps." },
-        { "file": "temple-sholom-vancouver_x101_exterior.jpg", "alt": "The same building seen slightly from the right, with evergreen shrubs and a path to the door." },
-        { "file": "temple-sholom-vancouver_x102_exterior.jpg", "alt": "A wider view of the building and its front garden." },
-        { "file": "temple-sholom-vancouver_x103_exterior.jpg", "alt": "Close view of the arched doorway with the sign and Star of David above it." },
-        { "file": "temple-sholom-vancouver_x104_exterior.jpg", "alt": "The building seen from the left, with the garden in the foreground." }
+        {
+          "file": "temple-sholom-vancouver_1_exterior.jpg",
+          "alt": "A two-storey cream stucco building with a tiled roof, a Star of David over the arched front door and a small sign beside the steps."
+        },
+        {
+          "file": "temple-sholom-vancouver_x100_exterior.jpg",
+          "alt": "Front view of the cream stucco building with dark window frames and clipped shrubs flanking the entrance steps."
+        },
+        {
+          "file": "temple-sholom-vancouver_x101_exterior.jpg",
+          "alt": "The same building seen slightly from the right, with evergreen shrubs and a path to the door."
+        },
+        {
+          "file": "temple-sholom-vancouver_x102_exterior.jpg",
+          "alt": "A wider view of the building and its front garden."
+        },
+        {
+          "file": "temple-sholom-vancouver_x103_exterior.jpg",
+          "alt": "Close view of the arched doorway with the sign and Star of David above it."
+        },
+        {
+          "file": "temple-sholom-vancouver_x104_exterior.jpg",
+          "alt": "The building seen from the left, with the garden in the foreground."
+        }
       ],
       "imageNote": "These views show a colour reconstruction of the congregation's historic West 10th Avenue building, based on an old photograph, not the current Oak Street synagogue. Colours are inferred.",
       "sources": [
-        { "label": "History of the Jews in Vancouver (Wikipedia)", "url": "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Vancouver" },
-        { "label": "Places That Matter: Temple Sholom", "url": "https://www.placesthatmatter.ca/location/temple-sholom/" },
-        { "label": "CBC News: the menorah that survived the 1985 firebombing", "url": "https://amp.cbc.ca/news/canada/british-columbia/a-menorah-survived-arson-in-vancouver-synagogue-1.7052528" },
-        { "label": "Temple Sholom website", "url": "http://www.templesholom.ca/" }
+        {
+          "label": "History of the Jews in Vancouver (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/History_of_the_Jews_in_Vancouver"
+        },
+        {
+          "label": "Places That Matter: Temple Sholom",
+          "url": "https://www.placesthatmatter.ca/location/temple-sholom/"
+        },
+        {
+          "label": "CBC News: the menorah that survived the 1985 firebombing",
+          "url": "https://amp.cbc.ca/news/canada/british-columbia/a-menorah-survived-arson-in-vancouver-synagogue-1.7052528"
+        },
+        {
+          "label": "Temple Sholom website",
+          "url": "http://www.templesholom.ca/"
+        }
       ],
       "checks": []
     },
@@ -71,20 +116,49 @@
         "Kolot Mayim describes itself as inclusive and welcoming, focused on learning and on celebrating Jewish life. It belongs to the Western Canadian Reform Collaboration with the Reform congregations of Vancouver, Calgary, Edmonton and Winnipeg."
       ],
       "images": [
-        { "file": "kolot-mayim-victoria_x100_exterior.jpg", "alt": "A low, flat-roofed beige building with a white entrance canopy, set behind a car park and clipped hedges." },
-        { "file": "kolot-mayim-victoria_x101_exterior.jpg", "alt": "The same low building seen from the left, with trees behind it." },
-        { "file": "kolot-mayim-victoria_x102_exterior.jpg", "alt": "The building seen from across the street, with a tall tree on the right." },
-        { "file": "kolot-mayim-victoria_x103_exterior.jpg", "alt": "A front view of the entrance canopy and glass doors." },
-        { "file": "kolot-mayim-victoria_x104_exterior.jpg", "alt": "Close view of the double glass doors under the white canopy." },
-        { "file": "kolot-mayim-victoria_x105_exterior.jpg", "alt": "The building and its hedge seen from the road." }
+        {
+          "file": "kolot-mayim-victoria_x100_exterior.jpg",
+          "alt": "A low, flat-roofed beige building with a white entrance canopy, set behind a car park and clipped hedges."
+        },
+        {
+          "file": "kolot-mayim-victoria_x101_exterior.jpg",
+          "alt": "The same low building seen from the left, with trees behind it."
+        },
+        {
+          "file": "kolot-mayim-victoria_x102_exterior.jpg",
+          "alt": "The building seen from across the street, with a tall tree on the right."
+        },
+        {
+          "file": "kolot-mayim-victoria_x103_exterior.jpg",
+          "alt": "A front view of the entrance canopy and glass doors."
+        },
+        {
+          "file": "kolot-mayim-victoria_x104_exterior.jpg",
+          "alt": "Close view of the double glass doors under the white canopy."
+        },
+        {
+          "file": "kolot-mayim-victoria_x105_exterior.jpg",
+          "alt": "The building and its hedge seen from the road."
+        }
       ],
       "imageNote": "Reconstructed from a street-level reference of the Jewish Community Centre of Victoria; facade details that were hidden in the reference are inferred.",
       "sources": [
-        { "label": "Kolot Mayim: About us", "url": "https://kolotmayimreformtemple.com/about-us-2/" },
-        { "label": "Jewish Independent: Kolot Mayim installs rabbi (2019)", "url": "https://www.jewishindependent.ca/kolot-mayim-installs-rabbi/" },
-        { "label": "Jewish Independent: Building Bridges series", "url": "https://www.jewishindependent.ca/tag/building-bridges/" }
+        {
+          "label": "Kolot Mayim: About us",
+          "url": "https://kolotmayimreformtemple.com/about-us-2/"
+        },
+        {
+          "label": "Jewish Independent: Kolot Mayim installs rabbi (2019)",
+          "url": "https://www.jewishindependent.ca/kolot-mayim-installs-rabbi/"
+        },
+        {
+          "label": "Jewish Independent: Building Bridges series",
+          "url": "https://www.jewishindependent.ca/tag/building-bridges/"
+        }
       ],
-      "checks": ["Founding year: own site says 1998, one Reform Judaism article says 1996."]
+      "checks": [
+        "Founding year: own site says 1998, one Reform Judaism article says 1996."
+      ]
     },
     {
       "id": "temple-bnai-tikvah-calgary",
@@ -107,16 +181,37 @@
         "The congregation's first full-time rabbi, Jordan Goldson, arrived in 1987 and was Alberta's first full-time Reform rabbi. Today the Temple runs Shabbatots for three- and four-year-olds, a Saturday-morning Shabbat School from preschool to Grade 7, and a two-year b'nai mitzvah program. Community service has long been part of its life: for many years it regularly hosted a shelter through Calgary's Inn from the Cold, and it set up a refugee assistance committee in 2016. It belongs to the Western Canadian Reform Collaboration."
       ],
       "images": [
-        { "file": "temple-bnai-tikvah-calgary_x100_exterior.jpg", "alt": "A low red-brick building with a steep triangular roof and a wall carrying the words Temple B'nai Tikvah, seen from a bend in the road under a blue sky." },
-        { "file": "temple-bnai-tikvah-calgary_x101_exterior.jpg", "alt": "The brick building and its lettered wall seen from the pavement, with tall trees behind." },
-        { "file": "temple-bnai-tikvah-calgary_x102_exterior.jpg", "alt": "A wider view of the building, the brick wall and the trees around it." }
+        {
+          "file": "temple-bnai-tikvah-calgary_x100_exterior.jpg",
+          "alt": "A low red-brick building with a steep triangular roof and a wall carrying the words Temple B'nai Tikvah, seen from a bend in the road under a blue sky."
+        },
+        {
+          "file": "temple-bnai-tikvah-calgary_x101_exterior.jpg",
+          "alt": "The brick building and its lettered wall seen from the pavement, with tall trees behind."
+        },
+        {
+          "file": "temple-bnai-tikvah-calgary_x102_exterior.jpg",
+          "alt": "A wider view of the building, the brick wall and the trees around it."
+        }
       ],
       "imageNote": "Views of the Britannia building, based on reference photographs.",
       "sources": [
-        { "label": "Temple B'nai Tikvah: Our story", "url": "https://templebnaitikvah.org/about/our-story/" },
-        { "label": "Times of Israel blog: Building Reform Jewish life in Calgary", "url": "https://blogs.timesofisrael.com/temple-bnai-tikvah-building-reform-jewish-life-in-calgary-alberta/" },
-        { "label": "Jewish Historical Society of Southern Alberta: Temple B'nai Tikvah fonds", "url": "https://jhssa.org/wp-content/uploads/2022/03/Temple-Bnai-Tikvah-fonds.pdf" },
-        { "label": "Heritage Inspires YYC: repurposed places of faith", "url": "https://mycalgary.com/city/historic-calgary/heritage-stories-repurposing-calgarys-historic-places-of-faith" }
+        {
+          "label": "Temple B'nai Tikvah: Our story",
+          "url": "https://templebnaitikvah.org/about/our-story/"
+        },
+        {
+          "label": "Times of Israel blog: Building Reform Jewish life in Calgary",
+          "url": "https://blogs.timesofisrael.com/temple-bnai-tikvah-building-reform-jewish-life-in-calgary-alberta/"
+        },
+        {
+          "label": "Jewish Historical Society of Southern Alberta: Temple B'nai Tikvah fonds",
+          "url": "https://jhssa.org/wp-content/uploads/2022/03/Temple-Bnai-Tikvah-fonds.pdf"
+        },
+        {
+          "label": "Heritage Inspires YYC: repurposed places of faith",
+          "url": "https://mycalgary.com/city/historic-calgary/heritage-stories-repurposing-calgarys-historic-places-of-faith"
+        }
       ],
       "checks": []
     },
@@ -141,15 +236,29 @@
         "Temple Beth Ora is affiliated with the Union for Reform Judaism. Rabbi Gila Caine was installed in April 2018 at a service that filled the sanctuary. The congregation takes part in the Western Canadian Reform Collaboration, a joint effort of the Reform synagogues of Edmonton, Calgary, Vancouver, Victoria and Winnipeg."
       ],
       "images": [
-        { "file": "temple-beth-ora-edmonton_2_interior.jpg", "alt": "A tall stained-glass panel in warm amber tones with a Star of David picked out in pale blue glass." }
+        {
+          "file": "temple-beth-ora-edmonton_2_interior.jpg",
+          "alt": "A tall stained-glass panel in warm amber tones with a Star of David picked out in pale blue glass."
+        }
       ],
       "imageNote": "Interior detail, based on a reference photograph.",
       "sources": [
-        { "label": "Temple Beth Ora Synagogue (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Temple_Beth_Ora_Synagogue_(Edmonton)" },
-        { "label": "Jewish Federation of Edmonton directory", "url": "https://www.jewishedmonton.org/community-directory/temple-beth-ora" },
-        { "label": "City Museum Edmonton: A brief history of the Edmonton Jewish community", "url": "https://citymuseumedmonton.ca/2021/01/13/a-brief-history-of-the-edmonton-jewish-community/" }
+        {
+          "label": "Temple Beth Ora Synagogue (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Temple_Beth_Ora_Synagogue_(Edmonton)"
+        },
+        {
+          "label": "Jewish Federation of Edmonton directory",
+          "url": "https://www.jewishedmonton.org/community-directory/temple-beth-ora"
+        },
+        {
+          "label": "City Museum Edmonton: A brief history of the Edmonton Jewish community",
+          "url": "https://citymuseumedmonton.ca/2021/01/13/a-brief-history-of-the-edmonton-jewish-community/"
+        }
       ],
-      "checks": ["Address: a 2026 Federation video says the congregation is returning to the new JCC."]
+      "checks": [
+        "Address: a 2026 Federation video says the congregation is returning to the new JCC."
+      ]
     },
     {
       "id": "temple-shalom-winnipeg",
@@ -171,12 +280,29 @@
         "Alongside Shabbat and holy-day services with a strong musical tradition, the Temple runs the Irma Penn School for Judaic Studies, an Introduction to Judaism course and adult education. Its affiliated cemetery, Beit Chayim Mikdash Shalom, serves Jews by birth, Jews by choice and interfaith families according to Reform practice.",
         "The Reaching Out Reaching Up capital campaign, launched on 5 November 2017, raised $400,000 in its first month; the same year the congregation set up an endowment fund with the Jewish Foundation of Manitoba. Rabbi Allan Finkel initiated the Western Canadian Reform Collaboration linking Winnipeg with the Reform congregations of Calgary, Edmonton, Vancouver and Victoria. Rabbi Myriam Saitman's installation was scheduled for 21 November 2025."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "temple-shalom-winnipeg_1_exterior.jpg",
+          "alt": "A low mid-century building of brown brick and cream panels with the words Temple Shalom on its front, a round window, a birch tree and a street in front."
+        }
+      ],
       "sources": [
-        { "label": "Encyclopaedia Judaica: Winnipeg", "url": "https://judaism_enc.en-academic.com/20638/WINNIPEG" },
-        { "label": "Jewish Federation of Winnipeg directory", "url": "https://www.jewishwinnipeg.org/directory/temple-shalom" },
-        { "label": "Winnipeg Jewish Review: Reaching Out Reaching Up campaign", "url": "https://wp.winnipegjewishreview.com/?p=8283" },
-        { "label": "Jewish Independent: Reform shuls partner", "url": "https://www.jewishindependent.ca/?p=36398" }
+        {
+          "label": "Encyclopaedia Judaica: Winnipeg",
+          "url": "https://judaism_enc.en-academic.com/20638/WINNIPEG"
+        },
+        {
+          "label": "Jewish Federation of Winnipeg directory",
+          "url": "https://www.jewishwinnipeg.org/directory/temple-shalom"
+        },
+        {
+          "label": "Winnipeg Jewish Review: Reaching Out Reaching Up campaign",
+          "url": "https://wp.winnipegjewishreview.com/?p=8283"
+        },
+        {
+          "label": "Jewish Independent: Reform shuls partner",
+          "url": "https://www.jewishindependent.ca/?p=36398"
+        }
       ],
       "checks": []
     },
@@ -201,18 +327,45 @@
         "Rabbi Bernard Bloomstone led the merged congregation from 1972 to 1983 and Rabbi Leigh Lerner from March 1989 until 2012, when he became rabbi emeritus and Rabbi Lisa Grushcow succeeded him. Rachelle Shubert has been director of music and cantorial soloist since 2001. The Temple offers cemetery services at four locations including Mount Royal Cemetery, runs the Westmount Mini Centre with the Cummings Jewish Centre for Seniors, and is affiliated with the Union for Reform Judaism and the Canadian Association of Reform Zionists."
       ],
       "images": [
-        { "file": "temple-emanu-el-beth-sholom-montreal_2_exterior.jpg", "alt": "A pale brick synagogue with a tall front of narrow dark green glass panels between stone piers, a wide flight of steps and bare trees." },
-        { "file": "temple-emanu-el-beth-sholom-montreal_x100_exterior.jpg", "alt": "Front view of the tall glass-and-stone facade and its steps." },
-        { "file": "temple-emanu-el-beth-sholom-montreal_x101_exterior.jpg", "alt": "The facade seen from the right, showing the brick side wall and small windows." },
-        { "file": "temple-emanu-el-beth-sholom-montreal_x102_exterior.jpg", "alt": "A straight-on view of the glass panels and the entrance steps with handrails." },
-        { "file": "temple-emanu-el-beth-sholom-montreal_x103_exterior.jpg", "alt": "A closer view of the front, with the glass panels filling most of the frame." },
-        { "file": "temple-emanu-el-beth-sholom-montreal_x104_exterior.jpg", "alt": "The facade seen from the left, with a tree in the foreground." }
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_2_exterior.jpg",
+          "alt": "A pale brick synagogue with a tall front of narrow dark green glass panels between stone piers, a wide flight of steps and bare trees."
+        },
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_x100_exterior.jpg",
+          "alt": "Front view of the tall glass-and-stone facade and its steps."
+        },
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_x101_exterior.jpg",
+          "alt": "The facade seen from the right, showing the brick side wall and small windows."
+        },
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_x102_exterior.jpg",
+          "alt": "A straight-on view of the glass panels and the entrance steps with handrails."
+        },
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_x103_exterior.jpg",
+          "alt": "A closer view of the front, with the glass panels filling most of the frame."
+        },
+        {
+          "file": "temple-emanu-el-beth-sholom-montreal_x104_exterior.jpg",
+          "alt": "The facade seen from the left, with a tree in the foreground."
+        }
       ],
       "imageNote": "Views of the 1960 Sherbrooke Street building, based on reference photographs.",
       "sources": [
-        { "label": "Temple Emanu-El-Beth Sholom (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Temple_Emanu-El-Beth_Sholom" },
-        { "label": "Museum of Jewish Montreal: Temple Emanu-El", "url": "https://museemontrealjuif.ca/exhibit/temple-emanu-el-6" },
-        { "label": "Temple Emanu-El-Beth Sholom website", "url": "http://www.templemontreal.ca/" }
+        {
+          "label": "Temple Emanu-El-Beth Sholom (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Temple_Emanu-El-Beth_Sholom"
+        },
+        {
+          "label": "Museum of Jewish Montreal: Temple Emanu-El",
+          "url": "https://museemontrealjuif.ca/exhibit/temple-emanu-el-6"
+        },
+        {
+          "label": "Temple Emanu-El-Beth Sholom website",
+          "url": "http://www.templemontreal.ca/"
+        }
       ],
       "checks": []
     },
@@ -237,17 +390,41 @@
         "The congregation holds Shabbat and festival services, runs a Hebrew school, marks life-cycle events and offers funeral and burial services. Its website names Rabbi Printz as its rabbi."
       ],
       "images": [
-        { "file": "bnai-shalom-vtikvah-ajax_x100_exterior.jpg", "alt": "A long single-storey red-brick building with a gabled glass front on the right, set on a lawn with a large tree." },
-        { "file": "bnai-shalom-vtikvah-ajax_x101_exterior.jpg", "alt": "Panoramic view of the brick building and its lawn." },
-        { "file": "bnai-shalom-vtikvah-ajax_x102_exterior.jpg", "alt": "The building seen from the front with a path to the entrance." },
-        { "file": "bnai-shalom-vtikvah-ajax_x103_exterior.jpg", "alt": "The building with the glass gable and the trees beside it." },
-        { "file": "bnai-shalom-vtikvah-ajax_x104_exterior.jpg", "alt": "A wide view of the lawn and the long brick frontage." },
-        { "file": "bnai-shalom-vtikvah-ajax_x105_exterior.jpg", "alt": "The building seen from slightly to the right, with a round shrub by the entrance." }
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x100_exterior.jpg",
+          "alt": "A long single-storey red-brick building with a gabled glass front on the right, set on a lawn with a large tree."
+        },
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x101_exterior.jpg",
+          "alt": "Panoramic view of the brick building and its lawn."
+        },
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x102_exterior.jpg",
+          "alt": "The building seen from the front with a path to the entrance."
+        },
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x103_exterior.jpg",
+          "alt": "The building with the glass gable and the trees beside it."
+        },
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x104_exterior.jpg",
+          "alt": "A wide view of the lawn and the long brick frontage."
+        },
+        {
+          "file": "bnai-shalom-vtikvah-ajax_x105_exterior.jpg",
+          "alt": "The building seen from slightly to the right, with a round shrub by the entrance."
+        }
       ],
       "imageNote": "Views of the congregation's shared worship venue, St. Paul's United Church; the church's own signage is not shown.",
       "sources": [
-        { "label": "B'nai Shalom v'Tikvah: Our history", "url": "https://bnaishalomvtikvah.ca/about-us/our-history/" },
-        { "label": "B'nai Shalom v'Tikvah: Contact", "url": "https://bnaishalomvtikvah.ca/contact-us/" }
+        {
+          "label": "B'nai Shalom v'Tikvah: Our history",
+          "url": "https://bnaishalomvtikvah.ca/about-us/our-history/"
+        },
+        {
+          "label": "B'nai Shalom v'Tikvah: Contact",
+          "url": "https://bnaishalomvtikvah.ca/contact-us/"
+        }
       ],
       "checks": []
     },
@@ -270,11 +447,25 @@
         "The association was renamed Am Shalom Congregation in 2001. Henry Bernick, a developer who had grown up in the Barrie area, donated land on Huronia Road at Lockhart Road in the city's south end, and with further donations a 10,000-square-foot synagogue was completed there in 2003. Some accounts give 2004 as the year the congregation in its present form began.",
         "Am Shalom is a Reform congregation affiliated with the Union for Reform Judaism, with about 75 member families. As the only synagogue in Barrie and Simcoe County it also serves Muskoka, Collingwood, Innisfil, Newmarket and the surrounding area. It runs the Jewish Heritage School for children from age four to bar and bat mitzvah, Shabbat and holiday services, adult education and a choir, Shirat Am Shalom, and takes part in interfaith and educational outreach in the wider community. The Reform rabbis' council lists Rabbi Emma Gottlieb as its rabbi from May 2025."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "am-shalom-barrie_1_exterior.jpg",
+          "alt": "A white block building with a blue pyramid roof and a small glazed lantern on top, a Star of David on its side wall and a curved car park in front, among trees."
+        }
+      ],
       "sources": [
-        { "label": "Am Shalom Congregation website", "url": "https://amshalom.ca/" },
-        { "label": "Canadian Jewish News: Barrie synagogue gets new spiritual leader", "url": "https://thecjn.ca/news/barrie-synagogue-gets-new-spiritual-leader/" },
-        { "label": "Bill Gladstone: First synagogue for Barrie (2000)", "url": "https://www.billgladstone.ca/first-synagogue-for-barrie-ontario-2000" }
+        {
+          "label": "Am Shalom Congregation website",
+          "url": "https://amshalom.ca/"
+        },
+        {
+          "label": "Canadian Jewish News: Barrie synagogue gets new spiritual leader",
+          "url": "https://thecjn.ca/news/barrie-synagogue-gets-new-spiritual-leader/"
+        },
+        {
+          "label": "Bill Gladstone: First synagogue for Barrie (2000)",
+          "url": "https://www.billgladstone.ca/first-synagogue-for-barrie-ontario-2000"
+        }
       ],
       "checks": []
     },
@@ -299,13 +490,25 @@
         "Har Tikvah now worships at 380 Bovaird Drive East. It is the only synagogue in Brampton and serves Brampton, Bramalea, Bolton, Malton, Georgetown and Caledon with Shabbat and festival services, a Hebrew school for ages three to sixteen, Torah study, adult education, speakers and bar and bat mitzvah tutoring. It is a member of the Union for Reform Judaism and the Canadian council of Reform congregations; a community directory lists Rabbi Michal Shekel as its rabbi."
       ],
       "images": [
-        { "file": "har-tikvah-brampton_3_interior.jpg", "alt": "A framed stained-glass arch with a Star of David above a wooden bench with a red cushion, against a plain pale wall." }
+        {
+          "file": "har-tikvah-brampton_3_interior.jpg",
+          "alt": "A framed stained-glass arch with a Star of David above a wooden bench with a red cushion, against a plain pale wall."
+        }
       ],
       "imageNote": "Interior detail reconstructed from an official photograph, with people removed.",
       "sources": [
-        { "label": "Har Tikvah: History", "url": "https://www.hartikvah.org/history" },
-        { "label": "City of Brampton By-law 180-84 (heritage designation)", "url": "https://www.brampton.ca/EN/City-Hall/Bylaws/Archive/180-1984.pdf" },
-        { "label": "UJA Discover Jewish Toronto directory", "url": "https://jewishtoronto.com/directory/congregation-har-tikvah-of-brampton" }
+        {
+          "label": "Har Tikvah: History",
+          "url": "https://www.hartikvah.org/history"
+        },
+        {
+          "label": "City of Brampton By-law 180-84 (heritage designation)",
+          "url": "https://www.brampton.ca/EN/City-Hall/Bylaws/Archive/180-1984.pdf"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto directory",
+          "url": "https://jewishtoronto.com/directory/congregation-har-tikvah-of-brampton"
+        }
       ],
       "checks": []
     },
@@ -329,12 +532,29 @@
         "After the Second World War Anshe Sholom became the first Hamilton synagogue to follow its members westward. The present building on Cline Avenue North in Westdale, designed by Joseph Singer, was built in 1951 and dedicated in June 1952; a new wing with a school section was added in 1963. Rabbi Bernard Baskin held the pulpit for a record forty years, and Rabbi Jordan D. Cohen, the congregation's first Canadian-born rabbi, began his service on 1 January 2007. Louise Sole Rotman was the first woman to serve as president.",
         "Recognised as Canada's first Reform congregation and Ontario's oldest Jewish congregation, Temple Anshe Sholom marked its 170th anniversary in 2020. It describes its worship as traditional yet innovative and commits itself to the full equality of women and the full participation of LGBTQ members. Nearly four metres of its records are held by the Ontario Jewish Archives."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "anshe-sholom-hamilton_1_exterior.jpg",
+          "alt": "A long, low synagogue in tan brick with a taller stone-faced entrance block carrying a menorah motif, set behind a lawn and a front walk."
+        }
+      ],
       "sources": [
-        { "label": "Temple Anshe Sholom: Our history", "url": "https://anshesholom.ca/about-us/our-history/" },
-        { "label": "Ontario Jewish Archives: Temple Anshe Sholom accession", "url": "https://search.ontariojewisharchives.org/Permalink/accessions25822" },
-        { "label": "Canadian Jewish News: Canada's oldest Reform shul celebrates 165 years", "url": "https://thecjn.ca/?p=154138" },
-        { "label": "Historical Hamilton: Temple Anshe Sholom", "url": "https://historicalhamilton.com/type/church/temple-anshe-sholom/" }
+        {
+          "label": "Temple Anshe Sholom: Our history",
+          "url": "https://anshesholom.ca/about-us/our-history/"
+        },
+        {
+          "label": "Ontario Jewish Archives: Temple Anshe Sholom accession",
+          "url": "https://search.ontariojewisharchives.org/Permalink/accessions25822"
+        },
+        {
+          "label": "Canadian Jewish News: Canada's oldest Reform shul celebrates 165 years",
+          "url": "https://thecjn.ca/?p=154138"
+        },
+        {
+          "label": "Historical Hamilton: Temple Anshe Sholom",
+          "url": "https://historicalhamilton.com/type/church/temple-anshe-sholom/"
+        }
       ],
       "checks": []
     },
@@ -359,13 +579,29 @@
         "The congregation grew from about ten families to around forty households and families. Between 1983 and 1993 household memberships rose from 19 to 50. In 1985 it completed the purchase of a block of plots in Cataraqui Cemetery, and in 1986 president Moussa Cohanim could write in his final report, 'We are here to stay.' Ann Levison ran the Hebrew school, members produced a lively newsletter called The Iyr Ha-Melech Whig, and part-time rabbis such as Barbara Bortz of Montreal shared the leading of services with lay members.",
         "Iyr Ha-Melech has long held its services in halls rather than a building of its own: for years in a hall at Queen's, and now at KUF Hall on McMahon Avenue. It holds Shabbat and holiday services, prepares young people for bar and bat mitzvah, and offers an open, liberal and inclusive Judaism to Kingston and the surrounding region. Members of the Orthodox Beth Israel and of Iyr Ha-Melech sit together on the Kingston Jewish Council, and some families belong to both."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Congregation Iyr Ha-Melech: About us", "url": "https://reformjewishkingston.ca/about-us-2/" },
-        { "label": "Ontario Jewish Archives: Iyr Ha-Melech", "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kingston/recentyears/iyr-ha-melech.html" },
-        { "label": "Bill Gladstone: A visit with the Jews of Kingston", "url": "https://www.billgladstone.ca/?p=7949" }
+      "images": [
+        {
+          "file": "iyr-ha-melech-kingston_1_exterior.jpg",
+          "alt": "A modern synagogue with a steep angled roof, dark slate cladding and a band of glazing, set behind red shrubs and tall evergreens in autumn."
+        }
       ],
-      "checks": ["Telephone number not found; only the email address is known."]
+      "sources": [
+        {
+          "label": "Congregation Iyr Ha-Melech: About us",
+          "url": "https://reformjewishkingston.ca/about-us-2/"
+        },
+        {
+          "label": "Ontario Jewish Archives: Iyr Ha-Melech",
+          "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kingston/recentyears/iyr-ha-melech.html"
+        },
+        {
+          "label": "Bill Gladstone: A visit with the Jews of Kingston",
+          "url": "https://www.billgladstone.ca/?p=7949"
+        }
+      ],
+      "checks": [
+        "Telephone number not found; only the email address is known."
+      ]
     },
     {
       "id": "temple-israel-london",
@@ -386,11 +622,25 @@
         "Rabbi Wittstein led the congregation until his death in January 2010 at the age of 74. Rabbi Michal Shekel of Toronto served as interim rabbi, and in June 2010 Rabbi Debra Stahlberg Dressler, newly ordained at Hebrew Union College in Cincinnati after a first career in direct marketing and magazine circulation, became the congregation's second spiritual leader and London's first full-time female rabbi. She co-founded the London Interfaith Peace Camp, which brings Jewish, Christian and Muslim young people together, and serves as principal of the religious school.",
         "Over the years Temple Israel has called many places home: a suburban basement, a building on Adelaide Street, and now a house on Windermere Road, a former family estate. Among its Torah scrolls is one from the Memorial Scrolls Trust, scroll number 357, which the congregation reads with reverence for its history. Temple Israel is a member of the Union for Reform Judaism and the London Jewish Federation, is part of the Camp George community, and takes part in the London Multi-Faith Social Action Coalition, interfaith tree plantings and food sorts."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "temple-israel-london_1_exterior.jpg",
+          "alt": "A two-storey red-brick building with a bay window, a stone-trimmed entrance, a wheelchair ramp and autumn trees around it."
+        }
+      ],
       "sources": [
-        { "label": "Temple Israel of London: Our history", "url": "https://www.templeisraellondon.ca/our-history" },
-        { "label": "Temple Israel of London: Our rabbi", "url": "https://templeisraellondon.ca/our-rabbi" },
-        { "label": "Canadian Jewish News: London's Temple Israel welcomes new rabbi", "url": "https://thecjn.ca/news/londons-temple-israel-welcomes-new-rabbi" }
+        {
+          "label": "Temple Israel of London: Our history",
+          "url": "https://www.templeisraellondon.ca/our-history"
+        },
+        {
+          "label": "Temple Israel of London: Our rabbi",
+          "url": "https://templeisraellondon.ca/our-rabbi"
+        },
+        {
+          "label": "Canadian Jewish News: London's Temple Israel welcomes new rabbi",
+          "url": "https://thecjn.ca/news/londons-temple-israel-welcomes-new-rabbi"
+        }
       ],
       "checks": []
     },
@@ -414,12 +664,29 @@
         "Rabbi Englander served Solel from its founding until his retirement in June 2014 and remains rabbi emeritus. He was named Mississauga's citizen of the year in 1980, appointed a Member of the Order of Canada in 2005, and helped found two interfaith institutions in the city: Foodpath, the community food bank, and Pathway Non-Profit Community Development, of which he was founding president. Rabbi Audrey Pollack succeeded him as senior rabbi in 2014.",
         "Solel has grown to more than 300 member families and runs a religious and language school two days a week for preschoolers to adults. Since 1980 it has been twinned with Kehilat Darchei Noam in Ramat HaSharon, Israel, and it has led several missions there. The congregation celebrated its fiftieth anniversary in 2023-24, re-enacting the walk from the Glen Erin Inn to Folkway Drive."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "solel-mississauga_1_exterior.jpg",
+          "alt": "A low brick building with a wooden upper band, a glazed entrance and the word Solel beside a Star of David on the wall, with a paved forecourt and pines."
+        }
+      ],
       "sources": [
-        { "label": "Solel Congregation website", "url": "https://solel.ca/" },
-        { "label": "Solel: Going back 50 years", "url": "https://solel.ca/president-message/2023-going-back-50-years/" },
-        { "label": "CCAR Press: Rabbi Lawrence A. Englander", "url": "https://www.ccarpress.org/author/lawrence-a-englander" },
-        { "label": "Ontario Jewish Archives: Solel Congregation accession", "url": "https://search.ontariojewisharchives.org/Permalink/accessions24168" }
+        {
+          "label": "Solel Congregation website",
+          "url": "https://solel.ca/"
+        },
+        {
+          "label": "Solel: Going back 50 years",
+          "url": "https://solel.ca/president-message/2023-going-back-50-years/"
+        },
+        {
+          "label": "CCAR Press: Rabbi Lawrence A. Englander",
+          "url": "https://www.ccarpress.org/author/lawrence-a-englander"
+        },
+        {
+          "label": "Ontario Jewish Archives: Solel Congregation accession",
+          "url": "https://search.ontariojewisharchives.org/Permalink/accessions24168"
+        }
       ],
       "checks": []
     },
@@ -444,14 +711,35 @@
         "For years the congregation made do with borrowed space, one year holding its High Holy Day services at a golf course. It later moved into a larger building in the heart of downtown Newmarket, near the public library, using two of the three floors for services, programming and its Hebrew school. Rabbi Jonathan Crane, who worked part-time with the congregation and led its High Holy Day services at the time, said the move gave Or Hadash a real footprint in Newmarket and in Ontario.",
         "Or Hadash describes itself as warm, friendly and egalitarian, with a family-like atmosphere. It holds weekly Shabbat and holiday services and runs a religious school, adult education and Tikkun Olam projects. Members say that community, more than location, is what draws them. A travel directory lists Rabbi Michal Shekel as its rabbi."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Or Hadash Synagogue website", "url": "https://orhadash.org/" },
-        { "label": "UJA Discover Jewish Toronto directory", "url": "https://jewishtoronto.com/directory/or-hadash-synagogue-and-religious-school" },
-        { "label": "Canadian Jewish News: Or Hadash Synagogue gets a new home", "url": "https://thecjn.ca/?p=240614" },
-        { "label": "Kosher Delight directory of Ontario Reform synagogues", "url": "https://www.kosherdelight.com/CanadaOntarioSynagoguesReform.shtml" }
+      "images": [
+        {
+          "file": "or-hadash-newmarket_1_exterior.jpg",
+          "alt": "A wide view across a snowy car park to Newmarket Plaza, a low brick shopping plaza with a tall sign for its tenants beside the road."
+        }
       ],
-      "checks": ["Founding year rests on one directory source.", "Street address to confirm on the congregation's own site."]
+      "sources": [
+        {
+          "label": "Or Hadash Synagogue website",
+          "url": "https://orhadash.org/"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto directory",
+          "url": "https://jewishtoronto.com/directory/or-hadash-synagogue-and-religious-school"
+        },
+        {
+          "label": "Canadian Jewish News: Or Hadash Synagogue gets a new home",
+          "url": "https://thecjn.ca/?p=240614"
+        },
+        {
+          "label": "Kosher Delight directory of Ontario Reform synagogues",
+          "url": "https://www.kosherdelight.com/CanadaOntarioSynagoguesReform.shtml"
+        }
+      ],
+      "checks": [
+        "Founding year rests on one directory source.",
+        "Street address to confirm on the congregation's own site."
+      ],
+      "imageNote": "This is an overview of the shared plaza at 130 Davis Drive; the congregation meets in an upstairs unit that cannot be picked out here, and the bank in the foreground is not the synagogue."
     },
     {
       "id": "shaarei-beth-el-oakville",
@@ -473,12 +761,29 @@
         "Rabbi Edward Goldfarb, formerly director of education at Temple Sinai in Toronto, arrived in 1982 as the first full-time rabbi and found a congregation of thirty to thirty-five families struggling to survive; he served eighteen years and saw it become a permanent part of the town. In the 1980s the synagogue merged with the Burlington Jewish Group to form Shaarei-Beth El Congregation of Halton, and in 1985 a 6,000-square-foot expansion with a 250-seat sanctuary was added to the front of the original building and dedicated in 1986. Stained-glass windows on the theme of the Days of Awe honour Rabbi Goldfarb's retirement.",
         "Rabbi Stephen Wise, a Toronto native ordained in 2005 and previously assistant rabbi at Temple Beth El in Boca Raton, took up the pulpit on 1 July 2007 and was installed that November. The congregation describes itself as Reform with a traditional orientation, serving Oakville, Burlington and Halton Region with weekly Shabbat morning services, Friday evening services, festivals and adult education; its school is directed by Cheryl Wise. About 165 families belong. The sixtieth anniversary in November 2015 brought a welcoming address from Rabbi Rick Jacobs, president of the Union for Reform Judaism, and the first Liz Fein Memorial leadership award."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "shaarei-beth-el-oakville_1_exterior.jpg",
+          "alt": "A white-brick synagogue with a glazed entrance under a deep fascia carrying the name Shaarei-Beth El Congregation, a young tree and a car park in front."
+        }
+      ],
       "sources": [
-        { "label": "Oakville News: Oakville synagogue celebrates 60th anniversary", "url": "https://oakvillenews.org/opinion/oakville-synagogue-celebrates-60th-anniversary/" },
-        { "label": "Oakville Beaver (2015): Shaarei-Beth El celebrating its 60th anniversary", "url": "https://news.ourontario.ca/3183327/page/12" },
-        { "label": "Oakville Beaver: stained-glass windows honour retiring rabbi", "url": "https://news.ourontario.ca/3282684/page/11" },
-        { "label": "Halton Information Providers listing", "url": "https://halton.cioc.ca/record/OAK0776" }
+        {
+          "label": "Oakville News: Oakville synagogue celebrates 60th anniversary",
+          "url": "https://oakvillenews.org/opinion/oakville-synagogue-celebrates-60th-anniversary/"
+        },
+        {
+          "label": "Oakville Beaver (2015): Shaarei-Beth El celebrating its 60th anniversary",
+          "url": "https://news.ourontario.ca/3183327/page/12"
+        },
+        {
+          "label": "Oakville Beaver: stained-glass windows honour retiring rabbi",
+          "url": "https://news.ourontario.ca/3282684/page/11"
+        },
+        {
+          "label": "Halton Information Providers listing",
+          "url": "https://halton.cioc.ca/record/OAK0776"
+        }
       ],
       "checks": []
     },
@@ -502,14 +807,32 @@
         "Ground was broken at 1301 Prince of Wales Drive on 27 April 1975, and that autumn the congregation held its High Holy Day services in the newly designed building. Temple Israel is now the second-largest congregation in Ottawa, with about 340 families, and the standard-bearer of Liberal Judaism in the capital. It is an active member of the Union for Reform Judaism, a founding member of Camp George, the Reform movement's summer camp in Ontario, and a supporter of ARZA Canada.",
         "The Temple Israel Religious School was opened to non-members by a unanimous board vote on 21 April 2011. The congregation runs an Insight into Judaism course and a Liberal Judaism library, and its social action has included a baby-quilt project for Israel. Rabbi Daniel Mikelberg has led the congregation since 2019."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Temple Israel (Ottawa) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Temple_Israel_(Ottawa)" },
-        { "label": "Temple Israel Ottawa: Our history", "url": "https://templeisraelottawa.ca/our-history.html" },
-        { "label": "Ottawa Jewish Historical Society gallery", "url": "https://ojhs.squarespace.com/gallery" },
-        { "label": "Temple Israel Ottawa: Czech Torah #355", "url": "https://templeisraelottawa.ca/?p=12162" }
+      "images": [
+        {
+          "file": "temple-israel-ottawa_1_exterior.jpg",
+          "alt": "A curved brick building with an arched entrance and a ramp, seen from the car park with a yellow excavator at work beside it."
+        }
       ],
-      "checks": []
+      "sources": [
+        {
+          "label": "Temple Israel (Ottawa) (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Temple_Israel_(Ottawa)"
+        },
+        {
+          "label": "Temple Israel Ottawa: Our history",
+          "url": "https://templeisraelottawa.ca/our-history.html"
+        },
+        {
+          "label": "Ottawa Jewish Historical Society gallery",
+          "url": "https://ojhs.squarespace.com/gallery"
+        },
+        {
+          "label": "Temple Israel Ottawa: Czech Torah #355",
+          "url": "https://templeisraelottawa.ca/?p=12162"
+        }
+      ],
+      "checks": [],
+      "imageNote": "The view shows the building during site work, as in the reference photograph."
     },
     {
       "id": "temple-shalom-waterloo",
@@ -531,12 +854,29 @@
         "The most significant step in its history came in 1996, when it moved into The Cedars at 543 Beechwood Drive, a $1.4 million worship and community centre designed and built jointly with Westminster United Church, a congregation formed in 1990 that had been meeting in a school gym. The partnership began when temple president Mark Pancer found himself a neighbour of a member of the church's building committee. It is believed to be Canada's first purpose-built Jewish-Christian house of worship, and both congregations say the arrangement has worked: the Temple worships on Friday evenings and Saturday mornings, the church on Sundays, and when Christmas Eve falls on a Friday the church simply holds a later service.",
         "At the time of the move the congregation numbered about 68 families; by 1999 it had 75 families and a religious school of 45 students, who met weekly with the pupils of the Beth Jacob day school. Today young families from Kitchener-Waterloo, Cambridge, Guelph, Stratford and Hanover come to its Tots program and its twice-weekly religious school."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "temple-shalom-waterloo_1_exterior.jpg",
+          "alt": "A red-brick building with a steep gabled front, a stone chimney column and a long covered walkway, lit warmly at dusk in a light mist."
+        }
+      ],
       "sources": [
-        { "label": "Ontario Jewish Archives: Kitchener-Waterloo religious life, 1960s", "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kitchener-waterloo/religiouslife/1960.html" },
-        { "label": "Ontario Jewish Archives: Temple Shalom", "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kitchener-waterloo/recentyears/templeshalom.html" },
-        { "label": "JTA: Ontario church, synagogue build joint house of worship", "url": "https://www.jta.org/archive/ontario-church-synagogue-build-joint-house-of-worship-2" },
-        { "label": "Christian Science Monitor (1996): Temple and church become one", "url": "https://proof.csmonitor.com/1996/1213/121396.intl.intl.1.html" }
+        {
+          "label": "Ontario Jewish Archives: Kitchener-Waterloo religious life, 1960s",
+          "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kitchener-waterloo/religiouslife/1960.html"
+        },
+        {
+          "label": "Ontario Jewish Archives: Temple Shalom",
+          "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/kitchener-waterloo/recentyears/templeshalom.html"
+        },
+        {
+          "label": "JTA: Ontario church, synagogue build joint house of worship",
+          "url": "https://www.jta.org/archive/ontario-church-synagogue-build-joint-house-of-worship-2"
+        },
+        {
+          "label": "Christian Science Monitor (1996): Temple and church become one",
+          "url": "https://proof.csmonitor.com/1996/1213/121396.intl.intl.1.html"
+        }
       ],
       "checks": []
     },
@@ -560,12 +900,29 @@
         "Rabbi Jonathan Plaut served from 1970 to 1984 and was instrumental in building the congregation; Rabbi Jeffrey Ableser followed. Though Reform, Beth El has always kept a strong feeling for Jewish tradition: it affiliated with the Windsor Jewish Community Council and the Va'ad HaKashruth, worked with the Orthodox congregations to obtain a cemetery, and in later years shared bar and bat mitzvah celebrations with Shaar Hashomayim. It marked its fiftieth year in October 2010 and its sixtieth in 2020.",
         "Today Congregation Beth El runs a small Sunday-morning religious school, joins in interfaith programs with local police and faith groups, and has partnered with Temple Israel in London, Ontario, for shared seders and events; in 2022 a student rabbi from Hebrew Union College in Cincinnati visited once a month."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "beth-el-windsor_1_exterior.jpg",
+          "alt": "A single-storey cream-brick synagogue with three tall blue stained-glass windows, a covered double-door entrance and a sign wall reading Congregation Beth El, behind a lawn."
+        }
+      ],
       "sources": [
-        { "label": "Congregation Beth El: History", "url": "https://bethelwindsor.org/history/" },
-        { "label": "Detroit Jewish News (2022): Congregation Beth El stays strong after 60+ years", "url": "https://digital.bentley.umich.edu/djnews/djn.2022.05.12.001/18" },
-        { "label": "Detroit Jewish News (1960): First Reform congregation formed in Windsor", "url": "https://digital.bentley.umich.edu/djnews/djn.1960.04.01.001/12" },
-        { "label": "Detroit Jewish News (2010): Congregation Beth El to mark its 50th year", "url": "https://digital.bentley.umich.edu/djnews/djn.2010.09.16.001/19" }
+        {
+          "label": "Congregation Beth El: History",
+          "url": "https://bethelwindsor.org/history/"
+        },
+        {
+          "label": "Detroit Jewish News (2022): Congregation Beth El stays strong after 60+ years",
+          "url": "https://digital.bentley.umich.edu/djnews/djn.2022.05.12.001/18"
+        },
+        {
+          "label": "Detroit Jewish News (1960): First Reform congregation formed in Windsor",
+          "url": "https://digital.bentley.umich.edu/djnews/djn.1960.04.01.001/12"
+        },
+        {
+          "label": "Detroit Jewish News (2010): Congregation Beth El to mark its 50th year",
+          "url": "https://digital.bentley.umich.edu/djnews/djn.2010.09.16.001/19"
+        }
       ],
       "checks": []
     },
@@ -591,14 +948,35 @@
         "The congregation appears in the Union for Reform Judaism's 2022 and 2023 annual reports and in ARZA Canada's list of Canadian Reform congregations, and the Reform rabbis' council lists Rabbi Rena Arshinoff as its rabbi. Because it meets inside a care home rather than in a synagogue building of its own, it is routinely left out of directories of Toronto synagogues.",
         "No founding narrative or date has been found online. Baycrest itself traces its origins to the Toronto Jewish Old Folks Home of 1918; the congregation is reached through Baycrest's spiritual care office."
       ],
-      "images": [],
-      "sources": [
-        { "label": "URJ 2023 Annual Report: congregations", "url": "https://www.2023annualreport.urj.org/congregations" },
-        { "label": "Reform Jewish Community of Canada: GTA congregations", "url": "https://therjcc.ca/affiliated-rabbis-of-the" },
-        { "label": "UJA Discover Jewish Toronto: Baycrest Terrace Reform Congregation", "url": "https://www.jewishtoronto.com/directory/baycrest-terrace-reform-congregation" },
-        { "label": "Baycrest: synagogue", "url": "http://www.baycrest.org/baycrest/living-at-baycrest/amenities/synagogue" }
+      "images": [
+        {
+          "file": "beth-chaverim-baycrest_1_exterior.jpg",
+          "alt": "A seven-storey orange-brick residence with grey window bays, seen across a lawn and garden path on a clear afternoon."
+        }
       ],
-      "checks": ["Founding date not found.", "No public email address."]
+      "sources": [
+        {
+          "label": "URJ 2023 Annual Report: congregations",
+          "url": "https://www.2023annualreport.urj.org/congregations"
+        },
+        {
+          "label": "Reform Jewish Community of Canada: GTA congregations",
+          "url": "https://therjcc.ca/affiliated-rabbis-of-the"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto: Baycrest Terrace Reform Congregation",
+          "url": "https://www.jewishtoronto.com/directory/baycrest-terrace-reform-congregation"
+        },
+        {
+          "label": "Baycrest: synagogue",
+          "url": "http://www.baycrest.org/baycrest/living-at-baycrest/amenities/synagogue"
+        }
+      ],
+      "checks": [
+        "Founding date not found.",
+        "No public email address."
+      ],
+      "imageNote": "The synagogue is part of the Baycrest residence building shown; the view is of the building, not of the sanctuary."
     },
     {
       "id": "city-shul-toronto",
@@ -622,15 +1000,29 @@
         "City Shul is fully egalitarian and developed its own prayer book, Siddur Shirat HaLev. Rabbi Goldstein, who had earlier served as assistant rabbi at Holy Blossom Temple from 1983 to 1986, is now rabbi emerita."
       ],
       "images": [
-        { "file": "city-shul-toronto_2_exterior.jpg", "alt": "A square stone church tower lit by evening sun, with tall glass buildings behind it and a park bench in the foreground." }
+        {
+          "file": "city-shul-toronto_2_exterior.jpg",
+          "alt": "A square stone church tower lit by evening sun, with tall glass buildings behind it and a park bench in the foreground."
+        }
       ],
       "imageNote": "The congregation's shared worship venue at St George by the Grange; the view keeps the architectural subject of the reference photograph.",
       "sources": [
-        { "label": "City Shul (Wikipedia)", "url": "https://en.wikipedia.org/wiki/City_Shul" },
-        { "label": "City Shul: Contact", "url": "https://www.cityshul.com/contact.html" },
-        { "label": "Reform Jewish Community of Canada: GTA congregations", "url": "https://therjcc.ca/affiliated-rabbis-of-the" }
+        {
+          "label": "City Shul (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/City_Shul"
+        },
+        {
+          "label": "City Shul: Contact",
+          "url": "https://www.cityshul.com/contact.html"
+        },
+        {
+          "label": "Reform Jewish Community of Canada: GTA congregations",
+          "url": "https://therjcc.ca/affiliated-rabbis-of-the"
+        }
       ],
-      "checks": ["Telephone: 437-986-0613 is current; 647-799-3557 is an older number."]
+      "checks": [
+        "Telephone: 437-986-0613 is current; 647-799-3557 is an older number."
+      ]
     },
     {
       "id": "holy-blossom-toronto",
@@ -653,17 +1045,41 @@
         "With more than 7,000 members, Holy Blossom is Canada's largest Reform congregation. Rabbi Yael Splansky is senior rabbi and Rabbi John Moscowitz is rabbi emeritus. A renewal of the Bathurst Street building by Diamond Schmitt Architects, which added the Schwartz-Reisman Atrium and new accessible spaces while preserving the 1938 sanctuary, won a Platinum Reconstruction Award in 2020. The Temple's archives hold board minutes back to 1856."
       ],
       "images": [
-        { "file": "holy-blossom-toronto_1_exterior.jpg", "alt": "The pale stone front of a Romanesque synagogue with a large round rose window above three arched doors at the top of a flight of steps." },
-        { "file": "holy-blossom-toronto_2_exterior.jpg", "alt": "The synagogue seen from the side across a lawn and trees, with its steps and tall arched windows." },
-        { "file": "holy-blossom-toronto_5_interior.jpg", "alt": "A bright hall with pale wood floor, rows of blue chairs and tall stained-glass windows on the left." }
+        {
+          "file": "holy-blossom-toronto_1_exterior.jpg",
+          "alt": "The pale stone front of a Romanesque synagogue with a large round rose window above three arched doors at the top of a flight of steps."
+        },
+        {
+          "file": "holy-blossom-toronto_2_exterior.jpg",
+          "alt": "The synagogue seen from the side across a lawn and trees, with its steps and tall arched windows."
+        },
+        {
+          "file": "holy-blossom-toronto_5_interior.jpg",
+          "alt": "A bright hall with pale wood floor, rows of blue chairs and tall stained-glass windows on the left."
+        }
       ],
       "imageNote": "Views of the Bathurst Street building, based on reference photographs.",
       "sources": [
-        { "label": "Holy Blossom Temple (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Holy_Blossom_Temple" },
-        { "label": "Holy Blossom Temple: About", "url": "https://holyblossom.org/?p=17" },
-        { "label": "Holy Blossom Temple: archives and history", "url": "https://holyblossom.org/category/temple-archives-history/" },
-        { "label": "Ontario Heritage Trust: Toronto's synagogues", "url": "https://www.heritagetrust.on.ca/heritagematters/articles/torontos-synagogues" },
-        { "label": "Architectural Conservancy Ontario: Holy Blossom Temple", "url": "https://acotoronto.ca/building.php?ID=5748" }
+        {
+          "label": "Holy Blossom Temple (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Holy_Blossom_Temple"
+        },
+        {
+          "label": "Holy Blossom Temple: About",
+          "url": "https://holyblossom.org/?p=17"
+        },
+        {
+          "label": "Holy Blossom Temple: archives and history",
+          "url": "https://holyblossom.org/category/temple-archives-history/"
+        },
+        {
+          "label": "Ontario Heritage Trust: Toronto's synagogues",
+          "url": "https://www.heritagetrust.on.ca/heritagematters/articles/torontos-synagogues"
+        },
+        {
+          "label": "Architectural Conservancy Ontario: Holy Blossom Temple",
+          "url": "https://acotoronto.ca/building.php?ID=5748"
+        }
       ],
       "checks": []
     },
@@ -687,13 +1103,29 @@
         "For most of its history the Temple was led by Rabbi Arthur Bielfeld, under whom it became known for social action: help for American draft resisters during the Vietnam War, early campaigning for Soviet Jewry from 1972, anti-racism work, support for former prisoners, and a role in founding Leo Baeck Day School, the Reform day school of Toronto.",
         "Temple Emanu-El has about 360 members. Its grounds hold a Biblical Garden, and the building a quiet reading room. The Centre for Jewish Living and Learning at the Temple runs a school from pre-kindergarten to Grade 12 with a b'nai mitzvah program, and the Temple is the registered home of ARZA Canada, the Canadian Reform Zionist association."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Temple Emanu-El: History", "url": "https://www.templeemanuel.ca/history.html" },
-        { "label": "Temple Emanu-El 50th anniversary publication (2008)", "url": "https://docslib.org/download/6917307/temple-emanu-el-small-pdf" },
-        { "label": "UJA Discover Jewish Toronto directory", "url": "https://jewishtoronto.com/directory/temple-emanu-el" }
+      "images": [
+        {
+          "file": "temple-emanu-el-toronto_1_exterior.jpg",
+          "alt": "A red-brick synagogue with a round rose window on its high front, a white-edged canopy of arched bays along the entrance and a curving drive across a lawn."
+        }
       ],
-      "checks": ["Founding year is implied (c. 1958), not confirmed."]
+      "sources": [
+        {
+          "label": "Temple Emanu-El: History",
+          "url": "https://www.templeemanuel.ca/history.html"
+        },
+        {
+          "label": "Temple Emanu-El 50th anniversary publication (2008)",
+          "url": "https://docslib.org/download/6917307/temple-emanu-el-small-pdf"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto directory",
+          "url": "https://jewishtoronto.com/directory/temple-emanu-el"
+        }
+      ],
+      "checks": [
+        "Founding year is implied (c. 1958), not confirmed."
+      ]
     },
     {
       "id": "temple-sinai-toronto",
@@ -714,12 +1146,29 @@
         "Building began only two years later, and the present synagogue at 210 Wilson Avenue was dedicated in October 1958 with 367 member families. Rabbi Pearlson served the congregation for about forty years, until the mid-1990s, and saw it grow to close to 1,800 families; he wrote a religion column for the Toronto Star and pioneered a daily interfaith dialogue on CBC Radio. He died on 19 February 2008 at 83. The chapel where the weekday morning minyan meets bears his name.",
         "Temple Sinai today has more than 1,750 member households, making it one of the largest Reform congregations in Canada. It is led by Rabbi Michael Dolgin as senior rabbi with Rabbi Jordan Shaner, and has nurtured several rabbis of its own, among them Erin Polansky, who grew up in the congregation and later served as its associate rabbi. Its program ranges from Omer study and a daily minyan to bridge, canasta and photography groups, and it describes itself as a warm and welcoming Jewish community, not just a Reform synagogue."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "temple-sinai-toronto_1_exterior.jpg",
+          "alt": "A pale, curved synagogue with a white dome rising above a glass-fronted sanctuary, long arched windows and a large boulder on the lawn."
+        }
+      ],
       "sources": [
-        { "label": "Temple Sinai: Our history", "url": "https://templesinai.net/our-history/" },
-        { "label": "JTA: Rabbi Jordan Pearlson, a stalwart of Toronto's Jewish community, has died", "url": "https://www.jta.org/archive/rabbi-jordan-pearlson-a-stalwart-of-torontos-jewish" },
-        { "label": "Canadian Jewish News: Temple Sinai's first rabbi remembered", "url": "https://www.cjnews.com/?p=80613" },
-        { "label": "UJA Discover Jewish Toronto directory", "url": "https://www.jewishtoronto.com/directory/temple-sinai-congregation-of-toronto" }
+        {
+          "label": "Temple Sinai: Our history",
+          "url": "https://templesinai.net/our-history/"
+        },
+        {
+          "label": "JTA: Rabbi Jordan Pearlson, a stalwart of Toronto's Jewish community, has died",
+          "url": "https://www.jta.org/archive/rabbi-jordan-pearlson-a-stalwart-of-torontos-jewish"
+        },
+        {
+          "label": "Canadian Jewish News: Temple Sinai's first rabbi remembered",
+          "url": "https://www.cjnews.com/?p=80613"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto directory",
+          "url": "https://www.jewishtoronto.com/directory/temple-sinai-congregation-of-toronto"
+        }
       ],
       "checks": []
     },
@@ -742,13 +1191,28 @@
         "Music is at the heart of worship at Har Zion. Its clergy, Rabbi Cory Weiss and Cantor Rachael Littman, have each composed liturgy for synagogues, and together they weave music through Shabbat services that the congregation describes as engaging and participatory. Rabbi Michael Stroh, who led the congregation for many years, is rabbi emeritus.",
         "Fully egalitarian, Temple Har Zion holds daily morning services, weekly Torah study, a monthly family service and a monthly Tot Shabbat. Its religious school runs on Sunday mornings for junior kindergarten to Grade 6 and on Tuesday evenings for Grades 7 to 10, with Hebrew taught in a separate Beit Ivrit stream."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Temple Har Zion: Prayer", "url": "https://www.harzion.ca/prayer.html" },
-        { "label": "Temple Har Zion: Rabbi", "url": "https://templeharzion.shulcloud.com/rabbi.html" },
-        { "label": "UJA Discover Jewish Toronto directory", "url": "https://jewishtoronto.com/directory/temple-har-zion" }
+      "images": [
+        {
+          "file": "temple-har-zion-thornhill_1_interior.jpg",
+          "alt": "A sanctuary lined in horizontal wood, with a blue and green glass ark, twin wooden lecterns on a raised blue platform and a soft ceiling glow."
+        }
       ],
-      "checks": []
+      "sources": [
+        {
+          "label": "Temple Har Zion: Prayer",
+          "url": "https://www.harzion.ca/prayer.html"
+        },
+        {
+          "label": "Temple Har Zion: Rabbi",
+          "url": "https://templeharzion.shulcloud.com/rabbi.html"
+        },
+        {
+          "label": "UJA Discover Jewish Toronto directory",
+          "url": "https://jewishtoronto.com/directory/temple-har-zion"
+        }
+      ],
+      "checks": [],
+      "imageNote": "This view shows the sanctuary interior; no exterior picture is held."
     },
     {
       "id": "temple-kol-ami-vaughan",
@@ -770,11 +1234,25 @@
         "Rabbi Daniel Gottlieb followed, then Rabbi Sharon Sobel as interim for six months, and from 2011 Rabbi Micah Streiffer. The congregation rented space for many years at Leo Baeck Day School in Thornhill. In 2001 it bought land at 8777 Dufferin Street, but never built there and sold it in 2010; plans to move to the Lebovic Jewish Community Campus and partner with Bialik Hebrew Day School also fell through. By its 25th anniversary in 2013 it had grown to about 170 families, and its leaders said that more than eighty per cent of members attended services or school or volunteered.",
         "Kol Ami's religious school meets on Saturday mornings and Wednesday evenings; on Shabbat the children go upstairs to class while parents study Torah and pray, and the families come together at noon for a family education service. In 2018 the members of Neshamah Congregation of York Region were proposed to merge into Kol Ami. Since 2021 the congregation has been housed in the Kimel Family Education Centre on the Vaughan Jewish Community Campus on Bathurst Street."
       ],
-      "images": [],
+      "images": [
+        {
+          "file": "temple-kol-ami-vaughan_1_exterior.jpg",
+          "alt": "A large modern building in cream and green panels with long bands of glass, two flagpoles flying the Canadian and Israeli flags, and young trees along the lawn."
+        }
+      ],
       "sources": [
-        { "label": "Temple Kol Ami: Our history", "url": "https://www.kolami.ca/welcome/our-history/" },
-        { "label": "Canadian Jewish News: Kol Ami celebrates 25 years", "url": "https://thecjn.ca/?p=233106" },
-        { "label": "Canadian Jewish News: Kol Ami rabbis", "url": "https://thecjn.ca/?p=102749" }
+        {
+          "label": "Temple Kol Ami: Our history",
+          "url": "https://www.kolami.ca/welcome/our-history/"
+        },
+        {
+          "label": "Canadian Jewish News: Kol Ami celebrates 25 years",
+          "url": "https://thecjn.ca/?p=233106"
+        },
+        {
+          "label": "Canadian Jewish News: Kol Ami rabbis",
+          "url": "https://thecjn.ca/?p=102749"
+        }
       ],
       "checks": []
     },
@@ -801,13 +1279,31 @@
         "By 2017 about 150 families belonged. In 2018 the members were proposed to merge into Temple Kol Ami, the established Reform congregation nearby, and Rabbi Polansky's service to Neshamah ended that year; she later became rabbi of Beth Israel Congregation in Kingston.",
         "Neshamah's registered charity status was revoked by the Canada Revenue Agency on 4 December 2021 and its federal corporation was dissolved on 27 April 2024. It is kept here as a legacy entry: it appears in ARZA Canada's list of 27 Canadian Reform congregations but not among the 25 current ones."
       ],
-      "images": [],
-      "sources": [
-        { "label": "Erin Polansky (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Erin_Polansky" },
-        { "label": "Neshamah Congregation of York Region (Eventbrite organiser page)", "url": "https://www.eventbrite.ca/o/neshamah-congregation-of-york-region-1172984817" },
-        { "label": "Beth Israel Kingston: Rabbi Erin Polansky", "url": "https://www.kingston-bethisrael.ca/rabbi-erin-polansky.html" }
+      "images": [
+        {
+          "file": "neshamah-york-region_1_exterior.jpg",
+          "alt": "A community centre with a long low roof across a car park, and a tall grey sign in the foreground reading North Thornhill Community Centre, 300 Pleasant Ridge Avenue."
+        }
       ],
-      "checks": ["Website neshamah.ca not verified as live.", "Telephone from an old directory listing."]
+      "sources": [
+        {
+          "label": "Erin Polansky (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Erin_Polansky"
+        },
+        {
+          "label": "Neshamah Congregation of York Region (Eventbrite organiser page)",
+          "url": "https://www.eventbrite.ca/o/neshamah-congregation-of-york-region-1172984817"
+        },
+        {
+          "label": "Beth Israel Kingston: Rabbi Erin Polansky",
+          "url": "https://www.kingston-bethisrael.ca/rabbi-erin-polansky.html"
+        }
+      ],
+      "checks": [
+        "Website neshamah.ca not verified as live.",
+        "Telephone from an old directory listing."
+      ],
+      "imageNote": "This is North Thornhill Community Centre, a shared meeting place the congregation has used. It is not a synagogue building of its own and does not confirm where the congregation meets today."
     },
     {
       "id": "bnai-tikvah-niagara-falls",
@@ -833,15 +1329,39 @@
         "In January 2000 the two shrinking congregations amalgamated, the first time in Canada that a Conservative and a Reform congregation had joined together. The merged congregation, called B'nai Tikvah, worshipped in the former B'nai Jacob building with about sixty families and forty Hebrew-school students; Bob Muller and Chuck Shulman were co-presidents, and Muller, a local businessman, later served as spiritual director. That same year it donated a Torah scroll to the new congregation in Barrie. Services were held monthly, and the congregation held four Torah scrolls, one of them a Czech memorial scroll, one of only eleven that came to Canada.",
         "After years of difficult discussion about maintaining an aging building with a dwindling membership, the Ferry Street synagogue was sold in November 2020 to a developer who planned to demolish it. The congregation arranged for six of the seven stained-glass windows and its memorial plaques to be placed in a Holocaust memorial in the Jewish section of a Niagara Falls cemetery, with the seventh window on loan to a local museum. Sources from 2021 describe the congregation as closing; it is kept here as a legacy entry."
       ],
-      "images": [],
-      "sources": [
-        { "label": "City of Niagara Falls report on the stained-glass windows (2021)", "url": "https://niagarafalls.civicweb.net/document/38451/MW-2021-54%20-%20Addition%20of%20Stained%20Glass%20Windows%20to%20.pdf?handle=ACCE573EF05B4F4DBCF932A959E2D551" },
-        { "label": "Canadian Jewish News: Niagara Falls is losing its only synagogue", "url": "https://thecjn.ca/?p=208774" },
-        { "label": "Ontario Jewish Archives: Niagara Falls, recent years", "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/niagarafalls/recentyears" },
-        { "label": "Ontario Jewish Archives: Temple Tikvah (St. Catharines)", "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/stcatharines/recentyears/templetikvah.html" },
-        { "label": "B'nai Brith Canada: Jewish Heritage Month partner, Niagara Falls", "url": "https://www.bnaibrith.ca/?p=30599" }
+      "images": [
+        {
+          "file": "bnai-tikvah-niagara-falls_1_exterior.jpg",
+          "alt": "A small white stucco synagogue with an arched wooden door at the top of a flight of steps, round-headed windows either side and a hedge in front."
+        }
       ],
-      "checks": ["Postal code not found.", "No website, email or current telephone number."]
+      "sources": [
+        {
+          "label": "City of Niagara Falls report on the stained-glass windows (2021)",
+          "url": "https://niagarafalls.civicweb.net/document/38451/MW-2021-54%20-%20Addition%20of%20Stained%20Glass%20Windows%20to%20.pdf?handle=ACCE573EF05B4F4DBCF932A959E2D551"
+        },
+        {
+          "label": "Canadian Jewish News: Niagara Falls is losing its only synagogue",
+          "url": "https://thecjn.ca/?p=208774"
+        },
+        {
+          "label": "Ontario Jewish Archives: Niagara Falls, recent years",
+          "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/niagarafalls/recentyears"
+        },
+        {
+          "label": "Ontario Jewish Archives: Temple Tikvah (St. Catharines)",
+          "url": "https://ontariojewisharchives.org/exhibits/osjc/communities/stcatharines/recentyears/templetikvah.html"
+        },
+        {
+          "label": "B'nai Brith Canada: Jewish Heritage Month partner, Niagara Falls",
+          "url": "https://www.bnaibrith.ca/?p=30599"
+        }
+      ],
+      "checks": [
+        "Postal code not found.",
+        "No website, email or current telephone number."
+      ],
+      "imageNote": "The congregation closed and sold this building in 2020; the view shows the former synagogue."
     }
   ]
 }

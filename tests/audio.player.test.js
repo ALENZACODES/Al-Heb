@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { waitFor } from './helpers/waitfor.js';
-import { createAudio, normalizeId, PLAYBACK_TRADITION, playbackTradition } from '../src/audio/player.js';
+import { createAudio, normalizeId, PLAYBACK_TRADITION, playbackTradition, ACCENT_SOURCES, isAccentClip } from '../src/audio/player.js';
 import { normalizeId as toolNormalize } from '../tools/audio/hebrew_data.mjs';
 
 class FakeAudio {
@@ -42,15 +42,50 @@ test('never swaps man for woman: only female file exists, male requested -> tts-
   assert.equal(audio.has('letter', 'bet'), false);
 });
 
-test('another tradition is used when the manifest marks it equivalent; Ashkenazi and Sephardi play the Israeli file by rule', async () => {
+test('the Ashkenazi setting falls back to the Israeli file of the same voice (owner decision 2026-11-07 22:56), with or without an equivalentTo rule; an older respelled Ashkenazi file is retired', async () => {
   const withEq = [e('f', 'ashkenazi', 'letter', 'bet', 'missing', { equivalentTo: ['israeli'] }), e('f', 'israeli', 'letter', 'bet', 'recorded')];
   let { audio } = make(withEq, { voice: 'f', congregation: 'ashkenazi' });
   let r = await audio.play('letter', 'bet');
-  assert.equal(r.source, 'file'); assert.equal(r.fileTradition, 'israeli');
+  assert.equal(r.source, 'file'); assert.equal(r.via, 'tradition'); assert.equal(r.fileTradition, 'israeli'); assert.equal(r.tradition, 'ashkenazi');
   const noEq = [e('f', 'ashkenazi', 'letter', 'bet'), e('f', 'israeli', 'letter', 'bet', 'recorded')];
   ({ audio } = make(noEq, { voice: 'f', congregation: 'ashkenazi' }));
   r = await audio.play('letter', 'bet');
-  assert.equal(r.source, 'file'); assert.equal(r.fileTradition, 'israeli'); assert.equal(r.tradition, 'ashkenazi');
+  assert.equal(r.source, 'file'); assert.equal(r.path, 'audio/f/israeli/letter/bet.mp3'); assert.equal(r.fileTradition, 'israeli');
+  // the old outside-voice respelled Ashkenazi clip (source paid-cloud) is retired: the Israeli file plays instead
+  const old = [e('f', 'ashkenazi', 'line', 'l1', 'tts', { source: 'paid-cloud' }), e('f', 'israeli', 'line', 'l1', 'tts')];
+  ({ audio } = make(old, { voice: 'f', congregation: 'ashkenazi' }));
+  r = await audio.play('line', 'l1');
+  assert.equal(r.path, 'audio/f/israeli/line/l1.mp3'); assert.equal(r.fileTradition, 'israeli');
+  // with no Israeli counterpart: no file, and the device voice stays refused for Ashkenazi (its letter names and vowels differ)
+  ({ audio } = make([e('f', 'ashkenazi', 'line', 'l2', 'tts', { source: 'paid-cloud' })], { voice: 'f', congregation: 'ashkenazi' }));
+  r = audio.status('line', 'l2');
+  assert.equal(r.source, 'none'); assert.equal(r.reason, 'tts-pronunciation-mismatch');
+});
+
+test('an admitted accent clip (Israeli voice reading the respelling, or tempo-capped) plays as the setting\'s own file; a mock-suffixed or unknown source does not', async () => {
+  for (const tradition of ['sephardi', 'ashkenazi']) {
+    for (const source of Object.values(ACCENT_SOURCES)) {
+      const m = [e('m', tradition, 'line', 'l1', 'synthetic-unreviewed', { source }), e('m', 'israeli', 'line', 'l1', 'tts')];
+      const { audio } = make(m, { voice: 'm', congregation: tradition });
+      const r = await audio.play('line', 'l1');
+      assert.equal(r.source, 'file', `${tradition} ${source}`); assert.equal(r.path, `audio/m/${tradition}/line/l1.mp3`);
+      assert.equal(r.tradition, tradition); assert.equal(r.fileTradition, undefined); assert.equal(r.via, 'exact'); assert.equal(r.entrySource, source);
+      assert.equal(playbackTradition(tradition, m[0]), tradition);
+      // a prayer row that aliases the admitted line plays the admitted line
+      const al = make([e('m', tradition, 'prayer', 'l1', 'missing', { aliasOf: 'line/l1' }), ...m, e('m', 'israeli', 'prayer', 'l1', 'tts')], { voice: 'm', congregation: tradition }).audio;
+      const pr = al.status('prayer', 'l1');
+      assert.equal(pr.path, `audio/m/${tradition}/line/l1.mp3`); assert.equal(pr.via, 'alias'); assert.equal(pr.fileTradition, undefined);
+    }
+    for (const source of [`${ACCENT_SOURCES.israeliVoice}:mock`, 'tts-respelled', 'paid-cloud', 'outside-respelled', undefined]) {
+      const own = e('m', tradition, 'line', 'l1', 'synthetic-unreviewed', { source });
+      assert.equal(isAccentClip(own), false, String(source));
+      const { audio } = make([own, e('m', 'israeli', 'line', 'l1', 'tts')], { voice: 'm', congregation: tradition });
+      assert.equal((await audio.play('line', 'l1')).path, 'audio/m/israeli/line/l1.mp3', String(source));
+    }
+    // an admitted row with status missing is not a file
+    assert.equal(isAccentClip(e('m', tradition, 'line', 'l1', 'missing', { source: ACCENT_SOURCES.israeliVoice })), false);
+  }
+  assert.equal(isAccentClip(e('m', 'israeli', 'line', 'l1', 'tts', { source: ACCENT_SOURCES.israeliVoice })), false, 'Israeli rows are never accent clips');
 });
 
 test('the Sephardi setting plays the Israeli file of the same voice for every kind, never the retired Sephardi file (owner decision 2026-11-07)', async () => {
@@ -73,9 +108,9 @@ test('the Sephardi setting plays the Israeli file of the same voice for every ki
 });
 
 test('tradition override per call', async () => {
-  const { audio } = make([e('m', 'israeli', 'word', 'x', 'recorded'), e('m', 'ashkenazi', 'word', 'x', 'recorded')], { voice: 'm', congregation: 'israeli' });
+  const { audio } = make([e('m', 'israeli', 'word', 'x'), e('m', 'ashkenazi', 'word', 'x', 'recorded')], { voice: 'm', congregation: 'israeli' });
   const r = await audio.play('word', 'x', { tradition: 'ashkenazi' });
-  assert.equal(r.source, 'file'); assert.equal(r.tradition, 'ashkenazi'); assert.equal(r.fileTradition, 'israeli');
+  assert.equal(r.source, 'file'); assert.equal(r.tradition, 'ashkenazi');
 });
 
 test('tts fallback uses he-IL and pointed text for israeli', async () => {
@@ -85,11 +120,14 @@ test('tts fallback uses he-IL and pointed text for israeli', async () => {
   assert.deepEqual(speech.spoken, [{ text: 'בֵּית', lang: 'he-IL' }]);
 });
 
-test('Ashkenazi plays Israeli sound by rule, so the Israeli device voice is no mismatch', async () => {
+test('no TTS for ashkenazi by default (would be wrong pronunciation); allowed when opted in and flagged', async () => {
   const m = [e('m', 'ashkenazi', 'word', 'x')];
   let { audio } = make(m, { voice: 'm', congregation: 'ashkenazi' });
   let r = await audio.play('word', 'x');
-  assert.equal(r.source, 'tts-fallback'); assert.equal(r.mismatch, false);
+  assert.equal(r.source, 'none'); assert.equal(r.reason, 'tts-pronunciation-mismatch');
+  ({ audio } = make(m, { voice: 'm', congregation: 'ashkenazi' }, { opts: { allowMismatchedTts: true } }));
+  r = await audio.play('word', 'x');
+  assert.equal(r.source, 'tts-fallback'); assert.equal(r.mismatch, true);
 });
 
 test('none when no speech synthesis, no Hebrew browser voice, unknown item, or bad voice', async () => {
@@ -156,13 +194,13 @@ test('normalizeId matches the tool-side normalizer', () => {
 
 // ---- one id mapping: lesson-word id <-> vocab id (manifest `vocabId`, data/curriculum/word-vocab-map.json)
 test('a clip recorded under the lesson-word id r01-w1 resolves for its vocab id (synthetic manifest)', async () => {
-  const m = [e('m', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'h842147e5' }), e('m', 'israeli', 'word', 'h842147e5')];
+  const m = [e('m', 'ashkenazi', 'word', 'r01-w1', 'recorded', { vocabId: 'h842147e5' }), e('m', 'ashkenazi', 'word', 'h842147e5')];
   const { audio, speech } = make(m, { voice: 'm', congregation: 'ashkenazi' });
   assert.equal(audio.has('word', 'h842147e5'), true);
   assert.equal(audio.has('word', 'r01-w1'), true);
   const r = await audio.play('word', 'h842147e5');
   assert.equal(r.source, 'file'); assert.equal(r.viaId, 'r01-w1'); assert.equal(r.id, 'h842147e5');
-  assert.deepEqual(FakeAudio.log, ['/app/audio/m/israeli/word/r01-w1.mp3']);
+  assert.deepEqual(FakeAudio.log, ['/app/audio/m/ashkenazi/word/r01-w1.mp3']);
   assert.equal(speech.spoken.length, 0);
 });
 
@@ -179,7 +217,7 @@ test('the exact id wins over a linked id; voice and tradition are never crossed 
     e('f', 'israeli', 'word', 'r01-w1', 'recorded', { vocabId: 'hx' }), e('m', 'ashkenazi', 'word', 'hx')];
   const { audio } = make(m, { voice: 'm', congregation: 'israeli' });
   assert.equal(audio.status('word', 'hx').path, 'audio/m/israeli/word/hx.mp3'); assert.equal(audio.status('word', 'hx').viaId, undefined);
-  assert.equal(audio.has('word', 'hx', { tradition: 'ashkenazi' }), true); // Ashkenazi plays the Israeli file (rule); its own row is not used
+  assert.equal(audio.status('word', 'hx', { tradition: 'ashkenazi' }).path, 'audio/m/israeli/word/hx.mp3'); // ashkenazi has no admitted file under either id: the Israeli file of the same voice
   assert.equal(audio.status('word', 'hx', { voice: 'f' }).path, 'audio/f/israeli/word/r01-w1.mp3'); // woman's file, not the man's
   const late = make([e('m', 'israeli', 'word', 'hy', 'recorded')], { voice: 'm', congregation: 'israeli' }).audio;
   assert.equal(late.has('word', 'r09-w1'), false);

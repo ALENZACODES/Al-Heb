@@ -8,7 +8,7 @@ paragraphs, contact facts, the points still to confirm, and the sources the stor
 |---|---|
 | Routes | `#/synagogues` (directory) and `#/synagogues/<id>` (one congregation); `src/shell/router.js`, section `read`, tier preview |
 | View | `src/synagogues/synagogues.view.js` |
-| Data | `data/synagogues/canada.json`: 27 entries, 33 pictures, about 7,000 words of story |
+| Data | `data/synagogues/canada.json`: 27 entries, 51 pictures, about 7,000 words of story |
 | Pictures | `assets/synagogues/<id>/<file>.jpg` (full, at most 1,400 px wide) and `assets/synagogues/<id>/thumb/<file>.jpg` (480 px) |
 | Tests | `tests/synagogues.test.js` (data shape, picture files, routes, both screens in a fake DOM) |
 | Offline | on demand, group `od-synagogues` (`src/shell/offline.js`); nothing is installed up front (`tools/build-precache.mjs`) |
@@ -31,16 +31,21 @@ archive, Wikipedia and community directories; every page used is listed under th
 disagree (Kolot Mayim's founding year, Am Shalom's 2003 or 2004) the entry says so. Nothing here has been checked with
 the congregations themselves; the `checks` lists and the preview tier say as much.
 
+## Standalone page
+
+`synagogues/index.html` is a plain, script-free page listing every congregation with its picture and a link into its story in the
+app. It is generated: `node tools/synagogues/build-page.mjs` rewrites it from the data file, and a test fails if it is stale.
+Re-run the command after any change to `canada.json`.
+
 ## Pictures
 
-33 JPEGs for 9 congregations. They are illustrative views built from reference photographs and street-level references,
+51 JPEGs for 27 congregations. They are illustrative views built from reference photographs and street-level references,
 not documentary photographs, and the screen says so. Two need their own caveats, carried in `imageNote`: the Vancouver
 set shows a colour reconstruction of the historic West 10th Avenue building, not the current Oak Street synagogue; the
-Ajax set shows the shared venue (St. Paul's United Church) without the church's signage. All files were re-encoded
+Ajax set shows the shared venue (St. Paul's United Church) without the church's signage. Three of the later pictures are not of a synagogue exterior and say so in `imageNote`: Or Hadash (the shared plaza at 130 Davis Drive), Har Zion (the sanctuary interior) and Neshamah (the North Thornhill Community Centre, a shared meeting place). All files were re-encoded
 without embedded metadata; `node tools/meta/scan.mjs assets/synagogues` passes with zero findings.
 
 ## Still to do
 
 - Ask each congregation to check its entry (facts, pictures, wording) before the route leaves preview.
-- Pictures for the 18 congregations that have none.
 - Hebrew names of the congregations, with audio, once a native speaker can review them.

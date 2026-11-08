@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "האות לָמֶד. נשמעת כמו ל בלמון. תסתכלו על הצורה: flagpole sticking high above the fence. שימו לב לא לבלבל עם כ · ד.",
+ "inputSha256": "7d197e05cca3c396ba644cdef1a7c3708bf67f7c8786a0d96b3ad7f0a04e6f0c",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

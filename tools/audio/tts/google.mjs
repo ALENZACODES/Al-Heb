@@ -44,8 +44,11 @@ export function voiceName({ voice, env: e = process.env, voiceName: override } =
  * Kept: U+05B0–U+05BC and U+05C7 vowel points and dagesh, U+05C1/U+05C2 shin and sin dots, U+05F3/U+05F4 geresh/gershayim.
  */
 export function cleanHebrewForTts(text) {
-  return String(text || '')
-    .normalize('NFC')
+  const s = String(text || '').normalize('NFC');
+  // Latin input (a tradition's English-letter respelling, tools/audio/render_tts.mjs --tradition sephardi|ashkenazi) passes
+  // through untouched apart from whitespace: the ch/kh/tz/sh digraphs, apostrophes and hyphens are what the voice must read.
+  if (!/[א-ת֑-ׇ]/.test(s)) return s.replace(/\s+/g, ' ').trim();
+  return s
     .replace(/[֑-ֽֿ֯׀׃-׆]/g, '')
     .replace(/־/g, ' ')
     .replace(/[ \t ]+/g, ' ')

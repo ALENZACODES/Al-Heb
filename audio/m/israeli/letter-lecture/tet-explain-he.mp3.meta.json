@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "האות טֵית. נשמעת כמו ט בטלפון. תסתכלו על הצורה: cereal bowl, open at the top, with its left rim curling in like a wave. שימו לב לא לבלבל עם ס · מ.",
+ "inputSha256": "e1bffb584f5b510ed6e01ae24b1cc3ed1525e96044f21f7b5b16b41d089848a2",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

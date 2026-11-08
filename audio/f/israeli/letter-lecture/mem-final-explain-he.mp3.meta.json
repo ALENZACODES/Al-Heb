@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "האות מֵם סוֹפִית. אותו צליל כמו מם, רק בסוף מילה. תסתכלו על הצורה: sealed square lunchbox. שימו לב לא לבלבל עם ס · מ.",
+ "inputSha256": "60039b48c5ae613e8ee3c3df07d5e3b09576fd3d5aa3ca30737715907bf85ade",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

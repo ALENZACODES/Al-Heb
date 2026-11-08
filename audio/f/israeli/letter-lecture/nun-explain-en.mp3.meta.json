@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Nun — NOON. Sound: N as in net. Shape hook: small right-backed seat. Tip: Short bent shape with a foot; Vav and final Nun are long straight stems; do not mix it up with Vav, Final Nun, Gimel.",
+ "inputSha256": "9cce20bebeb426e9c044abcda256c6e4ae120122dbcf7fc698b16c1763191dfa",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

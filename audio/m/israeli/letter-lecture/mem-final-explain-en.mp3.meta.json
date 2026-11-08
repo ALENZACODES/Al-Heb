@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Final Mem — MEM so-FEET. Sound: same M sound as Mem, used only at the end of a word. Shape hook: sealed square lunchbox. Tip: Four squared connected sides, not Samekh’s rounded loop or Mem’s open seam; do not mix it up with Samekh, Mem.",
+ "inputSha256": "6facbc6aab1a28143cadea0e479075692b3716c10b8e14d4430667210857b507",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

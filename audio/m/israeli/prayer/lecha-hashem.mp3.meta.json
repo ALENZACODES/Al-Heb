@@ -1,5 +1,13 @@
 {
  "status": "tts",
  "source": "tts:google",
- "note": "Israeli prayer completion, Nov 7 sprint"
+ "engine": "google-cloud-tts",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "לְךָ אֲדֹנָי הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ אֲדֹנָי הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ אֲדֹנָי אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ אֲדֹנָי אֱלֹהֵינוּ׃",
+ "inputSha256": "a050c459a1719a30e69f929940b15bf717029f542170499363e03345109426c2",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
+ "inputTextKind": "hebrew"
 }

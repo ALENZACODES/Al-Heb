@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Qof — KOF. Sound: K as in kite. Shape hook: table with a leg below the floor. Tip: One descending post extends below baseline and is detached from the roof, unlike He; do not mix it up with He, Final Kaf.",
+ "inputSha256": "7c69bb9ab5fc9d538deb50404cc20422cc534cdab58eb249c073e7f38dc5f15c",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

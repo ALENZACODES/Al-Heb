@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "האות נוּן סוֹפִית. אותו צליל כמו נון, רק בסוף מילה. תסתכלו על הצורה: long icicle below the floor. שימו לב לא לבלבל עם ו · ז · ך.",
+ "inputSha256": "15df6d9e0bb861b478036b79605a686e56f88a3e6131ad729357fd3da45fbc11",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

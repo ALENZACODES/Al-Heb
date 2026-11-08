@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Gimel — GHEE-mel. Sound: hard G as in go. Shape hook: walking stick taking a step. Tip: A downward slanting leg gives Gimel its step, missing from Nun or Vav; do not mix it up with Nun, Vav.",
+ "inputSha256": "c3974679154fbe5dccd26f835c51f187f2d50ea9e191695f5e987c56896f6ee0",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

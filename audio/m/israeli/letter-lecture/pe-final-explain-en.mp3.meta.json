@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Final Pe — PEH so-FEET. Sound: same sounds as Pe, used only at the end of a word. Shape hook: long hanging hook with an inner tooth. Tip: Distinctive inner curl/tooth and long downward tail; final Kaf has no inner tooth; do not mix it up with Final Kaf, Final Nun, Pe.",
+ "inputSha256": "bf76a0531235cafe314433eaa7fe68b09055239d5b313525ddcea43882143311",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

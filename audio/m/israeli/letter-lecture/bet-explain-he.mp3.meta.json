@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "האות בֵּית. נשמעת כמו בּ עם נקודה, או כמו ו בלי נקודה. תסתכלו על הצורה: open-left box with an extra-long floor. שימו לב לא לבלבל עם כ · פ.",
+ "inputSha256": "26fb8e25d67cdcef68a7f082d48d4708d600db60e3219f85baff2a7cda1cac30",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

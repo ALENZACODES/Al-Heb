@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Final Tsadi — TSAH-dee so-FEET. Sound: same TS sound as Tsadi, used only at the end of a word. Shape hook: the same hockey stick with no blade: the shaft drops straight through the floor, branch still leaning on it. Tip: Same leaning branch as Tsadi, but no foot along the baseline; not Final Nun, Final Kaf, Tsadi.",
+ "inputSha256": "44a1a497877cf553f7aae7213aa4ad9934fd706f61f86dcfb53ddee0ed13a2f4",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

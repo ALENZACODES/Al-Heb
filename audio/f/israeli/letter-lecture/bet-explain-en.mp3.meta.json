@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Bet — BET. Sound: B as in ball when it has a dot; V as in van without the dot. Shape hook: open-left box with an extra-long floor. Tip: Flat top plus flat bottom distinguishes rounded Kaf; no inner bar unlike Pe; do not mix it up with Kaf, Pe.",
+ "inputSha256": "de4f65a55bd9529aaf04a92057281807b9f36def1110b9a3ecd96e0ad0a68ca5",
+ "ingestedAt": null,
+ "licence": "not cleared",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

@@ -61,6 +61,18 @@
   position: absolute; bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 3.1rem); inset-inline: 0; z-index: 2;
   margin: 0; text-align: center; color: #F6F1E7; opacity: .78; font-size: .78rem;
 }
+/* Shown only when the browser refused to start the clip on its own: one tap anywhere starts it. */
+.prayer-audio-prompt {
+  margin: 1.1rem auto 0; max-width: 37rem; font-size: clamp(.95rem, 2.4vw, 1.1rem); color: #E8C87A;
+  animation: prayer-prompt 1.8s ease-in-out infinite alternate;
+}
+.prayer-veil[data-audio-state="playing"] .prayer-listen { border-color: #F6F1E7; }
+/* Under 360px wide the Listen and Skip pills overlapped by ~20px and the later Skip won the tap: stack Listen one row up. */
+@media (max-width: 359px) {
+  .prayer-listen { bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 3.1rem); }
+  .prayer-audio-note { bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 6.2rem); }
+}
+@keyframes prayer-prompt { from { opacity: .7; } to { opacity: 1; } }
 @keyframes prayer-stars { from { transform: translateY(-5px); opacity: .55; } to { transform: translateY(5px); opacity: 1; } }
 @keyframes prayer-light { from { transform: translate(-50%,-50%) scale(.72); opacity: .2; } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
 

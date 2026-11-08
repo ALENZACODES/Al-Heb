@@ -5,7 +5,10 @@
 // first visit that spends seconds installing the offline copy does not eat
 // the dwell (owner report, Nov 7 2026: the veil closed within ~4 s of the
 // page settling); only the dwell timer, a tap, Skip, Escape or the 12 s
-// failsafe close it.
+// failsafe close it. The chosen prayer's clip starts as the prayer renders
+// (the learner's voice setting, woman by default); where the browser blocks
+// autoplay the veil asks for one tap, which starts the clip without closing
+// the veil. While the clip plays the veil holds; it closes 1 s after "ended".
 export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
@@ -79,6 +82,29 @@ function luckyNumber() {
 function readLocal(key) { try { return localStorage.getItem(key) || ''; } catch { return ''; } }
 function writeLocal(key, value) { try { localStorage.setItem(key, value); } catch { /* private mode: no persistence */ } }
 
+/** Listen-button label and prompt for each audio state. Pure, so tests can pin the copy. */
+export const AUDIO_STATES = Object.freeze({
+  idle: { label: 'Listen to this prayer', prompt: '', pressed: 'false' },
+  playing: { label: 'Pause the prayer', prompt: '', pressed: 'true' },
+  paused: { label: 'Continue the prayer', prompt: '', pressed: 'false' },
+  blocked: { label: 'Listen to this prayer', prompt: 'Tap anywhere to hear the prayer', pressed: 'false' }
+});
+
+/** Did play() fail because the browser wants a gesture first (autoplay policy), rather than because the clip is broken?
+ *  Chromium, Firefox and Safari all reject with NotAllowedError; anything else is a real media failure. */
+export function isAutoplayBlock(err) { return !!err && (err.name === 'NotAllowedError' || /not allowed|user gesture|user activation/i.test(String(err.message || ''))); }
+
+/** Should this pointer/key event start blocked playback? Buttons keep their own meaning (Close, Skip, Don't show again, Listen),
+ *  Escape still closes, and Tab/modifier keys are navigation. Everything else on the veil is the learner's first tap. */
+export function startsBlockedPlayback(e) {
+  if (!e) return false;
+  if (e.type === 'keydown') {
+    if (e.key === 'Escape' || e.key === 'Tab' || e.key === 'Shift' || e.key === 'Control' || e.key === 'Alt' || e.key === 'Meta' || e.altKey || e.ctrlKey || e.metaKey) return false;
+  }
+  const t = e.target;
+  return !(t && typeof t.closest === 'function' && t.closest('button, a, input, select, textarea'));
+}
+
 function initPrayerVeil() {
   const veil = document.getElementById('alef-prayer-veil');
   if (!veil) return;
@@ -87,6 +113,7 @@ function initPrayerVeil() {
   const en = document.getElementById('alef-prayer-en');
   const listenBtn = document.getElementById('alef-prayer-listen');
   const audioNote = document.getElementById('alef-prayer-audio-note');
+  const audioPrompt = document.getElementById('alef-prayer-audio-prompt');
   const closeBtn = document.getElementById('alef-prayer-close');
   const noShowBtn = document.getElementById('alef-prayer-noshow');
   // The learner's own off switch wins over everything: no veil at all.
@@ -99,19 +126,27 @@ function initPrayerVeil() {
   let readySeen = false;
   let deadline = null;
   let audio = null, audioPath = '', holding = false;
+  let audioState = 'idle', counted = false, swallowClickUntil = 0;
   const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
 
   function stopAudio() {
     try { if (audio) { audio.pause(); audio.removeAttribute('src'); audio.load?.(); } } catch { /* ignore */ }
   }
-  // Only an explicit Listen tap may extend the short opening. A missing
-  // media "ended" event must never strand the learner behind the veil.
+  function setAudioState(next) {
+    audioState = next;
+    const ui = AUDIO_STATES[next] || AUDIO_STATES.idle;
+    veil.dataset.audioState = next;
+    if (listenBtn) { listenBtn.textContent = ui.label; listenBtn.setAttribute('aria-pressed', ui.pressed); }
+    if (audioPrompt) { audioPrompt.textContent = ui.prompt; audioPrompt.hidden = !ui.prompt; }
+  }
+  // Playback (the autoplay attempt or an explicit Listen tap) may extend the
+  // short opening. A missing media "ended" event must never strand the
+  // learner behind the veil.
   const MAX_LISTEN_HOLD_MS = 18000;
   function holdForAudio() {
     if (closed || holding) return;
     holding = true;
     clearTimeout(deadline);
-    document.removeEventListener('alef:ready', onReady);
     deadline = setTimeout(() => dismiss(true), MAX_LISTEN_HOLD_MS);
   }
   function releaseAfter(ms) {
@@ -125,26 +160,70 @@ function initPrayerVeil() {
   function arm() {
     if (rendered && readySeen && !holding && !closed) releaseAfter(firstVisit ? 9000 : 6000);
   }
-  listenBtn?.addEventListener('click', (e) => {
-    e.stopPropagation(); // a veil click dismisses; the Listen button must not
+  function hideAudioControls() {
+    if (listenBtn) listenBtn.hidden = true;
+    if (audioNote) audioNote.hidden = true;
+    if (audioPrompt) audioPrompt.hidden = true;
+  }
+  /** Start (or resume) the chosen clip. `auto` is the attempt made as the prayer renders, before any gesture:
+   *  a NotAllowedError there is the browser's autoplay policy, so the veil asks for a tap instead of giving up. */
+  function startPlayback({ auto = false } = {}) {
     if (closed || !audioPath) return;
     holdForAudio();
     try {
       if (!audio) audio = new Audio();
-      if (!audio.paused && !audio.ended) { audio.pause(); audio.currentTime = 0; releaseAfter(800); return; }
       if (audio.getAttribute('src') !== audioPath) audio.src = audioPath;
-      audio.onended = () => releaseAfter(1000);
-      audio.onerror = () => { if (listenBtn) listenBtn.hidden = true; if (audioNote) audioNote.hidden = true; releaseAfter(800); };
+      audio.onended = () => { setAudioState('idle'); releaseAfter(1000); };
+      audio.onerror = () => { hideAudioControls(); setAudioState('idle'); releaseAfter(800); };
       const p = audio.play();
+      const started = () => {
+        // Playback started: the learner heard this prayer. (A failed play
+        // never counts — the catch below leaves the count alone.) A pause and
+        // resume of the same prayer is still one listen.
+        setAudioState('playing');
+        if (!counted) { counted = true; try { writeLocal(LISTEN_COUNT_KEY, String((parseInt(readLocal(LISTEN_COUNT_KEY), 10) || 0) + 1)); } catch { /* private mode */ } }
+      };
+      const failed = (err) => {
+        if (closed) return;
+        if (auto && isAutoplayBlock(err)) { blockedByPolicy(); return; }
+        hideAudioControls(); setAudioState('idle'); releaseAfter(800);
+      };
       if (p?.then) {
         p.then(() => {
-          // Playback started: the learner heard this prayer. (A failed play
-          // never counts — the catch below leaves the count alone.)
-          try { writeLocal(LISTEN_COUNT_KEY, String((parseInt(readLocal(LISTEN_COUNT_KEY), 10) || 0) + 1)); } catch { /* private mode */ }
-        }).catch(() => releaseAfter(800));
-      } else if (p?.catch) p.catch(() => releaseAfter(800));
-    } catch { releaseAfter(800); }
+          // Playback started (see started() above).
+          started();
+        }).catch(failed);
+      } else started(); // very old media implementations return nothing from play()
+    } catch (err) { if (auto && isAutoplayBlock(err)) blockedByPolicy(); else releaseAfter(800); }
+  }
+  // The browser wants a gesture first: ask for one tap and hand the veil back
+  // to its normal dwell (or a failsafe, if the app has not signalled ready).
+  function blockedByPolicy() {
+    setAudioState('blocked');
+    holding = false;
+    if (readySeen) arm(); else releaseAfter(12000);
+  }
+  function pausePlayback() {
+    if (!audio) return;
+    try { audio.pause(); } catch { /* ignore */ }
+    setAudioState('paused');
+    // Paused by hand: let the veil close on a short dwell unless Continue is tapped.
+    holding = false;
+    releaseAfter(4000);
+  }
+  listenBtn?.addEventListener('click', (e) => {
+    e.stopPropagation(); // a veil click dismisses; the Listen button must not
+    if (closed || !audioPath) return;
+    if (audioState === 'playing') pausePlayback(); else startPlayback();
   });
+  // Autoplay refused: the learner's first tap or key on the veil starts the
+  // prayer and must NOT close it. The click that follows that pointerdown is
+  // swallowed; buttons keep their own meaning.
+  function onFirstGesture(e) {
+    if (closed || audioState !== 'blocked' || !startsBlockedPlayback(e)) return;
+    if (e.type === 'keydown') e.preventDefault(); else swallowClickUntil = Date.now() + 1000;
+    startPlayback();
+  }
 
   function dismiss(now = false) {
     if (closed) return;
@@ -158,8 +237,9 @@ function initPrayerVeil() {
     setTimeout(() => veil.remove(), 150);
   }
   function onReady() { readySeen = true; arm(); }
-  function onKey(e) { if (e.key === 'Escape') dismiss(true); }
-  veil.addEventListener('click', () => dismiss(true));
+  function onKey(e) { if (e.key === 'Escape') { dismiss(true); return; } onFirstGesture(e); }
+  veil.addEventListener('pointerdown', onFirstGesture);
+  veil.addEventListener('click', () => { if (Date.now() < swallowClickUntil) { swallowClickUntil = 0; return; } dismiss(true); });
   closeBtn?.addEventListener('click', (e) => { e.stopPropagation(); dismiss(true); });
   noShowBtn?.addEventListener('click', (e) => { e.stopPropagation(); writeVeilOptOut(); dismiss(true); });
   document.addEventListener('keydown', onKey);
@@ -194,7 +274,16 @@ function initPrayerVeil() {
     try {
       const prefs = readAudioPrefs();
       const path = prefs.audioFree ? null : prayerAudioPath(bankData, chosen, prefs.voice);
-      if (path && listenBtn) { audioPath = path; listenBtn.hidden = false; if (audioNote) audioNote.hidden = false; }
+      if (path && listenBtn) {
+        audioPath = path;
+        setAudioState('idle');
+        listenBtn.hidden = false;
+        if (audioNote) audioNote.hidden = false;
+        // The prayer is meant to be heard, not only read (owner, Nov 7 2026):
+        // play it as it appears. Browsers that want a gesture first reject
+        // with NotAllowedError; then the veil asks for a tap (see failed()).
+        startPlayback({ auto: true });
+      }
     } catch { /* audio is an addition; the veil still works without it */ }
   });
 }

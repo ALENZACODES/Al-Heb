@@ -44,7 +44,10 @@ export function mount(root, ctx) {
         h('a', { class: 'btn secondary', href: '#/read' }, t('home.opening.link'))) : null,
     ctx.hasRoute?.('progress') ? h('p', {}, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')) : null,
     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
-      h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
+      // U-19: no destination twice on one screen — the quick wall skips any
+      // target the five-destination row above already shows (Letters, Read
+      // and Calendar used to appear in both, reading as duplicate tiles).
+      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
         ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
     ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))

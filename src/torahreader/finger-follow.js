@@ -46,7 +46,8 @@ export function createFingerGuide({ clock, calm = () => false, announce = () => 
   }
   function decorate(text, verse) {
     const children = String(text).split(/(\s+)/u).map((part) => {
-      if (!part || /^\s+$/u.test(part)) return part;
+      // Standalone paseq/sof-pasuq marks stay in the text but are not reading words.
+      if (!/[א-ת]/u.test(part)) return part;
       const n = words.length;
       const word = el('span', { class: 'trd-finger-word', 'data-finger-word': String(n), role: 'button', tabindex: n === selected || (selected < 0 && n === 0) ? '0' : '-1',
         'aria-label': `Verse ${verse}, word ${n + 1}: ${part}`, 'aria-current': n === selected ? 'true' : 'false',

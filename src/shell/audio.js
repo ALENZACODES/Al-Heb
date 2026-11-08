@@ -7,6 +7,7 @@ import { spokenClips } from './audio-truth.js';
 import { gameMusic } from '../audio/music.js';
 import { sfx } from '../audio/sfx.js';
 import { mediaPolicy } from '../audio/policy.js';
+import { chapterPlaybackRate } from '../audio/player.js';
 export const REASONS = {
   'english-recording-unavailable': 'the English recording is unavailable',
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
@@ -177,6 +178,7 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   let speechDepth = 0;
   let playEpoch = 0;
   let playsInFlight = 0;
+  const queuedChapters = new Set();
   const speechBegin = () => {
     speechDepth += 1;
     mediaPolicy.setSpeech(true);
@@ -189,8 +191,15 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
   };
   return {
     ...inner,
+    setPlaybackRate(value) {
+      const rate = chapterPlaybackRate(value);
+      for (const request of queuedChapters) request.rate = rate;
+      const active = inner.setPlaybackRate?.(rate) ?? null;
+      return active ?? (queuedChapters.size ? rate : null);
+    },
     stop() {
       playEpoch += 1;
+      queuedChapters.clear();
       speechDepth = 0; mediaPolicy.clearSpeech(); gameMusic.setSpeech(false);
       const r = inner.stop();
       if (r?.interrupted || playsInFlight > 0) publish({ mode: 'idle', text: 'Sound stopped.' });
@@ -215,13 +224,16 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     status: (kind, id, o) => { need(kind); return gate(inner.status(kind, id, opts(o)), kind, id); },
     has: (kind, id, o) => { need(kind); return inner.has(kind, id, opts(o)); },
     async play(kind, id, o) {
+      const queued = kind === 'torah-chapter' || kind === 'torah-chapter-en' ? { rate: o?.rate } : null;
+      if (queued) queuedChapters.add(queued);
       need(kind);
       const epoch = playEpoch;
       playsInFlight += 1;
       try {
         await settle();
+        if (queued) queuedChapters.delete(queued);
         if (epoch !== playEpoch) return { source: 'none', stopped: true, reason: 'stopped' };
-        const o2 = opts(o);
+        const o2 = opts(queued ? { ...o, rate: queued.rate } : o);
         speechBegin();
         let fromMedia = false;
         try {
@@ -234,7 +246,7 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
           if (!fromMedia || r?.source === 'tts-fallback' || r?.source === 'none' || r?.fileError) publish(describeResult(r));
           return r;
         } finally { speechEnd(); }
-      } finally { playsInFlight = Math.max(0, playsInFlight - 1); }
+      } finally { if (queued) queuedChapters.delete(queued); playsInFlight = Math.max(0, playsInFlight - 1); }
     },
     async playSequence(items, so) {
       for (const it of items) need(Array.isArray(it) ? it[0] : it && it.kind);

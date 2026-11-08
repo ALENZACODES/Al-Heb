@@ -158,3 +158,39 @@ test('echo: the clip plays, plays again at 0.7x, then leaves a silent turn; stop
   assert.equal(done.echo.completed, false);
   assert.ok(seen.includes('your-turn:stopped'));
 });
+
+test('chapter speed selected during lazy manifest loading reaches the real audio element', async () => {
+  for (const [kind, tradition] of [['torah-chapter', 'israeli'], ['torah-chapter-en', 'english']]) {
+    El.log = [];
+    let resolveManifest;
+    const list = new Promise(resolve => { resolveManifest = resolve; });
+    const entry = { kind, tradition, voice: 'm', id: 'genesis-1', status: 'tts', source: 'paid-cloud', text: 'Beginning', path: `audio/m/${tradition}/${kind}/genesis-1.mp3` };
+    const audio = createShellAudio({ settings: { get: k => ({ voice: 'm', congregation: 'israeli' })[k] },
+      loadManifest: () => list, createAudio: o => createAudio({ ...o, AudioCtor: El, speech: null }) });
+    const playing = audio.play(kind, 'genesis-1', { tradition, rate: 1 });
+    assert.equal(audio.setPlaybackRate(0.75), 0.75);
+    assert.equal(audio.setPlaybackRate(1.25), 1.25);
+    assert.equal(El.log.length, 0);
+    resolveManifest([entry]);
+    const result = await playing;
+    assert.equal(result.source, 'file'); assert.equal(result.rate, 1.25); assert.equal(El.log[0].playbackRate, 1.25);
+    await audio.play(kind, 'genesis-1', { tradition, rate: 0.75 });
+    assert.equal(El.log[1].playbackRate, 0.75, 'queued update does not leak into the next explicit request');
+  }
+});
+
+test('stopping a queued chapter clears its speed override and ordinary clips remain unchanged', async () => {
+  El.log = [];
+  let resolveManifest;
+  const list = new Promise(resolve => { resolveManifest = resolve; });
+  const entry = { kind: 'torah-chapter-en', tradition: 'english', voice: 'm', id: 'genesis-1', status: 'tts', path: 'english.mp3' };
+  const audio = createShellAudio({ settings: { get: k => ({ voice: 'm', congregation: 'israeli' })[k] },
+    loadManifest: () => list, createAudio: o => createAudio({ ...o, AudioCtor: El, speech: null }) });
+  const playing = audio.play(entry.kind, entry.id, { tradition: 'english', rate: 1 });
+  audio.setPlaybackRate(1.25); audio.stop();
+  assert.equal(audio.setPlaybackRate(0.75), null);
+  resolveManifest([entry, row('m', 'israeli', 'alef')]);
+  assert.equal((await playing).stopped, true); assert.equal(El.log.length, 0);
+  await audio.play('letter', 'alef', { rate: 0.7 });
+  assert.equal(El.log[0].playbackRate, 0.7);
+});

@@ -507,3 +507,15 @@ test('chapter recording speed changes live player rate and is passed to subseque
   await sel(root, '.trd-play-chapter').click(); assert.equal(calls[1][2].rate, 1.25);
   assert.equal(sel(root, '[data-recording-rate="1.25"]').attrs['aria-pressed'], 'true');
 });
+
+test('finger guide preserves standalone punctuation without counting it as Hebrew words', async () => {
+  const { createFingerGuide } = await import('../src/torahreader/finger-follow.js');
+  const guide = createFingerGuide({ clock: fakeClock() });
+  await guide.controls().querySelector('.trd-finger-toggle').click();
+  guide.begin('punctuation-fixture');
+  const line = new N('p'), source = 'בְּרֵאשִׁית ׀ בָּרָא ׃';
+  line.append(...guide.text(source, 1)); guide.bind(line);
+  assert.equal(line.textContent, source);
+  assert.equal(line.queryAll('.trd-finger-word').length, 2);
+  assert.deepEqual(line.queryAll('.trd-finger-word').map(w => w.textContent), ['בְּרֵאשִׁית', 'בָּרָא']);
+});

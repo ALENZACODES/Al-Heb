@@ -10,6 +10,18 @@ import { speechText, SPOKEN_NAME } from '../shell/names.js';
 export const STORE_KEY = 'torahreader.v1';
 export const PASSAGE_IDS = ['priestly-blessing', 'shema'];
 export const VIEWS = ['reader', 'legend'];
+/** The full-Torah screens that share this route with the two-passage study view. */
+export const SCREENS = ['home', 'chapter', 'study', 'legend'];
+/** The five books, in canonical order. Chapter counts are the standard Hebrew grid. */
+export const TORAH_BOOKS = [
+  { id: 'genesis', en: 'Genesis', he: 'בְּרֵאשִׁית', chapters: 50 },
+  { id: 'exodus', en: 'Exodus', he: 'שְׁמוֹת', chapters: 40 },
+  { id: 'leviticus', en: 'Leviticus', he: 'וַיִּקְרָא', chapters: 27 },
+  { id: 'numbers', en: 'Numbers', he: 'בְּמִדְבַּר', chapters: 36 },
+  { id: 'deuteronomy', en: 'Deuteronomy', he: 'דְּבָרִים', chapters: 34 },
+];
+export const AUDIO_LANGS = ['he', 'en'];
+export const torahBook = (id) => TORAH_BOOKS.find((b) => b.id === id) || null;
 /** Milliseconds per word for "read with me". A pacing aid only; nothing here is synchronised with any recording. */
 export const SPEEDS = [
   { id: 'slow', ms: 2400, label: 'Slow' },
@@ -23,7 +35,12 @@ export const SIZES = [
   { id: 'largest', scale: 1.7, label: 'Largest' },
 ];
 export const sizeScale = (id) => (SIZES.find((x) => x.id === id) || SIZES[0]).scale;
-export const DEFAULT_STATE = { v: 1, passage: 'priestly-blessing', view: 'reader', showTrope: true, showNiqqud: true, speed: 'medium', size: 'normal' };
+export const DEFAULT_STATE = {
+  v: 1, passage: 'priestly-blessing', view: 'reader', screen: 'study',
+  book: 'genesis', chapter: 1, portionId: null,
+  showTrope: true, showNiqqud: true, showEnglish: true, audioLang: 'he',
+  speed: 'medium', size: 'normal',
+};
 
 /** Anything unknown or malformed in a stored value falls back to the default. */
 export function normaliseState(raw) {
@@ -31,8 +48,22 @@ export function normaliseState(raw) {
   if (!raw || typeof raw !== 'object') return s;
   if (PASSAGE_IDS.includes(raw.passage)) s.passage = raw.passage;
   if (VIEWS.includes(raw.view)) s.view = raw.view;
+  // Full-Torah screen: an explicit screen wins; a legacy stored view maps back to the screen the
+  // learner was on (legend stays legend, a study passage in progress reopens as study).
+  if (SCREENS.includes(raw.screen)) s.screen = raw.screen;
+  else if (raw.view === 'legend') s.screen = 'legend';
+  else if (raw.view === 'reader' && PASSAGE_IDS.includes(raw.passage)) s.screen = 'study';
+  s.view = s.screen === 'legend' ? 'legend' : 'reader';
+  const book = torahBook(raw.book);
+  if (book) {
+    s.book = book.id;
+    if (Number.isInteger(raw.chapter) && raw.chapter >= 1 && raw.chapter <= book.chapters) s.chapter = raw.chapter;
+  }
+  if (typeof raw.portionId === 'string' && raw.portionId) s.portionId = raw.portionId;
   if (typeof raw.showTrope === 'boolean') s.showTrope = raw.showTrope;
   if (typeof raw.showNiqqud === 'boolean') s.showNiqqud = raw.showNiqqud;
+  if (typeof raw.showEnglish === 'boolean') s.showEnglish = raw.showEnglish;
+  if (AUDIO_LANGS.includes(raw.audioLang)) s.audioLang = raw.audioLang;
   if (SPEEDS.some((x) => x.id === raw.speed)) s.speed = raw.speed;
   if (SIZES.some((x) => x.id === raw.size)) s.size = raw.size;
   return s;
@@ -171,6 +202,104 @@ export function legend(table, tropePassages = []) {
 }
 /** The mark drawn on a dotted circle so a combining mark is visible on its own. */
 export const markGlyph = (row) => '◌' + row.char;
+
+// ---------- full-Torah grid (data/corpus/torah/index.json) ----------
+
+/** Manifest ids/kinds for the Torah audio tracks (Lane J/J-2 layout). */
+export const torahVerseId = (book, chapter, verse) => `torah-${book}-${chapter}-${verse}`;
+export const torahChapterId = (book, chapter, lang = 'he') => (lang === 'en' ? `torah-en-${book}-${chapter}` : `torah-${book}-${chapter}`);
+export const torahChapterKind = (lang = 'he') => (lang === 'en' ? 'torah-chapter-en' : 'torah-chapter');
+
+/** Chapters that can actually be opened: books whose chapter files have been built, in order. */
+export function availableChapters(index) {
+  if (!index || !Array.isArray(index.books)) return [];
+  const out = [];
+  for (const b of index.books) {
+    const n = Math.min(b.chaptersAvailable || 0, (b.chapterVerses || []).length);
+    for (let c = 1; c <= n; c++) out.push({ book: b.id, chapter: c });
+  }
+  return out;
+}
+
+/** Previous/next openable chapter, skipping books whose files are not built yet; null at the ends. */
+export function adjacentChapter(index, book, chapter, dir = 1) {
+  const seq = availableChapters(index);
+  const i = seq.findIndex((x) => x.book === book && x.chapter === chapter);
+  if (i < 0) return null;
+  return seq[i + dir] || null;
+}
+
+/** 1-based position of a verse in the whole-Torah grid, from the index's chapter verse counts. */
+export function gridPosition(index, book, chapter, verse) {
+  let pos = 0;
+  for (const b of index.books) {
+    for (let c = 1; c <= b.chapterVerses.length; c++) {
+      if (b.id === book && c === chapter) return pos + verse;
+      pos += b.chapterVerses[c - 1];
+    }
+  }
+  return null;
+}
+
+/** The index portions named by the calendar's portion numbers (parshaOnShabbat ids), in order. */
+export function portionsForCalendarIds(index, ids) {
+  if (!index || !Array.isArray(index.parshiyot)) return [];
+  return (ids || []).map((n) => index.parshiyot.find((p) => p.num === n)).filter(Boolean);
+}
+
+/**
+ * One chapter of a portion, clipped to the portion's range:
+ * { book, chapter, fromVerse, toVerse, aliyot: [{n, verse}] } — aliyot lists the aliyah starts
+ * that fall inside this chapter's clipped range. Null when the chapter is outside the portion.
+ */
+export function portionChapter(index, portion, book, chapter) {
+  if (!index || !portion) return null;
+  const bookRow = index.books.find((b) => b.id === book);
+  if (!bookRow || chapter < 1 || chapter > bookRow.chapterVerses.length) return null;
+  const total = bookRow.chapterVerses[chapter - 1];
+  const c0 = gridPosition(index, book, chapter, 1), c1 = gridPosition(index, book, chapter, total);
+  const f = gridPosition(index, portion.from.book, portion.from.chapter, portion.from.verse);
+  const t = gridPosition(index, portion.to.book, portion.to.chapter, portion.to.verse);
+  if (f == null || t == null || t < c0 || f > c1) return null;
+  const fromVerse = f <= c0 ? 1 : portion.from.chapter === chapter && portion.from.book === book ? portion.from.verse : 1;
+  const toVerse = t >= c1 ? total : portion.to.verse;
+  const aliyot = [];
+  for (const a of portion.aliyot || []) {
+    if (a.from.book === book && a.from.chapter === chapter && a.from.verse >= fromVerse && a.from.verse <= toVerse) aliyot.push({ n: a.n, verse: a.from.verse });
+  }
+  return { book, chapter, fromVerse, toVerse, aliyot };
+}
+
+/** The openable chapters of a portion, each clipped (portionChapter), in reading order. */
+export function portionChapters(index, portion) {
+  if (!index || !portion) return [];
+  return availableChapters(index).map(({ book, chapter }) => portionChapter(index, portion, book, chapter)).filter(Boolean);
+}
+
+/**
+ * Where chapter playback has reached, from the measured per-verse durations.
+ * Returns null until every verse has a real duration for the chosen language and voice
+ * (the chapter bar stays hidden then — the page is fully usable text-only).
+ * Otherwise { index, verse, totalMs, ended } for the verse playing at elapsedMs.
+ */
+export function chapterPosition(verses, lang, voice, elapsedMs) {
+  const field = lang === 'en' ? 'durMsEn' : 'durMs';
+  if (!Array.isArray(verses) || !verses.length) return null;
+  let total = 0;
+  for (const v of verses) {
+    const d = v[field] && v[field][voice];
+    if (typeof d !== 'number' || !Number.isFinite(d) || d <= 0) return null;
+    total += d;
+  }
+  const t = Math.max(0, Number(elapsedMs) || 0);
+  if (t >= total) return { index: verses.length - 1, verse: verses[verses.length - 1].n, totalMs: total, ended: true };
+  let acc = 0;
+  for (let i = 0; i < verses.length; i++) {
+    acc += verses[i][field][voice];
+    if (t < acc) return { index: i, verse: verses[i].n, totalMs: total, ended: false };
+  }
+  return { index: verses.length - 1, verse: verses[verses.length - 1].n, totalMs: total, ended: true };
+}
 
 /** Next index when stepping; null when the end is reached. */
 export const stepIndex = (n, total, dir = 1) => {

@@ -5,7 +5,7 @@
 //   - no ctx.audio                -> play buttons say audio is unavailable
 //   - no pronunciation/transliterate.js -> transliteration falls back to a notice
 // Plain DOM, RTL Hebrew (lang="he" dir="rtl"), keyboard and screen-reader friendly.
-import { loadCorpus, letterInventory } from './corpus.js';
+import { loadCorpus, loadTorahIndex, letterInventory } from './corpus.js';
 import { versionLabel } from '../shell/names.js';
 import { silentReadingNode } from '../shell/silent-reading.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -22,6 +22,13 @@ const LETTER_NAME = {
   'kaf-final': 'Final Kaf', 'mem-final': 'Final Mem', 'nun-final': 'Final Nun', 'pe-final': 'Final Pe', 'tsadi-final': 'Final Tsadi',
 };
 const LETTER_CHAR = Object.fromEntries(Object.entries(LETTER_ID).map(([c, id]) => [id, c]));
+
+const TORAH_BOOK_OF = { Genesis: 'genesis', Exodus: 'exodus', Leviticus: 'leviticus', Numbers: 'numbers', Deuteronomy: 'deuteronomy' };
+/** A registry ref that points into the five Torah books ("Numbers 6:24", "Genesis 2:1-3") -> {book, chapter, verse}; anything else (Psalms, Siddur, ...) -> null. */
+export function torahRefOf(ref) {
+  const m = /^(Genesis|Exodus|Leviticus|Numbers|Deuteronomy) (\d+):(\d+)/.exec(String(ref || ''));
+  return m ? { book: TORAH_BOOK_OF[m[1]], chapter: Number(m[2]), verse: Number(m[3]) } : null;
+}
 
 /** Composite passages shown first. Everything else in the registry is a single-record passage. */
 const COMPOSITES = [
@@ -119,6 +126,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), el('p', { class: 'crp-warn', role: 'alert' }, 'The text corpus could not be loaded. Check your connection, then reload the page.'));
     return () => {};
   }
+  // The full-Torah grid, when present: excerpt records whose chapter is built link into the full reader.
+  const torahIndex = await loadTorahIndex().catch(() => null);
 
   // optional transliteration engine (lane 3)
   /** @type {null | ((t:string, o:any)=>string)} */
@@ -240,7 +249,14 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     for (const rec of p.records) if (Array.isArray(rec.largeLetters) && rec.largeLetters.length) textBox.append(el('p', { class: 'crp-lgnote' }, `${p.records.length > 1 ? rec.ref + ': ' : ''}Written large in the source text: `, ...rec.largeLetters.flatMap((c, i) => [i ? ', ' : '', heEl('span', c, 'he')]), '.'));
     for (const rec of p.records) if (rec.variants?.f) textBox.append(el('p', {}, el('strong', {}, 'Women say: '), heEl('span', rec.variants.f.he, 'he'), el('span', { class: 'crp-badge' }, 'derived, needs check')));
     host.append(textBox, status);
-    for (const rec of p.records) { const mb = metaBlock(rec); if (mb) host.append(el('h3', {}, p.records.length > 1 ? `About: ${rec.title}` : 'About this prayer'), mb); }
+    for (const rec of p.records) {
+      const tref = torahRefOf(rec.ref);
+      const tbook = tref && torahIndex?.books.find((b) => b.id === tref.book);
+      if (tref && tbook && (tbook.chaptersAvailable || 0) >= tref.chapter) {
+        host.append(el('p', {}, el('a', { class: 'crp-lnk', href: `#/torahreader?book=${tref.book}&chapter=${tref.chapter}&verse=${tref.verse}` }, `Read ${rec.ref} in the full Torah`)));
+      }
+      const mb = metaBlock(rec); if (mb) host.append(el('h3', {}, p.records.length > 1 ? `About: ${rec.title}` : 'About this prayer'), mb);
+    }
 
     // footer
     const foot = el('div', { class: 'crp-foot' });

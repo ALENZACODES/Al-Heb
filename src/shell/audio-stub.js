@@ -9,7 +9,7 @@ export function createStubAudio({ settings } = {}) {
     if (!texts) {
       texts = {};
       try {
-        for (const u of ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json']) {
+        for (const u of ['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json']) {
           const r = await fetch(u);
           if (r.ok) for (const e of await r.json()) texts[`${e.kind}:${e.id}`] ??= e.text;
         }

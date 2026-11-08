@@ -19,6 +19,9 @@ export function loadJson(rel) {
 export const READER_FILES = { 'priestly-blessing': 'data/corpus/reader/priestly-blessing.json', shema: 'data/corpus/reader/shema.json' };
 export const TROPE_FILES = { 'priestly-blessing': 'data/corpus/trope/priestly-blessing.json', shema: 'data/corpus/trope/shema.json' };
 export const TABLE_FILE = 'data/corpus/trope/table.json';
+export const TORAH_INDEX_FILE = 'data/corpus/torah/index.json';
+export const TORAH_MANIFEST_FILE = 'data/audio/manifest-torah.json';
+export const torahChapterFile = (book, chapter) => `data/corpus/torah/${book}/${String(chapter).padStart(2, '0')}.json`;
 /** { passages: {id: reader}, tropes: [trope passage], table } */
 export async function loadAll(load = loadJson) {
   const ids = Object.keys(READER_FILES);
@@ -28,4 +31,13 @@ export async function loadAll(load = loadJson) {
     load(TABLE_FILE),
   ]);
   return { passages: Object.fromEntries(ids.map((i, k) => [i, readers[k]])), tropes, table };
+}
+
+/** The full-Torah grid (data/corpus/torah/index.json). */
+export const loadTorahIndex = (load = loadJson) => load(TORAH_INDEX_FILE);
+/** One built chapter file of the full Torah. */
+export const loadTorahChapter = (book, chapter, load = loadJson) => load(torahChapterFile(book, chapter));
+/** The Torah audio manifest; an absent or unreadable shard means "no Torah clips yet", never an error. */
+export async function loadTorahManifest(load = loadJson) {
+  try { const m = await load(TORAH_MANIFEST_FILE); return Array.isArray(m) ? m : []; } catch { return []; }
 }

@@ -35,7 +35,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
 export const FIRST_DAY_LETTERS = ['shin', 'bet', 'lamed', 'vav', 'mem', 'he', 'tav', 'mem-final', 'alef'];
 const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json',
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
-const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/typing/',
+const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
@@ -46,7 +46,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
   'src/traditions/', 'src/vocab/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
@@ -55,6 +55,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/awards/gallery.view.js',
   // Arcade stylesheet: preview-game styling, fetched with the first arcade game and runtime-cached (first install stays under 3.95 MiB).
   'assets/css/arcade.css',
+  // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
+  'src/torahreader/torahreader.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/homepage/prayers.json', 'data/morning-verses.json',

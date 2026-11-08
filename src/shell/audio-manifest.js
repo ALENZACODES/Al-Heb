@@ -3,6 +3,7 @@
 // Pure of DOM: fetch is injected. The result is fed to player.extend() by the shell audio wrapper (see audio.js).
 export const MANIFEST_URL = 'data/audio/manifest.json';
 export const WORD_MANIFEST_URL = 'data/audio/manifest-kind-word.json';
+export const TORAH_MANIFEST_URL = 'data/audio/manifest-torah.json';
 
 /** Fetch + validate the core manifest. Rejects (never returns junk) so the caller can show an honest "unavailable" state. */
 export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
@@ -14,9 +15,14 @@ export async function fetchCoreManifest(fetchFn, url = MANIFEST_URL) {
 }
 
 /** Fetch the core manifest plus its kind=word shard and return the combined list (the same entries the core used to hold alone). */
-export async function fetchFullManifest(fetchFn, coreUrl = MANIFEST_URL, wordUrl = WORD_MANIFEST_URL) {
-  const [core, words] = await Promise.all([fetchCoreManifest(fetchFn, coreUrl), fetchCoreManifest(fetchFn, wordUrl)]);
-  return [...core, ...words];
+export async function fetchFullManifest(fetchFn, coreUrl = MANIFEST_URL, wordUrl = WORD_MANIFEST_URL, torahUrl = TORAH_MANIFEST_URL) {
+  const [core, words, torah] = await Promise.all([
+    fetchCoreManifest(fetchFn, coreUrl),
+    fetchCoreManifest(fetchFn, wordUrl),
+    // The Torah shard is additive: an absent or unreadable shard means "no Torah clips yet", never a failed load.
+    fetchCoreManifest(fetchFn, torahUrl).catch(() => []),
+  ]);
+  return [...core, ...words, ...torah];
 }
 
 /** Fetch the tiny shipped clip-count summary; rejects on anything but {recorded:number, tts:number}. */

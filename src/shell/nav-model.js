@@ -45,7 +45,7 @@ const MENU_HIDDEN = new Set(['welcome']);
  * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview
  * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
  */
-export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
+export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
   // The individual games stay out of the More sheet (the Games hub is the one listed door); search still finds each by name.
   'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
   'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',

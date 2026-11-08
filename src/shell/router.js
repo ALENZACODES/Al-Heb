@@ -158,7 +158,7 @@ export const ROUTES = [
   { name: 'dottile',      pattern: '/dottile',       module: '../pronunciation/dottile.view.js',       title: 'Dot tiles', owner: 'lane3', optional: true, quick: 'nav.dottile' },
   { name: 'syllablechips',pattern: '/syllablechips', module: '../pronunciation/syllablechips.view.js', title: 'Syllable chips', owner: 'lane3', optional: true, quick: 'nav.syllablechips' },
   { name: 'torahread',    pattern: '/torahread',          module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true, quick: 'nav.torahread' },
-  { name: 'torahreader', pattern: '/torahreader', module: '../torahreader/torahreader.view.js', title: 'Torah reader', owner: 'torahreader', optional: true, tier: 'preview', group: 'learn', quick: 'nav.torahreader' },
+  { name: 'torahreader', pattern: '/torahreader', module: '../torahreader/torahreader.view.js', title: 'Torah reader', owner: 'torahreader', optional: true, group: 'learn', quick: 'nav.torahreader' },
   { name: 'torahreadsec', pattern: '/torahread/:section', module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true },
   { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
   { name: 'nikkud-fade', pattern: '/nikkud-fade', module: '../nikkudfade/nikkudfade.view.js', tier: 'preview', title: 'Vowel marks, fading out', owner: 'builder', group: 'learn', quick: 'nav.route.nikkud-fade' },

@@ -134,3 +134,21 @@ export async function loadCorpus(opts = {}) {
   const [registry, phrasebook, guide, prayerMeta, gaps] = await Promise.all([readJson('registry.json'), readJson('phrasebook.json'), optional('torah-service-guide.json'), optional('prayer-meta.json'), optional('gaps.json')]);
   return createCorpus(registry, phrasebook, { guide, prayerMeta, gaps });
 }
+
+/** Read one JSON file under data/corpus/ (same browser/Node duality as loadCorpus). */
+async function readCorpusJson(name, opts = {}) {
+  const base = opts.base ?? new URL('../../data/corpus/', import.meta.url);
+  const url = new URL(name, base);
+  if (typeof process !== 'undefined' && process.versions?.node && url.protocol === 'file:') {
+    const fs = await import('node:fs/promises');
+    return JSON.parse(await fs.readFile(url, 'utf8'));
+  }
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`corpus: ${name} -> HTTP ${r.status}`);
+  return r.json();
+}
+
+/** The full-Torah grid: books, chapter verse counts, the 54 portions, provenance (data/corpus/torah/index.json). */
+export const loadTorahIndex = (opts = {}) => readCorpusJson('torah/index.json', opts);
+/** One built chapter of the full Torah (data/corpus/torah/<book>/<nn>.json). */
+export const loadTorahChapter = (book, chapter, opts = {}) => readCorpusJson(`torah/${book}/${String(chapter).padStart(2, '0')}.json`, opts);

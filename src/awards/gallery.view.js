@@ -51,7 +51,7 @@ const CSS = `
 .aw-cert { position: relative; color: #241c16; background-color: #f3ead5; background-image: radial-gradient(rgba(110, 82, 42, .16) .6px, transparent .7px), radial-gradient(rgba(255, 248, 230, .45) .5px, transparent .65px); background-size: 3px 3px, 5px 5px; background-position: 0 0, 1px 2px; border: 1px solid #b7a88a; padding: 1.2rem 2.2rem 1rem; max-inline-size: 56rem; margin-inline: auto; text-align: center; font-family: "Frank Ruhl Libre", "Times New Roman", Times, "DejaVu Serif", serif; overflow: visible; }
 .aw-paper { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .22; pointer-events: none; z-index: 0; }
 .aw-cert-frame { position: relative; z-index: 1; background: transparent; margin: .2rem 0 0; padding: 0 1rem .2rem; }
-.aw-cert-banner, .aw-watermark { position: relative; z-index: 1; margin: .15rem 0; letter-spacing: .14em; font-weight: 700; font-size: .95rem; color: #241c16; background: transparent; }
+.aw-design-proof { position: relative; z-index: 1; margin: .45rem 0 .15rem; letter-spacing: .12em; font-weight: 600; font-size: .82rem; color: #241c16; }
 .aw-wordmark { margin: .55rem 0 .05rem; font-size: .78rem; letter-spacing: .42em; }
 .aw-issuer { margin: 0; font-size: clamp(1.45rem, 3.6vw, 2.15rem); font-weight: 700; letter-spacing: .03em; line-height: 1.15; }
 .aw-cert h2 { margin: .3rem 0 .55rem; font-size: 1.12rem; font-weight: 500; letter-spacing: .04em; }
@@ -61,7 +61,7 @@ const CSS = `
 .aw-name-empty { margin: .2rem 0 0; font-size: .95rem; }
 .aw-course { margin: .1rem auto .35rem; max-inline-size: 36rem; font-size: 1.28rem; font-weight: 700; border-block: 1px solid #b7a88a; padding: .4rem 0; }
 .aw-sample-line { margin: .55rem auto .25rem; max-inline-size: 36rem; font-size: .95rem; }
-.aw-seal { display: block; width: 132px; height: 132px; margin: .15rem auto .05rem; }
+.aw-seal { display: block; width: 148px; height: 148px; margin: .35rem auto .1rem; }
 .aw-cert-no { margin: .15rem 0 0; font-size: 1rem; font-weight: 700; letter-spacing: .03em; }
 .aw-cert-note { margin: 0 0 .2rem; font-size: .78rem; }
 .aw-footer { margin: .1rem auto; max-inline-size: 36rem; font-size: .85rem; }
@@ -74,7 +74,7 @@ const CSS = `
   .aw-cert { padding: 1rem .7rem 1rem; }
   .aw-wordmark { letter-spacing: .28em; }
   .aw-issuer { letter-spacing: .01em; }
-  .aw-seal { width: 112px; height: 112px; }
+  .aw-seal { width: 124px; height: 124px; }
 }
 @media print {
   @page { size: A4 landscape; margin: 10mm; }
@@ -82,11 +82,11 @@ const CSS = `
   .aw-cert, .aw-cert * { visibility: visible; }
   .aw-cert { position: absolute; inset: 6mm; max-inline-size: none; box-shadow: none; color: #241c16; background-color: #f3ead5; background-image: radial-gradient(rgba(110, 82, 42, .16) .6px, transparent .7px), radial-gradient(rgba(255, 248, 230, .45) .5px, transparent .65px); -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: .45rem 1rem .35rem; }
   .aw-issuer { font-size: 1.55rem; }
-  .aw-seal { width: 96px; height: 96px; }
-  .aw-cert h2, .aw-presented, .aw-for, .aw-sample-line { margin-block: .12rem; }
+  .aw-seal { width: 118px; height: 118px; }
+  .aw-cert h2, .aw-presented, .aw-for { margin-block: .12rem; }
   .aw-course { padding-block: .22rem; }
   .aw-noprint { display: none !important; }
-  .aw-watermark, .aw-cert-banner { visibility: visible; }
+  .aw-design-proof { visibility: visible; }
 }
 `;
 
@@ -199,7 +199,7 @@ export async function mount(root, ctx) {
           return;
         }
         await shareNav.share({ title: 'ALEF sample certificate', text: shareText(m) });
-        status.textContent = 'The share sheet opened with text only. This browser did not take the PDF file. The text says SAMPLE / NOT EARNED.';
+        status.textContent = 'The share sheet opened with text only. This browser did not take the PDF file. The text says Design proof.';
       } catch (e) {
         status.textContent = e && e.name === 'AbortError'
           ? 'Share was cancelled. Nothing was sent.'
@@ -215,7 +215,7 @@ export async function mount(root, ctx) {
       const bytes = renderCertificatePdf(m);
       if (typeof ctx?.download === 'function') {
         ctx.download(bytes, PDF_FILENAME);
-        status.textContent = 'PDF ready on this device. It is marked SAMPLE / NOT EARNED. Nothing was sent.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
+        status.textContent = 'PDF ready on this device. It is marked Design proof. Nothing was sent.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
         return;
       }
       try {
@@ -230,7 +230,7 @@ export async function mount(root, ctx) {
         a.click();
         a.remove();
         setTimeout(() => URL.revokeObjectURL(url), 1500);
-        status.textContent = 'Download started on this device. The file is marked SAMPLE / NOT EARNED. Nothing was sent.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
+        status.textContent = 'Download started on this device. The file is marked Design proof. Nothing was sent.' + (pdfNameNote(m.displayName) ? ' ' + pdfNameNote(m.displayName) : '');
       } catch {
         status.textContent = 'Download is not available here. You can use Print and choose Save as PDF in the dialog.';
       }
@@ -249,7 +249,7 @@ export async function mount(root, ctx) {
 
   const jump = h('button', {
     type: 'button', id: 'award-jump',
-    onclick: () => { certHost.querySelector?.('#aw-cert-banner')?.focus?.(); },
+    onclick: () => { certHost.querySelector?.('#aw-design-proof')?.focus?.(); },
   }, 'Move to the sample certificate');
 
   const saveName = h('button', {
@@ -375,7 +375,7 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
-      h('p', {}, 'The sheet below is a sample layout for a proposed beginner reading completion. It is marked SAMPLE / NOT EARNED. The name you type is only a label on that sample.'),
+      h('p', {}, 'The sheet below is a design proof for a proposed beginner reading completion. Completion has not been assessed or awarded, and this preview does not issue a certificate. The name you type is only a label.'),
       h('p', { id: 'award-art-count' }, 'Approved artwork: 0. No final artwork is accepted.'),
       h('p', {}, MAIL_OFFER.text),
       h('div', { class: 'aw-noprint' },

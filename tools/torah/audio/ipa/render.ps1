@@ -12,7 +12,7 @@ $rows=Get-Content -Raw -Encoding UTF8 -LiteralPath "$PSScriptRoot/plan.json" | C
 if ($Limit -gt 0) {$rows=$rows | Select-Object -First $Limit}
 $i=0; $rows=@($rows | Where-Object {($script:i++ % $Shards) -eq $Shard})
 New-Item -ItemType Directory -Force "$PSScriptRoot/clips" | Out-Null
-$count=0; $skipped=0
+$count=0; $skipped=0; $failed=0
 foreach($r in $rows){
  $started=[DateTime]::UtcNow
  $out=Join-Path $PSScriptRoot $r.path
@@ -22,8 +22,13 @@ foreach($r in $rows){
  $response=$null
  for($attempt=0;$attempt -lt 4;$attempt++){
   try {$response=Invoke-RestMethod -Method Post -Uri 'https://texttospeech.googleapis.com/v1/text:synthesize' -Headers @{'X-Goog-Api-Key'=$key} -ContentType 'application/json; charset=utf-8' -Body ([Text.Encoding]::UTF8.GetBytes($body)) -TimeoutSec 90; break}
-  catch {if($attempt -eq 3){throw "Failed on $($r.id): $($_.ErrorDetails.Message) $($_.Exception.Message)"}; Start-Sleep -Seconds ([Math]::Pow(2,$attempt+1))}
+  catch {
+   $why="$($_.ErrorDetails.Message) $($_.Exception.Message)" -replace '\s+',' '
+   if($attempt -eq 3){Write-Output "FAILED $($r.id): $why"; $failed++; break}
+   Start-Sleep -Seconds ([Math]::Pow(2,$attempt+2))
+  }
  }
+ if(!$response){continue}
  $bytes=[Convert]::FromBase64String($response.audioContent)
  if($bytes.Length -lt 100){throw "Empty audio for $($r.id)"}
  [IO.File]::WriteAllBytes("$out.tmp",$bytes); Move-Item -LiteralPath "$out.tmp" -Destination $out -Force
@@ -32,4 +37,5 @@ foreach($r in $rows){
  $delay=1-([DateTime]::UtcNow-$started).TotalSeconds
  if($delay -gt 0){Start-Sleep -Milliseconds ([int]($delay*1000))}
 }
-Write-Output "Done: $count new clips, $skipped already there."
+Write-Output "Done: $count new clips, $skipped already there, $failed failed."
+if($failed -gt 0){exit 1}

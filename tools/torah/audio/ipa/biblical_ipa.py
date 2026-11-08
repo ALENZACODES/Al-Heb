@@ -219,7 +219,8 @@ def mark_word(segment, unstressed=False, final_word=False):
 
 def verse_words(spoken):
     """Split a verse into spoken words; a maqaf-joined word is one word whose earlier parts are unstressed."""
-    text = re.sub('[׀׃ֿׄ׀]', ' ', spoken)
+    text = re.sub('[\u05bf\u05c4]', '', spoken)        # rafe and the dots over some letters are marks, not word breaks
+    text = re.sub('[\u05c0\u05c3]', ' ', text)
     words = []
     tokens = text.split()
     for t_i, token in enumerate(tokens):

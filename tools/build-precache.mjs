@@ -73,6 +73,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',
   // Game-music engine (~20 KB): imported only when Play music is first pressed (src/audio/music.js), then runtime-cached.
   'src/audio/synth-music.js',
+  // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
+  'src/shell/speak-english.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

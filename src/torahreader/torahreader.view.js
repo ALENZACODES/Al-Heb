@@ -11,7 +11,6 @@
  * ctx extras for tests: ctx.clock {setInterval, clearInterval}, ctx.loadJson(rel) (replaces the loader).
  * The returned unmount function carries .ready (a promise that settles when data is loaded and the first render is done).
  */
-import { speakEnglish } from '../shell/speak-english.js';
 import { el, storeGet, storeSet } from '../curriculum/dom.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 import { loadAll, loadJson, loadTorahIndex, loadTorahChapter, loadTorahManifest } from './loader.js';
@@ -294,7 +293,7 @@ export function mount(root, ctx) {
       if (!sp || typeof U !== 'function') { say(`Your browser has no voice to read ${label} aloud.`); return; }
       try { ctx?.audio?.stop?.(); } catch { /* ignore */ }
       say(`Reading ${label} in English (your device's voice).`);
-      speakEnglish(text, { speech: sp, Utterance: U }); // sentence by sentence: phones cut off one long utterance after a few seconds
+      import('../shell/speak-english.js').then((m) => m.speakEnglish(text, { speech: sp, Utterance: U })).catch(() => {}); // sentence by sentence: phones cut off one long utterance after a few seconds
     } catch { say(`Could not read ${label} aloud.`); }
   }
 

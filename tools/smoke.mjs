@@ -104,6 +104,10 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   const listen = page.getByRole('button', { name: 'Listen to Shin', exact: true });
   // wait until the sound state is drawn (slow runners load the audio manifest late): either the Listen button or the no-audio label
   await page.waitForFunction(() => !!document.querySelector('button[aria-label="Listen to Shin"], main .audio-none'), null, { timeout: 30000 }).catch(() => {});
+  if (!(await page.evaluate(() => !!document.querySelector('button[aria-label="Listen to Shin"], main .audio-none')))) { // the lesson was mid-redraw (quiet refresh after the sound data landed): wait for it to be drawn again
+    await page.locator('main').getByRole('heading', { name: 'Words', exact: true }).waitFor({ timeout: 30000 }).catch(() => {});
+    await page.waitForFunction(() => !!document.querySelector('button[aria-label="Listen to Shin"], main .audio-none'), null, { timeout: 30000 }).catch(() => {});
+  }
   if (await listen.count()) {
     await listen.click();
     await page.waitForTimeout(300);

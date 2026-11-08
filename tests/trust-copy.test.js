@@ -1,6 +1,7 @@
 // Trust copy: each statement about pictures, the device voice and the Man/Woman choice is checked against the shipped data, so it
 // cannot drift into a claim the app does not keep (found by the learner review and the journey QA, 2026-11-05).
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -10,7 +11,7 @@ import { readinessLines, loadReadinessFacts } from '../src/shell/readiness.js';
 import { audioSupport } from '../src/pronunciation/forTradition.js';
 import { plain } from '../src/shell/plain-copy.js';
 
-const root = new URL('../', import.meta.url).pathname;
+const root = fileURLToPath(new URL('../', import.meta.url));
 const read = (p) => readFileSync(join(root, p), 'utf8');
 const json = (p) => JSON.parse(read(p));
 const summary = json('data/audio/summary.json');
@@ -26,10 +27,14 @@ test('About: pictures line does not deny the pictures that are shown; the count 
   const facts = await loadReadinessFacts(async (u) => ({ ok: true, json: async () => json(u) }));
   assert.equal(facts.memoryPictures, n);
   const text = readinessLines(facts).find((l) => l.id === 'images').text;
-  assert.match(text, /none approved yet, so no generated picture is shown/);
+  const approved = Object.values(json('data/images/approvals.json').approvals).filter(a => a?.status === 'approved').length;
+  assert.ok(approved > 0);
+  assert.equal(facts.images.approved, approved);
+  assert.ok(text.includes(`${approved} approvals`), text);
+  assert.doesNotMatch(text, /none approved yet/);
   assert.ok(text.includes(`the ${n} letter memory pictures are drawings made for this app and are shown as unreviewed drafts`), text);
-  // the shipped data really has no approved generated picture, which is what the first sentence says
-  assert.equal(Object.values(json('data/images/approvals.json').approvals).filter((a) => a && a.status === 'approved').length, 0);
+  assert.equal(facts.images.shown, approved, 'each approved picture is indexed and available');
+  assert.ok(text.includes(`${approved} shown`), text);
   // without the memory-chain file the line stays true and carries no number
   const bare = readinessLines({ imagesApproved: 0 }).find((l) => l.id === 'images').text;
   assert.ok(/the letter memory pictures are drawings/.test(bare) && !/\d/.test(bare));

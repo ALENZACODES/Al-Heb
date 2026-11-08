@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book31-p01.mp3"
    },
    "illustration": "a grandmother at a stove, a huge pot",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book31-p02.mp3"
    },
    "illustration": "a calendar with every Friday circled",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book31-p03.mp3"
    },
    "illustration": "a grown grandson leaning over the pot",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book31-p04.mp3"
    },
    "illustration": "chicken going into the pot",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book31-p05.mp3"
    },
    "illustration": "orange carrot coins",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book31-p06.mp3"
    },
    "illustration": "an onion being chopped, grandma not crying",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book31-p07.mp3"
    },
    "illustration": "the grandson sniffing, puzzled",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book31-p08.mp3"
    },
    "illustration": "the grandmother with a sly smile, finger on her lips",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book31-p09.mp3"
    },
    "illustration": "a small unlabelled jar in her hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book31-p10.mp3"
    },
    "illustration": "the grandson with a spoon, eyes closing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book31-p11.mp3"
    },
    "illustration": "the grandson hugging her from the side",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book31-p12.mp3"
    },
    "illustration": "the grandmother ladling a bowl, proud",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

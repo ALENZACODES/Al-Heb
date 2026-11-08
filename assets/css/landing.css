@@ -96,4 +96,5 @@ body:has(.showcase) .card.onboarding::before { display: none; }
 .show-letter-name { font-size: .78rem; color: #d8e2c4; }
 .show-try-status { margin: .7rem auto 0; max-width: 32rem; color: #e9e4cf; min-height: 1.4em; }
 .show-again { margin-top: .6rem; }
+.show-try-more { margin: .8rem 0 0; }
 @media (prefers-reduced-motion: reduce) { .show-slot.filled { animation: none; } .show-letter-btn { transition: none; } }

@@ -106,7 +106,9 @@ function tryPanel() {
     h('div', { class: 'show-letters' }, ...TRY_LETTERS.map(([glyph, name, sound]) =>
       h('button', { type: 'button', class: 'show-letter-btn', onclick: () => tap(glyph, name), 'aria-label': `Hear the letter ${name}` },
         heSpan(glyph, 'he show-letter-glyph'), h('span', { class: 'show-letter-name' }, `${name} · ${sound}`)))),
-    status, again);
+    status, again,
+    // the full builder: the whole alef-bet, over a thousand real words, each said out loud when built
+    h('p', { class: 'show-try-more' }, h('a', { class: 'btn show-btn', href: '#/firstwin' }, 'Build more words — hear each one')));
 }
 
 export function showcaseNode(ctx) {

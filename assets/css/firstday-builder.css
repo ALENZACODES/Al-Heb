@@ -1,0 +1,59 @@
+/* Minute One word builder (src/firstday/minuteone.view.js). Scoped to #firstwin. Loaded by the view when it mounts.
+   Colour never carries meaning alone: a needed letter also gets a thick underline and an aria-label; the built word a solid border.
+   The only motion is one short transition on the built word, off under calm mode ([data-calm]) and the system reduce-motion choice. */
+#firstwin .fw-word {
+  display: flex; justify-content: center; align-items: center; gap: 0.15em; min-height: 4.2rem; margin: 0.5rem auto;
+  padding: 0.35rem 0.75rem; max-width: 26rem; border: 2px dashed #b9ad95; border-radius: 0.75rem; background: rgba(255, 255, 255, 0.35);
+}
+#firstwin .fw-word:focus-visible { outline: 3px solid var(--accent, #1e4634); outline-offset: 2px; }
+#firstwin .fw-word.is-built { border-style: solid; border-color: var(--accent, #1e4634); }
+#firstwin .fw-word-he { font-size: 2.8rem; line-height: 1.3; font-weight: 700; letter-spacing: 0.04em; }
+#firstwin .fw-word-empty { font-size: 2rem; color: #8e8370; letter-spacing: 0.2em; }
+
+#firstwin .fw-suggest { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; justify-content: center; margin: 0.5rem 0; }
+#firstwin .fw-chip {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 0.1rem; padding: 0.35rem 0.7rem; min-width: 5.5rem;
+  border: 1px solid #b9ad95; border-radius: 0.6rem; background: rgba(255, 255, 255, 0.5); color: inherit; font: inherit; cursor: pointer;
+}
+#firstwin .fw-chip:hover, #firstwin .fw-chip:focus-visible { border-color: var(--accent, #1e4634); }
+#firstwin .fw-chip.is-aim { border-width: 2px; border-color: var(--accent, #1e4634); box-shadow: inset 0 -3px 0 var(--accent, #1e4634); }
+#firstwin .fw-chip-he { font-size: 1.5rem; line-height: 1.3; }
+#firstwin .fw-chip-en { font-size: 0.8rem; color: #4e483d; }
+
+#firstwin .fw-tray { margin-top: 0.75rem; }
+#firstwin .fw-tray-row { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+#firstwin .fw-tray-finals { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #d8cfbd; }
+#firstwin .fw-tile {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 0; min-width: 3.4rem; min-height: 3.6rem; padding: 0.25rem 0.4rem;
+  line-height: 1.2; cursor: grab; touch-action: manipulation;
+}
+#firstwin .fw-tile:active { cursor: grabbing; }
+#firstwin .fw-tile-he { font-size: 1.8rem; line-height: 1.3; }
+#firstwin .fw-tile-name { font-size: 0.7rem; opacity: 0.8; }
+#firstwin .fw-tile.is-needed { border-width: 2px; border-color: var(--accent, #1e4634); box-shadow: inset 0 -4px 0 var(--accent, #1e4634); }
+#firstwin .fw-tray-foot { gap: 0.6rem; margin-top: 0.5rem; }
+#firstwin .btn.small { padding: 0.2rem 0.6rem; font-size: 0.85rem; }
+
+#firstwin .fw-success { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 1rem; align-items: center; margin: 0.75rem 0; }
+#firstwin .fw-rimon { width: 96px; height: 96px; object-fit: contain; grid-row: 1 / span 2; }
+#firstwin .fw-success-he { font-size: 2.6rem; line-height: 1.3; font-weight: 700; margin: 0; }
+#firstwin .fw-success-line { margin: 0.2rem 0; font-size: 1.15rem; }
+#firstwin .fw-success-actions { grid-column: 1 / -1; flex-wrap: wrap; gap: 0.5rem; }
+#firstwin .fw-controls { gap: 0.5rem; margin: 0.25rem 0; }
+#firstwin .fw-aim { text-align: center; margin: 0.25rem 0; }
+
+/* A brief, quiet celebration: the built word grows 3% over 0.3 s (a transition, not a keyframe animation). Off under reduced motion and calm mode. */
+#firstwin .fw-word { transition: transform 0.3s ease, border-color 0.3s ease; }
+#firstwin .fw-word.is-built { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) {
+  #firstwin .fw-word, #firstwin .fw-splash-ch { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+[data-calm] #firstwin .fw-word, [data-calm] #firstwin .fw-splash-ch { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+
+@media (max-width: 480px) {
+  #firstwin .fw-tile { min-width: 2.9rem; min-height: 3.2rem; }
+  #firstwin .fw-tile-he { font-size: 1.5rem; }
+  #firstwin .fw-word-he { font-size: 2.3rem; }
+  #firstwin .fw-success { grid-template-columns: 1fr; text-align: center; }
+  #firstwin .fw-rimon { grid-row: auto; justify-self: center; }
+}

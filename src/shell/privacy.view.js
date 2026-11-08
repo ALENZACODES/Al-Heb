@@ -26,6 +26,7 @@ export const LOCAL_ONLY = [
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
 export const STORE_KEYS = [
   ['firstwin.v1', 'First ten minutes: your answers (motivation, level, minutes a day) and the promise date', 'src/firstday/minuteone.model.js'],
+  ['firstday.builder.v1', 'Word builder: which words you have built (their ids), how many builds, and when the last one was', 'src/firstday/minuteone.model.js'],
   ['firstwin.streakDay1', 'First ten minutes: the day-one streak note and when it was set', 'src/firstday/minuteone.view.js'],
   ['firstwin.routing', 'First ten minutes: motivation, level and minutes chosen, used to route you to a first lesson', 'src/firstday/minuteone.view.js'],
   ['profile.v1', 'When your profile record was created and by which screen', 'src/firstday/minuteone.view.js'],

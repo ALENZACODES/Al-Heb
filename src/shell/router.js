@@ -113,6 +113,7 @@ export const ROUTES = [
   { name: 'service', pattern: '/service', module: '../service/service.view.js', title: 'Follow the service', owner: 'service', optional: true, quick: 'nav.service' },
   { name: 'firstday', pattern: '/firstday', module: '../firstday/firstday.view.js', tier: 'v0', title: 'Your first 10 minutes', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday' },
   { name: 'firstday-ladder', pattern: '/firstday/ladder', module: '../firstday/ladder.view.js', title: 'Pointed to unpointed ladder', owner: 'firstday', optional: true, group: 'learn', quick: 'nav.firstday-ladder' },
+  { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },
   { name: 'placement', pattern: '/placement', module: '../placement/placement.view.js', title: 'Placement check (draft)', owner: 'placement', optional: true, group: 'learn', quick: 'nav.placement' },
   { name: 'reminders', pattern: '/reminders', module: './notify.view.js', title: 'Study reminders', owner: 'notify', optional: true, group: 'learn', quick: 'nav.reminders' },
   { name: 'install', pattern: '/install', module: './install.view.js', tier: 'v0', title: 'Install ALEF', owner: 'install', optional: true, group: 'learn', quick: 'nav.install' },

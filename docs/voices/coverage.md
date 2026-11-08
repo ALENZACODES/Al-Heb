@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Synthetic voice (Israeli only), not a recorded teacher"; missing = "No audio yet".
 
-**Overall: 21136 of 22728 required clips exist (93.0%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19321; No audio yet: 1592.**
+**Overall: 21146 of 23394 required clips exist (90.4%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19331; No audio yet: 2248.**
 
 ## By talent and group
 
@@ -54,7 +54,7 @@ Required 3485; have 2270; missing 1215.
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
-Required 4394; have 4394; missing 0.
+Required 4727; have 4399; missing 328.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -75,13 +75,13 @@ Required 4394; have 4394; missing 0.
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| vocab-word | 1000 | 0 | 1000 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| vocab-word | 1333 | 0 | 1005 | 0 | 328 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 35 | 0 | 35 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 4394; have 4394; missing 0.
+Required 4727; have 4399; missing 328.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -102,7 +102,7 @@ Required 4394; have 4394; missing 0.
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| vocab-word | 1000 | 0 | 1000 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| vocab-word | 1333 | 0 | 1005 | 0 | 328 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 35 | 0 | 35 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 

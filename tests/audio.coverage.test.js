@@ -52,10 +52,8 @@ test('who is missing what: filters by voice/tradition/group and labels the suppl
   assert.equal(suppliers({ tradition: 'ashkenazi', group: 'lesson-word' }), 'human only');
   assert.equal(suppliers({ tradition: 'israeli', group: 'syllable' }), 'human only');
   assert.match(suppliers({ tradition: 'israeli', group: 'phrasebook' }), /TTS unvetted/);
-  // The man-voice Israeli set is complete (2026-11-08); the Ashkenazi set still has gaps.
-  assert.equal(whoIsMissing(manifest, { voice: 'm', tradition: 'israeli' }).length, 0);
-  const txt = renderWho(manifest, { voice: 'm', tradition: 'ashkenazi' });
-  assert.match(txt, /\[m\/ashkenazi\]: missing/); assert.ok(!/Noa/.test(txt));
+  const txt = renderWho(manifest, { voice: 'm', tradition: 'israeli' });
+  assert.match(txt, /Ari \(man\), Israeli \[m\/israeli\]: missing/); assert.ok(!/Noa/.test(txt));
   assert.equal(renderWho([], {}), 'Nothing missing for this filter.');
   assert.deepEqual(Object.keys(TALENT).length, 6);
 });

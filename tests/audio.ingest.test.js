@@ -144,7 +144,8 @@ test('apply: converts, strips tags, neutral names, synthetic-unreviewed + proven
     assert.equal(m.find((x) => x.path === 'audio/m/israeli/letter/alef.mp3').status, 'missing');
     assert.equal(m.filter((x) => x.status === 'recorded').length, 1, 'no new recorded entry');
     assert.ok(!fs.existsSync(path.join(root, 'audio/m/sephardi/word/r01-w2.mp3')), 'rejected clip not written');
-    assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root, 'data/audio/summary.json'), 'utf8')), { total: m.length, recorded: 1, tts: 3 });
+    const sum = JSON.parse(fs.readFileSync(path.join(root, 'data/audio/summary.json'), 'utf8'));
+    assert.deepEqual({ total: sum.total, recorded: sum.recorded, tts: sum.tts, spoken: sum.spoken, sfx: sum.sfx }, { total: m.length, recorded: 1, tts: 3, spoken: 3, sfx: 0 }, 'the scratch root has no book, arcade or veil clips, so spoken equals tts');
     assert.match(report(res), /APPLIED/);
     // second run: entries now hold a synthetic clip, so they are left alone unless --replace
     const again = await run({ input: inp, root, tryConvert: 0 });

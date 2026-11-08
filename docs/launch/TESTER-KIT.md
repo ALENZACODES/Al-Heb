@@ -20,7 +20,7 @@ I am building a free app called ALEF that teaches you to read Hebrew letters and
 
 **What is NOT ready.** Please read this so nothing surprises you:
 
-- **There are no recordings of a teacher.** Nobody has recorded a teacher's voice yet. A few short word clips (87 as of 2026-11-05, `cat data/audio/summary.json`) use a synthetic voice that no native speaker has reviewed, in Israeli style only, so most people will not hear them. Everywhere else the app uses your phone's built-in Hebrew voice, if your phone has one. Some phones have none, and then you will see letters and words but hear nothing. The app tells you this in a notice at the top, and on the About and Settings screens.
+- **There are no recordings of a teacher.** Nobody has recorded a teacher's voice yet. The Hebrew clips (`spoken` in `data/audio/summary.json`, about 21,500 as of 2026-11-07) use a synthetic voice, a man's and a woman's, that no native speaker has reviewed; they cover letters, vowels, syllables, words, lines, prayers, book pages and games. Where no clip exists the app uses your phone's built-in Hebrew voice, if your phone has one. Some phones have none, and then you will see letters and words but hear nothing. The app tells you this in a notice at the top, and on the About and Settings screens.
 - **The Hebrew has not been checked.** No native speaker, teacher, rabbi or cantor has reviewed the lessons, word lists, spellings of sounds or prayer text. There may be mistakes. That is one of the things I want to find out.
 - **The pictures are drafts.** Some pictures may be missing or look odd.
 - **It has not been tried on many phones.** If something is broken on yours, that is useful to know.

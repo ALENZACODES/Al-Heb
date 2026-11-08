@@ -3,6 +3,7 @@
 // being used for sound: a recorded file, the browser's text-to-speech voice, or nothing.
 // Status wording comes from ./audio-labels.js (one table for every screen and report).
 import { fileLabel, isSyntheticStatus, STATUS_LABELS, traditionCaption } from './audio-labels.js';
+import { spokenClips } from './audio-truth.js';
 import { gameMusic } from '../audio/music.js';
 import { sfx } from '../audio/sfx.js';
 import { mediaPolicy } from '../audio/policy.js';
@@ -94,15 +95,25 @@ export function createAudioUnlock(g = globalThis) {
 
 const CHECKING = 'checking audio...';
 const IDLE_TEXT = "Sound: the list has not been loaded yet."; // one short line: the sound bar is one line at 360px; Details explains
-const initialText = (summary) => (summary.recorded > 0
+// The idle line. `summary` is the loaded list's own count (core manifest + word shard: only part of the clips); `shipped` is
+// data/audio/summary.json, whose `spoken` field counts every synthetic speech clip on disk, including the book, arcade and
+// opening-prayer clips that no manifest lists (tools/audio/summary.mjs). The number is read from there, never typed here.
+const spokenLine = (shipped) => {
+  const n = spokenClips(shipped);
+  return n > 0
+    ? `Sound: ${n.toLocaleString('en-US')} Hebrew clips (man and woman voices; synthetic, not a human recording); your device's voice fills any gap.`
+    : "Sound: synthetic Hebrew clips (man and woman voices, not a human recording); your device's voice fills any gap.";
+};
+const initialText = (summary, shipped = null) => (summary.recorded > 0
   ? { mode: 'idle', text: `Sound: ${summary.recorded} clips listed as "${STATUS_LABELS.recorded}" and ${summary.tts} as "${STATUS_LABELS.tts}"; anything else uses your browser's voice.` }
   : summary.tts > 0
-    ? { mode: 'idle', text: "Sound: no recorded teacher. A few word clips are synthetic and unreviewed; the rest uses your device's voice." } // no count: this list is only part of the clips (word shards load later)
+    ? { mode: 'idle', text: spokenLine(shipped) }
     : { mode: 'idle', text: "No recordings yet. Uses your device's Hebrew voice, if it has one." });
 
 /**
  * @param {{settings:any, manifest?:any[], loadManifest?:()=>Promise<any[]>, loadSummary?:()=>Promise<{recorded:number,tts:number}>, createAudio?:Function}} o
- * `loadSummary` (optional) is only called when the list fails to load: a {recorded:0,tts:0} answer keeps the idle "No recordings yet" line.
+ * `loadSummary` (optional) reads the shipped data/audio/summary.json: when the list loads it supplies the clip count for the idle line;
+ * when the list fails to load, a {recorded:0,tts:0} answer keeps the idle "No recordings yet" line.
  * Give `manifest` for an already-loaded list (state 'ready'), or `loadManifest` to resolve it lazily. Nothing is fetched at
  * creation: `manifestState` starts 'idle' (status text says no list is loaded). The first status()/has()/play()/playSequence()/
  * ensureManifest() moves it to 'checking' and starts the load; until it resolves has() is false and status() says "checking audio..."
@@ -137,9 +148,11 @@ export function createShellAudio({ settings, manifest, loadManifest, loadSummary
     if (pending) return pending;
     if (typeof loadManifest !== 'function') return Promise.resolve(false);
     if (mstate !== 'checking') { setM('checking'); publish({ mode: 'idle', pending: true, text: 'Sound: checking which recordings exist...' }); }
-    pending = Promise.resolve().then(loadManifest).then((list) => {
+    pending = Promise.resolve().then(loadManifest).then(async (list) => {
       inner.extend(list); summary = summarizeManifest(list);
-      setM('ready'); publish(initialText(summary)); return true;
+      let shipped = null;
+      try { if (typeof loadSummary === 'function') shipped = await loadSummary(); } catch { shipped = null; } // no count: the line still says what the clips are
+      setM('ready'); publish(initialText(summary, shipped)); return true;
     }).catch(async () => {
       setM('offline');
       // The big list is not here (offline, not cached). If the tiny shipped summary says no clip exists at all, there is nothing the

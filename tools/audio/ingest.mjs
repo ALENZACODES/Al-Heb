@@ -28,7 +28,7 @@ import { measure, encode, checkMp3, integratedLufs, TARGET, BITRATE_K, EDGE_SILE
 import { parseCsv, parseArgs, stripNiqqud } from '../tts/lib.mjs';
 import { HUMAN_ONLY_GROUPS } from './coverage.mjs';
 import { computeManifest } from '../build-precache.mjs';
-import { summaryOf } from './build_manifest.mjs';
+import { summaryOf } from './summary.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const OUTSIDE_SOURCE = 'outside-synthetic';
@@ -491,7 +491,7 @@ async function applyAll(res, entries, root, opts, tools, jobs, t) {
   for (const f of files) if (f.changed) fs.writeFileSync(path.join(root, f.rel), JSON.stringify(f.list, null, 1) + '\n');
   if (done.length) { // keep the tiny precached summary in step with the manifest, as build_manifest.mjs would
     const all = files.flatMap((f) => f.list); const sp = path.join(root, 'data/audio/summary.json');
-    if (fs.existsSync(sp)) fs.writeFileSync(sp, JSON.stringify(summaryOf(all)) + '\n');
+    if (fs.existsSync(sp)) fs.writeFileSync(sp, JSON.stringify(summaryOf(all, root)) + '\n');
   }
 }
 

@@ -6842,12 +6842,23 @@
   "kind": "word",
   "id": "il12-w2",
   "text": "מָחָר",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "outside-synthetic",
   "group": "lesson-word",
   "scope": "israeli-only",
   "vocabId": "he1c16e99",
-  "english": "UNKNOWN"
+  "english": "UNKNOWN",
+  "synth": {
+   "origin": "outside-synthetic",
+   "reviewed": false,
+   "redistributionCleared": false,
+   "licence": "unknown: not cleared",
+   "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+   "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+   "inputSha256": "5cd1026c79b6d37e4d0aa43b67e79c603b91986b222ccba9b881bee30f7cf74d",
+   "ingestedAt": "2026-11-05T15:17:38.111Z",
+   "ingestedBy": "tools/audio/ingest.mjs"
+  }
  },
  {
   "path": "audio/f/israeli/word/il12-w2.mp3",

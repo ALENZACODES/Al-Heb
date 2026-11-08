@@ -165,7 +165,7 @@ export function bannerText(summary, voice) {
   const dev = voice === 'yes' ? 'Your device has a Hebrew voice, so ALEF can read words aloud with it. It is a device voice, not a recorded teacher, and Israeli-style only.'
     : voice === 'unknown' ? 'ALEF will try your device\'s Hebrew voice if it has one. It would be a device voice, not a recorded teacher, and Israeli-style only.'
     : 'Your device has no Hebrew voice, so there is no sound here. Read the English-letter spelling shown with each word instead.';
-  const syn = summary && (summary.tts || 0) > 0 ? ' A few short word clips use a synthetic voice that native speakers have not reviewed.' : '';
+  const syn = summary && (summary.tts || 0) > 0 ? " The Hebrew clips (a man's and a woman's voice) use a synthetic voice that native speakers have not reviewed; the Settings and About screens give the count." : '';
   return `There are no recorded teacher clips yet.${syn} ${dev}`;
 }
 

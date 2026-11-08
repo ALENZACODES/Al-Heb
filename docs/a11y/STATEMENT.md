@@ -38,7 +38,7 @@ Preview, written 2026-11-04. This is a plain account of what the builders measur
 - "I do not use audio" does not yet hide every optional play button (for example on the letter atlas, Torah reader, vocabulary and scan screens), and first-run setup does not ask about it; the written text is shown next to those buttons (docs/a11y/deaf-hoh.md).
 - Written descriptions of sounds are drafts that no Hebrew speaker has checked, and words cannot replace hearing a sound (docs/a11y/deaf-hoh.md).
 - Calm mode removes the Torah "read with me" timer (Previous word and Next word stay, so you move the highlight by hand), but does not change the letter-tracing layout or the letter atlas, which still show a lot at once. Pause and resume covers the lesson page and its quick check, not every practice screen (docs/a11y/COGNITIVE.md).
-- Audio: no recorded voices ship yet. A few short word clips use a synthetic voice (the About page gives the count). Other sound comes from your browser's speech voice, which ALEF cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.
+- Audio: no recorded voices ship yet. The Hebrew clips use a synthetic voice, a man's and a woman's (the About page gives the count and what they cover). Other sound comes from your browser's speech voice, which ALEF cannot control or caption. The "I do not use audio" setting swaps listening questions for reading ones.
 - This list can be incomplete. Read docs/A11Y.md and the other files in docs/a11y/ for the measured details.
 
 ## How to report a barrier

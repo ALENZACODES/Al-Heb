@@ -45225,8 +45225,8 @@
   "id": "h277eae86",
   "text": "עֹל",
   "ipa": "ˈojl",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word",
   "english": "a yoke; servitude, subjugation",
   "phonetic": "ol"
@@ -48529,8 +48529,8 @@
   "id": "h2d90f840",
   "text": "אֲדָמָה",
   "ipa": "a.ˈdɔ.mə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word",
   "english": "earth, soil, land",
   "phonetic": "adamah"
@@ -56957,8 +56957,8 @@
   "id": "h33f66dda",
   "text": "בְּדִיקָה",
   "ipa": "bə.ˈdi.kə",
-  "status": "missing",
-  "source": "none",
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled",
   "group": "vocab-word",
   "english": "an examination, check-up, test, trial",
   "phonetic": "bedikah"

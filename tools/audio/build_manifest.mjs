@@ -281,8 +281,8 @@ export function splitEntries(entries) {
   return { core, wordShard, shards };
 }
 // Tiny precached summary (a few bytes) so the shell can still say "no recordings exist" when the big core manifest is not available offline.
-export const SUMMARY_FILE = 'data/audio/summary.json';
-export const summaryOf = (entries) => ({ total: entries.length, recorded: entries.filter((e) => e.status === 'recorded').length, tts: entries.filter((e) => isSyntheticStatus(e.status)).length });
+import { SUMMARY_FILE, summaryOf } from './summary.mjs'; // also counts the book, arcade and veil clips that no manifest lists
+export { SUMMARY_FILE, summaryOf };
 export const shardFile = (t) => `data/audio/manifest-words-${t}.json`;
 
 export function main(argv = process.argv.slice(2)) {
@@ -290,7 +290,7 @@ export function main(argv = process.argv.slice(2)) {
   const { entries, notes, warnings } = buildEntries();
   const { core, wordShard, shards } = splitEntries(entries);
   const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], [WORD_SHARD_FILE, JSON.stringify(wordShard, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n']),
-    [SUMMARY_FILE, JSON.stringify(summaryOf(entries)) + '\n']];
+    [SUMMARY_FILE, JSON.stringify(summaryOf(entries, ROOT)) + '\n']];
   if (check) {
     for (const [rel, text] of files) {
       const t = path.join(ROOT, rel);

@@ -5,7 +5,7 @@
 // they cannot (offline, first load), the line says so instead of guessing. The native-review line is fixed text tied to
 // docs/review/STATUS.md by tests/readiness.test.js: when review starts, that test fails and this wording must be updated.
 
-import { audioTruthLine } from './audio-truth.js';
+import { audioTruthLine, spokenClips } from './audio-truth.js';
 import { createImageResolver } from '../img/resolve.js';
 
 export const READINESS_TITLE = 'What is ready, and what is not';
@@ -70,7 +70,10 @@ export function readinessLines({ audio = null, imagesApproved = null, images = n
     // The wording comes from audio-truth.js; every number is read from data/audio/summary.json.
     const rec = audio.recorded || 0, tts = audio.tts || 0;
     const planned = `${tts.toLocaleString('en-US')} of ${audio.total.toLocaleString('en-US')} planned clips exist${rec > 0 ? `, ${rec.toLocaleString('en-US')} of them recorded by a person` : ', and none is a person recording'}.`;
-    lines.push({ id: 'audio', ready: false, text: `Audio: not ready. ${audioTruthLine(audio)} ${planned}` });
+    // Clips that no manifest plans (book pages, arcade lines, opening prayers): counted by tools/audio/summary.mjs in summary.spoken.
+    const outside = spokenClips(audio) - tts;
+    const extra = outside > 0 ? ` ${outside.toLocaleString('en-US')} more clips (book pages, arcade lines and opening prayers) are outside that plan.` : '';
+    lines.push({ id: 'audio', ready: false, text: `Audio: not ready. ${audioTruthLine(audio)} ${planned}${extra}` });
   } else {
     lines.push({ id: 'audio', ready: false, text: `Audio: ${audioTruthLine(null)}` });
   }

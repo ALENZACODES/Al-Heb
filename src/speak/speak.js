@@ -164,7 +164,7 @@ export function mount(root, ctx) {
     const parts = [];
     parts.push(caps.recognition ? 'Speech recognition: offered by this browser (Hebrew support unverified).' : 'Speech recognition: not available in this browser, so the check is by ear.');
     parts.push(caps.recording ? 'Recording: available.' : 'Recording: not available here.');
-    parts.push(caps.synthesis ? (caps.hebrewVoice === false ? 'Model voice: this browser lists no Hebrew voice, so "Listen" may stay silent or read with a wrong accent.' : 'Model voice: no recorded teacher exists, so "Listen" uses a short synthetic clip where one exists and otherwise the browser\'s voice.') : 'Model voice: this browser has no speech synthesis; "Listen" will do nothing until clips are recorded.');
+    parts.push(caps.synthesis ? (caps.hebrewVoice === false ? 'Model voice: this browser lists no Hebrew voice, so "Listen" may stay silent or read with a wrong accent.' : 'Model voice: no recorded teacher exists; "Listen" plays the synthetic Hebrew clip (man or woman, per your setting) where one exists and otherwise the browser\'s voice.') : 'Model voice: this browser has no speech synthesis; "Listen" will do nothing until clips are recorded.');
     return parts.join(' ');
   }
   function renderStart() {

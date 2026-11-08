@@ -16,7 +16,7 @@ test('with the shipped data: audio not ready, content unreviewed, picture counts
   assert.ok(Number.isFinite(summary.total) && summary.total > 0);
   assert.match(by.audio.text, /^Audio: not ready\. /);
   assert.match(by.audio.text, new RegExp(`${summary.tts.toLocaleString('en-US')} of ${summary.total.toLocaleString('en-US')} planned clips exist, and none is a person recording`));
-  assert.match(by.audio.text, /no recorded teacher/); assert.match(by.audio.text, /synthetic voice, unreviewed by native speakers/);
+  assert.match(by.audio.text, /no recorded teacher/); assert.match(by.audio.text, /in a synthetic voice \(a man's and a woman's; no recorded teacher, unreviewed by native speakers\)/);
   assert.doesNotMatch(by.audio.text, /audio available|native-recorded|recorded by a native/i);
   assert.match(by.review.text, /unreviewed draft/);
   assert.match(by.images.text, new RegExp(`${images.shown} shown`));

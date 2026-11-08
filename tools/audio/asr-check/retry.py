@@ -96,6 +96,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--execute', action='store_true')
     ap.add_argument('--paths', help='comma list of clip paths to redo instead of the ones in ASR-NEEDS-HUMAN.md')
+    ap.add_argument('--say', help="extra spellings to try, separated by |, e.g. 'דְּקוּד שָׁא|דֶקוּד-שָׁה' "
+                    "(a space or hyphen stops a voice merging two sounds; the check still compares against the real word)")
     ap.add_argument('--latin', help="also require an English-letters hearing to match this regex, e.g. '^[vw]ah?$' for va: "
                     "Hebrew spells b and v (and p/f) with one letter, so only Latin letters can tell them apart")
     a = ap.parse_args()
@@ -118,6 +120,8 @@ def main():
             texts = [r['pointed_hebrew'], base + '\u05B8' + 'ה']
         else:
             texts = list(dict.fromkeys([speakable(r['pointed_hebrew']), L.plain(r['pointed_hebrew']), full_spelling(r['pointed_hebrew'])]))
+        if a.say:
+            texts = [t.strip() for t in a.say.split('|') if t.strip()] + texts
         takes = [(v, t, rate) for v in VOICES[voice_of(path)] for rate in RATES for t in texts]
         plan.append((ln, r, takes, is_sound))
         print(f"{r['pointed_hebrew']:<16} {path}  up to {len(takes)} takes; spellings: {' | '.join(texts)}")

@@ -157,7 +157,7 @@ Draw these 10 pictures, one image each, square 1024 x 1024, house style and rule
 5. TUG_safe_dangerous.png: a child on a playground swing with soft sand below beside a cliff edge with crumbling rocks.
 6. TUG_whole_broken.png: a whole clay vase beside the same vase in pieces on the floor.
 7. TUG_alive_dead.png: a buzzing bee on a flower beside a dry dead flower drooping in a vase.
-8. TUG_hidden_visible.png: a gift sitting on an open table beside a gift peeking out from under a blanket.
+8. TUG_hidden_visible.png: a gift fully visible uncovered on a table on the LEFT beside the same gift hidden underneath an opaque blanket on the same table on the RIGHT.
 9. TUG_permanent_temporary.png: a stone house with a garden beside a camping tent in a field.
 10. TUG_private_public.png: a single garden chair behind a high hedge beside a busy public park bench with many people.
 ```
@@ -300,7 +300,7 @@ Draw these 10 pictures, one image each, square 1024 x 1024, house style and rule
 4. TUG_turn_up_down.png: a hand turning a radio knob with big sound waves beside the same hand turning it the other way with tiny sound waves.
 5. TUG_lengthen_shorten.png: a tailor letting down a trouser hem beside scissors trimming a long ribbon short.
 6. TUG_master_slave.png: an Egyptian taskmaster with a whip pointing beside a weary labourer carrying mud bricks (Passover story style).
-7. TUG_freedom_slavery.png: people walking through a parted sea toward open sky beside heavy broken chains on the ground.
+7. TUG_freedom_slavery.png: people walking through a parted sea toward open sky on the LEFT beside heavy intact closed iron shackles joined by an unbroken chain on the ground on the RIGHT.
 8. TUG_ascent_descent.png: a road climbing steeply up toward Jerusalem stone walls beside the same road winding down to the Dead Sea.
 9. TUG_majority_minority.png: a large flock of white sheep beside two black sheep standing apart.
 10. TUG_order_mess.png: spice jars lined up neatly on a shelf beside spice jars knocked over and spilled across a counter.

@@ -1,4 +1,4 @@
-# Missing pictures and sound: what is still to make (checked 2026-11-07)
+# Missing pictures and sound: what is still to make (checked 2026-11-08)
 
 Checked by looking for each file on disk in this repo. "Missing" means the file is not in the repo yet; every screen listed here still works without it (text only, or the device voice).
 
@@ -6,12 +6,14 @@ Checked by looking for each file on disk in this repo. "Missing" means the file 
 
 | Area | Missing | Prompts / rows | Where files go |
 | --- | --- | --- | --- |
-| Antonym Tug-of-War pair pictures (new 600-round bank) | 201 pictures | `docs/games/tugowar-image-batches.md` (21 batches), master in `docs/games/TUGOWAR-COMMANDS.md` | `assets/games/tugowar/pairs/TUG_<key>.png` |
-| Games that ask for an indexed picture that was never made | 8 pictures | rows in `docs/images/MISSING-NOW.csv` | through the image ingest (below) |
+| Antonym Tug-of-War pair pictures (new 600-round bank) | 0 (all 201 complete) | `docs/games/tugowar-image-batches.md` (21 batches), master in `docs/games/TUGOWAR-COMMANDS.md` | `assets/games/tugowar/pairs/TUG_<key>.png` |
+| Games that ask for an indexed picture that was never made | 0 (all 8 complete) | registered in `data/img/index.json` | `assets/img/gen/` |
 | Little books 22-62 page pictures | 492 pictures (books 22 to 62, 12 pages each) | `docs/books/missing-pages.csv`, master in `docs/books/COMMANDS-6-62.md` | `assets/books/bookN/BOOKN_pXX.jpg` |
-| Other image-manifest rows never produced | 674 rows in total (includes the 8 above) | `docs/images/MISSING-NOW.csv` (file, block, set, size, full prompt) | through the image ingest (below) |
+| Other image-manifest rows never produced | 666 rows | `docs/images/MISSING-NOW.csv` (file, block, set, size, full prompt) | through the image ingest (below) |
 
 ## What is complete (nothing to make)
+
+- All 201 Tug-of-War pair pictures and the 8 Weather Studio, Barter and Rental Agent pictures were generated and uploaded on 2026-11-08.
 
 - The 30 arcade games: all 67 pictures in `docs/games/arcade-images.csv` and all 370 voice lines in `docs/games/arcade-voice-lines.csv` are in the repo.
 - The 26 game backdrops (`GAME_*_env`) the other games use: all present and approved.
@@ -19,7 +21,7 @@ Checked by looking for each file on disk in this repo. "Missing" means the file 
 - Little-book pictures for books 1-21 are complete.
 - The main ALEF book (`book/out/alef-book.html`): every picture it links exists. The 27 letter drawings in its mnemonic cards are drawn in code on purpose, not placeholders.
 
-## The 8 game pictures
+## The 8 completed game pictures
 
 | Game | Picture ids |
 | --- | --- |
@@ -27,7 +29,7 @@ Checked by looking for each file on disk in this repo. "Missing" means the file 
 | Barter | `CTX_food_01`, `CTX_food_02`, `CTX_food_03`, `CTX_food_04` |
 | Rental Agent | `CTX_house_02`, `CTX_house_03` |
 
-Their full prompts are the matching rows of `docs/images/MISSING-NOW.csv`. Name the files exactly `PLACE_seasons_07.png` and so on.
+All eight are generated, approved and registered. The game-ready 800px and 1600px WebP files are in `assets/img/gen/`; their generation prompts are retained in the image provenance records.
 
 ## The other 666 manifest rows, by block
 
@@ -45,9 +47,9 @@ Their full prompts are the matching rows of `docs/images/MISSING-NOW.csv`. Name 
 | Q | 97 | words in context (the 6 Barter / Rental Agent ones are in the table above) |
 | R | 61 | book chapter headers, empty/error states, finale, morning cards, share cards, streak art, traditions badges, workbook game art |
 
-None of these 666 is linked by any screen or by the book today (checked by searching `src/`, `book/`, `data/img/index.json`, `data/curriculum`, `data/books`, `data/games` and `data/homepage` for each id), so they add new art rather than fill a visible gap. Make the 8 game pictures first.
+None of these 666 is linked by any screen or by the book today (checked by searching `src/`, `book/`, `data/img/index.json`, `data/curriculum`, `data/books`, `data/games` and `data/homepage` for each id), so they add new art rather than fill a visible gap.
 
-## Pushing manifest pictures (the 8 game pictures and the 666 rows)
+## Pushing the remaining 666 manifest pictures
 
 1. Generate with the prompt from `docs/images/MISSING-NOW.csv`, and keep the exact file name from its `file` column.
 2. Put the files in one folder (or a zip) and run:

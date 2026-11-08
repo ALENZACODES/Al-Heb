@@ -33,6 +33,10 @@ const isHd = (name) => /Chirp3|Chirp-HD|Chirp_HD|HD-/.test(String(name));
 export const priceFor = (name) => (isHd(name) ? PRICES['chirp3-hd'] : PRICES.wavenet);
 /** The voice name a slot resolves to under the given env (per-call voiceName wins in buildRequest). */
 export const voiceNameFor = (voice, e = process.env) => (voice === 'm' ? e.GOOGLE_TTS_VOICE_M : e.GOOGLE_TTS_VOICE_F) || voices[voice];
+/** The voice id a render with this voice actually uses (for the clip sidecar). Mirrors buildRequest's resolution: per-call override, then the env override, then the default. */
+export function voiceName({ voice, env: e = process.env, voiceName: override } = {}) {
+  return override || voiceNameFor(voice, e) || null;
+}
 
 /**
  * Pointed Hebrew in, speakable pointed Hebrew out. Pure; safe on non-Hebrew text (returns it trimmed).

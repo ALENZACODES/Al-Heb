@@ -6,6 +6,10 @@ export const id = 'elevenlabs';
 export const env = ['ELEVENLABS_API_KEY', 'ELEVENLABS_VOICE_M', 'ELEVENLABS_VOICE_F'];
 export const pricePerMillionChars = 80;
 export const voices = { m: '$ELEVENLABS_VOICE_M', f: '$ELEVENLABS_VOICE_F' };
+/** The voice id a render with this voice actually uses (for the clip sidecar). Env only — the ids are deliberately not hardcoded. */
+export function voiceName({ voice, env: e = process.env } = {}) {
+  return (voice === 'm' ? e.ELEVENLABS_VOICE_M : voice === 'f' ? e.ELEVENLABS_VOICE_F : undefined) || null;
+}
 export const outputFormat = 'mp3_44100_128';
 export const modelId = 'eleven_v3';
 

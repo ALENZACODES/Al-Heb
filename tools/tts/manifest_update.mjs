@@ -14,6 +14,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { REPO_ROOT, TTS_DIR, defaultWork, parseArgs, parseCsv, TTS_STATUS, REVIEWED_STATUS, HUMAN_STATUS, SOURCES, readRenderLog, clipKey } from './lib.mjs';
 import { checkMp3 } from './post.mjs';
+import { buildSidecar, LICENCE_NOT_CLEARED } from '../audio/sidecar.mjs';
 
 export const SHARDS = ['israeli', 'sephardi', 'ashkenazi'];
 export function manifestFiles(root) {
@@ -56,12 +57,33 @@ export function update({ root = REPO_ROOT, work = defaultWork(), reportPath, cop
         const dst = path.join(root, r.path);
         fs.mkdirSync(path.dirname(dst), { recursive: true });
         fs.copyFileSync(src, dst);
-        fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({
-          status: TTS_STATUS, source, synth, renderedAt: now(), engine: r.engine, cer: r.cer === '' || r.cer == null ? null : Number(r.cer), reviewed: false, redistributionCleared: false,
+        // Full sidecar (fix #21): the synth object below is unchanged (the manifest
+        // entry carries the identical object, and tests assert the two match). The
+        // top-level audit fields add the slot (tradition), the voice id from the
+        // render log, the exact input text and its hash, and the licence. For a
+        // respelled clip the input text is the sound word that was actually spoken;
+        // for an Israeli clip it is the pointed Hebrew.
+        const at = now();
+        const inputText = base === 'tts-respelled' ? rec.sound_word : e.text;
+        fs.writeFileSync(`${dst}.meta.json`, JSON.stringify(buildSidecar({
+          status: TTS_STATUS,
+          source,
+          engine: r.engine,
+          voiceId: rec.voice_id || null,
+          tradition: e.tradition,
+          inputText,
+          ingestedAt: at,
+          licence: LICENCE_NOT_CLEARED,
           note: mock ? 'MOCK RUN: the audio is a test tone, not speech. Plumbing test only.' : base === 'tts-respelled'
             ? 'Synthetic voice made from a respelling (sound word) of the Hebrew. Not a human recording. No human has listened to it; how it sounds is unknown. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.'
             : 'Synthetic voice made from pointed Hebrew. Not a human recording. No human has listened to it. Chatterbox output carries an inaudible PerTh watermark. Redistribution/sale clearance per docs/tts/README.md.',
-        }, null, 1) + '\n');
+          inputTextKind: base === 'tts-respelled' ? 'respelling' : 'hebrew',
+          renderedAt: at,
+          cer: r.cer === '' || r.cer == null ? null : Number(r.cer),
+          synth,
+          reviewed: false,
+          redistributionCleared: false,
+        }), null, 1) + '\n');
       }
       e.status = TTS_STATUS; e.source = source; e.synth = synth; f.changed = true;
     }

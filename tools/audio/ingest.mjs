@@ -23,6 +23,7 @@ import crypto from 'node:crypto';
 import { spawn, spawnSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadManifestFull } from './manifest_io.mjs';
+import { buildSidecar } from './sidecar.mjs';
 import { manifestFiles } from '../tts/manifest_update.mjs';
 import { measure, encode, checkMp3, integratedLufs, TARGET, BITRATE_K, EDGE_SILENCE_S } from '../tts/post.mjs';
 import { parseCsv, parseArgs, stripNiqqud } from '../tts/lib.mjs';
@@ -479,10 +480,37 @@ async function applyAll(res, entries, root, opts, tools, jobs, t) {
       fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(tmp, dst);
       const source = opts.origin === 'respelled' ? RESPELLED_SOURCE : OUTSIDE_SOURCE;
       const synth = { origin: source, ...(opts.origin === 'respelled' ? { madeFrom: 'respelling', accentVerified: false } : {}), reviewed: false, redistributionCleared: false, licence: opts.origin === 'respelled' ? 'licence not cleared' : 'unknown: not cleared', batch: opts.batch || null, note: opts.batchNote || null, inputSha256: r.sha, ingestedAt: now, ingestedBy: 'tools/audio/ingest.mjs' };
-      fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({
-        status: INGEST_STATUS, source, synth, reviewed: false, redistributionCleared: false,
-        note: (opts.origin === 'respelled' ? 'Synthetic clip made from a stored respelling by an outside voice service (licence not cleared). Whether it sounds Sephardi or Ashkenazi is not verified. ' : 'Synthetic clip from an outside source (provenance and licence not verified). ') + 'Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept).',
-      }, null, 1) + '\n');
+      // Full sidecar (fix #21). The synth object above is unchanged (the manifest
+      // entry carries the identical object, and tests assert the two match). The
+      // top-level audit fields add what synth never recorded: the slot
+      // (tradition/voice), the input text and its hash, and the licence. Two
+      // hashes, two meanings: inputSha256 is the hash of the input TEXT (computed
+      // by buildSidecar); synth.inputSha256 stays the hash of the input AUDIO FILE.
+      // The engine that spoke is not recorded for an outside clip, so engine and
+      // voiceId stay null rather than guessed. For a respelled clip the listing
+      // text is the Hebrew the clip is filed under, NOT the respelling that was
+      // spoken (the voice pipeline's listing.csv text column is the Hebrew — see
+      // tools/tts/voice_handoff.mjs) — so inputTextKind is 'manifest-text' and
+      // the respelling itself is recorded as unrecorded, not invented.
+      const isRespelled = opts.origin === 'respelled';
+      const inputText = isRespelled ? (r.listingText || hit.e.text || null) : (hit.e.text ?? null);
+      fs.writeFileSync(`${dst}.meta.json`, JSON.stringify(buildSidecar({
+        status: INGEST_STATUS,
+        source,
+        engine: null,
+        voiceId: null,
+        tradition: hit.e.tradition,
+        inputText,
+        ingestedAt: now,
+        licence: synth.licence,
+        note: (isRespelled ? 'Synthetic clip made from a stored respelling by an outside voice service (licence not cleared). Whether it sounds Sephardi or Ashkenazi is not verified. ' : 'Synthetic clip from an outside source (provenance and licence not verified). ') + 'Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept).',
+        inputTextKind: 'manifest-text',
+        voice: hit.e.voice,
+        inputFileSha256: r.sha,
+        synth,
+        reviewed: false,
+        redistributionCleared: false,
+      }), null, 1) + '\n');
       hit.e.status = INGEST_STATUS; hit.e.source = source; hit.e.synth = synth; hit.f.changed = true; // synth last, as tools/tts/manifest_update.mjs and build_manifest.mjs do
       r.state = 'applied'; done.push(r); res.applied++;
     } catch (e) { r.state = 'rejected'; r.fails.push('conversion failed: ' + e.message.slice(0, 200)); try { fs.rmSync(dst, { force: true }); } catch { /* */ } }

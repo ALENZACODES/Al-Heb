@@ -9,6 +9,7 @@ import { createRequire } from 'node:module';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import * as L from '../tools/record-kit/lib.mjs';
+import { sha256Text } from '../tools/audio/sidecar.mjs';
 import { buildHtml } from '../tools/record-kit/build.mjs';
 import { ingest } from '../tools/record-kit/ingest.mjs';
 
@@ -139,6 +140,12 @@ test('ingest --apply runs the post chain, marks the manifest recorded, keeps con
   const man = JSON.parse(fs.readFileSync(path.join(f.rootDir, 'data/audio/manifest-words-sephardi.json'), 'utf8'));
   assert.equal(man.find((e) => e.id === 'good').status, 'recorded'); assert.equal(man.find((e) => e.id === 'loud').status, 'missing');
   const meta = JSON.parse(fs.readFileSync(mp3 + '.meta.json', 'utf8')); assert.equal(meta.status, 'recorded'); assert.equal(meta.aiCloneConsent, false);
+  // Fix #21: the human sidecar carries the same canonical audit fields.
+  const good = man.find((e) => e.id === 'good');
+  assert.equal(meta.tradition, 'sephardi'); assert.equal(meta.voice, 'm');
+  assert.equal(meta.inputText, good.text); assert.equal(meta.inputSha256, sha256Text(good.text));
+  assert.equal(meta.engine, null); assert.equal(meta.voiceId, null); assert.equal(meta.licence, 'donor-consent');
+  assert.ok(meta.ingestedAt && meta.recordedAt);
   assert.ok(!JSON.stringify(meta).includes('Test Reader'));
   const all = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) e.isDirectory() ? walk(path.join(d, e.name)) : all.push(path.join(d, e.name)); })(f.rootDir);
   assert.ok(all.every((p) => !/consent/.test(p))); assert.ok(fs.existsSync(path.join(r.stagedIn, 'consent', 'consent.json')));

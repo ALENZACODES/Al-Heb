@@ -8,6 +8,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { run, report, matchFile, buildIndex, nameCandidates, readWav, metrics, judge, deliveryAudit, detectTools, loadListing, OUTSIDE_SOURCE } from '../tools/audio/ingest.mjs';
+import { sha256Text } from '../tools/audio/sidecar.mjs';
 import { checkMp3 } from '../tools/tts/post.mjs';
 import { fileLabel, isSyntheticStatus } from '../src/shell/audio-labels.js';
 
@@ -135,6 +136,14 @@ test('apply: converts, strips tags, neutral names, synthetic-unreviewed + proven
       const probed = checkMp3(f); assert.ok(probed.ok, 'mono 44.1 kHz mp3 with no tags or encoder string: ' + probed.problems.join()); assert.ok(probed.info.bit_rate >= 80000 && probed.info.bit_rate <= 112000, `bitrate ${probed.info.bit_rate}`);
       const side = fs.readFileSync(`${f}.meta.json`, 'utf8'); const sj = JSON.parse(side);
       assert.equal(sj.status, 'synthetic-unreviewed'); assert.equal(sj.reviewed, false); assert.deepEqual(sj.synth, e.synth);
+      // Fix #21: the sidecar also carries the audit fields at top level.
+      assert.equal(sj.engine, null, 'the outside engine is not recorded, so it stays null rather than guessed');
+      assert.equal(sj.voiceId, null);
+      assert.equal(sj.tradition, 'israeli'); assert.equal(sj.voice, e.voice);
+      assert.equal(sj.inputText, e.text); assert.equal(sj.inputSha256, sha256Text(e.text));
+      assert.equal(sj.inputTextKind, 'manifest-text');
+      assert.equal(sj.ingestedAt, '2026-01-01T00:00:00.000Z'); assert.equal(sj.licence, 'unknown: not cleared');
+      assert.match(sj.inputFileSha256, /^[0-9a-f]{64}$/);
       assert.ok(!/r01-w1\.wav|f_israeli|somegen/.test(side), 'original file names and tags are not copied');
       assert.match(fileLabel(e.status, e.tradition, e.source), /outside generator.*not a recorded teacher.*unreviewed/);
     }

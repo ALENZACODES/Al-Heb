@@ -13,6 +13,7 @@
 // Refuses --tradition ashkenazi/sephardi: no TTS offers those; Ashkenazi audio must be human-recorded.
 // Google: the default voices are the approved Israeli Hebrew pair (he-IL-Wavenet-B, he-IL-Wavenet-A); see tools/audio/tts/google.mjs.
 import { loadManifestFull } from './manifest_io.mjs';
+import { buildSidecar, LICENCE_NOT_CLEARED } from './sidecar.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -86,13 +87,27 @@ export async function renderBatch({ provider, rows, root = ROOT, fetchImpl = fet
     fs.mkdirSync(path.dirname(out), { recursive: true });
     fs.writeFileSync(out, buf);
     const normalized = normalize ? normalizeClip(out) : false;
-    const meta = {
-      status: 'tts', source: `tts:${provider.id}`, renderedAt: now(), redistributionCleared: false,
+    // Full sidecar (fix #21): engine + voice id + tradition + the exact input text
+    // and its hash + render time + licence. The voice id is resolved the same way
+    // the request resolved it, so the sidecar names the voice that actually spoke.
+    // buf.voiceName (when the provider returns it) wins: it is the voice that spoke.
+    const voiceId = buf.voiceName ?? (typeof provider.voiceName === 'function' ? provider.voiceName({ voice: r.voice, env }) : (provider.voices?.[r.voice] ?? null));
+    const at = now();
+    const meta = buildSidecar({
+      status: 'tts',
+      source: `tts:${provider.id}`,
+      engine: provider.id,
+      voiceId,
+      tradition: r.tradition,
+      inputText: r.text,
+      ingestedAt: at,
+      licence: LICENCE_NOT_CLEARED,
       note: 'TTS output redistribution rights not confirmed by counsel',
-      ...(buf.voiceName ? { voiceName: buf.voiceName } : provider.voices && provider.voices[r.voice] ? { voiceName: provider.voices[r.voice] } : {}),
+      renderedAt: at,
+      redistributionCleared: false,
       ...(buf.spokenText ? { spokenText: buf.spokenText } : {}),
       ...(normalize ? { normalized } : {}),
-    };
+    });
     fs.writeFileSync(`${out}.meta.json`, JSON.stringify(meta, null, 1) + '\n');
     written.push(r.path); log(`wrote ${r.path}${normalized ? ' (normalized)' : ''}`);
   }

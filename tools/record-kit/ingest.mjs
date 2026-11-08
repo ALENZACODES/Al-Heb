@@ -21,6 +21,7 @@ import zlib from 'node:zlib';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { parseCsv, parseClipPath, analyze, warningsFor, zipRead, toCsv, THRESH, consentComplete, slug } from './lib.mjs';
+import { buildSidecar } from '../audio/sidecar.mjs';
 import { REPO_ROOT } from '../tts/lib.mjs';
 import { measure, encode, checkMp3 } from '../tts/post.mjs';
 
@@ -156,8 +157,29 @@ async function applyAll(res, { root, work, shards, entry, consent, byName, now }
       if (!chk.ok) { res.rejected.push({ name: c.name, errors: ['post chain output failed checks: ' + chk.problems.join('; ')] }); fs.rmSync(out, { force: true }); continue; }
     } catch (e) { res.rejected.push({ name: c.name, errors: ['post chain failed: ' + e.message] }); continue; }
     const dst = path.join(root, c.path); fs.mkdirSync(path.dirname(dst), { recursive: true }); fs.copyFileSync(out, dst);
-    fs.writeFileSync(`${dst}.meta.json`, JSON.stringify({ status: 'recorded', source: 'human:record-kit', recordedAt: c.recordedAt || now(), ingestedAt: now(), donorRef: res.donor, aiCloneConsent: res.aiClone, consentVersion: consent.version, note: 'Human recording. Rights per the volunteer consent held outside the repo; check docs/voices/donor-rights-grant.md before release.' }, null, 1) + '\n');
-    const h = entry.get(c.path); if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; delete h.e.synth; h.s.changed = true; }
+    // Full sidecar (fix #21): the same canonical field set as the synthetic writers,
+    // with the human provenance it actually has. engine/voiceId are null — a human
+    // voice has no engine or voice id; the donor is identified by donorRef. The
+    // licence is the volunteer consent, not a vendor term.
+    const h = entry.get(c.path);
+    const at = now();
+    fs.writeFileSync(`${dst}.meta.json`, JSON.stringify(buildSidecar({
+      status: 'recorded',
+      source: 'human:record-kit',
+      engine: null,
+      voiceId: null,
+      tradition: h?.e.tradition ?? null,
+      inputText: h?.e.text ?? null,
+      ingestedAt: at,
+      licence: 'donor-consent',
+      note: 'Human recording. Rights per the volunteer consent held outside the repo; check docs/voices/donor-rights-grant.md before release.',
+      recordedAt: c.recordedAt || at,
+      voice: h?.e.voice ?? null,
+      donorRef: res.donor,
+      aiCloneConsent: res.aiClone,
+      consentVersion: consent.version,
+    }), null, 1) + '\n');
+    if (h) { h.e.status = 'recorded'; h.e.source = 'human:record-kit'; delete h.e.synth; h.s.changed = true; }
     done.push(c);
   }
   res.accepted = done;

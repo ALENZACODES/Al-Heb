@@ -6,6 +6,8 @@ export const id = 'azure';
 export const env = ['AZURE_SPEECH_KEY', 'AZURE_SPEECH_REGION'];
 export const pricePerMillionChars = 15;
 export const voices = { m: 'he-IL-AvriNeural', f: 'he-IL-HilaNeural' };
+/** The voice id a render with this voice actually uses (for the clip sidecar). */
+export function voiceName({ voice }) { return voices[voice] ?? null; }
 export const outputFormat = 'audio-24khz-96kbitrate-mono-mp3';
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

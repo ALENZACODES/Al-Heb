@@ -9,6 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadListing, run, RESPELLED_SOURCE, OUTSIDE_SOURCE, ORIGINS, detectTools, report } from '../tools/audio/ingest.mjs';
+import { sha256Text } from '../tools/audio/sidecar.mjs';
 import { checkMp3 } from '../tools/tts/post.mjs';
 import { buildVoicePlan } from '../tools/tts/voice_plan.mjs';
 import { renderItems } from '../tools/tts/voice_render.mjs';
@@ -74,6 +75,15 @@ test('end to end (mock tones): hand-off folder -> ingest dry run writes nothing 
       assert.equal(e.synth.redistributionCleared, false); assert.equal(e.synth.licence, 'licence not cleared');
       assert.ok(checkMp3(path.join(root, e.path)).ok);
       const side = JSON.parse(fs.readFileSync(path.join(root, `${e.path}.meta.json`), 'utf8')); assert.equal(side.source, RESPELLED_SOURCE); assert.deepEqual(side.synth, e.synth); assert.match(side.note, /respelling/); assert.match(side.note, /not verified/);
+      // Fix #21: the sidecar also carries the audit fields at top level.
+      assert.equal(side.engine, null, 'the outside engine is not recorded, so it stays null rather than guessed');
+      assert.equal(side.voiceId, null);
+      assert.equal(side.tradition, e.tradition); assert.equal(side.voice, e.voice);
+      assert.equal(side.inputTextKind, 'manifest-text', 'the listing carries the Hebrew the clip is filed under, not the respelling that was spoken');
+      assert.equal(side.inputText, e.text);
+      assert.equal(side.inputSha256, sha256Text(e.text));
+      assert.equal(side.ingestedAt, '2026-01-01T00:00:00.000Z'); assert.equal(side.licence, 'licence not cleared');
+      assert.match(side.inputFileSha256, /^[0-9a-f]{64}$/);
       assert.match(fileLabel(e.status, e.tradition, e.source), /style not verified; made from a respelling/);
       assert.equal(Object.keys(e).pop(), 'synth');
     }

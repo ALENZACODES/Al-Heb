@@ -1,0 +1,22 @@
+{
+  "createdUtc": "2026-11-08T08:20:15.829548+00:00",
+  "chapters": 187,
+  "verses": 5846,
+  "voices": [
+    "Ari / Charon",
+    "Noa / Kore"
+  ],
+  "chapterTracks": 374,
+  "requestChunks": 502,
+  "sourceCoverage": "All source verses submitted in original order for both voices; no missing or duplicate chapter tracks.",
+  "provider": "Google Chirp 3 HD",
+  "nominalCharacters": 1634994,
+  "audioBytes": 386932734,
+  "audioHours": 26.861887777777778,
+  "asrChunksAtAudit": 204,
+  "asrModel": "Systran/faster-whisper-tiny.en",
+  "asrModelRevision": "0d3d19a32d3338f10357c0889762bd8d64bbdeba",
+  "asrCaveat": "Unprompted recognition includes differences on names, archaic numbers and homophones; not human-reviewed pronunciation certification.",
+  "sourceAndHashChecks": "passed",
+  "fullDecodeChecks": "All chapter tracks were fully decoded by assemble.py; this audit rechecked their saved audio hashes."
+}

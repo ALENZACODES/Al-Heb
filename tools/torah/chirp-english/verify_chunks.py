@@ -7,11 +7,11 @@ root=pathlib.Path(__file__).resolve().parent
 MODEL='Systran/faster-whisper-tiny.en'
 MODEL_REVISION='0d3d19a32d3338f10357c0889762bd8d64bbdeba'
 NORMALIZATION_POLICY='nfd-lower-strip-combining-keep-hebrew-ascii-digits-space-v1'
-p=argparse.ArgumentParser();p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1);p.add_argument('--start',type=int,default=0);args=p.parse_args()
-if args.shards<1 or not 0<=args.shard<args.shards or args.start<0:raise ValueError('Invalid shard/start arguments')
+p=argparse.ArgumentParser();p.add_argument('--shard',type=int,default=0);p.add_argument('--shards',type=int,default=1);p.add_argument('--start',type=int,default=0);p.add_argument('--end',type=int,default=None);args=p.parse_args()
+if args.shards<1 or not 0<=args.shard<args.shards or args.start<0 or (args.end is not None and args.end<args.start):raise ValueError('Invalid shard/start arguments')
 snapshot=root/'models'/'models--Systran--faster-whisper-tiny.en'/'snapshots'/MODEL_REVISION
 model=WhisperModel(str(snapshot),device='cpu',compute_type='int8',cpu_threads=2,local_files_only=True)
-rows=json.loads((root/'plan.json').read_text(encoding='utf-8'))[args.start:][args.shard::args.shards]
+rows=json.loads((root/'plan.json').read_text(encoding='utf-8'))[args.start:args.end][args.shard::args.shards]
 while True:
     complete=0;new=0
     for r in rows:

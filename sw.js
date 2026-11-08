@@ -5,6 +5,8 @@
      Range requests for audio (what <audio> sends): answered from a cached full copy as a 206 slice; otherwise passed to the network and the clip is
      then fetched in full in the background and cached, small files only (MAX_CLIP_BYTES) and at most MAX_CLIPS clips (oldest dropped). Never at install.
      Range requests for anything else bypass the worker. See docs/audio/RANGE-AND-OFFLINE.md.
+     A cached clip is revalidated once per worker lifetime while online (conditional GET in the background, after the cached
+     answer has gone out): a clip re-rendered at the same path reaches a phone that already played the old one on the next play.
    - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
      so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
    - everything else same-origin: stale-while-revalidate
@@ -25,6 +27,25 @@ async function trimClips() {
   try { const c = await caches.open(RUNTIME); const keys = await c.keys(); for (let i = 0; i < keys.length - MAX_CLIPS; i++) await c.delete(keys[i]); } catch { /* ignore */ }
 }
 async function putClip(req, res) { await (await caches.open(RUNTIME)).put(req, res); await trimClips(); }
+const revalidated = new Set();
+/** Background conditional GET for a clip served from the cache. Replaces the copy when the host has different bytes; never throws, never blocks the answer. */
+async function revalidateClip(url, hit) {
+  if (revalidated.has(url) || !(self.navigator && self.navigator.onLine)) return;
+  revalidated.add(url);
+  try {
+    const headers = {};
+    const etag = hit.headers.get('etag'); const lm = hit.headers.get('last-modified');
+    if (etag) headers['If-None-Match'] = etag;
+    if (lm) headers['If-Modified-Since'] = lm;
+    const res = await fetch(url, { headers, cache: 'no-cache' });
+    if (res.status !== 200) return; // 304: unchanged; anything else: keep what we have
+    const fresh = new Uint8Array(await res.clone().arrayBuffer());
+    if (fresh.byteLength > MAX_CLIP_BYTES) { await (await caches.open(RUNTIME)).delete(url); return; }
+    const old = new Uint8Array(await hit.clone().arrayBuffer());
+    if (old.byteLength === fresh.byteLength && old.every((b, i) => b === fresh[i])) return;
+    await putClip(url, res);
+  } catch { /* offline or aborted: the cached copy stays */ }
+}
 const inFlight = new Set();
 /** Background full GET for a clip the page is reading with Range requests. Small files only; never throws. */
 async function fillClip(url, total) {
@@ -49,10 +70,11 @@ function parseRange(h, len) {
   else { a = +m[1]; b = m[2] === '' ? len - 1 : Math.min(+m[2], len - 1); }
   return a >= len || a > b ? 'unsat' : { a, b };
 }
-async function audioRange(req) {
+async function audioRange(req, event) {
   const cache = await caches.open(RUNTIME);
   const hit = await cache.match(req.url); // by URL: the Range header is not part of the key
   if (hit && hit.status === 200) {
+    if (event) event.waitUntil(revalidateClip(req.url, hit.clone()));
     const buf = await hit.clone().arrayBuffer(); const len = buf.byteLength;
     const r = parseRange(req.headers.get('range'), len);
     const type = hit.headers.get('content-type') || 'audio/mpeg';
@@ -93,7 +115,7 @@ self.addEventListener('fetch', (event) => {
   if (req.headers.has('range')) {
     if (!AUDIO.test(url.pathname)) return; // other media: the network handles Range as before
     event.respondWith((async () => {
-      const out = await audioRange(req);
+      const out = await audioRange(req, event);
       if (out instanceof Response) return out;
       event.waitUntil(fillClip(req.url, out.total));
       return out.res;
@@ -118,7 +140,8 @@ self.addEventListener('fetch', (event) => {
   }
   if (MEDIA.test(url.pathname)) {
     event.respondWith((async () => {
-      const hit = await caches.match(req); if (hit) return hit;
+      const hit = await caches.match(req);
+      if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(revalidateClip(req.url, hit.clone())); return hit; }
       const res = await fetch(req);
       if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > MAX_CLIP_BYTES)) { const c = await caches.open(AUDIO.test(url.pathname) ? RUNTIME : DATA); c.put(req, res.clone()); if (AUDIO.test(url.pathname)) event.waitUntil(trimClips()); }
       return res;

@@ -19,7 +19,9 @@ async function make({ congregation = 'sephardi', voice = 'm', audio, stored, loa
   store.m['torahreader.v1'] = rawStored ? stored : { screen: 'study', ...(stored || {}) };
   const clock = fakeClock(); const calls = [];
   const a = audio === 'rec' ? { has: () => true, play: async (k, i, o) => { calls.push([k, i, o]); return { source: 'file', entryStatus: 'recorded' }; } } : audio;
-  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : k === 'voice' ? voice : undefined) }, audio: a, clock, loadJson, query };
+  // the Hebrew verse index is left out unless a test supplies it, so each test decides which clips exist
+  const lj = loadJson && (async (rel) => (rel === 'data/audio/manifest-torah-he.json' ? {} : loadJson(rel)));
+  const ctx = { store, settings: { get: (k) => (k === 'congregation' ? congregation : k === 'voice' ? voice : undefined) }, audio: a, clock, loadJson: lj, query };
   const un = mount(root, ctx); await un.ready;
   return { root, store, ctx, clock, calls, un };
 }

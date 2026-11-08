@@ -35,6 +35,7 @@ export const OTHER_FOLDERS = Object.freeze({
   music: ['audio/music'],
 });
 export const TORAH_MANIFEST = 'data/audio/manifest-torah.json';
+import { expandTorahHebrew } from '../../src/shell/torah-he-index.js';
 const CLIP = /\.(mp3|m4a|ogg)$/i;
 
 function countClips(root, rel, re = CLIP) {
@@ -58,6 +59,8 @@ export function torahLinePaths(root = ROOT) {
   if (!fs.existsSync(f)) return [];
   const j = JSON.parse(fs.readFileSync(f, 'utf8'));
   const list = Array.isArray(j) ? j : (j.entries || []);
+  const he = path.join(root, 'data/audio/manifest-torah-he.json');
+  if (fs.existsSync(he)) list.push(...expandTorahHebrew(JSON.parse(fs.readFileSync(he, 'utf8'))));
   return list.map((e) => e.path).filter((p) => p && !OTHER_FOLDERS.englishTorah.some((d) => p.startsWith(d + '/')) && fs.existsSync(path.join(root, p)));
 }
 export function countOther(root = ROOT) {

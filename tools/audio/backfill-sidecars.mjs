@@ -42,8 +42,11 @@
 //
 // Skipped, with counts in the report: entries with no clip (status missing), human
 // clips (status recorded — a different provenance, not this schema), entries with an
-// unknown source, entries with no text. Sidecars whose clip has no manifest entry
-// (orphans) are reported, never deleted.
+// unknown source, entries with no text. Entries whose source is one of the ingested
+// sources (outside-synthetic, tts-respelled, tts-hebrew) are skipped too: their
+// sidecars are the ingest-time record and the manifest must agree with them (fix #23
+// reconciled 111 such rows); a paid-cloud plan must never overwrite them.
+// Sidecars whose clip has no manifest entry (orphans) are reported, never deleted.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

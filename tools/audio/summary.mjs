@@ -9,6 +9,7 @@
 //                          (audio/<voice>/israeli/book), arcade lines (audio/<voice>/israeli/games), opening-prayer veil clips (audio/homepage)
 //   spoken                 tts + every extra: all synthetic speech clips on disk. This is the N the sound line shows.
 //   sfx                    non-speech interface sounds (audio/sfx); never counted as speech
+//   other                  audio on disk outside the spoken count (OTHER_FOLDERS + Hebrew Torah lines from the Torah manifest)
 // Reads the committed manifests through manifest_io.mjs; it does not rebuild them (see docs/audio/ISRAELI-VOICE-2026-11-07.md, "Still open").
 import fs from 'node:fs';
 import path from 'node:path';
@@ -25,13 +26,22 @@ export const EXTRA_FOLDERS = Object.freeze({
   homepage: ['audio/homepage'],
 });
 export const SFX_FOLDERS = Object.freeze(['audio/sfx']);
+// Audio on disk that is neither a Hebrew lesson clip nor an interface sound, so it is NOT part of the spoken count the app shows:
+// word-builder clips, English Torah chapter recordings, archival third-party recordings for Listen, and background music.
+export const OTHER_FOLDERS = Object.freeze({
+  builder: ['audio/builder'],
+  englishTorah: ['audio/m/english', 'audio/f/english'],
+  listen: ['audio/listen'],
+  music: ['audio/music'],
+});
+export const TORAH_MANIFEST = 'data/audio/manifest-torah.json';
 const CLIP = /\.(mp3|m4a|ogg)$/i;
 
-function countClips(root, rel) {
+function countClips(root, rel, re = CLIP) {
   const dir = path.join(root, rel);
   if (!fs.existsSync(dir)) return 0;
   let n = 0;
-  const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (e.isDirectory()) walk(path.join(d, e.name)); else if (CLIP.test(e.name)) n++; } };
+  const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (e.isDirectory()) walk(path.join(d, e.name)); else if (re.test(e.name)) n++; } };
   walk(dir);
   return n;
 }
@@ -41,6 +51,20 @@ export function countExtras(root = ROOT) {
   const extra = {};
   for (const [name, dirs] of Object.entries(EXTRA_FOLDERS)) extra[name] = dirs.reduce((s, d) => s + countClips(root, d), 0);
   return extra;
+}
+/** Torah-manifest clips on disk outside the English Torah folders (the Hebrew Torah lines). */
+export function torahLinePaths(root = ROOT) {
+  const f = path.join(root, TORAH_MANIFEST);
+  if (!fs.existsSync(f)) return [];
+  const j = JSON.parse(fs.readFileSync(f, 'utf8'));
+  const list = Array.isArray(j) ? j : (j.entries || []);
+  return list.map((e) => e.path).filter((p) => p && !OTHER_FOLDERS.englishTorah.some((d) => p.startsWith(d + '/')) && fs.existsSync(path.join(root, p)));
+}
+export function countOther(root = ROOT) {
+  const other = {};
+  for (const [name, dirs] of Object.entries(OTHER_FOLDERS)) other[name] = dirs.reduce((s, d) => s + countClips(root, d, /\.mp3$/i), 0); // mp3 only: these folders also hold source formats
+  other.torahLines = torahLinePaths(root).length;
+  return other;
 }
 export function countSfx(root = ROOT) { return SFX_FOLDERS.reduce((s, d) => s + countClips(root, d), 0); }
 
@@ -58,6 +82,7 @@ export function summaryOf(entries, root = ROOT) {
     extra,
     spoken: tts + Object.values(extra).reduce((s, n) => s + n, 0),
     sfx: countSfx(root),
+    other: countOther(root),
   };
 }
 export const summaryText = (s) => JSON.stringify(s) + '\n';

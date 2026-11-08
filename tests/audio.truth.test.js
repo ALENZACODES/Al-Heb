@@ -6,7 +6,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { audioTruthLine, audioTruthDetail, audioTruthNode, loadAudioSummary, clipCoverage, spokenClips, AUDIO_UNKNOWN } from '../src/shell/audio-truth.js';
 import { isSyntheticStatus } from '../src/shell/audio-labels.js';
-import { EXTRA_FOLDERS, SFX_FOLDERS } from '../tools/audio/summary.mjs';
+import { EXTRA_FOLDERS, SFX_FOLDERS, OTHER_FOLDERS, torahLinePaths } from '../tools/audio/summary.mjs';
 import { readinessLines } from '../src/shell/readiness.js';
 import { bannerText } from '../src/shell/audio-access.js';
 
@@ -56,10 +56,12 @@ test('"unreviewed" and "no recorded teacher" hold in the data: every clip has a 
 
 test('every counted clip has its mp3 on disk, and there is no mp3 the summary does not count', () => {
   const files = mp3sUnder('audio');
-  assert.equal(files.length, summary.recorded + summary.spoken + summary.sfx);
+  const other = summary.other || {};
+  assert.equal(files.length, summary.recorded + summary.spoken + summary.sfx + Object.values(other).reduce((n, x) => n + x, 0));
   const listed = new Set(all.filter((x) => x.status !== 'missing').map((e) => e.path || e.file || e.src || ''));
   for (const p of listed) assert.ok(existsSync(join(root, p)), `${p}: file missing`);
-  const extraDirs = [...Object.values(EXTRA_FOLDERS).flat(), ...SFX_FOLDERS];
+  const extraDirs = [...Object.values(EXTRA_FOLDERS).flat(), ...SFX_FOLDERS, ...Object.values(OTHER_FOLDERS).flat()];
+  for (const p of torahLinePaths(root)) listed.add(p);
   for (const f of files) assert.ok(listed.has(f) || extraDirs.some((d) => f.startsWith(d + '/')), `${f}: on disk but in no manifest and no counted folder`);
 });
 

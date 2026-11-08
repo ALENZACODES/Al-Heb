@@ -1,6 +1,6 @@
 # Calendar art: green and gold
 
-Order sheet: `docs/images/calendar-art.csv` (14 rows: 1 header, 13 markers). The pictures are made in the outside picture studio and saved to the paths in the `path` column; `node tools/images/ingest_queue.mjs` (see `docs/images/QUEUE-2026-11-07.md`) checks the size, resizes if needed, strips metadata and writes them in place. Nothing in this sheet has been drawn yet.
+Order sheet: `docs/images/calendar-art.csv` (13 rows: 1 header, 12 markers). The pictures are made in the outside picture studio and saved to the paths in the `path` column; `node tools/images/ingest_queue.mjs` (see `docs/images/QUEUE-2026-11-07.md`) checks the size, resizes if needed, strips metadata and writes them in place. Nothing in this sheet has been drawn yet.
 
 ## Why
 
@@ -44,7 +44,7 @@ Markers are 256 x 256 PNG with transparency, drawn to read at 20 to 24 px (one b
 
 Deep green `#1F4D2E`, olive `#6B7F3A` (already in the house palette), warm gold `#D9A441`, paper-cream `#F6F1E7` for any light touch. No gradients, no gloss, no text, no star of David, no flags.
 
-## Master command (paste once, then the 14 rows)
+## Master command (paste once, then the 13 rows)
 
 ```
 You are drawing a small matching set of calendar marks and one header for a Hebrew learning app for adults.
@@ -61,6 +61,6 @@ no star of David, no flags.
 HEADER (kind = backdrop): 1600 x 600, landscape, no text, Jerusalem stone and olive motifs in deep green and
 gold, light from the upper left, the lower third quiet and dark so white text can sit over it.
 
-Save each file under the exact path in its row. Strip all metadata. After the 14, show me a contact sheet
+Save each file under the exact path in its row. Strip all metadata. After the 13, show me a contact sheet
 so I can check that the marks match each other. Reply "ready" and I will paste the rows.
 ```

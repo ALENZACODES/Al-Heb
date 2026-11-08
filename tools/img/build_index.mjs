@@ -47,7 +47,7 @@ export function groupOf({ stem, set = '', kind = '', key = '' }) {
   if (kind === 'lesson-scene') return { key: `lesson:${key}` };
   if (kind === 'festival-scene') return { key: `festival:${String(set).replace(/^j_festival_/, '')}` };
   if (kind.startsWith('word-') || kind === 'srs-card') return { key: `word:${key}` };
-  if ((m = /^L\d\d_([a-z_]+?)_(print|cursive)_.+$/.exec(stem))) return { key: `letter:${hy(m[1])}:${m[2]}`, rank: /_mnemonic$/.test(stem) ? 0 : 1 };
+  if ((m = /^L\d\d_([a-z_]+?)_(print|cursive)_.+$/.exec(stem))) return { key: `letter:${hy(m[1])}:${m[2]}`, rank: /_meet$/.test(stem) ? -1 : /_mnemonic$/.test(stem) ? 0 : 1 };
   if ((m = /^L\d\d_([a-z_]+?)_quirky$/.exec(stem))) return { key: `letter:${hy(m[1])}:quirky` };
   if ((m = /^V\d\d_([a-z_]+?)_(keyword|ari|noa|position|card)$/.exec(stem))) return { key: `vowel:${hy(m[1])}`, rank: m[2] === 'keyword' ? 0 : 1 };
   if ((m = /^VOC_([a-z_]+)_\d+$/.exec(stem))) return { key: `theme:${hy(m[1])}` };
@@ -96,6 +96,9 @@ export function buildIndexFrom({ manifest = [], blockJ = [], inter = [], altText
   for (const id of Object.keys(edges).filter((id) => id.startsWith('GAME_'))) put(id, { set: '' });
   // Approved opposite-pair gap artwork was added outside the original intake CSV.
   for (const id of Object.keys(edges).filter((id) => /^OPP_gap_(white_black|expensive_cheap|strong_weak|happy_sad|near_far)$/.test(id))) put(id, { set: 'Opposites gap', alt: 'Opposites: ' + id.slice(8).replaceAll('_', ' and ') + '.' });
+  // Reviewed meet cartoons are runtime letter artwork added after the intake CSV.
+  for (const id of Object.keys(edges).filter((id) => /^L\d\d_[a-z_]+_print_meet$/.test(id))) put(id, { set: '', alt: 'Meet the Hebrew letter ' + id.replace(/^L\d\d_/, '').replace(/_print_meet$/, '').replaceAll('_', ' ') + ': illustrated letter character.' });
+  for (const id of ['SPEAK_04_table_shabbat', 'SPEAK_05_table_welcome', 'SPEAK_08_street_taxi', 'OPP_expensive_cheap', 'OPP_near_far']) if (edges[id]?.length) put(id, { set: '' });
   const groups = new Map(); let order = 0;
   for (const [stem, r] of recs) {
     const g = groupOf({ stem, set: r.set, kind: r.kind, key: r.key });

@@ -26,13 +26,14 @@ test('every image id in every manifest is in the index with a non-empty alt and 
   assert.ok(withFile >= 1, 'at least the generated files are resolvable');
 });
 
-test('today nothing is approved, so with the real data no kind returns an image', () => {
+test('real approvals resolve only ingested artwork; empty approvals resolve nothing', () => {
   const idx = JSON.parse(readFileSync(join(ROOT, INDEX_PATH), 'utf8'));
   const ap = JSON.parse(readFileSync(join(ROOT, 'data/images/approvals.json'), 'utf8'));
   const R = createImageResolver({ index: idx, approvals: ap });
   const n = Object.values(ap.approvals || {}).filter((a) => a.status === 'approved').length;
   assert.equal(R.stats().approvedIngested, n);
-  if (n === 0) for (const [k, id] of [['letter', 'alef'], ['letter', 'bet'], ['vowel', 'kamatz'], ['id', 'BG_cafe'], ['id', 'CHAR_ari_neutral']]) assert.equal(R.resolve(k, id), null, `${k}:${id}`);
+  const empty = createImageResolver({ index: idx, approvals: {} });
+  for (const [k, id] of [['letter', 'alef'], ['letter', 'bet'], ['vowel', 'kamatz'], ['id', 'BG_cafe'], ['id', 'CHAR_ari_neutral']]) assert.equal(empty.resolve(k, id), null, `${k}:${id}`);
 });
 
 test('build is deterministic and handles quoted CSV', () => {

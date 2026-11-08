@@ -4,3 +4,7 @@ export function reactRimon(action) {
     document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action } }));
   }
 }
+
+export function signalRimon(action, detail = {}) {
+  if(typeof globalThis.document?.dispatchEvent === "function" && typeof CustomEvent === "function") document.dispatchEvent(new CustomEvent("alef:rimon", {detail:{...detail,action}}));
+}

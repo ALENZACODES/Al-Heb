@@ -54,7 +54,7 @@ test('a missing file and a rejected play do not speak Dutch, and stop interrupts
   assert.equal(r.fileError, 'file-error');
   assert.equal(synth.spoken.length, 0);
   class Hang extends El { play() { this.playing = true; return new Promise(() => {}); } }
-  const hung = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: [row('f', 'ashkenazi', 'alef', 'recorded')], AudioCtor: Hang, speech: speech([]), UtteranceCtor: class {} });
+  const hung = createAudio({ settings: { voice: 'f', congregation: 'ashkenazi' }, manifest: [row('f', 'israeli', 'alef', 'recorded')], AudioCtor: Hang, speech: speech([]), UtteranceCtor: class {} });
   const pending = hung.play('letter', 'alef');
   await new Promise((res) => setTimeout(res, 0));
   const stopped = hung.stop();

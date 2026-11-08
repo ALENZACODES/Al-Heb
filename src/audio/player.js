@@ -48,9 +48,9 @@ const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
  * the Israeli clips (the he-IL voices Ari and Noa) for every kind — letters, vowels, syllables, words, lines, prayers — and
  * expresses the Sephardi tradition on screen, in the English-letter reading; the respelled audio/<voice>/sephardi/* clips are
  * retired from playback (files and manifest rows stay). Every Sephardi clip has an Israeli counterpart of the same voice, so
- * nothing falls silent. Ashkenazi is not ruled on yet: it keeps its own files plus the per-id `equivalentTo` rules.
+ * nothing falls silent. Owner decision 2026-11-07 (later): Ashkenazi follows the same rule, Israeli clips plus the Ashkenazi reading in English letters; the audio/<voice>/ashkenazi/* files stay but are retired from playback.
  */
-export const PLAYBACK_TRADITION = Object.freeze({ israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'ashkenazi' });
+export const PLAYBACK_TRADITION = Object.freeze({ israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' });
 /** The tradition whose files a setting plays ('sephardi' -> 'israeli'); unknown values pass through. */
 export const playbackTradition = (tradition) => PLAYBACK_TRADITION[tradition] || tradition;
 

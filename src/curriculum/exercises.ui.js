@@ -1,3 +1,4 @@
+import { signalRimon } from '../shell/rimon-events.js';
 /** DOM pieces of the lesson loop shared by the exercise players: progress bar, summary card, and the quick-check player. */
 import { plain } from "../shell/plain-copy.js";
 import { el, heText, heLabeled } from "./dom.js";
@@ -79,7 +80,7 @@ export function mountQuiz(host, { questions, ctx, onFinish, now = () => Date.now
     function submit(i) {
         if (answered) return; answered = true;
         const ok = i === q.answerIndex; n++;
-        session.answer(ok); streak = ok ? streak + 1 : 0; fireFeedback(ctx, ok); saveProgress();
+        session.answer(ok); signalRimon(ok ? 'correct' : 'wrong'); streak = ok ? streak + 1 : 0; fireFeedback(ctx, ok); saveProgress();
         opts.forEach((b, k) => { b.disabled = true; b.setAttribute("disabled", ""); if (k === q.answerIndex) b.setAttribute("data-state", "right"); else if (k === i) b.setAttribute("data-state", "wrong");
           // a label that replaces the glyph also replaces the mark the style adds (right or wrong): say it in words
           if (q.options[k].label) b.setAttribute("aria-label", q.options[k].label + (k === q.answerIndex ? " This was the right answer." : k === i ? " Your choice, not the answer." : "")); });

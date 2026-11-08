@@ -13,3 +13,4 @@
 
 @media(max-width:600px){.rimon-restore{bottom:calc(76px + env(safe-area-inset-bottom))}}
 .show-mascot-box{width:140px;height:auto}.show-mascot-box .rimon-companion{width:100%}@media(max-width:600px){.show-mascot-box{width:96px}}
+.rimon-next{display:block;font-size:12px;padding:6px;background:#fff9eb;color:#29432d;border-radius:8px}.rimon-next[hidden]{display:none}

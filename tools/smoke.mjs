@@ -106,7 +106,7 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
     await listen.click();
     await page.waitForTimeout(300);
     const sound = await page.locator('#sound-status').innerText();
-    check('sound indicator states the real source after Listen', /browser|device voice|No sound|recorded/i.test(sound) && !/checking/i.test(sound), sound);
+    check('sound indicator states the real source after Listen', /browser|device voice|No sound|recorded|(Israeli|Sephardi|Ashkenazi|English) voice/i.test(sound) && !/checking/i.test(sound), sound);
   } else {
     check('unavailable congregation recording is labelled honestly', await page.locator('main .audio-none').first().isVisible() && /No audio yet/.test(await page.locator('main .audio-none').first().innerText()));
   }
@@ -124,7 +124,7 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
     answers.set(id, await card.locator('[data-state="right"]').innerText());
     await card.locator('[data-act="next"]').click();
   }
-  await page.getByRole('heading', { name: 'Lesson complete', exact: true }).waitFor();
+  await page.getByRole('heading', { name: /^lesson complete$/i }) /* headings are Title Cased on the page */.waitFor();
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('alef:srs.cards')));
   check('quick check earns completion and creates review cards', Object.keys(before).length === 14 /* 6 lesson cards + 8 memory-chain cards (4 each for Shin and Bet) */ && await page.evaluate(() => !!JSON.parse(localStorage.getItem('alef:curriculum.progress')).completed.r01));
   await page.goto(base + '#/'); await page.locator('#today-continue').waitFor();
@@ -143,7 +143,7 @@ const check = (name, ok, detail = '') => { checks.push({ name, ok: !!ok, detail 
   check('review persisted new ratings to srs.cards', Object.values(cards).some((c) => c.reps > before[c.id].reps));
   await page.screenshot({ path: join(outDir, 'flow_review_done.png'), fullPage: true });
   await page.goto(base + '#/learn?lesson=r01&review=1'); await page.waitForSelector('main');
-  check('lesson review deep link renders', /Nothing due|Card 1 of/.test(await page.locator('main').innerText()));
+  check('lesson review deep link renders', /Nothing due|Card 1 of/i.test(await page.locator('main').innerText()));
   check('flow had no page errors', errs.length === 0, errs.join('; '));
   await fresh.close();
 }

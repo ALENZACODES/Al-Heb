@@ -12,6 +12,25 @@ export const MESSAGES = Object.freeze({
   fruit: {he:'אִכְלוּ רִמּוֹן וְחִזְרוּ!!', en:'HAVE A POMEGRANATE AND COME BACK!!'},
 });
 export const SHABBAT = Object.freeze({he:'שַׁבָּת שָׁלוֹם!',en:'SHABBAT SHALOM!'});
+export const SHALOM = Object.freeze({he:'שָׁלוֹם!',en:'Hello!'});
+export const ENCOURAGEMENT_MS=5*60*1000, IDLE_BREAK_MS=15*60*1000, SESSION_BREAK_MS=60*60*1000;
+export function createSpeechSchedule(){
+  let started=null,lastActivity=0,next=0,count=0,breakCount=0,pending=null;
+  const encouragement=['keep','great','awesome','super','star','practice','again','winner'];
+  return {
+    activity(time){lastActivity=time;},
+    reaction(action){if(['bounce','laugh','highfive','sad','nervous','stretch'].includes(action))pending=action;},
+    tick(time,visible=true){
+      if(!visible)return null;
+      if(started===null){started=time;lastActivity=time;next=time+ENCOURAGEMENT_MS;return SHALOM;}
+      if(time<next)return null;
+      next=time+ENCOURAGEMENT_MS;
+      if(time-lastActivity>=IDLE_BREAK_MS || time-started>=SESSION_BREAK_MS){pending=null;return MESSAGES[breakCount++%2?'fruit':'tired'];}
+      const choices=SPEECH[pending];pending=null;
+      return MESSAGES[choices?.[0] || encouragement[count++%encouragement.length]];
+    }
+  };
+}
 export const SPEECH = Object.freeze({
   wave:['keep','awesome'],wink:['awesome','super'],bounce:['great','super','awesome'],
   laugh:['super','great'],highfive:['winner','star'],nervous:['again','keep'],
@@ -28,7 +47,7 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date()}={}){
   const bubble=doc.createElement('div');bubble.className='rimon-bubble';bubble.hidden=true;
   bubble.setAttribute('role','status');bubble.setAttribute('aria-live','polite');bubble.setAttribute('aria-atomic','true');
   doc.body.append(bubble);
-  const pick=createSpeechPicker();let message=null,expires=0,friday=isFriday(now()),key='',lastAction='',lastSpoke=0;
+  const schedule=createSpeechSchedule();let message=null,expires=0,friday=isFriday(now()),key='';
   function pair(line,cls){
     const group=doc.createElement('span');group.className=cls;
     const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
@@ -46,6 +65,8 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date()}={}){
   }
   function render(){
     const time=now().getTime();friday=isFriday(now());if(message && time>=expires)message=null;
+    const scheduled=schedule.tick(time,!host.hidden && !doc.hidden);
+    if(scheduled){message=scheduled;expires=time+Math.max(6500,scheduled.en.length*160);}
     const nextKey=(friday?'friday':'')+'|'+(message?.en||'')+'|'+host.hidden;
     if(nextKey!==key){
       key=nextKey;bubble.replaceChildren();
@@ -57,13 +78,14 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date()}={}){
     position();
   }
   function say(action){
-    const time=now().getTime();if(host.hidden || (action===lastAction && time-lastSpoke<1800))return;
-    const chosen=pick(action);if(!chosen)return;
-    lastAction=action;lastSpoke=time;message=chosen;expires=time+Math.max(6500,chosen.en.length*160);render();
+    schedule.reaction(action);
   }
+  const activity=()=>schedule.activity(now().getTime());
+  const activityEvents=['pointerdown','pointermove','keydown','touchstart','scroll'];
+  for(const event of activityEvents)doc.addEventListener(event,activity,{passive:true,capture:true});
   const interval=setInterval(render,1000);
   const visibility=()=>render();doc.addEventListener('visibilitychange',visibility);
   globalThis.addEventListener('resize',position);globalThis.addEventListener('scroll',position,{passive:true,capture:true});
   render();
-  return {say,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
+  return {say,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
 }

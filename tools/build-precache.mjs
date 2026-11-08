@@ -45,7 +45,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
   'data/games/', 'assets/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
-  'src/traditions/', 'src/vocab/',
+  'src/traditions/', 'src/vocab/', 'src/wordtrace/', 'src/typing/',
   // Reform synagogues in Canada: the directory data, the view and 66 pictures (about 9 MB), fetched on first view, runtime-cached.
   'src/synagogues/', 'data/synagogues/', 'assets/synagogues/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',

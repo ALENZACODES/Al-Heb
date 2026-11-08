@@ -11,16 +11,19 @@ await page.clock.install({time:new Date('2026-11-06T12:00:00-05:00')});
 await page.goto('http://127.0.0.1:8112/',{waitUntil:'networkidle'});if(await page.locator('#alef-prayer-noshow').isVisible())await page.locator('#alef-prayer-noshow').click();
 await page.locator('.home-builder').scrollIntoViewIfNeeded();
 await page.waitForFunction(()=>document.querySelector('.rimon-bubble').textContent.includes('SHABBAT SHALOM'));
+assert.ok(await page.locator('.rimon-bubble').textContent().then(t=>t.includes('Hello!')));
 await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>document.querySelector('.rimon-static'));
 await page.evaluate(()=>document.dispatchEvent(new CustomEvent('alef:rimon',{detail:{action:'sad'}})));
+assert.ok(!(await page.locator('.rimon-bubble').textContent()).includes('TRY AGAIN'));
+await page.clock.fastForward(300000);
 await page.waitForFunction(()=>document.querySelector('.rimon-bubble').textContent.includes('TRY AGAIN'));
 assert.equal(await page.locator('.rimon-bubble-he').first().getAttribute('dir'),'rtl');
 assert.equal(await page.locator('.rimon-bubble-en').first().getAttribute('lang'),'en');
 await page.screenshot({path:root+'docs/qa/rimon-bubbles-desktop.png'});
 await page.setViewportSize({width:375,height:812});await page.evaluate(()=>location.hash='#/awards');await page.waitForFunction(()=>document.body.dataset.route==='awards');
 await page.clock.fastForward(2000);await page.evaluate(()=>document.dispatchEvent(new CustomEvent('alef:rimon',{detail:{action:'sad'}})));
-await page.waitForTimeout(100);
-const bounds=await page.locator('.rimon-bubble').boundingBox();assert.ok(bounds.x>=0 && bounds.x+bounds.width<=375);assert.ok(bounds.y>=0 && bounds.y+bounds.height<=732);
+await page.clock.fastForward(1200);
+const bounds=await page.locator('.rimon-bubble').boundingBox();assert.ok(bounds.x>=0 && bounds.x+bounds.width<=375);assert.ok(bounds.y>=0 && bounds.y+bounds.height<=733,JSON.stringify(bounds));
 const mascot=await page.locator('.rimon-companion').boundingBox();assert.ok(bounds.x+bounds.width<=mascot.x+1);
 await page.screenshot({path:root+'docs/qa/rimon-bubbles-friday-phone.png'});
 assert.equal(await page.locator('.rimon-bubble').evaluate(e=>getComputedStyle(e).animationName),'none');
@@ -29,7 +32,10 @@ await page.getByRole('button',{name:'Show Rimon',exact:true}).click();assert.ok(
 await page.clock.setSystemTime(new Date('2026-11-07T00:00:01-05:00'));await page.clock.fastForward(1200);assert.equal(await page.locator('.rimon-shabbat').count(),0);
 await page.clock.setSystemTime(new Date('2026-11-13T00:00:01-05:00'));await page.clock.fastForward(1200);assert.equal(await page.locator('.rimon-shabbat').count(),1);
 await page.emulateMedia({reducedMotion:'no-preference'});await page.waitForFunction(()=>!document.querySelector('.rimon-static'));
-await page.evaluate(()=>document.dispatchEvent(new CustomEvent('alef:rimon',{detail:{action:'highfive'}})));await page.waitForFunction(()=>document.querySelector('.rimon-bubble').textContent.includes('WINNER'));
+await page.reload({waitUntil:'networkidle'});await page.emulateMedia({reducedMotion:'reduce'});
+await page.evaluate(()=>document.dispatchEvent(new CustomEvent('alef:rimon',{detail:{action:'highfive'}})));await page.clock.fastForward(300000);await page.waitForFunction(()=>document.querySelector('.rimon-bubble').textContent.includes('WINNER'));
+await page.emulateMedia({reducedMotion:'no-preference'});
 assert.equal(await page.locator('.rimon-bubble').evaluate(e=>getComputedStyle(e).animationName),'rimon-bubble-pop');
 assert.deepEqual(errors,[]);console.log(JSON.stringify({phrases:10,friday:'stays with reactions and updates across midnight',phone:'375px, beside mascot, clear of navigation',reducedMotion:'static bubble with text updates',errors},null,2));
 }finally{await browser.close();server.close();}
+

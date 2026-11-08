@@ -31,6 +31,10 @@
 //   the ordered WaveNet redo — and no voice id was recorded at render time, so
 //   voiceId stays null rather than guessed. If the redo replaced those clips, re-run
 //   this script after the manifest changes: it upgrades sidecars whose values differ.
+//   Exception: a tts:google clip whose existing sidecar records a voiceName and a
+//   renderedAt (a later re-render with a recorded voice) upgrades to THAT voice id
+//   and render time — the Nov 7 note does not apply to it, and the render-time
+//   record is never overwritten with the null-voice form.
 // - ingestedAt: null unless the existing sidecar already carries a renderedAt (the
 //   108 prayer sidecars do). The render date of the paid-cloud library was not recorded.
 // - licence: 'not cleared' everywhere until counsel clears redistribution/sale in
@@ -100,6 +104,13 @@ export function planSidecar(entry, existing = null) {
   }
   if (entry.text == null || entry.text === '') return { action: 'skip', reason: 'no-text', sidecar: null };
   const voiceId = PRODUCTION_VOICES[entry.voice];
+  // A later re-render records its own voice and time on the sidecar it writes
+  // (voiceName + renderedAt). That record is the truth for this clip: it replaces
+  // the Nov 7 no-voice form instead of being overwritten by it. A voice id is
+  // only trusted when it rides on a render-time record (voiceName, or a voiceId
+  // with a renderedAt) — a bare voiceId with no render time is not evidence.
+  const recordedVoice = existing?.voiceName ?? (existing?.renderedAt ? (existing?.voiceId ?? null) : null);
+  const recordedAt = existing?.renderedAt ?? null;
   let engine;
   let inputTextKind;
   let note;
@@ -118,7 +129,13 @@ export function planSidecar(entry, existing = null) {
   } else if (entry.source === 'tts:google') {
     engine = PRODUCTION_ENGINE;
     inputTextKind = 'hebrew';
-    note = 'Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).';
+    if (recordedVoice && recordedAt) {
+      note = `Backfilled from the manifest (fix #21): re-rendered ${recordedAt.slice(0, 10)} with the recorded voice ${recordedVoice}; the voice id and render time are taken from the render-time sidecar, not guessed.`;
+    } else if (recordedVoice) {
+      note = `Backfilled from the manifest (fix #21): the render-time sidecar records the voice ${recordedVoice}; the render time was not recorded, so ingestedAt stays null.`;
+    } else {
+      note = 'Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).';
+    }
   } else {
     return { action: 'skip', reason: `source-${entry.source}`, sidecar: null };
   }
@@ -126,8 +143,9 @@ export function planSidecar(entry, existing = null) {
     status: entry.status,
     source: entry.source,
     engine,
-    // tts:google prayer clips: no voice id was recorded; null is honest (see note).
-    voiceId: entry.source === 'tts:google' ? null : voiceId,
+    // tts:google clips: no voice id was recorded; null is honest — unless the
+    // existing sidecar records the voice the re-render actually used (see note).
+    voiceId: entry.source === 'tts:google' ? (recordedVoice ?? null) : voiceId,
     tradition: entry.tradition,
     inputText: entry.text,
     // Preserve a render date the clip already records (render_tts writes ingestedAt;
@@ -137,6 +155,10 @@ export function planSidecar(entry, existing = null) {
     note,
     inputTextKind,
     ...(existing?.renderedAt ? { renderedAt: existing.renderedAt } : {}),
+    // Render-time facts the canonical fields do not carry: keep them, do not drop.
+    ...(existing?.spokenText ? { spokenText: existing.spokenText } : {}),
+    ...(existing?.normalized != null ? { normalized: existing.normalized } : {}),
+    ...(existing?.redistributionCleared != null ? { redistributionCleared: existing.redistributionCleared } : {}),
   });
   if (!existing) return { action: 'create', reason: 'no-sidecar', sidecar };
   // Idempotent: a sidecar that already says exactly what this plan would say is

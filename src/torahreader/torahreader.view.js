@@ -242,7 +242,7 @@ export function mount(root, ctx) {
     const text = lang === 'en' ? chapterData.verses.map((v) => v.en).join(' ') : spokenText(chapterData.verses.map((v) => v.he).join(' '));
     // Chapter-only recordings have a measured total duration but no verse timestamps.
     // Play those normally without inventing word/verse timing or highlights.
-    if (chapterPosition(chapterData.verses, lang, voiceOf(), 0)) {
+    if (chapterRate === 1 && chapterPosition(chapterData.verses, lang, voiceOf(), 0)) {
       const started = Date.now();
       const timer = clock.setInterval(() => {
         const p = chapterPosition(chapterData.verses, lang, voiceOf(), Date.now() - started);
@@ -558,6 +558,9 @@ export function mount(root, ctx) {
       'aria-label': `Recording speed ${rate} times`, 'aria-pressed': String(chapterRate === rate),
       onclick: () => {
         chapterRate = rate;
+        // Legacy verse offsets use normal-speed wall time. A live speed change makes
+        // that clock inaccurate; clear its highlight without interrupting the recording.
+        stopChapterAudio(false);
         for (const button of rateButtons) button.setAttribute('aria-pressed', String(Number(button.getAttribute('data-recording-rate')) === rate));
         ctx?.audio?.setPlaybackRate?.(rate);
         say(`Recording speed: ${rate}×. The visual finger guide has its own pace.`);

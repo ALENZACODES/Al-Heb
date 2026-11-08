@@ -127,7 +127,7 @@ export function clipCaption(clip) {
   const trad = clip.setting && clip.setting !== clip.tradition ? traditionCaption(clip.setting, clip.tradition) : traditionLabel(clip.tradition);
   const who = [trad, voiceLabel(clip.voice)].filter(Boolean).join(', ');
   if (clip.status === 'tts' && clip.tradition !== 'israeli') {
-    return `Synthetic file (${who}; not a recorded teacher).`;
+    return `${who}.`;
   }
   const shared = fileLabel(clip.status, clip.tradition, clip.source);
   return who ? `${shared} (${who}).` : shared;

@@ -22,7 +22,7 @@ export function mount(root,ctx) {
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-weatherstudio'},h('h1',{id:'view-title'},'Weather Presenter Studio'),
     h('p',{},'Choose the Hebrew forecast phrase matching the presenter cue.'),
-    h('p',{class:'muted'},'Phrase source: intermediate lesson I-24 (draft); corpus attestation/native review pending.'),status,board);
+    status,board);
   root.replaceChildren(article);
   // The weather-studio backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.

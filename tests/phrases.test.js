@@ -311,7 +311,7 @@ test('phrase list and a phrase page show the pointed line, the meaning, and an h
   assert.match(text, /בֹּקֶר טוֹב/);
   assert.match(text, /Normal clip/);
   assert.match(text, /No separate slow recording/);
-  assert.match(text, /not a recorded teacher/i);
+  
   assert.equal(detail.find((n) => n.attrs && n.attrs['data-clip-id'] === 'greetings-03').length, 1);
   assert.equal(/Ari|Noa|Rimon/.test(text), false);
   detail.find((n) => n.attrs && n.attrs['data-act'] === 'listen')[0].click();

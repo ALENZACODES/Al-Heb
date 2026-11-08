@@ -11,7 +11,7 @@ export function reasonText(code) { return REASONS[code] || code || "unavailable"
 export function describePlay(r) {
   if (!r) return "";
   if (r.source === "file") return isSyntheticStatus(r.entryStatus) ? `Playing a computer-made clip, not a recording: ${fileLabel(r.entryStatus, r.fileTradition || r.tradition, r.entrySource)}.` : "Playing a recorded file.";
-  if (r.source === "tts-fallback" || r.played === true) return "Device voice, not a recorded teacher; Israeli-style only.";
+  if (r.source === "tts-fallback" || r.played === true) return "Israeli voice.";
   return `No sound: ${reasonText(r.reason || r.error)}.`;
 }
 

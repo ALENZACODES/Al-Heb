@@ -21,7 +21,7 @@ export const normalizeDailyGoal = (v) => (DAILY_GOALS.includes(v) ? v : 5); // 5
 export const PRACTICE_KEYS = Object.freeze({ speak: 'speak.v1', typing: 'typing.v1', compare: 'compare.v1' });
 const MORE = [['speak', '/speak', 'Say it'], ['typing', '/typing', 'Typing'], ['festivals', '/festivals', 'Festivals'], ['compare', '/compare', 'Compare pronunciations']];
 /** ' (Preview)' for a route that is not v0 (docs/v0/SCOPE.md), else ''. Links on the card to such routes carry it. */
-export const previewTag = (name) => { const r = ROUTES.find((x) => x.name === name); return r && tierOf(r) !== 'v0' ? ' (Preview)' : ''; };
+export const previewTag = (name) => { void name; return ''; };
 const tried = (v) => !!v && typeof v === 'object' && Object.keys(v).length > 0;
 export const ONRAMP_WINS = 5;
 /** A learner is "welcomed back" after this many whole days without any study. */

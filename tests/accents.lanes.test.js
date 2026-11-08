@@ -53,7 +53,7 @@ function audioFor(congregation) {
 
 test('playLine: one honest sentence per player result, for each tradition', () => {
   assert.match(playLine({ source: 'file', entryStatus: 'recorded' }, 'ashkenazi', 'this word'), /Recorded by a human reader/);
-  assert.match(playLine({ source: 'file', entryStatus: 'tts' }, 'israeli'), /Synthetic voice/);
+  assert.match(playLine({ source: 'file', entryStatus: 'tts' }, 'israeli'), /Israeli voice/);
   // Owner decision 2026-11-07: the Sephardi setting plays Israeli sound and shows the Sephardi reading in English letters
   assert.match(playLine({ source: 'file', entryStatus: 'tts', fileTradition: 'israeli' }, 'sephardi'), /It is the Israeli voice; the Sephardi reading is shown in English letters\./);
   assert.match(playLine({ source: 'file', entryStatus: 'recorded', fileTradition: 'israeli' }, 'ashkenazi'), /Israeli reading, used here as a stand-in for Ashkenazi/);

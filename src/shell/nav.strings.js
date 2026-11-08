@@ -80,7 +80,7 @@ export const NAV_EN = {
   'nav.route.listen-shelf': 'Sacred listen',
   'nav.route.books': 'Little books',
   'nav.route.book': 'Read a book',
-  'nav.route.synagogues': 'Reform synagogues in Canada',
+  'nav.route.synagogues': 'Reform Synagogues in Canada',
   'nav.route.synagogue': 'Synagogue',
   'nav.route.nikkud-fade': 'Vowel marks, fading out',
   'nav.route.roots': 'Roots and verb families',

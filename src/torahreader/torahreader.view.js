@@ -29,13 +29,13 @@ import {
   chapterPosition, torahVerseId, torahChapterId, torahChapterKind,
 } from './model.js';
 
-export const NOTICE = 'Draft, not checked by a cantor, rabbi or Hebrew teacher. The Hebrew and the cantillation marks come from the Leningrad Codex (UXLC, tanach.us); a program read the marks, and this screen shows which mark sits on which word and what kind of mark it is. It does not teach melodies and plays no chanting.';
+export const NOTICE = 'The Hebrew and its cantillation marks come from the Leningrad Codex. This page shows which mark sits on each word and what kind of mark it is.';
 export const LEGEND_NOTICE = 'This page names the marks and says whether each one pauses or joins. It does not describe or play any melody, because melodies are passed on by ear and differ between communities, and nobody qualified has reviewed this table. To learn to chant, work with a cantor or teacher from your own community.';
 export const CALM_NOTE = 'Calm mode is on, so the highlight does not move on its own and there is no timer. Use Next word and Previous word to step through the passage one word at a time.';
 export const PACE_NOTE = 'The highlight moves at the pace you pick. It is not synchronised with any audio or chanting.';
 export const TORAH_TEXT_LABEL = 'About this text. Hebrew: the Leningrad Codex in the Unicode/XML edition (UXLC, tanach.us), shown with vowel points; the cantillation marks can be shown or hidden. English: the JPS 1917 translation — public domain, and a translation from 1917: its English is older than a modern version\'s ("thee/thou" appear in prayer passages), and it is the newest complete English translation whose licence allows it to be included here. References follow the Hebrew chapter and verse numbering.';
-export const TORAH_AUDIO_LABEL = 'About the audio. A synthetic voice (Israeli) reads the pointed Hebrew aloud. It is a reading, not a chant: the cantillation marks are not sung, and this is not a recording of a teacher or cantor.';
-export const TORAH_EN_AUDIO_LABEL = 'Hear the English. A synthetic voice reads the JPS 1917 translation aloud, chapter by chapter. It is a reading, not a chant, and not a recording of a teacher. The translation is from 1917 — its English is older than a modern version\'s — and it is read exactly as printed.';
+export const TORAH_AUDIO_LABEL = 'Listen to the Hebrew read aloud in Israeli pronunciation. It is read, not chanted.';
+export const TORAH_EN_AUDIO_LABEL = 'Listen to the English, chapter by chapter, from the JPS 1917 translation.';
 export const TORAH_READING_LABEL = 'Read in Israeli Hebrew.';
 export const TRANSLIT_LABEL = 'Transliteration computed from the vowel points — a reading aid, not a checked transcription.';
 export const DRAFT_LABEL = 'Draft, not checked by a rabbi or Hebrew teacher.';
@@ -114,7 +114,7 @@ export function mount(root, ctx) {
   const body = el('div', { class: 'trd-body' });
   const status = el('div', { class: 'trd-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {});
-  wrap.append(h1, el('details', { class: 'trd-notice-d' }, el('summary', {}, 'Draft, not checked by a cantor or teacher'), el('p', { class: 'trd-notice' }, NOTICE)), body, status, footer);
+  wrap.append(h1, el('details', { class: 'trd-notice-d' }, el('summary', {}, 'About This Text'), el('p', { class: 'trd-notice' }, NOTICE)), body, status, footer);
   root.append(wrap);
 
   let alive = true, data = null, state = { ...DEFAULT_STATE }, error = null;
@@ -283,7 +283,7 @@ export function mount(root, ctx) {
   }
   async function playTorahVerse(v) {
     stopChapterAudio();
-    await playAudio('line', torahVerseId(state.book, state.chapter, v.n), spokenText(v.he), `${chapterData.ref}:${v.n} in Hebrew (synthetic voice)`, { tradition: 'israeli' });
+    await playAudio('line', torahVerseId(state.book, state.chapter, v.n), spokenText(v.he), `${chapterData.ref}:${v.n} in Hebrew`, { tradition: 'israeli' });
   }
 
   /** English prayer read aloud by the device's own English voice (no recorded English clip exists for these lines). */
@@ -551,7 +551,7 @@ export function mount(root, ctx) {
         el('p', { class: 'trd-vlabel' }, el('span', { class: 'trd-vnum' }, `${state.chapter}:${v.n}`)),
         el('p', { class: 'trd-hebrew' + (fingerGuide.enabled() ? ' trd-finger-on' : ''), lang: 'he', dir: 'rtl' }, ...fingerGuide.text(heShown, v.n)),
         manifestHas('line', torahVerseId(state.book, state.chapter, v.n))
-          ? el('button', { type: 'button', class: 'trd-hear-verse', 'aria-label': `Hear ${chapterData.ref}:${v.n} in Hebrew (synthetic voice)`, onclick: () => playTorahVerse(v) }, 'Hear')
+          ? el('button', { type: 'button', class: 'trd-hear-verse', 'aria-label': `Hear ${chapterData.ref}:${v.n} in Hebrew`, onclick: () => playTorahVerse(v) }, 'Hear')
           : null,
         el('button', { type: 'button', class: 'trd-sounds', 'data-translit': String(v.n), 'aria-pressed': (state.showPronunciation !== shownTranslit.has(v.n)) ? 'true' : 'false',
           onclick: () => { if (shownTranslit.has(v.n)) shownTranslit.delete(v.n); else shownTranslit.add(v.n); render(); } }, 'Sounds'),

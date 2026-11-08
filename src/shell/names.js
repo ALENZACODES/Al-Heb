@@ -174,8 +174,8 @@ export function versionLabel(meta) {
   const uses = ['orthodox', 'conservative', 'reform'].map((k) => (d[k] && d[k].use) || 'unknown');
   const varies = uses.includes('varies') || uses.includes('rarely-used');
   const unknown = uses.every((u) => u === 'unknown');
-  if (varies) return { oneVersion: true, text: 'One version shown (the common printed text). Other movements or congregations vary; see the notes.' };
-  if (unknown) return { oneVersion: true, text: 'One version shown. Differences between movements have not been checked.' };
+  if (varies) return { oneVersion: true, text: 'The common printed text. Some congregations use other wording.' };
+  if (unknown) return { oneVersion: true, text: '' };
   return { oneVersion: false, text: 'Same words in the movements checked (not reviewed by clergy).' };
 }
 

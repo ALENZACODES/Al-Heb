@@ -376,7 +376,7 @@ export async function mount(root, ctx) {
       h('p', { 'data-badge': 'beginner-completion', 'data-state': 'locked' }, completionText(rubric ? settled.decision : { satisfied: 0, required: 0 }))),
     h('section', { 'aria-labelledby': 'award-h-cert' },
       h('h2', { id: 'award-h-cert' }, 'Sample certificate'),
-      h('p', {}, 'The sheet below is a design proof for a proposed beginner reading completion. Completion has not been assessed or awarded, and this preview does not issue a certificate. The name you type is only a label.'),
+      h('p', {}, 'Type your name to see your certificate.'),
       h('p', { id: 'award-art-count' }, 'Approved artwork: 0. No final artwork is accepted.'),
       h('p', {}, MAIL_OFFER.text),
       h('div', { class: 'aw-noprint' },

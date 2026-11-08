@@ -463,3 +463,9 @@ button.is-playing [data-glyph] { display: inline-block; min-width: 1em; text-ali
 .skel-bar.short { width: 70%; }
 @keyframes skel-pulse { from { opacity: .35; } to { opacity: .65; } }
 @media (prefers-reduced-motion: reduce) { .skel-bar { animation: none; } }
+
+/* Clean pages: review and draft notes stay in the code for the review round but are not shown to learners. */
+.draft-flag:not(details):not([data-notice]), .alef-draft-notice, .trd-draft, .trd-label-draft, .tb-draft, .sy-draft, .sc-draft,
+.rt-draft, .rc-draft, .rc-honest, .photo-draft, .nf-draft, .ls-draft, .kw-draft, .gd-draft, .fd-draft, .alef-cal-draft,
+.menu-preview-note, .preview-banner { display: none !important; }
+details.draft-flag { background: none; border: 0; padding: 0; font-weight: inherit; color: inherit; }

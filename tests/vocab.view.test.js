@@ -112,7 +112,7 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   const lis = items(root); assert.equal(lis.length, 40);
   const he = lis[0].find((n) => n.attrs.lang === "he")[0];
   assert.equal(he.attrs.dir, "rtl"); assert.equal(he.text, tier500[0].pointed);
-  assert.match(lis[0].text, /Transliteration \(Sephardi, approximate\): et/);
+  assert.match(lis[0].text, /Say it \(Sephardi\): et/);
   assert.match(lis[0].text, /rank 1/);
   // no audio engine: no dead Listen button; one honest line with the respelling instead
   assert.equal(btn(lis[0], /Listen/), undefined);

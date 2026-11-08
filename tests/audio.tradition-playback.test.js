@@ -70,7 +70,7 @@ test('real manifest: the #/read priestly blessing line and the shalom lesson wor
     const line = f.status('line', 'bless-priestly-1');
     assert.equal(line.source, 'file'); assert.equal(line.path, 'audio/f/israeli/line/bless-priestly-1.mp3');
     const name = setting === 'sephardi' ? 'Sephardi' : 'Ashkenazi';
-    assert.equal(describeResult(line).text, `Sound: Synthetic voice, not a recorded teacher (woman, Israeli voice; ${name} reading shown in English letters).`);
+    assert.equal(describeResult(line).text, `Sound: Israeli voice (woman, Israeli voice; ${name} reading shown in English letters).`);
     assert.match(playbackLine({ type: 'playing', rate: 1, ...line }).text, new RegExp(`\\(woman, Israeli voice; ${name} reading shown in English letters\\)\\. Normal speed\\.`));
     for (const id of ['r03-w1', 'r04-w2', 'r04-w3']) {
       const w = player('m', setting).status('word', id);
@@ -90,11 +90,9 @@ test('fixture rows of the new provenance: the own file plays as itself under its
       assert.equal(line.source, 'file'); assert.equal(line.path, `audio/f/${setting}/line/bless-priestly-1.mp3`);
       assert.equal(line.tradition, setting); assert.equal(line.fileTradition, undefined); assert.equal(line.via, 'exact'); assert.equal(line.entrySource, source);
       const text = describeResult(line).text;
-      assert.match(text, source === ACCENT_SOURCES.israeliVoice
-        ? new RegExp(`^Sound: Synthetic voice \\(Israeli voice reading the ${name} respelling; not a recorded teacher; unreviewed\\) \\(woman, ${name}\\)\\.$`)
-        : new RegExp(`^Sound: Synthetic voice \\(outside voice reading the ${name} respelling, sped up to the Israeli clip's pace; ${name} style not verified; not a recorded teacher; unreviewed\\) \\(woman, ${name}\\)\\.$`));
+      assert.equal(text, `Sound: ${name} voice (woman, ${name}).`);
       assert.doesNotMatch(text, /Recorded by a human|Israeli only|reading shown in English letters/);
-      assert.match(playLine(line, setting, 'the line'), /^Playing the line: Synthetic voice \((Israeli|outside) voice reading/);
+      assert.match(playLine(line, setting, 'the line'), new RegExp(`^Playing the line: ${name} voice`));
       assert.doesNotMatch(playLine(line, setting, 'the line'), /stand-in|Israeli reading/);
       // the prayer alias row of the same id follows the admitted line
       const prayer = f.status('prayer', 'bless-priestly-1');
@@ -111,7 +109,7 @@ test('fixture rows of the new provenance: the own file plays as itself under its
       const text0 = Object.keys(lookup.clips)[0];
       const own = lookupClip(lookup, text0, 'f', setting);
       assert.equal(own.path, `audio/f/${setting}/line/bless-priestly-1.mp3`); assert.equal(own.tradition, setting); assert.equal(own.setting, setting);
-      assert.match(clipCaption(own), /Synthetic voice \((Israeli|outside) voice reading/); assert.doesNotMatch(clipCaption(own), /reading shown in English letters/);
+      assert.match(clipCaption(own), new RegExp(`^${name} voice`)); assert.doesNotMatch(clipCaption(own), /reading shown in English letters/);
       assert.equal(lookupClip(lookup, text0, 'f', other).path, 'audio/f/israeli/line/bless-priestly-1.mp3');
       assert.equal(lookupClip(lookup, text0, 'm', setting).path, 'audio/m/israeli/line/bless-priestly-1.mp3');
     }

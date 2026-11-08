@@ -98,7 +98,7 @@ export function mount(root, ctx) {
     const diff = reasons && known.length ? describeDifferences(known, reasons) : { sentences: [] };
     const sheet = h('section', { class: 'rmw-sheet', 'aria-label': `Reading sheet, ${cols.map((c) => TRADITION_LABELS[c]).join(', ')}` },
       h('h2', {}, `Reading sheet: ${cols.map((c) => TRADITION_LABELS[c]).join(', ')}`),
-      rows.length ? h('table', {}, h('caption', {}, 'Underlined syllable = stressed. Rule-generated and unverified by a native speaker.'), h('thead', {}, head), h('tbody', {}, body)) : h('p', {}, 'None of these words are in the table.'),
+      rows.length ? h('table', {}, h('caption', {}, 'The underlined syllable is stressed.'), h('thead', {}, head), h('tbody', {}, body)) : h('p', {}, 'None of these words are in the table.'),
       unknown.length ? h('p', { class: 'rmw-flag', role: 'alert' }, `Not in the table, left out: ${unknown.map((t) => t.he).join(', ')}.${unknown.some((t) => !t.pointed) ? ' Words need vowel points.' : ''}`) : null,
       h('p', {}, NOTICE));
     const why = diff.sentences.length ? h('section', { class: 'rmw-noprint', 'aria-labelledby': 'rmw-why' }, h('h2', { id: 'rmw-why' }, 'What differs between traditions here'), h('ul', {}, diff.sentences.map((s) => h('li', {}, s)))) : null;

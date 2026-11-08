@@ -77,7 +77,7 @@ export function mount(root, ctx) {
     const w = p[key], busy = recording === key, other = recording && recording !== key;
     return el('div', { class: 'rc-side', role: 'group', 'aria-label': `Word ${label}` },
       el('p', {}, `Word ${label}: `, heText(w.he, 'alef-he rc-big'), ` (${w.en})`),
-      el('p', {}, `English-letter spelling, made by rules: ${w.respelling || 'none'} (unreviewed)`),
+      el('p', {}, `Say it: ${w.respelling || ''}`),
       btn(`Hear ${label} (device voice)`, () => model(w)),
       recorder.supported ? btn(busy ? `Stop recording ${label}` : `Record ${label}`, () => toggleRecord(key), { 'aria-pressed': String(busy), disabled: !!other }) : null,
       takes[key] ? btn(`Play my ${label}`, () => play(key)) : null);

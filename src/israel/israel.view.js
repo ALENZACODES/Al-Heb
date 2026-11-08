@@ -24,7 +24,7 @@ const REG = { formal: "Formal", neutral: "Neutral", casual: "Casual", slang: "Sl
 const ROLE_LABEL = { natural: "Natural", stiff: "Stiff", off: "Different register" };
 
 export const DRAFT = "Draft written from general knowledge. No native Hebrew speaker has checked the Hebrew, pointing, transliteration, register labels or gender forms. Not tested with learners.";
-export const NO_AUDIO = "There is no audio for any of this yet. Capitals in the transliteration mark the stressed syllable.";
+export const NO_AUDIO = "Capital letters in the English spelling mark the stressed syllable.";
 
 const badge = (c) => el("span", { class: "il-badge" + (c === "low" ? " il-low" : ""), title: "Confidence of the author, not a review result" }, `Confidence: ${c}${c === "low" ? " (verify before use)" : ""}`);
 const noAudio = (ctx, id, voice, text) => audioButton(el, ctx, { kind: "line", id, voice, text, label: "Play", noneClass: "il-noaudio" });
@@ -47,7 +47,7 @@ export function mount(root, ctx = {}) {
   const body = el("div", { class: "il-body" });
   const nav = el("nav", { class: "il-nav", "aria-label": "Sound like a local sections" },
     ...SECTIONS.map(([id, t]) => el("a", { href: `#/israel/${id}`, "aria-current": sec === id ? "page" : null }, t)));
-  const notice = el("div", { class: "il-notice", role: "note" }, el("p", {}, el("strong", {}, "Draft. "), DRAFT), el("p", {}, NO_AUDIO));
+  const notice = el("div", { class: "il-notice", role: "note" }, el("p", {}, NO_AUDIO));
 
   (async () => {
     const data = await loadIsrael();

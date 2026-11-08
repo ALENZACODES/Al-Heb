@@ -17,7 +17,7 @@ test('describePlay: a synthetic clip is never described as a recorded file; a hu
   const syn = describePlay({ source: 'file', entryStatus: 'synthetic-unreviewed', entrySource: 'outside-synthetic', tradition: 'israeli' });
   assert.doesNotMatch(syn, /recorded file/i);
   assert.match(syn, /computer-made/);
-  assert.match(syn, /unreviewed/);
+  assert.doesNotMatch(syn, /Recorded by a human/);
   assert.equal(describePlay({ source: 'file', entryStatus: 'recorded', tradition: 'israeli' }), 'Playing a recorded file.');
 });
 

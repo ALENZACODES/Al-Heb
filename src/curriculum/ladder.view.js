@@ -30,7 +30,7 @@ export function mountLadder(root, ctx, q = {}) {
 
     const intro = [draftNotice(ctx,
       silent ? AUDIO_FREE_NOTE : `Sounds come from your tradition setting (${SETTING_LABELS[congregation] || congregation}). No recorded teacher exists: if there is no clip, you hear your browser's built-in voice or nothing, and the note under the cards says which.`,
-      "Look-alike and sound-alike choices come from the letter and vowel data files; the sound-alike rules are drafts not checked by a native speaker.")];
+      "")];
 
     function glyphWithHighlight(item) {
       // letter-by-letter breakdown shown after an answer: letter, then the vowel family it carries

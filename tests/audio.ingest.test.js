@@ -145,7 +145,7 @@ test('apply: converts, strips tags, neutral names, synthetic-unreviewed + proven
       assert.equal(sj.ingestedAt, '2026-01-01T00:00:00.000Z'); assert.equal(sj.licence, 'unknown: not cleared');
       assert.match(sj.inputFileSha256, /^[0-9a-f]{64}$/);
       assert.ok(!/r01-w1\.wav|f_israeli|somegen/.test(side), 'original file names and tags are not copied');
-      assert.match(fileLabel(e.status, e.tradition, e.source), /outside generator.*not a recorded teacher.*unreviewed/);
+      assert.match(fileLabel(e.status, e.tradition, e.source), / voice$/);
     }
     assert.equal(Object.keys(m.find((x) => x.path === 'audio/m/israeli/word/r01-w1.mp3')).pop(), 'synth', 'synth is the last key, as build_manifest.mjs writes it');
     assert.equal(m.find((x) => x.path === 'audio/m/israeli/word/r01-w3.mp3').status, 'recorded');

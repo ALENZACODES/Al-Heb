@@ -123,7 +123,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 
 - **r10** Kaf, final Kaf, and a silent shva at word end (25 min)
   - Read Kaf with dagesh (k, as in כִּי) and final Kaf (kh, as in לָךְ)
-  - Preview: a shva at the end of a word is silent
+  - A shva at the end of a word is silent
 - **r11** Segol: the 'eh' vowel (20 min)
   - Read segol as 'eh'
   - Compare tzere and segol: the same 'e' in Israeli and Sephardi, different in Ashkenazi (tzere 'ei', segol 'e')

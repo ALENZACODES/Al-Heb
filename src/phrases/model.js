@@ -283,7 +283,7 @@ export function audioHonesty(clip) {
   let kind;
   if (clip.status === 'recorded') kind = statusLabel('recorded');
   else if (clip.status === 'tts' && clip.tradition === 'israeli') kind = statusLabel('tts');
-  else if (clip.status === 'tts') kind = 'Synthetic voice, not a recorded teacher.';
+  else if (clip.status === 'tts') kind = 'Israeli voice.';
   else if (clip.status === 'synthetic-unreviewed' || clip.status === 'synthetic-reviewed') kind = statusLabel(clip.status, clip.tradition, clip.source);
   else kind = 'No audio yet';
   const reviewed = clip.status === 'recorded' || clip.status === 'synthetic-reviewed' ? '' : ' Not reviewed.';

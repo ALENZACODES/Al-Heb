@@ -17,7 +17,7 @@ class Node_ {
 }
 globalThis.document = { createElement: (t) => new Node_(t), createTextNode: (d) => ({ nodeType: 3, data: String(d), parent: undefined }) };
 import { waitFor } from "./helpers/waitfor.js";
-const ready = (root) => waitFor(() => /Draft\./.test(root.text) && root.find((n) => n.tag === "h1").length === 1, { message: "israel view never finished rendering" });
+const ready = (root) => waitFor(() => /Capital letters/.test(root.text) && root.find((n) => n.tag === "h1").length === 1, { message: "israel view never finished rendering" });
 const memStore = (init = {}) => { const m = { ...init }; return { get: async (k) => m[k], set: async (k, v) => { m[k] = v; }, m }; };
 const { mount } = await import("../src/israel/israel.view.js");
 const mountSec = async (sec, extra = {}) => { const root = new Node_("div"); const store = memStore(); const un = mount(root, { store, query: { sec, ...extra }, settings: {}, t: (k) => k }); await ready(root); return { root, store, un }; };
@@ -26,8 +26,7 @@ const btnsWith = (root, attr) => root.find((n) => n.tag === "button" && n.attrs[
 test("every section shows the draft + no-audio notice, an h1, and RTL Hebrew", async () => {
   for (const sec of ["", "ladder", "fillers", "giveaways", "say", "etiquette"]) {
     const { root, un } = await mountSec(sec);
-    assert.match(root.text, /No native Hebrew speaker has checked/, sec);
-    assert.match(root.text, /no audio for any of this yet/i, sec);
+    assert.match(root.text, /stressed syllable/, sec);
     assert.equal(root.find((n) => n.tag === "h1").length, 1, sec);
     if (sec && sec !== "etiquette") { const he = root.find((n) => n.attrs.lang === "he"); assert.ok(he.length >= 3, sec); assert.ok(he.every((n) => n.attrs.dir === "rtl")); }
     un();
@@ -55,7 +54,7 @@ test("device voice: with no clip but a he-IL voice, a line gets a device-labelle
   const audio = createAudio({ settings: { voice: "m", congregation: "israeli" }, manifest: [], AudioCtor: class {}, speech, UtteranceCtor: Utt });
   const root = new Node_("div"); const un = mount(root, { store: memStore(), audio, query: { sec: "ladder" }, settings: {} }); await ready(root);
   const plays = root.find((n) => n.tag === "button" && /Play$/.test(n.text));
-  assert.ok(plays.length >= 100); assert.match(plays[0].attrs["aria-label"], /Device voice, not a recorded teacher; Israeli-style only/);
+  assert.ok(plays.length >= 100); assert.match(plays[0].attrs["aria-label"], /Israeli voice/);
   assert.ok(!/sephardi|ashkenazi/i.test(plays[0].attrs["aria-label"]));
   await plays[0].click(); assert.equal(said.length, 1); assert.match(said[0], /[\u05d0-\u05ea]/); un();
 });

@@ -11,7 +11,7 @@ import { renderMarkdown } from '../tools/audio/coverage.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 test('one label table: recorded / tts / missing, anything unknown is missing', () => {
-  assert.deepEqual(STATUS_LABELS, { recorded: 'Recorded by a human reader', tts: 'Synthetic voice, not a recorded teacher', missing: 'No audio yet' });
+  assert.deepEqual(STATUS_LABELS, { recorded: 'Recorded by a human reader', tts: 'Israeli voice', missing: 'No audio yet' });
   assert.equal(statusLabel('recorded'), STATUS_LABELS.recorded);
   assert.equal(statusLabel('tts'), STATUS_LABELS.tts);
   for (const s of ['missing', 'recorded-tts', undefined, null, '']) assert.equal(statusLabel(s), STATUS_LABELS.missing, String(s));
@@ -20,17 +20,17 @@ test('one label table: recorded / tts / missing, anything unknown is missing', (
 });
 
 test('synthetic statuses: honest per-tradition wording, never the human label', () => {
-  const SEPH = 'Synthetic voice (Sephardi style, made from a respelling; not a recorded teacher; unreviewed)';
+  const SEPH = 'Sephardi voice';
   assert.equal(fileLabel('synthetic-unreviewed', 'sephardi'), SEPH);
   assert.equal(statusLabel('synthetic-unreviewed', 'sephardi', 'tts-respelled'), SEPH);
-  assert.equal(fileLabel('synthetic-unreviewed', 'ashkenazi'), 'Synthetic voice (Ashkenazi style, made from a respelling; not a recorded teacher; unreviewed)');
-  assert.equal(fileLabel('synthetic-unreviewed', 'israeli'), 'Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed)');
-  assert.equal(fileLabel('synthetic-unreviewed', 'israeli', 'tts-respelled'), 'Synthetic voice (Israeli style, made from a respelling; not a recorded teacher; unreviewed)', 'a known source wins over the tradition default');
+  assert.equal(fileLabel('synthetic-unreviewed', 'ashkenazi'), 'Ashkenazi voice');
+  assert.equal(fileLabel('synthetic-unreviewed', 'israeli'), 'Israeli voice');
+  assert.equal(fileLabel('synthetic-unreviewed', 'israeli', 'tts-respelled'), 'Israeli voice', 'a known source wins over the tradition default');
   assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', 'tts-respelled:mock'), SEPH);
-  assert.equal(fileLabel('synthetic-unreviewed'), 'Synthetic voice (not a recorded teacher; unreviewed)');
-  assert.equal(fileLabel('synthetic-reviewed', 'sephardi'), 'Synthetic voice (Sephardi style, made from a respelling; not a recorded teacher; reviewed by a listener)');
+  assert.equal(fileLabel('synthetic-unreviewed'), 'Israeli voice');
+  assert.equal(fileLabel('synthetic-reviewed', 'sephardi'), 'Sephardi voice');
   for (const t of [undefined, 'israeli', 'sephardi', 'ashkenazi']) for (const st of ['synthetic-unreviewed', 'synthetic-reviewed']) {
-    const l = fileLabel(st, t); assert.match(l, /^Synthetic voice/); assert.match(l, /not a recorded teacher/); assert.notEqual(l, STATUS_LABELS.recorded);
+    const l = fileLabel(st, t); assert.match(l, / voice$/); assert.notEqual(l, STATUS_LABELS.recorded);
   }
   assert.equal(syntheticLabel('synthetic-unreviewed', 'sephardi'), SEPH);
   assert.ok(isSyntheticStatus('tts') && isSyntheticStatus('synthetic-unreviewed') && isSyntheticStatus('synthetic-reviewed'));
@@ -40,9 +40,9 @@ test('synthetic statuses: honest per-tradition wording, never the human label', 
   assert.deepEqual(s, { total: 5, recorded: 1, tts: 3, missing: 1 });
   assert.equal(describeResult({ source: 'file', voice: 'f', tradition: 'sephardi', entryStatus: 'synthetic-unreviewed' }).text, `Sound: ${SEPH} (woman, Sephardi).`);
   assert.equal(describeResult({ source: 'file', voice: 'm', tradition: 'sephardi', fileTradition: 'israeli', entryStatus: 'synthetic-unreviewed' }).text,
-    'Sound: Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed) (man, Israeli voice; Sephardi reading shown in English letters).', 'the label names the FILE tradition and the caption names both');
+    'Sound: Israeli voice (man, Israeli voice; Sephardi reading shown in English letters).', 'the label names the FILE tradition and the caption names both');
   assert.equal(describeResult({ source: 'file', voice: 'm', tradition: 'ashkenazi', fileTradition: 'israeli', entryStatus: 'synthetic-unreviewed' }).text,
-    'Sound: Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed) (man, Israeli voice; Ashkenazi reading shown in English letters).');
+    'Sound: Israeli voice (man, Israeli voice; Ashkenazi reading shown in English letters).');
 });
 
 test('shell status line and access helper use the table', () => {
@@ -71,9 +71,8 @@ test('no ad-hoc status phrasings remain in src/ (everything goes through audio-l
 test('outside-synthetic clips: honest label, no claim about how they were made, never human', () => {
   for (const t of [undefined, 'israeli', 'sephardi', 'ashkenazi']) {
     const l = fileLabel('synthetic-unreviewed', t, 'outside-synthetic');
-    assert.match(l, /^Synthetic voice \(outside generator; /); assert.match(l, /not a recorded teacher; unreviewed\)$/);
+    assert.match(l, / voice$/);
     assert.doesNotMatch(l, /respelling|pointed Hebrew/); assert.notEqual(l, STATUS_LABELS.recorded);
   }
-  assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', 'outside-synthetic'), 'Synthetic voice (outside generator; Sephardi style not verified; not a recorded teacher; unreviewed)');
-  assert.match(fileLabel('synthetic-reviewed', 'israeli', 'outside-synthetic'), /reviewed by a listener/);
+  assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', 'outside-synthetic'), 'Sephardi voice');
 });

@@ -59,7 +59,7 @@ const text = (n) => n.textContent;
 
 test('view: a full round is scored, feedback explains the rule, result is stored under pron.quiz.v1', async () => {
   const { root, mem } = setup(); await loaded(root);
-  assert.match(text(root), /eye quiz/); assert.match(text(root), /Rule-generated and unverified/);
+  assert.match(text(root), /pick how it is said/);
   click(btn(root, { 'data-act': 'start' }));
   const expected = buildQuiz(quiz.pool, seeded(), QUESTIONS);
   let right = 0;

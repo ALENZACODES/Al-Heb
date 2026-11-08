@@ -128,7 +128,7 @@ export function mount(root, ctx = {}) {
 
   function header(extra) {
     const nodes = [h('h1', { id: 'view-title', tabindex: '-1' }, t('wt.title', 'Trace words'))];
-    nodes.push(h('p', { class: 'notice', role: 'note' }, t('wt.draft', 'DRAFT: stroke order and shapes have not been checked by a native Israeli teacher, and the word pointing comes from course data and Wiktionary-derived vocabulary that has not been proofread. If your teacher writes a letter differently, follow your teacher.')));
+    nodes.push(h('p', { class: 'notice draft-flag', role: 'note' }, t('wt.draft', 'DRAFT: stroke order and shapes have not been checked by a native Israeli teacher, and the word pointing comes from course data and Wiktionary-derived vocabulary that has not been proofread. If your teacher writes a letter differently, follow your teacher.')));
     if (S.script === 'cursive') nodes.push(h('p', { class: 'notice', role: 'note', 'data-note': 'joins' }, t('wt.joins', 'Cursive note: connected handwriting between letters is NOT modelled here. Each letter is traced separately in its cursive shape (ktav yad), and the joins between letters are not drawn or checked. Ask your teacher how your school connects letters.')));
     return [...nodes, ...(extra || [])];
   }

@@ -40,7 +40,7 @@ export function mount(root, ctx) {
   let catalog = null, catalogTried = false, badges = null;
   const style = h('style', {}); style.textContent = CSS;
   root.replaceChildren(style, h('h1', { id: 'view-title', tabindex: '-1' }, 'Daily goal and quests'),
-    h('p', { class: 'muted' }, 'A gentle daily layer on top of your lessons. Everything here is kept on this device only, nothing is sent anywhere, and nothing here ever stops you from learning. Draft: not tried with learners yet.'), status, newHost, main);
+    h('p', { class: 'muted' }, 'A gentle daily layer on top of your lessons. Everything here is kept on this device only, nothing is sent anywhere, and nothing here ever stops you from learning.'), status, newHost, main);
 
   function render(focusId) {
     const { rec, snap } = refresh(store);

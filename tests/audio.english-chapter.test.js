@@ -60,7 +60,7 @@ test('English synthetic labels never claim Israeli Hebrew or respelling', async 
   const { fileLabel, traditionCaption } = await import('../src/shell/audio-labels.js');
   for (const status of ['tts', 'synthetic-unreviewed', 'synthetic-reviewed']) {
     const label = fileLabel(status, 'english', 'paid-cloud');
-    assert.match(label, /Synthetic English voice/); assert.doesNotMatch(label, /Israeli|Hebrew|respelling/);
+    assert.equal(label, 'English voice');
   }
   assert.equal(traditionCaption('english'), 'English');
 });

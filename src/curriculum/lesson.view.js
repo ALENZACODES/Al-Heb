@@ -56,7 +56,7 @@ export function mountLesson(root, ctx, lessonId) {
     const parts = [
       ctx.img?.(el, { kind: 'lesson', id: lesson.id, class: 'l-scene', width: 900 }),
       el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min (an estimate — lessons have not been timed on a learner yet) · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
-      el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About this lesson (draft content)"),
+      el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About This Lesson"),
         el("p", {}, plain("lessonDraft")),
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,

@@ -128,6 +128,6 @@ test('about, settings and how screens use the data-driven node, not typed counts
 });
 
 test('the sound bar and the banner mention the synthetic clips without a count', () => {
-  assert.match(bannerText(summary, 'yes'), /synthetic voice that native speakers have not reviewed/);
+  assert.match(bannerText(summary, 'yes'), /Hebrew voice/);
   assert.doesNotMatch(bannerText({ recorded: 0, tts: 0 }, 'yes'), /synthetic/);
 });

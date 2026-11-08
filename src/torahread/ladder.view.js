@@ -37,7 +37,7 @@ export function renderLadder(host, env) {
     const ctl = el('details', { class: 'trd-fold trd-ctl', open: st.ctlOpen ? '' : null, ontoggle: (e) => { st.ctlOpen = !!(e?.target?.open); } },
       el('summary', {}, 'Change line or step'));
     root.append(el('h2', { id: 'trd-sec-h', tabindex: '-1', class: 'trd-sr' }, 'Reading without vowels'), ctl);
-    root.append(el('p', { class: 'trd-muted', id: 'trd-fade-link' }, 'Want the same idea with single words, one vowel point at a time? ', el('a', { class: 'btn secondary', href: '#/nikkud-fade' }, 'Vowel points, fading out (Preview)')));
+    root.append(el('p', { class: 'trd-muted', id: 'trd-fade-link' }, 'Want the same idea with single words, one vowel point at a time? ', el('a', { class: 'btn secondary', href: '#/nikkud-fade' }, 'Vowel Points, Fading Out')));
     ctl.append(el('p', {}, 'A Torah scroll has no vowel points and no cantillation marks. Siddurim are pointed. This ladder takes the same line through four steps, from fully pointed to letters only.'),
       el('details', {}, el('summary', {}, 'Tips for reading without points'), el('ul', {}, ...course.ladder.tips.map((t) => el('li', {}, ...mixed(t))))));
 

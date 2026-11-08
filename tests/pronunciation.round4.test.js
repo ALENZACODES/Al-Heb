@@ -152,7 +152,7 @@ for (const [name, mount] of Object.entries(VIEWS)) {
     const root = newRoot(); const { ctx, played } = makeCtx({ audio: { status: () => ({ source: 'tts-fallback' }), play: (k, id) => { played.push([k, id]); return Promise.resolve({ source: 'tts-fallback' }); } } });
     const un = mount(root, ctx); await loaded(root);
     const dev = all(root, (e) => e.tagName === 'BUTTON' && e.getAttribute('data-audio-state') === 'device');
-    assert.ok(dev.length > 0); assert.match(dev[0].getAttribute('aria-label'), /Device voice, not a recorded teacher; Israeli-style only/);
+    assert.ok(dev.length > 0); assert.match(dev[0].getAttribute('aria-label'), /Israeli voice/);
     assert.doesNotMatch(root.textContent, /no audio yet/i);
     click(dev[0]); await tick(); assert.equal(played.length, 1);
     un();

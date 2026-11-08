@@ -136,10 +136,10 @@ test('audioSupport: never promises recorded or non-Israeli sound that does not e
   assert.equal(FT.audioSupport('israeli').supported, 'device');
   // Sephardi plays the Israeli clips by rule (owner decision 2026-11-07), so the Israeli device voice is no mismatch for it
   const sep = FT.audioSupport('sephardi');
-  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi plays the Israeli clips/); assert.match(sep.line, /Sephardi reading in English letters/);
+  assert.equal(sep.supported, 'device'); assert.match(sep.line, /Sephardi reading is shown in English letters/);
   for (const t of ['ashkenazi']) {
     const s = FT.audioSupport(t);
-    assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /only Israeli Hebrew/);
+    assert.equal(s.supported, 'none'); assert.equal(s.deviceVoice, false); assert.match(s.line, /English letters/);
     assert.equal(FT.audioSupport(t, { browserVoiceAnyway: true }).supported, 'device-mismatch');
     assert.match(FT.audioSupport(t, { browserVoiceAnyway: true }).line, /will not sound/);
   }

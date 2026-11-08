@@ -143,7 +143,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const sp = speechSupport(globalThis);
     const total = loadState(store).reads.length;
     const kids = [
-      el('section', {}, el('p', { class: 'tdr-note' }, HONEST_NOTE), el('p', { class: 'tdr-note' }, 'There is no ranking and no single fluency score. Speed varies with the day, the line and your voice; ranges are more honest than one number.')),
+      el('section', {}, el('p', { class: 'tdr-note' }, HONEST_NOTE), el('p', { class: 'tdr-note' }, 'Speed changes from day to day. Compare yourself with yourself.')),
       S.phase === 'pick' || !S.item ? pickSection() : null,
       mainSection(),
       S.item && (S.phase === 'ready' || S.phase === 'done') ? rangeSection(S.item) : null,

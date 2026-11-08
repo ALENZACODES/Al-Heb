@@ -76,11 +76,11 @@ test('reviewNotice: draft note for validated:false, HIGH note only for the two c
       assert.match(n.text, /may not be the one Israeli schools teach/);
     } else {
       assert.equal(n.level, 'draft', `${l.id}/${s}`);
-      assert.match(n.text, /^Stroke order is a draft awaiting teacher review\./);
+      assert.match(n.text, /^Follow the arrows/);
     }
   }
   assert.equal(reviewNotice({ id: 'x', print: { strokes: [], validated: true } }, 'print').level, 'none');
-  assert.equal(reviewNotice(by.alef, 'cursive', (k, f) => (k === 'trace.draftStrokes' ? 'TR' : f)).text, 'TR (draft)');
+  assert.equal(reviewNotice(by.alef, 'cursive', (k, f) => (k === 'trace.draftStrokes' ? 'TR' : f)).text, 'TR');
 });
 
 test('trace view renders the HIGH-doubt notice for pe-final / tsadi-final cursive and the draft note elsewhere (fake DOM)', async () => {
@@ -119,5 +119,5 @@ test('trace view renders the HIGH-doubt notice for pe-final / tsadi-final cursiv
   }
   const a = await open('alef', 'print');
   assert.equal(a.high.length, 0); assert.equal(a.draft.length, 1);
-  assert.match(a.draft[0], /draft awaiting teacher review/);
+  assert.match(a.draft[0], /Follow the arrows/);
 });

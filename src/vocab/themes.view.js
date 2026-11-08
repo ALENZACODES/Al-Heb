@@ -64,7 +64,7 @@ export function mount(root, ctx) {
   const now = () => (typeof ctx?.now === 'function' ? ctx.now() : Date.now());
   const wrap = el('section', { class: 'alef-themes', 'aria-labelledby': 'view-title' });
   const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Theme packs');
-  const notice = el('p', { class: 'th-muted' }, DRAFT_NOTICE);
+  const notice = el('p', { class: 'th-muted draft-flag' }, DRAFT_NOTICE);
   const body = el('div', { class: 'th-body' });
   const status = el('div', { class: 'th-status', role: 'status', 'aria-live': 'polite' });
   const footer = el('footer', {}, sourcesLine(el, { examples: true }));

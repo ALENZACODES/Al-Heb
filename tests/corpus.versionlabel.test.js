@@ -10,7 +10,7 @@ const entries = Array.isArray(metaDoc.entries) ? metaDoc.entries : Object.values
 test('reader view wires versionLabel() into the per-prayer metadata block (source check, not a rendered DOM)', () => {
   const src = read('src/corpus/read.view.js');
   assert.match(src, /import \{ versionLabel \} from '\.\.\/shell\/names\.js'/);
-  assert.match(src, /const vl = versionLabel\(m\); if \(vl\.oneVersion\)/);
+  assert.match(src, /const vl = versionLabel\(m\); if \(vl\.oneVersion && vl\.text\)/);
   assert.match(src, /dl\.append\(el\('dt', \{\}, 'Version'\), el\('dd', \{ class: 'crp-version' \}, vl\.text\)\)/);
 });
 
@@ -18,7 +18,7 @@ test('every prayer-meta entry yields a label; the one-version text starts "One v
   assert.ok(entries.length >= 70);
   for (const m of entries) {
     const v = versionLabel(m);
-    assert.ok(v.text.length > 10);
-    if (v.oneVersion) assert.match(v.text, /^One version shown/);
+    assert.ok(!v.oneVersion || v.text === '' || v.text.length > 10);
+    if (v.oneVersion && v.text) assert.match(v.text, /^The common printed text/);
   }
 });

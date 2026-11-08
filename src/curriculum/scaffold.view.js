@@ -23,7 +23,7 @@ export function mountScaffold(root, ctx) {
   (async () => {
     const st = await loadState(ctx);
     if (!alive) return;
-    const head = draftNotice(ctx, "The Latin letters are produced by the app's own transliteration code from the pointed word. They are not checked by a native speaker, and the fading thresholds are hand-chosen, not fitted to learner data.");
+    const head = draftNotice(ctx);
     const words = Object.values(st.cards).filter((c) => parseCardId(c.id)?.kind === "word" && byId[parseCardId(c.id).lessonId]?.words[parseCardId(c.id).n - 1]);
     if (!words.length) {
       replaceKeepingFocus(wrap, h1, head, el("p", {}, "You have no word cards yet. Complete a lesson to add some, then come back."), el("a", { class: "btn", href: "#/learn" }, "All lessons"));

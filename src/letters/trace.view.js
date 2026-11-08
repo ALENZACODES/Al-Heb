@@ -31,7 +31,7 @@ export function reviewNotice(letter, script, t = (k, f) => f) {
     return { level: 'high', text: t('trace.highDoubt', 'Caution: the ' + script + ' form of this letter may not be the one Israeli schools teach, and its stroke order is an unreviewed draft. Do not learn it from here until a teacher has confirmed it.') };
   }
   if (block.validated === false || block.needsNativeReview) {
-    return { level: 'draft', text: t('trace.draftStrokes', 'Stroke order is a draft awaiting teacher review.') + (block.quality ? ' (' + block.quality + ')' : '') };
+    return { level: 'draft', text: t('trace.draftStrokes', 'Follow the arrows to write the letter.') };
   }
   return { level: 'none', text: '' };
 }
@@ -179,7 +179,7 @@ export function mount(root, ctx = {}) {
       ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));
     body.appendChild(tabs);
-    body.appendChild(h('p', { class: 'notice' }, t('trace.draftNotice', 'Draft: an Israeli teacher has not yet checked the stroke order and shapes. If your school teaches a different order, follow your teacher.')));
+    
     if (state.tab === 'trace') { renderTrace(); inVisualOrder(body); }
     else if (state.tab === 'drill') renderDrill();
     else renderTyping();

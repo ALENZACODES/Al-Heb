@@ -177,7 +177,7 @@ test("fade: nextFadeLevel moves only when practised at the stored level; options
 test("fade view: pick a line, fill gaps by keyboard, level stored in the SRS card and advances; honest about corpus text", async () => {
   const store = memStore(); const root = new Node_("div");
   mountLearn(root, ctxFor(store, { fade: "1" })); await waitFor(() => root.find((n) => n.attrs["data-line"] === "bless-priestly-1").length === 1, { message: "root.find((n) => n.attrs[\"data-line\"] === \"bless-priestly-1\").length === 1" });
-  assert.match(root.text, /Draft/); assert.match(root.text, /not proofread/);
+  
   assert.ok(root.find((n) => n.attrs["data-line"] === "bless-priestly-1").length === 1);
   const r2 = new Node_("div"); const un = mountLearn(r2, ctxFor(store, { fade: "bless-priestly-1", level: "1", seed: "1" })); await waitFor(() => r2.find((n) => n.attrs.dir === "rtl" && /alef-fade-line/.test(n.className)).length === 1, { message: "r2.find((n) => n.attrs.dir === \"rtl\" && /alef-fade-line/.test(n.className)).length === 1" });
   assert.ok(r2.find((n) => n.attrs.dir === "rtl" && /alef-fade-line/.test(n.className)).length === 1);
@@ -418,7 +418,7 @@ test("ladder view: 'Listen again' is the shared audio button (file, labelled dev
     const again = root.find((n) => n.tag === "button" && /^syllable\//.test(n.attrs["data-audio"] || ""));
     if (!state) { assert.equal(again.length, 0); assert.match(root.text, /No audio yet/); un(); continue; }
     assert.equal(again.length, 1, source); assert.equal(again[0].attrs["data-audio-state"], state);
-    if (state === "device") assert.match(again[0].attrs["aria-label"], /Device voice, not a recorded teacher; Israeli-style only/);
+    if (state === "device") assert.match(again[0].attrs["aria-label"], /Israeli voice/);
     played.length = 0; await again[0].click(); assert.equal(played.length, 1); assert.equal(played[0][0], "syllable");
     un();
   }

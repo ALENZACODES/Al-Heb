@@ -21,7 +21,7 @@ export function mount(root,ctx){
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-museumcurator'},h('h1',{id:'view-title'},'The Museum Curator'),
     h('p',{},'Read the inflected Hebrew artifact inscription and sort it by the possessor suffix.'),
-    h('p',{class:'muted'},'Source phrases are a draft lesson and require educator review; no unrelated artifact art is substituted.'),status,board);
+    status,board);
   root.replaceChildren(article);
   // The museum-hall backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.

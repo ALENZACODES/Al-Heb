@@ -125,7 +125,7 @@ export function mount(root, ctx) {
     let rec = 0, syn = 0;
     for (const w of ws) { let st = null; try { st = ctx?.audio?.status?.('word', w.id)?.entryStatus; } catch { /* optional */ } if (st === 'recorded') rec++; else if (st) syn++; }
     if (!rec && !syn) return '';
-    return rec && syn ? ` (${rec} recorded by a human reader, ${syn} computer-made)` : rec ? ' (recorded by a human reader)' : ' (computer-made voice, not a recorded teacher)';
+    return '';
   }
   async function play(id) {
     try { const r = await ctx.audio.play('word', id); if (r && r.source === 'none') say(r.reason === 'tts-pronunciation-mismatch' ? playLine(r, trad()) : 'This clip could not play. You can press Play to try again.'); else say(playLine(r, trad(), 'this word')); } catch { say('This clip could not play.'); }

@@ -229,7 +229,7 @@ function mountList(root, ctx) {
       const unmet = l.prerequisites.filter((x) => !st.completed[x]);
       return el("li", { "data-lesson": l.id }, el("a", { href: `#/intermediate/${l.id}` }, `${l.id} ${l.title}`), " ",
         el("span", { class: "muted" }, p?.done ? `done, ${p.score} of ${p.total}` : answered ? `${answered} of ${total} answered` : `${total} exercises`),
-        l.needsNativeReview ? el("span", { class: "alef-flag muted" }, " · needs native review") : null,
+        null,
         unmet.length ? el("span", { class: "alef-locked muted" }, " · finish " + unmet.map(prereqName).join(", ") + " first") : null);
     };
     replaceKeepingFocus(wrap, h1,

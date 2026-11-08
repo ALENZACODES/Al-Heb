@@ -14,7 +14,7 @@ test('Torah ladder page links to #/nikkud-fade and says Preview', async () => {
   const root = new N('div'); const store = memStore();
   const un = await mount(root, { store, settings: { congregation: 'sephardi' }, query: {} }); await tick();
   const a = root.all((n) => n.tag === 'a' && n.attrs.href === '#/nikkud-fade');
-  assert.equal(a.length, 1); assert.match(a[0].textContent, /Preview/); un();
+  assert.equal(a.length, 1); assert.match(a[0].textContent, /Vowel Points/); un();
 });
 
 test('the four preview features: preview tier, listed in the More sheet Preview group unless triaged hidden, absent from the v0 groups, route exists', () => {

@@ -23,7 +23,7 @@ export function mountDialogues(root, ctx, id) {
         const open = done.has(x.unlockAfter);
         return el("li", { class: "alef-item" }, el("div", { class: "alef-item-body" }, el("strong", {}, x.title), " ",
           el("span", { class: "muted" }, `${x.level} · ${x.topic}` + (open ? "" : ` · after "${byId[x.unlockAfter]?.title || x.unlockAfter}"`))),
-          el("a", { class: "btn", href: `#/learn?dialogue=${x.id}` }, open ? "Open" : "Preview"));
+          el("a", { class: "btn", href: `#/learn?dialogue=${x.id}` }, open ? "Open" : "Take a Look"));
       })), el("a", { class: "btn secondary", href: "#/learn" }, "All lessons"));
       return;
     }

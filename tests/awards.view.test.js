@@ -29,7 +29,7 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.match(text, /Confirmed criteria: none/);
   assert.match(text, /awaiting-review/);
   assert.match(text, /Design proof/);
-  assert.match(text, /has not been assessed/);
+  assert.match(text, /Type your name/);
   assert.match(text, /Name panel empty/);
   assert.match(text, /Approved artwork: 0/);
   assert.match(text, /Name panel empty/);

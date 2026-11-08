@@ -15,7 +15,7 @@ export const DRAFT_NOTE = 'Draft, unreviewed: no Hebrew teacher has checked this
 
 export function mount(root, ctx) {
   const wrap = el('section', { class: 'alef-placement', 'aria-labelledby': 'view-title' });
-  const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Placement check (draft)');
+  const h1 = el('h1', { id: 'view-title', tabindex: '-1' }, 'Placement Check');
   const body = el('div', {}); const status = el('div', { role: 'status', 'aria-live': 'polite' });
   wrap.append(h1, body, status); root.append(wrap);
   let alive = true, P = null, items = [], answers = [], answered = false;

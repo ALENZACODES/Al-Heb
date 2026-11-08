@@ -197,7 +197,7 @@ export function mount(root, ctx) {
       h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (ALEF will need a connection to open next time)')),
       h('div', { class: 'row' }, wipeGo)),
     ]),
-    group('adv', 'Advanced', 'For reviewers', [
+    group('adv', 'Advanced', 'More options', [
     h('fieldset', { class: 'field' }, h('legend', {}, 'Advanced'),
       boolRow('showUnapprovedImages', 'Show images that have not passed review', 'Pictures still waiting for a reviewer may be wrong or unsuitable. Leave this off unless you are reviewing them.')),
     ]),

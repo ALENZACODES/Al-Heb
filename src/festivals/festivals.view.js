@@ -150,7 +150,7 @@ export async function mount(root, ctx) {
     else if (PACK_OF[id] === id || packById(D.vocab, id)) { const p = packById(D.vocab, id); parts = p ? packView(ctx, D, p) : [h("p", {}, "No such festival pack.")]; }
     else parts = [h("p", {}, "No such festival pack.")];
     if (!alive) return () => {};
-    body.replaceChildren(...[...parts, h("footer", { class: "fv-muted" }, h("p", {}, DRAFT_NOTICE), h("p", {}, CALC_NOTE)),
+    body.replaceChildren(...[...parts, h("footer", { class: "fv-muted" }, h("p", { class: "draft-flag" }, DRAFT_NOTICE), h("p", {}, CALC_NOTE)),
       id && hasRoute(ctx)("festivals") ? h("p", {}, h("a", { class: "btn secondary", href: "#/festivals" }, "Back to this week")) : null].filter(Boolean));
   } catch (e) {
     body.replaceChildren(h("p", { role: "alert" }, "This screen could not load its data. Nothing was lost."));

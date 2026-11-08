@@ -8,23 +8,24 @@ const D = JSON.parse(readFileSync(join(root, 'data/synagogues/canada.json'), 'ut
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export function buildPage() {
-  const cur = D.congregations.filter((c) => c.status !== 'legacy').length;
-  const sections = D.provinces.map((p) => {
-    const items = D.congregations.filter((c) => c.province === p.code).map((c) => {
+  const card = (c) => {
       const im = c.images[0];
       const pic = im ? `<img src="../assets/synagogues/${esc(c.id)}/thumb/${esc(im.file)}" alt="${esc(im.alt)}" width="240" height="160" loading="lazy">` : '';
-      const legacy = c.status === 'legacy' ? ' <span class="badge">Legacy</span>' : '';
-      return `<li>\n<a href="../#/synagogues/${esc(c.id)}">${pic}<span class="name">${esc(c.name)}${legacy}</span><span class="city">${esc(c.city)}</span></a>\n<p>${esc(c.summary)}</p>\n</li>`;
-    }).join('\n');
-    return `<section>\n<h2>${esc(p.name)}</h2>\n<ul>\n${items}\n</ul>\n</section>`;
-  }).join('\n');
+      return `<li>\n<a href="../#/synagogues/${esc(c.id)}">${pic}<span class="name">${esc(c.name)}</span><span class="city">${esc(c.city)}</span></a>\n<p>${esc(c.summary)}</p>\n</li>`;
+  };
+  const current = D.congregations.filter((c) => c.status !== 'legacy');
+  const former = D.congregations.filter((c) => c.status === 'legacy');
+  const sections = D.provinces.map((p) => {
+    const items = current.filter((c) => c.province === p.code).map(card).join('\n');
+    return items ? `<section>\n<h2>${esc(p.name)}</h2>\n<ul>\n${items}\n</ul>\n</section>` : '';
+  }).filter(Boolean).join('\n') + (former.length ? `\n<section>\n<h2>Former Congregations</h2>\n<ul>\n${former.map(card).join('\n')}\n</ul>\n</section>` : '');
   return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reform synagogues in Canada</title>
-<meta name="description" content="${cur} current Reform congregations across Canada, from Vancouver to Montreal, with a short history, pictures and contact details for each.">
+<title>Reform Synagogues in Canada</title>
+<meta name="description" content="Reform synagogues across Canada, from Vancouver to Montreal, with the history, pictures and contact details of each congregation.">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
 <style>
@@ -47,12 +48,10 @@ li p{margin:.4rem .8rem .8rem;font-size:.92rem}
 </head>
 <body>
 <main>
-<h1>Reform synagogues in Canada</h1>
-<p class="lead">${cur} current Reform congregations and ${D.congregations.length - cur} that have closed or no longer hold a building, from British Columbia to Quebec. Open any one for its story, more pictures, contact details and sources.</p>
+<h1>Reform Synagogues in Canada</h1>
+<p class="lead">Find a Reform synagogue near you, from Vancouver to Montreal. Open any congregation to read its history, see its building and get directions.</p>
 <a class="open" href="../#/synagogues">Open the directory in the app</a>
 ${sections}
-<p class="note">${esc(D.pictureNote)}</p>
-<p class="note">${esc(D.sourceNote)}</p>
 </main>
 </body>
 </html>

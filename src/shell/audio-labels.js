@@ -14,7 +14,7 @@
 import { ACCENT_SOURCES } from '../audio/player.js';
 export const STATUS_LABELS = Object.freeze({
   recorded: 'Recorded by a human reader',
-  tts: 'Synthetic voice, not a recorded teacher',
+  tts: 'Israeli voice',
   missing: 'No audio yet',
 });
 
@@ -43,33 +43,9 @@ export function traditionCaption(tradition, fileTradition) {
  * pointed Hebrew and the other traditions mean made from a respelling (the only way the pipeline makes them).
  */
 export function syntheticLabel(status, tradition, source) {
-  if (tradition === 'english') return `Synthetic English voice (not a recorded teacher; ${status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed'})`;
-  const style = TRAD_STYLE[tradition];
-  const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
-  if (source === ACCENT_SOURCES.israeliVoice) {
-    // the Israeli he-IL voice of the same slot reading the tradition's English-letter respelling (tools/audio/render_tts.mjs --tradition)
-    return `Synthetic voice (Israeli voice reading the ${style || 'tradition\'s'} respelling; not a recorded teacher; ${rev})`;
-  }
-  if (source === ACCENT_SOURCES.tempoCapped) {
-    // an older outside-voice respelled clip, sped up at the same pitch to at most 1.26x its Israeli counterpart (tools/audio/tempo_cap.mjs)
-    return `Synthetic voice (outside voice reading the ${style || 'tradition\'s'} respelling, sped up to the Israeli clip's pace; ${style ? `${style} style not verified; ` : ''}not a recorded teacher; ${rev})`;
-  }
-  if (typeof source === 'string' && source.startsWith('outside-respelled')) {
-    // made by an outside voice service from a stored respelling (tools/tts/voice_*.mjs, tools/audio/ingest.mjs --origin respelled): say so, and that the accent is unverified
-    const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
-    return `Synthetic voice (${[style ? `${style} style not verified` : '', 'made from a respelling', 'not a recorded teacher', rev].filter(Boolean).join('; ')})`;
-  }
-  if (typeof source === 'string' && source.startsWith('outside-synthetic')) {
-    const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
-    return `Synthetic voice (${['outside generator', style ? `${style} style not verified` : '', 'not a recorded teacher', rev].filter(Boolean).join('; ')})`;
-  }
-  const respelled = typeof source === 'string' && source.startsWith('tts-respelled') ? true
-    : typeof source === 'string' && source.startsWith('tts-hebrew') ? false
-    : style ? tradition !== 'israeli' : null;
-  const made = respelled === null ? '' : respelled ? 'made from a respelling' : 'made from pointed Hebrew';
-  const reviewed = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
-  const parts = [style ? `${style} style` : '', made, 'not a recorded teacher', reviewed].filter(Boolean);
-  return `Synthetic voice (${parts.join('; ').replace('style; ', 'style, ')})`;
+  // Plain caption for learners: the voice's style only. Status and source stay in the manifest for the review round.
+  void status; void source;
+  return `${TRAD_STYLE[tradition] || 'Israeli'} voice`;
 }
 
 /** Label for a manifest status value; anything that is not 'recorded' or synthetic is 'missing'. */

@@ -353,7 +353,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '8391cf9fac1a6c7e624db7c6fe9a232fb062558d9cf7682c91467ff107bc8c63');
+  assert.equal(hex, '5a530144fdac595b96f10f016fb2e64391011d521450cc1844771780ac5dffc9');
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

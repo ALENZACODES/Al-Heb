@@ -2,7 +2,7 @@
 /**
  * Reform synagogues in Canada. One module, two views chosen by ctx.query.id:
  *   (none)   the directory: every congregation grouped by province, west to east, with a picture where one is held
- *   <id>     one congregation: pictures, the story in a few paragraphs, contact facts, open questions and sources
+ *   <id>     one congregation: pictures, its history in a few paragraphs, visiting and contact details, and sources
  * mount(root, ctx) -> unmount. ctx: { query?, hasRoute?, route? } plus optional `synagoguesData` for tests.
  * Data: data/synagogues/canada.json; pictures: assets/synagogues/<id>/ (full) and assets/synagogues/<id>/thumb/.
  * Offline once visited: the data and pictures are runtime-cached, not installed up front (tools/build-precache.mjs).
@@ -77,7 +77,8 @@ function mapLinks(c, { both = false } = {}) {
   const other = h("a", { class: "syn-map-alt", href: apple ? googleMaps(c) : appleMaps(c), target: "_blank", rel: "noopener" }, apple ? "or Google Maps" : "or Apple Maps");
   return h("div", { class: "syn-map-row" }, main, other);
 }
-const foundedText = (c) => (nz(c.founded) ? c.founded : "founding date not found");
+const sinceText = (c) => { if (!nz(c.founded)) return ""; const f = c.founded.replace(/\s*\(.*\)/, ""); return `since ${/^\d/.test(f) ? f : "the " + f}`; };
+const FORMER = "Former congregation";
 
 async function loadData(ctx) {
   return ctx?.synagoguesData || loadJSON(DATA);
@@ -90,36 +91,36 @@ function tile(ctx, c) {
       ? h("img", { src: IMG(c.id, first.file, true), alt: first.alt || "", loading: "lazy", decoding: "async" })
       : heSpan("בֵּית כְּנֶסֶת"));
   const body = h("div", { class: "syn-tile-body" },
-    h("strong", { class: "syn-tile-name" }, c.name, c.status === "legacy" ? h("span", { class: "syn-badge" }, "Legacy") : null),
-    h("span", { class: "syn-muted" }, `${c.city} · founded ${foundedText(c)}`),
-    c.images?.length ? h("span", { class: "syn-muted" }, ` · ${c.images.length} ${c.images.length === 1 ? "picture" : "pictures"}`) : null);
+    h("strong", { class: "syn-tile-name" }, c.name),
+    h("span", { class: "syn-muted" }, [c.city, c.status === "legacy" ? "" : sinceText(c)].filter(Boolean).join(" · ")));
   const href = `#/synagogues/${c.id}`;
   return h("li", { "data-id": c.id }, hasRoute(ctx)("synagogue") ? h("a", { class: "syn-tile", href }, pic, body) : h("div", { class: "syn-tile" }, pic, body), mapLinks(c));
 }
 
 function listView(ctx, D) {
   const parts = [];
-  const current = D.congregations.filter((c) => c.status !== "legacy").length;
-  const legacy = D.congregations.length - current;
-  const pictured = D.congregations.filter((c) => c.images?.length).length;
   parts.push(h("section", { class: "syn-card", "data-part": "intro" },
-    h("p", { class: "syn-lead" }, heSpan("בֵּית כְּנֶסֶת"), " ", h("em", {}, "beit knesset"), ", a house of gathering: the Hebrew word for a synagogue. Reform congregations in Canada often call theirs a temple."),
-    h("p", {}, `${D.congregations.length} congregations are listed: ${current} current members of the Reform movement in Canada and ${legacy} kept as legacy entries. ${pictured} have pictures. Open one to read its story, see its building and find its contact details.`),
-    h("p", { class: "syn-muted" }, D.pictureNote)));
+    h("p", { class: "syn-lead" }, heSpan("בֵּית כְּנֶסֶת"), " ", h("em", {}, "beit knesset"), " means a house of gathering. It is the Hebrew word for a synagogue."),
+    h("p", {}, "Find a Reform synagogue near you, from Vancouver to Montreal. Open any congregation to read its history, see its building and get directions.")));
+  const current = D.congregations.filter((c) => c.status !== "legacy");
+  const former = D.congregations.filter((c) => c.status === "legacy");
   for (const prov of D.provinces) {
-    const items = D.congregations.filter((c) => c.province === prov.code);
+    const items = current.filter((c) => c.province === prov.code);
     if (!items.length) continue;
     parts.push(h("section", { class: "syn-card", "data-part": "province", "data-province": prov.code, "aria-labelledby": `syn-h-${prov.code}` },
-      h("h2", { id: `syn-h-${prov.code}` }, prov.name, h("span", { class: "syn-badge" }, `${items.length}`)),
+      h("h2", { id: `syn-h-${prov.code}` }, prov.name),
       h("ul", { class: "syn-grid" }, ...items.map((c) => tile(ctx, c)))));
   }
-  parts.push(h("footer", { class: "syn-src" }, h("p", {}, D.sourceNote)));
+  if (former.length) parts.push(h("section", { class: "syn-card", "data-part": "former", "aria-labelledby": "syn-h-former" },
+    h("h2", { id: "syn-h-former" }, "Former Congregations"),
+    h("p", { class: "syn-muted" }, "Remembered here for the communities they built."),
+    h("ul", { class: "syn-grid" }, ...former.map((c) => tile(ctx, c)))));
   return parts;
 }
 
 function gallery(c) {
   const imgs = c.images || [];
-  if (!imgs.length) return h("p", { class: "syn-muted", "data-part": "no-picture" }, "No picture is held for this congregation yet.");
+  if (!imgs.length) return null;
   let idx = 0;
   const main = h("img", { src: IMG(c.id, imgs[0].file), alt: imgs[0].alt || "", decoding: "async", loading: "eager" });
   const cap = h("div", { class: "syn-caption syn-muted" }, imgs.length > 1 ? `Picture 1 of ${imgs.length}` : "Picture");
@@ -140,7 +141,7 @@ function gallery(c) {
       return h("li", {}, b);
     }))
     : null;
-  return h("div", { "data-part": "gallery" }, hero, thumbs, c.imageNote ? h("p", { class: "syn-muted" }, c.imageNote) : null);
+  return h("div", { "data-part": "gallery" }, hero, thumbs);
 }
 
 function facts(c) {
@@ -149,29 +150,26 @@ function facts(c) {
   row("Address", nz(c.address) ? h("span", {}, c.address, c.addressNote ? h("span", { class: "syn-muted" }, ` (${c.addressNote})`) : null) : null);
   if (!nz(c.address) && c.addressNote) row("Address", h("span", { class: "syn-muted" }, c.addressNote));
   row("Map", mapLinks(c, { both: true }));
-  row("Telephone", nz(c.phone) ? h("span", {}, h("a", { href: telHref(c.phone) }, c.phone), c.phoneNote ? h("span", { class: "syn-muted" }, ` (${c.phoneNote})`) : null) : c.phoneNote ? h("span", { class: "syn-muted" }, c.phoneNote) : null);
-  row("Email", nz(c.email) ? h("a", { href: `mailto:${c.email}` }, c.email) : c.emailNote ? h("span", { class: "syn-muted" }, c.emailNote) : null);
-  row("Website", nz(c.website) ? h("a", { href: c.website, rel: "noopener", target: "_blank" }, siteLabel(c.website)) : c.websiteNote ? h("span", { class: "syn-muted" }, c.websiteNote) : null);
-  row("Founded", h("span", {}, foundedText(c), c.foundedNote ? h("span", { class: "syn-muted" }, ` (${c.foundedNote})`) : null));
-  row("Status", c.statusNote || (c.status === "legacy" ? "Legacy" : "Current"));
-  return h("section", { class: "syn-card", "data-part": "facts", "aria-labelledby": "syn-h-facts" }, h("h2", { id: "syn-h-facts" }, "At a glance"), h("dl", {}, ...rows));
+  row("Telephone", nz(c.phone) ? h("a", { href: telHref(c.phone) }, c.phone) : null);
+  row("Email", nz(c.email) ? h("a", { href: `mailto:${c.email}` }, c.email) : null);
+  row("Website", nz(c.website) ? h("a", { href: c.website, rel: "noopener", target: "_blank" }, siteLabel(c.website)) : null);
+  row("Founded", nz(c.founded) ? c.founded : null);
+  return h("section", { class: "syn-card", "data-part": "facts", "aria-labelledby": "syn-h-facts" }, h("h2", { id: "syn-h-facts" }, c.status === "legacy" ? "Details" : "Visit and Contact"), h("dl", {}, ...rows));
 }
 
 function detailView(ctx, D, c) {
   const i = D.congregations.indexOf(c);
   const prev = D.congregations[i - 1], next = D.congregations[i + 1];
   const parts = [];
-  parts.push(h("p", { class: "syn-muted" }, `${c.city}, ${(D.provinces.find((p) => p.code === c.province) || {}).name || c.province} · founded ${foundedText(c)}`, c.status === "legacy" ? h("span", { class: "syn-badge" }, "Legacy") : null));
+  const place = `${c.city}, ${(D.provinces.find((p) => p.code === c.province) || {}).name || c.province}`;
+  parts.push(h("p", { class: "syn-muted" }, [place, sinceText(c)].filter(Boolean).join(" · "), c.status === "legacy" ? h("span", { class: "syn-badge" }, FORMER) : null));
   if (c.summary) parts.push(h("p", { class: "syn-lead" }, c.summary));
   parts.push(mapLinks(c, { both: true }));
-  parts.push(gallery(c));
+  const g = gallery(c); if (g) parts.push(g);
   parts.push(h("section", { class: "syn-card syn-story", "data-part": "story", "aria-labelledby": "syn-h-story" },
-    h("h2", { id: "syn-h-story" }, "The story"),
+    h("h2", { id: "syn-h-story" }, "History"),
     ...(c.story || []).map((p) => h("p", {}, p))));
   parts.push(facts(c));
-  if (c.checks?.length) parts.push(h("section", { class: "syn-card", "data-part": "checks", "aria-labelledby": "syn-h-checks" },
-    h("h2", { id: "syn-h-checks" }, "To confirm"),
-    h("ul", {}, ...c.checks.map((x) => h("li", {}, x)))));
   if (c.sources?.length) parts.push(h("details", { class: "syn-src", "data-part": "sources" },
     h("summary", {}, "Sources"),
     h("ul", {}, ...c.sources.map((s) => h("li", {}, h("a", { href: s.url, rel: "noopener", target: "_blank" }, s.label))))));
@@ -185,9 +183,9 @@ export async function mount(root, ctx) {
   let alive = true;
   const style = h("style", {}); style.textContent = CSS;
   const id = ctx?.query?.id || "";
-  const title = h("h1", { id: "view-title", tabindex: "-1" }, id ? "Synagogue" : "Reform synagogues in Canada");
+  const title = h("h1", { id: "view-title", tabindex: "-1" }, id ? "Synagogue" : "Reform Synagogues in Canada");
   const body = h("div", { class: "syn" });
-  const back = id && hasRoute(ctx)("synagogues") ? h("p", {}, h("a", { href: "#/synagogues" }, "← All synagogues")) : null;
+  const back = id && hasRoute(ctx)("synagogues") ? h("p", {}, h("a", { href: "#/synagogues" }, "← All Synagogues")) : null;
   root.replaceChildren(style, ...(back ? [back] : []), title, body);
   try {
     const D = await loadData(ctx);
@@ -195,13 +193,13 @@ export async function mount(root, ctx) {
     if (!id) { body.replaceChildren(...listView(ctx, D)); return () => { alive = false; }; }
     const c = D.congregations.find((x) => x.id === id);
     if (!c) {
-      body.replaceChildren(h("p", { role: "alert" }, "No such congregation in the list."), hasRoute(ctx)("synagogues") ? h("p", {}, h("a", { class: "btn", href: "#/synagogues" }, "All synagogues")) : null);
+      body.replaceChildren(h("p", { role: "alert" }, "We could not find that congregation."), hasRoute(ctx)("synagogues") ? h("p", {}, h("a", { class: "btn", href: "#/synagogues" }, "All Synagogues")) : null);
       return () => { alive = false; };
     }
     title.textContent = c.name;
     body.replaceChildren(...detailView(ctx, D, c));
   } catch (e) {
-    body.replaceChildren(h("p", { role: "alert" }, "This screen could not load its data. Nothing was lost."));
+    body.replaceChildren(h("p", { role: "alert" }, "This page did not load. Please try again."));
   }
   return () => { alive = false; };
 }

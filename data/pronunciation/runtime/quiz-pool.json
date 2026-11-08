@@ -3,7 +3,7 @@
  "rulesVersion": 1,
  "proofread": false,
  "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
- "notice": "Rule-generated and unverified: these readings come from spelling rules applied to the pointed text. No native speaker has checked them, no recording exists, and real speakers vary inside each tradition. Treat them as a study aid, not as a reference.",
+ "notice": "See how each tradition says the same word.",
  "description": "Words whose traditions differ, most frequent first. h pointed word, g gloss, i [IPA israeli, sephardi, ashkenazi], s [respelling israeli+sephardi, respelling ashkenazi], c difference codes (see reasons.json), t 1 when all three IPA strings differ. Only words with a gloss in data/vocab/words.json; glosses may not fit every sense.",
  "count": 400,
  "pool": [

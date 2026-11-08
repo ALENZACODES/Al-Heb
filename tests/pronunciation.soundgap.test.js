@@ -183,7 +183,7 @@ test('view: with only a device voice, play buttons are labelled as a device voic
   const un = mount(root, { settings: { congregation: 'israeli' }, audio, soundgapData: { soundgap, prayerwords } });
   await waitFor(() => /said the same here/.test(root.textContent), { message: 'soundgap rendered' });
   const b = all(root, (e) => e.tagName === 'BUTTON')[0];
-  assert.equal(b.attrs['data-audio-state'], 'device'); assert.match(b.attrs['aria-label'], /Device voice, not a recorded teacher; Israeli-style only/);
+  assert.equal(b.attrs['data-audio-state'], 'device'); assert.match(b.attrs['aria-label'], /Israeli voice/);
   b.dispatch('click'); await new Promise((r) => setTimeout(r, 10));
   assert.equal(calls.length, 1); assert.ok(inBlock(calls[0][2].replace(/[\s'"]/g, '')));
   un();

@@ -21,7 +21,7 @@ test('full flow: pick, start, stop, mark words, save; honest copy; a11y attribut
   const root = new N('div');
   const un = await mount(root, { store, now, query: {} });
   assert.match(root.textContent, /Self-reported, not measured by the app/);
-  assert.match(root.textContent, /no ranking and no single fluency score/);
+  assert.match(root.textContent, /Compare yourself with yourself/);
   const sel = root.querySelector('#tdr-pick');
   if (!sel) { assert.match(root.textContent, /No line is fully readable/); un(); return; }
   const opts = sel.queryAll('option').filter((o) => o.attrs.value);

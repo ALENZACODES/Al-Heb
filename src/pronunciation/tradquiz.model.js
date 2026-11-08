@@ -6,7 +6,7 @@ import { TRADITIONS, TRADITION_LABELS } from './compare.model.js';
 export const QUIZ_KEY = 'pron.quiz.v1';
 export const QUESTIONS = 10;
 export const ISRAELI_OR_SEPHARDI = 'israeli-or-sephardi';
-export const NOTE = 'This is an eye quiz. There are no recordings and no browser voice for the Sephardi or Ashkenazi readings, so nothing here can be tested by ear. The readings are rule-generated from the pointed text and have not been checked by a native speaker.';
+export const NOTE = 'Read each word and pick how it is said.';
 
 /** @typedef {{h:string,g:string,i:string[],s:string[],c:string,t:number}} PoolWord */
 /**

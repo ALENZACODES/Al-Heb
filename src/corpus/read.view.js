@@ -184,7 +184,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') {
         r = await ctx.audio.play(kind, id, { text, allowMismatchedTts: true });
         if (gen !== playGen) return;
-        if (r && r.source === 'tts-fallback') { say(`Playing ${label} with the device voice (not a recorded teacher; Israeli-style only).`); return; }
+        if (r && r.source === 'tts-fallback') { say(`Playing ${label}.`); return; }
       }
       if (r && (r.source === 'none' || r.played === false || r.ok === false)) say(`No audio for ${label} (${r.reason || r.error || 'unavailable'}).`);
       else if (r && r.source === 'tts-fallback') say(`Playing ${label} with the browser voice (not a recorded voice).`);
@@ -418,7 +418,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const d = m.denominations || {};
     const dn = ['orthodox', 'conservative', 'reform'].filter((k) => d[k] && d[k].use !== 'unknown').map((k) => `${k[0].toUpperCase() + k.slice(1)}: ${d[k].use}${d[k].note ? ' - ' + d[k].note : ''}`);
     add('Movements', dn.join(' | '));
-    const vl = versionLabel(m); if (vl.oneVersion) dl.append(el('dt', {}, 'Version'), el('dd', { class: 'crp-version' }, vl.text));
+    const vl = versionLabel(m); if (vl.oneVersion && vl.text) dl.append(el('dt', {}, 'Version'), el('dd', { class: 'crp-version' }, vl.text));
     add('Note', m.note);
     dl.append(el('dt', {}, 'Review'), el('dd', {}, m.clergyReviewed ? 'Reviewed by clergy.' : 'Written by the model; not reviewed by a rabbi, cantor or educator.'));
     return dl;

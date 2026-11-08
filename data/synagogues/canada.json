@@ -1,8 +1,6 @@
 {
-  "title": "Reform synagogues in Canada",
+  "title": "Reform Synagogues in Canada",
   "updated": "2026-11-08",
-  "pictureNote": "The pictures are illustrative views built from reference photographs and street-level references, not documentary photographs. Viewpoints and small details may differ from the building as it stands today. Where no picture is held, none is shown.",
-  "sourceNote": "Facts come from each congregation's own site, the Ontario Jewish Archives, community newspapers and the other pages listed under Sources. Items marked 'to confirm' were not settled by any source found.",
   "provinces": [
     {
       "code": "BC",
@@ -38,7 +36,6 @@
       "founded": "1965",
       "foundedYear": 1965,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Vancouver's only Reform congregation, founded in 1965; its first home was firebombed in 1985 and the Oak Street synagogue opened in 1988.",
       "story": [
         "Temple Sholom was founded in 1965 and is Vancouver's only Reform congregation. For its first decade it held services in members' living rooms and basements. In 1976 it bought a former Masonic hall at 4426 West 10th Avenue, between Trimble and Sasamat, and made that its first permanent home. Rabbi Philip Bregman joined the congregation in 1980 and would go on to serve it for most of his career; he is now rabbi emeritus.",
@@ -72,7 +69,6 @@
           "alt": "The building seen from the left, with the garden in the foreground."
         }
       ],
-      "imageNote": "These views show a colour reconstruction of the congregation's historic West 10th Avenue building, based on an old photograph, not the current Oak Street synagogue. Colours are inferred.",
       "sources": [
         {
           "label": "History of the Jews in Vancouver (Wikipedia)",
@@ -99,21 +95,19 @@
       "city": "Victoria",
       "province": "BC",
       "address": "3636 Shelbourne Street, Victoria, BC V8P 4H2",
-      "addressNote": "Meets at the Jewish Community Centre of Victoria (shared space; the congregation has no building of its own).",
+      "addressNote": "Meets at the Jewish Community Centre of Victoria.",
       "website": "https://kolotmayimreformtemple.com/",
       "phone": "250-704-2503",
       "email": "km@kolotmayimreformtemple.com",
       "founded": "1998",
       "foundedYear": 1998,
-      "foundedNote": "The congregation's own site says 1998; one Reform Judaism article says 1996.",
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Vancouver Island's Reform congregation, 'Voices of the Water', founded in 1998 by a few families and based at the Victoria JCC.",
       "story": [
-        "Kolot Mayim, Hebrew for 'Voices of the Water', is the Reform congregation of Victoria and Vancouver Island. It was founded in 1998 by a small group of individuals and families who met monthly in living rooms and at the Victoria Jewish Community Centre. The JCC on Shelbourne Street in Saanich remains its home; the congregation has never owned a building of its own.",
-        "Lynn Greenhough, a long-standing figure in Victoria's Jewish life, became the congregation's spiritual leader in 2017 while completing rabbinical studies through the Jewish Spiritual Leaders Institute. She was installed as rabbi on 6 September 2019; local press reported the installation as a series of firsts for the Greater Victoria community, including the first Canadian-born rabbi to serve there.",
+        "Kolot Mayim, Hebrew for 'Voices of the Water', is the Reform congregation of Victoria and Vancouver Island. It was founded in 1998 by a small group of individuals and families who met monthly in living rooms and at the Victoria Jewish Community Centre. The JCC on Shelbourne Street in Saanich is still its home.",
+        "Lynn Greenhough, a long-standing figure in Victoria's Jewish life, became the congregation's spiritual leader in 2017 while completing rabbinical studies through the Jewish Spiritual Leaders Institute. She was installed as rabbi on 6 September 2019, the first Canadian-born rabbi to serve the Greater Victoria community.",
         "The congregation is known for its free public lecture series. Building Bridges, a six-part series held mostly on Sunday mornings over Zoom, began in the 2021-22 season with the theme Celebrating Diversity in Jewish Life and has returned every year since, alongside the Kvell at the Well and L'dor V'dor series. Speakers have included rabbis, historians, genealogists and musicians from across North America.",
-        "Kolot Mayim describes itself as inclusive and welcoming, focused on learning and on celebrating Jewish life. It belongs to the Western Canadian Reform Collaboration with the Reform congregations of Vancouver, Calgary, Edmonton and Winnipeg."
+        "Kolot Mayim is an inclusive and welcoming community, focused on learning and on celebrating Jewish life. It belongs to the Western Canadian Reform Collaboration with the Reform congregations of Vancouver, Calgary, Edmonton and Winnipeg."
       ],
       "images": [
         {
@@ -141,7 +135,6 @@
           "alt": "The building and its hedge seen from the road."
         }
       ],
-      "imageNote": "Reconstructed from a street-level reference of the Jewish Community Centre of Victoria; facade details that were hidden in the reference are inferred.",
       "sources": [
         {
           "label": "Kolot Mayim: About us",
@@ -156,9 +149,7 @@
           "url": "https://www.jewishindependent.ca/tag/building-bridges/"
         }
       ],
-      "checks": [
-        "Founding year: own site says 1998, one Reform Judaism article says 1996."
-      ]
+      "checks": []
     },
     {
       "id": "temple-bnai-tikvah-calgary",
@@ -172,7 +163,6 @@
       "founded": "1979",
       "foundedYear": 1979,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Calgary's Reform congregation, begun in a living room in 1979 and settled since 2004 in a converted 1957 church in Britannia.",
       "story": [
         "Calgary's Reform congregation began on 6 April 1979 with a Shabbat service in the living room of Ron and Judy Bing: 33 people from 13 families. Norm Yanofsky played guitar and Henry Zimmer read the weekly Torah portion. The group incorporated that year as the Calgary Liberal Jewish Congregation and in 1980 took the name Temple B'nai Tikvah, 'Children of Hope', suggested by member Steven Switzer.",
@@ -194,7 +184,6 @@
           "alt": "A wider view of the building, the brick wall and the trees around it."
         }
       ],
-      "imageNote": "Views of the Britannia building, based on reference photographs.",
       "sources": [
         {
           "label": "Temple B'nai Tikvah: Our story",
@@ -221,14 +210,12 @@
       "city": "Edmonton",
       "province": "AB",
       "address": "12313 105 Avenue NW, Edmonton, AB T5N 0Y5",
-      "addressNote": "A 2026 Federation video says the congregation is returning to the new JCC; the address should be confirmed.",
       "website": "http://www.templebethora.org/",
       "phone": "780-487-4817",
       "email": "office@templebethora.org",
       "founded": "1979",
       "foundedYear": 1979,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Edmonton's only Reform synagogue, founded in 1979 by three families and housed since 2007 at Chesed Shel Emeth in Westmount.",
       "story": [
         "Temple Beth Ora was founded in 1979 as Beth Ora Synagogue, when three Edmonton families decided they wanted a Reform Jewish presence in the city. It was incorporated in 1980, the year its Beit Sefer classes began, and it became the Edmonton community's third congregation after the Orthodox Beth Israel and the Conservative Beth Shalom. It remains the city's only Reform synagogue.",
@@ -241,7 +228,6 @@
           "alt": "A tall stained-glass panel in warm amber tones with a Star of David picked out in pale blue glass."
         }
       ],
-      "imageNote": "Interior detail, based on a reference photograph.",
       "sources": [
         {
           "label": "Temple Beth Ora Synagogue (Wikipedia)",
@@ -256,9 +242,7 @@
           "url": "https://citymuseumedmonton.ca/2021/01/13/a-brief-history-of-the-edmonton-jewish-community/"
         }
       ],
-      "checks": [
-        "Address: a 2026 Federation video says the congregation is returning to the new JCC."
-      ]
+      "checks": []
     },
     {
       "id": "temple-shalom-winnipeg",
@@ -272,10 +256,9 @@
       "founded": "1965",
       "foundedYear": 1965,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Winnipeg's only Reform synagogue, opened in 1965 and settled at Grant Avenue and Wilton since 1987.",
       "story": [
-        "Temple Shalom is Winnipeg's only Reform synagogue. It opened in the city's south end in 1965, its beginnings owing much to an influx of university professors who had grown up in Reform congregations elsewhere and wanted one of their own. In a city where Reform is one of the smallest streams rather than the largest, the Temple has described itself as an anomaly, and for many of its members it is their one formal connection to Jewish life.",
+        "Temple Shalom is Winnipeg's only Reform synagogue. It opened in the city's south end in 1965, its beginnings owing much to an influx of university professors who had grown up in Reform congregations elsewhere and wanted one of their own. In a city where Reform is one of the smallest streams rather than the largest, the Temple stands out, and for many of its members it is their one formal connection to Jewish life.",
         "After years of effort the congregation established a permanent home at the corner of Grant Avenue and Wilton Street in 1987. Rabbi Eric Silver said at the time that it was 'a place we can call our own'. The Temple has a record as an innovator: in September 1984 its Rabbi Tracy Klirs became the first woman to lead a Canadian congregation as its rabbi, and it was the first congregation in Winnipeg to perform same-sex and interfaith marriages.",
         "Alongside Shabbat and holy-day services with a strong musical tradition, the Temple runs the Irma Penn School for Judaic Studies, an Introduction to Judaism course and adult education. Its affiliated cemetery, Beit Chayim Mikdash Shalom, serves Jews by birth, Jews by choice and interfaith families according to Reform practice.",
         "The Reaching Out Reaching Up capital campaign, launched on 5 November 2017, raised $400,000 in its first month; the same year the congregation set up an endowment fund with the Jewish Foundation of Manitoba. Rabbi Allan Finkel initiated the Western Canadian Reform Collaboration linking Winnipeg with the Reform congregations of Calgary, Edmonton, Vancouver and Victoria. Rabbi Myriam Saitman's installation was scheduled for 21 November 2025."
@@ -318,7 +301,6 @@
       "founded": "1882",
       "foundedYear": 1882,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Canada's oldest Reform congregation (1882) and the only one left in Quebec; its present Sherbrooke Street sanctuary was dedicated in 1960.",
       "story": [
         "Temple Emanu-El is the oldest Liberal or Reform congregation in Canada and today the only Reform congregation in Quebec. Its founding meeting was held on 23 August 1882 at Lindsay Hall on St. Catherine Street West, and it was incorporated by an act of the Quebec legislature on 30 March 1883. Rabbi Samuel Marks served as its first minister from 1882 to 1889, and early services were held at Albert Hall in Zion Church on Beaver Hall Hill. In 1892 the congregation built its first temple, seating about 275, at Stanley and Cypress Streets downtown.",
@@ -352,7 +334,6 @@
           "alt": "The facade seen from the left, with a tree in the foreground."
         }
       ],
-      "imageNote": "Views of the 1960 Sherbrooke Street building, based on reference photographs.",
       "sources": [
         {
           "label": "Temple Emanu-El-Beth Sholom (Wikipedia)",
@@ -382,7 +363,6 @@
       "founded": "1994",
       "foundedYear": 1994,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Durham Region's first Reform synagogue, 'Children of Peace and Hope', formally established in May 1994 and settled at St. Paul's United Church in Ajax.",
       "story": [
         "B'nai Shalom v'Tikvah, 'Children of Peace and Hope', grew out of Jewish Families of Durham, a social group whose members had come to the region from Toronto, Montreal and Vancouver and from Reform, Conservative and Orthodox backgrounds. The idea of a synagogue of their own came up at one of the group's meetings; after polling the members, a Reform congregation was chosen and formally established in May 1994 as the Durham Region Reform Synagogue, the first Reform synagogue in Durham.",
@@ -415,7 +395,6 @@
           "alt": "The building seen from slightly to the right, with a round shrub by the entrance."
         }
       ],
-      "imageNote": "Views of the congregation's shared worship venue, St. Paul's United Church; the church's own signage is not shown.",
       "sources": [
         {
           "label": "B'nai Shalom v'Tikvah: Our history",
@@ -440,7 +419,6 @@
       "founded": "2001 (roots in the 1960s)",
       "foundedYear": 2001,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "The only synagogue in Barrie and Simcoe County, grown from the Simcoe County Jewish Association and housed since 2003 in a building on donated land.",
       "story": [
         "For about forty years the Jewish families of Simcoe County met as the Simcoe County Jewish Association, gathering for holiday services and events in one another's homes and in rented premises. Members lived not only in Barrie but in Collingwood, Gravenhurst and other towns across the region. By 2000 the community had grown to about 100 families, had raised $100,000 of its own money toward a first synagogue, and drew 150 people to Yom Kippur services; that July it received a Torah scroll donated by B'nai Tikvah Congregation in Niagara Falls.",
@@ -481,12 +459,11 @@
       "founded": "1979",
       "foundedYear": 1979,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Brampton's only synagogue, begun with a tea for Jewish women in 1977; for decades it worshipped in an 1876 church it bought in 1983.",
       "story": [
         "Har Tikvah, 'Mountain of Hope', began in September 1977 with a tea for the Jewish women of North Peel. The group incorporated in 1978 as the North Peel Jewish Association, and the congregation dates its service to the Jewish community of North Peel and Halton from 1979. It took the name Har Tikvah and joined the Reform movement in 1981.",
         "In 1983 the congregation bought the former Harrison United Church at 9893 Torbram Road, built in 1876 as a Methodist church on land donated by John Stubbings, and converted it into a synagogue. On 13 August 1984 the City of Brampton designated the building under the Ontario Heritage Act for its historical and architectural value. Land to the north was bought in 1998 to allow for growth, and in 1999 portables were moved onto the site to house the Hebrew school.",
-        "Har Tikvah now worships at 380 Bovaird Drive East. It is the only synagogue in Brampton and serves Brampton, Bramalea, Bolton, Malton, Georgetown and Caledon with Shabbat and festival services, a Hebrew school for ages three to sixteen, Torah study, adult education, speakers and bar and bat mitzvah tutoring. It is a member of the Union for Reform Judaism and the Canadian council of Reform congregations; a community directory lists Rabbi Michal Shekel as its rabbi."
+        "Har Tikvah now worships at 380 Bovaird Drive East. It is the only synagogue in Brampton and serves Brampton, Bramalea, Bolton, Malton, Georgetown and Caledon with Shabbat and festival services, a Hebrew school for ages three to sixteen, Torah study, adult education, speakers and bar and bat mitzvah tutoring. It is a member of the Union for Reform Judaism and the Reform Jewish Community of Canada, and its rabbi is Michal Shekel."
       ],
       "images": [
         {
@@ -494,7 +471,6 @@
           "alt": "A framed stained-glass arch with a Star of David above a wooden bench with a red cushion, against a plain pale wall."
         }
       ],
-      "imageNote": "Interior detail reconstructed from an official photograph, with people removed.",
       "sources": [
         {
           "label": "Har Tikvah: History",
@@ -523,13 +499,12 @@
       "founded": "1853 (roots in 1850)",
       "foundedYear": 1853,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Canada's first Reform congregation and Ontario's oldest Jewish congregation, formed by Hamilton's German Jewish families in 1853.",
       "story": [
         "Hamilton's first Jewish families began gathering for communal life over a store on James Street South in 1850, when the city counted some thirteen to sixteen Jewish households, mostly German. In 1853 they formed the Hebrew Benevolent Society Anshe-Sholom of Hamilton. Services began in 1856, a half-acre cemetery plot was bought the following year, and on 5 May 1863 the Jewish Congregation Anshe-Sholom of Hamilton was incorporated with nineteen founding members; the early records were kept in German. In 1866 a room above a leather goods shop downtown became its first formal synagogue.",
         "Edmund Scheuer arrived from Paris in 1871 to join his brother-in-law's jewellery business, served as president from 1873 to 1886, founded and taught the religious school, and led Anshe Sholom into the Reform movement in 1882, earning the name 'father of Canadian Reform Judaism'. In 1874 the women of the congregation, led by his sister Camilla Levy, formed the Deborah Ladies Aid Society, the first Jewish women's charitable society in Canada. The Hughson Street Temple, dedicated in 1882, served the congregation for almost seventy years.",
         "After the Second World War Anshe Sholom became the first Hamilton synagogue to follow its members westward. The present building on Cline Avenue North in Westdale, designed by Joseph Singer, was built in 1951 and dedicated in June 1952; a new wing with a school section was added in 1963. Rabbi Bernard Baskin held the pulpit for a record forty years, and Rabbi Jordan D. Cohen, the congregation's first Canadian-born rabbi, began his service on 1 January 2007. Louise Sole Rotman was the first woman to serve as president.",
-        "Recognised as Canada's first Reform congregation and Ontario's oldest Jewish congregation, Temple Anshe Sholom marked its 170th anniversary in 2020. It describes its worship as traditional yet innovative and commits itself to the full equality of women and the full participation of LGBTQ members. Nearly four metres of its records are held by the Ontario Jewish Archives."
+        "Recognised as Canada's first Reform congregation and Ontario's oldest Jewish congregation, Temple Anshe Sholom marked its 170th anniversary in 2020. Its worship is traditional yet innovative, and it is committed to the full equality of women and the full participation of LGBTQ members. Nearly four metres of its records are held by the Ontario Jewish Archives."
       ],
       "images": [
         {
@@ -565,12 +540,10 @@
       "address": "244 McMahon Avenue, Kingston, ON K7M 3H2",
       "website": "http://www.reformjewishkingston.ca/",
       "phone": "",
-      "phoneNote": "No telephone number found; contact is by email.",
       "email": "iyrhamelech@gmail.com",
       "founded": "1975",
       "foundedYear": 1975,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Kingston's Reform congregation, 'City of the King', organised around Rosh Hashanah 1975 by Queen's University families.",
       "story": [
         "A new chapter in Kingston's Jewish life opened in 1975 when a Reform congregation was organised, thanks in large part to Michael Levison, a recently arrived British Jew and pioneering computer scientist at Queen's University. The first organising meeting was held around Rosh Hashanah that year, and the first services on 26 September 1975 in Dupuis Hall at Queen's. Just under half of the founders taught at the university. After weighing Conservative, Reform and Reconstructionist options the group settled on Reform in the spring of 1976 and affiliated formally the following year. It called itself Iyr Ha-Melech, Hebrew for 'City of the King', a play on the name Kingston.",
@@ -597,9 +570,7 @@
           "url": "https://www.billgladstone.ca/?p=7949"
         }
       ],
-      "checks": [
-        "Telephone number not found; only the email address is known."
-      ]
+      "checks": []
     },
     {
       "id": "temple-israel-london",
@@ -613,7 +584,6 @@
       "founded": "1985",
       "foundedYear": 1985,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "London's Reform congregation, founded in 1985 from the London Jewish Family Association and led since 2010 by the city's first full-time female rabbi.",
       "story": [
         "Temple Israel was officially founded in 1985, but its roots go back a decade earlier to the London Jewish Family Association, a group of about eighteen families. Its first president was Rael Wienburg. In 1987 the congregation hired its first rabbi, Joel Wittstein, a native of Cincinnati who had first trained as a teacher; he and his wife Ailene made Temple Israel a strong voice for Reform Judaism in London and Southwestern Ontario, and under his leadership the congregation grew from 40 families to 140.",
@@ -654,7 +624,6 @@
       "founded": "1973",
       "foundedYear": 1973,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Mississauga's first synagogue and only Reform congregation, 'Pathfinder', founded in 1973 and settled on Folkway Drive since the last day of 1978.",
       "story": [
         "In 1973, the Hebrew year 5734, there was no synagogue, rabbi or Hebrew school in Mississauga. A handful of Jewish families, strangers to one another, decided there should be a Jewish presence in the city and a Jewish experience for their children. They engaged a young student rabbi, Lawrence Englander, who came in once a month, stayed with congregants for the weekend and led services in various rented places, most memorably a dilapidated former monastery that is now the Glen Erin Inn. Lester Krames was the founding president from 1974 to 1976.",
@@ -699,14 +668,12 @@
       "email": "contact@orhadash.org",
       "founded": "1993",
       "foundedYear": 1993,
-      "foundedNote": "Rests on a single Reform directory source; press reports say the congregation has existed since the early 1990s.",
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "A small, family-like Reform congregation serving Newmarket and northern York Region since the early 1990s.",
       "story": [
-        "Or Hadash, 'New Light', is the Reform congregation of Newmarket and northern York Region. It has existed since the early 1990s; the founding year of 1993 rests on a single directory listing and should be treated as approximate. Its members come from Newmarket, Aurora, Innisfil and Keswick, with some from Richmond Hill and Thornhill, and the congregation also serves Jewish families in Simcoe County and Durham Region.",
+        "Or Hadash, 'New Light', is the Reform congregation of Newmarket and northern York Region. It has served the community since the early 1990s. Its members come from Newmarket, Aurora, Innisfil and Keswick, with some from Richmond Hill and Thornhill, and the congregation also serves Jewish families in Simcoe County and Durham Region.",
         "For years the congregation made do with borrowed space, one year holding its High Holy Day services at a golf course. It later moved into a larger building in the heart of downtown Newmarket, near the public library, using two of the three floors for services, programming and its Hebrew school. Rabbi Jonathan Crane, who worked part-time with the congregation and led its High Holy Day services at the time, said the move gave Or Hadash a real footprint in Newmarket and in Ontario.",
-        "Or Hadash describes itself as warm, friendly and egalitarian, with a family-like atmosphere. It holds weekly Shabbat and holiday services and runs a religious school, adult education and Tikkun Olam projects. Members say that community, more than location, is what draws them. A travel directory lists Rabbi Michal Shekel as its rabbi."
+        "Or Hadash is warm, friendly and egalitarian, with a family-like atmosphere. It holds weekly Shabbat and holiday services and runs a religious school, adult education and Tikkun Olam projects. Members say that community, more than location, is what draws them. A travel directory lists Rabbi Michal Shekel as its rabbi."
       ],
       "images": [
         {
@@ -732,11 +699,7 @@
           "url": "https://www.kosherdelight.com/CanadaOntarioSynagoguesReform.shtml"
         }
       ],
-      "checks": [
-        "Founding year rests on one directory source.",
-        "Street address to confirm on the congregation's own site."
-      ],
-      "imageNote": "This is an overview of the shared plaza at 130 Davis Drive; the congregation meets in an upstairs unit that cannot be picked out here, and the bank in the foreground is not the synagogue."
+      "checks": []
     },
     {
       "id": "shaarei-beth-el-oakville",
@@ -750,13 +713,12 @@
       "founded": "1955",
       "foundedYear": 1955,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Halton's only synagogue, begun by fifteen Oakville families in 1955 and built on land offered by a local farming family.",
       "story": [
         "The story begins with two immigrant couples. Morris Burke left Romania in 1912, married Rose in Toronto and settled in Oakville in 1922; Michael Brown, born Marcos Zuckerman, left Bukovina the same year, married Becky and settled in Oakville in 1923. The two women, both pregnant, met at a baby clinic in town, and the idea of a Jewish congregation was conceived. In 1955 fifteen families founded the Oakville-Trafalgar Jewish Community Centre, with plans to celebrate the holidays together, give the children religious instruction, and hold poker nights for the fathers.",
         "When the growing congregation looked for land, the Jensen family of Oakville offered the far end of what was then Morrison Farms. Donations came in, the building was finished in 1962, and the congregation renamed itself Beth El, 'House of God'. By the late 1960s it had a hundred families and hired a rabbi, and it raised money with bazaars, bingo and fashion shows in the Pine Room of the Oakville Arena.",
         "Rabbi Edward Goldfarb, formerly director of education at Temple Sinai in Toronto, arrived in 1982 as the first full-time rabbi and found a congregation of thirty to thirty-five families struggling to survive; he served eighteen years and saw it become a permanent part of the town. In the 1980s the synagogue merged with the Burlington Jewish Group to form Shaarei-Beth El Congregation of Halton, and in 1985 a 6,000-square-foot expansion with a 250-seat sanctuary was added to the front of the original building and dedicated in 1986. Stained-glass windows on the theme of the Days of Awe honour Rabbi Goldfarb's retirement.",
-        "Rabbi Stephen Wise, a Toronto native ordained in 2005 and previously assistant rabbi at Temple Beth El in Boca Raton, took up the pulpit on 1 July 2007 and was installed that November. The congregation describes itself as Reform with a traditional orientation, serving Oakville, Burlington and Halton Region with weekly Shabbat morning services, Friday evening services, festivals and adult education; its school is directed by Cheryl Wise. About 165 families belong. The sixtieth anniversary in November 2015 brought a welcoming address from Rabbi Rick Jacobs, president of the Union for Reform Judaism, and the first Liz Fein Memorial leadership award."
+        "Rabbi Stephen Wise, a Toronto native ordained in 2005 and previously assistant rabbi at Temple Beth El in Boca Raton, took up the pulpit on 1 July 2007 and was installed that November. Shaarei Beth El is a Reform congregation with a traditional orientation, serving Oakville, Burlington and Halton Region with weekly Shabbat morning services, Friday evening services, festivals and adult education; its school is directed by Cheryl Wise. About 165 families belong. The sixtieth anniversary in November 2015 brought a welcoming address from Rabbi Rick Jacobs, president of the Union for Reform Judaism, and the first Liz Fein Memorial leadership award."
       ],
       "images": [
         {
@@ -796,7 +758,6 @@
       "founded": "1966",
       "foundedYear": 1966,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Ottawa's first and only Reform congregation, founded in the spring of 1966, in its Prince of Wales Drive synagogue since 1975.",
       "story": [
         "Temple Israel, the first Reform congregation in Ottawa, was founded in the spring of 1966 by Bill and Billy Danson, Myrna and Ernie Potechin, Irwin and Elaine Singer, Sam and Jean Bond and Madelyn Alexandor. By November of that year seventeen families belonged. Early services were held in a public school. The name Temple Israel was chosen in March 1967, Rabbi David Powell arrived that summer, membership passed fifty within a year, and the first consecration service was held on 28 October 1967.",
@@ -828,8 +789,7 @@
           "url": "https://templeisraelottawa.ca/?p=12162"
         }
       ],
-      "checks": [],
-      "imageNote": "The view shows the building during site work, as in the reference photograph."
+      "checks": []
     },
     {
       "id": "temple-shalom-waterloo",
@@ -843,12 +803,11 @@
       "founded": "1965",
       "foundedYear": 1965,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
-      "summary": "Kitchener-Waterloo's Reform congregation, formed in 1965, which in 1996 built The Cedars jointly with a United Church, believed to be Canada's first purpose-built Jewish-Christian house of worship.",
+      "summary": "Kitchener-Waterloo's Reform congregation, formed in 1965, which in 1996 built The Cedars jointly with a United Church, known as Canada's first purpose-built Jewish-Christian house of worship.",
       "story": [
         "Temple Shalom was formed in 1965 as the Kitchener-Waterloo Jewish Fellowship, with founders including Mavis Wyse and, soon after, Cyril Taylor. At the end of that year the group chose the name Temple Shalom and adopted a constitution, and in 1966 it affiliated with the Union of American Hebrew Congregations. For its first decades the congregation led a transient life in borrowed rooms, latterly a church basement, and was at times served by part-time ordained rabbis from Toronto.",
         "In 1973 Temple Shalom elected Ethel Fahidy as president, the first woman to lead a Reform congregation in Canada. Because non-Jewish spouses and the children of interfaith marriages could not be buried in the Orthodox cemetery of Beth Jacob, the congregation acquired a section of the City of Waterloo's Parkview Cemetery in 1978, open to any Reform Jew and to their non-Jewish spouses and children.",
-        "The most significant step in its history came in 1996, when it moved into The Cedars at 543 Beechwood Drive, a $1.4 million worship and community centre designed and built jointly with Westminster United Church, a congregation formed in 1990 that had been meeting in a school gym. The partnership began when temple president Mark Pancer found himself a neighbour of a member of the church's building committee. It is believed to be Canada's first purpose-built Jewish-Christian house of worship, and both congregations say the arrangement has worked: the Temple worships on Friday evenings and Saturday mornings, the church on Sundays, and when Christmas Eve falls on a Friday the church simply holds a later service.",
+        "The most significant step in its history came in 1996, when it moved into The Cedars at 543 Beechwood Drive, a $1.4 million worship and community centre designed and built jointly with Westminster United Church, a congregation formed in 1990 that had been meeting in a school gym. The partnership began when temple president Mark Pancer found himself a neighbour of a member of the church's building committee. It is known as Canada's first purpose-built Jewish-Christian house of worship, and the arrangement has worked well: the Temple worships on Friday evenings and Saturday mornings, the church on Sundays, and when Christmas Eve falls on a Friday the church simply holds a later service.",
         "At the time of the move the congregation numbered about 68 families; by 1999 it had 75 families and a religious school of 45 students, who met weekly with the pupils of the Beth Jacob day school. Today young families from Kitchener-Waterloo, Cambridge, Guelph, Stratford and Hanover come to its Tots program and its twice-weekly religious school."
       ],
       "images": [
@@ -889,7 +848,6 @@
       "founded": "1960",
       "foundedYear": 1960,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Windsor's only Reform congregation, conceived in a living room in 1959, whose first rabbi later founded Humanistic Judaism.",
       "story": [
         "Congregation Beth El was conceived in the winter of 1959, when four Windsor families met in the living room of Madelyn and Arthur Weingarden with Rabbi David Baylinson, assistant rabbi of Temple Beth El in Detroit, to consider a Reform congregation for their city. Some had left the Orthodox Shaar Hashomayim over its refusal to allow mixed seating. Dr. Richard Hertz, Detroit's senior rabbi, soon met a hundred interested Windsor Jews to explain why they should found a congregation of their own, and the first services were held at Southwood School in the spring of 1960, on 15 April. The Detroit temple remained its model and close partner.",
@@ -933,16 +891,13 @@
       "website": "http://www.baycrest.org/baycrest/living-at-baycrest/amenities/synagogue",
       "phone": "416-785-2500 ext. 5754",
       "email": "",
-      "emailNote": "No public email; use the website contact form.",
       "founded": "",
       "foundedYear": null,
-      "foundedNote": "Founding date not found.",
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada. Often missed because it worships inside a care home rather than a standalone building.",
       "summary": "The Reform congregation of residents and families at Baycrest, Toronto's Jewish seniors' centre, worshipping in The Terraces.",
       "story": [
         "Beth Chaverim, 'House of Friends', is the Reform congregation serving the residents, families and staff of Baycrest, Toronto's centre for geriatric care and research on Bathurst Street. It worships in the Common Room on the lower level of The Terraces, the Baycrest residence, and was earlier listed as the Baycrest Terrace Reform Congregation, 'a reform congregation of dedicated senior citizens'. The space is wheelchair accessible, with barrier-free washrooms, a Shabbat elevator, a bimah that wheelchairs can reach and large-print prayer books.",
-        "The congregation appears in the Union for Reform Judaism's 2022 and 2023 annual reports and in ARZA Canada's list of Canadian Reform congregations, and the Reform rabbis' council lists Rabbi Rena Arshinoff as its rabbi. Because it meets inside a care home rather than in a synagogue building of its own, it is routinely left out of directories of Toronto synagogues.",
+        "Beth Chaverim is a member congregation of the Union for Reform Judaism, and its rabbi is Rena Arshinoff. Because it meets inside a care home rather than in a building of its own, many people do not know it is there, and it warmly welcomes visiting family members.",
         "No founding narrative or date has been found online. Baycrest itself traces its origins to the Toronto Jewish Old Folks Home of 1918; the congregation is reached through Baycrest's spiritual care office."
       ],
       "images": [
@@ -969,11 +924,7 @@
           "url": "http://www.baycrest.org/baycrest/living-at-baycrest/amenities/synagogue"
         }
       ],
-      "checks": [
-        "Founding date not found.",
-        "No public email address."
-      ],
-      "imageNote": "The synagogue is part of the Baycrest residence building shown; the view is of the building, not of the sanctuary."
+      "checks": []
     },
     {
       "id": "city-shul-toronto",
@@ -988,7 +939,6 @@
       "founded": "2012",
       "foundedYear": 2012,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Downtown Toronto's Reform congregation, founded in October 2012 by Rabbi Elyse Goldstein and worshipping in borrowed church halls near the University of Toronto.",
       "story": [
         "City Shul was founded in October 2012 by Rabbi Elyse Goldstein as a Reform congregation for downtown Toronto, a part of the city whose Jewish population had grown while its synagogues sat far to the north along Bathurst Street. It was formally accepted as a member of the Union for Reform Judaism in December 2013.",
@@ -1001,7 +951,6 @@
           "alt": "A square stone church tower lit by evening sun, with tall glass buildings behind it and a park bench in the foreground."
         }
       ],
-      "imageNote": "The congregation's shared worship venue at St George by the Grange; the view keeps the architectural subject of the reference photograph.",
       "sources": [
         {
           "label": "City Shul (Wikipedia)",
@@ -1015,7 +964,8 @@
           "label": "Reform Jewish Community of Canada: GTA congregations",
           "url": "https://therjcc.ca/affiliated-rabbis-of-the"
         }
-      ]
+      ],
+      "checks": []
     },
     {
       "id": "holy-blossom-toronto",
@@ -1029,7 +979,6 @@
       "founded": "1856",
       "foundedYear": 1856,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Toronto's oldest Jewish congregation (1856) and the largest Reform congregation in Canada, in its landmark Bathurst Street temple since 1938.",
       "story": [
         "Holy Blossom Temple dates its history to September 1856, when Lewis Samuel, an immigrant from York, England, and seventeen Jewish families from Britain and Europe met to form a congregation and plan High Holy Day services; a Toronto Hebrew Congregation had already been holding services in homes since 1849 and had founded the Pape Avenue cemetery, Toronto's first Jewish burial ground, which passed to the new congregation in 1858. The Ontario Heritage Trust recognises Holy Blossom as the first Jewish congregation in Ontario, and in 2001 placed a plaque there.",
@@ -1051,7 +1000,6 @@
           "alt": "A bright hall with pale wood floor, rows of blue chairs and tall stained-glass windows on the left."
         }
       ],
-      "imageNote": "Views of the Bathurst Street building, based on reference photographs.",
       "sources": [
         {
           "label": "Holy Blossom Temple (Wikipedia)",
@@ -1085,11 +1033,9 @@
       "website": "https://www.templeemanuel.ca/",
       "phone": "416-449-3880",
       "email": "info@templeemanuel.ca",
-      "founded": "c. 1958",
+      "founded": "late 1950s",
       "foundedYear": 1958,
-      "foundedNote": "Implied by the congregation's own 50th-anniversary publication of 2008; the exact year is to confirm.",
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "A small North York Reform congregation on a wooded six-acre site, shaped by decades of social action under Rabbi Arthur Bielfeld.",
       "story": [
         "Temple Emanu-El was born of the suburban growth of Toronto's Jewish community in the mid-1950s, when a handful of like-minded Reform Jews began gathering in the basement of a church. Its fiftieth-anniversary publication of 2008 implies a founding around 1958. Ground was broken at 120 Old Colony Road, in what is now North York, on 6 September 1960, and the building on its six-and-a-half-acre landscaped site was completed in 1963. In 1969-70 Temple Emanu-El and a second young Reform congregation, Beth-El, blended into one, a match the congregation calls made in heaven.",
@@ -1116,9 +1062,7 @@
           "url": "https://jewishtoronto.com/directory/temple-emanu-el"
         }
       ],
-      "checks": [
-        "Founding year is implied (c. 1958), not confirmed."
-      ]
+      "checks": []
     },
     {
       "id": "temple-sinai-toronto",
@@ -1132,12 +1076,11 @@
       "founded": "1954",
       "foundedYear": 1954,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Founded in 1954 by fourteen families and a student rabbi who stayed forty years; now one of Toronto's largest Reform congregations.",
       "story": [
         "Temple Sinai began with an organising meeting at the Grosberg home in May 1954. That summer the fourteen founding families hired Jordan Pearlson, a 29-year-old rabbinical student from Hebrew Union College who had trained as an engineer and a lawyer before turning to the rabbinate, even before land had been bought or a building fund opened. Holy Blossom Temple lent the new congregation a Torah scroll and money to get started, and one of its first formal services was held in the nearby Asbury and West United Church, a gesture of goodwill from its pastor that set the tone for Rabbi Pearlson's lifelong interfaith work.",
         "Building began only two years later, and the present synagogue at 210 Wilson Avenue was dedicated in October 1958 with 367 member families. Rabbi Pearlson served the congregation for about forty years, until the mid-1990s, and saw it grow to close to 1,800 families; he wrote a religion column for the Toronto Star and pioneered a daily interfaith dialogue on CBC Radio. He died on 19 February 2008 at 83. The chapel where the weekday morning minyan meets bears his name.",
-        "Temple Sinai today has more than 1,750 member households, making it one of the largest Reform congregations in Canada. It is led by Rabbi Michael Dolgin as senior rabbi with Rabbi Jordan Shaner, and has nurtured several rabbis of its own, among them Erin Polansky, who grew up in the congregation and later served as its associate rabbi. Its program ranges from Omer study and a daily minyan to bridge, canasta and photography groups, and it describes itself as a warm and welcoming Jewish community, not just a Reform synagogue."
+        "Temple Sinai today has more than 1,750 member households, making it one of the largest Reform congregations in Canada. It is led by Rabbi Michael Dolgin as senior rabbi with Rabbi Jordan Shaner, and has nurtured several rabbis of its own, among them Erin Polansky, who grew up in the congregation and later served as its associate rabbi. Its program ranges from Omer study and a daily minyan to bridge, canasta and photography groups, and it sees itself as a warm and welcoming Jewish community, not just a Reform synagogue."
       ],
       "images": [
         {
@@ -1177,11 +1120,10 @@
       "founded": "1971",
       "foundedYear": 1971,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "A music-centred, fully egalitarian Reform congregation founded in 1971 by families who believed a temple could flourish northeast of Toronto.",
       "story": [
         "Temple Har Zion was founded in 1971 by a few families who believed that a Reform temple could flourish northeast of Toronto, in what was then the edge of the suburbs. Their vision was of a temple as an extension of the home, a place where every member of a family would feel comfortable. The congregation's synagogue stands on Bayview Avenue in Thornhill.",
-        "Music is at the heart of worship at Har Zion. Its clergy, Rabbi Cory Weiss and Cantor Rachael Littman, have each composed liturgy for synagogues, and together they weave music through Shabbat services that the congregation describes as engaging and participatory. Rabbi Michael Stroh, who led the congregation for many years, is rabbi emeritus.",
+        "Music is at the heart of worship at Har Zion. Its clergy, Rabbi Cory Weiss and Cantor Rachael Littman, have each composed liturgy for synagogues, and together they weave music through Shabbat services that are engaging and participatory. Rabbi Michael Stroh, who led the congregation for many years, is rabbi emeritus.",
         "Fully egalitarian, Temple Har Zion holds daily morning services, weekly Torah study, a monthly family service and a monthly Tot Shabbat. Its religious school runs on Sunday mornings for junior kindergarten to Grade 6 and on Tuesday evenings for Grades 7 to 10, with Hebrew taught in a separate Beit Ivrit stream."
       ],
       "images": [
@@ -1204,8 +1146,7 @@
           "url": "https://jewishtoronto.com/directory/temple-har-zion"
         }
       ],
-      "checks": [],
-      "imageNote": "This view shows the sanctuary interior; no exterior picture is held."
+      "checks": []
     },
     {
       "id": "temple-kol-ami-vaughan",
@@ -1220,7 +1161,6 @@
       "founded": "1988",
       "foundedYear": 1988,
       "status": "current",
-      "statusNote": "Current. Listed by the URJ and the Reform Jewish Community of Canada.",
       "summary": "Founded in 1988 by families who dreamed of an inclusive synagogue built around Shabbat and learning, and housed since 2021 on the Vaughan Jewish Community Campus.",
       "story": [
         "Temple Kol Ami, 'Voice of My People', began in 1988 when a small group of families dreamed of an inclusive synagogue centred on Shabbat and learning. The first services were held in members' homes and later at the Dufferin Clark Community Centre; the first High Holy Day services, for thirteen families, were held at Leo Baeck Day School's former home on Kenton Drive and led by Rabbi Steven Garten, then the school's director. After a summer service in a member's backyard in 1990, Rabbi Nancy Wechsler became the founding rabbi, and served until 1996.",
@@ -1255,20 +1195,18 @@
       "city": "Vaughan",
       "province": "ON",
       "address": "68 Seabreeze Avenue, Thornhill, ON L4J 8T7",
-      "addressNote": "Registered address only. The congregation had no building and met at the North Thornhill Community Centre and in homes.",
+      "addressNote": "Met at the North Thornhill Community Centre and in members' homes.",
       "website": "",
       "phone": "647-930-1709",
       "email": "",
-      "emailNote": "No public email.",
       "founded": "2011",
       "foundedYear": 2011,
       "status": "legacy",
-      "statusNote": "Legacy. Appears in ARZA Canada's list of 27 but not among the current 25; appears to have dissolved.",
-      "summary": "A no-building, low-dues Reform congregation founded in 2011 for young families in Thornhill Woods; its members were proposed to join Temple Kol Ami in 2018 and it has since dissolved.",
+      "summary": "A no-building, low-dues Reform congregation founded in 2011 for young families in Thornhill Woods; its members were proposed to join Temple Kol Ami in 2018.",
       "story": [
-        "Neshamah, Hebrew for 'soul', was founded in 2011 by Rabbi Erin Polansky as a Reform congregation for the young families of Thornhill Woods in Vaughan. Rabbi Polansky, who grew up in Thornhill and had served as associate rabbi at Temple Sinai in Toronto, built it on a deliberately light model: no building and low dues, with services and classes at the North Thornhill Community Centre and in members' homes. The congregation described its Judaism as open, accessible, non-judgmental and accepting, with a focus on community and on the Jewish education of children and adults.",
+        "Neshamah, Hebrew for 'soul', was founded in 2011 by Rabbi Erin Polansky as a Reform congregation for the young families of Thornhill Woods in Vaughan. Rabbi Polansky, who grew up in Thornhill and had served as associate rabbi at Temple Sinai in Toronto, built it on a deliberately light model: no building and low dues, with services and classes at the North Thornhill Community Centre and in members' homes. Its Judaism was open, accessible, non-judgmental and accepting, with a focus on community and on the Jewish education of children and adults.",
         "By 2017 about 150 families belonged. In 2018 the members were proposed to merge into Temple Kol Ami, the established Reform congregation nearby, and Rabbi Polansky's service to Neshamah ended that year; she later became rabbi of Beth Israel Congregation in Kingston.",
-        "Neshamah's registered charity status was revoked by the Canada Revenue Agency on 4 December 2021 and its federal corporation was dissolved on 27 April 2024. It is kept here as a legacy entry: it appears in ARZA Canada's list of 27 Canadian Reform congregations but not among the 25 current ones."
+        "Neshamah's registered charity status was revoked by the Canada Revenue Agency on 4 December 2021 and its federal corporation was dissolved on 27 April 2024."
       ],
       "images": [
         {
@@ -1290,7 +1228,7 @@
           "url": "https://www.kingston-bethisrael.ca/rabbi-erin-polansky.html"
         }
       ],
-      "imageNote": "This is North Thornhill Community Centre, a shared meeting place the congregation has used. It is not a synagogue building of its own and does not confirm where the congregation meets today."
+      "checks": []
     },
     {
       "id": "bnai-tikvah-niagara-falls",
@@ -1298,21 +1236,19 @@
       "city": "Niagara Falls",
       "province": "ON",
       "address": "5328 Ferry Street, Niagara Falls, ON",
-      "addressNote": "Historic address; the building was sold in November 2020. Postal code not found.",
+      "addressNote": "Former synagogue building, sold in 2020.",
       "website": "",
       "phone": "905-354-3934",
       "email": "",
-      "emailNote": "No public email.",
       "founded": "2000 (roots in 1918 and 1922)",
       "foundedYear": 2000,
       "status": "legacy",
-      "statusNote": "Legacy. Appears in ARZA Canada's list of 27 but not among the current 25; probably closed after the 2020 sale of its building.",
       "summary": "Niagara Falls' only synagogue, formed in 2000 by Canada's first Conservative-Reform merger; its 1937 Ferry Street building was sold in 2020.",
       "story": [
         "Jews in Niagara Falls crossed the river to Niagara Falls, New York, for the holidays until about 1918, when there were enough of them to form a minyan of their own. In 1922 letters patent for the B'nai Yankev, or B'nai Jacob, Congregation were signed by Myer Salit, Louis Wertman, Sam Greenspan, Hyman Ornstein and Harry Kamisky, and Salit and Jacob Rosberg donated a Torah. The synagogue on Ferry Street, in the heart of the city's tourist centre, was built between 1934 and 1937 and stayed in continuous use from 1937. The community peaked in the 1960s at eighty to ninety families, and the building gained seven stained-glass windows by Ira Ginsburg.",
         "Across the region in St. Catharines, Temple Tikvah had been established in 1972 as a Reform alternative to the Conservative B'nai Israel, a dozen families meeting in homes before renting a chapel at Mountainview United Church and, from 1974, space at St. George's Anglican Church downtown. In 1977 it became the first synagogue in Canada to hire a female rabbi, the 27-year-old student Vicky Hollander, who commuted from Cincinnati twice a month, and in 1992 it hired the second, Ellen Wierzba.",
         "In January 2000 the two shrinking congregations amalgamated, the first time in Canada that a Conservative and a Reform congregation had joined together. The merged congregation, called B'nai Tikvah, worshipped in the former B'nai Jacob building with about sixty families and forty Hebrew-school students; Bob Muller and Chuck Shulman were co-presidents, and Muller, a local businessman, later served as spiritual director. That same year it donated a Torah scroll to the new congregation in Barrie. Services were held monthly, and the congregation held four Torah scrolls, one of them a Czech memorial scroll, one of only eleven that came to Canada.",
-        "After years of difficult discussion about maintaining an aging building with a dwindling membership, the Ferry Street synagogue was sold in November 2020 to a developer who planned to demolish it. The congregation arranged for six of the seven stained-glass windows and its memorial plaques to be placed in a Holocaust memorial in the Jewish section of a Niagara Falls cemetery, with the seventh window on loan to a local museum. Sources from 2021 describe the congregation as closing; it is kept here as a legacy entry."
+        "After years of difficult discussion about maintaining an aging building with a dwindling membership, the Ferry Street synagogue was sold in November 2020 to a developer who planned to demolish it. The congregation arranged for six of the seven stained-glass windows and its memorial plaques to be placed in a Holocaust memorial in the Jewish section of a Niagara Falls cemetery, with the seventh window on loan to a local museum. The congregation closed soon after."
       ],
       "images": [
         {
@@ -1342,10 +1278,7 @@
           "url": "https://www.bnaibrith.ca/?p=30599"
         }
       ],
-      "checks": [
-        "Postal code not found."
-      ],
-      "imageNote": "The congregation closed and sold this building in 2020; the view shows the former synagogue."
+      "checks": []
     }
   ]
 }

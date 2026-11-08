@@ -41,7 +41,7 @@ export function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'card game-card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Bubble Pop Prefix Blast'),
     h('p', {}, 'Pop the prefix that gives the requested meaning. A miss leaves the phrase unfinished.'),
-    h('p', { class: 'muted' }, 'Preview: corpus-attested study aid; native review pending.'), status, speechNote, board));
+    status, speechNote, board));
   function start() {
     session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: Math.min(8, deck.length) });
     deck = shuffled(deck).slice(0, 10); index = 0; paint();

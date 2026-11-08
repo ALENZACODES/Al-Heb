@@ -6,7 +6,7 @@
 export const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 export const TRADITION_LABELS = { israeli: 'Modern Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' };
 export const STORE_KEY = 'compare.v1';
-export const NOTICE = 'Rule-generated and unverified: these readings come from spelling rules applied to the pointed text. No native speaker has checked them, no recording exists, and real speakers vary inside each tradition. Treat them as a study aid, not as a reference.';
+export const NOTICE = 'See how each tradition says the same word.';
 
 const TAAM = /[֑-ֽ֯׀׃]/g; // accents, meteg, paseq, sof pasuq
 /** Lookup key: accents removed, maqaf removed (so a bound prefix such as לְ־ finds its entry לְ), canonical (NFD) mark order. */

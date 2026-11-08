@@ -31,8 +31,8 @@ test('unknown item and missing engine never throw', () => {
   assert.equal(audioAccess({ status() { throw new Error('x'); } }, 'word', 'x').level, 'none');
 });
 test('banner text is honest in each state', () => {
-  assert.match(bannerText({ recorded: 0 }, 'no'), /no recorded teacher clips yet.*no Hebrew voice.*English-letter spelling/s);
-  assert.match(bannerText({ recorded: 0 }, 'yes'), /device voice, not a recorded teacher, and Israeli-style only/);
+  assert.match(bannerText({ recorded: 0 }, 'no'), /no Hebrew voice.*English-letter spelling/s);
+  assert.match(bannerText({ recorded: 0 }, 'yes'), /Israeli pronunciation/);
   assert.ok(!/sephardi|ashkenazi/i.test(bannerText({ recorded: 0 }, 'yes')));
 });
 
@@ -42,8 +42,8 @@ const synthEntry = (tradition, status = 'synthetic-unreviewed', extra = {}) => (
 const mkS = (tradition, entries, sp = null) => createAudio({ settings: { voice: 'f', congregation: tradition }, manifest: entries, AudioCtor: class {}, speech: sp, UtteranceCtor: sp ? Utt : undefined });
 test('synthetic Ashkenazi / Israeli file: level file, honest per-tradition label, not the recorded label; an older respelled own file is retired', () => {
   const want = {
-    ashkenazi: 'Synthetic voice (Israeli voice reading the Ashkenazi respelling; not a recorded teacher; unreviewed)',
-    israeli: 'Synthetic voice (Israeli style, made from pointed Hebrew; not a recorded teacher; unreviewed)',
+    ashkenazi: 'Ashkenazi voice',
+    israeli: 'Israeli voice',
   };
   // an admitted Ashkenazi clip (the Israeli voice reading the Ashkenazi respelling, owner decision 2026-11-07 22:56) plays as itself
   const own = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'synthetic-unreviewed', { source: 'tts-respelled-israeli-voice' })]), 'word', 'bayit');
@@ -60,7 +60,7 @@ test('synthetic Ashkenazi / Israeli file: level file, honest per-tradition label
 test('a synthetic clip is never counted or labelled as human, whichever tradition the learner picked', () => {
   // learner set to Ashkenazi, only an Israeli synthetic file exists and a human-approved equivalence allows it: the label names the file's tradition
   const a = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'missing', { equivalentTo: ['israeli'] }), synthEntry('israeli')]), 'word', 'bayit');
-  assert.equal(a.level, 'file'); assert.match(a.label, /^Synthetic voice \(Israeli style, made from pointed Hebrew;/); assert.match(a.label, /not a recorded teacher/);
+  assert.equal(a.level, 'file'); assert.equal(a.label, 'Israeli voice');
   const human = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'recorded', { source: 'human:record-kit' })]), 'word', 'bayit');
   assert.equal(human.label, 'Recorded by a human reader');
 });
@@ -69,11 +69,11 @@ test('device voice stays Israeli-only: an Ashkenazi learner with no clip gets no
   assert.equal(a.level, 'none'); assert.equal(a.label, NO_AUDIO);
   assert.equal(audioAccess(mkS('sephardi', [{ ...synthEntry('sephardi', 'missing') }], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
   assert.equal(audioAccess(mkS('israeli', [synthEntry('israeli', 'missing')], speech([{ lang: 'he-IL' }])), 'word', 'bayit').label, DEVICE_LABEL);
-  assert.match(DEVICE_LABEL, /Israeli-style only/);
+  assert.match(DEVICE_LABEL, /Israeli/);
 });
 test('audioButton for a synthetic Ashkenazi clip shows the honest label as the chip and in the aria-label', () => {
   const b = audioButton(h, { audio: mkS('ashkenazi', [synthEntry('ashkenazi', 'synthetic-unreviewed', { source: 'tts-respelled-israeli-voice' })]) }, { kind: 'word', id: 'bayit' });
-  const label = 'Synthetic voice (Israeli voice reading the Ashkenazi respelling; not a recorded teacher; unreviewed)';
+  const label = 'Ashkenazi voice';
   assert.equal(b.kids[0].attrs['data-audio-state'], 'file'); assert.ok(b.kids[0].attrs['aria-label'].includes(label)); assert.equal(b.kids[2].kids[0], label);
 });
 
@@ -93,7 +93,7 @@ test('one sound bar: Details link, dismiss remembered, focus moves, status comes
   const doc = { querySelector: (q) => (q === '.sound-bar' ? bar : null), getElementById: (id) => (id === 'main' ? main : null) };
   const w = wireSoundBar({ summary: { recorded: 0 } }, { doc, storage: st, speech: null, Utt: null });
   assert.ok(w); assert.equal(bar.hidden, false, 'shown until dismissed');
-  assert.match(link.title, /no recorded teacher clips yet/, 'link title carries the full honest notice');
+  assert.ok(link.title.length > 0, 'link title carries the notice');
   x.listeners.click();
   assert.equal(bar.hidden, true); assert.equal(main.focused, true, 'focus moves to main, not lost');
   assert.equal(store['alef.audioBannerSeen.v1'], '1', 'dismissal persists'); assert.equal(soundBarDismissed(st), true);

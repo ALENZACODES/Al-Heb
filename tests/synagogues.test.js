@@ -80,8 +80,8 @@ test('routes: /synagogues and /synagogues/:id exist, sit in the read section, an
 
 test('directory: one tile per congregation, grouped by province west to east, with a thumbnail where a picture is held', async () => {
   const { root: r, text } = await show();
-  assert.match(text, /Reform synagogues in Canada/);
-  assert.match(text, /27 congregations/);
+  assert.match(text, /Reform Synagogues in Canada/);
+  assert.doesNotMatch(text, /legacy|to confirm|not found|illustrative/i);
   const tiles = r.queryAll('li[data-id]');
   assert.equal(tiles.length, 27);
   const provinces = r.queryAll('section[data-province]').map((s) => s.getAttribute('data-province'));
@@ -92,7 +92,8 @@ test('directory: one tile per congregation, grouped by province west to east, wi
   const ks = tiles.find((t) => t.getAttribute('data-id') === 'iyr-ha-melech-kingston');
   assert.ok(ks.querySelector('img'));
   assert.equal(tiles.filter((t) => t.querySelector('img')).length, 27);
-  assert.match(text, /Legacy/);
+  assert.match(text, /Former Congregations/);
+  assert.equal(r.queryAll('section[data-part="former"] li[data-id]').length, 2);
 });
 
 test('detail: story paragraphs, a gallery with one button per picture, contact facts, sources and neighbour links', async () => {
@@ -113,25 +114,23 @@ test('detail: story paragraphs, a gallery with one button per picture, contact f
   assert.match(text, /1950 Bathurst Street/);
   assert.ok(r.queryAll('[data-part="facts"] a').some((a) => a.getAttribute('href') === 'tel:4167893291'));
   assert.ok(r.queryAll('[data-part="sources"] a').length >= 1);
-  assert.match(text, /All synagogues/);
+  assert.match(text, /All Synagogues/);
   assert.ok(r.queryAll('nav a').length === 2);
 });
 
-test('detail: a one-picture congregation shows it, open questions are listed, and a picture that is not of the synagogue says so', async () => {
+test('detail: a one-picture congregation shows it, and no hedging notes or open questions are shown', async () => {
   const { root: r, text } = await show({ id: 'iyr-ha-melech-kingston' });
-  assert.equal(r.querySelector('[data-part="no-picture"]'), null);
   assert.ok(r.querySelector('.syn-hero img'));
-  assert.match(text, /To confirm/);
-  assert.match(text, /No telephone number found/);
-  const { text: plaza } = await show({ id: 'or-hadash-newmarket' });
-  assert.match(plaza, /the bank in the foreground is not the synagogue/);
-  const { text: shared } = await show({ id: 'neshamah-york-region' });
-  assert.match(shared, /not a synagogue building of its own/);
+  assert.doesNotMatch(text, /To confirm|not found|No telephone/);
+  for (const id of ['or-hadash-newmarket', 'neshamah-york-region', 'beth-chaverim-baycrest']) {
+    const { text: t } = await show({ id });
+    assert.doesNotMatch(t, /legacy|to confirm|not found|reconstruct|inferred|rests on|ARZA/i, id);
+  }
 });
 
-test('detail: legacy entries carry the Legacy badge and the closing story; an unknown id gives a polite notice', async () => {
+test('detail: former congregations carry a badge and the closing story; an unknown id gives a polite notice', async () => {
   const { text } = await show({ id: 'bnai-tikvah-niagara-falls' });
-  assert.match(text, /Legacy/);
+  assert.match(text, /Former congregation/);
   assert.match(text, /sold in November 2020/);
   const { root: r } = await show({ id: 'no-such-place' });
   assert.ok(r.querySelector('[role="alert"]'));
@@ -148,5 +147,5 @@ test('standalone page: synagogues/index.html is current, lists every congregatio
   assert.equal(html, buildPage());
   for (const c of D.congregations) assert.ok(html.includes(`href="../#/synagogues/${c.id}"`), c.id);
   assert.ok(!/<script|\son[a-z]+\s*=/i.test(html));
-  assert.match(html, /<title>Reform synagogues in Canada<\/title>/);
+  assert.match(html, /<title>Reform Synagogues in Canada<\/title>/);
 });

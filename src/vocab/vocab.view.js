@@ -197,7 +197,7 @@ export function mount(root, ctx) {
   const heWord = (e, cls) => e.pointed ? heText(e.pointed, cls) : heText(e.lemma, cls);
   const translitLine = (e) => {
     const tl = translitFor(e, tradition());
-    return el('p', { class: 'vc-meta' }, `Transliteration (${TRAD[tradition()]}, approximate): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
+    return el('p', { class: 'vc-meta' }, `Say it (${TRAD[tradition()]}): `, tl ? el('i', {}, tl) : '(not available: this word has no vowel points yet)');
   };
   const known = new Map(); // id -> entry, for every tier loaded so far (cross-references)
   /** Wrap runs of Hebrew letters (with points) inside an English string in lang=he spans. */

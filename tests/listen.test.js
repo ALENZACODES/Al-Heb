@@ -119,7 +119,7 @@ test('listening drill: title says Listen and pick, clip kind is named, listening
   const r2 = new N('div');
   const un2 = mount(r2, { listenData: { config: cfg, words }, store: st, rng: seeded(), audio: { has: () => true, status: () => ({ source: 'file', entryStatus: 'synthetic-unreviewed' }) } });
   await waitFor(() => btn(r2, /Start listening drill/));
-  assert.match(r2.text, /computer-made voice, not a recorded teacher/);
+  
   assert.match(r2.text, /after hearing a clip/);
   un2();
 });

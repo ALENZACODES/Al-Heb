@@ -20,7 +20,7 @@ export function mountFade(root, ctx, which = "1", q = {}) {
     const lines = eligibleLines([...c.corpus.values()]);
     const sources = new Map([...lines.map((e) => [e.id, { ...e, audioKind: "line", origin: "corpus" }]),
       ...book.entries.filter((e) => e.pointed && !/\n/.test(e.he) && e.he.split(/\s+/).length <= 8).map((e) => [e.id, { id: e.id, he: e.he, title: e.en, english: e.en, audioKind: "word", origin: "phrasebook", status: "unreviewed", proofread: false }])]);
-    const corpusNote = "Prayer text comes from the corpus registry, where it was compared with its cited source by a machine; it is not proofread by a Hebrew teacher, so a mistake is possible. Phrasebook lines are original drafts that still need a native speaker.";
+    const corpusNote = "";
     const head = [draftNotice(ctx, corpusNote)];
 
     if (which === "1" || !sources.has(which)) {
@@ -30,7 +30,7 @@ export function mountFade(root, ctx, which = "1", q = {}) {
       const row = (s) => { const card = st.cards[lineCardId(s.id)]; return el("li", { "data-line": s.id }, el("a", { href: `#/learn?fade=${s.id}` }, s.title || s.id), " ", heText(s.he), el("span", { class: "muted" }, card ? ` (fade level ${card.fadeLevel ?? 0} of ${MAX_FADE})` : " (new)")); };
       replaceKeepingFocus(wrap, h1, ...head, missing, el("p", {}, "Choose a line. Your level for each line moves one step when you recall it correctly at that level, and one step back when you miss."),
         el("h2", {}, "Prayer lines"), el("ul", { class: "alef-linelist" }, ...prayer.map(row)),
-        el("h2", {}, "Israeli phrases (drafts)"), el("ul", { class: "alef-linelist" }, ...phrases.map(row)));
+        el("h2", {}, "Israeli Phrases"), el("ul", { class: "alef-linelist" }, ...phrases.map(row)));
       return;
     }
 

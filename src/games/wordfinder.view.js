@@ -30,7 +30,7 @@ export function mount(root, ctx) {
     h('p', { class: 'muted' }, 'Hebrew reads right to left ←. The dots help with sounds. Every word has an English meaning.'),
     progress, status, sound, stage, more,
     h('p', { class: 'muted wf-source' },
-      '240 sourced words · 5 words per gentle round · vocabulary preview, not yet checked by a native Hebrew educator.')));
+      '240 words · 5 words per round')));
 
   // The treasure-map backdrop made for this game (approved art, decorative
   // only — never a word cue). A missing picture leaves the page as it was.
@@ -90,7 +90,7 @@ export function mount(root, ctx) {
       onStatus: (message) => { if (alive && current()?.id === word.id) sound.textContent = message; } });
     if (!alive || current()?.id !== word.id) return;
     if (result?.source === 'file') sound.textContent = 'Hebrew audio played from the ALEF library.';
-    else if (result?.source === 'tts-fallback') sound.textContent = 'Spoken with your device’s Hebrew voice, not a recorded teacher.';
+    else if (result?.source === 'tts-fallback') sound.textContent = 'Spoken with your device’s Hebrew voice.';
     else sound.textContent = result?.message || 'No Hebrew audio available; use the pointed text and pronunciation guide.';
   }
   function hearingButtons(word) {

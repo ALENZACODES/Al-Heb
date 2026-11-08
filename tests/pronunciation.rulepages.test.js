@@ -44,7 +44,7 @@ test('index page links to all seven rule pages and to Compare', async () => {
   const root = await page();
   const links = all(root, (x) => x.tagName === 'A').map((a) => a.getAttribute('href'));
   for (const id of ['kamatz', 'tav', 'holam', 'het', 'ayin', 'resh', 'stress']) assert.ok(links.includes(`#/rules/${id}`), id);
-  assert.ok(links.includes('#/compare')); assert.match(text(root), /Rule-generated and unverified/);
+  assert.ok(links.includes('#/compare')); assert.match(text(root), /each tradition says/);
 });
 
 test('a rule page shows the summary, a three-row table, "Who says it this way", limits, six example rows, sources and prev/next links', async () => {

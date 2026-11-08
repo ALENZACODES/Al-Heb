@@ -26,7 +26,7 @@ export function mount(root,ctx) {
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-rentalagent'},h('h1',{id:'view-title'},'Apartment Rental Agent'),
     h('p',{},'Inspect property features in Hebrew; select the listing that meets the requested feature.'),
-    h('p',{class:'muted'},'These are synthetic feature cards, not real offers. Air conditioning vocabulary unavailable in this source.'),status,board);
+    status,board);
   root.replaceChildren(article);
   // The apartment backdrop made for this game (approved art, decorative only —
   // never a word cue). A missing picture leaves the page as it was.

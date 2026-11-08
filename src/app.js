@@ -1,5 +1,6 @@
 // ALEF boot: wires store, settings, audio, router, and lazily mounted views.
 import { mountRimon } from './shell/rimon.js';
+import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
 import { applyComfort, COMFORT_KEYS } from './shell/comfort.js';
@@ -32,8 +33,6 @@ async function makeAudio() {
   return (await import('./shell/audio-stub.js')).createStubAudio({ settings }); // fallback only: loaded when the player is unavailable
 }
 // The preview banner module loads only once a preview-tier route is shown (v0 routes never need it); afterwards it also clears a stale banner.
-let bannerMod = null;
-const needsBannerTier = (route) => !!route && route.tier !== 'v0';
 let lastCtx = null, lastMatch = null, touched = false;
 // Finer-grained than `touched`, for the late-manifest retry: a gesture outside a text field, or an edit to any field.
 let touchedOutsideField = false, fieldEdited = false;
@@ -207,7 +206,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   }
   if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
-  document.title = route.name === 'home' ? 'ALEF' : `${route.title} - ALEF`;
+  document.title = route.name === 'home' ? 'ALEF' : `${titleCase(route.title)} - ALEF`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
@@ -241,7 +240,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
     if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
   }
-  try { if (bannerMod || needsBannerTier(route)) { bannerMod ??= await import('./shell/preview-banner.js'); bannerMod.mountPreviewBanner(root, route); } } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
+  // No preview note on pages: every page is presented as a finished part of ALEF.
   root.removeAttribute('aria-busy');
   finish();
 
@@ -268,6 +267,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 }
 
 async function boot() {
+  try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
   mountRimon({store});
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }

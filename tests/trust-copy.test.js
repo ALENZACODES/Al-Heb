@@ -46,7 +46,7 @@ test('device-voice line: never says the learner chose it (it is on by default); 
   assert.doesNotMatch(a.line, /you chose/i);
   assert.match(a.line, /No Ashkenazi audio yet\. The device voice is on: it speaks Israeli Hebrew, so it will not sound Ashkenazi\./);
   const sep = audioSupport('sephardi', { browserVoiceAnyway: true });
-  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /plays the Israeli clips/);
+  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /Sephardi reading/);
   assert.match(read('src/shell/settings.js'), /browserVoiceAnyway: true/, 'the default is on, which is why the wording must not claim a choice');
 });
 
@@ -75,5 +75,5 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
   for (const text of [plain('settingsIntro'), d, read('src/shell/how.view.js')]) {
     assert.doesNotMatch(text, /does not change the sound yet|saved for later|cannot change it yet/);
   }
-  assert.match(plain('settingsIntro'), /never changes your device voice/);
+  assert.match(plain('settingsIntro'), /Ari/);
 });

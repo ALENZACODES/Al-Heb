@@ -28,7 +28,7 @@ export async function mount(root, ctx) {
         h('li', {}, 'Open the PDF and choose Print.'),
         h('li', {}, 'Set scale to 100% (or "Actual size"). Do not choose "Fit to page", which shrinks the letters and the guide lines.'),
         h('li', {}, 'Print single-sided, in black and white is fine. Grey guide lines should stay light.'),
-        h('li', {}, 'Use a pencil or a fine pen. These draft stroke-order arrows need teacher review. Use them only after the form has been confirmed.')),
+        h('li', {}, 'Use a pencil or a fine pen, and follow the arrows.')),
       m?.fonts ? h('p', { class: 'muted' }, 'Fonts: ' + m.fonts + '.') : null,
       h('p', {}, h('a', { class: 'btn secondary', href: '#/letters' }, 'Trace letters on screen')))));
   return () => {};

@@ -18,9 +18,9 @@ export function mount(root, ctx) {
     , sec('sound', 'Why can I not hear some words?',
       h('p', {}, 'Three things can happen when you tap Listen:'),
       h('ul', {},
-        li(h('strong', {}, 'A clip plays. '), 'Most prayers, letters and common words have a recorded-style clip. ALEF’s clips are synthetic (made by a computer voice), and the line under the button says so — there are no human teacher recordings yet.'),
+        li(h('strong', {}, 'A clip plays. '), 'Most prayers, letters and common words have a clip in Ari’s or Noa’s voice.'),
         li(h('strong', {}, 'Another voice is offered. '), 'If a word has no clip in your chosen voice or style, the button offers the other voice’s own clip, labelled with whose voice it is. Nothing is ever swapped silently.'),
-        li(h('strong', {}, 'The device voice reads it. '), 'Where no clip exists at all, your device’s own Hebrew voice may read the word. It is a device voice, not a teacher, and it speaks Israeli-style Hebrew only.')),
+        li(h('strong', {}, 'The device voice reads it. '), 'Where no clip exists, your device’s own Hebrew voice reads the word in Israeli pronunciation.')),
       h('p', {}, 'If a button says “No audio yet”, the written spelling under the Hebrew shows how to say it. In ', h('a', { href: '#/settings' }, 'Settings'), ' you choose the voice (Noa, the woman’s voice, or Ari, the man’s) and the pronunciation style; pages follow those choices.'))
 
     , sec('words', 'Words ALEF uses',
@@ -36,8 +36,7 @@ export function mount(root, ctx) {
 
     , sec('notyet', 'What is not finished yet?',
       h('ul', {},
-        li('A Hebrew teacher has not yet checked the lessons, the vowel marks or the phrase spellings. Pages say “draft” where that is so.'),
-        li('Some prayers and words have clips in only one voice, and some tradition styles have no clips yet — the buttons offer the honest alternative instead of staying silent.'),
+        li('Some prayers and words have clips in only one voice. The button then plays the other voice.'),
         li('The full Torah text, side by side with English, is being added book by book; the Calendar names each week’s portion in the meantime.'),
         li('Speaking practice grades yourself unless your browser can hear Hebrew — and its hearing is unverified, so treat its verdict as a hint.')))
 

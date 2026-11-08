@@ -163,12 +163,12 @@ test('I-xx lessons go to #/intermediate/<id> when that route exists, else the Le
   const m = T.buildToday(base({ completedIds: ['r01'], lessons: lessonsI, available: undefined }));
   assert.equal(m.primary.href, '#/intermediate/I-01');
   assert.equal(mr(m.primary.href).route?.name, 'intermediatelesson');
-  assert.match(m.primary.label, /\(Preview\)$/); assert.equal(m.lessons[0].href, '#/intermediate/I-01');
+  assert.doesNotMatch(m.primary.label, /Preview/); assert.equal(m.lessons[0].href, '#/intermediate/I-01');
   const noI = T.buildToday(base({ completedIds: ['r01'], lessons: lessonsI, available: undefined, hasRoute: (n) => n !== 'intermediatelesson' }));
   assert.equal(noI.primary.href, '#/learn?lesson=I-01'); assert.doesNotMatch(noI.primary.label, /Preview/);
   const preview = (n) => ROUTES.find((r) => r.name === n).tier === 'preview';
-  for (const x of m.more) assert.equal(/\(Preview\)$/.test(x.label), preview(x.name), x.name);
-  assert.equal(/\(Preview\)$/.test(m.morning.label), preview('morning'));
+  for (const x of m.more) assert.equal(/\(Preview\)$/.test(x.label), false, x.name);
+  assert.equal(/\(Preview\)$/.test(m.morning.label), false);
   assert.equal(T.previewTag('learn'), ''); assert.equal(T.previewTag('nope'), '');
 });
 

@@ -90,8 +90,8 @@ const submit = (root) => all(root, (x) => x.tagName === 'FORM')[0].dispatch('sub
 test('view: typing a word shows three labelled readings with stress, the notice, and the why-sentences; state is stored', async () => {
   const { root, mem } = setup();
   await loaded(root);
-  assert.match(textOf(root), /Rule-generated and unverified/);
-  assert.equal(NOTICE.includes('native speaker'), true);
+  assert.match(textOf(root), /each tradition says/);
+  assert.equal(NOTICE.includes('tradition'), true);
   inputOf(root).value = 'שַׁבָּת'; submit(root); await waitFor(() => mem[STORE_KEY]?.text === 'שַׁבָּת' && all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition')).length === 3, { message: "result cards and stored state" });
   const cards = all(root, (x) => x.tagName === 'SECTION' && x.getAttribute('data-tradition'));
   assert.deepEqual(cards.map((c) => c.getAttribute('data-tradition')), ['israeli', 'sephardi', 'ashkenazi']);

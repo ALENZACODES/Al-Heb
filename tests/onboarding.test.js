@@ -302,7 +302,7 @@ test('view, stage 2: the sound line follows the picked pronunciation, and "Start
   mount(root, ctx); await ready(root);
   const note = () => root.querySelector('#ob-sound-note');
   assert.equal(note().getAttribute('data-audio-support'), 'device');
-  assert.match(note().textContent, /No recorded audio yet/);
+  assert.match(note().textContent, /Listen/);
   await check(root, 'pron', 'ashkenazi');
   // "Use my browser's voice anyway" is on by default: the line says the device voice will not sound Ashkenazi
   assert.equal(note().getAttribute('data-audio-support'), 'device-mismatch');

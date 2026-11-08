@@ -122,7 +122,7 @@ export function sampleModel(o = {}) {
     displayName: name,
     nameEntered: !!name,
     previewAt: typeof at === 'number' && Number.isFinite(at) ? at : null,
-    dateLabel: `Preview date: ${formatPreviewDate(at)}`,
+    dateLabel: `Date: ${formatPreviewDate(at)}`,
     brand: FACE.issuer,
     subtitle: FACE.subheading,
     kicker: FACE.course,

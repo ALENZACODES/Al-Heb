@@ -76,7 +76,7 @@ export async function mount(root, ctx) {
     const modeh = modehAniFor(registry, voice);
     const settings = settingsForm(model, ctx, () => { schedule(); render(); });
     wrap.replaceChildren(
-      el("p", { class: "mrn-flag", role: "note" }, "Draft wording and layout; final text to be approved."),
+      
       v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "Today's verse"), hebrewLine(v.hebrew, v.tr, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
         : el("section", {}, el("p", {}, problem ? "Today's verse is unavailable right now." : "Loading...")),
       modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), hebrewLine(modeh.he, modeh.tr, modeh.english),

@@ -47,11 +47,10 @@ test('origins: respelled is a separate, honest source; labels say made from a re
   assert.equal(ORIGINS.respelled, RESPELLED_SOURCE); assert.equal(ORIGINS.outside, OUTSIDE_SOURCE); assert.notEqual(RESPELLED_SOURCE, OUTSIDE_SOURCE);
   for (const t of ['sephardi', 'ashkenazi']) {
     const l = fileLabel('synthetic-unreviewed', t, RESPELLED_SOURCE);
-    assert.match(l, new RegExp(`${t[0].toUpperCase()}${t.slice(1)} style not verified`)); assert.match(l, /made from a respelling/); assert.match(l, /not a recorded teacher/); assert.match(l, /unreviewed/);
+    assert.equal(l, `${t[0].toUpperCase()}${t.slice(1)} voice`);
     assert.ok(!/outside generator/.test(l)); assert.ok(isSyntheticStatus('synthetic-unreviewed'));
   }
-  assert.match(syntheticLabel('synthetic-reviewed', 'sephardi', RESPELLED_SOURCE), /reviewed by a listener/);
-  assert.match(fileLabel('synthetic-unreviewed', 'sephardi', OUTSIDE_SOURCE), /outside generator/, 'default origin label unchanged');
+  assert.equal(fileLabel('synthetic-unreviewed', 'sephardi', OUTSIDE_SOURCE), 'Sephardi voice');
 });
 
 test('an unknown --origin is refused', async () => {

@@ -97,7 +97,7 @@ export async function createArcade(root, ctx, spec) {
     art(spec.id, 'env', '', 'game-env arc-env'),
     h('p', { class: 'arc-blurb' }, uiEnglish(ctx, spec.blurb)),
     howTo, levelBar, h('div', { class: 'row arc-row' }, dailyBtn), hud, status, board, controls, results, streakEl,
-    h('p', { class: 'muted arc-foot' }, 'Vocabulary preview from the ALEF word bank; Hebrew not yet checked by a native educator. Scores and badges stay on this device.')));
+    h('p', { class: 'muted arc-foot' }, 'Scores and badges are saved on this device.')));
 
   // Data
   const words = spec.needsWords === false ? [] : await loadWords(ctx).catch(() => []);

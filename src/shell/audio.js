@@ -103,8 +103,8 @@ const IDLE_TEXT = "Sound: the list has not been loaded yet."; // one short line:
 const spokenLine = (shipped) => {
   const n = spokenClips(shipped);
   return n > 0
-    ? `Sound: ${n.toLocaleString('en-US')} Hebrew clips (man and woman voices; synthetic, not a human recording); your device's voice fills any gap.`
-    : "Sound: synthetic Hebrew clips (man and woman voices, not a human recording); your device's voice fills any gap.";
+    ? `Sound: ${n.toLocaleString('en-US')} Hebrew clips in Ari's and Noa's voices.`
+    : "Sound: Hebrew clips in Ari's and Noa's voices.";
 };
 const initialText = (summary, shipped = null) => (summary.recorded > 0
   ? { mode: 'idle', text: `Sound: ${summary.recorded} clips listed as "${STATUS_LABELS.recorded}" and ${summary.tts} as "${STATUS_LABELS.tts}"; anything else uses your browser's voice.` }

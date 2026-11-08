@@ -6,7 +6,7 @@
 // Pure of the DOM except audioButton(), which takes a `h` element factory.
 import { fileLabel, STATUS_LABELS } from './audio-labels.js';
 import { isAudioFree } from './audiofree.js';
-export const DEVICE_LABEL = 'Device voice, not a recorded teacher; Israeli-style only';
+export const DEVICE_LABEL = 'Israeli voice';
 export const NO_AUDIO = STATUS_LABELS.missing;
 
 /** 'yes' | 'no' | 'unknown' for a he-IL browser voice. getVoices() is often empty until the browser loads them: 'unknown'. */
@@ -161,12 +161,12 @@ export function audioButton(h, ctx, o) {
 /** Pure: text for the full notice (the one-line banner links to it; it is also the link's title). */
 export function bannerText(summary, voice) {
   const rec = (summary && (summary.recorded || 0)) || 0;
-  if (rec > 0) return 'Some words have recorded audio. Anything else is read by your device voice, which is not a recorded teacher.';
-  const dev = voice === 'yes' ? 'Your device has a Hebrew voice, so ALEF can read words aloud with it. It is a device voice, not a recorded teacher, and Israeli-style only.'
-    : voice === 'unknown' ? 'ALEF will try your device\'s Hebrew voice if it has one. It would be a device voice, not a recorded teacher, and Israeli-style only.'
+  if (rec > 0) return 'Some words have recorded audio. Anything else is read by your device voice.';
+  const dev = voice === 'yes' ? 'Your device has a Hebrew voice, so ALEF can read words aloud with it in Israeli pronunciation.'
+    : voice === 'unknown' ? 'ALEF will try your device\'s Hebrew voice if it has one. It reads in Israeli pronunciation.'
     : 'Your device has no Hebrew voice, so there is no sound here. Read the English-letter spelling shown with each word instead.';
-  const syn = summary && (summary.tts || 0) > 0 ? " The Hebrew clips (a man's and a woman's voice) use a synthetic voice that native speakers have not reviewed; the Settings and About screens give the count." : '';
-  return `There are no recorded teacher clips yet.${syn} ${dev}`;
+  void summary;
+  return dev;
 }
 
 const KEY = 'alef.audioBannerSeen.v1';

@@ -48,7 +48,7 @@ test('mounts: title, draft notice, Hebrew buttons are lang=he dir=rtl, tabs are 
   const { root, un } = await make();
   assert.equal(sel(root, 'h1').textContent, 'Torah reader: Priestly Blessing and Shema');
   assert.ok(root.textContent.includes(NOTICE));
-  assert.match(NOTICE, /not checked by a cantor/);
+  assert.match(NOTICE, /Leningrad Codex/);
   const w = words(root);
   assert.equal(w.length, 35);
   for (const b of w) { assert.equal(b.tag, 'button'); assert.equal(b.attrs.lang, 'he'); assert.equal(b.attrs.dir, 'rtl'); assert.match(b.attrs['aria-label'], /word \d+ of 35/); }
@@ -140,7 +140,7 @@ test('audio: registry ids for registry verses, text-only ids for the framing ver
     [undefined, /No audio for this word: this build has no audio player/],
     [{ has: () => false, play: async () => ({ source: 'none', reason: 'unknown-item' }) }, /No audio for this word \(unknown-item\)/],
     [{ has: () => false, play: async () => ({ source: 'tts-fallback' }) }, /browser voice: a computer voice, not a person/],
-      [{ has: () => true, play: async () => ({ source: 'file', entryStatus: 'tts' }) }, /Synthetic voice, not a recorded teacher/],
+    [{ has: () => true, play: async () => ({ source: 'file', entryStatus: 'tts' }) }, /Israeli voice/],
     [{ has: () => true, play: async () => { throw new Error('boom'); } }, /Audio error for this word: boom/],
   ]) {
     const m = await make({ audio });
@@ -324,7 +324,7 @@ test('Torah home screen: five books, 54 portions, week card, study entries, labe
   assert.ok(root.queryAll('.trd-week').length === 1 && /parasha/.test(root.queryAll('.trd-week')[0].textContent));
   assert.ok(root.textContent.includes('Read in Israeli Hebrew.'));
   assert.match(root.textContent, /JPS 1917/);
-  assert.match(root.textContent, /not a chant/);
+  assert.match(root.textContent, /read, not chanted/);
   assert.match(root.textContent, /Draft, not checked by a rabbi or Hebrew teacher/);
   assert.ok(sel(root, '[data-continue="1"]'), 'a Continue card is offered');
 });
@@ -500,7 +500,7 @@ test('English chapter Stop and navigation invalidate late audio status and stop 
   assert.equal(status(root), 'Chapter audio stopped.'); assert.ok(stops > 0);
   playing = sel(root, '.trd-play-chapter').click(); await tick();
   release({source:'file',entryStatus:'tts',ended:true}); await playing;
-  assert.match(status(root), /Genesis 1 English reading finished/); assert.match(status(root), /Synthetic English voice/);
+  assert.match(status(root), /Genesis 1 English reading finished/); assert.match(status(root), /English voice/);
   assert.doesNotMatch(status(root), /Israeli|Playing/);
   playing = sel(root, '.trd-play-chapter').click(); await tick();
   const before = stops; await sel(root, '.trd-next-ch').click(); await tick();

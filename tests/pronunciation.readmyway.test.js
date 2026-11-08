@@ -68,7 +68,7 @@ test('printable sheet: print button enabled only with results and calls print; i
   const css = text(byTag(root, 'STYLE')[0]);
   assert.match(css, /@media print/); assert.match(css, /\.rmw-sheet/); assert.match(css, /rmw-noprint\{display:none\}/);
   const sheet = all(root, (x) => (x.getAttribute('class') || '').includes('rmw-sheet'))[0];
-  assert.match(text(sheet), /Rule-generated and unverified/);
+  assert.match(text(sheet), /each tradition says/);
   assert.ok(byTag(sheet, 'TH').every((th) => th.getAttribute('scope')));
 });
 

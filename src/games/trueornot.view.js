@@ -10,11 +10,11 @@ const spec = {
   blurb: 'A Hebrew word appears with a meaning under it. Is the meaning right? Tap TRUE on the right, NOT on the left, and keep the streak alive. Wrong pairings get sneakier each level.',
   howTo: ['Read the word and the meaning shown.', 'Tap TRUE (or press →) if they match, NOT (or press ←) if they do not.', 'A streak of right answers multiplies your points. One wrong call resets it.', 'Twenty cards per round; the timer per card shrinks on higher levels.'],
   levels: [
-    { name: '20 cards, easy decoys', cards: 20, perCard: 6, sameTheme: false },
-    { name: 'Decoys from the same theme', cards: 20, perCard: 5, sameTheme: true },
-    { name: 'Faster', cards: 24, perCard: 4, sameTheme: true },
-    { name: 'Sounds instead of Hebrew', cards: 24, perCard: 4, sameTheme: true, translit: true },
-    { name: '30 cards, 3 seconds each', cards: 30, perCard: 3, sameTheme: true, translit: false },
+    { name: '20 cards, easy decoys', cards: 20, perCard: 8, sameTheme: false },
+    { name: 'Decoys from the same theme', cards: 20, perCard: 7, sameTheme: true },
+    { name: 'Faster', cards: 24, perCard: 6, sameTheme: true },
+    { name: 'Sounds instead of Hebrew', cards: 24, perCard: 6, sameTheme: true, translit: true },
+    { name: '30 cards, 5 seconds each', cards: 30, perCard: 5, sameTheme: true, translit: false },
   ],
   par: (l, cfg) => cfg.cards * 10,
   seconds: (l, cfg) => cfg.cards * cfg.perCard + 10,
@@ -23,7 +23,7 @@ const spec = {
 function setup(A) {
   const cfg = A.cfg, rnd = A.rnd;
   const words = A.words; if (words.length < 10) { A.announce('Word bank did not load.'); return; }
-  let n = 0, card = null, streak = 0, deadline = 0;
+  let n = 0, card = null, streak = 0, leftMs = 0;
   const he = A.h('div', { class: 'arc-big', lang: 'he', dir: 'rtl' });
   const en = A.h('p', { class: 'arc-prompt' });
   const bar = A.h('div', { class: 'arc-bar', 'aria-hidden': 'true' }, A.h('span', { style: 'width:100%' }));
@@ -40,7 +40,7 @@ function setup(A) {
     card = { w, truth };
     he.textContent = cfg.translit ? w.translit : w.he;
     en.textContent = `${shown.en} · card ${n} of ${cfg.cards} · streak ${streak}`;
-    deadline = Date.now() + cfg.perCard * 1000;
+    leftMs = cfg.perCard * 1000;
     if (!cfg.translit) A.sayWord(w);
   };
   const answer = (said) => {
@@ -51,7 +51,7 @@ function setup(A) {
     next();
   };
   A.keys((k) => { if (k === 'right') { answer(true); return true; } if (k === 'left') { answer(false); return true; } return false; });
-  if (!A.untimed) A.loop(() => { const left2 = Math.max(0, deadline - Date.now()); bar.firstChild.style.width = `${(100 * left2) / (cfg.perCard * 1000)}%`; if (left2 <= 0 && card) { A.announce(`Too slow. ${card.w.he} means ${card.w.en}.`); streak = 0; A.miss(); next(); } }, 100);
+  if (!A.untimed) A.loop(() => { leftMs = Math.max(0, leftMs - 100); const left2 = leftMs; bar.firstChild.style.width = `${(100 * left2) / (cfg.perCard * 1000)}%`; if (left2 <= 0 && card) { A.announce(`Too slow. ${card.w.he} means ${card.w.en}.`); streak = 0; A.miss(); next(); } }, 100);
   A.setLives(0);
   next();
 }

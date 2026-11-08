@@ -8,16 +8,16 @@ export const STORE_KEY = 'games.bubbleword.v1';
 const spec = {
   id: 'bubbleword', title: 'Bubble Word', titleHe: 'בּוּעוֹת',
   blurb: 'A word with a hole in it. Bubbles rise carrying letters; pop the one that fills the hole before it floats away. The meaning tells you which letter it must be.',
-  howTo: ['Read the word with a gap and its meaning.', 'Tap the bubble carrying the missing letter.', 'A wrong bubble costs a point; letting the right bubble escape costs a life.', 'Twelve words finish the level. Later levels have more bubbles and faster rising.'],
+  howTo: ['Read the word with a gap and its meaning.', 'Tap the bubble carrying the missing letter.', 'A wrong bubble costs two points; letting the right bubble escape costs a life.', 'Ten words finish level 1. Later levels need more words, with more bubbles rising faster.'],
   levels: [
-    { name: '3 bubbles, slow', bubbles: 3, speed: 90, goal: 10, min: 2, max: 3 },
-    { name: '4 bubbles', bubbles: 4, speed: 75, goal: 12, min: 3, max: 4 },
-    { name: '5 bubbles', bubbles: 5, speed: 65, goal: 12, min: 3, max: 5 },
-    { name: '6 bubbles, look-alikes', bubbles: 6, speed: 55, goal: 14, min: 3, max: 6, confuse: true },
-    { name: '7 bubbles, fast', bubbles: 7, speed: 45, goal: 16, min: 4, max: 7, confuse: true },
+    { name: '3 bubbles, slow', bubbles: 3, speed: 95, goal: 10, min: 2, max: 3 },
+    { name: '4 bubbles', bubbles: 4, speed: 85, goal: 12, min: 3, max: 4 },
+    { name: '5 bubbles', bubbles: 5, speed: 75, goal: 12, min: 3, max: 5 },
+    { name: '6 bubbles, look-alikes', bubbles: 6, speed: 66, goal: 14, min: 3, max: 6, confuse: true },
+    { name: '7 bubbles, fast', bubbles: 7, speed: 58, goal: 16, min: 4, max: 7, confuse: true },
   ],
   par: (l, cfg) => cfg.goal * 10,
-  seconds: (l, cfg) => 100,
+  seconds: (l, cfg) => 120,
 };
 
 const LOOKALIKE = { 'ב': 'כ', 'כ': 'ב', 'ד': 'ר', 'ר': 'ד', 'ה': 'ח', 'ח': 'ה', 'ת': 'ח', 'ו': 'ז', 'ז': 'ו', 'ג': 'נ', 'נ': 'ג', 'ס': 'ם', 'ט': 'מ', 'מ': 'ט', 'ע': 'צ', 'צ': 'ע' };

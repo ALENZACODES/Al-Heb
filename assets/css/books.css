@@ -11,7 +11,7 @@
 
 .book-stage { display: grid; gap: .75rem; justify-items: center; text-align: center; }
 .book-page-img { width: 100%; max-inline-size: 44rem; aspect-ratio: 7 / 4; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
-.book-page-pending { display: grid; place-items: center; }
+.book-page-pending { display: grid; place-items: center; align-content: center; gap: .5rem; }
 .book-line { font-size: 2rem; line-height: 1.5; font-weight: 700; }
 .book-translit { font-size: 1.1rem; margin: 0; }
 .book-en { margin: 0; }
@@ -23,3 +23,11 @@
 .book-dots { display: flex; gap: .4rem; justify-content: center; padding-block: .5rem; flex-wrap: wrap; }
 .book-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); background: transparent; padding: 0; cursor: pointer; }
 .book-dot.on { background: var(--accent); }
+
+/* Books whose artwork is not made yet: a gold banner straight across the front of the cover and of the reader's picture space */
+.book-cover-soon, .book-page-pending { position: relative; overflow: hidden; }
+.book-cover-soon .book-cover-title { opacity: .55; }
+.book-soon-banner { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%) rotate(-8deg) scaleX(1.15);
+  background: #c9a227; color: #0f2a1d; text-align: center; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+  font-size: .85rem; white-space: nowrap; padding: .45rem .5rem; box-shadow: 0 2px 6px rgba(0,0,0,.18); border-block: 2px solid #0f2a1d; }
+.book-page-pending .book-soon-banner { font-size: 1.4rem; padding: .8rem 1rem; }

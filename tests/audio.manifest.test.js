@@ -47,7 +47,10 @@ test('synthetic clips have files and explicit provenance; none is a human record
     assert.ok(e.source === 'outside-synthetic' || e.source === 'paid-cloud' || /^tts[:-]/.test(e.source), `${e.path} source ${e.source}`);
     assert.notEqual(e.synth?.reviewed, true, `${e.path} claims a review that has not happened`);
     if (e.status === 'synthetic-unreviewed') {
-      assert.ok(['outside-synthetic', 'tts-respelled'].includes(e.source), e.path);
+      // Ingested clips only: outside-synthetic (outside generator), tts-respelled (Sephardi/Ashkenazi pre-existing game audio,
+      // Latin sound word spoken) and tts-hebrew (Israeli pre-existing game audio, pointed Hebrew spoken — fix #23: the 17
+      // tts-hebrew rows are the same ingest class as the tts-respelled rows, Israeli tradition; tools/tts/lib.mjs SOURCES).
+      assert.ok(['outside-synthetic', 'tts-respelled', 'tts-hebrew'].includes(e.source), e.path);
       assert.notEqual(e.synth?.reviewed, true, e.path);
     }
     assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), true, e.path);

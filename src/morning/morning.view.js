@@ -114,7 +114,7 @@ function settingsForm(model, ctx, changed) {
   return el("section", { "aria-labelledby": "mrn-set" }, el("h2", { id: "mrn-set" }, "Reminder and streak settings"),
     el("p", { class: "small" }, "Reminders fire only while ALEF is open; there is no server."),
     el("p", {}, el("label", {}, on, " Morning reminder"), " ", el("label", {}, "at ", time)),
-    sup.supported && sup.permission === "default" ? el("button", { type: "button", class: "btn secondary", onclick: async () => { const r = await requestNotificationPermission(); status.textContent = r === "granted" ? "Notifications on while ALEF is open." : "No notifications; the in-app banner will be used."; changed(); } }, "Allow notifications") : null,
+    sup.supported && sup.permission === "default" ? el("button", { type: "button", class: "btn secondary", onclick: async () => { const r = await requestNotificationPermission(); const msg = r === "granted" ? "Notifications on while ALEF is open." : r === "denied" ? "Notifications are blocked; you will see a banner when you open ALEF instead." : "Notifications were not allowed (the question was closed). You can try again, or rely on the in-app banner."; if (r === "granted" || r === "denied") changed(); const st = document.querySelector(".mrn-flag") || status; st.textContent = msg; } }, "Allow notifications") : null,
     status,
     el("p", {}, el("label", {}, obs, " Observant mode: no reminders on Shabbat or festivals; a reminder before sundown on the eve instead")),
     el("p", {}, el("label", {}, frz, " Streak rests on Shabbat and festival days")),

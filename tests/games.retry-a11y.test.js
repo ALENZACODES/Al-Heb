@@ -132,7 +132,8 @@ test('basket stops include 4 and 96, and pointer, arrows, and the slider share o
   assert.equal(place.value, '70');
   assert.equal(place.getAttribute('aria-valuenow'), '70');
   assert.equal(basket.style.insetInlineStart, '70%');
-  const pause = [...root.querySelectorAll('button')].find((b) => b.textContent === 'Pause');
+  const pause = [...root.querySelectorAll('button')].find((b) => b.textContent === 'Start');
+  assert.ok(pause, 'with motion on the game waits for Start');
   const onKey = listeners.find(([type]) => type === 'keydown')[1];
   onKey({ key: 'ArrowRight', target: pause, preventDefault() {} });
   assert.equal(place.value, '72');

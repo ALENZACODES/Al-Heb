@@ -19,6 +19,7 @@ export function createMediaPolicy({ now = () => Date.now() } = {}) {
   let speech = 0;
   let cantorial = false;
   let routeSacred = false;
+  let musicChosen = false; // the learner pressed Play music: no first-minute wait for them
   const subs = new Set();
   const emit = () => { for (const fn of subs) { try { fn(snapshot()); } catch { /* ignore */ } } };
   function quiet() { return now() - start < QUIET_MS; }
@@ -30,7 +31,7 @@ export function createMediaPolicy({ now = () => Date.now() } = {}) {
     subscribe(fn) { subs.add(fn); fn(snapshot()); return () => subs.delete(fn); },
     quiet,
     allowsSfx() { return won && !quiet() && speech === 0 && !cantorial && !routeSacred; },
-    allowsMusic() { return !quiet() && speech === 0 && !cantorial && !routeSacred; },
+    allowsMusic() { return (musicChosen || !quiet()) && speech === 0 && !cantorial && !routeSacred; },
     feedbackName,
     observe(name) { if (!won && WIN_NAMES.has(name)) { won = true; emit(); } },
     setSpeech(on) { speech = on ? speech + 1 : Math.max(0, speech - 1); emit(); },
@@ -39,6 +40,7 @@ export function createMediaPolicy({ now = () => Date.now() } = {}) {
     setRoute(name) { routeSacred = SACRED_ROUTES.has(name || ''); emit(); },
     shouldAsk() { return won && !quiet() && !asked; },
     markAsked() { asked = true; emit(); },
+    chooseMusic() { if (!musicChosen) { musicChosen = true; emit(); } },
   };
 }
 

@@ -11,14 +11,14 @@ const spec = {
   blurb: 'Letters fall into the well. Steer each one into its place so the bottom row spells the word, right to left. Junk letters pile up; keep the well from filling.',
   howTo: ['The word to spell is shown with its meaning. Hebrew runs right to left, so the first letter goes in the rightmost slot.', 'Move the falling letter left or right; press down or tap below to drop it faster.', 'A letter the word does not need is junk: drop it in a spare column.', 'Spell the word to score; three words finish the level.'],
   levels: [
-    { name: '2-letter words', min: 2, max: 2, cols: 4, rows: 6, speed: 1000, junk: 0.2, words: 3 },
-    { name: '3-letter words', min: 3, max: 3, cols: 5, rows: 6, speed: 900, junk: 0.3, words: 3 },
-    { name: '4-letter words', min: 4, max: 4, cols: 6, rows: 7, speed: 800, junk: 0.35, words: 3 },
-    { name: '5-letter words', min: 5, max: 5, cols: 7, rows: 7, speed: 700, junk: 0.4, words: 3 },
-    { name: 'Mixed, fast', min: 3, max: 6, cols: 8, rows: 8, speed: 550, junk: 0.45, words: 4 },
+    { name: '2-letter words', min: 2, max: 2, cols: 4, rows: 6, speed: 1500, junk: 0.2, words: 3 },
+    { name: '3-letter words', min: 3, max: 3, cols: 5, rows: 6, speed: 1300, junk: 0.3, words: 3 },
+    { name: '4-letter words', min: 4, max: 4, cols: 6, rows: 7, speed: 1150, junk: 0.35, words: 3 },
+    { name: '5-letter words', min: 5, max: 5, cols: 7, rows: 7, speed: 1000, junk: 0.4, words: 3 },
+    { name: 'Mixed, fast', min: 3, max: 6, cols: 8, rows: 8, speed: 800, junk: 0.45, words: 4 },
   ],
   par: (l, cfg) => cfg.words * 30,
-  seconds: (l, cfg) => 90 + l * 10,
+  seconds: (l, cfg) => 90 + l * 30,
 };
 
 function setup(A) {

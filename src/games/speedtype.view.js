@@ -29,7 +29,7 @@ function setup(A) {
   const bank = wordsOfLength(A.words, cfg.min, cfg.max);
   if (bank.length < cfg.words) { A.announce('Not enough words.'); return; }
   const queue = pickSeeded(bank, cfg.words, rnd);
-  let k = 0, word = null, target = '', typed = '', errors = 0, t0 = Date.now(), chars = 0;
+  let k = 0, word = null, target = '', typed = '', errors = 0, t0 = Math.max(Date.now(), A.readyAt || 0), chars = 0;
   const prompt = A.h('p', { class: 'arc-prompt' });
   const shown = A.h('div', { class: 'arc-big', lang: 'he', dir: 'rtl' });
   const typedEl = A.h('div', { class: 'arc-typed', lang: 'he', dir: 'rtl', 'aria-live': 'polite' });

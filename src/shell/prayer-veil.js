@@ -1,14 +1,18 @@
 // ALEF opening prayer veil: one sourced entry per real page load.
-// The veil holds for its full dwell (6 s for a returning learner, 9 s on a
-// first visit, longer while its prayer plays), counted from the LATER of the
+// The veil holds for a reading dwell sized to the prayer (readingMs: about
+// 0.6 s per English and pronunciation word plus 4 s, never under 10 s, 12 s on
+// a first visit, at most 30 s), counted from the LATER of the
 // prayer rendering and the app's ready signal — never from load timing — so a
 // first visit that spends seconds installing the offline copy does not eat
 // the dwell (owner report, Nov 7 2026: the veil closed within ~4 s of the
 // page settling); only the dwell timer, a tap, Skip, Escape or the 12 s
-// failsafe close it. The chosen prayer's clip starts as the prayer renders
-// (the learner's voice setting, woman by default); where the browser blocks
-// autoplay the veil asks for one tap, which starts the clip without closing
-// the veil. While the clip plays the veil holds; it closes 1 s after "ended".
+// failsafe close it. A tap on the background no longer closes it (owner
+// report, Nov 8 2026: people did not get a chance to read the prayer); Skip,
+// the close button and Escape do. The chosen prayer's clip starts as the
+// prayer renders; where the browser blocks autoplay the veil asks for one tap,
+// which starts the clip without closing the veil. The clips run 2 to 6 s, so
+// the end of the clip never cuts the reading time short: the veil closes when
+// the reading dwell is over, or 3 s after "ended", whichever is later.
 export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
@@ -27,6 +31,13 @@ export const LISTEN_COUNT_KEY = 'alef:opening-prayer:listens:v1';
 export const VEIL_FREQUENCY = 'every-visit';
 
 export function prayerKey(p) { return p.he; }
+
+/** How long the opening holds so the prayer can be read in Hebrew, pronunciation and English. */
+export function readingMs(p, firstVisit = false) {
+  const words = (t) => (typeof t === 'string' ? t.trim().split(/\s+/).filter(Boolean).length : 0);
+  const n = words(p?.en) + words(p?.tr);
+  return Math.min(30000, Math.max(firstVisit ? 12000 : 10000, 4000 + 600 * n));
+}
 
 /** Does not mutate the bank. If there are 2+ candidates, never repeats the previous one. */
 export function pickPrayer(bank, previous = '', random = Math.random) {
@@ -121,6 +132,7 @@ function initPrayerVeil() {
   const audioPrompt = document.getElementById('alef-prayer-audio-prompt');
   const closeBtn = document.getElementById('alef-prayer-close');
   const noShowBtn = document.getElementById('alef-prayer-noshow');
+  const skipBtn = document.getElementById('alef-prayer-skip');
   // The learner's own off switch wins over everything: no veil at all.
   if (readAudioPrefs().veilOptOut) { veil.remove(); return; }
   if (VEIL_FREQUENCY === 'once-ever' && readLocal(VISIT_KEY)) { veil.remove(); return; }
@@ -130,8 +142,9 @@ function initPrayerVeil() {
   let rendered = false;
   let readySeen = false;
   let deadline = null;
+  let dwellMs = readingMs(MODEH_ANI, firstVisit), dwellEndsAt = 0;
   let audio = null, audioPath = '', holding = false;
-  let audioState = 'idle', counted = false, swallowClickUntil = 0;
+  let audioState = 'idle', counted = false;
   const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
 
   function stopAudio() {
@@ -147,7 +160,7 @@ function initPrayerVeil() {
   // Playback (the autoplay attempt or an explicit Listen tap) may extend the
   // short opening. A missing media "ended" event must never strand the
   // learner behind the veil.
-  const MAX_LISTEN_HOLD_MS = 18000;
+  const MAX_LISTEN_HOLD_MS = 30000;
   function holdForAudio() {
     if (closed || holding) return;
     holding = true;
@@ -163,7 +176,15 @@ function initPrayerVeil() {
   // be read: on a slow first visit the render lands seconds before the page
   // settles, and counting from render alone ate the dwell.
   function arm() {
-    if (rendered && readySeen && !holding && !closed) releaseAfter(firstVisit ? 9000 : 6000);
+    if (!(rendered && readySeen && !holding && !closed)) return;
+    if (!dwellEndsAt) dwellEndsAt = Date.now() + dwellMs;
+    releaseAfter(Math.max(0, dwellEndsAt - Date.now()));
+  }
+  /** After the clip ends or is paused: never close before the reading time is up, and give at least `min` ms more. */
+  function releaseAfterListening(min) {
+    holding = false;
+    if (rendered && readySeen) { if (!dwellEndsAt) dwellEndsAt = Date.now() + dwellMs; releaseAfter(Math.max(min, dwellEndsAt - Date.now())); }
+    else releaseAfter(dwellMs + 8000);
   }
   function hideAudioControls() {
     if (listenBtn) listenBtn.hidden = true;
@@ -178,7 +199,7 @@ function initPrayerVeil() {
     try {
       if (!audio) audio = new Audio();
       if (audio.getAttribute('src') !== audioPath) audio.src = audioPath;
-      audio.onended = () => { setAudioState('idle'); releaseAfter(1000); };
+      audio.onended = () => { setAudioState('idle'); releaseAfterListening(3000); };
       audio.onerror = () => { hideAudioControls(); setAudioState('idle'); releaseAfter(800); };
       const p = audio.play();
       const started = () => {
@@ -213,8 +234,7 @@ function initPrayerVeil() {
     try { audio.pause(); } catch { /* ignore */ }
     setAudioState('paused');
     // Paused by hand: let the veil close on a short dwell unless Continue is tapped.
-    holding = false;
-    releaseAfter(4000);
+    releaseAfterListening(4000);
   }
   listenBtn?.addEventListener('click', (e) => {
     e.stopPropagation(); // a veil click dismisses; the Listen button must not
@@ -226,7 +246,7 @@ function initPrayerVeil() {
   // swallowed; buttons keep their own meaning.
   function onFirstGesture(e) {
     if (closed || audioState !== 'blocked' || !startsBlockedPlayback(e)) return;
-    if (e.type === 'keydown') e.preventDefault(); else swallowClickUntil = Date.now() + 1000;
+    if (e.type === 'keydown') e.preventDefault();
     startPlayback();
   }
 
@@ -244,8 +264,9 @@ function initPrayerVeil() {
   function onReady() { readySeen = true; arm(); }
   function onKey(e) { if (e.key === 'Escape') { dismiss(true); return; } onFirstGesture(e); }
   veil.addEventListener('pointerdown', onFirstGesture);
-  veil.addEventListener('click', () => { if (Date.now() < swallowClickUntil) { swallowClickUntil = 0; return; } dismiss(true); });
+  // A stray tap on the background must not close the prayer before it is read: only Skip, × and Escape close it.
   closeBtn?.addEventListener('click', (e) => { e.stopPropagation(); dismiss(true); });
+  skipBtn?.addEventListener('click', (e) => { e.stopPropagation(); dismiss(true); });
   noShowBtn?.addEventListener('click', (e) => { e.stopPropagation(); writeVeilOptOut(); dismiss(true); });
   document.addEventListener('keydown', onKey);
   document.addEventListener('alef:ready', onReady, { once: true });
@@ -273,8 +294,11 @@ function initPrayerVeil() {
     if (tr) { tr.textContent = chosen.tr || ''; tr.hidden = !chosen.tr; }
     en.textContent = chosen.en;
     veil.dataset.prayerReady = '1';
+    dwellMs = readingMs(chosen, firstVisit);
     rendered = true;
     arm();
+    // Rendered but the app is not ready yet: the pre-render 12 s failsafe must not cut the reading short.
+    if (!readySeen && !holding) releaseAfter(dwellMs + 8000);
     writeLocal(LAST_KEY, prayerKey(chosen));
     try {
       const prefs = readAudioPrefs();

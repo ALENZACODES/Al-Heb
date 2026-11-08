@@ -10,14 +10,14 @@ const spec = {
   blurb: 'A letter is called by name. Letters pop up in the holes; tap the one you heard before it sinks back. Each level calls faster and adds look-alikes.',
   howTo: ['Read (and, where a recording exists, hear) the letter name at the top.', 'Letters appear in the holes for a moment. Tap the one that matches.', 'Tapping a wrong letter costs a point; letting the right one sink costs a life.', 'Fifteen correct taps finish the level.'],
   levels: [
-    { name: '6 letters, slow', holes: 6, letters: 6, show: 2200, goal: 12 },
-    { name: '9 letters', holes: 9, letters: 9, show: 1800, goal: 14 },
-    { name: 'Look-alikes mixed in', holes: 9, letters: 12, show: 1500, goal: 15, confuse: true },
-    { name: 'All 22 letters', holes: 12, letters: 22, show: 1300, goal: 16 },
-    { name: 'All 27 shapes, fast', holes: 12, letters: 27, show: 1000, goal: 18, finals: true },
+    { name: '6 letters, slow', holes: 6, letters: 6, show: 3500, goal: 12 },
+    { name: '9 letters', holes: 9, letters: 9, show: 3000, goal: 14 },
+    { name: 'Look-alikes mixed in', holes: 9, letters: 12, show: 2600, goal: 15, confuse: true },
+    { name: 'All 22 letters', holes: 12, letters: 22, show: 2200, goal: 16 },
+    { name: 'All 27 shapes, fast', holes: 12, letters: 27, show: 1800, goal: 18, finals: true },
   ],
   par: (l, cfg) => cfg.goal * 10,
-  seconds: (l, cfg) => 75,
+  seconds: (l, cfg) => 90,
   needsWords: false,
 };
 

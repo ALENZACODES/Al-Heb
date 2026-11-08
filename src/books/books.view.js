@@ -33,10 +33,11 @@ export async function mount(root, ctx) {
         alt: "", loading: "lazy",
       }));
     } else {
-      cover.append(heSpan(b.titleHe, "book-cover-title"));
+      cover.classList.add("book-cover-soon");
+      cover.append(heSpan(b.titleHe, "book-cover-title"), h("span", { class: "book-soon-banner" }, "Artwork coming soon"));
     }
     const marks = [];
-    marks.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Pictures coming"));
+    marks.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Artwork coming soon"));
     marks.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
     if (places[b.id] && places[b.id].finishedAt) marks.push("Finished");
     return h("a", { class: "card book-card", href: `#/book/${b.id}` },

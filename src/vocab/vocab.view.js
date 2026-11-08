@@ -105,11 +105,7 @@ export function mount(root, ctx) {
   const notice = el('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTICE);
   const audioNote = el('p', { class: 'muted', role: 'status', 'aria-live': 'polite' }, '');
   const body = el('div', { class: 'vc-body' });
-  const footer = el('footer', {}, el('p', { class: 'vc-attrib' }, ATTRIBUTION), sourcesLine(el), el('p', {},
-    el('a', { href: 'https://creativecommons.org/licenses/by-sa/4.0/', rel: 'license noopener' }, 'CC BY-SA 4.0'), ' · ',
-    el('a', { href: 'https://github.com/hermitdave/FrequencyWords', rel: 'noopener' }, 'FrequencyWords'), ' · ',
-    el('a', { href: 'https://www.wiktionary.org/', rel: 'noopener' }, 'Wiktionary'), ' · ',
-    el('a', { href: 'https://kaikki.org/', rel: 'noopener' }, 'kaikki.org')));
+  const footer = el('footer', {}, sourcesLine(el));
   const modeBrowse = el('button', { type: 'button', class: 'btn', 'aria-pressed': 'true', onclick: () => setMode('browse') }, 'Browse');
   const modeReview = el('button', { type: 'button', class: 'btn', 'aria-pressed': 'false', onclick: () => setMode('review') }, 'Review');
   const modes = el('div', { class: 'vc-modes', role: 'group', 'aria-label': 'Vocabulary mode' }, modeBrowse, modeReview);

@@ -96,11 +96,12 @@ test('game music controls stay in the page and off until turned on', () => {
   const src = readFileSync(new URL('../src/audio/music-bar.js', import.meta.url), 'utf8');
   assert.doesNotMatch(src, /position:\s*sticky|inset-block-end:\s*0|z-index:\s*4/);
   assert.match(src, /position:\s*static/);
-  assert.match(src, /Turn music on/);
+  assert.match(src, /Play music/);
   assert.match(src, /data-music="mute"/);
   assert.match(src, /data-music="track"/);
   assert.match(src, /data-music="volume"/);
-  assert.match(src, /It stays off until you turn it on/);
+  assert.match(src, /Off until turned on; never plays during prayer or sacred listening/);
+  assert.doesNotMatch(src, /Optional secular music/);
   assert.deepEqual(OPPOSITE_PAIRS.map((p) => p.id), ['OPP_expensive_cheap', 'OPP_expensive_cheap', 'OPP_near_far']);
 });
 
@@ -124,4 +125,13 @@ test('calm mode and audio-free keep the bed off', () => {
   music.enable();
   assert.equal(music.snapshot().phase, 'blocked');
   assert.equal(media.made.length, 0);
+});
+
+test('the game bar offers the live-composed styles plus the Kenney loops, each with a unique id', async () => {
+  const { GAME_TRACKS } = await import('../src/audio/music.js');
+  const { SYNTH_STYLES } = await import('../src/audio/synth-music.js');
+  assert.ok(SYNTH_STYLES.length >= 12);
+  assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length);
+  assert.equal(new Set(GAME_TRACKS.map((t) => t.id)).size, GAME_TRACKS.length);
+  for (const st of SYNTH_STYLES) { assert.ok(st.bpm > 40 && st.bpm < 200, st.id); assert.ok(st.scale.length >= 5 && st.prog.length >= 4, st.id); }
 });

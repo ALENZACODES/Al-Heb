@@ -64,6 +64,7 @@ const CSS = `
 .crp-tr{font-size:.95rem;color:var(--muted,#5a6656);direction:ltr}
 .crp-gl{font-size:.85rem;color:var(--muted,#5a6656);direction:ltr;max-inline-size:9rem}
 .crp-en{margin-block:.2rem 1rem;font-style:italic;direction:ltr}
+.crp-en-big{font-size:1.3rem;line-height:1.5;font-style:normal}
 .crp-letters{display:flex;gap:.4rem;flex-wrap:wrap;margin-block:.5rem}
 .crp-ltr{display:inline-flex;gap:.35rem;align-items:baseline;padding:.25rem .7rem}
 .crp-ltr .he{font-size:1.5rem}
@@ -157,7 +158,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   const state = {
     tab: 'read',
     passageId: passages.some((p) => p.id === ctx.params?.textId) ? ctx.params.textId : passages[0].id,
-    translit: true, english: true, ctlOpen: false,
+    translit: true, english: true, ctlOpen: false, prayLang: 'he',
     letters: /** @type {Set<string>} */ (new Set()),
     situation: corpus.situations()[0], register: 'all', gender: 'm', query: '',
   };
@@ -218,7 +219,23 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     // Secondary controls (text picker, show/hide switches, Play all, letter highlights) sit in a closed details so the text is on the first screen of a phone.
     const ctl = el('details', { class: 'crp-ctl', open: state.ctlOpen ? '' : null, ontoggle: (e) => { state.ctlOpen = !!(e?.target?.open); } },
       el('summary', {}, 'Change text, show or hide, highlight letters'));
-    host.append(el('h2', { id: 'crp-h' }, p.title), el('p', {}, el('strong', {}, p.ref), p.records.some((r) => r.language === 'aramaic') ? el('span', { class: 'crp-badge' }, 'Aramaic, not Hebrew') : null), ctl);
+    const langBar = el('div', { class: 'crp-bar crp-praylang', role: 'group', 'aria-label': 'Pray in' }, el('strong', {}, 'Pray in: '),
+      el('button', { type: 'button', class: 'crp-chip', 'data-praylang': 'he', 'aria-pressed': state.prayLang !== 'en' ? 'true' : 'false', onclick: () => { state.prayLang = 'he'; render(); } }, 'Hebrew'),
+      el('button', { type: 'button', class: 'crp-chip', 'data-praylang': 'en', 'aria-pressed': state.prayLang === 'en' ? 'true' : 'false', onclick: () => { state.prayLang = 'en'; render(); } }, 'English'));
+    host.append(el('h2', { id: 'crp-h' }, p.title), el('p', {}, el('strong', {}, p.ref), p.records.some((r) => r.language === 'aramaic') ? el('span', { class: 'crp-badge' }, 'Aramaic, not Hebrew') : null), langBar);
+    if (state.prayLang === 'en') {
+      const enBox = el('div', { id: 'crp-text', class: 'crp-en-mode' });
+      for (const rec of p.records) {
+        const en = uiEnglish(ctx, String(rec.english || ''));
+        enBox.append(el('p', { class: 'crp-en crp-en-big', lang: 'en' }, en),
+          el('div', { class: 'crp-bar' }, el('button', { type: 'button', class: 'crp-play', onclick: () => {
+            try { const sp = globalThis.speechSynthesis, U = globalThis.SpeechSynthesisUtterance; if (!sp || typeof U !== 'function') { say('Your browser has no voice to read this aloud.'); return; } sp.cancel(); const u = new U(en); u.lang = 'en-US'; sp.speak(u); say(`Reading ${rec.ref} in English (your device's voice).`); } catch { /* no speech */ }
+          } }, `Hear ${rec.ref} in English`)));
+      }
+      host.append(enBox, status);
+      return;
+    }
+    host.append(ctl);
     ctl.append(bar);
 
     if (state.translit && !translitFn) ctl.append(el('p', { class: 'crp-warn' }, 'Transliteration needs src/pronunciation/transliterate.js, which is not available here.'));

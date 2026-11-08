@@ -7,10 +7,12 @@ const mk = (tag, attrs = {}, ...kids) => ({ tag, attrs, text: kids.map((k) => (k
 const { sourcesLine, exampleCredit } = await import('../src/shell/sources.js');
 const link = (n) => n.kids.find((k) => k && k.tag === 'a');
 
-test('sourcesLine: Wiktionary credit and a link to #/credits; Tatoeba only when examples are shown', () => {
-  const a = sourcesLine(mk); assert.match(a.text, /Wiktionary contributors \(CC BY-SA 4\.0\)/); assert.doesNotMatch(a.text, /Tatoeba/);
-  assert.equal(link(a).attrs.href, '#/credits');
-  const b = sourcesLine(mk, { examples: true }); assert.match(b.text, /Tatoeba contributors \(CC BY 2\.0 FR\)/);
+test('sourcesLine renders nothing visible: credits live once, on #/credits, behind the site-wide link', () => {
+  const a = sourcesLine(mk); assert.equal(a.text, ''); assert.equal(a.attrs.hidden, '');
+  const html = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /class="fine-print"><a href="#\/terms">Terms &amp; sources<\/a>/);
+  const credits = fs.readFileSync(new URL('../src/shell/credits.view.js', import.meta.url), 'utf8');
+  assert.match(credits, /VOCAB_ATTRIBUTION/); assert.match(credits, /Tatoeba contributors \(CC BY 2\.0 FR\)/);
 });
 
 test('exampleCredit: author(s), licence and sentence-id link from the data; null for non-Tatoeba examples', () => {

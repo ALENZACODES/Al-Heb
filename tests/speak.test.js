@@ -465,10 +465,10 @@ test('tabFromLocation: query wins; #/speak/read, #/speak?tab=read and aliases wo
   assert.equal(tabFromLocation({ tab: 'nope' }, '#/vocab'), 'say');
   assert.equal(tabFromLocation(null, undefined), 'say');
 });
-test('sources line: Wiktionary credit with a link to the credits screen', async () => {
+test('no per-screen sources line: credits live once, on #/credits', async () => {
   const { root, unmount } = await boot();
-  assert.match(root.text, /Word meanings: Wiktionary contributors \(CC BY-SA 4\.0\)/);
-  assert.equal(root.find((n) => n.tag === 'a' && n.attrs.href === '#/credits').length, 1);
+  assert.doesNotMatch(root.text, /Wiktionary contributors/); // credits live once, on #/credits
+  assert.doesNotMatch(root.text, /machine-built draft/);
   unmount();
 });
 

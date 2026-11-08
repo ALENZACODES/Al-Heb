@@ -1,6 +1,7 @@
 // /credits: every source in data/legal/attributions.json, grouped, with its licence, a link and an honest status flag.
 // This is the ONE place credits live: the About screen links here. Not legal advice (the file says so and the page repeats it).
 import { h } from './ui.js';
+import { ATTRIBUTION as VOCAB_ATTRIBUTION } from '../vocab/vocab.view.js';
 
 export const GROUPS = [
   ['vocabulary', 'Vocabulary'], ['scripture', 'Scripture text'], ['liturgy', 'Prayer text'], ['calendar', 'Calendar data'],
@@ -68,7 +69,14 @@ export async function mount(root, ctx) {
       h('p', {}, `${entries.length} sources listed: ${counts['verified-primary'] || 0} verified, ${counts['partly-verified'] || 0} partly verified, ${counts.unverified || 0} unverified, ${(counts['project-owned'] || 0) + (counts['not-present'] || 0)} project-written or not present.`),
       data.notLegalAdvice ? h('details', {}, h('summary', {}, 'What the status values mean'), h('p', {}, data.notLegalAdvice)) : null,
       h('p', {}, 'ALEF has no software licence for its own code and original text yet. Until one is added, all rights are reserved.')),
+    h('section', { class: 'card', 'aria-labelledby': 'cg-vocab-line' }, h('h2', { id: 'cg-vocab-line' }, 'Word meanings and example sentences'),
+      h('p', {}, VOCAB_ATTRIBUTION),
+      h('p', {}, 'Word meanings: Wiktionary contributors (CC BY-SA 4.0). Example sentences: Tatoeba contributors (CC BY 2.0 FR). Speech recognition and the fallback voice come from your browser.'),
+      h('p', {}, h('a', { href: 'https://creativecommons.org/licenses/by-sa/4.0/', rel: 'license noopener' }, 'CC BY-SA 4.0'), ' · ',
+        h('a', { href: 'https://github.com/hermitdave/FrequencyWords', rel: 'noopener' }, 'FrequencyWords'), ' · ',
+        h('a', { href: 'https://www.wiktionary.org/', rel: 'noopener' }, 'Wiktionary'), ' · ',
+        h('a', { href: 'https://kaikki.org/', rel: 'noopener' }, 'kaikki.org'))),
     ...sections,
-    h('p', {}, h('a', { class: 'btn secondary', href: '#/privacy' }, 'Privacy'), ' ', h('a', { class: 'btn secondary', href: '#/about' }, 'About'), ' ', h('a', { class: 'btn secondary', href: '#/how' }, 'How this works'))));
+    h('p', {}, h('a', { class: 'btn secondary', href: '#/terms' }, 'Terms'), ' ', h('a', { class: 'btn secondary', href: '#/privacy' }, 'Privacy'), ' ', h('a', { class: 'btn secondary', href: '#/about' }, 'About'), ' ', h('a', { class: 'btn secondary', href: '#/how' }, 'How this works'))));
   return () => {};
 }

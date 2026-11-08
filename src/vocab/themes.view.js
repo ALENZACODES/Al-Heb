@@ -14,7 +14,7 @@ import { el, heText, storeGet, storeSet } from '../curriculum/dom.js';
 import { loadJson, loadAllVocab } from '../sprint/loader.js';
 import { visibleRecords } from './loader.js';
 import { addCards, VOCAB_CARDS_KEY, POS_LABEL } from './model.js';
-import { ATTRIBUTION, DRAFT_NOTICE } from './vocab.view.js';
+import { DRAFT_NOTICE } from './vocab.view.js';
 import { audioButton } from '../shell/audio-access.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine, exampleCredit } from '../shell/sources.js';
@@ -67,7 +67,7 @@ export function mount(root, ctx) {
   const notice = el('p', { class: 'th-muted' }, DRAFT_NOTICE);
   const body = el('div', { class: 'th-body' });
   const status = el('div', { class: 'th-status', role: 'status', 'aria-live': 'polite' });
-  const footer = el('footer', {}, el('p', {}, ATTRIBUTION), sourcesLine(el, { examples: true }));
+  const footer = el('footer', {}, sourcesLine(el, { examples: true }));
   wrap.append(h1, notice, body, status, footer);
   root.append(wrap);
 

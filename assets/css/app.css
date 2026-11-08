@@ -300,8 +300,10 @@ main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 10px; }
 .credits li > a, .pg li > a:not(.btn) { padding-block: 0; }
 
 /* Sources line under word meanings and example sentences (src/shell/sources.js): small, wraps, link keeps the 44px target from the rule above */
-.src-line { font-size: .875rem; color: var(--muted); margin-block: .5rem; overflow-wrap: anywhere; }
-.src-line a { color: inherit; text-decoration: underline; }
+.src-line { display: none !important; }
+.fine-print { margin: 2.5rem 0 .4rem; text-align: center; font-size: 9px; line-height: 1; opacity: .28; }
+.fine-print a { color: var(--muted); text-decoration: none; }
+.fine-print a:hover, .fine-print a:focus-visible { opacity: 1; text-decoration: underline; }
 /* Memory card (src/letters/memorycard.js): on phones it sits after the stage and its toggles, never above the tracing stage. */
 @media (max-width: 600px) { main .alef-trace > div:has(> .stage) > .mc { order: 8; } main .alef-trace > div:has(> .stage) > .mc[data-first] { order: 4; } main .alef-trace > div:has(> .stage) > .mc-fallback { order: 8; } }
 

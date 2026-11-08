@@ -1,0 +1,1201 @@
+[
+ {
+  "id": "torah-en-genesis-1",
+  "book": "genesis",
+  "chapter": 1,
+  "ref": "Genesis 1",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "fae7c3026b80c6888c7d7cd4c2541f1ae25a4e284117e6e380769e68ca564620",
+  "chunks": [
+   {
+    "id": "genesis-1-ari-1",
+    "fingerprint": "b68b647f24bbc97a525b823861b8a8e8f9966fddd3e65f477fec4d6074d3fa33",
+    "fromVerse": 1,
+    "toVerse": 31
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-1.mp3",
+  "fingerprint": "ac3477c416a58ca03d4a23587873fe353bb07b6dfabe56e5118587902639e2dd",
+  "durationMs": 257162,
+  "audioSha256": "55c50d6e8795d900a21da61cf1e3bd7b84a1fa58486e9336bf9d63273d65ea14",
+  "bytes": 1028973,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-1",
+  "book": "genesis",
+  "chapter": 1,
+  "ref": "Genesis 1",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "fae7c3026b80c6888c7d7cd4c2541f1ae25a4e284117e6e380769e68ca564620",
+  "chunks": [
+   {
+    "id": "genesis-1-noa-1",
+    "fingerprint": "f6e02971a281cd7c0372cec160fef8d617e614404087e29e6d55f8213b5b76bc",
+    "fromVerse": 1,
+    "toVerse": 31
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-1.mp3",
+  "fingerprint": "dbf6631de8ed646170e60da3997406eda25d9becaad25b4ff109d6e550b03717",
+  "durationMs": 265586,
+  "audioSha256": "e526878ab74f890bd7adfd0a3dbf9369bec32391058b1d933608d0f6cf917374",
+  "bytes": 1062669,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-2",
+  "book": "genesis",
+  "chapter": 2,
+  "ref": "Genesis 2",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "567b1226d74ae6eff85b1567f573b2bbb8543bb7dc604e69a2b6c6e883d019c2",
+  "chunks": [
+   {
+    "id": "genesis-2-ari-1",
+    "fingerprint": "7964226b788cbf371de02cb1c93c0f8feeed23ea808efc2ee15016c7cfd1cf36",
+    "fromVerse": 1,
+    "toVerse": 25
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-2.mp3",
+  "fingerprint": "2c8c2eae8a06f895c135c0dfbac8d08cefc502a8793d49fff725bc94f3fb68df",
+  "durationMs": 186242,
+  "audioSha256": "9b061bdbb1999c3390d4b6628fc153d0f967d3e157ab51baa285911be4980852",
+  "bytes": 745293,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-2",
+  "book": "genesis",
+  "chapter": 2,
+  "ref": "Genesis 2",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "567b1226d74ae6eff85b1567f573b2bbb8543bb7dc604e69a2b6c6e883d019c2",
+  "chunks": [
+   {
+    "id": "genesis-2-noa-1",
+    "fingerprint": "ea2b83e97835492b218adf2d252c5190a81738355ec4a321c058c7156a9a8242",
+    "fromVerse": 1,
+    "toVerse": 25
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-2.mp3",
+  "fingerprint": "c0d88bd65529a5f453192457bce6a69f3b6a6ce8141ca844e17f9bfac8a5cf1a",
+  "durationMs": 175466,
+  "audioSha256": "600956b1b43f0f8a979d5cd3695284002dc6e416df7cbd7877a30df4bf019320",
+  "bytes": 702189,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-3",
+  "book": "genesis",
+  "chapter": 3,
+  "ref": "Genesis 3",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "6cabe395f51cf770c7dfbe6a88a41bc50b17e778ca02fe50bcf94cbb73c8553c",
+  "chunks": [
+   {
+    "id": "genesis-3-ari-1",
+    "fingerprint": "a90ec1531b5e6cd2abb0a558545ccb1154de00ee0c4322d736c8b6393c9942cb",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-3.mp3",
+  "fingerprint": "24954f515e94d8cdff4f7753858336dcfab849145cf51e0a8ac55215b1c1dc0b",
+  "durationMs": 207482,
+  "audioSha256": "797f7549fe16dafc55694cb4bda65fd8b657b96c9bac178998ef9159ed92c17f",
+  "bytes": 830253,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-3",
+  "book": "genesis",
+  "chapter": 3,
+  "ref": "Genesis 3",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "6cabe395f51cf770c7dfbe6a88a41bc50b17e778ca02fe50bcf94cbb73c8553c",
+  "chunks": [
+   {
+    "id": "genesis-3-noa-1",
+    "fingerprint": "66e125a332bbb26e1f4f9bcede72e7ca85db4714525cd8430d38084e754b1aa9",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-3.mp3",
+  "fingerprint": "f47e569ddf0a9266fdb163924e034368512f58d0362935b7d4cffa2770b21268",
+  "durationMs": 219122,
+  "audioSha256": "be542eb757e46f185d58f6bfa025c653cff50fca005d110bfc0735c06a8b440c",
+  "bytes": 876813,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-4",
+  "book": "genesis",
+  "chapter": 4,
+  "ref": "Genesis 4",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "bb9239e9b6df081788252b0318fbe78175298384ab806c0ecd17693714e42002",
+  "chunks": [
+   {
+    "id": "genesis-4-ari-1",
+    "fingerprint": "af2d26aca3f5b12543887994b98caaae3b483103ba42a098ec56642da1d52cc0",
+    "fromVerse": 1,
+    "toVerse": 26
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-4.mp3",
+  "fingerprint": "80be05ab06dc3e1d0357b879a44e48a58018042bd9a43854fb1fda5aec8a571a",
+  "durationMs": 198986,
+  "audioSha256": "1fcbfb874f74d35b21143e7a0c8ea8f4fc846a81a734cbcc6e6b858791860781",
+  "bytes": 796269,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-4",
+  "book": "genesis",
+  "chapter": 4,
+  "ref": "Genesis 4",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "bb9239e9b6df081788252b0318fbe78175298384ab806c0ecd17693714e42002",
+  "chunks": [
+   {
+    "id": "genesis-4-noa-1",
+    "fingerprint": "846954d5a891f6699f601d7fd3bdae306b77ff59c54ddee9fa176b518c0d645a",
+    "fromVerse": 1,
+    "toVerse": 26
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-4.mp3",
+  "fingerprint": "91ea9e70551400ae955032336c32d39fb2aabbe98daa8f882b0faef4d4be9d5a",
+  "durationMs": 205394,
+  "audioSha256": "ce2d5c2a52a335c7587d193393c620ea067b46f627e315d4c5a85a1e05d3d0ed",
+  "bytes": 821901,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-5",
+  "book": "genesis",
+  "chapter": 5,
+  "ref": "Genesis 5",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "7212cf4ae0b1c36e09f7f58816b8bac4e6596012f0cfeb8435fa403c3424938f",
+  "chunks": [
+   {
+    "id": "genesis-5-ari-1",
+    "fingerprint": "50c18126acdb775428d2cd06947f7c89442336e92c520b25903fa09c82047436",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-5.mp3",
+  "fingerprint": "6f3d5e85d24c62d80c29196e77ce4cf3b4af7e5ee56e3c7c2d63a31f4952e9e3",
+  "durationMs": 156674,
+  "audioSha256": "eca645773760e3ac633a34c8a2704cd1b3d1015575b63f415929bdf79533f590",
+  "bytes": 627021,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-5",
+  "book": "genesis",
+  "chapter": 5,
+  "ref": "Genesis 5",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "7212cf4ae0b1c36e09f7f58816b8bac4e6596012f0cfeb8435fa403c3424938f",
+  "chunks": [
+   {
+    "id": "genesis-5-noa-1",
+    "fingerprint": "ec437797eb78d926150ddeec983064c2ec1c5392b25f1265f5c5926159b3f583",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-5.mp3",
+  "fingerprint": "6a2e6b2748f5e1f07fba11129911515d5255c1f733f0f2b212448e22cf193edf",
+  "durationMs": 166634,
+  "audioSha256": "74142eaef1b7939ca353a3605783fe7f7796ab30efd7a1b82374c7ff0eec4421",
+  "bytes": 666861,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-6",
+  "book": "genesis",
+  "chapter": 6,
+  "ref": "Genesis 6",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "28530415f3698ee1de6f07e117182e3c722496e847d8e99f13bb08095ac70415",
+  "chunks": [
+   {
+    "id": "genesis-6-ari-1",
+    "fingerprint": "6ab21bd791c1417e12545a2a2c0e918b56a8ad36d707f64457160543d1d0f4be",
+    "fromVerse": 1,
+    "toVerse": 22
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-6.mp3",
+  "fingerprint": "e73d6d231419f7a4584ed44eca4289073e251f493b83f6d6eab2899b2c3fc885",
+  "durationMs": 168554,
+  "audioSha256": "a6b92830544125179d360d04a348cec81e1c23e1d54bd0f1492e727b81c4a2ad",
+  "bytes": 674541,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-6",
+  "book": "genesis",
+  "chapter": 6,
+  "ref": "Genesis 6",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "28530415f3698ee1de6f07e117182e3c722496e847d8e99f13bb08095ac70415",
+  "chunks": [
+   {
+    "id": "genesis-6-noa-1",
+    "fingerprint": "b2b0d09314d2cff414b42fd6513f291b7606c10270fa825dad37b6a44e25882b",
+    "fromVerse": 1,
+    "toVerse": 22
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-6.mp3",
+  "fingerprint": "2b76f2a702641d19b6cb0d36a264f3d783092a16c89c51bf87b32d86411aea26",
+  "durationMs": 180242,
+  "audioSha256": "719d6ee8710119fa96271f4361d4c8ee4516d46d5ee15c8ab3b334be877e094f",
+  "bytes": 721293,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-7",
+  "book": "genesis",
+  "chapter": 7,
+  "ref": "Genesis 7",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "f31da74d11b55a9c6581faaf9db4bb992827d4dd2af48b7ed29b79a2cd910a27",
+  "chunks": [
+   {
+    "id": "genesis-7-ari-1",
+    "fingerprint": "54c24662127fcb136863bf319d3e6e2a61d34931be1b4647989380825b4f5304",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-7.mp3",
+  "fingerprint": "21de53d863cc20692b17ea2960911631f8c52aac75328cfa3f1630411ec546d4",
+  "durationMs": 177986,
+  "audioSha256": "54999fe38583296a248bf8f2491d8a41eb1867101a8c9331a50e13e6e33d44a2",
+  "bytes": 712269,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-7",
+  "book": "genesis",
+  "chapter": 7,
+  "ref": "Genesis 7",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "f31da74d11b55a9c6581faaf9db4bb992827d4dd2af48b7ed29b79a2cd910a27",
+  "chunks": [
+   {
+    "id": "genesis-7-noa-1",
+    "fingerprint": "d313feccdefcbb0cdd042b34cd560d65a8fc011bb4291d445bacb6600cbeb0a1",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-7.mp3",
+  "fingerprint": "463ff0962de2149f1aaa621d23902eba167ee2de15794153eb2d7fd232059b65",
+  "durationMs": 185162,
+  "audioSha256": "0c3acc98bce39421aea12614eaf3a73c1d95674272d7be68e515d3ad71a9afc1",
+  "bytes": 740973,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-8",
+  "book": "genesis",
+  "chapter": 8,
+  "ref": "Genesis 8",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0d4b105a07b3b415ce606e596b0b70101e94e2616620ed33f25c0ef6829cde17",
+  "chunks": [
+   {
+    "id": "genesis-8-ari-1",
+    "fingerprint": "ab53618c4ea4fdcd8aea8dafc1f4cad78544a8921be18022da5d026681805110",
+    "fromVerse": 1,
+    "toVerse": 22
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-8.mp3",
+  "fingerprint": "c6a3d14257fa32020dea8f4ee904818f5769f4d2ed7bbcef2230f2be995fc1c8",
+  "durationMs": 171842,
+  "audioSha256": "c0f64a74965a4b00d92f7b90728ae649d0d57e302aa66722c5cf01992a707840",
+  "bytes": 687693,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-8",
+  "book": "genesis",
+  "chapter": 8,
+  "ref": "Genesis 8",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0d4b105a07b3b415ce606e596b0b70101e94e2616620ed33f25c0ef6829cde17",
+  "chunks": [
+   {
+    "id": "genesis-8-noa-1",
+    "fingerprint": "7a8cb1e256b5f2e1c932019b5e109bb39cebe1ae90f31f063abd3ea993488cc0",
+    "fromVerse": 1,
+    "toVerse": 22
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-8.mp3",
+  "fingerprint": "1c9203ca2060770030f91480b6829652a9f6914927bedfe19e94c002ccc95628",
+  "durationMs": 190586,
+  "audioSha256": "95475c65d5fc671ca046ca70870ef9c55a9ac6e6fe2dc4b299d49fe879a20e09",
+  "bytes": 762669,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-9",
+  "book": "genesis",
+  "chapter": 9,
+  "ref": "Genesis 9",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "d2ff21f07639cbbf0291c16c6787f8bc582d235d681f8d0f59605df767693ceb",
+  "chunks": [
+   {
+    "id": "genesis-9-ari-1",
+    "fingerprint": "157904119cde0c802695507fd160459670b6dbbd03fa35ade8bbab2c8c994638",
+    "fromVerse": 1,
+    "toVerse": 29
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-9.mp3",
+  "fingerprint": "477ceaacdfeeee35209b2d553254750022bbb6aeab66e71bb832473e543718a0",
+  "durationMs": 205706,
+  "audioSha256": "3d61710c962ce67b19e9064d96a5f364c08a017daf0f1d1773dfb605eeb969e1",
+  "bytes": 823149,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-9",
+  "book": "genesis",
+  "chapter": 9,
+  "ref": "Genesis 9",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "d2ff21f07639cbbf0291c16c6787f8bc582d235d681f8d0f59605df767693ceb",
+  "chunks": [
+   {
+    "id": "genesis-9-noa-1",
+    "fingerprint": "68dd570120eebc432ba780b9cbd2c276b7fe5d8d6c718f4b0bc78e24167dffb6",
+    "fromVerse": 1,
+    "toVerse": 29
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-9.mp3",
+  "fingerprint": "4d7ed6c48c213dca6f28de7dbbe56afad14455068492a845e81ccc2191c62107",
+  "durationMs": 210722,
+  "audioSha256": "63a119c14adcdaa2583be581648cc837ca7044b3f33a101d13554510d0ce80a9",
+  "bytes": 843213,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-10",
+  "book": "genesis",
+  "chapter": 10,
+  "ref": "Genesis 10",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "94b480cb15a6c56367498e8d9af757f4d097234e5703666f6aa392df5c277714",
+  "chunks": [
+   {
+    "id": "genesis-10-ari-1",
+    "fingerprint": "9ba60ff14caf8357cbefce2d087a91a76918da065ab3dad48d9c6a794dfd0ff9",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-10.mp3",
+  "fingerprint": "76be09c7f0519bc06135259da777339a2bd2279fa1bf8c423b242d0a8338e549",
+  "durationMs": 174626,
+  "audioSha256": "89bbe3a788bc8a228b08ab39575df2fc78774c29d5f253a0ec7104503c6797a5",
+  "bytes": 698829,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-10",
+  "book": "genesis",
+  "chapter": 10,
+  "ref": "Genesis 10",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "94b480cb15a6c56367498e8d9af757f4d097234e5703666f6aa392df5c277714",
+  "chunks": [
+   {
+    "id": "genesis-10-noa-1",
+    "fingerprint": "a0e82922f2a54385d4446be077f013a0a914bb5041528e61f0804b2e611176f8",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-10.mp3",
+  "fingerprint": "d0726fbf24b3b8b4b11e05386474775b726a597d5540a3a48407a0cea9bc4180",
+  "durationMs": 193322,
+  "audioSha256": "fe7d9690e17c3cd02cb2eba8f8de1c9d02bb0a8921fc52b412dc183097aaf262",
+  "bytes": 773613,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-11",
+  "book": "genesis",
+  "chapter": 11,
+  "ref": "Genesis 11",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "d5001714de61b07d713ab48d4767f809249ad4e03f10093cf71afd6b3cb03deb",
+  "chunks": [
+   {
+    "id": "genesis-11-ari-1",
+    "fingerprint": "eaf89a4314313ac6a3465792008a85cdbf0d1891f3ec70bbbd14096097322b26",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-11.mp3",
+  "fingerprint": "8b3f760ea3c775f1a50e24c87d58be8f1039e719793d9d7d098cf794b9977ee4",
+  "durationMs": 194906,
+  "audioSha256": "15a42e926fda0d94dc9ac2a70a67125c4095ca2fd50ec7608e0a128bce1088a6",
+  "bytes": 779949,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-11",
+  "book": "genesis",
+  "chapter": 11,
+  "ref": "Genesis 11",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "d5001714de61b07d713ab48d4767f809249ad4e03f10093cf71afd6b3cb03deb",
+  "chunks": [
+   {
+    "id": "genesis-11-noa-1",
+    "fingerprint": "96fbdcc662f04adfccabdf5daf52c82b331a1603838547413ea4b45869507088",
+    "fromVerse": 1,
+    "toVerse": 32
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-11.mp3",
+  "fingerprint": "8eb676b198147a47e9f396d6f3e45d30e46e4e359ae135e5e1620a260a89978d",
+  "durationMs": 205034,
+  "audioSha256": "fe50c3e82707c2f85ad7c6a5f647a732fee96120357f0f7c0b546e1078dc8bc1",
+  "bytes": 820461,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-12",
+  "book": "genesis",
+  "chapter": 12,
+  "ref": "Genesis 12",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "9c0db3759211a6f59d64e40a7c1c0a8fa1d70479d798eedf7fe9cf8672f56721",
+  "chunks": [
+   {
+    "id": "genesis-12-ari-1",
+    "fingerprint": "0268df6bb0300572e7d633976fea68a2c683436e5e3cf6082a9e95f99936d43f",
+    "fromVerse": 1,
+    "toVerse": 20
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-12.mp3",
+  "fingerprint": "214bd3111f63254efd5f4e39258d90bb6ec5c446bd7a79c5ae8374081afd604f",
+  "durationMs": 154466,
+  "audioSha256": "8c080ee36ec9da048f2bb206afcdccbc6d7017c507cfd79fc9138513ab8f25f6",
+  "bytes": 618189,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-12",
+  "book": "genesis",
+  "chapter": 12,
+  "ref": "Genesis 12",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "9c0db3759211a6f59d64e40a7c1c0a8fa1d70479d798eedf7fe9cf8672f56721",
+  "chunks": [
+   {
+    "id": "genesis-12-noa-1",
+    "fingerprint": "40f248f182f4943c515529547ee19dff361a33ef0338474547bedcd1cec45498",
+    "fromVerse": 1,
+    "toVerse": 20
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-12.mp3",
+  "fingerprint": "64dbd29c7c88aca0a3de5fcb6537aaec03a253e39136378b7b6c1957b94329a6",
+  "durationMs": 161426,
+  "audioSha256": "9a409762c762ff0384f0f8c6d579ae51f73562e309b10163cc22f24653a2474c",
+  "bytes": 646029,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-13",
+  "book": "genesis",
+  "chapter": 13,
+  "ref": "Genesis 13",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2c653db4cde3fdd6a4a0783d6db055c51945049a8c81ef0d70c96bc6efe775be",
+  "chunks": [
+   {
+    "id": "genesis-13-ari-1",
+    "fingerprint": "eb9053f57eb5472f296dbee0afdc192f5c2d7c27e39b05f8941da100b36b0376",
+    "fromVerse": 1,
+    "toVerse": 18
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-13.mp3",
+  "fingerprint": "722609897195417cab6e653b1cc553c442af63b745b1d78abbb3db1582eee230",
+  "durationMs": 129242,
+  "audioSha256": "adc05841764ecf07fbed4a831cbfd55f92b0b8421346c7961a3472836134024a",
+  "bytes": 517293,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-13",
+  "book": "genesis",
+  "chapter": 13,
+  "ref": "Genesis 13",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2c653db4cde3fdd6a4a0783d6db055c51945049a8c81ef0d70c96bc6efe775be",
+  "chunks": [
+   {
+    "id": "genesis-13-noa-1",
+    "fingerprint": "7dd49a35fbdf63850deb935c8231ecf119346240baf828de8ad7258c3b70976c",
+    "fromVerse": 1,
+    "toVerse": 18
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-13.mp3",
+  "fingerprint": "5bc6cab832dbe9b4e2626fb37c5f4622363413ef7f11f711ab850c0ce04660a7",
+  "durationMs": 132146,
+  "audioSha256": "6786e5879f3b12533dfb2fa1bfffcdf9bdbcf23554385787a8accd618cd639d7",
+  "bytes": 528909,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-14",
+  "book": "genesis",
+  "chapter": 14,
+  "ref": "Genesis 14",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "103d05b5ced18e63b470097a1657d58e68777b61cf3c64a3c6bf8064a3877882",
+  "chunks": [
+   {
+    "id": "genesis-14-ari-1",
+    "fingerprint": "144ec201843b7b983ae87dbb5c16ba338feadb6b11da4caf07ff6cb8b0d0684f",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-14.mp3",
+  "fingerprint": "c2a51cc2c2b31136cdc7c03f846f0806cb5ea6e2c98fdfa6b70bb73003689948",
+  "durationMs": 191714,
+  "audioSha256": "d8a380a30bf6d6026a334b8ae5a9f60a2780de68b10066dd9d21af288ca2a3bc",
+  "bytes": 767181,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-14",
+  "book": "genesis",
+  "chapter": 14,
+  "ref": "Genesis 14",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "103d05b5ced18e63b470097a1657d58e68777b61cf3c64a3c6bf8064a3877882",
+  "chunks": [
+   {
+    "id": "genesis-14-noa-1",
+    "fingerprint": "7207f420753251f5cdc9f85e434ecc75d2dce521876f29281f474a75274babf0",
+    "fromVerse": 1,
+    "toVerse": 24
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-14.mp3",
+  "fingerprint": "c9c3c019075b3cc266d8182d6f93a020b8d11fb2d3cceae248a479f4344131e2",
+  "durationMs": 196106,
+  "audioSha256": "1bf9f6a1bb94f92a0e0a22ccba3f2e421a8fcd961390f25938a84459aaf63591",
+  "bytes": 784749,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-15",
+  "book": "genesis",
+  "chapter": 15,
+  "ref": "Genesis 15",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "c3b82ef99e78dbcdb79dc993e2062ef92c4a91d06d571e36829de8fd8f60d154",
+  "chunks": [
+   {
+    "id": "genesis-15-ari-1",
+    "fingerprint": "a4c4b54433afccd29d82b9b8db2c50d1c2b8507344bf9f7253b6cf8c2907e0e7",
+    "fromVerse": 1,
+    "toVerse": 21
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-15.mp3",
+  "fingerprint": "48ebda5ab8452503d9bacf334be4923884482ceccd1d26a3286384530d5cb58b",
+  "durationMs": 157754,
+  "audioSha256": "adb77edb7ed92c67eca67d216ea1014604a7232f9a600e0f401797891e2f26d2",
+  "bytes": 631341,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-15",
+  "book": "genesis",
+  "chapter": 15,
+  "ref": "Genesis 15",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "c3b82ef99e78dbcdb79dc993e2062ef92c4a91d06d571e36829de8fd8f60d154",
+  "chunks": [
+   {
+    "id": "genesis-15-noa-1",
+    "fingerprint": "7d515aa635fa6ec7d27b592279bce17437ec20f6cdcd74eb6bdd6ce6600c1d12",
+    "fromVerse": 1,
+    "toVerse": 21
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-15.mp3",
+  "fingerprint": "fb4f4a72b691cf390b7017167aed0c886fd2c4b27bdff610ebfdf2b9dade5e96",
+  "durationMs": 167066,
+  "audioSha256": "db801efe68640715924d040be9ee21c9d17d76d2927ecec9b30997181fe0efba",
+  "bytes": 668589,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-16",
+  "book": "genesis",
+  "chapter": 16,
+  "ref": "Genesis 16",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2c8ba7cfa3595c6ad932a5729868460ad279d3fce4fb03089e6cc9ab54abeef4",
+  "chunks": [
+   {
+    "id": "genesis-16-ari-1",
+    "fingerprint": "ed4b8439b70122979e97ed19a47e4b76a32b1edf2c1dd4c884b673feca3c52e9",
+    "fromVerse": 1,
+    "toVerse": 16
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-16.mp3",
+  "fingerprint": "61105f6f1afd26fa9dfd9059e270a36fd8c6532d78ac24046584788de15f979d",
+  "durationMs": 142562,
+  "audioSha256": "0cc9df74dc90bd76d3c92969f9fb7a21bb265cf31adbf034e82db0365208ced8",
+  "bytes": 570573,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-16",
+  "book": "genesis",
+  "chapter": 16,
+  "ref": "Genesis 16",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2c8ba7cfa3595c6ad932a5729868460ad279d3fce4fb03089e6cc9ab54abeef4",
+  "chunks": [
+   {
+    "id": "genesis-16-noa-1",
+    "fingerprint": "7712569042817b1745ab4eb1f0fe33f96703abbf039925cbdbdd111b0291d7bb",
+    "fromVerse": 1,
+    "toVerse": 16
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-16.mp3",
+  "fingerprint": "21609704ca98726da52cbc30a03b7f199cb7ba4b40a6bf4927be213b06313974",
+  "durationMs": 143402,
+  "audioSha256": "4df96b7f684e6626e5a3d8b94e13d1298997fb0ad63dafde1932e873731e966f",
+  "bytes": 573933,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-18",
+  "book": "genesis",
+  "chapter": 18,
+  "ref": "Genesis 18",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0a4a1f938341ccc4c56b0de823b878be6703ee5ac6779fd152d90398fc8c5602",
+  "chunks": [
+   {
+    "id": "genesis-18-ari-1",
+    "fingerprint": "d9c8895cf65882883a420ca83f154653d11daa980ec95e9857f2053d5017f346",
+    "fromVerse": 1,
+    "toVerse": 33
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-genesis-18.mp3",
+  "fingerprint": "6fbb756fe49ba83767b09ac841f9be52b044d1961ed16cf6a16720481db5281f",
+  "durationMs": 267506,
+  "audioSha256": "e0864b79c6308b4f8696e28c6ff9df902a14b5dfbc1f0fed5c09600851d84ac6",
+  "bytes": 1070349,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-genesis-18",
+  "book": "genesis",
+  "chapter": 18,
+  "ref": "Genesis 18",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0a4a1f938341ccc4c56b0de823b878be6703ee5ac6779fd152d90398fc8c5602",
+  "chunks": [
+   {
+    "id": "genesis-18-noa-1",
+    "fingerprint": "2089b2b127740128404150117ed882279dea2592196a2e8362e6d7d0f935e3ea",
+    "fromVerse": 1,
+    "toVerse": 33
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-genesis-18.mp3",
+  "fingerprint": "c7e7cc9610a11155e168e13b6f50eed472debe8fb6c8cbf7f6088d35f006716a",
+  "durationMs": 273386,
+  "audioSha256": "78637e30dfddfdd0e1a3c6194c4dde5bd8d78506a075e8c507493a656676b7c9",
+  "bytes": 1093869,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-10",
+  "book": "leviticus",
+  "chapter": 10,
+  "ref": "Leviticus 10",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "689e90ee73c31c12ec4f2fd0740731909dd09562927781bee927858415af24ab",
+  "chunks": [
+   {
+    "id": "leviticus-10-ari-1",
+    "fingerprint": "9b4df99d565122ca3287a159dddc1a0c3a97d81d2b06690550893a9aabefc823",
+    "fromVerse": 1,
+    "toVerse": 20
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-10.mp3",
+  "fingerprint": "dc420d5a76de6355accf7f0257f922685154d6bde1db20a560c906227e127c87",
+  "durationMs": 209114,
+  "audioSha256": "162672153daf3eb43b1e0bfe143e6ec3ee4cd91eff243c0b947b38b23dd3e853",
+  "bytes": 836781,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-10",
+  "book": "leviticus",
+  "chapter": 10,
+  "ref": "Leviticus 10",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "689e90ee73c31c12ec4f2fd0740731909dd09562927781bee927858415af24ab",
+  "chunks": [
+   {
+    "id": "leviticus-10-noa-1",
+    "fingerprint": "456d72a25aa3f03fc1abd67d6f677e9762f0172c7e7d9091fee0e7cce183b4fb",
+    "fromVerse": 1,
+    "toVerse": 20
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-leviticus-10.mp3",
+  "fingerprint": "5395dc410dfacd266ea4e25548b8334055f1bf89be423eb2d3736fe07278ce18",
+  "durationMs": 206522,
+  "audioSha256": "8780cf7d28f5ba5d9ff3fec02c1fde023d00c3818660eedecce6ef68eac2344c",
+  "bytes": 826413,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-11",
+  "book": "leviticus",
+  "chapter": 11,
+  "ref": "Leviticus 11",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "f79fd993befefd63d9dadf2b7ee22e9ca1bc2cd5fb8af034e12622dfa9412887",
+  "chunks": [
+   {
+    "id": "leviticus-11-ari-1",
+    "fingerprint": "13e7880684f9553adf505fd75795f1ea123f94898ddeebbad75ab146239e4ce2",
+    "fromVerse": 1,
+    "toVerse": 39
+   },
+   {
+    "id": "leviticus-11-ari-2",
+    "fingerprint": "3cd72b3efe1306e6faed5214bc2127ca95046291152d0e1e5d0fc924338ae8c4",
+    "fromVerse": 40,
+    "toVerse": 47
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-11.mp3",
+  "fingerprint": "0409d33b9fe7f093f64bfcb118640976a069a0dfa5417f6c59904190a9b9daf4",
+  "durationMs": 383978,
+  "audioSha256": "473023c4fbef765c991e9fd5b9fc4f4e730659210697875e78bafc688d575128",
+  "bytes": 1536237,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-13",
+  "book": "leviticus",
+  "chapter": 13,
+  "ref": "Leviticus 13",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "dafc938d619d89e31c49d6661d4af084c73789e16c1b49983ec46494b78e1ac6",
+  "chunks": [
+   {
+    "id": "leviticus-13-ari-1",
+    "fingerprint": "dc4aefe83ea77399d5166daa80c3305180bdaff593fdf37df8b84bf7c6d5e1c3",
+    "fromVerse": 1,
+    "toVerse": 30
+   },
+   {
+    "id": "leviticus-13-ari-2",
+    "fingerprint": "4492cce8bfb7a3173b1c3c24673ebadda92ce2139c1af3eda294a66a500aba17",
+    "fromVerse": 31,
+    "toVerse": 59
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-13.mp3",
+  "fingerprint": "2f554e7cb3ae8c81368f16c409d3d92f910ed71f34ff5369d41d4c76af95422a",
+  "durationMs": 567434,
+  "audioSha256": "c1bc886e4e52eb64780f45d425c18ef7dbfb5d30491dccdac728f25a743c55d9",
+  "bytes": 2270061,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-13",
+  "book": "leviticus",
+  "chapter": 13,
+  "ref": "Leviticus 13",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "dafc938d619d89e31c49d6661d4af084c73789e16c1b49983ec46494b78e1ac6",
+  "chunks": [
+   {
+    "id": "leviticus-13-noa-1",
+    "fingerprint": "684cdebc296c17a0c004d2850d4b021cf2ee376132256d2c2ea7ed3358daf41b",
+    "fromVerse": 1,
+    "toVerse": 30
+   },
+   {
+    "id": "leviticus-13-noa-2",
+    "fingerprint": "0a82355dad235ddb3af1e6cbfc9c9ca7437029dcf4c6c83c2a282a91f9202d18",
+    "fromVerse": 31,
+    "toVerse": 59
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-leviticus-13.mp3",
+  "fingerprint": "c5ff697cfafd3ff00a8f00e2a67956568a72e5404e0a95c5b1d20d7b5f84bb2d",
+  "durationMs": 567746,
+  "audioSha256": "2ffc62880958488f49d4ea2e32950152d476cb09e8f804b38f881f3863bcb7d3",
+  "bytes": 2271309,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-15",
+  "book": "leviticus",
+  "chapter": 15,
+  "ref": "Leviticus 15",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2a36d65065ff504cd9fec55df1e5917285d0f8d830a873978f4993375d09f131",
+  "chunks": [
+   {
+    "id": "leviticus-15-ari-1",
+    "fingerprint": "f73cc908cb328fcd01d1a3ad7bc3e96ae435b58425b47582207c1e4a681180d6",
+    "fromVerse": 1,
+    "toVerse": 33
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-15.mp3",
+  "fingerprint": "eaffc146ffec65a39120d15c6f4be2b759cdc5075c7a295bc0c6b5742682ef5a",
+  "durationMs": 278354,
+  "audioSha256": "724ff27392f988b4ac1ceefe0b6cd8836657d794d67e8d66aae5add48d7bf529",
+  "bytes": 1113741,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-15",
+  "book": "leviticus",
+  "chapter": 15,
+  "ref": "Leviticus 15",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "2a36d65065ff504cd9fec55df1e5917285d0f8d830a873978f4993375d09f131",
+  "chunks": [
+   {
+    "id": "leviticus-15-noa-1",
+    "fingerprint": "f5133b9d35f3aa2f52942d18022e60d646a46f7c13c6c91185ff1316033f4b72",
+    "fromVerse": 1,
+    "toVerse": 33
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-leviticus-15.mp3",
+  "fingerprint": "8e404bc96175e1e8155bdf26224fe4fe4e54bb3f52968462c4fa95a7b8ed0f89",
+  "durationMs": 300434,
+  "audioSha256": "47a2cf8d9cdb07ca43e430206915cbe2eccb76056cee419215cf02a7dda29eee",
+  "bytes": 1202061,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-16",
+  "book": "leviticus",
+  "chapter": 16,
+  "ref": "Leviticus 16",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "7d1839c186fa19f5905300feaf93228ad36c1d1a27835d8394c52603df0e3d23",
+  "chunks": [
+   {
+    "id": "leviticus-16-ari-1",
+    "fingerprint": "91d48f0901d4c09921b80696562e4785d910d54d2b40c63685528a90edd88fe8",
+    "fromVerse": 1,
+    "toVerse": 27
+   },
+   {
+    "id": "leviticus-16-ari-2",
+    "fingerprint": "16128fa71c15a241c2f93fc5ab73af41b7eb4f978fa9645af03aa9dd9fb9595a",
+    "fromVerse": 28,
+    "toVerse": 34
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-16.mp3",
+  "fingerprint": "a8c882f0fb270ff2d94336f300e97be24059afe5f4bc1ce1183a1abeffe61244",
+  "durationMs": 321074,
+  "audioSha256": "8ba159a156f63f4a90aa2d226e652832237a259b4dfbaa7373e11d481a36d069",
+  "bytes": 1284621,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-18",
+  "book": "leviticus",
+  "chapter": 18,
+  "ref": "Leviticus 18",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0bcc41a087235231dab39a9c4915149109448e8857852390308a3b8d3008684e",
+  "chunks": [
+   {
+    "id": "leviticus-18-ari-1",
+    "fingerprint": "dc7933551ccf78a365f805320bbe0279bdc90eba23662b94c2366cf5f8d46439",
+    "fromVerse": 1,
+    "toVerse": 30
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-18.mp3",
+  "fingerprint": "06c771463a71ad1327f275fb0dbbafabe00a113a42e2b7609d50c912479108ac",
+  "durationMs": 222002,
+  "audioSha256": "e58be081d2e8c9bad2dd25c3898038bdacdcd9636a3ad77510d092f49c87362d",
+  "bytes": 888333,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-18",
+  "book": "leviticus",
+  "chapter": 18,
+  "ref": "Leviticus 18",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "0bcc41a087235231dab39a9c4915149109448e8857852390308a3b8d3008684e",
+  "chunks": [
+   {
+    "id": "leviticus-18-noa-1",
+    "fingerprint": "c331c77de3518893c620be7039ccea9d87c720914fe3262df06919acc0310bb8",
+    "fromVerse": 1,
+    "toVerse": 30
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-leviticus-18.mp3",
+  "fingerprint": "bfbbb0ea664c86aee6ae50f7bdf37bb6672a9d30da9b449ac5313231d7b0697e",
+  "durationMs": 223706,
+  "audioSha256": "074b374251aa1a560ea14b53d51b74963d50120cb4e0986fb0ac2a0166570171",
+  "bytes": 895149,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-19",
+  "book": "leviticus",
+  "chapter": 19,
+  "ref": "Leviticus 19",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "c7242c465dd572e27d7977c485d2d7632fada6de43f5d6fadf4e28dcfac1a4e0",
+  "chunks": [
+   {
+    "id": "leviticus-19-ari-1",
+    "fingerprint": "d1dfbfbb96f87a5d6a8dd7e0d0778420bd17c85166573b4994486c98119ecfe9",
+    "fromVerse": 1,
+    "toVerse": 37
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-19.mp3",
+  "fingerprint": "4e36c181b1804562bd4ce456982ee0600696a27d7866d6f7977c6a3b3ff040fe",
+  "durationMs": 301946,
+  "audioSha256": "0e779e9c9b9d0ffb0644472e6cca79b194d01673547c8bdc2e7db04f36aa7216",
+  "bytes": 1208109,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-19",
+  "book": "leviticus",
+  "chapter": 19,
+  "ref": "Leviticus 19",
+  "speaker": "noa",
+  "voice": "en-US-Chirp3-HD-Kore",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "c7242c465dd572e27d7977c485d2d7632fada6de43f5d6fadf4e28dcfac1a4e0",
+  "chunks": [
+   {
+    "id": "leviticus-19-noa-1",
+    "fingerprint": "fa516d23b1d33fc16f6108a3221eee09204a0362b933fc0f5b46bc7f5a2ab585",
+    "fromVerse": 1,
+    "toVerse": 37
+   }
+  ],
+  "path": "audio/f/english/torah-chapter-en/torah-en-leviticus-19.mp3",
+  "fingerprint": "4b07eb49d695b2ec549fa26799a7f6d7c34c6c73e687b9ce6f1ca4e7b20ae4c8",
+  "durationMs": 294962,
+  "audioSha256": "da4e2d3e03b8fe4861de32e45658b0b62400a2e9484c4914d09e04eba9b35270",
+  "bytes": 1180173,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ },
+ {
+  "id": "torah-en-leviticus-20",
+  "book": "leviticus",
+  "chapter": 20,
+  "ref": "Leviticus 20",
+  "speaker": "ari",
+  "voice": "en-US-Chirp3-HD-Charon",
+  "lang": "en",
+  "source": "JPS 1917",
+  "sourceSha256": "a4a6547b8631ce5767251484882c8edbf929e99fe39bd3b0a6cae38ba49991a4",
+  "chunks": [
+   {
+    "id": "leviticus-20-ari-1",
+    "fingerprint": "83f33e2c610824ce6b97764c1d5748758f5ae7e212a9d365cc366a22d4a3b01e",
+    "fromVerse": 1,
+    "toVerse": 27
+   }
+  ],
+  "path": "audio/m/english/torah-chapter-en/torah-en-leviticus-20.mp3",
+  "fingerprint": "cafa3f7190f10a11731189f9a4962f5d0bd5e64506a245f5c603ae4a038ab7f0",
+  "durationMs": 266834,
+  "audioSha256": "f82f6fceb3f7f7269bb66d41e8c2bf6196b28f981270e236fd2fef79be80c154",
+  "bytes": 1067661,
+  "qa": "Decoded completely; source coverage and fingerprints checked. English pilot ASR only, not all-chapter pronunciation certification."
+ }
+]

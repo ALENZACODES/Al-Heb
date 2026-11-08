@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book28-p01.mp3"
    },
    "illustration": "a busy terminal, departures board",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book28-p02.mp3"
    },
    "illustration": "a woman with a suitcase and passport",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book28-p03.mp3"
    },
    "illustration": "her suitcase on the airport scale, the attendant shaking her head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book28-p04.mp3"
    },
    "illustration": "the check-in agent pointing at the scale",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book28-p05.mp3"
    },
    "illustration": "the suitcase open on the floor, clothes everywhere",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book28-p06.mp3"
    },
    "illustration": "three thick books held up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book28-p07.mp3"
    },
    "illustration": "four pairs of shoes in a row",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book28-p08.mp3"
    },
    "illustration": "the woman now wearing a coat, scarf and hat indoors",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book28-p09.mp3"
    },
    "illustration": "a second coat over the first, waddling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book28-p10.mp3"
    },
    "illustration": "the scale reading just under the limit, agent amused",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book28-p11.mp3"
    },
    "illustration": "the woman in two coats squeezing down the aisle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book28-p12.mp3"
    },
    "illustration": "sweating in her seat, fanning herself with the safety card",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

@@ -91,6 +91,9 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
         if (envId) thumbs.push({ a, envId });
+        else if (ARCADE_GAMES.some((game) => game.id === id)) {
+          a.prepend(h('img', { class: 'wf-game-thumb', src: `assets/games/arcade/${id}/env.png`, alt: '', width: 1024, height: 1024, loading: 'lazy', decoding: 'async' }));
+        }
         return h('li', {}, a);
       })));
   });

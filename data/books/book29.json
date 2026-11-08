@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book29-p01.mp3"
    },
    "illustration": "a man checking his phone outside a café at dusk",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book29-p02.mp3"
    },
    "illustration": "a chat on his phone: see you at 8",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book29-p03.mp3"
    },
    "illustration": "a crisp blue shirt, tag still on the sleeve",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book29-p04.mp3"
    },
    "illustration": "a woman with a bicycle helmet under her arm, smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book29-p05.mp3"
    },
    "illustration": "a handshake that becomes a half-hug, awkward and warm",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book29-p06.mp3"
    },
    "illustration": "a small table, two menus",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book29-p07.mp3"
    },
    "illustration": "the man opening his mouth, nothing coming out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book29-p08.mp3"
    },
    "illustration": "her eyes on the price tag on his sleeve",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book29-p09.mp3"
    },
    "illustration": "the woman laughing, hand over her mouth",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book29-p10.mp3"
    },
    "illustration": "the man red-faced, pulling off the tag",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book29-p11.mp3"
    },
    "illustration": "the two of them talking with their hands, plates arriving",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book29-p12.mp3"
    },
    "illustration": "the two walking off, the bicycle between them",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

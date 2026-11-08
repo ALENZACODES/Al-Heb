@@ -259,9 +259,9 @@
    "titleEn": "At the Bank",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -271,9 +271,9 @@
    "titleEn": "Sea in the Morning",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -283,9 +283,9 @@
    "titleEn": "Tired",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -295,9 +295,9 @@
    "titleEn": "The Interview",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -307,9 +307,9 @@
    "titleEn": "My Neighbour",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -319,9 +319,9 @@
    "titleEn": "Falafel or Shawarma?",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -331,9 +331,9 @@
    "titleEn": "The Plane",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -343,9 +343,9 @@
    "titleEn": "First Date",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

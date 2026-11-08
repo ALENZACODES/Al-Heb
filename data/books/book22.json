@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book22-p01.mp3"
    },
    "illustration": "a bank branch with glass doors and a ticket machine",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book22-p02.mp3"
    },
    "illustration": "a hand pulling a paper ticket: 87",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book22-p03.mp3"
    },
    "illustration": "the ticket in her hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book22-p04.mp3"
    },
    "illustration": "the display board showing 20",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book22-p05.mp3"
    },
    "illustration": "rows of chairs, people waiting, a child drawing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book22-p06.mp3"
    },
    "illustration": "the woman reading a paperback",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book22-p07.mp3"
    },
    "illustration": "her head tilted, book on her lap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book22-p08.mp3"
    },
    "illustration": "the board flashing 87, a clerk calling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book22-p09.mp3"
    },
    "illustration": "the woman jolting awake, book falling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book22-p10.mp3"
    },
    "illustration": "the woman at the counter, the clerk smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book22-p11.mp3"
    },
    "illustration": "the clerk pointing at a frozen screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book22-p12.mp3"
    },
    "illustration": "the woman pulling a fresh blank ticket from the dispenser, deadpan",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

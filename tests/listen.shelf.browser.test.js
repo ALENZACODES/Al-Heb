@@ -123,7 +123,7 @@ async function exercise(origin, page) {
   }
   await page.eval(`new Promise((resolve) => { const t = setInterval(() => { if (document.querySelector('h1')) { clearInterval(t); resolve(); } }, 50); })`);
   const heading = await page.eval('document.querySelector("h1")?.textContent || ""');
-  assert.match(heading, /Sacred listen/);
+  assert.match(heading, /Sacred Listen/);
   const text = await page.eval('document.body.innerText');
   assert.match(text, /No cleared Sephardi recording/);
   assert.match(text, /No cleared Israeli recording/);
@@ -206,7 +206,7 @@ test('sacred listen and game music play, pause, mute, leave the route, and omit 
       const page = await browser.newPage();
       try {
         await page.goto(`${origin}/#/listen/shelf`, { waitUntil: 'domcontentloaded' });
-        assert.match(await page.locator('h1').innerText(), /Sacred listen/);
+        assert.match(await page.locator('h1').innerText(), /Sacred Listen/);
       } finally { await browser.close(); }
       return;
     }

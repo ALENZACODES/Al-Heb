@@ -83,7 +83,7 @@ test('end to end (mock tones): hand-off folder -> ingest dry run writes nothing 
       assert.equal(side.inputSha256, sha256Text(e.text));
       assert.equal(side.ingestedAt, '2026-01-01T00:00:00.000Z'); assert.equal(side.licence, 'licence not cleared');
       assert.match(side.inputFileSha256, /^[0-9a-f]{64}$/);
-      assert.match(fileLabel(e.status, e.tradition, e.source), /style not verified; made from a respelling/);
+      assert.equal(fileLabel(e.status, e.tradition, e.source), `${e.tradition[0].toUpperCase()}${e.tradition.slice(1)} voice`, 'learner caption names the voice style only (status and source stay in the manifest)');
       assert.equal(Object.keys(e).pop(), 'synth');
     }
     assert.match(report(res), /outside-respelled/);

@@ -107,7 +107,7 @@ test('browser: a learner who finished the first run lands in the builder; Hebrew
   const stored = { 'alef:firstwin.v1': { v: 2, done: true, builtAt: '2026-11-06T00:00:00.000Z', seconds: 40, accuracy: 100, wordId: 'abba' } };
   await withBuilder({ congregation: 'israeli', voice: 'm' }, stored, async (page, { errors, requests }) => {
     await page.waitForSelector('#firstwin .fw-tray .fw-tile', { timeout: 30000 });
-    assert.match(await page.locator('#view-title').innerText(), /Build Hebrew words/);
+    assert.match(await page.locator('#view-title').innerText(), /Build Hebrew Words/);
     await page.locator('#firstwin button:has-text("All letters")').click();
     assert.equal(await page.locator('#firstwin .fw-tray-row:not(.fw-tray-finals) .fw-tile').count(), 22);
     assert.equal(await page.locator('#firstwin .fw-tray-finals .fw-tile').count(), 5);

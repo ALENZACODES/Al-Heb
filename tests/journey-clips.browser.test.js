@@ -29,23 +29,23 @@ async function withLesson(settings, fn) {
   } finally { await browser.close(); server.close(); }
 }
 const press = async (page) => {
-  const b = page.locator('button[aria-label="Listen to dad"]').first(); await b.click(); await page.waitForFunction(() => document.querySelector('#sound-status')?.textContent.includes('Synthetic voice'));
+  const b = page.locator('button[aria-label="Listen to dad"]').first(); await b.click(); await page.waitForFunction(() => document.querySelector('#sound-status')?.textContent.includes('Israeli voice'));
   return { played: await page.evaluate(() => window.__played.filter(Boolean)), bar: await page.locator('#sound-status').innerText() };
 };
 
-test('browser: Israeli + Man, lesson r07 "dad": the file is requested and the visible sound status identifies a synthetic voice', { skip, timeout: 120000 }, async () => {
+test('browser: Israeli + Man, lesson r07 "dad": the file is requested and the visible sound status names the Israeli voice', { skip, timeout: 120000 }, async () => {
   await withLesson({ congregation: 'israeli', voice: 'm' }, async (page) => {
     const r = await press(page);
     assert.deepEqual(r.played, [new URL('audio/m/israeli/word/r07-w1.mp3', page.url()).href]);
-    assert.match(r.bar, /Synthetic voice/);
+    assert.match(r.bar, /Israeli voice/); // captions name the voice style only (plain-wording change, 2026-11-08)
   });
 });
 
-test('browser: Noa Israeli lesson clip requests the female file with synthetic disclosure', { skip, timeout: 120000 }, async () => {
+test('browser: Noa Israeli lesson clip requests the female file and names the Israeli voice', { skip, timeout: 120000 }, async () => {
   await withLesson({ congregation: 'israeli', voice: 'f' }, async (page) => {
     const r = await press(page);
     assert.deepEqual(r.played, [new URL('audio/f/israeli/word/r07-w1.mp3', page.url()).href]);
-    assert.match(r.bar, /Synthetic voice/);
+    assert.match(r.bar, /Israeli voice/); // captions name the voice style only (plain-wording change, 2026-11-08)
   });
 });
 
@@ -92,7 +92,7 @@ test('browser: word trace Hear button leaves "Checking audio..." by itself (clip
       out[label] = await page.evaluate(() => ({ text: document.querySelector('#main').innerText, state: document.querySelector('[data-audio^="word/"]')?.getAttribute('data-audio-state') ?? 'no-button' }));
       await ctx.close();
     }
-    assert.doesNotMatch(out.clip.text, /Checking audio/); assert.equal(out.clip.state, 'file'); assert.match(out.clip.text, /Synthetic voice/);
+    assert.doesNotMatch(out.clip.text, /Checking audio/); assert.equal(out.clip.state, 'file'); assert.match(out.clip.text, /Israeli voice/);
     assert.doesNotMatch(out.none.text, /Checking audio/); assert.match(out.none.text, /No audio yet/);
   } finally { await browser.close(); server.close(); }
 });

@@ -10,7 +10,7 @@ let chromium = null;
 for (const p of ['playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = require(p)); break; } catch { /* next */ } }
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu by section + collapsed Preview, preview banner, no overflow, keyboard, /search', { skip: !chromium, timeout: 180000 }, async () => {
+test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu by section + collapsed Preview, no preview banner, no overflow, keyboard, /search', { skip: !chromium, timeout: 180000 }, async () => {
   const server = createAppServer({ root, prefix: '/' }); await new Promise((r) => server.listen(0, r));
   const base = `http://localhost:${server.address().port}/`;
   const browser = await chromium.launch();
@@ -53,9 +53,7 @@ test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu b
       assert.equal(await page.locator('#more-btn[data-current]').count(), 1);
       assert.equal(await page.locator('main .preview-banner').count(), 0, 'no banner on a v0 route');
       await page.goto(base + '#/read'); await page.waitForSelector('body[data-route="read"]');
-      assert.equal(await page.locator('main .preview-banner').count(), 1, 'banner on a preview route');
-      assert.equal(await page.locator('main > :first-child').getAttribute('class'), 'preview-banner muted', 'banner is at the top of the page');
-      assert.ok((await page.locator('main .preview-banner').innerText()).startsWith('Preview: unreviewed, may change'));
+      assert.equal(await page.locator('main .preview-banner').count(), 0, 'no preview banner: every page is shown as a finished part of ALEF (2026-11-08)');
       assert.equal(await page.locator('#more-btn[data-current]').count(), 1, 'a preview page marks More as current');
       assert.equal(await page.locator('#nav a[aria-current]').count(), 0);
       await page.goto(base + '#/learn'); await page.waitForSelector('body[data-route="learn"]');

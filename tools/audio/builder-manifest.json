@@ -8,8 +8,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hf8c8316a_ari.mp3",
       "fingerprint": "4eba48d3e288b8ddaa0479a00d29b339f8d67332fb173b91d4afb554b0745089",
-      "bytes": 8300,
-      "sha256": "73dfe118e47ca67e4ee9d3439eea11a46152919f2e209307401998fdec852e24"
+      "bytes": 11328,
+      "sha256": "d7acbd31a2dd35bacf39d0cc1ef36b56c80e91bfcf6678c01e3e1f352123027d"
     },
     {
       "id": "hf8c8316a",
@@ -17,8 +17,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hf8c8316a_noa.mp3",
       "fingerprint": "9cdd22a609dee785ca437767c415c5be0c553165902397944d11a58f7d0e1199",
-      "bytes": 6572,
-      "sha256": "abbda77395c0d0066b42f10c851fcad2c39e2e1b5cf8cb8c8cd911d39b90096b"
+      "bytes": 12582,
+      "sha256": "c5aa70cdc687a03739561f2f46d879a2b2404069cd6911452de7a43eb1ac6723"
     },
     {
       "id": "hf63de22c",
@@ -89,8 +89,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/p580df509_noa.mp3",
       "fingerprint": "8868fdfa0d39a5ffae041b28287396109dc4be4404ab01610efa7e3cc61c0329",
-      "bytes": 7580,
-      "sha256": "3778ddc8dd2f2855b03ce98e40403fbcf4cfa73bba636d8de78005aec56f9f10"
+      "bytes": 7148,
+      "sha256": "531aec16653b6ceebccb24a80d5f633e76e3f9aedab44f4bc186ed24591a278b"
     },
     {
       "id": "h0a70642a",
@@ -332,8 +332,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h86027352_ari.mp3",
       "fingerprint": "2254dc5dace04432a10be873f31d84ac9ad35c840e3a90d78ab1148aee78bbfd",
-      "bytes": 9020,
-      "sha256": "15343795deae89cded373024729cbe06064a94009493ddb2d8a3061d29b324f8"
+      "bytes": 6140,
+      "sha256": "3700f9c92e7e529372fd35e6c54a2ec86dadf70e601f5e4f4b79c97d59646f96"
     },
     {
       "id": "h86027352",
@@ -341,8 +341,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h86027352_noa.mp3",
       "fingerprint": "1437b9a6ad25e6a9604f2c2498c270723b114ea1d82c6269258fec667480c2cf",
-      "bytes": 6860,
-      "sha256": "6a624cc030cc04d00564e662798e7eaeba35311691274b6270f25cabedebf6b2"
+      "bytes": 7148,
+      "sha256": "b5b2eee05b0df351834f370ea0a94d0e3c43022b2fa5d236e7024f3eb42a48a1"
     },
     {
       "id": "hc06c43b6",
@@ -422,8 +422,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h4fed6814_ari.mp3",
       "fingerprint": "a1e657f23d8f934ca169ebe9ffeaa1eaf3c91ef5ffcee9a2555608aea72dec71",
-      "bytes": 7148,
-      "sha256": "33cb5da24fb7932f1068b757b6c3d7e420f0af599db445bc62eb0a3710d84ff8"
+      "bytes": 5564,
+      "sha256": "34e2b506ac837cf2da0ded4814f49aa78d65cecea80cec984ec3eae79bb7ab30"
     },
     {
       "id": "h4fed6814",
@@ -431,8 +431,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h4fed6814_noa.mp3",
       "fingerprint": "7e3e342ae5f5fcc77c1901bb78b99144a563c4f39cc44e5f2ab2ef935bc8495c",
-      "bytes": 7868,
-      "sha256": "285926c2377264a3b92ae3cc4f2df83c78c798707881165b16fe4c80594f99d0"
+      "bytes": 6140,
+      "sha256": "622a5c98a3df23d32b24aa407513aa88987123fbc0287ec21702d1eb638904eb"
     },
     {
       "id": "h9c8ddecf",
@@ -512,8 +512,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h80d6f3f0_ari.mp3",
       "fingerprint": "f65a939f494a7edfa02f407667eadd7422966b0cf65549ceea132e37aa4f6da4",
-      "bytes": 5708,
-      "sha256": "536f618cde69a104e7b05c40d442ab9365c66d44e636666c32acce737d7b5a32"
+      "bytes": 4556,
+      "sha256": "df736b5c2611f7846e73ab2e042799062913fb50756bb195d99fd8bb775f1e0c"
     },
     {
       "id": "h80d6f3f0",
@@ -602,8 +602,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/pec9a400e_ari.mp3",
       "fingerprint": "809b9cda019755c81e0704d1212fed33f8efebe493ddb1b1aa3afc81263173c7",
-      "bytes": 7292,
-      "sha256": "d0d6d85549d7d01d9c10163db7de11b87f2d15d3dbd1f942f2f96438e1d36ed5"
+      "bytes": 4556,
+      "sha256": "b60b2eebd47f5e333a07b5a313ed8e11f536100056236d0cc157bccfd706c1db"
     },
     {
       "id": "pec9a400e",
@@ -611,8 +611,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/pec9a400e_noa.mp3",
       "fingerprint": "d484ae0c1e52f24fc086ce5b536ca220ca7fb57a5a5ea05f48911a307f677183",
-      "bytes": 5852,
-      "sha256": "3c096990ba46d2b774755c14ca2266210c36d6f79779a87495e5a48dd1f6a486"
+      "bytes": 5564,
+      "sha256": "9043ca8e8774703cda584e9a00cc0cb8f7ea2f4d1384df8c19cf865e3ca75537"
     },
     {
       "id": "hd4c8080b",
@@ -836,8 +836,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hc008b0a9_ari.mp3",
       "fingerprint": "c8cbc24a608ce7e96c9d4bffc832b173678023580a807bbca5134683ff0750bc",
-      "bytes": 7580,
-      "sha256": "05328ab2daae3ba73698f18f5b2ee5aba2dd5b31e1c475cfa437505192f16b8a"
+      "bytes": 5852,
+      "sha256": "c23119a5e0a1cfddf8cfb03924a575653f584850193d81c6ef8b65407187d613"
     },
     {
       "id": "hc008b0a9",
@@ -845,8 +845,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hc008b0a9_noa.mp3",
       "fingerprint": "92b6b36411f7143e0ec230185d8b64437ebe02333aec84b73af54deb37815455",
-      "bytes": 6572,
-      "sha256": "b36342e101bf7a0fd4d522988a2b5c0b617ebab095d07c8b73c8ad374b3428b7"
+      "bytes": 6428,
+      "sha256": "cf2cdf76b2aec92ed936cdeb0379179d6d0ac042049fbb721b16cf630be59707"
     },
     {
       "id": "h6b636d7b",
@@ -1250,8 +1250,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h55a56675_ari.mp3",
       "fingerprint": "51411a7a1f275629fbfd5a020d49e6903eceb9bfea366f7a988ce2c3481bc600",
-      "bytes": 8732,
-      "sha256": "8ede329e40a9853fedecc690634b2d88a295ed850871ec33a11506531cc24d7d"
+      "bytes": 6428,
+      "sha256": "c6373eda94bcae17ac9c50cf41a094ad91caf2532a8d32c09248e8fce2b1c71e"
     },
     {
       "id": "h55a56675",
@@ -1259,8 +1259,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h55a56675_noa.mp3",
       "fingerprint": "b55c67f576f1798ae7279e9ee31bb1df4bfb916112f00ea6eb8f66c6852ebd1c",
-      "bytes": 6428,
-      "sha256": "42fd50ce5fb2edd02089d7fc536ce90c677e3d4f59fdfc9bfce616d04659d3fa"
+      "bytes": 7148,
+      "sha256": "deeb4076ce8020358724285f28b98e9a57a1eb8658ec118a10c266647aefedfa"
     },
     {
       "id": "h5bd1f5e1",
@@ -1304,8 +1304,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h85cda534_ari.mp3",
       "fingerprint": "4a8fc50f202bf6a425f3db8ba2c08019fc429338ec97ca8406bc57e7742c34de",
-      "bytes": 7868,
-      "sha256": "a8333b5d391c602f458644b205d38f1c9f721fd264363cb7eda89358fa2fd082"
+      "bytes": 5852,
+      "sha256": "435ffa982bb72006e2b3af5f7ef73a59868678f1a04f467aba58a3f2894045cb"
     },
     {
       "id": "h85cda534",
@@ -1412,8 +1412,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hf1da5ea6_ari.mp3",
       "fingerprint": "65db9fffeb52894215360e5176a5a01f4facae27a88a2c8abaccd4300019c417",
-      "bytes": 8300,
-      "sha256": "3d549dfef957ef76105b935cf5b3ced27c3f85445f5c9aaddd578e631cce03b3"
+      "bytes": 5276,
+      "sha256": "3313d7c7998ae9c0bc08933c83302f31b87818455d04551e32b77634c1fa3c7e"
     },
     {
       "id": "hf1da5ea6",
@@ -1421,8 +1421,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hf1da5ea6_noa.mp3",
       "fingerprint": "c851bf23c7bf56f0b864ba48a8223849a4dc2bd50779545db86d758678a8465a",
-      "bytes": 6572,
-      "sha256": "2f6cd755bbf28ffb76e5b32c8283e212a3ed8993f15568ae884c7d5555561c35"
+      "bytes": 5564,
+      "sha256": "7f856742d0bb9db32df4b32de927cb52aef63ad16b7337ed52160bd87d9ec917"
     },
     {
       "id": "h770abeb5",
@@ -1682,8 +1682,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h8a450588_ari.mp3",
       "fingerprint": "5d6b6033650ea1aaf781ea00c809d54aa153e86813a1826f17782e9b4f667c0b",
-      "bytes": 6140,
-      "sha256": "015f9144b89ab6b5b2b92be2e081c605c797c3a1c59989df21a107fc8b08e441"
+      "bytes": 5708,
+      "sha256": "cc977db8912b2ee347d49147fb9245d4da26771b91d3d42ceaaab57a7df5ea0a"
     },
     {
       "id": "h8a450588",
@@ -1691,8 +1691,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h8a450588_noa.mp3",
       "fingerprint": "d028f6baa2fa64bbccae0df1120e46ee7724f1907ba10cfd4f90e37362a9a690",
-      "bytes": 6572,
-      "sha256": "cbd033fdf701ee17ff064927478bc4400400b0b195ddc09cba5810e90c1b2722"
+      "bytes": 6284,
+      "sha256": "0c57b746351adcdaf7ebf9ad094045f460719191291893cca756bd7812b09767"
     },
     {
       "id": "hd53e0a60",
@@ -1862,8 +1862,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hf07c1580_ari.mp3",
       "fingerprint": "2711c054e93b04bc55aaa802856c35c2e936fc0d5f2e055626b64afac382e234",
-      "bytes": 7292,
-      "sha256": "889276579f5991879c578f93b28da11c37d04caaa32551aa779260ec57ab1eda"
+      "bytes": 4988,
+      "sha256": "20f79a34a91fec6f3a8616a64ff291d9988cfe3a8356a96bb88124747c3b0050"
     },
     {
       "id": "hf07c1580",
@@ -1871,8 +1871,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hf07c1580_noa.mp3",
       "fingerprint": "413cc559786bb63c59627f42b40ce69e4de09e26cfa077175c9cdb466e6fd03f",
-      "bytes": 10460,
-      "sha256": "8388976f13ba91648eccebc7a89ba2eda6f36dc7d23bfeef4210b635c4dda779"
+      "bytes": 5708,
+      "sha256": "d7932639f0b83d55718b630c6f956a8269ab11beb248ff3252b10fda839607be"
     },
     {
       "id": "h92151b55",
@@ -1880,8 +1880,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h92151b55_ari.mp3",
       "fingerprint": "1c9477c801c1c2ffc6456dd43e4b14ee0447dfee09afa824c2e880e78911ef52",
-      "bytes": 8732,
-      "sha256": "042bd8f33c59a7502ff98e238324a92c05cd4a119218bf0cced9054caefeaad9"
+      "bytes": 5708,
+      "sha256": "ec75a74af6e94e055d105602594321685d85aa9dbb1307c07df0932b94fbd795"
     },
     {
       "id": "h92151b55",
@@ -1889,8 +1889,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h92151b55_noa.mp3",
       "fingerprint": "ff431881f365b8f732168369657a4c785a8242f88f109df37267077d332faa90",
-      "bytes": 6572,
-      "sha256": "a717872d4eaf7ee4176080bb624d2d886033eb69826b9f83bb16c400c6eaed54"
+      "bytes": 6716,
+      "sha256": "5da6d790b1e0f84d73f0cfeb9f74a339836ea9b07c203e9f4cf67e7fab2cefa5"
     },
     {
       "id": "hbb3bc5fd",
@@ -1934,8 +1934,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hcb5a058a_ari.mp3",
       "fingerprint": "b50744a0964679d0e5995973f6c0626e90cc94558a8320c42b10d4f6025d65b2",
-      "bytes": 8300,
-      "sha256": "58b85878c00c6a8ca4b48b0ed5b5ae45bc4f7ce134f407aff1db18f5e26c369d"
+      "bytes": 5852,
+      "sha256": "8afc81ee23e65396b07f1924c4c64ac029a473807d70489f0a566af4c8a74e90"
     },
     {
       "id": "hcb5a058a",
@@ -1943,8 +1943,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hcb5a058a_noa.mp3",
       "fingerprint": "f226f21b28c85fc0484d864abac0b522d625faa9c783521df827cb0423d077f7",
-      "bytes": 6428,
-      "sha256": "6593155a078a87cdb38c2166f6b0996cf0bb6b51d8f62ea64a5b882e0da12aba"
+      "bytes": 6716,
+      "sha256": "e26b563076e782caf6214f31ef0cb5fade2617a6c37c983faef1f7467156cc40"
     },
     {
       "id": "hf9a1a55b",
@@ -1970,8 +1970,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h3dfe9831_ari.mp3",
       "fingerprint": "f7ac7113493b08f36251c72338d01b6edb3d1093c2b2ae92374bbc03b6137f7f",
-      "bytes": 9740,
-      "sha256": "5c1c05ff87e9f1c956874c9386b113d710e72bc0b0d67d49508f08e4768a19bb"
+      "bytes": 5564,
+      "sha256": "44c4b0af4bbb6c6a72a0e61ed4e29ff531efe65061d30867dead5d7ef8767bbb"
     },
     {
       "id": "h3dfe9831",
@@ -1979,8 +1979,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h3dfe9831_noa.mp3",
       "fingerprint": "2d1f03fff9f71e7f2abbcd2a451580716454a7b5eb81ed164645a786d3b7d494",
-      "bytes": 7868,
-      "sha256": "ffe0297853ccfb142e333a8e4c70275b041e5cf3d8effe1a9aa5cf89ddfac016"
+      "bytes": 6140,
+      "sha256": "a0ab91027b17d8e6a3a570c46b99e1772da4a56ebb3957b5451f1b989ba5b945"
     },
     {
       "id": "h769a6c3e",
@@ -2006,8 +2006,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h29aadfe4_ari.mp3",
       "fingerprint": "6576723c37587d76972a35b753a162af15878ba006550bd81da5b587f2a41390",
-      "bytes": 8012,
-      "sha256": "707cb3ddd8d545540be3c1830284ab9c375a8e99fa79d4d3d848b290d142016c"
+      "bytes": 5852,
+      "sha256": "e256bd1c037330b8e9b5f21ddf07ef384524dcc1c9656ad352d61385cf6a3645"
     },
     {
       "id": "h29aadfe4",
@@ -2015,8 +2015,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h29aadfe4_noa.mp3",
       "fingerprint": "54df61c98ccc5f4de6ccba83bf03355a100a999aa57f5e28180e6792a804f39c",
-      "bytes": 5708,
-      "sha256": "811adbf5460e20f2656fe7a9e6a60280353e4ea3bb91432ae159ea90a0d5b57c"
+      "bytes": 6284,
+      "sha256": "fbde6d58b69ed80ca059a1449c73933593de2ad8d2d13d7754fa90c657e19df2"
     },
     {
       "id": "pc9b3fcc6",
@@ -2033,8 +2033,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/pc9b3fcc6_noa.mp3",
       "fingerprint": "76324cdae912cfd82db5c7ba6363b0365179a697587b7b9adc1d79bd9a30e0fe",
-      "bytes": 5132,
-      "sha256": "1450cfd9c00738923178df724490c9d2fa07a37960292ee8131d050b38049613"
+      "bytes": 5708,
+      "sha256": "7e17e08ab26f85a69daf0a8d86e2b46755ddf969f365ca30713c3975be52e28e"
     },
     {
       "id": "h68a92f84",
@@ -2042,8 +2042,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h68a92f84_ari.mp3",
       "fingerprint": "0f70363012cb70fa5a0e5ecb52aea56090c878c3b146e25f52188323daa399a5",
-      "bytes": 8300,
-      "sha256": "6df132bef481c5e326dacab10b53dd7211164460bc9b132bc77f385c0956ffb5"
+      "bytes": 5276,
+      "sha256": "5938b8e660b5e763d14d0952944496670ab54d27d47fae0bad57e64ba7a36fb6"
     },
     {
       "id": "h68a92f84",
@@ -2051,8 +2051,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h68a92f84_noa.mp3",
       "fingerprint": "bafae7e70b465e571bede1e96b06867844655b0e69ac7b2bbcca43acf55ac22c",
-      "bytes": 5852,
-      "sha256": "24fb289812732e7e1846ec9b88bf37a79f96ecbd23dd990f447c7ba8d8959364"
+      "bytes": 5996,
+      "sha256": "6dc5103dcd9dc2b83a7c731650ac388dc54770ecd9299c899ff41d7f41842c91"
     },
     {
       "id": "h1de12f34",
@@ -2141,8 +2141,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hffd9b904_noa.mp3",
       "fingerprint": "decf44bbe0961d328f8ba15907f59ab496781cb6eede3b20abb2d8d751b9500f",
-      "bytes": 6860,
-      "sha256": "3b16de32db9e1f3952e36af635664b50d99e039ed3c4f7646b8ef28750202d69"
+      "bytes": 5420,
+      "sha256": "d1936eb794962d61cca8bc5f0f6781ace3a5bd6cdc26568563bd38578b15b2c3"
     },
     {
       "id": "h26154c1a",
@@ -2222,8 +2222,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h42410d5e_ari.mp3",
       "fingerprint": "e6476f2e94bf7c55c9417c7eddd3884192c94b701ce1506dbb724be0a69a9783",
-      "bytes": 8012,
-      "sha256": "60a0277a5e60f87d8c390886c811c41f6b0bd01fa77928334989360635a84182"
+      "bytes": 4844,
+      "sha256": "afcaf8c5926d06396dc5a61ac7fdf5fd67e29478599ce79391d639975779dbdb"
     },
     {
       "id": "h42410d5e",
@@ -2231,8 +2231,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h42410d5e_noa.mp3",
       "fingerprint": "6bebfc5a1aff25d8e9416310c063b8d82f813ef0df57265c194e1bd9835149ef",
-      "bytes": 5132,
-      "sha256": "8a91f252bf34c2b183867ae224c6405acc869ccacfb2e1086571a558d50c149c"
+      "bytes": 5564,
+      "sha256": "f0561be880f5cc5ef77a641adfc5f2f58234b8e03374922d68724667a2307f33"
     },
     {
       "id": "h0b1cfbd9",
@@ -2240,8 +2240,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h0b1cfbd9_ari.mp3",
       "fingerprint": "163f0b512ec37b0281bc89ef181a483ff3017620bdcce7b9837f1b403ebc22a9",
-      "bytes": 8732,
-      "sha256": "cfcfbdfe23c142d9ccd0ca1f429b4310e382fc28e2c8aa34853692b68adeb1ae"
+      "bytes": 5420,
+      "sha256": "cecb0edb3f0eb3e58b2cf2255e4990d27b41884badf84dad6e77342c29f6d985"
     },
     {
       "id": "h0b1cfbd9",
@@ -2249,8 +2249,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h0b1cfbd9_noa.mp3",
       "fingerprint": "b3cf05066ea41e96a399dd840b9112af0ff2342749c77d0a3969f387d32432cc",
-      "bytes": 11900,
-      "sha256": "052e49ae6815cc90c0cb2253c342fa34e3df98b617e6a61e1f5d75b15c81e087"
+      "bytes": 6140,
+      "sha256": "69b27fa58eefb46925c3607cac114d62d42a2892f2f686f899afe9b04cb437df"
     },
     {
       "id": "h9160d23f",
@@ -2276,8 +2276,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h5c689c60_ari.mp3",
       "fingerprint": "70e4705a15d564ba9c44b798b7366038a34c501ed62d49e193225bf845aadf69",
-      "bytes": 7868,
-      "sha256": "4e26ab99a345875c50d6a7608e0995c7b7686924c9fce76ef25a6c45a805cced"
+      "bytes": 5852,
+      "sha256": "278946d611ebe456288448e50d04793fc3b71e0d1a44015b04c386f68c6fefc0"
     },
     {
       "id": "h5c689c60",
@@ -2285,8 +2285,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h5c689c60_noa.mp3",
       "fingerprint": "fe8cfda777cbf291bd1d194ce7f8e465f5c93890235b2e695a6b39cdc7528364",
-      "bytes": 6860,
-      "sha256": "de6961631f0ad9e66bbda80cb2ee7e2f829c2d67df898bb124998a64ea01f07b"
+      "bytes": 6428,
+      "sha256": "0dc49d3e7eb884740ea1099658aa47c9b6d9499b6584e4a60ea7a34c4b71cab0"
     },
     {
       "id": "hdd2bd792",
@@ -2366,8 +2366,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h8349e150_ari.mp3",
       "fingerprint": "18a675f50b659a4a542cba69229a364dbe6bfe0498028c02e08fc56f28e4d6cf",
-      "bytes": 7148,
-      "sha256": "a5a66b057dbee28c2eecf3df3757eb580c9ea6fc724fcd2bfc76ed5c388ed35b"
+      "bytes": 4844,
+      "sha256": "c3ed8af81ac32225214be94901368b544e7a8e8706f48c44250be6dbcf8e5130"
     },
     {
       "id": "h8349e150",
@@ -2375,8 +2375,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h8349e150_noa.mp3",
       "fingerprint": "bbb6f353e9e5e7de33220239a3a388c90fe2924c6204c0bb8d94afdd7a7d82b1",
-      "bytes": 5852,
-      "sha256": "4d977465919cca59b454d181cae7ed77419c57e6fb79ccde26b42903bc23d3e8"
+      "bytes": 5420,
+      "sha256": "ff3e54eed72162b96412ecc21a5bb5c59bfaf7b5c5021fda9aae519030a44b6d"
     },
     {
       "id": "hb814461b",
@@ -2474,8 +2474,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/he7f4c5c3_ari.mp3",
       "fingerprint": "a202001aed79ac754a89e8bec0f2df00ed37a3745a8aad5d265a9d624831e5f1",
-      "bytes": 7868,
-      "sha256": "592900b13ebe88fe927398e9f6cac82e490781c6814662e5ada5fcb38ff65edd"
+      "bytes": 5996,
+      "sha256": "87a88252a9554ccc69d855396b8d2e91d28f23ee645969507bde478724e35da8"
     },
     {
       "id": "he7f4c5c3",
@@ -2483,8 +2483,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/he7f4c5c3_noa.mp3",
       "fingerprint": "e2eefe93456c7b15a6c4bd2597e8aec2418bfa8ee9dcd5afbecf777601483f9b",
-      "bytes": 6140,
-      "sha256": "071b691a7bb034d22270cf2cc3627ffbe68666c235fa806e7645a5342331c807"
+      "bytes": 6860,
+      "sha256": "346249beb86c873744ecd718f5f7c088732d70fe25f7948d6b286edff58e2f59"
     },
     {
       "id": "hc8e59638",
@@ -2510,8 +2510,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h7c05b190_ari.mp3",
       "fingerprint": "c7d389530c33d7bf535561d42b3a8ecc82591a8110af8060fdceb35513a982a8",
-      "bytes": 7148,
-      "sha256": "a24992433fde353495ce633770b5030998cfd98838ffb31a80c3fdafb5af5bfa"
+      "bytes": 5996,
+      "sha256": "a04f123736dae87822099fc432af451daada91d2d2b0fa6e8c7198293471d946"
     },
     {
       "id": "h7c05b190",
@@ -2519,8 +2519,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h7c05b190_noa.mp3",
       "fingerprint": "6f61ff2d18b1d0b3e70aa075f5aaba4b085f7cade875a6979314f69b777a3eb4",
-      "bytes": 5852,
-      "sha256": "5c400b3075d20e3a716e8387d3123d54211d10ae7dc4dda86b6d98b82dee2196"
+      "bytes": 6860,
+      "sha256": "fd8001f22a187c38f4adf99e37b2ed8b3524daf0b6fbd42f9368f144649c4764"
     },
     {
       "id": "h48d3db84",
@@ -2528,8 +2528,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h48d3db84_ari.mp3",
       "fingerprint": "9ec614308f0946d31d0108415bdd254b8268115b9d54b336af7a0c233370ed1c",
-      "bytes": 7580,
-      "sha256": "340a73fa880b436dfcc96c8b5d53ecaf85c27abb75b98fbace40442fbc495b93"
+      "bytes": 5996,
+      "sha256": "1944c57a4e8c055e6835035ea61e94a218f4a661b43dce1acbbfaf999282143c"
     },
     {
       "id": "h48d3db84",
@@ -2537,8 +2537,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h48d3db84_noa.mp3",
       "fingerprint": "43daab0a7fa37a07d7a9752e1813235003dc1e34d87b3df8514aaf3722a15710",
-      "bytes": 6428,
-      "sha256": "dea8668ee385539c09dee5d5c738fe18ff4c9cc300ad9cd94666ecd8a6075aee"
+      "bytes": 6716,
+      "sha256": "7dca0e5e290deb22c476eaa7d23dc59525865e46f565bc0f943fed3c11ac15af"
     },
     {
       "id": "hba98874f",
@@ -2582,8 +2582,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/hf2bba104_ari.mp3",
       "fingerprint": "df24a5401d577679d611129e33836e76b409f86b9c0d8e084327ec9823d5ea37",
-      "bytes": 7292,
-      "sha256": "00cf66b26ef9c03d153ee40579cb2895bc8540c90946a17a9ca8a23a66d08732"
+      "bytes": 5132,
+      "sha256": "aa32b15652121e7e66ae73bfa1c10778875c1b18002a620d2c2da164b1512e00"
     },
     {
       "id": "hf2bba104",
@@ -2591,8 +2591,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/hf2bba104_noa.mp3",
       "fingerprint": "da8247f07caa2e08b6f351a3a26f098490409a7613792678cf81a47a92f93c1f",
-      "bytes": 5132,
-      "sha256": "7eaa9cd20ca01eb339714f0c56533003c23e4d019bef069e71ae25b8a7c04ef0"
+      "bytes": 5996,
+      "sha256": "20340fe39031aa0c50d42c52a80396e02b865042b368d69b32a0c7fa153841fa"
     },
     {
       "id": "h0c3016b2",
@@ -2600,8 +2600,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h0c3016b2_ari.mp3",
       "fingerprint": "66733deca5ff9a47371b106ac8a3d95df21444af9883636fe35aae199bfe5844",
-      "bytes": 10892,
-      "sha256": "72c591182b669e829a73404a8baa1814b1ffecd7ad627f9df83a2c713dbddcb2"
+      "bytes": 4988,
+      "sha256": "432136382b341492ee696062bc4e75bd08497eb6d249209e49dc07cdf3cea705"
     },
     {
       "id": "h0c3016b2",
@@ -2609,8 +2609,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h0c3016b2_noa.mp3",
       "fingerprint": "ec6e232e07b22634eba9b35441939841aaeed47112f7b1f2aeb8172680f4b141",
-      "bytes": 7148,
-      "sha256": "fcfa4a07fab5d12249d1ad540d875a1c085d1114b6108f62b68660d17170718b"
+      "bytes": 5420,
+      "sha256": "65f9337cefe3ab08a6e04ee28df768e8cbe48e648e029115fb74a7815672a215"
     },
     {
       "id": "h8453bf6a",
@@ -2636,8 +2636,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/h99a070bb_ari.mp3",
       "fingerprint": "e41273dc26a8cd07d8d7035bfcd63f8dffbdac8a53b34a5b428b0c7c51fb19a3",
-      "bytes": 9308,
-      "sha256": "ef04f77e5d90929e2c7a0069ffad125b00f7c930fed62f135ed2387f78c76e54"
+      "bytes": 5420,
+      "sha256": "b0aaca08ce829a4cdf741fb9965ec7044c208510811e158546e53b3c6e4f2a49"
     },
     {
       "id": "h99a070bb",
@@ -2645,8 +2645,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h99a070bb_noa.mp3",
       "fingerprint": "3a4f1c0bf7620214c7a1656199951e606eca37552a71dd13bc96b1d33d75d257",
-      "bytes": 5852,
-      "sha256": "5a17b045f9413e852317f2c167fb74dbc66d81f2b6c06d6e32639c91871cbf6e"
+      "bytes": 6284,
+      "sha256": "cee60f659e503e148c6ea6c712af4bc208a03120998a70546d41bdd412abc83d"
     },
     {
       "id": "h81024165",
@@ -2681,8 +2681,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h79df22f0_noa.mp3",
       "fingerprint": "ac91e491223dc59152b6c89e30000f0251e0662c325864299c5b7931e6674ddd",
-      "bytes": 10028,
-      "sha256": "56b0308ff7d984ab7146a8113ba56799f674f13b2e21880a1f3e40b1bceb5b9e"
+      "bytes": 6140,
+      "sha256": "60b75f746fcf36a88c7b547e7ee17e6412f976a175f970698cded90ddf74385e"
     },
     {
       "id": "h749f736f",
@@ -2717,8 +2717,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h60b16793_noa.mp3",
       "fingerprint": "6e7d79eff3d0c3eba2a31761afdc32b0c0c196ba9449b89cb32fae94a5800c57",
-      "bytes": 2540,
-      "sha256": "e65820b1289d96e13a3df63adf77d5ef23dd9e2fb84497460f0748bc6d957b9b"
+      "bytes": 8588,
+      "sha256": "4cbc97b85bd62d1a22bed7206f280f636254f13672c874dedda18b01f8cdeb08"
     },
     {
       "id": "hc0616a4b",
@@ -2861,8 +2861,8 @@
       "voice": "he-IL-Chirp3-HD-Kore",
       "path": "audio/builder/h58d8d8fe_noa.mp3",
       "fingerprint": "aa74a04abaf97db45b5ed8131c4af868acb7cb47194e01095263a864637d6d8b",
-      "bytes": 5708,
-      "sha256": "0d3edc56722c1568eed4f921243bc6ec7d9e42d8b7165d15456cbd0fb6a841a0"
+      "bytes": 6572,
+      "sha256": "14b2247005a90db415e950008065b3205cf23ebc85e4d7d0074118f8ce59893c"
     },
     {
       "id": "kelev",
@@ -2870,8 +2870,8 @@
       "voice": "he-IL-Chirp3-HD-Charon",
       "path": "audio/builder/kelev_ari.mp3",
       "fingerprint": "aea9e7a0d60a7c7222afde140feacc8ca925b0dc032b72effce2c81609d27d3d",
-      "bytes": 7580,
-      "sha256": "7d7a4341cb815dbc1e4da029bbfaedfcc0349548512eb2ff125348010d39a1f2"
+      "bytes": 5708,
+      "sha256": "0a91ef5f1c12526c6a51cd3fcdb2e3214dbb1f3e058151d918d989274c852ef6"
     },
     {
       "id": "kelev",

@@ -1,0 +1,14 @@
+- הָא (ha): `audio/f/israeli/word/hcd00a615.mp3`, no synthetic take passed
+- הָא (ha): `audio/m/israeli/word/hcd00a615.mp3`, no synthetic take passed
+- וְיִתְנַשֵּׂא (veyitnase): `audio/f/israeli/word/kaddish-1-w32.mp3`, no synthetic take passed
+- דְקוּדְשָׁא (dekudesha): `audio/f/israeli/word/kaddish-1-w37.mp3`, no synthetic take passed
+- דְקוּדְשָׁא (dekudesha): `audio/m/israeli/word/kaddish-1-w37.mp3`, no synthetic take passed
+- אִוָּה (ivah): `audio/f/israeli/word/h0cdd730a.mp3`, no synthetic take passed
+- הִוָּה (hivah): `audio/f/israeli/word/ha3cf2c46.mp3`, no synthetic take passed
+- וְאַתְרָךְ (ve'atrakh): `audio/m/israeli/word/brich-shmei-w7.mp3`, no synthetic take passed
+- וּנְבִיאוֹהִי (unevi'ohi): `audio/m/israeli/word/brich-shmei-w89.mp3`, no synthetic take passed
+- בָּךְ׃ (bakh): `audio/f/israeli/word/havdalah-opening-w39.mp3`, no synthetic take passed
+- בֵּאלָהָא (belaha): `audio/f/israeli/word/brich-shmei-w82.mp3`, no synthetic take passed
+- בֵּאלָהָא (belaha): `audio/m/israeli/word/brich-shmei-w82.mp3`, no synthetic take passed
+- מִשְׁאֲלִין (mish'alin): `audio/m/israeli/word/brich-shmei-w111.mp3`, no synthetic take passed
+- מִן־שְׁמַיָּא (min-shemaya): `audio/m/israeli/word/kaddish-1-w52.mp3`, no synthetic take passed

@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "מ",
- "inputSha256": "d8850d2035c0b055fb9f387e3d1323712b473491aa3022a5ae18b450a6ddd674",
+ "inputText": "מַ",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Letter sound replaced 2026-11-08 by the mem-a syllable (מַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/mem-a.mp3; heard back as the syllable by tools/audio/asr-check.",
  "inputTextKind": "hebrew"
 }

@@ -24,6 +24,20 @@ sys.path.insert(0, os.path.dirname(__file__))
 import check_lib as L  # noqa: E402
 from fix import ROOT, LOG, synth_rate, encode, speakable, voice_of, rows_by_file  # noqa: E402
 
+# A letter's "sound" clip is the letter with patah (שַׁ sha): a voice handed a bare letter says a clipped letter name.
+SOUND_TEXT = {'alef': 'אַ', 'bet': 'בַּ', 'vet': 'בַ', 'gimel': 'גַּ', 'dalet': 'דַּ', 'he': 'הַ', 'vav': 'וַ', 'zayin': 'זַ',
+              'chet': 'חַ', 'tet': 'טַ', 'yod': 'יַ', 'kaf': 'כַּ', 'khaf': 'כַ', 'lamed': 'לַ', 'mem': 'מַ', 'nun': 'נַ',
+              'samekh': 'סַ', 'ayin': 'עַ', 'pe': 'פַּ', 'fe': 'פַ', 'tsadi': 'צַ', 'qof': 'קַ', 'resh': 'רַ', 'shin': 'שַׁ',
+              'sin': 'שַׂ', 'tav': 'תַּ'}
+
+
+def sound_row(path):
+    m = re.search(r'/letter/([a-z]+)-sound\.mp3$', path)
+    if m and m.group(1) in SOUND_TEXT:
+        return {'pointed_hebrew': SOUND_TEXT[m.group(1)], 'file': path, 'same_audio_paths': path}
+    return None
+
+
 VOICES = {
     'm': ['he-IL-Wavenet-B', 'he-IL-Chirp3-HD-Charon', 'he-IL-Wavenet-D', 'he-IL-Standard-B', 'he-IL-Standard-D',
           'he-IL-Chirp3-HD-Puck', 'he-IL-Chirp3-HD-Orus', 'he-IL-Chirp3-HD-Fenrir'],
@@ -56,13 +70,18 @@ def main():
     rows = rows_by_file()
     plan = []
     for ln, path in todo:
-        r = rows.get(path)
+        r = rows.get(path) or sound_row(path)
         if not r:
             print('not in asr-check.csv, skipped:', path)
             continue
-        texts = list(dict.fromkeys([speakable(r['pointed_hebrew']), L.plain(r['pointed_hebrew']), full_spelling(r['pointed_hebrew'])]))
+        is_sound = r.get('same_audio_paths') == path and sound_row(path) is not None
+        if is_sound:  # never the bare letter (that is what read as a clipped name); patah, then qamats + he ('פָה')
+            base = r['pointed_hebrew'][0] + re.sub('[\u05B7]', '', r['pointed_hebrew'][1:])
+            texts = [r['pointed_hebrew'], base + '\u05B8' + 'ה']
+        else:
+            texts = list(dict.fromkeys([speakable(r['pointed_hebrew']), L.plain(r['pointed_hebrew']), full_spelling(r['pointed_hebrew'])]))
         takes = [(v, t, rate) for v in VOICES[voice_of(path)] for rate in RATES for t in texts]
-        plan.append((ln, r, takes))
+        plan.append((ln, r, takes, is_sound))
         print(f"{r['pointed_hebrew']:<16} {path}  up to {len(takes)} takes; spellings: {' | '.join(texts)}")
     if not a.execute:
         print('dry run: add --execute (needs GOOGLE_TTS_API_KEY)')
@@ -70,7 +89,7 @@ def main():
     key = os.environ.get('GOOGLE_TTS_API_KEY') or sys.exit('Set GOOGLE_TTS_API_KEY first.')
     tmp = tempfile.mkdtemp(prefix='alef-retry-')
     passed = set()
-    for n, (ln, r, takes) in enumerate(plan, 1):
+    for n, (ln, r, takes, is_sound) in enumerate(plan, 1):
         best, tried = None, []
         for i, (name, text, rate) in enumerate(takes):
             raw, out = os.path.join(tmp, f't{i}.mp3'), os.path.join(tmp, f't{i}-enc.mp3')
@@ -82,6 +101,8 @@ def main():
                 continue
             heard = L.hear(out)
             s = L.score(r['pointed_hebrew'], heard)
+            if is_sound and len(re.sub('[^\u05D0-\u05EA]', '', heard or '')) < 2:
+                s = 0.0  # heard as a lone letter = the voice said the letter's NAME, not its sound
             tried.append({'voice': name, 'rate': rate, 'text': text, 'heard': heard, 'score': s})
             print(f"   try {i + 1}/{len(takes)} {name} x{rate} '{text}' -> {heard or '(nothing)'} {s}", flush=True)
             if isinstance(s, float) and s >= L.PASS and (best is None or s > best[0]):

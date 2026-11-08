@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "י",
- "inputSha256": "72b4d9ab59b4b2e8647f0d189ca79e72dd8520f3e07b1b8441d2232dc7c0d4ab",
+ "inputText": "יַ",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Letter sound replaced 2026-11-08 by the yod-a syllable (יַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/yod-a.mp3; heard back as the syllable by tools/audio/asr-check.",
  "inputTextKind": "hebrew"
 }

@@ -4,10 +4,9 @@
  "engine": "google-cloud-tts",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
- "inputText": "ע",
- "inputSha256": "30c2d459822cd5ac37deab0cfaf495d2d16660783ecf36c09de9a4056402b516",
+ "inputText": "עַ",
  "ingestedAt": null,
  "licence": "not cleared",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "note": "Letter sound replaced 2026-11-08 by the ayin-a syllable (עַ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/f/israeli/syllable/ayin-a.mp3; heard back as the syllable by tools/audio/asr-check.",
  "inputTextKind": "hebrew"
 }

@@ -12,10 +12,10 @@ const mkSW = ({ controller = null, claimOnReady = true } = {}) => {
   return sw;
 };
 
-test('warm: uncontrolled fresh install fetches only the active tradition shard once the worker controls the page', async () => {
+test('warm: uncontrolled fresh install fetches the active tradition shard, and the Israeli shard it plays from, once the worker controls the page', async () => {
   const urls = []; const sw = mkSW();
   const r = await warmShardAfterInstall({ fetch: async (u) => { urls.push(u); return okRes; }, settings: settings('ashkenazi'), serviceWorker: sw, timeoutMs: 50 });
-  assert.equal(r, 'warmed'); assert.deepEqual(urls, [shardPath('ashkenazi')]);
+  assert.equal(r, 'warmed'); assert.deepEqual(urls, [shardPath('ashkenazi'), shardPath('israeli')]);
 });
 test('warm: already controlled page, no worker support, or unknown tradition does nothing', async () => {
   const fetch = async () => { throw new Error('must not fetch'); };
@@ -47,5 +47,5 @@ test('shard watch: a congregation change reloads only when enabled() says a shar
   const L = createShardLoader({ fetch: async (u) => { urls.push(u); return { ok: true, status: 200, json: async () => [] }; }, audio: { extend() {} }, settings: st });
   let asked = false; L.watch(() => asked);
   cb('x', ['congregation']); await new Promise((r) => setTimeout(r, 5)); assert.deepEqual(urls, [], 'not asked: nothing fetched');
-  asked = true; cb('x', ['congregation']); await new Promise((r) => setTimeout(r, 5)); assert.equal(urls.length, 1);
+  asked = true; cb('x', ['congregation']); await new Promise((r) => setTimeout(r, 5)); assert.deepEqual(urls, [shardPath('ashkenazi'), shardPath('israeli')], 'own shard plus the Israeli shard it plays from');
 });

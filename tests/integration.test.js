@@ -319,7 +319,7 @@ test('router: lane 1 sub-screens inject the query learn.view.js dispatches on', 
   assert.equal(matchRoute('#/soundgap').route.name, 'soundgap');
 });
 
-test('shard loader: loads only the learner tradition, re-loads on change, falls back, handles offline', async () => {
+test('shard loader: loads the learner tradition plus the Israeli shard it plays from, re-loads on change, falls back, handles offline', async () => {
   const { createShardLoader, OFFLINE_NOTE } = await import('../src/shell/audio-shards.js');
   const mk = (tradition, id) => [{ voice: 'f', tradition, kind: 'word', id, text: id, status: 'tts', path: `audio/f/${tradition}/word/${id}.mp3` }];
   const shards = { israeli: mk('israeli', 'a'), ashkenazi: mk('ashkenazi', 'b') }; // no sephardi shard
@@ -337,9 +337,10 @@ test('shard loader: loads only the learner tradition, re-loads on change, falls 
   const L = createShardLoader({ fetch: fakeFetch, audio: player, settings, onState: (s) => states.push(s.state) });
   assert.equal(player.status('word', 'b').source, 'none', 'before the shard loads the word is unknown');
   await L.load();
-  assert.deepEqual(calls, ['data/audio/manifest-words-ashkenazi.json'], 'only the learner shard is fetched');
-  assert.equal(player.status('word', 'b').source, 'file');
-  await L.load(); assert.equal(calls.length, 1, 'already loaded: no second fetch');
+  assert.deepEqual(calls, ['data/audio/manifest-words-ashkenazi.json', 'data/audio/manifest-words-israeli.json'], 'the learner shard, then the Israeli shard the setting plays');
+  assert.notEqual(player.status('word', 'b').source, 'file', 'an own-tradition clip not admitted to playback (player.js ACCENT_SOURCES) stays retired');
+  assert.equal(player.status('word', 'a').source, 'file', 'an Israeli-only word plays its Israeli clip under the Ashkenazi setting, not the device voice');
+  await L.load(); assert.equal(calls.length, 2, 'already loaded: no second fetch');
   // setting change re-loads
   L.watch(); cong = 'israeli'; subs[0](null, ['congregation']); await new Promise((r) => setTimeout(r, 0));
   assert.equal(calls.at(-1), 'data/audio/manifest-words-israeli.json');

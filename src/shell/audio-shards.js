@@ -43,7 +43,13 @@ export function createShardLoader({ fetch, audio, settings, onState = () => {} }
       used = 'israeli';
       if (loaded.has('israeli')) r = { list: null }; else r = await fetchShard('israeli');
     }
+    // The Sephardi and Ashkenazi settings PLAY the Israeli clips (src/audio/player.js PLAYBACK_TRADITION): their own shard only
+    // labels rows, so without the Israeli shard every prayer word fell through to the device voice, which is silent on a
+    // computer with no Hebrew voice installed (owner report, Nov 8 2026: sound on the phone, none on the computer).
+    let israeli = null;
+    if (used !== 'israeli' && !loaded.has('israeli')) israeli = await fetchShard('israeli');
     if (my !== seq) return last; // the setting changed while this was in flight
+    if (israeli?.list) give('israeli', israeli.list);
     if (r.list !== undefined) {
       if (r.list) give(used, r.list);
       emit({ state: used === tradition ? 'loaded' : 'fallback', tradition, loaded: used, note: '' });
@@ -83,9 +89,14 @@ export async function warmShardAfterInstall({ fetch, settings, serviceWorker, ti
     }
     if (!serviceWorker.controller) return 'unavailable';
     let res = await fetch(shardPath(tradition));
-    if (res.status === 404 && tradition === 'sephardi') res = await fetch(shardPath('israeli'));
+    let gotIsraeli = tradition === 'israeli';
+    if (res.status === 404 && tradition === 'sephardi') { res = await fetch(shardPath('israeli')); gotIsraeli = true; }
     if (!res.ok) return 'unavailable';
     await res.arrayBuffer?.();
+    if (!gotIsraeli) { // the clips these settings play come from the Israeli shard: keep it offline too
+      const isr = await fetch(shardPath('israeli'));
+      if (isr.ok) await isr.arrayBuffer?.();
+    }
     return 'warmed';
   } catch { return 'unavailable'; }
 }

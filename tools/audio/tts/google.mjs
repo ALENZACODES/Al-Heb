@@ -17,16 +17,22 @@
 // batch tool can refuse it before paying for it.
 //
 // Prices (cloud.google.com/text-to-speech/pricing, verified 2026-11-03, see data/audio/tts-prices.json):
-// WaveNet US$16 per 1M characters (first 1M free each month); Chirp 3 HD US$30 per 1M. SSML tags count as characters.
+// WaveNet US$4 per 1M characters (first 4M free each month); Chirp 3 HD US$30 per 1M (first 1M free). SSML tags count as characters.
+// pricePerMillionChars is the rate of the DEFAULT voices (WaveNet); priceFor(name) gives the rate for a named voice.
 // Learner-facing copy: never name the TTS brand.
 export const id = 'google';
 export const env = ['GOOGLE_TTS_API_KEY'];
-export const pricePerMillionChars = 16;
+export const PRICES = Object.freeze({ wavenet: 4, 'chirp3-hd': 30 }); // ids as in data/audio/tts-prices.json
+export const pricePerMillionChars = PRICES.wavenet;
 export const voices = { m: 'he-IL-Wavenet-B', f: 'he-IL-Wavenet-A' };
 export const APPROVED_VOICES = Object.freeze(['he-IL-Wavenet-B', 'he-IL-Wavenet-A']);
 export const outputFormat = 'MP3';
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const isHd = (name) => /Chirp3|Chirp-HD|Chirp_HD|HD-/.test(String(name));
+/** US$ per million characters for a voice name: Chirp 3 HD or WaveNet (the only two types this adapter sends). */
+export const priceFor = (name) => (isHd(name) ? PRICES['chirp3-hd'] : PRICES.wavenet);
+/** The voice name a slot resolves to under the given env (per-call voiceName wins in buildRequest). */
+export const voiceNameFor = (voice, e = process.env) => (voice === 'm' ? e.GOOGLE_TTS_VOICE_M : e.GOOGLE_TTS_VOICE_F) || voices[voice];
 
 /**
  * Pointed Hebrew in, speakable pointed Hebrew out. Pure; safe on non-Hebrew text (returns it trimmed).
@@ -74,7 +80,7 @@ export function buildRequest({ text, voice, ssml = false, speakingRate, env: e =
     voice: { languageCode: lang, name },
     audioConfig: { audioEncoding: outputFormat, sampleRateHertz: 24000, ...(!isHd(name) && speakingRate ? { speakingRate } : {}) },
   };
-  return { url: 'https://texttospeech.googleapis.com/v1/text:synthesize', method: 'POST', headers, body: JSON.stringify(body), billedChars: [...spoken].length, voiceName: name, languageCode: lang, spokenText: spoken, usdPerMillionChars: isHd(name) ? 30 : 16 };
+  return { url: 'https://texttospeech.googleapis.com/v1/text:synthesize', method: 'POST', headers, body: JSON.stringify(body), billedChars: [...spoken].length, voiceName: name, languageCode: lang, spokenText: spoken, usdPerMillionChars: priceFor(name) };
 }
 export async function parseResponse(res) {
   if (!res.ok) throw new Error(`google: HTTP ${res.status} ${await res.text()}`);

@@ -24,7 +24,10 @@ test('price file: every row has source + evidence + verified flag; unverified it
 
 test('adapter price constants agree with the verified price file', () => {
   assert.equal(azure.pricePerMillionChars, prices.providers.azure.rows.find((r) => r.id === 'neural').usdPerMillionChars);
-  assert.equal(google.pricePerMillionChars, prices.providers.google.rows.find((r) => r.id === 'chirp3-hd').usdPerMillionChars);
+  // the Google default voices are WaveNet (he-IL-Wavenet-B/A), so the constant is the WaveNet row; a Chirp 3 HD name is priced from its own row
+  assert.equal(google.pricePerMillionChars, prices.providers.google.rows.find((r) => r.id === 'wavenet').usdPerMillionChars);
+  assert.equal(google.priceFor(google.voices.m), prices.providers.google.rows.find((r) => r.id === 'wavenet').usdPerMillionChars);
+  assert.equal(google.priceFor('he-IL-Chirp3-HD-Charon'), prices.providers.google.rows.find((r) => r.id === 'chirp3-hd').usdPerMillionChars);
   assert.equal(eleven.pricePerMillionChars, prices.providers.elevenlabs.rows.find((r) => r.id === 'v3-api').usdPerMillionChars);
 });
 

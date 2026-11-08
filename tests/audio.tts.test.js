@@ -35,7 +35,8 @@ test('google: the multilingual HD voices are refused unless asked for by name', 
   assert.throws(() => google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Charon' }), /not an approved Israeli Hebrew voice/);
   assert.throws(() => google.buildRequest({ text: TEXT, voice: 'm', env: { ...env, GOOGLE_TTS_VOICE_M: 'he-IL-Chirp3-HD-Charon' } }), /not an approved/);
   const ok = google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Charon', allowHd: true });
-  assert.equal(ok.usdPerMillionChars, 30); assert.equal(google.pricePerMillionChars, 16);
+  assert.equal(ok.usdPerMillionChars, 30); assert.equal(google.pricePerMillionChars, 4, 'the default WaveNet rate (data/audio/tts-prices.json)');
+  assert.equal(google.buildRequest({ text: TEXT, voice: 'm', env }).usdPerMillionChars, 4);
   assert.ok(!('speakingRate' in JSON.parse(google.buildRequest({ text: TEXT, voice: 'm', env, voiceName: 'he-IL-Chirp3-HD-Kore', allowHd: true, speakingRate: 0.9 }).body).audioConfig));
   assert.equal(JSON.parse(google.buildRequest({ text: TEXT, voice: 'm', env, speakingRate: 0.9 }).body).audioConfig.speakingRate, 0.9);
 });
@@ -76,8 +77,10 @@ test('selection: default kinds exclude letters/vowels, skip already-present, ref
   assert.throws(() => selectEntries(manifest, { voice: 'm', tradition: 'ashkenazi' }), /no TTS provider offers it/);
 });
 test('estimate counts code points and prices from notes', () => {
-  const e = estimate(selectEntries(manifest, { voice: 'm' }), google);
-  assert.equal(e.chars, [...'שָׁלוֹם'].length); assert.ok(Math.abs(e.usd - (e.chars / 1e6) * 16) < 1e-12);
+  const e = estimate(selectEntries(manifest, { voice: 'm' }), google, {});
+  assert.equal(e.chars, [...'שָׁלוֹם'].length); assert.ok(Math.abs(e.usd - (e.chars / 1e6) * 4) < 1e-12, 'WaveNet rate for the default voices');
+  const hd = estimate(selectEntries(manifest, { voice: 'm' }), google, { GOOGLE_TTS_VOICE_M: 'he-IL-Chirp3-HD-Charon', GOOGLE_TTS_ALLOW_HD: '1' });
+  assert.ok(Math.abs(hd.usd - (hd.chars / 1e6) * 30) < 1e-12, 'a Chirp 3 HD override is priced as Chirp');
   assert.match(PRICE_LABEL, /list price verified on fetched pages 2026-11-03/);
 });
 test('renderBatch writes file + tts meta (fake fetch, temp dir, no network)', async () => {

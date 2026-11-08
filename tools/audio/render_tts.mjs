@@ -44,10 +44,13 @@ export function readIdList(file) {
   return fs.readFileSync(file, 'utf8').split(/\r?\n/).map((l) => l.replace(/#.*$/, '').trim()).filter(Boolean);
 }
 
-export function estimate(rows, provider) {
+/** Cost at list price. The rate follows the voice each row will get (env overrides included), so a Chirp 3 HD run is priced as Chirp. */
+export function estimate(rows, provider, env = process.env) {
   const clean = provider.cleanHebrewForTts || ((t) => t);
-  const chars = rows.reduce((n, r) => n + [...clean(r.text)].length, 0); // code points; niqqud marks counted (billing treatment unverified)
-  return { clips: rows.length, chars, usd: (chars / 1e6) * provider.pricePerMillionChars };
+  const rate = (r) => (provider.priceFor && provider.voiceNameFor ? provider.priceFor(provider.voiceNameFor(r.voice, env)) : provider.pricePerMillionChars);
+  let chars = 0, usd = 0;
+  for (const r of rows) { const n = [...clean(r.text)].length; chars += n; usd += (n / 1e6) * rate(r); } // code points; niqqud marks counted (billing treatment unverified)
+  return { clips: rows.length, chars, usd };
 }
 
 /** Rows whose text the provider flags (unpointed Hebrew, mixed scripts). Empty when the provider has no checker. */
@@ -120,7 +123,8 @@ export async function main(argv = process.argv.slice(2)) {
   const rows = selectEntries(manifest, { voice: a.voice, tradition: a.tradition, kinds: a.kinds ? a.kinds.split(',') : DEFAULT_KINDS, limit: a.limit ? +a.limit : undefined, onlyMissing: !a.redo, ids, kindsExplicit: !!a.kinds });
   if (ids) { const found = new Set(rows.map((r) => r.id)); const lost = ids.filter((i) => !found.has(i)); if (lost.length) console.log(`ids not in the manifest for this voice/tradition: ${lost.length} (${lost.slice(0, 10).join(', ')}${lost.length > 10 ? ', ...' : ''})`); }
   const est = estimate(rows, provider);
-  const voiceLabel = a.voice === 'both' ? `m=${provider.voices.m}, f=${provider.voices.f}` : provider.voices[a.voice];
+  const nameOf = (v) => (provider.voiceNameFor ? provider.voiceNameFor(v) : provider.voices[v]);
+  const voiceLabel = a.voice === 'both' ? `m=${nameOf('m')}, f=${nameOf('f')}` : nameOf(a.voice);
   console.log(`${a.execute ? 'EXECUTE' : 'DRY RUN'}: provider=${provider.id} voice=${a.voice} (${voiceLabel})${a.redo ? ' REDO (replaces existing files)' : ''}`);
   const clean = provider.cleanHebrewForTts || ((t) => t);
   for (const r of rows.slice(0, 25)) console.log(`  ${r.path}  ${clean(r.text)}`);

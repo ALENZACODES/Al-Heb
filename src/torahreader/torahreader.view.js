@@ -577,7 +577,23 @@ export function mount(root, ctx) {
     if (recording && !chapterMedia) {
       chapterMedia = el('audio', { controls: true, preload: 'metadata', src: recording.path, style: 'display:block;width:100%;margin-block:.6rem', 'aria-label': `${chapterData.ref} ${lang === 'en' ? 'English' : 'Hebrew'} recording` });
       chapterMedia.addEventListener('playing', () => say(`Playing ${chapterData.ref} in ${lang === 'en' ? 'English' : 'Hebrew'}.`));
-      chapterMedia.addEventListener('error', () => say('The recording could not load. Use Open recording below to play it directly.'));
+      // A long chapter can lose its download partway on the first play; pick it up again from the same second (up to 3 times)
+      // instead of stopping, and only report a failure when the recording cannot load at all.
+      const media = chapterMedia; let resumes = 0, lastTime = 0, wasPlaying = false;
+      media.addEventListener('timeupdate', () => { if (media.currentTime > 0) lastTime = media.currentTime; wasPlaying = !media.paused; });
+      media.addEventListener('error', () => {
+        if (lastTime > 0 && resumes < 3 && chapterMedia === media) {
+          resumes++;
+          const at = lastTime, resume = wasPlaying;
+          media.addEventListener('loadedmetadata', () => {
+            try { media.currentTime = at; } catch { /* optional */ }
+            if (resume) { const p = media.play(); if (p?.catch) p.catch(() => {}); }
+          }, { once: true });
+          try { media.load(); } catch { /* optional */ }
+          return;
+        }
+        say('The recording could not load. Use Open recording below to play it directly.');
+      });
     }
     const voiceName = voiceOf() === 'f' ? 'Noa' : 'Ari';
     const voiceBar = el('div', { class: 'trd-bar trd-chapter-voices', role: 'group', 'aria-label': 'Reading voice' }, el('span', {}, 'Voice:'),

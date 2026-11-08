@@ -562,3 +562,25 @@ test('chapter Ari/Noa toggle uses the global voice setting and refreshes exact-v
   assert.ok(sel(root, '.trd-play-chapter'));
   await sel(root, '.trd-play-chapter').click(); assert.equal(heard[1].voice, 'm'); assert.equal(heard[1].kind, 'torah-chapter');
 });
+
+test('a chapter recording that loses its download partway resumes from the same second instead of stopping', async () => {
+  const loadJson = async rel => rel === 'data/audio/manifest-torah.json'
+    ? [{ kind: 'torah-chapter-en', id: 'torah-en-genesis-1', voice: 'm', tradition: 'english', status: 'tts', path: 'audio/test.mp3' }]
+    : JSON.parse(fs.readFileSync(new URL('../' + rel, import.meta.url), 'utf8'));
+  const { root } = await make({ stored: { screen: 'chapter', audioLang: 'en' }, query: { book: 'genesis', chapter: '1' }, loadJson });
+  const media = root.all((n) => n.tag === 'audio')[0];
+  assert.ok(media, 'the English chapter has a player');
+  let loads = 0, plays = 0;
+  media.load = () => { loads++; }; media.play = () => { plays++; return Promise.resolve(); };
+  media.currentTime = 64.5; media.paused = false;
+  await media.fire('timeupdate');
+  await media.fire('error');
+  assert.equal(loads, 1, 'the recording is reloaded');
+  media.currentTime = 0;
+  await media.fire('loadedmetadata');
+  assert.equal(media.currentTime, 64.5, 'playback picks up where it broke off');
+  assert.equal(plays, 1, 'and carries on playing');
+  assert.doesNotMatch(status(root), /could not load/);
+  for (let i = 0; i < 3; i++) await media.fire('error');
+  assert.match(status(root), /could not load/, 'after three resumes the failure is reported');
+});

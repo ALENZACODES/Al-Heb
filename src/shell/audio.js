@@ -8,6 +8,7 @@ import { gameMusic } from '../audio/music.js';
 import { sfx } from '../audio/sfx.js';
 import { mediaPolicy } from '../audio/policy.js';
 export const REASONS = {
+  'english-recording-unavailable': 'the English recording is unavailable',
   'no-hebrew-browser-voice': 'your browser has no Hebrew voice installed',
   'tts-pronunciation-mismatch': 'the browser voice only reads Israeli pronunciation and you chose another tradition',
   'no-speech-synthesis': 'this browser has no speech synthesis',

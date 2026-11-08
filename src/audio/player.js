@@ -196,6 +196,17 @@ export function createAudio(opts) {
     const ctxt = context(o);
     const { voice } = ctxt;
     let tradition = ctxt.tradition;
+    // English Torah chapters use only the requested voice's exact recording. Never route
+    // an English request through Hebrew traditions, equivalent clips, or browser speech.
+    if (tradition === 'english' && kind === 'torah-chapter-en') {
+      if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
+      const entry = index.get(`${voice}|english|${kind}|${id}`);
+      if (entry && entry.status !== 'missing' && typeof entry.path === 'string' && entry.path) {
+        return { source: 'file', path: entry.path, url: url(entry.path), entryStatus: entry.status,
+          entrySource: entry.source, via: 'exact', kind, id, voice, tradition };
+      }
+      return { source: 'none', reason: 'english-recording-unavailable', kind, id, voice, tradition };
+    }
     if (TRADITIONS.includes(tradition) && israeliOnly.has(`${kind}|${id}`)) tradition = 'israeli';
     if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
     if (!TRADITIONS.includes(tradition)) return { source: 'none', reason: 'invalid-tradition', kind, id, voice, tradition };
@@ -367,6 +378,7 @@ export function createAudio(opts) {
     const id = normalizeId(rawId);
     const c2 = context(o);
     const { voice } = c2;
+    if (c2.tradition === 'english') return { source: 'none', reason: 'english-recording-unavailable', kind, id, voice, tradition: 'english' };
     const tradition = israeliOnly.has(`${kind}|${id}`) ? 'israeli' : c2.tradition;
     const text = textBy.get(`${kind}|${id}`) || (typeof o.text === 'string' && o.text.trim() ? o.text : '');
     if (!text) return { source: 'none', reason: 'unknown-item', kind, id, voice, tradition };

@@ -22,7 +22,7 @@ export const SYNTHETIC_STATUSES = Object.freeze(['tts', 'synthetic-unreviewed', 
 /** True for every status that means "a computer-made clip". Use this, never `=== 'tts'`, to tell synthetic from human. */
 export const isSyntheticStatus = (status) => SYNTHETIC_STATUSES.includes(status);
 
-const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi' });
+const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ashkenazi: 'Ashkenazi', english: 'English' });
 
 /**
  * Which tradition a playing file is, as a caption. Same file and setting: the tradition's name. A file of another tradition
@@ -43,6 +43,7 @@ export function traditionCaption(tradition, fileTradition) {
  * pointed Hebrew and the other traditions mean made from a respelling (the only way the pipeline makes them).
  */
 export function syntheticLabel(status, tradition, source) {
+  if (tradition === 'english') return `Synthetic English voice (not a recorded teacher; ${status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed'})`;
   const style = TRAD_STYLE[tradition];
   const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
   if (source === ACCENT_SOURCES.israeliVoice) {
@@ -74,6 +75,7 @@ export function syntheticLabel(status, tradition, source) {
 /** Label for a manifest status value; anything that is not 'recorded' or synthetic is 'missing'. */
 export function statusLabel(status, tradition, source) {
   if (status === 'recorded') return STATUS_LABELS.recorded;
+  if (tradition === 'english' && isSyntheticStatus(status)) return syntheticLabel(status, tradition, source);
   if (status === 'tts') return STATUS_LABELS.tts;
   if (status === 'synthetic-unreviewed' || status === 'synthetic-reviewed') return syntheticLabel(status, tradition, source);
   return STATUS_LABELS.missing;

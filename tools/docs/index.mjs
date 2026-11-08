@@ -114,7 +114,7 @@ export function splice(text, block) {
   return text.slice(0, a) + block + text.slice(b + END.length);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const file = join(ROOT, 'docs', 'INDEX.md');
   const next = splice(readFileSync(file, 'utf8'), render(scan()));
   if (process.argv.includes('--check')) {

@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -6,7 +7,7 @@ import path from 'node:path';
 import { scan, render, splice, START, END, listFiles, countsNear, diffIndex } from '../tools/docs/index.mjs';
 import { checkFile } from '../tools/docs/linkcheck.mjs';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 test('scan counts nested files and takes the README heading, else the first Markdown file', () => {
   const d = fs.mkdtempSync(path.join(os.tmpdir(), 'ix-'));

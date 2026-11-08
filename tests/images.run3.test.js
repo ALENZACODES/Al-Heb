@@ -99,7 +99,7 @@ test('run 3: every key exists in its source data; trope and vocab lookups behave
 });
 
 test('run 3: csv on disk is current, has the manifest columns, and no tool names in any run 3 file', () => {
-  assert.equal(read('data/images/run3.csv'), B.csv, 'run3.csv is stale: run node tools/images/build_run3.mjs');
+  assert.equal(read('data/images/run3.csv').replaceAll('\r\n', '\n'), B.csv, 'run3.csv is stale: run node tools/images/build_run3.mjs');
   const rows = loadRun3();
   assert.equal(rows.length, 1000);
   assert.deepEqual(Object.keys(rows[0]), HEAD);

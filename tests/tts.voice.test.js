@@ -31,7 +31,7 @@ const cfgReal = (over = {}) => { const c = cfgMock(); c.voices.m.voiceId = 'VOIC
 const ffTest = FF ? test : test.skip;
 
 async function mockWork(words = 3, { take2 = true } = {}) {
-  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { words });
+  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { includeExisting: true, words });
   await renderItems(plan.items, { work, take: 1, cfg: cfgMock(), mock: true });
   if (take2) await renderItems(plan.items, { work, take: 2, cfg: cfgMock(), mock: true });
   return { work, plan };
@@ -62,7 +62,7 @@ test('serviceBase accepts https or loopback http only (the key is sent there)', 
 
 // ---------- plan ----------
 test('plan: both traditions x m,f for N words, priority order first, respelling (not Hebrew) is the text, human-only kinds refused', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 20 });
+  const plan = await buildVoicePlan(REPO, { includeExisting: true, words: 20 });
   assert.equal(plan.counts.words, 20); assert.equal(plan.counts.clips, 80);
   const first = plan.items.slice(0, 4).map((i) => `${i.tradition}/${i.voice}`);
   assert.deepEqual(first, ['sephardi/m', 'sephardi/f', 'ashkenazi/m', 'ashkenazi/f']);
@@ -77,17 +77,17 @@ test('plan: both traditions x m,f for N words, priority order first, respelling 
   assert.equal(plan.items[0].speak, sw.soundtext.normalize('NFC'), 'respelling carried unchanged from repo data');
   const sum = plan.items.reduce((a, b) => a + b.chars, 0); assert.equal(plan.characters.take1Total, sum); assert.equal(plan.characters.withTake2, sum * 2);
   assert.equal(Object.keys(plan.characters.byTraditionVoice).length, 4);
-  await assert.rejects(buildVoicePlan(REPO, { kinds: ['letter'] }), /human-only/);
-  await assert.rejects(buildVoicePlan(REPO, { traditions: ['israeli'] }), /Israeli voices are made elsewhere/);
-  await assert.rejects(buildVoicePlan(REPO, { slots: ['x'] }), /m or f/);
+  await assert.rejects(buildVoicePlan(REPO, { includeExisting: true, kinds: ['letter'] }), /human-only/);
+  await assert.rejects(buildVoicePlan(REPO, { includeExisting: true, traditions: ['israeli'] }), /Israeli voices are made elsewhere/);
+  await assert.rejects(buildVoicePlan(REPO, { includeExisting: true, slots: ['x'] }), /m or f/);
 });
 
 test('plan: --max-clips, --batch-size, --resume; the estimate comes before any call and states no price', async () => {
-  const p = await buildVoicePlan(REPO, { maxClips: 10, batchSize: 4 });
+  const p = await buildVoicePlan(REPO, { includeExisting: true, maxClips: 10, batchSize: 4 });
   assert.equal(p.counts.clips, 10); assert.deepEqual([...new Set(p.items.map((i) => i.batch))], [1, 2, 3]); assert.equal(p.items[9].batch, 3);
-  const { work } = await mockWork(2, { take2: false });
-  const r = await buildVoicePlan(REPO, { words: 4, resumeWork: work });
-  assert.ok(!r.items.some((i) => ['r01-w1', 'r03-w1'].includes(i.id) && i.tradition === 'sephardi' && i.voice === 'm'), 'already rendered items are left out on resume');
+  const { work, plan: renderedPlan } = await mockWork(2, { take2: false });
+  const r = await buildVoicePlan(REPO, { includeExisting: true, words: 4, resumeWork: work });
+  assert.ok(!r.items.some((i) => renderedPlan.items.some((done) => done.path === i.path)), 'every rendered fixture path is left out on resume');
   assert.ok(r.counts.skipped.alreadyRendered > 0);
   const text = formatEstimate(p);
   assert.match(text, /CHARACTER BUDGET/); assert.match(text, /sephardi\/m/); assert.match(text, /ashkenazi\/f/); assert.match(text, /check your plan/i);
@@ -124,7 +124,7 @@ function stub(handler) {
 const pcmReply = (res, ms = 400) => { const n = 24 * ms; const b = Buffer.alloc(n * 2); for (let i = 0; i < n; i++) b.writeInt16LE(Math.round(Math.sin(i / 8) * 9000), i * 2); res.writeHead(200, { 'content-type': 'audio/pcm', 'request-id': `req-${Math.random().toString(16).slice(2, 8)}` }); res.end(b); };
 
 test('render: fixed settings, respelled text, voice id per slot, retries 429 (Retry-After) and 5xx with backoff, atomic files, log has provenance and no key', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 2, traditions: ['sephardi'] }); // 4 items
+  const plan = await buildVoicePlan(REPO, { includeExisting: true, words: 2, traditions: ['sephardi'] }); // 4 items
   const s = await stub((c, res) => { if (c.n === 1) { res.writeHead(429, { 'retry-after': '1' }); res.end('{"detail":"rate"}'); } else if (c.n === 2) { res.writeHead(503); res.end('busy'); } else pcmReply(res); });
   const work = tmp('render');
   try {
@@ -156,7 +156,7 @@ test('render: fixed settings, respelled text, voice id per slot, retries 429 (Re
 });
 
 test('render: 401 stops the whole run; a 422 fails one item and goes on; errors never contain the key; safe stop then resume', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 3, traditions: ['sephardi'], slots: ['m'] }); // 3 items
+  const plan = await buildVoicePlan(REPO, { includeExisting: true, words: 3, traditions: ['sephardi'], slots: ['m'] }); // 3 items
   let s = await stub((c, res) => { res.writeHead(401, { 'content-type': 'application/json' }); res.end(JSON.stringify({ detail: { status: 'quota_exceeded', message: `key ${KEY} out of quota` } })); });
   let work = tmp('fatal');
   try {
@@ -183,7 +183,7 @@ test('render: 401 stops the whole run; a 422 fails one item and goes on; errors 
 });
 
 test('render: a character cap stops the run; an unreachable server gives up after the stated attempts; the CLI refuses placeholders and needs --yes', async () => {
-  const plan = await buildVoicePlan(REPO, { words: 3, traditions: ['sephardi'], slots: ['m'] });
+  const plan = await buildVoicePlan(REPO, { includeExisting: true, words: 3, traditions: ['sephardi'], slots: ['m'] });
   const work = tmp('cap');
   const r = await renderItems(plan.items, { work, take: 1, cfg: cfgMock(), mock: true, maxChars: plan.items[0].chars + 1 });
   assert.equal(r.rendered, 1); assert.match(r.stopReason, /character cap/); rm(work);
@@ -227,7 +227,7 @@ ffTest('clip: mono 44.1 kHz mp3, no metadata, neutral names that are the manifes
 
 // ---------- judges ----------
 ffTest('J1: passes a clean clip; fails a cut-off tail, clipping, silence, wrong length; each verdict carries measured values', async () => {
-  const work = tmp('j1'); const plan = await buildVoicePlan(REPO, { words: 4, traditions: ['sephardi'], slots: ['m'] });
+  const work = tmp('j1'); const plan = await buildVoicePlan(REPO, { includeExisting: true, words: 4, traditions: ['sephardi'], slots: ['m'] });
   try {
     await renderItems(plan.items, { work, take: 1, cfg: cfgMock(), mock: true, mockTruncate: (it) => it.id === plan.items[1].id });
     // item 2: loud, hard-clipped samples; item 3: silence

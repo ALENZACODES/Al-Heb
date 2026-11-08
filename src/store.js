@@ -94,7 +94,12 @@ export function createStore(opts = {}) {
   /** @type {DegradedReason} */
   let reason = null;
   let newerSchema = false;
-  if (!backend || !probe(backend)) { backend = createMemoryStorage(); persistent = false; reason = 'unavailable'; }
+  if (!backend || !probe(backend)) {
+    const readable = backend;
+    backend = createMemoryStorage(); persistent = false; reason = 'unavailable';
+    // A full quota can reject the probe while saved progress remains readable.
+    if (readable) for (const [full, raw] of Object.entries(rawAll(readable))) backend.setItem(full, raw);
+  }
   /** @type {Set<(key:string,value:any,info?:{external?:boolean})=>void>} */
   const listeners = new Set();
   /** @type {Set<(s:{persistent:boolean,reason:DegradedReason,newerSchema:boolean})=>void>} */
@@ -107,13 +112,13 @@ export function createStore(opts = {}) {
 
   /** raw map of every prefixed entry (including corrupt ones and __meta) */
   function rawAll(b = backend) {
-    /** @type {Record<string,string>} */ const out = {};
+    /** @type {Record<string,string>} */ const out = Object.create(null);
     try { for (let i = 0; i < b.length; i++) { const full = b.key(i); if (full && full.startsWith(prefix)) { const v = b.getItem(full); if (v != null) out[full] = v; } } } catch { /* ignore */ }
     return out;
   }
   function dump() {
     /** @type {Record<string,any>} */
-    const out = {};
+    const out = Object.create(null);
     for (const [full, raw] of Object.entries(rawAll())) {
       if (full === prefix + META) continue;
       try { out[full.slice(prefix.length)] = JSON.parse(raw); } catch { /* skip corrupt */ }
@@ -241,13 +246,19 @@ export function createStore(opts = {}) {
       const before = rawAll();
       const rollback = () => {
         for (const full of Object.keys(rawAll())) { if (!(full in before)) { try { backend.removeItem(full); } catch { /* ignore */ } } }
-        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { /* ignore */ } }
+        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { /* verify below */ } }
+        return canonicalJSON(rawAll()) === canonicalJSON(before);
       };
       try {
         for (const k of p.diff.removed) backend.removeItem(prefix + k);
         for (const [k, v] of Object.entries(p.data)) backend.setItem(prefix + k, JSON.stringify(v));
       } catch (e) {
-        rollback();
+        if (!rollback()) {
+          backend = createMemoryStorage();
+          for (const [full, raw] of Object.entries(before)) backend.setItem(full, raw);
+          persistent = false; reason = isQuotaError(e) ? 'quota' : 'error'; notifyStatus();
+          return { ok: false, recoveryRequired: true, error: 'The browser could not restore the original saved copy. Your original progress is available in this open page only.' };
+        }
         return { ok: false, error: isQuotaError(e) ? 'Not enough storage space on this device to restore this backup. Nothing was changed.' : 'The browser refused to save the backup. Nothing was changed.' };
       }
       for (const k of p.diff.removed) emit(k, undefined);

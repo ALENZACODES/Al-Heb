@@ -54,10 +54,10 @@ export function mountRimon({store,doc=document}={}) {
   const animator=createAnimator(),loaded=new Map(),base=new URL('../../assets/img/rimon/',import.meta.url);
   let inlineVisible=true,observer;
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
-  try{hidden=sessionStorage.getItem('alef.rimon.dismissed')==='1';}catch{}
+  try{hidden=store?.get('rimon.dismissed',false)===true;}catch{}
   host.hidden=hidden;restore.hidden=!hidden;
   const speech=mountSpeechBubble(host,{doc});
-  function remember(){try{sessionStorage.setItem('alef.rimon.dismissed',hidden?'1':'0');}catch{}}
+  function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
   function load(name){
     if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));
     return loaded.get(name);

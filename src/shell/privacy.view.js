@@ -25,6 +25,14 @@ export const LOCAL_ONLY = [
 
 /** localStorage keys (all written with the prefix "alef:"). `file` is one source file that defines or uses the key. */
 export const STORE_KEYS = [
+  ['daystart.v1', 'Date and time you first opened the app today', 'src/awards/daystart.js'],
+  ['opening-prayer:listens:v1', 'Count of opening prayer listens, read by Awards', 'src/awards/observe.js'],
+  ['dialogues.done.v1', 'Completed dialogue records, read by Awards', 'src/awards/observe.js'],
+  ['listen.shelf.v1', 'Listening shelf progress, read by Awards', 'src/awards/observe.js'],
+  ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
+  ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
+  ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
+
   ['firstwin.v1', 'First ten minutes: your answers (motivation, level, minutes a day) and the promise date', 'src/firstday/minuteone.model.js'],
   ['firstday.builder.v1', 'Word builder: which words you have built (their ids), how many builds, and when the last one was', 'src/firstday/minuteone.model.js'],
   ['firstwin.streakDay1', 'First ten minutes: the day-one streak note and when it was set', 'src/firstday/minuteone.view.js'],

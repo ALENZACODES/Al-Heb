@@ -8,6 +8,11 @@ import { readinessNode } from './readiness.js';
 import { audioTruthNode } from './audio-truth.js';
 import { describePreview, storageNotice, wipeAllData, confirmMatches, CONFIRM_WORD, backupFileName } from './settings.data.js';
 
+export function restoreFailureMessage(result) {
+  if (result.recoveryRequired) return 'Could not restore: ' + result.error + ' Download a backup now, before closing or reloading this page.';
+  return 'Could not restore: ' + result.error + '. Your progress on this device was not changed.';
+}
+
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
   // Every change says it saved, in the one status line: a silent save reads
@@ -65,7 +70,7 @@ export function mount(root, ctx) {
       const go = h('button', { type: 'button', class: 'btn', onclick: () => {
         const res = store.importData(text, { mode: 'replace' });
         restoreBox.hidden = true; restoreBox.replaceChildren();
-        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup. Reload the page to see everything refreshed.`; } else status.textContent = 'Could not restore: ' + res.error + '. Your progress on this device was not changed.';
+        if (res.ok) { settings.reload(); status.textContent = `Restored ${res.imported} saved items from the backup. Reload the page to see everything refreshed.`; } else status.textContent = restoreFailureMessage(res);
         root.querySelector('#s-import-label')?.focus();
       } }, 'Replace my progress with this backup');
       const cancel = h('button', { type: 'button', class: 'btn secondary', onclick: () => { restoreBox.hidden = true; restoreBox.replaceChildren(); status.textContent = 'Restore cancelled. Nothing was changed.'; root.querySelector('#s-import-label')?.focus(); } }, 'Cancel');

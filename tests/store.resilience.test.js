@@ -29,11 +29,14 @@ test('unserialisable restore input cannot erase existing progress', () => {
   assert.equal(store.get('progress'), 42);
 });
 
-test('special property names survive backup without changing its prototype', () => {
+test('prototype-changing backup keys are rejected without changing progress', () => {
   const store = createStore({ storage: createMemoryStorage() });
-  store.importData('{"app":"alef","schema":1,"data":{"__proto__":{"completed":42}}}');
-  assert.equal(Object.hasOwn(store.exportData().data, '__proto__'), true);
+  store.set('progress', 42);
+  const result = store.importData('{"app":"alef","schema":1,"data":{"__proto__":{"completed":42}}}');
+  assert.equal(result.ok, false);
+  assert.equal(Object.hasOwn(store.exportData().data, '__proto__'), false);
   assert.equal(store.exportData().data.completed, undefined);
+  assert.equal(store.get('progress'), 42);
 });
 
 test('oversized restore rolls back disk progress rather than succeeding only in memory', () => {

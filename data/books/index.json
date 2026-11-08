@@ -367,9 +367,9 @@
    "titleEn": "Grandma's Soup",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -379,9 +379,9 @@
    "titleEn": "Lost in Jerusalem",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

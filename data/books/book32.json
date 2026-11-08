@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book32-p01.mp3"
    },
    "illustration": "narrow stone alleys, arches, golden light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book32-p02.mp3"
    },
    "illustration": "a woman with a paper map in a crowded alley",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book32-p03.mp3"
    },
    "illustration": "the alley forking, signs in three languages",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book32-p04.mp3"
    },
    "illustration": "the same spice shop appearing twice",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book32-p05.mp3"
    },
    "illustration": "the woman turning the map upside down",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book32-p06.mp3"
    },
    "illustration": "a shopkeeper in a doorway with tea",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book32-p07.mp3"
    },
    "illustration": "the woman pointing at the map",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book32-p08.mp3"
    },
    "illustration": "the man gesturing down the alley",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book32-p09.mp3"
    },
    "illustration": "down a long stepped alley",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book32-p10.mp3"
    },
    "illustration": "a steep stone staircase",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book32-p11.mp3"
    },
    "illustration": "the alley opening onto a wide bright plaza",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book32-p12.mp3"
    },
    "illustration": "the woman standing still before the great wall, people praying",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

@@ -22,7 +22,7 @@ export const SECTION_ROUTES = {
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
-  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf'],
+  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
   speak: ['speak', 'listen', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
@@ -35,7 +35,7 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 export const PARENT = {
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel',
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate',
-  grammartopic: 'grammar', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar',
+  grammartopic: 'grammar', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */

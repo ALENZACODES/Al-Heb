@@ -90,6 +90,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`speak/`](speak/) | 2 | Say it (draft, unreviewed) (`README.md`) |
 | [`sprint/`](sprint/) | 1 | Word Sprint (draft) (`README.md`) |
 | [`strategy/`](strategy/) | 4 | Competitor analysis: review against the ALEF repo (November 2026) (`COMPETITOR-REVIEW.md`) |
+| [`synagogues/`](synagogues/) | 1 | Reform synagogues in Canada (directory screen, preview) (`README.md`) |
 | [`teacher/`](teacher/) | 1 | Teacher share and Class summary (DRAFT, not educator reviewed) (`README.md`) |
 | [`test/`](test/) | 7 | CI failure triage: ci run 41899215557 / pages run 41899215538 (`CI-FAILURE-TRIAGE.md`) |
 | [`timedread/`](timedread/) | 1 | Timed Read-Aloud (self-assessed) (`README.md`) |

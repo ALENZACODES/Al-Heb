@@ -42,6 +42,8 @@ export const ROUTES = [
   { name: 'classtrackweek',     pattern: '/classtrack/:week',         module: '../classtrack/classtrack.view.js', title: 'Class track week', owner: 'lane10', paramQuery: { week: 'week' } },
   { name: 'classtrackmode',     pattern: '/classtrack/:week/:mode',   module: '../classtrack/classtrack.view.js', title: 'Class track sheet', owner: 'lane10', paramQuery: { week: 'week', mode: 'mode' } },
   { name: 'morning', pattern: '/morning', module: '../morning/morning.view.js', title: 'Start your day with God', owner: 'morning', optional: true, quick: 'nav.morning' },
+  { name: 'synagogues', pattern: '/synagogues', module: '../synagogues/synagogues.view.js', title: 'Reform synagogues in Canada', owner: 'synagogues', optional: true, quick: 'nav.route.synagogues' },
+  { name: 'synagogue', pattern: '/synagogues/:id', module: '../synagogues/synagogues.view.js', title: 'Synagogue', owner: 'synagogues', optional: true, paramQuery: { id: 'id' } },
   { name: 'books', pattern: '/books', module: '../books/books.view.js', title: 'Little books', owner: 'books', optional: true },
   { name: 'book', pattern: '/book/:id', module: '../books/book.view.js', title: 'Read a book', owner: 'books', paramQuery: { id: 'book' } },
   { name: 'games', pattern: '/games', module: '../games/games.view.js', title: 'Games', tier: 'preview', owner: 'games' },

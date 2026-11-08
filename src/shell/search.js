@@ -31,6 +31,7 @@ const FEATURE_WORDS = {
   morning: 'prayer morning modeh ani god verse',
   festivals: 'holidays jewish year festival',
   listen: 'hear hearing cantor music songs',
+  synagogues: 'synagogue synagogues temple shul congregation congregations canada canadian reform toronto montreal vancouver ottawa calgary edmonton winnipeg victoria hamilton directory',
 };
 
 /** @returns {{name:string, section:string, tier:'v0'|'preview', label:string, desc:string, href:string, hay:string, labelN:string}[]} */

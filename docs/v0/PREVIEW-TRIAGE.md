@@ -77,6 +77,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `phrases` | keep | Common phrases and sentences; supports the speaking goal. |
 | `books` | keep | The little-books shelf; listed in the Preview group so the books can be found. |
 | `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
+| `synagogues` | keep | Reform synagogues in Canada: a directory with pictures, stories and contact details for 27 congregations. Not a lesson; stays preview until the facts are checked by the congregations. |
 | `games` | keep | The games hub; listed in the Preview group as the one door to all the games. |
 | `wordfinder` | keep | The first game; linked from Home and the showcase. |
 | `tugowar` | hide | A game; reached from the games hub, and search finds it by name. |

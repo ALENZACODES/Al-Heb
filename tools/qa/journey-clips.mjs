@@ -115,8 +115,8 @@ for (const vp of [{ width: 360, height: 640 }, { width: 390, height: 844 }]) {
     const A = await profile(vp, { label: 'default-device-voice', speech: 'device' });
     const { page } = A;
     await A.step('first run: open the app (fresh profile)', async () => { await A.go('', {}); return { url: page.url().replace(base, '/'), text: (await A.text('body')).slice(0, 700) }; }, `01-first-run-welcome`);
-    await A.step('first run: answer "No, start from the beginning" and Continue', async () => {
-      await page.getByText('No, start from the beginning', { exact: false }).first().click().catch(() => {});
+    await A.step('first run: choose starting from zero and continue', async () => {
+      await page.locator('#ob-letters-none').check().catch(() => {});
       await page.getByRole('button', { name: /^Continue/ }).first().click().catch(() => {}); await wait(900);
       const t1 = (await A.text()).slice(0, 1200);
       return { url: page.url().replace(base, '/'), text: t1 };

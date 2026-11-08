@@ -104,7 +104,7 @@ test('browser: first run, pronunciation step: "Start without sound" and its desc
     const ctx = await browser.newContext({ viewport: { width: 360, height: 640 }, hasTouch: true, isMobile: true, serviceWorkers: 'block' });
     const page = await ctx.newPage();
     await page.goto(base); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(600);
-    await page.getByText('No, start from the beginning').first().click();
+    await page.locator('#ob-letters-none').check();
     await page.getByRole('button', { name: /^Continue/ }).first().click(); await page.waitForSelector('#ob-silent', { state: 'attached' });
     const r = await page.evaluate(() => { const l = document.querySelector('#ob-silent').closest('label'); const d = l.querySelector('.block'); const a = l.querySelector('strong').getBoundingClientRect(), b = d.getBoundingClientRect(); return { display: getComputedStyle(d).display, below: b.top >= a.bottom - 1 }; });
     assert.deepEqual(r, { display: 'block', below: true });

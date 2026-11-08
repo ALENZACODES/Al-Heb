@@ -51,7 +51,7 @@ async function tabTo(page, match, max = 120) {
   await page.keyboard.press('ArrowDown');
   const after = await page.evaluate(() => [...document.querySelectorAll('input[name=letters]:checked')].map((i) => i.value).join(','));
   note(f, 'arrow keys change the radio choice', before !== after, `${before} -> ${after}`);
-  const n2 = await tabTo(page, (a) => a.tag === 'button' && /^continue$/i.test(a.name), 40);
+  const n2 = await tabTo(page, (a) => a.tag === 'button' && a.id === 'ob-letters-continue', 40);
   note(f, 'Tab reaches "Continue" (no trap)', n2 > 0, `${n2} more presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
   note(f, 'Enter saves the answer (onboarding.v1, onboarded) and shows the synagogue step', await page.evaluate(() => { const o = JSON.parse(localStorage.getItem('alef:onboarding.v1') || 'null'); return !!o && o.letters === 'some' && o.start === '/placement' && JSON.parse(localStorage.getItem('alef:settings') || '{}').onboarded === true && location.hash === '#/welcome' && !!document.querySelector('#ob-form-congregation'); }), await page.evaluate(() => location.hash));

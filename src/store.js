@@ -94,7 +94,13 @@ export function createStore(opts = {}) {
   /** @type {DegradedReason} */
   let reason = null;
   let newerSchema = false;
-  if (!backend || !probe(backend)) { backend = createMemoryStorage(); persistent = false; reason = 'unavailable'; }
+  if (!backend || !probe(backend)) {
+    // A full or read-only storage area can usually still be read: carry what is there into memory before falling back,
+    // so the learner's progress stays visible and exportable this session.
+    const readable = backend ? rawAll(backend) : {};
+    backend = createMemoryStorage(); persistent = false; reason = 'unavailable';
+    for (const [full, raw] of Object.entries(readable)) backend.setItem(full, raw);
+  }
   /** @type {Set<(key:string,value:any,info?:{external?:boolean})=>void>} */
   const listeners = new Set();
   /** @type {Set<(s:{persistent:boolean,reason:DegradedReason,newerSchema:boolean})=>void>} */
@@ -233,21 +239,30 @@ export function createStore(opts = {}) {
      * All-or-nothing restore: validates first; if any write fails part-way (quota), everything is rolled back.
      * @param {string|object} input backup JSON text or object
      * @param {{mode?: 'replace'|'merge'}} [o]
-     * @returns {{ok:true,imported:number}|{ok:false,error:string}} (call previewImport first to show what will change)
+     * @returns {{ok:true,imported:number}|{ok:false,error:string,recoveryRequired?:boolean}} (call previewImport first to show what will change)
      */
     importData(input, o = {}) {
       const p = api.previewImport(input, o);
       if (!p.ok) return p;
       const before = rawAll();
+      /** @returns {boolean} true when the stored copy is back to exactly what it was */
       const rollback = () => {
-        for (const full of Object.keys(rawAll())) { if (!(full in before)) { try { backend.removeItem(full); } catch { /* ignore */ } } }
-        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { /* ignore */ } }
+        let ok = true;
+        for (const full of Object.keys(rawAll())) { if (!(full in before)) { try { backend.removeItem(full); } catch { ok = false; } } }
+        for (const [full, raw] of Object.entries(before)) { try { backend.setItem(full, raw); } catch { ok = false; } }
+        return ok;
       };
       try {
         for (const k of p.diff.removed) backend.removeItem(prefix + k);
         for (const [k, v] of Object.entries(p.data)) backend.setItem(prefix + k, JSON.stringify(v));
       } catch (e) {
-        rollback();
+        if (!rollback()) {
+          // The stored copy could not be put back: keep the previous progress in memory so it can still be exported now.
+          backend = createMemoryStorage(); persistent = false; reason = 'error';
+          for (const [full, raw] of Object.entries(before)) backend.setItem(full, raw);
+          notifyStatus();
+          return { ok: false, recoveryRequired: true, error: 'The backup could not be restored and the saved copy on this device could not be put back.' };
+        }
         return { ok: false, error: isQuotaError(e) ? 'Not enough storage space on this device to restore this backup. Nothing was changed.' : 'The browser refused to save the backup. Nothing was changed.' };
       }
       for (const k of p.diff.removed) emit(k, undefined);

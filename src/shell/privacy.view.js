@@ -152,6 +152,13 @@ export const STORE_KEYS = [
   ['awards.v1', 'Awards on this device: practice-game activity, the name typed for a certificate sample, and any objective assessment evidence stored later. Lesson completion is not copied here. There is no account.', 'src/awards/record.js'],
   ['books.v1', 'Little-books reading place: the last page you reached in each book, and when you first reached its last page', 'src/books/book.view.js'],
   ['books.finished.v1', 'Little books you have read to the last page, and when (drives the Finished mark on the shelf and the Book Finisher award)', 'src/books/book.view.js'],
+  ['daystart.v1', 'The time you first opened the app on each day, so the Early Bird and Night Owl awards come from a real record', 'src/awards/daystart.js'],
+  ['opening-prayer:listens:v1', 'The same opening-prayer listen count as "alef:opening-prayer:listens:v1", as Awards reads it through the store', 'src/awards/observe.js'],
+  ['dialogues.done.v1', 'Which dialogues you finished, and when (read by Awards)', 'src/awards/observe.js'],
+  ['listen.shelf.v1', 'How many times each Sacred Listen recording actually started playing (read by Awards)', 'src/awards/observe.js'],
+  ['home.builder.v1', 'Home-page word builder: which words you built and when, and your points', 'src/home/builder-model.js'],
+  ['games.homebuilder.v1', 'Game (home-page word builder): best score, plays and stars', 'src/home/builder-model.js'],
+  ['alef.rimon.dismissed', 'Whether you hid Rimon the mascot. Kept in sessionStorage under this exact name, gone when the tab closes', 'src/shell/rimon.js'],
 ];
 
 const table = (caption, head, rows) => h('div', { class: 'table-wrap', role: 'region', 'aria-label': caption, tabindex: '0' }, h('table', { class: 'priv-table' }, h('caption', {}, caption),

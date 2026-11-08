@@ -29,11 +29,14 @@ test('unserialisable restore input cannot erase existing progress', () => {
   assert.equal(store.get('progress'), 42);
 });
 
-test('special property names survive backup without changing its prototype', () => {
-  const store = createStore({ storage: createMemoryStorage() });
-  store.importData('{"app":"alef","schema":1,"data":{"__proto__":{"completed":42}}}');
-  assert.equal(Object.hasOwn(store.exportData().data, '__proto__'), true);
+test('a backup with a __proto__ key is refused whole and changes no prototype', () => {
+  const store = createStore({ storage: createMemoryStorage() }); store.set('progress', 7);
+  const r = store.importData('{"app":"alef","schema":1,"data":{"__proto__":{"completed":42}}}');
+  assert.equal(r.ok, false); assert.match(r.error, /invalid key name/);
+  assert.equal(store.get('progress'), 7, 'existing progress kept');
+  assert.equal(Object.hasOwn(store.exportData().data, '__proto__'), false);
   assert.equal(store.exportData().data.completed, undefined);
+  assert.equal(/** @type {any} */ ({}).completed, undefined, 'Object.prototype untouched');
 });
 
 test('oversized restore rolls back disk progress rather than succeeding only in memory', () => {

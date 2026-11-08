@@ -15,7 +15,9 @@ import { audioButton } from "../shell/audio-access.js";
 export const MORNING_CSS = `
 .mrn { display: grid; gap: 1rem; } .mrn * { min-inline-size: 0; overflow-wrap: anywhere; }
 .mrn section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: .75rem 1rem; }
-.mrn .mrn-he { font-size: 1.6rem; line-height: 1.7; } .mrn .mrn-ref { color: var(--muted, inherit); font-size: .9rem; }
+.mrn .mrn-he { font-size: 1.6rem; line-height: 1.7; display: block; } .mrn .mrn-ref { color: var(--muted, inherit); font-size: .9rem; }
+.mrn .mrn-tr { font-style: italic; margin: .3rem 0 .2rem; } .mrn .mrn-en { margin: .2rem 0; }
+.mrn .mrn-line { display: grid; gap: .1rem; }
 .mrn-streak { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 .mrn-flame { inline-size: 2rem; block-size: 2rem; } .mrn-count { font-size: 2rem; font-weight: 700; }
 .mrn-ring { inline-size: 3.2rem; block-size: 3.2rem; transform: rotate(-90deg); }
@@ -67,8 +69,6 @@ export async function mount(root, ctx) {
   try { verses = await getJson("../../data/morning-verses.json"); } catch (e) { problem = String(e.message || e); }
   try { registry = (await getJson("../../data/corpus/registry.json")).entries || []; } catch { /* Modeh Ani block is skipped */ }
   if (verses.length && checkVerses(verses).length) { problem = "morning verses failed validation"; verses = []; }
-  let translit = null; // optional lane-3 engine; the block simply omits the line if it is absent
-  try { const m = await import("../pronunciation/transliterate.js"); if (typeof m.transliterate === "function") translit = m.transliterate; } catch { /* absent */ }
   let timers = { cancel() {} };
   const render = () => {
     const prefs = model.prefs(), voice = ctx.settings && ctx.settings.get ? ctx.settings.get("voice") : "m";
@@ -77,9 +77,9 @@ export async function mount(root, ctx) {
     const settings = settingsForm(model, ctx, () => { schedule(); render(); });
     wrap.replaceChildren(
       el("p", { class: "mrn-flag", role: "note" }, "Draft wording and layout; final text to be approved."),
-      v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "Today's verse"), heText(v.hebrew, "mrn-he"), el("p", { lang: "en" }, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
+      v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "Today's verse"), hebrewLine(v.hebrew, v.tr, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
         : el("section", {}, el("p", {}, problem ? "Today's verse is unavailable right now." : "Loading...")),
-      modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), heText(modeh.he, "mrn-he"), translitLine(translit, modeh.he, ctx), el("p", {}, modeh.english),
+      modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), hebrewLine(modeh.he, modeh.tr, modeh.english),
         modeh.needsCheck ? el("p", { class: "mrn-flag" }, "The feminine form is derived and not yet checked by a Hebrew educator.") : null,
         audioButton(el, ctx, { kind: "line", id: MODEH_ANI_ID, text: modeh.he, label: "Play", class: "btn alef-play" })) : null,
       streakVisible(ctx) ? el("section", { "aria-labelledby": "mrn-sh" }, el("h2", { id: "mrn-sh" }, "Your streak"), streakPanel(model)) : null,
@@ -98,9 +98,9 @@ export async function mount(root, ctx) {
   return () => timers.cancel();
 }
 
-function translitLine(fn, he, ctx) {
-  if (!fn) return null;
-  try { const tr = fn(he, { scheme: "siddur", tradition: (ctx.settings && ctx.settings.get && ctx.settings.get("congregation")) || "sephardi" }); return tr ? el("p", { class: "mrn-ref", lang: "en" }, tr) : null; } catch { return null; }
+/** Hebrew / how to say it / what it says, the same three-line layout as the opening prayer. */
+function hebrewLine(he, tr, en) {
+  return el("div", { class: "mrn-line" }, heText(he, "mrn-he"), tr ? el("p", { class: "mrn-tr", lang: "he-Latn" }, tr) : null, en ? el("p", { class: "mrn-en", lang: "en" }, en) : null);
 }
 
 function settingsForm(model, ctx, changed) {

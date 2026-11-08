@@ -38,7 +38,22 @@ test("morning-verses.json: shape, no provenance fields, enough verified entries,
   const list = JSON.parse(fs.readFileSync("data/morning-verses.json", "utf8"));
   assert.deepEqual(V.checkVerses(list), []);
   assert.ok(list.length >= 90, `entries: ${list.length}`);
-  for (const e of list) assert.deepEqual(Object.keys(e).sort(), ["english_jps1917", "hebrew", "id", "source_ref"]);
+  for (const e of list) assert.deepEqual(Object.keys(e).sort(), ["english_jps1917", "hebrew", "id", "source_ref", "tr"]);
+  // every Hebrew line has how to say it (Latin letters, house style: Adonai for the Name, ch for chet and chaf, no diacritics) and what it says
+  for (const e of list) {
+    assert.match(e.tr, /^[A-Z]/, `${e.id}: tr starts with a capital`);
+    assert.doesNotMatch(e.tr, /[\u0590-\u05FF\u0300-\u036F]|YHWH|Yahweh|Jehovah/i, `${e.id}: tr style`);
+    if (/יְהוָה|יְהוִה/.test(e.hebrew)) assert.match(e.tr, /Adonai/, `${e.id}: the Name is read Adonai`);
+    assert.ok(e.english_jps1917.trim().length > 0);
+  }
+  // the 70 verses also present in data/homepage/prayers.json carry the same transliteration (one voice across the app)
+  const prayers = JSON.parse(fs.readFileSync("data/homepage/prayers.json", "utf8")).prayers;
+  const norm = (x) => x.normalize("NFC").replace(/\u05C3|:/g, "").trim();
+  const byHe = new Map(prayers.map((p) => [norm(p.he), p.tr]));
+  let shared = 0;
+  for (const e of list) { const tr = byHe.get(norm(e.hebrew)); if (tr) { shared++; assert.equal(e.tr, tr, e.id); } }
+  assert.ok(shared >= 60, `shared with prayers.json: ${shared}`);
+  const bad = V.checkVerses([{ ...list[0], tr: "" }]); assert.ok(bad.some((x) => /tr missing/.test(x)));
   const a = V.verseFor(list, new Date(2026, 10, 4, 6)), b = V.verseFor(list, new Date(2026, 10, 4, 23, 59));
   assert.equal(a.id, b.id); // same verse all day
   assert.equal(a.id, list[V.dayOfYear(new Date(2026, 10, 4)) % list.length].id);
@@ -55,6 +70,7 @@ test("Modeh Ani block: masculine from registry, feminine flagged needs-check, au
   const reg = JSON.parse(fs.readFileSync("data/corpus/registry.json", "utf8")).entries;
   const m = V.modehAniFor(reg, "m"), f = V.modehAniFor(reg, "f");
   assert.match(m.he, /^מוֹדֶה/); assert.match(f.he, /^מוֹדָה/); assert.equal(m.needsCheck, false); assert.equal(f.needsCheck, true);
+  assert.match(m.tr, /^Modeh ani lefanecha/); assert.match(f.tr, /^Modah ani lefanecha/); assert.ok(m.english && f.english);
   assert.equal(V.modehAniClip({ status: () => ({ source: "none" }) }), null);
   assert.equal(V.modehAniClip({ status: () => ({ source: "tts-fallback" }) }), null);
   assert.equal(V.modehAniClip({ status: () => ({ source: "file", url: "x.mp3" }) }).url, "x.mp3");

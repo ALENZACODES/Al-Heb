@@ -3,207 +3,153 @@ fail,0.0,word,הָא,אה.,ha,"ha!; behold!, this, here is",audio/f/israeli/word
 fail,0.0,word,הִוא,היו,hiv,it,audio/f/israeli/word/kiddush-veshamru-w14.mp3,audio/f/israeli/word/kiddush-veshamru-w14.mp3
 fail,0.0,word,הָא,אה,ha,"ha!; behold!, this, here is",audio/m/israeli/word/hcd00a615.mp3,audio/m/israeli/word/hcd00a615.mp3
 fail,0.0,word,הִוא,היו,hiv,it,audio/m/israeli/word/kiddush-veshamru-w14.mp3,audio/m/israeli/word/kiddush-veshamru-w14.mp3
-fail,0.0,builder,פֶּה,תודה רבה,peh,mouth,audio/builder/h60b16793_noa.mp3,audio/builder/h60b16793_noa.mp3
-fail,0.286,builder,כָּאן,קמקורי,kan,"here, at this place",audio/builder/h0c3016b2_ari.mp3,audio/builder/h0c3016b2_ari.mp3
-fail,0.333,builder,שִׁבְעָה,שספה,shiv'ah,seven,audio/builder/h68a92f84_ari.mp3,audio/builder/h68a92f84_ari.mp3
-fail,0.5,word,שָׂבַע,סבא,sava,to be sated; to be satisfied,audio/f/israeli/word/h264da105.mp3,audio/f/israeli/word/h264da105.mp3
-fail,0.5,word,אֶל,אר,el,"to, towards, into; at, by",audio/f/israeli/word/h68843f80.mp3,audio/f/israeli/word/h68843f80.mp3
+fail,0.5,word,כָּכָה,ככה,kakhah,"thus (in this way, like so)",audio/f/israeli/word/h3777d988.mp3,audio/f/israeli/word/h3777d988.mp3
+fail,0.5,word,אֶל,אר,el,"to, towards, into; at, by",audio/f/israeli/word/h68843f80.mp3,audio/f/israeli/word/h68843f80.mp3 audio/f/israeli/word/yigdal-w47.mp3
 fail,0.5,word,בְּפִי,בשיא,befi,by the mouth,audio/f/israeli/word/haftarah-after-w133.mp3,audio/f/israeli/word/haftarah-after-w133.mp3
 fail,0.5,word,סָר,שר,sar,"to turn, to turn aside; to depart",audio/f/israeli/word/hc480edcd.mp3,audio/f/israeli/word/hc480edcd.mp3
-fail,0.5,word,אֶל,אר,el,"to, towards, into; at, by",audio/f/israeli/word/yigdal-w47.mp3,audio/f/israeli/word/yigdal-w47.mp3
 fail,0.5,word,אֶל,אר,el,"to, towards, into; at, by",audio/f/israeli/word/yigdal-w8.mp3,audio/f/israeli/word/yigdal-w8.mp3
 fail,0.5,word,אִירָא׃,יראה,ira,I fear,audio/m/israeli/word/adon-olam-1-w72.mp3,audio/m/israeli/word/adon-olam-1-w72.mp3
-fail,0.5,word,שָׂבַע,סבא,sava,to be sated; to be satisfied,audio/m/israeli/word/h264da105.mp3,audio/m/israeli/word/h264da105.mp3
+fail,0.5,word,כָּכָה,ככה,kakhah,"thus (in this way, like so)",audio/m/israeli/word/h3777d988.mp3,audio/m/israeli/word/h3777d988.mp3
 fail,0.5,word,סָר,שר,sar,"to turn, to turn aside; to depart",audio/m/israeli/word/hc480edcd.mp3,audio/m/israeli/word/hc480edcd.mp3
-fail,0.5,word,שִׁשָּׁה,שיסה,shishah,six,audio/m/israeli/word/numbers-06-m.mp3,audio/m/israeli/word/numbers-06-m.mp3
-fail,0.5,builder,פָּרָה,בואו רע,parah,cow,audio/builder/h80d6f3f0_ari.mp3,audio/builder/h80d6f3f0_ari.mp3
-fail,0.5,builder,שִׁשָּׁה,שיסו,shishah,six,audio/builder/pc9b3fcc6_noa.mp3,audio/builder/pc9b3fcc6_noa.mp3
-fail,0.5,builder,טָרִי,צ'רי,tari,fresh,audio/builder/h8349e150_noa.mp3,audio/builder/h8349e150_noa.mp3
 fail,0.571,word,דְקֻדְשָׁא,דקוצ'ה,dekudsha,of the Holy One,audio/f/israeli/word/brich-shmei-w65.mp3,audio/f/israeli/word/brich-shmei-w65.mp3
-fail,0.571,word,בְשָׂמִים׃,וסמים.,vesamim,spices,audio/f/israeli/word/havdalah-spices-w9.mp3,audio/f/israeli/word/havdalah-spices-w9.mp3
-fail,0.571,word,בְשָׂמִים,וסמים.,vesamim,UNKNOWN,audio/f/israeli/word/i-06-w3.mp3,audio/f/israeli/word/i-06-w3.mp3
-fail,0.571,word,וְיִתְנַשֵּׂא,והתנסה.,veyitnase,and extolled,audio/f/israeli/word/kaddish-1-w32.mp3,audio/f/israeli/word/kaddish-1-w32.mp3
 fail,0.571,word,דְקוּדְשָׁא,דקוצ'ה,dekudesha,of the Holy One,audio/f/israeli/word/kaddish-1-w37.mp3,audio/f/israeli/word/kaddish-1-w37.mp3
+fail,0.571,word,כִרְעוּתֵהּ,קירוטה,khir'uteh,by his will,audio/f/israeli/word/kaddish-1-w8.mp3,audio/f/israeli/word/kaddish-1-w8.mp3
 fail,0.571,word,דְקֻדְשָׁא,דקוצ'ה,dekudsha,of the Holy One,audio/m/israeli/word/brich-shmei-w65.mp3,audio/m/israeli/word/brich-shmei-w65.mp3
-fail,0.571,word,בְשָׂמִים׃,וסמים.,vesamim,spices,audio/m/israeli/word/havdalah-spices-w9.mp3,audio/m/israeli/word/havdalah-spices-w9.mp3
-fail,0.571,word,בְשָׂמִים,וסמים.,vesamim,UNKNOWN,audio/m/israeli/word/i-06-w3.mp3,audio/m/israeli/word/i-06-w3.mp3
 fail,0.571,word,דְקוּדְשָׁא,דקוצ'ה,dekudesha,of the Holy One,audio/m/israeli/word/kaddish-1-w37.mp3,audio/m/israeli/word/kaddish-1-w37.mp3
-fail,0.571,word,בִּנְסֹעַ,בנשואה,binso'a,at the setting out,audio/m/israeli/word/vayehi-binsoa-w2.mp3,audio/m/israeli/word/vayehi-binsoa-w2.mp3
-fail,0.571,builder,שָׁבוּעַ,שישה סבועה,shavu'a,"week, period of seven days",audio/builder/h92151b55_noa.mp3,audio/builder/h92151b55_noa.mp3
-fail,0.571,builder,חֲמִשָּׁה,חמיסופה,chamishah,five,audio/builder/h29aadfe4_ari.mp3,audio/builder/h29aadfe4_ari.mp3
+fail,0.6,word,אֲבָרֲכֶךָּ,הברכך,avarakheka,I will bless you,audio/f/israeli/word/ashrei-145-1-3-w11.mp3,audio/f/israeli/word/ashrei-145-1-3-w11.mp3
 fail,0.667,word,עֻזּוֹ,וזו,uzo,his might,audio/f/israeli/word/aleinu-1-w50.mp3,audio/f/israeli/word/aleinu-1-w50.mp3
+fail,0.667,word,שֶׁכָּכָה,שככה.,shekakhah,that is in such a case,audio/f/israeli/word/ashrei-144-15-w3.mp3,audio/f/israeli/word/ashrei-144-15-w3.mp3
+fail,0.667,word,וִיחֻנֶּךָּ׃,ויחונך.,vichuneka,and may he be gracious to you,audio/f/israeli/word/bless-priestly-2-w5.mp3,audio/f/israeli/word/bless-priestly-2-w5.mp3
 fail,0.667,word,וּלְחַיִּין,ולחיים.,ulechayin,and for life,audio/f/israeli/word/brich-shmei-w117.mp3,audio/f/israeli/word/brich-shmei-w117.mp3
 fail,0.667,word,וּנְבִיאוֹהִי,ונביאו היא.,unevi'ohi,and his prophets,audio/f/israeli/word/brich-shmei-w89.mp3,audio/f/israeli/word/brich-shmei-w89.mp3
 fail,0.667,word,וּמַסְגֵּא,ומזגה.,umasge,and abounds,audio/f/israeli/word/brich-shmei-w91.mp3,audio/f/israeli/word/brich-shmei-w91.mp3
 fail,0.667,word,טַף,ת',taf,"babies, infants, small children; children",audio/f/israeli/word/h0cc80aed.mp3,audio/f/israeli/word/h0cc80aed.mp3
-fail,0.667,word,אִוָּה,איבה,ivah,"to greatly desire, want, long for, lust for",audio/f/israeli/word/h0cdd730a.mp3,audio/f/israeli/word/h0cdd730a.mp3
 fail,0.667,word,יֻדַּע,יהודה,yuda,"to be informed; to be made definite, to be put into definite form",audio/f/israeli/word/h0e071b5c.mp3,audio/f/israeli/word/h0e071b5c.mp3
-fail,0.667,word,הִוָּה,היבה,hivah,to constitute,audio/f/israeli/word/ha3cf2c46.mp3,audio/f/israeli/word/ha3cf2c46.mp3
+fail,0.667,word,כּוֹכָב,כוכב,kokhav,star; relating to fame,audio/f/israeli/word/h233af6f2.mp3,audio/f/israeli/word/h233af6f2.mp3
+fail,0.667,word,לֵוִי,לוי,levi,Levite,audio/f/israeli/word/hc5ed2600.mp3,audio/f/israeli/word/hc5ed2600.mp3
 fail,0.667,word,אָכֹם,החום,akhom,"black, brown",audio/f/israeli/word/hf76c8cd2.mp3,audio/f/israeli/word/hf76c8cd2.mp3
+fail,0.667,word,וִיחֻנֶּךָּ,ויחונך.,vichuneka,UNKNOWN,audio/f/israeli/word/r25-w4.mp3,audio/f/israeli/word/r25-w4.mp3
 fail,0.667,word,שְׂחוֹק,צחוק,sechok,laughter,audio/f/israeli/word/shir-hamaalot-w11.mp3,audio/f/israeli/word/shir-hamaalot-w11.mp3
 fail,0.667,word,עֻזּוֹ,וזו,uzo,his might,audio/m/israeli/word/aleinu-1-w50.mp3,audio/m/israeli/word/aleinu-1-w50.mp3
+fail,0.667,word,שֶׁכָּכָה,שככה.,shekakhah,that is in such a case,audio/m/israeli/word/ashrei-144-15-w3.mp3,audio/m/israeli/word/ashrei-144-15-w3.mp3
+fail,0.667,word,וִיחֻנֶּךָּ׃,ויחונך.,vichuneka,and may he be gracious to you,audio/m/israeli/word/bless-priestly-2-w5.mp3,audio/m/israeli/word/bless-priestly-2-w5.mp3
 fail,0.667,word,דְּלִבָּאי,בלי ביי,delibay,of my heart,audio/m/israeli/word/brich-shmei-w112.mp3,audio/m/israeli/word/brich-shmei-w112.mp3
 fail,0.667,word,וּלְחַיִּין,ולחיים.,ulechayin,and for life,audio/m/israeli/word/brich-shmei-w117.mp3,audio/m/israeli/word/brich-shmei-w117.mp3
 fail,0.667,word,וְאַתְרָךְ,והטראח,ve'atrakh,and your place,audio/m/israeli/word/brich-shmei-w7.mp3,audio/m/israeli/word/brich-shmei-w7.mp3
 fail,0.667,word,וּנְבִיאוֹהִי,ונביאו היא.,unevi'ohi,and his prophets,audio/m/israeli/word/brich-shmei-w89.mp3,audio/m/israeli/word/brich-shmei-w89.mp3
 fail,0.667,word,וּמַסְגֵּא,ומזגה.,umasge,and abounds,audio/m/israeli/word/brich-shmei-w91.mp3,audio/m/israeli/word/brich-shmei-w91.mp3
-fail,0.667,word,אִוָּה,איבה,ivah,"to greatly desire, want, long for, lust for",audio/m/israeli/word/h0cdd730a.mp3,audio/m/israeli/word/h0cdd730a.mp3
+fail,0.667,word,נָכוֹן,ניקון,nakhon,right / correct,audio/m/israeli/word/fillers-04.mp3,audio/m/israeli/word/fillers-04.mp3
 fail,0.667,word,יֻדַּע,יהודה,yuda,"to be informed; to be made definite, to be put into definite form",audio/m/israeli/word/h0e071b5c.mp3,audio/m/israeli/word/h0e071b5c.mp3
+fail,0.667,word,כּוֹכָב,כוכב,kokhav,star; relating to fame,audio/m/israeli/word/h233af6f2.mp3,audio/m/israeli/word/h233af6f2.mp3
 fail,0.667,word,יְרִיעָה,יריה,yeri'ah,"a curtain; a sheet of parchment, of cloth, etc",audio/m/israeli/word/ha54e1129.mp3,audio/m/israeli/word/ha54e1129.mp3
+fail,0.667,word,לֵוִי,לוי,levi,Levite,audio/m/israeli/word/hc5ed2600.mp3,audio/m/israeli/word/hc5ed2600.mp3
 fail,0.667,word,אָכֹם,אכון,akhom,"black, brown",audio/m/israeli/word/hf76c8cd2.mp3,audio/m/israeli/word/hf76c8cd2.mp3
 fail,0.667,word,לֹא אִירָא,לא יראה.,lo ira,UNKNOWN,audio/m/israeli/word/i-09-w16.mp3,audio/m/israeli/word/i-09-w16.mp3
-fail,0.667,word,חֲמִשָּׁה,חמיסה,chamishah,five,audio/m/israeli/word/numbers-05-m.mp3,audio/m/israeli/word/numbers-05-m.mp3
+fail,0.667,word,וִיחֻנֶּךָּ,ויחונך.,vichuneka,UNKNOWN,audio/m/israeli/word/r25-w4.mp3,audio/m/israeli/word/r25-w4.mp3
 fail,0.667,word,שְׂחוֹק,צחוק,sechok,laughter,audio/m/israeli/word/shir-hamaalot-w11.mp3,audio/m/israeli/word/shir-hamaalot-w11.mp3
-fail,0.667,builder,רֹאשׁ,רושף,rosh,head,audio/builder/h4fed6814_ari.mp3,audio/builder/h4fed6814_ari.mp3
-fail,0.667,builder,שָׁבוּעַ,שוזבועה,shavu'a,"week, period of seven days",audio/builder/h92151b55_ari.mp3,audio/builder/h92151b55_ari.mp3
-fail,0.667,builder,חֲמִשָּׁה,חמיסו,chamishah,five,audio/builder/h29aadfe4_noa.mp3,audio/builder/h29aadfe4_noa.mp3
-fail,0.667,builder,שִׁבְעָה,שיסעה,shiv'ah,seven,audio/builder/h68a92f84_noa.mp3,audio/builder/h68a92f84_noa.mp3
-fail,0.667,builder,מֵאָה,מה?,me'ah,"hundred, one hundred",audio/builder/hffd9b904_noa.mp3,audio/builder/hffd9b904_noa.mp3
-fail,0.667,builder,כֶּלֶב,כאב,kelev,dog,audio/builder/kelev_ari.mp3,audio/builder/kelev_ari.mp3
+fail,0.727,word,עַל־מַלְכַיָּא,אל-מלקאיה,al-malkhaya,over kings,audio/f/israeli/word/brich-shmei-w59.mp3,audio/f/israeli/word/brich-shmei-w59.mp3
 fail,0.727,word,וּבְשָׁכְבְּךָ,הופשח בך.,uveshakhbekha,and when you lie down,audio/f/israeli/word/shema-vahavta-w30.mp3,audio/f/israeli/word/shema-vahavta-w30.mp3 audio/f/israeli/word/vahavta-2-w17.mp3 audio/f/israeli/word/vahavta-full-w24.mp3
-borderline,0.75,word,שַׂמְּחֵנוּ,סמכנו,samechenu,gladden us,audio/f/israeli/word/haftarah-after-w64.mp3,audio/f/israeli/word/haftarah-after-w64.mp3
-borderline,0.75,word,בְּשָׂשׁוֹן,בסשון,besashon,with joy,audio/f/israeli/word/havdalah-opening-w17.mp3,audio/f/israeli/word/havdalah-opening-w17.mp3
-borderline,0.75,word,נֶאְדָּר,נהדר,nedar,majestic,audio/f/israeli/word/mi-chamocha-1-w6.mp3,audio/f/israeli/word/mi-chamocha-1-w6.mp3
-borderline,0.75,word,נֶאְדָּר,נהדר,nedar,UNKNOWN,audio/f/israeli/word/r43-w3.mp3,audio/f/israeli/word/r43-w3.mp3
+fail,0.727,word,אֲבָרֲכֶךָּ,עבר אחיך,avarakheka,I will bless you,audio/m/israeli/word/ashrei-145-1-3-w11.mp3,audio/m/israeli/word/ashrei-145-1-3-w11.mp3
+borderline,0.75,word,כִּכְלוֹת,ככלות,kikhlot,when all ended,audio/f/israeli/word/adon-olam-1-w18.mp3,audio/f/israeli/word/adon-olam-1-w18.mp3
+borderline,0.75,word,טָבְוָן,טוואן,tavevan,goodness,audio/f/israeli/word/brich-shmei-w93.mp3,audio/f/israeli/word/brich-shmei-w93.mp3
+borderline,0.75,word,נֶאְדָּר,נהדר,nedar,majestic,audio/f/israeli/word/mi-chamocha-1-w6.mp3,audio/f/israeli/word/mi-chamocha-1-w6.mp3 audio/f/israeli/word/r43-w3.mp3
+borderline,0.75,word,כִּכְלוֹת,ככלות,kikhlot,when all ended,audio/m/israeli/word/adon-olam-1-w18.mp3,audio/m/israeli/word/adon-olam-1-w18.mp3
 borderline,0.75,word,וַאֲבָרֲכָה,והברכה.,va'avarakhah,and I will bless,audio/m/israeli/word/ashrei-145-1-3-w6.mp3,audio/m/israeli/word/ashrei-145-1-3-w6.mp3
-borderline,0.75,word,בְּשָׂשׁוֹן,בסשון,besashon,with joy,audio/m/israeli/word/havdalah-opening-w17.mp3,audio/m/israeli/word/havdalah-opening-w17.mp3
-borderline,0.75,word,בְּבַקָּשָׁה,בבקיסא.,bevakashah,please / you're welcome,audio/m/israeli/word/politeness-03.mp3,audio/m/israeli/word/politeness-03.mp3
-borderline,0.75,builder,שֶׁמֶשׁ,שף מה שף,shemesh,sun,audio/builder/h86027352_noa.mp3,audio/builder/h86027352_noa.mp3
-borderline,0.75,builder,רֹאשׁ,ראש אף,rosh,head,audio/builder/h4fed6814_noa.mp3,audio/builder/h4fed6814_noa.mp3
-borderline,0.75,builder,שְׁלוֹשָׁה,שץ לא שסע,sheloshah,three,audio/builder/h3dfe9831_ari.mp3,audio/builder/h3dfe9831_ari.mp3
-borderline,0.75,builder,שְׁלוֹשָׁה,שסלו שסה,sheloshah,three,audio/builder/h3dfe9831_noa.mp3,audio/builder/h3dfe9831_noa.mp3
-borderline,0.75,builder,שְׁלִישִׁי,שסלישסי,shelishi,third,audio/builder/h0b1cfbd9_ari.mp3,audio/builder/h0b1cfbd9_ari.mp3
-borderline,0.75,builder,שְׁלִישִׁי,שס לי שסי,shelishi,third,audio/builder/h0b1cfbd9_noa.mp3,audio/builder/h0b1cfbd9_noa.mp3
-borderline,0.8,word,אֲבָרֲכֶךָּ,הברכך,avarakheka,I will bless you,audio/f/israeli/word/ashrei-145-1-3-w11.mp3,audio/f/israeli/word/ashrei-145-1-3-w11.mp3
 borderline,0.8,word,דְּהוּא,עד הוא,dehu,who he,audio/f/israeli/word/brich-shmei-w84.mp3,audio/f/israeli/word/brich-shmei-w84.mp3
 borderline,0.8,word,שַׁקְשׁוּקָה,שפקה שסוכה,shakshukah,shakshuka (eggs poached in tomato sauce),audio/f/israeli/word/cafe-18.mp3,audio/f/israeli/word/cafe-18.mp3
 borderline,0.8,word,שְׁאֵר,שוייר,she'er,"flesh, blood; food, sustenance; kin, relative",audio/f/israeli/word/h0210d79f.mp3,audio/f/israeli/word/h0210d79f.mp3
 borderline,0.8,word,חֵמָה,חמאה,chemah,"rage, wrath, fury; venom, poison",audio/f/israeli/word/h4739925f.mp3,audio/f/israeli/word/h4739925f.mp3
+borderline,0.8,word,עָווֹן,עוון,avon,"iniquity; an intentional sin, done for the purpose of pleasure",audio/f/israeli/word/h5271b622.mp3,audio/f/israeli/word/h5271b622.mp3
 borderline,0.8,word,פַּר,פער,par,"bull, ox",audio/f/israeli/word/h69a35691.mp3,audio/f/israeli/word/h69a35691.mp3
+borderline,0.8,word,דָּוִד׃,דוד,david,David,audio/f/israeli/word/haftarah-after-w103.mp3,audio/f/israeli/word/haftarah-after-w103.mp3
 borderline,0.8,word,בְיָמֵינוּ,וימינו,veyameinu,in our days,audio/f/israeli/word/haftarah-after-w57.mp3,audio/f/israeli/word/haftarah-after-w57.mp3
+borderline,0.8,word,דָּוִד,דוד,david,of David,audio/f/israeli/word/haftarah-after-w72.mp3,audio/f/israeli/word/haftarah-after-w72.mp3
 borderline,0.8,word,בְשֵׁם,ושם.,veshem,by the name,audio/f/israeli/word/haftarah-after-w90.mp3,audio/f/israeli/word/haftarah-after-w90.mp3
 borderline,0.8,word,בָּךְ׃,באח,bakh,in you,audio/f/israeli/word/havdalah-opening-w39.mp3,audio/f/israeli/word/havdalah-opening-w39.mp3
 borderline,0.8,word,וִיקָר,ועיקר,vikar,and honour,audio/f/israeli/word/havdalah-opening-w51.mp3,audio/f/israeli/word/havdalah-opening-w51.mp3
 borderline,0.8,word,שָׁר,שער,shar,to sing,audio/f/israeli/word/hcd826bec.mp3,audio/f/israeli/word/hcd826bec.mp3
 borderline,0.8,word,אִכֵּף,אי כיף,ikef,"to saddle, to attach a saddle",audio/f/israeli/word/hd502ab04.mp3,audio/f/israeli/word/hd502ab04.mp3
-borderline,0.8,word,אָוֶן,אבן,aven,"evil, wickedness",audio/f/israeli/word/hddeaa2ed.mp3,audio/f/israeli/word/hddeaa2ed.mp3
+borderline,0.8,word,וַואלָה,וואלה,vavlah,UNKNOWN,audio/f/israeli/word/il02-w6.mp3,audio/f/israeli/word/il02-w6.mp3
 borderline,0.8,word,שִׁשָּׁה,שי שופע,shishah,six,audio/f/israeli/word/numbers-06-m.mp3,audio/f/israeli/word/numbers-06-m.mp3
+borderline,0.8,word,וָואלָה,וואלה!,vavlah,really? / wow / honestly,audio/f/israeli/word/politeness-14.mp3,audio/f/israeli/word/politeness-14.mp3
 borderline,0.8,word,בַגּוֹיִם,וגויים,vagoyim,among the nations,audio/f/israeli/word/shir-hamaalot-w17.mp3,audio/f/israeli/word/shir-hamaalot-w17.mp3
 borderline,0.8,word,בְרִנָּה,ורינה,verinah,with joy,audio/f/israeli/word/shir-hamaalot-w43.mp3,audio/f/israeli/word/shir-hamaalot-w43.mp3
 borderline,0.8,word,בְאוֹר,ואור,ve'or,with the light,audio/f/israeli/word/sim-shalom-w19.mp3,audio/f/israeli/word/sim-shalom-w19.mp3
 borderline,0.8,word,דְּהוּא,עד הוא,dehu,who he,audio/m/israeli/word/brich-shmei-w84.mp3,audio/m/israeli/word/brich-shmei-w84.mp3
 borderline,0.8,word,סְתָם,סם,setam,just (because) / for no reason,audio/m/israeli/word/fillers-09.mp3,audio/m/israeli/word/fillers-09.mp3
+borderline,0.8,word,עָווֹן,עוון,avon,"iniquity; an intentional sin, done for the purpose of pleasure",audio/m/israeli/word/h5271b622.mp3,audio/m/israeli/word/h5271b622.mp3
+borderline,0.8,word,דָּוִד׃,דוד,david,David,audio/m/israeli/word/haftarah-after-w103.mp3,audio/m/israeli/word/haftarah-after-w103.mp3
 borderline,0.8,word,בְיָמֵינוּ,וימינו,veyameinu,in our days,audio/m/israeli/word/haftarah-after-w57.mp3,audio/m/israeli/word/haftarah-after-w57.mp3
+borderline,0.8,word,דָּוִד,דוד,david,of David,audio/m/israeli/word/haftarah-after-w72.mp3,audio/m/israeli/word/haftarah-after-w72.mp3
 borderline,0.8,word,בְשֵׁם,ושם.,veshem,by the name,audio/m/israeli/word/haftarah-after-w90.mp3,audio/m/israeli/word/haftarah-after-w90.mp3
 borderline,0.8,word,וִיקָר,ועיקר,vikar,and honour,audio/m/israeli/word/havdalah-opening-w51.mp3,audio/m/israeli/word/havdalah-opening-w51.mp3
 borderline,0.8,word,שָׁר,שער,shar,to sing,audio/m/israeli/word/hcd826bec.mp3,audio/m/israeli/word/hcd826bec.mp3
-borderline,0.8,word,אָוֶן,אבן,aven,"evil, wickedness",audio/m/israeli/word/hddeaa2ed.mp3,audio/m/israeli/word/hddeaa2ed.mp3
 borderline,0.8,word,וַיְהִי בִּנְסֹעַ הָאָרֹן,ויהי בנשואה הארון.,vayhi binso'a ha'aron,UNKNOWN,audio/m/israeli/word/i-26-w2.mp3,audio/m/israeli/word/i-26-w2.mp3
+borderline,0.8,word,וַואלָה,וואלה.,vavlah,UNKNOWN,audio/m/israeli/word/il02-w6.mp3,audio/m/israeli/word/il02-w6.mp3
 borderline,0.8,word,רֶבַע,ראבה,reva,"quarter, one fourth",audio/m/israeli/word/numbers-19.mp3,audio/m/israeli/word/numbers-19.mp3
+borderline,0.8,word,וָואלָה,וואלה!,vavlah,really? / wow / honestly,audio/m/israeli/word/politeness-14.mp3,audio/m/israeli/word/politeness-14.mp3
 borderline,0.8,word,וּבְשָׁכְבְּךָ,ופשח בך.,uveshakhbekha,and when you lie down,audio/m/israeli/word/shema-vahavta-w30.mp3,audio/m/israeli/word/shema-vahavta-w30.mp3 audio/m/israeli/word/vahavta-2-w17.mp3
 borderline,0.8,word,בַגּוֹיִם,וגויים,vagoyim,among the nations,audio/m/israeli/word/shir-hamaalot-w17.mp3,audio/m/israeli/word/shir-hamaalot-w17.mp3
 borderline,0.8,word,בְרִנָּה,ורינה,verinah,with joy,audio/m/israeli/word/shir-hamaalot-w43.mp3,audio/m/israeli/word/shir-hamaalot-w43.mp3
 borderline,0.8,word,בְאוֹר,ואור.,ve'or,with the light,audio/m/israeli/word/sim-shalom-w19.mp3,audio/m/israeli/word/sim-shalom-w19.mp3
 borderline,0.8,word,וּבְשָׁכְבְּךָ,ופשח בך.,uveshakhbekha,and when you lie down,audio/m/israeli/word/vahavta-full-w24.mp3,audio/m/israeli/word/vahavta-full-w24.mp3
-borderline,0.8,builder,שְׁמִי,שסמי,shemi,my name is,audio/builder/pec9a400e_ari.mp3,audio/builder/pec9a400e_ari.mp3
-borderline,0.8,builder,שְׁמִי,שיסמי,shemi,my name is,audio/builder/pec9a400e_noa.mp3,audio/builder/pec9a400e_noa.mp3
-borderline,0.8,builder,אֵשׁ,אשף,esh,fire,audio/builder/hf1da5ea6_ari.mp3,audio/builder/hf1da5ea6_ari.mp3
-borderline,0.8,builder,אֵשׁ,אשף,esh,fire,audio/builder/hf1da5ea6_noa.mp3,audio/builder/hf1da5ea6_noa.mp3
-borderline,0.8,builder,שָׁנָה,שסנה,shanah,year,audio/builder/hf07c1580_ari.mp3,audio/builder/hf07c1580_ari.mp3
-borderline,0.8,builder,שָׁנָה,שפנה,shanah,year,audio/builder/hf07c1580_noa.mp3,audio/builder/hf07c1580_noa.mp3
-borderline,0.8,builder,שֵׁנִי,שסני,sheni,second,audio/builder/h42410d5e_ari.mp3,audio/builder/h42410d5e_ari.mp3
-borderline,0.8,builder,שֵׁנִי,שפני,sheni,second,audio/builder/h42410d5e_noa.mp3,audio/builder/h42410d5e_noa.mp3
-borderline,0.8,builder,טָרִי,תארי,tari,fresh,audio/builder/h8349e150_ari.mp3,audio/builder/h8349e150_ari.mp3
-borderline,0.8,builder,שָׁם,שסם,sham,there,audio/builder/hf2bba104_ari.mp3,audio/builder/hf2bba104_ari.mp3
-borderline,0.8,builder,שָׁם,שסם,sham,there,audio/builder/hf2bba104_noa.mp3,audio/builder/hf2bba104_noa.mp3
-borderline,0.8,builder,כָּאן,כן,kan,"here, at this place",audio/builder/h0c3016b2_noa.mp3,audio/builder/h0c3016b2_noa.mp3
-borderline,0.8,builder,שׁוּב,שפוב,shuv,again,audio/builder/h99a070bb_ari.mp3,audio/builder/h99a070bb_ari.mp3
-borderline,0.8,builder,שׁוּב,שפוב,shuv,again,audio/builder/h99a070bb_noa.mp3,audio/builder/h99a070bb_noa.mp3
-borderline,0.8,builder,לְאָן,לין,le'an,whither,audio/builder/h79df22f0_noa.mp3,audio/builder/h79df22f0_noa.mp3
 borderline,0.833,word,אַנְטִיבְּיוֹטִיקָה,אנטיפיוטיקה,antibeyotikah,UNKNOWN,audio/f/israeli/word/i-14-w15.mp3,audio/f/israeli/word/i-14-w15.mp3
 borderline,0.833,word,מֶשֶׁךְ־הַזָּרַע,משך חזרה,meshekh-hazara,the measure of seed,audio/f/israeli/word/shir-hamaalot-w41.mp3,audio/f/israeli/word/shir-hamaalot-w41.mp3
 borderline,0.833,word,דְכָל־עַמָּךְ,נחל אמח,dekhal-amakh,of all your people,audio/m/israeli/word/brich-shmei-w114.mp3,audio/m/israeli/word/brich-shmei-w114.mp3
 borderline,0.833,word,אַנְטִיבְּיוֹטִיקָה,אנטיפיוטיקה,antibeyotikah,UNKNOWN,audio/m/israeli/word/i-14-w15.mp3,audio/m/israeli/word/i-14-w15.mp3
 borderline,0.833,word,מֶשֶׁךְ־הַזָּרַע,משך חזרה,meshekh-hazara,the measure of seed,audio/m/israeli/word/shir-hamaalot-w41.mp3,audio/m/israeli/word/shir-hamaalot-w41.mp3
 borderline,0.857,word,בְחֶפְצוֹ,וחפצו.,vecheftzo,by his will,audio/f/israeli/word/adon-olam-1-w11.mp3,audio/f/israeli/word/adon-olam-1-w11.mp3
-borderline,0.857,word,מָלַךְ,מלאך,malakh,to reign (to rule as a king),audio/f/israeli/word/adon-olam-1-w4.mp3,audio/f/israeli/word/adon-olam-1-w4.mp3
+borderline,0.857,word,מָלַךְ,מלאך,malakh,to reign (to rule as a king),audio/f/israeli/word/adon-olam-1-w4.mp3,audio/f/israeli/word/adon-olam-1-w4.mp3 audio/f/israeli/word/i-09-w2.mp3 audio/f/israeli/word/r46-w3.mp3
 borderline,0.857,word,בַשָּׁלוֹם׃,ושלום.,vashalom,with peace,audio/f/israeli/word/adonai-oz-w8.mp3,audio/f/israeli/word/adonai-oz-w8.mp3
 borderline,0.857,word,שָׂמָנוּ,שמענו,samanu,placed us,audio/f/israeli/word/aleinu-1-w14.mp3,audio/f/israeli/word/aleinu-1-w14.mp3
-borderline,0.857,word,שָׁלוֹם,שסלום,shalom,UNKNOWN,audio/f/israeli/word/anchor-shin.mp3,audio/f/israeli/word/anchor-shin.mp3 audio/f/israeli/word/bless-priestly-3-w7.mp3 audio/f/israeli/word/etz-chaim-w13.mp3 audio/f/israeli/word/greetings-01.mp3 audio/f/israeli/word/hf8c8316a.mp3 audio/f/israeli/word/i-10-w12.mp3 audio/f/israeli/word/i-28-w11.mp3 audio/f/israeli/word/i-47-w5.mp3 audio/f/israeli/word/il01-w1.mp3 audio/f/israeli/word/kaddish-1-w59.mp3 audio/f/israeli/word/kaddish-1-w63.mp3 audio/f/israeli/word/oseh-shalom-w2.mp3 audio/f/israeli/word/oseh-shalom-w6.mp3 audio/f/israeli/word/r03-w1.mp3 audio/f/israeli/word/r04-w2.mp3 audio/f/israeli/word/r05-w1.mp3 audio/f/israeli/word/r26-w3.mp3 audio/f/israeli/word/r31-w1.mp3 audio/f/israeli/word/r35-w1.mp3 audio/f/israeli/word/sim-shalom-w2.mp3 audio/builder/hf8c8316a_noa.mp3
+borderline,0.857,word,כְּכָל־הֲמוֹנָם,ככל המונם,kekhol-hamonam,like all their multitude,audio/f/israeli/word/aleinu-1-w22.mp3,audio/f/israeli/word/aleinu-1-w22.mp3
+borderline,0.857,word,שָׁלוֹם,שסלום,shalom,UNKNOWN,audio/f/israeli/word/anchor-shin.mp3,audio/f/israeli/word/anchor-shin.mp3 audio/f/israeli/word/bless-priestly-3-w7.mp3 audio/f/israeli/word/etz-chaim-w13.mp3 audio/f/israeli/word/greetings-01.mp3 audio/f/israeli/word/hf8c8316a.mp3 audio/f/israeli/word/i-10-w12.mp3 audio/f/israeli/word/i-28-w11.mp3 audio/f/israeli/word/i-47-w5.mp3 audio/f/israeli/word/il01-w1.mp3 audio/f/israeli/word/kaddish-1-w59.mp3 audio/f/israeli/word/kaddish-1-w63.mp3 audio/f/israeli/word/oseh-shalom-w2.mp3 audio/f/israeli/word/oseh-shalom-w6.mp3 audio/f/israeli/word/r03-w1.mp3 audio/f/israeli/word/r04-w2.mp3 audio/f/israeli/word/r05-w1.mp3 audio/f/israeli/word/r26-w3.mp3 audio/f/israeli/word/r31-w1.mp3 audio/f/israeli/word/r35-w1.mp3 audio/f/israeli/word/sim-shalom-w2.mp3
 borderline,0.857,word,וַאֲהַלְלָה,ואהלה.,va'ahalelah,and I will praise,audio/f/israeli/word/ashrei-145-1-3-w12.mp3,audio/f/israeli/word/ashrei-145-1-3-w12.mp3
+borderline,0.857,word,לְדָוִד,לדוד,ledavid,of David,audio/f/israeli/word/ashrei-145-1-3-w2.mp3,audio/f/israeli/word/ashrei-145-1-3-w2.mp3
 borderline,0.857,word,צַדִּיקַיָּא,צדיקאיה,tzadikaya,the righteous,audio/f/israeli/word/brich-shmei-w38.mp3,audio/f/israeli/word/brich-shmei-w38.mp3
-borderline,0.857,word,בֵּאלָהָא,בלהה,belaha,in God,audio/f/israeli/word/brich-shmei-w82.mp3,audio/f/israeli/word/brich-shmei-w82.mp3
-borderline,0.857,word,מֵצַר,מצער,metzar,"strait, isthmus; distress, straits",audio/f/israeli/word/h50ac3ea7.mp3,audio/f/israeli/word/h50ac3ea7.mp3
+borderline,0.857,word,מֵצַר,מצער,metzar,"strait, isthmus; distress, straits",audio/f/israeli/word/h50ac3ea7.mp3,audio/f/israeli/word/h50ac3ea7.mp3 audio/f/israeli/word/maoz-tzur-1-w16.mp3
 borderline,0.857,word,פַּרְק,פארק,park,park,audio/f/israeli/word/h8a450588.mp3,audio/f/israeli/word/h8a450588.mp3
+borderline,0.857,word,בְשָׂמִים׃,וסמים.,vesamim,spices,audio/f/israeli/word/havdalah-spices-w9.mp3,audio/f/israeli/word/havdalah-spices-w9.mp3
 borderline,0.857,word,סָלַח,סלאח,salach,to forgive; to excuse,audio/f/israeli/word/hdd847ae4.mp3,audio/f/israeli/word/hdd847ae4.mp3
-borderline,0.857,word,מָלַךְ,מלאך,malakh,UNKNOWN,audio/f/israeli/word/i-09-w2.mp3,audio/f/israeli/word/i-09-w2.mp3 audio/f/israeli/word/r46-w3.mp3
+borderline,0.857,word,בְשָׂמִים,וסמים.,vesamim,UNKNOWN,audio/f/israeli/word/i-06-w3.mp3,audio/f/israeli/word/i-06-w3.mp3
 borderline,0.857,word,וַיְהִי בִּנְסֹעַ הָאָרֹן,ויהי בנשוא הארון.,vayhi binso'a ha'aron,UNKNOWN,audio/f/israeli/word/i-26-w2.mp3,audio/f/israeli/word/i-26-w2.mp3
+borderline,0.857,word,וְיִתְנַשֵּׂא,והתנסה.,veyitnase,and extolled,audio/f/israeli/word/kaddish-1-w32.mp3,audio/f/israeli/word/kaddish-1-w32.mp3
 borderline,0.857,word,וְיִתְעַלֶּה,והתעלה.,veyit'aleh,and raised,audio/f/israeli/word/kaddish-1-w34.mp3,audio/f/israeli/word/kaddish-1-w34.mp3
-borderline,0.857,word,כִרְעוּתֵהּ,קירוטה,khir'uteh,by his will,audio/f/israeli/word/kaddish-1-w8.mp3,audio/f/israeli/word/kaddish-1-w8.mp3
 borderline,0.857,word,מַה־טֹּבוּ,מה טוב הוא!,mah-tovu,how goodly,audio/f/israeli/word/mah-tovu-1-w1.mp3,audio/f/israeli/word/mah-tovu-1-w1.mp3
-borderline,0.857,word,מִצָּר,מצהר,mitzar,the foe,audio/f/israeli/word/maoz-tzur-1-w16.mp3,audio/f/israeli/word/maoz-tzur-1-w16.mp3
-borderline,0.857,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/f/israeli/word/shema-vahavta-w19.mp3,audio/f/israeli/word/shema-vahavta-w19.mp3 audio/f/israeli/word/vahavta-2-w6.mp3
-borderline,0.857,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/f/israeli/word/vahavta-full-w13.mp3,audio/f/israeli/word/vahavta-full-w13.mp3
 borderline,0.857,word,בִּנְסֹעַ,בן סואה,binso'a,at the setting out,audio/f/israeli/word/vayehi-binsoa-w2.mp3,audio/f/israeli/word/vayehi-binsoa-w2.mp3
 borderline,0.857,word,בְחֶפְצוֹ,וחפצו.,vecheftzo,by his will,audio/m/israeli/word/adon-olam-1-w11.mp3,audio/m/israeli/word/adon-olam-1-w11.mp3
-borderline,0.857,word,מָלַךְ,מלאך,malakh,to reign (to rule as a king),audio/m/israeli/word/adon-olam-1-w4.mp3,audio/m/israeli/word/adon-olam-1-w4.mp3
+borderline,0.857,word,מָלַךְ,מלאך,malakh,to reign (to rule as a king),audio/m/israeli/word/adon-olam-1-w4.mp3,audio/m/israeli/word/adon-olam-1-w4.mp3 audio/m/israeli/word/i-09-w2.mp3
 borderline,0.857,word,בַשָּׁלוֹם׃,ושלום.,vashalom,with peace,audio/m/israeli/word/adonai-oz-w8.mp3,audio/m/israeli/word/adonai-oz-w8.mp3
-borderline,0.857,word,שָׁלוֹם,שסלום,shalom,UNKNOWN,audio/m/israeli/word/anchor-shin.mp3,audio/m/israeli/word/anchor-shin.mp3 audio/m/israeli/word/bless-priestly-3-w7.mp3 audio/m/israeli/word/etz-chaim-w13.mp3 audio/m/israeli/word/greetings-01.mp3 audio/m/israeli/word/hf8c8316a.mp3 audio/m/israeli/word/i-10-w12.mp3 audio/m/israeli/word/i-28-w11.mp3 audio/m/israeli/word/i-47-w5.mp3 audio/m/israeli/word/il01-w1.mp3 audio/m/israeli/word/kaddish-1-w59.mp3 audio/m/israeli/word/kaddish-1-w63.mp3 audio/m/israeli/word/oseh-shalom-w2.mp3 audio/m/israeli/word/oseh-shalom-w6.mp3 audio/m/israeli/word/r03-w1.mp3 audio/m/israeli/word/r04-w2.mp3 audio/m/israeli/word/r05-w1.mp3 audio/m/israeli/word/r26-w3.mp3 audio/m/israeli/word/r31-w1.mp3 audio/m/israeli/word/r35-w1.mp3 audio/m/israeli/word/sim-shalom-w2.mp3 audio/builder/hf8c8316a_ari.mp3
+borderline,0.857,word,כְּכָל־הֲמוֹנָם,ככל המונם,kekhol-hamonam,like all their multitude,audio/m/israeli/word/aleinu-1-w22.mp3,audio/m/israeli/word/aleinu-1-w22.mp3
+borderline,0.857,word,שָׁלוֹם,שסלום,shalom,UNKNOWN,audio/m/israeli/word/anchor-shin.mp3,audio/m/israeli/word/anchor-shin.mp3 audio/m/israeli/word/bless-priestly-3-w7.mp3 audio/m/israeli/word/etz-chaim-w13.mp3 audio/m/israeli/word/greetings-01.mp3 audio/m/israeli/word/hf8c8316a.mp3 audio/m/israeli/word/i-10-w12.mp3 audio/m/israeli/word/i-28-w11.mp3 audio/m/israeli/word/i-47-w5.mp3 audio/m/israeli/word/il01-w1.mp3 audio/m/israeli/word/kaddish-1-w59.mp3 audio/m/israeli/word/kaddish-1-w63.mp3 audio/m/israeli/word/oseh-shalom-w2.mp3 audio/m/israeli/word/oseh-shalom-w6.mp3 audio/m/israeli/word/r03-w1.mp3 audio/m/israeli/word/r04-w2.mp3 audio/m/israeli/word/r05-w1.mp3 audio/m/israeli/word/r26-w3.mp3 audio/m/israeli/word/r31-w1.mp3 audio/m/israeli/word/r35-w1.mp3 audio/m/israeli/word/sim-shalom-w2.mp3
 borderline,0.857,word,וַאֲהַלְלָה,ואהלה.,va'ahalelah,and I will praise,audio/m/israeli/word/ashrei-145-1-3-w12.mp3,audio/m/israeli/word/ashrei-145-1-3-w12.mp3
+borderline,0.857,word,לְדָוִד,לדוד,ledavid,of David,audio/m/israeli/word/ashrei-145-1-3-w2.mp3,audio/m/israeli/word/ashrei-145-1-3-w2.mp3
 borderline,0.857,word,צַדִּיקַיָּא,צדיקאיה,tzadikaya,the righteous,audio/m/israeli/word/brich-shmei-w38.mp3,audio/m/israeli/word/brich-shmei-w38.mp3
-borderline,0.857,word,בֵּאלָהָא,בלהה,belaha,in God,audio/m/israeli/word/brich-shmei-w82.mp3,audio/m/israeli/word/brich-shmei-w82.mp3
 borderline,0.857,word,מֵצַר,מצער,metzar,"strait, isthmus; distress, straits",audio/m/israeli/word/h50ac3ea7.mp3,audio/m/israeli/word/h50ac3ea7.mp3
 borderline,0.857,word,פַּרְק,פארק,park,park,audio/m/israeli/word/h8a450588.mp3,audio/m/israeli/word/h8a450588.mp3
-borderline,0.857,word,מָלַךְ,מלאך,malakh,UNKNOWN,audio/m/israeli/word/i-09-w2.mp3,audio/m/israeli/word/i-09-w2.mp3
-borderline,0.857,word,כִרְעוּתֵהּ,קירוטה,khir'uteh,by his will,audio/m/israeli/word/kaddish-1-w8.mp3,audio/m/israeli/word/kaddish-1-w8.mp3
-borderline,0.857,word,מַה־טֹּבוּ,מה טוב הוא,mah-tovu,how goodly,audio/m/israeli/word/mah-tovu-1-w1.mp3,audio/m/israeli/word/mah-tovu-1-w1.mp3
-borderline,0.857,word,מִצָּר,מצהר,mitzar,the foe,audio/m/israeli/word/maoz-tzur-1-w16.mp3,audio/m/israeli/word/maoz-tzur-1-w16.mp3
-borderline,0.857,word,שְׁנַיִם,שסניים,shenayim,two,audio/m/israeli/word/numbers-02-m.mp3,audio/m/israeli/word/numbers-02-m.mp3
-borderline,0.857,word,חָמֵשׁ,חמשף,chamesh,five (5) (feminine),audio/m/israeli/word/numbers-05-f.mp3,audio/m/israeli/word/numbers-05-f.mp3
-borderline,0.857,word,שִׁבְעָה,שסבעה,shiv'ah,seven,audio/m/israeli/word/numbers-07-m.mp3,audio/m/israeli/word/numbers-07-m.mp3
+borderline,0.857,word,בְשָׂמִים׃,וסמים.,vesamim,spices,audio/m/israeli/word/havdalah-spices-w9.mp3,audio/m/israeli/word/havdalah-spices-w9.mp3
+borderline,0.857,word,בְשָׂמִים,וסמים.,vesamim,UNKNOWN,audio/m/israeli/word/i-06-w3.mp3,audio/m/israeli/word/i-06-w3.mp3
 borderline,0.857,word,חָכְמָה,חכמת,chokhmah,UNKNOWN,audio/m/israeli/word/r32-w2.mp3,audio/m/israeli/word/r32-w2.mp3
-borderline,0.857,word,אדני,עד אני,dny,UNKNOWN,audio/m/israeli/word/r34-w2.mp3,audio/m/israeli/word/r34-w2.mp3
-borderline,0.857,word,מָלַךְ,מלאך,malakh,UNKNOWN,audio/m/israeli/word/r46-w3.mp3,audio/m/israeli/word/r46-w3.mp3
-borderline,0.857,word,וְהִגִּיעָנוּ,והגיינו,vehigi'anu,and brought us,audio/m/israeli/word/shehecheyanu-w9.mp3,audio/m/israeli/word/shehecheyanu-w9.mp3
-borderline,0.857,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/m/israeli/word/shema-vahavta-w19.mp3,audio/m/israeli/word/shema-vahavta-w19.mp3 audio/m/israeli/word/vahavta-full-w13.mp3
-borderline,0.857,word,בַדֶּרֶךְ,ודרך,vaderekh,on the way,audio/m/israeli/word/shema-vahavta-w29.mp3,audio/m/israeli/word/shema-vahavta-w29.mp3 audio/m/israeli/word/vahavta-full-w23.mp3
-borderline,0.857,word,שֶׁקֶל,שף קל,shekel,shekel (Israeli currency),audio/m/israeli/word/shop-19.mp3,audio/m/israeli/word/shop-19.mp3
-borderline,0.857,word,בַדֶּרֶךְ,ודרך,vaderekh,on the way,audio/m/israeli/word/vahavta-2-w16.mp3,audio/m/israeli/word/vahavta-2-w16.mp3
-borderline,0.857,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/m/israeli/word/vahavta-2-w6.mp3,audio/m/israeli/word/vahavta-2-w6.mp3
-borderline,0.857,builder,שֶׁמֶשׁ,שיף משה,shemesh,sun,audio/builder/h86027352_ari.mp3,audio/builder/h86027352_ari.mp3
-borderline,0.857,builder,דְּבַשׁ,דבשף,devash,honey,audio/builder/hc008b0a9_ari.mp3,audio/builder/hc008b0a9_ari.mp3
-borderline,0.857,builder,דְּבַשׁ,דבשף,devash,honey,audio/builder/hc008b0a9_noa.mp3,audio/builder/hc008b0a9_noa.mp3
-borderline,0.857,builder,נָחָשׁ,"נחשף,",nachash,snake,audio/builder/h55a56675_ari.mp3,audio/builder/h55a56675_ari.mp3
-borderline,0.857,builder,נָחָשׁ,נחשף,nachash,snake,audio/builder/h55a56675_noa.mp3,audio/builder/h55a56675_noa.mp3
-borderline,0.857,builder,גֶּפֶן,"גנפן,",gefen,"vine, grapevine",audio/builder/h85cda534_ari.mp3,audio/builder/h85cda534_ari.mp3
-borderline,0.857,builder,פַּרְק,פארק,park,park,audio/builder/h8a450588_ari.mp3,audio/builder/h8a450588_ari.mp3
-borderline,0.857,builder,פַּרְק,פארק,park,park,audio/builder/h8a450588_noa.mp3,audio/builder/h8a450588_noa.mp3
-borderline,0.857,builder,עַכְשָׁו,אכשסו,akhshav,now,audio/builder/hcb5a058a_ari.mp3,audio/builder/hcb5a058a_ari.mp3
-borderline,0.857,builder,עַכְשָׁו,אכשסו,akhshav,now,audio/builder/hcb5a058a_noa.mp3,audio/builder/hcb5a058a_noa.mp3
-borderline,0.857,builder,חֲמִישִׁי,חמישישי,chamishi,fifth,audio/builder/h5c689c60_ari.mp3,audio/builder/h5c689c60_ari.mp3
-borderline,0.857,builder,חֲמִישִׁי,חמישישי,chamishi,fifth,audio/builder/h5c689c60_noa.mp3,audio/builder/h5c689c60_noa.mp3
-borderline,0.857,builder,רֶגֶשׁ,רגשב,regesh,"emotion, feeling",audio/builder/he7f4c5c3_ari.mp3,audio/builder/he7f4c5c3_ari.mp3
-borderline,0.857,builder,רֶגֶשׁ,רגשב,regesh,"emotion, feeling",audio/builder/he7f4c5c3_noa.mp3,audio/builder/he7f4c5c3_noa.mp3
-borderline,0.857,builder,חָשׁוּב,חשפוב,chashuv,important,audio/builder/h7c05b190_ari.mp3,audio/builder/h7c05b190_ari.mp3
-borderline,0.857,builder,חָשׁוּב,חשפוב,chashuv,important,audio/builder/h7c05b190_noa.mp3,audio/builder/h7c05b190_noa.mp3
-borderline,0.857,builder,חַלָּשׁ,חלשף,chalash,weak,audio/builder/h48d3db84_ari.mp3,audio/builder/h48d3db84_ari.mp3
-borderline,0.857,builder,חַלָּשׁ,חלשף,chalash,weak,audio/builder/h48d3db84_noa.mp3,audio/builder/h48d3db84_noa.mp3
-borderline,0.857,builder,מֶלֶךְ,מלאך,melekh,king,audio/builder/h58d8d8fe_noa.mp3,audio/builder/h58d8d8fe_noa.mp3
 borderline,0.875,word,אֵל נָא רְפָא נָא לָהּ,אל נערפה נעלה,el na refa na lah,UNKNOWN,audio/f/israeli/word/i-10-w7.mp3,audio/f/israeli/word/i-10-w7.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/candle-shabbat-w9.mp3,audio/f/israeli/word/candle-shabbat-w9.mp3
 borderline,0.889,word,בָאֱלֹהִים,ואלוהים,va'elohim,among the gods,audio/f/israeli/word/ein-kamocha-w2.mp3,audio/f/israeli/word/ein-kamocha-w2.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/hanukkah-candle-w9.mp3,audio/f/israeli/word/hanukkah-candle-w9.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,UNKNOWN,audio/f/israeli/word/i-30-w9.mp3,audio/f/israeli/word/i-30-w9.mp3
 borderline,0.889,word,וּבְיוֹמֵיכוֹן,ובהומיכון.,uveyomeikhon,and in your days,audio/f/israeli/word/kaddish-1-w12.mp3,audio/f/israeli/word/kaddish-1-w12.mp3
 borderline,0.889,word,וְיִתְהַדָּר,והתהדר.,veyithadar,and honoured,audio/f/israeli/word/kaddish-1-w33.mp3,audio/f/israeli/word/kaddish-1-w33.mp3
 borderline,0.889,word,בְרֵאשִׁית,וראשית.,vereshit,of creation,audio/f/israeli/word/kiddush-shabbat-eve-w19.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w19.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/kiddush-shabbat-eve-w9.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w9.mp3
+borderline,0.889,word,וְהִשְׁתַּחֲווּ,והשתחוו.,vehishtachavu,and bow,audio/f/israeli/word/lecha-hashem-w21.mp3,audio/f/israeli/word/lecha-hashem-w21.mp3 audio/f/israeli/word/lecha-hashem-w29.mp3
 borderline,0.889,word,מִשְׁאֲלִין,מישלין,mish'alin,requests,audio/m/israeli/word/brich-shmei-w111.mp3,audio/m/israeli/word/brich-shmei-w111.mp3
 borderline,0.889,word,שַׁקְשׁוּקָה,שפקה שוקה,shakshukah,shakshuka (eggs poached in tomato sauce),audio/m/israeli/word/cafe-18.mp3,audio/m/israeli/word/cafe-18.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/m/israeli/word/candle-shabbat-w9.mp3,audio/m/israeli/word/candle-shabbat-w9.mp3 audio/m/israeli/word/kiddush-shabbat-eve-w9.mp3
 borderline,0.889,word,בָאֱלֹהִים,ואלוהים,va'elohim,among the gods,audio/m/israeli/word/ein-kamocha-w2.mp3,audio/m/israeli/word/ein-kamocha-w2.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/m/israeli/word/hanukkah-candle-w9.mp3,audio/m/israeli/word/hanukkah-candle-w9.mp3
+borderline,0.889,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,UNKNOWN,audio/m/israeli/word/i-30-w9.mp3,audio/m/israeli/word/i-30-w9.mp3
 borderline,0.889,word,וּבְיוֹמֵיכוֹן,ובהומיכון.,uveyomeikhon,and in your days,audio/m/israeli/word/kaddish-1-w12.mp3,audio/m/israeli/word/kaddish-1-w12.mp3
 borderline,0.889,word,מִן־שְׁמַיָּא,מין שמעיה.,min-shemaya,from heaven,audio/m/israeli/word/kaddish-1-w52.mp3,audio/m/israeli/word/kaddish-1-w52.mp3
-borderline,0.889,word,בְרֵאשִׁית,וראשית,vereshit,of creation,audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3
-borderline,0.889,word,שְׁלוֹשִׁים,שלושיסים,sheloshim,thirty,audio/m/israeli/word/numbers-12.mp3,audio/m/israeli/word/numbers-12.mp3
-borderline,0.889,word,יְבָרֶכְךָ,אברכך.,yevarekhkha,UNKNOWN,audio/m/israeli/word/r15-w1.mp3,audio/m/israeli/word/r15-w1.mp3
-borderline,0.889,word,יִתְגַּדַּל,התגדל,yitgadal,UNKNOWN,audio/m/israeli/word/r45-w1.mp3,audio/m/israeli/word/r45-w1.mp3
-borderline,0.889,builder,בְּבַקָּשָׁה,בבקשיסא,bevakashah,please / you're welcome,audio/builder/p580df509_noa.mp3,audio/builder/p580df509_noa.mp3
+borderline,0.889,word,וְהִשְׁתַּחֲווּ,והשתחוו.,vehishtachavu,and bow,audio/m/israeli/word/lecha-hashem-w21.mp3,audio/m/israeli/word/lecha-hashem-w21.mp3
+borderline,0.889,word,וְהִשְׁתַּחֲווּ,והשתחוו.,vehishtachavu,and bow,audio/m/israeli/word/lecha-hashem-w29.mp3,audio/m/israeli/word/lecha-hashem-w29.mp3
 number,digits,word,אַחַת,1.,achat,one (f.),audio/m/israeli/word/numbers-01-f.mp3,audio/m/israeli/word/numbers-01-f.mp3
 number,digits,word,שְׁתַּיִם,2.,shtayim,two (f.),audio/m/israeli/word/numbers-02-f.mp3,audio/m/israeli/word/numbers-02-f.mp3
 number,digits,word,אַרְבַּע,4.,arba,four (f.),audio/m/israeli/word/numbers-04-f.mp3,audio/m/israeli/word/numbers-04-f.mp3
@@ -211,11 +157,16 @@ number,digits,word,עֶשְׂרִים,20.,esrim,twenty,audio/m/israeli/word/numb
 number,digits,word,חֲמִשִּׁים,50.,chamishim,fifty,audio/m/israeli/word/numbers-13.mp3,audio/m/israeli/word/numbers-13.mp3
 number,digits,word,מֵאָה,100.,me'ah,"hundred, one hundred",audio/m/israeli/word/numbers-14.mp3,audio/m/israeli/word/numbers-14.mp3
 pass,0.9,word,הַזָּן אֶת הָעוֹלָם,הזן את העולם כולו.,hazan et ha'olam,UNKNOWN,audio/f/israeli/word/i-33-w4.mp3,audio/f/israeli/word/i-33-w4.mp3
+pass,0.909,word,וּבְמִצְוֹתֶיךָ,ובמצוותך,uvemitzvotekha,and your commandments,audio/f/israeli/word/amidah-elohai-netzor-w18.mp3,audio/f/israeli/word/amidah-elohai-netzor-w18.mp3
 pass,0.909,word,וְיַת־כָּל־דִּי־לִי,ואיית קל דילי,veyat-kol-di-li,and all that is mine,audio/f/israeli/word/brich-shmei-w43.mp3,audio/f/israeli/word/brich-shmei-w43.mp3
-pass,0.909,word,עַל־מַלְכַיָּא,על מלקאיה,al-malkhaya,over kings,audio/f/israeli/word/brich-shmei-w59.mp3,audio/f/israeli/word/brich-shmei-w59.mp3
 pass,0.909,word,בְדִבְרֵיהֶם,ודבריהם,vedivreihem,with their words,audio/f/israeli/word/haftarah-before-w12.mp3,audio/f/israeli/word/haftarah-before-w12.mp3
+pass,0.909,word,לֶאֱכֹל כָּאן אוֹ לָקַחַת?,לאכול כאן או לקחת.,le'ekhol kan o lakachat?,UNKNOWN,audio/f/israeli/word/i-13-w11.mp3,audio/f/israeli/word/i-13-w11.mp3
+pass,0.909,word,וּבְמִצְוֹתֶיךָ,ובמצוותך,uvemitzvotekha,and your commandments,audio/m/israeli/word/amidah-elohai-netzor-w18.mp3,audio/m/israeli/word/amidah-elohai-netzor-w18.mp3
 pass,0.909,word,בְדִבְרֵיהֶם,ודבריהם,vedivreihem,with their words,audio/m/israeli/word/haftarah-before-w12.mp3,audio/m/israeli/word/haftarah-before-w12.mp3
+pass,0.909,word,לֶאֱכֹל כָּאן אוֹ לָקַחַת?,לאכול כאן או לקחת.,le'ekhol kan o lakachat?,UNKNOWN,audio/m/israeli/word/i-13-w11.mp3,audio/m/israeli/word/i-13-w11.mp3
 pass,0.917,word,הַלְלוּ אֶת־אֲדֹנָי כָּל־גּוֹיִם,הללו את אדוני כל בויים.,halelu et-adonai kol-goyim,UNKNOWN,audio/f/israeli/word/i-07-w10.mp3,audio/f/israeli/word/i-07-w10.mp3
+pass,0.917,word,בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ,ברוך שם כבוד מלכותו.,barukh shem kevod malkhuto,UNKNOWN,audio/f/israeli/word/i-28-w8.mp3,audio/f/israeli/word/i-28-w8.mp3
+pass,0.917,word,בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ,ברוך שם כבוד מלכותו.,barukh shem kevod malkhuto,UNKNOWN,audio/m/israeli/word/i-28-w8.mp3,audio/m/israeli/word/i-28-w8.mp3
 pass,0.923,word,אֲדֹנָי לִי לֹא אִירָא,אדוני לי לא יירא.,adonai li lo ira,UNKNOWN,audio/f/israeli/word/i-07-w8.mp3,audio/f/israeli/word/i-07-w8.mp3
 pass,0.923,word,כָּל־עֹלָמִים,קהל עולמים,kol-olamim,all ages,audio/f/israeli/word/malchutcha-w3.mp3,audio/f/israeli/word/malchutcha-w3.mp3
 pass,0.923,word,בְּכָל־לְבָבְךָ,בך לבבך,bekhol-levavekha,with all your heart,audio/f/israeli/word/vahavta-full-w5.mp3,audio/f/israeli/word/vahavta-full-w5.mp3
@@ -234,7 +185,6 @@ pass,1.0,word,מֶלֶךְ,מלך,melekh,king,audio/f/israeli/word/adon-olam-1-w
 pass,1.0,word,שְׁמוֹ,שמו,shemo,his name,audio/f/israeli/word/adon-olam-1-w15.mp3,audio/f/israeli/word/adon-olam-1-w15.mp3
 pass,1.0,word,נִקְרָא׃,נקרא,nikra,to be read; to be called,audio/f/israeli/word/adon-olam-1-w16.mp3,audio/f/israeli/word/adon-olam-1-w16.mp3
 pass,1.0,word,וְאַחֲרֵי,ואחרי,ve'acharei,and after,audio/f/israeli/word/adon-olam-1-w17.mp3,audio/f/israeli/word/adon-olam-1-w17.mp3
-pass,1.0,word,כִּכְלוֹת,ככלות,kikhlot,when all ended,audio/f/israeli/word/adon-olam-1-w18.mp3,audio/f/israeli/word/adon-olam-1-w18.mp3
 pass,1.0,word,הַכֹּל,הכל,hakol,the all,audio/f/israeli/word/adon-olam-1-w19.mp3,audio/f/israeli/word/adon-olam-1-w19.mp3
 pass,1.0,word,עוֹלָם,עולם,olam,"world; a world; Ever, eternity",audio/f/israeli/word/adon-olam-1-w2.mp3,audio/f/israeli/word/adon-olam-1-w2.mp3
 pass,1.0,word,לְבַדּוֹ,לבדו,levado,by himself,audio/f/israeli/word/adon-olam-1-w20.mp3,audio/f/israeli/word/adon-olam-1-w20.mp3
@@ -311,7 +261,6 @@ pass,1.0,word,חֶלְקֵנוּ,חלקנו,chelkenu,our portion,audio/f/israeli
 pass,1.0,word,לְשַׁבֵּחַ,לשבח,leshabeach,to praise,audio/f/israeli/word/aleinu-1-w2.mp3,audio/f/israeli/word/aleinu-1-w2.mp3
 pass,1.0,word,כָּהֶם,כהם,kahem,like theirs,audio/f/israeli/word/aleinu-1-w20.mp3,audio/f/israeli/word/aleinu-1-w20.mp3
 pass,1.0,word,וְגוֹרָלֵנוּ,וגורלנו,vegoralenu,nor our lot,audio/f/israeli/word/aleinu-1-w21.mp3,audio/f/israeli/word/aleinu-1-w21.mp3
-pass,1.0,word,כְּכָל־הֲמוֹנָם,ככל המונם,kekhol-hamonam,like all their multitude,audio/f/israeli/word/aleinu-1-w22.mp3,audio/f/israeli/word/aleinu-1-w22.mp3
 pass,1.0,word,שֶׁהֵם,שהם,shehem,that they,audio/f/israeli/word/aleinu-1-w23.mp3,audio/f/israeli/word/aleinu-1-w23.mp3
 pass,1.0,word,מִשְׁתַּחֲוִים,משתחווים,mishtachavim,bow,audio/f/israeli/word/aleinu-1-w24.mp3,audio/f/israeli/word/aleinu-1-w24.mp3
 pass,1.0,word,לָהֶבֶל,להבל,lahevel,to vanity,audio/f/israeli/word/aleinu-1-w25.mp3,audio/f/israeli/word/aleinu-1-w25.mp3
@@ -381,7 +330,6 @@ pass,1.0,word,תִּהְיֶה,תהיה,tihyeh,let it be,audio/f/israeli/word/am
 pass,1.0,word,פְּתַח,פתח,petach,open,audio/f/israeli/word/amidah-elohai-netzor-w15.mp3,audio/f/israeli/word/amidah-elohai-netzor-w15.mp3
 pass,1.0,word,לִבִּי,ליבי,libi,my heart,audio/f/israeli/word/amidah-elohai-netzor-w16.mp3,audio/f/israeli/word/amidah-elohai-netzor-w16.mp3
 pass,1.0,word,בְּתוֹרָתֶךָ,בתורתך,betoratekha,to your Torah,audio/f/israeli/word/amidah-elohai-netzor-w17.mp3,audio/f/israeli/word/amidah-elohai-netzor-w17.mp3
-pass,1.0,word,וּבְמִצְוֹתֶיךָ,ובמצוותך,uvemitzvotekha,and your commandments,audio/f/israeli/word/amidah-elohai-netzor-w18.mp3,audio/f/israeli/word/amidah-elohai-netzor-w18.mp3
 pass,1.0,word,תִּרְדֹּף,תרדוף,tirdof,pursue,audio/f/israeli/word/amidah-elohai-netzor-w19.mp3,audio/f/israeli/word/amidah-elohai-netzor-w19.mp3
 pass,1.0,word,נְצוֹר,נצור,netzor,guard,audio/f/israeli/word/amidah-elohai-netzor-w2.mp3,audio/f/israeli/word/amidah-elohai-netzor-w2.mp3
 pass,1.0,word,נַפְשִׁי,נפשי,nafshi,"mental, psychological",audio/f/israeli/word/amidah-elohai-netzor-w20.mp3,audio/f/israeli/word/amidah-elohai-netzor-w20.mp3
@@ -467,7 +415,6 @@ pass,1.0,word,יָד,יד,yad,UNKNOWN,audio/f/israeli/word/anchor-yod.mp3,audio/
 pass,1.0,word,זָהָב,זהב,zahav,UNKNOWN,audio/f/israeli/word/anchor-zayin.mp3,audio/f/israeli/word/anchor-zayin.mp3 audio/f/israeli/word/h761c6cb9.mp3
 pass,1.0,word,אַשְׁרֵי,אשרי,ashrei,happy is/was/will be,audio/f/israeli/word/ashrei-144-15-w1.mp3,audio/f/israeli/word/ashrei-144-15-w1.mp3 audio/f/israeli/word/ashrei-84-5-w1.mp3 audio/f/israeli/word/havdalah-opening-w36.mp3
 pass,1.0,word,הָעָם,העם,ha'am,the people,audio/f/israeli/word/ashrei-144-15-w2.mp3,audio/f/israeli/word/ashrei-144-15-w2.mp3
-pass,1.0,word,שֶׁכָּכָה,שככה,shekakhah,that is in such a case,audio/f/israeli/word/ashrei-144-15-w3.mp3,audio/f/israeli/word/ashrei-144-15-w3.mp3
 pass,1.0,word,לּוֹ,לו,lo,to it,audio/f/israeli/word/ashrei-144-15-w4.mp3,audio/f/israeli/word/ashrei-144-15-w4.mp3
 pass,1.0,word,אַשְׁרֵי,אשרי,ashrei,happy is/was/will be,audio/f/israeli/word/ashrei-144-15-w5.mp3,audio/f/israeli/word/ashrei-144-15-w5.mp3
 pass,1.0,word,הָעָם,העם,ha'am,the people,audio/f/israeli/word/ashrei-144-15-w6.mp3,audio/f/israeli/word/ashrei-144-15-w6.mp3
@@ -481,7 +428,6 @@ pass,1.0,word,וָעֶד׃,ועד,va'ed,and ever,audio/f/israeli/word/ashrei-145
 pass,1.0,word,גָּדוֹל,גדול,gadol,"big, large; great, important",audio/f/israeli/word/ashrei-145-1-3-w16.mp3,audio/f/israeli/word/ashrei-145-1-3-w16.mp3
 pass,1.0,word,וּמְהֻלָּל,ומהולל,umehulal,and highly praised,audio/f/israeli/word/ashrei-145-1-3-w18.mp3,audio/f/israeli/word/ashrei-145-1-3-w18.mp3
 pass,1.0,word,מְאֹד,מאוד.,me'od,greatly,audio/f/israeli/word/ashrei-145-1-3-w19.mp3,audio/f/israeli/word/ashrei-145-1-3-w19.mp3
-pass,1.0,word,לְדָוִד,לדוד,ledavid,of David,audio/f/israeli/word/ashrei-145-1-3-w2.mp3,audio/f/israeli/word/ashrei-145-1-3-w2.mp3
 pass,1.0,word,וְלִגְדֻלָּתוֹ,ולגדולתו,veligdulato,and his greatness,audio/f/israeli/word/ashrei-145-1-3-w20.mp3,audio/f/israeli/word/ashrei-145-1-3-w20.mp3
 pass,1.0,word,חֵקֶר׃,חקר,cheker,"investigation, examination, inquiry",audio/f/israeli/word/ashrei-145-1-3-w22.mp3,audio/f/israeli/word/ashrei-145-1-3-w22.mp3
 pass,1.0,word,אֲרוֹמִמְךָ,ארומימך,aromimkha,I will extol you,audio/f/israeli/word/ashrei-145-1-3-w3.mp3,audio/f/israeli/word/ashrei-145-1-3-w3.mp3
@@ -560,7 +506,6 @@ pass,1.0,word,וְיִשְׁמְרֶךָ׃,וישמרך,veyishmerekha,and may he
 pass,1.0,word,יָאֵר,יער,ya'er,may he shine,audio/f/israeli/word/bless-priestly-2-w1.mp3,audio/f/israeli/word/bless-priestly-2-w1.mp3
 pass,1.0,word,פָּנָיו,פניו,panav,his face,audio/f/israeli/word/bless-priestly-2-w3.mp3,audio/f/israeli/word/bless-priestly-2-w3.mp3
 pass,1.0,word,אֵלֶיךָ,אליך,elekha,toward you,audio/f/israeli/word/bless-priestly-2-w4.mp3,audio/f/israeli/word/bless-priestly-2-w4.mp3 audio/f/israeli/word/hashivenu-w3.mp3
-pass,1.0,word,וִיחֻנֶּךָּ׃,ויחוניך,vichuneka,and may he be gracious to you,audio/f/israeli/word/bless-priestly-2-w5.mp3,audio/f/israeli/word/bless-priestly-2-w5.mp3
 pass,1.0,word,יִשָּׂא,יישא,yisa,may he lift,audio/f/israeli/word/bless-priestly-3-w1.mp3,audio/f/israeli/word/bless-priestly-3-w1.mp3
 pass,1.0,word,פָּנָיו,פניו,panav,his face,audio/f/israeli/word/bless-priestly-3-w3.mp3,audio/f/israeli/word/bless-priestly-3-w3.mp3
 pass,1.0,word,אֵלֶיךָ,אליך.,elekha,toward you,audio/f/israeli/word/bless-priestly-3-w4.mp3,audio/f/israeli/word/bless-priestly-3-w4.mp3
@@ -652,6 +597,7 @@ pass,1.0,word,עַל־בַּר־אֱלָהִין,על בר אלהין,al-bar-ela
 pass,1.0,word,יְהֵא,יהא,yehe,may be,audio/f/israeli/word/brich-shmei-w8.mp3,audio/f/israeli/word/brich-shmei-w8.mp3
 pass,1.0,word,סָמִיכְנָא,סמיך נא,samikhena,I rely,audio/f/israeli/word/brich-shmei-w80.mp3,audio/f/israeli/word/brich-shmei-w80.mp3
 pass,1.0,word,אֶלָּא,אלה,ela,"but, except",audio/f/israeli/word/brich-shmei-w81.mp3,audio/f/israeli/word/brich-shmei-w81.mp3 audio/f/israeli/word/hanerot-halalu-w28.mp3
+pass,1.0,word,בֵּאלָהָא,בלהה,belaha,in God,audio/f/israeli/word/brich-shmei-w82.mp3,audio/f/israeli/word/brich-shmei-w82.mp3
 pass,1.0,word,דִשְׁמַיָּא,דשמיא,dishmaya,of heaven,audio/f/israeli/word/brich-shmei-w83.mp3,audio/f/israeli/word/brich-shmei-w83.mp3
 pass,1.0,word,אֱלָהָא,אלהה,elaha,God,audio/f/israeli/word/brich-shmei-w85.mp3,audio/f/israeli/word/brich-shmei-w85.mp3
 pass,1.0,word,קְשׁוֹט,קשות,keshot,truth,audio/f/israeli/word/brich-shmei-w86.mp3,audio/f/israeli/word/brich-shmei-w86.mp3
@@ -660,7 +606,6 @@ pass,1.0,word,קְשׁוֹט,קשות,keshot,truth,audio/f/israeli/word/brich-sh
 pass,1.0,word,רְעוּתָךְ,רעותך,re'utakh,your good will,audio/f/israeli/word/brich-shmei-w9.mp3,audio/f/israeli/word/brich-shmei-w9.mp3
 pass,1.0,word,קְשׁוֹט,קשות,keshot,truth,audio/f/israeli/word/brich-shmei-w90.mp3,audio/f/israeli/word/brich-shmei-w90.mp3
 pass,1.0,word,לְמֶעְבַּד,למעבד,lemebad,in deeds,audio/f/israeli/word/brich-shmei-w92.mp3,audio/f/israeli/word/brich-shmei-w92.mp3
-pass,1.0,word,טָבְוָן,טבן,tavevan,goodness,audio/f/israeli/word/brich-shmei-w93.mp3,audio/f/israeli/word/brich-shmei-w93.mp3
 pass,1.0,word,וּקְשׁוֹט,וקשות,ukeshot,and truth,audio/f/israeli/word/brich-shmei-w94.mp3,audio/f/israeli/word/brich-shmei-w94.mp3
 pass,1.0,word,בֵּהּ,ב -,beh,in him,audio/f/israeli/word/brich-shmei-w95.mp3,audio/f/israeli/word/brich-shmei-w95.mp3
 pass,1.0,word,רָחִיץ,רחיץ,rachitz,trust,audio/f/israeli/word/brich-shmei-w97.mp3,audio/f/israeli/word/brich-shmei-w97.mp3
@@ -683,7 +628,6 @@ pass,1.0,word,שַׁבָּת׃,שבת,shabat,"Shabbat, Sabbath; Saturday; week (
 pass,1.0,word,אֱלֹהֵינוּ,אלוהינו,eloheinu,our-God,audio/f/israeli/word/candle-shabbat-w4.mp3,audio/f/israeli/word/candle-shabbat-w4.mp3 audio/f/israeli/word/havdalah-flame-w4.mp3 audio/f/israeli/word/lecha-hashem-w28.mp3 audio/f/israeli/word/lecha-hashem-w35.mp3 audio/f/israeli/word/shema-1-w4.mp3 audio/f/israeli/word/sim-shalom-w24.mp3 audio/f/israeli/word/torah-bless-2-w4.mp3
 pass,1.0,word,אֲשֶׁר,אשר,asher,introduces a subordinate clause,audio/f/israeli/word/candle-shabbat-w7.mp3,audio/f/israeli/word/candle-shabbat-w7.mp3 audio/f/israeli/word/hanukkah-candle-w7.mp3 audio/f/israeli/word/vahavta-2-w4.mp3 audio/f/israeli/word/vezot-hatorah-w3.mp3 audio/f/israeli/word/yigdal-w31.mp3
 pass,1.0,word,קִדְּשָׁנוּ,קידשנו,kideshanu,made us holy,audio/f/israeli/word/candle-shabbat-w8.mp3,audio/f/israeli/word/candle-shabbat-w8.mp3 audio/f/israeli/word/hanukkah-candle-w8.mp3 audio/f/israeli/word/kiddush-shabbat-eve-w8.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/candle-shabbat-w9.mp3,audio/f/israeli/word/candle-shabbat-w9.mp3
 pass,1.0,word,יָשָׁר,ישר,yashar,straight ahead,audio/f/israeli/word/directions-05.mp3,audio/f/israeli/word/directions-05.mp3
 pass,1.0,word,שְׂמֹאלָה,שמאלה,semolah,left,audio/f/israeli/word/directions-06.mp3,audio/f/israeli/word/directions-06.mp3
 pass,1.0,word,יָמִינָה,ימינה,yaminah,right,audio/f/israeli/word/directions-07.mp3,audio/f/israeli/word/directions-07.mp3
@@ -788,6 +732,7 @@ pass,1.0,word,תְּאֻנָּה,תאונה,te'unah,accident (all senses); car w
 pass,1.0,word,טָעוּת,טעות,ta'ut,"error, mistake",audio/f/israeli/word/h0c4906f8.mp3,audio/f/israeli/word/h0c4906f8.mp3
 pass,1.0,word,שָׁכַח,שכח,shakhach,to forget,audio/f/israeli/word/h0c76d311.mp3,audio/f/israeli/word/h0c76d311.mp3
 pass,1.0,word,בָּחוּר,בחור,bachur,"guy, boy; youth (countable), young man; a young man over 13 who is required to perform mitzvoth but has never married",audio/f/israeli/word/h0c96b2f5.mp3,audio/f/israeli/word/h0c96b2f5.mp3
+pass,1.0,word,אִוָּה,איבה,ivah,"to greatly desire, want, long for, lust for",audio/f/israeli/word/h0cdd730a.mp3,audio/f/israeli/word/h0cdd730a.mp3
 pass,1.0,word,הִזְדַּמְּנוּת,הזדמנות,hizdamenut,"an opportunity, a chance",audio/f/israeli/word/h0e0c5c6e.mp3,audio/f/israeli/word/h0e0c5c6e.mp3
 pass,1.0,word,הִתְגַּעֲגֵעַ,התגעגע,hitga'age'a,"to miss, to long for",audio/f/israeli/word/h0e1d6c8d.mp3,audio/f/israeli/word/h0e1d6c8d.mp3
 pass,1.0,word,אִחוּר,איחור,ichur,a delay,audio/f/israeli/word/h0edcb196.mp3,audio/f/israeli/word/h0edcb196.mp3
@@ -880,7 +825,6 @@ pass,1.0,word,כִּוֵּן,כיוון,kiven,to direct (as traffic),audio/f/isr
 pass,1.0,word,סֵפֶר,ספר,sefer,book; a writing,audio/f/israeli/word/h231c624a.mp3,audio/f/israeli/word/h231c624a.mp3
 pass,1.0,word,יַלְדוּתִי,ילדותי,yalduti,"childish (suitable for a child); juvenile, immature",audio/f/israeli/word/h233116f1.mp3,audio/f/israeli/word/h233116f1.mp3
 pass,1.0,word,זוּג,זוג,zug,"pair, couple, twosome; pair, two-of-a-kind",audio/f/israeli/word/h2334782c.mp3,audio/f/israeli/word/h2334782c.mp3
-pass,1.0,word,כּוֹכָב,כוכב,kokhav,star; relating to fame,audio/f/israeli/word/h233af6f2.mp3,audio/f/israeli/word/h233af6f2.mp3
 pass,1.0,word,מָהִיר,מהיר,mahir,"fast, quick, swift; skilled, skillful, proficient (in a craft or task); prompt, ready, diligent",audio/f/israeli/word/h23d5cdb5.mp3,audio/f/israeli/word/h23d5cdb5.mp3
 pass,1.0,word,בָּחַר,בחר,bachar,"to choose, to opt, to select; to prefer; to appoint",audio/f/israeli/word/h23e0b2a4.mp3,audio/f/israeli/word/h23e0b2a4.mp3 audio/f/israeli/word/r38-w2.mp3
 pass,1.0,word,כְּלוּם,כלום,kelum,anything; used to turn a statement of fact into a question of fact,audio/f/israeli/word/h23f7ab73.mp3,audio/f/israeli/word/h23f7ab73.mp3
@@ -893,6 +837,7 @@ pass,1.0,word,צׇהֳרַיִם,צהריים,tzohorayim,"Noon, midday",audio/f/
 pass,1.0,word,מָשַׁח,משך,mashach,to anoint with oil,audio/f/israeli/word/h25e14407.mp3,audio/f/israeli/word/h25e14407.mp3
 pass,1.0,word,אֶלֶף,אלף,elef,"thousand, one thousand",audio/f/israeli/word/h26154c1a.mp3,audio/f/israeli/word/h26154c1a.mp3
 pass,1.0,word,לַח,לך,lach,"humid; moist, damp",audio/f/israeli/word/h263f168c.mp3,audio/f/israeli/word/h263f168c.mp3
+pass,1.0,word,שָׂבַע,סבא,sava,to be sated; to be satisfied,audio/f/israeli/word/h264da105.mp3,audio/f/israeli/word/h264da105.mp3
 pass,1.0,word,הֶאֱמִין,האמין,he'emin,to believe,audio/f/israeli/word/h26a32615.mp3,audio/f/israeli/word/h26a32615.mp3
 pass,1.0,word,שֻׁתָּף,שותף,shutaf,"partner, affiliate, copartner; roommate",audio/f/israeli/word/h26e6f8c5.mp3,audio/f/israeli/word/h26e6f8c5.mp3
 pass,1.0,word,שׁוֹר,שור,shor,ox,audio/f/israeli/word/h26f014a5.mp3,audio/f/israeli/word/h26f014a5.mp3
@@ -965,7 +910,6 @@ pass,1.0,word,פּוֹלִיטִי,פוליטי,politi,political,audio/f/israeli
 pass,1.0,word,אֶדֶן,עדן,eden,"base, pedestal, socket",audio/f/israeli/word/h36fae7b2.mp3,audio/f/israeli/word/h36fae7b2.mp3
 pass,1.0,word,מְצֻיָּן,מצוין,metzuyan,Exceptional,audio/f/israeli/word/h37034142.mp3,audio/f/israeli/word/h37034142.mp3
 pass,1.0,word,רָחוֹק,רחוק,rachok,"far, distant",audio/f/israeli/word/h372b7277.mp3,audio/f/israeli/word/h372b7277.mp3 audio/f/israeli/word/i-40-w11.mp3 audio/f/israeli/word/il11-w5.mp3
-pass,1.0,word,כָּכָה,ככה,kakhah,"thus (in this way, like so)",audio/f/israeli/word/h3777d988.mp3,audio/f/israeli/word/h3777d988.mp3
 pass,1.0,word,תִּיק,תיק,tik,"bag, satchel; case; portfolio",audio/f/israeli/word/h378062a7.mp3,audio/f/israeli/word/h378062a7.mp3
 pass,1.0,word,בָּסִיס,בסיס,basis,a base,audio/f/israeli/word/h37908437.mp3,audio/f/israeli/word/h37908437.mp3 audio/f/israeli/word/i-18-w6.mp3
 pass,1.0,word,צִלֵּם,צילם,tzilem,"to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",audio/f/israeli/word/h37cac81b.mp3,audio/f/israeli/word/h37cac81b.mp3
@@ -1070,7 +1014,6 @@ pass,1.0,word,חַיִּים,חיים,chayim,life; life (state of being alive),a
 pass,1.0,word,לְלֹא,ללא,lelo,without,audio/f/israeli/word/h52191bbf.mp3,audio/f/israeli/word/h52191bbf.mp3
 pass,1.0,word,קָשַׁר,קשר,kashar,"to tie, link together; to relate, associate; to conspire",audio/f/israeli/word/h524464c5.mp3,audio/f/israeli/word/h524464c5.mp3
 pass,1.0,word,מַצָּב,מצב,matzav,"a shape, a situation, a state",audio/f/israeli/word/h524e52f1.mp3,audio/f/israeli/word/h524e52f1.mp3
-pass,1.0,word,עָווֹן,עוון,avon,"iniquity; an intentional sin, done for the purpose of pleasure",audio/f/israeli/word/h5271b622.mp3,audio/f/israeli/word/h5271b622.mp3
 pass,1.0,word,צָחַק,צחק,tzachak,to laugh; to joke,audio/f/israeli/word/h532fdc70.mp3,audio/f/israeli/word/h532fdc70.mp3
 pass,1.0,word,סִבָּה,סיבה,sibah,cause,audio/f/israeli/word/h5385f0f3.mp3,audio/f/israeli/word/h5385f0f3.mp3
 pass,1.0,word,חָדָשׁ,חדש,chadash,"new, recently made; new, current, recent (as opposed to former); grain from a new crop",audio/f/israeli/word/h53c53bdf.mp3,audio/f/israeli/word/h53c53bdf.mp3
@@ -1380,6 +1323,7 @@ pass,1.0,word,חֵךְ,חיך,chekh,"palate, roof of the mouth",audio/f/israeli/
 pass,1.0,word,נָסַע,נסע,nasa,to travel; to drive; to go,audio/f/israeli/word/ha321fe95.mp3,audio/f/israeli/word/ha321fe95.mp3
 pass,1.0,word,עוֹלָם,עולם,olam,"world; a world; Ever, eternity",audio/f/israeli/word/ha39cf3c9.mp3,audio/f/israeli/word/ha39cf3c9.mp3
 pass,1.0,word,צִיּוּן,ציון,tziyun,landmark; note; marking,audio/f/israeli/word/ha3acfc14.mp3,audio/f/israeli/word/ha3acfc14.mp3
+pass,1.0,word,הִוָּה,היבה,hivah,to constitute,audio/f/israeli/word/ha3cf2c46.mp3,audio/f/israeli/word/ha3cf2c46.mp3
 pass,1.0,word,הִתְקַשֵּׁר,התקשר,hitkasher,"to phone, call someone on a telephone; to be connected, to be tied to, to associate, to evoke",audio/f/israeli/word/ha42ef4a8.mp3,audio/f/israeli/word/ha42ef4a8.mp3
 pass,1.0,word,נֶשֶׁק,נשק,neshek,"arms, weaponry",audio/f/israeli/word/ha457bf9e.mp3,audio/f/israeli/word/ha457bf9e.mp3
 pass,1.0,word,שׁוֹטֵר,שוטר,shoter,"policeman, cop; a kind of officer or overseer among the Ancient Israelites",audio/f/israeli/word/ha4595016.mp3,audio/f/israeli/word/ha4595016.mp3
@@ -1423,7 +1367,6 @@ pass,1.0,word,רְצִינוּת,רצינות,retzinut,seriousness,audio/f/israe
 pass,1.0,word,פָּגַע,פגע,paga,"to hurt or injure (someone or something); to meet; to entreat, to intercede",audio/f/israeli/word/hafedf16c.mp3,audio/f/israeli/word/hafedf16c.mp3
 pass,1.0,word,בְּכָל־הַדּוֹרוֹת,בכל הדורות,bekhol-hadorot,in all generations,audio/f/israeli/word/haftarah-after-w10.mp3,audio/f/israeli/word/haftarah-after-w10.mp3
 pass,1.0,word,מָגֵן,מגן,magen,shield,audio/f/israeli/word/haftarah-after-w102.mp3,audio/f/israeli/word/haftarah-after-w102.mp3
-pass,1.0,word,דָּוִד׃,דוד,david,David,audio/f/israeli/word/haftarah-after-w103.mp3,audio/f/israeli/word/haftarah-after-w103.mp3
 pass,1.0,word,עַל,על,al,"on, on top of; on; about",audio/f/israeli/word/haftarah-after-w104.mp3,audio/f/israeli/word/haftarah-after-w104.mp3 audio/f/israeli/word/haftarah-after-w78.mp3 audio/f/israeli/word/hanerot-halalu-w34.mp3 audio/f/israeli/word/hanerot-halalu-w5.mp3 audio/f/israeli/word/havdalah-opening-w22.mp3
 pass,1.0,word,הַתּוֹרָה,התורה,hatorah,the Torah,audio/f/israeli/word/haftarah-after-w105.mp3,audio/f/israeli/word/haftarah-after-w105.mp3 audio/f/israeli/word/torah-bless-1-w18.mp3 audio/f/israeli/word/vezot-hatorah-w2.mp3
 pass,1.0,word,וְעַל,ועל,ve'al,and for,audio/f/israeli/word/haftarah-after-w106.mp3,audio/f/israeli/word/haftarah-after-w106.mp3 audio/f/israeli/word/hanerot-halalu-w7.mp3 audio/f/israeli/word/sim-shalom-w9.mp3
@@ -1494,6 +1437,7 @@ pass,1.0,word,הָעוֹלָם,העולם,ha'olam,the world,audio/f/israeli/word
 pass,1.0,word,מְשַׂמֵּחַ,משמח,mesameach,who gladdens,audio/f/israeli/word/haftarah-after-w61.mp3,audio/f/israeli/word/haftarah-after-w61.mp3
 pass,1.0,word,צִיּוֹן,ציון,tziyon,Zion,audio/f/israeli/word/haftarah-after-w62.mp3,audio/f/israeli/word/haftarah-after-w62.mp3
 pass,1.0,word,בְּבָנֶיהָ׃,בבניה,bevaneha,through her children,audio/f/israeli/word/haftarah-after-w63.mp3,audio/f/israeli/word/haftarah-after-w63.mp3
+pass,1.0,word,שַׂמְּחֵנוּ,סמכנו,samechenu,gladden us,audio/f/israeli/word/haftarah-after-w64.mp3,audio/f/israeli/word/haftarah-after-w64.mp3
 pass,1.0,word,אֱלֹהֵינוּ,אלוהינו,eloheinu,our-God,audio/f/israeli/word/haftarah-after-w66.mp3,audio/f/israeli/word/haftarah-after-w66.mp3 audio/f/israeli/word/hanukkah-candle-w4.mp3 audio/f/israeli/word/havdalah-hamavdil-w4.mp3
 pass,1.0,word,בְּאֵלִיָהוּ,באליהו,be'eliyahu,with Elijah,audio/f/israeli/word/haftarah-after-w67.mp3,audio/f/israeli/word/haftarah-after-w67.mp3
 pass,1.0,word,הַנָּבִיא,הנביא,hanavi,the prophet,audio/f/israeli/word/haftarah-after-w68.mp3,audio/f/israeli/word/haftarah-after-w68.mp3
@@ -1501,7 +1445,6 @@ pass,1.0,word,עַבְדָּךְ,אבדך,avdakh,your servant,audio/f/israeli/wo
 pass,1.0,word,צוּר,צור,tzur,rock,audio/f/israeli/word/haftarah-after-w7.mp3,audio/f/israeli/word/haftarah-after-w7.mp3
 pass,1.0,word,וּבְמַלְכוּת,ובמלכות,uvemalkhut,and with the kingdom,audio/f/israeli/word/haftarah-after-w70.mp3,audio/f/israeli/word/haftarah-after-w70.mp3
 pass,1.0,word,בֵּית,בית,beit,of the house,audio/f/israeli/word/haftarah-after-w71.mp3,audio/f/israeli/word/haftarah-after-w71.mp3
-pass,1.0,word,דָּוִד,דוד,david,of David,audio/f/israeli/word/haftarah-after-w72.mp3,audio/f/israeli/word/haftarah-after-w72.mp3
 pass,1.0,word,מְשִׁיחָךְ,משיחך,meshichakh,your anointed,audio/f/israeli/word/haftarah-after-w73.mp3,audio/f/israeli/word/haftarah-after-w73.mp3
 pass,1.0,word,יָבֹא,יבוא,yavo,may he come,audio/f/israeli/word/haftarah-after-w75.mp3,audio/f/israeli/word/haftarah-after-w75.mp3
 pass,1.0,word,וְיָגֵל,ויגל,veyagel,and rejoice,audio/f/israeli/word/haftarah-after-w76.mp3,audio/f/israeli/word/haftarah-after-w76.mp3
@@ -1590,7 +1533,6 @@ pass,1.0,word,וְעַל,ועל,ve'al,and for,audio/f/israeli/word/hanerot-halal
 pass,1.0,word,וְצִוָּנוּ,וציוונו,vetzivanu,and commanded us,audio/f/israeli/word/hanukkah-candle-w10.mp3,audio/f/israeli/word/hanukkah-candle-w10.mp3
 pass,1.0,word,נֵר,נר,ner,"oil lamp, candle",audio/f/israeli/word/hanukkah-candle-w12.mp3,audio/f/israeli/word/hanukkah-candle-w12.mp3
 pass,1.0,word,חֲנֻכָּה׃,חנוכה,chanukah,"consecration, dedication, inauguration",audio/f/israeli/word/hanukkah-candle-w13.mp3,audio/f/israeli/word/hanukkah-candle-w13.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/hanukkah-candle-w9.mp3,audio/f/israeli/word/hanukkah-candle-w9.mp3
 pass,1.0,word,בַּיָּמִים,בימים,bayamim,in the days,audio/f/israeli/word/hanukkah-nissim-w10.mp3,audio/f/israeli/word/hanukkah-nissim-w10.mp3
 pass,1.0,word,הָהֵם,ההם,hahem,those,audio/f/israeli/word/hanukkah-nissim-w11.mp3,audio/f/israeli/word/hanukkah-nissim-w11.mp3
 pass,1.0,word,בַּזְּמַן,בזמן,bazeman,at the time,audio/f/israeli/word/hanukkah-nissim-w12.mp3,audio/f/israeli/word/hanukkah-nissim-w12.mp3
@@ -1628,6 +1570,7 @@ pass,1.0,word,לִי,לי,li,to me,audio/f/israeli/word/havdalah-opening-w13.mp3
 pass,1.0,word,לִישׁוּעָה׃,לישועה,lishu'ah,for salvation,audio/f/israeli/word/havdalah-opening-w14.mp3,audio/f/israeli/word/havdalah-opening-w14.mp3
 pass,1.0,word,וּשְׁאַבְתֶּם,ושאבתם,ushe'avtem,and you will draw,audio/f/israeli/word/havdalah-opening-w15.mp3,audio/f/israeli/word/havdalah-opening-w15.mp3
 pass,1.0,word,מַיִם,מים,mayim,water,audio/f/israeli/word/havdalah-opening-w16.mp3,audio/f/israeli/word/havdalah-opening-w16.mp3
+pass,1.0,word,בְּשָׂשׁוֹן,בסשון,besashon,with joy,audio/f/israeli/word/havdalah-opening-w17.mp3,audio/f/israeli/word/havdalah-opening-w17.mp3
 pass,1.0,word,מִמַּעַיְנֵי,ממעייני,mima'aynei,from the springs of,audio/f/israeli/word/havdalah-opening-w18.mp3,audio/f/israeli/word/havdalah-opening-w18.mp3
 pass,1.0,word,הַיְשׁוּעָה׃,הישועה,hayshu'ah,salvation,audio/f/israeli/word/havdalah-opening-w19.mp3,audio/f/israeli/word/havdalah-opening-w19.mp3
 pass,1.0,word,לַאֲדֹנָי,לאדוני,la'adonai,to the LORD,audio/f/israeli/word/havdalah-opening-w20.mp3,audio/f/israeli/word/havdalah-opening-w20.mp3 audio/f/israeli/word/kiddush-zachor-w13.mp3
@@ -1757,7 +1700,6 @@ pass,1.0,word,אֶצְבַּע,אצבע,etzba,finger; forefinger,audio/f/israeli
 pass,1.0,word,אִיֵּם,איים,iyem,to threaten,audio/f/israeli/word/hc5a2dfc8.mp3,audio/f/israeli/word/hc5a2dfc8.mp3
 pass,1.0,word,קָרוֹב,קרוב,karov,"close, near",audio/f/israeli/word/hc5d024c3.mp3,audio/f/israeli/word/hc5d024c3.mp3 audio/f/israeli/word/hd53e0a60.mp3
 pass,1.0,word,שַׁיָּךְ,שייך,shayakh,"belonging (to), owned (by); relevant, pertinent",audio/f/israeli/word/hc5e933f4.mp3,audio/f/israeli/word/hc5e933f4.mp3
-pass,1.0,word,לֵוִי,לוי,levi,Levite,audio/f/israeli/word/hc5ed2600.mp3,audio/f/israeli/word/hc5ed2600.mp3
 pass,1.0,word,דּוֹר,דור,dor,generation,audio/f/israeli/word/hc637d8a6.mp3,audio/f/israeli/word/hc637d8a6.mp3
 pass,1.0,word,צַד,צד,tzad,"a side; a side, an aspect",audio/f/israeli/word/hc639d04f.mp3,audio/f/israeli/word/hc639d04f.mp3
 pass,1.0,word,נְקֻדָּה,נקודה,nekudah,"point; dot; full stop, period",audio/f/israeli/word/hc6597ed8.mp3,audio/f/israeli/word/hc6597ed8.mp3
@@ -1844,6 +1786,7 @@ pass,1.0,word,עָשָׂה,עשה,asah,"to do (to perform an action, to accompli
 pass,1.0,word,רֶכֶב,רכב,rekhev,"vehicle, chariot; car; a rider (an upper millstone)",audio/f/israeli/word/hdd46eaf9.mp3,audio/f/israeli/word/hdd46eaf9.mp3
 pass,1.0,word,שַׁעַר,שער,sha'ar,gateway (entrance); gateway (beginning); market value,audio/f/israeli/word/hddb5189f.mp3,audio/f/israeli/word/hddb5189f.mp3
 pass,1.0,word,אָדוֹן,אדון,adon,lord; Mr,audio/f/israeli/word/hddb7aae9.mp3,audio/f/israeli/word/hddb7aae9.mp3
+pass,1.0,word,אָוֶן,אבן,aven,"evil, wickedness",audio/f/israeli/word/hddeaa2ed.mp3,audio/f/israeli/word/hddeaa2ed.mp3
 pass,1.0,word,חוֹף,חוף,chof,"beach, shore, coast",audio/f/israeli/word/hde2302bb.mp3,audio/f/israeli/word/hde2302bb.mp3
 pass,1.0,word,הִטָּה,היטה,hitah,"to tilt, slant; to inflect",audio/f/israeli/word/hde82cf75.mp3,audio/f/israeli/word/hde82cf75.mp3
 pass,1.0,word,סָתַר,סתר,satar,"to contradict; to refute; to neutralize, to counteract",audio/f/israeli/word/hde989655.mp3,audio/f/israeli/word/hde989655.mp3
@@ -2119,7 +2062,6 @@ pass,1.0,word,טָרִי,טרי.,tari,UNKNOWN,audio/f/israeli/word/i-12-w8.mp3,a
 pass,1.0,word,עַגְבָנִיָּה,עגבנייה.,agvaniyah,UNKNOWN,audio/f/israeli/word/i-12-w9.mp3,audio/f/israeli/word/i-12-w9.mp3
 pass,1.0,word,אֶפְשָׁר לְהַזְמִין?,אפשר להזמין?,efshar lehazmin?,UNKNOWN,audio/f/israeli/word/i-13-w1.mp3,audio/f/israeli/word/i-13-w1.mp3
 pass,1.0,word,קָטָן,קטן,katan,UNKNOWN,audio/f/israeli/word/i-13-w10.mp3,audio/f/israeli/word/i-13-w10.mp3
-pass,1.0,word,לֶאֱכֹל כָּאן אוֹ לָקַחַת?,לאכול כאן או לקחת.,le'ekhol kan o lakachat?,UNKNOWN,audio/f/israeli/word/i-13-w11.mp3,audio/f/israeli/word/i-13-w11.mp3
 pass,1.0,word,"הַחֶשְׁבּוֹן, בְּבַקָּשָׁה","החשבון, בבקשה.","hacheshbon, bevakashah",UNKNOWN,audio/f/israeli/word/i-13-w12.mp3,audio/f/israeli/word/i-13-w12.mp3
 pass,1.0,word,צִמְחוֹנִי,צמחוני,tzimchoni,UNKNOWN,audio/f/israeli/word/i-13-w13.mp3,audio/f/israeli/word/i-13-w13.mp3
 pass,1.0,word,צִמְחוֹנִית,צמחונית,tzimchonit,UNKNOWN,audio/f/israeli/word/i-13-w14.mp3,audio/f/israeli/word/i-13-w14.mp3
@@ -2316,7 +2258,6 @@ pass,1.0,word,סְלִיחָה,סליחה,selichah,UNKNOWN,audio/f/israeli/word/
 pass,1.0,word,סְלִיחוֹת,סליחות,selichot,UNKNOWN,audio/f/israeli/word/i-28-w5.mp3,audio/f/israeli/word/i-28-w5.mp3
 pass,1.0,word,תְּשׁוּבָה,תשובה,teshuvah,UNKNOWN,audio/f/israeli/word/i-28-w6.mp3,audio/f/israeli/word/i-28-w6.mp3
 pass,1.0,word,שָׁנָה טוֹבָה,שנה טובה.,shanah tovah,UNKNOWN,audio/f/israeli/word/i-28-w7.mp3,audio/f/israeli/word/i-28-w7.mp3 audio/f/israeli/word/i-50-w4.mp3
-pass,1.0,word,בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ,ברוך שם כבוד מלכותו.,barukh shem kevod malkhuto,UNKNOWN,audio/f/israeli/word/i-28-w8.mp3,audio/f/israeli/word/i-28-w8.mp3
 pass,1.0,word,שְׁמַע יִשְׂרָאֵל,שמע ישראל,shema yisra'el,UNKNOWN,audio/f/israeli/word/i-28-w9.mp3,audio/f/israeli/word/i-28-w9.mp3
 pass,1.0,word,פֶּסַח,פסח,pesach,UNKNOWN,audio/f/israeli/word/i-29-w1.mp3,audio/f/israeli/word/i-29-w1.mp3
 pass,1.0,word,עֲבָדִים,עבדים,avadim,UNKNOWN,audio/f/israeli/word/i-29-w10.mp3,audio/f/israeli/word/i-29-w10.mp3
@@ -2339,7 +2280,6 @@ pass,1.0,word,לַזְּמַן הַזֶּה,לזמן הזה,lazeman hazeh,UNKNOW
 pass,1.0,word,בּוֹרֵא פְּרִי הַגָּפֶן,בורא פרי הגפן,bore peri hagafen,UNKNOWN,audio/f/israeli/word/i-30-w6.mp3,audio/f/israeli/word/i-30-w6.mp3
 pass,1.0,word,הַמּוֹצִיא לֶחֶם,המוציא לחם,hamotzi lechem,UNKNOWN,audio/f/israeli/word/i-30-w7.mp3,audio/f/israeli/word/i-30-w7.mp3
 pass,1.0,word,מִצְוָה,מצווה,mitzvah,UNKNOWN,audio/f/israeli/word/i-30-w8.mp3,audio/f/israeli/word/i-30-w8.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,UNKNOWN,audio/f/israeli/word/i-30-w9.mp3,audio/f/israeli/word/i-30-w9.mp3
 pass,1.0,word,פּוּרִים,פורים,purim,UNKNOWN,audio/f/israeli/word/i-31-w1.mp3,audio/f/israeli/word/i-31-w1.mp3
 pass,1.0,word,לְחַיִּים,לחיים,lechayim,UNKNOWN,audio/f/israeli/word/i-31-w11.mp3,audio/f/israeli/word/i-31-w11.mp3 audio/f/israeli/word/i-50-w6.mp3
 pass,1.0,word,פּוּר,פור,pur,UNKNOWN,audio/f/israeli/word/i-31-w2.mp3,audio/f/israeli/word/i-31-w2.mp3
@@ -2527,7 +2467,6 @@ pass,1.0,word,נוּ,נו.,nu,UNKNOWN,audio/f/israeli/word/il02-w2.mp3,audio/f/i
 pass,1.0,word,סַבָּבָּה,סבבה.,sababah,UNKNOWN,audio/f/israeli/word/il02-w3.mp3,audio/f/israeli/word/il02-w3.mp3
 pass,1.0,word,בְּסֵדֶר,בסדר.,beseder,UNKNOWN,audio/f/israeli/word/il02-w4.mp3,audio/f/israeli/word/il02-w4.mp3
 pass,1.0,word,אַחְלָה,אחלה.,achlah,UNKNOWN,audio/f/israeli/word/il02-w5.mp3,audio/f/israeli/word/il02-w5.mp3
-pass,1.0,word,וַואלָה,וואלה.,vavlah,UNKNOWN,audio/f/israeli/word/il02-w6.mp3,audio/f/israeli/word/il02-w6.mp3
 pass,1.0,word,שְׁמִי,שמי.,shemi,UNKNOWN,audio/f/israeli/word/il03-w1.mp3,audio/f/israeli/word/il03-w1.mp3
 pass,1.0,word,מַה שְׁמֶךָ,מה שמך?,mah shemekha,UNKNOWN,audio/f/israeli/word/il03-w2.mp3,audio/f/israeli/word/il03-w2.mp3
 pass,1.0,word,מַה שְׁמֵךְ,מה שמך?,mah shemekh,UNKNOWN,audio/f/israeli/word/il03-w3.mp3,audio/f/israeli/word/il03-w3.mp3
@@ -2735,7 +2674,6 @@ pass,1.0,word,הִנְחַלְתָּנוּ׃,הנחלתנו,hinchaltanu,you gave
 pass,1.0,word,מְקַדֵּשׁ,מקדש,mekadesh,who makes holy,audio/f/israeli/word/kiddush-shabbat-eve-w44.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w44.mp3
 pass,1.0,word,מֶלֶךְ,מלך,melekh,king,audio/f/israeli/word/kiddush-shabbat-eve-w5.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w5.mp3 audio/f/israeli/word/torah-bless-1-w5.mp3
 pass,1.0,word,אֲשֶׁר,אשר,asher,introduces a subordinate clause,audio/f/israeli/word/kiddush-shabbat-eve-w7.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w7.mp3 audio/f/israeli/word/shema-vahavta-w17.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/f/israeli/word/kiddush-shabbat-eve-w9.mp3,audio/f/israeli/word/kiddush-shabbat-eve-w9.mp3
 pass,1.0,word,וְשָׁמְרוּ,ושמרו,veshamru,shall keep,audio/f/israeli/word/kiddush-veshamru-w1.mp3,audio/f/israeli/word/kiddush-veshamru-w1.mp3
 pass,1.0,word,בְּנֵי,בני,benei,the children of,audio/f/israeli/word/kiddush-veshamru-w11.mp3,audio/f/israeli/word/kiddush-veshamru-w11.mp3
 pass,1.0,word,אוֹת,אות,ot,"a sign, an omen; a signal, a cue; letter (symbol)",audio/f/israeli/word/kiddush-veshamru-w13.mp3,audio/f/israeli/word/kiddush-veshamru-w13.mp3
@@ -2786,7 +2724,7 @@ pass,1.0,word,שֵׁשֶׁת,ששת,sheshet,six,audio/f/israeli/word/kiddush-zac
 pass,1.0,word,יָמִים,ימים,yamim,days,audio/f/israeli/word/kiddush-zachor-w6.mp3,audio/f/israeli/word/kiddush-zachor-w6.mp3
 pass,1.0,word,תַּעֲבֹד,תעבוד,ta'avod,you shall labour,audio/f/israeli/word/kiddush-zachor-w7.mp3,audio/f/israeli/word/kiddush-zachor-w7.mp3
 pass,1.0,word,וְעָשִׂיתָ,ועשית,ve'asita,and do,audio/f/israeli/word/kiddush-zachor-w8.mp3,audio/f/israeli/word/kiddush-zachor-w8.mp3
-pass,1.0,word,כָּל־מְלַאכְתֶּךָ,כל מלאכתך,kol-melakhtekha,all your work,audio/f/israeli/word/kiddush-zachor-w9.mp3,audio/f/israeli/word/kiddush-zachor-w9.mp3
+pass,1.0,word,כָּל־מְלַאכְתֶּךָ,קל מלאכתך.,kol-melakhtekha,all your work,audio/f/israeli/word/kiddush-zachor-w9.mp3,audio/f/israeli/word/kiddush-zachor-w9.mp3
 pass,1.0,word,לְכָה,לך,lekhah,come,audio/f/israeli/word/lecha-dodi-1-w1.mp3,audio/f/israeli/word/lecha-dodi-1-w1.mp3
 pass,1.0,word,בְּדִבּוּר,בדיבור,bedibur,in an utterance,audio/f/israeli/word/lecha-dodi-1-w10.mp3,audio/f/israeli/word/lecha-dodi-1-w10.mp3
 pass,1.0,word,אֶחָד,אחד,echad,one,audio/f/israeli/word/lecha-dodi-1-w11.mp3,audio/f/israeli/word/lecha-dodi-1-w11.mp3 audio/f/israeli/word/shema-1-w6.mp3 audio/f/israeli/word/shema-vahavta-w6.mp3 audio/f/israeli/word/yigdal-w10.mp3
@@ -2812,7 +2750,6 @@ pass,1.0,word,וְהַמִּתְנַשֵּׂא,והמתנשא,vehamitnase,and th
 pass,1.0,word,לְכֹל,לכל,lekhol,over all,audio/f/israeli/word/lecha-hashem-w16.mp3,audio/f/israeli/word/lecha-hashem-w16.mp3
 pass,1.0,word,לְרֹאשׁ׃,לראש,lerosh,as head,audio/f/israeli/word/lecha-hashem-w17.mp3,audio/f/israeli/word/lecha-hashem-w17.mp3
 pass,1.0,word,רוֹמְמוּ,רוממו,romemu,exalt,audio/f/israeli/word/lecha-hashem-w18.mp3,audio/f/israeli/word/lecha-hashem-w18.mp3
-pass,1.0,word,וְהִשְׁתַּחֲווּ,והשתחוו,vehishtachavu,and bow,audio/f/israeli/word/lecha-hashem-w21.mp3,audio/f/israeli/word/lecha-hashem-w21.mp3 audio/f/israeli/word/lecha-hashem-w29.mp3
 pass,1.0,word,לַהֲדֹם,להדום,lahadom,at the footstool,audio/f/israeli/word/lecha-hashem-w22.mp3,audio/f/israeli/word/lecha-hashem-w22.mp3
 pass,1.0,word,רַגְלָיו,רגליו,raglav,his feet,audio/f/israeli/word/lecha-hashem-w23.mp3,audio/f/israeli/word/lecha-hashem-w23.mp3
 pass,1.0,word,רוֹמְמוּ,רוממו,romemu,exalt,audio/f/israeli/word/lecha-hashem-w26.mp3,audio/f/israeli/word/lecha-hashem-w26.mp3
@@ -2915,7 +2852,6 @@ pass,1.0,word,אוּלַי,אולי.,ulai,maybe,audio/f/israeli/word/politeness-
 pass,1.0,word,בְּטַח,בטח.,betach,sure / of course,audio/f/israeli/word/politeness-11.mp3,audio/f/israeli/word/politeness-11.mp3
 pass,1.0,word,סַבָּבָה,סבבה.,sabavah,cool / great / fine by me,audio/f/israeli/word/politeness-12.mp3,audio/f/israeli/word/politeness-12.mp3
 pass,1.0,word,יַאלְלָה,יאללה.,yalelah,come on / let's go / OK then,audio/f/israeli/word/politeness-13.mp3,audio/f/israeli/word/politeness-13.mp3
-pass,1.0,word,וָואלָה,וואלה.,vavlah,really? / wow / honestly,audio/f/israeli/word/politeness-14.mp3,audio/f/israeli/word/politeness-14.mp3
 pass,1.0,word,אַחִי,"אחי,",achi,my brother (bro),audio/f/israeli/word/politeness-15.mp3,audio/f/israeli/word/politeness-15.mp3
 pass,1.0,word,יוֹפִי,"יופי,",yofi,great / nice,audio/f/israeli/word/politeness-16.mp3,audio/f/israeli/word/politeness-16.mp3
 pass,1.0,word,דַּי,די,dai,enough / stop it,audio/f/israeli/word/politeness-19.mp3,audio/f/israeli/word/politeness-19.mp3
@@ -2974,7 +2910,6 @@ pass,1.0,word,צְדָקָה,צדקה,tzedakah,UNKNOWN,audio/f/israeli/word/r24-
 pass,1.0,word,יָאֵר,יאר,ya'er,UNKNOWN,audio/f/israeli/word/r25-w1.mp3,audio/f/israeli/word/r25-w1.mp3
 pass,1.0,word,פָּנָיו,פניו,panav,UNKNOWN,audio/f/israeli/word/r25-w2.mp3,audio/f/israeli/word/r25-w2.mp3
 pass,1.0,word,אֵלֶיךָ,אליך,elekha,UNKNOWN,audio/f/israeli/word/r25-w3.mp3,audio/f/israeli/word/r25-w3.mp3
-pass,1.0,word,וִיחֻנֶּךָּ,ויחוניך,vichuneka,UNKNOWN,audio/f/israeli/word/r25-w4.mp3,audio/f/israeli/word/r25-w4.mp3
 pass,1.0,word,יִשָּׂא,ישא,yisa,UNKNOWN,audio/f/israeli/word/r26-w1.mp3,audio/f/israeli/word/r26-w1.mp3
 pass,1.0,word,וְיָשֵׂם,וישם,veyasem,UNKNOWN,audio/f/israeli/word/r26-w2.mp3,audio/f/israeli/word/r26-w2.mp3
 pass,1.0,word,בִּרְכַּת כֹּהֲנִים,ברכת כהנים,birkat kohanim,UNKNOWN,audio/f/israeli/word/r27-w1.mp3,audio/f/israeli/word/r27-w1.mp3
@@ -3066,6 +3001,7 @@ pass,1.0,word,וְהָיוּ,והיו,vehayu,and shall be,audio/f/israeli/word/s
 pass,1.0,word,הַדְּבָרִים,הדברים,hadevarim,the words,audio/f/israeli/word/shema-vahavta-w15.mp3,audio/f/israeli/word/shema-vahavta-w15.mp3 audio/f/israeli/word/vahavta-2-w2.mp3
 pass,1.0,word,הָאֵלֶּה,האלה,ha'eleh,these,audio/f/israeli/word/shema-vahavta-w16.mp3,audio/f/israeli/word/shema-vahavta-w16.mp3 audio/f/israeli/word/vahavta-full-w10.mp3
 pass,1.0,word,אָנֹכִי,אנוכי,anokhi,I (first-person singular nominative pronoun),audio/f/israeli/word/shema-vahavta-w18.mp3,audio/f/israeli/word/shema-vahavta-w18.mp3 audio/f/israeli/word/vahavta-full-w12.mp3
+pass,1.0,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/f/israeli/word/shema-vahavta-w19.mp3,audio/f/israeli/word/shema-vahavta-w19.mp3 audio/f/israeli/word/vahavta-2-w6.mp3
 pass,1.0,word,הַיּוֹם,היום,hayom,today,audio/f/israeli/word/shema-vahavta-w20.mp3,audio/f/israeli/word/shema-vahavta-w20.mp3
 pass,1.0,word,עַל־לְבָבֶךָ׃,על לבביך,al-levavekha,upon your heart,audio/f/israeli/word/shema-vahavta-w21.mp3,audio/f/israeli/word/shema-vahavta-w21.mp3
 pass,1.0,word,וְשִׁנַּנְתָּם,ושיננתם,veshinantam,and you shall teach them,audio/f/israeli/word/shema-vahavta-w22.mp3,audio/f/israeli/word/shema-vahavta-w22.mp3
@@ -3196,6 +3132,7 @@ pass,1.0,word,הָאֵלֶּה,האלה,ha'eleh,these,audio/f/israeli/word/vahav
 pass,1.0,word,אָנֹכִי,אנוכי,anokhi,with all your heart,audio/f/israeli/word/vahavta-2-w5.mp3,audio/f/israeli/word/vahavta-2-w5.mp3
 pass,1.0,word,עַל־לְבָבֶךָ׃,על לבביך,al-levavekha,upon your heart,audio/f/israeli/word/vahavta-2-w8.mp3,audio/f/israeli/word/vahavta-2-w8.mp3 audio/f/israeli/word/vahavta-full-w15.mp3
 pass,1.0,word,וְשִׁנַּנְתָּם,ושיננתם,veshinantam,and you shall teach them,audio/f/israeli/word/vahavta-2-w9.mp3,audio/f/israeli/word/vahavta-2-w9.mp3
+pass,1.0,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/f/israeli/word/vahavta-full-w13.mp3,audio/f/israeli/word/vahavta-full-w13.mp3
 pass,1.0,word,הַיּוֹם,היום,hayom,today,audio/f/israeli/word/vahavta-full-w14.mp3,audio/f/israeli/word/vahavta-full-w14.mp3
 pass,1.0,word,וְשִׁנַּנְתָּם,ושיננתם,veshinantam,and you shall teach them,audio/f/israeli/word/vahavta-full-w16.mp3,audio/f/israeli/word/vahavta-full-w16.mp3
 pass,1.0,word,וְדִבַּרְתָּ,ודיברת,vedibarta,and you shall talk,audio/f/israeli/word/vahavta-full-w18.mp3,audio/f/israeli/word/vahavta-full-w18.mp3
@@ -3348,7 +3285,6 @@ pass,1.0,word,מֶלֶךְ,מלך,melekh,king,audio/m/israeli/word/adon-olam-1-w
 pass,1.0,word,שְׁמוֹ,שמו,shemo,his name,audio/m/israeli/word/adon-olam-1-w15.mp3,audio/m/israeli/word/adon-olam-1-w15.mp3
 pass,1.0,word,נִקְרָא׃,נקרע,nikra,to be read; to be called,audio/m/israeli/word/adon-olam-1-w16.mp3,audio/m/israeli/word/adon-olam-1-w16.mp3
 pass,1.0,word,וְאַחֲרֵי,ואחרי,ve'acharei,and after,audio/m/israeli/word/adon-olam-1-w17.mp3,audio/m/israeli/word/adon-olam-1-w17.mp3
-pass,1.0,word,כִּכְלוֹת,ככלות,kikhlot,when all ended,audio/m/israeli/word/adon-olam-1-w18.mp3,audio/m/israeli/word/adon-olam-1-w18.mp3
 pass,1.0,word,הַכֹּל,הכל,hakol,the all,audio/m/israeli/word/adon-olam-1-w19.mp3,audio/m/israeli/word/adon-olam-1-w19.mp3
 pass,1.0,word,עוֹלָם,עולם,olam,"world; a world; Ever, eternity",audio/m/israeli/word/adon-olam-1-w2.mp3,audio/m/israeli/word/adon-olam-1-w2.mp3
 pass,1.0,word,לְבַדּוֹ,לבדו,levado,by himself,audio/m/israeli/word/adon-olam-1-w20.mp3,audio/m/israeli/word/adon-olam-1-w20.mp3
@@ -3426,7 +3362,6 @@ pass,1.0,word,חֶלְקֵנוּ,חלקנו,chelkenu,our portion,audio/m/israeli
 pass,1.0,word,לְשַׁבֵּחַ,לשבח,leshabeach,to praise,audio/m/israeli/word/aleinu-1-w2.mp3,audio/m/israeli/word/aleinu-1-w2.mp3
 pass,1.0,word,כָּהֶם,כהם,kahem,like theirs,audio/m/israeli/word/aleinu-1-w20.mp3,audio/m/israeli/word/aleinu-1-w20.mp3
 pass,1.0,word,וְגוֹרָלֵנוּ,וגורלנו,vegoralenu,nor our lot,audio/m/israeli/word/aleinu-1-w21.mp3,audio/m/israeli/word/aleinu-1-w21.mp3
-pass,1.0,word,כְּכָל־הֲמוֹנָם,ככל המונם,kekhol-hamonam,like all their multitude,audio/m/israeli/word/aleinu-1-w22.mp3,audio/m/israeli/word/aleinu-1-w22.mp3
 pass,1.0,word,שֶׁהֵם,שהם,shehem,that they,audio/m/israeli/word/aleinu-1-w23.mp3,audio/m/israeli/word/aleinu-1-w23.mp3
 pass,1.0,word,מִשְׁתַּחֲוִים,משתחווים,mishtachavim,bow,audio/m/israeli/word/aleinu-1-w24.mp3,audio/m/israeli/word/aleinu-1-w24.mp3
 pass,1.0,word,לָהֶבֶל,להבל,lahevel,to vanity,audio/m/israeli/word/aleinu-1-w25.mp3,audio/m/israeli/word/aleinu-1-w25.mp3
@@ -3495,7 +3430,6 @@ pass,1.0,word,תִּהְיֶה,תהיה,tihyeh,let it be,audio/m/israeli/word/am
 pass,1.0,word,פְּתַח,פתח,petach,open,audio/m/israeli/word/amidah-elohai-netzor-w15.mp3,audio/m/israeli/word/amidah-elohai-netzor-w15.mp3
 pass,1.0,word,לִבִּי,לבי,libi,my heart,audio/m/israeli/word/amidah-elohai-netzor-w16.mp3,audio/m/israeli/word/amidah-elohai-netzor-w16.mp3
 pass,1.0,word,בְּתוֹרָתֶךָ,בתורתך,betoratekha,to your Torah,audio/m/israeli/word/amidah-elohai-netzor-w17.mp3,audio/m/israeli/word/amidah-elohai-netzor-w17.mp3
-pass,1.0,word,וּבְמִצְוֹתֶיךָ,ובמצוותך,uvemitzvotekha,and your commandments,audio/m/israeli/word/amidah-elohai-netzor-w18.mp3,audio/m/israeli/word/amidah-elohai-netzor-w18.mp3
 pass,1.0,word,תִּרְדֹּף,תרדוף,tirdof,pursue,audio/m/israeli/word/amidah-elohai-netzor-w19.mp3,audio/m/israeli/word/amidah-elohai-netzor-w19.mp3
 pass,1.0,word,נְצוֹר,נצור,netzor,guard,audio/m/israeli/word/amidah-elohai-netzor-w2.mp3,audio/m/israeli/word/amidah-elohai-netzor-w2.mp3
 pass,1.0,word,נַפְשִׁי,נפשי,nafshi,"mental, psychological",audio/m/israeli/word/amidah-elohai-netzor-w20.mp3,audio/m/israeli/word/amidah-elohai-netzor-w20.mp3
@@ -3578,7 +3512,6 @@ pass,1.0,word,יָד,יד,yad,UNKNOWN,audio/m/israeli/word/anchor-yod.mp3,audio/
 pass,1.0,word,זָהָב,זהב,zahav,UNKNOWN,audio/m/israeli/word/anchor-zayin.mp3,audio/m/israeli/word/anchor-zayin.mp3
 pass,1.0,word,אַשְׁרֵי,אשרי,ashrei,happy is/was/will be,audio/m/israeli/word/ashrei-144-15-w1.mp3,audio/m/israeli/word/ashrei-144-15-w1.mp3 audio/m/israeli/word/ashrei-84-5-w1.mp3
 pass,1.0,word,הָעָם,העם,ha'am,the people,audio/m/israeli/word/ashrei-144-15-w2.mp3,audio/m/israeli/word/ashrei-144-15-w2.mp3
-pass,1.0,word,שֶׁכָּכָה,שככה,shekakhah,that is in such a case,audio/m/israeli/word/ashrei-144-15-w3.mp3,audio/m/israeli/word/ashrei-144-15-w3.mp3
 pass,1.0,word,לּוֹ,לא,lo,to it,audio/m/israeli/word/ashrei-144-15-w4.mp3,audio/m/israeli/word/ashrei-144-15-w4.mp3 audio/m/israeli/word/haftarah-after-w93.mp3
 pass,1.0,word,אַשְׁרֵי,אשרי,ashrei,happy is/was/will be,audio/m/israeli/word/ashrei-144-15-w5.mp3,audio/m/israeli/word/ashrei-144-15-w5.mp3 audio/m/israeli/word/havdalah-opening-w36.mp3
 pass,1.0,word,הָעָם,העם,ha'am,the people,audio/m/israeli/word/ashrei-144-15-w6.mp3,audio/m/israeli/word/ashrei-144-15-w6.mp3
@@ -3586,14 +3519,12 @@ pass,1.0,word,שֶׁאֲדֹנָי,שאדוני,she'adonai,whose LORD,audio/m/is
 pass,1.0,word,אֱלֹהָיו׃,אלוהיו,elohav,his God,audio/m/israeli/word/ashrei-144-15-w8.mp3,audio/m/israeli/word/ashrei-144-15-w8.mp3
 pass,1.0,word,תְּהִלָּה,תהילה,tehilah,"praise, adoration; glory, splendor",audio/m/israeli/word/ashrei-145-1-3-w1.mp3,audio/m/israeli/word/ashrei-145-1-3-w1.mp3 audio/m/israeli/word/yehalelu-w13.mp3
 pass,1.0,word,בְּכָל־יוֹם,בכל יום,bekhol-yom,every day,audio/m/israeli/word/ashrei-145-1-3-w10.mp3,audio/m/israeli/word/ashrei-145-1-3-w10.mp3
-pass,1.0,word,אֲבָרֲכֶךָּ,אברכיך,avarakheka,I will bless you,audio/m/israeli/word/ashrei-145-1-3-w11.mp3,audio/m/israeli/word/ashrei-145-1-3-w11.mp3
 pass,1.0,word,שִׁמְךָ,שמך,shimkha,your name,audio/m/israeli/word/ashrei-145-1-3-w13.mp3,audio/m/israeli/word/ashrei-145-1-3-w13.mp3
 pass,1.0,word,לְעוֹלָם,לעולם,le'olam,"eternally, forever",audio/m/israeli/word/ashrei-145-1-3-w14.mp3,audio/m/israeli/word/ashrei-145-1-3-w14.mp3 audio/m/israeli/word/haftarah-after-w136.mp3 audio/m/israeli/word/r36-w5.mp3 audio/m/israeli/word/shema-2-w5.mp3
 pass,1.0,word,וָעֶד׃,ועד,va'ed,and ever,audio/m/israeli/word/ashrei-145-1-3-w15.mp3,audio/m/israeli/word/ashrei-145-1-3-w15.mp3
 pass,1.0,word,גָּדוֹל,גדול,gadol,"big, large; great, important",audio/m/israeli/word/ashrei-145-1-3-w16.mp3,audio/m/israeli/word/ashrei-145-1-3-w16.mp3 audio/m/israeli/word/i-13-w9.mp3 audio/m/israeli/word/r18-w2.mp3
 pass,1.0,word,וּמְהֻלָּל,ומהולל,umehulal,and highly praised,audio/m/israeli/word/ashrei-145-1-3-w18.mp3,audio/m/israeli/word/ashrei-145-1-3-w18.mp3
 pass,1.0,word,מְאֹד,מאוד.,me'od,greatly,audio/m/israeli/word/ashrei-145-1-3-w19.mp3,audio/m/israeli/word/ashrei-145-1-3-w19.mp3
-pass,1.0,word,לְדָוִד,לדוד,ledavid,of David,audio/m/israeli/word/ashrei-145-1-3-w2.mp3,audio/m/israeli/word/ashrei-145-1-3-w2.mp3
 pass,1.0,word,וְלִגְדֻלָּתוֹ,ולגדולתו,veligdulato,and his greatness,audio/m/israeli/word/ashrei-145-1-3-w20.mp3,audio/m/israeli/word/ashrei-145-1-3-w20.mp3
 pass,1.0,word,אֵין,אין,ein,"there is not, there are not; used in expressing non-possession in the present tense; not, is not, are not",audio/m/israeli/word/ashrei-145-1-3-w21.mp3,audio/m/israeli/word/ashrei-145-1-3-w21.mp3 audio/m/israeli/word/i-47-w11.mp3
 pass,1.0,word,חֵקֶר׃,חקר,cheker,"investigation, examination, inquiry",audio/m/israeli/word/ashrei-145-1-3-w22.mp3,audio/m/israeli/word/ashrei-145-1-3-w22.mp3
@@ -3675,7 +3606,6 @@ pass,1.0,word,וְיִשְׁמְרֶךָ׃,וישמריך.,veyishmerekha,and may
 pass,1.0,word,יָאֵר,יאר,ya'er,may he shine,audio/m/israeli/word/bless-priestly-2-w1.mp3,audio/m/israeli/word/bless-priestly-2-w1.mp3
 pass,1.0,word,פָּנָיו,פניו,panav,his face,audio/m/israeli/word/bless-priestly-2-w3.mp3,audio/m/israeli/word/bless-priestly-2-w3.mp3
 pass,1.0,word,אֵלֶיךָ,אליך,elekha,toward you,audio/m/israeli/word/bless-priestly-2-w4.mp3,audio/m/israeli/word/bless-priestly-2-w4.mp3
-pass,1.0,word,וִיחֻנֶּךָּ׃,ויחוניך,vichuneka,and may he be gracious to you,audio/m/israeli/word/bless-priestly-2-w5.mp3,audio/m/israeli/word/bless-priestly-2-w5.mp3
 pass,1.0,word,יִשָּׂא,יישא,yisa,may he lift,audio/m/israeli/word/bless-priestly-3-w1.mp3,audio/m/israeli/word/bless-priestly-3-w1.mp3 audio/m/israeli/word/r26-w1.mp3
 pass,1.0,word,פָּנָיו,פניו,panav,his face,audio/m/israeli/word/bless-priestly-3-w3.mp3,audio/m/israeli/word/bless-priestly-3-w3.mp3 audio/m/israeli/word/r16-w3.mp3 audio/m/israeli/word/r25-w2.mp3
 pass,1.0,word,אֵלֶיךָ,אליך,elekha,toward you,audio/m/israeli/word/bless-priestly-3-w4.mp3,audio/m/israeli/word/bless-priestly-3-w4.mp3
@@ -3764,6 +3694,7 @@ pass,1.0,word,עַל־בַּר־אֱלָהִין,אלבר אלהין,al-bar-elah
 pass,1.0,word,יְהֵא,יהא,yehe,may be,audio/m/israeli/word/brich-shmei-w8.mp3,audio/m/israeli/word/brich-shmei-w8.mp3
 pass,1.0,word,סָמִיכְנָא,סמיך נא,samikhena,I rely,audio/m/israeli/word/brich-shmei-w80.mp3,audio/m/israeli/word/brich-shmei-w80.mp3
 pass,1.0,word,אֶלָּא,אלה,ela,"but, except",audio/m/israeli/word/brich-shmei-w81.mp3,audio/m/israeli/word/brich-shmei-w81.mp3
+pass,1.0,word,בֵּאלָהָא,בלהה,belaha,in God,audio/m/israeli/word/brich-shmei-w82.mp3,audio/m/israeli/word/brich-shmei-w82.mp3
 pass,1.0,word,דִשְׁמַיָּא,דשמיא,dishmaya,of heaven,audio/m/israeli/word/brich-shmei-w83.mp3,audio/m/israeli/word/brich-shmei-w83.mp3
 pass,1.0,word,אֱלָהָא,אלא הא.,elaha,God,audio/m/israeli/word/brich-shmei-w85.mp3,audio/m/israeli/word/brich-shmei-w85.mp3
 pass,1.0,word,קְשׁוֹט,קשות,keshot,truth,audio/m/israeli/word/brich-shmei-w86.mp3,audio/m/israeli/word/brich-shmei-w86.mp3
@@ -3794,7 +3725,6 @@ pass,1.0,word,שֶׁל,של,shel,"of, belonging to, owned by, pertaining to",aud
 pass,1.0,word,שַׁבָּת׃,שבת,shabat,"Shabbat, Sabbath; Saturday; week (Mishnaic Hebrew)",audio/m/israeli/word/candle-shabbat-w14.mp3,audio/m/israeli/word/candle-shabbat-w14.mp3 audio/m/israeli/word/kiddush-zachor-w12.mp3
 pass,1.0,word,אֲשֶׁר,אשר,asher,introduces a subordinate clause,audio/m/israeli/word/candle-shabbat-w7.mp3,audio/m/israeli/word/candle-shabbat-w7.mp3 audio/m/israeli/word/ha8f1d06f.mp3 audio/m/israeli/word/haftarah-before-w7.mp3 audio/m/israeli/word/hanukkah-candle-w7.mp3 audio/m/israeli/word/kiddush-gen-2-1-3-w10.mp3 audio/m/israeli/word/shema-vahavta-w17.mp3 audio/m/israeli/word/torah-bless-1-w7.mp3 audio/m/israeli/word/vahavta-2-w4.mp3 audio/m/israeli/word/vahavta-full-w11.mp3 audio/m/israeli/word/vezot-hatorah-w3.mp3 audio/m/israeli/word/yigdal-w31.mp3
 pass,1.0,word,קִדְּשָׁנוּ,קידשנו,kideshanu,made us holy,audio/m/israeli/word/candle-shabbat-w8.mp3,audio/m/israeli/word/candle-shabbat-w8.mp3 audio/m/israeli/word/hanukkah-candle-w8.mp3 audio/m/israeli/word/kiddush-shabbat-eve-w8.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/m/israeli/word/candle-shabbat-w9.mp3,audio/m/israeli/word/candle-shabbat-w9.mp3 audio/m/israeli/word/kiddush-shabbat-eve-w9.mp3
 pass,1.0,word,יָשָׁר,ישר,yashar,straight ahead,audio/m/israeli/word/directions-05.mp3,audio/m/israeli/word/directions-05.mp3
 pass,1.0,word,שְׂמֹאלָה,שמאלה,semolah,left,audio/m/israeli/word/directions-06.mp3,audio/m/israeli/word/directions-06.mp3
 pass,1.0,word,יָמִינָה,ימינה,yaminah,right,audio/m/israeli/word/directions-07.mp3,audio/m/israeli/word/directions-07.mp3
@@ -3828,7 +3758,6 @@ pass,1.0,word,דַרְכֵי,דרכי,darkhei,ways of,audio/m/israeli/word/etz-c
 pass,1.0,word,אָז,"עז,",az,so,audio/m/israeli/word/fillers-01.mp3,audio/m/israeli/word/fillers-01.mp3
 pass,1.0,word,נוּ,"נו,",nu,well? / come on,audio/m/israeli/word/fillers-02.mp3,audio/m/israeli/word/fillers-02.mp3
 pass,1.0,word,טוֹב,"טוב,",tov,OK / well / good,audio/m/israeli/word/fillers-03.mp3,audio/m/israeli/word/fillers-03.mp3
-pass,1.0,word,נָכוֹן,"נקון,",nakhon,right / correct,audio/m/israeli/word/fillers-04.mp3,audio/m/israeli/word/fillers-04.mp3
 pass,1.0,word,בֶּאֱמֶת?,באמת?,be'emet?,really?,audio/m/israeli/word/fillers-06.mp3,audio/m/israeli/word/fillers-06.mp3
 pass,1.0,word,מַמָּשׁ,ממש,mamash,really / truly / very,audio/m/israeli/word/fillers-07.mp3,audio/m/israeli/word/fillers-07.mp3 audio/m/israeli/word/hd0a91fd4.mp3
 pass,1.0,word,פָּשׁוּט,פשוט,pashut,simply / just,audio/m/israeli/word/fillers-08.mp3,audio/m/israeli/word/fillers-08.mp3 audio/m/israeli/word/h1a07a738.mp3
@@ -3899,6 +3828,7 @@ pass,1.0,word,טָעוּת,טעות,ta'ut,"error, mistake",audio/m/israeli/word/
 pass,1.0,word,שָׁכַח,שכח,shakhach,to forget,audio/m/israeli/word/h0c76d311.mp3,audio/m/israeli/word/h0c76d311.mp3
 pass,1.0,word,בָּחוּר,בחור,bachur,"guy, boy; youth (countable), young man; a young man over 13 who is required to perform mitzvoth but has never married",audio/m/israeli/word/h0c96b2f5.mp3,audio/m/israeli/word/h0c96b2f5.mp3
 pass,1.0,word,טַף,טף,taf,"babies, infants, small children; children",audio/m/israeli/word/h0cc80aed.mp3,audio/m/israeli/word/h0cc80aed.mp3
+pass,1.0,word,אִוָּה,איבה,ivah,"to greatly desire, want, long for, lust for",audio/m/israeli/word/h0cdd730a.mp3,audio/m/israeli/word/h0cdd730a.mp3
 pass,1.0,word,הִזְדַּמְּנוּת,הזדמנות,hizdamenut,"an opportunity, a chance",audio/m/israeli/word/h0e0c5c6e.mp3,audio/m/israeli/word/h0e0c5c6e.mp3
 pass,1.0,word,הִתְגַּעֲגֵעַ,התגעגע,hitga'age'a,"to miss, to long for",audio/m/israeli/word/h0e1d6c8d.mp3,audio/m/israeli/word/h0e1d6c8d.mp3
 pass,1.0,word,אִחוּר,איחור,ichur,a delay,audio/m/israeli/word/h0edcb196.mp3,audio/m/israeli/word/h0edcb196.mp3
@@ -3987,7 +3917,6 @@ pass,1.0,word,כִּוֵּן,כיוון,kiven,to direct (as traffic),audio/m/isr
 pass,1.0,word,סֵפֶר,ספר,sefer,book; a writing,audio/m/israeli/word/h231c624a.mp3,audio/m/israeli/word/h231c624a.mp3
 pass,1.0,word,יַלְדוּתִי,ילדותי,yalduti,"childish (suitable for a child); juvenile, immature",audio/m/israeli/word/h233116f1.mp3,audio/m/israeli/word/h233116f1.mp3
 pass,1.0,word,זוּג,זוג,zug,"pair, couple, twosome; pair, two-of-a-kind",audio/m/israeli/word/h2334782c.mp3,audio/m/israeli/word/h2334782c.mp3
-pass,1.0,word,כּוֹכָב,כוכב,kokhav,star; relating to fame,audio/m/israeli/word/h233af6f2.mp3,audio/m/israeli/word/h233af6f2.mp3
 pass,1.0,word,מָהִיר,מהיר,mahir,"fast, quick, swift; skilled, skillful, proficient (in a craft or task); prompt, ready, diligent",audio/m/israeli/word/h23d5cdb5.mp3,audio/m/israeli/word/h23d5cdb5.mp3
 pass,1.0,word,בָּחַר,בחר,bachar,"to choose, to opt, to select; to prefer; to appoint",audio/m/israeli/word/h23e0b2a4.mp3,audio/m/israeli/word/h23e0b2a4.mp3
 pass,1.0,word,כְּלוּם,כלום,kelum,anything; used to turn a statement of fact into a question of fact,audio/m/israeli/word/h23f7ab73.mp3,audio/m/israeli/word/h23f7ab73.mp3
@@ -4000,6 +3929,7 @@ pass,1.0,word,צׇהֳרַיִם,צהריים,tzohorayim,"Noon, midday",audio/m/
 pass,1.0,word,מָשַׁח,משך,mashach,to anoint with oil,audio/m/israeli/word/h25e14407.mp3,audio/m/israeli/word/h25e14407.mp3
 pass,1.0,word,אֶלֶף,אלף,elef,"thousand, one thousand",audio/m/israeli/word/h26154c1a.mp3,audio/m/israeli/word/h26154c1a.mp3
 pass,1.0,word,לַח,לך,lach,"humid; moist, damp",audio/m/israeli/word/h263f168c.mp3,audio/m/israeli/word/h263f168c.mp3
+pass,1.0,word,שָׂבַע,סבא,sava,to be sated; to be satisfied,audio/m/israeli/word/h264da105.mp3,audio/m/israeli/word/h264da105.mp3
 pass,1.0,word,הֶאֱמִין,האמין,he'emin,to believe,audio/m/israeli/word/h26a32615.mp3,audio/m/israeli/word/h26a32615.mp3
 pass,1.0,word,שֻׁתָּף,שותף,shutaf,"partner, affiliate, copartner; roommate",audio/m/israeli/word/h26e6f8c5.mp3,audio/m/israeli/word/h26e6f8c5.mp3
 pass,1.0,word,שׁוֹר,שור,shor,ox,audio/m/israeli/word/h26f014a5.mp3,audio/m/israeli/word/h26f014a5.mp3
@@ -4010,7 +3940,7 @@ pass,1.0,word,אָמַר,אמר,amar,"to say, tell; to intend; to mean",audio/m/
 pass,1.0,word,שָׁבוּר,שבור,shavur,"Broken; Broken, dead",audio/m/israeli/word/h28d30511.mp3,audio/m/israeli/word/h28d30511.mp3
 pass,1.0,word,רָאָה,רעה,ra'ah,"to see, to have vision; to observe, look at",audio/m/israeli/word/h28ecb454.mp3,audio/m/israeli/word/h28ecb454.mp3
 pass,1.0,word,חוֹמָה,חומה,chomah,"a wall, a structure built for defense around a city, castle, etc",audio/m/israeli/word/h293be884.mp3,audio/m/israeli/word/h293be884.mp3
-pass,1.0,word,וָו,וו,vav,hook,audio/m/israeli/word/h29a2e2b8.mp3,audio/m/israeli/word/h29a2e2b8.mp3
+pass,1.0,word,וָו,ו.,vav,hook,audio/m/israeli/word/h29a2e2b8.mp3,audio/m/israeli/word/h29a2e2b8.mp3
 pass,1.0,word,חֲמִשָּׁה,חמישה,chamishah,five,audio/m/israeli/word/h29aadfe4.mp3,audio/m/israeli/word/h29aadfe4.mp3
 pass,1.0,word,דַּי,די,dai,"enough, sufficient, adequate; stop!, enough!, cease!",audio/m/israeli/word/h29e4f547.mp3,audio/m/israeli/word/h29e4f547.mp3
 pass,1.0,word,קָשֶׁה,קשה,kasheh,hard (resistant to pressure); hard (difficult); hard,audio/m/israeli/word/h29ebe493.mp3,audio/m/israeli/word/h29ebe493.mp3
@@ -4070,7 +4000,6 @@ pass,1.0,word,פּוֹלִיטִי,פוליטי,politi,political,audio/m/israeli
 pass,1.0,word,אֶדֶן,עדן,eden,"base, pedestal, socket",audio/m/israeli/word/h36fae7b2.mp3,audio/m/israeli/word/h36fae7b2.mp3
 pass,1.0,word,מְצֻיָּן,מצוין,metzuyan,Exceptional,audio/m/israeli/word/h37034142.mp3,audio/m/israeli/word/h37034142.mp3
 pass,1.0,word,רָחוֹק,רחוק,rachok,"far, distant",audio/m/israeli/word/h372b7277.mp3,audio/m/israeli/word/h372b7277.mp3 audio/m/israeli/word/il11-w5.mp3
-pass,1.0,word,כָּכָה,ככה,kakhah,"thus (in this way, like so)",audio/m/israeli/word/h3777d988.mp3,audio/m/israeli/word/h3777d988.mp3
 pass,1.0,word,תִּיק,תיק,tik,"bag, satchel; case; portfolio",audio/m/israeli/word/h378062a7.mp3,audio/m/israeli/word/h378062a7.mp3
 pass,1.0,word,בָּסִיס,בסיס,basis,a base,audio/m/israeli/word/h37908437.mp3,audio/m/israeli/word/h37908437.mp3
 pass,1.0,word,צִלֵּם,צילם,tzilem,"to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",audio/m/israeli/word/h37cac81b.mp3,audio/m/israeli/word/h37cac81b.mp3
@@ -4174,7 +4103,6 @@ pass,1.0,word,חַיִּים,חיים,chayim,life; life (state of being alive),a
 pass,1.0,word,לְלֹא,ללא,lelo,without,audio/m/israeli/word/h52191bbf.mp3,audio/m/israeli/word/h52191bbf.mp3
 pass,1.0,word,קָשַׁר,קשר,kashar,"to tie, link together; to relate, associate; to conspire",audio/m/israeli/word/h524464c5.mp3,audio/m/israeli/word/h524464c5.mp3
 pass,1.0,word,מַצָּב,מצב,matzav,"a shape, a situation, a state",audio/m/israeli/word/h524e52f1.mp3,audio/m/israeli/word/h524e52f1.mp3
-pass,1.0,word,עָווֹן,עוון,avon,"iniquity; an intentional sin, done for the purpose of pleasure",audio/m/israeli/word/h5271b622.mp3,audio/m/israeli/word/h5271b622.mp3
 pass,1.0,word,צָחַק,צחק,tzachak,to laugh; to joke,audio/m/israeli/word/h532fdc70.mp3,audio/m/israeli/word/h532fdc70.mp3
 pass,1.0,word,סִבָּה,סיבה,sibah,cause,audio/m/israeli/word/h5385f0f3.mp3,audio/m/israeli/word/h5385f0f3.mp3
 pass,1.0,word,צָרַעַת,צרעת,tzara'at,"an affliction of the skin, clothes, or house as a punishment for sins of speech; leprosy",audio/m/israeli/word/h54170135.mp3,audio/m/israeli/word/h54170135.mp3
@@ -4529,7 +4457,6 @@ pass,1.0,word,רְצִינוּת,רצינות,retzinut,seriousness,audio/m/israe
 pass,1.0,word,פָּגַע,פגע,paga,"to hurt or injure (someone or something); to meet; to entreat, to intercede",audio/m/israeli/word/hafedf16c.mp3,audio/m/israeli/word/hafedf16c.mp3
 pass,1.0,word,בְּכָל־הַדּוֹרוֹת,בכל הדורות,bekhol-hadorot,in all generations,audio/m/israeli/word/haftarah-after-w10.mp3,audio/m/israeli/word/haftarah-after-w10.mp3
 pass,1.0,word,מָגֵן,מגן,magen,shield,audio/m/israeli/word/haftarah-after-w102.mp3,audio/m/israeli/word/haftarah-after-w102.mp3
-pass,1.0,word,דָּוִד׃,דוד,david,David,audio/m/israeli/word/haftarah-after-w103.mp3,audio/m/israeli/word/haftarah-after-w103.mp3
 pass,1.0,word,הַתּוֹרָה,התורה,hatorah,the Torah,audio/m/israeli/word/haftarah-after-w105.mp3,audio/m/israeli/word/haftarah-after-w105.mp3
 pass,1.0,word,וְעַל,ועל,ve'al,and for,audio/m/israeli/word/haftarah-after-w106.mp3,audio/m/israeli/word/haftarah-after-w106.mp3
 pass,1.0,word,הָעֲבוֹדָה,העבודה,ha'avodah,the service,audio/m/israeli/word/haftarah-after-w107.mp3,audio/m/israeli/word/haftarah-after-w107.mp3
@@ -4603,7 +4530,6 @@ pass,1.0,word,עַבְדָּךְ,עבדך,avdakh,your servant,audio/m/israeli/wo
 pass,1.0,word,צוּר,צור,tzur,rock,audio/m/israeli/word/haftarah-after-w7.mp3,audio/m/israeli/word/haftarah-after-w7.mp3
 pass,1.0,word,וּבְמַלְכוּת,ובמלכות,uvemalkhut,and with the kingdom,audio/m/israeli/word/haftarah-after-w70.mp3,audio/m/israeli/word/haftarah-after-w70.mp3
 pass,1.0,word,בֵּית,בית,beit,of the house,audio/m/israeli/word/haftarah-after-w71.mp3,audio/m/israeli/word/haftarah-after-w71.mp3
-pass,1.0,word,דָּוִד,דוד,david,of David,audio/m/israeli/word/haftarah-after-w72.mp3,audio/m/israeli/word/haftarah-after-w72.mp3
 pass,1.0,word,מְשִׁיחָךְ,משיחך,meshichakh,your anointed,audio/m/israeli/word/haftarah-after-w73.mp3,audio/m/israeli/word/haftarah-after-w73.mp3
 pass,1.0,word,בִּמְהֵרָה,במהרה,bimherah,quickly,audio/m/israeli/word/haftarah-after-w74.mp3,audio/m/israeli/word/haftarah-after-w74.mp3
 pass,1.0,word,יָבֹא,יבוא,yavo,may he come,audio/m/israeli/word/haftarah-after-w75.mp3,audio/m/israeli/word/haftarah-after-w75.mp3
@@ -4686,7 +4612,6 @@ pass,1.0,word,מַדְלִיקִין,מדליקין,madlikin,light,audio/m/israe
 pass,1.0,word,הַנִּסִּים,הניסים,hanisim,the miracles,audio/m/israeli/word/hanerot-halalu-w6.mp3,audio/m/israeli/word/hanerot-halalu-w6.mp3
 pass,1.0,word,הַתְּשׁוּעוֹת,התשועות,hateshu'ot,the deliverances,audio/m/israeli/word/hanerot-halalu-w8.mp3,audio/m/israeli/word/hanerot-halalu-w8.mp3
 pass,1.0,word,נֵר,נר,ner,"oil lamp, candle",audio/m/israeli/word/hanukkah-candle-w12.mp3,audio/m/israeli/word/hanukkah-candle-w12.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו,bemitzvotav,with his commandments,audio/m/israeli/word/hanukkah-candle-w9.mp3,audio/m/israeli/word/hanukkah-candle-w9.mp3
 pass,1.0,word,בַּיָּמִים,בימים,bayamim,in the days,audio/m/israeli/word/hanukkah-nissim-w10.mp3,audio/m/israeli/word/hanukkah-nissim-w10.mp3
 pass,1.0,word,הָהֵם,ההם,hahem,those,audio/m/israeli/word/hanukkah-nissim-w11.mp3,audio/m/israeli/word/hanukkah-nissim-w11.mp3
 pass,1.0,word,בַּזְּמַן,בזמן,bazeman,at the time,audio/m/israeli/word/hanukkah-nissim-w12.mp3,audio/m/israeli/word/hanukkah-nissim-w12.mp3
@@ -4724,6 +4649,7 @@ pass,1.0,word,וַיְהִי,ויהי,vayhi,and he has become,audio/m/israeli/wo
 pass,1.0,word,לִישׁוּעָה׃,לישועה,lishu'ah,for salvation,audio/m/israeli/word/havdalah-opening-w14.mp3,audio/m/israeli/word/havdalah-opening-w14.mp3
 pass,1.0,word,וּשְׁאַבְתֶּם,ושאבתם.,ushe'avtem,and you will draw,audio/m/israeli/word/havdalah-opening-w15.mp3,audio/m/israeli/word/havdalah-opening-w15.mp3
 pass,1.0,word,מַיִם,מים,mayim,water,audio/m/israeli/word/havdalah-opening-w16.mp3,audio/m/israeli/word/havdalah-opening-w16.mp3 audio/m/israeli/word/i-45-w9.mp3
+pass,1.0,word,בְּשָׂשׁוֹן,בסשון,besashon,with joy,audio/m/israeli/word/havdalah-opening-w17.mp3,audio/m/israeli/word/havdalah-opening-w17.mp3
 pass,1.0,word,מִמַּעַיְנֵי,ממעייני,mima'aynei,from the springs of,audio/m/israeli/word/havdalah-opening-w18.mp3,audio/m/israeli/word/havdalah-opening-w18.mp3
 pass,1.0,word,הַיְשׁוּעָה׃,הישועה,hayshu'ah,salvation,audio/m/israeli/word/havdalah-opening-w19.mp3,audio/m/israeli/word/havdalah-opening-w19.mp3 audio/m/israeli/word/havdalah-opening-w21.mp3
 pass,1.0,word,לַאֲדֹנָי,לאדוני,la'adonai,to the LORD,audio/m/israeli/word/havdalah-opening-w20.mp3,audio/m/israeli/word/havdalah-opening-w20.mp3
@@ -4852,7 +4778,6 @@ pass,1.0,word,אֶצְבַּע,אצבע,etzba,finger; forefinger,audio/m/israeli
 pass,1.0,word,אִיֵּם,איים,iyem,to threaten,audio/m/israeli/word/hc5a2dfc8.mp3,audio/m/israeli/word/hc5a2dfc8.mp3
 pass,1.0,word,קָרוֹב,קרוב,karov,"close, near",audio/m/israeli/word/hc5d024c3.mp3,audio/m/israeli/word/hc5d024c3.mp3 audio/m/israeli/word/il11-w4.mp3
 pass,1.0,word,שַׁיָּךְ,שייך,shayakh,"belonging (to), owned (by); relevant, pertinent",audio/m/israeli/word/hc5e933f4.mp3,audio/m/israeli/word/hc5e933f4.mp3
-pass,1.0,word,לֵוִי,לוי,levi,Levite,audio/m/israeli/word/hc5ed2600.mp3,audio/m/israeli/word/hc5ed2600.mp3
 pass,1.0,word,דּוֹר,דור,dor,generation,audio/m/israeli/word/hc637d8a6.mp3,audio/m/israeli/word/hc637d8a6.mp3
 pass,1.0,word,צַד,צד,tzad,"a side; a side, an aspect",audio/m/israeli/word/hc639d04f.mp3,audio/m/israeli/word/hc639d04f.mp3
 pass,1.0,word,נְקֻדָּה,נקודה,nekudah,"point; dot; full stop, period",audio/m/israeli/word/hc6597ed8.mp3,audio/m/israeli/word/hc6597ed8.mp3
@@ -4941,6 +4866,7 @@ pass,1.0,word,רֶכֶב,רכב,rekhev,"vehicle, chariot; car; a rider (an upper
 pass,1.0,word,סָלַח,סלח,salach,to forgive; to excuse,audio/m/israeli/word/hdd847ae4.mp3,audio/m/israeli/word/hdd847ae4.mp3
 pass,1.0,word,שַׁעַר,שער,sha'ar,gateway (entrance); gateway (beginning); market value,audio/m/israeli/word/hddb5189f.mp3,audio/m/israeli/word/hddb5189f.mp3
 pass,1.0,word,אָדוֹן,אדון,adon,lord; Mr,audio/m/israeli/word/hddb7aae9.mp3,audio/m/israeli/word/hddb7aae9.mp3
+pass,1.0,word,אָוֶן,אבן,aven,"evil, wickedness",audio/m/israeli/word/hddeaa2ed.mp3,audio/m/israeli/word/hddeaa2ed.mp3
 pass,1.0,word,חוֹף,חוף,chof,"beach, shore, coast",audio/m/israeli/word/hde2302bb.mp3,audio/m/israeli/word/hde2302bb.mp3
 pass,1.0,word,הִטָּה,היטה,hitah,"to tilt, slant; to inflect",audio/m/israeli/word/hde82cf75.mp3,audio/m/israeli/word/hde82cf75.mp3
 pass,1.0,word,סָתַר,סתר,satar,"to contradict; to refute; to neutralize, to counteract",audio/m/israeli/word/hde989655.mp3,audio/m/israeli/word/hde989655.mp3
@@ -5200,7 +5126,6 @@ pass,1.0,word,טָרִי,טרי,tari,UNKNOWN,audio/m/israeli/word/i-12-w8.mp3,au
 pass,1.0,word,עַגְבָנִיָּה,עגבנייה,agvaniyah,UNKNOWN,audio/m/israeli/word/i-12-w9.mp3,audio/m/israeli/word/i-12-w9.mp3
 pass,1.0,word,אֶפְשָׁר לְהַזְמִין?,אפשר להזמין,efshar lehazmin?,UNKNOWN,audio/m/israeli/word/i-13-w1.mp3,audio/m/israeli/word/i-13-w1.mp3
 pass,1.0,word,קָטָן,קטן,katan,UNKNOWN,audio/m/israeli/word/i-13-w10.mp3,audio/m/israeli/word/i-13-w10.mp3
-pass,1.0,word,לֶאֱכֹל כָּאן אוֹ לָקַחַת?,לאכול כאן או לקחת.,le'ekhol kan o lakachat?,UNKNOWN,audio/m/israeli/word/i-13-w11.mp3,audio/m/israeli/word/i-13-w11.mp3
 pass,1.0,word,"הַחֶשְׁבּוֹן, בְּבַקָּשָׁה","החשבון, בבקשה.","hacheshbon, bevakashah",UNKNOWN,audio/m/israeli/word/i-13-w12.mp3,audio/m/israeli/word/i-13-w12.mp3
 pass,1.0,word,צִמְחוֹנִי,צמחוני,tzimchoni,UNKNOWN,audio/m/israeli/word/i-13-w13.mp3,audio/m/israeli/word/i-13-w13.mp3
 pass,1.0,word,צִמְחוֹנִית,צמחונית,tzimchonit,UNKNOWN,audio/m/israeli/word/i-13-w14.mp3,audio/m/israeli/word/i-13-w14.mp3
@@ -5397,7 +5322,6 @@ pass,1.0,word,סְלִיחָה,סליחה,selichah,UNKNOWN,audio/m/israeli/word/
 pass,1.0,word,סְלִיחוֹת,סליחות,selichot,UNKNOWN,audio/m/israeli/word/i-28-w5.mp3,audio/m/israeli/word/i-28-w5.mp3
 pass,1.0,word,תְּשׁוּבָה,תשובה,teshuvah,UNKNOWN,audio/m/israeli/word/i-28-w6.mp3,audio/m/israeli/word/i-28-w6.mp3
 pass,1.0,word,שָׁנָה טוֹבָה,שנה טובה.,shanah tovah,UNKNOWN,audio/m/israeli/word/i-28-w7.mp3,audio/m/israeli/word/i-28-w7.mp3
-pass,1.0,word,בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ,ברוך שם כבוד מלכותו.,barukh shem kevod malkhuto,UNKNOWN,audio/m/israeli/word/i-28-w8.mp3,audio/m/israeli/word/i-28-w8.mp3
 pass,1.0,word,שְׁמַע יִשְׂרָאֵל,שמע ישראל.,shema yisra'el,UNKNOWN,audio/m/israeli/word/i-28-w9.mp3,audio/m/israeli/word/i-28-w9.mp3
 pass,1.0,word,פֶּסַח,פסח.,pesach,UNKNOWN,audio/m/israeli/word/i-29-w1.mp3,audio/m/israeli/word/i-29-w1.mp3
 pass,1.0,word,עֲבָדִים,עבדים.,avadim,UNKNOWN,audio/m/israeli/word/i-29-w10.mp3,audio/m/israeli/word/i-29-w10.mp3
@@ -5419,7 +5343,6 @@ pass,1.0,word,שֶׁהֶחֱיָינוּ,שהחיינו,shehecheyainu,UNKNOWN,au
 pass,1.0,word,לַזְּמַן הַזֶּה,לזמן הזה.,lazeman hazeh,UNKNOWN,audio/m/israeli/word/i-30-w5.mp3,audio/m/israeli/word/i-30-w5.mp3
 pass,1.0,word,הַמּוֹצִיא לֶחֶם,המוציא לחם.,hamotzi lechem,UNKNOWN,audio/m/israeli/word/i-30-w7.mp3,audio/m/israeli/word/i-30-w7.mp3
 pass,1.0,word,מִצְוָה,מצווה.,mitzvah,UNKNOWN,audio/m/israeli/word/i-30-w8.mp3,audio/m/israeli/word/i-30-w8.mp3
-pass,1.0,word,בְּמִצְוֹתָיו,במצוותיו.,bemitzvotav,UNKNOWN,audio/m/israeli/word/i-30-w9.mp3,audio/m/israeli/word/i-30-w9.mp3
 pass,1.0,word,פּוּרִים,פורים.,purim,UNKNOWN,audio/m/israeli/word/i-31-w1.mp3,audio/m/israeli/word/i-31-w1.mp3
 pass,1.0,word,מַשְׁקֶה,משקה.,mashkeh,UNKNOWN,audio/m/israeli/word/i-31-w10.mp3,audio/m/israeli/word/i-31-w10.mp3
 pass,1.0,word,לְחַיִּים,לחיים.,lechayim,UNKNOWN,audio/m/israeli/word/i-31-w11.mp3,audio/m/israeli/word/i-31-w11.mp3
@@ -5610,7 +5533,6 @@ pass,1.0,word,יָאללָה,יא אללה,yallah,UNKNOWN,audio/m/israeli/word/i
 pass,1.0,word,סַבָּבָּה,סבבה.,sababah,UNKNOWN,audio/m/israeli/word/il02-w3.mp3,audio/m/israeli/word/il02-w3.mp3
 pass,1.0,word,בְּסֵדֶר,בסדר.,beseder,UNKNOWN,audio/m/israeli/word/il02-w4.mp3,audio/m/israeli/word/il02-w4.mp3
 pass,1.0,word,אַחְלָה,אחלה.,achlah,UNKNOWN,audio/m/israeli/word/il02-w5.mp3,audio/m/israeli/word/il02-w5.mp3
-pass,1.0,word,וַואלָה,וואלה,vavlah,UNKNOWN,audio/m/israeli/word/il02-w6.mp3,audio/m/israeli/word/il02-w6.mp3
 pass,1.0,word,שְׁמִי,שמי,shemi,UNKNOWN,audio/m/israeli/word/il03-w1.mp3,audio/m/israeli/word/il03-w1.mp3
 pass,1.0,word,מַה שְׁמֶךָ,מה שמך?,mah shemekha,UNKNOWN,audio/m/israeli/word/il03-w2.mp3,audio/m/israeli/word/il03-w2.mp3
 pass,1.0,word,מַה שְׁמֵךְ,מה שמך?,mah shemekh,UNKNOWN,audio/m/israeli/word/il03-w3.mp3,audio/m/israeli/word/il03-w3.mp3
@@ -5750,6 +5672,7 @@ pass,1.0,word,בִּמְרוֹמָיו,במרומיו,bimromav,in his high place
 pass,1.0,word,יַעֲשֶׂה,יעשה,ya'aseh,may he make,audio/m/israeli/word/kaddish-1-w62.mp3,audio/m/israeli/word/kaddish-1-w62.mp3
 pass,1.0,word,כָּל,קל,kol,"all, whole, everything",audio/m/israeli/word/kaddish-1-w66.mp3,audio/m/israeli/word/kaddish-1-w66.mp3 audio/m/israeli/word/r32-w1.mp3
 pass,1.0,word,דִּי־בְרָא,דיברה,di-vera,that he created,audio/m/israeli/word/kaddish-1-w7.mp3,audio/m/israeli/word/kaddish-1-w7.mp3
+pass,1.0,word,כִרְעוּתֵהּ,כראותה,khir'uteh,by his will,audio/m/israeli/word/kaddish-1-w8.mp3,audio/m/israeli/word/kaddish-1-w8.mp3
 pass,1.0,word,וְיַמְלִיךְ,וימליך,veyamlikh,and may he establish,audio/m/israeli/word/kaddish-1-w9.mp3,audio/m/israeli/word/kaddish-1-w9.mp3
 pass,1.0,word,כְּבוֹד־אֲדֹנָי,כבוד אדוני,kevod-adonai,the glory of the LORD,audio/m/israeli/word/kedushah-baruch-w2.mp3,audio/m/israeli/word/kedushah-baruch-w2.mp3
 pass,1.0,word,מִמְּקוֹמוֹ׃,ממקומו,mimekomo,from his place,audio/m/israeli/word/kedushah-baruch-w3.mp3,audio/m/israeli/word/kedushah-baruch-w3.mp3
@@ -5796,6 +5719,7 @@ pass,1.0,word,וּבְרָצוֹן,וברצון,uveratzon,and favour,audio/m/isr
 pass,1.0,word,הִנְחִילָנוּ,הנחילנו,hinchilanu,gave us as an inheritance,audio/m/israeli/word/kiddush-shabbat-eve-w16.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w16.mp3
 pass,1.0,word,זִכָּרוֹן,זיכרון,zikaron,"memory; a memory; memory, computer memory",audio/m/israeli/word/kiddush-shabbat-eve-w17.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w17.mp3
 pass,1.0,word,לְמַעֲשֵׂה,למעשה,lema'aseh,for the work,audio/m/israeli/word/kiddush-shabbat-eve-w18.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w18.mp3
+pass,1.0,word,בְרֵאשִׁית,בראשית,vereshit,of creation,audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w19.mp3
 pass,1.0,word,תְּחִלָּה,תחילה,techilah,beginning,audio/m/israeli/word/kiddush-shabbat-eve-w23.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w23.mp3
 pass,1.0,word,לְמִקְרָאֵי,למקראי,lemikra'ei,for the convocations,audio/m/israeli/word/kiddush-shabbat-eve-w24.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w24.mp3
 pass,1.0,word,זֵכֶר,זכר,zekher,"remembrance, remain, remnant",audio/m/israeli/word/kiddush-shabbat-eve-w26.mp3,audio/m/israeli/word/kiddush-shabbat-eve-w26.mp3
@@ -5859,7 +5783,7 @@ pass,1.0,word,שֵׁשֶׁת,ששת,sheshet,six,audio/m/israeli/word/kiddush-zac
 pass,1.0,word,יָמִים,ימים,yamim,days,audio/m/israeli/word/kiddush-zachor-w6.mp3,audio/m/israeli/word/kiddush-zachor-w6.mp3
 pass,1.0,word,תַּעֲבֹד,תעבוד,ta'avod,you shall labour,audio/m/israeli/word/kiddush-zachor-w7.mp3,audio/m/israeli/word/kiddush-zachor-w7.mp3
 pass,1.0,word,וְעָשִׂיתָ,ועשית,ve'asita,and do,audio/m/israeli/word/kiddush-zachor-w8.mp3,audio/m/israeli/word/kiddush-zachor-w8.mp3
-pass,1.0,word,כָּל־מְלַאכְתֶּךָ,כל מלאכתך,kol-melakhtekha,all your work,audio/m/israeli/word/kiddush-zachor-w9.mp3,audio/m/israeli/word/kiddush-zachor-w9.mp3
+pass,1.0,word,כָּל־מְלַאכְתֶּךָ,קל מלאכתך.,kol-melakhtekha,all your work,audio/m/israeli/word/kiddush-zachor-w9.mp3,audio/m/israeli/word/kiddush-zachor-w9.mp3
 pass,1.0,word,לְכָה,לך,lekhah,come,audio/m/israeli/word/lecha-dodi-1-w1.mp3,audio/m/israeli/word/lecha-dodi-1-w1.mp3
 pass,1.0,word,בְּדִבּוּר,בדיבור,bedibur,in an utterance,audio/m/israeli/word/lecha-dodi-1-w10.mp3,audio/m/israeli/word/lecha-dodi-1-w10.mp3
 pass,1.0,word,הִשְׁמִיעָנוּ,השמיענו,hishmi'anu,made us hear,audio/m/israeli/word/lecha-dodi-1-w12.mp3,audio/m/israeli/word/lecha-dodi-1-w12.mp3
@@ -5885,10 +5809,8 @@ pass,1.0,word,וְהַמִּתְנַשֵּׂא,והמתנשא,vehamitnase,and th
 pass,1.0,word,לְכֹל,לכל,lekhol,over all,audio/m/israeli/word/lecha-hashem-w16.mp3,audio/m/israeli/word/lecha-hashem-w16.mp3
 pass,1.0,word,לְרֹאשׁ׃,לראש,lerosh,as head,audio/m/israeli/word/lecha-hashem-w17.mp3,audio/m/israeli/word/lecha-hashem-w17.mp3
 pass,1.0,word,רוֹמְמוּ,רוממו,romemu,exalt,audio/m/israeli/word/lecha-hashem-w18.mp3,audio/m/israeli/word/lecha-hashem-w18.mp3 audio/m/israeli/word/lecha-hashem-w26.mp3
-pass,1.0,word,וְהִשְׁתַּחֲווּ,והשתחוו,vehishtachavu,and bow,audio/m/israeli/word/lecha-hashem-w21.mp3,audio/m/israeli/word/lecha-hashem-w21.mp3
 pass,1.0,word,לַהֲדֹם,להדום,lahadom,at the footstool,audio/m/israeli/word/lecha-hashem-w22.mp3,audio/m/israeli/word/lecha-hashem-w22.mp3
 pass,1.0,word,רַגְלָיו,רגליו,raglav,his feet,audio/m/israeli/word/lecha-hashem-w23.mp3,audio/m/israeli/word/lecha-hashem-w23.mp3
-pass,1.0,word,וְהִשְׁתַּחֲווּ,והשתחוו,vehishtachavu,and bow,audio/m/israeli/word/lecha-hashem-w29.mp3,audio/m/israeli/word/lecha-hashem-w29.mp3
 pass,1.0,word,הַגְּדֻלָּה,הגדולה,hagedulah,the greatness,audio/m/israeli/word/lecha-hashem-w3.mp3,audio/m/israeli/word/lecha-hashem-w3.mp3
 pass,1.0,word,לְהַר,להר,lehar,at the mountain,audio/m/israeli/word/lecha-hashem-w30.mp3,audio/m/israeli/word/lecha-hashem-w30.mp3
 pass,1.0,word,וְהַגְּבוּרָה,והגבורה,vehagevurah,and the might,audio/m/israeli/word/lecha-hashem-w4.mp3,audio/m/israeli/word/lecha-hashem-w4.mp3
@@ -5896,6 +5818,7 @@ pass,1.0,word,וְהַתִּפְאֶרֶת,והתפארת,vehatif'eret,and the s
 pass,1.0,word,וְהַנֵּצַח,והנצח,vehanetzach,and the victory,audio/m/israeli/word/lecha-hashem-w6.mp3,audio/m/israeli/word/lecha-hashem-w6.mp3
 pass,1.0,word,וְהַהוֹד,וההוד,vehahod,and the majesty,audio/m/israeli/word/lecha-hashem-w7.mp3,audio/m/israeli/word/lecha-hashem-w7.mp3
 pass,1.0,word,כֹל,כל,khol,everything,audio/m/israeli/word/lecha-hashem-w9.mp3,audio/m/israeli/word/lecha-hashem-w9.mp3
+pass,1.0,word,מַה־טֹּבוּ,מה טובו.,mah-tovu,how goodly,audio/m/israeli/word/mah-tovu-1-w1.mp3,audio/m/israeli/word/mah-tovu-1-w1.mp3
 pass,1.0,word,אֹהָלֶיךָ,אוהליך,ohalekha,your tents,audio/m/israeli/word/mah-tovu-1-w2.mp3,audio/m/israeli/word/mah-tovu-1-w2.mp3
 pass,1.0,word,יַעֲקֹב,יעקב,ya'akov,Jacob,audio/m/israeli/word/mah-tovu-1-w3.mp3,audio/m/israeli/word/mah-tovu-1-w3.mp3
 pass,1.0,word,מִשְׁכְּנֹתֶיךָ,משכנותיך,mishkenotekha,your dwellings,audio/m/israeli/word/mah-tovu-1-w4.mp3,audio/m/israeli/word/mah-tovu-1-w4.mp3
@@ -5911,6 +5834,7 @@ pass,1.0,word,נְזַבֵּחַ,נזבח,nezabeach,we will offer,audio/m/israel
 pass,1.0,word,לְעֵת,לעת,le'et,at the time,audio/m/israeli/word/maoz-tzur-1-w13.mp3,audio/m/israeli/word/maoz-tzur-1-w13.mp3
 pass,1.0,word,תָּכִין,תכין,takhin,you prepared,audio/m/israeli/word/maoz-tzur-1-w14.mp3,audio/m/israeli/word/maoz-tzur-1-w14.mp3
 pass,1.0,word,מַטְבֵּחַ,מטבח,matbeach,slaughter,audio/m/israeli/word/maoz-tzur-1-w15.mp3,audio/m/israeli/word/maoz-tzur-1-w15.mp3
+pass,1.0,word,מִצָּר,מצר,mitzar,the foe,audio/m/israeli/word/maoz-tzur-1-w16.mp3,audio/m/israeli/word/maoz-tzur-1-w16.mp3
 pass,1.0,word,הַמְנַבֵּחַ,המנבח,hamnabeach,the barking,audio/m/israeli/word/maoz-tzur-1-w17.mp3,audio/m/israeli/word/maoz-tzur-1-w17.mp3
 pass,1.0,word,אָז,אז,az,"so, therefore, then, thus; then, next; then, at that time",audio/m/israeli/word/maoz-tzur-1-w18.mp3,audio/m/israeli/word/maoz-tzur-1-w18.mp3
 pass,1.0,word,אֶגְמוֹר,אגמור,egmor,I shall complete,audio/m/israeli/word/maoz-tzur-1-w19.mp3,audio/m/israeli/word/maoz-tzur-1-w19.mp3
@@ -5951,13 +5875,19 @@ pass,1.0,word,רְפָא,רפא,refa,heal,audio/m/israeli/word/num-12-13-w3.mp3,
 pass,1.0,word,נָא,נא,na,"please, if you please",audio/m/israeli/word/num-12-13-w4.mp3,audio/m/israeli/word/num-12-13-w4.mp3
 pass,1.0,word,לָהּ׃,לה.,lah,her,audio/m/israeli/word/num-12-13-w5.mp3,audio/m/israeli/word/num-12-13-w5.mp3
 pass,1.0,word,אֶחָד,אחד,echad,one,audio/m/israeli/word/numbers-01-m.mp3,audio/m/israeli/word/numbers-01-m.mp3
+pass,1.0,word,שְׁנַיִם,שניים,shenayim,two,audio/m/israeli/word/numbers-02-m.mp3,audio/m/israeli/word/numbers-02-m.mp3
 pass,1.0,word,אַרְבָּעָה,ארבעה,arba'ah,four,audio/m/israeli/word/numbers-04-m.mp3,audio/m/israeli/word/numbers-04-m.mp3
+pass,1.0,word,חָמֵשׁ,חמש,chamesh,five (5) (feminine),audio/m/israeli/word/numbers-05-f.mp3,audio/m/israeli/word/numbers-05-f.mp3
+pass,1.0,word,חֲמִשָּׁה,חמישה,chamishah,five,audio/m/israeli/word/numbers-05-m.mp3,audio/m/israeli/word/numbers-05-m.mp3
+pass,1.0,word,שִׁשָּׁה,שישה,shishah,six,audio/m/israeli/word/numbers-06-m.mp3,audio/m/israeli/word/numbers-06-m.mp3
 pass,1.0,word,שֶׁבַע,שיבה,sheva,seven (7) (feminine),audio/m/israeli/word/numbers-07-f.mp3,audio/m/israeli/word/numbers-07-f.mp3
+pass,1.0,word,שִׁבְעָה,שבעה,shiv'ah,seven,audio/m/israeli/word/numbers-07-m.mp3,audio/m/israeli/word/numbers-07-m.mp3
 pass,1.0,word,שְׁמוֹנֶה,שמונה,shemoneh,eight (8) (feminine),audio/m/israeli/word/numbers-08-f.mp3,audio/m/israeli/word/numbers-08-f.mp3
 pass,1.0,word,שְׁמוֹנָה,שמונו,shemonah,eight,audio/m/israeli/word/numbers-08-m.mp3,audio/m/israeli/word/numbers-08-m.mp3
 pass,1.0,word,תִּשְׁעָה,תשעה,tish'ah,nine,audio/m/israeli/word/numbers-09-m.mp3,audio/m/israeli/word/numbers-09-m.mp3
 pass,1.0,word,עֶשֶׂר,עשר,eser,ten (10) (feminine),audio/m/israeli/word/numbers-10-f.mp3,audio/m/israeli/word/numbers-10-f.mp3
 pass,1.0,word,עֲשָׂרָה,עשרו,asarah,ten,audio/m/israeli/word/numbers-10-m.mp3,audio/m/israeli/word/numbers-10-m.mp3
+pass,1.0,word,שְׁלוֹשִׁים,שלושים,sheloshim,thirty,audio/m/israeli/word/numbers-12.mp3,audio/m/israeli/word/numbers-12.mp3
 pass,1.0,word,אֶלֶף,אלף,elef,"thousand, one thousand",audio/m/israeli/word/numbers-15.mp3,audio/m/israeli/word/numbers-15.mp3
 pass,1.0,word,חֲצִי,חצי,chatzi,half,audio/m/israeli/word/numbers-18.mp3,audio/m/israeli/word/numbers-18.mp3
 pass,1.0,word,הַיּוֹם,היום,hayom,today,audio/m/israeli/word/numbers-20.mp3,audio/m/israeli/word/numbers-20.mp3
@@ -5974,6 +5904,7 @@ pass,1.0,word,אַחַת,אחת,achat,one (f.),audio/m/israeli/word/p0962becf.mp
 pass,1.0,word,בְּבַקָּשָׁה,בבקשה,bevakashah,please / you're welcome,audio/m/israeli/word/p580df509.mp3,audio/m/israeli/word/p580df509.mp3
 pass,1.0,word,אַרְבַּע,ארבע,arba,four (f.),audio/m/israeli/word/pc34fd630.mp3,audio/m/israeli/word/pc34fd630.mp3
 pass,1.0,word,תּוֹדָה,תודה.,todah,thank you,audio/m/israeli/word/politeness-01.mp3,audio/m/israeli/word/politeness-01.mp3
+pass,1.0,word,בְּבַקָּשָׁה,בבקשה.,bevakashah,please / you're welcome,audio/m/israeli/word/politeness-03.mp3,audio/m/israeli/word/politeness-03.mp3
 pass,1.0,word,סְלִיחָה,סליחה.,selichah,excuse me / sorry,audio/m/israeli/word/politeness-06.mp3,audio/m/israeli/word/politeness-06.mp3
 pass,1.0,word,כֵּן,כן.,ken,yes,audio/m/israeli/word/politeness-08.mp3,audio/m/israeli/word/politeness-08.mp3
 pass,1.0,word,לֹא,לא.,lo,no,audio/m/israeli/word/politeness-09.mp3,audio/m/israeli/word/politeness-09.mp3
@@ -5981,7 +5912,6 @@ pass,1.0,word,אוּלַי,אולי.,ulai,maybe,audio/m/israeli/word/politeness-
 pass,1.0,word,בְּטַח,בטח.,betach,sure / of course,audio/m/israeli/word/politeness-11.mp3,audio/m/israeli/word/politeness-11.mp3
 pass,1.0,word,סַבָּבָה,סבב.,sabavah,cool / great / fine by me,audio/m/israeli/word/politeness-12.mp3,audio/m/israeli/word/politeness-12.mp3
 pass,1.0,word,יַאלְלָה,יאללה.,yalelah,come on / let's go / OK then,audio/m/israeli/word/politeness-13.mp3,audio/m/israeli/word/politeness-13.mp3
-pass,1.0,word,וָואלָה,וואלה.,vavlah,really? / wow / honestly,audio/m/israeli/word/politeness-14.mp3,audio/m/israeli/word/politeness-14.mp3
 pass,1.0,word,אַחִי,אחי.,achi,my brother (bro),audio/m/israeli/word/politeness-15.mp3,audio/m/israeli/word/politeness-15.mp3
 pass,1.0,word,יוֹפִי,יופי.,yofi,great / nice,audio/m/israeli/word/politeness-16.mp3,audio/m/israeli/word/politeness-16.mp3
 pass,1.0,word,דַּי,די.,dai,enough / stop it,audio/m/israeli/word/politeness-19.mp3,audio/m/israeli/word/politeness-19.mp3
@@ -6006,6 +5936,7 @@ pass,1.0,word,כֻּלָּם,כולם,kulam,UNKNOWN,audio/m/israeli/word/r13-w3.
 pass,1.0,word,בְּרָכָה,ברכה,berakhah,UNKNOWN,audio/m/israeli/word/r14-w1.mp3,audio/m/israeli/word/r14-w1.mp3
 pass,1.0,word,בְּרֵאשִׁית,בראשית,bereshit,UNKNOWN,audio/m/israeli/word/r14-w2.mp3,audio/m/israeli/word/r14-w2.mp3
 pass,1.0,word,וְאָנִי,ואני,ve'ani,UNKNOWN,audio/m/israeli/word/r14-w4.mp3,audio/m/israeli/word/r14-w4.mp3
+pass,1.0,word,יְבָרֶכְךָ,יבר כך,yevarekhkha,UNKNOWN,audio/m/israeli/word/r15-w1.mp3,audio/m/israeli/word/r15-w1.mp3
 pass,1.0,word,אַף,אף,af,UNKNOWN,audio/m/israeli/word/r16-w2.mp3,audio/m/israeli/word/r16-w2.mp3
 pass,1.0,word,חַי,חי,chai,UNKNOWN,audio/m/israeli/word/r17-w1.mp3,audio/m/israeli/word/r17-w1.mp3
 pass,1.0,word,חָכָם,חכם,chakham,UNKNOWN,audio/m/israeli/word/r17-w2.mp3,audio/m/israeli/word/r17-w2.mp3
@@ -6020,7 +5951,6 @@ pass,1.0,word,קוֹל,קול,kol,UNKNOWN,audio/m/israeli/word/r24-w3.mp3,audio/
 pass,1.0,word,צְדָקָה,צדקה,tzedakah,UNKNOWN,audio/m/israeli/word/r24-w5.mp3,audio/m/israeli/word/r24-w5.mp3
 pass,1.0,word,יָאֵר,יאר,ya'er,UNKNOWN,audio/m/israeli/word/r25-w1.mp3,audio/m/israeli/word/r25-w1.mp3
 pass,1.0,word,אֵלֶיךָ,אליך,elekha,UNKNOWN,audio/m/israeli/word/r25-w3.mp3,audio/m/israeli/word/r25-w3.mp3
-pass,1.0,word,וִיחֻנֶּךָּ,ויחוניך,vichuneka,UNKNOWN,audio/m/israeli/word/r25-w4.mp3,audio/m/israeli/word/r25-w4.mp3
 pass,1.0,word,בִּרְכַּת כֹּהֲנִים,ברכת כהנים,birkat kohanim,UNKNOWN,audio/m/israeli/word/r27-w1.mp3,audio/m/israeli/word/r27-w1.mp3 audio/m/israeli/word/r48-w1.mp3
 pass,1.0,word,יִשְׁמְרֶךָ,ישמריך,yishmerekha,UNKNOWN,audio/m/israeli/word/r29-w1.mp3,audio/m/israeli/word/r29-w1.mp3
 pass,1.0,word,מִשְׁפָּט,משפט,mishpat,UNKNOWN,audio/m/israeli/word/r29-w2.mp3,audio/m/israeli/word/r29-w2.mp3
@@ -6033,6 +5963,7 @@ pass,1.0,word,וְהָיָה,והיה,vehayah,UNKNOWN,audio/m/israeli/word/r33-w
 pass,1.0,word,בַּבַּיִת,בבית,babayit,UNKNOWN,audio/m/israeli/word/r33-w2.mp3,audio/m/israeli/word/r33-w2.mp3
 pass,1.0,word,לַמֶּלֶךְ,למלך,lamelekh,UNKNOWN,audio/m/israeli/word/r33-w3.mp3,audio/m/israeli/word/r33-w3.mp3
 pass,1.0,word,מֵהָעוֹלָם,מהעולם,meha'olam,UNKNOWN,audio/m/israeli/word/r33-w4.mp3,audio/m/israeli/word/r33-w4.mp3
+pass,1.0,word,אדני,עדני,dny,UNKNOWN,audio/m/israeli/word/r34-w2.mp3,audio/m/israeli/word/r34-w2.mp3
 pass,1.0,word,כְּבוֹד,כבוד,kevod,UNKNOWN,audio/m/israeli/word/r36-w3.mp3,audio/m/israeli/word/r36-w3.mp3
 pass,1.0,word,וְאָהַבְתָּ,ואהבת,ve'ahavta,UNKNOWN,audio/m/israeli/word/r37-w1.mp3,audio/m/israeli/word/r37-w1.mp3 audio/m/israeli/word/r49-w1.mp3 audio/m/israeli/word/shema-vahavta-w7.mp3 audio/m/israeli/word/vahavta-1-w1.mp3 audio/m/israeli/word/vahavta-full-w1.mp3
 pass,1.0,word,לְבָבְךָ,לבבך,levavekha,UNKNOWN,audio/m/israeli/word/r37-w2.mp3,audio/m/israeli/word/r37-w2.mp3
@@ -6056,7 +5987,9 @@ pass,1.0,word,יִצְחָק,יצחק,yitzchak,UNKNOWN,audio/m/israeli/word/r42-
 pass,1.0,word,כָּמֹכָה,כמוך,kamokhah,UNKNOWN,audio/m/israeli/word/r43-w2.mp3,audio/m/israeli/word/r43-w2.mp3
 pass,1.0,word,בַּקֹּדֶשׁ,בקודש,bakodesh,UNKNOWN,audio/m/israeli/word/r43-w4.mp3,audio/m/israeli/word/r43-w4.mp3
 pass,1.0,word,הַכֹּל,הקול,hakol,UNKNOWN,audio/m/israeli/word/r44-w4.mp3,audio/m/israeli/word/r44-w4.mp3
+pass,1.0,word,יִתְגַּדַּל,יתגדל,yitgadal,UNKNOWN,audio/m/israeli/word/r45-w1.mp3,audio/m/israeli/word/r45-w1.mp3
 pass,1.0,word,אֲדוֹן,אדון,adon,UNKNOWN,audio/m/israeli/word/r46-w1.mp3,audio/m/israeli/word/r46-w1.mp3 audio/m/israeli/word/yigdal-w38.mp3
+pass,1.0,word,מָלַךְ,מלך,malakh,UNKNOWN,audio/m/israeli/word/r46-w3.mp3,audio/m/israeli/word/r46-w3.mp3
 pass,1.0,word,בְּטֶרֶם,בטרם,beterem,UNKNOWN,audio/m/israeli/word/r46-w4.mp3,audio/m/israeli/word/r46-w4.mp3
 pass,1.0,word,יְצִיר,יציר,yetzir,UNKNOWN,audio/m/israeli/word/r46-w5.mp3,audio/m/israeli/word/r46-w5.mp3
 pass,1.0,word,נִבְרָא,נברא,nivra,UNKNOWN,audio/m/israeli/word/r46-w6.mp3,audio/m/israeli/word/r46-w6.mp3
@@ -6069,6 +6002,7 @@ pass,1.0,word,סִדּוּר,סידור,sidur,UNKNOWN,audio/m/israeli/word/r51-w
 pass,1.0,word,לַזְּמַן,לזמן,lazeman,to the time,audio/m/israeli/word/shehecheyanu-w10.mp3,audio/m/israeli/word/shehecheyanu-w10.mp3
 pass,1.0,word,הַזֶּה׃,הזה,hazeh,this,audio/m/israeli/word/shehecheyanu-w11.mp3,audio/m/israeli/word/shehecheyanu-w11.mp3
 pass,1.0,word,וְקִיְּמָנוּ,וקיימנו,vekiyemanu,and sustained us,audio/m/israeli/word/shehecheyanu-w8.mp3,audio/m/israeli/word/shehecheyanu-w8.mp3
+pass,1.0,word,וְהִגִּיעָנוּ,והגיענו.,vehigi'anu,and brought us,audio/m/israeli/word/shehecheyanu-w9.mp3,audio/m/israeli/word/shehecheyanu-w9.mp3
 pass,1.0,word,שֵׁם,שם,shem,a name; a first name,audio/m/israeli/word/shema-2-w2.mp3,audio/m/israeli/word/shema-2-w2.mp3
 pass,1.0,word,כְּבוֹד,כבוד,kevod,the glory,audio/m/israeli/word/shema-2-w3.mp3,audio/m/israeli/word/shema-2-w3.mp3
 pass,1.0,word,אֱלֹהֶיךָ,אלוהיך,elohekha,your God,audio/m/israeli/word/shema-vahavta-w10.mp3,audio/m/israeli/word/shema-vahavta-w10.mp3 audio/m/israeli/word/vahavta-full-w4.mp3
@@ -6078,6 +6012,7 @@ pass,1.0,word,וּבְכָל־מְאֹדֶךָ׃,ובכל מאודיך,uvekhol-m
 pass,1.0,word,וְהָיוּ,והיו,vehayu,and shall be,audio/m/israeli/word/shema-vahavta-w14.mp3,audio/m/israeli/word/shema-vahavta-w14.mp3
 pass,1.0,word,הַדְּבָרִים,הדברים,hadevarim,the words,audio/m/israeli/word/shema-vahavta-w15.mp3,audio/m/israeli/word/shema-vahavta-w15.mp3 audio/m/israeli/word/vahavta-2-w2.mp3 audio/m/israeli/word/vahavta-full-w9.mp3
 pass,1.0,word,הָאֵלֶּה,האלה,ha'eleh,these,audio/m/israeli/word/shema-vahavta-w16.mp3,audio/m/israeli/word/shema-vahavta-w16.mp3 audio/m/israeli/word/vahavta-full-w10.mp3
+pass,1.0,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/m/israeli/word/shema-vahavta-w19.mp3,audio/m/israeli/word/shema-vahavta-w19.mp3 audio/m/israeli/word/vahavta-full-w13.mp3
 pass,1.0,word,יִשְׂרָאֵל,ישראל,yisra'el,Israel,audio/m/israeli/word/shema-vahavta-w2.mp3,audio/m/israeli/word/shema-vahavta-w2.mp3 audio/m/israeli/word/sim-shalom-w39.mp3
 pass,1.0,word,עַל־לְבָבֶךָ׃,על לבביך,al-levavekha,upon your heart,audio/m/israeli/word/shema-vahavta-w21.mp3,audio/m/israeli/word/shema-vahavta-w21.mp3
 pass,1.0,word,לְבָנֶיךָ,לבניך,levanekha,to your children,audio/m/israeli/word/shema-vahavta-w23.mp3,audio/m/israeli/word/shema-vahavta-w23.mp3
@@ -6086,6 +6021,7 @@ pass,1.0,word,בָּם,במ�,bam,of them,audio/m/israeli/word/shema-vahavta-w2
 pass,1.0,word,בְּשִׁבְתְּךָ,בשבטך,beshivtekha,when you sit,audio/m/israeli/word/shema-vahavta-w26.mp3,audio/m/israeli/word/shema-vahavta-w26.mp3
 pass,1.0,word,בְּבֵיתֶךָ,בביתך,beveitekha,in your house,audio/m/israeli/word/shema-vahavta-w27.mp3,audio/m/israeli/word/shema-vahavta-w27.mp3
 pass,1.0,word,וּבְלֶכְתְּךָ,ובלכתך,uvelekhtekha,and when you walk,audio/m/israeli/word/shema-vahavta-w28.mp3,audio/m/israeli/word/shema-vahavta-w28.mp3 audio/m/israeli/word/vahavta-full-w22.mp3
+pass,1.0,word,בַדֶּרֶךְ,בדרך,vaderekh,on the way,audio/m/israeli/word/shema-vahavta-w29.mp3,audio/m/israeli/word/shema-vahavta-w29.mp3 audio/m/israeli/word/vahavta-full-w23.mp3
 pass,1.0,word,וּבְקוּמֶךָ׃,ובקומיך,uvekumekha,and when you rise,audio/m/israeli/word/shema-vahavta-w31.mp3,audio/m/israeli/word/shema-vahavta-w31.mp3
 pass,1.0,word,וּקְשַׁרְתָּם,וקשרתם,ukeshartam,and you shall bind them,audio/m/israeli/word/shema-vahavta-w32.mp3,audio/m/israeli/word/shema-vahavta-w32.mp3
 pass,1.0,word,לְאוֹת,לאות,le'ot,for a sign,audio/m/israeli/word/shema-vahavta-w33.mp3,audio/m/israeli/word/shema-vahavta-w33.mp3
@@ -6132,6 +6068,7 @@ pass,1.0,word,כְּחֹלְמִים׃,כחולמים,kecholemim,like dreamers,a
 pass,1.0,word,מְזֻמָּן,מזמון,mezuman,cash,audio/m/israeli/word/shop-12.mp3,audio/m/israeli/word/shop-12.mp3
 pass,1.0,word,פָּתוּחַ,פיתוח,patuach,open,audio/m/israeli/word/shop-16.mp3,audio/m/israeli/word/shop-16.mp3
 pass,1.0,word,סָגוּר,סגור,sagur,closed,audio/m/israeli/word/shop-17.mp3,audio/m/israeli/word/shop-17.mp3
+pass,1.0,word,שֶׁקֶל,שקל,shekel,shekel (Israeli currency),audio/m/israeli/word/shop-19.mp3,audio/m/israeli/word/shop-19.mp3
 pass,1.0,word,שִׂים,שים,sim,grant,audio/m/israeli/word/sim-shalom-w1.mp3,audio/m/israeli/word/sim-shalom-w1.mp3
 pass,1.0,word,כָּל־יִשְׂרָאֵל,קל ישראל,kol-yisra'el,all Israel,audio/m/israeli/word/sim-shalom-w10.mp3,audio/m/israeli/word/sim-shalom-w10.mp3
 pass,1.0,word,עַמֶּךָ,עמך,amekha,your people,audio/m/israeli/word/sim-shalom-w11.mp3,audio/m/israeli/word/sim-shalom-w11.mp3
@@ -6192,9 +6129,11 @@ pass,1.0,word,בָּם,בם,bam,of them,audio/m/israeli/word/vahavta-2-w12.mp3,a
 pass,1.0,word,בְּשִׁבְתְּךָ,בשבטך,beshivtekha,when you sit,audio/m/israeli/word/vahavta-2-w13.mp3,audio/m/israeli/word/vahavta-2-w13.mp3
 pass,1.0,word,בְּבֵיתֶךָ,בביתך,beveitekha,in your house,audio/m/israeli/word/vahavta-2-w14.mp3,audio/m/israeli/word/vahavta-2-w14.mp3 audio/m/israeli/word/vahavta-full-w21.mp3
 pass,1.0,word,וּבְלֶכְתְּךָ,ובלכתך,uvelekhtekha,and when you walk,audio/m/israeli/word/vahavta-2-w15.mp3,audio/m/israeli/word/vahavta-2-w15.mp3
+pass,1.0,word,בַדֶּרֶךְ,בדרך,vaderekh,on the way,audio/m/israeli/word/vahavta-2-w16.mp3,audio/m/israeli/word/vahavta-2-w16.mp3
 pass,1.0,word,וּבְקוּמֶךָ׃,ובקומיך,uvekumekha,and when you rise,audio/m/israeli/word/vahavta-2-w18.mp3,audio/m/israeli/word/vahavta-2-w18.mp3
 pass,1.0,word,הָאֵלֶּה,האלה,ha'eleh,these,audio/m/israeli/word/vahavta-2-w3.mp3,audio/m/israeli/word/vahavta-2-w3.mp3
 pass,1.0,word,אָנֹכִי,אנוכי,anokhi,with all your heart,audio/m/israeli/word/vahavta-2-w5.mp3,audio/m/israeli/word/vahavta-2-w5.mp3
+pass,1.0,word,מְצַוְּךָ,מצבך,metzavekha,I command you,audio/m/israeli/word/vahavta-2-w6.mp3,audio/m/israeli/word/vahavta-2-w6.mp3
 pass,1.0,word,עַל־לְבָבֶךָ׃,על לבביך,al-levavekha,upon your heart,audio/m/israeli/word/vahavta-2-w8.mp3,audio/m/israeli/word/vahavta-2-w8.mp3 audio/m/israeli/word/vahavta-full-w15.mp3
 pass,1.0,word,לְבָנֶיךָ,לבניך,levanekha,to your children,audio/m/israeli/word/vahavta-full-w17.mp3,audio/m/israeli/word/vahavta-full-w17.mp3
 pass,1.0,word,בָּם,במ�,bam,of them,audio/m/israeli/word/vahavta-full-w19.mp3,audio/m/israeli/word/vahavta-full-w19.mp3
@@ -6219,6 +6158,7 @@ pass,1.0,word,תֵּצֵא,תצא,tetze,will go forth,audio/m/israeli/word/vayeh
 pass,1.0,word,תוֹרָה,תורה,torah,Torah,audio/m/israeli/word/vayehi-binsoa-w16.mp3,audio/m/israeli/word/vayehi-binsoa-w16.mp3
 pass,1.0,word,וּדְבַר,ודבר,udevar,and the word of,audio/m/israeli/word/vayehi-binsoa-w17.mp3,audio/m/israeli/word/vayehi-binsoa-w17.mp3
 pass,1.0,word,מִירוּשָׁלָםִ׃,מירושלמי,mirushalami,from Jerusalem,audio/m/israeli/word/vayehi-binsoa-w19.mp3,audio/m/israeli/word/vayehi-binsoa-w19.mp3
+pass,1.0,word,בִּנְסֹעַ,בנסוע,binso'a,at the setting out,audio/m/israeli/word/vayehi-binsoa-w2.mp3,audio/m/israeli/word/vayehi-binsoa-w2.mp3
 pass,1.0,word,שֶׁנָּתַן,שנתן,shenatan,that he gave,audio/m/israeli/word/vayehi-binsoa-w21.mp3,audio/m/israeli/word/vayehi-binsoa-w21.mp3
 pass,1.0,word,תּוֹרָה,תורה,torah,"instruction, teaching; the Written Torah and Oral Torah; theory",audio/m/israeli/word/vayehi-binsoa-w22.mp3,audio/m/israeli/word/vayehi-binsoa-w22.mp3
 pass,1.0,word,בִּקְדֻשָּׁתוֹ׃,בקדושתו,bikdushato,in his holiness,audio/m/israeli/word/vayehi-binsoa-w25.mp3,audio/m/israeli/word/vayehi-binsoa-w25.mp3
@@ -6335,270 +6275,3 @@ pass,1.0,word,יְהִי,יהי,yehi,may be,audio/m/israeli/word/zimun-opening-w
 pass,1.0,word,מְבֹרָךְ,מבורך,mevorakh,blessed,audio/m/israeli/word/zimun-opening-w6.mp3,audio/m/israeli/word/zimun-opening-w6.mp3
 pass,1.0,word,מֵעַתָּה,מעתה,me'atah,from now,audio/m/israeli/word/zimun-opening-w7.mp3,audio/m/israeli/word/zimun-opening-w7.mp3
 pass,1.0,word,וְעַד־עוֹלָם׃,ועד עולם.,ve'ad-olam,and forever,audio/m/israeli/word/zimun-opening-w8.mp3,audio/m/israeli/word/zimun-opening-w8.mp3
-pass,1.0,builder,כֵּן,כן.,ken,yes,audio/builder/hf63de22c_ari.mp3,audio/builder/hf63de22c_ari.mp3
-pass,1.0,builder,כֵּן,כן.,ken,yes,audio/builder/hf63de22c_noa.mp3,audio/builder/hf63de22c_noa.mp3
-pass,1.0,builder,לֹא,לא,lo,no / not,audio/builder/h8e3e6f50_ari.mp3,audio/builder/h8e3e6f50_ari.mp3
-pass,1.0,builder,לֹא,לא,lo,no / not,audio/builder/h8e3e6f50_noa.mp3,audio/builder/h8e3e6f50_noa.mp3
-pass,1.0,builder,תּוֹדָה,תודה,todah,thank you,audio/builder/he0b2f96b_ari.mp3,audio/builder/he0b2f96b_ari.mp3
-pass,1.0,builder,תּוֹדָה,תודה,todah,thank you,audio/builder/he0b2f96b_noa.mp3,audio/builder/he0b2f96b_noa.mp3
-pass,1.0,builder,בְּבַקָּשָׁה,בבקשה?,bevakashah,please / you're welcome,audio/builder/p580df509_ari.mp3,audio/builder/p580df509_ari.mp3
-pass,1.0,builder,אַבָּא,אבה,aba,dad,audio/builder/h0a70642a_ari.mp3,audio/builder/h0a70642a_ari.mp3
-pass,1.0,builder,אַבָּא,אבה,aba,dad,audio/builder/h0a70642a_noa.mp3,audio/builder/h0a70642a_noa.mp3
-pass,1.0,builder,אִמָּא,אימה,ima,mum,audio/builder/h1306c935_ari.mp3,audio/builder/h1306c935_ari.mp3
-pass,1.0,builder,אִמָּא,אימה,ima,mum,audio/builder/h1306c935_noa.mp3,audio/builder/h1306c935_noa.mp3
-pass,1.0,builder,מַיִם,מים,mayim,water,audio/builder/p7f7d7b8f_ari.mp3,audio/builder/p7f7d7b8f_ari.mp3
-pass,1.0,builder,מַיִם,מים,mayim,water,audio/builder/p7f7d7b8f_noa.mp3,audio/builder/p7f7d7b8f_noa.mp3
-pass,1.0,builder,לֶחֶם,לחם,lechem,bread,audio/builder/hf22f36ee_ari.mp3,audio/builder/hf22f36ee_ari.mp3
-pass,1.0,builder,לֶחֶם,לחם,lechem,bread,audio/builder/hf22f36ee_noa.mp3,audio/builder/hf22f36ee_noa.mp3
-pass,1.0,builder,סֵפֶר,ספר,sefer,book,audio/builder/h231c624a_ari.mp3,audio/builder/h231c624a_ari.mp3
-pass,1.0,builder,סֵפֶר,ספר,sefer,book,audio/builder/h231c624a_noa.mp3,audio/builder/h231c624a_noa.mp3
-pass,1.0,builder,חָלָב,חלב,chalav,milk,audio/builder/h35be21c5_ari.mp3,audio/builder/h35be21c5_ari.mp3
-pass,1.0,builder,חָלָב,חלב,chalav,milk,audio/builder/h35be21c5_noa.mp3,audio/builder/h35be21c5_noa.mp3
-pass,1.0,builder,כּוֹס,כוס,kos,cup,audio/builder/hf9047f4b_ari.mp3,audio/builder/hf9047f4b_ari.mp3
-pass,1.0,builder,כּוֹס,כוס,kos,cup,audio/builder/hf9047f4b_noa.mp3,audio/builder/hf9047f4b_noa.mp3
-pass,1.0,builder,לַיְלָה,לילה,laylah,night,audio/builder/hf5bee50d_ari.mp3,audio/builder/hf5bee50d_ari.mp3
-pass,1.0,builder,לַיְלָה,לילה,laylah,night,audio/builder/hf5bee50d_noa.mp3,audio/builder/hf5bee50d_noa.mp3
-pass,1.0,builder,תֵּה,תה,teh,tea,audio/builder/h1643d708_ari.mp3,audio/builder/h1643d708_ari.mp3
-pass,1.0,builder,תֵּה,תה,teh,tea,audio/builder/h1643d708_noa.mp3,audio/builder/h1643d708_noa.mp3
-pass,1.0,builder,אָחוֹת,אחות,achot,sister,audio/builder/h18108dff_ari.mp3,audio/builder/h18108dff_ari.mp3
-pass,1.0,builder,אָחוֹת,אחות,achot,sister,audio/builder/h18108dff_noa.mp3,audio/builder/h18108dff_noa.mp3
-pass,1.0,builder,אָח,אך,ach,brother,audio/builder/ha7545fff_ari.mp3,audio/builder/ha7545fff_ari.mp3
-pass,1.0,builder,אָח,אח,ach,brother,audio/builder/ha7545fff_noa.mp3,audio/builder/ha7545fff_noa.mp3
-pass,1.0,builder,בֵּיצָה,ביצה,beitzah,egg,audio/builder/h9974efdc_ari.mp3,audio/builder/h9974efdc_ari.mp3
-pass,1.0,builder,בֵּיצָה,ביצה,beitzah,egg,audio/builder/h9974efdc_noa.mp3,audio/builder/h9974efdc_noa.mp3
-pass,1.0,builder,יָם,ים,yam,sea,audio/builder/h4692cd32_ari.mp3,audio/builder/h4692cd32_ari.mp3
-pass,1.0,builder,יָם,ים,yam,sea,audio/builder/h4692cd32_noa.mp3,audio/builder/h4692cd32_noa.mp3
-pass,1.0,builder,טוֹב,טוב,tov,good,audio/builder/hc06c43b6_ari.mp3,audio/builder/hc06c43b6_ari.mp3
-pass,1.0,builder,טוֹב,טוב.,tov,good,audio/builder/hc06c43b6_noa.mp3,audio/builder/hc06c43b6_noa.mp3
-pass,1.0,builder,מִשְׁפָּחָה,משפחו,mishpachah,family,audio/builder/h9f3caed1_ari.mp3,audio/builder/h9f3caed1_ari.mp3
-pass,1.0,builder,מִשְׁפָּחָה,משפחו,mishpachah,family,audio/builder/h9f3caed1_noa.mp3,audio/builder/h9f3caed1_noa.mp3
-pass,1.0,builder,דֶּלֶת,דלת,delet,door (portal of entry),audio/builder/h80c0273d_ari.mp3,audio/builder/h80c0273d_ari.mp3
-pass,1.0,builder,דֶּלֶת,דלת,delet,door (portal of entry),audio/builder/h80c0273d_noa.mp3,audio/builder/h80c0273d_noa.mp3
-pass,1.0,builder,אֶחָד,אחד,echad,one,audio/builder/h155e306b_ari.mp3,audio/builder/h155e306b_ari.mp3
-pass,1.0,builder,אֶחָד,אחד,echad,one,audio/builder/h155e306b_noa.mp3,audio/builder/h155e306b_noa.mp3
-pass,1.0,builder,בַּיִת,בית,bayit,house / home,audio/builder/h9c8ddecf_ari.mp3,audio/builder/h9c8ddecf_ari.mp3
-pass,1.0,builder,בַּיִת,בית,bayit,house / home,audio/builder/h9c8ddecf_noa.mp3,audio/builder/h9c8ddecf_noa.mp3
-pass,1.0,builder,יָד,יד,yad,hand,audio/builder/h1a3574d3_ari.mp3,audio/builder/h1a3574d3_ari.mp3
-pass,1.0,builder,יָד,יד,yad,hand,audio/builder/h1a3574d3_noa.mp3,audio/builder/h1a3574d3_noa.mp3
-pass,1.0,builder,יוֹם,יום,yom,day,audio/builder/h50cf3648_ari.mp3,audio/builder/h50cf3648_ari.mp3
-pass,1.0,builder,יוֹם,יום,yom,day,audio/builder/h50cf3648_noa.mp3,audio/builder/h50cf3648_noa.mp3
-pass,1.0,builder,עֵץ,עץ,etz,tree,audio/builder/hd2fac0d2_ari.mp3,audio/builder/hd2fac0d2_ari.mp3
-pass,1.0,builder,עֵץ,עץ,etz,tree,audio/builder/hd2fac0d2_noa.mp3,audio/builder/hd2fac0d2_noa.mp3
-pass,1.0,builder,פָּרָה,פרה,parah,cow,audio/builder/h80d6f3f0_noa.mp3,audio/builder/h80d6f3f0_noa.mp3
-pass,1.0,builder,דָּג,דוג,dag,fish,audio/builder/h4f61c9d1_ari.mp3,audio/builder/h4f61c9d1_ari.mp3
-pass,1.0,builder,דָּג,דוג,dag,fish,audio/builder/h4f61c9d1_noa.mp3,audio/builder/h4f61c9d1_noa.mp3
-pass,1.0,builder,אוֹקֵי,אוקיי,okei,"OK, okay",audio/builder/h95c54aba_ari.mp3,audio/builder/h95c54aba_ari.mp3
-pass,1.0,builder,אוֹקֵי,אוקיי,okei,"OK, okay",audio/builder/h95c54aba_noa.mp3,audio/builder/h95c54aba_noa.mp3
-pass,1.0,builder,בַּי,ביי,bai,bye,audio/builder/he90efaca_ari.mp3,audio/builder/he90efaca_ari.mp3
-pass,1.0,builder,בַּי,ביי!,bai,bye,audio/builder/he90efaca_noa.mp3,audio/builder/he90efaca_noa.mp3
-pass,1.0,builder,אַחְלָה,אחלה,achlah,great,audio/builder/pae09e148_ari.mp3,audio/builder/pae09e148_ari.mp3
-pass,1.0,builder,אַחְלָה,אחלה,achlah,great,audio/builder/pae09e148_noa.mp3,audio/builder/pae09e148_noa.mp3
-pass,1.0,builder,אָנָּא,אנה,ana,please,audio/builder/hd4c8080b_ari.mp3,audio/builder/hd4c8080b_ari.mp3
-pass,1.0,builder,אָנָּא,אני?,ana,please,audio/builder/hd4c8080b_noa.mp3,audio/builder/hd4c8080b_noa.mp3
-pass,1.0,builder,אוּלַי,אולי,ulai,maybe,audio/builder/hdcd31646_ari.mp3,audio/builder/hdcd31646_ari.mp3
-pass,1.0,builder,אוּלַי,אולי.,ulai,maybe,audio/builder/hdcd31646_noa.mp3,audio/builder/hdcd31646_noa.mp3
-pass,1.0,builder,סַבָּא,סבא,saba,grandfather,audio/builder/h44404757_ari.mp3,audio/builder/h44404757_ari.mp3
-pass,1.0,builder,סַבָּא,סבא,saba,grandfather,audio/builder/h44404757_noa.mp3,audio/builder/h44404757_noa.mp3
-pass,1.0,builder,יֶלֶד,ילד,yeled,"child, a kid, a boy",audio/builder/h1301ecc3_ari.mp3,audio/builder/h1301ecc3_ari.mp3
-pass,1.0,builder,יֶלֶד,ילד,yeled,"child, a kid, a boy",audio/builder/h1301ecc3_noa.mp3,audio/builder/h1301ecc3_noa.mp3
-pass,1.0,builder,יַלְדָּה,ילדה,yaldah,girl (female child),audio/builder/hb92174cf_ari.mp3,audio/builder/hb92174cf_ari.mp3
-pass,1.0,builder,יַלְדָּה,ילדו,yaldah,girl (female child),audio/builder/hb92174cf_noa.mp3,audio/builder/hb92174cf_noa.mp3
-pass,1.0,builder,דּוֹד,דוד,dod,uncle,audio/builder/hc6cdec2b_ari.mp3,audio/builder/hc6cdec2b_ari.mp3
-pass,1.0,builder,דּוֹד,דוד,dod,uncle,audio/builder/hc6cdec2b_noa.mp3,audio/builder/hc6cdec2b_noa.mp3
-pass,1.0,builder,אָדָם,עדם,adam,person,audio/builder/hfe4ebf2c_ari.mp3,audio/builder/hfe4ebf2c_ari.mp3
-pass,1.0,builder,אָדָם,עדם,adam,person,audio/builder/hfe4ebf2c_noa.mp3,audio/builder/hfe4ebf2c_noa.mp3
-pass,1.0,builder,בַּחוּרָה,בחורה,bachurah,young woman,audio/builder/h19e80411_ari.mp3,audio/builder/h19e80411_ari.mp3
-pass,1.0,builder,בַּחוּרָה,בחורה,bachurah,young woman,audio/builder/h19e80411_noa.mp3,audio/builder/h19e80411_noa.mp3
-pass,1.0,builder,חָבֵר,חבר,chaver,a (male) friend,audio/builder/h2280b9b6_ari.mp3,audio/builder/h2280b9b6_ari.mp3
-pass,1.0,builder,חָבֵר,חבר,chaver,a (male) friend,audio/builder/h2280b9b6_noa.mp3,audio/builder/h2280b9b6_noa.mp3
-pass,1.0,builder,עַם,עם,am,"a nation, a people",audio/builder/h020c4fa8_ari.mp3,audio/builder/h020c4fa8_ari.mp3
-pass,1.0,builder,עַם,עם,am,"a nation, a people",audio/builder/h020c4fa8_noa.mp3,audio/builder/h020c4fa8_noa.mp3
-pass,1.0,builder,נָבִיא,נביא,navi,prophet,audio/builder/h8b8a2576_ari.mp3,audio/builder/h8b8a2576_ari.mp3
-pass,1.0,builder,נָבִיא,נביא,navi,prophet,audio/builder/h8b8a2576_noa.mp3,audio/builder/h8b8a2576_noa.mp3
-pass,1.0,builder,רוֹפֵא,רופא,rofe,"medical doctor, physician",audio/builder/hc8e03f62_ari.mp3,audio/builder/hc8e03f62_ari.mp3
-pass,1.0,builder,רוֹפֵא,רופא,rofe,"medical doctor, physician",audio/builder/hc8e03f62_noa.mp3,audio/builder/hc8e03f62_noa.mp3
-pass,1.0,builder,אֲרוּחָה,ארוחה,aruchah,meal,audio/builder/h6b636d7b_ari.mp3,audio/builder/h6b636d7b_ari.mp3
-pass,1.0,builder,אֲרוּחָה,ארוחי,aruchah,meal,audio/builder/h6b636d7b_noa.mp3,audio/builder/h6b636d7b_noa.mp3
-pass,1.0,builder,פְּרִי,פרי,peri,fruit,audio/builder/h166d92b0_ari.mp3,audio/builder/h166d92b0_ari.mp3
-pass,1.0,builder,פְּרִי,פרי,peri,fruit,audio/builder/h166d92b0_noa.mp3,audio/builder/h166d92b0_noa.mp3
-pass,1.0,builder,מִסְעָדָה,מסעדה,mis'adah,restaurant,audio/builder/h6d121ed3_ari.mp3,audio/builder/h6d121ed3_ari.mp3
-pass,1.0,builder,מִסְעָדָה,מסעדה,mis'adah,restaurant,audio/builder/h6d121ed3_noa.mp3,audio/builder/h6d121ed3_noa.mp3
-pass,1.0,builder,עוּגָה,עוגה,ugah,cake,audio/builder/ha664d093_ari.mp3,audio/builder/ha664d093_ari.mp3
-pass,1.0,builder,עוּגָה,עוגה,ugah,cake,audio/builder/ha664d093_noa.mp3,audio/builder/ha664d093_noa.mp3
-pass,1.0,builder,בַּקְבּוּק,בקבוק,bakbuk,bottle,audio/builder/hd22f2e01_ari.mp3,audio/builder/hd22f2e01_ari.mp3
-pass,1.0,builder,בַּקְבּוּק,בקבוק,bakbuk,bottle,audio/builder/hd22f2e01_noa.mp3,audio/builder/hd22f2e01_noa.mp3
-pass,1.0,builder,מָתוֹק,מתוק,matok,Sweet,audio/builder/h9790d078_ari.mp3,audio/builder/h9790d078_ari.mp3
-pass,1.0,builder,מָתוֹק,מתוק,matok,Sweet,audio/builder/h9790d078_noa.mp3,audio/builder/h9790d078_noa.mp3
-pass,1.0,builder,יַיִן,יין,yayin,wine,audio/builder/h03763c94_ari.mp3,audio/builder/h03763c94_ari.mp3
-pass,1.0,builder,יַיִן,יין,yayin,wine,audio/builder/h03763c94_noa.mp3,audio/builder/h03763c94_noa.mp3
-pass,1.0,builder,תַּפּוּחַ,תפוח,tapuach,apple,audio/builder/hbb1dc7a2_ari.mp3,audio/builder/hbb1dc7a2_ari.mp3
-pass,1.0,builder,תַּפּוּחַ,תפוח,tapuach,apple,audio/builder/hbb1dc7a2_noa.mp3,audio/builder/hbb1dc7a2_noa.mp3
-pass,1.0,builder,כִּסֵּא,כיסא,kise,chair,audio/builder/h568e3e03_ari.mp3,audio/builder/h568e3e03_ari.mp3
-pass,1.0,builder,כִּסֵּא,כיסא,kise,chair,audio/builder/h568e3e03_noa.mp3,audio/builder/h568e3e03_noa.mp3
-pass,1.0,builder,מִטָּה,מיטה,mitah,bed,audio/builder/h11b6d758_ari.mp3,audio/builder/h11b6d758_ari.mp3
-pass,1.0,builder,מִטָּה,מיטה,mitah,bed,audio/builder/h11b6d758_noa.mp3,audio/builder/h11b6d758_noa.mp3
-pass,1.0,builder,קִיר,קיר,kir,wall,audio/builder/h1c0ffa13_ari.mp3,audio/builder/h1c0ffa13_ari.mp3
-pass,1.0,builder,קִיר,קיר,kir,wall,audio/builder/h1c0ffa13_noa.mp3,audio/builder/h1c0ffa13_noa.mp3
-pass,1.0,builder,נְיָר,נייר,neyar,paper,audio/builder/h63142367_ari.mp3,audio/builder/h63142367_ari.mp3
-pass,1.0,builder,נְיָר,נייר,neyar,paper,audio/builder/h63142367_noa.mp3,audio/builder/h63142367_noa.mp3
-pass,1.0,builder,רִצְפָּה,רצפו,ritzpah,floor,audio/builder/h192ef310_ari.mp3,audio/builder/h192ef310_ari.mp3
-pass,1.0,builder,רִצְפָּה,רצפה,ritzpah,floor,audio/builder/h192ef310_noa.mp3,audio/builder/h192ef310_noa.mp3
-pass,1.0,builder,סַל,סל,sal,basket,audio/builder/hae5f6946_ari.mp3,audio/builder/hae5f6946_ari.mp3
-pass,1.0,builder,סַל,סל,sal,basket,audio/builder/hae5f6946_noa.mp3,audio/builder/hae5f6946_noa.mp3
-pass,1.0,builder,סַפָּה,ספה,sapah,a sofa,audio/builder/h470d40b1_ari.mp3,audio/builder/h470d40b1_ari.mp3
-pass,1.0,builder,סַפָּה,ספו,sapah,a sofa,audio/builder/h470d40b1_noa.mp3,audio/builder/h470d40b1_noa.mp3
-pass,1.0,builder,עֵט,עט,et,a pen,audio/builder/hf73dc598_ari.mp3,audio/builder/hf73dc598_ari.mp3
-pass,1.0,builder,עֵט,עט,et,a pen,audio/builder/hf73dc598_noa.mp3,audio/builder/hf73dc598_noa.mp3
-pass,1.0,builder,מַתָּנָה,מתנה,matanah,gift,audio/builder/hc5b0c1a0_ari.mp3,audio/builder/hc5b0c1a0_ari.mp3
-pass,1.0,builder,מַתָּנָה,מתניא,matanah,gift,audio/builder/hc5b0c1a0_noa.mp3,audio/builder/hc5b0c1a0_noa.mp3
-pass,1.0,builder,סַכִּין,סכין,sakin,"knife, blade",audio/builder/ha6e16125_ari.mp3,audio/builder/ha6e16125_ari.mp3
-pass,1.0,builder,סַכִּין,סכין,sakin,"knife, blade",audio/builder/ha6e16125_noa.mp3,audio/builder/ha6e16125_noa.mp3
-pass,1.0,builder,נֵר,נר,ner,"oil lamp, candle",audio/builder/h64fb7d35_ari.mp3,audio/builder/h64fb7d35_ari.mp3
-pass,1.0,builder,נֵר,נר,ner,"oil lamp, candle",audio/builder/h64fb7d35_noa.mp3,audio/builder/h64fb7d35_noa.mp3
-pass,1.0,builder,אַרְיֵה,אריה,aryeh,lion,audio/builder/he028e6f0_ari.mp3,audio/builder/he028e6f0_ari.mp3
-pass,1.0,builder,אַרְיֵה,אריה,aryeh,lion,audio/builder/he028e6f0_noa.mp3,audio/builder/he028e6f0_noa.mp3
-pass,1.0,builder,גָּמָל,גמל,gamal,camel,audio/builder/h3a77b486_ari.mp3,audio/builder/h3a77b486_ari.mp3
-pass,1.0,builder,גָּמָל,גמול,gamal,camel,audio/builder/h3a77b486_noa.mp3,audio/builder/h3a77b486_noa.mp3
-pass,1.0,builder,פִּיל,"פיל,",pil,elephant,audio/builder/h16d3c412_ari.mp3,audio/builder/h16d3c412_ari.mp3
-pass,1.0,builder,פִּיל,"פיל,",pil,elephant,audio/builder/h16d3c412_noa.mp3,audio/builder/h16d3c412_noa.mp3
-pass,1.0,builder,דֹּב,דוב,dov,bear,audio/builder/h5bd1f5e1_ari.mp3,audio/builder/h5bd1f5e1_ari.mp3
-pass,1.0,builder,דֹּב,דוב,dov,bear,audio/builder/h5bd1f5e1_noa.mp3,audio/builder/h5bd1f5e1_noa.mp3
-pass,1.0,builder,קוֹף,קוף,kof,"monkey, ape",audio/builder/hb119536d_ari.mp3,audio/builder/hb119536d_ari.mp3
-pass,1.0,builder,קוֹף,קוף,kof,"monkey, ape",audio/builder/hb119536d_noa.mp3,audio/builder/hb119536d_noa.mp3
-pass,1.0,builder,גֶּפֶן,גפן,gefen,"vine, grapevine",audio/builder/h85cda534_noa.mp3,audio/builder/h85cda534_noa.mp3
-pass,1.0,builder,גִּבְעָה,גבעה,giv'ah,a hill,audio/builder/h5bebb792_ari.mp3,audio/builder/h5bebb792_ari.mp3
-pass,1.0,builder,גִּבְעָה,גבעה,giv'ah,a hill,audio/builder/h5bebb792_noa.mp3,audio/builder/h5bebb792_noa.mp3
-pass,1.0,builder,נָהָר,נהר,nahar,river,audio/builder/h91ac0d37_ari.mp3,audio/builder/h91ac0d37_ari.mp3
-pass,1.0,builder,נָהָר,נהר,nahar,river,audio/builder/h91ac0d37_noa.mp3,audio/builder/h91ac0d37_noa.mp3
-pass,1.0,builder,יָרֵחַ,ירח,yareach,Moon,audio/builder/hc427aff6_ari.mp3,audio/builder/hc427aff6_ari.mp3
-pass,1.0,builder,יָרֵחַ,ירח,yareach,Moon,audio/builder/hc427aff6_noa.mp3,audio/builder/hc427aff6_noa.mp3
-pass,1.0,builder,יַעַר,יער,ya'ar,forest,audio/builder/hef745501_ari.mp3,audio/builder/hef745501_ari.mp3
-pass,1.0,builder,יַעַר,יער,ya'ar,forest,audio/builder/hef745501_noa.mp3,audio/builder/hef745501_noa.mp3
-pass,1.0,builder,אֲדָמָה,אדמה,adamah,earth / soil,audio/builder/h2d90f840_ari.mp3,audio/builder/h2d90f840_ari.mp3
-pass,1.0,builder,אֲדָמָה,אדמה,adamah,earth / soil,audio/builder/h2d90f840_noa.mp3,audio/builder/h2d90f840_noa.mp3
-pass,1.0,builder,עָנָן,אונן,anan,cloud,audio/builder/h770abeb5_ari.mp3,audio/builder/h770abeb5_ari.mp3
-pass,1.0,builder,עָנָן,אינן,anan,cloud,audio/builder/h770abeb5_noa.mp3,audio/builder/h770abeb5_noa.mp3
-pass,1.0,builder,רוּחַ,רוח,ruach,"wind, a wind",audio/builder/hfb819565_ari.mp3,audio/builder/hfb819565_ari.mp3
-pass,1.0,builder,רוּחַ,רוח,ruach,"wind, a wind",audio/builder/hfb819565_noa.mp3,audio/builder/hfb819565_noa.mp3
-pass,1.0,builder,סֶלַע,סלה,sela,rock,audio/builder/h68594418_ari.mp3,audio/builder/h68594418_ari.mp3
-pass,1.0,builder,סֶלַע,סלה,sela,rock,audio/builder/h68594418_noa.mp3,audio/builder/h68594418_noa.mp3
-pass,1.0,builder,קֹר,קור,kor,cold,audio/builder/ha9b360ab_ari.mp3,audio/builder/ha9b360ab_ari.mp3
-pass,1.0,builder,קֹר,קור,kor,cold,audio/builder/ha9b360ab_noa.mp3,audio/builder/ha9b360ab_noa.mp3
-pass,1.0,builder,חַם,חם,cham,hot,audio/builder/h5c2548dc_ari.mp3,audio/builder/h5c2548dc_ari.mp3
-pass,1.0,builder,חַם,חם,cham,hot,audio/builder/h5c2548dc_noa.mp3,audio/builder/h5c2548dc_noa.mp3
-pass,1.0,builder,מְעָרָה,מערה,me'arah,cave,audio/builder/h7d196d47_ari.mp3,audio/builder/h7d196d47_ari.mp3
-pass,1.0,builder,מְעָרָה,מערה,me'arah,cave,audio/builder/h7d196d47_noa.mp3,audio/builder/h7d196d47_noa.mp3
-pass,1.0,builder,חוֹף,חוף,chof,"beach, shore, coast",audio/builder/hde2302bb_ari.mp3,audio/builder/hde2302bb_ari.mp3
-pass,1.0,builder,חוֹף,חוף,chof,"beach, shore, coast",audio/builder/hde2302bb_noa.mp3,audio/builder/hde2302bb_noa.mp3
-pass,1.0,builder,עִיר,עיר,ir,city,audio/builder/he3b1acbd_ari.mp3,audio/builder/he3b1acbd_ari.mp3
-pass,1.0,builder,עִיר,עיר,ir,city,audio/builder/he3b1acbd_noa.mp3,audio/builder/he3b1acbd_noa.mp3
-pass,1.0,builder,דֶּרֶךְ,דרך,derekh,"a road, a path, a way",audio/builder/h5ae20314_ari.mp3,audio/builder/h5ae20314_ari.mp3
-pass,1.0,builder,דֶּרֶךְ,דרך,derekh,"a road, a path, a way",audio/builder/h5ae20314_noa.mp3,audio/builder/h5ae20314_noa.mp3
-pass,1.0,builder,רְחוֹב,רחוב,rechov,street,audio/builder/h18b1e15c_ari.mp3,audio/builder/h18b1e15c_ari.mp3
-pass,1.0,builder,רְחוֹב,רחוב,rechov,street,audio/builder/h18b1e15c_noa.mp3,audio/builder/h18b1e15c_noa.mp3
-pass,1.0,builder,מְכוֹנִית,מכונית,mekhonit,car,audio/builder/h5fc50b7a_ari.mp3,audio/builder/h5fc50b7a_ari.mp3
-pass,1.0,builder,מְכוֹנִית,מכונית,mekhonit,car,audio/builder/h5fc50b7a_noa.mp3,audio/builder/h5fc50b7a_noa.mp3
-pass,1.0,builder,אוֹטוֹבּוּס,אוטובוס,otobus,a bus (vehicle),audio/builder/hf524a1ad_ari.mp3,audio/builder/hf524a1ad_ari.mp3
-pass,1.0,builder,אוֹטוֹבּוּס,אוטובוס,otobus,a bus (vehicle),audio/builder/hf524a1ad_noa.mp3,audio/builder/hf524a1ad_noa.mp3
-pass,1.0,builder,מוֹנִית,מונית,monit,"taxi, cab, taxicab",audio/builder/h85c6747d_ari.mp3,audio/builder/h85c6747d_ari.mp3
-pass,1.0,builder,מוֹנִית,מונית,monit,"taxi, cab, taxicab",audio/builder/h85c6747d_noa.mp3,audio/builder/h85c6747d_noa.mp3
-pass,1.0,builder,בַּנְק,בנק,bank,bank,audio/builder/hf19f0a88_ari.mp3,audio/builder/hf19f0a88_ari.mp3
-pass,1.0,builder,בַּנְק,בנק,bank,bank,audio/builder/hf19f0a88_noa.mp3,audio/builder/hf19f0a88_noa.mp3
-pass,1.0,builder,קָרוֹב,קרוב,karov,"a relative, a family member",audio/builder/hd53e0a60_ari.mp3,audio/builder/hd53e0a60_ari.mp3
-pass,1.0,builder,קָרוֹב,קרוב,karov,"a relative, a family member",audio/builder/hd53e0a60_noa.mp3,audio/builder/hd53e0a60_noa.mp3
-pass,1.0,builder,רָחוֹק,רחוק,rachok,"far, distant",audio/builder/h372b7277_ari.mp3,audio/builder/h372b7277_ari.mp3
-pass,1.0,builder,רָחוֹק,רחוק,rachok,"far, distant",audio/builder/h372b7277_noa.mp3,audio/builder/h372b7277_noa.mp3
-pass,1.0,builder,דָּרוֹם,דרום,darom,south,audio/builder/h591afdf8_ari.mp3,audio/builder/h591afdf8_ari.mp3
-pass,1.0,builder,דָּרוֹם,דרום,darom,south,audio/builder/h591afdf8_noa.mp3,audio/builder/h591afdf8_noa.mp3
-pass,1.0,builder,צָפוֹן,צפון,tzafon,north,audio/builder/h7097c7a9_ari.mp3,audio/builder/h7097c7a9_ari.mp3
-pass,1.0,builder,צָפוֹן,צפון,tzafon,north,audio/builder/h7097c7a9_noa.mp3,audio/builder/h7097c7a9_noa.mp3
-pass,1.0,builder,שְׂמֹאלָה,שמאלה,semolah,left,audio/builder/p0381993d_ari.mp3,audio/builder/p0381993d_ari.mp3
-pass,1.0,builder,שְׂמֹאלָה,שמאלה,semolah,left,audio/builder/p0381993d_noa.mp3,audio/builder/p0381993d_noa.mp3
-pass,1.0,builder,אֶרֶץ,ארץ,eretz,"country, land",audio/builder/hd82a3079_ari.mp3,audio/builder/hd82a3079_ari.mp3
-pass,1.0,builder,אֶרֶץ,ארץ,eretz,"country, land",audio/builder/hd82a3079_noa.mp3,audio/builder/hd82a3079_noa.mp3
-pass,1.0,builder,מָלוֹן,מלון,malon,hotel,audio/builder/hdd727873_ari.mp3,audio/builder/hdd727873_ari.mp3
-pass,1.0,builder,מָלוֹן,מלון,malon,hotel,audio/builder/hdd727873_noa.mp3,audio/builder/hdd727873_noa.mp3
-pass,1.0,builder,בֹּקֶר,בוקר,boker,morning,audio/builder/h50241e1c_ari.mp3,audio/builder/h50241e1c_ari.mp3
-pass,1.0,builder,בֹּקֶר,בקר,boker,morning,audio/builder/h50241e1c_noa.mp3,audio/builder/h50241e1c_noa.mp3
-pass,1.0,builder,עֶרֶב,ערב,erev,"evening, night",audio/builder/he074d347_ari.mp3,audio/builder/he074d347_ari.mp3
-pass,1.0,builder,עֶרֶב,ערב,erev,"evening, night",audio/builder/he074d347_noa.mp3,audio/builder/he074d347_noa.mp3
-pass,1.0,builder,דַּקָּה,דקו,dakah,minute,audio/builder/hbb3bc5fd_ari.mp3,audio/builder/hbb3bc5fd_ari.mp3
-pass,1.0,builder,דַּקָּה,דקו,dakah,minute,audio/builder/hbb3bc5fd_noa.mp3,audio/builder/hbb3bc5fd_noa.mp3
-pass,1.0,builder,אֶתְמוֹל,אתמול,etmol,yesterday,audio/builder/h1b39a6b6_ari.mp3,audio/builder/h1b39a6b6_ari.mp3
-pass,1.0,builder,אֶתְמוֹל,אתמול,etmol,yesterday,audio/builder/h1b39a6b6_noa.mp3,audio/builder/h1b39a6b6_noa.mp3
-pass,1.0,builder,שְׁנַיִם,שניים,shenayim,two,audio/builder/hf9a1a55b_ari.mp3,audio/builder/hf9a1a55b_ari.mp3
-pass,1.0,builder,שְׁנַיִם,שניים,shenayim,two,audio/builder/hf9a1a55b_noa.mp3,audio/builder/hf9a1a55b_noa.mp3
-pass,1.0,builder,אַרְבָּעָה,ארבעה,arba'ah,four,audio/builder/h769a6c3e_ari.mp3,audio/builder/h769a6c3e_ari.mp3
-pass,1.0,builder,אַרְבָּעָה,ארבעה,arba'ah,four,audio/builder/h769a6c3e_noa.mp3,audio/builder/h769a6c3e_noa.mp3
-pass,1.0,builder,שִׁשָּׁה,שישו,shishah,six,audio/builder/pc9b3fcc6_ari.mp3,audio/builder/pc9b3fcc6_ari.mp3
-pass,1.0,builder,תִּשְׁעָה,תשעה,tish'ah,nine,audio/builder/h1de12f34_ari.mp3,audio/builder/h1de12f34_ari.mp3
-pass,1.0,builder,תִּשְׁעָה,תשעה,tish'ah,nine,audio/builder/h1de12f34_noa.mp3,audio/builder/h1de12f34_noa.mp3
-pass,1.0,builder,עֲשָׂרָה,עשרו,asarah,ten,audio/builder/h4589871d_ari.mp3,audio/builder/h4589871d_ari.mp3
-pass,1.0,builder,עֲשָׂרָה,עשרו,asarah,ten,audio/builder/h4589871d_noa.mp3,audio/builder/h4589871d_noa.mp3
-pass,1.0,builder,עֶשְׂרִים,עשרים,esrim,twenty,audio/builder/h2d27796a_ari.mp3,audio/builder/h2d27796a_ari.mp3
-pass,1.0,builder,עֶשְׂרִים,עשרים,esrim,twenty,audio/builder/h2d27796a_noa.mp3,audio/builder/h2d27796a_noa.mp3
-pass,1.0,builder,אַרְבָּעִים,ארבעים,arba'im,forty,audio/builder/h83f51398_ari.mp3,audio/builder/h83f51398_ari.mp3
-pass,1.0,builder,אַרְבָּעִים,ארבעים,arba'im,forty,audio/builder/h83f51398_noa.mp3,audio/builder/h83f51398_noa.mp3
-pass,1.0,builder,מֵאָה,מאה,me'ah,"hundred, one hundred",audio/builder/hffd9b904_ari.mp3,audio/builder/hffd9b904_ari.mp3
-pass,1.0,builder,אֶלֶף,אלף,elef,"thousand, one thousand",audio/builder/h26154c1a_ari.mp3,audio/builder/h26154c1a_ari.mp3
-pass,1.0,builder,אֶלֶף,אלף,elef,"thousand, one thousand",audio/builder/h26154c1a_noa.mp3,audio/builder/h26154c1a_noa.mp3
-pass,1.0,builder,קַיִץ,קיץ,kayitz,summer,audio/builder/h3739ff77_ari.mp3,audio/builder/h3739ff77_ari.mp3
-pass,1.0,builder,קַיִץ,קיץ,kayitz,summer,audio/builder/h3739ff77_noa.mp3,audio/builder/h3739ff77_noa.mp3
-pass,1.0,builder,צׇהֳרַיִם,צהורים,tzohorayim,"Noon, midday",audio/builder/h25aa368e_ari.mp3,audio/builder/h25aa368e_ari.mp3
-pass,1.0,builder,צׇהֳרַיִם,צהורים,tzohorayim,"Noon, midday",audio/builder/h25aa368e_noa.mp3,audio/builder/h25aa368e_noa.mp3
-pass,1.0,builder,חֲצִי,חצי,chatzi,half,audio/builder/h47a142a6_ari.mp3,audio/builder/h47a142a6_ari.mp3
-pass,1.0,builder,חֲצִי,חצי,chatzi,half,audio/builder/h47a142a6_noa.mp3,audio/builder/h47a142a6_noa.mp3
-pass,1.0,builder,רְבִיעִי,רביעי,revi'i,fourth,audio/builder/h9160d23f_ari.mp3,audio/builder/h9160d23f_ari.mp3
-pass,1.0,builder,רְבִיעִי,רביעי,revi'i,fourth,audio/builder/h9160d23f_noa.mp3,audio/builder/h9160d23f_noa.mp3
-pass,1.0,builder,גָּדוֹל,גדול,gadol,"big, large",audio/builder/hdd2bd792_ari.mp3,audio/builder/hdd2bd792_ari.mp3
-pass,1.0,builder,גָּדוֹל,גדול,gadol,"big, large",audio/builder/hdd2bd792_noa.mp3,audio/builder/hdd2bd792_noa.mp3
-pass,1.0,builder,קָטָן,קטן,katan,"little, small, diminutive",audio/builder/h7be38218_ari.mp3,audio/builder/h7be38218_ari.mp3
-pass,1.0,builder,קָטָן,קיטן,katan,"little, small, diminutive",audio/builder/h7be38218_noa.mp3,audio/builder/h7be38218_noa.mp3
-pass,1.0,builder,יָפֶה,יפה.,yafeh,"beautiful, comely, fair, goodly, pleasant",audio/builder/hb4ac356a_ari.mp3,audio/builder/hb4ac356a_ari.mp3
-pass,1.0,builder,יָפֶה,יפה,yafeh,"beautiful, comely, fair, goodly, pleasant",audio/builder/hb4ac356a_noa.mp3,audio/builder/hb4ac356a_noa.mp3
-pass,1.0,builder,אֲמִתִּי,אמיתי,amiti,"real, true, actual",audio/builder/h64e266b0_ari.mp3,audio/builder/h64e266b0_ari.mp3
-pass,1.0,builder,אֲמִתִּי,אמיתי,amiti,"real, true, actual",audio/builder/h64e266b0_noa.mp3,audio/builder/h64e266b0_noa.mp3
-pass,1.0,builder,יָרֹק,ירוק,yarok,green,audio/builder/hb814461b_ari.mp3,audio/builder/hb814461b_ari.mp3
-pass,1.0,builder,יָרֹק,ירוק,yarok,green,audio/builder/hb814461b_noa.mp3,audio/builder/hb814461b_noa.mp3
-pass,1.0,builder,קַל,קל,kal,light (of low weight),audio/builder/hadfa84bd_ari.mp3,audio/builder/hadfa84bd_ari.mp3
-pass,1.0,builder,קַל,קל,kal,light (of low weight),audio/builder/hadfa84bd_noa.mp3,audio/builder/hadfa84bd_noa.mp3
-pass,1.0,builder,רָגוּעַ,רגוע,ragu'a,"relaxed, calm",audio/builder/h8a9b78b8_ari.mp3,audio/builder/h8a9b78b8_ari.mp3
-pass,1.0,builder,רָגוּעַ,רגוע,ragu'a,"relaxed, calm",audio/builder/h8a9b78b8_noa.mp3,audio/builder/h8a9b78b8_noa.mp3
-pass,1.0,builder,מְאֻשָּׁר,מאישר,me'ushar,"Happy, content",audio/builder/h8633259a_ari.mp3,audio/builder/h8633259a_ari.mp3
-pass,1.0,builder,מְאֻשָּׁר,מאשוור,me'ushar,"Happy, content",audio/builder/h8633259a_noa.mp3,audio/builder/h8633259a_noa.mp3
-pass,1.0,builder,חֲלוֹם,חלום,chalom,dream,audio/builder/h3c6a06b3_ari.mp3,audio/builder/h3c6a06b3_ari.mp3
-pass,1.0,builder,חֲלוֹם,חלום,chalom,dream,audio/builder/h3c6a06b3_noa.mp3,audio/builder/h3c6a06b3_noa.mp3
-pass,1.0,builder,תִּקְוָה,תקווה,tikvah,hope,audio/builder/hc8e59638_ari.mp3,audio/builder/hc8e59638_ari.mp3
-pass,1.0,builder,תִּקְוָה,תקווה,tikvah,hope,audio/builder/hc8e59638_noa.mp3,audio/builder/hc8e59638_noa.mp3
-pass,1.0,builder,נָכוֹן,נכון,nakhon,"right, correct",audio/builder/hba98874f_ari.mp3,audio/builder/hba98874f_ari.mp3
-pass,1.0,builder,נָכוֹן,נכון,nakhon,"right, correct",audio/builder/hba98874f_noa.mp3,audio/builder/hba98874f_noa.mp3
-pass,1.0,builder,יַחַד,יחד,yachad,together,audio/builder/h4d766086_ari.mp3,audio/builder/h4d766086_ari.mp3
-pass,1.0,builder,יַחַד,יחד,yachad,together,audio/builder/h4d766086_noa.mp3,audio/builder/h4d766086_noa.mp3
-pass,1.0,builder,עַתָּה,עתו,atah,now,audio/builder/h8453bf6a_ari.mp3,audio/builder/h8453bf6a_ari.mp3
-pass,1.0,builder,עַתָּה,אתה,atah,now,audio/builder/h8453bf6a_noa.mp3,audio/builder/h8453bf6a_noa.mp3
-pass,1.0,builder,מְאוֹד,מאוד,me'od,"very, quite",audio/builder/h81024165_ari.mp3,audio/builder/h81024165_ari.mp3
-pass,1.0,builder,מְאוֹד,מאוד,me'od,"very, quite",audio/builder/h81024165_noa.mp3,audio/builder/h81024165_noa.mp3
-pass,1.0,builder,לְאָן,לאן,le'an,whither,audio/builder/h79df22f0_ari.mp3,audio/builder/h79df22f0_ari.mp3
-pass,1.0,builder,תָּמִיד,תמיד,tamid,"always, regularly",audio/builder/h749f736f_ari.mp3,audio/builder/h749f736f_ari.mp3
-pass,1.0,builder,תָּמִיד,תמיד,tamid,"always, regularly",audio/builder/h749f736f_noa.mp3,audio/builder/h749f736f_noa.mp3
-pass,1.0,builder,פֶּה,פה,peh,mouth,audio/builder/h60b16793_ari.mp3,audio/builder/h60b16793_ari.mp3
-pass,1.0,builder,אֹזֶן,אוזן,ozen,ear,audio/builder/hc0616a4b_ari.mp3,audio/builder/hc0616a4b_ari.mp3
-pass,1.0,builder,אֹזֶן,אוזן,ozen,ear,audio/builder/hc0616a4b_noa.mp3,audio/builder/hc0616a4b_noa.mp3
-pass,1.0,builder,עַיִן,עין,ayin,eye,audio/builder/h9d6352ee_ari.mp3,audio/builder/h9d6352ee_ari.mp3
-pass,1.0,builder,עַיִן,עין,ayin,eye,audio/builder/h9d6352ee_noa.mp3,audio/builder/h9d6352ee_noa.mp3
-pass,1.0,builder,לֵב,לב,lev,heart,audio/builder/h890d1505_ari.mp3,audio/builder/h890d1505_ari.mp3
-pass,1.0,builder,לֵב,לב,lev,heart,audio/builder/h890d1505_noa.mp3,audio/builder/h890d1505_noa.mp3
-pass,1.0,builder,גַּב,גב,gav,back,audio/builder/h3fc254f5_ari.mp3,audio/builder/h3fc254f5_ari.mp3
-pass,1.0,builder,גַּב,גב,gav,back,audio/builder/h3fc254f5_noa.mp3,audio/builder/h3fc254f5_noa.mp3
-pass,1.0,builder,בֶּטֶן,בטן,beten,"abdomen, belly",audio/builder/h06f78f5d_ari.mp3,audio/builder/h06f78f5d_ari.mp3
-pass,1.0,builder,בֶּטֶן,בטן,beten,"abdomen, belly",audio/builder/h06f78f5d_noa.mp3,audio/builder/h06f78f5d_noa.mp3
-pass,1.0,builder,יָרֵךְ,ירך,yarekh,thigh,audio/builder/h1c939a81_ari.mp3,audio/builder/h1c939a81_ari.mp3
-pass,1.0,builder,יָרֵךְ,ירך,yarekh,thigh,audio/builder/h1c939a81_noa.mp3,audio/builder/h1c939a81_noa.mp3
-pass,1.0,builder,אוֹר,אור,or,"to shine, be illuminated",audio/builder/h5b150aaf_ari.mp3,audio/builder/h5b150aaf_ari.mp3
-pass,1.0,builder,אוֹר,אור,or,"to shine, be illuminated",audio/builder/h5b150aaf_noa.mp3,audio/builder/h5b150aaf_noa.mp3
-pass,1.0,builder,מֶלֶךְ,מלך,melekh,king,audio/builder/h58d8d8fe_ari.mp3,audio/builder/h58d8d8fe_ari.mp3
-pass,1.0,builder,כֶּלֶב,כלב,kelev,dog,audio/builder/kelev_noa.mp3,audio/builder/kelev_noa.mp3
-pass,1.0,builder,חָתוּל,חתול,chatul,cat,audio/builder/chatul_ari.mp3,audio/builder/chatul_ari.mp3
-pass,1.0,builder,חָתוּל,חתול,chatul,cat,audio/builder/chatul_noa.mp3,audio/builder/chatul_noa.mp3
-pass,1.0,builder,פֶּרַח,פרח,perach,flower,audio/builder/perach_ari.mp3,audio/builder/perach_ari.mp3
-pass,1.0,builder,פֶּרַח,פרח,perach,flower,audio/builder/perach_noa.mp3,audio/builder/perach_noa.mp3

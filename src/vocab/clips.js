@@ -83,6 +83,25 @@ export function lookupClip(lookup, text, voice, tradition) {
   return row?.[`${voice}|${tradition}`] || null;
 }
 
+/**
+ * The dictionary ladder (usability review U-02 / journey J13): when the
+ * learner's own voice/tradition slot is empty, another slot's clip for the
+ * same text — same tradition in the other voice first, then Israeli (the
+ * library's home tradition), then the remaining traditions. The clip is
+ * always labelled with its REAL voice and tradition by the caller; nothing
+ * here substitutes one tradition for another silently.
+ */
+export function alternateClip(lookup, text, voice, tradition) {
+  if (!lookup || !VOICES.includes(voice) || !TRADITIONS.includes(tradition)) return null;
+  const row = lookup.clips?.[clipKey(text)];
+  if (!row) return null;
+  const other = voice === 'm' ? 'f' : 'm';
+  const order = [`${other}|${tradition}`, `${voice}|israeli`, `${other}|israeli`,
+    ...TRADITIONS.filter((t) => t !== tradition && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])];
+  for (const slot of order) if (row[slot]) return row[slot];
+  return null;
+}
+
 export function voiceLabel(voice) {
   return VOICE_KEY[voice] ? t(VOICE_KEY[voice]) : '';
 }

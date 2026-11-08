@@ -55,7 +55,7 @@ export function mountLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const parts = [
       ctx.img?.(el, { kind: 'lesson', id: lesson.id, class: 'l-scene', width: 900 }),
-      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · ${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
+      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min (an estimate — lessons have not been timed on a learner yet) · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
       el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About this lesson (draft content)"),
         el("p", {}, plain("lessonDraft")),
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
@@ -167,11 +167,32 @@ export function mountLesson(root, ctx, lessonId) {
     const more = el("div", { class: "row alef-actions" },
       el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards"),
       el("a", { class: "btn secondary", href: "#/learn" }, "All lessons"));
+    // U-13 (completion without contact): the quick check IS the completion,
+    // so it asks for contact first — the learner must have scrolled the
+    // lesson's last content part into view before it opens. A lesson already
+    // finished, or one being resumed mid-check, is never re-gated; where
+    // scrolling cannot be observed, the check stays open (no traps).
+    const lastPart = [...parts].reverse().find((n) => n && typeof n === 'object' && (n.tagName === 'SECTION' || n.tagName === 'P'));
+    let visited = isDone || carried > 0 || typeof IntersectionObserver !== 'function' || !lastPart;
+    const gateNote = el("p", { class: "muted", id: "alef-check-gate", role: "note" },
+      visited ? "" : "Look through the lesson first — the quick check opens when you reach the end of it. (Testing out without studying is on the lesson list, labelled “Test out”.)");
+    const syncGate = () => {
+      const gated = !visited && !unmet.length && !!questions.length;
+      startBtn.disabled = gated || !!unmet.length || !questions.length;
+      if (!gated && gateNote.textContent) gateNote.textContent = "";
+    };
+    if (!visited) startBtn.disabled = true;
     parts.push(el("p", { class: "muted" }, questions.length ? (questions.length === 1 ? "Quick check: 1 question. Finish it to complete the lesson. Your place is saved." : plain("quickCheckMany", { n: questions.length })) + (carried ? ` You have already answered ${carried}.` : "")
       : "No quick check is available for this lesson yet, so it cannot be marked complete."),
-      actions, more, quizHost, done);
+      gateNote, actions, more, quizHost, done);
 
     replaceKeepingFocus(wrap, h1, ...parts);
+    if (!visited && lastPart && typeof IntersectionObserver === 'function') {
+      try {
+        const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { visited = true; try { io.disconnect(); } catch { /* ignore */ } syncGate(); } }, { rootMargin: '0px 0px -10% 0px' });
+        io.observe(lastPart);
+      } catch { visited = true; syncGate(); }
+    }
   })().catch((e) => { wrap.replaceChildren(h1, el("p", { role: "alert" }, "This lesson did not load. Please reload the page and try again.")); });
   return () => { alive = false; offQuiz(); wrap.remove(); };
 }

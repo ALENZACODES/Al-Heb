@@ -42,8 +42,12 @@ export function mount(root, ctx) {
   let alive = true, data = null, onramp = null, content = null, lessonQs = [], lesson = null, nextLesson = null;
   let chain, memCard = null; // chain: undefined while loading (never blocks the step), null when unavailable, else the file
   let progress = migrateProgress(null), check = null, picked = null, answered = null;
+  // U-03: a finished on-ramp can be practised again. Practice runs on a
+  // throwaway copy of the progress: nothing is saved, the recorded first
+  // completion (its answers, cards and streak) is never touched.
+  let practice = false;
   const say = (t) => { status.textContent = t; };
-  const save = () => storeSet(ctx, PROGRESS_KEY, progress);
+  const save = () => (practice ? Promise.resolve() : storeSet(ctx, PROGRESS_KEY, progress));
   const focus = () => { try { h1.focus(); } catch { /* ignore */ } };
   // after a quick-check answer or a rebuild: keep focus inside the screen (never drop it to body); only moves it if it was lost
   const focusLost = () => { const a = document.activeElement; return !a || a === document.body || !body.contains(a) || a.disabled; };
@@ -141,19 +145,20 @@ export function mount(root, ctx) {
   async function win(s) {
     progress = winStep(progress, onramp, s.id); answered = null;
     await save();
-    try { const raw = await storeGet(ctx, STREAK_KEY, null); await storeSet(ctx, STREAK_KEY, recordActivity(raw, Date.now())); } catch { /* best effort */ }
-    const err = onrampDone(onramp, progress) && lesson ? await countLesson() : null;
+    if (!practice) { try { const raw = await storeGet(ctx, STREAK_KEY, null); await storeSet(ctx, STREAK_KEY, recordActivity(raw, Date.now())); } catch { /* best effort */ } }
+    const err = !practice && onrampDone(onramp, progress) && lesson ? await countLesson() : null;
     say(''); renderStep(); focus();
     if (err) showSaveFailed(err);
   }
   function renderDone() {
     const d = onramp.done || {};
     body.replaceChildren(
-      el('p', { class: 'muted' }, `${onramp.steps.length} of ${onramp.steps.length} wins · about ${onrampMinutes(onramp)} minutes in all (a goal, not measured)`),
+      el('p', { class: 'muted' }, practice ? 'Practice round finished. Your finished mark stays as it was — practising changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins · about ${onrampMinutes(onramp)} minutes in all (a goal, not measured)`),
       el('h2', {}, d.title || 'Done'),
       el('p', { class: 'fd-card alef-card' }, heText(onramp.steps.find((s) => s.kind === 'word')?.he || '', 'alef-he alef-huge fd-big')),
       el('p', {}, d.body || ''),
-      el('p', {}, el('a', { class: 'btn', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons')),
+      el('p', {}, el('a', { class: 'btn', id: 'fd-next-lesson', href: nextLesson ? `#/learn?lesson=${nextLesson.id}` : '#/learn' }, nextLesson ? `Continue: ${nextLesson.title}` : 'All lessons'),
+        ' ', el('button', { class: 'btn secondary', type: 'button', id: 'fd-again', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; say(''); renderStep(); focus(); } }, 'Do the steps again')),
       d.preview ? el('p', {}, d.preview, ' ', el('a', { class: 'btn secondary', id: 'fd-preview', href: '#/firstday?part=preview' }, 'Read shalom today')) : null,
       el('p', {}, el('a', { href: '#/' }, 'Back to Home')));
   }

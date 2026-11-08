@@ -62,7 +62,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   const focusTitle = () => title.focus?.();
 
   function pickSection() {
-    if (!items.length) return el('section', {}, el('h2', {}, 'Choose a line'), el('p', {}, 'No line is fully readable for you yet. Keep going with the lessons; this check unlocks when you can decode at least one whole line.'), el('a', { class: 'btn', href: '#/learn' }, 'Back to lessons'));
+    if (!items.length) return el('section', {}, el('h2', {}, 'Choose a line'), el('p', {}, 'No line is fully readable for you yet. This check unlocks when you can decode at least one whole line. The fastest way there: keep going with the lessons, or practise the letters themselves.'), el('p', {}, el('a', { class: 'btn', href: '#/learn' }, 'Back to lessons'), ' ', el('a', { class: 'btn secondary', href: '#/letters' }, 'Practise the letters'), ' ', el('a', { class: 'btn secondary', href: '#/firstday' }, 'Your first 10 minutes')));
     const sel = el('select', { id: 'tdr-pick' }, el('option', { value: '' }, 'Choose a line...'), ...items.map((i) => el('option', { value: i.id, selected: S.item?.id === i.id ? '' : null }, `${i.label} - ${i.words} words`)));
     sel.addEventListener('change', () => { S.item = items.find((i) => i.id === sel.value) || null; S.phase = S.item ? 'ready' : 'pick'; render(); });
     return el('section', {}, el('h2', {}, 'Choose a line'), el('label', { for: 'tdr-pick' }, 'Only lines you can fully decode are listed. Short lines give a rough speed; longer ones are steadier.'), sel);

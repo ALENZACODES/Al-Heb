@@ -272,7 +272,7 @@ function mountLesson(root, ctx, id) {
     };
 
     const intro = () => [
-      el("p", { class: "muted" }, `${lesson.unit ? lesson.unit + " · " : ""}${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the siddur" : "Speak in Israel"} · ${exs.length} exercises`),
+      el("p", { class: "muted" }, `${lesson.unit ? lesson.unit + " · " : ""}about ${lesson.estMinutes} min (estimate) · ${lesson.track === "read" ? "Read the siddur" : "Speak in Israel"} · ${exs.length} exercises`),
       el("p", { class: "draft-flag", role: "note" }, DRAFT_TEXT),
       exs.length ? null : el("p", { class: "alef-locked", role: "note" }, "This lesson has no exercises yet, so it cannot be completed."),
       lesson.needsNativeReview ? el("p", { class: "draft-flag alef-needs-review", role: "note" }, REVIEW_FLAG) : null,

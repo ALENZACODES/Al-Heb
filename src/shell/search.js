@@ -12,11 +12,32 @@ export function norm(s) {
 }
 const tokens = (q) => norm(q).split(' ').filter(Boolean);
 
+/** Words a beginner types for a feature, beyond its label (usability review
+ *  U-22): "camera", "prayers" or "dictionary" must find the page that does
+ *  it, not only the page that happens to be named it. */
+const FEATURE_WORDS = {
+  scan: 'camera photo picture photograph menu sign ocr printed page',
+  read: 'prayers prayer siddur blessings bless synagogue service',
+  speak: 'say pronounce pronunciation microphone aloud practice speaking',
+  phrases: 'sayings sentences everyday expressions',
+  games: 'play playing game',
+  vocab: 'dictionary words word meanings translate translation',
+  calendar: 'dates shabbat holidays festivals portion week',
+  letters: 'alphabet alef bet letters tracing',
+  books: 'stories story book reading',
+  help: 'help questions answers guide stuck',
+  settings: 'voice style preferences options',
+  progress: 'streak done finished plan tomorrow',
+  morning: 'prayer morning modeh ani god verse',
+  festivals: 'holidays jewish year festival',
+  listen: 'hear hearing cantor music songs',
+};
+
 /** @returns {{name:string, section:string, tier:'v0'|'preview', label:string, desc:string, href:string, hay:string, labelN:string}[]} */
 export function buildPageIndex(routes, available, t, tHe = () => '', sectionLabel = (id) => id) {
   return searchablePages(routes, available).map((r) => {
     const label = t(labelKey(r)), he = tHe(labelKey(r)), desc = description(r, label), section = ROUTE_SECTION[r.name] || 'more';
-    return { name: r.name, section, tier: tierOf(r), label, desc, he, href: '#' + r.pattern, labelN: norm(label), hay: norm([label, r.title, he, sectionLabel(section), r.name].join(' ')) };
+    return { name: r.name, section, tier: tierOf(r), label, desc, he, href: '#' + r.pattern, labelN: norm(label), hay: norm([label, r.title, he, sectionLabel(section), r.name, FEATURE_WORDS[r.name] || ''].join(' ')) };
   });
 }
 

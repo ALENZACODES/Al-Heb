@@ -43,6 +43,11 @@ const CSS = `
 .crp-tab[aria-selected="true"],.crp-chip[aria-pressed="true"],.crp-ltr[aria-pressed="true"]{background:var(--accent,#1e4634);color:var(--accent-fg,#fffaf0);font-weight:700}
 .crp-ctl{border:1px solid var(--border,#d9cdb3);border-radius:8px;padding:0 .7rem;margin-block:.4rem}
 .crp-ctl>summary{cursor:pointer;font-weight:700;min-block-size:max(44px,var(--tap,48px));display:flex;align-items:center}
+.crp-occasions{margin-block:.5rem 1rem}
+.crp-door{border:1px solid var(--border,#d9cdb3);border-radius:8px;padding:0 .7rem;margin-block:.4rem;background:var(--card,#fffaf0)}
+.crp-door>summary{cursor:pointer;font-weight:700;min-block-size:max(44px,var(--tap,48px));display:flex;align-items:center}
+.crp-door>summary:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
+.crp-door .crp-lnk{margin:.2rem .3rem .5rem 0}
 .crp-ctl>summary:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .crp-bar{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-block:.5rem}
 .crp-bar label{display:inline-flex;gap:.4rem;align-items:center}
@@ -170,8 +175,16 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     const gen = ++playGen;
     if (!ctx.audio || typeof ctx.audio.play !== 'function') { say('Audio is not available in this build.'); return; }
     try {
-      const r = await ctx.audio.play(kind, id, { text });
+      let r = await ctx.audio.play(kind, id, { text });
       if (gen !== playGen) return;
+      // U-02 ladder for single words and lines: when the only refusal is the
+      // tradition guard, offer the device voice (Israeli-style, labelled)
+      // instead of ending at "No audio".
+      if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') {
+        r = await ctx.audio.play(kind, id, { text, allowMismatchedTts: true });
+        if (gen !== playGen) return;
+        if (r && r.source === 'tts-fallback') { say(`Playing ${label} with the device voice (not a recorded teacher; Israeli-style only).`); return; }
+      }
       if (r && (r.source === 'none' || r.played === false || r.ok === false)) say(`No audio for ${label} (${r.reason || r.error || 'unavailable'}).`);
       else if (r && r.source === 'tts-fallback') say(`Playing ${label} with the browser voice (not a recorded voice).`);
       else say(`Played ${label}.`);
@@ -187,6 +200,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
   // ---------- reader ----------
   function renderReader(host) {
     const p = passages.find((x) => x.id === state.passageId) || passages[0];
+    // Landing (no text chosen, still on the opening passage): the occasion
+    // doors come first, so "Read the Prayers" opens as an index, not one
+    // unexplained blessing (U-08).
+    if (!ctx.params?.textId && state.passageId === passages[0].id) renderOccasions(host);
     const allHe = p.records.map((r) => r.he).join('\n');
     const inv = letterInventory(allHe);
     const trad = congregationOf(ctx.settings);
@@ -306,6 +323,38 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         await playLine(rec, i, lines[i], true);
       }
     }
+  }
+
+  // ---------- occasion doors (U-08) ----------
+  // The reader used to open on one blessing, with Friday evening buried at
+  // the bottom of the Shabbat-morning guide. The doors group the SAME
+  // prayers by when they are said; the guide stays the inside of the
+  // Shabbat-morning door, and every prayer opens here in the reader.
+  function renderOccasions(host) {
+    const g = corpus.guide();
+    if (!g) return;
+    const fri = (g.otherOccasions || []).find((o) => /^Friday/i.test(o.title || ''));
+    const han = (g.otherOccasions || []).find((o) => /Hanukkah/i.test(o.title || ''));
+    const secPrayers = (id) => (g.sections || []).find((s) => s.id === id)?.prayers || [];
+    const door = (title, note, kids) => el('details', { class: 'crp-door' },
+      el('summary', {}, title), el('p', { class: 'crp-gl' }, note), ...kids);
+    const linkRow = (items, label) => el('div', { role: 'group', 'aria-label': label }, ...items.map((pr) => prayerLink(typeof pr === 'string' ? { id: pr } : pr)));
+    const box = el('section', { class: 'crp-occasions', 'aria-labelledby': 'crp-occ-h' },
+      el('h2', { id: 'crp-occ-h' }, 'Start from an occasion'),
+      el('p', { class: 'crp-gl' }, 'The prayers (the Siddur — the Jewish prayer book), grouped by when you would say them. Open a door, then tap a prayer to read it here.'));
+    if (fri) box.append(door('Friday evening', 'Candles, Kabbalat Shabbat and Kiddush — the start of Shabbat.', [linkRow(fri.prayers || [], 'Friday evening prayers')]));
+    box.append(door('Shabbat morning', 'The full Saturday-morning service, in order, with what happens at each step and your part in it.', [
+      el('p', {}, el('button', { type: 'button', class: 'crp-play', onclick: () => { state.tab = 'guide'; render(); } }, 'Open the service guide'))]));
+    const coreSeen = new Set(); const core = [];
+    for (const pr of [...secPrayers('shema-and-blessings'), ...secPrayers('amidah')]) { const id = typeof pr === 'string' ? pr : pr.id; if (id && !coreSeen.has(id)) { coreSeen.add(id); core.push(pr); } }
+    box.append(door('Weekday morning', 'The daily core most people say every morning: the Shema and its blessings, and the Amidah. A full weekday service order is not in ALEF yet.', [
+      linkRow(core, 'Weekday morning prayers'),
+      el('p', { class: 'crp-gl' }, 'The day itself starts with ', el('a', { href: '#/morning' }, 'Start with God — Modeh Ani and a verse'), '.')]));
+    const festKids = [];
+    if (han) festKids.push(linkRow(han.prayers || [], 'Hanukkah prayers'));
+    festKids.push(el('p', { class: 'crp-gl' }, el('a', { href: '#/festivals' }, 'Festivals through the year'), ' — what each day is and when it falls.'));
+    box.append(door('Festivals', 'Prayers for the festival days, starting with Hanukkah candle lighting.', festKids));
+    host.append(box);
   }
 
   // ---------- Torah-service guide ----------

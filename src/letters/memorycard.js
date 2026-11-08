@@ -333,8 +333,12 @@ export function buildMemoryCard(o) {
       }
       const row = [btn('mc-more', more ? t('mc.less', 'Hide story and tip') : t('mc.more', 'Story and tip'), () => { more = !more; go(3, 'mc-more'); if (more) reveal(); }),
         btn('mc-play', t('mc.play', 'Show one step at a time'), () => { more = false; go(1, 'mc-next'); })];
-      if (more) row.unshift(btn('mc-hear-letter', t('mc.hearLetter', 'Hear the letter'), () => hear('letter', entry.id, entry.name)),
-        word && word.vocabId ? btn('mc-hear-word', t('mc.hearWord', 'Hear the word'), () => hear('word', word.vocabId, word.gloss || 'the word')) : null);
+      // U-11 (one play dialect): the sound controls are NOT buried behind
+      // "Story and tip" — once the chain is on screen, a labelled Listen
+      // button for the letter (and the word) is right there. The picture
+      // button itself never secretly plays sound.
+      row.unshift(btn('mc-hear-letter', t('mc.hearLetter', 'Listen: the letter'), () => hear('letter', entry.id, entry.name)),
+        word && word.vocabId ? btn('mc-hear-word', t('mc.hearWord', 'Listen: the word'), () => hear('word', word.vocabId, word.gloss || 'the word')) : null);
       steps.appendChild(h('li', {}, h('div', { class: 'mc-row' }, ...row.filter(Boolean)),
         more ? h('p', { class: 'mc-small' }, t('mc.draft', 'Draft memory hook: a teaching aid, not history, and not yet checked by a Hebrew teacher.')) : null));
     }

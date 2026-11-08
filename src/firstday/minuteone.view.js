@@ -378,7 +378,7 @@ export async function mount(root, ctx) {
           h('p', {}, h('button', { type: 'button', class: 'btn secondary', onclick: async (ev) => {
             const stop = startSpeaking(ctx, ev?.currentTarget?.closest?.('[data-live]') || shell);
             try { await ctx?.audio?.play?.(word.audio.kind, word.audio.id); say('Playing.'); } catch { say('Playing.'); } finally { stop(); }
-          } }, 'Hear'),
+          } }, 'Listen'),
             ' ',
             h('button', { type: 'button', class: 'btn', onclick: finishTry }, 'I said it — continue'),
             ' ',

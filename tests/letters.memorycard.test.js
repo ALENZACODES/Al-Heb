@@ -85,7 +85,9 @@ test('memory card: ONE tap shows picture + sound hook + word together; "Play the
   assert.ok(b.includes('שָׁלוֹם')); assert.ok(b.includes(respell('שָׁלוֹם', 'ashkenazi'))); assert.match(b, /= peace, hello/);
   assert.doesNotMatch(b, /respelling, rule-generated|\(Ashkenazi respelling/, 'no wrapping label');
   assert.equal(c.el.find((n) => n.className === 'mc-chip')[0].text, 'Ashkenazi', 'short tradition chip');
-  assert.doesNotMatch(b, /Three prongs/, 'story is behind "Story and tip"'); assert.equal(act(c.el, 'mc-hear-word'), undefined);
+  assert.doesNotMatch(b, /Three prongs/, 'story is behind "Story and tip"');
+  // U-11: sound is NOT behind "Story and tip" — the Listen controls are on the card once the chain shows, in the one play dialect.
+  assert.ok(act(c.el, 'mc-hear-word'), 'Listen: the word is present without opening Story and tip'); assert.match(act(c.el, 'mc-hear-word').text, /Listen/); assert.match(act(c.el, 'mc-hear-letter').text, /Listen/);
   await act(c.el, 'mc-more').click();
   b = body(c.el); assert.match(b, /Three prongs/); assert.match(b, /Only shin has three prongs/); assert.match(b, /not history/);
   await act(c.el, 'mc-hear-word').click(); await act(c.el, 'mc-hear-letter').click();

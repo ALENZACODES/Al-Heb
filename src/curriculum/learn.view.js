@@ -98,14 +98,17 @@ function mountMap(root, ctx) {
           return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
-            el("span", { class: "alef-min" }, `${l.estMinutes} min`), " ",
+            el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",
             l.words[0] ? heText(l.words[0].he) : null, " ",
             el("button", { type: "button", class: "alef-btn", disabled: state === "locked" ? "" : null,
               "aria-label": `${state === "done" ? "Review" : "Start"} ${l.title}`,
               onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
             " ",
-            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete: ${l.title}`,
-              onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Mark complete")) : null);
+            // U-13: completing a lesson without opening it is a test-out, and
+            // the button says so — the lesson itself is completed by its
+            // quick check, after looking through it.
+            state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete without studying it (test out): ${l.title}`,
+              onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),
       list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);
   }

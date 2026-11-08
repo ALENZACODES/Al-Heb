@@ -17,7 +17,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { uiEnglish } from '../shell/names.js';
 import { sourcesLine } from '../shell/sources.js';
 import { loadJson } from '../speak/loader.js';
-import { lookupClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
+import { lookupClip, alternateClip, planIsExactFile, clipCaption, unavailableLine, CLIP_RATES, SPEED_BUTTONS, CHECKING } from './clips.js';
 
 /** Shown under the search box. The 5,000 glosses are not rewritten by this screen. */
 export const SENSE_NOTE = 'A greeting search such as hi or hello can lead with a word whose stored gloss is different. That lead is labelled, and the gloss on the card is not changed. An exact transliteration is labelled separately. For a short search, words that only contain those letters stay hidden until you ask for them. Glosses in the 5,000-word list are the stored sense, often only the first dictionary sense.';
@@ -152,30 +152,48 @@ export function mount(root, ctx) {
       return hold;
     }
     const clip = lookupClip(clipLookup, text, voice, trad);
-    if (!clip) return el('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, unavailableLine(voice, trad));
+    if (!clip) {
+      // U-02 ladder (journey J13): the learner's own slot is empty (e.g. a
+      // Sephardi slot that was never recorded), but another slot has this
+      // word's own clip. Offer it, labelled with its real voice and
+      // tradition — never a silent "No clip" dead end.
+      const alt = alternateClip(clipLookup, text, voice, trad);
+      if (!alt) return el('span', { class: 'audio-none muted', 'data-audio-state': 'none' }, unavailableLine(voice, trad));
+      return clipControls(alt, name, `${unavailableLine(voice, trad)} You can hear the ${alt.voice === 'm' ? 'man' : 'woman'}’s voice:`);
+    }
+    return clipControls(clip, name, null);
+  };
+  // The speed-button group for one specific clip (the learner's own slot, or
+  // the ladder's alternate). Playback always asks for the clip's OWN voice
+  // and tradition and verifies the plan is that exact file.
+  const clipControls = (clip, name, lead) => {
+    const cv = clip.voice, ct = clip.tradition;
     const note = el('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, clipCaption(clip));
-    const play = async (rateId) => {
-      if (!CLIP_RATES.includes(rateId) || typeof ctx.audio.play !== 'function') { note.textContent = unavailableLine(voice, trad); return; }
-      const opts = { voice, tradition: trad, rate: rateId, allowMismatchedTts: false };
+    const play = async (rateId, btn) => {
+      if (!CLIP_RATES.includes(rateId) || typeof ctx.audio.play !== 'function') { note.textContent = unavailableLine(cv, ct); return; }
+      const opts = { voice: cv, tradition: ct, rate: rateId, allowMismatchedTts: false };
+      if (btn) { btn.disabled = true; if (btn.classList) btn.classList.add('is-playing'); }
       try {
         if (ctx.audio.ensureManifest) await ctx.audio.ensureManifest();
-        let plan = ctx.audio.status?.(clip.kind, clip.id, { voice, tradition: trad, allowMismatchedTts: false });
+        let plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
         if (plan?.reason === CHECKING && ctx.audio.ensureManifest) {
           await ctx.audio.ensureManifest();
-          plan = ctx.audio.status?.(clip.kind, clip.id, { voice, tradition: trad, allowMismatchedTts: false });
+          plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
         }
-        if (!planIsExactFile(plan, { voice, tradition: trad, id: clip.id })) { note.textContent = unavailableLine(voice, trad); return; }
+        if (!planIsExactFile(plan, { voice: cv, tradition: ct, id: clip.id })) { note.textContent = unavailableLine(cv, ct); return; }
         try { ctx.audio.stop?.(); } catch { /* ignore */ }
         const r = await ctx.audio.play(clip.kind, clip.id, opts);
-        if (!r || r.source === 'none' || r.fileError) note.textContent = unavailableLine(voice, trad);
+        if (!r || r.source === 'none' || r.fileError) note.textContent = unavailableLine(cv, ct);
         else if (r.source === 'tts-fallback') note.textContent = DEVICE_LABEL;
         else note.textContent = clipCaption({ ...clip, status: r.entryStatus || clip.status, source: r.entrySource || clip.source, tradition: r.tradition || clip.tradition, voice: r.voice || clip.voice });
-      } catch { note.textContent = unavailableLine(voice, trad); }
+      } catch { note.textContent = unavailableLine(cv, ct); }
+      finally { if (btn) { btn.disabled = false; if (btn.classList) btn.classList.remove('is-playing'); } }
     };
     return el('span', { class: 'vc-speed', role: 'group', 'aria-label': `Play the clip for ${name}` },
+      lead ? el('span', { class: 'audio-none muted', 'data-audio-state': 'ladder' }, lead) : null,
       ...SPEED_BUTTONS.map(([rateId, label]) => el('button', {
         type: 'button', class: 'btn secondary', 'data-rate': rateId, 'data-audio': `${clip.kind}/${clip.id}`, 'data-audio-state': 'file',
-        'aria-label': `${label}: ${name}`, onclick: () => play(rateId),
+        'aria-label': `${label}: ${name}`, onclick: (e) => play(rateId, e?.currentTarget),
       }, label)),
       note);
   };

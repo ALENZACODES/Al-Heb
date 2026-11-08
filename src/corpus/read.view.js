@@ -5,6 +5,7 @@
 //   - no ctx.audio                -> play buttons say audio is unavailable
 //   - no pronunciation/transliterate.js -> transliteration falls back to a notice
 // Plain DOM, RTL Hebrew (lang="he" dir="rtl"), keyboard and screen-reader friendly.
+import { speakEnglish } from '../shell/speak-english.js';
 import { loadCorpus, loadTorahIndex, letterInventory } from './corpus.js';
 import { versionLabel } from '../shell/names.js';
 import { silentReadingNode } from '../shell/silent-reading.js';
@@ -229,7 +230,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
         const en = uiEnglish(ctx, String(rec.english || ''));
         enBox.append(el('p', { class: 'crp-en crp-en-big', lang: 'en' }, en),
           el('div', { class: 'crp-bar' }, el('button', { type: 'button', class: 'crp-play', onclick: () => {
-            try { const sp = globalThis.speechSynthesis, U = globalThis.SpeechSynthesisUtterance; if (!sp || typeof U !== 'function') { say('Your browser has no voice to read this aloud.'); return; } sp.cancel(); const u = new U(en); u.lang = 'en-US'; sp.speak(u); say(`Reading ${rec.ref} in English (your device's voice).`); } catch { /* no speech */ }
+            try { const sp = globalThis.speechSynthesis, U = globalThis.SpeechSynthesisUtterance; if (!sp || typeof U !== 'function') { say('Your browser has no voice to read this aloud.'); return; } say(`Reading ${rec.ref} in English (your device's voice).`); speakEnglish(en, { speech: sp, Utterance: U }); /* sentence by sentence: phones cut off one long utterance */ } catch { /* no speech */ }
           } }, `Hear ${rec.ref} in English`)));
       }
       host.append(enBox, status);

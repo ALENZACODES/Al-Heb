@@ -117,7 +117,7 @@ test('harvest art is local and documentary text stays out of image pixels', () =
 
 test('optional prayer audio has a finite escape hatch and cannot trap the opening veil', () => {
   const veil = read('src/shell/prayer-veil.js');
-  assert.match(veil, /const MAX_LISTEN_HOLD_MS = 18000/);
+  assert.match(veil, /const MAX_LISTEN_HOLD_MS = 30000/);
   assert.match(veil, /deadline = setTimeout\(\(\) => dismiss\(true\), MAX_LISTEN_HOLD_MS\)/);
   assert.match(veil, /function releaseAfter\(ms\)/);
   assert.match(veil, /if \(now \|\| reduce\) \{ veil\.remove\(\); return; \}/);

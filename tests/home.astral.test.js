@@ -37,7 +37,11 @@ test('random picker excludes the previous prayer without biasing an eligible can
 
 test('opening card has a hard timeout, skip controls and ready signal before the app route', () => {
   const src = readFileSync(new URL('../src/shell/prayer-veil.js', import.meta.url), 'utf8');
-  assert.match(src, /\? 9000 : 6000/);
+  // Reading dwell sized to the prayer: never under 10 s (12 s first visit), at most 30 s (owner report, Nov 8 2026).
+  assert.match(src, /firstVisit \? 12000 : 10000/);
+  assert.match(src, /dwellMs = readingMs\(chosen, firstVisit\)/);
+  assert.match(src, /skipBtn\?\.addEventListener\('click'/);
+  assert.doesNotMatch(src, /veil\.addEventListener\('click'/);
   assert.match(src, /document\.addEventListener\('alef:ready'/);
   // The dwell starts only once the prayer has rendered AND the app is ready:
   // a slow first visit installs the offline copy before the page settles, and
@@ -83,11 +87,10 @@ test('veil autoplay: the clip starts as the prayer renders; a policy refusal ask
   assert.match(src, /listenBtn\.hidden = false;[\s\S]{0,400}startPlayback\(\{ auto: true \}\)/);
   // only the automatic attempt may turn NotAllowedError into the tap prompt; a Listen tap that fails hides the controls
   assert.match(src, /if \(auto && isAutoplayBlock\(err\)\) \{ blockedByPolicy\(\); return; \}/);
-  // the first tap on a blocked veil starts the clip and swallows the click that would dismiss it
+  // the first tap on a blocked veil starts the clip (a background tap never closes the veil)
   assert.match(src, /veil\.addEventListener\('pointerdown', onFirstGesture\)/);
-  assert.match(src, /if \(Date\.now\(\) < swallowClickUntil\)/);
-  // the veil holds while the clip plays and closes 1 s after it ends
-  assert.match(src, /audio\.onended = \(\) => \{ setAudioState\('idle'\); releaseAfter\(1000\); \}/);
+  // the veil holds while the clip plays; when it ends, the reading time still runs out in full (at least 3 s more)
+  assert.match(src, /audio\.onended = \(\) => \{ setAudioState\('idle'\); releaseAfterListening\(3000\); \}/);
   // the listen count moves once per prayer, only after play() resolved
   assert.match(src, /if \(!counted\) \{ counted = true;/);
   // the audio-free setting and the opt-out are still honoured before any clip is touched

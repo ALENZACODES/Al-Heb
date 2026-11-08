@@ -1,4 +1,4 @@
-// First load of the built site does not request data/img/index.json (nothing is approved, so it cannot change any screen).
+// Empty approvals avoid the image index; real approved art requires it.
 // Skipped without Playwright or dist/; with ALEF_REQUIRE_BROWSER=1 a missing browser or dist/ fails.
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -18,18 +18,21 @@ const missing = !chromium ? 'Playwright not installed' : !existsSync(join(dist, 
 const skip = must ? false : missing;
 test('img first-load prerequisites are present (only enforced when ALEF_REQUIRE_BROWSER=1)', () => { if (must) assert.equal(missing, false, String(missing)); });
 
-test('dist: first load and a lesson page request no data/img/index.json', { skip, timeout: 60000 }, async () => {
+for (const approved of [false, true]) test(`dist: ${approved ? 'approved art loads its index' : 'empty approvals skip the index'}`, { skip, timeout: 60000 }, async () => {
   const srv = await startServer(dist, parseHeaders(readFileSync(join(dist, '_headers'), 'utf8')));
   const base = `http://127.0.0.1:${srv.address().port}/`;
   const browser = await chromium.launch();
   try {
     const ctx = await browser.newContext({ serviceWorkers: 'block' });
+    if (!approved) await ctx.route('**/data/images/approvals.json', route => route.fulfill({ json: { approvals: {} } }));
     const page = await ctx.newPage();
     const urls = []; page.on('request', (r) => urls.push(r.url().replace(base, '')));
     await page.goto(base, { waitUntil: 'load' });
     await page.waitForSelector('body[data-ready="1"]', { timeout: 15000 });
     await page.goto(`${base}#/learn`); await page.waitForTimeout(800);
     assert.ok(urls.some((u) => /data\/images\/approvals\.json/.test(u)), 'approvals are still read');
-    assert.deepEqual(urls.filter((u) => /data\/img\/index\.json/.test(u)), []);
+    const requests = urls.filter((u) => /data\/img\/index\.json/.test(u));
+    if (approved) assert.ok(requests.length > 0, 'approved artwork requires the index');
+    else assert.deepEqual(requests, []);
   } finally { await browser.close(); srv.close(); }
 });

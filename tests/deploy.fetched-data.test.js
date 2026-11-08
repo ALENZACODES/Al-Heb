@@ -35,3 +35,10 @@ test('a 404 is reported as a missing file; other failures keep the connection hi
   assert.ok(t.includes(MISSING_FILE_NOTE) && /not your connection/.test(t) && !/Check your connection/i.test(t));
   assert.equal(loadFailureText(new TypeError('Failed to fetch'), 'x', 'FALLBACK'), 'FALLBACK');
 });
+
+// Template-built portrait paths are not captured by the literal-path scan above.
+test('runtime portal, mascot and every route companion portrait ship without --with-img', () => {
+  const ship = new Set(listShipFiles());
+  const required = ['assets/img/rimon/rimon-sprite.png', ...['PORTAL_words_clay.webp', 'PORTAL_games_shofar.webp', 'MASCOT_rimon.800.webp'].map(n => `assets/img/gen/${n}`), ...['ari', 'noa'].flatMap(v => ['neutral', 'speak', 'listen', 'celebrate', 'synagogue', 'telaviv'].map(p => `assets/img/gen/CHAR_${v}_${p}.800.webp`))];
+  for (const path of required) { assert.ok(existsSync(join(root, path)), path); assert.ok(ship.has(path), `${path} must ship`); }
+});

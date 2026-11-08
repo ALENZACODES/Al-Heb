@@ -43,7 +43,7 @@
     "f": "audio/f/israeli/book/book43-p03.mp3",
     "m": "audio/m/israeli/book/book43-p03.mp3"
    },
-   "illustration": "a page of letters, some circled, some crossed out",
+   "illustration": "a worksheet page of blank letter tiles, some circled, some crossed out in pencil",
    "hasImg": false,
    "hasAudio": true
   },
@@ -71,7 +71,7 @@
     "f": "audio/f/israeli/book/book43-p05.mp3",
     "m": "audio/m/israeli/book/book43-p05.mp3"
    },
-   "illustration": "two letters side by side, one with a dot",
+   "illustration": "two matching blank tiles side by side on the table, one with a single dot in its centre",
    "hasImg": false,
    "hasAudio": true
   },
@@ -141,7 +141,7 @@
     "f": "audio/f/israeli/book/book43-p10.mp3",
     "m": "audio/m/israeli/book/book43-p10.mp3"
    },
-   "illustration": "the word written large on his flashcard",
+   "illustration": "a flashcard held up in his hand, its face blank, his eyes on it",
    "hasImg": false,
    "hasAudio": true
   },

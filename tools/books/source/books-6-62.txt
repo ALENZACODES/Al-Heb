@@ -239,7 +239,7 @@
 שִׁירָה קָמָה מַהֵר. | Shira kamah maher. | Shira gets up fast. | the woman jolting awake, book falling
 "שָׁלוֹם, אֲנִי רוֹצָה..." | "Shalom, ani rotzah..." | "Hello, I want..." | the woman at the counter, the clerk smiling
 "סְלִיחָה, הַמַּחְשֵׁב לֹא עוֹבֵד." | "Slichah, ha-machshev lo oved." | "Sorry, the computer isn't working." | the clerk pointing at a frozen screen
-שִׁירָה לוֹקַחַת מִסְפָּר. | Shira lokachat mispar. | Shira takes a number. | the woman pulling a new ticket, deadpan
+שִׁירָה לוֹקַחַת מִסְפָּר. | Shira lokachat mispar. | Shira takes a number. | the woman pulling a fresh blank ticket from the dispenser, deadpan
 
 ## book23 | יָם בַּבֹּקֶר | Yam Ba-Boker | Sea in the Morning | A
 הַיָּם. | Ha-yam. | The sea. | a wide calm sea at first light
@@ -257,7 +257,7 @@
 
 ## book24 | עָיֵף | Ayef | Tired | A
 אֵיתָן עָיֵף. | Eitan ayef. | Eitan is tired. | a man slumped at an office desk, late afternoon
-עָיֵף מְאוֹד. | Ayef me'od. | Very tired. | his head on the keyboard, letters filling the screen
+עָיֵף מְאוֹד. | Ayef me'od. | Very tired. | his head on the keyboard, the screen glowing with blurred lines of type
 הוּא שׁוֹתֶה קָפֶה. | Hu shoteh kafeh. | He drinks coffee. | a third empty cup joining two others
 עֲדַיִן עָיֵף. | Adayin ayef. | Still tired. | yawning at the screen
 הוּא הוֹלֵךְ הַבַּיְתָה. | Hu holech ha-baitah. | He goes home. | the man on a bus with his eyes closed
@@ -314,7 +314,7 @@
 ## book28 | הַמָּטוֹס | Ha-Matos | The Plane | B
 שְׂדֵה הַתְּעוּפָה. | Sdeh ha-te'ufah. | The airport. | a busy terminal, departures board
 תָּמָר נוֹסַעַת לְלוֹנְדוֹן. | Tamar nosa'at le-London. | Tamar is flying to London. | a woman with a suitcase and passport
-הַתִּיק כָּבֵד. | Ha-tik kaved. | The bag is heavy. | her suitcase on the scale, the number too high
+הַתִּיק כָּבֵד. | Ha-tik kaved. | The bag is heavy. | her suitcase on the airport scale, the attendant shaking her head
 "סְלִיחָה, יוֹתֵר מִדַּי." | "Slichah, yoter midai." | "Sorry, too much." | the check-in agent pointing at the scale
 תָּמָר פּוֹתַחַת אֶת הַתִּיק. | Tamar potachat et ha-tik. | Tamar opens the bag. | the suitcase open on the floor, clothes everywhere
 שְׁלוֹשָׁה סְפָרִים. | Shloshah sfarim. | Three books. | three thick books held up
@@ -462,7 +462,7 @@
 דְּפִיקָה בַּדֶּלֶת. | Dfikah ba-delet. | A knock at the door. | the door, knuckles
 הַשְּׁכֵנָה. לֶחֶם וּמֶלַח. | Ha-shchenah. Lechem u-melach. | The neighbour. Bread and salt. | an older woman holding a loaf and a small dish of salt
 "בְּרוּכִים הַבָּאִים." | "Bruchim ha-ba'im." | "Welcome." | the neighbour smiling warmly
-"וְהַגֶּשֶׁם? זֶה תָּמִיד. יֵשׁ לִי אִינְסְטָלָטוֹר." | "Ve-ha-geshem? Zeh tamid. Yesh li instalator." | "And the leak? It always does that. I have a plumber." | the neighbour glancing at the drip, waving a phone number
+"וְהַגֶּשֶׁם? זֶה תָּמִיד. יֵשׁ לִי אִינְסְטָלָטוֹר." | "Ve-ha-geshem? Zeh tamid. Yesh li instalator." | "And the leak? It always does that. I have a plumber." | the neighbour glancing at the drip, waving a small blank card
 הַבַּיִת הֶחָדָשׁ מַתְחִיל. | Ha-bayit he-chadash matchil. | The new home begins. | the three eating bread with salt on the boxes, laughing
 
 ## book39 | פְּקָק | Pkak | Traffic Jam | B
@@ -472,7 +472,7 @@
 הָאוֹטוֹ לֹא זָז. | Ha-oto lo zaz. | The car doesn't move. | the speedometer at zero
 הוּא שׁוֹמֵעַ חֲדָשׁוֹת. | Hu shome'a chadashot. | He listens to the news. | the radio: traffic report
 "פְּקָק בְּאַיָּלוֹן," אוֹמֵר הָרַדְיוֹ. | "Pkak be-Ayalon," omer ha-radyo. | "Traffic jam on the Ayalon," says the radio. | the man giving the radio a look
-"תּוֹדָה," אוֹמֵר יוֹסִי. | "Todah," omer Yossi. | "Thanks," says Yossi. | deadpan
+"תּוֹדָה," אוֹמֵר יוֹסִי. | "Todah," omer Yossi. | "Thanks," says Yossi. | the man saying thanks to the dashboard, deadpan, still not moving
 הוּא רוֹאֶה אִישׁ בָּאוֹטוֹ לְיָדוֹ. | Hu ro'eh ish ba-oto le-yado. | He sees a man in the car next to him. | the neighbouring driver, also stuck
 הָאִישׁ שָׁר. | Ha-ish shar. | The man is singing. | the other driver belting out a song, eyes closed
 יוֹסִי צוֹחֵק. | Yossi tzochek. | Yossi laughs. | the man laughing despite himself
@@ -486,7 +486,7 @@
 מִי כּוֹתֵב מִכְתָּבִים הַיּוֹם? | Mi kotev michtavim ha-yom? | Who writes letters today? | her puzzled face
 הִיא פּוֹתַחַת. | Hi potachat. | She opens it. | tearing the envelope carefully
 כְּתַב יָד יָפֶה. | Ktav yad yafeh. | Beautiful handwriting. | looping blue ink on the page
-"לֵאָה שֶׁלִּי," | "Leah sheli," | "My Leah," | the first line of the letter
+"לֵאָה שֶׁלִּי," | "Leah sheli," | "My Leah," | the letter unfolded in her hands, its lines soft pencil strokes, no readable words
 הִיא קוֹרֵאת לְאַט. | Hi koret le'at. | She reads slowly. | the woman sitting down on the stairs
 הַמִּכְתָּב מֵהַסָּבָא שֶׁלָּהּ. | Ha-michtav me-ha-saba shelah. | The letter is from her grandfather. | a photo of an old man tucked in the fold
 הוּא כָּתַב לִפְנֵי שָׁנָה. | Hu katav lifnei shanah. | He wrote it a year ago. | a date at the top, a year back
@@ -497,7 +497,7 @@
 דָּוִד בֶּן אַרְבָּעִים הַיּוֹם. | David ben arba'im ha-yom. | David is forty today. | a man looking in the mirror, finding a grey hair
 "אַרְבָּעִים," הוּא אוֹמֵר לַמַּרְאָה. | "Arba'im," hu omer la-mar'ah. | "Forty," he says to the mirror. | close on his face, raised eyebrow
 הַמַּרְאָה לֹא עוֹנָה. | Ha-mar'ah lo onah. | The mirror doesn't answer. | the mirror, the man, silence
-הוּא לֹא רוֹצֶה מְסִבָּה. | Hu lo rotzeh mesibah. | He doesn't want a party. | a text: no party please
+הוּא לֹא רוֹצֶה מְסִבָּה. | Hu lo rotzeh mesibah. | He doesn't want a party. | a phone held up, one short message bubble left blank, the man's face firm
 הוּא רוֹצֶה שֶׁקֶט. | Hu rotzeh sheket. | He wants quiet. | the man alone with a book and tea
 הוּא הוֹלֵךְ לַיָּם. | Hu holech la-yam. | He goes to the sea. | walking along an empty beach
 הוּא שׂוֹחֶה. | Hu socheh. | He swims. | floating on his back, sky above
@@ -524,14 +524,14 @@
 ## book43 | לוֹמֵד עִבְרִית | Lomed Ivrit | Learning Hebrew | B
 מַארְק לוֹמֵד עִבְרִית. | Mark lomed ivrit. | Mark is learning Hebrew. | a man at a kitchen table with flashcards
 הוּא בֶּן חֲמִשִּׁים. | Hu ben chamishim. | He is fifty. | reading glasses, a determined face
-הָאוֹתִיּוֹת קָשׁוֹת. | Ha-otiyot kashot. | The letters are hard. | a page of letters, some circled, some crossed out
+הָאוֹתִיּוֹת קָשׁוֹת. | Ha-otiyot kashot. | The letters are hard. | a worksheet page of blank letter tiles, some circled, some crossed out in pencil
 מִיָּמִין לִשְׂמֹאל. | Mi-yamin li-smol. | From right to left. | his finger moving across a line, an arrow drawn above
-"בֵּית אוֹ וֵית?" | "Bet o vet?" | "Bet or vet?" | two letters side by side, one with a dot
+"בֵּית אוֹ וֵית?" | "Bet o vet?" | "Bet or vet?" | two matching blank tiles side by side on the table, one with a single dot in its centre
 הוּא לֹא מֵבִין. | Hu lo mevin. | He doesn't understand. | the man rubbing his eyes
 הוּא רוֹצֶה לְהַפְסִיק. | Hu rotzeh lehafsik. | He wants to quit. | the book closed, pushed away
 הוּא שׁוֹמֵעַ שִׁיר בָּרַדְיוֹ. | Hu shome'a shir ba-radyo. | He hears a song on the radio. | a radio on the counter
 הוּא מֵבִין מִלָּה אַחַת. | Hu mevin milah achat. | He understands one word. | his head lifting, eyes wide
-"אַהֲבָה." | "Ahavah." | "Love." | the word written large on his flashcard
+"אַהֲבָה." | "Ahavah." | "Love." | a flashcard held up in his hand, its face blank, his eyes on it
 הוּא פּוֹתֵחַ אֶת הַסֵּפֶר. | Hu pote'ach et ha-sefer. | He opens the book. | the book open again, pencil in hand
 עוֹד מִלָּה. וְעוֹד אַחַת. | Od milah. Ve-od achat. | Another word. And another. | the table covered with cards, the man smiling
 
@@ -766,7 +766,7 @@
 הוּא חוֹזֵר לַתַּחֲנָה. לֹא שָׁם. | Hu chozer la-tachanah. Lo sham. | He goes back to the bus stop. Not there. | the empty bench, a pigeon
 בָּאַרְנָק: כֶּסֶף, כַּרְטִיסִים, תְּמוּנָה שֶׁל הַבַּת. | Ba-arnak: kesef, kartisim, tmunah shel ha-bat. | In the wallet: money, cards, a photo of his daughter. | a thought bubble of the wallet's contents
 הַתְּמוּנָה. זֶה מָה שֶׁכּוֹאֵב. | Ha-tmunah. Zeh mah she-ko'ev. | The photo. That's what hurts. | the man sitting heavily on a step
-בָּעֶרֶב: הַטֶּלֶפוֹן. | Ba-erev: ha-telefon. | In the evening: the phone. | an unknown number calling
+בָּעֶרֶב: הַטֶּלֶפוֹן. | Ba-erev: ha-telefon. | In the evening: the phone. | a phone lit up and buzzing on the table, its screen a blank glow
 "שָׁלוֹם? מָצָאתִי אַרְנָק." | "Shalom? Matzati arnak." | "Hello? I found a wallet." | a teenager's voice, a bubble of the wallet in a hand
 "אֵיפֹה אַתָּה?" | "Eifoh atah?" | "Where are you?" | the man jumping up
 הֵם נִפְגָּשִׁים בַּתַּחֲנָה. | Hem nifgashim ba-tachanah. | They meet at the station. | a boy of sixteen holding out the wallet

@@ -23,9 +23,13 @@ import { buildReminders, upcoming, itemStart, MAX_WINDOW_DAYS } from "./reminder
 import { toICS, downloadICS } from "./reminders.ics.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "./reminders.notify.js";
 import { CALENDAR_CSS } from "./calendar.style.js";
-import { el, heText, tr, storeGet, storeSet } from "./dom.js";
+import { markersFor, isImportant, markerChip, MARKER_KINDS, MARKER_LABEL, artAvailable, ART_BASE } from "./calendar.markers.js";
+import { yomTovDates } from "./streak.js";
+import { el, heText, tr, storeGet, storeSet, STREAK_KEY as STREAK_RECORD_KEY } from "./dom.js";
 
 const finite = (v) => typeof v === "number" && Number.isFinite(v);
+/** reminder kind (reminders.js) -> marker kind */
+const REMINDER_MARKER = { candles: "candles", havdalah: "havdalah", holiday: "festival", roshchodesh: "roshchodesh", morning: "morning", evening: "evening" };
 
 function shellLocation(ctx) {
   const s = ctx?.settings;
@@ -51,6 +55,7 @@ export function mount(root, ctx) {
   let status = "";            // polite status line for export / notifications
   let notifier = { cancel() {} };
   let rearm = null;
+  let doneDays = new Set();   // ISO dates on which the study goal was met (streak record), shown with the "Studied" marker
 
   if (typeof document !== "undefined" && document.head && !document.getElementById?.("alef-cal-style")) {
     const st = el("style", { id: "alef-cal-style" }, CALENDAR_CSS);
@@ -59,11 +64,19 @@ export function mount(root, ctx) {
 
   const wrap = el("section", { class: "alef-calendar", "aria-labelledby": "alef-cal-h" });
   const title = el("h1", { id: "alef-cal-h", class: "alef-h", tabindex: "-1" }, tr(ctx, "cal.title", "Calendar"));
+  const head = el("header", { class: "alef-cal-head" }, title, el("p", { class: "alef-cal-tagline" }, "The Jewish year, week by week: festivals, Shabbat, the new moon and the Torah portion. Marked days open a page that explains the day."));
+  // optional banner art assets/img/calendar/header.png (1600x600): shown only when the file exists
+  artAvailable("header").then((ok) => {
+    if (!ok || !alive) return;
+    const img = el("img", { class: "alef-cal-art", alt: "", src: `${ART_BASE}/header.png`, width: "1600", height: "600", decoding: "async" });
+    img.addEventListener("error", () => img.remove());
+    head.prepend(img); head.classList.add("has-art");
+  }).catch(() => {});
   const todayBox = el("div", { class: "alef-cal-today" });
   const gridBox = el("section", { "aria-label": "Calendar grid" });
   const remindBox = el("section", { "aria-labelledby": "alef-rem-h" });
   const settingsBox = el("details", { class: "alef-cal-settings" });
-  wrap.append(title, todayBox, gridBox, remindBox, settingsBox);
+  wrap.append(head, todayBox, gridBox, remindBox, settingsBox);
   root.append(wrap);
 
   const nowDate = () => (ctx && typeof ctx.now === "function" ? ctx.now() : new Date());
@@ -135,16 +148,18 @@ export function mount(root, ctx) {
       el("section", { "aria-labelledby": "alef-up-h" },
         el("h2", { id: "alef-up-h" }, tr(ctx, "cal.upcoming", "Coming up")),
         el("ul", { class: "alef-holidays" }, ...hols.map((h) =>
-          el("li", { "data-holiday": h.id }, el("strong", {}, h.en), " ", heText(h.he), ` ${h.start}${h.end !== h.start ? " to " + h.end : ""}`,
+          el("li", { "data-holiday": h.id }, el("strong", {}, el("a", { href: `#/day/${h.start}` }, h.en)), " ", heText(h.he), ` ${h.start}${h.end !== h.start ? " to " + h.end : ""}`,
             h.verified === "unverified" ? " (date rule unverified)" : "")))),
       cardBlock("evening", g, slot === "evening", "alef-prompt-e")].filter(Boolean));
   }
 
   // ---------- grid ----------
-  function dayLabel(c) {
+  function dayLabel(c, marks = []) {
     // WCAG 2.5.3: the visible text (day, Hebrew day, label) must appear unbroken in the name, so it closes the name
-    const vis = [String(c.g.d), c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe, c.label].filter(Boolean).join("");
-    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (c.label ? `, ${c.label}` : "") + `, ${vis}`;
+    const shown = c.label || (c.isFriday ? "Candles" : "");
+    const vis = [String(c.g.d), c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe, shown].filter(Boolean).join("");
+    const extra = marks.map((m) => m.label).filter((l) => !shown.includes(l));
+    return `${WEEKDAYS_EN[c.weekday]} ${c.g.d} ${MONTHS_EN[c.g.m - 1]} ${c.g.y}, ${c.hebrew.label}` + (shown ? `, ${shown}` : "") + (extra.length ? `, ${extra.join(", ")}` : "") + `, ${vis}`;
   }
 
   function renderGrid() {
@@ -171,18 +186,30 @@ export function mount(root, ctx) {
     }
     const mg = monthGrid(cursor.y, cursor.m, gridOpt());
     const sel = selected && selected.slice(0, 7) === `${cursor.y}-${String(cursor.m).padStart(2, "0")}` ? selected : null;
+    const first = mg.weeks[0][0].iso, last = mg.weeks[mg.weeks.length - 1][6].iso;
+    const yt = yomTovDates(first, isoDate(addDays(parseISO(last), 1)), prefs.observance);
     const table = el("table", { class: "alef-cal-table" },
       el("caption", {}, `${mg.title} · ${mg.hebrewRange} `, heText(mg.hebrewRangeHe)),
       el("thead", {}, el("tr", {}, ...WEEKDAYS_EN.map((d) => el("th", { scope: "col", abbr: d }, d.slice(0, 3))))),
       el("tbody", {}, ...mg.weeks.map((w) => el("tr", {}, ...w.map((c) => {
-        const cls = ["alef-cal-day", c.inMonth ? "" : "out", c.isShabbat ? "shabbat" : "", c.holidays.some((x) => x.kind !== "roshchodesh") ? "holiday" : "", c.iso === todayISO ? "today" : ""].filter(Boolean).join(" ");
-        return el("td", {}, el("button", { type: "button", class: cls, "aria-pressed": String(c.iso === sel), "aria-label": dayLabel(c), "data-date": c.iso,
-          onclick: () => { selected = c.iso; renderGrid(); } },
-        el("span", { class: "g" }, String(c.g.d)),
-        el("span", { class: "h", lang: "he", dir: "rtl" }, c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe),
-        el("span", { class: "l" }, c.label)));
+        const marks = markersFor({ holidays: c.holidays, isShabbat: c.isShabbat, isFriday: c.isFriday, eveOfYomTov: yt.has(isoDate(addDays(c.g, 1))), done: doneDays.has(c.iso) });
+        const important = isImportant(marks);
+        const cls = ["alef-cal-day", c.inMonth ? "" : "out", c.isShabbat ? "shabbat" : "", c.holidays.some((x) => x.kind === "major" || x.kind === "minor") ? "holiday" : "", c.holidays.some((x) => x.kind === "fast") ? "fast" : "", c.holidays.some((x) => x.kind === "modern") ? "remembrance" : "", c.iso === todayISO ? "today" : "", important ? "linked" : ""].filter(Boolean).join(" ");
+        const inner = [
+          el("span", { class: "g" }, String(c.g.d)),
+          el("span", { class: "h", lang: "he", dir: "rtl" }, c.hebrew.day === 1 ? `${c.hebrew.dayHe} ${c.hebrew.monthHe}` : c.hebrew.dayHe),
+          el("span", { class: "l" }, c.label || (c.isFriday ? "Candles" : "")),
+          marks.length ? el("span", { class: "m" }, ...marks.map((m) => markerChip(m, { compact: true, el }))) : null,
+        ];
+        // a marked day opens its page; an ordinary day shows the short detail panel below the grid
+        const cell = important
+          ? el("a", { class: cls, href: `#/day/${c.iso}`, "aria-label": dayLabel(c, marks) + ", opens the day page", "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null }, ...inner)
+          : el("button", { type: "button", class: cls, "aria-pressed": String(c.iso === sel), "aria-label": dayLabel(c, marks), "data-date": c.iso, "aria-current": c.iso === todayISO ? "date" : null,
+            onclick: () => { selected = c.iso; renderGrid(); } }, ...inner);
+        return el("td", {}, cell);
       })))));
-    gridBox.replaceChildren(el("h2", {}, "Month"), nav, table, sel ? detailPanel(parseISO(sel)) : el("p", { class: "alef-cal-note" }, "Select a day for details."));
+    const legend = el("ul", { class: "alef-cal-legend", "aria-label": "Marker legend" }, ...MARKER_KINDS.map((m) => el("li", {}, markerChip(m, { el }))));
+    gridBox.replaceChildren(el("h2", {}, "Month"), nav, table, legend, sel ? detailPanel(parseISO(sel)) : el("p", { class: "alef-cal-note" }, "Marked days open a page about the day. Select any other day for its Hebrew date."));
   }
 
   function step(dir) {
@@ -208,6 +235,7 @@ export function mount(root, ctx) {
       else { const h = havdalah(g, { lat: l.lat, lon: l.lon }, prefs.havdalah); if (h) kids.push(el("p", {}, `Havdalah ${formatTime(roundToMinute(h.havdalah), tz)} (${l.name}).`)); }
     }
     if (!d.holidays.length && !d.eveOf.length && !d.parsha && weekday(g) !== 6) kids.push(el("p", { class: "alef-cal-note" }, "No festival or observance on this day."));
+    kids.push(el("p", {}, el("a", { class: "alef-cal-btn", href: `#/day/${d.iso}` }, "Open this day")));
     return el("div", { class: "alef-cal-detail", role: "region", "aria-live": "polite", "aria-label": "Day details" }, ...kids);
   }
 
@@ -246,7 +274,11 @@ export function mount(root, ctx) {
       el("p", { class: "alef-cal-note" }, "Candle lighting, havdalah, holidays and a short morning and evening prayer moment. Download them as a calendar file and import it into your phone's calendar so they fire even when this app is closed."),
       el("h3", {}, "Next reminders"),
       next.length
-        ? el("ul", { class: "alef-cal-list", "aria-label": "Upcoming reminders" }, ...next.map((it) => el("li", { "data-kind": it.kind }, el("strong", {}, fmtItem(it, l)), " ", it.title)))
+        ? el("ul", { class: "alef-cal-list", "aria-label": "Upcoming reminders" }, ...next.map((it) => {
+          const mk = REMINDER_MARKER[it.kind] || "reminder-set";
+          return el("li", { "data-kind": it.kind }, markerChip({ kind: mk, label: MARKER_LABEL[mk] }, { el }),
+            el("span", {}, el("span", { class: "when" }, fmtItem(it, l)), " ", it.title));
+        }))
         : el("p", { class: "alef-cal-note" }, "Nothing scheduled: turn reminder types on in Settings."),
       ...notes.map((n) => el("p", { class: "alef-cal-note", role: "note" }, n)),
       el("div", { class: "alef-cal-form" },
@@ -292,7 +324,8 @@ export function mount(root, ctx) {
   function renderSettings() {
     const l = loc();
     const n = (k) => (v) => setPrefs({ [k]: v });
-    const check = (key, label) => el("label", { class: "check" }, el("input", { type: "checkbox", checked: prefs.remind[key], onchange: (e) => setPrefs({ remind: { ...prefs.remind, [key]: !!e.target.checked } }) }), label);
+    const check = (key, label) => el("label", { class: "check" }, el("input", { type: "checkbox", checked: prefs.remind[key], onchange: (e) => setPrefs({ remind: { ...prefs.remind, [key]: !!e.target.checked } }) }),
+      markerChip({ kind: "reminder-set", label: "" }, { compact: true, el }), label);
     const hv = prefs.havdalah.mode === "minutes" ? `min${prefs.havdalah.minutes}` : "tzeit85";
     settingsBox.replaceChildren(
       el("summary", {}, el("strong", {}, "Settings: location, candle lighting, reminders")),
@@ -342,7 +375,9 @@ export function mount(root, ctx) {
   function renderMain() { if (!alive) return; renderToday(); renderGrid(); renderReminders(); armNotifications(); }
 
   (async () => {
-    prefs = normalizePrefs(await storeGet(ctx, CAL_PREFS_KEY, null));
+    const [p, streak] = await Promise.all([storeGet(ctx, CAL_PREFS_KEY, null), storeGet(ctx, STREAK_RECORD_KEY, null)]);
+    prefs = normalizePrefs(p);
+    doneDays = new Set(Array.isArray(streak?.doneDates) ? streak.doneDates.filter((x) => typeof x === "string") : []);
     if (!alive) return;
     if (!loc()) settingsBox.setAttribute("open", "");
     renderMain();

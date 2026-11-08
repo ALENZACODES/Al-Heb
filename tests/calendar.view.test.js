@@ -81,11 +81,21 @@ test("navigating to December shows Hanukkah; selecting a day shows details; Toda
   assert.match(table().find((n) => n.tag === "caption")[0].text, /December 2026/);
   const d = table().find((n) => n.attrs["data-date"] === "2026-12-05")[0];
   assert.match(d.text, /Hanukkah/); assert.match(d.className, /holiday/);
-  await d.click();
+  // a marked day is a link to its day page (shape + label markers, no colour-only meaning)
+  assert.equal(d.tag, "a"); assert.equal(d.attrs.href, "#/day/2026-12-05");
+  assert.deepEqual(d.find((n) => n.attrs["data-marker"]).map((n) => n.attrs["data-marker"]), ["festival-minor", "shabbat", "havdalah"]);
+  assert.match(d.attrs["aria-label"], /Minor festival, Shabbat, Havdalah/);
+  const fri = table().find((n) => n.attrs["data-date"] === "2026-12-04")[0];
+  assert.equal(fri.tag, "a"); assert.match(fri.text, /Candles/); assert.ok(fri.find((n) => n.attrs["data-marker"] === "candles").length);
+  // an ordinary weekday stays a button and shows the short detail panel with a link to the page
+  const wed = table().find((n) => n.attrs["data-date"] === "2026-12-02")[0];
+  assert.equal(wed.tag, "button");
+  await wed.click();
   const detail = root.find((n) => n.className === "alef-cal-detail")[0];
-  assert.match(detail.text, /Saturday 2026-12-05/); assert.match(detail.text, /25 Kislev 5787/); assert.match(detail.text, /Hanukkah/);
-  await table().find((n) => n.attrs["data-date"] === "2026-12-04")[0].click();
-  assert.match(root.find((n) => n.className === "alef-cal-detail")[0].text, /Candle lighting 16:23 \(Toronto, ON\)/);
+  assert.match(detail.text, /Wednesday 2026-12-02/); assert.match(detail.text, /22 Kislev 5787/);
+  assert.ok(detail.find((n) => n.tag === "a" && n.attrs.href === "#/day/2026-12-02").length);
+  // the legend names every marker
+  assert.equal(root.find((n) => /alef-cal-legend/.test(n.className))[0].find((n) => n.tag === "li").length, 9);
   await root.find((n) => n.tag === "button" && n.text === "Today")[0].click();
   assert.match(table().find((n) => n.tag === "caption")[0].text, /November 2026/);
   await root.find((n) => n.attrs["aria-label"] === "Previous month")[0].click();

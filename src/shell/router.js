@@ -145,6 +145,7 @@ export const ROUTES = [
   { name: 'text',     pattern: '/read/:textId',   module: '../corpus/read.view.js',              title: 'Read', owner: 'lane5' },
   { name: 'scan',     pattern: '/scan',           module: '../photo/scan.view.js',               nav: 'nav.scan',     title: 'Scan', owner: 'lane6' },
   { name: 'calendar', pattern: '/calendar',       module: '../curriculum/calendar.view.js',      tier: 'v0', nav: 'nav.calendar', title: 'Calendar', owner: 'lane1' },
+  { name: 'day',      pattern: '/day/:date',      module: '../curriculum/day.view.js',           tier: 'preview', title: 'Day', owner: 'items' },
   { name: 'settings', pattern: '/settings',       module: './settings.view.js', tier: 'v0',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
   { name: 'accessibility', pattern: '/accessibility', module: './a11y.view.js', tier: 'preview', title: 'Accessibility', owner: 'a11y', quick: 'nav.accessibility' },
   { name: 'welcome', pattern: '/welcome',        module: './onboarding.view.js', tier: 'v0',                title: 'Welcome', owner: 'lane8' },

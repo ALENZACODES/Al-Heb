@@ -142,6 +142,7 @@ export const STORE_KEYS = [
   ['morning.prefs', 'Morning verse preferences', 'src/morning/plan.js'],
   ['notify.prefs', 'Reminder time and on/off', 'src/shell/boot-hooks.js'],
   ['calendar.prefs', 'Calendar preferences', 'src/shell/notify.js'],
+  ['alef:calendar.art', 'Whether the optional calendar artwork files exist on the server (true or false per file), so the calendar asks once per browser session. Kept in sessionStorage under this exact name, gone when the tab closes; holds nothing about you', 'src/curriculum/calendar.markers.js'],
   ['install.v1', 'Install prompt state', 'src/shell/install.js'],
   ['alef.audioBannerSeen.v1', 'Whether you dismissed the audio notice (saved under this exact name, without the "alef:" prefix)', 'src/shell/audio-access.js'],
   ['alef.storage-notice.v1', 'Storage notice state and whether you dismissed it (saved under this exact name, without the "alef:" prefix)', 'src/shell/install-notice.js'],

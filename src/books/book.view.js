@@ -4,6 +4,7 @@
    read-along voice. Voice clips live in the audio tree (kind "book"); a
    page whose clips are not recorded yet says so instead of failing. */
 import { h, heSpan } from "../shell/ui.js";
+import { readerSlow, setReaderSlow, applyReaderRate, speedLine } from "./reader.speed.js";
 
 const fetchJson = async (ctx, url) => {
   const r = await (ctx.fetchFn ?? fetch)(url);
@@ -60,6 +61,7 @@ export async function mount(root, ctx) {
   const stage = h("div", { class: "book-stage" });
   const dots = h("div", { class: "book-dots", role: "tablist", "aria-label": "Pages" });
   const audioEl = h("audio", { preload: "none" });
+  applyReaderRate(audioEl, readerSlow()); // normal unless Slower was chosen earlier this session
   let audioState = h("span", { class: "muted book-audio-state", role: "status" });
 
   const render = () => {
@@ -85,12 +87,23 @@ export async function mount(root, ctx) {
       onclick: async () => {
         audioState.textContent = "Loading…";
         audioEl.src = p.audio[voice];
+        applyReaderRate(audioEl, readerSlow()); // normal pace unless the learner chose Slower (this session only)
         try { await audioEl.play(); audioState.textContent = ""; }
         catch { audioState.textContent = "This page's voice is not recorded yet."; }
       },
     }, label);
+    // Slower: the learner's choice, kept for this visit only; never a default
+    const slower = h("button", {
+      type: "button", class: "btn secondary book-slower", "aria-pressed": readerSlow(),
+      onclick: () => {
+        const on = setReaderSlow(!readerSlow());
+        slower.setAttribute("aria-pressed", String(on));
+        applyReaderRate(audioEl, on);
+        audioState.textContent = speedLine(on);
+      },
+    }, "Slower");
     stage.append(h("div", { class: "book-listen-row" },
-      listen("f", "▶ Listen — Noa"), listen("m", "▶ Listen — Ari"), audioState));
+      listen("f", "▶ Listen — Noa"), listen("m", "▶ Listen — Ari"), slower, audioState));
 
     const prev = h("button", { type: "button", class: "btn", onclick: () => { if (page > 0) { page--; render(); } } }, "← Previous");
     const next = h("button", { type: "button", class: "btn primary", onclick: () => { if (page < book.pages.length - 1) { page++; render(); } } },

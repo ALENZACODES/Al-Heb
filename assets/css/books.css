@@ -17,6 +17,8 @@
 .book-en { margin: 0; }
 .book-listen-row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; justify-content: center; }
 .book-listen { min-block-size: var(--tap); }
+.book-slower { min-block-size: var(--tap); }
+.book-slower[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
 .book-nav { display: flex; gap: 1rem; align-items: center; justify-content: space-between; width: 100%; max-inline-size: 44rem; }
 .book-dots { display: flex; gap: .4rem; justify-content: center; padding-block: .5rem; flex-wrap: wrap; }
 .book-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); background: transparent; padding: 0; cursor: pointer; }

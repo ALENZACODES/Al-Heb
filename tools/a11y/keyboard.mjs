@@ -33,7 +33,7 @@ async function open(hash, { fresh = false, viewport = { width: 390, height: 844 
   await page.goto(base + (hash ? '#' + hash : '')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(500);
   return { ctx, page, errors };
 }
-const active = (page) => page.evaluate(() => { const a = document.activeElement; return a ? { tag: a.tagName.toLowerCase(), id: a.id, role: a.getAttribute('role'), type: a.type || '', name: (a.getAttribute('aria-label') || a.textContent || a.value || '').trim().replace(/\s+/g, ' ').slice(0, 60), inMain: !!a.closest('main'), inNav: !!a.closest('.site-nav'), pressed: a.getAttribute('aria-pressed'), letter: a.dataset.letter || '', checked: a.checked } : null; });
+const active = (page) => page.evaluate(() => { const a = document.activeElement; return a ? { tag: a.tagName.toLowerCase(), id: a.id, role: a.getAttribute('role'), type: a.type || '', name: (a.getAttribute('aria-label') || a.textContent || a.value || '').trim().replace(/\s+/g, ' ').slice(0, 60), inMain: !!a.closest('main'), inNav: !!a.closest('.site-nav'), pressed: a.getAttribute('aria-pressed'), letter: a.dataset.letter || '', checked: a.checked, href: a.getAttribute('href'), section: a.closest('[data-section]')?.getAttribute('data-section') } : null; });
 /** Press Tab until `match(active)` is true. Returns the number of presses, or -1 if not reached within max. */
 async function tabTo(page, match, max = 120) {
   for (let i = 1; i <= max; i++) { await page.keyboard.press('Tab'); const a = await active(page); if (a && match(a)) return i; }
@@ -149,7 +149,7 @@ async function tabTo(page, match, max = 120) {
 {
   const { ctx, page } = await open('/read/priestly-blessing');
   const f = 'reader';
-  const nT = await tabTo(page, (a) => a.role === 'tab', 10);
+  const nT = await tabTo(page, (a) => a.inMain && a.role === 'tab', 20);
   note(f, 'Tab reaches the reader tabs', nT > 0, `${nT} presses`);
   await page.keyboard.press('ArrowRight'); const a1 = await active(page);
   note(f, 'arrow keys move between tabs (WAI-ARIA tabs pattern)', a1?.role === 'tab' && /guide|phrase/i.test(a1.name), a1?.name);
@@ -192,16 +192,17 @@ async function tabTo(page, match, max = 120) {
   note(f, 'tabbing forwards out of the open sheet closes it', left > 0 && await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'false'), `${left} presses to leave the nav`);
   await page.focus('#more-btn'); await page.keyboard.press('Enter');
   note(f, 'sheet reopens from More with Enter', await page.evaluate(() => document.getElementById('more-btn').getAttribute('aria-expanded') === 'true'));
-  // The sheet is grouped in <details>: a collapsed group's links are not rendered, so Tab skips them. Calendar is a preview page
-  // (docs/v0/SCOPE.md), so it sits inside the collapsed "Preview" group; the walk must open that group by keyboard first.
+  // The sheet is grouped in <details>: a collapsed group's links are not rendered, so Tab skips them.
+  // Read Calendar's current navigation section from its real link, then open that group by keyboard.
   const hidden = await page.evaluate(() => { const a = document.querySelector('#nav-more a[href="#/calendar"]'); if (!a || !a.closest('details') || a.closest('details').open) return false; const was = document.activeElement; a.focus(); const got = document.activeElement === a; if (got) was?.focus(); return !got && !a.checkVisibility(); });
   note(f, 'Calendar sits in a collapsed group and cannot take focus while collapsed', hidden);
-  const nPv = await tabTo(page, (a) => a.inNav && a.tag === 'summary' && /^preview/i.test(a.name), 12);
-  note(f, 'Tab reaches the "Preview" group heading without passing through collapsed links', nPv > 0, `${nPv} presses`);
+  const calendarSection = await page.locator('#nav-more a[href="#/calendar"]').evaluate(a => a.closest('[data-section]').getAttribute('data-section'));
+  const nPv = await tabTo(page, (a) => a.inNav && a.tag === 'summary' && a.section === calendarSection, 12);
+  note(f, 'Tab reaches the Calendar group heading without passing through collapsed links', nPv > 0, `${nPv} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(100);
-  note(f, 'Enter expands the Preview group (details[open])', await page.evaluate(() => !!document.querySelector('#nav-more li[data-section="preview"] > details[open]')));
+  note(f, 'Enter expands the Calendar group (details[open])', await page.locator('#nav-more a[href="#/calendar"]').evaluate(a => a.closest('details').open));
   const menuStops = await page.locator('#nav-more a, #nav-more button, #nav-more summary').count();
-  const nCal = await tabTo(page, (a) => a.inNav && /calendar/i.test(a.name), menuStops + 2);
+  const nCal = await tabTo(page, (a) => a.inNav && a.href === '#/calendar', menuStops + 2);
   note(f, 'Tab reaches the Calendar link inside the expanded group', nCal > 0, `${nCal} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
   const a = await active(page);

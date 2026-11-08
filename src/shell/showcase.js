@@ -78,7 +78,7 @@ export function showcaseNode(ctx) {
     portalsNode(has),
     builderNode(ctx),
     h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 62 story books · 3 Hebrew traditions'),
-    h('details', { class: 'show-all-destinations', ...(ctx?.routeName === 'home' ? { open: true } : {}) },
+    h('details', { class: 'show-all-destinations' }, // closed: the full list is one tap away, so the page opens small (depth revealed, not dumped)
       h('summary', {}, 'Explore all ALEF destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));
 }

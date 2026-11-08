@@ -11,7 +11,7 @@ import { h, heSpan } from '../shell/ui.js';
 import { loadOnboardingData } from './loader.js';
 import { STORE_KEY, PLACEMENT_KEY, LETTERS_QUESTION, LETTER_ANSWERS, DENOMINATIONS, PRONUNCIATIONS, SETTINGS_KEY_PRONUNCIATION,
   GOAL_QUESTION, GOAL_CHOICES, normalize, answerLetters, setDenomination, setMinutes, setStep, suggestedPronunciation, answerById, placementLesson, buildPlan } from './model.js';
-import { DAILY_GOAL_KEY, DAILY_GOALS } from '../home/today.js';
+import { DAILY_GOAL_KEY, DAILY_GOALS, FIRSTDAY_PROGRESS_KEY as FIRSTDAY_KEY } from '../home/today.js';
 import { PROGRESS_KEY } from '../curriculum/dom.js';
 import { audioSupport } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
@@ -80,7 +80,14 @@ export function mount(root, ctx) {
       h('div', { class: 'row' }, h('button', { type: 'submit', class: 'btn', id: 'ob-letters-continue' }, 'Continue to my learning plan'),
         rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : null));
     const submit = () => {
-      if (!picked) { say('Choose one answer to continue.'); focus(form.querySelector('#ob-letters-none')); return; }
+      if (!picked) {
+        // Said next to the button AND shown at the question, which is scrolled into view: the learner sees what is missing, not an unchanged page.
+        say('Choose one answer to continue.');
+        next.textContent = 'First, choose how much Hebrew you can read today (question 1, above). Not sure? Choose “Starting from zero”.';
+        const first = form.querySelector('#ob-letters-none');
+        try { first?.closest?.('fieldset')?.scrollIntoView?.({ block: 'start', behavior: 'smooth' }); } catch { /* old browsers */ }
+        focus(first); return;
+      }
       rec = answerLetters(rec, picked, nowISO());
       save();
       const israelNow = goal === 'israel';
@@ -145,8 +152,11 @@ export function mount(root, ctx) {
   // ---- Stage 3: plan card ----
   function renderPlan() {
     const placement = store.get(PLACEMENT_KEY);
+    // The plan says "N minutes a day"; Home's daily goal must say the same N, so a learner who skipped the minutes question gets the plan's default.
+    try { const want = rec.minutesPerDay || D?.plans?.defaultMinutes; const had = store.get(DAILY_GOAL_KEY); if ((had === null || had === undefined) && DAILY_GOALS.includes(want)) store.set(DAILY_GOAL_KEY, want); } catch { /* best effort */ }
     let completed = []; try { completed = Object.keys(store.get(PROGRESS_KEY)?.completed || {}); } catch { /* none */ }
-    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed, goal: settings.get('goal') }) : null;
+    let firstdayDone = false; try { const fd = store.get(FIRSTDAY_KEY); firstdayDone = !!(fd && (fd.done || (Array.isArray(fd.wins) && fd.wins.length >= 5))); } catch { /* none */ }
+    const plan = D ? buildPlan({ record: rec, placement, lessons: D.lessons, plans: D.plans, hasRoute: ctx.hasRoute, completed, goal: settings.get('goal'), firstdayDone }) : null;
     const placed = rec.letters !== 'none' && plan && (plan.source === 'placement' || settings.get('goal') === 'israel') ? plan.startLesson : null;
     const primaryHref = placed ? '#/learn?lesson=' + encodeURIComponent(placed) : startHref();
     const placedTitle = placed ? D?.lessons?.find((l) => l.id === placed)?.title : null;
@@ -157,7 +167,7 @@ export function mount(root, ctx) {
       ? h('section', { class: 'card ob-plan', 'aria-labelledby': 'ob-plan-h' },
         h('h2', { id: 'ob-plan-h' }, 'Your week'),
         h('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTE),
-        h('p', {}, `Your goal is ${plan.minutesPerDay} minutes a day. The lessons below add up to about ${plan.totalMinutes} minutes this week. ${plan.note}`),
+        h('p', {}, `Your goal is ${plan.minutesPerDay} minutes a day. Some lessons take longer than that: stop whenever you like, and the lesson opens where you stopped.${plan.source === 'placement' || /placement/.test(plan.note) ? ' ' + plan.note : ''}`),
         h('ol', { class: 'ob-days' }, ...plan.days.map(dayNode)))
       : h('p', { role: 'note' }, loadError ? 'The plan did not load, so there is no week plan yet. Your starting point still works.' : 'Building your week...');
     const changeStart = h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-start', onclick: () => { say('Answer the question again to change your starting point.'); go('letters'); } }, 'Change my starting point');

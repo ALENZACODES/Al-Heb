@@ -135,3 +135,9 @@ test('the game bar offers the live-composed styles plus the Kenney loops, each w
   assert.equal(new Set(GAME_TRACKS.map((t) => t.id)).size, GAME_TRACKS.length);
   for (const st of SYNTH_STYLES) { assert.ok(st.bpm > 40 && st.bpm < 200, st.id); assert.ok(st.scale.length >= 5 && st.prog.length >= 4, st.id); }
 });
+
+test('the installed track-name list matches the music engine, so the track list never offers a style the engine lacks', async () => {
+  const { SYNTH_STYLE_LIST } = await import('../src/audio/synth-styles.js');
+  const { SYNTH_STYLES } = await import('../src/audio/synth-music.js');
+  assert.deepEqual(SYNTH_STYLE_LIST.map((s) => [s.id, s.title, s.role]), SYNTH_STYLES.map((s) => [s.id, s.title, s.role]));
+});

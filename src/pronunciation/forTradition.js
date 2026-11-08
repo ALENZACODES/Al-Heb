@@ -83,12 +83,12 @@ export function letterSound(rec, tradition, { dagesh, fallbackEn = '' } = {}) {
 export function audioNote(tradition, { hasRecording = false } = {}) {
   const t = normalize(tradition);
   if (hasRecording) return '';
-  if (t === 'israeli') return 'No recording yet: this plays the device voice, which speaks Israeli Hebrew.';
+  if (t === 'israeli') return 'If a word has no recording yet, your device reads it in Israeli Hebrew.';
   // Owner decision 2026-11-07: the Sephardi setting plays Israeli sound (clips and device voice) and shows the Sephardi reading in English letters.
-  if (t === 'sephardi') return 'No recording yet: Sephardi plays the Israeli clips, or the device voice, which speak Israeli Hebrew; the Sephardi reading is shown in English letters.';
+  if (t === 'sephardi') return 'You hear Ari and Noa in Israeli Hebrew. The Sephardi way to say it is written in English letters.';
   // Owner decision 2026-11-07 22:56: Ashkenazi plays its own clip only when it is an admitted accent clip (an Israeli voice reading the
   // Ashkenazi spelling, src/audio/player.js isAccentClip), otherwise the Israeli clips; the device voice stays off for it.
-  return `There is no ${LABELS[t]} recording yet. ${LABELS[t]} plays the Israeli clips where one exists (the ${LABELS[t]} reading is shown in English letters); the device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the English-letter spelling instead.`;
+  return `You hear Ari and Noa in Israeli Hebrew. The ${LABELS[t]} way to say it is written in English letters. If a word has no recording, nothing plays: read the English letters.`;
 }
 
 /** Tradition for content that exists only in Modern Israeli Hebrew (phrasebook, Israel track): never the congregation. */
@@ -142,10 +142,10 @@ export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree 
   const base = { tradition: t, recorded: recorded > 0 };
   if (audioFree) return { ...base, deviceVoice: false, supported: 'off', line: 'Sound is off: you chose to learn without audio. Every step can be done by reading.' };
   if (recorded > 0) return { ...base, deviceVoice: t === 'israeli', supported: 'recorded', line: `Some items have recorded audio. Anything else is read by your device voice, which is Israeli Hebrew${t === 'israeli' ? '' : `, not ${L}`}.` };
-  if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'Tap Listen to hear each word in Israeli Hebrew, in Ari\'s or Noa\'s voice.' };
+  if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'Ari and Noa read every word aloud in Israeli Hebrew.' };
   // Owner decision 2026-11-07 (src/audio/player.js PLAYBACK_TRADITION): the Sephardi setting plays the Israeli clips and shows the
   // Sephardi reading in English letters. The device voice, also Israeli, is no mismatch for it.
-  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'Tap Listen to hear each word. The Sephardi reading is shown in English letters.' };
+  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'Ari and Noa read every word aloud in Israeli Hebrew. The Sephardi way to say it is written in English letters.' };
   if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. The device voice is on: it speaks Israeli Hebrew, so it will not sound ${L}.` };
-  return { ...base, deviceVoice: false, supported: 'none', line: `Tap Listen to hear each word. The ${L} reading is shown in English letters.` };
+  return { ...base, deviceVoice: false, supported: 'none', line: `Ari and Noa read every word aloud in Israeli Hebrew. The ${L} way to say it is written in English letters.` };
 }

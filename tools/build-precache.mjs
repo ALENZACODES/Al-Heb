@@ -71,6 +71,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json',
   'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',
+  // Game-music engine (~20 KB): imported only when Play music is first pressed (src/audio/music.js), then runtime-cached.
+  'src/audio/synth-music.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

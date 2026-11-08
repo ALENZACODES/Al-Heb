@@ -98,6 +98,7 @@ export function buildToday(o) {
 
   return {
     state: firstRun ? 'first-run' : 'learning', firstRun, primary, backlog, welcomeBack,
+    away: firstRun ? 0 : Math.max(0, Number(o.daysAway) || 0), // whole days since the last study day (a short gap gets a friendly hello, 7+ the welcome-back path)
     onramp: { wins: Array.isArray(o.firstday?.wins) ? Math.min(ONRAMP_WINS, o.firstday.wins.length) : 0, total: ONRAMP_WINS },
     lessons: ok('learn') ? nexts.map((l) => ({ id: l.id, title: l.title, href: lessonHref(l.id), tag: tag(l.id) })) : [],
     allDone: !firstRun && nexts.length === 0,
@@ -126,6 +127,7 @@ export function renderToday(today, t, onGoal, opts = {}) {
     : today.firstRun && today.primary?.kind === 'placement' ? 'Welcome. A short check finds the lesson to start from.'
     : today.firstRun ? 'Welcome. One small step at a time: the first is one letter, about 2 minutes.'
     : away && !today.backlog ? 'Welcome back. No need to catch up: start with the next step below.'
+    : !today.firstRun && (today.away || 0) >= 2 && !today.backlog && today.primary ? 'Good to see you again. Pick up right where you left off.'
     : today.backlog ? `${today.due.count} cards are waiting. Reviewing them first keeps what you learned.`
     : today.allDone ? 'All lessons in your track are complete. Use Review to keep them fresh.'
     : today.primary?.kind === 'lesson' ? 'Your next lesson is ready.' : today.primary ? 'Pick up where you left off.' : '';
@@ -143,7 +145,7 @@ export function renderToday(today, t, onGoal, opts = {}) {
     h('p', { id: 'today-due', class: 'muted' }, today.due.count === 0 ? dueText : (today.primary?.kind === 'review' ? dueText : '')),
     !calm && (sec.length || moreLinks.length) ? h('p', { id: 'today-more', class: 'today-secondary' }, ...[...sec, ...moreLinks.map((m) => h('a', { href: m.href }, m.label))].flatMap((n, i) => [i ? ' \u00b7 ' : '', n])) : null,
     // the streak line stays hidden until there is something to say: a streak of 2 or more days (or a paused one that reached 2)
-    showStreak && !today.welcomeBack && (today.streak.count >= 2 || today.streak.best >= 2) ? h('p', { id: 'today-streak', role: 'status', 'aria-live': 'polite' }, h('span', { class: 'muted' }, t('home.streak') + ': '), ...streakText) : null,
+    showStreak && !today.welcomeBack && (today.streak.count >= 2 || today.streak.best >= 2 || (today.streak.count === 1 && !today.streak.activeToday && !today.streak.restToday)) ? h('p', { id: 'today-streak', role: 'status', 'aria-live': 'polite' }, h('span', { class: 'muted' }, t('home.streak') + ': '), ...streakText) : null,
     calm ? h('details', { id: 'today-calm-more' }, h('summary', { class: 'muted small' }, 'More choices'),
       sec.length || today.more.length ? h('p', { id: 'today-more', class: 'today-secondary' }, ...[...sec, ...today.more.slice(0, Math.max(0, 3 - sec.length)).map((m) => h('a', { href: m.href }, m.label))].flatMap((n, i) => [i ? ' \u00b7 ' : '', n])) : null) : null,
     calm ? null : h('details', { id: 'today-goal-box' }, h('summary', { class: 'muted small' }, `Daily goal: ${today.dailyGoal} min`),

@@ -55,7 +55,8 @@
   ],
   "done": {
     "title": "Five wins. You read your first Hebrew word.",
-    "body": "Self-reported: you said you heard and traced each piece. The next lesson adds one more letter and the dot inside Bet.",
+    "body": "שָׁב (shav) means \"returned\". You just read a real Hebrew word, with its vowel marks. The next lesson adds one more letter and the dot inside Bet, so you can read שַׁבָּת (Shabbat).",
+    "tomorrow": "Come back tomorrow for your next letter. A few minutes a day is all it takes.",
     "preview": "Optional preview: read שָׁלוֹם today (about 10 minutes). Lesson 3 teaches these letters properly; this is a head start, not a shortcut."
   }
 }

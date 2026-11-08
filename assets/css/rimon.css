@@ -29,3 +29,5 @@
 @media(max-width:600px){.rimon-bubble{padding:10px 12px}.rimon-bubble-he{font-size:21px}.rimon-bubble-en{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.rimon-bubble.is-popping{animation:none!important}}
 @media(max-width:600px){.rimon-bubble{width:min(168px,calc(100vw - 100px));padding:8px 10px;border-radius:16px}.rimon-bubble-he{font-size:18px}.rimon-bubble-en{font-size:11px;margin-top:2px}}
+/* Phones: a smaller Rimon, so he does not sit on top of answer buttons at the right edge. */
+@media(max-width:600px){.rimon-corner{width:58px}.rimon-corner .rimon-dismiss{width:40px;height:40px;font-size:16px;right:-10px;top:-12px}}

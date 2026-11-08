@@ -403,9 +403,9 @@
    "titleEn": "Night Shift",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -415,9 +415,9 @@
    "titleEn": "The Garden on the Roof",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

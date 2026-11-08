@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book34-p01.mp3"
    },
    "illustration": "a hospital entrance at night, lights on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book34-p02.mp3"
    },
    "illustration": "a nurse pulling on her badge, coffee in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book34-p03.mp3"
    },
    "illustration": "the nurse at a station with monitors",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book34-p04.mp3"
    },
    "illustration": "a dim corridor, soft lights",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book34-p05.mp3"
    },
    "illustration": "three call lights blinking at once",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book34-p06.mp3"
    },
    "illustration": "the nurse hurrying between doors",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book34-p07.mp3"
    },
    "illustration": "an elderly patient sitting up in bed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book34-p08.mp3"
    },
    "illustration": "the man asking gently",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book34-p09.mp3"
    },
    "illustration": "the nurse on the edge of the bed, hands shaping waves",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book34-p10.mp3"
    },
    "illustration": "the man asleep, peaceful",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book34-p11.mp3"
    },
    "illustration": "sunlight through the ward windows",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book34-p12.mp3"
    },
    "illustration": "the nurse walking out as the city wakes, yawning",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

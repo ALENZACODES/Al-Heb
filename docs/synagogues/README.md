@@ -31,6 +31,12 @@ archive, Wikipedia and community directories; every page used is listed under th
 disagree (Kolot Mayim's founding year, Am Shalom's 2003 or 2004) the entry says so. Nothing here has been checked with
 the congregations themselves; the `checks` lists and the preview tier say as much.
 
+## Standalone page
+
+`synagogues/index.html` is a plain, script-free page listing every congregation with its picture and a link into its story in the
+app. It is generated: `node tools/synagogues/build-page.mjs` rewrites it from the data file, and a test fails if it is stale.
+Re-run the command after any change to `canada.json`.
+
 ## Pictures
 
 51 JPEGs for 27 congregations. They are illustrative views built from reference photographs and street-level references,

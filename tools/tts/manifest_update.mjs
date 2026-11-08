@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { manifestText } from '../audio/manifest_io.mjs';
 // Mark accepted TTS clips in the audio manifest the app reads, and copy their MP3s into <root>/audio/.
 //   node tools/tts/manifest_update.mjs [--report tools/tts/verify-report.csv] [--work ~/alef-tts-work] [--root <repo>] [--no-copy] [--dry-run] [--allow-mock]
 // Status written: "synthetic-unreviewed" (a computer-made clip that no human has listened to). It NEVER writes "recorded", it never touches an
@@ -89,7 +90,7 @@ export function update({ root = REPO_ROOT, work = defaultWork(), reportPath, cop
     }
     res.marked++;
   }
-  if (!dry) for (const f of files) if (f.changed) fs.writeFileSync(path.join(root, f.rel), JSON.stringify(f.list, null, 1) + '\n');
+  if (!dry) for (const f of files) if (f.changed) fs.writeFileSync(path.join(root, f.rel), manifestText(f.list));
   return res;
 }
 

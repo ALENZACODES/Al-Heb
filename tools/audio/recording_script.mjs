@@ -9,7 +9,7 @@ import { CONFUSABLE_LETTER_PAIRS, GRID_VOWELS } from './hebrew_data.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const SCRIPT_TRADITIONS = ['israeli', 'ashkenazi'];
-export const TAKES = { letter: 3, 'letter-variant': 3, 'letter-sound': 4, vowel: 3, syllable: 2, anchor: 2, 'lesson-word': 2, 'prayer-word': 2, word: 2, phrase: 2, 'prayer-line': 2, line: 2, prayer: 3 };
+export const TAKES = { 'letter-lecture': 2, letter: 3, 'letter-variant': 3, 'letter-sound': 4, vowel: 3, syllable: 2, anchor: 2, 'lesson-word': 2, 'prayer-word': 2, word: 2, phrase: 2, 'prayer-line': 2, line: 2, prayer: 3 };
 const ISRAELI_MERGED = new Set(['tet|tav', 'alef|ayin', 'kaf|qof']);
 const csvCell = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
 const mdCell = (v) => String(v ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
@@ -25,6 +25,8 @@ export function direction(e, tradition) {
   const s = section(e);
   const ash = tradition === 'ashkenazi';
   switch (s) {
+    case 'letter-lecture':
+      return 'Read the teaching text in its indicated language (English for explain-en); retain natural pauses and clear sounds.';
     case 'letter':
       return ash
         ? 'Say the letter NAME once, falling intonation, no carrier phrase. Use the Ashkenazi/Yiddish-liturgical name your community uses (e.g. "beys" for bet). DIRECTOR: confirm the 27-name list with the talent before the session.'
@@ -90,8 +92,8 @@ export function minimalPairs(tradition) {
   return out;
 }
 
-const SECTION_ORDER = ['letter', 'letter-variant', 'letter-sound', 'vowel', 'syllable', 'anchor', 'lesson-word', 'phrase', 'prayer-line', 'prayer-word', 'word', 'line', 'prayer'];
-const SECTION_TITLES = {
+const SECTION_ORDER = ['letter-lecture', 'letter', 'letter-variant', 'letter-sound', 'vowel', 'syllable', 'anchor', 'lesson-word', 'phrase', 'prayer-line', 'prayer-word', 'word', 'line', 'prayer'];
+const SECTION_TITLES = { 'letter-lecture': 'Letter teaching clips',
   letter: 'Letter names', 'letter-sound': 'Isolated letter sounds', vowel: 'Vowels and marks', syllable: 'Syllable grid (22 letters x 5 vowel sounds)',
   'letter-variant': 'Letter variant forms (vet, khaf, fe, sin)', anchor: 'Mnemonic anchor words (Israeli only)', 'lesson-word': 'Lesson vocabulary words',
   phrase: 'Survival phrasebook (Israeli only)', 'prayer-line': 'Prayer lines (one clip per line)', 'prayer-word': 'Prayer words (one clip per word, for tap-to-hear)',

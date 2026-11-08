@@ -1,5 +1,5 @@
 import { test } from 'node:test';
-import { loadManifestFull } from '../tools/audio/manifest_io.mjs';
+import { loadManifestFull, manifestText } from '../tools/audio/manifest_io.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -16,10 +16,11 @@ test('committed manifest has contract fields, valid paths, hebrew code points', 
   for (const e of manifest) {
     assert.ok(['m', 'f'].includes(e.voice));
     assert.ok(['israeli', 'sephardi', 'ashkenazi'].includes(e.tradition));
-    assert.ok(['letter', 'vowel', 'syllable', 'word', 'line', 'prayer'].includes(e.kind));
+    assert.ok(['letter', 'vowel', 'syllable', 'word', 'line', 'prayer', 'letter-lecture'].includes(e.kind));
     assert.equal(e.path, `audio/${e.voice}/${e.tradition}/${e.kind}/${e.id}.mp3`);
     assert.match(e.id, /^[a-z0-9][a-z0-9._-]*$/);
-    assert.match(e.text, /[֐-׿]/);
+    if (e.kind === 'letter-lecture' && e.id.endsWith('-explain-en')) assert.match(e.text, /[A-Za-z]/);
+    else assert.match(e.text, /[֐-׿]/);
     assert.ok(['missing', 'tts', 'synthetic-unreviewed', 'recorded'].includes(e.status));
     assert.ok(typeof e.source === 'string');
     assert.ok(!seen.has(e.path), `dup ${e.path}`); seen.add(e.path);
@@ -39,12 +40,15 @@ test('covers 31 letter forms (27 + 4 variants), 15 vowels, 22x5 syllable grid fo
   }
 });
 
-test('only ingested synthetic clips exist: every non-missing entry is synthetic-unreviewed, has its file, and none is recorded', () => {
+test('synthetic clips have files and explicit provenance; none is a human recording', () => {
   for (const e of manifest) {
     if (e.status === 'missing') { assert.equal(e.source, 'none', e.path); assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), false, e.path); continue; }
-    assert.equal(e.status, 'synthetic-unreviewed', e.path);
-    assert.equal(e.source, 'outside-synthetic', e.path);
-    assert.equal(e.synth && e.synth.reviewed, false, e.path);
+    assert.ok(['tts', 'synthetic-unreviewed'].includes(e.status), e.path);
+    assert.notEqual(e.source, 'none', e.path);
+    if (e.status === 'synthetic-unreviewed') {
+      assert.ok(['outside-synthetic', 'tts-respelled'].includes(e.source), e.path);
+      assert.notEqual(e.synth?.reviewed, true, e.path);
+    }
     assert.equal(fs.existsSync(new URL('../' + e.path, import.meta.url)), true, e.path);
   }
   assert.equal(manifest.filter((e) => e.status === 'recorded').length, 0, 'no human recording exists');
@@ -115,10 +119,10 @@ test('size budget: core manifest, the kind-word shard and every word shard stay 
     const sh = JSON.parse(fs.readFileSync(f, 'utf8'));
     assert.ok(sh.length > 1000 && sh.every((e) => ['prayer-word', 'vocab-word', 'vocab-alias', 'vocab-extra'].includes(e.group) && e.tradition === t));
   }
-  assert.equal(manifest.length, core.length + wordShard.length + 3 * JSON.parse(fs.readFileSync(new URL('../data/audio/manifest-words-israeli.json', import.meta.url), 'utf8')).length);
+  assert.equal(manifest.length, core.length + wordShard.length + ['israeli', 'sephardi', 'ashkenazi'].reduce((n, t) => n + JSON.parse(fs.readFileSync(new URL(`../data/audio/manifest-words-${t}.json`, import.meta.url), 'utf8')).length, 0));
 });
 
-test('every id in every donor recording script resolves to a missing manifest entry with the right kind/voice/tradition path', () => {
+test('every donor script id resolves to a manifest entry with the right kind/voice/tradition path', () => {
   const idx = new Map(manifest.map((e) => [e.path, e]));
   const ids = {};
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) {
@@ -128,19 +132,21 @@ test('every id in every donor recording script resolves to a missing manifest en
     for (const r of rows) for (const v of ['m', 'f']) {
       const e = idx.get(`audio/${v}/${t}/word/${r.id}.mp3`);
       assert.ok(e, `${t}/${v}/${r.id} missing from manifest`);
-      assert.deepEqual([e.kind, e.voice, e.tradition], ['word', v, t]); assert.ok(['missing', 'synthetic-unreviewed'].includes(e.status));
+      assert.deepEqual([e.kind, e.voice, e.tradition], ['word', v, t]); assert.ok(['missing', 'tts', 'synthetic-unreviewed'].includes(e.status));
     }
   }
   assert.deepEqual(ids.israeli, ids.sephardi); assert.deepEqual(ids.israeli, ids.ashkenazi);
   assert.ok(manifest.some((e) => e.id === 'ha3cf2c46'));
 });
 
-test('every vocab-word manifest entry (donor-script words) appears in its tradition script; script words are not in core', () => {
+test('all donor script words remain in each voice and tradition vocabulary shard', () => {
   const inScript = {};
   for (const t of ['israeli', 'sephardi', 'ashkenazi']) inScript[t] = new Set(parseCsv(fs.readFileSync(new URL(`../docs/voices/recording-script-${t}.csv`, import.meta.url), 'utf8')).map((r) => r.id));
   const vw = manifest.filter((e) => e.group === 'vocab-word');
-  assert.equal(vw.length, 6000);
-  for (const e of vw) assert.ok(inScript[e.tradition].has(e.id), `${e.path} not in script`);
+  for (const t of Object.keys(inScript)) for (const v of ['m', 'f']) {
+    const ids = new Set(vw.filter((e) => e.tradition === t && e.voice === v).map((e) => e.id));
+    for (const id of inScript[t]) assert.ok(ids.has(id), `${t}/${v}/${id} missing donor word`);
+  }
 });
 
 test('sin letter name follows canonical mark order (vowel before sin dot)', () => {
@@ -159,4 +165,12 @@ test('vocab ids: every mapped or Listen-pool vocab id has a word entry for every
   for (const id of ids) for (const t of ['israeli', 'sephardi', 'ashkenazi']) for (const v of ['m', 'f']) assert.ok(have.has(`${v}|${t}|${id}`), `${v}/${t}/${id}`);
   assert.ok(manifest.filter((x) => x.group === 'vocab-alias').every((e) => /^word\/[a-z0-9._-]+-w\d+$/.test(e.aliasOf)));
   assert.ok(manifest.filter((x) => x.group === 'vocab-alias' || x.group === 'vocab-extra').every((e) => e.status === 'missing' || e.status === 'recorded' || e.status === 'tts'));
+});
+
+test('manifest serialization preserves every field and stays deterministic without indentation overhead', () => {
+  const rows = [{ text: 'שלום', synth: { reviewed: false }, optional: false }, { id: 'second', source: 'paid-cloud' }];
+  const text = manifestText(rows);
+  assert.deepEqual(JSON.parse(text), rows);
+  assert.equal(manifestText(JSON.parse(text)), text);
+  assert.ok(Buffer.byteLength(text) < Buffer.byteLength(JSON.stringify(rows, null, 1)));
 });

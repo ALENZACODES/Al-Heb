@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { manifestText } from './manifest_io.mjs';
 // Ingest a batch of audio clips that came from an OUTSIDE generator (format and layout not known in advance).
 //   node tools/audio/ingest.mjs <folder | extracted-zip folder | .zip> [options]          DRY RUN (default): report only, writes nothing
 //   node tools/audio/ingest.mjs <input> --apply [options]                                  convert, write audio/, sidecars, manifest
@@ -458,8 +459,8 @@ const findEntry = (entries, p) => entries.find((e) => e.path === p);
 
 async function applyAll(res, entries, root, opts, tools, jobs, t) {
   const ready = res.files.filter((r) => r.state === 'ready');
-  if (!tools.ffmpeg || !tools.ffprobe) { res.errors.push('--apply needs ffmpeg and ffprobe (to convert and strip metadata); nothing was written'); return; }
   if (res.budget.over && !opts.overBudgetOk) { res.errors.push(`--apply refused: total ${res.budget.totalMb.toFixed(0)} MB would exceed the ${t.budgetMb} MB budget (raise --budget-mb or pass --over-budget-ok after deciding where the clips will be hosted)`); return; }
+  if (!tools.ffmpeg || !tools.ffprobe) { res.errors.push('--apply needs ffmpeg and ffprobe (to convert and strip metadata); nothing was written'); return; }
   if (res.delivery && !res.delivery.ok) { res.errors.push('--apply refused: the delivery check failed (clips could end up in the precache); see the report'); return; }
   const now = (opts.now || (() => new Date().toISOString()))();
   const files = manifestFiles(root).map((rel) => ({ rel, list: JSON.parse(fs.readFileSync(path.join(root, rel), 'utf8')), changed: false }));
@@ -516,7 +517,7 @@ async function applyAll(res, entries, root, opts, tools, jobs, t) {
     } catch (e) { r.state = 'rejected'; r.fails.push('conversion failed: ' + e.message.slice(0, 200)); try { fs.rmSync(dst, { force: true }); } catch { /* */ } }
     finally { fs.rmSync(tmpDir, { recursive: true, force: true }); }
   });
-  for (const f of files) if (f.changed) fs.writeFileSync(path.join(root, f.rel), JSON.stringify(f.list, null, 1) + '\n');
+  for (const f of files) if (f.changed) fs.writeFileSync(path.join(root, f.rel), manifestText(f.list));
   if (done.length) { // keep the tiny precached summary in step with the manifest, as build_manifest.mjs would
     const all = files.flatMap((f) => f.list); const sp = path.join(root, 'data/audio/summary.json');
     if (fs.existsSync(sp)) fs.writeFileSync(sp, JSON.stringify(summaryOf(all, root)) + '\n');

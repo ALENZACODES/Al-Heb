@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { manifestText } from './manifest_io.mjs';
 // Rebuild learner labels on word and line clips: pointed Hebrew stays, English meaning is filled when it was
 // missing, and the phonetic is regenerated per tradition (Ashkenazi siddur; Sephardi Moroccan-adjacent).
 // Also writes an English-sounds reading (`say`) and refreshes audio/INDEX.csv. Does not touch audio files,
@@ -118,10 +119,10 @@ for (const [, rows] of loaded) {
 }
 
 for (const [rel, rows] of loaded) {
-  let text = JSON.stringify(rows, null, 1) + '\n';
+  let text = manifestText(rows);
   if (rel.startsWith('data/audio/manifest-words-') && Buffer.byteLength(text) >= 2 * MiB) {
     for (const e of rows) delete e.say;
-    text = JSON.stringify(rows, null, 1) + '\n';
+    text = manifestText(rows);
     console.log(`${rel}: dropped stored say to stay under 2 MiB (${(Buffer.byteLength(text) / MiB).toFixed(2)} MiB). The app derives say from phonetic.`);
   } else {
     console.log(`${rel}: ${(Buffer.byteLength(text) / MiB).toFixed(2)} MiB`);

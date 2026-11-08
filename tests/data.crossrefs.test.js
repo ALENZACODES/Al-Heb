@@ -79,6 +79,8 @@ test('audio manifests: no duplicate path, canonical path shape, and every id map
   const kid = new Set(all.map((a) => `${a.kind}/${a.id}`));
   const lessonWord = new Set(); for (const l of lessons) (l.words || []).forEach((w, i) => lessonWord.add(`${l.id.toLowerCase()}-w${i + 1}`));
   const base = (id) => id.replace(/-(m|f)$/, '');
+  const retired = new Map(rd('data/audio/retired-vocabulary.json').map((e) => [e.id, e]));
+  for (const [id, row] of retired) { assert.ok(!vids.has(id), id); assert.ok(row.reason && row.he); }
   const bad = [];
   for (const a of all) {
     const at = `${a.kind}/${a.id}`;
@@ -92,7 +94,7 @@ test('audio manifests: no duplicate path, canonical path shape, and every id map
     if (a.kind === 'line' || a.kind === 'prayer') { const b0 = a.id.replace(/-l\d+$/, ''); if (!(regIds.has(a.id) || regIds.has(b0) || phrase.has(a.id) || phrase.has(base(a.id)))) bad.push(`${at} line id`); }
     if (a.kind === 'word') {
       if (a.group === 'lesson-word' && !lessonWord.has(a.id)) bad.push(`${at} lesson word`);
-      if (/^vocab-/.test(a.group) && !vids.has(a.id)) bad.push(`${at} vocab id`);
+      if (/^vocab-/.test(a.group) && !vids.has(a.id) && retired.get(a.id)?.he !== a.text) bad.push(`${at} vocab id`);
       if (a.group === 'phrasebook' && !(phrase.has(a.id) || phrase.has(base(a.id)))) bad.push(`${at} phrasebook id`);
       if (a.group === 'prayer-word' && !regIds.has(a.id.replace(/-w\d+$/, ''))) bad.push(`${at} prayer word`);
     }

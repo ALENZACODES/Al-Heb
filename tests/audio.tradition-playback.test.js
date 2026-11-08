@@ -70,7 +70,7 @@ test('real manifest: the #/read priestly blessing line and the shalom lesson wor
     const line = f.status('line', 'bless-priestly-1');
     assert.equal(line.source, 'file'); assert.equal(line.path, 'audio/f/israeli/line/bless-priestly-1.mp3');
     const name = setting === 'sephardi' ? 'Sephardi' : 'Ashkenazi';
-    assert.equal(describeResult(line).text, `Sound: Synthetic voice (Israeli only), not a recorded teacher (woman, Israeli voice; ${name} reading shown in English letters).`);
+    assert.equal(describeResult(line).text, `Sound: Synthetic voice, not a recorded teacher (woman, Israeli voice; ${name} reading shown in English letters).`);
     assert.match(playbackLine({ type: 'playing', rate: 1, ...line }).text, new RegExp(`\\(woman, Israeli voice; ${name} reading shown in English letters\\)\\. Normal speed\\.`));
     for (const id of ['r03-w1', 'r04-w2', 'r04-w3']) {
       const w = player('m', setting).status('word', id);

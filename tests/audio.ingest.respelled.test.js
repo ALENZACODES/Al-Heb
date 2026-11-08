@@ -26,7 +26,7 @@ const tmp = (p) => fs.mkdtempSync(path.join(os.tmpdir(), `respelled-${p}-`));
 const rm = (d) => fs.rmSync(d, { recursive: true, force: true });
 
 async function handoffFolder() {
-  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { words: 2 }); const cfg = loadVoiceConfig(path.join(REPO, 'tools/tts/voices.config.json'));
+  const work = tmp('work'); const plan = await buildVoicePlan(REPO, { words: 2, includeExisting: true }); const cfg = loadVoiceConfig(path.join(REPO, 'tools/tts/voices.config.json'));
   await renderItems(plan.items, { work, take: 1, cfg, mock: true }); await renderItems(plan.items, { work, take: 2, cfg, mock: true });
   await clipAll({ work, take: 1, log: () => {} }); await clipAll({ work, take: 2, log: () => {} });
   await runJudges({ work, recogniser: makeRecogniser({ cfg, mode: 'mock', items: readJsonl(workPaths(work).log).filter((l) => l.event === 'rendered') }), log: () => {} });

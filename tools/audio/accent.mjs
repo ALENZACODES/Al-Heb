@@ -1,3 +1,4 @@
+import { manifestText } from './manifest_io.mjs';
 // Shared helpers for the Sephardi and Ashkenazi ("accent") clips: the respelling the Israeli voice reads, the tempo cap against the
 // Israeli counterpart, and the manifest marking that admits a clip to playback. Owner decision (John Khan, 2026-11-07 22:56), see
 // docs/audio/ACCENT-VOICES-2026-11-08.md. Used by tools/audio/render_tts.mjs (--tradition sephardi|ashkenazi) and
@@ -127,7 +128,7 @@ export function markAccentRows(root, updates, { dry = false } = {}) {
       if (u.synth && typeof u.synth === 'object') { delete e.synth; e.synth = u.synth; }
       res.marked.push(e.path); changed = true;
     }
-    if (changed && !dry) fs.writeFileSync(abs, JSON.stringify(list, null, 1) + '\n');
+    if (changed && !dry) fs.writeFileSync(abs, manifestText(list));
   }
   res.notFound = [...pending.keys()];
   return res;

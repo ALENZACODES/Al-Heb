@@ -202,8 +202,8 @@ export function backfill({ root = ROOT, write = false, force = false, shard = nu
     if (plan.action === 'create') log(`  ${write ? 'wrote' : 'would write'} ${e.path}.meta.json`);
   }
   for (const p of listSidecars(root)) {
-    const clip = path.relative(root, p).replace(/\.meta\.json$/, '');
-    if (!allPaths.has(clip)) res.orphans.push(path.relative(root, p));
+    const clip = path.relative(root, p).split(path.sep).join('/').replace(/\.meta\.json$/, '');
+    if (!allPaths.has(clip)) res.orphans.push(path.relative(root, p).split(path.sep).join('/'));
   }
   return res;
 }

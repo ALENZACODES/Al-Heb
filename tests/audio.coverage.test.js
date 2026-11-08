@@ -11,11 +11,12 @@ const R = fileURLToPath(new URL('..', import.meta.url));
 const manifest = loadManifestFull(R);
 const E = (voice, tradition, kind, id, group, extra = {}) => ({ path: `audio/${voice}/${tradition}/${kind}/${id}.mp3`, voice, tradition, kind, id, text: 'שָׁלוֹם', status: 'missing', source: 'none', group, ...extra });
 
-test('real manifest: no recording exists; the only clips are synthetic-unreviewed and the report says so', () => {
+test('real manifest: no recording exists; synthetic clips are counted separately from human recordings and the report says so', () => {
+  const ix = buildIndex(manifest);
   const t = totals(computeCoverage(manifest));
-  const synth = manifest.filter((e) => !e.optional && !e.aliasOf && e.status === 'synthetic-unreviewed').length;
-  assert.equal(t.recorded, 0); assert.equal(t.tts, synth); assert.equal(t.viaEquivalent, 0);
-  assert.equal(t.missing, t.required - synth); assert.ok(t.required > 6000);
+  const synth = manifest.filter((e) => !e.optional && !e.aliasOf && ['tts', 'synthetic-unreviewed'].includes(e.status)).length;
+  assert.equal(t.recorded, 0); assert.equal(t.tts, synth); assert.equal(t.viaEquivalent, manifest.filter((e) => !e.optional && !e.aliasOf && entryState(e, ix) === 'via-equivalent').length);
+  assert.equal(t.missing, t.required - synth - t.viaEquivalent); assert.ok(t.required > 6000);
   assert.match(renderMarkdown(manifest), /Recorded by a human reader: 0;/);
 });
 

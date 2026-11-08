@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { manifestText } from './manifest_io.mjs';
 // Builds data/audio/manifest.json (core) + data/audio/manifest-kind-word.json (kind=word entries) + the per-tradition
 // data/audio/manifest-words-<tradition>.json shards (array of {path, voice, tradition, kind, id, text, ipa?, status, source, equivalentTo?}).
 // Reads other lanes' data when present; skips gracefully when absent. Status is "missing" until a file exists under audio/.
@@ -289,7 +290,7 @@ export function main(argv = process.argv.slice(2)) {
   const check = argv.includes('--check');
   const { entries, notes, warnings } = buildEntries();
   const { core, wordShard, shards } = splitEntries(entries);
-  const files = [['data/audio/manifest.json', JSON.stringify(core, null, 1) + '\n'], [WORD_SHARD_FILE, JSON.stringify(wordShard, null, 1) + '\n'], ...TRADITIONS.map((t) => [shardFile(t), JSON.stringify(shards[t], null, 1) + '\n']),
+  const files = [['data/audio/manifest.json', manifestText(core)], [WORD_SHARD_FILE, manifestText(wordShard)], ...TRADITIONS.map((t) => [shardFile(t), manifestText(shards[t])]),
     [SUMMARY_FILE, JSON.stringify(summaryOf(entries, ROOT)) + '\n']];
   if (check) {
     for (const [rel, text] of files) {

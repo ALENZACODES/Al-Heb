@@ -22,7 +22,7 @@ for (const slot of SLOTS) {
     const text = fs.readFileSync(path.join(root, DIR, `recording-kit-${slot}-clip-list.csv`), 'utf8');
     assert.equal(text.split('\n')[0], COLS.join(','));
     const rows = parseCsv(text);
-    assert.ok(rows.length > 0 && rows.length <= TARGET);
+    assert.ok(rows.length <= TARGET);
     const seen = new Set();
     for (const r of rows) {
       const e = byKey.get(`${voice}|${tradition}|${r.kind}|${r.id}`);

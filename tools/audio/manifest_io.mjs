@@ -17,3 +17,6 @@ export function loadManifestFull(root = ROOT) {
   }
   return out;
 }
+
+// Keep rows diffable without shipping indentation for every field.
+export const manifestText = (rows) => "[\n" + rows.map((row) => JSON.stringify(row)).join(",\n") + "\n]\n";

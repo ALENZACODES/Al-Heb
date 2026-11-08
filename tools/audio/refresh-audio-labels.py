@@ -32,7 +32,7 @@ for p,rows in allrows:
    r['english']=line_labels.get(r['id'],line_labels.get(re.sub(r'-f$|-m$','',r['id']),'UNKNOWN'))
   if r['tradition']=='israeli' and r['kind']=='word':
    r['english']=D[r['id']] if r['id'] in D else r.get('english',key.get(r['id'],'UNKNOWN'))
- p.write_text(json.dumps(rows,ensure_ascii=False,indent=1)+'\n')
+ p.write_text('[\n' + ',\n'.join(json.dumps(row, ensure_ascii=False, separators=(',', ':')) for row in rows) + '\n]\n', encoding='utf-8')
 # Synchronize the current index only. Never add/remove rows or production status.
 with indexpath.open(newline='') as fh:reader=csv.DictReader(fh);fields=reader.fieldnames;idx=list(reader)
 lookup={r['path']:r for _,rows in allrows for r in rows}

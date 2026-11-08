@@ -11,7 +11,7 @@ import { renderMarkdown } from '../tools/audio/coverage.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 test('one label table: recorded / tts / missing, anything unknown is missing', () => {
-  assert.deepEqual(STATUS_LABELS, { recorded: 'Recorded by a human reader', tts: 'Synthetic voice (Israeli only), not a recorded teacher', missing: 'No audio yet' });
+  assert.deepEqual(STATUS_LABELS, { recorded: 'Recorded by a human reader', tts: 'Synthetic voice, not a recorded teacher', missing: 'No audio yet' });
   assert.equal(statusLabel('recorded'), STATUS_LABELS.recorded);
   assert.equal(statusLabel('tts'), STATUS_LABELS.tts);
   for (const s of ['missing', 'recorded-tts', undefined, null, '']) assert.equal(statusLabel(s), STATUS_LABELS.missing, String(s));

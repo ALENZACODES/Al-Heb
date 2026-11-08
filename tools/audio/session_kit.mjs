@@ -75,6 +75,7 @@ export function orderedBlocks(manifest, tradition, voice) {
   })();
   const names = [...byAlpha(by(['letter', 'letter-variant'])), ...by(['vowel']).sort((a, b) => VOWEL_ORDER.indexOf(a.id) - VOWEL_ORDER.indexOf(b.id))];
   const blocks = [
+    { name: 'Letter teaching clips', cap: SESSION_CAP_MIN, clips: stable(by(['letter-lecture'])) },
     { name: 'Letter names, variant forms, vowels and marks', cap: SESSION_CAP_MIN, clips: names },
     { name: 'Isolated letter sounds (directed)', cap: SESSION_CAP_MIN, clips: byAlpha(by(['letter-sound'])) },
     { name: 'Syllable grid', cap: SESSION_CAP_MIN, clips: bySyl(by(['syllable'])) },

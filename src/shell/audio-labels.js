@@ -14,7 +14,7 @@
 import { ACCENT_SOURCES } from '../audio/player.js';
 export const STATUS_LABELS = Object.freeze({
   recorded: 'Recorded by a human reader',
-  tts: 'Synthetic voice (Israeli only), not a recorded teacher',
+  tts: 'Synthetic voice, not a recorded teacher',
   missing: 'No audio yet',
 });
 

@@ -8,12 +8,13 @@
   "records": 6636,
   "vocab": 6303,
   "corpus": 333,
-  "review": 385
+  "review": 388
  },
  "flags": {
   "alef-vav-mater-repaired": 71,
   "aramaic": 8,
   "ashk-final-kamatz-reduced": 1221,
+  "ashk-reduction-latin-not-applied": 4,
   "divine-name": 61,
   "he-patach-no-mappiq": 1,
   "ipa-differs-from-words.json": 121,

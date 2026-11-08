@@ -8,12 +8,12 @@ import { DEFAULTS } from '../tools/audio/ingest.mjs';
 const SW = fs.readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
 const MAX_CLIP_BYTES = +/const MAX_CLIP_BYTES = (\d+) \* 1024/.exec(SW)[1] * 1024;
 
-test('every clip on disk is small enough for the service worker to cache (no silent no-offline clips)', () => {
+test('short learning clips fit the offline cap; longer line/prayer recordings use bounded network playback', () => {
   let n = 0;
   for (const e of loadManifestFull()) {
     if (e.status === 'missing') continue;
     const size = fs.statSync(new URL('../' + e.path, import.meta.url)).size; n++;
-    assert.ok(size <= MAX_CLIP_BYTES, `${e.path} is ${size} bytes, over the worker cap of ${MAX_CLIP_BYTES}`);
+    assert.ok(size <= MAX_CLIP_BYTES || ['line', 'prayer'].includes(e.kind), `${e.path} is ${size} bytes, over the worker cap of ${MAX_CLIP_BYTES}`);
   }
   assert.ok(n > 0);
 });

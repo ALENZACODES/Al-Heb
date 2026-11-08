@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { manifestText } from './manifest_io.mjs';
 // Reconcile manifest rows that say "missing" with clips that exist on disk and carry a sidecar.
 //   node tools/audio/mark_present.mjs [--dry-run]
 // For every manifest entry whose status is "missing" and whose file exists under audio/ WITH a <clip>.mp3.meta.json sidecar
@@ -37,7 +38,7 @@ export function markPresent({ root = ROOT, dry = false } = {}) {
       changed = true;
     }
     all.push(...list);
-    if (changed && !dry) fs.writeFileSync(abs, JSON.stringify(list, null, 1) + '\n');
+    if (changed && !dry) fs.writeFileSync(abs, manifestText(list));
   }
   if (!dry) fs.writeFileSync(path.join(root, SUMMARY_FILE), summaryText(summaryOf(all, root)));
   return res;

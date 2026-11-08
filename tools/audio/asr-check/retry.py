@@ -45,10 +45,14 @@ def full_spelling(pointed):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--execute', action='store_true')
+    ap.add_argument('--paths', help='comma list of clip paths to redo instead of the ones in ASR-NEEDS-HUMAN.md')
     a = ap.parse_args()
     need = os.path.join(ROOT, 'docs', 'audio', 'ASR-NEEDS-HUMAN.md')
     lines = open(need, encoding='utf-8').read().splitlines()
     todo = [(ln, re.search(r'`([^`]+)`', ln).group(1)) for ln in lines if re.search(r'`([^`]+)`', ln)]
+    if a.paths:
+        want = [p.strip() for p in a.paths.split(',') if p.strip()]
+        todo = [(next((ln for ln, p in todo if p == w), None), w) for w in want]
     rows = rows_by_file()
     plan = []
     for ln, path in todo:

@@ -77,8 +77,22 @@ FINALS = str.maketrans('ךםןףץ', 'כמנפצ')
 SAME = str.maketrans({'ע': 'א', 'ט': 'ת', 'ק': 'כ', 'ח': 'כ', 'ו': '', 'י': ''})
 
 
-def core(s):
-    s = NIQQUD.sub('', str(s).replace('־', ' ')).translate(FINALS)
+V = '\u05D5'
+# A vav carrying its own vowel inside a word is the consonant v (אִוָּה iva, מִצְוָה): mark it 'ב' (b/v are one letter).
+CONS_VAV = re.compile('(?<=[\u05D0-\u05EA\u0591-\u05C7])' + V + '(?=[\u05BC]?[\u05B0-\u05B8\u05BB])')
+# An aleph with no vowel of its own inside a word is silent (בֵּאלָהָא be-la-ha): drop it.
+SILENT_ALEPH = re.compile('(?<=[\u05B0-\u05C7])\u05D0(?=[\u05D0-\u05EA])')
+
+
+def core(s, drop_silent_aleph=False):
+    s = str(s)
+    if re.search('[\u05B0-\u05BC]', s):  # pointed text (the expected word): apply the sound rules above
+        s = CONS_VAV.sub('ב', s)
+        if drop_silent_aleph:
+            s = SILENT_ALEPH.sub('', s)
+    else:  # what the model heard: a doubled vav is the consonant v
+        s = s.replace(V + V, 'ב')
+    s = NIQQUD.sub('', s.replace('־', ' ')).translate(FINALS)
     s = re.sub(r'[^א-ת\s]', '', s)
     return ''.join(re.sub(r'[אה]$', '', w.translate(SAME)) for w in s.split())
 
@@ -89,10 +103,12 @@ def score(expected_hebrew, heard):
         return None
     if re.fullmatch(r'[\d\s.,:-]+', str(heard).strip()):
         return 'digits'  # the model wrote a number as digits: not checkable by spelling
-    a, b = core(expected_hebrew), core(heard)
-    if not a or not b:
-        return 1.0 if a == b else 0.0
-    return round(difflib.SequenceMatcher(None, a, b).ratio(), 3)
+    b = core(heard)
+    best = 0.0
+    for a in {core(expected_hebrew), core(expected_hebrew, drop_silent_aleph=True)}:  # a silent aleph may be written or not
+        r = (1.0 if a == b else 0.0) if not a or not b else difflib.SequenceMatcher(None, a, b).ratio()
+        best = max(best, r)
+    return round(best, 3)
 
 
 def plain(hebrew):

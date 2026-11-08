@@ -15,18 +15,18 @@ Google's Hebrew voices guess at Biblical words, and the earlier pilots in `docs/
 
 ## Recording (Windows, Command Prompt, from `C:\Users\user\Al-Heb`)
 
-You only need Python 3 and PowerShell 7 for this; `ipa.json` is already built.
+You only need Python 3 (the `py` launcher) and the PowerShell that comes with Windows; `ipa.json` is already built. First `cd C:\Users\user\Al-Heb` and `git pull`.
 
 1. Plan one chapter first (Genesis 1 is 62 requests, under $1):
-   `python tools\torah\audio\ipa\plan.py --book genesis --chapter 1`
+   `py tools\torah\audio\ipa\plan.py --book genesis --chapter 1`
 2. Record it with your Google key (the same `GOOGLE_TTS_API_KEY` the other audio tools use):
-   `pwsh tools\torah\audio\ipa\render.ps1`
+   `powershell -ExecutionPolicy Bypass -File tools\torah\audio\ipa\render.ps1`
 3. Listen to `tools\torah\audio\ipa\clips\`. Ari is `-ari`, Noa is `-noa`.
 4. Put the chapter in the app:
-   `python tools\torah\audio\ipa\install.py --book genesis --chapter 1`
+   `py tools\torah\audio\ipa\install.py --book genesis --chapter 1`
    then commit `audio\*\israeli\line\torah-genesis-1-*.mp3` and `data\audio\manifest-torah.json`. Each verse gets its own Hear button in the Torah Reader.
 
-For the whole Torah: `python tools\torah\audio\ipa\plan.py` (11,692 requests, about $94 at Google's listed $30 per million characters, before any free allowance), then step 2 again. A rerun skips clips that are already done.
+For the whole Torah: `py tools\torah\audio\ipa\plan.py` (11,692 requests, about $94 at Google's listed $30 per million characters, before any free allowance), then step 2 again. A rerun skips clips that are already done.
 
 ## Rebuilding `ipa.json`
 

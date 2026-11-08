@@ -1,14 +1,14 @@
 param([int]$Limit=0,[int]$Shard=0,[int]$Shards=1)
 # Sends plan.json to Google Chirp, one verse and voice per request, and saves clips/<id>.mp3 with a .json sidecar.
 # Reruns skip a clip whose fingerprint and audio hash still match. Key: GOOGLE_TTS_API_KEY (user or process environment).
-#   pwsh render.ps1              every request in plan.json
-#   pwsh render.ps1 -Limit 6     the first six only
+#   powershell -ExecutionPolicy Bypass -File render.ps1              every request in plan.json
+#   powershell -ExecutionPolicy Bypass -File render.ps1 -Limit 6     the first six only
 $ErrorActionPreference='Stop'
 if($Shards -lt 1 -or $Shard -lt 0 -or $Shard -ge $Shards -or $Limit -lt 0){throw 'Invalid shard or limit'}
 $key=[Environment]::GetEnvironmentVariable('GOOGLE_TTS_API_KEY','User')
 if (!$key) {$key=$env:GOOGLE_TTS_API_KEY}
 if (!$key) {throw 'Set GOOGLE_TTS_API_KEY first'}
-$rows=Get-Content -Raw -LiteralPath "$PSScriptRoot/plan.json" | ConvertFrom-Json
+$rows=Get-Content -Raw -Encoding UTF8 -LiteralPath "$PSScriptRoot/plan.json" | ConvertFrom-Json
 if ($Limit -gt 0) {$rows=$rows | Select-Object -First $Limit}
 $i=0; $rows=@($rows | Where-Object {($script:i++ % $Shards) -eq $Shard})
 New-Item -ItemType Directory -Force "$PSScriptRoot/clips" | Out-Null
@@ -17,7 +17,7 @@ foreach($r in $rows){
  $started=[DateTime]::UtcNow
  $out=Join-Path $PSScriptRoot $r.path
  $sidecar="$out.json"
- if ((Test-Path $out) -and (Test-Path $sidecar)) { $old=Get-Content -Raw $sidecar | ConvertFrom-Json; if ($old.fingerprint -eq $r.fingerprint -and (Get-FileHash $out -Algorithm SHA256).Hash.ToLower() -eq $old.audioSha256) {$skipped++; continue} }
+ if ((Test-Path $out) -and (Test-Path $sidecar)) { $old=Get-Content -Raw -Encoding UTF8 $sidecar | ConvertFrom-Json; if ($old.fingerprint -eq $r.fingerprint -and (Get-FileHash $out -Algorithm SHA256).Hash.ToLower() -eq $old.audioSha256) {$skipped++; continue} }
  $body=@{input=$r.input;voice=@{languageCode=$r.languageCode;name=$r.voice};audioConfig=@{audioEncoding='MP3';sampleRateHertz=24000}} | ConvertTo-Json -Depth 8 -Compress
  $response=$null
  for($attempt=0;$attempt -lt 4;$attempt++){

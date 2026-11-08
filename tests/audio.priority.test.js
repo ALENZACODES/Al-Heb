@@ -29,7 +29,8 @@ test('the list has the stated columns and ranks 1..N with unique ids', () => {
   // at DEFAULT_TOP — once the library is nearly complete N is small (4 on 2026-11-07),
   // not 500. Ranks are 1..N whatever N is.
   assert.ok(rows.length <= DEFAULT_TOP, `list has ${rows.length} rows, over the ${DEFAULT_TOP} cap`);
-  assert.ok(rows.length > 0, 'the priority list is empty: nothing is missing');
+  // Empty is the finished state: no Israeli man-voice word is missing (2026-11-08).
+  if (!rows.length) { assert.equal(manifest.filter((e) => e.voice === 'm' && e.tradition === 'israeli' && e.kind === 'word' && e.status === 'missing' && !e.aliasOf).length, 0); return; }
   assert.deepEqual(Object.keys(rows[0]), ROW_COLS);
   assert.deepEqual(rows.map((r) => Number(r.rank)), Array.from({ length: rows.length }, (_, i) => i + 1));
   assert.equal(new Set(rows.map((r) => r.id)).size, rows.length);

@@ -49005,7 +49005,10 @@
   "source": "none",
   "group": "vocab-word",
   "english": "new, recently made; new, current, recent (as opposed to former); grain from a new crop",
-  "phonetic": "chadash"
+  "phonetic": "chadash",
+  "equivalentTo": [
+   "israeli"
+  ]
  },
  {
   "path": "audio/f/sephardi/word/h53c53bdf.mp3",
@@ -63480,7 +63483,10 @@
   "source": "none",
   "group": "vocab-word",
   "english": "to remove, to take off (one's clothing); to extend (a limb); to spread, to proliferate",
-  "phonetic": "pashat"
+  "phonetic": "pashat",
+  "equivalentTo": [
+   "israeli"
+  ]
  },
  {
   "path": "audio/f/sephardi/word/h1eeebe32.mp3",
@@ -74020,7 +74026,10 @@
   "source": "none",
   "group": "vocab-word",
   "english": "an era, age, epoch, period",
-  "phonetic": "tekufah"
+  "phonetic": "tekufah",
+  "equivalentTo": [
+   "israeli"
+  ]
  },
  {
   "path": "audio/f/sephardi/word/h3e5d0f9c.mp3",

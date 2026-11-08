@@ -48473,8 +48473,8 @@
   "id": "h53c53bdf",
   "text": "חָדָשׁ",
   "ipa": "χa.ˈdaʃ",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "tts:google",
   "group": "vocab-word",
   "english": "new, recently made; new, current, recent (as opposed to former); grain from a new crop",
   "phonetic": "chadash"
@@ -61073,8 +61073,8 @@
   "id": "h1eeebe32",
   "text": "פָּשַׁט",
   "ipa": "pa.ˈʃat",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "tts:google",
   "group": "vocab-word",
   "english": "to remove, to take off (one's clothing); to extend (a limb); to spread, to proliferate",
   "phonetic": "pashat"
@@ -70257,8 +70257,8 @@
   "id": "h3e5d0f9c",
   "text": "תְּקוּפָה",
   "ipa": "te.ku.ˈfa",
-  "status": "missing",
-  "source": "none",
+  "status": "tts",
+  "source": "tts:google",
   "group": "vocab-word",
   "english": "an era, age, epoch, period",
   "phonetic": "tekufah"

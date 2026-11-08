@@ -1,4 +1,1 @@
 rank,id,pointed_hebrew,kind,group,tier,score,why,lesson_route_ref,already_have,same_text_as,batch
-"1","h53c53bdf","חָדָשׁ","word","vocab-word","T5","696","deck order 324; corpus frequency rank 283","","no","","1"
-"2","h1eeebe32","פָּשַׁט","word","vocab-word","T5","630","deck order 620","","no","","1"
-"3","h3e5d0f9c","תְּקוּפָה","word","vocab-word","T5","600","deck order 716","","no","","1"

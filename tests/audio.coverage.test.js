@@ -52,8 +52,10 @@ test('who is missing what: filters by voice/tradition/group and labels the suppl
   assert.equal(suppliers({ tradition: 'ashkenazi', group: 'lesson-word' }), 'human only');
   assert.equal(suppliers({ tradition: 'israeli', group: 'syllable' }), 'human only');
   assert.match(suppliers({ tradition: 'israeli', group: 'phrasebook' }), /TTS unvetted/);
-  const txt = renderWho(manifest, { voice: 'm', tradition: 'israeli' });
-  assert.match(txt, /Ari \(man\), Israeli \[m\/israeli\]: missing/); assert.ok(!/Noa/.test(txt));
+  // The man-voice Israeli set is complete (2026-11-08); the Ashkenazi set still has gaps.
+  assert.equal(whoIsMissing(manifest, { voice: 'm', tradition: 'israeli' }).length, 0);
+  const txt = renderWho(manifest, { voice: 'm', tradition: 'ashkenazi' });
+  assert.match(txt, /\[m\/ashkenazi\]: missing/); assert.ok(!/Noa/.test(txt));
   assert.equal(renderWho([], {}), 'Nothing missing for this filter.');
   assert.deepEqual(Object.keys(TALENT).length, 6);
 });
@@ -65,6 +67,6 @@ test('docs/voices/coverage.md is current; CLI --who works and rejects bad flags'
   assert.equal(ok.status, 0, ok.stderr); assert.match(ok.stdout, /Ashkenazi reader \(woman\)/);
   assert.equal(spawnSync('node', [cli, '--who', '--voice', 'x'], { encoding: 'utf8' }).status, 2);
   assert.equal(spawnSync('node', [cli, '--check'], { encoding: 'utf8' }).status, 0);
-  const lst = spawnSync('node', [cli, '--who', '--voice', 'm', '--tradition', 'israeli', '--group', 'letter', '--list', '--limit', '2'], { encoding: 'utf8' });
-  assert.match(lst.stdout, /audio\/m\/israeli\/letter\/alef\.mp3/);
+  const lst = spawnSync('node', [cli, '--who', '--voice', 'm', '--tradition', 'ashkenazi', '--group', 'letter', '--list', '--limit', '2'], { encoding: 'utf8' });
+  assert.match(lst.stdout, /audio\/m\/ashkenazi\/letter\/alef\.mp3/);
 });

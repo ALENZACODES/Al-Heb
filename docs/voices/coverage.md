@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Synthetic voice (Israeli only), not a recorded teacher"; missing = "No audio yet".
 
-**Overall: 21130 of 22728 required clips exist (93.0%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19318; No audio yet: 1598.**
+**Overall: 21136 of 22728 required clips exist (93.0%); Recorded by a human reader: 0; Synthetic voice (Israeli only), not a recorded teacher: 19321; No audio yet: 1592.**
 
 ## By talent and group
 
@@ -81,7 +81,7 @@ Required 4394; have 4394; missing 0.
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 4394; have 4391; missing 3.
+Required 4394; have 4394; missing 0.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -102,7 +102,7 @@ Required 4394; have 4391; missing 3.
 | name | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| vocab-word | 1000 | 0 | 997 | 0 | 3 | 0/0 | human or TTS (TTS unvetted) |
+| vocab-word | 1000 | 0 | 1000 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 35 | 0 | 35 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 
@@ -129,7 +129,7 @@ Required 3485; have 3485; missing 0.
 
 ### Sephardi-values reader (man), pending decision  (voice=m, tradition=sephardi)
 
-Required 3485; have 3482; missing 3.
+Required 3485; have 3485; missing 0.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -144,7 +144,7 @@ Required 3485; have 3482; missing 3.
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human only |
 | prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 0/18 | human only |
-| vocab-word | 1000 | 0 | 0 | 997 | 3 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 0 | 1000 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 35 | 0 | 0 | 35 | 0 | 0/0 | human only |
 

@@ -54,8 +54,7 @@ test('no-audio path: honest notice, read-and-match, saves to listen.v1', async (
   const start = await waitFor(() => btn(root, /Start read-and-match/));
   assert.match(root.text, /Audio not recorded yet/);
   assert.match(root.text, /Draft/);
-  assert.match(root.text, /Word meanings: Wiktionary contributors \(CC BY-SA 4\.0\)/);
-  assert.equal(root.find((n) => n.tag === 'a' && n.attrs.href === '#/credits').length, 1);
+  assert.doesNotMatch(root.text, /Wiktionary contributors/); // credits live once, on #/credits
   assert.doesNotMatch(root.text, /Start listening drill/);
   start.click();
   const opts = await waitFor(() => root.find((n) => n.attrs.role === 'group')[0]);

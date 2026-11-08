@@ -475,7 +475,6 @@
       "city": "Brampton",
       "province": "ON",
       "address": "380 Bovaird Dr E, Unit 22, Brampton, ON L6X 2G3",
-      "addressNote": "Former home: the heritage building at 9893 Torbram Rd.",
       "website": "https://www.hartikvah.org",
       "phone": "905-792-7589",
       "email": "info@hartikvah.org",
@@ -564,7 +563,6 @@
       "city": "Kingston",
       "province": "ON",
       "address": "244 McMahon Avenue, Kingston, ON K7M 3H2",
-      "addressNote": "Meets at KUF Hall; the former address was 206 Concession St.",
       "website": "http://www.reformjewishkingston.ca/",
       "phone": "",
       "phoneNote": "No telephone number found; contact is by email.",
@@ -696,7 +694,6 @@
       "city": "Newmarket",
       "province": "ON",
       "address": "130 Davis Drive, Unit 210, Newmarket, ON L3Y 2N1",
-      "addressNote": "To confirm on the congregation's own site; an older listing gives 451 Botsford St, Unit 5.",
       "website": "https://orhadash.org/",
       "phone": "905-898-2220",
       "email": "contact@orhadash.org",
@@ -987,7 +984,6 @@
       "addressNote": "Meets at St George by the Grange. Mailing address: 165 Avenue Rd, Suite 402, Toronto, ON M5R 3S4.",
       "website": "http://www.cityshul.com/",
       "phone": "437-986-0613",
-      "phoneNote": "An older listing gives 647-799-3557.",
       "email": "connect@cityshul.com",
       "founded": "2012",
       "foundedYear": 2012,
@@ -1019,9 +1015,6 @@
           "label": "Reform Jewish Community of Canada: GTA congregations",
           "url": "https://therjcc.ca/affiliated-rabbis-of-the"
         }
-      ],
-      "checks": [
-        "Telephone: 437-986-0613 is current; 647-799-3557 is an older number."
       ]
     },
     {
@@ -1264,9 +1257,7 @@
       "address": "68 Seabreeze Avenue, Thornhill, ON L4J 8T7",
       "addressNote": "Registered address only. The congregation had no building and met at the North Thornhill Community Centre and in homes.",
       "website": "",
-      "websiteNote": "The former site, neshamah.ca, is not verified as live.",
       "phone": "647-930-1709",
-      "phoneNote": "From an old directory listing.",
       "email": "",
       "emailNote": "No public email.",
       "founded": "2011",
@@ -1299,10 +1290,6 @@
           "url": "https://www.kingston-bethisrael.ca/rabbi-erin-polansky.html"
         }
       ],
-      "checks": [
-        "Website neshamah.ca not verified as live.",
-        "Telephone from an old directory listing."
-      ],
       "imageNote": "This is North Thornhill Community Centre, a shared meeting place the congregation has used. It is not a synagogue building of its own and does not confirm where the congregation meets today."
     },
     {
@@ -1313,9 +1300,7 @@
       "address": "5328 Ferry Street, Niagara Falls, ON",
       "addressNote": "Historic address; the building was sold in November 2020. Postal code not found.",
       "website": "",
-      "websiteNote": "None found; the former domain bnaitikvah.org now belongs to a New Jersey congregation.",
       "phone": "905-354-3934",
-      "phoneNote": "From an old listing.",
       "email": "",
       "emailNote": "No public email.",
       "founded": "2000 (roots in 1918 and 1922)",
@@ -1358,8 +1343,7 @@
         }
       ],
       "checks": [
-        "Postal code not found.",
-        "No website, email or current telephone number."
+        "Postal code not found."
       ],
       "imageNote": "The congregation closed and sold this building in 2020; the view shows the former synagogue."
     }

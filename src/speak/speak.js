@@ -116,7 +116,7 @@ export function mount(root, ctx) {
   const tabs = el('ul', { class: 'sk-tabs', 'aria-label': 'Say it sections' });
   const body = el('div', { class: 'sk-body' });
   const status = el('div', { class: 'sk-status', role: 'status', 'aria-live': 'polite' });
-  const footer = el('footer', {}, el('p', {}, 'Vocabulary: data/vocab/words.json (Wiktionary, CC BY-SA 4.0, and ALEF\'s own phrasebook), a machine-built draft. Speech recognition and the fallback voice are your browser\'s; neither is verified for Hebrew by ALEF.'));
+  const footer = el('footer', {});
   footer.append(sourcesLine(el));
   wrap.append(h1, tabs, body, status, footer);
   root.append(wrap);

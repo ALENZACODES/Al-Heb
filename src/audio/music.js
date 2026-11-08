@@ -2,6 +2,7 @@
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
 import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES } from '../listen/catalog.js';
 import { mediaPolicy } from './policy.js';
+import { SYNTH_STYLES, createSynthTrack, createGaplessTrack } from './synth-music.js';
 
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(Number(v)) ? Number(v) : 0));
 
@@ -196,7 +197,17 @@ export function createMusicController({
   };
 }
 
-export const gameMusic = createMusicController();
+/** Every track the game bar offers: the styles composed live in the browser first, then the three Kenney loops. */
+export const GAME_TRACKS = [
+  ...SYNTH_STYLES.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
+  ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Kenney loops' })),
+];
+function makeGameAudio(url) {
+  const m = /synth:([\w-]+)$/.exec(String(url));
+  if (m) { const st = SYNTH_STYLES.find((x) => x.id === m[1]); if (st) return createSynthTrack(st); }
+  return createGaplessTrack(url);
+}
+export const gameMusic = createMusicController({ tracks: GAME_TRACKS, makeAudio: makeGameAudio });
 mediaPolicy.subscribe(() => gameMusic.notePolicy());
 export function musicContextFor(route, { calm = false, audioFree = false } = {}) {
   const name = route?.name || '';

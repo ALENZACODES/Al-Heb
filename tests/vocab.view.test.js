@@ -105,8 +105,8 @@ test("browse: draft notice, attribution footer, RTL pointed Hebrew, transliterat
   const { root, ctx } = mk();
   const un = mount(root, ctx); await idle(root);
   assert.ok(root.text.includes(DRAFT_NOTICE));
-  assert.ok(root.find((n) => n.tag === "footer")[0].text.includes(ATTRIBUTION));
-  assert.ok(root.find((n) => n.tag === "a" && n.attrs.href === "#/credits").length === 1, "footer links to #/credits");
+  // credits live once, on #/credits (reached from the site-wide "Terms & sources" link), not on every screen
+  assert.ok(!root.text.includes(ATTRIBUTION));
   assert.match(ATTRIBUTION, /CC BY-SA 4\.0/); assert.match(ATTRIBUTION, /Hermit Dave/); assert.match(ATTRIBUTION, /Wiktionary/);
   assert.equal(byId(root, "view-title").tag, "h1");
   const lis = items(root); assert.equal(lis.length, 40);

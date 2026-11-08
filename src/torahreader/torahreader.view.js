@@ -61,6 +61,11 @@ const CSS = `
 .alef-trd .trd-w.trd-sel{border-style:dashed}
 .alef-trd .trd-stop{font-size:calc(1.5rem * var(--trd-scale,1));line-height:1.6}
 .alef-trd .trd-en{margin:.15rem 0;font-style:italic}
+.alef-trd .trd-say{margin:.3rem 0 .1rem;font-size:1.1rem;font-weight:600;letter-spacing:.01em}
+.alef-trd .trd-say-k{font-style:normal;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin-inline-end:.3em}
+.alef-trd .trd-en-only{font-size:1.35rem;line-height:1.5;margin:.3rem 0 .5rem}
+.alef-trd .trd-praylang{align-items:center;margin-block:.4rem .8rem}
+.alef-trd .trd-praylang-k{font-weight:700}
 .alef-trd .trd-detail{border:2px solid currentColor;border-radius:8px;padding:.6rem;margin-block:1rem}
 .alef-trd .trd-big{font-size:calc(1.9rem * var(--trd-scale,1));direction:rtl}
 .alef-trd .trd-lg{font-size:1.6em;line-height:1}
@@ -243,6 +248,17 @@ export function mount(root, ctx) {
     await playAudio('line', torahVerseId(state.book, state.chapter, v.n), spokenText(v.he), `${chapterData.ref}:${v.n} in Hebrew (synthetic voice)`, { tradition: 'israeli' });
   }
 
+  /** English prayer read aloud by the device's own English voice (no recorded English clip exists for these lines). */
+  function speakEnglish(text, label) {
+    try {
+      const sp = globalThis.speechSynthesis, U = globalThis.SpeechSynthesisUtterance;
+      if (!sp || typeof U !== 'function') { say(`Your browser has no voice to read ${label} aloud.`); return; }
+      try { ctx?.audio?.stop?.(); } catch { /* ignore */ }
+      sp.cancel(); const u = new U(text); u.lang = 'en-US'; sp.speak(u);
+      say(`Reading ${label} in English (your device's voice).`);
+    } catch { say(`Could not read ${label} aloud.`); }
+  }
+
   // ---------- rendering ----------
   function setState(patch) {
     state = { ...state, ...patch };
@@ -337,9 +353,21 @@ export function mount(root, ctx) {
       const hear = el('button', { type: 'button', class: 'trd-hearline', onclick: () => playAudio('line', lineId || `torahreader-${p.id}-${v.verse}`, spokenText(v.he), `${v.ref}`) }, `Hear ${v.ref}`);
       const slot = el('div', { class: 'trd-slot' }); slots.set(vi, slot);
       const lgNote = large.length ? el('p', { class: 'trd-lgnote' }, 'Written large in the source text: ', ...(v.largeLetters || []).flatMap((c, i) => [i ? ', ' : '', el('span', { lang: 'he', dir: 'rtl' }, c)]), '.') : null;
+      const enText = v.english ? uiEnglish(ctx, v.english) : '';
+      if (state.prayLang === 'en') {
+        verses.append(el('div', { class: 'trd-verse trd-verse-en', 'data-verse': v.verse }, label,
+          el('p', { class: 'trd-en-only', lang: 'en' }, enText),
+          el('button', { type: 'button', class: 'trd-hearline', onclick: () => speakEnglish(enText, v.ref) }, `Hear ${v.ref} in English`)));
+        return;
+      }
       verses.append(el('div', { class: 'trd-verse', 'data-verse': v.verse }, label, line, lgNote,
-        v.english ? el('p', { class: 'trd-en' }, uiEnglish(ctx, v.english)) : null, slot, hear));
+        el('p', { class: 'trd-say', lang: 'en' }, el('span', { class: 'trd-say-k' }, 'Say it: '), translit(v.he)),
+        enText ? el('p', { class: 'trd-en' }, el('span', { class: 'trd-say-k' }, 'It means: '), enText) : null, slot, hear));
     });
+    const langBar = el('div', { class: 'trd-bar trd-praylang', role: 'group', 'aria-label': 'Pray in' },
+      el('span', { class: 'trd-praylang-k' }, 'Pray in:'),
+      el('button', { type: 'button', 'data-praylang': 'he', 'aria-pressed': state.prayLang !== 'en' ? 'true' : 'false', onclick: () => { setState({ prayLang: 'he' }); render(); } }, 'Hebrew'),
+      el('button', { type: 'button', 'data-praylang': 'en', 'aria-pressed': state.prayLang === 'en' ? 'true' : 'false', onclick: () => { stopTimer(); setState({ prayLang: 'en' }); render(); } }, 'English'));
 
     function select(n) { showDetail(n); say(`Selected word ${n + 1}: ${translit(plainOf(items[n]))}`); }
     function showDetail(n) {
@@ -383,7 +411,7 @@ export function mount(root, ctx) {
       el('summary', {}, calm ? 'Marks, text size, step through words, legend' : 'Marks, text size, Read with me, legend'),
       el('p', { class: 'trd-hint' }, 'Tap or press a word to see it with its vowel points and mark, its transliteration (', trad, ' tradition) and to hear it. The details open under that verse.'),
       switches, sizes, calm ? null : speeds, stepBar, el('p', { class: 'trd-pace' }, calm ? CALM_NOTE : PACE_NOTE), legendBtn());
-    return [ctl, verses];
+    return [langBar, ctl, verses];
   }
 
   // ---------- full Torah: home + chapter ----------

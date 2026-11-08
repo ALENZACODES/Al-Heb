@@ -48,9 +48,7 @@ test('lists all 40 packs as real buttons, with the draft notice and CC BY-SA att
   assert.deepEqual(packs.map((b) => b.attrs['data-pack']), index.themes.map((t) => t.id));
   for (const b of packs) assert.equal(b.attrs.type, 'button');
   assert.ok(root.text.includes(DRAFT_NOTICE));
-  assert.ok(root.text.includes(ATTRIBUTION));
-  assert.match(root.text, /Tatoeba contributors \(CC BY 2\.0 FR\)/);
-  assert.equal(root.find((n) => n.tag === 'a' && n.attrs.href === '#/credits').length, 1);
+  assert.ok(!root.text.includes(ATTRIBUTION), 'credits live once, on #/credits');
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
 });
 

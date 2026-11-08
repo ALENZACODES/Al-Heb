@@ -16,6 +16,7 @@ import { transliterate } from '../pronunciation/transliterate.js';
 import { loadAll, loadJson, loadTorahIndex, loadTorahChapter, loadTorahManifest } from './loader.js';
 import { uiEnglish } from '../shell/names.js';
 import { calmOn } from '../shell/comfort.js';
+import { createFingerGuide, FINGER_CSS } from './finger-follow.js';
 import { playLine, LABELS as TRAD_LABELS } from '../pronunciation/forTradition.js';
 import { parshaOnShabbat } from '../curriculum/calendar.parsha.js';
 import { saturdayOnOrAfter } from '../curriculum/calendar.js';
@@ -42,7 +43,7 @@ const PASSAGE_LABEL = { 'priestly-blessing': 'Priestly Blessing (Numbers 6:22-27
 const PASSAGE_SHORT = { 'priestly-blessing': 'Priestly Blessing', shema: 'Shema and V’ahavta' };
 const CLS_LABEL = { disjunctive: 'pauses (disjunctive)', conjunctive: 'joins to the next word (conjunctive)', 'secondary-stress': 'stress mark (not a trope)', separator: 'separator (not a melody)', 'verse-end': 'verse end (punctuation)' };
 
-const CSS = `
+const CSS = FINGER_CSS + `
 .alef-trd{max-inline-size:44rem;margin-inline:auto;overflow-wrap:anywhere}
 .alef-trd *{box-sizing:border-box}
 .alef-trd .trd-notice{border-inline-start:6px solid currentColor;padding-inline-start:.6rem;margin-block:.75rem}
@@ -123,6 +124,7 @@ export function mount(root, ctx) {
   let torah = null, torahManifest = [], chapterData = null, chapterKey = '', weekPortion = undefined, calendarPrefsRaw = null;
   let chapterPlay = null, targetVerse = null;
   const chapterRows = new Map(), shownTranslit = new Set();
+  const fingerGuide = createFingerGuide({ clock, calm: () => calmOn(ctx), announce: (text) => say(text), redraw: () => render() });
   const say = (t) => { status.textContent = t; };
   const save = () => storeSet(ctx, STORE_KEY, state);
   const passage = () => data.passages[state.passage];
@@ -515,7 +517,7 @@ export function mount(root, ctx) {
     const row = el('div', { class: 'trd-row' + (targetVerse === v.n ? ' trd-target' : ''), 'data-torah-verse': String(v.n), 'aria-current': targetVerse === v.n ? 'true' : 'false' },
       el('div', { class: 'trd-cell-he' },
         el('p', { class: 'trd-vlabel' }, el('span', { class: 'trd-vnum' }, `${state.chapter}:${v.n}`)),
-        el('p', { class: 'trd-hebrew', lang: 'he', dir: 'rtl' }, heShown),
+        el('p', { class: 'trd-hebrew' + (fingerGuide.enabled() ? ' trd-finger-on' : ''), lang: 'he', dir: 'rtl' }, ...fingerGuide.text(heShown, v.n)),
         manifestHas('line', torahVerseId(state.book, state.chapter, v.n))
           ? el('button', { type: 'button', class: 'trd-hear-verse', 'aria-label': `Hear ${chapterData.ref}:${v.n} in Hebrew (synthetic voice)`, onclick: () => playTorahVerse(v) }, 'Hear')
           : null,
@@ -542,6 +544,7 @@ export function mount(root, ctx) {
       el('button', { type: 'button', class: 'trd-stop-chapter', onclick: () => { stopChapterAudio(); try { ctx?.audio?.stop?.(); } catch { /* ignore */ } say('Chapter audio stopped.'); } }, 'Stop'))];
   }
   function renderChapter() {
+    fingerGuide.begin(`${state.book}/${state.chapter}/${state.portionId || ''}`);
     if (!torah) return [el('p', { class: 'trd-error', role: 'alert' }, 'The Torah text could not be loaded. Check your connection and reload.')];
     if (!chapterData) return [el('p', { class: 'trd-error', role: 'alert' }, 'This chapter could not be loaded. Check your connection and reload.')];
     const bookRow = torah.books.find((b) => b.id === state.book) || torahBook(state.book);
@@ -576,6 +579,7 @@ export function mount(root, ctx) {
       toggle('Pronunciation guide', 'showPronunciation', 'Pronunciation guide shown.', 'Pronunciation guide hidden.')));
     if (state.showPronunciation) out.push(el('p', { class: 'trd-hint' }, 'Reading the English letters: a as in father; e as in bed; i as in machine; o as in go (without the final glide); u as in flute. Sh as in ship; ch and kh are the throat sound in Bach; tz as in cats. This generated guide does not mark syllable stress and still needs pronunciation review.'));
     out.push(...chapterAudioBar(!!sec));
+    out.push(fingerGuide.controls());
     const versesBox = el('div', { class: 'trd-chapter-verses' });
     const shown = chapterData.verses.filter((v) => !sec || (v.n >= sec.fromVerse && v.n <= sec.toVerse));
     let firstShown = true;
@@ -586,6 +590,7 @@ export function mount(root, ctx) {
       firstShown = false;
       versesBox.append(verseRow(v));
     }
+    fingerGuide.bind(versesBox);
     out.push(versesBox);
     out.push(labelBlock());
     return out;
@@ -624,7 +629,7 @@ export function mount(root, ctx) {
     if (error) { body.replaceChildren(el('p', { class: 'trd-error', role: 'alert' }, 'The reader data could not be loaded. Check your connection and reload.')); return; }
     if (!data) { body.replaceChildren(el('p', {}, 'Loading…')); return; }
     if (state.screen !== 'study') stopTimer();
-    if (state.screen !== 'chapter') stopChapterAudio();
+    if (state.screen !== 'chapter') { stopChapterAudio(); fingerGuide.pause(); }
     wrap.setAttribute('style', `--trd-scale:${sizeScale(state.size)}`);
     const screen = state.screen;
     h1.textContent = screen === 'home' ? 'Torah reader'
@@ -644,7 +649,7 @@ export function mount(root, ctx) {
     } else footer.replaceChildren();
   }
 
-  const onVis = () => { if (document.hidden && timer != null) pauseRun(); };
+  const onVis = () => { if (document.hidden) { fingerGuide.pause(); if (timer != null) pauseRun(); } };
   try { document.addEventListener?.('visibilitychange', onVis); } catch { /* optional */ }
 
   const ready = (async () => {
@@ -676,7 +681,7 @@ export function mount(root, ctx) {
   })();
 
   const unmount = () => {
-    alive = false; stopTimer(); stopChapterAudio();
+    alive = false; stopTimer(); stopChapterAudio(); fingerGuide.dispose();
     try { document.removeEventListener?.('visibilitychange', onVis); } catch { /* ignore */ }
     try { ctx?.audio?.stop?.(); } catch { /* ignore */ }
     try { wrap.remove?.(); } catch { /* ignore */ }

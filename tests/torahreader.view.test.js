@@ -423,3 +423,47 @@ test('English chapter-only audio plays for either voice without invented verse t
     assert.equal(root.queryAll('.trd-play-chapter').length, 0, 'English availability does not imply Hebrew availability');
   }
 });
+
+test('phone finger guide preserves source words and follows touch, keyboard and pacing controls', async () => {
+  const { root, clock, un } = await make({ query: { book: 'genesis', chapter: '1' } });
+  const original = root.queryAll('.trd-hebrew').map((p) => p.textContent);
+  await sel(root, '.trd-finger-toggle').click();
+  assert.deepEqual(root.queryAll('.trd-hebrew').map((p) => p.textContent), original, 'spacing, niqqud and trope remain unchanged');
+  const ws = root.queryAll('.trd-finger-word');
+  assert.ok(ws.length > 100); assert.equal(sel(root, '.trd-finger-toggle').attrs['aria-pressed'], 'true');
+  assert.equal(sel(root, '.trd-hebrew').attrs.dir, 'rtl');
+  const box = sel(root, '.trd-chapter-verses');
+  await box.fire('pointerdown', { target: ws[2], pointerId: 7, isPrimary: true, button: 0 });
+  await box.fire('pointermove', { target: ws[6], pointerId: 7 });
+  assert.equal(ws[6].attrs['aria-current'], 'true'); assert.equal(ws[2].attrs['aria-current'], 'false');
+  await box.fire('pointerup', { pointerId: 7 });
+  await box.fire('pointermove', { target: ws[8], pointerId: 7 });
+  assert.equal(ws[6].attrs['aria-current'], 'true', 'lifting finger ends tracking');
+  await ws[6].fire('keydown', { key: 'ArrowLeft' });
+  assert.equal(ws[7].attrs['aria-current'], 'true', 'left arrow advances in RTL reading order');
+  await sel(root, '.trd-finger-run').click(); assert.equal(clock.timers.size, 1);
+  const duration = () => [...clock.timers.values()][0].ms;
+  const normal = duration(); await sel(root, '.trd-finger-slower').click(); assert.ok(duration() > normal);
+  await sel(root, '.trd-finger-faster').click(); assert.equal(duration(), normal);
+  clock.fire(); assert.equal(ws[8].attrs['aria-current'], 'true');
+  await box.fire('pointerdown', { target: ws[1], pointerId: 8, button: 0 });
+  assert.equal(clock.timers.size, 0, 'finger takes over from automatic movement');
+  await box.fire('pointercancel', { pointerId: 8 });
+  await box.fire('pointermove', { target: ws[3], pointerId: 8 });
+  assert.equal(ws[1].attrs['aria-current'], 'true');
+  await sel(root, '.trd-finger-run').click(); un(); assert.equal(clock.timers.size, 0);
+});
+
+test('finger guide stops on navigation and can be switched off for normal scrolling', async () => {
+  const { root, clock } = await make({ query: { book: 'genesis', chapter: '1' } });
+  await sel(root, '.trd-finger-toggle').click();
+  await sel(root, '.trd-finger-next').click();
+  await sel(root, '.trd-finger-run').click();
+  await sel(root, '.trd-next-ch').click(); await tick();
+  assert.equal(clock.timers.size, 0); assert.equal(root.queryAll('.trd-finger-word')[0].attrs['aria-current'], 'true');
+  const text = sel(root, '.trd-hebrew').textContent;
+  await sel(root, '.trd-finger-toggle').click();
+  assert.equal(root.queryAll('.trd-finger-word').length, 0);
+  assert.equal(root.queryAll('.trd-finger-on').length, 0);
+  assert.equal(sel(root, '.trd-hebrew').textContent, text);
+});

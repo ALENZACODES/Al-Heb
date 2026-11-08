@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book17-p01.mp3"
    },
    "illustration": "grey clouds over the Carmel hillside and the bay",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book17-p02.mp3"
    },
    "illustration": "rain streaking a bus window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book17-p03.mp3"
    },
    "illustration": "a steep street turned into a stream",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book17-p04.mp3"
    },
    "illustration": "a woman under a shop awning, soaked",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book17-p05.mp3"
    },
    "illustration": "the woman sprinting between awnings, bag over her head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book17-p06.mp3"
    },
    "illustration": "dripping hair, smudged mascara, laughing anyway",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book17-p07.mp3"
    },
    "illustration": "a warm lit café window glowing in the rain",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book17-p08.mp3"
    },
    "illustration": "the door opening, a bell ringing, warmth",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book17-p09.mp3"
    },
    "illustration": "the counter, a barista nodding",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book17-p10.mp3"
    },
    "illustration": "the woman at a window seat, mug in both hands",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book17-p11.mp3"
    },
    "illustration": "rain on glass, city lights blurred behind it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book17-p12.mp3"
    },
    "illustration": "the woman's reflection in the window, steam rising from the mug",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

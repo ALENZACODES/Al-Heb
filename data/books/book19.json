@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book19-p01.mp3"
    },
    "illustration": "a man in bed asking, half asleep, a woman already dressed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book19-p02.mp3"
    },
    "illustration": "a wall clock reading seven",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book19-p03.mp3"
    },
    "illustration": "the man leaping out of bed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book19-p04.mp3"
    },
    "illustration": "one sock on, shirt half buttoned",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book19-p05.mp3"
    },
    "illustration": "a sad glance at the coffee maker",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book19-p06.mp3"
    },
    "illustration": "running down the stairs two at a time",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book19-p07.mp3"
    },
    "illustration": "asking a teenager with headphones",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book19-p08.mp3"
    },
    "illustration": "the teenager showing his phone screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book19-p09.mp3"
    },
    "illustration": "an office lobby, out of breath",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book19-p10.mp3"
    },
    "illustration": "dark glass doors, lights off",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book19-p11.mp3"
    },
    "illustration": "the man staring at the calendar on his phone",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book19-p12.mp3"
    },
    "illustration": "the man strolling slowly to a café, relieved",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book20-p01.mp3"
    },
    "illustration": "a dark apartment, a dog's nose at the bedroom door",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book20-p02.mp3"
    },
    "illustration": "a big friendly dog stretching",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book20-p03.mp3"
    },
    "illustration": "a woman with the blanket over her head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book20-p04.mp3"
    },
    "illustration": "the dog with the leash in its mouth",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book20-p05.mp3"
    },
    "illustration": "the dog sitting perfectly still, staring",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book20-p06.mp3"
    },
    "illustration": "the dog jumping onto the bed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book20-p07.mp3"
    },
    "illustration": "the woman sitting up, hair wild",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book20-p08.mp3"
    },
    "illustration": "woman and dog on an empty street at dawn",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book20-p09.mp3"
    },
    "illustration": "the dog trotting, tail high",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book20-p10.mp3"
    },
    "illustration": "the woman smiling despite herself, coffee from a kiosk",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book20-p11.mp3"
    },
    "illustration": "sun coming up over rooftops, the two of them watching",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book20-p12.mp3"
    },
    "illustration": "the woman crouched, hugging the dog",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

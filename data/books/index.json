@@ -199,9 +199,9 @@
    "titleEn": "Rain in Haifa",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -211,9 +211,9 @@
    "titleEn": "Big City, Small Apartment",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -223,9 +223,9 @@
    "titleEn": "What Time Is It?",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -235,9 +235,9 @@
    "titleEn": "The Dog Wants to Go Out",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -247,9 +247,9 @@
    "titleEn": "Red Wine, White Wine",
    "level": "Beginner 1",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

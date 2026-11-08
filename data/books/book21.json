@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book21-p01.mp3"
    },
    "illustration": "a narrow wine shop with wooden shelves",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book21-p02.mp3"
    },
    "illustration": "a man staring at a wall of bottles, lost",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book21-p03.mp3"
    },
    "illustration": "his hand on a red bottle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book21-p04.mp3"
    },
    "illustration": "his other hand on a white bottle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book21-p05.mp3"
    },
    "illustration": "a woman in an apron approaching with a smile",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book21-p06.mp3"
    },
    "illustration": "the saleswoman with a questioning gesture",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book21-p07.mp3"
    },
    "illustration": "a thought bubble of grilled fish with lemon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book21-p08.mp3"
    },
    "illustration": "the saleswoman handing him a chilled bottle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book21-p09.mp3"
    },
    "illustration": "the man hesitating, picturing a woman holding a red glass",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book21-p10.mp3"
    },
    "illustration": "the saleswoman adding a second bottle, winking",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book21-p11.mp3"
    },
    "illustration": "two bottles wrapped in paper",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book21-p12.mp3"
    },
    "illustration": "a candlelit table, two glasses, one red, one white",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

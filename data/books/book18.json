@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book18-p01.mp3"
    },
    "illustration": "towers and old buildings crowded together, seen from above",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book18-p02.mp3"
    },
    "illustration": "a studio: bed, desk, kitchenette in one view",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book18-p03.mp3"
    },
    "illustration": "the man touching both walls with outstretched arms",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book18-p04.mp3"
    },
    "illustration": "a bed folded up against the wall",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book18-p05.mp3"
    },
    "illustration": "a two-burner stove under a lofted bed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book18-p06.mp3"
    },
    "illustration": "a table that folds down from the wall",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book18-p07.mp3"
    },
    "illustration": "a tall window with the city spread out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book18-p08.mp3"
    },
    "illustration": "a balcony just big enough for one chair and a basil plant",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book18-p09.mp3"
    },
    "illustration": "the man with coffee, feet on the railing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book18-p10.mp3"
    },
    "illustration": "a sliver of blue between two buildings",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book18-p11.mp3"
    },
    "illustration": "the room again, tidy and bright",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book18-p12.mp3"
    },
    "illustration": "the man on the balcony, the whole city and sea beyond",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

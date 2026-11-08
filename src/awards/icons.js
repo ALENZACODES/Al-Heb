@@ -107,6 +107,34 @@ export function renderMedallion(_h, o = {}) {
   }, shapes.map(([tag, attrs]) => svgNode(tag, attrs)));
 }
 
+function sealDistress() {
+  let s = 0x51A9C;
+  const next = () => { s = (Math.imul(s, 1664525) + 1013904223) >>> 0; return s / 4294967296; };
+  const nodes = [];
+  for (let i = 0; i < 14; i++) {
+    const a = next() * Math.PI * 2;
+    const rad = 8 + next() * 34;
+    nodes.push(svgNode('circle', {
+      cx: (60 + Math.cos(a) * rad).toFixed(1),
+      cy: (60 + Math.sin(a) * rad).toFixed(1),
+      r: (1.1 + next() * 2.6).toFixed(1),
+      fill: '#5c1018', 'fill-opacity': (0.28 + next() * 0.4).toFixed(2),
+    }));
+  }
+  for (let i = 0; i < 18; i++) {
+    const a = next() * Math.PI * 2;
+    const rad = 46 + next() * 9;
+    nodes.push(svgNode('circle', {
+      cx: (60 + Math.cos(a) * rad).toFixed(1),
+      cy: (60 + Math.sin(a) * rad).toFixed(1),
+      r: (0.55 + next() * 1.5).toFixed(1),
+      fill: next() > 0.4 ? '#f3ead5' : '#7a1520',
+      'fill-opacity': '0.8',
+    }));
+  }
+  return nodes;
+}
+
 function sealWord(tag, attrs, text) {
   const node = svgNode(tag, attrs);
   node.append(globalThis.document.createTextNode(text));
@@ -120,7 +148,7 @@ function ringWord(text) {
 function centerWord(text) {
   return sealWord('text', {
     x: '60', y: '66', 'text-anchor': 'middle', fill: '#3d0a10', 'font-size': '14', 'font-weight': '700',
-    'font-family': 'Times New Roman, Times, serif',
+    'font-family': 'Frank Ruhl Libre, Times New Roman, Times, serif',
   }, text);
 }
 
@@ -132,12 +160,13 @@ export function renderSeal(_h) {
   }, [
     svgNode('circle', { cx: '61.2', cy: '61.4', r: '52', fill: '#5c1018' }),
     svgNode('circle', { cx: '60', cy: '60', r: '52', fill: '#9e1a28' }),
+    ...sealDistress(),
     svgNode('circle', { cx: '59.2', cy: '58.6', r: '49.5', fill: 'none', stroke: '#d07076', 'stroke-width': '0.8' }),
     svgNode('circle', { cx: '60', cy: '60', r: '44', fill: 'none', stroke: '#4a0c12', 'stroke-width': '2.2' }),
     svgNode('circle', { cx: '60', cy: '60', r: '30', fill: 'none', stroke: '#4a0c12', 'stroke-width': '1.1' }),
     svgNode('path', { id: 'aw-seal-arc', d: 'M16 62 A44 44 0 0 1 104 62', fill: 'none' }),
     svgNode('text', {
-      fill: '#3d0a10', 'font-size': '8.5', 'font-family': 'Times New Roman, Times, serif', 'letter-spacing': '1.4',
+      fill: '#3d0a10', 'font-size': '8.5', 'font-family': 'Frank Ruhl Libre, Times New Roman, Times, serif', 'letter-spacing': '1.4',
     }, [ringWord('KEY FOUNDATION')]),
     centerWord('ALEF'),
   ]);

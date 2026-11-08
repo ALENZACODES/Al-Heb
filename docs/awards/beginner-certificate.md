@@ -89,6 +89,6 @@ The printable sheet, the screen preview, and the PDF share one landscape hierarc
 
 Key Foundation is a display name on this sample. It is not a claim of a registered charity, company, or accreditation. The seal is a temporary crimson stamp with the words KEY FOUNDATION on the ring and ALEF in the center. It is not a royal arms, a state crest, or a sign of endorsement. Approved artwork remains 0.
 
-HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF uses the standard PDF serif Times with WinAnsi encoding, which the viewer supplies. The eggshell grain and the seal are drawn in the PDF content, not only in the page CSS. No new font file was added, and no paid font service is used.
+HTML uses Frank Ruhl Libre, already shipped under SIL OFL 1.1 (`assets/fonts/FONTS.md`, `assets/fonts/web/frank-ruhl-libre.woff2`). The PDF embeds the same face: Latin static instances at weights 400 and 700, taken from `assets/fonts/frankruhllibre-FrankRuhlLibre[wght].ttf`, licence `assets/fonts/frankruhllibre-OFL.txt`. No reserved font name. No new typeface and no paid font service. The eggshell curves, the grain, and the distressed seal are drawn in the PDF content, not only in the page CSS.
 
 Approved artwork: 0. The seal is a temporary geometric drawing. The longer notes stay in the page disclosure and in this document.

@@ -45,7 +45,8 @@ async function open({ browser, base }, route, { vp = { width: 360, height: 640 }
   const ctx = await browser.newContext({ viewport: vp, hasTouch: true, colorScheme: scheme, reducedMotion: reduced, serviceWorkers: 'block' });
   const page = await ctx.newPage(); const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+  page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text() + " " + m.location().url); });
+  page.on('response', (r) => { if (r.status() >= 400) errors.push(`${r.status()} ${new URL(r.url()).pathname}`); });
   await page.goto(base + 'offline.html');
   await page.evaluate(async ({ s, code }) => {
     localStorage.clear(); localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, ...s }));

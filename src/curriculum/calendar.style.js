@@ -83,6 +83,7 @@ a.alef-cal-day { color: var(--cal-ink); }
    The label and the "today" word leave the cell (the gold outline, the markers and the aria-label still carry them);
    the day page and the detail panel show the names in full. */
 @media (max-width: 479.98px) {
+  .alef-cal-table { border-spacing: 0; }
   .alef-cal-day { min-block-size: 3.6rem; padding: .2rem .15rem; gap: .05rem; grid-template-rows: auto auto 1fr; }
   .alef-cal-day .l { display: none; }
   .alef-cal-day .h { font-size: .62rem; }

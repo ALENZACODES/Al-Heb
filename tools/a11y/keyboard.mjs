@@ -200,7 +200,8 @@ async function tabTo(page, match, max = 120) {
   note(f, 'Tab reaches the "Preview" group heading without passing through collapsed links', nPv > 0, `${nPv} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(100);
   note(f, 'Enter expands the Preview group (details[open])', await page.evaluate(() => !!document.querySelector('#nav-more li[data-section="preview"] > details[open]')));
-  const nCal = await tabTo(page, (a) => a.inNav && /calendar/i.test(a.name), 80);
+  const menuStops = await page.locator('#nav-more a, #nav-more button, #nav-more summary').count();
+  const nCal = await tabTo(page, (a) => a.inNav && /calendar/i.test(a.name), menuStops + 2);
   note(f, 'Tab reaches the Calendar link inside the expanded group', nCal > 0, `${nCal} presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
   const a = await active(page);
@@ -224,6 +225,9 @@ async function tabTo(page, match, max = 120) {
     await page.evaluate(() => document.querySelectorAll('main details').forEach((d) => { d.open = true; })); // the walk is of the controls; a closed group is tested by the More-sheet flow
     await page.waitForTimeout(150);
     const stops = []; let done = false, presses = 0;
+    if (route.includes('lesson=')) {
+      await page.keyboard.press('Control+End'); await page.waitForTimeout(300);
+    }
     // start at the very top: the skip link is the first stop (sequential focus would otherwise start after the heading the router focused)
     await page.evaluate(() => { window.scrollTo(0, 0); window.__seenSkip = false; document.querySelector('.skip-link')?.focus(); });
     for (; presses < 400; presses++) {

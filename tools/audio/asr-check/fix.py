@@ -45,13 +45,49 @@ def speakable(hebrew):
     return re.sub(r'\s+', ' ', s).strip(' .:')
 
 
-def synth(text, voice_name, key):
+def synth_rate(text, voice_name, key, rate=1.0):
+    audio = {'audioEncoding': 'MP3', 'sampleRateHertz': 24000}
+    if rate != 1.0:
+        audio['speakingRate'] = rate
     body = json.dumps({'input': {'text': text}, 'voice': {'languageCode': 'he-IL', 'name': voice_name},
-                       'audioConfig': {'audioEncoding': 'MP3', 'sampleRateHertz': 24000}}).encode()
+                       'audioConfig': audio}).encode()
     req = urllib.request.Request('https://texttospeech.googleapis.com/v1/text:synthesize', data=body, method='POST',
                                  headers={'Content-Type': 'application/json', 'X-Goog-Api-Key': key})
     with urllib.request.urlopen(req, timeout=90) as r:
         return base64.b64decode(json.load(r)['audioContent'])
+
+
+def synth(text, voice_name, key):
+    return synth_rate(text, voice_name, key, 1.0)
+
+
+def rows_by_file():
+    """docs/audio/asr-check.csv keyed by every path that shares a recording."""
+    out = {}
+    with open(os.path.join(ROOT, 'docs', 'audio', 'asr-check.csv'), encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            for p in r['same_audio_paths'].split():
+                out[p] = r
+    return out
+
+
+def refresh_builder_manifest():
+    """Builder clips carry a sha256 in tools/audio/builder-manifest.json (tools/audio/verify-builder.mjs checks it)."""
+    import hashlib
+    bm_path = os.path.join(ROOT, 'tools', 'audio', 'builder-manifest.json')
+    bm = json.load(open(bm_path, encoding='utf-8'))
+    changed = 0
+    for c in bm['clips']:
+        p = os.path.join(ROOT, c['path'])
+        if os.path.exists(p):
+            data = open(p, 'rb').read()
+            h = hashlib.sha256(data).hexdigest()
+            if h != c.get('sha256'):
+                c['sha256'], c['bytes'], changed = h, len(data), changed + 1
+    if changed:
+        with open(bm_path, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(json.dumps(bm, ensure_ascii=False, indent=2) + '\n')
+        print(f'builder-manifest.json: {changed} hashes refreshed')
 
 
 def encode(src, dst, builder):
@@ -123,22 +159,7 @@ def main():
             print(f"[{n}/{len(rows)}] NO GOOD TAKE {r['pointed_hebrew']} ({r['file']})", flush=True)
         with open(LOG, 'a', encoding='utf-8') as f:
             f.write(json.dumps(rec, ensure_ascii=False) + '\n')
-    # Builder clips carry a sha256 in tools/audio/builder-manifest.json (tools/audio/verify-builder.mjs checks it): refresh it.
-    import hashlib
-    bm_path = os.path.join(ROOT, 'tools', 'audio', 'builder-manifest.json')
-    bm = json.load(open(bm_path, encoding='utf-8'))
-    changed = 0
-    for c in bm['clips']:
-        p = os.path.join(ROOT, c['path'])
-        if os.path.exists(p):
-            data = open(p, 'rb').read()
-            h = hashlib.sha256(data).hexdigest()
-            if h != c.get('sha256'):
-                c['sha256'], c['bytes'], changed = h, len(data), changed + 1
-    if changed:
-        with open(bm_path, 'w', encoding='utf-8') as f:
-            f.write(json.dumps(bm, ensure_ascii=False, indent=2) + '\n')
-        print(f'builder-manifest.json: {changed} hashes refreshed')
+    refresh_builder_manifest()
     if human:
         with open(os.path.join(ROOT, 'docs', 'audio', 'ASR-NEEDS-HUMAN.md'), 'a', encoding='utf-8') as f:
             for r in human:

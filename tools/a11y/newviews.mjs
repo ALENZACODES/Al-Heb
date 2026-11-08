@@ -162,7 +162,7 @@ for (const theme of ['light', 'dark']) {
     const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message)); page.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text().slice(0, 120)); });
     const rec = ((result.routes[route] ||= {})[theme] = { states: {} });
     // in-app navigation (home first, then the hash changes) because the shell deliberately does not move focus on the very first load
-    await page.goto(base + (route === '/' ? '#/how' : '#/')); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(300); // home is reached from another page: setting the hash to the one already showing is not a navigation
+    await page.goto(base + (route === '/' ? '#/how' : '#/')); await page.waitForSelector('body[data-ready="1"]', { timeout: 60000 }); await page.waitForTimeout(300); // 60 s: CI runners can be slow to boot the home page // home is reached from another page: setting the hash to the one already showing is not a navigation
     await page.evaluate((h) => { location.hash = h; }, route); await settle(page);
     rec.focusOnNav = await page.evaluate(() => ({ onHeading: document.activeElement?.id === 'view-title' || document.activeElement === document.querySelector('main h1'), active: document.activeElement ? document.activeElement.tagName.toLowerCase() + (document.activeElement.id ? '#' + document.activeElement.id : '') : null }));
     rec.hash = await page.evaluate(() => location.hash);

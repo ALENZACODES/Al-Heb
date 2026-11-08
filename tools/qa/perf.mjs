@@ -1,8 +1,8 @@
 // Performance budget tool (prong P074 follow-on). Cold load on emulated slow 4G with a 4x CPU slowdown, via Playwright + CDP, headless Chromium.
-// This is emulation on one Linux machine: relative numbers (bytes, request counts, ordering of events) are solid, absolute milliseconds are only
+// This is emulation on one machine: relative numbers (bytes, request counts, ordering of events) are solid, absolute milliseconds are only
 // indicative, and nothing here is a real phone. A budget is derived from a measured baseline, never invented.
 // Usage: node tools/qa/perf.mjs [--quick] [--runs 3] [--net slow4g|fast4g|none] [--cpu 4] [--routes /,/vocab] [--out docs/perf]
-//                                [--block-manifest] (abort data/audio/manifest.json and the word shards in every load, to see the page without them) [--set-budget]   write docs/perf/budget.json from this run (baseline x 1.15, rounded up to 10 KB)
+//                                [--block-manifest] (abort data/audio/manifest.json and the word shards in every load, to see the page without them) [--set-budget]   write docs/perf/budget.json from this run (baseline x existing headroom (5% default), rounded up to 10 KB)
 //   default   cold load of / (median of --runs) + the lazy audio-manifest comparison + the 5 heaviest routes (memory, DOM nodes)
 //   --quick   cold load of / once, no manifest comparison, no heavy routes (used by tests/perf.test.js)
 // Writes <out>/results.json. Exit 1 when JS bytes on first load of / exceed docs/perf/budget.json.
@@ -25,6 +25,7 @@ const args = process.argv.slice(2);
 const arg = (n, d) => (args.includes(n) ? args[args.indexOf(n) + 1] : d);
 const quick = args.includes('--quick');
 const runs = Number(arg('--runs', quick ? 1 : 3));
+if (args.includes('--set-budget') && (!Number.isInteger(runs) || runs < 3)) { console.error('--set-budget requires at least 3 runs'); process.exit(2); }
 const netName = arg('--net', 'slow4g');
 const cpu = Number(arg('--cpu', 4));
 const outDir = resolve(root, arg('--out', 'docs/perf')); mkdirSync(outDir, { recursive: true });
@@ -83,7 +84,7 @@ async function load(route, { blockManifest = false, heavy = false } = {}) {
     return {
       fcp, domContentLoaded: nav?.domContentLoadedEventEnd ?? null, load: nav?.loadEventEnd ?? null,
       requests: res.length + 1, totalBytes: sum(res) + doc.size, docBytes: doc.size, jsBytes: sum(js), jsRequests: js.length, jsBytesBeforeFcp: fcp == null ? null : sum(js.filter((r) => r.end <= fcp)), jsRequestsBeforeFcp: fcp == null ? null : js.filter((r) => r.end <= fcp).length,
-      cssBytes: sum(css), fontBytes: sum(fonts), dataBytes: sum(data), imageBytes: sum(img), biggestJs: big, biggestData: bigData,
+      cssBytes: sum(css), fontBytes: sum(fonts), dataBytes: sum(data), imageBytes: sum(img), biggestJs: big, biggestData: bigData, jsResources: js.map((r) => [r.url, r.size]),
       manifest: man ? { requestedAtMs: Math.round(man.start), finishedAtMs: Math.round(man.end), bytes: man.size, afterFcp: fcp != null && man.start >= fcp } : null,
       longTasks: { count: lt.length, totalMs: Math.round(lt.reduce((s, [, d]) => s + d, 0)), maxMs: Math.round(Math.max(0, ...lt.map(([, d]) => d))), tbtMs: Math.round(after.reduce((s, [, d]) => s + Math.max(0, d - 50), 0)) },
       domNodes: document.getElementsByTagName('*').length,
@@ -105,11 +106,11 @@ const summarize = (list) => {
   const o = { runs: list.length, ready: list.every((x) => x.ready), errors: [...new Set(list.flatMap((x) => x.errors))] };
   for (const k of ['fcp', 'readyMs', 'manifestSettledMs', 'viewMs', 'mainNodes', 'load', 'requests', 'totalBytes', 'jsBytes', 'jsRequests', 'jsBytesBeforeFcp', 'jsRequestsBeforeFcp', 'cssBytes', 'fontBytes', 'dataBytes', 'imageBytes', 'domNodes', 'jsHeapUsedMB', 'cdpNodes', 'cdpListeners', 'layoutCount']) { const v = agg(list, k); if (v != null) o[k] = Math.round(v * 10) / 10; }
   o.longTasks = { count: agg(list.map((x) => x.longTasks), 'count'), totalMs: agg(list.map((x) => x.longTasks), 'totalMs'), maxMs: agg(list.map((x) => x.longTasks), 'maxMs'), tbtMs: agg(list.map((x) => x.longTasks), 'tbtMs') };
-  o.manifest = list[0].manifest; o.biggestJs = list[0].biggestJs; o.biggestData = list[0].biggestData; o.fcpAll = list.map((x) => Math.round(x.fcp ?? 0));
+  o.manifest = list[0].manifest; o.biggestJs = list[0].biggestJs; o.biggestData = list[0].biggestData; o.fcpAll = list.map((x) => Math.round(x.fcp ?? 0)); o.jsBytesAll = list.map((x) => x.jsBytes); o.jsRequestsAll = list.map((x) => x.jsRequests); o.jsResources = list[0].jsResources;
   return o;
 };
 
-const result = { when: new Date().toISOString(), chromium: browser.version(), network: netName, netDetail: NETS[netName], cpuSlowdown: cpu, runs, note: 'Emulated throttling in headless Chromium on a shared Linux machine, not a real phone; compare bytes and ordering, treat milliseconds as indicative.', routes: {} };
+const result = { when: new Date().toISOString(), chromium: browser.version(), network: netName, netDetail: NETS[netName], cpuSlowdown: cpu, runs, platform: process.platform, note: 'Emulated throttling in headless Chromium on a shared machine, not a real phone; compare bytes and ordering, treat milliseconds as indicative.', routes: {} };
 for (const route of routes) {
   const list = []; for (let i = 0; i < runs; i++) list.push(await load(route, { heavy: !quick }));
   result.routes[route] = summarize(list);
@@ -129,8 +130,11 @@ await browser.close(); server.close();
 const budgetFile = join(outDir, 'budget.json');
 const first = result.routes['/'];
 if (args.includes('--set-budget') && first) {
-  const baseline = first.jsBytes; const budget = Math.ceil((baseline * 1.15) / 10240) * 10240;
-  writeFileSync(budgetFile, JSON.stringify({ metric: 'JS bytes transferred (script resources incl. headers) until the audio manifest has settled (window.alefManifest) + 1 s, cold load of /, no service worker', baselineBytes: baseline, headroom: 1.15, budgetBytes: budget, measured: result.when, network: netName, jsRequests: first.jsRequests, rule: 'baseline x 1.15 rounded up to the next 10 KB; raise only with a written reason in docs/perf/PERF.md' }, null, 1) + '\n');
+  if (!first.ready || first.errors.length) { console.error('Cannot set budget from a failed page load'); process.exit(2); }
+  const prior = existsSync(budgetFile) ? JSON.parse(readFileSync(budgetFile, 'utf8')) : {};
+  const headroom = Number.isFinite(prior.headroom) && prior.headroom >= 1 ? prior.headroom : 1.05;
+  const baseline = first.jsBytes; const budget = Math.ceil((baseline * headroom) / 10240) * 10240;
+  writeFileSync(budgetFile, JSON.stringify({ metric: 'JS bytes transferred (script resources incl. headers) until the audio manifest has settled (window.alefManifest) + 1 s, cold load of /, no service worker', baselineBytes: baseline, headroom, budgetBytes: budget, measured: result.when, network: netName, jsRequests: first.jsRequests, rule: 'baseline x headroom rounded up to the next 10 KB; raise only with a written reason in docs/perf/PERF.md' }, null, 1) + '\n');
   console.log(`budget written: baseline ${baseline} B -> budget ${budget} B`);
 }
 let over = false;

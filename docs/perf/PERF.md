@@ -31,6 +31,16 @@ The cold load of `/` had grown to 346346 B in 55 requests (budget 317440 B). Cau
 
 The cold load of `/` measured 326629 B in 49 requests against the 317440 B budget. Three changes, each measured with `node tools/qa/perf.mjs --quick` (emulated, this machine): the fallback audio stub (`shell/audio-stub.js`) and the preview banner (`shell/preview-banner.js`) are imported only when needed (player failed; a preview-tier route shown), and Home fetches `shell/backup-reminder.js` only when at least one lesson is completed (the reminder is never due below 3). Together: 326629 B to 317594 B. Then `openStart` moved from `placement/model.js` (9.2 KB) to `placement/start.js` (re-exported from the model, same behaviour), so Home no longer loads the placement item builder: 309860 B in 46 requests. Budget and baseline unchanged.
 
+### Budget rebaseline, 2026-11-08 (current Home)
+
+The old **317440 B** budget measured the November 4 Home. The current Home includes the requested opening prayer veil, animated mascot and speech bubble, word builder, illustrated showcase, music controls and synthesis engine; the router and audio player also support the expanded catalogue. These are visible first-load features or shell services. The music modules account for 47684 source bytes, the builder/showcase/game-session modules for 30478, and the mascot modules for 14532 (before HTTP headers). The complete measured resource list is saved in `baseline-2026-11-08.json`.
+
+Optimization was investigated before rebasing: the Home builder's awards module now loads only when a completed word needs an award, removing the eager awards dependency. The remaining largest requests are the router (33 KB), audio player (26 KB), boot module (25 KB), music synthesizer (23 KB), and calendar (21 KB). The calendar supports the live streak/rest-day calculation. Deferring the synthesizer alone would save about 22 KB but needs a separate design preserving audio-context activation from the user's gesture, track switching, pause and speech interruptions; it would not bring this larger Home under the old budget. No feature was hidden or deferred beyond the measurement window to pass this check.
+
+Measured with `node tools/qa/perf.mjs --quick --runs 3 --set-budget`, headless Edge/Chromium **157.0.4341.42 on Windows**, slow-4G network emulation, 4x CPU slowdown and the existing cold 390x844 viewport. **Not a real phone**; timings on this shared machine are indicative. All three loads became ready with no page errors. The median is **502448 B in 66 JavaScript requests**, with individual byte/request samples retained in the evidence JSON. The measured median FCP was 1524 ms; this cross-machine timing is not comparable to the older Linux timing as a speed improvement or regression.
+
+Keep the existing **5% headroom**, rounded up to the next 10 KB: **532480 B**. The tool now preserves that configured margin instead of silently resetting it to 15%, and refuses `--set-budget` with fewer than three runs. Future increases still require a written reason and a fresh three-run measurement; the one-run CI guard remains enabled.
+
 ## Numbers (slow 4G, 4x CPU, median of 3)
 
 | Route | FCP ms | JS KB (req) | JS KB before FCP | total KB | long tasks (TBT ms) | DOM nodes (main) | JS heap MB |

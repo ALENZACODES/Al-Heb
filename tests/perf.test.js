@@ -39,3 +39,25 @@ test('pwa audit: manifest, icons, SW, offline fallback, installability', { skip:
   const r = spawnSync('node', ['tools/qa/pwa_audit.mjs', '--out', out], { cwd: root, encoding: 'utf8', timeout: 110000 });
   assert.equal(r.status, 0, r.stdout.split('\n').filter((l) => l.startsWith('FAIL')).join('\n') + r.stderr);
 });
+
+
+test('rebaseline evidence has three cold loads and matches the budget median', () => {
+  const evidence = JSON.parse(readFileSync(join(root, 'docs/perf/baseline-2026-11-08.json'), 'utf8'));
+  const home = evidence.routes['/'];
+  assert.ok(evidence.runs >= 3);
+  assert.equal(home.jsBytesAll.length, evidence.runs);
+  assert.equal(home.jsRequestsAll.length, evidence.runs);
+  const sorted = [...home.jsBytesAll].sort((a, b) => a - b);
+  assert.equal(budget.baselineBytes, sorted[Math.floor((sorted.length - 1) / 2)]);
+  assert.equal(home.ready, true);
+  assert.deepEqual(home.errors, []);
+  assert.equal(budget.headroom, 1.05);
+});
+
+test('rebaseline refuses a single sample before writing a budget', { skip: !haveBrowser }, () => {
+  const out = mkdtempSync(join(tmpdir(), 'alef-perf-single-'));
+  const r = spawnSync('node', ['tools/qa/perf.mjs', '--quick', '--runs', '1', '--set-budget', '--out', out], { cwd: root, encoding: 'utf8' });
+  assert.equal(r.status, 2, r.stdout + r.stderr);
+  assert.match(r.stderr, /at least 3 runs/);
+  assert.equal(existsSync(join(out, 'budget.json')), false);
+});

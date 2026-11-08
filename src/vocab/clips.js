@@ -7,7 +7,7 @@
 // in PR #20, commit 8f37d4ba, file docs/audio/PLAYBACK-CONTRACT.md, on
 // chatgpt/games-enrich-2026-11-06. This screen does not set playbackRate itself.
 import { fileLabel, traditionCaption } from '../shell/audio-labels.js';
-import { playbackTradition } from '../audio/player.js';
+import { playbackTradition, isAccentClip } from '../audio/player.js';
 import { t } from '../shell/i18n.js';
 
 export const VOICES = Object.freeze(['m', 'f']);
@@ -71,7 +71,7 @@ export function buildClipLookup(rows, fileExists = () => true) {
   }
   return {
     schema: 'alef-vocab-clip-lookup/1',
-    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose files the setting plays (src/audio/player.js PLAYBACK_TRADITION: the Sephardi and Ashkenazi settings play the Israeli file, owner decisions 2026-11-07); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
+    rule: 'Same pointed text, same voice, file present, status not missing. The slot is the tradition whose file the setting plays (src/audio/player.js): the setting\'s own slot when its source is an admitted accent provenance (ACCENT_SOURCES: an Israeli voice reading the tradition\'s respelling, or a tempo-capped older clip), otherwise the Israeli slot (PLAYBACK_TRADITION, owner decisions 2026-11-07); the clip is captioned with its real tradition. Anchor ids skipped. Lowest word id wins.',
     clips,
   };
 }
@@ -80,7 +80,8 @@ export function buildClipLookup(rows, fileExists = () => true) {
 export function lookupClip(lookup, text, voice, tradition) {
   if (!lookup || !VOICES.includes(voice) || !TRADITIONS.includes(tradition)) return null;
   const row = lookup.clips?.[clipKey(text)];
-  const clip = row?.[`${voice}|${playbackTradition(tradition)}`] || null;
+  const own = row?.[`${voice}|${tradition}`] || null;
+  const clip = row?.[`${voice}|${playbackTradition(tradition, own)}`] || null;
   // `setting` is the learner's tradition; `tradition` stays the FILE's. The caption names both when they differ.
   return clip ? { ...clip, setting: tradition } : null;
 }
@@ -98,11 +99,13 @@ export function alternateClip(lookup, text, voice, tradition) {
   const row = lookup.clips?.[clipKey(text)];
   if (!row) return null;
   const other = voice === 'm' ? 'f' : 'm';
-  const played = playbackTradition(tradition);
-  // Slots whose files a setting plays; a retired slot (Sephardi files) is never offered.
-  const live = TRADITIONS.filter((t) => playbackTradition(t) === t);
-  const order = [`${other}|${played}`, `${voice}|israeli`, `${other}|israeli`,
-    ...live.filter((t) => t !== played && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])];
+  const played = playbackTradition(tradition, row[`${voice}|${tradition}`]);
+  // Slots whose files a setting plays: the other voice's own admitted clip of this setting first, then Israeli, then another
+  // tradition's admitted clips. A retired slot (an older respelled Sephardi/Ashkenazi file) is never offered.
+  const live = (slot) => row[slot] && (slot.endsWith('|israeli') || isAccentClip(row[slot]));
+  const order = [`${other}|${tradition}`, `${voice}|israeli`, `${other}|israeli`,
+    ...TRADITIONS.filter((t) => t !== tradition && t !== 'israeli').flatMap((t) => [`${voice}|${t}`, `${other}|${t}`])]
+    .filter((slot) => slot !== `${voice}|${played}` && live(slot));
   for (const slot of order) if (row[slot]) return { ...row[slot], setting: tradition };
   return null;
 }

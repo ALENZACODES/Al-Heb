@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { stripPoints, filterEntries } from '../src/vocab/model.js';
 import { fold, matchBand, rankEntries, isExactBand, BAND } from '../src/vocab/rank.js';
 import { transliterate } from '../src/pronunciation/transliterate.js';
-import { buildClipLookup, lookupClip, planIsExactFile, CLIP_RATES, PLAYBACK_DEPENDENCY } from '../src/vocab/clips.js';
+import { buildClipLookup, lookupClip, alternateClip, planIsExactFile, CLIP_RATES, PLAYBACK_DEPENDENCY } from '../src/vocab/clips.js';
 import { lookupFromDisk } from '../tools/vocab/build-clip-lookup.mjs';
 import { aliasHits, GREETING_ALIAS } from '../src/vocab/aliases.js';
 import { applyRanked } from '../src/vocab/vocab.view.js';
@@ -144,13 +144,14 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   const shalom = content.find((e) => e.lemma === 'שלום' && e.pos === 'noun');
   const fSep = lookupClip(onDisk, shalom.pointed, 'f', 'sephardi');
   const mAsh = lookupClip(onDisk, shalom.pointed, 'm', 'ashkenazi');
-  // the Sephardi setting plays the Israeli file (owner decision 2026-11-07); the clip keeps its real tradition and remembers the setting
+  // the Sephardi and Ashkenazi settings play the Israeli file unless their own slot is an admitted accent clip (owner decisions
+  // 2026-11-07; the old paid-cloud respelled files are retired); the clip keeps its real tradition and remembers the setting
   assert.ok(fSep && fSep.path.startsWith('audio/f/israeli/'));
   assert.equal(fSep.tradition, 'israeli'); assert.equal(fSep.setting, 'sephardi');
   assert.ok(mAsh && mAsh.path.startsWith('audio/m/israeli/'));
   assert.equal(mAsh.tradition, 'israeli'); assert.equal(mAsh.setting, 'ashkenazi');
-  assert.notEqual(fSep.path, mAsh.path); // different voices
-  assert.match(onDisk.rule, /Sephardi and Ashkenazi settings play the Israeli file/);
+  assert.notEqual(fSep.path, mAsh.path);
+  assert.match(onDisk.rule, /otherwise the Israeli slot/);
   assert.ok(existsSync(new URL('../' + fSep.path, import.meta.url)));
   assert.deepEqual(CLIP_RATES, ['normal', 'slow']);
   assert.equal(planIsExactFile({ source: 'file', via: 'exact', url: '/x', voice: 'f', tradition: 'sephardi', id: fSep.id }, { voice: 'f', tradition: 'sephardi', id: fSep.id }), true);
@@ -166,8 +167,16 @@ test('clip lookup plays one real id for the selected voice and tradition', () =>
   const small = buildClipLookup(rows, () => true);
   assert.equal(lookupClip(small, 'הִיא', 'f', 'sephardi').id, 'a', 'the Sephardi setting gets the Israeli slot');
   assert.equal(lookupClip(small, 'הִיא', 'f', 'ashkenazi').id, 'a', 'the Ashkenazi setting gets the Israeli slot too');
-  assert.equal(lookupClip(small, 'הִיא', 'f', 'nusach-x'), null, 'an unknown setting has no slot');
   assert.equal(lookupClip(small, 'הִיא', 'm', 'israeli').id, 'b');
+  // an admitted accent clip (an Israeli voice reading the respelling) is the setting's own slot; an old respelled one is not
+  const withOwn = buildClipLookup([...rows,
+    { id: 'c', kind: 'word', voice: 'f', tradition: 'ashkenazi', path: 'c.mp3', status: 'synthetic-unreviewed', source: 'tts-respelled-israeli-voice', text: 'הִיא' },
+    { id: 'd', kind: 'word', voice: 'f', tradition: 'sephardi', path: 'd.mp3', status: 'tts', source: 'paid-cloud', text: 'הִיא' }], () => true);
+  const own = lookupClip(withOwn, 'הִיא', 'f', 'ashkenazi');
+  assert.equal(own.id, 'c'); assert.equal(own.tradition, 'ashkenazi'); assert.equal(own.setting, 'ashkenazi');
+  assert.equal(lookupClip(withOwn, 'הִיא', 'f', 'sephardi').id, 'a', 'the retired Sephardi slot is passed over');
+  assert.equal(alternateClip(withOwn, 'הִיא', 'm', 'ashkenazi').id, 'c', 'the other voice\'s admitted own clip is offered first');
+  assert.equal(alternateClip(withOwn, 'הִיא', 'm', 'sephardi').id, 'a', 'never the retired Sephardi slot');
 });
 
 test('the screen list is 5000 minus hidden rows and word forms, with nothing padded back', async () => {

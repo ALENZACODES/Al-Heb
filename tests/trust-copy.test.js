@@ -61,7 +61,8 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
   const mSep = at('m', 'sephardi', 'h9c8ddecf');
   assert.equal(mSep.source, 'file', 'Man + Sephardi plays the man Israeli clip'); assert.match(mSep.path, /audio\/m\/israeli\//);
   assert.equal(at('f', 'israeli', 'h9c8ddecf').source, 'file', 'the Israeli woman house clip stays on its own row');
-  assert.notEqual(at('m', 'ashkenazi', 'h9c8ddecf').source, 'file', 'Man + Ashkenazi house was not in the package, and Ashkenazi has no rule yet');
+  const mAsh = at('m', 'ashkenazi', 'h9c8ddecf');
+  assert.equal(mAsh.source, 'file', 'Man + Ashkenazi plays the man Israeli clip (owner decision 2026-11-07 22:56: Ashkenazi falls back to Israeli like Sephardi)'); assert.match(mAsh.path, /audio\/m\/israeli\//); assert.equal(mAsh.fileTradition, 'israeli');
   const d = audioTruthDetail(summary);
   assert.match(d, /not swapped for a different voice or tradition/);
   assert.match(d, /Israeli style has not been verified/);

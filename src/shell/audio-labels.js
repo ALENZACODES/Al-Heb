@@ -7,7 +7,11 @@
 // A clip whose manifest `source` is 'outside-respelled' was made from a stored respelling by an outside voice service; its label says that and that the accent is not verified.
 // A clip whose manifest `source` is 'outside-synthetic' (tools/audio/ingest.mjs) came from a generator whose model and method are unknown, so its label
 // says that instead of claiming "made from pointed Hebrew / a respelling".
+// A clip whose `source` is one of ACCENT_SOURCES (src/audio/player.js) is an admitted Sephardi/Ashkenazi clip: either the Israeli voice
+// reading the tradition's respelling ('tts-respelled-israeli-voice') or an older respelled clip sped up to the Israeli clip's pace
+// ('tts-respelled-tempo-capped'); its label says which, and that nobody has listened to it.
 // Anything else counts as 'missing' (see summarizeManifest in ./audio.js).
+import { ACCENT_SOURCES } from '../audio/player.js';
 export const STATUS_LABELS = Object.freeze({
   recorded: 'Recorded by a human reader',
   tts: 'Synthetic voice (Israeli only), not a recorded teacher',
@@ -40,6 +44,15 @@ export function traditionCaption(tradition, fileTradition) {
  */
 export function syntheticLabel(status, tradition, source) {
   const style = TRAD_STYLE[tradition];
+  const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';
+  if (source === ACCENT_SOURCES.israeliVoice) {
+    // the Israeli he-IL voice of the same slot reading the tradition's English-letter respelling (tools/audio/render_tts.mjs --tradition)
+    return `Synthetic voice (Israeli voice reading the ${style || 'tradition\'s'} respelling; not a recorded teacher; ${rev})`;
+  }
+  if (source === ACCENT_SOURCES.tempoCapped) {
+    // an older outside-voice respelled clip, sped up at the same pitch to at most 1.26x its Israeli counterpart (tools/audio/tempo_cap.mjs)
+    return `Synthetic voice (outside voice reading the ${style || 'tradition\'s'} respelling, sped up to the Israeli clip's pace; ${style ? `${style} style not verified; ` : ''}not a recorded teacher; ${rev})`;
+  }
   if (typeof source === 'string' && source.startsWith('outside-respelled')) {
     // made by an outside voice service from a stored respelling (tools/tts/voice_*.mjs, tools/audio/ingest.mjs --origin respelled): say so, and that the accent is unverified
     const rev = status === 'synthetic-reviewed' ? 'reviewed by a listener' : 'unreviewed';

@@ -86,7 +86,9 @@ export function audioNote(tradition, { hasRecording = false } = {}) {
   if (t === 'israeli') return 'No recording yet: this plays the device voice, which speaks Israeli Hebrew.';
   // Owner decision 2026-11-07: the Sephardi setting plays Israeli sound (clips and device voice) and shows the Sephardi reading in English letters.
   if (t === 'sephardi') return 'No recording yet: Sephardi plays the Israeli clips, or the device voice, which speak Israeli Hebrew; the Sephardi reading is shown in English letters.';
-  return `There is no ${LABELS[t]} recording yet. The device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the English-letter spelling instead.`;
+  // Owner decision 2026-11-07 22:56: Ashkenazi plays its own clip only when it is an admitted accent clip (an Israeli voice reading the
+  // Ashkenazi spelling, src/audio/player.js isAccentClip), otherwise the Israeli clips; the device voice stays off for it.
+  return `There is no ${LABELS[t]} recording yet. ${LABELS[t]} plays the Israeli clips where one exists (the ${LABELS[t]} reading is shown in English letters); the device voice speaks Israeli Hebrew, so it will not match your ${LABELS[t]} setting. Read the English-letter spelling instead.`;
 }
 
 /** Tradition for content that exists only in Modern Israeli Hebrew (phrasebook, Israel track): never the congregation. */
@@ -102,11 +104,11 @@ export function playLine(r, tradition, what = 'this') {
   const t = normalize(tradition);
   if (r && r.source === 'file') {
     const other = r.fileTradition && r.fileTradition !== t
-      ? ((t === 'sephardi' || t === 'ashkenazi') && normalize(r.fileTradition) === 'israeli' ? ` It is the Israeli voice; the ${LABELS[t]} reading is shown in English letters.` : ` It is the ${LABELS[normalize(r.fileTradition)]} reading, used here as a stand-in for ${LABELS[t]}.`)
+      ? (t === 'sephardi' && normalize(r.fileTradition) === 'israeli' ? ' It is the Israeli voice; the Sephardi reading is shown in English letters.' : ` It is the ${LABELS[normalize(r.fileTradition)]} reading, used here as a stand-in for ${LABELS[t]}.`)
       : '';
-    return `Playing ${what}: ${fileLabel(r.entryStatus)}.${other}`;
+    return `Playing ${what}: ${fileLabel(r.entryStatus, r.fileTradition || t, r.entrySource)}.${other}`;
   }
-  if (r && r.source === 'tts-fallback') return `Playing ${what} with the browser voice: a computer voice, not a person. ${t === 'israeli' ? 'It speaks Israeli Hebrew' : (t === 'sephardi' || t === 'ashkenazi') ? `It speaks Israeli Hebrew (${LABELS[t]} plays Israeli sound; the ${LABELS[t]} reading is shown in English letters)` : `It speaks Israeli Hebrew, not ${LABELS[t]}`} and may ignore the vowel points.`;
+  if (r && r.source === 'tts-fallback') return `Playing ${what} with the browser voice: a computer voice, not a person. ${t === 'israeli' ? 'It speaks Israeli Hebrew' : t === 'sephardi' ? 'It speaks Israeli Hebrew (Sephardi plays Israeli sound; the Sephardi reading is shown in English letters)' : `It speaks Israeli Hebrew, not ${LABELS[t]}`} and may ignore the vowel points.`;
   if (r && r.source === 'none' && r.reason === 'tts-pronunciation-mismatch') return `Not played: ${audioNote(t)}`;
   if (r && (r.source === 'none' || r.played === false || r.ok === false)) return `No audio for ${what} (${r.reason || r.error || 'unavailable'}).`;
   return `Played ${what}.`;
@@ -143,7 +145,7 @@ export function audioSupport(tradition, { browserVoiceAnyway = false, audioFree 
   if (t === 'israeli') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. The Hebrew clips use a synthetic voice (a man\'s and a woman\'s); where none exists, Listen uses your device\'s Hebrew voice if it has one: a computer voice, not a teacher.' };
   // Owner decision 2026-11-07 (src/audio/player.js PLAYBACK_TRADITION): the Sephardi setting plays the Israeli clips and shows the
   // Sephardi reading in English letters. The device voice, also Israeli, is no mismatch for it.
-  if (t === 'sephardi' || t === 'ashkenazi') return { ...base, deviceVoice: true, supported: 'device', line: `No recorded audio yet. ${L} plays the Israeli clips (a synthetic man's or woman's voice) and shows the ${L} reading in English letters; where no clip exists, Listen uses your device\'s Hebrew voice if it has one: a computer voice, not a teacher.` };
+  if (t === 'sephardi') return { ...base, deviceVoice: true, supported: 'device', line: 'No recorded audio yet. Sephardi plays the Israeli clips (a synthetic man\'s or woman\'s voice) and shows the Sephardi reading in English letters; where no clip exists, Listen uses your device\'s Hebrew voice if it has one: a computer voice, not a teacher.' };
   if (browserVoiceAnyway) return { ...base, deviceVoice: true, supported: 'device-mismatch', line: `No ${L} audio yet. The device voice is on: it speaks Israeli Hebrew, so it will not sound ${L}.` };
-  return { ...base, deviceVoice: false, supported: 'none', line: `No ${L} audio yet. The device voice speaks only Israeli Hebrew, so Listen stays off for ${L}. Read the English-letter spelling instead.` };
+  return { ...base, deviceVoice: false, supported: 'none', line: `No ${L} audio yet. ${L} plays the Israeli clips where one exists and shows the ${L} reading in English letters; the device voice speaks only Israeli Hebrew, so Listen stays off for ${L} items with no clip. Read the English-letter spelling instead.` };
 }

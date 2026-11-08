@@ -5,7 +5,7 @@
 import { h, heSpan } from '../shell/ui.js';
 import { DEVICE_LABEL } from '../shell/audio-access.js';
 import { speechText } from '../shell/names.js';
-import { playbackTradition } from '../audio/player.js';
+import { playbackTradition, isAccentClip } from '../audio/player.js';
 import {
   TRADITIONS, VOICES, TRAD_LABEL, VOICE_LABEL, loadPhraseScreen, formLabel, addressNotices, audioHonesty, contentHonesty, cellClip, playPhraseClip,
 } from './model.js';
@@ -77,18 +77,20 @@ export function mount(root, ctx) {
       const out = [];
       for (const t of TRADITIONS) for (const v of VOICES) {
         if ((t === tradition || t === playbackTradition(tradition)) && v === voice) continue;
-        if (playbackTradition(t) !== t) continue; // a retired slot (Sephardi files) is not offered
         const c = form.audio?.[t]?.[v]?.normal;
-        if (c) out.push(c);
+        if (!c) continue;
+        if (t !== 'israeli' && !isAccentClip(c)) continue; // a retired slot (an older respelled Sephardi/Ashkenazi file) is not offered
+        out.push(c);
       }
       const rank = (c) => (c.tradition === 'israeli' ? 0 : 2) + (c.voice === voice ? 0 : 1);
       return out.sort((a, b) => rank(a) - rank(b));
     }
 
     function clipLine(form) {
-      // The row that PLAYS for this style: the Sephardi style plays the Israeli row (src/audio/player.js PLAYBACK_TRADITION,
-      // owner decision 2026-11-07); the button and caption name the row's real tradition.
-      const played = playbackTradition(tradition);
+      // The row that PLAYS for this style: the style's own row when it is an admitted accent clip (src/audio/player.js
+      // isAccentClip: an Israeli voice reading the respelling, or a tempo-capped older clip), otherwise the Israeli row
+      // (PLAYBACK_TRADITION, owner decisions 2026-11-07); the button and caption name the row's real tradition.
+      const played = playbackTradition(tradition, form.audio?.[tradition]?.[voice]?.normal);
       const normal = form.audio?.[played]?.[voice]?.normal || null;
       const slow = form.audio?.[played]?.[voice]?.slow || null;
       let listed;
@@ -247,7 +249,7 @@ export function mount(root, ctx) {
         }));
       const shown = phrases.filter((p) => category === 'all' || p.category === category);
       const items = shown.map((p) => {
-        const has = !!cellClip(p, playbackTradition(tradition), voice, 'normal');
+        const has = !!cellClip(p, playbackTradition(tradition, cellClip(p, tradition, voice, 'normal')), voice, 'normal');
         const anyClip = TRADITIONS.some((t) => VOICES.some((v) => cellClip(p, t, v, 'normal')));
         const q = `?tradition=${tradition}&voice=${voice}`;
         return h('li', { class: 'alef-item', 'data-phrase': p.id },

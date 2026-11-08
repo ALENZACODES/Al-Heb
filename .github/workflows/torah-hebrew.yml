@@ -30,6 +30,9 @@ jobs:
       - name: ffmpeg (clip length)
         if: env.GOOGLE_TTS_API_KEY != ''
         run: sudo apt-get update -y && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Which sounds Google accepts (one small request)
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: python3 tools/torah/audio/ipa/probe.py
       - name: Record and install each queued chapter
         if: env.GOOGLE_TTS_API_KEY != ''
         shell: bash
@@ -43,9 +46,10 @@ jobs:
             echo "== $book ${chapter:-}"
             python3 plan.py $args
             # four workers, each paced to about one request a second
-            for s in 0 1 2 3; do pwsh -NoProfile -File render.ps1 -Shard $s -Shards 4 & done
-            wait
+            pids=""; for s in 0 1 2 3; do pwsh -NoProfile -File render.ps1 -Shard $s -Shards 4 & pids="$pids $!"; done
+            failed=0; for p in $pids; do wait $p || failed=1; done
             if [ "$book" = "all" ]; then python3 install.py; else python3 install.py --book "$book" ${chapter:+--chapter "$chapter"}; fi
+            if [ "$failed" = 1 ]; then echo "::error::Some requests failed; the clips that worked were kept"; fi
           done
       - name: Refresh audio summary and offline list; Torah tests
         if: env.GOOGLE_TTS_API_KEY != ''

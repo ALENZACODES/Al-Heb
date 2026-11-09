@@ -102,7 +102,7 @@ test('failed uncached JSON and JS requests never masquerade as offline HTML', as
 
 test('previously cached JSON remains available when the connection fails', async () => {
   const w = worker(async () => { throw new Error('offline'); });
-  await (await w.caches.open('alef-shell-test')).put('data/vocab/bank.json', new Response('{"words":[]}', { headers: { 'content-type': 'application/json' } }));
+  await (await w.caches.open('alef-shell-test')).put('https://alef.test/data/vocab/bank.json', new Response('{"words":[]}', { headers: { 'content-type': 'application/json' } }));
   const res = await w.get('data/vocab/bank.json');
   assert.deepEqual(await res.json(), { words: [] });
 });

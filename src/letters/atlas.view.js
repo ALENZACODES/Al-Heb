@@ -77,7 +77,7 @@ const CSS = `
 .alef-atlas{font-family:system-ui,sans-serif;max-width:860px;margin:0 auto;padding:12px;color:#1b1b1f}
 .alef-atlas button{font:inherit;cursor:pointer;border:1px solid #9aa;background:#fff;border-radius:10px;min-height:44px;padding:6px 10px}
 .alef-atlas button:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
-.alef-atlas button[aria-pressed=true]{background:#1f4e9c;color:#fff;border-color:#1f4e9c}
+.alef-atlas button[aria-pressed=true]{background:var(--accent,#1e4634);color:var(--accent-fg,#fffaf0);border-color:var(--accent,#1e4634)}
 .alef-atlas .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px;margin:10px 0;padding:0;list-style:none}
 .alef-atlas .tile{width:100%;display:flex;flex-direction:column;align-items:center;gap:0;line-height:1.15}
 .alef-atlas .tile .g{font-size:2.3rem}.alef-atlas .tile .n{font-size:.8rem}.alef-atlas .tile .s{font-size:.75rem;color:#445}

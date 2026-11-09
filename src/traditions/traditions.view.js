@@ -34,19 +34,19 @@ const CSS = `
 .alef-trad h2{margin:.2em 0 .4em}
 .alef-trad h3{margin:1.1em 0 .4em;font-size:1.1rem}
 .alef-trad h4{margin:0 0 .3rem;font-size:1rem}
-.alef-trad .draft-flag{background:var(--warn-bg,#fff3cd);color:var(--warn-fg,#4d3b00);padding:.5rem .75rem;border-radius:8px;border-inline-start:4px solid var(--focus,#1a5fb4);font-weight:600}
+.alef-trad .draft-flag{background:var(--warn-bg,#fff3cd);color:var(--warn-fg,#4d3b00);padding:.5rem .75rem;border-radius:8px;border-inline-start:4px solid var(--focus,#b45309);font-weight:600}
 .alef-trad .tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0}
 .alef-trad button{font:inherit;cursor:pointer;border:1px solid var(--border,#666);border-radius:8px;background:var(--card,#f4f4f4);color:inherit;padding:.3rem .8rem;min-height:2.75rem;min-width:2.75rem}
-.alef-trad button[aria-pressed=true]{background:var(--accent,#1a5fb4);color:var(--accent-fg,#fff);border-color:var(--accent,#1a5fb4)}
+.alef-trad button[aria-pressed=true]{background:var(--accent,#1e4634);color:var(--accent-fg,#fff);border-color:var(--accent,#1e4634)}
 .alef-trad button:disabled{opacity:.6;cursor:not-allowed}
-.alef-trad :is(button,select,input,a,summary,[tabindex]):focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
+.alef-trad :is(button,select,input,a,summary,[tabindex]):focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .alef-trad select{font:inherit;max-width:100%;min-height:2.75rem;padding:.3rem;width:100%}
 .alef-trad .he{font-family:var(--font-he,serif);direction:rtl;unicode-bidi:isolate}
 .alef-trad .he-big{font-size:2rem;line-height:1.5;margin:.3rem 0}
 .alef-trad .he-lines{display:block}
 .alef-trad .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(15rem,100%),1fr));gap:.7rem;margin:.6rem 0}
 .alef-trad .card{border:1px solid var(--border,#888);border-radius:10px;padding:.6rem .8rem;background:var(--card,transparent)}
-.alef-trad .card.mine{border-width:2px;border-color:var(--accent,#1a5fb4)}
+.alef-trad .card.mine{border-width:2px;border-color:var(--accent,#1e4634)}
 .alef-trad .say{font-weight:600;overflow-wrap:anywhere}
 .alef-trad .muted{color:var(--muted,#555)}
 .alef-trad .badge{display:inline-block;font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:0 .35rem;margin-inline-end:.35rem;white-space:nowrap}
@@ -62,7 +62,7 @@ const CSS = `
 .alef-trad table{border-collapse:collapse;width:100%}
 .alef-trad th,.alef-trad td{border-block-end:1px solid var(--border,#888);padding:.4rem .5rem;text-align:start;vertical-align:top}
 .alef-trad thead th{position:sticky;inset-block-start:0;background:var(--bg,#fff)}
-.alef-trad tr.focus-row{outline:3px solid var(--focus,#1a5fb4);outline-offset:-3px}
+.alef-trad tr.focus-row{outline:3px solid var(--focus,#b45309);outline-offset:-3px}
 .alef-trad .table-wrap{max-width:100%}
 .alef-trad .ipa{font-family:"Noto Sans","DejaVu Sans",sans-serif;font-size:.9em;color:var(--muted,#555);display:block}
 .alef-trad fieldset{min-width:0;border:1px solid var(--border,#888);border-radius:8px;padding:.5rem .8rem;margin:.6rem 0}

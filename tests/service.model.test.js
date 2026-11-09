@@ -55,9 +55,9 @@ test('coverage reuses progress decode: fresh learner 0%, all lessons done is hig
   assert.match(M.coverageSentence('Friday evening', c), /1 of the 3 lines Aleph holds/);
 });
 
-test('wording: decodable is not fluent; draft and copyright notices present', () => {
-  assert.match(M.COVERAGE_NOTE, /does not mean you read it fluently/);
-  assert.match(M.DRAFT_NOTICE, /not reviewed by a rabbi/i);
+test('wording: plain ready-to-read note; congregation note; copyright line kept for the credits page', () => {
+  assert.match(M.COVERAGE_NOTE, /ready to read when you have learned every letter/);
+  assert.match(M.DRAFT_NOTICE, /follow your own prayer book/i);
   assert.match(M.COPYRIGHT_NOTICE, /Mishkan T'filah[\s\S]*copyrighted/);
   assert.equal(JSON.stringify(S.orders).match(/page \d|p\. ?\d/i), null);
 });

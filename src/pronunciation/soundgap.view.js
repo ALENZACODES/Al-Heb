@@ -54,7 +54,7 @@ const CSS = `
 .alef-soundgap .he{font-size:1.5rem;unicode-bidi:isolate}
 .alef-soundgap .badge{font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:0 .3rem;margin-inline-start:.4rem}
 .alef-soundgap button{font:inherit;cursor:pointer}
-.alef-soundgap button:focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
+.alef-soundgap button:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 `;
 
 /**

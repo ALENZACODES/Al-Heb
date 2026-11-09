@@ -76,6 +76,7 @@ export function mountRimon({store,doc=document}={}) {
   }
   async function play(name){
     if(!ACTIONS[name] || hidden || !alive) return;
+    if(name!=='blink'&&name!=='yawn'&&name!=='thinking'&&typeof peekSoon==='function')peekSoon();
     if(media?.matches){speech.say(name);return;}
     const id=requestId;
     if(await load(name) && alive && id===requestId && !hidden && !media?.matches){animator.request(name,Date.now());paint();}
@@ -86,6 +87,12 @@ export function mountRimon({store,doc=document}={}) {
     const parent=anchor || doc.body;if(host.parentNode!==parent)parent.append(host);
     host.classList.toggle('rimon-corner',!anchor);speech.refresh();
   }
+  // Phones: after he has said his piece Rimon ducks behind the bottom bar and peeks over it, so he never sits on a lesson.
+  // Anything he reacts to (a right answer, a streak) brings him back up; a tap on his head does too.
+  const phone=()=>{try{return !!doc.defaultView?.matchMedia?.('(max-width:600px)')?.matches;}catch{return false;}};
+  let peekTimer=0;
+  function peekSoon(ms=5000){clearTimeout(peekTimer);host.classList.remove('rimon-peek');if(phone())peekTimer=setTimeout(()=>{if(alive&&host.classList.contains('rimon-corner'))host.classList.add('rimon-peek');},ms);}
+  host.addEventListener('click',e=>{if(host.classList.contains('rimon-peek')&&e.target!==dismiss){e.preventDefault();peekSoon();play('wave');}});
   const event=e=>{
     const {action,nextHref}=e.detail || {};
     if(action==='lesson' && /^#\/(learn|lesson|intermediate)(\/|\?|$)/.test(nextHref || '')){next.href=nextHref;next.hidden=false;}
@@ -123,5 +130,5 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
-  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
 }

@@ -37,8 +37,8 @@ export async function mount(root, ctx) {
       cover.append(heSpan(b.titleHe, "book-cover-title"), h("span", { class: "book-soon-banner" }, "Artwork coming soon"));
     }
     const marks = [];
-    marks.push(b.hasImages ? "Pictures ready" : (b.picturedPages ? `Pictures ${b.picturedPages} of ${b.pageCount}` : "Artwork coming soon"));
-    marks.push(b.hasAudio ? "Voices ready" : (b.audioPages ? `Voices ${b.audioPages} of ${b.pageCount} pages` : "Voices coming"));
+    // Learner-facing marks only: what the book does for the reader, not how far production has got.
+    if (b.hasAudio) marks.push("Read aloud by Ari and Noa");
     if (places[b.id] && places[b.id].finishedAt) marks.push("Finished");
     return h("a", { class: "card book-card", href: `#/book/${b.id}` },
       cover,

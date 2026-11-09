@@ -85,14 +85,15 @@ test('audioButton: none -> text only with respelling; device -> button', () => {
   const dev = audioButton(h, { audio: mk(speech([{ lang: 'he-IL' }])) }, { kind: 'word', id: 'bayit' });
   assert.equal(dev.kids[0].tag, 'button'); assert.equal(dev.kids[0].attrs['data-audio-state'], 'device');
 });
-test('one sound bar: Details link, dismiss remembered, focus moves, status comes back when it matters', () => {
+test('one sound bar: quiet when sound works, Details link, dismiss remembered, focus moves, status comes back when it matters', () => {
   const store = {}; const st = { getItem: (k) => store[k] ?? null, setItem: (k, v) => { store[k] = v; } };
   const x = { listeners: {}, addEventListener(t, f) { this.listeners[t] = f; } }, link = {};
   const bar = { hidden: false, querySelector: (q) => (q === '.sound-bar-x' ? x : q === '.sound-bar-details' ? link : null) };
   const main = { focused: false, focus() { this.focused = true; } };
   const doc = { querySelector: (q) => (q === '.sound-bar' ? bar : null), getElementById: (id) => (id === 'main' ? main : null) };
   const w = wireSoundBar({ summary: { recorded: 0 } }, { doc, storage: st, speech: null, Utt: null });
-  assert.ok(w); assert.equal(bar.hidden, false, 'shown until dismissed');
+  assert.ok(w); assert.equal(bar.hidden, true, 'hidden while sound simply works');
+  w.show('none'); assert.equal(bar.hidden, false, 'a problem is shown');
   assert.ok(link.title.length > 0, 'link title carries the notice');
   x.listeners.click();
   assert.equal(bar.hidden, true); assert.equal(main.focused, true, 'focus moves to main, not lost');

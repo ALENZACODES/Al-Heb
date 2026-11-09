@@ -223,7 +223,7 @@
 }
 .show-section-title {
   margin: 0;
-  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-family: inherit; /* one UI font for English headings across the app */
   font-size: clamp(1.3rem, 3vw, 1.9rem);
   font-weight: 700;
   line-height: 1.25;
@@ -288,7 +288,7 @@
 }
 .show-portal-title {
   display: block;
-  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-family: inherit; /* one UI font for English headings across the app */
   font-size: clamp(1.03rem, 2vw, 1.24rem);
   font-weight: 700;
   line-height: 1.2; color: #F6F1E7;
@@ -318,7 +318,7 @@
   box-shadow: inset 0 0 0 4px rgba(246,241,231,.035);
 }
 .show-try-title {
-  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-family: inherit; /* one UI font for English headings across the app */
   font-size: clamp(1.2rem, 3vw, 1.55rem);
   letter-spacing: normal; color: #F6F1E7;
 }

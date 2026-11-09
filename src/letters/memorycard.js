@@ -194,7 +194,7 @@ function h(tag, attrs, ...kids) {
 }
 
 export const MEMORY_CARD_CSS = `
-.mc{--mc-bg:var(--card,#fff);--mc-fg:var(--fg,#1b1b1f);--mc-line:var(--border,#ccd);--mc-muted:var(--muted,#556);--mc-ink:#1f4e9c;border:1px solid var(--mc-line);border-radius:12px;background:var(--mc-bg);color:var(--mc-fg);padding:8px 10px;margin:8px 0;font-family:system-ui,sans-serif;scroll-margin-block-end:5.5rem}
+.mc{--mc-bg:var(--card,#fff);--mc-fg:var(--fg,#1b1b1f);--mc-line:var(--border,#ccd);--mc-muted:var(--muted,#556);--mc-ink:var(--accent,#1e4634);border:1px solid var(--mc-line);border-radius:12px;background:var(--mc-bg);color:var(--mc-fg);padding:8px 10px;margin:8px 0;font-family:system-ui,sans-serif;scroll-margin-block-end:5.5rem}
 .mc-compact{padding:6px 8px;margin:4px 0}.mc.mc-compact .mc-art{inline-size:72px;block-size:72px}.mc-compact .mc-glyph{font-size:2.8rem}.mc-compact .mc-name{display:none}.mc-compact .mc-cap{margin:0 0 4px}.mc-compact .mc-cap:empty{display:none}
 .mc-top{display:flex;flex-wrap:nowrap;gap:8px 12px;align-items:center}
 .mc .mc-art{flex:0 0 auto;inline-size:92px;block-size:92px;padding:0;border:2px solid var(--mc-line);border-radius:14px;background:var(--mc-bg);color:var(--mc-fg);display:grid;place-items:center;overflow:hidden;cursor:pointer;font:inherit;min-block-size:44px}

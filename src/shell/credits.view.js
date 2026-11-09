@@ -65,7 +65,7 @@ export async function mount(root, ctx) {
   root.replaceChildren(h('article', { class: 'stack', id: 'credits' },
     h('section', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.credits', 'Credits & licences')),
-      h('p', { class: 'draft-flag', role: 'note' }, 'This is not legal advice, and no lawyer has reviewed it. Licence labels are what each source says about itself. If a row says "unverified" or "partly verified", nobody has confirmed the right with the original owner. No native speaker, rabbi or teacher has reviewed the Hebrew, the vowel marks, the English spelling of Hebrew words, or the translations.'),
+      h('p', { class: 'draft-flag', role: 'note' }, 'This is not legal advice, and no lawyer has reviewed it. Licence labels are what each source says about itself. If a row says "unverified" or "partly verified", nobody has confirmed the right with the original owner. No native speaker, rabbi or teacher has reviewed the Hebrew, the vowel marks, the English spelling of Hebrew words, or the translations. The Follow the Service screen uses no prayer book\'s text, layout or page numbers; published siddurim such as Mishkan T\'filah are copyrighted.'),
       h('p', {}, `${entries.length} sources listed: ${counts['verified-primary'] || 0} verified, ${counts['partly-verified'] || 0} partly verified, ${counts.unverified || 0} unverified, ${(counts['project-owned'] || 0) + (counts['not-present'] || 0)} project-written or not present.`),
       data.notLegalAdvice ? h('details', {}, h('summary', {}, 'What the status values mean'), h('p', {}, data.notLegalAdvice)) : null,
       h('p', {}, 'Aleph has no software licence for its own code and original text yet. Until one is added, all rights are reserved.')),

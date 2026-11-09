@@ -45,7 +45,7 @@ export const DAILY_PRAYERS = Object.freeze({
     tr: "Shma Yisrael, Adonai Eloheinu, Adonai Echad.",
     en: "Hear, O Israel: the Lord is our God, the Lord is One. (Deuteronomy 6:4)",
     note: "The Torah says to speak these words \"when you lie down and when you rise up\" (Deuteronomy 6:7), so many people say the Shema just before sleep.",
-    route: "#/read/shema",
+    route: "#/read/shema-vahavta",
   },
 });
 

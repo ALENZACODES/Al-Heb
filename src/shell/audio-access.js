@@ -174,8 +174,8 @@ const KEY = 'alef.audioBannerSeen.v1';
 export function soundBarDismissed(storage = globalThis.localStorage) { try { return !!(storage && storage.getItem(KEY)); } catch { return false; } }
 /**
  * Wire the ONE sound bar (index.html .sound-bar: #sound-status role=status + Details link + dismiss button).
- * Dismiss hides the bar, remembers it, and moves focus to `focusTo` so it is not lost. The bar comes back for a
- * non-idle status (a play error, "list could not be loaded"), because those are things the learner needs to know.
+ * The bar stays hidden while sound works (idle). It shows only for a non-idle status (a play error, "list could not be
+ * loaded"), because those are things the learner needs to know. Dismiss hides it, remembers it, and moves focus to `focusTo`.
  * @returns {{show:(mode:string)=>void, dismissed:()=>boolean}|null}
  */
 export function wireSoundBar(audio, { doc = globalThis.document, storage = globalThis.localStorage, speech, Utt, focusTo } = {}) {
@@ -183,7 +183,8 @@ export function wireSoundBar(audio, { doc = globalThis.document, storage = globa
   const x = bar.querySelector('.sound-bar-x'), link = bar.querySelector('.sound-bar-details');
   if (link) link.title = bannerText(audio && audio.summary, deviceVoiceState(speech, Utt));
   let gone = soundBarDismissed(storage);
-  const apply = (mode, pending = !!(audio && audio.state && audio.state.pending)) => { bar.hidden = pending || (gone && (!mode || mode === 'idle')); };
+  // The bar is for problems only (a play error, a list that could not load). When sound simply works there is nothing to say.
+  const apply = (mode, pending = !!(audio && audio.state && audio.state.pending)) => { bar.hidden = pending || !mode || mode === 'idle'; };
   apply('idle');
   if (x) x.addEventListener('click', () => {
     gone = true; try { storage && storage.setItem(KEY, '1'); } catch { /* ignore */ }

@@ -34,7 +34,7 @@ const CSS = `
 .wt{font-family:var(--font-ui,system-ui,sans-serif);max-width:760px;margin:0 auto;padding:8px 4px;color:var(--fg,#1b1b1f)}
 .wt h1{font-size:1.5rem;margin:.2em 0}
 .wt button{font:inherit;cursor:pointer;border:1px solid var(--border,#9aa);background:var(--card,#fff);color:var(--fg,#1b1b1f);border-radius:8px;padding:8px 12px;min-height:44px}
-.wt button[aria-pressed=true]{background:var(--accent,#1f4e9c);color:var(--accent-fg,#fff);border-color:var(--accent,#1f4e9c)}
+.wt button[aria-pressed=true]{background:var(--accent,#1e4634);color:var(--accent-fg,#fff);border-color:var(--accent,#1e4634)}
 .wt button:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .wt button[disabled]{opacity:.55;cursor:default}
 .wt .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}

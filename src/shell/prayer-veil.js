@@ -28,7 +28,12 @@ export const LISTEN_COUNT_KEY = 'alef:opening-prayer:listens:v1';
  *  The learner's own off switch is "Don't show again" (the veilOptOut
  *  setting, reversible in Settings). This constant is the whole frequency
  *  policy: 'once-ever' would show the veil only until the first visit. */
-export const VEIL_FREQUENCY = 'every-visit';
+export const VEIL_FREQUENCY = 'once-a-day';
+const DAY_KEY = 'alef:opening-prayer:day:v1';
+/** Local calendar day as YYYY-MM-DD: the opening prayer greets the learner once a day, not on every reload. */
+export function localDay(d = new Date()) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
+/** Pure: should the opening prayer show, given the stored day and today's? */
+export function veilDue(lastDay, today, frequency = VEIL_FREQUENCY) { return frequency === 'every-visit' || lastDay !== today; }
 
 export function prayerKey(p) { return p.he; }
 
@@ -146,6 +151,9 @@ function initPrayerVeil() {
   // The learner's own off switch wins over everything: no veil at all.
   if (readAudioPrefs().veilOptOut) { veil.remove(); return; }
   if (VEIL_FREQUENCY === 'once-ever' && readLocal(VISIT_KEY)) { veil.remove(); return; }
+  const today = localDay();
+  if (!veilDue(readLocal(DAY_KEY), today)) { veil.remove(); return; }
+  writeLocal(DAY_KEY, today);
   const firstVisit = !readLocal(VISIT_KEY);
   writeLocal(VISIT_KEY, '1');
   let closed = false;

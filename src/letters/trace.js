@@ -435,7 +435,7 @@ export function createTracer(container, letter, script, opts = {}) {
     try { svg.setPointerCapture(ev.pointerId); } catch (e) { /* not supported */ }
     cancelAnimation();
     clear(gHint);
-    drawing = { id: ev.pointerId, pts: [toBox(ev)], path: el('path', { fill: 'none', stroke: '#1f4e9c', 'stroke-width': 26, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0.85 }) };
+    drawing = { id: ev.pointerId, pts: [toBox(ev)], path: el('path', { fill: 'none', stroke: '#1e4634', 'stroke-width': 26, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0.85 }) };
     clear(gUser); gUser.appendChild(drawing.path); updateUser();
     if (ev.preventDefault) ev.preventDefault();
   }

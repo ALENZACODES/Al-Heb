@@ -65,7 +65,7 @@ const he = (text, attrs = {}) => h('span', Object.assign({ dir: 'rtl', lang: 'he
 const CSS = `
 .alef-trace{font-family:system-ui,sans-serif;max-width:760px;margin:0 auto;padding:12px;color:#1b1b1f}
 .alef-trace button{font:inherit;cursor:pointer;border:1px solid #9aa;background:#fff;border-radius:8px;padding:8px 12px;min-height:44px}
-.alef-trace button[aria-pressed=true],.alef-trace button[aria-selected=true]{background:#1f4e9c;color:#fff;border-color:#1f4e9c}
+.alef-trace button[aria-pressed=true],.alef-trace button[aria-selected=true]{background:var(--accent,#1e4634);color:var(--accent-fg,#fffaf0);border-color:var(--accent,#1e4634)}
 .alef-trace button:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .alef-trace .tabs{display:flex;gap:6px;margin:8px 0}
 .alef-trace .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(52px,1fr));gap:6px;margin:8px 0}

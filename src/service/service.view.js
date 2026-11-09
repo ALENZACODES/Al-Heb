@@ -6,7 +6,7 @@ import { loadProgressData } from '../progress/data.js';
 import { readSnapshot, readableNow } from '../progress/model.js';
 import {
   loadServiceData, coverage, coverageSentence, buildCards, clipFor, ORDER_IDS, FOLLOW_IDS, TRADITIONS, TRADITION_LABELS,
-  MARKER_LABELS, VARIES, DRAFT_NOTICE, COPYRIGHT_NOTICE, COVERAGE_NOTE,
+  MARKER_LABELS, VARIES, DRAFT_NOTICE, COVERAGE_NOTE,
 } from './model.js';
 
 const PREFS = 'service.prefs';
@@ -58,9 +58,8 @@ export async function mount(root, ctx) {
 
   const read = readableNow(readSnapshot(store), P);
 
-  const notices = () => h('div', {},
-    h('p', { class: 'draft-flag', role: 'note' }, DRAFT_NOTICE),
-    h('p', { class: 'small muted' }, COPYRIGHT_NOTICE));
+  // The copyright line lives on the credits page with every other source note; here the learner gets one plain sentence.
+  const notices = () => h('div', {}, h('p', { class: 'small' }, DRAFT_NOTICE));
 
   function tabs() {
     const b = (mode, label) => h('button', { type: 'button', class: 'btn secondary', 'data-mode': mode, 'aria-pressed': st.mode === mode ? 'true' : 'false', onclick: () => { st.mode = mode; render(mode === 'coverage' ? 'sv-tab-coverage' : 'sv-tab-follow'); } }, label);
@@ -75,14 +74,14 @@ export async function mount(root, ctx) {
       const missingGaps = o.gaps.map((g) => S.corpus.gap(g)?.title).filter(Boolean);
       return h('section', { class: 'card', 'aria-labelledby': `sv-h-${oid}`, 'data-order': oid },
         h('h2', { id: `sv-h-${oid}` }, o.title),
-        h('p', { class: 'sv-big', 'data-pct': String(c.pct) }, `${c.pct}% decodable`),
-        h('progress', { max: '100', value: String(c.pct), 'aria-label': `${o.title}: share of lines decodable` }),
+        h('p', { class: 'sv-big', 'data-pct': String(c.pct) }, `${c.pct}% ready to read`),
+        h('progress', { max: '100', value: String(c.pct), 'aria-label': `${o.title}: share of lines ready to read` }),
         h('p', {}, coverageSentence(o.title, c)),
-        h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are decodable (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
+        h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are ready to read (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
         c.almost ? h('p', { class: 'small' }, `${c.almost} more ${c.almost === 1 ? 'line is' : 'lines are'} exactly one sign away.`) : null,
         h('p', { class: 'small muted' }, `The percentage covers only the texts Aleph holds. ${c.gaps} typical ${c.gaps === 1 ? 'part is' : 'parts are'} not in Aleph yet, so it does not cover the whole service.`),
         h('details', {}, h('summary', {}, 'Text by text'),
-          h('ul', {}, ...c.perItem.map((p) => h('li', {}, `${p.moment}: ${p.decodable ? 'decodable' : `${p.full} of ${p.lines} ${p.lines === 1 ? 'line' : 'lines'} decodable`}`)))),
+          h('ul', {}, ...c.perItem.map((p) => h('li', {}, `${p.moment}: ${p.decodable ? 'ready to read' : `${p.full} of ${p.lines} ${p.lines === 1 ? 'line' : 'lines'} ready`}`)))),
         missingGaps.length ? h('details', {}, h('summary', {}, 'Not in Aleph yet'), h('ul', {}, ...missingGaps.map((g) => h('li', {}, g)))) : null,
         o.follow ? h('button', { type: 'button', class: 'btn secondary', 'data-follow': oid, onclick: () => { st.mode = 'follow'; st.order = oid; st.i = 0; save(); render('sv-card'); } }, `Follow ${o.short.toLowerCase()} service`) : null);
     });

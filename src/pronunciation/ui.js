@@ -12,7 +12,7 @@ export const DRAFT_NOTICE = 'Draft, unreviewed: the pointing, sounds, respelling
 export const CSS = `
 .alef-r4{font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:0 auto;padding:1rem}
 .alef-r4 h2,.alef-r4 h3{margin:1.1em 0 .4em}
-.alef-r4 .draft-flag{background:var(--warn-bg,#fff3cd);color:var(--warn-fg,#4d3b00);padding:.5rem .75rem;border-radius:8px;border-inline-start:4px solid var(--focus,#1a5fb4);font-weight:600}
+.alef-r4 .draft-flag{background:var(--warn-bg,#fff3cd);color:var(--warn-fg,#4d3b00);padding:.5rem .75rem;border-radius:8px;border-inline-start:4px solid var(--focus,#b45309);font-weight:600}
 .alef-r4 .he{font-size:2.2rem;line-height:1.3;unicode-bidi:isolate}
 .alef-r4 .he-small{font-size:1.3rem;unicode-bidi:isolate}
 .alef-r4 .ipa{font-family:"Noto Sans","DejaVu Sans",sans-serif}
@@ -20,8 +20,8 @@ export const CSS = `
 .alef-r4 fieldset{min-width:0;border:1px solid var(--border,#888);border-radius:8px;padding:.5rem 1rem;margin:.6rem 0}
 .alef-r4 fieldset label{margin-inline-end:1.2rem}
 .alef-r4 button{font:inherit;cursor:pointer;border:1px solid var(--border,#666);border-radius:6px;background:var(--card,#f4f4f4);color:inherit;padding:.3rem .7rem;min-height:2.5rem}
-.alef-r4 button[aria-pressed=true],.alef-r4 button[aria-checked=true]{background:var(--accent,#1a5fb4);color:var(--accent-fg,#fff);border-color:var(--accent,#1a5fb4)}
-.alef-r4 button:focus-visible,.alef-r4 input:focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
+.alef-r4 button[aria-pressed=true],.alef-r4 button[aria-checked=true]{background:var(--accent,#1e4634);color:var(--accent-fg,#fff);border-color:var(--accent,#1e4634)}
+.alef-r4 button:focus-visible,.alef-r4 input:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .alef-r4 .badge{font-size:.8rem;border:1px solid currentColor;border-radius:4px;padding:0 .3rem;margin-inline-start:.4rem}
 .alef-r4 .muted{opacity:.8}
 .alef-r4 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(9rem,100%),1fr));gap:.6rem}

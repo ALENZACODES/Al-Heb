@@ -237,7 +237,7 @@ button.catcher-star { pointer-events: auto; background: transparent; border: 0; 
   padding-block-start: 1rem;
 }
 .wf-games-hub .wf-level-section h2 {
-  font-family: Georgia, 'Frank Ruhl Libre', serif;
+  font-family: inherit; /* one UI font for English headings across the app */
   color: var(--fg);
   font-size: clamp(1.2rem, 2vw, 1.5rem);
 }

@@ -39,7 +39,7 @@ const CSS = `
 .alef-sounds .vowel-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:.75rem}
 .alef-sounds .vowel-grid>li{border:1px solid var(--border,#888);border-radius:8px;padding:.6rem}
 .alef-sounds .sign{all:unset;cursor:pointer;display:flex;align-items:center;gap:.7rem;border-radius:6px;padding:.2rem .4rem}
-.alef-sounds .sign:focus-visible{outline:3px solid var(--focus,#1a5fb4);outline-offset:2px}
+.alef-sounds .sign:focus-visible{outline:3px solid var(--focus,#b45309);outline-offset:2px}
 .alef-sounds .sign:hover{background:rgba(128,128,128,.15)}
 .alef-sounds .he{font-size:2.2rem;line-height:1.2;unicode-bidi:isolate}
 .alef-sounds .he-small{font-size:1.3rem;unicode-bidi:isolate}

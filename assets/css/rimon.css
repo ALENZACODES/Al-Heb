@@ -31,3 +31,8 @@
 @media(max-width:600px){.rimon-bubble{width:min(168px,calc(100vw - 100px));padding:8px 10px;border-radius:16px}.rimon-bubble-he{font-size:18px}.rimon-bubble-en{font-size:11px;margin-top:2px}}
 /* Phones: a smaller Rimon, so he does not sit on top of answer buttons at the right edge. */
 @media(max-width:600px){.rimon-corner{width:58px}.rimon-corner .rimon-dismiss{width:48px;height:48px;font-size:18px;right:-14px;top:-16px}}
+
+/* Phones: Rimon peeks over the bottom bar between moments, so lesson text and answer buttons stay clear. */
+.rimon-corner{transition:transform .35s ease}
+@media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(62%);cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
+@media(prefers-reduced-motion:reduce){.rimon-corner{transition:none}}

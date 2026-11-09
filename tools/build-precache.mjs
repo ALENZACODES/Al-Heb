@@ -47,7 +47,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.
   'src/traditions/', 'src/vocab/', 'src/wordtrace/', 'src/typing/',
   // Reform synagogues in Canada: the directory data, the view and 66 pictures (about 9 MB), fetched on first view, runtime-cached.
-  'src/synagogues/', 'data/synagogues/', 'assets/synagogues/'];
+  'src/synagogues/', 'data/synagogues/', 'assets/synagogues/',
+  // Follow the Service screen code: fetched when the screen first opens, runtime-cached (its service orders stay installed for the v0 offline contract).
+  'src/service/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',

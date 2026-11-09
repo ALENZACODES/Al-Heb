@@ -13,9 +13,9 @@ export const TRADITION_LABELS = { israeli: 'Modern Israeli', sephardi: 'American
 export const MARKER_LABELS = { stand: 'Stand', sit: 'Sit', sing: 'Sing', silent: 'Silent' };
 export const VARIES = 'Stand, sit, sing or silent: varies by congregation';
 
-export const DRAFT_NOTICE = 'Draft, not reviewed by a rabbi, cantor or Hebrew teacher. This is Aleph\'s own simplified sequence of the texts it holds. The order in a real congregation differs: ask your rabbi, cantor or a friend in the room.';
+export const DRAFT_NOTICE = 'Every congregation runs the service a little differently. Use this as a guide and follow your own prayer book in the room.';
 export const COPYRIGHT_NOTICE = 'No prayerbook text, layout or page numbers are used here. Published siddurim such as Mishkan T\'filah are copyrighted; this screen follows none of them.';
-export const COVERAGE_NOTE = '"Decodable" means you have been taught every letter and vowel sign in the line. It does not mean you read it fluently, quickly or aloud with the room.';
+export const COVERAGE_NOTE = 'A line is ready to read when you have learned every letter and vowel sign in it.';
 
 /** Load orders, the corpus guide/registry and gap ids. @param {{loadCorpus:Function}} corpusApi */
 export async function loadServiceData(corpusApi) {
@@ -75,7 +75,7 @@ export function coverage(order, gradedLines, known) {
 
 /** Plain-language sentence for a coverage result. */
 export function coverageSentence(title, c) {
-  return `${c.full} of the ${c.lines} lines Aleph holds for ${title.toLowerCase()} use only letters and signs you have been taught (${c.pct}% decodable).`;
+  return `${c.full} of the ${c.lines} lines Aleph holds for ${title.toLowerCase()} use only letters and signs you have learned (${c.pct}% ready to read).`;
 }
 
 /** Markers for a card: only those in data (each quoted from the guide). */

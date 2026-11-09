@@ -5,6 +5,7 @@
   python tools/audio/asr-check/letter_takes.py shin yod        # several letters
   (listen to the takes, then:)
   python tools/audio/asr-check/letter_takes.py --pick shin=3   # copies take 3 over the Shin name, man and woman
+  python tools/audio/asr-check/letter_takes.py --pick shin=f5  # only Noa (woman) gets take 5; m5 = only Ari
 
 Takes, per voice (Ari = m, Noa = f):
   1 WaveNet, pointed name      2 WaveNet, name with the vowel letter spelled out and a trailing pause
@@ -80,8 +81,14 @@ def make(lid, key):
 
 
 def pick(spec):
+    # shin=5 sets both voices; shin=f5 sets only Noa (woman); shin=m2 sets only Ari (man)
     lid, n = spec.split('=')
+    only = None
+    if n[:1] in ('m', 'f'):
+        only, n = n[0], n[1:]
     for v, who in (('m', 'ari'), ('f', 'noa')):
+        if only and v != only:
+            continue
         src = os.path.join(REVIEW, lid, f'take-{n}-{who}.mp3')
         if not os.path.exists(src):
             raise SystemExit(f'missing {src}: make the takes first')

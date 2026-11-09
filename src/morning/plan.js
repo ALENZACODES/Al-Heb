@@ -10,7 +10,7 @@ export const PREFS_KEY = "morning.prefs";
 export const TITLE = "Start your day with God";
 /** Default cap for the eve-of-Shabbat/festival reminder. Conservative and earlier than any candle lighting; NEEDS REVIEW by an observant reader. Learner can change it (prefs.eravLatest). */
 export const ERAV_LATEST = "14:00";
-export const DEFAULT_PREFS = Object.freeze({ v: 1, on: false, time: "07:00", rescueTime: "20:00", eravLatest: ERAV_LATEST, observant: null, freeze: null, lastSeen: null, lastRescue: null });
+export const DEFAULT_PREFS = Object.freeze({ v: 1, on: false, time: "06:00", rescueTime: "20:00", eravLatest: ERAV_LATEST, observant: null, freeze: null, lastSeen: null, lastRescue: null });
 const hhmm = (v, d) => (typeof v === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(v) ? v : d);
 const isoOrNull = (v) => (typeof v === "string" && /^\d{4}-\d\d-\d\d$/.test(v) ? v : null);
 

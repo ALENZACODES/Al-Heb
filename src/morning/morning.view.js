@@ -11,13 +11,14 @@ import { uiEnglish } from "../shell/names.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "../curriculum/reminders.notify.js";
 import { clock } from "../curriculum/streak.js";
 import { audioButton } from "../shell/audio-access.js";
+import { torahQuoteFor, STREAK_LINE } from "../curriculum/calendar.quickadd.js";
 
 export const MORNING_CSS = `
 .mrn { display: grid; gap: 1rem; } .mrn * { min-inline-size: 0; overflow-wrap: anywhere; }
 .mrn section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: .75rem 1rem; }
 .mrn .mrn-he { font-size: 1.6rem; line-height: 1.7; display: block; } .mrn .mrn-ref { color: var(--muted, inherit); font-size: .9rem; }
 .mrn .mrn-tr { font-style: italic; margin: .3rem 0 .2rem; } .mrn .mrn-en { margin: .2rem 0; }
-.mrn .mrn-line { display: grid; gap: .1rem; }
+.mrn .mrn-line { display: grid; gap: .1rem; } .mrn .mrn-why { margin: .4rem 0; }
 .mrn-streak { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 .mrn-flame { inline-size: 2rem; block-size: 2rem; } .mrn-count { font-size: 2rem; font-weight: 700; }
 .mrn-ring { inline-size: 3.2rem; block-size: 3.2rem; transform: rotate(-90deg); }
@@ -47,7 +48,8 @@ export function streakPanel(model) {
   const sec = Math.min(p.todaySeconds, p.goal);
   const label = p.activeToday ? "Today is done" : p.restToday ? "Resting today" : `${clock(sec)} of ${clock(p.goal)} today`;
   const msg = p.restToday ? "Resting today. A rest day never breaks your streak."
-    : p.broken ? "New streak starts today. One day at a time." : null;
+    : p.broken ? "New streak starts today. One day at a time."
+    : p.count > 0 && !p.activeToday ? STREAK_LINE + " Five minutes today adds a day." : null;
   return el("div", { class: "mrn-streak", role: "group", "aria-label": "Streak" },
     flame(), el("span", { class: "mrn-count", "aria-label": `${p.count} day streak` }, String(p.count)), el("span", {}, p.count === 1 ? "day" : "days"),
     ring(sec, p.goal), el("span", { role: "status" }, label),
@@ -65,7 +67,8 @@ export async function mount(root, ctx) {
   const model = createMorningModel(ctx.store, now);
   const wrap = el("div", { class: "mrn" });
   root.replaceChildren(el("h1", { id: "view-title", tabindex: "-1" }, uiEnglish(ctx, TITLE)), wrap);
-  let verses = [], registry = [], problem = null;
+  let verses = [], registry = [], problem = null, torah = [];
+  try { torah = (await getJson("../../data/torah-quotes.json")).quotes || []; } catch { /* the Torah card is skipped */ }
   try { verses = await getJson("../../data/morning-verses.json"); } catch (e) { problem = String(e.message || e); }
   try { registry = (await getJson("../../data/corpus/registry.json")).entries || []; } catch { /* Modeh Ani block is skipped */ }
   if (verses.length && checkVerses(verses).length) { problem = "morning verses failed validation"; verses = []; }
@@ -75,9 +78,12 @@ export async function mount(root, ctx) {
     const v = verses.length ? verseFor(verses, now()) : null;
     const modeh = modehAniFor(registry, voice);
     const settings = settingsForm(model, ctx, () => { schedule(); render(); });
+    const tq = torahQuoteFor(torah, now());
     wrap.replaceChildren(
-      
-      v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "Today's verse"), hebrewLine(v.hebrew, v.tr, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
+      tq ? el("section", { "aria-labelledby": "mrn-th", class: "mrn-torah" }, el("h2", { id: "mrn-th" }, "Torah Verse of the Day"), hebrewLine(tq.he, tq.tr, tq.en),
+        el("p", { class: "mrn-ref" }, tq.ref, " (JPS 1917)"), el("p", { class: "mrn-why" }, el("strong", {}, "What it means: "), tq.why),
+        el("p", {}, el("a", { href: tq.route, class: "btn secondary" }, "Read it in the Torah"), " ", el("a", { href: "#/calendar", class: "btn secondary" }, "Get it on my calendar"))) : null,
+      v ? el("section", { "aria-labelledby": "mrn-vh" }, el("h2", { id: "mrn-vh" }, "A Verse for the Morning"), hebrewLine(v.hebrew, v.tr, v.english_jps1917), el("p", { class: "mrn-ref" }, v.source_ref, " (JPS 1917)"))
         : el("section", {}, el("p", {}, problem ? "Today's verse is unavailable right now." : "Loading...")),
       modeh ? el("section", { "aria-labelledby": "mrn-mh" }, el("h2", { id: "mrn-mh" }, "Modeh Ani"), hebrewLine(modeh.he, modeh.tr, modeh.english),
         modeh.needsCheck ? el("p", { class: "mrn-flag" }, "The feminine form is derived and not yet checked by a Hebrew educator.") : null,
@@ -112,7 +118,7 @@ function settingsForm(model, ctx, changed) {
   const erev = el("input", { type: "time", id: "mrn-erev", value: prefs.eravLatest, onchange: (e) => { model.setPrefs({ eravLatest: e.target.value }); changed(); } });
   const status = el("p", { role: "status", class: "mrn-flag" }, sup.supported ? (sup.permission === "denied" ? "Notifications are blocked; you will see a banner when you open ALEF instead." : "") : "This browser has no notifications; you will see a banner when you open ALEF instead.");
   return el("section", { "aria-labelledby": "mrn-set" }, el("h2", { id: "mrn-set" }, "Reminder and streak settings"),
-    el("p", { class: "small" }, "Reminders fire only while ALEF is open; there is no server."),
+    el("p", { class: "small" }, "These reminders fire only while Aleph is open. For reminders that come even when Aleph is closed, ", el("a", { href: "#/calendar" }, "add them to your calendar"), "."),
     el("p", {}, el("label", {}, on, " Morning reminder"), " ", el("label", {}, "at ", time)),
     sup.supported && sup.permission === "default" ? el("button", { type: "button", class: "btn secondary", onclick: async () => { const r = await requestNotificationPermission(); const msg = r === "granted" ? "Notifications on while ALEF is open." : r === "denied" ? "Notifications are blocked; you will see a banner when you open ALEF instead." : "Notifications were not allowed (the question was closed). You can try again, or rely on the in-app banner."; if (r === "granted" || r === "denied") changed(); const st = document.querySelector(".mrn-flag") || status; st.textContent = msg; } }, "Allow notifications") : null,
     status,

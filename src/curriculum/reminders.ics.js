@@ -15,7 +15,7 @@ const enc = new TextEncoder();
 const pad = (n, w = 2) => String(n).padStart(w, "0");
 
 /** Escape a TEXT value (RFC 5545 3.3.11). */
-export const escapeText = (s) => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+export const escapeText = (s) => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
 export const unescapeText = (s) => s.replace(/\\n/gi, "\n").replace(/\\([;,\\])/g, "$1");
 
 /** Fold a content line to at most 75 octets per physical line (continuations start with one space), never splitting a character. */
@@ -24,7 +24,12 @@ export function foldLine(line) {
   const out = []; let cur = "", curBytes = 0, limit = 75;
   for (const ch of line) {
     const b = enc.encode(ch).length;
-    if (curBytes + b > limit) { out.push(cur); cur = ""; curBytes = 0; limit = 74; }
+    // Never start a continuation line with a combining mark (Hebrew vowel points stay with their letter).
+    if (curBytes + b > limit && cur && !/\p{M}/u.test(ch)) { out.push(cur); cur = ""; curBytes = 0; limit = 74; }
+    else if (curBytes + b > limit && cur) {
+      const m = /(\P{M}\p{M}*)$/u.exec(cur);
+      if (m && m[1].length < cur.length) { out.push(cur.slice(0, -m[1].length)); cur = m[1]; curBytes = enc.encode(cur).length; limit = 74; }
+    }
     cur += ch; curBytes += b;
   }
   if (cur) out.push(cur);

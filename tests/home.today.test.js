@@ -54,7 +54,7 @@ test('render: every href is a real route, one primary button with text, due/stre
   const m = T.buildToday(base({ completedIds: ['r01'], dueCount: 6, streak: { count: 2, activeToday: false } }));
   const R = T.renderToday(m, t);
   for (const h of hrefs(R)) if (h !== '#/festivals') assert.ok(matchRoute(h).route, h); // /festivals: route not in router.js yet (main adds it); hasRoute hides the link until then
-  assert.match(R.textContent, /6 cards due/); assert.match(R.textContent, /2 days\. Study for 5 minutes today to add a day/);
+  assert.match(R.textContent, /6 cards due/); assert.match(R.textContent, /2 days\. Please keep your streak going\. You're doing awesome! Study for 5 minutes today to add a day/);
   const primary = R.queryAll('a.btn'); assert.equal(primary.length, 1); assert.match(primary[0].textContent, /^Continue: /);
   assert.equal(R.attrs['aria-labelledby'], 'h-today'); assert.equal(R.queryAll('h2').length, 1);
   const one = T.renderToday(T.buildToday(base({ completedIds: ['r01'], dueCount: 1 })), t); assert.match(one.textContent, /1 card due/);
@@ -139,7 +139,7 @@ test('streak copy states the real 5-minute rule; a paused streak shows the best;
   // hidden until a streak of 2 days exists (or a paused one that reached 2): nothing for a brand-new learner or a streak of 1
   assert.doesNotMatch(txt({ count: 0, best: 0 }), /Streak:|No streak yet/);
   assert.doesNotMatch(txt({ count: 1, best: 1, activeToday: true }), /Streak:/);
-  assert.match(txt({ count: 2, best: 2, activeToday: false }), /2 days\. Study for 5 minutes today to add a day\. A day counts when you study for 5 minutes/);
+  assert.match(txt({ count: 2, best: 2, activeToday: false }), /2 days\. Please keep your streak going\. You're doing awesome! Study for 5 minutes today to add a day\. A day counts when you study for 5 minutes/);
   assert.match(txt({ count: 2, best: 2, activeToday: true }), /and counting/);
   const rest = txt({ count: 2, best: 2, activeToday: false, restToday: true });
   assert.match(rest, /2 days\. Today is a rest day/); assert.doesNotMatch(rest, /Study for 5 minutes today/);

@@ -116,7 +116,7 @@ export function renderToday(today, t, onGoal, opts = {}) {
   const RULE = plain('streakRule');
   const days = (n) => `${n} day${n === 1 ? '' : 's'}`;
   const streakText = today.streak.count > 0
-    ? [h('strong', {}, days(today.streak.count)), today.streak.activeToday ? ' and counting. Today\'s 5 minutes are done.' : today.streak.restToday ? '. Today is a rest day: your streak is safe, nothing is needed today.' : `. Study for 5 minutes today to add a day. ${RULE}`]
+    ? [h('strong', {}, days(today.streak.count)), today.streak.activeToday ? ' and counting. Today\'s 5 minutes are done.' : today.streak.restToday ? '. Today is a rest day: your streak is safe, nothing is needed today.' : `. Please keep your streak going. You're doing awesome! Study for 5 minutes today to add a day. ${RULE}`]
     : today.streak.best > 0
       ? today.streak.restToday ? [`Today is a rest day. Your best streak was ${days(today.streak.best)}. A new one starts the next time you study for 5 minutes.`] : [`Your best streak was ${days(today.streak.best)}. A new one starts the next time you study for 5 minutes. ${RULE}`]
       : [`No streak yet. ${RULE}`];

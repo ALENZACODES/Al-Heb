@@ -52,7 +52,7 @@ test("no location: asks for one, never invents a time, settings panel opens", as
   const un = mount(root, ctxFor({ now: () => new Date(2026, 10, 3, 20, 0) })); await ready(root);
   assert.match(root.text, /Set your location/);
   assert.doesNotMatch(root.text, /candle lighting in/);
-  assert.ok("open" in root.find((n) => n.tag === "details")[0].attrs);
+  assert.ok("open" in root.find((n) => n.tag === "details" && n.className === "alef-cal-settings")[0].attrs);
   assert.match(root.text, /No location set/);
   un();
 });

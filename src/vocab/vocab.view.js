@@ -176,6 +176,11 @@ export function mount(root, ctx) {
           await ctx.audio.ensureManifest();
           plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
         }
+        if (!planIsExactFile(plan, { voice: cv, tradition: ct, id: clip.id }) && typeof globalThis.alefShards?.load === 'function') {
+          // Many dictionary clips live in the Israeli word list, which the app loads a moment after start-up: wait for it once.
+          try { await globalThis.alefShards.load(); } catch { /* fall through to the honest "unavailable" line */ }
+          plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
+        }
         if (!planIsExactFile(plan, { voice: cv, tradition: ct, id: clip.id })) { note.textContent = unavailableLine(cv, ct); return; }
         try { ctx.audio.stop?.(); } catch { /* ignore */ }
         const r = await ctx.audio.play(clip.kind, clip.id, opts);

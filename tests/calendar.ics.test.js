@@ -111,7 +111,7 @@ test("foldLine never splits a multi-byte character and continuation lines start 
 
 test("escapeText / unescapeText round trip and triggerFor", () => {
   const s = "a,b;c\\d\ne";
-  assert.equal(I.escapeText(s), "a\\,b\;c\\\\d\\ne");
+  assert.equal(I.escapeText(s), "a\\,b\\;c\\\\d\\ne");
   assert.equal(I.unescapeText(I.escapeText(s)), s);
   assert.equal(I.triggerFor(0), "PT0S"); assert.equal(I.triggerFor(30), "-PT30M"); assert.equal(I.triggerFor(90), "-PT1H30M"); assert.equal(I.triggerFor(900), "-PT15H");
 });

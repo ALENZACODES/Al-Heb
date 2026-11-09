@@ -322,3 +322,17 @@ test("the unmounted rescue banner and the evening-nudge setting are gone; no dra
   assert.equal(V.rescueBanner, undefined);
   assert.equal(P.rescueState(new Date(2026, 10, 10, 21), { v: 2 }, P.normalizePrefs({}), {}).text, undefined);
 });
+
+test("streak nudge: once a day, only with a streak that is not done today", async () => {
+  const N = await import("../src/morning/nudge.js");
+  const now = new Date(2026, 10, 10, 9, 0);
+  const rec = { v: 2, count: 3, best: 3, last: "2026-11-09", todayDate: "2026-11-10", todaySeconds: 0 };
+  const base = { lastRescue: null };
+  const a = N.nudgeDue(now, rec, base);
+  if (a.count > 0) {
+    assert.equal(a.show, true);
+    assert.equal(N.nudgeDue(now, rec, { lastRescue: "2026-11-10" }).show, false);
+    assert.match(N.nudgeText(3), /keep your streak going\. You're doing awesome! 3 days so far/);
+  }
+  assert.equal(N.nudgeDue(now, null, base).show, false);
+});

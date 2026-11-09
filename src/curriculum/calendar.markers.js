@@ -117,8 +117,13 @@ const sessionWrite = (k, v) => { try { const o = sessionRead(); o[k] = v; global
  * True when `${base}/${name}.png` loads in this browser. A missing file is remembered for the browser session (sessionStorage)
  * so the calendar asks the server about each slot once, not on every navigation. Never true outside a browser.
  */
+/** Calendar art files that are in the repo. Add a name here (e.g. "header", "markers/candles") when its PNG is committed;
+ *  until then nothing is requested, so a fresh visit makes no 404 requests. */
+export const ART_PRESENT = new Set([]);
 export function artAvailable(name, base = ART_BASE) {
   const key = `${base}/${name}`;
+  const short = key.slice(ART_BASE.length + 1);
+  if (!ART_PRESENT.has(short) && !globalThis.__ALEF_PROBE_ALL_ART__) return Promise.resolve(false);
   if (probes.has(key)) return probes.get(key);
   const known = sessionRead()[key];
   const p = typeof known === "boolean" ? Promise.resolve(known) : new Promise((resolve) => {

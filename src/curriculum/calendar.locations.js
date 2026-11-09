@@ -42,7 +42,7 @@ export const DEFAULT_PREFS = Object.freeze({
   observance: "reform",  // reform | traditional | israel (holiday day-counts)
   parshaSchedule: "auto", // auto (Israel for Israeli locations) | diaspora | israel
   remind: { candles: true, havdalah: true, holidays: true, roshChodesh: false, morning: true, evening: true },
-  morningTime: "07:30", eveningTime: "21:30",
+  morningTime: "06:00", eveningTime: "22:00",
   candleAlarmMin: 30, havdalahAlarmMin: 0,
   notify: false,
 });

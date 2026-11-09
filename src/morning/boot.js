@@ -5,6 +5,7 @@
  */
 import { createEngagement, isCountedRoute } from "./engage.js";
 import { createMorningModel } from "./model.js";
+import { nudgeDue, showNudge, NUDGE_DELAY_MS } from "./nudge.js";
 
 export function startMorning(ctx, env = globalThis) {
   const clock = () => Date.now();
@@ -21,5 +22,14 @@ export function startMorning(ctx, env = globalThis) {
   for (const ev of ["pointerdown", "keydown", "touchstart", "wheel"]) on(doc, ev, () => eng.interact(clock()), { passive: true, capture: true });
   const timer = win.setInterval(() => eng.tick(clock()), 1000);
   route();
-  return { engine: eng, model, stop() { win.clearInterval(timer); eng.flush(clock()); } };
+  // Friendly streak nudge, once a day, not on the first visit (no streak yet) and never during a rest day.
+  const nudge = () => {
+    try {
+      if (!doc || doc.visibilityState === "hidden") return;
+      const n = nudgeDue(new Date(), model.record(), model.prefs(), { observant: model.observant(), mode: model.mode(), extraRest: model.extraRest() });
+      if (n.show && showNudge(doc, n.count)) model.markRescueShown();
+    } catch { /* never block the app */ }
+  };
+  const nudgeTimer = win.setTimeout?.(nudge, NUDGE_DELAY_MS);
+  return { engine: eng, model, stop() { win.clearInterval(timer); win.clearTimeout?.(nudgeTimer); eng.flush(clock()); } };
 }

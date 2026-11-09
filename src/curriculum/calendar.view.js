@@ -23,6 +23,7 @@ import { buildReminders, upcoming, itemStart, MAX_WINDOW_DAYS } from "./reminder
 import { toICS, downloadICS } from "./reminders.ics.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "./reminders.notify.js";
 import { CALENDAR_CSS } from "./calendar.style.js";
+import { addToCalendarPanel } from "./calendar.addpanel.js";
 import { respell, congregationOf } from "../pronunciation/forTradition.js";
 import { markersFor, isImportant, markerChip, MARKER_KINDS, MARKER_LABEL, artAvailable, ART_BASE } from "./calendar.markers.js";
 import { yomTovDates } from "./streak.js";
@@ -77,7 +78,8 @@ export function mount(root, ctx) {
   const gridBox = el("section", { "aria-label": "Calendar grid" });
   const remindBox = el("section", { "aria-labelledby": "alef-rem-h" });
   const settingsBox = el("details", { class: "alef-cal-settings" });
-  wrap.append(head, todayBox, gridBox, remindBox, settingsBox);
+  const addBox = el("div", { class: "alef-cal-add" });
+  wrap.append(head, todayBox, addBox, gridBox, remindBox, settingsBox);
   root.append(wrap);
 
   const nowDate = () => (ctx && typeof ctx.now === "function" ? ctx.now() : new Date());
@@ -378,7 +380,13 @@ export function mount(root, ctx) {
           el("label", {}, "Candle-lighting alert (minutes before)", el("input", { id: "alef-candle-alarm", type: "number", min: "0", max: "240", step: "5", value: prefs.candleAlarmMin, onchange: (e) => n("candleAlarmMin")(Math.round(Number(e.target.value))) })))));
   }
 
-  function renderMain() { if (!alive) return; renderToday(); renderGrid(); renderReminders(); armNotifications(); }
+  function renderAdd() {
+    addBox.replaceChildren(addToCalendarPanel(el, {
+      store: ctx?.store, observance: prefs.observance, heText, now: nowDate,
+      holidayFile: () => { const { items } = currentItems(365); return items.length ? { text: toICS(items.filter((it) => it.kind !== "morning" && it.kind !== "evening"), { now: nowDate() }), count: items.filter((it) => it.kind !== "morning" && it.kind !== "evening").length } : null; },
+    }));
+  }
+  function renderMain() { if (!alive) return; renderToday(); renderAdd(); renderGrid(); renderReminders(); armNotifications(); }
 
   (async () => {
     const [p, streak] = await Promise.all([storeGet(ctx, CAL_PREFS_KEY, null), storeGet(ctx, STREAK_RECORD_KEY, null)]);

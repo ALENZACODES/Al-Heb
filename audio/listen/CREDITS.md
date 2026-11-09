@@ -13,3 +13,6 @@ The playback files in this folder were enhanced for clarity (gentle denoise, de-
 levelling) from the original recordings; the unmodified originals are preserved in `originals/`.
 For CC BY-SA items the enhanced file is an adaptation under the same licence; the performer and
 source credits in the catalogue are unchanged.
+
+## Restoration (2026-11-08)
+All playback files (`.ogg` and `.mp3`) were rendered again from `originals/` with `tools/audio/cantorial_restore.py`, using free ffmpeg filters only: rumble cut, de-click, FFT denoise, a small presence lift for the voice, a low-pass above the range the old discs hold (historic recordings only), a gentle lowering of hiss between phrases, and loudness levelling to about -16 LUFS. Nothing was added to the music. The unmodified downloads stay in `originals/`. CC BY-SA items remain adaptations under the same licence with unchanged credits.

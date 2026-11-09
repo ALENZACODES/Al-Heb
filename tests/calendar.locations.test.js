@@ -59,7 +59,7 @@ test("normalizePrefs: defaults, preset adoption, garbage in -> safe out", () => 
   assert.deepEqual([half.locationId, half.lat, half.lon], ["custom", 43.7, null]);
   assert.equal(L.resolveLocation(half, null), null); // needs both to compute anything assert.equal(bad.candleMinutes, 18);
   assert.equal(bad.havdalah.mode, "tzeit"); assert.equal(bad.havdalah.minutes, 50); assert.equal(bad.observance, "reform");
-  assert.equal(bad.morningTime, "07:30"); assert.equal(bad.remind.candles, true); assert.equal(bad.notify, false);
+  assert.equal(bad.morningTime, "06:00"); assert.equal(bad.remind.candles, true); assert.equal(bad.notify, false);
   assert.deepEqual(L.normalizePrefs(L.normalizePrefs({ locationId: "toronto", havdalah: { mode: "minutes", minutes: 72 } })), L.normalizePrefs({ locationId: "toronto", havdalah: { mode: "minutes", minutes: 72 } }));
 });
 

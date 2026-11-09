@@ -1,0 +1,120 @@
+{
+  "pack": "alef-original-music",
+  "created": "2026-11-09",
+  "timezone": "America/Toronto",
+  "owner": "John Khan / ALENZA CODES",
+  "license": "All rights reserved, John Khan / ALENZA CODES",
+  "provenance": "Original compositions created for ALEF. No third-party recordings. Metadata stripped (no ID3, no C2PA/JUMBF, no encoder provenance).",
+  "usage_rules": [
+    "Optional game/background beds and songs only.",
+    "Never place under prayers/cantor audio.",
+    "Never play over learner speech.",
+    "Respect mute / audioFree / calm mode."
+  ],
+  "tracks": [
+    {
+      "id": "klezmer-loop-a",
+      "file": "klezmer-loop-a.mp3",
+      "title": "Klezmer Loop A",
+      "kind": "instrumental",
+      "style": "Jewish folk / klezmer dance loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 174.89,
+      "bytes": 4197355
+    },
+    {
+      "id": "klezmer-loop-b",
+      "file": "klezmer-loop-b.mp3",
+      "title": "Klezmer Loop B",
+      "kind": "instrumental",
+      "style": "Jewish folk / klezmer dance loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 171.729,
+      "bytes": 4121495
+    },
+    {
+      "id": "niggun-calm-loop-a",
+      "file": "niggun-calm-loop-a.mp3",
+      "title": "Niggun Calm Loop A",
+      "kind": "instrumental",
+      "style": "Calm niggun / contemplative loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 200.02,
+      "bytes": 4800470
+    },
+    {
+      "id": "niggun-calm-loop-b",
+      "file": "niggun-calm-loop-b.mp3",
+      "title": "Niggun Calm Loop B",
+      "kind": "instrumental",
+      "style": "Calm niggun / contemplative loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 203.024,
+      "bytes": 4872568
+    },
+    {
+      "id": "cantor-strings-a",
+      "file": "cantor-strings-a.mp3",
+      "title": "Cantor Strings A",
+      "kind": "instrumental",
+      "style": "Cantorial-inspired strings",
+      "role": "optional game/background bed",
+      "duration_seconds": 213.342,
+      "bytes": 5120209
+    },
+    {
+      "id": "cantor-strings-b",
+      "file": "cantor-strings-b.mp3",
+      "title": "Cantor Strings B",
+      "kind": "instrumental",
+      "style": "Cantorial-inspired strings",
+      "role": "optional game/background bed",
+      "duration_seconds": 199.21,
+      "bytes": 4781035
+    },
+    {
+      "id": "yachad",
+      "file": "yachad.mp3",
+      "title": "Yachad",
+      "kind": "vocal",
+      "style": "Jewish folk / Reform-friendly communal song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Come sit close, the candles glow / Friends and family, row by row / Bread is warm and hearts are wide / No one waiting left outside / Yachad, yachad, we sing as one / Shalom from dusk to rising sun / Lai lai lai, lai lai lai lai",
+      "duration_seconds": 126.851,
+      "bytes": 3044414
+    },
+    {
+      "id": "open-hands",
+      "file": "open-hands.mp3",
+      "title": "Open Hands",
+      "kind": "vocal",
+      "style": "Reform Judaism\u2013friendly worship song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "In every hand a little flame / In every voice a gentle name / We open doors and build with care / We mend the world with what we share / Shalom, shalom, let peace begin / With open hands we welcome in",
+      "duration_seconds": 59.638,
+      "bytes": 1431301
+    },
+    {
+      "id": "gates-of-morning-a",
+      "file": "gates-of-morning-a.mp3",
+      "title": "Gates of Morning A",
+      "kind": "vocal",
+      "style": "Cantorial / liturgical-inspired original",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
+      "duration_seconds": 89.313,
+      "bytes": 2143503
+    },
+    {
+      "id": "gates-of-morning-b",
+      "file": "gates-of-morning-b.mp3",
+      "title": "Gates of Morning B",
+      "kind": "vocal",
+      "style": "Cantorial / liturgical-inspired original",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
+      "duration_seconds": 70.008,
+      "bytes": 1680195
+    }
+  ]
+}

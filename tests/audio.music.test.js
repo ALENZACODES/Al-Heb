@@ -127,11 +127,12 @@ test('calm mode and audio-free keep the bed off', () => {
   assert.equal(media.made.length, 0);
 });
 
-test('the game bar offers the live-composed styles plus the Kenney loops, each with a unique id', async () => {
+test('the game bar offers the live-composed styles plus the Kenney loops and original ALEF tracks, each with a unique id', async () => {
   const { GAME_TRACKS } = await import('../src/audio/music.js');
   const { SYNTH_STYLES } = await import('../src/audio/synth-music.js');
+  const { ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS } = await import('../src/listen/catalog.js');
   assert.ok(SYNTH_STYLES.length >= 12);
-  assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length);
+  assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length + ORIGINAL_MUSIC_TRACKS.length + ORIGINAL_SONG_TRACKS.length);
   assert.equal(new Set(GAME_TRACKS.map((t) => t.id)).size, GAME_TRACKS.length);
   for (const st of SYNTH_STYLES) { assert.ok(st.bpm > 40 && st.bpm < 200, st.id); assert.ok(st.scale.length >= 5 && st.prog.length >= 4, st.id); }
 });

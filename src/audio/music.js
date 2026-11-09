@@ -1,6 +1,6 @@
 // Optional secular game beds. Off until the learner turns them on.
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
-import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
+import { MUSIC_BASE, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
 import { mediaPolicy } from './policy.js';
 import { SYNTH_STYLE_LIST } from './synth-styles.js';
 
@@ -197,10 +197,12 @@ export function createMusicController({
   };
 }
 
-/** Every track the game bar offers: the styles composed live in the browser first, then the three Kenney loops. */
+/** Every track the game bar offers: the styles composed live in the browser first, then the Kenney loops and original ALEF tracks. */
 export const GAME_TRACKS = [
   ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for Aleph' })),
   ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Kenney loops' })),
+  ...ORIGINAL_MUSIC_TRACKS.map((t) => ({ ...t, group: 'Original beds' })),
+  ...ORIGINAL_SONG_TRACKS.map((t) => ({ ...t, group: 'Original songs' })),
 ];
 /** The music engine (src/audio/synth-music.js, ~20 KB) loads only when someone presses Play music, not at app start; until then this
  *  stand-in records volume and listeners and hands them over. Same <audio>-like surface the controller drives. */

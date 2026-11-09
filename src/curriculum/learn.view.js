@@ -75,6 +75,7 @@ function mountMap(root, ctx) {
             onclick: () => { track = id; render(); } }, label))),
       continueCard(list[firstOpen] && !done.has(list[firstOpen].id) ? list[firstOpen] : null, doneInTrack, list.length, st),
       track === "read" && ctx?.hasRoute?.("classtrack") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/classtrack" }, "My study plan"), ": 10 weeks, 3 months, 6 months or a year, on your own dates, with help each week.") : null,
+      ctx?.hasRoute?.("lab") ? el("p", { class: "alef-plan-link" }, el("a", { href: "#/lab" }, "Brain Lab"), ": today’s three quick drills for your Hebrew eyes, ears and memory.") : null,
       el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
       el("p", { class: "alef-due", role: "status" }, dueCount
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`

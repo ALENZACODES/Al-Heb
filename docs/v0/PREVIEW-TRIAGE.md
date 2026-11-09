@@ -79,6 +79,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `listen-shelf` | keep | The Sacred Listen shelf; listed in the Preview group so the recordings can be found. |
 | `synagogues` | keep | Reform synagogues in Canada: a directory with pictures, stories and contact details for 27 congregations. Not a lesson; stays preview until the facts are checked by the congregations. |
 | `games` | keep | The games hub; listed in the Preview group as the one door to all the games. |
+| `lab` | keep | Brain Lab: the daily three-drill workout and its ten timed drills; linked from Learn and the games hub. |
 | `wordfinder` | keep | The first game; linked from Home and the showcase. |
 | `tugowar` | hide | A game; reached from the games hub, and search finds it by name. |
 | `vowelcatcher` | hide | A game; reached from the games hub, and search finds it by name. |

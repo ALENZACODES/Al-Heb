@@ -100,7 +100,7 @@ export function mount(root, ctx) {
   const article = h('article', { class: 'card wf-games-hub' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Games ', heSpan('מִשְׂחָקִים')),
     h('p', {}, 'Completely new to Hebrew? Start at Level 1. Every level is open; you can play at your pace.'),
-    
+    h('p', { class: 'wf-lab-link' }, h('a', { class: 'btn', href: '#/lab' }, 'Brain Lab'), ' Three 45-second drills a day that get harder as you improve, with a score for each skill.'),
     arcadeCard(ctx),
     ...sections);
   root.replaceChildren(article);

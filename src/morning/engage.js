@@ -12,7 +12,7 @@ export const IDLE_MS = 60000;
 export const PERSIST_MS = 10000;
 
 /** Routes that count as a learning activity: lessons, review, ladder/fade drills, prayer/Torah read-aloud, sprints. */
-const COUNTED = [/^\/learn(\b|$)/, /^\/ladder/, /^\/fade/, /^\/spotit\//, /^\/checkpoint/, /^\/loanwords/, /^\/dialogues/, /^\/gender/, /^\/scaffold/, /^\/read(\/|$)/, /^\/torahread/, /^\/sounds/, /^\/vocab/, /^\/words\/trace/, /^\/letters/, /^\/classtrack/, /^\/israel/, /^\/sprint/, /^\/timedread/, /^\/service/];
+const COUNTED = [/^\/learn(\b|$)/, /^\/ladder/, /^\/fade/, /^\/spotit\//, /^\/checkpoint/, /^\/loanwords/, /^\/dialogues/, /^\/gender/, /^\/scaffold/, /^\/read(\/|$)/, /^\/torahread/, /^\/sounds/, /^\/vocab/, /^\/words\/trace/, /^\/letters/, /^\/classtrack/, /^\/israel/, /^\/sprint/, /^\/timedread/, /^\/service/, /^\/lab(\/|$)/];
 /** @param {string} hash e.g. "#/learn?review=1" */
 export function isCountedRoute(hash) {
   const p = String(hash || "").replace(/^#/, "").split("?")[0];

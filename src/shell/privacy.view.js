@@ -90,6 +90,7 @@ export const STORE_KEYS = [
   ['games.sentencetrain.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/sentencetrain.view.js'],
   ['games.shadowcraft.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/shadowcraft.view.js'],
   ['games.shuktaxi.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/shuktaxi.view.js'],
+  ['lab.v1', 'Brain Lab: best score, level reached and the last 30 scores per drill, and which drills you finished each day (two weeks)', 'src/lab/lab.core.js'],
   ['games.soundsnap.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/soundsnap.view.js'],
   ['games.speedtype.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/speedtype.view.js'],
   ['games.submarinesonar.v1', 'Game: best score, plays, stars per level, badges and daily challenge results', 'src/games/submarinesonar.view.js'],

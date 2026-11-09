@@ -61,6 +61,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
+  { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
   { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },

@@ -17,6 +17,8 @@ export const SECTION_ROUTES = {
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
     'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
+    // Brain Lab (daily drills) and its drill pages
+    'lab', 'labgame',
     // games hub and every game (owner 'games'), arcade included
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
@@ -35,7 +37,7 @@ export const ROUTE_SECTION = Object.fromEntries(Object.entries(SECTION_ROUTES).f
 export const PARENT = {
   letter: 'letters', loanword: 'loanwords', spotit: 'learn', dialogue: 'dialogues', phrase: 'phrases', fadeline: 'fade', israelsec: 'israel',
   classtrackweek: 'classtrack', classtrackmode: 'classtrack', festival: 'festivals', 'rules-page': 'rules', intermediatelesson: 'intermediate',
-  grammartopic: 'grammar', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
+  grammartopic: 'grammar', labgame: 'lab', text: 'read', torahreadsec: 'torahread', book: 'books', day: 'calendar', synagogue: 'synagogues',
 };
 
 /** Hidden from the menu (still searchable): first-run onboarding. */

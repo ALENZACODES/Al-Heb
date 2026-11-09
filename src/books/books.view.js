@@ -65,7 +65,7 @@ export async function mount(root, ctx) {
     return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
   });
   for (const k of keys) {
-    wrap.append(h("h2", { class: "book-group-title" }, k === keys[0] ? `Start here — ${k}` : k));
+    wrap.append(h("h2", { class: "book-group-title" }, k === keys[0] ? `Start here: ${k}` : k));
     const grid = h("div", { class: "book-shelf" });
     for (const b of groups.get(k)) grid.append(cardFor(b));
     wrap.append(grid);

@@ -23,7 +23,6 @@ import { buildReminders, upcoming, itemStart, MAX_WINDOW_DAYS } from "./reminder
 import { toICS, downloadICS } from "./reminders.ics.js";
 import { notificationSupport, requestNotificationPermission, scheduleLocalNotifications } from "./reminders.notify.js";
 import { CALENDAR_CSS } from "./calendar.style.js";
-import { addToCalendarPanel } from "./calendar.addpanel.js";
 import { respell, congregationOf } from "../pronunciation/forTradition.js";
 import { markersFor, isImportant, markerChip, MARKER_KINDS, MARKER_LABEL, artAvailable, ART_BASE } from "./calendar.markers.js";
 import { yomTovDates } from "./streak.js";
@@ -381,10 +380,10 @@ export function mount(root, ctx) {
   }
 
   function renderAdd() {
-    addBox.replaceChildren(addToCalendarPanel(el, {
+    import("./calendar.addpanel.js").then(({ addToCalendarPanel }) => { if (alive) addBox.replaceChildren(addToCalendarPanel(el, {
       store: ctx?.store, observance: prefs.observance, heText, now: nowDate,
       holidayFile: () => { const { items } = currentItems(365); return items.length ? { text: toICS(items.filter((it) => it.kind !== "morning" && it.kind !== "evening"), { now: nowDate() }), count: items.filter((it) => it.kind !== "morning" && it.kind !== "evening").length } : null; },
-    }));
+    })); }).catch(() => { /* the quick-add box is optional; the reminders list below still works */ });
   }
   function renderMain() { if (!alive) return; renderToday(); renderAdd(); renderGrid(); renderReminders(); armNotifications(); }
 

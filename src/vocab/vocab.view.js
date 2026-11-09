@@ -4,6 +4,12 @@
  * Review cards live in store key "srs.vocab" (ids "vocab:<id>") so they never appear in the lesson review queue.
  * The list is a machine-built DRAFT: no Hebrew educator has proofread it, and the screen says so.
  */
+/** Dictionary recordings: one list, fetched the first time a dictionary-only clip is played, then given to the player. */
+let dictAudio = null;
+function loadDictionaryAudio(ctx) {
+  if (!dictAudio) dictAudio = fetch(new URL('../../data/vocab/audio-dictionary.json', import.meta.url)).then((r) => (r.ok ? r.json() : [])).then((list) => { ctx.audio?.extend?.(list); return true; }).catch(() => { dictAudio = null; return false; });
+  return dictAudio;
+}
 import { el, heText, tr, storeGet, storeSet } from '../curriculum/dom.js';
 import { review, due, MS_DAY } from '../curriculum/srs.js';
 import { transliterate } from '../pronunciation/transliterate.js';
@@ -174,6 +180,10 @@ export function mount(root, ctx) {
         let plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
         if (plan?.reason === CHECKING && ctx.audio.ensureManifest) {
           await ctx.audio.ensureManifest();
+          plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
+        }
+        if (!planIsExactFile(plan, { voice: cv, tradition: ct, id: clip.id }) && String(clip.id).startsWith('dict-')) {
+          await loadDictionaryAudio(ctx);
           plan = ctx.audio.status?.(clip.kind, clip.id, { voice: cv, tradition: ct, allowMismatchedTts: false });
         }
         if (!planIsExactFile(plan, { voice: cv, tradition: ct, id: clip.id }) && typeof globalThis.alefShards?.load === 'function') {

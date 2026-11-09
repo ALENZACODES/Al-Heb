@@ -24,7 +24,8 @@ export const DEFAULT_MORNING = "06:00";
 export const DEFAULT_BEDTIME = "22:00";
 export const OBSERVANCES = Object.freeze(["reform", "traditional", "israel"]);
 
-export const STREAK_LINE = "Please keep your streak going. You're doing awesome!";
+import { STREAK_LINE } from "../morning/nudge.js";
+export { STREAK_LINE };
 
 /** The two daily prayers. Hebrew, how to say it and English match data/homepage/prayers.json. */
 export const DAILY_PRAYERS = Object.freeze({

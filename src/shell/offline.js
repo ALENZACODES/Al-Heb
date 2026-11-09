@@ -19,7 +19,7 @@ export const GROUPS = Object.freeze([
   { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/|src\/listen\/|data\/listen\/|src\/typing\/|data\/typing\/|src\/trope\/|data\/trope-trainer\/|src\/home\/)/, route: "#/learn" },
   { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|assets\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
   { id: "pronunciation", label: "Sounds and pronunciation", test: /^(src\/pronunciation\/|data\/pronunciation\/)/, route: "#/sounds" },
-  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
+  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/torah-quotes\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
   { id: "vocab", label: "Vocabulary and Word Sprint", test: /^(src\/vocab\/|data\/vocab\/|src\/sprint\/|data\/sprint\/)/, route: "#/vocab", needs: ["vocab-packs"] },
   { id: "photo", label: "Scan a photo", test: /^(src\/photo\/|data\/photo\/)/, route: "#/scan", needs: ["ocr"] },
   { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/awards\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
@@ -53,7 +53,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
   { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
   { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/)/, approxMB: 0.5 },
-  { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/(corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\//, approxMB: 0.5 },
+  { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
@@ -73,7 +73,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
   { id: "od-music", label: "Game music player and English read-aloud", test: /^src\/(audio\/synth-music|shell\/speak-english)\.js$/, approxMB: 0.03 },
-  { id: "od-day-code", label: "Calendar day pages, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.07 },
+  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

@@ -4,7 +4,8 @@
  * The banner is in-app only. The same line goes into the daily calendar reminders (calendar.quickadd.js).
  */
 import { projectStreak, dayKey, isRestDay } from "../curriculum/streak.js";
-import { STREAK_LINE } from "../curriculum/calendar.quickadd.js";
+/** The encouragement line, shared with the calendar reminders (calendar.quickadd.js re-exports it). */
+export const STREAK_LINE = "Please keep your streak going. You're doing awesome!";
 
 export const NUDGE_DELAY_MS = 4000;
 

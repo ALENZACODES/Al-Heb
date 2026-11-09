@@ -18,7 +18,7 @@ export const spokenClips = (a) => (hasAudioCounts(a) ? (Number.isFinite(a.spoken
 /** What the synthetic clips cover, read from the summary's per-kind counts (kinds, extra) in this order; '' when the summary has no breakdown. @param {any} a */
 export function clipCoverage(a) {
   const k = a?.kinds || {}, x = a?.extra || {};
-  const names = [['letters', k.letter], ['vowels', k.vowel], ['syllables', k.syllable], ['words', k.word], ['lines', k.line], ['prayers', (k.prayer || 0) + (x.homepage || 0)], ['book pages', x.book], ['games', x.games]]
+  const names = [['letters', k.letter], ['vowels', k.vowel], ['syllables', k.syllable], ['words', (k.word || 0) + (x.dictionary || 0)], ['lines', k.line], ['prayers', (k.prayer || 0) + (x.homepage || 0)], ['book pages', x.book], ['games', x.games]]
     .filter(([, n]) => Number.isFinite(n) && n > 0).map(([name]) => name);
   if (!names.length) return '';
   return names.length === 1 ? names[0] : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;

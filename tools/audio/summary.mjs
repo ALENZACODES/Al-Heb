@@ -24,6 +24,7 @@ export const EXTRA_FOLDERS = Object.freeze({
   book: ['audio/m/israeli/book', 'audio/f/israeli/book'],
   games: ['audio/m/israeli/games', 'audio/f/israeli/games'],
   homepage: ['audio/homepage'],
+  dictionary: ['audio/m/israeli/dictionary', 'audio/f/israeli/dictionary'],
 });
 export const SFX_FOLDERS = Object.freeze(['audio/sfx']);
 // Audio on disk that is neither a Hebrew lesson clip nor an interface sound, so it is NOT part of the spoken count the app shows:

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Records every dictionary word that has no clip yet, in Ari's and Noa's Israeli voices (Google he-IL WaveNet pair),
-// then makes them playable: adds the rows to data/audio/manifest-words-israeli.json, rebuilds data/vocab/clip-lookup.json
+// then makes them playable: adds the rows to data/vocab/audio-dictionary.json (loaded by the dictionary page only), rebuilds data/vocab/clip-lookup.json
 // and data/audio/summary.json. Safe to stop and run again: words already on disk are not sent again.
 //
 //   set GOOGLE_TTS_API_KEY=...            (Command Prompt)   /   export GOOGLE_TTS_API_KEY=...   (bash)
@@ -20,7 +20,7 @@ import { transliterate } from '../../src/pronunciation/transliterate.js';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const rel = (p) => path.join(ROOT, p);
 const readJson = (p) => JSON.parse(fs.readFileSync(rel(p), 'utf8'));
-const SHARD = 'data/audio/manifest-words-israeli.json';
+const SHARD = 'data/vocab/audio-dictionary.json';
 
 export function dictionaryRows() {
   const words = readJson('data/vocab/vocab5000.json').entries;
@@ -28,10 +28,10 @@ export function dictionaryRows() {
   const rows = [];
   for (const w of words.sort((a, b) => a.rank - b.rank)) {
     const text = w.pointed && /[ְ-ׇ]/.test(w.pointed) ? w.pointed : null; // only pointed words: unpointed text is read unreliably
-    if (!text || lookup[clipKey(text)]) continue;
+    if (!text || lookup[clipKey(text)] || /[\u05B0-\u05BB]{2}/.test(text)) continue; // two vowel points on one letter: a data error, not recorded
     for (const voice of ['m', 'f']) {
       const id = `dict-${w.id}`;
-      rows.push({ path: `audio/${voice}/israeli/word/${id}.mp3`, voice, tradition: 'israeli', kind: 'word', id, text, status: 'tts', source: 'paid-cloud',
+      rows.push({ path: `audio/${voice}/israeli/dictionary/${id}.mp3`, voice, tradition: 'israeli', kind: 'word', id, text, status: 'tts', source: 'paid-cloud',
         group: 'dictionary-word', english: w.gloss || '', phonetic: transliterate(text).trim(), rank: w.rank });
     }
   }
@@ -54,9 +54,9 @@ async function main(argv) {
     console.log(`${Math.min(i + 50, todo.length)} of ${todo.length}`);
   }
   // Add every recorded row that is not in the shard yet, then rebuild the lookup and the summary.
-  const shard = readJson(SHARD);
+  const shard = fs.existsSync(rel(SHARD)) ? readJson(SHARD) : [];
   const have = new Set(shard.map((r) => r.path));
-  const add = all.filter((r) => fs.existsSync(rel(r.path)) && !have.has(r.path)).map(({ rank, ...r }) => r);
+  const add = all.filter((r) => fs.existsSync(rel(r.path)) && !have.has(r.path)).map(({ path: p, voice, tradition, kind, id, text, status }) => ({ path: p, voice, tradition, kind, id, text, status }));
   if (add.length) fs.writeFileSync(rel(SHARD), '[\n' + [...shard, ...add].map((r) => JSON.stringify(r)).join(',\n') + '\n]\n');
   console.log(`added ${add.length} rows to ${SHARD}`);
   for (const s of ['tools/vocab/build-clip-lookup.mjs', 'tools/audio/summary.mjs', 'tools/build-precache.mjs']) {

@@ -42,11 +42,10 @@ def jobs(kinds):
                 add(r['file'], r['pointed_hebrew'], r['phonetic'], r['kind'], r['english'])
     if 'dictionary' in kinds:
         # Dictionary words recorded by tools/audio/render_dictionary.mjs (rows with group "dictionary-word").
-        shard = os.path.join(ROOT, 'data', 'audio', 'manifest-words-israeli.json')
+        shard = os.path.join(ROOT, 'data', 'vocab', 'audio-dictionary.json')
         if os.path.exists(shard):
             for r in json.load(open(shard, encoding='utf-8')):
-                if r.get('group') == 'dictionary-word':
-                    add(r['path'], r['text'], r.get('phonetic', ''), 'dictionary', r.get('english', ''))
+                add(r['path'], r['text'], '', 'dictionary', '')
     if 'builder' in kinds:
         words = json.load(open(os.path.join(ROOT, 'data', 'builder_words.json'), encoding='utf-8'))
         for w in words:

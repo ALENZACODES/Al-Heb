@@ -63,6 +63,7 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/awards/proof-font.js', 'src/awards/certificate.js', 'src/awards/icons.js',
   // Day page (preview route /day/<date>): its view and model are loaded lazily by the router when a day is opened, runtime-cached by sw.js; the markers module stays installed because the Calendar (v0) draws them. Morning screen view (optional route /morning): route code only, its verses/model files stay installed. Both moved here when the day pages landed (keeps first install under 3.95 MiB).
   'src/curriculum/day.view.js', 'src/curriculum/calendar.day.js', 'src/morning/morning.view.js',
+  'src/curriculum/calendar.addpanel.js', 'src/curriculum/calendar.quickadd.js' /* calendar quick-add box: loaded when the Calendar opens */,
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
@@ -71,7 +72,7 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/torahreader/torahreader.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
-  'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json',
+  'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json', 'data/torah-quotes.json',
   'data/letters/art-concept-map.json', 'data/letters/keyboard-si1452.json',
   // Game-music engine (~20 KB): imported only when Play music is first pressed (src/audio/music.js), then runtime-cached.
   'src/audio/synth-music.js',

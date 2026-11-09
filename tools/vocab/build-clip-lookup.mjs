@@ -18,6 +18,8 @@ export function lookupFromDisk(rootDir = root) {
     for (const e of list) for (const t of [e.pointed, e.lemma, e.he]) if (t) vocabTexts.add(clipKey(t));
   }
   for (const r of read('data/audio/manifest-words-israeli.json')) if (r && r.tradition === 'israeli' && vocabTexts.has(clipKey(r.text))) rows.push(r);
+  // Dictionary recordings (tools/audio/render_dictionary.mjs) live in their own list, loaded by the dictionary page only.
+  rows.push(...read('data/vocab/audio-dictionary.json'));
   return buildClipLookup(rows, (p) => existsSync(join(rootDir, p)));
 }
 

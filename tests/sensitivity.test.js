@@ -126,7 +126,7 @@ test('English UI strings in src name God only where listed (a "G-d" setting is a
   const hits = [];
   const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (e.name !== 'tools') walk(p); } else if (e.name === 'names.js') continue; else if (/\.(js|mjs)$/.test(e.name)) { const t = fs.readFileSync(p, 'utf8'); if (/\b(God|LORD)\b/.test(t)) hits.push(path.relative(root, p).split(path.sep).join('/')); } } };
   walk(path.join(root, 'src'));
-  const expected = ['src/morning/plan.js', 'src/shell/router.js'];
+  const expected = ['src/morning/plan.js', 'src/shell/router.js', 'src/curriculum/calendar.quickadd.js' /* the Shema's English in the calendar reminder text */];
   const extra = hits.filter((h) => !expected.includes(h));
   assert.deepEqual(extra, [], 'new English UI text uses the word God; route it through englishGod() from src/shell/names.js');
 });

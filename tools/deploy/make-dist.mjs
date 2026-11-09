@@ -24,6 +24,8 @@ export const EXTRAS = [
   ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],
   ['data/vocab/packs', 'vocab packs (fetched when a pack is opened)'],
+  ['data/vocab/clip-lookup.json', 'dictionary clip lookup (2.2 MB, over the 2 MiB precache cap): fetched when the dictionary opens, runtime-cached'],
+  ['data/vocab/audio-dictionary.json', 'dictionary recordings list: fetched the first time a dictionary-only word is played'],
   ['data/vocab/words.json', 'full word list (7 MB): fetched on demand by /listen, /grammar and /placement; over the 2 MiB precache cap, so never installed up front'],
   ['data/photo/_benchmark/images/menu-1__clean.png', 'scan sample page, named literally in src/photo/scan.view.js (U-21); fetched when a learner tries the sample, not precached'],
   ['data/audio/manifest-words-ashkenazi.json', 'lazy audio word shard'],

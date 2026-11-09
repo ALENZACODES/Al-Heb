@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 46: Tet cursive set
+Aleph IMAGE RUN - COMMAND 46: Tet cursive set
 
 ATTACH: REF_cursive_tet.png (attach once, before pasting this).
 

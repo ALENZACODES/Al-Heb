@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "draft": true,
-  "description": "Per-sound comparison of the three reading settings the app uses, plus an 'also exists' list. Plain-English values were written for ALEF as paraphrases of the sources named in sources.json. No native speaker or linguist has reviewed this file.",
+  "description": "Per-sound comparison of the three reading settings the app uses, plus an 'also exists' list. Plain-English values were written for Aleph as paraphrases of the sources named in sources.json. No native speaker or linguist has reviewed this file.",
   "confidence": {
     "high": "Two or more of the pages we read agree on the Israeli and Ashkenazi cells and on the 'other communities' cell.",
     "medium": "One page supports it, or the pages agree on the substance but differ in detail.",
     "low": "Mostly the project's own inference, or the page itself flags the claim as weak."
   },
   "settings": {
-    "israeli": "Modern Israeli: the everyday standard Hebrew of Israel. ALEF makes no claim about Tel Aviv-specific speech; no source for it was found.",
-    "american": "American synagogue (the app's 'sephardi' setting): Sephardi/Israeli vowel values said with American-English habits. This is a teaching convention in ALEF, not a community with one fixed accent.",
-    "ashkenazi": "Traditional Ashkenazi liturgical reading. Real Ashkenazi Hebrew has regional dialects (Lithuanian, Polish, German, Hungarian, ...); ALEF picks the commonest siddur values.",
+    "israeli": "Modern Israeli: the everyday standard Hebrew of Israel. Aleph makes no claim about Tel Aviv-specific speech; no source for it was found.",
+    "american": "American synagogue (the app's 'sephardi' setting): Sephardi/Israeli vowel values said with American-English habits. This is a teaching convention in Aleph, not a community with one fixed accent.",
+    "ashkenazi": "Traditional Ashkenazi liturgical reading. Real Ashkenazi Hebrew has regional dialects (Lithuanian, Polish, German, Hungarian, ...); Aleph picks the commonest siddur values.",
     "sephardi": "Traditional Sephardi reading, as kept in Sephardi and Mizrahi communities: the sounds behind the app's Sephardi-values setting. Spellings in this column follow the SephardicU transliteration guide, which gives each Hebrew letter one Latin letter or pair."
   },
   "sounds": [
@@ -85,7 +85,7 @@
         "sephardicu"
       ],
       "americanBasis": "lane 3 inference; the aw habit is described in data/pronunciation/niqqud.json without an outside source.",
-      "note": "Kamatz katan (a short o in a few words such as kol) is a separate topic that ALEF handles only for a short word list; it is not covered here.",
+      "note": "Kamatz katan (a short o in a few words such as kol) is a separate topic that Aleph handles only for a short word list; it is not covered here.",
       "sephardi": {
         "say": "ah, like patach (barukh). Kamatz katan is read o by the sound of the word, not by the grammar books: kal, tsahorayim.",
         "translit": "a"
@@ -339,7 +339,7 @@
         "sephardicu"
       ],
       "americanBasis": "Same as Israeli.",
-      "note": "A deeper qof in some Mizrahi communities is plausible but the pages we read name only Georgian Jews, so ALEF names only them.",
+      "note": "A deeper qof in some Mizrahi communities is plausible but the pages we read name only Georgian Jews, so Aleph names only them.",
       "sephardi": {
         "say": "k for almost everyone; a few communities keep a deeper k.",
         "translit": "q, so that it stays apart from kaf (k)"
@@ -397,7 +397,7 @@
         },
         {
           "who": "Yemenite",
-          "say": "the Wikipedia page says second-to-last, but tags that claim 'citation needed'; ALEF does not rely on it"
+          "say": "the Wikipedia page says second-to-last, but tags that claim 'citation needed'; Aleph does not rely on it"
         }
       ],
       "confidence": "medium",
@@ -433,7 +433,7 @@
         "wp-ashkenazi"
       ],
       "confidence": "medium",
-      "note": "Described by one Wikipedia article only (first 100,000 of 124,343 characters read). ALEF has no Yemenite audio, respelling or lesson; this is a note that it exists."
+      "note": "Described by one Wikipedia article only (first 100,000 of 124,343 characters read). Aleph has no Yemenite audio, respelling or lesson; this is a note that it exists."
     },
     {
       "id": "mizrahi",
@@ -450,7 +450,7 @@
         "chabad"
       ],
       "confidence": "medium",
-      "note": "ALEF's 'sephardi' setting is NOT a model of any of these communities. If your synagogue belongs to one, ask a member or the cantor and treat this app as a general guide only."
+      "note": "Aleph's 'sephardi' setting is NOT a model of any of these communities. If your synagogue belongs to one, ask a member or the cantor and treat this app as a general guide only."
     },
     {
       "id": "western-sephardi",

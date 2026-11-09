@@ -1,6 +1,6 @@
-# Licence options for ALEF (code, content, images, audio)
+# Licence options for Aleph (code, content, images, audio)
 
-**Not legal advice. No lawyer has reviewed this. No licence is chosen here: that is John's decision (see `DECISIONS-FOR-JOHN.md`).** This file compares choices for each asset class, given these goals: ALEF is free to learners now and may be sold (the app, access to it, or the company) later.
+**Not legal advice. No lawyer has reviewed this. No licence is chosen here: that is John's decision (see `DECISIONS-FOR-JOHN.md`).** This file compares choices for each asset class, given these goals: Aleph is free to learners now and may be sold (the app, access to it, or the company) later.
 
 Source facts: `data/legal/attributions.json` (28 entries, generated 2026-11-04) and `CONTENT-LICENCE-AUDIT.md`, both read for this file. Descriptions of what each general licence does (MIT, Apache-2.0, CC family, OFL) are general background, not re-verified from the licence texts today, except where the audit says it read them.
 
@@ -94,7 +94,7 @@ Reading `commercialUse` and `shareAlike` from `data/legal/attributions.json`. No
 6. The 117 lesson records with no licence: state one or remove.
 7. Ownership and protectability of code and text drafted with an automated writing tool; protectability of machine-made images.
 8. OpenSubtitles rights behind the FrequencyWords counts.
-9. Name and trademark clearance for "ALEF" (not researched).
+9. Name and trademark clearance for "Aleph" (not researched).
 10. Contract wording for voice buyouts (Israel and publisher's jurisdiction).
 
 ## 8. Consequence summary (neutral)

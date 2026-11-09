@@ -1,4 +1,4 @@
-// ALEF word tracing view: trace a whole word, letter by letter, right to left; then place the vowel marks.
+// Aleph word tracing view: trace a whole word, letter by letter, right to left; then place the vowel marks.
 // Reuses createTracer() from src/letters/trace.js and the stroke data in data/letters/letters.json unchanged.
 // export mount(root, ctx) -> unmount.  ctx (shell): {settings, store, audio, route, t, query}. Test hooks: ctx.letters, ctx.wordtrace.
 // DRAFT: stroke order is unreviewed (docs/letters/STROKE-RULES.md); word pointing comes from course data / Wiktionary-derived vocab, not proofread.

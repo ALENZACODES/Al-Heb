@@ -1,4 +1,4 @@
-# ALEF build contract (all lanes read this first)
+# Aleph build contract (all lanes read this first)
 
 Product: interactive Hebrew course (app + book), intro -> intermediate. Two goals: (1) read Torah/prayers aloud
 with a congregation, (2) function in Israel without sounding like an outsider. Man + woman voices. Spec: ~/reports/Hebrew learning app research.md and notes in ~/research_notes/Hebrew learning app research/.

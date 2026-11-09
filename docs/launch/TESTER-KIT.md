@@ -1,6 +1,6 @@
 # Tester kit: first real learners (draft, 2026-11-05)
 
-Purpose: get 5 to 10 real people to try ALEF while the owner watches or reads their notes, so the project has evidence from learners and not only from tests. Nothing in this file says a session has happened. As of this draft no learner has used the app (`docs/STATUS.md`, section "Deployed and reviewed"). The review site is live at https://alef-review.onrender.com/ (Render, from `main`), so the owner can hand testers that link.
+Purpose: get 5 to 10 real people to try Aleph while the owner watches or reads their notes, so the project has evidence from learners and not only from tests. Nothing in this file says a session has happened. As of this draft no learner has used the app (`docs/STATUS.md`, section "Deployed and reviewed"). The review site is live at https://alef-review.onrender.com/ (Render, from `main`), so the owner can hand testers that link.
 
 Things the owner fills in before sending: the link or install steps, a way for testers to reach the owner (no contact address exists in the repo yet; `docs/launch/LIMITATIONS.md` says the same), and the date window. Left as `[OWNER: ...]` below.
 
@@ -12,7 +12,7 @@ Things the owner fills in before sending: the link or install steps, a way for t
 
 Hi [name],
 
-I am building a free app called ALEF that teaches you to read Hebrew letters and, later, prayers. I would like 25 minutes of your time to try it and tell me honestly where it is confusing. You are not being tested; the app is.
+I am building a free app called Aleph that teaches you to read Hebrew letters and, later, prayers. I would like 25 minutes of your time to try it and tell me honestly where it is confusing. You are not being tested; the app is.
 
 **Where it is:** [OWNER: link, or "I will hand you my phone"]
 
@@ -37,7 +37,7 @@ Stop whenever you like. If you get stuck, say so out loud or write it down; do n
 
 **Your data:** the app keeps its notes on your phone only. See `docs/launch/PRIVACY-FOR-TESTERS.md` (the owner can paste or print it for you). I will only write down what you tell me or what I see you do, and I will record your name nowhere unless you want it there; a tester ID like T01 is enough.
 
-**Consent, in one line:** by trying the app and answering the form you agree I may use your answers, without your name, to improve ALEF and to say how many people tested it. You can stop at any point and ask me to delete your answers. If you are under 18, please ask a parent or guardian first.
+**Consent, in one line:** by trying the app and answering the form you agree I may use your answers, without your name, to improve Aleph and to say how many people tested it. You can stop at any point and ask me to delete your answers. If you are under 18, please ask a parent or guardian first.
 
 Thank you,
 John

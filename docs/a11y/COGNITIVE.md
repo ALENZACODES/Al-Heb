@@ -2,7 +2,7 @@
 
 Lane: cognitive. Date: 2026-11-04.
 
-**What was and was not tested.** Everything below was checked with unit tests on a fake DOM, source scans, a word-counting script, and one desktop Chromium run (390px and 320px wide) that read computed styles. **Nobody tested any of this with real people** who have dyslexia, ADHD, memory difficulties, anxiety, sensory sensitivities, migraine, low literacy, brain fog or fatigue, and no screen reader, phone or photosensitivity analyser was used. Nothing here claims that a feature helps a particular group. The settings are offered as choices; people can try them and keep what works. ALEF never asks about a person's condition, and no setting is named after one.
+**What was and was not tested.** Everything below was checked with unit tests on a fake DOM, source scans, a word-counting script, and one desktop Chromium run (390px and 320px wide) that read computed styles. **Nobody tested any of this with real people** who have dyslexia, ADHD, memory difficulties, anxiety, sensory sensitivities, migraine, low literacy, brain fog or fatigue, and no screen reader, phone or photosensitivity analyser was used. Nothing here claims that a feature helps a particular group. The settings are offered as choices; people can try them and keep what works. Aleph never asks about a person's condition, and no setting is named after one.
 
 ## What was added
 
@@ -40,7 +40,7 @@ Penalty-style or blaming text found by searching `src` for wrong, failed, broke,
 - "That round had several wrong strokes." (word tracing) is now "...strokes off the path."
 - "Wrong register" (Sounds like a local labels, score line) is now "Different register"; "Wrong answers go into your Say it review queue" is now "Answers you miss go into..."
 - "No sound: the browser voice failed" (3 places) and "Recording failed" now say "did not work".
-- Reminder default: "ALEF: time to study" is now "ALEF: a few minutes of Hebrew", with "Only if you feel like it. Your lessons and review cards stay as they are."
+- Reminder default: "Aleph: time to study" is now "Aleph: a few minutes of Hebrew", with "Only if you feel like it. Your lessons and review cards stay as they are."
 - Quick-check closing lines no longer say "tough one" or "Solid" (see plain-copy).
 - Left as they are: "Not quite." (neutral, and followed by the right answer), "Again" on review ratings, "Missed N of M" in the weak-spots list on Progress, and the technical words in error messages for developers.
 

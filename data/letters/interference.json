@@ -1,5 +1,5 @@
 {
- "status": "draft hints written for ALEF from the shape of the modern print letters; not checked by a native teacher",
+ "status": "draft hints written for Aleph from the shape of the modern print letters; not checked by a native teacher",
  "note": "Shown ONLY after a learner taps the wrong letter. Key = the two ids sorted alphabetically and joined by '|'. If a pair has no entry here, the hint of the confusables set containing both letters is used. A wrong tap between letters that never get confused shows no look-alike warning.",
  "pairs": {
   "bet|kaf": "Bet has sharp corners and its floor sticks out at the back. Kaf is one soft curve, like a backwards C.",

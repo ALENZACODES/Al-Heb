@@ -53,8 +53,8 @@ export function triggerFor(alarmMin) {
  */
 export function toICS(items, opt = {}) {
   const stamp = utcStamp(opt.now || new Date());
-  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ALEF//Jewish calendar and reminders 1.0//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-    `X-WR-CALNAME:${escapeText(opt.calName || "ALEF Jewish calendar")}`];
+  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Aleph//Jewish calendar and reminders 1.0//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    `X-WR-CALNAME:${escapeText(opt.calName || "Aleph Jewish calendar")}`];
   for (const it of items) {
     const w = it.when;
     L.push("BEGIN:VEVENT", `UID:${it.uid}@alef.local`, `DTSTAMP:${stamp}`);
@@ -67,7 +67,7 @@ export function toICS(items, opt = {}) {
     } else {
       L.push(`DTSTART;VALUE=DATE:${dateOnly({ y: w.y, m: w.m, d: w.d })}`, `DTEND;VALUE=DATE:${dateOnly(addDays({ y: w.endY, m: w.endM, d: w.endD }, 1))}`);
     }
-    L.push(`SUMMARY:${escapeText(it.title)}`, `DESCRIPTION:${escapeText(it.description)}`, `CATEGORIES:${escapeText("ALEF," + it.kind)}`,
+    L.push(`SUMMARY:${escapeText(it.title)}`, `DESCRIPTION:${escapeText(it.description)}`, `CATEGORIES:${escapeText("Aleph," + it.kind)}`,
       `TRANSP:${w.type === "instant" ? "OPAQUE" : "TRANSPARENT"}`);
     if (it.alarmMin != null) L.push("BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${escapeText(it.title)}`, `TRIGGER:${triggerFor(it.alarmMin)}`, "END:VALARM");
     L.push("END:VEVENT");

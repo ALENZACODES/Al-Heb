@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 50 (command 350): J-0635.png to J-0647.png
+Aleph IMAGE RUN - BLOCK J 50 (command 350): J-0635.png to J-0647.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_shavuot, festival_tu-bishvat, festival_shabbat-table.

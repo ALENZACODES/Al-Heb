@@ -8,7 +8,7 @@ Definitions: wpm = words / minutes (all words); cleanWpm = (words - stumbled) / 
 
 ## Integration for src/progress (parent to apply)
 - `src/timedread/gate.js` exports `timedReadGate(gate, state)` returning `{done, have, need, measurable:true, note}`.
-- `data/timedread/gates.json` proposes grey and black gates (kind `timedRead`; targets copy belts.json wpmTarget, ALEF proposals, unsourced).
+- `data/timedread/gates.json` proposes grey and black gates (kind `timedRead`; targets copy belts.json wpmTarget, Aleph proposals, unsourced).
 - In `src/progress/model.js` `evaluate()`: add `import { timedReadGate } from '../timedread/gate.js';` and `case 'timedRead': return timedReadGate(g, c.timedRead);`
 - In `readSnapshot` (or makeContext): `timedRead: g('timedread.v1', null)` and expose as `c.timedRead`.
 - In `src/progress/data.js` merge gates: replace `gates.gates.grey` and `.black` with `data/timedread/gates.json` entries. Until then those gates stay `unmeasured`.

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 44 (command 344): J-0556.png to J-0568.png
+Aleph IMAGE RUN - BLOCK J 44 (command 344): J-0556.png to J-0568.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_time-numbers-set01, festival_rosh-hashanah.

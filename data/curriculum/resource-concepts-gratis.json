@@ -6,7 +6,7 @@
   "r": "reading siddur or Torah aloud",
   "i": "Israeli functional Hebrew",
   "c": "beginner clarity",
-  "f": "fit with ALEF",
+  "f": "fit with Aleph",
   "risk": "originality risk, higher is worse"
  },
  "sources": {
@@ -207,7 +207,7 @@
    "improvedName": "Gender pair cards with both voices",
    "spec": {
     "screen": "Sentence pair card: the same sentence twice, one tinted per speaker/addressee gender, the differing letters highlighted. A voice button for Ari and one for Noa on each.",
-    "data": "genderPairs[] = {id, en, forms:{m:{he, translit}, f:{he, translit}}, differsAt:[charIndex...], grammarTag}. All sentences authored for ALEF; none copied from the site.",
+    "data": "genderPairs[] = {id, en, forms:{m:{he, translit}, f:{he, translit}}, differsAt:[charIndex...], grammarTag}. All sentences authored for Aleph; none copied from the site.",
     "interaction": "Learner picks 'I am...' (m/f) in settings; the card shows their own form first. A quiz plays a voice and asks which gender was meant, then a second quiz asks to produce the other form by tapping the changed ending.",
     "test": "Unit: every pair differs in at least one letter, differsAt indices point at real differing characters, both voices exist in the manifest or are flagged, and no sentence string is a copy of a TeachMeHebrew line (checked by a fixture of forbidden strings)."
    },
@@ -233,14 +233,14 @@
    "improvedName": "Coverage meter on an owned frequency list",
    "spec": {
     "screen": "Vocabulary screen with a coverage meter: 'you can now read N% of the running words in the Israeli track texts'. Tap the meter to see the next five highest value words.",
-    "data": "Frequency source must be ALEF's own licence-clean list (spoken-style subtitles or ALEF corpus counts), computed in tools/, stored as word->rank with a provenance and licence field. Do not import this site's list.",
+    "data": "Frequency source must be Aleph's own licence-clean list (spoken-style subtitles or Aleph corpus counts), computed in tools/, stored as word->rank with a provenance and licence field. Do not import this site's list.",
     "interaction": "Each lesson reports newly covered words; the learner can mark words as known to adjust coverage; unknown high-rank words are queued as SRS cards.",
     "test": "Unit: coverage is monotonic when a word is added, equals 100 for the full list, and every rank row has provenance and licence filled."
    },
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "Page read (about 447 thousand characters of text). The corpus is written text; ALEF would want a spoken source for the Israel track and a prayer-text source for the read track."
+   "notes": "Page read (about 447 thousand characters of text). The corpus is written text; Aleph would want a spoken source for the Israel track and a prayer-text source for the read track."
   },
   {
    "id": "gr-tmh-04",
@@ -305,7 +305,7 @@
    "improvedScore": 965,
    "improvedName": "Hard-sound lab grid with contrast words",
    "spec": {
-    "screen": "Hard-sound lab: grid with rows for the target sound and columns for a, e, i, o, u in onset and coda. Alongside each cell a minimal-pair 'sounds like' contrast (for example chet versus he, resh versus lamed) drawn from ALEF's own word list.",
+    "screen": "Hard-sound lab: grid with rows for the target sound and columns for a, e, i, o, u in onset and coda. Alongside each cell a minimal-pair 'sounds like' contrast (for example chet versus he, resh versus lamed) drawn from Aleph's own word list.",
     "data": "drills.json extension: {sound, cell:{position: onset|coda, vowel}, audioIds, contrastWith:[ids]}; audio per voice and tradition; fallback flags honest about TTS.",
     "interaction": "Tap a cell to hear it; record-yourself (no scoring claimed) then compare waveform lengths only if a recording exists; a listen-and-pick test with the contrast word.",
     "test": "Unit: 20 cells exist per sound (10 vowel cells onset and coda); every cell has a manifest id or a missing flag; contrastWith ids resolve in the corpus."
@@ -333,7 +333,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "The lyrics are a copyrighted song; ALEF must write its own chant. Not reproduced here."
+   "notes": "The lyrics are a copyrighted song; Aleph must write its own chant. Not reproduced here."
   },
   {
    "id": "gr-tmh-08",
@@ -352,7 +352,7 @@
    "improvedName": "Role-swap dialogs with two voices",
    "spec": {
     "screen": "Two-lane chat view: Noa and Ari alternate; the learner takes one lane and the app voices the other. Tap any line for syllable chips and a gloss; a Swap button switches roles and re-inflects gendered forms.",
-    "data": "dialogs[] = {id, scene, turns:[{speaker: A|B, he, translit, en, gendered:[forms]}]} original ALEF scenes only; ALEF tags 20 scenes with the words they teach.",
+    "data": "dialogs[] = {id, scene, turns:[{speaker: A|B, he, translit, en, gendered:[forms]}]} original Aleph scenes only; Aleph tags 20 scenes with the words they teach.",
     "interaction": "Learner reads their lines aloud (no scoring claim), advances on tap or on a recognised phrase if speech recognition is added later; a cloze round hides the learner's own line.",
     "test": "Unit: each dialog alternates speakers, gendered forms exist for both voices, every word is in the lesson word list or flagged new, and no turn matches a TeachMeHebrew line."
    },
@@ -380,7 +380,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "listing only; pages not opened",
-   "notes": "Lyrics are third-party copyrighted; ALEF should link out, not embed."
+   "notes": "Lyrics are third-party copyrighted; Aleph should link out, not embed."
   },
   {
    "id": "gr-tmh-10",
@@ -401,7 +401,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "Pairs with the photo-scan lane. ALEF would need its own photographs."
+   "notes": "Pairs with the photo-scan lane. Aleph would need its own photographs."
   },
   {
    "id": "gr-tmh-11",
@@ -422,7 +422,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "An in-app 'request a phrase' would need a backend or at least an email link; no claim is made that ALEF has one."
+   "notes": "An in-app 'request a phrase' would need a backend or at least an email link; no claim is made that Aleph has one."
   },
   {
    "id": "gr-tmh-12",
@@ -443,7 +443,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "ALEF has its own FSRS-style scheduler. A CSV export of the learner's deck would be a trust feature."
+   "notes": "Aleph has its own FSRS-style scheduler. A CSV export of the learner's deck would be a trust feature."
   },
   {
    "id": "gr-tmh-13",
@@ -571,7 +571,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "listing only; story texts not read",
-   "notes": "ALEF would write its own tiny pointed readers using only taught words."
+   "notes": "Aleph would write its own tiny pointed readers using only taught words."
   },
   {
    "id": "gr-sh-02",
@@ -638,7 +638,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "Genesis 1 would be pointed text from a PD source in ALEF; the fit here is graduation to the priestly blessing opener."
+   "notes": "Genesis 1 would be pointed text from a PD source in Aleph; the fit here is graduation to the priestly blessing opener."
   },
   {
    "id": "gr-alh-03",
@@ -705,7 +705,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "mirror description only",
-   "notes": "Vocabulary and register are from 1965; ALEF would treat the form (dialog then substitution drill) as the idea."
+   "notes": "Vocabulary and register are from 1965; Aleph would treat the form (dialog then substitution drill) as the idea."
   },
   {
    "id": "gr-dli-01",
@@ -726,7 +726,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "Content is a short list of sounds; overlaps with the TeachMeHebrew sound page and ALEF's lane-3 drills."
+   "notes": "Content is a short list of sounds; overlaps with the TeachMeHebrew sound page and Aleph's lane-3 drills."
   },
   {
    "id": "gr-dli-02",
@@ -813,7 +813,7 @@
    "improvedName": "Five-rung item ladder with gender-aware typing",
    "spec": {
     "screen": "Lesson progress rail with five rungs. Each rung is a different exercise on the same eight items; the rail shows which rungs have been cleared for each item.",
-    "data": "exerciseLadder[] = {itemId, rung: hear|meaning|order|produce|type, passedAt}; item pool authored by ALEF; the type exercise accepts gendered variants via accepted[].",
+    "data": "exerciseLadder[] = {itemId, rung: hear|meaning|order|produce|type, passedAt}; item pool authored by Aleph; the type exercise accepts gendered variants via accepted[].",
     "interaction": "Items climb one rung per success and drop one on miss; the last rung feeds SRS. Reorder rung uses RTL word tiles; produce rung uses a prompt in the learner's language.",
     "test": "Unit: ladder state machine never skips a rung, accepted[] answers are normalised for niqqud and final forms, and reorder tiles are shuffled but always solvable."
    },
@@ -902,13 +902,13 @@
    "printable": null,
    "status": "proposed",
    "evidence": "listing only; videos not watched",
-   "notes": "Accessibility transcripts must still be available in ALEF; reveal-after-attempt is the compromise."
+   "notes": "Accessibility transcripts must still be available in Aleph; reveal-after-attempt is the compromise."
   },
   {
    "id": "gr-la-03",
    "source": "laits",
    "name": "Authentic voices: interviews with children, second-language learners and radio announcers",
-   "what": "A sound bites collection of interviews exposes learners to varied real speakers. ALEF would need its own consented recordings.",
+   "what": "A sound bites collection of interviews exposes learners to varied real speakers. Aleph would need its own consented recordings.",
    "axes": {
     "r": 50,
     "i": 700,
@@ -943,7 +943,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "CC BY-SA text; ALEF should not import the table, its own letters.json is the source."
+   "notes": "CC BY-SA text; Aleph should not import the table, its own letters.json is the source."
   },
   {
    "id": "gr-wb-02",
@@ -1050,7 +1050,7 @@
    "improvedName": "Register-tagged alternates",
    "spec": {
     "screen": "Word card shows primary and alternate with a register chip (everyday, formal, loan) and a short 'when' line.",
-    "data": "alternates[] = {he, register, note}; register assigned by ALEF's author, flagged unverified until a native reviewer signs off.",
+    "data": "alternates[] = {he, register, note}; register assigned by Aleph's author, flagged unverified until a native reviewer signs off.",
     "interaction": "Learner chooses which form fits a short context sentence; cards remember the choice.",
     "test": "Unit: every slash row in the source style maps to an alternates[] list with a register value from the allowed set."
    },
@@ -1123,7 +1123,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "read",
-   "notes": "The page's own labels are inconsistent (some pairs list female first); ALEF's control removes that ambiguity."
+   "notes": "The page's own labels are inconsistent (some pairs list female first); Aleph's control removes that ambiguity."
   },
   {
    "id": "gr-jm-03",

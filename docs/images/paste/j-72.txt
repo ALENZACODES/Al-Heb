@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 72 (command 372): J-0913.png to J-0925.png
+Aleph IMAGE RUN - BLOCK J 72 (command 372): J-0913.png to J-0925.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: srs.

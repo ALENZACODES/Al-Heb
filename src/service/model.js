@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF "Service": Siddur Coverage % and Follow-the-service cards. Pure functions plus one loader; no DOM.
+// Aleph "Service": Siddur Coverage % and Follow-the-service cards. Pure functions plus one loader; no DOM.
 // Decoding is NOT re-implemented: coverage consumes the graded lines from src/progress (readableNow -> gradeLines).
 // "Decodable" means every letter and vowel sign in the line has been taught. It does not mean fluent or fast.
 import { loadJSON } from '../curriculum/data.js';
@@ -13,7 +13,7 @@ export const TRADITION_LABELS = { israeli: 'Modern Israeli', sephardi: 'American
 export const MARKER_LABELS = { stand: 'Stand', sit: 'Sit', sing: 'Sing', silent: 'Silent' };
 export const VARIES = 'Stand, sit, sing or silent: varies by congregation';
 
-export const DRAFT_NOTICE = 'Draft, not reviewed by a rabbi, cantor or Hebrew teacher. This is ALEF\'s own simplified sequence of the texts it holds. The order in a real congregation differs: ask your rabbi, cantor or a friend in the room.';
+export const DRAFT_NOTICE = 'Draft, not reviewed by a rabbi, cantor or Hebrew teacher. This is Aleph\'s own simplified sequence of the texts it holds. The order in a real congregation differs: ask your rabbi, cantor or a friend in the room.';
 export const COPYRIGHT_NOTICE = 'No prayerbook text, layout or page numbers are used here. Published siddurim such as Mishkan T\'filah are copyrighted; this screen follows none of them.';
 export const COVERAGE_NOTE = '"Decodable" means you have been taught every letter and vowel sign in the line. It does not mean you read it fluently, quickly or aloud with the room.';
 
@@ -51,7 +51,7 @@ export function validateOrders(orders, byId, guide, hasGap) {
 
 /**
  * Siddur coverage for one order. `gradedLines` comes from src/progress/model.js readableNow(...).lines (decode.gradeLines).
- * Headline counts only lines ALEF holds; gaps are reported separately so nothing is overclaimed.
+ * Headline counts only lines Aleph holds; gaps are reported separately so nothing is overclaimed.
  * @param {any} order @param {Array<any>} gradedLines @param {Set<string>} known
  */
 export function coverage(order, gradedLines, known) {
@@ -75,7 +75,7 @@ export function coverage(order, gradedLines, known) {
 
 /** Plain-language sentence for a coverage result. */
 export function coverageSentence(title, c) {
-  return `${c.full} of the ${c.lines} lines ALEF holds for ${title.toLowerCase()} use only letters and signs you have been taught (${c.pct}% decodable).`;
+  return `${c.full} of the ${c.lines} lines Aleph holds for ${title.toLowerCase()} use only letters and signs you have been taught (${c.pct}% decodable).`;
 }
 
 /** Markers for a card: only those in data (each quoted from the guide). */
@@ -96,7 +96,7 @@ export function buildCards(orders, orderId, byId, tradition) {
     const markers = markersFor(orders, orderId, it.id);
     return {
       n: i + 1, of: o.items.length, id: it.id, moment: it.moment, title: e.title, ref: e.ref,
-      he: lines, tr, en, englishSource: e.englishSource === 'original-gloss' ? "ALEF's own plain gloss (project-owned, not reviewed)" : (e.englishSource ?? null), language: e.language,
+      he: lines, tr, en, englishSource: e.englishSource === 'original-gloss' ? "Aleph's own plain gloss (project-owned, not reviewed)" : (e.englishSource ?? null), language: e.language,
       markers, markerKnown: markers.length > 0,
     };
   });

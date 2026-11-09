@@ -1,4 +1,4 @@
-# ALEF verification sweep
+# Aleph verification sweep
 
 Fetch date: 2026-11-03/04 (sandbox UTC clock read 2026-11-04; the session date was 2026-11-03). Every VERIFIED row rests on a page or API response fetched in this session; the URL column is that page. Nothing was marked VERIFIED from memory. Raw fetches and the fetch log are in `~/research_notes/verification/raw/` and `fetchlog.tsv` (outside git).
 
@@ -31,7 +31,7 @@ Candle-lighting comparison is in section 1b below the table.
 | 1.02 | Hebcal rate limit | VERIFIED | 429 if >90 requests in a 10-second window; "free service; please be polite" | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
 | 1.03 | Hebcal API content licence/attribution/commercial use | VERIFIED | CC BY 4.0; "even commercially... give appropriate credit to Hebcal.com" | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
 | 1.04 | Separate Hebcal "terms of service" page exists | STILL UNVERIFIED | /home/about/terms returns 404; only developer-apis licence text and privacy policy found; no standalone ToS located | https://www.hebcal.com/home/about/terms (404) | 2026-11-03/04 |
-| 1.05 | Hebcal code libs licence (@hebcal/core GPL) | VERIFIED | "@hebcal/core... released under GPL License"; some newer libs BSD. NOTE: ALEF calendar.js is independent code so GPL does not attach unless @hebcal/core is bundled | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
+| 1.05 | Hebcal code libs licence (@hebcal/core GPL) | VERIFIED | "@hebcal/core... released under GPL License"; some newer libs BSD. NOTE: Aleph calendar.js is independent code so GPL does not attach unless @hebcal/core is bundled | https://www.hebcal.com/home/developer-apis | 2026-11-03/04 |
 | 1.06 | Hebcal location uses GeoNames IDs (geonameid), zip, or lat/long; elevation optional | VERIFIED | "GeoNames.org numeric ID, United States ZIP code, or latitude/longitude" | https://www.hebcal.com/home/195/shabbat-times-rest-api | 2026-11-03/04 |
 | 1.07 | GeoNames data: licence/commercial use | VERIFIED | cc-by; "commercial usage is allowed 'as is'"; credit GeoNames | https://www.geonames.org/export/ | 2026-11-03/04 |
 | 1.08 | Candle lighting 18 min default; 40 Jerusalem; 30 Haifa | VERIFIED | "18 minutes before sundown (40 for Jerusalem, 30 for Haifa and Zikhron Ya'akov)"; applies to Erev Shabbat and Erev Chag. NOTE: calendar.js only defines 18 and 40 constants; no Haifa/Zikhron 30 | https://www.hebcal.com/home/195/shabbat-times-rest-api | 2026-11-03/04 |

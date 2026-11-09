@@ -99,7 +99,7 @@ test("scheduleStudyReminder: fires at the chosen time via the injected show(), t
   assert.equal(shown.length, 0);
   t.advanceTo(local(2026, 11, 4, 9, 0));
   assert.equal(shown.length, 1);
-  assert.equal(shown[0].title, "ALEF: a few minutes of Hebrew");
+  assert.equal(shown[0].title, "Aleph: a few minutes of Hebrew");
   assert.equal(shown[0].o.route, "#/learn");
   assert.deepEqual(fired, [local(2026, 11, 4, 9, 0)]);
   assert.equal(N.status().next.getTime(), local(2026, 11, 5, 9, 0), "re-armed for Thursday");
@@ -347,7 +347,7 @@ test("card: Allow button requests permission on click only, then enables and sch
   assert.equal(N.status().scheduled, 1);
   t.advanceTo(local(2026, 11, 8, 7, 15));
   assert.equal(F.made.length, 1, "fired via the page constructor (no service worker in the fake)");
-  assert.equal(F.made[0].title, "ALEF: a few minutes of Hebrew");
+  assert.equal(F.made[0].title, "Aleph: a few minutes of Hebrew");
 });
 
 test("card: test-notification button shows one immediately; denied permission is explained", async () => {
@@ -355,7 +355,7 @@ test("card: test-notification button shows one immediately; denied permission is
   const { root, unmount } = await boot({ "notify.prefs": { enabled: true, hour: 9, minute: 0, days: [1] } }, { Notification: F });
   byId(root, "nt-test").fire("click");
   await waitFor(() => F.made.length === 1);
-  assert.equal(F.made[0].title, "ALEF test reminder"); assert.equal(F.made[0].options.tag, "alef-test");
+  assert.equal(F.made[0].title, "Aleph test reminder"); assert.equal(F.made[0].options.tag, "alef-test");
   assert.match(statusText(root), /Test notification sent/);
   unmount();
   const d = await boot({}, { Notification: fakeNotification("denied") });

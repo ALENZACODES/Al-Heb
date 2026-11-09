@@ -1,8 +1,8 @@
 # Ranked steals — Best App Starts (t1040u)
 
-Research author’s ranking: each app is #1 at one thing; steal exactly that for ALEF Hebrew.
+Research author’s ranking: each app is #1 at one thing; steal exactly that for Aleph Hebrew.
 
-| Rank | App | #1 at | Steal for ALEF | Wired? |
+| Rank | App | #1 at | Steal for Aleph | Wired? |
 |------|-----|-------|----------------|--------|
 | 1 | **Duolingo** | Time-to-first-win + finish | Lesson before account; celebration chain; **one** completion haptic | Yes — TRY→SAVE; haptic on streak only |
 | 2 | **Finch** | Emotional investment, no guilt | Name/create something early that learning feeds; missed day never shames | Yes — Day-1 “seder is lit / place stays held” |
@@ -20,4 +20,4 @@ Research author’s ranking: each app is #1 at one thing; steal exactly that for
 
 **Cautionary (do not copy):** LingQ / Anki / Rosetta Stone blank-slate or immersion-first starts without scaffolding.
 
-**Hebrew gap this owns:** Duolingo Hebrew has no formal aleph-bet/niqqud intro; HebrewPod101 walls behind email; Nemo is phrases. ALEF owns minute one with build + fade + reverence.
+**Hebrew gap this owns:** Duolingo Hebrew has no formal aleph-bet/niqqud intro; HebrewPod101 walls behind email; Nemo is phrases. Aleph owns minute one with build + fade + reverence.

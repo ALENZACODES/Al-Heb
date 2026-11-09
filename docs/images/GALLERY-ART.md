@@ -4,7 +4,7 @@ Order sheet: `docs/images/gallery-art.csv` (6 rows: 1 header, 5 pictures). Nothi
 
 ## Why
 
-The Aleph Gallery page (Jewish art and life, 1800 to today) now uses the ALEF house theme: deep olive green, gold `#D9A441`, paper cream `#F6F1E7`, Heebo, Frank Ruhl Libre and Gveret Levin. Two places on that page still use placeholders: the four-panel Moses comic (emoji today) and the Reform service section (no picture today). This sheet orders one matching set for those slots, drawn in the same hand as the golden olive tree (`assets/img/gen/OPP_two_04`).
+The Aleph Gallery page (Jewish art and life, 1800 to today) now uses the Aleph house theme: deep olive green, gold `#D9A441`, paper cream `#F6F1E7`, Heebo, Frank Ruhl Libre and Gveret Levin. Two places on that page still use placeholders: the four-panel Moses comic (emoji today) and the Reform service section (no picture today). This sheet orders one matching set for those slots, drawn in the same hand as the golden olive tree (`assets/img/gen/OPP_two_04`).
 
 ## Where to save
 

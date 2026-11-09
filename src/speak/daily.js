@@ -2,14 +2,14 @@
 // For the home screen's Today card (the home owner calls loadDailyCardFromStore or buildDailyCard) and for the "Today's five"
 // choice on the Say it screen. buildDailyCard is pure (no clock, no DOM, no store): the caller passes the date key.
 // Items come only from data/speak/sets/*.json (copied from data/vocab/words.json, a machine-built draft). "Weak" comes from
-// soundReport() in model.js, which counts a browser recognizer's output that ALEF has not verified for Hebrew; the card says so.
+// soundReport() in model.js, which counts a browser recognizer's output that Aleph has not verified for Hebrew; the card says so.
 import { STORE_KEY, coerceState, normalizeHe, soundClass, soundLabel, soundReport } from './model.js';
 import { loadSetsIndex, loadSet } from './loader.js';
 
 export const DAILY_SIZE = 5;
 export const DAILY_SETS_PER_DAY = 3;
 export const DAILY_PREFIX = 'daily:';
-export const DAILY_NOTE = 'Draft: words and vowel points were built by a program and are not teacher-checked. "Weak sounds" are counted from a browser recognizer that ALEF has not verified for Hebrew.';
+export const DAILY_NOTE = 'Draft: words and vowel points were built by a program and are not teacher-checked. "Weak sounds" are counted from a browser recognizer that Aleph has not verified for Hebrew.';
 
 /** Local calendar day as YYYY-MM-DD from epoch milliseconds. */
 export function dayKeyLocal(ms) {

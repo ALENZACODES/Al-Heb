@@ -1,4 +1,4 @@
-# ALEF v0: launch note for John (2026-11-04, memory-chain section refreshed about 21:15)
+# Aleph v0: launch note for John (2026-11-04, memory-chain section refreshed about 21:15)
 
 Plain version of where things stand if you ship a tiny first release and share the link. Each claim names the doc it comes from. Counts drift because other work is going on in the repo; re-check before you quote one.
 

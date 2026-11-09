@@ -1,5 +1,5 @@
 // @ts-check
-// Hebrew -> Latin transliteration for ALEF (lane 3).
+// Hebrew -> Latin transliteration for Aleph (lane 3).
 //
 //   transliterate(pointedHebrew, {scheme, tradition, ...options}) -> string
 //

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 42: He cursive set
+Aleph IMAGE RUN - COMMAND 42: He cursive set
 
 ATTACH: REF_cursive_he.png (attach once, before pasting this).
 

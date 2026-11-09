@@ -1,4 +1,4 @@
-"""Hand-authored stroke centerlines (medians) for ALEF letters.  DRAFT -- NOT NATIVE-VALIDATED.
+"""Hand-authored stroke centerlines (medians) for Aleph letters.  DRAFT -- NOT NATIVE-VALIDATED.
 
 Coordinates: 0..1000 box, y down. Each letter -> list of strokes in writing order; each stroke is a list of
 (x, y) control points along the centerline. A point written c(x, y) is a sharp CORNER (spline is split there).

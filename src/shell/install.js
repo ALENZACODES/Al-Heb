@@ -1,5 +1,5 @@
 // @ts-check
-// "Install ALEF" helper: capture beforeinstallprompt, detect iOS Safari, remember a dismissal under store key "install.v1".
+// "Install Aleph" helper: capture beforeinstallprompt, detect iOS Safari, remember a dismissal under store key "install.v1".
 // DOM-free and injectable (global, store, clock) so it runs in Node tests. See docs/install/ROUTES.md.
 //  - Chromium (Android, desktop) fires `beforeinstallprompt`; the saved event's prompt() must be called from a click.
 //  - iOS/iPadOS Safari has NO install prompt API: the learner uses Share, then "Add to Home Screen". We can only show instructions.
@@ -78,8 +78,8 @@ export function installStatus(p) {
 
 /** Steps for the iOS card. Wording matches Apple's published flow (iOS 16.4 and later); not verified on a device here. */
 export const IOS_STEPS = Object.freeze([
-  "Open ALEF in Safari.",
+  "Open Aleph in Safari.",
   "Tap the Share button (the square with an arrow) at the bottom of the screen, or at the top on an iPad.",
   "Scroll down and tap \"Add to Home Screen\".",
-  "Tap \"Add\". Then open ALEF from the new icon on your Home Screen.",
+  "Tap \"Add\". Then open Aleph from the new icon on your Home Screen.",
 ]);

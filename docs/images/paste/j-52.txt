@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 52 (command 352): J-0661.png to J-0673.png
+Aleph IMAGE RUN - BLOCK J 52 (command 352): J-0661.png to J-0673.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_havdalah, festival_synagogue-interior.

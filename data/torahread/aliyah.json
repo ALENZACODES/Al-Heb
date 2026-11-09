@@ -2,7 +2,7 @@
   "schema": "alef-torahread-aliyah/1",
   "status": "draft",
   "reviewed": false,
-  "note": "Written for ALEF from general knowledge of common synagogue practice. NOT reviewed by a rabbi, cantor or gabbai. Customs differ between communities and even between neighbouring synagogues. Where this file is not sure a custom is shared, it says 'varies' or 'unknown' on purpose. The Hebrew of the blessings is NOT stored here: it comes from data/corpus/registry.json by id.",
+  "note": "Written for Aleph from general knowledge of common synagogue practice. NOT reviewed by a rabbi, cantor or gabbai. Customs differ between communities and even between neighbouring synagogues. Where this file is not sure a custom is shared, it says 'varies' or 'unknown' on purpose. The Hebrew of the blessings is NOT stored here: it comes from data/corpus/registry.json by id.",
   "intro": "An aliyah (plural aliyot, 'going up') is being called to the Torah scroll to say the blessings before and after a section of the reading. You do not read the scroll yourself: in most congregations a designated reader (ba'al koreh) does that. Rehearse the steps below, then ask the person in charge (the gabbai, or the rabbi or cantor) how your congregation does each one.",
   "steps": [
     {

@@ -1,6 +1,6 @@
 {
-  "name": "ALEF",
-  "short_name": "ALEF",
+  "name": "Aleph",
+  "short_name": "Aleph",
   "description": "A free Hebrew reading and speaking course for synagogue readers and Israel travellers. Works offline. Content is a draft, not yet reviewed by a Hebrew teacher or clergy.",
   "start_url": "./#/",
   "scope": "./",

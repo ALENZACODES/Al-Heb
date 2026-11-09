@@ -1,6 +1,6 @@
 # Questions for a rabbi or cantor
 
-ALEF is a free Hebrew reading and prayer-learning app used by learners from many American synagogues. A machine and a
+Aleph is a free Hebrew reading and prayer-learning app used by learners from many American synagogues. A machine and a
 non-clergy author built the content; no clergy member has reviewed it. Please answer in the margin. Examples are in the app.
 Reviewer: ____________  Movement/community: ____________  Date: ________
 

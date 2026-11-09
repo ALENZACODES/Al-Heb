@@ -19,7 +19,7 @@ For the Ashkenazi setting, should the app show cholam as `o` (sholom, Boruch-sty
 - Adonai: `adonoy` in `transliterate.js` line 138 and in `data/pronunciation/drills.json` ("Adonoy"). This `oy` comes from kamatz + yod (Ashkenazi kamatz = o, then the yod diphthong), not from cholam. Do not confuse the two when deciding.
 
 Prose that mentions the choice:
-- `data/traditions/guide.json` line 59: "Ashkenazi has regional dialects. ALEF models one common siddur style; your community's may differ (for example oy or ey for cholam)."
+- `data/traditions/guide.json` line 59: "Ashkenazi has regional dialects. Aleph models one common siddur style; your community's may differ (for example oy or ey for cholam)."
 - `data/traditions/sounds.json` has a cholam entry; `data/traditions/sources.json` cites "cholam and tsere regional values".
 
 Internal inconsistency to fix whichever way you decide: `prayerwords.json` shows haolam with `OY` and Torah with `TOY-roh / TOH-roh`, but Shalom with `SHO-lom` and the `doh` of Adonoy with `o`. A learner sees cholam as `oy` in two words and `o` in two others, in the same tradition. The transliterator and the prayer-word cards disagree.

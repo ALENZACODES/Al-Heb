@@ -31,7 +31,7 @@ const NONFINAL_WITH_FINAL = new Set([0x05db, 0x05de, 0x05e0, 0x05e4, 0x05e6]); /
 const isVowel = (c) => (c >= 0x05b0 && c <= 0x05bb) || c === 0x05c7;
 const isAccent = (c) => c >= 0x0591 && c <= 0x05af;
 const isMark = (c) => (c >= 0x0591 && c <= 0x05bd) || c === 0x05bf || c === 0x05c1 || c === 0x05c2 || c === 0x05c4 || c === 0x05c5 || c === 0x05c7;
-const MAQAF = 0x05be, SOF = 0x05c3, PASEQ = 0x05c0, SHIN = 0x05e9, ALEF = 0x05d0, AYIN = 0x05e2, DAGESH = 0x05bc, SHIN_DOT = 0x05c1, SIN_DOT = 0x05c2;
+const MAQAF = 0x05be, SOF = 0x05c3, PASEQ = 0x05c0, SHIN = 0x05e9, Aleph = 0x05d0, AYIN = 0x05e2, DAGESH = 0x05bc, SHIN_DOT = 0x05c1, SIN_DOT = 0x05c2;
 const isControl = (c) => (c < 0x20 && c !== 0x0a) || (c >= 0x7f && c <= 0x9f) || (c >= 0x200b && c <= 0x200f) || (c >= 0x202a && c <= 0x202e) || (c >= 0x2060 && c <= 0x2064) || c === 0xfeff || c === 0x034f || c === 0xa0;
 
 /** Codes that count as hard failures (the rest are warnings). */
@@ -79,7 +79,7 @@ export function checkHebrew(s) {
       for (const m of marks) { if (seen.has(m)) push('double-mark', i, String.fromCodePoint(c, ...marks)); seen.add(m); }
       if ((seen.has(SHIN_DOT) || seen.has(SIN_DOT)) && c !== SHIN) push('shin-dot-off-shin', i, String.fromCodePoint(c, ...marks));
       if (seen.has(SHIN_DOT) && seen.has(SIN_DOT)) push('sin-and-shin', i, String.fromCodePoint(c, ...marks));
-      if (seen.has(DAGESH) && (c === ALEF || c === AYIN)) push('dagesh-on-alef-ayin', i, String.fromCodePoint(c, ...marks));
+      if (seen.has(DAGESH) && (c === Aleph || c === AYIN)) push('dagesh-on-alef-ayin', i, String.fromCodePoint(c, ...marks));
       i = j; continue;
     }
     if (isMark(c)) { push('mark-no-letter', i, 'U+' + c.toString(16).toUpperCase().padStart(4, '0')); i++; continue; }

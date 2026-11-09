@@ -1,4 +1,4 @@
-// Cantillation (trope, te'amim) parser for the ALEF corpus (stage 2).
+// Cantillation (trope, te'amim) parser for the Aleph corpus (stage 2).
 //   node tools/corpus/trope.mjs     # writes data/corpus/trope/{table,priestly-blessing,shema}.json and data/corpus/reader/*.json
 //
 // Input: the raw UXLC verse strings already stored in data/corpus/source-snapshot.json (Tanach.us, "may be viewed or

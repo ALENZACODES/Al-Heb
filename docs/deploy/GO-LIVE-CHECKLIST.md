@@ -1,4 +1,4 @@
-# Go-live checklist: ALEF on Render
+# Go-live checklist: Aleph on Render
 
 The review site is live at https://alef-review.onrender.com/ (Render, auto-deploys from `main`). This checklist is the per-deploy verification: push to `main`, wait for the deploy, confirm the served version, run the smoke test. The archived Cloudflare Pages path — account creation, dashboard steps — is in `docs/deploy/CLOUDFLARE-PAGES.md` and is not the live host. The local build and check were run on 2026-11-04 (`node tools/deploy/build_site.mjs` then `node tools/deploy/check-deploy.mjs --root dist`: 44 of 44 checks passed, 6 warnings about origins named in code, which are expected).
 

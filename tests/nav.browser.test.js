@@ -53,7 +53,7 @@ test('nav at 320 and 390 px: <=5 controls (v0 only), current marked, More menu b
       assert.equal(await page.locator('#more-btn[data-current]').count(), 1);
       assert.equal(await page.locator('main .preview-banner').count(), 0, 'no banner on a v0 route');
       await page.goto(base + '#/read'); await page.waitForSelector('body[data-route="read"]');
-      assert.equal(await page.locator('main .preview-banner').count(), 0, 'no preview banner: every page is shown as a finished part of ALEF (2026-11-08)');
+      assert.equal(await page.locator('main .preview-banner').count(), 0, 'no preview banner: every page is shown as a finished part of Aleph (2026-11-08)');
       assert.equal(await page.locator('#more-btn[data-current]').count(), 1, 'a preview page marks More as current');
       assert.equal(await page.locator('#nav a[aria-current]').count(), 0);
       await page.goto(base + '#/learn'); await page.waitForSelector('body[data-route="learn"]');

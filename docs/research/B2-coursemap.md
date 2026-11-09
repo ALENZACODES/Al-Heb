@@ -1,6 +1,6 @@
 # B2: syllabus page and time-budget page
 
-Board support: indirect. Neither has an R number. They were proposed in the task brief; the nearest board text is "R focus, C: Gameplan budget vs what ALEF has today" (lessons, hours) and the R recommendation that nothing claim "B1". Built as preview only.
+Board support: indirect. Neither has an R number. They were proposed in the task brief; the nearest board text is "R focus, C: Gameplan budget vs what Aleph has today" (lessons, hours) and the R recommendation that nothing claim "B1". Built as preview only.
 
 ## What exists
 - `src/coursemap/model.js` (pure): `syllabus`, `timeTotals`, `budget`, `toMarkdown`, `DEFAULT_RANGE = {400, 600}` (a parameter).
@@ -11,7 +11,7 @@ Board support: indirect. Neither has an R number. They were proposed in the task
 
 ## Real (RAN)
 - 125 lessons, 3,325 estimated minutes = 55.4 hours of lesson time (all of it from `estMinutes`, summed by the code).
-- That is 9% to 14% of a 400 to 600 hour range. The page says the remaining hours would have to come from review, listening, reading and speaking, which nothing in ALEF measures.
+- That is 9% to 14% of a 400 to 600 hour range. The page says the remaining hours would have to come from review, listening, reading and speaking, which nothing in Aleph measures.
 
 ## Draft / unverified
 - The 400 to 600 hour range has no source in this repo. The page labels it unverified. Change `DEFAULT_RANGE` when a source is chosen.

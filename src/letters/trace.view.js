@@ -1,4 +1,4 @@
-// ALEF lane 2 view: letter picker, print/cursive tracing, confusable drill, SI-1452 typing trainer.
+// Aleph lane 2 view: letter picker, print/cursive tracing, confusable drill, SI-1452 typing trainer.
 // Plain DOM, no dependencies. export mount(root, ctx) -> unmount.
 // ctx (from lane 8 shell): {settings, store, audio, route, t}. Everything on ctx is optional here.
 // Test/offline hooks: ctx.letters, ctx.confusables, ctx.keyboard, ctx.consonants may supply already-loaded data.

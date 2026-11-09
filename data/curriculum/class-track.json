@@ -1,7 +1,7 @@
 {
  "schema": "alef-class-track/1",
  "status": "draft-not-educator-reviewed",
- "note": "ALEF original 10-week adult reading track. Not clergy or educator reviewed. Not derived from any book text; shape (a few letters and vowels a week, letters to words to sentences, siddur focus) follows only public course descriptions (docs/curriculum/class-track/SOURCES.md). Hebrew comes from the corpus registry by id only.",
+ "note": "Aleph original 10-week adult reading track. Not clergy or educator reviewed. Not derived from any book text; shape (a few letters and vowels a week, letters to words to sentences, siddur focus) follows only public course descriptions (docs/curriculum/class-track/SOURCES.md). Hebrew comes from the corpus registry by id only.",
  "sessionMinutes": 60,
  "teacherPlan": [
   {

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 33 (command 333): J-0413.png to J-0425.png
+Aleph IMAGE RUN - BLOCK J 33 (command 333): J-0413.png to J-0425.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_home-things-set01.

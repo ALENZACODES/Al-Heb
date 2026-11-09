@@ -1,5 +1,5 @@
 // @ts-check
-// Hebrew text normalisation for the ALEF corpus. Pure functions, no DOM, no I/O.
+// Hebrew text normalisation for the Aleph corpus. Pure functions, no DOM, no I/O.
 //
 // NORMALISATION RULE (documented; tests/corpus.hebrew.test.js enforces it):
 //   1. Display text (`he`) is POINTED text WITHOUT cantillation. Removed: ta'amim U+0591-U+05AF,

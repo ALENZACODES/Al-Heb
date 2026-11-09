@@ -48,7 +48,7 @@ export function chunk(items, n = MAX_ITEMS, maxChars = MAX_CHARS) {
 
 export function render(nn, command, items) {
   const L = [];
-  L.push(`ALEF IMAGE RUN - INTERMEDIATE ${nn} (command ${command}): lesson scenes ${items[0].lesson} to ${items[items.length - 1].lesson}`);
+  L.push(`Aleph IMAGE RUN - INTERMEDIATE ${nn} (command ${command}): lesson scenes ${items[0].lesson} to ${items[items.length - 1].lesson}`);
   L.push('');
   L.push('No attachments are needed; everything is described in words below. These are the opening and closing scene pictures of the intermediate prayer lessons.');
   L.push('');

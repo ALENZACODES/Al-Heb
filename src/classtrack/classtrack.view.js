@@ -1,4 +1,4 @@
-// ALEF Class track: a 10-week adult reading plan (DRAFT, ALEF original). Week list with progress from the store,
+// Aleph Class track: a 10-week adult reading plan (DRAFT, Aleph original). Week list with progress from the store,
 // a printable per-week handout and a one-page teacher/cantor session plan. No external dependencies.
 import { h, heSpan } from '../shell/ui.js';
 import { niceId } from '../progress/model.js';
@@ -107,13 +107,13 @@ export function mount(root, ctx = {}) {
         h('article', { class: 'ct-sheet card', 'aria-label': `Week ${w.week} handout` },
           ...weekHeader(i),
           h('h3', {}, 'This week'), list(w.goals),
-          h('h3', {}, 'Lessons in ALEF'), list([...w.lessons.map((id) => `${id}: ${lessonTitle(id)}`), ...(w.stretch || []).map((id) => `Extra: ${id}: ${lessonTitle(id)}`)]),
+          h('h3', {}, 'Lessons in Aleph'), list([...w.lessons.map((id) => `${id}: ${lessonTitle(id)}`), ...(w.stretch || []).map((id) => `Extra: ${id}: ${lessonTitle(id)}`)]),
           h('h3', {}, `${w.readAloud.mode === 'listen' ? 'Listen to' : 'Read aloud'}`),
           ...(w.readAloud.mode === 'listen' ? [h('p', {}, `Listen to: ${ra.map((t) => t.title).join('; ')}. Do not read it yet.`)] : ra.flatMap((t) => [h('p', { class: 'small' }, t.title), ...t.lines.map((l) => heSpan(l, 'he ct-he'))])),
           h('h3', {}, 'Homework'), h('ul', { class: 'ct-checks' }, ...w.homework.map((x) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `${x.label} (about ${x.minutes} min)`))),
           h('h3', {}, 'Can you...'), h('ul', { class: 'ct-checks' }, ...w.canYou.map((c) => h('li', {}, h('span', { class: 'ct-box', 'aria-hidden': 'true' }), `...${c}?`))),
           h('p', { class: 'small' }, 'Culture note: ', w.culture),
-          h('p', { class: 'small' }, 'ALEF class track: original plan, draft, not reviewed by an educator.')));
+          h('p', { class: 'small' }, 'Aleph class track: original plan, draft, not reviewed by an educator.')));
     }
 
     function renderTeacher(i) {
@@ -129,7 +129,7 @@ export function mount(root, ctx = {}) {
           ...(w.readAloud.mode === 'listen' ? [h('p', {}, ra.map((t) => t.title).join('; '))] : ra.flatMap((t) => [h('p', { class: 'small' }, t.title), ...t.lines.map((l) => heSpan(l, 'he ct-he'))])),
           h('h3', {}, 'Common errors to listen for'),
           er.gaps.length || er.kinds.length ? h('ul', {}, ...er.gaps.map((g) => h('li', {}, `${g.title}: ${g.trap}`)), ...er.kinds.map((k) => h('li', {}, `${k.kind}: ${k.hint}`))) : h('p', {}, 'No specific error data for this week.'),
-          h('p', { class: 'small' }, 'Error text comes from ALEF\'s sound-gap and hints data, which is itself a draft written from general knowledge and not checked with learners.'),
+          h('p', { class: 'small' }, 'Error text comes from Aleph\'s sound-gap and hints data, which is itself a draft written from general knowledge and not checked with learners.'),
           h('h3', {}, 'Homework to give'), list(w.homework.map((x) => `${x.label} (about ${x.minutes} min)`)),
           h('h3', {}, 'Self-check at the end'), list(w.canYou.map((c) => `Can you ${c}?`)),
           h('p', { class: 'small' }, 'Culture note: ', w.culture)));

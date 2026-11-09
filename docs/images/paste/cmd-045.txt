@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 45: Chet cursive set
+Aleph IMAGE RUN - COMMAND 45: Chet cursive set
 
 ATTACH: REF_cursive_chet.png (attach once, before pasting this).
 

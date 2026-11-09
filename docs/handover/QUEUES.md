@@ -1,4 +1,4 @@
-# ALEF — Open Work Queues
+# Aleph — Open Work Queues
 
 Pointers and counts as of the snapshot: **2026-11-07, 16:26 EST**. The queue files themselves live on the build machine (paths below) and are worked in place; their substance is summarized here so the shape of the remaining work survives without the machine. The governing programme document is the goal file: `~/workspace/goals/alef-at-9-5-production-quality-hebrew-studio/GOAL.md` (the 9.5 mandate, the 7-dimension rubric, and the 20-item gap ledger G1–G20).
 

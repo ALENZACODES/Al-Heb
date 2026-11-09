@@ -1,6 +1,6 @@
 # Backup reminder
 
-ALEF keeps progress only in this browser on this device. Nothing copies it anywhere automatically, and no screen may say or imply
+Aleph keeps progress only in this browser on this device. Nothing copies it anywhere automatically, and no screen may say or imply
 otherwise. The only backup is the file the learner downloads from Settings > Back up, restore or delete.
 
 ## What the learner sees
@@ -9,7 +9,7 @@ otherwise. The only backup is the file the learner downloads from Settings > Bac
 - After a download, the card stays away until **5 more** lessons are finished.
 - "Not now" hides it for **7 days**.
 - The card links to Settings. It never claims anything was saved for them.
-- The Settings message after a download says the file is only as safe as where it is kept and that ALEF does not make backups by itself.
+- The Settings message after a download says the file is only as safe as where it is kept and that Aleph does not make backups by itself.
 
 ## Code
 

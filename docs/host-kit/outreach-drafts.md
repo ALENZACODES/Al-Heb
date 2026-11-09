@@ -6,7 +6,7 @@ Rules followed here:
 - Only facts from the user's competitor analysis (`~/research_notes/competitor/competitor-analysis.txt`, section "Toronto inspiration", read from the congregations' public sites on 3 Nov 2026 via a web index) appear below. Each fact has a source tag in square brackets.
 - No email addresses or phone numbers are included. Use the contact page or published contact route on each congregation's own site.
 - Facts were not re-verified live. Programme details can change. John should check each site before sending.
-- Placeholders in [brackets] are for John to fill. Do not claim anything about ALEF that the partner sheet does not say.
+- Placeholders in [brackets] are for John to fill. Do not claim anything about Aleph that the partner sheet does not say.
 - Do not name or compare other programmes. Do not promise audio per tradition; it is not ready.
 
 ## Fact list with sources
@@ -37,15 +37,15 @@ Channel: the lifelong-learning contact route on holyblossom.org. Addressed to th
 
 Dear Dr. Kozierok,
 
-My name is John Khan. I am a mortgage broker and data scientist in the GTA, and I have built a free Hebrew-reading course called ALEF. It runs on a phone, works offline once opened, and has no accounts or fees.
+My name is John Khan. I am a mortgage broker and data scientist in the GTA, and I have built a free Hebrew-reading course called Aleph. It runs on a phone, works offline once opened, and has no accounts or fees.
 
 I noticed that Holy Blossom's fall guide lists a five-part lunch-hour Hebrew series for refreshing and updating Hebrew [F3] and the HBT 101 series for newer members [F2]. I did not find a beginner Hebrew-reading offer on the site for January or February 2027 [F4]; I may have missed it, and I would be glad to be corrected.
 
 Would you be open to a short conversation about two ideas?
-1. ALEF as a free practice companion that members use between sessions of a class you already run.
+1. Aleph as a free practice companion that members use between sessions of a class you already run.
 2. A small five-week cohort, hosted at Holy Blossom or online, led by someone from your own teaching team, using a facilitator guide and settings sheet I will provide. You would choose the pronunciation tradition and everything about customs and prayer.
 
-I should be clear that ALEF is new, has not been reviewed by clergy or educators, and I would value your educators' critical read before any use with members. I would also share a one-page partner sheet and a feedback form.
+I should be clear that Aleph is new, has not been reviewed by clergy or educators, and I would value your educators' critical read before any use with members. I would also share a one-page partner sheet and a feedback form.
 
 Thank you for considering it. [John to add how he wants to be reached.]
 
@@ -61,13 +61,13 @@ Channel: the contact form on cityshul.ca.
 
 Hello,
 
-I am John Khan, a Toronto-area mortgage broker and data scientist who built ALEF, a free Hebrew-reading course that runs on a phone, works offline once opened, and has no accounts.
+I am John Khan, a Toronto-area mortgage broker and data scientist who built Aleph, a free Hebrew-reading course that runs on a phone, works offline once opened, and has no accounts.
 
 I read on your site that City Shul is a Reform congregation in downtown Toronto where "you don't need to be an expert to participate" [F6, F9], and that a New Members Shabbat Service is listed for November 14 [F7]. I did not find an adult Hebrew-reading class on the current site [F8], so I wanted to ask if a short, free cohort might be useful.
 
 One idea: a four- or five-week "follow the service" cohort that your own leader runs, using our printed facilitator guide and a settings sheet, with learners practising on their own phones between sessions. You would decide the pronunciation, the texts and whether it happens at all.
 
-ALEF is a draft: it has not been reviewed by clergy or educators, and recorded audio for different traditions is not ready, so your leader's voice would be the model. I would send a one-page sheet and a feedback form, and would take your comments seriously.
+Aleph is a draft: it has not been reviewed by clergy or educators, and recorded audio for different traditions is not ready, so your leader's voice would be the model. I would send a one-page sheet and a feedback form, and would take your comments seriously.
 
 If this is not a fit, no problem at all. [John to add how he wants to be reached.]
 
@@ -83,11 +83,11 @@ Channel: the contact route and email list on thejunctionshul.org. This is a smal
 
 Hello,
 
-I am John Khan, a Toronto-area mortgage broker and data scientist. I built ALEF, a free Hebrew-reading course for phones. It works offline once opened and needs no accounts.
+I am John Khan, a Toronto-area mortgage broker and data scientist. I built Aleph, a free Hebrew-reading course for phones. It works offline once opened and needs no accounts.
 
-Your bulletin mentions help with learning to read Hebrew for Bar and Bat Mitzvah families [F11]. If it would be useful, I can give you a one-page printable sheet that families can use to start reading Hebrew with ALEF before or alongside any teacher you arrange. There is nothing to set up, no cost, and nothing to integrate.
+Your bulletin mentions help with learning to read Hebrew for Bar and Bat Mitzvah families [F11]. If it would be useful, I can give you a one-page printable sheet that families can use to start reading Hebrew with Aleph before or alongside any teacher you arrange. There is nothing to set up, no cost, and nothing to integrate.
 
-ALEF is a draft and has not been reviewed by clergy or educators. If your leaders would rather look it over first, I would be glad to send the guide and sheets for review.
+Aleph is a draft and has not been reviewed by clergy or educators. If your leaders would rather look it over first, I would be glad to send the guide and sheets for review.
 
 Thank you for your time. [John to add how he wants to be reached.]
 
@@ -97,11 +97,11 @@ John Khan
 ---
 
 ## Short message (any congregation, social or form)
-"Hi, I am John Khan, a GTA mortgage broker and data scientist. I built ALEF, a free, offline, no-account Hebrew-reading course. Congregations can run it as a short cohort between classes. It is a draft and has not been reviewed by clergy or educators. If your learning team would like a one-page sheet, I would be glad to send it. [John to add contact preference.]"
+"Hi, I am John Khan, a GTA mortgage broker and data scientist. I built Aleph, a free, offline, no-account Hebrew-reading course. Congregations can run it as a short cohort between classes. It is a draft and has not been reviewed by clergy or educators. If your learning team would like a one-page sheet, I would be glad to send it. [John to add contact preference.]"
 
 ## Before sending: John's checklist
 - [ ] Re-read each congregation's site; confirm each fact is still correct
 - [ ] Remove any fact you cannot re-confirm
-- [ ] Add the ALEF address and your own contact line
+- [ ] Add the Aleph address and your own contact line
 - [ ] Decide how you introduce yourself (the drafts say mortgage broker and data scientist); nothing here says you are new to this work
 - [ ] Attach the partner sheet (print to PDF from `partner-sheet.html`)

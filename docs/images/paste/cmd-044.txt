@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 44: Zayin cursive set
+Aleph IMAGE RUN - COMMAND 44: Zayin cursive set
 
 ATTACH: REF_cursive_zayin.png (attach once, before pasting this).
 

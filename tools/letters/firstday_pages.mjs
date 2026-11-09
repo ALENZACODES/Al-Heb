@@ -79,7 +79,7 @@ h1{font-size:22pt;margin:0 0 2mm}h2{font-size:13pt;margin:3.5mm 0 1.5mm}h3{font-
 }
 
 export function pageShell({ title, body, n, total, fields = true, set = 'workbook', draft = DRAFT, fonts = FONTS_NOTE }) {
-  return `<section class="page" data-page="${n}"><div class="hd"><span><b>ALEF</b> &middot; ${esc(set)} &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>${esc(draft)} ${esc(fonts)}</span><span>${n} / ${total}</span></div></section>`;
+  return `<section class="page" data-page="${n}"><div class="hd"><span><b>Aleph</b> &middot; ${esc(set)} &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>${esc(draft)} ${esc(fonts)}</span><span>${n} / ${total}</span></div></section>`;
 }
 
 export function wrapHtml({ title, css, pages, set, draft, fonts }) {
@@ -163,7 +163,7 @@ export function buildFirstDayHtml(paperId) {
   pages.push({ kind: 'ladder', title: 'Ladder, stages 1-2', fields: true, body: `<p>Read each word aloud, then tick it. Stage 1 words use only the letters above; from step 4 on, other letters and signs appear (follow the gloss and the key). ${esc(m.passRule)}</p>${m.stages.slice(0, 2).map(stageHtml).join('')}` });
   pages.push({ kind: 'ladder', title: 'Ladder, stages 3-4', fields: true, body: `<p>Now the vowel signs are gone, as in a newspaper or a street sign. Try each word from its letters and meaning; peek at the key only for stage 3 words.</p>${m.stages.slice(2).map(stageHtml).join('')}<h3>Key: all ${m.stepCount} words with their vowel signs</h3>${key(m.stages)}<p class="small">${esc(m.ladderNote)}</p>` });
 
-  const html = wrapHtml({ title: `ALEF first 10 minutes (${paper.label})`, css, pages, set: 'First 10 minutes', draft: DRAFT });
+  const html = wrapHtml({ title: `Aleph first 10 minutes (${paper.label})`, css, pages, set: 'First 10 minutes', draft: DRAFT });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model: m };
 }
 

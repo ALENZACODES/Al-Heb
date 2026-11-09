@@ -1,6 +1,6 @@
 {
   "schema": "alef-firstwords/1",
-  "status": "DRAFT: Hebrew and transliteration copied from the existing ALEF lexicon. Short English glosses and use prompts are editorial and native-educator review is pending.",
+  "status": "DRAFT: Hebrew and transliteration copied from the existing Aleph lexicon. Short English glosses and use prompts are editorial and native-educator review is pending.",
   "attribution": "Source IDs and pointed Hebrew: data/vocab/index.json; derives from Wiktionary/Kaikki (CC BY-SA 4.0) and FrequencyWords. See docs/vocab/LICENSES.md and data/vocab/attribution.json.",
   "count": 240,
   "starterCount": 24,

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 59 (command 359): J-0746.png to J-0757.png
+Aleph IMAGE RUN - BLOCK J 59 (command 359): J-0746.png to J-0757.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: letter_alt, vowel_alt.

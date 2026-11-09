@@ -1,7 +1,7 @@
 {
  "schema": "alef-prayer-cards-1",
  "status": "draft-not-clergy-reviewed",
- "note": "Original short reflections written for ALEF (Lane 1, 2026-11-04) in the spirit of book/opening-prayer.txt. They are NOT reviewed by clergy, a rabbi or a native Hebrew speaker and are not liturgy. The Hebrew phrase in each card is a verbatim slice of a data/corpus/registry.json entry (referenced by registryId); registry statuses vary (tests/calendar.cards.test.js checks the slice is contained in the entry). Glosses are plain English renderings written for ALEF, not published translations. Card pools are 23 long so a given card does not repeat on the same weekday.",
+ "note": "Original short reflections written for Aleph (Lane 1, 2026-11-04) in the spirit of book/opening-prayer.txt. They are NOT reviewed by clergy, a rabbi or a native Hebrew speaker and are not liturgy. The Hebrew phrase in each card is a verbatim slice of a data/corpus/registry.json entry (referenced by registryId); registry statuses vary (tests/calendar.cards.test.js checks the slice is contained in the entry). Glosses are plain English renderings written for Aleph, not published translations. Card pools are 23 long so a given card does not repeat on the same weekday.",
  "femaleVariants": {
   "m01": {
    "from": "מוֹדֶה",

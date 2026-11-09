@@ -1,9 +1,9 @@
-# ALEF — Beginner ladder (LOCKED to t1039u first-open)
+# Aleph — Beginner ladder (LOCKED to t1039u first-open)
 
 **Entry:** Splash **שָׁלוֹם** → ≤4 routing screens → Minute One `#/firstwin` (build **אבא**) before Save/Personalise. (t1040u)  
 **Registers:** joyful drills vs reverent prayer (no XP/mascots on sacred text).  
 **Audio kinds:** `letter` · `letter-lecture` · `syllable` · `word` · `line` · `prayer` → `audio/<m|f>/<tradition>/<kind>/<id>.mp3`.  
-**Freeze:** cast + production voices unchanged; ALEF cream/navy colors.
+**Freeze:** cast + production voices unchanged; Aleph cream/navy colors.
 
 ---
 

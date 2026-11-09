@@ -364,7 +364,7 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
       el('p', {}, el('button', { type: 'button', class: 'crp-play', onclick: () => { state.tab = 'guide'; render(); } }, 'Open the service guide'))]));
     const coreSeen = new Set(); const core = [];
     for (const pr of [...secPrayers('shema-and-blessings'), ...secPrayers('amidah')]) { const id = typeof pr === 'string' ? pr : pr.id; if (id && !coreSeen.has(id)) { coreSeen.add(id); core.push(pr); } }
-    box.append(door('Weekday morning', 'The daily core most people say every morning: the Shema and its blessings, and the Amidah. A full weekday service order is not in ALEF yet.', [
+    box.append(door('Weekday morning', 'The daily core most people say every morning: the Shema and its blessings, and the Amidah. A full weekday service order is not in Aleph yet.', [
       linkRow(core, 'Weekday morning prayers'),
       el('p', { class: 'crp-gl' }, 'The day itself starts with ', el('a', { href: '#/morning' }, uiEnglish(ctx, MORNING_TITLE + ' — Modeh Ani and a verse')), '.')]));
     const festKids = [];

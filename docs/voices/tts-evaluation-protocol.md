@@ -1,6 +1,6 @@
 # TTS listening-test protocol (Azure vs Google vs ElevenLabs)
 
-Purpose: decide, with a fresh test on ALEF's actual content, which provider (if any) renders Modern Israeli words and sentences. Not run yet; no credentials and no listeners exist in this repository's session.
+Purpose: decide, with a fresh test on Aleph's actual content, which provider (if any) renders Modern Israeli words and sentences. Not run yet; no credentials and no listeners exist in this repository's session.
 
 ## Ground facts this test must respect
 - Only Modern Israeli pronunciation can be tested. No TTS provider found offers Ashkenazi (or liturgical Sephardi) pronunciation: Ashkenazi audio is a human-recording task.

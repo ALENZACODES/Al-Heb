@@ -44,7 +44,7 @@ export function optionalGroups(tradition = "sephardi") {
 /**
  * Files that tools/build-precache.mjs lists as ALEF_ON_DEMAND: NOT installed with the app (first install is small, v0 pages only),
  * fetched when a learner first opens the page that needs them or all at once by "Download everything". Same shape as optionalGroups()
- * so the Use-ALEF-offline card can list them; `approxMB` is measured from the repo on 2026-11-04 and only a hint.
+ * so the Use-Aleph-offline card can list them; `approxMB` is measured from the repo on 2026-11-04 and only a hint.
  * First match wins; anything unmatched lands in "More pages and data".
  */
 export const ON_DEMAND_GROUPS = Object.freeze([
@@ -251,7 +251,7 @@ export async function storageHealth(env = {}) {
   const overall = [level(originRatio), local.level].sort((a, b) => rank[b] - rank[a])[0];
   const exportRoute = env.hasRoute ? (env.hasRoute("settings") ? "#/settings" : null) : "#/settings";
   const advice = [];
-  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after ALEF; saving may start failing near the limit.`);
+  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after Aleph; saving may start failing near the limit.`);
   if (level(originRatio) === "warn" || level(originRatio) === "critical") advice.push("The browser says this site uses most of its allowed storage (mostly offline copies). Clearing the offline copies is safe; progress is kept separately.");
   if (st.supported && st.persisted === false) advice.push("Progress is not protected from automatic browser clean-up. Use \"Protect my progress\", and keep a backup file.");
   return { persist: { supported: st.supported, persisted: st.persisted }, origin: { usage: st.usage, quota: st.quota, ratio: originRatio, level: level(originRatio) }, local, level: overall, exportRoute, advice };

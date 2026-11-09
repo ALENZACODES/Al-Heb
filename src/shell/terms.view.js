@@ -1,4 +1,4 @@
-// /terms: the rights page. Ownership and terms for ALEF itself, and the one learner-facing
+// /terms: the rights page. Ownership and terms for Aleph itself, and the one learner-facing
 // roll of credits: music and sounds, the historic recordings, text sources, fonts, and the
 // synthetic-voice note. The full source-by-source licence ledger stays on /credits.
 import { h } from './ui.js';
@@ -12,7 +12,7 @@ export function mount(root, ctx) {
     h('section', { class: 'card' },
       h('h1', { id: 'view-title', tabindex: '-1' }, t('nav.terms', 'Terms and rights')),
       h('p', {}, '© 2026 John Khan. All rights reserved.'),
-      h('p', {}, 'ALEF — the app, its lessons, its original text and its artwork — belongs to John Khan. You may use it for your own learning, free of charge. Nothing here grants a right to copy, redistribute or resell the app or its original material.'),
+      h('p', {}, 'Aleph — the app, its lessons, its original text and its artwork — belongs to John Khan. You may use it for your own learning, free of charge. Nothing here grants a right to copy, redistribute or resell the app or its original material.'),
       h('p', { class: 'muted' }, 'Material that comes from elsewhere keeps its own licence, set out below. This page is a plain-language summary, not legal advice; the full source-by-source ledger is on the Credits page.')),
     h('section', { class: 'card', 'aria-labelledby': 'terms-music' },
       h('h2', { id: 'terms-music' }, 'Music and sound effects'),

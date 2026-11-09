@@ -14,7 +14,7 @@
   "closingPerfect": "Every answer right first time. Come back to review in a day or two to see what stuck.",
   "closingSolid": "Solid. 3 to look at again; they are in your review.",
   "closingTough": "That was a tough one. 3 to look at again; they are in your review, and trying the lesson once more is fine.",
-  "notifyOpenOnly": "Reminders fire only while ALEF is open in this browser (an open tab, or the installed app in the foreground). Nothing can wake it when it is closed; for that, import the calendar's reminder file into your phone's calendar.",
+  "notifyOpenOnly": "Reminders fire only while Aleph is open in this browser (an open tab, or the installed app in the foreground). Nothing can wake it when it is closed; for that, import the calendar's reminder file into your phone's calendar.",
   "streakNone": "A streak counts the days you study for 5 minutes or more, on a lesson, review or practice screen.",
   "welcomeBackDue": "Welcome back. Nothing to catch up on. Ease in with a few review cards, and stop whenever you like. Or go straight to your next step below.",
   "skippedNote": "3 skipped (not counted either way). Do the exercise again to answer them.",

@@ -1,4 +1,4 @@
-# Who can help with ALEF
+# Who can help with Aleph
 
 This page lists, for each kind of outside helper, what they would check, where it lives, how big the job is, and what they must not be asked to do. It names no person or organisation, and nobody has reviewed anything yet: as of this writing the repo holds no returned verdicts (`docs/review/STATUS.md` says 0 reviewed). The consolidated review packet is in [NATIVE-REVIEW-PACKET.md](NATIVE-REVIEW-PACKET.md).
 

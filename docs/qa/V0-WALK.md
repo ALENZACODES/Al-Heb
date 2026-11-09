@@ -145,7 +145,7 @@ Step sequence and pass/warn/fail pattern identical across settings: no (see the 
 
 ## Per-step screen text (first congregation, truncated)
 
-- onboarding: title "Welcome to ALEF אלף"; controls at end: Start: Your first 10 minutes \| Your first 10 minutes \| Shin and Bet: your first two letters \| Tav and the dot in Bet: Shabbat \| Lamed, final Mem and Vav: Shalom \| Shabbat Shalom: review \| Meet the Priestly Blessing (listen and spot) \| Yod and the 'ee' vowel \| Review due cards \| Alef and He \| Change my starting point \| Change synagogue or pronunciation \| Change goal or minutes a day
+- onboarding: title "Welcome to Aleph אלף"; controls at end: Start: Your first 10 minutes \| Your first 10 minutes \| Shin and Bet: your first two letters \| Tav and the dot in Bet: Shabbat \| Lamed, final Mem and Vav: Shalom \| Shabbat Shalom: review \| Meet the Priestly Blessing (listen and spot) \| Yod and the 'ee' vowel \| Review due cards \| Alef and He \| Change my starting point \| Change synagogue or pronunciation \| Change goal or minutes a day
 - onboarding to first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Trace Bet \| Samekh \| Shin \| Lamed \| Why? \| 
 - first letter: title "Your first 10 minutes"; controls at end: Hear it \| Trace it \| Kaf \| Pe \| Bet \| Why? \| 
 - second letter: title "Your first 10 minutes"; controls at end: Hear it \| בָ \| ב \| Why?

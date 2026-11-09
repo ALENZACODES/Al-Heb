@@ -96,6 +96,6 @@ export function createOcrServer({ argosPython = process.env.ARGOS_PYTHON || 'pyt
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const port = Number(process.env.PORT || 8787);
   const s = createOcrServer();
-  s.listen(port, '127.0.0.1', () => console.log(`ALEF local OCR/translate helper on http://127.0.0.1:${port}/ (health: /health)`));
+  s.listen(port, '127.0.0.1', () => console.log(`Aleph local OCR/translate helper on http://127.0.0.1:${port}/ (health: /health)`));
   process.on('SIGINT', () => { s.stopWorker(); process.exit(0); });
 }

@@ -1,4 +1,4 @@
-// Build the ALEF Torah dataset (Lane J Phase 1 + Lane J-2 layout).
+// Build the Aleph Torah dataset (Lane J Phase 1 + Lane J-2 layout).
 //   node tools/torah/fetch_torah.mjs [--books genesis] [--out <repoRoot>] [--snapshot <dir>] [--offline]
 //
 // Hebrew source of record: the Unicode/XML Leningrad Codex (UXLC) book XML from tanach.us

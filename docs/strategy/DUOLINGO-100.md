@@ -1,10 +1,10 @@
-# ALEF vs Duolingo Hebrew (refreshed 2026-11-04)
+# Aleph vs Duolingo Hebrew (refreshed 2026-11-04)
 
-Directive from John: "duolingo hebrew is the one to beat." `docs/strategy/duolingo-100.csv` still holds the 100-row plan (canonical, checked by `tests/strategy.duolingo100.test.js`); its status words were not re-audited in this refresh. This file now has three parts: what is known about Duolingo Hebrew (third-party, unchanged from 2026-11-03), a feature-by-feature table of ALEF as it is today, and where ALEF is deliberately different.
+Directive from John: "duolingo hebrew is the one to beat." `docs/strategy/duolingo-100.csv` still holds the 100-row plan (canonical, checked by `tests/strategy.duolingo100.test.js`); its status words were not re-audited in this refresh. This file now has three parts: what is known about Duolingo Hebrew (third-party, unchanged from 2026-11-03), a feature-by-feature table of Aleph as it is today, and where Aleph is deliberately different.
 
-**Reading the status words.** `built` means the code and data exist in this checkout and the path is given. It does not mean a learner has tried it, a Hebrew educator has reviewed it, or it has run on a real phone: none of that has happened for any feature. `partial` means part of the feature exists. `missing` means nothing exists. ALEF does not have parity with Duolingo Hebrew on anything that needs scale, audio or a store app (table below).
+**Reading the status words.** `built` means the code and data exist in this checkout and the path is given. It does not mean a learner has tried it, a Hebrew educator has reviewed it, or it has run on a real phone: none of that has happened for any feature. `partial` means part of the feature exists. `missing` means nothing exists. Aleph does not have parity with Duolingo Hebrew on anything that needs scale, audio or a store app (table below).
 
-Facts about ALEF measured on 2026-11-04 are in `docs/STATUS.md` with their commands: 73 routes, 125 core lessons, 50 intermediate lessons, 6,297 vocabulary records, 70 corpus records, 0 of 16,710 audio clips recorded, 0 images approved, 0 rows reviewed by natives (of 7,039 in the packs), nothing deployed, no learner has used it.
+Facts about Aleph measured on 2026-11-04 are in `docs/STATUS.md` with their commands: 73 routes, 125 core lessons, 50 intermediate lessons, 6,297 vocabulary records, 70 corpus records, 0 of 16,710 audio clips recorded, 0 images approved, 0 rows reviewed by natives (of 7,039 in the packs), nothing deployed, no learner has used it.
 
 ## 1. What Duolingo Hebrew is, as far as I could verify (fetched 2026-11-03)
 
@@ -35,15 +35,15 @@ The internal notes (S16) also say Duolingo Max's availability for Hebrew was unv
 ## 2. Honest ground rules for the claims in this plan
 
 - Where I wrote "Duolingo has/lacks X" I give a source id. Absence claims are phrased as "no source found", never as fact.
-- ALEF "done" means built, not proven. The biggest unproven things: audio (none), educator review (none), learner testing (none), real-device testing (none), deployment (none).
-- ALEF is a reading-first tool for adults (siddur, Torah, plus an Israel track). Duolingo is a general gamified course. The plan "beats" Duolingo on a defined learner (adult who wants to read the siddur or follow a service) and does not claim a better general Hebrew course.
+- Aleph "done" means built, not proven. The biggest unproven things: audio (none), educator review (none), learner testing (none), real-device testing (none), deployment (none).
+- Aleph is a reading-first tool for adults (siddur, Torah, plus an Israel track). Duolingo is a general gamified course. The plan "beats" Duolingo on a defined learner (adult who wants to read the siddur or follow a service) and does not claim a better general Hebrew course.
 
 
-## 3. Feature by feature: Duolingo Hebrew vs ALEF today
+## 3. Feature by feature: Duolingo Hebrew vs Aleph today
 
 Duolingo column: what the sources in section 1 say (third-party, some conflicting; no first-party description was obtained). "Not reported" means I found no source either way, not that it is absent.
 
-| # | Feature | Duolingo Hebrew (section 1 source) | ALEF today | Status | Evidence in this repo |
+| # | Feature | Duolingo Hebrew (section 1 source) | Aleph today | Status | Evidence in this repo |
 |---|---|---|---|---|---|
 | 1 | Alphabet teaching | A Letters section behind a menu (S12, S3) | Letter atlas, stroke tracing (print and cursive), look-alike drills | built, untested with learners | `src/letters/atlas.view.js`, `src/letters/trace.view.js`, `src/curriculum/spotit.view.js`, `src/curriculum/checkpoint.view.js` |
 | 2 | Niqqud (vowel signs) | Conflicting reports (S1, S3) | Vowel trainers, syllable ladder, pointed-to-unpointed ladder | built (unpointed fade-out is partial) | `src/pronunciation/`, `src/curriculum/ladder.view.js`, `src/firstday/ladder.view.js`, `src/curriculum/fade.view.js` |
@@ -73,9 +73,9 @@ Duolingo column: what the sources in section 1 say (third-party, some conflictin
 | 26 | Content review and trust | Long-standing error complaints (S14, S3) | No native or clergy review yet: 0 of 7,039 rows | missing | `docs/review/STATUS.md` |
 | 27 | Scale, brand, reach | 130 million monthly users (S11) | No users | missing | none |
 
-Where Duolingo is clearly ahead today: native audio, scale of content and exercises, gamification and habit machinery, store apps with push, reach. ALEF has no advantage that has been tested.
+Where Duolingo is clearly ahead today: native audio, scale of content and exercises, gamification and habit machinery, store apps with push, reach. Aleph has no advantage that has been tested.
 
-## 4. Where ALEF is deliberately different (not a Duolingo clone)
+## 4. Where Aleph is deliberately different (not a Duolingo clone)
 
 These are choices, not claims of being better. None has been tested with learners.
 
@@ -88,7 +88,7 @@ These are choices, not claims of being better. None has been tested with learner
 
 ## 5. Not claimed
 
-- No claim that ALEF beats, equals or approaches Duolingo Hebrew on audio, scale, polish, retention or reach.
+- No claim that Aleph beats, equals or approaches Duolingo Hebrew on audio, scale, polish, retention or reach.
 - No claim about learner outcomes. The head-to-head study and the five-learner first-session test in the CSV have not been run.
 - No claim that any Hebrew, pointing, translation or prayer text is correct; none is reviewed.
 

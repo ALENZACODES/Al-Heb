@@ -1,4 +1,4 @@
-# ALEF voices: the exact production order (text-to-speech on your PC, plus what the drafting assistant can and cannot do)
+# Aleph voices: the exact production order (text-to-speech on your PC, plus what the drafting assistant can and cannot do)
 
 Read this first. These are the facts the order is built on, each measured from the repo today:
 

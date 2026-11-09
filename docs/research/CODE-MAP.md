@@ -1,4 +1,4 @@
-# ALEF code and layout map
+# Aleph code and layout map
 
 Written by auditor M on 2026-11-04. Everything here was read from the tree or counted with `wc`/python on that date. Where a thing is only inferred, it says so. Counts move while about 12 other agents edit; re-measure before quoting.
 

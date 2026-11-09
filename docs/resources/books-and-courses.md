@@ -1,8 +1,8 @@
-# Books and courses: teaching ideas for ALEF
+# Books and courses: teaching ideas for Aleph
 
 Status: research notes, 2026-11-03. Scores are the author's judgement on a 0-1000 scale, not measured outcomes. Machine-readable concepts: `data/curriculum/resource-concepts-books.json` (validated by `tests/resources-books.test.js`). Only ideas and pedagogy are used; no text, artwork or audio from any resource is copied.
 
-Score axes in the table: reading siddur or Torah aloud / Israeli functional Hebrew / beginner clarity / fit with ALEF (offline app, stylus tracing, per-tradition audio, SRS, existing workbook) / originality risk (higher is worse). The headline score is a judgement that weighs these, not an average.
+Score axes in the table: reading siddur or Torah aloud / Israeli functional Hebrew / beginner clarity / fit with Aleph (offline app, stylus tracing, per-tradition audio, SRS, existing workbook) / originality risk (higher is worse). The headline score is a judgement that weighs these, not an average.
 
 ## Access summary
 
@@ -25,9 +25,9 @@ Activity types absent (I checked the text of all pages for these): matching, wor
 
 Strengths worth borrowing: a predictable page template; stroke numbers right on the model; one memory hook per letter.
 
-Weaknesses: letters are never tied to a sound on the page; no discrimination of look-alikes (bet/kaf, dalet/resh); no reading at all, so a learner finishes unable to read a word; no spacing or review; the three-script ancestry strip and abstract "meanings" add load without helping decoding, and their historical claims are presented as fact, which I did not verify; colouring has little value past childhood. The book's religious conventions are not ALEF's and were ignored.
+Weaknesses: letters are never tied to a sound on the page; no discrimination of look-alikes (bet/kaf, dalet/resh); no reading at all, so a learner finishes unable to read a word; no spacing or review; the three-script ancestry strip and abstract "meanings" add load without helping decoding, and their historical claims are presented as fact, which I did not verify; colouring has little value past childhood. The book's religious conventions are not Aleph's and were ignored.
 
-What ALEF already does better: stroke tracing with feedback, a faded repetition line, sound labels, finals and variants (31 rows), a confusables page and syllable and word pages in the printable workbook.
+What Aleph already does better: stroke tracing with feedback, a faded repetition line, sound labels, finals and variants (31 rows), a confusables page and syllable and word pages in the printable workbook.
 
 ## 2. NJOP "The Interactive Hebrew Alphabet"
 
@@ -41,7 +41,7 @@ Does poorly: left-to-right layout against the reading direction (the page itself
 
 Public page content: about 55 minutes, 21 lectures in 4 sections (intro and Hebrew keyboard setup; alphabet in groups from Alef-Dalet through Resh-Tav with a midterm; recognising handwritten forms in groups; extras with an overview PDF). Letters and pronunciation only, no vowel signs. Ratings: 4.6 from 660 ratings on the Udemy page and 4.5 from 864 reviews on a third-party listing, so figures differ by source and date. Two instructors are named. I could not read reviews.
 
-Worth keeping: handwriting recognition as its own block, keyboard setup early, small groups with a mid-course check. Weak points for ALEF: no vowels so no real reading; passive video; alphabetical chunking ignores look-alikes.
+Worth keeping: handwriting recognition as its own block, keyboard setup early, small groups with a mid-course check. Weak points for Aleph: no vowels so no real reading; passive video; alphabetical chunking ignores look-alikes.
 
 ## 4. Hebrew For Dummies, 2nd edition (Jill Suzanne Jacobs, Wiley)
 
@@ -89,12 +89,12 @@ Columns: id, source, concept, reading/Israeli/clarity/fit/risk, score, improved 
 | bk-dummies-07 | dummies | Online audio of native speakers in conversation | 500/800/800/800/60 | 750 | 750 |
 | bk-dummies-08 | dummies | Part of Tens: ten-item quick-win lists | 400/700/800/600/100 | 600 | 600 |
 
-## Improved ALEF versions (every concept at 850+, plus several below it)
+## Improved Aleph versions (every concept at 850+, plus several below it)
 
 ### bk-bpa-04 Shape-hook cards with learner choice (780 -> 940)
 
 - Screen: Per-letter card showing a simple original image that echoes the print glyph's shape, a one-line cue, and the sound anchor word; a toggle swaps between two cues.
-- Data: Data: hooks[] per letter {cue, imageId, kind: shape or sound}, authored for ALEF, not taken from the book. Optional history line kept in a separate "origin" field and labelled as background.
+- Data: Data: hooks[] per letter {cue, imageId, kind: shape or sound}, authored for Aleph, not taken from the book. Optional history line kept in a separate "origin" field and labelled as background.
 - Interaction: Learner picks the hook that works for them; a recall test later shows only the hook image and asks for the letter; hook usage informs which hooks stay.
 - Test: Unit: every letter has at least one hook, imageId resolves to an asset or is flagged pending, no hook text contradicts the letter's recorded sound; recall quiz returns the right answer for each hook.
 

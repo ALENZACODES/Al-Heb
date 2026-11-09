@@ -1,4 +1,4 @@
-# ALEF — Audio Ledger
+# Aleph — Audio Ledger
 
 State as of the snapshot: **2026-11-07, 16:26 EST**. Counts are from verified landings and inventories, not from plans. Where a figure predates today's landings it says so — a full recount of `data/audio/summary.json` after today's merges settle is owed.
 

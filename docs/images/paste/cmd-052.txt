@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 52: Samekh cursive set
+Aleph IMAGE RUN - COMMAND 52: Samekh cursive set
 
 ATTACH: REF_cursive_samekh.png (attach once, before pasting this).
 

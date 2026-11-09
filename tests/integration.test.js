@@ -87,7 +87,7 @@ test('i18n: t() interpolates and falls back to key', () => {
 });
 test('manifest.webmanifest is valid and icons exist', () => {
   const m = json('manifest.webmanifest');
-  assert.equal(m.name, 'ALEF'); assert.ok(m.start_url && m.scope && m.display === 'standalone');
+  assert.equal(m.name, 'Aleph'); assert.ok(m.start_url && m.scope && m.display === 'standalone');
   assert.ok(m.icons.some((i) => i.sizes === '192x192') && m.icons.some((i) => i.sizes === '512x512') && m.icons.some((i) => i.purpose === 'maskable'));
   for (const i of m.icons) assert.ok(existsSync(join(root, i.src)), i.src);
 });

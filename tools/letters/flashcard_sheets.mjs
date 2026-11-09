@@ -66,7 +66,7 @@ body{font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif}.page{padding:
 <div class="notice"><b>${esc(CARD_DRAFT)}</b> Transliteration marked * is machine-made (Israeli, siddur style). Glosses show only the first senses. A word's pointing is taken from the vocab data and may need correction.</div>
 <h2>Groups</h2><table style="font-size:9pt;border-collapse:collapse">${model.groups.map((g) => `<tr><td style="padding:.5mm 6mm .5mm 0">${esc(g.title)}</td><td>${g.cards.length.toLocaleString('en-US')} cards</td></tr>`).join('')}</table>` };
   const pages = [first].concat(plan.map((p, i) => ({ kind: 'cards', title: `${p.group.title}: cards ${p.from + 1}-${p.from + p.cards.length} of ${p.group.cards.length}`, fields: false, body: `<div class="grid12">${CUTGUIDE}${p.cards.map(card).join('')}</div>` })));
-  const html = wrapHtml({ title: `ALEF vocabulary flashcards (${paper.label})`, css, pages, set: 'Flashcards', draft: CARD_DRAFT, fonts: 'Hebrew font: Alef (SIL OFL 1.1), a static font so the PDF stays small.' });
+  const html = wrapHtml({ title: `Aleph vocabulary flashcards (${paper.label})`, css, pages, set: 'Flashcards', draft: CARD_DRAFT, fonts: 'Hebrew font: Alef (SIL OFL 1.1), a static font so the PDF stays small.' });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model };
 }
 
@@ -93,7 +93,7 @@ body{font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif}.page{padding:
 <div class="notice"><b>${esc(m.fixture ? FIXTURE_NOTE : CHAIN_DRAFT)}</b></div>` };
   const pages = [first];
   chunks.forEach((ch, i) => { pages.push({ kind: 'letter-fronts', title: `Fronts, page ${i + 1} of ${chunks.length}`, fields: false, body: sheet(pad(ch), front) }); pages.push({ kind: 'letter-backs', title: `Backs, page ${i + 1} of ${chunks.length} (mirrored for a long-edge flip)`, fields: false, body: sheet(mirror(pad(ch)), back) }); });
-  const html = wrapHtml({ title: `ALEF letter flashcards (${paper.label})`, css, pages, set: 'Letter flashcards', draft: m.fixture ? FIXTURE_NOTE : CHAIN_DRAFT, fonts: 'Fonts: Frank Ruhl Libre (SIL OFL 1.1).' });
+  const html = wrapHtml({ title: `Aleph letter flashcards (${paper.label})`, css, pages, set: 'Letter flashcards', draft: m.fixture ? FIXTURE_NOTE : CHAIN_DRAFT, fonts: 'Fonts: Frank Ruhl Libre (SIL OFL 1.1).' });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model: m };
 }
 

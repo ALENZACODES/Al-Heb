@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 50: Mem cursive set
+Aleph IMAGE RUN - COMMAND 50: Mem cursive set
 
 ATTACH: REF_cursive_mem.png (attach once, before pasting this).
 

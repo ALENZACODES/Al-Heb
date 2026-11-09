@@ -18,7 +18,7 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `atlas` (/letters/atlas) - the letter atlas.
 - `progress` (/progress) - what you have done and what is due.
 - `settings` (/settings) - preferences plus backup, restore and delete of local data.
-- `about` (/about) - what ALEF is.
+- `about` (/about) - what Aleph is.
 - `credits` (/credits) - credits and licences.
 - `privacy` (/privacy) - privacy notes (local-only data).
 - `terms` (/terms) - terms and rights: ownership, and the credit roll (music and sounds, historic recordings, text sources, fonts, the synthetic-voice note).

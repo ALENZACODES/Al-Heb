@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 47: Yod cursive set
+Aleph IMAGE RUN - COMMAND 47: Yod cursive set
 
 ATTACH: REF_cursive_yod.png (attach once, before pasting this).
 

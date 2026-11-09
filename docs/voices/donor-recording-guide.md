@@ -1,4 +1,4 @@
-# ALEF donor recording guide (DRAFT, one page)
+# Aleph donor recording guide (DRAFT, one page)
 
 *Draft. Nobody has been contacted. Recording starts only after the donor rights grant (docs/voices/donor-rights-grant.html) is signed. Time estimates assume 120 to 180 lines per hour and are not measured.*
 

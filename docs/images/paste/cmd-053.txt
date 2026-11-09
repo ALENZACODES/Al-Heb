@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 53: Ayin cursive set
+Aleph IMAGE RUN - COMMAND 53: Ayin cursive set
 
 ATTACH: REF_cursive_ayin.png (attach once, before pasting this).
 

@@ -1,9 +1,9 @@
-# ALEF — First open (LOCKED t1040u)
+# Aleph — First open (LOCKED t1040u)
 
 **Formula:** value before ask — a **real win in under 60 seconds** → designed celebration.  
 **Order:** **TRY → SAVE → PERSONALISE.** Never account, paywall, or tour before the win.
 
-**Freeze:** Ari / Noa / Rimon faces unchanged. Production WaveNet/Chirp voices unchanged. Keep existing ALEF colors (`--bg` cream `#f6efe0`, `--accent` navy `#1f3a5f`) — Duolingo feather-green is competitor reference only, not our palette.
+**Freeze:** Ari / Noa / Rimon faces unchanged. Production WaveNet/Chirp voices unchanged. Keep existing Aleph colors (`--bg` cream `#f6efe0`, `--accent` navy `#1f3a5f`) — Duolingo feather-green is competitor reference only, not our palette.
 
 **Identity Test:** the learner must *build* Hebrew to win. Tapping “Continue” through menus is not a win.
 

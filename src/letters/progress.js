@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF lane 2: per-letter tracing progress persisted through ctx.store (key `letters.progress`).
+// Aleph lane 2: per-letter tracing progress persisted through ctx.store (key `letters.progress`).
 // Shape: { [letterId]: { print?: Entry, cursive?: Entry } }, Entry = { completions, perfect, bestMistakes, last }  (last = ISO date string)
 // "completed" means: the learner finished all strokes at least once in that script by drawing, with no stroke button and no stroke shown for them
 // (runs that had such help are kept apart as "assisted"). "perfect" counts zero-mistake runs. Works with any store exposing get(key, fallback) / set(key, value); without a store it is in-memory only.

@@ -79,7 +79,7 @@ out('data/books/index.json', JSON.stringify({ ...index, books: kept }, null, 1) 
 
 // Compendium: every page in Hebrew, phonetic English and English.
 const md = [];
-md.push('# ALEF little books 6 to 62');
+md.push('# Aleph little books 6 to 62');
 md.push('');
 md.push('57 original beginner readers for adult learners: 12 pages each, one short sentence a page, adult subjects (coffee, work, the bank, a first date, a night shift, moving house). Hebrew with vowel points, a phonetic English line and a translation for every page. Generated from `tools/books/source/books-6-62.txt` by `node tools/books/build.mjs`; edit the source, not this file.');
 md.push('');

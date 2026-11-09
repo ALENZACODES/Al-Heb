@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 63: Fe sofit cursive set
+Aleph IMAGE RUN - COMMAND 63: Fe sofit cursive set
 
 ATTACH: REF_cursive_pe_final.png (attach once, before pasting this).
 

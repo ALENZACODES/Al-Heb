@@ -136,7 +136,7 @@ function header(nn, part, items) {
   const used = [...new Set(items.map((r) => backdropOf(r.original)).filter((b) => b && BG[b]))];
   if (items.some((r) => /cafe background/.test(r.original)) && !used.includes('BG_cafe')) used.push('BG_cafe');
   const L = [];
-  L.push(`ALEF IMAGE RUN - REDO ${nn}: regenerate flagged images (${items.length} of ${part})`);
+  L.push(`Aleph IMAGE RUN - REDO ${nn}: regenerate flagged images (${items.length} of ${part})`);
   L.push('');
   L.push('No attachments are needed; everything is described in words below. These images were made once already and are being REDONE because the first versions had text in them, came out square instead of wide, or used the wrong backdrop. Follow the size, the backdrop and the no-text rule literally.');
   L.push('');

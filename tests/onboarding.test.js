@@ -119,7 +119,7 @@ const statusText = (root) => root.querySelector('#ob-status').textContent;
 test('view, first run: the letters question with five labelled radios; Continue without an answer saves nothing', async () => {
   const { root, store, settings, ctx } = mk();
   mount(root, ctx); await ready(root);
-  assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף'); // t() returned the key, so the English fallback is used
+  assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to Aleph אלף'); // t() returned the key, so the English fallback is used
   assert.match(root.textContent, /How much Hebrew can you read today\?/);
   const rs = radios(root, 'letters');
   assert.deepEqual(rs.map((r) => r.attrs.value), ['none', 'some', 'letters', 'vowels', 'sentences']);

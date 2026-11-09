@@ -17,7 +17,7 @@ Originally read from `sw.js` on 2026-11-04. **Item 1 has since been applied** (r
 ## 3. Put optional downloads in their own durable cache
 **Now:** `assets/vendor/_tesseract/*` (about 5 MB), `data/vocab/packs/*` and the audio shards are cached on first use into `alef-runtime-v1` by the generic SWR; nothing records that the learner chose "Download everything".
 **Change:** add `const OPTIONAL = 'alef-optional-v1'` and route these three patterns there (cache first for vendor, SWR for packs/shards), never pruned by `activate`.
-**Why:** the "Use ALEF offline" card can then report these as one group and survive version bumps; 150 pack files (`data/vocab/packs/`) are only fetched when a pack opens, so the card currently warms only the four tier files.
+**Why:** the "Use Aleph offline" card can then report these as one group and survive version bumps; 150 pack files (`data/vocab/packs/`) are only fetched when a pack opens, so the card currently warms only the four tier files.
 
 ## 4. `notificationclick` and `push` handlers
 **Now:** none. Notifications from `showNow()` (src/shell/notify.js) do nothing when tapped.

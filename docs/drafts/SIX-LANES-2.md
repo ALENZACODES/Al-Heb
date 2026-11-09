@@ -1,4 +1,4 @@
-# ALEF: 100 NEW jobs for the external drafting assistant, in 6 lanes (items 101 to 200)
+# Aleph: 100 NEW jobs for the external drafting assistant, in 6 lanes (items 101 to 200)
 
 This is round 2. Items 1 to 86 of `SIX-LANES.md` are done. Items 87 to 100 of that file (launch writing, privacy and terms drafts, launch checklist) are NOT repeated here. Nothing below overlaps items 1 to 100.
 
@@ -16,7 +16,7 @@ Two extra rules for round 2:
 
 ## Lane 1: Pictures (16 jobs), needs image generation
 
-Command: "You are the ALEF illustrator. Flat, friendly, simple pictures on a plain light background. No text, no letters, no detailed faces, nothing from any film, game, brand or logo. One idea per picture. Return PNG 1024x1024 and a 512 version."
+Command: "You are the Aleph illustrator. Flat, friendly, simple pictures on a plain light background. No text, no letters, no detailed faces, nothing from any film, game, brand or logo. One idea per picture. Return PNG 1024x1024 and a 512 version."
 
 101. Eight "in Israel" street objects: a bus stop pole, a falafel pita, a market scale, a shared taxi, a pedestrian crossing, a water bottle and cup, a coin purse, a train ticket (no readable text on any of them)
 102. Ten kitchen and food objects: bread, olives, a pot, a spoon, a fork, a plate, a glass, an egg, a lemon, a jar
@@ -38,7 +38,7 @@ This lane's acceptance check: no text, no letters, no brand look, one idea per p
 
 ## Lane 2: Hebrew text drafting (17 jobs)
 
-Command: "You are an ALEF content drafter. Simple Hebrew a beginner needs. Give every Hebrew line fully pointed, a transliteration for the Israeli/Sephardi reading, the Ashkenazi reading where it differs, and an English gloss. `?? CHECK` for anything uncertain."
+Command: "You are an Aleph content drafter. Simple Hebrew a beginner needs. Give every Hebrew line fully pointed, a transliteration for the Israeli/Sephardi reading, the Ashkenazi reading where it differs, and an English gloss. `?? CHECK` for anything uncertain."
 
 117. 60 airport, hotel and passport-desk phrases
 118. 50 phrases for a pharmacy and a doctor's reception (symptoms-free: ask for a plaster, ask where it hurts is out; keep to booking, asking for help, saying you need a pharmacy)
@@ -60,7 +60,7 @@ Command: "You are an ALEF content drafter. Simple Hebrew a beginner needs. Give 
 
 ## Lane 3: Audio and speaking scripts (16 jobs)
 
-Command: "You are the ALEF recording director. You write scripts for human voice actors and listeners. You do not generate audio."
+Command: "You are the Aleph recording director. You write scripts for human voice actors and listeners. You do not generate audio."
 
 134. A short brief for recording numbers 0 to 100 (which forms, masculine and feminine, gaps to leave)
 135. A script list for the 22 letters plus 5 final forms as "name, sound, example" triples, read at three speeds
@@ -81,7 +81,7 @@ Command: "You are the ALEF recording director. You write scripts for human voice
 
 ## Lane 4: Book and workbook content (17 jobs)
 
-Command: "You are the ALEF author. Write for nervous adult beginners. Short paragraphs, one idea each, a tiny win at the end of every page. Number every exercise; keep answers in a separate section."
+Command: "You are the Aleph author. Write for nervous adult beginners. Short paragraphs, one idea each, a tiny win at the end of every page. Number every exercise; keep answers in a separate section."
 
 150. Chapter 6 draft: "Your first conversation"
 151. Chapter 7 draft: "Numbers, prices and the clock"
@@ -103,7 +103,7 @@ Command: "You are the ALEF author. Write for nervous adult beginners. Short para
 
 ## Lane 5: Review, QA and adversarial testing (17 jobs)
 
-Command: "You are the ALEF reviewer. Be hostile and specific. Quote the exact text you are criticising. Rank by how much it would confuse a first-time learner. No praise."
+Command: "You are the Aleph reviewer. Be hostile and specific. Quote the exact text you are criticising. Rank by how much it would confuse a first-time learner. No praise."
 
 167. Review the Home screen's wording: what would a beginner not understand in the first 10 seconds
 168. Review every button label across the app for vague or duplicate verbs
@@ -119,15 +119,15 @@ Command: "You are the ALEF reviewer. Be hostile and specific. Quote the exact te
 178. List 50 ways a learner could misunderstand each of the 12 grammar notes you can find in `docs/`, one line each
 179. Design a 30-minute usability test script for 5 testers, with neutral wording that does not hint
 180. Draft a bug-report template that a non-technical tester can fill in
-181. Compare ALEF's review/repeat system with how a typical flashcard app schedules cards, from public descriptions only; list what is risky to copy
+181. Compare Aleph's review/repeat system with how a typical flashcard app schedules cards, from public descriptions only; list what is risky to copy
 182. Review the book's table of contents for gaps a beginner would hit
 183. Write 40 "would I trust this?" questions a cautious adult would ask before giving a free app their time
 
 ## Lane 6: Business, partners and growth drafts (16 jobs)
 
-Command: "You are the ALEF partnerships writer. Be honest: no invented numbers, testimonials, awards or user counts. Plain language."
+Command: "You are the Aleph partnerships writer. Be honest: no invented numbers, testimonials, awards or user counts. Plain language."
 
-184. A one-page description of ALEF for a synagogue newsletter
+184. A one-page description of Aleph for a synagogue newsletter
 185. A one-page description for a Jewish day-school parent newsletter
 186. A one-page description for a public library programme
 187. A one-page description for a university Hebrew department
@@ -143,7 +143,7 @@ Command: "You are the ALEF partnerships writer. Be honest: no invented numbers, 
 197. A plan to collect feedback without collecting personal data
 198. A 90-day roadmap draft in three phases with clear stop-or-continue questions at the end of each
 199. A "what we will not do" page (no ads, no tracking, no fake urgency) for the credits screen, wording only
-200. A one-page honest summary of what is finished, draft and unverified in ALEF, for a possible partner (use only the facts John provides; mark gaps)
+200. A one-page honest summary of what is finished, draft and unverified in Aleph, for a possible partner (use only the facts John provides; mark gaps)
 
 ---
 
@@ -153,4 +153,4 @@ Command: "You are the ALEF partnerships writer. Be honest: no invented numbers, 
 2. Save replies into `docs/drafts/inbox/lane<N>/`. Nowhere else.
 3. Tell the build agents a file's name when you want it used. They check it before anything ships.
 4. Anything marked `?? CHECK` goes to a native speaker, rabbi or cantor, not to the app.
-5. Item 200 and any item that states facts about ALEF can only use facts you give it; do not let it describe the app from guesswork.
+5. Item 200 and any item that states facts about Aleph can only use facts you give it; do not let it describe the app from guesswork.

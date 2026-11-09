@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 01 (command 301): J-0001.png to J-0013.png
+Aleph IMAGE RUN - BLOCK J 01 (command 301): J-0001.png to J-0013.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_arts-sports-set01.

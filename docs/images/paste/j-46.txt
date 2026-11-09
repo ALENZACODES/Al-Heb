@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 46 (command 346): J-0582.png to J-0594.png
+Aleph IMAGE RUN - BLOCK J 46 (command 346): J-0582.png to J-0594.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_sukkot, festival_hanukkah.

@@ -1,5 +1,5 @@
 /**
- * ALEF spaced-repetition scheduler (Lane 1).
+ * Aleph spaced-repetition scheduler (Lane 1).
  *
  * WHAT THIS IS: an FSRS-STYLE scheduler written from scratch in plain JS.
  * WHAT THIS IS NOT: it is NOT the reference FSRS implementation (ts-fsrs / fsrs-rs)

@@ -1,9 +1,9 @@
-# ALEF congregation settings sheet
+# Aleph congregation settings sheet
 
 **DRAFT. Not reviewed by clergy or educators.** For the leader to complete before session 1. The choice belongs to the congregation's clergy or education lead; the table below is a starting guess, not a ruling.
 
 ## Where the setting is
-In ALEF: Settings, "Prayer pronunciation". Choices: Israeli, Sephardi (default for American synagogues), Ashkenazi. First-run setup shows the same choice (an "American synagogue" option is stored as Sephardi because the common American synagogue sound uses Sephardi/Israeli vowel values).
+In Aleph: Settings, "Prayer pronunciation". Choices: Israeli, Sephardi (default for American synagogues), Ashkenazi. First-run setup shows the same choice (an "American synagogue" option is stored as Sephardi because the common American synagogue sound uses Sephardi/Israeli vowel values).
 
 ## What the setting changes today
 - Prayer transliteration and respelling shown in the app follow the chosen tradition.
@@ -17,7 +17,7 @@ In ALEF: Settings, "Prayer pronunciation". Choices: Israeli, Sephardi (default f
 | Prays with Ashkenazi pronunciation (some Orthodox and traditional communities) | Ashkenazi | The device voice will not match; the leader models it. |
 | Is mixed or unsure | Sephardi, or ask the clergy | Say in session 1 which one the room uses. Do not change mid-cohort. |
 
-Sources for the tradition descriptions are in ALEF's own `data/traditions/sources.json`; none of this has been checked by a clergy member.
+Sources for the tradition descriptions are in Aleph's own `data/traditions/sources.json`; none of this has been checked by a clergy member.
 
 ## Sheet to fill in
 - Congregation / host: ______________________
@@ -28,6 +28,6 @@ Sources for the tradition descriptions are in ALEF's own `data/traditions/source
 - Access needs gathered at sign-up (large print, seating, other): ______________________
 
 ## Device checklist
-- [ ] ALEF opened once on Wi-Fi, then tested with the connection off
+- [ ] Aleph opened once on Wi-Fi, then tested with the connection off
 - [ ] Setting changed on at least two of the leader's devices to confirm it sticks
 - [ ] Learners told that clearing browser data erases their progress

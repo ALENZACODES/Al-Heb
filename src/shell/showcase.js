@@ -71,7 +71,7 @@ export function showcaseNode(ctx) {
       ' ',
       h('a', { class: 'btn secondary show-btn2', href: '#/books' }, 'Read a story book'))),
     mascotBox);
-  return h('section', { class: 'showcase', 'aria-label': 'Explore ALEF' },
+  return h('section', { class: 'showcase', 'aria-label': 'Explore Aleph' },
     h('div', { class: 'show-hero' },
       astralTreeNode(),
       heroText),
@@ -79,6 +79,6 @@ export function showcaseNode(ctx) {
     builderNode(ctx),
     h('p', { class: 'show-stats' }, 'Games across 9 levels · 240 first words · 62 story books · 3 Hebrew traditions'),
     h('details', { class: 'show-all-destinations' }, // closed: the full list is one tap away, so the page opens small (depth revealed, not dumped)
-      h('summary', {}, 'Explore all ALEF destinations'),
+      h('summary', {}, 'Explore all Aleph destinations'),
       h('ul', { class: 'show-grid' }, ...tiles)));
 }

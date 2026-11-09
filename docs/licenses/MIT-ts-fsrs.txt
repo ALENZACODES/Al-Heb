@@ -2,7 +2,7 @@ Notice for the FSRS-6 default weights used in src/fsrs/fsrs6.js
 
 The 21 default weights in src/fsrs/fsrs6.js are the published defaults of ts-fsrs 6.0.0
 (https://github.com/open-spaced-repetition/ts-fsrs), an MIT-licensed project of the
-open-spaced-repetition community. The algorithm code in this repo is a hand port written for ALEF.
+open-spaced-repetition community. The algorithm code in this repo is a hand port written for Aleph.
 
 Copyright (c) the ts-fsrs authors
 (NOTE: the exact copyright line in the project's own LICENSE file was NOT read when this notice was

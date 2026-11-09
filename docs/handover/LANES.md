@@ -1,4 +1,4 @@
-# ALEF — Workstreams (Lanes)
+# Aleph — Workstreams (Lanes)
 
 Status as of the snapshot: **2026-11-07, 16:26 EST**. "Local staging" paths are on the build machine under `~/workspace/`. Workstreams marked IN FLIGHT were actively running at snapshot time — check `main`'s commit log before assuming their state.
 

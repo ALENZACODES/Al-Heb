@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 54: Pe / Fe cursive set
+Aleph IMAGE RUN - COMMAND 54: Pe / Fe cursive set
 
 ATTACH: REF_cursive_pe.png (attach once, before pasting this).
 

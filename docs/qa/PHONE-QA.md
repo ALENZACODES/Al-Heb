@@ -45,7 +45,7 @@ The first overlap scan reported 90 overlaps. I looked at them: they were element
 
 ## Offline
 
-Checked with the real service worker on a 360x640 emulated phone: load `/`, wait for the service worker to control the page and for the cache to stop growing (337 entries), then switch the browser offline. Each of the 15 routes then opened by hash and also survived a full page reload, with its heading and content rendered and no page errors. An unknown path while offline returned the app page (HTTP 200, title "ALEF"). `tools/qa/offline.mjs` (the repo's own update and storage script) was not re-run here.
+Checked with the real service worker on a 360x640 emulated phone: load `/`, wait for the service worker to control the page and for the cache to stop growing (337 entries), then switch the browser offline. Each of the 15 routes then opened by hash and also survived a full page reload, with its heading and content rendered and no page errors. An unknown path while offline returned the app page (HTTP 200, title "Aleph"). `tools/qa/offline.mjs` (the repo's own update and storage script) was not re-run here.
 
 ## First paint
 

@@ -1,4 +1,4 @@
-# ALEF Human Recording Kit — Male × Ashkenazi
+# Aleph Human Recording Kit — Male × Ashkenazi
 
 **Status:** DRAFT pattern instance (drafting lane) — **not** a claim that the slot is finally UNFILLED or that any audio/session exists  
 **Derived from:** the m × sephardi pattern kit  
@@ -25,9 +25,9 @@ Mark **FINAL** only after Casting declares the slot UNFILLED and the priority ID
 
 ## 2. Donor consent (perpetual royalty-free commercial)
 
-> **Voice Recording Consent — ALEF (Male Ashkenazi slot)**
+> **Voice Recording Consent — Aleph (Male Ashkenazi slot)**
 >
-> I, **________________________**, grant **John Khan / the ALEF project rightsholder** a **perpetual, irrevocable, worldwide, royalty-free, transferable** licence to use my recorded voice and performances in the ALEF Hebrew learning application and related products, including **commercial sale, licensing, and distribution**, in any media now known or later developed.
+> I, **________________________**, grant **John Khan / the Aleph project rightsholder** a **perpetual, irrevocable, worldwide, royalty-free, transferable** licence to use my recorded voice and performances in the Aleph Hebrew learning application and related products, including **commercial sale, licensing, and distribution**, in any media now known or later developed.
 >
 > I understand recordings may be edited, normalized, segmented into short clips, and paired with Hebrew text for teaching. I waive claims to residuals or further payment beyond any one-time fee we agree in writing (**$________ / volunteer $0**).
 >

@@ -1,4 +1,4 @@
-# Decisions for John: licensing and selling ALEF
+# Decisions for John: licensing and selling Aleph
 
 **Not legal advice.** I am not a lawyer and nothing here has been reviewed by one. This lists choices only you can make, what each one changes if you later sell the app or the company, and a checklist to finish before charging money. Facts come from `docs/legal/CONTENT-LICENCE-AUDIT.md` (read that for what was and was not verified on 2026-11-04). Where I could not verify something, I say so.
 
@@ -56,7 +56,7 @@ Do each item; tick when done. None of these has been done by me except where sta
 9. [ ] Re-read each licence page yourself on the day you launch (labels change; this audit is dated 2026-11-04).
 10. [ ] Have a Hebrew educator and clergy review the Hebrew, pointing and prayer text. The repo says none has been reviewed.
 11. [ ] Check app-store rules against the CC BY-SA no-additional-restrictions clause (lawyer question).
-12. [ ] Confirm trademark and name clearance for "ALEF" in the jurisdictions and stores you will use (not researched here).
+12. [ ] Confirm trademark and name clearance for "Aleph" in the jurisdictions and stores you will use (not researched here).
 13. [ ] Terms of service, privacy policy and (if you collect payment) consumer and tax rules for Canada and any store country. Not covered here.
 14. [ ] Check how copyright ownership of tool-assisted code and text is documented, so a buyer's due-diligence questions can be answered.
 15. [ ] Keep an evidence folder: dated copies of each licence page and the fetch dates (the repo already keeps `data/vocab/sources.lock.json` hashes).

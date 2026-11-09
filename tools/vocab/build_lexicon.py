@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage 1 of the ALEF vocabulary pipeline (stdlib only).
+"""Stage 1 of the Aleph vocabulary pipeline (stdlib only).
 
 Reads the cached raw sources (tools/vocab/fetch.py) and writes tools/vocab/.cache/stage.json:
 the selected lemma entries with dictionary data (pointed form, glosses, pos, gender, forms, root, ipa),

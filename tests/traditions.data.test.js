@@ -89,7 +89,7 @@ test('sounds: alsoExists entries are marked as reference only and cite known sou
     assert.ok(Object.hasOwn(sounds.confidence, a.confidence));
     for (const id of a.sources) assert.ok(srcIds.has(id), `${a.id} -> ${id}`);
   }
-  // honesty: the Yemenite entry says what was read and that ALEF teaches none of it
+  // honesty: the Yemenite entry says what was read and that Aleph teaches none of it
   const y = sounds.alsoExists.find((a) => a.id === 'yemenite');
   assert.match(y.note, /no Yemenite audio/i);
 });

@@ -2,11 +2,11 @@
 
 Status: draft text for the main lane to wire into the About screen. Written 2026-11-04. Each line says only what the repo showed on that date; update it as things change.
 
-## What to know before you rely on ALEF
+## What to know before you rely on Aleph
 
-**ALEF is an early draft.** It is free and it works, but it has not been checked by the people who should check it.
+**Aleph is an early draft.** It is free and it works, but it has not been checked by the people who should check it.
 
-**The Hebrew has not been reviewed.** The lessons, word lists, vowel points, transliterations, prayer texts and tradition comparisons were put together by programs. No native speaker, Hebrew teacher, rabbi or cantor has reviewed them yet. There will be mistakes. If something looks wrong, trust a printed siddur, a dictionary or your teacher over ALEF, and please tell us.
+**The Hebrew has not been reviewed.** The lessons, word lists, vowel points, transliterations, prayer texts and tradition comparisons were put together by programs. No native speaker, Hebrew teacher, rabbi or cantor has reviewed them yet. There will be mistakes. If something looks wrong, trust a printed siddur, a dictionary or your teacher over Aleph, and please tell us.
 
 **There is no recorded teacher.** The Hebrew clips (`spoken` in `data/audio/summary.json`, about 21,500 as of 2026-11-07) use a synthetic voice, a man's and a woman's, that no native speaker has reviewed; they cover letters, vowels, syllables, words, lines, prayers, book pages and games. Where no clip exists the app uses your device's built-in Hebrew voice, if it has one. Both are computer voices, not a teacher. Some phones and browsers have no Hebrew voice, and the ones that do vary in quality. Without one, you will see text but hear nothing.
 

@@ -4,7 +4,7 @@ Checked against origin/main `ceb04efc`. Everything below was run or read in a cl
 
 ## 1. Dry run of tools/audio/ingest.mjs (never --apply)
 
-Only one audio folder exists outside the repo: `/mnt/user-data/uploads/ALEF-THREE-JUDGE-PASSED` (88 WAV, 24 kHz mono, plus README, manifest.csv, manifest.json). It is labelled machine-pass only, unreviewed, not approved for teaching.
+Only one audio folder exists outside the repo: `/mnt/user-data/uploads/Aleph-THREE-JUDGE-PASSED` (88 WAV, 24 kHz mono, plus README, manifest.csv, manifest.json). It is labelled machine-pass only, unreviewed, not approved for teaching.
 
 | Run | Result |
 |---|---|

@@ -1,4 +1,4 @@
-# ALEF architecture (lane 8)
+# Aleph architecture (lane 8)
 
 ## Boot
 `index.html` -> `src/app.js`: creates `settings` (over `store`), `audio` (lane 4 `createAudio({settings})` via dynamic

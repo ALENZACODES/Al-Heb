@@ -1,4 +1,4 @@
-# ALEF performance and PWA audit
+# Aleph performance and PWA audit
 
 Tools: `node tools/qa/perf.mjs` (budget, routes, manifest effect), `node tools/qa/pwa_audit.mjs` (manifest, icons, service worker, offline).
 Raw numbers: `docs/perf/results.json` (full run, median of 3), `docs/perf/no-manifest/results.json` (same routes with the audio manifest and word shards blocked, 1 run), `docs/perf/pwa-audit.json`.

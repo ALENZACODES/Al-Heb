@@ -1,4 +1,4 @@
-# Badges: earned recognition in ALEF (draft)
+# Badges: earned recognition in Aleph (draft)
 
 Status: built and unit-tested on top of the engagement loops (`docs/feel/LOOPS-PARITY.md`). Nothing here was tried with a real learner, on a real phone, or with a screen reader. The only browser check was one headless desktop-Chrome screenshot of `#/daily` with an empty store (the shelf rendered, no console review was done). Names and thresholds are the owner's to tune; they are guesses, not tuned on any learner.
 

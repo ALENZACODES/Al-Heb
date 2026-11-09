@@ -64,7 +64,7 @@ How, using what exists: the single-file recorder (docs/record-kit/README.md, too
 
 Consent, plain words to say before the donor opens the page (summary of docs/voices/donor-rights-grant.md, which is a DRAFT FOR A LAWYER and not ready to sign):
 1. You read a list of letters, vowels, words and prayer lines; nothing else is recorded.
-2. We may use the recordings in the ALEF app (free or paid), its book audio and marketing, and may sell the product; no royalties.
+2. We may use the recordings in the Aleph app (free or paid), its book audio and marketing, and may sell the product; no royalties.
 3. Voice cloning or training a synthetic voice is a separate tick, default NO; a NO does not affect acceptance.
 4. You choose credit or no credit. You can withdraw: that stops future use, it does not recall copies already published.
 5. Adults only. Say which community and style you read in; that is saved as the donor note.

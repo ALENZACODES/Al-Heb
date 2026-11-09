@@ -1,4 +1,4 @@
-# ALEF Casting Report — Blind Multi-Judge Results
+# Aleph Casting Report — Blind Multi-Judge Results
 
 **Sprint:** Voice SUPER COMMAND · 2026-11-05 · America/Toronto  
 **Status:** 2/6 FILLED by John’s explicit production authorization; other slots UNFILLED with kits  

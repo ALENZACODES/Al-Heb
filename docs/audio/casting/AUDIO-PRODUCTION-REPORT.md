@@ -1,4 +1,4 @@
-# ALEF Audio Production Report
+# Aleph Audio Production Report
 
 **Status:** STRUCTURE ONLY (DRAFT). Counts are 0 until files exist on disk and pass the manifest check. Nothing here claims any audio was produced.
 **Sprint:** 2026-11-05 · America/Toronto

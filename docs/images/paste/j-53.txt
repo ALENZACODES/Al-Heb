@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 53 (command 353): J-0674.png to J-0685.png
+Aleph IMAGE RUN - BLOCK J 53 (command 353): J-0674.png to J-0685.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_synagogue-interior, lesson_I-01, lesson_I-02, lesson_I-03, lesson_I-04, lesson_I-05, lesson_I-06.

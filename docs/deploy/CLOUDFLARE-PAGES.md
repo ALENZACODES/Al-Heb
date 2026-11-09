@@ -1,11 +1,11 @@
-# Deploying ALEF on Cloudflare Pages (archived alternative — not the live host)
+# Deploying Aleph on Cloudflare Pages (archived alternative — not the live host)
 
 > **Archived alternative — not the live host.** The review site is served by Render from `main` (https://alef-review.onrender.com/); see `docs/DEPLOY.md`. This document is kept as the record of the Cloudflare Pages path, its limits, and why it cannot host the full audio library (20,000-file Free cap vs about 25,000 clips). Nothing below has been set up and no Cloudflare account is needed.
 
 Why Cloudflare Pages: docs/ research (competitor analysis, item 39) picks it as the PWA host because audio clips are static files and the Free plan has no bandwidth charge for static requests. That claim comes from the research; the only Cloudflare numbers re-read for this document are in the table below.
 
 ## Limits (read from developers.cloudflare.com/pages/platform/limits and /pages/configuration/build-image on 2026-11-03)
-| Limit | Value | ALEF today (`node tools/deploy/build_site.mjs`, run 2026-11-04) |
+| Limit | Value | Aleph today (`node tools/deploy/build_site.mjs`, run 2026-11-04) |
 |---|---|---|
 | Files per site (Free) | 20,000 (paid plans up to 100,000 with `PAGES_WRANGLER_MAJOR_VERSION=4`) | 723 files (59.76 MiB) |
 | Size of one file | 25 MiB | largest is 8.86 MiB (`assets/workbook/alef-flashcards-letter.pdf`); the largest script is 3.72 MiB (`assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js`) |

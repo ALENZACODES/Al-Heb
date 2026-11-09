@@ -4,8 +4,8 @@ Lane: Deaf and hard of hearing. Draft. Written 2026-11-04.
 
 ## Read this first
 - Nobody working on this could test with Deaf or hard of hearing people, a hearing aid, a cochlear implant, captions, or any assistive device. Everything below is a reading of the code and runs of the automated tests. A line that says "works" means "the code path runs in a test", not "a Deaf learner found it usable".
-- Lip-reading and sign-language material are out of scope. ALEF has none and does not claim any.
-- Words cannot replace hearing a sound. The written sound descriptions are taken from ALEF's own pronunciation notes (`data/pronunciation`), nobody who speaks Hebrew has checked their wording, and they are marked draft on screen.
+- Lip-reading and sign-language material are out of scope. Aleph has none and does not claim any.
+- Words cannot replace hearing a sound. The written sound descriptions are taken from Aleph's own pronunciation notes (`data/pronunciation`), nobody who speaks Hebrew has checked their wording, and they are marked draft on screen.
 - The "Closest English" lines are comparisons with English words, not exact phonetics.
 
 ## The setting

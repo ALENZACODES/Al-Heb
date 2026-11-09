@@ -34,7 +34,7 @@ index 45f2e0a..bb715ef 100644
      if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
 -      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
 +      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service' + pv('service'))),
-       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
+       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
      sections.push(readSec);
  
 @@ -173,7 +176,7 @@ export async function mount(root, ctx) {

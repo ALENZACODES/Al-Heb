@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF lane 2: whole-letter sanity check, "$1 / $N"-style template matching.
+// Aleph lane 2: whole-letter sanity check, "$1 / $N"-style template matching.
 // Compares ALL the strokes a learner drew against a letter's own strokes, ignoring the ORDER they were drawn in
 // (every permutation of the user's strokes is tried; <= 5 strokes) and ignoring size and position (translate + uniform scale).
 // Stroke DIRECTION is not ignored by default (a stroke drawn backwards scores lower) - pass {ignoreDirection:true} to allow both.

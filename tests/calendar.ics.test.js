@@ -24,7 +24,7 @@ test("raw text rules: CRLF everywhere, final CRLF, no bare LF, lines <= 75 octet
 test("parse back: calendar properties and one VEVENT per item", () => {
   const cal = I.parseICS(ics);
   assert.equal(cal.props.VERSION[0].value, "2.0");
-  assert.match(cal.props.PRODID[0].value, /ALEF/);
+  assert.match(cal.props.PRODID[0].value, /Aleph/);
   assert.equal(cal.props.CALSCALE[0].value, "GREGORIAN");
   assert.equal(cal.events.length, items.length);
   const uids = new Set(cal.events.map((e) => e.props.UID[0].value));

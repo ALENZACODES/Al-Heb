@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 43 (command 343): J-0543.png to J-0555.png
+Aleph IMAGE RUN - BLOCK J 43 (command 343): J-0543.png to J-0555.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_time-numbers-set01.

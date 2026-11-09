@@ -18,7 +18,7 @@ export function mount(root, ctx) {
   const savedAbout = (key, value) => {
     if (key === 'voice') status.textContent = `Saved ✓ You’ll hear ${VOICE_SAY[value] || 'your chosen voice'} where clips exist.`;
     else if (key === 'congregation') status.textContent = `Saved ✓ ${STYLE_SAY[value] || value} style, where clips exist.`;
-    else if (key === 'veilOptOut') status.textContent = value ? 'Saved ✓ The opening prayer will not show again. You can turn it back on here any time.' : 'Saved ✓ The opening prayer will show again when you open ALEF.';
+    else if (key === 'veilOptOut') status.textContent = value ? 'Saved ✓ The opening prayer will not show again. You can turn it back on here any time.' : 'Saved ✓ The opening prayer will show again when you open Aleph.';
     else if (key === 'gender') status.textContent = 'Saved ✓ Hebrew forms will use your choice.';
     else status.textContent = 'Saved ✓';
   };
@@ -39,7 +39,7 @@ export function mount(root, ctx) {
       const id = `s-gender-${v ?? 'unset'}`;
       fs.append(h('label', { class: 'opt', for: id }, h('input', { type: 'radio', name: 'gender', id, value: v ?? '', checked: settings.get('gender') === v ? true : null, onchange: () => { settings.set({ gender: v }); savedAbout('gender', v); } }), h('span', {}, label)));
     }
-    fs.append(h('p', { class: 'muted', id: 's-gender-help' }, 'Hebrew words change with the speaker\'s gender. "I am a student" is different for a man and a woman. The gender drill and the "Sound like a local" pages use this choice, so you only say it once. Until you choose, pages show both forms or ask you. ALEF never assumes masculine. The choice stays on this device and is included in your backup.'));
+    fs.append(h('p', { class: 'muted', id: 's-gender-help' }, 'Hebrew words change with the speaker\'s gender. "I am a student" is different for a man and a woman. The gender drill and the "Sound like a local" pages use this choice, so you only say it once. Until you choose, pages show both forms or ask you. Aleph never assumes masculine. The choice stays on this device and is included in your backup.'));
     return fs;
   };
   // one checkbox row per boolean setting (plain English labels; the i18n table is owned by another lane)
@@ -110,7 +110,7 @@ export function mount(root, ctx) {
   const exportBtn = h('button', { type: 'button', class: 'btn', onclick: () => {
     const url = URL.createObjectURL(new Blob([store.exportJSON()], { type: 'application/json' }));
     const a = h('a', { href: url, download: backupFileName() }); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
-    status.textContent = `Backup file downloaded: ${a.getAttribute('download')}. This copy is only as safe as where you keep it; Restore reads it back. ALEF does not make backups by itself.`;
+    status.textContent = `Backup file downloaded: ${a.getAttribute('download')}. This copy is only as safe as where you keep it; Restore reads it back. Aleph does not make backups by itself.`;
     // the Home reminder counts from here (backup.reminder.v1); only a downloaded file counts, never anything automatic
     try { store.set(REMINDER_KEY, afterExport(store.get(REMINDER_KEY), completedCount(store.get('curriculum.progress')))); } catch { /* best effort */ }
   } }, t('settings.export'));
@@ -148,7 +148,7 @@ export function mount(root, ctx) {
     labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
-    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how ALEF works, in plain words')),
+    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how Aleph works, in plain words')),
     h('p', { class: 'muted' }, plain('settingsIntro')),
     audioTruthNode(h, { id: 'settings-audio-truth', class: 'muted', fetchFn: ctx.readinessFetch }), // counts read from data/audio/summary.json
     readinessNode(h, { fetchFn: ctx.readinessFetch }), // plain "what is ready and what is not" (src/shell/readiness.js)
@@ -174,7 +174,7 @@ export function mount(root, ctx) {
     radioGroup('theme', 'settings.theme'),
     h('div', { class: 'field' }, h('label', { class: 'opt', for: 's-bva' }, h('input', { type: 'checkbox', id: 's-bva', checked: settings.get('browserVoiceAnyway') ? true : null, onchange: (e) => { settings.set({ browserVoiceAnyway: e.target.checked }); savedAbout('browserVoiceAnyway', e.target.checked); } }), h('span', {}, t('settings.browserVoiceAnyway')))),
     ]),
-    group('opening', 'Opening prayer', 'The short blessing shown when ALEF opens', [
+    group('opening', 'Opening prayer', 'The short blessing shown when Aleph opens', [
     boolRow('veilOptOut', 'Don’t show the opening prayer', 'The blessing screen has its own “Don’t show again” button; this is the same switch. Untick it to bring the blessing back.'),
     ]),
     group('forms', 'Hebrew forms and names', 'Your gender for Hebrew forms and the English divine name', [
@@ -194,7 +194,7 @@ export function mount(root, ctx) {
     h('fieldset', { class: 'field' }, h('legend', {}, 'Delete all my data'),
       h('p', { id: 's-wipe-help' }, plain('wipeHelp', { word: CONFIRM_WORD })),
       h('label', { class: 'field' }, `Type ${CONFIRM_WORD}`, wipeInput),
-      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (ALEF will need a connection to open next time)')),
+      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (Aleph will need a connection to open next time)')),
       h('div', { class: 'row' }, wipeGo)),
     ]),
     group('adv', 'Advanced', 'More options', [

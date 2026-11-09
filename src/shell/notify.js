@@ -188,7 +188,7 @@ export function scheduleStudyReminder(p, opt = {}) {
     if (late < 0) return arm(); // woke early (long delay was clamped, or the clock moved)
     if (late <= LATE_GRACE_MS) {
       const when = entry.target;
-      Promise.resolve(show(opt.title ?? "ALEF: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are.", { route: opt.route ?? "#/learn" })).catch(() => {});
+      Promise.resolve(show(opt.title ?? "Aleph: a few minutes of Hebrew", opt.body ?? "Only if you feel like it. Your lessons and review cards stay as they are.", { route: opt.route ?? "#/learn" })).catch(() => {});
       try { opt.onFire?.(when); } catch { /* listener bug must not stop the chain */ }
     }
     arm(); // either fired, or missed (tab was frozen): move to the next occurrence, never fire late

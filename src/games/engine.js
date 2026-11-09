@@ -1,5 +1,5 @@
 import { reactRimon } from '../shell/rimon-events.js';
-// ALEF games engine — shared plumbing for the mini-game views.
+// Aleph games engine — shared plumbing for the mini-game views.
 // Zero-dependency ES module, written against the same ctx contract as the
 // rest of the app: mount(root, ctx) with ctx = { settings, store, audio,
 // route, t, hasRoute }. Everything defensive: a game must still play in

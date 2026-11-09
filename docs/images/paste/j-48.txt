@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 48 (command 348): J-0609.png to J-0621.png
+Aleph IMAGE RUN - BLOCK J 48 (command 348): J-0609.png to J-0621.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_purim, festival_pesach.

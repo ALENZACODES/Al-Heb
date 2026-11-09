@@ -1,6 +1,6 @@
 // @ts-check
 import { speechSafeText } from '../shell/names.js';
-// ALEF audio player. Resolution order for play(kind, id):
+// Aleph audio player. Resolution order for play(kind, id):
 //   0. the congregation setting picks which tradition's FILES play: a Sephardi or Ashkenazi row whose `source` is in
 //      ACCENT_SOURCES (an Israeli voice reading the tradition's respelling, or a tempo-capped older clip) plays as itself;
 //      otherwise the setting plays the Israeli clips (PLAYBACK_TRADITION below) and the result keeps tradition = the setting

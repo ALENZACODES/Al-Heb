@@ -1,7 +1,7 @@
 // Thin wrappers around three browser APIs used by "Say it". Every constructor is injectable so tests run in Node.
-// Nothing starts until the learner presses a button; nothing is uploaded by ALEF. The browser's SpeechRecognition may itself
+// Nothing starts until the learner presses a button; nothing is uploaded by Aleph. The browser's SpeechRecognition may itself
 // send audio to the browser vendor's servers (Chromium does); the screen says so before the first use.
-// ALEF has not measured how well any browser recognizer hears Hebrew: treat its text as a hint.
+// Aleph has not measured how well any browser recognizer hears Hebrew: treat its text as a hint.
 
 import { speechText } from '../shell/names.js';
 const g = () => /** @type {any} */ (globalThis);

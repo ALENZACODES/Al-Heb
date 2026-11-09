@@ -7,13 +7,13 @@
    "name": "manifest.name present",
    "ok": true,
    "kind": "ok",
-   "detail": "ALEF"
+   "detail": "Aleph"
   },
   {
    "name": "manifest.short_name present",
    "ok": true,
    "kind": "ok",
-   "detail": "ALEF"
+   "detail": "Aleph"
   },
   {
    "name": "manifest.start_url present",

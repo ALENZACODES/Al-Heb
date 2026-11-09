@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF store: small synchronous key/value store over localStorage with an
+// Aleph store: small synchronous key/value store over localStorage with an
 // in-memory fallback (private mode, quota errors, Node tests), a versioned
 // schema, and checksummed, validated, all-or-nothing JSON export/import.
 //
@@ -176,7 +176,7 @@ export function createStore(opts = {}) {
     keys() { return Object.keys(dump()); },
     /** @param {(key:string,value:any,info?:{external?:boolean})=>void} fn @returns {()=>void} */
     subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); },
-    /** Remove every ALEF entry (including ones that fail to parse). Keeps the schema stamp. */
+    /** Remove every Aleph entry (including ones that fail to parse). Keeps the schema stamp. */
     clear() {
       for (const full of Object.keys(rawAll())) { if (full === prefix + META) continue; try { backend.removeItem(full); } catch { /* ignore */ } emit(full.slice(prefix.length), undefined); }
       // After a fallback to memory the old copy is still in the real storage and would return on the next load: remove it too.
@@ -203,13 +203,13 @@ export function createStore(opts = {}) {
      */
     previewImport(input, o = {}) {
       const mode = o.mode === 'merge' ? 'merge' : 'replace';
-      if (typeof input === 'string' && input.length > MAX_BACKUP_CHARS * 2) return { ok: false, error: 'This file is too large to be an ALEF backup.' };
+      if (typeof input === 'string' && input.length > MAX_BACKUP_CHARS * 2) return { ok: false, error: 'This file is too large to be an Aleph backup.' };
       let obj;
       try { obj = typeof input === 'string' ? JSON.parse(input) : input; }
       catch { return { ok: false, error: 'Not valid JSON' }; }
-      if (!obj || typeof obj !== 'object' || obj.app !== APP_ID || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'Not an ALEF backup' };
+      if (!obj || typeof obj !== 'object' || obj.app !== APP_ID || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'Not an Aleph backup' };
       if (!Number.isInteger(obj.schema) || obj.schema < 1) return { ok: false, error: 'Missing schema version' };
-      if (obj.schema > schemaNow) return { ok: false, error: `Backup is from a newer ALEF (schema ${obj.schema})` };
+      if (obj.schema > schemaNow) return { ok: false, error: `Backup is from a newer Aleph (schema ${obj.schema})` };
       if (obj.checksum !== undefined) {
         if (typeof obj.checksum !== 'string' || checksum(canonicalJSON(obj.data)) !== obj.checksum) return { ok: false, error: 'The checksum does not match: the file was changed or cut short after it was saved' };
       }

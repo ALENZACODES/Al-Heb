@@ -1,4 +1,4 @@
-// Pure logic for the ALEF record kit. No Node-only APIs: this file is inlined verbatim (minus the `export` keywords) into
+// Pure logic for the Aleph record kit. No Node-only APIs: this file is inlined verbatim (minus the `export` keywords) into
 // recorder.html by build.mjs, and imported as a module by ingest.mjs and the tests.
 
 export const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
@@ -10,8 +10,8 @@ export const CONSENT_VERSION = '2026-11-draft-1';
 export const CONSENT_TEXT = [
   'DRAFT: have a lawyer review before relying on this. Plain-language summary, not legal advice.',
   'What you are doing: you will read aloud words, letters, syllables and prayer lines from a list, and the page will record your voice on this device. Nothing is sent anywhere by the page. You choose when to send the exported file, and to whom.',
-  'What you give: a permanent, worldwide, royalty-free right for ALEF to copy, edit (trim, adjust volume, clean up noise, join pieces together), distribute and play your recordings in the ALEF Hebrew-learning app and website (free or paid), in the audio that goes with the ALEF book, and in marketing and demos for ALEF.',
-  'Sale: ALEF may be sold, or its rights transferred to a buyer or successor, and your recordings may go with it, including in a product that is sold or subscribed to. You will not be paid royalties or a share of income.',
+  'What you give: a permanent, worldwide, royalty-free right for Aleph to copy, edit (trim, adjust volume, clean up noise, join pieces together), distribute and play your recordings in the Aleph Hebrew-learning app and website (free or paid), in the audio that goes with the Aleph book, and in marketing and demos for Aleph.',
+  'Sale: Aleph may be sold, or its rights transferred to a buyer or successor, and your recordings may go with it, including in a product that is sold or subscribed to. You will not be paid royalties or a share of income.',
   'Voice cloning and AI: your recordings will NOT be used to clone your voice, or to train or adjust any voice model, unless you tick the separate optional box below. Leaving it unticked has no effect on whether your recordings are accepted.',
   'Changing your mind: you may withdraw in writing at any time. This stops future use in new releases and new marketing as soon as reasonably practical. It does not reach copies already shipped, downloaded, printed or published.',
   'Privacy: your name is kept private and used only for this agreement and legal records. Your recordings are not published with your name unless you ask for credit.',
@@ -19,10 +19,10 @@ export const CONSENT_TEXT = [
 
 export const CONSENT_REQUIRED = [
   ['age18', 'I am 18 or older (if I am not, a parent or guardian is helping me and agrees to all of this).'],
-  ['grant', 'I have read the summary above and I agree to the use of my recordings described in it, including that ALEF may be sold and that I will not be paid royalties.'],
+  ['grant', 'I have read the summary above and I agree to the use of my recordings described in it, including that Aleph may be sold and that I will not be paid royalties.'],
   ['own_voice', 'The voice is mine, I am free to give these rights, and I will read only what is on the screen.'],
 ];
-export const CONSENT_OPTIONAL_CLONE = ['ai_clone', 'OPTIONAL. I also agree that my recordings may be used as a reference for, or to train or adjust, a computer-generated voice that sounds like me, used inside ALEF, its book audio and its marketing. (Leave unticked for NO.)'];
+export const CONSENT_OPTIONAL_CLONE = ['ai_clone', 'OPTIONAL. I also agree that my recordings may be used as a reference for, or to train or adjust, a computer-generated voice that sounds like me, used inside Aleph, its book audio and its marketing. (Leave unticked for NO.)'];
 
 export const consentComplete = (c) => !!c && CONSENT_REQUIRED.every(([k]) => c.required && c.required[k] === true) && !!String(c.volunteer_name || '').trim();
 

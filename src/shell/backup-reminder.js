@@ -1,5 +1,5 @@
 // @ts-check
-// Progress backup reminder. ALEF keeps progress only in this browser on this device; nothing is copied anywhere automatically.
+// Progress backup reminder. Aleph keeps progress only in this browser on this device; nothing is copied anywhere automatically.
 // After meaningful progress (a few finished lessons) Home shows one calm card pointing at Settings > Back up. It never says or
 // implies that a backup happened on its own: the only thing that counts as a backup is the learner downloading the file.
 // Pure helpers plus one small node builder (takes an `h` element factory). Store key: backup.reminder.v1

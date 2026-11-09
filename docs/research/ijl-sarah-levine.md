@@ -19,7 +19,7 @@ Status: 2026-11-03. Everything below is UNVERIFIED unless it says "read directly
 2. Ask the user for the program's flyer or registration page; search by exact URL rather than by name.
 3. If captions are wanted, run `tools/youtube/fetch-slow.py` on the channel's ids, keep output in research_notes (outside the repo), and store only summaries here.
 
-## Features ALEF should adopt (our judgement, NOT derived from the channel)
+## Features Aleph should adopt (our judgement, NOT derived from the channel)
 
 The program name implies a confidence-first, low-anxiety promise to adult beginners. These follow from that premise plus our own YouTube synthesis (`docs/youtube/synthesis.md`), not from anything Levine teaches:
 

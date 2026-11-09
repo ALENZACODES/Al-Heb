@@ -1,10 +1,10 @@
-# ALEF launch copy (draft, written 2026-11-04)
+# Aleph launch copy (draft, written 2026-11-04)
 
 Every claim below is something the repo can show on the date above (counts from `docs/STATUS.md`, measured by the commands listed there). Nothing here says the content is correct, reviewed, or tested with learners. Re-check the counts before publishing; they drift.
 
 ## One-paragraph description
 
-ALEF is a free Hebrew course that runs in your browser and works offline once loaded. It teaches you to read Hebrew aloud, starting from the letters and vowel points, and then to read the lines you meet in a synagogue (Torah, prayers, the service) and to say everyday words and phrases for a trip to Israel. It has lessons, review cards, letter tracing, a vocabulary list grouped by topic, and a way to compare how the Ashkenazi, Sephardi and Israeli traditions pronounce the same line. There is no account and no ads, and your progress stays on your device. It is an early draft: there are no recorded voices yet (it uses your device's Hebrew voice if it has one), and no native speaker, teacher or clergy member has reviewed the Hebrew.
+Aleph is a free Hebrew course that runs in your browser and works offline once loaded. It teaches you to read Hebrew aloud, starting from the letters and vowel points, and then to read the lines you meet in a synagogue (Torah, prayers, the service) and to say everyday words and phrases for a trip to Israel. It has lessons, review cards, letter tracing, a vocabulary list grouped by topic, and a way to compare how the Ashkenazi, Sephardi and Israeli traditions pronounce the same line. There is no account and no ads, and your progress stays on your device. It is an early draft: there are no recorded voices yet (it uses your device's Hebrew voice if it has one), and no native speaker, teacher or clergy member has reviewed the Hebrew.
 
 ## Five bullets
 
@@ -33,7 +33,7 @@ ALEF is a free Hebrew course that runs in your browser and works offline once lo
 
 - Tagline: "Read Hebrew aloud. Speak it in Israel." (this is the line already on the Home screen)
 - 80 characters: "Free Hebrew reading and speaking practice. Offline. Early draft, unreviewed."
-- Post: "ALEF is a free, offline Hebrew reading course for shul and Israel trips. It is an early draft: no recorded teacher (a few short word clips use a synthetic voice nobody has reviewed) and no teacher has reviewed the Hebrew. I am looking for a few learners and one reviewer to tell me what is wrong."
+- Post: "Aleph is a free, offline Hebrew reading course for shul and Israel trips. It is an early draft: no recorded teacher (a few short word clips use a synthetic voice nobody has reviewed) and no teacher has reviewed the Hebrew. I am looking for a few learners and one reviewer to tell me what is wrong."
 
 ## Wording rules for anyone editing this
 

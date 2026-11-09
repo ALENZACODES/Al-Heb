@@ -60,7 +60,7 @@ export function mount(root, ctx) {
   function supportLine() {
     const st = notify.status();
     if (!st.supported) {
-      if (st.ios && !st.standalone) return "This browser cannot show notifications here. On an iPhone or iPad, add ALEF to the Home Screen first (Share, then Add to Home Screen), then open it from there.";
+      if (st.ios && !st.standalone) return "This browser cannot show notifications here. On an iPhone or iPad, add Aleph to the Home Screen first (Share, then Add to Home Screen), then open it from there.";
       return "This browser does not support notifications. The calendar screen can export reminders to your phone's calendar instead.";
     }
     if (st.permission === "denied") return "Notifications are blocked for this site in the browser's settings. Allow them there, then come back.";
@@ -102,17 +102,17 @@ export function mount(root, ctx) {
       : "No city is set, so Shabbat quiet hours cannot be computed. Pick a city on the Calendar screen; until then reminders are not held back on Shabbat. Friday and Saturday are off by default for that reason; tick them above if you want reminders on those days.";
 
     const enable = el("input", { type: "checkbox", id: "nt-enabled", checked: prefs.enabled ? true : null, disabled: canUse ? null : true,
-      onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, enabled: e.target.checked }); await save(); await arm(); say(prefs.enabled ? "Reminders on, while ALEF is open." : "Reminders off."); } });
+      onchange: async (e) => { prefs = notify.normalizePrefs({ ...prefs, enabled: e.target.checked }); await save(); await arm(); say(prefs.enabled ? "Reminders on, while Aleph is open." : "Reminders off."); } });
 
     const permBtn = el("button", { type: "button", class: "btn", id: "nt-allow", disabled: st.supported && st.permission === "default" ? null : true, onclick: async () => {
       const p = await notify.requestPermission();
-      if (p === "granted") { prefs = notify.normalizePrefs({ ...prefs, enabled: true }); await save(); say("Notifications allowed. Reminders are on while ALEF is open."); }
+      if (p === "granted") { prefs = notify.normalizePrefs({ ...prefs, enabled: true }); await save(); say("Notifications allowed. Reminders are on while Aleph is open."); }
       else say(p === "denied" ? "The browser refused. Notifications stay off." : `Notifications not enabled (permission: ${p}).`);
       await arm(); render();
     } }, "Allow notifications");
 
     const testBtn = el("button", { type: "button", class: "btn secondary", id: "nt-test", disabled: canUse ? null : true, onclick: async () => {
-      const r = await notify.showNow("ALEF test reminder", "This is what a study reminder looks like.", { route: "#/reminders", tag: "alef-test" });
+      const r = await notify.showNow("Aleph test reminder", "This is what a study reminder looks like.", { route: "#/reminders", tag: "alef-test" });
       say(r.ok ? "Test notification sent. If you did not see it, check the system's notification settings for this browser." : `Could not show a notification (${r.reason}).`);
     } }, "Send a test notification");
 
@@ -141,7 +141,7 @@ export function mount(root, ctx) {
     const st = notify.status();
     if (!st.supported || st.permission !== "granted") { n.textContent = "Reminders will start once notifications are allowed."; return; }
     const next = schedule?.ok ? schedule.next : null;
-    n.textContent = next ? `Next reminder: ${fmtWhen(next)} (if ALEF is still open then).` : (prefs.days.length ? "No reminder in the next two weeks (every chosen time falls in quiet hours)." : "No days chosen.");
+    n.textContent = next ? `Next reminder: ${fmtWhen(next)} (if Aleph is still open then).` : (prefs.days.length ? "No reminder in the next two weeks (every chosen time falls in quiet hours)." : "No days chosen.");
   }
 
   async function init() {

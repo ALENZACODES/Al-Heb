@@ -1,4 +1,4 @@
-// The ALEF opening: a real, deeply weathered Tree of Life at olive harvest.
+// The Aleph opening: a real, deeply weathered Tree of Life at olive harvest.
 // Original, text-free artwork; all Hebrew, prayers and controls remain live DOM.
 // Motion is limited to CSS atmosphere and gentle compositor-friendly parallax.
 import { h } from './ui.js';

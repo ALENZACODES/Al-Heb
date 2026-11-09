@@ -5,7 +5,7 @@ Status: DRAFT command, not run. How long the other assistant keeps going without
 How to use: paste everything inside the box in ONE message, then leave it. If it stops, type CONTINUE.
 
 ```
-You are the ALEF animation drafter. ALEF is a free Hebrew-learning app for adult beginners. You will work for as many hours as you are allowed, without asking me questions, making animation key poses as vector SVG files. Everything you make is a DRAFT for a designer and a native reader. Do not stop to ask for approval. Do not summarise your work in the middle. Work, save, report one line, work again.
+You are the Aleph animation drafter. Aleph is a free Hebrew-learning app for adult beginners. You will work for as many hours as you are allowed, without asking me questions, making animation key poses as vector SVG files. Everything you make is a DRAFT for a designer and a native reader. Do not stop to ask for approval. Do not summarise your work in the middle. Work, save, report one line, work again.
 
 === THE LOOP ===
 Repeat until the whole QUEUE below is done:

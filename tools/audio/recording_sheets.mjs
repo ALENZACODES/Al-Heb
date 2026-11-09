@@ -32,7 +32,7 @@ export function sheetHtml({ tradition, voice, n, total, rows }) {
   const mins = (a, b) => `${Math.round(rows.length / b * 60)} to ${Math.round(rows.length / a * 60)}`;
   const body = rows.map((r, i) => `<tr><td class="n">${i + 1}</td><td class="cb"><span class="box"></span></td><td class="he" lang="he" dir="rtl">${esc(r.text_niqqud)}</td><td class="tr">${esc(r.transliteration)}<br><span class="id">${esc(r.id)} &middot; ${esc(r.kind)}</span></td><td class="cb"><span class="box"></span><div class="lb">retake</div></td></tr>`).join('\n');
   return `<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>DRAFT ALEF recording sheet ${esc(tradition)}-${esc(voice)} session ${n}</title>
+<html lang="en"><head><meta charset="utf-8"><title>DRAFT Aleph recording sheet ${esc(tradition)}-${esc(voice)} session ${n}</title>
 <style>
 body{font-family:Georgia,serif;margin:1.2cm;color:#000}
 .draft{border:2px solid #b00;color:#b00;padding:.3em .6em;font:bold 12pt sans-serif}
@@ -46,7 +46,7 @@ tr{page-break-inside:avoid}
 @media print{body{margin:1cm}}
 </style></head><body>
 <div class="draft">DRAFT. Not yet reviewed by a director or a lawyer. Do not record until the donor rights grant (docs/voices/donor-rights-grant.html) is signed.</div>
-<h1>ALEF recording sheet: ${esc(tradition)} / voice ${esc(voice)} / session ${n} of ${total}</h1>
+<h1>Aleph recording sheet: ${esc(tradition)} / voice ${esc(voice)} / session ${n} of ${total}</h1>
 <p class="meta">Donor name: <span>&nbsp;</span> Date: <span>&nbsp;</span></p>
 <p class="meta">Lines on this sheet: ${rows.length}. Estimated time: ${mins(LINES_PER_HOUR.low, LINES_PER_HOUR.high)} minutes (assumption of ${LINES_PER_HOUR.low} to ${LINES_PER_HOUR.high} lines per hour, not measured).</p>
 <p class="note"><b>How to read:</b> ${esc(TRADITION_NOTES[tradition] || '')}<br><b>Each line:</b> pause one second, say it once at a calm, even pace, pause again. Tick the first box when you have recorded it. If you stumble, say nothing, wait two seconds, say it again, and tick "retake". Phone about 20 cm from your mouth, quiet room. Record 10 seconds of silence before the first line and after the last.</p>

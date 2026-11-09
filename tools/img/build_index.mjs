@@ -62,7 +62,7 @@ function synthAlt(stem, set) {
   if ((m = /^ICON_(.+)$/.exec(stem))) return `Icon: ${m[1].replace(/_/g, ' ')}.`;
   if ((m = /^BADGE_(\d+)$/.exec(stem))) return `Achievement badge ${+m[1]}.`;
   if ((m = /^PRAY_(.+)_(\d+)$/.exec(stem))) return `Illustration ${+m[2]} for the ${m[1].replace(/_/g, ' ')} page.`;
-  if ((m = /^BRAND_(.+)$/.exec(stem))) return `ALEF brand artwork: ${m[1].replace(/_/g, ' ')}.`;
+  if ((m = /^BRAND_(.+)$/.exec(stem))) return `Aleph brand artwork: ${m[1].replace(/_/g, ' ')}.`;
   return `Illustration: ${stem.replace(/_/g, ' ')}${set ? ` (${set.replace(/_/g, ' ')})` : ''}.`;
 }
 

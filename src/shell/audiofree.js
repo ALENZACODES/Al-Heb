@@ -22,7 +22,7 @@ export const AUDIO_FREE_NOTE = 'Sound parts are left out because you chose "I do
 export const SKIP_NOTE = 'Skipping is fine. A skipped item is not marked wrong, does not change your score and does not affect your streak.';
 
 /** What the written sound descriptions are, said the same way everywhere. */
-export const SOUND_TEXT_NOTE = 'Draft. These are written descriptions of how a sound is made, taken from ALEF\'s pronunciation notes. Nobody who speaks Hebrew has checked this wording, and words alone cannot replace hearing a sound.';
+export const SOUND_TEXT_NOTE = 'Draft. These are written descriptions of how a sound is made, taken from Aleph\'s pronunciation notes. Nobody who speaks Hebrew has checked this wording, and words alone cannot replace hearing a sound.';
 
 /**
  * Wording for a "say it / read it aloud" instruction. For a learner who does not use audio, "aloud" becomes "in the way you read".

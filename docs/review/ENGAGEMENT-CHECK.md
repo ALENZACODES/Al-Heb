@@ -44,7 +44,7 @@ Observed strings: Home "Paused. Your best streak was N days. A new one starts wh
 
 Changed (fixes):
 1. `src/morning/morning.view.js`: removed "Reddit and Duolingo do not do this." (naming other products in a settings screen; also not something checked).
-2. Same file: the settings sentence said "Shabbat and festival days never break an ALEF streak" even when the box is off, which is false (observed in `streak.js`: with `freeze` false a missed Saturday breaks the chain). It now states which of the two is true for the current setting, and mentions the Progress rest-day button. The rest-today message no longer claims Shabbat when the rest day was one the learner declared.
+2. Same file: the settings sentence said "Shabbat and festival days never break an Aleph streak" even when the box is off, which is false (observed in `streak.js`: with `freeze` false a missed Saturday breaks the chain). It now states which of the two is true for the current setting, and mentions the Progress rest-day button. The rest-today message no longer claims Shabbat when the rest day was one the learner declared.
 3. `src/shell/notify.js`: default notification body "A few minutes of Hebrew keeps the streak going." changed to "A few minutes of Hebrew, whenever you are ready." (streak-pressure wording in a push-style message).
 
 Left as is, flagged for John:

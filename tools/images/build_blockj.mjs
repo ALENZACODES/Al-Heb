@@ -69,7 +69,7 @@ function itemLine(r, n) {
 export function render(nn, command, rows) {
   const L = [];
   const sets = [...new Set(rows.map((r) => r.set.replace(/^j_/, '')))];
-  L.push(`ALEF IMAGE RUN - BLOCK J ${nn} (command ${command}): ${rows[0].file} to ${rows[rows.length - 1].file}`);
+  L.push(`Aleph IMAGE RUN - BLOCK J ${nn} (command ${command}): ${rows[0].file} to ${rows[rows.length - 1].file}`);
   L.push('');
   L.push('No attachments are needed; everything is described in words below.');
   L.push(`Sets in this file: ${sets.join(', ')}.`);
@@ -139,7 +139,7 @@ export function build() {
 
 function master(files, rows, counts) {
   const L = [];
-  L.push('ALEF IMAGE RUN - BLOCK J MASTER INSTRUCTIONS (commands 301 to ' + (FIRST_COMMAND + files.length - 1) + ')');
+  L.push('Aleph IMAGE RUN - BLOCK J MASTER INSTRUCTIONS (commands 301 to ' + (FIRST_COMMAND + files.length - 1) + ')');
   L.push('');
   L.push(`This is a run of ${rows.length} further pictures for the app and the book, in ${files.length} paste files. Nothing needs to be attached. Keep ONE conversation in the image tool for the whole run so the style stays the same.`);
   L.push('');

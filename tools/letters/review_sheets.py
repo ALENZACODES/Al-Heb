@@ -225,7 +225,7 @@ td[data-l]:before{content:attr(data-l);display:block;font-size:.7rem;color:#555;
 }
 @media print{body{margin:6mm}table{font-size:.7rem}}
 """
-    body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ALEF stroke-order review sheet (draft)</title><style>{style}</style></head><body>'
+    body = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aleph stroke-order review sheet (draft)</title><style>{style}</style></head><body>'
             '<h1>Hebrew letter stroke order: teacher review sheet (DRAFT)</h1>'
             '<p>54 records: 27 letters x print (block) and cursive (ktav yad). None is validated. Please tick the box if the shape AND the stroke count, order and direction are what Israeli school handwriting teaches; otherwise write the correction in the last column (for example "2 strokes: bar right-to-left, then stem top-down").</p>'
             '<p>Numbered dot = where the stroke starts; arrows = pen direction; grey = the glyph outline the strokes should follow. '

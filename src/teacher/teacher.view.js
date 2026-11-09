@@ -1,4 +1,4 @@
-// ALEF teacher share (DRAFT). Two pages on one view: learner "Share my progress" and teacher "Class summary".
+// Aleph teacher share (DRAFT). Two pages on one view: learner "Share my progress" and teacher "Class summary".
 // Everything is local: nothing is sent anywhere, there is no fetch/XHR/beacon. All text goes in via textContent (h() text nodes).
 import { h } from '../shell/ui.js';
 import { loadProgressData } from '../progress/data.js';
@@ -76,7 +76,7 @@ export function mount(root, ctx = {}) {
       h('section', { class: 'card tc-consent', 'aria-labelledby': 'tc-h-consent', role: 'note' },
         h('h2', { id: 'tc-h-consent' }, 'Before you share'),
         h('p', {}, 'You are sharing a short summary: lessons you finished, letters and vowel signs you practised, the look-alike pairs and signs you miss most, your class-track week, any timed read results, and today\'s date. It has no email, no account and no recordings.'),
-        h('p', {}, 'Nothing leaves your device until you send it yourself, by pasting the code into a message or attaching the file. ALEF never uploads it.')),
+        h('p', {}, 'Nothing leaves your device until you send it yourself, by pasting the code into a message or attaching the file. Aleph never uploads it.')),
       h('div', {}, h('label', { for: 'tc-name' }, 'Your name for your teacher (optional)'), name),
       h('button', { type: 'button', class: 'btn', onclick: make }, 'Export my summary'),
       status, out,

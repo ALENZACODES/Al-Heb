@@ -68,7 +68,7 @@ export async function mount(root, ctx) {
       h('p', { class: 'draft-flag', role: 'note' }, 'This is not legal advice, and no lawyer has reviewed it. Licence labels are what each source says about itself. If a row says "unverified" or "partly verified", nobody has confirmed the right with the original owner. No native speaker, rabbi or teacher has reviewed the Hebrew, the vowel marks, the English spelling of Hebrew words, or the translations.'),
       h('p', {}, `${entries.length} sources listed: ${counts['verified-primary'] || 0} verified, ${counts['partly-verified'] || 0} partly verified, ${counts.unverified || 0} unverified, ${(counts['project-owned'] || 0) + (counts['not-present'] || 0)} project-written or not present.`),
       data.notLegalAdvice ? h('details', {}, h('summary', {}, 'What the status values mean'), h('p', {}, data.notLegalAdvice)) : null,
-      h('p', {}, 'ALEF has no software licence for its own code and original text yet. Until one is added, all rights are reserved.')),
+      h('p', {}, 'Aleph has no software licence for its own code and original text yet. Until one is added, all rights are reserved.')),
     h('section', { class: 'card', 'aria-labelledby': 'cg-vocab-line' }, h('h2', { id: 'cg-vocab-line' }, 'Word meanings and example sentences'),
       h('p', {}, VOCAB_ATTRIBUTION),
       h('p', {}, 'Word meanings: Wiktionary contributors (CC BY-SA 4.0). Example sentences: Tatoeba contributors (CC BY 2.0 FR). Speech recognition and the fallback voice come from your browser.'),

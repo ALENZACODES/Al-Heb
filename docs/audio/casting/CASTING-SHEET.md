@@ -1,4 +1,4 @@
-# ALEF Casting Sheet — Blind Scorecard (printable)
+# Aleph Casting Sheet — Blind Scorecard (printable)
 
 **Sprint:** Voice SUPER COMMAND · 2026-11-05 · America/Toronto  
 **Status:** DRAFT rubric (drafting lane) — freeze before Blind Judge Passes #1–#3  
@@ -27,7 +27,7 @@
 | 3 | **Clarity** | Consonants and vowels distinguishable at learning speed. |
 | 4 | **Prayer dignity & pacing** | Stress and phrasing fit liturgical text; unhurried, respectful. |
 | 5 | **Niqqud fidelity** | Pointed text pronounced as pointed (shva, kamatz/patach, dagesh per tradition). |
-| 6 | **Overall (computed or scored)** | Holistic fitness for ALEF beginners praying aloud. |
+| 6 | **Overall (computed or scored)** | Holistic fitness for Aleph beginners praying aloud. |
 
 *Minimum fields for Decision Rule:* criteria **1–5** required. Overall may be the mean of 1–5 or a separate holistic mark — record which method you used at the top of your pass.
 

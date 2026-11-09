@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 16 (command 316): J-0192.png to J-0204.png
+Aleph IMAGE RUN - BLOCK J 16 (command 316): J-0192.png to J-0204.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_food-drink-set01.

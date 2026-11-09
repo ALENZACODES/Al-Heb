@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 04 (command 304): J-0040.png to J-0052.png
+Aleph IMAGE RUN - BLOCK J 04 (command 304): J-0040.png to J-0052.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_clothes-shopping-set01, vocab_describing-words-set01.

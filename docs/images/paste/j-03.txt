@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 03 (command 303): J-0027.png to J-0039.png
+Aleph IMAGE RUN - BLOCK J 03 (command 303): J-0027.png to J-0039.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_body-health-set01, vocab_clothes-shopping-set01.

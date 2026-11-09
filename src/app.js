@@ -1,4 +1,4 @@
-// ALEF boot: wires store, settings, audio, router, and lazily mounted views.
+// Aleph boot: wires store, settings, audio, router, and lazily mounted views.
 import { mountRimon } from './shell/rimon.js';
 import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
@@ -205,11 +205,11 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   const live = document.getElementById('announcer');
   if (!route) {
     root.replaceChildren(h('section', { class: 'card' }, h('h1', { id: 'view-title', tabindex: '-1' }, t('notfound.title')), h('p', { class: 'mono' }, path), h('a', { class: 'btn', href: '#/' }, t('nav.home'))));
-    renderNav(null); document.title = `${t('notfound.title')} - ALEF`; return finish();
+    renderNav(null); document.title = `${t('notfound.title')} - Aleph`; return finish();
   }
   if (route.name === 'home' && !settings.get('onboarded')) { ctxBase.route('/welcome'); return; }
   renderNav(route.name);
-  document.title = route.name === 'home' ? 'ALEF' : `${titleCase(route.title)} - ALEF`;
+  document.title = route.name === 'home' ? 'Aleph' : `${titleCase(route.title)} - Aleph`;
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
@@ -238,12 +238,12 @@ async function show(match, ctxBase, { quiet = false } = {}) {
     console.error(`view ${route.name} failed`, err);
     unavailableCard(root, { title: route.title, t, module: route.module, error: err?.message, kind: 'error' });
   }
-  if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - ALEF" rather than a generic title; falls back to the id, then to the route title
+  if (route.name === 'letter' && params?.id && token === navToken) { // "Letter Bet - Aleph" rather than a generic title; falls back to the id, then to the route title
     let nm = '';
     try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
-    if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
+    if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - Aleph`;
   }
-  // No preview note on pages: every page is presented as a finished part of ALEF.
+  // No preview note on pages: every page is presented as a finished part of Aleph.
   root.removeAttribute('aria-busy');
   finish();
 
@@ -352,5 +352,5 @@ async function boot() {
 window.addEventListener('error', (e) => { document.body.dataset.lastError = e.message; });
 boot().catch((e) => {
   console.error(e);
-  document.getElementById('main').textContent = 'ALEF could not start. Reload the page. If it keeps happening, try another browser.';
+  document.getElementById('main').textContent = 'Aleph could not start. Reload the page. If it keeps happening, try another browser.';
 });

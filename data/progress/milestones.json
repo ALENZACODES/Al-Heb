@@ -1,7 +1,7 @@
 {
   "schema": "alef-progress-milestones/1",
   "status": "draft-needs-expert-review",
-  "note": "Milestones are ALEF's own, derived from what the app can measure (lessons, tracing, SRS cards, Spot It, checkpoints, decodability of registry texts). They are not an external standard. Kinds are resolved by src/progress/model.js evaluateMilestone().",
+  "note": "Milestones are Aleph's own, derived from what the app can measure (lessons, tracing, SRS cards, Spot It, checkpoints, decodability of registry texts). They are not an external standard. Kinds are resolved by src/progress/model.js evaluateMilestone().",
   "settings": {
     "matureStabilityDays": 21,
     "vocabBandStartedMin": 10,

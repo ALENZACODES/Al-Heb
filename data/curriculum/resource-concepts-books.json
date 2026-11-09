@@ -77,7 +77,7 @@
    "improvedName": "Shape-hook cards with learner choice",
    "spec": {
     "screen": "Per-letter card showing a simple original image that echoes the print glyph's shape, a one-line cue, and the sound anchor word; a toggle swaps between two cues.",
-    "data": "Data: hooks[] per letter {cue, imageId, kind: shape or sound}, authored for ALEF, not taken from the book. Optional history line kept in a separate \"origin\" field and labelled as background.",
+    "data": "Data: hooks[] per letter {cue, imageId, kind: shape or sound}, authored for Aleph, not taken from the book. Optional history line kept in a separate \"origin\" field and labelled as background.",
     "interaction": "Learner picks the hook that works for them; a recall test later shows only the hook image and asks for the letter; hook usage informs which hooks stay.",
     "test": "Unit: every letter has at least one hook, imageId resolves to an asset or is flagged pending, no hook text contradicts the letter's recorded sound; recall quiz returns the right answer for each hook."
    },
@@ -311,7 +311,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "notes": "ALEF already has a congregation setting; keep the up-front statement, add per-tradition playback."
+   "notes": "Aleph already has a congregation setting; keep the up-front statement, add per-tradition playback."
   },
   {
    "id": "bk-njop-04",
@@ -331,7 +331,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "notes": "Weakness record. ALEF shows tiles right to left everywhere."
+   "notes": "Weakness record. Aleph shows tiles right to left everywhere."
   },
   {
    "id": "bk-njop-05",
@@ -476,7 +476,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "notes": "Weakness for ALEF goals: a learner cannot read a single word yet. Short scope is a strength for a free funnel course only."
+   "notes": "Weakness for Aleph goals: a learner cannot read a single word yet. Short scope is a strength for a free funnel course only."
   },
   {
    "id": "bk-udemy-05",
@@ -606,7 +606,7 @@
    "spec": null,
    "printable": null,
    "status": "proposed",
-   "notes": "ALEF runs these as two parallel tracks (read and israel) from day one, which suits the two stated goals better."
+   "notes": "Aleph runs these as two parallel tracks (read and israel) from day one, which suits the two stated goals better."
   },
   {
    "id": "bk-dummies-05",

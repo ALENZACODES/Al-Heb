@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 45 (command 345): J-0569.png to J-0581.png
+Aleph IMAGE RUN - BLOCK J 45 (command 345): J-0569.png to J-0581.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: festival_rosh-hashanah, festival_yom-kippur, festival_sukkot.

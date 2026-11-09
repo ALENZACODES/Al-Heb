@@ -6,7 +6,7 @@
   "r": "reading siddur or Torah aloud",
   "i": "Israeli functional Hebrew",
   "c": "beginner clarity",
-  "f": "fit with ALEF",
+  "f": "fit with Aleph",
   "risk": "originality risk, higher is worse"
  },
  "sources": {
@@ -79,7 +79,7 @@
    "improvedScore": 880,
    "improvedName": "Letter behaviour badges tied to the data",
    "spec": {
-    "screen": "Letter card with a single highlighted badge row (silent carrier, dot changes sound, has final form, look-alike warning). Badge text is ALEF's own wording.",
+    "screen": "Letter card with a single highlighted badge row (silent carrier, dot changes sound, has final form, look-alike warning). Badge text is Aleph's own wording.",
     "data": "badges[] per letter in data/letters/letters.json extension: {letterId, kind: silent|dagesh-pair|final|lookalike|loanword-mark, textKey}. Keys point to i18n strings, not copied captions.",
     "interaction": "Tap a badge to open a 10 second demo (toggle dot, show final form, flash the look-alike). A later retrieval card asks which badge a letter carries.",
     "test": "Unit: every one of the 27 letters has at least one badge, the badge kinds agree with letters.json fields (finalOf, confusableWith), and no badge text is shorter than 10 characters."
@@ -87,7 +87,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read",
-   "notes": "The lesson also says a final he is simply not read. That is a beginner shortcut: it is wrong for mappiq-he and for several Torah words. ALEF should say 'usually silent' and link to the exceptions later."
+   "notes": "The lesson also says a final he is simply not read. That is a beginner shortcut: it is wrong for mappiq-he and for several Torah words. Aleph should say 'usually silent' and link to the exceptions later."
   },
   {
    "id": "yt-alphabet-03",
@@ -105,7 +105,7 @@
    "improvedScore": 960,
    "improvedName": "Dot toggle tile with set-the-dot test",
    "spec": {
-    "screen": "Two-state letter tile: one big glyph with a draggable or tappable dot. Left half shows plosive (dotted), right half shows fricative (plain), each with its sound button and a mouth-position hint drawn by ALEF.",
+    "screen": "Two-state letter tile: one big glyph with a draggable or tappable dot. Left half shows plosive (dotted), right half shows fricative (plain), each with its sound button and a mouth-position hint drawn by Aleph.",
     "data": "dageshPairs[] = {letterId, dotted: {sound, ipa}, plain: {sound, ipa}} for bet, kaf, pe; a tradition field so a pair can be dropped or re-labelled where a tradition has no audible contrast. Audio ids reuse letter and syllable manifest entries.",
     "interaction": "Toggle the dot; the sound plays and the tile morphs. Then a 6 item test plays a sound and the learner must set the dot correctly. Mistakes feed the SRS card for that letter pair.",
     "test": "Unit: exactly three pairs ship, each has audio ids that resolve in the manifest (or are flagged missing), and the test builder never produces an item whose answer is ambiguous under the selected tradition."
@@ -206,7 +206,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read",
-   "notes": "The video series lumps shva in as a short e. That is a simplification that is wrong in silent-shva positions, so ALEF keeps shva in its own unit."
+   "notes": "The video series lumps shva in as a short e. That is a simplification that is wrong in silent-shva positions, so Aleph keeps shva in its own unit."
   },
   {
    "id": "yt-vowels-02",
@@ -250,7 +250,7 @@
    "improvedName": "Same-sound spelling variants inside the vowel board",
    "spec": {
     "screen": "In each family column of the vowel board a second row shows the 'full spelling' variants (sign alone, sign plus yud, sign plus vav) on the same carrier, with one audio per row that is identical.",
-    "data": "matresVariants[] = {family, forms:[{pointed, spelledFull}]} derived from niqqud.json and the word list; examples drawn from ALEF's own corpus.",
+    "data": "matresVariants[] = {family, forms:[{pointed, spelledFull}]} derived from niqqud.json and the word list; examples drawn from Aleph's own corpus.",
     "interaction": "Learner taps 'same sound?' to see both forms play identically; later the unpointed-text round asks which family a plain vav or yud stands for in a real word.",
     "test": "Unit: each variant pair has an identical audio id; corpus examples exist for every pair; unpointed reading round returns only answers consistent with the word's pointed form."
    },
@@ -298,7 +298,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read",
-   "notes": "Counterexample for ALEF: the shva rules module in src/pronunciation/shva.js is the right treatment; do not copy this simplification."
+   "notes": "Counterexample for Aleph: the shva rules module in src/pronunciation/shva.js is the right treatment; do not copy this simplification."
   },
   {
    "id": "yt-vowels-06",

@@ -30,7 +30,7 @@ function group(number, block, set, title, template, variables, prompt, files, op
 
 // ---------------- Block A (1-10) ----------------
 group(1, 'A', 'setup_style', 'Style guide', 'literal', {},
-  'Write STYLE GUIDE v1 for the ALEF image set and keep it for every later image: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind; square 1024x1024 unless a command says otherwise; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Print the guide as a numbered list, then generate one sample image of a ceramic cup on a wooden table in this style so we can approve it.',
+  'Write STYLE GUIDE v1 for the Aleph image set and keep it for every later image: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind; square 1024x1024 unless a command says otherwise; every object centred with 10% margin; consistent 3/4 top-down light from upper left. Print the guide as a numbered list, then generate one sample image of a ceramic cup on a wooden table in this style so we can approve it.',
   [{ file: 'STYLE_sample_cup', prompt: `${S.STYLE_GUIDE} A ceramic cup on a wooden table. ${NO_TEXT}` }],
   { textOutputs: ['numbered STYLE GUIDE v1 list'] });
 

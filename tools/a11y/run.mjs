@@ -68,7 +68,7 @@ for (const [device, theme] of CONFIGS) {
   note('skip link moves focus into #main', await page.evaluate(() => document.activeElement?.id === 'main'));
   const p2 = await ctx.newPage(); await p2.goto(base + '#/'); await p2.waitForSelector('body[data-ready="1"]');
   const stops = []; for (let i = 0; i < 14; i++) { await p2.keyboard.press('Tab'); stops.push(await p2.evaluate(() => { const a = document.activeElement; return (a?.textContent || a?.tagName || '').trim().replace(/\s+/g, ' ').slice(0, 24); })); }
-  note('Tab order on a phone: skip link, brand, the v0 tab-bar links (Learn, Progress), More (the sheet items are not tabbable while closed)', ['Skip', 'ALEF', 'Learn', 'Progress', 'More'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
+  note('Tab order on a phone: skip link, brand, the v0 tab-bar links (Learn, Progress), More (the sheet items are not tabbable while closed)', ['Skip', 'Aleph', 'Learn', 'Progress', 'More'].every((x, i) => stops[i]?.startsWith(x)), stops.join(' | '));
   // focus visible on a nav link
   const outline = await page.evaluate(() => { const a = document.querySelector('#nav a'); a.focus(); const c = getComputedStyle(a); return c.outlineStyle + ' ' + c.outlineWidth; });
   note('focused nav link has a visible outline', /solid 3px/.test(outline), outline);

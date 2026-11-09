@@ -1,6 +1,6 @@
 // @ts-check
 // Headings and menu labels in Title Case across the app ("Reform Synagogues in Canada").
-// Only ever raises a first letter: words already holding a capital (ALEF, iPhone), words with digits and Hebrew are left alone.
+// Only ever raises a first letter: words already holding a capital (Aleph, iPhone), words with digits and Hebrew are left alone.
 // Opt out on any element with data-case="keep".
 
 const SMALL = new Set(["a", "an", "the", "and", "but", "or", "nor", "for", "so", "yet", "as", "at", "by", "in", "of", "on", "to", "up", "vs", "via", "per", "off"]);

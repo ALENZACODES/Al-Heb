@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 05 (command 305): J-0053.png to J-0065.png
+Aleph IMAGE RUN - BLOCK J 05 (command 305): J-0053.png to J-0065.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_describing-words-set01, vocab_describing-words-set02, vocab_describing-words-set03.

@@ -191,7 +191,7 @@ test("4-week simulated calendar with Yom Kippur and a two-day Yom Tov: streak eq
     const key = S.dayKey(day), t = new Date(day.getFullYear(), day.getMonth(), day.getDate(), 8).getTime();
     d.open(t);
     const p = d.shown(t);
-    if (p.restToday) { expectFrozen++; frozenSeen.push(key); assert.equal(p.count, completed, `rest day ${key} must not change the count`); continue; } // user does not touch ALEF
+    if (p.restToday) { expectFrozen++; frozenSeen.push(key); assert.equal(p.count, completed, `rest day ${key} must not change the count`); continue; } // user does not touch Aleph
     d.study(t, 300); completed++;
     assert.equal(d.shown(t + 301000).count, completed, `day ${key}`);
   }

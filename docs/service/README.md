@@ -7,7 +7,7 @@ Route `#/service`, view `src/service/service.view.js` (model `src/service/model.
 - `src/shell/i18n.js`: `'nav.service': 'Follow the service',`
 
 ## What it does
-- Coverage: for Friday evening, Shabbat morning and weekday morning, the share of lines ALEF holds that the learner can decode now. It reuses `src/progress` (`readableNow` -> `decode.gradeLines/gradeWords`); nothing is re-implemented. Percentages are rounded down. "Decodable" is not "fluent". Known gaps (`data/corpus/gaps.json` ids) are listed separately, so the percentage is not of the whole service.
+- Coverage: for Friday evening, Shabbat morning and weekday morning, the share of lines Aleph holds that the learner can decode now. It reuses `src/progress` (`readableNow` -> `decode.gradeLines/gradeWords`); nothing is re-implemented. Percentages are rounded down. "Decodable" is not "fluent". Known gaps (`data/corpus/gaps.json` ids) are listed separately, so the percentage is not of the whole service.
 - Follow the service: page-turn cards for Friday evening and Shabbat morning from registry texts only: pointed Hebrew, transliteration per tradition (hide toggle), registry English. Stand/sit/sing/silent markers appear only where `torah-service-guide.json` says so, each with its quoted words (a test verifies the quote); otherwise "varies by congregation". Friday evening has no guide wording, so it has no markers. Audio button only when `audio.status` reports a real file (speech fallback does not count).
 
 ## Limits

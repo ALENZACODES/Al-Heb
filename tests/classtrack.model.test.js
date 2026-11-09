@@ -23,7 +23,7 @@ test('validate catches a bad lesson id, an unknown text and an undecodable early
   assert.ok(p.some((x) => /unknown lesson r999/.test(x)) && p.some((x) => /unknown text nope/.test(x)) && p.some((x) => /aleinu-1 not decodable/.test(x)));
 });
 
-test('every ALEF core lesson appears at most once and the plan is ordered by ALEF lesson number', () => {
+test('every Aleph core lesson appears at most once and the plan is ordered by Aleph lesson number', () => {
   const ids = D.track.weeks.flatMap((w) => w.lessons);
   assert.equal(new Set(ids).size, ids.length);
   const read = ids.filter((i) => /^r\d+$/.test(i)).map((i) => Number(i.slice(1)));

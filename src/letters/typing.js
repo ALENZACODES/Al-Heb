@@ -1,4 +1,4 @@
-// ALEF lane 2: Israeli SI-1452 typing trainer (pure logic; the view draws the keyboard).
+// Aleph lane 2: Israeli SI-1452 typing trainer (pure logic; the view draws the keyboard).
 // Layout data: data/letters/keyboard-si1452.json (built from xkeyboard-config symbols/il; see SOURCES.md).
 // @ts-check
 

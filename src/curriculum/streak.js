@@ -1,5 +1,5 @@
 /**
- * ALEF streak engine (pure; no DOM, no clock, no store). DRAFT behaviour, copy marked draft in the views.
+ * Aleph streak engine (pure; no DOM, no clock, no store). DRAFT behaviour, copy marked draft in the views.
  *
  * ONE record, ONE store key ("streak", STREAK_KEY): the lane-1 record { count, best, last } extended in place, so every
  * old reader keeps working and Home (curriculum/progress.js currentStreak) and Progress (progress/model.js streakInfo)

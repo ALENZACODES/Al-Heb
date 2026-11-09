@@ -31,7 +31,7 @@
   {
    "name": "home Today card shows 6 due cards, a streak line, the morning link and one Continue button",
    "ok": true,
-   "detail": "ALEF אלף Read Hebrew aloud. Speak it in Israel. Today's lesson Next lesson: Tav and the dot in Bet: Shabbat 6 cards due Streak: No streak yet. Finish a lesson or review a card to start one. Daily goal: 5 min10 min15 min20 min More practice: Typing · Festivals · Compare traditions Today's morning verse Continue: Tav and the dot in Bet: Shabbat Opening Draft opening: pending clergy/educator review. "
+   "detail": "Aleph אלף Read Hebrew aloud. Speak it in Israel. Today's lesson Next lesson: Tav and the dot in Bet: Shabbat 6 cards due Streak: No streak yet. Finish a lesson or review a card to start one. Daily goal: 5 min10 min15 min20 min More practice: Typing · Festivals · Compare traditions Today's morning verse Continue: Tav and the dot in Bet: Shabbat Opening Draft opening: pending clergy/educator review. "
   },
   {
    "name": "review persisted ratings to srs.cards",
@@ -53,22 +53,22 @@
   {
    "route": "/",
    "status": "content",
-   "heading": "ALEF אלף",
+   "heading": "Aleph אלף",
    "unavailable": false,
    "textLength": 1478,
    "focused": "",
-   "title": "ALEF",
+   "title": "Aleph",
    "errors": [],
    "consoleErrors": []
   },
   {
    "route": "/welcome",
    "status": "content",
-   "heading": "Welcome to ALEF אלף",
+   "heading": "Welcome to Aleph אלף",
    "unavailable": false,
    "textLength": 461,
    "focused": "",
-   "title": "Welcome - ALEF",
+   "title": "Welcome - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -79,7 +79,7 @@
    "unavailable": false,
    "textLength": 4818,
    "focused": "",
-   "title": "Learn - ALEF",
+   "title": "Learn - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -90,7 +90,7 @@
    "unavailable": false,
    "textLength": 1818,
    "focused": "",
-   "title": "Learn - ALEF",
+   "title": "Learn - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -101,7 +101,7 @@
    "unavailable": false,
    "textLength": 121,
    "focused": "",
-   "title": "Learn - ALEF",
+   "title": "Learn - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -112,7 +112,7 @@
    "unavailable": false,
    "textLength": 1235,
    "focused": "",
-   "title": "Letters - ALEF",
+   "title": "Letters - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -123,7 +123,7 @@
    "unavailable": false,
    "textLength": 1234,
    "focused": "",
-   "title": "Letter - ALEF",
+   "title": "Letter - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -134,7 +134,7 @@
    "unavailable": false,
    "textLength": 5890,
    "focused": "",
-   "title": "Sounds - ALEF",
+   "title": "Sounds - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -145,7 +145,7 @@
    "unavailable": false,
    "textLength": 8758,
    "focused": "",
-   "title": "Read - ALEF",
+   "title": "Read - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -156,7 +156,7 @@
    "unavailable": false,
    "textLength": 8758,
    "focused": "",
-   "title": "Read - ALEF",
+   "title": "Read - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -167,7 +167,7 @@
    "unavailable": false,
    "textLength": 891,
    "focused": "",
-   "title": "Scan - ALEF",
+   "title": "Scan - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -178,7 +178,7 @@
    "unavailable": false,
    "textLength": 4509,
    "focused": "",
-   "title": "Calendar - ALEF",
+   "title": "Calendar - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -189,7 +189,7 @@
    "unavailable": false,
    "textLength": 2153,
    "focused": "",
-   "title": "Workbook - ALEF",
+   "title": "Workbook - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -200,7 +200,7 @@
    "unavailable": false,
    "textLength": 496,
    "focused": "",
-   "title": "Letter atlas - ALEF",
+   "title": "Letter atlas - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -211,7 +211,7 @@
    "unavailable": false,
    "textLength": 35,
    "focused": "",
-   "title": "Sound gap - ALEF",
+   "title": "Sound gap - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -222,7 +222,7 @@
    "unavailable": false,
    "textLength": 8323,
    "focused": "",
-   "title": "Vocabulary - ALEF",
+   "title": "Vocabulary - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -233,7 +233,7 @@
    "unavailable": false,
    "textLength": 678,
    "focused": "",
-   "title": "Words you can already read - ALEF",
+   "title": "Words you can already read - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -244,7 +244,7 @@
    "unavailable": false,
    "textLength": 725,
    "focused": "",
-   "title": "Words you can already read - ALEF",
+   "title": "Words you can already read - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -255,7 +255,7 @@
    "unavailable": false,
    "textLength": 264,
    "focused": "",
-   "title": "Spot It - ALEF",
+   "title": "Spot It - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -266,7 +266,7 @@
    "unavailable": false,
    "textLength": 165,
    "focused": "",
-   "title": "Look-alike checkpoint - ALEF",
+   "title": "Look-alike checkpoint - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -277,7 +277,7 @@
    "unavailable": false,
    "textLength": 690,
    "focused": "",
-   "title": "Israel dialogues - ALEF",
+   "title": "Israel dialogues - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -288,7 +288,7 @@
    "unavailable": false,
    "textLength": 971,
    "focused": "",
-   "title": "Israel dialogue - ALEF",
+   "title": "Israel dialogue - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -299,7 +299,7 @@
    "unavailable": false,
    "textLength": 914,
    "focused": "",
-   "title": "Settings - ALEF",
+   "title": "Settings - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -310,18 +310,18 @@
    "unavailable": false,
    "textLength": 7339,
    "focused": "",
-   "title": "How this works - ALEF",
+   "title": "How this works - Aleph",
    "errors": [],
    "consoleErrors": []
   },
   {
    "route": "/about",
    "status": "content",
-   "heading": "About ALEF",
+   "heading": "About Aleph",
    "unavailable": false,
    "textLength": 4777,
    "focused": "",
-   "title": "About - ALEF",
+   "title": "About - Aleph",
    "errors": [],
    "consoleErrors": []
   },
@@ -332,7 +332,7 @@
    "unavailable": false,
    "textLength": 27,
    "focused": "",
-   "title": "Page not found - ALEF",
+   "title": "Page not found - Aleph",
    "errors": [],
    "consoleErrors": []
   },

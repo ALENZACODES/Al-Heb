@@ -20,7 +20,7 @@ import { uiEnglish } from '../shell/names.js';
 import { sourcesLine, exampleCredit } from '../shell/sources.js';
 
 export const STORE_KEY = 'vocab.themes.v1';
-export const SENSE_NOTE = 'Example lines are copied from ALEF\'s own texts (prayers, phrasebook, lessons). Whether the word means the same thing in the line was not checked.';
+export const SENSE_NOTE = 'Example lines are copied from Aleph\'s own texts (prayers, phrasebook, lessons). Whether the word means the same thing in the line was not checked.';
 const CSS = `
 .alef-themes{max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
 .alef-themes *{box-sizing:border-box;max-inline-size:100%}
@@ -38,7 +38,7 @@ function injectStyle() {
 }
 const focusNode = (n) => { try { n?.focus?.(); } catch { /* ignore */ } };
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
-const SOURCE_LABEL = { corpus: 'ALEF text library', service: 'service order', curriculum: 'lesson text' };
+const SOURCE_LABEL = { corpus: 'Aleph text library', service: 'service order', curriculum: 'lesson text' };
 
 /** Pointed form + POS key used to match a pack word to its entry in the 5,000-word list. */
 export const bridgeKey = (he, pos) => `${String(he ?? '').normalize('NFC')}|${pos}`;
@@ -91,7 +91,7 @@ export function mount(root, ctx) {
       return el('li', {}, el('button', { type: 'button', class: 'btn secondary th-card', 'data-pack': t.id, onclick: () => openPack(t.id) },
         el('strong', {}, t.title), ' ', el('span', { class: 'th-muted' }, `${plural(t.size, 'word', 'words')}, ${t.withExample} with an example line${sent ? ', sent to your review deck' : ''}`)));
     });
-    setBody(el('p', {}, `${data.count} packs of up to ${data.themeSize} words, grouped by topic and ordered by how often the word appears in ALEF's own texts. Choose one to open it.`), el('ul', { class: 'th-list', 'aria-label': 'Theme packs' }, ...items));
+    setBody(el('p', {}, `${data.count} packs of up to ${data.themeSize} words, grouped by topic and ordered by how often the word appears in Aleph's own texts. Choose one to open it.`), el('ul', { class: 'th-list', 'aria-label': 'Theme packs' }, ...items));
     say('');
     state.last = null; save();
     focusNode(h1);
@@ -103,7 +103,7 @@ export function mount(root, ctx) {
     const listen = audioButton(el, ctx, { kind: 'word', id: w.id, text: String(w.he || '').replace(/־/g, ' '), label: 'Listen', name: w.en });
     const ex = w.example ? el('blockquote', { class: 'th-ex' },
       heText(w.example.he), w.example.en ? el('div', {}, uiEnglish(ctx, w.example.en)) : null,
-      el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'ALEF texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`), exampleCredit(el, w.example)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of ALEF\'s texts.');
+      el('div', { class: 'th-muted' }, `From the ${SOURCE_LABEL[w.example.source?.channel] || 'Aleph texts'} (${w.example.source?.ref ?? ''}). ${SENSE_NOTE}`), exampleCredit(el, w.example)) : el('p', { class: 'th-muted' }, 'No example line: this word does not appear in a full line of Aleph\'s texts.');
     const flags = w.flags?.includes('exampleSpellingShared') ? el('p', { class: 'th-muted' }, 'The spelling is shared with another word, so the line may show that other word.') : null;
     return el('li', { class: 'th-word', 'data-id': w.id },
       ctx.img?.(el, { kind: 'word', id: w.id, class: 'th-pic', width: 400 }),

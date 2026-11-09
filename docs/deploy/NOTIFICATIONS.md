@@ -9,10 +9,10 @@ this document is about the one-a-day **study nudge**.
 
 | Situation | Study reminder fires? | Why |
 |---|---|---|
-| ALEF open in a browser tab, foreground, permission granted | Yes, at the chosen hh:mm on chosen days (within 10 minutes of the time, else skipped) | `setTimeout` chain in the page, re-checked at least every 6 hours; a slot more than 10 minutes late is dropped, never fired late |
-| ALEF open but the tab is in the background (desktop) | Usually yes | Browsers throttle background timers (Chrome: to once a minute after 5 minutes hidden, and "intensive throttling" to once a minute in chained timers) but still run them; the 10-minute grace covers that. **Not verified in a browser.** |
+| Aleph open in a browser tab, foreground, permission granted | Yes, at the chosen hh:mm on chosen days (within 10 minutes of the time, else skipped) | `setTimeout` chain in the page, re-checked at least every 6 hours; a slot more than 10 minutes late is dropped, never fired late |
+| Aleph open but the tab is in the background (desktop) | Usually yes | Browsers throttle background timers (Chrome: to once a minute after 5 minutes hidden, and "intensive throttling" to once a minute in chained timers) but still run them; the 10-minute grace covers that. **Not verified in a browser.** |
 | Installed PWA open on Android, screen on, in foreground | Yes, expected | Same page timer; the notification is shown through the service-worker registration (`registration.showNotification`), because Android Chrome rejects `new Notification()` from a page |
-| Phone locked, app in the background, tab discarded, app closed | **No** | The page is frozen or gone; no timer runs. Nothing wakes ALEF: there is no push server |
+| Phone locked, app in the background, tab discarded, app closed | **No** | The page is frozen or gone; no timer runs. Nothing wakes Aleph: there is no push server |
 | Offline (any of the above) | Same as online | Nothing here needs the network; the notification body and icon are local (`assets/icons/icon-192.png` is in the precache list) |
 | Between candle lighting and havdalah (learner's city set on the Calendar screen, "Keep Shabbat quiet" on) | **No**, by design | See section 3 |
 | No city set | Fires on Shabbat too | The card says so; nothing is guessed from the device |
@@ -72,8 +72,8 @@ Push subscriptions also expire or rotate; the server must drop 404/410 endpoints
 
 ## 5. iOS and Safari limits (from Apple's and WebKit's published notes; not tested on a device here)
 
-- iOS/iPadOS 16.4 and later show Web Push and `Notification` **only for web apps added to the Home Screen**. In a Safari tab `Notification` is undefined, so the card shows "add ALEF to the Home Screen first" (detected by user agent and `navigator.standalone`; iPadOS presents itself as a Mac, so `maxTouchPoints > 1` on "Macintosh" is treated as iOS).
-- Even installed, iOS does not run page timers while the app is in the background, so the open-tab reminder works only while ALEF is on screen. Real reminders on iOS need Web Push (section 4).
+- iOS/iPadOS 16.4 and later show Web Push and `Notification` **only for web apps added to the Home Screen**. In a Safari tab `Notification` is undefined, so the card shows "add Aleph to the Home Screen first" (detected by user agent and `navigator.standalone`; iPadOS presents itself as a Mac, so `maxTouchPoints > 1` on "Macintosh" is treated as iOS).
+- Even installed, iOS does not run page timers while the app is in the background, so the open-tab reminder works only while Aleph is on screen. Real reminders on iOS need Web Push (section 4).
 - iOS Web Push requires permission to be asked from a user gesture and the notification to be shown by the service worker (`registration.showNotification`); `showNow()` already prefers that path.
 - Safari on macOS supports `Notification` in a tab and Web Push since Safari 16 (macOS Ventura); the service-worker path is used there too when a registration exists.
 - `manifest.webmanifest` has `display: standalone`, which iOS needs for installability; no change was required.

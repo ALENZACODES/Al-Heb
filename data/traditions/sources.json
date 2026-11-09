@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "References behind data/traditions/*.json. Every fact in this lane is a paraphrase written for ALEF; no sentences were copied. 'fetched' is the date a page was read in this build session (the text was read through a fetch tool). 'coverage' says how much of the page was read, because some pages were long.",
+  "description": "References behind data/traditions/*.json. Every fact in this lane is a paraphrase written for Aleph; no sentences were copied. 'fetched' is the date a page was read in this build session (the text was read through a fetch tool). 'coverage' says how much of the page was read, because some pages were long.",
   "licenceNote": "Wikipedia article text is CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). We copy no wording, only facts, and cite each page. If you treat the paraphrased notes in sounds.json as adaptations, they are offered under the same CC BY-SA 4.0 licence with attribution to the pages listed here; that is a precaution, not a legal opinion. Pealim, Chabad.org and the BJPA paper are NOT openly licensed: they are cited by URL only, as references a reader can open.",
   "sources": [
     {
@@ -45,7 +45,7 @@
       "open": true,
       "fetched": "2026-11-03",
       "coverage": "first 100,000 of 124,343 characters",
-      "supports": "pharyngeal het and ayin; gimel without dagesh as a voiced throat fricative and with dagesh as j; tav raphe as th; dalet raphe as dh; patah and segol sound alike; penultimate stress claim is tagged 'citation needed' on the page, so ALEF does not rely on it"
+      "supports": "pharyngeal het and ayin; gimel without dagesh as a voiced throat fricative and with dagesh as j; tav raphe as th; dalet raphe as dh; patah and segol sound alike; penultimate stress claim is tagged 'citation needed' on the page, so Aleph does not rely on it"
     },
     {
       "id": "pealim",
@@ -82,9 +82,9 @@
     },
     {
       "id": "lane3",
-      "title": "ALEF data/pronunciation (lane 3, in this repository)",
+      "title": "Aleph data/pronunciation (lane 3, in this repository)",
       "url": "data/pronunciation/consonants.json",
-      "publisher": "ALEF project",
+      "publisher": "Aleph project",
       "licence": "project data; marked unreviewed by a native speaker",
       "open": true,
       "fetched": "2026-11-03",
@@ -95,7 +95,7 @@
       "id": "own",
       "title": "Project inference (no outside source)",
       "url": "",
-      "publisher": "ALEF project",
+      "publisher": "Aleph project",
       "licence": "n/a",
       "open": true,
       "fetched": "2026-11-03",

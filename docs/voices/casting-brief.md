@@ -1,9 +1,9 @@
-# Casting brief: ALEF Hebrew course voices
+# Casting brief: Aleph Hebrew course voices
 
 Status: DRAFT brief for a human producer. No talent has been contacted, no recordings exist, and no rates are known (the project research found no published Hebrew per-finished-hour or e-learning buyout rates; only one marketplace profile showing "starting at" US$100 with no unit). Treat all money fields as unknown until quotes arrive.
 
 ## Product in one paragraph
-ALEF is an interactive Hebrew course (web/mobile app, plus a printed/PDF/EPUB book with companion web audio) taking adults from the alphabet to intermediate reading. Two goals: read Torah and prayers aloud with a congregation, and function in Israel without sounding like an outsider. Narrators are named Ari (man) and Noa (woman).
+Aleph is an interactive Hebrew course (web/mobile app, plus a printed/PDF/EPUB book with companion web audio) taking adults from the alphabet to intermediate reading. Two goals: read Torah and prayers aloud with a congregation, and function in Israel without sounding like an outsider. Narrators are named Ari (man) and Noa (woman).
 
 ## Roles
 | Role | Voice | Tradition(s) | Notes |

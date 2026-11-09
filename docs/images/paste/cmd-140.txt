@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 140: Progress dashboard mascot
+Aleph IMAGE RUN - COMMAND 140: Progress dashboard mascot
 
 ATTACH: MAS_rimon_01.png (attach once, before pasting this).
 

@@ -23,7 +23,15 @@ export function progressBar(label = "Lesson progress") {
 export function summaryNode(d) {
   const st = d.stats;
   const next = d.nextHref ? el("a", { class: "btn alef-next-primary", href: d.nextHref }, d.nextLabel || "Next lesson") : null;
+  // Celebration first: Rimon, confetti (still for reduced motion) and a cheer that matches the score.
+  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:rimon", { detail: { action: st.accuracy >= 0.8 ? "highfive" : "bounce" } })); } catch { /* the cheer is optional */ }
+  const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
+  const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
+    ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
+    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
   return el("div", { class: "alef-summary" },
+    party,
+    el("p", { class: "alef-celebrate-cheer" }, cheer),
     el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Lesson finished"),
     el("p", { role: "status" }, d.countText),
     el("dl", { class: "alef-summary-stats" },

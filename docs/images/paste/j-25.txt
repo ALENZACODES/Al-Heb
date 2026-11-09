@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 25 (command 325): J-0309.png to J-0321.png
+Aleph IMAGE RUN - BLOCK J 25 (command 325): J-0309.png to J-0321.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_general-things-set07.

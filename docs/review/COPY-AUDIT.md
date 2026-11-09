@@ -23,7 +23,7 @@ Limits, stated plainly:
 
 | Word | Where a learner meets it | Decision |
 |---|---|---|
-| belt | Learn map ("Current belt"), lesson page ("white"), Progress | Say "level" first, then "belt". First use on Learn now reads "Your level: White belt. Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons." Lesson lists show "White belt", not raw `white` (applied; lesson page: diff). |
+| belt | Learn map ("Current belt"), lesson page ("white"), Progress | Say "level" first, then "belt". First use on Learn now reads "Your level: White belt. Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons." Lesson lists show "White belt", not raw `white` (applied; lesson page: diff). |
 | A1 / A2 / B1 | Learn list, lesson page (raw codes) | Shown as "Beginner (A1)", "Elementary (A2)", "Intermediate (B1)" (applied via `levelLabel` in `src/curriculum/dom.js`). |
 | niqqud / nikud | Typing tab, nav "Vowel-point dial" | Never shown to a learner as a bare word in v0 text. Use "vowel marks". If the Hebrew word is wanted, say it once: "vowel marks (niqqud)". |
 | dagesh | Keyboard note, lesson goals | Explain as "the dot (dagesh)" at first use. Applied in the keyboard note. r01 to r10 goals say "dot inside Bet", which is fine. |
@@ -56,7 +56,7 @@ Limits, stated plainly:
 | `settings.location` | Settings legend | Awkward | "Your location, for candle-lighting times (optional)" |
 | `settings.persist.no` | Settings | Passive, no next step | "This browser cannot save your progress. It will be lost when you close the app, so download a backup before you leave." (same fact as `storageNotice`) |
 | `settings.browserVoiceAnyway` | Settings checkbox | Cryptic bracket | "Use my browser's voice even when it cannot match my pronunciation style (you will see a note when that happens)" |
-| `unavailable.body` | Shown when a page is missing | "module ... this build" | "This part of ALEF is not ready yet. Nothing is broken. Please check back later." |
+| `unavailable.body` | Shown when a page is missing | "module ... this build" | "This part of Aleph is not ready yet. Nothing is broken. Please check back later." |
 | `error.title` | Error card | Vague, alarming | "This screen did not load" |
 | `error.body` | Error card | Blames the screen, no next step | "Sorry about that. Try reloading the page, or go back to Home." |
 | `nav.scaffold` | Menu, Learn | "Latin" | "Read without English letters" |
@@ -75,7 +75,7 @@ Not changed, but unclear to a newcomer (needs the page owner, because I do not k
 |---|---|---|
 | Learn map: track tab | "Read the siddur" | "Read the prayer book" |
 | Learn map: level pill | Raw `white`, `A1`, `B1` | "White belt", "Beginner (A1)", ... |
-| Learn map: belt line | "Current belt: White", never explains belts, "Black (fluency practice)" | "Your level: White belt. Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons." / "Black belt (practice for fluency)" |
+| Learn map: belt line | "Current belt: White", never explains belts, "Black (fluency practice)" | "Your level: White belt. Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons." / "Black belt (practice for fluency)" |
 | Learn map: link | "Read without Latin" | "Read without English letters" |
 | Learn map: streak (3 lines) | "(5 minutes today keeps it)" is loss framing; "Paused" reads as a fault | "Streak: 3 days. Study for 5 minutes today to add a day." / "Your best streak was 12 days. A new one starts the next time you study for 5 minutes." / "A streak counts the days you study for 5 minutes or more, on a lesson, review or practice screen." |
 | Review: streak line (2 lines) | Same | "Streak: 3 days. Study for 5 minutes today to add a day." / "A streak counts the days you study for 5 minutes or more." |
@@ -94,9 +94,9 @@ Not changed, but unclear to a newcomer (needs the page owner, because I do not k
 | Setup: question | "movement" | "Which branch of Judaism are you part of? (optional)" |
 | Setup: plan draft note | 3 sentences of internals ("pacing guide", "Every link goes to an existing screen") | "Draft: no learner has tried this plan yet. The minutes are goals, not measurements. The plan has one lesson a day and starts with the lesson shown on Home. It updates as you finish lessons." |
 | Setup: plan errors, plan note | "plan data", "draft cutoffs, untested" | "The plan did not load. You can still start." / "(a draft guess)" |
-| Progress: draft flag | "belt gates and thresholds", "pointing" | "Draft: the milestones and levels here are ALEF's own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks." |
+| Progress: draft flag | "belt gates and thresholds", "pointing" | "Draft: the milestones and levels here are Aleph's own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks." |
 | Progress: "Siddur coverage" | Jargon | "Prayer book coverage" (also the milestone labels in `data/progress/personal-milestones.json`, the "Read the prayer book and Torah" path title and the grey-belt gate text) |
-| Progress: Belts blurb | "names borrowed, gates are ours" | "Belts are ALEF's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons." |
+| Progress: Belts blurb | "names borrowed, gates are ours" | "Belts are Aleph's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons." |
 | Progress: numbers | "new / learning / mature", "the scheduler expects" | "new / learning / well known"; "Review cards come back after longer and longer gaps while you keep remembering them. "Well known" means a card you should remember for 21 days or more." |
 | Progress: backup | "checksum", "progress keys", "keys in the file win" | "built-in check", "saved items", "if both have the same item, the file wins"; status "The file check passed." |
 | Progress: build error | "could not be computed" | "Progress could not be shown right now. Your saved learning is not affected." |
@@ -121,7 +121,7 @@ See section 6. Summary of what the diffs fix:
 | `src/curriculum/lesson.view.js` | Level pill shows "white · 5 min · Read the siddur" | "White belt · 5 min · Read the prayer book" |
 | `src/curriculum/lesson.view.js` | "glosses and pointing" | "Draft: a native Hebrew speaker has not yet checked the English meanings or the vowel marks." |
 | `src/curriculum/lesson.view.js` | Raw error text; `no lesson with id "x"` | "This lesson did not load. Please reload the page and try again." / "We could not find that lesson." |
-| `src/shell/settings.view.js` | Delete text says it removes "the offline copies of the app" (it does so only if the box is ticked); "offline service worker" | "Tick the box below to remove the offline copy of the app too." / "Also remove the offline copy of the app (ALEF will need a connection to open next time)" |
+| `src/shell/settings.view.js` | Delete text says it removes "the offline copies of the app" (it does so only if the box is ticked); "offline service worker" | "Tick the box below to remove the offline copy of the app too." / "Also remove the offline copy of the app (Aleph will need a connection to open next time)" |
 | `src/shell/settings.view.js` | No explanation of pronunciation style | Adds one line above the radio group |
 | `src/shell/settings.view.js` | "text-to-speech voice" | "your browser's built-in voice" |
 | `src/shell/settings.view.js` | "Could not restore: <raw error>" | "This file could not be restored (<error>). Your progress on this device was not changed." |
@@ -134,7 +134,7 @@ Checked and fine (no change): `src/curriculum/exercises.session.js` (feedback is
 | Topic | What the app does now | Recommendation |
 |---|---|---|
 | Shin / Sin | Letter list has one letter `shin`, with "(sin, dot on the left, is s)" in its sound line. Vowel list has "Shin dot" and "Sin dot". No place spells it "Sin" as a separate letter or "Shinn". | Consistent. Keep "Shin" for the letter and "Sin" only when talking about the left-hand dot. Say so once in the Letter page (not done: owner of letters data). |
-| ALEF / Alef / Aleph | App name "ALEF" (188 hits in v0 files). Letter "Alef" (10). "Aleph" appears once, in a code comment (`src/pronunciation/kamatz-katan.js`), not in learner text. | Consistent. Rule: ALEF = the app, Alef = the letter. |
+| Aleph / Alef / Aleph | App name "Aleph" (188 hits in v0 files). Letter "Alef" (10). "Aleph" appears once, in a code comment (`src/pronunciation/kamatz-katan.js`), not in learner text. | Consistent. Rule: Aleph = the app, Alef = the letter. |
 | Tsadi vs Tzere, Chet vs Khaf | Letter "Tsadi" but vowel "Tzere"; "Chet" and "Chirik" with `ch`, but "throaty ch" for chet and "khaf" for the soft kaf | **decide**: pick `ts` or `tz` (suggest `Tzadi`/`Tzere` to match the vowel and common American usage), and one spelling for the throat sound (`Chet`/`Khaf` both in use). Needs data and test updates, so not applied. |
 | Vowel sign / vowel mark / vowel point | "vowel sign" (first-10-minutes, Progress), "Vowel marks" (letter page, my rewrites), "Vowel-point dial", "Vowel board" | **decide**: use "vowel mark" in all learner text. `data/firstday/onramp.json` ("Your first vowel sign") and Progress ("Signs taught by lessons") would change. |
 | Daily goal | "Study goal" (Home), "Daily goal" (Progress), "How many minutes a day?" (setup) | "Daily goal" (diff for `today.js`). |
@@ -306,7 +306,7 @@ Made against the working tree at the time of writing (`/tmp` copies, since delet
 +      h('p', { id: 's-wipe-help' }, `This permanently deletes your progress, review cards, streaks and settings from this device. Tick the box below to remove the offline copy of the app too. It cannot be undone, so download a backup first. Type ${CONFIRM_WORD} to turn on the button.`),
        h('label', { class: 'field' }, `Type ${CONFIRM_WORD}`, wipeInput),
 -      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline service worker (the app will need a connection to load next time)')),
-+      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (ALEF will need a connection to open next time)')),
++      h('label', { class: 'opt', for: 's-wipe-sw' }, wipeSw, h('span', {}, 'Also remove the offline copy of the app (Aleph will need a connection to open next time)')),
        h('div', { class: 'row' }, wipeGo)),
      h('fieldset', { class: 'field' }, h('legend', {}, 'Advanced'),
        boolRow('showUnapprovedImages', 'Show images that have not passed review', 'Pictures still waiting for a reviewer may be wrong or unsuitable. Leave this off unless you are reviewing them.')),

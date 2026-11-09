@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF text corpus API (lane 5). Pure data access + letter inventory; no DOM.
+// Aleph text corpus API (lane 5). Pure data access + letter inventory; no DOM.
 //   const corpus = await loadCorpus();            // browser (fetch) or Node (fs)
 //   corpus.getText('bless-priestly-1'); corpus.search('shalom'); corpus.bySituation('cafe');
 //   letterInventory(he) -> which of the 27 letters / vowel signs occur

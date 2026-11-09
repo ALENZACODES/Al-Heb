@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 38: Alef cursive set
+Aleph IMAGE RUN - COMMAND 38: Alef cursive set
 
 ATTACH: REF_cursive_alef.png (attach once, before pasting this).
 

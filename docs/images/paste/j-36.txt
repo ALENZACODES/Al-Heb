@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 36 (command 336): J-0452.png to J-0464.png
+Aleph IMAGE RUN - BLOCK J 36 (command 336): J-0452.png to J-0464.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_nature-animals-set01, vocab_people-family-set01.

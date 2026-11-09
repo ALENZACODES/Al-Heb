@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF teacher share (DRAFT): aggregate validated summaries into class-level confusions and per-learner help rows. Pure.
+// Aleph teacher share (DRAFT): aggregate validated summaries into class-level confusions and per-learner help rows. Pure.
 import { niceId } from '../progress/model.js';
 
 const SCREEN = { vowelboard: 'Vowel board', niqquddial: 'Vowel-point dial', dottile: 'Dot tiles', syllablechips: 'Syllable chips' };

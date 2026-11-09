@@ -1,7 +1,7 @@
 {
   "schema": "alef-grammar-notes/1",
   "status": "draft-unreviewed",
-  "note": "English explanations and the construct-chain glosses were written for ALEF and have not been reviewed by a Hebrew teacher. All Hebrew shown by the grammar screens is pulled programmatically from data/vocab/words.json and data/corpus/registry.json; none is typed here. Construct chains are located by registry id and token positions only.",
+  "note": "English explanations and the construct-chain glosses were written for Aleph and have not been reviewed by a Hebrew teacher. All Hebrew shown by the grammar screens is pulled programmatically from data/vocab/words.json and data/corpus/registry.json; none is typed here. Construct chains are located by registry id and token positions only.",
   "topics": {
     "article": {
       "title": "The word for \"the\": ha- and the doubled letter",

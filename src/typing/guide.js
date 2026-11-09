@@ -32,7 +32,7 @@ export const GENERAL = Object.freeze([
   "Vowel points are separate characters that follow the letter they sit under. If a mark lands on the wrong letter, delete back to the letter and enter it again after the letter.",
   "Shin and sin: type shin (ש), then the right dot (shin dot) or left dot (sin dot).",
   "Shuruk (וּ) has no key of its own on the Israeli layout: type vav (ו), then dagesh.",
-  "The drills in ALEF check letters only, so you never need vowel points to finish a drill.",
+  "The drills in Aleph check letters only, so you never need vowel points to finish a drill.",
   "The practice box below inserts a vowel mark where your cursor is. It exists so you can copy marks into other apps; it does not check anything.",
 ]);
 

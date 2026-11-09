@@ -1,4 +1,4 @@
-// ALEF lane 2 view: Letter Atlas. All 31 tiles (27 letters + vet, khaf, fe, sin) with sound, memory hook,
+// Aleph lane 2 view: Letter Atlas. All 31 tiles (27 letters + vet, khaf, fe, sin) with sound, memory hook,
 // tap-to-hear, and an optional "find the letter" quiz that shows a look-alike warning only after a wrong tap.
 // Plain DOM, no dependencies. export mount(root, ctx) -> unmount.
 // ctx (from the shell): {settings, store, audio, route, t, params}. Everything is optional.

@@ -1,8 +1,8 @@
-# ALEF: 100 jobs for an external drafting assistant, in 6 lanes that cannot collide with the build agents
+# Aleph: 100 jobs for an external drafting assistant, in 6 lanes that cannot collide with the build agents
 
 ## Ground rules (paste at the top of every drafting chat)
 
-You are a production lane for ALEF, a free Hebrew-learning app and book for adults (intro to intermediate; goal: read prayers and Torah aloud with a congregation, and get around in Israel). Work alone; never wait for me. Rules:
+You are a production lane for Aleph, a free Hebrew-learning app and book for adults (intro to intermediate; goal: read prayers and Torah aloud with a congregation, and get around in Israel). Work alone; never wait for me. Rules:
 
 1. Everything you make is a DRAFT for human review. Never claim it was checked by a native speaker, rabbi or teacher.
 2. Never invent Hebrew facts. When unsure of pointing (niqqud), spelling, or a word, mark it `?? CHECK`. Use only common, ordinary words. No divine names in examples.
@@ -22,7 +22,7 @@ Time estimate: each lane is roughly 6 to 8 hours of drafting work including your
 
 Exact prompts for jobs 1 to 17 are in `docs/drafts/IMAGE-PROMPTS.md`: shared rules, a negative-prompt list, 27 one-object letter prompts (file `lane1-<n>-<letterId>.png`), 5 look-alike pair prompts, 8 scene prompts and a 5-line acceptance check. Use those prompts instead of the short job lines below; the job lines stay as the index (still 17 jobs, 100 in all).
 
-Command: "You are the ALEF illustrator. Make flat, friendly, simple pictures on a plain light background, no text, no letters, no people's faces in detail, no characters from any film, game or brand. Each picture must show ONE object. Return PNG, 1024x1024, then a 512 and a 128 version if you can."
+Command: "You are the Aleph illustrator. Make flat, friendly, simple pictures on a plain light background, no text, no letters, no people's faces in detail, no characters from any film, game or brand. Each picture must show ONE object. Return PNG, 1024x1024, then a 512 and a 128 version if you can."
 
 1. Alef: a person standing on their hands (stick-figure style, neutral clothes)
 2. Bet: a house, side view, open door, ball inside
@@ -44,7 +44,7 @@ Command: "You are the ALEF illustrator. Make flat, friendly, simple pictures on 
 
 ## Lane 2: Hebrew text drafting (17 jobs)
 
-Command: "You are an ALEF content drafter. Write only simple Hebrew a beginner needs. Give every Hebrew line with full pointing, a transliteration for the Sephardi/Israeli reading, the Ashkenazi reading if it differs, and an English gloss. Flag `?? CHECK` for anything you are not certain of."
+Command: "You are an Aleph content drafter. Write only simple Hebrew a beginner needs. Give every Hebrew line with full pointing, a transliteration for the Sephardi/Israeli reading, the Ashkenazi reading if it differs, and an English gloss. Flag `?? CHECK` for anything you are not certain of."
 
 18. 200 greetings and polite phrases for Israel (CSV: he, translit, gloss, tradition note)
 19. 100 phrases for a bakery, market and cafe
@@ -66,7 +66,7 @@ Command: "You are an ALEF content drafter. Write only simple Hebrew a beginner n
 
 ## Lane 3: Audio and speaking scripts (17 jobs)
 
-Command: "You are the ALEF recording director. Write scripts for human voice actors. You do not generate audio. Be exact about what is said and how fast."
+Command: "You are the Aleph recording director. Write scripts for human voice actors. You do not generate audio. Be exact about what is said and how fast."
 
 35. Recording brief for an Israeli female voice: pace, tone, mouth position notes
 36. Same brief for an Israeli male voice
@@ -88,7 +88,7 @@ Command: "You are the ALEF recording director. Write scripts for human voice act
 
 ## Lane 4: Book and workbook content (17 jobs)
 
-Command: "You are the ALEF author. Write for adults who feel nervous. Short paragraphs, one idea each, a tiny win at the end of every page. No jargon. Number every exercise and give the answer key separately."
+Command: "You are the Aleph author. Write for adults who feel nervous. Short paragraphs, one idea each, a tiny win at the end of every page. No jargon. Number every exercise and give the answer key separately."
 
 52. Chapter 1 draft: "Your first six letters"
 53. Chapter 2 draft: "Sounds that are not in English"
@@ -110,7 +110,7 @@ Command: "You are the ALEF author. Write for adults who feel nervous. Short para
 
 ## Lane 5: Review, QA and adversarial testing (16 jobs)
 
-Command: "You are the ALEF reviewer. Be hostile and specific. Quote the exact text you are criticising. Rank issues by how much they would confuse a first-time learner. Do not praise."
+Command: "You are the Aleph reviewer. Be hostile and specific. Quote the exact text you are criticising. Rank issues by how much they would confuse a first-time learner. Do not praise."
 
 69. Review the 27 letter picture ideas: which pairs would be confused with each other?
 70. Review the 27 hook words: any word said differently by English speakers in the US, UK, Canada?
@@ -121,7 +121,7 @@ Command: "You are the ALEF reviewer. Be hostile and specific. Quote the exact te
 75. Write 60 test cases for review and spaced repetition
 76. Write 40 offline and slow-network test cases
 77. Write 40 accessibility test cases (screen reader, large text, high contrast, keyboard only)
-78. Compare ALEF's first 5 minutes with a typical language app's first 5 minutes, from public descriptions; list what to copy and what to avoid
+78. Compare Aleph's first 5 minutes with a typical language app's first 5 minutes, from public descriptions; list what to copy and what to avoid
 79. Audit the English copy for the 20 most-used screens: too long, vague, patronising
 80. Check 100 Hebrew words for pointing errors (list `?? CHECK` items for a native)
 81. Draft a native-speaker review form that takes 20 minutes
@@ -131,7 +131,7 @@ Command: "You are the ALEF reviewer. Be hostile and specific. Quote the exact te
 
 ## Lane 6: Launch, outreach and business drafts (16 jobs)
 
-Command: "You are the ALEF launch writer. Be honest: no invented numbers, no testimonials, no claims of awards. Plain language."
+Command: "You are the Aleph launch writer. Be honest: no invented numbers, no testimonials, no claims of awards. Plain language."
 
 85. Store/page description, short (80 words) and long (300 words)
 86. 10 one-line taglines

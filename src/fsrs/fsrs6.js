@@ -1,7 +1,7 @@
-// FSRS-6 memory model, written for ALEF from the published algorithm (open-spaced-repetition wiki "The Algorithm", FSRS-6).
+// FSRS-6 memory model, written for Aleph from the published algorithm (open-spaced-repetition wiki "The Algorithm", FSRS-6).
 // It is a PURE module: no store, no clock. It is NOT wired into the live review scheduler (src/curriculum/srs.js is unchanged); the
 // preview route #/scheduler only shows what these formulas would do. The 21 numbers below are the PUBLISHED DEFAULT weights of the
-// MIT-licensed ts-fsrs 6.0.0 (copyright its authors; notice in docs/research/B2-fsrs6.md); they are NOT fitted to ALEF review data.
+// MIT-licensed ts-fsrs 6.0.0 (copyright its authors; notice in docs/research/B2-fsrs6.md); they are NOT fitted to Aleph review data.
 // Correctness is checked in tests/fsrs6.test.js against tests/fixtures/fsrs6-reference.json, produced once by running ts-fsrs 6.0.0
 // outside this repo (fuzz off, short-term stage off, no learning steps, whole-day gaps). Short-term (same-day) memory is not modelled.
 

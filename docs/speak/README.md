@@ -1,6 +1,6 @@
 # Say it (draft, unreviewed)
 
-Spoken practice for ALEF. Closes the "no speaking exercise at all" gap in `docs/strategy/DUOLINGO-100.md` (items 6, P044,
+Spoken practice for Aleph. Closes the "no speaking exercise at all" gap in `docs/strategy/DUOLINGO-100.md` (items 6, P044,
 P045, P047) as a draft. Route wiring: `docs/speak/ROUTES.md`. Store key: `speak.v1`.
 
 ## What it does
@@ -59,9 +59,9 @@ line says it is the browser's voice, not a recording. If the browser lists no He
 ## Honesty notes (also shown on screen)
 
 - Draft flag on every start screen: words, points and transliterations are machine-built, not teacher-checked.
-- The recognizer is the browser's and is **unverified for Hebrew by ALEF**; no accuracy was measured. A "match" means the
+- The recognizer is the browser's and is **unverified for Hebrew by Aleph**; no accuracy was measured. A "match" means the
   recognizer wrote the same letters, not that a teacher heard the learner.
-- The browser's recognizer may send audio to its vendor's servers (Chromium does); ALEF sends nothing. Nothing starts until the
+- The browser's recognizer may send audio to its vendor's servers (Chromium does); Aleph sends nothing. Nothing starts until the
   learner presses the microphone button.
 - The weakest-sounds report counts recognizer output, so a weak sound may be the recognizer's weakness.
 

@@ -199,7 +199,7 @@ export function createMusicController({
 
 /** Every track the game bar offers: the styles composed live in the browser first, then the three Kenney loops. */
 export const GAME_TRACKS = [
-  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
+  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for Aleph' })),
   ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Kenney loops' })),
 ];
 /** The music engine (src/audio/synth-music.js, ~20 KB) loads only when someone presses Play music, not at app start; until then this

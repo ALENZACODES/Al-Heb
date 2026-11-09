@@ -1,4 +1,4 @@
-# ALEF — site craft and quality pass
+# Aleph — site craft and quality pass
 
 **Owner attribution:** John Khan  
 **Date:** 7 November 2026  

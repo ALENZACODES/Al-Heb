@@ -75,7 +75,7 @@ Read from the vendor's own pages on 2026-11-08 (terms last modified
   claims a clip infringes, there is no vendor indemnity to call on.
 - **Restrictions that bind.** (a) Competitive use: the output may not be
   used to develop a similar or competing product or service (service terms
-  §17(a)). ALEF is a Hebrew course, not a speech service, so this does not
+  §17(a)). Aleph is a Hebrew course, not a speech service, so this does not
   bite — but the clips must never be repackaged as a voice product.
   (b) Model restrictions: the output may not be used to substitute,
   replace or circumvent a vendor model, or to create or improve models

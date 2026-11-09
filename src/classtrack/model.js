@@ -1,11 +1,11 @@
 // @ts-check
-// Class track: pure helpers over data/curriculum/class-track.json (ALEF original 10-week plan, DRAFT).
+// Class track: pure helpers over data/curriculum/class-track.json (Aleph original 10-week plan, DRAFT).
 // No DOM. Progress is derived from the same store key src/progress reads ('curriculum.progress' -> completed map).
 import { loadJSON } from '../curriculum/data.js';
 import { loadCorpus } from '../corpus/corpus.js';
 import { knownSet, gradeLines } from '../progress/decode.js';
 
-export const DRAFT = 'Draft: ALEF\'s own plan, not reviewed by a clergy member or Hebrew educator, not copied from any book. Hebrew pointing is a draft and awaits native-speaker review.';
+export const DRAFT = 'Draft: Aleph\'s own plan, not reviewed by a clergy member or Hebrew educator, not copied from any book. Hebrew pointing is a draft and awaits native-speaker review.';
 
 export async function loadClassTrack() {
   const [track, lf, soundgap, hints, corpus, gates] = await Promise.all([

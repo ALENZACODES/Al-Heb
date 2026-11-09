@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 62: Nun sofit cursive set
+Aleph IMAGE RUN - COMMAND 62: Nun sofit cursive set
 
 ATTACH: REF_cursive_nun_final.png (attach once, before pasting this).
 

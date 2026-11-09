@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF Progress: pure computations over a store snapshot. No DOM, no fetch, no clock (callers pass `now`).
+// Aleph Progress: pure computations over a store snapshot. No DOM, no fetch, no clock (callers pass `now`).
 // Everything here is derived from data other lanes already write; nothing is estimated that was not measured.
 import { BASE_LETTER_IDS, FINAL_LETTER_IDS, MARK_IDS } from '../corpus/normalize.js';
 import { projectStreak } from '../curriculum/streak.js';
@@ -376,7 +376,7 @@ export function evaluatePath(goalKey, d, c) {
   return { goal: goalKey, title: path.title, items, done: items.filter((i) => i.done).length, total: items.length };
 }
 
-/** Belts with ALEF-specific gates. state: earned | ready (only unmeasurable gates left) | current | later. */
+/** Belts with Aleph-specific gates. state: earned | ready (only unmeasurable gates left) | current | later. */
 export function evaluateBelts(d, c) {
   let currentSeen = false;
   return d.belts.belts.map((b) => {
@@ -471,7 +471,7 @@ export function readNowSummary(s, d, c) {
     { id: 'vocab', label: 'Vocabulary cards', value: v.started ? `${v.started} started, ${v.bands.reduce((n, b) => n + b.mature, 0)} mature${v.reached ? `, working in the first ${v.reached.toLocaleString('en-US')}` : ''}` : 'none started', detail: 'Cards you have reviewed at least once; mature means the scheduler expects you to keep them for 21 days or more.', href: '#/vocab', have: v.started, need: null, measured: 'taught' },
     { id: 'timedread', label: 'Timed read-alouds', value: tr.reads ? `${tr.reads} ${tr.reads === 1 ? 'read' : 'reads'} of ${tr.texts} ${tr.texts === 1 ? 'text' : 'texts'}${tr.best ? `, about ${tr.best.medianWpm} clean words a minute on ${tr.best.textId}` : ''}` : 'none yet', detail: 'Self-reported: you time the read and mark the words that tripped you; the app keeps only the clock.', href: '#/timedread', have: tr.reads, need: null, measured: 'self' },
   ];
-  if (sc) rows.push({ id: 'siddur', label: `Siddur coverage, ${sc.title}`, value: `${sc.pct}% of the lines ALEF holds`, detail: `${sc.full} of ${sc.lines} lines use only letters and signs you have been taught; ${sc.gaps} ${sc.gaps === 1 ? 'part' : 'parts'} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`, href: '#/service', have: sc.full, need: sc.lines, measured: 'taught' });
+  if (sc) rows.push({ id: 'siddur', label: `Siddur coverage, ${sc.title}`, value: `${sc.pct}% of the lines Aleph holds`, detail: `${sc.full} of ${sc.lines} lines use only letters and signs you have been taught; ${sc.gaps} ${sc.gaps === 1 ? 'part' : 'parts'} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`, href: '#/service', have: sc.full, need: sc.lines, measured: 'taught' });
   rows.push({ id: 'firstday', label: 'First 10 minutes and the unpointed ladder', value: !fd.started ? 'not started' : `${fd.readWords.length} first-day ${fd.readWords.length === 1 ? 'word' : 'words'} marked read${fd.ladder.steps ? `; ladder ${fd.ladder.right} of ${fd.ladder.total} unpointed words marked read` : ''}`, detail: 'Self-reported: you said whether you read each word. A hinted word never counts as read unpointed.', href: fd.ladder.answered ? '#/firstday/ladder' : '#/firstday', have: fd.readWords.length + fd.ladder.right, need: null, measured: 'self' });
   return rows;
 }

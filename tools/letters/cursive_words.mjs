@@ -59,7 +59,7 @@ export function buildCursiveHtml(paperId) {
     const pair = model.slice(i, i + 2);
     pages.push({ kind: 'letters', title: pair.map((b) => b.name).join(' and '), fields: true, body: pair.map(letterBlock).join('') });
   }
-  const html = wrapHtml({ title: `ALEF cursive words workbook (${paper.label})`, css, pages, set: 'Cursive words', draft: CURSIVE_DRAFT });
+  const html = wrapHtml({ title: `Aleph cursive words workbook (${paper.label})`, css, pages, set: 'Cursive words', draft: CURSIVE_DRAFT });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model };
 }
 

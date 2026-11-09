@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Stage 2 of the ALEF vocabulary pipeline.
+// Stage 2 of the Aleph vocabulary pipeline.
 //   input : tools/vocab/.cache/stage.json (build_lexicon.py), data/corpus/phrasebook.json,
 //           data/curriculum/lessons.json, src/pronunciation/transliterate.js
 //   output: data/vocab/words.json, packs.json, index.json, packs/<id>.json, meta.json

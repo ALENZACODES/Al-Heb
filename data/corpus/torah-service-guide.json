@@ -3,7 +3,7 @@
  "id": "reading-a-torah-service",
  "title": "Reading a Torah service",
  "subtitle": "The order of a Shabbat morning service, with the prayers a first-year attendee will meet",
- "note": "Written for ALEF by the model from general knowledge of the standard Ashkenazi Shabbat-morning order. It has NOT been reviewed by a rabbi, cantor or Hebrew educator. Orders and customs differ between Orthodox, Conservative, Reform, Sephardi and Mizrahi communities; each section has a \"howCongregationsDiffer\" line. Every prayer id is a record in registry.json; every gap id is in gaps.json.",
+ "note": "Written for Aleph by the model from general knowledge of the standard Ashkenazi Shabbat-morning order. It has NOT been reviewed by a rabbi, cantor or Hebrew educator. Orders and customs differ between Orthodox, Conservative, Reform, Sephardi and Mizrahi communities; each section has a \"howCongregationsDiffer\" line. Every prayer id is a record in registry.json; every gap id is in gaps.json.",
  "approximateLength": "Orthodox about 3 hours, Conservative about 2 to 2.5 hours, Reform about 1 to 1.5 hours (typical ranges, not rules).",
  "scrollNote": "The Torah scroll has no vowels and no cantillation marks. The registry contains the blessings around the reading, not the weekly portion.",
  "sections": [

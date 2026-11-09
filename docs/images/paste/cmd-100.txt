@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 100: Final QA and manifest
+Aleph IMAGE RUN - COMMAND 100: Final QA and manifest
 
 No attachments are needed otherwise; everything is described in words below.
 

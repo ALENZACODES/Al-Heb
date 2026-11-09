@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract print-letter outlines from DejaVu Sans into the ALEF 0..1000 box.
+"""Extract print-letter outlines from DejaVu Sans into the Aleph 0..1000 box.
 
 Output: data/letters/_build/print_outlines.json  {id: {"cp": int, "outline": svg-d, "bbox": [x0,y0,x1,y1]}}
 Uniform scale for all letters (so relative sizes, ascenders and descenders are preserved);

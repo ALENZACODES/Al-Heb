@@ -1,4 +1,4 @@
-# ALEF — Project State (Handover Snapshot)
+# Aleph — Project State (Handover Snapshot)
 
 **Snapshot taken:** 2026-11-07, 16:26 EST (America/Toronto). This snapshot begins aging the moment it is written. Several workstreams were in flight at snapshot time (see LANES.md); before acting on any "in flight" statement, check the commit log on `main` — work may already have landed.
 

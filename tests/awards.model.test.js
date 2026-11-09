@@ -310,7 +310,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(text, /Independent learning programme/);
   assert.doesNotMatch(text, /Not an accredited qualification/);
   assert.match(text, /Beginner Hebrew Foundations/);
-  assert.match(text, /ALEF is Key Foundation/);
+  assert.match(text, /Aleph is Key Foundation/);
   assert.match(text, /Cert # SA-20261106/);
   assert.doesNotMatch(text, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(text, /FMVA|CFI|Corporate Finance/);
@@ -336,7 +336,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
     earned: true,
     watermark: 'EARNED',
     kicker: 'Record',
-    brand: 'ALEF',
+    brand: 'Aleph',
     subtitle: 'Beginner reading',
     disclaimer: 'Caller prose beside the watermark.',
     artNote: 'Temporary layout.',
@@ -353,7 +353,7 @@ test('sample PDF is landscape, watermarked, and does not turn a sample into an i
   assert.match(Buffer.from(hebrew).toString('latin1'), /\?/);
   assert.equal(pdfLiteral('a(b)\\c'), '(a\\(b\\)\\\\c)');
   const hex = createHash('sha256').update(bytes).digest('hex');
-  assert.equal(hex, '5a530144fdac595b96f10f016fb2e64391011d521450cc1844771780ac5dffc9');
+  assert.equal(hex, '90682006e4dd28a41fd9cdcd8ef9067bd2c62cf6243fac1b9506f4589e801dea' /* certificate now says Aleph */);
 });
 
 test('trust notes name real source files, and this lane does not award from them', () => {

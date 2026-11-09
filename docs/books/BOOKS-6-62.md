@@ -1,4 +1,4 @@
-# ALEF little books 6 to 62
+# Aleph little books 6 to 62
 
 57 original beginner readers for adult learners: 12 pages each, one short sentence a page, adult subjects (coffee, work, the bank, a first date, a night shift, moving house). Hebrew with vowel points, a phonetic English line and a translation for every page. Generated from `tools/books/source/books-6-62.txt` by `node tools/books/build.mjs`; edit the source, not this file.
 

@@ -332,7 +332,7 @@ for (const scen of ['A', 'B']) {
     await page.reload(); await page.waitForSelector('h1'); await sleep(500); rec('ios-notice', 'stays dismissed after reload', (await notice(page).count()) === 0); }
   rec('ios-notice', 'first-visit record written', !!rec1, rec1 || '');
   // install route on iOS UA
-  await page.goto(base + '#/install'); await page.locator('h1', { hasText: 'Install ALEF' }).waitFor({ timeout: 8000 }).catch(() => {});
+  await page.goto(base + '#/install'); await page.locator('h1', { hasText: 'Install Aleph' }).waitFor({ timeout: 8000 }).catch(() => {});
   const inst = (await page.locator('#main').innerText()).replace(/\n+/g, ' | ').slice(0, 400);
   rec('ios-notice', '#/install on iPhone UA mentions Share / Home Screen steps', /Share/i.test(inst) && /Home Screen/i.test(inst), inst.slice(0, 220));
   await ctx.close();

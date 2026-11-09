@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 38 (command 338): J-0478.png to J-0490.png
+Aleph IMAGE RUN - BLOCK J 38 (command 338): J-0478.png to J-0490.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_people-family-set01, vocab_places-travel-set01.

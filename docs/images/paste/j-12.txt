@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 12 (command 312): J-0141.png to J-0153.png
+Aleph IMAGE RUN - BLOCK J 12 (command 312): J-0141.png to J-0153.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_doing-verbs-set06, vocab_doing-verbs-set07.

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 65 (command 365): J-0822.png to J-0834.png
+Aleph IMAGE RUN - BLOCK J 65 (command 365): J-0822.png to J-0834.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: srs.

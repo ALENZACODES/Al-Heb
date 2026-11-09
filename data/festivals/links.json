@@ -1,6 +1,6 @@
 {
  "schema": "alef-festival-links/1",
- "note": "Where ALEF already holds a text or lesson for a festival. `texts` are ids in data/corpus/registry.json (route /read/<id>); `lessons` are ids that may exist in data/curriculum/lessons.json (route /learn?lesson=<id>). The card shows a link only when the route exists in this build (hasRoute) AND the id exists in the loaded data. Lesson ids I-29..I-32 and I-50 are in data/curriculum/lessons.json (registered when this was checked), so their lesson links appear.",
+ "note": "Where Aleph already holds a text or lesson for a festival. `texts` are ids in data/corpus/registry.json (route /read/<id>); `lessons` are ids that may exist in data/curriculum/lessons.json (route /learn?lesson=<id>). The card shows a link only when the route exists in this build (hasRoute) AND the id exists in the loaded data. Lesson ids I-29..I-32 and I-50 are in data/curriculum/lessons.json (registered when this was checked), so their lesson links appear.",
  "festivals": {
   "rosh-hashanah": { "texts": ["shehecheyanu", "kiddush-wine-1"], "lessons": ["I-50"] },
   "yom-kippur": { "texts": [], "lessons": ["I-50"] },

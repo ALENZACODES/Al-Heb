@@ -1,8 +1,8 @@
-# ALEF — Game loops (aligned to t1039u)
+# Aleph — Game loops (aligned to t1039u)
 
 **TRY → SAVE → PERSONALISE.** Minute One is Game 0.  
 **Two registers:** joyful drills may use seeds; **reverent** prayer/siyum never shows XP/mascots on the sacred text.  
-**Freeze:** Ari/Noa/Rimon + ALEF colors; production voices untouched. Feather-green = competitor ref only.
+**Freeze:** Ari/Noa/Rimon + Aleph colors; production voices untouched. Feather-green = competitor ref only.
 
 XP (joyful only): **+1** micro · **+3** lesson exit · **+5** drill PB. Sacred surfaces: gratitude copy, not seed bursts.
 
@@ -55,5 +55,5 @@ XP (joyful only): **+1** micro · **+3** lesson exit · **+5** drill PB. Sacred 
 ## Implementation
 - `#/firstwin` ships before personalise.  
 - `#/welcome` = personalise after win (or Settings).  
-- Share card reuses cream `--card` / navy `--accent` — Calm structure, ALEF skin.  
+- Share card reuses cream `--card` / navy `--accent` — Calm structure, Aleph skin.  
 - Haptics: existing `hapticsOn` in `exercises.session.js`; celebration pulse once.

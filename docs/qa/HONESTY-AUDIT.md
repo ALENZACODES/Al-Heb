@@ -38,7 +38,7 @@ Test: `tests/honesty.wording.test.js` (source checks only; no DOM run of a force
 | "Black belt (practice for fluency)" | `src/curriculum/learn.view.js` | Changed to "Black belt (all belts finished; keep practising)" (it implied fluency was the next step). |
 
 Needs a human, not changed (file in flux or a design choice):
-- `src/curriculum/dom.js` `levelLabel()` shows "Beginner (A1)", "Elementary (A2)", "Intermediate (B1)", and `src/coursemap/model.js` shows A1/A2/B1 codes. They are CEFR names on lessons nobody has benchmarked against CEFR. `data/curriculum/resource-concepts-gratis.json` mentions a CEFR claim only as a research note. Recommend dropping the codes or adding "ALEF's own estimate".
+- `src/curriculum/dom.js` `levelLabel()` shows "Beginner (A1)", "Elementary (A2)", "Intermediate (B1)", and `src/coursemap/model.js` shows A1/A2/B1 codes. They are CEFR names on lessons nobody has benchmarked against CEFR. `data/curriculum/resource-concepts-gratis.json` mentions a CEFR claim only as a research note. Recommend dropping the codes or adding "Aleph's own estimate".
 - `docs/strategy/ACTIONS.csv` A31 plans a "mastery check per rung": a plan, not a claim.
 - Placement items come from lesson data and the recommendation has no validation; tests only check the arithmetic.
 

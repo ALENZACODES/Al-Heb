@@ -29,7 +29,7 @@ const stripStyle = (p) => (p.startsWith(STYLE) ? p.slice(STYLE.length).trim() : 
 function header(g, part, inputs) {
   const refs = inputs.filter((f) => /^(REF_|MAS_)/.test(f));
   const L = [];
-  L.push(`ALEF IMAGE RUN - COMMAND ${g.number}${part ? ` (part ${part})` : ''}: ${g.title}`);
+  L.push(`Aleph IMAGE RUN - COMMAND ${g.number}${part ? ` (part ${part})` : ''}: ${g.title}`);
   L.push('');
   if (refs.length) { L.push(`ATTACH: ${refs.join(', ')} (attach once, before pasting this).`); L.push(''); }
   L.push('No attachments are needed otherwise; everything is described in words below.');

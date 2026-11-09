@@ -93,7 +93,7 @@ export function buildNiqqudHtml(paperId) {
 <h2>Contents</h2><table class="toc">${model.sections.map((s, i) => `<tr><td class="he print">${esc(s.shape)}</td><td>${esc(s.name)}</td><td>${esc(s.sound)}</td><td>page ${i + 2}</td></tr>`).join('')}</table>` });
   const free = `<div class="free"><div class="rh"><span class="box"></span><span class="nm">From memory: write the six words again, right to left, then read them aloud.</span></div>${traceStrip({ cells: [''], n: 1, family: 'WB-Print', tierOf: () => 'blank', size: 62, base: 60, height: 78 })}${traceStrip({ cells: [''], n: 1, family: 'WB-Print', tierOf: () => 'blank', size: 62, base: 60, height: 78 })}</div>`;
   for (const s of model.sections) pages.push({ kind: 'sign', title: s.name, fields: true, body: signBlock(s) + free });
-  const html = wrapHtml({ title: `ALEF niqqud workbook (${paper.label})`, css: css + '.toc{font-size:9pt;border-collapse:collapse}.toc td{padding:.6mm 3mm .6mm 0}.toc td.he{font-size:14pt}', pages, set: 'Niqqud', draft: NIQQUD_DRAFT });
+  const html = wrapHtml({ title: `Aleph niqqud workbook (${paper.label})`, css: css + '.toc{font-size:9pt;border-collapse:collapse}.toc td{padding:.6mm 3mm .6mm 0}.toc td.he{font-size:14pt}', pages, set: 'Niqqud', draft: NIQQUD_DRAFT });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model };
 }
 

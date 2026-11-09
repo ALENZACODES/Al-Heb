@@ -4,7 +4,7 @@
 // Gate: {kind:'timedRead', minWpm, minWords?, minReads?, minAccuracy?, label}
 //   Passes when ONE text (reads are never mixed across texts) has `minReads` reads of at least `minWords` words whose
 //   median correct-words-per-minute >= minWpm and median accuracy >= minAccuracy. Uses the last `window` reads of that text.
-// All targets are ALEF proposals (data/curriculum/belts.json: "proposed by ALEF, not sourced"). Reads are self-reported.
+// All targets are Aleph proposals (data/curriculum/belts.json: "proposed by Aleph, not sourced"). Reads are self-reported.
 import { cleanState, cleanWpm, accuracy, median } from './model.js';
 
 export const GATE_DEFAULTS = Object.freeze({ minWords: 4, minReads: 3, minAccuracy: 0.9, window: 5 });

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 02 (command 302): J-0014.png to J-0026.png
+Aleph IMAGE RUN - BLOCK J 02 (command 302): J-0014.png to J-0026.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_arts-sports-set01, vocab_body-health-set01.

@@ -186,7 +186,7 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 /* ---- Continue card (Rimon + next lesson + one big button) ---- */
 .alef-continue { display: flex; gap: 1rem; align-items: center; margin-block: .8rem 1rem; padding: 1rem 1.1rem; border-radius: 18px;
   background: linear-gradient(135deg, #123d2a, #1e5a3e); color: #f7ecc9; border: 2px solid #c9a227; box-shadow: 0 6px 22px rgba(18, 61, 42, .25); }
-.alef-continue-rimon { inline-size: 96px; block-size: 96px; object-fit: cover; flex: 0 0 auto; border-radius: 50%; border: 3px solid #e9c25a; background: #fbf3dc; animation: alef-bob 3.2s ease-in-out infinite; }
+.alef-continue-rimon { inline-size: 96px; block-size: 96px; object-fit: cover; flex: 0 0 auto; border-radius: 50%; border: 3px solid #e9c25a; background: #fbf3dc; animation: alef-continue-bob 3.2s ease-in-out infinite; }
 .alef-continue-body { flex: 1 1 auto; min-inline-size: 0; display: grid; gap: .45rem; }
 .alef-continue-say, .alef-continue-next { margin: 0; }
 .alef-continue .muted { color: #d9c88f; }
@@ -197,7 +197,7 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 .alef-continue-go:hover { filter: brightness(1.05); }
 .alef-continue-go:active { transform: translateY(3px); box-shadow: 0 1px 0 #a07c18; }
 .alef-continue-go:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-@keyframes alef-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes alef-continue-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @media (prefers-reduced-motion: reduce) { .alef-continue-rimon { animation: none; } .alef-continue-bar > span { transition: none; } }
 @media (max-width: 480px) { .alef-continue { flex-direction: column; text-align: center; } .alef-continue-go { justify-self: stretch; } .alef-continue-body { justify-items: stretch; } .alef-continue-go { justify-self: stretch; } .alef-continue-rimon { inline-size: 80px; block-size: 80px; } }
 
@@ -220,3 +220,17 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 @media (prefers-reduced-motion: reduce) { .alef-lesson-available::before { animation: none; } .alef-lesson { transition: none; } .alef-lesson:hover { transform: none; } }
 
 .alef-streak, .alef-belt { margin-block: .35rem; font-size: .92rem; }
+
+/* ---- Lesson finished: Rimon and a burst of green and gold confetti ---- */
+.alef-celebrate { position: relative; display: grid; place-items: center; block-size: 150px; overflow: hidden; }
+.alef-celebrate-rimon { inline-size: 120px; block-size: 120px; border-radius: 50%; border: 4px solid #e9c25a; object-fit: cover; background: #fbf3dc; animation: alef-hop .8s ease-out 2; }
+.alef-celebrate i { position: absolute; inset-block-start: 50%; inset-inline-start: 50%; inline-size: 9px; block-size: 14px; border-radius: 2px;
+  background: hsl(calc(var(--i) * 47), 70%, 55%); opacity: 0; animation: alef-burst 1.4s ease-out forwards; animation-delay: calc(var(--i) * 25ms);
+  --a: calc(var(--i) * 20deg); }
+.alef-celebrate i:nth-child(odd) { background: #e9c25a; }
+.alef-celebrate i:nth-child(3n) { background: #1e5a3e; }
+@keyframes alef-burst { 0% { opacity: 1; transform: translate(-50%, -50%) rotate(var(--a)) translateY(0) rotate(0); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--a)) translateY(-120px) rotate(540deg); } }
+@keyframes alef-hop { 0%, 100% { transform: translateY(0) scale(1); } 40% { transform: translateY(-14px) scale(1.06); } }
+.alef-celebrate-cheer { text-align: center; font-size: 1.25rem; font-weight: 800; color: #1e5a3e; margin-block: .2rem .4rem; }
+@media (prefers-reduced-motion: reduce) { .alef-celebrate i { display: none; } .alef-celebrate-rimon { animation: none; } }

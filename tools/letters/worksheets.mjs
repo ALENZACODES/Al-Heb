@@ -67,7 +67,7 @@ footer{font-size:.7rem;color:#555;margin-top:6mm}
 <p>/${esc(letter.sound.ipa)}/ ${esc(letter.sound.en)}</p>
 ${sec('print', 'Print')}
 ${sec('cursive', 'Cursive (handwriting)')}
-<footer>ALEF worksheet. Guide glyphs: Frank Ruhl Libre (print) and Gveret Levin (cursive), SIL Open Font License 1.1. Stroke data: draft, needsNativeReview.</footer>
+<footer>Aleph worksheet. Guide glyphs: Frank Ruhl Libre (print) and Gveret Levin (cursive), SIL Open Font License 1.1. Stroke data: draft, needsNativeReview.</footer>
 </body></html>
 `;
 }

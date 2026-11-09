@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 61 (command 361): J-0770.png to J-0782.png
+Aleph IMAGE RUN - BLOCK J 61 (command 361): J-0770.png to J-0782.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vowel_alt, srs.

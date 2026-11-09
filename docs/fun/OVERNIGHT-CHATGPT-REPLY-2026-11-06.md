@@ -8,7 +8,7 @@ The following is the complete decision object, suitable for overnight-2026-11-06
 
 ```json
 {
-  "project": "Al-Heb / ALEF",
+  "project": "Al-Heb / Aleph",
   "decision_date": "2026-11-06",
   "reviewer": "ChatGPT",
   "decision_type": "recommendations_only",

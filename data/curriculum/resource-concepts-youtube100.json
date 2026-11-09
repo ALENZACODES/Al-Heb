@@ -1,12 +1,12 @@
 {
  "version": 1,
  "generated": "2026-11-03",
- "note": "Scores 0-1000 are the author's judgement of expected learner value for ALEF, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 20 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 11 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value for Aleph, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. Source: English captions (manual or auto, machine-noisy) of YouTube videos from the top-100 candidate list in docs/youtube/top100.md; only 20 of 100 captions were fetched before YouTube rate-limited the machine, so counts like 4 of 11 refer to the reading videos actually read. No video was watched and no audio heard. No text, video or audio is reused; ideas only.",
  "axesKey": {
   "r": "reading siddur or Torah aloud",
   "i": "Israeli functional Hebrew",
   "c": "beginner clarity",
-  "f": "fit with ALEF",
+  "f": "fit with Aleph",
   "risk": "originality risk, higher is worse"
  },
  "sources": {
@@ -15,11 +15,11 @@
    "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
   },
   "y100-err": {
-   "name": "Errors and myths heard in those captions, turned into guards for ALEF",
+   "name": "Errors and myths heard in those captions, turned into guards for Aleph",
    "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
   },
   "y100-gap": {
-   "name": "Things none of the read videos does well, which ALEF can",
+   "name": "Things none of the read videos does well, which Aleph can",
    "licence": "Public YouTube videos by several channels; licence not stated in the data read, treat as standard YouTube terms with all rights reserved. Ideas only, no text, video, audio or image reused."
   }
  },
@@ -43,7 +43,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read (9 of 11)",
-   "notes": "ALEF can order by frequency and by contrast pairs instead."
+   "notes": "Aleph can order by frequency and by contrast pairs instead."
   },
   {
    "id": "y100-tech-02",
@@ -85,7 +85,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read (5 of 11)",
-   "notes": "Overlaps gap-02 where ALEF actually checks the learner trace."
+   "notes": "Overlaps gap-02 where Aleph actually checks the learner trace."
   },
   {
    "id": "y100-tech-04",
@@ -133,7 +133,7 @@
    "id": "y100-tech-06",
    "source": "y100-tech",
    "name": "Shape gimmicks and picture mnemonics",
-   "what": "Letters and vowels are tied to a picture or a gag (a necktie, a gap in the shape, a hole at the bottom). Seen in 3 of 11. Strong for look-alike pairs; each teacher invents their own, so ALEF must draw its own.",
+   "what": "Letters and vowels are tied to a picture or a gag (a necktie, a gap in the shape, a hole at the bottom). Seen in 3 of 11. Strong for look-alike pairs; each teacher invents their own, so Aleph must draw its own.",
    "axes": {
     "r": 700,
     "i": 600,
@@ -284,7 +284,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read (2 of 11)",
-   "notes": "Needs ALEF audio for each syllable."
+   "notes": "Needs Aleph audio for each syllable."
   },
   {
    "id": "y100-tech-13",
@@ -566,7 +566,7 @@
    "printable": null,
    "status": "proposed",
    "evidence": "captions-read (at least 5 of 18)",
-   "notes": "ALEF already plans per-tradition audio; this makes the tradition a first-class setting in every drill."
+   "notes": "Aleph already plans per-tradition audio; this makes the tradition a first-class setting in every drill."
   },
   {
    "id": "y100-err-10",
@@ -593,7 +593,7 @@
    "id": "y100-gap-01",
    "source": "y100-gap",
    "name": "Adaptive look-alike drilling",
-   "what": "No video drills the classic confusions (bet/kaf, dalet/resh, vav/zayin/final nun, he/chet/tav) beyond a spoken warning. ALEF can log each learner confusion and serve the pair that hurts them.",
+   "what": "No video drills the classic confusions (bet/kaf, dalet/resh, vav/zayin/final nun, he/chet/tav) beyond a spoken warning. Aleph can log each learner confusion and serve the pair that hurts them.",
    "axes": {
     "r": 850,
     "i": 800,
@@ -605,7 +605,7 @@
    "improvedScore": 965,
    "improvedName": "Confusion-pair trainer",
    "spec": {
-    "screen": "A two-up card: hear a sound or word, tap one of two near-identical letters. After a miss, the pair is shown with its one differing feature highlighted by ALEF art (never a teacher mnemonic) and the miss is logged.",
+    "screen": "A two-up card: hear a sound or word, tap one of two near-identical letters. After a miss, the pair is shown with its one differing feature highlighted by Aleph art (never a teacher mnemonic) and the miss is logged.",
     "data": "confusionPairs[] = {a, b, feature, audioIds}; learnerConfusions{pairId: misses, lastSeen}; scheduling is a plain SRS queue weighted by miss count.",
     "interaction": "Round of ten pairs, weighted to the learner worst pairs; a streak unlocks the next pair set; a heat map in progress shows which pairs are still weak.",
     "test": "Unit: every pair has an audio id and a stated feature; selection never repeats a pair twice in a row; misses raise a pair weight and clean answers lower it."
@@ -619,7 +619,7 @@
    "id": "y100-gap-02",
    "source": "y100-gap",
    "name": "Stylus tracing with a real stroke check",
-   "what": "Every writing demo is passive, and the learner cannot be corrected on a video. ALEF can check start point, direction and order on a tablet, linked to the handwriting form.",
+   "what": "Every writing demo is passive, and the learner cannot be corrected on a video. Aleph can check start point, direction and order on a tablet, linked to the handwriting form.",
    "axes": {
     "r": 400,
     "i": 800,
@@ -645,7 +645,7 @@
    "id": "y100-gap-03",
    "source": "y100-gap",
    "name": "Word stress and rhythm",
-   "what": "The read videos barely mention which syllable carries the stress. Reading aloud with the wrong stress is a common give-away, and ALEF can colour the stressed syllable and test it.",
+   "what": "The read videos barely mention which syllable carries the stress. Reading aloud with the wrong stress is a common give-away, and Aleph can colour the stressed syllable and test it.",
    "axes": {
     "r": 700,
     "i": 900,
@@ -671,7 +671,7 @@
    "id": "y100-gap-04",
    "source": "y100-gap",
    "name": "Follow-along prayer reading without transliteration",
-   "what": "The prayer videos read a line for the learner to repeat, or discuss meaning, and none ties the sounds back to letters and signs. ALEF can light words as they are read and let the learner tap any word.",
+   "what": "The prayer videos read a line for the learner to repeat, or discuss meaning, and none ties the sounds back to letters and signs. Aleph can light words as they are read and let the learner tap any word.",
    "axes": {
     "r": 950,
     "i": 300,
@@ -718,7 +718,7 @@
    "id": "y100-gap-06",
    "source": "y100-gap",
    "name": "Error log that explains the rule behind a miss",
-   "what": "Videos cannot say why this learner missed this word. ALEF can tag each miss with the rule at fault (shva, silent letter, merged sound, look-alike) and show the matching mini-lesson.",
+   "what": "Videos cannot say why this learner missed this word. Aleph can tag each miss with the rule at fault (shva, silent letter, merged sound, look-alike) and show the matching mini-lesson.",
    "axes": {
     "r": 800,
     "i": 800,

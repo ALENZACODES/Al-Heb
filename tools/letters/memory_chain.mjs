@@ -59,7 +59,7 @@ ${m.fixture ? '.fx{border:.4mm solid #000;font-size:7pt;padding:.8mm 2mm;margin-
   const trad = `<div class="trad"><b>Three ways to say it.</b> <b>I</b> Israeli: everyday modern Hebrew (the default here). <b>S</b> Sephardi, as the app's setting: Israeli-style vowels said with English-speaking habits. <b>A</b> Ashkenazi: the traditional siddur reading, for example Shabbos for Shabbat. Pick one and keep to it. The picture hooks use the Israeli sound.</div>`;
   const body = `${m.fixture ? `<div class="fx"><b>${esc(FIXTURE_NOTE)}</b></div>` : ''}${grid}${trad}`;
   const pages = [{ kind: 'poster', title: '27 letters you will not forget', fields: false, body }];
-  const html = wrapHtml({ title: `ALEF memory chain poster (${paper.label})`, css, pages, set: 'Memory chain', draft: m.fixture ? FIXTURE_NOTE : CHAIN_DRAFT, fonts: 'Fonts: Frank Ruhl Libre (SIL OFL 1.1).' });
+  const html = wrapHtml({ title: `Aleph memory chain poster (${paper.label})`, css, pages, set: 'Memory chain', draft: m.fixture ? FIXTURE_NOTE : CHAIN_DRAFT, fonts: 'Fonts: Frank Ruhl Libre (SIL OFL 1.1).' });
   return { html, pages: pages.map((p) => p.kind), pageCount: 1, model: m };
 }
 

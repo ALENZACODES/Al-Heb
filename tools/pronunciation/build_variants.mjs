@@ -53,7 +53,7 @@ const CONS = {
 };
 const KHAF = ['χ', 'x', 'x'];
 const AYIN = ['', 'ʕ', ''];
-const ALEF = ['', 'ʔ', ''];
+const Aleph = ['', 'ʔ', ''];
 const VOWEL = {
   kamatz: ['a', 'a', 'ɔ'], 'kamatz-katan': ['o', 'ɔ', 'ɔ'], patach: ['a', 'a', 'a'],
   tzere: ['e', 'e', 'ej'], segol: ['e', 'e', 'e'], chirik: ['i', 'i', 'i'],
@@ -234,7 +234,7 @@ export function renderWord(he, ctx) {
       if (e.mater || e.silent) continue;
       const L = e.letter;
       let c;
-      if (L === 'א') c = e.vowel ? ALEF[t] : '';
+      if (L === 'א') c = e.vowel ? Aleph[t] : '';
       else if (L === 'ע') c = AYIN[t];
       else if (L === 'ב') c = e.dagesh ? 'b' : 'v';
       else if (L === 'כ' || L === 'ך') c = e.dagesh ? 'k' : KHAF[t];

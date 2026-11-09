@@ -1,11 +1,11 @@
 // @ts-check
-// ALEF teacher share (DRAFT): build, encode, parse and validate a small learner progress summary.
+// Aleph teacher share (DRAFT): build, encode, parse and validate a small learner progress summary.
 // Pure: no DOM, no fetch, no clock (callers pass `now`). Weak-spot logic is src/progress/model.js weakSpots, not duplicated.
 import { readSnapshot, knowledge, weakSpots, dayKey } from '../progress/model.js';
 import { currentWeekIndex } from '../classtrack/model.js';
 
 export const SCHEMA = 'alef-progress-share/1';
-export const CODE_PREFIX = 'ALEF-SHARE-1.';
+export const CODE_PREFIX = 'Aleph-SHARE-1.';
 export const MAX_SUMMARY_BYTES = 8 * 1024;      // one summary
 export const MAX_TOTAL_BYTES = 256 * 1024;      // everything a teacher pastes or loads at once
 export const MAX_LEARNERS = 60;
@@ -76,17 +76,17 @@ export function parseSummary(text) {
   let t = text.trim();
   if (!t) return { ok: false, error: 'Empty.' };
   if (t.length > MAX_SUMMARY_BYTES * 2) return { ok: false, error: 'Too large to be a progress summary.' };
-  if (HTMLISH.test(t)) return { ok: false, error: 'Looks like HTML, not an ALEF summary. Rejected.' };
+  if (HTMLISH.test(t)) return { ok: false, error: 'Looks like HTML, not an Aleph summary. Rejected.' };
   let json = t;
   if (t.startsWith(CODE_PREFIX)) {
     const body = t.slice(CODE_PREFIX.length).replace(/\s+/g, '');
     if (!/^[A-Za-z0-9_-]+$/.test(body)) return { ok: false, error: 'Code has characters that do not belong.' };
     try { json = unb64(body); } catch { return { ok: false, error: 'Code could not be decoded.' }; }
-    if (HTMLISH.test(json)) return { ok: false, error: 'Looks like HTML, not an ALEF summary. Rejected.' };
+    if (HTMLISH.test(json)) return { ok: false, error: 'Looks like HTML, not an Aleph summary. Rejected.' };
   }
   if (json.length > MAX_SUMMARY_BYTES) return { ok: false, error: 'Too large to be a progress summary.' };
   let v;
-  try { v = JSON.parse(json); } catch { return { ok: false, error: 'Not valid JSON or an ALEF code.' }; }
+  try { v = JSON.parse(json); } catch { return { ok: false, error: 'Not valid JSON or an Aleph code.' }; }
   return validateSummary(v);
 }
 

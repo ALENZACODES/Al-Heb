@@ -1,4 +1,4 @@
-// ALEF word tracing: niqqud placement step. Pure model + scoring (no DOM).
+// Aleph word tracing: niqqud placement step. Pure model + scoring (no DOM).
 // The learner picks a mark from a small tray and taps the letter cell it belongs on; the board scores each cell by exact set match.
 // @ts-check
 import { cellsOf, MARK } from '../curriculum/hebrew.js';

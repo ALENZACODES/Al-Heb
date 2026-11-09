@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 60 (command 360): J-0758.png to J-0769.png
+Aleph IMAGE RUN - BLOCK J 60 (command 360): J-0758.png to J-0769.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vowel_alt.

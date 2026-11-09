@@ -47,5 +47,5 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const args = process.argv.slice(2);
   const flag = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
   const port = Number(args.find((a) => /^\d+$/.test(a)) ?? process.env.PORT ?? 8080);
-  createAppServer({ root: flag('--root') ? resolve(flag('--root')) : ROOT, prefix: flag('--prefix') ?? '/' }).listen(port, () => console.log(`ALEF dev server: http://localhost:${port}/`));
+  createAppServer({ root: flag('--root') ? resolve(flag('--root')) : ROOT, prefix: flag('--prefix') ?? '/' }).listen(port, () => console.log(`Aleph dev server: http://localhost:${port}/`));
 }

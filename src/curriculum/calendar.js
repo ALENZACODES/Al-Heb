@@ -1,5 +1,5 @@
 /**
- * ALEF offline Jewish calendar (Lane 1). No network, no dependencies, not Hebcal.
+ * Aleph offline Jewish calendar (Lane 1). No network, no dependencies, not Hebcal.
  *
  * 1. Hebrew calendar: the standard arithmetic calendar (molad/dehiyyot rules) as given in
  *    Dershowitz & Reingold, "Calendrical Calculations" (implemented from memory of the published algorithm;

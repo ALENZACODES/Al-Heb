@@ -28,9 +28,9 @@ export const PRINT_MARGIN = 40;
 
 /** Face copy. Fixed so a caller cannot swap in a degree title or another institution. */
 export const FACE = Object.freeze({
-  wordmark: 'ALEF',
-  heading: 'ALEF',
-  issuer: 'ALEF is Key Foundation',
+  wordmark: 'Aleph',
+  heading: 'Aleph',
+  issuer: 'Aleph is Key Foundation',
   subheading: 'Certificate of Completion',
   presented: 'Presented to',
   forWord: 'for',
@@ -144,13 +144,13 @@ export const SAMPLE_PAGE_NOTES = Object.freeze([
   'The name is a label you typed. It is not a signature and not an account.',
   'No teacher, rabbi, or examiner has signed this sample. The seal is a temporary geometric drawing, not a seal of office.',
   'There is no verification website, and this sample has no code that could prove it.',
-  'A saved PDF stays in your files. ALEF does not keep a copy on a server. The file is not a secure or tamper-proof document.',
+  'A saved PDF stays in your files. Aleph does not keep a copy on a server. The file is not a secure or tamper-proof document.',
   ART_NOTE,
 ]);
 
 /** Learner-facing share blurb. Ignores any caller watermark. */
 export function shareText(_model) {
-  return `${DESIGN_PROOF}. Not an earned certificate. Completion has not been assessed or awarded. ALEF does not email this and does not upload it.`;
+  return `${DESIGN_PROOF}. Not an earned certificate. Completion has not been assessed or awarded. Aleph does not email this and does not upload it.`;
 }
 
 export function shareAvailability(nav) {
@@ -368,7 +368,7 @@ function drawSeal(cmds, cx, cy) {
   cmds.push(`${CRIMSON_DEEP} RG 0.65 w`);
   strokeCircle(cmds, cx, cy, 22);
   placeRingText(cmds, cx, cy, 26.2, 'KEY FOUNDATION', 5.6);
-  place(cmds, 'F2', 9, cy - 3, 'ALEF', CRIMSON_INK);
+  place(cmds, 'F2', 9, cy - 3, 'Aleph', CRIMSON_INK);
 }
 
 /** Shrink a long name onto one line, or two lines if it still will not fit. */

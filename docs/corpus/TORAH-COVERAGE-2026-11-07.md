@@ -1,6 +1,6 @@
 # Torah coverage report (2026-11-07)
 
-Report only: nothing was imported, rendered or changed by this document. It answers two questions: what Hebrew and English Torah text ALEF holds today, and what the owner's "whole Torah in Hebrew and English with slow replay" still needs. Counts are read from the files named; where a count comes from a generated doc rather than from a file in this tree, the doc is named.
+Report only: nothing was imported, rendered or changed by this document. It answers two questions: what Hebrew and English Torah text Aleph holds today, and what the owner's "whole Torah in Hebrew and English with slow replay" still needs. Counts are read from the files named; where a count comes from a generated doc rather than from a file in this tree, the doc is named.
 
 ## 1. What the app holds
 

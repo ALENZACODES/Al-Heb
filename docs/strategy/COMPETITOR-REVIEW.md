@@ -1,14 +1,14 @@
-# Competitor analysis: review against the ALEF repo (November 2026)
+# Competitor analysis: review against the Aleph repo (November 2026)
 
 Source: `competitor-analysis.txt` (807 lines, read in full; HTML original not separately read). Repo read at commit `cb4e5c1`. Status words: **done**, **partial**, **not started**, **blocked** (needs a human). "Verified" means I opened the file named; nothing here was run in a browser. I ran four test files (audio.coverage, vocab.schema, corpus.hebrew, images.ingest): 44 pass, 0 fail. `node --test tests/` as a directory argument failed with a runner error, so I make no full-suite claim.
 
 ## 1. The ten findings that matter for decisions
 
 1. **The white space is the doc's research claim**: no competitor combines niqqud-first reading, prayer reading, conversation, tradition-switchable audio and photo-OCR. I did not re-survey the field.
-2. **Audio is the moat and ALEF has none.** 14,036 clips needed; 0 exist (`docs/voices/coverage.md`). Every "match: human audio" move is blocked on recording.
+2. **Audio is the moat and Aleph has none.** 14,036 clips needed; 0 exist (`docs/voices/coverage.md`). Every "match: human audio" move is blocked on recording.
 3. **Only Israeli audio can be machine-made** (the doc and `tools/audio/render_tts.mjs` agree). Ashkenazi prayer audio, the sharpest differentiator, is also the slowest lane.
 4. **"Free now, maybe sold later" is a licensing decision.** The doc's sale-clear verdicts are looser than the repo's own records (section 4).
-5. **CapCut is ruled out for ALEF audio** (section 5).
+5. **CapCut is ruled out for Aleph audio** (section 5).
 6. **A streak with automatic Shabbat/Yom Tov freeze is the cheapest differentiator.** The repo has a user-marked rest-day streak, not an automatic freeze.
 7. **NJOP's host-network model is the distribution plan.** The repo already has a 10-week Class track (`#/classtrack`), not the doc's 5-week format.
 8. **Scoring must be called "reading accuracy"**, not a pronunciation grade (doc, resource 21). The repo has no speech recognition.
@@ -75,12 +75,12 @@ M = match, E = exceed.
 | "797 illustrations" | **Matches** `data/images/manifest.csv` (797 rows, all `pending`). Doc calls them "placeholders"; the repo has also queued a further 1,000 (`data/images/next1000.csv`). 0 approved. |
 | "5,000 words" | **Matches** `vocab5000.json` (5,000). Repo also has `words.json` (6,029 words, 270 phrases). 4,997 pointed from Wiktionary; all `proofread: false`. |
 | "Chatterbox" / "Cloudflare Pages" | Chatterbox is **absent from the repo** (Resemble's page says MIT, lists Hebrew). Cloudflare is only an option in `DEPLOY.md`; nothing deployed. Doc cites 23 languages, Resemble says 20+. |
-| "ALEF's code already flags the Dicta endpoint" | **True.** `docs/photo/ENGINES.md`: "No terms/rate limit found: ask Dicta before shipping". The code ships it behind an opt-in checkbox. |
+| "Aleph's code already flags the Dicta endpoint" | **True.** `docs/photo/ENGINES.md`: "No terms/rate limit found: ask Dicta before shipping". The code ships it behind an opt-in checkbox. |
 | "31 strengths" | **Self-contradiction.** I count 30 (1a to 10c). Also the repo's belts borrow Aleph Champ-style names while the doc says avoid its trade dress. |
 | Route 2: 14,036 clips in 8-20 machine-hours | **Inconsistent with the doc's own rule** that Chatterbox can only produce Israeli. Honest TTS scope is ~5,224 Israeli clips (2,612 x 2); the rest is human. |
 | §M.4 "author = John Khan only; no co-author trailers; strip AI/tool names" | **Applied.** The published repo shows John Khan as the only author and carries no tool names. Disclosure of AI-made art is a separate question: `docs/images/RIGHTS.md` and `IMAGE-RUN.md` say to disclose it and to answer store AI-disclosure questions truthfully, so John should decide that wording knowingly. |
 
-## 4. "Free now, sale later" against ALEF's actual licences
+## 4. "Free now, sale later" against Aleph's actual licences
 
 No NC, ND or personal-use material was found **in shipped data**. Non-commercial sources appear only as rejected or "ideas only" references (`docs/corpus/LICENSES.md` section 3; `docs/resources/gratis-directory.md`, e.g. Learn101: personal, non-commercial only). I grepped docs and data JSON for NC/ND/GPL terms; I did not audit `book/`, PDFs or the full `assets/` tree.
 
@@ -100,11 +100,11 @@ No NC, ND or personal-use material was found **in shipped data**. Non-commercial
 
 ## 5. CapCut
 
-The doc's conclusion: for ALEF audio CapCut is a **trap**. CapCut's TTS page, as quoted, names Chinese, Malay, Vietnamese, Thai, English, Spanish, Japanese "and more", not Hebrew. Its Terms (section 5) bar scripted use and incorporating the service into another product, and the Materials License limits use to per-export, bars standalone use of materials, and bars making them available in other apps. The doc adds that 14,036 clips by hand would take 230-460 hours.
+The doc's conclusion: for Aleph audio CapCut is a **trap**. CapCut's TTS page, as quoted, names Chinese, Malay, Vietnamese, Thai, English, Spanish, Japanese "and more", not Hebrew. Its Terms (section 5) bar scripted use and incorporating the service into another product, and the Materials License limits use to per-export, bars standalone use of materials, and bars making them available in other apps. The doc adds that 14,036 clips by hand would take 230-460 hours.
 
 What I checked: I could not fetch CapCut's pages (blocked in this session) and a search turned up no confirmation either way, so **I did not verify the quotes or the Hebrew-voice absence**. The doc itself marks the Hebrew voice "unverified" and proposes a 15-minute in-app test; the user's computer is linked but I did not run it.
 
-What it means for the plan: if CapCut is to be used for **ALEF lesson or prayer audio**, don't. If it is for **editing marketing or demo videos**, the doc says that is fine for Dual-Use-marked materials, but re-read the licence before using any CapCut-supplied voice, music or template commercially.
+What it means for the plan: if CapCut is to be used for **Aleph lesson or prayer audio**, don't. If it is for **editing marketing or demo videos**, the doc says that is fine for Dual-Use-marked materials, but re-read the licence before using any CapCut-supplied voice, music or template commercially.
 
 Alternatives from the doc and repo only: record people with the kits in `docs/voices/kit/` (the only route for Ashkenazi and Sephardi); Chatterbox locally for Israeli drafts (MIT per Resemble; not in the repo yet; clips carry a PerTh watermark); harvest Common Voice CC0 or Lingua Libre matches (small yield, per the doc); `tools/audio/render_tts.mjs` with Azure/Google/ElevenLabs is wired but unpriced for redistribution rights. The doc rules out Piper's Hebrew voice, Edge-TTS and Forvo.
 

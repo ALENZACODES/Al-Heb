@@ -1,10 +1,10 @@
-# Free-Hebrew directory (Gratis Global): teaching ideas for ALEF
+# Free-Hebrew directory (Gratis Global): teaching ideas for Aleph
 
 Status: research notes, 2026-11-03. Scores are the author's judgement on a 0-1000 scale, not measured outcomes. Machine-readable concepts: `data/curriculum/resource-concepts-gratis.json` (validated by `tests/resources-gratis.test.js`). Licence summary and consequences: `docs/resources/gratis-reuse-matrix.md`. Only ideas and pedagogy are used; no text, vocabulary lists, audio, lyrics or images from any resource are copied.
 
 Source directory: https://gratisglobal.com/learn-hebrew-free (over 100 links across 11 headings: apps, dictionaries, video lessons, audio lessons, online courses, other resources, speaking practice, media, dictionaries and pronunciation guides, textbooks, tests). I visited the priority subset below, one resource at a time, and did not try to cover the whole list.
 
-Score axes: r reading siddur or Torah aloud / i Israeli functional Hebrew / c beginner clarity / f fit with ALEF / risk originality risk (higher is worse). Each concept record also carries an `evidence` field saying how much I actually saw.
+Score axes: r reading siddur or Torah aloud / i Israeli functional Hebrew / c beginner clarity / f fit with Aleph / risk originality risk (higher is worse). Each concept record also carries an `evidence` field saying how much I actually saw.
 
 ## Access summary
 
@@ -36,16 +36,16 @@ Concepts:
 
 - gr-tmh-01 (690): Four-step path: alphabet, basic words and phrases, grammar by example, dialogs. The home page orders the site as Step 0 alphabet, Step 1 basic vocabulary (words, phrases, verbs, numbers, time), Step 2 thirty grammar-by-example lessons, Step 3 fifteen dialogs. Communicate first, rules after.
 - gr-tmh-02 (860): Grammar by example with masculine and feminine versions of the same sentence side by side. A grammar lesson opens with two or three lines of rule (for instance that the present-tense verb to be is not written) and then lists many parallel sentences, repeating each one in its masculine and feminine form with English, transliteration and Hebrew in three columns. Note: Lesson pages 1, 11 and 14 read.
-- gr-tmh-03 (740): Ten-thousand word frequency list kept in natural inflected and prefixed forms. The list ranks 10,000 words from about five million words of mostly news and encyclopedia text. It leaves prefixes and suffixes attached on purpose, so the same lexeme appears many times, and it says its own order would differ for speech. Note: Page read (about 447 thousand characters of text). The corpus is written text; ALEF would want a spoken source for the Israel track and a prayer-text source for the read track.
+- gr-tmh-03 (740): Ten-thousand word frequency list kept in natural inflected and prefixed forms. The list ranks 10,000 words from about five million words of mostly news and encyclopedia text. It leaves prefixes and suffixes attached on purpose, so the same lexeme appears many times, and it says its own order would differ for speech. Note: Page read (about 447 thousand characters of text). The corpus is written text; Aleph would want a spoken source for the Israel track and a prayer-text source for the read track.
 - gr-tmh-04 (320): Five hundred basic words ordered alphabetically by Hebrew spelling. The 500-word page lists English, transliteration and Hebrew in Hebrew alphabetical order, so a watermelon, a dad, and the word for but sit next to each other. It is a reference, not a learning order. Note: Anti-pattern for sequencing. Fine as a lookup index. The first words on the page alphabetically are mixed everyday and rare items, so frequency or theme is a better teaching order.
 - gr-tmh-05 (860): Transliteration with hyphenated syllables and the stressed syllable marked. Every transliteration on the site breaks words into hyphenated syllables and marks the stressed syllable by emphasis, with a stated rule that stress is final unless marked. Learners can see stress without knowing the script. Note: Prayer stress (milel/milra) matters for reading aloud and for cantillation readiness.
 - gr-tmh-06 (870): A page that only drills the two hardest sounds, each with every vowel before and after. One page drills ר and the ח/כ/ך sound with a grid: sound plus each of five vowels (onset) and each of five vowels plus sound (coda), all recorded by a native speaker, explained as the sounds learners find hardest.
-- gr-tmh-07 (620): Letter-order song using a picture for each early letter. The page gives the lyrics of the Israeli children's alefbet song, mapping early letters to pictures (tent, house, camel, door) and then verse-chunking the rest of the order. Memorising order by melody and image. Note: The lyrics are a copyrighted song; ALEF must write its own chant. Not reproduced here.
+- gr-tmh-07 (620): Letter-order song using a picture for each early letter. The page gives the lyrics of the Israeli children's alefbet song, mapping early letters to pictures (tent, house, camel, door) and then verse-chunking the rest of the order. Memorising order by melody and image. Note: The lyrics are a copyrighted song; Aleph must write its own chant. Not reproduced here.
 - gr-tmh-08 (820): Fifteen short scripted dialogs on everyday scenes (restaurant, directions, phone, family...). Each dialog is a short back-and-forth about one scene, shown line by line in three columns. The restaurant one runs from the host's greeting to ordering. Speaker labels are not visible in the page text, so turns are inferred. Note: Dialog 1 and 8 read.
-- gr-tmh-09 (380): Song and joke pages as reading and listening extras. Twenty-odd song lyric pages and fourteen joke pages offer authentic Hebrew entertainment texts, listed as optional extras after the core steps. Note: Lyrics are third-party copyrighted; ALEF should link out, not embed. Evidence: listing only; pages not opened.
-- gr-tmh-10 (700): Israeli signage page (photo plus reading plus translation). A page of real signs with the Hebrew, a transliteration and an English gloss (the page I read had one entry: the red shield of David sign). A small idea: teach reading from real signs. Note: Pairs with the photo-scan lane. ALEF would need its own photographs.
-- gr-tmh-11 (700): Request-a-phrase loop and colloquial register notes. The phrasebook page collects requested everyday phrases in both genders (an informal screw-up phrase, an around-nine-thirty phrase, a request for a lift) with English glosses and some notes in brackets. Real spoken register, driven by user requests. Note: An in-app 'request a phrase' would need a backend or at least an email link; no claim is made that ALEF has one.
-- gr-tmh-12 (560): Anki decks for the alphabet, words, verbs, phrases and numbers, with audio. The site offers downloadable flash card decks with audio so the learner can use their own spaced repetition tool. Note: ALEF has its own FSRS-style scheduler. A CSV export of the learner's deck would be a trust feature.
+- gr-tmh-09 (380): Song and joke pages as reading and listening extras. Twenty-odd song lyric pages and fourteen joke pages offer authentic Hebrew entertainment texts, listed as optional extras after the core steps. Note: Lyrics are third-party copyrighted; Aleph should link out, not embed. Evidence: listing only; pages not opened.
+- gr-tmh-10 (700): Israeli signage page (photo plus reading plus translation). A page of real signs with the Hebrew, a transliteration and an English gloss (the page I read had one entry: the red shield of David sign). A small idea: teach reading from real signs. Note: Pairs with the photo-scan lane. Aleph would need its own photographs.
+- gr-tmh-11 (700): Request-a-phrase loop and colloquial register notes. The phrasebook page collects requested everyday phrases in both genders (an informal screw-up phrase, an around-nine-thirty phrase, a request for a lift) with English glosses and some notes in brackets. Real spoken register, driven by user requests. Note: An in-app 'request a phrase' would need a backend or at least an email link; no claim is made that Aleph has one.
+- gr-tmh-12 (560): Anki decks for the alphabet, words, verbs, phrases and numbers, with audio. The site offers downloadable flash card decks with audio so the learner can use their own spaced repetition tool. Note: Aleph has its own FSRS-style scheduler. A CSV export of the learner's deck would be a trust feature.
 - gr-tmh-13 (780): A frequency list built from one single text (Harry Potter in Hebrew). The menu lists a separate word-frequency list for one book. The idea, inferred from the title only, is a vocabulary list for one text. Evidence: title and menu entry only; page not opened.
 
 ### Learn101
@@ -81,7 +81,7 @@ None recorded.
 
 Concepts:
 
-- gr-sh-01 (780): Graded short stories labelled A1 to C2, filterable by topic, some free. The site (renamed from StoryHebrew to StoryOlive) lists dozens of stories with level tags, topic tags (daily life, food, travel, holidays...) and a free flag. Content sits behind login and premium. I read only the listing. Note: ALEF would write its own tiny pointed readers using only taught words. Evidence: listing only; story texts not read.
+- gr-sh-01 (780): Graded short stories labelled A1 to C2, filterable by topic, some free. The site (renamed from StoryHebrew to StoryOlive) lists dozens of stories with level tags, topic tags (daily life, food, travel, holidays...) and a free flag. Content sits behind login and premium. I read only the listing. Note: Aleph would write its own tiny pointed readers using only taught words. Evidence: listing only; story texts not read.
 - gr-sh-02 (640): Placement test and free tools (alphabet, numbers, level test). Free tools include an alphabet page, numbers page and a Hebrew level test. A placement check lets a returning learner skip known material. Evidence: listing only; level test content not seen.
 
 ### A Little Hebrew reading trainer
@@ -93,7 +93,7 @@ Concepts:
 Concepts:
 
 - gr-alh-01 (900): Hear a syllable, pick the matching written card from two, with a tiny alphabet that grows. The reading trainer plays a sound and shows two written cards; the learner picks the match as fast as they can, with guessing allowed. Sampling its card data showed it starts with two consonants on one vowel, then repeats syllables, then closes syllables and short words, adding one idea per level. Note: Idea is general decoding practice; no card data is copied. No licence stated on the page.
-- gr-alh-02 (760): Ladder graduates to real text (invites reading Genesis 1). At the end of all levels the trainer says the learner is ready to read and links to the first chapter of Genesis. A clear 'you can now read something real' moment. Note: Genesis 1 would be pointed text from a PD source in ALEF; the fit here is graduation to the priestly blessing opener.
+- gr-alh-02 (760): Ladder graduates to real text (invites reading Genesis 1). At the end of all levels the trainer says the learner is ready to read and links to the first chapter of Genesis. A clear 'you can now read something real' moment. Note: Genesis 1 would be pointed text from a PD source in Aleph; the fit here is graduation to the priestly blessing opener.
 - gr-alh-03 (400): Sound effects and badges for levels and achievements. Short ding sounds, a level-up reward and an achievements row give feedback without accounts; progress is kept in the address and a cookie.
 
 ### FSI Hebrew Basic Course via LiveLingua
@@ -106,7 +106,7 @@ Concepts:
 Concepts:
 
 - gr-fsi-01 (850): Transliteration scaffold removed over the course (script introduced alongside, then transliteration dropped). A description of the 40-unit FSI Basic Hebrew course (1965) says dialogs are transliterated in the early units, an alphabet introduction sits near the back and is meant to be studied in parallel, and later sections drop transliteration. The idea is to fade the scaffold. Note: The livelingua page returned a 403 to me. Evidence: description of the course from a mirror page (fsi-language-courses.org); the FSI Hebrew PDF itself was not opened.
-- gr-fsi-02 (700): Unit shape of dialog, then drills, then exercises with audio per unit. The mirror describes 40 units, each containing dialogs, drills and exercises, with over 22 hours of audio, designed for 1960s diplomats and aimed at informal educated spoken Hebrew. Pattern drilling after a dialog. Note: Vocabulary and register are from 1965; ALEF would treat the form (dialog then substitution drill) as the idea. Evidence: mirror description only.
+- gr-fsi-02 (700): Unit shape of dialog, then drills, then exercises with audio per unit. The mirror describes 40 units, each containing dialogs, drills and exercises, with over 22 hours of audio, designed for 1960s diplomats and aimed at informal educated spoken Hebrew. Pattern drilling after a dialog. Note: Vocabulary and register are from 1965; Aleph would treat the form (dialog then substitution drill) as the idea. Evidence: mirror description only.
 
 ### DLI Hebrew Language Survival Kit
 
@@ -116,7 +116,7 @@ Concepts:
 
 Concepts:
 
-- gr-dli-01 (740): A first module of sounds unfamiliar to English speakers, each with a like-as-in guide. The survival kit opens its menu with a sounds-unfamiliar-to-English-speakers module, listing a handful of hard sounds with English approximations written in its own letter scheme. Note: Content is a short list of sounds; overlaps with the TeachMeHebrew sound page and ALEF's lane-3 drills.
+- gr-dli-01 (740): A first module of sounds unfamiliar to English speakers, each with a like-as-in guide. The survival kit opens its menu with a sounds-unfamiliar-to-English-speakers module, listing a handful of hard sounds with English approximations written in its own letter scheme. Note: Content is a short list of sounds; overlaps with the TeachMeHebrew sound page and Aleph's lane-3 drills.
 - gr-dli-02 (560): Survival-first topic ordering: commands, helpful words, greetings, emergencies, then niche vocabulary. The 22-module kit starts with commands and warnings, then helpful words and questions, greetings, numbers, days and time, directions, emergency terms, food, medical terms. Military topics (ranks, mine warfare) make most of it irrelevant to a civilian learner. Note: Idea worth keeping: a small emergency card. Audio and PDF are offered as zip downloads; licence is not stated on the pages I read.
 
 ### Goethe-Verlag Book2 (50languages)
@@ -151,8 +151,8 @@ Concepts:
 Concepts:
 
 - gr-la-01 (720): Units named for letters of the alphabet, each with flashcards then a cumulative vocabulary review every two to three units. The tutorials page lists Unit Alef, Unit Bet, Unit Gimel and so on, each with small flashcard sets, followed by review activities that combine the last two or three units (Alef to Gimel, Dalet to Vav). Note: Free for educational use with credit; commercial use prohibited. Evidence: index page only; tutorial content not opened.
-- gr-la-02 (720): Listening-first video scenes with transcripts held back. The video page lists scenes (before class, a restaurant, buying clothes, planning a trip) and says transcripts are given only on accessibility request, so the learner must listen to understand. Not safe to copy; the mechanic is portable. Note: Accessibility transcripts must still be available in ALEF; reveal-after-attempt is the compromise. Evidence: listing only; videos not watched.
-- gr-la-03 (450): Authentic voices: interviews with children, second-language learners and radio announcers. A sound bites collection of interviews exposes learners to varied real speakers. ALEF would need its own consented recordings. Evidence: listing only.
+- gr-la-02 (720): Listening-first video scenes with transcripts held back. The video page lists scenes (before class, a restaurant, buying clothes, planning a trip) and says transcripts are given only on accessibility request, so the learner must listen to understand. Not safe to copy; the mechanic is portable. Note: Accessibility transcripts must still be available in Aleph; reveal-after-attempt is the compromise. Evidence: listing only; videos not watched.
+- gr-la-03 (450): Authentic voices: interviews with children, second-language learners and radio announcers. A sound bites collection of interviews exposes learners to varied real speakers. Aleph would need its own consented recordings. Evidence: listing only.
 
 ### Wikibooks Hebrew (Israeli Hebrew)
 
@@ -162,7 +162,7 @@ Concepts:
 
 Concepts:
 
-- gr-wb-01 (520): Alphabet table: letter, IPA, name, English keyword. A four-column alphabet table gives each letter, IPA, name in Hebrew script and a keyword. Community text; some letter names are spelled in odd non-standard ways, and the IPA for resh follows a French r. Note: CC BY-SA text; ALEF should not import the table, its own letters.json is the source.
+- gr-wb-01 (520): Alphabet table: letter, IPA, name, English keyword. A four-column alphabet table gives each letter, IPA, name in Hebrew script and a keyword. Community text; some letter names are spelled in odd non-standard ways, and the IPA for resh follows a French r. Note: CC BY-SA text; Aleph should not import the table, its own letters.json is the source.
 - gr-wb-02 (740): Lesson page with four columns (English, pointed Hebrew, transliteration, IPA) and a short culture note. Lesson 1 of the elementary course tabulates greeting words and pronouns in four columns, then gives notes such as the two usual replies to thanks. Note: Share-alike applies to copied text and tables; the structure is free to reuse.
 - gr-wb-03 (720): Introduction unit on sounds, syllables, dagesh, vowel reduction, shva, spelling. The contents page has a pronunciation and spelling block with those named topics before greetings. Only the contents were seen, not the pages. Evidence: contents page only.
 
@@ -189,7 +189,7 @@ Concepts:
 Concepts:
 
 - gr-jm-01 (680): One-page travel card organised by situation (greetings and courtesies, shopping and dining, emergencies, getting around, days, seasons, numbers). A federation mission page lists words and phrases under seven situation headings with English and a transliteration. Compact enough to print as a pocket card.
-- gr-jm-02 (840): Speaker gender and addressee gender marked inline (male/female) for questions and statements. Phrases that change by gender give both forms in one line, for example what is your name and how are you, and I want, so the traveller must pick the right one for themselves or the person they address. Note: The page's own labels are inconsistent (some pairs list female first); ALEF's control removes that ambiguity.
+- gr-jm-02 (840): Speaker gender and addressee gender marked inline (male/female) for questions and statements. Phrases that change by gender give both forms in one line, for example what is your name and how are you, and I want, so the traveller must pick the right one for themselves or the person they address. Note: The page's own labels are inconsistent (some pairs list female first); Aleph's control removes that ambiguity.
 - gr-jm-03 (250): Transliteration only, with no Hebrew script. The phrase list shows English and an ad hoc Latin spelling for every item, with inconsistent spellings across the page. The learner never meets the script.
 - gr-jm-04 (700): Culture notes inside the vocabulary (shared taxi versus regular taxi, corner grocery, change literally as leftovers). Some items carry a short gloss that explains how the thing works in Israel. Taxi has two kinds, change is an idiom, a small local grocery has its own word.
 
@@ -244,7 +244,7 @@ Concepts:
 | gr-tmh-04 | Five hundred basic words ordered alphabetically by Hebrew spelling | tmh | 150 | 350 | 400 | 300 | 100 | 320 | - |
 | gr-jm-03 | Transliteration only, with no Hebrew script | jewishmiami | 0 | 450 | 350 | 200 | 100 | 250 | - |
 
-## Improved ALEF specs (concepts scoring 850 or more)
+## Improved Aleph specs (concepts scoring 850 or more)
 
 ### gr-alh-01 Syllable ladder with confusable-aware distractors (900 -> 975)
 
@@ -262,7 +262,7 @@ Concepts:
 
 ### gr-tmh-06 Hard-sound lab grid with contrast words (870 -> 965)
 
-- Screen: Hard-sound lab: grid with rows for the target sound and columns for a, e, i, o, u in onset and coda. Alongside each cell a minimal-pair 'sounds like' contrast (for example chet versus he, resh versus lamed) drawn from ALEF's own word list.
+- Screen: Hard-sound lab: grid with rows for the target sound and columns for a, e, i, o, u in onset and coda. Alongside each cell a minimal-pair 'sounds like' contrast (for example chet versus he, resh versus lamed) drawn from Aleph's own word list.
 - Data: drills.json extension: {sound, cell:{position: onset|coda, vowel}, audioIds, contrastWith:[ids]}; audio per voice and tradition; fallback flags honest about TTS.
 - Interaction: Tap a cell to hear it; record-yourself (no scoring claimed) then compare waveform lengths only if a recording exists; a listen-and-pick test with the contrast word.
 - Test: Unit: 20 cells exist per sound (10 vowel cells onset and coda); every cell has a manifest id or a missing flag; contrastWith ids resolve in the corpus.
@@ -270,7 +270,7 @@ Concepts:
 ### gr-tmh-02 Gender pair cards with both voices (860 -> 965)
 
 - Screen: Sentence pair card: the same sentence twice, one tinted per speaker/addressee gender, the differing letters highlighted. A voice button for Ari and one for Noa on each.
-- Data: genderPairs[] = {id, en, forms:{m:{he, translit}, f:{he, translit}}, differsAt:[charIndex...], grammarTag}. All sentences authored for ALEF; none copied from the site.
+- Data: genderPairs[] = {id, en, forms:{m:{he, translit}, f:{he, translit}}, differsAt:[charIndex...], grammarTag}. All sentences authored for Aleph; none copied from the site.
 - Interaction: Learner picks 'I am...' (m/f) in settings; the card shows their own form first. A quiz plays a voice and asks which gender was meant, then a second quiz asks to produce the other form by tapping the changed ending.
 - Test: Unit: every pair differs in at least one letter, differsAt indices point at real differing characters, both voices exist in the manifest or are flagged, and no sentence string is a copy of a TeachMeHebrew line (checked by a fixture of forbidden strings).
 
@@ -307,8 +307,8 @@ Concepts:
 
 ## Cross-cutting observations
 
-- Gender is the main Israeli-function gap in the free tools I read: TeachMeHebrew pairs forms and the Miami page marks them inline, but no resource lets the learner say which form they are producing. ALEF's two voices make that possible.
-- Frequency data sources differ in kind. TeachMeHebrew's list is written news and encyclopedia text; the user's sheet has no frequency at all; none of these is a prayer or Torah list. ALEF needs its own per-text counts.
+- Gender is the main Israeli-function gap in the free tools I read: TeachMeHebrew pairs forms and the Miami page marks them inline, but no resource lets the learner say which form they are producing. Aleph's two voices make that possible.
+- Frequency data sources differ in kind. TeachMeHebrew's list is written news and encyclopedia text; the user's sheet has no frequency at all; none of these is a prayer or Torah list. Aleph needs its own per-text counts.
 - Sequencing: alphabetical word lists (TeachMeHebrew 500) are lookups, not curricula; situational grouping (Miami, DLI, Loecsen, Goethe) is better for the Israel track.
 - The user's sheet has 722 rows, not 625, and 519 rows differ between its unpointed and pointed columns. Pointing is inconsistent across the first Hebrew column.
 - Quality varies: Learn101 says 26 letters; Wikibooks letter names and IPA contain errors a native reviewer should check; the Miami page spells transliterations inconsistently.

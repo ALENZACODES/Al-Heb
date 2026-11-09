@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 19 (command 319): J-0231.png to J-0243.png
+Aleph IMAGE RUN - BLOCK J 19 (command 319): J-0231.png to J-0243.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_general-things-set02, vocab_general-things-set03.

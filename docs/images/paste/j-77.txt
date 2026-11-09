@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 77 (command 377): J-0978.png to J-0990.png
+Aleph IMAGE RUN - BLOCK J 77 (command 377): J-0978.png to J-0990.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: srs.

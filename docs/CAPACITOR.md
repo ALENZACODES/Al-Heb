@@ -1,8 +1,8 @@
-# Wrapping ALEF with Capacitor (documentation only; nothing here has been run)
+# Wrapping Aleph with Capacitor (documentation only; nothing here has been run)
 
-ALEF is a static site, so Capacitor can load it as `webDir`. This needs npm (blocked in the build environment) and, for iOS, macOS + Xcode.
+Aleph is a static site, so Capacitor can load it as `webDir`. This needs npm (blocked in the build environment) and, for iOS, macOS + Xcode.
 
-1. In a copy of the repo with network access: `npm init -y && npm i @capacitor/core @capacitor/cli`; `npx cap init ALEF org.example.alef --web-dir=.`
+1. In a copy of the repo with network access: `npm init -y && npm i @capacitor/core @capacitor/cli`; `npx cap init Aleph org.example.alef --web-dir=.`
    (better: copy `index.html sw.js manifest.webmanifest precache-manifest.js offline.html src data assets` into a `www/` dir and set `webDir: 'www'`).
 2. `npm i @capacitor/ios @capacitor/android && npx cap add ios && npx cap add android && npx cap sync`.
 3. Open with `npx cap open ios|android`, set bundle id, icons (from `assets/icons/`), signing.

@@ -1,4 +1,4 @@
-// ALEF word tracing: attempt flow (guide fade-out), outcome rating, SRS hook and progress. Pure + store helpers, no DOM.
+// Aleph word tracing: attempt flow (guide fade-out), outcome rating, SRS hook and progress. Pure + store helpers, no DOM.
 // @ts-check
 import { newCard, review, due, MS_DAY } from '../curriculum/srs.js';
 

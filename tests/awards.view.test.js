@@ -42,7 +42,7 @@ test('first visit explains evidence, locks mastery, and watermarks the sample', 
   assert.doesNotMatch(face, /Not an accredited qualification/);
   assert.match(face, /Beginner Hebrew Foundations/);
   assert.match(face, /Presented to/);
-  assert.match(face, /ALEF is Key Foundation/);
+  assert.match(face, /Aleph is Key Foundation/);
   assert.match(face, /Cert # incomplete/);
   assert.doesNotMatch(face, /CE#|Accreditation No|SAMPLE-0001|continuing-education|continuing education/);
   assert.doesNotMatch(face, /tamper-proof|verification website|seal of office/);
@@ -185,7 +185,7 @@ test('direct HTML caller cannot replace the sample watermark with EARNED', async
   assert.equal(longNode.querySelector('[data-cert-name]').queryAll('script').length, 0);
   assert.equal(longNode.querySelector('#aw-design-proof').textContent, DESIGN_PROOF);
   const style = readFileSync(new URL('../src/awards/gallery.view.js', import.meta.url), 'utf8');
-  assert.match(node.textContent, /ALEF is Key Foundation/);
+  assert.match(node.textContent, /Aleph is Key Foundation/);
   assert.match(node.textContent, /Cert # incomplete/);
   assert.match(node.textContent, /Design proof/);
   assert.doesNotMatch(node.textContent, /Sample internal reference|CE#|Accreditation No|SAMPLE-0001/);

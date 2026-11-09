@@ -1,4 +1,4 @@
-# ALEF scorecard (out of 1,000)
+# Aleph scorecard (out of 1,000)
 
 Status: DRAFT. These numbers are the builder's own estimates against a rubric the builder chose. They are not a measurement, no learner has used the app, and no native speaker, rabbi, cantor, teacher or designer has reviewed anything. Update a line only when the evidence column changes.
 

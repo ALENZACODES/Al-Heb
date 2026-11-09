@@ -5,9 +5,9 @@
 ## Route line (next to the `install` entry)
 
 ```js
-{ name: 'offline', pattern: '/offline', module: './offline.view.js', title: 'Use ALEF offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
+{ name: 'offline', pattern: '/offline', module: './offline.view.js', title: 'Use Aleph offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
 ```
-Needs a `nav.offline` string ("Use ALEF offline") and `src/shell/offline.js`, `offline.view.js`, `update.js` in the precache (`npm run precache`, not run here). Link to `#/offline` from Settings if wanted.
+Needs a `nav.offline` string ("Use Aleph offline") and `src/shell/offline.js`, `offline.view.js`, `update.js` in the precache (`npm run precache`, not run here). Link to `#/offline` from Settings if wanted.
 
 ## Update banner (works on every screen)
 

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 58: Shin / Sin cursive set
+Aleph IMAGE RUN - COMMAND 58: Shin / Sin cursive set
 
 ATTACH: REF_cursive_shin.png (attach once, before pasting this).
 

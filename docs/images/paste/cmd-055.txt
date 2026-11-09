@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - COMMAND 55: Tsadi cursive set
+Aleph IMAGE RUN - COMMAND 55: Tsadi cursive set
 
 ATTACH: REF_cursive_tsadi.png (attach once, before pasting this).
 

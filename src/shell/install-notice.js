@@ -1,7 +1,7 @@
 // @ts-check
 // Browser-tab storage notice. Safari (iPhone/iPad) may delete a website's saved data after 7 days without a visit when the site
 // is used in a browser tab (not added to the Home Screen). This shows one dismissible banner, after the learner has come back on
-// a second day, telling them to add ALEF to the Home Screen and keep a backup file. Not shown when installed (standalone).
+// a second day, telling them to add Aleph to the Home Screen and keep a backup file. Not shown when installed (standalone).
 // Own keys, plain localStorage, never throws. Loaded from index.html as a second module so src/app.js is untouched.
 const KEY = "alef.storage-notice.v1";
 const DAY = 86400000;
@@ -36,7 +36,7 @@ async function run() {
   box.setAttribute("aria-label", "Keep your progress");
   box.style.cssText = "margin:.5rem max(1rem,env(safe-area-inset-left));padding:.75rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--fg);font-size:.9rem";
   const p = d.createElement("p"); p.style.margin = "0 0 .5rem";
-  p.textContent = "Safari can erase what a website saved if you do not open it for about a week. To keep your progress, add ALEF to your Home Screen, and save a backup file from Settings now and then.";
+  p.textContent = "Safari can erase what a website saved if you do not open it for about a week. To keep your progress, add Aleph to your Home Screen, and save a backup file from Settings now and then.";
   const row = d.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:.5rem";
   const how = d.createElement("a"); how.href = "#/install"; how.className = "btn"; how.textContent = "How to add it";
   const x = d.createElement("button"); x.type = "button"; x.className = "btn secondary"; x.textContent = "Not now";

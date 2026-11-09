@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 41 (command 341): J-0517.png to J-0529.png
+Aleph IMAGE RUN - BLOCK J 41 (command 341): J-0517.png to J-0529.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_small-words-set01, vocab_society-work-law-set01, vocab_tech-media-set01.

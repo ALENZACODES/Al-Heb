@@ -10,7 +10,7 @@ Route `#/progress`, view `src/progress/progress.view.js`. Everything is computed
 - `src/progress/weekly.js` the "This week" card (`weeklySummary`, `weeklySentences`) and the inline SVG sparkline (`sparklineSVG`).
 - `src/progress/milestones.js` personal milestones (`evaluateMilestones`, `updateMilestones`, `milestoneRows`); `store.js recordMilestones` persists them. Definitions: `data/progress/personal-milestones.json`.
 - `src/progress/data.js` loads lessons, belts, registry, phrasebook, `data/service/orders.json` (for the siddur coverage line) and the data files below. `mergeTimedReadGates()` replaces the `unmeasured` placeholders of the grey and black belts with the timed-read gates from `data/timedread/gates.json` (only `kind: timedRead` entries with a `minWpm`; other belts are never touched; nothing is mutated). If that file is missing, grey and black stay unmeasured.
-- `data/progress/milestones.json` goal paths and thresholds. `data/progress/belt-gates.json` ALEF belt gates. `data/timedread/gates.json` timed-read gates for grey and black (targets copy `belts.json` wpmTarget, ALEF proposals, unsourced). All are drafts, not expert-reviewed.
+- `data/progress/milestones.json` goal paths and thresholds. `data/progress/belt-gates.json` Aleph belt gates. `data/timedread/gates.json` timed-read gates for grey and black (targets copy `belts.json` wpmTarget, Aleph proposals, unsourced). All are drafts, not expert-reviewed.
 
 ## Where each number comes from (store keys, all written by other lanes)
 | Shown | Key | Rule |
@@ -26,7 +26,7 @@ Route `#/progress`, view `src/progress/progress.view.js`. Everything is computed
 | Daily goal | `srs.cards`, `srs.vocab`, `curriculum.progress` | distinct cards reviewed today; a lesson finished today also meets it |
 | Weak spots | `curriculum.pairs`, `srs.cards` lapses, `pron.misses` | ranked by miss count; letters already in a pair row are folded into it |
 | Timed reads, reading speed | `timedread.v1` | `evaluate()` kind `timedRead` calls `src/timedread/gate.js timedReadGate(gate, raw)`: one text, last 5 reads, median clean wpm and accuracy; texts are never mixed. "Your numbers" shows the read count and the median clean wpm of the text with the most reads. Everything is self-reported: the app keeps only the clock |
-| Siddur coverage | graded lines above + `data/service/orders.json`, `service.prefs` | `src/service/model.js coverage()` over Progress's own graded lines, for the service saved on the Service screen (else Shabbat morning). Percent of lines ALEF holds, rounded down; gaps are counted separately. The line links to `#/service` |
+| Siddur coverage | graded lines above + `data/service/orders.json`, `service.prefs` | `src/service/model.js coverage()` over Progress's own graded lines, for the service saved on the Service screen (else Shabbat morning). Percent of lines Aleph holds, rounded down; gaps are counted separately. The line links to `#/service` |
 
 | Weak spots, This week, Milestones | see the three sections below | each states its limits in the screen text |
 | "What can I read now?" panel | all of the above + `firstday.progress`, `firstday.ladder` + `data/firstday/ladder.json` | `readNowSummary()`: one row per source (letters and signs, lines and words, vocabulary cards, timed reads, siddur coverage, first day). Rows are tagged `taught` (lessons, tracing) or `self` (the learner's own report: timed reads, first-day words, ladder via `unpointedScore`); the view shows a "self-reported" badge on the latter. Links appear only for routes present in the build (`ctx.hasRoute`) |
@@ -54,5 +54,5 @@ Sources, all read-only: `letters.progress` (a letter finished but never without 
 
 ## Honesty notes
 - A belt or "decodable" line means the learner has met every letter and sign in it. It does not mean they read it fluently or correctly aloud.
-- Belt gates are ALEF's own (belts.json: the verification sweep found the Aleph Champ ladder does not apply).
+- Belt gates are Aleph's own (belts.json: the verification sweep found the Aleph Champ ladder does not apply).
 - The streak here is rest-aware and can differ from the plain streak lane 1 shows on Home.

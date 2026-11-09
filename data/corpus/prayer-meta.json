@@ -1,6 +1,6 @@
 {
  "schema": "alef-corpus-prayer-meta/1",
- "note": "Hand-written for ALEF (lane 5, round 3). Plain-English lines and denomination hints were written by the model from general knowledge. NO rabbi, cantor or Hebrew educator has reviewed this file (clergyReviewed is false on every entry). Where the author was not sure the value is \"unknown\" or \"varies\". \"as-written\" means the Hebrew in the registry is the common text in that movement, not that every congregation says it.",
+ "note": "Hand-written for Aleph (lane 5, round 3). Plain-English lines and denomination hints were written by the model from general knowledge. NO rabbi, cantor or Hebrew educator has reviewed this file (clergyReviewed is false on every entry). Where the author was not sure the value is \"unknown\" or \"varies\". \"as-written\" means the Hebrew in the registry is the common text in that movement, not that every congregation says it.",
  "vocabulary": {
   "delivery": [
    "sung",

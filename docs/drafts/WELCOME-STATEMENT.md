@@ -2,15 +2,15 @@
 
 ## Short version (for the Home "About" line and the credits page)
 
-ALEF is free for everyone who wants to learn Hebrew. People of every background are welcome here: any race, culture, faith or no faith, any caste or class, any gender or sexual orientation, any family shape, any ability, any age.
+Aleph is free for everyone who wants to learn Hebrew. People of every background are welcome here: any race, culture, faith or no faith, any caste or class, any gender or sexual orientation, any family shape, any ability, any age.
 
 ## Longer version (for the About page)
 
-ALEF is a free place to learn Hebrew. Anyone who wants to read Hebrew, pray in it, travel with it, or simply learn it is welcome to start today. You do not need to share a faith, a heritage, a family background or an opinion with the person who made this app. Learners of every race, culture, caste, class, gender, sexual orientation, family shape, ability and age are welcome, and so are people who are Jewish, people who are not, people who are exploring, and people who are returning.
+Aleph is a free place to learn Hebrew. Anyone who wants to read Hebrew, pray in it, travel with it, or simply learn it is welcome to start today. You do not need to share a faith, a heritage, a family background or an opinion with the person who made this app. Learners of every race, culture, caste, class, gender, sexual orientation, family shape, ability and age are welcome, and so are people who are Jewish, people who are not, people who are exploring, and people who are returning.
 
 The app teaches letters, sounds and words. It does not ask who you are, and it does not ask you to prove anything. We teach three ways of pronouncing Hebrew (Israeli, Sephardi and Ashkenazi) so you can choose the one your community or your plans need.
 
-If something in ALEF excludes you or hurts you, please tell us so we can fix it.
+If something in Aleph excludes you or hurts you, please tell us so we can fix it.
 
 ## Notes for John (not for the app)
 

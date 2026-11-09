@@ -25,7 +25,7 @@ const go = async (query = {}, init = {}) => { const root = new Node_('div'); con
 
 test('week list: ten weeks, draft notice, one h1, links to week, handout and teacher plan', async () => {
   const { root, un } = await go();
-  assert.match(root.text, /Draft: ALEF's own plan/);
+  assert.match(root.text, /Draft: Aleph's own plan/);
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
   assert.equal(root.find((n) => n.attrs['data-week']).length, 10);
   const hrefs = root.find((n) => n.tag === 'a').map((a) => a.attrs.href);

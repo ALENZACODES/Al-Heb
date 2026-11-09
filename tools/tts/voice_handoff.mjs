@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Build the hand-off folder for a real listener, like the earlier ALEF-THREE-JUDGE-PASSED batch:
+// Build the hand-off folder for a real listener, like the earlier Aleph-THREE-JUDGE-PASSED batch:
 //   <out>/audio/<voice>/<tradition>/<kind>/<id>.mp3      ONLY clips that all three judges passed ("unanimous-machine-pass"); the layout tools/audio/ingest.mjs reads as is
 //   <out>/manifest.csv, manifest.json                     the 14 columns of the earlier batch (id,he,source_file,source_text_sha256,source_structural,recognition,consistency,
 //                                                         overall,human_approved,status,wav_file,wav_sha256,mp3_file,mp3_sha256) + tradition, voice_slot, respelled_text
@@ -116,7 +116,7 @@ export async function main(argv = process.argv.slice(2)) {
   const a = parseArgs(argv, ['include-wav', 'allow-mock', 'help']);
   if (a.help) { console.log(fs.readFileSync(fileURLToPath(import.meta.url), 'utf8').split('\n').filter((l) => l.startsWith('//')).map((l) => l.slice(3)).join('\n')); return; }
   const work = path.resolve(a.work || defaultWork());
-  const r = buildHandoff({ work, out: path.resolve(a.out || path.join(work, 'handoff', 'ALEF-RESPELLED-THREE-JUDGE-PASSED')), root: a.root ? path.resolve(a.root) : REPO_ROOT, includeWav: !!a['include-wav'], allowMock: !!a['allow-mock'] });
+  const r = buildHandoff({ work, out: path.resolve(a.out || path.join(work, 'handoff', 'Aleph-RESPELLED-THREE-JUDGE-PASSED')), root: a.root ? path.resolve(a.root) : REPO_ROOT, includeWav: !!a['include-wav'], allowMock: !!a['allow-mock'] });
   console.log(`hand-off ${r.mock ? '(MOCK) ' : ''}-> ${r.dest}\n  ${r.counts.passed} unanimous-machine-pass of ${r.counts.total} rendered; ${r.counts.failed} in failures.csv; listening pages: ${r.pages.join(', ') || 'none'}`);
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((e) => { console.error(e.message); process.exit(1); });

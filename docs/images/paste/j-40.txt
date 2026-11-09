@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 40 (command 340): J-0504.png to J-0516.png
+Aleph IMAGE RUN - BLOCK J 40 (command 340): J-0504.png to J-0516.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_science-ideas-set01, vocab_small-words-set01.

@@ -8,7 +8,7 @@ Status: **built as self-report, not measured by the app.** The timed-read lane (
 3. After stopping, ask "How many words did you stumble on or skip?" (number input, 0..N). No guessing for the learner.
 4. Store to `progress.reads` as `{ textId, words, ms, errors, at }`. wpm = (words - errors) / (ms / 60000), computed on display only.
 5. Progress shows the median of the last 5 reads of the SAME text and a plain label "self-reported". Never average across texts of different difficulty.
-6. Belt grey/black gates become `{kind: "timedRead", minWpm, minWords}` and are only evaluated from stored reads; targets in belts.json are ALEF proposals, unsourced.
+6. Belt grey/black gates become `{kind: "timedRead", minWpm, minWords}` and are only evaluated from stored reads; targets in belts.json are Aleph proposals, unsourced.
 
 ## Needed from other lanes
 - A read-aloud view with a timer (lane 5 read.view.js) or a new view that writes `progress.reads`.

@@ -19,7 +19,7 @@
    "vp": "phone",
    "scheme": "light",
    "profile": "seeded",
-   "heading": "ALEF אלף",
+   "heading": "Aleph אלף",
    "unavailable": false,
    "textLength": 974,
    "hash": "#/",
@@ -39,7 +39,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -83,7 +83,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -127,7 +127,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -171,7 +171,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -215,7 +215,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -226,7 +226,7 @@
      "a \"Back to all texts\"",
      "(body)",
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\""
     ],
     "issues": [],
@@ -259,7 +259,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -303,7 +303,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -347,7 +347,7 @@
    "tabs": {
     "order": [
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\"",
      "a \"Learnלימוד\"",
      "a \"Lettersאותיות\"",
@@ -358,7 +358,7 @@
      "a \"Home\"",
      "(body)",
      "a \"Skip to main conte\"",
-     "a \"ALEF אלף, home\"",
+     "a \"Aleph אלף, home\"",
      "a \"Homeבית\""
     ],
     "issues": [],
@@ -371,7 +371,7 @@
    "route": "/",
    "ok": true,
    "why": "",
-   "h1": "ALEF אלף",
+   "h1": "Aleph אלף",
    "unavailable": false,
    "len": 985,
    "pageErrors": [],

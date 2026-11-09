@@ -115,8 +115,8 @@ ${body}
 
 export function renderIndex(manifest) {
   const rows = manifest.areas.map((a) => `<tr><td>${a.n}</td><td>P${a.priority}</td><td><b>${esc(a.title)}</b><br><span class="small">${esc(a.reviewer)}</span></td><td style="text-align:right">${a.items}</td><td style="text-align:right">${a.hours.toFixed(1)}</td><td>${[a.files.csv && `<a href="${a.files.csv}">sheet (CSV)</a>`, a.files.html && `<a href="${a.files.html}">printable HTML</a>`, a.files.pdf && `<a href="${a.files.pdf}">PDF</a>`].filter(Boolean).join(' &middot; ')}</td></tr>`).join('\n');
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ALEF reviewer packets</title><style>${CSS} body{margin:24px;max-width:1000px} td,th{font-size:10pt}</style></head><body>
-<h1>ALEF reviewer packets</h1>
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Aleph reviewer packets</title><style>${CSS} body{margin:24px;max-width:1000px} td,th{font-size:10pt}</style></head><body>
+<h1>Aleph reviewer packets</h1>
 <div class="meta">Generated ${esc(manifest.generated)} &middot; ${manifest.totalItems} items &middot; about ${manifest.totalHours.toFixed(1)} hours in total (phase one, priority 1-6: ${manifest.phaseOneHours.toFixed(1)} h). See docs/review/README.md for how to hand these out.</div>
 <table><thead><tr><th>#</th><th>Pri</th><th>Area / suggested reviewer</th><th>Items</th><th>Est. hours</th><th>Files</th></tr></thead><tbody>${rows}</tbody></table>
 </body></html>`;

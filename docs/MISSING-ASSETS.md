@@ -19,7 +19,7 @@ Checked by looking for each file on disk in this repo. "Missing" means the file 
 - The 26 game backdrops (`GAME_*_env`) the other games use: all present and approved.
 - Little-book audio: all 1,368 page clips for books 6-62 (both voices) are in the repo, and books 1-5 have their clips too.
 - Little-book pictures for books 1-21 are complete.
-- The main ALEF book (`book/out/alef-book.html`): every picture it links exists. The 27 letter drawings in its mnemonic cards are drawn in code on purpose, not placeholders.
+- The main Aleph book (`book/out/alef-book.html`): every picture it links exists. The 27 letter drawings in its mnemonic cards are drawn in code on purpose, not placeholders.
 
 ## The 8 completed game pictures
 

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 42 (command 342): J-0530.png to J-0542.png
+Aleph IMAGE RUN - BLOCK J 42 (command 342): J-0530.png to J-0542.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_tech-media-set01, vocab_time-numbers-set01.

@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 15 (command 315): J-0179.png to J-0191.png
+Aleph IMAGE RUN - BLOCK J 15 (command 315): J-0179.png to J-0191.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_doing-verbs-set08, vocab_feelings-mind-set01, vocab_food-drink-set01.

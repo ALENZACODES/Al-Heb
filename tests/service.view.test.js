@@ -15,7 +15,7 @@ test('coverage tab: three services, honest wording, no fluency claim, gaps separ
   assert.match(root.textContent, /does not mean you read it fluently/);
   assert.match(root.textContent, /Draft, not reviewed by a rabbi/);
   assert.match(root.textContent, /Mishkan T'filah are copyrighted/);
-  for (const s of secs) { assert.match(s.textContent, /\d+% decodable/); assert.match(s.textContent, /not in ALEF yet/); assert.doesNotMatch(s.textContent, /fluent/); }
+  for (const s of secs) { assert.match(s.textContent, /\d+% decodable/); assert.match(s.textContent, /not in Aleph yet/); assert.doesNotMatch(s.textContent, /fluent/); }
   assert.match(root.queryAll('[data-order="friday-night"]')[0].textContent, /^Friday evening0% decodable/); // fresh learner
   assert.equal(root.queryAll('[data-follow]').length, 2); // weekday morning has no follow mode
   un();

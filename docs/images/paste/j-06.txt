@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 06 (command 306): J-0066.png to J-0078.png
+Aleph IMAGE RUN - BLOCK J 06 (command 306): J-0066.png to J-0078.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_describing-words-set03, vocab_doing-verbs-set01, vocab_doing-verbs-set02.

@@ -16,9 +16,9 @@ Status: DRAFT. Only public course listings were read. The book itself was NOT re
 
 ## Could not be verified
 - **IJL**: the user wrote "IJL" for his Toronto class. We did not identify it and do not assert what it is or that it uses any particular book. The user says it follows *Aleph Isn't Tough*; that is the user's statement, unconfirmed.
-- **@cantorsarahlevine** (YouTube channel UCkkQjuJsXPMVkvOPhOndaSg): the channel page could not be fetched (not on the tool allowlist) and two searches returned nothing about it. We know only the name and ID the user supplied. Her videos, playlists, order and pronunciation tradition are unknown; nothing in ALEF refers to her content. Next step: the user lists the playlist titles (or exports them) and we map them.
-- The book's actual week-by-week order, letters per week, vocabulary, exercises and prayers. Not public in the listings; we did not try to obtain them. The class-track order is ALEF's own (see PEDAGOGY-MAP.md).
-- The pronunciation tradition taught in the class (Ashkenazi-influenced vs Israeli). Not stated by any fetched page. ALEF's existing lessons use its own default; confirm with the teacher.
+- **@cantorsarahlevine** (YouTube channel UCkkQjuJsXPMVkvOPhOndaSg): the channel page could not be fetched (not on the tool allowlist) and two searches returned nothing about it. We know only the name and ID the user supplied. Her videos, playlists, order and pronunciation tradition are unknown; nothing in Aleph refers to her content. Next step: the user lists the playlist titles (or exports them) and we map them.
+- The book's actual week-by-week order, letters per week, vocabulary, exercises and prayers. Not public in the listings; we did not try to obtain them. The class-track order is Aleph's own (see PEDAGOGY-MAP.md).
+- The pronunciation tradition taught in the class (Ashkenazi-influenced vs Israeli). Not stated by any fetched page. Aleph's existing lessons use its own default; confirm with the teacher.
 
 ## Copyright stance
 The book is copyrighted. Class-track copies none of its text, exercises, word lists, page order or illustrations. Only generally described pedagogy (a few letters and vowels per week, decode letters -> segments -> words -> sentences, siddur focus) was used; all wording in `data/curriculum/class-track.json` is original.

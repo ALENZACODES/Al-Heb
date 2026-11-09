@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 17 (command 317): J-0205.png to J-0217.png
+Aleph IMAGE RUN - BLOCK J 17 (command 317): J-0205.png to J-0217.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_food-drink-set01, vocab_general-things-set01.

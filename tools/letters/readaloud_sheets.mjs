@@ -91,7 +91,7 @@ table.t{border-collapse:collapse;width:100%;font-size:9pt}.t td,.t th{border-bot
 <p class="small">From data/pronunciation (drafts, not reviewed by a native speaker).</p>` });
     }
   });
-  const html = wrapHtml({ title: `ALEF read-aloud practice (${paper.label})`, css, pages: pages.map((p) => ({ ...p, fields: true })), set: 'Read aloud', draft: READ_DRAFT });
+  const html = wrapHtml({ title: `Aleph read-aloud practice (${paper.label})`, css, pages: pages.map((p) => ({ ...p, fields: true })), set: 'Read aloud', draft: READ_DRAFT });
   return { html, pages: pages.map((p) => p.kind), pageCount: pages.length, model: m };
 }
 import * as PAPER_REF from './workbook.mjs';

@@ -32,7 +32,7 @@ for (const obs of OBSERVANCES) {
     for (const it of buildReminders(prefs, iso(a), iso(b)).items) if (!seen.has(it.uid)) { seen.add(it.uid); items.push(it); }
     a = new Date(b.getTime() + 86400000);
   }
-  const text = toICS(items, { now: STAMP, calName: NAMES[obs] }).replace('PRODID:-//ALEF//Jewish calendar and reminders 1.0//EN', 'PRODID:-//Aleph//Hebrew calendar 1.0//EN\r\nREFRESH-INTERVAL;VALUE=DURATION:P1D\r\nX-PUBLISHED-TTL:P1D').replace(/@alef\.local/g, '@aleph');
+  const text = toICS(items, { now: STAMP, calName: NAMES[obs] }).replace('PRODID:-//Aleph//Jewish calendar and reminders 1.0//EN', 'PRODID:-//Aleph//Hebrew calendar 1.0//EN\r\nREFRESH-INTERVAL;VALUE=DURATION:P1D\r\nX-PUBLISHED-TTL:P1D').replace(/@alef\.local/g, '@aleph');
   files.push([holidayFeedPath(obs), write(holidayFeedPath(obs), text), items.length]);
 }
 

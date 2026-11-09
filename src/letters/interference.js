@@ -1,5 +1,5 @@
 // @ts-check
-// ALEF lane 2: look-alike warnings. A hint is returned ONLY after a wrong answer, and only when the
+// Aleph lane 2: look-alike warnings. A hint is returned ONLY after a wrong answer, and only when the
 // tapped letter really is one that gets confused with the target. Correct answers and unrelated
 // mistakes return null, so the warning never appears before the learner has made the mistake.
 

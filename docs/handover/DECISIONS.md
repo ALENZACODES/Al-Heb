@@ -1,4 +1,4 @@
-# ALEF — Owner Decisions Log (Nov 6–7, 2026)
+# Aleph — Owner Decisions Log (Nov 6–7, 2026)
 
 All times EST (America/Toronto). These rulings govern the work queues; where a review or plan disagrees with a ruling here, the ruling wins.
 

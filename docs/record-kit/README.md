@@ -1,6 +1,6 @@
-# ALEF record kit: getting human voice recordings from a volunteer
+# Aleph record kit: getting human voice recordings from a volunteer
 
-One HTML file, `tools/record-kit/recorder.html`, lets a reader (a cantor, a teacher) record the ALEF reading list on a phone or laptop. It needs no install, no account and no internet once the file is open. Nothing is uploaded: recordings stay on the volunteer's device until they send you one zip.
+One HTML file, `tools/record-kit/recorder.html`, lets a reader (a cantor, a teacher) record the Aleph reading list on a phone or laptop. It needs no install, no account and no internet once the file is open. Nothing is uploaded: recordings stay on the volunteer's device until they send you one zip.
 
 Status: built and tested with a fake microphone and fixture files only. No real volunteer has used it yet, and the consent wording is a draft (see below).
 
@@ -40,6 +40,6 @@ Listen to every clip before release: the page and ingest check technical quality
 
 - The page makes no network requests. Recordings and the volunteer's name live in the volunteer's browser storage and in the zip they choose to send.
 - The consent screen is mandatory: three required ticks plus the name, and a separate optional box for voice cloning / model training, off by default. Without that tick the recordings must not be used to clone the voice or train any model (the ingest sidecar records `aiCloneConsent`).
-- Consent text mirrors `docs/voices/donor-rights-grant.md` (use in the free or paid app, the book and marketing; ALEF may be sold or transferred; no royalties; withdrawal stops future use only). **It is draft wording: have a lawyer review before relying on it.** A ticked box on screen may not be enough for signed-agreement purposes; keep the signed form in `docs/voices/` as the legal record until a lawyer says otherwise, and note that minors need a guardian.
+- Consent text mirrors `docs/voices/donor-rights-grant.md` (use in the free or paid app, the book and marketing; Aleph may be sold or transferred; no royalties; withdrawal stops future use only). **It is draft wording: have a lawyer review before relying on it.** A ticked box on screen may not be enough for signed-agreement purposes; keep the signed form in `docs/voices/` as the legal record until a lawyer says otherwise, and note that minors need a guardian.
 - `ingest --apply` stores `consent.json` and `consent.txt` under the work folder (default `~/alef-record-work/<name>-<ref>/consent/`), never in the repo. Do not commit zips, raw recordings or consent files; the repo only receives MP3s and sidecars with a random donor reference, no name.
 - Ask the volunteer to delete the recordings from their device after you confirm receipt (the page's "Discard it and start over" clears the saved session).

@@ -137,7 +137,7 @@ Each judge writes `judges/j1.jsonl`, `j2.jsonl`, `j3.jsonl` with the measured va
 ## 8. Hand-off folder for a real person
 
 ```
-node tools/tts/voice_handoff.mjs --out "$ALEF_VOICE_WORK/handoff/ALEF-RESPELLED-THREE-JUDGE-PASSED"
+node tools/tts/voice_handoff.mjs --out "$ALEF_VOICE_WORK/handoff/Aleph-RESPELLED-THREE-JUDGE-PASSED"
 ```
 
 It copies only clips that all three judges passed ("unanimous-machine-pass") and whose verdicts were made on the exact delivered file, writes `manifest.csv` and `manifest.json` (the 14 columns of the earlier outside batch, plus `tradition`, `voice_slot`, `respelled_text`), `failures.csv` with reasons, `listing.csv` for ingest, `listen/<tradition>-<slot>.html` listening pages with matching sheets, and a `README.md` with the caveats. `--include-wav` adds the raw take-1 files. `human_approved` is `False` on every row.

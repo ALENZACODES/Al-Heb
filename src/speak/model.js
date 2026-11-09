@@ -2,7 +2,7 @@
 // Targets come only from data/vocab/words.json and data/corpus/phrasebook.json (both machine-built DRAFTS, not native-reviewed);
 // nothing here writes Hebrew of its own. Comparison is letters-only (niqqud, cantillation and punctuation stripped, final letters
 // folded), because a browser recognizer returns unpointed text. The recognizer itself is the browser's (SpeechRecognition,
-// lang he-IL): ALEF has not verified how well it hears Hebrew, so a verdict is a hint, never a grade.
+// lang he-IL): Aleph has not verified how well it hears Hebrew, so a verdict is a hint, never a grade.
 
 export const STORE_KEY = 'speak.v1';
 export const MAX_ATTEMPTS = 1000;
@@ -145,7 +145,7 @@ export function setSummary(attempts, setId) {
 // ---- Scoring history and the weakest-sounds report ----------------------------------------------------------------
 // Say-it attempts in asr mode give a target string and the recognizer's text; both are letters only, so the report is by
 // LETTER CLASS (bet/vet share ב, het/khaf share the kh sound), never by vowel. It counts what the browser recognizer wrote,
-// which ALEF has not verified for Hebrew: a "weak" sound may be the recognizer's weakness, not the learner's.
+// which Aleph has not verified for Hebrew: a "weak" sound may be the recognizer's weakness, not the learner's.
 
 export const SOUND_CLASSES = [
   { id: 'alef-ayin', label: 'alef / ayin (glottal or silent)', letters: 'אע' },

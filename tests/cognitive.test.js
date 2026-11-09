@@ -150,7 +150,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'astral-stars-drift', 'astral-ray-pass', 'prefix-float', 'game-conveyor-move', 'show-shimmer',
     'show-rise', 'show-pop', 'rimon-breathe', 'rimon-bubble-pop', 'alef-nudge',
     // first-lesson player (assets/css/player.css): one-shot, never looping; the global reduced-motion and calm rules switch them off
-    'fd-rise', 'fd-pop', 'fd-fall'];
+    'fd-rise', 'fd-pop', 'fd-fall',
+    // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off
+    'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

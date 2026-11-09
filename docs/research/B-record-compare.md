@@ -8,9 +8,9 @@ Status: PREVIEW tier, DRAFT, UNSCORED. Route `#/record-compare` (Speak section).
 ## What is real
 - `src/recordcompare/model.js` + `recordcompare.view.js`. For each pair the learner can hear each word in the device voice, record themselves saying A and B (one at a time, auto-stop at 4 s), play both back, and answer "Could you hear a difference?" (yes / not sure / no).
 - Pairs: only those `data/speak/minimal-pairs.json` marks audible in the chosen reading style (Israeli, Sephardi or Ashkenazi), with that style's rule-made respelling. Filter by contrast.
-- Recordings stay in memory as object URLs and are dropped on Next or when the page closes; nothing is uploaded by ALEF or stored. The store (`recordcompare.v1`) keeps only counts of the learner's own answers.
+- Recordings stay in memory as object URLs and are dropped on Next or when the page closes; nothing is uploaded by Aleph or stored. The store (`recordcompare.v1`) keeps only counts of the learner's own answers.
 - No microphone or no MediaRecorder: the page says so and still lets the learner hear the words and report.
-- Wording on screen: "Practice only. ALEF does not judge your pronunciation and gives no score." No accuracy figure anywhere; the summary says "your own reports, not a measurement". A test blocks accuracy/percent wording.
+- Wording on screen: "Practice only. Aleph does not judge your pronunciation and gives no score." No accuracy figure anywhere; the summary says "your own reports, not a measurement". A test blocks accuracy/percent wording.
 - Tests: `tests/recordcompare.test.js` (9): tradition filter against the data, state, selection, honesty strings, view with a fake recorder (record, stop, play back, report, microphone refused, no recorder, style switch). No real microphone was used.
 
 ## What is not real

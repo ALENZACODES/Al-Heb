@@ -4,7 +4,7 @@ index d0f8bb8..ad9dd81 100644
 +++ b/src/app.js
 @@ -226,7 +226,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
      try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
-     if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - ALEF`;
+     if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - Aleph`;
    }
 -  try { mountPreviewBanner(root, route); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
 +  try { mountPreviewBanner(root, route, query); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted

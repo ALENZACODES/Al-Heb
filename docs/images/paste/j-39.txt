@@ -1,4 +1,4 @@
-ALEF IMAGE RUN - BLOCK J 39 (command 339): J-0491.png to J-0503.png
+Aleph IMAGE RUN - BLOCK J 39 (command 339): J-0491.png to J-0503.png
 
 No attachments are needed; everything is described in words below.
 Sets in this file: vocab_places-travel-set01, vocab_religion-prayer-set01, vocab_school-learning-set01, vocab_science-ideas-set01.

@@ -1,4 +1,4 @@
-// ALEF opening prayer veil: one sourced entry per real page load.
+// Aleph opening prayer veil: one sourced entry per real page load.
 // The veil holds for a reading dwell sized to the prayer (readingMs: about
 // 0.6 s per English and pronunciation word plus 4 s, never under 10 s, 12 s on
 // a first visit, at most 30 s), counted from the LATER of the
@@ -17,7 +17,7 @@ export const MODEH_ANI = Object.freeze({
   he: 'מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ',
   tr: 'Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.',
   en: 'I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.',
-  source: 'Traditional Modeh Ani — exact wording supplied in the ALEF homepage brief; edition collation pending.'
+  source: 'Traditional Modeh Ani — exact wording supplied in the Aleph homepage brief; edition collation pending.'
 });
 const LAST_KEY = 'alef:opening-prayer:last:v1';
 const VISIT_KEY = 'alef:opening-prayer:seen:v1';

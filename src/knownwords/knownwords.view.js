@@ -1,5 +1,5 @@
 /**
- * Known-word checker (#/known-words), PREVIEW. Paste Hebrew text, pick a vocabulary level, and see which words are NOT in ALEF's word list
+ * Known-word checker (#/known-words), PREVIEW. Paste Hebrew text, pick a vocabulary level, and see which words are NOT in Aleph's word list
  * up to that level. Nothing is stored or sent anywhere; the check runs on this device. It does not judge grammar or meaning, and a word
  * missing from the list may still be correct Hebrew: the list is incomplete and unreviewed.
  * The word list comes from the small derived file data/knownwords/index.json (tools/knownwords/build.mjs), not the 7 MB vocabulary file.
@@ -9,7 +9,7 @@ import { el, heText } from '../curriculum/dom.js';
 import { loadJSON } from '../curriculum/data.js';
 import { LEVELS, knownSet, knownSetFromIndex, validate, similar } from './validate.js';
 
-export const NOTE = 'Preview. This checks spelling against ALEF\'s own word list (which no Hebrew teacher has reviewed). A word that is not found may still be fine Hebrew, and a word that is found may still be used wrongly. Nothing you paste is saved or sent anywhere.';
+export const NOTE = 'Preview. This checks spelling against Aleph\'s own word list (which no Hebrew teacher has reviewed). A word that is not found may still be fine Hebrew, and a word that is found may still be used wrongly. Nothing you paste is saved or sent anywhere.';
 const LEVEL_NOTE = { A1: 'A1 words', A2: 'A1 and A2 words', B1: 'A1 to B1 words', B2: 'all listed words (A1 to B2)' };
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */

@@ -6,7 +6,7 @@ A04,Section 4,Decide whether Metsudah-labelled corpus records (21 of 70) are kep
 A05,Section 4,Verify Sefaria licence labels (CC0/PD/CC-BY) on each source page for all 70 registry entries,build,M,none,not started
 A06,Section 4 / vocab,Get a lawyer's opinion on CC BY-SA vocabulary data in a sold bundle,john,M,lawyer,not started
 A07,Section 4,Build visible credits page for CC BY / CC BY-SA / Hebcal / Tatoeba attributions,build,M,none,partial
-A08,Section 4,Choose a licence for the ALEF code (README says none chosen),john,S,John decision,not started
+A08,Section 4,Choose a licence for the Aleph code (README says none chosen),john,S,John decision,not started
 A09,Section 4,Get counsel's view on redistribution of TTS output and on image copyright limits,john,M,lawyer,not started
 A10,Section 4,Obtain written terms from Dicta or keep Nakdan opt-in only and label it unlicensed,john,S,Dicta reply,not started
 A11,Audio / paperwork,Draft donor consent and release form (recording rights; separate opt-in for voice cloning; 18+; credit) for lawyer review,build,S,none,not started
@@ -33,5 +33,5 @@ A31,Moves 10a-10c,Audit lesson order against vowel-triad design; add mastery che
 A32,Moves 9a,State the Day-1 reading promise at onboarding and measure it,build,S,none,not started
 A33,Moves 9c / Toronto,Send outreach to City Shul (New Members Shabbat Nov 14) and Holy Blossom contact,john,S,A32,not started
 A34,Section 6,Re-check prices before any public comparison (Mondly figure conflicts with one third-party source),john,S,none,not started
-A35,CapCut,Decide CapCut use: marketing/demo video editing only; no CapCut voices for ALEF audio; optionally run the 15-minute Hebrew voice test,john,S,John decision,not started
+A35,CapCut,Decide CapCut use: marketing/demo video editing only; no CapCut voices for Aleph audio; optionally run the 15-minute Hebrew voice test,john,S,John decision,not started
 A36,Review of content,Hebrew-educator and rabbinic review of corpus and lessons (all proofread false),john,L,reviewer,not started

@@ -1,6 +1,6 @@
 # SUPER COMMAND: every word and phrase, in all three traditions, with the sounds explained
 
-This is the master prompt for the outside drafting assistant. It does two jobs for each item ALEF needs a voice for:
+This is the master prompt for the outside drafting assistant. It does two jobs for each item Aleph needs a voice for:
 
 1. **Say it**: give a Latin-letter "sound word" for the Modern Israeli, Sephardi and Ashkenazi reading (the same trick the build uses, so the assistant's answer can be compared line by line with the build's).
 2. **Explain it**: explain every sound in plain English (mouth, tongue, throat, an English comparison, the mistake to avoid), per tradition.
@@ -14,7 +14,7 @@ The inputs are ready: `docs/drafts/batches/batch-01-letter.csv` to `batch-50-wor
 ## PART 1. Paste this at the top of every chat (the SUPER COMMAND)
 
 ```
-You are the ALEF pronunciation drafter. ALEF is a free Hebrew-learning app and book for adults (intro to intermediate). Learners want to read prayers and Torah aloud with a congregation and to get around in Israel. They are nervous beginners.
+You are the Aleph pronunciation drafter. Aleph is a free Hebrew-learning app and book for adults (intro to intermediate). Learners want to read prayers and Torah aloud with a congregation and to get around in Israel. They are nervous beginners.
 
 YOUR JOB. For each row I paste (columns: id, kind, group, he; "he" is fully pointed Hebrew), return one row with a sound word for each of three traditions, plus notes. Then, when I ask, explain the sounds.
 

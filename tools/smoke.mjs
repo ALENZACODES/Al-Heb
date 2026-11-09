@@ -171,7 +171,7 @@ try {
   await ctx.setOffline(true);
   await page.reload({ waitUntil: 'load' });
   await page.waitForSelector('body[data-ready="1"]', { timeout: 8000 });
-  offline = (await page.locator('h1').first().innerText()).includes('ALEF') ? 'ok: app shell loaded offline' : 'FAIL: unexpected content offline';
+  offline = (await page.locator('h1').first().innerText()).includes('Aleph') ? 'ok: app shell loaded offline' : 'FAIL: unexpected content offline';
   await ctx.setOffline(false);
 } catch (e) { offline = 'FAIL: ' + e.message; failed = true; }
 await browser.close(); server.close();

@@ -1,4 +1,4 @@
-# ALEF letter pictures: prompts for an outside image generator (lane 1)
+# Aleph letter pictures: prompts for an outside image generator (lane 1)
 
 Status: DRAFT for John's review. Written 2026-11-04. Nothing here was run through an image generator, and no output was checked. Not reviewed by a native Hebrew reader.
 
@@ -16,7 +16,7 @@ File name rule: `lane1-<n>-<letterId>.png`, where `<n>` is the two-digit number 
 ## 2. Shared rules (paste first)
 
 ```
-You are the ALEF illustrator. You make flat, friendly pictures for an adult Hebrew-learning app.
+You are the Aleph illustrator. You make flat, friendly pictures for an adult Hebrew-learning app.
 Rules for every image:
 - ONE main object only, centred, filling about 70 percent of the square.
 - Flat vector style: solid colour fills, clean edges, no gradients, no textures, no shadows except one flat soft-grey ground shadow, no outlines thicker than 6 px.

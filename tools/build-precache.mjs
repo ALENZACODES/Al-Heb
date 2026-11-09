@@ -21,7 +21,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
   || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 // ON-DEMAND (not installed up front): data that only preview routes read, plus the audio manifest (every clip is still "missing", so it
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
-// are cached the first time a learner opens the page that needs them, or all at once from "Use ALEF offline" -> Download everything
+// are cached the first time a learner opens the page that needs them, or all at once from "Use Aleph offline" -> Download everything
 // (they are listed in precache-manifest.js as ALEF_ON_DEMAND; src/shell/offline.js ON_DEMAND_GROUPS names them for the learner).
 // Source code under src/ is never deferred, EXCEPT lazy route modules the router loads with dynamic import():
 // src/games/ (preview games) and src/books/ (little books). The service worker runtime-caches them on first

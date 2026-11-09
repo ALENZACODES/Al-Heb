@@ -1,4 +1,4 @@
-// ALEF Service screen: (1) Siddur Coverage % per service, (2) Follow the service, page-turn cards.
+// Aleph Service screen: (1) Siddur Coverage % per service, (2) Follow the service, page-turn cards.
 // mount(root, ctx) -> unmount. ctx: { store, settings?, audio?, query? }. Offline; reads only repo data files.
 import { h, heSpan, audioButton } from '../shell/ui.js';
 import { loadCorpus } from '../corpus/corpus.js';
@@ -80,10 +80,10 @@ export async function mount(root, ctx) {
         h('p', {}, coverageSentence(o.title, c)),
         h('p', { class: 'small' }, `Words: ${c.wordsFull} of ${c.words} different words in these lines are decodable (${c.wordsPct}%). Whole texts: ${c.textsFull} of ${c.texts}.`),
         c.almost ? h('p', { class: 'small' }, `${c.almost} more ${c.almost === 1 ? 'line is' : 'lines are'} exactly one sign away.`) : null,
-        h('p', { class: 'small muted' }, `The percentage covers only the texts ALEF holds. ${c.gaps} typical ${c.gaps === 1 ? 'part is' : 'parts are'} not in ALEF yet, so it does not cover the whole service.`),
+        h('p', { class: 'small muted' }, `The percentage covers only the texts Aleph holds. ${c.gaps} typical ${c.gaps === 1 ? 'part is' : 'parts are'} not in Aleph yet, so it does not cover the whole service.`),
         h('details', {}, h('summary', {}, 'Text by text'),
           h('ul', {}, ...c.perItem.map((p) => h('li', {}, `${p.moment}: ${p.decodable ? 'decodable' : `${p.full} of ${p.lines} ${p.lines === 1 ? 'line' : 'lines'} decodable`}`)))),
-        missingGaps.length ? h('details', {}, h('summary', {}, 'Not in ALEF yet'), h('ul', {}, ...missingGaps.map((g) => h('li', {}, g)))) : null,
+        missingGaps.length ? h('details', {}, h('summary', {}, 'Not in Aleph yet'), h('ul', {}, ...missingGaps.map((g) => h('li', {}, g)))) : null,
         o.follow ? h('button', { type: 'button', class: 'btn secondary', 'data-follow': oid, onclick: () => { st.mode = 'follow'; st.order = oid; st.i = 0; save(); render('sv-card'); } }, `Follow ${o.short.toLowerCase()} service`) : null);
     });
     return [h('p', { class: 'small' }, COVERAGE_NOTE), ...sections];

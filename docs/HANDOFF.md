@@ -1,4 +1,4 @@
-# ALEF handoff for John (checked 2026-11-04, refreshed about 21:15)
+# Aleph handoff for John (checked 2026-11-04, refreshed about 21:15)
 
 > **Superseded / stale since 2026-11-05: see [`STATUS.md`](STATUS.md).** Counts in this file were read on 2026-11-04. For current counts (re-run 2026-11-05) use `STATUS.md`.
 

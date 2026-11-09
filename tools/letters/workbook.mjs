@@ -194,7 +194,7 @@ h1{font-size:24pt;margin:0 0 2mm}h2{font-size:13pt;margin:4mm 0 1.5mm}p,li{font-
 `;
 
 function pageShell({ paper, S, title, body, n, total, fields = true }) {
-  return `<section class="page" data-page="${n}"><div class="hd"><span><b>ALEF</b> &middot; ${esc(S.label)} workbook &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>DRAFT: stroke order not yet reviewed by a native teacher. Fonts: Frank Ruhl Libre / Gveret Levin (SIL OFL 1.1).</span><span>${n} / ${total}</span></div></section>`;
+  return `<section class="page" data-page="${n}"><div class="hd"><span><b>Aleph</b> &middot; ${esc(S.label)} workbook &middot; ${esc(title)}</span>${fields ? '<span class="fields">No. <span>&nbsp;</span> Date <span>&nbsp;</span></span>' : ''}</div>${body}<div class="ft"><span>DRAFT: stroke order not yet reviewed by a native teacher. Fonts: Frank Ruhl Libre / Gveret Levin (SIL OFL 1.1).</span><span>${n} / ${total}</span></div></section>`;
 }
 
 /** Full HTML + page list. @param {'print'|'cursive'} script @param {'a4'|'letter'} paperId */
@@ -230,7 +230,7 @@ ${opts.mnemonics ? '<div class="notice"><b>Memory hooks (DRAFT):</b> the italic 
   chunk(model.confRows, per(22.5)).forEach((rows, i) => pages.push({ kind: 'confusables', title: 'Look-alike letters', fields: true, body: (i === 0 ? '<p>Letters that are easy to mix up. Trace a whole set in a row, then write the set from memory.</p>' : '') + rows.map((r) => confHtml(r, S)).join('') }));
 
   const total = pages.length;
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ALEF ${esc(S.label)} workbook (${paper.label})</title><style>${CSS(paper, S)}</style></head><body>${pages.map((p, i) => pageShell({ paper, S, title: p.title, body: p.body, n: i + 1, total, fields: p.fields })).join('')}</body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Aleph ${esc(S.label)} workbook (${paper.label})</title><style>${CSS(paper, S)}</style></head><body>${pages.map((p, i) => pageShell({ paper, S, title: p.title, body: p.body, n: i + 1, total, fields: p.fields })).join('')}</body></html>`;
   return { html, pages: pages.map((p) => p.kind), pageCount: total, model };
 }
 

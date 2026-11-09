@@ -2,7 +2,7 @@
 // Update UX: notice that a new service worker is installed and offer "Reload", never reloading by itself mid-session.
 // One exception, boot-apply: a worker that is ALREADY waiting when the app starts is applied at once
 // (startUpdateBanner opts in), because at startup nothing is in progress yet — that is what makes the
-// "close ALEF and open it again" remedy actually deliver the update (owner report, Nov 7 2026: on the
+// "close Aleph and open it again" remedy actually deliver the update (owner report, Nov 7 2026: on the
 // owner's phone, updates sat waiting behind the banner and the newest build 'never arrived').
 //
 // HOW IN-PROGRESS WORK SURVIVES (and what does not):
@@ -136,12 +136,12 @@ export function mountUpdateBanner(handle, opt = {}) {
   const tryApply = () => { if (!pending) return; if (isBusy()) return; pending = false; stopPoll(); handle.apply({ beforeReload: opt.beforeReload }); };
   const render = (s) => {
     if (s === "idle") { bar.hidden = true; return; }
-    msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all ALEF tabs and open it again." : "A new version of ALEF is ready. Reload to use it; your progress is already saved.";
+    msg.textContent = s === "stalled" ? "The update could not be applied from here. Close all Aleph tabs and open it again." : "A new version of Aleph is ready. Reload to use it; your progress is already saved.";
     reload.hidden = s === "stalled"; bar.hidden = false;
   };
   reload.addEventListener("click", () => {
     if (!isBusy()) { handle.apply({ beforeReload: opt.beforeReload }); return; }
-    pending = true; msg.textContent = "You are in the middle of an exercise, so ALEF will reload when you finish it. Your progress is already saved.";
+    pending = true; msg.textContent = "You are in the middle of an exercise, so Aleph will reload when you finish it. Your progress is already saved.";
     if (poll == null) poll = setT2(tryApply, 2000);
   });
   later.addEventListener("click", () => { pending = false; stopPoll(); bar.hidden = true; });

@@ -1,4 +1,4 @@
-# ALEF Casting Report
+# Aleph Casting Report
 
 **Status:** STRUCTURE ONLY (DRAFT). Every table below is empty. Nothing here claims a candidate was found, auditioned, scored or approved.
 **Sprint:** 2026-11-05 · America/Toronto

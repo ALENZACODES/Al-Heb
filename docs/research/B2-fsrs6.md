@@ -17,7 +17,7 @@ Status: module + preview route. NOT wired into the live review scheduler.
 - Not wired into `src/curriculum/srs.js` (12 importers, v0 review path, integration lane active). Swap needs decisions listed in the board (10-minute Again step, `state` mapping, same-day reviews). No store migration is needed if the card shape is kept.
 - Same-day (short-term) memory and learning steps are not modelled; the reference was run with them off.
 - Fuzz is not implemented.
-- No claim about fewer reviews or better retention. The weights are not fitted to ALEF data (there is none).
+- No claim about fewer reviews or better retention. The weights are not fitted to Aleph data (there is none).
 - Not run in a browser.
 
 ## Browser check (RAN, temp copy only)

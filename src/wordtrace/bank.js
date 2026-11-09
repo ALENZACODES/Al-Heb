@@ -1,4 +1,4 @@
-// ALEF word tracing: word bank, letter eligibility, levels, final-letter (sofit) rules. Pure, no DOM.
+// Aleph word tracing: word bank, letter eligibility, levels, final-letter (sofit) rules. Pure, no DOM.
 // Part of the word-tracing feature (src/wordtrace/*). Reads curriculum helpers; changes nothing outside this folder.
 // @ts-check
 import { cellsOf, BASE, MARK } from '../curriculum/hebrew.js';

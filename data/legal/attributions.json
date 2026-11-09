@@ -286,12 +286,12 @@
       "id": "hebcal-fixtures",
       "name": "Hebcal output (test fixtures and the Hebcal-derived parsha schedule)",
       "group": "calendar",
-      "usedFor": "data/calendar/hebcal-fixtures.json (used by tests to compare ALEF's own date calculations; the file is listed in precache-manifest.js) and data/calendar/parsha.json (the weekly Torah portion schedule, derived from Hebcal output per src/curriculum/calendar.parsha.js)",
+      "usedFor": "data/calendar/hebcal-fixtures.json (used by tests to compare Aleph's own date calculations; the file is listed in precache-manifest.js) and data/calendar/parsha.json (the weekly Torah portion schedule, derived from Hebcal output per src/curriculum/calendar.parsha.js)",
       "licence": "CC BY 4.0 (Hebcal states content on its site is CC BY 4.0 unless otherwise noted)",
       "licenceUrl": "https://www.hebcal.com/home/about",
       "commercialUse": "yes-with-conditions",
       "shareAlike": false,
-      "attributionText": "Calendar data (holiday dates and the weekly Torah portion schedule) from Hebcal (hebcal.com), CC BY 4.0. ALEF's own date calculations were compared against it; changes were made.",
+      "attributionText": "Calendar data (holiday dates and the weekly Torah portion schedule) from Hebcal (hebcal.com), CC BY 4.0. Aleph's own date calculations were compared against it; changes were made.",
       "perItemCredit": false,
       "status": "partly-verified",
       "auditRef": "CONTENT-LICENCE-AUDIT.md#hebcal-fixtures"
@@ -361,7 +361,7 @@
       "licenceUrl": "",
       "commercialUse": "not-applicable",
       "shareAlike": false,
-      "attributionText": "Original ALEF content. Copyright held by the project owner; all rights reserved unless a licence is added.",
+      "attributionText": "Original Aleph content. Copyright held by the project owner; all rights reserved unless a licence is added.",
       "perItemCredit": false,
       "status": "project-owned",
       "auditRef": "CONTENT-LICENCE-AUDIT.md#project-original"
@@ -403,7 +403,7 @@
       "licenceUrl": "",
       "commercialUse": "not-applicable",
       "shareAlike": false,
-      "attributionText": "Memory hooks and stories are original ALEF content. Example words and meanings derive from Wiktionary contributors (CC BY-SA 4.0).",
+      "attributionText": "Memory hooks and stories are original Aleph content. Example words and meanings derive from Wiktionary contributors (CC BY-SA 4.0).",
       "perItemCredit": false,
       "status": "project-owned",
       "auditRef": "CONTENT-LICENCE-AUDIT.md#memory-chain-text"

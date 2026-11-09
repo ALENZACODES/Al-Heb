@@ -1,4 +1,4 @@
-// ALEF lane 2: letter tracing engine.
+// Aleph lane 2: letter tracing engine.
 //
 // Pure geometry + scoring (no DOM) at the top; DOM glue (createTracer) at the bottom.
 // Coordinates: 0..1000 box, y down, same as data/letters/letters.json.

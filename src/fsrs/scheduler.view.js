@@ -7,7 +7,7 @@
 import { el } from '../curriculum/dom.js';
 import { onDueDays, intervalsFor } from './fsrs6.js';
 
-export const NOTE = 'Preview and explanation only. Your real reviews still use ALEF\'s own scheduler; nothing here changes them and nothing is saved. The numbers come from the published default settings of the FSRS-6 method, not from your own review history.';
+export const NOTE = 'Preview and explanation only. Your real reviews still use Aleph\'s own scheduler; nothing here changes them and nothing is saved. The numbers come from the published default settings of the FSRS-6 method, not from your own review history.';
 const NAMES = [['Again', 1], ['Hard', 2], ['Good', 3], ['Easy', 4]];
 const TARGETS = [0.8, 0.85, 0.9, 0.95];
 const LEN = 8;

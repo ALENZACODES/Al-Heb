@@ -1,5 +1,5 @@
 # Dev tool: regenerates data/calendar/prayer-cards.json from data/corpus/registry.json (run from the repo root: python3 tests/calendar.tools/make-prayer-cards.py).
-# The reflections (text) and glosses are hand-written ALEF drafts; the Hebrew pieces are sliced by word position from the registry, so they are verbatim.
+# The reflections (text) and glosses are hand-written Aleph drafts; the Hebrew pieces are sliced by word position from the registry, so they are verbatim.
 import json,re
 reg={e['id']:e['he'] for e in json.load(open('data/corpus/registry.json'))['entries']}
 def piece(rid,start,n):
@@ -71,7 +71,7 @@ def build(rows,slot):
         out.append(dict(id=i,slot=slot,registryId=rid,piece=piece(rid,st,n),gloss=gl,text=tx))
     return out
 doc={"schema":"alef-prayer-cards-1","status":"draft-not-clergy-reviewed",
-"note":"Original short reflections written for ALEF (Lane 1, 2026-11-04) in the spirit of book/opening-prayer.txt. They are NOT reviewed by clergy, a rabbi or a native Hebrew speaker and are not liturgy. The Hebrew phrase in each card is a verbatim slice of a data/corpus/registry.json entry (referenced by registryId); registry statuses vary (tests/calendar.cards.test.js checks the slice is contained in the entry). Glosses are plain English renderings written for ALEF, not published translations. Card pools are 23 long so a given card does not repeat on the same weekday.",
+"note":"Original short reflections written for Aleph (Lane 1, 2026-11-04) in the spirit of book/opening-prayer.txt. They are NOT reviewed by clergy, a rabbi or a native Hebrew speaker and are not liturgy. The Hebrew phrase in each card is a verbatim slice of a data/corpus/registry.json entry (referenced by registryId); registry statuses vary (tests/calendar.cards.test.js checks the slice is contained in the entry). Glosses are plain English renderings written for Aleph, not published translations. Card pools are 23 long so a given card does not repeat on the same weekday.",
 "femaleVariants":{"m01":{"from":"מוֹדֶה","to":"מוֹדָה"}},
 "morning":build(M,"morning"),"evening":build(E,"evening"),"fridayEvening":build(F,"fridayEvening"),"saturdayEvening":build(S,"saturdayEvening")}
 for k in ("morning","evening","fridayEvening","saturdayEvening"):

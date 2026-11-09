@@ -1,18 +1,18 @@
-# Engagement loops: ALEF against the Duolingo loop features (draft)
+# Engagement loops: Aleph against the Duolingo loop features (draft)
 
-Status of this file: a plan and a gap list. It was written by reading ALEF's source and a small set of public Duolingo pages fetched on 2026-11-05. No learner has used ALEF. Nothing below says a loop improves retention or learning in ALEF; the only claims are about what the code does and what tests cover. Every row marked "needs human review" waits on a person.
+Status of this file: a plan and a gap list. It was written by reading Aleph's source and a small set of public Duolingo pages fetched on 2026-11-05. No learner has used Aleph. Nothing below says a loop improves retention or learning in Aleph; the only claims are about what the code does and what tests cover. Every row marked "needs human review" waits on a person.
 
 ## How to read the matrix
 
-- "ALEF today" cites files in this repo as they were at commit `a160084`, before the loops work in `preview/loops/` (section 4).
+- "Aleph today" cites files in this repo as they were at commit `a160084`, before the loops work in `preview/loops/` (section 4).
 - "Duolingo" facts are only the ones in section 6, each with its page and date. Where I could not fetch a page, the row says so. No Duolingo number is quoted from memory.
 - Effort: S = under a day, M = a few days, L = a week or more, X = needs a server or content that does not exist.
 - "Owner decision" means John has to choose before it can ship. "Needs review" means a Hebrew teacher, native speaker, accessibility reviewer or real-device check is still required.
-- Design rules for every ALEF version: free, no ads, no paywall, nothing blocks a learner, no guilt notifications, no dark patterns, offline-first, data stays on the device, reduced motion and calm mode honoured, no flashing, screen-reader announcements, controls at least 48 px.
+- Design rules for every Aleph version: free, no ads, no paywall, nothing blocks a learner, no guilt notifications, no dark patterns, offline-first, data stays on the device, reduced motion and calm mode honoured, no flashing, screen-reader announcements, controls at least 48 px.
 
 ## 1. Matrix
 
-| Duolingo feature (source in section 6) | ALEF today | Gap | ALEF's better version | Effort | Owner decision? | Needs review? |
+| Duolingo feature (source in section 6) | Aleph today | Gap | Aleph's better version | Effort | Owner decision? | Needs review? |
 |---|---|---|---|---|---|---|
 | Streak: consecutive days with a lesson; Streak Freeze pauses one day; up to two equipped (a 2022 post) | Engaged-time streak: a day counts at 300 s (`src/curriculum/streak.js` `GOAL_SECONDS`, accrual in `src/morning/engage.js`); Shabbat and Yom Tov rest days with a setting; rest days the learner declares in Progress (`src/progress/store.js` `setRestDay`); a break is a projection and `best` is kept. Home and Progress show one number. Hidden in calm mode (`src/shell/comfort.js` `streakVisible`). Tests: `tests/streak.freeze.test.js`, `tests/engagement.dst.test.js` | A missed ordinary day resets the shown count to 0. No earned rest days. No one-tap repair. Copy about a break exists in views | `preview/loops/rhythm.js`: a "practice rhythm" that earns a free rest day for every 5 practice days (bank of 3), spends one automatically on a missed day, and has a free repair that restores the run after a gap. Never uses loss wording; tests scan the copy for banned words. Home's existing streak is untouched | M | Yes: should the Home streak adopt these rules, and what counts as a practice day (5 points here)? | Copy and real-phone check |
 | Streak repair, paid with gems | Nothing | Duolingo's current repair rules not confirmed in my fetches (the pages I read do not mention repair) | Free repair, no currency, no timer, unlimited, recorded locally | S | Same as above | No |
@@ -35,18 +35,18 @@ Status of this file: a plan and a gap list. It was written by reading ALEF's sou
 
 ## 2. Where Duolingo wins today
 
-- Course depth and polish: ALEF's 125 core and 50 intermediate lessons are draft content, 0 of 3,718 review rows reviewed (`docs/review/STATUS.md`).
-- Audio: ALEF has 0 recorded clips of 24,906 listed (`docs/STATUS.md`). Duolingo's Stories and exercises include listening (Dec 2024 post).
-- Art and animation: 0 generated images are approved for display in ALEF (`docs/STATUS.md`), and the new celebration is deliberately plain.
-- Social: friends, leagues, friend streaks and quests need people and a server. ALEF has none.
-- Scale and experimentation: Duolingo's posts describe thousands of experiments and millions of learners on long streaks. ALEF has no learners and no experiments.
-- Reminders from a closed app: needs push infrastructure ALEF does not have.
+- Course depth and polish: Aleph's 125 core and 50 intermediate lessons are draft content, 0 of 3,718 review rows reviewed (`docs/review/STATUS.md`).
+- Audio: Aleph has 0 recorded clips of 24,906 listed (`docs/STATUS.md`). Duolingo's Stories and exercises include listening (Dec 2024 post).
+- Art and animation: 0 generated images are approved for display in Aleph (`docs/STATUS.md`), and the new celebration is deliberately plain.
+- Social: friends, leagues, friend streaks and quests need people and a server. Aleph has none.
+- Scale and experimentation: Duolingo's posts describe thousands of experiments and millions of learners on long streaks. Aleph has no learners and no experiments.
+- Reminders from a closed app: needs push infrastructure Aleph does not have.
 
-## 3. Metrics where ALEF can be better, and how each is checked
+## 3. Metrics where Aleph can be better, and how each is checked
 
 These are properties of the code, not outcomes. No retention, learning or satisfaction claim is made.
 
-| Metric | ALEF's position | How it is checked |
+| Metric | Aleph's position | How it is checked |
 |---|---|---|
 | Price, ads, paywall | None of the three exist in the source | search of `src/` and `docs/legal/` (not a legal review) |
 | Anything that blocks a learner (hearts, timers, locked practice) | None in the new modules | tests assert every loop function returns without gating; the page has no disabled "continue" state |
@@ -100,7 +100,7 @@ Consequence: a learner who has never opened `/daily` online will not have it off
 - Roediger and Karpicke (2006), Psychological Science 17(3): taking a test improves later retention; on a delayed test (2 days, 1 week) prior testing beat restudying; restudying gave more confidence without better delayed retention. https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/
 - Rohrer and Taylor (2007), Instructional Science 35(6), 481-498: spaced practice and mixed (shuffled) practice both beat the usual grouped format on a test a week later. https://digitalcommons.usf.edu/psy_facpub/1767/
 
-What these support for design: short repeated sessions, retrieval over rereading, and mixing item types. They do not show that points, streaks or quests improve learning, and ALEF has no data on that.
+What these support for design: short repeated sessions, retrieval over rereading, and mixing item types. They do not show that points, streaks or quests improve learning, and Aleph has no data on that.
 
 ## 7. Owner decisions raised by this file
 

@@ -1,13 +1,19 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "בָּרוּךְ כְּבוֹד־אֲדֹנָי מִמְּקוֹמוֹ׃",
  "inputSha256": "4df525e0485bffa49cb6dcb20be8bc9b067d4611a2611a89e2fe496aa17ee9ee",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בָּרוּךְ כְּבוֹד־אֲדֹנָי מִמְּקוֹמוֹ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "audio/f/israeli/word/kedushah-baruch-w2.mp3",
+  "audio/f/israeli/word/i-02-w14.mp3"
+ ]
 }

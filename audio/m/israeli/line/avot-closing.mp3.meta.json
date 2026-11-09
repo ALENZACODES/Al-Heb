@@ -1,13 +1,25 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
  "inputSha256": "b35cd2cdf8244c92fe011524e4f15232ad9f3f651d52b6f466200a08ffd1f979",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/adon-olam-1-w14.mp3",
+  "audio/m/israeli/word/avot-1-w35.mp3",
+  "audio/m/israeli/word/avot-1-w36.mp3",
+  "audio/m/israeli/word/avot-1-w37.mp3",
+  "audio/m/israeli/word/aleinu-1-w38.mp3",
+  "audio/m/israeli/word/avot-1-w2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/avot-closing-w8.mp3",
+  "audio/m/israeli/word/avot-1-w8.mp3"
+ ]
 }

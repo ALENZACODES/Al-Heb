@@ -8,7 +8,7 @@
  "inputSha256": "a7f7c1bdc4b8c2132319c1b5024b9558e0608c0f86e14bf3d27c92f5957ca7cf",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
  "inputTextKind": "hebrew",
  "stitchedFromText": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃ אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃ הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִמָּנוּ הָיִינוּ שְׂמֵחִים׃ שׁוּבָה אֲדֹנָי אֶת־שְׁבִיתֵנוּ כַּאֲפִיקִים בַּנֶּגֶב׃ הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃ הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
  "stitchedFrom": [

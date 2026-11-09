@@ -1,13 +1,26 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
  "inputSha256": "80f2c4e6be5d349aee83fb82ec82c7efd0167405aefcadfa53446565875804c8",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/amidah-elohai-netzor-w48.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w49.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w50.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w51.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w52.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w16.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w54.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w56.mp3",
+  "audio/f/israeli/word/amidah-elohai-netzor-w57.mp3"
+ ]
 }

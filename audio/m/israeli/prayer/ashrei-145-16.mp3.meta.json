@@ -1,13 +1,21 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
  "inputSha256": "f6ea3314f851b8ada0fd98d40cadad453cec9bd0bee17fa3e89f588afed644bd",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/ashrei-145-16-w1.mp3",
+  "audio/m/israeli/word/ashrei-145-16-w2.mp3",
+  "audio/m/israeli/word/ashrei-145-16-w3.mp3",
+  "audio/m/israeli/word/ashrei-145-16-w4.mp3",
+  "audio/m/israeli/word/ashrei-145-16-w5.mp3"
+ ]
 }

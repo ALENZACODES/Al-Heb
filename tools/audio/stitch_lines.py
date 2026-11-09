@@ -38,6 +38,12 @@ def norm(w):
 # Written forms read aloud as another word (the divine name is read Adonai).
 SPOKEN = {'יְהוָה': 'אֲדֹנָי', 'יְהוִה': 'אֱלֹהִים'}
 
+# (voice, word) -> the word clip to use, chosen by the sound review (tools/audio/asr-check/word_pick.json)
+PREFER = {}
+_pick = os.path.join(ROOT, 'tools', 'audio', 'asr-check', 'word_pick.json')
+if os.path.exists(_pick):
+    PREFER = {(k.split('|')[0], k.split('|')[1]): v for k, v in json.load(open(_pick, encoding='utf-8')).items()}
+
 _INDEX = {}
 _VERDICT = None
 
@@ -79,7 +85,7 @@ def decode(path):
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
 
 
-def trim(x, thr_db=-42, pad=0.015):
+def trim(x, thr_db=-55, pad=0.02, tail=0.07):
     if not len(x):
         return x
     win = int(0.01 * SR)
@@ -90,7 +96,7 @@ def trim(x, thr_db=-42, pad=0.015):
     loud = np.where(20 * np.log10(rms) > thr_db)[0]
     if not len(loud):
         return x
-    a = max(0, loud[0] * win - int(pad * SR)); b = min(len(x), (loud[-1] + 1) * win + int(pad * SR))
+    a = max(0, loud[0] * win - int(pad * SR)); b = min(len(x), (loud[-1] + 1) * win + int(tail * SR))
     y = x[a:b].copy()
     f = min(FADE, len(y) // 4)
     if f:
@@ -123,6 +129,9 @@ def stitch(voice, rel):
     for w in ws:
         k = norm(w)
         k = SPOKEN.get(k, k)
+        if (voice, k) in PREFER:
+            parts.append(os.path.join(ROOT, PREFER[(voice, k)]))
+            continue
         hits = idx.get(k)
         if not hits:
             return False, f'no word clip for {w}'

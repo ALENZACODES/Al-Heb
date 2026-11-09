@@ -8,7 +8,7 @@
  "inputSha256": "67cf5baf0ba4513b5c1dc98c9280062a125646bf77d09567044bd1bb45059082",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
  "inputTextKind": "hebrew",
  "stitchedFromText": "יְהַלְלוּ אֶת־שֵׁם אֲדֹנָי כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ הוֹדוֹ עַל־אֶרֶץ וְשָׁמָיִם׃ וַיָּרֶם קֶרֶן לְעַמּוֹ תְּהִלָּה לְכָל־חֲסִידָיו לִבְנֵי יִשְׂרָאֵל עַם־קְרֹבוֹ הַלְלוּ־יָהּ׃",
  "stitchedFrom": [

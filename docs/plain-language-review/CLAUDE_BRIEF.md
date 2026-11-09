@@ -1,6 +1,10 @@
-# Claude brief: apply the human-voice edits on Aleph
+# Brief: apply the plain-language edits on Aleph
 
-You are editing the Aleph Hebrew-learning app so learner-facing English reads as if a person wrote it, scores lower on obvious AI tells, and is not a close paraphrase of other sites. This brief is self-contained. The detailed findings, examples, and suggested rewrites are in `NOTES.md` in the same folder as this file (`/workspace/aleph-human-review/NOTES.md`). The string inventory is `inventory.csv`.
+**Style:** write plain, easy-to-follow English. Short sentences. Common words. One idea per sentence. Literal button labels. Do not add warmth, personality, or contractions for their own sake. Still remove AI tells and still rewrite close-paraphrase synagogue stories.
+
+
+
+You are editing the Aleph Hebrew-learning app so learner-facing English is plain and easy to follow: short sentences, common words, one idea per sentence, literal button labels. Remove AI tells. Rewrite close-paraphrase synagogue passages. Do not add warmth, personality, or contractions for their own sake. This brief is self-contained. The detailed findings are in `NOTES.md` in the same folder (`docs/plain-language-review/`). Large inventory CSVs were removed from the PR; do not add them back.
 
 Do the work. Open a pull request when the tests pass. Do not push to `main` or to anyone else's branch.
 
@@ -13,8 +17,7 @@ Do the work. Open a pull request when the tests pass. Do not push to `main` or t
   - `john/fun-lessons-start-2026-11-06`
   - any `chatgpt/*`, `cursor/*`, or other bot working branch
   - the dirty worktrees at `/workspace/Al-Heb` and `/workspace/Al-Heb-fun`
-- Create a new branch: **`john/human-voice-2026-11-09`**
-- If that name is taken, use `john/human-voice-2026-11-09-b`.
+- Work on **`john/easy-to-follow-voice-2026-11-09`**. Do not push to the deleted branch `john/human-voice-2026-11-09`.
 
 ## 2. What to change, and what to leave alone
 
@@ -118,8 +121,8 @@ Update assertions that expect the old English. Do not weaken a test to sneak a w
 Open a PR:
 
 - Base: `main`
-- Head: `john/human-voice-2026-11-09`
-- Title: `Human-voice pass: learner English, synagogue paraphrase, Aleph spelling`
+- Head: `john/easy-to-follow-voice-2026-11-09`
+- Title: `Use plain, easy-to-follow English in app copy`
 - Body should point at NOTES.md (you may copy the counts and the five plagiarism URLs into the PR), list files changed, and state that Hebrew and teaching facts were left alone.
 - Do not mention CAIA, CQF, or school credentials in the PR body either.
 

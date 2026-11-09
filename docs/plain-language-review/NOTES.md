@@ -1,4 +1,22 @@
-# Aleph human-voice and plagiarism notes
+# Style update (9 November 2026, America/Toronto)
+
+The copy work on this branch uses **plain, easy-to-follow English**, not a warmer or more "human" voice.
+
+Rules for every rewrite:
+
+- Short, plain sentences. One idea per sentence where you can.
+- Common words. Literal labels (a button says what it does).
+- Do not add warmth, personality, jokes, or contractions for their own sake.
+- Still remove AI tells (not-X-but-Y, staged openers, repeated closers, sales phrasing, em-dash habit, over-titled names).
+- Still rewrite close-paraphrase synagogue passages. Keep facts and citations.
+- Keep Hebrew, transliterations, teaching facts, keys and ids unchanged.
+- Keep the library Title Case gate passing. Do not weaken tests.
+
+Where a rewrite suggested below uses a chatty tone, apply a plainer wording instead.
+
+---
+
+# Aleph plain-language and plagiarism notes
 
 Reviewed: 9 November 2026, America/Toronto  
 Review tree: `/workspace/aleph-human-review/repo` (detached worktree of `origin/main`, do not commit or push from this tree)  

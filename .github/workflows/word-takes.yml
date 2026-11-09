@@ -22,10 +22,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Record takes
         run: python3 tools/audio/render_word_takes.py
-      - name: Push takes to john/word-takes
+      - name: Push takes to john/word-takes (in batches, a single large push is refused)
         run: |
           git config user.name "John Khan"
           git config user.email "johnnykhan1@gmail.com"
-          git add audio-takes
-          git commit -q -m "Word takes: $(python3 -c "import json;print(len(json.load(open('audio-takes/takes.json'))))") takes of the flagged words"
-          git push --force origin HEAD:refs/heads/john/word-takes
+          git config http.postBuffer 524288000
+          git checkout -q -B john/word-takes
+          first=1
+          ls audio-takes/*/*.mp3 | split -l 300 - /tmp/batch-
+          for b in /tmp/batch-*; do
+            xargs -a "$b" git add
+            git commit -q -m "Word takes: batch $(basename "$b")"
+            if [ "$first" = 1 ]; then git push -q --force origin HEAD:refs/heads/john/word-takes; first=0; else git push -q origin HEAD:refs/heads/john/word-takes; fi
+          done
+          git add audio-takes/takes.json
+          git commit -q -m "Word takes: index ($(python3 -c "import json;print(len(json.load(open('audio-takes/takes.json'))))") takes)"
+          git push -q origin HEAD:refs/heads/john/word-takes

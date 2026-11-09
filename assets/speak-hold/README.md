@@ -1,4 +1,4 @@
-# SPEAK hold (ChatGPT overnight 2026-11-06)
+# SPEAK hold (Overnight review 2026-11-06)
 
 **Bucket: unreviewed_hold / HOLD.** On GitHub so John can unlock — **not** learner-shipped.
 

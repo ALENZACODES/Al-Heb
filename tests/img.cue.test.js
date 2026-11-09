@@ -25,7 +25,7 @@ function walkJs(dir, out = []) {
 }
 
 const HELD = [
-  ...readdirSync(join(root, 'assets/chatgpt-overnight/game/hold')).filter((f) => f.endsWith('.png')).map((f) => f.replace(/\.png$/, '')),
+  ...readdirSync(join(root, 'assets/game-art/game/hold')).filter((f) => f.endsWith('.png')).map((f) => f.replace(/\.png$/, '')),
   'GAME_scenes_composite_03', 'GAME_scenes_composite_04', 'GAME_scenes_composite_05', 'GAME_minute_one_celebration_10_ref',
 ];
 
@@ -73,7 +73,7 @@ test('held Noa-drift stills and composites are not referenced by the app', () =>
 test('scene webps and held copies are not installed in the precache', () => {
   const pre = JSON.parse(read('precache-manifest.js').match(/self\.ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
   assert.equal(pre.some(p => p.startsWith('assets/img/gen/')), false);
-  assert.equal(pre.some(p => p.startsWith('assets/chatgpt-overnight/game/hold/')), false);
+  assert.equal(pre.some(p => p.startsWith('assets/game-art/game/hold/')), false);
   assert.equal(pre.some(p => p.includes('GAME_scenes_composite_')), false);
 });
 

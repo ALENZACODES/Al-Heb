@@ -1,13 +1,12 @@
 {
   "batch": "batch02",
   "status": "DRAFT_CAST_REVIEW_REQUIRED",
-  "sourceChat": "https://chatgpt.com/c/6aed5013-3da0-83ea-9e4c-380a86cc9288",
   "referencesUploaded": [
     "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/aleph-meet.png",
     "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/bet-meet.png",
     "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/yod-meet.png"
   ],
-  "generationMethod": "Ten separate generated image outputs in one ChatGPT image series; downloaded via “Download 10 images in this series”; not a contact sheet and not crops.",
+  "generationMethod": "Ten separate generated image outputs in one image series; downloaded via “Download 10 images in this series”; not a contact sheet and not crops.",
   "previousCurrentSet": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2",
   "qa": {
     "glyphMapping": "Visually verified in sequence: כ, ך, ל, מ, ם, נ, ן, ס, ע, פ; individual glyph cards match the filenames.",

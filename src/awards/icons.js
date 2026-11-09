@@ -1,5 +1,5 @@
 // Temporary original medallions. Accepted artwork count is 0.
-// These vectors are stand-ins, not ChatGPT image files and not cast art.
+// These vectors are stand-ins, not generated image files and not cast art.
 // Swap TEMP_GLYPHS or point ART_FILES at approved files later. Do not treat generation as approval.
 //
 // Activity medallions record a saved game session. They are not mastery.

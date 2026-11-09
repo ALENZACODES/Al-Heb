@@ -1,4 +1,4 @@
-# Meet-the-letter cartoons (ChatGPT)
+# Meet-the-letter cartoons 
 
 27/27 PNGs under `batch01`–`batch03`. Overnight DECISIONS: **ship=[]**. Keep on GitHub as drafts.
 

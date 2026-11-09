@@ -2,7 +2,7 @@
 
 This lane adds an Awards page. It does not change the lesson engine. Lesson completion is not a certificate.
 
-Approved artwork: none. The medallions and the certificate frame are temporary original vectors. Accepted image count is 0. They are not ChatGPT image files. `ART_FILES` in `src/awards/icons.js` is the replacement seam (`medallion`, `certificateFrame`, `seal` are null until a named file is approved).
+Approved artwork: none. The medallions and the certificate frame are temporary original vectors. Accepted image count is 0. They are not generated image files. `ART_FILES` in `src/awards/icons.js` is the replacement seam (`medallion`, `certificateFrame`, `seal` are null until a named file is approved).
 
 ## Confirmed criteria
 

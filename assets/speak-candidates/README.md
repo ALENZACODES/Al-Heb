@@ -1,4 +1,4 @@
-# SPEAK candidates (ChatGPT overnight 2026-11-06)
+# SPEAK candidates (Overnight review 2026-11-06)
 
 **Bucket: candidate_only.** Not ship. Not approved.
 

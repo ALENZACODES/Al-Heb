@@ -53,7 +53,7 @@
   Cache-Control: no-cache
 
 # Binary assets that rarely change: one week. If a file is replaced, give it a new name.
-# (fix #15: books, letter art, speak art and the chatgpt-overnight set shipped with no Cache-Control rule at all.)
+# (fix #15: books, letter art, speak art and the game-art set shipped with no Cache-Control rule at all.)
 /assets/fonts/*
   Cache-Control: public, max-age=604800
 /assets/icons/*
@@ -77,7 +77,7 @@
   Cache-Control: public, max-age=604800
 /assets/letter-cartoons/*
   Cache-Control: public, max-age=604800
-/assets/chatgpt-overnight/*
+/assets/game-art/*
   Cache-Control: public, max-age=604800
 /assets/speak-hold/*
   Cache-Control: public, max-age=604800

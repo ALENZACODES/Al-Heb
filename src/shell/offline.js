@@ -57,7 +57,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
   { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
   { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
-  { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(chatgpt-overnight|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
+  { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
   { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },

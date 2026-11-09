@@ -25,7 +25,7 @@ for (const e of v5) byId.set(e.id, { he: e.pointed || e.lemma, gloss: e.gloss, p
 const R = createImageResolver({ index, approvals, wordCues: book });
 const plain = createImageResolver({ index, approvals });
 const held = [
-  ...readdirSync(join(root, 'assets/chatgpt-overnight/game/hold')).filter((f) => f.endsWith('.png')).map((f) => f.replace(/\.png$/, '')),
+  ...readdirSync(join(root, 'assets/game-art/game/hold')).filter((f) => f.endsWith('.png')).map((f) => f.replace(/\.png$/, '')),
   'GAME_scenes_composite_03', 'GAME_scenes_composite_04', 'GAME_scenes_composite_05', 'GAME_minute_one_celebration_10_ref',
 ];
 

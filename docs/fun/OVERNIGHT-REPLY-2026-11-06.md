@@ -4,13 +4,13 @@ My recommendation is a conservative release: hold SPEAK_04, 05 and 08 as candida
 
 I reviewed the six attached images and the three decision documents. No audio was attached, and no canonical character sheet was supplied, so the visual scores below assess observable quality rather than verified character identity. None of the six reviewed images earns an unconditional ≥9.2/10 ship approval.
 
-The following is the complete decision object, suitable for overnight-2026-11-06/chatgpt-decisions-reply.md.
+The following is the complete decision object, suitable for overnight-2026-11-06/decisions-reply.md.
 
 ```json
 {
   "project": "Al-Heb / Aleph",
   "decision_date": "2026-11-06",
-  "reviewer": "ChatGPT",
+  "reviewer": "overnight review",
   "decision_type": "recommendations_only",
   "release_threshold": 9.2,
   "authority": "Advisory; John and MAIN BOT retain approval authority",
@@ -19,7 +19,7 @@ The following is the complete decision object, suitable for overnight-2026-11-06
     "audio_files_listened": 0,
     "canonical_character_sheet_available": false,
     "documents_reviewed": [
-      "CHATGPT-DECISIONS-BRIEF.md",
+      "DECISIONS-BRIEF.md",
       "sephardi-repair-queue.md",
       "OPEN-QUESTIONS.md"
     ],

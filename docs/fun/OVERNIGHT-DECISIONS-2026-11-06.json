@@ -1,6 +1,5 @@
 {
   "date": "2026-11-06",
-  "source_thread": "https://chatgpt.com/c/6aed705d-9b44-83ea-852b-517cb7af5b28",
   "status": "recommendations_only",
   "release_threshold": 9.2,
   "ship": {
@@ -111,5 +110,5 @@
     "Noa",
     "Rimon"
   ],
-  "caveat": "No canonical character sheet supplied; ChatGPT references to supplied wardrobe/character descriptions are unverified. No production changes performed."
+  "caveat": "No canonical character sheet supplied; the image generator references to supplied wardrobe/character descriptions are unverified. No production changes performed."
 }

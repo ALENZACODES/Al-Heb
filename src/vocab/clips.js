@@ -5,7 +5,7 @@
 // rate is 'normal' or 'slow'. The shared player maps slow to 0.7× and the sound bar
 // says "Playing" only after a playing event. That behavior is the unmerged contract
 // in PR #20, commit 8f37d4ba, file docs/audio/PLAYBACK-CONTRACT.md, on
-// chatgpt/games-enrich-2026-11-06. This screen does not set playbackRate itself.
+// the games-enrich-2026-11-06 branch. This screen does not set playbackRate itself.
 import { fileLabel, traditionCaption } from '../shell/audio-labels.js';
 import { playbackTradition, isAccentClip } from '../audio/player.js';
 import { t } from '../shell/i18n.js';

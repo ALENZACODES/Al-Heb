@@ -130,7 +130,7 @@
     "Later"
   ],
   "draftArt": {
-    "note": "ChatGPT drafts per overnight DECISIONS. ship=[]. Candidates/hold only.",
+    "note": "Drafts per overnight DECISIONS. ship=[]. Candidates/hold only.",
     "decisions": "docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json",
     "letterCartoons": {
       "alef": "assets/letter-cartoons/batch01/aleph-meet.png",
@@ -138,7 +138,7 @@
     },
     "speakCandidatesIndex": "data/images/speak-candidates.json",
     "speakHoldIndex": "data/images/speak-hold.json",
-    "letterCartoonsIndex": "data/images/letter-cartoons-chatgpt.json",
+    "letterCartoonsIndex": "data/images/letter-cartoons.json",
     "showHoldRequiresUnlock": true
   }
 }

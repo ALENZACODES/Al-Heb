@@ -39,7 +39,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
-  'assets/chatgpt-overnight/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
+  'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.

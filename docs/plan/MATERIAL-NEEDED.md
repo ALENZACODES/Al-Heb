@@ -2,7 +2,7 @@
 
 The study plans (10 weeks, 3 months, 6 months, 1 year) are live and use only lessons, pages and tools that already exist in Aleph. This list is what would make them richer. Nothing here blocks the plans from working today.
 
-## Pictures (one prompt each, then drop the file in `assets/img/gen/` and tell Claude the name)
+## Pictures (one prompt each, then drop the file in `assets/img/gen/` and add the name to the image list)
 
 | For | What the picture shows | Size |
 |---|---|---|

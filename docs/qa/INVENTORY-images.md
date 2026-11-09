@@ -1,4 +1,4 @@
-# ChatGPT / OpenAI image inventory — Al-Heb
+# Image inventory — Al-Heb
 
 Generated: 2026-11-06 America/Toronto · Overnight DECISIONS applied.
 
@@ -17,9 +17,9 @@ No Ari/Noa/Rimon face regen; no production voice swaps; Vertex QA/labels only.
 | Already tracked gen/review | ~1828+1500 | yes | `assets/img/gen`, `docs/drafts/images-review` |
 
 ## Dual-decide
-ChatGPT overnight `DECISIONS.json` (threshold 9.2): no SPEAK ship; candidates 04/05/08; rest HOLD; pe-final/qof/resh atlas-only no regen.
+Overnight review `DECISIONS.json` (threshold 9.2): no SPEAK ship; candidates 04/05/08; rest HOLD; pe-final/qof/resh atlas-only no regen.
 
 ## Paths
-- Inventory JSON: `docs/qa/INVENTORY-chatgpt-images.json`
+- Inventory JSON: `docs/qa/INVENTORY-images.json`
 - Use plan: `docs/qa/vertex-image-use-plan.md`
 - Decisions: `docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json`

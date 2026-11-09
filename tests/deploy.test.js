@@ -23,7 +23,7 @@ test('_headers: cache rules per file kind, and never two Cache-Control rules on 
   for (const p of ['/', '/index.html', '/sw.js', '/precache-manifest.js', '/manifest.webmanifest', '/src/app.js', '/data/audio/manifest.json', '/preview/loops/daily.view.js']) assert.equal(cc(p), 'no-cache', p);
   assert.match(cc('/assets/fonts/web/heebo.woff2'), /max-age=604800/);
   // fix #15: every binary-asset prefix that ships has a one-week rule, not the host default.
-  for (const p of ['/assets/books/book1/BOOK1_p01.jpg', '/assets/letters/morph/alef.svg', '/assets/letter-cartoons/alef.png', '/assets/chatgpt-overnight/game/hold/x.png', '/assets/speak-hold/SPEAK_09_cafe_order.png', '/assets/speak-candidates/SPEAK_05_table_welcome.png']) assert.match(cc(p), /max-age=604800/, p);
+  for (const p of ['/assets/books/book1/BOOK1_p01.jpg', '/assets/letters/morph/alef.svg', '/assets/letter-cartoons/alef.png', '/assets/game-art/game/hold/x.png', '/assets/speak-hold/SPEAK_09_cafe_order.png', '/assets/speak-candidates/SPEAK_05_table_welcome.png']) assert.match(cc(p), /max-age=604800/, p);
   for (const p of ['/', '/sw.js', '/src/a/b.js', '/assets/fonts/web/heebo.woff2', '/audio/x/y.mp3', '/assets/css/app.css', '/assets/books/book1/BOOK1_p01.jpg', '/assets/letters/morph/alef.svg', '/preview/loops/daily.view.js']) assert.equal(cacheRuleCount(rules, p), 1, p);
   assert.equal(headersFor(rules, '/manifest.webmanifest').get('content-type').value, 'application/manifest+json');
   // fix #15 regression guard: every file make-dist ships carries exactly one Cache-Control rule

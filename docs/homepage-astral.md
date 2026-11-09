@@ -1,6 +1,6 @@
 # Aleph homepage — astral Tree of Knowledge (branch candidate)
 
-**Status:** implementation candidate on `chatgpt/homepage-astral-2026-11-07`; do not merge to main or publish without review.
+**Status:** implementation candidate on `homepage-astral-2026-11-07` (feature branch); do not merge to main or publish without review.
 
 ## Opening prayer
 

@@ -1,6 +1,6 @@
 # Aleph opening — ancient olive harvest under the stars
 
-**Review candidate, 7 November 2026.** Feature branch: `chatgpt/homepage-olive-harvest-2026-11-07`. This is not permission to merge or publish.
+**Review candidate, 7 November 2026.** Feature branch: `homepage-olive-harvest-2026-11-07` (feature branch). This is not permission to merge or publish.
 
 ## Art direction
 

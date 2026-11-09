@@ -39,4 +39,4 @@ Raw OGG pack preserved under: `sfx-free/raw/Audio/` (100 files)
 
 - CC0 only for game SFX in this folder.
 - No cast voice replacement — these are UI/game feedback only.
-- Wire via ChatGPT order: `games-25/orders/2026-11-06-sfx-wire-chatgpt.md`
+- Wiring order: `games-25/orders/2026-11-06-sfx-wire.md`

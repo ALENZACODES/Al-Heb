@@ -2,7 +2,7 @@
 
 **Owner attribution:** John Khan  
 **Date:** 7 November 2026  
-**Branch:** `chatgpt/site-quality-john-khan-2026-11-07`  
+**Branch:** `site-quality-john-khan-2026-11-07` (feature branch)  
 **Scope:** first-load shell, visual entry points, route discovery, beginner learning, audio truth, provenance, mobile and accessibility. No changes to the three character faces or production voice assets. No merge or live publish.
 
 ## Changes actually made

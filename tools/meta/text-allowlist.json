@@ -88,6 +88,14 @@
     {
       "path": "tools/release/prepush.sh",
       "reason": "Pre-push guard: holds the banned-word list (split into fragments) it checks commit messages against."
+    },
+    {
+      "path": "docs/test/links-2026-11-07.json",
+      "reason": "Link-check report: lists third-party terms-of-service URLs it checked; the URLs are facts about the links, not notes about how the app was made."
+    },
+    {
+      "path": "docs/test/LINK-CHECK-2026-11-07.md",
+      "reason": "Link-check report: lists third-party terms-of-service URLs it checked; the URLs are facts about the links, not notes about how the app was made."
     }
   ]
 }

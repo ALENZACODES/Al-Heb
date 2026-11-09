@@ -4,8 +4,8 @@ Staging only. This is not release approval, not a live deploy, and not an art me
 
 Parents, unchanged:
 
-- PR #20 `chatgpt/games-enrich-2026-11-06` at `2ff079611405692e80e6dc2bb9624876dc2bab0f` (shared player, Tug retry, Vowel basket). Not an ancestor of PR #22.
-- PR #22 `chatgpt/games-remaining20-2026-11-06` at `7109790b68552d974712b30363899fdbe309d0d0` (25 route registrations). Its `src/audio/sfx.js` imports `./policy.js`, which that commit does not contain.
+- PR #20 `games-enrich-2026-11-06` (feature branch) at `2ff079611405692e80e6dc2bb9624876dc2bab0f` (shared player, Tug retry, Vowel basket). Not an ancestor of PR #22.
+- PR #22 `games-remaining20-2026-11-06` (feature branch) at `7109790b68552d974712b30363899fdbe309d0d0` (25 route registrations). Its `src/audio/sfx.js` imports `./policy.js`, which that commit does not contain.
 
 This branch adds PR #22's game modules onto the PR #20 tree, so `src/audio/policy.js` is present. PR #17 artwork is not included.
 

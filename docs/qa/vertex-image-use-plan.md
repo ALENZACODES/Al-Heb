@@ -1,11 +1,11 @@
-# Vertex image use plan — ChatGPT Al-Heb assets
+# Vertex image use plan — Al-Heb assets
 
 Updated: 2026-11-06T06:20:09.826074+00:00 (America/Toronto on box).
 Model: gemini-3.5-flash · Freeze: no Ari/Noa/Rimon regen · no production audio swaps.
 
 ## Overnight DECISIONS (authority)
 
-- Source: `docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json` (ChatGPT ≥9.2 dual-decide).
+- Source: `docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json` (≥9.2 dual-decide).
 - **ship.speak = []** · **ship.letter_cartoons = []**
 - candidate SPEAK: 04, 05, 08 → `assets/speak-candidates/`
 - hold SPEAK: 01–03, 06–07, 09–12 → `assets/speak-hold/` (kept for John unlock)
@@ -25,8 +25,8 @@ Model: gemini-3.5-flash · Freeze: no Ari/Noa/Rimon regen · no production audio
 |---|---|---|
 | candidate | `assets/speak-candidates/` | `data/images/speak-candidates.json` |
 | hold | `assets/speak-hold/` | `data/images/speak-hold.json` |
-| letter drafts | `assets/letter-cartoons/batch0{1,2,3}/` | `data/images/letter-cartoons-chatgpt.json` |
-| decisions | `docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json` | also `assets/chatgpt-overnight/DECISIONS.json` |
+| letter drafts | `assets/letter-cartoons/batch0{1,2,3}/` | `data/images/letter-cartoons.json` |
+| decisions | `docs/fun/OVERNIGHT-DECISIONS-2026-11-06.json` | also `assets/game-art/DECISIONS.json` |
 
 App: default hide hold; `minute-one.json#draftArt.showHoldRequiresUnlock=true`.
 

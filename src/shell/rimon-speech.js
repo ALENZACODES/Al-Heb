@@ -13,16 +13,27 @@ export const MESSAGES = Object.freeze({
 });
 export const SHABBAT = Object.freeze({he:'שַׁבָּת שָׁלוֹם!',en:'SHABBAT SHALOM!'});
 export const SHALOM = Object.freeze({he:'שָׁלוֹם!',en:'Hello!'});
+/** Rimon's first line of the visit: by time of day, then a streak line when there is a streak to keep. */
+export const GREETINGS = Object.freeze({
+  morning: {he:'בֹּקֶר טוֹב!',en:'Good morning!'},
+  day: SHALOM,
+  evening: {he:'עֶרֶב טוֹב!',en:'Good evening!'},
+  night: {he:'לַיְלָה טוֹב!',en:'Good night!'},
+});
+export function greetingFor(date){const h=date.getHours();return GREETINGS[h>=5&&h<11?'morning':h<17&&h>=11?'day':h>=17&&h<22?'evening':'night'];}
+export function streakLine(count){return {he:'בּוֹאוּ נִלְמַד!',en:count===1?"LET'S MAKE IT 2 DAYS!":`KEEP YOUR ${count}-DAY STREAK GOING!`};}
+export function doneLine(count){return {he:'כָּל הַכָּבוֹד!',en:count>1?`${count} DAYS IN A ROW!`:'DONE FOR TODAY!'};}
 export const ENCOURAGEMENT_MS=5*60*1000, IDLE_BREAK_MS=15*60*1000, SESSION_BREAK_MS=60*60*1000;
-export function createSpeechSchedule(){
-  let started=null,lastActivity=0,next=0,count=0,breakCount=0,pending=null;
+export function createSpeechSchedule({greet=null,followUp=null}={}){
+  let queued=null,started=null,lastActivity=0,next=0,count=0,breakCount=0,pending=null;
   const encouragement=['keep','great','awesome','super','star','practice','again','winner'];
   return {
     activity(time){lastActivity=time;},
     reaction(action){if(['bounce','laugh','highfive','sad','nervous','stretch'].includes(action))pending=action;},
     tick(time,visible=true){
       if(!visible)return null;
-      if(started===null){started=time;lastActivity=time;next=time+ENCOURAGEMENT_MS;return SHALOM;}
+      if(started===null){started=time;lastActivity=time;next=time+ENCOURAGEMENT_MS;queued=followUp?.()||null;return greet?.(time)||SHALOM;}
+      if(queued&&time>=started+7000){const q=queued;queued=null;return q;}
       if(time<next)return null;
       next=time+ENCOURAGEMENT_MS;
       if(time-lastActivity>=IDLE_BREAK_MS || time-started>=SESSION_BREAK_MS){pending=null;return MESSAGES[breakCount++%2?'fruit':'tired'];}
@@ -43,11 +54,11 @@ export function createSpeechPicker(){
   return action=>{const choices=SPEECH[action];if(!choices)return null;const n=counts.get(action)||0;counts.set(action,n+1);return MESSAGES[choices[n%choices.length]];};
 }
 
-export function mountSpeechBubble(host,{doc=document,now=()=>new Date()}={}){
+export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=null}={}){
   const bubble=doc.createElement('div');bubble.className='rimon-bubble';bubble.hidden=true;
   bubble.setAttribute('role','status');bubble.setAttribute('aria-live','polite');bubble.setAttribute('aria-atomic','true');
   doc.body.append(bubble);
-  const schedule=createSpeechSchedule();let message=null,expires=0,friday=isFriday(now()),key='';
+  const schedule=createSpeechSchedule({greet:(t)=>greetingFor(new Date(t)),followUp:()=>{const st=streak?.();if(!st||!st.count)return null;return st.activeToday?doneLine(st.count):streakLine(st.count);}});let message=null,expires=0,friday=isFriday(now()),key='';
   function pair(line,cls){
     const group=doc.createElement('span');group.className=cls;
     const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
@@ -80,7 +91,8 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date()}={}){
   function say(action){
     schedule.reaction(action);
   }
-  const activity=()=>schedule.activity(now().getTime());
+  // Any tap, key or scroll also clears a visible bubble, so it never sits on top of a button the learner wants.
+  const activity=(e)=>{schedule.activity(now().getTime());if(message && e && e.type!=='pointermove'){message=null;render();}};
   const activityEvents=['pointerdown','pointermove','keydown','touchstart','scroll'];
   for(const event of activityEvents)doc.addEventListener(event,activity,{passive:true,capture:true});
   const interval=setInterval(render,1000);

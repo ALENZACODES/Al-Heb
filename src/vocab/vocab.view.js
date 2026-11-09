@@ -294,7 +294,7 @@ export function mount(root, ctx) {
     const heading = el('h2', { class: 'vc-group' }); heading.hidden = true; // filled (and shown) by renderRows only for the function-words group; hidden until then so no empty heading exists while words load
     const search = el('input', { id: 'vc-search', type: 'search', dir: 'auto', autocomplete: 'off', placeholder: 'שלום or hello or hi' });
     search.value = sel.query;
-    const sense = el('p', { id: 'vc-sense', class: 'muted' }, SENSE_NOTE);
+    const sense = el('details', { class: 'muted small' }, el('summary', {}, 'How search works'), el('p', { id: 'vc-sense' }, SENSE_NOTE));
     const status = el('p', { id: 'vc-status', role: 'status', 'aria-live': 'polite', class: 'muted' }, 'Loading words…');
     const addRow = el('div', { class: 'row' });
     const list = el('ul', { id: 'vc-list', class: 'vc-list', 'aria-label': 'Words' });

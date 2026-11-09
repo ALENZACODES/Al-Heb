@@ -1,4 +1,5 @@
 import { mountSpeechBubble } from './rimon-speech.js';
+import { projectStreak } from '../curriculum/streak.js';
 // Twelve drawings per action: start, ten in-betweens, finish.
 export const ACTIONS = Object.freeze({
   blink:{ms:45,label:'Ready to learn',priority:0},
@@ -56,7 +57,7 @@ export function mountRimon({store,doc=document}={}) {
   let alive=true,hidden=false,requestId=0,lastActivity=Date.now(),yawned=false,thought=false,nextBlink=Date.now()+4000,lastPaint='',idleSince=Date.now();
   try{hidden=store?.get('rimon.dismissed',false)===true;}catch{}
   host.hidden=hidden;restore.hidden=!hidden;
-  const speech=mountSpeechBubble(host,{doc});
+  const speech=mountSpeechBubble(host,{doc,streak:()=>{try{const r=store?.get?.('streak');return r?projectStreak(r,new Date()):null;}catch{return null;}}});
   function remember(){try{store?.set('rimon.dismissed',hidden);}catch{}}
   function load(name){
     if(!loaded.has(name)) loaded.set(name,new Promise(resolve=>{const image=new Image();image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=new URL(name+'.png',base).href;}));

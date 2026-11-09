@@ -27,7 +27,9 @@ export function showNudge(doc, count, { onStudy, onLater } = {}) {
   const box = doc.createElement("div");
   box.id = "streak-nudge"; box.setAttribute("role", "status"); box.setAttribute("aria-live", "polite");
   box.style.cssText = "position:fixed;inset-inline:1rem;inset-block-end:5.5rem;z-index:50;max-inline-size:34rem;margin-inline:auto;padding:.8rem 1rem;border-radius:14px;background:#123d2a;color:#f5e6b8;border:2px solid #c9a227;box-shadow:0 6px 24px rgba(0,0,0,.3);display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;";
-  const p = doc.createElement("p"); p.style.margin = "0"; p.style.flex = "1 1 16rem"; p.textContent = nudgeText(count);
+  const pic = doc.createElement("img"); pic.src = new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href; pic.alt = ""; pic.width = 56; pic.height = 56;
+  pic.style.cssText = "inline-size:56px;block-size:56px;object-fit:contain;flex:0 0 auto;";
+  const p = doc.createElement("p"); p.style.margin = "0"; p.style.flex = "1 1 14rem"; p.textContent = "Rimon says: " + nudgeText(count);
   const go = doc.createElement("a"); go.href = "#/learn"; go.textContent = "Study now"; go.className = "btn";
   go.style.cssText = "min-block-size:44px;display:inline-flex;align-items:center;padding:.3rem .9rem;border-radius:999px;background:#c9a227;color:#123d2a;font-weight:700;text-decoration:none;";
   const later = doc.createElement("button"); later.type = "button"; later.textContent = "Later";
@@ -35,7 +37,7 @@ export function showNudge(doc, count, { onStudy, onLater } = {}) {
   const close = () => { box.remove(); };
   go.addEventListener("click", () => { close(); onStudy?.(); });
   later.addEventListener("click", () => { close(); onLater?.(); });
-  box.append(p, go, later);
+  box.append(pic, p, go, later);
   doc.body.append(box);
   return box;
 }

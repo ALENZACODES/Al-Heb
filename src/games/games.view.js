@@ -129,6 +129,6 @@ function arcadeCard(ctx) {
   const streak = arc?.streak || 0;
   return h('section', { class: 'card wf-arcade-card', 'aria-labelledby': 'wf-arcade-h' },
     h('h2', { id: 'wf-arcade-h' }, 'Arcade · today\'s game'),
-    h('p', {}, h('a', { class: 'btn', href: '#/' + game.id + '?daily=1' }, game.title + ' ', heSpan(game.titleHe)), ' ', h('span', { class: 'muted' }, game.tag + '. Same board for everyone today; play it as the daily challenge.')),
+    h('p', {}, h('a', { class: 'btn', href: '#/' + game.id + '?daily=1' }, game.title, h('span', { style: 'margin-inline-start:.45em' }, heSpan(game.titleHe))), ' ', h('span', { class: 'muted' }, game.tag + '. Same board for everyone today; play it as the daily challenge.')),
     h('p', { class: 'muted' }, streak ? `Your arcade streak: ${streak} day${streak === 1 ? '' : 's'}. Play any arcade game today to keep it.` : 'Play any arcade game today to start a streak. Thirty quick games, five levels each, badges for bests and perfect rounds.'));
 }

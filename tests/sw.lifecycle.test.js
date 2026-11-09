@@ -35,7 +35,7 @@ function boot({ version = 'v2', precache = ['index.html', 'offline.html'], fetch
       async match(req) { for (const c of store.values()) { const hit = await c.match(req); if (hit) return hit; } return undefined; },
     },
   };
-  const ctx = { self, caches: self.caches, importScripts() {}, fetch: fetchImpl || (async () => { throw new TypeError('offline'); }), URL, Response };
+  const ctx = { self, caches: self.caches, importScripts() {}, fetch: fetchImpl || (async () => { throw new TypeError('offline'); }), URL, Response, setTimeout, clearTimeout };
   ctx.globalThis = ctx;
   vm.runInNewContext(SW.replace(/importScripts\([^)]*\);/, ''), ctx);
   const fire = async (type, ev = {}) => {

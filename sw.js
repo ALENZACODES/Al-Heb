@@ -21,6 +21,7 @@ const DATA = `alef-data-${VERSION}`;  // every other runtime-cached file (vocab 
 const AUDIO = /\.(mp3|m4a|ogg|wav)$/i;
 const MAX_CLIP_BYTES = 2048 * 1024; // 2 MiB, so the longest prayer recordings (about 1.8 MiB) also work offline; a clip bigger than this is never cached by the worker (plain network, no offline copy)
 const MAX_CLIPS = 600;             // audio entries kept in RUNTIME; past this the oldest-inserted are deleted
+const NAVIGATION_TIMEOUT_MS = 3500; // a stalled connection must not prevent a cached app shell from opening
 
 /** Drop the oldest clips beyond MAX_CLIPS (Cache keys() is in insertion order); putClip = put + trim. */
 async function trimClips() {
@@ -125,7 +126,14 @@ self.addEventListener('fetch', (event) => {
 
   if (req.mode === 'navigate') {
     event.respondWith((async () => {
-      try { const res = await fetch(req); if (res.ok) return res; } catch { /* offline */ }
+      // Network first, but a connection that hangs must not keep an installed learner
+      // on a blank screen. The late network promise cannot replace this response.
+      let timeoutId;
+      const timeout = new Promise((resolve) => { timeoutId = setTimeout(() => resolve(null), NAVIGATION_TIMEOUT_MS); });
+      try {
+        const res = await Promise.race([Promise.resolve().then(() => fetch(req)).catch(() => null), timeout]);
+        if (res?.ok) return res;
+      } finally { clearTimeout(timeoutId); }
       return (await caches.match('index.html')) || (await caches.match('offline.html')) || Response.error();
     })());
     return;
@@ -152,6 +160,8 @@ self.addEventListener('fetch', (event) => {
     const hit = await caches.match(req, { ignoreSearch: false });
     const hitInData = hit && !!(await (await caches.open(DATA)).match(req));
     const net = fetch(req).then(async (res) => { if (res.ok) { if (!(hit && !hitInData)) { const c = await caches.open(DATA); c.put(req, res.clone()); } } return res; }).catch(() => null);
-    return hit || (await net) || (await caches.match('offline.html')) || Response.error();
+    // Only navigations receive offline.html. JS/JSON requests must fail as
+    // resources, not get a 200 HTML page that is then parsed as code or data.
+    return hit || (await net) || Response.error();
   })());
 });

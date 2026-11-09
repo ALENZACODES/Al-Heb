@@ -17,29 +17,29 @@ export const HUB_ENV_KEY = Object.freeze({
 export const GAMES = Object.freeze([
   ['tugowar', 'Antonym Tug-of-War', 'Pull the rope with opposites'],
   ['vowelcatcher', 'Vowel Catcher', 'Catch the falling vowel stars'],
-  ['pinball', 'The Hebrew Pinball Bouncer', 'Pinball with Hebrew letters'],
-  ['prefixblast', 'Bubble Pop Prefix Blast', 'Pop the right prefix bubbles'],
-  ['memorypalace', 'The Memory Palace Courtyard', 'A courtyard that remembers words'],
+  ['pinball', 'Hebrew Pinball', 'Pinball with Hebrew letters'],
+  ['prefixblast', 'Prefix Blast', 'Pop the right prefix bubbles'],
+  ['memorypalace', 'Memory Palace', 'A courtyard that remembers words'],
   ['archbuilder', 'Hebrew Arch-Builder', 'Build each letter stroke by stroke'],
   ['lasermaze', 'Laser Mirror Maze', 'Bounce the beam to the target word'],
   ['letterbridge', 'Letter Bridge Builder', 'Bridge the gap letter by letter'],
-  ['roottree', 'Hebrew Root Tree Cultivator', 'Grow words from their roots'],
-  ['bumperverbs', 'Bumper Car Verb Conjugations', 'Bump the right verb form'],
-  ['shabbatrush', 'Endless Runner: Shabbat Rush', 'Run the pre-Shabbat errands'],
-  ['typewriter', 'Typewriter Conveyor Belt', 'Type the words before they pass'],
+  ['roottree', 'Root Tree', 'Grow words from their roots'],
+  ['bumperverbs', 'Verb Bumper Cars', 'Bump the right verb form'],
+  ['shabbatrush', 'Shabbat Rush', 'Run the pre-Shabbat errands'],
+  ['typewriter', 'Typewriter Belt', 'Type the words before they pass'],
   ['petclinic', 'Pet Clinic Helper', 'Care for the animals, in Hebrew'],
   ['trainswitch', 'Train Track Switchboard', 'Switch the trains to the right words'],
   ['weatherstudio', 'Weather Presenter Studio', 'Present the forecast in Hebrew'],
   ['rentalagent', 'Apartment Rental Agent', 'Match renters to homes'],
   // Echo Chamber remains available by direct link, not in the catalogue until audible pairs pass review.
   ['museumcurator', 'The Museum Curator', 'Sort the artefacts by their words'],
-  ['karaokebeat', 'The Karaoke Beat Matcher', 'Match the word to the beat'],
+  ['karaokebeat', 'Karaoke Beat', 'Match the word to the beat'],
   ['shadowcraft', 'Shadow Craft', 'Match the word to its shadow'],
-  ['ciphergrid', 'Cipher Decryption Grid', 'Crack the letter code'],
+  ['ciphergrid', 'Cipher Grid', 'Crack the letter code'],
   ['shuktaxi', 'Shuk Taxi Driver', 'Drive the market run'],
-  ['barter', 'The Israeli Flea Market Barter', 'Trade your way through the shuk'],
-  ['submarinesonar', 'Submarine Sonar Vowels', 'Ping the vowels under the sea'],
-  ['rhymelab', 'Hebrew Rhyme Laboratory', 'Find the words that rhyme'],
+  ['barter', 'Shuk Barter', 'Trade your way through the shuk'],
+  ['submarinesonar', 'Sonar Vowels', 'Ping the vowels under the sea'],
+  ['rhymelab', 'Rhyme Lab', 'Find the words that rhyme'],
 ]);
 
 /** Practical entry labels, not CEFR equivalences or claims of verified mastery. */
@@ -75,7 +75,7 @@ export const LEVEL_BY_GAME = Object.freeze({
 
 export function mount(root, ctx) {
   const original = new Map([...GAMES, ...ARCADE_GAMES.map((x) => [x.id, x.title, x.tag])].map(([id, title, hook]) => [id, { id, title, hook }]));
-  const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'No Hebrew experience needed: hear, look, find and learn 240 short words' }, ...original.values()];
+  const items = [{ id: 'wordfinder', title: 'Hebrew Word Finder', hook: 'For people who do not know Hebrew yet. Hear a word, find it and learn it. There are 240 short words.' }, ...original.values()];
   const thumbs = [];
   const sections = LEVEL_DESCRIPTIONS.map((intro, i) => {
     const level = i + 1;

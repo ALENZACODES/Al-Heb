@@ -11,9 +11,9 @@ import { DAYSTART_KEY, cleanDayStart } from './daystart.js';
 export const GAME_STORE_KEYS = Object.freeze([
   { key: 'games.tugowar.v1', title: 'Antonym Tug-of-War', file: 'src/games/tugowar.view.js', href: '#/tugowar', code: 'tug' },
   { key: 'games.vowelcatcher.v1', title: 'Vowel Catcher', file: 'src/games/vowelcatcher.view.js', href: '#/vowelcatcher', code: 'vowel' },
-  { key: 'games.pinball.v1', title: 'The Hebrew Pinball Bouncer', file: 'src/games/pinball.view.js', href: '#/pinball', code: 'pin' },
-  { key: 'games.prefixblast.v1', title: 'Bubble Pop Prefix Blast', file: 'src/games/prefixblast.view.js', href: '#/prefixblast', code: 'prefix' },
-  { key: 'games.memorypalace.v1', title: 'The Memory Palace Courtyard', file: 'src/games/memorypalace.view.js', href: '#/memorypalace', code: 'palace' },
+  { key: 'games.pinball.v1', title: 'Hebrew Pinball', file: 'src/games/pinball.view.js', href: '#/pinball', code: 'pin' },
+  { key: 'games.prefixblast.v1', title: 'Prefix Blast', file: 'src/games/prefixblast.view.js', href: '#/prefixblast', code: 'prefix' },
+  { key: 'games.memorypalace.v1', title: 'Memory Palace', file: 'src/games/memorypalace.view.js', href: '#/memorypalace', code: 'palace' },
 ]);
 
 /**

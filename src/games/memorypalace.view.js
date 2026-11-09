@@ -30,7 +30,7 @@ export function mount(root, ctx) {
   const speechNote = h('p', { class: 'muted', 'data-speech': 'palace' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
-    h('h1', { id: 'view-title', tabindex: '-1' }, 'The Memory Palace Courtyard'),
+    h('h1', { id: 'view-title', tabindex: '-1' }, 'Memory Palace'),
     h('p', {}, 'Study each letter picture, walk the ordered route, then recall its stops.'), status, speechNote, board));
   function start() {
     session = createSession({ store: ctx?.store, storeKey: STORE_KEY, par: 5 });

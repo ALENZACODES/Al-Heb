@@ -16,7 +16,7 @@ export function mount(root, ctx) {
   const status = h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading direction signs…');
   const board=h('div',{class:'game-board'});
   const article=h('article',{class:'card game-card game-shuktaxi'},h('h1',{id:'view-title'},'Shuk Taxi Driver'),
-    h('p',{},'Read the Hebrew direction on your journey. The street signs have no English overlay.'),status,board);
+    h('p',{},'Read the Hebrew direction as you go. The street signs have no English on them.'),status,board);
   root.replaceChildren(article);
   function paint(feedback){
     if(!alive||!article.isConnected)return;

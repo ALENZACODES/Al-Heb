@@ -165,7 +165,7 @@ export function mount(root, ctx) {
       type: 'button', class: 'btn ghost tug-hear', 'aria-label': `Hear ${q.prompt.tr}`,
       onclick: () => { void speak(ctx, q.prompt.he, { kind: 'word', id: q.prompt.audio || `tug-${q.key}-${q.reversed ? 2 : 1}` }); },
     }, '🔊');
-    const nodes = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(q.prompt.he, 'he game-he'), ` (${q.prompt.tr} — ${q.prompt.en})? `, hear)];
+    const nodes = [h('p', { class: 'game-prompt' }, 'Opposite of ', heSpan(q.prompt.he, 'he game-he'), ` (${q.prompt.tr}: ${q.prompt.en})? `, hear)];
     const pic = pictureNode(q);
     if (pic) nodes.push(pic);
     nodes.push(h('div', { class: 'game-choices' }, ...q.choices.map((c) => h('button', {
@@ -194,7 +194,7 @@ export function mount(root, ctx) {
     sfx.play('tick');
     sfx.play(ok ? 'success' : 'miss');
     status.textContent = ok
-      ? `Yes — ${q.prompt.he} × ${q.answer.he}. Your team pulls!`
+      ? `Yes. ${q.prompt.he} × ${q.answer.he}. Your team pulls!`
       : `Not that one. The opposite of ${q.prompt.he} is ${q.answer.he} (${q.answer.tr}).`;
     paintRope();
     clearTimeout(timer);

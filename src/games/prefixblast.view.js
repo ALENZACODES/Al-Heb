@@ -39,7 +39,7 @@ export function mount(root, ctx) {
   const speechNote = h('p', { class: 'muted', 'data-speech': 'prefix' });
   const board = h('div', { class: 'game-board' });
   root.replaceChildren(h('article', { class: 'card game-card' },
-    h('h1', { id: 'view-title', tabindex: '-1' }, 'Bubble Pop Prefix Blast'),
+    h('h1', { id: 'view-title', tabindex: '-1' }, 'Prefix Blast'),
     h('p', {}, 'Pop the prefix that gives the requested meaning. A miss leaves the phrase unfinished.'),
     status, speechNote, board));
   function start() {

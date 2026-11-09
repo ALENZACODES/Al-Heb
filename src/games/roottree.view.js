@@ -17,7 +17,7 @@ export function mount(root, ctx) {
   const status = h('p', { role: 'status', class: 'game-status', 'aria-live': 'polite' }, 'Loading root families…');
   const board = h('div', { class: 'game-board' });
   const article = h('article', { class: 'card game-card game-roottree' },
-    h('h1', { id: 'view-title' }, 'Hebrew Root Tree Cultivator'),
+    h('h1', { id: 'view-title' }, 'Root Tree'),
     h('p', {}, 'Grow a branch only with a verb listed under the displayed Hebrew root.'),
     h('p', { class: 'muted' }, 'Family assignments are dictionary-derived and await Hebrew-editor review.'), status, board);
   root.replaceChildren(article);

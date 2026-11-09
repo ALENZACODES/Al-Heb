@@ -19,7 +19,7 @@ export function mount(root,ctx){
   let alive=true,deck=[],R=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading Hebrew numerals…');
   const board=h('div',{class:'game-board'});
-  const article=h('article',{class:'card game-card game-barter'},h('h1',{id:'view-title'},'The Israeli Flea Market Barter'),
+  const article=h('article',{class:'card game-card game-barter'},h('h1',{id:'view-title'},'Shuk Barter'),
     h('p',{},'Read the Hebrew number. Make a counteroffer at your exact budget, below the asking price.'),status,board);
   root.replaceChildren(article);
   // The market-stall backdrop made for this game (approved art, decorative only —

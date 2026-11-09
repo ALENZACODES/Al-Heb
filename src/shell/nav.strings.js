@@ -20,7 +20,7 @@ export const NAV_EN = {
   'nav.route.lettertwins': 'Letter Twins',
   'nav.route.soundsnap': 'Sound Snap',
   'nav.route.lookalikes': 'Look-Alike Sorter',
-  'nav.route.alefbetrun': 'Alef-Bet Run',
+  'nav.route.alefbetrun': 'Aleph-Bet Run',
   'nav.route.finalfive': 'Final Five',
   'nav.route.letterdrop': 'Letter Drop',
   'nav.route.vowelstack': 'Vowel Stack',

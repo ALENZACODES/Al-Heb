@@ -79,7 +79,7 @@ test('trace screen: RTL strip in reading order, one cell per letter, first cell 
   const cs = cells(root);
   assert.equal(cs.length, 2);
   assert.match(cs[0].getAttribute('aria-label'), /Letter 1 of 2: Bet/);
-  assert.match(cs[1].getAttribute('aria-label'), /Letter 2 of 2: Alef/);
+  assert.match(cs[1].getAttribute('aria-label'), /Letter 2 of 2: Aleph/);
   assert.equal(cs[0].getAttribute('data-active'), 'true'); assert.equal(cs[1].getAttribute('data-active'), 'false');
   assert.equal(svgOf(cs[0]).style.pointerEvents, 'auto'); assert.equal(svgOf(cs[1]).style.pointerEvents, 'none');
   assert.equal(svgOf(cs[0]).getAttribute('data-guide'), 'solid');

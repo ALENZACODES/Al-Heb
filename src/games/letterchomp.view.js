@@ -10,7 +10,7 @@ const spec = {
   blurb: 'Rimon the pomegranate is loose in a maze of letters. Eat every copy of the letter shown at the top; its look-alikes are poison. Erasers roam the corridors.',
   howTo: ['Move with the arrow keys, W A S D, the pad below, or by tapping the side of the maze you want to go.', 'Eat only the target letter. A look-alike costs points and a life.', 'When the erasers touch you, you lose a life. Three lives per round.', 'Clear every target letter to finish the level.'],
   levels: [
-    { name: 'Alef to He', size: 9, targets: 5, decoys: 3, erasers: 1, speed: 1000, letters: ['alef', 'bet', 'gimel', 'dalet', 'he'] },
+    { name: 'Aleph to He', size: 9, targets: 5, decoys: 3, erasers: 1, speed: 1000, letters: ['alef', 'bet', 'gimel', 'dalet', 'he'] },
     { name: 'Vav to Yod', size: 9, targets: 6, decoys: 4, erasers: 1, speed: 880, letters: ['vav', 'zayin', 'chet', 'tet', 'yod'] },
     { name: 'Kaf to Ayin', size: 11, targets: 7, decoys: 5, erasers: 2, speed: 780, letters: ['kaf', 'lamed', 'mem', 'nun', 'samekh', 'ayin'] },
     { name: 'Pe to Tav', size: 11, targets: 8, decoys: 6, erasers: 2, speed: 680, letters: ['pe', 'tsadi', 'qof', 'resh', 'shin', 'tav'] },

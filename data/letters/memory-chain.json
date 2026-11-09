@@ -18,10 +18,10 @@
   {
    "id": "alef",
    "hebrew": "א",
-   "name": "Alef",
+   "name": "Aleph",
    "picture": {
     "idea": "A silent mime in a handstand. The handstand body is the letter.",
-    "alt": "Alef becomes a silent mime doing a handstand",
+    "alt": "Aleph becomes a silent mime doing a handstand",
     "svg": "assets/letters/morph/alef.svg"
    },
    "sound": {

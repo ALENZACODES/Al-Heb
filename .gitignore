@@ -11,3 +11,4 @@ dist-test/
 data/images/review/
 tools/torah/snapshot/
 audio/_review/
+.env

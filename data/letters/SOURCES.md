@@ -21,7 +21,7 @@
 - Authored by hand (tools/letters/author_strokes.py). NOT derived from any copyrighted stroke diagram: the Hebrew4Christians, Abzug/JMU, ancient-hebrew.org and Akhlah diagrams were NOT viewed or copied (the PDFs were not reachable and are copyrighted).
 - Stroke counts consistent with research text: print vav/kaf/resh = 1; bet, dalet, zayin, samekh, ayin, tsadi, final mem = 2 (flag `strokeCountConfirmedByResearch`). Cursive alef = 2 and mem = 3 (Hebrew4Christians / HebrewPod101 text).
 - ORDER and DIRECTION are the author's convention (docs/letters/STROKE-RULES.md). Every record is `validated:false`, `needsNativeReview:true`, `quality:"draft"`.
-- Print strokes remain hand-authored over the DejaVu outline (no print font skeletonised; Frank Ruhl Libre, Alef and Heebo are in assets/fonts but not used for strokes).
+- Print strokes remain hand-authored over the DejaVu outline (no print font skeletonised; Frank Ruhl Libre, Aleph and Heebo are in assets/fonts but not used for strokes).
 - Worksheets/workbooks use Frank Ruhl Libre (print) and Gveret Levin (cursive) as dotted guides (OFL 1.1).
 
 ## keyboard-si1452.json

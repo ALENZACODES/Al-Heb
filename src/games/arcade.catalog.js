@@ -7,7 +7,7 @@ export const ARCADE_GAMES = Object.freeze([
   { id: 'lettertwins', title: 'Letter Twins', titleHe: 'תְּאוֹמִים', level: 1, tag: 'Memory pairs: letter and its name' },
   { id: 'soundsnap', title: 'Sound Snap', titleHe: 'שְׁמַע וְלַחֵץ', level: 1, tag: 'Hear a letter, tap it before it hides' },
   { id: 'lookalikes', title: 'Look-Alike Sorter', titleHe: 'דּוֹמִים', level: 1, tag: 'Sort the letters that look alike' },
-  { id: 'alefbetrun', title: 'Alef-Bet Run', titleHe: 'רִיצַת אָלֶף־בֵּית', level: 1, tag: 'Tap the letters in order, fast' },
+  { id: 'alefbetrun', title: 'Aleph-Bet Run', titleHe: 'רִיצַת אָלֶף־בֵּית', level: 1, tag: 'Tap the letters in order, fast' },
   { id: 'finalfive', title: 'Final Five', titleHe: 'אוֹתִיּוֹת סוֹפִיּוֹת', level: 1, tag: 'Pick the final form at the end of a word' },
   { id: 'letterdrop', title: 'Letter Drop', titleHe: 'אוֹתִיּוֹת יוֹרְדוֹת', level: 1, tag: 'Catch the matching letter in your basket' },
   // Level 2: vowels, syllables, first words

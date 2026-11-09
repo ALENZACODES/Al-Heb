@@ -52,7 +52,7 @@ export const ROUTES = [
   { name: 'lettertwins', pattern: '/lettertwins', module: '../games/lettertwins.view.js', title: 'Letter Twins', tier: 'preview', owner: 'games' },
   { name: 'soundsnap', pattern: '/soundsnap', module: '../games/soundsnap.view.js', title: 'Sound Snap', tier: 'preview', owner: 'games' },
   { name: 'lookalikes', pattern: '/lookalikes', module: '../games/lookalikes.view.js', title: 'Look-Alike Sorter', tier: 'preview', owner: 'games' },
-  { name: 'alefbetrun', pattern: '/alefbetrun', module: '../games/alefbetrun.view.js', title: 'Alef-Bet Run', tier: 'preview', owner: 'games' },
+  { name: 'alefbetrun', pattern: '/alefbetrun', module: '../games/alefbetrun.view.js', title: 'Aleph-Bet Run', tier: 'preview', owner: 'games' },
   { name: 'finalfive', pattern: '/finalfive', module: '../games/finalfive.view.js', title: 'Final Five', tier: 'preview', owner: 'games' },
   { name: 'letterdrop', pattern: '/letterdrop', module: '../games/letterdrop.view.js', title: 'Letter Drop', tier: 'preview', owner: 'games' },
   { name: 'vowelstack', pattern: '/vowelstack', module: '../games/vowelstack.view.js', title: 'Vowel Stack', tier: 'preview', owner: 'games' },

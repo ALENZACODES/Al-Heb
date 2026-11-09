@@ -1,5 +1,5 @@
 // @ts-check
-/* Books shelf: the little read-along books (Sifrei Ha-Alef-Bet), grouped by
+/* Books shelf: the little read-along books (Sifrei Ha-Aleph-Bet), grouped by
    level with a "Start here" first group (U-16: 62 flat cards read as a
    warehouse). Data: data/books/index.json + data/books/<id>.json. Covers
    use each book's page-1 picture when it exists; the badges say honestly

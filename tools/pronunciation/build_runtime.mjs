@@ -27,7 +27,7 @@ export const CODES = {
   ch: { text: 'Het (ח): [χ] in Israeli, a deeper throat sound [ħ] in Sephardi, [x] in Ashkenazi.' },
   kh: { text: 'Khaf without a dagesh (כ / ך): [χ] in Israeli, [x] in Sephardi and Ashkenazi.' },
   ay: { text: 'Ayin (ע): silent in Israeli and Ashkenazi, a throat sound [ʕ] in Sephardi.' },
-  al: { text: 'Alef (א) that carries a vowel: silent in Israeli and Ashkenazi, a glottal stop [ʔ] in Sephardi.' },
+  al: { text: 'Aleph (א) that carries a vowel: silent in Israeli and Ashkenazi, a glottal stop [ʔ] in Sephardi.' },
   re: { text: 'Resh (ר): a back-of-the-throat [ʁ] in Israeli, a front rolled or tapped r in Sephardi and Ashkenazi.' },
   sv: { text: 'Spoken shva: e in Israeli and Sephardi, a short [ə] in Ashkenazi.' },
   fr: { text: 'Final kamatz + he (or alef) when the word is not stressed on it: an open [a] in Israeli and Sephardi, a short [ə] ("eh") in Ashkenazi.' },

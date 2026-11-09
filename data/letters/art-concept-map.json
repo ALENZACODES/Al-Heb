@@ -29,7 +29,7 @@
   "letters": [
     {
       "id": "alef",
-      "name": "Alef",
+      "name": "Aleph",
       "hebrew": "א",
       "order": "01",
       "approved": {
@@ -1912,7 +1912,7 @@
     "notDecidedByData": [
       "How many Sephardi or Mizrahi communities keep a throat sound for ayin, and which: the data gives one \"Sephardi\" textbook model and says it is not a model of any community.",
       "Whether Ashkenazi ayin is always silent: data/traditions/sounds.json says \"silent in most forms; traditional authorities advised a throaty sound in prayer, which is rarely done\".",
-      "Alef has the same issue: its fields say silent, while consonants.json lists a glottal stop [ʔ] for Sephardi. Not changed in this pass."
+      "Aleph has the same issue: its fields say silent, while consonants.json lists a glottal stop [ʔ] for Sephardi. Not changed in this pass."
     ]
   },
   "garden": {

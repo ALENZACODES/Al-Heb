@@ -36,7 +36,7 @@
   {"id":"tav-sav","title":"Tav or sav (dagesh on ת)","feature":"dagesh on ת","heard":{"israeli":"NOT audible: both [t]","sephardi":"NOT audible: both [t] (θ / d communities not generated)","ashkenazi":"t with the dot, s without the dot"},"available":0,"pairs":[
 
   ]},
-  {"id":"alef-ayin","title":"Alef or ayin","feature":"א vs ע","heard":{"israeli":"NOT audible: both silent or a glottal stop","sephardi":"alef is a glottal stop [ʔ], ayin is pharyngeal [ʕ]","ashkenazi":"NOT audible: both silent"},"available":45,"pairs":[
+  {"id":"alef-ayin","title":"Aleph or ayin","feature":"א vs ע","heard":{"israeli":"NOT audible: both silent or a glottal stop","sephardi":"alef is a glottal stop [ʔ], ayin is pharyngeal [ʕ]","ashkenazi":"NOT audible: both silent"},"available":45,"pairs":[
    {"a":{"id":"h0f231144","he":"אִם","en":"if, whether","is":"alef","ipa":["ˈim","ˈʔim","ˈim"],"simple":["im","im","im"]},"b":{"id":"h583b5633","he":"עִם","en":"with","is":"ayin","ipa":["ˈim","ˈʕim","ˈim"],"simple":["im","im","im"]},"audible":[false,true,false]},
    {"a":{"id":"h9d36c656","he":"אַל","en":"not, do not","is":"alef","ipa":["ˈal","ˈʔal","ˈal"],"simple":["al","al","al"]},"b":{"id":"h7d05bcca","he":"עַל","en":"on, on top of","is":"ayin","ipa":["ˈal","ˈʕal","ˈal"],"simple":["al","al","al"]},"audible":[false,true,false]},
    {"a":{"id":"h7c9d2ffe","he":"אֵת","en":"(marks a definite direct object; not translated)","is":"alef","ipa":["ˈet","ˈʔet","ˈejs"],"simple":["et","et","eis"]},"b":{"id":"hd08812d6","he":"עֵת","en":"a time","is":"ayin","ipa":["ˈet","ˈʕet","ˈejs"],"simple":["et","et","eis"]},"audible":[false,true,false]},

@@ -26,6 +26,16 @@ function run(script, args, label) {
   return true;
 }
 
+// Reads GOOGLE_TTS_API_KEY from a .env file in the repo root (gitignored) if it isn't already set.
+import { readFileSync as __rf, existsSync as __ex } from 'node:fs';
+{ const envPath = new URL('../../.env', import.meta.url);
+  if (!process.env.GOOGLE_TTS_API_KEY && __ex(envPath)) {
+    for (const line of __rf(envPath, 'utf8').split(/\r?\n/)) {
+      const m = line.match(/^\s*GOOGLE_TTS_API_KEY\s*=\s*"?([^"\s]+)"?\s*$/);
+      if (m) process.env.GOOGLE_TTS_API_KEY = m[1];
+    }
+  }
+}
 if (execute && !process.env.GOOGLE_TTS_API_KEY) { console.error('GOOGLE_TTS_API_KEY is not set.'); process.exit(1); }
 for (const tradition of ['sephardi', 'ashkenazi']) {
   run('tools/audio/render_tts.mjs', ['--provider', 'google', '--voice', 'both', '--tradition', tradition, '--kinds', KINDS, ...limit, ...(execute ? ['--execute'] : [])], `${tradition}: ${execute ? 'recording' : 'dry run'}`);

@@ -173,7 +173,7 @@
   },
   {
    "id": "alef-ayin",
-   "title": "Alef and ayin",
+   "title": "Aleph and ayin",
    "letters": [
     "alef",
     "ayin"
@@ -185,7 +185,7 @@
       "alef",
       "ayin"
      ],
-     "text": "Alef and ayin are the same: a tiny catch of the throat between vowels (the middle of uh-oh) or nothing at the start of a word."
+     "text": "Aleph and ayin are the same: a tiny catch of the throat between vowels (the middle of uh-oh) or nothing at the start of a word."
     },
     "sephardi": {
      "merged": [],
@@ -307,7 +307,7 @@
      "heardIn": [
       "sephardi"
      ],
-     "note": "Alef at the end of a word is silent; so is the ayin here, which only carries a patach in the word before it."
+     "note": "Aleph at the end of a word is silent; so is the ayin here, which only carries a patach in the word before it."
     }
    ],
    "needsNativeSpeaker": [

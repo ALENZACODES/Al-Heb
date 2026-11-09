@@ -10,7 +10,7 @@
   "alef": {
    "id": "alef",
    "he": "א",
-   "name": "Alef",
+   "name": "Aleph",
    "ipa": {
     "israeli": "[ʔ] or ∅",
     "sephardi": "[ʔ]",
@@ -23,9 +23,9 @@
     "american_synagogue": "silent / a glottal stop between vowels (uh-oh)"
    },
    "say": {
-    "israeli": "Alef says nothing; it holds a vowel, like the catch in uh-oh.",
-    "sephardi": "Alef says nothing; it holds a vowel, like the catch in uh-oh.",
-    "ashkenazi": "Alef says nothing; it only holds a vowel."
+    "israeli": "Aleph says nothing; it holds a vowel, like the catch in uh-oh.",
+    "sephardi": "Aleph says nothing; it holds a vowel, like the catch in uh-oh.",
+    "ashkenazi": "Aleph says nothing; it only holds a vowel."
    },
    "changesSound": false,
    "notes": "Ashkenazi alef is silent at all times in most forms.",
@@ -633,9 +633,9 @@
     "american_synagogue": "silent"
    },
    "say": {
-    "israeli": "Ayin says nothing, like Alef; it only holds a vowel.",
+    "israeli": "Ayin says nothing, like Aleph; it only holds a vowel.",
     "sephardi": "Ayin says a squeezed throat sound; Israeli Hebrew keeps it silent.",
-    "ashkenazi": "Ayin says nothing, like Alef; it only holds a vowel."
+    "ashkenazi": "Ayin says nothing, like Aleph; it only holds a vowel."
    },
    "changesSound": true,
    "notes": "General Israeli ayin is absorbed by alef. A pharyngeal learned in shul can mark a speaker as an outsider in Israel. The per-tradition English lines follow the stored IPA; needs-native-review.",

@@ -16,7 +16,7 @@ import { largePositionsIn } from '../torahreader/model.js';
 import { LETTER_ID, isHebrewLetter, FINAL_OF } from './normalize.js';
 
 const LETTER_NAME = {
-  alef: 'Alef', bet: 'Bet', gimel: 'Gimel', dalet: 'Dalet', he: 'He', vav: 'Vav', zayin: 'Zayin', chet: 'Chet', tet: 'Tet',
+  alef: 'Aleph', bet: 'Bet', gimel: 'Gimel', dalet: 'Dalet', he: 'He', vav: 'Vav', zayin: 'Zayin', chet: 'Chet', tet: 'Tet',
   yod: 'Yod', kaf: 'Kaf', lamed: 'Lamed', mem: 'Mem', nun: 'Nun', samekh: 'Samekh', ayin: 'Ayin', pe: 'Pe', tsadi: 'Tsadi',
   qof: 'Qof', resh: 'Resh', shin: 'Shin', tav: 'Tav',
   'kaf-final': 'Final Kaf', 'mem-final': 'Final Mem', 'nun-final': 'Final Nun', 'pe-final': 'Final Pe', 'tsadi-final': 'Final Tsadi',

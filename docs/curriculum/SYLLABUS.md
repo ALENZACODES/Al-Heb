@@ -28,8 +28,8 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Understand this is the page-1 text you will fully decode by lesson 27
 - **r06** Yod and the 'ee' vowel (20 min)
   - Read chirik as 'ee' (the words here have a yod after it; chirik without a yod sounds the same)
-- **r07** Alef and He (25 min)
-  - Know Alef is silent carrier of its vowel
+- **r07** Aleph and He (25 min)
+  - Know Aleph is silent carrier of its vowel
   - Know final-He after kamatz is silent
 - **r08** Tzere: the 'e' / 'ay' vowel (20 min)
   - Read tzere with and without yod: 'e' as in bed (Israeli, Sephardi) or 'ay' as in they (Ashkenazi)

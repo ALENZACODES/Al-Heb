@@ -122,7 +122,7 @@ export const FINISH_BEATS = Object.freeze([
 
 /** The 22 letters in alef-bet order (ids are the letter clip ids under audio/{m,f}/israeli/letter/), with the final forms. */
 export const ALEF_BET = Object.freeze([
-  { id: 'alef', he: 'א', name: 'Alef' }, { id: 'bet', he: 'ב', name: 'Bet' }, { id: 'gimel', he: 'ג', name: 'Gimel' },
+  { id: 'alef', he: 'א', name: 'Aleph' }, { id: 'bet', he: 'ב', name: 'Bet' }, { id: 'gimel', he: 'ג', name: 'Gimel' },
   { id: 'dalet', he: 'ד', name: 'Dalet' }, { id: 'he', he: 'ה', name: 'He' }, { id: 'vav', he: 'ו', name: 'Vav' },
   { id: 'zayin', he: 'ז', name: 'Zayin' }, { id: 'chet', he: 'ח', name: 'Chet' }, { id: 'tet', he: 'ט', name: 'Tet' },
   { id: 'yod', he: 'י', name: 'Yod' }, { id: 'kaf', he: 'כ', name: 'Kaf', final: 'ך', finalId: 'kaf-final' },

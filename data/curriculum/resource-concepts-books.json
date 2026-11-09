@@ -186,7 +186,7 @@
    "id": "bk-bpa-10",
    "source": "bpa",
    "name": "Alphabetical-only sequence, one letter at a time, no review",
-   "what": "Alef to Tav in order with no cumulative review, no look-alike contrast and no sounds task.",
+   "what": "Aleph to Tav in order with no cumulative review, no look-alike contrast and no sounds task.",
    "axes": {
     "r": 300,
     "i": 300,
@@ -395,7 +395,7 @@
    "id": "bk-udemy-01",
    "source": "udemy",
    "name": "Letters taught in small alphabetical groups with a midterm",
-   "what": "Course sections run Alef-Dalet up to Resh-Tav with a midterm in the middle (from the public outline; group sizes beyond the first and last were not shown).",
+   "what": "Course sections run Aleph-Dalet up to Resh-Tav with a midterm in the middle (from the public outline; group sizes beyond the first and last were not shown).",
    "axes": {
     "r": 750,
     "i": 700,
@@ -438,7 +438,7 @@
    "id": "bk-udemy-03",
    "source": "udemy",
    "name": "Dedicated \"recognise handwriting\" block after print letters",
-   "what": "A separate section on handwritten letter forms, run in letter groups (Alef-Hey through Pey-Tav).",
+   "what": "A separate section on handwritten letter forms, run in letter groups (Aleph-Hey through Pey-Tav).",
    "axes": {
     "r": 650,
     "i": 900,

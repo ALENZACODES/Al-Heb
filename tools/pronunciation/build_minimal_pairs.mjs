@@ -41,7 +41,7 @@ export const CONTRASTS = [
     heard: { israeli: 'NOT audible: both are [χ] (merged)', sephardi: 'het is pharyngeal [ħ], khaf is velar [x]; only for speakers who keep the pharyngeal', ashkenazi: 'NOT audible: both are [x] (pharyngeal het is "seldom observed in practice")' } },
   { id: 'tav-sav', title: 'Tav or sav (dagesh on ת)', feature: 'dagesh on ת', mask: { dagesh: false }, value: (c) => (c.ch === 'ת' ? (c.dagesh ? 'tav' : 'sav') : null),
     heard: { israeli: 'NOT audible: both [t]', sephardi: 'NOT audible: both [t] (θ / d communities not generated)', ashkenazi: 't with the dot, s without the dot' } },
-  { id: 'alef-ayin', title: 'Alef or ayin', feature: 'א vs ע', mask: { letter: false }, value: (c) => ((c.ch === 'א' || c.ch === 'ע') && !c.dagesh ? (c.ch === 'א' ? 'alef' : 'ayin') : null), fold: true,
+  { id: 'alef-ayin', title: 'Aleph or ayin', feature: 'א vs ע', mask: { letter: false }, value: (c) => ((c.ch === 'א' || c.ch === 'ע') && !c.dagesh ? (c.ch === 'א' ? 'alef' : 'ayin') : null), fold: true,
     heard: { israeli: 'NOT audible: both silent or a glottal stop', sephardi: 'alef is a glottal stop [ʔ], ayin is pharyngeal [ʕ]', ashkenazi: 'NOT audible: both silent' } },
   { id: 'kamatz-patach', title: 'Kamatz or patach', feature: 'ָ vs ַ', mask: { vowel: false }, value: (c) => (c.vowel === 'kamatz' ? 'kamatz' : c.vowel === 'patach' ? 'patach' : null),
     heard: { israeli: 'NOT audible: both [a]', sephardi: 'NOT audible: both [a] (length not generated)', ashkenazi: 'kamatz [ɔ] (o as in "saw"), patach [a]' } },

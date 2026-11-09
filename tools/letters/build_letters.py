@@ -12,7 +12,7 @@ outl = json.load(open(os.path.join(ROOT, "data", "letters", "_build", "print_out
 
 # id, English name, Hebrew name (pointed), glyph, gematria, ipa (modern Israeli), English cue
 META = [
- ("alef","Alef","אָלֶף","א",1,"ʔ","silent / a tiny glottal stop, like the pause in 'uh-oh'"),
+ ("alef","Aleph","אָלֶף","א",1,"ʔ","silent / a tiny glottal stop, like the pause in 'uh-oh'"),
  ("bet","Bet","בֵּית","ב",2,"b ~ v","b with a dot (bet), v without (vet)"),
  ("gimel","Gimel","גִּימֶל","ג",3,"ɡ","g as in go"),
  ("dalet","Dalet","דָּלֶת","ד",4,"d","d as in door"),

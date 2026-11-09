@@ -19,7 +19,7 @@ export const NOA =
 
 /** Letter ids (contract) in the doc's order, nn = 01..27. `file` is the name used inside file names. */
 export const LETTERS = [
-  { nn: '01', id: 'alef', title: 'Alef', sound: 'silent', shape: 'two diagonal horns joined by a slanted body', keyword: 'Ox head', vocab: [['dad', 'aba'], ['mom', 'ima'], ['light', 'or']], cursive: 'a person leaning on a walking pole' },
+  { nn: '01', id: 'alef', title: 'Aleph', sound: 'silent', shape: 'two diagonal horns joined by a slanted body', keyword: 'Ox head', vocab: [['dad', 'aba'], ['mom', 'ima'], ['light', 'or']], cursive: 'a person leaning on a walking pole' },
   { nn: '02', id: 'bet', title: 'Bet / Vet', sound: 'b / v', shape: 'a box open to the left with a dot inside', keyword: 'Bed inside a house', vocab: [['house', 'bayit'], ['banana', 'banana'], ['sunrise', 'boker']], cursive: 'a swan gliding' },
   { nn: '03', id: 'gimel', title: 'Gimel', sound: 'g', shape: 'a tall stroke with a short foot kicking out to the left', keyword: 'Giraffe mid-stride', vocab: [['camel', 'gamal'], ['garden', 'gan'], ['carrot', 'gezer']], cursive: 'a curled shrimp' },
   { nn: '04', id: 'dalet', title: 'Dalet', sound: 'd', shape: 'a flat lintel with one post hanging from its right end', keyword: 'Door frame', vocab: [['door', 'delet'], ['fish', 'dag'], ['honey', 'dvash']], cursive: "a duck's head and neck" },

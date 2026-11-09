@@ -10,6 +10,7 @@ Takes, per voice (Ari = m, Noa = f):
   1 WaveNet, pointed name      2 WaveNet, name with the vowel letter spelled out and a trailing pause
   3 Chirp 3 HD, pointed name   4 Chirp 3 HD, name said inside a short phrase, then trimmed to the name
   5 WaveNet, slower (0.85)
+  6+ extra spellings for letters listed in EXTRA (vav, shin, yod), WaveNet then Chirp 3 HD
 If faster-whisper is installed, each take is also checked by the speech-to-text model and its score is printed.
 The pick overwrites audio/{m,f}/israeli/letter/<id>.mp3 and audio/{m,f}/israeli/letter-lecture/<id>-name.mp3.
 """
@@ -23,6 +24,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 from fix import ROOT, VOICES, synth_rate, encode  # noqa: E402
 
 REVIEW = os.path.join(ROOT, 'audio', '_review', 'letters')
+# Extra spellings for names the voice misreads. Each gives takes 6 and up (WaveNet, then Chirp 3 HD).
+# Vav: "ואו" is how Israelis write the name; "וָב" can only be read "vav" (bet without a dot is v).
+EXTRA = {'vav': ['וָאו', 'וָב'], 'shin': ['שִׁין.'], 'yod': ['יוּד']}
 
 
 def letter_name(lid):
@@ -53,6 +57,8 @@ def make(lid, key):
     for v, (wavenet, hd) in VOICES.items():
         takes = [(wavenet, he, 1.0, False), (wavenet, plain + ',', 1.0, False), (hd, he, 1.0, False),
                  (hd, 'האות ' + he, 1.0, True), (wavenet, he, 0.85, False)]
+        for alt in EXTRA.get(lid, []):
+            takes += [(wavenet, alt, 1.0, False), (hd, alt, 1.0, False)]
         for i, (voice, text, rate, phrase) in enumerate(takes, 1):
             raw = os.path.join(REVIEW, lid, f'raw-{v}-{i}.mp3')
             out = os.path.join(REVIEW, lid, f'take-{i}-{"ari" if v == "m" else "noa"}.mp3')

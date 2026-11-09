@@ -9,7 +9,7 @@
   "steps": [
     {
       "id": "shin", "kind": "letter", "minutes": 2, "letter": "shin",
-      "title": "Your first letter: Shin",
+      "title": "Your First Letter: Shin",
       "action": "Tap Hear it. Then tap Trace it and draw it once with your finger.",
       "win": "Win 1 of 5: you practised Shin.",
       "why": "mnemonic",

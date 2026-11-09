@@ -93,11 +93,11 @@ export function mount(root, ctx) {
       const optMissing = extras().map((g) => ({ g, miss: g.urls.filter((u) => (extraReport?.missing || []).includes(u)).length }));
       kids.push(el("div", { class: "of-card", id: "of-groups" },
         el("h2", {}, "What works without a connection"),
-        el("p", {}, `${report.cached} of ${report.total} files are saved (${O.fmtBytes(report.bytes)}). "Ready" means every file of that part is on this device; it has not been tested in airplane mode.`),
+        el("p", {}, `${report.cached} of ${report.total} files are saved (${O.fmtBytes(report.bytes)}). "Ready" means every file of that part is on this device.`),
         el("ul", {}, items),
         el("h3", {}, "Optional downloads"),
         el("ul", { id: "of-extras" }, optMissing.map(({ g, miss }) => el("li", { "data-extra": g.id }, `${g.label}: ${miss === 0 ? "saved" : `${miss} of ${g.urls.length} not saved, about ${g.approxMB} MB`}`))),
-        el("p", { class: "muted" }, "Spoken audio clips are not part of this copy. No recorded teacher exists; the few short word clips with a synthetic voice are fetched when played, and whether one works without a connection has not been tested. Other speech is your browser's own voice, not a recording; whether it works without a connection depends on your device.")));
+        el("p", { class: "muted" }, "Ari's and Noa's voice clips are not part of this download. A clip is stored on this device after it plays once while you are online (up to the 600 most recent) and then plays without a connection, so play a lesson once online before using it offline. Speech in your device's own voice is not a recording; it works offline only if your device supports it.")));
     }
 
     // download

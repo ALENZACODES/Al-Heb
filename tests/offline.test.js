@@ -251,7 +251,7 @@ test("card: lists groups with honest states, optional downloads, version, and st
   assert.match(g.text, /App shell, settings and install ready offline \(2 of 2 files/);
   assert.match(g.text, /Scan a photo not saved yet \(0 of 1 files/); assert.match(g.text, /Needs an optional download/);
   assert.match(g.text, /Letters and tracing not saved yet \(0 of 1 files/);
-  assert.match(g.text, /2 of 4 files are saved/); assert.match(g.text, /not been tested in airplane mode/);
+  assert.match(g.text, /2 of 4 files are saved/); assert.match(g.text, /"Ready" means every file of that part is on this device\./); assert.match(g.text, /after it plays once while you are online/);
   assert.match(byId(root, "of-extras").text, /Word audio list \(israeli\): 1 of 1 not saved/);
   assert.match(byId(root, "of-sw").text, /switched on for this page/); assert.match(byId(root, "of-sw").text, /Version v123/);
   assert.match(byId(root, "of-usage").text, /1\.0 MB of about 1024\.0 MB/);

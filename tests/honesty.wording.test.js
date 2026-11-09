@@ -23,10 +23,9 @@ test('every place that speaks about voices says no recordings exist and that bro
   const must = [
     ['src/shell/plain-copy.js', /Ari \(man\) or Noa \(woman\)/], // was /does not change the sound yet/, which was false for Man + Israeli
     ['src/shell/about.view.js', /audioTruthNode/], // the about line (no recorded teacher, synthetic clips) is built in src/shell/audio-truth.js; tests/audio.truth.test.js
-    ['src/shell/settings.view.js', /audioTruthNode/],
+    ['src/shell/settings.view.js', /href: '#\/about'/], // Settings links to About, where the sound statement lives (one place for notes)
     ['src/shell/audio-truth.js', /no recorded teacher/],
     ['src/shell/how.view.js', /No human or studio recordings exist yet/],
-    ['src/shell/offline.view.js', /No recorded teacher exists/],
     ['src/shell/offline.view.js', /not a recording/],
     ['src/shell/a11y.statement.js', /no recorded voices ship yet/],
     ['src/app.js', /No recordings\./],

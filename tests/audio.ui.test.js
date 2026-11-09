@@ -27,9 +27,11 @@ test('How this works: the sound paragraph does not deny that synthetic clips exi
   assert.doesNotMatch(src, /no synthetic voice files exist/);
 });
 
-test('Offline page: mentions the synthetic clips and does not claim they are saved', async () => {
+test('Offline page: voice clips are not in the download; a clip is stored after it plays once (sw.js runtime cache)', async () => {
   const { readFileSync } = await import('node:fs');
   const src = readFileSync(new URL('../src/shell/offline.view.js', import.meta.url), 'utf8');
-  assert.match(src, /synthetic voice/);
+  assert.match(src, /voice clips are not part of this download/);
+  assert.match(src, /stored on this device after it plays once/);
+  assert.match(readFileSync(new URL('../sw.js', import.meta.url), 'utf8'), /const MAX_CLIPS = 600;/, 'the page quotes the runtime cache size');
   assert.doesNotMatch(src, /clips are saved for offline/);
 });

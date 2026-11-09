@@ -420,7 +420,8 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     add('Movements', dn.join(' | '));
     const vl = versionLabel(m); if (vl.oneVersion && vl.text) dl.append(el('dt', {}, 'Version'), el('dd', { class: 'crp-version' }, vl.text));
     add('Note', m.note);
-    dl.append(el('dt', {}, 'Review'), el('dd', {}, m.clergyReviewed ? 'Reviewed by clergy.' : 'Written by the model; not reviewed by a rabbi, cantor or educator.'));
+    // Review status is stated once, on the credits page; a text only gets a line here when clergy have reviewed it.
+    if (m.clergyReviewed) dl.append(el('dt', {}, 'Review'), el('dd', {}, 'Reviewed by clergy.'));
     return dl;
   }
 

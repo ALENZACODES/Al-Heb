@@ -364,7 +364,7 @@ export async function mount(root, ctx) {
         h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-mastery' },
       h('h2', { id: 'award-h-mastery' }, 'Beginner checklist finishes'),
-      h('p', {}, 'Matte, polished and foil are locked layout slots. None is unlocked. A game, a visit, or a lesson tick does not fill them. Issuance stays closed until a reviewed assessment exists.'),
+      h('p', {}, 'Matte, polished and foil open once Aleph has a proper reading check, which is still being built. Games, visits and lesson ticks do not count toward them.'),
       h('ul', { class: 'aw-slots' }, ...masterySlots().map((slot) => h('li', {
         class: 'aw-slot', 'data-state': 'locked', 'data-finish': slot.finish, 'data-slot': slot.id,
       },

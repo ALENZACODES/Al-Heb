@@ -122,8 +122,10 @@ test('audioTruthNode: drawn with no number, then filled from the fetched summary
   assert.match(bad.textContent, /could not be checked/); assert.equal(await loadAudioSummary(async () => ({ ok: false })), null);
 });
 
-test('about, settings and how screens use the data-driven node, not typed counts', () => {
-  for (const f of ['src/shell/about.view.js', 'src/shell/settings.view.js', 'src/shell/how.view.js']) assert.match(read(f), /audioTruthNode\(/, f);
+test('about and how screens use the data-driven node, not typed counts; settings links to About instead of repeating it', () => {
+  for (const f of ['src/shell/about.view.js', 'src/shell/how.view.js']) assert.match(read(f), /audioTruthNode\(/, f);
+  assert.match(read('src/shell/settings.view.js'), /href: '#\/about'/);
+  assert.doesNotMatch(read('src/shell/settings.view.js'), /\d{1,3},\d{3} Hebrew clips/);
   assert.doesNotMatch(read('src/shell/how.view.js'), /no synthetic voice files exist/i);
 });
 

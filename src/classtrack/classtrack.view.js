@@ -226,7 +226,7 @@ export function mount(root, ctx = {}) {
           renderList();
         } }, 'Save my plan');
         body.replaceChildren(
-          plan.goal ? h('p', {}, h('strong', {}, 'My goal: '), plan.goal) : null,
+          plan.goal ? h('p', {}, h('strong', {}, 'My goal: '), plan.goal) : '', // replaceChildren prints a null as the word "null"
           h('div', { class: 'ct-row' }, h('label', { for: 'ct-start' }, 'Start date '), start, h('label', { for: 'ct-pace' }, 'Plan length '), pace),
           days, h('p', {}, h('label', { for: 'ct-goal' }, 'My goal '), goal), h('div', { class: 'ct-row' }, save), status);
       };

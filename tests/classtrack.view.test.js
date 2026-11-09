@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { waitFor } from './helpers/waitfor.js';
@@ -23,13 +24,13 @@ const memStore = (init = {}) => { const m = { ...init }; return { get: async (k,
 const ready = (root) => waitFor(() => /Draft:/.test(root.text), { message: 'classtrack view never finished rendering' });
 const go = async (query = {}, init = {}) => { const root = new Node_('div'); const un = mount(root, { store: memStore(init), query }); await ready(root); return { root, un }; };
 
-test('week list: ten weeks, draft notice, one h1, links to week, handout and teacher plan', async () => {
+test('week list: ten weeks, draft notice, one h1, links to week and handout; no teacher plan', async () => {
   const { root, un } = await go();
   assert.match(root.text, /Draft: Aleph's own plan/);
   assert.equal(root.find((n) => n.tag === 'h1').length, 1);
   assert.equal(root.find((n) => n.attrs['data-week']).length, 10);
   const hrefs = root.find((n) => n.tag === 'a').map((a) => a.attrs.href);
-  assert.ok(hrefs.includes('#/classtrack/3') && hrefs.includes('#/classtrack/3/handout') && hrefs.includes('#/classtrack/3/teacher'));
+  assert.ok(hrefs.includes('#/classtrack/3') && hrefs.includes('#/classtrack/3/handout') && !hrefs.some((x) => /teacher/.test(x)));
   assert.equal(root.find((n) => n.attrs['data-week'] === '1')[0].attrs['data-state'], 'next');
   un();
 });
@@ -76,15 +77,21 @@ test('print button calls window.print when present and is harmless without it', 
   assert.equal(n, 1);
 });
 
-test('teacher plan: timings total the session, common errors come from sound-gap and hints data', async () => {
+test('self-study: no teacher plan; each week has a help box; a 1-year plan adds 42 more weeks with real lessons', async () => {
   const { root } = await go({ week: '1', mode: 'teacher' });
-  const sheet = root.find((n) => /ct-teacher/.test(n.className))[0];
-  assert.ok(sheet);
-  assert.match(sheet.text, /Timing \(60 minutes\)/);
-  assert.match(sheet.text, /Common errors to listen for/);
-  assert.match(sheet.text, /direction-slip/);
-  assert.match(sheet.text, /Vav|vav|Bet|bet/);
-  assert.match(sheet.text, /Self-check/);
+  assert.equal(root.find((n) => /ct-teacher/.test(n.className)).length, 0, 'the old teacher link opens the week itself');
+  assert.ok(root.find((n) => /ct-help/.test(n.className)).length, 'help box on the week');
+  const V = await import('../src/classtrack/classtrack.view.js');
+  const lessons = JSON.parse(readFileSync(new URL('../data/curriculum/lessons.json', import.meta.url))).lessons;
+  assert.equal(V.buildSteps(lessons, '10w').length, 0);
+  assert.equal(V.buildSteps(lessons, '3m').length, 3);
+  assert.equal(V.buildSteps(lessons, '6m').length, 16);
+  const year = V.buildSteps(lessons, '1y');
+  assert.equal(year.length, 42);
+  for (const st of year) assert.ok(st.items.length && st.items.every((it) => /^#\//.test(it.href)), st.title);
+  assert.ok(year.some((st) => /Torah/.test(st.title)) && year.some((st) => /Speak in Israel/.test(st.title)));
+  assert.equal(V.weekDates({ start: '2026-11-09', length: '10w' }, 1), 'Nov 16 to Nov 22');
+  assert.deepEqual(V.normalizePlan({ length: 'x', days: [1, 9, 1], start: 'bad' }), { start: '', length: '10w', days: [1], goal: '' });
 });
 
 test('bad week number falls back to the list; a failing store does not crash', async () => {

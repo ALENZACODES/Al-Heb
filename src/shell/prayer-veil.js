@@ -52,6 +52,16 @@ export function pickPrayer(bank, previous = '', random = Math.random) {
   return pool[n];
 }
 
+/** The opening line for this visit. A first visit always opens with Mah Tovu ("How good are your tents"), said on entering
+ *  a synagogue. Later visits draw from the prayer-book lines (the first 14 of the bank: Modeh Ani, the Priestly Blessing,
+ *  the Shema, Mah Tovu, Ein Kamocha, Ashrei...) three times in four, and from the whole bank otherwise. Never the previous line. */
+export function pickOpening(bank, previous = '', random = Math.random, roll = Math.random) {
+  if (!Array.isArray(bank) || !bank.length) return pickPrayer(bank, previous, random);
+  if (!previous) { const mah = bank.find((p) => p && typeof p.he === 'string' && p.he.startsWith('מַה־טֹּבוּ')); if (mah) return mah; }
+  const liturgy = bank.slice(0, 14);
+  return Number(roll()) < 0.75 ? pickPrayer(liturgy, previous, random) : pickPrayer(bank, previous, random);
+}
+
 /** Clip for a bank prayer, or null. data.audio maps 1-based bank positions ("1".."80") to {m, f} paths. */
 export function prayerAudioPath(data, chosen, voice) {
   if (!data || !Array.isArray(data.prayers) || !chosen) return null;
@@ -287,7 +297,7 @@ function initPrayerVeil() {
       const data = await response.json();
       if (!Array.isArray(data.prayers) || data.prayers.length !== 80) throw new Error('unreviewed or incomplete prayer bank');
       bankData = data;
-      chosen = pickPrayer(data.prayers, readLocal(LAST_KEY), luckyNumber);
+      chosen = pickOpening(data.prayers, readLocal(LAST_KEY), luckyNumber);
     } catch { /* the supplied Modeh Ani is the single safe fallback */ }
     if (closed) return;
     he.textContent = chosen.he;

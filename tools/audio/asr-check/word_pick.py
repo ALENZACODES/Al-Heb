@@ -27,10 +27,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--model', required=True)
     ap.add_argument('--execute', action='store_true')
+    ap.add_argument('--match', default='', help='only clips whose path matches this regular expression')
     a = ap.parse_args()
     rows = {}
     for l in open(P.RES, encoding='utf-8'):
-        r = json.loads(l); rows[r['file']] = r
+        r = json.loads(l)
+        if re.search(a.match, r['file']):
+            rows[r['file']] = r
     pick = json.load(open(PICK, encoding='utf-8')) if os.path.exists(PICK) else {}
     tried = {}
     # 1. best take per weak word

@@ -110,3 +110,27 @@
 {"file": "audio/m/israeli/prayer/vayehi-binsoa.mp3", "decision": "rebuilt", "ratio_before": 0.932, "ratio_after": 0.99, "weak_before": ["אֲדֹנָי", "אֲדֹנָי"], "weak_after": []}
 {"file": "audio/m/israeli/prayer/yehalelu.mp3", "decision": "rebuilt", "ratio_before": 0.969, "ratio_after": 0.969, "weak_before": ["כִּי"], "weak_after": []}
 {"file": "audio/m/israeli/prayer/yigdal.mp3", "decision": "rebuilt", "ratio_before": 0.904, "ratio_after": 0.94, "weak_before": ["הִנּוֹ", "אֲדוֹן", "עוֹלָם", "לְכָל", "נוֹצָר", "יוֹרֶה", "גְדֻלָּתוֹ", "לְזוּלָתוֹ", "צוֹפֶה", "וְיוֹדֵעַ", "סְתָרֵינוּ", "מַבִּיט", "לְסוֹף", "דָּבָר", "בְּקַדְמָתוֹ"], "weak_after": ["הִנּוֹ", "לֹא", "יַחֲלִיף", "הָאֵל", "וְלֹא", "יָמִיר", "דָּתוֹ", "לְעוֹלָמִים"]}
+{"file": "audio/f/israeli/line/cafe-01.mp3", "decision": "kept (cannot join: no word clip for לִשְׁנַיִם,)", "ratio_before": 0.732, "weak_before": ["שֻׁלְחָן"]}
+{"file": "audio/f/israeli/line/cafe-03-f.mp3", "decision": "kept (cannot join: no word clip for רוֹצָה)", "ratio_before": 0.667, "weak_before": ["קָפֶה"]}
+{"file": "audio/f/israeli/line/cafe-03-m.mp3", "decision": "kept (cannot join: no word clip for רוֹצֶה)", "ratio_before": 0.857, "weak_before": ["קָפֶה"]}
+{"file": "audio/f/israeli/line/cafe-06.mp3", "decision": "kept (cannot join: no word clip for שָׁחוֹר)", "ratio_before": 0.632, "weak_before": ["קָפֶה"]}
+{"file": "audio/f/israeli/line/cafe-07.mp3", "decision": "rebuilt", "ratio_before": 0.667, "ratio_after": 1.0, "weak_before": ["קָפֶה"], "weak_after": []}
+{"file": "audio/f/israeli/line/cafe-08.mp3", "decision": "kept (cannot join: no word clip for נַעֲנָע)", "ratio_before": 0.824, "weak_before": ["עִם"]}
+{"file": "audio/f/israeli/line/fillers-20.mp3", "decision": "rebuilt", "ratio_before": 0.75, "ratio_after": 1.0, "weak_before": ["זֶה"], "weak_after": []}
+{"file": "audio/f/israeli/line/politeness-05.mp3", "decision": "rebuilt", "ratio_before": 0.778, "ratio_after": 1.0, "weak_before": ["מָה"], "weak_after": []}
+{"file": "audio/f/israeli/line/shop-04.mp3", "decision": "rebuilt", "ratio_before": 0.8, "ratio_after": 1.0, "weak_before": ["זֶה"], "weak_after": []}
+{"file": "audio/f/israeli/line/small-talk-03-m.mp3", "decision": "kept (cannot join: no word clip for מֵאֵיפֹה)", "ratio_before": 0.778, "weak_before": ["אַתָּה"]}
+{"file": "audio/m/israeli/line/cafe-01.mp3", "decision": "kept (cannot join: no word clip for לִשְׁנַיִם,)", "ratio_before": 0.727, "weak_before": ["שֻׁלְחָן"]}
+{"file": "audio/m/israeli/line/cafe-03-f.mp3", "decision": "kept (cannot join: no word clip for רוֹצָה)", "ratio_before": 0.667, "weak_before": ["קָפֶה"]}
+{"file": "audio/m/israeli/line/cafe-07.mp3", "decision": "rebuilt", "ratio_before": 0.762, "ratio_after": 1.0, "weak_before": ["קָפֶה"], "weak_after": []}
+{"file": "audio/m/israeli/line/cafe-08.mp3", "decision": "kept (cannot join: no word clip for נַעֲנָע)", "ratio_before": 0.706, "weak_before": ["עִם"]}
+{"file": "audio/m/israeli/line/cafe-15.mp3", "decision": "rebuilt", "ratio_before": 0.727, "ratio_after": 1.0, "weak_before": ["אֶחָד"], "weak_after": []}
+{"file": "audio/m/israeli/line/cafe-26.mp3", "decision": "kept (cannot join: no word clip for הַחֶשְׁבּוֹן,)", "ratio_before": 0.667, "weak_before": ["בְּבַקָּשָׁה"]}
+{"file": "audio/m/israeli/line/directions-04.mp3", "decision": "rebuilt", "ratio_before": 0.769, "ratio_after": 1.0, "weak_before": ["זֶה"], "weak_after": []}
+{"file": "audio/m/israeli/line/greetings-10.mp3", "decision": "rebuilt", "ratio_before": 0.588, "ratio_after": 1.0, "weak_before": ["שָׁנָה"], "weak_after": []}
+{"file": "audio/m/israeli/line/greetings-18.mp3", "decision": "rebuilt", "ratio_before": 0.5, "ratio_after": 1.0, "weak_before": ["כָּכָה", "כָּכָה"], "weak_after": []}
+{"file": "audio/m/israeli/line/greetings-19.mp3", "decision": "rebuilt", "ratio_before": 0.667, "ratio_after": 0.933, "weak_before": ["נָעִים"], "weak_after": []}
+{"file": "audio/m/israeli/line/politeness-05.mp3", "decision": "rebuilt", "ratio_before": 0.889, "ratio_after": 1.0, "weak_before": ["מָה"], "weak_after": []}
+{"file": "audio/m/israeli/line/shop-03.mp3", "decision": "rebuilt", "ratio_before": 0.667, "ratio_after": 1.0, "weak_before": ["זֶה"], "weak_after": []}
+{"file": "audio/m/israeli/line/shop-04.mp3", "decision": "rebuilt", "ratio_before": 0.8, "ratio_after": 1.0, "weak_before": ["זֶה"], "weak_after": []}
+{"file": "audio/m/israeli/line/taxi-07.mp3", "decision": "rebuilt", "ratio_before": 0.727, "ratio_after": 0.97, "weak_before": ["בְּבַקָּשָׁה"], "weak_after": []}

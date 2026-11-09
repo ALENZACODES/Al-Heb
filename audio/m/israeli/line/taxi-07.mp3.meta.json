@@ -1,13 +1,19 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
  "inputSha256": "e9868e92b35926c3bdce3358c5cf41498baab851f8a9265b07dc7fd340e1d52c",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+ "stitchedFrom": [
+  "audio/m/israeli/word/il06-w1.mp3",
+  "audio/m/israeli/word/i-23-w6.mp3",
+  "audio/m/israeli/word/il01-w3.mp3"
+ ]
 }

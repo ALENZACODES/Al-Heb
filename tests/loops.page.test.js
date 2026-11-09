@@ -158,7 +158,7 @@ test('targets: every button in the page uses the shared btn class (48 px tap siz
 });
 test('routes: /daily is one preview route outside the first install, v0 stays at 20, and the key is registered everywhere', async () => {
   const { ROUTES, matchRoute } = await import('../src/shell/router.js');
-  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 20); const r = ROUTES.find((x) => x.name === 'daily');
+  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 24); /* 20 + Library and Brain Lab (4 routes), promoted 2026-11-09 at the owner's order (docs/v0/SCOPE.md) */ const r = ROUTES.find((x) => x.name === 'daily');
   assert.equal(r.tier, 'preview'); assert.equal(matchRoute('#/daily').route.name, 'daily'); assert.ok(fs.existsSync(path.resolve(ROOT, 'src/shell', r.module)));
   const { computeManifest } = await import('../tools/build-precache.mjs'); const m = computeManifest(ROOT);
   assert.ok(![...m.files, ...m.onDemand].some((f) => f.startsWith('preview/')), 'preview/loops is not in the precache lists');

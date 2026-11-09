@@ -17,14 +17,14 @@ export const SECTION_ROUTES = {
     'ladder', 'fade', 'fadeline', 'scaffold', 'gender', 'roles', 'firstday-ladder', 'vocab', 'vocab-themes', 'sprint', 'wordtrace', 'dialogues', 'dialogue', 'phrases', 'phrase',
     'israel', 'israelsec', 'intermediate', 'intermediatelesson', 'grammar', 'grammartopic', 'typing', 'classtrack', 'classtrackweek', 'classtrackmode',
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
-    // Brain Lab (daily drills) and its drill pages
-    'lab', 'labgame',
+    // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
+    'lab', 'labgame', 'library', 'libraryarticle',
     // games hub and every game (owner 'games'), arcade included
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
-  read: ['library', 'libraryarticle', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
+  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
   speak: ['speak', 'listen', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],

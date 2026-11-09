@@ -28,6 +28,10 @@ One line per route; the backtick name is the route `name` in `ROUTES` (the test 
 - `calendar` (/calendar) - the Hebrew calendar: Shabbat times, festivals and the weekly portion (promoted 2026-11-07 at the owner's order: the page worked but sat buried in the Preview group, so learners could not find it).
 - `festivals` (/festivals) - this week in the Jewish year (promoted with the calendar, 2026-11-07).
 - `festival` (/festivals/:id) - one festival's words (the calendar family's detail page, promoted with it).
+- `library` (/library) - the Library: short articles on Jewish life with their Hebrew words and sources, and the Letter Videos page (promoted 2026-11-09 at the owner's order so learners can find it; the articles pass the ten checks in tools/content/check-articles.mjs, but no rabbi, cantor or native speaker has reviewed them yet).
+- `libraryarticle` (/library/:id) - one Library article or the Letter Videos page (promoted with the Library).
+- `lab` (/lab) - Brain Lab: the daily three-drill workout and skill scores (promoted 2026-11-09 at the owner's order; its Hebrew all comes from data already in the app, not yet reviewed by a native speaker).
+- `labgame` (/lab/:game) - one Brain Lab drill (promoted with Brain Lab).
 - `help` (/help) - the beginner's help page: plain-word answers about starting, sound, progress and what is not finished yet (added 2026-11-07, usability review U-10: the app had no help page at all; the deep explainer stays at /how).
 
 Why these: they are the shortest path a new learner takes (welcome, first day, lessons, letters, review, progress), plus the pages a

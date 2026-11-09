@@ -87,11 +87,14 @@ export function mountRimon({store,doc=document}={}) {
     const parent=anchor || doc.body;if(host.parentNode!==parent)parent.append(host);
     host.classList.toggle('rimon-corner',!anchor);speech.refresh();
   }
-  // Phones: after he has said his piece Rimon ducks behind the bottom bar and peeks over it, so he never sits on a lesson.
+  // Phones: after he has said his piece Rimon ducks behind the bottom bar (two seconds after he reacts, and at once on a new page) and peeks over it, so he never sits on a lesson.
   // Anything he reacts to (a right answer, a streak) brings him back up; a tap on his head does too.
   const phone=()=>{try{return !!doc.defaultView?.matchMedia?.('(max-width:600px)')?.matches;}catch{return false;}};
   let peekTimer=0;
-  function peekSoon(ms=5000){clearTimeout(peekTimer);host.classList.remove('rimon-peek');if(phone())peekTimer=setTimeout(()=>{if(alive&&host.classList.contains('rimon-corner'))host.classList.add('rimon-peek');},ms);}
+  function peekSoon(ms=2000){clearTimeout(peekTimer);host.classList.remove('rimon-peek');if(phone())peekTimer=setTimeout(()=>{if(alive&&host.classList.contains('rimon-corner'))host.classList.add('rimon-peek');},ms);}
+  // A new page starts with Rimon already peeking, so the top of the page is never covered.
+  const onRoute=()=>{if(alive&&phone()&&host.classList.contains('rimon-corner')){clearTimeout(peekTimer);host.classList.add('rimon-peek');}};
+  doc.defaultView?.addEventListener?.('hashchange',onRoute);
   host.addEventListener('click',e=>{if(host.classList.contains('rimon-peek')&&e.target!==dismiss){e.preventDefault();peekSoon();play('wave');}});
   const event=e=>{
     const {action,nextHref}=e.detail || {};
@@ -107,7 +110,10 @@ export function mountRimon({store,doc=document}={}) {
   });
   const activity=()=>{lastActivity=Date.now();yawned=false;thought=false;};
   const ready=()=>{
+    // a page greeting: he waves from where he is; when already peeking he stays down so the new page is clear
+    const wasPeeking=host.classList.contains('rimon-peek');
     next.hidden=true;observer?.disconnect();inlineVisible=true;place();reset();activity();play('wave');
+    if(wasPeeking&&phone()&&host.classList.contains('rimon-corner')){clearTimeout(peekTimer);host.classList.add('rimon-peek');}
     const hero=doc.querySelector('.show-hero-text');
     if(hero && typeof IntersectionObserver==='function'){
       observer=new IntersectionObserver(entries=>{inlineVisible=entries[0].isIntersecting;place();},{threshold:0.1});observer.observe(hero);
@@ -130,5 +136,5 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
-  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  return {element:host,play,ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
 }

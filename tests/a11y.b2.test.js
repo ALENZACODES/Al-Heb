@@ -60,5 +60,5 @@ test('every new route is registered as preview with a nav string, in a section, 
     assert.ok(Object.values(SECTION_ROUTES).some((l) => l.includes(n)), `${n} in a nav section`); assert.ok(strings.includes(`'nav.route.${n}'`));
     assert.ok(readFileSync(new URL('../src/shell/' + r.module, import.meta.url)), 'module exists');
   }
-  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 20);
+  assert.equal(ROUTES.filter((r) => r.tier === 'v0').length, 24); /* 20 + Library and Brain Lab (4 routes), promoted 2026-11-09 at the owner's order (docs/v0/SCOPE.md) */
 });

@@ -73,6 +73,7 @@ function mountMap(root, ctx) {
         ...[["read", tr(ctx, "learn.track.read", "Read the prayer book")], ["israel", tr(ctx, "learn.track.israel", "Speak in Israel")]].map(([id, label]) =>
           el("button", { type: "button", class: "alef-tab", "aria-pressed": String(track === id), id: `alef-tab-${id}`,
             onclick: () => { track = id; render(); } }, label))),
+      continueCard(list[firstOpen] && !done.has(list[firstOpen].id) ? list[firstOpen] : null, doneInTrack, list.length, st),
       el("p", { class: "alef-progress", role: "status" }, `${doneInTrack} / ${list.length} ${tr(ctx, "learn.lessonsDone", "lessons done")}`),
       el("p", { class: "alef-due", role: "status" }, dueCount
         ? dueCount === 1 ? "1 review due" : `${dueCount} ${tr(ctx, "learn.dueReviews", "reviews due")}`
@@ -113,9 +114,28 @@ function mountMap(root, ctx) {
       list.length > 8 ? el("p", {}, el("button", { type: "button", class: "btn secondary", id: "alef-show-all", "aria-pressed": String(showAll), onclick: () => { showAll = !showAll; render().then(() => { if (alive) wrap.querySelector?.("#alef-show-all")?.focus?.(); }); } }, showAll ? "Show fewer lessons" : `Show all ${list.length} lessons`)) : null);
   }
 
+  /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
+  function continueCard(next, doneCount, total, st) {
+    const pct = total ? Math.round((doneCount / total) * 100) : 0;
+    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
+    const streak = st?.streak?.count || 0;
+    const say = !next ? "You finished every lesson in this track. Amazing!"
+      : doneCount === 0 ? "Let's start! Your first lesson takes about " + next.estMinutes + " minutes."
+      : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
+      : "Ready for the next one? You're doing great.";
+    return el("div", { class: "alef-continue", role: "group", "aria-label": "Continue learning" },
+      pic,
+      el("div", { class: "alef-continue-body" },
+        el("p", { class: "alef-continue-say" }, el("strong", {}, "Rimon: "), say),
+        next ? el("p", { class: "alef-continue-next" }, el("span", { class: "muted" }, "Next: "), el("strong", {}, next.title)) : null,
+        el("div", { class: "alef-continue-bar", role: "progressbar", "aria-valuemin": "0", "aria-valuemax": String(total), "aria-valuenow": String(doneCount), "aria-label": "Lessons done in this track" },
+          el("span", { style: `inline-size:${pct}%` })),
+        next ? el("button", { type: "button", class: "alef-continue-go", onclick: () => ctx?.route?.(`/learn?lesson=${next.id}`) }, doneCount === 0 ? "Start your first lesson" : "Continue") : null));
+  }
+
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

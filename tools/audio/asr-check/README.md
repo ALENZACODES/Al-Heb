@@ -41,6 +41,18 @@ Every take is logged in `tools/audio/asr-check/fix-log.jsonl`.
 Then run the scan again (`scan.py --report-only` is not enough: the fixed files must be heard again; delete
 `tools/audio/asr-check/results.jsonl` lines for the fixed files, or the whole file, and rerun `scan.py`).
 
+## Dictionary words
+
+After `node tools/audio/render_dictionary.mjs --execute`, check only the new dictionary clips, then re-record the ones that fail:
+
+```
+python tools/audio/asr-check/scan.py --kinds dictionary
+python tools/audio/asr-check/fix.py --execute
+node tools/vocab/build-clip-lookup.mjs
+```
+
+The report lists each word as pass, borderline or fail; `fix.py` tries up to four new takes for every fail and keeps the best one that passes.
+
 ## Limits
 
 - It is a machine listener. A **fail** is strong evidence; a **pass** means the word is recognisable, not that a teacher approved

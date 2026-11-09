@@ -7,7 +7,7 @@
  "inputText": "סֶלָה׃",
  "inputSha256": "1c1a5ff7d34c83035d40d9fa21d4fc5b9709aad0739240b44ba0d6028a822196",
  "ingestedAt": null,
- "licence": "not cleared",
+ "licence": "customer-owned",
  "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair (see CASTING-REPORT.md) reading a respelling. The respelled Latin input actually sent was not recorded, so inputText is the manifest Hebrew text. Slot-level provenance, not per-clip verified; render date not recorded.",
  "inputTextKind": "respelling-unrecorded"
 }

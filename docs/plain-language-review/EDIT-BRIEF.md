@@ -15,7 +15,7 @@ Do the work. Open a pull request when the tests pass. Do not push to `main` or t
 - Do **not** start from, commit to, or push to:
   - `john/israeli-production-2026-11-05`
   - `john/fun-lessons-start-2026-11-06`
-  - any `chatgpt/*`, `cursor/*`, or other bot working branch
+  - any other working branch that is not this one
   - the dirty worktrees at `/workspace/Al-Heb` and `/workspace/Al-Heb-fun`
 - Work on **`john/easy-to-follow-voice-2026-11-09`**. Do not push to the deleted branch `john/human-voice-2026-11-09`.
 
@@ -36,7 +36,7 @@ Do **not**:
 - Add personality that invents facts, jokes that punch down, or claims the app cannot support.
 - Mention CAIA, CQF, CU Boulder, conferral dates, or Brown University anywhere public.
 - Put a personal bio on About beyond "Made by John Khan." Location, if it appears, is Toronto, Ontario.
-- Rewrite public-domain JPS 1917, liturgy in English, or dictionary glosses unless a gloss is accidentally written as an AI stock sentence rather than a definition.
+- Rewrite public-domain JPS 1917, liturgy in English, or dictionary glosses unless a gloss is accidentally written as a stock machine sentence rather than a definition.
 - "Fix" false friends listed in NOTES.md section E (literal *journey* as travel, *unlock* as a game level, *harness* as a noun, "how it is said", "What would you like?" in a café dialogue, CSS `landscape`).
 - Commit in the review worktree at `/workspace/aleph-human-review/repo` if it is still detached; do your work in a fresh branch of a clean clone or worktree.
 
@@ -69,7 +69,7 @@ Keep every `sources` URL. After rewriting, spot-check that names, years, street 
 
 Edit `data/library/articles.json` using the sentence-level list in NOTES.md A9.
 
-Heading policy: the current gate in `tools/content/check-articles.mjs` **requires Title Case**. Humanizer treats Title Case headings as an AI tell. Preferred path: change the gate to sentence case, update `tests/library.test.js` (and any snapshot or title-case assertions), and convert article titles and section headings to sentence case, with plainer heading wording where the current heading is written for effect. If you do not want to touch the gate in this PR, leave titles in Title Case and only fix the sentences.
+Heading policy: the current gate in `tools/content/check-articles.mjs` **requires Title Case**. Title Case headings are often a machine-writing habit. Preferred path: change the gate to sentence case, update `tests/library.test.js` (and any snapshot or title-case assertions), and convert article titles and section headings to sentence case, with plainer heading wording where the current heading is written for effect. If you do not want to touch the gate in this PR, leave titles in Title Case and only fix the sentences.
 
 Re-run `node tools/content/check-articles.mjs` and, if the environment can reach the network, `node tools/content/check-sources.mjs`.
 

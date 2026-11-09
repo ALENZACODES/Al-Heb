@@ -22,7 +22,7 @@ Reviewed: 9 November 2026, America/Toronto
 Review tree: `/workspace/aleph-human-review/repo` (detached worktree of `origin/main`, do not commit or push from this tree)  
 Commit: `e074ceae005a372cc20674ab7004db727707c1d5` (9 November 2026, 17:13 America/Toronto)  
 Message: "Word takes workflow: push the takes in batches of 300"  
-Guide: [blader/humanizer](https://github.com/blader/humanizer) `SKILL.md` v3.1.0, based on Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). The GitHub repo is live; that is the checklist used below.
+Guide: Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). That is the checklist used below.
 
 ## Why this branch
 
@@ -244,7 +244,7 @@ Lesson titles and goals are mostly task-like ("Say Hagomel after a safe journey�
 
 Exercise feedback in `src/curriculum/exercises.session.js` was already signed off as human in the earlier audit ("Correct.", "Not quite.", "Still tricky. It will come back in your review."). Keep that tone.
 
-Reflection prompts in `prompts.json` should be read for §3/§4 ("What really matters", "Let's explore"). I did not find those stock openers in a spot check; still have Claude skim the English prompt lines.
+Reflection prompts in `prompts.json` should be read for §3/§4 ("What really matters", "Let's explore"). I did not find those stock openers in a spot check; still skim the English prompt lines.
 
 ### A14. Read, Speak, Torah, Listen, Brain Lab, Study plan, Progress
 
@@ -289,7 +289,7 @@ Do not invent new exclamation-heavy CTAs ("Unlock your potential", "Start your j
 
 ## C. Write-ups (articles, stories, certificates, lesson text)
 
-Covered above in A8–A13. Priority order for Claude:
+Covered above in A8–A13. Priority order for the edits:
 
 1. Rewrite `data/synagogues/canada.json` stories (plagiarism + sales/AI openers).
 2. Library article sentences listed in A9 (and heading policy decision).

@@ -37,7 +37,7 @@ const CSS = `
 .lib-vid figcaption .he{color:#f2d27c;font-size:1.3rem}
 .lib-feature{display:flex;gap:.8rem;align-items:center;background:#1e4634;color:#fffaf0;border-radius:14px;padding:.7rem .9rem;text-decoration:none;border:2px solid #d4a647;margin-block:1rem}
 .lib-feature b{color:#f2d27c;display:block}
-.lib-src{font-size:.78rem;color:var(--muted,#6b746c);margin-block-start:1.6rem}
+.lib-src{font-size:.78rem;color:#56635a;margin-block-start:1.6rem}
 .lib-src summary{cursor:pointer;min-block-size:44px;display:flex;align-items:center}
 .lib-src ol{padding-inline-start:1.2rem}
 .lib-src a{color:inherit}

@@ -9,7 +9,9 @@ import {
 } from './lab.core.js';
 import { DRILLS } from './lab.games.js';
 
-const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#4f8a6a', problem: '#a5762a' };
+const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
+// Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
+const SKILL_INK = { speed: '#163527' };
 
 const CSS = `
 .lab{max-inline-size:44rem;margin-inline:auto}
@@ -168,7 +170,7 @@ function drill(root, ctx, id) {
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
-        h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout drill ${pos + 1} of 3` : ''),
+        h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout drill ${pos + 1} of 3` : ''),
         h('p', { class: 'how' }, game.blurb),
         h('p', { class: 'lab-note' }, `${globalThis.document?.documentElement?.hasAttribute?.('data-calm') ? 'Ten rounds, no clock (calm mode is on).' : `${SESSION_SECONDS} seconds.`} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
         h('div', { class: 'lab-actions' }, start)));

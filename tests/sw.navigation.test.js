@@ -38,7 +38,7 @@ function worker(fetchImpl) {
     addEventListener(name, fn) { (listeners[name] ||= []).push(fn); },
     skipWaiting: async () => {}, clients: { claim: async () => {} }
   };
-  vm.runInNewContext(SHORT.replace(/importScripts\\([^)]*\\);/, ''), {
+  vm.runInNewContext(SHORT.replace(/importScripts\([^)]*\);/, ''), {
     self, caches, fetch: fetchImpl, URL, Response, Headers, setTimeout, clearTimeout, importScripts() {}
   });
   const get = async (path, mode = 'cors') => {

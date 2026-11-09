@@ -1,13 +1,22 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
  "inputSha256": "f0c962418f980f67a39ef5e6d35be6628b3c24eda26732928c6dd7bc2be31ba7",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
+ "stitchedFrom": [
+  "audio/m/israeli/word/h8913b4db.mp3",
+  "audio/m/israeli/word/mi-sheberach-opening-w2.mp3",
+  "audio/m/israeli/word/avot-1-w6.mp3",
+  "audio/m/israeli/word/avot-1-w8.mp3",
+  "audio/m/israeli/word/avot-1-w10.mp3",
+  "audio/m/israeli/word/mi-sheberach-opening-w6.mp3"
+ ]
 }

@@ -1,13 +1,31 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃",
  "inputSha256": "46a7dff919bf08cd6dc925ab93c37cffa4fea33e0beb69dff2934715daf2b128",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בְּעָלְמָא דִּי־בְרָא כִרְעוּתֵהּ וְיַמְלִיךְ מַלְכוּתֵהּ בְּחַיֵּיכוֹן וּבְיוֹמֵיכוֹן וּבְחַיֵּי דְכָל־בֵּית יִשְׂרָאֵל בַּעֲגָלָא וּבִזְמַן קָרִיב וְאִמְרוּ אָמֵן׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/i-04-w3.mp3",
+  "audio/f/israeli/word/kaddish-1-w7.mp3",
+  "audio/f/israeli/word/kaddish-1-w8.mp3",
+  "audio/f/israeli/word/kaddish-1-w9.mp3",
+  "audio/f/israeli/word/kaddish-1-w10.mp3",
+  "audio/f/israeli/word/kaddish-1-w11.mp3",
+  "audio/f/israeli/word/kaddish-1-w12.mp3",
+  "audio/f/israeli/word/kaddish-1-w13.mp3",
+  "audio/f/israeli/word/kaddish-1-w14.mp3",
+  "audio/f/israeli/word/brich-shmei-w115.mp3",
+  "audio/f/israeli/word/kaddish-1-w16.mp3",
+  "audio/f/israeli/word/kaddish-1-w17.mp3",
+  "audio/f/israeli/word/kaddish-1-w18.mp3",
+  "audio/f/israeli/word/kaddish-1-w19.mp3",
+  "audio/f/israeli/word/haftarah-after-w143.mp3"
+ ]
 }

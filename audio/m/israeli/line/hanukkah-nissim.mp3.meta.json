@@ -1,13 +1,29 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה׃",
  "inputSha256": "056154258638d3538c99d1265f7181bf678db5821a010a3b6ee9b61415b4372c",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/aleinu-1-w38.mp3",
+  "audio/m/israeli/word/avot-1-w2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/aleinu-1-w54.mp3",
+  "audio/m/israeli/word/adon-olam-1-w14.mp3",
+  "audio/m/israeli/word/birkat-hamazon-1-w6.mp3",
+  "audio/m/israeli/word/hanukkah-nissim-w7.mp3",
+  "audio/m/israeli/word/hanukkah-nissim-w8.mp3",
+  "audio/m/israeli/word/hanerot-halalu-w12.mp3",
+  "audio/m/israeli/word/hanukkah-nissim-w10.mp3",
+  "audio/m/israeli/word/hanukkah-nissim-w11.mp3",
+  "audio/m/israeli/word/hanukkah-nissim-w12.mp3",
+  "audio/m/israeli/word/haftarah-after-w113.mp3"
+ ]
 }

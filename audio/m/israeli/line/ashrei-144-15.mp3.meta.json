@@ -1,13 +1,24 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁאֲדֹנָי אֱלֹהָיו׃",
  "inputSha256": "d56b137c84d0d69d74785b5649030414f8e59fe59d6dacdde70ab3fa8fce5f55",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ אַשְׁרֵי הָעָם שֶׁאֲדֹנָי אֱלֹהָיו׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/ashrei-144-15-w1.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w2.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w3.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w4.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w1.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w2.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w7.mp3",
+  "audio/m/israeli/word/ashrei-144-15-w8.mp3"
+ ]
 }

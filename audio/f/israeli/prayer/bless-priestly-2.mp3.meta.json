@@ -1,13 +1,21 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
  "inputSha256": "1d8169fdab160694e672eeed41926a10117be48da7306fb6940f807ab9d2e02e",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/bless-priestly-2-w1.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w3.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w4.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w5.mp3"
+ ]
 }

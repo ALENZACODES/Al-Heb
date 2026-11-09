@@ -1,13 +1,34 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּינוּ וְלַעֲלוּבַת נֶפֶשׁ תּוֹשִׁיעַ בִּמְהֵרָה בְיָמֵינוּ בָּרוּךְ אַתָּה אֲדֹנָי מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ׃",
  "inputSha256": "a5dd49b7d2269fcbd372693ac6c4e64cc9257920cf740425d4b66ccd27e044b5",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "רַחֵם עַל צִיּוֹן כִּי הִיא בֵּית חַיֵּינוּ וְלַעֲלוּבַת נֶפֶשׁ תּוֹשִׁיעַ בִּמְהֵרָה בְיָמֵינוּ בָּרוּךְ אַתָּה אֲדֹנָי מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/haftarah-after-w46.mp3",
+  "audio/m/israeli/word/haftarah-after-w104.mp3",
+  "audio/m/israeli/word/haftarah-after-w48.mp3",
+  "audio/m/israeli/word/aleinu-1-w68.mp3",
+  "audio/m/israeli/word/brich-shmei-w62.mp3",
+  "audio/m/israeli/word/haftarah-after-w51.mp3",
+  "audio/m/israeli/word/haftarah-after-w52.mp3",
+  "audio/m/israeli/word/haftarah-after-w53.mp3",
+  "audio/m/israeli/word/haftarah-after-w54.mp3",
+  "audio/m/israeli/word/haftarah-after-w55.mp3",
+  "audio/m/israeli/word/haftarah-after-w56.mp3",
+  "audio/m/israeli/word/haftarah-after-w57.mp3",
+  "audio/m/israeli/word/aleinu-1-w38.mp3",
+  "audio/m/israeli/word/avot-1-w2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/haftarah-after-w61.mp3",
+  "audio/m/israeli/word/haftarah-after-w48.mp3",
+  "audio/m/israeli/word/haftarah-after-w63.mp3"
+ ]
 }

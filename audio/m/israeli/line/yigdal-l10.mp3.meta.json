@@ -1,13 +1,23 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃",
  "inputSha256": "0f69cc1ce32bac21814221e746ff8e1f7c2c56c81d2186ca999ae29ad3bedd23",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/yigdal-w77.mp3",
+  "audio/m/israeli/word/yigdal-w78.mp3",
+  "audio/m/israeli/word/yigdal-w79.mp3",
+  "audio/m/israeli/word/yigdal-w80.mp3",
+  "audio/m/israeli/word/yigdal-w81.mp3",
+  "audio/m/israeli/word/hd4a691d3.mp3",
+  "audio/m/israeli/word/yigdal-w83.mp3"
+ ]
 }

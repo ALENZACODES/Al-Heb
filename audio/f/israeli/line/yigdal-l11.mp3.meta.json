@@ -1,13 +1,24 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
  "inputSha256": "eae6edc8cf878351089b65c95b827e2740b4883896bc10b3cf4c4f719e4931d5",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/avot-1-w19.mp3",
+  "audio/f/israeli/word/yigdal-w85.mp3",
+  "audio/f/israeli/word/hba22ae3e.mp3",
+  "audio/f/israeli/word/yigdal-w87.mp3",
+  "audio/f/israeli/word/birkat-hamazon-1-w16.mp3",
+  "audio/f/israeli/word/yigdal-w89.mp3",
+  "audio/f/israeli/word/yigdal-w90.mp3",
+  "audio/f/israeli/word/yigdal-w91.mp3"
+ ]
 }

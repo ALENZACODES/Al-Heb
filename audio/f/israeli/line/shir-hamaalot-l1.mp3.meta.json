@@ -1,13 +1,24 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃",
  "inputSha256": "e7944cd537c3e04de58d974bffbfab65288db048f9b03aae5e0f82504c7326de",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב אֲדֹנָי אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/r09-w1.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w2.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w3.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w5.mp3",
+  "audio/f/israeli/word/haftarah-after-w48.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w26.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w8.mp3"
+ ]
 }

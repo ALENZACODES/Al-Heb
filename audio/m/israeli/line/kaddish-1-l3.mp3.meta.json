@@ -1,13 +1,23 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא",
  "inputSha256": "17f7790cc533750c6e45ee55d3a3b8cfff4cb7f2961dff813032fa653b58be8e",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא",
+ "stitchedFrom": [
+  "audio/m/israeli/word/brich-shmei-w104.mp3",
+  "audio/m/israeli/word/brich-shmei-w2.mp3",
+  "audio/m/israeli/word/kaddish-1-w23.mp3",
+  "audio/m/israeli/word/i-04-w6.mp3",
+  "audio/m/israeli/word/brich-shmei-w13.mp3",
+  "audio/m/israeli/word/kaddish-1-w26.mp3",
+  "audio/m/israeli/word/kaddish-1-w27.mp3"
+ ]
 }

@@ -1,13 +1,24 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
  "inputSha256": "77568b8bbe267c89197404d9d011271c26056a4decbbe224275fc9e39c7778ec",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w9.mp3",
+  "audio/f/israeli/word/adon-olam-1-w10.mp3",
+  "audio/f/israeli/word/adon-olam-1-w11.mp3",
+  "audio/f/israeli/word/adon-olam-1-w12.mp3",
+  "audio/f/israeli/word/adon-olam-1-w13.mp3",
+  "audio/f/israeli/word/adon-olam-1-w14.mp3",
+  "audio/f/israeli/word/adon-olam-1-w15.mp3",
+  "audio/f/israeli/word/adon-olam-1-w16.mp3"
+ ]
 }

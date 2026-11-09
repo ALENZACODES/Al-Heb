@@ -1,13 +1,21 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ",
  "inputSha256": "0d6921ae5a755e44df569bdc2de45780f43d96909805d8d23a3c4017a58e9359",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ",
+ "stitchedFrom": [
+  "audio/f/israeli/word/kiddush-zachor-w5.mp3",
+  "audio/f/israeli/word/etz-chaim-w15.mp3",
+  "audio/f/israeli/word/kiddush-zachor-w7.mp3",
+  "audio/f/israeli/word/kiddush-zachor-w8.mp3",
+  "audio/f/israeli/word/kiddush-zachor-w9.mp3"
+ ]
 }

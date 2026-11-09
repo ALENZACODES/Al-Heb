@@ -1,13 +1,23 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-B",
  "tradition": "israeli",
  "inputText": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
  "inputSha256": "331af19fa4b1ca02842eb84f4163dad722778fc76a8b8c7404dadc19c9184fce",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/adon-olam-1-w23.mp3",
+  "audio/m/israeli/word/adon-olam-1-w24.mp3",
+  "audio/m/israeli/word/adon-olam-1-w23.mp3",
+  "audio/m/israeli/word/adon-olam-1-w26.mp3",
+  "audio/m/israeli/word/adon-olam-1-w23.mp3",
+  "audio/m/israeli/word/adon-olam-1-w28.mp3",
+  "audio/m/israeli/word/adon-olam-1-w29.mp3"
+ ]
 }

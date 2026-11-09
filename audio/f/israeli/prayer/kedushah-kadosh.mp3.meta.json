@@ -1,13 +1,28 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ אֲדֹנָי צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃",
  "inputSha256": "ea96fd16c0c49d087b82b265511c93fcb2a49ffec3c78fd0b2ee4157c4ef1cbf",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ אֲדֹנָי צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/kedushah-kadosh-w1.mp3",
+  "audio/f/israeli/word/h67c6be75.mp3",
+  "audio/f/israeli/word/kedushah-kadosh-w3.mp3",
+  "audio/f/israeli/word/kedushah-kadosh-w4.mp3",
+  "audio/f/israeli/word/h39244df3.mp3",
+  "audio/f/israeli/word/h39244df3.mp3",
+  "audio/f/israeli/word/h39244df3.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/havdalah-opening-w27.mp3",
+  "audio/f/israeli/word/kedushah-kadosh-w10.mp3",
+  "audio/f/israeli/word/kedushah-kadosh-w11.mp3",
+  "audio/f/israeli/word/haftarah-after-w88.mp3"
+ ]
 }

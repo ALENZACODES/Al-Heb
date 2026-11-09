@@ -1,13 +1,22 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "גַּדְּלוּ לַאֲדֹנָי אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃",
  "inputSha256": "b14a2bf93eacb48aec236de714fc1ee8e46b409fb3155fbadd31910cb34cc3a1",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "גַּדְּלוּ לַאֲדֹנָי אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/gadlu-w1.mp3",
+  "audio/f/israeli/word/gadlu-w2.mp3",
+  "audio/f/israeli/word/gadlu-w3.mp3",
+  "audio/f/israeli/word/gadlu-w4.mp3",
+  "audio/f/israeli/word/adon-olam-1-w15.mp3",
+  "audio/f/israeli/word/gadlu-w6.mp3"
+ ]
 }

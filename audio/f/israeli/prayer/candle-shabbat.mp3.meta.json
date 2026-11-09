@@ -1,13 +1,30 @@
 {
  "status": "tts",
  "source": "tts:google",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": null,
  "tradition": "israeli",
  "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
  "inputSha256": "e405ee7339e811d10435209aae7b0024c1351ae7900b6d171b2a3117d86389fc",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): rendered 2026-11-07 through the then-default HD voices; the voice id was not recorded at render time, so voiceId is null rather than guessed (docs/audio/ISRAELI-VOICE-2026-11-07.md documents the regression and the ordered WaveNet redo).",
- "inputTextKind": "hebrew"
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "audio/f/israeli/word/avot-1-w2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/aleinu-1-w54.mp3",
+  "audio/f/israeli/word/adon-olam-1-w14.mp3",
+  "audio/f/israeli/word/birkat-hamazon-1-w6.mp3",
+  "audio/f/israeli/word/adon-olam-1-w3.mp3",
+  "audio/f/israeli/word/candle-shabbat-w8.mp3",
+  "audio/f/israeli/word/candle-shabbat-w9.mp3",
+  "audio/f/israeli/word/candle-shabbat-w10.mp3",
+  "audio/f/israeli/word/candle-shabbat-w11.mp3",
+  "audio/f/israeli/word/anchor-nun.mp3",
+  "audio/f/israeli/word/candle-shabbat-w13.mp3",
+  "audio/f/israeli/word/candle-shabbat-w14.mp3"
+ ]
 }

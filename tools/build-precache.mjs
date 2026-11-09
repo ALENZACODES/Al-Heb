@@ -51,7 +51,9 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   // Follow the Service screen code: fetched when the screen first opens, runtime-cached (its service orders stay installed for the v0 offline contract).
   'src/service/',
   // Brain Lab: drill code and its two small lists, fetched when the Lab first opens, runtime-cached.
-  'src/lab/', 'data/lab/'];
+  'src/lab/', 'data/lab/',
+  // Library: the article view and the articles, fetched when the Library first opens, runtime-cached.
+  'src/library/', 'data/library/'];
 const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',

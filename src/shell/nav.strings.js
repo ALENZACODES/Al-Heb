@@ -15,6 +15,7 @@ export const NAV_EN = {
   'nav.route.awards': 'Awards and certificate',
   // games hub and every game
   'nav.route.games': 'Games',
+  'nav.route.library': 'Library', 'nav.route.libraryarticle': 'Library article',
   'nav.route.lab': 'Brain Lab', 'nav.route.labgame': 'Brain Lab drill',
   'nav.route.letterchomp': 'Letter Chomp',
   'nav.route.fallingletters': 'Falling Letters',

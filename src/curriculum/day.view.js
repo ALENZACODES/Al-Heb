@@ -28,13 +28,16 @@ const todayISO = (ctx) => { const d = ctx && typeof ctx.now === "function" ? ctx
 
 async function loadAll(ctx) {
   const inj = ctx?.dayData || {};
-  const [copy, links, registry, lessons] = await Promise.all([
+  const [copy, links, registry, lessons, library] = await Promise.all([
     inj.copy || loadJSON("data/calendar/days.json"),
     inj.links || loadJSON("data/festivals/links.json").catch(() => null),
     inj.registry || loadJSON("data/corpus/registry.json").then((r) => r.entries).catch(() => []),
     inj.lessons ? Promise.resolve(inj.lessons) : loadJSON("data/curriculum/lessons.json").then((l) => l.lessons.map((x) => [x.id, x.title])).catch(() => []),
+    inj.library ? Promise.resolve(inj.library) : loadJSON("data/library/articles.json").then((l) => l.articles).catch(() => []),
   ]);
-  return { copy, links, registryTitles: new Map(registry.map((e) => [e.id, e.title])), lessonTitles: new Map(lessons) };
+  const articles = new Map();
+  for (const a of library || []) for (const d of a.dayIds || []) { if (!articles.has(d)) articles.set(d, []); articles.get(d).push({ id: a.id, title: a.title }); }
+  return { copy, links, registryTitles: new Map(registry.map((e) => [e.id, e.title])), lessonTitles: new Map(lessons), articles };
 }
 
 export function mount(root, ctx) {
@@ -60,7 +63,7 @@ export function mount(root, ctx) {
     const loc = resolveLocation(prefs, shellLocation(ctx));
     const israel = prefs.parshaSchedule === "israel" || (prefs.parshaSchedule === "auto" && !!loc?.israel);
     const has = (n) => (typeof ctx?.hasRoute === "function" ? !!ctx.hasRoute(n) : false);
-    const page = dayPage(iso, { mode: prefs.observance, israel, copy: D.copy, links: D.links, env: { hasRoute: has, registryTitles: D.registryTitles, lessonTitles: D.lessonTitles }, loc, havdalahPrefs: prefs.havdalah });
+    const page = dayPage(iso, { mode: prefs.observance, israel, copy: D.copy, links: D.links, env: { hasRoute: has, registryTitles: D.registryTitles, lessonTitles: D.lessonTitles, articles: D.articles }, loc, havdalahPrefs: prefs.havdalah });
     render(page, loc);
   })().catch((e) => {
     if (!alive) return;

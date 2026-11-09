@@ -66,6 +66,14 @@ export function sectionLinks(c, linkEntry, env = {}) {
   return out;
 }
 
+/** Library articles about this day (data/library/articles.json `dayIds`), when the Library route is in this build. */
+export function articleLinks(key, base, env = {}) {
+  const has = typeof env.hasRoute === "function" ? env.hasRoute : () => false;
+  if (!has("libraryarticle") || !env.articles) return [];
+  const list = env.articles.get(key) || env.articles.get(base) || [];
+  return list.map((a) => ({ href: `#/library/${a.id}`, label: `Read: ${a.title}`, kind: "article" }));
+}
+
 /** Nightfall on civil date g by the learner's havdalah method (sunset + minutes, or the sun N degrees below the horizon). */
 function nightfall(g, loc, hv) {
   const opt = hv || DEFAULT_HAVDALAH;
@@ -143,7 +151,7 @@ export function dayPage(iso, o = {}) {
     sections.push({
       key, he: extra.he || c.he || "", tr: extra.tr || c.tr || "", en: extra.en || c.en || key, title: extra.title || extra.en || c.en || key,
       what: c.what || [], customs: c.customs || [], words: c.words || [], readings: c.readings || [],
-      links: sectionLinks(c, linkEntry, o.env), learnMore, hasCopy: !!copyFor(o.copy, base), note: extra.note || "",
+      links: [...sectionLinks(c, linkEntry, o.env), ...articleLinks(key, base, o.env)], learnMore, hasCopy: !!copyFor(o.copy, base), note: extra.note || "",
     });
   };
   for (const h of det.holidays) {

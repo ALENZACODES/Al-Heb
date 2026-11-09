@@ -24,12 +24,12 @@ A 1280×640 crop of the wide home screen sits at [`.github/social-preview.png`](
 
 ## Status
 
-Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 21,506 short clips with a synthetic voice that no native speaker has reviewed (19,453 counted by `cat data/audio/summary.json`, plus 1,488 book-page clips, 370 arcade voice lines, 160 home-screen veil clips and 30 interface sounds that no manifest lists; counts as of 2026-11-07 on `main` b616ac68, `find audio -name '*.mp3' | wc -l`; the breakdown is in `docs/STATUS.md`), and many tests have not been run on real devices. A directory full of drafts is not a finished course. The review build is deployed at https://alef-review.onrender.com/ (Render, auto-deploys from `main`), no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 35,134 short clips with a synthetic voice that no native speaker has reviewed (20,595 counted by `cat data/audio/summary.json`, plus 14,539 the summary does not yet count — 11,692 Torah-reading lines, 1,488 book-page clips, 408 word-builder clips, 374 English Torah clips, 370 arcade-game lines, 160 home-screen clips, 30 interface sounds, 14 listen clips and 3 music clips; counts as of 2026-11-08, counted from the `main` tree at ed69a1b3a7), and many tests have not been run on real devices. A directory full of drafts is not a finished course. The review build is deployed at https://alef-review.onrender.com/ (Render, auto-deploys from `main`), no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine
 run) at phone size, unit tests, and read-through content checks written by the repo itself. What has not: any real phone or
-screen reader, any real recording (0 of 25,122 listed clips are a person's voice; 19,453 are synthetic), any review of the
+screen reader, any real recording (0 of 26,886 listed clips are a person's voice; 20,595 are synthetic), any review of the
 1,231 approved images by a teacher (approved in `data/images/approvals.json` by the maintainer, 1,836 rows in the manifest,
 counts as of 2026-11-07), and any review of the Hebrew (0 of 3,718 rows in the review packs). Today's QA and content-check results are
 summarised in [docs/STATUS.md](docs/STATUS.md); the step list for going live is

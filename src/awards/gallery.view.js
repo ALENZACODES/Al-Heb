@@ -311,11 +311,12 @@ export async function mount(root, ctx) {
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Awards'),
     h('p', { id: 'award-visit', 'data-visit': settled.visit }, visit),
     h('p', {}, 'Awards are decided on this device. They do not need a connection. ' + ART_NOTE),
+    h('p', {}, 'These awards record activity, not mastery. Locked and earned are written in words, not by colour alone.'),
     h('p', { class: 'aw-note' }, EVIDENCE_SUMMARY),
     status,
     h('section', { 'aria-labelledby': 'award-h-badges' },
       h('h2', { id: 'award-h-badges' }, 'Activity'),
-      h('p', {}, 'These medallions record a saved practice-game session. They are activity, not mastery. The picture is a temporary enamel stand-in with a mark for the game that saved the play. Locked and earned are written in words, not by colour alone.'),
+      h('p', {}, 'These medallions record a saved practice-game session. The picture is a temporary enamel stand-in with a mark for the game that saved the play.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'practice').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'activity',
       },
@@ -336,7 +337,7 @@ export async function mount(root, ctx) {
       h('ul', { class: 'aw-links' }, ...GAME_STORE_KEYS.map((g) => h('li', {}, h('a', { class: 'aw-link', href: g.href }, g.title))))),
     h('section', { 'aria-labelledby': 'award-h-ladder' },
       h('h2', { id: 'award-h-ladder' }, 'Streak ladder'),
-      h('p', {}, 'One medallion per rung, from two counted days to a full year. The picture grows like a tree instead of showing a number. Days are counted by the streak engine, with Shabbat and festival days frozen so they never break the chain. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
+      h('p', {}, 'One medallion per rung, from two counted days to a full year. The picture grows like a tree instead of showing a number. Days are counted by the streak engine, with Shabbat and festival days frozen so they never break the chain.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section === 'ladder').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'ladder',
       },
@@ -350,7 +351,7 @@ export async function mount(root, ctx) {
         h('p', {}, row.detail)))))),
     h('section', { 'aria-labelledby': 'award-h-milestones' },
       h('h2', { id: 'award-h-milestones' }, 'Milestones and mastery'),
-      h('p', {}, 'These medallions record things the app itself counted: a first study day, your daily goal, prayers heard, letters and words in your review decks, sets finished, and days that started early or late. A medallion whose record does not exist yet says so and stays locked. They are activity, not mastery. Locked and earned are written in words, not by colour alone.'),
+      h('p', {}, 'These medallions record things the app itself counted: a first study day, your daily goal, prayers heard, letters and words in your review decks, sets finished, and days that started early or late. A medallion whose record does not exist yet says so and stays locked.'),
       h('ul', { class: 'aw-gallery' }, ...rows.filter((r) => r.category === 'milestones' && r.section !== 'ladder').map((row) => h('li', {
         class: 'aw-badge', 'data-state': row.state, 'data-badge': row.id, 'data-category': 'milestones',
       },

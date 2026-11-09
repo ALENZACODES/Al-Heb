@@ -35,7 +35,7 @@ export const FACE = Object.freeze({
   presented: 'Presented to',
   forWord: 'for',
   course: 'Beginner Hebrew Foundations',
-  sampleLine: 'Sample design \u2014 completion has not been assessed or awarded.',
+  sampleLine: 'Sample design. Completion has not been assessed or awarded.',
   certNote: 'Sample internal reference',
   footer: 'Independent learning programme',
   temporary: 'Temporary layout',

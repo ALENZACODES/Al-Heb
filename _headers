@@ -68,6 +68,9 @@
   Cache-Control: public, max-age=604800
 /assets/synagogues/*
   Cache-Control: public, max-age=604800
+# Letter videos are re-rendered under the same names by tools/video/letter_videos.py, so they keep one day.
+/assets/videos/*
+  Cache-Control: public, max-age=86400
 /assets/games/*
   Cache-Control: public, max-age=604800
 /assets/letters/*

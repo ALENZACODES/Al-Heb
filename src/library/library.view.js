@@ -2,6 +2,7 @@
 import { h, heSpan } from '../shell/ui.js';
 
 const URL_ = new URL('../../data/library/articles.json', import.meta.url);
+const VIDEOS = new URL('../../data/videos/letters.json', import.meta.url);
 const GROUPS = [
   { title: 'Jewish Life and Prayer', ids: ['reform-judaism', 'shabbat-at-home', 'how-a-service-flows', 'torah-portions', 'how-hebrew-came-back'] },
   { title: 'The Jewish Year', ids: ['jewish-calendar', 'high-holy-days', 'sukkot', 'hanukkah', 'purim', 'passover-seder', 'shavuot'] },
@@ -29,6 +30,13 @@ const CSS = `
 .lib-terms .tr{font-weight:700;color:#f2d27c}
 .lib-try{display:inline-flex;min-block-size:48px;align-items:center;padding:.5rem 1.2rem;border-radius:999px;background:#e9c46a;color:#163527;font-weight:800;text-decoration:none;box-shadow:0 3px 0 #b38a2e;margin-block:1rem}
 .lib-nav{display:flex;justify-content:space-between;gap:1rem;margin-block:1.4rem;flex-wrap:wrap}
+.lib-vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:.7rem;margin-block:1rem}
+.lib-vid{background:#163527;border-radius:14px;overflow:hidden;border:2px solid #d4a647;margin:0}
+.lib-vid video{display:block;inline-size:100%;aspect-ratio:1;background:#163527}
+.lib-vid figcaption{color:#fffaf0;font-weight:700;padding:.35rem .6rem;display:flex;justify-content:space-between;align-items:center}
+.lib-vid figcaption .he{color:#f2d27c;font-size:1.3rem}
+.lib-feature{display:flex;gap:.8rem;align-items:center;background:#1e4634;color:#fffaf0;border-radius:14px;padding:.7rem .9rem;text-decoration:none;border:2px solid #d4a647;margin-block:1rem}
+.lib-feature b{color:#f2d27c;display:block}
 .lib-src{font-size:.78rem;color:var(--muted,#6b746c);margin-block-start:1.6rem}
 .lib-src summary{cursor:pointer;min-block-size:44px;display:flex;align-items:center}
 .lib-src ol{padding-inline-start:1.2rem}
@@ -54,6 +62,7 @@ function hub(wrap, arts) {
   wrap.replaceChildren(
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Library ', heSpan('סִפְרִיָּה', 'he')),
     h('p', { class: 'lib-sub' }, 'Short reads on Jewish life, written for adults starting out. Each one teaches a few Hebrew words and ends with something to try in Aleph.'),
+    h('a', { class: 'lib-feature', href: '#/library/letter-videos' }, h('span', { 'aria-hidden': 'true', style: 'font-size:2rem' }, '▶'), h('span', {}, h('b', {}, 'Letter Videos'), 'Watch each letter drawn stroke by stroke, then hear its name and sound.')),
     ...GROUPS.map((g) => h('section', { class: 'lib-group' }, h('h2', {}, g.title), h('ul', { class: 'lib-list' }, ...g.ids.map((id) => byId.get(id)).filter(Boolean).map(card)))),
     rest.length ? h('section', { class: 'lib-group' }, h('h2', {}, 'More'), h('ul', { class: 'lib-list' }, ...rest.map(card))) : '');
 }
@@ -77,11 +86,32 @@ function article(wrap, arts, id) {
       h('ol', {}, ...a.references.map((r) => h('li', {}, h('a', { href: r.url, rel: 'noopener', target: '_blank' }, r.title), `, ${r.publisher}`))))));
 }
 
+async function videos(wrap, ctx) {
+  const f = ctx?.fetchFn || ctx?.fetch || globalThis.fetch;
+  const res = await f(VIDEOS);
+  if (!res.ok) throw new Error('videos did not load');
+  const voice = ctx.settings?.get?.('voice') === 'f' ? 'f' : 'm';
+  const all = (await res.json()).videos;
+  const list = all.some((v) => v.voice === voice) ? all.filter((v) => v.voice === voice) : all.filter((v) => v.voice === all[0]?.voice);
+  wrap.replaceChildren(
+    h('p', {}, h('a', { href: '#/library' }, '← Library')),
+    h('h1', { id: 'view-title', tabindex: '-1' }, 'Letter Videos ', heSpan('סִרְטוֹנִים', 'he')),
+    h('p', { class: 'lib-sub' }, 'Each letter is drawn in the order you write it, then you hear its name and its sound. Watch, then trace it yourself on the Letters screen.'),
+    h('div', { class: 'lib-vids' }, ...list.map((v) => h('figure', { class: 'lib-vid' },
+      h('video', { src: v.src, poster: v.poster, controls: '', preload: 'none', playsinline: '', 'aria-label': `${v.name}: drawn stroke by stroke, then its name and sound` }),
+      h('figcaption', {}, h('span', {}, v.name), heSpan(v.he, 'he'))))),
+    h('a', { class: 'lib-try', href: '#/letters' }, 'Trace the letters'));
+}
+
 export function mount(root, ctx) {
   style(globalThis.document);
   const wrap = h('div', { class: 'lib' });
   root.replaceChildren(wrap);
   const id = ctx.params?.id || ctx.query?.article;
+  if (id === 'letter-videos') {
+    videos(wrap, ctx).catch(() => wrap.replaceChildren(h('h1', { id: 'view-title', tabindex: '-1' }, 'Letter Videos'), h('p', { role: 'alert' }, 'The videos could not load. Check your connection, then reload the page.')));
+    return () => {};
+  }
   load(ctx).then((arts) => (id ? article(wrap, arts, id) : hub(wrap, arts)))
     .catch(() => wrap.replaceChildren(h('h1', { id: 'view-title', tabindex: '-1' }, 'Library'), h('p', { role: 'alert' }, 'The Library could not load. Check your connection, then reload the page.')));
   return () => {};

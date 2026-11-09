@@ -52,3 +52,16 @@ test('calendar day pages offer the matching article when the Library is in the b
   assert.deepEqual(articleLinks('pesach', 'pesach', { hasRoute: (n) => n === 'libraryarticle', articles }), [{ href: '#/library/passover-seder', label: 'Read: Pesach and the Seder', kind: 'article' }]);
   assert.deepEqual(articleLinks('pesach', 'pesach', { hasRoute: () => false, articles }), []);
 });
+
+test('letter videos: every listed video and poster is on disk, one per letter per voice', async () => {
+  const { existsSync, statSync } = await import('node:fs');
+  const v = JSON.parse(readFileSync('data/videos/letters.json', 'utf8')).videos;
+  const letters = JSON.parse(readFileSync('data/letters/letters.json', 'utf8')).map((l) => l.id);
+  assert.ok(v.length >= 22);
+  for (const x of v) {
+    assert.ok(letters.includes(x.id), x.id);
+    assert.ok(existsSync(x.src) && statSync(x.src).size < 400 * 1024, `${x.src} present and small`);
+    assert.ok(existsSync(x.poster), x.poster);
+  }
+  assert.equal(new Set(v.map((x) => `${x.voice}:${x.id}`)).size, v.length);
+});

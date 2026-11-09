@@ -62,6 +62,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
   { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
   { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
+  { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
   { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
   { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
   { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },

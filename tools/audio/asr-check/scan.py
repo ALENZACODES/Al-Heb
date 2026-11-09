@@ -3,6 +3,7 @@
   python tools/audio/asr-check/scan.py                      # words, lines, prayers, front-page builder words
   python tools/audio/asr-check/scan.py --kinds word --limit 200
   python tools/audio/asr-check/scan.py --report-only        # rebuild the report from results already saved
+  python tools/audio/asr-check/scan.py --kinds dictionary   # only the dictionary words from render_dictionary.mjs
 
 Resumable: results go to tools/audio/asr-check/results.jsonl as they come in; a rerun skips clips already heard.
 Identical files (same bytes under several ids) are heard once and reported under every path.
@@ -39,6 +40,13 @@ def jobs(kinds):
         for r in csv.DictReader(f):
             if r['tradition'] == 'israeli' and r['kind'] in kinds:
                 add(r['file'], r['pointed_hebrew'], r['phonetic'], r['kind'], r['english'])
+    if 'dictionary' in kinds:
+        # Dictionary words recorded by tools/audio/render_dictionary.mjs (rows with group "dictionary-word").
+        shard = os.path.join(ROOT, 'data', 'audio', 'manifest-words-israeli.json')
+        if os.path.exists(shard):
+            for r in json.load(open(shard, encoding='utf-8')):
+                if r.get('group') == 'dictionary-word':
+                    add(r['path'], r['text'], r.get('phonetic', ''), 'dictionary', r.get('english', ''))
     if 'builder' in kinds:
         words = json.load(open(os.path.join(ROOT, 'data', 'builder_words.json'), encoding='utf-8'))
         for w in words:
@@ -105,7 +113,7 @@ def report(all_jobs):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--kinds', default='word,line,prayer,builder')
+    ap.add_argument('--kinds', default='word,line,prayer,builder,dictionary')
     ap.add_argument('--limit', type=int)
     ap.add_argument('--report-only', action='store_true')
     ap.add_argument('--no-recheck', action='store_true', help='skip re-hearing flagged clips one at a time')

@@ -1,0 +1,456 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "75 everyday lines written after round 2 of the Talk pack, as the check on lines the pack was not written against. The reference is one acceptable answer. The score on this file is reported as measured; it is not a pass mark. The round 1 file (talk.fresh.json) has since been used to widen the pack, so it is now a regression check.",
+ "samples": [
+  {
+   "id": "g-en-01",
+   "direction": "en-he",
+   "source": "Could you tell me where the pharmacy is?",
+   "reference": "אפשר לדעת איפה בית המרקחת?"
+  },
+  {
+   "id": "g-en-02",
+   "direction": "en-he",
+   "source": "Two beers, please.",
+   "reference": "שתי בירות, בבקשה."
+  },
+  {
+   "id": "g-en-03",
+   "direction": "en-he",
+   "source": "What time does the pharmacy close?",
+   "reference": "מתי בית המרקחת נסגר?"
+  },
+  {
+   "id": "g-en-04",
+   "direction": "en-he",
+   "source": "Is the museum open today?",
+   "reference": "המוזיאון פתוח היום?"
+  },
+  {
+   "id": "g-en-05",
+   "direction": "en-he",
+   "source": "I'd like to book a table for six.",
+   "reference": "אני רוצה להזמין שולחן לשישה."
+  },
+  {
+   "id": "g-en-06",
+   "direction": "en-he",
+   "source": "It costs fifty shekels.",
+   "reference": "זה עולה חמישים שקלים."
+  },
+  {
+   "id": "g-en-07",
+   "direction": "en-he",
+   "source": "Can I have a bottle of water?",
+   "reference": "אפשר בקבוק מים?"
+  },
+  {
+   "id": "g-en-08",
+   "direction": "en-he",
+   "source": "Where can I find a taxi?",
+   "reference": "איפה אפשר למצוא מונית?"
+  },
+  {
+   "id": "g-en-09",
+   "direction": "en-he",
+   "source": "Turn left after the bridge.",
+   "reference": "פנה שמאלה אחרי הגשר."
+  },
+  {
+   "id": "g-en-10",
+   "direction": "en-he",
+   "source": "I want to go to the beach.",
+   "reference": "אני רוצה להגיע לחוף הים."
+  },
+  {
+   "id": "g-en-11",
+   "direction": "en-he",
+   "source": "Do you have a table outside?",
+   "reference": "יש לכם שולחן בחוץ?"
+  },
+  {
+   "id": "g-en-12",
+   "direction": "en-he",
+   "source": "I don't drink wine.",
+   "reference": "אני לא שותה יין."
+  },
+  {
+   "id": "g-en-13",
+   "direction": "en-he",
+   "source": "My phone is dead.",
+   "reference": "הטלפון שלי כבוי."
+  },
+  {
+   "id": "g-en-14",
+   "direction": "en-he",
+   "source": "We need three rooms.",
+   "reference": "אנחנו צריכים שלושה חדרים."
+  },
+  {
+   "id": "g-en-15",
+   "direction": "en-he",
+   "source": "Is there a bus to Tel Aviv?",
+   "reference": "יש אוטובוס לתל אביב?"
+  },
+  {
+   "id": "g-en-16",
+   "direction": "en-he",
+   "source": "What time is dinner?",
+   "reference": "מתי ארוחת הערב?"
+  },
+  {
+   "id": "g-en-17",
+   "direction": "en-he",
+   "source": "I'm looking for a pharmacy.",
+   "reference": "אני מחפש בית מרקחת."
+  },
+  {
+   "id": "g-en-18",
+   "direction": "en-he",
+   "source": "How much is a ticket to Eilat?",
+   "reference": "כמה עולה כרטיס לאילת?"
+  },
+  {
+   "id": "g-en-19",
+   "direction": "en-he",
+   "source": "Thank you for your help.",
+   "reference": "תודה על העזרה."
+  },
+  {
+   "id": "g-en-20",
+   "direction": "en-he",
+   "source": "Can I get the wifi password?",
+   "reference": "אפשר לקבל את הסיסמה של הוויי-פיי?"
+  },
+  {
+   "id": "g-en-21",
+   "direction": "en-he",
+   "source": "Good evening, a table for two please.",
+   "reference": "ערב טוב, שולחן לשניים, בבקשה."
+  },
+  {
+   "id": "g-en-22",
+   "direction": "en-he",
+   "source": "Where is the rabbi?",
+   "reference": "איפה הרב?"
+  },
+  {
+   "id": "g-en-23",
+   "direction": "en-he",
+   "source": "Is the synagogue open now?",
+   "reference": "בית הכנסת פתוח עכשיו?"
+  },
+  {
+   "id": "g-en-24",
+   "direction": "en-he",
+   "source": "I need a prayer shawl.",
+   "reference": "אני צריך טלית."
+  },
+  {
+   "id": "g-en-25",
+   "direction": "en-he",
+   "source": "What page?",
+   "reference": "איזה עמוד?"
+  },
+  {
+   "id": "g-en-26",
+   "direction": "en-he",
+   "source": "Happy Hanukkah!",
+   "reference": "חנוכה שמח!"
+  },
+  {
+   "id": "g-en-27",
+   "direction": "en-he",
+   "source": "In ten minutes.",
+   "reference": "בעוד עשר דקות."
+  },
+  {
+   "id": "g-en-28",
+   "direction": "en-he",
+   "source": "The train is late.",
+   "reference": "הרכבת מאחרת."
+  },
+  {
+   "id": "g-en-29",
+   "direction": "en-he",
+   "source": "I lost my keys.",
+   "reference": "איבדתי את המפתחות."
+  },
+  {
+   "id": "g-en-30",
+   "direction": "en-he",
+   "source": "Does it contain gluten?",
+   "reference": "יש בזה גלוטן?"
+  },
+  {
+   "id": "g-en-31",
+   "direction": "en-he",
+   "source": "Can I pay in dollars?",
+   "reference": "אפשר לשלם בדולרים?"
+  },
+  {
+   "id": "g-en-32",
+   "direction": "en-he",
+   "source": "One falafel and one cola, please.",
+   "reference": "פלאפל אחד וקולה אחת, בבקשה."
+  },
+  {
+   "id": "g-en-33",
+   "direction": "en-he",
+   "source": "I need to see a doctor.",
+   "reference": "אני צריך לראות רופא."
+  },
+  {
+   "id": "g-en-34",
+   "direction": "en-he",
+   "source": "Where do I get off?",
+   "reference": "איפה אני יורד?"
+  },
+  {
+   "id": "g-en-35",
+   "direction": "en-he",
+   "source": "It's very hot today.",
+   "reference": "חם מאוד היום."
+  },
+  {
+   "id": "g-en-36",
+   "direction": "en-he",
+   "source": "Can you recommend a restaurant?",
+   "reference": "אפשר להמליץ על מסעדה?"
+  },
+  {
+   "id": "g-en-37",
+   "direction": "en-he",
+   "source": "I'll have the soup.",
+   "reference": "אני רוצה את המרק."
+  },
+  {
+   "id": "g-en-38",
+   "direction": "en-he",
+   "source": "Sorry, I don't understand.",
+   "reference": "סליחה, אני לא מבין."
+  },
+  {
+   "id": "g-en-39",
+   "direction": "en-he",
+   "source": "How do I get to the Western Wall?",
+   "reference": "איך מגיעים לכותל?"
+  },
+  {
+   "id": "g-en-40",
+   "direction": "en-he",
+   "source": "We have a reservation for six.",
+   "reference": "יש לנו הזמנה לשישה."
+  },
+  {
+   "id": "g-en-41",
+   "direction": "en-he",
+   "source": "Is this seat taken?",
+   "reference": "אפשר לשבת כאן?"
+  },
+  {
+   "id": "g-en-42",
+   "direction": "en-he",
+   "source": "Good night and thank you.",
+   "reference": "לילה טוב ותודה."
+  },
+  {
+   "id": "g-en-43",
+   "direction": "en-he",
+   "source": "I would like to pay.",
+   "reference": "אני רוצה לשלם."
+  },
+  {
+   "id": "g-en-44",
+   "direction": "en-he",
+   "source": "What is your name, please?",
+   "reference": "איך קוראים לך, בבקשה?"
+  },
+  {
+   "id": "g-en-45",
+   "direction": "en-he",
+   "source": "Where is the entrance?",
+   "reference": "איפה הכניסה?"
+  },
+  {
+   "id": "g-he-46",
+   "direction": "he-en",
+   "source": "איפה תחנת האוטובוס?",
+   "reference": "Where is the bus stop?"
+  },
+  {
+   "id": "g-he-47",
+   "direction": "he-en",
+   "source": "כמה עולה כרטיס?",
+   "reference": "How much is a ticket?"
+  },
+  {
+   "id": "g-he-48",
+   "direction": "he-en",
+   "source": "המוזיאון סגור היום.",
+   "reference": "The museum is closed today."
+  },
+  {
+   "id": "g-he-49",
+   "direction": "he-en",
+   "source": "אפשר לשלם בכרטיס?",
+   "reference": "Can I pay by card?"
+  },
+  {
+   "id": "g-he-50",
+   "direction": "he-en",
+   "source": "יש לכם תפריט באנגלית?",
+   "reference": "Do you have a menu in English?"
+  },
+  {
+   "id": "g-he-51",
+   "direction": "he-en",
+   "source": "זה עולה שלושים שקלים.",
+   "reference": "It costs thirty shekels."
+  },
+  {
+   "id": "g-he-52",
+   "direction": "he-en",
+   "source": "אני מחפשת את השוק.",
+   "reference": "I am looking for the market."
+  },
+  {
+   "id": "g-he-53",
+   "direction": "he-en",
+   "source": "בלי סוכר, בבקשה.",
+   "reference": "No sugar, please."
+  },
+  {
+   "id": "g-he-54",
+   "direction": "he-en",
+   "source": "הרכבת מאחרת.",
+   "reference": "The train is late."
+  },
+  {
+   "id": "g-he-55",
+   "direction": "he-en",
+   "source": "תפנה שמאלה ברמזור.",
+   "reference": "Turn left at the light."
+  },
+  {
+   "id": "g-he-56",
+   "direction": "he-en",
+   "source": "יש לי אלרגיה לחלב.",
+   "reference": "I am allergic to milk."
+  },
+  {
+   "id": "g-he-57",
+   "direction": "he-en",
+   "source": "מתי החנות נסגרת?",
+   "reference": "When does the store close?"
+  },
+  {
+   "id": "g-he-58",
+   "direction": "he-en",
+   "source": "אני לא מדבר עברית.",
+   "reference": "I don't speak Hebrew."
+  },
+  {
+   "id": "g-he-59",
+   "direction": "he-en",
+   "source": "שתי בירות, בבקשה.",
+   "reference": "Two beers, please."
+  },
+  {
+   "id": "g-he-60",
+   "direction": "he-en",
+   "source": "אתה יכול לעזור לי?",
+   "reference": "Can you help me?"
+  },
+  {
+   "id": "g-he-61",
+   "direction": "he-en",
+   "source": "נתראה מחר.",
+   "reference": "See you tomorrow."
+  },
+  {
+   "id": "g-he-62",
+   "direction": "he-en",
+   "source": "איפה אפשר לקנות מים?",
+   "reference": "Where can I buy water?"
+  },
+  {
+   "id": "g-he-63",
+   "direction": "he-en",
+   "source": "אני צריך רופא עכשיו.",
+   "reference": "I need a doctor now."
+  },
+  {
+   "id": "g-he-64",
+   "direction": "he-en",
+   "source": "כמה זמן לוקח להגיע לירושלים?",
+   "reference": "How long does it take to get to Jerusalem?"
+  },
+  {
+   "id": "g-he-65",
+   "direction": "he-en",
+   "source": "חג שמח לכולם.",
+   "reference": "Happy holiday to everyone."
+  },
+  {
+   "id": "g-he-66",
+   "direction": "he-en",
+   "source": "השירותים בקומה השנייה.",
+   "reference": "The restrooms are on the second floor."
+  },
+  {
+   "id": "g-he-67",
+   "direction": "he-en",
+   "source": "אין בעיה.",
+   "reference": "No problem."
+  },
+  {
+   "id": "g-he-68",
+   "direction": "he-en",
+   "source": "אפשר עוד לחם?",
+   "reference": "Can I have more bread?"
+  },
+  {
+   "id": "g-he-69",
+   "direction": "he-en",
+   "source": "יש לנו הזמנה לשניים.",
+   "reference": "We have a reservation for two."
+  },
+  {
+   "id": "g-he-70",
+   "direction": "he-en",
+   "source": "מה אתה ממליץ?",
+   "reference": "What do you recommend?"
+  },
+  {
+   "id": "g-he-71",
+   "direction": "he-en",
+   "source": "איפה בית מרקחת?",
+   "reference": "Where is the pharmacy?"
+  },
+  {
+   "id": "g-he-72",
+   "direction": "he-en",
+   "source": "אני רוצה להגיע לחיפה.",
+   "reference": "I want to go to Haifa."
+  },
+  {
+   "id": "g-he-73",
+   "direction": "he-en",
+   "source": "בעוד חמש דקות.",
+   "reference": "In five minutes."
+  },
+  {
+   "id": "g-he-74",
+   "direction": "he-en",
+   "source": "סליחה, מה השעה?",
+   "reference": "Excuse me, what time is it?"
+  },
+  {
+   "id": "g-he-75",
+   "direction": "he-en",
+   "source": "שבת שלום ומבורך.",
+   "reference": "Shabbat shalom."
+  }
+ ]
+}

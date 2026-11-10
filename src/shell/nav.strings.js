@@ -4,6 +4,7 @@
 import { en } from './i18n.js';
 
 export const NAV_EN = {
+  'nav.ask': 'Ask the Torah',
   'nav.section.learn': 'Learn', 'nav.section.read': 'Read', 'nav.section.speak': 'Speak & Listen', 'nav.section.progress': 'Progress', 'nav.section.more': 'More',
   'nav.section.learn.desc': 'Lessons, letters, vocabulary, grammar and typing.',
   'nav.section.read.desc': 'Torah, prayers, the service and chanting marks.',
@@ -11,12 +12,16 @@ export const NAV_EN = {
   'nav.section.progress.desc': 'What you have done, what to review, and the Jewish calendar.',
   'nav.section.more.desc': 'Settings, search, install, offline use, credits and privacy.',
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
+  'nav.talk': 'Talk',
   'nav.phrases': 'Common phrases',
+  'nav.practical': 'Practical',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.songs': 'Songs',
+  'nav.route.camera': 'Camera Translator',
   // games hub and every game
   'nav.route.games': 'Games',
   'nav.route.library': 'Library', 'nav.route.libraryarticle': 'Library article',
+  'nav.route.league': 'League', 'nav.route.shop': 'Shop',
   'nav.route.lab': 'Brain Lab', 'nav.route.labgame': 'Brain Lab drill',
   'nav.route.letterchomp': 'Letter Chomp',
   'nav.route.fallingletters': 'Falling Letters',

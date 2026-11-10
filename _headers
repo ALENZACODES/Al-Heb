@@ -32,6 +32,10 @@
   Cache-Control: no-cache
 /offline.html
   Cache-Control: no-cache
+/404.html
+  Cache-Control: no-cache
+/404.js
+  Cache-Control: no-cache
 /synagogues/
   Cache-Control: no-cache
 /synagogues/index.html
@@ -39,6 +43,10 @@
 /sw.js
   Cache-Control: no-cache
 /precache-manifest.js
+  Cache-Control: no-cache
+/robots.txt
+  Cache-Control: no-cache
+/sitemap.xml
   Cache-Control: no-cache
 
 # App code, styles and data keep stable (un-hashed) file names, so they are NOT immutable: revalidate with the ETag (a 304 is cheap).
@@ -82,6 +90,8 @@
 /assets/speak-hold/*
   Cache-Control: public, max-age=604800
 /assets/speak-candidates/*
+  Cache-Control: public, max-age=604800
+/assets/light/*
   Cache-Control: public, max-age=604800
 /assets/vendor/*
   Cache-Control: public, max-age=604800

@@ -204,3 +204,84 @@ Changes that need no speakers or reviewers. None of them makes content reviewed 
 - Lean v0: preview triage (`docs/v0/PREVIEW-TRIAGE.md`); nine low-value preview pages are out of the menus.
 - Settings and About show "What is ready, and what is not" and one sound line. The sound line and the audio row read their counts from `data/audio/summary.json` when the page loads (no typed number); at the 2026-11-05 data it says 87 short word clips with a synthetic voice, unreviewed by native speakers; no recorded teacher; the rest of the app uses your device voice when it has a Hebrew voice. Content unreviewed, no pictures approved.
 - `docs/INDEX.md`: one line per docs folder.
+
+## Overnight hand-off, 10 November 2026 (lesson-integrity lane, America/Toronto)
+
+This section is a working hand-off for the overnight lesson-integrity branch. It does not replace the counted tables above, and those tables were not re-run for this pass. Nothing here was merged to `main` or deployed.
+
+### 2:43 AM ET — CI unit-tier fix pushed
+
+- Branch `feature/lesson-integrity-2026-11-10`, tip then `e2e93d76a` ("Fix CI unit-tier audio manifests after lesson-word inserts").
+- GitHub `test` had failed at 2:28 AM ET on `62ca2a024` (build-dist was green). The five Unit-tier failures were branch regressions, not the 22 local audio-only misses of this sparse worktree: I-28 / I-29 / I-50 word inserts left later ids pointing at unrecorded files, and 188 Hallel / Kiddush / leshev word ids had been added to the tradition word shards with no clip and no `equivalentTo`.
+- Fix: remap existing I-28 / I-50 mp3s onto the lesson ids that match their pointed text; mark גְּמַר חֲתִימָה טוֹבָה and חַג כָּשֵׁר וְשָׂמֵחַ as `missing` (device voice); I-50 w10 (feminine take-care) aliases `line/greetings-27-f` and stays `missing` so unique-file counts do not rise; I-50 w12 (בְּעֶזְרַת הַשֵּׁם) keeps its existing clip and was not re-voiced; drop the 188 shard ids. `tts` / `spoken` / `kinds.word` match main. No new audio was rendered.
+- Watching CI run `42777285310`. At 2:48 AM ET, `build-dist` was green; `test` and `browser` were still in progress.
+
+### 2:48 AM ET — Practical Cloud test and tradition-style check
+
+- Practical Vertex pass: the first process (PID 2422383) died at 260/677 on an SSL read timeout, spent about $0.044. The tester now retries timeouts and skips items that already have `speech_done`. Resumed as PID 2536209 from the same checkpoint; at 2:48 AM ET it was at 270/677, about $0.051. Cap US$15. Chirp remains unusable; transcription is Vertex `gemini-3.5-flash`, to be said honestly in the report. `--redecide`, the pass/fail table, UI hiding, and the Practical fails list in the lanes hub wait until speech and translation finish.
+- Tradition styles (John, 2:44 AM ET), started without waiting for `lanes/replies/STYLES-G-r1.md`. Offline report: `/workspace/shared/al-heb/overnight-2026-11-10/TRADITION-STYLES-TEST-2026-11-10.md`. Sample of 50 items (words, phrase lines, liturgical lines) with male-voice clips in all three traditions, read in place from `/workspace/Al-Heb-overnight/audio` (this worktree still has no audio checkout; disk 3.6 GB free, floor 2.5 GB).
+  - 50/50 have three pairwise-different mp3s.
+  - Transliteration probes pass: tav without dagesh is t/t/s; kamatz gadol is a/a/o. Default Latin for שַׁבָּת is shabat / shabat / shabos; the familiar Shabbat / Shabbos spelling only appears with `geminate: true`, which the app does not turn on. Israeli and Sephardi Latin remain identical by design.
+  - The settings switch **does** change on-screen Latin and **does not** change the audio file: `PLAYBACK_TRADITION` maps Sephardi and Ashkenazi to the Israeli clip (owner decision 7 November 2026). No admitted accent-provenance rows exist, so the distinct on-disk tradition files stay retired. Not flipped overnight. Sent to Lane C as the styles fails list in the lanes hub.
+  - Vertex STT of those 150 clips is still pending (cap US$5), to start once it will not collide with the Practical pass.
+- No `LANE-C-r2` / `r3` or `PRACTICAL-FIXES-r1` yet.
+- Held, unchanged: divine Name, default rite, גּוֹי / גּוֹיָה, clergy review, remaining liturgy gaps.
+
+### 2:55 AM ET — LANE-C-r2 folded; CI path-contract fix ready to push
+
+- `lanes/replies/LANE-C-r2.md` landed (2:47 AM ET). Applied what fits, without merging lane C's branch or touching `main`.
+  - lane C's 13 Babbel-style Israel units (`#/israel-units`, preview, on-demand) were copied from the lane C branch. Every grammar-example Hebrew string was checked against that unit's own lessons (44/44 present). All 24 il lessons and all 30 Israel B1 lessons sit in exactly one unit; no synagogue lesson is included. `#/practical` stays as extra phrasebook practice, including synagogue-track greetings. Docs: `docs/curriculum/ISRAEL-UNITS.md`, plus a placement note in the Babbel plan and the Judaic-to-Israeli path doc.
+  - Learner-facing titles and goals on this branch do not say "the corpus" or "g-hallel" (those strings remain only in lesson `note` fields). The three prayer items Lane C named from round 1 are already fixed here: I-10 answers the leader's Priestly Blessing with Ken yehi ratzon (Amen when kohanim bless); I-33's zimun invitation is "Friends, let us bless" / Rabotai, with Chaverai named as a variant, not "Gentlemen"; I-33's Amen comes after the first blessing closes ("hazan et hakol"), which is the ordinary congregational answer, so it was not removed.
+  - Held, unchanged: divine Name, default rite, goy, clergy review.
+- CI run `42777285310` on `e2e93d76a`: `build-dist` green; Unit tier failed 22 tests (not the 22 local audio-only misses). The `-unrecorded.mp3` paths and remapped lesson-word files broke the canonical path contract (`path` must be `audio/{voice}/{tradition}/{kind}/{id}.mp3`, and two ids may not share a path). Fix: move the new I-28 / I-50 greetings to the end of those word lists so existing files keep their original ids; new slots (`i-28-w13`, `i-50-w13`, `i-50-w14`) are `missing` with canonical paths. I-50 w14 aliases `line/greetings-27-f`. The Name line stays on its existing clip. Practical holiday items were remapped by their Hebrew so none points at `i-50-w10` (now בְּעֶזְרַת הַשֵּׁם). The 188 Hallel / Kiddush / leshev word ids were restored as `missing` with `aliasOf` the real parent line (or `-l1` when the registry splits a psalm into lines), so the reader and recording lists have a row and Sephardi playback is not silent. `gcloud-results.json` is skipped by the precache tool because the file is not committed. Privacy now lists `practical.progress` against `practical-progress.js`.
+- Continuity notes (no new Hebrew, no cross-track prerequisites) on `il01`, `r51`, `I-11` and `I-19`, pinned in `tests/curriculum.rabbi-appeal.test.js`.
+- Practical Cloud test still running (PID 2536209): about 460/677 unique items, ~$0.085, cap $15. Tradition-style STT still waiting so the two Vertex jobs do not collide. Disk 3.4 GB free.
+
+
+## Overnight hand-off (10 November 2026, about 3:13 AM ET)
+
+Lesson-integrity lane, still on `feature/lesson-integrity-2026-11-10`. Nothing was merged to `main` or deployed. Disk was brought back above 2.5 GB (about 4.9 GB free after clearing unused `/tmp` lighthouse profiles).
+
+### Practical Cloud test
+Finished (`--resume`, then `--redecide`). Spend **US$0.447** of the US$15 cap, logged in the Practical spend ledger. After `--redecide`: **645 pass / 105 fail / 0 blocked** (95 unique `failing_keys`). Results: `data/curriculum/practical/gcloud-results.json`. Fails for lane C: the Practical fails list in the lanes hub. The Practical UI already hides failing keys once that results file is present. New leftover-lesson pages (`pu-verbs-now`, `pu-past`, `pu-decide`, extra `pu-fillers` page) were not in this Cloud run (curriculum is now 36 units / 166 pages / 750 sourced items).
+
+### Tradition styles (STYLES-G-r1 applied in part)
+lane C's verdict was right that the styles were not distinct in **playback**. As of this pass the Sephardi and Ashkenazi settings play their **own present bank clips** (the existing paid-cloud / on-disk mp3s). Missing own rows still fall back to the Israeli file of the same voice, and the caption says so. These clips are not claimed as human recordings or as a certified accent. `:mock` sources stay retired.
+
+Ashkenazi Latin already uses **s** for tav without dagesh (pinned in `tests/pronunciation.three-styles.test.js`).
+
+**Held for John, built behind flags, default off, not decided:** `STYLE_FLAGS.sephardiPharyngeals` (ḥ / ʿ) and `STYLE_FLAGS.geminateDisplay` (Shabbos / Sukkot). `src/pronunciation/transliterate.js`.
+
+Clear engine fix applied: kamatz before chataf-kamatz, and `אָזְנַיִם` on the kamatz-katan list, so צָהֳרַיִם / אָזְנַיִם read **tzohorayim** / **oznayim** in all three styles.
+
+Vertex STT of the 50×3 existing clips is running (`--stt`, cap US$5). The report will be finalized in `overnight-2026-11-10/TRADITION-STYLES-TEST-2026-11-10.md` when that job exits. Accent *rendering* (Lane C fixes 4–5) was not started (spend and listen gate).
+
+### CI
+`094ca93af` `test` job failed. Besides the usual audio-only / docs-coverage set that also fails on `main`, it correctly caught a stale `word-vocab-map.json` after the I-28 / I-50 word moves (`I-28:11`). That map has been rebuilt locally. Playback tests that assumed retired Sephardi/Ashkenazi files have been updated locally and are not on the remote tip yet. Browser job may still be running. Do not force-push.
+
+### Other
+- r34 now points at the sourced calendar date ט״וּ בִּשְׁבָט as a gershayim example (no new invented abbreviation).
+- Lesson-integrity score note updated to **81 / 100** (estimate) in `docs/review/LESSON-INTEGRITY-2026-11-10.md`.
+- Local unpushed work is ahead of origin; next push should include the map rebuild, precache for the new Practical pages, style playback change, r34 note, and tests. `gcloud-results.json` must stay out of the commit.
+
+
+## Overnight hand-off — about 3:14 AM ET
+
+Pushed `eefe184b7` (non-force) on `feature/lesson-integrity-2026-11-10`. Sephardi and Ashkenazi settings now play their own bank clips first, Israeli only when the own row is missing or a `:mock`. Ashkenazi tav-without-dagesh stays `s`. Sephardi ḥ/ʿ and geminate display are behind flags, default off; not decided. Kamatz-katan covers a kamatz immediately before a chataf-kamatz, plus `אָזְנַיִם`. Rebuilt the stale I-28 word-vocab map. Standin tests skip unrecorded liturgy word rows (`hallel`/`kiddush`/`leshev`) and do not require the audio tree on disk. Practical Cloud report is in `docs/review/PRACTICAL-GCLOUD-TEST-2026-11-10.md` (645/105, US$0.45). `gcloud-results.json` stays untracked. Tradition Vertex STT still running (PID 2655907, `/tmp/tradition-styles-stt.log`); report will be finalized when it finishes. Disk still above 2.5 GB.
+
+
+## Overnight hand-off — about 3:23 AM ET
+
+Pushed `b1424fa1c` (playback-test updates for own-bank clips) and earlier `b13651394` (stale audio docs, israelunits in nav). Practical Cloud resume tested the 25 leftover-lesson items: **669 pass / 81 fail / 71 unique keys**, spend US$0.464 of $15. Grouped fails: the Practical fails list in the lanes hub (and `lanes/`). All unique tested fails are speech-loop issues; no remaining translation mismatches. New unit lines mostly passed. Tradition first-pass STT: Israeli 43/50, Sephardi 15/50, Ashkenazi 7/50, spend $0.083. Duration check: Sephardi median 1.71× the Israeli clip (46/50 over the agreed 1.33 cap); Ashkenazi median 1.08× (18/50 over 1.15). First-pass STT used an “Israeli Hebrew” prompt, which also scores Ashkenazi *shabbos* as a fail (e.g. שבוס vs שבת). Tradition-aware Gemini STT and a tempo-cap experiment on copies (not the shared bank) are in flight. Disk still above 2.5 GB. Nothing merged to main or deployed.
+
+
+## Overnight hand-off — about 3:28 AM ET
+
+Final tradition-styles listen-check is in `docs/review/TRADITION-STYLES-TEST-2026-11-10.md` and the overnight hub. First-pass STT (Israeli prompt): IL 43/50, SE 15/50, ASH 7/50. After a tradition-aware Gemini prompt plus a phonetic fold, combined passes are **IL 47/50, SE 21/50, ASH 17/50**. Sephardi clips are slow (median 1.71× Israeli, 46/50 over 1.33×) but tempo-capping copies to 1.33/1.15 gained almost no STT passes, so the shared audio bank was not overwritten. Remaining long-line fails often transcribe as a different prayer (needs a human listen, then a remake). Spend US$0.205 of $5. Fails for lane C: hub the styles fails list in the lanes hub and the styles fails list in the lanes hub. Held flags still off. Practical stays at 166 sourced pages; every unique line has now been Cloud-tested (669 pass / 81 fail / 71 unique keys). I-18 slang still out. No force-push, no merge to main, no deploy.
+
+
+## Overnight hand-off — about 3:45 AM ET
+
+Folded lane C LANE-C-r3 (the lane C branch @ `57d6522ea`) as additive files, not a merge: `data/curriculum/practical-pages/` (194-page outline, first 20 pages written, schema) plus `tests/curriculum.practical-pages.test.js` (10 tests, all passing) and the two curriculum docs. The live Practical course is still the existing 36 units / 166 sourced pages on `#/practical`. `#/israel-units` was not removed (John has not approved a single-course merge). `pu-army` (I-18 slang) is in the outline so every Israel-track lesson has a home, but it is held off the live set. בְּעֶזְרַת הַשֵּׁם on `pu-politeness-p05` is held for John.
+
+lane C's PRACTICAL-FIXES-r1 verdict is in `docs/review/PRACTICAL-FIXES-r1.md` and `lanes/replies/PRACTICAL-FIXES-r1.md`: keep all 71 sources; no curriculum edits; two optional gloss/maqaf notes left for John. This lane did not duplicate those data non-changes. The Cloud tester now treats digits in a transcript as Hebrew number words; `--redecide` cleared the three numeral items (`d-cafe-l5`, `d-taxi-l6`, `d-hotel-l6`). Counts are now **673 pass / 77 fail / 67 unique keys**, spend still US$0.464. Aggressive letter-sound folding was not turned on. Pushed `aa683245c` (pronunciation shards + Torah-reader label) after the interrupted push; CI run `42784844073` is in progress on that tip until this follow-up push.

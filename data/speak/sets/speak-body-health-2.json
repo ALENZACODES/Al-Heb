@@ -50,7 +50,7 @@
    "translit": "higish",
    "en": "to submit (something), to hand (something) in",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hc0cdd8d1",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "nituach",
    "en": "operation, surgery",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h127c6e1e",
    "source": "data/vocab/words.json"
   }
  ]

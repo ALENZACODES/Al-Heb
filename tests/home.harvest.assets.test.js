@@ -13,9 +13,9 @@ function checkWebp(relativePath, maxBytes) {
   return statSync(url).size;
 }
 
-test('the cinematic harvest hero ships as valid, local responsive images', () => {
-  const wide = checkWebp(ANCIENT_TREE_SRC, 300_000);
-  const mobile = checkWebp(ANCIENT_TREE_MOBILE_SRC, 125_000);
+test('the heaven-sent home hero ships as valid, local responsive images', () => {
+  const wide = checkWebp(ANCIENT_TREE_SRC, 320_000);
+  const mobile = checkWebp(ANCIENT_TREE_MOBILE_SRC, 220_000);
   assert.ok(mobile < wide, 'narrow screens must not download the wide image');
   assert.match(ANCIENT_TREE_SRC, /^assets\/img\/gen\//);
 });

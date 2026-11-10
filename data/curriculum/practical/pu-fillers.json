@@ -1,0 +1,1441 @@
+{
+ "id": "pu-fillers",
+ "title": "Sounding local: fillers",
+ "level": "L0",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il02",
+   "title": "Fillers that make you sound local",
+   "track": "israel",
+   "wordCount": 6
+  },
+  {
+   "id": "il23",
+   "title": "Sound less like an outsider: pronunciation markers",
+   "track": "israel",
+   "wordCount": 3
+  }
+ ],
+ "phrasebookSituation": "fillers",
+ "speakSets": [
+  "speak-survival-fillers-1"
+ ],
+ "grammarNote": "Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson. Register is unreviewed.",
+ "items": [
+  {
+   "id": "fillers-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אָז",
+   "en": "so",
+   "translit": "az",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-01"
+   }
+  },
+  {
+   "id": "fillers-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "נוּ",
+   "en": "well? / come on",
+   "translit": "nu",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-02"
+   }
+  },
+  {
+   "id": "fillers-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "טוֹב",
+   "en": "OK / well / good",
+   "translit": "tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-03"
+   }
+  },
+  {
+   "id": "fillers-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "נָכוֹן",
+   "en": "right / correct",
+   "translit": "nachon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-04"
+   }
+  },
+  {
+   "id": "fillers-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לֹא נָכוֹן",
+   "en": "not right / wrong",
+   "translit": "lo nachon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-05"
+   }
+  },
+  {
+   "id": "fillers-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בֶּאֱמֶת?",
+   "en": "really?",
+   "translit": "be'emet?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-06"
+   }
+  },
+  {
+   "id": "fillers-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מַמָּשׁ",
+   "en": "really / truly / very",
+   "translit": "mamash",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-07"
+   }
+  },
+  {
+   "id": "fillers-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "פָּשׁוּט",
+   "en": "simply / just",
+   "translit": "pashut",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-08"
+   }
+  },
+  {
+   "id": "fillers-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "סְתָם",
+   "en": "just (because) / for no reason",
+   "translit": "stam",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-09"
+   }
+  },
+  {
+   "id": "fillers-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּעֶצֶם",
+   "en": "actually / in fact",
+   "translit": "be'etsem",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-10"
+   }
+  },
+  {
+   "id": "fillers-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כְּלוֹמַר",
+   "en": "that is / I mean",
+   "translit": "klomar",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-11"
+   }
+  },
+  {
+   "id": "fillers-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲבָל",
+   "en": "but",
+   "translit": "aval",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "fillers-12"
+   }
+  },
+  {
+   "id": "fillers-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי לֹא יוֹדֵעַ",
+   "en": "I don't know",
+   "translit": "ani lo yode'a",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-13"
+   }
+  },
+  {
+   "id": "fillers-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי לֹא מֵבִין",
+   "en": "I don't understand",
+   "translit": "ani lo mevin",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-14"
+   }
+  },
+  {
+   "id": "fillers-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי מֵבִין",
+   "en": "I understand",
+   "translit": "ani mevin",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-15"
+   }
+  },
+  {
+   "id": "fillers-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+   "en": "do you speak English?",
+   "translit": "ata medaber anglit?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-16"
+   }
+  },
+  {
+   "id": "fillers-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב",
+   "en": "I don't speak Hebrew well",
+   "translit": "ani lo medaber ivrit tov",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-17"
+   }
+  },
+  {
+   "id": "fillers-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+   "en": "can you speak slowly?",
+   "translit": "efshar ledaber le'at?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-18"
+   }
+  },
+  {
+   "id": "fillers-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+   "en": "can you repeat that?",
+   "translit": "efshar lachazor al ze?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-19"
+   }
+  },
+  {
+   "id": "fillers-20",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה זֶה?",
+   "en": "what is this?",
+   "translit": "ma ze?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-20"
+   }
+  },
+  {
+   "id": "fillers-21",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה זֶה אוֹמֵר?",
+   "en": "what does that mean?",
+   "translit": "ma ze omer?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-21"
+   }
+  },
+  {
+   "id": "fillers-22",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+   "en": "how do you say ... in Hebrew?",
+   "translit": "eich omrim ... be'ivrit?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-22"
+   }
+  },
+  {
+   "id": "fillers-23",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+   "en": "can you write that down?",
+   "translit": "efshar lichtov et ze?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "fillers-23"
+   }
+  },
+  {
+   "id": "il02-w1",
+   "source": "data/curriculum/lessons.json#il02.words[0]",
+   "he": "יָאללָה",
+   "en": "come on; let's go",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il02-w1"
+   }
+  },
+  {
+   "id": "il02-w3",
+   "source": "data/curriculum/lessons.json#il02.words[2]",
+   "he": "סַבָּבָּה",
+   "en": "cool; fine",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il02-w3"
+   }
+  },
+  {
+   "id": "il02-w4",
+   "source": "data/curriculum/lessons.json#il02.words[3]",
+   "he": "בְּסֵדֶר",
+   "en": "OK; all right",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il02-w4"
+   }
+  },
+  {
+   "id": "il02-w5",
+   "source": "data/curriculum/lessons.json#il02.words[4]",
+   "he": "אַחְלָה",
+   "en": "great",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il02-w5"
+   }
+  },
+  {
+   "id": "il02-w6",
+   "source": "data/curriculum/lessons.json#il02.words[5]",
+   "he": "וַואלָה",
+   "en": "really? wow",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il02-w6"
+   }
+  },
+  {
+   "id": "il23-w1",
+   "source": "data/curriculum/lessons.json#il23.words[0]",
+   "he": "רֹאשׁ",
+   "en": "head (uvular vs tapped resh)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w1"
+   }
+  },
+  {
+   "id": "il23-w2",
+   "source": "data/curriculum/lessons.json#il23.words[1]",
+   "he": "חַיִּים",
+   "en": "life (chet, not kaf)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w2"
+   }
+  },
+  {
+   "id": "il23-w3",
+   "source": "data/curriculum/lessons.json#il23.words[2]",
+   "he": "מַה שְׁלוֹמְךָ",
+   "en": "how are you (to a man; stress on the last syllable)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w3"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "fillers-01",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "fillers-02",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "fillers-03",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "fillers-04",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "fillers-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "fillers-06",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "fillers-07",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "fillers-08",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "fillers-09",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "fillers-10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "fillers-11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "fillers-12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "fillers-13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "fillers-14",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "line",
+   "id": "fillers-15",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "line",
+   "id": "fillers-16",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "line",
+   "id": "fillers-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "line",
+   "id": "fillers-18",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "line",
+   "id": "fillers-19",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "line",
+   "id": "fillers-20",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "line",
+   "id": "fillers-21",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "line",
+   "id": "fillers-22",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "line",
+   "id": "fillers-23",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "il02-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "il02-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "il02-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "word",
+   "id": "il02-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "il02-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "il23-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "il23-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "il23-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "fillers-01",
+    "fillers-02",
+    "fillers-03",
+    "fillers-04",
+    "fillers-05",
+    "fillers-06",
+    "fillers-07",
+    "fillers-08",
+    "fillers-09",
+    "fillers-10",
+    "fillers-11",
+    "fillers-12",
+    "fillers-13",
+    "fillers-14",
+    "fillers-15",
+    "fillers-16",
+    "fillers-17",
+    "fillers-18",
+    "fillers-19",
+    "fillers-20",
+    "fillers-21",
+    "fillers-22",
+    "fillers-23",
+    "il02-w1",
+    "il02-w3",
+    "il02-w4",
+    "il02-w5",
+    "il02-w6",
+    "il23-w1",
+    "il23-w2",
+    "il23-w3"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-fillers-1.json.",
+   "set": "speak-survival-fillers-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-fillers-p01",
+   "title": "So",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אָז. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "fillers-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אָז",
+     "en": "so",
+     "translit": "az",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-01"
+     }
+    },
+    {
+     "id": "fillers-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "נוּ",
+     "en": "well? / come on",
+     "translit": "nu",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-02"
+     }
+    },
+    {
+     "id": "fillers-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "טוֹב",
+     "en": "OK / well / good",
+     "translit": "tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-03"
+     }
+    },
+    {
+     "id": "fillers-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "נָכוֹן",
+     "en": "right / correct",
+     "translit": "nachon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-04"
+     }
+    },
+    {
+     "id": "fillers-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֹא נָכוֹן",
+     "en": "not right / wrong",
+     "translit": "lo nachon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "fillers-01",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "fillers-02",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "fillers-03",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "fillers-04",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "fillers-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "fillers-01",
+    "fillers-02",
+    "fillers-03",
+    "fillers-04",
+    "fillers-05"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p02",
+   "title": "Really?",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: בֶּאֱמֶת?. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "fillers-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בֶּאֱמֶת?",
+     "en": "really?",
+     "translit": "be'emet?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-06"
+     }
+    },
+    {
+     "id": "fillers-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַמָּשׁ",
+     "en": "really / truly / very",
+     "translit": "mamash",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-07"
+     }
+    },
+    {
+     "id": "fillers-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פָּשׁוּט",
+     "en": "simply / just",
+     "translit": "pashut",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-08"
+     }
+    },
+    {
+     "id": "fillers-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סְתָם",
+     "en": "just (because) / for no reason",
+     "translit": "stam",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-09"
+     }
+    },
+    {
+     "id": "fillers-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּעֶצֶם",
+     "en": "actually / in fact",
+     "translit": "be'etsem",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "fillers-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "fillers-07",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "fillers-08",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "fillers-09",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "fillers-10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "fillers-06",
+    "fillers-07",
+    "fillers-08",
+    "fillers-09",
+    "fillers-10"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p03",
+   "title": "That is / I mean",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: כְּלוֹמַר. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "fillers-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כְּלוֹמַר",
+     "en": "that is / I mean",
+     "translit": "klomar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-11"
+     }
+    },
+    {
+     "id": "fillers-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲבָל",
+     "en": "but",
+     "translit": "aval",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "fillers-12"
+     }
+    },
+    {
+     "id": "fillers-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי לֹא יוֹדֵעַ",
+     "en": "I don't know",
+     "translit": "ani lo yode'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-13"
+     }
+    },
+    {
+     "id": "fillers-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי לֹא מֵבִין",
+     "en": "I don't understand",
+     "translit": "ani lo mevin",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-14"
+     }
+    },
+    {
+     "id": "fillers-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי מֵבִין",
+     "en": "I understand",
+     "translit": "ani mevin",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "fillers-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "fillers-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "fillers-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "fillers-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "fillers-15",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "fillers-11",
+    "fillers-12",
+    "fillers-13",
+    "fillers-14",
+    "fillers-15"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p04",
+   "title": "Do you speak English?",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אַתָּה מְדַבֵּר אַנְגְּלִית?. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "fillers-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+     "en": "do you speak English?",
+     "translit": "ata medaber anglit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-16"
+     }
+    },
+    {
+     "id": "fillers-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב",
+     "en": "I don't speak Hebrew well",
+     "translit": "ani lo medaber ivrit tov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-17"
+     }
+    },
+    {
+     "id": "fillers-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+     "en": "can you speak slowly?",
+     "translit": "efshar ledaber le'at?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-18"
+     }
+    },
+    {
+     "id": "fillers-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לַחֲזֹר עַל זֶה?",
+     "en": "can you repeat that?",
+     "translit": "efshar lachazor al ze?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-19"
+     }
+    },
+    {
+     "id": "fillers-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה זֶה?",
+     "en": "what is this?",
+     "translit": "ma ze?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-20"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "fillers-16",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "fillers-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "fillers-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "fillers-19",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "fillers-20",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "fillers-16",
+    "fillers-17",
+    "fillers-18",
+    "fillers-19",
+    "fillers-20"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p05",
+   "title": "What does that mean?",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: מָה זֶה אוֹמֵר?. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "fillers-21",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה זֶה אוֹמֵר?",
+     "en": "what does that mean?",
+     "translit": "ma ze omer?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-21"
+     }
+    },
+    {
+     "id": "fillers-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+     "en": "how do you say ... in Hebrew?",
+     "translit": "eich omrim ... be'ivrit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-22"
+     }
+    },
+    {
+     "id": "fillers-23",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִכְתֹּב אֶת זֶה?",
+     "en": "can you write that down?",
+     "translit": "efshar lichtov et ze?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "fillers-23"
+     }
+    },
+    {
+     "id": "il02-w1",
+     "source": "data/curriculum/lessons.json#il02.words[0]",
+     "he": "יָאללָה",
+     "en": "come on; let's go",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il02-w1"
+     }
+    },
+    {
+     "id": "il02-w3",
+     "source": "data/curriculum/lessons.json#il02.words[2]",
+     "he": "סַבָּבָּה",
+     "en": "cool; fine",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il02-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "fillers-21",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "fillers-22",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "fillers-23",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il02-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il02-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "fillers-21",
+    "fillers-22",
+    "fillers-23",
+    "il02-w1",
+    "il02-w3"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p06",
+   "title": "OK; all right",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: בְּסֵדֶר. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "il02-w4",
+     "source": "data/curriculum/lessons.json#il02.words[3]",
+     "he": "בְּסֵדֶר",
+     "en": "OK; all right",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il02-w4"
+     }
+    },
+    {
+     "id": "il02-w5",
+     "source": "data/curriculum/lessons.json#il02.words[4]",
+     "he": "אַחְלָה",
+     "en": "great",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il02-w5"
+     }
+    },
+    {
+     "id": "il02-w6",
+     "source": "data/curriculum/lessons.json#il02.words[5]",
+     "he": "וַואלָה",
+     "en": "really? wow",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il02-w6"
+     }
+    },
+    {
+     "id": "il23-w1",
+     "source": "data/curriculum/lessons.json#il23.words[0]",
+     "he": "רֹאשׁ",
+     "en": "head (uvular vs tapped resh)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w1"
+     }
+    },
+    {
+     "id": "il23-w2",
+     "source": "data/curriculum/lessons.json#il23.words[1]",
+     "he": "חַיִּים",
+     "en": "life (chet, not kaf)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w2"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il02-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il02-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il02-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il23-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il23-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il02-w4",
+    "il02-w5",
+    "il02-w6",
+    "il23-w1",
+    "il23-w2"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p07",
+   "title": "How are you (to a man; stress on the last syllable)",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מַה שְׁלוֹמְךָ. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "il23-w3",
+     "source": "data/curriculum/lessons.json#il23.words[2]",
+     "he": "מַה שְׁלוֹמְךָ",
+     "en": "how are you (to a man; stress on the last syllable)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il23-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il23-w3"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  }
+ ]
+}

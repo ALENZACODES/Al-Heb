@@ -1,0 +1,50 @@
+{
+ "schema": "alef-curriculum-lesson-lexicon/1",
+ "generated": false,
+ "proofread": false,
+ "note": "Curated pointed forms and phrases used by lessons, added 2026-11-10. These lemmas were missing from the generated vocabulary or needed as whole phrases. Not a clergy review. Do not treat as generated data.",
+ "entries": [
+  {
+   "id": "lex-mapah",
+   "he": "מַפָּה",
+   "en": "a map",
+   "reason": "The noun 'map' is מַפָּה. Lesson I-40 had been using מִפָּה, which is a verb form 'to map'."
+  },
+  {
+   "id": "lex-maten",
+   "he": "מַטְעֵן",
+   "en": "a charger (for a phone or battery)",
+   "reason": "An electrical charger is מַטְעֵן. Lesson I-16 had been using מִטְעָן, which means cargo or a charge (load)."
+  },
+  {
+   "id": "lex-kurs",
+   "he": "קוּרְס",
+   "en": "a course (a class or series of classes)",
+   "reason": "An academic course is קוּרְס. Lesson I-37 had been using קוֹרֵס, which means 'is collapsing'."
+  },
+  {
+   "id": "lex-miluim",
+   "he": "מִלּוּאִים",
+   "en": "reserve duty (IDF)",
+   "reason": "Israeli Hebrew sense used in lesson I-18; the generated lexicon had no reserve-duty entry."
+  },
+  {
+   "id": "lex-gmar",
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "reason": "The usual Yom Kippur greeting, distinct from שָׁנָה טוֹבָה on Rosh Hashana."
+  },
+  {
+   "id": "lex-kasher",
+   "he": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "en": "a kosher and happy holiday (Pesach greeting)",
+   "reason": "The common Pesach greeting; חַג שָׂמֵחַ alone is also used."
+  },
+  {
+   "id": "lex-tishmeri",
+   "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+   "en": "take care of yourself (said to a woman)",
+   "reason": "Feminine counterpart of תִּשְׁמֹר עַל עַצְמְךָ."
+  }
+ ]
+}

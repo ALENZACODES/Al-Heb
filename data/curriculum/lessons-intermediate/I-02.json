@@ -111,7 +111,7 @@
    },
    "source": {
     "file": "data/vocab/words.json",
-    "id": "hffd88aa2#forms.future"
+    "id": "p07b88d14"
    }
   },
   {
@@ -316,7 +316,7 @@
   {
    "id": "I-02-e06",
    "type": "produce",
-   "en": "the great, the mighty and the awesome",
+   "en": "the great, mighty and awesome God",
    "options": [
     "הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא",
     "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן",

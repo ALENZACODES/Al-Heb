@@ -54,7 +54,7 @@ export function triggerFor(alarmMin) {
 export function toICS(items, opt = {}) {
   const stamp = utcStamp(opt.now || new Date());
   const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Aleph//Jewish calendar and reminders 1.0//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
-    `X-WR-CALNAME:${escapeText(opt.calName || "Aleph Jewish calendar")}`];
+    `X-WR-CALNAME:${escapeText(opt.calName || "ALEF Jewish calendar")}`];
   for (const it of items) {
     const w = it.when;
     L.push("BEGIN:VEVENT", `UID:${it.uid}@alef.local`, `DTSTAMP:${stamp}`);

@@ -1,4 +1,4 @@
-// Router wiring for the games programme (GAMES-START-HERE.md). Both stay preview.
+// Router wiring for the games programme (docs/games/GAMES-START-HERE.md). Both stay preview.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';

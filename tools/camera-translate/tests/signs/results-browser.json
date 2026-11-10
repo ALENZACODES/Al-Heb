@@ -1,0 +1,371 @@
+{
+ "synthetic": true,
+ "note": "Computer-made sign images, not photographs. Headless desktop Chromium, not a phone.",
+ "reader": "in-browser reader, mode binary",
+ "total": {
+  "images": 20,
+  "cerPooled": 0.0193,
+  "lines": 28,
+  "linesReadExactly": 25,
+  "linesTranslatedEndToEnd": 27,
+  "wrongEnglishDrawn": 0,
+  "meanMs": 316
+ },
+ "byWear": {
+  "clean": {
+   "images": 12,
+   "cerPooled": 0.0163,
+   "lines": 17,
+   "linesReadExactly": 15,
+   "linesTranslatedEndToEnd": 16,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 352
+  },
+  "noise": {
+   "images": 2,
+   "cerPooled": 0,
+   "lines": 2,
+   "linesReadExactly": 2,
+   "linesTranslatedEndToEnd": 2,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 268
+  },
+  "blur": {
+   "images": 2,
+   "cerPooled": 0,
+   "lines": 4,
+   "linesReadExactly": 4,
+   "linesTranslatedEndToEnd": 4,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 231
+  },
+  "perspective": {
+   "images": 1,
+   "cerPooled": 0,
+   "lines": 1,
+   "linesReadExactly": 1,
+   "linesTranslatedEndToEnd": 1,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 178
+  },
+  "rotate": {
+   "images": 2,
+   "cerPooled": 0.087,
+   "lines": 3,
+   "linesReadExactly": 2,
+   "linesTranslatedEndToEnd": 3,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 355
+  },
+  "lowcontrast": {
+   "images": 1,
+   "cerPooled": 0,
+   "lines": 1,
+   "linesReadExactly": 1,
+   "linesTranslatedEndToEnd": 1,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 203
+  }
+ },
+ "rows": [
+  {
+   "id": "optical-store",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 628,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 208,
+   "levelled": 0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 259,
+   "levelled": 0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 438,
+   "levelled": 0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 287,
+   "levelled": 0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 298,
+   "levelled": 0,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price",
+   "variant": "clean",
+   "cer": 0.1429,
+   "ms": 347,
+   "levelled": 0,
+   "read": [
+    "מחיר חדשו"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry",
+   "variant": "noise",
+   "cer": 0,
+   "ms": 320,
+   "levelled": 0,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms",
+   "variant": "blur",
+   "cer": 0,
+   "ms": 176,
+   "levelled": 0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 155,
+   "levelled": 0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd",
+   "variant": "perspective",
+   "cer": 0,
+   "ms": 178,
+   "levelled": 0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square",
+   "variant": "rotate",
+   "cer": 0.1818,
+   "ms": 304,
+   "levelled": 4,
+   "read": [
+    "ביבר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 270,
+   "levelled": 0,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue",
+   "variant": "noise",
+   "cer": 0,
+   "ms": 216,
+   "levelled": 0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 274,
+   "levelled": 0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food",
+   "variant": "clean",
+   "cer": 0,
+   "ms": 611,
+   "levelled": 0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses",
+   "variant": "blur",
+   "cer": 0,
+   "ms": 286,
+   "levelled": 0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant",
+   "variant": "clean",
+   "cer": 0.05,
+   "ms": 452,
+   "levelled": 0,
+   "read": [
+    "מסעדה כשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking",
+   "variant": "lowcontrast",
+   "cer": 0,
+   "ms": 203,
+   "levelled": 0,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs",
+   "variant": "rotate",
+   "cer": 0,
+   "ms": 406,
+   "levelled": -4.2,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  }
+ ],
+ "pageErrors": [],
+ "nonGetRequests": [],
+ "otherOrigins": []
+}

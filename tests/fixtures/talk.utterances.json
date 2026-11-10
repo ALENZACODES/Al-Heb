@@ -1,0 +1,706 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "100 everyday lines (50 English to Hebrew, 50 Hebrew to English) used to score the Talk engine. The reference is one acceptable answer, not the only one.",
+ "samples": [
+  {
+   "id": "enhe-01",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "Hello.",
+   "reference": "שלום."
+  },
+  {
+   "id": "enhe-02",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "Good morning.",
+   "reference": "בוקר טוב."
+  },
+  {
+   "id": "enhe-03",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "Good evening.",
+   "reference": "ערב טוב."
+  },
+  {
+   "id": "enhe-04",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "How are you?",
+   "reference": "מה שלומך?"
+  },
+  {
+   "id": "enhe-05",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "I'm fine, thanks.",
+   "reference": "אני בסדר, תודה."
+  },
+  {
+   "id": "enhe-06",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "Nice to meet you.",
+   "reference": "נעים מאוד."
+  },
+  {
+   "id": "enhe-07",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "What's your name?",
+   "reference": "איך קוראים לך?"
+  },
+  {
+   "id": "enhe-08",
+   "direction": "en-he",
+   "category": "greetings",
+   "source": "My name is David.",
+   "reference": "קוראים לי דוד."
+  },
+  {
+   "id": "enhe-09",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "Where is the train station?",
+   "reference": "איפה תחנת הרכבת?"
+  },
+  {
+   "id": "enhe-10",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "Turn left at the light.",
+   "reference": "פנה שמאלה ברמזור."
+  },
+  {
+   "id": "enhe-11",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "How do I get to the hotel?",
+   "reference": "איך מגיעים למלון?"
+  },
+  {
+   "id": "enhe-12",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "Is it far from here?",
+   "reference": "זה רחוק מכאן?"
+  },
+  {
+   "id": "enhe-13",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "Go straight and then turn right.",
+   "reference": "תמשיך ישר ואז פנה ימינה."
+  },
+  {
+   "id": "enhe-14",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "I'm lost.",
+   "reference": "תעיתי."
+  },
+  {
+   "id": "enhe-15",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "Can you show me on the map?",
+   "reference": "אפשר להראות לי על המפה?"
+  },
+  {
+   "id": "enhe-16",
+   "direction": "en-he",
+   "category": "directions",
+   "source": "What time does the bus arrive?",
+   "reference": "מתי האוטובוס מגיע?"
+  },
+  {
+   "id": "enhe-17",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "I would like a coffee, please.",
+   "reference": "אני רוצה קפה, בבקשה."
+  },
+  {
+   "id": "enhe-18",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "The bill, please.",
+   "reference": "את החשבון, בבקשה."
+  },
+  {
+   "id": "enhe-19",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "Do you have vegetarian options?",
+   "reference": "יש לכם אפשרויות צמחוניות?"
+  },
+  {
+   "id": "enhe-20",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "Water, no ice.",
+   "reference": "מים, בלי קרח."
+  },
+  {
+   "id": "enhe-21",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "This is delicious.",
+   "reference": "זה טעים מאוד."
+  },
+  {
+   "id": "enhe-22",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "Can I see the menu?",
+   "reference": "אפשר לראות את התפריט?"
+  },
+  {
+   "id": "enhe-23",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "I am allergic to nuts.",
+   "reference": "יש לי אלרגיה לאגוזים."
+  },
+  {
+   "id": "enhe-24",
+   "direction": "en-he",
+   "category": "ordering",
+   "source": "A table for two, please.",
+   "reference": "שולחן לשניים, בבקשה."
+  },
+  {
+   "id": "enhe-25",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "How much does this cost?",
+   "reference": "כמה זה עולה?"
+  },
+  {
+   "id": "enhe-26",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "That's too expensive.",
+   "reference": "זה יקר מדי."
+  },
+  {
+   "id": "enhe-27",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "I'll take it.",
+   "reference": "אני לוקח את זה."
+  },
+  {
+   "id": "enhe-28",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "Do you accept credit cards?",
+   "reference": "אפשר לשלם בכרטיס אשראי?"
+  },
+  {
+   "id": "enhe-29",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "Where is the restroom?",
+   "reference": "איפה השירותים?"
+  },
+  {
+   "id": "enhe-30",
+   "direction": "en-he",
+   "category": "shopping",
+   "source": "I need a bag, please.",
+   "reference": "אני צריך שקית, בבקשה."
+  },
+  {
+   "id": "enhe-31",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "Call a doctor.",
+   "reference": "תקראו לרופא."
+  },
+  {
+   "id": "enhe-32",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "I need help.",
+   "reference": "אני צריך עזרה."
+  },
+  {
+   "id": "enhe-33",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "Where is the hospital?",
+   "reference": "איפה בית החולים?"
+  },
+  {
+   "id": "enhe-34",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "I don't feel well.",
+   "reference": "אני לא מרגיש טוב."
+  },
+  {
+   "id": "enhe-35",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "Call the police.",
+   "reference": "תתקשרו למשטרה."
+  },
+  {
+   "id": "enhe-36",
+   "direction": "en-he",
+   "category": "emergencies",
+   "source": "There has been an accident.",
+   "reference": "הייתה תאונה."
+  },
+  {
+   "id": "enhe-37",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Shabbat shalom.",
+   "reference": "שבת שלום."
+  },
+  {
+   "id": "enhe-38",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "What time is the service?",
+   "reference": "מתי התפילה?"
+  },
+  {
+   "id": "enhe-39",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Where is the synagogue?",
+   "reference": "איפה בית הכנסת?"
+  },
+  {
+   "id": "enhe-40",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Please hand me a prayer book.",
+   "reference": "אפשר סידור, בבקשה."
+  },
+  {
+   "id": "enhe-41",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Is there kiddush after the service?",
+   "reference": "יש קידוש אחרי התפילה?"
+  },
+  {
+   "id": "enhe-42",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "See you at shul.",
+   "reference": "נתראה בבית הכנסת."
+  },
+  {
+   "id": "enhe-43",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "After Shabbat.",
+   "reference": "מוצאי שבת."
+  },
+  {
+   "id": "enhe-44",
+   "direction": "en-he",
+   "category": "shul",
+   "source": "Have a peaceful Sabbath.",
+   "reference": "שבת מנוחה."
+  },
+  {
+   "id": "enhe-45",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "It is three o'clock.",
+   "reference": "השעה שלוש."
+  },
+  {
+   "id": "enhe-46",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "How many tickets?",
+   "reference": "כמה כרטיסים?"
+  },
+  {
+   "id": "enhe-47",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "I need two tickets.",
+   "reference": "אני צריך שני כרטיסים."
+  },
+  {
+   "id": "enhe-48",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "The number is five six seven.",
+   "reference": "המספר הוא חמש שש שבע."
+  },
+  {
+   "id": "enhe-49",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "See you tomorrow at ten.",
+   "reference": "נתראה מחר בעשר."
+  },
+  {
+   "id": "enhe-50",
+   "direction": "en-he",
+   "category": "numbers",
+   "source": "Wait a minute, please.",
+   "reference": "רגע אחד, בבקשה."
+  },
+  {
+   "id": "heen-01",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "שלום.",
+   "reference": "Hello."
+  },
+  {
+   "id": "heen-02",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "בוקר טוב.",
+   "reference": "Good morning."
+  },
+  {
+   "id": "heen-03",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "ערב טוב.",
+   "reference": "Good evening."
+  },
+  {
+   "id": "heen-04",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "מה שלומך?",
+   "reference": "How are you?"
+  },
+  {
+   "id": "heen-05",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "אני בסדר, תודה.",
+   "reference": "I'm fine, thanks."
+  },
+  {
+   "id": "heen-06",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "נעים מאוד.",
+   "reference": "Nice to meet you."
+  },
+  {
+   "id": "heen-07",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "איך קוראים לך?",
+   "reference": "What's your name?"
+  },
+  {
+   "id": "heen-08",
+   "direction": "he-en",
+   "category": "greetings",
+   "source": "קוראים לי דוד.",
+   "reference": "My name is David."
+  },
+  {
+   "id": "heen-09",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "איפה תחנת הרכבת?",
+   "reference": "Where is the train station?"
+  },
+  {
+   "id": "heen-10",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "פנה שמאלה ברמזור.",
+   "reference": "Turn left at the light."
+  },
+  {
+   "id": "heen-11",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "איך מגיעים למלון?",
+   "reference": "How do I get to the hotel?"
+  },
+  {
+   "id": "heen-12",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "זה רחוק מכאן?",
+   "reference": "Is it far from here?"
+  },
+  {
+   "id": "heen-13",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "תמשיך ישר ואז פנה ימינה.",
+   "reference": "Go straight and then turn right."
+  },
+  {
+   "id": "heen-14",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "תעיתי.",
+   "reference": "I'm lost."
+  },
+  {
+   "id": "heen-15",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "אפשר להראות לי על המפה?",
+   "reference": "Can you show me on the map?"
+  },
+  {
+   "id": "heen-16",
+   "direction": "he-en",
+   "category": "directions",
+   "source": "מתי האוטובוס מגיע?",
+   "reference": "What time does the bus arrive?"
+  },
+  {
+   "id": "heen-17",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "אני רוצה קפה, בבקשה.",
+   "reference": "I would like a coffee, please."
+  },
+  {
+   "id": "heen-18",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "את החשבון, בבקשה.",
+   "reference": "The bill, please."
+  },
+  {
+   "id": "heen-19",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "יש לכם אפשרויות צמחוניות?",
+   "reference": "Do you have vegetarian options?"
+  },
+  {
+   "id": "heen-20",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "מים, בלי קרח.",
+   "reference": "Water, no ice."
+  },
+  {
+   "id": "heen-21",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "זה טעים מאוד.",
+   "reference": "This is delicious."
+  },
+  {
+   "id": "heen-22",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "אפשר לראות את התפריט?",
+   "reference": "Can I see the menu?"
+  },
+  {
+   "id": "heen-23",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "יש לי אלרגיה לאגוזים.",
+   "reference": "I am allergic to nuts."
+  },
+  {
+   "id": "heen-24",
+   "direction": "he-en",
+   "category": "ordering",
+   "source": "שולחן לשניים, בבקשה.",
+   "reference": "A table for two, please."
+  },
+  {
+   "id": "heen-25",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "כמה זה עולה?",
+   "reference": "How much does this cost?"
+  },
+  {
+   "id": "heen-26",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "זה יקר מדי.",
+   "reference": "That's too expensive."
+  },
+  {
+   "id": "heen-27",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "אני לוקח את זה.",
+   "reference": "I'll take it."
+  },
+  {
+   "id": "heen-28",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "אפשר לשלם בכרטיס אשראי?",
+   "reference": "Do you accept credit cards?"
+  },
+  {
+   "id": "heen-29",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "איפה השירותים?",
+   "reference": "Where is the restroom?"
+  },
+  {
+   "id": "heen-30",
+   "direction": "he-en",
+   "category": "shopping",
+   "source": "אני צריך שקית, בבקשה.",
+   "reference": "I need a bag, please."
+  },
+  {
+   "id": "heen-31",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "תקראו לרופא.",
+   "reference": "Call a doctor."
+  },
+  {
+   "id": "heen-32",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "אני צריך עזרה.",
+   "reference": "I need help."
+  },
+  {
+   "id": "heen-33",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "איפה בית החולים?",
+   "reference": "Where is the hospital?"
+  },
+  {
+   "id": "heen-34",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "אני לא מרגיש טוב.",
+   "reference": "I don't feel well."
+  },
+  {
+   "id": "heen-35",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "תתקשרו למשטרה.",
+   "reference": "Call the police."
+  },
+  {
+   "id": "heen-36",
+   "direction": "he-en",
+   "category": "emergencies",
+   "source": "הייתה תאונה.",
+   "reference": "There has been an accident."
+  },
+  {
+   "id": "heen-37",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "שבת שלום.",
+   "reference": "Shabbat shalom."
+  },
+  {
+   "id": "heen-38",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "מתי התפילה?",
+   "reference": "What time is the service?"
+  },
+  {
+   "id": "heen-39",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "איפה בית הכנסת?",
+   "reference": "Where is the synagogue?"
+  },
+  {
+   "id": "heen-40",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "אפשר סידור, בבקשה.",
+   "reference": "Please hand me a prayer book."
+  },
+  {
+   "id": "heen-41",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "יש קידוש אחרי התפילה?",
+   "reference": "Is there kiddush after the service?"
+  },
+  {
+   "id": "heen-42",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "נתראה בבית הכנסת.",
+   "reference": "See you at shul."
+  },
+  {
+   "id": "heen-43",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "מוצאי שבת.",
+   "reference": "After Shabbat."
+  },
+  {
+   "id": "heen-44",
+   "direction": "he-en",
+   "category": "shul",
+   "source": "שבת מנוחה.",
+   "reference": "Have a peaceful Sabbath."
+  },
+  {
+   "id": "heen-45",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "השעה שלוש.",
+   "reference": "It is three o'clock."
+  },
+  {
+   "id": "heen-46",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "כמה כרטיסים?",
+   "reference": "How many tickets?"
+  },
+  {
+   "id": "heen-47",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "אני צריך שני כרטיסים.",
+   "reference": "I need two tickets."
+  },
+  {
+   "id": "heen-48",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "המספר הוא חמש שש שבע.",
+   "reference": "The number is five six seven."
+  },
+  {
+   "id": "heen-49",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "נתראה מחר בעשר.",
+   "reference": "See you tomorrow at ten."
+  },
+  {
+   "id": "heen-50",
+   "direction": "he-en",
+   "category": "numbers",
+   "source": "רגע אחד, בבקשה.",
+   "reference": "Wait a minute, please."
+  }
+ ]
+}

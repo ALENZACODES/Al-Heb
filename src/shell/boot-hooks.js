@@ -14,3 +14,11 @@ export async function armReminders(ctx) {
     return await armFromPrefs(ctx);
   } catch (e) { return { ok: false, reason: String(e?.message || e), next: null, cancel() {} }; }
 }
+
+/**
+ * Arm the retention system (streak freezes, XP, gems, hearts, practice league, Rimon reminders). The code lives in
+ * src/retention/ and is fetched here, after first paint, so it adds nothing to the first-install precache.
+ * Never throws: a fault in retention must not break the app.
+ * @param {{store?:object, settings?:object}} ctx
+ */
+export const armRetention = (ctx) => import('../retention/boot.js').then((m) => m.armRetention(ctx)).catch(() => null);

@@ -1626,6 +1626,31 @@
    "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker or qualified-reader review. Hebrew, niqqud, id, rank and audio are unchanged. proofread stays false. נִקּוּד / ניקוד. Wiktionary: the vowel-point system, and uncountable \"scoring\" (already this record's alt). https://en.wiktionary.org/wiki/%D7%A0%D7%99%D7%A7%D7%95%D7%93 The full build's noun keyword rule matches the English word \"point\" and would file this under Math/Measurements; topic is held at Misc Nouns.",
    "gloss": "vowel points (the marks that show vowels in Hebrew text); scoring",
    "topic": "Misc Nouns"
+  },
+  "v1d519995": {
+   "lemma": "גו",
+   "reason": "sense-noise lane 2026-11-10: disambiguate a circular English loanword. English gloss only; proofread stays false. Gloss aligned in vocab5000.json without a 5k rebuild.",
+   "gloss": "go (the board game)"
+  },
+  "v92bbb2f2": {
+   "lemma": "טנק",
+   "reason": "sense-noise lane 2026-11-10: disambiguate a circular English loanword. English gloss only; proofread stays false. Gloss aligned in vocab5000.json without a 5k rebuild.",
+   "gloss": "tank (an armored fighting vehicle)"
+  },
+  "v35787d85": {
+   "lemma": "סלמון",
+   "reason": "sense-noise lane 2026-11-10: disambiguate a circular English loanword. English gloss only; proofread stays false. Gloss aligned in vocab5000.json without a 5k rebuild.",
+   "gloss": "salmon (the fish)"
+  },
+  "v390aa9b9": {
+   "lemma": "בנק",
+   "reason": "sense-noise lane 2026-11-10: disambiguate a circular English loanword. English gloss only; proofread stays false. Gloss aligned in vocab5000.json without a 5k rebuild.",
+   "gloss": "bank (a financial institution)"
+  },
+  "vdee4ee61": {
+   "lemma": "פין",
+   "reason": "sense-noise lane 2026-11-10: disambiguate a circular English loanword. English gloss only; proofread stays false. Gloss aligned in vocab5000.json without a 5k rebuild.",
+   "gloss": "pin (a peg or fastener)"
   }
  },
  "additions": [
@@ -1740,6 +1765,33 @@
    "topic": "Transportation",
    "priority": 1800,
    "reason": "basic noun missing from the pool; unpointed in Wiktionary"
+  },
+  {
+   "lemma": "מפה",
+   "pos": "noun",
+   "pointed": "מַפָּה",
+   "gloss": "a map",
+   "topic": "Places / Travel",
+   "priority": 800,
+   "reason": "The noun 'map' (מַפָּה) was missing from the pool; only the verbs מִפָּה / מֻפָּה 'to map' were present. Lesson I-40 needs the noun."
+  },
+  {
+   "lemma": "מטען",
+   "pos": "noun",
+   "pointed": "מַטְעֵן",
+   "gloss": "a charger (for a phone or battery)",
+   "topic": "Electronics",
+   "priority": 2000,
+   "reason": "An electrical charger (מַטְעֵן) was missing; only מִטְעָן 'cargo' was present. Lesson I-16 needs the charger."
+  },
+  {
+   "lemma": "קורס",
+   "pos": "noun",
+   "pointed": "קוּרְס",
+   "gloss": "a course (a class or series of classes)",
+   "topic": "Education",
+   "priority": 1500,
+   "reason": "The academic noun קוּרְס was missing; קוֹרֵס 'is collapsing' is a different word. Lesson I-37 needs the noun."
   }
  ],
  "extraForms": {

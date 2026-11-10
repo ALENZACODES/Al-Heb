@@ -63,10 +63,10 @@ export function createBrowserTesseract({ baseUrl = DEFAULT_BASE, lang = 'heb', p
     sendsImageOffDevice: false,
     describe: () => `vendored tesseract.js 7.0.0 + heb tessdata_fast from ${baseUrl}; psm ${psm}; contrast normalisation ${preprocess ? 'on' : 'off'}; deskew ${doDeskew ? 'on' : 'off'}; binarize ${binarize ? 'on' : 'off'}`,
     /** @returns {Promise<Array<{text:string,x:number,y:number,w:number,h:number,conf?:number}>>} */
-    async ocr(image, { mode } = {}) {
+    async ocr(image, { mode, psm: callPsm } = {}) {
       const w = await getWorker();
       const prepared = await prepareImage(image, { preprocess, deskew: doDeskew, binarize });
-      await w.setParameters({ tessedit_pageseg_mode: String(psm) });
+      await w.setParameters({ tessedit_pageseg_mode: String(callPsm ?? psm) });
       const { data } = await w.recognize(prepared.blob, {}, { blocks: true });
       return wordsFromData(data).map((b) => ({ ...b, x: b.x / prepared.scale, y: b.y / prepared.scale, w: b.w / prepared.scale, h: b.h / prepared.scale }));
     },

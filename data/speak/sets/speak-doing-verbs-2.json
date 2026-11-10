@@ -104,7 +104,7 @@
    "translit": "nitan",
    "en": "to be given",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0c806e7a",
    "source": "data/vocab/words.json"
   },
   {
@@ -113,7 +113,7 @@
    "translit": "bara",
    "en": "to create (when act of a deity)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h0fab4286",
    "source": "data/vocab/words.json"
   }
  ]

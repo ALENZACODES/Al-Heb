@@ -34,7 +34,7 @@ export function mount(root, ctx) {
   const env = ctx?.env || {};
   const nav = env.navigator ?? globalThis.navigator;
   const wrap = el("section", { class: "alef-offline", "aria-labelledby": "view-title" });
-  const h1 = el("h1", { id: "view-title", tabindex: "-1" }, "Use Aleph offline");
+  const h1 = el("h1", { id: "view-title", tabindex: "-1" }, "Use ALEF offline");
   const body = el("div", { class: "of-body" });
   const status = el("p", { role: "status", "aria-live": "polite", id: "of-status" });
   wrap.append(h1, body, status);
@@ -51,7 +51,7 @@ export function mount(root, ctx) {
 
   async function refresh() {
     try { const l = await O.loadPrecacheList(env.fetch); files = l.files; onDemand = l.onDemand || []; version = l.version; loadError = ""; }
-    catch (e) { loadError = `The list of offline files did not load. Open Aleph once while online, then try again.`; files = []; onDemand = []; }
+    catch (e) { loadError = `The list of offline files did not load. Open ALEF once while online, then try again.`; files = []; onDemand = []; }
     report = await O.cacheReport(files, { caches: env.caches });
     extraReport = await O.cacheReport(extraUrls(), { caches: env.caches, measure: false });
     health = await O.storageHealth({ navigator: nav, localStorage: env.localStorage, hasRoute: ctx?.hasRoute });
@@ -80,9 +80,9 @@ export function mount(root, ctx) {
     if (!alive) return;
     const kids = [];
     const controlled = !!nav?.serviceWorker?.controller;
-    const swLine = !nav?.serviceWorker ? "This browser cannot keep an offline copy of Aleph."
-      : controlled ? "Offline use is switched on for this page." : "Offline use is not switched on for this page yet. Reload once while online; until then Aleph needs a connection.";
-    kids.push(el("p", {}, "Aleph keeps a copy of itself on this device so it can open without a connection."), el("p", { class: "muted", id: "of-sw" }, swLine + (version ? ` Version ${version}.` : "")));
+    const swLine = !nav?.serviceWorker ? "This browser cannot keep an offline copy of ALEF."
+      : controlled ? "Offline use is switched on for this page." : "Offline use is not switched on for this page yet. Reload once while online; until then ALEF needs a connection.";
+    kids.push(el("p", {}, "ALEF keeps a copy of itself on this device so it can open without a connection."), el("p", { class: "muted", id: "of-sw" }, swLine + (version ? ` Version ${version}.` : "")));
     if (loadError) kids.push(el("p", { role: "alert", id: "of-error" }, loadError));
 
     // groups
@@ -131,7 +131,7 @@ export function mount(root, ctx) {
     // updates
     if (upd) {
       kids.push(el("div", { class: "of-card", id: "of-update" }, el("h2", {}, "Updates"),
-        el("p", { id: "of-update-text" }, updState === "waiting" || updState === "activated" ? "A new version is ready. Use the Reload button at the bottom of the screen when you are at a good stopping point." : updState === "stalled" ? "An update is waiting but could not be applied here. Close all Aleph tabs and open it again." : "You have the latest version this device has seen."),
+        el("p", { id: "of-update-text" }, updState === "waiting" || updState === "activated" ? "A new version is ready. Use the Reload button at the bottom of the screen when you are at a good stopping point." : updState === "stalled" ? "An update is waiting but could not be applied here. Close all ALEF tabs and open it again." : "You have the latest version this device has seen."),
         el("div", { class: "of-row" }, el("button", { type: "button", class: "btn secondary", id: "of-check", onclick: async () => { await upd.check(); say(upd.state() === "idle" ? "No newer version found." : "A newer version was found."); } }, "Check for a new version"))));
     }
     body.replaceChildren(...kids.filter(Boolean));

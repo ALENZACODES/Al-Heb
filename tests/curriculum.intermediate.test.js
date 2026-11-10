@@ -6,7 +6,7 @@ import { transliterate } from "../src/pronunciation/transliterate.js";
 
 // Intermediate lessons I-01..I-50 live in data/curriculum/lessons-intermediate/ and are registered in lessons.json by tools/curriculum/intermediate/register.py
 // (see docs/curriculum/INTERMEDIATE.md). The main rule checked here: every Hebrew string in a lesson is either a whole
-// entry of, or a composition of whitespace tokens found in, data/vocab/words.json, data/corpus/*.json or data/service/*.json.
+// entry of, or a composition of whitespace tokens found in, data/vocab/words.json, data/curriculum/lesson-lexicon.json, data/corpus/*.json or data/service/*.json.
 
 const ROOT = new URL("../", import.meta.url);
 const readJson = (f) => JSON.parse(fs.readFileSync(new URL(f, ROOT), "utf8"));
@@ -22,6 +22,8 @@ const phrasebook = readJson("data/corpus/phrasebook.json");
 const regById = Object.fromEntries(registry.entries.map((e) => [e.id, e]));
 const wordById = Object.fromEntries(words.words.map((w) => [w.id, w]));
 const phraseById = Object.fromEntries(phrasebook.entries.map((e) => [e.id, e]));
+const lexicon = readJson("data/curriculum/lesson-lexicon.json");
+const lexiconById = Object.fromEntries(lexicon.entries.map((e) => [e.id, e]));
 
 // ---- Hebrew normalisation shared with the authoring check
 const HEB = /[א-ת]/;
@@ -38,6 +40,7 @@ function harvest(o) {
   else if (o && typeof o === "object") Object.values(o).forEach(harvest);
 }
 harvest(words.words);
+harvest(readJson("data/curriculum/lesson-lexicon.json"));
 for (const dir of ["data/corpus", "data/service"]) {
   for (const f of fs.readdirSync(new URL(dir + "/", ROOT)).filter((x) => x.endsWith(".json"))) harvest(readJson(`${dir}/${f}`));
 }
@@ -164,6 +167,10 @@ test("word source references resolve; pronunciation equals the project's transli
       } else if (src.file === "data/corpus/registry.json") {
         const [id, ln] = src.id.split("#l"); const e = regById[id]; assert.ok(e, src.id);
         assert.equal(key(e.he.split("\n")[(ln ? +ln : 1) - 1]), key(w.he), `${l.id} ${w.he} ${src.id}`);
+      } else if (src.file === "data/curriculum/lesson-lexicon.json") {
+        const ent = lexiconById[src.id];
+        assert.ok(ent, `${l.id} ${w.he}: unknown lesson-lexicon id ${src.id}`);
+        assert.equal(key(ent.he), key(w.he), `${l.id} ${w.he} != ${src.id}`);
       } else {
         assert.equal(src.file, "composed", `${l.id} ${w.he}`);
         assert.deepEqual(src.tokens, tokens(w.he));

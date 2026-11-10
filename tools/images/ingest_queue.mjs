@@ -11,6 +11,9 @@
 //      unique across the sheets (env.png, idle-01.png) prefix it with a folder of the target path and two underscores:
 //      letterchomp__env.png, rimon__idle-01.png, markers__festival.png. Browser suffixes " (1)" / " - Copy" are ignored.
 //   2. by CSV: --map FILE.csv with a header `file,path` (file = name or path of the dropped file, path = target path).
+// Rimon stills (docs/images/rimon-stills.csv) are named as in the sheet: rimon-007-starting-line.png -> data/images/rimon/v2/rimon-007-starting-line.webp
+// (512 x 512 WebP with transparency). After any still is written, data/images/rimon/present.json is rewritten so the
+// app starts showing it (tools/images/rimon/build.mjs writePresent).
 // Everything else is reported as UNMATCHED and never used. Two files for one target = CONFLICT, neither is written.
 //
 // Each matched file is checked (real image, aspect within 2% of the spec unless --crop centre-crops it), resized to
@@ -22,6 +25,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { parseCsv } from './ingest_lib.mjs';
 import { scanFile, stripper, typeOf } from '../meta/lib.mjs';
+import { writePresent } from './rimon/build.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(here, '..', '..');
@@ -33,6 +37,7 @@ export const SHEETS = [
   { csv: 'docs/images/calendar-art.csv', col: 'path', group: 'calendar' },
   { csv: 'docs/images/rimon-frames.csv', col: 'path', group: 'rimon' },
   { csv: 'docs/books/image-prompts-6-62.csv', col: 'output_path', group: 'books' },
+  { csv: 'docs/images/rimon-stills.csv', col: 'path', group: 'rimon-stills' },
 ];
 
 /** The spec a target path must be written to. Exported so the test can pin it. */
@@ -43,6 +48,7 @@ export function specFor(target) {
   if (/^assets\/games\/arcade\/(cast|letters)\/[a-z0-9-]+\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
   if (/^assets\/img\/calendar\/markers\/[a-z0-9-]+\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
   if (/^assets\/img\/rimon\/frames\/[a-z]+-\d\d\.png$/.test(target)) return { format: 'png', width: 256, height: 256, alpha: true, kind: 'sprite' };
+  if (/^data\/images\/rimon\/v2\/rimon-\d{3}-[a-z0-9-]+\.webp$/.test(target)) return { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' };
   return null;
 }
 
@@ -162,7 +168,9 @@ export function convert(src, dst, spec, engine, crop) {
   const fit = crop ? `scale=${w}:${h}:force_original_aspect_ratio=increase:flags=lanczos,crop=${w}:${h}` : `scale=${w}:${h}:flags=lanczos`;
   const fmt = spec.alpha ? 'format=rgba' : 'format=rgb24';
   const args = ['-y', '-v', 'error', '-i', src, '-vf', `${fit},${fmt}`, '-map_metadata', '-1', '-frames:v', '1'];
-  if (spec.format === 'jpeg') args.push('-q:v', '4', '-pix_fmt', 'yuvj420p', '-f', 'image2', '-c:v', 'mjpeg'); else args.push('-f', 'image2', '-c:v', 'png');
+  if (spec.format === 'jpeg') args.push('-q:v', '4', '-pix_fmt', 'yuvj420p', '-f', 'image2', '-c:v', 'mjpeg');
+  else if (spec.format === 'webp') args.push('-c:v', 'libwebp', '-quality', String(spec.quality || 88), '-lossless', '0', '-pix_fmt', 'yuva420p', '-f', 'webp');
+  else args.push('-f', 'image2', '-c:v', 'png');
   args.push(dst);
   const r = spawnSync('ffmpeg', args, { encoding: 'utf8' });
   if (r.status !== 0) return { ok: false, error: `ffmpeg: ${(r.stderr || '').trim().slice(0, 300)}` };
@@ -274,6 +282,7 @@ export async function run(o, log = console.log) {
     }
   }
   const stillMissing = missing.filter((t) => !rows.some((r) => r.target === t && r.status === 'WROTE'));
+  if (rows.some((r) => r.status === 'WROTE' && r.group === 'rimon-stills')) summary.rimonPresent = writePresent(o.root).length;
   const groups = {};
   for (const t of targets.keys()) { const g = targets.get(t).group; groups[g] ||= { total: 0, missing: 0 }; groups[g].total++; if (stillMissing.includes(t)) groups[g].missing++; }
   if (!o.quiet) {

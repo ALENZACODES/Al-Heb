@@ -73,3 +73,18 @@ All of these ids are already in `data/corpus/registry.json`; the intermediate le
 | `maoz-tzur-1` | Siddur: Maoz Tzur, first verse | I-32 |
 | `zimun-opening` | Siddur: Birkat Hamazon, zimun (invitation) | I-33 |
 | `shir-hamaalot` | Psalm 126:1-6 | I-33 |
+| `hallel-113-1` | Psalms 113:1 | I-07 |
+| `hallel-115-1` | Psalms 115:1 | I-07 |
+| `hallel-116-13` | Psalms 116:13 | I-07 |
+| `hallel-117` | Psalms 117:1-2 | I-07 |
+| `hallel-118-1-4` | Psalms 118:1-4 | I-07 |
+| `hallel-118-5` | Psalms 118:5 | I-07 |
+| `hallel-118-6` | Psalms 118:6 | I-07 |
+| `hallel-118-24` | Psalms 118:24 | I-07 |
+| `hallel-118-25` | Psalms 118:25 | I-07 |
+| `hallel-118-28` | Psalms 118:28 | I-07 |
+| `kiddush-festival-eve-open` | Siddur: Yom Tov evening Kiddush, opening of the sanctification | I-29 |
+| `kiddush-festival-pesach` | Siddur: Yom Tov evening Kiddush, Pesach insert | I-29 |
+| `kiddush-festival-eve-close` | Siddur: Yom Tov evening Kiddush, close of the sanctification | I-29 |
+| `kiddush-festival-sukkot` | Siddur: Yom Tov evening Kiddush, Sukkot insert | I-30 |
+| `leshev-basukkah` | Siddur: blessing to dwell in the sukkah | I-30 |

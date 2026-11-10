@@ -78,7 +78,7 @@ const META = {
   'ashrei-145-16': { ref: 'Psalm 145:16', cat: 'torah', level: 'inter-1', title: "Poteach et yadecha (the verse said with concentration in Ashrei)" },
   'shir-hamaalot': { ref: 'Psalm 126:1-6', cat: 'torah', level: 'inter-2', title: "Shir hamaalot (sung before Birkat Hamazon on Shabbat and festivals)" },
   // Siddur lines
-  'vayehi-binsoa': { corrections: [['\u05D5\u05B7\u05D9\u05BC\u05D0\u05DE\u05B6\u05E8', '\u05D5\u05B7\u05D9\u05B9\u05D0\u05DE\u05B6\u05E8'], ['\u05DE\u05E9\u05C1\u05B6\u05D4', '\u05DE\u05B9\u05E9\u05C1\u05B6\u05D4']], ref: 'Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing)', cat: 'siddur', level: 'intro-3', title: 'Vayehi binsoa ha-aron (opening the ark)', nusach: 'Ashkenaz (Metsudah)',
+  'vayehi-binsoa': { corrections: [['\u05D5\u05B7\u05D9\u05BC\u05D0\u05DE\u05B6\u05E8', '\u05D5\u05B7\u05D9\u05BC\u05B9\u05D0\u05DE\u05B6\u05E8'], ['\u05DE\u05E9\u05C1\u05B6\u05D4', '\u05DE\u05B9\u05E9\u05C1\u05B6\u05D4']], ref: 'Siddur: Vayehi binsoa (Numbers 10:35, Isaiah 2:3, blessing)', cat: 'siddur', level: 'intro-3', title: 'Vayehi binsoa ha-aron (opening the ark)', nusach: 'Ashkenaz (Metsudah)',
     gloss: 'And it was, when the ark set out, Moses said: Arise, LORD, and let your enemies be scattered, and let those who hate you flee before you. For from Zion will go forth Torah, and the word of the LORD from Jerusalem. Blessed is the one who gave the Torah to his people Israel in his holiness.',
     notes: 'Metsudah weekday text. The Shabbat service in Ashkenazi books uses the same words. Sephardi/Mizrahi order of the Torah service differs.' },
   'lecha-hashem': { ref: 'Siddur: Lecha Adonai hagedulah (1 Chronicles 29:11, Psalm 99:5, 99:9)', cat: 'siddur', level: 'inter-1', title: 'Lecha Adonai hagedulah (carrying the Torah around)', nusach: 'Ashkenaz (Metsudah)', dropTokens: ['והקהל', 'עונימ'],
@@ -118,8 +118,8 @@ const META = {
     gloss: ['May the living God be magnified and praised; he exists, and his existence is not bound by time.', 'He is one, and there is no unity like his unity; hidden, and without end to his oneness.', 'He has no bodily form and is not a body; his holiness cannot be compared.', 'He preceded everything that was created; first, and with no beginning to his beginning.', 'Behold, he is master of the world to every creature; he shows his greatness and his sovereignty.', 'The abundance of his prophecy he gave to the people he treasured and who are his glory.', 'No one has arisen in Israel like Moses, a prophet who beheld his likeness.', 'A Torah of truth God gave to his people through his prophet, trusted in his house.', 'God will not alter or exchange his law, for ever, for any other.', 'He watches and knows our secrets; he sees the end of a matter at its beginning.', 'He repays a person with kindness according to his deeds; he gives the wicked evil according to his wickedness.', 'At the end of days he will send our anointed one, to redeem those who await the end of his salvation.', 'God will revive the dead in his great kindness; blessed for ever is his praised name.'],
     notes: 'Thirteen lines; the small headings in the source naming each principle are removed. Line 12 and 13 mention a messiah and revival of the dead; Reform and some Conservative books change or omit these ideas. Check the local siddur.' },
   'zimun-opening': { ref: 'Siddur: Birkat Hamazon, zimun (invitation)', cat: 'siddur', level: 'inter-2', title: 'Zimun: "Rabotai nevarech" and the response', nusach: 'Ashkenaz (Metsudah)',
-    gloss: ['Gentlemen, let us bless.', 'May the name of the LORD be blessed from now and for ever.'],
-    notes: 'The invitation said by the leader of the meal, then the group repeats the response. The longer form with "Eloheinu" is said with ten or more; not included here.' },
+    gloss: ['Friends, let us bless.', 'May the name of the LORD be blessed from now and for ever.'],
+    notes: 'The invitation said by the leader of the meal, then the group repeats the response. The longer form with "Eloheinu" is said with ten or more; not included here. Rabotai is literally "my masters"; many Reform and egalitarian tables say chaverai ("my friends") instead.' },
   'haftarah-before': { ref: 'Siddur: Haftarah, blessings before', cat: 'siddur', level: 'inter-2', title: 'Haftarah blessings before the reading', nusach: 'Edot HaMizrach (Shaliehsaboo edition)',
     gloss: 'Blessed are you, LORD our God, king of the world, who chose good prophets and was pleased with their words, which were spoken in truth. Blessed are you, LORD, who chooses the Torah, and Moses his servant, and Israel his people, and prophets of truth and righteousness.',
     notes: 'Two blessings in the Sephardi/Mizrahi form (the first and last of the haftarah blessings before the reading). Ashkenazi books print the same two but some communities add more; confirm local custom.' },
@@ -148,11 +148,51 @@ const META = {
     gloss: 'Blessed are you, LORD our God, king of the world, who has kept us alive, sustained us, and brought us to this time.',
     notes: 'Taken from the Hanukkah candle-lighting page; the wording is the same for festivals, new fruit and other firsts.' },
   'hanerot-halalu': { ref: 'Siddur: Hanerot halalu', cat: 'siddur', level: 'inter-1', title: 'Hanerot halalu (said while lighting Hanukkah candles)', nusach: 'Edot HaMizrach (Shaliehsaboo edition)',
-    gloss: 'We light these lights for the miracles, the deliverances, and the wonders that you did for our ancestors through your holy priests. Throughout the eight days of Hanukkah these lights are holy, and we may not use them, only look at them, in order to thank and praise your name for your miracles, your wonders and your salvations.' },
+    gloss: 'We light these lights for the miracles, the deliverances, and the wonders that you did for our ancestors through your holy priests. Throughout the eight days of Hanukkah these lights are holy, and we may not use them, only look at them, in order to give thanks to your name for your miracles, your wonders and your salvations.',
+    notes: 'Ashkenazi books read lehodot ulehallel leshimkha hagadol ("to thank and to praise your great name") and add bayamim hahem bazman hazeh after la\'avoteinu.' },
   'maoz-tzur-1': { ref: 'Siddur: Maoz Tzur, first verse', cat: 'siddur', level: 'inter-2', title: 'Maoz Tzur (first verse)', nusach: 'Edot HaMizrach (Shaliehsaboo edition)',
     gloss: 'Rock of my salvation, to praise you is fitting. Restore my house of prayer, and there we will bring a thanksgiving offering. When you have prepared the slaughter of the barking foe, then I shall complete with a song of psalm the dedication of the altar.',
     notes: 'First verse only. Ashkenazi congregations sing the best-known tune; Sephardi/Mizrahi tunes differ.' },
+  // Selected Hallel verses and festival Kiddush, added 2026-11-10 (lesson-integrity). Do not rewrite existing keys.
+  'hallel-113-1': { ref: 'Psalms 113:1', cat: 'torah', level: 'inter-1', title: 'Hallel: opening verse (Psalm 113:1)',
+    notes: 'First verse of Hallel. The rest of Psalms 113-118, and the half-Hallel cuts used on Rosh Chodesh and the later days of Pesach, are still a gap (g-hallel).' },
+  'hallel-115-1': { ref: 'Psalms 115:1', cat: 'torah', level: 'inter-1', title: "Hallel: 'Not to us, LORD' (Psalm 115:1)" },
+  'hallel-116-13': { ref: 'Psalms 116:13', cat: 'torah', level: 'inter-1', title: "Hallel: 'I will lift the cup of salvation' (Psalm 116:13)",
+    notes: 'This verse is also said in the opening chain of Havdalah (havdalah-opening).' },
+  'hallel-117': { ref: 'Psalms 117:1-2', cat: 'torah', level: 'inter-1', title: 'Hallel: Psalm 117 (whole psalm)',
+    notes: 'The shortest psalm; said in full Hallel. "Kol goyim" here means the nations, the usual biblical sense.' },
+  'hallel-118-1-4': { ref: 'Psalms 118:1-4', cat: 'torah', level: 'inter-1', title: "Hallel: 'Hodu' and the responsive opening of Psalm 118",
+    notes: 'The congregation answers each call with "ki l\'olam chasdo".' },
+  'hallel-118-5': { ref: 'Psalms 118:5', cat: 'torah', level: 'inter-1', title: "Hallel: 'From the narrow place I called' (Psalm 118:5)" },
+  'hallel-118-6': { ref: 'Psalms 118:6', cat: 'torah', level: 'inter-1', title: "Hallel: 'The LORD is with me; I will not fear' (Psalm 118:6)" },
+  'hallel-118-24': { ref: 'Psalms 118:24', cat: 'torah', level: 'inter-1', title: "Hallel: 'This is the day the LORD made' (Psalm 118:24)" },
+  'hallel-118-25': { ref: 'Psalms 118:25', cat: 'torah', level: 'inter-1', title: "Hallel: 'Anna Adonai hoshia na' (Psalm 118:25)" },
+  'hallel-118-28': { ref: 'Psalms 118:28', cat: 'torah', level: 'inter-1', title: "Hallel: 'You are my God' (Psalm 118:28)" },
+  'kiddush-festival-day-verses': { ref: 'Leviticus 23:4, 23:44', cat: 'torah', level: 'inter-1', title: 'Festival daytime Kiddush: the two Leviticus verses',
+    notes: 'These two verses (not a contiguous range) are the Torah passages recited at daytime Kiddush on a festival. Pair with kiddush-wine-1. The siddur sometimes prints slightly different cantillation; the consonants follow UXLC.' },
+  'kiddush-festival-eve-open': { dropParen: true, ref: 'Siddur: Yom Tov evening Kiddush, opening of the sanctification', cat: 'siddur', level: 'inter-1', title: 'Festival evening Kiddush: opening (weekday form)', nusach: 'Sefard (Torat Emet)',
+    gloss: 'Blessed are you, LORD our God, king of the world, who chose us from every people, raised us above every language, and made us holy with his commandments. And you gave us, LORD our God, in love, appointed times for gladness, festivals and seasons for joy, this day of',
+    notes: 'Weekday (non-Shabbat) form: parenthetical Shabbat phrases in the source were dropped with dropParen, so the line ends mid-phrase ("this day of") and must be followed by the festival insert (kiddush-festival-pesach / shavuot / sukkot / shemini) and then kiddush-festival-eve-close. Pair with kiddush-wine-1. When a festival falls on Friday night, say the parenthetical Shabbat words as well; they are not in this record.' },
+  'kiddush-festival-pesach': { dropTokens: ['לפסח'], ref: 'Siddur: Yom Tov evening Kiddush, Pesach insert', cat: 'siddur', level: 'inter-1', title: 'Festival Kiddush insert: Pesach', nusach: 'Sefard (Torat Emet)',
+    gloss: 'this Festival of Matzot, the time of our freedom',
+    notes: 'The source rubric "for Pesach" is dropped (dropTokens). Insert this line between kiddush-festival-eve-open and kiddush-festival-eve-close.' },
+  'kiddush-festival-shavuot': { dropTokens: ['לשבועות'], ref: 'Siddur: Yom Tov evening Kiddush, Shavuot insert', cat: 'siddur', level: 'inter-1', title: 'Festival Kiddush insert: Shavuot', nusach: 'Sefard (Torat Emet)',
+    gloss: 'this Festival of Shavuot, the time of the giving of our Torah',
+    notes: 'The source rubric "for Shavuot" is dropped. The Torat Emet text prints תּוֹרָתֵינוּ (an extra yod) and הַשָׁבוּעוֹת (shin without dagesh after the definite article). Both are kept as in the source; standard siddurim usually print תּוֹרָתֵנוּ and הַשָּׁבוּעוֹת. An educator should confirm the local book.' },
+  'kiddush-festival-sukkot': { dropTokens: ['לסוכות'], ref: 'Siddur: Yom Tov evening Kiddush, Sukkot insert', cat: 'siddur', level: 'inter-1', title: 'Festival Kiddush insert: Sukkot', nusach: 'Sefard (Torat Emet)',
+    gloss: 'this Festival of Sukkot, the time of our gladness',
+    notes: 'The source rubric "for Sukkot" is dropped. Insert between the opening and the close. On Sukkot also say leshev-basukkah.' },
+  'kiddush-festival-shemini': { dropTokens: ['לשמע', 'ולשת'], ref: 'Siddur: Yom Tov evening Kiddush, Shemini Atzeret insert', cat: 'siddur', level: 'inter-1', title: 'Festival Kiddush insert: Shemini Atzeret', nusach: 'Sefard (Torat Emet)',
+    gloss: 'this Festival of Shemini Atzeret, the time of our gladness',
+    notes: 'The source rubric abbreviated "for Shemini Atzeret and for Simchat Torah" is dropped. Some books print "Shemini Atzeret this festival"; the source wording is kept.' },
+  'kiddush-festival-eve-close': { dropParen: true, ref: 'Siddur: Yom Tov evening Kiddush, close of the sanctification', cat: 'siddur', level: 'inter-1', title: 'Festival evening Kiddush: close (weekday form)', nusach: 'Sefard (Torat Emet)',
+    gloss: 'a holy convocation, a remembrance of the exodus from Egypt. For you chose us and made us holy from all the peoples, and your holy appointed times you have given us as an inheritance in gladness and in joy. Blessed are you, LORD, who makes Israel and the seasons holy.',
+    notes: 'Weekday form: parenthetical Shabbat phrases in the source were dropped with dropParen. The closing formula is "who makes Israel and the seasons holy" (not the Shabbat close "who makes the Shabbat holy"). When a festival falls on Friday night, say the parenthetical Shabbat words as well; they are not in this record.' },
+  'leshev-basukkah': { ref: 'Siddur: blessing to dwell in the sukkah', cat: 'siddur', level: 'intro-3', title: 'Leshev basukkah (blessing to dwell in the sukkah)', nusach: 'Sefard (Torat Emet)',
+    gloss: 'Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to dwell in the sukkah.',
+    notes: 'Said in the sukkah, usually after Kiddush (or after hamotzi when there is no Kiddush). Customs differ on which meals and which days of Sukkot this blessing is said; confirm local custom.' },
 };
+
 
 const SIDDUR_ATTR = {
   'Metsudah': 'Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA\'S AND IS NOT INDEPENDENTLY VERIFIED.',
@@ -230,12 +270,34 @@ for (const [id, meta] of Object.entries(META)) {
 }
 
 const order = Object.keys(META);
-const out = {
+const registryPath = path.join(root, 'data/corpus/registry.json');
+const built = {
   schema: 'alef-corpus-registry/1',
   note: 'Built by src/corpus/tools/build-registry.mjs from data/corpus/source-snapshot.json. Do not edit by hand; edit META in the builder and re-run. See docs/corpus/LICENSES.md.',
   generated: FETCHED,
   normalisation: 'Pointed Hebrew, cantillation removed, NFC; see src/corpus/normalize.js header.',
   entries: order.map((id) => entries.find((e) => e.id === id)),
 };
-fs.writeFileSync(path.join(root, 'data/corpus/registry.json'), JSON.stringify(out, null, 1) + '\n');
-console.log('wrote registry.json with', entries.length, 'entries');
+let out = built;
+if (fs.existsSync(registryPath)) {
+  // A later Metsudah re-source pass stamps `resourced` and sometimes adjusts nusach,
+  // attribution and dropTokens. A fresh META build would drop that work (and, for a
+  // few lines, change the Hebrew). Preserve every already-committed record; only add
+  // ids that are not yet in the file. applyTransforms still ran for every META id so
+  // a stale vowel correction cannot hide in an unbuilt record.
+  const prev = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+  const prevBy = new Map(prev.entries.map((e) => [e.id, e]));
+  const preserved = [];
+  const added = [];
+  out = { ...prev, entries: order.map((id) => {
+    if (prevBy.has(id)) { preserved.push(id); return prevBy.get(id); }
+    added.push(id);
+    return built.entries.find((e) => e.id === id);
+  }) };
+  const dropped = prev.entries.filter((e) => !order.includes(e.id)).map((e) => e.id);
+  if (dropped.length) throw new Error('refusing to drop registry ids: ' + dropped.join(', '));
+  console.log('registry: preserved', preserved.length, 'existing records, added', added.length || 0, added.join(', ') || '');
+} else {
+  console.log('wrote new registry.json with', built.entries.length, 'entries');
+}
+fs.writeFileSync(registryPath, JSON.stringify(out, null, 1) + '\n');

@@ -83,15 +83,15 @@
    }
   },
   {
-   "he": "מִפָּה",
-   "en": "map",
+   "he": "מַפָּה",
+   "en": "a map",
    "translit": null,
    "pronunciation": {
-    "israeli": "mipah"
+    "israeli": "mapah"
    },
    "source": {
-    "file": "data/vocab/words.json",
-    "id": "hb63f1e69"
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-mapah"
    }
   },
   {
@@ -151,7 +151,7 @@
    },
    "source": {
     "file": "data/vocab/words.json",
-    "id": "hd53e0a60"
+    "id": "hc5d024c3"
    }
   }
  ],
@@ -195,7 +195,7 @@
      "en": "route"
     },
     {
-     "he": "מִפָּה",
+     "he": "מַפָּה",
      "en": "map"
     }
    ]

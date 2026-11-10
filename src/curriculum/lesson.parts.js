@@ -4,6 +4,7 @@
  * Part size is set by count (src/curriculum/chunks.js), not by a clock: it has not been timed with learners.
  * mountChunkedLesson(root, ctx, lessonId) -> unmount. Reads and writes the store key lesson.resume.v1.
  */
+import { streakVisible } from "../shell/comfort.js";
 import { lessons, byId } from "./lessons.js";
 import { el, heText, replaceKeepingFocus, storeGet, storeSet, showSaveFailure } from "./dom.js";
 import { loadContent, vowelEnglish } from "./content.js";
@@ -93,6 +94,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     const goTo = (n) => {
       cur = Math.max(0, Math.min(plan.length - 1, n));
       persist({ chunk: cur });
+      try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:lesson-part", { detail: { lessonId: lesson.id, part: cur, of: plan.length } })); } catch { /* optional: the 3-minute lesson listens for this (src/retention/) */ }
       draw();
       wrap.querySelector?.("#alef-part-title")?.focus?.({ preventScroll: true });
       try { globalThis.scrollTo?.(0, 0); } catch { /* optional */ }
@@ -107,7 +109,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     function drawSummary(updated, dueCount) {
       const stats = statsFromResults(results, qids);
       const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
-      replaceKeepingFocus(wrap, h1, summaryNode({ title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right on the first try.`, stats, ms: Date.now() - t0,
+      replaceKeepingFocus(wrap, h1, summaryNode({ ctx, store: ctx?.store, sfx: ctx?.sfx, showStreak: streakVisible(ctx), title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right on the first try.`, stats, ms: Date.now() - t0,
         goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
         nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));

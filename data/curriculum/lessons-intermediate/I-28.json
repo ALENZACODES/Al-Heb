@@ -3,7 +3,7 @@
  "track": "read",
  "level": "intermediate",
  "unit": "synagogue",
- "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+ "title": "Yom Kippur: the Shema line said aloud and the words of the day",
  "status": "draft",
  "proofread": false,
  "needsNativeReview": true,
@@ -185,6 +185,20 @@
     "file": "data/vocab/words.json",
     "id": "h9a1ab3f5"
    }
+  },
+  {
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-gmar"
+   },
+   "pronunciation": {
+    "israeli": "gemar chatimah tovah",
+    "sephardi": "gemar chatimah tovah",
+    "ashkenazi": "gemar chasimoh tovoh"
+   }
   }
  ],
  "prayerLines": [
@@ -197,8 +211,9 @@
  ],
  "goals": [
   "Know the one day a year when 'Baruch shem' is said aloud and answer it",
-  "Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness",
-  "Say 'a good year' and ask and give forgiveness politely"
+  "Recognise the Yom Kippur words: fast, atonement, shofar at the close, forgiveness",
+  "Greet people with 'gmar chatimah tovah' on Yom Kippur (not only 'shanah tovah', which belongs to Rosh Hashana and the days around it)",
+  "Know that Kol Nidrei and most of the Yom Kippur liturgy are not in ALEF yet"
  ],
  "estMinutes": 30,
  "prerequisites": [
@@ -303,7 +318,7 @@
   {
    "id": "I-28-e09",
    "type": "respond",
-   "cue": "Someone you wronged asks for forgiveness. Ask 'excuse me / sorry' back politely.",
+   "cue": "Before Yom Kippur, ask someone you may have wronged to forgive you. Say 'sorry, forgive me'.",
    "answer": {
     "he": "סְלִיחָה",
     "en": "Excuse me / sorry (forgive me)"
@@ -360,6 +375,15 @@
    "type": "recall",
    "he": "סְלִיחוֹת",
    "en": "penitential prayers"
+  },
+  {
+   "id": "I-28-e16",
+   "type": "respond",
+   "cue": "It is Yom Kippur. Greet your neighbour.",
+   "answer": {
+    "he": "גְּמַר חֲתִימָה טוֹבָה",
+    "en": "A good final sealing."
+   }
   }
  ],
  "note": "Most Yom Kippur liturgy is a corpus gap: g-high-holidays is out of scope, and Kol Nidre, Avinu Malkenu, the confession (Vidui), Unetaneh Tokef and Ne'ilah have no entry. This lesson teaches only vocabulary from words.json and the Shema lines (the quiet Baruch shem line is said aloud on Yom Kippur)."

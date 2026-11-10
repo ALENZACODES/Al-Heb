@@ -254,9 +254,9 @@ test("audio: Normal and Slow call play(kind, id) for this voice and tradition, a
   const { clipKey } = await import("../src/vocab/clips.js");
   const { DEVICE_LABEL } = await import("../src/shell/audio-access.js");
   const played = [];
-  // The Sephardi setting plays the Israeli slot (owner decision 2026-11-07); a Sephardi-only slot is not offered.
   const clip = { id: "i-10-w12", kind: "word", path: "audio/f/israeli/word/i-10-w12.mp3", status: "tts", source: "paid-cloud", voice: "f", tradition: "israeli" };
-  const lookup = { clips: { [clipKey(tier500[0].pointed)]: { "f|israeli": clip, "f|sephardi": { ...clip, path: "audio/f/sephardi/word/i-10-w12.mp3", tradition: "sephardi" } } } };
+  const own = { ...clip, path: "audio/f/sephardi/word/i-10-w12.mp3", tradition: "sephardi" };
+  const lookup = { clips: { [clipKey(tier500[0].pointed)]: { "f|israeli": clip, "f|sephardi": own } } };
   const audio = {
     status: (k, id, o) => ({ source: "file", via: "exact", url: "/" + clip.path, path: clip.path, id, voice: o.voice, tradition: o.tradition, entryStatus: "tts", entrySource: "paid-cloud" }),
     play: async (k, id, o) => { played.push({ k, id, o: { ...o } }); return { source: "file", voice: o.voice, tradition: o.tradition, entryStatus: "tts", entrySource: "paid-cloud" }; },
@@ -271,9 +271,10 @@ test("audio: Normal and Slow call play(kind, id) for this voice and tradition, a
   assert.equal(played[0].k, "word");
   assert.equal(played[0].id, "i-10-w12");
   assert.equal(played[0].o.voice, "f");
-  assert.equal(played[0].o.tradition, "israeli", "the Israeli file is asked for by its own tradition");
+  assert.equal(played[0].o.tradition, "sephardi", "a present Sephardi slot is asked for by its own tradition");
   assert.equal(played[0].o.rate, "slow");
-  assert.match(lis[0].text, /Israeli voice; Sephardi reading shown in English letters/);
+  assert.match(lis[0].text, /Sephardi/);
+  assert.doesNotMatch(lis[0].text, /reading shown in English letters/);
   assert.equal(played[0].o.text, undefined, "a missing or extra line is not passed as text");
   assert.doesNotMatch(lis[0].text, /Playing/);
   await btn(lis[0], /^Normal$/).click();

@@ -1,0 +1,1073 @@
+{
+ "id": "pu-politeness",
+ "title": "Please, sorry and being polite",
+ "level": "L0",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il01",
+   "title": "Hello, thanks, sorry",
+   "track": "israel",
+   "wordCount": 7
+  }
+ ],
+ "phrasebookSituation": "politeness",
+ "speakSets": [
+  "speak-survival-politeness-1"
+ ],
+ "grammarNote": "בְּבַקָּשָׁה softens a request or answers thanks. סְלִיחָה opens an interruption or an apology. These notes only name forms already in the phrasebook.",
+ "items": [
+  {
+   "id": "politeness-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תּוֹדָה",
+   "en": "thank you",
+   "translit": "toda",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-01"
+   }
+  },
+  {
+   "id": "politeness-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תּוֹדָה רַבָּה",
+   "en": "thank you very much",
+   "translit": "toda raba",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-02"
+   }
+  },
+  {
+   "id": "politeness-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּבַקָּשָׁה",
+   "en": "please / you're welcome",
+   "translit": "bevakasha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-03"
+   }
+  },
+  {
+   "id": "politeness-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵין בְּעָיָה",
+   "en": "no problem",
+   "translit": "ein be'aya",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-04"
+   }
+  },
+  {
+   "id": "politeness-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵין בַּעַד מָה",
+   "en": "you're welcome (lit. nothing for what)",
+   "translit": "ein ba'ad ma",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-05"
+   }
+  },
+  {
+   "id": "politeness-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "סְלִיחָה",
+   "en": "excuse me / sorry",
+   "translit": "slicha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-06"
+   }
+  },
+  {
+   "id": "politeness-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי מִצְטַעֵר",
+   "en": "I'm sorry",
+   "translit": "ani mitsta'er",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-07"
+   }
+  },
+  {
+   "id": "politeness-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כֵּן",
+   "en": "yes",
+   "translit": "ken",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-08"
+   }
+  },
+  {
+   "id": "politeness-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לֹא",
+   "en": "no",
+   "translit": "lo",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-09"
+   }
+  },
+  {
+   "id": "politeness-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אוּלַי",
+   "en": "maybe",
+   "translit": "ulai",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-10"
+   }
+  },
+  {
+   "id": "politeness-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בְּטַח",
+   "en": "sure / of course",
+   "translit": "betach",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-11"
+   }
+  },
+  {
+   "id": "politeness-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "סַבָּבָה",
+   "en": "cool / great / fine by me",
+   "translit": "sababa",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-12"
+   }
+  },
+  {
+   "id": "politeness-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יַאלְלָה",
+   "en": "come on / let's go / OK then",
+   "translit": "yalla",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-13"
+   }
+  },
+  {
+   "id": "politeness-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "וָואלָה",
+   "en": "really? / wow / honestly",
+   "translit": "wallah",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-14"
+   }
+  },
+  {
+   "id": "politeness-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אַחִי",
+   "en": "my brother (bro)",
+   "translit": "achi",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-15"
+   }
+  },
+  {
+   "id": "politeness-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יוֹפִי",
+   "en": "great / nice",
+   "translit": "yofi",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-16"
+   }
+  },
+  {
+   "id": "politeness-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חֲבָל עַל הַזְּמַן",
+   "en": "awesome (lit. a waste of the time)",
+   "translit": "chaval al hazman",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-17"
+   }
+  },
+  {
+   "id": "politeness-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה פִּתְאוֹם?",
+   "en": "no way! / what do you mean?",
+   "translit": "ma pitom?",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-18"
+   }
+  },
+  {
+   "id": "politeness-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "דַּי",
+   "en": "enough / stop it",
+   "translit": "dai",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-19"
+   }
+  },
+  {
+   "id": "politeness-20",
+   "source": "data/corpus/phrasebook.json",
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": "rega",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "politeness-20"
+   }
+  },
+  {
+   "id": "politeness-22",
+   "source": "data/corpus/phrasebook.json",
+   "he": "יִהְיֶה בְּסֵדֶר",
+   "en": "it'll be OK",
+   "translit": "yihye beseder",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "politeness-22"
+   }
+  },
+  {
+   "id": "il01-w1",
+   "source": "data/curriculum/lessons.json#il01.words[0]",
+   "he": "שָׁלוֹם",
+   "en": "hello/peace",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w1"
+   }
+  },
+  {
+   "id": "il01-w7",
+   "source": "data/curriculum/lessons.json#il01.words[6]",
+   "he": "בֹּקֶר טוֹב",
+   "en": "good morning",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il01-w7"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "politeness-01",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "politeness-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "politeness-03",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "politeness-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "politeness-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "politeness-06",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "politeness-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "politeness-08",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "politeness-09",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "politeness-10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "politeness-11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "politeness-12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "politeness-13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "politeness-14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "politeness-15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "politeness-16",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "line",
+   "id": "politeness-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "line",
+   "id": "politeness-18",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "politeness-19",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "politeness-20",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "line",
+   "id": "politeness-22",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "il01-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "il01-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "politeness-01",
+    "politeness-02",
+    "politeness-03",
+    "politeness-04",
+    "politeness-05",
+    "politeness-06",
+    "politeness-07",
+    "politeness-08",
+    "politeness-09",
+    "politeness-10",
+    "politeness-11",
+    "politeness-12",
+    "politeness-13",
+    "politeness-14",
+    "politeness-15",
+    "politeness-16",
+    "politeness-17",
+    "politeness-18",
+    "politeness-19",
+    "politeness-20",
+    "politeness-22",
+    "il01-w1",
+    "il01-w7"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-politeness-1.json.",
+   "set": "speak-survival-politeness-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-politeness-p01",
+   "title": "Thank you",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: תּוֹדָה. בְּבַקָּשָׁה softens a request or answers thanks.",
+   "items": [
+    {
+     "id": "politeness-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תּוֹדָה",
+     "en": "thank you",
+     "translit": "toda",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-01"
+     }
+    },
+    {
+     "id": "politeness-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תּוֹדָה רַבָּה",
+     "en": "thank you very much",
+     "translit": "toda raba",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-02"
+     }
+    },
+    {
+     "id": "politeness-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּבַקָּשָׁה",
+     "en": "please / you're welcome",
+     "translit": "bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-03"
+     }
+    },
+    {
+     "id": "politeness-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵין בְּעָיָה",
+     "en": "no problem",
+     "translit": "ein be'aya",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-04"
+     }
+    },
+    {
+     "id": "politeness-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵין בַּעַד מָה",
+     "en": "you're welcome (lit. nothing for what)",
+     "translit": "ein ba'ad ma",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "politeness-01",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "politeness-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "politeness-03",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "politeness-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "politeness-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "politeness-01",
+    "politeness-02",
+    "politeness-03",
+    "politeness-04",
+    "politeness-05"
+   ],
+   "speakSet": "speak-survival-politeness-1"
+  },
+  {
+   "id": "pu-politeness-p02",
+   "title": "Excuse me / sorry",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: סְלִיחָה. בְּבַקָּשָׁה softens a request or answers thanks.",
+   "items": [
+    {
+     "id": "politeness-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סְלִיחָה",
+     "en": "excuse me / sorry",
+     "translit": "slicha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-06"
+     }
+    },
+    {
+     "id": "politeness-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי מִצְטַעֵר",
+     "en": "I'm sorry",
+     "translit": "ani mitsta'er",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-07"
+     }
+    },
+    {
+     "id": "politeness-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כֵּן",
+     "en": "yes",
+     "translit": "ken",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-08"
+     }
+    },
+    {
+     "id": "politeness-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֹא",
+     "en": "no",
+     "translit": "lo",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-09"
+     }
+    },
+    {
+     "id": "politeness-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אוּלַי",
+     "en": "maybe",
+     "translit": "ulai",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "politeness-06",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "politeness-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "politeness-08",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "politeness-09",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "politeness-10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "politeness-06",
+    "politeness-07",
+    "politeness-08",
+    "politeness-09",
+    "politeness-10"
+   ],
+   "speakSet": "speak-survival-politeness-1"
+  },
+  {
+   "id": "pu-politeness-p03",
+   "title": "Sure / of course",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: בְּטַח. בְּבַקָּשָׁה softens a request or answers thanks.",
+   "items": [
+    {
+     "id": "politeness-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בְּטַח",
+     "en": "sure / of course",
+     "translit": "betach",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-11"
+     }
+    },
+    {
+     "id": "politeness-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סַבָּבָה",
+     "en": "cool / great / fine by me",
+     "translit": "sababa",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-12"
+     }
+    },
+    {
+     "id": "politeness-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יַאלְלָה",
+     "en": "come on / let's go / OK then",
+     "translit": "yalla",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-13"
+     }
+    },
+    {
+     "id": "politeness-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "וָואלָה",
+     "en": "really? / wow / honestly",
+     "translit": "wallah",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-14"
+     }
+    },
+    {
+     "id": "politeness-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אַחִי",
+     "en": "my brother (bro)",
+     "translit": "achi",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "politeness-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "politeness-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "politeness-13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "politeness-14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "politeness-15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "politeness-11",
+    "politeness-12",
+    "politeness-13",
+    "politeness-14",
+    "politeness-15"
+   ],
+   "speakSet": "speak-survival-politeness-1"
+  },
+  {
+   "id": "pu-politeness-p04",
+   "title": "Great / nice",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: יוֹפִי. בְּבַקָּשָׁה softens a request or answers thanks.",
+   "items": [
+    {
+     "id": "politeness-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יוֹפִי",
+     "en": "great / nice",
+     "translit": "yofi",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-16"
+     }
+    },
+    {
+     "id": "politeness-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲבָל עַל הַזְּמַן",
+     "en": "awesome (lit. a waste of the time)",
+     "translit": "chaval al hazman",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-17"
+     }
+    },
+    {
+     "id": "politeness-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה פִּתְאוֹם?",
+     "en": "no way! / what do you mean?",
+     "translit": "ma pitom?",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-18"
+     }
+    },
+    {
+     "id": "politeness-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "דַּי",
+     "en": "enough / stop it",
+     "translit": "dai",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-19"
+     }
+    },
+    {
+     "id": "politeness-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "רֶגַע",
+     "en": "one moment",
+     "translit": "rega",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "politeness-20"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "politeness-16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "politeness-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "politeness-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "politeness-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "politeness-20",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "politeness-16",
+    "politeness-17",
+    "politeness-18",
+    "politeness-19",
+    "politeness-20"
+   ],
+   "speakSet": "speak-survival-politeness-1"
+  },
+  {
+   "id": "pu-politeness-p05",
+   "title": "It'll be OK",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: יִהְיֶה בְּסֵדֶר. בְּבַקָּשָׁה softens a request or answers thanks.",
+   "items": [
+    {
+     "id": "politeness-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יִהְיֶה בְּסֵדֶר",
+     "en": "it'll be OK",
+     "translit": "yihye beseder",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "politeness-22"
+     }
+    },
+    {
+     "id": "il01-w1",
+     "source": "data/curriculum/lessons.json#il01.words[0]",
+     "he": "שָׁלוֹם",
+     "en": "hello/peace",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w1"
+     }
+    },
+    {
+     "id": "il01-w7",
+     "source": "data/curriculum/lessons.json#il01.words[6]",
+     "he": "בֹּקֶר טוֹב",
+     "en": "good morning",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il01-w7"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "politeness-22",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il01-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il01-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "politeness-22",
+    "il01-w1",
+    "il01-w7"
+   ],
+   "speakSet": "speak-survival-politeness-1"
+  }
+ ]
+}

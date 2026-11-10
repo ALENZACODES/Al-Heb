@@ -9,6 +9,13 @@
       "status": "needs-native-review",
       "applied": true,
       "reason": "Lesson r32 teaches this as a kamatz katan example: kamatz reads o and the shva after it is silent, so the respelling is kodsho in every tradition (was kadesho)."
+    },
+    {
+      "he": "אָזְנַיִם",
+      "item": "X2",
+      "status": "needs-native-review",
+      "applied": true,
+      "reason": "Kamatz katan + silent shva: the respelling is oznayim in every tradition (was azenayim / ozenayim). Not checked by a native speaker."
     }
   ],
   "ruleNotes": [

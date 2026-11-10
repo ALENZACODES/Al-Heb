@@ -14,7 +14,7 @@
    "translit": "davar",
    "en": "thing",
    "kind": "word",
-   "audioId": "yigdal-w82",
+   "audioId": "soundgap-vav-bet-1-a",
    "source": "data/vocab/words.json"
   },
   {
@@ -68,7 +68,7 @@
    "translit": "chevel",
    "en": "rope",
    "kind": "word",
-   "audioId": "h9d27e0b4",
+   "audioId": "soundgap-chet-khaf-he-2-b",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "shai",
    "en": "gift (present)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h33829f74",
    "source": "data/vocab/words.json"
   },
   {

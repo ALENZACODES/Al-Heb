@@ -5,7 +5,7 @@ Run as:  python3 -I tools/images/ingest_queue_image.py <command> ...   (-I: the 
 Prints ONE JSON document on stdout. Exit code 0 even on a per-file error (reported inside the JSON); 2 on usage.
 
   probe FILE                    -> {ok, format, width, height, mode, hasAlpha, alphaUsed}
-  convert SRC DST SPEC_JSON     -> {ok, width, height, bytes}   SPEC = {"format":"png"|"jpeg","width":W,"height":H,
+  convert SRC DST SPEC_JSON     -> {ok, width, height, bytes}   SPEC = {"format":"png"|"jpeg"|"webp","width":W,"height":H,
                                    "alpha":true|false,"quality":85,"crop":true|false}
 Needs Pillow. Without it the probe says {"ok": false, "error": "no PIL"} and the caller falls back to ffprobe/ffmpeg.
 """
@@ -67,6 +67,8 @@ def convert(src, dst, spec):
             # No exif, no icc, no text chunks are passed: PIL writes only what is given here.
             if spec.get('format') == 'jpeg':
                 im.save(dst, 'JPEG', quality=int(spec.get('quality', 85)), optimize=True, subsampling='4:2:0')
+            elif spec.get('format') == 'webp':
+                im.save(dst, 'WEBP', quality=int(spec.get('quality', 88)), method=6)
             else:
                 im.save(dst, 'PNG', optimize=True)
             return {'ok': True, 'width': im.width, 'height': im.height, 'bytes': os.path.getsize(dst)}

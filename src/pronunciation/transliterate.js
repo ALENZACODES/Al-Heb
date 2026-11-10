@@ -12,8 +12,8 @@
 //   'ashkenazi-siddur'  siddur style with the Ashkenazi values (forces tradition 'ashkenazi')
 //
 // Traditions: 'israeli' | 'sephardi' | 'ashkenazi'. israeli and sephardi currently produce
-// IDENTICAL Latin output (their differences are pharyngeals / shva realisation, which the siddur
-// schemes do not write); the IPA data in data/pronunciation/ differs.
+// IDENTICAL Latin output unless STYLE_FLAGS.sephardiPharyngeals is on (held for John, default off).
+// IPA data in data/pronunciation/ can still differ.
 //
 // Options (all optional):
 //   geminate      (default false)   double the consonant for dagesh chazak (spelling convention;
@@ -32,7 +32,7 @@
 //
 // Furtive patach: final chet / mappiq he + patach after a vowel puts the 'a' before the consonant (ruach).
 // Divine name: a word whose consonants are exactly יהוה is read as Adonai / Adonoy (convention).
-// Kamatz katan: only U+05C7 or the tiny unverified list in kamatz-katan.js.
+// Kamatz katan: U+05C7, the tiny unverified list in kamatz-katan.js, or a kamatz immediately before chataf-kamatz.
 
 import { parseWord, MARK, stripTaamim } from './hebrew.js';
 import { classifyShvas } from './shva.js';
@@ -40,6 +40,12 @@ import { kamatzKatanStemStart } from './kamatz-katan.js';
 import { speechText } from '../shell/names.js';
 
 /** @typedef {import('./hebrew.js').Cluster} Cluster */
+
+/** Held for John. Both default off; the app must not flip them until he decides.
+ *  sephardiPharyngeals: write ח as ḥ and ע as ʿ in Sephardi Latin only.
+ *  geminateDisplay: double a consonant for dagesh chazak (Shabbos, Sukkot).
+ */
+export const STYLE_FLAGS = Object.freeze({ sephardiPharyngeals: false, geminateDisplay: false });
 
 const PREFIX_LETTERS = new Set(['ו', 'ב', 'ל', 'מ', 'ה', 'ש', 'כ']);
 const SONORANTS = new Set(['ר', 'ל', 'מ', 'ם', 'נ', 'ן', 'י']);
@@ -62,7 +68,8 @@ function resolveOptions(opts = {}) {
     tradition,
     academic: scheme === 'academic',
     ashk: tradition === 'ashkenazi',
-    geminate: opts.geminate ?? false,
+    geminate: opts.geminate ?? STYLE_FLAGS.geminateDisplay,
+    sephardiPharyngeals: opts.sephardiPharyngeals ?? STYLE_FLAGS.sephardiPharyngeals,
     shvaLevel: opts.shvaLevel ?? 2,
     shvaMode: opts.shvaMode ?? 'liturgical',
     shvaStyle: opts.shvaStyle ?? 'e',
@@ -104,7 +111,7 @@ function consonantLatin(c, o) {
     case 'ה': return 'h';
     case 'ו': return 'v';
     case 'ז': return 'z';
-    case 'ח': return o.academic ? 'ẖ' : 'ch';
+    case 'ח': return (o.sephardiPharyngeals && o.tradition === 'sephardi') ? 'ḥ' : (o.academic ? 'ẖ' : 'ch');
     case 'ט': return 't';
     case 'י': return 'y';
     case 'כ': case 'ך': return dag ? 'k' : 'kh';
@@ -143,6 +150,12 @@ function transliterateWord(word, o) {
   if (stem >= 0) {
     for (let i = stem; i < n; i++) {
       if (clusters[i].vowel === 'kamatz') { clusters[i].vowel = 'kamatz-katan'; break; }
+    }
+  }
+  // Grammar: a kamatz immediately before a letter with chataf-kamatz is kamatz katan (e.g. צָהֳרַיִם).
+  for (let i = 0; i < n - 1; i++) {
+    if (clusters[i].vowel === 'kamatz' && clusters[i + 1].vowel === 'chataf-kamatz') {
+      clusters[i].vowel = 'kamatz-katan';
     }
   }
 
@@ -209,7 +222,10 @@ function transliterateWord(word, o) {
     // consonant
     let cons;
     if (vowelOf[i] === 'shuruk-solo') cons = '';
-    else if (c.ch === 'א' || c.ch === 'ע') cons = !isFirst && vid ? "'" : '';
+    else if (c.ch === 'א' || c.ch === 'ע') {
+      if (o.sephardiPharyngeals && o.tradition === 'sephardi' && c.ch === 'ע') cons = 'ʿ';
+      else cons = !isFirst && vid ? "'" : '';
+    }
     else if (c.ch === 'ה') {
       // mappiq he is always pronounced; a final he without mappiq is a vowel letter
       // A he that has lost its own mark only because a following vav is a vowel letter

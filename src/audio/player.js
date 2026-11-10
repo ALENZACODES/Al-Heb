@@ -1,10 +1,10 @@
 // @ts-check
 import { speechSafeText } from '../shell/names.js';
 // Aleph audio player. Resolution order for play(kind, id):
-//   0. the congregation setting picks which tradition's FILES play: a Sephardi or Ashkenazi row whose `source` is in
-//      ACCENT_SOURCES (an Israeli voice reading the tradition's respelling, or a tempo-capped older clip) plays as itself;
-//      otherwise the setting plays the Israeli clips (PLAYBACK_TRADITION below) and the result keeps tradition = the setting
-//      and says fileTradition = 'israeli'. Every other own-tradition file (the slow `paid-cloud` respelled clips) is retired.
+//   0. the congregation setting picks which tradition's FILES play: the setting's own bank first (a present, non-missing
+//      Sephardi or Ashkenazi row, including the existing paid-cloud clips already in the audio bank), then the Israeli
+//      file of the same voice (fileTradition = 'israeli'). israeli-only items stay Israeli. Missing own rows still fall
+//      back; they do not go silent.
 //   1. exact file (same voice + that tradition) whose manifest status is not "missing"
 //   2. same voice, OTHER tradition, only if the manifest entry lists it in `equivalentTo`
 //   3. Web Speech API (speechSynthesis, he-IL) speaking the pointed text
@@ -53,36 +53,43 @@ export function normalizeId(s) {
 const VOICES = ['m', 'f'];
 const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
 /**
- * Manifest `source` values that ADMIT a Sephardi or Ashkenazi file to playback (owner decision, John Khan, 2026-11-07 22:56,
- * docs/audio/ACCENT-VOICES-2026-11-08.md). Any other own-tradition file (the older `paid-cloud` / `tts-respelled` clips made by
- * an outside voice from a respelling, about 2.5x the Israeli length) stays retired until it is re-rendered or tempo-capped.
+ * Manifest `source` values for the newer accent pipeline (docs/audio/ACCENT-VOICES-2026-11-08.md).
  *   israeliVoice  the Israeli he-IL voice of the same slot (Ari / Noa) reading the tradition's English-letter respelling, kept
  *                 within 1.26x the Israeli clip's length (tools/audio/render_tts.mjs --tradition sephardi|ashkenazi)
  *   tempoCapped   an older respelled clip sped up (same pitch) to at most 1.26x its Israeli counterpart (tools/audio/tempo_cap.mjs)
+ * As of 10 November 2026 the settings also play the older present bank clips (paid-cloud / tts-respelled), not only these two
+ * provenances. isAccentClip still names the newer provenance (or a human recording) for labels and reviews.
  */
 export const ACCENT_SOURCES = Object.freeze({ israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped' });
 const ADMITTED = new Set(Object.values(ACCENT_SOURCES));
-/** True for a manifest source that admits an own-tradition clip (a ':mock' suffix from a plumbing run does not admit). */
+/** True for a manifest source that is one of the newer accent provenances (a ':mock' suffix from a plumbing run does not count). */
 export const isAccentSource = (source) => ADMITTED.has(String(source || ''));
 /**
- * True when this manifest row is an own-tradition (Sephardi/Ashkenazi) file the setting may play as itself: a human recording
- * of the tradition (status 'recorded') or a synthetic clip whose source is in ACCENT_SOURCES.
+ * True when this manifest row is a newer-provenance or human-recorded own-tradition clip.
  */
 export const isAccentClip = (entry) => !!entry && entry.status !== 'missing' && entry.tradition !== 'israeli' && (entry.status === 'recorded' || isAccentSource(entry.source));
 /**
- * Which tradition's files each congregation setting falls back to when it has no admitted clip of its own. Owner decisions
- * (John Khan, 2026-11-07): the Sephardi setting plays the Israeli clips (the he-IL voices Ari and Noa) and shows the Sephardi
- * reading in English letters; since 22:56 the same holds for Ashkenazi, and both traditions get clips of their own made by the
- * Israeli voices reading the tradition's respelling. A row whose `source` is in ACCENT_SOURCES plays as itself (isAccentClip);
- * every other own-tradition file is retired (files and manifest rows stay). Every Sephardi and Ashkenazi clip has an Israeli
- * counterpart of the same voice, so nothing falls silent.
+ * True when a Sephardi or Ashkenazi manifest row has a file the setting may play as itself: any present, non-missing path,
+ * including the existing paid-cloud bank clips. Missing rows still fall back to the Israeli file of the same voice.
  */
-export const PLAYBACK_TRADITION = Object.freeze({ israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' });
+export const isPlayableOwnClip = (entry) => !!entry && entry.status !== 'missing' && entry.tradition !== 'israeli' && typeof entry.path === 'string' && !!entry.path && !String(entry.source || '').includes(':mock');
 /**
- * The tradition whose file a setting plays: the setting itself when `own` (the setting's own manifest row for the item) is an
- * admitted accent clip, otherwise the fallback table ('sephardi' / 'ashkenazi' -> 'israeli'); unknown values pass through.
+ * The tradition whose files each setting prefers. When that row is missing, FALLBACK_TRADITION is used so nothing goes silent.
+ * 10 November 2026: play the setting's own bank when the file is present.
  */
-export const playbackTradition = (tradition, own) => (isAccentClip(own) && own.tradition === tradition ? tradition : PLAYBACK_TRADITION[tradition] || tradition);
+export const PLAYBACK_TRADITION = Object.freeze({ israeli: 'israeli', sephardi: 'sephardi', ashkenazi: 'ashkenazi' });
+export const FALLBACK_TRADITION = Object.freeze({ israeli: 'israeli', sephardi: 'israeli', ashkenazi: 'israeli' });
+/**
+ * The tradition whose file a setting plays: the setting itself when `own` is a present own-tradition clip, otherwise the
+ * Israeli fallback. Called without `own` (or with `own === undefined`) this is the preferred bank (the player tries it first).
+ * Unknown values pass through.
+ */
+export const playbackTradition = (tradition, own) => {
+  if (tradition === 'israeli') return 'israeli';
+  if (own === undefined) return PLAYBACK_TRADITION[tradition] || tradition;
+  if (own && own.tradition === tradition && (isPlayableOwnClip(own) || isAccentClip(own))) return tradition;
+  return FALLBACK_TRADITION[tradition] || tradition;
+};
 /** Settings for which the device (Web Speech) voice, which speaks Israeli Hebrew, is an acceptable stand-in without the override. */
 const DEVICE_VOICE_OK = Object.freeze({ israeli: true, sephardi: true, ashkenazi: false });
 
@@ -182,17 +189,17 @@ export function createAudio(opts) {
   }
 
   /**
-   * The setting's OWN file for one id, only when its manifest row is an admitted accent clip (isAccentClip): exact, or an alias
-   * row whose target is admitted. Returns a partial plan (no fileTradition: the file is the setting's own) or null.
+   * The setting's OWN file for one id, when that manifest row is present (isPlayableOwnClip): exact, or an alias row whose
+   * target is present. Returns a partial plan (no fileTradition: the file is the setting's own) or null.
    */
   function ownAccentFile(voice, tradition, kind, id) {
     const own = index.get(`${voice}|${tradition}|${kind}|${id}`);
     if (!own) return null;
-    if (isAccentClip(own)) return { source: 'file', path: own.path, url: url(own.path), entryStatus: own.status, entrySource: own.source, via: 'exact' };
+    if (isPlayableOwnClip(own) || isAccentClip(own)) return { source: 'file', path: own.path, url: url(own.path), entryStatus: own.status, entrySource: own.source, via: 'exact' };
     if (own.aliasOf && own.status === 'missing') {
       const [ak, ...rest] = String(own.aliasOf).split('/');
       const target = index.get(`${voice}|${tradition}|${ak}|${rest.join('/')}`);
-      if (isAccentClip(target)) return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, entrySource: target.source, via: 'alias' };
+      if (target && (isPlayableOwnClip(target) || isAccentClip(target))) return { source: 'file', path: target.path, url: url(target.path), entryStatus: target.status, entrySource: target.source, via: 'alias' };
     }
     return null;
   }
@@ -217,22 +224,37 @@ export function createAudio(opts) {
     if (TRADITIONS.includes(tradition) && israeliOnly.has(`${kind}|${id}`)) tradition = 'israeli';
     if (!VOICES.includes(voice)) return { source: 'none', reason: 'invalid-voice', kind, id, voice, tradition };
     if (!TRADITIONS.includes(tradition)) return { source: 'none', reason: 'invalid-tradition', kind, id, voice, tradition };
-    // The files this setting plays (step 0): an admitted own-tradition clip (isAccentClip) plays as itself; otherwise the
-    // fallback tradition's file (the Sephardi and Ashkenazi settings play the Israeli files and say so).
+    // The files this setting plays (step 0): the setting's own present clip first, otherwise the Israeli file of the same voice.
     const fileTrad = playbackTradition(tradition);
+    const fallbackTrad = FALLBACK_TRADITION[tradition] || 'israeli';
     const exact = index.get(`${voice}|${fileTrad}|${kind}|${id}`) || index.get(`${voice}|${tradition}|${kind}|${id}`);
-    // Per candidate id: own admitted file, then the fallback tradition's exact/alias file. Same-tradition files under any
+    // Per candidate id: own present file, then the fallback tradition's exact/alias file. Same-tradition files under any
     // linked id beat an `equivalentTo` stand-in under the requested id.
     let stand = null;
     for (const cid of candidates(kind, id)) {
-      if (fileTrad !== tradition) {
-        const own = ownAccentFile(voice, tradition, kind, cid);
-        if (own) return { ...own, kind, id, voice, tradition, ...(cid !== id ? { viaId: cid } : {}) };
+      const own = tradition !== 'israeli' ? ownAccentFile(voice, tradition, kind, cid) : null;
+      if (own) return { ...own, kind, id, voice, tradition, ...(cid !== id ? { viaId: cid } : {}) };
+      // If the own row is missing but aliases a line/prayer, try that id in the Israeli fallback (the 188 Hallel/Kiddush word rows).
+      if (tradition !== 'israeli') {
+        const ownRow = index.get(`${voice}|${tradition}|${kind}|${cid}`);
+        if (ownRow && ownRow.aliasOf && ownRow.status === 'missing') {
+          const [ak, ...rest] = String(ownRow.aliasOf).split('/');
+          const aliasHit = fileFor(voice, fallbackTrad, ak, rest.join('/'));
+          if (aliasHit) {
+            const found = { ...aliasHit, kind, id, voice, tradition, fileTradition: aliasHit.fileTradition || fallbackTrad, via: 'tradition', ...(cid !== id ? { viaId: cid } : {}) };
+            return found;
+          }
+        }
       }
-      const hit = fileFor(voice, fileTrad, kind, cid);
+      // If the own row is present but not playable (e.g. a :mock source), skip it and use the Israeli fallback.
+      const hit = fileFor(voice, tradition === 'israeli' ? 'israeli' : fallbackTrad, kind, cid);
       if (!hit) continue;
+      const usedFallback = tradition !== 'israeli';
       const found = { ...hit, kind, id, voice, tradition, ...(cid !== id ? { viaId: cid } : {}) };
-      if (fileTrad !== tradition) { found.fileTradition = hit.fileTradition || fileTrad; if (hit.via === 'exact' || hit.via === 'alias') found.via = 'tradition'; }
+      if (usedFallback || (hit.fileTradition && hit.fileTradition !== tradition)) {
+        found.fileTradition = hit.fileTradition || fallbackTrad;
+        if (hit.via === 'exact' || hit.via === 'alias') found.via = 'tradition';
+      }
       if (hit.via !== 'equivalent') return found;
       if (!stand) stand = found;
     }

@@ -4,7 +4,8 @@ needs-review,2676
 homograph,1695
 plural-missing,821
 dup-spelling,420
-gloss-machine,234
+gloss-machine,229
 pos-unknown,104
 gender-missing,7
 no-niqqud,2
+translit-mismatch,1

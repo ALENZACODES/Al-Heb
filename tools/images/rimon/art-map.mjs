@@ -1,0 +1,126 @@
+// Drawn Rimon stills from feature/rimon-stills-2026-11-10 (data/images/rimon/rimon-NNN.webp, manifest.csv there),
+// matched to the triggers in src/shell/rimon-triggers.js by what each picture shows (its slug and pose).
+//
+// Those pictures own the plain numbers (rimon-023.webp, rimon-025b.webp). The 200 catalogue stills in stills.mjs use
+// the "a" numbers (rimon-a023.webp), so the two sets never overwrite each other. For each trigger the app tries the
+// pictures below first (they exist), then the catalogue's own drawing once it is made.
+// A trigger missing here simply waits for its catalogue still. Edit, then run: node tools/images/rimon/build.mjs --present
+export const ART_SOURCE = 'feature/rimon-stills-2026-11-10 (data/images/rimon/manifest.csv)';
+
+export const ART = Object.freeze({
+  'greet.first': ['002', '001'],
+  'first.return': ['020'],
+  'onboarding.letters': ['005'],
+  'onboarding.congregation': ['010', '015'],
+  'onboarding.minutes': ['008'],
+  'onboarding.plan': ['019'],
+  'firstday.start': ['017'],
+  'firstday.ladder': ['018'],
+  'firstwin.builder': ['011'],
+  'placement.start': ['008'],
+  'install.page': ['098'],
+  'first.correct': ['012'],
+  'first.mistake': ['014'],
+  'first.lesson': ['071'],
+  'first.badge': ['076'],
+
+  'answer.correct': ['021', '023', '024', '026', '027', '028', '030', '031', '033', '034', '035', '036', '037', '039', '040'],
+  'answer.correct.streak3': ['022'],
+  'answer.correct.streak5': ['025b', '025'],
+  'answer.correct.streak10': ['083'],
+  'answer.comeback': ['068'],
+  'answer.wrong': ['041', '042', '044', '045', '048', '049', '054', '055'],
+  'answer.wrong.repeat': ['047', '051', '052'],
+  'answer.wrong.many': ['050'],
+  'game.timelow': ['043'],
+  'game.end.good': ['026'],
+  'lesson.next': ['078', '004'],
+  'learn.continue.first': ['018'],
+  'learn.continue.next': ['011', '019'],
+  'learn.continue.streak': ['062'],
+  'learn.continue.alldone': ['082', '081'],
+  'lesson.complete.perfect': ['073', '074', '083', '084'],
+  'lesson.complete.great': ['071', '077', '075'],
+  'lesson.complete.done': ['085', '079', '080'],
+  'checkpoint.home': ['043'],
+  'review.home': ['080'],
+
+  'streak.day.1': ['056'],
+  'streak.day.3': ['057'],
+  'streak.day.7': ['058'],
+  'streak.day.14': ['059'],
+  'streak.day.30': ['060'],
+  'streak.day.50': ['066'],
+  'streak.day.100': ['067'],
+  'streak.day.365': ['069'],
+  'streak.atrisk': ['062'],
+  'streak.saved': ['063'],
+  'streak.lost': ['055'],
+  'streak.restart': ['068'],
+  'streak.rest': ['064'],
+  'goal.reached': ['061'],
+
+  'idle.fidget': ['089', '090', '091', '092', '093', '094', '095', '096', '097'],
+  'idle.sleep': ['087', '099'],
+  'idle.break': ['100'],
+
+  'greet.morning': ['100'],
+  'greet.day': ['001'],
+  'greet.evening': ['020'],
+  'greet.night': ['099'],
+  'greet.back': ['038', '020'],
+  'greet.week': ['018'],
+
+  'shabbat.erev': ['118'],
+  'shabbat.evening': ['117'],
+  'shabbat.day': ['116', '119'],
+  'shabbat.havdalah': ['120'],
+  'shabbat.rest': ['116', '070'],
+  'holiday.rosh-hashanah': ['121', '122'],
+  'holiday.yom-kippur': ['123'],
+  'holiday.sukkot': ['125', '124'],
+
+  'awards.gallery': ['075'],
+  'awards.empty': ['114'],
+  'award.new': ['076', '077'],
+  'progress.home': ['065', '066'],
+  'share.home': ['067'],
+  'daily.home': ['065'],
+  'lessons.10': ['081'],
+  'lessons.25': ['082'],
+  'lessons.50': ['066'],
+  'lessons.100': ['081'],
+
+  'reminder.streak': ['062', '065'],
+  'reminders.page': ['110'],
+  'classtrack.home': ['065'],
+  'calendar.home': ['065'],
+
+  'error.notfound': ['104', '102'],
+  'error.view': ['101', '108', '109'],
+  'offline.lost': ['106', '105'],
+  'offline.back': ['112', '107'],
+  'offline.page': ['107'],
+  'loading.slow': ['110'],
+  'help.home': ['047'],
+  'about.home': ['003b', '003'],
+  'search.home': ['114'],
+  'letters.home': ['005'],
+  'speak.home': ['016'],
+  'listen.home': ['015'],
+  'songs.home': ['094'],
+});
+
+// Catalogue stills that exist but must not be shown yet, with the reason. The app skips them (present.json leaves them
+// out) and each trigger falls back to the drawn set above. Remove an id once its fixed drawing is saved.
+export const HOLD = Object.freeze({});
+
+// Shown, but worth a second drawing when the next batch is made. Same prompt, plus the note.
+export const REDRAW = Object.freeze({
+  a019: 'Fist pump reads weakly: the raised fist is small and sits against the body. Raise it clear of the body outline.',
+  a021: 'Clapping hands overlap the sash and blend into it. Keep both hands above the sash, clearly apart from it.',
+  a030: 'Hands blend into the sash. Move them clear of the sash so the gesture reads at small sizes.',
+  a033: 'The pinching hand sits on the sash and is hard to see. Lift it to cheek height, clear of the sash.',
+  a035: 'Hands blend into the sash. Keep them out to the sides, clear of the sash.',
+  a045: 'The dark mortarboard almost disappears on dark backgrounds. Keep it, but add a gold tassel and a thin gold edge.',
+});

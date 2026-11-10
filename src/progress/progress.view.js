@@ -10,6 +10,9 @@ import { setRestDay, setGoalTarget, exportProgressJSON, progressFileName, inspec
 import { weakReport } from './weak.js';
 import { weeklySummary, weeklySentences, sparklineSVG, WEEKS } from './weekly.js';
 import { evaluateMilestones, milestoneRows } from './milestones.js';
+import { statModel } from '../shell/statbar.js';
+import { weekStripNode } from '../shell/weekstrip.js';
+import { DAILY_GOAL_KEY } from '../home/today.js';
 
 const CSS = `
 .pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -52,6 +55,7 @@ const CSS = `
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
+
 export async function mount(root, ctx) {
   let alive = true;
   const { store } = ctx;
@@ -78,6 +82,7 @@ export async function mount(root, ctx) {
 
   const showStreak = streakVisible(ctx);
   const todaySection = h('section', { class: 'card', 'aria-labelledby': 'pg-h-today' });
+  const heroSlot = h('div', { class: 'pg-hero-slot' }); // above the cards: the header's two numbers, large (filled by renderToday)
   function renderToday(focusId) {
     const s = readSnapshot(store), t = now(), st = streakInfo(s, t), g = goalInfo(s, t, d.milestones.settings.defaultGoal);
     const today = dayKey(t), yesterday = addDays(today, -1);
@@ -85,11 +90,18 @@ export async function mount(root, ctx) {
     const streakLine = st.count > 0
       ? `${plural(st.count, 'day', 'days')} in a row${st.restToday ? ' (resting today)' : st.activeToday ? ', including today' : ''}. Best so far: ${st.best}.`
       : st.restToday ? 'Resting today. Your streak is waiting for you.' : plain('progressNoStreak');
-    const goalLine = g.lessonsToday > 0 ? `Today's goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
-      : g.cards >= g.target ? `Today's goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
+    const goalLine = g.lessonsToday > 0 ? `Today's review goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
+      : g.cards >= g.target ? `Today's review goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
       : `${g.cards} of ${g.target} cards today. Any amount counts.`;
-    const sel = h('select', { id: 'pg-goal', onchange: (e) => { try { setGoalTarget(store, Number(e.target.value)); status.textContent = `Daily goal set to ${e.target.value} cards.`; renderToday('pg-goal'); } catch { status.textContent = 'Could not save the goal.'; } } },
+    const sel = h('select', { id: 'pg-goal', onchange: (e) => { try { setGoalTarget(store, Number(e.target.value)); status.textContent = `Review goal set to ${e.target.value} cards.`; renderToday('pg-goal'); } catch { status.textContent = 'Could not save the goal.'; } } },
       ...[...new Set([...d.milestones.settings.goalChoices, g.target])].sort((a, b) => a - b).map((n) => h('option', { value: String(n), selected: n === g.target ? true : null }, `${n} cards a day`)));
+    // The same two numbers as the header: the streak flame and today's study minutes against the daily goal chosen at setup.
+    let sm = null; try { sm = statModel({ streak: store.get('streak'), dailyGoal: store.get(DAILY_GOAL_KEY), now: t }); } catch { sm = null; }
+    const hero = sm ? h('div', { class: 'pg-hero', role: 'group', 'aria-label': 'Streak and study time today' },
+      showStreak ? h('div', { class: `pg-hero-flame${sm.lit ? ' is-lit' : ''}` }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }), h('strong', {}, String(sm.count)), h('span', {}, sm.count === 1 ? 'day streak' : 'day streak')) : null,
+      h('div', { class: `pg-hero-goal${sm.met ? ' is-met' : ''}`, style: `--p:${sm.pct}` }, h('span', { class: 'pg-hero-ring', 'aria-hidden': 'true' }), h('strong', {}, `${sm.todayMin}/${sm.goalMin}`), h('span', {}, 'minutes today')),
+      showStreak ? (() => { try { return weekStripNode(store.get('streak'), { now: t, extraRest: s.rest }); } catch { return null; } })() : null) : null;
+    heroSlot.replaceChildren(...(hero ? [hero] : []));
     todaySection.replaceChildren(
       h('h2', { id: 'pg-h-today' }, 'Today'),
       showStreak ? h('p', { class: 'pg-big' }, streakLine) : null,
@@ -97,7 +109,7 @@ export async function mount(root, ctx) {
       h('progress', { max: String(g.target), value: String(g.met ? g.target : Math.min(g.cards, g.target)), 'aria-label': 'Cards reviewed today' }),
       showStreak ? h('p', { class: 'small muted' }, plain('progressRestNote')) : null,
       h('div', { class: 'pg-row' },
-        h('label', { for: 'pg-goal' }, 'Daily goal '), sel),
+        h('label', { for: 'pg-goal' }, 'Review goal '), sel),
       !showStreak ? null : h('div', { class: 'pg-row' },
         h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest', 'aria-pressed': st.restToday ? 'true' : 'false', onclick: () => { setRestDay(store, today, !st.restToday); status.textContent = st.restToday ? 'Rest day removed for today.' : 'Today is a rest day. Your streak is safe.'; renderToday('pg-rest'); } }, st.restToday ? 'Today is a rest day (tap to undo)' : 'Take today as a rest day'),
         missedYesterday ? h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest-y', onclick: () => { setRestDay(store, yesterday, true); status.textContent = 'Yesterday counted as a rest day.'; renderToday('pg-rest-y'); } }, 'Count yesterday as a rest day') : null),
@@ -107,8 +119,8 @@ export async function mount(root, ctx) {
 
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
-    const sections = [];
-    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are Aleph\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
+    const sections = [heroSlot];
+    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are ALEF\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
@@ -146,7 +158,7 @@ export async function mount(root, ctx) {
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
       `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
-      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
+      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
     sections.push(readSec);
 
     // 2. today, then this week
@@ -234,7 +246,7 @@ export async function mount(root, ctx) {
     const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
     const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, `Belts are Aleph's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
+      h('p', { class: 'small muted' }, `Belts are ALEF's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
       ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
         h('p', { class: 'small' }, b.gate),
         h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
@@ -254,7 +266,7 @@ export async function mount(root, ctx) {
     const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp, tr = timedReadSummary(c.timedRead);
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
-      h('p', { class: 'small muted' }, `Aleph has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
+      h('p', { class: 'small muted' }, `ALEF has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
       h('dl', {},
         ...row('Letters traced', `${k.traced.size} of ${ALL_LETTERS.length}`),
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),

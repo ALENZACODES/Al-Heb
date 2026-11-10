@@ -5,26 +5,26 @@
  "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
  "rules": "docs/pronunciation/VARIANTS.md",
  "counts": {
-  "records": 6636,
+  "records": 6659,
   "vocab": 6303,
-  "corpus": 333,
-  "review": 385
+  "corpus": 356,
+  "review": 393
  },
  "flags": {
-  "alef-vav-mater-repaired": 71,
+  "alef-vav-mater-repaired": 74,
   "aramaic": 8,
-  "ashk-final-kamatz-reduced": 1221,
-  "divine-name": 64,
+  "ashk-final-kamatz-reduced": 1229,
+  "divine-name": 79,
   "he-patach-no-mappiq": 1,
   "ipa-differs-from-words.json": 121,
   "kamatz-katan-before-chataf": 2,
-  "kamatz-katan-list": 38,
+  "kamatz-katan-list": 41,
   "non-hebrew-token": 8,
-  "possible-segolate": 240,
-  "shva-heuristic-L3": 168,
+  "possible-segolate": 246,
+  "shva-heuristic-L3": 171,
   "unpointed": 2,
-  "vav-cholam-consonantal": 8,
-  "vav-dagesh-consonantal": 57,
+  "vav-cholam-consonantal": 10,
+  "vav-dagesh-consonantal": 58,
   "words-ipa-colloquial-shva-drop": 170,
   "words-ipa-syllable-count-differs": 16
  },
@@ -47,7 +47,7 @@
   },
   {
    "file": "_corpus-1.json",
-   "count": 333
+   "count": 356
   }
  ],
  "review": "_review.csv"

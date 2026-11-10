@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#16301c">
+  <title>Page not found — ALEF</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 1.1rem/1.5 system-ui, -apple-system, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 max(1rem, env(safe-area-inset-left)) env(safe-area-inset-bottom); background: #16301c; color: #f3efa8; }
+    h1 { font-size: 1.6rem; color: #f3dfa6; }
+    a { color: #e8c97a; display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; padding: 0.5rem 0.75rem; }
+    @media (prefers-color-scheme: light) {
+      body { background: #f6efe0; color: #16301c; }
+      h1 { color: #16301c; }
+      a { color: #1c4023; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Page not found</h1>
+    <p>This address is not a page of ALEF. Open ALEF from the home page, or use a link that starts with #/.</p>
+    <p><a id="alef-home" href="./">Open ALEF</a></p>
+  </main>
+  <!-- Path-to-hash mapping lives in /404.js so it stays inside script-src 'self'. The file comments the /Al-Heb/ GitHub Pages case. -->
+  <script src="/404.js"></script>
+</body>
+</html>

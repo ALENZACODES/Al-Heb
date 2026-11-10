@@ -1,12 +1,12 @@
 {
  "schema": "alef-vocab-themes-index/1",
- "generated": "2026-11-07",
+ "generated": "2026-11-10",
  "count": 40,
  "themeSize": 125,
  "counts": {
   "words": 4786,
-  "withExample": 1047,
-  "withoutExample": 3739,
+  "withExample": 1065,
+  "withoutExample": 3721,
   "droppedFromWordsJson": 1513
  },
  "themes": [
@@ -23,7 +23,7 @@
    "topic": "body-health",
    "title": "Body and health, set 1 of 1",
    "size": 125,
-   "withExample": 32,
+   "withExample": 34,
    "file": "body-health-set01.json"
   },
   {
@@ -39,7 +39,7 @@
    "topic": "describing-words",
    "title": "Describing words, set 1 of 3",
    "size": 125,
-   "withExample": 82,
+   "withExample": 84,
    "file": "describing-words-set01.json"
   },
   {
@@ -71,7 +71,7 @@
    "topic": "doing-verbs",
    "title": "Doing verbs, set 2 of 8",
    "size": 125,
-   "withExample": 44,
+   "withExample": 46,
    "file": "doing-verbs-set02.json"
   },
   {
@@ -151,7 +151,7 @@
    "topic": "general-things",
    "title": "General things, set 2 of 11",
    "size": 125,
-   "withExample": 24,
+   "withExample": 27,
    "file": "general-things-set02.json"
   },
   {
@@ -255,7 +255,7 @@
    "topic": "people-family",
    "title": "People and family, set 1 of 1",
    "size": 125,
-   "withExample": 37,
+   "withExample": 38,
    "file": "people-family-set01.json"
   },
   {
@@ -263,7 +263,7 @@
    "topic": "places-travel",
    "title": "Places and travel, set 1 of 1",
    "size": 125,
-   "withExample": 59,
+   "withExample": 60,
    "file": "places-travel-set01.json"
   },
   {
@@ -271,7 +271,7 @@
    "topic": "religion-prayer",
    "title": "Religion and prayer, set 1 of 1",
    "size": 125,
-   "withExample": 114,
+   "withExample": 116,
    "file": "religion-prayer-set01.json"
   },
   {
@@ -287,7 +287,7 @@
    "topic": "science-ideas",
    "title": "Science and ideas, set 1 of 1",
    "size": 125,
-   "withExample": 23,
+   "withExample": 25,
    "file": "science-ideas-set01.json"
   },
   {
@@ -303,7 +303,7 @@
    "topic": "society-work-law",
    "title": "Society, work and law, set 1 of 1",
    "size": 125,
-   "withExample": 20,
+   "withExample": 21,
    "file": "society-work-law-set01.json"
   },
   {
@@ -327,7 +327,7 @@
    "topic": "time-numbers",
    "title": "Time and numbers, set 1 of 1",
    "size": 125,
-   "withExample": 50,
+   "withExample": 52,
    "file": "time-numbers-set01.json"
   }
  ]

@@ -57,7 +57,10 @@ export async function buildVoicePlan(root = REPO_ROOT, o = {}) {
   const done = o.resumeWork ? renderedMap(o.resumeWork) : new Map();
   const words = [...index.entries()].map(([k, i]) => { const [kind, id] = k.split('|'); return { kind, id, i, rank: ranks.get(id) ?? null }; });
   const kindOrder = (k) => kinds.indexOf(k);
-  words.sort((a, b) => kindOrder(a.kind) - kindOrder(b.kind) || (a.rank ?? 1e9) - (b.rank ?? 1e9) || a.i - b.i);
+  // includeExisting: soundwords curriculum order (r01-w1 first). Missing-only ranks from
+  // priority.mjs are for the next unsourced clips, and would otherwise jump new prayer-word
+  // aliases of common words (for example hallel-115-1-w1 "לא") ahead of the lesson ids.
+  words.sort((a, b) => kindOrder(a.kind) - kindOrder(b.kind) || (o.includeExisting ? a.i - b.i : ((a.rank ?? 1e9) - (b.rank ?? 1e9) || a.i - b.i)));
   const items = []; let nWords = 0;
   for (const w of words) {
     if (o.words && nWords >= o.words) break;

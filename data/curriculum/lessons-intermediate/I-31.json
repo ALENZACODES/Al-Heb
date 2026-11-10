@@ -178,13 +178,12 @@
  ],
  "prayerLines": [
   "hanukkah-nissim",
-  "shehecheyanu",
-  "hagomel"
+  "shehecheyanu"
  ],
  "goals": [
-  "Say the blessing for miracles used on Purim and Hanukkah",
+  "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (ALEF stores that wording with the Hanukkah source)",
   "Greet and toast in Hebrew",
-  "Know that the Megillah itself is not in the corpus"
+  "Know that the Megillah reading is not in ALEF yet"
  ],
  "estMinutes": 25,
  "prerequisites": [
@@ -205,7 +204,7 @@
    "id": "I-31-e01",
    "type": "fade",
    "line": "hanukkah-nissim",
-   "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time."
+   "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time. (Same wording on Purim and Hanukkah.)"
   },
   {
    "id": "I-31-e02",

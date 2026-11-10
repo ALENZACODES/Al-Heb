@@ -1941,6 +1941,407 @@
     "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
    },
    "fetchedAt": "2026-11-04T06:08:44Z"
+  },
+  "hallel-113-1": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 113,
+   "verses": [
+    1,
+    1
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "הַ֥לְלוּ יָ֨הּ ׀ הַ֭לְלוּ עַבְדֵ֣י יְהוָ֑ה הֽ͏ַ֝לְלוּ אֶת־ שֵׁ֥ם יְהוָֽה׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 113:1",
+    "rawLines": [
+     "Hallelujah. Praise, O ye servants of the LORD, Praise the name of the LORD."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-115-1": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 115,
+   "verses": [
+    1,
+    1
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "לֹ֤א לָ֥נוּ יְהוָ֗ה לֹ֫א לָ֥נוּ כִּֽי־ לְ֭שִׁמְךָ תֵּ֣ן כָּב֑וֹד עַל־ חַ֝סְדְּךָ֗ עַל־ אֲמִתֶּֽךָ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 115:1",
+    "rawLines": [
+     "Not unto us, O LORD, not unto us, But unto Thy name give glory, For Thy mercy, and for Thy truth's sake."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-116-13": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 116,
+   "verses": [
+    13,
+    13
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "כּוֹס־ יְשׁוּע֥וֹת אֶשָּׂ֑א וּבְשֵׁ֖ם יְהוָ֣ה אֶקְרָֽא׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 116:13",
+    "rawLines": [
+     "I will lift up the cup of salvation, And call upon the name of the LORD."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-117": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 117,
+   "verses": [
+    1,
+    2
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "הַֽלְל֣וּ אֶת־ יְ֭הוָה כָּל־ גּוֹיִ֑ם שַׁ֝בְּח֗וּהוּ כָּל־ הָאֻמִּֽים׃",
+    "כִּ֥י גָ֘בַ֤ר עָלֵ֨ינוּ ׀ חַסְדּ֗וֹ וֶֽאֱמֶת־ יְהוָ֥ה לְעוֹלָ֗ם הַֽלְלוּ־ יָֽהּ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 117:1-2",
+    "rawLines": [
+     "O praise the LORD, all ye nations; Laud Him, all ye peoples.",
+     "For His mercy is great toward us; And the truth of the LORD endureth for ever. Hallelujah."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-1-4": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    1,
+    4
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "הוֹד֣וּ לַיהוָ֣ה כִּי־ ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+    "יֹֽאמַר־ נָ֥א יִשְׂרָאֵ֑ל כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+    "יֹֽאמְרוּ־ נָ֥א בֵֽית־ אַהֲרֹ֑ן כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+    "יֹֽאמְרוּ־ נָ֭א יִרְאֵ֣י יְהוָ֑ה כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:1-4",
+    "rawLines": [
+     "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever.",
+     "So let Israel now say, For His mercy endureth for ever,",
+     "So let the house of Aaron now say, For His mercy endureth for ever.",
+     "So let them now that fear the LORD say, For His mercy endureth for ever."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-5": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    5,
+    5
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "מִֽן־ הַ֭מֵּצַ֥ר קָרָ֣אתִי יָּ֑הּ עָנָ֖נִי בַמֶּרְחָ֣ב יָֽהּ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:5",
+    "rawLines": [
+     "Out of my straits I called upon the LORD; He answered me with great enlargement."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-24": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    24,
+    24
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "זֶה־ הַ֭יּוֹם עָשָׂ֣ה יְהוָ֑ה נָגִ֖ילָה וְנִשְׂמְחָ֣ה בֽוֹ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:24",
+    "rawLines": [
+     "This is the day which the LORD hath made; We will rejoice and be glad in it."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-25": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    25,
+    25
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "אָֽנָּ֣א יְ֭הוָה הוֹשִׁ֘יעָ֥ה נָּ֑א אָֽנָּ֥א יְ֝הוָ֗ה הַצְלִ֘יחָ֥ה נָּֽא׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:25",
+    "rawLines": [
+     "We beseech Thee, O LORD, save now! We beseech Thee, O LORD, make us now to prosper!"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-28": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    28,
+    28
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "אֵלִ֣י אַתָּ֣ה וְאוֹדֶ֑ךָּ אֱ֝לֹהַ֗י אֲרוֹמְמֶֽךָּ׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:28",
+    "rawLines": [
+     "Thou art my God, and I will give thanks unto Thee; Thou art my God, I will exalt Thee."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-day-verses": {
+   "kind": "tanach-us",
+   "book": "Leviticus",
+   "chapter": 23,
+   "verses": [
+    4,
+    44
+   ],
+   "verseList": [
+    4,
+    44
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Leviticus.xml",
+   "rawLines": [
+    "אֵ֚לֶּה מוֹעֲדֵ֣י יְהוָ֔ה מִקְרָאֵ֖י קֹ֑דֶשׁ אֲשֶׁר־ תִּקְרְא֥וּ אֹתָ֖ם בְּמוֹעֲדָֽם׃",
+    "וַיְדַבֵּ֣ר מֹשֶׁ֔ה אֶת־ מֹעֲדֵ֖י יְהוָ֑ה אֶל־ בְּנֵ֖י יִשְׂרָאֵֽל׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Leviticus 23:4, 23:44",
+    "rawLines": [
+     "These are the appointed seasons of the LORD, even holy convocations, which ye shall proclaim in their appointed season.",
+     "And Moses declared unto the children of Israel the appointed seasons of the LORD."
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-eve-open": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    9
+   ],
+   "rawLines": [
+    "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו. וַתִּתֶּן לָנוּ יְהֹוָה אֱלֹהֵינוּ בְּאַהֲבָה <small>(<b><small>לשבת</small></b> שַׁבָּתוֹת לִמְנוּחָה וּ)</small>מוֹעֲדִים לְשִׂמְחָה. חַגִּים וּזְמַנִּים לְשָׂשׂוֹן. אֶת יוֹם <small>(<b><small>לשבת</small></b> הַשַּׁבָּת הַזֶּה וְאֶת יוֹם)</small>:</small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-pesach": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    10
+   ],
+   "rawLines": [
+    "<small><small>לפסח:</small> <b>חַג הַמַּצּוֹת הַזֶּה. זְמַן חֵרוּתֵנוּ:</b></small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-shavuot": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    11
+   ],
+   "rawLines": [
+    "<small><small>לשבועות:</small> <b>חַג הַשָׁבוּעוֹת הַזֶּה. זְמַן מַתַּן תּוֹרָתֵינוּ:</b></small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-sukkot": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    12
+   ],
+   "rawLines": [
+    "<small><small>לסוכות:</small> <b>חַג הַסֻּכּוֹת הַזֶּה. זְמַן שִׂמְחָתֵנוּ:</b></small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-shemini": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    13
+   ],
+   "rawLines": [
+    "<small><small>לשמ\"ע ולש\"ת:</small> <b>שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה. זְמַן שִׂמְחָתֵנוּ:</b></small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "kiddush-festival-eve-close": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    14
+   ],
+   "rawLines": [
+    "<small><small> <small>(לשבת <b>בְּאַהֲבָה</b>)</small> </small> מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם. כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים. <small> <small>(לשבת <b>וְשַׁבָּת</b>)</small> </small> וּמוֹעֲדֵי קָדְשֶׁךָ <small> <small>(לשבת <b>בְּאַהֲבָה וּבְרָצוֹן</b>)</small> </small> בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ: בָּרוּךְ אַתָּה יְהֹוָה. מְקַדֵּשׁ <small> <small>(לשבת <b>הַשַּׁבָּת וְ</b>)</small> </small>יִשְׂרָאֵל וְהַזְּמַנִּים:</small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "leshev-basukkah": {
+   "kind": "sefaria-siddur",
+   "ref": "Siddur Sefard, Holidays, Yom Tov Eve Kiddush",
+   "versionTitle": "Torat Emet 357",
+   "license": "Public Domain",
+   "versionSource": "http://www.toratemetfreeware.com/index.html?downloads",
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Holidays%2C_Yom_Tov_Eve_Kiddush",
+   "apiUrl": "https://www.sefaria.org/api/v3/texts/Siddur%20Sefard%2C%20Holidays%2C%20Yom%20Tov%20Eve%20Kiddush?version=hebrew%7Call",
+   "lineIndexes": [
+    17
+   ],
+   "rawLines": [
+    "<small><b>בָּרוּךְ</b> אַתָּה יְהֹוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם. אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו. וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה:</small>"
+   ],
+   "fetchedAt": "2026-11-10T05:58:22Z"
+  },
+  "hallel-118-6": {
+   "kind": "tanach-us",
+   "book": "Psalms",
+   "chapter": 118,
+   "verses": [
+    6,
+    6
+   ],
+   "versionTitle": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+   "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "rawLines": [
+    "יְהוָ֣ה לִ֭י לֹ֣א אִירָ֑א מַה־ יַּעֲשֶׂ֖ה לִ֣י אָדָֽם׃"
+   ],
+   "english": {
+    "versionTitle": "The Holy Scriptures: A New Translation (JPS 1917)",
+    "license": "Public Domain",
+    "ref": "Psalms 118:6",
+    "rawLines": [
+     "The LORD is for me; I will not fear; What can man do unto me?"
+    ],
+    "versionSource": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/"
+   },
+   "fetchedAt": "2026-11-10T06:01:14Z"
   }
  }
 }

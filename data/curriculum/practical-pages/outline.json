@@ -1,0 +1,2106 @@
+{
+ "schema": "alef-practical-outline/1",
+ "compatibleWith": "alef-practical-units/2",
+ "generated": "2026-11-10",
+ "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. pu-army (I-18 army slang) is outlined so every Israel-track lesson has a home, but it is held off the live Practical set until John decides. #/israel-units is not removed until John approves a single-course merge.",
+ "levels": {
+  "L0": "First words",
+  "L1": "Getting around",
+  "L2": "Daily life",
+  "L3": "Living in Israel",
+  "L4": "Shabbat and the year"
+ },
+ "routes": {
+  "list": "#/practical",
+  "unit": "#/practical/:id",
+  "page": "#/practical/:id/:page",
+  "nav": "nav.practical"
+ },
+ "pageKinds": {
+  "learn": "New words and phrases with audio",
+  "grammar": "One grammar point, explained with the page's own lines",
+  "dialogue": "A short conversation, then its lines one by one",
+  "listen": "Hear a clip and pick the meaning",
+  "speak": "Say the line for a situation, then compare with the clip",
+  "review": "New page content plus earlier items due for review",
+  "check": "End-of-level check across every unit in the level"
+ },
+ "totals": {
+  "units": 37,
+  "pages": 191,
+  "written": 94
+ },
+ "units": [
+  {
+   "id": "pu-greetings",
+   "level": "L0",
+   "title": "Greetings and Courtesy",
+   "lessons": [
+    "il01"
+   ],
+   "phrasebookSituation": "greetings",
+   "dialogue": "d-smalltalk",
+   "file": "data/curriculum/practical/pu-greetings.json",
+   "route": "#/practical/pu-greetings",
+   "pages": [
+    {
+     "id": "pu-greetings-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Hello and Goodbye",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p01"
+    },
+    {
+     "id": "pu-greetings-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Good Morning to Good Night",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p02"
+    },
+    {
+     "id": "pu-greetings-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "How Are You?",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p03"
+    },
+    {
+     "id": "pu-greetings-p04",
+     "order": 4,
+     "kind": "learn",
+     "title": "Fine, Thanks",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p04"
+    },
+    {
+     "id": "pu-greetings-p05",
+     "order": 5,
+     "kind": "dialogue",
+     "title": "Nice to Meet You",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p05"
+    },
+    {
+     "id": "pu-greetings-p06",
+     "order": 6,
+     "kind": "learn",
+     "title": "Shabbat and Holiday Greetings",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p06"
+    },
+    {
+     "id": "pu-greetings-p07",
+     "order": 7,
+     "kind": "review",
+     "title": "Good Wishes and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-greetings/pu-greetings-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-politeness",
+   "level": "L0",
+   "title": "Please, Sorry and Being Polite",
+   "lessons": [
+    "il01"
+   ],
+   "phrasebookSituation": "politeness",
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-politeness.json",
+   "route": "#/practical/pu-politeness",
+   "pages": [
+    {
+     "id": "pu-politeness-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Thank You and Please",
+     "status": "written",
+     "route": "#/practical/pu-politeness/pu-politeness-p01"
+    },
+    {
+     "id": "pu-politeness-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Sorry and Excuse Me",
+     "status": "written",
+     "route": "#/practical/pu-politeness/pu-politeness-p02"
+    },
+    {
+     "id": "pu-politeness-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Yes, No and Maybe",
+     "status": "written",
+     "route": "#/practical/pu-politeness/pu-politeness-p03"
+    },
+    {
+     "id": "pu-politeness-p04",
+     "order": 4,
+     "kind": "listen",
+     "title": "Street Hebrew",
+     "status": "written",
+     "route": "#/practical/pu-politeness/pu-politeness-p04"
+    },
+    {
+     "id": "pu-politeness-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Enough, It Will Be Fine, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-politeness/pu-politeness-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-fillers",
+   "level": "L0",
+   "title": "Sounding Local",
+   "lessons": [
+    "il02"
+   ],
+   "phrasebookSituation": "fillers",
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-fillers.json",
+   "route": "#/practical/pu-fillers",
+   "pages": [
+    {
+     "id": "pu-fillers-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "So, Well, But",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p01"
+    },
+    {
+     "id": "pu-fillers-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Right, Really, Just",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p02"
+    },
+    {
+     "id": "pu-fillers-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "I Don't Understand",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p03"
+    },
+    {
+     "id": "pu-fillers-p04",
+     "order": 4,
+     "kind": "grammar",
+     "title": "Do You Speak English?",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p04"
+    },
+    {
+     "id": "pu-fillers-p05",
+     "order": 5,
+     "kind": "speak",
+     "title": "Slower, Please",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p05"
+    },
+    {
+     "id": "pu-fillers-p06",
+     "order": 6,
+     "kind": "review",
+     "title": "What Does It Mean? and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-fillers/pu-fillers-p06"
+    }
+   ]
+  },
+  {
+   "id": "pu-numbers",
+   "level": "L0",
+   "title": "Numbers, Prices and Time",
+   "lessons": [
+    "il04",
+    "il05"
+   ],
+   "phrasebookSituation": "numbers",
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-numbers.json",
+   "route": "#/practical/pu-numbers",
+   "pages": [
+    {
+     "id": "pu-numbers-p01",
+     "order": 1,
+     "kind": "grammar",
+     "title": "One to Five",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p01"
+    },
+    {
+     "id": "pu-numbers-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Six to Ten",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p02"
+    },
+    {
+     "id": "pu-numbers-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Twenty, Thirty, a Hundred, a Thousand",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p03"
+    },
+    {
+     "id": "pu-numbers-p04",
+     "order": 4,
+     "kind": "grammar",
+     "title": "What Time Is It?",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p04"
+    },
+    {
+     "id": "pu-numbers-p05",
+     "order": 5,
+     "kind": "learn",
+     "title": "Today, Tomorrow, Yesterday",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p05"
+    },
+    {
+     "id": "pu-numbers-p06",
+     "order": 6,
+     "kind": "listen",
+     "title": "Hear the Number",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p06"
+    },
+    {
+     "id": "pu-numbers-p07",
+     "order": 7,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-numbers/pu-numbers-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-introducing",
+   "level": "L0",
+   "title": "Introducing Yourself",
+   "lessons": [
+    "il03"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": "d-smalltalk",
+   "file": "data/curriculum/practical/pu-introducing.json",
+   "route": "#/practical/pu-introducing",
+   "pages": [
+    {
+     "id": "pu-introducing-p01",
+     "order": 1,
+     "kind": "grammar",
+     "title": "My Name Is",
+     "status": "written",
+     "route": "#/practical/pu-introducing/pu-introducing-p01"
+    },
+    {
+     "id": "pu-introducing-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Where Are You From?",
+     "status": "written",
+     "route": "#/practical/pu-introducing/pu-introducing-p02"
+    },
+    {
+     "id": "pu-introducing-p03",
+     "order": 3,
+     "kind": "dialogue",
+     "title": "Small Talk at a Party",
+     "status": "written",
+     "route": "#/practical/pu-introducing/pu-introducing-p03"
+    },
+    {
+     "id": "pu-introducing-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Say It About Yourself",
+     "status": "written",
+     "route": "#/practical/pu-introducing/pu-introducing-p04"
+    },
+    {
+     "id": "pu-introducing-p05",
+     "order": 5,
+     "kind": "check",
+     "title": "Level 0 Check",
+     "status": "written",
+     "route": "#/practical/pu-introducing/pu-introducing-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-cafe",
+   "level": "L1",
+   "title": "Ordering at a Cafe",
+   "lessons": [
+    "il06",
+    "il07",
+    "I-13"
+   ],
+   "phrasebookSituation": "cafe",
+   "dialogue": "d-cafe",
+   "file": "data/curriculum/practical/pu-cafe.json",
+   "route": "#/practical/pu-cafe",
+   "pages": [
+    {
+     "id": "pu-cafe-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Coffee and Tea",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p01"
+    },
+    {
+     "id": "pu-cafe-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "I Want: Man and Woman",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p02"
+    },
+    {
+     "id": "pu-cafe-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Something to Eat",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p03"
+    },
+    {
+     "id": "pu-cafe-p04",
+     "order": 4,
+     "kind": "grammar",
+     "title": "How Much Is It?",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p04"
+    },
+    {
+     "id": "pu-cafe-p05",
+     "order": 5,
+     "kind": "dialogue",
+     "title": "At the Counter",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p05"
+    },
+    {
+     "id": "pu-cafe-p06",
+     "order": 6,
+     "kind": "listen",
+     "title": "Hear the Order",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p06"
+    },
+    {
+     "id": "pu-cafe-p07",
+     "order": 7,
+     "kind": "learn",
+     "title": "Here or To Go",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p07"
+    },
+    {
+     "id": "pu-cafe-p08",
+     "order": 8,
+     "kind": "speak",
+     "title": "Order for Yourself",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p08"
+    },
+    {
+     "id": "pu-cafe-p09",
+     "order": 9,
+     "kind": "learn",
+     "title": "Paying and Thanks",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p09"
+    },
+    {
+     "id": "pu-cafe-p10",
+     "order": 10,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-cafe/pu-cafe-p10"
+    }
+   ]
+  },
+  {
+   "id": "pu-restaurant",
+   "level": "L1",
+   "title": "Ordering at a Restaurant",
+   "lessons": [
+    "il06",
+    "il07",
+    "I-13",
+    "I-38"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": "d-restaurant",
+   "file": "data/curriculum/practical/pu-restaurant.json",
+   "route": "#/practical/pu-restaurant",
+   "pages": [
+    {
+     "id": "pu-restaurant-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "A Table for Two",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p01"
+    },
+    {
+     "id": "pu-restaurant-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "The Menu",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p02"
+    },
+    {
+     "id": "pu-restaurant-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "Adjectives That Match",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p03"
+    },
+    {
+     "id": "pu-restaurant-p04",
+     "order": 4,
+     "kind": "dialogue",
+     "title": "Ordering a Meal",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p04"
+    },
+    {
+     "id": "pu-restaurant-p05",
+     "order": 5,
+     "kind": "learn",
+     "title": "With and Without",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p05"
+    },
+    {
+     "id": "pu-restaurant-p06",
+     "order": 6,
+     "kind": "speak",
+     "title": "Ask for the Bill",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p06"
+    },
+    {
+     "id": "pu-restaurant-p07",
+     "order": 7,
+     "kind": "review",
+     "title": "Gladly, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-shop",
+   "level": "L1",
+   "title": "Shopping and Paying",
+   "lessons": [
+    "il08",
+    "il09",
+    "I-12",
+    "I-43"
+   ],
+   "phrasebookSituation": "shop",
+   "dialogue": "d-shop",
+   "file": "data/curriculum/practical/pu-shop.json",
+   "route": "#/practical/pu-shop",
+   "pages": [
+    {
+     "id": "pu-shop-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "In the Shop",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p01"
+    },
+    {
+     "id": "pu-shop-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Numbers with Nouns",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p02"
+    },
+    {
+     "id": "pu-shop-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Sizes",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p03"
+    },
+    {
+     "id": "pu-shop-p04",
+     "order": 4,
+     "kind": "dialogue",
+     "title": "Trying On a Shirt",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p04"
+    },
+    {
+     "id": "pu-shop-p05",
+     "order": 5,
+     "kind": "grammar",
+     "title": "This: זֶה and זֹאת",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p05"
+    },
+    {
+     "id": "pu-shop-p06",
+     "order": 6,
+     "kind": "listen",
+     "title": "Hear the Price",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p06"
+    },
+    {
+     "id": "pu-shop-p07",
+     "order": 7,
+     "kind": "speak",
+     "title": "Ask to Try It On",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p07"
+    },
+    {
+     "id": "pu-shop-p08",
+     "order": 8,
+     "kind": "learn",
+     "title": "Paying and the Receipt",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p08"
+    },
+    {
+     "id": "pu-shop-p09",
+     "order": 9,
+     "kind": "review",
+     "title": "Closing Time and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-shop/pu-shop-p09"
+    }
+   ]
+  },
+  {
+   "id": "pu-directions",
+   "level": "L1",
+   "title": "Asking for and Following Directions",
+   "lessons": [
+    "il11",
+    "I-15"
+   ],
+   "phrasebookSituation": "directions",
+   "dialogue": "d-directions",
+   "file": "data/curriculum/practical/pu-directions.json",
+   "route": "#/practical/pu-directions",
+   "pages": [
+    {
+     "id": "pu-directions-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Where Is...?",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p01"
+    },
+    {
+     "id": "pu-directions-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Right, Left, Straight",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p02"
+    },
+    {
+     "id": "pu-directions-p03",
+     "order": 3,
+     "kind": "dialogue",
+     "title": "Where Is the Central Station?",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p03"
+    },
+    {
+     "id": "pu-directions-p04",
+     "order": 4,
+     "kind": "learn",
+     "title": "Near and Far",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p04"
+    },
+    {
+     "id": "pu-directions-p05",
+     "order": 5,
+     "kind": "listen",
+     "title": "Follow the Directions",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p05"
+    },
+    {
+     "id": "pu-directions-p06",
+     "order": 6,
+     "kind": "speak",
+     "title": "Ask the Way",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p06"
+    },
+    {
+     "id": "pu-directions-p07",
+     "order": 7,
+     "kind": "review",
+     "title": "Two Words, One Place, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-directions/pu-directions-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-transport",
+   "level": "L1",
+   "title": "Taxi, Bus and Train",
+   "lessons": [
+    "il10",
+    "I-11",
+    "I-23"
+   ],
+   "phrasebookSituation": "taxi",
+   "dialogue": "d-taxi",
+   "file": "data/curriculum/practical/pu-transport.json",
+   "route": "#/practical/pu-transport",
+   "pages": [
+    {
+     "id": "pu-transport-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Taking a Taxi",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p01"
+    },
+    {
+     "id": "pu-transport-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "To and From: לְ and מִ",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p02"
+    },
+    {
+     "id": "pu-transport-p03",
+     "order": 3,
+     "kind": "dialogue",
+     "title": "A Taxi to the Airport",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p03"
+    },
+    {
+     "id": "pu-transport-p04",
+     "order": 4,
+     "kind": "learn",
+     "title": "The Bus",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p04"
+    },
+    {
+     "id": "pu-transport-p05",
+     "order": 5,
+     "kind": "learn",
+     "title": "The Train",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p05"
+    },
+    {
+     "id": "pu-transport-p06",
+     "order": 6,
+     "kind": "listen",
+     "title": "Hear the Stop",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p06"
+    },
+    {
+     "id": "pu-transport-p07",
+     "order": 7,
+     "kind": "speak",
+     "title": "Tell the Driver Where",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p07"
+    },
+    {
+     "id": "pu-transport-p08",
+     "order": 8,
+     "kind": "learn",
+     "title": "Tickets and the Rav-Kav",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p08"
+    },
+    {
+     "id": "pu-transport-p09",
+     "order": 9,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-transport/pu-transport-p09"
+    }
+   ]
+  },
+  {
+   "id": "pu-small-talk",
+   "level": "L1",
+   "title": "Small Talk",
+   "lessons": [
+    "il13",
+    "I-25",
+    "I-36"
+   ],
+   "phrasebookSituation": "small-talk",
+   "dialogue": "d-smalltalk",
+   "file": "data/curriculum/practical/pu-small-talk.json",
+   "route": "#/practical/pu-small-talk",
+   "pages": [
+    {
+     "id": "pu-small-talk-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "How Long Have You Been Here?",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p01"
+    },
+    {
+     "id": "pu-small-talk-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Questions: מָה and מָתַי",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p02"
+    },
+    {
+     "id": "pu-small-talk-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "How Do You Feel?",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p03"
+    },
+    {
+     "id": "pu-small-talk-p04",
+     "order": 4,
+     "kind": "learn",
+     "title": "Work and Studies",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p04"
+    },
+    {
+     "id": "pu-small-talk-p05",
+     "order": 5,
+     "kind": "listen",
+     "title": "Hear the Question",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p05"
+    },
+    {
+     "id": "pu-small-talk-p06",
+     "order": 6,
+     "kind": "speak",
+     "title": "Friends and Goodbyes",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p06"
+    },
+    {
+     "id": "pu-small-talk-p07",
+     "order": 7,
+     "kind": "learn",
+     "title": "Keeping It Going",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p07"
+    },
+    {
+     "id": "pu-small-talk-p08",
+     "order": 8,
+     "kind": "check",
+     "title": "Level 1 Check",
+     "status": "written",
+     "route": "#/practical/pu-small-talk/pu-small-talk-p08"
+    }
+   ]
+  },
+  {
+   "id": "pu-verbs-now",
+   "level": "L2",
+   "title": "What I Do Now",
+   "lessons": [
+    "il16"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-verbs-now.json",
+   "route": "#/practical/pu-verbs-now",
+   "pages": [
+    {
+     "id": "pu-verbs-now-p01",
+     "order": 1,
+     "kind": "grammar",
+     "title": "Present Tense: Man and Woman",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p01"
+    },
+    {
+     "id": "pu-verbs-now-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Everyday Verbs",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p02"
+    },
+    {
+     "id": "pu-verbs-now-p03",
+     "order": 3,
+     "kind": "review",
+     "title": "Come Here, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p03"
+    }
+   ]
+  },
+  {
+   "id": "pu-past",
+   "level": "L2",
+   "title": "What I Did",
+   "lessons": [
+    "il19"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-past.json",
+   "route": "#/practical/pu-past",
+   "pages": [
+    {
+     "id": "pu-past-p01",
+     "order": 1,
+     "kind": "grammar",
+     "title": "Past Tense: What I Did",
+     "status": "written",
+     "route": "#/practical/pu-past/pu-past-p01"
+    },
+    {
+     "id": "pu-past-p02",
+     "order": 2,
+     "kind": "review",
+     "title": "What I Did Yesterday, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-past/pu-past-p02"
+    }
+   ]
+  },
+  {
+   "id": "pu-family",
+   "level": "L2",
+   "title": "Family and Who You Are",
+   "lessons": [
+    "il14",
+    "I-42"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-family.json",
+   "route": "#/practical/pu-family",
+   "pages": [
+    {
+     "id": "pu-family-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "My Family",
+     "status": "written",
+     "route": "#/practical/pu-family/pu-family-p01"
+    },
+    {
+     "id": "pu-family-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "One and Many: -ים",
+     "status": "written",
+     "route": "#/practical/pu-family/pu-family-p02"
+    },
+    {
+     "id": "pu-family-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "School and Play",
+     "status": "written",
+     "route": "#/practical/pu-family/pu-family-p03"
+    },
+    {
+     "id": "pu-family-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Describe Your Family",
+     "status": "written",
+     "route": "#/practical/pu-family/pu-family-p04"
+    },
+    {
+     "id": "pu-family-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Happy, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-family/pu-family-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-home",
+   "level": "L2",
+   "title": "Home and Repairs",
+   "lessons": [
+    "I-44"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-home.json",
+   "route": "#/practical/pu-home",
+   "pages": [
+    {
+     "id": "pu-home-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Rooms and Things",
+     "status": "written",
+     "route": "#/practical/pu-home/pu-home-p01"
+    },
+    {
+     "id": "pu-home-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Something Is Broken",
+     "status": "written",
+     "route": "#/practical/pu-home/pu-home-p02"
+    },
+    {
+     "id": "pu-home-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Call the Landlord",
+     "status": "written",
+     "route": "#/practical/pu-home/pu-home-p03"
+    },
+    {
+     "id": "pu-home-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Help, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-home/pu-home-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-time",
+   "level": "L2",
+   "title": "Days, Time and Dates",
+   "lessons": [
+    "il12"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-time.json",
+   "route": "#/practical/pu-time",
+   "pages": [
+    {
+     "id": "pu-time-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Days of the Week",
+     "status": "planned",
+     "route": "#/practical/pu-time/pu-time-p01"
+    },
+    {
+     "id": "pu-time-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Telling the Time",
+     "status": "planned",
+     "route": "#/practical/pu-time/pu-time-p02"
+    },
+    {
+     "id": "pu-time-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Dates and Months",
+     "status": "planned",
+     "route": "#/practical/pu-time/pu-time-p03"
+    },
+    {
+     "id": "pu-time-p04",
+     "order": 4,
+     "kind": "listen",
+     "title": "Hear the Time",
+     "status": "planned",
+     "route": "#/practical/pu-time/pu-time-p04"
+    },
+    {
+     "id": "pu-time-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-time/pu-time-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-weather",
+   "level": "L2",
+   "title": "Weather and What to Take",
+   "lessons": [
+    "il15",
+    "I-24"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-weather.json",
+   "route": "#/practical/pu-weather",
+   "pages": [
+    {
+     "id": "pu-weather-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Hot, Cold, Rain",
+     "status": "planned",
+     "route": "#/practical/pu-weather/pu-weather-p01"
+    },
+    {
+     "id": "pu-weather-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "It Is: No Word Needed",
+     "status": "planned",
+     "route": "#/practical/pu-weather/pu-weather-p02"
+    },
+    {
+     "id": "pu-weather-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Talk About the Weather",
+     "status": "planned",
+     "route": "#/practical/pu-weather/pu-weather-p03"
+    },
+    {
+     "id": "pu-weather-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-weather/pu-weather-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-hotel",
+   "level": "L2",
+   "title": "Hotel and Booking",
+   "lessons": [
+    "il17"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": "d-hotel",
+   "file": "data/curriculum/practical/pu-hotel.json",
+   "route": "#/practical/pu-hotel",
+   "pages": [
+    {
+     "id": "pu-hotel-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "At Reception",
+     "status": "planned",
+     "route": "#/practical/pu-hotel/pu-hotel-p01"
+    },
+    {
+     "id": "pu-hotel-p02",
+     "order": 2,
+     "kind": "dialogue",
+     "title": "Checking In",
+     "status": "planned",
+     "route": "#/practical/pu-hotel/pu-hotel-p02"
+    },
+    {
+     "id": "pu-hotel-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "I Have, You Have: יֵשׁ לִי",
+     "status": "planned",
+     "route": "#/practical/pu-hotel/pu-hotel-p03"
+    },
+    {
+     "id": "pu-hotel-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Ask for Something in the Room",
+     "status": "planned",
+     "route": "#/practical/pu-hotel/pu-hotel-p04"
+    },
+    {
+     "id": "pu-hotel-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-hotel/pu-hotel-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-phone",
+   "level": "L2",
+   "title": "Phone, SIM and Messages",
+   "lessons": [
+    "il22",
+    "I-16"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-phone.json",
+   "route": "#/practical/pu-phone",
+   "pages": [
+    {
+     "id": "pu-phone-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Buying a SIM",
+     "status": "planned",
+     "route": "#/practical/pu-phone/pu-phone-p01"
+    },
+    {
+     "id": "pu-phone-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "On the Phone",
+     "status": "planned",
+     "route": "#/practical/pu-phone/pu-phone-p02"
+    },
+    {
+     "id": "pu-phone-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Leave a Message",
+     "status": "planned",
+     "route": "#/practical/pu-phone/pu-phone-p03"
+    },
+    {
+     "id": "pu-phone-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-phone/pu-phone-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-apartment",
+   "level": "L2",
+   "title": "Looking at an Apartment",
+   "lessons": [
+    "I-17"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-apartment.json",
+   "route": "#/practical/pu-apartment",
+   "pages": [
+    {
+     "id": "pu-apartment-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Rooms and Rent",
+     "status": "planned",
+     "route": "#/practical/pu-apartment/pu-apartment-p01"
+    },
+    {
+     "id": "pu-apartment-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Is There...? יֵשׁ and אֵין",
+     "status": "planned",
+     "route": "#/practical/pu-apartment/pu-apartment-p02"
+    },
+    {
+     "id": "pu-apartment-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Questions for the Owner",
+     "status": "planned",
+     "route": "#/practical/pu-apartment/pu-apartment-p03"
+    },
+    {
+     "id": "pu-apartment-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-apartment/pu-apartment-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-plans",
+   "level": "L2",
+   "title": "Making Plans",
+   "lessons": [
+    "il20"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-plans.json",
+   "route": "#/practical/pu-plans",
+   "pages": [
+    {
+     "id": "pu-plans-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "When Are You Free?",
+     "status": "planned",
+     "route": "#/practical/pu-plans/pu-plans-p01"
+    },
+    {
+     "id": "pu-plans-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Want To: רוֹצֶה Plus a Verb",
+     "status": "planned",
+     "route": "#/practical/pu-plans/pu-plans-p02"
+    },
+    {
+     "id": "pu-plans-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Suggest a Plan",
+     "status": "planned",
+     "route": "#/practical/pu-plans/pu-plans-p03"
+    },
+    {
+     "id": "pu-plans-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-plans/pu-plans-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-opinions",
+   "level": "L2",
+   "title": "Opinions and Preferences",
+   "lessons": [
+    "il21"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-opinions.json",
+   "route": "#/practical/pu-opinions",
+   "pages": [
+    {
+     "id": "pu-opinions-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "I Like, I Don't Like",
+     "status": "planned",
+     "route": "#/practical/pu-opinions/pu-opinions-p01"
+    },
+    {
+     "id": "pu-opinions-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "I Think That: שֶׁ",
+     "status": "planned",
+     "route": "#/practical/pu-opinions/pu-opinions-p02"
+    },
+    {
+     "id": "pu-opinions-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Give Your Opinion",
+     "status": "planned",
+     "route": "#/practical/pu-opinions/pu-opinions-p03"
+    },
+    {
+     "id": "pu-opinions-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-opinions/pu-opinions-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-driving",
+   "level": "L2",
+   "title": "Driving and the Road",
+   "lessons": [
+    "I-39"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-driving.json",
+   "route": "#/practical/pu-driving",
+   "pages": [
+    {
+     "id": "pu-driving-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Signs and Roads",
+     "status": "planned",
+     "route": "#/practical/pu-driving/pu-driving-p01"
+    },
+    {
+     "id": "pu-driving-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Parking and Fuel",
+     "status": "planned",
+     "route": "#/practical/pu-driving/pu-driving-p02"
+    },
+    {
+     "id": "pu-driving-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Ask a Driver",
+     "status": "planned",
+     "route": "#/practical/pu-driving/pu-driving-p03"
+    },
+    {
+     "id": "pu-driving-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-driving/pu-driving-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-hiking",
+   "level": "L2",
+   "title": "Hiking and the Trail",
+   "lessons": [
+    "I-40"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-hiking.json",
+   "route": "#/practical/pu-hiking",
+   "pages": [
+    {
+     "id": "pu-hiking-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "On the Trail",
+     "status": "planned",
+     "route": "#/practical/pu-hiking/pu-hiking-p01"
+    },
+    {
+     "id": "pu-hiking-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Water and Safety",
+     "status": "planned",
+     "route": "#/practical/pu-hiking/pu-hiking-p02"
+    },
+    {
+     "id": "pu-hiking-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Ask About the Trail",
+     "status": "planned",
+     "route": "#/practical/pu-hiking/pu-hiking-p03"
+    },
+    {
+     "id": "pu-hiking-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-hiking/pu-hiking-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-beach",
+   "level": "L2",
+   "title": "At the Beach",
+   "lessons": [
+    "I-41"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-beach.json",
+   "route": "#/practical/pu-beach",
+   "pages": [
+    {
+     "id": "pu-beach-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Sun and Sea",
+     "status": "planned",
+     "route": "#/practical/pu-beach/pu-beach-p01"
+    },
+    {
+     "id": "pu-beach-p02",
+     "order": 2,
+     "kind": "speak",
+     "title": "At the Beach Kiosk",
+     "status": "planned",
+     "route": "#/practical/pu-beach/pu-beach-p02"
+    },
+    {
+     "id": "pu-beach-p03",
+     "order": 3,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-beach/pu-beach-p03"
+    }
+   ]
+  },
+  {
+   "id": "pu-decide",
+   "level": "L2",
+   "title": "Putting It Together",
+   "lessons": [
+    "il23",
+    "il24"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-decide.json",
+   "route": "#/practical/pu-decide",
+   "pages": [
+    {
+     "id": "pu-decide-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Sound Less Like an Outsider",
+     "status": "planned",
+     "route": "#/practical/pu-decide/pu-decide-p01"
+    },
+    {
+     "id": "pu-decide-p02",
+     "order": 2,
+     "kind": "dialogue",
+     "title": "A Longer Conversation",
+     "status": "planned",
+     "route": "#/practical/pu-decide/pu-decide-p02"
+    },
+    {
+     "id": "pu-decide-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Your Turn",
+     "status": "planned",
+     "route": "#/practical/pu-decide/pu-decide-p03"
+    },
+    {
+     "id": "pu-decide-p04",
+     "order": 4,
+     "kind": "check",
+     "title": "Level 2 Check",
+     "status": "planned",
+     "route": "#/practical/pu-decide/pu-decide-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-work",
+   "level": "L3",
+   "title": "Work, Office and a Course",
+   "lessons": [
+    "I-36",
+    "I-37"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-work.json",
+   "route": "#/practical/pu-work",
+   "pages": [
+    {
+     "id": "pu-work-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "At the Office",
+     "status": "planned",
+     "route": "#/practical/pu-work/pu-work-p01"
+    },
+    {
+     "id": "pu-work-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Requests at Work",
+     "status": "planned",
+     "route": "#/practical/pu-work/pu-work-p02"
+    },
+    {
+     "id": "pu-work-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "Meetings and Email",
+     "status": "planned",
+     "route": "#/practical/pu-work/pu-work-p03"
+    },
+    {
+     "id": "pu-work-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Introduce Your Job",
+     "status": "planned",
+     "route": "#/practical/pu-work/pu-work-p04"
+    },
+    {
+     "id": "pu-work-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-work/pu-work-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-health",
+   "level": "L3",
+   "title": "Doctor, Clinic and Pharmacy",
+   "lessons": [
+    "il18",
+    "I-14",
+    "I-20"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-health.json",
+   "route": "#/practical/pu-health",
+   "pages": [
+    {
+     "id": "pu-health-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "It Hurts Here",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p01"
+    },
+    {
+     "id": "pu-health-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "My Head Hurts: כּוֹאֵב לִי",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p02"
+    },
+    {
+     "id": "pu-health-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "At the Clinic",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p03"
+    },
+    {
+     "id": "pu-health-p04",
+     "order": 4,
+     "kind": "learn",
+     "title": "At the Pharmacy",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p04"
+    },
+    {
+     "id": "pu-health-p05",
+     "order": 5,
+     "kind": "listen",
+     "title": "Hear the Instructions",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p05"
+    },
+    {
+     "id": "pu-health-p06",
+     "order": 6,
+     "kind": "speak",
+     "title": "Describe What Hurts",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p06"
+    },
+    {
+     "id": "pu-health-p07",
+     "order": 7,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-health/pu-health-p07"
+    }
+   ]
+  },
+  {
+   "id": "pu-bank",
+   "level": "L3",
+   "title": "Bank, Cash and Forms",
+   "lessons": [
+    "I-21",
+    "I-48"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-bank.json",
+   "route": "#/practical/pu-bank",
+   "pages": [
+    {
+     "id": "pu-bank-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "At the Bank",
+     "status": "planned",
+     "route": "#/practical/pu-bank/pu-bank-p01"
+    },
+    {
+     "id": "pu-bank-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Filling In a Form",
+     "status": "planned",
+     "route": "#/practical/pu-bank/pu-bank-p02"
+    },
+    {
+     "id": "pu-bank-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "Must and Need: צָרִיךְ",
+     "status": "planned",
+     "route": "#/practical/pu-bank/pu-bank-p03"
+    },
+    {
+     "id": "pu-bank-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Ask at the Counter",
+     "status": "planned",
+     "route": "#/practical/pu-bank/pu-bank-p04"
+    },
+    {
+     "id": "pu-bank-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-bank/pu-bank-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-post",
+   "level": "L3",
+   "title": "Post Office and Parcels",
+   "lessons": [
+    "I-22"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-post.json",
+   "route": "#/practical/pu-post",
+   "pages": [
+    {
+     "id": "pu-post-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Sending a Parcel",
+     "status": "planned",
+     "route": "#/practical/pu-post/pu-post-p01"
+    },
+    {
+     "id": "pu-post-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Collecting a Parcel",
+     "status": "planned",
+     "route": "#/practical/pu-post/pu-post-p02"
+    },
+    {
+     "id": "pu-post-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Ask Where Your Parcel Is",
+     "status": "planned",
+     "route": "#/practical/pu-post/pu-post-p03"
+    },
+    {
+     "id": "pu-post-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-post/pu-post-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-emergencies",
+   "level": "L3",
+   "title": "Emergencies and Calling for Help",
+   "lessons": [
+    "I-46",
+    "il18"
+   ],
+   "phrasebookSituation": "help",
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-emergencies.json",
+   "route": "#/practical/pu-emergencies",
+   "pages": [
+    {
+     "id": "pu-emergencies-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Help!",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p01"
+    },
+    {
+     "id": "pu-emergencies-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Calling an Ambulance or the Police",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p02"
+    },
+    {
+     "id": "pu-emergencies-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "Commands: Come, Call, Wait",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p03"
+    },
+    {
+     "id": "pu-emergencies-p04",
+     "order": 4,
+     "kind": "listen",
+     "title": "Hear the Instructions",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p04"
+    },
+    {
+     "id": "pu-emergencies-p05",
+     "order": 5,
+     "kind": "speak",
+     "title": "Say What Happened",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p05"
+    },
+    {
+     "id": "pu-emergencies-p06",
+     "order": 6,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-emergencies/pu-emergencies-p06"
+    }
+   ]
+  },
+  {
+   "id": "pu-delivery",
+   "level": "L3",
+   "title": "Ordering Delivery",
+   "lessons": [
+    "I-45"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-delivery.json",
+   "route": "#/practical/pu-delivery",
+   "pages": [
+    {
+     "id": "pu-delivery-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "The Order",
+     "status": "planned",
+     "route": "#/practical/pu-delivery/pu-delivery-p01"
+    },
+    {
+     "id": "pu-delivery-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "The Address",
+     "status": "planned",
+     "route": "#/practical/pu-delivery/pu-delivery-p02"
+    },
+    {
+     "id": "pu-delivery-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Call the Courier",
+     "status": "planned",
+     "route": "#/practical/pu-delivery/pu-delivery-p03"
+    },
+    {
+     "id": "pu-delivery-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-delivery/pu-delivery-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-social",
+   "level": "L3",
+   "title": "Messages, Photos and Social Media",
+   "lessons": [
+    "I-49"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-social.json",
+   "route": "#/practical/pu-social",
+   "pages": [
+    {
+     "id": "pu-social-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Short Messages",
+     "status": "planned",
+     "route": "#/practical/pu-social/pu-social-p01"
+    },
+    {
+     "id": "pu-social-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Future Tense: I Will",
+     "status": "planned",
+     "route": "#/practical/pu-social/pu-social-p02"
+    },
+    {
+     "id": "pu-social-p03",
+     "order": 3,
+     "kind": "speak",
+     "title": "Reply to a Friend",
+     "status": "planned",
+     "route": "#/practical/pu-social/pu-social-p03"
+    },
+    {
+     "id": "pu-social-p04",
+     "order": 4,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-social/pu-social-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-army",
+   "level": "L3",
+   "title": "Army Slang Basics",
+   "lessons": [
+    "I-18"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-army.json",
+   "route": "#/practical/pu-army",
+   "heldForJohn": true,
+   "live": false,
+   "pages": [
+    {
+     "id": "pu-army-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Words From the Army",
+     "status": "planned",
+     "route": "#/practical/pu-army/pu-army-p01"
+    },
+    {
+     "id": "pu-army-p02",
+     "order": 2,
+     "kind": "listen",
+     "title": "Hear It in Conversation",
+     "status": "planned",
+     "route": "#/practical/pu-army/pu-army-p02"
+    },
+    {
+     "id": "pu-army-p03",
+     "order": 3,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-army/pu-army-p03"
+    }
+   ]
+  },
+  {
+   "id": "pu-news",
+   "level": "L3",
+   "title": "Reading a Headline",
+   "lessons": [
+    "I-47"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-news.json",
+   "route": "#/practical/pu-news",
+   "pages": [
+    {
+     "id": "pu-news-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "Headline Words",
+     "status": "planned",
+     "route": "#/practical/pu-news/pu-news-p01"
+    },
+    {
+     "id": "pu-news-p02",
+     "order": 2,
+     "kind": "grammar",
+     "title": "Reading Without Vowel Marks",
+     "status": "planned",
+     "route": "#/practical/pu-news/pu-news-p02"
+    },
+    {
+     "id": "pu-news-p03",
+     "order": 3,
+     "kind": "learn",
+     "title": "One Short Story",
+     "status": "planned",
+     "route": "#/practical/pu-news/pu-news-p03"
+    },
+    {
+     "id": "pu-news-p04",
+     "order": 4,
+     "kind": "check",
+     "title": "Level 3 Check",
+     "status": "planned",
+     "route": "#/practical/pu-news/pu-news-p04"
+    }
+   ]
+  },
+  {
+   "id": "pu-shabbat",
+   "level": "L4",
+   "title": "Being Invited for Shabbat",
+   "lessons": [
+    "I-19"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-shabbat.json",
+   "route": "#/practical/pu-shabbat",
+   "pages": [
+    {
+     "id": "pu-shabbat-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "The Invitation",
+     "status": "planned",
+     "route": "#/practical/pu-shabbat/pu-shabbat-p01"
+    },
+    {
+     "id": "pu-shabbat-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "At the Table",
+     "status": "planned",
+     "route": "#/practical/pu-shabbat/pu-shabbat-p02"
+    },
+    {
+     "id": "pu-shabbat-p03",
+     "order": 3,
+     "kind": "grammar",
+     "title": "Polite Requests at a Meal",
+     "status": "planned",
+     "route": "#/practical/pu-shabbat/pu-shabbat-p03"
+    },
+    {
+     "id": "pu-shabbat-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Thank Your Hosts",
+     "status": "planned",
+     "route": "#/practical/pu-shabbat/pu-shabbat-p04"
+    },
+    {
+     "id": "pu-shabbat-p05",
+     "order": 5,
+     "kind": "review",
+     "title": "Unit Review",
+     "status": "planned",
+     "route": "#/practical/pu-shabbat/pu-shabbat-p05"
+    }
+   ]
+  },
+  {
+   "id": "pu-holidays",
+   "level": "L4",
+   "title": "Holiday Greetings and Everyday Wishes",
+   "lessons": [
+    "I-50"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-holidays.json",
+   "route": "#/practical/pu-holidays",
+   "pages": [
+    {
+     "id": "pu-holidays-p01",
+     "order": 1,
+     "kind": "learn",
+     "title": "The Year at a Glance",
+     "status": "planned",
+     "route": "#/practical/pu-holidays/pu-holidays-p01"
+    },
+    {
+     "id": "pu-holidays-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Greetings for Each Holiday",
+     "status": "planned",
+     "route": "#/practical/pu-holidays/pu-holidays-p02"
+    },
+    {
+     "id": "pu-holidays-p03",
+     "order": 3,
+     "kind": "listen",
+     "title": "Hear the Greeting",
+     "status": "planned",
+     "route": "#/practical/pu-holidays/pu-holidays-p03"
+    },
+    {
+     "id": "pu-holidays-p04",
+     "order": 4,
+     "kind": "speak",
+     "title": "Wish Someone Well",
+     "status": "planned",
+     "route": "#/practical/pu-holidays/pu-holidays-p04"
+    },
+    {
+     "id": "pu-holidays-p05",
+     "order": 5,
+     "kind": "check",
+     "title": "Final Check",
+     "status": "planned",
+     "route": "#/practical/pu-holidays/pu-holidays-p05"
+    }
+   ]
+  }
+ ]
+}

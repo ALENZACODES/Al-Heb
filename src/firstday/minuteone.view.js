@@ -300,13 +300,19 @@ export async function mount(root, ctx) {
         'aria-label': 'שָׁלוֹם',
       }, ...spans),
       h('p', { class: 'muted', style: 'text-align:center' }, sp.gloss ? `Shalom — “${sp.gloss}.”` : 'Shalom.'),
-      h('p', { style: 'text-align:center' }, sp.line || 'You just read your first Hebrew word.'),
+      h('p', { style: 'text-align:center' }, sp.line || 'Your first Hebrew word. Tap to hear it.'),
       h('p', { class: 'row', style: 'justify-content:center' },
+        // Quiet tap-to-hear: the recorded clip (Ari or Noa), never an error banner when the browser blocks sound before a tap.
+        h('button', { type: 'button', class: 'btn secondary fw-hear', id: 'fw-hear-shalom', onclick: () => playSplash() }, '🔊 Hear it'),
         h('button', { type: 'button', class: 'btn', onclick: advanceFromSplash }, freeMode() ? 'Build words' : 'Begin')),
     );
-    playSplash();
+    // Autoplay only after the learner has already tapped in this tab (browsers block sound before that, which used to raise
+    // a "No sound" bar on the very first screen). Otherwise the Hear it button above plays it.
+    try { if (globalThis.navigator?.userActivation?.hasBeenActive) playSplash(); } catch { /* sound is optional */ }
     const ms = Math.max(1200, sp.assembleMs || 1800);
-    setTimeout(() => { if (alive && phase === 'splash') advanceFromSplash(); }, ms + 1200);
+    // Auto-advance only when the word was heard by itself; otherwise the learner gets time to tap Hear it.
+    let heard = false; try { heard = !!globalThis.navigator?.userActivation?.hasBeenActive; } catch { /* ignore */ }
+    setTimeout(() => { if (alive && phase === 'splash' && (heard || !globalThis.navigator?.userActivation)) advanceFromSplash(); }, ms + 1200);
   }
 
   function renderMotive() {
@@ -384,7 +390,7 @@ export async function mount(root, ctx) {
 
   // ---------- the builder ----------
   function rimonNode() {
-    const img = h('img', { class: 'fw-rimon', src: RIMON_SRC, alt: 'Rimon the pomegranate, smiling', width: '96', height: '96', loading: 'lazy', decoding: 'async' });
+    const img = h('img', { class: 'fw-rimon', src: RIMON_SRC, alt: 'Rimon the pomegranate, smiling', width: '96', height: '96', loading: 'lazy', decoding: 'async', 'data-rimon-still': 'firstwin.builder' });
     img.addEventListener('error', () => img.remove());
     return img;
   }
@@ -517,7 +523,7 @@ export async function mount(root, ctx) {
     if (celebrateStep >= 4) {
       kids.push(h('div', { class: 'card fw-share', id: 'fw-share-card', style: 'text-align:center' },
         h('p', { class: 'he', lang: 'he', dir: 'rtl', style: 'font-size:2.2rem;margin:0' }, word.bare),
-        h('p', { class: 'muted' }, data.shareLine || 'My first Hebrew word on Aleph')));
+        h('p', { class: 'muted' }, data.shareLine || 'My first Hebrew word on ALEF')));
     }
     // Beat 5: siyum open-next / Zeigarnik
     if (celebrateStep >= 5) {

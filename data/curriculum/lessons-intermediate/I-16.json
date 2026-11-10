@@ -51,7 +51,7 @@
   },
   {
    "he": "הוֹדָעָה",
-   "en": "notice",
+   "en": "message, notice",
    "translit": null,
    "pronunciation": {
     "israeli": "hoda'ah"
@@ -98,15 +98,15 @@
    }
   },
   {
-   "he": "מִטְעָן",
-   "en": "charger",
+   "he": "מַטְעֵן",
+   "en": "charger (for a phone or battery)",
    "translit": null,
    "pronunciation": {
-    "israeli": "mit'an"
+    "israeli": "mat'en"
    },
    "source": {
-    "file": "data/vocab/words.json",
-    "id": "hed3878d2"
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-maten"
    }
   },
   {
@@ -260,7 +260,7 @@
      "en": "battery"
     },
     {
-     "he": "מִטְעָן",
+     "he": "מַטְעֵן",
      "en": "charger"
     },
     {
@@ -278,7 +278,7 @@
    "type": "respond",
    "cue": "Your battery is dead. Ask for a charger.",
    "answer": {
-    "he": "יֵשׁ לְךָ מִטְעָן?",
+    "he": "יֵשׁ לְךָ מַטְעֵן?",
     "en": "Do you have a charger?"
    }
   },
@@ -339,7 +339,7 @@
    "options": [
     "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
     "אָבַד לִי הַטֶּלֶפוֹן",
-    "יֵשׁ לְךָ מִטְעָן?"
+    "יֵשׁ לְךָ מַטְעֵן?"
    ],
    "answer": 0
   },

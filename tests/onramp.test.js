@@ -195,7 +195,7 @@ test('first day follows the chosen tradition: a style line before step 1, and th
   assert.ok(style, 'style line present');
   assert.match(style.textContent, /Reading style: Ashkenazi\./);
   assert.equal(style.getAttribute('data-audio-support'), 'none');
-  assert.match(style.textContent, /Ashkenazi way to say it is written in English letters/);
+  assert.match(style.textContent, /Ashkenazi reading is shown in English letters/);
   const hear = btns(root, /Hear it/)[0]; assert.ok(hear);
   await hear.fire('click');
   await waitFor(() => /browser voice/.test(root.queryAll('div').find((d) => d.getAttribute('id') === 'fd-status')?.textContent || ''), { message: 'no play line' });

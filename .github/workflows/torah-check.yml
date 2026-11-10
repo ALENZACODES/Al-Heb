@@ -1,0 +1,67 @@
+name: torah-check
+# Both audio reviewers (word model ivrit-ai Whisper, sound model renikud IPA) on every Hebrew Torah verse clip, in 20 parallel slices.
+# Runs when tools/torah/audio/check-queue.txt changes on main, or by hand. Results: one branch per slice, john/torah-check-<n>,
+# file docs/torah/audio-verification/check/shard-<n>.jsonl. Nothing in the app changes.
+on:
+  push:
+    branches: [main]
+    paths: ['tools/torah/audio/check-queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: torah-check
+  cancel-in-progress: false
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - name: Convert the pinned sound model (renikud/whisper-he-ipa) to CTranslate2 int8
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q transformers ctranslate2==4.8.5
+          ct2-transformers-converter --model renikud/whisper-he-ipa --revision e709a907f8e0e6ebcb83340b8563818dd1bc3bee \
+            --output_dir phoneme-ct2 --quantization int8 --copy_files tokenizer.json preprocessor_config.json
+          sha256sum phoneme-ct2/model.bin
+      - uses: actions/upload-artifact@v4
+        with: { name: phoneme-ct2, path: phoneme-ct2, retention-days: 3 }
+  check:
+    needs: model
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    env:
+      LANG: C.UTF-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with: { python-version: '3.12' }
+      - uses: actions/download-artifact@v4
+        with: { name: phoneme-ct2, path: phoneme-ct2 }
+      - name: Tools
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+          pip install -q faster-whisper phonikud
+      - name: Check slice ${{ matrix.shard }} of 20
+        run: |
+          mkdir -p docs/torah/audio-verification/check
+          python tools/torah/audio/check_shard.py --shard ${{ matrix.shard }} --of 20 --model phoneme-ct2 \
+            --out docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl
+      - name: Push the results to john/torah-check-${{ matrix.shard }}
+        if: always()
+        run: |
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          f=docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl
+          [ -f "$f" ] || exit 0
+          git checkout -q -B john/torah-check-${{ matrix.shard }}
+          git add "$f"
+          git commit -q -m "Torah audio check: slice ${{ matrix.shard }} ($(wc -l < "$f") clips)"
+          git push -q --force origin HEAD:refs/heads/john/torah-check-${{ matrix.shard }}

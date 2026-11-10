@@ -26,6 +26,7 @@ const token = (ctx, g) => {
 /** Rimon reacts to a Brain Lab moment; the companion decides whether it shows (dismissed, reduced motion). */
 const rimon = (action, moment, game) => { try { signalRimon(action, { moment: `lab.${moment}`, game }); } catch { /* optional */ } };
 const tradOf = (ctx) => normTradition(typeof ctx.settings?.get === 'function' ? ctx.settings.get('congregation') : ctx.settings?.congregation);
+import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
@@ -38,6 +39,16 @@ const CSS = `
 /* Light "paper" tiles keep dark ink in every theme; text straight on the page card follows the theme. */
 .lab-cell,.lab-stats div,.lab-met li,.lab-ticket,.lab-flash,.lab-chain,.lab-flank,.lab-twin,.lab-drop,.lab-slots li,.lab-rule,.lab-card,.lab-sky{color:#1b2a20}
 .lab-met li .en,.lab-cell .lab-val,.lab-ticket .lab-val{color:#5d4a2a}
+.lab-art{display:block;max-inline-size:100%;block-size:auto;margin-inline:auto;pointer-events:none;user-select:none}
+.lab-art.cover{aspect-ratio:3/2;inline-size:100%;max-inline-size:30rem;border-radius:14px;border:2px solid #d4a647;object-fit:cover;margin-block:.4rem .8rem}
+.lab-art.win{inline-size:9rem;block-size:9rem;object-fit:contain;margin-block:.2rem}
+.lab-art.done{aspect-ratio:3/2;inline-size:100%;border-radius:12px;object-fit:cover;margin-block:.2rem .8rem}
+@media (prefers-reduced-data:reduce){.lab-art{display:none}}
+.lab-board.has-mat{background:var(--lab-mat) center/cover no-repeat;border-radius:14px;padding:1.1rem .8rem}
+.lab-board.has-mat>*{background:#fffaf0;border-radius:14px;padding:.5rem;box-shadow:0 0 0 1px #e2d6b8}
+.lab-cell.is-hidden{background-image:var(--lab-tileback,none);background-size:cover;background-position:center}
+.lab-art.figure{inline-size:5.5rem;block-size:5.5rem;object-fit:contain;margin:.2rem auto 0}
+@media (forced-colors:active){.lab-board.has-mat{background:none}.lab-cell.is-hidden{background-image:none}}
 .lab h1{margin-block:.2em .3em}
 .lab-sub{color:var(--muted,#5d6b60);margin-block:0 1rem}
 .lab-hero{background:linear-gradient(160deg,#1e4634,#163527);color:#fffaf0;border-radius:18px;padding:1.1rem 1.2rem;border:2px solid #d4a647;box-shadow:0 6px 18px #10281826}
@@ -234,6 +245,7 @@ function hub(root, ctx) {
     h('p', { class: 'lab-sub' }, 'Short, fast games that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
       h('h2', { id: 'lab-today' }, prog.complete ? 'Today’s workout is done' : 'Today’s Workout'),
+      prog.complete ? artImg(h, WORKOUT_DONE_ART, 'done') : null,
       h('p', {}, prog.complete ? `Well done. Come back tomorrow for a new mix.${streak > 1 ? ` ${streak} days in a row.` : ''}` : `Three games, about three minutes. ${prog.done.length} of 3 done.${streak > 0 ? ` Streak: ${streak} ${streak === 1 ? 'day' : 'days'}.` : ''}`),
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
@@ -289,6 +301,7 @@ function drill(root, ctx, id) {
       h('div', { class: 'lab-play lab-intro' },
         art(ctx, `LAB_v2_${id}_cover`, 'lab-cover', 900),
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
+        artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout game ${pos + 1} of 3` : ''),
         game.teaches ? h('p', { class: 'lab-teaches' }, `You practise: ${game.teaches.charAt(0).toLowerCase()}${game.teaches.slice(1)}.`) : null,
         h('p', { class: 'how' }, game.blurb),
@@ -321,9 +334,11 @@ function drill(root, ctx, id) {
     const trialBar = h('div', { class: 'lab-trialbar', hidden: true });
     const board = h('div', { class: 'lab-board' });
     const feedback = h('p', { class: 'lab-feedback', 'aria-live': 'polite' });
+    const figure = matKind(id) === 'figure' ? artImg(h, playArtPath(id), 'figure') : null;
     wrap.replaceChildren(back, h('div', { class: 'lab-play' },
       h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(SESSION_SECONDS) }, timeBar), lvlEl, runEl, h('span', {}, 'Score ', scoreEl)),
-      prompt, trialBar, board, feedback));
+      prompt, trialBar, board, feedback, figure));
+    applyMat(id, { board, root: wrap });
     const rnd = seeded(`${id}:${Date.now()}`);
     const audioOn = !isAudioFree(ctx);
     // Calm mode and No time limits (Settings > Accessibility): no clocks at all. Rounds wait for you and the game ends after ten rounds.
@@ -420,6 +435,7 @@ function drill(root, ctx, id) {
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
       art(ctx, `LAB_v2_${id}_win`, 'lab-win-art', 360),
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
+      artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win'),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
       h('p', { class: 'score' }, String(sum.score)),
       h('p', {}, isBest && sum.score > 0 && prevGame ? art(ctx, 'LAB_v2_new_best', 'lab-side-pic', 200) : null, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),

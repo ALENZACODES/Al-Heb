@@ -20,7 +20,7 @@ const ROOT = new URL('../../', import.meta.url);
  * About 430 KB, fetched once per build (the six games added 2026-11-10 brought about 70 KB: their code and data/lab/words.json).
  */
 export const LAB_FILES = Object.freeze([
-  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/lab/lab.games2.js', 'src/games/engine.js',
+  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/lab/lab.games2.js', 'src/lab/lab.art.js', 'src/games/engine.js',
   'data/lab/syllables.json', 'data/lab/numbers.json', 'data/lab/words.json', 'data/roots/families.json',
 ]);
 

@@ -86,6 +86,11 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/audio/synth-music.js',
   // Songs page and the celebration sting: loaded on first open / first lesson finished with music on, then runtime-cached.
   'src/listen/songs.view.js', 'src/audio/sting.js',
+  // First-win word builder (optional route /firstwin): view code only; its word list is already on demand.
+  // Moved so first install stays under 3.95 MiB after the v2 stills shell modules landed.
+  'src/firstday/minuteone.view.js',
+  // Phrases screens (preview routes): view code only, fetched on first open, runtime-cached.
+  'src/phrases/phrases.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).

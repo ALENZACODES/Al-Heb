@@ -165,7 +165,7 @@ test('mount shows a still on alef:rimon and hides it when the image errors', () 
   doc.dispatch('alef:rimon', { action: 'correct' });
   assert.equal(fig.hidden, false);
   assert.ok(fig.dataset.still);
-  assert.match(img.src, /rimon-\d{3}[a-z]?\.webp$/);
+  assert.match(img.src, /rimon-\d{3}[a-z]?(?:-[a-z0-9-]+)?\.webp$/);
   assert.ok(fig.classList.contains('is-burst'));
   // Fail-safe: a missing file removes the moment instead of leaving a broken image.
   const err = doc._listeners.get('img:error') || [];

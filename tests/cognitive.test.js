@@ -149,6 +149,10 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'astral-harvest-breathe', 'astral-motes-drift', 'astral-ancient-reveal', 'astral-photo-drift',
     'astral-stars-drift', 'astral-ray-pass', 'prefix-float', 'game-conveyor-move', 'show-shimmer',
     'show-rise', 'show-pop', 'rimon-breathe', 'rimon-bubble-pop', 'alef-nudge',
+    // Companion stills (assets/css/rimon.css): one-shot burst, bounce, crash and peek-in (0.5–0.6 s);
+    // rimon-gold-pulse loops at 1.1 s on a streak glow only. Global reduced-motion and calm rules,
+    // plus local reduce-motion rules in rimon.css, switch them all off.
+    'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse',
     // first-lesson player (assets/css/player.css): one-shot, never looping; the global reduced-motion and calm rules switch them off
     'fd-rise', 'fd-pop', 'fd-fall',
     // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off

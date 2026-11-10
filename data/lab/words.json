@@ -68,7 +68,7 @@
 {"id":"shin-shin","letter":"shin","he":"שׁ","name":"Shin","sound":{"israeli":"ʃ","sephardi":"ʃ","ashkenazi":"ʃ"}},
 {"id":"shin-sin","letter":"shin","he":"שׂ","name":"Sin","sound":{"israeli":"s","sephardi":"s","ashkenazi":"s"}},
 {"id":"tav-dagesh","letter":"tav","he":"תּ","name":"Tav","sound":{"israeli":"t","sephardi":"t","ashkenazi":"t"}},
-{"id":"tav-plain","letter":"tav","he":"ת","name":"Tav","sound":{"israeli":"t","sephardi":"t","ashkenazi":"s"}},
+{"id":"tav-plain","letter":"tav","he":"ת","name":"Tav","names":{"ashkenazi":"Sav"},"sound":{"israeli":"t","sephardi":"t","ashkenazi":"s"}},
 {"id":"mem-final","letter":"mem-final","he":"ם","name":"Final Mem","sound":{"israeli":"m","sephardi":"m","ashkenazi":"m"}},
 {"id":"nun-final","letter":"nun-final","he":"ן","name":"Final Nun","sound":{"israeli":"n","sephardi":"n","ashkenazi":"n"}},
 {"id":"pe-final","letter":"pe-final","he":"ף","name":"Final Pe","sound":{"israeli":"f","sephardi":"f","ashkenazi":"f"}},

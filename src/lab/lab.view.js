@@ -61,7 +61,7 @@ const CSS = `
 .lab-plan .name{font-weight:700}.lab-plan .skill{font-size:.8rem;opacity:.85}
 .lab-go{display:inline-flex;min-block-size:52px;align-items:center;justify-content:center;padding:.6rem 1.4rem;border-radius:999px;background:#e9c46a;color:#163527;font-weight:800;text-decoration:none;border:0;box-shadow:0 3px 0 #b38a2e;font-size:1.05rem}
 .lab-go:focus-visible{outline:3px solid #fffaf0;outline-offset:3px}
-.lab-skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.6rem;margin:1.2rem 0}
+.lab-skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(7.6rem,1fr));gap:.6rem;margin:1.2rem 0}
 .lab-skill{background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.5rem .7rem;border-block-start:5px solid var(--sk)}
 .lab-skill b{display:block;font-size:1.4rem;line-height:1.1;color:var(--fg,#1b2a20)}
 .lab-skill small{color:var(--muted,#5d6b60);display:block;font-size:.8rem;line-height:1.3}
@@ -131,6 +131,7 @@ const CSS = `
 .lab-fresh{margin:0 0 1rem}
 .lab-fresh h2{font-size:1.05rem;margin:0 0 .4rem}
 .lab-fresh-row{display:flex;gap:.6rem;overflow-x:auto;padding-block-end:.4rem;scroll-snap-type:x mandatory}
+@media (min-width:48rem){.lab-fresh-row{flex-wrap:wrap;overflow:visible}.lab-fresh-card{flex:1 1 9rem!important}}
 .lab-fresh-card{flex:0 0 9.5rem;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:.3rem;text-align:center;background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.7rem .5rem;text-decoration:none;color:inherit;min-block-size:48px}
 .lab-fresh-card .t{font-weight:800}
 .lab-fresh-card .lab-teaches{font-size:.78rem;line-height:1.3}

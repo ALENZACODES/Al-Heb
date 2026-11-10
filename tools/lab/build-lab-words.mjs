@@ -32,6 +32,8 @@ export const DIRECTION_IDS = Object.freeze([
 ]);
 /** English names of the second form of the letters whose sound changes with a dot. */
 export const VARIANT_NAMES = Object.freeze({ 'bet:without dagesh': 'Vet', 'kaf:without dagesh': 'Khaf', 'pe:without dagesh': 'Fe', 'shin:with sin dot': 'Sin' });
+/** Names a tradition uses instead: Tav without its dot is called Sav where it says s (Ashkenazi). */
+export const TRADITION_NAMES = Object.freeze({ 'tav:without dagesh': { ashkenazi: 'Sav' } });
 const DAGESH = 'ּ', SHIN_DOT = 'ׁ', SIN_DOT = 'ׂ';
 /** Letters that take the reduced (chataf) vowels: alef, he, chet, ayin. */
 const GUTTURALS = new Set(['alef', 'he', 'chet', 'ayin']);
@@ -104,7 +106,8 @@ export function build() {
       const mark = /with dagesh/.test(v.condition) ? DAGESH : /shin dot/.test(v.condition) ? SHIN_DOT : /sin dot/.test(v.condition) ? SIN_DOT : '';
       const key = `${id}:${v.condition}`;
       cards.push({ id: `${id}${mark === DAGESH ? '-dagesh' : mark === SHIN_DOT ? '-shin' : mark === SIN_DOT ? '-sin' : '-plain'}`, letter: id, he: rec.he + mark,
-        name: VARIANT_NAMES[key] || names.get(id) || rec.name, sound: Object.fromEntries(TRADITIONS.map((t) => [t, soundKey(firstSound(v.ipa?.[t])) || key])) });
+        name: VARIANT_NAMES[key] || names.get(id) || rec.name, ...(TRADITION_NAMES[key] ? { names: TRADITION_NAMES[key] } : {}),
+        sound: Object.fromEntries(TRADITIONS.map((t) => [t, soundKey(firstSound(v.ipa?.[t])) || key])) });
     }
   }
 

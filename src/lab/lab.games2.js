@@ -30,7 +30,8 @@ const twins = {
       const before = env.h('div', { class: 'lab-twin-before', 'aria-hidden': 'true' });
       const row = env.h('div', { class: 'lab-row' });
       env.board.replaceChildren(env.h('div', { class: 'lab-twin-stage' }, before, card), row);
-      const paint = (c) => { card.replaceChildren(big(env, c.he, 'lab-glyph lab-huge')); card.setAttribute('aria-label', c.name); card.classList.remove('is-in'); void card.offsetWidth; card.classList.add('is-in'); };
+      const nm = (c) => c.names?.[trad] || c.name; // Tav without its dot is Sav in Ashkenazi
+      const paint = (c) => { card.replaceChildren(big(env, c.he, 'lab-glyph lab-huge')); card.setAttribute('aria-label', nm(c)); card.classList.remove('is-in'); void card.offsetWidth; card.classList.add('is-in'); };
       const warm = () => { // the first card(s) of a game, or after the game starts comparing two back: just look and remember
         const { card: c } = twinsNext(m.hist, W.cards, level, trad, env.rnd);
         m.hist.push(c); paint(c); before.replaceChildren();
@@ -48,8 +49,8 @@ const twins = {
         const t0 = env.now();
         const pick = (yes, b) => {
           const ok = yes === same; mark(b, ok);
-          if (!ok || level <= 2) env.say(`${c.he} ${c.name} and ${ref.he} ${ref.name}: ${same ? 'the same sound' : 'different sounds'}.`);
-          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${ref.name} and ${c.name} sound the same` } : { he: c.he, en: c.name });
+          if (!ok || level <= 2) env.say(`${c.he} ${nm(c)} and ${ref.he} ${nm(ref)}: ${same ? 'the same sound' : 'different sounds'}.`);
+          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${nm(ref)} and ${nm(c)} sound the same` } : { he: c.he, en: nm(c) });
           finish({ ok, ms: env.now() - t0, par: 1100 });
         };
         const no = btn(env, '✗ Different', () => pick(false, no), 'btn secondary lab-yn');

@@ -65,6 +65,7 @@ test('Sound Twins: which letters share a sound follows each tradition (from data
   assert.ok(same('ח', 'כ', 'israeli') && same('ח', 'כ', 'ashkenazi') && !same('ח', 'כ', 'sephardi'), 'Chet and Khaf merge, except in Sephardi');
   assert.ok(same('א', 'ע', 'israeli') && same('א', 'ע', 'ashkenazi') && !same('א', 'ע', 'sephardi'), 'Aleph and Ayin merge, except in Sephardi');
   assert.ok(same('ת', 'ס', 'ashkenazi') && !same('ת', 'ס', 'israeli'), 'Tav without its dot says s only in Ashkenazi');
+  assert.equal(card('ת').names?.ashkenazi, 'Sav', 'and there it is called Sav');
   assert.equal(normTradition('ashkenazi'), 'ashkenazi'); assert.equal(normTradition(undefined), 'israeli'); assert.equal(normTradition('x'), 'israeli');
 });
 

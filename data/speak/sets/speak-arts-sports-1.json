@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-arts-sports-1",
+ "title": "Arts and sport",
+ "theme": "arts-sports",
+ "level": "B2",
+ "track": "israel",
+ "pack": "arts-sports-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hddb5189f",
+   "he": "שַׁעַר",
+   "translit": "sha'ar",
+   "en": "gateway (entrance)",
+   "kind": "word",
+   "audioId": "hddb5189f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbbbfa9a7",
+   "he": "סֶרֶט",
+   "translit": "seret",
+   "en": "ribbon",
+   "kind": "word",
+   "audioId": "i-38-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h58d8d8fe",
+   "he": "מֶלֶךְ",
+   "translit": "melekh",
+   "en": "king",
+   "kind": "word",
+   "audioId": "r11-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h08e1b712",
+   "he": "תְּמוּנָה",
+   "translit": "temunah",
+   "en": "photograph, photo, picture",
+   "kind": "word",
+   "audioId": "i-49-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he43ad309",
+   "he": "שָׁפַט",
+   "translit": "shafat",
+   "en": "to judge",
+   "kind": "word",
+   "audioId": "he43ad309",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf423b369",
+   "he": "תָּו",
+   "translit": "tav",
+   "en": "character, mark, sign (symbol)",
+   "kind": "word",
+   "audioId": "hf423b369",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hffc00eb8",
+   "he": "מוּזִיקָה",
+   "translit": "muzikah",
+   "en": "music",
+   "kind": "word",
+   "audioId": "hffc00eb8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he3294d36",
+   "he": "חַיָּל",
+   "translit": "chayal",
+   "en": "soldier",
+   "kind": "word",
+   "audioId": "i-18-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9aaba801",
+   "he": "שׁוֹפֵט",
+   "translit": "shofet",
+   "en": "judge",
+   "kind": "word",
+   "audioId": "h9aaba801",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h571c298a",
+   "he": "מַלְכָּה",
+   "translit": "malkah",
+   "en": "queen (female monarch)",
+   "kind": "word",
+   "audioId": "h571c298a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha4183f7b",
+   "he": "פָּרָשׁ",
+   "translit": "parash",
+   "en": "horseman, cavalier, dragoon",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb97cf298",
+   "he": "הֶחְמִיץ",
+   "translit": "hechmitz",
+   "en": "to sour or become leavened",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

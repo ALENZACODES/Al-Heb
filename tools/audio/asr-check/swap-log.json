@@ -1,0 +1,353 @@
+[
+ {
+  "path": "audio/f/israeli/word/amidah-yihyu-w4.mp3",
+  "source": "audio/f/israeli/word/amidah-elohai-netzor-w51.mp3",
+  "hebrew": "פִי",
+  "voice": "f",
+  "was_heard": "סי",
+  "source_heard": "פי",
+  "sha256": "d5063b862c4d9fe034cc0cddd89ba2f5aa0befd236c10849bcbb6a239aa4228f"
+ },
+ {
+  "path": "audio/f/israeli/word/fillers-02.mp3",
+  "source": "audio/f/israeli/word/hb2147419.mp3",
+  "hebrew": "נוּ",
+  "voice": "f",
+  "was_heard": "יפה",
+  "source_heard": "נו",
+  "sha256": "ce06d1064d6eec626ab92c75d7deeb2a4ffbedd6bdc375d1c8266518c0236403"
+ },
+ {
+  "path": "audio/f/israeli/word/h39d32f55.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w18.mp3",
+  "hebrew": "שָׂם",
+  "voice": "f",
+  "was_heard": "סאם",
+  "source_heard": "שם",
+  "sha256": "dd0b64bf4397f02eaf34ae4c4c4b76358b77bb657b9f005bcfac660e3e4b1ef3"
+ },
+ {
+  "path": "audio/m/israeli/word/numbers-09-f.mp3",
+  "source": "audio/m/israeli/word/il04-w9.mp3",
+  "hebrew": "תֵּשַׁע",
+  "voice": "m",
+  "was_heard": "ושאסה",
+  "source_heard": "תשע",
+  "sha256": "521f8b34d008aefc435aaf967b992f5d33e40da794ad1b51a924b07bf3617bac"
+ },
+ {
+  "path": "audio/m/israeli/word/h39d32f55.mp3",
+  "source": "audio/m/israeli/word/aleinu-1-w18.mp3",
+  "hebrew": "שָׂם",
+  "voice": "m",
+  "was_heard": "סם",
+  "source_heard": "שם",
+  "sha256": "1698053d720cc3c21b0cd55295b526db7ef1f1cd13737bc1a4c1fce5b02dbd78"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-10-m.mp3",
+  "source": "audio/f/israeli/word/h4589871d.mp3",
+  "hebrew": "עֲשָׂרָה",
+  "voice": "f",
+  "was_heard": "ישראל",
+  "source_heard": "עשרה",
+  "sha256": "371ccd750242afcd5366d376bffcc8cb0e312152621400fac20b8ebb2ddeb730"
+ },
+ {
+  "path": "audio/m/israeli/word/fillers-08.mp3",
+  "source": "audio/m/israeli/word/h1a07a738.mp3",
+  "hebrew": "פָּשׁוּט",
+  "voice": "m",
+  "was_heard": "בשפוט",
+  "source_heard": "פשוט",
+  "sha256": "ba58d4cebd046fa526d5c663a206b56c90ed9e3ebb1ab8f6db10c45fa0f2f4e2"
+ },
+ {
+  "path": "audio/f/israeli/word/avot-1-w11.mp3",
+  "source": "audio/f/israeli/word/avot-1-w5.mp3",
+  "hebrew": "וֵאלֹהֵי",
+  "voice": "f",
+  "was_heard": "ולא היי.",
+  "source_heard": "ואלוהי",
+  "sha256": "cb9143f7e39ff71b4c6aaabfbcee00c1a90f81fbf633644691b2a80e6c40675f"
+ },
+ {
+  "path": "audio/f/israeli/word/bless-formula-1-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/haftarah-before-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/hagomel-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/havdalah-hamavdil-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/kedushah-baruch-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/kiddush-shabbat-eve-w41.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/torah-bless-2-w1.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/yigdal-w105.mp3",
+  "source": "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "hebrew": "בָּרוּךְ",
+  "voice": "f",
+  "was_heard": "ברור.",
+  "source_heard": "ברוך",
+  "sha256": "9f56dc03e63125fde4037074ecd5634d2faf8ba0f3b45b84a9fc71f6646f4a20"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-06-f.mp3",
+  "source": "audio/f/israeli/word/il04-w6.mp3",
+  "hebrew": "שֵׁשׁ",
+  "voice": "f",
+  "was_heard": "שפשף",
+  "source_heard": "שש",
+  "sha256": "a9e5ca7e8f3cdf279b51d0d452f8d4271d6370e1070471277f75b8303fb71967"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-07-m.mp3",
+  "source": "audio/f/israeli/word/h68a92f84.mp3",
+  "hebrew": "שִׁבְעָה",
+  "voice": "f",
+  "was_heard": "שפעה",
+  "source_heard": "שבעה",
+  "sha256": "6b3c977f626d9b8d9f296f5f215879372f512c06c4853e2e55795730196b7ca3"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-14.mp3",
+  "source": "audio/f/israeli/word/hffd9b904.mp3",
+  "hebrew": "מֵאָה",
+  "voice": "f",
+  "was_heard": "מי",
+  "source_heard": "מאה",
+  "sha256": "36abaab7deeff574cd42959ded857090ccfe97291fe2c6dd587900a45cc82067"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-21.mp3",
+  "source": "audio/f/israeli/word/i-36-w9.mp3",
+  "hebrew": "מָחָר",
+  "voice": "f",
+  "was_heard": "ניחר",
+  "source_heard": "מחר",
+  "sha256": "ad9260605a1015c810d22ea295a7e58ae98adb81dea8fc4e9ccf343df892c1dc"
+ },
+ {
+  "path": "audio/m/israeli/word/numbers-06-f.mp3",
+  "source": "audio/m/israeli/word/il04-w6.mp3",
+  "hebrew": "שֵׁשׁ",
+  "voice": "m",
+  "was_heard": "שף שף",
+  "source_heard": "שש",
+  "sha256": "bc1dc731e09a6c53686b03641ca0a814ac64249e9f383aad253872c5cfa11cdb"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-03-f.mp3",
+  "source": "audio/f/israeli/word/il04-w3.mp3",
+  "hebrew": "שָׁלוֹשׁ",
+  "voice": "f",
+  "was_heard": "ששלשף",
+  "source_heard": "שלוש.",
+  "sha256": "b5728dc6bea74539fb0d91568353c091e025cdc35e696919258fee765d4e692d"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-03-m.mp3",
+  "source": "audio/f/israeli/word/h3dfe9831.mp3",
+  "hebrew": "שְׁלוֹשָׁה",
+  "voice": "f",
+  "was_heard": "שסלושסה",
+  "source_heard": "שלושה",
+  "sha256": "e8c7d9c15dd250628978c8d51b11e51f81f96f702b51a6707576445c4ecfd1d7"
+ },
+ {
+  "path": "audio/m/israeli/word/mi-chamocha-1-w6.mp3",
+  "source": "audio/m/israeli/word/r43-w3.mp3",
+  "hebrew": "נֶאְדָּר",
+  "voice": "m",
+  "was_heard": "נהדר!",
+  "source_heard": "נעדר",
+  "sha256": "6fdfc9bb443532400841bef99c0771c28ead149286fdc30fbfe293fd92824c6f"
+ },
+ {
+  "path": "audio/m/israeli/word/numbers-03-f.mp3",
+  "source": "audio/m/israeli/word/il04-w3.mp3",
+  "hebrew": "שָׁלוֹשׁ",
+  "voice": "m",
+  "was_heard": "שסלושף",
+  "source_heard": "שלוש",
+  "sha256": "38282520d53aa151fe2078dd95a3884fe86100c92b93bb65c5f439c0a192b9e5"
+ },
+ {
+  "path": "audio/m/israeli/word/numbers-03-m.mp3",
+  "source": "audio/m/israeli/word/h3dfe9831.mp3",
+  "hebrew": "שְׁלוֹשָׁה",
+  "voice": "m",
+  "was_heard": "שץ לא שסע",
+  "source_heard": "שלושה",
+  "sha256": "945401a3d68e40b5afe1fcd7b1ecdf89e06253a13c3ec51277906e54c43caeb9"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-09-f.mp3",
+  "source": "audio/f/israeli/word/il04-w9.mp3",
+  "hebrew": "תֵּשַׁע",
+  "voice": "f",
+  "was_heard": "תשסה",
+  "source_heard": "תשע",
+  "sha256": "5ee747a229088736f6d103b5a286406a432055334a9baa5ce593fd673c248557"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-12.mp3",
+  "source": "audio/f/israeli/word/il05-w2.mp3",
+  "hebrew": "שְׁלוֹשִׁים",
+  "voice": "f",
+  "was_heard": "שסלו שיסים",
+  "source_heard": "שלושים",
+  "sha256": "9eae7fd98532622e3dd9736d532a490d856feb4af597a6f72e6d93a60f22f1a5"
+ },
+ {
+  "path": "audio/m/israeli/word/amidah-elohai-netzor-w45.mp3",
+  "source": "audio/m/israeli/word/i-30-w11.mp3",
+  "hebrew": "הוֹשִׁיעָה",
+  "voice": "m",
+  "was_heard": "הושיע",
+  "source_heard": "הושיעה.",
+  "sha256": "f0c5286fc23eb8fe40ae9f35a0f79429dea923aef044f79dda7afb7d913c2918"
+ },
+ {
+  "path": "audio/m/israeli/word/havdalah-opening-w41.mp3",
+  "source": "audio/m/israeli/word/i-30-w11.mp3",
+  "hebrew": "הוֹשִׁיעָה",
+  "voice": "m",
+  "was_heard": "הושיע",
+  "source_heard": "הושיעה.",
+  "sha256": "f0c5286fc23eb8fe40ae9f35a0f79429dea923aef044f79dda7afb7d913c2918"
+ },
+ {
+  "path": "audio/m/israeli/word/kiddush-shabbat-eve-w30.mp3",
+  "source": "audio/m/israeli/word/kiddush-shabbat-eve-w11.mp3",
+  "hebrew": "בָנוּ",
+  "voice": "m",
+  "was_heard": "באנו.",
+  "source_heard": "בנו",
+  "sha256": "92a37593119853002c85ef50e0f5c0db6da55926a24a4b1547284aaff40e6c88"
+ },
+ {
+  "path": "audio/f/israeli/word/fillers-07.mp3",
+  "source": "audio/f/israeli/word/hd0a91fd4.mp3",
+  "hebrew": "מַמָּשׁ",
+  "voice": "f",
+  "was_heard": "ממי שף",
+  "source_heard": "ממש",
+  "sha256": "31687e071711135ed874dc2e2928c68fe651a152890decca37478555b211d44f"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-05-f.mp3",
+  "source": "audio/f/israeli/word/il04-w5.mp3",
+  "hebrew": "חָמֵשׁ",
+  "voice": "f",
+  "was_heard": "חמשף",
+  "source_heard": "חמש",
+  "sha256": "dbafb7db518960bb8494eb2850a93d3e07aef36c884589d3b1afb04bd34ee4b1"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-08-f.mp3",
+  "source": "audio/f/israeli/word/il04-w8.mp3",
+  "hebrew": "שְׁמוֹנֶה",
+  "voice": "f",
+  "was_heard": "שסמונה",
+  "source_heard": "שמונה",
+  "sha256": "883db0811b6e566b48ef5b95d660e91414f7be465417e4cec3c2b4c49115ce47"
+ },
+ {
+  "path": "audio/f/israeli/word/shema-vahavta-w29.mp3",
+  "source": "audio/f/israeli/word/vahavta-2-w16.mp3",
+  "hebrew": "בַדֶּרֶךְ",
+  "voice": "f",
+  "was_heard": "ודרך",
+  "source_heard": "בדרך",
+  "sha256": "519455aba65bb592c196359e376eae44750f59c91893fa8ed8eadba4ec6a3238"
+ },
+ {
+  "path": "audio/f/israeli/word/shop-19.mp3",
+  "source": "audio/f/israeli/word/h90377d47.mp3",
+  "hebrew": "שֶׁקֶל",
+  "voice": "f",
+  "was_heard": "שפקל",
+  "source_heard": "שקל",
+  "sha256": "02137ea48322c84f7bcca592daaadebd443acef4f918ebbf94d1efe3a5560796"
+ },
+ {
+  "path": "audio/m/israeli/word/bless-priestly-1-w1.mp3",
+  "source": "audio/m/israeli/word/i-10-w11.mp3",
+  "hebrew": "יְבָרֶכְךָ",
+  "voice": "m",
+  "was_heard": "יברך.",
+  "source_heard": "יברכך",
+  "sha256": "1fa810a5397978da90e4ef7981ddd3c8119fc79511086a0d370c8e7754a7f35c"
+ },
+ {
+  "path": "audio/m/israeli/word/fillers-07.mp3",
+  "source": "audio/m/israeli/word/hd0a91fd4.mp3",
+  "hebrew": "מַמָּשׁ",
+  "voice": "m",
+  "was_heard": "ממושף",
+  "source_heard": "ממש",
+  "sha256": "2eed57240e90ce737750abd9b4a728cc31d8727748a977fdf8dec5201893bfcb"
+ },
+ {
+  "path": "audio/f/israeli/word/numbers-13.mp3",
+  "source": "audio/f/israeli/word/h5b285a5d.mp3",
+  "hebrew": "חֲמִשִּׁים",
+  "voice": "f",
+  "was_heard": "חמישיפים",
+  "source_heard": "חמישים",
+  "sha256": "5ea9efd87e6d365be2b57c25e44613269d629199517e99af3a9ce95d5af5fcdc"
+ }
+]

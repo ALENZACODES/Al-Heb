@@ -1,0 +1,23 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+ "inputSha256": "df590eb4f341ba9df5993241defaac2fd820091eae8a87c0c7a8e64b745c6f71",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְאָהַבְתָּ אֵת אֲדֹנָי אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/i-01-w11.mp3",
+  "audio/m/israeli/word/shema-vahavta-w8.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/kiddush-zachor-w14.mp3",
+  "audio/m/israeli/word/shema-vahavta-w11.mp3",
+  "audio/m/israeli/word/shema-vahavta-w12.mp3",
+  "audio/m/israeli/word/shema-vahavta-w13.mp3"
+ ]
+}

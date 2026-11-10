@@ -1,0 +1,980 @@
+{
+ "schema": 1,
+ "source": "data/vocab/words.json",
+ "note": "Hebrew, pointing and glosses are copied from the vocabulary file. The person-noun list is an editorial choice of existing rows. Gender tags come from the dictionary source; some words are used in both genders. Unreviewed by a Hebrew teacher.",
+ "pronouns": {
+  "ani": {
+   "id": "h103e7d27",
+   "he": "אֲנִי",
+   "translit": "ani",
+   "en": "I"
+  },
+  "atah": {
+   "id": "h36d595e4",
+   "he": "אַתָּה",
+   "translit": "atah",
+   "en": "you, thou"
+  },
+  "at": {
+   "id": "h2ba0b3bf",
+   "he": "אַתְּ",
+   "translit": "at",
+   "en": "you, thou"
+  },
+  "hu": {
+   "id": "h1ef19acb",
+   "he": "הוּא",
+   "translit": "hu",
+   "en": "he"
+  },
+  "hi": {
+   "id": "h0b842943",
+   "he": "הִיא",
+   "translit": "hi",
+   "en": "she, it"
+  }
+ },
+ "pairs": [
+  {
+   "id": "h3542cfc1",
+   "en": "a (male) student, pupil, disciple",
+   "m": {
+    "he": "תַּלְמִיד",
+    "translit": "talmid"
+   },
+   "f": {
+    "he": "תַּלְמִידָה"
+   },
+   "rank": 1186
+  },
+  {
+   "id": "h2280b9b6",
+   "en": "a (male) friend",
+   "m": {
+    "he": "חָבֵר",
+    "translit": "chaver"
+   },
+   "f": {
+    "he": "חֲבֵרָה"
+   },
+   "rank": 58
+  },
+  {
+   "id": "h1301ecc3",
+   "en": "child, a kid, a boy",
+   "m": {
+    "he": "יֶלֶד",
+    "translit": "yeled"
+   },
+   "f": {
+    "he": "יַלְדָּה"
+   },
+   "rank": 85
+  },
+  {
+   "id": "h5fa9ade9",
+   "en": "old person",
+   "m": {
+    "he": "זָקֵן",
+    "translit": "zaken"
+   },
+   "f": {
+    "he": "זְקֵנָה"
+   },
+   "rank": 847
+  },
+  {
+   "id": "hd4d192c8",
+   "en": "an agent",
+   "m": {
+    "he": "סוֹכֵן",
+    "translit": "sokhen"
+   },
+   "f": {
+    "he": "סוֹכֶנֶת"
+   },
+   "rank": 334
+  },
+  {
+   "id": "h4e4b99b1",
+   "en": "a president",
+   "m": {
+    "he": "נָשִׂיא",
+    "translit": "nasi"
+   },
+   "f": {
+    "he": "נְשִׂיאָה"
+   },
+   "rank": 618
+  },
+  {
+   "id": "hd522984d",
+   "en": "infant, baby (male)",
+   "m": {
+    "he": "תִּינוֹק",
+    "translit": "tinok"
+   },
+   "f": {
+    "he": "תִּינֹקֶת"
+   },
+   "rank": 468
+  },
+  {
+   "id": "h8123d4c2",
+   "en": "sick person",
+   "m": {
+    "he": "חוֹלֶה",
+    "translit": "choleh"
+   },
+   "f": {
+    "he": "חוֹלָה"
+   },
+   "rank": 480
+  },
+  {
+   "id": "h59a7d1fc",
+   "en": "hero",
+   "m": {
+    "he": "גִּבּוֹר",
+    "translit": "gibor"
+   },
+   "f": {
+    "he": "גִּבּוֹרָה"
+   },
+   "rank": 776
+  },
+  {
+   "id": "he3294d36",
+   "en": "soldier",
+   "m": {
+    "he": "חַיָּל",
+    "translit": "chayal"
+   },
+   "f": {
+    "he": "חַיֶּלֶת"
+   },
+   "rank": 708
+  },
+  {
+   "id": "hc8e03f62",
+   "en": "medical doctor, physician",
+   "m": {
+    "he": "רוֹפֵא",
+    "translit": "rofe"
+   },
+   "f": {
+    "he": "רוֹפְאָה"
+   },
+   "rank": 768
+  },
+  {
+   "id": "hc8c1466c",
+   "en": "teacher, instructor, educator (a man who teaches)",
+   "m": {
+    "he": "מוֹרֶה",
+    "translit": "moreh"
+   },
+   "f": {
+    "he": "מוֹרָה"
+   },
+   "rank": 882
+  },
+  {
+   "id": "h882ed65b",
+   "en": "pilot",
+   "m": {
+    "he": "טַיָּס",
+    "translit": "tayas"
+   },
+   "f": {
+    "he": "טַיֶּסֶת"
+   },
+   "rank": 947
+  },
+  {
+   "id": "h1999d835",
+   "en": "Jew, Jewish person",
+   "m": {
+    "he": "יְהוּדִי",
+    "translit": "yehudi"
+   },
+   "f": {
+    "he": "יְהוּדִיָּה"
+   },
+   "rank": 1214
+  },
+  {
+   "id": "hea1fe8e9",
+   "en": "orphan",
+   "m": {
+    "he": "יָתוֹם",
+    "translit": "yatom"
+   },
+   "f": {
+    "he": "יְתוֹמָה"
+   },
+   "rank": 2434
+  },
+  {
+   "id": "h1d63cb27",
+   "en": "a (male) player",
+   "m": {
+    "he": "שַׂחְקָן",
+    "translit": "sachkan"
+   },
+   "f": {
+    "he": "שַׂחְקָנִית"
+   },
+   "rank": 1157
+  },
+  {
+   "id": "h4d76dd5a",
+   "en": "a (male) friend",
+   "m": {
+    "he": "יָדִיד",
+    "translit": "yadid"
+   },
+   "f": {
+    "he": "יְדִידָה"
+   },
+   "rank": 714
+  },
+  {
+   "id": "h26e6f8c5",
+   "en": "partner, affiliate, copartner",
+   "m": {
+    "he": "שֻׁתָּף",
+    "translit": "shutaf"
+   },
+   "f": {
+    "he": "שֻׁתָּפָה"
+   },
+   "rank": 649
+  },
+  {
+   "id": "hd53e0a60",
+   "en": "a relative, a family member",
+   "m": {
+    "he": "קָרוֹב",
+    "translit": "karov"
+   },
+   "f": {
+    "he": "קְרוֹבָה"
+   },
+   "rank": 339
+  }
+ ],
+ "irregular": [
+  {
+   "id": "h9c8ddecf",
+   "he": "בַּיִת",
+   "translit": "bayit",
+   "en": "house",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 48
+  },
+  {
+   "id": "h00fd9c4f",
+   "he": "פַּעַם",
+   "translit": "pa'am",
+   "en": "a time",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 61
+  },
+  {
+   "id": "h1a3574d3",
+   "he": "יָד",
+   "translit": "yad",
+   "en": "arm",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 74
+  },
+  {
+   "id": "h788c5f0a",
+   "he": "עֶצֶם",
+   "translit": "etzem",
+   "en": "bone",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 82
+  },
+  {
+   "id": "hbd0751bc",
+   "he": "פָּנִים",
+   "translit": "panim",
+   "en": "face",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 93
+  },
+  {
+   "id": "hf5bee50d",
+   "he": "לַיְלָה",
+   "translit": "laylah",
+   "en": "night",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 109
+  },
+  {
+   "id": "h60b16793",
+   "he": "פֶּה",
+   "translit": "peh",
+   "en": "mouth",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 163
+  },
+  {
+   "id": "h85ac8666",
+   "he": "שֵׁן",
+   "translit": "shen",
+   "en": "tooth",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 175
+  },
+  {
+   "id": "h1306c935",
+   "he": "אִמָּא",
+   "translit": "ima",
+   "en": "mother",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 180
+  },
+  {
+   "id": "hf1ccd0e6",
+   "he": "אֱלוֹהַּ",
+   "translit": "eloah",
+   "en": "a god",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 183
+  },
+  {
+   "id": "h5ae20314",
+   "he": "דֶּרֶךְ",
+   "translit": "derekh",
+   "en": "a road, a path, a way",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 209
+  },
+  {
+   "id": "h9d6352ee",
+   "he": "עַיִן",
+   "translit": "ayin",
+   "en": "eye",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 216
+  },
+  {
+   "id": "he3b1acbd",
+   "he": "עִיר",
+   "translit": "ir",
+   "en": "city",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 224
+  },
+  {
+   "id": "h9034f8b8",
+   "he": "מָוֶת",
+   "translit": "mavet",
+   "en": "death",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 312
+  },
+  {
+   "id": "hdb3c45eb",
+   "he": "רֶגֶל",
+   "translit": "regel",
+   "en": "foot, leg",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 323
+  },
+  {
+   "id": "h19702c85",
+   "he": "מִקְוֶה",
+   "translit": "mikveh",
+   "en": "mikveh",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 369
+  },
+  {
+   "id": "he028e6f0",
+   "he": "אַרְיֵה",
+   "translit": "aryeh",
+   "en": "lion",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 443
+  },
+  {
+   "id": "h6b43040f",
+   "he": "צֶוֶת",
+   "translit": "tzevet",
+   "en": "crew, squad, team",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 454
+  },
+  {
+   "id": "hd49bc59a",
+   "he": "הוֹרֶה",
+   "translit": "horeh",
+   "en": "parent (mother or father)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 467
+  },
+  {
+   "id": "h8123d4c2",
+   "he": "חוֹלֶה",
+   "translit": "choleh",
+   "en": "sick person",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 480
+  },
+  {
+   "id": "hcfc3bd6e",
+   "he": "אֵם",
+   "translit": "em",
+   "en": "mother, feminine originator or codifier",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 482
+  },
+  {
+   "id": "hf1da5ea6",
+   "he": "אֵשׁ",
+   "translit": "esh",
+   "en": "fire",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 491
+  },
+  {
+   "id": "hd82a3079",
+   "he": "אֶרֶץ",
+   "translit": "eretz",
+   "en": "country, land",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 493
+  },
+  {
+   "id": "h637ad9ae",
+   "he": "נָשִׁים",
+   "translit": "nashim",
+   "en": "women",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 548
+  },
+  {
+   "id": "hf9047f4b",
+   "he": "כּוֹס",
+   "translit": "kos",
+   "en": "cup",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 734
+  },
+  {
+   "id": "hea59fdfe",
+   "he": "שֵׁרוּת",
+   "translit": "sherut",
+   "en": "a service",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 775
+  },
+  {
+   "id": "h22100765",
+   "he": "אוֹת",
+   "translit": "ot",
+   "en": "a sign, an omen",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 781
+  },
+  {
+   "id": "hb082296c",
+   "he": "קֶרֶן",
+   "translit": "keren",
+   "en": "horn",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 808
+  },
+  {
+   "id": "hc5862de6",
+   "he": "אֶצְבַּע",
+   "translit": "etzba",
+   "en": "finger",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 823
+  },
+  {
+   "id": "h8359d19c",
+   "he": "סָבְתָא",
+   "translit": "saveta",
+   "en": "grandmother",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 854
+  },
+  {
+   "id": "h4646b41c",
+   "he": "כַּף",
+   "translit": "kaf",
+   "en": "palm, paw",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 855
+  },
+  {
+   "id": "hc8c1466c",
+   "he": "מוֹרֶה",
+   "translit": "moreh",
+   "en": "teacher, instructor, educator (a man who teaches)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 882
+  },
+  {
+   "id": "he078c9e6",
+   "he": "מַשְׁקֶה",
+   "translit": "mashkeh",
+   "en": "drink (a beverage)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 883
+  },
+  {
+   "id": "h1643d708",
+   "he": "תֵּה",
+   "translit": "teh",
+   "en": "tea",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 957
+  },
+  {
+   "id": "he53d1d1d",
+   "he": "אֶבֶן",
+   "translit": "even",
+   "en": "stone",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 961
+  },
+  {
+   "id": "h817ec28c",
+   "he": "צִפּוֹר",
+   "translit": "tzipor",
+   "en": "a bird of any kind",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 974
+  },
+  {
+   "id": "h96db6897",
+   "he": "נַעַל",
+   "translit": "na'al",
+   "en": "shoe",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1002
+  },
+  {
+   "id": "h15d39df8",
+   "he": "עֹלָה",
+   "translit": "olah",
+   "en": "fully burnt offering",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1010
+  },
+  {
+   "id": "hf811b45d",
+   "he": "אֵת",
+   "translit": "et",
+   "en": "shovel",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1069
+  },
+  {
+   "id": "hc0616a4b",
+   "he": "אֹזֶן",
+   "translit": "ozen",
+   "en": "ear",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1073
+  },
+  {
+   "id": "h2056d9ad",
+   "he": "קָצֶה",
+   "translit": "katzeh",
+   "en": "tip, end",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1121
+  },
+  {
+   "id": "he5f2eb9c",
+   "he": "מֻמְחֶה",
+   "translit": "mumcheh",
+   "en": "a (male) expert",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1353
+  },
+  {
+   "id": "hb5913147",
+   "he": "נֶפֶשׁ",
+   "translit": "nefesh",
+   "en": "a soul, psyche",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1375
+  },
+  {
+   "id": "hb5d32923",
+   "he": "קַרְקַע",
+   "translit": "karka",
+   "en": "earth, soil",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1395
+  },
+  {
+   "id": "hac94b307",
+   "he": "שָׂדֶה",
+   "translit": "sadeh",
+   "en": "field (wide space for crops)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1425
+  },
+  {
+   "id": "he945f31c",
+   "he": "חֶרֶב",
+   "translit": "cherev",
+   "en": "sword",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1506
+  },
+  {
+   "id": "h9324911c",
+   "he": "חָצֵר",
+   "translit": "chatzer",
+   "en": "yard, courtyard",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1516
+  },
+  {
+   "id": "hadd284cb",
+   "he": "חוֹזֶה",
+   "translit": "chozeh",
+   "en": "seer (prophet)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1520
+  },
+  {
+   "id": "he0949da8",
+   "he": "לָשׁוֹן",
+   "translit": "lashon",
+   "en": "tongue",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1532
+  },
+  {
+   "id": "ha406f533",
+   "he": "צְפִיָּה",
+   "translit": "tzefiyah",
+   "en": "a watch, a viewing",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1572
+  },
+  {
+   "id": "he19222ad",
+   "he": "יָמִין",
+   "translit": "yamin",
+   "en": "right",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1638
+  },
+  {
+   "id": "h1d850035",
+   "he": "בֶּרֶךְ",
+   "translit": "berekh",
+   "en": "knee",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1706
+  },
+  {
+   "id": "h0bf98919",
+   "he": "עָמִית",
+   "translit": "amit",
+   "en": "colleague",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1769
+  },
+  {
+   "id": "h93f568f7",
+   "he": "שֶׂה",
+   "translit": "seh",
+   "en": "lamb, kid (young of Caprinae)",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1823
+  },
+  {
+   "id": "h850a3966",
+   "he": "כָּנָף",
+   "translit": "kanaf",
+   "en": "wing",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1876
+  },
+  {
+   "id": "hcdf2fabf",
+   "he": "כָּתֵף",
+   "translit": "katef",
+   "en": "shoulder",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 1967
+  },
+  {
+   "id": "hc13caa96",
+   "he": "בּוֹנֶה",
+   "translit": "boneh",
+   "en": "beaver",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 1980
+  },
+  {
+   "id": "h3c89e275",
+   "he": "פֶּחָה",
+   "translit": "pechah",
+   "en": "governor",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2057
+  },
+  {
+   "id": "h792555ac",
+   "he": "צִוּוּת",
+   "translit": "tzivut",
+   "en": "staffing",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2077
+  },
+  {
+   "id": "h1c939a81",
+   "he": "יָרֵךְ",
+   "translit": "yarekh",
+   "en": "thigh",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2109
+  },
+  {
+   "id": "ha44c1345",
+   "he": "טָלֶה",
+   "translit": "taleh",
+   "en": "lamb",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2168
+  },
+  {
+   "id": "h86027352",
+   "he": "שֶׁמֶשׁ",
+   "translit": "shemesh",
+   "en": "sun",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2188
+  },
+  {
+   "id": "hcb15c69d",
+   "he": "גָּדֵר",
+   "translit": "gader",
+   "en": "fence, hedge, wall",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2237
+  },
+  {
+   "id": "h048d4c5e",
+   "he": "צוֹפֶה",
+   "translit": "tzofeh",
+   "en": "a watchman, a lookout",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2305
+  },
+  {
+   "id": "h33e8c3ac",
+   "he": "מוֹנֶה",
+   "translit": "moneh",
+   "en": "numerator the number or expression written above the line in a fraction",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2335
+  },
+  {
+   "id": "h06f78f5d",
+   "he": "בֶּטֶן",
+   "translit": "beten",
+   "en": "abdomen, belly",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2372
+  },
+  {
+   "id": "hb037fcb8",
+   "he": "צֵלָע",
+   "translit": "tzela",
+   "en": "rib (of the body)",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2380
+  },
+  {
+   "id": "h81887b78",
+   "he": "צִפֹּרֶן",
+   "translit": "tziporen",
+   "en": "claw, nail (fingernail or toenail)",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2408
+  },
+  {
+   "id": "h3d80f391",
+   "he": "מַחַט",
+   "translit": "machat",
+   "en": "a needle",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2450
+  },
+  {
+   "id": "h1d762980",
+   "he": "אַלְפָא",
+   "translit": "alfa",
+   "en": "alpha",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2487
+  },
+  {
+   "id": "h178c96ba",
+   "he": "רְאוֹת",
+   "translit": "re'ot",
+   "en": "view, vision",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2558
+  },
+  {
+   "id": "hbdf796ba",
+   "he": "זְרוֹעַ",
+   "translit": "zero'a",
+   "en": "arm",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2712
+  },
+  {
+   "id": "h6730c8c1",
+   "he": "צְפַרְדֵּעַ",
+   "translit": "tzefarde'a",
+   "en": "frog",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2749
+  },
+  {
+   "id": "hbc3cffd5",
+   "he": "תּוּת",
+   "translit": "tut",
+   "en": "strawberry",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2838
+  },
+  {
+   "id": "h06440deb",
+   "he": "קָפֶה",
+   "translit": "kafeh",
+   "en": "coffee",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2866
+  },
+  {
+   "id": "h1209204e",
+   "he": "עִמּוּת",
+   "translit": "imut",
+   "en": "confrontation, conflict",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2877
+  },
+  {
+   "id": "h2852c2ca",
+   "he": "מַעֲשֶׂה",
+   "translit": "ma'aseh",
+   "en": "deed, action, act",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2941
+  },
+  {
+   "id": "hc17d26a5",
+   "he": "יוֹרֶה",
+   "translit": "yoreh",
+   "en": "a (male) shooter",
+   "gender": "m",
+   "kind": "masculine-with-feminine-ending",
+   "rank": 2956
+  },
+  {
+   "id": "he0fc258b",
+   "he": "עֵז",
+   "translit": "ez",
+   "en": "female goat, she-goat",
+   "gender": "f",
+   "kind": "feminine-without-feminine-ending",
+   "rank": 2968
+  }
+ ]
+}

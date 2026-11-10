@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Kaf — KAHF. Sound: K as in kite with a dot; throaty KH without the dot. Shape hook: rounded open-left mitten. Tip: Its upper-left turn is smooth, unlike Bet’s boxy square roof and floor; do not mix it up with Bet, Pe.",
+ "inputSha256": "28521e7121f795b1dccaf63bc380cba77d289f002f9a3c19873a70ad91878559",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

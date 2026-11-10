@@ -1,0 +1,555 @@
+{
+ "generatedBy": "tools/qa/journey.mjs",
+ "note": "Scripted emulation, not real learners. Headless Chromium, 390x844, overridden Date.",
+ "quick": true,
+ "start": "2026-11-09T14:00:00.000Z",
+ "personas": {
+  "A": {
+   "name": "A: total beginner, Ashkenazi synagogue, 10 min a day",
+   "plan": {
+    "text": "Your week Draft: this plan has not been tried by a learner. Minutes are targets, not measurements. Every link goes to an existing screen. This is a pacing guide: the Today card on Home moves to the next lesson as soon as you mark one complete, so it can run ahead of this plan. Follow the Today card. 10 minutes a day, about 69 minutes this week. Lessons start at r01. Day 1 (10 min) Your first 10 minutes 10 min Day 2 (10 min) Shin and Bet: your first two letters (part 1 of 2) 10 min Day 3 (10 min) Shin and Bet: your first two letters (part 2 of 2) 10 min Day 4 (10 min) Tav and the dot in Bet: Shabbat (part 1 of 2) 10 min Day 5 (10 min) Tav and the dot in Bet: Shabbat (part 2 of 2) 10 min Day 6 (9 min) Lamed, final Mem and Vav: Shalom (part 1 of 3) 9 min Day 7 (10 min) Review due cards 5 min Trace letters 5 min",
+    "days": [
+     {
+      "label": "Day 1",
+      "items": [
+       {
+        "t": "Your first 10 minutes",
+        "h": "#/firstday"
+       }
+      ]
+     },
+     {
+      "label": "Day 2",
+      "items": [
+       {
+        "t": "Shin and Bet: your first two letters",
+        "h": "#/learn?lesson=r01"
+       }
+      ]
+     },
+     {
+      "label": "Day 3",
+      "items": [
+       {
+        "t": "Shin and Bet: your first two letters",
+        "h": "#/learn?lesson=r01"
+       }
+      ]
+     },
+     {
+      "label": "Day 4",
+      "items": [
+       {
+        "t": "Tav and the dot in Bet: Shabbat",
+        "h": "#/learn?lesson=r02"
+       }
+      ]
+     },
+     {
+      "label": "Day 5",
+      "items": [
+       {
+        "t": "Tav and the dot in Bet: Shabbat",
+        "h": "#/learn?lesson=r02"
+       }
+      ]
+     },
+     {
+      "label": "Day 6",
+      "items": [
+       {
+        "t": "Lamed, final Mem and Vav: Shalom",
+        "h": "#/learn?lesson=r03"
+       }
+      ]
+     },
+     {
+      "label": "Day 7",
+      "items": [
+       {
+        "t": "Review due cards",
+        "h": "#/learn?review=1"
+       },
+       {
+        "t": "Trace letters",
+        "h": "#/letters"
+       }
+      ]
+     }
+    ],
+    "start": {
+     "label": "Start: Your first 10 minutes",
+     "href": "#/firstday"
+    },
+    "goalMentioned": false
+   },
+   "placement": null,
+   "steps": [
+    {
+     "day": 1,
+     "what": "first open lands on",
+     "hash": "#/welcome"
+    },
+    {
+     "day": 1,
+     "what": "Continue with no answer",
+     "status": "Choose one answer to continue."
+    },
+    {
+     "day": 1,
+     "what": "pronunciation preselected after denomination",
+     "denom": "orthodox",
+     "suggested": "sephardi",
+     "wanted": "ashkenazi"
+    },
+    {
+     "day": 1,
+     "what": "plan card",
+     "days": 7,
+     "start": {
+      "label": "Start: Your first 10 minutes",
+      "href": "#/firstday"
+     }
+    },
+    {
+     "day": 1,
+     "what": "Today card (open)",
+     "state": "first-run",
+     "primary": "Continue: your first 10 minutes",
+     "href": "#/firstday",
+     "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+     "due": "No reviews due.",
+     "goalOn": "10"
+    },
+    {
+     "day": 1,
+     "what": "first 10: Hear it",
+     "step": "Five letters",
+     "status": "Sound is not available on this device yet."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Hear it",
+     "step": "Read your first word",
+     "status": "Sound is not available on this device yet."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Check my reading",
+     "status": "shah-LOHM: peace. Source: Priestly Blessing, Numbers 6:26 (last word); also Oseh Shalom."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Hear it",
+     "step": "Read a second word",
+     "status": "Sound is not available on this device yet."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Check my reading",
+     "status": "shahm: there. Source: Common word, not from the Priestly Blessing."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Hear it",
+     "step": "Read a third word",
+     "status": "Sound is not available on this device yet."
+    },
+    {
+     "day": 1,
+     "what": "first 10: Check my reading",
+     "status": "mah: what. Source: Common word, not from the Priestly Blessing."
+    },
+    {
+     "day": 1,
+     "what": "first 10: check answered wrong on purpose",
+     "status": "Not quite. Shalom is the long word with the dot-vav. Try again, nothing is lost."
+    },
+    {
+     "day": 1,
+     "what": "first 10: check answered right",
+     "status": "Yes, that one is shalom."
+    },
+    {
+     "day": 1,
+     "what": "first 10 minutes finished",
+     "steps": 8,
+     "actionsOnLastScreen": 2,
+     "last": " resh, kaf, final kaf, nun, and so on) and vowels (tzere, segol, shva) outside the 5 letters and 2 vowels taught here. Extending to the full verse is a later step. Start your first lesson Back to Home"
+    },
+    {
+     "day": 1,
+     "what": "Today card (right after first task)",
+     "state": "learning",
+     "primary": "Continue: Shin and Bet: your first two letters",
+     "href": "#/learn?lesson=r01",
+     "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+     "due": "No reviews due.",
+     "goalOn": "10"
+    },
+    {
+     "day": 1,
+     "what": "Today card (after task 1)",
+     "state": "learning",
+     "primary": "Continue: Shin and Bet: your first two letters",
+     "href": "#/learn?lesson=r01",
+     "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+     "due": "No reviews due.",
+     "goalOn": "10"
+    },
+    {
+     "day": 1,
+     "what": "lesson: Listen",
+     "lesson": "r01",
+     "note": "No sound: speech-error."
+    },
+    {
+     "day": 1,
+     "what": "lesson: marked complete without any check",
+     "lesson": "r01",
+     "done": "Lesson complete. 6 new review cards added.\n\nReview now\nNext lesson\nAll lessons",
+     "cards": 5,
+     "exercises": 0
+    },
+    {
+     "day": 1,
+     "what": "review session",
+     "rated": 6,
+     "again": 2,
+     "hintPanels": 2,
+     "summary": "Session done 6 cards reviewed: 2 again, 1 hard, 3 good, 0 easy. All caught up. Lessons Home",
+     "startedWith": "Review Card 1 of 6 Name this letter and say its sound. ב Show answer Keyboard: after showing the answer, press 1 Again, "
+    },
+    {
+     "day": 1,
+     "what": "tool opened: speak",
+     "text": "Say it Say it Listening drills Sounds by tradition Read a prayer aloud Shadowing History Hear a word, say it out loud, then check. Twelve words or phrases a set. Draft, not yet reviewed: the words, th"
+    },
+    {
+     "day": 1,
+     "what": "speak: capabilities line",
+     "caps": "Speech recognition: offered by this browser (Hebrew support unverified). Recording: available. Model voice: no recorded clips exist yet, so \"Listen\" uses the browser's voice."
+    },
+    {
+     "day": 1,
+     "what": "speak: self-judged round",
+     "answered": 3,
+     "end": "Say it Say it Listening drills Sounds by tradition Read a prayer aloud Shadowing History Set done You tried 3 items this round. Across every round of \"Survival: cafe\": 2 said or matched, 0 close, 1 not yet, of 3 tried. A"
+    },
+    {
+     "day": 1,
+     "what": "tool opened: typing",
+     "text": "Hebrew typing practice Draft, unreviewed: this screen has not been checked by a Hebrew teacher or tested on every device. Practise typing Hebrew letters. Use your device's Hebrew keyboard, the on-scre"
+    },
+    {
+     "day": 1,
+     "what": "typing: letters round",
+     "answered": 10,
+     "summary": "Single letters: 9 of 10 right (90%). Time on right answers: 0:00 for 9 characters (too short to give a speed). This is only today's practice on this device: not",
+     "deliberateMisses": 1
+    },
+    {
+     "day": 1,
+     "what": "typing: totals line after the round",
+     "totals": "Your practice on this device 1 round, 9 of 10 answers right (90%). Single letters: 1 round, 9 of 10 right These are counts from your own practice only. Speed is the time from your first key press to Check on answers you "
+    },
+    {
+     "day": 1,
+     "what": "tool opened: listen",
+     "text": "Listen and pick Draft: the word list was built by a program and no Hebrew teacher has checked it. A gloss or vowel point may be wrong. Audio not recorded yet. No recording exists for these words, so t"
+    },
+    {
+     "day": 1,
+     "what": "listen: round",
+     "mode": "read",
+     "answered": 10,
+     "deliberateMisses": 1,
+     "end": "Done: 9 right out of 10. Back"
+    },
+    {
+     "day": 1,
+     "what": "tool opened: progress",
+     "text": "Your progress Draft: milestones, belt gates and thresholds are Aleph's own and not expert-reviewed. Hebrew pointing is a draft and awaits native-speaker review. What can I read now? One view across the "
+    },
+    {
+     "day": 1,
+     "what": "progress screen (day 1)",
+     "today": "Today No streak running right now. A day counts after 5 minutes of study on a lesson, review or practice screen. Today's goal is met: you finished 1 lesson. A rest day does not break your streak. The streak counts a day after 5 minutes of study. The card goal below is a separate, gentle target. Daily goal 5 cards a day 10 cards a day 20 cards a day 40 cards a day Take today as a rest day",
+     "now": [
+      "Letters and signs met 2 of 27 letters, 3 of 15 signs From completed lessons and finished tracing. Open",
+      "Prayer and Torah lines you can sound out 0 of 129 lines, 0 words 0 more lines are one sign away. Every letter ",
+      "Vocabulary cards none started Cards you have reviewed at least once; mature means the scheduler expects you to",
+      "Timed read-aloudsself-reported none yet Self-reported: you time the read and mark the words that tripped you; ",
+      "Siddur coverage, Shabbat morning 0% of the lines Aleph holds 0 of 48 lines use only letters and signs you have ",
+      "First 10 minutes and the unpointed ladderself-reported 3 first-day words marked read; ladder 0 of 8 unpointed "
+     ],
+     "week": [
+      "At least 0 minutes engaged",
+      "0 of 7 days reached the daily goal",
+      "At least 1 new word first reviewed",
+      "6 cards reviewed",
+      "0 timed reads (self-reported)",
+      "Streak: 0 days",
+      "No rest days in this week"
+     ],
+     "numbers": "Letters traced 0 of 27 Letters taught by lessons 2 of 27 Signs taught by lessons 3 of 15 Lessons completed 1 of 125 Review cards: new / learning / mature 0 / 6 / 0 Vocabulary band not started Spot It clean rounds no rounds yet Look-alike checkpoints passed none yet Timed reads (self-reported) none yet Reading speed (self-reported) not measured"
+    },
+    {
+     "day": 1,
+     "what": "Today card (before the 5-minute mark)",
+     "state": "learning",
+     "primary": "Continue: Tav and the dot in Bet: Shabbat",
+     "href": "#/learn?lesson=r02",
+     "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+     "due": "No reviews due.",
+     "goalOn": "10"
+    },
+    {
+     "day": 1,
+     "what": "Today card (after 5+ min)",
+     "state": "learning",
+     "primary": "Continue: Tav and the dot in Bet: Shabbat",
+     "href": "#/learn?lesson=r02",
+     "streak": "Streak: 1 day and counting. Today's 5 minutes are done.",
+     "due": "No reviews due.",
+     "goalOn": "10"
+    }
+   ],
+   "findings": [
+    {
+     "persona": "A",
+     "day": 1,
+     "sev": "high",
+     "id": "streak-copy-vs-rule",
+     "title": "Home says a lesson or a review card starts the streak, but finishing lessons and reviewing cards did not",
+     "repro": [
+      "Persona A: finish 2 Today-card task(s) on day 1 (lessons completed and cards rated), spend under 5 minutes",
+      "Open Home and read the Streak line"
+     ],
+     "evidence": {
+      "line": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+      "record": {
+       "v": 2,
+       "count": 0,
+       "best": 0,
+       "last": null,
+       "todayDate": "2026-11-09",
+       "todaySeconds": 7,
+       "frozenDates": [],
+       "doneDates": [],
+       "freeze": false,
+       "mode": "reform"
+      },
+      "shot": "docs/qa/journey/A-d1-streak-before-5min.jpg"
+     }
+    },
+    {
+     "persona": "A",
+     "day": 1,
+     "sev": "low",
+     "id": "raw-speech-error",
+     "title": "Sound bar and lesson Listen button show a raw code (\"speech-error\")",
+     "repro": [
+      "Open any lesson",
+      "Tap Listen (headless Chromium has no speech voices; not checked in a real browser)"
+     ],
+     "evidence": {
+      "statusBar": "No sound: the browser voice reported an error."
+     }
+    }
+   ],
+   "errors": [],
+   "days": {
+    "1": {
+     "d": 1,
+     "tasks": [
+      {
+       "href": "#/firstday",
+       "label": "Continue: your first 10 minutes",
+       "hash": "#/firstday"
+      },
+      {
+       "href": "#/learn?lesson=r01",
+       "label": "Continue: Shin and Bet: your first two letters",
+       "hash": "#/learn?lesson=r01",
+       "result": {
+        "done": true,
+        "id": "r01",
+        "title": "Shin and Bet: your first two letters",
+        "doneText": "Lesson complete. 6 new review cards added.\n\nReview now\nNext lesson\nAll lessons",
+        "shot": null,
+        "review": {
+         "rated": 6,
+         "again": 2,
+         "summary": "Session done\n\n6 cards reviewed: 2 again, 1 hard, 3 good, 0 easy.\n\nAll caught up.\n\nLessons\nHome",
+         "shot": null
+        }
+       }
+      }
+     ],
+     "planStart": {
+      "label": "Start: Your first 10 minutes",
+      "href": "#/firstday"
+     },
+     "today": {
+      "rendered": true,
+      "state": "first-run",
+      "text": "Today's lesson Welcome. Start with your first 10 minutes: five letters, two vowels, three real words. No reviews due. Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap). Study goal: 5 min10 min15 min20 min30 min Your own target. The streak always counts a day at 5 minutes. More practice: Typing · Festivals · Compare traditions Today's morning verse Continue: your first 10 minutes",
+      "primaryLabel": "Continue: your first 10 minutes",
+      "primaryHref": "#/firstday",
+      "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+      "due": "No reviews due.",
+      "dueHref": null,
+      "goalOn": "10",
+      "next": [],
+      "more": [
+       "Typing",
+       "Festivals",
+       "Compare traditions"
+      ]
+     },
+     "todayShot": null,
+     "streakRecord": {
+      "v": 2,
+      "count": 0,
+      "best": 0,
+      "last": null,
+      "todayDate": "2026-11-09",
+      "todaySeconds": 0,
+      "frozenDates": [],
+      "doneDates": [],
+      "freeze": false,
+      "mode": "reform"
+     },
+     "streakCheck": {
+      "shown": 0,
+      "learnerExpected": 0,
+      "ruleExpected": 0,
+      "line": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap)."
+     },
+     "planCompare": {
+      "plan": {
+       "label": "Day 1",
+       "items": [
+        {
+         "t": "Your first 10 minutes",
+         "h": "#/firstday"
+        }
+       ]
+      },
+      "today": "Continue: your first 10 minutes",
+      "todayHref": "#/firstday",
+      "match": true
+     },
+     "afterFirstTask": {
+      "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+      "due": "No reviews due.",
+      "primary": "Continue: Shin and Bet: your first two letters"
+     },
+     "progress": {
+      "today": "Today No streak running right now. A day counts after 5 minutes of study on a lesson, review or practice screen. Today's goal is met: you finished 1 lesson. A rest day does not break your streak. The streak counts a day after 5 minutes of study. The card goal below is a separate, gentle target. Daily goal 5 cards a day 10 cards a day 20 cards a day 40 cards a day Take today as a rest day",
+      "now": [
+       "Letters and signs met 2 of 27 letters, 3 of 15 signs From completed lessons and finished tracing. Open",
+       "Prayer and Torah lines you can sound out 0 of 129 lines, 0 words 0 more lines are one sign away. Every letter ",
+       "Vocabulary cards none started Cards you have reviewed at least once; mature means the scheduler expects you to",
+       "Timed read-aloudsself-reported none yet Self-reported: you time the read and mark the words that tripped you; ",
+       "Siddur coverage, Shabbat morning 0% of the lines Aleph holds 0 of 48 lines use only letters and signs you have ",
+       "First 10 minutes and the unpointed ladderself-reported 3 first-day words marked read; ladder 0 of 8 unpointed "
+      ],
+      "week": [
+       "At least 0 minutes engaged",
+       "0 of 7 days reached the daily goal",
+       "At least 1 new word first reviewed",
+       "6 cards reviewed",
+       "0 timed reads (self-reported)",
+       "Streak: 0 days",
+       "No rest days in this week"
+      ],
+      "numbers": "Letters traced 0 of 27 Letters taught by lessons 2 of 27 Signs taught by lessons 3 of 15 Lessons completed 1 of 125 Review cards: new / learning / mature 0 / 6 / 0 Vocabulary band not started Spot It clean rounds no rounds yet Look-alike checkpoints passed none yet Timed reads (self-reported) none yet Reading speed (self-reported) not measured"
+     },
+     "beforeDwell": {
+      "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap).",
+      "record": {
+       "v": 2,
+       "count": 0,
+       "best": 0,
+       "last": null,
+       "todayDate": "2026-11-09",
+       "todaySeconds": 7,
+       "frozenDates": [],
+       "doneDates": [],
+       "freeze": false,
+       "mode": "reform"
+      }
+     },
+     "afterDwell": {
+      "streak": "Streak: 1 day and counting. Today's 5 minutes are done.",
+      "record": {
+       "v": 2,
+       "count": 1,
+       "best": 1,
+       "last": "2026-11-09",
+       "todayDate": "2026-11-09",
+       "todaySeconds": 345,
+       "frozenDates": [],
+       "doneDates": [
+        "2026-11-09"
+       ],
+       "freeze": false,
+       "mode": "reform"
+      }
+     },
+     "progressTodayAfter": "Today 1 day in a row, including today. Best so far: 1. Today's goal is met: you finished 1 lesson. A rest day does not break your streak. The streak counts a day after 5 minutes of study. The card goal below is a separate, gentle target. Daily goal 5 cards a day 10 cards a day 20 cards a day 40 cards a day Take today as a rest day"
+    }
+   },
+   "notes": [
+    "first10-hear: Sound is not available on this device yet.",
+    "first10-hear: Sound is not available on this device yet.",
+    "first10-hear: Sound is not available on this device yet.",
+    "first10-hear: Sound is not available on this device yet.",
+    "lesson Listen note: No sound: speech-error.",
+    "lesson r01: completing it asks the learner nothing (no exercise on the page); \"Mark lesson complete\" is a self-declaration",
+    "speak: the browser-listening (microphone) path was NOT exercised: headless Chromium has no microphone or permission prompt, so only the self-judged mode was run.",
+    "listen: no recorded audio, falls back to read-and-match: \"Listen and pick Draft: the word list was built by a program and no Hebrew teacher has checked it. A gloss or vowel point may be wrong. Audio not recorded yet. N\""
+   ],
+   "finalStore": {
+    "streak": {
+     "v": 2,
+     "count": 1,
+     "best": 1,
+     "last": "2026-11-09",
+     "todayDate": "2026-11-09",
+     "todaySeconds": 345,
+     "frozenDates": [],
+     "doneDates": [
+      "2026-11-09"
+     ],
+     "freeze": false,
+     "mode": "reform"
+    },
+    "completed": [
+     "r01"
+    ],
+    "cards": 6
+   },
+   "onboardingRecord": {
+    "v": 1,
+    "letters": "none",
+    "start": "/firstday",
+    "askedAt": "2026-11-09T14:00:00.607Z",
+    "denomination": "orthodox",
+    "minutesPerDay": 10,
+    "step": "plan"
+   },
+   "israelBefore": null
+  }
+ },
+ "elapsedSeconds": 49,
+ "counts": {
+  "A": {
+   "steps": 32,
+   "findings": 2,
+   "errors": 0
+  }
+ }
+}

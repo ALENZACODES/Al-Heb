@@ -1,0 +1,1772 @@
+{
+ "retrieved": "2026-11-08",
+ "books": {
+  "genesis": {
+   "uxlcVersion": "UXLC 2.6",
+   "uxlcFileDate": "19 Oct 2026",
+   "wlcVerses": 1533,
+   "standardVerses": 1533,
+   "chaptersBuilt": 50
+  },
+  "exodus": {
+   "uxlcVersion": "UXLC 2.6",
+   "uxlcFileDate": "19 Oct 2026",
+   "wlcVerses": 1213,
+   "standardVerses": 1210,
+   "chaptersBuilt": 40
+  },
+  "leviticus": {
+   "uxlcVersion": "UXLC 2.6",
+   "uxlcFileDate": "19 Oct 2026",
+   "wlcVerses": 859,
+   "standardVerses": 859,
+   "chaptersBuilt": 27
+  },
+  "numbers": {
+   "uxlcVersion": "UXLC 2.6",
+   "uxlcFileDate": "19 Oct 2026",
+   "wlcVerses": 1289,
+   "standardVerses": 1288,
+   "chaptersBuilt": 36
+  },
+  "deuteronomy": {
+   "uxlcVersion": "UXLC 2.6",
+   "uxlcFileDate": "19 Oct 2026",
+   "wlcVerses": 959,
+   "standardVerses": 956,
+   "chaptersBuilt": 34
+  }
+ },
+ "realignments": [
+  {
+   "book": "exodus",
+   "chapter": 20,
+   "standardVerses": 23,
+   "wlcVersesInvolved": 26,
+   "crossesWlcChapter": false
+  },
+  {
+   "book": "numbers",
+   "chapter": 26,
+   "standardVerses": 65,
+   "wlcVersesInvolved": 66,
+   "crossesWlcChapter": true
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 5,
+   "standardVerses": 30,
+   "wlcVersesInvolved": 33,
+   "crossesWlcChapter": false
+  }
+ ],
+ "chapters": [
+  {
+   "book": "genesis",
+   "chapter": 1,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 2,
+   "standardVerses": 25,
+   "sefariaHeSegs": 25,
+   "sefariaEnSegs": 25,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 3,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 4,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 5,
+   "standardVerses": 32,
+   "sefariaHeSegs": 32,
+   "sefariaEnSegs": 32,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 6,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 7,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 8,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 9,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 10,
+   "standardVerses": 32,
+   "sefariaHeSegs": 32,
+   "sefariaEnSegs": 32,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 11,
+   "standardVerses": 32,
+   "sefariaHeSegs": 32,
+   "sefariaEnSegs": 32,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 12,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 13,
+   "standardVerses": 18,
+   "sefariaHeSegs": 18,
+   "sefariaEnSegs": 18,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 14,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 15,
+   "standardVerses": 21,
+   "sefariaHeSegs": 21,
+   "sefariaEnSegs": 21,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 16,
+   "standardVerses": 16,
+   "sefariaHeSegs": 16,
+   "sefariaEnSegs": 16,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 17,
+   "standardVerses": 27,
+   "sefariaHeSegs": 27,
+   "sefariaEnSegs": 27,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 18,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 19,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 20,
+   "standardVerses": 18,
+   "sefariaHeSegs": 18,
+   "sefariaEnSegs": 18,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 21,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 22,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 23,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 24,
+   "standardVerses": 67,
+   "sefariaHeSegs": 67,
+   "sefariaEnSegs": 67,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 25,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 26,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 27,
+   "standardVerses": 46,
+   "sefariaHeSegs": 46,
+   "sefariaEnSegs": 46,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 28,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 29,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 30,
+   "standardVerses": 43,
+   "sefariaHeSegs": 43,
+   "sefariaEnSegs": 43,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 31,
+   "standardVerses": 54,
+   "sefariaHeSegs": 54,
+   "sefariaEnSegs": 54,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 32,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 33,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 34,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 35,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 36,
+   "standardVerses": 43,
+   "sefariaHeSegs": 43,
+   "sefariaEnSegs": 43,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 37,
+   "standardVerses": 36,
+   "sefariaHeSegs": 36,
+   "sefariaEnSegs": 36,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 38,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 39,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 40,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 41,
+   "standardVerses": 57,
+   "sefariaHeSegs": 57,
+   "sefariaEnSegs": 57,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 42,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 43,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 44,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 45,
+   "standardVerses": 28,
+   "sefariaHeSegs": 28,
+   "sefariaEnSegs": 28,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 46,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 47,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 48,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 49,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "genesis",
+   "chapter": 50,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 1,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 2,
+   "standardVerses": 25,
+   "sefariaHeSegs": 25,
+   "sefariaEnSegs": 25,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 3,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 4,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 5,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 6,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 7,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 8,
+   "standardVerses": 28,
+   "sefariaHeSegs": 28,
+   "sefariaEnSegs": 28,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 9,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 10,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 11,
+   "standardVerses": 10,
+   "sefariaHeSegs": 10,
+   "sefariaEnSegs": 10,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 12,
+   "standardVerses": 51,
+   "sefariaHeSegs": 51,
+   "sefariaEnSegs": 51,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 13,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 14,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 15,
+   "standardVerses": 27,
+   "sefariaHeSegs": 27,
+   "sefariaEnSegs": 27,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 16,
+   "standardVerses": 36,
+   "sefariaHeSegs": 36,
+   "sefariaEnSegs": 36,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 17,
+   "standardVerses": 16,
+   "sefariaHeSegs": 16,
+   "sefariaEnSegs": 16,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 18,
+   "standardVerses": 27,
+   "sefariaHeSegs": 27,
+   "sefariaEnSegs": 27,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 19,
+   "standardVerses": 25,
+   "sefariaHeSegs": 25,
+   "sefariaEnSegs": 25,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 20,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": "re-segmented (26 WLC verses involved)"
+  },
+  {
+   "book": "exodus",
+   "chapter": 21,
+   "standardVerses": 37,
+   "sefariaHeSegs": 37,
+   "sefariaEnSegs": 37,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 22,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 23,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 24,
+   "standardVerses": 18,
+   "sefariaHeSegs": 18,
+   "sefariaEnSegs": 18,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 25,
+   "standardVerses": 40,
+   "sefariaHeSegs": 40,
+   "sefariaEnSegs": 40,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 26,
+   "standardVerses": 37,
+   "sefariaHeSegs": 37,
+   "sefariaEnSegs": 37,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 27,
+   "standardVerses": 21,
+   "sefariaHeSegs": 21,
+   "sefariaEnSegs": 21,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 28,
+   "standardVerses": 43,
+   "sefariaHeSegs": 43,
+   "sefariaEnSegs": 43,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 29,
+   "standardVerses": 46,
+   "sefariaHeSegs": 46,
+   "sefariaEnSegs": 46,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 30,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 31,
+   "standardVerses": 18,
+   "sefariaHeSegs": 18,
+   "sefariaEnSegs": 18,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 32,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 33,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 34,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 35,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 36,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 37,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 38,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 39,
+   "standardVerses": 43,
+   "sefariaHeSegs": 43,
+   "sefariaEnSegs": 43,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "exodus",
+   "chapter": 40,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 1,
+   "standardVerses": 17,
+   "sefariaHeSegs": 17,
+   "sefariaEnSegs": 17,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 2,
+   "standardVerses": 16,
+   "sefariaHeSegs": 16,
+   "sefariaEnSegs": 16,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 3,
+   "standardVerses": 17,
+   "sefariaHeSegs": 17,
+   "sefariaEnSegs": 17,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 4,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 5,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 6,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 7,
+   "standardVerses": 38,
+   "sefariaHeSegs": 38,
+   "sefariaEnSegs": 38,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 8,
+   "standardVerses": 36,
+   "sefariaHeSegs": 36,
+   "sefariaEnSegs": 36,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 9,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 10,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 11,
+   "standardVerses": 47,
+   "sefariaHeSegs": 47,
+   "sefariaEnSegs": 47,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 12,
+   "standardVerses": 8,
+   "sefariaHeSegs": 8,
+   "sefariaEnSegs": 8,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 13,
+   "standardVerses": 59,
+   "sefariaHeSegs": 59,
+   "sefariaEnSegs": 59,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 14,
+   "standardVerses": 57,
+   "sefariaHeSegs": 57,
+   "sefariaEnSegs": 57,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 15,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 16,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 17,
+   "standardVerses": 16,
+   "sefariaHeSegs": 16,
+   "sefariaEnSegs": 16,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 18,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 19,
+   "standardVerses": 37,
+   "sefariaHeSegs": 37,
+   "sefariaEnSegs": 37,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 20,
+   "standardVerses": 27,
+   "sefariaHeSegs": 27,
+   "sefariaEnSegs": 27,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 21,
+   "standardVerses": 24,
+   "sefariaHeSegs": 24,
+   "sefariaEnSegs": 24,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 22,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 23,
+   "standardVerses": 44,
+   "sefariaHeSegs": 44,
+   "sefariaEnSegs": 44,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 24,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 25,
+   "standardVerses": 55,
+   "sefariaHeSegs": 55,
+   "sefariaEnSegs": 55,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 26,
+   "standardVerses": 46,
+   "sefariaHeSegs": 46,
+   "sefariaEnSegs": 46,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "leviticus",
+   "chapter": 27,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 1,
+   "standardVerses": 54,
+   "sefariaHeSegs": 54,
+   "sefariaEnSegs": 54,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 2,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 3,
+   "standardVerses": 51,
+   "sefariaHeSegs": 51,
+   "sefariaEnSegs": 51,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 4,
+   "standardVerses": 49,
+   "sefariaHeSegs": 49,
+   "sefariaEnSegs": 49,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 5,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 6,
+   "standardVerses": 27,
+   "sefariaHeSegs": 27,
+   "sefariaEnSegs": 27,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 7,
+   "standardVerses": 89,
+   "sefariaHeSegs": 89,
+   "sefariaEnSegs": 89,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 8,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 9,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 10,
+   "standardVerses": 36,
+   "sefariaHeSegs": 36,
+   "sefariaEnSegs": 36,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 11,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 12,
+   "standardVerses": 16,
+   "sefariaHeSegs": 16,
+   "sefariaEnSegs": 16,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 13,
+   "standardVerses": 33,
+   "sefariaHeSegs": 33,
+   "sefariaEnSegs": 33,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 14,
+   "standardVerses": 45,
+   "sefariaHeSegs": 45,
+   "sefariaEnSegs": 45,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 15,
+   "standardVerses": 41,
+   "sefariaHeSegs": 41,
+   "sefariaEnSegs": 41,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 16,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 17,
+   "standardVerses": 28,
+   "sefariaHeSegs": 28,
+   "sefariaEnSegs": 28,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 18,
+   "standardVerses": 32,
+   "sefariaHeSegs": 32,
+   "sefariaEnSegs": 32,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 19,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 20,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 21,
+   "standardVerses": 35,
+   "sefariaHeSegs": 35,
+   "sefariaEnSegs": 35,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 22,
+   "standardVerses": 41,
+   "sefariaHeSegs": 41,
+   "sefariaEnSegs": 41,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 23,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 24,
+   "standardVerses": 25,
+   "sefariaHeSegs": 25,
+   "sefariaEnSegs": 25,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 25,
+   "standardVerses": 18,
+   "sefariaHeSegs": 18,
+   "sefariaEnSegs": 18,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 26,
+   "standardVerses": 65,
+   "sefariaHeSegs": 65,
+   "sefariaEnSegs": 65,
+   "skeletonMatch": true,
+   "mapping": "re-segmented (66 WLC verses involved, crosses a WLC chapter boundary)"
+  },
+  {
+   "book": "numbers",
+   "chapter": 27,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 28,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 29,
+   "standardVerses": 39,
+   "sefariaHeSegs": 39,
+   "sefariaEnSegs": 39,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 30,
+   "standardVerses": 17,
+   "sefariaHeSegs": 17,
+   "sefariaEnSegs": 17,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 31,
+   "standardVerses": 54,
+   "sefariaHeSegs": 54,
+   "sefariaEnSegs": 54,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 32,
+   "standardVerses": 42,
+   "sefariaHeSegs": 42,
+   "sefariaEnSegs": 42,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 33,
+   "standardVerses": 56,
+   "sefariaHeSegs": 56,
+   "sefariaEnSegs": 56,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 34,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 35,
+   "standardVerses": 34,
+   "sefariaHeSegs": 34,
+   "sefariaEnSegs": 34,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "numbers",
+   "chapter": 36,
+   "standardVerses": 13,
+   "sefariaHeSegs": 13,
+   "sefariaEnSegs": 13,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 1,
+   "standardVerses": 46,
+   "sefariaHeSegs": 46,
+   "sefariaEnSegs": 46,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 2,
+   "standardVerses": 37,
+   "sefariaHeSegs": 37,
+   "sefariaEnSegs": 37,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 3,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 4,
+   "standardVerses": 49,
+   "sefariaHeSegs": 49,
+   "sefariaEnSegs": 49,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 5,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": "re-segmented (33 WLC verses involved)"
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 6,
+   "standardVerses": 25,
+   "sefariaHeSegs": 25,
+   "sefariaEnSegs": 25,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 7,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 8,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 9,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 10,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 11,
+   "standardVerses": 32,
+   "sefariaHeSegs": 32,
+   "sefariaEnSegs": 32,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 12,
+   "standardVerses": 31,
+   "sefariaHeSegs": 31,
+   "sefariaEnSegs": 31,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 13,
+   "standardVerses": 19,
+   "sefariaHeSegs": 19,
+   "sefariaEnSegs": 19,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 14,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 15,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 16,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 17,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 18,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 19,
+   "standardVerses": 21,
+   "sefariaHeSegs": 21,
+   "sefariaEnSegs": 21,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 20,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 21,
+   "standardVerses": 23,
+   "sefariaHeSegs": 23,
+   "sefariaEnSegs": 23,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 22,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 23,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 24,
+   "standardVerses": 22,
+   "sefariaHeSegs": 22,
+   "sefariaEnSegs": 22,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 25,
+   "standardVerses": 19,
+   "sefariaHeSegs": 19,
+   "sefariaEnSegs": 19,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 26,
+   "standardVerses": 19,
+   "sefariaHeSegs": 19,
+   "sefariaEnSegs": 19,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 27,
+   "standardVerses": 26,
+   "sefariaHeSegs": 26,
+   "sefariaEnSegs": 26,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 28,
+   "standardVerses": 69,
+   "sefariaHeSegs": 69,
+   "sefariaEnSegs": 69,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 29,
+   "standardVerses": 28,
+   "sefariaHeSegs": 28,
+   "sefariaEnSegs": 28,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 30,
+   "standardVerses": 20,
+   "sefariaHeSegs": 20,
+   "sefariaEnSegs": 20,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 31,
+   "standardVerses": 30,
+   "sefariaHeSegs": 30,
+   "sefariaEnSegs": 30,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 32,
+   "standardVerses": 52,
+   "sefariaHeSegs": 52,
+   "sefariaEnSegs": 52,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 33,
+   "standardVerses": 29,
+   "sefariaHeSegs": 29,
+   "sefariaEnSegs": 29,
+   "skeletonMatch": true,
+   "mapping": null
+  },
+  {
+   "book": "deuteronomy",
+   "chapter": 34,
+   "standardVerses": 12,
+   "sefariaHeSegs": 12,
+   "sefariaEnSegs": 12,
+   "skeletonMatch": true,
+   "mapping": null
+  }
+ ],
+ "charCounts": {
+  "genesis": {
+   "heSpoken": 164346,
+   "en": 196890
+  },
+  "exodus": {
+   "heSpoken": 135151,
+   "en": 168845
+  },
+  "leviticus": {
+   "heSpoken": 94787,
+   "en": 125601
+  },
+  "numbers": {
+   "heSpoken": 134367,
+   "en": 174368
+  },
+  "deuteronomy": {
+   "heSpoken": 116096,
+   "en": 146198
+  },
+  "torahHeSpokenTotal": 644747,
+  "torahEnTotal": 811902
+ }
+}

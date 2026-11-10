@@ -1,0 +1,24 @@
+{
+  "schema": "alef-torahread-trope/1",
+  "status": "draft",
+  "reviewed": false,
+  "title": "Cantillation (trope): not taught here, and why",
+  "note": "Short explainer. No claim here is about a particular community's melodies. Not reviewed by a cantor.",
+  "whatItIs": [
+    "In a printed Chumash (a book of the Torah), many words carry extra small marks above and below the letters, besides the vowel points. These are cantillation marks, called te'amim in Hebrew, or trope.",
+    "They show the melody motif for each word and also mark how phrases join and pause, so they work both as musical notation and as punctuation.",
+    "A Torah scroll has no vowel points and no cantillation marks. A reader has to know both the vowels and the tune for every word."
+  ],
+  "whyNotHere": [
+    "The texts in this app deliberately leave the cantillation marks out, so that you can see the letters and vowels clearly. (They were removed from the source texts when the corpus was built.)",
+    "The melodies are passed on by ear and differ between communities. This app has no recording by a qualified cantor, so teaching them from here would mean guessing.",
+    "You do not need trope to have an aliyah. The person called up says the blessings; in most congregations a designated reader chants the scroll.",
+    "Nothing in this app has been reviewed by a cantor, rabbi or Hebrew teacher."
+  ],
+  "whatToDo": [
+    "Listen. Hear how your own congregation's cantor or reader chants the reading and the blessings, and follow along in a printed text.",
+    "Ask your cantor or rabbi whether they would record the two aliyah blessings in your congregation's tune, or whether they teach beginners.",
+    "Keep practising the reading ladder in this section first: you need the vowels before the melody.",
+    "If you later want to chant from the scroll, learn it with a teacher from your own community."
+  ]
+}

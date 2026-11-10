@@ -1,0 +1,177 @@
+{
+ "id": "book48",
+ "titleHe": "הַחֲתֻנָּה",
+ "titleTranslit": "Ha-Chatunah",
+ "titleEn": "The Wedding",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "חֲתֻנָּה בַּגָּלִיל.",
+   "translit": "Chatunah ba-Galil.",
+   "en": "A wedding in the Galilee.",
+   "img": "assets/books/book48/BOOK48_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p01.mp3",
+    "m": "audio/m/israeli/book/book48-p01.mp3"
+   },
+   "illustration": "an outdoor venue, olive trees, string lights",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "תָּמָר וְאֵיתָן מִתְחַתְּנִים.",
+   "translit": "Tamar ve-Eitan mitchatnim.",
+   "en": "Tamar and Eitan are getting married.",
+   "img": "assets/books/book48/BOOK48_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p02.mp3",
+    "m": "audio/m/israeli/book/book48-p02.mp3"
+   },
+   "illustration": "the couple under a chuppah",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַמִּשְׁפָּחָה שֶׁל תָּמָר מִמָּרוֹקוֹ.",
+   "translit": "Ha-mishpachah shel Tamar mi-Maroko.",
+   "en": "Tamar's family is from Morocco.",
+   "img": "assets/books/book48/BOOK48_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p03.mp3",
+    "m": "audio/m/israeli/book/book48-p03.mp3"
+   },
+   "illustration": "aunts in embroidered kaftans, trays of sweets",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הַמִּשְׁפָּחָה שֶׁל אֵיתָן מִפּוֹלִין.",
+   "translit": "Ha-mishpachah shel Eitan mi-Polin.",
+   "en": "Eitan's family is from Poland.",
+   "img": "assets/books/book48/BOOK48_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p04.mp3",
+    "m": "audio/m/israeli/book/book48-p04.mp3"
+   },
+   "illustration": "uncles in dark suits, a grandmother with a cane",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "שְׁתֵּי מִשְׁפָּחוֹת. שְׁתֵּי שָׂפוֹת.",
+   "translit": "Shtei mishpachot. Shtei safot.",
+   "en": "Two families. Two languages.",
+   "img": "assets/books/book48/BOOK48_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p05.mp3",
+    "m": "audio/m/israeli/book/book48-p05.mp3"
+   },
+   "illustration": "two tables, animated conversation across the gap",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "אַף אֶחָד לֹא מֵבִין אַף אֶחָד.",
+   "translit": "Af echad lo mevin af echad.",
+   "en": "Nobody understands anybody.",
+   "img": "assets/books/book48/BOOK48_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p06.mp3",
+    "m": "audio/m/israeli/book/book48-p06.mp3"
+   },
+   "illustration": "hands gesturing, confused smiles",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "וְאָז: מוּסִיקָה.",
+   "translit": "Ve-az: musikah.",
+   "en": "And then: music.",
+   "img": "assets/books/book48/BOOK48_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p07.mp3",
+    "m": "audio/m/israeli/book/book48-p07.mp3"
+   },
+   "illustration": "a band striking up, a darbuka and a clarinet",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "סָבְתָא מִמָּרוֹקוֹ רוֹקֶדֶת.",
+   "translit": "Savta mi-Maroko rokedet.",
+   "en": "The grandmother from Morocco dances.",
+   "img": "assets/books/book48/BOOK48_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p08.mp3",
+    "m": "audio/m/israeli/book/book48-p08.mp3"
+   },
+   "illustration": "an elderly woman dancing with her arms up",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "סָבָא מִפּוֹלִין רוֹקֵד.",
+   "translit": "Saba mi-Polin roked.",
+   "en": "The grandfather from Poland dances.",
+   "img": "assets/books/book48/BOOK48_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p09.mp3",
+    "m": "audio/m/israeli/book/book48-p09.mp3"
+   },
+   "illustration": "an old man kicking up his heels",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הֵם רוֹקְדִים בְּיַחַד.",
+   "translit": "Hem rokdim be-yachad.",
+   "en": "They dance together.",
+   "img": "assets/books/book48/BOOK48_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p10.mp3",
+    "m": "audio/m/israeli/book/book48-p10.mp3"
+   },
+   "illustration": "the two elders dancing, everyone clapping",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "כֻּלָּם מְבִינִים.",
+   "translit": "Kulam mevinim.",
+   "en": "Everyone understands.",
+   "img": "assets/books/book48/BOOK48_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p11.mp3",
+    "m": "audio/m/israeli/book/book48-p11.mp3"
+   },
+   "illustration": "the whole crowd in one circle",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "מַזָּל טוֹב!",
+   "translit": "Mazal tov!",
+   "en": "Congratulations!",
+   "img": "assets/books/book48/BOOK48_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book48-p12.mp3",
+    "m": "audio/m/israeli/book/book48-p12.mp3"
+   },
+   "illustration": "the couple lifted on chairs, confetti",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

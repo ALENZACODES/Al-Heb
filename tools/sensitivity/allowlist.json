@@ -1,0 +1,266 @@
+{
+ "_doc": "Expected occurrences of the four-letter name in learner-facing audio targets, vocabulary items, Latin spellings and respellings. A finding not covered here, or more than max, fails tests/sensitivity.test.js. status known-issue = should be fixed by the owner lane, then the entry lowered or removed; accepted = judged consistent with docs/sensitivity/CONVENTIONS.md by this audit (not clergy-reviewed).",
+ "entries": [
+  {
+   "file": "data/audio/manifest-words-ashkenazi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-israeli.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-sephardi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "prefixed",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was prefixed audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was 54 bare-name audio targets (lesson word clips). Fixed by the audio lane: the manifest now uses the spoken substitute. Kept at max 0 so any return of a bare-name target fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-ashkenazi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-israeli.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest-words-sephardi.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "key": "text",
+   "cls": "audio-target",
+   "kind": "maqaf-exact",
+   "max": 0,
+   "status": "fixed",
+   "reason": "Was maqaf-exact audio targets (kedushah-baruch word and prefixed forms). Fixed by the audio lane: speechText() in names.js now substitutes inside maqaf compounds and prefixed forms and the manifest builder uses it; the prefix pointing is kept from the source (clergy review pending). Kept at max 0 so any return fails the gate."
+  },
+  {
+   "file": "data/corpus/registry.json",
+   "key": "notes",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-02.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-03.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-06.json",
+   "key": "lookup",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 1,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:ashkenazi",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:israeli",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "key": "simple:sephardi",
+   "cls": "respell-as-written",
+   "kind": "prefixed",
+   "max": 3,
+   "status": "known-issue",
+   "reason": "Learner-facing respelling of a prefixed form reads the letters (laivah / laiveh / laihovah). Owner: pronunciation lane. The standard spoken form needs a clergy-approved respelling."
+  },
+  {
+   "file": "data/vocab/index.json",
+   "key": "rows",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-1.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/religion-prayer-1.json",
+   "key": "alt",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/packs/survival-lesson-read-1.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/packs/survival-lesson-read-1.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/themes/religion-prayer-set01.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/themes/religion-prayer-set01.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "alt",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "English source gloss or build note that spells the name (from the vocabulary source). Not a transliteration prompt. Review wording with clergy (see REVIEW-FOR-CLERGY.md)."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "he",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/words.json",
+   "key": "heUnpointed",
+   "cls": "vocab-item",
+   "kind": "exact",
+   "max": 2,
+   "status": "accepted",
+   "reason": "Recognition item (the Name, read aloud as Adonai) with translit adonai and a note not to pronounce the letters. Not in speak sets or deck-order. Must stay out of any produce/say-it prompt."
+  },
+  {
+   "file": "data/vocab/corrections.json",
+   "key": "en",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "Audit record of a removed example (the old value, or the reason for removing it) that quotes a source sentence with 'Jehovah's Witnesses'. It is a log of a removal, not shown to learners. Review wording with clergy (see REVIEW-FOR-CLERGY.md question 12)."
+  },
+  {
+   "file": "data/vocab/corrections.json",
+   "key": "reason",
+   "cls": "latin-spelling",
+   "kind": "latin",
+   "max": 1,
+   "status": "accepted",
+   "reason": "Audit record of a removed example (the old value, or the reason for removing it) that quotes a source sentence with 'Jehovah's Witnesses'. It is a log of a removal, not shown to learners. Review wording with clergy (see REVIEW-FOR-CLERGY.md question 12)."
+  }
+ ]
+}

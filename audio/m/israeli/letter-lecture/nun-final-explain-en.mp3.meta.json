@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Final Nun — NOON so-FEET. Sound: same N sound as Nun, used only at the end of a word. Shape hook: long icicle below the floor. Tip: Much longer descender than Vav or Zayin, without a base foot; do not mix it up with Vav, Zayin, Final Kaf.",
+ "inputSha256": "d4b09e5fd8d280c0c8557f62aeda23656687996655e310207fc7d227cc30ea5d",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

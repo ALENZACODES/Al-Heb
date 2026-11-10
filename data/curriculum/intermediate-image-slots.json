@@ -1,0 +1,814 @@
+{
+ "schema": "alef-intermediate-image-slots/1",
+ "version": 1,
+ "status": "draft",
+ "note": "Two image slots per intermediate lesson. Each scene is one line meant as the core of a later image prompt. No images exist yet; nothing here has been generated or reviewed.",
+ "rules": [
+  "No text, letters, numbers, logos or readable signs anywhere in the image; blank or blurred surfaces instead.",
+  "No identifiable real people and no faces of real individuals; people are generic, mostly seen from behind, the side or at a distance.",
+  "Warm, realistic photographic style; the same style across the set.",
+  "Do not draw sacred texts with legible writing; ritual objects are shown plainly and respectfully."
+ ],
+ "lessons": [
+  {
+   "lesson": "I-01",
+   "title": "Shema and its blessings: Barchu, Shema, Baruch shem, V'ahavta",
+   "slots": [
+    {
+     "id": "I-01-img1",
+     "role": "opening scene",
+     "scene": "A congregation standing, one hand over the eyes, during the Shema, seen from behind in a warm sanctuary."
+    },
+    {
+     "id": "I-01-img2",
+     "role": "closing scene",
+     "scene": "A prayer book open on a wooden stand beside a pair of reading glasses, soft window light."
+    }
+   ]
+  },
+  {
+   "lesson": "I-02",
+   "title": "Amidah openings: open my lips, Avot, Kedushah responses",
+   "slots": [
+    {
+     "id": "I-02-img1",
+     "role": "opening scene",
+     "scene": "A worshipper standing alone with feet together in quiet prayer facing a plain stone wall."
+    },
+    {
+     "id": "I-02-img2",
+     "role": "closing scene",
+     "scene": "A cantor's hands resting on a lectern as the congregation rises behind in blurred rows."
+    }
+   ]
+  },
+  {
+   "lesson": "I-03",
+   "title": "Torah service responses: ark, aliyah blessings, returning the scroll",
+   "slots": [
+    {
+     "id": "I-03-img1",
+     "role": "opening scene",
+     "scene": "A Torah scroll carried slowly through a seated congregation, hands reaching out to touch it."
+    },
+    {
+     "id": "I-03-img2",
+     "role": "closing scene",
+     "scene": "An open ark with several scrolls in embroidered velvet covers, lit from inside."
+    }
+   ]
+  },
+  {
+   "lesson": "I-04",
+   "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
+   "slots": [
+    {
+     "id": "I-04-img1",
+     "role": "opening scene",
+     "scene": "A row of mourners standing together, shoulders touching, in a small prayer room."
+    },
+    {
+     "id": "I-04-img2",
+     "role": "closing scene",
+     "scene": "A single memorial candle burning on a table beside a closed prayer book."
+    }
+   ]
+  },
+  {
+   "lesson": "I-05",
+   "title": "Kiddush: candles, wine, bread and the Shabbat verses",
+   "slots": [
+    {
+     "id": "I-05-img1",
+     "role": "opening scene",
+     "scene": "A family around a Friday-night table with a silver cup of wine and two covered loaves."
+    },
+    {
+     "id": "I-05-img2",
+     "role": "closing scene",
+     "scene": "Two hands lifting a small kiddush cup toward the light of Shabbat candles."
+    }
+   ]
+  },
+  {
+   "lesson": "I-06",
+   "title": "Havdalah: wine, spices, flame and the separation blessing",
+   "slots": [
+    {
+     "id": "I-06-img1",
+     "role": "opening scene",
+     "scene": "A braided havdalah candle and a small spice box held up in a darkened room."
+    },
+    {
+     "id": "I-06-img2",
+     "role": "closing scene",
+     "scene": "Fingers curled toward a flame to see the light reflected on the nails, dim kitchen."
+    }
+   ]
+  },
+  {
+   "lesson": "I-07",
+   "title": "Hallel refrains: the lines the congregation sings back",
+   "slots": [
+    {
+     "id": "I-07-img1",
+     "role": "opening scene",
+     "scene": "A crowded hall of people singing with their mouths open, hands raised, festive light."
+    },
+    {
+     "id": "I-07-img2",
+     "role": "closing scene",
+     "scene": "A table with a cup of wine, a prayer book and a plate of dates, late afternoon."
+    }
+   ]
+  },
+  {
+   "lesson": "I-08",
+   "title": "Aleinu: the closing prayer and where to bow",
+   "slots": [
+    {
+     "id": "I-08-img1",
+     "role": "opening scene",
+     "scene": "Worshippers bowing low from the waist at the end of a service, seen from the side."
+    },
+    {
+     "id": "I-08-img2",
+     "role": "closing scene",
+     "scene": "A sunlit window of a synagogue with a tree outside and rows of empty chairs."
+    }
+   ]
+  },
+  {
+   "lesson": "I-09",
+   "title": "Adon Olam: the closing hymn line by line",
+   "slots": [
+    {
+     "id": "I-09-img1",
+     "role": "opening scene",
+     "scene": "People drifting out of a synagogue at midday, children running ahead down the steps."
+    },
+    {
+     "id": "I-09-img2",
+     "role": "closing scene",
+     "scene": "A small group at the door singing together with arms around each other's shoulders."
+    }
+   ]
+  },
+  {
+   "lesson": "I-10",
+   "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
+   "slots": [
+    {
+     "id": "I-10-img1",
+     "role": "opening scene",
+     "scene": "A person standing at the front of a congregation while others lean in to listen."
+    },
+    {
+     "id": "I-10-img2",
+     "role": "closing scene",
+     "scene": "A hospital corridor with a bunch of flowers on a chair and a window onto a garden."
+    }
+   ]
+  },
+  {
+   "lesson": "I-11",
+   "title": "Bus and train: tickets, platforms and getting off",
+   "slots": [
+    {
+     "id": "I-11-img1",
+     "role": "opening scene",
+     "scene": "A passenger tapping a transit card on a reader on a crowded city bus."
+    },
+    {
+     "id": "I-11-img2",
+     "role": "closing scene",
+     "scene": "A train platform at dusk with a waiting passenger and the lights of an approaching train."
+    }
+   ]
+  },
+  {
+   "lesson": "I-12",
+   "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+   "slots": [
+    {
+     "id": "I-12-img1",
+     "role": "opening scene",
+     "scene": "A covered market lane with crates of tomatoes, cucumbers and olives and a vendor holding up two fingers."
+    },
+    {
+     "id": "I-12-img2",
+     "role": "closing scene",
+     "scene": "Two hands exchanging coins and a paper bag of fruit across a wooden stall."
+    }
+   ]
+  },
+  {
+   "lesson": "I-13",
+   "title": "Cafe ordering: milk, sugar, sizes and the bill",
+   "slots": [
+    {
+     "id": "I-13-img1",
+     "role": "opening scene",
+     "scene": "A cafe counter with a glass of milky coffee, a pastry and a barista's hand sliding the cup forward."
+    },
+    {
+     "id": "I-13-img2",
+     "role": "closing scene",
+     "scene": "A sunny pavement table with two coffees, a small sugar pot and a street cat nearby."
+    }
+   ]
+  },
+  {
+   "lesson": "I-14",
+   "title": "Pharmacy: pain, fever, prescriptions and how often to take it",
+   "slots": [
+    {
+     "id": "I-14-img1",
+     "role": "opening scene",
+     "scene": "A pharmacist handing a small white box across the counter to a customer, shelves behind."
+    },
+    {
+     "id": "I-14-img2",
+     "role": "closing scene",
+     "scene": "A hand holding a thermometer and a glass of water beside a window."
+    }
+   ]
+  },
+  {
+   "lesson": "I-15",
+   "title": "Directions: streets, corners and 'how do I get to'",
+   "slots": [
+    {
+     "id": "I-15-img1",
+     "role": "opening scene",
+     "scene": "A traveller turning a paper map in a narrow old-city street, a stone archway ahead."
+    },
+    {
+     "id": "I-15-img2",
+     "role": "closing scene",
+     "scene": "A street corner with a traffic light, a bakery and a pedestrian pointing the way."
+    }
+   ]
+  },
+  {
+   "lesson": "I-16",
+   "title": "Phone and SIM: numbers, messages, battery and signal",
+   "slots": [
+    {
+     "id": "I-16-img1",
+     "role": "opening scene",
+     "scene": "A person holding a phone high to find a signal on a rooftop at sunset."
+    },
+    {
+     "id": "I-16-img2",
+     "role": "closing scene",
+     "scene": "A phone on a charger beside a cup of tea and an open notebook."
+    }
+   ]
+  },
+  {
+   "lesson": "I-17",
+   "title": "Apartment viewing: rooms, floor, rent and the landlord",
+   "slots": [
+    {
+     "id": "I-17-img1",
+     "role": "opening scene",
+     "scene": "A bright empty apartment living room with a balcony door open to a city view."
+    },
+    {
+     "id": "I-17-img2",
+     "role": "closing scene",
+     "scene": "A key being handed from one hand to another in front of a front door."
+    }
+   ]
+  },
+  {
+   "lesson": "I-18",
+   "title": "Army slang basics: how soldiers and their friends talk",
+   "slots": [
+    {
+     "id": "I-18-img1",
+     "role": "opening scene",
+     "scene": "Two young adults in plain olive clothes laughing on a bus with duffel bags at their feet."
+    },
+    {
+     "id": "I-18-img2",
+     "role": "closing scene",
+     "scene": "A kitchen table with a kit bag, a water bottle and a phone, early morning light."
+    }
+   ]
+  },
+  {
+   "lesson": "I-19",
+   "title": "Shabbat invitation: being invited, what to bring, saying thanks",
+   "slots": [
+    {
+     "id": "I-19-img1",
+     "role": "opening scene",
+     "scene": "A long Friday-night table with candles, wine, bread and guests laughing."
+    },
+    {
+     "id": "I-19-img2",
+     "role": "closing scene",
+     "scene": "A guest arriving at an open door holding a bottle and a cake box, hosts greeting."
+    }
+   ]
+  },
+  {
+   "lesson": "I-20",
+   "title": "Hospital and clinic: doctor, appointment, insurance, 'where does it hurt'",
+   "slots": [
+    {
+     "id": "I-20-img1",
+     "role": "opening scene",
+     "scene": "A clinic waiting room with a few chairs, a nurse's station and a window."
+    },
+    {
+     "id": "I-20-img2",
+     "role": "closing scene",
+     "scene": "A doctor's hand resting reassuringly on a patient's shoulder in a small exam room."
+    }
+   ]
+  },
+  {
+   "lesson": "I-21",
+   "title": "Bank: accounts, cash machines, exchanging money and signing",
+   "slots": [
+    {
+     "id": "I-21-img1",
+     "role": "opening scene",
+     "scene": "A bank counter with a clerk and a customer filling in a form with a pen."
+    },
+    {
+     "id": "I-21-img2",
+     "role": "closing scene",
+     "scene": "A cash machine on a sunny street wall with a person waiting behind."
+    }
+   ]
+  },
+  {
+   "lesson": "I-22",
+   "title": "Post office: parcels, letters, stamps and waiting your turn",
+   "slots": [
+    {
+     "id": "I-22-img1",
+     "role": "opening scene",
+     "scene": "A post office queue with parcels in hands and a clerk weighing a box on a scale."
+    },
+    {
+     "id": "I-22-img2",
+     "role": "closing scene",
+     "scene": "A small stack of stamped envelopes and a taped parcel on a counter."
+    }
+   ]
+  },
+  {
+   "lesson": "I-23",
+   "title": "Taxi: destination, meter, 'slower' and the receipt",
+   "slots": [
+    {
+     "id": "I-23-img1",
+     "role": "opening scene",
+     "scene": "A taxi at a kerb with the driver leaning over to a passenger's window."
+    },
+    {
+     "id": "I-23-img2",
+     "role": "closing scene",
+     "scene": "A passenger's view from the back seat of a road at dusk with a meter glowing."
+    }
+   ]
+  },
+  {
+   "lesson": "I-24",
+   "title": "Weather: hot, cold, rain, sun and what to take",
+   "slots": [
+    {
+     "id": "I-24-img1",
+     "role": "opening scene",
+     "scene": "A street under a sudden rain shower with open umbrellas and wet pavement."
+    },
+    {
+     "id": "I-24-img2",
+     "role": "closing scene",
+     "scene": "A bright beach-front promenade at noon with a hot haze over the sea."
+    }
+   ]
+  },
+  {
+   "lesson": "I-25",
+   "title": "Small talk: where you're from, how long you've been here, keeping in touch",
+   "slots": [
+    {
+     "id": "I-25-img1",
+     "role": "opening scene",
+     "scene": "Two strangers chatting on a bench in a park, one holding a language notebook."
+    },
+    {
+     "id": "I-25-img2",
+     "role": "closing scene",
+     "scene": "A cafe terrace conversation between three people with coffees and gestures."
+    }
+   ]
+  },
+  {
+   "lesson": "I-26",
+   "title": "The full Torah service in order: ark, reading, lifting, returning",
+   "slots": [
+    {
+     "id": "I-26-img1",
+     "role": "opening scene",
+     "scene": "A congregation seated facing the reading table as a scroll is lifted high above it."
+    },
+    {
+     "id": "I-26-img2",
+     "role": "closing scene",
+     "scene": "A reader's silver pointer resting on an open unrolled scroll."
+    }
+   ]
+  },
+  {
+   "lesson": "I-27",
+   "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
+   "slots": [
+    {
+     "id": "I-27-img1",
+     "role": "opening scene",
+     "scene": "A sanctuary at the peak of the service with everyone rising on tiptoe together."
+    },
+    {
+     "id": "I-27-img2",
+     "role": "closing scene",
+     "scene": "A pair of worshippers taking three small steps backward at the end of silent prayer."
+    }
+   ]
+  },
+  {
+   "lesson": "I-28",
+   "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+   "slots": [
+    {
+     "id": "I-28-img1",
+     "role": "opening scene",
+     "scene": "A synagogue at dusk with white-clad worshippers standing in a long silent line."
+    },
+    {
+     "id": "I-28-img2",
+     "role": "closing scene",
+     "scene": "A ram's horn resting on a white cloth beside a prayer book."
+    }
+   ]
+  },
+  {
+   "lesson": "I-29",
+   "title": "Pesach: the seder blessings the corpus holds",
+   "slots": [
+    {
+     "id": "I-29-img1",
+     "role": "opening scene",
+     "scene": "A festive table with matzo, a seder plate of small dishes and a cup of wine."
+    },
+    {
+     "id": "I-29-img2",
+     "role": "closing scene",
+     "scene": "A child's wide eyes at a holiday table lit by candlelight."
+    }
+   ]
+  },
+  {
+   "lesson": "I-30",
+   "title": "Sukkot: sukkah words and the blessings that carry over",
+   "slots": [
+    {
+     "id": "I-30-img1",
+     "role": "opening scene",
+     "scene": "A leafy hut built on a balcony with fruit hanging from its roof and a table set inside."
+    },
+    {
+     "id": "I-30-img2",
+     "role": "closing scene",
+     "scene": "A family eating together inside a temporary booth with the night sky visible through the branches."
+    }
+   ]
+  },
+  {
+   "lesson": "I-31",
+   "title": "Purim: the miracle blessing and the words of the day",
+   "slots": [
+    {
+     "id": "I-31-img1",
+     "role": "opening scene",
+     "scene": "Children in colourful homemade costumes in a street parade, faces turned to a noise-maker."
+    },
+    {
+     "id": "I-31-img2",
+     "role": "closing scene",
+     "scene": "A table of triangular pastries and gift baskets wrapped in ribbon."
+    }
+   ]
+  },
+  {
+   "lesson": "I-32",
+   "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
+   "slots": [
+    {
+     "id": "I-32-img1",
+     "role": "opening scene",
+     "scene": "A window sill with a candelabrum of lit candles and a dark street beyond."
+    },
+    {
+     "id": "I-32-img2",
+     "role": "closing scene",
+     "scene": "A child lighting a candle with the helper flame while a parent watches."
+    }
+   ]
+  },
+  {
+   "lesson": "I-33",
+   "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
+   "slots": [
+    {
+     "id": "I-33-img1",
+     "role": "opening scene",
+     "scene": "A table after a meal with empty plates, crumbs and people leaning back and singing softly."
+    },
+    {
+     "id": "I-33-img2",
+     "role": "closing scene",
+     "scene": "Hands passing a small book around a table of friends after dinner."
+    }
+   ]
+  },
+  {
+   "lesson": "I-34",
+   "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
+   "slots": [
+    {
+     "id": "I-34-img1",
+     "role": "opening scene",
+     "scene": "A traveller at an airport window with a bag at their feet and a plane on the runway."
+    },
+    {
+     "id": "I-34-img2",
+     "role": "closing scene",
+     "scene": "A quiet road at dawn with a lone car and hills in the distance."
+    }
+   ]
+  },
+  {
+   "lesson": "I-35",
+   "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
+   "slots": [
+    {
+     "id": "I-35-img1",
+     "role": "opening scene",
+     "scene": "A long Saturday lunch table in a garden with wine, bread and a crowd of guests."
+    },
+    {
+     "id": "I-35-img2",
+     "role": "closing scene",
+     "scene": "A kiddush cup being passed along a table of smiling neighbours."
+    }
+   ]
+  },
+  {
+   "lesson": "I-36",
+   "title": "Work: office, meeting, boss and interview",
+   "slots": [
+    {
+     "id": "I-36-img1",
+     "role": "opening scene",
+     "scene": "A modern shared office with colleagues around a table and a window onto the city."
+    },
+    {
+     "id": "I-36-img2",
+     "role": "closing scene",
+     "scene": "A job interview seen from the side, two people across a desk, handshake just ending."
+    }
+   ]
+  },
+  {
+   "lesson": "I-37",
+   "title": "University: courses, lectures, exams and scholarships",
+   "slots": [
+    {
+     "id": "I-37-img1",
+     "role": "opening scene",
+     "scene": "A campus lawn with students sitting on the grass with books and laptops."
+    },
+    {
+     "id": "I-37-img2",
+     "role": "closing scene",
+     "scene": "A lecture hall seen from the back with a speaker at the front and rows of listeners."
+    }
+   ]
+  },
+  {
+   "lesson": "I-38",
+   "title": "Dating and going out: asking someone out, plans and compliments",
+   "slots": [
+    {
+     "id": "I-38-img1",
+     "role": "opening scene",
+     "scene": "Two people on a first date at a small restaurant table, candle between them, mid-laugh."
+    },
+    {
+     "id": "I-38-img2",
+     "role": "closing scene",
+     "scene": "Friends in a cinema queue at night with warm light on their faces."
+    }
+   ]
+  },
+  {
+   "lesson": "I-39",
+   "title": "Driving: car, road, signs, fuel and parking",
+   "slots": [
+    {
+     "id": "I-39-img1",
+     "role": "opening scene",
+     "scene": "A car stopped at a red traffic light on a wide city road at sunset."
+    },
+    {
+     "id": "I-39-img2",
+     "role": "closing scene",
+     "scene": "A driver's hands on the wheel and a road bending toward hills."
+    }
+   ]
+  },
+  {
+   "lesson": "I-40",
+   "title": "Hiking: trail, mountain, stream, water and the map",
+   "slots": [
+    {
+     "id": "I-40-img1",
+     "role": "opening scene",
+     "scene": "Hikers on a narrow dry trail along a stream with a hill rising behind."
+    },
+    {
+     "id": "I-40-img2",
+     "role": "closing scene",
+     "scene": "A paper map and a water bottle on a flat rock in the sun."
+    }
+   ]
+  },
+  {
+   "lesson": "I-41",
+   "title": "Beach: sea, sand, towel and swimming",
+   "slots": [
+    {
+     "id": "I-41-img1",
+     "role": "opening scene",
+     "scene": "A wide Mediterranean beach with umbrellas, sand and a calm sea."
+    },
+    {
+     "id": "I-41-img2",
+     "role": "closing scene",
+     "scene": "A towel and a hat left on the sand beside footprints leading to the water."
+    }
+   ]
+  },
+  {
+   "lesson": "I-42",
+   "title": "Kids: asking about children, school and play",
+   "slots": [
+    {
+     "id": "I-42-img1",
+     "role": "opening scene",
+     "scene": "Children running across a playground while a parent watches from a bench."
+    },
+    {
+     "id": "I-42-img2",
+     "role": "closing scene",
+     "scene": "A kindergarten room with small chairs, drawings on the wall and a teacher kneeling beside a child."
+    }
+   ]
+  },
+  {
+   "lesson": "I-43",
+   "title": "Supermarket: aisles, prices, bags and the checkout",
+   "slots": [
+    {
+     "id": "I-43-img1",
+     "role": "opening scene",
+     "scene": "A supermarket aisle with a full trolley and shelves of bread, milk and fruit."
+    },
+    {
+     "id": "I-43-img2",
+     "role": "closing scene",
+     "scene": "A checkout belt with groceries and a hand holding out a card."
+    }
+   ]
+  },
+  {
+   "lesson": "I-44",
+   "title": "Repairs and the landlord: something is broken",
+   "slots": [
+    {
+     "id": "I-44-img1",
+     "role": "opening scene",
+     "scene": "A landlord and tenant looking at a broken fridge with the door hanging open."
+    },
+    {
+     "id": "I-44-img2",
+     "role": "closing scene",
+     "scene": "An electrician on a stool with a torch inspecting a ceiling light."
+    }
+   ]
+  },
+  {
+   "lesson": "I-45",
+   "title": "Ordering delivery: pizza, address, floor and the courier",
+   "slots": [
+    {
+     "id": "I-45-img1",
+     "role": "opening scene",
+     "scene": "A delivery rider on a scooter arriving at an apartment block at night with a box on the back."
+    },
+    {
+     "id": "I-45-img2",
+     "role": "closing scene",
+     "scene": "A hand taking a warm pizza box through a half-open door."
+    }
+   ]
+  },
+  {
+   "lesson": "I-46",
+   "title": "Emergencies: police, ambulance, fire and calling for help",
+   "slots": [
+    {
+     "id": "I-46-img1",
+     "role": "opening scene",
+     "scene": "An ambulance with its lights on at the kerb of a quiet street at night and a crowd standing back."
+    },
+    {
+     "id": "I-46-img2",
+     "role": "closing scene",
+     "scene": "A person on a phone in a stairwell looking worried, a police car's blue light on the wall."
+    }
+   ]
+  },
+  {
+   "lesson": "I-47",
+   "title": "News headlines: government, elections, war and peace, prices",
+   "slots": [
+    {
+     "id": "I-47-img1",
+     "role": "opening scene",
+     "scene": "A family watching a television news broadcast in a living room, faces serious."
+    },
+    {
+     "id": "I-47-img2",
+     "role": "closing scene",
+     "scene": "A newsstand with a stack of folded newspapers and a hand taking one."
+    }
+   ]
+  },
+  {
+   "lesson": "I-48",
+   "title": "Banking forms: name, number, signature and date",
+   "slots": [
+    {
+     "id": "I-48-img1",
+     "role": "opening scene",
+     "scene": "A person signing a paper form at a desk with a pen and a folder of documents."
+    },
+    {
+     "id": "I-48-img2",
+     "role": "closing scene",
+     "scene": "A banker's desk with a calculator, a folder and two cups of coffee."
+    }
+   ]
+  },
+  {
+   "lesson": "I-49",
+   "title": "Social media: posting, messages, photos and passwords",
+   "slots": [
+    {
+     "id": "I-49-img1",
+     "role": "opening scene",
+     "scene": "A friend group leaning together to take a photo on a phone at a street festival."
+    },
+    {
+     "id": "I-49-img2",
+     "role": "closing scene",
+     "scene": "A hand scrolling a phone screen beside a cup of coffee, blurred cafe behind."
+    }
+   ]
+  },
+  {
+   "lesson": "I-50",
+   "title": "Holiday greetings by festival: who says what, and when",
+   "slots": [
+    {
+     "id": "I-50-img1",
+     "role": "opening scene",
+     "scene": "Neighbours greeting each other on a street with flowers and holiday decorations."
+    },
+    {
+     "id": "I-50-img2",
+     "role": "closing scene",
+     "scene": "A table with a honey jar, an apple, a candle and a card, set for a festive greeting."
+    }
+   ]
+  }
+ ]
+}

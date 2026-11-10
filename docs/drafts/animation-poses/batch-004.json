@@ -1,0 +1,1846 @@
+{
+  "batch": 4,
+  "short": false,
+  "count": 100,
+  "status": "DRAFT, not reviewed",
+  "files": [
+    {
+      "file": "window-k2.svg",
+      "phase": "C",
+      "item": "window",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "window — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "window-k3.svg",
+      "phase": "C",
+      "item": "window",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "window — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "window-k4.svg",
+      "phase": "C",
+      "item": "window",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "window — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "window-k5.svg",
+      "phase": "C",
+      "item": "window",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "window — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "sun-k1.svg",
+      "phase": "C",
+      "item": "sun",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sun — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "sun-k2.svg",
+      "phase": "C",
+      "item": "sun",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sun — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "sun-k3.svg",
+      "phase": "C",
+      "item": "sun",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sun — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "sun-k4.svg",
+      "phase": "C",
+      "item": "sun",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sun — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "sun-k5.svg",
+      "phase": "C",
+      "item": "sun",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "sun — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "moon-k1.svg",
+      "phase": "C",
+      "item": "moon",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "moon — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "moon-k2.svg",
+      "phase": "C",
+      "item": "moon",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "moon — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "moon-k3.svg",
+      "phase": "C",
+      "item": "moon",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "moon — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "moon-k4.svg",
+      "phase": "C",
+      "item": "moon",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "moon — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "moon-k5.svg",
+      "phase": "C",
+      "item": "moon",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "moon — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "star-k1.svg",
+      "phase": "C",
+      "item": "star",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "star — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "star-k2.svg",
+      "phase": "C",
+      "item": "star",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "star — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "star-k3.svg",
+      "phase": "C",
+      "item": "star",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "star — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "star-k4.svg",
+      "phase": "C",
+      "item": "star",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "star — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "star-k5.svg",
+      "phase": "C",
+      "item": "star",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "star — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "tree-k1.svg",
+      "phase": "C",
+      "item": "tree",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tree — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "tree-k2.svg",
+      "phase": "C",
+      "item": "tree",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tree — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "tree-k3.svg",
+      "phase": "C",
+      "item": "tree",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tree — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "tree-k4.svg",
+      "phase": "C",
+      "item": "tree",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tree — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "tree-k5.svg",
+      "phase": "C",
+      "item": "tree",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tree — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "flower-k1.svg",
+      "phase": "C",
+      "item": "flower",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "flower — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "flower-k2.svg",
+      "phase": "C",
+      "item": "flower",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "flower — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "flower-k3.svg",
+      "phase": "C",
+      "item": "flower",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "flower — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "flower-k4.svg",
+      "phase": "C",
+      "item": "flower",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "flower — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "flower-k5.svg",
+      "phase": "C",
+      "item": "flower",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "flower — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "dog-k1.svg",
+      "phase": "C",
+      "item": "dog",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dog — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "dog-k2.svg",
+      "phase": "C",
+      "item": "dog",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dog — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "dog-k3.svg",
+      "phase": "C",
+      "item": "dog",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dog — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "dog-k4.svg",
+      "phase": "C",
+      "item": "dog",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dog — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "dog-k5.svg",
+      "phase": "C",
+      "item": "dog",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "dog — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "cat-k1.svg",
+      "phase": "C",
+      "item": "cat",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cat — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "cat-k2.svg",
+      "phase": "C",
+      "item": "cat",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cat — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "cat-k3.svg",
+      "phase": "C",
+      "item": "cat",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cat — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "cat-k4.svg",
+      "phase": "C",
+      "item": "cat",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cat — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "cat-k5.svg",
+      "phase": "C",
+      "item": "cat",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "cat — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bird-k1.svg",
+      "phase": "C",
+      "item": "bird",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bird — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bird-k2.svg",
+      "phase": "C",
+      "item": "bird",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bird — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bird-k3.svg",
+      "phase": "C",
+      "item": "bird",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bird — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bird-k4.svg",
+      "phase": "C",
+      "item": "bird",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bird — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bird-k5.svg",
+      "phase": "C",
+      "item": "bird",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bird — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "fish-k1.svg",
+      "phase": "C",
+      "item": "fish",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fish — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "fish-k2.svg",
+      "phase": "C",
+      "item": "fish",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fish — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "fish-k3.svg",
+      "phase": "C",
+      "item": "fish",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fish — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "fish-k4.svg",
+      "phase": "C",
+      "item": "fish",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fish — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "fish-k5.svg",
+      "phase": "C",
+      "item": "fish",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "fish — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "milk-k1.svg",
+      "phase": "C",
+      "item": "milk",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "milk — pose 1",
+      "doubt": "Unlabelled carton may also suggest juice; retain accessible context."
+    },
+    {
+      "file": "milk-k2.svg",
+      "phase": "C",
+      "item": "milk",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "milk — pose 2",
+      "doubt": "Unlabelled carton may also suggest juice; retain accessible context."
+    },
+    {
+      "file": "milk-k3.svg",
+      "phase": "C",
+      "item": "milk",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "milk — pose 3",
+      "doubt": "Unlabelled carton may also suggest juice; retain accessible context."
+    },
+    {
+      "file": "milk-k4.svg",
+      "phase": "C",
+      "item": "milk",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "milk — pose 4",
+      "doubt": "Unlabelled carton may also suggest juice; retain accessible context."
+    },
+    {
+      "file": "milk-k5.svg",
+      "phase": "C",
+      "item": "milk",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "milk — pose 5",
+      "doubt": "Unlabelled carton may also suggest juice; retain accessible context."
+    },
+    {
+      "file": "egg-k1.svg",
+      "phase": "C",
+      "item": "egg",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "egg — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "egg-k2.svg",
+      "phase": "C",
+      "item": "egg",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "egg — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "egg-k3.svg",
+      "phase": "C",
+      "item": "egg",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "egg — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "egg-k4.svg",
+      "phase": "C",
+      "item": "egg",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "egg — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "egg-k5.svg",
+      "phase": "C",
+      "item": "egg",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "egg — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "apple-k1.svg",
+      "phase": "C",
+      "item": "apple",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "apple — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "apple-k2.svg",
+      "phase": "C",
+      "item": "apple",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "apple — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "apple-k3.svg",
+      "phase": "C",
+      "item": "apple",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "apple — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "apple-k4.svg",
+      "phase": "C",
+      "item": "apple",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "apple — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "apple-k5.svg",
+      "phase": "C",
+      "item": "apple",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "apple — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "olive-k1.svg",
+      "phase": "C",
+      "item": "olive",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "olive — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "olive-k2.svg",
+      "phase": "C",
+      "item": "olive",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "olive — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "olive-k3.svg",
+      "phase": "C",
+      "item": "olive",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "olive — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "olive-k4.svg",
+      "phase": "C",
+      "item": "olive",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "olive — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "olive-k5.svg",
+      "phase": "C",
+      "item": "olive",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "olive — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "wine-glass-k1.svg",
+      "phase": "C",
+      "item": "wine-glass",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "wine glass — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "wine-glass-k2.svg",
+      "phase": "C",
+      "item": "wine-glass",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "wine glass — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "wine-glass-k3.svg",
+      "phase": "C",
+      "item": "wine-glass",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "wine glass — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "wine-glass-k4.svg",
+      "phase": "C",
+      "item": "wine-glass",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "wine glass — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "wine-glass-k5.svg",
+      "phase": "C",
+      "item": "wine-glass",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "wine glass — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "key-k1.svg",
+      "phase": "C",
+      "item": "key",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "key — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "key-k2.svg",
+      "phase": "C",
+      "item": "key",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "key — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "key-k3.svg",
+      "phase": "C",
+      "item": "key",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "key — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "key-k4.svg",
+      "phase": "C",
+      "item": "key",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "key — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "key-k5.svg",
+      "phase": "C",
+      "item": "key",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "key — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "phone-k1.svg",
+      "phase": "C",
+      "item": "phone",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "phone — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "phone-k2.svg",
+      "phase": "C",
+      "item": "phone",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "phone — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "phone-k3.svg",
+      "phase": "C",
+      "item": "phone",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "phone — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "phone-k4.svg",
+      "phase": "C",
+      "item": "phone",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "phone — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "phone-k5.svg",
+      "phase": "C",
+      "item": "phone",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "phone — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "car-k1.svg",
+      "phase": "C",
+      "item": "car",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "car — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "car-k2.svg",
+      "phase": "C",
+      "item": "car",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "car — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "car-k3.svg",
+      "phase": "C",
+      "item": "car",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "car — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "car-k4.svg",
+      "phase": "C",
+      "item": "car",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "car — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "car-k5.svg",
+      "phase": "C",
+      "item": "car",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "car — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bus-k1.svg",
+      "phase": "C",
+      "item": "bus",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bus — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bus-k2.svg",
+      "phase": "C",
+      "item": "bus",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bus — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bus-k3.svg",
+      "phase": "C",
+      "item": "bus",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bus — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bus-k4.svg",
+      "phase": "C",
+      "item": "bus",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bus — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "bus-k5.svg",
+      "phase": "C",
+      "item": "bus",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "bus — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "train-k1.svg",
+      "phase": "C",
+      "item": "train",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "train — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "train-k2.svg",
+      "phase": "C",
+      "item": "train",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "train — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "train-k3.svg",
+      "phase": "C",
+      "item": "train",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "train — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "train-k4.svg",
+      "phase": "C",
+      "item": "train",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "train — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "train-k5.svg",
+      "phase": "C",
+      "item": "train",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "train — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ticket-k1.svg",
+      "phase": "C",
+      "item": "ticket",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ticket — pose 1",
+      "doubt": "n/a"
+    }
+  ],
+  "doubts": [
+    {
+      "file": "milk-k1.svg",
+      "what": "Unlabelled carton may also suggest juice; retain accessible context.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "milk-k2.svg",
+      "what": "Unlabelled carton may also suggest juice; retain accessible context.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "milk-k3.svg",
+      "what": "Unlabelled carton may also suggest juice; retain accessible context.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "milk-k4.svg",
+      "what": "Unlabelled carton may also suggest juice; retain accessible context.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "milk-k5.svg",
+      "what": "Unlabelled carton may also suggest juice; retain accessible context.",
+      "tag": "?? CHECK"
+    }
+  ]
+}

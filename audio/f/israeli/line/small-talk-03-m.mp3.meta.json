@@ -1,0 +1,18 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "מֵאֵיפֹה אַתָּה?",
+ "inputSha256": "722b07764316c8158d6c0014030ef5a496f1465b688f311eb5881139f7fab329",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מֵאֵיפֹה אַתָּה?",
+ "stitchedFrom": [
+  "audio-takes/f/wa4b0399196-p.mp3",
+  "audio/f/israeli/word/avot-1-w2.mp3"
+ ]
+}

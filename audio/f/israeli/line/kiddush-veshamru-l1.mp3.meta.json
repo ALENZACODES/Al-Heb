@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃",
+ "inputSha256": "9ec528ae32ecdb03b63e489792edb37041798ee0408fdd449a59233cc20e2315",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/i-05-w11.mp3",
+  "audio/f/israeli/word/kiddush-veshamru-w2.mp3",
+  "audio/f/israeli/word/kiddush-veshamru-w3.mp3",
+  "audio/f/israeli/word/kiddush-gen-2-1-3-w30.mp3",
+  "audio/f/israeli/word/kiddush-veshamru-w3.mp3",
+  "audio/f/israeli/word/kiddush-veshamru-w6.mp3",
+  "audio/f/israeli/word/h39b463af.mp3",
+  "audio/f/israeli/word/adon-olam-1-w2.mp3"
+ ]
+}

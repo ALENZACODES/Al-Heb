@@ -1,0 +1,399 @@
+{
+ "id": "I-14",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Pharmacy: pain, fever, prescriptions and how often to take it",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "בֵּית מֶרְקַחַת",
+   "en": "pharmacy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beit merkachat"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p61bec400"
+   }
+  },
+  {
+   "he": "תְּרוּפָה",
+   "en": "medicine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "terufah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0047024c"
+   }
+  },
+  {
+   "he": "כַּדּוּרִים",
+   "en": "pills",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kadurim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he314ca8e#forms.plural"
+   }
+  },
+  {
+   "he": "מִרְשָׁם",
+   "en": "prescription",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mirsham"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "haf8e95dd"
+   }
+  },
+  {
+   "he": "כְּאֵב רֹאשׁ",
+   "en": "headache",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ke'ev rosh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּאֵב",
+     "רֹאשׁ"
+    ]
+   }
+  },
+  {
+   "he": "כְּאֵב גָּרוֹן",
+   "en": "sore throat",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ke'ev garon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּאֵב",
+     "גָּרוֹן"
+    ]
+   }
+  },
+  {
+   "he": "כְּאֵב בֶּטֶן",
+   "en": "stomach ache",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ke'ev beten"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּאֵב",
+     "בֶּטֶן"
+    ]
+   }
+  },
+  {
+   "he": "חֹם",
+   "en": "fever",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he527093f"
+   }
+  },
+  {
+   "he": "נֶגֶד",
+   "en": "against, for (a symptom)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "neged"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5965e00c"
+   }
+  },
+  {
+   "he": "פַּעַם בְּיוֹם",
+   "en": "once a day",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pa'am beyom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "פַּעַם",
+     "בְּיוֹם"
+    ]
+   }
+  },
+  {
+   "he": "פַּעֲמַיִם בְּיוֹם",
+   "en": "twice a day",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pa'amayim beyom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "פַּעֲמַיִם",
+     "בְּיוֹם"
+    ]
+   }
+  },
+  {
+   "he": "אַחֲרֵי",
+   "en": "after",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "acharei"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "ha7a8a47a"
+   }
+  },
+  {
+   "he": "לִפְנֵי",
+   "en": "before",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lifnei"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h40502f8d"
+   }
+  },
+  {
+   "he": "אָלֶרְגִּי",
+   "en": "allergic (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "alergi"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h375ca4cd"
+   }
+  },
+  {
+   "he": "אַנְטִיבְּיוֹטִיקָה",
+   "en": "antibiotics",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "antibeyotikah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hdbc9b05f"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Describe a headache, sore throat, stomach ache or fever",
+  "Ask for something for it and whether a prescription is needed",
+  "Understand how many times a day to take it"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-14-e01",
+   "type": "produce",
+   "en": "where is the pharmacy?",
+   "options": [
+    "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+    "אֵיפֹה בֵּית הַחוֹלִים?",
+    "אֵיפֹה הַתַּחֲנָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-14-e02",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "כְּאֵב רֹאשׁ",
+     "en": "headache"
+    },
+    {
+     "he": "כְּאֵב גָּרוֹן",
+     "en": "sore throat"
+    },
+    {
+     "he": "כְּאֵב בֶּטֶן",
+     "en": "stomach ache"
+    },
+    {
+     "he": "חֹם",
+     "en": "fever"
+    }
+   ]
+  },
+  {
+   "id": "I-14-e03",
+   "type": "order",
+   "he": "יֵשׁ לִי כְּאֵב רֹאשׁ",
+   "en": "I have a headache"
+  },
+  {
+   "id": "I-14-e04",
+   "type": "respond",
+   "cue": "Tell the pharmacist you have a fever.",
+   "answer": {
+    "he": "יֵשׁ לִי חֹם",
+    "en": "I have a fever"
+   }
+  },
+  {
+   "id": "I-14-e05",
+   "type": "produce",
+   "en": "something for a headache",
+   "options": [
+    "מַשֶּׁהוּ נֶגֶד כְּאֵב רֹאשׁ",
+    "מַשֶּׁהוּ נֶגֶד חֹם",
+    "מַשֶּׁהוּ נֶגֶד כְּאֵב בֶּטֶן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-14-e06",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, יֵשׁ לִי כְּאֵב גָּרוֹן. יֵשׁ מַשֶּׁהוּ נֶגֶד זֶה?",
+     "en": "Hello, I have a sore throat. Is there something for it?"
+    },
+    {
+     "speaker": "b",
+     "he": "כֵּן. יֵשׁ לְךָ חֹם?",
+     "en": "Yes. Do you have a fever?"
+    },
+    {
+     "speaker": "a",
+     "he": "לֹא.",
+     "en": "No."
+    },
+    {
+     "speaker": "b",
+     "he": "לָקַחַת פַּעֲמַיִם בְּיוֹם, אַחֲרֵי אֹכֶל.",
+     "en": "To take twice a day, after food."
+    }
+   ],
+   "task": "Say the customer's lines, then repeat the pharmacist's instruction."
+  },
+  {
+   "id": "I-14-e07",
+   "type": "respond",
+   "cue": "Ask whether you need a prescription.",
+   "answer": {
+    "he": "צָרִיךְ מִרְשָׁם?",
+    "en": "Is a prescription needed?"
+   }
+  },
+  {
+   "id": "I-14-e08",
+   "type": "gender",
+   "m": "יֵשׁ לְךָ מִרְשָׁם?",
+   "f": "יֵשׁ לָךְ מִרְשָׁם?",
+   "en": "Do you have a prescription?"
+  },
+  {
+   "id": "I-14-e09",
+   "type": "produce",
+   "en": "twice a day",
+   "options": [
+    "פַּעֲמַיִם בְּיוֹם",
+    "פַּעַם בְּיוֹם",
+    "שָׁלוֹשׁ פְּעָמִים בְּיוֹם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-14-e10",
+   "type": "order",
+   "he": "שָׁלוֹשׁ פְּעָמִים בְּיוֹם, עִם מַיִם",
+   "en": "Three times a day, with water"
+  },
+  {
+   "id": "I-14-e11",
+   "type": "produce",
+   "en": "after food",
+   "options": [
+    "אַחֲרֵי אֹכֶל",
+    "לִפְנֵי אֹכֶל",
+    "עִם מַיִם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-14-e12",
+   "type": "gender",
+   "m": "אֲנִי אָלֶרְגִּי לְ",
+   "f": "אֲנִי אָלֶרְגִּית לְ",
+   "en": "I'm allergic to ..."
+  },
+  {
+   "id": "I-14-e13",
+   "type": "recall",
+   "he": "אַנְטִיבְּיוֹטִיקָה",
+   "en": "antibiotics"
+  },
+  {
+   "id": "I-14-e14",
+   "type": "recall",
+   "he": "כַּדּוּרִים",
+   "en": "pills"
+  },
+  {
+   "id": "I-14-e15",
+   "type": "produce",
+   "en": "medicine",
+   "options": [
+    "תְּרוּפָה",
+    "תַּחְבֹּשֶׁת",
+    "מִרְשָׁם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-14-e16",
+   "type": "respond",
+   "cue": "You feel unwell and want to say so.",
+   "answer": {
+    "he": "אֲנִי לֹא מַרְגִּישׁ טוֹב",
+    "en": "I don't feel well"
+   }
+  }
+ ],
+ "note": "The imperative 'take' (kach / kchi) has no pointed token in the allowed sources, so the pharmacist uses the infinitive."
+}

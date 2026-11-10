@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-science-ideas-3",
+ "title": "Science and ideas 3",
+ "theme": "science-ideas",
+ "level": "B1",
+ "track": "israel",
+ "pack": "science-ideas-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h788c5f0a",
+   "he": "עֶצֶם",
+   "translit": "etzem",
+   "en": "bone",
+   "kind": "word",
+   "audioId": "h788c5f0a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h761c6cb9",
+   "he": "זָהָב",
+   "translit": "zahav",
+   "en": "gold (metal)",
+   "kind": "word",
+   "audioId": "r23-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbb24a2a3",
+   "he": "שִׂחֵק",
+   "translit": "sichek",
+   "en": "to play",
+   "kind": "word",
+   "audioId": "hbb24a2a3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf4758d4d",
+   "he": "רֹק",
+   "translit": "rok",
+   "en": "saliva",
+   "kind": "word",
+   "audioId": "hf4758d4d",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hde82cf75",
+   "he": "הִטָּה",
+   "translit": "hitah",
+   "en": "to tilt, slant",
+   "kind": "word",
+   "audioId": "hde82cf75",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h87f1b5a9",
+   "he": "זָכָר",
+   "translit": "zakhar",
+   "en": "man, male",
+   "kind": "word",
+   "audioId": "h87f1b5a9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc6597ed8",
+   "he": "נְקֻדָּה",
+   "translit": "nekudah",
+   "en": "point",
+   "kind": "word",
+   "audioId": "hc6597ed8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6b43040f",
+   "he": "צֶוֶת",
+   "translit": "tzevet",
+   "en": "crew, squad, team",
+   "kind": "word",
+   "audioId": "h6b43040f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h447cab37",
+   "he": "קְבוּצָה",
+   "translit": "kevutzah",
+   "en": "group",
+   "kind": "word",
+   "audioId": "h447cab37",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8cbd3155",
+   "he": "רָקַד",
+   "translit": "rakad",
+   "en": "dance, skip",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h46266386",
+   "he": "לְמַטָּה",
+   "translit": "lematah",
+   "en": "down, downward",
+   "kind": "word",
+   "audioId": "h46266386",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h61ba0237",
+   "he": "אָחוּז",
+   "translit": "achuz",
+   "en": "held, grasped",
+   "kind": "word",
+   "audioId": "h61ba0237",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

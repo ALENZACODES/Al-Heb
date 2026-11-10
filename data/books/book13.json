@@ -1,0 +1,177 @@
+{
+ "id": "book13",
+ "titleHe": "יֵשׁ לִי, אֵין לִי",
+ "titleTranslit": "Yesh Li, Ein Li",
+ "titleEn": "I Have, I Don't Have",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "נָדָב בַּבַּיִת.",
+   "translit": "Nadav ba-bayit.",
+   "en": "Nadav is at home.",
+   "img": "assets/books/book13/BOOK13_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p01.mp3",
+    "m": "audio/m/israeli/book/book13-p01.mp3"
+   },
+   "illustration": "a man in a small bright apartment, plants everywhere",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "יֵשׁ לִי בַּיִת.",
+   "translit": "Yesh li bayit.",
+   "en": "I have a home.",
+   "img": "assets/books/book13/BOOK13_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p02.mp3",
+    "m": "audio/m/israeli/book/book13-p02.mp3"
+   },
+   "illustration": "the man looking around his flat with quiet satisfaction",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "יֵשׁ לִי חָתוּל.",
+   "translit": "Yesh li chatul.",
+   "en": "I have a cat.",
+   "img": "assets/books/book13/BOOK13_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p03.mp3",
+    "m": "audio/m/israeli/book/book13-p03.mp3"
+   },
+   "illustration": "a grey cat on the windowsill",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "יֵשׁ לִי עֲבוֹדָה.",
+   "translit": "Yesh li avodah.",
+   "en": "I have a job.",
+   "img": "assets/books/book13/BOOK13_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p04.mp3",
+    "m": "audio/m/israeli/book/book13-p04.mp3"
+   },
+   "illustration": "a laptop with a video call grid open",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "אֵין לִי זְמַן.",
+   "translit": "Ein li zman.",
+   "en": "I don't have time.",
+   "img": "assets/books/book13/BOOK13_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p05.mp3",
+    "m": "audio/m/israeli/book/book13-p05.mp3"
+   },
+   "illustration": "a wall calendar covered in notes",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "אֵין לִי אוֹטוֹ.",
+   "translit": "Ein li oto.",
+   "en": "I don't have a car.",
+   "img": "assets/books/book13/BOOK13_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p06.mp3",
+    "m": "audio/m/israeli/book/book13-p06.mp3"
+   },
+   "illustration": "a bus pass and a helmet on a hook",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "יֵשׁ לִי אוֹפַנַּיִם.",
+   "translit": "Yesh li ofanayim.",
+   "en": "I have a bicycle.",
+   "img": "assets/books/book13/BOOK13_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p07.mp3",
+    "m": "audio/m/israeli/book/book13-p07.mp3"
+   },
+   "illustration": "a bicycle leaning in the hallway",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "אֵין לִי כֶּסֶף.",
+   "translit": "Ein li kesef.",
+   "en": "I don't have money.",
+   "img": "assets/books/book13/BOOK13_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p08.mp3",
+    "m": "audio/m/israeli/book/book13-p08.mp3"
+   },
+   "illustration": "an open wallet with a receipt and one coin",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "יֵשׁ לִי חֲבֵרִים.",
+   "translit": "Yesh li chaverim.",
+   "en": "I have friends.",
+   "img": "assets/books/book13/BOOK13_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p09.mp3",
+    "m": "audio/m/israeli/book/book13-p09.mp3"
+   },
+   "illustration": "a phone buzzing with a group chat full of messages",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "יֵשׁ לִי יוֹם שִׁישִׁי.",
+   "translit": "Yesh li yom shishi.",
+   "en": "I have Friday.",
+   "img": "assets/books/book13/BOOK13_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p10.mp3",
+    "m": "audio/m/israeli/book/book13-p10.mp3"
+   },
+   "illustration": "the man in a hammock on a tiny balcony",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "אֵין לִי כְּלוּם? לֹא.",
+   "translit": "Ein li klum? Lo.",
+   "en": "Do I have nothing? No.",
+   "img": "assets/books/book13/BOOK13_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p11.mp3",
+    "m": "audio/m/israeli/book/book13-p11.mp3"
+   },
+   "illustration": "the man counting on his fingers, smiling",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "יֵשׁ לִי הַכֹּל.",
+   "translit": "Yesh li ha-kol.",
+   "en": "I have everything.",
+   "img": "assets/books/book13/BOOK13_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book13-p12.mp3",
+    "m": "audio/m/israeli/book/book13-p12.mp3"
+   },
+   "illustration": "the man, the cat, the bicycle and the sunset through the window",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

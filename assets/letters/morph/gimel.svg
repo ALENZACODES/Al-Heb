@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-gimel" viewBox="0 0 200 200" role="img" aria-labelledby="gimel-t gimel-d"><title id="gimel-t">Gimel becomes a grumpy camel stomping forward</title><desc id="gimel-d">A grumpy tan camel with one hump faces left with a scowling eyebrow, a pointed ear and a flat frown. The letter top bar is its back, the long stroke its hind leg, and the short bottom stroke the front foot stomping forward. Puffs of snort leave its nose.</desc><style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-gimel .g{fill:none;stroke:var(--m-ink);stroke-width:34;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-gimel .gf{fill:none;stroke:var(--m-3);stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-gimel .L{fill:none;stroke:var(--m-2);stroke-width:64;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-gimel .morph-pop{transform-origin:50% 50%}
+@media (forced-colors:active){svg.morph-gimel .gf{stroke:Canvas}}</style><defs><path id="gimel-bd" d="M320 262C300 380 360 540 470 565C545 585 615 560 628 470L628 290C628 245 585 250 545 262C470 262 400 258 320 262Z"/><path id="gimel-hp" d="M440 262C440 175 480 130 530 130C580 130 612 180 612 262Z"/><path id="gimel-nk" d="M380 345C320 300 305 230 320 150"/><path id="gimel-hd" d="M150 180C140 140 175 110 235 100L335 72C385 60 410 105 395 140C378 190 300 222 225 220C185 220 155 210 150 180Z"/><path id="gimel-l1" d="M410 520L410 745"/><path id="gimel-l2" d="M520 520L520 745"/></defs><g transform="translate(16 2) scale(.235)"><g class="morph-a morph-strokes"><path id="gimel-1" d="M360 253 C380 253 447 247 480 253 C513 259 542 266 560 290 C578 314 583 358 590 400 C597 442 595 498 600 540 C605 582 613 616 620 650 C627 684 637 727 640 742"/><path id="gimel-2" d="M570 570 C564 583 552 628 535 650 C518 672 502 695 470 705 C438 715 366 711 345 712"/></g><g class="morph-b"><path d="M120 785H760" class="ml msi" style="--w:9;stroke-dasharray:28 22;opacity:.5"/>
+<g class="morph-pop">
+<use href="#gimel-l1" class="g" style="stroke-width:66"/><use href="#gimel-l2" class="g" style="stroke-width:66"/><use href="#gimel-nk" class="g" style="stroke-width:136"/><use href="#gimel-bd" class="g" style="stroke-width:30"/><use href="#gimel-hp" class="g" style="stroke-width:30"/><use href="#gimel-hd" class="g" style="stroke-width:30"/>
+<use href="#gimel-l1" class="gf" style="stroke-width:38"/><use href="#gimel-l2" class="gf" style="stroke-width:38"/><use href="#gimel-nk" class="gf" style="stroke-width:106"/><use href="#gimel-bd" class="mf3"/><use href="#gimel-hp" class="mf3"/><use href="#gimel-hd" class="mf3"/>
+<path d="M345 80L368 22L400 80Z" class="mf3 msi" style="stroke-width:14;stroke-linejoin:round"/>
+<path d="M285 100L350 140" class="ml msi" style="--w:24"/><circle cx="325" cy="150" r="14" class="mfi"/>
+<path d="M170 205Q215 190 250 212" class="ml msi" style="--w:12"/><circle cx="178" cy="150" r="9" class="mfi"/></g>
+<path class="L" d="M360 253 C380 253 447 247 480 253 C513 259 542 266 560 290 C578 314 583 358 590 400 C597 442 595 498 600 540 C605 582 613 616 620 650 C627 684 637 727 640 742"/><path class="L" d="M570 570 C564 583 552 628 535 650 C518 672 502 695 470 705 C438 715 366 711 345 712"/>
+<g class="morph-pop morph-pop-late"><path d="M110 125Q70 85 30 110M95 190Q45 200 25 235" class="ml ms2" style="--w:12;stroke-opacity:.6"/></g></g></g></svg>

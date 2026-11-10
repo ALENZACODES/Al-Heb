@@ -1,0 +1,23 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+ "inputSha256": "9d8122ebb7dde96cd838a38cd4b9096929cd660457f747b983e2326ff11d029a",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִשָּׂא אֲדֹנָי פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/bless-priestly-3-w1.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w3.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w4.mp3",
+  "audio/f/israeli/word/bless-priestly-3-w5.mp3",
+  "audio/f/israeli/word/bless-priestly-3-w6.mp3",
+  "audio/f/israeli/word/anchor-shin.mp3"
+ ]
+}

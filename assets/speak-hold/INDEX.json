@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "bucket": "unreviewed_hold",
+  "note": "Kept on GitHub for John unlock; app must not show as shipped art. HOLD.",
+  "files": [
+    "SPEAK_01_street_falafel.png",
+    "SPEAK_02_street_bus_ticket.png",
+    "SPEAK_03_street_directions.png",
+    "SPEAK_06_sanctuary_quiet.png",
+    "SPEAK_07_sanctuary_together.png",
+    "SPEAK_09_cafe_order.png",
+    "SPEAK_10_market_pomegranates.png",
+    "SPEAK_11_sound_card.png",
+    "SPEAK_12_your_turn.png"
+  ],
+  "unlock": "John visual review + identity check vs batch01 cast; then move to speak-candidates or approve",
+  "freeze_cast": true
+}

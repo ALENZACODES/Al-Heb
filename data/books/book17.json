@@ -1,0 +1,177 @@
+{
+ "id": "book17",
+ "titleHe": "גֶּשֶׁם בְּחֵיפָה",
+ "titleTranslit": "Geshem Be-Cheifah",
+ "titleEn": "Rain in Haifa",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "חֵיפָה. חֹרֶף.",
+   "translit": "Cheifah. Choref.",
+   "en": "Haifa. Winter.",
+   "img": "assets/books/book17/BOOK17_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p01.mp3",
+    "m": "audio/m/israeli/book/book17-p01.mp3"
+   },
+   "illustration": "grey clouds over the Carmel hillside and the bay",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "גֶּשֶׁם.",
+   "translit": "Geshem.",
+   "en": "Rain.",
+   "img": "assets/books/book17/BOOK17_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p02.mp3",
+    "m": "audio/m/israeli/book/book17-p02.mp3"
+   },
+   "illustration": "rain streaking a bus window",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַרְבֵּה גֶּשֶׁם.",
+   "translit": "Harbeh geshem.",
+   "en": "A lot of rain.",
+   "img": "assets/books/book17/BOOK17_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p03.mp3",
+    "m": "audio/m/israeli/book/book17-p03.mp3"
+   },
+   "illustration": "a steep street turned into a stream",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "לְיָעֵל אֵין מִטְרִיָּה.",
+   "translit": "Le-Yael ein mitriyah.",
+   "en": "Yael has no umbrella.",
+   "img": "assets/books/book17/BOOK17_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p04.mp3",
+    "m": "audio/m/israeli/book/book17-p04.mp3"
+   },
+   "illustration": "a woman under a shop awning, soaked",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "יָעֵל רָצָה.",
+   "translit": "Yael ratzah.",
+   "en": "Yael runs.",
+   "img": "assets/books/book17/BOOK17_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p05.mp3",
+    "m": "audio/m/israeli/book/book17-p05.mp3"
+   },
+   "illustration": "the woman sprinting between awnings, bag over her head",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הִיא רְטֻבָּה.",
+   "translit": "Hi retubah.",
+   "en": "She is wet.",
+   "img": "assets/books/book17/BOOK17_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p06.mp3",
+    "m": "audio/m/israeli/book/book17-p06.mp3"
+   },
+   "illustration": "dripping hair, smudged mascara, laughing anyway",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "קָפֶה!",
+   "translit": "Kafeh!",
+   "en": "A café!",
+   "img": "assets/books/book17/BOOK17_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p07.mp3",
+    "m": "audio/m/israeli/book/book17-p07.mp3"
+   },
+   "illustration": "a warm lit café window glowing in the rain",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "יָעֵל נִכְנֶסֶת.",
+   "translit": "Yael nichneset.",
+   "en": "Yael goes in.",
+   "img": "assets/books/book17/BOOK17_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p08.mp3",
+    "m": "audio/m/israeli/book/book17-p08.mp3"
+   },
+   "illustration": "the door opening, a bell ringing, warmth",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"שׁוֹקוֹ חַם, בְּבַקָּשָׁה.\"",
+   "translit": "\"Shoko cham, bevakashah.\"",
+   "en": "\"Hot chocolate, please.\"",
+   "img": "assets/books/book17/BOOK17_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p09.mp3",
+    "m": "audio/m/israeli/book/book17-p09.mp3"
+   },
+   "illustration": "the counter, a barista nodding",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הִיא יוֹשֶׁבֶת לְיַד הַחַלּוֹן.",
+   "translit": "Hi yoshevet le-yad ha-chalon.",
+   "en": "She sits by the window.",
+   "img": "assets/books/book17/BOOK17_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p10.mp3",
+    "m": "audio/m/israeli/book/book17-p10.mp3"
+   },
+   "illustration": "the woman at a window seat, mug in both hands",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַגֶּשֶׁם יָפֶה.",
+   "translit": "Ha-geshem yafeh.",
+   "en": "The rain is beautiful.",
+   "img": "assets/books/book17/BOOK17_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p11.mp3",
+    "m": "audio/m/israeli/book/book17-p11.mp3"
+   },
+   "illustration": "rain on glass, city lights blurred behind it",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "בִּפְנִים חַם.",
+   "translit": "Bifnim cham.",
+   "en": "Inside it is warm.",
+   "img": "assets/books/book17/BOOK17_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book17-p12.mp3",
+    "m": "audio/m/israeli/book/book17-p12.mp3"
+   },
+   "illustration": "the woman's reflection in the window, steam rising from the mug",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

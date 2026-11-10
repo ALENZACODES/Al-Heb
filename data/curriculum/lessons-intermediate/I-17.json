@@ -1,0 +1,369 @@
+{
+ "id": "I-17",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Apartment viewing: rooms, floor, rent and the landlord",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "דִּירָה",
+   "en": "apartment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "dirah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h4d07da60"
+   }
+  },
+  {
+   "he": "חֶדֶר",
+   "en": "room",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "cheder"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h608afd50"
+   }
+  },
+  {
+   "he": "חֲדָרִים",
+   "en": "rooms",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chadarim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h608afd50#forms.plural"
+   }
+  },
+  {
+   "he": "קוֹמָה",
+   "en": "story, floor",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "komah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfcbe3a9c"
+   }
+  },
+  {
+   "he": "מִרְפֶּסֶת",
+   "en": "balcony",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mirpeset"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9975b0d0"
+   }
+  },
+  {
+   "he": "חֲנָיָה",
+   "en": "parking",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chanayah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd7b6e838"
+   }
+  },
+  {
+   "he": "חוֹזֶה",
+   "en": "contract",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chozeh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hebd6393d#forms.present"
+   }
+  },
+  {
+   "he": "בַּעַל הַבַּיִת",
+   "en": "the landlord",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ba'al habayit"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בַּעַל",
+     "הַבַּיִת"
+    ]
+   }
+  },
+  {
+   "he": "וַעַד בַּיִת",
+   "en": "building committee (fee)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "va'ad bayit"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וַעַד",
+     "בַּיִת"
+    ]
+   }
+  },
+  {
+   "he": "שָׁנָה",
+   "en": "year",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shanah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf07c1580"
+   }
+  },
+  {
+   "he": "חֹדֶשׁ",
+   "en": "month",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chodesh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h168cf034"
+   }
+  },
+  {
+   "he": "גְּדוֹלָה",
+   "en": "big (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gedolah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "גְּדוֹלָה"
+    ]
+   }
+  },
+  {
+   "he": "טוֹבָה",
+   "en": "good (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tovah"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "טוֹבָה"
+    ]
+   }
+  },
+  {
+   "he": "אוֹר",
+   "en": "light",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "or"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5b150aaf"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Say you are looking for an apartment and ask how many rooms",
+  "Ask about the floor, balcony, parking and the monthly price",
+  "Ask about the contract and the landlord"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-17-e01",
+   "type": "order",
+   "he": "אֲנִי מְחַפֵּשׂ דִּירָה",
+   "en": "I'm looking for an apartment"
+  },
+  {
+   "id": "I-17-e02",
+   "type": "produce",
+   "en": "how many rooms?",
+   "options": [
+    "כַּמָּה חֲדָרִים?",
+    "כַּמָּה זֶה עוֹלֶה?",
+    "אֵיזוֹ קוֹמָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-17-e03",
+   "type": "order",
+   "he": "שְׁלוֹשָׁה חֲדָרִים עִם מִרְפֶּסֶת",
+   "en": "Three rooms with a balcony"
+  },
+  {
+   "id": "I-17-e04",
+   "type": "produce",
+   "en": "which floor?",
+   "options": [
+    "אֵיזוֹ קוֹמָה?",
+    "אֵיזֶה רְחוֹב?",
+    "אֵיזֶה אוֹטוֹבּוּס?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-17-e05",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "קוֹמָה",
+     "en": "floor (storey)"
+    },
+    {
+     "he": "מִרְפֶּסֶת",
+     "en": "balcony"
+    },
+    {
+     "he": "חֲנָיָה",
+     "en": "parking"
+    },
+    {
+     "he": "חוֹזֶה",
+     "en": "contract"
+    }
+   ]
+  },
+  {
+   "id": "I-17-e06",
+   "type": "respond",
+   "cue": "Ask whether there is parking.",
+   "answer": {
+    "he": "יֵשׁ חֲנָיָה?",
+    "en": "Is there parking?"
+   }
+  },
+  {
+   "id": "I-17-e07",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, אֲנִי מְחַפֵּשׂ דִּירָה. כַּמָּה חֲדָרִים יֵשׁ?",
+     "en": "Hello, I'm looking for an apartment. How many rooms are there?"
+    },
+    {
+     "speaker": "b",
+     "he": "שְׁלוֹשָׁה חֲדָרִים, קוֹמָה רִאשׁוֹנָה, עִם מִרְפֶּסֶת.",
+     "en": "Three rooms, first floor, with a balcony."
+    },
+    {
+     "speaker": "a",
+     "he": "כַּמָּה זֶה עוֹלֶה כָּל חֹדֶשׁ?",
+     "en": "How much is it per month?"
+    },
+    {
+     "speaker": "b",
+     "he": "אַרְבָּעָה אֲלָפִים שְׁקָלִים.",
+     "en": "Four thousand shekels."
+    }
+   ],
+   "task": "Say the renter's lines."
+  },
+  {
+   "id": "I-17-e08",
+   "type": "order",
+   "he": "כַּמָּה זֶה עוֹלֶה כָּל חֹדֶשׁ?",
+   "en": "How much does it cost each month?"
+  },
+  {
+   "id": "I-17-e09",
+   "type": "produce",
+   "en": "the landlord",
+   "options": [
+    "בַּעַל הַבַּיִת",
+    "וַעַד בַּיִת",
+    "חוֹזֶה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-17-e10",
+   "type": "recall",
+   "he": "וַעַד בַּיִת",
+   "en": "building committee (fee)"
+  },
+  {
+   "id": "I-17-e11",
+   "type": "respond",
+   "cue": "Ask whether the contract is for a year.",
+   "answer": {
+    "he": "חוֹזֶה שֶׁל שָׁנָה?",
+    "en": "A contract of one year?"
+   }
+  },
+  {
+   "id": "I-17-e12",
+   "type": "produce",
+   "en": "a big apartment",
+   "options": [
+    "דִּירָה גְּדוֹלָה",
+    "דִּירָה טוֹבָה",
+    "דִּירָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-17-e13",
+   "type": "order",
+   "he": "יֵשׁ הַרְבֵּה אוֹר",
+   "en": "There is a lot of light"
+  },
+  {
+   "id": "I-17-e14",
+   "type": "respond",
+   "cue": "Ask when you can see the apartment.",
+   "answer": {
+    "he": "מָתַי אֶפְשָׁר לִרְאוֹת?",
+    "en": "When can I see (it)?"
+   }
+  },
+  {
+   "id": "I-17-e15",
+   "type": "recall",
+   "he": "חֶדֶר",
+   "en": "room"
+  }
+ ],
+ "note": "'arnona' (municipal tax), 'elevator', 'furnished' and the feminine 'mechapeset' have no pointed token in the sources and are not taught."
+}

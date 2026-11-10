@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traditions preview (dev only)</title>
+<link rel="stylesheet" href="../../assets/css/fonts.css">
+<link rel="stylesheet" href="../../assets/css/app.css">
+</head>
+<body>
+<!-- Dev-only harness: mounts the Traditions view without the app shell, with an in-memory settings object and
+     NO audio (so the "no audio yet" states show). Serve the repo root over http and open
+     /docs/traditions/preview.html?tab=compare|sounds|guide|hear|sources&text=<registry id> -->
+<main id="main"></main>
+<script type="module">
+  import { mount } from '../../src/traditions/traditions.view.js';
+  const q = Object.fromEntries(new URLSearchParams(location.search));
+  const settings = { congregation: q.congregation || 'sephardi', set(k, v) { this[k] = v; } };
+  mount(document.getElementById('main'), { settings, query: q, t: (k) => k, audio: { has: () => false, status: () => ({ source: 'none' }) } });
+</script>
+</body>
+</html>

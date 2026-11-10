@@ -1,0 +1,5 @@
+{
+  "note": "Only these CSV columns may hold the whole-cell placeholders below instead of real content. Used only with --placeholders. Matching is case-insensitive on the header name. Add a column here only with a human decision.",
+  "placeholders": ["PENDING-HUMAN", "UNASSIGNED"],
+  "columns": ["tester", "test_date", "actual_result", "script_revision", "community", "tradition", "reviewer_reference", "review_date"]
+}

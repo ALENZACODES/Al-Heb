@@ -1,0 +1,25 @@
+{
+  "id": "genesis-15-8-he-noa",
+  "fingerprint": "d01d6bf791e511b3cdef3545130ac9527f21e1ba239ebea88edc02cd1c9b0dbc",
+  "audioSha256": "75671739075602b307cc42ad2ac4e8821e27a443b74320eff6e6caed192c0cbc",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "ויאמר אדני אלוהים במה אדע כי אירשנה",
+  "transcript": "ויאמר עדיני אלוהים במה אדע כי יירשנה.",
+  "wordEdits": 2,
+  "referenceWords": 7,
+  "wer": 0.2857142857142857,
+  "asrExact": false,
+  "orthographicWordEdits": 2,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

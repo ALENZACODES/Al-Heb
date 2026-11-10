@@ -1,0 +1,225 @@
+{
+ "schemaVersion": 1,
+ "proofread": false,
+ "description": "Ten of the most frequent prayer words as an Israeli, an American-synagogue and a traditional Ashkenazi speaker would say them. Respellings are English approximations I wrote by hand from the vowel and consonant rules in niqqud.json and consonants.json, NOT recorded or native-checked. Capitals mark the stressed syllable. 'American' means the usual American-synagogue habit: Sephardi vowel values on American English sounds, English r, ch for chet/khaf.",
+ "americanHabits": [
+  "Vowels are often longer or glide (ay in HAY-nu) where Israelis use a short pure e.",
+  "Resh is the English r; Israelis use a back-of-the-throat r.",
+  "Chet and khaf are usually ch as in Bach; some Americans say k or h.",
+  "Ayin is silent, as in Israel."
+ ],
+ "words": [
+  {
+   "id": "barukh",
+   "he": "בָּרוּךְ",
+   "gloss": "blessed",
+   "israeli": {
+    "say": "ba-RUKH",
+    "stress": "last"
+   },
+   "american": {
+    "say": "bah-ROOKH (many say bah-ROOK)",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "BO-rukh",
+    "stress": "second-to-last"
+   },
+   "diffs": [
+    "stress",
+    "vowel",
+    "kamatz",
+    "chet-khaf"
+   ]
+  },
+  {
+   "id": "atah",
+   "he": "אַתָּה",
+   "gloss": "you (m.)",
+   "israeli": {
+    "say": "a-TA",
+    "stress": "last"
+   },
+   "american": {
+    "say": "ah-TAH",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "AH-toh",
+    "stress": "second-to-last"
+   },
+   "diffs": [
+    "stress",
+    "kamatz"
+   ]
+  },
+  {
+   "id": "adonai",
+   "he": "אֲדֹנָי",
+   "gloss": "Adonai (my Lord; read aloud in place of the Name)",
+   "israeli": {
+    "say": "a-do-NAI",
+    "stress": "last"
+   },
+   "american": {
+    "say": "ah-doh-NYE",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "ah-doh-NOY",
+    "stress": "last"
+   },
+   "diffs": [
+    "kamatz-yod",
+    "vowel"
+   ]
+  },
+  {
+   "id": "eloheinu",
+   "he": "אֱלֹהֵינוּ",
+   "gloss": "our God",
+   "israeli": {
+    "say": "e-lo-HAY-nu",
+    "stress": "second-to-last"
+   },
+   "american": {
+    "say": "eh-loh-HAY-noo",
+    "stress": "second-to-last"
+   },
+   "ashkenazi": {
+    "say": "eh-loh-HAY-noo",
+    "stress": "second-to-last"
+   },
+   "diffs": [
+    "vowel"
+   ]
+  },
+  {
+   "id": "melekh",
+   "he": "מֶלֶךְ",
+   "gloss": "king",
+   "israeli": {
+    "say": "ME-lekh",
+    "stress": "first"
+   },
+   "american": {
+    "say": "MEH-lekh",
+    "stress": "first"
+   },
+   "ashkenazi": {
+    "say": "MEH-lekh",
+    "stress": "first"
+   },
+   "diffs": [
+    "chet-khaf"
+   ]
+  },
+  {
+   "id": "haolam",
+   "he": "הָעוֹלָם",
+   "gloss": "the world",
+   "israeli": {
+    "say": "ha-o-LAM",
+    "stress": "last"
+   },
+   "american": {
+    "say": "hah-oh-LAHM",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "ho-OY-lom (some: ho-OH-lom)",
+    "stress": "second-to-last"
+   },
+   "diffs": [
+    "stress",
+    "kamatz",
+    "ayin",
+    "cholam"
+   ]
+  },
+  {
+   "id": "shalom",
+   "he": "שָׁלוֹם",
+   "gloss": "peace",
+   "israeli": {
+    "say": "sha-LOM",
+    "stress": "last"
+   },
+   "american": {
+    "say": "shah-LOHM",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "SHO-lom",
+    "stress": "second-to-last"
+   },
+   "diffs": [
+    "stress",
+    "kamatz"
+   ]
+  },
+  {
+   "id": "amen",
+   "he": "אָמֵן",
+   "gloss": "amen",
+   "israeli": {
+    "say": "a-MEN",
+    "stress": "last"
+   },
+   "american": {
+    "say": "ah-MAYN (also AH-men in English)",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "o-MAYN",
+    "stress": "last"
+   },
+   "diffs": [
+    "kamatz",
+    "tzere"
+   ]
+  },
+  {
+   "id": "shabbat",
+   "he": "שַׁבָּת",
+   "gloss": "Sabbath",
+   "israeli": {
+    "say": "sha-BAT",
+    "stress": "last"
+   },
+   "american": {
+    "say": "shah-BAHT",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "SHAH-bos",
+    "stress": "first"
+   },
+   "diffs": [
+    "tav"
+   ]
+  },
+  {
+   "id": "torah",
+   "he": "תּוֹרָה",
+   "gloss": "Torah, teaching",
+   "israeli": {
+    "say": "to-RA",
+    "stress": "last"
+   },
+   "american": {
+    "say": "toh-RAH (English TOR-uh is common outside prayer)",
+    "stress": "last"
+   },
+   "ashkenazi": {
+    "say": "TOY-roh / TOH-roh",
+    "stress": "first"
+   },
+   "diffs": [
+    "kamatz",
+    "stress",
+    "cholam"
+   ]
+  }
+ ]
+}

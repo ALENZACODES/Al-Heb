@@ -1,0 +1,177 @@
+{
+ "id": "book59",
+ "titleHe": "מְכִינִים חוּמוּס",
+ "titleTranslit": "Mechinim Chumus",
+ "titleEn": "Making Hummus",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "חוּמוּס. אֹכֶל פָּשׁוּט.",
+   "translit": "Chumus. Ochel pashut.",
+   "en": "Hummus. Simple food.",
+   "img": "assets/books/book59/BOOK59_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p01.mp3",
+    "m": "audio/m/israeli/book/book59-p01.mp3"
+   },
+   "illustration": "a bowl of hummus with olive oil and paprika",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "יָעֵל רוֹצָה לְהָכִין בַּבַּיִת.",
+   "translit": "Yael rotzah lehachin ba-bayit.",
+   "en": "Yael wants to make it at home.",
+   "img": "assets/books/book59/BOOK59_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p02.mp3",
+    "m": "audio/m/israeli/book/book59-p02.mp3"
+   },
+   "illustration": "a woman with a bag of dried chickpeas",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "גַּרְגְּרֵי חוּמוּס. לַיְלָה בַּמַּיִם.",
+   "translit": "Gargerei chumus. Lailah ba-mayim.",
+   "en": "Chickpeas. A night in water.",
+   "img": "assets/books/book59/BOOK59_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p03.mp3",
+    "m": "audio/m/israeli/book/book59-p03.mp3"
+   },
+   "illustration": "a bowl of chickpeas soaking on the counter",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "בַּבֹּקֶר: מְבַשְּׁלִים.",
+   "translit": "Ba-boker: mevashlim.",
+   "en": "In the morning: cook.",
+   "img": "assets/books/book59/BOOK59_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p04.mp3",
+    "m": "audio/m/israeli/book/book59-p04.mp3"
+   },
+   "illustration": "a pot bubbling, foam skimmed",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "שְׁעָתַיִם.",
+   "translit": "Sha'atayim.",
+   "en": "Two hours.",
+   "img": "assets/books/book59/BOOK59_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p05.mp3",
+    "m": "audio/m/israeli/book/book59-p05.mp3"
+   },
+   "illustration": "the clock, the woman reading nearby",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "טְחִינָה. לִימוֹן. שׁוּם. מֶלַח.",
+   "translit": "Tchinah. Limon. Shum. Melach.",
+   "en": "Tahini. Lemon. Garlic. Salt.",
+   "img": "assets/books/book59/BOOK59_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p06.mp3",
+    "m": "audio/m/israeli/book/book59-p06.mp3"
+   },
+   "illustration": "four ingredients lined up",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הִיא טוֹחֶנֶת.",
+   "translit": "Hi tochenet.",
+   "en": "She blends.",
+   "img": "assets/books/book59/BOOK59_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p07.mp3",
+    "m": "audio/m/israeli/book/book59-p07.mp3"
+   },
+   "illustration": "a food processor whirring",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הִיא טוֹעֶמֶת.",
+   "translit": "Hi to'emet.",
+   "en": "She tastes.",
+   "img": "assets/books/book59/BOOK59_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p08.mp3",
+    "m": "audio/m/israeli/book/book59-p08.mp3"
+   },
+   "illustration": "a finger in the bowl, a thinking face",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"לֹא כְּמוֹ בַּשּׁוּק.\"",
+   "translit": "\"Lo kmo ba-shuk.\"",
+   "en": "\"Not like at the market.\"",
+   "img": "assets/books/book59/BOOK59_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p09.mp3",
+    "m": "audio/m/israeli/book/book59-p09.mp3"
+   },
+   "illustration": "the market hummus stall pictured in her mind",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הִיא מְנַסָּה שׁוּב. עוֹד לִימוֹן.",
+   "translit": "Hi menasah shuv. Od limon.",
+   "en": "She tries again. More lemon.",
+   "img": "assets/books/book59/BOOK59_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p10.mp3",
+    "m": "audio/m/israeli/book/book59-p10.mp3"
+   },
+   "illustration": "squeezing a lemon",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "עֲדַיִן לֹא. אֲבָל טוֹב.",
+   "translit": "Adayin lo. Aval tov.",
+   "en": "Still not. But good.",
+   "img": "assets/books/book59/BOOK59_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p11.mp3",
+    "m": "audio/m/israeli/book/book59-p11.mp3"
+   },
+   "illustration": "her satisfied shrug",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "פִּיתָה חַמָּה. חוּמוּס בַּבַּיִת.",
+   "translit": "Pitah chamah. Chumus ba-bayit.",
+   "en": "Warm pita. Hummus at home.",
+   "img": "assets/books/book59/BOOK59_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book59-p12.mp3",
+    "m": "audio/m/israeli/book/book59-p12.mp3"
+   },
+   "illustration": "a bowl, a pita, a window with afternoon light",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

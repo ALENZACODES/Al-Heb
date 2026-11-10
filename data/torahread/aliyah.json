@@ -1,0 +1,104 @@
+{
+  "schema": "alef-torahread-aliyah/1",
+  "status": "draft",
+  "reviewed": false,
+  "note": "Written for Aleph from general knowledge of common synagogue practice. NOT reviewed by a rabbi, cantor or gabbai. Customs differ between communities and even between neighbouring synagogues. Where this file is not sure a custom is shared, it says 'varies' or 'unknown' on purpose. The Hebrew of the blessings is NOT stored here: it comes from data/corpus/registry.json by id.",
+  "intro": "An aliyah (plural aliyot, 'going up') is being called to the Torah scroll to say the blessings before and after a section of the reading. You do not read the scroll yourself: in most congregations a designated reader (ba'al koreh) does that. Rehearse the steps below, then ask the person in charge (the gabbai, or the rabbi or cantor) how your congregation does each one.",
+  "steps": [
+    {
+      "id": "before",
+      "title": "Before the service",
+      "what": "Tell the gabbai (the person who organises who is called up) that you would like or are expected to have an aliyah, and which one if you know.",
+      "you": [
+        "Have your Hebrew name ready, and your father's Hebrew name. Some congregations also use your mother's name; ask.",
+        "Ask which aliyah you have and whether the blessings are on a card at the reading table.",
+        "Ask what the dress custom is (head covering, tallit). Many synagogues lend one."
+      ],
+      "certainty": "common",
+      "ask": ["Which aliyah is mine?", "How should my Hebrew name be given?", "Is there a card with the blessings?"]
+    },
+    {
+      "id": "called",
+      "title": "You are called",
+      "what": "The gabbai or the reader calls you in Hebrew by your Hebrew name and your father's name. In many congregations the call begins with the word Ya'amod ('let him stand'); the wording varies and may be different for a woman.",
+      "you": ["Stand and go up to the platform (bimah) where the scroll is read. The gabbai may meet you and show the way."],
+      "say": "Nothing yet.",
+      "certainty": "varies"
+    },
+    {
+      "id": "place",
+      "title": "Where to stand",
+      "what": "The scroll is open on the reading table. You stand at the table next to the reader. Which side of the reader you stand on is a custom that this app does not record.",
+      "you": ["Let the gabbai show you the exact spot."],
+      "certainty": "unknown"
+    },
+    {
+      "id": "touch",
+      "title": "Find the place and touch the scroll",
+      "what": "Many people touch the scroll at the first word of the section with the corner of a tallit, a sash, or the scroll's cover, kiss what touched it, and hold the wooden handles (atzei chayim).",
+      "you": ["Do what the gabbai shows you. Do not touch the writing with a finger."],
+      "certainty": "varies"
+    },
+    {
+      "id": "barchu",
+      "title": "Say Barchu",
+      "what": "You call the congregation to bless. They answer.",
+      "you": ["You say the first line. The congregation answers with the second line.", "In many congregations you then say the second line yourself too, before the blessing; watch what the person before you does."],
+      "prayerId": "torah-barchu",
+      "certainty": "common",
+      "audioHint": "line"
+    },
+    {
+      "id": "bless1",
+      "title": "The blessing before the reading",
+      "what": "You say the blessing. The congregation answers: Amen.",
+      "you": ["Say it clearly. If you stumble, keep going; the gabbai is beside you."],
+      "prayerId": "torah-bless-1",
+      "certainty": "common"
+    },
+    {
+      "id": "read",
+      "title": "The reading",
+      "what": "The reader chants the section from the scroll. Your part is to stand there and follow along.",
+      "you": ["Look at the text where the reader is. You do not read aloud."],
+      "certainty": "common"
+    },
+    {
+      "id": "touch2",
+      "title": "At the end of the section",
+      "what": "When the reader finishes, many people touch the scroll again near the last words and kiss it, as at the start, and hold the handles.",
+      "you": ["Do what the gabbai shows you."],
+      "certainty": "varies"
+    },
+    {
+      "id": "bless2",
+      "title": "The blessing after the reading",
+      "what": "You say the second blessing. The congregation answers: Amen.",
+      "you": ["Say it, then wait for the gabbai to tell you what happens next."],
+      "prayerId": "torah-bless-2",
+      "certainty": "common"
+    },
+    {
+      "id": "after",
+      "title": "Afterwards",
+      "what": "You may be offered a Mi sheberach, a prayer for you and your family, said by the gabbai or the reader. People often greet you with 'Yasher koach' ('more power to you'). Whether you stay at the table until the next person finishes, and where you sit afterwards, varies by congregation.",
+      "you": ["Ask the gabbai beforehand whether to stay at the table.", "The registry holds only the opening words of the Mi sheberach (the full text depends on the occasion and is a recorded gap in this app)."],
+      "prayerId": "mi-sheberach-opening",
+      "certainty": "varies"
+    }
+  ],
+  "differences": {
+    "intro": "What is recorded here is only what the author is sure of. 'unknown' means: not recorded; ask. Nothing in this table has been reviewed by clergy.",
+    "movements": ["Orthodox", "Conservative", "Reform"],
+    "rows": [
+      { "topic": "Words of the two blessings", "values": ["Same Hebrew as in the registry", "Same Hebrew as in the registry", "Same Hebrew as in the registry"], "basis": "data/corpus/prayer-meta.json says the aliyah blessing is the same Hebrew in the three movements; that metadata is itself not clergy-reviewed. A siddur of another rite may differ in small details." },
+      { "topic": "Women called to the Torah", "values": ["Not in mainstream Orthodox services", "Permitted by the movement; congregations vary", "Yes"], "basis": "General knowledge. Some Orthodox-affiliated groups differ and are not described here." },
+      { "topic": "Kohen called first, Levi second", "values": ["Customary", "unknown", "unknown"], "basis": "Orthodox custom is well established; the others are not recorded here." },
+      { "topic": "Seven aliyot on Shabbat morning", "values": ["Traditional number (plus maftir)", "unknown", "unknown"], "basis": "The registry guide says the number of aliyot varies by movement and congregation." },
+      { "topic": "Head covering", "values": ["Expected", "Expected", "Varies by person and congregation"], "basis": "General knowledge; ask the gabbai." },
+      { "topic": "Tallit", "values": ["unknown", "unknown", "unknown"], "basis": "Communities differ on who wears one; many synagogues lend one." },
+      { "topic": "Where to stand, which side", "values": ["unknown", "unknown", "unknown"], "basis": "Not recorded." },
+      { "topic": "Staying at the table after your blessing", "values": ["unknown", "unknown", "unknown"], "basis": "Not recorded." }
+    ]
+  }
+}

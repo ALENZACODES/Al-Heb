@@ -1,0 +1,179 @@
+{
+ "id": "book1",
+ "titleHe": "הַקּוֹף שֶׁלֹּא יָדַע",
+ "titleTranslit": "Ha-Kof She-Lo Yado",
+ "titleEn": "The Monkey Who Didn't Know",
+ "level": "Grade 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "גָּדוֹל! קָטָן!",
+   "translit": "Gadol! Katan!",
+   "en": "Big! Small!",
+   "img": "assets/books/book1/BOOK1_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p01.mp3",
+    "m": "audio/m/israeli/book/book1-p01.mp3"
+   },
+   "illustration": "a curious monkey looking at two contrasting hats against a warm ochre background.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הַקּוֹף לֹא רוֹצֶה כּוֹבַע אָדֹם.",
+   "translit": "Ha-kof lo rotze kova adom.",
+   "en": "The monkey doesn't want a red hat.",
+   "img": "assets/books/book1/BOOK1_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p02.mp3",
+    "m": "audio/m/israeli/book/book1-p02.mp3"
+   },
+   "illustration": "the monkey pushes away a vibrant red fedora, theatrically unimpressed.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַקּוֹף לֹא רוֹצֶה כּוֹבַע יָרוֹק.",
+   "translit": "Ha-kof lo rotze kova yarok.",
+   "en": "The monkey doesn't want a green hat.",
+   "img": "assets/books/book1/BOOK1_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p03.mp3",
+    "m": "audio/m/israeli/book/book1-p03.mp3"
+   },
+   "illustration": "the monkey inspects an olive-green cap and shakes its head.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הַקּוֹף רוֹצֶה כּוֹבַע עִם שׁוֹקוֹלָד!",
+   "translit": "Ha-kof rotze kova im shokolad!",
+   "en": "The monkey wants a hat with chocolate!",
+   "img": "assets/books/book1/BOOK1_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p04.mp3",
+    "m": "audio/m/israeli/book/book1-p04.mp3"
+   },
+   "illustration": "the monkey proudly wears a tall chef's hat topped with melting dark chocolate.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַקּוֹף לֹא רוֹצֶה כּוֹבַע קָטָן.",
+   "translit": "Ha-kof lo rotze kova katan.",
+   "en": "The monkey doesn't want a small hat.",
+   "img": "assets/books/book1/BOOK1_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p05.mp3",
+    "m": "audio/m/israeli/book/book1-p05.mp3"
+   },
+   "illustration": "the tiny hat balanced on one of the monkey's fingers; he stares at it.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַקּוֹף לֹא רוֹצֶה כּוֹבַע גָּדוֹל.",
+   "translit": "Ha-kof lo rotze kova gadol.",
+   "en": "The monkey doesn't want a big hat.",
+   "img": "assets/books/book1/BOOK1_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p06.mp3",
+    "m": "audio/m/israeli/book/book1-p06.mp3"
+   },
+   "illustration": "the huge hat covers the monkey's whole body; only his tail sticks out.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הַקּוֹף לֹא רוֹצֶה כּוֹבַע כָּחֹל.",
+   "translit": "Ha-kof lo rotze kova kachol.",
+   "en": "The monkey doesn't want a blue hat.",
+   "img": "assets/books/book1/BOOK1_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p07.mp3",
+    "m": "audio/m/israeli/book/book1-p07.mp3"
+   },
+   "illustration": "the monkey holds the blue hat at arm's length, one eyebrow raised.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "לֹא לָבָן. לֹא שָׁחֹר.",
+   "translit": "Lo lavan. Lo shachor.",
+   "en": "Not white. Not black.",
+   "img": "assets/books/book1/BOOK1_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p08.mp3",
+    "m": "audio/m/israeli/book/book1-p08.mp3"
+   },
+   "illustration": "two hats side by side, white and black; the monkey walks past both.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הַקּוֹף רוֹצֶה... מַה?",
+   "translit": "Ha-kof rotze... mah?",
+   "en": "The monkey wants... what?",
+   "img": "assets/books/book1/BOOK1_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p09.mp3",
+    "m": "audio/m/israeli/book/book1-p09.mp3"
+   },
+   "illustration": "the monkey sits and thinks, chin in hand, surrounded by the rejected hats.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַקּוֹף רוֹצֶה כּוֹבַע עִם בָּנָנָה!",
+   "translit": "Ha-kof rotze kova im banana!",
+   "en": "The monkey wants a hat with a banana!",
+   "img": "assets/books/book1/BOOK1_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p10.mp3",
+    "m": "audio/m/israeli/book/book1-p10.mp3"
+   },
+   "illustration": "a hat with a banana perched on top; the monkey reaches for it, grinning.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "לֹא! הַקּוֹף רוֹצֶה אֶת הַכּוֹבַע עִם הַשּׁוֹקוֹלָד!",
+   "translit": "Lo! Ha-kof rotze et ha-kova im ha-shokolad!",
+   "en": "No! The monkey wants THE hat with the chocolate!",
+   "img": "assets/books/book1/BOOK1_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p11.mp3",
+    "m": "audio/m/israeli/book/book1-p11.mp3"
+   },
+   "illustration": "the monkey points past the banana hat to the chef's hat from page 4.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַקּוֹף אוֹכֵל שׁוֹקוֹלָד. טוֹב!",
+   "translit": "Ha-kof ochel shokolad. Tov!",
+   "en": "The monkey eats chocolate. Good!",
+   "img": "assets/books/book1/BOOK1_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book1-p12.mp3",
+    "m": "audio/m/israeli/book/book1-p12.mp3"
+   },
+   "illustration": "the monkey, chocolate in hand, chef's hat beside him, perfectly content.",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ],
+ "hasImages": true,
+ "hasAudio": true
+}

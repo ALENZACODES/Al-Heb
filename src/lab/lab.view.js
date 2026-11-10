@@ -8,12 +8,18 @@ import {
   readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded,
 } from './lab.core.js';
 import { DRILLS } from './lab.games.js';
+import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
 const SKILL_INK = { speed: '#163527' };
 
 const CSS = `
+.lab-art{display:block;max-inline-size:100%;block-size:auto;margin-inline:auto;pointer-events:none;user-select:none}
+.lab-art.cover{aspect-ratio:3/2;inline-size:100%;max-inline-size:30rem;border-radius:14px;border:2px solid #d4a647;object-fit:cover;margin-block:.4rem .8rem}
+.lab-art.win{inline-size:9rem;block-size:9rem;object-fit:contain;margin-block:.2rem}
+.lab-art.done{aspect-ratio:3/2;inline-size:100%;border-radius:12px;object-fit:cover;margin-block:.2rem .8rem}
+@media (prefers-reduced-data:reduce){.lab-art{display:none}}
 .lab{max-inline-size:44rem;margin-inline:auto}
 .lab h1{margin-block:.2em .3em}
 .lab-sub{color:var(--muted,#5d6b60);margin-block:0 1rem}
@@ -119,6 +125,7 @@ function hub(root, ctx) {
     h('p', { class: 'lab-sub' }, 'Short, fast drills that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
       h('h2', { id: 'lab-today' }, prog.complete ? 'Today’s workout is done' : 'Today’s Workout'),
+      prog.complete ? artImg(h, WORKOUT_DONE_ART, 'done') : null,
       h('p', {}, prog.complete ? `Well done. Come back tomorrow for a new mix.${streak > 1 ? ` ${streak} days in a row.` : ''}` : `Three drills, about three minutes. ${prog.done.length} of 3 done.${streak > 0 ? ` Streak: ${streak} ${streak === 1 ? 'day' : 'days'}.` : ''}`),
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
@@ -170,6 +177,7 @@ function drill(root, ctx, id) {
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
+        artImg(h, artPath(id, 'cover'), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout drill ${pos + 1} of 3` : ''),
         h('p', { class: 'how' }, game.blurb),
         h('p', { class: 'lab-note' }, `${globalThis.document?.documentElement?.hasAttribute?.('data-calm') ? 'Ten rounds, no clock (calm mode is on).' : `${SESSION_SECONDS} seconds.`} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
@@ -278,6 +286,7 @@ function drill(root, ctx, id) {
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
+      artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win'),
       h('p', { class: 'score' }, String(sum.score)),
       h('p', {}, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this drill.') : `Best: ${prevGame?.best ?? sum.score}`),
       h('div', { class: 'lab-stats' },

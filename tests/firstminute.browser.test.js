@@ -67,7 +67,7 @@ test('first minute in a browser: one question per screen by keyboard, no jump on
   });
 });
 
-test('one Rimon per screen: the corner Rimon steps aside where the page draws its own, and his bubble ducks with him on a phone', { skip, timeout: 120000 }, async () => {
+test('one Rimon per screen: the corner Rimon steps aside where the page draws its own (Learn, Games), and his bubble ducks with him on a phone', { skip, timeout: 120000 }, async () => {
   const server = createAppServer({ root }); await new Promise((r) => server.listen(0, r));
   const base = `http://localhost:${server.address().port}/`;
   const browser = await chromium.launch();
@@ -79,6 +79,8 @@ test('one Rimon per screen: the corner Rimon steps aside where the page draws it
     assert.ok(await page.locator('.alef-continue-rimon, .rimon-inline').count(), 'Learn draws its own Rimon');
     assert.equal(await page.locator('.rimon-corner').isVisible().catch(() => false), false, 'corner Rimon steps aside on Learn');
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('alef:rimon.dismissed') || 'false')), false, 'stepping aside is not a dismissal');
+    await page.goto(base + '#/games'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForSelector('.wf-hub-mascot.rimon-inline'); await page.waitForTimeout(900);
+    assert.equal(await page.locator('.rimon-corner').isVisible().catch(() => false), false, 'corner Rimon steps aside on Games, where the animated Rimon now waves');
     await page.goto(base + '#/progress'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(3200);
     if (await page.locator('.rimon-corner.rimon-peek').count()) {
       const shown = await page.locator('.rimon-bubble').evaluateAll((els) => els.filter((e) => getComputedStyle(e).display !== 'none' && !e.hidden && e.textContent.trim()).length);

@@ -14,7 +14,8 @@ const fetchJson = async (ctx, url) => {
 export async function mount(root, ctx) {
   root.append(h("h1", {}, "Little books"));
   root.append(h("p", { class: "muted" },
-    "Little Hebrew story books, read along page by page. Big print, full vowels, and a voice for every page. Start at Beginner 1 — the shelf is grouped by level."));
+    "Little Hebrew story books, read along page by page. Big print, full vowels, and a voice on the pages that have a recording. Start at Beginner 1 — the shelf is grouped by level."));
+  root.append(h("p", {}, h("a", { href: "#/practical" }, "Practice these places"), "."));
   const wrap = h("div", { class: "book-groups" });
   root.append(wrap);
   const data = await fetchJson(ctx, "data/books/index.json").catch(() => null);
@@ -57,7 +58,7 @@ export async function mount(root, ctx) {
     grid.append(cardFor(openBook));
     wrap.append(grid);
   }
-  const LEVEL_ORDER = ["Beginner 1", "Beginner 2", "Beginner 3", "Grade 1"];
+  const LEVEL_ORDER = ["Beginner 1", "Beginner 2", "Beginner 3", "Advanced", "Grade 1"];
   const groups = new Map();
   for (const b of data.books) { const k = b.level || "More books"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(b); }
   const keys = [...groups.keys()].sort((a, b) => {

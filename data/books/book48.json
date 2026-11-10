@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book48-p01.mp3"
    },
    "illustration": "an outdoor venue, olive trees, string lights",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book48-p02.mp3"
    },
    "illustration": "the couple under a chuppah",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book48-p03.mp3"
    },
    "illustration": "aunts in embroidered kaftans, trays of sweets",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book48-p04.mp3"
    },
    "illustration": "uncles in dark suits, a grandmother with a cane",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book48-p05.mp3"
    },
    "illustration": "two tables, animated conversation across the gap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book48-p06.mp3"
    },
    "illustration": "hands gesturing, confused smiles",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book48-p07.mp3"
    },
    "illustration": "a band striking up, a darbuka and a clarinet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book48-p08.mp3"
    },
    "illustration": "an elderly woman dancing with her arms up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book48-p09.mp3"
    },
    "illustration": "an old man kicking up his heels",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book48-p10.mp3"
    },
    "illustration": "the two elders dancing, everyone clapping",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book48-p11.mp3"
    },
    "illustration": "the whole crowd in one circle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book48-p12.mp3"
    },
    "illustration": "the couple lifted on chairs, confetti",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

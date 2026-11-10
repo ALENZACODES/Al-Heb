@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book42-p01.mp3"
    },
    "illustration": "a taxi at a stand under a streetlight",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book42-p02.mp3"
    },
    "illustration": "an older driver with a moustache and a radio",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book42-p03.mp3"
    },
    "illustration": "a woman sliding into the back seat",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book42-p04.mp3"
    },
    "illustration": "the driver looking in the mirror",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book42-p05.mp3"
    },
    "illustration": "a suitcase on her lap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book42-p06.mp3"
    },
    "illustration": "the driver pulling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book42-p07.mp3"
    },
    "illustration": "the woman looking out at the passing city",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book42-p08.mp3"
    },
    "illustration": "the driver's eyes in the mirror",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book42-p09.mp3"
    },
    "illustration": "the woman's reflection in the window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book42-p10.mp3"
    },
    "illustration": "the highway, the lights, quiet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book42-p11.mp3"
    },
    "illustration": "the driver speaking gently, hands on the wheel",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book42-p12.mp3"
    },
    "illustration": "the taxi at the terminal, the woman stepping out into the lights",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

@@ -1,0 +1,261 @@
+{
+ "id": "pu-going-out",
+ "title": "Going out",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-38",
+   "title": "Dating and going out: asking someone out, plans and compliments",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-38-w1",
+   "source": "data/curriculum/lessons.json#I-38.words[0]",
+   "he": "יָפֶה",
+   "en": "beautiful, nice",
+   "translit": "yafeh",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w2",
+   "source": "data/curriculum/lessons.json#I-38.words[1]",
+   "he": "חָמוּד",
+   "en": "cute, sweet, charming",
+   "translit": "chamud",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w3",
+   "source": "data/curriculum/lessons.json#I-38.words[2]",
+   "he": "מִסְעָדָה",
+   "en": "restaurant",
+   "translit": "mis'adah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w4",
+   "source": "data/curriculum/lessons.json#I-38.words[3]",
+   "he": "סֶרֶט",
+   "en": "film",
+   "translit": "seret",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w5",
+   "source": "data/curriculum/lessons.json#I-38.words[4]",
+   "he": "חָבֵר",
+   "en": "friend (m)",
+   "translit": "chaver",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w6",
+   "source": "data/curriculum/lessons.json#I-38.words[5]",
+   "he": "חֲבֵרָה",
+   "en": "friend (f)",
+   "translit": "chaverah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w7",
+   "source": "data/curriculum/lessons.json#I-38.words[6]",
+   "he": "אֶפְשָׁר לָצֵאת",
+   "en": "can we go out?",
+   "translit": "efshar latzet",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w8",
+   "source": "data/curriculum/lessons.json#I-38.words[7]",
+   "he": "בֶּאֱמֶת?",
+   "en": "really?",
+   "translit": "be'emet?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w9",
+   "source": "data/curriculum/lessons.json#I-38.words[8]",
+   "he": "מָתַי?",
+   "en": "when?",
+   "translit": "matai?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w10",
+   "source": "data/curriculum/lessons.json#I-38.words[9]",
+   "he": "הָעֶרֶב",
+   "en": "this evening",
+   "translit": "ha'erev",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w11",
+   "source": "data/curriculum/lessons.json#I-38.words[10]",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": "machar",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-38-w12",
+   "source": "data/curriculum/lessons.json#I-38.words[11]",
+   "he": "בְּשִׂמְחָה",
+   "en": "gladly, with pleasure",
+   "translit": "besimchah",
+   "review": "native-speaker-needed: pointing and register"
+  }
+ ],
+ "srsQueue": [
+  "i-38-w1",
+  "i-38-w2",
+  "i-38-w3",
+  "i-38-w4",
+  "i-38-w5",
+  "i-38-w6",
+  "i-38-w7",
+  "i-38-w8",
+  "i-38-w9",
+  "i-38-w10",
+  "i-38-w11",
+  "i-38-w12"
+ ],
+ "listenDrills": [],
+ "speakDrills": [],
+ "pages": [
+  {
+   "id": "pu-going-out-p01",
+   "title": "Asking someone out",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-38-w1",
+     "source": "data/curriculum/lessons.json#I-38.words[0]",
+     "he": "יָפֶה",
+     "en": "beautiful, nice",
+     "translit": "yafeh",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w2",
+     "source": "data/curriculum/lessons.json#I-38.words[1]",
+     "he": "חָמוּד",
+     "en": "cute, sweet, charming",
+     "translit": "chamud",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w3",
+     "source": "data/curriculum/lessons.json#I-38.words[2]",
+     "he": "מִסְעָדָה",
+     "en": "restaurant",
+     "translit": "mis'adah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w4",
+     "source": "data/curriculum/lessons.json#I-38.words[3]",
+     "he": "סֶרֶט",
+     "en": "film",
+     "translit": "seret",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w5",
+     "source": "data/curriculum/lessons.json#I-38.words[4]",
+     "he": "חָבֵר",
+     "en": "friend (m)",
+     "translit": "chaver",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-going-out-p02",
+   "title": "Tonight or tomorrow",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-38-w6",
+     "source": "data/curriculum/lessons.json#I-38.words[5]",
+     "he": "חֲבֵרָה",
+     "en": "friend (f)",
+     "translit": "chaverah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w7",
+     "source": "data/curriculum/lessons.json#I-38.words[6]",
+     "he": "אֶפְשָׁר לָצֵאת",
+     "en": "can we go out?",
+     "translit": "efshar latzet",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w8",
+     "source": "data/curriculum/lessons.json#I-38.words[7]",
+     "he": "בֶּאֱמֶת?",
+     "en": "really?",
+     "translit": "be'emet?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w9",
+     "source": "data/curriculum/lessons.json#I-38.words[8]",
+     "he": "מָתַי?",
+     "en": "when?",
+     "translit": "matai?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w10",
+     "source": "data/curriculum/lessons.json#I-38.words[9]",
+     "he": "הָעֶרֶב",
+     "en": "this evening",
+     "translit": "ha'erev",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-going-out-p03",
+   "title": "Tomorrow",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-38-w11",
+     "source": "data/curriculum/lessons.json#I-38.words[10]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-38-w12",
+     "source": "data/curriculum/lessons.json#I-38.words[11]",
+     "he": "בְּשִׂמְחָה",
+     "en": "gladly, with pleasure",
+     "translit": "besimchah",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  }
+ ],
+ "relatedBook": {
+  "id": "book44",
+  "titleEn": "The Café on the Corner",
+  "href": "#/book/book44"
+ }
+}

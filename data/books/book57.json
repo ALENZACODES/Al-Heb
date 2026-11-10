@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book57-p01.mp3"
    },
    "illustration": "an alarm clock, a man groaning",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book57-p02.mp3"
    },
    "illustration": "a packed bus, suits, coffee cups",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book57-p03.mp3"
    },
    "illustration": "a man with visibly foreign confusion",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book57-p04.mp3"
    },
    "illustration": "the man looking at a calendar, counting days",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book57-p05.mp3"
    },
    "illustration": "his disbelief",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book57-p06.mp3"
    },
    "illustration": "the boss shrugging cheerfully",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book57-p07.mp3"
    },
    "illustration": "gears turning over his head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book57-p08.mp3"
    },
    "illustration": "a split image, desk and beach",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book57-p09.mp3"
    },
    "illustration": "his slow approving nod",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book57-p10.mp3"
    },
    "illustration": "a snowy street, a maple leaf flag",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book57-p11.mp3"
    },
    "illustration": "the man at a locked dark office in the snow",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book57-p12.mp3"
    },
    "illustration": "the man laughing alone in the snow, breath visible",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

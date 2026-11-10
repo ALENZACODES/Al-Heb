@@ -11,7 +11,7 @@ async function tryImport(paths) {
   return null;
 }
 
-export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['ask', '#/ask'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook'], ['light', '#/light']];
+export const QUICK = [['books', '#/books'], ['practical', '#/practical'], ['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['ask', '#/ask'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook'], ['light', '#/light']];
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
@@ -21,17 +21,23 @@ export function mount(root, ctx) {
   // Baby-step Home (docs/v0/SCOPE.md): a new learner sees the Today card, five destinations and a More button, nothing else.
   // Everything below the Today card is drawn by renderRest() once the Today model says whether this is a first run.
   const restHost = h('div', { class: 'stack', id: 'home-rest' });
-  const DESTS = [['letters', 'letters', 'Letters'], ['vocab', 'vocab', 'Dictionary'], ['read', 'read', 'Read'], ['progress', 'progress', 'Progress'], ['calendar', 'calendar', 'Calendar']];
+  const DESTS = [['letters', 'letters', 'Letters'], ['vocab', 'vocab', 'Dictionary'], ['readhub', 'read-home', 'Read'], ['progress', 'progress', 'Progress'], ['calendar', 'calendar', 'Calendar']];
   const openMenu = (e) => { e?.stopPropagation?.(); /* the shell closes the sheet on any outside click, including this one */ const b2 = globalThis.document?.getElementById?.('more-btn'); if (b2) b2.click(); else if (ctx.route) ctx.route('/settings'); };
   // A beginner sees the five destinations (Letters first) in one short row directly under the title, ABOVE the Today card, so Letters is on the
   // first screen of a phone (at 375x667 the old "Go to" card started at y=570 and its first tile at y=621, under the tab bar).
   const destHost = h('div', { id: 'home-dests-host' });
-  const babyDests = () => h('nav', { 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick', class: 'visually-hidden' }, t('home.quick')),
+  const babyDests = () => h('div', { id: 'home-dests-wrap' },
+    h('nav', { 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick', class: 'visually-hidden' }, t('home.quick')),
     h('ul', { class: 'tiles home-dests', style: 'grid-template-columns:repeat(auto-fit,minmax(min(4.5rem,100%),1fr));gap:.5rem;margin:0;padding:0' },
       ...DESTS.filter(([n]) => ctx.hasRoute?.(n) ?? false).map(([n, route, label]) => {
         const pre = previewTag(n);
         return h('li', {}, h('a', { class: 'tile', href: '#/' + route, style: 'padding-inline:.25rem;min-block-size:3rem' }, medal('home', n, 40), h('span', {}, label), pre ? ' ' : null, pre ? h('span', { class: 'muted small' }, 'Preview') : null));
-      })));
+      }))),
+    h('nav', { 'aria-labelledby': 'h-stories', style: 'margin-block-start:.75rem' },
+      h('h2', { id: 'h-stories' }, 'Stories and places'),
+      h('ul', { class: 'tiles', style: 'grid-template-columns:repeat(auto-fit,minmax(min(4.5rem,100%),1fr));gap:.5rem;margin:0;padding:0' },
+        ctx.hasRoute?.('books') ? h('li', {}, h('a', { class: 'tile', href: '#/books' }, 'Little books')) : null,
+        ctx.hasRoute?.('practical') ? h('li', {}, h('a', { class: 'tile', href: '#/practical' }, 'Practical')) : null)));
   const babyRest = () => [
     h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-more', 'aria-controls': 'nav-more', onclick: openMenu }, 'More'))];
   const fullRest = () => {

@@ -1919,15 +1919,15 @@
    "dialogue": null,
    "file": "data/curriculum/practical/pu-army.json",
    "route": "#/practical/pu-army",
-   "heldForJohn": true,
-   "live": false,
+   "heldForJohn": false,
+   "live": true,
    "pages": [
     {
      "id": "pu-army-p01",
      "order": 1,
      "kind": "learn",
      "title": "Words From the Army",
-     "status": "planned",
+     "status": "draft",
      "route": "#/practical/pu-army/pu-army-p01"
     },
     {
@@ -1935,7 +1935,7 @@
      "order": 2,
      "kind": "listen",
      "title": "Hear It in Conversation",
-     "status": "planned",
+     "status": "draft",
      "route": "#/practical/pu-army/pu-army-p02"
     },
     {
@@ -1943,10 +1943,11 @@
      "order": 3,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "draft",
      "route": "#/practical/pu-army/pu-army-p03"
     }
-   ]
+   ],
+   "status": "built-draft"
   },
   {
    "id": "pu-news",

@@ -1,0 +1,336 @@
+{
+ "id": "pu-hospital",
+ "title": "Hospital and clinic",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-20",
+   "title": "Hospital and clinic: doctor, appointment, insurance, 'where does it hurt'",
+   "track": "israel",
+   "wordCount": 13
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-20-w1",
+   "source": "data/curriculum/lessons.json#I-20.words[0]",
+   "he": "בֵּית חוֹלִים",
+   "en": "hospital",
+   "translit": "beit cholim",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w2",
+   "source": "data/curriculum/lessons.json#I-20.words[1]",
+   "he": "רוֹפֵא",
+   "en": "medical doctor, physician",
+   "translit": "rofe",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w3",
+   "source": "data/curriculum/lessons.json#I-20.words[2]",
+   "he": "רוֹפְאָה",
+   "en": "doctor (f)",
+   "translit": "rofe'ah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w4",
+   "source": "data/curriculum/lessons.json#I-20.words[3]",
+   "he": "אָחוֹת",
+   "en": "nurse (f)",
+   "translit": "achot",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w5",
+   "source": "data/curriculum/lessons.json#I-20.words[4]",
+   "he": "תּוֹר",
+   "en": "appointment, turn",
+   "translit": "tor",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w6",
+   "source": "data/curriculum/lessons.json#I-20.words[5]",
+   "he": "בִּטּוּחַ",
+   "en": "insurance",
+   "translit": "bituach",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w7",
+   "source": "data/curriculum/lessons.json#I-20.words[6]",
+   "he": "כּוֹאֵב",
+   "en": "it hurts",
+   "translit": "ko'ev",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w8",
+   "source": "data/curriculum/lessons.json#I-20.words[7]",
+   "he": "בְּדִיקָה",
+   "en": "test, examination",
+   "translit": "bedikah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w9",
+   "source": "data/curriculum/lessons.json#I-20.words[8]",
+   "he": "דָּם",
+   "en": "blood",
+   "translit": "dam",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w10",
+   "source": "data/curriculum/lessons.json#I-20.words[9]",
+   "he": "חֵרוּם",
+   "en": "emergency",
+   "translit": "cherum",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w11",
+   "source": "data/curriculum/lessons.json#I-20.words[10]",
+   "he": "אַמְבּוּלַנְס",
+   "en": "ambulance",
+   "translit": "ambulans",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w12",
+   "source": "data/curriculum/lessons.json#I-20.words[11]",
+   "he": "הַדַּרְכּוֹן",
+   "en": "the passport",
+   "translit": "hadarkon",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-20-w13",
+   "source": "data/curriculum/lessons.json#I-20.words[12]",
+   "he": "מִשְׁפָּחָה",
+   "en": "family",
+   "translit": "mishpachah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "directions-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+   "en": "where is the hospital?",
+   "translit": "eifo beit hacholim?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "directions-17"
+   }
+  },
+  {
+   "id": "help-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי צָרִיךְ רוֹפֵא",
+   "en": "I need a doctor",
+   "translit": "ani tsarich rofe",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "help-02"
+   }
+  }
+ ],
+ "srsQueue": [
+  "i-20-w1",
+  "i-20-w2",
+  "i-20-w3",
+  "i-20-w4",
+  "i-20-w5",
+  "i-20-w6",
+  "i-20-w7",
+  "i-20-w8",
+  "i-20-w9",
+  "i-20-w10",
+  "i-20-w11",
+  "i-20-w12",
+  "i-20-w13",
+  "directions-17",
+  "help-02"
+ ],
+ "listenDrills": [],
+ "speakDrills": [],
+ "pages": [
+  {
+   "id": "pu-hospital-p01",
+   "title": "The hospital and who works there",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-20-w1",
+     "source": "data/curriculum/lessons.json#I-20.words[0]",
+     "he": "בֵּית חוֹלִים",
+     "en": "hospital",
+     "translit": "beit cholim",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w2",
+     "source": "data/curriculum/lessons.json#I-20.words[1]",
+     "he": "רוֹפֵא",
+     "en": "medical doctor, physician",
+     "translit": "rofe",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w3",
+     "source": "data/curriculum/lessons.json#I-20.words[2]",
+     "he": "רוֹפְאָה",
+     "en": "doctor (f)",
+     "translit": "rofe'ah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w4",
+     "source": "data/curriculum/lessons.json#I-20.words[3]",
+     "he": "אָחוֹת",
+     "en": "nurse (f)",
+     "translit": "achot",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w5",
+     "source": "data/curriculum/lessons.json#I-20.words[4]",
+     "he": "תּוֹר",
+     "en": "appointment, turn",
+     "translit": "tor",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p02",
+   "title": "Appointments, insurance and tests",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-20-w6",
+     "source": "data/curriculum/lessons.json#I-20.words[5]",
+     "he": "בִּטּוּחַ",
+     "en": "insurance",
+     "translit": "bituach",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w7",
+     "source": "data/curriculum/lessons.json#I-20.words[6]",
+     "he": "כּוֹאֵב",
+     "en": "it hurts",
+     "translit": "ko'ev",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w8",
+     "source": "data/curriculum/lessons.json#I-20.words[7]",
+     "he": "בְּדִיקָה",
+     "en": "test, examination",
+     "translit": "bedikah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w9",
+     "source": "data/curriculum/lessons.json#I-20.words[8]",
+     "he": "דָּם",
+     "en": "blood",
+     "translit": "dam",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w10",
+     "source": "data/curriculum/lessons.json#I-20.words[9]",
+     "he": "חֵרוּם",
+     "en": "emergency",
+     "translit": "cherum",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p03",
+   "title": "I need a doctor",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-20-w11",
+     "source": "data/curriculum/lessons.json#I-20.words[10]",
+     "he": "אַמְבּוּלַנְס",
+     "en": "ambulance",
+     "translit": "ambulans",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w12",
+     "source": "data/curriculum/lessons.json#I-20.words[11]",
+     "he": "הַדַּרְכּוֹן",
+     "en": "the passport",
+     "translit": "hadarkon",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-20-w13",
+     "source": "data/curriculum/lessons.json#I-20.words[12]",
+     "he": "מִשְׁפָּחָה",
+     "en": "family",
+     "translit": "mishpachah",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-hospital-p04",
+   "title": "where is the hospital?",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json.",
+   "items": [
+    {
+     "id": "directions-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+     "en": "where is the hospital?",
+     "translit": "eifo beit hacholim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-17"
+     }
+    },
+    {
+     "id": "help-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צָרִיךְ רוֹפֵא",
+     "en": "I need a doctor",
+     "translit": "ani tsarich rofe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "help-02"
+     }
+    }
+   ]
+  }
+ ],
+ "relatedBook": {
+  "id": "book36",
+  "titleEn": "Doctor, I'm Fine",
+  "href": "#/book/book36"
+ }
+}

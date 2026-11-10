@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book58-p01.mp3"
    },
    "illustration": "a quiet reading hall, tall windows",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book58-p02.mp3"
    },
    "illustration": "a sign: quiet please, a librarian's glance",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book58-p03.mp3"
    },
    "illustration": "a man at the same table, same chair",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book58-p04.mp3"
    },
    "illustration": "an open book he isn't looking at",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book58-p05.mp3"
    },
    "illustration": "a laptop with job listings, a worn CV",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book58-p06.mp3"
    },
    "illustration": "a librarian watching kindly over her glasses",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book58-p07.mp3"
    },
    "illustration": "a slim book placed silently",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book58-p08.mp3"
    },
    "illustration": "the title on the cover",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book58-p09.mp3"
    },
    "illustration": "the man covering his mouth",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book58-p10.mp3"
    },
    "illustration": "the CV reworked, red pen everywhere",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book58-p11.mp3"
    },
    "illustration": "his phone lighting up in the hall, a rush to the door",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book58-p12.mp3"
    },
    "illustration": "a bouquet set on the librarian's desk, a thumbs up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

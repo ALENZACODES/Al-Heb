@@ -1,0 +1,311 @@
+{
+ "id": "pu-airport-taxi",
+ "title": "A taxi to the airport",
+ "level": "L1",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-23",
+   "title": "Taxi: destination, meter, 'slower' and the receipt",
+   "track": "israel",
+   "wordCount": 13
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-23-w1",
+   "source": "data/curriculum/lessons.json#I-23.words[0]",
+   "he": "מוֹנִית",
+   "en": "taxi",
+   "translit": "monit",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w2",
+   "source": "data/curriculum/lessons.json#I-23.words[1]",
+   "he": "לְאָן?",
+   "en": "where to?",
+   "translit": "le'an?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w3",
+   "source": "data/curriculum/lessons.json#I-23.words[2]",
+   "he": "לִשְׂדֵה הַתְּעוּפָה",
+   "en": "to the airport",
+   "translit": "lisdeh hate'ufah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w4",
+   "source": "data/curriculum/lessons.json#I-23.words[3]",
+   "he": "לַמָּלוֹן",
+   "en": "to the hotel",
+   "translit": "lamalon",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w5",
+   "source": "data/curriculum/lessons.json#I-23.words[4]",
+   "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+   "en": "to the central station",
+   "translit": "latachanah hamerkazit",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w6",
+   "source": "data/curriculum/lessons.json#I-23.words[5]",
+   "he": "מוֹנֶה",
+   "en": "meter",
+   "translit": "moneh",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w7",
+   "source": "data/curriculum/lessons.json#I-23.words[6]",
+   "he": "כַּמָּה זֶה יַעֲלֶה?",
+   "en": "how much will it cost?",
+   "translit": "kamah zeh ya'aleh?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w8",
+   "source": "data/curriculum/lessons.json#I-23.words[7]",
+   "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+   "en": "stop here, please",
+   "translit": "atzor kan, bevakashah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w9",
+   "source": "data/curriculum/lessons.json#I-23.words[8]",
+   "he": "לְאַט",
+   "en": "slowly",
+   "translit": "le'at",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w10",
+   "source": "data/curriculum/lessons.json#I-23.words[9]",
+   "he": "קַבָּלָה",
+   "en": "receipt",
+   "translit": "kabalah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w11",
+   "source": "data/curriculum/lessons.json#I-23.words[10]",
+   "he": "מְמַהֵר",
+   "en": "in a hurry (m)",
+   "translit": "memaher",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w12",
+   "source": "data/curriculum/lessons.json#I-23.words[11]",
+   "he": "שֵׁרוּת",
+   "en": "service; shared taxi (sherut)",
+   "translit": "sherut",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-23-w13",
+   "source": "data/curriculum/lessons.json#I-23.words[12]",
+   "he": "חַלּוֹן",
+   "en": "window",
+   "translit": "chalon",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "taxi-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
+   "en": "to the airport, please",
+   "translit": "lisde hate'ufa, bevakasha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-03"
+   }
+  }
+ ],
+ "srsQueue": [
+  "i-23-w1",
+  "i-23-w2",
+  "i-23-w3",
+  "i-23-w4",
+  "i-23-w5",
+  "i-23-w6",
+  "i-23-w7",
+  "i-23-w8",
+  "i-23-w9",
+  "i-23-w10",
+  "i-23-w11",
+  "i-23-w12",
+  "i-23-w13",
+  "taxi-03"
+ ],
+ "listenDrills": [],
+ "speakDrills": [],
+ "pages": [
+  {
+   "id": "pu-airport-taxi-p01",
+   "title": "To the airport, please",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-23-w1",
+     "source": "data/curriculum/lessons.json#I-23.words[0]",
+     "he": "מוֹנִית",
+     "en": "taxi",
+     "translit": "monit",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w2",
+     "source": "data/curriculum/lessons.json#I-23.words[1]",
+     "he": "לְאָן?",
+     "en": "where to?",
+     "translit": "le'an?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w3",
+     "source": "data/curriculum/lessons.json#I-23.words[2]",
+     "he": "לִשְׂדֵה הַתְּעוּפָה",
+     "en": "to the airport",
+     "translit": "lisdeh hate'ufah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w4",
+     "source": "data/curriculum/lessons.json#I-23.words[3]",
+     "he": "לַמָּלוֹן",
+     "en": "to the hotel",
+     "translit": "lamalon",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w5",
+     "source": "data/curriculum/lessons.json#I-23.words[4]",
+     "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+     "en": "to the central station",
+     "translit": "latachanah hamerkazit",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-airport-taxi-p02",
+   "title": "The meter and the receipt",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-23-w6",
+     "source": "data/curriculum/lessons.json#I-23.words[5]",
+     "he": "מוֹנֶה",
+     "en": "meter",
+     "translit": "moneh",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w7",
+     "source": "data/curriculum/lessons.json#I-23.words[6]",
+     "he": "כַּמָּה זֶה יַעֲלֶה?",
+     "en": "how much will it cost?",
+     "translit": "kamah zeh ya'aleh?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w8",
+     "source": "data/curriculum/lessons.json#I-23.words[7]",
+     "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+     "en": "stop here, please",
+     "translit": "atzor kan, bevakashah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w9",
+     "source": "data/curriculum/lessons.json#I-23.words[8]",
+     "he": "לְאַט",
+     "en": "slowly",
+     "translit": "le'at",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w10",
+     "source": "data/curriculum/lessons.json#I-23.words[9]",
+     "he": "קַבָּלָה",
+     "en": "receipt",
+     "translit": "kabalah",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-airport-taxi-p03",
+   "title": "In a hurry (m)",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-23-w11",
+     "source": "data/curriculum/lessons.json#I-23.words[10]",
+     "he": "מְמַהֵר",
+     "en": "in a hurry (m)",
+     "translit": "memaher",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w12",
+     "source": "data/curriculum/lessons.json#I-23.words[11]",
+     "he": "שֵׁרוּת",
+     "en": "service; shared taxi (sherut)",
+     "translit": "sherut",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-23-w13",
+     "source": "data/curriculum/lessons.json#I-23.words[12]",
+     "he": "חַלּוֹן",
+     "en": "window",
+     "translit": "chalon",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-airport-taxi-p04",
+   "title": "to the airport, please",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json.",
+   "items": [
+    {
+     "id": "taxi-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
+     "en": "to the airport, please",
+     "translit": "lisde hate'ufa, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-03"
+     }
+    }
+   ]
+  }
+ ],
+ "relatedBook": {
+  "id": "book42",
+  "titleEn": "The Taxi Driver",
+  "href": "#/book/book42"
+ }
+}

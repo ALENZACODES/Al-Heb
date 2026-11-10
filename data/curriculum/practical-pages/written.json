@@ -26067,6 +26067,254 @@
     "i-44-w8",
     "i-44-w7"
    ]
+  },
+  {
+   "id": "pu-pharmacy-p01",
+   "unit": "pu-pharmacy",
+   "title": "Words at the pharmacy",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-pharmacy-p02",
+   "unit": "pu-pharmacy",
+   "title": "Pain, fever and how often",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-pharmacy-p03",
+   "unit": "pu-pharmacy",
+   "title": "Where is the pharmacy?",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-pharmacy-p04",
+   "unit": "pu-pharmacy",
+   "title": "Where is the pharmacy?",
+   "status": "draft",
+   "itemCount": 1,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-hospital-p01",
+   "unit": "pu-hospital",
+   "title": "The hospital and who works there",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-hospital-p02",
+   "unit": "pu-hospital",
+   "title": "Appointments, insurance and tests",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-hospital-p03",
+   "unit": "pu-hospital",
+   "title": "I need a doctor",
+   "status": "draft",
+   "itemCount": 3,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-hospital-p04",
+   "unit": "pu-hospital",
+   "title": "where is the hospital?",
+   "status": "draft",
+   "itemCount": 2,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-shuk-p01",
+   "unit": "pu-shuk",
+   "title": "The market and the prices",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-shuk-p02",
+   "unit": "pu-shuk",
+   "title": "Fresh food",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-shuk-p03",
+   "unit": "pu-shuk",
+   "title": "I'll take this",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-supermarket-p01",
+   "unit": "pu-supermarket",
+   "title": "The cart and the aisles",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-supermarket-p02",
+   "unit": "pu-supermarket",
+   "title": "Paying and the bag",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-supermarket-p03",
+   "unit": "pu-supermarket",
+   "title": "Discount",
+   "status": "draft",
+   "itemCount": 1,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-university-p01",
+   "unit": "pu-university",
+   "title": "People and places at the university",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-university-p02",
+   "unit": "pu-university",
+   "title": "Courses, exams and a book",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-university-p03",
+   "unit": "pu-university",
+   "title": "Tomorrow",
+   "status": "draft",
+   "itemCount": 2,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-school-p01",
+   "unit": "pu-school",
+   "title": "Children and family",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-school-p02",
+   "unit": "pu-school",
+   "title": "School, the teacher and play",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-school-p03",
+   "unit": "pu-school",
+   "title": "How old (lit. son of how much)?",
+   "status": "draft",
+   "itemCount": 2,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-going-out-p01",
+   "unit": "pu-going-out",
+   "title": "Asking someone out",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-going-out-p02",
+   "unit": "pu-going-out",
+   "title": "Tonight or tomorrow",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-going-out-p03",
+   "unit": "pu-going-out",
+   "title": "Tomorrow",
+   "status": "draft",
+   "itemCount": 2,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-airport-taxi-p01",
+   "unit": "pu-airport-taxi",
+   "title": "To the airport, please",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-airport-taxi-p02",
+   "unit": "pu-airport-taxi",
+   "title": "The meter and the receipt",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-airport-taxi-p03",
+   "unit": "pu-airport-taxi",
+   "title": "In a hurry (m)",
+   "status": "draft",
+   "itemCount": 3,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-airport-taxi-p04",
+   "unit": "pu-airport-taxi",
+   "title": "to the airport, please",
+   "status": "draft",
+   "itemCount": 1,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-army-p01",
+   "unit": "pu-army",
+   "title": "Words from the army",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-army-p02",
+   "unit": "pu-army",
+   "title": "How friends talk",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-army-p03",
+   "unit": "pu-army",
+   "title": "Unit review",
+   "status": "draft",
+   "itemCount": 5,
+   "nativeReview": "required"
+  },
+  {
+   "id": "pu-army-p04",
+   "unit": "pu-army",
+   "title": "Chill",
+   "status": "draft",
+   "itemCount": 1,
+   "nativeReview": "required"
   }
  ],
  "completeUnits": [

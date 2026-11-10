@@ -15,6 +15,8 @@ export const NAV_EN = {
   'nav.talk': 'Talk',
   'nav.phrases': 'Common phrases',
   'nav.practical': 'Practical',
+  'nav.books': 'Little books',
+  'nav.games': 'Games',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',

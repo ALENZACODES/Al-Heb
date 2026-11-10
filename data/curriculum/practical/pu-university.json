@@ -1,0 +1,256 @@
+{
+ "id": "pu-university",
+ "title": "At the university",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-37",
+   "title": "University: courses, lectures, exams and scholarships",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-37-w1",
+   "source": "data/curriculum/lessons.json#I-37.words[0]",
+   "he": "אוּנִיבֶרְסִיטָה",
+   "en": "university",
+   "translit": "universitah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w2",
+   "source": "data/curriculum/lessons.json#I-37.words[1]",
+   "he": "מוֹרֶה",
+   "en": "teacher (m)",
+   "translit": "moreh",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w3",
+   "source": "data/curriculum/lessons.json#I-37.words[2]",
+   "he": "מְרַצֶּה",
+   "en": "lecturer; lecturing",
+   "translit": "meratzeh",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w4",
+   "source": "data/curriculum/lessons.json#I-37.words[3]",
+   "he": "פְּרוֹפֶסוֹר",
+   "en": "professor",
+   "translit": "perofesor",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w5",
+   "source": "data/curriculum/lessons.json#I-37.words[4]",
+   "he": "מִבְחָן",
+   "en": "test, exam",
+   "translit": "mivchan",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w6",
+   "source": "data/curriculum/lessons.json#I-37.words[5]",
+   "he": "שִׁעוּר",
+   "en": "lesson, class",
+   "translit": "shi'ur",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w7",
+   "source": "data/curriculum/lessons.json#I-37.words[6]",
+   "he": "סֵפֶר",
+   "en": "book",
+   "translit": "sefer",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w8",
+   "source": "data/curriculum/lessons.json#I-37.words[7]",
+   "he": "מִלְגָּה",
+   "en": "scholarship",
+   "translit": "milgah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w9",
+   "source": "data/curriculum/lessons.json#I-37.words[8]",
+   "he": "קוּרְס",
+   "en": "a course (a class)",
+   "translit": "kurs",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w10",
+   "source": "data/curriculum/lessons.json#I-37.words[9]",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": "hayom",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w11",
+   "source": "data/curriculum/lessons.json#I-37.words[10]",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": "machar",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-37-w12",
+   "source": "data/curriculum/lessons.json#I-37.words[11]",
+   "he": "חָבֵר",
+   "en": "friend (m)",
+   "translit": "chaver",
+   "review": "native-speaker-needed: pointing and register"
+  }
+ ],
+ "srsQueue": [
+  "i-37-w1",
+  "i-37-w2",
+  "i-37-w3",
+  "i-37-w4",
+  "i-37-w5",
+  "i-37-w6",
+  "i-37-w7",
+  "i-37-w8",
+  "i-37-w9",
+  "i-37-w10",
+  "i-37-w11",
+  "i-37-w12"
+ ],
+ "listenDrills": [],
+ "speakDrills": [],
+ "pages": [
+  {
+   "id": "pu-university-p01",
+   "title": "People and places at the university",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-37-w1",
+     "source": "data/curriculum/lessons.json#I-37.words[0]",
+     "he": "אוּנִיבֶרְסִיטָה",
+     "en": "university",
+     "translit": "universitah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w2",
+     "source": "data/curriculum/lessons.json#I-37.words[1]",
+     "he": "מוֹרֶה",
+     "en": "teacher (m)",
+     "translit": "moreh",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w3",
+     "source": "data/curriculum/lessons.json#I-37.words[2]",
+     "he": "מְרַצֶּה",
+     "en": "lecturer; lecturing",
+     "translit": "meratzeh",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w4",
+     "source": "data/curriculum/lessons.json#I-37.words[3]",
+     "he": "פְּרוֹפֶסוֹר",
+     "en": "professor",
+     "translit": "perofesor",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w5",
+     "source": "data/curriculum/lessons.json#I-37.words[4]",
+     "he": "מִבְחָן",
+     "en": "test, exam",
+     "translit": "mivchan",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-university-p02",
+   "title": "Courses, exams and a book",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-37-w6",
+     "source": "data/curriculum/lessons.json#I-37.words[5]",
+     "he": "שִׁעוּר",
+     "en": "lesson, class",
+     "translit": "shi'ur",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w7",
+     "source": "data/curriculum/lessons.json#I-37.words[6]",
+     "he": "סֵפֶר",
+     "en": "book",
+     "translit": "sefer",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w8",
+     "source": "data/curriculum/lessons.json#I-37.words[7]",
+     "he": "מִלְגָּה",
+     "en": "scholarship",
+     "translit": "milgah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w9",
+     "source": "data/curriculum/lessons.json#I-37.words[8]",
+     "he": "קוּרְס",
+     "en": "a course (a class)",
+     "translit": "kurs",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w10",
+     "source": "data/curriculum/lessons.json#I-37.words[9]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-university-p03",
+   "title": "Tomorrow",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-37-w11",
+     "source": "data/curriculum/lessons.json#I-37.words[10]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-37-w12",
+     "source": "data/curriculum/lessons.json#I-37.words[11]",
+     "he": "חָבֵר",
+     "en": "friend (m)",
+     "translit": "chaver",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  }
+ ]
+}

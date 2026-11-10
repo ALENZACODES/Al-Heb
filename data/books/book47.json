@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book47-p01.mp3"
    },
    "illustration": "an old house, bare walls with picture outlines",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book47-p02.mp3"
    },
    "illustration": "an older woman directing movers",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book47-p03.mp3"
    },
    "illustration": "her grown son taping a box",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book47-p04.mp3"
    },
    "illustration": "a battered box in the middle of the floor",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book47-p05.mp3"
    },
    "illustration": "the son kneeling by it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book47-p06.mp3"
    },
    "illustration": "the mother shrugging",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book47-p07.mp3"
    },
    "illustration": "a stack of old photos spilling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book47-p08.mp3"
    },
    "illustration": "two faded photos: a toddler, a boy with a bike",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book47-p09.mp3"
    },
    "illustration": "a photo of a young man laughing, same nose as the son",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book47-p10.mp3"
    },
    "illustration": "the mother cross-legged among photos",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book47-p11.mp3"
    },
    "illustration": "the light shifting, movers waiting at the door",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book47-p12.mp3"
    },
    "illustration": "the mother in the moving truck, the box on her lap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

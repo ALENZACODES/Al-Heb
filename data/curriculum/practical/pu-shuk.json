@@ -1,0 +1,307 @@
+{
+ "id": "pu-shuk",
+ "title": "At the shuk",
+ "level": "L1",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-12",
+   "title": "Shuk bargaining: prices, discounts and 'I'll take it'",
+   "track": "israel",
+   "wordCount": 15
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-12-w1",
+   "source": "data/curriculum/lessons.json#I-12.words[0]",
+   "he": "שׁוּק",
+   "en": "market",
+   "translit": "shuk",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w2",
+   "source": "data/curriculum/lessons.json#I-12.words[1]",
+   "he": "כַּמָּה זֶה עוֹלֶה?",
+   "en": "how much does it cost?",
+   "translit": "kamah zeh oleh?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w3",
+   "source": "data/curriculum/lessons.json#I-12.words[2]",
+   "he": "מָה הַמְּחִיר?",
+   "en": "what is the price?",
+   "translit": "mah hamechir?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w4",
+   "source": "data/curriculum/lessons.json#I-12.words[3]",
+   "he": "זֶה יָקָר",
+   "en": "it's expensive",
+   "translit": "zeh yakar",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w5",
+   "source": "data/curriculum/lessons.json#I-12.words[4]",
+   "he": "זֶה זוֹל",
+   "en": "it's cheap",
+   "translit": "zeh zol",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w6",
+   "source": "data/curriculum/lessons.json#I-12.words[5]",
+   "he": "יֵשׁ הַנָּחָה?",
+   "en": "is there a discount?",
+   "translit": "yesh hanachah?",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w7",
+   "source": "data/curriculum/lessons.json#I-12.words[6]",
+   "he": "חֲצִי",
+   "en": "half",
+   "translit": "chatzi",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w8",
+   "source": "data/curriculum/lessons.json#I-12.words[7]",
+   "he": "טָרִי",
+   "en": "fresh",
+   "translit": "tari",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w9",
+   "source": "data/curriculum/lessons.json#I-12.words[8]",
+   "he": "עַגְבָנִיָּה",
+   "en": "tomato",
+   "translit": "agvaniyah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w10",
+   "source": "data/curriculum/lessons.json#I-12.words[9]",
+   "he": "מְלָפְפוֹן",
+   "en": "cucumber",
+   "translit": "melafefon",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w11",
+   "source": "data/curriculum/lessons.json#I-12.words[10]",
+   "he": "גְּבִינָה",
+   "en": "cheese",
+   "translit": "gevinah",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w12",
+   "source": "data/curriculum/lessons.json#I-12.words[11]",
+   "he": "זֵיתִים",
+   "en": "olives",
+   "translit": "zeitim",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w13",
+   "source": "data/curriculum/lessons.json#I-12.words[12]",
+   "he": "אֶקַּח אֶת זֶה",
+   "en": "I'll take this",
+   "translit": "ekach et zeh",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w14",
+   "source": "data/curriculum/lessons.json#I-12.words[13]",
+   "he": "מְזֻמָּן",
+   "en": "cash",
+   "translit": "mezuman",
+   "review": "native-speaker-needed: pointing and register"
+  },
+  {
+   "id": "i-12-w15",
+   "source": "data/curriculum/lessons.json#I-12.words[14]",
+   "he": "שַׂקִּית",
+   "en": "bag",
+   "translit": "sakit",
+   "review": "native-speaker-needed: pointing and register"
+  }
+ ],
+ "srsQueue": [
+  "i-12-w1",
+  "i-12-w2",
+  "i-12-w3",
+  "i-12-w4",
+  "i-12-w5",
+  "i-12-w6",
+  "i-12-w7",
+  "i-12-w8",
+  "i-12-w9",
+  "i-12-w10",
+  "i-12-w11",
+  "i-12-w12",
+  "i-12-w13",
+  "i-12-w14",
+  "i-12-w15"
+ ],
+ "listenDrills": [],
+ "speakDrills": [],
+ "pages": [
+  {
+   "id": "pu-shuk-p01",
+   "title": "The market and the prices",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-12-w1",
+     "source": "data/curriculum/lessons.json#I-12.words[0]",
+     "he": "שׁוּק",
+     "en": "market",
+     "translit": "shuk",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w2",
+     "source": "data/curriculum/lessons.json#I-12.words[1]",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "how much does it cost?",
+     "translit": "kamah zeh oleh?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w3",
+     "source": "data/curriculum/lessons.json#I-12.words[2]",
+     "he": "מָה הַמְּחִיר?",
+     "en": "what is the price?",
+     "translit": "mah hamechir?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w4",
+     "source": "data/curriculum/lessons.json#I-12.words[3]",
+     "he": "זֶה יָקָר",
+     "en": "it's expensive",
+     "translit": "zeh yakar",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w5",
+     "source": "data/curriculum/lessons.json#I-12.words[4]",
+     "he": "זֶה זוֹל",
+     "en": "it's cheap",
+     "translit": "zeh zol",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-shuk-p02",
+   "title": "Fresh food",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-12-w6",
+     "source": "data/curriculum/lessons.json#I-12.words[5]",
+     "he": "יֵשׁ הַנָּחָה?",
+     "en": "is there a discount?",
+     "translit": "yesh hanachah?",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w7",
+     "source": "data/curriculum/lessons.json#I-12.words[6]",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chatzi",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w8",
+     "source": "data/curriculum/lessons.json#I-12.words[7]",
+     "he": "טָרִי",
+     "en": "fresh",
+     "translit": "tari",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w9",
+     "source": "data/curriculum/lessons.json#I-12.words[8]",
+     "he": "עַגְבָנִיָּה",
+     "en": "tomato",
+     "translit": "agvaniyah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w10",
+     "source": "data/curriculum/lessons.json#I-12.words[9]",
+     "he": "מְלָפְפוֹן",
+     "en": "cucumber",
+     "translit": "melafefon",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  },
+  {
+   "id": "pu-shuk-p03",
+   "title": "I'll take this",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-12-w11",
+     "source": "data/curriculum/lessons.json#I-12.words[10]",
+     "he": "גְּבִינָה",
+     "en": "cheese",
+     "translit": "gevinah",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w12",
+     "source": "data/curriculum/lessons.json#I-12.words[11]",
+     "he": "זֵיתִים",
+     "en": "olives",
+     "translit": "zeitim",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w13",
+     "source": "data/curriculum/lessons.json#I-12.words[12]",
+     "he": "אֶקַּח אֶת זֶה",
+     "en": "I'll take this",
+     "translit": "ekach et zeh",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w14",
+     "source": "data/curriculum/lessons.json#I-12.words[13]",
+     "he": "מְזֻמָּן",
+     "en": "cash",
+     "translit": "mezuman",
+     "review": "native-speaker-needed: pointing and register"
+    },
+    {
+     "id": "i-12-w15",
+     "source": "data/curriculum/lessons.json#I-12.words[14]",
+     "he": "שַׂקִּית",
+     "en": "bag",
+     "translit": "sakit",
+     "review": "native-speaker-needed: pointing and register"
+    }
+   ]
+  }
+ ]
+}

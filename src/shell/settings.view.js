@@ -42,7 +42,7 @@ export function mount(root, ctx) {
   };
   // one checkbox row per boolean setting (plain English labels; the i18n table is owned by another lane)
   const boolRow = (key, label, help) => h('div', { class: 'field' },
-    h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => { settings.set({ [key]: e.target.checked }); savedAbout(key, e.target.checked); } }), h('span', {}, label)),
+    h('label', { class: 'opt', for: 's-' + key }, h('input', { type: 'checkbox', id: 's-' + key, checked: settings.get(key) ? true : null, onchange: (e) => { settings.set({ [key]: e.target.checked }); savedAbout(key, e.target.checked); ctx.sfx?.play?.('toggle'); } }), h('span', {}, label)),
     help ? h('p', { class: 'muted' }, help) : null);
   const toggle = h('input', { type: 'checkbox', id: 's-israel', checked: settings.get('israelTrack') ? true : null,
     onchange: (e) => { settings.set({ israelTrack: e.target.checked }); savedAbout('israelTrack', e.target.checked); } });

@@ -40,21 +40,25 @@ test('banner text is honest in each state', () => {
 const synthEntry = (tradition, status = 'synthetic-unreviewed', extra = {}) => ({ path: `audio/f/${tradition}/word/bayit.mp3`, voice: 'f', tradition, kind: 'word', id: 'bayit', text: 'בַּיִת', status,
   source: tradition === 'israeli' ? 'tts-hebrew' : 'tts-respelled', ...extra });
 const mkS = (tradition, entries, sp = null) => createAudio({ settings: { voice: 'f', congregation: tradition }, manifest: entries, AudioCtor: class {}, speech: sp, UtteranceCtor: sp ? Utt : undefined });
-test('synthetic Ashkenazi / Israeli file: level file, honest per-tradition label, not the recorded label; an older respelled own file is retired', () => {
+test('synthetic Ashkenazi / Israeli file: level file, honest per-tradition label, not the recorded label; a present bank clip plays as itself', () => {
   const want = {
     ashkenazi: 'Ashkenazi voice',
+    sephardi: 'Sephardi voice',
     israeli: 'Israeli voice',
   };
-  // an admitted Ashkenazi clip (the Israeli voice reading the Ashkenazi respelling, owner decision 2026-11-07 22:56) plays as itself
+  // an admitted Ashkenazi clip (the Israeli voice reading the Ashkenazi respelling) plays as itself
   const own = audioAccess(mkS('ashkenazi', [synthEntry('ashkenazi', 'synthetic-unreviewed', { source: 'tts-respelled-israeli-voice' })]), 'word', 'bayit');
   assert.equal(own.level, 'file'); assert.equal(own.label, want.ashkenazi); assert.ok(!/Recorded by a human/.test(own.label));
   const isr = audioAccess(mkS('israeli', [synthEntry('israeli')]), 'word', 'bayit');
   assert.equal(isr.level, 'file'); assert.equal(isr.label, want.israeli);
-  // the older respelled own files (source tts-respelled / paid-cloud) are retired: Sephardi and Ashkenazi play the Israeli file, or nothing
+  // present paid-cloud / tts-respelled bank files now play as the setting's own clip
   for (const t of ['sephardi', 'ashkenazi']) {
-    assert.equal(audioAccess(mkS(t, [synthEntry(t)]), 'word', 'bayit').level, 'none', t);
-    const viaRule = audioAccess(mkS(t, [synthEntry(t), synthEntry('israeli')]), 'word', 'bayit');
-    assert.equal(viaRule.level, 'file', t); assert.equal(viaRule.label, want.israeli, 'the label names the file that plays');
+    const self = audioAccess(mkS(t, [synthEntry(t)]), 'word', 'bayit');
+    assert.equal(self.level, 'file', t);
+    assert.equal(self.label, want[t], t + ' label names the file that plays');
+    const viaRule = audioAccess(mkS(t, [synthEntry(t, 'missing'), synthEntry('israeli')]), 'word', 'bayit');
+    assert.equal(viaRule.level, 'file', t + ' fallback');
+    assert.equal(viaRule.label, want.israeli, 'a missing own row falls back to the Israeli file and the label says so');
   }
 });
 test('a synthetic clip is never counted or labelled as human, whichever tradition the learner picked', () => {

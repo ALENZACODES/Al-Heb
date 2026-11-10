@@ -609,51 +609,20 @@ def write_outputs(items, results_by_key, checkpoint, stt_note=""):
         )
     OUT_MD.write_text("\n".join(lines) + "\n")
 
-    # Claude packet
-    fail_unique = []
-    seen = set()
-    for rec in fails:
-        k = (rec["id"], rec["he"], rec["en"])
-        if k in seen:
-            continue
-        seen.add(k)
-        fail_unique.append(rec)
-    prompt = [
-        "# Practical items that failed the Google Cloud test — please propose exact fixes",
-        "",
-        "You are Claude, working on ALEF (repo ALENZACODES/Al-Heb), lane C curriculum.",
-        "These Practical conversation items failed an automated Google Cloud check (he-IL WaveNet TTS → Chirp STT with nikkud stripped,",
-        "plus Hebrew→English and English→Hebrew translation compared to the stored gloss and source).",
-        "",
-        "For each item, give the exact fix, using only the Hebrew and English already in the item's source",
-        "(data/corpus/phrasebook.json, data/curriculum/lessons.json, or data/curriculum/dialogues.json).",
-        "Do not invent new Hebrew and treat it as verified. Do not voice or rewrite the divine Name.",
-        "If the TTS/STT loop failed but the source Hebrew and gloss are already correct, say so and recommend keeping the source as-is",
-        "(the speech loop can fail on short words). If the gloss is wrong relative to the source, restore the source English.",
-        "If the source itself is wrong, quote the better existing source line or mark it held.",
-        "",
-        "Reply as `replies/PRACTICAL-FIXES-r1.md` with one section per item: id, your diagnosis, and the exact replacement fields (he, en, or drop).",
-        f"",
-        f"{len(fail_unique)} unique failing items follow.",
-        "",
-    ]
-    for rec in fail_unique:
-        prompt += [
-            f"## {rec.get('unitId')} / {rec['id']}",
-            f"- Hebrew: {rec.get('he')}",
-            f"- Gloss: {rec.get('en')}",
-            f"- Source: {rec.get('source')}",
-            f"- STT output: {rec.get('stt_text')}",
-            f"- WER (nikkud stripped, word): {rec.get('wer')}",
-            f"- Letter WER: {rec.get('letter_wer')}",
-            f"- Translation HE→EN: {rec.get('he_to_en')}",
-            f"- Reverse EN→HE: {rec.get('en_to_he')}",
-            f"- Why it failed: {rec.get('reason')}",
-            "",
-        ]
-    OUT_FAILS.parent.mkdir(parents=True, exist_ok=True)
-    OUT_FAILS.write_text("\n".join(prompt) + "\n")
-    print(json.dumps({
+    # Claude packet, grouped by cause
+    try:
+        import importlib.util
+        helper = ROOT / "tools/curriculum/write_practical_fails.py"
+        spec = importlib.util.spec_from_file_location("write_practical_fails", helper)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        dest, summary = mod.write_grouped(rows, {"pass": n_pass, "fail": n_fail, "blocked_divine_name": n_blocked}, checkpoint.get("spent_usd"), dest=OUT_FAILS)
+        also = Path("/workspace/shared/al-heb/overnight-2026-11-10/PRACTICAL-FAILS-FOR-CLAUDE.md")
+        also.write_text(dest.read_text())
+        print(f"grouped fails {summary} -> {dest} and {also}", file=sys.stderr)
+    except Exception as e:
+        print(f"grouped fails writer failed: {e}", file=sys.stderr)
+        print(json.dumps({
         "pass": n_pass, "fail": n_fail, "blocked": n_blocked,
         "spent_usd": checkpoint.get("spent_usd"),
         "out": str(OUT_JSON), "fails_for_claude": str(OUT_FAILS),

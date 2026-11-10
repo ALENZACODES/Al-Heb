@@ -1,0 +1,5 @@
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2
+# Gradio is optional and large; the FastAPI /demo page covers the interactive demo.
+# gradio>=4.44

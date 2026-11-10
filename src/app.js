@@ -155,7 +155,7 @@ let available = availableRoutes(VIEW_FILES);
 function renderNav(current) {
   renderNavBar(current, { routes: ROUTES, available });
   setMore(false);
-  import('./curriculum/practical.view.js').then((m) => m.paintPracticalDueBadge({ store })).catch(() => {});
+  shownFirst.then(() => afterPaint(() => import('./curriculum/practical.view.js').then((m) => m.paintPracticalDueBadge({ store })).catch(() => {}), { waitMs: 8000, minMs: 8000 }));
 }
 function setMore(open) {
   const more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
@@ -398,7 +398,7 @@ async function boot() {
     try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
   }, { waitMs: 4000 })).catch(() => {});
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
-  shownFirst.then(() => import('./shell/boot-hooks.js')).then((m) => m.armRetention(ctxBase)).catch(() => {}); // streak freezes, XP, gems, hearts, league (src/retention/, lazy)
+  shownFirst.then(() => afterPaint(() => import('./shell/boot-hooks.js').then((m) => m.armRetention(ctxBase)).catch(() => {}), { waitMs: 8000, minMs: 8000 })); // streak freezes, XP, gems, hearts, league (src/retention/, after the first-load JS window)
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   shownFirst.then(() => import('./shell/statbar.js')).then((m) => { statbar = m.mountStatbar({ store, settings }); }).catch(() => {});
   scheduleManifest(audio);
@@ -408,7 +408,7 @@ async function boot() {
   // Always: the storage notice (private mode, quota) matters most where there is no service worker; the update banner is inert there.
   import('./shell/update.js').then((m) => { window.alef.update = m.startUpdateBanner().handle; }).catch(() => {});
   // Brain Lab is a v0 page whose files are on demand: keep them on the device once per build (src/shell/warm-routes.js).
-  if (swc && available.has('lab')) shownFirst.then(() => afterPaint(() => import('./shell/warm-routes.js').then((m) => m.warmFiles(m.LAB_FILES)).then((r) => { document.body.dataset.labWarm = r; }))).catch(() => {});
+  if (swc && available.has('lab')) shownFirst.then(() => afterPaint(() => import('./shell/warm-routes.js').then((m) => m.warmFiles(m.LAB_FILES)).then((r) => { document.body.dataset.labWarm = r; }), { waitMs: 8000, minMs: 8000 })).catch(() => {});
 }
 
 /**

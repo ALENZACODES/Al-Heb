@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book60-p01.mp3"
    },
    "illustration": "a man turning out pockets at a kiosk, coffee in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book60-p02.mp3"
    },
    "illustration": "empty pockets",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book60-p03.mp3"
    },
    "illustration": "the barista shaking her head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book60-p04.mp3"
    },
    "illustration": "the empty bench, a pigeon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book60-p05.mp3"
    },
    "illustration": "a thought bubble of the wallet's contents",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book60-p06.mp3"
    },
    "illustration": "the man sitting heavily on a step",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book60-p07.mp3"
    },
    "illustration": "a phone lit up and buzzing on the table, its screen a blank glow",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book60-p08.mp3"
    },
    "illustration": "a teenager's voice, a bubble of the wallet in a hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book60-p09.mp3"
    },
    "illustration": "the man jumping up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book60-p10.mp3"
    },
    "illustration": "a boy of sixteen holding out the wallet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book60-p11.mp3"
    },
    "illustration": "the man checking, relief",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book60-p12.mp3"
    },
    "illustration": "the boy waving it away, both smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

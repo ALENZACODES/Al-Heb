@@ -136,7 +136,7 @@ The guard list of real words (`data/camera/real-neighbours.json`, 3,264 words, C
 - `node --test tests/camera.model.test.js`: 20 passed.
 - `node --test tests/camera.browser.test.js`: 5 passed, in headless Chromium with the `_headers` Content-Security-Policy on the page. Every test asserts no policy violations, no request other than GET, and no address contacted other than the app's own.
 - `python3 -m pytest tools/camera-translate/tests -q`: 20 passed.
-- `npm test` (the full unit tier): UNIT_COUNT.
+- `npm test` (the full unit tier): 3,330 passed, 0 failed, 10 skipped.
 
 ## Not Done, Not Measured
 

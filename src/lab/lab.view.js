@@ -25,6 +25,17 @@ const token = (ctx, g) => {
 };
 /** Rimon reacts to a Brain Lab moment; the companion decides whether it shows (dismissed, reduced motion). */
 const rimon = (action, moment, game) => { try { signalRimon(action, { moment: `lab.${moment}`, game }); } catch { /* optional */ } };
+/**
+ * Rimon on the results card, drawn from his own approved sprite sheets (assets/img/rimon/<action>.png, 4 x 3 frames): one still
+ * frame at the height of the gesture. Shown until the game's own results picture (LAB_v2_<game>_win) is approved.
+ */
+const RIMON_POSE = { highfive: ['highfive', 7, 'Rimon gives you a high five'], laugh: ['laugh', 7, 'Rimon laughs with joy'], wink: ['wink', 6, 'Rimon winks: well played'], nervous: ['nervous', 5, 'Rimon: you can do it'] };
+const rimonStill = (pose) => {
+  const [sheet, frame, label] = RIMON_POSE[pose] || RIMON_POSE.wink;
+  return h('span', { class: 'lab-rimon', role: 'img', 'aria-label': label,
+    style: `background-image:url("assets/img/rimon/${sheet}.png");background-position:${(frame % 4) * 100 / 3}% ${Math.floor(frame / 4) * 50}%` });
+};
+let wavedThisVisit = false; // Rimon waves when Brain Lab first opens, not every time you come back to the list
 const tradOf = (ctx) => normTradition(typeof ctx.settings?.get === 'function' ? ctx.settings.get('congregation') : ctx.settings?.congregation);
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
@@ -117,6 +128,12 @@ const CSS = `
 .lab-token-glyph.is-long .he{font-size:.95rem}.lab-token-glyph.is-longer .he{font-size:.78rem}
 .lab-game{flex-direction:row;align-items:flex-start;gap:.75rem}
 .lab-game .body{display:flex;flex-direction:column;gap:.2rem;min-inline-size:0;flex:1}
+.lab-fresh{margin:0 0 1rem}
+.lab-fresh h2{font-size:1.05rem;margin:0 0 .4rem}
+.lab-fresh-row{display:flex;gap:.6rem;overflow-x:auto;padding-block-end:.4rem;scroll-snap-type:x mandatory}
+.lab-fresh-card{flex:0 0 9.5rem;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:.3rem;text-align:center;background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.7rem .5rem;text-decoration:none;color:inherit;min-block-size:48px}
+.lab-fresh-card .t{font-weight:800}
+.lab-fresh-card .lab-teaches{font-size:.78rem;line-height:1.3}
 .lab-new{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#a8442f;color:#fffaf0;border-radius:99px;padding:.05rem .5rem;margin-inline-start:.35rem;vertical-align:middle}
 .lab-teaches{font-size:.85rem;color:var(--lab-accent);font-weight:600}
 .lab-group{margin:1rem 0 .3rem;font-size:1.05rem;display:flex;align-items:center;gap:.5rem}
@@ -125,6 +142,7 @@ const CSS = `
 /* intro and results */
 .lab-cover{display:block;inline-size:100%;block-size:auto;aspect-ratio:2/1;object-fit:cover;border-radius:14px}
 .lab-win-art{display:block;inline-size:180px;block-size:180px;margin:0 auto;object-fit:contain}
+.lab-rimon{display:block;inline-size:116px;block-size:116px;margin:0 auto -.5rem;background-size:400% 300%;background-repeat:no-repeat}
 .lab-stars{font-size:2rem;letter-spacing:.2rem;color:var(--lab-gold);margin:0}
 .lab-met{list-style:none;padding:0;margin:.6rem 0;display:grid;gap:.4rem;text-align:start}
 .lab-met li{display:flex;align-items:center;gap:.6rem;background:#fffaf0;border:1px solid #e2d6b8;border-radius:12px;padding:.4rem .7rem}
@@ -220,6 +238,7 @@ function hub(root, ctx) {
   const plan = dailyWorkout(today, st), prog = workoutProgress(st, today, plan), streak = workoutStreak(st, today);
   const next = plan.find((id) => !prog.done.includes(id));
   const overall = overallScore(st);
+  const newOnes = GAMES.filter((g) => isNewGame(g, st));
   const tile = (g) => {
     const gs = st.games[g.id];
     return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` }, token(ctx, g),
@@ -233,6 +252,9 @@ function hub(root, ctx) {
     (prog.complete && art(ctx, 'LAB_v2_workout_done', 'lab-hero-art', 1200)) || art(ctx, 'LAB_v2_hero', 'lab-hero-art', 1200),
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Brain Lab ', heSpan('מַעְבָּדָה', 'he')),
     h('p', { class: 'lab-sub' }, 'Short, fast games that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
+    newOnes.length ? h('section', { class: 'lab-fresh', 'aria-labelledby': 'lab-fresh-h' },
+      h('h2', { id: 'lab-fresh-h' }, newOnes.length === 1 ? 'A New Game to Try' : `${newOnes.length} New Games to Try`),
+      h('div', { class: 'lab-fresh-row' }, ...newOnes.map((g) => h('a', { class: 'lab-fresh-card', href: `#/lab/${g.id}` }, token(ctx, g), h('span', { class: 't' }, g.title), h('span', { class: 'lab-teaches' }, g.teaches))))) : null,
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
       h('h2', { id: 'lab-today' }, prog.complete ? 'Today’s workout is done' : 'Today’s Workout'),
       h('p', {}, prog.complete ? `Well done. Come back tomorrow for a new mix.${streak > 1 ? ` ${streak} days in a row.` : ''}` : `Three games, about three minutes. ${prog.done.length} of 3 done.${streak > 0 ? ` Streak: ${streak} ${streak === 1 ? 'day' : 'days'}.` : ''}`),
@@ -254,7 +276,7 @@ function hub(root, ctx) {
       h('h3', { class: 'lab-group', style: `--sk:${SKILL_COLOR[s.id]}` }, s.name, ' ', heSpan(s.he, 'he lab-val')),
       h('div', { class: 'lab-games' }, ...GAMES.filter((g) => g.skill === s.id).map(tile))]));
   root.replaceChildren(wrap);
-  rimon('wave', 'hub');
+  if (!wavedThisVisit) { wavedThisVisit = true; rimon('wave', 'hub'); }
   return () => {};
 }
 
@@ -411,7 +433,8 @@ function drill(root, ctx, id) {
     const plan = dailyWorkout(day, st), prog = workoutProgress(st, day, plan);
     const nextId = workout ? plan.find((g) => !prog.done.includes(g)) : null;
     const stars = starsFor(sum);
-    rimon(workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous', workout && prog.complete ? 'workout-done' : 'results', id);
+    const pose = workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous';
+    rimon(pose, workout && prog.complete ? 'workout-done' : 'results', id);
     const audioOn = !isAudioFree(ctx);
     const listen = (it) => (audioOn && it.clip && hasRecordedClip(ctx, it.clip.kind, it.clip.id)
       ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playRecordedClip(ctx, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
@@ -419,18 +442,18 @@ function drill(root, ctx, id) {
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
-      art(ctx, `LAB_v2_${id}_win`, 'lab-win-art', 360),
+      art(ctx, `LAB_v2_${id}_win`, 'lab-win-art', 360) || rimonStill(pose),
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
       h('p', { class: 'score' }, String(sum.score)),
       h('p', {}, isBest && sum.score > 0 && prevGame ? art(ctx, 'LAB_v2_new_best', 'lab-side-pic', 200) : null, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
+      h('div', { class: 'lab-actions' }, primary, again),
       h('div', { class: 'lab-stats' },
         h('div', {}, h('b', {}, `${sum.accuracy}%`), 'right'),
         h('div', {}, h('b', {}, String(sum.maxLevel)), 'top level'),
         h('div', {}, h('b', {}, sum.avgMs == null ? '–' : `${(sum.avgMs / 1000).toFixed(1)}s`), 'per answer'),
         h('div', {}, h('b', {}, `${sum.correct}/${sum.trials}`), 'rounds')),
       h('p', { class: 'lab-note' }, comparison(prevGame?.history, sum)),
-      h('div', { class: 'lab-actions' }, primary, again),
       metList.length ? h('section', { 'aria-labelledby': 'lab-met-h' },
         h('h2', { id: 'lab-met-h', class: 'lab-group', style: `--sk:${SKILL_COLOR[game.skill]}` }, 'Hebrew You Met'),
         h('ul', { class: 'lab-met' }, ...metList.map((it) => h('li', {}, heSpan(it.he, 'he'), h('span', { class: 'en' }, it.en), listen(it))))) : null));

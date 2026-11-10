@@ -49,7 +49,7 @@ const twins = {
         const pick = (yes, b) => {
           const ok = yes === same; mark(b, ok);
           if (!ok || level <= 2) env.say(`${c.he} ${c.name} and ${ref.he} ${ref.name}: ${same ? 'the same sound' : 'different sounds'}.`);
-          if (same && c.id !== ref.id) env.met({ he: `${ref.he} ${c.he}`, en: `${ref.name} and ${c.name} sound the same` });
+          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${ref.name} and ${c.name} sound the same` } : { he: c.he, en: c.name });
           finish({ ok, ms: env.now() - t0, par: 1100 });
         };
         const no = btn(env, '✗ Different', () => pick(false, no), 'btn secondary lab-yn');

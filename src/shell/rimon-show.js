@@ -43,6 +43,11 @@ export function registerRimonProvider(fn) {
 
 /** Pure: candidate URLs for a situation, rotated so the same still does not repeat back to back. */
 export function rimonCandidates(situation, { rotate = true } = {}) {
+  try {
+    const staged = globalThis.alefRimonStage?.urlsForSituation?.(situation);
+    // An array, even an empty one, is a real answer: quiet days and Hide Rimon must not fall back to the default map.
+    if (Array.isArray(staged)) return staged.filter((u) => typeof u === 'string');
+  } catch { /* fall through */ }
   for (const p of providers) {
     try { const r = p(situation); if (Array.isArray(r) && r.length) return r.filter((u) => typeof u === 'string'); } catch { /* fall through */ }
   }
@@ -68,6 +73,10 @@ export function showRimon(situation, opts = {}) {
     const win = opts.win || globalThis;
     if (!doc?.createElement || !doc.body) return null;
     if (opts.settings?.get?.('rimonOff') === true) return null;
+    try {
+      const store = opts.store || opts.settings?.store || globalThis.alef?.store;
+      if (store?.get?.('rimon.dismissed', false) === true) return null;
+    } catch { /* keep going */ }
     const urls = rimonCandidates(situation);
     if (!urls.length) return null;
     const calm = opts.settings?.get?.('calmMode') === true;

@@ -62,3 +62,15 @@ test('answer band: colour class, words rotate, never throws', () => {
   assert.notEqual(bandWord(true, 0), bandWord(true, 1));
   assert.equal(showAnswerBand(true, { doc: null }), false);
 });
+
+test('a registered stage that returns an empty list stays quiet and does not fall back to the default map', () => {
+  const prev = globalThis.alefRimonStage;
+  globalThis.alefRimonStage = { urlsForSituation: () => [] };
+  try { assert.deepEqual(rimonCandidates('welcome', { rotate: false }), []); }
+  finally { globalThis.alefRimonStage = prev; }
+});
+
+test('showRimon stays off when the learner has hidden Rimon', () => {
+  const win = { matchMedia: () => ({ matches: false }) };
+  assert.equal(showRimon('correct', { doc: fakeDoc(), win, store: { get: (k) => k === 'rimon.dismissed' ? true : undefined } }), null);
+});

@@ -1,20 +1,17 @@
 // Camera Translator (#/camera): photograph a Hebrew sign or menu and see the English drawn over the Hebrew, on the photo.
 // mount(root, ctx) -> unmount. Loaded lazily by the router; nothing here is in the first-install precache.
 //
-// Two ways to translate:
-//   service     when data/camera/config.json names a translation service (tools/camera-translate): the photo is sent there
-//               only after the learner presses the send button under a plain notice of where it goes.
-//   on device   always available: the app's own in-browser Hebrew reader plus the built-in sign word list. Nothing is sent.
-// Every photo is redrawn through a canvas first, which drops location and camera details (EXIF) before anything else happens.
-// The four-letter name is never drawn, shown as text, sent for translation or spoken: such a region is left as photographed.
+// Everything runs in the browser: the app's own Hebrew reader, the sign word list, the app phrasebook and dictionary.
+// There is no server and no upload. Every photo is redrawn through a canvas first, which drops location and camera
+// details, so a saved translated photo carries none. Nothing is stored: the photo is gone when the screen closes.
+// The four-letter name is never drawn, shown as text or spoken: such a line is left as photographed.
 import { h, heSpan, deviceVoiceState } from '../shell/ui.js';
 import { speechSafeText } from '../shell/names.js';
 import { isPointed } from '../photo/hebrew.js';
-import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabel, MAX_UPLOAD_SIDE, HELD_NOTE } from './camera-model.js';
-import { loadConfig, loadGlossaryData, loadDictionaryIndex, translateViaService } from './camera-client.js';
+import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabel, MAX_PHOTO_SIDE, HELD_NOTE } from './camera-model.js';
+import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from './camera-client.js';
 
-export const NOT_SET_UP_NOTICE = 'The full translation service is not set up for this site yet. Until it is, your photo is read on this device and only words from the built-in list of common sign and menu words are translated. Nothing leaves your device.';
-export const SEND_NOTICE = 'To translate everything on the sign, your photo is sent to the Aleph translation service, which may pass it to Google Cloud to read the Hebrew and translate it. Location and camera details are removed from the photo first. The photo is not kept after the answer is sent back.';
+export const ON_DEVICE_NOTICE = 'Your photo stays on this device. It is read and translated here, in your browser, and nothing is sent anywhere. Common sign and menu words get the best results; other lines are translated word for word from the Aleph dictionary when every word is found.';
 export const ACCURACY_NOTICE = 'This reader has only been measured on computer-made sign images, not on real photos. Expect mistakes with glare, angles, small or decorative lettering. Do not rely on it for anything important.';
 
 const CSS = `
@@ -47,7 +44,7 @@ function styleOnce(doc) {
 export async function cleanPhoto(file, doc = document) {
   let bmp;
   try { bmp = await createImageBitmap(file, { imageOrientation: 'from-image' }); } catch { bmp = await createImageBitmap(file); }
-  const scale = Math.min(1, MAX_UPLOAD_SIDE / Math.max(bmp.width, bmp.height));
+  const scale = Math.min(1, MAX_PHOTO_SIDE / Math.max(bmp.width, bmp.height));
   const canvas = Object.assign(doc.createElement('canvas'), { width: Math.max(1, Math.round(bmp.width * scale)), height: Math.max(1, Math.round(bmp.height * scale)) });
   canvas.getContext('2d').drawImage(bmp, 0, 0, canvas.width, canvas.height);
   bmp.close?.();
@@ -63,16 +60,13 @@ export function mount(root, ctx = {}) {
   const urlOf = new WeakMap();   // one object URL per picture, revoked when a new photo is taken or the view closes
   const objectUrl = (blob) => { let u = urlOf.get(blob); if (!u) { u = URL.createObjectURL(blob); urlOf.set(blob, u); urls.add(u); } return u; };
   const dropUrls = () => { for (const u of urls) URL.revokeObjectURL(u); urls.clear(); };
-  let backend = { mode: 'none', url: null, origin: null };
   let glossary = null; let engine = null; let photo = null; let result = null; let showing = 'english'; let selected = null; let alive = true;
-  let blocked = false;
 
   const status = h('p', { class: 'camera-status', role: 'status', 'aria-live': 'polite' });
-  const modeNote = h('p', { class: 'note camera-mode', role: 'note' }, 'Checking what is available…');
+  const modeNote = h('p', { class: 'note camera-mode', role: 'note' }, ON_DEVICE_NOTICE);
   const takeInput = h('input', { type: 'file', accept: 'image/*', capture: 'environment', 'aria-label': 'Take a photo' });
   const chooseInput = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Choose a photo' });
   const sampleBtn = h('button', { type: 'button', class: 'btn secondary', id: 'camera-sample' }, 'Try A Sample Sign');
-  const actions = h('div', { class: 'row camera-actions' });
   const out = h('div', { class: 'camera-out' });
   const wrap = h('section', { class: 'card camera-tr', 'aria-labelledby': 'view-title' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Camera Translator'),
@@ -82,12 +76,9 @@ export function mount(root, ctx = {}) {
       h('label', { class: 'btn pick' }, 'Take A Photo', takeInput),
       h('label', { class: 'btn secondary pick' }, 'Choose A Photo', chooseInput),
       sampleBtn),
-    status, actions, out,
+    status, out,
     h('p', { class: 'muted camera-accuracy', role: 'note' }, ACCURACY_NOTICE));
   root.replaceChildren(wrap);
-
-  const onCspBlock = (e) => { if (backend.origin && String(e.blockedURI || '').startsWith(backend.origin)) blocked = true; };
-  doc.addEventListener('securitypolicyviolation', onCspBlock);
 
   /** Speak Hebrew with the device voice. Returns 'yes' | 'unknown' (tried; the device may have no Hebrew voice) | 'no'. */
   const speak = (text) => {
@@ -114,13 +105,17 @@ export function mount(root, ctx = {}) {
 
   // Word-by-word help: the second layer, opened on request. It loads the app's own dictionary the first time (about 0.9 MB).
   let dictionary = null;
+  const getDictionary = async () => {
+    if (!dictionary) { try { dictionary = createDictionary(ctx.cameraDictionary || await loadDictionaryIndex()); } catch { dictionary = createDictionary(null); } }
+    return dictionary;
+  };
   const KIND_NOTE = { 'sign-list': 'From the built-in sign word list.', dictionary: 'From the Aleph dictionary.', unknown: 'Not in the Aleph dictionary as written.', number: '',
     joined: 'This may be the joined form of the word shown here (the form a noun takes before another noun, as in \u201cstation of\u201d). Check it against the sign.',
     plural: 'This may be the plural of the word shown here. Check it against the sign.' };
   const showWords = async (r, btn) => {
     const box = btn.closest('.camera-detail')?.querySelector('.camera-words'); if (!box) return;
     btn.setAttribute('disabled', ''); box.replaceChildren(h('p', { class: 'muted' }, 'Looking up each word…'));
-    if (!dictionary) { try { dictionary = createDictionary(ctx.cameraDictionary || await loadDictionaryIndex()); } catch { dictionary = createDictionary(null); } }
+    await getDictionary();
     if (!alive) return;
     const words = wordBreakdown(r.he, glossary, dictionary).filter((w) => w.kind !== 'number');
     const item = (w) => {
@@ -168,7 +163,7 @@ export function mount(root, ctx = {}) {
       alt: english ? 'Your photo with the Hebrew replaced by English' : 'Your photo as taken' });
     const stage = h('div', { class: 'stage' }, img);
     result.regions.forEach((r, i) => {
-      const p = percentBox(r.box, result.width, result.height);
+      const p = percentBox(english ? r.box : (r.boxOriginal || r.box), result.width, result.height);
       const label = r.held ? `Line ${i + 1}: sacred text` : `Line ${i + 1}: ${r.en || 'not translated'}. Hear the Hebrew.`;
       const b = h('button', { type: 'button', class: 'hit', 'data-region': r.id, 'aria-label': label, 'aria-pressed': 'false', onclick: () => showDetail(r, !r.held) });
       b.style.left = p.left; b.style.top = p.top; b.style.width = p.width; b.style.height = p.height;
@@ -176,7 +171,7 @@ export function mount(root, ctx = {}) {
     });
     for (const n of result.notices) out.append(h('p', { class: 'note' }, n));
     out.append(h('figure', { class: 'camera-figure' }, stage,
-      h('figcaption', { class: 'muted' }, result.source === 'service' ? 'Read and translated by the translation service.' : 'Read on this device. Only words from the built-in list are translated.')));
+      h('figcaption', { class: 'muted' }, 'Read and translated on this device.')));
     const controls = h('div', { class: 'row' });
     if (result.blob) {
       controls.append(h('button', { type: 'button', class: 'btn secondary', id: 'camera-toggle', 'aria-pressed': String(showing === 'original'),
@@ -200,52 +195,26 @@ export function mount(root, ctx = {}) {
 
   const runOnDevice = async () => {
     if (!photo) return;
-    actions.replaceChildren(); out.dataset.done = ''; status.textContent = 'Reading the photo on this device… The first time, this downloads about 5 MB.';
+    out.dataset.done = ''; status.textContent = 'Reading the photo on this device… The first time, this downloads about 5 MB.';
+    out.replaceChildren(h('figure', {}, h('img', { src: objectUrl(photo.blob), width: String(photo.width), height: String(photo.height), alt: 'Your photo as taken', style: 'max-inline-size:100%;block-size:auto;border-radius:6px' })));
     try {
       const { translateOnDevice } = await import('./on-device.js');
-      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc,
+      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc, dictionaryLoader: getDictionary,
         onProgress: (m) => { if (alive && m?.status) status.textContent = `Reading on this device: ${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
       engine = r.engine;
       if (!alive) return;
-      result = { ...r, source: 'device' }; showing = 'english'; selected = null; status.textContent = ''; render();
+      result = r; showing = 'english'; selected = null; status.textContent = ''; render();
     } catch { if (alive) fail('This photo could not be read on this device. Try a clearer, closer photo.'); }
-  };
-
-  const runService = async () => {
-    if (!photo) return;
-    actions.replaceChildren(); out.dataset.done = ''; status.textContent = 'Sending the photo and waiting for the translation…';
-    try {
-      const r = await (ctx.cameraService || translateViaService)(backend.url, photo.blob);
-      if (!alive) return;
-      result = { ...r, source: 'service' }; showing = 'english'; selected = null; status.textContent = ''; render();
-    } catch (e) {
-      if (!alive) return;
-      const why = blocked ? 'This site is not yet allowed to reach the translation service.' : (e?.kind ? e.message : 'The translation service could not be reached.');
-      status.textContent = `${why} You can still translate on this device.`;
-      actions.replaceChildren(h('button', { type: 'button', class: 'btn', onclick: runOnDevice }, 'Translate On This Device'));
-      out.dataset.done = '1';
-    }
-  };
-
-  const offerChoices = () => {
-    out.replaceChildren(h('figure', {}, h('img', { src: objectUrl(photo.blob), width: String(photo.width), height: String(photo.height), alt: 'Your photo as taken', style: 'max-inline-size:100%;block-size:auto;border-radius:6px' })));
-    if (backend.url) {
-      status.textContent = '';
-      actions.replaceChildren(
-        h('p', { class: 'note', role: 'note', style: 'flex-basis:100%' }, SEND_NOTICE),
-        h('button', { type: 'button', class: 'btn', id: 'camera-send', onclick: runService }, 'Send Photo And Translate'),
-        h('button', { type: 'button', class: 'btn secondary', id: 'camera-local', onclick: runOnDevice }, 'Translate On This Device Instead'));
-    } else runOnDevice();
   };
 
   const take = async (file) => {
     if (!file) return;
-    dropUrls(); result = null; selected = null; out.dataset.done = ''; actions.replaceChildren(); out.replaceChildren();
+    dropUrls(); result = null; selected = null; out.dataset.done = ''; out.replaceChildren();
     status.textContent = 'Preparing the photo…';
     try { photo = await cleanPhoto(file, doc); } catch { photo = null; fail('That file could not be opened as a photo. Please choose a JPEG or PNG picture.'); return; }
     if (!alive) return;
-    if (!glossary) { try { glossary = createGlossary(await loadGlossaryData()); } catch { glossary = createGlossary({ entries: [] }); } }
-    offerChoices();
+    if (!glossary) { try { glossary = createGlossary(ctx.cameraGlossary || await loadGlossaryData(), { phrasebook: await loadPhrasebook() }); } catch { glossary = createGlossary({ entries: [] }); } }
+    runOnDevice();
   };
   const onTake = () => { take(takeInput.files?.[0]); takeInput.value = ''; };
   const onChoose = () => { take(chooseInput.files?.[0]); chooseInput.value = ''; };
@@ -260,18 +229,11 @@ export function mount(root, ctx = {}) {
     sampleBtn.removeAttribute('disabled');
   });
 
-  (ctx.cameraConfig ? Promise.resolve(ctx.cameraConfig) : loadConfig()).then((b) => {
-    if (!alive) return;
-    backend = b;
-    if (b.url) modeNote.textContent = 'Photos stay on your device until you choose to send one. You can always translate on this device instead, with the built-in word list.';
-    else modeNote.textContent = NOT_SET_UP_NOTICE;
-    wrap.dataset.mode = b.url ? 'service' : 'device';
-  });
+  wrap.dataset.mode = 'device';
 
   return () => {
     alive = false;
     takeInput.removeEventListener('change', onTake); chooseInput.removeEventListener('change', onChoose);
-    doc.removeEventListener('securitypolicyviolation', onCspBlock);
     try { win?.speechSynthesis?.cancel(); } catch { /* ignore */ }
     try { engine?.terminate?.(); } catch { /* ignore */ }
     dropUrls(); photo = null; result = null; root.textContent = '';

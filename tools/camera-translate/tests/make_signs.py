@@ -24,8 +24,9 @@ SIGNS = [
  ('pharmacy', 'shop', [('בית מרקחת', 'Pharmacy')], 'noto-sans', 84, WHITE, GREEN, 'center', 'clean'),
  ('exit', 'door', [('יציאה', 'Exit')], 'alef-bold', 110, WHITE, GREEN, 'center', 'clean'),
  ('closed', 'door', [('סגור', 'Closed')], 'heebo', 120, RED, WHITE, 'center', 'clean'),
- ('bookshop', 'shop', [('חנות ספרים', 'Bookshop')], 'alef-bold', 84, DARK, CREAM, 'center', 'clean'),
- ('petrol-station', 'shop', [('תחנת דלק', 'Petrol Station')], 'heebo', 84, WHITE, RED, 'center', 'clean'),
+ # Two signs kept OUTSIDE the sign word list on purpose, so the set always shows what happens to an unlisted sign.
+ ('shoe-shop', 'shop', [('חנות נעליים', 'Shoe Shop')], 'alef-bold', 84, DARK, CREAM, 'center', 'clean'),
+ ('new-price', 'shop', [('מחיר חדש', 'New Price')], 'heebo', 84, WHITE, RED, 'center', 'clean'),
  ('no-entry', 'door', [('אין כניסה', 'No Entry')], 'alef-bold', 90, WHITE, RED, 'center', 'noise'),
  ('restrooms', 'door', [('שירותים', 'Restrooms')], 'noto-sans', 92, DARK, (235, 235, 235), 'center', 'blur'),
  ('herzl-street', 'street', [('רחוב הרצל', 'Herzl Street')], 'alef-bold', 88, WHITE, BLUE, 'center', 'clean'),
@@ -101,13 +102,34 @@ def main():
                       'lines': [{'he': h, 'en': e} for h, e in pairs], 'synthetic': True})
     json.dump({'synthetic': True, 'note': 'Rendered text with simulated wear. NOT photographs. Do not quote results as real-photo accuracy.',
                'seed': 2026, 'count': len(items), 'items': items}, open(OUT / 'ground-truth.json', 'w'), ensure_ascii=False, indent=1)
-    # One extra file for the upload tests: the first sign saved the way a phone would, with camera details and a GPS position.
+    # Signs for the browser tests that are not part of the measured set: one whose words are in the app dictionary but not in the
+    # sign list (drawn word for word), kept here so the measured set stays at twenty.
     fx = HERE / 'fixtures'; fx.mkdir(exist_ok=True)
+    cv2.imwrite(str(fx / 'outside-list-salt.jpg'), render(['מלח'], 'alef-bold', 96, DARK, CREAM, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    cv2.imwrite(str(fx / 'outside-list-big-house.jpg'), render(['בית גדול'], 'alef-bold', 84, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    # One extra file for the metadata tests: the first sign saved the way a phone would, with camera details and a GPS position.
     phone = Image.open(OUT / 'optical-store.jpg')
     exif = Image.Exif(); exif[0x010F] = 'TestCam'; gps = exif.get_ifd(0x8825)
     gps[1] = 'N'; gps[2] = (43.0, 52.0, 0.0); gps[3] = 'W'; gps[4] = (79.0, 26.0, 0.0)
     phone.save(fx / 'phone-photo-with-exif.jpg', 'JPEG', exif=exif, quality=92)
     print(f'wrote {len(items)} sign images to {OUT}')
 
+def write_wear_dir(out):
+    """Write the 120 wear images and a ground-truth.json to a folder (for tools/camera-translate/e2e-batch.mjs)."""
+    out = Path(out); out.mkdir(parents=True, exist_ok=True)
+    items = []
+    for sid, variant, lines, data in wear_set():
+        name = f'{sid}__{variant}.jpg'
+        (out / name).write_bytes(data)
+        items.append({'id': f'{sid}__{variant}', 'file': name, 'variant': variant, 'lines': lines, 'synthetic': True})
+    json.dump({'synthetic': True, 'note': 'Rendered text with simulated wear. NOT photographs.', 'count': len(items), 'items': items},
+              open(out / 'ground-truth.json', 'w'), ensure_ascii=False, indent=1)
+    print(f'wrote {len(items)} images to {out}')
+
+
 if __name__ == '__main__':
-    main()
+    import sys
+    if len(sys.argv) == 3 and sys.argv[1] == '--wear-dir':
+        write_wear_dir(sys.argv[2])
+    else:
+        main()

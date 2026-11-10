@@ -95,7 +95,20 @@ def test_word_list_matches_the_shared_cases_and_the_app_copy():
         r = g.translate(case['he'])
         assert (r['en'], r['status']) == (case['en'], case['status']), case
     assert g.translate('חנות אופטיקה')['translit'] == 'chanut optika'
+    its = json.loads((HERE / 'fixtures/review-r1-fails.json').read_text(encoding='utf-8'))['items']
+    norm = lambda t: ''.join(ch for ch in (t or '').lower() if ch.isalnum())
+    right = sum(norm(g.translate(i['ocr'])['en']) == norm(i['en']) for i in its)
+    wrong = sum(bool(g.translate(i['ocr'])['en']) and norm(g.translate(i['ocr'])['en']) != norm(i['en']) for i in its)
+    assert right >= 43 and wrong <= 4 and all(norm(g.translate(i['he'])['en']) == norm(i['en']) for i in its)
     assert tokens('קפה 12.50!') == ['קפה', '12.50']
+
+
+def test_guard_list_of_real_words_is_current():
+    import subprocess, sys
+    before = (ROOT / 'data/camera/sign-glossary.json').read_bytes()
+    r = subprocess.run([sys.executable, str(HERE.parent / 'build_real_neighbours.py')], capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0, r.stderr[-500:]
+    assert (ROOT / 'data/camera/sign-glossary.json').read_bytes() == before, 'realNeighbours was stale: commit the rebuilt word list'
 
 
 def test_sacred_name_guard():
@@ -233,7 +246,7 @@ def test_cloud_translator_adapter_and_fallback_chain():
         name = 'down'
         def translate(self, lines): raise TranslateError('cloud translation failed')
     chain = ChainTranslator([Down(), GlossaryTranslator()])
-    got = chain.translate(['יציאה', 'חנות ספרים'])
+    got = chain.translate(['יציאה', 'חנות נעליים'])
     assert got[0]['en'] == 'Exit' and got[0]['source'] == 'word-list' and got[1]['en'] is None and chain.errors
 
 
@@ -341,12 +354,12 @@ def test_twenty_synthetic_signs_exist_and_are_labelled_synthetic():
 
 @pytest.mark.skipif(not TesseractOCR().available(), reason='Tesseract with the heb model is not installed')
 def test_on_server_reader_and_word_list_on_the_synthetic_signs():
-    """Regression floor only (measured 2026-11-10: pooled CER 0.029, 24 of 28 lines translated end to end). Synthetic images, not photos."""
+    """Regression floor only. Synthetic images, not photos. Measured numbers are in docs/photo/CAMERA-TRANSLATE.md."""
     import subprocess, sys
     r = subprocess.run([sys.executable, str(HERE.parent / 'eval.py')], capture_output=True, text=True, timeout=600)
     assert r.returncode == 0, r.stderr[-800:]
     s = json.loads((SIGNS / 'results-tesseract-word-list.json').read_text(encoding='utf-8'))['summary']
     assert s['images'] == 20 and s['lines'] == 28
     assert s['cerPooled'] <= 0.06, s
-    assert s['linesTranslatedEndToEnd'] >= 22, s
-    assert s['linesTranslatedGivenCorrectText'] == 26, s       # the two signs outside the word list stay untranslated on purpose
+    assert s['linesTranslatedEndToEnd'] >= 24, s
+    assert s['linesTranslatedGivenCorrectText'] == 27, s       # the one sign kept outside the word list stays untranslated on purpose

@@ -85,8 +85,8 @@
    "synthetic": true
   },
   {
-   "id": "bookshop",
-   "file": "bookshop.jpg",
+   "id": "shoe-shop",
+   "file": "shoe-shop.jpg",
    "kind": "shop",
    "variant": "clean",
    "font": "alef-bold",
@@ -94,15 +94,15 @@
    "align": "center",
    "lines": [
     {
-     "he": "חנות ספרים",
-     "en": "Bookshop"
+     "he": "חנות נעליים",
+     "en": "Shoe Shop"
     }
    ],
    "synthetic": true
   },
   {
-   "id": "petrol-station",
-   "file": "petrol-station.jpg",
+   "id": "new-price",
+   "file": "new-price.jpg",
    "kind": "shop",
    "variant": "clean",
    "font": "heebo",
@@ -110,8 +110,8 @@
    "align": "center",
    "lines": [
     {
-     "he": "תחנת דלק",
-     "en": "Petrol Station"
+     "he": "מחיר חדש",
+     "en": "New Price"
     }
    ],
    "synthetic": true

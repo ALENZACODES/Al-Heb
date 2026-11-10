@@ -1,7 +1,13 @@
-# Camera Translator Service
+# Camera Translator: Offline Test Rig
 
-Hebrew text in a photo, translated to English and drawn back onto the photo. This is the service behind the app's `#/camera` screen.
-The screen also works without it (on-device reading plus a small built-in word list); the service adds full translation and better reading.
+**The app does not use anything in this folder at run time.** The Camera Translator (`#/camera`) runs entirely in the browser, with no server and no upload (owner decision, 2026-11-10). This folder is what measures it:
+
+- `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes all 120 wear variants).
+- `e2e-camera.mjs`, `e2e-batch.mjs`: drive the real screen and the real in-browser reader in headless Chromium, under the site security policy.
+- `build_real_neighbours.py`: rebuilds the guard list in the sign word list after the list is edited.
+- `camera_translate/hebrew.py`: a Python copy of the word-list rules, held to the same cases file as the app (`data/camera/glossary-cases.json`).
+- `eval.py`: a second measuring stick using Tesseract on this machine.
+- `camera_translate/app.py` and the rest: a FastAPI service built before the no-server decision (Tesseract or Google Cloud reading, Pillow/OpenCV overlay). It is not deployed and the app has no code that can call it. Its Google adapters have never been run against Google. The sections below describe that service as built.
 
 ## What It Does
 
@@ -12,7 +18,7 @@ The screen also works without it (on-device reading plus a small built-in word l
    - Otherwise Tesseract with the `heb` model, on the server itself, after levelling tilted text. It is also the fallback when Vision fails.
 4. Translates each line to English.
    - Google Cloud Translation when credentials are set.
-   - The built-in sign word list (87 entries) otherwise, and for lines the cloud translator could not answer.
+   - The built-in sign word list otherwise, and for lines the cloud translator could not answer.
 5. Removes the Hebrew letters from each box (flat fill on plain signs, OpenCV inpainting on uneven ones, strong blur when letters cannot be separated), then draws the English sized to the box in the sign's own colours. Hebrew that was flush right becomes English flush left.
 6. Answers with the regions (box, Hebrew, English, how to say it, where the English came from) and the translated photo.
 
@@ -21,7 +27,7 @@ The screen also works without it (on-device reading plus a small built-in word l
 - The photo is held in memory for the length of the request. No file, database, cache or log line holds a photo or its text. The Tesseract path passes the image on stdin, not through a temp file. `tests/test_camera_translate.py` checks that handling a photo writes no file.
 - Metadata is stripped before anything else reads the photo, and the returned photo is encoded fresh. Checked by tests on both directions.
 - Responses carry `Cache-Control: no-store`.
-- With the cloud path on, the photo (metadata-free) and the Hebrew text go to Google. The app says so before the learner sends anything.
+- With the cloud path on, the photo (metadata-free) and the Hebrew text would go to Google. The app cannot reach this service, so no learner photo does.
 - A line containing the four-letter name is left exactly as photographed: not sent for translation, not drawn over, and its text is not returned.
 
 ## Run It
@@ -42,26 +48,17 @@ uvicorn camera_translate.app:app --host 127.0.0.1 --port 8790
 
 `Dockerfile` builds the same thing with Tesseract included. `python3 demo.py` opens an optional Gradio page for trying photos by hand (needs `pip install gradio`; not run in this build).
 
-## Connect The App
-
-Set `backendUrl` in `data/camera/config.json`:
-
-- A path on the same site (for example `/api/camera`, with the host forwarding it to this service) works with the site security policy as it is.
-- A loopback address (`http://127.0.0.1:8790`) works for local testing. Chrome asks the visitor for permission before a public page may call a loopback address.
-- Any other `https://` address also needs that one origin added to `connect-src` in `_headers`. Plain `http://` to another host is refused by the app.
-
-The cloud calls cost money past the free allowance, and the service has no login: set a budget cap in Google Cloud, keep `ALLOWED_ORIGINS` tight, and keep the rate limit on. Origin checks stop other websites, not scripts.
-
 ## Test And Measure
 
 ```
-python3 -m pytest tools/camera-translate/tests -q        # 19 tests; no cloud calls
+python3 -m pytest tools/camera-translate/tests -q        # 20 tests; no cloud calls
 python3 tools/camera-translate/tests/make_signs.py       # regenerate the 20 synthetic signs
 cd tools/camera-translate && python3 eval.py             # Tesseract + word list
 python3 eval.py --wear                                   # the 20 signs under six kinds of wear (120 images)
 python3 eval.py --ocr vision --translate google          # the cloud path; needs credentials, sends the 20 test images to Google
 node --test tests/camera.model.test.js                   # app-side logic (from the repo root)
 node --test tests/camera.browser.test.js                 # real Chromium, under the site security policy
+node tools/camera-translate/e2e-batch.mjs tools/camera-translate/tests/signs   # the app's own path on a folder of labelled signs
 ```
 
 Results and their limits are in `docs/photo/CAMERA-TRANSLATE.md`.
@@ -80,4 +77,5 @@ Results and their limits are in `docs/photo/CAMERA-TRANSLATE.md`.
 | `camera_translate/sign-glossary.json` | copy of `data/camera/sign-glossary.json` (a test keeps them identical) |
 | `camera_translate/fonts/` | Alef Bold (SIL Open Font License, licence text alongside) |
 | `eval.py`, `tests/` | measurement script, tests, the 20 synthetic signs and their ground truth |
-| `e2e-camera.mjs` | drives `#/camera` in headless Chromium |
+| `e2e-camera.mjs`, `e2e-batch.mjs` | drive `#/camera` in headless Chromium |
+| `build_real_neighbours.py` | rebuilds the guard list of real words in the sign word list |

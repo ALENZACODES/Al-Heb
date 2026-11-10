@@ -150,6 +150,7 @@ export function mount(root, ctx) {
     h('p', { class: 'muted' }, plain('settingsIntro')),
     // The sound statement and the "what is ready" list live on About (one place for notes about the app), linked here.
     h('p', { class: 'small muted' }, 'About the voices and what is still being built: ', h('a', { href: '#/about' }, 'About ALEF'), '.'),
+    h('p', { class: 'small muted' }, h('a', { href: '#/privacy', id: 's-privacy-link' }, 'Privacy'), ' · ', h('a', { href: '#/terms', id: 's-terms-link' }, 'Terms & sources'), '.'),
     status, // right under the backup buttons so a confirmation is visible without scrolling
     radioGroup('voice', 'settings.voice'),
     h('div', { class: 'teacher-row', id: 's-teachers' },

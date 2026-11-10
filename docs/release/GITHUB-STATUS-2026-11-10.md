@@ -10,7 +10,11 @@ Checked against `main` at `907caadc` (Torah audio fix), with the GitHub compare 
 | **`main` fails the tracked-text scan in one place** | `tests/audio.music.test.js` line 137 names a vendor inside a negative check (from the music pack, PR #39). `node tools/meta/scan.mjs --text` reports 1 finding. | Add that test file to `tools/meta/text-allowlist.json`, or reword the check. Left alone here so it does not collide with the launch-ready lane. |
 | **Tonight's work is on branches with no pull request** | Nothing is lost (all pushed), but nothing is queued for John's tap either. | Open a PR per branch below, marked do not merge without John. |
 
-## Tonight's Branches
+## Update, 3 AM
+
+The integration branch `overnight/launch-ready-2026-11-10` has since merged the Brain Lab graphics, the commercial pictures, the Rimon stills stage, lesson integrity, the first minute and round 1 of this branch. This branch has merged the integration branch back (at `f04fb7ed`) and reconciled the Brain Lab art, so merging this branch into the integration branch again adds only tonight's later Brain Lab work and conflicts only in the generated `precache-manifest.js` (re-run `node tools/build-precache.mjs`).
+
+## Tonight's Branches (1:45 AM)
 
 | Branch | Ahead / behind `main` | Holds | Next step |
 |---|---|---|---|

@@ -44,10 +44,10 @@ Every game's rules live in `src/lab/lab.core.js` as plain functions with tests. 
 
 ## Pictures
 
-Each game has a slot for a round token (`LAB_v2_<game>`), a cover (`LAB_v2_<game>_cover`), a results picture (`LAB_v2_<game>_win`) and its in-game pictures. They are read through the shared image resolver, so a picture shows once it is ingested and approved, and nothing is fetched before that. Until then the token is the game's letter on a green-and-gold disc. Board pictures are switched off under high contrast and forced colours.
-
-- First ten games: `docs/images/BRAIN-LAB-ORDERS-2026-11-09.md` and rank 9 of `docs/images/COMMERCIAL-ORDERS-2026-11-09.md` (PR #41). The hero and the ten tokens are already drawn on `feature/commercial-images-2026-11-10`.
-- Six new games and the café menu: [`docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`](../images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md) (41 pictures).
+- **Drawn and showing** (`data/images/brain-lab-2026-11-10`, wired in `src/lab/lab.art.js`): a cover, an in-game picture and a results picture for all sixteen games, the new-best rosette and the workout-done picture. Board pictures sit behind the board with an opaque backing under every tile, so text never sits on a picture. Four new games place their picture themselves, where its order put it: the Sound Twins card face, the Vowel Rain sky, the Taxi Turns road and the Café Order counter.
+- **Drawn and showing** (`data/images/commercial-2026-11-10`): the Brain Lab hero at the top of the page and the round tokens of the first ten games, laid over the letter disc once they load.
+- **Still on order** ([`docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`](../images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md)): the six new games' tokens, the seventeen café menu pictures, the raindrop and the taxi. These go through the shared image resolver: each shows once it is ingested and approved, and nothing is fetched before that. Until then a new game's token is its letter on a green-and-gold disc.
+- Every picture is decorative, loads lazily, and changes nothing if it fails (offline, save-data) or under high contrast and forced colours. When a results picture is missing or fails, Rimon from his own sprite sheets stands in.
 
 Review rounds for this work, with scores and what would raise them: [`BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md`](BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md).
 

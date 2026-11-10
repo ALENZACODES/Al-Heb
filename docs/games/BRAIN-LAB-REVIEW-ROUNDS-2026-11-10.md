@@ -10,11 +10,11 @@ Seven rounds on the night of November 10. Each round was scored 0 to 100 against
 | 4 | `34206408` | 88 | Browser test plays all sixteen games to their results; axe (WCAG A and AA) clean in light and dark; Mourner's Kaddish left out of the games; chataf only under the throat letters; Brain Lab notes and GitHub status written. | Rimon is only in the corner, not in the games; returning learners do not see the new games first; Rimon waved on every return to the list. |
 | 5 | `f908ed0f` | 90 | Rimon cheers on every results card from his own sprite sheets; "New Games to Try" at the top; Rimon waves once per visit; Sound Twins lists every letter met. | Vowel Rain's buttons wrapped and fell below the fold on a 360 px phone. |
 | 6 | `2bc4c0b8e` | 91 | Vowel Rain fits a 360 px phone; the drop falls to the ground on any sky height; Tav without its dot is "Sav" for Ashkenazi learners; wide screens show the new games and skills in rows. | See round 7. |
-| 7 | final | 91 | Full unit suite and the browser test re-run; PR opened. | Below. |
+| 7 | `4258e646` | 94 | Merged the integration branch back and reconciled the art: the drawn pack now shows covers, board pictures and results for all sixteen games, the ten drawn tokens and the hero are on the page, and the four new games place their own pictures (card face, sky, road, café counter) instead of a mat that turned the road cream. Unit tests, the browser test of all sixteen games and axe re-run after the merge. | Below. |
 
-## What Would Take It From 91 to 95 and Up
+## What Would Take It From 94 to 97 and Up
 
-1. **The pictures** (biggest gap): ingest and approve the Brain Lab hero and ten tokens already drawn on `feature/commercial-images-2026-11-10`, then draw the 41 in `docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md` and the 32 in `docs/images/BRAIN-LAB-ORDERS-2026-11-09.md`. Every one already has its slot; no code change is needed.
+1. **The last pictures:** the six new tokens, the seventeen café menu pictures, the raindrop and the taxi (23 in `docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`). Each already has its slot; no code change is needed. John's look at the drawn Brain Lab pack, which is shown directly rather than through the approval list.
 2. **A native speaker** checks the six new Hebrew titles and the café and direction transliterations (they come from the dictionary's style, for example "semolah" where speakers say "smola").
 3. **John's held decision:** whether names other than the four-letter name (Elohim, Eloheinu) should also be filled in, never chosen, in Prayer Chain; and whether Mourner's Kaddish stays out.
 4. **Ten café words are silent** (cake, juice, ice cream, chocolate, soup, apple, orange, sandwich, lemonade, challah): their only recordings are in the 1.2 MB dictionary list, which Brain Lab does not load. Recording them into the word list, the same way as the other café words, would let every order be heard.

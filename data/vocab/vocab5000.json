@@ -86847,19 +86847,19 @@
 },
 {
 "rank":4997,
-"lemma":"הצדיע",
-"pointed":"הִצְדִּיעַ",
+"lemma":"קורס",
+"pointed":"קוּרְס",
 "needsPointing":false,
-"pos":"verb",
-"topic":"Verbs",
-"gloss":"to salute",
+"pos":"noun",
+"topic":"Society",
+"gloss":"a course (a class or series of classes)",
 "tier":5000,
-"id":"v5a28e3dd",
+"id":"v71df8e0c",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":false,
 "curatedCore":false,
-"sourceRank":4977
+"sourceRank":null
 },
 {
 "rank":4998,
@@ -86879,19 +86879,20 @@
 },
 {
 "rank":4999,
-"lemma":"קורס",
-"pointed":"קוּרְס",
+"lemma":"נקוד",
+"pointed":"נִקּוּד",
 "needsPointing":false,
 "pos":"noun",
-"topic":"Society",
-"gloss":"a course (a class or series of classes)",
+"topic":"Misc Nouns",
+"gloss":"vowel points (the marks that show vowels in Hebrew text); scoring",
 "tier":5000,
-"id":"v71df8e0c",
+"id":"v9d548ac6",
 "proofread":false,
 "pointedSource":"wiktionary",
 "readList":false,
 "curatedCore":false,
-"sourceRank":null
+"sourceRank":4979,
+"overridden":true
 },
 {
 "rank":5000,

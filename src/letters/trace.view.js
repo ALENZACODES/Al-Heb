@@ -13,6 +13,7 @@ import { loadMemoryChain, entryFor, buildMemoryCard, memoryFallback } from './me
 import { describeLetterStrokes, STROKE_WORDS_NOTE } from './strokewords.js';
 import { shapeLabel } from './shapetext.js';
 import { makeRoving } from '../shell/roving.js';
+import { ROSTER } from './roster.js';
 
 /** Records whose LETTERFORM (not just the order) the builder doubts most: docs/letters/REVIEW-LIST.md "DOUBT (HIGH)". */
 export const HIGH_DOUBT = { 'pe-final': ['cursive'], 'tsadi-final': ['cursive'] };
@@ -120,6 +121,8 @@ export function mount(root, ctx = {}) {
     for (const n of kids) {
       if (n === keptTitle || n === keptGlyph) continue;
       if (n.remove) n.remove();
+      else if ((n.parentNode || n.parent) && (n.parentNode || n.parent).removeChild) (n.parentNode || n.parent).removeChild(n);
+      else if (root.textContent !== undefined && !keptTitle && !keptGlyph) root.textContent = '';
     }
   } else {
     root.textContent = '';
@@ -130,7 +133,10 @@ export function mount(root, ctx = {}) {
   body.style.minBlockSize = 'calc(100svh - 9.5rem)';
   wrap.appendChild(body);
   root.appendChild(wrap);
-  body.appendChild(h('p', { role: 'status', text: t('trace.loading', 'Loading letters...') }));
+  // First paint from the compact roster so the letter and stage space are on screen
+  // before the 200 KB stroke file arrives (and so the inner tree does not grow from a one-line loading status).
+  state.letters = ROSTER.slice();
+  render();
 
   Promise.all([
     ctx.letters || loadJson(DATA('letters.json')),
@@ -189,15 +195,6 @@ export function mount(root, ctx = {}) {
     const tabs = h('div', { class: 'tabs', role: 'tablist', 'aria-label': t('trace.tabs', 'Letter practice') },
       ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));
-    { const cur = letterById(state.letterId) || state.letters[0];
-      if (cur) {
-        if (keptTitle) {
-          keptTitle.classList?.add?.('alef-letter-title');
-          keptTitle.textContent = cur.name + ' ' + (cur.he || '');
-        } else {
-          body.appendChild(h('h1', { id: 'view-title', tabindex: '-1', class: 'alef-letter-title' }, cur.name + ' ', he(cur.he, { class: 'he' })));
-        }
-      } }
     body.appendChild(tabs);
     
     if (state.tab === 'trace') { renderTrace(); inVisualOrder(body); }
@@ -205,14 +202,14 @@ export function mount(root, ctx = {}) {
     else renderTyping();
   }
 
-  const letterById = id => state.letters.find(l => l.id === id);
+  function letterById(id){ return state.letters.find(l => l.id === id); }
 
   // Keyboard and screen reader order must follow what is drawn. On phones app.css re-orders this tab's blocks (the stage rises to the
   // top, see QA defect O1); the same ranking is applied here to the DOM so Tab, and reading order, go top to bottom. Ties keep DOM order.
   function inVisualOrder(host) {
     if (typeof host.append !== 'function' || !host.children?.[0]?.matches) return; // a stripped-down DOM (unit tests) has no sibling/selector API
     const kids = [...host.children]; const last = kids[kids.length - 1];
-    const rank = (e) => e.tagName === 'H1' ? 0 : e.classList.contains('tabs') ? 1 : e.classList.contains('grid') ? 2
+    const rank = (e) => e.classList.contains('tabs') ? 1 : e.classList.contains('grid') ? 2
       : e.matches('.row') && e.querySelector(':scope > .big') ? 3 : e.classList.contains('stage') ? 5 : e.classList.contains('feedback') ? 6
       : e.matches('.row') && e.previousElementSibling && e.previousElementSibling.classList.contains('feedback') ? 7
       : e.matches('.row') && e.previousElementSibling && e.previousElementSibling.matches('.row') && e.previousElementSibling.previousElementSibling && e.previousElementSibling.previousElementSibling.classList.contains('feedback') ? 7
@@ -239,6 +236,7 @@ export function mount(root, ctx = {}) {
   function renderTrace() {
     const letter = letterById(state.letterId) || state.letters[0];
     let cardHost = null;
+    const strokesReady = !!(letter && letter[state.script] && letter[state.script].strokes);
     // first look: the first two letters of the first-day flow (Shin, then Bet) one tap away, one compact row
     { const fl = ['shin', 'bet'].map(letterById).filter(Boolean);
       if (fl.length === 2) body.appendChild(h('div', { class: 'row', 'data-firstlook': '1', role: 'group', 'aria-label': t('trace.firstLook', 'First look') },
@@ -256,7 +254,7 @@ export function mount(root, ctx = {}) {
       if (rn.level !== 'none') body.appendChild(h('p', { class: 'notice' + (rn.level === 'high' ? ' notice-high' : ''), 'data-review': rn.level, role: rn.level === 'high' ? 'alert' : undefined }, rn.text)); }
     body.appendChild(h('div', { class: 'row' },
       h('span', { class: 'big', dir: 'rtl', lang: 'he' }, letter.he),
-      h('div', {}, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'drawn by you') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with help, not drawn by you yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, (() => { const rec = state.consonants ? state.consonants[letter.id] : null; const trad = congregationOf(ctx.settings); const mine = letterSound(rec, trad, { fallbackEn: letter.sound.en }).en; return mine; })()))));
+      h('div', { class: 'letter-meta' }, h('strong', {}, letter.name + ' '), he(letter.nameHe), progress0.isCompleted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, '\u2713 ' + t('trace.completed', 'drawn by you') + ' (' + state.script + ')') : (progress0.isAssisted(letter.id, state.script) ? h('span', { class: 'chip', role: 'status' }, t('trace.walkedThrough', 'walked through with help, not drawn by you yet') + ' (' + state.script + ')') : null), h('br'), h('span', {}, (() => { const rec = state.consonants ? state.consonants[letter.id] : null; const trad = congregationOf(ctx.settings); const mine = letterSound(rec, trad, { fallbackEn: letter.sound?.en || '' }).en; return mine; })()))));
     { // memory card: letter -> picture -> sound hook -> word. For a letter the learner has not traced yet it sits right under the letter row,
       // above the stage (first screen on a phone); once traced it moves below the toggles so the stage stays first.
       const me = entryFor(state.chain, letter.id);
@@ -284,6 +282,12 @@ export function mount(root, ctx = {}) {
     }
     if (cardHost && !cardHost.first) body.appendChild(cardHost.el);
     assistedRun = false;
+    if (!strokesReady) {
+      const stage = h('div', { class: 'stage' });
+      const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.loading', 'Loading the tracing area...'));
+      body.appendChild(stage); body.appendChild(fb);
+      return;
+    }
     const block = letter[state.script];
     const stage = h('div', { class: 'stage' });
     const fb = h('div', { class: 'feedback', role: 'status', 'aria-live': 'polite' }, t('trace.start', 'Press Animate to see the order, then trace it.'));

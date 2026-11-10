@@ -1,4 +1,7 @@
 {
+  "version": 1,
+  "status": "draft-needs-native-review",
+  "note": "Slim map used by #/learn first paint. Generated from lessons.json; do not edit by hand.",
   "lessons": [
     {
       "id": "r01",

@@ -55,7 +55,7 @@ function mountMap(root, ctx) {
   if (h1.classList) { h1.classList.add("alef-h"); h1.classList.add("alef-learn-hero"); }
   else h1.className = `${h1.className || ""} alef-h alef-learn-hero`.trim();
   // Leave #view-title as a child of #main. Moving it into the section disconnects it and
-  // resets LCP to this late mount.
+  // resets LCP to this late mount (often 8–11s after the route module loads).
   if (!h1.parentNode || h1.parentNode !== root) {
     if (root.insertBefore && root.firstChild) root.insertBefore(h1, root.firstChild);
     else if (root.append) root.append(h1);

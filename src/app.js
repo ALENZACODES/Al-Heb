@@ -382,13 +382,9 @@ async function boot() {
     if (!r.ok) throw new Error(String(r.status));
     return r.json();
   }), { settings });
-  // The Home and Welcome tree does not use the optional image resolver.
-  // Let the first route paint before fetching image approvals; deep-linked
-  // lessons still receive the resolver before mounting as before.
-  const firstIsHome = !location.hash || location.hash === '#/' || location.hash === '#/welcome';
-  if (!firstIsHome) {
-    try { images = await resolveImages(); } catch { images = null; }
-  }
+  // No route waits for picture approvals or the image index before first paint.
+  // After the first view has painted, load the resolver and fill the teacher band;
+  // the next navigation (or a later quiet refresh) can draw pictures.
   const lessonSfx = { play(name) { try { sfx.enter({ settings }); return sfx.play(name === 'correct' ? 'success' : name === 'wrong' ? 'miss' : name); } catch { return false; } } }; // lessons and First day share the games' CC0 set
   const ctxBase = { settings, store, audio, sfx: lessonSfx, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });

@@ -44,6 +44,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
   'src/games/', 'src/books/', 'data/books/', 'data/images/',
+  // Camera Translator (preview route /camera): view code, word list and config are fetched when the screen first opens, runtime-cached.
+  'src/camera/', 'data/camera/',
   // Game data (word bank, prefix deck, arcade lists, the laws) and arcade art (backdrops, cast and letter sprites): fetched when a game first opens, runtime-cached.
   'data/games/', 'assets/games/',
   // Preview-route view code (pronunciation styles, vocabulary browser): not v0, fetched on first view, runtime-cached.

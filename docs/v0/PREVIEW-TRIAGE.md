@@ -53,6 +53,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `sounds` | keep | Sound descriptions; also the silent-reading reference. |
 | `read` | keep | Reader; target for `timedread`. |
 | `scan` | keep | Scan a page. |
+| `camera` | keep | Camera Translator: English drawn over the Hebrew on a photo of a sign or menu. On-device by default; measured on computer-made images only (docs/photo/CAMERA-TRANSLATE.md). |
 | `calendar` | keep | Calendar. |
 | `accessibility` | keep | Has its own quick row in Settings (see SCOPE.md). |
 | `how` | keep | How this works; linked from the sound bar. |

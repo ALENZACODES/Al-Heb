@@ -1,0 +1,101 @@
+{
+ "note": "Shared cases: the Python and the JavaScript word-list translators must agree on these.",
+ "cases": [
+  {
+   "he": "חנות אופטיקה",
+   "en": "Optical Store",
+   "status": "full"
+  },
+  {
+   "he": "מאפייה",
+   "en": "Bakery",
+   "status": "full"
+  },
+  {
+   "he": "בית מרקחת",
+   "en": "Pharmacy",
+   "status": "full"
+  },
+  {
+   "he": "יציאה",
+   "en": "Exit",
+   "status": "full"
+  },
+  {
+   "he": "סגור",
+   "en": "Closed",
+   "status": "full"
+  },
+  {
+   "he": "רחוב הרצל",
+   "en": "Herzl Street",
+   "status": "full"
+  },
+  {
+   "he": "שדרות בן יהודה",
+   "en": "Ben Yehuda Boulevard",
+   "status": "full"
+  },
+  {
+   "he": "קפה 12",
+   "en": "Coffee 12",
+   "status": "full"
+  },
+  {
+   "he": "חומוס 18.50",
+   "en": "Hummus 18.50",
+   "status": "full"
+  },
+  {
+   "he": "בֵּית כְּנֶסֶת",
+   "en": "Synagogue",
+   "status": "full"
+  },
+  {
+   "he": "סגור!",
+   "en": "Closed",
+   "status": "full"
+  },
+  {
+   "he": "חנות ספרים",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "רחוב ויצמן",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "כניסה יציאה",
+   "en": "Entrance Exit",
+   "status": "full"
+  },
+  {
+   "he": "",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "ביכר דיזנגוף",
+   "en": "Dizengoff Square",
+   "status": "near"
+  },
+  {
+   "he": "מסעדה בשרה",
+   "en": null,
+   "status": "none",
+   "why": "two listed words are one letter away, so no guess is made"
+  },
+  {
+   "he": "בשר",
+   "en": "Meat",
+   "status": "full"
+  },
+  {
+   "he": "אבג",
+   "en": null,
+   "status": "none"
+  }
+ ]
+}

@@ -77,10 +77,9 @@ export function applyMat(gameId, { board, root, ImageCtor = globalThis.Image } =
 }
 
 // ------------------------------------------------------------------ Tokens, the hero, and pictures a game places itself
-// The round tokens of the first ten games and the Brain Lab hero are in the commercial pack (data/images/commercial-2026-11-10).
-// The six new games' tokens are still on order; until they arrive their token is the game's letter on a green-and-gold disc.
+// The round tokens of all sixteen games and the Brain Lab hero are in the commercial pack (data/images/commercial-2026-11-10).
 export const TOKEN_DIR = 'data/images/commercial-2026-11-10';
-const TOKENS = new Set(['hunt', 'matrix', 'soundmatch', 'siddurflash', 'switch', 'gematria', 'countup', 'numberear', 'calendar', 'pattern']);
+const TOKENS = new Set(['hunt', 'matrix', 'soundmatch', 'siddurflash', 'switch', 'gematria', 'countup', 'numberear', 'calendar', 'pattern', 'twins', 'rain', 'middle', 'taxi', 'cafe', 'chain']);
 export const tokenArtPath = (gameId) => (TOKENS.has(gameId) ? `${TOKEN_DIR}/LAB_v2_${gameId}.webp` : null);
 export const HERO_ART = `${TOKEN_DIR}/LAB_v2_hero.webp`;
 /**

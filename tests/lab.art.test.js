@@ -92,6 +92,6 @@ test('applyBackground sets the picture only after it loads, never on error; toke
   applyBackground(bad, 'y.webp', { ImageCtor: Img }); made[1].onerror(); assert.equal(bad.style.backgroundImage, undefined);
   assert.equal(applyBackground(null, 'x.webp', { ImageCtor: Img }), false);
   for (const g of GAMES) { const p = tokenArtPath(g.id); if (p) assert.ok(existsSync(p), p); }
-  assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 10);
+  assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 16);
   assert.ok(existsSync(HERO_ART));
 });

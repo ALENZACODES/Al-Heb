@@ -213,6 +213,8 @@ const CSS = `
 .lab-link.is-reveal{color:#a8442f;text-decoration:underline dotted}
 .lab-chain-en{display:block;margin-block-start:.2rem;font-weight:400}
 .lab-chain-opts{flex-wrap:wrap;gap:.5rem}
+/* On a board with a mat every child sits on warm white, whatever the theme: its secondary buttons keep dark ink. */
+.lab-board.has-mat .btn.secondary{color:#163527;background:#fffaf0;border-color:#c9a227}.lab-board.has-mat .btn.secondary .lab-val{color:#5d4a2a}
 .lab-chain-opt{min-block-size:56px;min-inline-size:7rem;display:inline-flex;flex-direction:column;align-items:center;gap:0;line-height:1.2}
 .lab-chain-opt .lab-val{font-size:.8rem;font-weight:400}
 /* ordered board pictures (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md), shown once approved; never under high contrast */

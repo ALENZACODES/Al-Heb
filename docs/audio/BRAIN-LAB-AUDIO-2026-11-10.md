@@ -9,7 +9,7 @@ Every Hebrew item a Brain Lab game shows, checked against the recordings the gam
 | Calendar Puzzle | 27 | 4 | 10 | 0 | 13 |
 | Prayer Chain, Siddur Flash | 41 | 37 | 1 | 3 | 0 |
 | Count Up, Number Ear | 18 | 17 | 0 | 1 | 0 |
-| Letter Pattern | 929 | 309 | 0 | 125 | 495 |
+| Letter Pattern | 929 | 803 | 0 | 126 | 0 |
 | Sound Twins | 32 | 26 | 0 | 0 | 6 |
 | Vowel Rain | 73 | 51 | 0 | 0 | 22 |
 | Café Order | 29 | 29 | 0 | 0 | 0 |
@@ -44,7 +44,7 @@ Priority 1: a game plays it, or asks for it by sound, and beginners meet it firs
 | Prayer Chain, Siddur Flash | `sim-shalom` | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Sim shalom (peace blessing of the morning Amidah) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 | Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 
-Letter Pattern adds 125 beginner words at priority 2 and 495 more at priority 3; the game does not speak yet, so they are listed only in the CSV.
+Letter Pattern words without a recording are listed only in the CSV: 0 beginner words (level A1 or A2, priority 1), 126 at priority 2.
 
 ## For the Ashkenazi and Sephardi Settings
 

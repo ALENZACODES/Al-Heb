@@ -232,3 +232,14 @@ test('audio: every word a Brain Lab game says can be played, in both Israeli voi
   assert.match(g2, /audio\?\.extend\?\.\(w\.extraClips/, 'the dictionary-only recordings are handed to the player');
   assert.match(g2, /x\.sound\[trad\] === x\.sound\.israeli/, 'a letter sound plays only where the tradition says it the Israeli way');
 });
+
+test('audio: Letter Pattern words point at real recordings (word or line clips the player knows, or dictionary files in both voices)', () => {
+  const rows = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json')].filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
+  const ids = new Set(json('data/roots/families.json').families.flatMap((f) => (f.words || []).map((w) => w.id)));
+  assert.ok(W.familyClips.length >= 800);
+  for (const [wid, k, cid] of W.familyClips) {
+    assert.ok(ids.has(wid), wid);
+    if (k === 'd') for (const v of ['m', 'f']) assert.ok(existsSync(`audio/${v}/israeli/dictionary/dict-${cid}.mp3`), `${wid} ${v}`);
+    else for (const v of ['m', 'f']) assert.ok(rows.some((r) => r.kind === (k === 'l' ? 'line' : 'word') && r.id === cid && r.voice === v), `${wid} ${cid} ${v}`);
+  }
+});

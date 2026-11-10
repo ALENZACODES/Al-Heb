@@ -152,6 +152,18 @@ export function build() {
       vowels.push({ he, letter, sign: sid, from, sound, ...(rec ? { syllable: rec.id } : standIn ? { sayAs: standIn.id } : {}) });
     }
   }
+  function familyClips() {
+    const out = [], seen = new Set();
+    for (const f of readJSON('data/roots/families.json').families || []) for (const w of f.words || []) {
+      if (!w.he || !w.id || seen.has(w.id)) continue; seen.add(w.id);
+      const m = loaded.find((r) => r.voice === 'm' && r.text === w.he && (r.kind === 'word' || r.kind === 'line'));
+      if (m && loaded.some((r) => r.voice === 'f' && r.kind === m.kind && r.id === m.id)) { out.push([w.id, m.kind === 'line' ? 'l' : 'w', m.id]); continue; }
+      const c = clips[w.he]; const dm = c?.['m|israeli'], df = c?.['f|israeli'];
+      if (dm && df && dm.id === df.id && /^dict-/.test(dm.id) && dm.path === `audio/m/israeli/dictionary/${dm.id}.mp3` && df.path === `audio/f/israeli/dictionary/${df.id}.mp3`
+        && existsSync(join(ROOT, dm.path)) && existsSync(join(ROOT, df.path))) out.push([w.id, 'd', dm.id.slice(5)]); // 'dict-' prefix dropped
+    }
+    return out;
+  }
   return {
     schema: 'alef-lab-words/1',
     source: 'data/vocab/words.json, data/vocab/clip-lookup.json, data/pronunciation/consonants.json, data/pronunciation/niqqud.json, data/letters/letters.json, data/lab/syllables.json (tools/lab/build-lab-words.mjs)',
@@ -160,6 +172,10 @@ export function build() {
     // Calendar Puzzle: the recorded name of each holy day (exact pointed text, both Israeli voices), said with the answer.
     holyDays: HOLIDAY_DEFS.map((d) => ({ id: d.id, clip: clipByText(d.he) })).filter((d) => d.clip),
     extraClips,
+    // Letter Pattern: the recording of each root-family word, by its word id in data/roots/families.json: [word id, kind, clip id];
+    // kind 'w' word, 'l' line, 'd' = a dictionary
+    // file (audio/<voice>/israeli/dictionary/<id>.mp3) that Brain Lab adds to the player itself (src/lab/lab.games.js).
+    familyClips: familyClips(),
     signs: VOWEL_SIGNS.map(({ id }) => { const r = signs.get(id); return { id, name: String(r.name).split('(')[0].trim(), mark: r.shape.slice(1) }; }),
   };
 }

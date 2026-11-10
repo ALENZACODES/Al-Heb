@@ -147,7 +147,7 @@ const siddurflash = {
     const fallback = words.map((w, i) => [w, i]).filter(([w, i]) => i >= 1 && !hasDivineName(w));
     const [targetWord, targetIndex] = unique.length ? unique[randInt(env.rnd, unique.length)] : fallback.length ? fallback.at(-1) : [words.at(-1), words.length - 1];
     const step = Math.max(330, 1150 - level * 70);
-    env.met?.({ he: targetWord, en: `from ${String(first.title).replace(/\s*\(.*\)\s*$/, '')}` });
+    env.met?.({ he: targetWord, en: `from ${String(first.title).replace(/\s*\(.*\)\s*$/, '')}`, clip: { kind: 'line', id: first.id } });
     return new Promise((resolve) => {
       let shownAt = null, hiddenAt = null, done = false, idx = -1;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -342,11 +342,23 @@ const calendar = {
 const pattern = {
   load: (env) => once('families', async () => {
     const raw = await getJSON(env, 'data/roots/families.json');
+    // Recordings of the family words (data/lab/words.json familyClips): a word or line clip the player knows, or a dictionary
+    // file whose two rows (Ari and Noa) are handed to the player here. A word without one stays silent.
+    const clips = new Map();
+    try {
+      const he = new Map((raw.families || []).flatMap((f) => (f.words || []).map((w) => [w.id, w.he])));
+      const extra = [];
+      for (const [wid, k, cid] of (await getJSON(env, 'data/lab/words.json')).familyClips || []) {
+        if (k === 'd') { const id = `dict-${cid}`; clips.set(wid, { kind: 'word', id }); for (const v of ['m', 'f']) extra.push({ path: `audio/${v}/israeli/dictionary/${id}.mp3`, voice: v, tradition: 'israeli', kind: 'word', id, text: he.get(wid), status: 'tts' }); }
+        else clips.set(wid, { kind: k === 'l' ? 'line' : 'word', id: cid });
+      }
+      env.ctx?.audio?.extend?.(extra);
+    } catch { /* the words stay silent */ }
     const fams = [];
     for (const f of raw.families || []) {
       const root = consonants(f.root);
       if (root.length !== 3) continue;
-      const words = (f.words || []).filter((w) => w.he && hasPattern(w.he, root)).map((w) => ({ he: w.he, en: w.en, level: w.level }));
+      const words = (f.words || []).filter((w) => w.he && hasPattern(w.he, root)).map((w) => ({ he: w.he, en: w.en, level: w.level, clip: clips.get(w.id) || null }));
       if (words.length >= 2) fams.push({ root, rootHe: f.root, words, easy: words.filter((w) => w.level === 'A1' || w.level === 'A2').length });
     }
     const allWords = (raw.families || []).flatMap((f) => (f.words || []).map((w) => ({ he: w.he, en: w.en, level: w.level }))).filter((w) => w.he);
@@ -364,7 +376,7 @@ const pattern = {
     for (const w of shuffle(level <= 4 ? allWords.filter((x) => x.level === 'A1' || x.level === 'A2') : allWords, env.rnd)) { if (others.length >= tiles - k) break; const c = consonants(w.he); if (!hasPattern(w.he, fam.root) && !seen.has(c)) { seen.add(c); others.push(w); } }
     const board = shuffle([...targets.map((w) => ({ ...w, hit: true })), ...others.map((w) => ({ ...w, hit: false }))], env.rnd);
     const showEn = level <= 4;
-    for (const w of targets) env.met?.({ he: w.he, en: String(w.en).split(/[;,]/)[0] });
+    for (const w of targets) env.met?.({ he: w.he, en: String(w.en).split(/[;,]/)[0], clip: w.clip });
     return new Promise((resolve) => {
       const t0 = env.now(); let found = 0;
       env.prompt(env.h('span', {}, 'Tap every word with ', big(env, fam.rootHe, 'lab-inline'), ' in this order'));
@@ -375,7 +387,7 @@ const pattern = {
         b.setAttribute('aria-label', String(board[i].en));
       }, (i, b) => {
         if (b.disabled) return;
-        if (board[i].hit) { b.disabled = true; mark(b, true); found++; if (found === targets.length) resolve({ ok: true, ms: env.now() - t0, par: 2200 * targets.length + 1000 }); }
+        if (board[i].hit) { b.disabled = true; mark(b, true); found++; if (board[i].clip && env.hasClip(board[i].clip.kind, board[i].clip.id)) env.playClip(board[i].clip.kind, board[i].clip.id, board[i].he); if (found === targets.length) resolve({ ok: true, ms: env.now() - t0, par: 2200 * targets.length + 1000 }); }
         else { mark(b, false); board.forEach((x, j) => { if (x.hit) g.cells[j].classList.add('is-reveal'); }); resolve({ ok: false, ms: env.now() - t0 }); }
       }, 'Words');
       env.board.replaceChildren(g.el);

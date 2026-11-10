@@ -31,7 +31,7 @@ test('LAB_FILES is exactly what Brain Lab needs that the first install leaves ou
   const needed = [...modules, ...dataFiles].filter((f) => !installed.has(f)).sort();
   assert.deepEqual([...LAB_FILES].sort(), needed);
   const bytes = LAB_FILES.reduce((n, f) => n + fs.statSync(path.join(ROOT, f)).size, 0);
-  assert.ok(bytes < 450 * 1024, `about ${Math.round(bytes / 1024)} KB fetched once per build`);
+  assert.ok(bytes < 500 * 1024, `about ${Math.round(bytes / 1024)} KB fetched once per build`); // 450 KB until 2026-11-10, when the recordings of 830 Letter Pattern words (about 27 KB) joined data/lab/words.json
 });
 
 function fakes({ cached = [], controller = true, onLine = true, saveData = false, failing = [] } = {}) {

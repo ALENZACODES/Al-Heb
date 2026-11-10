@@ -7,14 +7,15 @@
 //  - gender null: the learner's own grammatical gender for first-person Hebrew forms ('m', 'f' or 'both' = show both forms). Unset by
 //    default and never guessed: nothing may fall back to a masculine form. One shared value, read by the gender drill, the Israel view
 //    and the pair cards; adopted once from the old per-feature keys (see adoptLegacyGender).
-//  - script 'print', theme 'auto', lat/lon null (candle-lighting location is opt-in).
+//  - script 'print', theme 'dark' (the dark green and gold look, owner's order 2026-11-08: one look throughout the app; 'auto' still
+//    follows the device for anyone who picks it), lat/lon null (candle-lighting location is opt-in).
 export const DEFAULTS = Object.freeze({
   voice: 'f',
   congregation: 'sephardi',
   israelTrack: false,
   showUnapprovedImages: false,
   script: 'print',
-  theme: 'auto',
+  theme: 'dark',
   lat: null,
   lon: null,
   gender: null,        // null (not chosen) | 'm' | 'f' | 'both'; see the comment above

@@ -18,6 +18,9 @@ import { loadMemoryChain, entryFor, buildMemoryCard } from '../letters/memorycar
 import { vowelSound, respell, congregationOf, audioNote, saySound, playLine, audioSupport, LABELS } from '../pronunciation/forTradition.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { soundOn } from '../curriculum/exercises.session.js';
+import { rimonInline } from '../shell/rimon-inline.js';
+import { projectStreak, GOAL_SECONDS } from '../curriculum/streak.js';
+import { streakVisible } from '../shell/comfort.js';
 
 const PREVIEW_SOURCES = 'Hebrew copied from existing course data; nothing new.';
 const SHORT_NOTICE = 'Draft, unreviewed: no Hebrew teacher has checked it and no learner has tried it yet.';
@@ -25,6 +28,23 @@ const SHORT_NOTICE = 'Draft, unreviewed: no Hebrew teacher has checked it and no
 /** Extra audio ids for the syllable and the word (no recording: the device voice says the text). */
 export function onrampAudioEntries(onramp) {
   return (onramp?.steps || []).filter((s) => s.he && s.kind !== 'vowel').map((s) => ({ path: `audio/m/israeli/word/firstday-${s.id}.mp3`, voice: 'm', tradition: 'israeli', kind: 'word', id: `firstday-${s.id}`, text: s.he, status: 'missing', source: 'none', group: 'firstday' }));
+}
+
+/**
+ * The streak flame on the finish screen, from the shared streak record: lit once today counts (5 minutes of study, the rule in
+ * src/curriculum/streak.js), otherwise filling toward it. Pure, so the words can be tested. @param {any} raw @param {number} now
+ */
+export function flameState(raw, now) {
+  let p; try { p = projectStreak(raw, now); } catch { p = { count: 0, activeToday: false, todaySeconds: 0 }; }
+  const goalMin = Math.round(GOAL_SECONDS / 60), secs = Math.min(GOAL_SECONDS, p.todaySeconds || 0), min = Math.floor(secs / 60);
+  if (p.activeToday && p.count > 0) {
+    return { lit: true, fill: 100, big: String(p.count), title: p.count === 1 ? 'Day 1 of your streak!' : `${p.count} days in a row!`,
+      sub: p.count === 1 ? 'Today counts. Come back tomorrow to make it 2.' : `Today counts. Come back tomorrow to make it ${p.count + 1}.` };
+  }
+  const left = Math.max(1, goalMin - min);
+  return { lit: false, fill: Math.round((secs / GOAL_SECONDS) * 100), big: `${min}/${goalMin}`,
+    title: `${min} of ${goalMin} minutes today`,
+    sub: p.count > 0 ? `${left} more minute${left === 1 ? '' : 's'} of study today keeps your ${p.count}-day streak.` : `${left} more minute${left === 1 ? '' : 's'} of study today lights day 1 of your streak. The next lesson counts.` };
 }
 
 /** @param {HTMLElement} root @param {any} ctx @returns {() => void} unmount */
@@ -55,6 +75,7 @@ export function mount(root, ctx) {
   // throwaway copy of the progress: nothing is saved, the recorded first
   // completion (its answers, cards and streak) is never touched.
   let practice = false;
+  let offStreak = null; // store subscription for the live flame on the finish screen
   const say = (t) => { status.textContent = t; };
   const save = () => (practice ? Promise.resolve() : storeSet(ctx, PROGRESS_KEY, progress));
   const focus = () => { try { h1.focus(); } catch { /* ignore */ } };
@@ -106,7 +127,8 @@ export function mount(root, ctx) {
     if (me) memCard = buildMemoryCard({ entry: me, glyph: he, tradition, audio: ctx?.audio, compact: true, hideSoundLine: true });
     setMeter(unitsBefore(i), stepLabel);
     const nodes = [el('p', { class: 'fd-steplabel' }, `${stepLabel} · about ${s.minutes} min`), kicker(KIND_LABEL[s.kind] || 'Learn'), el('h2', { class: 'fd-q', 'data-case': 'keep' }, s.title),
-      memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))];
+      memCard && (he || me?.hebrew) ? el('p', { class: 'fd-hero-glyph', 'data-hero-glyph': '1' }, heText(he || me.hebrew, 'alef-he')) : null, // the new letter, large, before its picture (the chain entry carries it when course content is still loading)
+      memCard ? memCard.el : el('p', { class: 'fd-card alef-card', 'data-glyph-slot': '1' }, heText(he, 'alef-he alef-huge fd-big'))].filter(Boolean);
     if (s.kind === 'letter' && chain === null) nodes.push(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
     // one sound line, in the learner's tradition
     if (s.kind === 'letter') nodes.push(el('p', { class: 'fd-say' }, saySound(content?.consonants?.get?.(s.letter), tradition, { fallbackEn: L?.sound?.en || '' })));
@@ -224,12 +246,30 @@ export function mount(root, ctx) {
     const d = onramp.done || {};
     // the streak record decides (a day counts after 5 minutes)
     const streakLine = el('p', { class: 'fd-streak', id: 'fd-streak' }, '');
+    // the flame: fills toward 5 minutes and lights while this screen is open if the day starts to count (the engine saves every 10 s)
+    const flameN = el('span', { class: 'fd-flame-n' }, ''), flameT = el('strong', {}, ''), flameS = el('span', { class: 'fd-flame-sub' }, '');
+    const flame = el('div', { class: 'fd-flame', id: 'fd-flame', hidden: practice || !streakVisible(ctx) ? '' : null },
+      el('span', { class: 'fd-flame-ico', 'aria-hidden': 'true' }), el('p', {}, flameN, flameT, el('br'), flameS));
+    let wasLit = null;
+    const paintFlame = (raw) => {
+      const f = flameState(raw, Date.now());
+      flameN.textContent = f.lit ? f.big : ''; flameT.textContent = f.title; flameS.textContent = f.sub;
+      flame.setAttribute('class', f.lit ? 'fd-flame is-lit' : 'fd-flame'); flame.setAttribute('style', `--fill:${f.fill}`);
+      if (wasLit === false && f.lit) { try { if (soundOn(ctx)) ctx.sfx.play('streak'); } catch { /* sound is never the only cue */ } try { cheer?.play('stretch'); } catch { /* decoration */ } }
+      wasLit = f.lit;
+    };
     if (!practice) storeGet(ctx, STREAK_KEY, null).then((s) => {
       const p = currentStreak(s, Date.now());
       streakLine.textContent = p.activeToday && p.count > 0
         ? (p.count === 1 ? 'Today counts: day 1 of your streak.' : `Your streak: ${p.count} days in a row.`)
         : 'Five minutes of study today starts your streak.';
+      if (alive) paintFlame(s);
     }).catch(() => {});
+    if (!practice && typeof ctx?.store?.subscribe === 'function') {
+      try { offStreak?.(); } catch { /* none */ }
+      offStreak = ctx.store.subscribe((key, value) => { if (alive && key === STREAK_KEY) { paintFlame(value); streakLine.textContent = flameState(value, Date.now()).lit ? 'Today counts toward your streak.' : streakLine.textContent; } });
+    }
+    const cheer = practice ? null : rimonInline({ action: 'highfive', size: 148, label: 'Rimon cheers' });
     // measured: answers in this record, minutes since this screen opened
     const vals = Object.values(progress.answers || {});
     const acc = vals.length ? Math.round((vals.filter(Boolean).length / vals.length) * 100) : null;
@@ -238,16 +278,17 @@ export function mount(root, ctx) {
     const stat = (big, small) => el('li', { class: 'fd-stat' }, el('span', { class: 'fd-stat-big' }, big), el('span', { class: 'fd-stat-small' }, small));
     body.replaceChildren(
       el('div', { class: 'fd-done' },
-        el('div', { class: 'fd-medal', 'aria-hidden': 'true' }, el('span', {}, '✓')),
+        cheer ? el('div', { class: 'fd-cheer' }, cheer.el) : el('div', { class: 'fd-medal', 'aria-hidden': 'true' }, el('span', {}, '✓')),
         el('p', { class: 'fd-steplabel' }, practice ? 'Practice round finished. Your finished mark stays as it was — practising changes nothing you earned.' : `${onramp.steps.length} of ${onramp.steps.length} wins`),
         el('h2', { class: 'fd-done-title', 'data-case': 'keep' }, d.title || 'Done'),
         practice ? null : el('ul', { class: 'fd-stats', 'aria-label': 'This lesson' },
           stat(`${onramp.steps.length}/${onramp.steps.length}`, 'wins'),
           acc === null ? null : stat(`${acc}%`, 'answers right'),
           stat(`${mins} min`, 'this visit')),
+        practice ? null : flame,
         el('p', { class: 'fd-card alef-card' }, heText(onramp.steps.find((s) => s.kind === 'word')?.he || '', 'alef-he alef-huge fd-big')),
         el('p', {}, d.body || ''),
-        practice ? null : streakLine,
+        practice ? null : el('div', { class: 'visually-hidden' }, streakLine),
         practice ? null : el('p', {}, d.tomorrow || 'Come back tomorrow for your next letter. A few minutes a day is all it takes.',
           ctx?.hasRoute?.('reminders') !== false ? [' ', el('a', { href: '#/reminders', id: 'fd-remind' }, 'Remind me tomorrow')] : null),
         el('p', { class: 'fd-done-more' }, el('button', { class: 'btn secondary', type: 'button', id: 'fd-again', onclick: () => { practice = true; progress = migrateProgress(null); answered = null; stage = 'learn'; verdict = null; sel = null; say(''); renderStep(); focus(); } }, 'Do the steps again'),
@@ -303,7 +344,13 @@ export function mount(root, ctx) {
     const slot = body.querySelector('[data-glyph-slot]'); if (!slot) return;
     if (typeof slot.replaceWith !== 'function' || typeof slot.after !== 'function') { renderStep(); return; } // minimal DOMs: renderStep keeps the quiz position
     const me = entryFor(chain, s.letter);
-    if (me) { memCard = buildMemoryCard({ entry: me, glyph: content?.letters?.get(s.letter)?.he || '', tradition, audio: ctx?.audio, compact: true, hideSoundLine: true }); slot.replaceWith(memCard.el); }
+    if (me) {
+      const glyph = content?.letters?.get(s.letter)?.he || '';
+      memCard = buildMemoryCard({ entry: me, glyph, tradition, audio: ctx?.audio, compact: true, hideSoundLine: true });
+      // the letter stays large above its picture card (the card turns its own glyph into the picture)
+      const hero = body.querySelector('[data-hero-glyph]') ? null : el('p', { class: 'fd-hero-glyph', 'data-hero-glyph': '1' }, heText(glyph || me.hebrew || '', 'alef-he'));
+      if (hero) slot.replaceWith(hero, memCard.el); else slot.replaceWith(memCard.el);
+    }
     else {
       if (chain === null) slot.after(el('p', { class: 'mc-fallback muted small', role: 'status', 'data-memory-fallback': '1' }, 'Picture and word hint unavailable offline'));
       const M = content?.mnemonics?.get(s.letter), shape = body.querySelector('.fd-why p'); // no chain entry: the old story stays, as before
@@ -340,5 +387,5 @@ export function mount(root, ctx) {
       else renderStep();
     } catch { if (alive) body.replaceChildren(el('p', { role: 'alert' }, 'The lesson could not be loaded. Reload; nothing was lost.')); }
   })();
-  return () => { alive = false; if (memCard) memCard.destroy(); try { bodyEl?.classList?.remove('fd-player'); globalThis.document?.removeEventListener?.('keydown', onKey); } catch { /* ignore */ } wrap.remove(); };
+  return () => { alive = false; try { offStreak?.(); } catch { /* ignore */ } if (memCard) memCard.destroy(); try { bodyEl?.classList?.remove('fd-player'); globalThis.document?.removeEventListener?.('keydown', onKey); } catch { /* ignore */ } wrap.remove(); };
 }

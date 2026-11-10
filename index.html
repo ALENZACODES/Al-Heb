@@ -18,6 +18,7 @@
   <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="assets/css/learn.css">
   <link rel="stylesheet" href="assets/css/games.css">
@@ -30,6 +31,7 @@
   <link rel="stylesheet" href="assets/css/player.css">
   <link rel="stylesheet" href="assets/css/builder.css">
   <link rel="stylesheet" href="assets/css/rimon.css">
+  <link rel="stylesheet" href="assets/css/polish.css">
   <link rel="preload" href="assets/fonts/web/frank-ruhl-libre.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
@@ -52,7 +54,7 @@
   <header class="site-header" role="banner">
     <a class="brand" href="#/" aria-label="Aleph אָלֶף, home"><span>Aleph</span> <span lang="he" dir="rtl" class="he">אָלֶף</span></a>
   </header>
-  <nav class="site-nav" aria-label="Main"><ul id="nav"></ul><button type="button" class="more-btn" id="more-btn" aria-expanded="false" aria-controls="nav-more" hidden><span>More</span><span lang="he" dir="rtl" class="he nav-he">עוד</span></button><ul id="nav-more" class="nav-more" aria-label="More sections"></ul></nav>
+  <nav class="site-nav" aria-label="Main"><ul id="nav"></ul><button type="button" class="more-btn" id="more-btn" aria-expanded="false" aria-controls="nav-more" hidden><span class="nav-ico nav-ico-more" aria-hidden="true"></span><span class="nav-label">More</span><span lang="he" dir="rtl" class="he nav-he">עוד</span></button><ul id="nav-more" class="nav-more" aria-label="More sections"></ul></nav>
   <div class="sound-bar" hidden role="region" aria-label="Sound status"><p id="sound-status" role="status" aria-live="polite">Sound: checking audio support...</p> <button type="button" class="sound-bar-more" aria-expanded="false" aria-controls="sound-status">Full message</button> <a class="sound-bar-details" href="#/how" aria-label="Details: how audio works">Details</a><button type="button" class="sound-bar-x" aria-label="Dismiss audio notice">&times;</button></div>
   <div id="alef-companions" class="companions" role="complementary" aria-label="Your teachers"></div>
   <main id="main" tabindex="-1" aria-live="off"><p class="muted">Loading Aleph…</p></main>

@@ -115,3 +115,31 @@ test('zero hearts gates a new lesson but not review; reduced motion runs no anim
     await c.close();
   });
 });
+
+test('a real 3-minute lesson: clicking through the short parts reaches the stopping card, which survives the lesson redraw', { skip: !chromium, timeout: 180000 }, async () => {
+  await withApp(async (browser, base) => {
+    const a = await open(browser, base, {});
+    await a.go('#/shop', '.ret-shop');
+    const id = await a.page.evaluate(async () => { const m = await import('/src/curriculum/lessons.js'); const size = (l) => (l.letters?.length || 0) + (l.vowels?.length || 0) + (l.words?.length || 0); return m.lessons.filter((l) => !l.prerequisites.length).sort((x, y) => size(y) - size(x))[0]?.id; });
+    await a.go(`#/learn?lesson=${id}&quick=1`, '.alef-chunked #alef-part-title');
+    for (let i = 0; i < 80; i++) {
+      if (await a.page.$('.ret-quick-done') || await a.page.$('.alef-summary')) break;
+      await a.page.evaluate(() => {
+        const vis = (b) => b && !b.hidden && !b.disabled && b.offsetParent !== null;
+        const opt = [...document.querySelectorAll('.alef-chunked .alef-int-opt')].find(vis); if (opt) return opt.click();
+        const main = [...document.querySelectorAll('.alef-chunked button.btn:not(.secondary)')].filter((b) => vis(b) && !/Listen|Hear/.test(b.textContent)); main[main.length - 1]?.click();
+      });
+      await a.page.waitForTimeout(150);
+    }
+    const parts = await a.page.evaluate(() => Number((document.querySelector('#alef-part-title')?.textContent || '').split(' of ')[1]) || 0);
+    if (parts >= 6) { // long enough for a stopping point (shorter lessons simply end with their own end card)
+      assert.match(await a.page.$eval('.ret-quick-done', (n) => n.textContent), /Three Minutes Done.*\+10 XP.*Your place is saved/s);
+      const r = await stored(a.page, 'alef:retention.v1'), s = await stored(a.page, 'alef:streak');
+      assert.deepEqual([r.xp.total, r.lessonsFinished, s.count], [10, 0, 1]);
+      await a.page.click('.ret-quick-done button');
+      assert.equal(await a.page.$('.ret-quick-done'), null); assert.ok(await a.page.$('.alef-chunked #alef-part-title'), 'the lesson carries on');
+    } else assert.ok(await a.page.$('.alef-summary'), 'a short lesson ends with its own end card');
+    assert.deepEqual(a.errors, []);
+    await a.close();
+  });
+});

@@ -6,6 +6,7 @@ import { normalizeRecord, toStored, projectStreak, rollover, withDeclaredRest, c
 import { clone, CAPS } from './state.js';
 import { dayKey, addDaysISO, weekdayOf, daysBetween, localAt } from './clock.js';
 import { earn, spend, PRICES } from './gems.js';
+import { restNow } from './quiet.js';
 
 /** Tuning. */
 export const STREAK = Object.freeze({
@@ -136,8 +137,9 @@ export function afterDayCompleted(streakBefore, streakAfter, ret, now = Date.now
  */
 export function streakStatus(streakRaw, ret, now = Date.now()) {
   const p = projectStreak(streakRaw, now), today = dayKey(now);
-  const restToday = p.restToday || isRestDay(today, normalizeRecord(streakRaw).mode);
-  const base = { count: p.count, best: p.best, held: ret.freezes.held, activeToday: p.activeToday, repair: repairOffer(ret, now) };
+  const mode = normalizeRecord(streakRaw).mode, kind = restNow(now, { mode }) || (isRestDay(today, mode) ? (new Date(now).getDay() === 6 ? 'shabbat' : 'yomtov') : null);
+  const restToday = p.restToday || !!kind; // from Friday 18:00, all Saturday, Yom Tov and its eve from 18:00: no streak pressure
+  const base = { count: p.count, best: p.best, held: ret.freezes.held, activeToday: p.activeToday, repair: repairOffer(ret, now), restKind: restToday ? kind || 'rest' : null };
   let state = 'new';
   if (restToday && !p.activeToday) state = 'rest';
   else if (p.activeToday) state = 'done';
@@ -150,7 +152,7 @@ export function streakStatus(streakRaw, ret, now = Date.now()) {
 export function streakLine(st) {
   const n = st.count;
   switch (st.state) {
-    case 'rest': return 'Your streak rests today too.';
+    case 'rest': return st.restKind === 'shabbat' ? 'Shabbat Shalom. Your streak rests today too.' : st.restKind === 'yomtov' ? 'Chag sameach. Your streak rests today too.' : 'A rest day. Your streak rests today too.';
     case 'done': return n <= 1 ? 'Day 1 done. See you tomorrow!' : `${n} days in a row. See you tomorrow!`;
     case 'freeze-used': return `A streak freeze covered a missed day. Your ${n}-day streak is safe. ${st.held} left.`;
     case 'at-risk': return `Keep your ${n}-day streak: one 3-minute lesson does it.`;

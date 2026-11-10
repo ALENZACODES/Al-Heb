@@ -193,3 +193,11 @@ test('calendar fallback: one daily event at the usual time, Sunday to Thursday o
   assert.doesNotMatch(text, /BYDAY=[^\r]*(FR|SA)/); assert.ok(text.endsWith('END:VCALENDAR\r\n'));
   assert.equal(parseICS(text).events.length, 1);
 });
+test('the app\'s older in-app streak banner is also quiet from Friday 18:00, all Saturday and on Yom Tov, for every learner', async () => {
+  const N = await import('../../src/morning/nudge.js');
+  const rec = (last) => ({ v: 2, count: 3, best: 3, last, frozenDates: [], doneDates: [], freeze: false, mode: 'reform' });
+  assert.equal(N.nudgeDue(new Date(T('2026-11-13T17:00')), rec('2026-11-12'), { lastRescue: null }).show, true, 'Friday afternoon');
+  assert.equal(N.nudgeDue(new Date(T('2026-11-13T18:00')), rec('2026-11-12'), { lastRescue: null }).show, false, 'Friday 18:00');
+  assert.equal(N.nudgeDue(new Date(T('2026-11-14T10:00')), rec('2026-11-13'), { lastRescue: null }).show, false, 'Saturday, observant mode off');
+  assert.equal(N.nudgeDue(new Date(T('2026-11-10T09:00')), rec('2026-11-09'), { lastRescue: null }).show, true, 'a weekday');
+});

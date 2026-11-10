@@ -107,19 +107,29 @@ The lane rules win over the spec where they disagree.
 
 ## Not Built
 
-- A full seven-state streak card. The streak line, the seven-day strip (with a snowflake for a day a freeze covered) and the freeze and repair links are in the daily-goal card on Home.
 - Settings-page controls. The switches are on `#/shop` and the goal picker is in the goal card.
 - Situational lines S05 and S08 are in the catalogue but nothing sends them. S05 (a Friday streak nudge) has no use while Friday is a free day; S08 (hearts full) would have to be sent on a day the learner already studied, which the "never after a session today" rule forbids. S01, S02, S03, S04, S06, S07 and S09 are wired.
 - Real leagues with other learners. That needs accounts, a server and a privacy review.
 
 ## Added in the Second Pass
 
-- **3-minute lesson.** The Home goal card has a "3-minute lesson" button that opens the learner's next lesson with `?quick=1`, which uses the app's existing short-parts player. After four parts in one sitting a "Three Minutes Done" card pays 10 XP, counts the day for the streak and offers "Keep going" or "Done for today"; the lesson's place is already saved by the player. A lesson of four parts or fewer simply ends with its normal end card. The number of parts is `QUICK_PARTS` in `boot.js`.
+- **3-minute lesson.** The Home goal card has a "3-minute lesson" button that opens the learner's next lesson with `?quick=1`, which uses the app's existing short-parts player. After four parts in one sitting a "Three Minutes Done" card pays 10 XP, counts the day for the streak (it does not count as a finished lesson, so it unlocks nothing and pays no first-lesson gems) and offers "Keep going" or "Done for today"; the lesson's place is already saved by the player. A lesson of four parts or fewer simply ends with its normal end card. The number of parts is `QUICK_PARTS` in `boot.js`.
 - **Rimon's bubble lines** for welcome back, goal reached, one more heart, moving up, the holiday greeting and the after-Shabbat greeting (`LINES` in `rimon.js`; the shell's Rimon shows a line sent as `detail.say`).
 - **Seven-day strip** in the goal card (`weekDots` in `streak.js`).
 - **Calendar fallback.** "Add a daily reminder to my calendar" on `#/shop`, and on iPhone in a browser tab the opt-in card offers it together with "How to add" to the Home Screen. The file repeats Sunday to Thursday at the learner's usual time, never Friday or Saturday (`reminderICS` in `notify.js`).
 - **Situational lines S02 and S07** (the day after Yom Tov; Thursday when the move-up line is within 30 XP).
 - **Browser tests**: `tests/retention/retention.browser.test.js` (advisory tier, like the repo's other browser tests). They pass locally in headless Chrome at 320, 360 and 390 px. A real 3-minute lesson was also walked by hand from the Home button to the end card: the reward panel and the reminder opt-in card appeared and XP, gems and the streak were saved.
+
+## Added in the Third Pass
+
+- **Streak card states.** The goal card on Home carries all seven states (`rest`, `done`, `freeze-used`, `at-risk`, `open`, `broken`, `new`) with its own line for each, and is a rest day from Friday 18:00, all Saturday, and on Yom Tov and its eve from 18:00, so it never says "at risk" then. Once a day, in the evening, Rimon looks worried about an unfinished day.
+- **The app's older in-app streak banner** (`src/morning/nudge.js`, "Rimon says: Please keep your streak going") used to stay quiet on Saturday only for learners in observant mode. It is now quiet for everyone from Friday 18:00, all Saturday and on Yom Tov.
+- **Fix:** the "Three Minutes Done" card was being wiped when the lesson player redrew the next part. It now sits above the lesson. This was found by clicking through a real six-part lesson, and that click-through is now a browser test.
+- Checked by hand in a real lesson: two wrong first answers took hearts from 5 to 3 and the top-bar chip followed.
+
+### Badges
+
+The app's 25 badges (`src/awards/`) already include the streak medallions, and they still come from the streak engine; a retention milestone and its badge arrive together. No new badges were added for leagues or daily goals, because each badge needs its own medallion picture.
 
 ## Hebrew
 

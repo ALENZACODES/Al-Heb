@@ -58,6 +58,7 @@ export function goalRingNode(R) {
         st.repair ? h('a', { class: 'btn secondary', href: '#/shop' }, `Repair your ${st.repair.prev}-day streak`) : null,
         R.streakShown() && !st.repair && rec.freezes.held < STREAK.freezeMax && rec.gems.balance >= PRICES.freeze ? h('a', { class: 'btn secondary', href: '#/shop' }, 'Get a streak freeze') : null),
       picker);
+    wrap.setAttribute('data-state', st.state);
     if (st.state === 'freeze-used') R.freezeNoteShown();
   };
   // The low-friction start: the learner's next lesson in short parts. The link is filled in once the lesson list has loaded.
@@ -117,6 +118,9 @@ export function routeShown(R, g = globalThis, gate = false) {
     const head = main.querySelector('.stack > header') || main.querySelector('header');
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
+    // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.
+    const st = R.status(), today = new Date().toDateString();
+    if (st.state === 'at-risk' && R.streakShown() && R.get().lastRiskDay !== today) { R.update((r) => { r.lastRiskDay = today; return r; }); g.setTimeout(() => showRimon('streak_at_risk'), 3000); }
   }
 }
 
@@ -188,7 +192,8 @@ export function showReward(R, out, g = globalThis) {
 }
 /** The 3-minute lesson's stopping point: a small reward card at the top of the lesson. The lesson's place is already saved. */
 export function showQuickDone(R, out, g = globalThis) {
-  const doc = g.document, page = doc.querySelector('.alef-chunked') || doc.getElementById('main');
+  // The card sits in <main> above the lesson, not inside it: the lesson player redraws its own article on every part.
+  const doc = g.document, page = doc.getElementById('main');
   if (!page || out.calm || page.querySelector('.ret-quick-done')) return;
   const total = h('strong', { class: 'ret-total' }, String(out.todayBefore));
   const card = h('section', { class: 'ret-reward ret-quick-done alef-retention', 'aria-labelledby': 'ret-quick-h' },
@@ -198,10 +203,9 @@ export function showQuickDone(R, out, g = globalThis) {
     h('p', { class: 'ret-today' }, total, ` of ${out.goal} XP today`),
     h('p', { role: 'status' }, `${out.streak.grew ? `${out.streak.count}-day streak! ` : ''}${out.goalCrossed ? 'Daily goal reached! ' : ''}${out.gems ? `+${gemsText(out.gems)}. ` : ''}Your place is saved.`),
     h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: () => card.remove() }, 'Keep going'), h('a', { class: 'btn secondary', href: '#/' }, 'Done for today')));
-  const title = page.querySelector('#view-title');
-  if (title?.parentNode) title.parentNode.insertBefore(card, title.nextSibling); else page.prepend(card);
+  page.prepend(card);
   countUp(total, out.todayBefore, out.todayAfter, 600, g);
-  try { card.scrollIntoView({ block: 'nearest' }); } catch { /* optional */ }
+  try { g.scrollTo?.(0, 0); card.querySelector('h2')?.focus({ preventScroll: true }); } catch { /* optional */ }
   g.setTimeout(() => showRimon(out.goalCrossed ? 'daily_goal' : out.streak.grew ? (out.streak.milestone ? 'streak_milestone' : 'streak_extended') : 'xp_payout'), 600);
 }
 export { reducedMotion, heartCount, repairOffer, CURRENCY };

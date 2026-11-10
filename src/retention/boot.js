@@ -54,7 +54,7 @@ export function retention(ctx, g = globalThis) {
     if (!detail.quick) lastFinish = { hash: here, at: t };
     const awardId = detail.quick ? `quick|${detail.lessonId}|${dayKey(t)}` : `lesson|${here}|${detail.ms ?? ''}|${dayKey(t)}`;
     const todayBefore = todayXp(rec, t);
-    const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t });
+    const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t, partial: !!detail.quick });
     if (pay.duplicate) return null;
     const after = completeLessonDay(before, t);
     muteStreakSub = true; try { store.set(STREAK_KEY, after); } finally { muteStreakSub = false; }

@@ -112,3 +112,9 @@ test('gems refill: 350 gems fills all five; not offered when full', () => {
   assert.equal(refillByGems(out.rec, NOW).reason, 'full');
   r.gems.balance = 10; assert.equal(refillByGems(r, NOW).reason, 'balance');
 });
+test('a 3-minute sitting pays XP but is not a finished lesson (no unlock, no first-lesson gems)', () => {
+  const a = lessonPayout(fresh(), { awardId: 'quick|r05|d', accuracy: 0, now: NOW, partial: true });
+  assert.deepEqual([a.xp, a.first, a.gems, a.rec.lessonsFinished], [10, false, 0, 0]);
+  const b = lessonPayout(a.rec, { awardId: 'lesson|r05', accuracy: 0, now: NOW });
+  assert.deepEqual([b.xp, b.first, b.gems, b.rec.lessonsFinished], [10, true, 60, 1], 'finishing the lesson later still pays, and reaches the daily goal');
+});

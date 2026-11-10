@@ -47,14 +47,15 @@ export function award(rec, { awardId, kind = 'lesson', amount, now = Date.now() 
 
 /**
  * Everything one finished lesson pays: base XP, accuracy bonus, combo bonus, gems, the lesson counter.
+ * partial: a 3-minute sitting inside a longer lesson. It pays the XP but does not count as a finished lesson (no unlocks, no first-lesson gems).
  * @returns {{rec:object, xp:number, parts:{base:number, accuracy:number, combo:number}, gems:number, goalCrossed:boolean, first:boolean, duplicate:boolean}}
  */
-export function lessonPayout(rec, { awardId, accuracy = 0, maxCombo = 0, now = Date.now() }) {
+export function lessonPayout(rec, { awardId, accuracy = 0, maxCombo = 0, now = Date.now(), partial = false }) {
   const parts = { base: XP.lesson, accuracy: accuracy >= XP.accuracyAt ? XP.accuracyBonus : 0, combo: comboBonus(maxCombo) };
   if (!awardId || rec.xp.recentIds.includes(awardId)) return { rec, xp: 0, parts, gems: 0, goalCrossed: false, first: false, duplicate: true };
-  const gemsBefore = rec.gems.balance, first = rec.lessonsFinished === 0;
+  const gemsBefore = rec.gems.balance, first = !partial && rec.lessonsFinished === 0;
   let { rec: r, paid, goalCrossed } = award(rec, { awardId, kind: 'lesson', amount: parts.base + parts.accuracy + parts.combo, now });
-  r = clone(r); r.lessonsFinished += 1;
+  r = clone(r); if (!partial) r.lessonsFinished += 1; // a 3-minute sitting pays XP but is not a finished lesson
   if (parts.accuracy) r = earn(r, EARN.accuracy, 'accuracy', now);
   if (first) r = earn(r, EARN.first, 'first', now);
   return { rec: r, xp: paid, parts, gems: r.gems.balance - gemsBefore, goalCrossed, first, duplicate: false };

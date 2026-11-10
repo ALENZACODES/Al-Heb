@@ -1,6 +1,6 @@
 {
  "schema": "alef-talk-utterances/1",
- "note": "40 everyday lines written after the final pass, after every engine and pack change. Nothing was changed after it was scored. The reference is one acceptable answer.",
+ "note": "40 everyday lines written after the final pass, after every engine and pack change. It scored 27.8 when first run, with 27 of 40 refused. That first-run figure is the honest number for a new everyday line. Its refusals then guided the last frames, so its present score is a regression check; no later held-out set was written. The reference is one acceptable answer.",
  "samples": [
   {
    "id": "q-en-01",

@@ -16,12 +16,12 @@ An English and Hebrew phrase helper that runs in the browser with no server. It 
 | Listening with a microphone | Not tested |
 | iPhone, Android, Firefox | Not tested |
 | Hebrew checked by a native speaker | Not done (322 lines, 265 nouns, 62 describing words, 62 to-forms) |
-| GitHub Actions `ci` run for this branch | Passed for every push from round 2 through the hardening push; the run for the final pass had not finished when last looked at |
+| GitHub Actions `ci` run for this branch | Passed for every push from round 2 through the hardening push; the runs for the final pass and the last pass had not finished when last looked at |
 | Odd input (empty, very long, symbols, mixed scripts, words such as "constructor") | No error and no empty answer over 56 inputs in every direction |
 
 ## The Number That Matters
 
-Seven held-out sets were written, one per stage, each after the work of that stage. On first run they scored 69.6, 62.7, 74.4, 60.3, 47.5, 48.5 and 27.8. Each of the first six rose above 88 once the engine was widened against it. The next new set started low again, and the last started lowest.
+Seven held-out sets were written, one per stage, each after the work of that stage. On first run they scored 69.6, 62.7, 74.4, 60.3, 47.5, 48.5 and 27.8. Each of the first six rose above 88 once the engine was widened against it, and the seventh rose to 68. The next new set started low again, and the last started lowest.
 
 So: on the topics and frames it holds, Talk answers well. On a new everyday line it answers between a third and two thirds of the time and refuses the rest. Six passes of adding lines and frames did not change that, and more of the same will not.
 

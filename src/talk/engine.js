@@ -353,6 +353,11 @@ export function createEngine(data) {
         const who = np(lead + c[1], true); const what = np('the ' + c[2], true);
         if (who && what && who.from === 'table' && what.from === 'table' && who.definite) { const he = `${what.he} של ${who.he}`; return { he, def: he, definite: true, from: 'table', kind: 'noun', g: what.g }; }
       }
+      // "a supermarket near the hotel"
+      if ((c = /^(.+) (?:near|next to|by) (.+)$/.exec(t))) {
+        const a = np(lead + c[1], true); const b = np(c[2], true);
+        if (a && b && b.from === 'table' && b.definite) { const tail = ` ליד ${b.he}`; return { ...a, he: a.he + tail, def: a.def + tail, kind: 'noun' }; }
+      }
       // "a gift for my mother"
       if ((c = /^(.+) for (.+)$/.exec(t))) {
         const a = np(lead + c[1], true); const b = np(c[2], true);
@@ -414,6 +419,10 @@ export function createEngine(data) {
       if (rest && rest.definite && rest.kind === 'noun') return { ...rest, en: `${w} ${rest.bare}`, bare: `${w} ${rest.bare}` };
     }
     if (parts.length >= 2 && parts[parts.length - 1] === 'שלי') { const rest = enOf(parts.slice(0, -1).join(' ')); if (rest && rest.definite && rest.kind === 'noun') return { ...rest, en: `my ${rest.bare}`, bare: `my ${rest.bare}` }; }
+    if (parts.length >= 3 && parts.includes('ליד')) {
+      const k = parts.indexOf('ליד'); const what = enOf(parts.slice(0, k).join(' ')); const where = enOf(parts.slice(k + 1).join(' '));
+      if (what && where && where.from === 'table' && (where.definite || where.kind !== 'noun')) { const tail = ` near ${where.en}`; return { ...what, en: what.en + tail, bare: what.bare + tail }; }
+    }
     if (parts.length >= 3 && parts.includes('של')) {
       const k = parts.indexOf('של'); const what = enOf(parts.slice(0, k).join(' ')); const who = enOf(parts.slice(k + 1).join(' '));
       if (what && who && what.definite && who.definite && what.from === 'table' && who.from === 'table') { const b = `${who.kind === 'noun' ? who.en : who.bare}'s ${what.bare}`; return { ...what, en: b, bare: b, kind: 'own' }; }
@@ -584,6 +593,22 @@ export function createEngine(data) {
       if (sj.who === 'you') out.toF = line('f', 'את');
       return out;
     };
+    if ((m = /^(.+) (does not|do not) (close|open)$/.exec(q))) {
+      const sj = listed(m[1]);
+      if (sj) return { he: `${sj.he} לא ${m[3] === 'close' ? byG(sj, 'נסגר', 'נסגרת', 'נסגרים', 'נסגרות') : byG(sj, 'נפתח', 'נפתחת', 'נפתחים', 'נפתחות')}`, from: 'table' };
+    }
+    if ((m = /^(.+) (?:is|are) waiting(?: (outside|inside|here))?$/.exec(q))) {
+      const sj = listed(m[1]);
+      if (sj) return { he: `${sj.he} ${byG(sj, 'מחכה', 'מחכה', 'מחכים', 'מחכות')}${m[2] === 'outside' ? ' בחוץ' : m[2] === 'inside' ? ' בפנים' : m[2] ? ' כאן' : ''}`, from: 'table' };
+    }
+    if ((m = /^(?:when|what time) does (.+) (leave|arrive|come)$/.exec(q))) {
+      const sj = listed(m[1]);
+      if (sj) return { he: `מתי ${sj.he} ${m[2] === 'leave' ? byG(sj, 'יוצא', 'יוצאת', 'יוצאים', 'יוצאות') : byG(sj, 'מגיע', 'מגיעה', 'מגיעים', 'מגיעות')}?`, from: 'table' };
+    }
+    if ((m = /^how far is (.+)$/.exec(q))) { const sj = listed(m[1]) || (np(m[1])?.kind === 'place' ? np(m[1]) : null); if (sj) return { he: `כמה רחוק ${sj.he}?`, from: 'table' }; }
+    if ((m = /^do you have (?:this|it) in (\w+)$/.exec(q))) { const col = adjEn.get(m[1]); if (col) return { he: `יש לכם את זה ב${col.m}?`, from: 'table' }; }
+    if ((m = /^are there (?:any )?(.+)$/.exec(q))) { const n = np(m[1]); if (n && !n.definite) return { he: `יש ${n.he}?`, from: lvl(n) }; }
+    if ((m = /^(?:can|could) you (.+)$/.exec(q))) { const v = vp(m[1]); if (v) return { he: `אפשר ${v.he}?`, from: v.from }; }
     if ((m = /^(?:can|could) you take me to (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `אפשר לקחת אותי ${withPrep(n, 'ל')}?`, from: lvl(n) }; }
     if ((m = /^i am waiting for (.+)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `אני מחכה ${withPrep(n, 'ל')}`, from: lvl(n) }; }
     if ((m = /^where does (.+) go$/.exec(q))) { const sj = listed(m[1]); if (sj) return { he: `לאן ${sj.he} ${byG(sj, 'נוסע', 'נוסעת', 'נוסעים', 'נוסעות')}?`, from: 'table' }; }
@@ -607,6 +632,7 @@ export function createEngine(data) {
     if ((m = /^(.+) (?:is|are) (on|next to|near|behind|in front of|under) (.+)$/.exec(q))) {
       const sj = listed(m[1]); const n = np(m[3]);
       if (sj && n && n.from === 'table') {
+        if (m[2] === 'on' && /(^|ה)קומה( |$)/.test(n.he)) return { he: `${sj.he} ${withPrep(n, 'ב')}`, from: 'table' }; // "on the third floor" is "in" in Hebrew
         const where = m[2] === 'under' ? 'מתחת ' + withPrep(n, 'ל') : `${{ on: 'על', 'next to': 'ליד', near: 'ליד', behind: 'מאחורי', 'in front of': 'מול' }[m[2]]} ${n.he}`;
         return { he: `${sj.he} ${where}`, from: 'table' };
       }
@@ -732,6 +758,18 @@ export function createEngine(data) {
     const the = (x) => enOf(x);
     const afterPrep = (x) => enOf('ה' + x) || enOf(x);
     if ((m = /^זה עלה (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && /shekel|dollar/.test(n.bare)) return { en: `It cost ${n.en}`, from: 'table' }; }
+    if ((m = /^(.+?) לא (נסגר|נסגרת|נסגרים|נסגרות|נפתח|נפתחת|נפתחים|נפתחות)$/.exec(q))) {
+      const sj = enOf(m[1]); const plural = /ים$|ות$/.test(m[2]);
+      if (sj && sj.definite && sj.from === 'table') return { en: `${cap(sj.en)} ${plural ? "don't" : "doesn't"} ${/^נס/.test(m[2]) ? 'close' : 'open'}`, from: 'table' };
+    }
+    if ((m = /^(.+?) (מחכה|מחכים|מחכות)( בחוץ| בפנים| כאן)?$/.exec(q)) && !/^(?:אני|אנחנו|אתה|את|הוא|היא)$/.test(m[1])) {
+      const sj = enOf(m[1]);
+      if (sj && sj.definite && sj.from === 'table') return { en: `${cap(sj.en)} ${m[2] === 'מחכה' ? 'is' : 'are'} waiting${m[3] === ' בחוץ' ? ' outside' : m[3] === ' בפנים' ? ' inside' : m[3] ? ' here' : ''}`, from: 'table' };
+    }
+    if ((m = /^מתי (.+) (יוצא|יוצאת|יוצאים|יוצאות|מגיע|מגיעה|מגיעים|מגיעות)$/.exec(q))) { const sj = enOf(m[1]); if (sj && sj.definite && sj.from === 'table') return { en: `When does ${sj.en} ${/^יוצ/.test(m[2]) ? 'leave' : 'arrive'}?`, from: 'table' }; }
+    if ((m = /^כמה רחוק (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && n.from === 'table') return { en: `How far is ${n.en}?`, from: 'table' }; }
+    if ((m = /^יש לכם את זה ב(.+)$/.exec(q))) { const col = adjHe.get(m[1]); if (col) return { en: `Do you have this in ${col.en[0]}?`, from: 'table' }; }
+    if ((m = /^יש (.+)$/.exec(q)) && !/^(?:לי|לך|לנו|לכם|כאן|בזה) /.test(m[1] + ' ')) { const n = enOf(m[1]); if (n && n.from === 'table' && !n.definite && / /.test(m[1])) return { en: /s$/.test(n.bare) && !MASS.has(n.bare) ? `Are there ${n.bare}?` : `Is there ${a(n)}?`, from: 'table' }; }
     if ((m = /^אפשר לקחת אותי ל(.+)$/.exec(q))) { const n = afterPrep(m[1]); if (n) return { en: `Can you take me to ${n.en}?`, from: n.from }; }
     if ((m = /^אני מחכה ל(.+)$/.exec(q))) { const n = afterPrep(m[1]); if (n) return { en: `I am waiting for ${n.en}`, from: n.from }; }
     if ((m = /^לאן (.+) (?:נוסע|נוסעת|נוסעים|נוסעות)$/.exec(q))) { const n = enOf(m[1]); if (n && n.definite) return { en: `Where does ${n.en} go?`, from: n.from }; }

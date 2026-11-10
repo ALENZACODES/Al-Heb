@@ -3,10 +3,10 @@
 Status: PLAN ONLY. Nothing in this document has been built or tested. It is written against `main` at commit `907caadc3`.
 Audience: the engineer who builds it. Every rule, number, key, file and string is fixed here. Where a product choice was open, a default is set in section 0.3 so the build never stops for a question.
 
-Revision: review round 2 of 5 (2026-11-10). Round 1 gaps: section 8 (G1–G38). Round 2 gaps: section 9 (G39–G66). Round 2 re-checked the file against `main` at `b574744f6` (no `src` change since `907caadc3`) and `overnight/launch-ready-2026-11-10` at `8102de323`, which adds a Rimon reminder system, Rimon stills and a streak flame. The older text has been corrected in place; where a section points to a G number, that entry has the detail.
+Revision: review round 3 of 5 (2026-11-10). Round 1 gaps: section 8 (G1–G38). Round 2 gaps: section 9 (G39–G66), checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at `8102de323`. Round 3: section 10 (G67–G92) reconciles this spec with the build on `claude/retention-fable-2026-11-10` (`ab7a979e6`, `c5280dc77`, `bd985a7dd`, `f0a6220e3`, built on `main` at `b574744f6`), decides each of its departures, and lists every point the build misses or contradicts as a fix list (10.4). Where an older section and section 10 disagree, section 10 wins; the older text has been corrected in place where the change was small.
 
 Scope: the three groups John listed.
-1. Streak and loss aversion: streak, streak freezes bought with seeds (ALEF's gems), 3-minute lessons.
+1. Streak and loss aversion: streak, streak freezes bought with gems, 3-minute lessons.
 2. Gamification and dopamine loops: XP with confetti, sound and payouts; 10-tier weekly leagues; hearts lost on mistakes and won back by practising old material.
 3. Notifications: personalised timing from local history; Rimon's tone escalating from encouraging to disappointed to a playful roast.
 
@@ -25,7 +25,7 @@ Scope: the three groups John listed.
 | Quiz answers | `src/curriculum/exercises.ui.js` line 92 on main, line 104 on overnight | `signalRimon(ok ? 'correct' : 'wrong')` | Hearts listen to this (section 2.3). |
 | Reminders | `src/shell/notify.js`, `notify.view.js`, route `#/reminders`; on overnight also `rimon-reminders.js` (58 Rimon lines, `composeReminder`, send log `notify.log`) and `reminder-ask.js` (one-time ask after the first win, `notify.asked`) | Opt-in, permission only from a click, in-page `setTimeout` chain, Rimon's line chosen at fire time, wide Shabbat/chag/solemn-day quiet, night quiet 22–07, at most 1 a day and 5 a week. Store key `notify.prefs`; `normalizePrefs` DROPS unknown keys. | This IS the reminder engine. Retention adds lines, tone and timing to it (G45–G51); it does not build a second one. Retention settings that `notify.prefs` would drop live in `retention.notify.v1`. |
 | Calendar | `src/curriculum/calendar.js`, `calendar.locations.js`, `reminders.ics.js` | Holidays, sunset, havdalah, `.ics` export | Quiet hours and the iPhone calendar fallback. |
-| Badges | `src/awards/*` (`streak-2` … `streak-365`) | Streak medallions from the streak engine | Untouched. Seeds are paid alongside them (section 1.4). |
+| Badges | `src/awards/*` (`streak-2` … `streak-365`) | Streak medallions from the streak engine | Untouched. Gems are paid alongside them (section 1.4). |
 | Preview loops | `preview/loops/*` (`loops.v1`, points, forgiving "rhythm", free repair) | Preview tier only | Untouched. XP here is a separate live system; merging the two is decision D7. |
 | Comfort settings | `src/shell/comfort.js`, `settings.js` | `calmMode` (no animation, sound, streak or timer pressure), `showStreak`, `shortSession`, `soundEffects` | Every mechanic here switches off or goes quiet under `calmMode`. |
 | Store | `src/store.js` | Synchronous `get/set/update/subscribe`, in-memory fallback, whole-app backup | All new state lives in two new keys through this store. |
@@ -40,7 +40,7 @@ Scope: the three groups John listed.
 6. Logo and app icon stay the gold Aleph. Rimon never appears as the icon, the notification icon or the badge (notification `icon` stays `assets/icons/icon-192.png`).
 7. Git: branch `retention/build` from `overnight/launch-ready-2026-11-10` (or from `main` once `main` contains that branch; G39), small additive commits, author John Khan, no AI attribution lines, never force-push, never merge to main, never deploy. Edits to existing files are additive (new export, new optional field, one-line hook) and are listed in section 6.2.
 8. `prefers-reduced-motion: reduce` or `calmMode`: no confetti motion, no number count-up, no Rimon animation (the bubble still speaks), no sound.
-9. No money. Seeds, freezes and hearts can never be bought with real money, and no ads (decision D4).
+9. No money. Gems, freezes and hearts can never be bought with real money, and no ads (decision D4).
 
 ### 0.3 Defaults for open product choices (the build uses these; John can flip any later)
 
@@ -51,8 +51,10 @@ Scope: the three groups John listed.
 | D3 | Leagues without a server | Simulated cohort, clearly labelled as pretend players (section 2.2). |
 | D4 | Real-money purchases | None, ever. |
 | D5 | Roast tier | Off unless the learner picks "Playful Rimon" when opting in. Default tone is "Kind Rimon". |
-| D6 | Paid streak repair (Duolingo-style) | Not built. A broken streak stays broken; `best` is kept. |
+| D6 | Paid streak repair (Duolingo-style) | Built and adopted in round 3 (G69): within 48 h of a break, a streak of 2+ days can be repaired for 150 gems per missed day, at most 3 days. |
 | D7 | XP vs preview `loops.v1` points | Separate. `loops.v1` is not read or written. |
+| D9 | Friday as a free streak day | Round 3 default: NO (G70). Saturday and Yom Tov are always free; Friday and the eve of Yom Tov are not. One constant (`STREAK.shabbatCoversFriday`) flips it if John says yes. |
+| D10 | `#/league` and `#/shop` visible to all learners | Round 3 default: stay preview tier until John approves (G76). |
 | D8 | Friday streak-saver nudge | Use the existing `erev-shabbat` line (Friday before 12:00 only). No other Friday nudge (round 2). |
 
 Note for John: the repo's own competitor review (`docs/strategy/DUOLINGO-100.md`, source S9) records that Duolingo replaced Hearts with an Energy battery in July 2025. This spec builds Hearts as asked; the module is small enough to swap for an energy model later.
@@ -83,7 +85,7 @@ The 7-day strip (existing `weekStrip`, shown on Progress; Home has no strip) gai
 
 ### 1.2 Streak freezes
 
-- Price: 200 seeds. Maximum held: 2. Bought on `#/seeds` (section 2.4) or from the streak card's "Get a freeze" link (shown only when `held < 2` and balance ≥ 200).
+- Price: 200 gems. Maximum held: 2. Bought on `#/shop` (section 2.4) or from the streak card's "Get a freeze" link (shown only when `held < 2` and balance ≥ 200).
 - A freeze is used automatically, never by a tap. Nothing to equip.
 - Applied during the retention rollover (1.3) for each MISSED day: a past day after `streak.last`, not today, not already frozen by the streak engine, not covered by travel grace.
 - All-or-nothing: if missed days ≤ `held`, every missed day is covered and `held` drops by that number. If missed days > `held`, NO freeze is spent (no wasting freezes on a streak that breaks anyway) and the streak shows as broken.
@@ -107,7 +109,7 @@ if missed.length <= ret.freezes.held:
     ret.freezes.held -= missed.length
     ret.freezes.used += missed (keep last 60)
     ret.freezes.unseen = true                               // drives the freeze-used line state once
-    seeds ledger: no change
+    gems ledger: no change
 else: nothing spent
 ret.freezes.evaluatedThrough = to
 write both keys with store.update (streak first, then retention)
@@ -115,14 +117,17 @@ write both keys with store.update (streak first, then retention)
 
 `withDeclaredRest` is a no-op on pre-v2 streak records. If `streakRaw.v !== 2`, call the existing engine's `rollover(streakRaw, now)` and store the result first so it becomes v2. This is existing API, not a change to it.
 
-### 1.4 Seeds paid by the streak
+### 1.4 Gems paid by the streak
 
-Each milestone is paid once per install, ever. Paid milestones are recorded in `ret.seeds.paidMilestones` (e.g. `[7, 30]`). A rebuilt streak that reaches 7 again pays nothing. Checked after every `completeDay` against `projectStreak(...).count`:
+Each milestone is paid once per install, ever (round 3 adopts the built list, G68). Paid milestones are recorded in `ret.gems.paidMilestones`. A rebuilt streak that reaches a milestone again pays nothing. Checked after every `completeDay` against `projectStreak(...).count`:
 
-| Streak reaches | Seeds |
+| Streak reaches | Gems |
 |---|---|
+| 3 | 5 |
 | 7 | 25 |
+| 14 | 30 |
 | 30 | 50 |
+| 50 | 75 |
 | 100 | 100 |
 | 365 | 200 |
 
@@ -155,17 +160,18 @@ XP only goes up. It is never spent and never removed.
 | Accuracy ≥ 0.9 on that lesson | +5 | none | same event, `accuracy` |
 | Rate a review card | 1 | 20 per day | new `alef:card-rated {cardId, rating}` from `review.view.js` (G3) |
 | Finish a heart-refill practice round | 5 | none | 2.3 |
+| Combo inside one lesson (G72) | +2 per 5 right in a row | +6 per lesson | `alef:rimon` correct/wrong with `source:'lesson'` |
 | Finish a game round with ≥ 1 star | 3 | 15 per day | existing `games/engine.js` / `arcade.js` end (`stars`) via new `alef:game-finished` event |
-| Reach the daily XP goal | 0 XP, +10 seeds | once per day | computed |
+| Reach the daily XP goal | 0 XP, +10 gems | once per day | computed |
 
 Daily goal: no new goal control. Home already has a daily goal in minutes (`DAILY_GOAL_KEY` / `normalizeDailyGoal` in `src/home/today.js`: 5, 10, 15, 20 or 30, default 5). The XP goal is that number × 4 (5 → 20 XP, 10 → 40, 15 → 60, 20 → 80, 30 → 120), read fresh every time it is needed. A goal ring shows "{x} of {goal} XP today" (text always beside the drawing).
 
 Payout moment on the lesson end card, in this order (total ≤ 2.2 s, all skipped instantly on any tap):
 1. t=0: existing Rimon `highfive`/`bounce`, confetti and sting already fire.
 2. t=300 ms: an XP chip "+15 XP" under the cheer line. Motion: scale 0.6 → 1.0 over 250 ms, then the "today" total counts up from old to new over 600 ms (`requestAnimationFrame`). Reduced motion or calm: chip appears at full size with the final number, no count-up.
-3. If the daily goal was crossed: line "Daily goal reached! +10 seeds", Rimon `laugh` (queued after the cheer by the animator's priority queue).
+3. If the daily goal was crossed: line "Daily goal reached! +10 gems", Rimon `laugh` (queued after the cheer by the animator's priority queue).
 4. If the streak grew: line "{n}-day streak!". No Rimon cue: the existing flame card lights with its own sound and Rimon stretch (G43).
-5. Live region: one `role="status"` sentence that combines all of it, e.g. "Lesson finished. 15 XP. Daily goal reached, 10 seeds. 4-day streak." Announced once.
+5. Live region: one `role="status"` sentence that combines all of it, e.g. "Lesson finished. 15 XP. Daily goal reached, 10 gems. 4-day streak." Announced once.
 
 Sound: the existing `alef:celebrate` sting only, and only when `soundEffects` is on and calm mode is off. No new sound files in v1.
 
@@ -207,12 +213,12 @@ Sensitivity note for the rabbi review: "Pardes" and "Keter" carry religious mean
 - PRNG: mulberry32, seed = FNV-1a 32-bit hash of `installId + '|' + weekId + '|' + tier`.
 - 29 players. Names: drawn without replacement from `league.names.js`: 120 gender-neutral first names plus an initial ("Noam K.", "Ariel S.", "Tal B.", "Shai R.", "Yuval M.", "Eden L.", "Lior G.", "Sasha P.", "Robin T.", "Jordan F.", "Avery H.", "Rowan D."…). No real public figures; no religious titles. The engineer writes the full list of 120; list rules: Latin letters, 3–8 letters, used as both men's and women's names in English or Israeli use.
 - Baseline `B` = median weekly XP of the learner's last 4 joined weeks (from `league.history`); 120 if fewer than 2 weeks.
-- Player weekly target `T_i = B × m_i`, with `m_i` from a fixed table sorted to spread the field: for tier t, `m_i = 0.35 + 1.6 × (i/28)^1.3 × (1 + 0.04 × (t − 1))`, i = 0..28, then multiplied by jitter `0.9 + 0.2 × rand()`. The result: a learner who does their usual week lands mid-table; about 25% above their usual promotes.
+- Player weekly target `T_i = B × m_i × jitter`, jitter `0.9 + 0.2 × rand()`, with `m_i = paceOf(i, t)` (round 3 adopts the built curve, G71, because the earlier formula could not meet both targets): x = i/28; if x ≤ 0.5, `m = 0.35 + 0.65 × (x/0.5)`; else `m = 1 + 0.9 × ((x − 0.5)/0.5)^3 × (1 + 0.04 × (t − 1))`. The result: a learner who does their usual week lands mid-table; about 25% above their usual promotes.
 - Progress through the week: `xp_i(now) = round(T_i × curve(f))`, f = elapsed fraction of the league week. `curve(f) = f` with a per-player phase: player i adds its XP in 6 daily steps (Sun–Fri) with step sizes from `rand()` normalised to sum 1. Pretend players earn nothing during Friday 18:00 to Saturday 21:00 (not inside the week anyway).
 - Ranking: by XP descending. On a tie the learner ranks above the pretend player.
 
 #### Settlement
-At the first app open after the week ends: compute final ranks with f = 1, apply the promote/demote table, push `{week, tier, rank, xp, result:'up'|'stay'|'down'}` to `league.history` (keep 26), set the new tier, set `league.resultUnseen = weekId`. Seeds: exactly one payout per settled week, the first that applies: tier 10 and rank ≤ 3 → 100; rank 1 → 100; promoted → 50; otherwise 0. (Section 8 G14–G16 add the curve, draw order and multi-week rules.)
+At the first app open after the week ends: compute final ranks with f = 1, apply the promote/demote table, push `{week, tier, rank, xp, result:'up'|'stay'|'down'}` to `league.history` (keep 26), set the new tier, set `league.resultUnseen = weekId`. Gems: exactly one payout per settled week, the first that applies: tier 10 and rank ≤ 3 → 100; rank 1 → 100; promoted → 50; otherwise 0. (Section 8 G14–G16 add the curve, draw order and multi-week rules.)
 
 #### Screens
 `#/league` (route title "League"):
@@ -235,9 +241,9 @@ Only if John chooses real leagues later. Cloudflare Worker + D1 (or similar): an
 - At 0, starting a NEW lesson is gated. The end card's "Next lesson" button is replaced by:
   - Primary: "Practise to earn a heart" → `#/learn?review=1&refill=1`
   - Secondary: "Next heart in {h} h {m} min" (disabled text, updates each minute)
-  - Tertiary (only if balance ≥ 350): "Refill all hearts for 350 seeds"
+  - Tertiary (only if balance ≥ 350): "Refill all hearts for 350 gems"
   - Line: "Review is always open. Practising old words is how memory sticks."
-- Win back by practising: a refill round is 5 due review cards (from `src/curriculum/srs.js` `due()`; if fewer than 5 are due, the oldest-reviewed cards fill the round). Finishing the round with ≥ 4 right gives +1 heart and +5 XP; with fewer than 4 right it still gives +1 heart (the reward is for practising, not for being perfect). One round = one heart.
+- Win back by practising (round 3, G74): every 5 review ratings anywhere in review (`#/learn?review=1`, and `#/learn?review=1&refill=1` which is the same queue) give +1 heart; if 4 or more of those 5 were rated Good or Easy, also +5 XP. Leaving part-way keeps the count toward the next 5.
 - Time refill: +1 heart per 4 hours since `hearts.lastRefillAt`, computed lazily on read, capped at 5.
 - Reading, prayer, Torah, songs, games: never cost hearts, never gated.
 - Header chip (lesson pages only, when hearts are on): "♥ 4" with `aria-label="4 of 5 hearts"`.
@@ -248,15 +254,15 @@ Only if John chooses real leagues later. Cloudflare Worker + D1 (or similar): an
 | Down to 1 heart | "One heart left. Take your time." | `thinking` |
 | 0 hearts (end card) | "Out of hearts for now. Practise a few old words to earn one back." | `sad` then `point` |
 | Heart won back | "+1 heart! Memory, meet muscle." | `bounce` |
-| Refill with seeds | "Hearts full. Off you go!" | `highfive` |
+| Refill with gems | "Hearts full. Off you go!" | `highfive` |
 
-### 2.4 Seeds (ALEF's gems)
+### 2.4 Gems
 
-Name: "seeds" (a pomegranate is full of them). Hebrew label: גַּרְעִינִים [NATIVE REVIEW]. Icon: a small red seed glyph drawn in CSS (no new image required).
+Name: "Gems" (round 3, G67: John's brief says "Streak Freezes bought with virtual gems"; the built constant is `CURRENCY` in `src/retention/gems.js`). No Hebrew label in v1. Icon: a small gem glyph drawn in CSS (no new image required).
 
 Earned only, never bought:
 
-| Source | Seeds |
+| Source | Gems |
 |---|---|
 | Daily XP goal reached | 10 |
 | Lesson with accuracy ≥ 0.9 | 2 |
@@ -264,18 +270,20 @@ Earned only, never bought:
 | League promotion / rank 1 / top 3 in tier 10 | 50 / 100 / 100 |
 | First lesson ever | 50 (so a freeze is reachable in the first week) |
 
-Spent on (`#/seeds`, route title "Seeds"):
+Spent on (`#/shop`, route title "Shop"):
 
 | Item | Price | Limit |
 |---|---|---|
 | Streak freeze | 200 | hold 2 |
 | Refill all hearts | 350 | only when hearts < 5 and hearts are on |
 
-`#/seeds` shows balance, the two items with plain-language effects ("Covers one missed day automatically"), and the last 10 ledger lines ("+10 Daily goal, Tuesday"). Buying asks once: "Spend 200 seeds on a streak freeze?" with "Yes, buy it" / "Cancel". On buy: Rimon `wink`, line "Freeze ready. Rimon's keeping it cold."
+`#/shop` shows balance, the two items with plain-language effects ("Covers one missed day automatically"), and the last 10 ledger lines ("+10 Daily goal, Tuesday"). Buying asks once: "Spend 200 gems on a streak freeze?" with "Yes, buy it" / "Cancel". On buy: Rimon `wink`, line "Freeze ready. Rimon's keeping it cold."
 
 ---
 
 ## 3. Notifications and Rimon's tone
+
+Round 3 note (G80): the sender is retention's scheduler (`src/retention/notify.js`). Wherever 3.1–3.5 say "the existing engine", "`composeReminder`" or "`armFromPrefs`", read: retention's scheduler, gated also by the overnight `isRestTime` and night quiet, with the overnight `reminder-ask.js` card as the only ask. Retention's own 08:00–21:00 window applies too (G79).
 
 ### 3.1 Opt-in (only after the first win)
 
@@ -435,7 +443,7 @@ When each applies: `freeze-used` when the plan day is the first after a day a he
 
 ## 4. Rimon: `cueRimon(moment)` and the event contract
 
-New file `src/retention/rimon-cue.js`. It does not define or export `showRimon` or `SITUATIONS` (both already exist in `src/shell/rimon-show.js` with a different meaning: stills).
+File `src/retention/rimon.js` (built; round 3 F8 renames its export to `cueRimon`). It does not define or export `showRimon` or `SITUATIONS` (both already exist in `src/shell/rimon-show.js` with a different meaning: stills).
 
 ```js
 export const MOMENTS = Object.freeze({
@@ -452,6 +460,7 @@ export const MOMENTS = Object.freeze({
   league_stay:       { action: 'wave' },
   league_down:       { action: 'thinking' },
   notify_optin:      { action: 'point' },
+  streak_repaired:   { action: 'highfive' },
 });
 export function cueRimon(moment, data = {}, doc = globalThis.document) { … }
 ```
@@ -476,11 +485,12 @@ Moment-to-caller table:
 | `daily_goal` | `hooks.js` after an XP award crosses the goal |
 | `streak_at_risk` | Home streak line when it renders the `at-risk` state (once per local day) |
 | `freeze_used` | Home streak line when it renders the `freeze-used` state |
-| `freeze_bought` | `seeds.view.js` |
+| `freeze_bought` | `shop.view.js` |
 | `heart_lost`, `heart_last` | `hooks.js` on a counted wrong answer |
 | `hearts_empty` | `hearts.view.js` |
-| `heart_back` | `hearts.js` after a refill round |
-| `hearts_refilled` | `seeds.view.js` |
+| `heart_back` | `boot.js` `reviewRated` when the 5th rating returns a heart |
+| `streak_repaired` | `shop.view.js` after a repair |
+| `hearts_refilled` | `shop.view.js` |
 | `league_up/stay/down` | `league.view.js` results card |
 | `notify_optin` | the `reminder-ask.js` card (3.1) |
 
@@ -499,7 +509,7 @@ No two cues within 400 ms (`rimon-cue.js` queues them).
   "createdAt": "YYYY-MM-DD",
   "lessonsFinished": 0,                      // drives D2, opt-in timing, league unlock; first created = number of keys in curriculum.progress.completed (G11)
   "xp": { "total": 0, "days": { "YYYY-MM-DD": 0 }, "reviewDays": { "YYYY-MM-DD": 0 }, "gameDays": { "YYYY-MM-DD": 0 }, "recentIds": [] },  // *Days keep 120 (cap counters); recentIds keep 300
-  "seeds": { "balance": 0, "ledger": [ { "at": 0, "d": 0, "why": "goal" } ], "paidMilestones": [], "goalPaidOn": null },  // ledger keep 100; goalPaidOn = ISO day the goal seeds were last paid
+  "gems": { "balance": 0, "ledger": [ { "at": 0, "d": 0, "why": "goal" } ], "paidMilestones": [], "goalPaidOn": null },  // ledger keep 100; goalPaidOn = ISO day the goal gems were last paid
   "freezes": { "held": 0, "used": [], "evaluatedThrough": null, "unseen": false },                   // used keep 60
   "travelCovered": [],                                                                                 // keep 30
   "hearts": { "n": 5, "lastRefillAt": 0, "quizId": null, "lostIn": [] },        // on/off lives in settings only; lostIn = qIndex list for quizId (G5)
@@ -558,9 +568,9 @@ No `dailyGoalXp` key: the XP goal is derived from the existing minutes goal (2.1
 | 2 | (removed in round 2) | quiet hours are the existing `composeReminder` gate (3.2) | none |
 | 3 | `src/retention/state.js` | keys, defaults, `normalizeRetention`, `normalizeNotify`, `load(store)`, `save(store, fn)` | `tests/retention.state.test.js` |
 | 4 | `src/retention/xp.js` | `award(rec, {awardId, kind, amount, now})`, caps, `todayXp`, `goalCrossed` | `tests/retention.xp.test.js` |
-| 5 | `src/retention/seeds.js` | `earn`, `spend` (returns `{ok, reason}`), prices, milestone payouts | `tests/retention.seeds.test.js` |
+| 5 | `src/retention/gems.js` | `earn`, `spend` (returns `{ok, reason}`), prices, milestone payouts | `tests/retention.gems.test.js` |
 | 6 | `src/retention/freeze.js` | `buyFreeze`, `applyMissedDays(streakRaw, ret, now)` (1.3), `travelGrace` (1.5) | `tests/retention.freeze.test.js` |
-| 7 | `src/retention/hearts.js` | `heartsOn(ret, settings, route)`, `loseHeart`, `refillByTime`, `refillByPractice`, `refillBySeeds`, `canStartLesson` | `tests/retention.hearts.test.js` |
+| 7 | `src/retention/hearts.js` | `heartsOn(ret, settings, route)`, `loseHeart`, `refillByTime`, `refillByPractice`, `refillByGems`, `canStartLesson` | `tests/retention.hearts.test.js` |
 | 8 | `src/retention/league.names.js` | 120 names | (covered by 9) |
 | 9 | `src/retention/league.sim.js` | `mulberry32`, `fnv1a`, `cohort(installId, weekId, tier, baseline)`, `standings(cohort, learnerXp, now)`, `settle(ret, now)` | `tests/retention.league.test.js` |
 | 10 | `src/retention/tone.js` | `kindFor3_3({daysAway, tone, nextRoast, stopped, special})` returns a kind or null (3.3); the 70 lines themselves are added to `rimon-reminders.js` (6.2) | `tests/retention.tone.test.js` |
@@ -569,13 +579,13 @@ No `dailyGoalXp` key: the XP goal is derived from the existing minutes goal (2.1
 | 13 | `src/retention/plan.js` | 14-day Cache Storage plan writer using `composeReminder`, periodic sync registration (3.5); no in-page timer (the existing `notify.js` is that) | `tests/retention.plan.test.js` |
 | 14 | `src/retention/hooks.js` | listeners: `alef:celebrate`, `alef:rimon` (source lesson/review), `alef:game-finished`, `hashchange`/`visibilitychange` sessions; calls 4–13 | `tests/retention.hooks.test.js` |
 | 15 | `src/retention/boot.js` | `armRetention(ctx)`: rollover, settle league, once-per-day greeting, arm scheduler | (covered by e2e) |
-| 16 | `src/retention/retention.css` | chip, ring, league table, seed glyph; `@media (prefers-reduced-motion: reduce)` and `[data-calm]` turn off every animation | a11y browser test |
+| 16 | `src/retention/retention.css` | chip, ring, league table, gem glyph; `@media (prefers-reduced-motion: reduce)` and `[data-calm]` turn off every animation | a11y browser test |
 | 17 | `src/retention/xp-payout.js` | end-card payout node (2.1) | `tests/retention.payout.test.js` |
-| 18 | `src/retention/streak-line.js` | one status line with the 1.1 states, rendered under the existing Home flame (`.alef-streak-flame`, `data-streak-slot="home"`) plus the seeds/league row (G53) | `tests/retention.streakline.test.js` |
+| 18 | `src/retention/streak-line.js` | one status line with the 1.1 states, rendered under the existing Home flame (`.alef-streak-flame`, `data-streak-slot="home"`) plus the gems/league row (G53) | `tests/retention.streakline.test.js` |
 | 19 | `src/retention/hearts.view.js` | chip + 0-heart end-card block | `tests/retention.heartsview.test.js` |
 | 20 | (none) | the opt-in is the existing `reminder-ask.js`, extended in 6.2 | `tests/retention.optin.test.js` |
 | 21 | `src/retention/league.view.js` | `#/league` | `tests/retention.leagueview.test.js` |
-| 22 | `src/retention/seeds.view.js` | `#/seeds` | `tests/retention.seedsview.test.js` |
+| 22 | `src/retention/shop.view.js` | `#/shop` | `tests/retention.shopview.test.js` |
 | 23 | `docs/retention/README.md` | what is built, what is pretend, what each key holds | none |
 
 ### 6.2 Additive edits to existing files (one commit each, after 6.1)
@@ -600,8 +610,8 @@ No `dailyGoalXp` key: the XP goal is derived from the existing minutes goal (2.1
 | `src/shell/rimon.js` | `detail.line` support (section 4) |
 | `src/shell/rimon-speech.js` | `export const LINES` (3.6 table) and `sayLine` |
 | `src/shell/settings.js` | three keys (5.4) |
-| `src/shell/router.js` | `{ name:'league', pattern:'/league', module:'../retention/league.view.js', title:'League', owner:'retention', optional:true, group:'learn', quick:'nav.league' }` and the same for `seeds` (`title:'Seeds'`) |
-| `src/shell/nav.strings.js` | `nav.league: 'League'`, `nav.seeds: 'Seeds'` |
+| `src/shell/router.js` | `{ name:'league', pattern:'/league', module:'../retention/league.view.js', title:'League', owner:'retention', optional:true, group:'learn', quick:'nav.league' }` and the same for `gems` (`title:'Gems'`) |
+| `src/shell/nav.strings.js` | `nav.league: 'League'`, `nav.route.shop: 'Shop'` |
 | `src/shell/boot-hooks.js` | `export const armRetention = (ctx) => import('../retention/boot.js').then((m) => m.armRetention(ctx)).catch(() => {});` |
 | `src/app.js` `boot()` | one line next to the existing hooks: `import('./shell/boot-hooks.js').then((m) => m.armRetention(ctxBase)).catch(() => {});` |
 | `src/shell/home.view.js` (overnight) | after the existing `.alef-streak-flame` is appended, mount `streak-line.js` under it; if the import fails, Home is unchanged (G53) |
@@ -629,14 +639,14 @@ Unit tests run under `npm test` (node:test, no DOM); every pure module takes `no
 11. Zone change Toronto → Tel Aviv, 20 h real elapsed, one calendar day skipped → travel grace covers it, no freeze spent.
 12. Zone change with 40 h elapsed → no travel grace.
 13. Pre-v2 streak record is rolled over to v2 before freezes apply.
-14. `held` never exceeds 2; buying with 199 seeds fails with `reason:'balance'`.
+14. `held` never exceeds 2; buying with 199 gems fails with `reason:'balance'`.
 
-**XP and seeds**
-15. Lesson accuracy 0.95 → +15 XP, +2 seeds. Same `awardId` twice → paid once.
+**XP and gems**
+15. Lesson accuracy 0.95 → +15 XP, +2 gems. Same `awardId` twice → paid once.
 16. 25 `alef:card-rated` events in one day → 20 XP.
-17. Crossing the goal pays 10 seeds once per day (`goalPaidOn`), even if the minutes goal is lowered and the goal is crossed again.
+17. Crossing the goal pays 10 gems once per day (`goalPaidOn`), even if the minutes goal is lowered and the goal is crossed again.
 18. Streak reaching 7 pays 25 once; a later streak reaching 7 again pays nothing (`paidMilestones` is per install).
-19. First lesson ever pays 50 seeds.
+19. First lesson ever pays 50 gems.
 20. Ledger and `recentIds` trimmed to caps.
 
 **Hearts**
@@ -645,7 +655,7 @@ Unit tests run under `npm test` (node:test, no DOM); every pure module takes `no
 23. 0 hearts → `canStartLesson` false; the current lesson still finishes and pays XP.
 24. Time refill: lastRefillAt 9 h ago at 2 hearts → 4 hearts.
 25. Refill round, ratings [1,2,3,3,4] (3 counted right) → +1 heart, no XP bonus; ratings [3,3,4,3,2] (4 right) → +1 heart, +5 XP; a round left before 5 ratings → nothing.
-26. Seeds refill at 350 → 5 hearts, balance −350; at 5 hearts the option is absent.
+26. Gems refill at 350 → 5 hearts, balance −350; at 5 hearts the option is absent.
 
 **Leagues**
 27. Same `installId`/week/tier → identical cohort (names, targets) on every call.
@@ -689,22 +699,22 @@ Unit tests run under `npm test` (node:test, no DOM); every pure module takes `no
 57. Backup round-trip keeps both keys byte-identical (extend the existing backup test).
 
 **Browser (Playwright, `tests/retention.*.browser.test.js`, skipped without Playwright like the existing browser tests)**
-58. Fresh install: no opt-in card on first open; finish quick lesson → payout "+10 XP", "+50 seeds" ledger line, opt-in card visible, Rimon host `data-action` becomes `highfive` or `bounce`.
+58. Fresh install: no opt-in card on first open; finish quick lesson → payout "+10 XP", "+50 gems" ledger line, opt-in card visible, Rimon host `data-action` becomes `highfive` or `bounce`.
 59. Ask card with Playful picked, "Yes, nudge me" with a stubbed `Notification` (granted) → `notify.prefs.enabled` true and `retention.notify.v1.tone = 'playful'`; "No" → `notify.asked` set, card never shown again.
 60. Reduced motion (`page.emulateMedia({reducedMotion:'reduce'})`): no element under `.alef-retention` has a running animation (`getAnimations().length === 0`), the XP number is final at first paint.
 61. Calm mode: no hearts chip, no league route content, no streak count, no opt-in card.
 62. Hearts: seed state with 1 heart and 3 lessons done, answer wrong → chip shows "♥ 0", end card shows "Practise to earn a heart", no "Next lesson" link.
 63. `#/league`: honesty line visible and above the table; 30 rows; learner row labelled "You"; zero axe violations.
-64. `#/seeds`: buy freeze with 250 seeds → balance 50, held 1, confirmation dialog first.
+64. `#/shop`: buy freeze with 250 gems → balance 50, held 1, confirmation dialog first.
 65. Seeded broken-gap state with 1 freeze → Home shows the freeze-used line, and the Progress 7-day strip shows a snowflake on the covered day.
-66. Widths 320/360/390 px: nothing clipped sideways on Home, `#/league`, `#/seeds`, the end card.
+66. Widths 320/360/390 px: nothing clipped sideways on Home, `#/league`, `#/shop`, the end card.
 67. Clock fixed to Friday 19:00 (`page.clock`): scheduler shows no notification even when due.
 68. Service worker test: plan in Cache Storage, dispatch a synthetic `periodicsync` → exactly one notification when due, none inside a quiet range.
 
 ### 6.4 Hebrew review list
 
 Every new Hebrew string, for the native reviewer (none are to be treated as final):
-`גַּרְעִין`, `נֶבֶט`, `שֹׁרֶשׁ`, `עָנָף`, `עָלֶה`, `פֶּרַח`, `פְּרִי`, `פַּרְדֵּס`, `כֶּתֶר`, `רִמּוֹן זָהָב`, `גַּרְעִינִים`, `עוֹד לֵב!`, `עוֹלִים שָׁלָב!` (13 strings; the greeting strings were dropped in round 2, G57). Add all to `docs/hebrew-lint/` with status `needs-native-review`.
+`גַּרְעִין`, `נֶבֶט`, `שֹׁרֶשׁ`, `עָנָף`, `עָלֶה`, `פֶּרַח`, `פְּרִי`, `פַּרְדֵּס`, `כֶּתֶר`, `רִמּוֹן זָהָב`, `עוֹד לֵב!`, `עוֹלִים שָׁלָב!` (12 strings; the gems label was dropped in round 3, G67; the greeting strings were dropped in round 2, G57). Add all to `docs/hebrew-lint/` with status `needs-native-review`.
 
 ### 6.5 Definition of done
 
@@ -735,7 +745,7 @@ Each entry gives the gap (what an engineer would have had to ask) and the rule t
 
 **G3. Review XP had no event to listen to.** Checked: review (`#/learn?review=1`) uses `review.view.js` rating buttons 1–4 and `rateCard`, not `mountQuiz`, so no `correct`/`wrong` event fires there. Rule: `review.view.js` dispatches `alef:card-rated {cardId, rating}` after each successful `rateCard`. Undo (`restoreRating`) does not take XP back (XP never goes down). awardId = `rate:{cardId}:{ms}`.
 
-**G4. The heart-refill round was undefined in code terms.** Rule: `#/learn?review=1&refill=1` builds the queue with `limit: 5`. If fewer than 5 cards are due, it uses whatever `buildQueue` returns; with 0 due it shows "Nothing is due. Here are 5 older cards." and fills from cards sorted by oldest `last` review. "Right" = rating ≥ 3 (Good or Easy). When the 5th rating is saved, the view dispatches `alef:review-finished {refill:true, ratings}`; `hearts.js` adds 1 heart and, if ≥ 4 right, 5 XP (awardId `refill:{ms}`). Leaving early gives nothing. The refill route is reachable at any heart count; above 5 hearts it pays only the per-card XP.
+**G4. The heart-refill round was undefined in code terms.** (Replaced in round 3 by G74; kept for history.) Rule was: `#/learn?review=1&refill=1` builds the queue with `limit: 5`. If fewer than 5 cards are due, it uses whatever `buildQueue` returns; with 0 due it shows "Nothing is due. Here are 5 older cards." and fills from cards sorted by oldest `last` review. "Right" = rating ≥ 3 (Good or Easy). When the 5th rating is saved, the view dispatches `alef:review-finished {refill:true, ratings}`; `hearts.js` adds 1 heart and, if ≥ 4 right, 5 XP (awardId `refill:{ms}`). Leaving early gives nothing. The refill route is reachable at any heart count; above 5 hearts it pays only the per-card XP.
 
 **G5. "Same question" had no identity.** Rule: `mountQuiz` dispatches `alef:quiz-start {quizId}` at mount and adds `quizId` and `qIndex` (index in the original question list) to each answer event. `hearts.js` keeps `{quizId, lostIn:[qIndex…]}`; a new `quiz-start` replaces it. A wrong answer costs a heart only if `qIndex` is not in `lostIn` and this is that question's first answer in the quiz (the end-of-quiz repeat of a missed question never costs). "First heart lost in a session" = first loss for this `quizId`.
 
@@ -749,11 +759,11 @@ Each entry gives the gap (what an engineer would have had to ask) and the rule t
 
 **G10. Duplicate on/off state.** `hearts.enabled` and `league.enabled` existed in both settings and the record. Rule: settings only (5.4).
 
-**G11. Existing learners.** (a) When `retention.v1` is first created, `lessonsFinished` = number of keys in `curriculum.progress.completed` (checked: `PROGRESS_KEY` in `src/curriculum/dom.js`), so learners who already finished 3 lessons get hearts at once and 5 get leagues at once. They are NOT paid the 50 "first lesson" seeds unless `lessonsFinished` was 0. (b) Replaced in round 2 by G45: on overnight the study reminder already speaks in Rimon's voice, so there is one reminder system and nothing to switch between.
+**G11. Existing learners.** (a) When `retention.v1` is first created, `lessonsFinished` = number of keys in `curriculum.progress.completed` (checked: `PROGRESS_KEY` in `src/curriculum/dom.js`), so learners who already finished 3 lessons get hearts at once and 5 get leagues at once. They are NOT paid the 50 "first lesson" gems unless `lessonsFinished` was 0. (b) Replaced in round 2 by G45: on overnight the study reminder already speaks in Rimon's voice, so there is one reminder system and nothing to switch between.
 
 ### 8.2 Rules that were ambiguous
 
-**G12. Goal seeds once per day** had no field. Rule: `seeds.goalPaidOn` (ISO day). Pay only when `goalPaidOn !== today`.
+**G12. Goal gems once per day** had no field. Rule: `gems.goalPaidOn` (ISO day). Pay only when `goalPaidOn !== today`.
 
 **G13. Milestone repayment** contradicted itself. Rule: once per install (1.4 rewritten).
 
@@ -787,15 +797,15 @@ Each entry gives the gap (what an engineer would have had to ask) and the rule t
 
 **G28. End card order and "tap skips".** Rule, top to bottom: existing celebration (confetti, cheer), XP chip and "{x} of {goal} XP today" line, goal/streak lines, hearts block (only at 0), existing stats, opt-in card (only when due), actions row. "Any tap skips" = a pointer or key event on the card jumps every pending animation to its end state at once; it does not dismiss anything.
 
-**G29. How learners find Seeds and League.** Rule: Home shows one row under the streak card: "{balance} seeds" linking to `#/seeds`, and, when leagues are on, "{tier}: {rank}th" linking to `#/league`. Both are also in the router quick menu (6.2). Calm mode hides the row.
+**G29. How learners find Gems and League.** Rule: Home shows one row under the streak card: "{balance} gems" linking to `#/shop`, and, when leagues are on, "{tier}: {rank}th" linking to `#/league`. Both are also in the router quick menu (6.2). Calm mode hides the row.
 
 **G30. Where copy lives.** Rule: every learner-facing English string in this spec goes in one file, `src/retention/strings.js` (a frozen object keyed by id). Reminder lines go in `rimon-reminders.js` (3.6). Settings copy: "Hearts" with help line "Mistakes in lessons cost a heart. Practise old words to win them back."; "Practice league" with help line "A weekly race against pretend players paced to you."; "Rimon's reminders" with "Off / Kind Rimon / Playful Rimon (for adults)".
 
-**G31. Colours.** Rule: use the existing theme variables (`--accent` and the dark-green/gold palette already in the app CSS); no new colour variables except `--alef-seed` for the seed glyph, which must reach 3:1 against both light and dark backgrounds (checked by the existing a11y colour test pattern).
+**G31. Colours.** Rule: use the existing theme variables (`--accent` and the dark-green/gold palette already in the app CSS); no new colour variables except `--alef-gem` for the gem glyph, which must reach 3:1 against both light and dark backgrounds (checked by the existing a11y colour test pattern).
 
 **G32. Calendar fallback days.** Rule: the `.ics` event repeats `RRULE:FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH` at the typical time (no Friday or Saturday event), titled "Hebrew with Rimon (3 minutes)".
 
-**G33. Backup, delete, privacy.** Checked: `src/store.js` backup and clear operate on every key with the `alef:` prefix, so both new keys are backed up and wiped with no extra code. Rule: add one sentence to `privacy.view.js`: "Your XP, seeds, hearts, practice league and reminder times are kept on this device only." Nothing is sent anywhere; no telemetry is added.
+**G33. Backup, delete, privacy.** Checked: `src/store.js` backup and clear operate on every key with the `alef:` prefix, so both new keys are backed up and wiped with no extra code. Rule: add one sentence to `privacy.view.js`: "Your XP, gems, hearts, practice league and reminder times are kept on this device only." Nothing is sent anywhere; no telemetry is added.
 
 **G34. Time arithmetic.** `nextFire`'s "+23 h 30 min" is elapsed time on purpose (it can drift an hour across a DST change), then clamped to wall-clock windows. Every other "same time tomorrow" uses local wall-clock construction (1.5).
 
@@ -803,15 +813,15 @@ Each entry gives the gap (what an engineer would have had to ask) and the rule t
 
 **G36. Which games pay XP.** Only games that end through `src/games/engine.js` or `src/games/arcade.js`. Other game views (for example `wordfinder.view.js`) pay nothing in v1; the README says so.
 
-**G37. Precache.** All files from 6.1 (JS and CSS) are added by running `npm run precache` after the last commit; the commit that does this is the last one on the branch.
+**G37. Precache.** (Replaced in round 3 by G78.) All files from 6.1 (JS and CSS) are added by running `npm run precache` after the last commit; the commit that does this is the last one on the branch.
 
-**G38. Time refill arithmetic.** Rule: when a heart is lost while `n === 5`, set `lastRefillAt = now`. On every read: `gained = floor((now − lastRefillAt) / 4 h)`; `n = min(5, n + gained)`; `lastRefillAt += gained × 4 h`; if `n === 5`, `lastRefillAt = 0`. Practice and seed refills do not reset the timer unless they bring `n` to 5.
+**G38. Time refill arithmetic.** Rule: when a heart is lost while `n === 5`, set `lastRefillAt = now`. On every read: `gained = floor((now − lastRefillAt) / 4 h)`; `n = min(5, n + gained)`; `lastRefillAt += gained × 4 h`; if `n === 5`, `lastRefillAt = 0`. Practice and gem refills do not reset the timer unless they bring `n` to 5.
 
 ### 8.3 Added unit tests (69–86)
 
 69. `alef:celebrate {final:true}` on a v2 streak with `last` = yesterday → count + 1; same event with `final:false` → unchanged, no XP.
 70. Quick lesson end → 10 XP, `lessonsFinished` + 1, streak day complete, `curriculum.progress.completed` unchanged.
-71. Fresh `retention.v1` with 4 completed lessons in `curriculum.progress` → `lessonsFinished = 4`, hearts on, no 50-seed first-lesson payout.
+71. Fresh `retention.v1` with 4 completed lessons in `curriculum.progress` → `lessonsFinished = 4`, hearts on, no 50-gem first-lesson payout.
 72. `alef:quiz-start` resets `lostIn`; wrong at qIndex 2 → −1; the end-of-quiz repeat of qIndex 2 wrong → 0.
 73. `canStartLesson` false + no resume record → gate; false + resume record present → lesson opens.
 74. Refill round with 0 due cards fills 5 from the oldest-reviewed cards.
@@ -836,7 +846,7 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 
 ### 9.1 New code on the overnight branch
 
-**G39. Which branch to build on.** `main` has no `src` change since the spec was written; the overnight branch has 134 changed `src` files, including Rimon and reminder modules this spec must use. Rule: branch `retention/build` from `overnight/launch-ready-2026-11-10`; if `main` already contains `8102de323` when the build starts, branch from `main` instead. Never merge either into anything (0.2 rule 7).
+**G39. Which branch to build on.** (Replaced in round 3 by G67.) `main` has no `src` change since the spec was written; the overnight branch has 134 changed `src` files, including Rimon and reminder modules this spec must use. Rule: branch `retention/build` from `overnight/launch-ready-2026-11-10`; if `main` already contains `8102de323` when the build starts, branch from `main` instead. Never merge either into anything (0.2 rule 7).
 
 **G40. Moved anchors.** `signalRimon` in `mountQuiz` is line 104 on overnight. `summaryNode` now also takes `ctx`, `store`, `sfx`, `showStreak` and renders `rimonInline`, `flameCard` and `.alef-remind-slot`. Retention appends its payout after the flame and before the remind slot (G28 order still holds: payout comes before the opt-in). 0.1 and 6.2 updated.
 
@@ -848,7 +858,7 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 
 **G44. Quiet days, quiet routes, hidden Rimon.** The stage hides Rimon on Yom HaShoah, Yom HaZikaron, Tisha B'Av and on prayer/Torah routes (`body[data-rimon-quiet]`), and `rimon.dismissed` hides the companion. Rule: `cueRimon` returns false in all three cases (section 4).
 
-**G45. A second reminder engine.** Overnight's `notify.js` already speaks with Rimon's lines from `rimon-reminders.js`, chosen at fire time, logged in `notify.log`. Rule: retention builds no scheduler and no message picker. It adds 70 lines to `LINES`, a `state.kind` override in `kindFor`, an `excludeIds` filter in `pickLine`, and the calm/stopped/tone wiring in the `armFromPrefs` show path (6.2). `messages.js` and `scheduler.js` are removed from 6.1 (`tone.js` and `plan.js` replace them).
+**G45. A second reminder engine.** (Replaced in round 3 by G80.) Overnight's `notify.js` already speaks with Rimon's lines from `rimon-reminders.js`, chosen at fire time, logged in `notify.log`. Rule: retention builds no scheduler and no message picker. It adds 70 lines to `LINES`, a `state.kind` override in `kindFor`, an `excludeIds` filter in `pickLine`, and the calm/stopped/tone wiring in the `armFromPrefs` show path (6.2). `messages.js` and `scheduler.js` are removed from 6.1 (`tone.js` and `plan.js` replace them).
 
 **G46. Two frequency rule sets.** Rule: the existing caps stay as they are (1 a day, 5 a week, every 3 days from 7 days away, weekly from 14, silent from 45), and the spec's `final` stop at 14 days is applied on top. The ladder in 3.3 is rewritten to use the existing kinds plus `roast` and `final`.
 
@@ -856,15 +866,15 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 
 **G48. Two opt-in cards.** Overnight's `reminder-ask.js` asks once after the first win. Rule: keep it, ask once (the spec's "ask again after 3 lessons" is dropped), add the tone radio, the iPhone calendar card and a calm-mode check (3.1).
 
-**G49. Personal timing had nowhere to live.** The existing scheduler fires at one daily time. Rule: retention writes the learner's typical time into `notify.prefs.hour/minute` while `autoTime` is on; a manual change switches it off (3.4).
+**G49. Personal timing had nowhere to live.** (Void after G80, see F23.) The existing scheduler fires at one daily time. Rule: retention writes the learner's typical time into `notify.prefs.hour/minute` while `autoTime` is on; a manual change switches it off (3.4).
 
-**G50. "+23 h 30 min" rule.** Incompatible with a fixed daily time; dropped (3.4).
+**G50. "+23 h 30 min" rule.** (Void after G80, see F23.) Incompatible with a fixed daily time; dropped (3.4).
 
-**G51. Duplicate stores.** `retention.notify.v1` no longer keeps a send log, ask count or opt-in flag; those are `notify.log`, `notify.asked` and `notify.prefs.enabled` (5.2).
+**G51. Duplicate stores.** (Replaced in round 3 by G73 and G80.) `retention.notify.v1` no longer keeps a send log, ask count or opt-in flag; those are `notify.log`, `notify.asked` and `notify.prefs.enabled` (5.2).
 
 **G52. Copy that contradicts hearts.** Existing line `d16` says "No hearts to lose". Rule: while hearts are on, `d16` is passed in `excludeIds`.
 
-**G53. A second Home streak card.** Overnight already shows a flame under the Home title (`.alef-streak-flame`, `data-streak-slot="home"`). Rule: no new card; `streak-line.js` adds one status line (1.1 states) and the seeds/league row under that flame (6.1 row 18).
+**G53. A second Home streak card.** Overnight already shows a flame under the Home title (`.alef-streak-flame`, `data-streak-slot="home"`). Rule: no new card; `streak-line.js` adds one status line (1.1 states) and the gems/league row under that flame (6.1 row 18).
 
 **G54. Flame copy ignores D1.** `flame.js` says "N more minutes of study today keeps your streak", but with D1 a finished lesson also completes the day. Rule: the not-lit sub line ends with " Or finish one lesson." (6.2).
 
@@ -909,3 +919,87 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 97. Auto time with `quietFrom` 22: typical 21:50 → 21:30; with `quietTo` 7: typical 06:40 → 07:30.
 98. Service worker sent ids in the Cache Storage plan are copied into `notify.log` at the next boot, without duplicates.
 
+---
+
+## 10. Review round 3: reconciliation with the Fable build (G67–G92)
+
+Checked by reading the code on `claude/retention-fable-2026-11-10`, not only its notes (`docs/retention/IMPLEMENTATION.md`). The build was made from the round-0 version of this spec, on `main`, before rounds 1–2 existed. So most of the gaps below are the build still following the earlier text.
+
+### 10.1 Where the fix-up work happens
+
+**G67. Base for the fix-up.** New branch `retention/fixup-2026-11-10`, created from `claude/retention-fable-2026-11-10` at `f0a6220e3`. Then, in that order: (1) merge `overnight/launch-ready-2026-11-10` into it with a normal merge commit (no rebase, no force-push); (2) resolve the expected conflicts in `src/curriculum/exercises.ui.js` (both branches edit the answer line and `summaryNode`; keep both sides' additions), `src/shell/router.js`, `src/app.js`; (3) apply the 10.4 fix list, one commit per item. Nothing goes to `main` and nothing is deployed. If `main` already contains the overnight branch when work starts, merge `main` instead of the overnight branch. This replaces G39.
+
+### 10.2 Departures in the build: decided
+
+| G | Build does | Spec before | Round 3 decision |
+|---|---|---|---|
+| G67 | Currency shown as "Gems" (`CURRENCY` in `gems.js`) | "Seeds" | **Adopt.** John's brief says gems. Sections 0–9 now say gems; `#/seeds` is `#/shop`; the gems Hebrew label is dropped. |
+| G68 | Streak milestones 3, 7, 14, 30, 50, 100, 365 paying 5–200 gems | 7, 30, 100, 365 | **Adopt** (1.4 updated). They line up with the overnight stage's milestone stills. |
+| G69 | 48 h paid streak repair (150 gems a day, at most 3 days, streak ≥ 2) | D6: not built | **Adopt** (D6 updated). Gems are earned only, so no money is involved. Copy must say "Repair your streak" and never use a countdown under one hour. |
+| G70 | Friday and the eve of every Yom Tov are free rest days for everyone; Saturday and Yom Tov are free for everyone even when the learner's Shabbat freeze is off | Rest days follow the engine's `freeze` setting | **Split.** Saturday and Yom Tov always free: adopt (harmless, respectful). Friday and Yom Tov eves free: **reject by default** (D9). The build's reason ("a missed Friday would be lost at midnight, inside the Shabbat window") does not hold: the streak is judged at the next app open, not at midnight, so nothing is lost inside the window. A free Friday also lets a 5-day study week keep a 7-day streak. Fix: `STREAK.shabbatCoversFriday = false` (10.4 F1). John can flip it. |
+| G71 | League pacing curve `paceOf()` | Power formula | **Adopt** (2.2 updated). The build's tests check both targets against the simulator. |
+| G72 | Combo bonus: +2 XP per 5 right in a row inside a lesson, at most +6 | Not specified | **Adopt.** Added to 2.1 by this entry. |
+| G73 | One storage key; reminder state at `retention.v1.notify` | Two keys | **Adopt.** 5.2 now means the `notify` object inside `retention.v1` with the same fields. Exception after the overnight merge: the send log and the "already asked" flag are the overnight keys `notify.log` and `notify.asked` (G80). |
+| G74 | Review XP event `alef:review-rated {rating}`; hearts come back one per 5 review cards rated anywhere (`#/learn?review=1&refill=1` is just the review queue) | `alef:card-rated`; a dedicated 5-card refill queue | **Adopt** the event name and the simpler rule (any 5 ratings = 1 heart; 4+ rated Good or Easy also pays 5 XP). G3/G4 are read with these names. |
+| G75 | Module and test names (`gems.js`, `leagues.js`, `notify.js`, `messages.js`, `quiet.js`, `rimon.js`, `ui.js`, `shop.view.js`; tests in `tests/retention/`) | Spec names | **Adopt.** 6.1 is read as the build's file map in `docs/retention/IMPLEMENTATION.md`. Exceptions in 10.4: `rimon.js` must stop exporting a function named `showRimon` (F8). |
+| G76 | `/league` and `/shop` as preview-tier routes | Normal routes | **Keep preview until John approves** (D10). Promoting needs `tier: 'v0'` plus raising the route count in `tests/a11y.b2.test.js` and `tests/a11y.hub.test.js`. |
+| G77 | Switches (hearts, league, reminders, tone) on `#/shop`, goal picker in the goal card; no Settings controls | Settings page | **Adopt the Shop location**, plus one Settings row "Rewards and reminders" linking to `#/shop` (F14). The goal picker is removed (F6). |
+| G78 | Retention code loaded on demand, not in the first-install precache | G37: precached | **Adopt.** It is fetched after first paint and cached once used. |
+| G79 | Night window for reminders 08:00–21:00 (`NIGHT` in `quiet.js`) | Round 2: overnight's 22:00–07:00 only | **Adopt** as an extra gate on top of the overnight one: reminders only 08:00–21:00. This corrects 3.2 (round 2 had dropped it). |
+
+### 10.3 Reminders after the overnight merge (the one open design point)
+
+**G80. One sender.** `main` + the Fable build has one reminder sender (retention's in-page scheduler). The overnight branch adds a second (`notify.js` `armFromPrefs` speaking `rimon-reminders.js` lines) and a second ask card (`reminder-ask.js`). After the merge both would fire. Rule:
+- The sender is retention's scheduler (`src/retention/notify.js` `createScheduler`), because it has the tone ladder, the 14-day stop, personal timing and the service-worker plan, all tested.
+- At retention boot, if `retention.v1.notify.optedIn` is true, call the overnight `notify.js` `cancelAll()` (checked: exported on overnight) and set `notify.prefs.enabled = false` through `normalizePrefs`, so the old timer never runs alongside.
+- The ask card is the overnight `reminder-ask.js` card (it is already placed in `.alef-remind-slot`). Retention's own `optInCard` in `ui.js` is not shown when that module exists. The overnight card's "Yes" calls retention's `turnOnReminders(tone)` instead of enabling `notify.prefs`, and gains the tone radio (3.1).
+- Ask once: `NOTIFY.maxAsks = 1` (round 2, G48); the build asks twice.
+- Lines: retention's 73 lines stay in `src/retention/messages.js`. The overnight `rimon-reminders.js` lines are used only for kinds retention lacks (`holiday`, `milestone`, `welcome`): `pickMessage` falls back to `pickLine` for those days. S01, S02 and S05 are dropped (overnight `after-rest` and `erev-shabbat` cover them, G56).
+- Quiet gate: retention's `isQuiet` AND the overnight `isRestTime` (Friday 12:00 to Saturday 23:59, chag eves from 12:00, solemn days). Both must allow a send.
+This replaces G45 and G51 for the merged code. Sections 3.1–3.5 are read with "the existing engine" meaning retention's scheduler plus these overnight checks.
+
+### 10.4 Fix list: every point the build misses or contradicts
+
+Each item: what the build does now (checked in the code) → what it must do. One commit each on `retention/fixup-2026-11-10`.
+
+| # | Spec point | Build now | Required |
+|---|---|---|---|
+| F1 | D9 / G70 | `shabbatCoversFriday: true`; Friday and Yom Tov eves free | Set to `false`; keep Saturday and Yom Tov free |
+| F2 | G2 | `boot.js` pays XP and completes the streak day on every `alef:celebrate {kind:'lesson'}`, so an intermediate "Round finished" card pays too | `summaryNode` gets `final` (default true); `intermediate.view.js` passes `final: all`; `lessonFinished` returns early when `final === false` |
+| F3 | G6 | Hearts only on `#/learn?…lesson=`; `#/intermediate/:id` lessons never cost or gate | Include `#/intermediate/:id` in `isLessonHash` and in `answered()` |
+| F4 | G7 | Gate keyed on an in-memory `lessonHash`; reloading a lesson already in progress at 0 hearts gates it | Do not gate when the lesson has a resume record (`lesson.parts.js` `RESUME_KEY` entry, or intermediate progress for that id) |
+| F5 | G11a | `lessonsFinished` starts at 0 for learners who already finished lessons, so hearts, league and the ask wait 3–5 more lessons, and the 50-gem first-lesson payout is paid to experienced learners | On first creation set it to the number of keys in `curriculum.progress.completed`; pay the first-lesson gems only when that number was 0 |
+| F6 | G9 | Own XP goal picker (Casual 10 / Regular 20 / Serious 30 / Intense 50) in a Home goal card, next to Home's existing minutes goal | Remove the picker; XP goal = minutes goal × 4 (`normalizeDailyGoal`); `GOAL_CHOICES` unused |
+| F7 | G11b, G80 | On `main`, a learner with the old study reminder on can get both it and Rimon's reminder | Apply G80 (disarm and disable the old one when retention reminders are on) on `main` too |
+| F8 | G41 | `src/retention/rimon.js` exports `showRimon` and `SITUATIONS`, and assigns `globalThis.ALEF.showRimon`; overnight's `rimon-show.js` exports a different `showRimon` | Rename to `cueRimon` / `MOMENTS`; drop the global assignment |
+| F9 | G42 | Cues carry `detail.retention: true`; the overnight stage counts `bounce wink highfive sad` cues as quiz answers and maps `laugh nervous point` to game stills | Add `cue: true` to the detail; add the one-line `cue` guard to `rimon-stage.js` `onRimon` |
+| F10 | G43 | Retention cues `lesson_complete`, `streak_extended`, `streak_milestone`, `streak_broken`, `welcome_back`, `shabbat`, `chag`, `shavua_tov`; after the merge these double the stage's and flame's own reactions | Remove those cues (keep the rest of the moment list in section 4, plus `streak_repaired`) |
+| F11 | G44 | Cues ignore quiet routes/days and Hide Rimon | `cueRimon` returns false when `body[data-rimon-quiet]` is set or `rimon.dismissed` is true |
+| F12 | G53 | Top bar has its own streak flame; overnight Home already shows one under the title | Top bar keeps gems, hearts and league; its flame is hidden on Home when `.alef-streak-flame` exists |
+| F13 | G58 | No solemn-day rule in retention quiet | Covered by G80's `isRestTime` after the merge; on `main` add Yom HaShoah, Yom HaZikaron, Tisha B'Av to `quiet.js` (via `holidaysBetween`) |
+| F14 | G77 | No Settings entry | Settings row "Rewards and reminders" → `#/shop` |
+| F15 | 1.6, G8, G55 | 3-minute lesson not built | Build it as `?short=1` (never `quick`, which is the lesson's quick check) |
+| F16 | 3.6 bubble table | `line` is sent but `rimon.js` ignores it; no `goal`, `heartBack`, `moveUp` text | Add `LINES` and `sayLine` to `rimon-speech.js`, and the `detail.line` branch to `rimon.js` |
+| F17 | 1.1 | Streak states shown inside the goal card; no `at-risk`/`freeze-used`/`broken` wording rules, no snowflake on the Progress strip | Add the 1.1 states (with G26: no `at-risk` Friday 18:00 to Saturday 21:00) as one line under the Home flame; snowflake on covered days in `weekStrip` rendering |
+| F18 | 3.1, G32 | No iPhone calendar card | Build it (once, `BYDAY=SU,MO,TU,WE,TH`) |
+| F19 | 3.6 | S02, S05, S07, S08 in the catalogue but never sent; S01, S02, S05 duplicate overnight lines | Drop S01, S02, S05 (G56). Wire S07 (Thursday, within 30 XP of promotion) and S08 (hearts back to 5 after being 0) |
+| F20 | G54 | (overnight) flame says only "N more minutes", but a finished lesson now completes the day | Add " Or finish one lesson." to the unlit line in `flame.js` |
+| F21 | G52 | (overnight) line `d16` "No hearts to lose" can be sent while hearts are on | Exclude `d16` while hearts are on (only relevant where overnight lines are used, G80) |
+| F22 | 6.3 browser tests 58–68 | Not automated; checked by hand at 360 px | Add them under `tests/retention/*.browser.test.js` using the existing Playwright pattern (advisory in CI) |
+| F23 | G50 vs build | Build keeps the "+23 h 30 min" first-fire rule | Keep it (it works with retention's own scheduler, which is the sender after G80). G49/G50 apply only to the overnight engine and are void after G80 |
+| F24 | Hebrew | Ten tier names unreviewed (listed in `docs/retention/HEBREW-REVIEW.md`) | No change; stays on the native review list (6.4) |
+
+### 10.5 Contradictions removed from this file in round 3
+
+**G81.** "Seeds" replaced by "Gems" everywhere except the pomegranate jokes in the message copy and the league tier "Seed" (G67).
+**G82.** D6 (repair) and the 1.4 milestone table now match the decisions (G68, G69).
+**G83.** The 2.2 pacing formula is replaced by the built curve (G71).
+**G84.** D9 (Friday) and D10 (route tier) added to 0.3.
+**G85.** 5.2 is now the `notify` object inside `retention.v1` (G73).
+**G86.** G39's build base is replaced by G67.
+**G87.** G45/G51 (overnight engine as sender) are replaced by G80 (retention scheduler as sender, overnight ask card and quiet gate kept).
+**G88.** G48's "ask once" now applies to the merged card (`maxAsks = 1`).
+**G89.** 3.2's night window: retention's 08:00–21:00 is restored as an extra gate (G79).
+**G90.** G4's dedicated 5-card refill queue is replaced by "any 5 review ratings" (G74).
+**G91.** G37 (precache everything) is replaced by on-demand loading (G78).
+**G92.** Test names follow the build (`tests/retention/`). Tests whose numbers or names changed with these decisions: 14 and 26 (prices unchanged, currency name), 18 (milestone list), 25 (any 5 ratings), 29–30 (now checked against `paceOf`), 58 and 64 (`#/shop`). New tests for the fix list: one per item F1–F21, each asserting the "Required" column, plus F22's browser set.

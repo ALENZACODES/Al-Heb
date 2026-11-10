@@ -26,9 +26,9 @@
   "check": "End-of-level check across every unit in the level"
  },
  "totals": {
-  "units": 36,
+  "units": 37,
   "pages": 191,
-  "written": 56
+  "written": 94
  },
  "units": [
   {
@@ -618,7 +618,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Where Is...?",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p01"
     },
     {
@@ -626,15 +626,15 @@
      "order": 2,
      "kind": "grammar",
      "title": "Right, Left, Straight",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p02"
     },
     {
      "id": "pu-directions-p03",
      "order": 3,
      "kind": "dialogue",
-     "title": "Where Is the Bus Station?",
-     "status": "planned",
+     "title": "Where Is the Central Station?",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p03"
     },
     {
@@ -642,7 +642,7 @@
      "order": 4,
      "kind": "learn",
      "title": "Near and Far",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p04"
     },
     {
@@ -650,7 +650,7 @@
      "order": 5,
      "kind": "listen",
      "title": "Follow the Directions",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p05"
     },
     {
@@ -658,15 +658,15 @@
      "order": 6,
      "kind": "speak",
      "title": "Ask the Way",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p06"
     },
     {
      "id": "pu-directions-p07",
      "order": 7,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Two Words, One Place, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p07"
     }
    ]
@@ -690,7 +690,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Taking a Taxi",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p01"
     },
     {
@@ -698,7 +698,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "To and From: לְ and מִ",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p02"
     },
     {
@@ -706,7 +706,7 @@
      "order": 3,
      "kind": "dialogue",
      "title": "A Taxi to the Airport",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p03"
     },
     {
@@ -714,7 +714,7 @@
      "order": 4,
      "kind": "learn",
      "title": "The Bus",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p04"
     },
     {
@@ -722,7 +722,7 @@
      "order": 5,
      "kind": "learn",
      "title": "The Train",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p05"
     },
     {
@@ -730,7 +730,7 @@
      "order": 6,
      "kind": "listen",
      "title": "Hear the Stop",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p06"
     },
     {
@@ -738,7 +738,7 @@
      "order": 7,
      "kind": "speak",
      "title": "Tell the Driver Where",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p07"
     },
     {
@@ -746,7 +746,7 @@
      "order": 8,
      "kind": "learn",
      "title": "Tickets and the Rav-Kav",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p08"
     },
     {
@@ -754,7 +754,7 @@
      "order": 9,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p09"
     }
    ]
@@ -777,24 +777,24 @@
      "id": "pu-small-talk-p01",
      "order": 1,
      "kind": "learn",
-     "title": "Where Are You From?",
-     "status": "planned",
+     "title": "How Long Have You Been Here?",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p01"
     },
     {
      "id": "pu-small-talk-p02",
      "order": 2,
      "kind": "grammar",
-     "title": "Questions: מָה, מִי, אֵיפֹה",
-     "status": "planned",
+     "title": "Questions: מָה and מָתַי",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p02"
     },
     {
      "id": "pu-small-talk-p03",
      "order": 3,
-     "kind": "dialogue",
-     "title": "Nice to Meet You",
-     "status": "planned",
+     "kind": "learn",
+     "title": "How Do You Feel?",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p03"
     },
     {
@@ -802,7 +802,7 @@
      "order": 4,
      "kind": "learn",
      "title": "Work and Studies",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p04"
     },
     {
@@ -810,15 +810,15 @@
      "order": 5,
      "kind": "listen",
      "title": "Hear the Question",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p05"
     },
     {
      "id": "pu-small-talk-p06",
      "order": 6,
      "kind": "speak",
-     "title": "Talk About Yourself",
-     "status": "planned",
+     "title": "Friends and Goodbyes",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p06"
     },
     {
@@ -826,7 +826,7 @@
      "order": 7,
      "kind": "learn",
      "title": "Keeping It Going",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p07"
     },
     {
@@ -834,63 +834,76 @@
      "order": 8,
      "kind": "check",
      "title": "Level 1 Check",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p08"
     }
    ]
   },
   {
-   "id": "pu-verbs",
+   "id": "pu-verbs-now",
    "level": "L2",
-   "title": "Verbs: Now and Yesterday",
+   "title": "What I Do Now",
    "lessons": [
-    "il16",
+    "il16"
+   ],
+   "phrasebookSituation": null,
+   "dialogue": null,
+   "file": "data/curriculum/practical/pu-verbs-now.json",
+   "route": "#/practical/pu-verbs-now",
+   "pages": [
+    {
+     "id": "pu-verbs-now-p01",
+     "order": 1,
+     "kind": "grammar",
+     "title": "Present Tense: Man and Woman",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p01"
+    },
+    {
+     "id": "pu-verbs-now-p02",
+     "order": 2,
+     "kind": "learn",
+     "title": "Everyday Verbs",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p02"
+    },
+    {
+     "id": "pu-verbs-now-p03",
+     "order": 3,
+     "kind": "review",
+     "title": "Come Here, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-verbs-now/pu-verbs-now-p03"
+    }
+   ]
+  },
+  {
+   "id": "pu-past",
+   "level": "L2",
+   "title": "What I Did",
+   "lessons": [
     "il19"
    ],
    "phrasebookSituation": null,
    "dialogue": null,
-   "file": "data/curriculum/practical/pu-verbs.json",
-   "route": "#/practical/pu-verbs",
+   "file": "data/curriculum/practical/pu-past.json",
+   "route": "#/practical/pu-past",
    "pages": [
     {
-     "id": "pu-verbs-p01",
+     "id": "pu-past-p01",
      "order": 1,
      "kind": "grammar",
-     "title": "Present Tense: Four Forms",
-     "status": "planned",
-     "route": "#/practical/pu-verbs/pu-verbs-p01"
-    },
-    {
-     "id": "pu-verbs-p02",
-     "order": 2,
-     "kind": "learn",
-     "title": "Everyday Verbs",
-     "status": "planned",
-     "route": "#/practical/pu-verbs/pu-verbs-p02"
-    },
-    {
-     "id": "pu-verbs-p03",
-     "order": 3,
-     "kind": "grammar",
      "title": "Past Tense: What I Did",
-     "status": "planned",
-     "route": "#/practical/pu-verbs/pu-verbs-p03"
+     "status": "written",
+     "route": "#/practical/pu-past/pu-past-p01"
     },
     {
-     "id": "pu-verbs-p04",
-     "order": 4,
-     "kind": "speak",
-     "title": "Say What You Did Yesterday",
-     "status": "planned",
-     "route": "#/practical/pu-verbs/pu-verbs-p04"
-    },
-    {
-     "id": "pu-verbs-p05",
-     "order": 5,
+     "id": "pu-past-p02",
+     "order": 2,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
-     "route": "#/practical/pu-verbs/pu-verbs-p05"
+     "title": "What I Did Yesterday, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-past/pu-past-p02"
     }
    ]
   },
@@ -912,23 +925,23 @@
      "order": 1,
      "kind": "learn",
      "title": "My Family",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-family/pu-family-p01"
     },
     {
      "id": "pu-family-p02",
      "order": 2,
      "kind": "grammar",
-     "title": "My, Your, His, Her",
-     "status": "planned",
+     "title": "One and Many: -ים",
+     "status": "written",
      "route": "#/practical/pu-family/pu-family-p02"
     },
     {
      "id": "pu-family-p03",
      "order": 3,
      "kind": "learn",
-     "title": "Ages and Birthdays",
-     "status": "planned",
+     "title": "School and Play",
+     "status": "written",
      "route": "#/practical/pu-family/pu-family-p03"
     },
     {
@@ -936,15 +949,15 @@
      "order": 4,
      "kind": "speak",
      "title": "Describe Your Family",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-family/pu-family-p04"
     },
     {
      "id": "pu-family-p05",
      "order": 5,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Happy, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-family/pu-family-p05"
     }
    ]
@@ -966,7 +979,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Rooms and Things",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-home/pu-home-p01"
     },
     {
@@ -974,7 +987,7 @@
      "order": 2,
      "kind": "learn",
      "title": "Something Is Broken",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-home/pu-home-p02"
     },
     {
@@ -982,15 +995,15 @@
      "order": 3,
      "kind": "speak",
      "title": "Call the Landlord",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-home/pu-home-p03"
     },
     {
      "id": "pu-home-p04",
      "order": 4,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Help, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-home/pu-home-p04"
     }
    ]
@@ -1466,7 +1479,7 @@
    ]
   },
   {
-   "id": "pu-conversation",
+   "id": "pu-decide",
    "level": "L2",
    "title": "Putting It Together",
    "lessons": [
@@ -1475,40 +1488,40 @@
    ],
    "phrasebookSituation": null,
    "dialogue": null,
-   "file": "data/curriculum/practical/pu-conversation.json",
-   "route": "#/practical/pu-conversation",
+   "file": "data/curriculum/practical/pu-decide.json",
+   "route": "#/practical/pu-decide",
    "pages": [
     {
-     "id": "pu-conversation-p01",
+     "id": "pu-decide-p01",
      "order": 1,
      "kind": "learn",
      "title": "Sound Less Like an Outsider",
      "status": "planned",
-     "route": "#/practical/pu-conversation/pu-conversation-p01"
+     "route": "#/practical/pu-decide/pu-decide-p01"
     },
     {
-     "id": "pu-conversation-p02",
+     "id": "pu-decide-p02",
      "order": 2,
      "kind": "dialogue",
      "title": "A Longer Conversation",
      "status": "planned",
-     "route": "#/practical/pu-conversation/pu-conversation-p02"
+     "route": "#/practical/pu-decide/pu-decide-p02"
     },
     {
-     "id": "pu-conversation-p03",
+     "id": "pu-decide-p03",
      "order": 3,
      "kind": "speak",
      "title": "Your Turn",
      "status": "planned",
-     "route": "#/practical/pu-conversation/pu-conversation-p03"
+     "route": "#/practical/pu-decide/pu-decide-p03"
     },
     {
-     "id": "pu-conversation-p04",
+     "id": "pu-decide-p04",
      "order": 4,
      "kind": "check",
      "title": "Level 2 Check",
      "status": "planned",
-     "route": "#/practical/pu-conversation/pu-conversation-p04"
+     "route": "#/practical/pu-decide/pu-decide-p04"
     }
    ]
   },

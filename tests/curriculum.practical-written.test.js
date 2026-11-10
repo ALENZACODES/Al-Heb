@@ -18,11 +18,11 @@ test("a fully written unit shows exactly its written pages, in order", () => {
   }
   const counts = writtenPageCounts(index, written);
   assert.equal(counts["pu-introducing"], 5);
-  assert.equal(counts["pu-directions"], index.units.find((u) => u.id === "pu-directions").pageCount, "unwritten units keep their draft count");
+  assert.equal(counts["pu-weather"], index.units.find((u) => u.id === "pu-weather").pageCount, "unwritten units keep their draft count");
 });
 
 test("units without written pages are unchanged", () => {
-  const cafe = unitOf("pu-directions");
+  const cafe = unitOf("pu-weather");
   assert.equal(applyWritten(cafe, written), cafe);
 });
 
@@ -125,4 +125,12 @@ test("a hidden item's speaking prompt is left out of the rendered page", async (
   assert.equal(all(root, (x) => x.getAttribute("data-speak") === "numbers-16").length, 0, "numbers-16 failed the clip check");
   assert.equal(all(root, (x) => x.getAttribute("data-speak") === "numbers-17").length, 1);
   if (typeof un === "function") un();
+});
+
+test("every outline unit is a live Practical unit, so its written pages can show (pu-army is held off)", () => {
+  const outline = read("data/curriculum/practical-pages/outline.json");
+  const live = new Set(index.units.map((u) => u.id));
+  const missing = outline.units.filter((u) => !live.has(u.id) && u.live !== false).map((u) => u.id);
+  assert.deepEqual(missing, []);
+  for (const id of written.completeUnits) assert.ok(live.has(id), `${id} is written but has no live unit`);
 });

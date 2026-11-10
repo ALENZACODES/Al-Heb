@@ -269,3 +269,36 @@ Built:
 
 **92 / 100** (estimate). See the second pass in
 [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md).
+
+## Round 8
+
+**Built:** level 1 is finished. `pu-directions` (7 pages), `pu-transport` (9) and `pu-small-talk` (8) are written to the same
+sourced standard, so all 80 pages of levels 0 and 1 are live.
+
+**Kept out:**
+- every item on the hidden list;
+- `il13-w4` (בְּרוּךְ הַשֵּׁם), which names God and stays with John's decisions.
+
+**One English gloss corrected:** the woman's form of "how old are you?" now reads "daughter of how much", not "son".
+
+**Open:**
+- 57 dialogue lines with no audio;
+- levels 2 to 4 (111 pages);
+- native and cantor review;
+- John's held decisions.
+
+**93 / 100** (estimate).
+
+## Round 9
+
+**Built:** level 2 is started. `pu-verbs-now` (3 pages), `pu-past` (2), `pu-family` (5) and `pu-home` (4) are written, for 94
+live pages.
+
+**Found and fixed:** two of this plan's added units used their own ids (`pu-verbs`, `pu-conversation`) that the live course does
+not have. Any page written for them would never have shown. They now use the live ids `pu-verbs-now`, `pu-past` and
+`pu-decide`. A new test fails if an outline unit has no live unit.
+
+**New source:** the gender pairs in `data/curriculum/gender-pairs.json` now supply women's forms that the phrasebook lacks. They
+are original, unreviewed sentences with no clips yet, and the pages mark them for native review.
+
+**93 / 100** (estimate). Levels 2 to 4 still have 97 pages to write.

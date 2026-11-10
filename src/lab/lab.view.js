@@ -1,5 +1,5 @@
 // Brain Lab (#/lab, #/lab/:game). Daily three-drill workout, ten short timed drills that adjust to you, five skill scores.
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { sfx } from '../audio/sfx.js';
 import { playRecordedClip, hasRecordedClip } from '../games/engine.js';
@@ -123,7 +123,7 @@ function hub(root, ctx) {
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
         return h('li', { class: done ? 'done' : '' }, h('span', { class: 'dot', 'aria-hidden': 'true' }, done ? '✓' : String(i + 1)),
-          h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
+          medal('lab', g.id, 40), h('span', {}, h('span', { class: 'name' }, g.title), h('br'), h('span', { class: 'skill' }, skillOf(g.skill).name)),
           done ? h('span', { class: 'visually-hidden' }, ' (done)') : null);
       })),
       prog.complete ? h('a', { class: 'lab-go', href: `#/lab/${plan[0]}` }, 'Play again') : h('a', { class: 'lab-go', href: `#/lab/${next}?workout=1` }, prog.done.length ? 'Continue workout' : 'Start workout')),
@@ -137,6 +137,7 @@ function hub(root, ctx) {
     h('div', { class: 'lab-games' }, ...GAMES.map((g) => {
       const gs = st.games[g.id];
       return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
+        medal('lab', g.id, 56),
         h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he')),
         h('span', { class: 'm' }, `${skillOf(g.skill).name} · ${gs ? `best ${gs.best} · level ${gs.lastMax}` : 'not played yet'}`),
         h('span', { class: 'm' }, g.blurb),

@@ -1,7 +1,7 @@
 // Games hub (#/games): every game in one place. Until this page existed the
 // home page linked only five of the twenty-five games and the rest were
 // reachable solely by typing their address (owner report, Nov 7 2026).
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
@@ -92,7 +92,7 @@ export function mount(root, ctx) {
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
         if (envId) thumbs.push({ a, envId });
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
-          a.prepend(h('img', { class: 'wf-game-thumb', src: `assets/games/arcade/${id}/env.png`, alt: '', width: 1024, height: 1024, loading: 'lazy', decoding: 'async' }));
+          a.prepend(medal('arcade', id, 96));
         }
         return h('li', {}, a);
       })));

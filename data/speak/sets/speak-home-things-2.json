@@ -14,7 +14,7 @@
    "translit": "kal",
    "en": "light (of low weight)",
    "kind": "word",
-   "audioId": "hadfa84bd",
+   "audioId": "soundgap-resh-0-b",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "tzafah",
    "en": "to watch",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h89e2dc0a",
    "source": "data/vocab/words.json"
   },
   {
@@ -86,7 +86,7 @@
    "translit": "kufsah",
    "en": "a box or other container or receptacle for storage or transport",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h2d2dc4db",
    "source": "data/vocab/words.json"
   },
   {

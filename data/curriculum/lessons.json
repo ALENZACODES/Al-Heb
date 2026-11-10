@@ -1305,7 +1305,8 @@
    "estMinutes": 20,
    "prerequisites": [
     "r33"
-   ]
+   ],
+   "note": "The second goal is to recognise geresh (׳) and gershayim (״) when they appear in a printed siddur. A pointed example already in this project is the calendar date ט״וּ בִּשְׁבָט (the 15th of Shevat, in data/calendar/days.json), where the gershayim mark the number 15. Siddur abbreviations use the same marks. This lesson does not add a new Hebrew word of its own."
   },
   {
    "id": "r35",
@@ -1979,7 +1980,8 @@
    "estMinutes": 30,
    "prerequisites": [
     "r50"
-   ]
+   ],
+   "note": "After this belt, the recommended next step for someone who also wants everyday Israeli Hebrew is the Israel path beginning at il01. I-19 and I-50 are where the two paths meet. This lesson does not require them."
   },
   {
    "id": "il01",
@@ -2030,7 +2032,8 @@
     "Greet and thank in Hebrew without switching to English"
    ],
    "estMinutes": 20,
-   "prerequisites": []
+   "prerequisites": [],
+   "note": "If you already finished the read path through r51, you will meet some of the same words here as everyday speech. This path does not teach how to follow a new siddur page; r50 and r51 do that. Shabbat invitations and holiday greetings that connect the two paths come later, in I-19 and I-50."
   },
   {
    "id": "il02",
@@ -3551,7 +3554,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "hffd88aa2#forms.future"
+      "id": "p07b88d14"
      }
     },
     {
@@ -5159,7 +5162,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "h5b150aaf"
+      "id": "h4700de9c"
      }
     },
     {
@@ -5594,14 +5597,22 @@
     }
    ],
    "prayerLines": [
-    "birkat-hamazon-1",
-    "yehalelu",
-    "havdalah-opening"
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
    ],
    "goals": [
     "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
-    "Recognise the Psalm 118 lines that are sung responsively",
-    "Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur"
+    "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in ALEF",
+    "Know that the rest of Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is not in ALEF yet; this lesson uses selected refrain verses only",
+    "Know that these refrains are sung on festivals, Rosh Chodesh and Hanukkah; I-29, I-30 and I-32 sit on those days"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -5629,10 +5640,9 @@
     },
     {
      "id": "I-07-e02",
-     "type": "spot",
-     "line": "birkat-hamazon-1",
-     "target": "חַסְדּוֹ",
-     "en": "his kindness"
+     "type": "order",
+     "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+     "en": "for his kindness is for ever"
     },
     {
      "id": "I-07-e03",
@@ -5655,11 +5665,14 @@
     },
     {
      "id": "I-07-e05",
-     "type": "spot",
-     "line": "yehalelu",
-     "target": "הַלְלוּ",
-     "en": "praise! (plural command)",
-     "lineIndex": 2
+     "type": "produce",
+     "en": "halleluyah: praise the LORD",
+     "options": [
+      "הַלְלוּ־יָהּ",
+      "כִּי לְעוֹלָם חַסְדּוֹ",
+      "אֵלִי אַתָּה"
+     ],
+     "answer": 0
     },
     {
      "id": "I-07-e06",
@@ -5720,10 +5733,9 @@
     },
     {
      "id": "I-07-e12",
-     "type": "spot",
-     "line": "havdalah-opening",
-     "target": "יְשׁוּעוֹת",
-     "en": "salvations"
+     "type": "order",
+     "he": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
+     "en": "I will lift the cup of salvation"
     },
     {
      "id": "I-07-e13",
@@ -5747,9 +5759,16 @@
       "הַלְלוּ־יָהּ"
      ],
      "answer": 0
+    },
+    {
+     "id": "I-07-e16",
+     "type": "fade",
+     "line": "hallel-118-1-4",
+     "lineIndex": 1,
+     "en": "Give thanks to the LORD, for he is good; his kindness is for ever."
     }
    ],
-   "note": "Hallel itself is a corpus gap (g-hallel). This lesson teaches only refrain fragments whose words are all present in the corpus or the vocabulary file; 'hodu' is not in any source file, so the first word of the refrain cannot be shown. Register the full Hallel in the registry before extending this lesson."
+   "note": "Selected Hallel refrain verses are now in the registry (hallel-113-1, 115-1, 116-13, 117, 118:1-6, 118:24-25, 118:28). The rest of Psalms 113-118, half-Hallel, and the repetitions remain a corpus gap (g-hallel). This lesson does not present those selected verses as the complete Hallel."
   },
   {
    "id": "I-08",
@@ -5960,7 +5979,8 @@
    "goals": [
     "Read the first paragraph of Aleinu at the speed it is said",
     "Find the words where many congregations bow",
-    "Say the closing 'ein od' line from memory"
+    "Say the closing 'ein od' line from memory",
+    "Know that the wording here follows Edot HaMizrach; some Ashkenazi books word the bowing line differently"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -6740,7 +6760,7 @@
    "goals": [
     "Recognise the opening of Mi Shebeirach and answer it",
     "Answer Birkat Hagomel with the congregation's response",
-    "Answer Shehecheyanu with Amen, and the Priestly Blessing with Amen or Ken yehi ratzon"
+    "Answer Shehecheyanu with Amen, and answer the Priestly Blessing said by the leader with 'Ken yehi ratzon' (when kohanim bless, the answer is Amen)"
    ],
    "estMinutes": 35,
    "prerequisites": [
@@ -7280,7 +7300,7 @@
      ]
     }
    ],
-   "note": "'Rav-Kav' and 'platform' are from the vocabulary file; there is no source line for 'validate' or 'to load the card', so those are not taught."
+   "note": "'Rav-Kav' and 'platform' are from the vocabulary file; there is no source line for 'validate' or 'to load the card', so those are not taught. This is the first intermediate lesson on the Israel path. Shabbat invitations (I-19) and holiday greetings (I-50) are the later lessons that meet the synagogue path; this lesson cannot list those synagogue lessons as prerequisites."
   },
   {
    "id": "I-12",
@@ -8986,15 +9006,15 @@
      }
     },
     {
-     "he": "מִטְעָן",
-     "en": "charger",
+     "he": "מַטְעֵן",
+     "en": "charger (for a phone or battery)",
      "translit": null,
      "pronunciation": {
-      "israeli": "mit'an"
+      "israeli": "mat'en"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "hed3878d2"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-maten"
      }
     },
     {
@@ -9148,7 +9168,7 @@
        "en": "battery"
       },
       {
-       "he": "מִטְעָן",
+       "he": "מַטְעֵן",
        "en": "charger"
       },
       {
@@ -9166,7 +9186,7 @@
      "type": "respond",
      "cue": "Your battery is dead. Ask for a charger.",
      "answer": {
-      "he": "יֵשׁ לְךָ מִטְעָן?",
+      "he": "יֵשׁ לְךָ מַטְעֵן?",
       "en": "Do you have a charger?"
      }
     },
@@ -9227,7 +9247,7 @@
      "options": [
       "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
       "אָבַד לִי הַטֶּלֶפוֹן",
-      "יֵשׁ לְךָ מִטְעָן?"
+      "יֵשׁ לְךָ מַטְעֵן?"
      ],
      "answer": 0
     },
@@ -9447,7 +9467,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "h5b150aaf"
+      "id": "h4700de9c"
      }
     }
    ],
@@ -9679,14 +9699,14 @@
     },
     {
      "he": "מִלּוּאִים",
-     "en": "reserve duty",
+     "en": "reserve duty (IDF)",
      "translit": null,
      "pronunciation": {
       "israeli": "milu'im"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "h8601ee5c"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-miluim"
      }
     },
     {
@@ -10440,7 +10460,7 @@
      ]
     }
    ],
-   "note": "'kosher' and 'shomer Shabbat' have no pointed token in the sources and are not taught."
+   "note": "'kosher' and 'shomer Shabbat' have no pointed token in the sources and are not taught. Friday-night Kiddush and Havdalah, as they are said in the service, are taught on the read path in I-05 and I-06. This Israel-path lesson cannot list them as prerequisites; treat them as companions."
   },
   {
    "id": "I-20",
@@ -10502,7 +10522,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "ha7545fff#forms.feminine"
+      "id": "h18108dff"
      }
     },
     {
@@ -13678,6 +13698,20 @@
       "file": "data/vocab/words.json",
       "id": "h9a1ab3f5"
      }
+    },
+    {
+     "he": "גְּמַר חֲתִימָה טוֹבָה",
+     "en": "a good final sealing (Yom Kippur greeting)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-gmar"
+     },
+     "pronunciation": {
+      "israeli": "gemar chatimah tovah",
+      "sephardi": "gemar chatimah tovah",
+      "ashkenazi": "gemar chasimoh tovoh"
+     }
     }
    ],
    "prayerLines": [
@@ -13690,8 +13724,9 @@
    ],
    "goals": [
     "Know the one day a year when 'Baruch shem' is said aloud and answer it",
-    "Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness",
-    "Say 'a good year' and ask and give forgiveness politely"
+    "Recognise the Yom Kippur words: fast, atonement, shofar at the close, forgiveness",
+    "Greet people with 'gmar chatimah tovah' on Yom Kippur (not only 'shanah tovah', which belongs to Rosh Hashana and the days around it)",
+    "Know that Kol Nidrei and most of the Yom Kippur liturgy are not in ALEF yet"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -13853,6 +13888,15 @@
      "type": "recall",
      "he": "סְלִיחוֹת",
      "en": "penitential prayers"
+    },
+    {
+     "id": "I-28-e16",
+     "type": "respond",
+     "cue": "It is Yom Kippur. Greet your neighbour.",
+     "answer": {
+      "he": "גְּמַר חֲתִימָה טוֹבָה",
+      "en": "A good final sealing."
+     }
     }
    ],
    "note": "Most Yom Kippur liturgy is a corpus gap: g-high-holidays is out of scope, and Kol Nidre, Avinu Malkenu, the confession (Vidui), Unetaneh Tokef and Ne'ilah have no entry. This lesson teaches only vocabulary from words.json and the Shema lines (the quiet Baruch shem line is said aloud on Yom Kippur)."
@@ -14053,19 +14097,35 @@
        "קִדּוּשׁ"
       ]
      }
+    },
+    {
+     "he": "חַג כָּשֵׁר וְשָׂמֵחַ",
+     "en": "a kosher and happy holiday (Pesach greeting)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-kasher"
+     },
+     "pronunciation": {
+      "israeli": "chag kasher vesameach",
+      "sephardi": "chag kasher vesameach",
+      "ashkenazi": "chag kosheir vesomeiach"
+     }
     }
    ],
    "prayerLines": [
     "kiddush-wine-1",
-    "kiddush-shabbat-eve",
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-eve-close",
     "shehecheyanu",
     "mi-chamocha-1",
     "hamotzi"
    ],
    "goals": [
     "Say the wine blessing and the Shehecheyanu that open the seder",
-    "Find 'the exodus from Egypt' in the Kiddush text",
-    "Wish 'chag sameach', and know that the Haggadah is not in ALEF yet"
+    "Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'",
+    "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts ALEF still does not hold"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -14134,7 +14194,7 @@
     {
      "id": "I-29-e06",
      "type": "spot",
-     "line": "kiddush-shabbat-eve",
+     "line": "kiddush-festival-eve-close",
      "target": "מִצְרָיִם",
      "en": "Egypt"
     },
@@ -14213,7 +14273,7 @@
     {
      "id": "I-29-e13",
      "type": "respond",
-     "cue": "The seder begins with Kiddush over wine, then the long Kiddush blessing ends 'mekadesh'. Answer.",
+     "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer amen. The festival Kiddush that follows names 'this Festival of Matzot, the time of our freedom' and ends 'who sanctifies Israel and the seasons'.",
      "answer": {
       "he": "אָמֵן",
       "en": "Amen"
@@ -14224,9 +14284,32 @@
      "type": "fade",
      "line": "hamotzi",
      "en": "Blessed are you... who brings forth bread from the earth."
+    },
+    {
+     "id": "I-29-e15",
+     "type": "produce",
+     "en": "a kosher and happy holiday (Pesach greeting)",
+     "options": [
+      "חַג כָּשֵׁר וְשָׂמֵחַ",
+      "שָׁנָה טוֹבָה",
+      "שַׁבָּת שָׁלוֹם"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "I-29-e16",
+     "type": "fade",
+     "line": "kiddush-festival-pesach",
+     "en": "this Festival of Matzot, the time of our freedom"
+    },
+    {
+     "id": "I-29-e17",
+     "type": "fade",
+     "line": "kiddush-festival-eve-close",
+     "en": "...a remembrance of the exodus from Egypt... who makes Israel and the seasons holy."
     }
    ],
-   "note": "The Haggadah (Mah Nishtanah, the four sons, Dayenu, Hallel, the Four Questions) is not in any source file; g-hallel, g-festival-kiddush and the matzo blessings are gaps, and the festival Kiddush text is replaced here by the Shabbat Kiddush lines in the registry. The holiday Kiddush is a gap (g-festival-kiddush); do not treat I-29 as a seder guide."
+   "note": "The weekday festival Kiddush (opening, Pesach insert, and close) is now in the registry from Sefaria Torat Emet 357. The Haggadah (Mah Nishtanah, the four sons, Dayenu, the Four Questions) is not; the matzo blessings and the rest of Hallel remain gaps (g-hallel still names the unsourced psalm verses). Do not treat I-29 as a complete seder guide. The Friday-night Shabbat Kiddush is a related but different blessing and is not used here as a stand-in. The same weekday festival-Kiddush pattern, with different inserts, is used on Shavuot (kiddush-festival-shavuot) and Shemini Atzeret (kiddush-festival-shemini); those inserts are in the registry but this lesson stays with Pesach."
   },
   {
    "id": "I-30",
@@ -14428,14 +14511,15 @@
    "prayerLines": [
     "shehecheyanu",
     "kiddush-wine-1",
-    "hamotzi",
-    "havdalah-opening",
-    "kiddush-veshamru"
+    "kiddush-festival-sukkot",
+    "kiddush-festival-eve-close",
+    "leshev-basukkah",
+    "hamotzi"
    ],
    "goals": [
     "Greet people with chag sameach and recognise the word sukkah",
-    "Say Shehecheyanu and the wine blessing at the sukkah",
-    "Know that the lulav blessing and Hallel are not in ALEF yet"
+    "Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah",
+    "Know that the lulav blessing, Hoshanot, and the rest of Hallel are not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -14558,10 +14642,9 @@
     {
      "id": "I-30-e12",
      "type": "spot",
-     "line": "havdalah-opening",
-     "target": "וְשָׂשׁוֹן",
-     "en": "joy, gladness",
-     "lineIndex": 1
+     "line": "leshev-basukkah",
+     "target": "בַּסֻּכָּה",
+     "en": "in the sukkah"
     },
     {
      "id": "I-30-e13",
@@ -14579,9 +14662,21 @@
       "חַג שָׂמֵחַ"
      ],
      "answer": 0
+    },
+    {
+     "id": "I-30-e15",
+     "type": "fade",
+     "line": "leshev-basukkah",
+     "en": "Blessed are you... who commanded us to dwell in the sukkah."
+    },
+    {
+     "id": "I-30-e16",
+     "type": "fade",
+     "line": "kiddush-festival-sukkot",
+     "en": "this Festival of Sukkot, the time of our gladness"
     }
    ],
-   "note": "Lulav and etrog, the Hallel and Hoshanot, Hakafot, Simchat Torah and Shemini Atzeret texts are not in any source file (g-hallel, g-festival-kiddush, g-high-holidays). The words lulav, etrog and ushpizin have no pointed token, so they are left out."
+   "note": "Leshev basukkah and the weekday festival Kiddush (including the Sukkot insert) are now in the registry from Sefaria Torat Emet 357. Lulav and etrog, Hoshanot, Hakafot, and Shemini Atzeret / Simchat Torah liturgy beyond the Kiddush insert are not (g-festival-kiddush still names the festival Amidah; g-hallel names the unsourced Hallel verses). The words lulav, etrog and ushpizin have no pointed token in the source files, so they are left out."
   },
   {
    "id": "I-31",
@@ -14763,11 +14858,10 @@
    ],
    "prayerLines": [
     "hanukkah-nissim",
-    "shehecheyanu",
-    "hagomel"
+    "shehecheyanu"
    ],
    "goals": [
-    "Say the blessing for miracles used on Purim and Hanukkah",
+    "Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (ALEF stores that wording with the Hanukkah source)",
     "Greet and toast in Hebrew",
     "Know that the Megillah reading is not in ALEF yet"
    ],
@@ -14790,7 +14884,7 @@
      "id": "I-31-e01",
      "type": "fade",
      "line": "hanukkah-nissim",
-     "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time."
+     "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time. (Same wording on Purim and Hanukkah.)"
     },
     {
      "id": "I-31-e02",
@@ -15138,7 +15232,8 @@
    "goals": [
     "Say the candle-lighting blessing and answer Amen",
     "Follow the order of blessings on the first night",
-    "Read the first lines of Hanerot Halalu and Maoz Tzur"
+    "Read the first lines of Hanerot Halalu and Maoz Tzur",
+    "Know that the candle blessing here follows Edot HaMizrach, 'ner Chanukah'; Ashkenaz often says 'ner shel Chanukah'"
    ],
    "estMinutes": 35,
    "prerequisites": [
@@ -15177,7 +15272,7 @@
     {
      "id": "I-32-e04",
      "type": "respond",
-     "cue": "The first blessing ends 'ner Chanukah'. Answer.",
+     "cue": "The first blessing ends 'ner Chanukah' (Edot HaMizrach wording; Ashkenaz often says 'ner shel Chanukah'). Answer.",
      "answer": {
       "he": "אָמֵן",
       "en": "Amen"
@@ -16833,15 +16928,15 @@
      }
     },
     {
-     "he": "קוֹרֵס",
-     "en": "course",
+     "he": "קוּרְס",
+     "en": "a course (a class)",
      "translit": null,
      "pronunciation": {
-      "israeli": "kores"
+      "israeli": "kurs"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "h130a0158#forms.present"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-kurs"
      }
     },
     {
@@ -16929,8 +17024,8 @@
     {
      "id": "I-37-e02",
      "type": "gender",
-     "m": "אֲנִי רוֹצֶה קוֹרֵס",
-     "f": "אֲנִי רוֹצָה קוֹרֵס",
+     "m": "אֲנִי רוֹצֶה קוּרְס",
+     "f": "אֲנִי רוֹצָה קוּרְס",
      "en": "I want a course"
     },
     {
@@ -17818,15 +17913,15 @@
      }
     },
     {
-     "he": "מִפָּה",
-     "en": "map",
+     "he": "מַפָּה",
+     "en": "a map",
      "translit": null,
      "pronunciation": {
-      "israeli": "mipah"
+      "israeli": "mapah"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "hb63f1e69"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-mapah"
      }
     },
     {
@@ -17886,7 +17981,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "hd53e0a60"
+      "id": "hc5d024c3"
      }
     }
    ],
@@ -17930,7 +18025,7 @@
        "en": "route"
       },
       {
-       "he": "מִפָּה",
+       "he": "מַפָּה",
        "en": "map"
       }
      ]
@@ -18509,7 +18604,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "h0a70642a#forms.feminine"
+      "id": "h1306c935"
      }
     },
     {
@@ -21038,7 +21133,7 @@
    "track": "israel",
    "level": "B1",
    "unit": "israel",
-   "title": "Holiday greetings by festival: who says what, and when",
+   "title": "Holiday greetings by festival, plus everyday wishes",
    "status": "draft",
    "proofread": false,
    "needsNativeReview": true,
@@ -21131,7 +21226,7 @@
     },
     {
      "he": "תִּשְׁמֹר עַל עַצְמְךָ",
-     "en": "take care of yourself",
+     "en": "take care of yourself (said to a man)",
      "translit": null,
      "pronunciation": {
       "israeli": "tishmor al atzmekha"
@@ -21188,13 +21283,37 @@
       "file": "data/vocab/words.json",
       "id": "h33cf0d1b"
      }
+    },
+    {
+     "he": "גְּמַר חֲתִימָה טוֹבָה",
+     "en": "a good final sealing (Yom Kippur greeting)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-gmar"
+     },
+     "pronunciation": {
+      "israeli": "gemar chatimah tovah"
+     }
+    },
+    {
+     "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+     "en": "take care of yourself (said to a woman)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-tishmeri"
+     },
+     "pronunciation": {
+      "israeli": "tishmeri al atzmekh"
+     }
     }
    ],
    "prayerLines": [],
    "goals": [
-    "Choose the right greeting for Shabbat, a holiday, the new year and after Shabbat",
+    "Choose the right greeting for Shabbat, a festival, Rosh Hashana, Yom Kippur and after Shabbat",
     "Know which greetings are for a person and which are for a time",
-    "Reply naturally and keep the register neutral"
+    "Reply naturally; when a greeting is gendered, use the form that matches the person you are speaking to"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -21364,7 +21483,7 @@
      "id": "I-50-e14",
      "type": "register",
      "he": "תִּשְׁמֹר עַל עַצְמְךָ",
-     "en": "take care of yourself",
+     "en": "take care of yourself (said to a man)",
      "answer": "neutral",
      "options": [
       "formal",
@@ -21377,9 +21496,29 @@
      "type": "recall",
      "he": "בְּעֶזְרַת הַשֵּׁם",
      "en": "God willing"
+    },
+    {
+     "id": "I-50-e16",
+     "type": "respond",
+     "cue": "It is Yom Kippur. Greet your neighbour.",
+     "answer": {
+      "he": "גְּמַר חֲתִימָה טוֹבָה",
+      "en": "A good final sealing."
+     }
+    },
+    {
+     "id": "I-50-e17",
+     "type": "produce",
+     "en": "a good final sealing (Yom Kippur greeting)",
+     "options": [
+      "גְּמַר חֲתִימָה טוֹבָה",
+      "שָׁנָה טוֹבָה",
+      "שָׁבוּעַ טוֹב"
+     ],
+     "answer": 0
     }
    ],
-   "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it."
+   "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it. Liturgical forms for the same holidays live on the read track in I-28–I-32 (Yom Kippur, Pesach, Sukkot, Purim, Hanukkah). This Israel-track lesson cannot list those as prerequisites; treat them as companions, not as required earlier lessons."
   }
  ]
 }

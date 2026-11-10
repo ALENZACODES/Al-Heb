@@ -6,7 +6,7 @@
  "notice": "See how each tradition says the same word.",
  "description": "Lookup shards for the Compare traditions view. Entry: [ipaIsraeli, ipaSephardi, ipaAshkenazi, respelling Israeli+Sephardi, respelling Ashkenazi, codes, stressRuleIds]. Shard = shardOf(wordKey(word), shards) in src/pronunciation/compare.model.js.",
  "shards": 6,
- "words": 6988,
+ "words": 7047,
  "files": [
   "lookup-01.json",
   "lookup-02.json",

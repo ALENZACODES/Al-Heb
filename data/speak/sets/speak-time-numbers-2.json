@@ -32,7 +32,7 @@
    "translit": "boker",
    "en": "a morning, dawn",
    "kind": "word",
-   "audioId": null,
+   "audioId": "plene-o-defective",
    "source": "data/vocab/words.json"
   },
   {
@@ -50,7 +50,7 @@
    "translit": "hitzbi'a",
    "en": "to point at (using one's finger)",
    "kind": "word",
-   "audioId": null,
+   "audioId": "h7bd1602a",
    "source": "data/vocab/words.json"
   },
   {
@@ -95,7 +95,7 @@
    "translit": "dakah",
    "en": "minute",
    "kind": "word",
-   "audioId": null,
+   "audioId": "hbb3bc5fd",
    "source": "data/vocab/words.json"
   },
   {

@@ -7,7 +7,7 @@ Every Hebrew item a Brain Lab game shows, checked against the recordings the gam
 | Game | Items | Recorded | Record first (1) | Next (2) | Later (3) |
 |---|---|---|---|---|---|
 | Calendar Puzzle | 27 | 4 | 10 | 0 | 13 |
-| Prayer Chain, Siddur Flash | 41 | 37 | 1 | 3 | 0 |
+| Prayer Chain, Siddur Flash | 48 | 37 | 6 | 5 | 0 |
 | Count Up, Number Ear | 18 | 17 | 0 | 1 | 0 |
 | Letter Pattern | 929 | 803 | 0 | 126 | 0 |
 | Sound Twins | 32 | 26 | 0 | 0 | 6 |
@@ -34,6 +34,11 @@ Priority 1: a game plays it, or asks for it by sound, and beginners meet it firs
 | Calendar Puzzle | `shavuot` | שָׁבוּעוֹת | Shavuot | missing | missing | Israeli clip for all three settings |
 | Calendar Puzzle | `tisha-bav` | תִּשְׁעָה בְּאָב | Tisha B'Av | missing | missing | Israeli clip for all three settings |
 | Prayer Chain, Siddur Flash | `torah-barchu` | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ | Barchu (call to the Torah blessing) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-pesach` | חַג הַמַּצּוֹת הַזֶּה זְמַן חֵרוּתֵנוּ׃ | Festival Kiddush insert: Pesach | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-shavuot` | חַג הַשָׁבוּעוֹת הַזֶּה זְמַן מַתַּן תּוֹרָתֵינוּ׃ | Festival Kiddush insert: Shavuot | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-sukkot` | חַג הַסֻּכּוֹת הַזֶּה זְמַן שִׂמְחָתֵנוּ׃ | Festival Kiddush insert: Sukkot | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-shemini` | שְׁמִינִי עֲצֶרֶת הַחַג הַזֶּה זְמַן שִׂמְחָתֵנוּ׃ | Festival Kiddush insert: Shemini Atzeret | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `leshev-basukkah` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לֵישֵׁב בַּסֻּכָּה׃ | Leshev basukkah (blessing to dwell in the sukkah) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 
 ## Next
 
@@ -43,6 +48,8 @@ Priority 1: a game plays it, or asks for it by sound, and beginners meet it firs
 | Prayer Chain, Siddur Flash | `hagomel` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ | Birkat Hagomel (after recovery or safe travel) and the congregation's response | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 | Prayer Chain, Siddur Flash | `sim-shalom` | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Sim shalom (peace blessing of the morning Amidah) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 | Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-eve-open` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ יְהוָה אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃ | Festival evening Kiddush: opening (weekday form) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `kiddush-festival-eve-close` | מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וּמוֹעֲדֵי קָדְשֶׁךָ בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים׃ | Festival evening Kiddush: close (weekday form) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
 
 Letter Pattern words without a recording are listed only in the CSV: 0 beginner words (level A1 or A2, priority 1), 126 at priority 2.
 

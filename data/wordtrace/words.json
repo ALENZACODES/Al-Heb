@@ -3318,9 +3318,9 @@
    "pointing": "course-data"
   },
   {
-   "he": "מִפָּה",
+   "he": "מַפָּה",
    "plain": "מפה",
-   "en": "map",
+   "en": "a map",
    "letters": [
     "mem",
     "pe",
@@ -6041,6 +6041,24 @@
    "src": "lesson",
    "lesson": "I-34",
    "audio": "I-34-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּשִׂמְחָה",
+   "plain": "בשמחה",
+   "en": "gladly, with pleasure",
+   "letters": [
+    "bet",
+    "shin",
+    "mem",
+    "chet",
+    "he"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-19",
+   "audio": "I-19-w5",
    "pointing": "course-data"
   },
   {

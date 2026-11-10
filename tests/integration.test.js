@@ -327,7 +327,7 @@ test('shard loader: loads the learner tradition plus the Israeli shard it plays 
   const shards = { israeli: mk('israeli', 'a'), ashkenazi: [
     ...mk('ashkenazi', 'b'),
     ...mk('ashkenazi', 'retired').map((e) => ({ ...e, status: 'tts', source: 'paid-cloud' })),
-  ] }; // no Sephardi shard; generic TTS is not an admitted Ashkenazi source
+  ] }; // no Sephardi shard; paid-cloud Ashkenazi bank clips now play; human recordings still do
   const calls = []; let offline = false;
   const fakeFetch = async (u) => {
     calls.push(u);
@@ -346,7 +346,7 @@ test('shard loader: loads the learner tradition plus the Israeli shard it plays 
   const own = player.status('word', 'b');
   assert.equal(own.source, 'file', 'a human recording is admitted for its own tradition');
   assert.equal(own.path, 'audio/f/ashkenazi/word/b.mp3');
-  assert.notEqual(player.status('word', 'retired').source, 'file', 'generic TTS not admitted by ACCENT_SOURCES stays retired');
+  assert.equal(player.status('word', 'retired').source, 'file', 'a present paid-cloud Ashkenazi bank clip plays as itself');
   const israeliFallback = player.status('word', 'a');
   assert.equal(israeliFallback.source, 'file', 'an Israeli-only word plays its Israeli clip under the Ashkenazi setting');
   assert.equal(israeliFallback.fileTradition, 'israeli');

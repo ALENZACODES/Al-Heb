@@ -1,6 +1,6 @@
 {
  "schema": "alef-speak-sets/1",
- "generated": "2026-11-07",
+ "generated": "2026-11-10",
  "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
  "count": 61,
  "sets": [
@@ -42,7 +42,7 @@
    "track": "israel",
    "pack": "survival-fillers-1",
    "size": 11,
-   "withClip": 3
+   "withClip": 4
   },
   {
    "id": "speak-survival-greetings-1",
@@ -202,7 +202,7 @@
    "track": "both",
    "pack": "general-things-1",
    "size": 12,
-   "withClip": 10
+   "withClip": 11
   },
   {
    "id": "speak-nature-animals-1",
@@ -292,7 +292,7 @@
    "track": "both",
    "pack": "home-things-1",
    "size": 12,
-   "withClip": 8
+   "withClip": 9
   },
   {
    "id": "speak-places-travel-1",
@@ -312,7 +312,7 @@
    "track": "israel",
    "pack": "school-learning-1",
    "size": 12,
-   "withClip": 7
+   "withClip": 8
   },
   {
    "id": "speak-tech-media-1",
@@ -322,7 +322,7 @@
    "track": "israel",
    "pack": "tech-media-1",
    "size": 12,
-   "withClip": 5
+   "withClip": 9
   },
   {
    "id": "speak-arts-sports-1",
@@ -342,7 +342,7 @@
    "track": "both",
    "pack": "doing-verbs-2",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-small-words-2",
@@ -362,7 +362,7 @@
    "track": "israel",
    "pack": "body-health-2",
    "size": 12,
-   "withClip": 5
+   "withClip": 7
   },
   {
    "id": "speak-feelings-mind-2",
@@ -372,7 +372,7 @@
    "track": "israel",
    "pack": "feelings-mind-2",
    "size": 12,
-   "withClip": 9
+   "withClip": 11
   },
   {
    "id": "speak-general-things-2",
@@ -432,7 +432,7 @@
    "track": "both",
    "pack": "religion-prayer-2",
    "size": 12,
-   "withClip": 4
+   "withClip": 5
   },
   {
    "id": "speak-science-ideas-2",
@@ -442,7 +442,7 @@
    "track": "both",
    "pack": "science-ideas-2",
    "size": 12,
-   "withClip": 5
+   "withClip": 10
   },
   {
    "id": "speak-society-work-law-2",
@@ -452,7 +452,7 @@
    "track": "israel",
    "pack": "society-work-law-2",
    "size": 12,
-   "withClip": 2
+   "withClip": 3
   },
   {
    "id": "speak-time-numbers-2",
@@ -462,7 +462,7 @@
    "track": "both",
    "pack": "time-numbers-2",
    "size": 12,
-   "withClip": 5
+   "withClip": 8
   },
   {
    "id": "speak-describing-words-2",
@@ -492,7 +492,7 @@
    "track": "israel",
    "pack": "home-things-2",
    "size": 12,
-   "withClip": 5
+   "withClip": 7
   },
   {
    "id": "speak-tech-media-2",
@@ -502,7 +502,7 @@
    "track": "israel",
    "pack": "tech-media-2",
    "size": 12,
-   "withClip": 6
+   "withClip": 8
   },
   {
    "id": "speak-describing-words-3",
@@ -542,7 +542,7 @@
    "track": "israel",
    "pack": "body-health-3",
    "size": 12,
-   "withClip": 4
+   "withClip": 5
   },
   {
    "id": "speak-doing-verbs-3",
@@ -552,7 +552,7 @@
    "track": "both",
    "pack": "doing-verbs-3",
    "size": 12,
-   "withClip": 0
+   "withClip": 2
   },
   {
    "id": "speak-nature-animals-3",
@@ -562,7 +562,7 @@
    "track": "both",
    "pack": "nature-animals-3",
    "size": 12,
-   "withClip": 4
+   "withClip": 6
   },
   {
    "id": "speak-religion-prayer-3",

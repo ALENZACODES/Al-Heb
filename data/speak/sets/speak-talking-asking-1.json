@@ -23,7 +23,7 @@
    "translit": "diber",
    "en": "to speak (say words)",
    "kind": "word",
-   "audioId": "h5e4080cc",
+   "audioId": "soundgap-vav-bet-1-b",
    "source": "data/vocab/words.json"
   },
   {
@@ -41,7 +41,7 @@
    "translit": "kara",
    "en": "to read",
    "kind": "word",
-   "audioId": "h8ff6123b",
+   "audioId": "soundgap-alef-ayin-4-a",
    "source": "data/vocab/words.json"
   },
   {

@@ -133,9 +133,7 @@ None of these was changed. Each needs a decision; a recommendation is given wher
    the second; the phrasebook line uses the first, so it was not changed); `אַרוּחַת בֹּקֶר` (il17) should be `אֲרוּחַת`, but it is the shared
    vocabulary record `pe9c62881` with its own audio, so it belongs to the vocabulary lane; Adon Olam `אִישָׁן` (registry) vs `אִישַׁן`
    (I-09 word and exercise); I-22 `מָה כְּתֹבֶת?` should be `מָה הַכְּתֹבֶת?`, but `הַכְּתֹבֶת` is not attested in the data.
-5. **Content gaps a rabbi will notice**: the Yom Kippur greetings ("g'mar chatimah tovah", which the day page has, and "tzom kal") are not in
-   I-28 or I-50 (adding them was tried: `גְּמַר` is in no vocabulary or corpus source the lessons may draw on, so the
-   no-invented-Hebrew test rightly refused it; it needs a sourced entry first); I-31 (Purim) uses the Hagomel line only to spot a word; r34 says it teaches abbreviation marks but has no example word.
+5. **Content gaps a rabbi will notice**: I-50 now teaches `גְּמַר חֲתִימָה טוֹבָה` (moved to the end of that lesson's word list so existing audio ids stay stable) as the Yom Kippur greeting, alongside `שָׁנָה טוֹבָה` for Rosh Hashana. `צוֹם קַל` is still absent: it is not in the sources the lessons may draw on, so it stays a named gap rather than invented Hebrew. I-31 (Purim) still uses the Hagomel line only to spot a word. r34 now points at the already-sourced calendar date `ט״וּ בִּשְׁבָט` as a gershayim example and does not invent a siddur abbreviation.
 6. **Lesson titles are sentence case** ("Shin and Bet: your first two letters"); the house rule is Title Case. Left for the copy lane.
 7. **Branch name.** This work sits on the lane branch the brief named, which does not follow the `john/<topic>-<date>` pattern in
    `CONTRIBUTING.md`; `sh tools/git/branch-cleanup.sh --apply` renames it when the work is merged.
@@ -151,17 +149,15 @@ synagogue lessons (I-01 to I-10, I-26 to I-35) by a cantor; the prayer notes in 
 
 ## Score
 
-Lane C, rabbi appeal and lesson sense: **78 / 100** after this pass (an estimate, not a measurement; before it, about 68: the course order
-was already sound, but the leader's Priestly Blessing, the Birkat Hamazon Amen, "Gentlemen", "shavua tov" on Friday night and dev wording
-in goals are the kind of slips a rabbi stops at).
+Lane C, rabbi appeal and lesson sense: **81 / 100** after the later 10 November 2026 passes (an estimate, not a measurement; the 78 was from the first overnight pass, and about 68 before that). The later lift is the I-50 Yom Kippur greeting, the r34 gershayim example, named tradition wording on I-08 / I-32 / I-28, and the Judaic-to-Israeli companion notes on il01, r51, I-11 and I-19. None of those lines is clergy-reviewed.
 
-What would raise it:
+What would still raise it:
 - One Ashkenazi-based prayer text, re-sourced with network access (+6).
 - John's decisions on the eight name items above, then applied (+4).
 - Reform optional lines (matriarchs, Aleinu alternative) from a licensed source (+4).
 - A cantor's pass over the 20 synagogue lessons and a native speaker's over the 30 Israel lessons (+6, and it is the only thing that
   lets any line be marked reviewed).
-- Yom Kippur and festival greetings in I-28 and I-50, and an example word in r34 (+2).
+- A sourced `צוֹם קַל` and festival-specific greetings that still have no pointed tokens (+1).
 
 ## Round 2 (2026-11-10, later the same night)
 
@@ -190,3 +186,75 @@ demand, and the grammar notes say they are not yet reviewed by a teacher.
 ### Score
 
 **81 / 100** (estimate). The gain is the unit structure and drills; the rest of the plan above needs a decision, a source or a person.
+
+## Round 3 (Review Round 2 of 5)
+
+### Gaps Closed
+
+- **Two parallel courses.** The Practical course on `feature/lesson-integrity-2026-11-10` (`#/practical`, 33 units) and this
+  branch's `#/israel-units` cover the same ground. The plan now converges on `#/practical` and retires `#/israel-units` at merge
+  ([`../curriculum/PRACTICAL-200-PAGE-PLAN.md`](../curriculum/PRACTICAL-200-PAGE-PLAN.md)).
+- **Lessons with no unit.** il16, il19, il23, il24 and I-18 had no Practical unit. Three units were added (`pu-verbs`,
+  `pu-conversation`, `pu-army`), and a test now fails if any Israel-track lesson is left out.
+- **Grammar notes that described files.** The Practical branch's page notes read "This page uses only Hebrew already stored in
+  data/corpus/phrasebook.json…". The first 20 pages now have real grammar points, and a test bans file talk in a page note.
+- **Woman's forms missing.** The phrasebook gives only the man's form of how are you, I'm sorry, I don't understand and do you
+  speak English. The audio manifests hold both forms with clips, so the pages teach them as pairs.
+
+### Built This Round
+
+- A 194-page outline in 36 units and five levels, with ids, kinds, titles, routes and lesson links
+  (`data/curriculum/practical-pages/outline.json`).
+- The first 20 pages written in full: 103 items with pointed Hebrew, transliteration, English and clip ids; 20 grammar points;
+  speaking prompts; listening rounds; spaced review of earlier items (now `written.json`, readable copy in
+  [`../curriculum/PRACTICAL-WRITTEN-PAGES.md`](../curriculum/PRACTICAL-WRITTEN-PAGES.md)).
+- A v3 page schema that only adds optional fields to the v2 page (`page.schema.json`).
+- 10 tests. Every Hebrew line must match its source byte for byte after NFC normalisation. Grammar Hebrew must come from the
+  page's own items or earlier ones. Clips must be in a manifest in both voices, or be marked as gaps. Review items must come from
+  earlier pages. The outline must have 100 to 200 pages and cover every lesson.
+
+### Score
+
+**85 / 100** (estimate). Raised by the outline, the 20 written pages and the convergence plan. To raise it further:
+
+- the merge decision and v3 support in `practical.view.js` (+3)
+- the remaining 174 pages to the same standard (+4)
+- native-speaker and cantor review (+6)
+- John's decisions on the divine-name holds (+2)
+
+## Round 4 (Review Round 3 of 5)
+
+### Plan to Reach 95 to 100
+
+| Step | Gain | Status |
+|---|---|---|
+| Fix lesson words that mean something else, and the clips that say them | +2 | built: charger, course and map, with clip rows marked missing and a clip-text test |
+| Finish level 0 of the Practical course | +2 | built: 30 of 30 level-0 pages written |
+| Merge decision and v3 support in the Practical view | +3 | waiting for John |
+| Clips for corrected words and dialogue lines | +1 | needs a rendering run |
+| Native-speaker and cantor review; divine-name decisions | +6 | needs people and John |
+
+### Score
+
+**88 / 100** (estimate). See [`BRANCH-REVIEW-2026-11-10-R3.md`](BRANCH-REVIEW-2026-11-10-R3.md).
+
+## Round 5 (Review Round 4 of 5)
+
+Built:
+- **Merge.** The feature branch is merged into this branch, so one green lesson branch carries both the live Practical course and
+  the liturgy fixes.
+- **Written pages in the live view.** The 30 written pages now show in `#/practical`.
+- **Learner copy.** File-talk is stripped from the draft pages' grammar notes, and the intro line is plainer.
+- **Tests.** Seven new tests, two of them rendering real pages.
+
+Review: [`BRANCH-REVIEW-2026-11-10-R4.md`](BRANCH-REVIEW-2026-11-10-R4.md). **90 / 100** (estimate).
+
+## Round 6 (Review Round 5 of 5)
+
+Built:
+- **Failed clips pulled for good.** The 67 items whose clips failed are now hidden through a committed list. Before, the hiding
+  depended on an untracked file.
+- **The cafe unit written in full.** All ten `pu-cafe` pages are written, for 40 written pages.
+- **Reply on the fails.** `PRACTICAL-FIXES-r2.md`: all 67 kept as sourced and pulled from learner pages; none rewritten.
+
+Final review: [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md). **91 / 100** (estimate).

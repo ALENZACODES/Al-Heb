@@ -6,7 +6,7 @@
   "hebrew-in-gloss": 0,
   "verb-gloss-form": 3,
   "duplicate-lemma-pointed": 62,
-  "circular-gloss": 21,
+  "circular-gloss": 16,
   "furtive-patach-translit": 0
  },
  "hits": {
@@ -427,22 +427,10 @@
   ],
   "circular-gloss": [
    {
-    "key": "v390aa9b9",
-    "lemma": "בנק",
-    "pointed": "בַּנְק",
-    "detail": "bank = bank"
-   },
-   {
     "key": "vcdca8789",
     "lemma": "גנרל",
     "pointed": "גֶּנֶרָל",
     "detail": "general = general"
-   },
-   {
-    "key": "vdee4ee61",
-    "lemma": "פין",
-    "pointed": "פִּין",
-    "detail": "pin = pin"
    },
    {
     "key": "v6cee62cc",
@@ -481,12 +469,6 @@
     "detail": "ego = ego"
    },
    {
-    "key": "v1d519995",
-    "lemma": "גו",
-    "pointed": "גּוֹ",
-    "detail": "go = go"
-   },
-   {
     "key": "v3b0e96d6",
     "lemma": "ביט",
     "pointed": "בִּיט",
@@ -503,12 +485,6 @@
     "lemma": "גולף",
     "pointed": "גּוֹלְף",
     "detail": "golf = golf"
-   },
-   {
-    "key": "v92bbb2f2",
-    "lemma": "טנק",
-    "pointed": "טַנְק",
-    "detail": "tank = tank"
    },
    {
     "key": "vdd742b63",
@@ -545,12 +521,6 @@
     "lemma": "אלמנט",
     "pointed": "אֵלֵמֶנְט",
     "detail": "element = element"
-   },
-   {
-    "key": "v35787d85",
-    "lemma": "סלמון",
-    "pointed": "סַלְמוֹן",
-    "detail": "salmon = salmon"
    }
   ],
   "furtive-patach-translit": []

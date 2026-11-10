@@ -6,7 +6,7 @@
   "removed": 2,
   "translit": 173,
   "forms": 1,
-  "glosses": 74,
+  "glosses": 92,
   "hidden": 4,
   "examples": 56,
   "ipa": 23,
@@ -4505,6 +4505,132 @@
    "old": "amen",
    "new": "amen (so be it)",
    "reason": "sense-noise lane 2026-11-07: English gloss only, not a native-speaker review. The bare gloss \"amen\" repeats the transliteration and the audit marks it circular. Wiktionary defines אָמֵן as the agreement response \"amen\"; the English word means \"so be it\". https://en.wiktionary.org/wiki/%D7%90%D7%9E%D7%9F https://en.wiktionary.org/wiki/amen"
+  },
+  {
+   "id": "haf8e95dd",
+   "field": "en",
+   "old": "a recipe",
+   "new": "a (medical) prescription",
+   "reason": "In modern Hebrew מִרְשָׁם is a doctor's prescription; a cooking recipe is מִתְכּוֹן. Lesson I-14 already teaches the medical sense."
+  },
+  {
+   "id": "h64706707",
+   "field": "en",
+   "old": "arithmetic, mathematics",
+   "new": "arithmetic, mathematics; a bill or account",
+   "reason": "Align the words.json gloss with the already-overridden vocab5000 sense used in lessons I-21 and I-48."
+  },
+  {
+   "id": "h215beb3e",
+   "field": "en",
+   "old": "silver",
+   "new": "silver; money",
+   "reason": "Align the words.json gloss with the already-overridden vocab5000 sense used in lessons I-21 and I-48."
+  },
+  {
+   "id": "h0a69f537",
+   "field": "en",
+   "old": "to be pressed",
+   "new": "to perish, to be lost",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary and biblical usage have perish/be lost as the primary sense of אָבַד; \"to be pressed\" is a rare later listed sense and is not the learner meaning."
+  },
+  {
+   "id": "hc7778ee0",
+   "field": "en",
+   "old": "to be restored (of art)",
+   "new": "to be healed, to be cured",
+   "reason": "sense-noise lane 2026-11-10: רֻפָּא is the pual of רפא \"to heal\". \"Restored (of art)\" is not the Hebrew verb sense."
+  },
+  {
+   "id": "h54170135",
+   "field": "en",
+   "old": "an affliction of the skin, clothes, or house as a punishment for sins of speech",
+   "new": "tzaraat, a biblical affliction of skin, clothes or a house (often compared to leprosy)",
+   "reason": "sense-noise lane 2026-11-10: the current gloss treats a midrash (punishment for speech) as the definition. Wiktionary also lists the medical/biblical affliction sense; that is what a learner needs. Clergy can add the midrash."
+  },
+  {
+   "id": "h2761f10d",
+   "field": "en",
+   "old": "to be forced to volunteer, be voluntold",
+   "new": "to volunteer",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary and standard dictionaries: התנדב is \"to volunteer\". \"Voluntold\" is English slang and not the Hebrew sense."
+  },
+  {
+   "id": "hf6cc5993",
+   "field": "en",
+   "old": "the act of sticking with",
+   "new": "standing; the Amidah (the standing prayer)",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary lists standing as the first sense and the Amidah as the Jewish-liturgical sense. \"Sticking with\" is a secondary sense, not the learner meaning."
+  },
+  {
+   "id": "h80a9b98b",
+   "field": "en",
+   "old": "any instance of redness, even one that is not due to an immune response",
+   "new": "inflammation",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary marks the \"any redness\" sense as considered incorrect; the pathology sense is inflammation (Deut 28:22)."
+  },
+  {
+   "id": "h6dbe0be6",
+   "field": "en",
+   "old": "to be kashered",
+   "new": "to be made fit or approved; to be kashered",
+   "reason": "sense-noise lane 2026-11-10: הֻכְשַׁר is the hufal of הכשיר \"to make fit/qualify\", not only the kashrut sense."
+  },
+  {
+   "id": "hce2879fb",
+   "field": "en",
+   "old": "the Debir, the innermost part of the Holy of Holies in the First Temple",
+   "new": "the debir, the Holy of Holies (the innermost room of the Temple)",
+   "reason": "sense-noise lane 2026-11-10: דביר is the Holy of Holies itself, not a part inside it. Wiktionary synonym: קֹדֶשׁ הַקֳּדָשִׁים."
+  },
+  {
+   "id": "h33e8c3ac",
+   "field": "en",
+   "old": "numerator the number or expression written above the line in a fraction",
+   "new": "a meter or gauge; the numerator of a fraction; one who counts",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary lists the modern \"meter/gauge\" sense as well as the mathematical numerator; the current gloss only had the fraction sense."
+  },
+  {
+   "id": "hc83a9175",
+   "field": "en",
+   "old": "a sea creature from which tekhelet can be extracted, Hexaplex trunculus",
+   "new": "a snail or sea-snail; in Jewish law, the creature from which tekhelet dye is taken",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary: Modern Israeli sense is gastropod; the tekhelet chilazon is the Jewish-law sense. Both belong in the gloss."
+  },
+  {
+   "id": "he6cb9a45",
+   "field": "en",
+   "old": "go",
+   "new": "go (the board game)",
+   "reason": "sense-noise lane 2026-11-10: Wiktionary: גּוֹ is the board game go (and, separately, torso is usually גַּו). The bare gloss \"go\" is circular."
+  },
+  {
+   "id": "hc79f8a66",
+   "field": "en",
+   "old": "tank",
+   "new": "tank (an armored fighting vehicle)",
+   "reason": "sense-noise lane 2026-11-10: In modern Hebrew טַנְק is the military vehicle; a storage tank is typically מִיכָל. Disambiguated."
+  },
+  {
+   "id": "hf466322e",
+   "field": "en",
+   "old": "Salmon",
+   "new": "salmon (the fish)",
+   "reason": "sense-noise lane 2026-11-10: The gloss was capitalised as a proper name; the word is the fish (and the food)."
+  },
+  {
+   "id": "hf19f0a88",
+   "field": "en",
+   "old": "bank",
+   "new": "bank (a financial institution)",
+   "reason": "sense-noise lane 2026-11-10: Disambiguate the English loanword; a river bank in Hebrew is not usually בַּנְק."
+  },
+  {
+   "id": "h3a9e580d",
+   "field": "en",
+   "old": "pin",
+   "new": "pin (a peg or fastener)",
+   "reason": "sense-noise lane 2026-11-10: Disambiguate the English loanword (a peg or fastener, not a PIN code)."
   }
  ]
 }

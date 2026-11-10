@@ -1,0 +1,6285 @@
+{
+ "schema": "alef-practical-clip-map/1",
+ "tradition": "israeli",
+ "note": "Existing clip ids only. Gaps are listed in docs/curriculum/PRACTICAL-AUDIO-GAPS.md for the games lane to render with Google Cloud TTS. This file does not invent audio.",
+ "items": {
+  "pu-greetings|greetings-01": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-01",
+   "kind": "word",
+   "clipId": "greetings-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-02": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-02",
+   "kind": "word",
+   "clipId": "greetings-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-03": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-03",
+   "kind": "line",
+   "clipId": "greetings-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-04": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-04",
+   "kind": "line",
+   "clipId": "greetings-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-05": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-05",
+   "kind": "line",
+   "clipId": "greetings-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-06": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-06",
+   "kind": "line",
+   "clipId": "greetings-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-07": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-07",
+   "kind": "line",
+   "clipId": "greetings-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-08": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-08",
+   "kind": "line",
+   "clipId": "greetings-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-09": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-09",
+   "kind": "line",
+   "clipId": "greetings-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-10": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-10",
+   "kind": "line",
+   "clipId": "greetings-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-11": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-11",
+   "kind": "line",
+   "clipId": "greetings-11-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-12": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-12",
+   "kind": "line",
+   "clipId": "greetings-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-13": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-13",
+   "kind": "line",
+   "clipId": "greetings-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-14": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-14",
+   "kind": "line",
+   "clipId": "greetings-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-15": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-15",
+   "kind": "word",
+   "clipId": "greetings-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-16": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-16",
+   "kind": "word",
+   "clipId": "greetings-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-17": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-17",
+   "kind": "line",
+   "clipId": "greetings-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-18": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-18",
+   "kind": "line",
+   "clipId": "greetings-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-19": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-19",
+   "kind": "line",
+   "clipId": "greetings-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-20": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-20",
+   "kind": "word",
+   "clipId": "greetings-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-21": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-21",
+   "kind": "line",
+   "clipId": "greetings-21",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-22": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-22",
+   "kind": "line",
+   "clipId": "greetings-22-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-23": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-23",
+   "kind": "line",
+   "clipId": "greetings-23",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-24": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-24",
+   "kind": "line",
+   "clipId": "greetings-24",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-25": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-25",
+   "kind": "word",
+   "clipId": "greetings-25",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-26": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-26",
+   "kind": "word",
+   "clipId": "greetings-26",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|greetings-27": {
+   "unitId": "pu-greetings",
+   "itemId": "greetings-27",
+   "kind": "line",
+   "clipId": "greetings-27-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-greetings|il01-w2": {
+   "unitId": "pu-greetings",
+   "itemId": "il01-w2",
+   "kind": "word",
+   "clipId": "il01-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|il01-w3": {
+   "unitId": "pu-greetings",
+   "itemId": "il01-w3",
+   "kind": "word",
+   "clipId": "il01-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|il01-w4": {
+   "unitId": "pu-greetings",
+   "itemId": "il01-w4",
+   "kind": "word",
+   "clipId": "il01-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|il01-w5": {
+   "unitId": "pu-greetings",
+   "itemId": "il01-w5",
+   "kind": "word",
+   "clipId": "il01-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-greetings|il01-w6": {
+   "unitId": "pu-greetings",
+   "itemId": "il01-w6",
+   "kind": "word",
+   "clipId": "il01-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-01": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-01",
+   "kind": "word",
+   "clipId": "politeness-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-02": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-02",
+   "kind": "line",
+   "clipId": "politeness-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-03": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-03",
+   "kind": "word",
+   "clipId": "politeness-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-04": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-04",
+   "kind": "line",
+   "clipId": "politeness-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-05": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-05",
+   "kind": "line",
+   "clipId": "politeness-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-06": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-06",
+   "kind": "word",
+   "clipId": "politeness-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-07": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-07",
+   "kind": "line",
+   "clipId": "politeness-07-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-08": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-08",
+   "kind": "word",
+   "clipId": "politeness-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-09": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-09",
+   "kind": "word",
+   "clipId": "politeness-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-10": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-10",
+   "kind": "word",
+   "clipId": "politeness-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-11": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-11",
+   "kind": "word",
+   "clipId": "politeness-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-12": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-12",
+   "kind": "word",
+   "clipId": "politeness-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-13": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-13",
+   "kind": "word",
+   "clipId": "politeness-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-14": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-14",
+   "kind": "word",
+   "clipId": "politeness-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-15": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-15",
+   "kind": "word",
+   "clipId": "politeness-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-16": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-16",
+   "kind": "word",
+   "clipId": "politeness-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-17": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-17",
+   "kind": "line",
+   "clipId": "politeness-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-18": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-18",
+   "kind": "line",
+   "clipId": "politeness-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-19": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-19",
+   "kind": "word",
+   "clipId": "politeness-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-20": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-20",
+   "kind": "word",
+   "clipId": "politeness-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|politeness-22": {
+   "unitId": "pu-politeness",
+   "itemId": "politeness-22",
+   "kind": "line",
+   "clipId": "politeness-22",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|il01-w1": {
+   "unitId": "pu-politeness",
+   "itemId": "il01-w1",
+   "kind": "word",
+   "clipId": "il01-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-politeness|il01-w7": {
+   "unitId": "pu-politeness",
+   "itemId": "il01-w7",
+   "kind": "word",
+   "clipId": "il01-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-01": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-01",
+   "kind": "word",
+   "clipId": "fillers-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-02": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-02",
+   "kind": "word",
+   "clipId": "fillers-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-03": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-03",
+   "kind": "word",
+   "clipId": "fillers-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-04": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-04",
+   "kind": "word",
+   "clipId": "fillers-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-05": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-05",
+   "kind": "line",
+   "clipId": "fillers-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-06": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-06",
+   "kind": "word",
+   "clipId": "fillers-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-07": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-07",
+   "kind": "word",
+   "clipId": "fillers-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-08": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-08",
+   "kind": "word",
+   "clipId": "fillers-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-09": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-09",
+   "kind": "word",
+   "clipId": "fillers-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-10": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-10",
+   "kind": "word",
+   "clipId": "fillers-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-11": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-11",
+   "kind": "word",
+   "clipId": "fillers-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-12": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-12",
+   "kind": "word",
+   "clipId": "fillers-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-13": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-13",
+   "kind": "line",
+   "clipId": "fillers-13-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-14": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-14",
+   "kind": "line",
+   "clipId": "fillers-14-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-15": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-15",
+   "kind": "line",
+   "clipId": "fillers-15-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-16": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-16",
+   "kind": "line",
+   "clipId": "fillers-16-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-17": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-17",
+   "kind": "line",
+   "clipId": "fillers-17-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-18": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-18",
+   "kind": "line",
+   "clipId": "fillers-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-19": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-19",
+   "kind": "line",
+   "clipId": "fillers-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-20": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-20",
+   "kind": "line",
+   "clipId": "fillers-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-21": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-21",
+   "kind": "line",
+   "clipId": "fillers-21",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-22": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-22",
+   "kind": "line",
+   "clipId": "fillers-22",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|fillers-23": {
+   "unitId": "pu-fillers",
+   "itemId": "fillers-23",
+   "kind": "line",
+   "clipId": "fillers-23",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il02-w1": {
+   "unitId": "pu-fillers",
+   "itemId": "il02-w1",
+   "kind": "word",
+   "clipId": "il02-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il02-w3": {
+   "unitId": "pu-fillers",
+   "itemId": "il02-w3",
+   "kind": "word",
+   "clipId": "il02-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il02-w4": {
+   "unitId": "pu-fillers",
+   "itemId": "il02-w4",
+   "kind": "word",
+   "clipId": "il02-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il02-w5": {
+   "unitId": "pu-fillers",
+   "itemId": "il02-w5",
+   "kind": "word",
+   "clipId": "il02-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il02-w6": {
+   "unitId": "pu-fillers",
+   "itemId": "il02-w6",
+   "kind": "word",
+   "clipId": "il02-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il23-w1": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w1",
+   "kind": "word",
+   "clipId": "il23-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il23-w2": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w2",
+   "kind": "word",
+   "clipId": "il23-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il23-w3": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w3",
+   "kind": "word",
+   "clipId": "il23-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-01": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-01",
+   "kind": "word",
+   "clipId": "r18-w1",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-02": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-02",
+   "kind": "word",
+   "clipId": "numbers-02-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-03": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-03",
+   "kind": "word",
+   "clipId": "numbers-03-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-04": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-04",
+   "kind": "word",
+   "clipId": "numbers-04-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-05": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-05",
+   "kind": "word",
+   "clipId": "numbers-05-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-06": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-06",
+   "kind": "word",
+   "clipId": "numbers-06-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-07": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-07",
+   "kind": "word",
+   "clipId": "numbers-07-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-08": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-08",
+   "kind": "word",
+   "clipId": "numbers-08-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-09": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-09",
+   "kind": "word",
+   "clipId": "numbers-09-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-10": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-10",
+   "kind": "word",
+   "clipId": "numbers-10-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-11": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-11",
+   "kind": "word",
+   "clipId": "numbers-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-12": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-12",
+   "kind": "word",
+   "clipId": "numbers-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-13": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-13",
+   "kind": "word",
+   "clipId": "numbers-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-14": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-14",
+   "kind": "word",
+   "clipId": "numbers-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-15": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-15",
+   "kind": "word",
+   "clipId": "numbers-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-16": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-16",
+   "kind": "line",
+   "clipId": "numbers-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-17": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-17",
+   "kind": "line",
+   "clipId": "numbers-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-18": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-18",
+   "kind": "word",
+   "clipId": "numbers-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-19": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-19",
+   "kind": "word",
+   "clipId": "numbers-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-20": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-20",
+   "kind": "word",
+   "clipId": "numbers-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-21": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-21",
+   "kind": "word",
+   "clipId": "numbers-21",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|numbers-22": {
+   "unitId": "pu-numbers",
+   "itemId": "numbers-22",
+   "kind": "word",
+   "clipId": "numbers-22",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w1": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w1",
+   "kind": "word",
+   "clipId": "il04-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w2": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w2",
+   "kind": "word",
+   "clipId": "il04-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w3": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w3",
+   "kind": "word",
+   "clipId": "il04-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w4": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w4",
+   "kind": "word",
+   "clipId": "il04-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w5": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w5",
+   "kind": "word",
+   "clipId": "il04-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w6": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w6",
+   "kind": "word",
+   "clipId": "il04-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w7": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w7",
+   "kind": "word",
+   "clipId": "il04-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w8": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w8",
+   "kind": "word",
+   "clipId": "il04-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w9": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w9",
+   "kind": "word",
+   "clipId": "il04-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il04-w10": {
+   "unitId": "pu-numbers",
+   "itemId": "il04-w10",
+   "kind": "word",
+   "clipId": "il04-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il05-w4": {
+   "unitId": "pu-numbers",
+   "itemId": "il05-w4",
+   "kind": "word",
+   "clipId": "il05-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-numbers|il05-w5": {
+   "unitId": "pu-numbers",
+   "itemId": "il05-w5",
+   "kind": "word",
+   "clipId": "il05-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-introducing|il03-w1": {
+   "unitId": "pu-introducing",
+   "itemId": "il03-w1",
+   "kind": "word",
+   "clipId": "il03-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-introducing|il03-w2": {
+   "unitId": "pu-introducing",
+   "itemId": "il03-w2",
+   "kind": "word",
+   "clipId": "il03-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-introducing|il03-w3": {
+   "unitId": "pu-introducing",
+   "itemId": "il03-w3",
+   "kind": "word",
+   "clipId": "il03-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-introducing|il03-w4": {
+   "unitId": "pu-introducing",
+   "itemId": "il03-w4",
+   "kind": "word",
+   "clipId": "il03-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-introducing|il03-w5": {
+   "unitId": "pu-introducing",
+   "itemId": "il03-w5",
+   "kind": "word",
+   "clipId": "il03-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-01": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-01",
+   "kind": "line",
+   "clipId": "cafe-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-02": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-02",
+   "kind": "line",
+   "clipId": "cafe-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-03": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-03",
+   "kind": "line",
+   "clipId": "cafe-03-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-04": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-04",
+   "kind": "line",
+   "clipId": "cafe-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-05": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-05",
+   "kind": "word",
+   "clipId": "cafe-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-06": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-06",
+   "kind": "line",
+   "clipId": "cafe-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-07": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-07",
+   "kind": "line",
+   "clipId": "cafe-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-08": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-08",
+   "kind": "line",
+   "clipId": "cafe-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-09": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-09",
+   "kind": "word",
+   "clipId": "cafe-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-10": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-10",
+   "kind": "line",
+   "clipId": "cafe-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-11": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-11",
+   "kind": "word",
+   "clipId": "cafe-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-12": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-12",
+   "kind": "word",
+   "clipId": "cafe-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-13": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-13",
+   "kind": "word",
+   "clipId": "cafe-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-14": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-14",
+   "kind": "line",
+   "clipId": "cafe-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-15": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-15",
+   "kind": "line",
+   "clipId": "cafe-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-16": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-16",
+   "kind": "word",
+   "clipId": "cafe-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-17": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-17",
+   "kind": "word",
+   "clipId": "cafe-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-18": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-18",
+   "kind": "word",
+   "clipId": "cafe-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-19": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-19",
+   "kind": "word",
+   "clipId": "cafe-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-20": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-20",
+   "kind": "word",
+   "clipId": "cafe-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-21": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-21",
+   "kind": "line",
+   "clipId": "cafe-21",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-22": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-22",
+   "kind": "line",
+   "clipId": "cafe-22-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-23": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-23",
+   "kind": "line",
+   "clipId": "cafe-23-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-24": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-24",
+   "kind": "line",
+   "clipId": "cafe-24-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-25": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-25",
+   "kind": "line",
+   "clipId": "cafe-25",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-26": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-26",
+   "kind": "line",
+   "clipId": "cafe-26",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|cafe-27": {
+   "unitId": "pu-cafe",
+   "itemId": "cafe-27",
+   "kind": "line",
+   "clipId": "cafe-27",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il06-w1": {
+   "unitId": "pu-cafe",
+   "itemId": "il06-w1",
+   "kind": "word",
+   "clipId": "il06-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il06-w2": {
+   "unitId": "pu-cafe",
+   "itemId": "il06-w2",
+   "kind": "word",
+   "clipId": "il06-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il06-w3": {
+   "unitId": "pu-cafe",
+   "itemId": "il06-w3",
+   "kind": "word",
+   "clipId": "il06-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il06-w5": {
+   "unitId": "pu-cafe",
+   "itemId": "il06-w5",
+   "kind": "word",
+   "clipId": "il06-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il06-w6": {
+   "unitId": "pu-cafe",
+   "itemId": "il06-w6",
+   "kind": "word",
+   "clipId": "il06-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il07-w1": {
+   "unitId": "pu-cafe",
+   "itemId": "il07-w1",
+   "kind": "word",
+   "clipId": "il07-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il07-w2": {
+   "unitId": "pu-cafe",
+   "itemId": "il07-w2",
+   "kind": "word",
+   "clipId": "il07-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il07-w3": {
+   "unitId": "pu-cafe",
+   "itemId": "il07-w3",
+   "kind": "word",
+   "clipId": "il07-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il07-w4": {
+   "unitId": "pu-cafe",
+   "itemId": "il07-w4",
+   "kind": "word",
+   "clipId": "il07-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|il07-w6": {
+   "unitId": "pu-cafe",
+   "itemId": "il07-w6",
+   "kind": "word",
+   "clipId": "il07-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w6": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w6",
+   "kind": "word",
+   "clipId": "i-13-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w7": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w7",
+   "kind": "word",
+   "clipId": "i-13-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w8": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w8",
+   "kind": "word",
+   "clipId": "i-13-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w9": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w9",
+   "kind": "word",
+   "clipId": "i-13-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w10": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w10",
+   "kind": "word",
+   "clipId": "i-13-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w13": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w13",
+   "kind": "word",
+   "clipId": "i-13-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-cafe|i-13-w14": {
+   "unitId": "pu-cafe",
+   "itemId": "i-13-w14",
+   "kind": "word",
+   "clipId": "i-13-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-01": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-01",
+   "kind": "line",
+   "clipId": "cafe-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-02": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-02",
+   "kind": "line",
+   "clipId": "cafe-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-14": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-14",
+   "kind": "line",
+   "clipId": "cafe-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-16": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-16",
+   "kind": "word",
+   "clipId": "cafe-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-17": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-17",
+   "kind": "word",
+   "clipId": "cafe-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-20": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-20",
+   "kind": "word",
+   "clipId": "cafe-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-21": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-21",
+   "kind": "line",
+   "clipId": "cafe-21",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-22": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-22",
+   "kind": "line",
+   "clipId": "cafe-22-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-25": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-25",
+   "kind": "line",
+   "clipId": "cafe-25",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-26": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-26",
+   "kind": "line",
+   "clipId": "cafe-26",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-27": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-27",
+   "kind": "line",
+   "clipId": "cafe-27",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-10": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-10",
+   "kind": "line",
+   "clipId": "cafe-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-18": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-18",
+   "kind": "word",
+   "clipId": "cafe-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-19": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-19",
+   "kind": "word",
+   "clipId": "cafe-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-11": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-11",
+   "kind": "word",
+   "clipId": "cafe-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-12": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-12",
+   "kind": "word",
+   "clipId": "cafe-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-13": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-13",
+   "kind": "word",
+   "clipId": "cafe-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-15": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-15",
+   "kind": "line",
+   "clipId": "cafe-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-23": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-23",
+   "kind": "line",
+   "clipId": "cafe-23-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-24": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-24",
+   "kind": "line",
+   "clipId": "cafe-24-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-03": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-03",
+   "kind": "line",
+   "clipId": "cafe-03-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-08": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-08",
+   "kind": "line",
+   "clipId": "cafe-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|cafe-09": {
+   "unitId": "pu-restaurant",
+   "itemId": "cafe-09",
+   "kind": "word",
+   "clipId": "cafe-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il06-w1": {
+   "unitId": "pu-restaurant",
+   "itemId": "il06-w1",
+   "kind": "word",
+   "clipId": "il06-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il06-w2": {
+   "unitId": "pu-restaurant",
+   "itemId": "il06-w2",
+   "kind": "word",
+   "clipId": "il06-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il06-w3": {
+   "unitId": "pu-restaurant",
+   "itemId": "il06-w3",
+   "kind": "word",
+   "clipId": "il06-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il06-w5": {
+   "unitId": "pu-restaurant",
+   "itemId": "il06-w5",
+   "kind": "word",
+   "clipId": "il06-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il06-w6": {
+   "unitId": "pu-restaurant",
+   "itemId": "il06-w6",
+   "kind": "word",
+   "clipId": "il06-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il07-w1": {
+   "unitId": "pu-restaurant",
+   "itemId": "il07-w1",
+   "kind": "word",
+   "clipId": "il07-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il07-w2": {
+   "unitId": "pu-restaurant",
+   "itemId": "il07-w2",
+   "kind": "word",
+   "clipId": "il07-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il07-w3": {
+   "unitId": "pu-restaurant",
+   "itemId": "il07-w3",
+   "kind": "word",
+   "clipId": "il07-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il07-w4": {
+   "unitId": "pu-restaurant",
+   "itemId": "il07-w4",
+   "kind": "word",
+   "clipId": "il07-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|il07-w6": {
+   "unitId": "pu-restaurant",
+   "itemId": "il07-w6",
+   "kind": "word",
+   "clipId": "il07-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w2": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w2",
+   "kind": "word",
+   "clipId": "i-13-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w3": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w3",
+   "kind": "word",
+   "clipId": "i-13-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w4": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w4",
+   "kind": "word",
+   "clipId": "i-13-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w6": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w6",
+   "kind": "word",
+   "clipId": "i-13-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w7": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w7",
+   "kind": "word",
+   "clipId": "i-13-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w8": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w8",
+   "kind": "word",
+   "clipId": "i-13-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w9": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w9",
+   "kind": "word",
+   "clipId": "i-13-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w10": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w10",
+   "kind": "word",
+   "clipId": "i-13-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w13": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w13",
+   "kind": "word",
+   "clipId": "i-13-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-13-w14": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-13-w14",
+   "kind": "word",
+   "clipId": "i-13-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w1": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w1",
+   "kind": "word",
+   "clipId": "i-38-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w2": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w2",
+   "kind": "word",
+   "clipId": "i-38-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w3": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w3",
+   "kind": "word",
+   "clipId": "i-38-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w4": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w4",
+   "kind": "word",
+   "clipId": "i-38-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w5": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w5",
+   "kind": "word",
+   "clipId": "i-38-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w6": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w6",
+   "kind": "word",
+   "clipId": "i-38-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w7": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w7",
+   "kind": "word",
+   "clipId": "i-38-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w8": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w8",
+   "kind": "word",
+   "clipId": "i-38-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w9": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w9",
+   "kind": "word",
+   "clipId": "i-38-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w10": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w10",
+   "kind": "word",
+   "clipId": "i-38-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w11": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w11",
+   "kind": "word",
+   "clipId": "i-38-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-restaurant|i-38-w12": {
+   "unitId": "pu-restaurant",
+   "itemId": "i-38-w12",
+   "kind": "word",
+   "clipId": "i-38-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-01": {
+   "unitId": "pu-shop",
+   "itemId": "shop-01",
+   "kind": "line",
+   "clipId": "shop-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-02": {
+   "unitId": "pu-shop",
+   "itemId": "shop-02",
+   "kind": "line",
+   "clipId": "shop-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-03": {
+   "unitId": "pu-shop",
+   "itemId": "shop-03",
+   "kind": "line",
+   "clipId": "shop-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-04": {
+   "unitId": "pu-shop",
+   "itemId": "shop-04",
+   "kind": "line",
+   "clipId": "shop-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-05": {
+   "unitId": "pu-shop",
+   "itemId": "shop-05",
+   "kind": "line",
+   "clipId": "shop-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-06": {
+   "unitId": "pu-shop",
+   "itemId": "shop-06",
+   "kind": "line",
+   "clipId": "shop-06-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-shop|shop-07": {
+   "unitId": "pu-shop",
+   "itemId": "shop-07",
+   "kind": "line",
+   "clipId": "shop-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-08": {
+   "unitId": "pu-shop",
+   "itemId": "shop-08",
+   "kind": "line",
+   "clipId": "shop-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-09": {
+   "unitId": "pu-shop",
+   "itemId": "shop-09",
+   "kind": "line",
+   "clipId": "shop-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-10": {
+   "unitId": "pu-shop",
+   "itemId": "shop-10",
+   "kind": "line",
+   "clipId": "shop-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-11": {
+   "unitId": "pu-shop",
+   "itemId": "shop-11",
+   "kind": "line",
+   "clipId": "shop-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-12": {
+   "unitId": "pu-shop",
+   "itemId": "shop-12",
+   "kind": "word",
+   "clipId": "shop-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-13": {
+   "unitId": "pu-shop",
+   "itemId": "shop-13",
+   "kind": "line",
+   "clipId": "shop-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-14": {
+   "unitId": "pu-shop",
+   "itemId": "shop-14",
+   "kind": "line",
+   "clipId": "shop-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-15": {
+   "unitId": "pu-shop",
+   "itemId": "shop-15",
+   "kind": "line",
+   "clipId": "shop-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-16": {
+   "unitId": "pu-shop",
+   "itemId": "shop-16",
+   "kind": "word",
+   "clipId": "shop-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-17": {
+   "unitId": "pu-shop",
+   "itemId": "shop-17",
+   "kind": "word",
+   "clipId": "shop-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-18": {
+   "unitId": "pu-shop",
+   "itemId": "shop-18",
+   "kind": "line",
+   "clipId": "shop-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-19": {
+   "unitId": "pu-shop",
+   "itemId": "shop-19",
+   "kind": "word",
+   "clipId": "shop-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|shop-20": {
+   "unitId": "pu-shop",
+   "itemId": "shop-20",
+   "kind": "line",
+   "clipId": "shop-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w1": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w1",
+   "kind": "word",
+   "clipId": "il08-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w2": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w2",
+   "kind": "word",
+   "clipId": "il08-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w3": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w3",
+   "kind": "word",
+   "clipId": "il08-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w4": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w4",
+   "kind": "word",
+   "clipId": "il08-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w5": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w5",
+   "kind": "word",
+   "clipId": "il08-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il08-w6": {
+   "unitId": "pu-shop",
+   "itemId": "il08-w6",
+   "kind": "word",
+   "clipId": "il08-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il09-w3": {
+   "unitId": "pu-shop",
+   "itemId": "il09-w3",
+   "kind": "word",
+   "clipId": "il09-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il09-w4": {
+   "unitId": "pu-shop",
+   "itemId": "il09-w4",
+   "kind": "word",
+   "clipId": "il09-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|il09-w5": {
+   "unitId": "pu-shop",
+   "itemId": "il09-w5",
+   "kind": "word",
+   "clipId": "il09-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w1": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w1",
+   "kind": "word",
+   "clipId": "i-12-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w7": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w7",
+   "kind": "word",
+   "clipId": "i-12-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w8": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w8",
+   "kind": "word",
+   "clipId": "i-12-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w9": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w9",
+   "kind": "word",
+   "clipId": "i-12-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w10": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w10",
+   "kind": "word",
+   "clipId": "i-12-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w11": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w11",
+   "kind": "word",
+   "clipId": "i-12-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-12-w12": {
+   "unitId": "pu-shop",
+   "itemId": "i-12-w12",
+   "kind": "word",
+   "clipId": "i-12-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w1": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w1",
+   "kind": "word",
+   "clipId": "i-43-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w2": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w2",
+   "kind": "word",
+   "clipId": "i-43-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w3": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w3",
+   "kind": "word",
+   "clipId": "i-43-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w4": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w4",
+   "kind": "word",
+   "clipId": "i-43-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w5": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w5",
+   "kind": "word",
+   "clipId": "i-43-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w6": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w6",
+   "kind": "word",
+   "clipId": "i-43-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w7": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w7",
+   "kind": "word",
+   "clipId": "i-43-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shop|i-43-w11": {
+   "unitId": "pu-shop",
+   "itemId": "i-43-w11",
+   "kind": "word",
+   "clipId": "i-43-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-01": {
+   "unitId": "pu-directions",
+   "itemId": "directions-01",
+   "kind": "line",
+   "clipId": "directions-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-02": {
+   "unitId": "pu-directions",
+   "itemId": "directions-02",
+   "kind": "line",
+   "clipId": "directions-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-03": {
+   "unitId": "pu-directions",
+   "itemId": "directions-03",
+   "kind": "line",
+   "clipId": "directions-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-04": {
+   "unitId": "pu-directions",
+   "itemId": "directions-04",
+   "kind": "line",
+   "clipId": "directions-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-05": {
+   "unitId": "pu-directions",
+   "itemId": "directions-05",
+   "kind": "word",
+   "clipId": "directions-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-06": {
+   "unitId": "pu-directions",
+   "itemId": "directions-06",
+   "kind": "word",
+   "clipId": "directions-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-07": {
+   "unitId": "pu-directions",
+   "itemId": "directions-07",
+   "kind": "word",
+   "clipId": "directions-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-08": {
+   "unitId": "pu-directions",
+   "itemId": "directions-08",
+   "kind": "line",
+   "clipId": "directions-08-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-directions|directions-09": {
+   "unitId": "pu-directions",
+   "itemId": "directions-09",
+   "kind": "line",
+   "clipId": "directions-09-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-directions|directions-10": {
+   "unitId": "pu-directions",
+   "itemId": "directions-10",
+   "kind": "line",
+   "clipId": "directions-10-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-directions|directions-11": {
+   "unitId": "pu-directions",
+   "itemId": "directions-11",
+   "kind": "line",
+   "clipId": "directions-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-12": {
+   "unitId": "pu-directions",
+   "itemId": "directions-12",
+   "kind": "word",
+   "clipId": "directions-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-13": {
+   "unitId": "pu-directions",
+   "itemId": "directions-13",
+   "kind": "word",
+   "clipId": "directions-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-14": {
+   "unitId": "pu-directions",
+   "itemId": "directions-14",
+   "kind": "line",
+   "clipId": "directions-14-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-directions|directions-15": {
+   "unitId": "pu-directions",
+   "itemId": "directions-15",
+   "kind": "line",
+   "clipId": "directions-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-16": {
+   "unitId": "pu-directions",
+   "itemId": "directions-16",
+   "kind": "line",
+   "clipId": "directions-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-17": {
+   "unitId": "pu-directions",
+   "itemId": "directions-17",
+   "kind": "line",
+   "clipId": "directions-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-18": {
+   "unitId": "pu-directions",
+   "itemId": "directions-18",
+   "kind": "line",
+   "clipId": "directions-18",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-19": {
+   "unitId": "pu-directions",
+   "itemId": "directions-19",
+   "kind": "line",
+   "clipId": "directions-19",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|directions-20": {
+   "unitId": "pu-directions",
+   "itemId": "directions-20",
+   "kind": "line",
+   "clipId": "directions-20",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|il11-w4": {
+   "unitId": "pu-directions",
+   "itemId": "il11-w4",
+   "kind": "word",
+   "clipId": "il11-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|il11-w5": {
+   "unitId": "pu-directions",
+   "itemId": "il11-w5",
+   "kind": "word",
+   "clipId": "il11-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|il11-w6": {
+   "unitId": "pu-directions",
+   "itemId": "il11-w6",
+   "kind": "word",
+   "clipId": "il11-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w5": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w5",
+   "kind": "word",
+   "clipId": "i-15-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w6": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w6",
+   "kind": "word",
+   "clipId": "i-15-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w10": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w10",
+   "kind": "word",
+   "clipId": "i-15-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w11": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w11",
+   "kind": "word",
+   "clipId": "i-15-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w12": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w12",
+   "kind": "word",
+   "clipId": "i-15-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-directions|i-15-w16": {
+   "unitId": "pu-directions",
+   "itemId": "i-15-w16",
+   "kind": "word",
+   "clipId": "i-15-w16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-01": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-01",
+   "kind": "line",
+   "clipId": "taxi-01-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-transport|taxi-02": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-02",
+   "kind": "word",
+   "clipId": "taxi-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-03": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-03",
+   "kind": "line",
+   "clipId": "taxi-03",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-04": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-04",
+   "kind": "line",
+   "clipId": "taxi-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-05": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-05",
+   "kind": "word",
+   "clipId": "taxi-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-06": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-06",
+   "kind": "word",
+   "clipId": "taxi-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-07": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-07",
+   "kind": "line",
+   "clipId": "taxi-07",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-08": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-08",
+   "kind": "line",
+   "clipId": "taxi-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-09": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-09",
+   "kind": "line",
+   "clipId": "taxi-09-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-transport|taxi-10": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-10",
+   "kind": "line",
+   "clipId": "taxi-10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-11": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-11",
+   "kind": "line",
+   "clipId": "taxi-11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-12": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-12",
+   "kind": "line",
+   "clipId": "taxi-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-13": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-13",
+   "kind": "line",
+   "clipId": "taxi-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-14": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-14",
+   "kind": "line",
+   "clipId": "taxi-14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|taxi-15": {
+   "unitId": "pu-transport",
+   "itemId": "taxi-15",
+   "kind": "line",
+   "clipId": "taxi-15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w1": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w1",
+   "kind": "word",
+   "clipId": "il10-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w2": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w2",
+   "kind": "word",
+   "clipId": "il10-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w3": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w3",
+   "kind": "word",
+   "clipId": "il10-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w4": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w4",
+   "kind": "word",
+   "clipId": "il10-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w5": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w5",
+   "kind": "word",
+   "clipId": "il10-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|il10-w6": {
+   "unitId": "pu-transport",
+   "itemId": "il10-w6",
+   "kind": "word",
+   "clipId": "il10-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w5": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w5",
+   "kind": "word",
+   "clipId": "i-11-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w6": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w6",
+   "kind": "word",
+   "clipId": "i-11-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w7": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w7",
+   "kind": "word",
+   "clipId": "i-11-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w8": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w8",
+   "kind": "word",
+   "clipId": "i-11-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w9": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w9",
+   "kind": "word",
+   "clipId": "i-11-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w10": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w10",
+   "kind": "word",
+   "clipId": "i-11-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w11": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w11",
+   "kind": "word",
+   "clipId": "i-11-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-11-w12": {
+   "unitId": "pu-transport",
+   "itemId": "i-11-w12",
+   "kind": "word",
+   "clipId": "i-11-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w3": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w3",
+   "kind": "word",
+   "clipId": "i-23-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w6": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w6",
+   "kind": "word",
+   "clipId": "i-23-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w9": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w9",
+   "kind": "word",
+   "clipId": "i-23-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w10": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w10",
+   "kind": "word",
+   "clipId": "i-23-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w11": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w11",
+   "kind": "word",
+   "clipId": "i-23-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w12": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w12",
+   "kind": "word",
+   "clipId": "i-23-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-transport|i-23-w13": {
+   "unitId": "pu-transport",
+   "itemId": "i-23-w13",
+   "kind": "word",
+   "clipId": "i-23-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-01": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-01",
+   "kind": "line",
+   "clipId": "small-talk-01-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-02": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-02",
+   "kind": "line",
+   "clipId": "small-talk-02",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-03": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-03",
+   "kind": "line",
+   "clipId": "small-talk-03-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-04": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-04",
+   "kind": "line",
+   "clipId": "small-talk-04",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-05": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-05",
+   "kind": "line",
+   "clipId": "small-talk-05-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-06": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-06",
+   "kind": "line",
+   "clipId": "small-talk-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-07": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-07",
+   "kind": "line",
+   "clipId": "small-talk-07-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-08": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-08",
+   "kind": "line",
+   "clipId": "small-talk-08-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-09": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-09",
+   "kind": "line",
+   "clipId": "small-talk-09-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-10": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-10",
+   "kind": "line",
+   "clipId": "small-talk-10-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-11": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-11",
+   "kind": "line",
+   "clipId": "small-talk-11-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-12": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-12",
+   "kind": "line",
+   "clipId": "small-talk-12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-13": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-13",
+   "kind": "line",
+   "clipId": "small-talk-13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-14": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-14",
+   "kind": "line",
+   "clipId": "small-talk-14-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-15": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-15",
+   "kind": "word",
+   "clipId": "i-18-w16",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-16": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-16",
+   "kind": "line",
+   "clipId": "small-talk-16",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-17": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-17",
+   "kind": "line",
+   "clipId": "small-talk-17",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-18": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-18",
+   "kind": "word",
+   "clipId": "i-37-w12",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|small-talk-19": {
+   "unitId": "pu-small-talk",
+   "itemId": "small-talk-19",
+   "kind": "line",
+   "clipId": "small-talk-19-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-small-talk|il13-w1": {
+   "unitId": "pu-small-talk",
+   "itemId": "il13-w1",
+   "kind": "word",
+   "clipId": "il13-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|il13-w2": {
+   "unitId": "pu-small-talk",
+   "itemId": "il13-w2",
+   "kind": "word",
+   "clipId": "il13-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|il13-w3": {
+   "unitId": "pu-small-talk",
+   "itemId": "il13-w3",
+   "kind": "word",
+   "clipId": "il13-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|il13-w5": {
+   "unitId": "pu-small-talk",
+   "itemId": "il13-w5",
+   "kind": "word",
+   "clipId": "il13-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w2": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w2",
+   "kind": "word",
+   "clipId": "i-25-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w5": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w5",
+   "kind": "word",
+   "clipId": "i-25-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w6": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w6",
+   "kind": "word",
+   "clipId": "i-25-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w7": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w7",
+   "kind": "word",
+   "clipId": "i-25-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w8": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w8",
+   "kind": "word",
+   "clipId": "i-25-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w9": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w9",
+   "kind": "word",
+   "clipId": "i-25-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w10": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w10",
+   "kind": "word",
+   "clipId": "i-25-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w12": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w12",
+   "kind": "word",
+   "clipId": "i-25-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w14": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w14",
+   "kind": "word",
+   "clipId": "i-25-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-25-w15": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-25-w15",
+   "kind": "word",
+   "clipId": "i-25-w15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w1": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w1",
+   "kind": "word",
+   "clipId": "i-36-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w2": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w2",
+   "kind": "word",
+   "clipId": "i-36-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w3": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w3",
+   "kind": "word",
+   "clipId": "i-36-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w4": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w4",
+   "kind": "word",
+   "clipId": "i-36-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w5": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w5",
+   "kind": "word",
+   "clipId": "i-36-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w6": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w6",
+   "kind": "word",
+   "clipId": "i-36-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w7": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w7",
+   "kind": "word",
+   "clipId": "i-36-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w8": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w8",
+   "kind": "word",
+   "clipId": "i-36-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w9": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w9",
+   "kind": "word",
+   "clipId": "i-36-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w10": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w10",
+   "kind": "word",
+   "clipId": "i-36-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w11": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w11",
+   "kind": "word",
+   "clipId": "i-36-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-small-talk|i-36-w12": {
+   "unitId": "pu-small-talk",
+   "itemId": "i-36-w12",
+   "kind": "word",
+   "clipId": "i-36-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w1": {
+   "unitId": "pu-family",
+   "itemId": "il14-w1",
+   "kind": "word",
+   "clipId": "il14-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w2": {
+   "unitId": "pu-family",
+   "itemId": "il14-w2",
+   "kind": "word",
+   "clipId": "il14-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w3": {
+   "unitId": "pu-family",
+   "itemId": "il14-w3",
+   "kind": "word",
+   "clipId": "il14-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w4": {
+   "unitId": "pu-family",
+   "itemId": "il14-w4",
+   "kind": "word",
+   "clipId": "il14-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w5": {
+   "unitId": "pu-family",
+   "itemId": "il14-w5",
+   "kind": "word",
+   "clipId": "il14-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|il14-w6": {
+   "unitId": "pu-family",
+   "itemId": "il14-w6",
+   "kind": "word",
+   "clipId": "il14-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w3": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w3",
+   "kind": "word",
+   "clipId": "i-42-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w4": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w4",
+   "kind": "word",
+   "clipId": "i-42-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w5": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w5",
+   "kind": "word",
+   "clipId": "i-42-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w6": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w6",
+   "kind": "word",
+   "clipId": "i-42-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w7": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w7",
+   "kind": "word",
+   "clipId": "i-42-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w8": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w8",
+   "kind": "word",
+   "clipId": "i-42-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w9": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w9",
+   "kind": "word",
+   "clipId": "i-42-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w10": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w10",
+   "kind": "word",
+   "clipId": "i-42-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w11": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w11",
+   "kind": "word",
+   "clipId": "i-42-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-family|i-42-w12": {
+   "unitId": "pu-family",
+   "itemId": "i-42-w12",
+   "kind": "word",
+   "clipId": "i-42-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w1": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w1",
+   "kind": "word",
+   "clipId": "i-44-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w2": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w2",
+   "kind": "word",
+   "clipId": "i-44-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w3": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w3",
+   "kind": "word",
+   "clipId": "i-44-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w4": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w4",
+   "kind": "word",
+   "clipId": "i-44-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w5": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w5",
+   "kind": "word",
+   "clipId": "i-44-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w6": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w6",
+   "kind": "word",
+   "clipId": "i-44-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w7": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w7",
+   "kind": "word",
+   "clipId": "i-44-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w8": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w8",
+   "kind": "word",
+   "clipId": "i-44-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w9": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w9",
+   "kind": "word",
+   "clipId": "i-44-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w10": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w10",
+   "kind": "word",
+   "clipId": "i-44-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w11": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w11",
+   "kind": "word",
+   "clipId": "i-44-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-home|i-44-w12": {
+   "unitId": "pu-home",
+   "itemId": "i-44-w12",
+   "kind": "word",
+   "clipId": "i-44-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-time|il12-w1": {
+   "unitId": "pu-time",
+   "itemId": "il12-w1",
+   "kind": "word",
+   "clipId": "il12-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-time|il12-w2": {
+   "unitId": "pu-time",
+   "itemId": "il12-w2",
+   "kind": "word",
+   "clipId": "il12-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "synthetic-unreviewed"
+  },
+  "pu-time|il12-w3": {
+   "unitId": "pu-time",
+   "itemId": "il12-w3",
+   "kind": "word",
+   "clipId": "il12-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-time|il12-w4": {
+   "unitId": "pu-time",
+   "itemId": "il12-w4",
+   "kind": "word",
+   "clipId": "il12-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-time|il12-w5": {
+   "unitId": "pu-time",
+   "itemId": "il12-w5",
+   "kind": "word",
+   "clipId": "il12-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-time|il12-w6": {
+   "unitId": "pu-time",
+   "itemId": "il12-w6",
+   "kind": "word",
+   "clipId": "il12-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|il15-w1": {
+   "unitId": "pu-weather",
+   "itemId": "il15-w1",
+   "kind": "word",
+   "clipId": "il15-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|il15-w2": {
+   "unitId": "pu-weather",
+   "itemId": "il15-w2",
+   "kind": "word",
+   "clipId": "il15-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|il15-w3": {
+   "unitId": "pu-weather",
+   "itemId": "il15-w3",
+   "kind": "word",
+   "clipId": "il15-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|il15-w4": {
+   "unitId": "pu-weather",
+   "itemId": "il15-w4",
+   "kind": "word",
+   "clipId": "il15-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|il15-w5": {
+   "unitId": "pu-weather",
+   "itemId": "il15-w5",
+   "kind": "word",
+   "clipId": "il15-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w6": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w6",
+   "kind": "word",
+   "clipId": "i-24-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w7": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w7",
+   "kind": "word",
+   "clipId": "i-24-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w8": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w8",
+   "kind": "word",
+   "clipId": "i-24-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w9": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w9",
+   "kind": "word",
+   "clipId": "i-24-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w10": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w10",
+   "kind": "word",
+   "clipId": "i-24-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w11": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w11",
+   "kind": "word",
+   "clipId": "i-24-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w12": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w12",
+   "kind": "word",
+   "clipId": "i-24-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w13": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w13",
+   "kind": "word",
+   "clipId": "i-24-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w14": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w14",
+   "kind": "word",
+   "clipId": "i-24-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-weather|i-24-w15": {
+   "unitId": "pu-weather",
+   "itemId": "i-24-w15",
+   "kind": "word",
+   "clipId": "i-24-w15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hotel|il17-w1": {
+   "unitId": "pu-hotel",
+   "itemId": "il17-w1",
+   "kind": "word",
+   "clipId": "il17-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hotel|il17-w2": {
+   "unitId": "pu-hotel",
+   "itemId": "il17-w2",
+   "kind": "word",
+   "clipId": "il17-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hotel|il17-w3": {
+   "unitId": "pu-hotel",
+   "itemId": "il17-w3",
+   "kind": "word",
+   "clipId": "il17-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hotel|il17-w4": {
+   "unitId": "pu-hotel",
+   "itemId": "il17-w4",
+   "kind": "word",
+   "clipId": "il17-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hotel|il17-w5": {
+   "unitId": "pu-hotel",
+   "itemId": "il17-w5",
+   "kind": "word",
+   "clipId": "il17-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|il22-w1": {
+   "unitId": "pu-phone",
+   "itemId": "il22-w1",
+   "kind": "word",
+   "clipId": "il22-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|il22-w2": {
+   "unitId": "pu-phone",
+   "itemId": "il22-w2",
+   "kind": "word",
+   "clipId": "il22-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|il22-w3": {
+   "unitId": "pu-phone",
+   "itemId": "il22-w3",
+   "kind": "word",
+   "clipId": "il22-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|il22-w4": {
+   "unitId": "pu-phone",
+   "itemId": "il22-w4",
+   "kind": "word",
+   "clipId": "il22-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|il22-w5": {
+   "unitId": "pu-phone",
+   "itemId": "il22-w5",
+   "kind": "word",
+   "clipId": "il22-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w1": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w1",
+   "kind": "word",
+   "clipId": "i-16-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w2": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w2",
+   "kind": "word",
+   "clipId": "i-16-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w3": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w3",
+   "kind": "word",
+   "clipId": "i-16-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w5": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w5",
+   "kind": "word",
+   "clipId": "i-16-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w6": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w6",
+   "kind": "word",
+   "clipId": "i-16-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w7": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w7",
+   "kind": "word",
+   "clipId": "i-16-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w8": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w8",
+   "kind": "word",
+   "clipId": "i-16-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w10": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w10",
+   "kind": "word",
+   "clipId": "i-16-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w11": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w11",
+   "kind": "word",
+   "clipId": "i-16-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w12": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w12",
+   "kind": "word",
+   "clipId": "i-16-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w13": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w13",
+   "kind": "word",
+   "clipId": "i-16-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-phone|i-16-w14": {
+   "unitId": "pu-phone",
+   "itemId": "i-16-w14",
+   "kind": "word",
+   "clipId": "i-16-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w1": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w1",
+   "kind": "word",
+   "clipId": "i-17-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w2": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w2",
+   "kind": "word",
+   "clipId": "i-17-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w3": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w3",
+   "kind": "word",
+   "clipId": "i-17-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w4": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w4",
+   "kind": "word",
+   "clipId": "i-17-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w5": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w5",
+   "kind": "word",
+   "clipId": "i-17-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w6": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w6",
+   "kind": "word",
+   "clipId": "i-17-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w7": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w7",
+   "kind": "word",
+   "clipId": "i-17-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w8": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w8",
+   "kind": "word",
+   "clipId": "i-17-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w9": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w9",
+   "kind": "word",
+   "clipId": "i-17-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w10": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w10",
+   "kind": "word",
+   "clipId": "i-17-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w11": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w11",
+   "kind": "word",
+   "clipId": "i-17-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w12": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w12",
+   "kind": "word",
+   "clipId": "i-17-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w13": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w13",
+   "kind": "word",
+   "clipId": "i-17-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-apartment|i-17-w14": {
+   "unitId": "pu-apartment",
+   "itemId": "i-17-w14",
+   "kind": "word",
+   "clipId": "i-17-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-plans|il20-w1": {
+   "unitId": "pu-plans",
+   "itemId": "il20-w1",
+   "kind": "word",
+   "clipId": "il20-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-plans|il20-w2": {
+   "unitId": "pu-plans",
+   "itemId": "il20-w2",
+   "kind": "word",
+   "clipId": "il20-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-plans|il20-w3": {
+   "unitId": "pu-plans",
+   "itemId": "il20-w3",
+   "kind": "word",
+   "clipId": "il20-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-plans|il20-w4": {
+   "unitId": "pu-plans",
+   "itemId": "il20-w4",
+   "kind": "word",
+   "clipId": "il20-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-plans|il20-w5": {
+   "unitId": "pu-plans",
+   "itemId": "il20-w5",
+   "kind": "word",
+   "clipId": "il20-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-opinions|il21-w1": {
+   "unitId": "pu-opinions",
+   "itemId": "il21-w1",
+   "kind": "word",
+   "clipId": "il21-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-opinions|il21-w2": {
+   "unitId": "pu-opinions",
+   "itemId": "il21-w2",
+   "kind": "word",
+   "clipId": "il21-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-opinions|il21-w3": {
+   "unitId": "pu-opinions",
+   "itemId": "il21-w3",
+   "kind": "word",
+   "clipId": "il21-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-opinions|il21-w4": {
+   "unitId": "pu-opinions",
+   "itemId": "il21-w4",
+   "kind": "word",
+   "clipId": "il21-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-opinions|il21-w5": {
+   "unitId": "pu-opinions",
+   "itemId": "il21-w5",
+   "kind": "word",
+   "clipId": "il21-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w1": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w1",
+   "kind": "word",
+   "clipId": "i-39-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w2": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w2",
+   "kind": "word",
+   "clipId": "i-39-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w3": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w3",
+   "kind": "word",
+   "clipId": "i-39-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w4": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w4",
+   "kind": "word",
+   "clipId": "i-39-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w5": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w5",
+   "kind": "word",
+   "clipId": "i-39-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w6": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w6",
+   "kind": "word",
+   "clipId": "i-39-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w7": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w7",
+   "kind": "word",
+   "clipId": "i-39-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w8": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w8",
+   "kind": "word",
+   "clipId": "i-39-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w9": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w9",
+   "kind": "word",
+   "clipId": "i-39-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w10": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w10",
+   "kind": "word",
+   "clipId": "i-39-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w11": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w11",
+   "kind": "word",
+   "clipId": "i-39-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-driving|i-39-w12": {
+   "unitId": "pu-driving",
+   "itemId": "i-39-w12",
+   "kind": "word",
+   "clipId": "i-39-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w1": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w1",
+   "kind": "word",
+   "clipId": "i-40-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w2": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w2",
+   "kind": "word",
+   "clipId": "i-40-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w3": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w3",
+   "kind": "word",
+   "clipId": "i-40-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w4": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w4",
+   "kind": "word",
+   "clipId": "i-40-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w5": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w5",
+   "kind": "word",
+   "clipId": "i-40-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w6": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w6",
+   "kind": "word",
+   "clipId": "i-40-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w7": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w7",
+   "kind": "word",
+   "clipId": "i-40-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w8": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w8",
+   "kind": "word",
+   "clipId": "i-40-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w9": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w9",
+   "kind": "word",
+   "clipId": "i-40-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w10": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w10",
+   "kind": "word",
+   "clipId": "i-40-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w11": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w11",
+   "kind": "word",
+   "clipId": "i-40-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-hiking|i-40-w12": {
+   "unitId": "pu-hiking",
+   "itemId": "i-40-w12",
+   "kind": "word",
+   "clipId": "i-40-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w1": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w1",
+   "kind": "word",
+   "clipId": "i-41-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w2": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w2",
+   "kind": "word",
+   "clipId": "i-41-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w3": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w3",
+   "kind": "word",
+   "clipId": "i-41-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w4": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w4",
+   "kind": "word",
+   "clipId": "i-41-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w5": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w5",
+   "kind": "word",
+   "clipId": "i-41-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w6": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w6",
+   "kind": "word",
+   "clipId": "i-41-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w7": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w7",
+   "kind": "word",
+   "clipId": "i-41-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w8": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w8",
+   "kind": "word",
+   "clipId": "i-41-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w9": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w9",
+   "kind": "word",
+   "clipId": "i-41-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w10": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w10",
+   "kind": "word",
+   "clipId": "i-41-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w11": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w11",
+   "kind": "word",
+   "clipId": "i-41-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-beach|i-41-w12": {
+   "unitId": "pu-beach",
+   "itemId": "i-41-w12",
+   "kind": "word",
+   "clipId": "i-41-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w1": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w1",
+   "kind": "word",
+   "clipId": "i-36-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w2": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w2",
+   "kind": "word",
+   "clipId": "i-36-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w3": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w3",
+   "kind": "word",
+   "clipId": "i-36-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w4": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w4",
+   "kind": "word",
+   "clipId": "i-36-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w5": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w5",
+   "kind": "word",
+   "clipId": "i-36-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w6": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w6",
+   "kind": "word",
+   "clipId": "i-36-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w7": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w7",
+   "kind": "word",
+   "clipId": "i-36-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w8": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w8",
+   "kind": "word",
+   "clipId": "i-36-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w9": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w9",
+   "kind": "word",
+   "clipId": "i-36-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w10": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w10",
+   "kind": "word",
+   "clipId": "i-36-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w11": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w11",
+   "kind": "word",
+   "clipId": "i-36-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-36-w12": {
+   "unitId": "pu-work",
+   "itemId": "i-36-w12",
+   "kind": "word",
+   "clipId": "i-36-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w1": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w1",
+   "kind": "word",
+   "clipId": "i-37-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w2": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w2",
+   "kind": "word",
+   "clipId": "i-37-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w3": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w3",
+   "kind": "word",
+   "clipId": "i-37-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w4": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w4",
+   "kind": "word",
+   "clipId": "i-37-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w5": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w5",
+   "kind": "word",
+   "clipId": "i-37-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w6": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w6",
+   "kind": "word",
+   "clipId": "i-37-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w7": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w7",
+   "kind": "word",
+   "clipId": "i-37-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w8": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w8",
+   "kind": "word",
+   "clipId": "i-37-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w9": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w9",
+   "kind": "word",
+   "clipId": "i-37-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-work|i-37-w12": {
+   "unitId": "pu-work",
+   "itemId": "i-37-w12",
+   "kind": "word",
+   "clipId": "i-37-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w1": {
+   "unitId": "pu-health",
+   "itemId": "il18-w1",
+   "kind": "word",
+   "clipId": "il18-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w2": {
+   "unitId": "pu-health",
+   "itemId": "il18-w2",
+   "kind": "word",
+   "clipId": "il18-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w3": {
+   "unitId": "pu-health",
+   "itemId": "il18-w3",
+   "kind": "word",
+   "clipId": "il18-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w4": {
+   "unitId": "pu-health",
+   "itemId": "il18-w4",
+   "kind": "word",
+   "clipId": "il18-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w5": {
+   "unitId": "pu-health",
+   "itemId": "il18-w5",
+   "kind": "word",
+   "clipId": "il18-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|il18-w6": {
+   "unitId": "pu-health",
+   "itemId": "il18-w6",
+   "kind": "word",
+   "clipId": "il18-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w2": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w2",
+   "kind": "word",
+   "clipId": "i-14-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w3": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w3",
+   "kind": "word",
+   "clipId": "i-14-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w4": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w4",
+   "kind": "word",
+   "clipId": "i-14-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w5": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w5",
+   "kind": "word",
+   "clipId": "i-14-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w6": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w6",
+   "kind": "word",
+   "clipId": "i-14-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w7": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w7",
+   "kind": "word",
+   "clipId": "i-14-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w8": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w8",
+   "kind": "word",
+   "clipId": "i-14-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w9": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w9",
+   "kind": "word",
+   "clipId": "i-14-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w10": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w10",
+   "kind": "word",
+   "clipId": "i-14-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w11": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w11",
+   "kind": "word",
+   "clipId": "i-14-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w12": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w12",
+   "kind": "word",
+   "clipId": "i-14-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w13": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w13",
+   "kind": "word",
+   "clipId": "i-14-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w14": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w14",
+   "kind": "word",
+   "clipId": "i-14-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-14-w15": {
+   "unitId": "pu-health",
+   "itemId": "i-14-w15",
+   "kind": "word",
+   "clipId": "i-14-w15",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w1": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w1",
+   "kind": "word",
+   "clipId": "i-20-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w3": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w3",
+   "kind": "word",
+   "clipId": "i-20-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w4": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w4",
+   "kind": "word",
+   "clipId": "i-20-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w5": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w5",
+   "kind": "word",
+   "clipId": "i-20-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w6": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w6",
+   "kind": "word",
+   "clipId": "i-20-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w7": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w7",
+   "kind": "word",
+   "clipId": "i-20-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w8": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w8",
+   "kind": "word",
+   "clipId": "i-20-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w9": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w9",
+   "kind": "word",
+   "clipId": "i-20-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w10": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w10",
+   "kind": "word",
+   "clipId": "i-20-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w11": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w11",
+   "kind": "word",
+   "clipId": "i-20-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w12": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w12",
+   "kind": "word",
+   "clipId": "i-20-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-health|i-20-w13": {
+   "unitId": "pu-health",
+   "itemId": "i-20-w13",
+   "kind": "word",
+   "clipId": "i-20-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w1": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w1",
+   "kind": "word",
+   "clipId": "i-21-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w2": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w2",
+   "kind": "word",
+   "clipId": "i-21-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w3": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w3",
+   "kind": "word",
+   "clipId": "i-21-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w4": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w4",
+   "kind": "word",
+   "clipId": "i-21-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w5": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w5",
+   "kind": "word",
+   "clipId": "i-21-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w6": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w6",
+   "kind": "word",
+   "clipId": "i-21-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w7": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w7",
+   "kind": "word",
+   "clipId": "i-21-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w8": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w8",
+   "kind": "word",
+   "clipId": "i-21-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w9": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w9",
+   "kind": "word",
+   "clipId": "i-21-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w10": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w10",
+   "kind": "word",
+   "clipId": "i-21-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w11": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w11",
+   "kind": "word",
+   "clipId": "i-21-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w12": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w12",
+   "kind": "word",
+   "clipId": "i-21-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w13": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w13",
+   "kind": "word",
+   "clipId": "i-21-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-21-w14": {
+   "unitId": "pu-bank",
+   "itemId": "i-21-w14",
+   "kind": "word",
+   "clipId": "i-21-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w2": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w2",
+   "kind": "word",
+   "clipId": "i-48-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w4": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w4",
+   "kind": "word",
+   "clipId": "i-48-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w5": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w5",
+   "kind": "word",
+   "clipId": "i-48-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w6": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w6",
+   "kind": "word",
+   "clipId": "i-48-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w7": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w7",
+   "kind": "word",
+   "clipId": "i-48-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w8": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w8",
+   "kind": "word",
+   "clipId": "i-48-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-bank|i-48-w9": {
+   "unitId": "pu-bank",
+   "itemId": "i-48-w9",
+   "kind": "word",
+   "clipId": "i-48-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w1": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w1",
+   "kind": "word",
+   "clipId": "i-22-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w2": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w2",
+   "kind": "word",
+   "clipId": "i-22-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w3": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w3",
+   "kind": "word",
+   "clipId": "i-22-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w4": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w4",
+   "kind": "word",
+   "clipId": "i-22-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w5": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w5",
+   "kind": "word",
+   "clipId": "i-22-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w6": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w6",
+   "kind": "word",
+   "clipId": "i-22-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w7": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w7",
+   "kind": "word",
+   "clipId": "i-22-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w8": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w8",
+   "kind": "word",
+   "clipId": "i-22-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w9": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w9",
+   "kind": "word",
+   "clipId": "i-22-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w10": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w10",
+   "kind": "word",
+   "clipId": "i-22-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w11": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w11",
+   "kind": "word",
+   "clipId": "i-22-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w12": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w12",
+   "kind": "word",
+   "clipId": "i-22-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-post|i-22-w13": {
+   "unitId": "pu-post",
+   "itemId": "i-22-w13",
+   "kind": "word",
+   "clipId": "i-22-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|help-01": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-01",
+   "kind": "word",
+   "clipId": "help-01",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|help-02": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-02",
+   "kind": "line",
+   "clipId": "help-02-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-emergencies|help-03": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-03",
+   "kind": "line",
+   "clipId": "help-03-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-emergencies|help-04": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-04",
+   "kind": "line",
+   "clipId": "help-04-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-emergencies|help-05": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-05",
+   "kind": "line",
+   "clipId": "help-05",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|help-06": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-06",
+   "kind": "line",
+   "clipId": "help-06",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|help-07": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-07",
+   "kind": "line",
+   "clipId": "help-07-m",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  },
+  "pu-emergencies|help-08": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-08",
+   "kind": "line",
+   "clipId": "help-08",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|help-09": {
+   "unitId": "pu-emergencies",
+   "itemId": "help-09",
+   "kind": "line",
+   "clipId": "help-09",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w1": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w1",
+   "kind": "word",
+   "clipId": "i-46-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w2": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w2",
+   "kind": "word",
+   "clipId": "i-46-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w3": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w3",
+   "kind": "word",
+   "clipId": "i-46-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w4": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w4",
+   "kind": "word",
+   "clipId": "i-46-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w5": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w5",
+   "kind": "word",
+   "clipId": "i-46-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w6": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w6",
+   "kind": "word",
+   "clipId": "i-46-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w7": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w7",
+   "kind": "word",
+   "clipId": "i-46-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w9": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w9",
+   "kind": "word",
+   "clipId": "i-46-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w10": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w10",
+   "kind": "word",
+   "clipId": "i-46-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w11": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w11",
+   "kind": "word",
+   "clipId": "i-46-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|i-46-w12": {
+   "unitId": "pu-emergencies",
+   "itemId": "i-46-w12",
+   "kind": "word",
+   "clipId": "i-46-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|il18-w1": {
+   "unitId": "pu-emergencies",
+   "itemId": "il18-w1",
+   "kind": "word",
+   "clipId": "il18-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|il18-w2": {
+   "unitId": "pu-emergencies",
+   "itemId": "il18-w2",
+   "kind": "word",
+   "clipId": "il18-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|il18-w3": {
+   "unitId": "pu-emergencies",
+   "itemId": "il18-w3",
+   "kind": "word",
+   "clipId": "il18-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|il18-w5": {
+   "unitId": "pu-emergencies",
+   "itemId": "il18-w5",
+   "kind": "word",
+   "clipId": "il18-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-emergencies|il18-w6": {
+   "unitId": "pu-emergencies",
+   "itemId": "il18-w6",
+   "kind": "word",
+   "clipId": "il18-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w1": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w1",
+   "kind": "word",
+   "clipId": "i-45-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w2": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w2",
+   "kind": "word",
+   "clipId": "i-45-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w3": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w3",
+   "kind": "word",
+   "clipId": "i-45-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w4": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w4",
+   "kind": "word",
+   "clipId": "i-45-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w5": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w5",
+   "kind": "word",
+   "clipId": "i-45-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w6": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w6",
+   "kind": "word",
+   "clipId": "i-45-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w7": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w7",
+   "kind": "word",
+   "clipId": "i-45-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w8": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w8",
+   "kind": "word",
+   "clipId": "i-45-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w9": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w9",
+   "kind": "word",
+   "clipId": "i-45-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w10": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w10",
+   "kind": "word",
+   "clipId": "i-45-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w11": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w11",
+   "kind": "word",
+   "clipId": "i-45-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-delivery|i-45-w12": {
+   "unitId": "pu-delivery",
+   "itemId": "i-45-w12",
+   "kind": "word",
+   "clipId": "i-45-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w1": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w1",
+   "kind": "word",
+   "clipId": "i-49-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w2": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w2",
+   "kind": "word",
+   "clipId": "i-49-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w3": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w3",
+   "kind": "word",
+   "clipId": "i-49-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w4": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w4",
+   "kind": "word",
+   "clipId": "i-49-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w5": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w5",
+   "kind": "word",
+   "clipId": "i-49-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w6": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w6",
+   "kind": "word",
+   "clipId": "i-49-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w7": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w7",
+   "kind": "word",
+   "clipId": "i-49-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w8": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w8",
+   "kind": "word",
+   "clipId": "i-49-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w9": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w9",
+   "kind": "word",
+   "clipId": "i-49-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w10": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w10",
+   "kind": "word",
+   "clipId": "i-49-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w11": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w11",
+   "kind": "word",
+   "clipId": "i-49-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-social|i-49-w12": {
+   "unitId": "pu-social",
+   "itemId": "i-49-w12",
+   "kind": "word",
+   "clipId": "i-49-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w1": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w1",
+   "kind": "word",
+   "clipId": "i-47-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w2": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w2",
+   "kind": "word",
+   "clipId": "i-47-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w3": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w3",
+   "kind": "word",
+   "clipId": "i-47-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w4": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w4",
+   "kind": "word",
+   "clipId": "i-47-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w5": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w5",
+   "kind": "word",
+   "clipId": "i-47-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w6": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w6",
+   "kind": "word",
+   "clipId": "i-47-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w7": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w7",
+   "kind": "word",
+   "clipId": "i-47-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w8": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w8",
+   "kind": "word",
+   "clipId": "i-47-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w9": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w9",
+   "kind": "word",
+   "clipId": "i-47-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w10": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w10",
+   "kind": "word",
+   "clipId": "i-47-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w11": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w11",
+   "kind": "word",
+   "clipId": "i-47-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-news|i-47-w12": {
+   "unitId": "pu-news",
+   "itemId": "i-47-w12",
+   "kind": "word",
+   "clipId": "i-47-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w1": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w1",
+   "kind": "word",
+   "clipId": "il16-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w2": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w2",
+   "kind": "word",
+   "clipId": "il16-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w3": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w3",
+   "kind": "word",
+   "clipId": "il16-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w4": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w4",
+   "kind": "word",
+   "clipId": "il16-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w5": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w5",
+   "kind": "word",
+   "clipId": "il16-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w1": {
+   "unitId": "pu-past",
+   "itemId": "il19-w1",
+   "kind": "word",
+   "clipId": "il19-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w2": {
+   "unitId": "pu-past",
+   "itemId": "il19-w2",
+   "kind": "word",
+   "clipId": "il19-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w3": {
+   "unitId": "pu-past",
+   "itemId": "il19-w3",
+   "kind": "word",
+   "clipId": "il19-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w4": {
+   "unitId": "pu-past",
+   "itemId": "il19-w4",
+   "kind": "word",
+   "clipId": "il19-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w5": {
+   "unitId": "pu-past",
+   "itemId": "il19-w5",
+   "kind": "word",
+   "clipId": "il19-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w1": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w1",
+   "kind": "word",
+   "clipId": "il24-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w2": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w2",
+   "kind": "word",
+   "clipId": "il24-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w3": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w3",
+   "kind": "word",
+   "clipId": "il24-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w1": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w1",
+   "kind": "word",
+   "clipId": "i-19-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w2": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w2",
+   "kind": "word",
+   "clipId": "i-19-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w3": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w3",
+   "kind": "word",
+   "clipId": "i-19-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w4": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w4",
+   "kind": "word",
+   "clipId": "i-19-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w5": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w5",
+   "kind": "word",
+   "clipId": "i-19-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w6": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w6",
+   "kind": "word",
+   "clipId": "i-19-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w7": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w7",
+   "kind": "word",
+   "clipId": "i-19-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w8": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w8",
+   "kind": "word",
+   "clipId": "i-19-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w9": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w9",
+   "kind": "word",
+   "clipId": "i-19-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w10": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w10",
+   "kind": "word",
+   "clipId": "i-19-w10",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w11": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w11",
+   "kind": "word",
+   "clipId": "i-19-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w12": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w12",
+   "kind": "word",
+   "clipId": "i-19-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w13": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w13",
+   "kind": "word",
+   "clipId": "i-19-w13",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-shabbat|i-19-w14": {
+   "unitId": "pu-shabbat",
+   "itemId": "i-19-w14",
+   "kind": "word",
+   "clipId": "i-19-w14",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w1": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w1",
+   "kind": "word",
+   "clipId": "i-50-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w2": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w2",
+   "kind": "word",
+   "clipId": "i-50-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w3": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w3",
+   "kind": "word",
+   "clipId": "i-50-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w4": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w4",
+   "kind": "word",
+   "clipId": "i-50-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w5": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w5",
+   "kind": "word",
+   "clipId": "i-50-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w6": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w6",
+   "kind": "word",
+   "clipId": "i-50-w6",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w7": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w7",
+   "kind": "word",
+   "clipId": "i-50-w7",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w8": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w8",
+   "kind": "word",
+   "clipId": "i-50-w8",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w9": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w9",
+   "kind": "word",
+   "clipId": "i-50-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w11": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w11",
+   "kind": "word",
+   "clipId": "i-50-w11",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w12": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w12",
+   "kind": "word",
+   "clipId": "i-50-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w14": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w14",
+   "kind": "line",
+   "clipId": "greetings-27-f",
+   "tradition": "israeli",
+   "via": "same-pointed-text",
+   "status": "tts"
+  }
+ },
+ "totals": {
+  "mapped": 697,
+  "gaps": 53,
+  "items": 750
+ }
+}

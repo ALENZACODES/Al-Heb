@@ -1,0 +1,2136 @@
+{
+ "id": "pu-transport",
+ "title": "Transport: taxi, bus and train",
+ "level": "L1",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il10",
+   "title": "Taxi and public transport",
+   "track": "israel",
+   "wordCount": 6
+  },
+  {
+   "id": "I-11",
+   "title": "Bus and train: tickets, platforms and getting off",
+   "track": "israel",
+   "wordCount": 12
+  },
+  {
+   "id": "I-23",
+   "title": "Taxi: destination, meter, 'slower' and the receipt",
+   "track": "israel",
+   "wordCount": 13
+  }
+ ],
+ "phrasebookSituation": "taxi",
+ "speakSets": [
+  "speak-survival-taxi-1"
+ ],
+ "grammarNote": "Destinations after לְ or לַ are already frozen in the phrasebook. Which-bus and next-train questions use אֵיזֶה and מָתַי. These notes only name forms already in the sources.",
+ "items": [
+  {
+   "id": "taxi-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי צָרִיךְ מוֹנִית",
+   "en": "I need a taxi",
+   "translit": "ani tsarich monit",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-01"
+   }
+  },
+  {
+   "id": "taxi-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לְאָן?",
+   "en": "where to?",
+   "translit": "le'an?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-02"
+   }
+  },
+  {
+   "id": "taxi-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
+   "en": "to the airport, please",
+   "translit": "lisde hate'ufa, bevakasha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-03"
+   }
+  },
+  {
+   "id": "taxi-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+   "en": "to the central station",
+   "translit": "latachana hamerkazit",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-04"
+   }
+  },
+  {
+   "id": "taxi-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לַמָּלוֹן",
+   "en": "to the hotel",
+   "translit": "lamalon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "taxi-05"
+   }
+  },
+  {
+   "id": "taxi-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "לַכּוֹתֶל",
+   "en": "to the Western Wall",
+   "translit": "lakotel",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "taxi-06"
+   }
+  },
+  {
+   "id": "taxi-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+   "en": "can you use the meter, please?",
+   "translit": "efshar moneh, bevakasha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-07"
+   }
+  },
+  {
+   "id": "taxi-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כַּמָּה זֶה יַעֲלֶה?",
+   "en": "how much will it cost?",
+   "translit": "kama ze ya'ale?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-08"
+   }
+  },
+  {
+   "id": "taxi-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+   "en": "stop here, please",
+   "translit": "atsor kan, bevakasha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-09"
+   }
+  },
+  {
+   "id": "taxi-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?",
+   "en": "where is the bus stop?",
+   "translit": "eifo tachanat ha'otobus?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-10"
+   }
+  },
+  {
+   "id": "taxi-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?",
+   "en": "which bus goes to ...?",
+   "translit": "eize otobus holech le...?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-11"
+   }
+  },
+  {
+   "id": "taxi-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+   "en": "when is the next train?",
+   "translit": "matai harakevet haba'a?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-12"
+   }
+  },
+  {
+   "id": "taxi-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה",
+   "en": "one ticket to ..., please",
+   "translit": "kartis echad le..., bevakasha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-13"
+   }
+  },
+  {
+   "id": "taxi-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַאִם זֶה הָאוֹטוֹבּוּס לְ...?",
+   "en": "is this the bus to ...?",
+   "translit": "ha'im ze ha'otobus le...?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-14"
+   }
+  },
+  {
+   "id": "taxi-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה",
+   "en": "it was a pleasant ride, thanks",
+   "translit": "hanesi'a hayta na'ima, toda",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "taxi-15"
+   }
+  },
+  {
+   "id": "il10-w1",
+   "source": "data/curriculum/lessons.json#il10.words[0]",
+   "he": "מוֹנִית",
+   "en": "taxi",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w1"
+   }
+  },
+  {
+   "id": "il10-w2",
+   "source": "data/curriculum/lessons.json#il10.words[1]",
+   "he": "אוֹטוֹבּוּס",
+   "en": "bus",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w2"
+   }
+  },
+  {
+   "id": "il10-w3",
+   "source": "data/curriculum/lessons.json#il10.words[2]",
+   "he": "רַכֶּבֶת",
+   "en": "train",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w3"
+   }
+  },
+  {
+   "id": "il10-w4",
+   "source": "data/curriculum/lessons.json#il10.words[3]",
+   "he": "תַּחֲנָה",
+   "en": "station; stop",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w4"
+   }
+  },
+  {
+   "id": "il10-w5",
+   "source": "data/curriculum/lessons.json#il10.words[4]",
+   "he": "כַּרְטִיס",
+   "en": "ticket",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w5"
+   }
+  },
+  {
+   "id": "il10-w6",
+   "source": "data/curriculum/lessons.json#il10.words[5]",
+   "he": "נְסִיעָה",
+   "en": "ride; trip",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il10-w6"
+   }
+  },
+  {
+   "id": "i-11-w5",
+   "source": "data/curriculum/lessons.json#I-11.words[4]",
+   "he": "רַב-קַו",
+   "en": "Rav-Kav (the transit card)",
+   "translit": "rav-kav",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w5"
+   }
+  },
+  {
+   "id": "i-11-w6",
+   "source": "data/curriculum/lessons.json#I-11.words[5]",
+   "he": "רְצִיף",
+   "en": "platform",
+   "translit": "retzif",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w6"
+   }
+  },
+  {
+   "id": "i-11-w7",
+   "source": "data/curriculum/lessons.json#I-11.words[6]",
+   "he": "נַהָג",
+   "en": "driver",
+   "translit": "nahag",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w7"
+   }
+  },
+  {
+   "id": "i-11-w8",
+   "source": "data/curriculum/lessons.json#I-11.words[7]",
+   "he": "הַתַּחֲנָה הַבָּאָה",
+   "en": "the next stop",
+   "translit": "hatachanah haba'ah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w8"
+   }
+  },
+  {
+   "id": "i-11-w9",
+   "source": "data/curriculum/lessons.json#I-11.words[8]",
+   "he": "יוֹרֵד",
+   "en": "getting off (m)",
+   "translit": "yored",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w9"
+   }
+  },
+  {
+   "id": "i-11-w10",
+   "source": "data/curriculum/lessons.json#I-11.words[9]",
+   "he": "יוֹרֶדֶת",
+   "en": "getting off (f)",
+   "translit": "yoredet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w10"
+   }
+  },
+  {
+   "id": "i-11-w11",
+   "source": "data/curriculum/lessons.json#I-11.words[10]",
+   "he": "תָּפוּס",
+   "en": "taken (seat)",
+   "translit": "tafus",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w11"
+   }
+  },
+  {
+   "id": "i-11-w12",
+   "source": "data/curriculum/lessons.json#I-11.words[11]",
+   "he": "פָּנוּי",
+   "en": "free (seat)",
+   "translit": "panuy",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-11-w12"
+   }
+  },
+  {
+   "id": "i-23-w3",
+   "source": "data/curriculum/lessons.json#I-23.words[2]",
+   "he": "לִשְׂדֵה הַתְּעוּפָה",
+   "en": "to the airport",
+   "translit": "lisdeh hate'ufah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w3"
+   }
+  },
+  {
+   "id": "i-23-w6",
+   "source": "data/curriculum/lessons.json#I-23.words[5]",
+   "he": "מוֹנֶה",
+   "en": "meter",
+   "translit": "moneh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w6"
+   }
+  },
+  {
+   "id": "i-23-w9",
+   "source": "data/curriculum/lessons.json#I-23.words[8]",
+   "he": "לְאַט",
+   "en": "slowly",
+   "translit": "le'at",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w9"
+   }
+  },
+  {
+   "id": "i-23-w10",
+   "source": "data/curriculum/lessons.json#I-23.words[9]",
+   "he": "קַבָּלָה",
+   "en": "receipt",
+   "translit": "kabalah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w10"
+   }
+  },
+  {
+   "id": "i-23-w11",
+   "source": "data/curriculum/lessons.json#I-23.words[10]",
+   "he": "מְמַהֵר",
+   "en": "in a hurry (m)",
+   "translit": "memaher",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w11"
+   }
+  },
+  {
+   "id": "i-23-w12",
+   "source": "data/curriculum/lessons.json#I-23.words[11]",
+   "he": "שֵׁרוּת",
+   "en": "service; shared taxi (sherut)",
+   "translit": "sherut",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w12"
+   }
+  },
+  {
+   "id": "i-23-w13",
+   "source": "data/curriculum/lessons.json#I-23.words[12]",
+   "he": "חַלּוֹן",
+   "en": "window",
+   "translit": "chalon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w13"
+   }
+  },
+  {
+   "id": "d-taxi-l1",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "שָׁלוֹם. לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה.",
+   "en": "Hello. To the airport, please.",
+   "translit": "shalom. lisde hate'ufa, bevakasha.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l1"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-taxi-l2",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "בְּסֵדֶר. עֲלֵה.",
+   "en": "OK. Get in.",
+   "translit": "beseder. ale.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l2"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-taxi-l3",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "עִם מוֹנֶה, בְּבַקָּשָׁה.",
+   "en": "With the meter, please.",
+   "translit": "im mone, bevakasha.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l3"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-taxi-l4",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "כֵּן, בְּלִי בְּעָיָה.",
+   "en": "Yes, no problem.",
+   "translit": "ken, bli be'aya.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l4"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-taxi-l5",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "כַּמָּה זְמַן?",
+   "en": "How long will it take?",
+   "translit": "kama zman?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l5"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-taxi-l6",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "בְּעֵרֶךְ עֶשְׂרִים דַּקּוֹת.",
+   "en": "About twenty minutes.",
+   "translit": "be'erech esrim dakot.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l6"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-taxi-l7",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "הִגַּעְנוּ.",
+   "en": "We've arrived.",
+   "translit": "higanu.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l7"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-taxi-l8",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "כַּמָּה אֲנִי חַיָּב?",
+   "en": "How much do I owe?",
+   "translit": "kama ani chayav?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l8"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-taxi-l9",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "מֵאָה שְׁקָלִים.",
+   "en": "A hundred shekels.",
+   "translit": "me'a shekalim.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l9"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-taxi-l10",
+   "source": "data/curriculum/dialogues.json#d-taxi",
+   "he": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+   "en": "Here you go, thanks. Have a good day!",
+   "translit": "hine, toda. yom tov!",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-taxi-l10"
+   },
+   "speaker": "a"
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "taxi-01",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "taxi-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "taxi-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "taxi-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "taxi-05",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "taxi-06",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "taxi-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "taxi-08",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "line",
+   "id": "taxi-09",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "line",
+   "id": "taxi-10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "taxi-11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "line",
+   "id": "taxi-12",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "taxi-13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "taxi-14",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "line",
+   "id": "taxi-15",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "il10-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "il10-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "il10-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "il10-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "il10-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "il10-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "i-11-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "i-11-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "i-11-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "i-11-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "i-11-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "word",
+   "id": "i-11-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "i-11-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "i-11-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "i-23-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "i-23-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 32,
+   "kind": "word",
+   "id": "i-23-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 33,
+   "kind": "word",
+   "id": "i-23-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 34,
+   "kind": "word",
+   "id": "i-23-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 35,
+   "kind": "word",
+   "id": "i-23-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 36,
+   "kind": "word",
+   "id": "i-23-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 37,
+   "kind": "line",
+   "id": "d-taxi-l1",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 38,
+   "kind": "line",
+   "id": "d-taxi-l2",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 39,
+   "kind": "line",
+   "id": "d-taxi-l3",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 40,
+   "kind": "line",
+   "id": "d-taxi-l4",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 41,
+   "kind": "line",
+   "id": "d-taxi-l5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 42,
+   "kind": "line",
+   "id": "d-taxi-l6",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 43,
+   "kind": "line",
+   "id": "d-taxi-l7",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 44,
+   "kind": "line",
+   "id": "d-taxi-l8",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 45,
+   "kind": "line",
+   "id": "d-taxi-l9",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 46,
+   "kind": "line",
+   "id": "d-taxi-l10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "taxi-01",
+    "taxi-02",
+    "taxi-03",
+    "taxi-04",
+    "taxi-05",
+    "taxi-06",
+    "taxi-07",
+    "taxi-08",
+    "taxi-09",
+    "taxi-10",
+    "taxi-11",
+    "taxi-12",
+    "taxi-13",
+    "taxi-14",
+    "taxi-15",
+    "il10-w1",
+    "il10-w2",
+    "il10-w3",
+    "il10-w4",
+    "il10-w5",
+    "il10-w6",
+    "i-11-w5",
+    "i-11-w6",
+    "i-11-w7",
+    "i-11-w8",
+    "i-11-w9",
+    "i-11-w10",
+    "i-11-w11",
+    "i-11-w12",
+    "i-23-w3",
+    "i-23-w6",
+    "i-23-w9",
+    "i-23-w10",
+    "i-23-w11",
+    "i-23-w12",
+    "i-23-w13",
+    "d-taxi-l1",
+    "d-taxi-l2",
+    "d-taxi-l3",
+    "d-taxi-l4",
+    "d-taxi-l5",
+    "d-taxi-l6",
+    "d-taxi-l7",
+    "d-taxi-l8",
+    "d-taxi-l9",
+    "d-taxi-l10"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-taxi-1.json.",
+   "set": "speak-survival-taxi-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-transport-p01",
+   "title": "I need a taxi",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֲנִי צָרִיךְ מוֹנִית. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "taxi-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צָרִיךְ מוֹנִית",
+     "en": "I need a taxi",
+     "translit": "ani tsarich monit",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-01"
+     }
+    },
+    {
+     "id": "taxi-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לְאָן?",
+     "en": "where to?",
+     "translit": "le'an?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-02"
+     }
+    },
+    {
+     "id": "taxi-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה",
+     "en": "to the airport, please",
+     "translit": "lisde hate'ufa, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-03"
+     }
+    },
+    {
+     "id": "taxi-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
+     "en": "to the central station",
+     "translit": "latachana hamerkazit",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-04"
+     }
+    },
+    {
+     "id": "taxi-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לַמָּלוֹן",
+     "en": "to the hotel",
+     "translit": "lamalon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "taxi-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "taxi-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "taxi-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "taxi-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "taxi-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "taxi-05",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "taxi-01",
+    "taxi-02",
+    "taxi-03",
+    "taxi-04",
+    "taxi-05"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p02",
+   "title": "To the Western Wall",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: לַכּוֹתֶל. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "taxi-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לַכּוֹתֶל",
+     "en": "to the Western Wall",
+     "translit": "lakotel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "taxi-06"
+     }
+    },
+    {
+     "id": "taxi-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה?",
+     "en": "can you use the meter, please?",
+     "translit": "efshar moneh, bevakasha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-07"
+     }
+    },
+    {
+     "id": "taxi-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּמָּה זֶה יַעֲלֶה?",
+     "en": "how much will it cost?",
+     "translit": "kama ze ya'ale?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-08"
+     }
+    },
+    {
+     "id": "taxi-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+     "en": "stop here, please",
+     "translit": "atsor kan, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-09"
+     }
+    },
+    {
+     "id": "taxi-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס?",
+     "en": "where is the bus stop?",
+     "translit": "eifo tachanat ha'otobus?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "taxi-06",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "taxi-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "taxi-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "taxi-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "taxi-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "taxi-06",
+    "taxi-07",
+    "taxi-08",
+    "taxi-09",
+    "taxi-10"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p03",
+   "title": "Which bus goes to ...?",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "taxi-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...?",
+     "en": "which bus goes to ...?",
+     "translit": "eize otobus holech le...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-11"
+     }
+    },
+    {
+     "id": "taxi-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+     "en": "when is the next train?",
+     "translit": "matai harakevet haba'a?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-12"
+     }
+    },
+    {
+     "id": "taxi-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה",
+     "en": "one ticket to ..., please",
+     "translit": "kartis echad le..., bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-13"
+     }
+    },
+    {
+     "id": "taxi-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַאִם זֶה הָאוֹטוֹבּוּס לְ...?",
+     "en": "is this the bus to ...?",
+     "translit": "ha'im ze ha'otobus le...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-14"
+     }
+    },
+    {
+     "id": "taxi-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה",
+     "en": "it was a pleasant ride, thanks",
+     "translit": "hanesi'a hayta na'ima, toda",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "taxi-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "taxi-11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "taxi-12",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "taxi-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "taxi-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "taxi-15",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "taxi-11",
+    "taxi-12",
+    "taxi-13",
+    "taxi-14",
+    "taxi-15"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p04",
+   "title": "Taxi",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מוֹנִית. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "il10-w1",
+     "source": "data/curriculum/lessons.json#il10.words[0]",
+     "he": "מוֹנִית",
+     "en": "taxi",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w1"
+     }
+    },
+    {
+     "id": "il10-w2",
+     "source": "data/curriculum/lessons.json#il10.words[1]",
+     "he": "אוֹטוֹבּוּס",
+     "en": "bus",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w2"
+     }
+    },
+    {
+     "id": "il10-w3",
+     "source": "data/curriculum/lessons.json#il10.words[2]",
+     "he": "רַכֶּבֶת",
+     "en": "train",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w3"
+     }
+    },
+    {
+     "id": "il10-w4",
+     "source": "data/curriculum/lessons.json#il10.words[3]",
+     "he": "תַּחֲנָה",
+     "en": "station; stop",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w4"
+     }
+    },
+    {
+     "id": "il10-w5",
+     "source": "data/curriculum/lessons.json#il10.words[4]",
+     "he": "כַּרְטִיס",
+     "en": "ticket",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il10-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il10-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il10-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il10-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il10-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il10-w1",
+    "il10-w2",
+    "il10-w3",
+    "il10-w4",
+    "il10-w5"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p05",
+   "title": "Ride; trip",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: נְסִיעָה. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "il10-w6",
+     "source": "data/curriculum/lessons.json#il10.words[5]",
+     "he": "נְסִיעָה",
+     "en": "ride; trip",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il10-w6"
+     }
+    },
+    {
+     "id": "i-11-w5",
+     "source": "data/curriculum/lessons.json#I-11.words[4]",
+     "he": "רַב-קַו",
+     "en": "Rav-Kav (the transit card)",
+     "translit": "rav-kav",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w5"
+     }
+    },
+    {
+     "id": "i-11-w6",
+     "source": "data/curriculum/lessons.json#I-11.words[5]",
+     "he": "רְצִיף",
+     "en": "platform",
+     "translit": "retzif",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w6"
+     }
+    },
+    {
+     "id": "i-11-w7",
+     "source": "data/curriculum/lessons.json#I-11.words[6]",
+     "he": "נַהָג",
+     "en": "driver",
+     "translit": "nahag",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w7"
+     }
+    },
+    {
+     "id": "i-11-w8",
+     "source": "data/curriculum/lessons.json#I-11.words[7]",
+     "he": "הַתַּחֲנָה הַבָּאָה",
+     "en": "the next stop",
+     "translit": "hatachanah haba'ah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w8"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il10-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-11-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-11-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-11-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-11-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il10-w6",
+    "i-11-w5",
+    "i-11-w6",
+    "i-11-w7",
+    "i-11-w8"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p06",
+   "title": "Getting off (m)",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: יוֹרֵד. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "i-11-w9",
+     "source": "data/curriculum/lessons.json#I-11.words[8]",
+     "he": "יוֹרֵד",
+     "en": "getting off (m)",
+     "translit": "yored",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w9"
+     }
+    },
+    {
+     "id": "i-11-w10",
+     "source": "data/curriculum/lessons.json#I-11.words[9]",
+     "he": "יוֹרֶדֶת",
+     "en": "getting off (f)",
+     "translit": "yoredet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w10"
+     }
+    },
+    {
+     "id": "i-11-w11",
+     "source": "data/curriculum/lessons.json#I-11.words[10]",
+     "he": "תָּפוּס",
+     "en": "taken (seat)",
+     "translit": "tafus",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w11"
+     }
+    },
+    {
+     "id": "i-11-w12",
+     "source": "data/curriculum/lessons.json#I-11.words[11]",
+     "he": "פָּנוּי",
+     "en": "free (seat)",
+     "translit": "panuy",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-11-w12"
+     }
+    },
+    {
+     "id": "i-23-w3",
+     "source": "data/curriculum/lessons.json#I-23.words[2]",
+     "he": "לִשְׂדֵה הַתְּעוּפָה",
+     "en": "to the airport",
+     "translit": "lisdeh hate'ufah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-11-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-11-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-11-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-11-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-23-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-11-w9",
+    "i-11-w10",
+    "i-11-w11",
+    "i-11-w12",
+    "i-23-w3"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p07",
+   "title": "Meter",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מוֹנֶה. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "i-23-w6",
+     "source": "data/curriculum/lessons.json#I-23.words[5]",
+     "he": "מוֹנֶה",
+     "en": "meter",
+     "translit": "moneh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w6"
+     }
+    },
+    {
+     "id": "i-23-w9",
+     "source": "data/curriculum/lessons.json#I-23.words[8]",
+     "he": "לְאַט",
+     "en": "slowly",
+     "translit": "le'at",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w9"
+     }
+    },
+    {
+     "id": "i-23-w10",
+     "source": "data/curriculum/lessons.json#I-23.words[9]",
+     "he": "קַבָּלָה",
+     "en": "receipt",
+     "translit": "kabalah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w10"
+     }
+    },
+    {
+     "id": "i-23-w11",
+     "source": "data/curriculum/lessons.json#I-23.words[10]",
+     "he": "מְמַהֵר",
+     "en": "in a hurry (m)",
+     "translit": "memaher",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w11"
+     }
+    },
+    {
+     "id": "i-23-w12",
+     "source": "data/curriculum/lessons.json#I-23.words[11]",
+     "he": "שֵׁרוּת",
+     "en": "service; shared taxi (sherut)",
+     "translit": "sherut",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-23-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-23-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-23-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-23-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-23-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-23-w6",
+    "i-23-w9",
+    "i-23-w10",
+    "i-23-w11",
+    "i-23-w12"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p08",
+   "title": "Window",
+   "order": 8,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json, data/curriculum/lessons.json. First line: חַלּוֹן. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "i-23-w13",
+     "source": "data/curriculum/lessons.json#I-23.words[12]",
+     "he": "חַלּוֹן",
+     "en": "window",
+     "translit": "chalon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w13"
+     }
+    },
+    {
+     "id": "d-taxi-l1",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "שָׁלוֹם. לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה.",
+     "en": "Hello. To the airport, please.",
+     "translit": "shalom. lisde hate'ufa, bevakasha.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l1"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-taxi-l2",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "בְּסֵדֶר. עֲלֵה.",
+     "en": "OK. Get in.",
+     "translit": "beseder. ale.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l2"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-taxi-l3",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "עִם מוֹנֶה, בְּבַקָּשָׁה.",
+     "en": "With the meter, please.",
+     "translit": "im mone, bevakasha.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l3"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-taxi-l4",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "כֵּן, בְּלִי בְּעָיָה.",
+     "en": "Yes, no problem.",
+     "translit": "ken, bli be'aya.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l4"
+     },
+     "speaker": "b"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-23-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-taxi-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-taxi-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-taxi-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-taxi-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-23-w13",
+    "d-taxi-l1",
+    "d-taxi-l2",
+    "d-taxi-l3",
+    "d-taxi-l4"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p09",
+   "title": "How long will it take?",
+   "order": 9,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: כַּמָּה זְמַן?. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "d-taxi-l5",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "כַּמָּה זְמַן?",
+     "en": "How long will it take?",
+     "translit": "kama zman?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l5"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-taxi-l6",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "בְּעֵרֶךְ עֶשְׂרִים דַּקּוֹת.",
+     "en": "About twenty minutes.",
+     "translit": "be'erech esrim dakot.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l6"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-taxi-l7",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "הִגַּעְנוּ.",
+     "en": "We've arrived.",
+     "translit": "higanu.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l7"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-taxi-l8",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "כַּמָּה אֲנִי חַיָּב?",
+     "en": "How much do I owe?",
+     "translit": "kama ani chayav?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l8"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-taxi-l9",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "מֵאָה שְׁקָלִים.",
+     "en": "A hundred shekels.",
+     "translit": "me'a shekalim.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l9"
+     },
+     "speaker": "b"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-taxi-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-taxi-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-taxi-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-taxi-l8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-taxi-l9",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-taxi-l5",
+    "d-taxi-l6",
+    "d-taxi-l7",
+    "d-taxi-l8",
+    "d-taxi-l9"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  },
+  {
+   "id": "pu-transport-p10",
+   "title": "Here you go, thanks. Have a good day!",
+   "order": 10,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: הִנֵּה, תּוֹדָה. יוֹם טוֹב!. Destinations after לְ or לַ are already frozen in the phrasebook.",
+   "items": [
+    {
+     "id": "d-taxi-l10",
+     "source": "data/curriculum/dialogues.json#d-taxi",
+     "he": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+     "en": "Here you go, thanks. Have a good day!",
+     "translit": "hine, toda. yom tov!",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-taxi-l10"
+     },
+     "speaker": "a"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-taxi-l10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-taxi-l10"
+   ],
+   "speakSet": "speak-survival-taxi-1"
+  }
+ ]
+}

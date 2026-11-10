@@ -26,8 +26,8 @@ const TRAD_STYLE = Object.freeze({ israeli: 'Israeli', sephardi: 'Sephardi', ash
 
 /**
  * Which tradition a playing file is, as a caption. Same file and setting: the tradition's name. A file of another tradition
- * standing in for the setting (the Sephardi setting plays the Israeli clips, owner decision 2026-11-07, src/audio/player.js
- * PLAYBACK_TRADITION): "Israeli voice; Sephardi reading shown in English letters".
+ * standing in for the setting (when a Sephardi or Ashkenazi row is missing, the Israeli file of the same voice plays,
+ * src/audio/player.js FALLBACK_TRADITION): "Israeli voice; Sephardi reading shown in English letters".
  * @param {string} tradition the learner's setting @param {string} [fileTradition] the file's tradition when it differs
  */
 export function traditionCaption(tradition, fileTradition) {
@@ -52,7 +52,7 @@ export function syntheticLabel(status, tradition, source) {
 export function statusLabel(status, tradition, source) {
   if (status === 'recorded') return STATUS_LABELS.recorded;
   if (tradition === 'english' && isSyntheticStatus(status)) return syntheticLabel(status, tradition, source);
-  if (status === 'tts') return STATUS_LABELS.tts;
+  if (status === 'tts') return (tradition && tradition !== 'israeli' && TRAD_STYLE[tradition]) ? `${TRAD_STYLE[tradition]} voice` : STATUS_LABELS.tts;
   if (status === 'synthetic-unreviewed' || status === 'synthetic-reviewed') return syntheticLabel(status, tradition, source);
   return STATUS_LABELS.missing;
 }

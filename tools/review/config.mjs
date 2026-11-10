@@ -53,8 +53,12 @@ export const CLAIMS = [
   { area: 'pron-rules', match: /^data\/pronunciation\/runtime\/(?!rules\.json$)/, reason: 'derived lookup shards, picks, reasons and quiz pool built from the rules. rules.json (learner-facing prose) is reviewed as rows.' },
   { area: 'lessons', match: /^data\/curriculum\/lessons-intermediate\/I-\d+\.json$/, reason: 'generated copies of the I-01..I-50 entries in lessons.json (identical); titles and words are in lessons, exercises in intermediate.' },
   { area: 'lessons', match: /^data\/curriculum\/intermediate-index\.json$/, reason: 'index of the same lessons (titles, prerequisites, prayer line ids); nothing to read that the lessons rows do not show.' },
+  { area: 'lessons', match: /^data\/curriculum\/lesson-lexicon\.json$/, reason: 'seven curated pointed forms already used as lesson words in lessons.json (I-16, I-18, I-37, I-40 and festival greetings). Not generated vocabulary; proofread is still false and native review is outstanding.' },
+  { area: 'lessons', match: /^data\/curriculum\/practical(-units\.json|\/)/, reason: 'draft conversation units and pages that only copy phrasebook, lesson and dialogue Hebrew already in those files; no new Hebrew; native review still outstanding (proofread: false).' },
   { area: 'vocab-top1000', match: /^data\/vocab\/(words|corrections)\.json$/, reason: 'carries the replacement example sentences flagged needsNativeReview (flags on the example). They are reviewer rows vocab-example:<id> in docs/review/packs/03-vocab-top-1000, not rows here, because the sheet there has no example column.' },
   { area: 'vocab-top1000', match: /^data\/vocab\/packs\/(?!vocab5k-tier-)[a-z-]+-\d+\.json$/, reason: 'themed word packs: copies of the same flagged example sentences as data/vocab/words.json (see that claim).' },
+  { area: 'lessons', match: /^data\/curriculum\/lesson-lexicon\.json$/, reason: 'three curated pointed forms used as lesson words in I-16, I-37 and I-40 (charger, course, map), replacing words that meant something else. Not generated vocabulary; native review outstanding.' },
+  { area: 'dialogues', match: /^data\/curriculum\/practical-pages\//, reason: 'Practical course outline and first written pages: every Hebrew line is copied by id from the phrasebook, audio manifests or dialogues, and a test checks it; English grammar notes and spoken-style transliteration of the woman\'s forms need a native read (nativeReview: required).' },
 ];
 export const claimFor = (file) => CLAIMS.find((c) => c.match.test(file)) || null;
 

@@ -46,7 +46,7 @@ test('device-voice line: never says the learner chose it (it is on by default); 
   assert.doesNotMatch(a.line, /you chose/i);
   assert.match(a.line, /No Ashkenazi audio yet\. The device voice is on: it speaks Israeli Hebrew, so it will not sound Ashkenazi\./);
   const sep = audioSupport('sephardi', { browserVoiceAnyway: true });
-  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /Sephardi way to say it/);
+  assert.equal(sep.supported, 'device'); assert.doesNotMatch(sep.line, /you chose|will not sound/i); assert.match(sep.line, /Sephardi clip is in the audio bank/);
   assert.match(read('src/shell/settings.js'), /browserVoiceAnyway: true/, 'the default is on, which is why the wording must not claim a choice');
 });
 
@@ -60,14 +60,17 @@ test('Man/Woman: a clip plays only for its own voice and tradition, and the word
   const house = all.find((e) => e.id === 'h9c8ddecf' && e.voice === 'f' && e.tradition === 'sephardi');
   assert.ok(['tts', 'synthetic-unreviewed'].includes(house.status), `a synthetic status that no human reviewed, got ${house.status}`);
   const at = (voice, congregation, id) => createAudio({ settings: { voice, congregation }, manifest: all, AudioCtor: class {}, speech: null }).status('word', id);
-  // Owner decision 2026-11-07: the Sephardi setting plays the Israeli clip of the same voice and says so; the Sephardi files are retired.
   const fSep = at('f', 'sephardi', 'h9c8ddecf');
-  assert.equal(fSep.source, 'file', 'Woman + Sephardi plays a clip'); assert.equal(fSep.fileTradition, 'israeli'); assert.match(fSep.path, /audio\/f\/israeli\//);
+  assert.equal(fSep.source, 'file', 'Woman + Sephardi plays a clip');
+  if (fSep.fileTradition === 'israeli') assert.match(fSep.path, /audio\/f\/israeli\//);
+  else { assert.equal(fSep.fileTradition, undefined); assert.match(fSep.path, /audio\/f\/sephardi\//); }
   const mSep = at('m', 'sephardi', 'h9c8ddecf');
-  assert.equal(mSep.source, 'file', 'Man + Sephardi plays the man Israeli clip'); assert.match(mSep.path, /audio\/m\/israeli\//);
+  assert.equal(mSep.source, 'file', 'Man + Sephardi plays a clip');
+  assert.match(mSep.path, mSep.fileTradition === 'israeli' ? /audio\/m\/israeli\// : /audio\/m\/sephardi\//);
   assert.equal(at('f', 'israeli', 'h9c8ddecf').source, 'file', 'the Israeli woman house clip stays on its own row');
   const mAsh = at('m', 'ashkenazi', 'h9c8ddecf');
-  assert.equal(mAsh.source, 'file', 'Man + Ashkenazi plays the man Israeli clip (owner decision 2026-11-07 22:56: Ashkenazi falls back to Israeli like Sephardi)'); assert.match(mAsh.path, /audio\/m\/israeli\//); assert.equal(mAsh.fileTradition, 'israeli');
+  assert.equal(mAsh.source, 'file', 'Man + Ashkenazi plays a clip');
+  assert.match(mAsh.path, mAsh.fileTradition === 'israeli' ? /audio\/m\/israeli\// : /audio\/m\/ashkenazi\//);
   const d = audioTruthDetail(summary);
   assert.match(d, /not swapped for a different voice or tradition/);
   assert.match(d, /Israeli style has not been verified/);

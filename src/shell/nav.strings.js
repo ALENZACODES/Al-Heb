@@ -13,6 +13,7 @@ export const NAV_EN = {
   'nav.section.more.desc': 'Settings, search, install, offline use, credits and privacy.',
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
   'nav.phrases': 'Common phrases',
+  'nav.practical': 'Practical',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.songs': 'Songs',
   'nav.route.camera': 'Camera Translator',

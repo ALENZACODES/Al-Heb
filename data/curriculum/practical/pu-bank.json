@@ -1,0 +1,994 @@
+{
+ "id": "pu-bank",
+ "title": "Bank, cash and forms",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-21",
+   "title": "Bank: accounts, cash machines, exchanging money and signing",
+   "track": "israel",
+   "wordCount": 14
+  },
+  {
+   "id": "I-48",
+   "title": "Banking forms: name, number, signature and date",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "speakSets": [
+  "speak-society-work-law-2"
+ ],
+ "grammarNote": "I-21 and I-48 already store account, cash-machine and form-signing words. These notes only name forms already in those lessons.",
+ "items": [
+  {
+   "id": "i-21-w1",
+   "source": "data/curriculum/lessons.json#I-21.words[0]",
+   "he": "בַּנְק",
+   "en": "bank",
+   "translit": "bank",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w1"
+   }
+  },
+  {
+   "id": "i-21-w2",
+   "source": "data/curriculum/lessons.json#I-21.words[1]",
+   "he": "חֶשְׁבּוֹן",
+   "en": "account; bill",
+   "translit": "cheshbon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w2"
+   }
+  },
+  {
+   "id": "i-21-w3",
+   "source": "data/curriculum/lessons.json#I-21.words[2]",
+   "he": "כֶּסֶף",
+   "en": "money",
+   "translit": "kesef",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w3"
+   }
+  },
+  {
+   "id": "i-21-w4",
+   "source": "data/curriculum/lessons.json#I-21.words[3]",
+   "he": "כַּסְפּוֹמָט",
+   "en": "cash machine (ATM)",
+   "translit": "kaspomat",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w4"
+   }
+  },
+  {
+   "id": "i-21-w5",
+   "source": "data/curriculum/lessons.json#I-21.words[4]",
+   "he": "לִמְשֹׁךְ",
+   "en": "to withdraw",
+   "translit": "limshokh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w5"
+   }
+  },
+  {
+   "id": "i-21-w6",
+   "source": "data/curriculum/lessons.json#I-21.words[5]",
+   "he": "לְהַחְלִיף",
+   "en": "to exchange",
+   "translit": "lehachlif",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w6"
+   }
+  },
+  {
+   "id": "i-21-w7",
+   "source": "data/curriculum/lessons.json#I-21.words[6]",
+   "he": "דּוֹלָר",
+   "en": "dollar",
+   "translit": "dolar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w7"
+   }
+  },
+  {
+   "id": "i-21-w8",
+   "source": "data/curriculum/lessons.json#I-21.words[7]",
+   "he": "שֶׁקֶל",
+   "en": "shekel",
+   "translit": "shekel",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w8"
+   }
+  },
+  {
+   "id": "i-21-w9",
+   "source": "data/curriculum/lessons.json#I-21.words[8]",
+   "he": "כַּרְטִיס אַשְׁרַאי",
+   "en": "credit card",
+   "translit": "kartis ashray",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w9"
+   }
+  },
+  {
+   "id": "i-21-w10",
+   "source": "data/curriculum/lessons.json#I-21.words[9]",
+   "he": "חֲתִימָה",
+   "en": "signature",
+   "translit": "chatimah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w10"
+   }
+  },
+  {
+   "id": "i-21-w11",
+   "source": "data/curriculum/lessons.json#I-21.words[10]",
+   "he": "הַלְוָאָה",
+   "en": "loan",
+   "translit": "halva'ah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w11"
+   }
+  },
+  {
+   "id": "i-21-w12",
+   "source": "data/curriculum/lessons.json#I-21.words[11]",
+   "he": "רִבִּית",
+   "en": "interest",
+   "translit": "ribit",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w12"
+   }
+  },
+  {
+   "id": "i-21-w13",
+   "source": "data/curriculum/lessons.json#I-21.words[12]",
+   "he": "פָּתוּחַ",
+   "en": "open",
+   "translit": "patuach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w13"
+   }
+  },
+  {
+   "id": "i-21-w14",
+   "source": "data/curriculum/lessons.json#I-21.words[13]",
+   "he": "סָגוּר",
+   "en": "closed",
+   "translit": "sagur",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-21-w14"
+   }
+  },
+  {
+   "id": "i-48-w2",
+   "source": "data/curriculum/lessons.json#I-48.words[1]",
+   "he": "מִסְפָּר",
+   "en": "number",
+   "translit": "mispar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w2"
+   }
+  },
+  {
+   "id": "i-48-w4",
+   "source": "data/curriculum/lessons.json#I-48.words[3]",
+   "he": "שֵׁם",
+   "en": "name",
+   "translit": "shem",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w4"
+   }
+  },
+  {
+   "id": "i-48-w5",
+   "source": "data/curriculum/lessons.json#I-48.words[4]",
+   "he": "כְּתֹבֶת",
+   "en": "address",
+   "translit": "ketovet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w5"
+   }
+  },
+  {
+   "id": "i-48-w6",
+   "source": "data/curriculum/lessons.json#I-48.words[5]",
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": "telefon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w6"
+   }
+  },
+  {
+   "id": "i-48-w7",
+   "source": "data/curriculum/lessons.json#I-48.words[6]",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": "hayom",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w7"
+   }
+  },
+  {
+   "id": "i-48-w8",
+   "source": "data/curriculum/lessons.json#I-48.words[7]",
+   "he": "שָׁנָה",
+   "en": "year",
+   "translit": "shanah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w8"
+   }
+  },
+  {
+   "id": "i-48-w9",
+   "source": "data/curriculum/lessons.json#I-48.words[8]",
+   "he": "חֹדֶשׁ",
+   "en": "month",
+   "translit": "chodesh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-48-w9"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-21-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-21-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-21-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-21-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-21-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-21-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-21-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-21-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-21-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-21-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-21-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-21-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-21-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-21-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-48-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "i-48-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "i-48-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "i-48-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "word",
+   "id": "i-48-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "i-48-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "i-48-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-21-w1",
+    "i-21-w2",
+    "i-21-w3",
+    "i-21-w4",
+    "i-21-w5",
+    "i-21-w6",
+    "i-21-w7",
+    "i-21-w8",
+    "i-21-w9",
+    "i-21-w10",
+    "i-21-w11",
+    "i-21-w12",
+    "i-21-w13",
+    "i-21-w14",
+    "i-48-w2",
+    "i-48-w4",
+    "i-48-w5",
+    "i-48-w6",
+    "i-48-w7",
+    "i-48-w8",
+    "i-48-w9"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-society-work-law-2.json.",
+   "set": "speak-society-work-law-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-bank-p01",
+   "title": "Bank",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: בַּנְק. I-21 and I-48 already store account, cash-machine and form-signing words.",
+   "items": [
+    {
+     "id": "i-21-w1",
+     "source": "data/curriculum/lessons.json#I-21.words[0]",
+     "he": "בַּנְק",
+     "en": "bank",
+     "translit": "bank",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w1"
+     }
+    },
+    {
+     "id": "i-21-w2",
+     "source": "data/curriculum/lessons.json#I-21.words[1]",
+     "he": "חֶשְׁבּוֹן",
+     "en": "account; bill",
+     "translit": "cheshbon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w2"
+     }
+    },
+    {
+     "id": "i-21-w3",
+     "source": "data/curriculum/lessons.json#I-21.words[2]",
+     "he": "כֶּסֶף",
+     "en": "money",
+     "translit": "kesef",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w3"
+     }
+    },
+    {
+     "id": "i-21-w4",
+     "source": "data/curriculum/lessons.json#I-21.words[3]",
+     "he": "כַּסְפּוֹמָט",
+     "en": "cash machine (ATM)",
+     "translit": "kaspomat",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w4"
+     }
+    },
+    {
+     "id": "i-21-w5",
+     "source": "data/curriculum/lessons.json#I-21.words[4]",
+     "he": "לִמְשֹׁךְ",
+     "en": "to withdraw",
+     "translit": "limshokh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-21-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-21-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-21-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-21-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-21-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-21-w1",
+    "i-21-w2",
+    "i-21-w3",
+    "i-21-w4",
+    "i-21-w5"
+   ],
+   "speakSet": "speak-society-work-law-2"
+  },
+  {
+   "id": "pu-bank-p02",
+   "title": "To exchange",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: לְהַחְלִיף. I-21 and I-48 already store account, cash-machine and form-signing words.",
+   "items": [
+    {
+     "id": "i-21-w6",
+     "source": "data/curriculum/lessons.json#I-21.words[5]",
+     "he": "לְהַחְלִיף",
+     "en": "to exchange",
+     "translit": "lehachlif",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w6"
+     }
+    },
+    {
+     "id": "i-21-w7",
+     "source": "data/curriculum/lessons.json#I-21.words[6]",
+     "he": "דּוֹלָר",
+     "en": "dollar",
+     "translit": "dolar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w7"
+     }
+    },
+    {
+     "id": "i-21-w8",
+     "source": "data/curriculum/lessons.json#I-21.words[7]",
+     "he": "שֶׁקֶל",
+     "en": "shekel",
+     "translit": "shekel",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w8"
+     }
+    },
+    {
+     "id": "i-21-w9",
+     "source": "data/curriculum/lessons.json#I-21.words[8]",
+     "he": "כַּרְטִיס אַשְׁרַאי",
+     "en": "credit card",
+     "translit": "kartis ashray",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w9"
+     }
+    },
+    {
+     "id": "i-21-w10",
+     "source": "data/curriculum/lessons.json#I-21.words[9]",
+     "he": "חֲתִימָה",
+     "en": "signature",
+     "translit": "chatimah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-21-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-21-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-21-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-21-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-21-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-21-w6",
+    "i-21-w7",
+    "i-21-w8",
+    "i-21-w9",
+    "i-21-w10"
+   ],
+   "speakSet": "speak-society-work-law-2"
+  },
+  {
+   "id": "pu-bank-p03",
+   "title": "Loan",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הַלְוָאָה. I-21 and I-48 already store account, cash-machine and form-signing words.",
+   "items": [
+    {
+     "id": "i-21-w11",
+     "source": "data/curriculum/lessons.json#I-21.words[10]",
+     "he": "הַלְוָאָה",
+     "en": "loan",
+     "translit": "halva'ah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w11"
+     }
+    },
+    {
+     "id": "i-21-w12",
+     "source": "data/curriculum/lessons.json#I-21.words[11]",
+     "he": "רִבִּית",
+     "en": "interest",
+     "translit": "ribit",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w12"
+     }
+    },
+    {
+     "id": "i-21-w13",
+     "source": "data/curriculum/lessons.json#I-21.words[12]",
+     "he": "פָּתוּחַ",
+     "en": "open",
+     "translit": "patuach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w13"
+     }
+    },
+    {
+     "id": "i-21-w14",
+     "source": "data/curriculum/lessons.json#I-21.words[13]",
+     "he": "סָגוּר",
+     "en": "closed",
+     "translit": "sagur",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-21-w14"
+     }
+    },
+    {
+     "id": "i-48-w2",
+     "source": "data/curriculum/lessons.json#I-48.words[1]",
+     "he": "מִסְפָּר",
+     "en": "number",
+     "translit": "mispar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w2"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-21-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-21-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-21-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-21-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-48-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-21-w11",
+    "i-21-w12",
+    "i-21-w13",
+    "i-21-w14",
+    "i-48-w2"
+   ],
+   "speakSet": "speak-society-work-law-2"
+  },
+  {
+   "id": "pu-bank-p04",
+   "title": "Name",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שֵׁם. I-21 and I-48 already store account, cash-machine and form-signing words.",
+   "items": [
+    {
+     "id": "i-48-w4",
+     "source": "data/curriculum/lessons.json#I-48.words[3]",
+     "he": "שֵׁם",
+     "en": "name",
+     "translit": "shem",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w4"
+     }
+    },
+    {
+     "id": "i-48-w5",
+     "source": "data/curriculum/lessons.json#I-48.words[4]",
+     "he": "כְּתֹבֶת",
+     "en": "address",
+     "translit": "ketovet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w5"
+     }
+    },
+    {
+     "id": "i-48-w6",
+     "source": "data/curriculum/lessons.json#I-48.words[5]",
+     "he": "טֶלֶפוֹן",
+     "en": "phone",
+     "translit": "telefon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w6"
+     }
+    },
+    {
+     "id": "i-48-w7",
+     "source": "data/curriculum/lessons.json#I-48.words[6]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w7"
+     }
+    },
+    {
+     "id": "i-48-w8",
+     "source": "data/curriculum/lessons.json#I-48.words[7]",
+     "he": "שָׁנָה",
+     "en": "year",
+     "translit": "shanah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w8"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-48-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-48-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-48-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-48-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-48-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-48-w4",
+    "i-48-w5",
+    "i-48-w6",
+    "i-48-w7",
+    "i-48-w8"
+   ],
+   "speakSet": "speak-society-work-law-2"
+  },
+  {
+   "id": "pu-bank-p05",
+   "title": "Month",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: חֹדֶשׁ. I-21 and I-48 already store account, cash-machine and form-signing words.",
+   "items": [
+    {
+     "id": "i-48-w9",
+     "source": "data/curriculum/lessons.json#I-48.words[8]",
+     "he": "חֹדֶשׁ",
+     "en": "month",
+     "translit": "chodesh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-48-w9"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-48-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-48-w9"
+   ],
+   "speakSet": "speak-society-work-law-2"
+  }
+ ]
+}

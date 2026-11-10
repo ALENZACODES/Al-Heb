@@ -1,5 +1,7 @@
 # Hebrew for Israel, Unit by Unit
 
+This page is lane C's Babbel-style grouping of the existing Israel-track lessons (core il01–il24, go-further Israel B1). It does not add a 126th lesson and does not replace `#/practical`, which is extra situation practice drawn from the phrasebook and cited lessons (including synagogue-track greetings). Folded onto `feature/lesson-integrity-2026-11-10` from the lane C branch on 10 November 2026 after a source check of every Hebrew example.
+
 The Israel track rearranged as practical units, the way a structured conversation course (Babbel is the usual example) is built:
 one real situation per unit, a short grammar note that explains the pattern behind the phrases, spaced review, and listening and
 speaking drills. Route: `#/israel-units` (preview). Data: `data/curriculum/israel-units.json`. Logic: `src/curriculum/israel-units.js`.

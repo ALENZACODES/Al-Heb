@@ -1,0 +1,2395 @@
+{
+ "id": "pu-small-talk",
+ "title": "Small talk",
+ "level": "L1",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il13",
+   "title": "Small talk: how are you",
+   "track": "israel",
+   "wordCount": 5
+  },
+  {
+   "id": "I-25",
+   "title": "Small talk: where you're from, how long you've been here, keeping in touch",
+   "track": "israel",
+   "wordCount": 15
+  },
+  {
+   "id": "I-36",
+   "title": "Work: office, meeting, boss and interview",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "phrasebookSituation": "small-talk",
+ "speakSets": [
+  "speak-survival-small-talk-1"
+ ],
+ "grammarNote": "Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי. Feeling phrases often put the adjective first: חַם לִי, קַר לִי. These notes only name forms already in the sources.",
+ "items": [
+  {
+   "id": "small-talk-01",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מַה שִּׁמְךָ?",
+   "en": "what's your name?",
+   "translit": "ma shimcha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-01"
+   }
+  },
+  {
+   "id": "small-talk-02",
+   "source": "data/corpus/phrasebook.json",
+   "he": "קוֹרְאִים לִי ...",
+   "en": "my name is ... (lit. they call me ...)",
+   "translit": "kor'im li ...",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-02"
+   }
+  },
+  {
+   "id": "small-talk-03",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מֵאֵיפֹה אַתָּה?",
+   "en": "where are you from?",
+   "translit": "me'eifo ata?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-03"
+   }
+  },
+  {
+   "id": "small-talk-04",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי מִקָּנָדָה",
+   "en": "I'm from Canada",
+   "translit": "ani mikanada",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-04"
+   }
+  },
+  {
+   "id": "small-talk-05",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי תַּיָּר",
+   "en": "I'm a tourist",
+   "translit": "ani tayar",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-05"
+   }
+  },
+  {
+   "id": "small-talk-06",
+   "source": "data/corpus/phrasebook.json",
+   "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+   "en": "it's my first time in Israel",
+   "translit": "zot hapa'am harishona sheli beyisrael",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-06"
+   }
+  },
+  {
+   "id": "small-talk-07",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה אַתָּה עוֹשֶׂה?",
+   "en": "what do you do (for work)?",
+   "translit": "ma ata ose?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-07"
+   }
+  },
+  {
+   "id": "small-talk-08",
+   "source": "data/corpus/phrasebook.json",
+   "he": "בֶּן כַּמָּה אַתָּה?",
+   "en": "how old are you? (lit. son of how much)",
+   "translit": "ben kama ata?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-08"
+   }
+  },
+  {
+   "id": "small-talk-09",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי רָעֵב",
+   "en": "I'm hungry",
+   "translit": "ani ra'ev",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-09"
+   }
+  },
+  {
+   "id": "small-talk-10",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי צָמֵא",
+   "en": "I'm thirsty",
+   "translit": "ani tsame",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-10"
+   }
+  },
+  {
+   "id": "small-talk-11",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֲנִי עָיֵף",
+   "en": "I'm tired",
+   "translit": "ani ayef",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-11"
+   }
+  },
+  {
+   "id": "small-talk-12",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חַם לִי",
+   "en": "I'm hot",
+   "translit": "cham li",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-12"
+   }
+  },
+  {
+   "id": "small-talk-13",
+   "source": "data/corpus/phrasebook.json",
+   "he": "קַר לִי",
+   "en": "I'm cold",
+   "translit": "kar li",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-13"
+   }
+  },
+  {
+   "id": "small-talk-14",
+   "source": "data/corpus/phrasebook.json",
+   "he": "הַכֹּל בְּסֵדֶר אִתְּךָ?",
+   "en": "are you OK?",
+   "translit": "hakol beseder itcha?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-14"
+   }
+  },
+  {
+   "id": "small-talk-15",
+   "source": "data/corpus/phrasebook.json",
+   "he": "תִּרְגַּע",
+   "en": "chill / calm down",
+   "translit": "tirga",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "word",
+    "id": "small-talk-15"
+   }
+  },
+  {
+   "id": "small-talk-16",
+   "source": "data/corpus/phrasebook.json",
+   "he": "מָה הַמַּצָּב?",
+   "en": "how's it going? (lit. what's the situation)",
+   "translit": "ma hamatsav?",
+   "review": "native-speaker-needed: slang/register and spelling",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-16"
+   }
+  },
+  {
+   "id": "small-talk-17",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵין מָה לַעֲשׂוֹת",
+   "en": "there's nothing to be done",
+   "translit": "ein ma la'asot",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-17"
+   }
+  },
+  {
+   "id": "small-talk-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "חָבֵר",
+   "en": "friend",
+   "translit": "chaver",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "small-talk-18"
+   }
+  },
+  {
+   "id": "small-talk-19",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֶתְגַּעְגֵּעַ אֵלֶיךָ",
+   "en": "I'll miss you",
+   "translit": "etga'age'a elecha",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "small-talk-19"
+   }
+  },
+  {
+   "id": "il13-w1",
+   "source": "data/curriculum/lessons.json#il13.words[0]",
+   "he": "מַה נִּשְׁמָע",
+   "en": "what's up; how are you",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il13-w1"
+   }
+  },
+  {
+   "id": "il13-w2",
+   "source": "data/curriculum/lessons.json#il13.words[1]",
+   "he": "הַכֹּל בְּסֵדֶר",
+   "en": "everything's fine",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il13-w2"
+   }
+  },
+  {
+   "id": "il13-w3",
+   "source": "data/curriculum/lessons.json#il13.words[2]",
+   "he": "מַה קּוֹרֶה",
+   "en": "what's happening",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il13-w3"
+   }
+  },
+  {
+   "id": "il13-w5",
+   "source": "data/curriculum/lessons.json#il13.words[4]",
+   "he": "לֹא רַע",
+   "en": "not bad",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il13-w5"
+   }
+  },
+  {
+   "id": "i-25-w2",
+   "source": "data/curriculum/lessons.json#I-25.words[1]",
+   "he": "קוֹרְאִים לִי",
+   "en": "my name is (they call me)",
+   "translit": "kore'im li",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w2"
+   }
+  },
+  {
+   "id": "i-25-w5",
+   "source": "data/curriculum/lessons.json#I-25.words[4]",
+   "he": "כַּמָּה זְמַן",
+   "en": "how long",
+   "translit": "kamah zeman",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w5"
+   }
+  },
+  {
+   "id": "i-25-w6",
+   "source": "data/curriculum/lessons.json#I-25.words[5]",
+   "he": "בָּאָרֶץ",
+   "en": "in the country (Israel)",
+   "translit": "ba'aretz",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w6"
+   }
+  },
+  {
+   "id": "i-25-w7",
+   "source": "data/curriculum/lessons.json#I-25.words[6]",
+   "he": "שָׁבוּעַ",
+   "en": "a week",
+   "translit": "shavu'a",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w7"
+   }
+  },
+  {
+   "id": "i-25-w8",
+   "source": "data/curriculum/lessons.json#I-25.words[7]",
+   "he": "חֹדֶשׁ",
+   "en": "month",
+   "translit": "chodesh",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w8"
+   }
+  },
+  {
+   "id": "i-25-w9",
+   "source": "data/curriculum/lessons.json#I-25.words[8]",
+   "he": "לוֹמֵד",
+   "en": "studying (m)",
+   "translit": "lomed",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w9"
+   }
+  },
+  {
+   "id": "i-25-w10",
+   "source": "data/curriculum/lessons.json#I-25.words[9]",
+   "he": "עִבְרִית",
+   "en": "Hebrew",
+   "translit": "ivrit",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w10"
+   }
+  },
+  {
+   "id": "i-25-w12",
+   "source": "data/curriculum/lessons.json#I-25.words[11]",
+   "he": "מָה נִשְׁמָע?",
+   "en": "what's up?",
+   "translit": "mah nishma?",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w12"
+   }
+  },
+  {
+   "id": "i-25-w14",
+   "source": "data/curriculum/lessons.json#I-25.words[13]",
+   "he": "נָעִים מְאֹד",
+   "en": "nice to meet you",
+   "translit": "na'im me'od",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w14"
+   }
+  },
+  {
+   "id": "i-25-w15",
+   "source": "data/curriculum/lessons.json#I-25.words[14]",
+   "he": "לְהִתְרָאוֹת",
+   "en": "see you",
+   "translit": "lehitra'ot",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-25-w15"
+   }
+  },
+  {
+   "id": "i-36-w1",
+   "source": "data/curriculum/lessons.json#I-36.words[0]",
+   "he": "עֲבוֹדָה",
+   "en": "work, job",
+   "translit": "avodah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w1"
+   }
+  },
+  {
+   "id": "i-36-w2",
+   "source": "data/curriculum/lessons.json#I-36.words[1]",
+   "he": "מִשְׂרָד",
+   "en": "office",
+   "translit": "misrad",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w2"
+   }
+  },
+  {
+   "id": "i-36-w3",
+   "source": "data/curriculum/lessons.json#I-36.words[2]",
+   "he": "פְּגִישָׁה",
+   "en": "meeting, appointment",
+   "translit": "pegishah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w3"
+   }
+  },
+  {
+   "id": "i-36-w4",
+   "source": "data/curriculum/lessons.json#I-36.words[3]",
+   "he": "מְנַהֵל",
+   "en": "manager, boss",
+   "translit": "menahel",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w4"
+   }
+  },
+  {
+   "id": "i-36-w5",
+   "source": "data/curriculum/lessons.json#I-36.words[4]",
+   "he": "לָקוֹחַ",
+   "en": "client",
+   "translit": "lakoach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w5"
+   }
+  },
+  {
+   "id": "i-36-w6",
+   "source": "data/curriculum/lessons.json#I-36.words[5]",
+   "he": "מַעֲסִיק",
+   "en": "employer",
+   "translit": "ma'asik",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w6"
+   }
+  },
+  {
+   "id": "i-36-w7",
+   "source": "data/curriculum/lessons.json#I-36.words[6]",
+   "he": "רֵאָיוֹן",
+   "en": "interview",
+   "translit": "re'aivon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w7"
+   }
+  },
+  {
+   "id": "i-36-w8",
+   "source": "data/curriculum/lessons.json#I-36.words[7]",
+   "he": "הוֹדָעָה",
+   "en": "message, notice",
+   "translit": "hoda'ah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w8"
+   }
+  },
+  {
+   "id": "i-36-w9",
+   "source": "data/curriculum/lessons.json#I-36.words[8]",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": "machar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w9"
+   }
+  },
+  {
+   "id": "i-36-w10",
+   "source": "data/curriculum/lessons.json#I-36.words[9]",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": "hayom",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w10"
+   }
+  },
+  {
+   "id": "i-36-w11",
+   "source": "data/curriculum/lessons.json#I-36.words[10]",
+   "he": "עוֹבֵד",
+   "en": "working (m)",
+   "translit": "oved",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w11"
+   }
+  },
+  {
+   "id": "i-36-w12",
+   "source": "data/curriculum/lessons.json#I-36.words[11]",
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": "rega",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-36-w12"
+   }
+  },
+  {
+   "id": "d-smalltalk-l1",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "הַיי, מָה נִשְׁמָע?",
+   "en": "Hi, how's it going?",
+   "translit": "hai, ma nishma?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l1"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-smalltalk-l2",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+   "en": "All fine, thanks. And you?",
+   "translit": "hakol beseder, toda. ve'ata?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l2"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-smalltalk-l3",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+   "en": "All good. Where are you from?",
+   "translit": "hakol tov. me'eifo at?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l3"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-smalltalk-l4",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+   "en": "I'm from Tel Aviv. And you?",
+   "translit": "ani mitel aviv. ve'ata?",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l4"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-smalltalk-l5",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+   "en": "I'm from Canada. I speak a little Hebrew.",
+   "translit": "ani mikanada. ani medaber ivrit ktsat.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l5"
+   },
+   "speaker": "a"
+  },
+  {
+   "id": "d-smalltalk-l6",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב.",
+   "en": "Excellent! You speak well.",
+   "translit": "metsuyan! ata medaber tov.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l6"
+   },
+   "speaker": "b"
+  },
+  {
+   "id": "d-smalltalk-l7",
+   "source": "data/curriculum/dialogues.json#d-smalltalk",
+   "he": "נָעִים מְאוֹד.",
+   "en": "Very nice to meet you.",
+   "translit": "na'im me'od.",
+   "review": "needs-native-review: dialogue line, not native-checked",
+   "listen": {
+    "kind": "line",
+    "id": "d-smalltalk-l7"
+   },
+   "speaker": "a"
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "small-talk-01",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "small-talk-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "small-talk-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "small-talk-04",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "small-talk-05",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "small-talk-06",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "small-talk-07",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "small-talk-08",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "line",
+   "id": "small-talk-09",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "line",
+   "id": "small-talk-10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "small-talk-11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "line",
+   "id": "small-talk-12",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "small-talk-13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "small-talk-14",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "small-talk-15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "line",
+   "id": "small-talk-16",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "line",
+   "id": "small-talk-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 18,
+   "kind": "word",
+   "id": "small-talk-18",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 19,
+   "kind": "line",
+   "id": "small-talk-19",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 20,
+   "kind": "word",
+   "id": "il13-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 21,
+   "kind": "word",
+   "id": "il13-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 22,
+   "kind": "word",
+   "id": "il13-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 23,
+   "kind": "word",
+   "id": "il13-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 24,
+   "kind": "word",
+   "id": "i-25-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 25,
+   "kind": "word",
+   "id": "i-25-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 26,
+   "kind": "word",
+   "id": "i-25-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 27,
+   "kind": "word",
+   "id": "i-25-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 28,
+   "kind": "word",
+   "id": "i-25-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "i-25-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "i-25-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "i-25-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 32,
+   "kind": "word",
+   "id": "i-25-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 33,
+   "kind": "word",
+   "id": "i-25-w15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 34,
+   "kind": "word",
+   "id": "i-36-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 35,
+   "kind": "word",
+   "id": "i-36-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 36,
+   "kind": "word",
+   "id": "i-36-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 37,
+   "kind": "word",
+   "id": "i-36-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 38,
+   "kind": "word",
+   "id": "i-36-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 39,
+   "kind": "word",
+   "id": "i-36-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 40,
+   "kind": "word",
+   "id": "i-36-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 41,
+   "kind": "word",
+   "id": "i-36-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 42,
+   "kind": "word",
+   "id": "i-36-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 43,
+   "kind": "word",
+   "id": "i-36-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 44,
+   "kind": "word",
+   "id": "i-36-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 45,
+   "kind": "word",
+   "id": "i-36-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 46,
+   "kind": "line",
+   "id": "d-smalltalk-l1",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 47,
+   "kind": "line",
+   "id": "d-smalltalk-l2",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 48,
+   "kind": "line",
+   "id": "d-smalltalk-l3",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 49,
+   "kind": "line",
+   "id": "d-smalltalk-l4",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 50,
+   "kind": "line",
+   "id": "d-smalltalk-l5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 51,
+   "kind": "line",
+   "id": "d-smalltalk-l6",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 52,
+   "kind": "line",
+   "id": "d-smalltalk-l7",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "small-talk-01",
+    "small-talk-02",
+    "small-talk-03",
+    "small-talk-04",
+    "small-talk-05",
+    "small-talk-06",
+    "small-talk-07",
+    "small-talk-08",
+    "small-talk-09",
+    "small-talk-10",
+    "small-talk-11",
+    "small-talk-12",
+    "small-talk-13",
+    "small-talk-14",
+    "small-talk-15",
+    "small-talk-16",
+    "small-talk-17",
+    "small-talk-18",
+    "small-talk-19",
+    "il13-w1",
+    "il13-w2",
+    "il13-w3",
+    "il13-w5",
+    "i-25-w2",
+    "i-25-w5",
+    "i-25-w6",
+    "i-25-w7",
+    "i-25-w8",
+    "i-25-w9",
+    "i-25-w10",
+    "i-25-w12",
+    "i-25-w14",
+    "i-25-w15",
+    "i-36-w1",
+    "i-36-w2",
+    "i-36-w3",
+    "i-36-w4",
+    "i-36-w5",
+    "i-36-w6",
+    "i-36-w7",
+    "i-36-w8",
+    "i-36-w9",
+    "i-36-w10",
+    "i-36-w11",
+    "i-36-w12",
+    "d-smalltalk-l1",
+    "d-smalltalk-l2",
+    "d-smalltalk-l3",
+    "d-smalltalk-l4",
+    "d-smalltalk-l5",
+    "d-smalltalk-l6",
+    "d-smalltalk-l7"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-small-talk-1.json.",
+   "set": "speak-survival-small-talk-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-small-talk-p01",
+   "title": "What's your name?",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: מַה שִּׁמְךָ?. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "small-talk-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַה שִּׁמְךָ?",
+     "en": "what's your name?",
+     "translit": "ma shimcha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-01"
+     }
+    },
+    {
+     "id": "small-talk-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קוֹרְאִים לִי ...",
+     "en": "my name is ... (lit. they call me ...)",
+     "translit": "kor'im li ...",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-02"
+     }
+    },
+    {
+     "id": "small-talk-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מֵאֵיפֹה אַתָּה?",
+     "en": "where are you from?",
+     "translit": "me'eifo ata?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-03"
+     }
+    },
+    {
+     "id": "small-talk-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי מִקָּנָדָה",
+     "en": "I'm from Canada",
+     "translit": "ani mikanada",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-04"
+     }
+    },
+    {
+     "id": "small-talk-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי תַּיָּר",
+     "en": "I'm a tourist",
+     "translit": "ani tayar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-05"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "small-talk-05",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "small-talk-01",
+    "small-talk-02",
+    "small-talk-03",
+    "small-talk-04",
+    "small-talk-05"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p02",
+   "title": "It's my first time in Israel",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "small-talk-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+     "en": "it's my first time in Israel",
+     "translit": "zot hapa'am harishona sheli beyisrael",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-06"
+     }
+    },
+    {
+     "id": "small-talk-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה אַתָּה עוֹשֶׂה?",
+     "en": "what do you do (for work)?",
+     "translit": "ma ata ose?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-07"
+     }
+    },
+    {
+     "id": "small-talk-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בֶּן כַּמָּה אַתָּה?",
+     "en": "how old are you? (lit. son of how much)",
+     "translit": "ben kama ata?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-08"
+     }
+    },
+    {
+     "id": "small-talk-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי רָעֵב",
+     "en": "I'm hungry",
+     "translit": "ani ra'ev",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-09"
+     }
+    },
+    {
+     "id": "small-talk-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צָמֵא",
+     "en": "I'm thirsty",
+     "translit": "ani tsame",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "small-talk-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "small-talk-06",
+    "small-talk-07",
+    "small-talk-08",
+    "small-talk-09",
+    "small-talk-10"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p03",
+   "title": "I'm tired",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֲנִי עָיֵף. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "small-talk-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי עָיֵף",
+     "en": "I'm tired",
+     "translit": "ani ayef",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-11"
+     }
+    },
+    {
+     "id": "small-talk-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חַם לִי",
+     "en": "I'm hot",
+     "translit": "cham li",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-12"
+     }
+    },
+    {
+     "id": "small-talk-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קַר לִי",
+     "en": "I'm cold",
+     "translit": "kar li",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-13"
+     }
+    },
+    {
+     "id": "small-talk-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַכֹּל בְּסֵדֶר אִתְּךָ?",
+     "en": "are you OK?",
+     "translit": "hakol beseder itcha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-14"
+     }
+    },
+    {
+     "id": "small-talk-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תִּרְגַּע",
+     "en": "chill / calm down",
+     "translit": "tirga",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "word",
+      "id": "small-talk-15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-12",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "small-talk-15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "small-talk-11",
+    "small-talk-12",
+    "small-talk-13",
+    "small-talk-14",
+    "small-talk-15"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p04",
+   "title": "How's it going? (lit. what's the situation)",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: מָה הַמַּצָּב?. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "small-talk-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמַּצָּב?",
+     "en": "how's it going? (lit. what's the situation)",
+     "translit": "ma hamatsav?",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-16"
+     }
+    },
+    {
+     "id": "small-talk-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵין מָה לַעֲשׂוֹת",
+     "en": "there's nothing to be done",
+     "translit": "ein ma la'asot",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-17"
+     }
+    },
+    {
+     "id": "small-talk-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חָבֵר",
+     "en": "friend",
+     "translit": "chaver",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "small-talk-18"
+     }
+    },
+    {
+     "id": "small-talk-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶתְגַּעְגֵּעַ אֵלֶיךָ",
+     "en": "I'll miss you",
+     "translit": "etga'age'a elecha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-19"
+     }
+    },
+    {
+     "id": "il13-w1",
+     "source": "data/curriculum/lessons.json#il13.words[0]",
+     "he": "מַה נִּשְׁמָע",
+     "en": "what's up; how are you",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il13-w1"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-16",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "small-talk-18",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-19",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il13-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "small-talk-16",
+    "small-talk-17",
+    "small-talk-18",
+    "small-talk-19",
+    "il13-w1"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p05",
+   "title": "Everything's fine",
+   "order": 5,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הַכֹּל בְּסֵדֶר. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "il13-w2",
+     "source": "data/curriculum/lessons.json#il13.words[1]",
+     "he": "הַכֹּל בְּסֵדֶר",
+     "en": "everything's fine",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il13-w2"
+     }
+    },
+    {
+     "id": "il13-w3",
+     "source": "data/curriculum/lessons.json#il13.words[2]",
+     "he": "מַה קּוֹרֶה",
+     "en": "what's happening",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il13-w3"
+     }
+    },
+    {
+     "id": "il13-w5",
+     "source": "data/curriculum/lessons.json#il13.words[4]",
+     "he": "לֹא רַע",
+     "en": "not bad",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il13-w5"
+     }
+    },
+    {
+     "id": "i-25-w2",
+     "source": "data/curriculum/lessons.json#I-25.words[1]",
+     "he": "קוֹרְאִים לִי",
+     "en": "my name is (they call me)",
+     "translit": "kore'im li",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w2"
+     }
+    },
+    {
+     "id": "i-25-w5",
+     "source": "data/curriculum/lessons.json#I-25.words[4]",
+     "he": "כַּמָּה זְמַן",
+     "en": "how long",
+     "translit": "kamah zeman",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il13-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il13-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il13-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-25-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-25-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il13-w2",
+    "il13-w3",
+    "il13-w5",
+    "i-25-w2",
+    "i-25-w5"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p06",
+   "title": "In the country (Israel)",
+   "order": 6,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: בָּאָרֶץ. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "i-25-w6",
+     "source": "data/curriculum/lessons.json#I-25.words[5]",
+     "he": "בָּאָרֶץ",
+     "en": "in the country (Israel)",
+     "translit": "ba'aretz",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w6"
+     }
+    },
+    {
+     "id": "i-25-w7",
+     "source": "data/curriculum/lessons.json#I-25.words[6]",
+     "he": "שָׁבוּעַ",
+     "en": "a week",
+     "translit": "shavu'a",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w7"
+     }
+    },
+    {
+     "id": "i-25-w8",
+     "source": "data/curriculum/lessons.json#I-25.words[7]",
+     "he": "חֹדֶשׁ",
+     "en": "month",
+     "translit": "chodesh",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w8"
+     }
+    },
+    {
+     "id": "i-25-w9",
+     "source": "data/curriculum/lessons.json#I-25.words[8]",
+     "he": "לוֹמֵד",
+     "en": "studying (m)",
+     "translit": "lomed",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w9"
+     }
+    },
+    {
+     "id": "i-25-w10",
+     "source": "data/curriculum/lessons.json#I-25.words[9]",
+     "he": "עִבְרִית",
+     "en": "Hebrew",
+     "translit": "ivrit",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-25-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-25-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-25-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-25-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-25-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-25-w6",
+    "i-25-w7",
+    "i-25-w8",
+    "i-25-w9",
+    "i-25-w10"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p07",
+   "title": "What's up?",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מָה נִשְׁמָע?. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "i-25-w12",
+     "source": "data/curriculum/lessons.json#I-25.words[11]",
+     "he": "מָה נִשְׁמָע?",
+     "en": "what's up?",
+     "translit": "mah nishma?",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w12"
+     }
+    },
+    {
+     "id": "i-25-w14",
+     "source": "data/curriculum/lessons.json#I-25.words[13]",
+     "he": "נָעִים מְאֹד",
+     "en": "nice to meet you",
+     "translit": "na'im me'od",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w14"
+     }
+    },
+    {
+     "id": "i-25-w15",
+     "source": "data/curriculum/lessons.json#I-25.words[14]",
+     "he": "לְהִתְרָאוֹת",
+     "en": "see you",
+     "translit": "lehitra'ot",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-25-w15"
+     }
+    },
+    {
+     "id": "i-36-w1",
+     "source": "data/curriculum/lessons.json#I-36.words[0]",
+     "he": "עֲבוֹדָה",
+     "en": "work, job",
+     "translit": "avodah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w1"
+     }
+    },
+    {
+     "id": "i-36-w2",
+     "source": "data/curriculum/lessons.json#I-36.words[1]",
+     "he": "מִשְׂרָד",
+     "en": "office",
+     "translit": "misrad",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w2"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-25-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-25-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-25-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-36-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-25-w12",
+    "i-25-w14",
+    "i-25-w15",
+    "i-36-w1",
+    "i-36-w2"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p08",
+   "title": "Meeting, appointment",
+   "order": 8,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: פְּגִישָׁה. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "i-36-w3",
+     "source": "data/curriculum/lessons.json#I-36.words[2]",
+     "he": "פְּגִישָׁה",
+     "en": "meeting, appointment",
+     "translit": "pegishah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w3"
+     }
+    },
+    {
+     "id": "i-36-w4",
+     "source": "data/curriculum/lessons.json#I-36.words[3]",
+     "he": "מְנַהֵל",
+     "en": "manager, boss",
+     "translit": "menahel",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w4"
+     }
+    },
+    {
+     "id": "i-36-w5",
+     "source": "data/curriculum/lessons.json#I-36.words[4]",
+     "he": "לָקוֹחַ",
+     "en": "client",
+     "translit": "lakoach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w5"
+     }
+    },
+    {
+     "id": "i-36-w6",
+     "source": "data/curriculum/lessons.json#I-36.words[5]",
+     "he": "מַעֲסִיק",
+     "en": "employer",
+     "translit": "ma'asik",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w6"
+     }
+    },
+    {
+     "id": "i-36-w7",
+     "source": "data/curriculum/lessons.json#I-36.words[6]",
+     "he": "רֵאָיוֹן",
+     "en": "interview",
+     "translit": "re'aivon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w7"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-36-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-36-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-36-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-36-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-36-w3",
+    "i-36-w4",
+    "i-36-w5",
+    "i-36-w6",
+    "i-36-w7"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p09",
+   "title": "Message, notice",
+   "order": 9,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הוֹדָעָה. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "i-36-w8",
+     "source": "data/curriculum/lessons.json#I-36.words[7]",
+     "he": "הוֹדָעָה",
+     "en": "message, notice",
+     "translit": "hoda'ah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w8"
+     }
+    },
+    {
+     "id": "i-36-w9",
+     "source": "data/curriculum/lessons.json#I-36.words[8]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w9"
+     }
+    },
+    {
+     "id": "i-36-w10",
+     "source": "data/curriculum/lessons.json#I-36.words[9]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w10"
+     }
+    },
+    {
+     "id": "i-36-w11",
+     "source": "data/curriculum/lessons.json#I-36.words[10]",
+     "he": "עוֹבֵד",
+     "en": "working (m)",
+     "translit": "oved",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w11"
+     }
+    },
+    {
+     "id": "i-36-w12",
+     "source": "data/curriculum/lessons.json#I-36.words[11]",
+     "he": "רֶגַע",
+     "en": "one moment",
+     "translit": "rega",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-36-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-36-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-36-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-36-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-36-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-36-w8",
+    "i-36-w9",
+    "i-36-w10",
+    "i-36-w11",
+    "i-36-w12"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p10",
+   "title": "Hi, how's it going?",
+   "order": 10,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: הַיי, מָה נִשְׁמָע?. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "d-smalltalk-l1",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "הַיי, מָה נִשְׁמָע?",
+     "en": "Hi, how's it going?",
+     "translit": "hai, ma nishma?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l1"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-smalltalk-l2",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+     "en": "All fine, thanks. And you?",
+     "translit": "hakol beseder, toda. ve'ata?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l2"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-smalltalk-l3",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+     "en": "All good. Where are you from?",
+     "translit": "hakol tov. me'eifo at?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l3"
+     },
+     "speaker": "a"
+    },
+    {
+     "id": "d-smalltalk-l4",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+     "en": "I'm from Tel Aviv. And you?",
+     "translit": "ani mitel aviv. ve'ata?",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l4"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-smalltalk-l5",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+     "en": "I'm from Canada. I speak a little Hebrew.",
+     "translit": "ani mikanada. ani medaber ivrit ktsat.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l5"
+     },
+     "speaker": "a"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-smalltalk-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-smalltalk-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-smalltalk-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-smalltalk-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-smalltalk-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-smalltalk-l1",
+    "d-smalltalk-l2",
+    "d-smalltalk-l3",
+    "d-smalltalk-l4",
+    "d-smalltalk-l5"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  },
+  {
+   "id": "pu-small-talk-p11",
+   "title": "Excellent! You speak well.",
+   "order": 11,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב.. Name questions use מַה שִּׁמְךָ and קוֹרְאִים לִי.",
+   "items": [
+    {
+     "id": "d-smalltalk-l6",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב.",
+     "en": "Excellent! You speak well.",
+     "translit": "metsuyan! ata medaber tov.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l6"
+     },
+     "speaker": "b"
+    },
+    {
+     "id": "d-smalltalk-l7",
+     "source": "data/curriculum/dialogues.json#d-smalltalk",
+     "he": "נָעִים מְאוֹד.",
+     "en": "Very nice to meet you.",
+     "translit": "na'im me'od.",
+     "review": "needs-native-review: dialogue line, not native-checked",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l7"
+     },
+     "speaker": "a"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-smalltalk-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-smalltalk-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "d-smalltalk-l6",
+    "d-smalltalk-l7"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  }
+ ]
+}

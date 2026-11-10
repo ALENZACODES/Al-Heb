@@ -1,0 +1,813 @@
+{
+ "id": "pu-phone",
+ "title": "Phone, SIM and messages",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il22",
+   "title": "Phone, WhatsApp and appointments",
+   "track": "israel",
+   "wordCount": 5
+  },
+  {
+   "id": "I-16",
+   "title": "Phone and SIM: numbers, messages, battery and signal",
+   "track": "israel",
+   "wordCount": 14
+  }
+ ],
+ "speakSets": [
+  "speak-tech-media-1"
+ ],
+ "grammarNote": "il22 and I-16 already store phone, SIM, message and battery words, including מַטְעֵן (charger). These notes only name forms already in those lessons.",
+ "items": [
+  {
+   "id": "il22-w1",
+   "source": "data/curriculum/lessons.json#il22.words[0]",
+   "he": "הַלּוֹ",
+   "en": "hello (on the phone)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il22-w1"
+   }
+  },
+  {
+   "id": "il22-w2",
+   "source": "data/curriculum/lessons.json#il22.words[1]",
+   "he": "לְהִתְקַשֵּׁר",
+   "en": "to get in touch",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il22-w2"
+   }
+  },
+  {
+   "id": "il22-w3",
+   "source": "data/curriculum/lessons.json#il22.words[2]",
+   "he": "פְּגִישָׁה",
+   "en": "meeting",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il22-w3"
+   }
+  },
+  {
+   "id": "il22-w4",
+   "source": "data/curriculum/lessons.json#il22.words[3]",
+   "he": "לְקַבֵּעַ",
+   "en": "to set (an appointment)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il22-w4"
+   }
+  },
+  {
+   "id": "il22-w5",
+   "source": "data/curriculum/lessons.json#il22.words[4]",
+   "he": "הוֹדָעָה",
+   "en": "message",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il22-w5"
+   }
+  },
+  {
+   "id": "i-16-w1",
+   "source": "data/curriculum/lessons.json#I-16.words[0]",
+   "he": "טֶלֶפוֹן",
+   "en": "phone",
+   "translit": "telefon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w1"
+   }
+  },
+  {
+   "id": "i-16-w2",
+   "source": "data/curriculum/lessons.json#I-16.words[1]",
+   "he": "מִסְפָּר",
+   "en": "number",
+   "translit": "mispar",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w2"
+   }
+  },
+  {
+   "id": "i-16-w3",
+   "source": "data/curriculum/lessons.json#I-16.words[2]",
+   "he": "מִסְפַּר טֶלֶפוֹן",
+   "en": "phone number",
+   "translit": "mispar telefon",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w3"
+   }
+  },
+  {
+   "id": "i-16-w5",
+   "source": "data/curriculum/lessons.json#I-16.words[4]",
+   "he": "אִינְטֶרְנֶט",
+   "en": "internet",
+   "translit": "ineternet",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w5"
+   }
+  },
+  {
+   "id": "i-16-w6",
+   "source": "data/curriculum/lessons.json#I-16.words[5]",
+   "he": "סִיסְמָה",
+   "en": "password",
+   "translit": "sisemah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w6"
+   }
+  },
+  {
+   "id": "i-16-w7",
+   "source": "data/curriculum/lessons.json#I-16.words[6]",
+   "he": "סוֹלְלָה",
+   "en": "battery",
+   "translit": "solelah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w7"
+   }
+  },
+  {
+   "id": "i-16-w8",
+   "source": "data/curriculum/lessons.json#I-16.words[7]",
+   "he": "מַטְעֵן",
+   "en": "charger (for a phone or battery)",
+   "translit": "mat'en",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w8"
+   }
+  },
+  {
+   "id": "i-16-w10",
+   "source": "data/curriculum/lessons.json#I-16.words[9]",
+   "he": "לִשְׁלֹחַ",
+   "en": "to send",
+   "translit": "lishloach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w10"
+   }
+  },
+  {
+   "id": "i-16-w11",
+   "source": "data/curriculum/lessons.json#I-16.words[10]",
+   "he": "שׁוֹלֵחַ",
+   "en": "sending (m)",
+   "translit": "sholeach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w11"
+   }
+  },
+  {
+   "id": "i-16-w12",
+   "source": "data/curriculum/lessons.json#I-16.words[11]",
+   "he": "הַלּוֹ?",
+   "en": "hello? (on the phone)",
+   "translit": "halo?",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w12"
+   }
+  },
+  {
+   "id": "i-16-w13",
+   "source": "data/curriculum/lessons.json#I-16.words[12]",
+   "he": "רֶגַע",
+   "en": "one moment",
+   "translit": "rega",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w13"
+   }
+  },
+  {
+   "id": "i-16-w14",
+   "source": "data/curriculum/lessons.json#I-16.words[13]",
+   "he": "אֲנִי לֹא שׁוֹמֵעַ",
+   "en": "I can't hear (m)",
+   "translit": "ani lo shome'a",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-16-w14"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il22-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il22-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il22-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il22-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il22-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-16-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-16-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-16-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-16-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-16-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-16-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-16-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-16-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-16-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-16-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "word",
+   "id": "i-16-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 17,
+   "kind": "word",
+   "id": "i-16-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il22-w1",
+    "il22-w2",
+    "il22-w3",
+    "il22-w4",
+    "il22-w5",
+    "i-16-w1",
+    "i-16-w2",
+    "i-16-w3",
+    "i-16-w5",
+    "i-16-w6",
+    "i-16-w7",
+    "i-16-w8",
+    "i-16-w10",
+    "i-16-w11",
+    "i-16-w12",
+    "i-16-w13",
+    "i-16-w14"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-tech-media-1.json.",
+   "set": "speak-tech-media-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-phone-p01",
+   "title": "Hello (on the phone)",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הַלּוֹ. il22 and I-16 already store phone, SIM, message and battery words, including מַטְעֵן (charger).",
+   "items": [
+    {
+     "id": "il22-w1",
+     "source": "data/curriculum/lessons.json#il22.words[0]",
+     "he": "הַלּוֹ",
+     "en": "hello (on the phone)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w1"
+     }
+    },
+    {
+     "id": "il22-w2",
+     "source": "data/curriculum/lessons.json#il22.words[1]",
+     "he": "לְהִתְקַשֵּׁר",
+     "en": "to get in touch",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w2"
+     }
+    },
+    {
+     "id": "il22-w3",
+     "source": "data/curriculum/lessons.json#il22.words[2]",
+     "he": "פְּגִישָׁה",
+     "en": "meeting",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w3"
+     }
+    },
+    {
+     "id": "il22-w4",
+     "source": "data/curriculum/lessons.json#il22.words[3]",
+     "he": "לְקַבֵּעַ",
+     "en": "to set (an appointment)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w4"
+     }
+    },
+    {
+     "id": "il22-w5",
+     "source": "data/curriculum/lessons.json#il22.words[4]",
+     "he": "הוֹדָעָה",
+     "en": "message",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il22-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il22-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il22-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il22-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il22-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il22-w1",
+    "il22-w2",
+    "il22-w3",
+    "il22-w4",
+    "il22-w5"
+   ],
+   "speakSet": "speak-tech-media-1"
+  },
+  {
+   "id": "pu-phone-p02",
+   "title": "Phone",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: טֶלֶפוֹן. il22 and I-16 already store phone, SIM, message and battery words, including מַטְעֵן (charger).",
+   "items": [
+    {
+     "id": "i-16-w1",
+     "source": "data/curriculum/lessons.json#I-16.words[0]",
+     "he": "טֶלֶפוֹן",
+     "en": "phone",
+     "translit": "telefon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w1"
+     }
+    },
+    {
+     "id": "i-16-w2",
+     "source": "data/curriculum/lessons.json#I-16.words[1]",
+     "he": "מִסְפָּר",
+     "en": "number",
+     "translit": "mispar",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w2"
+     }
+    },
+    {
+     "id": "i-16-w3",
+     "source": "data/curriculum/lessons.json#I-16.words[2]",
+     "he": "מִסְפַּר טֶלֶפוֹן",
+     "en": "phone number",
+     "translit": "mispar telefon",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w3"
+     }
+    },
+    {
+     "id": "i-16-w5",
+     "source": "data/curriculum/lessons.json#I-16.words[4]",
+     "he": "אִינְטֶרְנֶט",
+     "en": "internet",
+     "translit": "ineternet",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w5"
+     }
+    },
+    {
+     "id": "i-16-w6",
+     "source": "data/curriculum/lessons.json#I-16.words[5]",
+     "he": "סִיסְמָה",
+     "en": "password",
+     "translit": "sisemah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w6"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-16-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-16-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-16-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-16-w1",
+    "i-16-w2",
+    "i-16-w3",
+    "i-16-w5",
+    "i-16-w6"
+   ],
+   "speakSet": "speak-tech-media-1"
+  },
+  {
+   "id": "pu-phone-p03",
+   "title": "Battery",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: סוֹלְלָה. il22 and I-16 already store phone, SIM, message and battery words, including מַטְעֵן (charger).",
+   "items": [
+    {
+     "id": "i-16-w7",
+     "source": "data/curriculum/lessons.json#I-16.words[6]",
+     "he": "סוֹלְלָה",
+     "en": "battery",
+     "translit": "solelah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w7"
+     }
+    },
+    {
+     "id": "i-16-w8",
+     "source": "data/curriculum/lessons.json#I-16.words[7]",
+     "he": "מַטְעֵן",
+     "en": "charger (for a phone or battery)",
+     "translit": "mat'en",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w8"
+     }
+    },
+    {
+     "id": "i-16-w10",
+     "source": "data/curriculum/lessons.json#I-16.words[9]",
+     "he": "לִשְׁלֹחַ",
+     "en": "to send",
+     "translit": "lishloach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w10"
+     }
+    },
+    {
+     "id": "i-16-w11",
+     "source": "data/curriculum/lessons.json#I-16.words[10]",
+     "he": "שׁוֹלֵחַ",
+     "en": "sending (m)",
+     "translit": "sholeach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w11"
+     }
+    },
+    {
+     "id": "i-16-w12",
+     "source": "data/curriculum/lessons.json#I-16.words[11]",
+     "he": "הַלּוֹ?",
+     "en": "hello? (on the phone)",
+     "translit": "halo?",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-16-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-16-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-16-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-16-w7",
+    "i-16-w8",
+    "i-16-w10",
+    "i-16-w11",
+    "i-16-w12"
+   ],
+   "speakSet": "speak-tech-media-1"
+  },
+  {
+   "id": "pu-phone-p04",
+   "title": "One moment",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: רֶגַע. il22 and I-16 already store phone, SIM, message and battery words, including מַטְעֵן (charger).",
+   "items": [
+    {
+     "id": "i-16-w13",
+     "source": "data/curriculum/lessons.json#I-16.words[12]",
+     "he": "רֶגַע",
+     "en": "one moment",
+     "translit": "rega",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w13"
+     }
+    },
+    {
+     "id": "i-16-w14",
+     "source": "data/curriculum/lessons.json#I-16.words[13]",
+     "he": "אֲנִי לֹא שׁוֹמֵעַ",
+     "en": "I can't hear (m)",
+     "translit": "ani lo shome'a",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w14"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-16-w13",
+    "i-16-w14"
+   ],
+   "speakSet": "speak-tech-media-1"
+  }
+ ]
+}

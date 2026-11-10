@@ -481,6 +481,36 @@
    "gaps": [
     "g-birkat-hamazon-rest"
    ]
+  },
+  {
+   "id": "festivals",
+   "title": "Festivals: Hallel and Yom Tov Kiddush",
+   "prayers": [
+    "kiddush-wine-1",
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-shavuot",
+    "kiddush-festival-sukkot",
+    "kiddush-festival-shemini",
+    "kiddush-festival-eve-close",
+    "kiddush-festival-day-verses",
+    "leshev-basukkah",
+    "shehecheyanu",
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
+   ],
+   "gaps": [
+    "g-hallel",
+    "g-festival-kiddush"
+   ]
   }
  ]
 }

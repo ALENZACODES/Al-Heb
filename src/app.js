@@ -155,6 +155,7 @@ let available = availableRoutes(VIEW_FILES);
 function renderNav(current) {
   renderNavBar(current, { routes: ROUTES, available });
   setMore(false);
+  import('./curriculum/practical.view.js').then((m) => m.paintPracticalDueBadge({ store })).catch(() => {});
 }
 function setMore(open) {
   const more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');

@@ -4,7 +4,8 @@
 // Every Hebrew word, transliteration and English gloss is read from the app's own data; nothing Hebrew is typed here.
 // The only hand-made input is WHICH dictionary entries each game uses (listed by dictionary id) and the English names of
 // the dotted and undotted letter forms (Vet, Khaf, Fe, Sin), which the letter table does not carry.
-//   cafe       Café Order: food and drink from the dictionary (survival café pack and food words), short English label, clip.
+//   cafe       Café Order: food and drink from the dictionary (survival café pack and food words), short English label, clip,
+//              and `pic`, the menu picture to show when the word has no picture of its own in the image index.
 //   directions Taxi Turns: right, left and straight from the directions pack, with clips.
 //   cards      Sound Twins: letter forms with their sound in each tradition, from data/pronunciation/consonants.json.
 //   vowels     Vowel Rain: letter + vowel sign, the vowel's sound in each tradition from data/pronunciation/niqqud.json,
@@ -76,10 +77,13 @@ export function build() {
   };
   const word = (id) => { const w = dict.get(id); if (!w) throw new Error(`dictionary id ${id} not found`); return w; };
 
+  // A menu picture: the word's own picture when the image index already has one ordered (kind 'word'), otherwise the Brain Lab
+  // menu picture ordered in docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md (kind 'id', LAB_v2_menu_<name>).
+  const wordPics = readJSON('data/img/index.json').w || {};
   const cafe = [];
   for (const [tier, ids] of Object.entries(CAFE_IDS)) for (const id of ids) {
-    const w = word(id);
-    cafe.push({ id, he: w.he, tr: w.translit, en: shortGloss(w.en), tier: +tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}) });
+    const w = word(id), en = shortGloss(w.en);
+    cafe.push({ id, he: w.he, tr: w.translit, en, tier: +tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}), ...(wordPics[id] ? {} : { pic: `LAB_v2_menu_${en.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}` }) });
   }
   const directions = DIRECTION_IDS.map(({ id, dir, tier }) => { const w = word(id); return { id, he: w.he, tr: w.translit, en: shortGloss(w.en), dir, tier, ...(clipFor(w.he) ? { clip: clipFor(w.he) } : {}) }; });
 

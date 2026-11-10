@@ -14,6 +14,8 @@ import { DRILLS as FIRST_TEN } from './lab.games.js';
 import { NEW_DRILLS } from './lab.games2.js';
 
 const DRILLS = Object.freeze({ ...FIRST_TEN, ...NEW_DRILLS });
+/** Games whose ordered in-game picture is a mat behind the whole board (the others place theirs inside the round). */
+const BOARD_MATS = new Set(['hunt', 'countup', 'calendar', 'pattern']);
 /** Pictures ordered for Brain Lab (docs/lab/GRAPHICS-ORDER.md and the commercial orders): shown only once ingested and approved. */
 const art = (ctx, id, cls, width) => { try { return ctx.img?.(h, { kind: 'id', id, class: cls, width, decorative: true }) || null; } catch { return null; } };
 /** The round token beside a game: its approved picture, or its letter on a green-and-gold disc. */
@@ -59,6 +61,7 @@ const CSS = `
 .lab-time{flex:1;block-size:10px;border-radius:99px;background:#e9e1cb;overflow:hidden}
 .lab-time>span{display:block;block-size:100%;background:linear-gradient(90deg,#d4a647,#2f6b4f);transform-origin:left;transition:transform .2s linear}
 .lab-lvl{font-size:.85rem;background:#1e4634;color:#fffaf0;border-radius:99px;padding:.2rem .6rem}
+.lab-run{font-size:.8rem;color:#7a5a12;white-space:nowrap}.lab-run.is-on{background:#f6e6b8;border:1px solid #d4a647;border-radius:99px;padding:.1rem .5rem}
 .lab-prompt{font-size:1.15rem;font-weight:600;min-block-size:3.2rem;display:flex;align-items:center;justify-content:center;text-align:center;gap:.4rem;flex-wrap:wrap}
 .lab-board{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem}
 .lab-trialbar{block-size:4px;border-radius:99px;background:#d4a647;transform-origin:left;inline-size:100%}
@@ -136,7 +139,7 @@ const CSS = `
 .lab-ground{position:absolute;inset-inline:0;inset-block-end:0;block-size:.8rem;background:#6b7f3a}
 .lab-vowels{flex-wrap:wrap;gap:.5rem}
 .lab-vowel{min-inline-size:3.6rem;min-block-size:3.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1}
-.lab-vowel-hint{font-size:1.15rem;font-weight:400;opacity:.9}
+.lab-vowel-hint{font-size:1.35rem;font-weight:400;line-height:1.2}
 /* Middle Letter */
 .lab-flank{display:flex;gap:.15rem;justify-content:center;background:#fffaf0;border:2px solid #d9cba5;border-radius:16px;padding:.4rem .8rem}
 .lab-flank .lab-glyph{font-size:clamp(2rem,9vw,2.8rem)}
@@ -155,7 +158,9 @@ const CSS = `
 .lab-turns .btn{min-inline-size:6rem;min-block-size:56px;font-size:1.05rem;display:inline-flex;align-items:center;justify-content:center;gap:.4rem}
 /* Café Order */
 .lab-cafe{display:flex;flex-direction:column;align-items:center;gap:.4rem;inline-size:100%}
-.lab-who{margin:0;font-weight:700;color:#1e4634}
+.lab-who{margin:0;font-weight:700;color:#1e4634;display:flex;align-items:center;gap:.5rem}
+.lab-face{inline-size:56px;block-size:56px;border-radius:50%;object-fit:cover;border:3px solid #d4a647;background:#fffaf0}
+.lab-menu-pic{inline-size:56px;block-size:56px;object-fit:contain}
 .lab-ticket{min-block-size:6.5rem;min-inline-size:12rem;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fffaf0;border:2px dashed #b38a2e;border-radius:12px;padding:.4rem 1rem}
 .lab-order-he{font-size:clamp(1.8rem,8vw,2.4rem)}
 .lab-slots{display:flex;gap:.4rem;list-style:none;padding:0;margin:0;flex-wrap:wrap;justify-content:center}
@@ -171,6 +176,14 @@ const CSS = `
 .lab-chain-en{display:block;margin-block-start:.2rem;font-weight:400}
 .lab-chain-opts{flex-wrap:wrap;gap:.5rem}
 .lab-chain-opt{min-block-size:56px;min-inline-size:7rem}
+/* ordered board pictures (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md), shown once approved; never under high contrast */
+.lab-has-art{background-size:cover;background-position:center}
+.lab-board.lab-has-art{border-radius:14px;padding:.6rem}
+.lab-side-pic{inline-size:56px;block-size:56px;object-fit:contain;vertical-align:middle}
+.lab-grid .lab-cell.is-hidden{background-image:var(--lab-back,none);background-size:cover}
+.lab-drop.lab-has-art,.lab-cab.lab-has-art{background-size:contain;background-repeat:no-repeat;background-color:transparent;border-color:transparent;box-shadow:none}
+@media (prefers-contrast:more),(forced-colors:active){.lab-has-art,.lab-grid .lab-cell.is-hidden{background-image:none!important}}
+:root[data-theme^="contrast"] .lab-has-art,:root[data-theme^="contrast"] .lab-grid .lab-cell.is-hidden{background-image:none!important}
 @keyframes lab-shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 @media (prefers-reduced-motion:reduce){.lab-cell,.lab-time>span,.lab-twin,.lab-cab{transition:none!important}.lab-cell.is-wrong{animation:none}}
 `;
@@ -210,7 +223,7 @@ function hub(root, ctx) {
         gs ? spark(gs.history.map((x) => x.s)) : null));
   };
   const wrap = h('div', { class: 'lab' },
-    art(ctx, 'LAB_v2_hero', 'lab-hero-art', 1200),
+    (prog.complete && art(ctx, 'LAB_v2_workout_done', 'lab-hero-art', 1200)) || art(ctx, 'LAB_v2_hero', 'lab-hero-art', 1200),
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Brain Lab ', heSpan('מַעְבָּדָה', 'he')),
     h('p', { class: 'lab-sub' }, 'Short, fast games that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
@@ -296,12 +309,14 @@ function drill(root, ctx, id) {
     catch { wrap.replaceChildren(back, h('div', { class: 'lab-play' }, h('p', { role: 'alert' }, 'This game could not load its words. Check your connection, then try again.'), h('button', { type: 'button', class: 'btn', onclick: () => intro() }, 'Try again'))); return; }
     if (!alive) return;
     const timeBar = h('span'), scoreEl = h('span', { 'aria-live': 'off' }, '0'), lvlEl = h('span', { class: 'lab-lvl' }, '');
+    const runEl = h('span', { class: 'lab-run', 'aria-hidden': 'true' });
+    let run = 0;
     const prompt = h('div', { class: 'lab-prompt', 'aria-live': 'polite' });
     const trialBar = h('div', { class: 'lab-trialbar', hidden: true });
     const board = h('div', { class: 'lab-board' });
     const feedback = h('p', { class: 'lab-feedback', 'aria-live': 'polite' });
     wrap.replaceChildren(back, h('div', { class: 'lab-play' },
-      h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(SESSION_SECONDS) }, timeBar), lvlEl, h('span', {}, 'Score ', scoreEl)),
+      h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(SESSION_SECONDS) }, timeBar), lvlEl, runEl, h('span', {}, 'Score ', scoreEl)),
       prompt, trialBar, board, feedback));
     const rnd = seeded(`${id}:${Date.now()}`);
     const audioOn = !isAudioFree(ctx);
@@ -319,6 +334,11 @@ function drill(root, ctx, id) {
     const env = {
       h, heSpan, ctx, rnd, data, board, memo: {},
       tradition: tradOf(ctx), calm: calm || reduceMotion,
+      // An approved picture from the shared image resolver, or null (the game then shows text only).
+      img: (kind, imgId, cls, width) => { try { return ctx.img?.(h, { kind, id: imgId, class: cls, width, decorative: true }) || null; } catch { return null; } },
+      // The file of an approved picture, for a board backdrop (CSS background); null when it is not in the app yet.
+      artSrc: (imgId, width) => { try { return ctx.images?.resolve?.('id', imgId, { width })?.src || null; } catch { return null; } },
+      backdrop: (el, imgId, width = 900) => { const src = env.artSrc(imgId, width); if (src && el) { el.style.backgroundImage = `url("${src}")`; el.classList.add('lab-has-art'); } return el; },
       met: (item) => { if (item?.he) met.push(item); },
       rimon: (action) => rimon(action, 'round', id),
       now: () => (globalThis.performance?.now?.() ?? Date.now()),
@@ -336,6 +356,7 @@ function drill(root, ctx, id) {
       playClip: (kind, cid, text) => (audioOn ? playRecordedClip(ctx, kind, cid, { text }) : Promise.resolve(false)),
       sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playRecordedClip(ctx, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
     };
+    if (BOARD_MATS.has(id)) env.backdrop(board, `LAB_v2_${id}_play`, 900);
     const t0 = Date.now(), total = SESSION_SECONDS * 1000;
     const clock = setInterval(() => {
       if (calm) { timeBar.style.transform = `scaleX(${1 - trials.length / CALM_ROUNDS})`; return; }
@@ -358,6 +379,8 @@ function drill(root, ctx, id) {
       score += pts; scoreEl.textContent = String(score);
       trials.push({ ok: r.ok, ms: r.ms, level, pts });
       const before = ladder.level; ladder = step(ladder, r.ok);
+      // A run of right answers shows beside the level from three in a row; it does not change the score.
+      run = r.ok ? run + 1 : 0; runEl.textContent = run >= 3 ? `${run} in a row` : ''; runEl.classList.toggle('is-on', run >= 3);
       try { sfx.play(r.ok ? (ladder.level > before ? 'streak' : 'success') : 'error_soft'); } catch { /* sound is optional */ }
       if (r.ok) feedback.textContent = ladder.level > before ? `Level ${ladder.level}!` : `+${pts}`;
       if (r.ok && ladder.level > before && ladder.level % 2 === 0) rimon('bounce', 'levelup', id);
@@ -393,17 +416,17 @@ function drill(root, ctx, id) {
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
       h('p', { class: 'score' }, String(sum.score)),
-      h('p', {}, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
+      h('p', {}, isBest && sum.score > 0 && prevGame ? art(ctx, 'LAB_v2_new_best', 'lab-side-pic', 200) : null, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
       h('div', { class: 'lab-stats' },
         h('div', {}, h('b', {}, `${sum.accuracy}%`), 'right'),
         h('div', {}, h('b', {}, String(sum.maxLevel)), 'top level'),
         h('div', {}, h('b', {}, sum.avgMs == null ? '–' : `${(sum.avgMs / 1000).toFixed(1)}s`), 'per answer'),
         h('div', {}, h('b', {}, `${sum.correct}/${sum.trials}`), 'rounds')),
       h('p', { class: 'lab-note' }, comparison(prevGame?.history, sum)),
+      h('div', { class: 'lab-actions' }, primary, again),
       metList.length ? h('section', { 'aria-labelledby': 'lab-met-h' },
         h('h2', { id: 'lab-met-h', class: 'lab-group', style: `--sk:${SKILL_COLOR[game.skill]}` }, 'Hebrew You Met'),
-        h('ul', { class: 'lab-met' }, ...metList.map((it) => h('li', {}, heSpan(it.he, 'he'), h('span', { class: 'en' }, it.en), listen(it))))) : null,
-      h('div', { class: 'lab-actions' }, primary, again)));
+        h('ul', { class: 'lab-met' }, ...metList.map((it) => h('li', {}, heSpan(it.he, 'he'), h('span', { class: 'en' }, it.en), listen(it))))) : null));
     primary.focus();
   };
 

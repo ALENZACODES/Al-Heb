@@ -25,7 +25,7 @@ const twins = {
     const back = twinsBack(level);
     return new Promise((resolve) => {
       const finish = once1(resolve);
-      const card = env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
+      const card = env.backdrop?.(env.h('div', { class: 'lab-twin', 'aria-live': 'polite' }), 'LAB_v2_twins_play', 400) || env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
       const before = env.h('div', { class: 'lab-twin-before', 'aria-hidden': 'true' });
       const row = env.h('div', { class: 'lab-row' });
       env.board.replaceChildren(env.h('div', { class: 'lab-twin-stage' }, before, card), row);
@@ -78,7 +78,9 @@ const rain = {
       const finish = once1(resolve);
       const t0 = env.now();
       const d = env.h('div', { class: 'lab-drop', role: 'img', 'aria-label': `Syllable ${drop.he}` }, big(env, drop.he, 'lab-glyph'));
+      env.backdrop?.(d, 'LAB_v2_rain_drop', 200);
       const sky = env.h('div', { class: 'lab-sky' }, d, env.h('div', { class: 'lab-ground', 'aria-hidden': 'true' }));
+      env.backdrop?.(sky, 'LAB_v2_rain_play', 700);
       const row = env.h('div', { class: 'lab-row lab-vowels' });
       env.prompt(env.h('span', {}, 'Tap the vowel sound before it lands.'));
       env.board.replaceChildren(sky, row);
@@ -154,7 +156,8 @@ const taxi = {
       const sign = env.h('div', { class: `lab-sign sign-${tr.rule}` }, big(env, tr.word.he, 'lab-word'), level <= 2 ? env.h('span', { class: 'lab-val' }, tr.word.tr) : null);
       const road = env.h('div', { class: 'lab-road', 'data-side': tr.side, role: 'img', 'aria-label': `A sign on the ${tr.side === 'straight' ? 'middle' : tr.side} of the road says ${tr.word.tr}` },
         env.h('div', { class: 'lab-lane' }, tr.side === 'left' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'straight' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'right' ? sign : null),
-        env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }));
+        env.backdrop?.(env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }), 'LAB_v2_taxi_cab', 200) || env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }));
+      env.backdrop?.(road, 'LAB_v2_taxi_play', 700);
       const row = env.h('div', { class: 'lab-row lab-turns' });
       const pick = (k, b) => {
         const ok = k === tr.answer; mark(b, ok);
@@ -183,7 +186,10 @@ const cafe = {
       const finish = once1(resolve);
       const slots = env.h('ol', { class: 'lab-slots', 'aria-label': `${order.length} things ordered` }, ...order.map(() => env.h('li', {}, '·')));
       const ticket = env.h('div', { class: 'lab-ticket', 'aria-live': 'polite' });
-      env.board.replaceChildren(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, `${who} orders`), ticket, slots));
+      // Noa or Ari, speaking (their approved portraits), takes the order; text only if the picture is not available.
+      const face = env.img?.('id', who === 'Noa' ? 'CHAR_noa_speak' : 'CHAR_ari_speak', 'lab-face', 160);
+      env.board.replaceChildren(env.backdrop?.(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots), 'LAB_v2_cafe_play', 900)
+        || env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots));
       env.prompt(env.h('span', {}, `${who} is ordering. Remember it, in order.`));
       env.rimon?.('thinking');
       let i = 0;
@@ -199,7 +205,7 @@ const cafe = {
         const t0 = env.now(); let k = 0;
         ticket.replaceChildren();
         env.prompt(env.h('span', {}, `Bring ${who}'s order, in the same order.`));
-        const g = grid(env, menu.length, 3, (j, b) => { b.classList.add('lab-wide'); b.append(env.h('span', { class: 'lab-text' }, menu[j].en)); }, (j, b) => {
+        const g = grid(env, menu.length, 3, (j, b) => { b.classList.add('lab-wide'); const pic = env.img?.('word', menu[j].id, 'lab-menu-pic', 160) || (menu[j].pic ? env.img?.('id', menu[j].pic, 'lab-menu-pic', 160) : null); if (pic) b.append(pic); b.append(env.h('span', { class: 'lab-text' }, menu[j].en)); }, (j, b) => {
           if (b.disabled) return;
           if (menu[j] === order[k]) {
             b.disabled = true; mark(b, true);

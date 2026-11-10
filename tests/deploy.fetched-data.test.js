@@ -37,8 +37,22 @@ test('a 404 is reported as a missing file; other failures keep the connection hi
 });
 
 // Template-built portrait paths are not captured by the literal-path scan above.
-test('runtime portal, mascot and every route companion portrait ship without --with-img', () => {
-  const ship = new Set(listShipFiles());
+test('runtime portal, mascot and every route companion portrait ship even with --no-img', () => {
+  const ship = new Set(listShipFiles({ img: false }));
   const required = ['assets/img/rimon/rimon-sprite.png', ...['PORTAL_words_clay.webp', 'PORTAL_games_shofar.webp', 'MASCOT_rimon.800.webp'].map(n => `assets/img/gen/${n}`), ...['ari', 'noa'].flatMap(v => ['neutral', 'speak', 'listen', 'celebrate', 'synagogue', 'telaviv'].map(p => `assets/img/gen/CHAR_${v}_${p}.800.webp`))];
   for (const path of required) { assert.ok(existsSync(join(root, path)), path); assert.ok(ship.has(path), `${path} must ship`); }
+});
+
+// A built site (GitHub Pages, Cloudflare Pages) must carry the pictures the screens load by name. Found 2026-11-10 by opening
+// every page of a built copy: the default build left out assets/img and the Brain Lab picture folders, so those requests were 404.
+test('the default build ships the picture folders the screens load by name', () => {
+  const ship = listShipFiles();
+  for (const dir of ['assets/img/gen/', 'data/images/brain-lab-2026-11-10/', 'data/images/commercial-2026-11-10/', 'data/images/rimon/']) {
+    assert.ok(ship.some((f) => f.startsWith(dir) && f.endsWith('.webp')), `${dir} pictures must ship`);
+  }
+  for (const dir of ['assets/img/icons/', 'assets/img/game-thumbs/', 'assets/img/arcade-thumbs/']) {
+    if (existsSync(join(root, dir))) assert.ok(ship.some((f) => f.startsWith(dir)), `${dir} must ship`);
+  }
+  assert.ok(!ship.some((f) => f.startsWith('assets/images/')), 'incoming photos never ship');
+  assert.ok(!listShipFiles({ img: false }).some((f) => f.startsWith('assets/img/arcade-thumbs/')), '--no-img leaves the illustration folder out');
 });

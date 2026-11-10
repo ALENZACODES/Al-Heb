@@ -27,7 +27,7 @@ No `_redirects` (the hash router needs no rewrites; with no `404.html` Pages ser
 
 ## What ships and what does not
 Ships: the install (precache) list, now a small core: 284 files, 3.36 MiB (measured 2026-11-04 from `dist/precache-manifest.js`; `build_site` prints "precache 284 files, 3.36 MiB"). A further 246 files, 10.46 MiB (`ALEF_ON_DEMAND`: vocabulary, pronunciation, speak, calendar and other data that only preview routes read, the audio manifest, intermediate lessons, screenshots) are not installed up front; `sw.js` caches them the first time a page asks for them, or all at once from the offline page's download-everything button (`tools/build-precache.mjs`, `src/shell/offline.js`). The committed root `precache-manifest.js` is stale and was not regenerated; `build_site` writes a fresh one inside `dist/`. Also shipped: `sw.js`, `_headers`, the OCR runtime `assets/vendor/` (4.8 MiB, loaded on the first photo), `assets/workbook/` PDFs (29.5 MiB, not precached), `data/vocab/packs/`, the three `data/audio/manifest-words-*.json` shards, the OFL font licence texts, and `audio/` once it exists.
-Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of incoming photos), `*.test.js`, `.md` files (except the vendored licences), and `assets/img/` (about 42 MB on disk of placeholder SVG/WebP that no file in `src/` references; add `--with-img` when the app starts using them).
+Does not ship: docs, tests, tools, book, research, `assets/images/` (219 MB of incoming photos), `*.test.js` and `.md` files (except the vendored licences). `assets/img/` (about 150 MB of illustrations, icons and game pictures) ships by default since 2026-11-10, because the screens now load those files by name; `--no-img` leaves the folder out.
 
 ## Steps
 Local, before anything else (these can be run locally; **John does** everything from step 3 on).
@@ -40,7 +40,7 @@ Local, before anything else (these can be run locally; **John does** everything 
 7. **John does:** Save and Deploy. Watch the log for the "dist ready" report; if it prints "OVER A CLOUDFLARE PAGES LIMIT" the build fails by design.
 8. **John does:** open `https://<project>.pages.dev` in Chrome on a phone and a desktop and run the after-deploy list below. Note any failure.
 9. **John does (optional):** custom domain under the project's Custom domains tab (DNS in Cloudflare; HTTPS and HSTS are then configured per zone, not in `_headers`).
-10. **John does:** in the project's Settings, leave preview deployments on, so each branch gets its own URL for review. Preview URLs are public unless you add Cloudflare Access; do not put private material (the incoming photos are not shipped, but the OCR sample images in `assets/img/` would be with `--with-img`) in a preview.
+10. **John does:** in the project's Settings, leave preview deployments on, so each branch gets its own URL for review. Preview URLs are public unless you add Cloudflare Access; do not put private material (the incoming photos are not shipped; the pictures in `assets/img/` are, unless the build runs with `--no-img`) in a preview.
 
 ## After the deploy: what only a real host can show (not verified yet)
 - `curl -sI https://<project>.pages.dev/manifest.webmanifest` shows `content-type: application/manifest+json`; `/sw.js` and `/` show `cache-control: no-cache` (Cloudflare may add its own ETag and `cf-cache-status`).

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { pathToFileURL } from 'node:url';
 // Build the Cloudflare Pages output folder: copies ONLY runtime files into dist/ and prints a size report.
-//   node tools/deploy/make-dist.mjs [--out dist] [--with-img]
+//   node tools/deploy/make-dist.mjs [--out dist] [--no-img]
 // What ships: the precache list (tools/build-precache.mjs computeManifest) + the extras below. Never shipped: docs, tests, book,
 // research, tools, assets/images (incoming photos, ~219 MB), src/**/*.test.js, anything under node_modules.
 // sw.js imports ./precache-manifest.js, so a fresh one is written into dist/ for exactly the files that ship.
@@ -37,11 +37,14 @@ export const EXTRAS = [
   ['data/audio/manifest-words-sephardi.json', 'lazy audio word shard'],
   ['data/audio/manifest-torah.json', 'lazy full-Torah recording list; ship even when both languages exceed the precache size limit'],
   ['data/audio/manifest-torah-he.json', 'lazy index of the Hebrew Torah verse recordings (src/shell/torah-he-index.js)'],
-  ['assets/img', 'illustrations: only shipped with --with-img (16 MiB of placeholders); the two hero files named literally in src/ ship always via their own entries below'],
+  ['assets/img', 'illustrations, icons and game pictures the screens load by name (about 150 MiB, never precached). Shipped by default since 2026-11-10: without them a built site shows no menu icons, game pictures or lesson art. --no-img leaves them out; the files named in their own entries below ship either way'],
   ['assets/img/social-preview.png', 'Open Graph and Twitter link-preview image'],
   ['assets/img/gen/HERO_tree_of_life_realistic.webp', 'home astral-tree hero, named literally in src/shell/astral-tree.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/gen/HERO_home_tree.webp', 'Welcome hero, named literally in src/shell/home-hero.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/rimon', 'Rimon animation sheets, loaded by the mascot on every route'],
+  ['data/images/brain-lab-2026-11-10', 'Brain Lab game covers and result pictures (src/lab/); fetched when Brain Lab opens'],
+  ['data/images/brain-lab-studio-2026-11-10', 'Brain Lab studio game pictures (src/lab/); fetched when a studio game opens'],
+  ['data/images/commercial-2026-11-10', 'Brain Lab hero and tokens, and the commercial picture set (src/lab/); fetched on demand'],
   ['data/images/rimon', 'Rimon stills (rimon-NNN.webp) and present.json, the list of the ones that exist (src/shell/rimon-stage.js); fetched on demand, runtime-cached'],
   ...['PORTAL_words_clay.webp', 'PORTAL_games_shofar.webp', 'MASCOT_rimon.800.webp'].map((name) => [`assets/img/gen/${name}`, 'Runtime portal and mascot art']),
   ...['ari', 'noa'].flatMap((voice) => ['neutral', 'speak', 'listen', 'celebrate', 'synagogue', 'telaviv'].map((pose) => [`assets/img/gen/CHAR_${voice}_${pose}.800.webp`, 'Route-specific companion portrait'])),
@@ -68,7 +71,7 @@ function walk(dir, root = ROOT, out = []) {
   return out;
 }
 
-export function listShipFiles({ img = false } = {}) {
+export function listShipFiles({ img = true } = {}) {
   const cm = computeManifest(ROOT);
   const set = new Set([...cm.files, ...cm.onDemand]); // on-demand files must ship too: they are fetched later, not installed
   for (const [p] of EXTRAS) {
@@ -84,7 +87,7 @@ export function listShipFiles({ img = false } = {}) {
 /** With the packs left out, these are not copied: the pack parts and lists, and the runtime's WebAssembly. The runtime's code stays. */
 export const isPackData = (rel) => rel.startsWith('assets/vendor/_nmt/') || (rel.startsWith('assets/vendor/_ort/') && /\.(wasm|bin)$/.test(rel));
 
-export function makeDist({ out = 'dist', img = false, packs = process.env.ALEF_PACKS === 'remote' ? 'remote' : 'local' } = {}) {
+export function makeDist({ out = 'dist', img = true, packs = process.env.ALEF_PACKS === 'remote' ? 'remote' : 'local' } = {}) {
   const dist = join(ROOT, out);
   if (!dist.startsWith(ROOT + sep) || dist === ROOT) throw new Error('--out must be a folder inside the repo');
   rmSync(dist, { recursive: true, force: true });
@@ -111,7 +114,7 @@ const mib = (b) => (b / 1048576).toFixed(2) + ' MiB';
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-  const r = makeDist({ out: opt('--out', 'dist'), img: args.includes('--with-img') });
+  const r = makeDist({ out: opt('--out', 'dist'), img: !args.includes('--no-img') });
   console.log(`dist ready: ${r.dist}`);
   console.log(`files ${r.files} (no host file-count cap; Render); total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
   console.log('by folder:'); for (const [g, v] of r.groups) console.log(`  ${g.padEnd(28)} ${String(v.files).padStart(5)} files  ${mib(v.bytes).padStart(11)}`);

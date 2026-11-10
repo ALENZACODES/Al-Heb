@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "bucket": "unreviewed_hold",
+  "freeze_cast": true,
+  "note": "On GitHub for unlock; default UI must not ship these.",
+  "count": 9,
+  "images": [
+    {
+      "id": "SPEAK_01_street_falafel",
+      "filename": "SPEAK_01_street_falafel.png",
+      "path": "assets/speak-hold/SPEAK_01_street_falafel.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_02_street_bus_ticket",
+      "filename": "SPEAK_02_street_bus_ticket.png",
+      "path": "assets/speak-hold/SPEAK_02_street_bus_ticket.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_03_street_directions",
+      "filename": "SPEAK_03_street_directions.png",
+      "path": "assets/speak-hold/SPEAK_03_street_directions.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_06_sanctuary_quiet",
+      "filename": "SPEAK_06_sanctuary_quiet.png",
+      "path": "assets/speak-hold/SPEAK_06_sanctuary_quiet.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_07_sanctuary_together",
+      "filename": "SPEAK_07_sanctuary_together.png",
+      "path": "assets/speak-hold/SPEAK_07_sanctuary_together.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_09_cafe_order",
+      "filename": "SPEAK_09_cafe_order.png",
+      "path": "assets/speak-hold/SPEAK_09_cafe_order.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_10_market_pomegranates",
+      "filename": "SPEAK_10_market_pomegranates.png",
+      "path": "assets/speak-hold/SPEAK_10_market_pomegranates.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_11_sound_card",
+      "filename": "SPEAK_11_sound_card.png",
+      "path": "assets/speak-hold/SPEAK_11_sound_card.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    },
+    {
+      "id": "SPEAK_12_your_turn",
+      "filename": "SPEAK_12_your_turn.png",
+      "path": "assets/speak-hold/SPEAK_12_your_turn.png",
+      "bucket": "unreviewed_hold",
+      "approved": false,
+      "status": "HOLD",
+      "unlock": "John",
+      "screens": [
+        "SpeakStreet",
+        "SpeakSanctuary",
+        "SpeakCafeMarket",
+        "SoundCard",
+        "YourTurn"
+      ]
+    }
+  ]
+}

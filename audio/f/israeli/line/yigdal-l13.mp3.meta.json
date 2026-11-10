@@ -1,0 +1,26 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
+ "inputSha256": "acfd4ec929338e9e8c4e5f5d8b0ed5cd69ec4c753533113ea8f332b67abddeb5",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/yigdal-w100.mp3",
+  "audio/f/israeli/word/yigdal-w101.mp3",
+  "audio/f/israeli/word/avot-1-w17.mp3",
+  "audio/f/israeli/word/yigdal-w103.mp3",
+  "audio/f/israeli/word/birkat-hamazon-1-w22.mp3",
+  "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "audio/f/israeli/word/yigdal-w106.mp3",
+  "audio/f/israeli/word/h46f7979e.mp3",
+  "audio/f/israeli/word/h65a05fb2.mp3",
+  "audio/f/israeli/word/yigdal-w109.mp3"
+ ]
+}

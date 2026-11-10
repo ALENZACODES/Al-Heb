@@ -1,0 +1,369 @@
+{
+ "id": "I-32",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "חֲנֻכָּה",
+   "en": "Hanukkah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chanukah",
+    "sephardi": "chanukah",
+    "ashkenazi": "chanukoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5e1ba7b7"
+   }
+  },
+  {
+   "he": "לְהַדְלִיק",
+   "en": "to light",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehadlik",
+    "sephardi": "lehadlik",
+    "ashkenazi": "lehadlik"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8246132a#forms.infinitive"
+   }
+  },
+  {
+   "he": "נֵר",
+   "en": "oil lamp, candle",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ner",
+    "sephardi": "ner",
+    "ashkenazi": "neir"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h64fb7d35"
+   }
+  },
+  {
+   "he": "נֵרוֹת",
+   "en": "candles",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nerot",
+    "sephardi": "nerot",
+    "ashkenazi": "neiros"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h64fb7d35#forms.plural"
+   }
+  },
+  {
+   "he": "שֶׁעָשָׂה נִסִּים",
+   "en": "who performed miracles",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "she'asah nisim",
+    "sephardi": "she'asah nisim",
+    "ashkenazi": "she'osoh nisim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁעָשָׂה",
+     "נִסִּים"
+    ]
+   }
+  },
+  {
+   "he": "הַתְּשׁוּעוֹת",
+   "en": "the deliverances",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hateshu'ot",
+    "sephardi": "hateshu'ot",
+    "ashkenazi": "hateshu'os"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַתְּשׁוּעוֹת"
+    ]
+   }
+  },
+  {
+   "he": "הַנִּפְלָאוֹת",
+   "en": "the wonders",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hanifla'ot",
+    "sephardi": "hanifla'ot",
+    "ashkenazi": "haniflo'os"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַנִּפְלָאוֹת"
+    ]
+   }
+  },
+  {
+   "he": "כֹּהֲנֶיךָ",
+   "en": "your priests",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kohanekha",
+    "sephardi": "kohanekha",
+    "ashkenazi": "kohanekho"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כֹּהֲנֶיךָ"
+    ]
+   }
+  },
+  {
+   "he": "מָעוֹז צוּר",
+   "en": "Rock of my salvation",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ma'oz tzur",
+    "sephardi": "ma'oz tzur",
+    "ashkenazi": "mo'oz tzur"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מָעוֹז",
+     "צוּר"
+    ]
+   }
+  },
+  {
+   "he": "יְשׁוּעָתִי",
+   "en": "my salvation",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yeshu'ati",
+    "sephardi": "yeshu'ati",
+    "ashkenazi": "yeshu'osi"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יְשׁוּעָתִי"
+    ]
+   }
+  },
+  {
+   "he": "שְׁמוֹנַת יְמֵי חֲנֻכָּה",
+   "en": "the eight days of Hanukkah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shemonat yemei chanukah",
+    "sephardi": "shemonat yemei chanukah",
+    "ashkenazi": "shemonas yemei chanukoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁמוֹנַת",
+     "יְמֵי",
+     "חֲנֻכָּה"
+    ]
+   }
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ",
+   "en": "who has kept us alive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shehecheyainu",
+    "sephardi": "shehecheyainu",
+    "ashkenazi": "shehecheyoynu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁהֶחֱיָינוּ"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "hanukkah-candle",
+  "hanukkah-nissim",
+  "shehecheyanu",
+  "hanerot-halalu",
+  "maoz-tzur-1"
+ ],
+ "goals": [
+  "Say the candle-lighting blessing and answer Amen",
+  "Follow the order of blessings on the first night",
+  "Read the first lines of Hanerot Halalu and Maoz Tzur"
+ ],
+ "estMinutes": 35,
+ "prerequisites": [
+  "I-05"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-32-e01",
+   "type": "fade",
+   "line": "hanukkah-candle",
+   "en": "Blessed are you... who made us holy with his commandments and commanded us to light the Hanukkah light."
+  },
+  {
+   "id": "I-32-e02",
+   "type": "spot",
+   "line": "hanukkah-candle",
+   "target": "לְהַדְלִיק",
+   "en": "to light"
+  },
+  {
+   "id": "I-32-e03",
+   "type": "order",
+   "he": "וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה",
+   "en": "and commanded us to light the Hanukkah light"
+  },
+  {
+   "id": "I-32-e04",
+   "type": "respond",
+   "cue": "The first blessing ends 'ner Chanukah'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "לְהַדְלִיק נֵר חֲנֻכָּה",
+    "en": "to light the Hanukkah light"
+   }
+  },
+  {
+   "id": "I-32-e05",
+   "type": "fade",
+   "line": "hanukkah-nissim",
+   "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time."
+  },
+  {
+   "id": "I-32-e06",
+   "type": "respond",
+   "cue": "The second blessing ends 'bazman hazeh'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה",
+    "en": "in those days, at this time"
+   }
+  },
+  {
+   "id": "I-32-e07",
+   "type": "fade",
+   "line": "shehecheyanu",
+   "en": "Blessed are you... who has kept us alive, sustained us and brought us to this time."
+  },
+  {
+   "id": "I-32-e08",
+   "type": "respond",
+   "cue": "On the first night only the third blessing follows. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "לַזְּמַן הַזֶּה",
+    "en": "to this time"
+   }
+  },
+  {
+   "id": "I-32-e09",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "נֵר",
+     "en": "candle, light"
+    },
+    {
+     "he": "נִסִּים",
+     "en": "miracles"
+    },
+    {
+     "he": "הַתְּשׁוּעוֹת",
+     "en": "the deliverances"
+    },
+    {
+     "he": "הַנִּפְלָאוֹת",
+     "en": "the wonders"
+    },
+    {
+     "he": "כֹּהֲנֶיךָ",
+     "en": "your priests"
+    }
+   ]
+  },
+  {
+   "id": "I-32-e10",
+   "type": "fade",
+   "line": "hanerot-halalu",
+   "en": "We light these lights for the miracles, the deliverances and the wonders that you did for our ancestors..."
+  },
+  {
+   "id": "I-32-e11",
+   "type": "spot",
+   "line": "hanerot-halalu",
+   "target": "הַלָּלוּ",
+   "en": "these"
+  },
+  {
+   "id": "I-32-e12",
+   "type": "order",
+   "he": "הַנֵּרוֹת הַלָּלוּ אֲנַחְנוּ מַדְלִיקִין",
+   "en": "We light these lights"
+  },
+  {
+   "id": "I-32-e13",
+   "type": "fade",
+   "line": "maoz-tzur-1",
+   "en": "Rock of my salvation, to praise you is fitting."
+  },
+  {
+   "id": "I-32-e14",
+   "type": "order",
+   "he": "מָעוֹז צוּר יְשׁוּעָתִי לְךָ נָאֶה לְשַׁבֵּחַ",
+   "en": "Rock of my salvation, to praise you is fitting"
+  },
+  {
+   "id": "I-32-e15",
+   "type": "produce",
+   "en": "Hanukkah",
+   "options": [
+    "חֲנֻכָּה",
+    "פּוּרִים",
+    "פֶּסַח"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "Al HaNisim and Hallel for Hanukkah, the rest of Maoz Tzur and the Hanukkah songs are gaps (g-hallel)."
+}

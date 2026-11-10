@@ -1,0 +1,395 @@
+{
+ "id": "I-26",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "The full Torah service in order: ark, reading, lifting, returning",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אֵין כָּמוֹךָ",
+   "en": "there is none like you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ein kamokha",
+    "sephardi": "ein kamokha",
+    "ashkenazi": "ein komokho"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֵין",
+     "כָּמוֹךָ"
+    ]
+   }
+  },
+  {
+   "he": "וַיְהִי בִּנְסֹעַ הָאָרֹן",
+   "en": "and it was, when the ark set out",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vayhi binso'a ha'aron",
+    "sephardi": "vayhi binso'a ha'aron",
+    "ashkenazi": "vayhi binso'a ho'oron"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וַיְהִי",
+     "בִּנְסֹעַ",
+     "הָאָרֹן"
+    ]
+   }
+  },
+  {
+   "he": "מִצִּיּוֹן תֵּצֵא תוֹרָה",
+   "en": "from Zion will go forth Torah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mitziyon tetze torah",
+    "sephardi": "mitziyon tetze torah",
+    "ashkenazi": "mitziyon teitzei soroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִצִּיּוֹן",
+     "תֵּצֵא",
+     "תוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "בְּרִיךְ שְׁמֵהּ",
+   "en": "blessed is his name (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "berikh shemeh",
+    "sephardi": "berikh shemeh",
+    "ashkenazi": "berikh shemeih"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּרִיךְ",
+     "שְׁמֵהּ"
+    ]
+   }
+  },
+  {
+   "he": "גַּדְּלוּ",
+   "en": "magnify! (leader's invitation)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gadelu",
+    "sephardi": "gadelu",
+    "ashkenazi": "gadelu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "גַּדְּלוּ"
+    ]
+   }
+  },
+  {
+   "he": "לְךָ יְהוָה הַגְּדֻלָּה",
+   "en": "yours, LORD, is the greatness",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lekha adonai hagedulah",
+    "sephardi": "lekha adonai hagedulah",
+    "ashkenazi": "lekho adonoy hageduloh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְךָ",
+     "יְהוָה",
+     "הַגְּדֻלָּה"
+    ]
+   }
+  },
+  {
+   "he": "סֵפֶר תּוֹרָה",
+   "en": "Torah scroll",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sefer torah",
+    "sephardi": "sefer torah",
+    "ashkenazi": "seifer toroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "סֵפֶר",
+     "תּוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "עֲלִיָּה",
+   "en": "aliyah (being called up to the Torah)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aliyah",
+    "sephardi": "aliyah",
+    "ashkenazi": "aliyoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8c045649"
+   }
+  },
+  {
+   "he": "וְזֹאת הַתּוֹרָה",
+   "en": "and this is the Torah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vezot hatorah",
+    "sephardi": "vezot hatorah",
+    "ashkenazi": "vezos hatoroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְזֹאת",
+     "הַתּוֹרָה"
+    ]
+   }
+  },
+  {
+   "he": "לְעַמּוֹ",
+   "en": "to his people",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'amo",
+    "sephardi": "le'amo",
+    "ashkenazi": "le'amo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְעַמּוֹ"
+    ]
+   }
+  },
+  {
+   "he": "עֵץ חַיִּים",
+   "en": "a tree of life",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "etz chayim",
+    "sephardi": "etz chayim",
+    "ashkenazi": "eitz chayim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עֵץ",
+     "חַיִּים"
+    ]
+   }
+  },
+  {
+   "he": "הֲשִׁיבֵנוּ",
+   "en": "bring us back",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hashivenu",
+    "sephardi": "hashivenu",
+    "ashkenazi": "hashiveinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הֲשִׁיבֵנוּ"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "ein-kamocha",
+  "vayehi-binsoa",
+  "brich-shmei",
+  "gadlu",
+  "lecha-hashem",
+  "torah-bless-1",
+  "torah-bless-2",
+  "vezot-hatorah",
+  "haftarah-before",
+  "yehalelu",
+  "etz-chaim",
+  "hashivenu"
+ ],
+ "goals": [
+  "Name the twelve moments of a Shabbat-morning Torah service in order",
+  "Join the lines the congregation sings: Ein Kamocha, Gadlu, Lecha Adonai, Etz Chaim",
+  "Follow the reading: aliyah blessings, lifting, haftarah, returning the scroll"
+ ],
+ "estMinutes": 45,
+ "prerequisites": [
+  "I-03"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-26-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "אֵין כָּמוֹךָ",
+     "en": "there is none like you (opening the ark)"
+    },
+    {
+     "he": "גַּדְּלוּ",
+     "en": "magnify! (leader lifts the scroll)"
+    },
+    {
+     "he": "וְזֹאת הַתּוֹרָה",
+     "en": "and this is the Torah (lifting)"
+    },
+    {
+     "he": "הֲשִׁיבֵנוּ",
+     "en": "bring us back (returning)"
+    },
+    {
+     "he": "עֵץ חַיִּים",
+     "en": "a tree of life (returning)"
+    }
+   ]
+  },
+  {
+   "id": "I-26-e02",
+   "type": "fade",
+   "line": "ein-kamocha",
+   "en": "There is none like you among the gods, my Lord, and nothing like your works."
+  },
+  {
+   "id": "I-26-e03",
+   "type": "spot",
+   "line": "vayehi-binsoa",
+   "target": "תוֹרָה",
+   "en": "Torah"
+  },
+  {
+   "id": "I-26-e04",
+   "type": "order",
+   "he": "כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה",
+   "en": "For from Zion will go forth Torah"
+  },
+  {
+   "id": "I-26-e05",
+   "type": "fade",
+   "line": "brich-shmei",
+   "en": "Blessed is the name of the Master of the world (Aramaic, when the ark is opened)."
+  },
+  {
+   "id": "I-26-e06",
+   "type": "respond",
+   "cue": "The leader lifts the scroll and calls. Answer with the congregation's line.",
+   "answer": {
+    "he": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד",
+    "en": "Yours, LORD, are the greatness, the might, the splendour, the victory and the majesty."
+   },
+   "prompt": {
+    "he": "גַּדְּלוּ לַיהוָה אִתִּי",
+    "en": "Magnify the LORD with me."
+   }
+  },
+  {
+   "id": "I-26-e07",
+   "type": "fade",
+   "line": "lecha-hashem",
+   "en": "Yours, LORD, are the greatness and the might... (said as the scroll is carried)."
+  },
+  {
+   "id": "I-26-e08",
+   "type": "respond",
+   "cue": "Before an aliyah the reader says Barchu. Answer.",
+   "answer": {
+    "he": "בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+    "en": "Blessed is the LORD, the blessed one, for ever and ever."
+   },
+   "prompt": {
+    "he": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ",
+    "en": "Bless the LORD, the blessed one."
+   }
+  },
+  {
+   "id": "I-26-e09",
+   "type": "respond",
+   "cue": "The blessing after the reading ends 'noten haTorah'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה",
+    "en": "Blessed are you, LORD, giver of the Torah."
+   }
+  },
+  {
+   "id": "I-26-e10",
+   "type": "order",
+   "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל",
+   "en": "And this is the Torah that Moses set before the children of Israel"
+  },
+  {
+   "id": "I-26-e11",
+   "type": "fade",
+   "line": "haftarah-before",
+   "en": "Blessed are you... who chose good prophets and was pleased with their words..."
+  },
+  {
+   "id": "I-26-e12",
+   "type": "spot",
+   "line": "haftarah-before",
+   "target": "בִּנְבִיאִים",
+   "en": "among prophets"
+  },
+  {
+   "id": "I-26-e13",
+   "type": "order",
+   "he": "יְהַלְלוּ אֶת־שֵׁם יְהוָה",
+   "en": "Let them praise the name of the LORD"
+  },
+  {
+   "id": "I-26-e14",
+   "type": "fade",
+   "line": "etz-chaim",
+   "en": "It is a tree of life to those who hold fast to it..."
+  },
+  {
+   "id": "I-26-e15",
+   "type": "order",
+   "he": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ חַדֵּשׁ יָמֵינוּ כְּקֶדֶם",
+   "en": "Bring us back to you, LORD; renew our days as of old."
+  },
+  {
+   "id": "I-26-e16",
+   "type": "produce",
+   "en": "the Torah scroll",
+   "options": [
+    "סֵפֶר תּוֹרָה",
+    "עֵץ חַיִּים",
+    "עֲלִיָּה"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "The scroll's weekly reading (g-torah-reading-text), the haftarah text (g-haftarah-text), the Torah-service prayers for the community (g-community-prayers), the composite Ein Kamocha and the full Mi Shebeirach (g-mi-sheberach-full) are corpus gaps. 'Haftarah' as a single pointed word is not in any source file, so it is not shown as a lesson word; it appears only through the registry id haftarah-before."
+}

@@ -1,0 +1,474 @@
+/* ALEF base styles. Logical properties throughout (RTL-aware). Fonts: assets/css/fonts.css (self-hosted OFL). */
+:root {
+  --bg: #f6efe0; --fg: #1c2a1e; --muted: #5a6656; --card: #fffaf0; --border: #d9cdb3;
+  --accent: #1e4634; --accent-fg: #fffaf0; --focus: #b45309; --warn-bg: #fff1c2; --warn-fg: #5b4200;
+  --font-ui: "Heebo", system-ui, -apple-system, "Segoe UI", "DejaVu Sans", sans-serif;
+  --font-he: "Frank Ruhl Libre", "Ezra SIL", "SBL Hebrew", "FreeSerif", "DejaVu Serif", serif;
+  --font-he-cursive: "Gveret Levin", "FreeSans", "DejaVu Sans", cursive;
+  --tap: 48px; --radius: 12px; --gap: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #101a13; --fg: #ece7da; --muted: #a9b3a4; --card: #18251c; --border: #2c4234; --accent: #9ec49a; --accent-fg: #0c1710; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; }
+}
+:root[data-theme="dark"] { --bg: #101a13; --fg: #ece7da; --muted: #a9b3a4; --card: #18251c; --border: #2c4234; --accent: #9ec49a; --accent-fg: #0c1710; --focus: #fbbf24; --warn-bg: #3d3210; --warn-fg: #f5d98a; color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html { font-size: calc(100% * var(--text-scale, 1)); } /* comfort: Settings > Reading comfort (src/shell/comfort.js); 100% keeps the browser's own text size */
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/var(--line-height, 1.55) var(--font-ui); letter-spacing: var(--letter-spacing, normal); padding-block-end: env(safe-area-inset-bottom); }
+.he, [lang="he"] { font-family: var(--font-he); direction: rtl; unicode-bidi: isolate; font-size: 1.15em; }
+:root[data-script="cursive"] .he, :root[data-script="cursive"] [lang="he"] { font-family: var(--font-he-cursive); }
+bdi, .num { unicode-bidi: isolate; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+main:focus, h1:focus { outline: none; }
+h1[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible { outline: none; }
+.skip-link { position: absolute; inset-inline-start: .5rem; inset-block-start: -12rem; background: var(--accent); color: var(--accent-fg); padding: .75rem 1rem; z-index: 100; border-radius: 8px; }
+.skip-link:focus { inset-block-start: .5rem; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.site-header { padding: 0 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); display: flex; align-items: center; }
+.brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); display: inline-flex; gap: .5rem; min-block-size: 44px; align-items: center; }
+.site-nav { border-block: 1px solid var(--border); background: var(--card); overflow-x: auto; }
+.site-nav ul { list-style: none; margin: 0; padding: 0 .5rem; display: flex; gap: .25rem; }
+.site-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); min-inline-size: var(--tap); padding: .25rem .75rem; text-decoration: none; color: var(--fg); border-radius: 8px; font-size: .9rem; line-height: 1.2; }
+.site-nav a[aria-current="page"] { background: var(--accent); color: var(--accent-fg); }
+.nav-he { font-size: .85em; opacity: .85; }
+main { max-inline-size: var(--measure, 46rem); margin-inline: auto; padding: 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); }
+.stack > * + *, main > * + * { margin-block-start: var(--gap); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; }
+h1 { font-size: 1.6rem; margin-block: 0 .5rem; line-height: 1.2; }
+h2 { font-size: 1.15rem; margin-block: 0 .5rem; }
+.muted { color: var(--muted); }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: .85rem; overflow-wrap: anywhere; }
+.draft-flag { background: var(--warn-bg); color: var(--warn-fg); padding: .5rem .75rem; border-radius: 8px; border-inline-start: 4px solid var(--focus); font-weight: 600; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-block-size: var(--tap); padding: .5rem 1.1rem; border-radius: 999px; border: 2px solid var(--accent); background: var(--accent); color: var(--accent-fg); font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+.btn.secondary { background: transparent; color: var(--accent); }
+.row { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr)); gap: .75rem; }
+.tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; min-block-size: 5rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--fg); font-weight: 600; background: var(--bg); }
+.field { border: 0; padding: 0; margin: 0 0 1.1rem; display: block; }
+.field legend { font-weight: 700; padding: 0; margin-block-end: .35rem; }
+.opt { display: flex; align-items: center; gap: .75rem; min-block-size: var(--tap); }
+.opt input { inline-size: 1.4rem; block-size: 1.4rem; flex: none; }
+input[type="number"] { font: inherit; min-block-size: var(--tap); inline-size: 100%; max-inline-size: 14rem; padding-inline: .5rem; background: var(--bg); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; display: block; }
+input[aria-invalid="true"] { border-color: #b91c1c; }
+details summary { cursor: pointer; min-block-size: 2rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } .btn, .tile { transition: transform .12s ease; } .btn:active, .tile:active { transform: scale(.98); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active) { .btn, .tile, .card { border: 2px solid CanvasText; } }
+[hidden] { display: none !important; }
+.sound-bar { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding: .4rem 1rem; font-size: .85rem; background: var(--warn-bg); color: var(--warn-fg); border-block-end: 1px solid var(--border); }
+.sound-bar p { margin: 0; }
+.sound-bar a { color: inherit; font-weight: 600; }
+.sound-bar[data-mode] { }
+#sound-status[data-mode="file"] { font-weight: 600; }
+.opt-block { align-items: flex-start; padding-block: .35rem; }
+.opt-block .block { display: block; font-size: .9rem; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; inline-size: 100%; font-size: .9rem; }
+caption { text-align: start; font-weight: 700; padding-block-end: .35rem; }
+th, td { border: 1px solid var(--border); padding: .4rem .5rem; text-align: start; vertical-align: top; overflow-wrap: break-word; }
+th:first-child, td:first-child { min-inline-size: 7rem; }
+.credits { list-style: none; margin: 0; padding: 0; }
+.credits li { padding-block: .6rem; border-block-start: 1px solid var(--border); }
+.credits .block { display: block; font-size: .92rem; }
+.how h3 { font-size: 1rem; margin-block: 1rem .25rem; }
+.how li, .card li { margin-block: .35rem; }
+.onboarding legend { font-size: 1.05rem; }
+/* fieldsets default to min-width:min-content, which pushed the Sound-gap radio group past 390px */
+fieldset { min-inline-size: 0; max-inline-size: 100%; }
+main { overflow-x: clip; } /* a stray wide table (Sound gap) must not widen the page; tables inside .table-wrap still scroll */
+.tiles li { display: flex; } .tiles .tile { flex: 1; text-align: center; padding-inline: .4rem; }
+
+/* Lane 1 round 4 exercises (ladder, fade-out, gender pairs, scaffold) */
+.alef-draft-notice{font-size:.85rem;opacity:.8;border:1px dashed currentColor;border-radius:8px;padding:6px 10px;margin:8px 0}
+.alef-cardpair,.alef-chips,.alef-gap-options,.alef-voice-select{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+.alef-card-opt,.alef-opt,.alef-chip,.alef-voice-choice{min-height:44px;min-width:44px;padding:8px 14px;border:2px solid currentColor;border-radius:10px;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.alef-card-opt{font-size:1.8rem}
+.alef-correct{border-style:solid;outline:3px double currentColor}
+.alef-wrong{border-style:dashed;opacity:.7}
+.alef-chip[aria-pressed="true"],.alef-voice-choice[aria-checked="true"]{outline:3px solid currentColor;font-weight:700}
+.alef-levelbar{height:10px;border-radius:6px;background:rgba(127,127,127,.25);overflow:hidden}
+.alef-fade-line{font-size:1.6rem;line-height:2.1;direction:rtl}
+.alef-gap{display:inline-block;min-width:2.2em;border-bottom:3px solid currentColor;text-align:center}
+.alef-gap-open{outline:2px dashed currentColor}
+.alef-fade-blank{opacity:.5}
+.alef-pair{border:1px solid rgba(127,127,127,.5);border-radius:10px;padding:10px;margin:10px 0}
+.alef-diff{background:transparent;color:inherit;text-decoration:underline wavy;text-underline-offset:4px}
+.alef-latin{opacity:1}.alef-latin-1,.alef-translit-faint{opacity:.45}.alef-latin-2{opacity:.25}.alef-latin-3{visibility:hidden}
+.alef-noaudio{font-size:.85rem;opacity:.7}
+
+/* QA round (lane 8/QA, 2026-11-04): fixes found by tools/qa/walk.mjs at 390px */
+/* radio/checkbox labels in the pronunciation views wrapped so the radio sat at the end of the previous line, apart from its text */
+main label:has(> input[type=radio], > input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
+/* a long <option> text (Read: "The Priestly Blessing (Birkat Kohanim) (Numbers 6:24-26)") made the select wider than the phone and main{overflow-x:clip} cut it off */
+select { max-inline-size: 100%; min-block-size: 44px; }
+/* tap targets: 44px minimum for disclosure summaries, the sound-bar link and the pronunciation-screen buttons */
+main summary { padding-block: .6rem; min-block-size: 44px; box-sizing: border-box; display: list-item; }
+.sound-bar a { padding-block: .9rem; margin-block: -.9rem; }
+main .alef-r4 button { min-height: 44px; }
+/* Letters (trace) and Atlas ship their own fixed-colour CSS (text #1b1b1f, buttons #fff): in dark mode that was dark text on the dark page and white buttons with light, invisible glyphs.
+   Re-point their neutral surfaces at the theme variables; :where() keeps the specificity low so their own pressed/right/wrong/final states still win. */
+main .alef-trace, main .alef-atlas { color: var(--fg); }
+:where(main .alef-trace, main .alef-atlas) button:not([aria-pressed=true]):not([aria-selected=true]) { background: var(--card); color: var(--fg); border-color: var(--border); }
+main .alef-atlas .panel { background: var(--card); border-color: var(--border); }
+main .alef-atlas .tile .s, main .alef-atlas .muted, main .alef-trace .kb .k small { color: var(--muted); }
+main .alef-atlas .tile.final, main .alef-atlas .tile.wrong, main .alef-atlas .tile.right, main .alef-trace .kb .k.hit { color: #1b1b1f; }
+main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
+
+/* Shell chrome round (lane 8, 2026-11-04): header+nav+sound bar took ~200px of an 844px phone.
+   Phone (<720px): 44px header, one-line sound bar (tap for full text), five main sections in a fixed bottom tab bar plus a "More" sheet.
+   Wide screens: the old top nav, all sections in one row. */
+.sound-bar { padding-block: 0; flex-wrap: nowrap; gap: .75rem; font-size: .8rem; line-height: 1.3; }
+.sound-bar p { flex: 1; min-inline-size: 0; padding-block: .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.sound-bar p.open { white-space: normal; }
+.sound-bar a { flex: none; white-space: nowrap; }
+.site-nav { display: flex; flex-wrap: wrap; position: relative; overflow: visible; }
+.site-nav ul { padding: 0 .5rem; }
+.site-nav > ul#nav { flex-wrap: wrap; }
+.more-btn { display: none; }
+.site-nav .nav-more { list-style: none; margin: 0; padding: 0 .5rem; display: flex; flex-wrap: wrap; gap: .25rem; }
+@media (max-width: 719.98px) {
+  body { padding-block-end: calc(60px + env(safe-area-inset-bottom)); }
+  .site-nav { position: fixed; inset-inline: 0; inset-block-end: 0; z-index: 50; border-block-end: 0; padding-block-end: env(safe-area-inset-bottom); flex-wrap: nowrap; box-shadow: 0 -2px 8px rgba(0,0,0,.08); }
+  .site-nav > ul#nav { flex: 1; flex-wrap: nowrap; padding: 0; gap: 0; }
+  .site-nav > ul#nav li { flex: 1 1 0; min-inline-size: 0; }
+  .site-nav a, .more-btn { min-block-size: 56px; padding: .2rem .1rem; font-size: .75rem; inline-size: 100%; border-radius: 0; }
+  .more-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 0 0 4.5rem; border: 0; background: transparent; color: var(--fg); font: inherit; font-size: .75rem; line-height: 1.2; cursor: pointer; }
+  .more-btn[hidden] { display: none !important; }
+  .more-btn[aria-expanded="true"], .more-btn[data-current] { background: var(--accent); color: var(--accent-fg); }
+  .site-nav .nav-more { display: none; position: absolute; inset-inline: 0; inset-block-end: 100%; background: var(--card); border: 1px solid var(--border); border-block-end: 0; border-radius: 12px 12px 0 0; padding: .5rem; box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
+  .site-nav .nav-more.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr)); gap: .25rem; }
+  .nav-more a { min-block-size: 56px; font-size: .85rem; border: 1px solid var(--border); border-radius: 10px; }
+  main { padding-block-end: 1.5rem; }
+  .site-nav .nav-he { font-size: 1em; }
+}
+
+
+/* Letters / tracing on a phone (QA defect O1): the stage sat ~1660px down the page. This only re-orders and compacts lane 2's markup
+   (tabs, notice, grid, toggles row, letter-card row, details.remember, .stage, feedback, button rows, notice) when a .stage exists, so it
+   depends on that child order: see docs/ARCHITECTURE.md. Nothing is removed; the draft notice and the memory hook stay on the page, below the stage. */
+@media (max-width: 719.98px) {
+  main .alef-trace > div:has(> .stage) { display: flex; flex-direction: column; }
+  main .alef-trace > div:has(> .stage) > * { order: 20; margin-block: 0 .6rem; }
+  main .alef-trace > div:has(> .stage) > .tabs { order: 1; }
+  main .alef-trace > div:has(> .stage) > .grid { order: 2; display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: .4rem; padding-block-end: .35rem; -webkit-overflow-scrolling: touch; }
+  main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 max(3rem, var(--tap, 48px)); min-block-size: var(--tap, 48px); scroll-snap-align: center; }
+  main .alef-trace > div:has(> .stage) > .grid + .row { order: 8; }            /* print / cursive / strict / outline toggles */
+  main .alef-trace > div:has(> .stage) > .row:has(> .big) { order: 3; }            /* the chosen letter and its name */
+  main .alef-trace > div:has(> .stage) > .stage { order: 5; }
+  main .alef-trace > div:has(> .stage) > .feedback { order: 6; }
+  main .alef-trace > div:has(> .stage) > .feedback + .row { order: 7; }           /* reset / undo / next */
+  main .alef-trace > div:has(> .stage) > .feedback + .row + .row { order: 7; }
+  main .alef-trace > div:has(> .stage) > .tabs + .notice { order: 9; }        /* draft notice */
+  main .alef-trace > div:has(> .stage) > details.remember { order: 10; }
+  main .alef-trace > div:has(> .stage) > .notice:last-child { order: 11; }
+}
+/* Range sliders and file inputs: 44px hit area (QA O5) */
+input[type="range"] { min-block-size: 44px; inline-size: 100%; max-inline-size: 100%; margin-block: 0; cursor: pointer; }
+input[type="file"] { min-block-size: 44px; max-inline-size: 100%; font: inherit; cursor: pointer; }
+input[type="file"]::file-selector-button { min-block-size: 44px; padding-inline: 1rem; margin-inline-end: .75rem; font: inherit; font-weight: 600; border-radius: 999px; border: 2px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+/* labels that wrap a checkbox/radio deeper than a direct child (Vocab "Show word forms", Scan options) and plain text/url/search inputs: 44px */
+main label:has(input[type=radio], input[type=checkbox]) { display: inline-flex; align-items: center; gap: .4rem; min-block-size: 44px; white-space: normal; }
+main input[type=url], main input[type=text], main input[type=search], main input:not([type]) { min-block-size: 44px; min-inline-size: 0; max-inline-size: 100%; }
+
+/* a11y round (lane 8, 2026-11-03): contrast fixes found by tools/a11y/run.mjs.
+   Opacity on text blends it toward the background (muted text at .7-.8 opacity measured 3.5-3.8:1 against the 4.5:1 needed), so text keeps full opacity and the muted colour carries the de-emphasis. */
+.alef-draft-notice, .alef-noaudio { opacity: 1; }
+main .alef-r4 .muted, main .crp-ltr small { opacity: 1; }
+/* atlas keeps its fixed light tile colours for the final/right/wrong states; the muted sub-label must not follow the (light) dark-mode muted colour onto them */
+main .alef-atlas .tile.final .s, main .alef-atlas .tile.wrong .s, main .alef-atlas .tile.right .s { color: #3b3b44; }
+/* Settings: the file input behind "Restore from backup file" is visually hidden, so its keyboard focus was invisible. Ring the label that stands for it. */
+label.btn:has(+ input[type=file]:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+[hidden] { display: none !important; }
+
+/* Generated pictures (src/img/resolve.js). Sizing only: no min-height, so a missing picture leaves no gap. */
+.alef-img{display:block;height:auto;max-width:100%;border-radius:.5rem}
+.vc-pic,.th-pic{width:100%;max-width:14rem}
+.at-pic{width:100%;max-width:18rem;margin:0 auto .5rem}
+.at-meet{width:100%;max-width:18rem;margin:0 auto .5rem}
+.letter-meet{height:auto;max-width:100%}
+.l-scene,.fv-pic{width:100%;max-width:36rem;margin:0 0 .75rem}
+.pl-pic{max-width:9rem;margin:0 auto .5rem}
+/* Teachers band (src/shell/companions.js): Ari and Noa on every screen, posed for the page. */
+.companions{display:flex;align-items:center;gap:.55rem;padding:.5rem 1rem 0}
+.companions .comp-pic{width:3rem;height:3rem;object-fit:cover;border-radius:50%}
+.companions .comp-names{font-size:.85rem;opacity:.75}
+/* Settings voice-picker portraits (settings.view.js). */
+.teacher-row{display:flex;gap:1.25rem;margin:.25rem 0 .5rem}
+.teacher{margin:0;text-align:center}
+.teacher-pic{width:7rem;height:7rem;object-fit:cover;border-radius:1rem}
+.teacher figcaption{font-size:.85rem;margin-top:.3rem}
+/* Reviewer mode (settings.showUnapprovedImages): visible outline on pictures that are not approved. */
+.alef-img[data-unapproved]{outline:3px dashed #c2410c;outline-offset:2px}
+
+/* Mobile quirks round (lane mobile, 2026-11-04). Emulation-checked only; see docs/mobile/FINDINGS.md. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(31,58,95,.15); overscroll-behavior-y: none; }
+/* removes the 300ms double-tap-zoom wait on controls without disabling pinch zoom */
+a, button, summary, label, select, input, [role="button"] { touch-action: manipulation; }
+/* iOS Safari zooms the page when a focused field has a font-size under 16px: keep every field at 16px or more */
+input, select, textarea { font-size: max(16px, 1em); font-family: inherit; }
+textarea { max-inline-size: 100%; }
+/* notch / landscape: header, banner and the fixed bottom bar clear the side insets too */
+.site-header, .sound-bar { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right)); }
+main { padding-inline: max(1rem, env(safe-area-inset-left), env(safe-area-inset-right)); }
+@media (max-width: 719.98px) {
+  /* text zoom / large system font: reserve the bar height in rem so the last card is never hidden behind it */
+  body { padding-block-end: calc(4.5rem + env(safe-area-inset-bottom)); }
+  /* a focused or scrolled-to control (first Listen button, last button) stops above the fixed tab bar, not under it */
+  html { scroll-padding-block-end: calc(4.5rem + env(safe-area-inset-bottom)); }
+  .site-nav { padding-inline: env(safe-area-inset-left) env(safe-area-inset-right); }
+  /* the bar is capped at 14px labels: at 200% text a 5-tab bar cannot hold larger words without breaking them mid-word (page text still scales) */
+  .site-nav a, .more-btn { min-block-size: 3.5rem; font-size: min(.75rem, 14px); }
+  .site-nav .nav-more a { font-size: min(.85rem, 16px); }
+  /* Android Chrome resizes the layout viewport for the on-screen keyboard, which would leave the tab bar floating over the field: hide it while typing */
+  body:has(input:focus, textarea:focus, select:focus) .site-nav { display: none; }
+  body:has(input:focus, textarea:focus, select:focus) { padding-block-end: env(safe-area-inset-bottom); }
+}
+/* short landscape phones: a fixed bar plus header would take a third of the screen, so let the bar scroll with the page */
+@media (max-height: 480px) and (max-width: 719.98px) {
+  .site-nav { position: static; box-shadow: none; }
+  body { padding-block-end: env(safe-area-inset-bottom); }
+  .site-nav .nav-more { position: static; }
+}
+/* forced-colors / Windows high contrast: the current tab was shown by background only */
+@media (forced-colors: active) {
+  .site-nav a[aria-current="page"], .more-btn[aria-expanded="true"], .more-btn[data-current] { background: Highlight; color: HighlightText; forced-color-adjust: none; text-decoration: underline; }
+  .site-nav { border-block-start: 2px solid CanvasText; }
+  .more-btn { border: 1px solid ButtonText; }
+}
+@media (prefers-contrast: more) { :root { --border: currentColor; --muted: var(--fg); } }
+/* Dark/forced-colors QA 2026-11-04: toggle buttons and tabs (Letters, Atlas, others) lost their pressed/selected look when forced colors replaced the author background, and the bottom-tab focus ring was cut off by the screen edge. */
+@media (forced-colors: active) { button[aria-pressed="true"], button[aria-selected="true"], [role="tab"][aria-selected="true"] { background: Highlight; color: HighlightText; border-color: Highlight; forced-color-adjust: none; } }
+@media (max-width: 719.98px) { .site-nav a:focus-visible, .more-btn:focus-visible { outline-offset: -4px; } }
+
+/* ---- Navigation: section tabs + grouped More menu + search (src/shell/nav.js, menu.js, search.view.js; docs/nav/NAV.md) ---- */
+.more-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-block-size: var(--tap); padding: .25rem .75rem; border: 0; background: transparent; color: var(--fg); font: inherit; font-size: .9rem; line-height: 1.2; cursor: pointer; border-radius: 8px; }
+.more-btn[hidden] { display: none !important; }
+.more-btn[aria-expanded="true"], .more-btn[data-current] { background: var(--accent); color: var(--accent-fg); }
+.site-nav > ul#nav { flex-wrap: nowrap; }
+.site-nav .nav-more { display: none; position: absolute; inset-inline: 0; inset-block-start: 100%; z-index: 60; flex-direction: column; flex-wrap: nowrap; gap: .25rem; max-block-size: min(70vh, 40rem); overflow-y: auto; overscroll-behavior: contain; background: var(--card); border: 1px solid var(--border); border-radius: 0 0 12px 12px; padding: .5rem; box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+.site-nav .nav-more.open { display: flex; }
+.nav-group > details { border: 1px solid var(--border); border-radius: 10px; }
+.nav-group summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .5rem; min-block-size: var(--tap); padding: .4rem .75rem; cursor: pointer; font-weight: 600; align-content: center; }
+.menu-count { font-weight: 400; opacity: .75; font-size: .85em; }
+.menu-sec-desc { flex-basis: 100%; font-weight: 400; font-size: .8rem; opacity: .8; }
+.nav-group .menu-list { display: grid; gap: .25rem; padding: 0 .5rem .5rem; margin: 0; list-style: none; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+.nav-more .menu-link, .search-list a { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .1rem; min-block-size: var(--tap); padding: .4rem .75rem; text-align: start; border: 1px solid var(--border); border-radius: 10px; font-size: .95rem; inline-size: 100%; box-sizing: border-box; }
+.nav-more .menu-link[aria-current="page"] { background: var(--accent); color: var(--accent-fg); }
+.menu-label { font-weight: 600; }
+.menu-desc { font-size: .8rem; opacity: .8; font-weight: 400; }
+.search-form { display: flex; flex-direction: column; gap: .35rem; }
+.search-form input { min-block-size: var(--tap); font: inherit; padding: .4rem .6rem; inline-size: 100%; box-sizing: border-box; }
+.search-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: .35rem; }
+.search-he { font-size: 1.6rem; }
+@media (max-width: 719.98px) {
+  .site-nav { flex-wrap: nowrap; }
+  .site-nav > ul#nav li { flex: 1 1 0; min-inline-size: 0; }
+  .site-nav a, .more-btn { overflow-wrap: anywhere; hyphens: auto; }
+  .more-btn { flex: 0 0 4.5rem; inline-size: auto; border-radius: 0; min-block-size: 56px; padding: .2rem .1rem; font-size: .75rem; }
+  .site-nav .nav-more { inset-block-start: auto; inset-block-end: 100%; border-radius: 12px 12px 0 0; border-block-end: 0; max-block-size: calc(100dvh - 8rem); box-shadow: 0 -6px 16px rgba(0,0,0,.18); }
+  .site-nav .nav-more.open { display: flex; grid-template-columns: none; }
+  .nav-more .menu-link { min-block-size: var(--tap, 48px); border-radius: 10px; font-size: .95rem; }
+  .nav-group .menu-list { grid-template-columns: 1fr; }
+}
+
+/* One compact sound bar: status sentence (up to two lines, tap for all), "Details" link and dismiss, each a 44px target. */
+.sound-bar { min-block-size: 44px; box-sizing: border-box; }
+.sound-bar p { padding-block: 0; }
+.sound-bar[hidden] { display: none; }
+.sound-bar p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; white-space: normal; text-overflow: clip; }
+.sound-bar p.open { -webkit-line-clamp: unset; line-clamp: unset; display: block; }
+.sound-bar a.sound-bar-details { display: inline-flex; align-items: center; justify-content: center; min-inline-size: 44px; min-block-size: 44px; padding-block: 0; margin-block: 0; }
+.sound-bar-more { flex: none; min-inline-size: 44px; min-block-size: 44px; padding-inline: .5rem; background: none; border: 0; color: inherit; font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.sound-bar-x { flex: none; min-inline-size: 44px; min-block-size: 44px; margin-inline-end: -.5rem; background: none; border: 0; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+
+/* ---- v0 accessibility pass (docs/qa/A11Y-V0.md): fixes seen at 375x667 and at 200% text ---- */
+/* Letters tab row (Trace / Look-alikes / Typing) did not wrap, so at 200% text the last tab sat past the edge and main{overflow-x:clip} cut it off */
+main .alef-trace .tabs { flex-wrap: wrap; }
+/* long unbroken credit titles overflowed their list item at 200% text and were clipped */
+.credits li, #priv-flows li { overflow-wrap: anywhere; }
+.credits li a { display: inline-flex; align-items: center; min-block-size: 44px; }
+/* Progress: row links ("Open", "Go", "Time a read") were 21px tall; the import file field was 26px */
+.pg li a:not(.btn) { display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; }
+.pg input[type="file"] { min-block-size: 44px; }
+/* wide tables (Privacy "Stored keys") scroll inside their own box instead of being cut off by main{overflow-x:clip} */
+.table-wrap:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* Links inside running text: padding on an inline box adds tap area (about 45px high) without changing the line height, so the text does not move */
+main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 10px; }
+.credits li > a, .pg li > a:not(.btn) { padding-block: 0; }
+
+/* Sources line under word meanings and example sentences (src/shell/sources.js): small, wraps, link keeps the 44px target from the rule above */
+.src-line { display: none !important; }
+.fine-print { margin: 2.5rem 0 .4rem; text-align: center; font-size: .75rem; line-height: 1.5; }
+.fine-print a { color: var(--muted); text-decoration: none; }
+.fine-print a:hover, .fine-print a:focus-visible { opacity: 1; text-decoration: underline; }
+/* Memory card (src/letters/memorycard.js): on phones it sits after the stage and its toggles, never above the tracing stage. */
+@media (max-width: 600px) { main .alef-trace > div:has(> .stage) > .mc { order: 8; } main .alef-trace > div:has(> .stage) > .mc[data-first] { order: 4; } main .alef-trace > div:has(> .stage) > .mc-fallback { order: 8; } }
+
+/* ==== Colour-blind and low-vision round (docs/a11y/colourblind.md; measured by tools/a11y/contrast.mjs) ==== */
+/* 1. Right / wrong line colours as tokens, so views can follow the theme. Colour is never the only cue: see the marks in section 3. */
+:root { --ok-line: #1a7f37; --bad-line: #b3261e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ok-line: #6fd18a; --bad-line: #ff8a80; } }
+:root[data-theme="dark"] { --ok-line: #6fd18a; --bad-line: #ff8a80; }
+
+/* 2. High-contrast themes. Settings > Theme has "High contrast, light" (black on white) and "High contrast, dark" (white on black).
+   With "Match device" the same palettes switch on by themselves when the device asks for more contrast (prefers-contrast: more).
+   Windows forced-colors mode is handled separately below and wins over both. */
+:root[data-theme="contrast"] { --bg: #ffffff; --fg: #000000; --muted: #3d3d3d; --card: #ffffff; --border: #000000; --accent: #00227a; --accent-fg: #ffffff; --focus: #8a2d00; --warn-bg: #ffe9a0; --warn-fg: #000000; --ok-line: #0b5a22; --bad-line: #9a1b13; color-scheme: light; }
+:root[data-theme="contrast-dark"] { --bg: #000000; --fg: #ffffff; --muted: #e0e0e0; --card: #000000; --border: #ffffff; --accent: #9ec5ff; --accent-fg: #000000; --focus: #ffd400; --warn-bg: #2b2200; --warn-fg: #ffe680; --ok-line: #8ef0a8; --bad-line: #ff9e94; color-scheme: dark; }
+@media (prefers-contrast: more) {
+  :root:not([data-theme]) { --bg: #ffffff; --fg: #000000; --muted: #3d3d3d; --card: #ffffff; --border: #000000; --accent: #00227a; --accent-fg: #ffffff; --focus: #8a2d00; --warn-bg: #ffe9a0; --warn-fg: #000000; --ok-line: #0b5a22; --bad-line: #9a1b13; }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { --bg: #000000; --fg: #ffffff; --muted: #e0e0e0; --card: #000000; --border: #ffffff; --accent: #9ec5ff; --accent-fg: #000000; --focus: #ffd400; --warn-bg: #2b2200; --warn-fg: #ffe680; --ok-line: #8ef0a8; --bad-line: #ff9e94; }
+}
+/* Controls and cards get a solid edge in the high-contrast themes; links stay underlined; the focus ring is thicker. */
+:root[data-theme^="contrast"] :focus-visible { outline-width: 4px; }
+@media (prefers-contrast: more) { :root:not([data-theme]) :focus-visible { outline-width: 4px; } }
+:root[data-theme^="contrast"] .card, :root[data-theme^="contrast"] .tile, :root[data-theme^="contrast"] .alef-lesson { border-width: 2px; }
+:root[data-theme^="contrast"] main a:not(.btn):not(.alef-btn):not(.alef-link):not(.tile):not(.skip-link) { text-decoration: underline; text-decoration-thickness: .1em; }
+/* native radios and checkboxes are nearly invisible on black in the dark scheme: draw them with a solid edge in the text colour */
+:root[data-theme^="contrast"] input[type="radio"], :root[data-theme^="contrast"] input[type="checkbox"] { appearance: none; -webkit-appearance: none; background: var(--bg); border: 2px solid var(--fg); border-radius: 50%; display: inline-grid; place-content: center; }
+:root[data-theme^="contrast"] input[type="checkbox"] { border-radius: 4px; }
+:root[data-theme^="contrast"] input[type="radio"]:checked::before { content: ""; inline-size: .7rem; block-size: .7rem; border-radius: 50%; background: var(--fg); }
+:root[data-theme^="contrast"] input[type="checkbox"]:checked::before { content: "\2713"; font-weight: 700; line-height: 1; color: var(--fg); }
+:root[data-theme^="contrast"] .alef-pb-fill { background: var(--fg); }
+:root[data-theme^="contrast"] .alef-pb { border-color: var(--fg); }
+/* the state-colour buttons and cells in learn.css keep their own pairs; in the high-contrast themes they use the plain theme pair with a heavy edge */
+html:root[data-theme="contrast"] .alef-rate-1, html:root[data-theme="contrast"] .alef-rate-2 { background: #000; border-color: #000; color: #fff; }
+html:root[data-theme="contrast-dark"] .alef-rate-1, html:root[data-theme="contrast-dark"] .alef-rate-2 { background: #fff; border-color: #fff; color: #000; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-hit { background: #fff; color: #000; border-color: #0b5a22; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-wrong { background: #fff; color: #000; border-color: #9a1b13; }
+html:root[data-theme="contrast"] .alef-spot-cell.alef-spot-missed { border-color: #8a2d00; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-hit { background: #000; color: #fff; border-color: #8ef0a8; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-wrong { background: #000; color: #fff; border-color: #ff9e94; }
+html:root[data-theme="contrast-dark"] .alef-spot-cell.alef-spot-missed { border-color: #ffd400; }
+/* 3. Second cues for right and wrong. A mark after the tile or cell content, plus the word the screen already prints ("Good!", "Natural.", "That is ...").
+   A tick is a tick and a cross is a cross in any colour vision. The marks are drawn as text, so forced-colors keeps them. */
+main .alef-atlas .tile.right::after { content: "\2713\00a0Right"; display: block; direction: ltr; unicode-bidi: isolate; text-align: center; font-size: .75rem; font-weight: 700; color: #0b4a1c; }
+main .alef-atlas .tile.wrong::after { content: "\2717\00a0Not this"; display: block; direction: ltr; unicode-bidi: isolate; text-align: center; font-size: .75rem; font-weight: 700; color: #7a1710; }
+main .alef-atlas .tile.right { border-width: 3px; }
+main .alef-atlas .tile.wrong { border-width: 3px; border-style: dashed; }
+main .wt .nq-cell[data-state=ok]::after { content: "\2713"; display: block; font-family: var(--font-ui); font-size: 1rem; line-height: 1; font-weight: 700; color: var(--fg); }
+main .wt .nq-cell[data-state=bad]::after { content: "\2717"; display: block; font-family: var(--font-ui); font-size: 1rem; line-height: 1; font-weight: 700; color: var(--fg); }
+main .wt .nq-cell[data-state=ok] { border-color: var(--ok-line); }
+main .wt .nq-cell[data-state=bad] { border-color: var(--bad-line); }
+main .wt .cell[data-done=true] { border-color: var(--ok-line); }
+.il-opt[data-state="natural"]::before { content: "\2713\00a0"; font-weight: 700; }
+.il-opt[data-state="picked-wrong"]::before { content: "\2717\00a0"; font-weight: 700; }
+.il-opt[data-state="picked-wrong"] { border-style: dashed; }
+main .il-opt[data-state="natural"] { border-color: var(--ok-line); }
+main .il-opt[data-state="picked-wrong"] { border-color: var(--bad-line); }
+.il-label.il-right::before { content: "\2713\00a0"; }
+.il-label.il-wrong::before { content: "\2717\00a0"; }
+:root[data-theme="dark"] .il-wrong, :root[data-theme="dark"] .il-right { text-decoration: none; }
+
+/* 4. Windows high-contrast (forced colors): keep the right / wrong marks, the tracing guide and the memory pictures readable.
+   SVG fills and strokes are replaced by system colours here, so the tracing guide is drawn as an outline instead of a grey fill. */
+@media (forced-colors: active) {
+  main .alef-atlas .tile.right::after, main .alef-atlas .tile.wrong::after { color: CanvasText; }
+  .mc .mc-art { border: 2px solid CanvasText; }
+}
+
+/* ---- Calm mode and reading comfort (src/shell/comfort.js; docs/a11y/COGNITIVE.md) ----
+   Calm mode (Settings > Calm and quiet) sets data-calm on the root: no animation, no transition, no smooth scroll anywhere.
+   The system "reduce motion" rule above applies whether or not calm mode is on. Reading comfort values arrive as CSS variables on the root. */
+:root[data-calm], :root[data-calm] *, :root[data-calm] *::before, :root[data-calm] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+button, input, select, textarea { letter-spacing: inherit; }
+.he, [lang="he"], .alef-he, .mc-svg { letter-spacing: normal; }
+
+/* ---- Touch and movement (motor lane, 2026-11-04). Settings: targetSize, bottomActions (src/shell/motor.js). ---- */
+/* Measured at 375x667 with tools/a11y/targets.mjs. Buttons that sit next to each other keep at least 8px between them, so a slipped finger does not hit the neighbour. */
+.row { gap: .5rem; }
+.alef-cardpair, .alef-chips, .alef-gap-options, .alef-voice-select, .alef-tabs { gap: .5rem; }
+.alef-draft summary { min-block-size: 44px; padding-block: .6rem; }
+/* Large buttons and links (Settings > Touch and movement). The variable --tap is set to 64px on the root; these rules make every kind of target honour it. */
+:root[data-target-size="large"] :is(button, .btn, a.btn, summary, select, [role="tab"], [role="button"], .tile, .menu-link, .alef-btn, .alef-play, .alef-link, .alef-tab, .alef-chip, .alef-opt, .alef-card-opt, .alef-voice-choice, .alef-spot-cell) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
+:root[data-target-size="large"] :is(input[type="number"], input[type="text"], input[type="search"], input[type="url"], input:not([type]), input[type="range"], input[type="file"]) { min-block-size: var(--hit, 64px); }
+:root[data-target-size="large"] main label:has(input[type="radio"], input[type="checkbox"]), :root[data-target-size="large"] .opt { min-block-size: var(--hit, 64px); padding-block: .25rem; }
+:root[data-target-size="large"] input[type="radio"], :root[data-target-size="large"] input[type="checkbox"] { inline-size: 2rem; block-size: 2rem; }
+:root[data-target-size="large"] .row, :root[data-target-size="large"] .alef-tabs, :root[data-target-size="large"] .alef-cardpair, :root[data-target-size="large"] .alef-chips, :root[data-target-size="large"] .alef-ratings, :root[data-target-size="large"] .alef-actionbar, :root[data-target-size="large"] .alef-lesson-list, :root[data-target-size="large"] .tiles { gap: 1rem; }
+:root[data-target-size="large"] main :is(p, li, dd, td) > a:not(.btn):not(.skip-link) { padding-block: 18px; }
+@media (max-width: 719.98px) {
+  :root[data-target-size="large"] body { padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
+  :root[data-target-size="large"] { scroll-padding-block-end: calc(5.5rem + env(safe-area-inset-bottom)); }
+  :root[data-target-size="large"] .site-nav a, :root[data-target-size="large"] .more-btn { min-block-size: 4.25rem; }
+  :root[data-target-size="large"] .alef-actionbar { inset-block-end: calc(4.4rem + env(safe-area-inset-bottom)); }
+}
+/* Main buttons at the bottom (Settings > Touch and movement): Show answer, ratings, Continue and Next stay above the tab bar, in thumb reach. Lessons already do this with .alef-actionbar. */
+:root[data-bottom-actions] :is(.alef-review .alef-ratings, .alef-review .alef-mem-actions, .alef-sprint .sp-row:has(#sprint-next), .alef-sprint .sp-row:has(#sprint-reveal)) { position: sticky; inset-block-end: 0; z-index: 40; background: var(--card); padding: .5rem; border-block-start: 1px solid var(--border); }
+/* a lone button keeps its own colours; a halo of the card colour keeps text from showing through behind it */
+:root[data-bottom-actions] :is(.alef-review .alef-card > button.btn, #fd-next) { position: sticky; inset-block-end: .5rem; z-index: 40; box-shadow: 0 0 0 .5rem var(--card); }
+@media (max-width: 719.98px) {
+  :root[data-bottom-actions] :is(.alef-review .alef-ratings, .alef-review .alef-mem-actions, .alef-sprint .sp-row:has(#sprint-next), .alef-sprint .sp-row:has(#sprint-reveal)) { inset-block-end: calc(3.6rem + env(safe-area-inset-bottom)); }
+  :root[data-bottom-actions] :is(.alef-review .alef-card > button.btn, #fd-next) { inset-block-end: calc(4.1rem + env(safe-area-inset-bottom)); }
+}
+/* "Check answer" (Settings > Ask me to confirm each answer): the marked choice is outlined with a thick border and a tick, not by colour alone */
+.alef-int-opt[aria-pressed="true"] { outline: 4px solid var(--focus); outline-offset: 2px; font-weight: 700; }
+.alef-int-opt[aria-pressed="true"]::before { content: "\2713\00a0"; }
+/* Letters > Typing: the on-screen keyboard was 13 keys of 34px in a 343px row, so the outer keys were cut off and every key was under 44px wide. On a phone the rows wrap and each key is 44px wide, with 8px between keys. */
+@media (max-width: 599.98px) {
+  main .alef-trace .kb { gap: 8px; }
+  main .alef-trace .kb .r { flex-wrap: wrap; gap: 8px; }
+  main .alef-trace .kb .k { flex: 0 0 44px; min-inline-size: 44px; min-block-size: 56px; }
+}
+/* Calendar day buttons were 43px wide on a 375px phone (the card padding left 309px for 7 columns). Let the grid use the card's side padding so each day is at least 44px. */
+@media (max-width: 480px) { main .alef-cal-table { inline-size: calc(100% + 2rem); margin-inline: -1rem; } }
+/* Space between neighbouring targets: buttons placed one after another outside a flex row (Home daily goal, About and Privacy link buttons) and stacked radio/checkbox rows touched each other. */
+main :is(p:not(.row), #today-goal) > .btn + .btn { margin-inline-start: .5rem; }
+main .btn { margin-block: 2px; }
+main .opt, main label:has(> input[type="radio"], > input[type="checkbox"]) { margin-block: 3px; }
+main .opt, main label:has(> input[type="radio"], > input[type="checkbox"]) { margin-inline-end: .75rem; }
+main details { margin-block: 4px; }
+main label > :is(select, input[type="url"], input[type="file"]) { margin-block: 4px; }
+/* large mode: header, sound bar and list links too */
+:root[data-target-size="large"] :is(.brand, .sound-bar-details, .sound-bar-more, .sound-bar-x, .pg li a:not(.btn), .credits li a, .search-list a, .nav-more a) { min-block-size: var(--hit, 64px); min-inline-size: var(--hit, 64px); }
+:root[data-target-size="large"] main .alef-trace .kb .k { flex-basis: 56px; min-inline-size: 56px; min-block-size: 64px; }
+/* Letters on a phone: "Strokes in words" kept the default order 20 and so sat below "Remember it" on screen while coming before it for Tab (the DOM ranks it 8.2). Same place in both now. */
+@media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .sw-wrap { order: 9; } }
+/* ...and the Print / Cursive / Strict / Outline row lost its "after the grid" order (the letter-card row now sits between them), so it fell to the bottom on screen while it is above "Strokes in words" for Tab. */
+@media (max-width: 719.98px) { main .alef-trace > div:has(> .stage) > .script-toggles { order: 8; } }
+
+/* ---- Phone QA round (2026-11-05): 48px floor, narrow-screen fixes ----
+   Several controls were still 44px because later, more specific 44px rules beat the --tap token (for example "main label:has(input)" beat ".opt").
+   These rules re-point them at --tap, so the Settings > Touch and movement size still applies. */
+.brand { min-block-size: var(--tap, 48px); }
+.sound-bar { min-block-size: var(--tap, 48px); }
+.sound-bar a.sound-bar-details, .sound-bar-more, .sound-bar-x { min-block-size: var(--tap, 48px); }
+.sound-bar a.sound-bar-details, .sound-bar-x { min-inline-size: var(--tap, 48px); }
+main summary, .alef-draft summary, main .alef-trace .strokewords summary { min-block-size: var(--tap, 48px); }
+main label:has(input[type=radio], input[type=checkbox]), main label.opt { min-block-size: var(--tap, 48px); }
+main select, main input[type=url], main input[type=text], main input[type=search], main input:not([type]), input[type="file"], input[type="file"]::file-selector-button { min-block-size: var(--tap, 48px); }
+main .alef-trace button:not(.k), main .alef-atlas .row button, main .mc .mc-btn { min-block-size: var(--tap, 48px); }
+.credits li a, .pg li a:not(.btn) { min-block-size: var(--tap, 48px); }
+.pg li a:not(.btn) { min-inline-size: var(--tap, 48px); }
+/* The sound bar's message was squeezed to two letters at the largest text size because the buttons took the whole row. Let it wrap onto its own line. */
+.sound-bar { flex-wrap: wrap; row-gap: 0; column-gap: .5rem; } /* the 48px buttons are 4px wider; a smaller gap keeps the message at the same length at 360px */
+.sound-bar p { flex: 1 1 6rem; }
+/* Welcome at tablet width: "main label:has(input)" turned the two-line answers inline, so they flowed side by side with uneven widths. Keep each answer on its own row. */
+main label.opt-block:has(input) { display: flex; }
+/* Playing state for Listen buttons (usability review U-06): while a clip or the
+   device voice is sounding, the button is visibly "on" and its glyph is a stop
+   square — a second tap stops the sound. */
+button.is-playing { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button.is-playing [data-glyph] { display: inline-block; min-width: 1em; text-align: center; }
+/* Loading skeleton (U-24): shown by the shell while a view module loads, so a
+   slow connection never leaves a blank page. Quiet grey bars, no motion for
+   reduced-motion learners. */
+.alef-skeleton { display: grid; gap: .7rem; margin: 1.2rem 0 .5rem; }
+.skel-bar { height: 1rem; border-radius: .5rem; background: var(--border, #d9cdb3); opacity: .55; animation: skel-pulse 1.2s ease-in-out infinite alternate; }
+.skel-bar.skel-title { height: 1.8rem; width: 55%; }
+.skel-bar.short { width: 70%; }
+@keyframes skel-pulse { from { opacity: .35; } to { opacity: .65; } }
+@media (prefers-reduced-motion: reduce) { .skel-bar { animation: none; } }
+
+/* Clean pages: review and draft notes stay in the code for the review round but are not shown to learners. */
+.draft-flag:not(details):not([data-notice]), .alef-draft-notice, .trd-draft, .trd-label-draft, .tb-draft, .sy-draft, .sc-draft,
+.rt-draft, .rc-draft, .rc-honest, .photo-draft, .nf-draft, .ls-draft, .kw-draft, .gd-draft, .fd-draft, .alef-cal-draft,
+.menu-preview-note, .preview-banner { display: none !important; }
+details.draft-flag { background: none; border: 0; padding: 0; font-weight: inherit; color: inherit; }
+
+/* Brand bar and green-and-gold accents, light theme only (minified to keep the first install under budget) */
+.site-header{background:#123d2a;border-block-end:2px solid #c9a227;min-block-size:3rem}.site-header .brand{color:#f0d488;font-weight:700;letter-spacing:.02em;text-decoration:none;font-size:1.15rem}.site-header .brand .he{color:#f0d488;font-size:1.2em;margin-inline-start:.3em}.site-header .brand:focus-visible{outline:3px solid #f0d488;outline-offset:3px}:root[data-theme="light"] .site-nav{background:#fbf6e8;border-block-end:2px solid #e6d39a}:root[data-theme="light"] .site-nav a[aria-current="page"]{background:#123d2a;color:#f0d488;box-shadow:inset 0 -3px 0 #c9a227}:root[data-theme="light"] main h1::after{content:"";display:block;inline-size:3.2rem;block-size:4px;border-radius:4px;margin-block-start:.35rem;background:linear-gradient(90deg,#c9a227,#e9c25a)}:root[data-theme="light"] .btn.secondary{border-color:#c9a227;color:#123d2a;background:#fffaf0}@media (prefers-color-scheme:light){:root:not([data-theme]) .site-nav{background:#fbf6e8;border-block-end:2px solid #e6d39a}:root:not([data-theme]) .site-nav a[aria-current="page"]{background:#123d2a;color:#f0d488;box-shadow:inset 0 -3px 0 #c9a227}:root:not([data-theme]) main h1::after{content:"";display:block;inline-size:3.2rem;block-size:4px;border-radius:4px;margin-block-start:.35rem;background:linear-gradient(90deg,#c9a227,#e9c25a)}:root:not([data-theme]) .btn.secondary{border-color:#c9a227;color:#123d2a;background:#fffaf0}}

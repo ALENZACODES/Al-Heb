@@ -1,0 +1,922 @@
+{
+ "schemaVersion": 1,
+ "description": "One record per shared vowel/mark id (CONTRACT). ipa and english are keyed by tradition. english.american_synagogue is the typical American-synagogue rendering (Sephardi/Israeli vowel values on an American English base). All english fields are lane-3 inferences from the IPA (verified.english=false); IPA is taken from the cited pages.",
+ "traditions": [
+  "israeli",
+  "sephardi",
+  "ashkenazi"
+ ],
+ "records": [
+  {
+   "id": "kamatz",
+   "kind": "vowel",
+   "nameHe": "קָמָץ",
+   "name": "Kamatz (kamatz gadol)",
+   "base": "ב",
+   "shape": "בָ",
+   "codepoints": [
+    "U+05B8"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B8"
+   ],
+   "position": "below (T-shaped mark under the letter)",
+   "israeliQuality": "a",
+   "ipa": {
+    "israeli": "[a]",
+    "sephardi": "[a(ː)]",
+    "ashkenazi": "[ɔ]"
+   },
+   "english": {
+    "israeli": "a as in father (short, no glide)",
+    "sephardi": "a as in father",
+    "ashkenazi": "aw as in saw (Barukh -> Bawrukh)",
+    "american_synagogue": "ah as in father; older or Orthodox speakers say aw as in saw"
+   },
+   "example": {
+    "he": "אָב",
+    "gloss": "father",
+    "source": "lane3-own"
+   },
+   "notes": "In Ashkenazi the alternative values are [u] in open syllables (southern dialects) and [ʌ] (Lithuanian). In standard print kamatz gadol and kamatz katan look identical; Israeli readers treat a plain kamatz as [a] except for a short memorised list (see kamatz-katan variant).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   },
+   "variants": [
+    {
+     "id": "kamatz-malei",
+     "shape": "בָה",
+     "codepoints": [
+      "U+05B8",
+      "U+05D4"
+     ],
+     "note": "kamatz + silent he (or alef); same sound as kamatz",
+     "ipa": null
+    },
+    {
+     "id": "kamatz-katan",
+     "nameHe": "קָמָץ קָטָן",
+     "shape": "בׇ",
+     "codepoints": [
+      "U+05C7"
+     ],
+     "ipa": {
+      "israeli": "[o̞]",
+      "sephardi": "[ɔ]",
+      "ashkenazi": "[ɔ]"
+     },
+     "english": {
+      "israeli": "o as in for (no glide)",
+      "sephardi": "o as in for",
+      "ashkenazi": "aw as in saw (same as kamatz gadol, so the distinction is inaudible)",
+      "american_synagogue": "o as in for"
+     },
+     "example": {
+      "he": "כָּל",
+      "gloss": "all / every (kol)",
+      "source": "lane3-own"
+     },
+     "note": "Has its own Unicode glyph U+05C7 but most print uses the ordinary kamatz. The word list in src/pronunciation/kamatz-katan.js is a lane-3 draft (verified: false). Usually respelled with a vav (holam malei) in Israeli ktiv male.",
+     "verified": false
+    }
+   ]
+  },
+  {
+   "id": "patach",
+   "kind": "vowel",
+   "nameHe": "פַּתַח",
+   "name": "Patach",
+   "base": "ב",
+   "shape": "בַ",
+   "codepoints": [
+    "U+05B7"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B7"
+   ],
+   "position": "below (horizontal line)",
+   "israeliQuality": "a",
+   "ipa": {
+    "israeli": "[a]",
+    "sephardi": "[a]",
+    "ashkenazi": "[a]"
+   },
+   "english": {
+    "israeli": "a as in father",
+    "sephardi": "a as in father",
+    "ashkenazi": "a as in father",
+    "american_synagogue": "ah as in father"
+   },
+   "example": {
+    "he": "בַּיִת",
+    "gloss": "house (bayit)",
+    "source": "lane3-own"
+   },
+   "notes": "A patach under a final ח, ע or ה-with-mappiq is a furtive patach and is read BEFORE the letter (נֹחַ = [no.ax]).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  },
+  {
+   "id": "tzere",
+   "kind": "vowel",
+   "nameHe": "צֵירֵי",
+   "name": "Tzere",
+   "base": "ב",
+   "shape": "בֵ",
+   "codepoints": [
+    "U+05B5"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B5"
+   ],
+   "position": "below (two horizontal dots)",
+   "israeliQuality": "e",
+   "ipa": {
+    "israeli": "[e̞]",
+    "sephardi": "[e(ː)]",
+    "ashkenazi": "[ej]"
+   },
+   "english": {
+    "israeli": "e as in bed (a few words and speakers say ei as in they)",
+    "sephardi": "e as in bed",
+    "ashkenazi": "ei as in they (Polish usage is often like eye)",
+    "american_synagogue": "e as in bed; ei as in they when written with yod"
+   },
+   "example": {
+    "he": "בֵּן",
+    "gloss": "son (ben)",
+    "source": "lane3-own"
+   },
+   "notes": "Pealim: Israeli tzere may be [ei] in some cases, not for all speakers. Ashkenazi [aj] is the Polish variant.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Pealim: Pronunciations of Hebrew",
+     "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+    },
+    {
+     "label": "Chabad: The Difference Between Sepharadic and Ashkenazic Pronunciation",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3549013/jewish/The-Difference-Between-Sepharadic-and-Ashkenazic-Pronunciation.htm"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   },
+   "variants": [
+    {
+     "id": "tzere-malei",
+     "shape": "בֵי",
+     "codepoints": [
+      "U+05B5",
+      "U+05D9"
+     ],
+     "note": "tzere + yod; commonly romanised ei",
+     "ipa": null
+    }
+   ]
+  },
+  {
+   "id": "segol",
+   "kind": "vowel",
+   "nameHe": "סֶגוֹל",
+   "name": "Segol",
+   "base": "ב",
+   "shape": "בֶ",
+   "codepoints": [
+    "U+05B6"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B6"
+   ],
+   "position": "below (three dots in a triangle)",
+   "israeliQuality": "e",
+   "ipa": {
+    "israeli": "[e̞]",
+    "sephardi": "[e]",
+    "ashkenazi": "[e]"
+   },
+   "english": {
+    "israeli": "e as in bed",
+    "sephardi": "e as in bed",
+    "ashkenazi": "e as in bed (stressed syllables in Polish/Ukrainian usage: ei)",
+    "american_synagogue": "e as in bed"
+   },
+   "example": {
+    "he": "סֶפֶר",
+    "gloss": "book (sefer)",
+    "source": "lane3-own"
+   },
+   "notes": "Israeli tzere and segol sound the same; the sign distinction survives only in the spelling.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  },
+  {
+   "id": "chirik",
+   "kind": "vowel",
+   "nameHe": "חִירִיק",
+   "name": "Chirik",
+   "base": "ב",
+   "shape": "בִ",
+   "codepoints": [
+    "U+05B4"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B4"
+   ],
+   "position": "below (single dot)",
+   "israeliQuality": "i",
+   "ipa": {
+    "israeli": "[i]",
+    "sephardi": "[i]",
+    "ashkenazi": "[i]"
+   },
+   "english": {
+    "israeli": "i as in machine (short)",
+    "sephardi": "i as in machine",
+    "ashkenazi": "i as in machine",
+    "american_synagogue": "i as in machine"
+   },
+   "example": {
+    "he": "אִמָּא",
+    "gloss": "mother (ima)",
+    "source": "lane3-own"
+   },
+   "notes": "Israeli writing usually adds a yod (chirik malei) to disambiguate; same sound.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   },
+   "variants": [
+    {
+     "id": "chirik-malei",
+     "shape": "בִי",
+     "codepoints": [
+      "U+05B4",
+      "U+05D9"
+     ],
+     "note": "chirik + yod; same sound",
+     "ipa": null
+    }
+   ]
+  },
+  {
+   "id": "cholam",
+   "kind": "vowel",
+   "nameHe": "חוֹלָם",
+   "name": "Cholam",
+   "base": "ב",
+   "shape": "בֹ",
+   "codepoints": [
+    "U+05B9"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B9"
+   ],
+   "position": "above-left of the letter (chaser) or over a vav (malei)",
+   "israeliQuality": "o",
+   "ipa": {
+    "israeli": "[o̞]",
+    "sephardi": "[o(ː)]",
+    "ashkenazi": "[o]"
+   },
+   "english": {
+    "israeli": "o as in for (no glide)",
+    "sephardi": "o as in home",
+    "ashkenazi": "o as in home (southern German / many American Ashkenazim); oy as in oy vey (Polish/Galician, Chasidic); ow (northern German)",
+    "american_synagogue": "oh as in home"
+   },
+   "example": {
+    "he": "שָׁלוֹם",
+    "gloss": "peace (shalom)",
+    "source": "notes"
+   },
+   "notes": "Ashkenazi values by sub-dialect: [oj] Polish/Galician, [au] N. German, [ej] Lithuanian, [øi] Hungarian, [o] S. German. The primary Ashkenazi value stored here is [o] because the sources say many non-Hassidic American Ashkenazim use it; see ashkenaziVariants.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": true
+   },
+   "variants": [
+    {
+     "id": "cholam-chaser",
+     "shape": "בֹ",
+     "codepoints": [
+      "U+05B9"
+     ],
+     "note": "cholam without vav: the dot sits above-left of the letter",
+     "ipa": null
+    },
+    {
+     "id": "cholam-malei",
+     "shape": "בוֹ",
+     "codepoints": [
+      "U+05D5",
+      "U+05B9"
+     ],
+     "note": "cholam on a vav (vav is a vowel letter here); same sound",
+     "ipa": null
+    }
+   ],
+   "ashkenaziVariants": [
+    {
+     "region": "Polish/Galician",
+     "ipa": "[oj]"
+    },
+    {
+     "region": "northern German",
+     "ipa": "[au]"
+    },
+    {
+     "region": "Lithuanian",
+     "ipa": "[ej]"
+    },
+    {
+     "region": "Hungarian",
+     "ipa": "[øi]"
+    },
+    {
+     "region": "southern German; many non-Hassidic American Ashkenazim",
+     "ipa": "[o]"
+    }
+   ]
+  },
+  {
+   "id": "kubutz",
+   "kind": "vowel",
+   "nameHe": "קֻבּוּץ",
+   "name": "Kubutz",
+   "base": "ב",
+   "shape": "בֻ",
+   "codepoints": [
+    "U+05BB"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05BB"
+   ],
+   "position": "below (three diagonal dots)",
+   "israeliQuality": "u",
+   "ipa": {
+    "israeli": "[u]",
+    "sephardi": "[u]",
+    "ashkenazi": "[u]"
+   },
+   "english": {
+    "israeli": "oo as in boot (short)",
+    "sephardi": "oo as in boot",
+    "ashkenazi": "oo as in boot; occasionally as in put",
+    "american_synagogue": "oo as in boot; sometimes as in put"
+   },
+   "example": {
+    "he": "סֻכָּה",
+    "gloss": "sukkah (booth)",
+    "source": "lane3-own"
+   },
+   "notes": "Hungarian/Oberlander Ashkenazi [y]; occasional [ʊ]. Same sound as shuruk.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Judaism 101: Guide to Transliteration",
+     "url": "https://jewfaq.org/translitguide.htm"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  },
+  {
+   "id": "shuruk",
+   "kind": "vowel",
+   "nameHe": "שׁוּרוּק",
+   "name": "Shuruk",
+   "base": "ב",
+   "shape": "בוּ",
+   "codepoints": [
+    "U+05D5",
+    "U+05BC"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05D5",
+    "U+05BC"
+   ],
+   "position": "a dot inside a vav (the vav is a vowel letter)",
+   "israeliQuality": "u",
+   "ipa": {
+    "israeli": "[u]",
+    "sephardi": "[u]",
+    "ashkenazi": "[u]"
+   },
+   "english": {
+    "israeli": "oo as in boot",
+    "sephardi": "oo as in boot",
+    "ashkenazi": "oo as in boot",
+    "american_synagogue": "oo as in boot"
+   },
+   "example": {
+    "he": "סוּס",
+    "gloss": "horse (sus)",
+    "source": "lane3-own"
+   },
+   "notes": "The shared id is shuruk; the shape is a vav with a dagesh dot (U+05D5 U+05BC) after a consonant. Not to be confused with a consonant vav carrying dagesh (rare).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  },
+  {
+   "id": "shva",
+   "kind": "vowel",
+   "nameHe": "שְׁוָא",
+   "name": "Shva",
+   "base": "ב",
+   "shape": "בְ",
+   "codepoints": [
+    "U+05B0"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B0"
+   ],
+   "position": "below (two vertical dots)",
+   "israeliQuality": "e or silent",
+   "ipa": {
+    "israeli": "[e̞] or ∅ (no vowel)",
+    "sephardi": "[ɛ]~[e̞] when vocal, ∅ when silent",
+    "ashkenazi": "∅ colloquially (zman); [e]/[ə] when read strictly in liturgy"
+   },
+   "english": {
+    "israeli": "e as in begin, or silent",
+    "sephardi": "e as in bed when vocal; silent otherwise",
+    "ashkenazi": "often dropped (zman); short uh/e when read strictly in prayer",
+    "american_synagogue": "a short e/uh (often written with an apostrophe), or silent"
+   },
+   "example": {
+    "he": "שְׁמַע",
+    "gloss": "hear (Shema)",
+    "source": "lane3-own"
+   },
+   "notes": "Vocal (na) vs silent (nach) is decided by rules: see src/pronunciation/shva.js. Modern Israelis often drop or insert the [e] on phonological grounds, not by the historical rules; no corpus measurement was found.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  },
+  {
+   "id": "chataf-patach",
+   "kind": "vowel",
+   "nameHe": "חֲטַף פַּתַח",
+   "name": "Chataf patach",
+   "base": "ב",
+   "shape": "בֲ",
+   "codepoints": [
+    "U+05B2"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B2"
+   ],
+   "position": "below (shva + patach)",
+   "israeliQuality": "a",
+   "ipa": {
+    "israeli": "[a]",
+    "sephardi": "[a]",
+    "ashkenazi": "[a]"
+   },
+   "english": {
+    "israeli": "very short a as in father",
+    "sephardi": "very short a",
+    "ashkenazi": "very short a",
+    "american_synagogue": "very short a"
+   },
+   "example": {
+    "he": "חֲבֵרָה",
+    "gloss": "company / female friend (chavera)",
+    "source": "notes"
+   },
+   "notes": "Reduced vowels appear mostly under guttural letters.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": true
+   }
+  },
+  {
+   "id": "chataf-segol",
+   "kind": "vowel",
+   "nameHe": "חֲטַף סֶגוֹל",
+   "name": "Chataf segol",
+   "base": "ב",
+   "shape": "בֱ",
+   "codepoints": [
+    "U+05B1"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B1"
+   ],
+   "position": "below (shva + segol)",
+   "israeliQuality": "e",
+   "ipa": {
+    "israeli": "[e̞]",
+    "sephardi": "[e]",
+    "ashkenazi": "[e]"
+   },
+   "english": {
+    "israeli": "very short e as in bed",
+    "sephardi": "very short e",
+    "ashkenazi": "very short e",
+    "american_synagogue": "very short e"
+   },
+   "example": {
+    "he": "אֱמֶת",
+    "gloss": "truth (emet)",
+    "source": "notes"
+   },
+   "notes": "Short reduced e.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": true
+   }
+  },
+  {
+   "id": "chataf-kamatz",
+   "kind": "vowel",
+   "nameHe": "חֲטַף קָמָץ",
+   "name": "Chataf kamatz",
+   "base": "ב",
+   "shape": "בֳ",
+   "codepoints": [
+    "U+05B3"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05B3"
+   ],
+   "position": "below (shva + kamatz)",
+   "israeliQuality": "o",
+   "ipa": {
+    "israeli": "[o̞]",
+    "sephardi": "[ɔ]",
+    "ashkenazi": "[ɔ]"
+   },
+   "english": {
+    "israeli": "very short o as in for",
+    "sephardi": "very short o",
+    "ashkenazi": "very short aw/o",
+    "american_synagogue": "very short o"
+   },
+   "example": {
+    "he": "צָהֳרַיִם",
+    "gloss": "noon (tsohorayim)",
+    "source": "notes"
+   },
+   "notes": "Not to be confused with kamatz katan. A kamatz right before a chataf kamatz is itself a kamatz katan (lane-3 synthesis, unverified).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": true
+   }
+  },
+  {
+   "id": "dagesh",
+   "kind": "mark",
+   "nameHe": "דָּגֵשׁ",
+   "name": "Dagesh",
+   "base": "ב",
+   "shape": "בּ",
+   "codepoints": [
+    "U+05BC"
+   ],
+   "shapeCodepoints": [
+    "U+05D1",
+    "U+05BC"
+   ],
+   "position": "inside the letter (a dot)",
+   "israeliQuality": "mark",
+   "ipa": {
+    "israeli": "hardens bet/kaf/pe to [b][k][p]; gemination absent",
+    "sephardi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)",
+    "ashkenazi": "hardens bet/kaf/pe to [b][k][p]; (gemination not covered by the sources fetched)"
+   },
+   "english": {
+    "israeli": "no sound of its own; makes b, k, p instead of v, kh, f",
+    "sephardi": "same",
+    "ashkenazi": "same; also makes tav t instead of s",
+    "american_synagogue": "same as Israeli; a tav with dagesh is always t"
+   },
+   "example": {
+    "he": "שַׁבָּת",
+    "gloss": "Shabbat",
+    "source": "lane3-own"
+   },
+   "notes": "Two things share one sign: dagesh kal (begadkefat hardening) and dagesh chazak (doubling). Dagesh chazak is acoustically and phonologically nonexistent in Modern Hebrew; it matters for reading only as a shva-na trigger and as a spelling convention. Mappiq (dagesh in a final he) means the he is pronounced.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   },
+   "variants": [
+    {
+     "id": "dagesh-kal",
+     "shape": "בּ",
+     "codepoints": [
+      "U+05BC"
+     ],
+     "note": "hardens begadkefat letters (bet, gimel, dalet, kaf, pe, tav); only bet/kaf/pe change sound in Israeli Hebrew",
+     "ipa": null
+    },
+    {
+     "id": "dagesh-chazak",
+     "shape": "שּׁ",
+     "codepoints": [
+      "U+05BC"
+     ],
+     "note": "doubling; not heard in Israeli Hebrew",
+     "ipa": null
+    },
+    {
+     "id": "mappiq",
+     "shape": "הּ",
+     "codepoints": [
+      "U+05BC"
+     ],
+     "note": "dagesh in a final he: the he is a real [h]",
+     "ipa": null
+    }
+   ]
+  },
+  {
+   "id": "shin-dot",
+   "kind": "mark",
+   "nameHe": "נקודת שין",
+   "name": "Shin dot",
+   "base": "ש",
+   "shape": "שׁ",
+   "codepoints": [
+    "U+05C1"
+   ],
+   "shapeCodepoints": [
+    "U+05E9",
+    "U+05C1"
+   ],
+   "position": "above the right branch of the letter",
+   "israeliQuality": "sh",
+   "ipa": {
+    "israeli": "[ʃ]",
+    "sephardi": "[ʃ]",
+    "ashkenazi": "[ʃ]"
+   },
+   "english": {
+    "israeli": "sh as in shoe",
+    "sephardi": "sh as in shoe",
+    "ashkenazi": "sh as in shoe",
+    "american_synagogue": "sh as in shoe"
+   },
+   "example": {
+    "he": "שָׁלוֹם",
+    "gloss": "peace (shalom)",
+    "source": "notes"
+   },
+   "notes": "The dot is written over the right (first) branch.",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": true
+   }
+  },
+  {
+   "id": "sin-dot",
+   "kind": "mark",
+   "nameHe": "נקודת שין שמאלית",
+   "name": "Sin dot",
+   "base": "ש",
+   "shape": "שׂ",
+   "codepoints": [
+    "U+05C2"
+   ],
+   "shapeCodepoints": [
+    "U+05E9",
+    "U+05C2"
+   ],
+   "position": "above the left (third) branch of the letter",
+   "israeliQuality": "s",
+   "ipa": {
+    "israeli": "[s]",
+    "sephardi": "[s]",
+    "ashkenazi": "[s]"
+   },
+   "english": {
+    "israeli": "s as in sun",
+    "sephardi": "s as in sun",
+    "ashkenazi": "s as in sun",
+    "american_synagogue": "s as in sun"
+   },
+   "example": {
+    "he": "יִשְׂרָאֵל",
+    "gloss": "Israel (Yisrael)",
+    "source": "lane3-own"
+   },
+   "notes": "Lithuanian Ashkenazi historically merged shin and sin as [s] (historical, not current).",
+   "sources": [
+    {
+     "label": "Wikipedia: Niqqud",
+     "url": "https://en.wikipedia.org/wiki/Niqqud"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "verified": {
+    "ipa": true,
+    "english": false,
+    "example": false
+   }
+  }
+ ]
+}

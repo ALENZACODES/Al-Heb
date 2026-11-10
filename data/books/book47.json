@@ -1,0 +1,177 @@
+{
+ "id": "book47",
+ "titleHe": "הַקּוּפְסָה הָאַחֲרוֹנָה",
+ "titleTranslit": "Ha-Kufsah Ha-Achronah",
+ "titleEn": "The Last Box",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הַבַּיִת שֶׁל אִמָּא רֵיק.",
+   "translit": "Ha-bayit shel Ima reik.",
+   "en": "Mom's house is empty.",
+   "img": "assets/books/book47/BOOK47_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p01.mp3",
+    "m": "audio/m/israeli/book/book47-p01.mp3"
+   },
+   "illustration": "an old house, bare walls with picture outlines",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הִיא עוֹבֶרֶת לְדִירָה קְטַנָּה.",
+   "translit": "Hi overet le-dirah ktanah.",
+   "en": "She is moving to a small apartment.",
+   "img": "assets/books/book47/BOOK47_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p02.mp3",
+    "m": "audio/m/israeli/book/book47-p02.mp3"
+   },
+   "illustration": "an older woman directing movers",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "יוֹסִי עוֹזֵר.",
+   "translit": "Yossi ozer.",
+   "en": "Yossi helps.",
+   "img": "assets/books/book47/BOOK47_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p03.mp3",
+    "m": "audio/m/israeli/book/book47-p03.mp3"
+   },
+   "illustration": "her grown son taping a box",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "יֵשׁ קוּפְסָה אַחַת אַחֲרוֹנָה.",
+   "translit": "Yesh kufsah achat achronah.",
+   "en": "There is one last box.",
+   "img": "assets/books/book47/BOOK47_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p04.mp3",
+    "m": "audio/m/israeli/book/book47-p04.mp3"
+   },
+   "illustration": "a battered box in the middle of the floor",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "\"מָה בִּפְנִים?\"",
+   "translit": "\"Mah bifnim?\"",
+   "en": "\"What's inside?\"",
+   "img": "assets/books/book47/BOOK47_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p05.mp3",
+    "m": "audio/m/israeli/book/book47-p05.mp3"
+   },
+   "illustration": "the son kneeling by it",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "\"לֹא יוֹדַעַת. פְּתַח.\"",
+   "translit": "\"Lo yoda'at. Ptach.\"",
+   "en": "\"I don't know. Open it.\"",
+   "img": "assets/books/book47/BOOK47_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p06.mp3",
+    "m": "audio/m/israeli/book/book47-p06.mp3"
+   },
+   "illustration": "the mother shrugging",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "תְּמוּנוֹת.",
+   "translit": "Tmunot.",
+   "en": "Photographs.",
+   "img": "assets/books/book47/BOOK47_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p07.mp3",
+    "m": "audio/m/israeli/book/book47-p07.mp3"
+   },
+   "illustration": "a stack of old photos spilling out",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "יוֹסִי בֶּן שָׁלוֹשׁ. יוֹסִי בֶּן עֶשֶׂר.",
+   "translit": "Yossi ben shalosh. Yossi ben eser.",
+   "en": "Yossi at three. Yossi at ten.",
+   "img": "assets/books/book47/BOOK47_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p08.mp3",
+    "m": "audio/m/israeli/book/book47-p08.mp3"
+   },
+   "illustration": "two faded photos: a toddler, a boy with a bike",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "אַבָּא צָעִיר.",
+   "translit": "Aba tza'ir.",
+   "en": "Dad, young.",
+   "img": "assets/books/book47/BOOK47_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p09.mp3",
+    "m": "audio/m/israeli/book/book47-p09.mp3"
+   },
+   "illustration": "a photo of a young man laughing, same nose as the son",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "אִמָּא יוֹשֶׁבֶת עַל הָרִצְפָּה.",
+   "translit": "Ima yoshevet al ha-ritzpah.",
+   "en": "Mom sits on the floor.",
+   "img": "assets/books/book47/BOOK47_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p10.mp3",
+    "m": "audio/m/israeli/book/book47-p10.mp3"
+   },
+   "illustration": "the mother cross-legged among photos",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הֵם מִסְתַּכְּלִים שָׁעָה.",
+   "translit": "Hem mistaklim sha'ah.",
+   "en": "They look for an hour.",
+   "img": "assets/books/book47/BOOK47_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p11.mp3",
+    "m": "audio/m/israeli/book/book47-p11.mp3"
+   },
+   "illustration": "the light shifting, movers waiting at the door",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַקּוּפְסָה הָאַחֲרוֹנָה בָּאָה אִתָּם.",
+   "translit": "Ha-kufsah ha-achronah ba'ah itam.",
+   "en": "The last box comes with them.",
+   "img": "assets/books/book47/BOOK47_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book47-p12.mp3",
+    "m": "audio/m/israeli/book/book47-p12.mp3"
+   },
+   "illustration": "the mother in the moving truck, the box on her lap",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
+ "inputSha256": "baf0ab363e6ce5a4a060e9e2a593f2f95dbca7b1ee92988221672a26a4b753f0",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/malchutcha-w1.mp3",
+  "audio/f/israeli/word/malchutcha-w2.mp3",
+  "audio/f/israeli/word/malchutcha-w3.mp3",
+  "audio/f/israeli/word/malchutcha-w4.mp3",
+  "audio/f/israeli/word/malchutcha-w5.mp3",
+  "audio/f/israeli/word/malchutcha-w6.mp3"
+ ]
+}

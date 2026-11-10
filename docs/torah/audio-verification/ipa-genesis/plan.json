@@ -1,0 +1,106 @@
+[
+  {
+    "id": "genesis-1-1-he-ari",
+    "book": "genesis",
+    "chapter": 1,
+    "verse": 1,
+    "lang": "he",
+    "speaker": "ari",
+    "voice": "de-DE-Chirp3-HD-Charon",
+    "text": "Bereshit bara Elohim et hashamayim veet haaretz.",
+    "displayText": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
+    "fingerprint": "69697958c5df95667c4106b7db8109f77d91f1073972b52dd06661d0beace528",
+    "path": "clips/genesis-1-1-he-ari.mp3",
+    "reviewRequired": true,
+    "recognitionReference": "בראשית ברא אלהים את השמים ואת הארץ",
+    "pronunciations": [
+      {
+        "phrase": "Bereshit",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "be.ʁe.ˈʃiːt"
+      },
+      {
+        "phrase": "bara",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ba.ˈʁa"
+      },
+      {
+        "phrase": "Elohim",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.lo.ˈhiːm"
+      },
+      {
+        "phrase": "et",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "et"
+      },
+      {
+        "phrase": "hashamayim",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ha.ʃa.ˈma.jiːm"
+      },
+      {
+        "phrase": "veet",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ve.ˈet"
+      },
+      {
+        "phrase": "haaretz",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ha.ˈa.ʁets"
+      }
+    ]
+  },
+  {
+    "id": "genesis-1-1-he-noa",
+    "book": "genesis",
+    "chapter": 1,
+    "verse": 1,
+    "lang": "he",
+    "speaker": "noa",
+    "voice": "de-DE-Chirp3-HD-Kore",
+    "text": "Bereshit bara Elohim et hashamayim veet haaretz.",
+    "displayText": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
+    "fingerprint": "cc56efa86e702afec97945c1f7eab387ed7dccc7e5271c5584294b0b307a7127",
+    "path": "clips/genesis-1-1-he-noa.mp3",
+    "reviewRequired": true,
+    "recognitionReference": "בראשית ברא אלהים את השמים ואת הארץ",
+    "pronunciations": [
+      {
+        "phrase": "Bereshit",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "be.ʁe.ˈʃiːt"
+      },
+      {
+        "phrase": "bara",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ba.ˈʁa"
+      },
+      {
+        "phrase": "Elohim",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.lo.ˈhiːm"
+      },
+      {
+        "phrase": "et",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "et"
+      },
+      {
+        "phrase": "hashamayim",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ha.ʃa.ˈma.jiːm"
+      },
+      {
+        "phrase": "veet",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ve.ˈet"
+      },
+      {
+        "phrase": "haaretz",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ha.ˈa.ʁets"
+      }
+    ]
+  }
+]

@@ -1,0 +1,137 @@
+{
+ "generatedBy": "docs/onramp/shots.mjs",
+ "note": "Scripted emulation at 390x844, not a real learner. seconds = script wall clock since the first screenshot, not learner time.",
+ "todayBefore": {
+  "label": "Continue: your first 10 minutes",
+  "href": "#/firstday"
+ },
+ "todayAfter": {
+  "label": "Continue: Shin and Bet: your first two letters",
+  "href": "#/learn?lesson=r01",
+  "streak": "Streak: No streak yet. A day counts after 5 minutes of study on a lesson, review or practice screen (the timer pauses after a minute without a tap)."
+ },
+ "r01QuickCheckLine": "Quick check: 4 questions. The lesson counts as complete when you finish it.",
+ "screens": [
+  {
+   "slug": "01-home-today",
+   "file": "01-home-today.jpg",
+   "taps": 0,
+   "seconds": 3.9,
+   "height": 4512,
+   "chars": 1619,
+   "h1": "Aleph אלף",
+   "h2": "Today's lesson",
+   "hash": "#/"
+  },
+  {
+   "slug": "02-firstday-step1",
+   "file": "02-firstday-step1.jpg",
+   "taps": 0,
+   "seconds": 4.6,
+   "height": 844,
+   "chars": 313,
+   "h1": "Your first 10 minutes",
+   "h2": "Hebrew reads right to left",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "03-firstday-step2",
+   "file": "03-firstday-step2.jpg",
+   "taps": 1,
+   "seconds": 5,
+   "height": 977,
+   "chars": 337,
+   "h1": "Your first 10 minutes",
+   "h2": "Five letters",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "04-firstday-step3",
+   "file": "04-firstday-step3.jpg",
+   "taps": 3,
+   "seconds": 6.1,
+   "height": 844,
+   "chars": 340,
+   "h1": "Your first 10 minutes",
+   "h2": "Two vowel signs",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "05-firstday-step4",
+   "file": "05-firstday-step4.jpg",
+   "taps": 4,
+   "seconds": 6.5,
+   "height": 844,
+   "chars": 271,
+   "h1": "Your first 10 minutes",
+   "h2": "Read your first word",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "06-firstday-step5",
+   "file": "06-firstday-step5.jpg",
+   "taps": 7,
+   "seconds": 7.3,
+   "height": 844,
+   "chars": 312,
+   "h1": "Your first 10 minutes",
+   "h2": "Read a second word",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "07-firstday-step6",
+   "file": "07-firstday-step6.jpg",
+   "taps": 10,
+   "seconds": 8.1,
+   "height": 844,
+   "chars": 310,
+   "h1": "Your first 10 minutes",
+   "h2": "Read a third word",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "08-firstday-step7",
+   "file": "08-firstday-step7.jpg",
+   "taps": 13,
+   "seconds": 9,
+   "height": 844,
+   "chars": 230,
+   "h1": "Your first 10 minutes",
+   "h2": "Which one says shalom?",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "09-firstday-step8",
+   "file": "09-firstday-step8.jpg",
+   "taps": 15,
+   "seconds": 9.7,
+   "height": 927,
+   "chars": 592,
+   "h1": "Your first 10 minutes",
+   "h2": "You read 3 Hebrew words",
+   "hash": "#/firstday"
+  },
+  {
+   "slug": "90-home-after-firstday",
+   "file": "90-home-after-firstday.jpg",
+   "taps": 15,
+   "seconds": 10.5,
+   "height": 4583,
+   "chars": 1667,
+   "h1": "Aleph אלף",
+   "h2": "Today's lesson",
+   "hash": "#/"
+  },
+  {
+   "slug": "91-lesson-r01",
+   "file": "91-lesson-r01.jpg",
+   "taps": 15,
+   "seconds": 11.1,
+   "height": 3423,
+   "chars": 1861,
+   "h1": "Shin and Bet: your first two letters",
+   "h2": "Goals",
+   "hash": "#/learn?lesson=r01"
+  }
+ ]
+}

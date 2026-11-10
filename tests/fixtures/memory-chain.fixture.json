@@ -1,0 +1,14 @@
+{
+  "meta": { "fixture": true, "note": "Test fixture only, shaped like data/letters/memory-chain.json. Hebrew words copied from data/letters/mnemonics.json." },
+  "letters": [
+    { "id": "alef", "hebrew": "א", "name": "Alef", "picture": { "idea": "a mime in a handstand", "alt": "A mime upside down on one hand", "svg": "assets/letters/morph/alef.svg" },
+      "sound": { "hook": "Alef is the quiet one.", "line": "Silent: the vowel under it does the talking.", "perTradition": { "israeli": "Silent, or a tiny pause.", "sephardi": "Silent, or a tiny pause (Sephardi).", "ashkenazi": "Silent, or a tiny pause (Ashkenazi)." } },
+      "word": { "he": "אַבָּא", "vocabId": "aba", "rank": 1, "gloss": "dad" }, "story": "A mime in a handstand.", "tip": "Ayin is the other silent letter.", "risk": "none" },
+    { "id": "bet", "hebrew": "ב", "name": "Bet", "picture": { "idea": "a house", "alt": "A small house with a flat floor", "svg": "assets/letters/morph/bet.svg" },
+      "sound": { "hook": "Bet is a house.", "line": "b with a dot, v without.", "perTradition": { "israeli": "b", "sephardi": "b", "ashkenazi": "b" } },
+      "word": { "he": "בַּיִת", "vocabId": "bayit", "rank": 2, "gloss": "house" }, "story": "Walk in the open side.", "tip": "Kaf is round at the corners.", "risk": "none" },
+    { "id": "shin", "hebrew": "ש", "name": "Shin", "picture": { "idea": "a three-pronged crown", "alt": "Three candle flames", "svg": "assets/letters/morph/shin.svg" },
+      "sound": { "hook": "Shin hushes.", "line": "sh", "perTradition": { "israeli": "sh", "sephardi": "sh", "ashkenazi": "sh" } },
+      "word": { "he": "שָׁלוֹם", "vocabId": "shalom", "rank": 3, "gloss": "peace, hello" }, "story": "Three prongs.", "tip": "Only shin has three prongs.", "risk": "none" }
+  ]
+}

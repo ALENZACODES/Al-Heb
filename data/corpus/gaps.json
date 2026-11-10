@@ -1,0 +1,537 @@
+{
+ "schema": "alef-corpus-gaps/1",
+ "note": "Honest list of what the corpus does not contain. status: not-found-in-permissive-source, sourceable-not-added, likely-copyrighted, out-of-scope-this-round. \"sourceable-not-added\" means a permissive source was seen but not fetched or used this round. Nothing in the registry is typed from memory (typedFromMemory is false everywhere).",
+ "audit": [
+  {
+   "item": "Shema",
+   "status": "present",
+   "ids": [
+    "shema-1",
+    "shema-vahavta"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Baruch shem kevod malchuto",
+   "status": "present",
+   "ids": [
+    "shema-2"
+   ],
+   "note": ""
+  },
+  {
+   "item": "V'ahavta",
+   "status": "present",
+   "ids": [
+    "vahavta-1",
+    "vahavta-2",
+    "vahavta-full",
+    "shema-vahavta"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Amidah opening lines",
+   "status": "present",
+   "ids": [
+    "amidah-lips",
+    "avot-1"
+   ],
+   "note": "avot-1 was cut before its closing clause because of a scrambled divine name in the source; avot-closing now supplies it from Metsudah."
+  },
+  {
+   "item": "Amidah closing lines",
+   "status": "added-round-3",
+   "ids": [
+    "avot-closing",
+    "sim-shalom",
+    "amidah-yihyu",
+    "amidah-elohai-netzor",
+    "oseh-shalom"
+   ],
+   "note": "Modim and the middle blessings are gaps."
+  },
+  {
+   "item": "Kiddush, Friday night",
+   "status": "added-round-3",
+   "ids": [
+    "kiddush-gen-2-1-3",
+    "kiddush-wine-1",
+    "kiddush-shabbat-eve"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Kiddush, Shabbat day",
+   "status": "added-round-3",
+   "ids": [
+    "kiddush-veshamru",
+    "kiddush-zachor",
+    "kiddush-wine-1"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Motzi / Hamotzi",
+   "status": "present",
+   "ids": [
+    "hamotzi"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Shabbat candle blessing",
+   "status": "present",
+   "ids": [
+    "candle-shabbat"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Havdalah blessings",
+   "status": "added-round-3",
+   "ids": [
+    "havdalah-opening",
+    "havdalah-spices",
+    "havdalah-flame",
+    "havdalah-hamavdil",
+    "kiddush-wine-1"
+   ],
+   "note": "Wine blessing is shared with Kiddush."
+  },
+  {
+   "item": "Torah service: Barchu",
+   "status": "present",
+   "ids": [
+    "torah-barchu"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Torah service: blessings before and after the aliyah",
+   "status": "present",
+   "ids": [
+    "torah-bless-1",
+    "torah-bless-2"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Torah service: opening the ark",
+   "status": "added-round-3",
+   "ids": [
+    "vayehi-binsoa",
+    "brich-shmei",
+    "gadlu",
+    "lecha-hashem"
+   ],
+   "note": "Echad Eloheinu and Av harachamim are gaps."
+  },
+  {
+   "item": "Haftarah blessings",
+   "status": "added-round-3",
+   "ids": [
+    "haftarah-before",
+    "haftarah-after"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Ein Kamocha",
+   "status": "partial",
+   "ids": [
+    "ein-kamocha",
+    "malchutcha",
+    "adonai-oz"
+   ],
+   "note": "The composite \"Adonai melech\" line is a gap (g-ein-kamocha-composite)."
+  },
+  {
+   "item": "Aleinu",
+   "status": "partial",
+   "ids": [
+    "aleinu-1"
+   ],
+   "note": "Second paragraph is a gap."
+  },
+  {
+   "item": "Mourner's Kaddish",
+   "status": "present",
+   "ids": [
+    "kaddish-1"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Adon Olam",
+   "status": "present",
+   "ids": [
+    "adon-olam-1"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Yigdal",
+   "status": "added-round-3",
+   "ids": [
+    "yigdal"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Ashrei line starters",
+   "status": "added-round-3",
+   "ids": [
+    "ashrei-84-5",
+    "ashrei-144-15",
+    "ashrei-145-1-3",
+    "ashrei-145-16"
+   ],
+   "note": "Rest of Psalm 145 is a gap."
+  },
+  {
+   "item": "Modeh Ani",
+   "status": "present",
+   "ids": [
+    "modeh-ani-1"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Shehecheyanu",
+   "status": "added-round-3",
+   "ids": [
+    "shehecheyanu"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Hanukkah candles",
+   "status": "added-round-3",
+   "ids": [
+    "hanukkah-candle",
+    "hanukkah-nissim",
+    "shehecheyanu",
+    "hanerot-halalu",
+    "maoz-tzur-1"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Birkat Hamazon opening",
+   "status": "present",
+   "ids": [
+    "birkat-hamazon-1",
+    "zimun-opening",
+    "shir-hamaalot"
+   ],
+   "note": "Blessings 2 to 4 are a gap."
+  },
+  {
+   "item": "Priestly Blessing",
+   "status": "present",
+   "ids": [
+    "bless-priestly-1",
+    "bless-priestly-2",
+    "bless-priestly-3"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Mi Shebeirach basics",
+   "status": "partial",
+   "ids": [
+    "mi-sheberach-opening"
+   ],
+   "note": "Opening words only. Full texts and matriarch versions are gaps."
+  },
+  {
+   "item": "Kedushah verses (extra)",
+   "status": "added-round-3",
+   "ids": [
+    "kedushah-kadosh",
+    "kedushah-baruch",
+    "kedushah-yimloch"
+   ],
+   "note": ""
+  },
+  {
+   "item": "Returning the Torah (extra)",
+   "status": "added-round-3",
+   "ids": [
+    "yehalelu",
+    "hashivenu",
+    "etz-chaim",
+    "vezot-hatorah"
+   ],
+   "note": ""
+  }
+ ],
+ "gaps": [
+  {
+   "id": "g-echad-eloheinu",
+   "name": "Echad Eloheinu gadol adoneinu kadosh venora shemo",
+   "whereInService": "Torah service, after the Shema line",
+   "status": "not-found-in-permissive-source",
+   "why": "The only pointed text found was the Daat Siddur Ashkenaz version on Sefaria, whose pointing is defective (omits holam on vav, uses abbreviations for the divine name). Not typed from memory.",
+   "relatedIds": [
+    "shema-1"
+   ]
+  },
+  {
+   "id": "g-ein-kamocha-composite",
+   "name": "Adonai melech, Adonai malach, Adonai yimloch le-olam va-ed (middle of Ein Kamocha)",
+   "whereInService": "Torah service",
+   "status": "not-found-in-permissive-source",
+   "why": "Same reason as above (Daat text only). The verse lines before and after it are in the registry.",
+   "relatedIds": [
+    "ein-kamocha",
+    "malchutcha",
+    "adonai-oz"
+   ]
+  },
+  {
+   "id": "g-av-harachamim-torah",
+   "name": "Av harachamim heitiva (after Ein Kamocha)",
+   "whereInService": "Torah service",
+   "status": "not-found-in-permissive-source",
+   "why": "Only the defective Daat text found.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-ein-keloheinu",
+   "name": "Ein Keloheinu",
+   "whereInService": "End of Shabbat Musaf",
+   "status": "not-found-in-permissive-source",
+   "why": "Only the defective Daat text found; the Metsudah weekday leaf does not exist.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-mi-sheberach-full",
+   "name": "Full Mi sheberach texts (for an aliyah, for the sick, for a birth, for a bar/bat mitzvah)",
+   "whereInService": "Torah service",
+   "status": "sourceable-not-added",
+   "why": "Sefard Torat Emet (Public Domain label) has the Orthodox texts, but they contain name placeholders and holiday variants in parentheses that need design decisions; matriarch versions used by Reform and Conservative congregations were not found in an open source.",
+   "relatedIds": [
+    "mi-sheberach-opening"
+   ]
+  },
+  {
+   "id": "g-baruch-sheamar",
+   "name": "Baruch She-amar",
+   "whereInService": "Pesukei Dezimra",
+   "status": "sourceable-not-added",
+   "why": "Present in Siddur Ashkenaz (Metsudah, CC-BY label); not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-yishtabach",
+   "name": "Yishtabach",
+   "whereInService": "Pesukei Dezimra",
+   "status": "sourceable-not-added",
+   "why": "Present in Metsudah; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-psalms-pesukei",
+   "name": "Psalms 145-150 and other Shabbat psalms",
+   "whereInService": "Pesukei Dezimra",
+   "status": "sourceable-not-added",
+   "why": "UXLC verses can be added from tanach.us; Psalm 145 is in the registry only in part.",
+   "relatedIds": [
+    "ashrei-145-1-3",
+    "ashrei-145-16"
+   ]
+  },
+  {
+   "id": "g-ashrei-145-rest",
+   "name": "Rest of Psalm 145",
+   "whereInService": "Pesukei Dezimra and before the Torah is returned",
+   "status": "sourceable-not-added",
+   "why": "UXLC Hebrew can be added verse by verse; not done this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-yotzer-or",
+   "name": "Yotzer Or and the blessings before the Shema",
+   "whereInService": "Shema and its blessings",
+   "status": "sourceable-not-added",
+   "why": "In Metsudah (CC-BY label); long; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-ahavat-olam",
+   "name": "Ahavat Olam / Ahavah Rabbah",
+   "whereInService": "Shema and its blessings",
+   "status": "sourceable-not-added",
+   "why": "In Metsudah; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-emet-veyatziv",
+   "name": "Emet veyatziv / Ge-ulah blessing",
+   "whereInService": "Shema and its blessings",
+   "status": "sourceable-not-added",
+   "why": "In Metsudah; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-shema-paragraph-2-3",
+   "name": "Shema paragraphs 2 and 3 (Deut 11:13-21; Num 15:37-41)",
+   "whereInService": "Shema and its blessings",
+   "status": "sourceable-not-added",
+   "why": "UXLC verses can be added; Reform books often omit paragraph 2. Not done this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-modim",
+   "name": "Modim anachnu lach and the other Amidah middle blessings",
+   "whereInService": "Amidah",
+   "status": "sourceable-not-added",
+   "why": "Metsudah weekday leaves exist; Shabbat middle blessings (Yismechu, Retzeh) not fetched.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-shabbat-amidah-middle",
+   "name": "Shabbat Amidah middle blessing (Yismechu, Elohenu velohei avotenu retzeh)",
+   "whereInService": "Amidah",
+   "status": "sourceable-not-added",
+   "why": "Metsudah Shabbat Amidah leaf exists; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-musaf-amidah",
+   "name": "Musaf Amidah for Shabbat",
+   "whereInService": "Musaf",
+   "status": "sourceable-not-added",
+   "why": "Metsudah leaves exist; not fetched this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-aleinu-second-paragraph",
+   "name": "Aleinu, second paragraph",
+   "whereInService": "Closing prayers",
+   "status": "sourceable-not-added",
+   "why": "The Edot HaMizrach Shaliehsaboo (CC0) leaf has it; not added this round.",
+   "relatedIds": [
+    "aleinu-1"
+   ]
+  },
+  {
+   "id": "g-birkat-hamazon-rest",
+   "name": "Birkat Hamazon blessings 2, 3 and 4 and the closing requests",
+   "whereInService": "After meals",
+   "status": "sourceable-not-added",
+   "why": "In Metsudah and Torat Emet via Sefaria; long; not fetched this round.",
+   "relatedIds": [
+    "birkat-hamazon-1",
+    "zimun-opening"
+   ]
+  },
+  {
+   "id": "g-torah-reading-text",
+   "name": "The weekly Torah portion with vowels",
+   "whereInService": "Torah reading",
+   "status": "sourceable-not-added",
+   "why": "UXLC Hebrew (public domain) could be added by portion; vowelled text without cantillation is a separate decision for the app.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-haftarah-text",
+   "name": "Haftarah passages",
+   "whereInService": "Haftarah",
+   "status": "sourceable-not-added",
+   "why": "UXLC Hebrew can be added by passage; not done.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-community-prayers",
+   "name": "Prayer for the State of Israel, prayer for the country, memorial prayers, prayer for soldiers",
+   "whereInService": "Community prayers",
+   "status": "likely-copyrighted",
+   "why": "These are authored by movements or rabbinic bodies and most are under copyright; no open source found.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-kabbalat-shabbat-psalms",
+   "name": "Kabbalat Shabbat psalms (95-99, 29) and Yedid Nefesh",
+   "whereInService": "Friday night",
+   "status": "sourceable-not-added",
+   "why": "Psalms are available from UXLC; Yedid Nefesh is in Metsudah; not added.",
+   "relatedIds": [
+    "lecha-dodi-1"
+   ]
+  },
+  {
+   "id": "g-shalom-aleichem",
+   "name": "Shalom Aleichem",
+   "whereInService": "Friday night at home",
+   "status": "sourceable-not-added",
+   "why": "In Metsudah with a repeat-three-times marker in the source; not added this round.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-eshet-chayil",
+   "name": "Eshet Chayil (Proverbs 31:10-31)",
+   "whereInService": "Friday night at home",
+   "status": "sourceable-not-added",
+   "why": "UXLC verses available; not added.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-havdalah-closing-songs",
+   "name": "Hamavdil, Eliyahu Hanavi and other Havdalah songs",
+   "whereInService": "Saturday night",
+   "status": "sourceable-not-added",
+   "why": "Available in the siddur sources but several are later poems; not added.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-matriarchs",
+   "name": "Matriarch (Imahot) additions to the Amidah and Mi sheberach",
+   "whereInService": "Amidah, Torah service",
+   "status": "not-found-in-permissive-source",
+   "why": "The wording used in Reform and Conservative movement siddurim is under copyright or not available under an open label. Not typed from memory.",
+   "relatedIds": [
+    "avot-1",
+    "avot-closing",
+    "mi-sheberach-opening"
+   ]
+  },
+  {
+   "id": "g-high-holidays",
+   "name": "Kol Nidre, Avinu Malkeinu, Unetaneh Tokef, Yizkor, the High Holiday Amidot",
+   "whereInService": "Rosh Hashanah and Yom Kippur",
+   "status": "out-of-scope-this-round",
+   "why": "Most first-time attendees come at the High Holidays. These were not in scope for this round; no source was probed. Needs a separate round and an educator.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-festival-kiddush",
+   "name": "Kiddush and Amidah for festivals",
+   "whereInService": "Festivals",
+   "status": "sourceable-not-added",
+   "why": "Edot HaMizrach and Metsudah have festival Kiddush; not added.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-hallel",
+   "name": "Hallel (Psalms 113-118)",
+   "whereInService": "Festivals, Rosh Chodesh, Hanukkah",
+   "status": "sourceable-not-added",
+   "why": "UXLC verses available; not added.",
+   "relatedIds": []
+  },
+  {
+   "id": "g-bar-bat-mitzvah",
+   "name": "Blessings for a bar or bat mitzvah",
+   "whereInService": "Torah service",
+   "status": "out-of-scope-this-round",
+   "why": "Not probed; the aliyah blessings are in the registry.",
+   "relatedIds": [
+    "torah-bless-1",
+    "torah-bless-2"
+   ]
+  }
+ ]
+}

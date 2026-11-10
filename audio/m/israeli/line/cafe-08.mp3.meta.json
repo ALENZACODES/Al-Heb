@@ -1,0 +1,19 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "תֵּה עִם נַעֲנָע",
+ "inputSha256": "ff2a26d298e127495347909acc8848fed3d551ca2021bb4f50f07b4a8e9c7347",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "תֵּה עִם נַעֲנָע",
+ "stitchedFrom": [
+  "audio/m/israeli/word/h1643d708.mp3",
+  "audio/m/israeli/word/brich-shmei-w10.mp3",
+  "audio-takes/m/w46f8d321c3-s.mp3"
+ ]
+}

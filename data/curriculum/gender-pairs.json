@@ -1,0 +1,476 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "note": "Pairs and paradigms are original sentences written for Aleph. The Hebrew, pointing, transliteration and glosses have NOT been reviewed by a native speaker. None was copied from TeachMeHebrew or Jewish Miami. differsAt (cluster indices of letters+marks, per form) is computed by src/curriculum/gender.js and checked by a test. Audio: ids gp-NN-m / gp-NN-f (kind word) are NOT in the audio manifest yet.",
+ "pairs": [
+  {
+   "id": "gp-01",
+   "en": "I am a student.",
+   "who": "speaker",
+   "grammarTag": "noun-ending",
+   "forms": {
+    "m": {
+     "he": "אֲנִי תַּלְמִיד",
+     "translit": "ani talmid"
+    },
+    "f": {
+     "he": "אֲנִי תַּלְמִידָה",
+     "translit": "ani talmida"
+    }
+   }
+  },
+  {
+   "id": "gp-02",
+   "en": "I am tired.",
+   "who": "speaker",
+   "grammarTag": "adjective",
+   "forms": {
+    "m": {
+     "he": "אֲנִי עָיֵף",
+     "translit": "ani ayef"
+    },
+    "f": {
+     "he": "אֲנִי עֲיֵפָה",
+     "translit": "ani aye'fa"
+    }
+   }
+  },
+  {
+   "id": "gp-03",
+   "en": "I am hungry.",
+   "who": "speaker",
+   "grammarTag": "adjective",
+   "forms": {
+    "m": {
+     "he": "אֲנִי רָעֵב",
+     "translit": "ani ra'ev"
+    },
+    "f": {
+     "he": "אֲנִי רְעֵבָה",
+     "translit": "ani re'eva"
+    }
+   }
+  },
+  {
+   "id": "gp-04",
+   "en": "I want water.",
+   "who": "speaker",
+   "grammarTag": "present-verb",
+   "forms": {
+    "m": {
+     "he": "אֲנִי רוֹצֶה מַיִם",
+     "translit": "ani rotze mayim"
+    },
+    "f": {
+     "he": "אֲנִי רוֹצָה מַיִם",
+     "translit": "ani rotza mayim"
+    }
+   }
+  },
+  {
+   "id": "gp-05",
+   "en": "I live in Tel Aviv.",
+   "who": "speaker",
+   "grammarTag": "present-verb",
+   "forms": {
+    "m": {
+     "he": "אֲנִי גָּר בְּתֵל אָבִיב",
+     "translit": "ani gar be-tel aviv"
+    },
+    "f": {
+     "he": "אֲנִי גָּרָה בְּתֵל אָבִיב",
+     "translit": "ani gara be-tel aviv"
+    }
+   }
+  },
+  {
+   "id": "gp-06",
+   "en": "I understand.",
+   "who": "speaker",
+   "grammarTag": "present-verb",
+   "forms": {
+    "m": {
+     "he": "אֲנִי מֵבִין",
+     "translit": "ani mevin"
+    },
+    "f": {
+     "he": "אֲנִי מְבִינָה",
+     "translit": "ani mevina"
+    }
+   }
+  },
+  {
+   "id": "gp-07",
+   "en": "I speak a little Hebrew.",
+   "who": "speaker",
+   "grammarTag": "present-verb",
+   "forms": {
+    "m": {
+     "he": "אֲנִי מְדַבֵּר קְצָת עִבְרִית",
+     "translit": "ani medaber ktsat ivrit"
+    },
+    "f": {
+     "he": "אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית",
+     "translit": "ani medaberet ktsat ivrit"
+    }
+   }
+  },
+  {
+   "id": "gp-08",
+   "en": "I am happy.",
+   "who": "speaker",
+   "grammarTag": "adjective",
+   "forms": {
+    "m": {
+     "he": "אֲנִי שָׂמֵחַ",
+     "translit": "ani sameach"
+    },
+    "f": {
+     "he": "אֲנִי שְׂמֵחָה",
+     "translit": "ani smecha"
+    }
+   }
+  },
+  {
+   "id": "gp-09",
+   "en": "I am ready.",
+   "who": "speaker",
+   "grammarTag": "adjective",
+   "forms": {
+    "m": {
+     "he": "אֲנִי מוּכָן",
+     "translit": "ani muchan"
+    },
+    "f": {
+     "he": "אֲנִי מוּכָנָה",
+     "translit": "ani muchana"
+    }
+   }
+  },
+  {
+   "id": "gp-10",
+   "en": "You are right.",
+   "who": "addressee",
+   "grammarTag": "you-pronoun-adjective",
+   "forms": {
+    "m": {
+     "he": "אַתָּה צוֹדֵק",
+     "translit": "ata tsodek"
+    },
+    "f": {
+     "he": "אַתְּ צוֹדֶקֶת",
+     "translit": "at tsodeket"
+    }
+   }
+  },
+  {
+   "id": "gp-11",
+   "en": "Where are you from?",
+   "who": "addressee",
+   "grammarTag": "you-pronoun",
+   "forms": {
+    "m": {
+     "he": "מֵאֵיפֹה אַתָּה",
+     "translit": "me'eifo ata"
+    },
+    "f": {
+     "he": "מֵאֵיפֹה אַתְּ",
+     "translit": "me'eifo at"
+    }
+   }
+  },
+  {
+   "id": "gp-12",
+   "en": "What do you want?",
+   "who": "addressee",
+   "grammarTag": "you-pronoun-verb",
+   "forms": {
+    "m": {
+     "he": "מָה אַתָּה רוֹצֶה",
+     "translit": "ma ata rotze"
+    },
+    "f": {
+     "he": "מָה אַתְּ רוֹצָה",
+     "translit": "ma at rotza"
+    }
+   }
+  },
+  {
+   "id": "gp-13",
+   "en": "Do you understand?",
+   "who": "addressee",
+   "grammarTag": "you-pronoun-verb",
+   "forms": {
+    "m": {
+     "he": "אַתָּה מֵבִין",
+     "translit": "ata mevin"
+    },
+    "f": {
+     "he": "אַתְּ מְבִינָה",
+     "translit": "at mevina"
+    }
+   }
+  },
+  {
+   "id": "gp-14",
+   "en": "Come here.",
+   "who": "addressee",
+   "grammarTag": "imperative",
+   "forms": {
+    "m": {
+     "he": "בּוֹא הֵנָּה",
+     "translit": "bo hena"
+    },
+    "f": {
+     "he": "בּוֹאִי הֵנָּה",
+     "translit": "bo'i hena"
+    }
+   }
+  },
+  {
+   "id": "gp-15",
+   "en": "Wait a moment.",
+   "who": "addressee",
+   "grammarTag": "imperative",
+   "forms": {
+    "m": {
+     "he": "חַכֵּה רֶגַע",
+     "translit": "chake rega"
+    },
+    "f": {
+     "he": "חַכִּי רֶגַע",
+     "translit": "chaki rega"
+    }
+   }
+  },
+  {
+   "id": "gp-16",
+   "en": "Sit, please.",
+   "who": "addressee",
+   "grammarTag": "imperative",
+   "forms": {
+    "m": {
+     "he": "שֵׁב בְּבַקָּשָׁה",
+     "translit": "shev bevakasha"
+    },
+    "f": {
+     "he": "שְׁבִי בְּבַקָּשָׁה",
+     "translit": "shvi bevakasha"
+    }
+   }
+  }
+ ],
+ "paradigms": [
+  {
+   "id": "gpar-01",
+   "en": "I want water.",
+   "tag": "present-verb (speaker)",
+   "parts": [
+    {
+     "fixed": {
+      "he": "אֲנִי",
+      "translit": "ani"
+     }
+    },
+    {
+     "by": "speaker",
+     "m": {
+      "he": "רוֹצֶה",
+      "translit": "rotze"
+     },
+     "f": {
+      "he": "רוֹצָה",
+      "translit": "rotza"
+     }
+    },
+    {
+     "fixed": {
+      "he": "מַיִם",
+      "translit": "mayim"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gpar-02",
+   "en": "Are you hungry?",
+   "tag": "pronoun + adjective (addressee)",
+   "parts": [
+    {
+     "by": "addressee",
+     "m": {
+      "he": "אַתָּה",
+      "translit": "ata"
+     },
+     "f": {
+      "he": "אַתְּ",
+      "translit": "at"
+     }
+    },
+    {
+     "by": "addressee",
+     "m": {
+      "he": "רָעֵב",
+      "translit": "ra'ev"
+     },
+     "f": {
+      "he": "רְעֵבָה",
+      "translit": "re'eva"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gpar-03",
+   "en": "I love you.",
+   "tag": "present-verb (speaker) + object suffix (addressee)",
+   "parts": [
+    {
+     "fixed": {
+      "he": "אֲנִי",
+      "translit": "ani"
+     }
+    },
+    {
+     "by": "speaker",
+     "m": {
+      "he": "אוֹהֵב",
+      "translit": "ohev"
+     },
+     "f": {
+      "he": "אוֹהֶבֶת",
+      "translit": "ohevet"
+     }
+    },
+    {
+     "by": "addressee",
+     "m": {
+      "he": "אוֹתְךָ",
+      "translit": "otcha"
+     },
+     "f": {
+      "he": "אוֹתָךְ",
+      "translit": "otach"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gpar-04",
+   "en": "Can I help you?",
+   "tag": "adjective (speaker) + preposition suffix (addressee)",
+   "parts": [
+    {
+     "fixed": {
+      "he": "אֲנִי",
+      "translit": "ani"
+     }
+    },
+    {
+     "by": "speaker",
+     "m": {
+      "he": "יָכוֹל",
+      "translit": "yachol"
+     },
+     "f": {
+      "he": "יְכוֹלָה",
+      "translit": "yechola"
+     }
+    },
+    {
+     "fixed": {
+      "he": "לַעֲזֹר",
+      "translit": "la'azor"
+     }
+    },
+    {
+     "by": "addressee",
+     "m": {
+      "he": "לְךָ",
+      "translit": "lecha"
+     },
+     "f": {
+      "he": "לָךְ",
+      "translit": "lach"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gpar-05",
+   "en": "I am waiting for you.",
+   "tag": "present-verb (speaker) + preposition suffix (addressee)",
+   "parts": [
+    {
+     "fixed": {
+      "he": "אֲנִי",
+      "translit": "ani"
+     }
+    },
+    {
+     "by": "speaker",
+     "m": {
+      "he": "מְחַכֶּה",
+      "translit": "mechake"
+     },
+     "f": {
+      "he": "מְחַכָּה",
+      "translit": "mechaka"
+     }
+    },
+    {
+     "by": "addressee",
+     "m": {
+      "he": "לְךָ",
+      "translit": "lecha"
+     },
+     "f": {
+      "he": "לָךְ",
+      "translit": "lach"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gpar-06",
+   "en": "I don't understand you.",
+   "tag": "negated verb (speaker) + object suffix (addressee)",
+   "parts": [
+    {
+     "fixed": {
+      "he": "אֲנִי",
+      "translit": "ani"
+     }
+    },
+    {
+     "fixed": {
+      "he": "לֹא",
+      "translit": "lo"
+     }
+    },
+    {
+     "by": "speaker",
+     "m": {
+      "he": "מֵבִין",
+      "translit": "mevin"
+     },
+     "f": {
+      "he": "מְבִינָה",
+      "translit": "mevina"
+     }
+    },
+    {
+     "by": "addressee",
+     "m": {
+      "he": "אוֹתְךָ",
+      "translit": "otcha"
+     },
+     "f": {
+      "he": "אוֹתָךְ",
+      "translit": "otach"
+     }
+    }
+   ]
+  }
+ ]
+}

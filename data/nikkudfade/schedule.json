@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "note": "Default fade schedule. Numbers are design choices to be tuned with real learners, not research findings.",
+  "stages": [
+    { "stage": 1, "id": "full", "label": "Full points", "help": "Every word shows its vowel points." },
+    { "stage": 2, "id": "partial", "label": "Points on new and look-alike words", "help": "Points stay only on words you have read fewer than newAfter times, and on words whose spelling matches another word." },
+    { "stage": 3, "id": "none", "label": "No points, tap to reveal", "help": "Words show without points. Tap a word to see its points; a tapped word does not count as read unaided." }
+  ],
+  "newAfter": 3,
+  "window": 10,
+  "advanceMaxHintRate": 0.2,
+  "demoteMinHintRate": 0.6,
+  "minReadsPerStage": 10,
+  "sessionSize": 8
+}

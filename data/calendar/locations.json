@@ -1,0 +1,671 @@
+{
+ "schema": "alef-locations-1",
+ "note": "Hand-entered approximate city-centre coordinates (2 decimals, about 1 km). Not taken from GeoNames. candleMinutes: 18 outside Israel; in Israel Jerusalem 40, Haifa and Zikhron Ya'akov 30, other Israeli cities 20. The 18/40/30 values are in Hebcal's published text (hebcal.com/home/195/shabbat-times-rest-api); 20 for the other Israeli cities is what Hebcal's own output implies (observed 2026-11-04 for 13 Israeli points and Tel Aviv by GeoNames id; the published text does not say it) and is also the common Israeli custom. other communities use other offsets and the app lets the user change it. tz is an IANA zone name.",
+ "defaults": {
+  "candleMinutes": 18,
+  "jerusalemCandleMinutes": 40,
+  "havdalah": {
+   "mode": "tzeit",
+   "degrees": 8.5,
+   "minutes": 50
+  }
+ },
+ "havdalahChoices": [
+  {
+   "id": "tzeit85",
+   "label": "Nightfall: sun 8.5 degrees below the horizon (Hebcal default)",
+   "mode": "tzeit",
+   "degrees": 8.5
+  },
+  {
+   "id": "min42",
+   "label": "42 minutes after sunset",
+   "mode": "minutes",
+   "minutes": 42
+  },
+  {
+   "id": "min50",
+   "label": "50 minutes after sunset",
+   "mode": "minutes",
+   "minutes": 50
+  },
+  {
+   "id": "min72",
+   "label": "72 minutes after sunset (Rabbeinu Tam)",
+   "mode": "minutes",
+   "minutes": 72
+  }
+ ],
+ "presets": [
+  {
+   "id": "new-york",
+   "name": "New York, NY",
+   "group": "United States",
+   "lat": 40.71,
+   "lon": -74.01,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "los-angeles",
+   "name": "Los Angeles, CA",
+   "group": "United States",
+   "lat": 34.05,
+   "lon": -118.24,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "chicago",
+   "name": "Chicago, IL",
+   "group": "United States",
+   "lat": 41.88,
+   "lon": -87.63,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "houston",
+   "name": "Houston, TX",
+   "group": "United States",
+   "lat": 29.76,
+   "lon": -95.37,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "phoenix",
+   "name": "Phoenix, AZ",
+   "group": "United States",
+   "lat": 33.45,
+   "lon": -112.07,
+   "tz": "America/Phoenix",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "philadelphia",
+   "name": "Philadelphia, PA",
+   "group": "United States",
+   "lat": 39.95,
+   "lon": -75.17,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "san-diego",
+   "name": "San Diego, CA",
+   "group": "United States",
+   "lat": 32.72,
+   "lon": -117.16,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "dallas",
+   "name": "Dallas, TX",
+   "group": "United States",
+   "lat": 32.78,
+   "lon": -96.8,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "san-francisco",
+   "name": "San Francisco, CA",
+   "group": "United States",
+   "lat": 37.77,
+   "lon": -122.42,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "seattle",
+   "name": "Seattle, WA",
+   "group": "United States",
+   "lat": 47.61,
+   "lon": -122.33,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "denver",
+   "name": "Denver, CO",
+   "group": "United States",
+   "lat": 39.74,
+   "lon": -104.99,
+   "tz": "America/Denver",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "boston",
+   "name": "Boston, MA",
+   "group": "United States",
+   "lat": 42.36,
+   "lon": -71.06,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "washington-dc",
+   "name": "Washington, DC",
+   "group": "United States",
+   "lat": 38.91,
+   "lon": -77.04,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "atlanta",
+   "name": "Atlanta, GA",
+   "group": "United States",
+   "lat": 33.75,
+   "lon": -84.39,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "miami",
+   "name": "Miami, FL",
+   "group": "United States",
+   "lat": 25.76,
+   "lon": -80.19,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "baltimore",
+   "name": "Baltimore, MD",
+   "group": "United States",
+   "lat": 39.29,
+   "lon": -76.61,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "cleveland",
+   "name": "Cleveland, OH",
+   "group": "United States",
+   "lat": 41.5,
+   "lon": -81.69,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "detroit",
+   "name": "Detroit, MI",
+   "group": "United States",
+   "lat": 42.33,
+   "lon": -83.05,
+   "tz": "America/Detroit",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "minneapolis",
+   "name": "Minneapolis, MN",
+   "group": "United States",
+   "lat": 44.98,
+   "lon": -93.27,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "st-louis",
+   "name": "St. Louis, MO",
+   "group": "United States",
+   "lat": 38.63,
+   "lon": -90.2,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "las-vegas",
+   "name": "Las Vegas, NV",
+   "group": "United States",
+   "lat": 36.17,
+   "lon": -115.14,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "portland",
+   "name": "Portland, OR",
+   "group": "United States",
+   "lat": 45.52,
+   "lon": -122.68,
+   "tz": "America/Los_Angeles",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "pittsburgh",
+   "name": "Pittsburgh, PA",
+   "group": "United States",
+   "lat": 40.44,
+   "lon": -80.0,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "cincinnati",
+   "name": "Cincinnati, OH",
+   "group": "United States",
+   "lat": 39.1,
+   "lon": -84.51,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "columbus",
+   "name": "Columbus, OH",
+   "group": "United States",
+   "lat": 39.96,
+   "lon": -83.0,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "nashville",
+   "name": "Nashville, TN",
+   "group": "United States",
+   "lat": 36.16,
+   "lon": -86.78,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "orlando",
+   "name": "Orlando, FL",
+   "group": "United States",
+   "lat": 28.54,
+   "lon": -81.38,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "tampa",
+   "name": "Tampa, FL",
+   "group": "United States",
+   "lat": 27.95,
+   "lon": -82.46,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "new-orleans",
+   "name": "New Orleans, LA",
+   "group": "United States",
+   "lat": 29.95,
+   "lon": -90.07,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "austin",
+   "name": "Austin, TX",
+   "group": "United States",
+   "lat": 30.27,
+   "lon": -97.74,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "salt-lake-city",
+   "name": "Salt Lake City, UT",
+   "group": "United States",
+   "lat": 40.76,
+   "lon": -111.89,
+   "tz": "America/Denver",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "honolulu",
+   "name": "Honolulu, HI",
+   "group": "United States",
+   "lat": 21.31,
+   "lon": -157.86,
+   "tz": "Pacific/Honolulu",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "anchorage",
+   "name": "Anchorage, AK",
+   "group": "United States",
+   "lat": 61.22,
+   "lon": -149.9,
+   "tz": "America/Anchorage",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "milwaukee",
+   "name": "Milwaukee, WI",
+   "group": "United States",
+   "lat": 43.04,
+   "lon": -87.91,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "kansas-city",
+   "name": "Kansas City, MO",
+   "group": "United States",
+   "lat": 39.1,
+   "lon": -94.58,
+   "tz": "America/Chicago",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "indianapolis",
+   "name": "Indianapolis, IN",
+   "group": "United States",
+   "lat": 39.77,
+   "lon": -86.16,
+   "tz": "America/Indiana/Indianapolis",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "charlotte",
+   "name": "Charlotte, NC",
+   "group": "United States",
+   "lat": 35.23,
+   "lon": -80.84,
+   "tz": "America/New_York",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "toronto",
+   "name": "Toronto, ON",
+   "group": "Canada",
+   "lat": 43.65,
+   "lon": -79.38,
+   "tz": "America/Toronto",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "montreal",
+   "name": "Montreal, QC",
+   "group": "Canada",
+   "lat": 45.5,
+   "lon": -73.57,
+   "tz": "America/Toronto",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "ottawa",
+   "name": "Ottawa, ON",
+   "group": "Canada",
+   "lat": 45.42,
+   "lon": -75.7,
+   "tz": "America/Toronto",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "winnipeg",
+   "name": "Winnipeg, MB",
+   "group": "Canada",
+   "lat": 49.9,
+   "lon": -97.14,
+   "tz": "America/Winnipeg",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "calgary",
+   "name": "Calgary, AB",
+   "group": "Canada",
+   "lat": 51.05,
+   "lon": -114.07,
+   "tz": "America/Edmonton",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "vancouver",
+   "name": "Vancouver, BC",
+   "group": "Canada",
+   "lat": 49.28,
+   "lon": -123.12,
+   "tz": "America/Vancouver",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "jerusalem",
+   "name": "Jerusalem",
+   "group": "Israel",
+   "lat": 31.78,
+   "lon": 35.22,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 40,
+   "israel": true
+  },
+  {
+   "id": "tel-aviv",
+   "name": "Tel Aviv",
+   "group": "Israel",
+   "lat": 32.08,
+   "lon": 34.78,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "haifa",
+   "name": "Haifa",
+   "group": "Israel",
+   "lat": 32.79,
+   "lon": 34.99,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 30,
+   "israel": true
+  },
+  {
+   "id": "zikhron-yaakov",
+   "name": "Zikhron Ya'akov",
+   "group": "Israel",
+   "lat": 32.57,
+   "lon": 34.95,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 30,
+   "israel": true
+  },
+  {
+   "id": "beer-sheva",
+   "name": "Be'er Sheva",
+   "group": "Israel",
+   "lat": 31.25,
+   "lon": 34.79,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "eilat",
+   "name": "Eilat",
+   "group": "Israel",
+   "lat": 29.56,
+   "lon": 34.95,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "netanya",
+   "name": "Netanya",
+   "group": "Israel",
+   "lat": 32.33,
+   "lon": 34.86,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "raanana",
+   "name": "Ra'anana",
+   "group": "Israel",
+   "lat": 32.18,
+   "lon": 34.87,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "herzliya",
+   "name": "Herzliya",
+   "group": "Israel",
+   "lat": 32.16,
+   "lon": 34.84,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "modiin",
+   "name": "Modi'in",
+   "group": "Israel",
+   "lat": 31.9,
+   "lon": 35.01,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "tiberias",
+   "name": "Tiberias",
+   "group": "Israel",
+   "lat": 32.79,
+   "lon": 35.53,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "safed",
+   "name": "Safed (Tzfat)",
+   "group": "Israel",
+   "lat": 32.96,
+   "lon": 35.5,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "ashdod",
+   "name": "Ashdod",
+   "group": "Israel",
+   "lat": 31.8,
+   "lon": 34.65,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "petah-tikva",
+   "name": "Petah Tikva",
+   "group": "Israel",
+   "lat": 32.09,
+   "lon": 34.89,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "rishon-lezion",
+   "name": "Rishon LeZion",
+   "group": "Israel",
+   "lat": 31.97,
+   "lon": 34.8,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "beit-shemesh",
+   "name": "Beit Shemesh",
+   "group": "Israel",
+   "lat": 31.75,
+   "lon": 34.99,
+   "tz": "Asia/Jerusalem",
+   "candleMinutes": 20,
+   "israel": true
+  },
+  {
+   "id": "london",
+   "name": "London, UK",
+   "group": "Other",
+   "lat": 51.51,
+   "lon": -0.13,
+   "tz": "Europe/London",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "paris",
+   "name": "Paris, France",
+   "group": "Other",
+   "lat": 48.86,
+   "lon": 2.35,
+   "tz": "Europe/Paris",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "sydney",
+   "name": "Sydney, Australia",
+   "group": "Other",
+   "lat": -33.87,
+   "lon": 151.21,
+   "tz": "Australia/Sydney",
+   "candleMinutes": 18,
+   "israel": false
+  },
+  {
+   "id": "buenos-aires",
+   "name": "Buenos Aires, Argentina",
+   "group": "Other",
+   "lat": -34.6,
+   "lon": -58.38,
+   "tz": "America/Argentina/Buenos_Aires",
+   "candleMinutes": 18,
+   "israel": false
+  }
+ ]
+}

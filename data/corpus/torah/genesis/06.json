@@ -1,0 +1,330 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "genesis",
+ "bookHe": "בְּרֵאשִׁית",
+ "chapter": 6,
+ "ref": "Genesis 6",
+ "parshaIds": [
+  "bereshit",
+  "noach"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-07",
+ "verses": [
+  {
+   "n": 1,
+   "he": "וַיְהִי כִּי־הֵחֵל הָאָדָם לָרֹב עַל־פְּנֵי הָאֲדָמָה וּבָנוֹת יֻלְּדוּ לָהֶם׃",
+   "heTrope": "וַֽיְהִי֙ כִּֽי־הֵחֵ֣ל הֽ͏ָאָדָ֔ם לָרֹ֖ב עַל־פְּנֵ֣י הֽ͏ָאֲדָמָ֑ה וּבָנ֖וֹת יֻלְּד֥וּ לָהֶֽם׃",
+   "en": "And it came to pass, when men began to multiply on the face of the earth, and daughters were born unto them,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 2,
+   "he": "וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם כִּי טֹבֹת הֵנָּה וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ׃",
+   "heTrope": "וַיִּרְא֤וּ בְנֵי־הָֽאֱלֹהִים֙ אֶת־בְּנ֣וֹת הָֽאָדָ֔ם כִּ֥י טֹבֹ֖ת הֵ֑נָּה וַיִּקְח֤וּ לָהֶם֙ נָשִׁ֔ים מִכֹּ֖ל אֲשֶׁ֥ר בָּחָֽרוּ׃",
+   "en": "that the sons of nobles saw the daughters of men that they were fair; and they took them wives, whomsoever they chose.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וַיֹּאמֶר יְהוָה לֹא־יָדוֹן רוּחִי בָאָדָם לְעֹלָם בְּשַׁגַּם הוּא בָשָׂר וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים שָׁנָה׃",
+   "heTrope": "וַיֹּ֣אמֶר יְהוָ֗ה לֹֽא־יָד֨וֹן רוּחִ֤י בָֽאָדָם֙ לְעֹלָ֔ם בְּשַׁגַּ֖ם ה֣וּא בָשָׂ֑ר וְהָי֣וּ יָמָ֔יו מֵאָ֥ה וְעֶשְׂרִ֖ים שָׁנָֽה׃",
+   "en": "And the LORD said: ‘My spirit shall not abide in man for ever, for that he also is flesh; therefore shall his days be a hundred and twenty years.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 4,
+   "he": "הַנְּפִלִים הָיוּ בָאָרֶץ בַּיָּמִים הָהֵם וְגַם אַחֲרֵי־כֵן אֲשֶׁר יָבֹאוּ בְּנֵי הָאֱלֹהִים אֶל־בְּנוֹת הָאָדָם וְיָלְדוּ לָהֶם הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי הַשֵּׁם׃",
+   "heTrope": "הַנְּפִלִ֞ים הָי֣וּ בָאָרֶץ֮ בַּיָּמִ֣ים הָהֵם֒ וְגַ֣ם אַֽחֲרֵי־כֵ֗ן אֲשֶׁ֨ר יָבֹ֜אוּ בְּנֵ֤י הָֽאֱלֹהִים֙ אֶל־בְּנ֣וֹת הֽ͏ָאָדָ֔ם וְיָלְד֖וּ לָהֶ֑ם הֵ֧מָּה הַגִּבֹּרִ֛ים אֲשֶׁ֥ר מֵעוֹלָ֖ם אַנְשֵׁ֥י הַשֵּֽׁם׃",
+   "en": "The Nephilim were in the earth in those days, and also after that, when the sons of nobles came in unto the daughters of men, and they bore children to them; the same were the mighty men that were of old, the men of renown.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם בָּאָרֶץ וְכָל־יֵצֶר מַחְשְׁבֹת לִבּוֹ רַק רַע כָּל־הַיּוֹם׃",
+   "heTrope": "וַיַּ֣רְא יְהוָ֔ה כִּ֥י רַבָּ֛ה רָעַ֥ת הָאָדָ֖ם בָּאָ֑רֶץ וְכָל־יֵ֙צֶר֙ מַחְשְׁבֹ֣ת לִבּ֔וֹ רַ֥ק רַ֖ע כָּל־הַיּֽוֹם׃",
+   "en": "And the LORD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 6,
+   "he": "וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם בָּאָרֶץ וַיִּתְעַצֵּב אֶל־לִבּוֹ׃",
+   "heTrope": "וַיִּנָּ֣חֶם יְהוָ֔ה כִּֽי־עָשָׂ֥ה אֶת־הֽ͏ָאָדָ֖ם בָּאָ֑רֶץ וַיִּתְעַצֵּ֖ב אֶל־לִבּֽוֹ׃",
+   "en": "And it repented the LORD that He had made man on the earth, and it grieved Him at His heart.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 7,
+   "he": "וַיֹּאמֶר יְהוָה אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמָיִם כִּי נִחַמְתִּי כִּי עֲשִׂיתִם׃",
+   "heTrope": "וַיֹּ֣אמֶר יְהוָ֗ה אֶמְחֶ֨ה אֶת־הָאָדָ֤ם אֲשֶׁר־בָּרָ֙אתִי֙ מֵעַל֙ פְּנֵ֣י הֽ͏ָאֲדָמָ֔ה מֽ͏ֵאָדָם֙ עַד־בְּהֵמָ֔ה עַד־רֶ֖מֶשׂ וְעַד־ע֣וֹף הַשָּׁמָ֑יִם כִּ֥י נִחַ֖מְתִּי כִּ֥י עֲשִׂיתִֽם׃",
+   "en": "And the LORD said: ‘I will blot out man whom I have created from the face of the earth; both man, and beast, and creeping thing, and fowl of the air; for it repenteth Me that I have made them.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 8,
+   "he": "וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה׃",
+   "heTrope": "וְנֹ֕חַ מָ֥צָא חֵ֖ן בְּעֵינֵ֥י יְהוָֽה׃",
+   "en": "But Noah found grace in the eyes of the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "אֵלֶּה תּוֹלְדֹת נֹחַ נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ׃",
+   "heTrope": "אֵ֚לֶּה תּוֹלְדֹ֣ת נֹ֔חַ נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּדֹֽרֹתָ֑יו אֶת־הֽ͏ָאֱלֹהִ֖ים הִֽתְהַלֶּךְ־נֹֽחַ׃",
+   "en": "These are the generations of Noah. Noah was in his generations a man righteous and wholehearted; Noah walked with God.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 10,
+   "he": "וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת׃",
+   "heTrope": "וַיּ֥וֹלֶד נֹ֖חַ שְׁלֹשָׁ֣ה בָנִ֑ים אֶת־שֵׁ֖ם אֶת־חָ֥ם וְאֶת־יָֽפֶת׃",
+   "en": "And Noah begot three sons, Shem, Ham, and Japheth.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 11,
+   "he": "וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים וַתִּמָּלֵא הָאָרֶץ חָמָס׃",
+   "heTrope": "וַתִּשָּׁחֵ֥ת הָאָ֖רֶץ לִפְנֵ֣י הֽ͏ָאֱלֹהִ֑ים וַתִּמָּלֵ֥א הָאָ֖רֶץ חָמָֽס׃",
+   "en": "And the earth was corrupt before God, and the earth was filled with violence.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ וְהִנֵּה נִשְׁחָתָה כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ עַל־הָאָרֶץ׃",
+   "heTrope": "וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָאָ֖רֶץ וְהִנֵּ֣ה נִשְׁחָ֑תָה כִּֽי־הִשְׁחִ֧ית כָּל־בָּשָׂ֛ר אֶת־דַּרְכּ֖וֹ עַל־הָאָֽרֶץ׃",
+   "en": "And God saw the earth, and, behold, it was corrupt; for all flesh had corrupted their way upon the earth. .",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 13,
+   "he": "וַיֹּאמֶר אֱלֹהִים לְנֹחַ קֵץ כָּל־בָּשָׂר בָּא לְפָנַי כִּי־מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ׃",
+   "heTrope": "וַיֹּ֨אמֶר אֱלֹהִ֜ים לְנֹ֗חַ קֵ֤ץ כָּל־בָּשָׂר֙ בָּ֣א לְפָנַ֔י כִּֽי־מָלְאָ֥ה הָאָ֛רֶץ חָמָ֖ס מִפְּנֵיהֶ֑ם וְהִנְנִ֥י מַשְׁחִיתָ֖ם אֶת־הָאָֽרֶץ׃",
+   "en": "And God said unto Noah: ‘The end of all flesh is come before Me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 14,
+   "he": "עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ מִבַּיִת וּמִחוּץ בַּכֹּפֶר׃",
+   "heTrope": "עֲשֵׂ֤ה לְךָ֙ תֵּבַ֣ת עֲצֵי־גֹ֔פֶר קִנִּ֖ים תּֽ͏ַעֲשֶׂ֣ה אֶת־הַתֵּבָ֑ה וְכָֽפַרְתָּ֥ אֹתָ֛הּ מִבַּ֥יִת וּמִח֖וּץ בַּכֹּֽפֶר׃",
+   "en": "Make thee an ark of gopher wood; with rooms shalt thou make the ark, and shalt pitch it within and without with pitch.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 15,
+   "he": "וְזֶה אֲשֶׁר תַּעֲשֶׂה אֹתָהּ שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ הַתֵּבָה חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים אַמָּה קוֹמָתָהּ׃",
+   "heTrope": "וְזֶ֕ה אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה אֹתָ֑הּ שְׁלֹ֧שׁ מֵא֣וֹת אַמָּ֗ה אֹ֚רֶךְ הַתֵּבָ֔ה חֲמִשִּׁ֤ים אַמָּה֙ רָחְבָּ֔הּ וּשְׁלֹשִׁ֥ים אַמָּ֖ה קוֹמָתָֽהּ׃",
+   "en": "And this is how thou shalt make it: the length of the ark three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 16,
+   "he": "צֹהַר תַּעֲשֶׂה לַתֵּבָה וְאֶל־אַמָּה תְּכַלֶנָּה מִלְמַעְלָה וּפֶתַח הַתֵּבָה בְּצִדָּהּ תָּשִׂים תַּחְתִּיִּם שְׁנִיִּם וּשְׁלִשִׁים תַּעֲשֶׂהָ׃",
+   "heTrope": "צֹ֣הַר ׀ תּֽ͏ַעֲשֶׂ֣ה לַתֵּבָ֗ה וְאֶל־אַמָּה֙ תְּכַלֶ֣נָּה מִלְמַ֔עְלָה וּפֶ֥תַח הַתֵּבָ֖ה בְּצִדָּ֣הּ תָּשִׂ֑ים תַּחְתִּיִּ֛ם שְׁנִיִּ֥ם וּשְׁלִשִׁ֖ים תּֽ͏ַעֲשֶֽׂהָ׃",
+   "en": "A light shalt thou make to the ark, and to a cubit shalt thou finish it upward; and the door of the ark shalt thou set in the side thereof; with lower, second, and third stories shalt thou make it.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 17,
+   "he": "וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל מַיִם עַל־הָאָרֶץ לְשַׁחֵת כָּל־בָּשָׂר אֲשֶׁר־בּוֹ רוּחַ חַיִּים מִתַּחַת הַשָּׁמָיִם כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע׃",
+   "heTrope": "וַאֲנִ֗י הִנְנִי֩ מֵבִ֨יא אֶת־הַמַּבּ֥וּל מַ֙יִם֙ עַל־הָאָ֔רֶץ לְשַׁחֵ֣ת כָּל־בָּשָׂ֗ר אֲשֶׁר־בּוֹ֙ ר֣וּחַ חַיִּ֔ים מִתַּ֖חַת הַשָּׁמָ֑יִם כֹּ֥ל אֲשֶׁר־בָּאָ֖רֶץ יִגְוָֽע׃",
+   "en": "And I, behold, I do bring the flood of waters upon the earth, to destroy all flesh, wherein is the breath of life, from under heaven; every thing that is in the earth shall perish.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 18,
+   "he": "וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה אַתָּה וּבָנֶיךָ וְאִשְׁתְּךָ וּנְשֵׁי־בָנֶיךָ אִתָּךְ׃",
+   "heTrope": "וַהֲקִמֹתִ֥י אֶת־בְּרִיתִ֖י אִתָּ֑ךְ וּבָאתָ֙ אֶל־הַתֵּבָ֔ה אַתָּ֕ה וּבָנֶ֛יךָ וְאִשְׁתְּךָ֥ וּנְשֵֽׁי־בָנֶ֖יךָ אִתָּֽךְ׃",
+   "en": "But I will establish My covenant with thee; and thou shalt come into the ark, thou, and thy sons, and thy wife, and thy sons’ wives with thee.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 19,
+   "he": "וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה לְהַחֲיֹת אִתָּךְ זָכָר וּנְקֵבָה יִהְיוּ׃",
+   "heTrope": "וּמִכָּל־הָ֠חַי מִֽכָּל־בָּשָׂ֞ר שְׁנַ֧יִם מִכֹּ֛ל תָּבִ֥יא אֶל־הַתֵּבָ֖ה לְהַחֲיֹ֣ת אִתָּ֑ךְ זָכָ֥ר וּנְקֵבָ֖ה יִֽהְיֽוּ׃",
+   "en": "And of every living thing of all flesh, two of every sort shalt thou bring into the ark, to keep them alive with thee; they shall be male and female.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 20,
+   "he": "מֵהָעוֹף לְמִינֵהוּ וּמִן־הַבְּהֵמָה לְמִינָהּ מִכֹּל רֶמֶשׂ הָאֲדָמָה לְמִינֵהוּ שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ לְהַחֲיוֹת׃",
+   "heTrope": "מֵהָע֣וֹף לְמִינֵ֗הוּ וּמִן־הַבְּהֵמָה֙ לְמִינָ֔הּ מִכֹּ֛ל רֶ֥מֶשׂ הֽ͏ָאֲדָמָ֖ה לְמִינֵ֑הוּ שְׁנַ֧יִם מִכֹּ֛ל יָבֹ֥אוּ אֵלֶ֖יךָ לְהֽ͏ַחֲיֽוֹת׃",
+   "en": "Of the fowl after their kind, and of the cattle after their kind, of every creeping thing of the ground after its kind, two of every sort shall come unto thee, to keep them alive.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 21,
+   "he": "וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל וְאָסַפְתָּ אֵלֶיךָ וְהָיָה לְךָ וְלָהֶם לְאָכְלָה׃",
+   "heTrope": "וְאַתָּ֣ה קַח־לְךָ֗ מִכָּל־מֽ͏ַאֲכָל֙ אֲשֶׁ֣ר יֽ͏ֵאָכֵ֔ל וְאָסַפְתָּ֖ אֵלֶ֑יךָ וְהָיָ֥ה לְךָ֛ וְלָהֶ֖ם לְאָכְלָֽה׃",
+   "en": "And take thou unto thee of all food that is eaten, and gather it to thee; and it shall be for food for thee, and for them.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 22,
+   "he": "וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה׃",
+   "heTrope": "וַיַּ֖עַשׂ נֹ֑חַ כְּ֠כֹל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛וֹ אֱלֹהִ֖ים כֵּ֥ן עָשָֽׂה׃",
+   "en": "Thus did Noah; according to all that God commanded him, so did he.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-script="print">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word tracing harness</title>
+<link rel="stylesheet" href="../assets/css/fonts.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body>
+<main id="main" style="padding:8px"><div id="root"></div></main>
+<script type="module">
+// Test harness only (used by tests/wordtrace.e2e.mjs): mounts the view with a localStorage store, outside the app shell.
+import { mount } from '../src/wordtrace/wordtrace.view.js';
+const qs = Object.fromEntries(new URLSearchParams(location.search));
+const mem = JSON.parse(localStorage.getItem('wt-harness') || '{}');
+const store = { get: (k, d) => (k in mem ? mem[k] : d), set: (k, v) => { mem[k] = v; localStorage.setItem('wt-harness', JSON.stringify(mem)); } };
+if (qs.seed) store.set('letters.progress', Object.fromEntries(qs.seed.split(',').map(id => [id, { print: { completions: 1, perfect: 0, bestMistakes: 1, last: '2026-11-03T00:00:00Z' }, cursive: { completions: 1, perfect: 0, bestMistakes: 1, last: '2026-11-03T00:00:00Z' } }])));
+if (qs.script) document.documentElement.dataset.script = qs.script;
+window.__unmount = mount(document.getElementById('root'), { store, t: k => k, query: qs, settings: { script: qs.script || 'print' }, audio: { has: () => false, play: () => {} } });
+</script>
+</body>
+</html>

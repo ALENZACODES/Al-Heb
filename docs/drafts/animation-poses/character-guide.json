@@ -1,0 +1,22 @@
+{
+  "status": "DRAFT, not reviewed",
+  "purpose": "Keep established character identities available for every future continuation.",
+  "reference_files": [
+    "references/ari-noa-original.png",
+    "references/noa-original.png"
+  ],
+  "ari": {
+    "hair": "short dark curls",
+    "face": "trimmed beard",
+    "clothes": "navy shirt and olive-green trousers",
+    "reference_details": "silver necklace and cream shoes remain visible in the original reference"
+  },
+  "noa": {
+    "hair": "dark shoulder-length waves",
+    "accessories": "round gold hoop earrings",
+    "clothes": "terracotta blouse, navy trousers and shoes"
+  },
+  "vector_adaptation": "Round white faces, dot eyes, small mouth curves, simplified curls or waves, and solid permitted palette. White hands represent gloves. These are simplified interpretations, not exact reproductions of the raster references.",
+  "role_caution": "No family relationships or professions are established by the two reference images. Family-role pictures are illustrative stand-ins requiring context, not character biography.",
+  "avoid": "Do not revert to anonymous stick figures. Do not replace the reference files. Do not claim human approval."
+}

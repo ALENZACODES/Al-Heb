@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-feelings-mind-1",
+ "title": "Feelings and thinking 1",
+ "theme": "feelings-mind",
+ "level": "A2",
+ "track": "both",
+ "pack": "feelings-mind-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hf28ba308",
+   "he": "יָדַע",
+   "translit": "yada",
+   "en": "to know (a fact)",
+   "kind": "word",
+   "audioId": "hf28ba308",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1b96f9f4",
+   "he": "אָהַב",
+   "translit": "ahav",
+   "en": "to love",
+   "kind": "word",
+   "audioId": "h1b96f9f4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha7e901e9",
+   "he": "יָרֵא",
+   "translit": "yare",
+   "en": "to fear, be afraid",
+   "kind": "word",
+   "audioId": "ha7e901e9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h511bbb6f",
+   "he": "הִרְגִּישׁ",
+   "translit": "hirgish",
+   "en": "to feel, sense",
+   "kind": "word",
+   "audioId": "h511bbb6f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd83852fd",
+   "he": "הֵבִין",
+   "translit": "hevin",
+   "en": "to understand",
+   "kind": "word",
+   "audioId": "hd83852fd",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h26a32615",
+   "he": "הֶאֱמִין",
+   "translit": "he'emin",
+   "en": "to believe",
+   "kind": "word",
+   "audioId": "h26a32615",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbab9e498",
+   "he": "דָּאַג",
+   "translit": "da'ag",
+   "en": "to worry",
+   "kind": "word",
+   "audioId": "hbab9e498",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h78d6aa81",
+   "he": "שָׂמַח",
+   "translit": "samach",
+   "en": "to be happy, glad, joyous, cheerful, merry",
+   "kind": "word",
+   "audioId": "h78d6aa81",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6fd09fff",
+   "he": "דֵּעָה",
+   "translit": "de'ah",
+   "en": "opinion, point of view",
+   "kind": "word",
+   "audioId": "h6fd09fff",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0cdd730a",
+   "he": "אִוָּה",
+   "translit": "ivah",
+   "en": "to greatly desire, want, long for, lust for",
+   "kind": "word",
+   "audioId": "h0cdd730a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h23e0b2a4",
+   "he": "בָּחַר",
+   "translit": "bachar",
+   "en": "to choose, to opt, to select",
+   "kind": "word",
+   "audioId": "r38-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0c76d311",
+   "he": "שָׁכַח",
+   "translit": "shakhach",
+   "en": "to forget",
+   "kind": "word",
+   "audioId": "h0c76d311",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

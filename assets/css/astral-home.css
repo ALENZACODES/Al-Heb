@@ -1,0 +1,402 @@
+/* ALEF astral homepage: all motion is opacity/transform; no image or network media. */
+.prayer-veil {
+  position: fixed; inset: 0; z-index: 9999; display: grid;
+  place-items: center; overflow: hidden; isolation: isolate;
+  padding: max(1.5rem, env(safe-area-inset-top)) 1.1rem max(1.5rem, env(safe-area-inset-bottom));
+  background: #1E4634; color: #F6F1E7; text-align: center;
+  transition: opacity .15s ease; cursor: pointer;
+}
+.prayer-veil--leaving { opacity: 0; pointer-events: none; }
+.prayer-veil-stars {
+  position: absolute; inset: -2%; pointer-events: none; opacity: .85;
+  background:
+    radial-gradient(circle at 9% 16%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 61%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 35% 30%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 57% 13%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 70%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 37%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 91% 81%, #D9A441 0 1px, transparent 2px);
+  animation: prayer-stars 19s ease-in-out infinite alternate;
+}
+.prayer-veil-glow {
+  position: absolute; top: 50%; left: 50%; width: min(72vw, 420px); aspect-ratio: 1; pointer-events: none;
+  background: radial-gradient(circle, rgba(217,164,65,.30), rgba(217,164,65,.09) 32%, transparent 68%);
+  transform: translate(-50%, -50%) scale(.7);
+  animation: prayer-light 2s ease-out forwards;
+}
+.prayer-words {
+  position: relative; z-index: 1; width: min(100%, 44rem); opacity: 0;
+  transform: translateY(8px); transition: opacity .24s ease, transform .24s ease;
+}
+.prayer-veil[data-prayer-ready="1"] .prayer-words { opacity: 1; transform: none; }
+.prayer-he { font-family: 'Frank Ruhl Libre', serif; font-weight: 600; line-height: 1.55; font-size: clamp(1.6rem, 4.3vw, 2.65rem); color: #F6F1E7; }
+.prayer-en { margin: .65rem auto 0; max-width: 37rem; font-size: clamp(.91rem, 2.2vw, 1.08rem); line-height: 1.5; color: #F6F1E7; opacity: .89; }
+.prayer-tr { margin: .55rem auto 0; max-width: 37rem; font-size: clamp(1rem, 2.6vw, 1.22rem); line-height: 1.5; font-style: italic; color: #E8C87A; }
+.prayer-skip {
+  min-height: 48px;
+  position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-end: 1.2rem; z-index: 2;
+  background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
+  padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.prayer-skip:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-veil-close {
+  position: absolute; top: max(.7rem, env(safe-area-inset-top)); inset-inline-end: .8rem; z-index: 3;
+  width: 48px; height: 48px; border-radius: 50%; border: 2px solid #D9A441;
+  background: transparent; color: #F6F1E7; font: inherit; font-size: 1.7rem; line-height: 1; cursor: pointer;
+}
+.prayer-veil-close:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-noshow {
+  position: absolute; top: max(.7rem, env(safe-area-inset-top)); inset-inline-start: .8rem; z-index: 3;
+  min-height: 48px; background: transparent; color: #F6F1E7; border: none; text-decoration: underline; text-underline-offset: 3px;
+  padding: .55rem .7rem; font: inherit; font-size: .85rem; cursor: pointer; white-space: nowrap;
+}
+.prayer-noshow:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-listen {
+  min-height: 48px;
+  position: absolute; bottom: max(1.2rem, env(safe-area-inset-bottom)); inset-inline-start: 1.2rem; z-index: 2;
+  background: transparent; color: #F6F1E7; border: 1px solid #D9A441; border-radius: 40px;
+  padding: .55rem .95rem; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.prayer-listen:focus-visible { outline: 3px solid #D9A441; outline-offset: 3px; }
+.prayer-audio-note {
+  position: absolute; bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 3.1rem); inset-inline: 0; z-index: 2;
+  margin: 0; text-align: center; color: #F6F1E7; opacity: .78; font-size: .78rem;
+}
+/* Shown only when the browser refused to start the clip on its own: one tap anywhere starts it. */
+.prayer-audio-prompt {
+  margin: 1.1rem auto 0; max-width: 37rem; font-size: clamp(.95rem, 2.4vw, 1.1rem); color: #E8C87A;
+  animation: prayer-prompt 1.8s ease-in-out infinite alternate;
+}
+.prayer-veil[data-audio-state="playing"] .prayer-listen { border-color: #F6F1E7; }
+/* Under 360px wide the Listen and Skip pills overlapped by ~20px and the later Skip won the tap: stack Listen one row up. */
+@media (max-width: 359px) {
+  .prayer-listen { bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 3.1rem); }
+  .prayer-audio-note { bottom: calc(max(1.2rem, env(safe-area-inset-bottom)) + 6.2rem); }
+}
+@keyframes prayer-prompt { from { opacity: .7; } to { opacity: 1; } }
+@keyframes prayer-stars { from { transform: translateY(-5px); opacity: .55; } to { transform: translateY(5px); opacity: 1; } }
+@keyframes prayer-light { from { transform: translate(-50%,-50%) scale(.72); opacity: .2; } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
+
+/* The photo-realistic reading of an ancient tree is deliberate: no primitive
+   vector canopy, no toy-fruit circles, one local WebP asset and no moving typography. */
+.show-hero { display: block; min-height: 0; overflow: hidden; background: #1E4634; border-color: #D9A441; }
+.show-hero::after { content: none; animation: none; }
+.show-hero-text {
+  position: relative; z-index: 2; background: #1E4634; color: #F6F1E7;
+  padding: 1rem 1.25rem 1.2rem; animation: none;
+}
+.show-hero-text .show-kicker { color: #D9A441; }
+.show-hero-text .show-title { color: #F6F1E7; text-shadow: none; }
+.show-hero-text .show-sub { color: #F6F1E7; }
+.show-hero-text .show-btn { color: #2B2B2B; background: #D9A441; border-color: #D9A441; }
+.show-hero-text .show-btn2, .show-hero-text .show-btn2:hover {
+  color: #F6F1E7; background: #1E4634; border-color: #D9A441;
+}
+
+.astral-scene {
+  position: relative; width: 100%; height: clamp(280px, 48vw, 500px);
+  /* Short landscape screens (fold half-open, dual panes, landscape tablets):
+     the width-driven height alone would push the hero words off-screen. */
+  max-height: 58vh;
+  background: linear-gradient(180deg, #1E4634 0%, #6B7F3A 55%, #D9A441 100%);
+  isolation: isolate; overflow: hidden;
+}
+.astral-photo-motion {
+  position: absolute; inset: -4%; overflow: hidden;
+  transform: translate3d(0,var(--tree-shift,0px),0);
+  animation: astral-photo-drift 25s ease-in-out 2s infinite alternate;
+}
+.astral-tree-picture { display: block; width: 100%; height: 100%; }
+.astral-tree-photo {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  object-position: 53% 50%; transform: scale(1.035);
+  /* Retain the rich grain of the oak-aged olive bark and painted clay: no blur. */
+  filter: brightness(1.015) contrast(1.055) saturate(1.035);
+  animation: astral-ancient-reveal 2s cubic-bezier(.19,.63,.24,1) both;
+}
+.astral-nightfall {
+  position: absolute; inset: 0; pointer-events: none;
+  /* Preserve the original sky and olive-harvest materials. */
+  background: linear-gradient(180deg,
+    rgba(31,58,95,.27) 0%, rgba(31,58,95,.07) 34%,
+    rgba(31,58,95,.03) 70%, rgba(43,43,43,.21) 100%);
+}
+.astral-harvest-halo {
+  position: absolute; inset: 0; pointer-events: none; opacity: .62;
+  background: radial-gradient(circle at 57% 31%, rgba(217,164,65,.23), transparent 36%),
+              radial-gradient(ellipse at 30% 58%, rgba(217,164,65,.10), transparent 58%);
+  animation: astral-harvest-breathe 14s ease-in-out infinite alternate;
+}
+.astral-harvest-motes {
+  position: absolute; inset: -3%; pointer-events: none; opacity: .64;
+  background:
+    radial-gradient(circle at 14% 36%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 61%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 37% 15%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 54% 41%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 65% 76%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 79% 34%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 88% 61%, #F6F1E7 0 1px, transparent 2px);
+  animation: astral-motes-drift 17s ease-in-out infinite alternate;
+}
+.astral-stars {
+  position: absolute; inset: -5%; pointer-events: none;
+  background:
+    radial-gradient(circle at 7% 18%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 18% 56%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 26% 12%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 36% 49%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 46% 8%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 58% 30%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 15%, #D9A441 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 43%, #F6F1E7 0 1px, transparent 2px),
+    radial-gradient(circle at 93% 20%, #D9A441 0 1px, transparent 2px);
+  animation: astral-stars-drift 20s ease-in-out infinite alternate;
+  opacity: .65;
+}
+.astral-ray {
+  position: absolute; z-index: 2; top: -20%; bottom: -20%; left: -25%;
+  width: 42%; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(217,164,65,.25), transparent);
+  transform: skewX(-17deg) translateX(-150%);
+  animation: astral-ray-pass 13s ease-in-out infinite;
+}
+.astral-ground-light {
+  position: absolute; inset: 55% 0 0; pointer-events: none;
+  background: radial-gradient(ellipse at 58% 100%, rgba(217,164,65,.17), transparent 68%);
+  opacity: .85;
+}
+.astral-scene[data-paused="1"] *, .astral-scene[data-paused="1"]::before, .astral-scene[data-paused="1"]::after {
+  animation-play-state: paused !important;
+}
+@keyframes astral-harvest-breathe {
+  from { opacity: .36; transform: scale(1); }
+  to { opacity: .68; transform: scale(1.025); }
+}
+@keyframes astral-motes-drift {
+  from { opacity: .35; transform: translate3d(-5px,9px,0); }
+  to { opacity: .72; transform: translate3d(8px,-11px,0); }
+}
+@keyframes astral-ancient-reveal {
+  0% { opacity: .2; transform: scale(1.14) translateY(9px); }
+  100% { opacity: 1; transform: scale(1.035) translateY(0); }
+}
+@keyframes astral-photo-drift {
+  from { transform: translate3d(0,var(--tree-shift,0px),0) scale(1); }
+  to { transform: translate3d(0,var(--tree-shift,0px),0) scale(1.025); }
+}
+@keyframes astral-stars-drift {
+  from { transform: translate3d(0,-5px,0); opacity: .35; }
+  to { transform: translate3d(0,7px,0); opacity: .75; }
+}
+@keyframes astral-ray-pass {
+  0%,20% { transform: skewX(-17deg) translateX(-160%); opacity: 0; }
+  42% { opacity: .48; }
+  72%,100% { transform: skewX(-17deg) translateX(340%); opacity: 0; }
+}
+@media (max-width: 600px) {
+  .astral-scene { height: clamp(260px, 68vw, 345px); }
+  .astral-tree-photo { object-position: 42% 53%; }
+  .prayer-veil-stars { opacity: .6; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prayer-veil, .prayer-words, .astral-scene, .astral-scene *,
+  .prayer-veil *, .show-hero, .show-hero-text { animation: none !important; transition: none !important; }
+  .prayer-veil-glow { transform: translate(-50%, -50%); }
+  .prayer-words { transform: none; }
+  .astral-photo-motion { transform: none !important; }
+  .astral-tree-photo { transform: none !important; }
+}
+
+
+/* ALEF crafted entryways. Every photograph is a different framing of the
+   already-loaded, locally stored olive-harvest hero — no external image,
+   generic icon library, hidden text, or new image download. */
+.show-portals {
+  margin: 1.2rem 0 1rem;
+  padding: clamp(.85rem, 2.5vw, 1.3rem);
+  border: 1px solid rgba(217,164,65,.6);
+  border-radius: 18px;
+  color: #2B2B2B;
+  background: linear-gradient(160deg, #F6F1E7, rgba(217,164,65,.11) 100%);
+}
+.show-section-title {
+  margin: 0;
+  font-family: inherit; /* one UI font for English headings across the app */
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1E4634;
+}
+.show-portals-intro {
+  margin: .35rem 0 1rem;
+  max-width: 45rem;
+  line-height: 1.5;
+  color: #2B2B2B;
+}
+.show-portal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.55rem, 1.6vw, 1rem);
+  margin: 0; padding: 0; list-style: none;
+}
+.show-portal-grid li { min-width: 0; }
+.show-portal {
+  position: relative; display: flex; flex-direction: column;
+  overflow: hidden; text-decoration: none; height: 100%;
+  border: 1px solid #D9A441; border-radius: 15px;
+  background: #1E4634; color: #F6F1E7;
+  box-shadow: 0 6px 20px rgba(43,43,43,.19);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.show-portal:hover, .show-portal:focus-visible {
+  transform: translateY(-3px); border-color: #F6F1E7;
+  box-shadow: 0 12px 27px rgba(43,43,43,.28);
+}
+.show-portal-art {
+  display: block; position: relative; aspect-ratio: 4/3; width: 100%;
+  background-image: linear-gradient(180deg,
+    rgba(31,58,95,.05) 30%,rgba(31,58,95,.20) 70%,rgba(31,58,95,.65) 100%),
+    url("../img/gen/HERO_olive_harvest_astral.1600.webp");
+  background-repeat: no-repeat;
+  background-size: cover, 220% auto;
+}
+.show-portal--clay .show-portal-art { background-position: center, 0% 70%; }
+.show-portal--wood .show-portal-art { background-position: center, 36% 25%; }
+.show-portal--harvest .show-portal-art { background-position: center, 67% 95%; }
+.show-portal--sky .show-portal-art { background-position: center, 100% 35%; }
+.show-portal--scroll .show-portal-art { background-position: center, 50% 8%; }
+/* Dedicated, text-free historical-artifact photography instead of repeated scenery. */
+.show-portal--clay .show-portal-art {
+  background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.22) 67%,rgba(31,58,95,.53) 100%),
+    url("../img/gen/PORTAL_words_clay.webp");
+  background-position: center, center;
+  background-size: cover, cover;
+}
+.show-portal--harvest .show-portal-art {
+  background-image: linear-gradient(180deg,rgba(31,58,95,.02) 28%,rgba(31,58,95,.24) 70%,rgba(31,58,95,.57) 100%),
+    url("../img/gen/PORTAL_games_shofar.webp");
+  background-position: center, center;
+  background-size: cover, cover;
+}
+.show-portal-copy {
+  display: flex; flex: 1; flex-direction: column; gap: .38rem;
+  padding: .8rem .8rem 1rem;
+  border-top: 1px solid rgba(217,164,65,.7);
+  background: linear-gradient(150deg, #1E4634, rgba(43,43,43,.92));
+}
+.show-portal-title {
+  display: block;
+  font-family: inherit; /* one UI font for English headings across the app */
+  font-size: clamp(1.03rem, 2vw, 1.24rem);
+  font-weight: 700;
+  line-height: 1.2; color: #F6F1E7;
+}
+.show-portal-note {
+  display: block; font-size: .83rem; line-height: 1.5;
+  color: #F6F1E7; opacity: .92;
+}
+.show-stats {
+  margin: 1rem 0;
+  padding: .85rem .75rem;
+  border-block: 1px solid rgba(217,164,65,.5);
+  background: #F6F1E7;
+  color: #1E4634;
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 1.6;
+  letter-spacing: .025em;
+}
+.show-try {
+  padding: clamp(1rem, 2.6vw, 1.6rem);
+  border: 2px solid #D9A441;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 92% 7%, rgba(217,164,65,.19), transparent 34%),
+    linear-gradient(140deg, #1E4634, #2B2B2B);
+  box-shadow: inset 0 0 0 4px rgba(246,241,231,.035);
+}
+.show-try-title {
+  font-family: inherit; /* one UI font for English headings across the app */
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  letter-spacing: normal; color: #F6F1E7;
+}
+.show-try .show-letter-btn {
+  min-width: 4.4rem; min-height: 58px;
+  border: 1.5px solid #D9A441; background: rgba(246,241,231,.09);
+}
+.show-try .show-letter-btn:focus-visible { outline: 3px solid #F6F1E7; outline-offset: 3px; }
+.show-all-destinations {
+  border: 1px solid rgba(217,164,65,.65);
+  border-radius: 14px;
+  padding: .85rem 1rem;
+  background: #F6F1E7;
+}
+.show-all-destinations summary {
+  color: #1E4634; font-weight: 750;
+  padding: .25rem 0;
+  cursor: pointer; font-size: 1.04rem;
+}
+.show-all-destinations[open] summary { margin-bottom: .6rem; }
+.show-all-destinations .show-grid { margin-bottom: .2rem; }
+.show-all-destinations .show-tile {
+  background: linear-gradient(160deg, #1E4634, #2B2B2B);
+  border-color: rgba(217,164,65,.6);
+}
+.show-all-destinations .show-tile-title { color: #F6F1E7; }
+.show-all-destinations .show-tile-hook { color: #F6F1E7; opacity: .85; }
+.show-portals :is(a,button):focus-visible,
+.show-all-destinations summary:focus-visible {
+  outline: 3px solid #D9A441; outline-offset: 3px;
+}
+@media (max-width: 920px) {
+  .show-portal-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px) {
+  .show-portal-art {
+    background-image: linear-gradient(180deg,
+      rgba(31,58,95,.05) 30%,rgba(31,58,95,.2) 70%,rgba(31,58,95,.65)),
+      url("../img/gen/HERO_olive_harvest_astral.900.webp");
+  }
+  .show-portal-grid { gap: .6rem; }
+  .show-portal-copy { padding: .72rem; }
+  .show-portal-note { font-size: .8rem; }
+}
+@media (max-width: 380px) {
+  .show-portal-grid { grid-template-columns: 1fr; }
+  .show-portal-art { aspect-ratio: 1.85/1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .show-portal { transition: none !important; }
+  .show-portal:hover { transform: none; }
+}
+
+
+/* Wide cinema is scoped to Home/Welcome; lessons and forms keep their original,
+   readable narrow measure. The photographed tree deserves room on desktop. */
+main:has(.showcase) {
+  max-inline-size: min(100%, 78rem);
+  padding-inline: clamp(.65rem, 2vw, 1.2rem);
+}
+main:has(.showcase) #home-today-host,
+main:has(.showcase) #home-rest,
+main:has(.showcase) #home-dests-host {
+  max-inline-size: 59rem;
+  margin-inline: auto;
+}
+main:has(.showcase) .show-hero-text {
+  padding: clamp(1.1rem, 2.7vw, 2.15rem) clamp(1.15rem, 3.5vw, 2.6rem);
+}
+main:has(.showcase) .show-hero {
+  border-radius: 19px;
+  box-shadow: 0 17px 46px rgba(43,43,43,.23);
+}
+@media (prefers-reduced-motion: reduce) {
+  main:has(.showcase) .show-hero { box-shadow: none; }
+}
+main:has(.showcase) .show-hero-text { display:flex; gap:1rem; align-items:flex-start; }
+.show-hero-copy { flex:1 1 auto; min-width:0; }
+.show-mascot-box { flex:0 0 auto; width:6rem; height:6rem; }
+.show-mascot-box:empty { display:none; }
+.show-mascot { display:block; width:100%; height:100%; object-fit:contain; margin:0; }

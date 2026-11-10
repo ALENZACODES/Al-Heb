@@ -1,0 +1,344 @@
+{
+ "id": "I-31",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Purim: the miracle blessing and the words of the day",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "פּוּרִים",
+   "en": "Purim",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "purim",
+    "sephardi": "purim",
+    "ashkenazi": "purim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1fb2094#forms.plural"
+   }
+  },
+  {
+   "he": "פּוּר",
+   "en": "lot",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pur",
+    "sephardi": "pur",
+    "ashkenazi": "pur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1fb2094"
+   }
+  },
+  {
+   "he": "שָׂמֵחַ",
+   "en": "happy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sameach",
+    "sephardi": "sameach",
+    "ashkenazi": "someiach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h78d6aa81#forms.present"
+   }
+  },
+  {
+   "he": "נִסִּים",
+   "en": "miracles",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nisim",
+    "sephardi": "nisim",
+    "ashkenazi": "nisim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3674f19e#forms.plural"
+   }
+  },
+  {
+   "he": "שֶׁעָשָׂה נִסִּים",
+   "en": "who performed miracles",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "she'asah nisim",
+    "sephardi": "she'asah nisim",
+    "ashkenazi": "she'osoh nisim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁעָשָׂה",
+     "נִסִּים"
+    ]
+   }
+  },
+  {
+   "he": "לַאֲבוֹתֵינוּ",
+   "en": "for our ancestors",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "la'avoteinu",
+    "sephardi": "la'avoteinu",
+    "ashkenazi": "la'avoseinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לַאֲבוֹתֵינוּ"
+    ]
+   }
+  },
+  {
+   "he": "בַּיָּמִים הָהֵם",
+   "en": "in those days",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bayamim hahem",
+    "sephardi": "bayamim hahem",
+    "ashkenazi": "bayomim hoheim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בַּיָּמִים",
+     "הָהֵם"
+    ]
+   }
+  },
+  {
+   "he": "בַּזְּמַן הַזֶּה",
+   "en": "at this time",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bazeman hazeh",
+    "sephardi": "bazeman hazeh",
+    "ashkenazi": "bazeman hazeh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בַּזְּמַן",
+     "הַזֶּה"
+    ]
+   }
+  },
+  {
+   "he": "שִׂמְחָה",
+   "en": "joy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "simchah",
+    "sephardi": "simchah",
+    "ashkenazi": "simchoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3612be9c"
+   }
+  },
+  {
+   "he": "מַשְׁקֶה",
+   "en": "drink",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mashkeh",
+    "sephardi": "mashkeh",
+    "ashkenazi": "mashkeh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h84bdc684#forms.present"
+   }
+  },
+  {
+   "he": "לְחַיִּים",
+   "en": "cheers!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechayim",
+    "sephardi": "lechayim",
+    "ashkenazi": "lechayim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pf3ba64a2"
+   }
+  }
+ ],
+ "prayerLines": [
+  "hanukkah-nissim",
+  "shehecheyanu",
+  "hagomel"
+ ],
+ "goals": [
+  "Say the blessing for miracles used on Purim and Hanukkah",
+  "Greet and toast in Hebrew",
+  "Know that the Megillah itself is not in the corpus"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-29"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-31-e01",
+   "type": "fade",
+   "line": "hanukkah-nissim",
+   "en": "Blessed are you... who performed miracles for our ancestors in those days, at this time."
+  },
+  {
+   "id": "I-31-e02",
+   "type": "spot",
+   "line": "hanukkah-nissim",
+   "target": "נִסִּים",
+   "en": "miracles"
+  },
+  {
+   "id": "I-31-e03",
+   "type": "order",
+   "he": "שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה",
+   "en": "who performed miracles for our ancestors in those days, at this time"
+  },
+  {
+   "id": "I-31-e04",
+   "type": "respond",
+   "cue": "The blessing ends 'bazman hazeh'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה",
+    "en": "in those days, at this time"
+   }
+  },
+  {
+   "id": "I-31-e05",
+   "type": "recall",
+   "he": "פּוּרִים",
+   "en": "Purim"
+  },
+  {
+   "id": "I-31-e06",
+   "type": "produce",
+   "en": "miracles",
+   "options": [
+    "נִסִּים",
+    "פּוּרִים",
+    "שִׂמְחָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-31-e07",
+   "type": "fade",
+   "line": "shehecheyanu",
+   "en": "Blessed are you... who has kept us alive, sustained us and brought us to this time."
+  },
+  {
+   "id": "I-31-e08",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "פּוּרִים",
+     "en": "Purim"
+    },
+    {
+     "he": "נִסִּים",
+     "en": "miracles"
+    },
+    {
+     "he": "שִׂמְחָה",
+     "en": "joy"
+    },
+    {
+     "he": "לְחַיִּים",
+     "en": "cheers"
+    },
+    {
+     "he": "שָׂמֵחַ",
+     "en": "happy"
+    }
+   ]
+  },
+  {
+   "id": "I-31-e09",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "חַג שָׂמֵחַ!",
+     "en": "Happy holiday!"
+    },
+    {
+     "speaker": "b",
+     "he": "לְחַיִּים!",
+     "en": "Cheers!"
+    }
+   ],
+   "task": "Say the greeting and answer the toast."
+  },
+  {
+   "id": "I-31-e10",
+   "type": "spot",
+   "line": "hagomel",
+   "target": "טוֹבוֹת",
+   "en": "good things",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-31-e11",
+   "type": "produce",
+   "en": "cheers!",
+   "options": [
+    "לְחַיִּים!",
+    "תּוֹדָה רַבָּה",
+    "שָׁנָה טוֹבָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-31-e12",
+   "type": "recall",
+   "he": "פּוּר",
+   "en": "lot"
+  },
+  {
+   "id": "I-31-e13",
+   "type": "order",
+   "he": "בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה",
+   "en": "in those days, at this time"
+  },
+  {
+   "id": "I-31-e14",
+   "type": "respond",
+   "cue": "A friend sends a greeting. Reply with a happy holiday.",
+   "answer": {
+    "he": "חַג שָׂמֵחַ",
+    "en": "Happy holiday"
+   }
+  }
+ ],
+ "note": "The Megillah blessings and reading, Al HaNisim, and Shushan Purim texts are not in any source file. 'Esther' and 'Mordechai' have no pointed token. The sheasah-nissim blessing is the one registered as the Hanukkah blessing; it is also said before the Megillah, a point to verify with a rabbi."
+}

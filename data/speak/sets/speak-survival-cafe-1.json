@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-cafe-1",
+ "title": "Survival: cafe",
+ "theme": "food-drink",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-cafe-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p7f7d7b8f",
+   "he": "מַיִם",
+   "translit": "mayim",
+   "en": "water",
+   "kind": "word",
+   "audioId": "il06-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p5e953ba9",
+   "he": "סָלָט",
+   "translit": "salat",
+   "en": "salad",
+   "kind": "word",
+   "audioId": "il07-w5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pf8630913",
+   "he": "פִּיתָה",
+   "translit": "pitah",
+   "en": "pita bread",
+   "kind": "word",
+   "audioId": "cafe-19",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pa04b1f3c",
+   "he": "פָלָאפֶל",
+   "translit": "falafel",
+   "en": "falafel",
+   "kind": "word",
+   "audioId": "cafe-17",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pf3ba64a2",
+   "he": "לְחַיִּים!",
+   "translit": "lechayim!",
+   "en": "cheers!",
+   "kind": "word",
+   "audioId": "i-19-w12",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6296527a",
+   "he": "אֶסְפְּרֶסוֹ",
+   "translit": "espereso",
+   "en": "espresso",
+   "kind": "word",
+   "audioId": "i-13-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p189bffd6",
+   "he": "טָעִים מְאֹד",
+   "translit": "ta'im me'od",
+   "en": "very tasty",
+   "kind": "phrase",
+   "audioId": "i-19-w11",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p43836f09",
+   "he": "שַׁקְשׁוּקָה",
+   "translit": "shakshukah",
+   "en": "shakshuka (eggs poached in tomato sauce)",
+   "kind": "word",
+   "audioId": "cafe-18",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p80064ddc",
+   "he": "קָפֶה הָפוּךְ",
+   "translit": "kafeh hafukh",
+   "en": "latte-style milky coffee (lit. upside-down coffee)",
+   "kind": "phrase",
+   "audioId": "i-13-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pce477866",
+   "he": "קָפֶה שָׁחוֹר",
+   "translit": "kafeh shachor",
+   "en": "black coffee",
+   "kind": "phrase",
+   "audioId": "i-13-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p7ec62c43",
+   "he": "קָפֶה עִם חָלָב",
+   "translit": "kafeh im chalav",
+   "en": "coffee with milk",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p2de095da",
+   "he": "תֵּה עִם נַעֲנָע",
+   "translit": "teh im na'ana",
+   "en": "tea with mint",
+   "kind": "phrase",
+   "audioId": "i-13-w5",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

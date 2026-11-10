@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "proofread": false,
+  "description": "Own-wording mouth hints for the dot-toggle tile. DRAFT, not checked by a speech teacher or native speaker. The sounds themselves are read from consonants.json at runtime (single source). Pairs: bet/vet, kaf/khaf, pe/fe (dagesh) and shin/sin (dot position).",
+  "pairs": [
+    { "id": "bet-vet", "letterId": "bet", "dot": "dagesh",
+      "hints": { "with": "Both lips press together and pop open.", "without": "Top teeth touch the lower lip; air buzzes through." } },
+    { "id": "kaf-khaf", "letterId": "kaf", "dot": "dagesh",
+      "hints": { "with": "The back of the tongue blocks the air for a moment, then releases.", "without": "The back of the tongue leaves a narrow gap and air rubs through, like a rough h from the throat." } },
+    { "id": "pe-fe", "letterId": "pe", "dot": "dagesh",
+      "hints": { "with": "Both lips press together and pop open, with no buzz.", "without": "Top teeth touch the lower lip; air rushes through, no buzz." } },
+    { "id": "shin-sin", "letterId": "shin", "dot": "shin-sin",
+      "hints": { "with": "Right-hand dot (shin): tongue pulled back a little, a hushing sound.", "without": "Left-hand dot (sin): tongue tip near the teeth, a hissing s sound." } }
+  ],
+  "caveats": [
+    "Which form a word uses (dotted or not) depends on the letter's position and the vowel before it. This tile only teaches what the dot does; it does not decide which form a given word has.",
+    "A dagesh also appears in other letters, where it does not change the sound audibly in Israeli Hebrew. Only bet, kaf and pe change sound.",
+    "Sephardi bet is sometimes described as softer than [b]; the data marks this as declining and unverified. The tile shows the Israeli textbook contrast."
+  ]
+}

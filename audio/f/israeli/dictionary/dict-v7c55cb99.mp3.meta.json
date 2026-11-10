@@ -1,0 +1,16 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "עוֹלָמִי",
+ "inputSha256": "60546bb76d68ada8b1778f68fac3c3a5d3926a83e7ed4760e759547852f9e2b1",
+ "ingestedAt": "2026-11-09T01:38:33.470Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-09T01:38:33.470Z",
+ "redistributionCleared": false,
+ "spokenText": "עוֹלָמִי",
+ "normalized": true
+}

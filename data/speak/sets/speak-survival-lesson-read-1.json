@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-lesson-read-1",
+ "title": "Survival: lesson read",
+ "theme": "religion-prayer",
+ "level": "A1",
+ "track": "read",
+ "pack": "survival-lesson-read-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "pefce5ddb",
+   "he": "כָּל",
+   "translit": "kol",
+   "en": "all, whole, everything",
+   "kind": "word",
+   "audioId": "r32-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p876ae85e",
+   "he": "לִי",
+   "translit": "li",
+   "en": "to me",
+   "kind": "word",
+   "audioId": "r06-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb9484fba",
+   "he": "לְךָ",
+   "translit": "lekha",
+   "en": "to you",
+   "kind": "word",
+   "audioId": "r14-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p58f69180",
+   "he": "יָאֵר",
+   "translit": "ya'er",
+   "en": "may He shine",
+   "kind": "word",
+   "audioId": "r25-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0a649453",
+   "he": "רַבָּא",
+   "translit": "raba",
+   "en": "great",
+   "kind": "word",
+   "audioId": "r45-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0e9c033e",
+   "he": "הַכֹּל",
+   "translit": "hakol",
+   "en": "the all",
+   "kind": "word",
+   "audioId": "r44-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p5218d74d",
+   "he": "מוֹדָה",
+   "translit": "modah",
+   "en": "grateful (f.)",
+   "kind": "word",
+   "audioId": "r39-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb5035285",
+   "he": "הַזָּן",
+   "translit": "hazan",
+   "en": "who feeds",
+   "kind": "word",
+   "audioId": "r47-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pc1622162",
+   "he": "טֹּבוּ",
+   "translit": "tovu",
+   "en": "good are",
+   "kind": "word",
+   "audioId": "r40-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0494a8ee",
+   "he": "אֵלֶיךָ",
+   "translit": "elekha",
+   "en": "toward you",
+   "kind": "word",
+   "audioId": "r25-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p797dfc5a",
+   "he": "וְאָנִי",
+   "translit": "ve'ani",
+   "en": "and I",
+   "kind": "word",
+   "audioId": "r14-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb34f3bdc",
+   "he": "וְהָיָה",
+   "translit": "vehayah",
+   "en": "and it will be",
+   "kind": "word",
+   "audioId": "r33-w1",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

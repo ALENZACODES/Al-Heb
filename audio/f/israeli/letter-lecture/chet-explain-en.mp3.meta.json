@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Chet — KHET. Sound: a throaty KH, like the ch in Bach. Shape hook: bridge with both legs attached. Tip: Both verticals touch the horizontal roof; He has a separated left post; do not mix it up with He, Tav.",
+ "inputSha256": "072e8646ef912ca3db669b0c986641d25a8bbdcd622e997824a4c6d0a15938a6",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

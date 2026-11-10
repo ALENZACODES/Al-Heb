@@ -16,7 +16,7 @@ body.fd-player #game-music,
 body.fd-player .rimon-corner,
 body.fd-player .rimon-bubble,
 body.fd-player .rimon-restore { display: none !important; }
-body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1rem calc(15rem + env(safe-area-inset-bottom)); } /* room for Hear it / Trace it above the pinned Continue button */
+body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1rem calc(12rem + env(safe-area-inset-bottom)); } /* room for Hear it / Trace it stacked above Continue in the footer */
 
 .alef-firstday { --fd-gold: #d9a441; --fd-gold-hi: #e8c97a; --fd-cream: #f6f1e7; --fd-sage: #b9c9a4; --fd-ok: #7fb069; --fd-bad: #e07a5f; color: var(--fd-cream); }
 .alef-firstday a { color: var(--fd-gold-hi); }
@@ -94,6 +94,9 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
   background: rgba(15, 36, 19, .96); border-block-start: 1px solid rgba(217, 164, 65, .25);
 }
 .fd-foot:empty { display: none; }
+.fd-foot-tools { display: flex; flex-wrap: wrap; gap: .6rem; flex: 1 1 100%; max-inline-size: 40rem; }
+.fd-foot-tools .btn { min-inline-size: 7rem; }
+
 .fd-foot .fd-cta { flex: 1 1 100%; max-inline-size: 40rem; min-block-size: 54px; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em; text-align: center; text-decoration: none; display: inline-grid; place-items: center; }
 .fd-foot .fd-cta[disabled] { background: rgba(246, 241, 231, .16); color: rgba(246, 241, 231, .5); box-shadow: none; cursor: not-allowed; }
 .fd-sheet { animation: fd-rise .28s cubic-bezier(.2, .8, .2, 1); }

@@ -1823,7 +1823,7 @@
   {"id":"vayehi-binsoa-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיְהִי","soundtext":"vai-hí","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"vayehi-binsoa-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בִּנְסֹעַ","soundtext":"bin-só-a","confidence":"medium","flags":["furtive-stress-own-rule","pharyngeal-merged"]},
   {"id":"vayehi-binsoa-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"הָאָרֹן","soundtext":"ha-a-rón","confidence":"medium","flags":["final-stress-assumed"]},
-  {"id":"vayehi-binsoa-w4","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיֹאמֶר","soundtext":"va-yo-mér","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"vayehi-binsoa-w4","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיֹּאמֶר","soundtext":"va-yo-mér","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"vayehi-binsoa-w5","kind":"word","group":"prayer-word","voices":["m","f"],"he":"מֹשֶׁה","soundtext":"mo-shé","confidence":"low","flags":["final-stress-assumed","possible-segolate"]},
   {"id":"vayehi-binsoa-w6","kind":"word","group":"prayer-word","voices":["m","f"],"he":"קוּמָה","soundtext":"ku-má","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"vayehi-binsoa-w7","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-do-nái","confidence":"medium","flags":["stress-from-small-list"]},

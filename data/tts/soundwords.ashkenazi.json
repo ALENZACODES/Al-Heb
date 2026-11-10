@@ -1818,7 +1818,7 @@
   {"id":"vayehi-binsoa-w1","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיְהִי","soundtext":"vái-hi","confidence":"medium","flags":["ashk-penultimate-default"]},
   {"id":"vayehi-binsoa-w2","kind":"word","group":"prayer-word","voices":["m","f"],"he":"בִּנְסֹעַ","soundtext":"bin-sói-a","confidence":"medium","flags":["ashk-penultimate-default"]},
   {"id":"vayehi-binsoa-w3","kind":"word","group":"prayer-word","voices":["m","f"],"he":"הָאָרֹן","soundtext":"ho-ó-roin","confidence":"medium","flags":["ashk-penultimate-default"]},
-  {"id":"vayehi-binsoa-w4","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיֹאמֶר","soundtext":"va-yói-mer","confidence":"medium","flags":["ashk-penultimate-default"]},
+  {"id":"vayehi-binsoa-w4","kind":"word","group":"prayer-word","voices":["m","f"],"he":"וַיֹּאמֶר","soundtext":"va-yói-mer","confidence":"medium","flags":["ashk-penultimate-default"]},
   {"id":"vayehi-binsoa-w5","kind":"word","group":"prayer-word","voices":["m","f"],"he":"מֹשֶׁה","soundtext":"mói-she","confidence":"medium","flags":["ashk-penultimate-default"]},
   {"id":"vayehi-binsoa-w6","kind":"word","group":"prayer-word","voices":["m","f"],"he":"קוּמָה","soundtext":"kú-me","confidence":"medium","flags":["ashk-final-kamatz-reduced","ashk-penultimate-default"]},
   {"id":"vayehi-binsoa-w7","kind":"word","group":"prayer-word","voices":["m","f"],"he":"אֲדֹנָי","soundtext":"a-doi-nói","confidence":"medium","flags":["stress-from-small-list"]},

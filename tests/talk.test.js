@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   detectDirection, hasHebrew, holdsDivineName, hasLatinName, normalizeForCompare,
   pushHistory, resolveBackendUrl, stripNikkud, swapDirection, translationMatchScore,
-  wordErrorRate,
+  wordErrorRate, loadSettings,
 } from '../src/talk/talk.model.js';
 
 test('stripNikkud removes vowel points and leaves letters', () => {
@@ -65,4 +65,11 @@ test('history keeps the newest first and caps the list', () => {
   const capped = pushHistory(out, { id: '3', ts: 3, direction: 'auto', source: 'x', translation: 'y' }, 2);
   assert.equal(capped.length, 2);
   assert.equal(capped[0].id, '3');
+});
+
+test('voice-keep defaults off and only turns on when explicitly saved', () => {
+  const d = loadSettings({});
+  assert.equal(d.voiceKeep, false);
+  assert.equal(loadSettings({ voiceKeep: true }).voiceKeep, true);
+  assert.equal(loadSettings({ voiceKeep: 'yes' }).voiceKeep, false);
 });

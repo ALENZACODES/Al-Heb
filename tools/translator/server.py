@@ -30,6 +30,7 @@ class TextIn(BaseModel):
     direction: str = "auto"
     nikkud: bool = False
     speak: bool = True
+    voice_keep: bool = False
 
 
 @app.get("/health")
@@ -43,6 +44,8 @@ def health():
         "spend_usd": spend.total(),
         "spend_stop": spend.SOFT_STOP,
         "voice": pipeline.try_instant_custom_voice_access(),
+        "camera_ocr": "gemini_vision",
+        "cloud_vision": False,
     }
 
 
@@ -52,6 +55,7 @@ async def talk(
     direction: str = Form("auto"),
     nikkud: str = Form("false"),
     speak: str = Form("true"),
+    voice_keep: str = Form("false"),
     partial: str = Form(""),
     audio: UploadFile | None = File(None),
 ):
@@ -61,6 +65,7 @@ async def talk(
         direction=direction,
         nikkud=str(nikkud).lower() in ("1", "true", "yes"),
         speak=str(speak).lower() in ("1", "true", "yes"),
+        voice_keep=str(voice_keep).lower() in ("1", "true", "yes"),
         partial=partial or "",
         audio=audio,
         json_body=None,
@@ -71,7 +76,7 @@ async def talk(
 async def talk_json(body: TextIn):
     try:
         result = pipeline.talk(
-            text=body.text, direction=body.direction, nikkud=body.nikkud, speak=body.speak
+            text=body.text, direction=body.direction, nikkud=body.nikkud, speak=body.speak, voice_keep=body.voice_keep
         )
     except spend.SpendCapExceeded as e:
         raise HTTPException(status_code=429, detail=str(e))
@@ -102,7 +107,7 @@ async def translate_text_only(body: TextIn):
     return result
 
 
-async def _talk_impl(text, direction, nikkud, speak, partial, audio, json_body):
+async def _talk_impl(text, direction, nikkud, speak, partial, audio, json_body, voice_keep=False):
     audio_bytes = b""
     mime = ""
     if audio is not None:
@@ -118,6 +123,7 @@ async def _talk_impl(text, direction, nikkud, speak, partial, audio, json_body):
             direction=direction,
             nikkud=nikkud,
             speak=speak,
+            voice_keep=voice_keep,
             partial=partial or "",
         )
     except spend.SpendCapExceeded as e:
@@ -148,6 +154,7 @@ async def json_talk(request: Request, call_next):
                     direction=body.get("direction") or "auto",
                     nikkud=bool(body.get("nikkud")),
                     speak=body.get("speak", True),
+                    voice_keep=body.get("voice_keep", False),
                 )
             except spend.SpendCapExceeded as e:
                 return JSONResponse({"ok": False, "error": str(e)}, status_code=429)
@@ -155,6 +162,31 @@ async def json_talk(request: Request, call_next):
                 return JSONResponse({"ok": False, "error": "Translation failed."}, status_code=502)
             return JSONResponse(result)
     return await call_next(request)
+
+
+
+@app.post("/v1/camera")
+async def camera(
+    image: UploadFile = File(...),
+    gold: str = Form("false"),
+    direction: str = Form("he-en"),
+):
+    data = await image.read()
+    if len(data) > 10_000_000:
+        raise HTTPException(status_code=413, detail="That photo is too large.")
+    try:
+        from tools.translator.camera import load_image_bytes, translate_image
+        im = load_image_bytes(data)
+        result = translate_image(
+            im,
+            gold=str(gold).lower() in ("1", "true", "yes"),
+            direction=direction or "he-en",
+        )
+    except spend.SpendCapExceeded as e:
+        raise HTTPException(status_code=429, detail=str(e))
+    except Exception:
+        raise HTTPException(status_code=502, detail="Camera translation failed.")
+    return result
 
 
 if __name__ == "__main__":

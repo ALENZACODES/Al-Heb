@@ -64,6 +64,10 @@ John authorised up to **US$100** of Google Cloud. Every call is estimated in `to
 
 See `tools/translator/render.yaml`. A private or web service would take `GOOGLE_TTS_API_KEY` and `GOOGLE_CLOUD_PROJECT` from the Render dashboard, not from the repo.
 
-## Camera follow-on
+## Camera
 
-A `#/camera` “translate the sign on the photo” feature (Vision OCR + overlay) shares this stack and the same spend cap. Spec: overnight FABLE-2. Built after the first green translator backtest.
+`#/camera` is on this branch. Overlay style is in `docs/camera/OVERLAY-STYLE.md` and `docs/camera/README.md`. The high-accuracy OCR path is Gemini vision because Cloud Vision is disabled on the project. `src/photo/` (tesseract.js, sign mode) remains the on-device Scan path and is what a local fallback should reuse. Branch `claude/camera-translate-fable-2026-11-10` was not on origin when this was built, so there was nothing to reconcile.
+
+## Audio backtest
+
+Cloud Speech-to-Text is also disabled (and v3 Translation / Speech v2 need OAuth, which this machine does not have). The 100-sample speech backtest synthesizes with Chirp 3 HD and transcribes with Gemini 3.5 Flash Lite audio, three times. Report: `docs/review/TRANSLATOR-AUDIO-BACKTEST-2026-11-10.md`.

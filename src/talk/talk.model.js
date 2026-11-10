@@ -8,6 +8,8 @@ const LAT_WORD = /[A-Za-z]/;
 export const NAME_SKELETON = 'יהוה';
 export const HISTORY_KEY = 'alef.talk.history.v1';
 export const SETTINGS_KEY = 'alef.talk.settings.v1';
+/** Experimental Gemini Live / native-audio speech-to-speech (off by default). */
+export const VOICE_KEEP_DEFAULT = false;
 export const URL_KEY = 'alefTranslatorUrl';
 export const MAX_HISTORY = 80;
 
@@ -156,4 +158,18 @@ export function swapDirection(dir) {
 
 export function uid() {
   return 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+
+/**
+ * @param {object} [saved]
+ * @returns {{direction:string, faceToFace:boolean, nikkud:boolean, autoSpeak:boolean, voiceKeep:boolean}}
+ */
+export function loadSettings(saved = {}) {
+  return {
+    direction: saved.direction === 'en-he' || saved.direction === 'he-en' ? saved.direction : 'auto',
+    faceToFace: !!saved.faceToFace,
+    nikkud: !!saved.nikkud,
+    autoSpeak: saved.autoSpeak !== false,
+    voiceKeep: saved.voiceKeep === true, // off unless explicitly enabled
+  };
 }

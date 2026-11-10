@@ -78,6 +78,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/speak/speak.js',
   // Talk (live translator) screen: route code only, fetched on first open, runtime-cached (keeps first install under 3.95 MiB).
   'src/talk/talk.view.js', 'src/talk/talk.model.js',
+  // Camera sign translator: route code only, fetched on first open, runtime-cached.
+  'src/camera/camera.view.js', 'src/camera/camera.model.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',

@@ -14,6 +14,8 @@ import json
 import math
 import os
 import struct
+import threading
+import time
 import wave
 from pathlib import Path
 
@@ -70,6 +72,43 @@ def api_key() -> str:
 
 def _client() -> httpx.Client:
     return httpx.Client(timeout=60.0)
+
+
+_GEMINI_LOCK = threading.Lock()
+_GEMINI_NEXT = 0.0
+_GEMINI_INTERVAL = 0.55  # min seconds between Gemini calls (shared by all threads)
+
+
+def _acquire_gemini_slot(extra: float = 0.0) -> None:
+    global _GEMINI_NEXT
+    with _GEMINI_LOCK:
+        now = time.monotonic()
+        wait = _GEMINI_NEXT - now
+        _GEMINI_NEXT = max(_GEMINI_NEXT, now) + _GEMINI_INTERVAL + extra
+    if wait > 0:
+        time.sleep(wait)
+
+
+def _gemini_generate(model: str, key: str, payload: dict, retries: int = 6) -> httpx.Response:
+    """POST generateContent with backoff on 429/5xx and transport errors."""
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    last: httpx.Response | BaseException | None = None
+    for attempt in range(retries):
+        _acquire_gemini_slot(extra=(2 ** attempt if attempt else 0))
+        try:
+            r = _client().post(url, params={"key": key}, json=payload)
+        except (httpx.TimeoutException, httpx.ConnectError, httpx.TransportError) as e:
+            last = e
+            time.sleep(min(2 ** attempt, 20))
+            continue
+        last = r
+        if r.status_code in (429, 500, 502, 503, 504):
+            time.sleep(min(2 ** attempt + 1, 25))
+            continue
+        return r
+    if isinstance(last, BaseException):
+        raise RuntimeError(f"Gemini request failed ({type(last).__name__}).")
+    return last  # type: ignore[return-value]
 
 
 def _get(key_name: str):
@@ -196,31 +235,27 @@ def _translate_gemini(text: str, source: str, target: str) -> tuple[str, str]:
         f"Translate the following {src_name} into natural everyday {tgt_name}, "
         "in the same register as a conversation-phrase translator. "
         "Glossary: סידור is a Jewish prayer book (siddur), never a menu; "
-        "תעיתי in travel or directions means I'm lost, not I was wrong; "
-        "מוצאי שבת means After Shabbat (Motzaei Shabbat). "
+        "תעיתי in travel or directions means I'm lost, not I was wrong or I am mistaken; "
+        "translate I'm lost as תעיתי, never אני טועה; "
+        "מוצאי שבת means After Shabbat (Motzaei Shabbat); "
+        "שקית is a shopping bag (not תיק unless the source said briefcase); "
+        "I'm fine, thanks is אני בסדר, תודה — return only that translation, no extra greeting. "
         "Return only the translation, with no quotes, labels, or explanation. "
         "Do not add vowel points (nikkud) unless the source already has them.\n\n"
         f"{text}"
     )
     last = None
+    payload = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0}}
     for model in GEMINI_TRANSLATE_MODELS:
-        r = _client().post(
-            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-            params={"key": key},
-            json={"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0}},
-        )
-        if r.status_code == 503:
-            last = r
-            continue
+        r = _gemini_generate(model, key, payload)
+        last = r
         if r.status_code >= 400:
-            last = r
             continue
         spend.charge("gemini", chars=len(prompt) + 32, detail=f"{model} {source or 'auto'}->{target} {len(text)}c")
         parts = (((r.json().get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
         out = "".join(p.get("text") or "" for p in parts).strip().strip('"').strip("'")
         if out:
             return out, source or ""
-        last = r
     status = last.status_code if last is not None else "none"
     raise RuntimeError(f"Gemini translation failed ({status}).")
 
@@ -388,6 +423,7 @@ def talk(
     nikkud: bool = False,
     speak: bool = True,
     partial: str = "",
+    voice_keep: bool = False,
 ) -> dict:
     """Run the conversation pipeline. Never speaks the divine Name."""
     source_audio = audio
@@ -456,6 +492,12 @@ def talk(
             f"stock_match:{gender or 'female'} (Chirp 3 Instant Custom Voice does not "
             "support Hebrew; closest stock voice by pitch/gender was used)"
         )
+        if voice_keep:
+            voice_mode = (
+                "voice_keep_flag: Gemini Live / native-audio speech-to-speech is requested, "
+                "but this turn still uses stock Chirp 3 HD. A same-speaker clone is not available "
+                "for Hebrew on the keys we have. Intonation is approximated, not kept."
+            )
 
     return {
         "ok": True,
@@ -466,6 +508,7 @@ def talk(
         "detected": detected,
         "stt_confidence": stt_conf,
         "voice_mode": voice_mode,
+        "voice_keep": bool(voice_keep),
         "voice_name": voice_name,
         "audio": audio_b64,
         "audio_mime": audio_mime,
@@ -489,3 +532,48 @@ def try_instant_custom_voice_access() -> dict:
             or os.environ.get("CLOUDSDK_AUTH_ACCESS_TOKEN")
         ),
     }
+
+
+ASR_MODELS = (
+    "gemini-3.5-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-3.5-flash",
+    "gemini-3-flash-preview",
+)
+
+
+def transcribe_audio(audio: bytes, mime: str = "audio/mp3", lang_hint: str = "auto") -> tuple[str, str]:
+    """Transcribe speech with Gemini audio input (Cloud Speech-to-Text is not enabled).
+
+    Returns (transcript, engine_name).
+    """
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("VERTEX_API_KEY") or ""
+    if not key:
+        raise RuntimeError("No Gemini key is configured for transcription.")
+    mime = mime or "audio/mp3"
+    if mime in ("audio/mpeg", "audio/mp3"):
+        mime = "audio/mp3"
+    hint = "Hebrew" if (lang_hint or "").startswith("he") else "English" if (lang_hint or "").startswith("en") else "English or Hebrew"
+    prompt = (
+        f"Transcribe the {hint} speech exactly as spoken. "
+        "Return only the transcript, with no labels, quotes, or commentary. "
+        "Keep numbers as words if they were spoken as words."
+    )
+    b64 = base64.b64encode(audio).decode("ascii")
+    last = None
+    payload = {"contents": [{"parts": [
+        {"text": prompt},
+        {"inline_data": {"mime_type": mime, "data": b64}},
+    ]}], "generationConfig": {"temperature": 0}}
+    for model in ASR_MODELS:
+        r = _gemini_generate(model, key, payload)
+        last = r
+        if r.status_code >= 400:
+            continue
+        spend.charge("gemini", chars=len(prompt) + max(len(audio) // 20, 40), detail=f"asr {model} {len(audio)}b")
+        parts = (((r.json().get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
+        text = "".join(p.get("text") or "" for p in parts).strip().strip('"')
+        if text:
+            return text, f"gemini_audio:{model}"
+    status = last.status_code if last is not None else "none"
+    raise RuntimeError(f"Gemini audio transcription failed ({status}).")

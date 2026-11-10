@@ -145,6 +145,7 @@ export const ROUTES = [
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
   { name: 'speak', pattern: '/speak', module: '../speak/speak.view.js', title: 'Say it', owner: 'speak', optional: true, group: 'learn', quick: 'nav.speak' },
   { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },
+  { name: 'camera', pattern: '/camera', module: '../camera/camera.view.js', title: 'Camera', owner: 'camera', optional: true, quick: 'nav.camera' },
   { name: 'sprint', pattern: '/sprint', module: '../sprint/sprint.view.js', title: 'Word Sprint', owner: 'sprint', optional: true, group: 'learn', quick: 'nav.sprint' },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
   { name: 'roles',    pattern: '/gender/roles',  module: '../curriculum/learn.view.js', title: 'Say it as me',     owner: 'lane1', group: 'learn', quick: 'nav.roles',    query: { gender: 'roles' }, needs: 'curriculum/gender.view.js' },

@@ -4,7 +4,7 @@
 import { h } from '../shell/ui.js';
 import {
   detectDirection, hasHebrew, holdsDivineName, pushHistory, resolveBackendUrl,
-  stripNikkud, swapDirection, uid, HISTORY_KEY, SETTINGS_KEY, URL_KEY,
+  stripNikkud, swapDirection, uid, HISTORY_KEY, SETTINGS_KEY, URL_KEY, loadSettings,
 } from './talk.model.js';
 
 const LANG = { en: 'English', he: 'עברית' };
@@ -86,12 +86,14 @@ export function mount(root, ctx) {
   let direction = 'auto'; // auto | en-he | he-en
   let faceToFace = false;
   let nikkud = false;
+  let voiceKeep = false;
   let autoSpeak = true;
   const saved = storageGet(SETTINGS_KEY, {});
   if (saved && typeof saved === 'object') {
     if (saved.direction) direction = saved.direction;
     faceToFace = !!saved.faceToFace;
     nikkud = !!saved.nikkud;
+    voiceKeep = saved.voiceKeep === true;
     if (typeof saved.autoSpeak === 'boolean') autoSpeak = saved.autoSpeak;
   }
   /** @type {any[]} */
@@ -149,13 +151,16 @@ export function mount(root, ctx) {
   const togFace = h('input', { type: 'checkbox', id: 'talk-face' });
   const togNikkud = h('input', { type: 'checkbox', id: 'talk-nikkud' });
   const togSpeak = h('input', { type: 'checkbox', id: 'talk-speak' });
+  const togVoice = h('input', { type: 'checkbox', id: 'talk-voice-keep' });
   togFace.checked = faceToFace;
   togNikkud.checked = nikkud;
   togSpeak.checked = autoSpeak;
+  togVoice.checked = voiceKeep;
   const toggles = h('div', { class: 'talk-toggles' },
     h('label', {}, togFace, ' Face-to-face (other side upside down)'),
     h('label', {}, togNikkud, ' Show Hebrew with vowels (nikkud) when available'),
-    h('label', {}, togSpeak, ' Speak the translation automatically'));
+    h('label', {}, togSpeak, ' Speak the translation automatically'),
+    h('label', {}, togVoice, ' Keep my intonation (experimental, not a voice clone)'));
 
   const histTitle = h('h2', {}, 'History');
   const hist = h('ul', { class: 'talk-history' });
@@ -166,7 +171,7 @@ export function mount(root, ctx) {
   root.replaceChildren(wrap);
 
   function persist() {
-    storageSet(SETTINGS_KEY, { direction, faceToFace, nikkud, autoSpeak });
+    storageSet(SETTINGS_KEY, { direction, faceToFace, nikkud, autoSpeak, voiceKeep });
     storageSet(HISTORY_KEY, history);
   }
 
@@ -368,6 +373,7 @@ export function mount(root, ctx) {
     fd.append('direction', direction);
     fd.append('nikkud', String(nikkud));
     fd.append('speak', String(autoSpeak));
+    fd.append('voice_keep', String(voiceKeep));
     if (partial) fd.append('partial', partial);
     await translatePayload(fd);
     hint.textContent = 'Tap the microphone, speak, then tap again to translate.';
@@ -385,6 +391,7 @@ export function mount(root, ctx) {
   };
   togFace.onchange = () => { faceToFace = togFace.checked; persist(); paintLangs(); };
   togNikkud.onchange = () => { nikkud = togNikkud.checked; persist(); };
+  togVoice.onchange = () => { voiceKeep = togVoice.checked; persist(); };
   togSpeak.onchange = () => { autoSpeak = togSpeak.checked; persist(); };
   mic.onclick = () => { recording ? stopRec() : startRec(); };
   send.onclick = () => translateText(ta.value);

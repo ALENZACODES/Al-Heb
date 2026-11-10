@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book45-p01.mp3"
    },
    "illustration": "a phone face down, an unmade bed, sunlight",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book45-p02.mp3"
    },
    "illustration": "a man standing in his kitchen in pajamas",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book45-p03.mp3"
    },
    "illustration": "thumb hovering over the mail icon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book45-p04.mp3"
    },
    "illustration": "the phone going into a drawer",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book45-p05.mp3"
    },
    "illustration": "wandering with hands in pockets, looking up at balconies",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book45-p06.mp3"
    },
    "illustration": "a cluttered secondhand bookshop",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book45-p07.mp3"
    },
    "illustration": "a worn hardcover with a torn jacket",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book45-p08.mp3"
    },
    "illustration": "a bench under a ficus tree",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book45-p09.mp3"
    },
    "illustration": "the shadow of the tree moving across the bench",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book45-p10.mp3"
    },
    "illustration": "a small boy with a ball",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book45-p11.mp3"
    },
    "illustration": "the man showing the cover",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book45-p12.mp3"
    },
    "illustration": "the boy running off, the man smiling at the book",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

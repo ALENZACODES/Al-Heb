@@ -7,7 +7,9 @@ export const BROWSER = [
 ].map((n) => `tests/${n}.test.js`);
 // Convention: any tests/*.browser.test.js is browser tier too.
 const isBrowser = (f) => BROWSER.includes(f) || f.endsWith('.browser.test.js');
-const all = () => readdirSync('tests').filter((f) => f.endsWith('.test.js')).map((f) => `tests/${f}`).sort();
+const inDir = (dir) => { try { return readdirSync(dir).filter((f) => f.endsWith('.test.js')).map((f) => `${dir}/${f}`); } catch { return []; } };
+// tests/*.test.js plus the retention suite in tests/retention/*.test.js.
+const all = () => [...inDir('tests'), ...inDir('tests/retention')].sort();
 export const unitFiles = () => all().filter((f) => !isBrowser(f));
 export const browserFiles = () => all().filter(isBrowser);
 export const allFiles = () => all();

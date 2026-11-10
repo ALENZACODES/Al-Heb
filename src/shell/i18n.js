@@ -1,13 +1,11 @@
 // Minimal i18n. English is the UI language. Hebrew strings exist for key navigation
 // labels only and are FLAGGED FOR NATIVE REVIEW (see HEBREW_REVIEW_NEEDED).
 export const en = {
-  'app.name': 'Aleph',
+  'app.name': 'ALEF',
   'app.tagline': 'Read Hebrew aloud. Speak it in Israel.',
   'skip': 'Skip to main content',
-  'nav.home': 'Home', 'nav.learn': 'Learn', 'nav.letters': 'Letters', 'nav.sounds': 'Sounds',
-  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About', 'nav.help': 'Help', 'nav.workbook': 'Workbook', 'nav.atlas': 'Letter atlas', 'nav.soundgap': 'Sound gap', 'nav.vocab': 'Dictionary — 5,000 words', 'nav.ladder': 'Syllable ladder', 'nav.fade': 'Fade-out recall', 'nav.gender': 'Gender pairs', 'nav.roles': 'Say it as me', 'nav.scaffold': 'Read without English letters', 'nav.vowelboard': 'Vowel board', 'nav.progress': 'Your progress', 'nav.wordtrace': 'Trace words', 'nav.torahread': 'Torah reading', 'nav.torahreader': 'Torah reader', 'nav.israel': 'Sound like a local', 'nav.traditions': 'Pronunciation styles', 'nav.classtrack': 'My study plan', 'nav.morning': 'Morning verse', 'nav.timedread': 'Timed read-aloud', 'nav.share': 'Share my progress', 'nav.service': 'Follow the service', 'nav.firstday': 'First 10 minutes', 'nav.placement': 'Placement check', 'nav.reminders': 'Study reminders', 'nav.install': 'Install Aleph', 'nav.compare': 'Compare pronunciation styles', 'nav.typing': 'Typing practice', 'nav.credits': 'Credits and licences', 'nav.privacy': 'Privacy', 'nav.terms': 'Terms and rights', 'nav.grammar': 'Grammar notes', 'nav.intermediate': 'Intermediate lessons', 'nav.practical': 'Practical', 'nav.israelunits': 'Hebrew for Israel, unit by unit', 'nav.route.israelunits': 'Hebrew for Israel (moved to Practical)', 'nav.traditionquiz': 'Which pronunciation style is this?', 'nav.readmyway': 'Read it my way', 'nav.rules': 'Pronunciation rules', 'nav.trope': 'Chanting-mark trainer', 'nav.listen': 'Listen and pick', 'nav.festivals': 'This week in the Jewish year', 'nav.offline': 'Use Aleph offline', 'nav.vocab-themes': 'Theme packs', 'nav.speak': 'Say it', 'nav.firstday-ladder': 'Reading with fewer vowel marks', 'nav.sprint': 'Word Sprint', 'nav.classsummary': 'Class summary', 'nav.niqquddial': 'Vowel-point dial', 'nav.dottile': 'Dot tiles', 'nav.syllablechips': 'Syllable chips', 'nav.loanwords': 'Words you can read', 'nav.checkpoint': 'Look-alike check', 'nav.dialogues': 'Israel dialogues',
-  'home.more': 'More ways to learn', 'home.more.hint': 'Optional practice. These open inside the Learn section.',
-  'home.opening.title': 'Opening prayer',
+  'nav.home': 'Home', 'nav.learn': 'Learn', 'nav.ask': 'Ask the Torah', 'nav.letters': 'Letters', 'nav.sounds': 'Sounds',
+  'nav.read': 'Read', 'nav.scan': 'Scan', 'nav.calendar': 'Calendar', 'nav.settings': 'Settings', 'nav.about': 'About', 'nav.help': 'Help', 'nav.workbook': 'Workbook', 'nav.light': 'Star of David light', 'nav.atlas': 'Letter atlas', 'nav.soundgap': 'Sound gap', 'nav.vocab': 'Dictionary — 5,000 words', 'nav.ladder': 'Syllable ladder', 'nav.fade': 'Fade-out recall', 'nav.gender': 'Gender pairs', 'nav.roles': 'Say it as me', 'nav.scaffold': 'Read without English letters', 'nav.vowelboard': 'Vowel board', 'nav.progress': 'Your progress', 'nav.wordtrace': 'Trace words', 'nav.torahread': 'Torah reading', 'nav.torahreader': 'Torah reader', 'nav.israel': 'Sound like a local', 'nav.traditions': 'Pronunciation styles', 'nav.classtrack': 'My study plan', 'nav.morning': 'Morning verse', 'nav.timedread': 'Timed read-aloud', 'nav.share': 'Share my progress', 'nav.service': 'Follow the service', 'nav.firstday': 'First 10 minutes', 'nav.placement': 'Placement check', 'nav.reminders': 'Study reminders', 'nav.install': 'Install ALEF', 'nav.compare': 'Compare pronunciation styles', 'nav.typing': 'Typing practice', 'nav.credits': 'Credits and licences', 'nav.privacy': 'Privacy', 'nav.terms': 'Terms and rights', 'nav.grammar': 'Grammar notes', 'nav.intermediate': 'Intermediate lessons', 'nav.practical': 'Practical', 'nav.israelunits': 'Hebrew for Israel, unit by unit', 'nav.route.israelunits': 'Hebrew for Israel (moved to Practical)', 'nav.traditionquiz': 'Which pronunciation style is this?', 'nav.readmyway': 'Read it my way', 'nav.rules': 'Pronunciation rules', 'nav.trope': 'Chanting-mark trainer', 'nav.listen': 'Listen and pick', 'nav.festivals': 'This week in the Jewish year', 'nav.offline': 'Use ALEF offline', 'nav.vocab-themes': 'Theme packs', 'nav.speak': 'Say it', 'nav.firstday-ladder': 'Reading with fewer vowel marks', 'nav.sprint': 'Word Sprint', 'nav.classsummary': 'Class summary', 'nav.niqquddial': 'Vowel-point dial', 'nav.dottile': 'Dot tiles', 'nav.syllablechips': 'Syllable chips', 'nav.loanwords': 'Words you can read', 'nav.checkpoint': 'Look-alike check', 'nav.dialogues': 'Israel dialogues',  'home.more': 'More ways to learn', 'home.more.hint': 'Optional practice. These open inside the Learn section.',  'home.opening.title': 'Opening prayer',
   'home.opening.draft': 'Draft: a rabbi or Hebrew teacher has not checked this yet.',
   'home.opening.body': 'This spot is kept for an opening prayer. We will add one after a rabbi or Hebrew teacher has checked it. The plan is to start with the Priestly Blessing, a short blessing from the Torah (Numbers 6:24-26).',
   'home.opening.link': 'Go to Read',
@@ -21,7 +19,7 @@ export const en = {
   'home.quick': 'Go to',
   'home.reflect': 'Morning and evening reflection',
   'home.reflect.link': 'Open today\'s prompt',
-  'home.install': 'Install Aleph on this device',
+  'home.install': 'Install ALEF on this device',
   'settings.title': 'Settings',
   'settings.voice': 'Voice', 'settings.voice.f': 'Woman (Noa)', 'settings.voice.m': 'Man (Ari)',
   'settings.congregation': 'Pronunciation style',
@@ -37,13 +35,16 @@ export const en = {
   'settings.persist.no': 'This browser cannot save your progress. It will be lost when you close the app, so download a backup before you leave.',
   'settings.reset': 'Reset settings to defaults',
   'unavailable.title': 'Not available yet',
-  'unavailable.body': 'This part of Aleph is not ready yet. Nothing is broken. Please check back later.',
+  'unavailable.body': 'This part of ALEF is not ready yet. Nothing is broken. Please check back later.',
   'error.title': 'This screen did not load',
   'error.body': 'Sorry about that. Try reloading the page, or go back to Home.',
+  'offline.title': 'Needs a connection the first time',
+  'offline.body': 'This screen is not saved on this device yet. Connect to the internet and open it once. After that it works offline too.',
   'notfound.title': 'Page not found',
-  'about.title': 'About Aleph',
+  'notfound.updating': 'A newer version has this page. Updating now…',
+  'about.title': 'About ALEF',
   'how.title': 'How this works',
-  'welcome.title': 'Welcome to Aleph',
+  'welcome.title': 'Welcome to ALEF',
   'home.streak': 'Streak',
   'home.goal.read': 'Next lesson: synagogue reading',
   'home.goal.israel': 'Next lesson: Hebrew in Israel',
@@ -54,10 +55,11 @@ export const en = {
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {
-  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
-  'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת',
+  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.ask': 'שאלות על התורה', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
+  'nav.read': 'קריאה', 'nav.progress': 'התקדמות', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת', 'nav.light': 'אור מגן דוד',
   // DRAFT, unreviewed machine-assisted labels for the new Learn sub-screens:
   'nav.loanwords': 'מילים שאפשר לקרוא', 'nav.checkpoint': 'בדיקת אותיות דומות', 'nav.dialogues': 'שיחות בישראל', 'nav.practical': 'עברית מעשית', 'nav.israelunits': 'עברית לישראל, יחידה אחרי יחידה',
+  'nav.talk': 'שיחה',
   'app.name': 'אלף',
 };
 export const HEBREW_REVIEW_NEEDED = Object.keys(he);

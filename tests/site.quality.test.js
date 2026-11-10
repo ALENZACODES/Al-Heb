@@ -84,11 +84,12 @@ test('first prayer has visible Hebrew and English before scripts, and no-JS exit
   assert.ok(html.indexOf('src/shell/prayer-veil.js') < html.indexOf('src/app.js'));
 });
 
-test('Home and Welcome do not wait for optional image approvals', () => {
+test('no route waits for optional image approvals before first paint', () => {
   const app = read('src/app.js');
-  assert.match(app, /const firstIsHome =/);
-  assert.match(app, /if \(!firstIsHome\) \{/);
-  assert.ok(app.indexOf('router.start();') < app.indexOf('if (firstIsHome) {\n    \/\/ Deferring'), 'optional resolver deferred after route start');
+  assert.doesNotMatch(app, /const firstIsHome =/);
+  const start = app.indexOf('router.start();');
+  const deferred = app.indexOf('shownFirst.then(() => afterPaint(async () => {', start);
+  assert.ok(start >= 0 && deferred > start, 'image resolver deferred until after the first route has painted');
   assert.match(app, /ctxBase\.images = images/);
 });
 
@@ -111,7 +112,7 @@ test('harvest art is local and documentary text stays out of image pixels', () =
   // (Home and About), not in the shell on every page.
   assert.doesNotMatch(html, /site-footer/);
   assert.match(read('src/shell/home.view.js'), /Made by John Khan · © 2026 John Khan\. All rights reserved\./);
-  assert.match(read('src/shell/about.view.js'), /Made by John Khan\. Aleph is \\u00a9 2026 John Khan/);
+  assert.match(read('src/shell/about.view.js'), /Made by John Khan\. ALEF is \\u00a9 2026 John Khan/);
 });
 
 

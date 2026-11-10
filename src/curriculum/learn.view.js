@@ -9,41 +9,38 @@
  * Storage keys: see progress.js.
  */
 import { plain } from "../shell/plain-copy.js";
-import { lessons, belts } from "./lessons.js";
+import { lessonSummaries as lessons, belts } from "./lessons-index.js";
 import { due } from "./srs.js";
 import { plural } from "../shell/plural.js";
 import { el, heText, tr, replaceKeepingFocus, levelLabel, showSaveFailure, refocusIfLost } from "./dom.js";
 import { loadState, completeLesson } from "./actions.js";
-import { mountLesson } from "./lesson.view.js";
-import { mountReview } from "./review.view.js";
-import { mountLoanwords } from "./loanwords.view.js";
-import { mountSpotIt } from "./spotit.view.js";
-import { mountCheckpoint } from "./checkpoint.view.js";
-import { mountDialogues } from "./dialogues.view.js";
-import { mountLadder } from "./ladder.view.js";
-import { mountFade } from "./fade.view.js";
-import { mountGender } from "./gender.view.js";
-import { mountScaffold } from "./scaffold.view.js";
 import { streakVisible } from "../shell/comfort.js";
+import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
+import { rimonInline } from "../shell/rimon-inline.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
-  if (q.loanwords) return mountLoanwords(root, ctx, q.loanwords);
-  if (q.spotit) return mountSpotIt(root, ctx, q.spotit, q.seed);
-  if (q.checkpoint) return mountCheckpoint(root, ctx, q.seed);
-  if (q.ladder) return mountLadder(root, ctx, q);
-  if (q.fade) return mountFade(root, ctx, String(q.fade), q);
-  if (q.gender) return mountGender(root, ctx, q.gender === "roles" ? "roles" : "pairs", q);
-  if (q.scaffold) return mountScaffold(root, ctx);
-  if (q.dialogues || q.dialogue) return mountDialogues(root, ctx, q.dialogue);
-  if (q.review) return mountReview(root, ctx, { lessonId: q.lesson });
-  if (q.lesson) {
-    const un = mountLesson(root, ctx, q.lesson);
-    // intermediate lessons (I-xx) have a player of their own: guarded link, only when that route exists in this build
-    if (/^I-\d+$/.test(String(q.lesson)) && ctx?.hasRoute?.("intermediatelesson")) {
-      root.append(el("p", { class: "row" }, el("a", { class: "btn secondary", href: `#/intermediate/${encodeURIComponent(q.lesson)}` }, "Open in the intermediate player")));
-    }
-    return un;
+  // Sub-screens pull lessons.json and their own modules only when opened, so the map can paint from the slim index.
+  if (q.loanwords || q.spotit || q.checkpoint || q.ladder || q.fade || q.gender || q.scaffold || q.dialogues || q.dialogue || q.review || q.lesson) {
+    let alive = true, un = () => {};
+    const go = (fn) => Promise.resolve().then(fn).then((u) => { if (!alive) { try { u && u(); } catch {} return; } if (typeof u === "function") un = u; }).catch((e) => { if (alive) console.error("learn sub-screen failed", e); });
+    if (q.loanwords) go(() => import("./loanwords.view.js").then((m) => m.mountLoanwords(root, ctx, q.loanwords)));
+    else if (q.spotit) go(() => import("./spotit.view.js").then((m) => m.mountSpotIt(root, ctx, q.spotit, q.seed)));
+    else if (q.checkpoint) go(() => import("./checkpoint.view.js").then((m) => m.mountCheckpoint(root, ctx, q.seed)));
+    else if (q.ladder) go(() => import("./ladder.view.js").then((m) => m.mountLadder(root, ctx, q)));
+    else if (q.fade) go(() => import("./fade.view.js").then((m) => m.mountFade(root, ctx, String(q.fade), q)));
+    else if (q.gender) go(() => import("./gender.view.js").then((m) => m.mountGender(root, ctx, q.gender === "roles" ? "roles" : "pairs", q)));
+    else if (q.scaffold) go(() => import("./scaffold.view.js").then((m) => m.mountScaffold(root, ctx)));
+    else if (q.dialogues || q.dialogue) go(() => import("./dialogues.view.js").then((m) => m.mountDialogues(root, ctx, q.dialogue)));
+    else if (q.review) go(() => import("./review.view.js").then((m) => m.mountReview(root, ctx, { lessonId: q.lesson })));
+    else if (q.lesson) go(() => import("./lesson.view.js").then((m) => {
+      const u = m.mountLesson(root, ctx, q.lesson);
+      if (/^I-\d+$/.test(String(q.lesson)) && ctx?.hasRoute?.("intermediatelesson")) {
+        root.append(el("p", { class: "row" }, el("a", { class: "btn secondary", href: `#/intermediate/${encodeURIComponent(q.lesson)}` }, "Open in the intermediate player")));
+      }
+      return u;
+    }));
+    return () => { alive = false; try { un(); } catch {} };
   }
   return mountMap(root, ctx);
 }
@@ -54,8 +51,15 @@ function mountMap(root, ctx) {
   let track = goal === "israel" ? "israel" : "read";
   let showAll = false; // a long lesson list shows the next few lessons first; "Show all" opens the rest
   const wrap = el("section", { class: "alef-learn", "aria-labelledby": "view-title" });
-  const h1 = el("h1", { id: "view-title", tabindex: "-1", class: "alef-h" }, tr(ctx, "learn.title", "Lessons"));
-  wrap.append(h1);
+  const h1 = (root.querySelector && root.querySelector("#view-title")) || el("h1", { id: "view-title", tabindex: "-1", class: "alef-h alef-learn-hero" }, tr(ctx, "learn.title", "Lessons"));
+  if (h1.classList) { h1.classList.add("alef-h"); h1.classList.add("alef-learn-hero"); }
+  else h1.className = `${h1.className || ""} alef-h alef-learn-hero`.trim();
+  // Leave #view-title as a child of #main. Moving it into the section disconnects it and
+  // resets LCP to this late mount (often 8–11s after the route module loads).
+  if (!h1.parentNode || h1.parentNode !== root) {
+    if (root.insertBefore && root.firstChild) root.insertBefore(h1, root.firstChild);
+    else if (root.append) root.append(h1);
+  }
   root.append(wrap);
 
   async function render() {
@@ -68,7 +72,7 @@ function mountMap(root, ctx) {
     const firstOpen = Math.max(0, list.findIndex((l) => !done.has(l.id)));
     const far = (i) => list.length > 8 && !showAll && (i < firstOpen - 1 || i > firstOpen + 5);
 
-    replaceKeepingFocus(wrap, h1,
+    replaceKeepingFocus(wrap,
       el("div", { class: "alef-tabs", role: "group", "aria-label": tr(ctx, "learn.tracks", "Tracks") },
         ...[["read", tr(ctx, "learn.track.read", "Read the prayer book")], ["israel", tr(ctx, "learn.track.israel", "Speak in Israel")]].map(([id, label]) =>
           el("button", { type: "button", class: "alef-tab", "aria-pressed": String(track === id), id: `alef-tab-${id}`,
@@ -99,11 +103,18 @@ function mountMap(root, ctx) {
           const ready = l.prerequisites.every((p) => done.has(p));
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
-          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null },
+          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null,
+            // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
+            onclick: (e) => {
+              if (e?.target?.closest?.("button, a, summary")) return;
+              if (state !== "locked") { ctx?.route?.(`/learn?lesson=${l.id}`); return; }
+              // a locked stop says what opens it, instead of doing nothing
+              const note = e?.currentTarget?.querySelector?.(".alef-locked-note"); if (note) { note.hidden = !note.hidden; if (note.hidden) note.setAttribute("hidden", ""); else note.removeAttribute("hidden"); }
+            } },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",
-            l.words[0] ? heText(l.words[0].he) : null, " ",
+            (l.teaser || l.words?.[0]?.he) ? heText(l.teaser || l.words[0].he) : null, " ",
             el("button", { type: "button", class: "alef-btn", disabled: state === "locked" ? "" : null,
               "aria-label": `${state === "done" ? "Review" : "Start"} ${l.title}`,
               onclick: () => ctx && ctx.route && ctx.route(`/learn?lesson=${l.id}`) }, state === "done" ? tr(ctx, "learn.review", "Review") : tr(ctx, "learn.start", "Start")),
@@ -111,6 +122,7 @@ function mountMap(root, ctx) {
             // U-13: completing a lesson without opening it is a test-out, and
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
+            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it."; })()) : null,
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete without studying it (test out): ${l.title}`,
               onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),
@@ -120,13 +132,20 @@ function mountMap(root, ctx) {
   /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
   function continueCard(next, doneCount, total, st) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
+    const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
+    // Rimon waves (first lesson) or points to the next one, from the same animated sheets as setup and the lesson finish.
+    // When a still for this moment exists, rimon-stage.js can replace the picture (data-rimon-still).
+    const still = !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next";
+    let pic; try { pic = rimonInline({ action: doneCount === 0 ? "wave" : "point", size: 96, label: "Rimon" }).el; pic.setAttribute("class", "rimon-inline alef-continue-rimon"); pic.setAttribute("data-rimon-still", still); } catch { pic = null; }
+    if (!pic) pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const say = !next ? "You finished every lesson in this track. Amazing!"
-      : doneCount === 0 ? "Let's start! Your first lesson takes about " + next.estMinutes + " minutes."
+      : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
       : "Ready for the next one? You're doing great.";
-    const goal = st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
+    // the ring is the learner's own daily goal (chosen at setup, the same number the header shows); the streak still counts a day at 5 minutes
+    let goalSec = 0; try { const g = ctx?.store?.get?.(DAILY_GOAL_KEY); if (g != null) goalSec = normalizeDailyGoal(g) * 60; } catch { /* no store: the streak goal */ }
+    const goal = goalSec || st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
     const goalPct = Math.round((secs / goal) * 100), mins = Math.floor(secs / 60), goalMin = Math.round(goal / 60);
     const ring = el("div", { class: "alef-goal-ring", style: `--p:${goalPct}`, role: "img", "aria-label": goalPct >= 100 ? "Daily goal reached" : `Today: ${mins} of ${goalMin} minutes` },
       el("span", {}, goalPct >= 100 ? "✓" : `${mins}/${goalMin}`), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));
@@ -142,7 +161,7 @@ function mountMap(root, ctx) {
 
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons."));
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

@@ -13,5 +13,8 @@ tools/torah/snapshot/
 audio/_review/
 .env
 
+# Ask the Torah local env and caches
+tools/ask-torah/.venv/
+tools/ask-torah/**/__pycache__/
 # local Google Cloud test checkpoint (contains no secrets, but is a run artifact)
 data/curriculum/practical/_gcloud-checkpoint.json

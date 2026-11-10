@@ -1,0 +1,174 @@
+{
+ "synthetic": true,
+ "note": "Rendered text with simulated wear. NOT photographs.",
+ "ocr": "Tesseract heb (on this server, no cloud)",
+ "translate": "built-in sign word list",
+ "byWear": {
+  "clean": {
+   "images": 20,
+   "edits": 9,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 21,
+   "linesTranslatedEndToEnd": 26,
+   "worst": [
+    [
+     "new-price",
+     0.286
+    ],
+    [
+     "dizengoff-square",
+     0.182
+    ],
+    [
+     "no-entry",
+     0.125
+    ],
+    [
+     "no-smoking",
+     0.125
+    ],
+    [
+     "kosher-restaurant",
+     0.1
+    ]
+   ],
+   "cerPooled": 0.0435
+  },
+  "noise": {
+   "images": 20,
+   "edits": 9,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 20,
+   "linesTranslatedEndToEnd": 27,
+   "worst": [
+    [
+     "dizengoff-square",
+     0.182
+    ],
+    [
+     "new-price",
+     0.143
+    ],
+    [
+     "no-entry",
+     0.125
+    ],
+    [
+     "no-smoking",
+     0.125
+    ],
+    [
+     "kosher-restaurant",
+     0.1
+    ]
+   ],
+   "cerPooled": 0.0435
+  },
+  "blur": {
+   "images": 20,
+   "edits": 5,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 25,
+   "linesTranslatedEndToEnd": 27,
+   "worst": [
+    [
+     "menu-drinks",
+     0.286
+    ],
+    [
+     "dizengoff-square",
+     0.091
+    ]
+   ],
+   "cerPooled": 0.0242
+  },
+  "rotate": {
+   "images": 20,
+   "edits": 6,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 23,
+   "linesTranslatedEndToEnd": 27,
+   "worst": [
+    [
+     "dizengoff-square",
+     0.182
+    ],
+    [
+     "new-price",
+     0.143
+    ],
+    [
+     "no-entry",
+     0.125
+    ],
+    [
+     "bus-stop",
+     0.091
+    ],
+    [
+     "kosher-restaurant",
+     0.05
+    ]
+   ],
+   "cerPooled": 0.029
+  },
+  "perspective": {
+   "images": 20,
+   "edits": 6,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 24,
+   "linesTranslatedEndToEnd": 26,
+   "worst": [
+    [
+     "new-price",
+     0.286
+    ],
+    [
+     "dizengoff-square",
+     0.182
+    ],
+    [
+     "no-entry",
+     0.125
+    ],
+    [
+     "kosher-restaurant",
+     0.05
+    ]
+   ],
+   "cerPooled": 0.029
+  },
+  "lowcontrast": {
+   "images": 20,
+   "edits": 7,
+   "ref": 207,
+   "lines": 28,
+   "linesReadExactly": 23,
+   "linesTranslatedEndToEnd": 26,
+   "worst": [
+    [
+     "new-price",
+     0.286
+    ],
+    [
+     "dizengoff-square",
+     0.182
+    ],
+    [
+     "kosher-restaurant",
+     0.1
+    ],
+    [
+     "bus-stop",
+     0.091
+    ]
+   ],
+   "cerPooled": 0.0338
+  }
+ }
+}

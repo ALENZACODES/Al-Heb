@@ -14,7 +14,7 @@ import { loadJSON } from "../curriculum/data.js";
 import { CAL_PREFS_KEY } from "../curriculum/calendar.locations.js";
 import { weekCard, linksFor, shabbatReady, packById, PACK_OF } from "./model.js";
 
-export const DRAFT_NOTICE = "Draft. Nobody has proofread these words or lines. Words come from Aleph's vocabulary list and lines are copied from its own texts; whether a word means the same in the festival or in a line was not checked.";
+export const DRAFT_NOTICE = "Draft. Nobody has proofread these words or lines. Words come from ALEF's vocabulary list and lines are copied from its own texts; whether a word means the same in the festival or in a line was not checked.";
 export const CALC_NOTE = "Dates and times are calculated, not authoritative. Check with your community.";
 const CSS = `
 .fv{display:grid;gap:var(--gap,1rem);max-inline-size:40rem;margin-inline:auto;overflow-wrap:anywhere}
@@ -106,10 +106,10 @@ function packView(ctx, D, pack) {
       w.senseNote ? h("p", { class: "fv-muted" }, w.senseNote) : null,
       w.line ? h("div", { class: "fv-line" }, h("div", {}, heSpan(w.line.he)), h("div", { class: "fv-muted" }, `From ${w.line.title}. `, hasRoute(ctx)("text") && w.line.source === "registry" && D.registryById.has(w.line.id) ? h("a", { href: `#/read/${w.line.id}` }, "Open the text") : null)) : null))),
   ];
-  if (pack.gaps.length) parts.push(h("section", { class: "fv-card", "data-part": "gaps" }, h("h2", {}, "Not in Aleph's vocabulary yet"), h("p", {}, pack.gaps.map((g) => g.en).join("; ") + "."), ...pack.notes.map((n) => h("p", { class: "fv-muted" }, n))));
+  if (pack.gaps.length) parts.push(h("section", { class: "fv-card", "data-part": "gaps" }, h("h2", {}, "Not in ALEF's vocabulary yet"), h("p", {}, pack.gaps.map((g) => g.en).join("; ") + "."), ...pack.notes.map((n) => h("p", { class: "fv-muted" }, n))));
   else if (pack.notes.length) parts.push(...pack.notes.map((n) => h("p", { class: "fv-muted" }, n)));
   const lk = linkList(linksFor(D.links.festivals?.[pack.id], { hasRoute: hasRoute(ctx), registryTitles: D.registryTitles, lessonTitles: D.lessonTitles }));
-  if (lk) parts.push(h("section", { class: "fv-card", "data-part": "links" }, h("h2", {}, "In Aleph"), lk));
+  if (lk) parts.push(h("section", { class: "fv-card", "data-part": "links" }, h("h2", {}, "In ALEF"), lk));
   return parts;
 }
 
@@ -135,7 +135,7 @@ async function readyView(ctx, D) {
         p.decodable === null ? "Coverage unknown." : p.decodable ? "You have been taught every letter and sign in it." : `${p.full} of ${pl(p.lines, "line", "lines")} use only what you have been taught${p.almost ? `; ${p.almost} more ${p.almost === 1 ? "is" : "are"} one step away` : ""}.`),
       hasRoute(ctx)("text") ? h("a", { class: "btn secondary", href: p.href }, "Open and read it") : null))),
   ];
-  if (r.skipped.length) parts.push(h("section", { class: "fv-card", "data-part": "skipped" }, h("h2", {}, "Not in Aleph yet"), h("ul", {}, ...r.skipped.map((s) => h("li", {}, `${s.label}: ${s.reason}.`)))));
+  if (r.skipped.length) parts.push(h("section", { class: "fv-card", "data-part": "skipped" }, h("h2", {}, "Not in ALEF yet"), h("ul", {}, ...r.skipped.map((s) => h("li", {}, `${s.label}: ${s.reason}.`)))));
   return parts;
 }
 

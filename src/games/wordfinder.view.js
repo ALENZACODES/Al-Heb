@@ -67,7 +67,7 @@ export function mount(root, ctx) {
         h('span', { class: 'wf-track-fill', style: 'width:' + (100 * count / 240).toFixed(1) + '%' })));
   }
   function englishReadAloud(word) {
-    if (audioOff()) { sound.textContent = 'Audio is off in your Aleph settings.'; return; }
+    if (audioOff()) { sound.textContent = 'Audio is off in your ALEF settings.'; return; }
     const synth = globalThis.speechSynthesis, Ctor = globalThis.SpeechSynthesisUtterance;
     if (!synth || !Ctor || typeof synth.speak !== 'function') {
       sound.textContent = 'English read-aloud is not available here. The meaning is written on the card.';
@@ -85,11 +85,11 @@ export function mount(root, ctx) {
     } catch { sound.textContent = 'English read-aloud unavailable. The meaning is written above.'; }
   }
   async function hebrewReadAloud(word) {
-    if (audioOff()) { sound.textContent = 'Audio is off in your Aleph settings.'; return; }
+    if (audioOff()) { sound.textContent = 'Audio is off in your ALEF settings.'; return; }
     const result = await speak(ctx, word.he, { kind: 'word', id: word.id,
       onStatus: (message) => { if (alive && current()?.id === word.id) sound.textContent = message; } });
     if (!alive || current()?.id !== word.id) return;
-    if (result?.source === 'file') sound.textContent = 'Hebrew audio played from the Aleph library.';
+    if (result?.source === 'file') sound.textContent = 'Hebrew audio played from the ALEF library.';
     else if (result?.source === 'tts-fallback') sound.textContent = 'Spoken with your device’s Hebrew voice.';
     else sound.textContent = result?.message || 'No Hebrew audio available; use the pointed text and pronunciation guide.';
   }

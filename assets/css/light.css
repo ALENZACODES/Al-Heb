@@ -1,0 +1,135 @@
+/* Star of David light (#/light). Loaded on first open, not in the first-install CSS. */
+.alef-light-root{
+  position:fixed; inset:0; z-index:10000;
+  display:flex; flex-direction:column;
+  background:#000;
+  color:#f3dfa6;
+  font-family:var(--font-ui, system-ui, sans-serif);
+  --light-hi:#fff6d0; --light-gold:#e8c97a; --light-lo:#b8862b;
+  --light-core:#ffe9a8; --light-mid:#e8c97a; --light-edge:#000;
+}
+.alef-light-root[data-temp="white"]{
+  --light-hi:#ffffff; --light-gold:#f3f1ea; --light-lo:#c8c2b0;
+  --light-core:#fffef8; --light-mid:#e8e4d6; --light-edge:#000;
+  color:#f4f1e8;
+}
+.alef-light-stage{
+  flex:1 1 auto;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  min-block-size:0;
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(232,201,122, calc(0.18 * var(--light-brightness, .8))) 0%, #000 68%);
+  overflow:hidden;
+}
+.alef-light-root[data-temp="white"] .alef-light-stage{
+  background:
+    radial-gradient(ellipse at 50% 46%, rgba(255,252,245, calc(0.16 * var(--light-brightness, .8))) 0%, #000 68%);
+}
+.alef-light-star{
+  width:min(78vmin, 28rem);
+  height:auto;
+  filter:
+    drop-shadow(0 0 calc(18px * var(--light-brightness, .8)) rgba(232,201,122, .55))
+    drop-shadow(0 0 calc(48px * var(--light-brightness, .8)) rgba(184,134,43, .35));
+  opacity:calc(0.45 + var(--light-brightness, .8) * 0.55);
+  transform-origin:50% 50%;
+}
+.alef-light-root[data-temp="white"] .alef-light-star{
+  filter:
+    drop-shadow(0 0 calc(18px * var(--light-brightness, .8)) rgba(255,255,255, .5))
+    drop-shadow(0 0 calc(48px * var(--light-brightness, .8)) rgba(230,224,200, .3));
+}
+.alef-light-halo{ transform-origin:100px 100px; }
+.alef-light-caption{
+  margin:.75rem 0 0;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:.78rem;
+  color:#e8c97a;
+  opacity:calc(.35 + var(--light-brightness, .8) * .4);
+}
+.alef-light-caption .he{ letter-spacing:0; margin-inline-end:.6em; font-size:1.15em; }
+.alef-light-panel{
+  flex:0 0 auto;
+  padding:.85rem 1.1rem 1.15rem;
+  background:linear-gradient(180deg, rgba(8,8,6,.0), rgba(8,8,6,.92) 18%, #070704);
+  border-block-start:1px solid rgba(201,162,39,.35);
+  color:#f3dfa6;
+  max-block-size:48vh;
+  overflow:auto;
+}
+.alef-light-head{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; }
+.alef-light-head h1{
+  margin:0;
+  font-size:1.15rem;
+  font-weight:650;
+  letter-spacing:.03em;
+  color:#f3dfa6;
+}
+.alef-light-head h1::after{ display:none !important; }
+.alef-light-close{
+  color:#e8c97a;
+  text-decoration:none;
+  font-size:.95rem;
+  border-bottom:1px solid rgba(232,201,122,.4);
+}
+.alef-light-close:focus-visible{ outline:3px solid #f0d488; outline-offset:3px; }
+.alef-light-slider{
+  display:grid; gap:.35rem;
+  margin:.85rem 0 .6rem;
+  font-size:.9rem;
+}
+.alef-light-slider input[type="range"]{
+  inline-size:100%;
+  accent-color:#c9a227;
+}
+.alef-light-toggles, .alef-light-sparkle-row, .alef-light-downloads{
+  display:flex; flex-wrap:wrap; gap:.5rem;
+  margin:.4rem 0;
+  align-items:center;
+}
+.alef-light-note, .alef-light-warn p, .alef-light-stencil{
+  margin:.55rem 0 .35rem;
+  font-size:.92rem;
+  line-height:1.45;
+  color:#f3dfa6;
+}
+.alef-light-warn{
+  margin:.5rem 0;
+  padding:.7rem .8rem;
+  border:1px solid rgba(201,162,39,.4);
+  border-radius:.5rem;
+  background:rgba(20,16,6,.7);
+}
+.alef-light-torch-video{
+  position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);
+  clip-path:inset(50%); white-space:nowrap; border:0; padding:0;
+}
+@media (prefers-reduced-motion: no-preference){
+  .alef-light-stage[data-pulse="on"] .alef-light-star{
+    animation:alef-light-breathe 2.4s ease-in-out infinite;
+  }
+  .alef-light-stage[data-pulse="on"] .alef-light-halo{
+    animation:alef-light-halo 2.4s ease-in-out infinite;
+  }
+}
+@keyframes alef-light-breathe{
+  0%,100%{ opacity:calc(0.42 + var(--light-brightness, .8) * 0.45); transform:scale(0.985); }
+  50%{ opacity:calc(0.62 + var(--light-brightness, .8) * 0.38); transform:scale(1.03); }
+}
+@keyframes alef-light-halo{
+  0%,100%{ opacity:.85; }
+  50%{ opacity:1; }
+}
+@media (prefers-reduced-motion: reduce){
+  .alef-light-star, .alef-light-halo{ animation:none !important; }
+}
+
+@media (max-height: 900px){
+  .alef-light-star{ width:min(52vmin, 20rem); }
+  .alef-light-caption{ margin:.4rem 0 0; }
+  .alef-light-panel{ padding:.6rem 1rem .8rem; }
+  .alef-light-slider{ margin:.55rem 0 .4rem; }
+  .alef-light-note, .alef-light-warn p, .alef-light-stencil{ font-size:.86rem; margin:.4rem 0 .25rem; }
+  .alef-light-warn{ padding:.5rem .7rem; }
+}

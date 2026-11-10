@@ -18,7 +18,7 @@ export const PLAIN = Object.freeze({
   closingPerfect: 'You got every answer on the first try. Review again in a day or two to see what stuck.',
   closingSolid: 'Good work. {n} to look at again. They are in your review.',
   closingTough: 'That was a hard one. {n} to look at again. They are in your review. You can try the lesson again if you like.',
-  notifyOpenOnly: 'Reminders only work while Aleph is open in this browser. If Aleph is closed, nothing can remind you. To get reminders anyway, add the calendar reminder file to your phone\'s calendar.',
+  notifyOpenOnly: 'Reminders only work while ALEF is open in this browser. If ALEF is closed, nothing can remind you. To get reminders anyway, add the calendar reminder file to your phone\'s calendar.',
   streakNone: 'A streak counts the days you study for 5 minutes or more.',
   welcomeBackDue: 'Welcome back. There is nothing to catch up on. Try a few review cards and stop whenever you like. Or start with your next step below.',
   skippedNote: '{n} skipped. Skipped items do not count for or against you. Do the exercise again to answer them.',

@@ -38,9 +38,9 @@ export async function storageStatus(nav = typeof navigator !== 'undefined' ? nav
 export function inspectBackup(text, expect = { app: 'alef', schema: 1 }) {
   let obj;
   try { obj = JSON.parse(text); } catch { return { ok: false, error: 'This file is not valid JSON.' }; }
-  if (!obj || obj.app !== expect.app || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'This is not an Aleph backup file.' };
+  if (!obj || obj.app !== expect.app || typeof obj.data !== 'object' || obj.data === null || Array.isArray(obj.data)) return { ok: false, error: 'This is not an ALEF backup file.' };
   if (!Number.isInteger(obj.schema) || obj.schema < 1) return { ok: false, error: 'The backup has no version number.' };
-  if (expect.schema != null && obj.schema > expect.schema) return { ok: false, error: `This backup is from a newer Aleph (version ${obj.schema}). Update the app first.` };
+  if (expect.schema != null && obj.schema > expect.schema) return { ok: false, error: `This backup is from a newer ALEF (version ${obj.schema}). Update the app first.` };
   const keys = Object.keys(obj.data);
   return { ok: true, items: keys.length, exportedAt: typeof obj.exportedAt === 'string' ? obj.exportedAt : null, schema: obj.schema, keys };
 }

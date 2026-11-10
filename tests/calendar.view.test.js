@@ -57,6 +57,9 @@ test("no location: asks for one, never invents a time, settings panel opens", as
   un();
 });
 
+// a day cell's spoken name rides in a visually hidden span (no aria-label, so WCAG 2.5.3 cannot mismatch)
+const spoken = (n) => n.find((x) => x.className === "visually-hidden")[0].text;
+
 test("month grid: caption with Hebrew months, 7 headers, 5 weeks for Nov 2026, Saturday shows the portion, holiday days flagged", async () => {
   const root = new Node_("div");
   const un = mount(root, ctxFor({ settings: { location: { lat: 43.65, lon: -79.38, tz: "America/Toronto" } } })); await ready(root);
@@ -66,10 +69,10 @@ test("month grid: caption with Hebrew months, 7 headers, 5 weeks for Nov 2026, S
   assert.equal(table.find((n) => n.tag === "tr").length, 1 + 5);
   const day = (iso) => table.find((n) => n.attrs["data-date"] === iso)[0];
   assert.match(day("2026-11-07").text, /Chayei Sara/);
-  assert.match(day("2026-11-10").attrs["aria-label"], /Rosh Chodesh Kislev/);
+  assert.match(spoken(day("2026-11-10")), /Rosh Chodesh Kislev/);
   assert.match(day("2026-11-03").className, /today/);
   assert.match(day("2026-11-07").className, /shabbat/);
-  assert.match(day("2026-11-03").attrs["aria-label"], /Tuesday 3 November 2026, 23 Cheshvan 5787/);
+  assert.match(spoken(day("2026-11-03")), /Tuesday 3 November 2026, 23 Cheshvan 5787/);
   un();
 });
 
@@ -84,7 +87,7 @@ test("navigating to December shows Hanukkah; selecting a day shows details; Toda
   // a marked day is a link to its day page (shape + label markers, no colour-only meaning)
   assert.equal(d.tag, "a"); assert.equal(d.attrs.href, "#/day/2026-12-05");
   assert.deepEqual(d.find((n) => n.attrs["data-marker"]).map((n) => n.attrs["data-marker"]), ["festival-minor", "shabbat", "havdalah"]);
-  assert.match(d.attrs["aria-label"], /Minor festival, Shabbat, Havdalah/);
+  assert.match(spoken(d), /Minor festival, Shabbat, Havdalah/);
   const fri = table().find((n) => n.attrs["data-date"] === "2026-12-04")[0];
   assert.equal(fri.tag, "a"); assert.match(fri.text, /Candles/); assert.ok(fri.find((n) => n.attrs["data-marker"] === "candles").length);
   // an ordinary weekday stays a button and shows the short detail panel with a link to the page

@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (104)
+# Practical Hebrew: The Written Pages (117)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -2055,6 +2055,257 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Say: rain. → גֶּשֶׁם (geshem) · audio `il15-w3`
 
 **Review queue from earlier pages:** `i-24-w1`, `i-24-w2`, `i-24-w3`, `i-24-w6`, `i-24-w10`, `i-24-w15`
+
+## pu-hotel-p01: At Reception
+
+*Learn page.* Name what you need at a hotel desk.
+
+**Grammar: One root, two words: הַזְמָנָה.** הַזְמָנָה is a reservation, and also an order. It comes from the same root as לְהַזְמִין, to order, from the cafe unit.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֶדֶר | cheder \* | room | `il17-w1` tts, f+m |
+| הַזְמָנָה | hazmana \* | reservation | `il17-w2` tts, f+m |
+| לַיְלָה | laila \* | night | `il17-w3` tts, f+m |
+| מַפְתֵּחַ | mafteach \* | key | `il17-w4` tts, f+m |
+
+**Speak.**
+
+- Say: a reservation. → הַזְמָנָה (hazmana) · audio `il17-w2`
+- Say: the key. → מַפְתֵּחַ (mafteach) · audio `il17-w4`
+
+**Review queue from earlier pages:** `cafe-14`, `d-restaurant-l1`
+
+## pu-hotel-p02: Checking In
+
+*Dialogue page.* Follow a check-in from hello to the key.
+
+**Grammar: On the floor: בַּקּוֹמָה.** בְּ (in, on) meets הַ (the) and merges into בַּ, just as לְ and הַ make לַ: בַּקּוֹמָה הַשְּׁנִיָּה, on the second floor.
+
+**Dialogue setting.** A guest checks in at a hotel desk.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (woman): שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. | shalom. yesh li hazmana. | Hello. I have a reservation. | `d-hotel-l1` gap |
+| Receptionist (man): בְּאֵיזֶה שֵׁם? | be'eize shem? | Under what name? | `d-hotel-l2` gap |
+| Guest (woman): לֵוִי. | levi. | Levi. | `d-hotel-l3` gap |
+| Receptionist (man): כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת. | ken, ani ro'e. shlosha leilot. | Yes, I see it. Three nights. | `d-hotel-l4` gap |
+| Guest (woman): מָתַי אֲרוּחַת הַבֹּקֶר? | matai aruchat haboker? | When is breakfast? | `d-hotel-l5` gap |
+| Receptionist (man): מִשֶּׁבַע עַד עֶשֶׂר. | mishe'va ad eser. | From seven to ten. | `d-hotel-l6` gap |
+| Receptionist (man): הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ. | hacheder bakoma hashniya. hine hamafteach. | The room is on the second floor. Here is the key. | `d-hotel-l7` gap |
+| Guest (woman): תּוֹדָה רַבָּה! | toda raba! | Thank you very much! | `d-hotel-l8` gap |
+
+**Speak.**
+
+- Tell the desk you have a reservation. → שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. (shalom. yesh li hazmana.) · audio `d-hotel-l1`
+
+**Review queue from earlier pages:** `taxi-04`, `il17-w4`, `politeness-02`
+
+## pu-hotel-p03: I Have: יֵשׁ לִי
+
+*Grammar page.* Say you have a reservation and understand how many nights.
+
+**Grammar: To have: יֵשׁ and לְ.** Hebrew has no verb for have in the present. It says there is to me: יֵשׁ לִי הַזְמָנָה, I have a reservation. Night has an irregular plural: לַיְלָה, three לֵילוֹת.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (woman): שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. | shalom. yesh li hazmana. | Hello. I have a reservation. | `d-hotel-l1` gap |
+| Receptionist (man): כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת. | ken, ani ro'e. shlosha leilot. | Yes, I see it. Three nights. | `d-hotel-l4` gap |
+
+**Speak.**
+
+- Say you have a reservation. → שָׁלוֹם. יֵשׁ לִי הַזְמָנָה. (shalom. yesh li hazmana.) · audio `d-hotel-l1`
+
+**Review queue from earlier pages:** `il08-w5`, `il17-w3`
+
+## pu-hotel-p04: Ask About Breakfast
+
+*Speak page.* Ask when breakfast is and understand the hours.
+
+**Grammar: From and until: מִ... עַד.** From is מִ joined to the next word, until is עַד: מִשֶּׁבַע עַד עֶשֶׂר, from seven to ten. Hours use the counting set.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (woman): מָתַי אֲרוּחַת הַבֹּקֶר? | matai aruchat haboker? | When is breakfast? | `d-hotel-l5` gap |
+| Receptionist (man): מִשֶּׁבַע עַד עֶשֶׂר. | mishe'va ad eser. | From seven to ten. | `d-hotel-l6` gap |
+| Receptionist (man): בְּאֵיזֶה שֵׁם? | be'eize shem? | Under what name? | `d-hotel-l2` gap |
+
+**Speak.**
+
+- Ask when breakfast is. → מָתַי אֲרוּחַת הַבֹּקֶר? (matai aruchat haboker?) · audio `d-hotel-l5`
+- Ask under what name, as the desk does. → בְּאֵיזֶה שֵׁם? (be'eize shem?) · audio `d-hotel-l2`
+
+**Review queue from earlier pages:** `numbers-07-f`, `numbers-10-f`
+
+## pu-hotel-p05: Here Is the Key, and Unit Review
+
+*Review page.* Take your key, then review the hotel unit.
+
+**Grammar: Here is: הִנֵּה, again.** הִנֵּה הַמַּפְתֵּחַ, here is the key, uses the same הִנֵּה as here is the menu. Expect it whenever something is handed to you.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Receptionist (man): הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ. | hacheder bakoma hashniya. hine hamafteach. | The room is on the second floor. Here is the key. | `d-hotel-l7` gap |
+
+**Speak.**
+
+- Read the line aloud: the room is on the second floor, here is the key. → הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ. (hacheder bakoma hashniya. hine hamafteach.) · audio `d-hotel-l7`
+
+**Review queue from earlier pages:** `il17-w1`, `il17-w2`, `il17-w4`, `d-hotel-l1`, `d-hotel-l4`, `d-hotel-l5`
+
+## pu-phone-p01: Buying a SIM
+
+*Learn page.* Ask for a SIM, a number and the Wi-Fi password.
+
+**Grammar: Two nouns as one: מִסְפַּר טֶלֶפוֹן.** When מִסְפָּר is the first of two nouns that work as one, its vowel shortens: מִסְפַּר טֶלֶפוֹן, a phone number.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| טֶלֶפוֹן | telefon \* | phone | `i-16-w1` tts, f+m |
+| מִסְפָּר | mispar \* | number | `i-16-w2` tts, f+m |
+| מִסְפַּר טֶלֶפוֹן | mispar telefon \* | phone number | `i-16-w3` tts, f+m |
+| אִינְטֶרְנֶט | internet \* | internet | `i-16-w5` tts, f+m |
+| סִיסְמָה | sisma \* | password | `i-16-w6` tts, f+m |
+
+**Speak.**
+
+- Ask for the password. → סִיסְמָה (sisma) · audio `i-16-w6`
+- Say: phone number. → מִסְפַּר טֶלֶפוֹן (mispar telefon) · audio `i-16-w3`
+
+**Review queue from earlier pages:** `i-15-w11`, `taxi-10`
+
+## pu-phone-p02: On the Phone
+
+*Learn page.* Ask someone to wait and say you can't hear.
+
+**Grammar: To-verbs: לְהִתְקַשֵּׁר and לִשְׁלֹחַ.** Phone verbs come as to-verbs after another word: לְהִתְקַשֵּׁר (to call), לִשְׁלֹחַ (to send). A man says אֲנִי לֹא שׁוֹמֵעַ when the line is bad.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רֶגַע | rega \* | one moment | `i-16-w13` tts, f+m |
+| אֲנִי לֹא שׁוֹמֵעַ | ani lo shome'a \* | I can't hear (m) | `i-16-w14` tts, f+m |
+| לְהִתְקַשֵּׁר | lehitkasher \* | to call | `i-16-w9` tts, f+m |
+| לִשְׁלֹחַ | lishloach \* | to send | `i-16-w10` tts, f+m |
+
+**Speak.**
+
+- Ask the caller to hold a moment. → רֶגַע (rega) · audio `i-16-w13`
+- You are a man. Say you can't hear. → אֲנִי לֹא שׁוֹמֵעַ (ani lo shome'a) · audio `i-16-w14`
+
+**Review queue from earlier pages:** `politeness-20`, `cafe-25`
+
+## pu-phone-p03: Leave a Message
+
+*Speak page.* Send a message and set a meeting.
+
+**Grammar: Sending: שׁוֹלֵחַ.** אֲנִי שׁוֹלֵחַ הוֹדָעָה is I'm sending a message, said by a man. פְּגִישָׁה is a meeting, and לְקַבֵּעַ is to set one.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הוֹדָעָה | hoda'a \* | message | `il22-w5` tts, f+m |
+| שׁוֹלֵחַ | sholeach \* | sending (m) | `i-16-w11` tts, f+m |
+| פְּגִישָׁה | pgisha \* | meeting | `il22-w3` tts, f+m |
+| לְקַבֵּעַ | likbo'a \* | to set (an appointment) | `il22-w4` tts, f+m |
+
+**Speak.**
+
+- Say: a message. → הוֹדָעָה (hoda'a) · audio `il22-w5`
+- Say: to set a meeting. → לְקַבֵּעַ (likbo'a) · audio `il22-w4`
+
+**Review queue from earlier pages:** `i-16-w10`, `il16-w4`
+
+## pu-phone-p04: Battery, and Unit Review
+
+*Review page.* Ask about the battery, then review the phone unit.
+
+**Grammar: Ask with יֵשׁ.** יֵשׁ and a noun asks whether something is there, as at the hotel and the shop. Say it with the battery word when your phone is dying.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| סוֹלְלָה | solela \* | battery | `i-16-w7` tts, f+m |
+
+**Speak.**
+
+- Say: battery. → סוֹלְלָה (solela) · audio `i-16-w7`
+
+**Review queue from earlier pages:** `i-16-w3`, `i-16-w6`, `i-16-w13`, `i-16-w9`, `il22-w5`, `il22-w3`
+
+## pu-apartment-p01: Rooms and Rent
+
+*Learn page.* Ask about the rooms and the rent period.
+
+**Grammar: One room, many rooms: חֶדֶר and חֲדָרִים.** חֶדֶר becomes חֲדָרִים in the plural, with -im and new vowels, like יֶלֶד and יְלָדִים. Rent is usually by the חֹדֶשׁ, and a lease often runs a שָׁנָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דִּירָה | dira \* | apartment | `i-17-w1` tts, f+m |
+| חֶדֶר | cheder \* | room | `i-17-w2` tts, f+m |
+| חֲדָרִים | chadarim \* | rooms | `i-17-w3` tts, f+m |
+| חֹדֶשׁ | chodesh \* | month | `i-17-w11` tts, f+m |
+| שָׁנָה | shana \* | year | `i-17-w10` tts, f+m |
+
+**Speak.**
+
+- Say: an apartment. → דִּירָה (dira) · audio `i-17-w1`
+- Say: rooms. → חֲדָרִים (chadarim) · audio `i-17-w3`
+
+**Review queue from earlier pages:** `i-42-w3`, `il17-w1`
+
+## pu-apartment-p02: Is There...? יֵשׁ and אֵין
+
+*Grammar page.* Ask whether there is a balcony or parking.
+
+**Grammar: יֵשׁ and אֵין with a noun.** Put a noun after יֵשׁ and raise your voice to ask if there is one: a balcony, מִרְפֶּסֶת, or parking, חֲנָיָה. The answer may be אֵין, there isn't.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מִרְפֶּסֶת | mirpeset \* | balcony | `i-17-w5` tts, f+m |
+| חֲנָיָה | chanaya \* | parking | `i-17-w6` tts, f+m |
+| יֵשׁ | yesh \* | there is | `il08-w5` tts, f+m |
+| אֵין | ein \* | there isn't | `il08-w6` tts, f+m |
+
+**Speak.**
+
+- Say: a balcony. → מִרְפֶּסֶת (mirpeset) · audio `i-17-w5`
+- Say: there isn't. → אֵין (ein) · audio `il08-w6`
+
+**Review queue from earlier pages:** `d-hotel-l1`, `shop-08`
+
+## pu-apartment-p03: Questions for the Owner
+
+*Speak page.* Talk about the contract and the building fee.
+
+**Grammar: The building committee: וַעַד בַּיִת.** וַעַד בַּיִת is the building committee, and also the monthly fee it collects. Ask the בַּעַל הַבַּיִת about it before you sign the חוֹזֶה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בַּעַל הַבַּיִת | ba'al habayit \* | the landlord | `i-17-w8` tts, f+m |
+| חוֹזֶה | choze \* | contract | `i-17-w7` tts, f+m |
+| וַעַד בַּיִת | va'ad bayit \* | building committee (fee) | `i-17-w9` tts, f+m |
+
+**Speak.**
+
+- Say: the contract. → חוֹזֶה (choze) · audio `i-17-w7`
+- Say: the building committee fee. → וַעַד בַּיִת (va'ad bayit) · audio `i-17-w9`
+
+**Review queue from earlier pages:** `i-44-w8`, `cafe-27`
+
+## pu-apartment-p04: Big and Good, and Unit Review
+
+*Review page.* Describe the apartment, then review the unit.
+
+**Grammar: Feminine describing words: גְּדוֹלָה and טוֹבָה.** דִּירָה is feminine, so a big, good apartment takes the feminine forms גְּדוֹלָה and טוֹבָה, as שָׁנָה takes טוֹבָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גְּדוֹלָה | gdola \* | big (f) | `i-17-w12` tts, f+m |
+| טוֹבָה | tova \* | good (f) | `i-17-w13` tts, f+m |
+
+**Speak.**
+
+- Say the apartment is big. → גְּדוֹלָה (gdola) · audio `i-17-w12`
+
+**Review queue from earlier pages:** `i-17-w1`, `i-17-w3`, `i-17-w5`, `i-17-w6`, `i-17-w7`, `i-17-w8`
 
 ## pu-army-p01: Words From the Army
 

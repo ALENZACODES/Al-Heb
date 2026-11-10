@@ -21,18 +21,18 @@ export function describePreview(preview) {
   if (n(d.removed)) parts.push(`${n(d.removed)} on this device but not in the backup will be removed`);
   if (n(d.unchanged)) parts.push(`${n(d.unchanged)} are already identical`);
   lines.push(parts.length ? parts.join('; ') + '.' : 'Nothing on this device would change.');
-  if (preview.migrated) lines.push('The backup is from an older version of Aleph and will be upgraded as it is restored.');
+  if (preview.migrated) lines.push('The backup is from an older version of ALEF and will be upgraded as it is restored.');
   return lines;
 }
 
 /** Message for a store that cannot keep data across reloads, or null when everything is fine. @param {{persistent:boolean,reason:string|null,newerSchema?:boolean}} s */
 export function storageNotice(s) {
   if (s?.persistent === false) {
-    if (s.reason === 'quota') return 'This device is out of storage space for Aleph. Your progress is being kept in memory only and will be lost when you close this tab. Download a backup now, free some space, then press "Try saving again".';
+    if (s.reason === 'quota') return 'This device is out of storage space for ALEF. Your progress is being kept in memory only and will be lost when you close this tab. Download a backup now, free some space, then press "Try saving again".';
     if (s.reason === 'error') return 'The browser refused to save your progress. It is kept in memory only and will be lost when you close this tab. Download a backup now.';
-    return 'This browser is not letting Aleph save anything (private browsing or blocked storage). The app works, but your progress is kept in memory only and will be lost when you close this tab. Download a backup before you leave.';
+    return 'This browser is not letting ALEF save anything (private browsing or blocked storage). The app works, but your progress is kept in memory only and will be lost when you close this tab. Download a backup before you leave.';
   }
-  if (s?.newerSchema) return 'Your saved data was written by a newer version of Aleph. It is read as it is and not upgraded or downgraded; update the app to be safe.';
+  if (s?.newerSchema) return 'Your saved data was written by a newer version of ALEF. It is read as it is and not upgraded or downgraded; update the app to be safe.';
   return null;
 }
 
@@ -50,8 +50,9 @@ export async function wipeAllData(o) {
       for (const k of names) { st.removeItem(k); rep.extraKeys++; }
     }
   } catch (e) { rep.errors.push('local flags: ' + (/** @type {any} */ (e)?.message || e)); }
-  // The worker's caches (alef-shell-*: the app itself; alef-runtime-*: static audio, images and word-clip lists) hold no learner
-  // data, so they stay unless the worker is being removed too: wiping them would leave the installed app unable to open offline.
+  // alef-shell-* and alef-runtime-* hold the app and static audio, not learner progress, so they stay unless the worker
+  // is being removed too: wiping them would leave the installed app unable to open offline. alef-data, alef-music-v1 and
+  // alef-retention (which reminders were already shown) are removed with the rest of the learner's data.
   try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (!o.unregisterServiceWorker && /^alef-(shell|runtime)-/.test(k)) continue; if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
   if (o.unregisterServiceWorker) {
     try { const sw = o.navigator?.serviceWorker; const regs = sw?.getRegistrations ? await sw.getRegistrations() : []; for (const r of regs) { if (await r.unregister()) rep.serviceWorkers++; } }

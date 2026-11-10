@@ -92,5 +92,5 @@ export function describeRange(r) {
 export function speechSupport(g = globalThis) {
   const C = g?.SpeechRecognition || g?.webkitSpeechRecognition;
   if (!C) return { available: false, lang: 'he-IL', note: 'No speech recognition in this browser. The check stays self-assessed.' };
-  return { available: true, lang: 'he-IL', note: 'This browser has speech recognition, but it may send audio to a server and Hebrew support varies. Aleph does not use it. Your results are self-reported.' };
+  return { available: true, lang: 'he-IL', note: 'This browser has speech recognition, but it may send audio to a server and Hebrew support varies. ALEF does not use it. Your results are self-reported.' };
 }

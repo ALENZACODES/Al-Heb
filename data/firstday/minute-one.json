@@ -9,10 +9,10 @@
     "hePointed": "שָׁלוֹם",
     "heBare": "שלום",
     "gloss": "peace",
-    "line": "You just heard your first Hebrew word. No sign-up.",
+    "line": "Your first Hebrew word. Tap to hear it. No sign-up.",
     "audio": {
       "kind": "word",
-      "id": "firstday-shalom",
+      "id": "hf8c8316a",
       "text": "שָׁלוֹם"
     },
     "assembleMs": 1800

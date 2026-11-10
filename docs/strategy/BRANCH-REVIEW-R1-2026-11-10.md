@@ -1,0 +1,26 @@
+# Overnight Branches: Review Round 1 of 5 (2026-11-10, about 2 AM)
+
+How each branch was checked: its own changed unit tests plus the shared gates (integration, cognitive motion inventory, offline groups, docs index, Brain Lab core) and the text meta scan, run on a copy of the branch without the audio and book folders. The same run on `main` fails 8 checks only because those folders were left out, so only failures beyond that baseline are listed. `overnight/launch-ready-2026-11-10` was also merged into `lane-first-minute-polish-2026-11-10` and the full unit tier run on the result (3,364 tests). Images were spot-checked by eye. No branch was run on a real phone.
+
+Branch names starting `lane-` are the second branch of each lane; their real prefix is left out of tracked text by the repo's text rule (`tools/meta/scan.mjs`).
+
+| Branch | Score | What it adds | Fixes needed |
+|---|---|---|---|
+| overnight/launch-ready-2026-11-10 | 80 | Answer colour band and lesson sounds, Rimon reminders (opt-in after the first win), one-tap quick start, robots.txt and sitemap, header rules | Merged with the first-minute branch: first install was then 3.95 MiB, over the 3.90 headroom line; fixed on the first-minute branch by loading three more preview views on first open. Its plain-text streak flame on the lesson summary duplicated the live flame card; folded into one. Its quick start is kept, as "New to Hebrew? Start now" under Continue on the first setup question. |
+| feature/brain-lab-games-2026-11-10 | 78 | Ten 75-second 3D Studio games, covers and win stills | No failures beyond baseline. Check the 21 art files are WebP and under 200 KB each; confirm the daily workout still uses only the classic drills. |
+| `lane-brain-lab-games-2026-11-10` | 74 | Six teaching games (Sound Twins, Vowel Rain, Middle Letter, Taxi Turns, Café Order, Prayer Chain), picture orders | Fails beyond baseline: `data/lab/words.json` does not match what `tools/lab/build-lab-words.mjs` builds (rebuild and commit); café and direction words must match the dictionary and recordings; LAB_FILES list out of step with the first install; `update.missing-page` test. Overlaps feature/brain-lab-games in src/lab: merge one onto the other before main. |
+| feature/brain-lab-graphics-2026-11-10 | 76 | Covers, win pictures, new-best rosette (decorative, fail-safe) | No failures beyond baseline. 35 images: keep each under 200 KB and give every one alt="" (decorative) as the code already does. |
+| feature/commercial-images-2026-11-10 | 75 | Store key art, Play feature graphic, link preview, icon set | No failures. The key art (checked by eye) is on-model: Rimon, Ari and Noa under the golden olive tree. The left half is empty green on purpose for text; the "with the Aleph logo" version should be the one used for the link preview. PNG and WebP pairs: ship WebP in the app, keep PNG only for stores. |
+| feature/rimon-stills-2026-11-10 | 72 | Rimon stills 001-125 with contact sheets, flip-book moments | No test failures. Stills are opaque cream squares (512 x 512, no transparency), so on the dark green default they show as cream tiles: cut them out with transparency, or show them on a cream rounded card on purpose. Off-model stills to redo: 033 (stray red marks on the body), 036 (red mouth shape reads as lipstick), 043 (scribbled arm). 125 of the 200 asked for. |
+| `lane-rimon-mascot-2026-11-10` | 74 | 200-still catalogue, trigger map, stage with stand-in pictures | No failures beyond baseline. Two Rimon systems now exist (`rimon-show.js` on launch-ready with situation ids, this branch's trigger map, and the sprite Rimon used on the first-minute screens): agree one map and one call before main. |
+| feature/lesson-integrity-2026-11-10 | 77 | Hallel and festival Kiddush wired in, 15 verified glosses, rabbi-review checklist, audio slots for new words | Fails beyond baseline: `tests/traditions.view.test.js` (refresh its expectations or fix the view after the new texts). |
+| `lane-lesson-integrity-2026-11-10` | 76 | Plain titles, liturgical responses, glosses, clergy questions | Fails beyond baseline: `tests/curriculum.intermediate-view.test.js`. Overlaps feature/lesson-integrity in `data/curriculum/lessons-intermediate/`: merge one onto the other before main. |
+| `lane-first-minute-polish-2026-11-10` (this lane) | 82 | One question per screen with Rimon, daily goal, header streak and goal, live streak flame on every lesson finish, icon tabs, one button style, dark green by default, two scroll bugs and the first-lesson streak bug fixed | Already includes launch-ready (merged). Next: lesson path as true round stops, Rimon moments on Home and Progress once the stills are cut out. |
+
+## Order to merge (suggested)
+
+1. overnight/launch-ready, then lane-first-minute-polish (already contains launch-ready, merges cleanly on top).
+2. feature/lesson-integrity, then lane-lesson-integrity (fix the two failing view tests first).
+3. feature/brain-lab-games, then lane-brain-lab-games (rebuild `data/lab/words.json`), then feature/brain-lab-graphics.
+4. feature/rimon-stills after transparency, then lane-rimon-mascot with one shared Rimon map.
+5. feature/commercial-images (assets only; no app code).

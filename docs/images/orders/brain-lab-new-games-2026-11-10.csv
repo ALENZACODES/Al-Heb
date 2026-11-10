@@ -1,0 +1,42 @@
+game,role,filename,pixels,transparent,screen,status
+twins,token,LAB_v2_twins.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+twins,cover,LAB_v2_twins_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+twins,in-game,LAB_v2_twins_play.png,1024x1024,no,"Behind the letter on each Sound Twins card (.lab-twin background, about 130 px); switched off under high contrast",not drawn
+twins,win,LAB_v2_twins_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+rain,token,LAB_v2_rain.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+rain,cover,LAB_v2_rain_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+rain,in-game,LAB_v2_rain_play.png,1024x1536,no,"Behind the falling drops (.lab-sky background, about 350 x 210 px, cover-fitted); switched off under high contrast",not drawn
+rain,in-game,LAB_v2_rain_drop.png,1024x1024,yes,"Each falling drop (.lab-drop, about 72 px)",not drawn
+rain,win,LAB_v2_rain_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+middle,token,LAB_v2_middle.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+middle,cover,LAB_v2_middle_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+middle,win,LAB_v2_middle_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+taxi,token,LAB_v2_taxi.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+taxi,cover,LAB_v2_taxi_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+taxi,in-game,LAB_v2_taxi_play.png,1024x1536,no,"Behind the road board (.lab-road background, about 380 x 180 px); switched off under high contrast",not drawn
+taxi,in-game,LAB_v2_taxi_cab.png,1024x1024,yes,"The taxi that moves left, right or ahead after each answer (.lab-cab, about 48 px)",not drawn
+taxi,win,LAB_v2_taxi_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+cafe,token,LAB_v2_cafe.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+cafe,cover,LAB_v2_cafe_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+cafe,in-game,LAB_v2_cafe_play.png,1536x1024,no,"Behind the order card and menu (.lab-cafe background, about 360 x 300 px); switched off under high contrast",not drawn
+cafe,win,LAB_v2_cafe_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+chain,token,LAB_v2_chain.png,1024x1024,no,"Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",not drawn
+chain,cover,LAB_v2_chain_cover.png,1536x1024,no,"Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",not drawn
+chain,win,LAB_v2_chain_win.png,1024x1024,yes,"Results card above the stars (lab.view.js results(), about 180 px)",not drawn
+cafe-menu,menu,LAB_v2_menu_water.png,1024x1024,no,"Café Order menu tile for ""water"" (lab.games2.js, about 56 px; dictionary word p7f7d7b8f)",not drawn
+cafe-menu,menu,LAB_v2_menu_coffee.png,1024x1024,no,"Café Order menu tile for ""coffee"" (lab.games2.js, about 56 px; dictionary word h06440deb)",not drawn
+cafe-menu,menu,LAB_v2_menu_falafel.png,1024x1024,no,"Café Order menu tile for ""falafel"" (lab.games2.js, about 56 px; dictionary word pa04b1f3c)",not drawn
+cafe-menu,menu,LAB_v2_menu_pita-bread.png,1024x1024,no,"Café Order menu tile for ""pita bread"" (lab.games2.js, about 56 px; dictionary word pf8630913)",not drawn
+cafe-menu,menu,LAB_v2_menu_salad.png,1024x1024,no,"Café Order menu tile for ""salad"" (lab.games2.js, about 56 px; dictionary word p5e953ba9)",not drawn
+cafe-menu,menu,LAB_v2_menu_shakshuka.png,1024x1024,no,"Café Order menu tile for ""shakshuka"" (lab.games2.js, about 56 px; dictionary word p43836f09)",not drawn
+cafe-menu,menu,LAB_v2_menu_espresso.png,1024x1024,no,"Café Order menu tile for ""espresso"" (lab.games2.js, about 56 px; dictionary word p6296527a)",not drawn
+cafe-menu,menu,LAB_v2_menu_latte-style-milky-coffee.png,1024x1024,no,"Café Order menu tile for ""latte-style milky coffee"" (lab.games2.js, about 56 px; dictionary word p80064ddc)",not drawn
+cafe-menu,menu,LAB_v2_menu_soup.png,1024x1024,no,"Café Order menu tile for ""soup"" (lab.games2.js, about 56 px; dictionary word h1efbc546)",not drawn
+cafe-menu,menu,LAB_v2_menu_orange.png,1024x1024,no,"Café Order menu tile for ""orange"" (lab.games2.js, about 56 px; dictionary word hec23eb47)",not drawn
+cafe-menu,menu,LAB_v2_menu_black-coffee.png,1024x1024,no,"Café Order menu tile for ""black coffee"" (lab.games2.js, about 56 px; dictionary word pce477866)",not drawn
+cafe-menu,menu,LAB_v2_menu_coffee-with-milk.png,1024x1024,no,"Café Order menu tile for ""coffee with milk"" (lab.games2.js, about 56 px; dictionary word p7ec62c43)",not drawn
+cafe-menu,menu,LAB_v2_menu_tea-with-mint.png,1024x1024,no,"Café Order menu tile for ""tea with mint"" (lab.games2.js, about 56 px; dictionary word p2de095da)",not drawn
+cafe-menu,menu,LAB_v2_menu_sugar.png,1024x1024,no,"Café Order menu tile for ""sugar"" (lab.games2.js, about 56 px; dictionary word h7631737e)",not drawn
+cafe-menu,menu,LAB_v2_menu_cheese.png,1024x1024,no,"Café Order menu tile for ""cheese"" (lab.games2.js, about 56 px; dictionary word h4ef6ec03)",not drawn
+cafe-menu,menu,LAB_v2_menu_sandwich.png,1024x1024,no,"Café Order menu tile for ""sandwich"" (lab.games2.js, about 56 px; dictionary word h08c16650)",not drawn
+cafe-menu,menu,LAB_v2_menu_lemonade.png,1024x1024,no,"Café Order menu tile for ""lemonade"" (lab.games2.js, about 56 px; dictionary word h8417ff6d)",not drawn

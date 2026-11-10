@@ -51,6 +51,8 @@ export const ROUTES = [
   { name: 'library', pattern: '/library', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', quick: 'nav.route.library' },
   { name: 'libraryarticle', pattern: '/library/:id', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', paramQuery: { id: 'article' } },
   { name: 'lab', pattern: '/lab', module: '../lab/lab.view.js', title: 'Brain Lab', tier: 'v0', owner: 'lab', quick: 'nav.route.lab' },
+  { name: 'league', pattern: '/league', module: '../retention/league.view.js', title: 'League', owner: 'retention', quick: 'nav.route.league' },
+  { name: 'shop', pattern: '/shop', module: '../retention/shop.view.js', title: 'Shop', owner: 'retention', quick: 'nav.route.shop' },
   { name: 'labgame', pattern: '/lab/:game', module: '../lab/lab.view.js', title: 'Brain Lab', tier: 'v0', owner: 'lab', paramQuery: { game: 'game' } },
   { name: 'letterchomp', pattern: '/letterchomp', module: '../games/letterchomp.view.js', title: 'Letter Chomp', tier: 'preview', owner: 'games' },
   { name: 'fallingletters', pattern: '/fallingletters', module: '../games/fallingletters.view.js', title: 'Falling Letters', tier: 'preview', owner: 'games' },
@@ -123,7 +125,7 @@ export const ROUTES = [
   { name: 'firstwin', pattern: '/firstwin', module: '../firstday/minuteone.view.js', title: 'Build your first Hebrew word', owner: 'firstday', optional: true, group: 'learn' },
   { name: 'placement', pattern: '/placement', module: '../placement/placement.view.js', title: 'Placement Check', owner: 'placement', optional: true, group: 'learn', quick: 'nav.placement' },
   { name: 'reminders', pattern: '/reminders', module: './notify.view.js', title: 'Study reminders', owner: 'notify', optional: true, group: 'learn', quick: 'nav.reminders' },
-  { name: 'install', pattern: '/install', module: './install.view.js', tier: 'v0', title: 'Install Aleph', owner: 'install', optional: true, group: 'learn', quick: 'nav.install' },
+  { name: 'install', pattern: '/install', module: './install.view.js', tier: 'v0', title: 'Install ALEF', owner: 'install', optional: true, group: 'learn', quick: 'nav.install' },
   { name: 'typing', pattern: '/typing', module: '../typing/typing.view.js', title: 'Typing practice', owner: 'typing', optional: true, group: 'learn', quick: 'nav.typing' },
   { name: 'festivals', pattern: '/festivals', module: '../festivals/festivals.view.js', tier: 'v0', title: 'This week in the Jewish year', owner: 'festivals', optional: true, group: 'learn', quick: 'nav.festivals' },
   { name: 'festival', pattern: '/festivals/:id', module: '../festivals/festivals.view.js', tier: 'v0', title: 'Festival words', owner: 'festivals', optional: true, paramQuery: { id: 'id' } },
@@ -147,8 +149,9 @@ export const ROUTES = [
   { name: 'privacy', pattern: '/privacy', module: './privacy.view.js', tier: 'v0', title: 'Privacy', owner: 'legal', optional: true, group: 'learn', quick: 'nav.privacy' },
   { name: 'terms', pattern: '/terms', module: './terms.view.js', tier: 'v0', title: 'Terms and rights', owner: 'legal', optional: true, group: 'learn', quick: 'nav.terms' },
   { name: 'compare', pattern: '/compare', module: '../pronunciation/compare.view.js', title: 'Compare pronunciations', owner: 'pronunciation', optional: true, group: 'learn', quick: 'nav.compare' },
-  { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use Aleph offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
+  { name: 'offline', pattern: '/offline', module: './offline.view.js', tier: 'v0', title: 'Use ALEF offline', owner: 'offline', optional: true, group: 'learn', quick: 'nav.offline' },
   { name: 'vocab-themes', pattern: '/vocab/themes', module: '../vocab/themes.view.js', title: 'Theme packs', owner: 'vocab', optional: true, group: 'learn', quick: 'nav.vocab-themes' },
+  { name: 'talk', pattern: '/talk', module: '../talk/talk.view.js', title: 'Talk', owner: 'talk', optional: true, quick: 'nav.talk' },
   { name: 'speak', pattern: '/speak', module: '../speak/speak.view.js', title: 'Say it', owner: 'speak', optional: true, group: 'learn', quick: 'nav.speak' },
   { name: 'sprint', pattern: '/sprint', module: '../sprint/sprint.view.js', title: 'Word Sprint', owner: 'sprint', optional: true, group: 'learn', quick: 'nav.sprint' },
   { name: 'gender',   pattern: '/gender',        module: '../curriculum/learn.view.js', title: 'Gender pairs',     owner: 'lane1', group: 'learn', quick: 'nav.gender',   query: { gender: 'pairs' }, needs: 'curriculum/gender.view.js' },
@@ -158,6 +161,7 @@ export const ROUTES = [
   { name: 'read',     pattern: '/read',           module: '../corpus/read.view.js',              nav: 'nav.read',     title: 'Read', owner: 'lane5' },
   { name: 'text',     pattern: '/read/:textId',   module: '../corpus/read.view.js',              title: 'Read', owner: 'lane5' },
   { name: 'scan',     pattern: '/scan',           module: '../photo/scan.view.js',               nav: 'nav.scan',     title: 'Scan', owner: 'lane6' },
+  { name: 'camera',   pattern: '/camera',         module: '../camera/camera.view.js',            title: 'Camera Translator', owner: 'camera', optional: true, group: 'learn', quick: 'nav.route.camera' },
   { name: 'calendar', pattern: '/calendar',       module: '../curriculum/calendar.view.js',      tier: 'v0', nav: 'nav.calendar', title: 'Calendar', owner: 'lane1' },
   { name: 'day',      pattern: '/day/:date',      module: '../curriculum/day.view.js',           tier: 'preview', title: 'Day', owner: 'items' },
   { name: 'settings', pattern: '/settings',       module: './settings.view.js', tier: 'v0',                  nav: 'nav.settings', title: 'Settings', owner: 'lane8' },
@@ -168,6 +172,7 @@ export const ROUTES = [
   // Optional routes: other lanes add these view files over time. When the file is missing the route is hidden from nav/quick
   // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.
   { name: 'workbook', pattern: '/workbook',        module: './workbook.view.js',                  nav: 'nav.workbook', title: 'Workbook', owner: 'lane8' },
+  { name: 'light', pattern: '/light', module: '../light/light.view.js', title: 'Star of David light', owner: 'light', optional: true, quick: 'nav.light' },
   { name: 'soundgap', pattern: '/soundgap',       module: '../pronunciation/soundgap.view.js',   title: 'Sound gap', owner: 'lane3', optional: true, quick: 'nav.soundgap' },
   { name: 'vowelboard',   pattern: '/vowelboard',    module: '../pronunciation/vowelboard.view.js',    title: 'Vowel board', owner: 'lane3', optional: true, quick: 'nav.vowelboard' },
   { name: 'niqquddial',   pattern: '/niqquddial',    module: '../pronunciation/niqquddial.view.js',    title: 'Vowel-point dial', owner: 'lane3', optional: true, quick: 'nav.niqquddial' },
@@ -175,6 +180,7 @@ export const ROUTES = [
   { name: 'syllablechips',pattern: '/syllablechips', module: '../pronunciation/syllablechips.view.js', title: 'Syllable chips', owner: 'lane3', optional: true, quick: 'nav.syllablechips' },
   { name: 'torahread',    pattern: '/torahread',          module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true, quick: 'nav.torahread' },
   { name: 'torahreader', pattern: '/torahreader', module: '../torahreader/torahreader.view.js', title: 'Torah reader', owner: 'torahreader', optional: true, group: 'learn', quick: 'nav.torahreader' },
+  { name: 'ask', pattern: '/ask', module: '../ask/ask.view.js', title: 'Ask the Torah', owner: 'ask-torah', optional: true, group: 'learn', quick: 'nav.ask' },
   { name: 'torahreadsec', pattern: '/torahread/:section', module: '../torahread/torahread.view.js', title: 'Torah reading', owner: 'torahread', optional: true },
   { name: 'vocab',    pattern: '/vocab',          module: '../vocab/vocab.view.js',              title: 'Vocabulary', owner: 'lane9', optional: true, quick: 'nav.vocab' },
   { name: 'nikkud-fade', pattern: '/nikkud-fade', module: '../nikkudfade/nikkudfade.view.js', tier: 'preview', title: 'Vowel marks, fading out', owner: 'builder', group: 'learn', quick: 'nav.route.nikkud-fade' },
@@ -214,8 +220,15 @@ export function parseHash(hash) {
 }
 
 /** @param {string} hash @returns {{route:RouteDef|null, params:Record<string,string>, path:string, query:Record<string,string>}} */
+export function canonicalPath(path) {
+  if (path === '/brainlab' || path.startsWith('/brainlab/')) return '/lab' + path.slice('/brainlab'.length);
+  return path;
+}
+
 export function matchRoute(hash) {
-  const { path, query } = parseHash(hash);
+  const parsed = parseHash(hash);
+  const path = canonicalPath(parsed.path);
+  const query = parsed.query;
   const segs = path.split('/').filter(Boolean);
   for (const route of ROUTES) {
     const ps = route.pattern.split('/').filter(Boolean);

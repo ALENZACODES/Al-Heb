@@ -17,8 +17,10 @@ export function loadJson(rel) {
   return p;
 }
 export const loadPlans = () => loadJson('data/onboarding/plans.json');
-/** Read-track lesson list (ids, titles, estMinutes) from lane 1's data file; read only. */
-export const loadLessons = () => loadJson('data/curriculum/lessons.json').then((d) => d.lessons);
+/** Lesson list for the plan (ids, tracks, titles, minutes, prerequisites). The slim index (about 17 KB) keeps the first screen light;
+ *  the full lesson file (about 460 KB) is the fallback if the index cannot be read. */
+export const loadLessons = () => loadJson('data/curriculum/lessons.index.json').then((d) => { if (!Array.isArray(d?.lessons) || !d.lessons.length) throw new Error('empty lesson index'); return d.lessons; })
+  .catch(() => loadJson('data/curriculum/lessons.json').then((d) => d.lessons));
 /** @returns {Promise<{plans:any, lessons:any[]}>} */
 export async function loadOnboardingData() {
   const [plans, lessons] = await Promise.all([loadPlans(), loadLessons()]);

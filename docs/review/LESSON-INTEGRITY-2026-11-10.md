@@ -323,3 +323,10 @@ are original, unreviewed sentences with no clips yet, and the pages mark them fo
    - The word for weapon is left off the pages; the unit teaches soldier, reserve duty, base, leave and the slang.
 5. **Both festival greetings kept.** No change to the data.
 6. **Shabbat and holiday units stay at the end.** No change.
+
+Also in round 11:
+- **Three more units written:** `pu-hotel` (5 pages), `pu-phone` (4) and `pu-apartment` (4), for 117 live pages, with 72 left.
+- **A pointing slip kept off the pages.** il17's breakfast word is pointed אַרוּחַת, with a patah. The dialogue's אֲרוּחַת, with a
+  hataf patah, is the correct form, so the hotel pages use the dialogue line.
+- **Fix still to make:** il17-w5 itself has to be corrected in the lesson data together with its vocab link, as listed since
+  round 1.

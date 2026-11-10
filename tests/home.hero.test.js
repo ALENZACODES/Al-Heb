@@ -33,11 +33,11 @@ test('home shows the Tree of Life while welcome keeps its onboarding flow', () =
     assert.ok(mobile, 'mobile image is chosen by a picture source');
     assert.equal(mobile.attrs.srcset, ANCIENT_TREE_MOBILE_SRC);
     assert.equal(mobile.attrs.media, '(max-width: 600px)');
-    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_MOBILE_SRC, import.meta.url)), 'mobile artwork must ship with Aleph');
+    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_MOBILE_SRC, import.meta.url)), 'mobile artwork must ship with ALEF');
     assert.ok(scene.querySelector('.astral-harvest-motes'), 'harvest motes animate separately from the image');
     assert.ok(scene.querySelector('.astral-harvest-halo'), 'subtle warm light is layered in CSS');
     assert.equal(scene.attrs['aria-label'], ANCIENT_TREE_DESCRIPTION);
-    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_SRC, import.meta.url)), 'artwork must ship with Aleph');
+    assert.ok(existsSync(new URL('../' + ANCIENT_TREE_SRC, import.meta.url)), 'artwork must ship with ALEF');
     assert.ok(scene.querySelector('.astral-ray'), 'moving light remains');
     assert.ok(scene.querySelector('.astral-stars'), 'night sky remains');
     const hero = root.querySelector('.show-hero');
@@ -49,7 +49,7 @@ test('home shows the Tree of Life while welcome keeps its onboarding flow', () =
     assert.equal(root.querySelector('.show-hero a.show-btn2').attrs.href, '#/books');
   }
   assert.equal(home.queryAll('h1').length, 1);
-  assert.equal(welcome.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to Aleph אלף');
+  assert.equal(welcome.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף');
   const css = readFileSync(new URL('../assets/css/astral-home.css', import.meta.url), 'utf8');
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
   assert.match(css, /astral-scene\[data-paused="1"\]/);

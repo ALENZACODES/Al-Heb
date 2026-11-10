@@ -1,4 +1,4 @@
-import { h, heSpan } from './ui.js';
+import { h, heSpan, medal } from './ui.js';
 import { showcaseNode } from './showcase.js';
 import { ROUTES } from './router.js';
 import { PREVIEW_HIDDEN } from './nav-model.js';
@@ -11,7 +11,7 @@ async function tryImport(paths) {
   return null;
 }
 
-export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook']];
+export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['ask', '#/ask'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook'], ['light', '#/light']];
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;
@@ -30,7 +30,7 @@ export function mount(root, ctx) {
     h('ul', { class: 'tiles home-dests', style: 'grid-template-columns:repeat(auto-fit,minmax(min(4.5rem,100%),1fr));gap:.5rem;margin:0;padding:0' },
       ...DESTS.filter(([n]) => ctx.hasRoute?.(n) ?? false).map(([n, route, label]) => {
         const pre = previewTag(n);
-        return h('li', {}, h('a', { class: 'tile', href: '#/' + route, style: 'padding-inline:.25rem;min-block-size:3rem' }, h('span', {}, label), pre ? ' ' : null, pre ? h('span', { class: 'muted small' }, 'Preview') : null));
+        return h('li', {}, h('a', { class: 'tile', href: '#/' + route, style: 'padding-inline:.25rem;min-block-size:3rem' }, medal('home', n, 40), h('span', {}, label), pre ? ' ' : null, pre ? h('span', { class: 'muted small' }, 'Preview') : null));
       })));
   const babyRest = () => [
     h('p', {}, h('button', { class: 'btn secondary', type: 'button', id: 'home-more', 'aria-controls': 'nav-more', onclick: openMenu }, 'More'))];
@@ -41,7 +41,7 @@ export function mount(root, ctx) {
       // U-19: no destination twice on one screen — the quick wall skips any
       // target the five-destination row above already shows (Letters, Read
       // and Calendar used to appear in both, reading as duplicate tiles).
-      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
+      h('ul', { class: 'tiles' }, ...QUICK.filter(([, href]) => !DESTS.some(([, r]) => '#/' + r === href)).map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, medal('home', k, 48), h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
         // optional views from other lanes: only listed when their file exists in this build
         ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
     ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))
@@ -84,6 +84,9 @@ export function mount(root, ctx) {
       firstday, onboarding, placement, hasRoute: ctx.hasRoute, daysAway: daysAway({ last: st.rawStreak?.last, cards: st.cards }), reviewedToday: reviewedToday(st.cards), dailyGoal: goalNow, speak, typing, compare,
       });
       renderRest(today.firstRun);
+      // Streak flame under the title (Duolingo-style), only when there is a streak and the learner has not hidden streaks.
+      header.querySelector?.('.alef-streak-flame')?.remove?.();
+      if (streakVisible(ctx) && today.streak.count > 0) header.append(h('p', { class: 'alef-streak-flame', 'data-streak-slot': 'home' }, h('span', { class: 'alef-flame', 'aria-hidden': 'true' }, '🔥'), h('strong', {}, `${today.streak.count}-day streak`), today.streak.activeToday ? ' · today counts' : ' · keep it lit today'));
       // A returning learner sees their next step first: the Today card moves up under the title, and the hero's
       // "Start your first 10 minutes" (already done) gives way to it. A first visit keeps the showcase on top.
       if (!today.firstRun) {

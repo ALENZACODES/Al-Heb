@@ -27813,6 +27813,3004 @@
    ]
   },
   {
+   "id": "pu-hotel-p01",
+   "title": "At Reception",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name what you need at a hotel desk.",
+   "grammarNote": "One root, two words: הַזְמָנָה. הַזְמָנָה is a reservation, and also an order. It comes from the same root as לְהַזְמִין, to order, from the cafe unit.",
+   "grammar": {
+    "point": "One root, two words: הַזְמָנָה",
+    "body": "הַזְמָנָה is a reservation, and also an order. It comes from the same root as לְהַזְמִין, to order, from the cafe unit.",
+    "examples": [
+     {
+      "itemId": "il17-w2",
+      "he": "הַזְמָנָה",
+      "en": "reservation"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il17-w1",
+     "source": "data/curriculum/lessons.json#il17.words[0]",
+     "he": "חֶדֶר",
+     "en": "room",
+     "translit": "cheder",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il17-w1"
+     },
+     "audio": {
+      "clipId": "il17-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il17-w2",
+     "source": "data/curriculum/lessons.json#il17.words[1]",
+     "he": "הַזְמָנָה",
+     "en": "reservation",
+     "translit": "hazmana",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il17-w2"
+     },
+     "audio": {
+      "clipId": "il17-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il17-w3",
+     "source": "data/curriculum/lessons.json#il17.words[2]",
+     "he": "לַיְלָה",
+     "en": "night",
+     "translit": "laila",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il17-w3"
+     },
+     "audio": {
+      "clipId": "il17-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il17-w4",
+     "source": "data/curriculum/lessons.json#il17.words[3]",
+     "he": "מַפְתֵּחַ",
+     "en": "key",
+     "translit": "mafteach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il17-w4"
+     },
+     "audio": {
+      "clipId": "il17-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il17-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il17-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il17-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il17-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-restaurant-l1",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il17-w1",
+    "il17-w2",
+    "il17-w3",
+    "il17-w4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il17-w1"
+     },
+     "answer": "il17-w1",
+     "options": [
+      "il17-w2",
+      "il17-w3",
+      "il17-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il17-w2"
+     },
+     "answer": "il17-w2",
+     "options": [
+      "il17-w1",
+      "il17-w3",
+      "il17-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il17-w3"
+     },
+     "answer": "il17-w3",
+     "options": [
+      "il17-w1",
+      "il17-w2",
+      "il17-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il17-w4"
+     },
+     "answer": "il17-w4",
+     "options": [
+      "il17-w1",
+      "il17-w2",
+      "il17-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: a reservation.",
+     "answer": "il17-w2",
+     "he": "הַזְמָנָה",
+     "translit": "hazmana",
+     "en": "reservation",
+     "audio": {
+      "clipId": "il17-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: the key.",
+     "answer": "il17-w4",
+     "he": "מַפְתֵּחַ",
+     "translit": "mafteach",
+     "en": "key",
+     "audio": {
+      "clipId": "il17-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-14",
+    "d-restaurant-l1"
+   ]
+  },
+  {
+   "id": "pu-hotel-p02",
+   "title": "Checking In",
+   "order": 2,
+   "kind": "dialogue",
+   "can": "Follow a check-in from hello to the key.",
+   "grammarNote": "On the floor: בַּקּוֹמָה. בְּ (in, on) meets הַ (the) and merges into בַּ, just as לְ and הַ make לַ: בַּקּוֹמָה הַשְּׁנִיָּה, on the second floor.",
+   "grammar": {
+    "point": "On the floor: בַּקּוֹמָה",
+    "body": "בְּ (in, on) meets הַ (the) and merges into בַּ, just as לְ and הַ make לַ: בַּקּוֹמָה הַשְּׁנִיָּה, on the second floor.",
+    "examples": [
+     {
+      "itemId": "d-hotel-l7",
+      "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+      "en": "The room is on the second floor. Here is the key."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-hotel-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+     "en": "Hello. I have a reservation.",
+     "translit": "shalom. yesh li hazmana.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l1"
+     },
+     "audio": {
+      "clipId": "d-hotel-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    },
+    {
+     "id": "d-hotel-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בְּאֵיזֶה שֵׁם?",
+     "en": "Under what name?",
+     "translit": "be'eize shem?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l2"
+     },
+     "audio": {
+      "clipId": "d-hotel-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    },
+    {
+     "id": "d-hotel-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "לֵוִי.",
+     "en": "Levi.",
+     "translit": "levi.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l3"
+     },
+     "audio": {
+      "clipId": "d-hotel-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    },
+    {
+     "id": "d-hotel-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+     "en": "Yes, I see it. Three nights.",
+     "translit": "ken, ani ro'e. shlosha leilot.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l4"
+     },
+     "audio": {
+      "clipId": "d-hotel-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    },
+    {
+     "id": "d-hotel-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+     "en": "When is breakfast?",
+     "translit": "matai aruchat haboker?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l5"
+     },
+     "audio": {
+      "clipId": "d-hotel-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    },
+    {
+     "id": "d-hotel-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מִשֶּׁבַע עַד עֶשֶׂר.",
+     "en": "From seven to ten.",
+     "translit": "mishe'va ad eser.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l6"
+     },
+     "audio": {
+      "clipId": "d-hotel-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    },
+    {
+     "id": "d-hotel-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+     "en": "The room is on the second floor. Here is the key.",
+     "translit": "hacheder bakoma hashniya. hine hamafteach.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l7"
+     },
+     "audio": {
+      "clipId": "d-hotel-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    },
+    {
+     "id": "d-hotel-l8",
+     "source": "data/curriculum/dialogues.json",
+     "he": "תּוֹדָה רַבָּה!",
+     "en": "Thank you very much!",
+     "translit": "toda raba!",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l8"
+     },
+     "audio": {
+      "clipId": "d-hotel-l8",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-hotel-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-hotel-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-hotel-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-hotel-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-hotel-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-hotel-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-hotel-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "d-hotel-l8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "taxi-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "il17-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 11,
+     "kind": "line",
+     "id": "politeness-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-hotel-l1",
+    "d-hotel-l2",
+    "d-hotel-l3",
+    "d-hotel-l4",
+    "d-hotel-l5",
+    "d-hotel-l6",
+    "d-hotel-l7",
+    "d-hotel-l8"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Tell the desk you have a reservation.",
+     "answer": "d-hotel-l1",
+     "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+     "translit": "shalom. yesh li hazmana.",
+     "en": "Hello. I have a reservation.",
+     "audio": {
+      "clipId": "d-hotel-l1",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "taxi-04",
+    "il17-w4",
+    "politeness-02"
+   ],
+   "dialogue": {
+    "id": "d-hotel",
+    "setting": "A guest checks in at a hotel desk.",
+    "lines": [
+     "d-hotel-l1",
+     "d-hotel-l2",
+     "d-hotel-l3",
+     "d-hotel-l4",
+     "d-hotel-l5",
+     "d-hotel-l6",
+     "d-hotel-l7",
+     "d-hotel-l8"
+    ]
+   }
+  },
+  {
+   "id": "pu-hotel-p03",
+   "title": "I Have: יֵשׁ לִי",
+   "order": 3,
+   "kind": "grammar",
+   "can": "Say you have a reservation and understand how many nights.",
+   "grammarNote": "To have: יֵשׁ and לְ. Hebrew has no verb for have in the present. It says there is to me: יֵשׁ לִי הַזְמָנָה, I have a reservation. Night has an irregular plural: לַיְלָה, three לֵילוֹת.",
+   "grammar": {
+    "point": "To have: יֵשׁ and לְ",
+    "body": "Hebrew has no verb for have in the present. It says there is to me: יֵשׁ לִי הַזְמָנָה, I have a reservation. Night has an irregular plural: לַיְלָה, three לֵילוֹת.",
+    "examples": [
+     {
+      "itemId": "d-hotel-l1",
+      "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+      "en": "Hello. I have a reservation."
+     },
+     {
+      "itemId": "d-hotel-l4",
+      "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+      "en": "Yes, I see it. Three nights."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-hotel-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+     "en": "Hello. I have a reservation.",
+     "translit": "shalom. yesh li hazmana.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l1"
+     },
+     "audio": {
+      "clipId": "d-hotel-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    },
+    {
+     "id": "d-hotel-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+     "en": "Yes, I see it. Three nights.",
+     "translit": "ken, ani ro'e. shlosha leilot.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l4"
+     },
+     "audio": {
+      "clipId": "d-hotel-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-hotel-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-hotel-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il08-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il17-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-hotel-l1",
+    "d-hotel-l4"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Say you have a reservation.",
+     "answer": "d-hotel-l1",
+     "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+     "translit": "shalom. yesh li hazmana.",
+     "en": "Hello. I have a reservation.",
+     "audio": {
+      "clipId": "d-hotel-l1",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il08-w5",
+    "il17-w3"
+   ]
+  },
+  {
+   "id": "pu-hotel-p04",
+   "title": "Ask About Breakfast",
+   "order": 4,
+   "kind": "speak",
+   "can": "Ask when breakfast is and understand the hours.",
+   "grammarNote": "From and until: מִ... עַד. From is מִ joined to the next word, until is עַד: מִשֶּׁבַע עַד עֶשֶׂר, from seven to ten. Hours use the counting set.",
+   "grammar": {
+    "point": "From and until: מִ... עַד",
+    "body": "From is מִ joined to the next word, until is עַד: מִשֶּׁבַע עַד עֶשֶׂר, from seven to ten. Hours use the counting set.",
+    "examples": [
+     {
+      "itemId": "d-hotel-l6",
+      "he": "מִשֶּׁבַע עַד עֶשֶׂר.",
+      "en": "From seven to ten."
+     },
+     {
+      "itemId": "d-hotel-l5",
+      "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+      "en": "When is breakfast?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-hotel-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+     "en": "When is breakfast?",
+     "translit": "matai aruchat haboker?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l5"
+     },
+     "audio": {
+      "clipId": "d-hotel-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (woman)"
+    },
+    {
+     "id": "d-hotel-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מִשֶּׁבַע עַד עֶשֶׂר.",
+     "en": "From seven to ten.",
+     "translit": "mishe'va ad eser.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l6"
+     },
+     "audio": {
+      "clipId": "d-hotel-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    },
+    {
+     "id": "d-hotel-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בְּאֵיזֶה שֵׁם?",
+     "en": "Under what name?",
+     "translit": "be'eize shem?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l2"
+     },
+     "audio": {
+      "clipId": "d-hotel-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-hotel-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-hotel-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-hotel-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-07-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-10-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-hotel-l5",
+    "d-hotel-l6",
+    "d-hotel-l2"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Ask when breakfast is.",
+     "answer": "d-hotel-l5",
+     "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+     "translit": "matai aruchat haboker?",
+     "en": "When is breakfast?",
+     "audio": {
+      "clipId": "d-hotel-l5",
+      "status": "gap",
+      "voices": []
+     }
+    },
+    {
+     "prompt": "Ask under what name, as the desk does.",
+     "answer": "d-hotel-l2",
+     "he": "בְּאֵיזֶה שֵׁם?",
+     "translit": "be'eize shem?",
+     "en": "Under what name?",
+     "audio": {
+      "clipId": "d-hotel-l2",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-07-f",
+    "numbers-10-f"
+   ]
+  },
+  {
+   "id": "pu-hotel-p05",
+   "title": "Here Is the Key, and Unit Review",
+   "order": 5,
+   "kind": "review",
+   "can": "Take your key, then review the hotel unit.",
+   "grammarNote": "Here is: הִנֵּה, again. הִנֵּה הַמַּפְתֵּחַ, here is the key, uses the same הִנֵּה as here is the menu. Expect it whenever something is handed to you.",
+   "grammar": {
+    "point": "Here is: הִנֵּה, again",
+    "body": "הִנֵּה הַמַּפְתֵּחַ, here is the key, uses the same הִנֵּה as here is the menu. Expect it whenever something is handed to you.",
+    "examples": [
+     {
+      "itemId": "d-hotel-l7",
+      "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+      "en": "The room is on the second floor. Here is the key."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-hotel-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+     "en": "The room is on the second floor. Here is the key.",
+     "translit": "hacheder bakoma hashniya. hine hamafteach.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-hotel-l7"
+     },
+     "audio": {
+      "clipId": "d-hotel-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Receptionist (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-hotel-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il17-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il17-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il17-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-hotel-l1",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-hotel-l4",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-hotel-l5",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-hotel-l7"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Read the line aloud: the room is on the second floor, here is the key.",
+     "answer": "d-hotel-l7",
+     "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+     "translit": "hacheder bakoma hashniya. hine hamafteach.",
+     "en": "The room is on the second floor. Here is the key.",
+     "audio": {
+      "clipId": "d-hotel-l7",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il17-w1",
+    "il17-w2",
+    "il17-w4",
+    "d-hotel-l1",
+    "d-hotel-l4",
+    "d-hotel-l5"
+   ]
+  },
+  {
+   "id": "pu-phone-p01",
+   "title": "Buying a SIM",
+   "order": 1,
+   "kind": "learn",
+   "can": "Ask for a SIM, a number and the Wi-Fi password.",
+   "grammarNote": "Two nouns as one: מִסְפַּר טֶלֶפוֹן. When מִסְפָּר is the first of two nouns that work as one, its vowel shortens: מִסְפַּר טֶלֶפוֹן, a phone number.",
+   "grammar": {
+    "point": "Two nouns as one: מִסְפַּר טֶלֶפוֹן",
+    "body": "When מִסְפָּר is the first of two nouns that work as one, its vowel shortens: מִסְפַּר טֶלֶפוֹן, a phone number.",
+    "examples": [
+     {
+      "itemId": "i-16-w3",
+      "he": "מִסְפַּר טֶלֶפוֹן",
+      "en": "phone number"
+     },
+     {
+      "itemId": "i-16-w2",
+      "he": "מִסְפָּר",
+      "en": "number"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-16-w1",
+     "source": "data/curriculum/lessons.json#I-16.words[0]",
+     "he": "טֶלֶפוֹן",
+     "en": "phone",
+     "translit": "telefon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w1"
+     },
+     "audio": {
+      "clipId": "i-16-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w2",
+     "source": "data/curriculum/lessons.json#I-16.words[1]",
+     "he": "מִסְפָּר",
+     "en": "number",
+     "translit": "mispar",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w2"
+     },
+     "audio": {
+      "clipId": "i-16-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w3",
+     "source": "data/curriculum/lessons.json#I-16.words[2]",
+     "he": "מִסְפַּר טֶלֶפוֹן",
+     "en": "phone number",
+     "translit": "mispar telefon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w3"
+     },
+     "audio": {
+      "clipId": "i-16-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w5",
+     "source": "data/curriculum/lessons.json#I-16.words[4]",
+     "he": "אִינְטֶרְנֶט",
+     "en": "internet",
+     "translit": "internet",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w5"
+     },
+     "audio": {
+      "clipId": "i-16-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w6",
+     "source": "data/curriculum/lessons.json#I-16.words[5]",
+     "he": "סִיסְמָה",
+     "en": "password",
+     "translit": "sisma",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w6"
+     },
+     "audio": {
+      "clipId": "i-16-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-16-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-16-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-16-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-15-w11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "taxi-10",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-16-w1",
+    "i-16-w2",
+    "i-16-w3",
+    "i-16-w5",
+    "i-16-w6"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w1"
+     },
+     "answer": "i-16-w1",
+     "options": [
+      "i-16-w2",
+      "i-16-w3",
+      "i-16-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w2"
+     },
+     "answer": "i-16-w2",
+     "options": [
+      "i-16-w1",
+      "i-16-w3",
+      "i-16-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w3"
+     },
+     "answer": "i-16-w3",
+     "options": [
+      "i-16-w1",
+      "i-16-w2",
+      "i-16-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w5"
+     },
+     "answer": "i-16-w5",
+     "options": [
+      "i-16-w1",
+      "i-16-w2",
+      "i-16-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w6"
+     },
+     "answer": "i-16-w6",
+     "options": [
+      "i-16-w1",
+      "i-16-w2",
+      "i-16-w6"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for the password.",
+     "answer": "i-16-w6",
+     "he": "סִיסְמָה",
+     "translit": "sisma",
+     "en": "password",
+     "audio": {
+      "clipId": "i-16-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: phone number.",
+     "answer": "i-16-w3",
+     "he": "מִסְפַּר טֶלֶפוֹן",
+     "translit": "mispar telefon",
+     "en": "phone number",
+     "audio": {
+      "clipId": "i-16-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-15-w11",
+    "taxi-10"
+   ]
+  },
+  {
+   "id": "pu-phone-p02",
+   "title": "On the Phone",
+   "order": 2,
+   "kind": "learn",
+   "can": "Ask someone to wait and say you can't hear.",
+   "grammarNote": "To-verbs: לְהִתְקַשֵּׁר and לִשְׁלֹחַ. Phone verbs come as to-verbs after another word: לְהִתְקַשֵּׁר (to call), לִשְׁלֹחַ (to send). A man says אֲנִי לֹא שׁוֹמֵעַ when the line is bad.",
+   "grammar": {
+    "point": "To-verbs: לְהִתְקַשֵּׁר and לִשְׁלֹחַ",
+    "body": "Phone verbs come as to-verbs after another word: לְהִתְקַשֵּׁר (to call), לִשְׁלֹחַ (to send). A man says אֲנִי לֹא שׁוֹמֵעַ when the line is bad.",
+    "examples": [
+     {
+      "itemId": "i-16-w9",
+      "he": "לְהִתְקַשֵּׁר",
+      "en": "to call"
+     },
+     {
+      "itemId": "i-16-w14",
+      "he": "אֲנִי לֹא שׁוֹמֵעַ",
+      "en": "I can't hear (m)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-16-w13",
+     "source": "data/curriculum/lessons.json#I-16.words[12]",
+     "he": "רֶגַע",
+     "en": "one moment",
+     "translit": "rega",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w13"
+     },
+     "audio": {
+      "clipId": "i-16-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w14",
+     "source": "data/curriculum/lessons.json#I-16.words[13]",
+     "he": "אֲנִי לֹא שׁוֹמֵעַ",
+     "en": "I can't hear (m)",
+     "translit": "ani lo shome'a",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w14"
+     },
+     "audio": {
+      "clipId": "i-16-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w9",
+     "source": "data/curriculum/lessons.json#I-16.words[8]",
+     "he": "לְהִתְקַשֵּׁר",
+     "en": "to call",
+     "translit": "lehitkasher",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w9"
+     },
+     "audio": {
+      "clipId": "i-16-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w10",
+     "source": "data/curriculum/lessons.json#I-16.words[9]",
+     "he": "לִשְׁלֹחַ",
+     "en": "to send",
+     "translit": "lishloach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w10"
+     },
+     "audio": {
+      "clipId": "i-16-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-16-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-16-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "politeness-20",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-25",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-16-w13",
+    "i-16-w14",
+    "i-16-w9",
+    "i-16-w10"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w13"
+     },
+     "answer": "i-16-w13",
+     "options": [
+      "i-16-w14",
+      "i-16-w9",
+      "i-16-w13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w14"
+     },
+     "answer": "i-16-w14",
+     "options": [
+      "i-16-w13",
+      "i-16-w9",
+      "i-16-w14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w9"
+     },
+     "answer": "i-16-w9",
+     "options": [
+      "i-16-w13",
+      "i-16-w14",
+      "i-16-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w10"
+     },
+     "answer": "i-16-w10",
+     "options": [
+      "i-16-w13",
+      "i-16-w14",
+      "i-16-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask the caller to hold a moment.",
+     "answer": "i-16-w13",
+     "he": "רֶגַע",
+     "translit": "rega",
+     "en": "one moment",
+     "audio": {
+      "clipId": "i-16-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You are a man. Say you can't hear.",
+     "answer": "i-16-w14",
+     "he": "אֲנִי לֹא שׁוֹמֵעַ",
+     "translit": "ani lo shome'a",
+     "en": "I can't hear (m)",
+     "audio": {
+      "clipId": "i-16-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-20",
+    "cafe-25"
+   ]
+  },
+  {
+   "id": "pu-phone-p03",
+   "title": "Leave a Message",
+   "order": 3,
+   "kind": "speak",
+   "can": "Send a message and set a meeting.",
+   "grammarNote": "Sending: שׁוֹלֵחַ. אֲנִי שׁוֹלֵחַ הוֹדָעָה is I'm sending a message, said by a man. פְּגִישָׁה is a meeting, and לְקַבֵּעַ is to set one.",
+   "grammar": {
+    "point": "Sending: שׁוֹלֵחַ",
+    "body": "אֲנִי שׁוֹלֵחַ הוֹדָעָה is I'm sending a message, said by a man. פְּגִישָׁה is a meeting, and לְקַבֵּעַ is to set one.",
+    "examples": [
+     {
+      "itemId": "i-16-w11",
+      "he": "שׁוֹלֵחַ",
+      "en": "sending (m)"
+     },
+     {
+      "itemId": "il22-w5",
+      "he": "הוֹדָעָה",
+      "en": "message"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il22-w5",
+     "source": "data/curriculum/lessons.json#il22.words[4]",
+     "he": "הוֹדָעָה",
+     "en": "message",
+     "translit": "hoda'a",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w5"
+     },
+     "audio": {
+      "clipId": "il22-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-16-w11",
+     "source": "data/curriculum/lessons.json#I-16.words[10]",
+     "he": "שׁוֹלֵחַ",
+     "en": "sending (m)",
+     "translit": "sholeach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w11"
+     },
+     "audio": {
+      "clipId": "i-16-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il22-w3",
+     "source": "data/curriculum/lessons.json#il22.words[2]",
+     "he": "פְּגִישָׁה",
+     "en": "meeting",
+     "translit": "pgisha",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w3"
+     },
+     "audio": {
+      "clipId": "il22-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il22-w4",
+     "source": "data/curriculum/lessons.json#il22.words[3]",
+     "he": "לְקַבֵּעַ",
+     "en": "to set (an appointment)",
+     "translit": "likbo'a",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il22-w4"
+     },
+     "audio": {
+      "clipId": "il22-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il22-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il22-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il22-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-16-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il16-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il22-w5",
+    "i-16-w11",
+    "il22-w3",
+    "il22-w4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il22-w5"
+     },
+     "answer": "il22-w5",
+     "options": [
+      "i-16-w11",
+      "il22-w3",
+      "il22-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w11"
+     },
+     "answer": "i-16-w11",
+     "options": [
+      "il22-w5",
+      "il22-w3",
+      "i-16-w11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il22-w3"
+     },
+     "answer": "il22-w3",
+     "options": [
+      "il22-w5",
+      "i-16-w11",
+      "il22-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il22-w4"
+     },
+     "answer": "il22-w4",
+     "options": [
+      "il22-w5",
+      "i-16-w11",
+      "il22-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: a message.",
+     "answer": "il22-w5",
+     "he": "הוֹדָעָה",
+     "translit": "hoda'a",
+     "en": "message",
+     "audio": {
+      "clipId": "il22-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: to set a meeting.",
+     "answer": "il22-w4",
+     "he": "לְקַבֵּעַ",
+     "translit": "likbo'a",
+     "en": "to set (an appointment)",
+     "audio": {
+      "clipId": "il22-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-16-w10",
+    "il16-w4"
+   ]
+  },
+  {
+   "id": "pu-phone-p04",
+   "title": "Battery, and Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Ask about the battery, then review the phone unit.",
+   "grammarNote": "Ask with יֵשׁ. יֵשׁ and a noun asks whether something is there, as at the hotel and the shop. Say it with the battery word when your phone is dying.",
+   "grammar": {
+    "point": "Ask with יֵשׁ",
+    "body": "יֵשׁ and a noun asks whether something is there, as at the hotel and the shop. Say it with the battery word when your phone is dying.",
+    "examples": [
+     {
+      "itemId": "i-16-w7",
+      "he": "סוֹלְלָה",
+      "en": "battery"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-16-w7",
+     "source": "data/curriculum/lessons.json#I-16.words[6]",
+     "he": "סוֹלְלָה",
+     "en": "battery",
+     "translit": "solela",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-16-w7"
+     },
+     "audio": {
+      "clipId": "i-16-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-16-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-16-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-16-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-16-w13",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-16-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il22-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "il22-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-16-w7"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-16-w7"
+     },
+     "answer": "i-16-w7",
+     "options": [
+      "i-16-w7"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: battery.",
+     "answer": "i-16-w7",
+     "he": "סוֹלְלָה",
+     "translit": "solela",
+     "en": "battery",
+     "audio": {
+      "clipId": "i-16-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-16-w3",
+    "i-16-w6",
+    "i-16-w13",
+    "i-16-w9",
+    "il22-w5",
+    "il22-w3"
+   ]
+  },
+  {
+   "id": "pu-apartment-p01",
+   "title": "Rooms and Rent",
+   "order": 1,
+   "kind": "learn",
+   "can": "Ask about the rooms and the rent period.",
+   "grammarNote": "One room, many rooms: חֶדֶר and חֲדָרִים. חֶדֶר becomes חֲדָרִים in the plural, with -im and new vowels, like יֶלֶד and יְלָדִים. Rent is usually by the חֹדֶשׁ, and a lease often runs a שָׁנָה.",
+   "grammar": {
+    "point": "One room, many rooms: חֶדֶר and חֲדָרִים",
+    "body": "חֶדֶר becomes חֲדָרִים in the plural, with -im and new vowels, like יֶלֶד and יְלָדִים. Rent is usually by the חֹדֶשׁ, and a lease often runs a שָׁנָה.",
+    "examples": [
+     {
+      "itemId": "i-17-w3",
+      "he": "חֲדָרִים",
+      "en": "rooms"
+     },
+     {
+      "itemId": "i-17-w2",
+      "he": "חֶדֶר",
+      "en": "room"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-17-w1",
+     "source": "data/curriculum/lessons.json#I-17.words[0]",
+     "he": "דִּירָה",
+     "en": "apartment",
+     "translit": "dira",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w1"
+     },
+     "audio": {
+      "clipId": "i-17-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w2",
+     "source": "data/curriculum/lessons.json#I-17.words[1]",
+     "he": "חֶדֶר",
+     "en": "room",
+     "translit": "cheder",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w2"
+     },
+     "audio": {
+      "clipId": "i-17-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w3",
+     "source": "data/curriculum/lessons.json#I-17.words[2]",
+     "he": "חֲדָרִים",
+     "en": "rooms",
+     "translit": "chadarim",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w3"
+     },
+     "audio": {
+      "clipId": "i-17-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w11",
+     "source": "data/curriculum/lessons.json#I-17.words[10]",
+     "he": "חֹדֶשׁ",
+     "en": "month",
+     "translit": "chodesh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w11"
+     },
+     "audio": {
+      "clipId": "i-17-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w10",
+     "source": "data/curriculum/lessons.json#I-17.words[9]",
+     "he": "שָׁנָה",
+     "en": "year",
+     "translit": "shana",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w10"
+     },
+     "audio": {
+      "clipId": "i-17-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-17-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-17-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-17-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-17-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-17-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-42-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "il17-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-17-w1",
+    "i-17-w2",
+    "i-17-w3",
+    "i-17-w11",
+    "i-17-w10"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w1"
+     },
+     "answer": "i-17-w1",
+     "options": [
+      "i-17-w2",
+      "i-17-w3",
+      "i-17-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w2"
+     },
+     "answer": "i-17-w2",
+     "options": [
+      "i-17-w1",
+      "i-17-w3",
+      "i-17-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w3"
+     },
+     "answer": "i-17-w3",
+     "options": [
+      "i-17-w1",
+      "i-17-w2",
+      "i-17-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w11"
+     },
+     "answer": "i-17-w11",
+     "options": [
+      "i-17-w1",
+      "i-17-w2",
+      "i-17-w11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w10"
+     },
+     "answer": "i-17-w10",
+     "options": [
+      "i-17-w1",
+      "i-17-w2",
+      "i-17-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: an apartment.",
+     "answer": "i-17-w1",
+     "he": "דִּירָה",
+     "translit": "dira",
+     "en": "apartment",
+     "audio": {
+      "clipId": "i-17-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: rooms.",
+     "answer": "i-17-w3",
+     "he": "חֲדָרִים",
+     "translit": "chadarim",
+     "en": "rooms",
+     "audio": {
+      "clipId": "i-17-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-42-w3",
+    "il17-w1"
+   ]
+  },
+  {
+   "id": "pu-apartment-p02",
+   "title": "Is There...? יֵשׁ and אֵין",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Ask whether there is a balcony or parking.",
+   "grammarNote": "יֵשׁ and אֵין with a noun. Put a noun after יֵשׁ and raise your voice to ask if there is one: a balcony, מִרְפֶּסֶת, or parking, חֲנָיָה. The answer may be אֵין, there isn't.",
+   "grammar": {
+    "point": "יֵשׁ and אֵין with a noun",
+    "body": "Put a noun after יֵשׁ and raise your voice to ask if there is one: a balcony, מִרְפֶּסֶת, or parking, חֲנָיָה. The answer may be אֵין, there isn't.",
+    "examples": [
+     {
+      "itemId": "i-17-w5",
+      "he": "מִרְפֶּסֶת",
+      "en": "balcony"
+     },
+     {
+      "itemId": "i-17-w6",
+      "he": "חֲנָיָה",
+      "en": "parking"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-17-w5",
+     "source": "data/curriculum/lessons.json#I-17.words[4]",
+     "he": "מִרְפֶּסֶת",
+     "en": "balcony",
+     "translit": "mirpeset",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w5"
+     },
+     "audio": {
+      "clipId": "i-17-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w6",
+     "source": "data/curriculum/lessons.json#I-17.words[5]",
+     "he": "חֲנָיָה",
+     "en": "parking",
+     "translit": "chanaya",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w6"
+     },
+     "audio": {
+      "clipId": "i-17-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il08-w5",
+     "source": "data/curriculum/lessons.json#il08.words[4]",
+     "he": "יֵשׁ",
+     "en": "there is",
+     "translit": "yesh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w5"
+     },
+     "audio": {
+      "clipId": "il08-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il08-w6",
+     "source": "data/curriculum/lessons.json#il08.words[5]",
+     "he": "אֵין",
+     "en": "there isn't",
+     "translit": "ein",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w6"
+     },
+     "audio": {
+      "clipId": "il08-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-17-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-17-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il08-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il08-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-hotel-l1",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "shop-08",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-17-w5",
+    "i-17-w6",
+    "il08-w5",
+    "il08-w6"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w5"
+     },
+     "answer": "i-17-w5",
+     "options": [
+      "i-17-w6",
+      "il08-w5",
+      "i-17-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w6"
+     },
+     "answer": "i-17-w6",
+     "options": [
+      "i-17-w5",
+      "il08-w5",
+      "i-17-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il08-w5"
+     },
+     "answer": "il08-w5",
+     "options": [
+      "i-17-w5",
+      "i-17-w6",
+      "il08-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il08-w6"
+     },
+     "answer": "il08-w6",
+     "options": [
+      "i-17-w5",
+      "i-17-w6",
+      "il08-w6"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: a balcony.",
+     "answer": "i-17-w5",
+     "he": "מִרְפֶּסֶת",
+     "translit": "mirpeset",
+     "en": "balcony",
+     "audio": {
+      "clipId": "i-17-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: there isn't.",
+     "answer": "il08-w6",
+     "he": "אֵין",
+     "translit": "ein",
+     "en": "there isn't",
+     "audio": {
+      "clipId": "il08-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "d-hotel-l1",
+    "shop-08"
+   ]
+  },
+  {
+   "id": "pu-apartment-p03",
+   "title": "Questions for the Owner",
+   "order": 3,
+   "kind": "speak",
+   "can": "Talk about the contract and the building fee.",
+   "grammarNote": "The building committee: וַעַד בַּיִת. וַעַד בַּיִת is the building committee, and also the monthly fee it collects. Ask the בַּעַל הַבַּיִת about it before you sign the חוֹזֶה.",
+   "grammar": {
+    "point": "The building committee: וַעַד בַּיִת",
+    "body": "וַעַד בַּיִת is the building committee, and also the monthly fee it collects. Ask the בַּעַל הַבַּיִת about it before you sign the חוֹזֶה.",
+    "examples": [
+     {
+      "itemId": "i-17-w9",
+      "he": "וַעַד בַּיִת",
+      "en": "building committee (fee)"
+     },
+     {
+      "itemId": "i-17-w7",
+      "he": "חוֹזֶה",
+      "en": "contract"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-17-w8",
+     "source": "data/curriculum/lessons.json#I-17.words[7]",
+     "he": "בַּעַל הַבַּיִת",
+     "en": "the landlord",
+     "translit": "ba'al habayit",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w8"
+     },
+     "audio": {
+      "clipId": "i-17-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w7",
+     "source": "data/curriculum/lessons.json#I-17.words[6]",
+     "he": "חוֹזֶה",
+     "en": "contract",
+     "translit": "choze",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w7"
+     },
+     "audio": {
+      "clipId": "i-17-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w9",
+     "source": "data/curriculum/lessons.json#I-17.words[8]",
+     "he": "וַעַד בַּיִת",
+     "en": "building committee (fee)",
+     "translit": "va'ad bayit",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w9"
+     },
+     "audio": {
+      "clipId": "i-17-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-17-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-17-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-17-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-44-w8",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-17-w8",
+    "i-17-w7",
+    "i-17-w9"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w8"
+     },
+     "answer": "i-17-w8",
+     "options": [
+      "i-17-w7",
+      "i-17-w9",
+      "i-17-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w7"
+     },
+     "answer": "i-17-w7",
+     "options": [
+      "i-17-w8",
+      "i-17-w9",
+      "i-17-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w9"
+     },
+     "answer": "i-17-w9",
+     "options": [
+      "i-17-w8",
+      "i-17-w7",
+      "i-17-w9"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: the contract.",
+     "answer": "i-17-w7",
+     "he": "חוֹזֶה",
+     "translit": "choze",
+     "en": "contract",
+     "audio": {
+      "clipId": "i-17-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: the building committee fee.",
+     "answer": "i-17-w9",
+     "he": "וַעַד בַּיִת",
+     "translit": "va'ad bayit",
+     "en": "building committee (fee)",
+     "audio": {
+      "clipId": "i-17-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-44-w8",
+    "cafe-27"
+   ]
+  },
+  {
+   "id": "pu-apartment-p04",
+   "title": "Big and Good, and Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Describe the apartment, then review the unit.",
+   "grammarNote": "Feminine describing words: גְּדוֹלָה and טוֹבָה. דִּירָה is feminine, so a big, good apartment takes the feminine forms גְּדוֹלָה and טוֹבָה, as שָׁנָה takes טוֹבָה.",
+   "grammar": {
+    "point": "Feminine describing words: גְּדוֹלָה and טוֹבָה",
+    "body": "דִּירָה is feminine, so a big, good apartment takes the feminine forms גְּדוֹלָה and טוֹבָה, as שָׁנָה takes טוֹבָה.",
+    "examples": [
+     {
+      "itemId": "i-17-w12",
+      "he": "גְּדוֹלָה",
+      "en": "big (f)"
+     },
+     {
+      "itemId": "i-17-w13",
+      "he": "טוֹבָה",
+      "en": "good (f)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-17-w12",
+     "source": "data/curriculum/lessons.json#I-17.words[11]",
+     "he": "גְּדוֹלָה",
+     "en": "big (f)",
+     "translit": "gdola",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w12"
+     },
+     "audio": {
+      "clipId": "i-17-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-17-w13",
+     "source": "data/curriculum/lessons.json#I-17.words[12]",
+     "he": "טוֹבָה",
+     "en": "good (f)",
+     "translit": "tova",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-17-w13"
+     },
+     "audio": {
+      "clipId": "i-17-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-17-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-17-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-17-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-17-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-17-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-17-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-17-w7",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "i-17-w8",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-17-w12",
+    "i-17-w13"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w12"
+     },
+     "answer": "i-17-w12",
+     "options": [
+      "i-17-w13",
+      "i-17-w12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-17-w13"
+     },
+     "answer": "i-17-w13",
+     "options": [
+      "i-17-w12",
+      "i-17-w13"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say the apartment is big.",
+     "answer": "i-17-w12",
+     "he": "גְּדוֹלָה",
+     "translit": "gdola",
+     "en": "big (f)",
+     "audio": {
+      "clipId": "i-17-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-17-w1",
+    "i-17-w3",
+    "i-17-w5",
+    "i-17-w6",
+    "i-17-w7",
+    "i-17-w8"
+   ]
+  },
+  {
    "id": "pu-army-p01",
    "title": "Words From the Army",
    "order": 1,
@@ -28617,6 +31615,9 @@
   "pu-home",
   "pu-time",
   "pu-weather",
+  "pu-hotel",
+  "pu-phone",
+  "pu-apartment",
   "pu-army"
  ]
 }

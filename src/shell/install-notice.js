@@ -36,7 +36,7 @@ async function run() {
   box.setAttribute("aria-label", "Keep your progress");
   box.style.cssText = "margin:.5rem max(1rem,env(safe-area-inset-left));padding:.75rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--card);color:var(--fg);font-size:.9rem";
   const p = d.createElement("p"); p.style.margin = "0 0 .5rem";
-  p.textContent = "Safari can erase what a website saved if you do not open it for about a week. To keep your progress, add Aleph to your Home Screen, and save a backup file from Settings now and then.";
+  p.textContent = "Safari can erase what a website saved if you do not open it for about a week. To keep your progress, add ALEF to your Home Screen, and save a backup file from Settings now and then.";
   const row = d.createElement("div"); row.style.cssText = "display:flex;flex-wrap:wrap;gap:.5rem";
   const how = d.createElement("a"); how.href = "#/install"; how.className = "btn"; how.textContent = "How to add it";
   const x = d.createElement("button"); x.type = "button"; x.className = "btn secondary"; x.textContent = "Not now";

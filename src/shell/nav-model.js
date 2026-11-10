@@ -7,7 +7,7 @@ export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
   { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['read'] },
   { id: 'speak',    labelKey: 'nav.section.speak',    descKey: 'nav.section.speak.desc',    primary: ['speak', 'listen', 'compare', 'tradition-quiz'] },
-  { id: 'progress', labelKey: 'nav.section.progress', descKey: 'nav.section.progress.desc', primary: ['progress', 'calendar'] },
+  { id: 'progress', labelKey: 'nav.section.progress', descKey: 'nav.section.progress.desc', heKey: 'nav.progress', primary: ['progress', 'calendar'] },
   { id: 'more',     labelKey: 'nav.section.more',     descKey: 'nav.section.more.desc',     heKey: null, primary: [] },
 ];
 
@@ -19,15 +19,17 @@ export const SECTION_ROUTES = {
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
     // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
     'lab', 'labgame', 'library', 'libraryarticle',
+    // Retention: weekly practice league and the streak-freeze shop
+    'league', 'shop',
     // games hub and every game (owner 'games'), arcade included
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
-  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
-  speak: ['speak', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
+  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
+  speak: ['speak', 'talk', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
-  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
+  more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
 
 /** Route name -> section id. */

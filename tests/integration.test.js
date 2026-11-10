@@ -10,7 +10,7 @@ import { DEFAULTS, ENUMS, createSettings, validate } from '../src/shell/settings
 import { createStore, createMemoryStorage } from '../src/store.js';
 import { t, en } from '../src/shell/i18n.js';
 import { computeManifest } from '../tools/build-precache.mjs';
-import { build, findRootAbsolute } from '../tools/build-static.mjs';
+import { build, findRootAbsolute, EXCLUDE as STATIC_EXCLUDE } from '../tools/build-static.mjs';
 import { createAudio } from '../src/audio/player.js';
 import { createShellAudio, describeResult, summarizeManifest } from '../src/shell/audio.js';
 import { rmSync } from 'node:fs';
@@ -41,7 +41,7 @@ test('router table: module files for lane 8 exist; others are in the contract pa
 });
 test('settings defaults and validation', () => {
   // Each lane adds its own settings keys, so this checks the long-standing defaults one by one instead of the whole object (new keys have their own tests).
-  const expectedDefaults = { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'auto', lat: null, lon: null, gender: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: true, gender: null };
+  const expectedDefaults = { voice: 'f', congregation: 'sephardi', israelTrack: false, script: 'print', theme: 'dark', lat: null, lon: null, gender: null, goal: 'read', onboarded: false, browserVoiceAnyway: true, showUnapprovedImages: false, writeGodAsGd: false, haptics: false, soundEffects: true, gender: null };
   for (const [k, v] of Object.entries(expectedDefaults)) assert.deepEqual(DEFAULTS[k], v, 'default for ' + k);
   const s = createSettings(createStore({ storage: createMemoryStorage() }));
   assert.equal(s.congregation, 'sephardi');
@@ -214,7 +214,10 @@ test('build-static: dist has the shell, woff2 fonts, no TTFs/tests/tools, precac
     assert.deepEqual(r.problems, []);
     const d = join(root, 'dist-test');
     for (const f of ['index.html', 'sw.js', 'precache-manifest.js', 'manifest.webmanifest', '.nojekyll', '404.html', 'assets/fonts/web/frank-ruhl-libre.woff2', 'data/audio/manifest.json', 'src/shell/how.view.js']) assert.ok(existsSync(join(d, f)), f);
-    for (const f of ['assets/fonts/heebo-Heebo[wght].ttf', 'tools', 'tests', 'src/corpus/tools', 'data/images']) assert.ok(!existsSync(join(d, f)), 'should not ship ' + f);
+    for (const f of ['assets/fonts/heebo-Heebo[wght].ttf', 'tools', 'tests', 'src/corpus/tools', 'data/images/rimon/legacy', 'data/images/sheets']) assert.ok(!existsSync(join(d, f)), 'should not ship ' + f);
+    // data/images holds build-time inputs; only Rimon's stills and their list ship (fetched at run time)
+    assert.deepEqual(readdirSync(join(d, 'data/images')), ['rimon']);
+    assert.ok(existsSync(join(d, 'data/images/rimon/present.json')));
     const files = JSON.parse(readFileSync(join(d, 'precache-manifest.js'), 'utf8').match(/ALEF_PRECACHE = (\[[\s\S]*?\]);/)[1]);
     for (const f of files) assert.ok(existsSync(join(d, f)), f);
     assert.ok(files.includes('assets/fonts/web/heebo.woff2'));
@@ -378,4 +381,9 @@ test('shell audio: setNote appends and clears a short note on the status line', 
   const a = createShellAudio({ settings: { get: () => 'f' }, manifest: [], createAudio });
   const base = a.state.text; a.setNote('audio info unavailable offline');
   assert.match(a.state.text, /\(audio info unavailable offline\)$/); a.setNote(''); assert.equal(a.state.text, base);
+});
+
+test('build-static ships Rimon stills and their list, not the archived ones or other image inputs', () => {
+  for (const rel of ['data/images/rimon/present.json', 'data/images/rimon/rimon-023.webp', 'data/images/rimon/v2/rimon-007-starting-line.webp']) assert.equal(STATIC_EXCLUDE(rel), false, rel);
+  for (const rel of ['data/images/rimon/legacy/rimon-001.webp', 'data/images/rimon/README.md', 'data/images/rimon/manifest.csv', 'data/images/sheets/x.webp']) assert.equal(STATIC_EXCLUDE(rel), true, rel);
 });

@@ -24,10 +24,14 @@ test('rule table: each setting prefers its own bank and falls back to Israeli', 
 
 test('real manifest: older paid-cloud Sephardi and Ashkenazi rows are playable own clips, even when they are not the newer accent provenance', () => {
   const playable = all.filter((e) => isPlayableOwnClip(e));
-  const admitted = all.filter((e) => isAccentClip(e));
   assert.ok(playable.length > 8000, `playable ${playable.length}`);
   assert.ok(playable.some((e) => e.source === 'paid-cloud'));
-  assert.deepEqual(admitted.map((e) => e.path), [], 'newer ACCENT_SOURCES rows have not landed yet; the bank clips still play');
+});
+
+test('real manifest: admitted Sephardi and Ashkenazi rows include the Brain Lab game-word recordings of 2026-11-10', () => {
+  const admitted = all.filter((e) => isAccentClip(e)).map((e) => e.path).sort();
+  const expected = JSON.parse(readFileSync(new URL('./fixtures/admitted-accent-clips.json', import.meta.url), 'utf8'));
+  for (const p of expected) assert.ok(admitted.includes(p), p);
 });
 
 for (const setting of ACCENT) {

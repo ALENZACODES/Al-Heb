@@ -1,0 +1,1083 @@
+{
+ "schema": 3,
+ "note": "Word list for common signs and menus: the on-device translator of the Camera Translator, and the pronunciation shown when a line is tapped. Entries marked checked: app-dictionary take their vowel pointing and Latin spelling from data/vocab/index.json; the English gloss is the sign sense. All other entries were written for this project and have not been checked by a native speaker.",
+ "review": "native-speaker-needed: pointing, transliteration, glosses",
+ "license": "original (project-owned)",
+ "patterns": [
+  {
+   "head": "רחוב",
+   "en": "{x} Street"
+  },
+  {
+   "head": "שדרות",
+   "en": "{x} Boulevard"
+  },
+  {
+   "head": "כיכר",
+   "en": "{x} Square"
+  }
+ ],
+ "entries": [
+  {
+   "he": "חנות אופטיקה",
+   "pointed": "חֲנוּת אוֹפְּטִיקָה",
+   "translit": "chanut optika",
+   "en": "Optical Store"
+  },
+  {
+   "he": "חנות",
+   "pointed": "חֲנוּת",
+   "translit": "chanut",
+   "en": "Store",
+   "head": true
+  },
+  {
+   "he": "אופטיקה",
+   "pointed": "אוֹפְּטִיקָה",
+   "translit": "optika",
+   "en": "Optics"
+  },
+  {
+   "he": "מאפייה",
+   "pointed": "מַאֲפִיָּה",
+   "translit": "ma'afiya",
+   "en": "Bakery"
+  },
+  {
+   "he": "מאפיה",
+   "pointed": "מַאֲפִיָּה",
+   "translit": "ma'afiya",
+   "en": "Bakery"
+  },
+  {
+   "he": "בית מרקחת",
+   "pointed": "בֵּית מִרְקַחַת",
+   "translit": "beit mirkachat",
+   "en": "Pharmacy"
+  },
+  {
+   "he": "יציאה",
+   "pointed": "יְצִיאָה",
+   "translit": "yetzi'a",
+   "en": "Exit"
+  },
+  {
+   "he": "יציאת חירום",
+   "pointed": "יְצִיאַת חֵרוּם",
+   "translit": "yetzi'at cherum",
+   "en": "Emergency Exit"
+  },
+  {
+   "he": "כניסה",
+   "pointed": "כְּנִיסָה",
+   "translit": "knisa",
+   "en": "Entrance"
+  },
+  {
+   "he": "אין כניסה",
+   "pointed": "אֵין כְּנִיסָה",
+   "translit": "ein knisa",
+   "en": "No Entry"
+  },
+  {
+   "he": "סגור",
+   "pointed": "סָגוּר",
+   "translit": "sagur",
+   "en": "Closed",
+   "describes": true
+  },
+  {
+   "he": "פתוח",
+   "pointed": "פָּתוּחַ",
+   "translit": "patuach",
+   "en": "Open",
+   "describes": true
+  },
+  {
+   "he": "שירותים",
+   "pointed": "שֵׁרוּתִים",
+   "translit": "sherutim",
+   "en": "Restrooms"
+  },
+  {
+   "he": "מסעדה",
+   "pointed": "מִסְעָדָה",
+   "translit": "mis'ada",
+   "en": "Restaurant"
+  },
+  {
+   "he": "מסעדה כשרה",
+   "pointed": "מִסְעָדָה כְּשֵׁרָה",
+   "translit": "mis'ada kshera",
+   "en": "Kosher Restaurant"
+  },
+  {
+   "he": "בית קפה",
+   "pointed": "בֵּית קָפֶה",
+   "translit": "beit kafe",
+   "en": "Coffee Shop",
+   "alt": [
+    "Cafe"
+   ]
+  },
+  {
+   "he": "קפה",
+   "pointed": "קָפֶה",
+   "translit": "kafe",
+   "en": "Coffee"
+  },
+  {
+   "he": "תה",
+   "pointed": "תֵּה",
+   "translit": "te",
+   "en": "Tea"
+  },
+  {
+   "he": "תפריט",
+   "pointed": "תַּפְרִיט",
+   "translit": "tafrit",
+   "en": "Menu"
+  },
+  {
+   "he": "עצור",
+   "pointed": "עֲצֹר",
+   "translit": "atzor",
+   "en": "Stop"
+  },
+  {
+   "he": "זהירות",
+   "pointed": "זְהִירוּת",
+   "translit": "zehirut",
+   "en": "Caution"
+  },
+  {
+   "he": "חניה",
+   "pointed": "חֲנָיָה",
+   "translit": "chanaya",
+   "en": "Parking"
+  },
+  {
+   "he": "אסור לעשן",
+   "pointed": "אָסוּר לְעַשֵּׁן",
+   "translit": "asur le'ashen",
+   "en": "No Smoking"
+  },
+  {
+   "he": "דחוף",
+   "pointed": "דְּחֹף",
+   "translit": "dchof",
+   "en": "Push"
+  },
+  {
+   "he": "משוך",
+   "pointed": "מְשֹׁךְ",
+   "translit": "meshoch",
+   "en": "Pull"
+  },
+  {
+   "he": "בית כנסת",
+   "pointed": "בֵּית כְּנֶסֶת",
+   "translit": "beit knesset",
+   "en": "Synagogue"
+  },
+  {
+   "he": "בית ספר",
+   "pointed": "בֵּית סֵפֶר",
+   "translit": "beit sefer",
+   "en": "School"
+  },
+  {
+   "he": "בית חולים",
+   "pointed": "בֵּית חוֹלִים",
+   "translit": "beit cholim",
+   "en": "Hospital"
+  },
+  {
+   "he": "משטרה",
+   "pointed": "מִשְׁטָרָה",
+   "translit": "mishtara",
+   "en": "Police"
+  },
+  {
+   "he": "דואר",
+   "pointed": "דֹּאַר",
+   "translit": "do'ar",
+   "en": "Post Office"
+  },
+  {
+   "he": "בנק",
+   "pointed": "בַּנְק",
+   "translit": "bank",
+   "en": "Bank"
+  },
+  {
+   "he": "שוק",
+   "pointed": "שׁוּק",
+   "translit": "shuk",
+   "en": "Market",
+   "head": true
+  },
+  {
+   "he": "מבצע",
+   "pointed": "מִבְצָע",
+   "translit": "mivtza",
+   "en": "Special Offer"
+  },
+  {
+   "he": "כשר",
+   "pointed": "כָּשֵׁר",
+   "translit": "kasher",
+   "en": "Kosher",
+   "describes": true
+  },
+  {
+   "he": "לחם",
+   "pointed": "לֶחֶם",
+   "translit": "lechem",
+   "en": "Bread"
+  },
+  {
+   "he": "מים",
+   "pointed": "מַיִם",
+   "translit": "mayim",
+   "en": "Water"
+  },
+  {
+   "he": "חלב",
+   "pointed": "חָלָב",
+   "translit": "chalav",
+   "en": "Milk"
+  },
+  {
+   "he": "יין",
+   "pointed": "יַיִן",
+   "translit": "yayin",
+   "en": "Wine"
+  },
+  {
+   "he": "סלט",
+   "pointed": "סָלָט",
+   "translit": "salat",
+   "en": "Salad"
+  },
+  {
+   "he": "מרק",
+   "pointed": "מָרָק",
+   "translit": "marak",
+   "en": "Soup"
+  },
+  {
+   "he": "עוף",
+   "pointed": "עוֹף",
+   "translit": "of",
+   "en": "Chicken"
+  },
+  {
+   "he": "דגים",
+   "pointed": "דָּגִים",
+   "translit": "dagim",
+   "en": "Fish"
+  },
+  {
+   "he": "בשר",
+   "pointed": "בָּשָׂר",
+   "translit": "basar",
+   "en": "Meat"
+  },
+  {
+   "he": "פלאפל",
+   "pointed": "פָלָאפֶל",
+   "translit": "falafel",
+   "en": "Falafel"
+  },
+  {
+   "he": "חומוס",
+   "pointed": "חוּמוּס",
+   "translit": "chumus",
+   "en": "Hummus"
+  },
+  {
+   "he": "פיתה",
+   "pointed": "פִּיתָה",
+   "translit": "pita",
+   "en": "Pita"
+  },
+  {
+   "he": "קינוחים",
+   "pointed": "קִנּוּחִים",
+   "translit": "kinuchim",
+   "en": "Desserts"
+  },
+  {
+   "he": "שתייה",
+   "pointed": "שְׁתִיָּה",
+   "translit": "shtiya",
+   "en": "Drinks"
+  },
+  {
+   "he": "מנה ראשונה",
+   "pointed": "מָנָה רִאשׁוֹנָה",
+   "translit": "mana rishona",
+   "en": "Starter"
+  },
+  {
+   "he": "מנה עיקרית",
+   "pointed": "מָנָה עִקָּרִית",
+   "translit": "mana ikarit",
+   "en": "Main Course"
+  },
+  {
+   "he": "ארוחת בוקר",
+   "pointed": "אֲרוּחַת בֹּקֶר",
+   "translit": "aruchat boker",
+   "en": "Breakfast"
+  },
+  {
+   "he": "רחוב",
+   "pointed": "רְחוֹב",
+   "translit": "rechov",
+   "en": "Street"
+  },
+  {
+   "he": "שדרות",
+   "pointed": "שְׂדֵרוֹת",
+   "translit": "sderot",
+   "en": "Boulevard"
+  },
+  {
+   "he": "כיכר",
+   "pointed": "כִּכָּר",
+   "translit": "kikar",
+   "en": "Square"
+  },
+  {
+   "he": "מרכז העיר",
+   "pointed": "מֶרְכַּז הָעִיר",
+   "translit": "merkaz ha'ir",
+   "en": "City Centre"
+  },
+  {
+   "he": "תחנת אוטובוס",
+   "pointed": "תַּחֲנַת אוֹטוֹבּוּס",
+   "translit": "tachanat otobus",
+   "en": "Bus Stop"
+  },
+  {
+   "he": "תחנת רכבת",
+   "pointed": "תַּחֲנַת רַכֶּבֶת",
+   "translit": "tachanat rakevet",
+   "en": "Train Station"
+  },
+  {
+   "he": "שדה תעופה",
+   "pointed": "שְׂדֵה תְּעוּפָה",
+   "translit": "sde te'ufa",
+   "en": "Airport"
+  },
+  {
+   "he": "מלון",
+   "pointed": "מָלוֹן",
+   "translit": "malon",
+   "en": "Hotel"
+  },
+  {
+   "he": "קופה",
+   "pointed": "קֻפָּה",
+   "translit": "kupa",
+   "en": "Cashier"
+  },
+  {
+   "he": "מידע",
+   "pointed": "מֵידָע",
+   "translit": "meida",
+   "en": "Information"
+  },
+  {
+   "he": "ספרייה",
+   "pointed": "סִפְרִיָּה",
+   "translit": "sifriya",
+   "en": "Library"
+  },
+  {
+   "he": "מוזיאון",
+   "pointed": "מוּזֵיאוֹן",
+   "translit": "muze'on",
+   "en": "Museum"
+  },
+  {
+   "he": "חוף",
+   "pointed": "חוֹף",
+   "translit": "chof",
+   "en": "Beach"
+  },
+  {
+   "he": "גן ילדים",
+   "pointed": "גַּן יְלָדִים",
+   "translit": "gan yeladim",
+   "en": "Kindergarten"
+  },
+  {
+   "he": "מעלית",
+   "pointed": "מַעֲלִית",
+   "translit": "ma'alit",
+   "en": "Elevator"
+  },
+  {
+   "he": "מדרגות",
+   "pointed": "מַדְרֵגוֹת",
+   "translit": "madregot",
+   "en": "Stairs"
+  },
+  {
+   "he": "שעות פתיחה",
+   "pointed": "שְׁעוֹת פְּתִיחָה",
+   "translit": "she'ot pticha",
+   "en": "Opening Hours"
+  },
+  {
+   "he": "ברוכים הבאים",
+   "pointed": "בְּרוּכִים הַבָּאִים",
+   "translit": "bruchim haba'im",
+   "en": "Welcome"
+  },
+  {
+   "he": "תודה",
+   "pointed": "תּוֹדָה",
+   "translit": "toda",
+   "en": "Thank You"
+  },
+  {
+   "he": "שלום",
+   "pointed": "שָׁלוֹם",
+   "translit": "shalom",
+   "en": "Hello"
+  },
+  {
+   "he": "מספרה",
+   "pointed": "מִסְפָּרָה",
+   "translit": "mispara",
+   "en": "Hair Salon"
+  },
+  {
+   "he": "מכולת",
+   "pointed": "מַכֹּלֶת",
+   "translit": "makolet",
+   "en": "Grocery"
+  },
+  {
+   "he": "ירקות",
+   "pointed": "יְרָקוֹת",
+   "translit": "yerakot",
+   "en": "Vegetables"
+  },
+  {
+   "he": "פירות",
+   "pointed": "פֵּרוֹת",
+   "translit": "perot",
+   "en": "Fruit"
+  },
+  {
+   "he": "להשכיר",
+   "pointed": "לְהַשְׂכִּיר",
+   "translit": "lehaskir",
+   "en": "For Rent"
+  },
+  {
+   "he": "למכירה",
+   "pointed": "לִמְכִירָה",
+   "translit": "limchira",
+   "en": "For Sale"
+  },
+  {
+   "he": "שמאלה",
+   "pointed": "שְׂמֹאלָה",
+   "translit": "smola",
+   "en": "Left"
+  },
+  {
+   "he": "ימינה",
+   "pointed": "יָמִינָה",
+   "translit": "yamina",
+   "en": "Right"
+  },
+  {
+   "he": "ישר",
+   "pointed": "יָשָׁר",
+   "translit": "yashar",
+   "en": "Straight Ahead"
+  },
+  {
+   "he": "ירושלים",
+   "pointed": "יְרוּשָׁלַיִם",
+   "translit": "yerushalayim",
+   "en": "Jerusalem",
+   "name": true
+  },
+  {
+   "he": "תל אביב",
+   "pointed": "תֵּל אָבִיב",
+   "translit": "tel aviv",
+   "en": "Tel Aviv",
+   "name": true
+  },
+  {
+   "he": "חיפה",
+   "pointed": "חֵיפָה",
+   "translit": "cheifa",
+   "en": "Haifa",
+   "name": true
+  },
+  {
+   "he": "הרצל",
+   "pointed": "הֶרְצְל",
+   "translit": "hertzel",
+   "en": "Herzl",
+   "name": true
+  },
+  {
+   "he": "בן יהודה",
+   "pointed": "בֶּן יְהוּדָה",
+   "translit": "ben yehuda",
+   "en": "Ben Yehuda",
+   "name": true
+  },
+  {
+   "he": "יפו",
+   "pointed": "יָפוֹ",
+   "translit": "yafo",
+   "en": "Jaffa",
+   "name": true
+  },
+  {
+   "he": "דיזנגוף",
+   "pointed": "דִּיזֶנְגּוֹף",
+   "translit": "dizengof",
+   "en": "Dizengoff",
+   "name": true
+  },
+  {
+   "he": "סכנה",
+   "pointed": "סַכָּנָה",
+   "translit": "sakanah",
+   "en": "Danger",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "רופא",
+   "pointed": "רוֹפֵא",
+   "translit": "rofe",
+   "en": "Doctor",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "קומה",
+   "pointed": "קוֹמָה",
+   "translit": "komah",
+   "en": "Floor",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מחיר",
+   "pointed": "מְחִיר",
+   "translit": "mechir",
+   "en": "Price",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "גלידה",
+   "pointed": "גְּלִידָה",
+   "translit": "gelidah",
+   "en": "Ice Cream",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "פיצה",
+   "pointed": "פִּיצָה",
+   "translit": "pitzah",
+   "en": "Pizza",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מיץ",
+   "pointed": "מִיץ",
+   "translit": "mitz",
+   "en": "Juice",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "בירה",
+   "pointed": "בִּירָה",
+   "translit": "birah",
+   "en": "Beer",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "עוגה",
+   "pointed": "עוּגָה",
+   "translit": "ugah",
+   "en": "Cake",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "גבינה",
+   "pointed": "גְּבִינָה",
+   "translit": "gevinah",
+   "en": "Cheese",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "טרי",
+   "pointed": "טָרִי",
+   "translit": "tari",
+   "en": "Fresh",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "צפון",
+   "pointed": "צָפוֹן",
+   "translit": "tzafon",
+   "en": "North",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "דרום",
+   "pointed": "דָּרוֹם",
+   "translit": "darom",
+   "en": "South",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מזרח",
+   "pointed": "מִזְרָח",
+   "translit": "mizrach",
+   "en": "East",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מערב",
+   "pointed": "מַעֲרָב",
+   "translit": "ma'arav",
+   "en": "West",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "רכבת",
+   "pointed": "רַכֶּבֶת",
+   "translit": "rakevet",
+   "en": "Train",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "אוטובוס",
+   "pointed": "אוֹטוֹבּוּס",
+   "translit": "otobus",
+   "en": "Bus",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מונית",
+   "pointed": "מוֹנִית",
+   "translit": "monit",
+   "en": "Taxi",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "נמל",
+   "pointed": "נָמֵל",
+   "translit": "namel",
+   "en": "Port",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "גשר",
+   "pointed": "גֶּשֶׁר",
+   "translit": "gesher",
+   "en": "Bridge",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "דלת",
+   "pointed": "דֶּלֶת",
+   "translit": "delet",
+   "en": "Door",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "אשראי",
+   "pointed": "אַשְׁרַאי",
+   "translit": "ashray",
+   "en": "Credit",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "נשים",
+   "pointed": "נָשִׁים",
+   "translit": "nashim",
+   "en": "Women",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "היום",
+   "pointed": "הַיּוֹם",
+   "translit": "hayom",
+   "en": "Today",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מחר",
+   "pointed": "מָחָר",
+   "translit": "machar",
+   "en": "Tomorrow",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "אמבולנס",
+   "pointed": "אַמְבּוּלַנְס",
+   "translit": "ambulans",
+   "en": "Ambulance",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "כרטיס",
+   "pointed": "כַּרְטִיס",
+   "translit": "kartis",
+   "en": "Ticket",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "משאית",
+   "pointed": "מַשָּׂאִית",
+   "translit": "masa'it",
+   "en": "Truck",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "יום",
+   "pointed": "יוֹם",
+   "translit": "yom",
+   "en": "Day",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "לילה",
+   "pointed": "לַיְלָה",
+   "translit": "laylah",
+   "en": "Night",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "שקל",
+   "pointed": "שֶׁקֶל",
+   "translit": "shekel",
+   "en": "Shekel",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "חדש",
+   "pointed": "חָדָשׁ",
+   "translit": "chadash",
+   "en": "New",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "גדול",
+   "pointed": "גָּדוֹל",
+   "translit": "gadol",
+   "en": "Big",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "קטן",
+   "pointed": "קָטָן",
+   "translit": "katan",
+   "en": "Small",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "חם",
+   "pointed": "חַם",
+   "translit": "cham",
+   "en": "Hot",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "קר",
+   "pointed": "קַר",
+   "translit": "kar",
+   "en": "Cold",
+   "checked": "app-dictionary",
+   "describes": true
+  },
+  {
+   "he": "שבת",
+   "pointed": "שַׁבָּת",
+   "translit": "shabat",
+   "en": "Shabbat",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "חג",
+   "pointed": "חַג",
+   "translit": "chag",
+   "en": "Holiday",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "גן",
+   "pointed": "גַּן",
+   "translit": "gan",
+   "en": "Garden",
+   "checked": "app-dictionary",
+   "head": true
+  },
+  {
+   "he": "כסף",
+   "pointed": "כֶּסֶף",
+   "translit": "kesef",
+   "en": "Money",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "דלק",
+   "pointed": "דֶּלֶק",
+   "translit": "delek",
+   "en": "Fuel",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "ספר",
+   "pointed": "סֵפֶר",
+   "translit": "sefer",
+   "en": "Book",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "תחנה",
+   "pointed": "תַּחֲנָה",
+   "translit": "tachanah",
+   "en": "Station",
+   "checked": "app-dictionary",
+   "head": true
+  },
+  {
+   "he": "שעה",
+   "pointed": "שָׁעָה",
+   "translit": "sha'ah",
+   "en": "Hour",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "ערב",
+   "pointed": "עֶרֶב",
+   "translit": "erev",
+   "en": "Evening",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "עזרה",
+   "pointed": "עֶזְרָה",
+   "translit": "ezrah",
+   "en": "Help",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מפתח",
+   "pointed": "מַפְתֵּחַ",
+   "translit": "mafteach",
+   "en": "Key",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "חדר",
+   "pointed": "חֶדֶר",
+   "translit": "cheder",
+   "en": "Room",
+   "checked": "app-dictionary",
+   "head": true
+  },
+  {
+   "he": "שער",
+   "pointed": "שַׁעַר",
+   "translit": "sha'ar",
+   "en": "Gate",
+   "checked": "app-dictionary",
+   "head": true
+  },
+  {
+   "he": "חלון",
+   "pointed": "חַלּוֹן",
+   "translit": "chalon",
+   "en": "Window",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מוצא",
+   "pointed": "מוֹצָא",
+   "translit": "motza",
+   "en": "Exit",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "מעליות",
+   "pointed": "מַעֲלִיּוֹת",
+   "translit": "ma'aliyot",
+   "en": "Elevators"
+  },
+  {
+   "he": "סופרמרקט",
+   "pointed": "סוּפֶּרְמַרְקֶט",
+   "translit": "supermarket",
+   "en": "Supermarket"
+  },
+  {
+   "he": "משיכה",
+   "pointed": "מְשִׁיכָה",
+   "translit": "meshicha",
+   "en": "Pull"
+  },
+  {
+   "he": "דחיפה",
+   "pointed": "דְּחִיפָה",
+   "translit": "dchifa",
+   "en": "Push"
+  },
+  {
+   "he": "חנות ספרים",
+   "pointed": "חֲנוּת סְפָרִים",
+   "translit": "chanut sfarim",
+   "en": "Bookshop"
+  },
+  {
+   "he": "ספרים",
+   "pointed": "סְפָרִים",
+   "translit": "sfarim",
+   "en": "Books"
+  },
+  {
+   "he": "תחנת דלק",
+   "pointed": "תַּחֲנַת דֶּלֶק",
+   "translit": "tachanat delek",
+   "en": "Petrol Station"
+  },
+  {
+   "he": "שעות",
+   "pointed": "שָׁעוֹת",
+   "translit": "sha'ot",
+   "en": "Hours"
+  },
+  {
+   "he": "גברים",
+   "pointed": "גְּבָרִים",
+   "translit": "gvarim",
+   "en": "Men"
+  },
+  {
+   "he": "מזומן",
+   "pointed": "מְזֻמָּן",
+   "translit": "mezuman",
+   "en": "Cash"
+  },
+  {
+   "he": "חינם",
+   "pointed": "חִנָּם",
+   "translit": "chinam",
+   "en": "Free",
+   "describes": true
+  },
+  {
+   "he": "מרפאה",
+   "pointed": "מִרְפָּאָה",
+   "translit": "mirpa'a",
+   "en": "Clinic"
+  },
+  {
+   "he": "כרטיסים",
+   "pointed": "כַּרְטִיסִים",
+   "translit": "kartisim",
+   "en": "Tickets"
+  },
+  {
+   "he": "הנחה",
+   "pointed": "הֲנָחָה",
+   "translit": "hanacha",
+   "en": "Discount"
+  },
+  {
+   "he": "פארק",
+   "pointed": "פַּארְק",
+   "translit": "park",
+   "en": "Park"
+  },
+  {
+   "he": "תחנת משטרה",
+   "pointed": "תַּחֲנַת מִשְׁטָרָה",
+   "translit": "tachanat mishtara",
+   "en": "Police Station"
+  },
+  {
+   "he": "רופא שיניים",
+   "pointed": "רוֹפֵא שִׁנַּיִם",
+   "translit": "rofe shinayim",
+   "en": "Dentist"
+  },
+  {
+   "he": "מיוחד",
+   "pointed": "מְיֻחָד",
+   "translit": "meyuchad",
+   "en": "Special",
+   "describes": true
+  },
+  {
+   "he": "בית",
+   "pointed": "בַּיִת",
+   "translit": "bayit",
+   "en": "House",
+   "checked": "app-dictionary",
+   "head": true
+  },
+  {
+   "he": "אין",
+   "pointed": "אֵין",
+   "translit": "ein",
+   "en": "No",
+   "checked": "app-dictionary"
+  },
+  {
+   "he": "בית מלון",
+   "pointed": "בֵּית מָלוֹן",
+   "translit": "beit malon",
+   "en": "Hotel"
+  }
+ ],
+ "variants": [
+  {
+   "he": "חנויות",
+   "of": "חנות",
+   "exact": false,
+   "why": "plural"
+  },
+  {
+   "he": "ספריה",
+   "of": "ספרייה",
+   "exact": true,
+   "why": "spelling"
+  },
+  {
+   "he": "שרותים",
+   "of": "שירותים",
+   "exact": true,
+   "why": "spelling"
+  },
+  {
+   "he": "פיתות",
+   "of": "פיתה",
+   "exact": false,
+   "why": "plural"
+  }
+ ]
+}

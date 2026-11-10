@@ -1,0 +1,2048 @@
+{
+ "synthetic": true,
+ "note": "Computer-made sign images, not photographs. Headless desktop Chromium, not a phone.",
+ "reader": "in-browser reader, mode binary",
+ "total": {
+  "images": 133,
+  "cerPooled": 0.0577,
+  "lines": 185,
+  "linesReadExactly": 137,
+  "linesTranslatedEndToEnd": 168,
+  "wrongEnglishDrawn": 2,
+  "meanMs": 284
+ },
+ "byWear": {
+  "dark": {
+   "images": 20,
+   "cerPooled": 0.0097,
+   "lines": 28,
+   "linesReadExactly": 26,
+   "linesTranslatedEndToEnd": 27,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 288
+  },
+  "bright": {
+   "images": 20,
+   "cerPooled": 0.0242,
+   "lines": 28,
+   "linesReadExactly": 24,
+   "linesTranslatedEndToEnd": 27,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 264
+  },
+  "occlude": {
+   "images": 20,
+   "cerPooled": 0.2464,
+   "lines": 28,
+   "linesReadExactly": 3,
+   "linesTranslatedEndToEnd": 16,
+   "wrongEnglishDrawn": 2,
+   "meanMs": 342
+  },
+  "tight": {
+   "images": 20,
+   "cerPooled": 0.029,
+   "lines": 28,
+   "linesReadExactly": 23,
+   "linesTranslatedEndToEnd": 27,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 156
+  },
+  "angle": {
+   "images": 20,
+   "cerPooled": 0.0145,
+   "lines": 28,
+   "linesReadExactly": 26,
+   "linesTranslatedEndToEnd": 27,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 297
+  },
+  "bilingual": {
+   "images": 20,
+   "cerPooled": 0.029,
+   "lines": 28,
+   "linesReadExactly": 23,
+   "linesTranslatedEndToEnd": 27,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 303
+  },
+  "nikkud": {
+   "images": 13,
+   "cerPooled": 0.0476,
+   "lines": 17,
+   "linesReadExactly": 12,
+   "linesTranslatedEndToEnd": 17,
+   "wrongEnglishDrawn": 0,
+   "meanMs": 371
+  }
+ },
+ "rows": [
+  {
+   "id": "optical-store__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 753,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 218,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__occlude",
+   "variant": "occlude",
+   "cer": 0,
+   "ms": 242,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 159,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 279,
+   "levelled": -7.9,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 347,
+   "levelled": 0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "optical-store__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 419,
+   "levelled": 0,
+   "read": [
+    "חַנוּת אוּפָטִיקָה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 294,
+   "levelled": 0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 193,
+   "levelled": 0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__occlude",
+   "variant": "occlude",
+   "cer": 0.1667,
+   "ms": 389,
+   "levelled": 0,
+   "read": [
+    "מאפויה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 113,
+   "levelled": 0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 243,
+   "levelled": 8,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 208,
+   "levelled": 0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bakery__nikkud",
+   "variant": "nikkud",
+   "cer": 0.1667,
+   "ms": 420,
+   "levelled": 0,
+   "read": [
+    "מַאַָפִּיָה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 195,
+   "levelled": 0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 158,
+   "levelled": 0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__occlude",
+   "variant": "occlude",
+   "cer": 0.125,
+   "ms": 279,
+   "levelled": 0,
+   "read": [
+    "בית מ יקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 117,
+   "levelled": 0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 211,
+   "levelled": 8,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 248,
+   "levelled": 0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "pharmacy__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 317,
+   "levelled": 0,
+   "read": [
+    "בִּית מִרְקֶחַת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 430,
+   "levelled": 0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 426,
+   "levelled": 0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__occlude",
+   "variant": "occlude",
+   "cer": 0.2,
+   "ms": 498,
+   "levelled": 0,
+   "read": [
+    "יצי ה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 97,
+   "levelled": 0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 421,
+   "levelled": 8,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 277,
+   "levelled": 0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "exit__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 429,
+   "levelled": 0,
+   "read": [
+    "יְצִיאֶה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 219,
+   "levelled": 0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 230,
+   "levelled": 0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__occlude",
+   "variant": "occlude",
+   "cer": 1,
+   "ms": 381,
+   "levelled": 0,
+   "read": [],
+   "english": [],
+   "wrong": []
+  },
+  {
+   "id": "closed__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 67,
+   "levelled": 0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 231,
+   "levelled": -7.7,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 191,
+   "levelled": 0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "closed__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 386,
+   "levelled": 0,
+   "read": [
+    "סָגוּר"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 256,
+   "levelled": 0,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 196,
+   "levelled": 0,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop__occlude",
+   "variant": "occlude",
+   "cer": 0.6,
+   "ms": 195,
+   "levelled": 0,
+   "read": [
+    "חנות :2"
+   ],
+   "english": [
+    "Store"
+   ],
+   "wrong": [
+    "חנות :2 -> Store (word-list)"
+   ]
+  },
+  {
+   "id": "shoe-shop__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 170,
+   "levelled": 0,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 190,
+   "levelled": -7.9,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "shoe-shop__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 322,
+   "levelled": 0,
+   "read": [
+    "חנות נעליים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__dark",
+   "variant": "dark",
+   "cer": 0.1429,
+   "ms": 280,
+   "levelled": 0,
+   "read": [
+    "מחיר חדשו"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__bright",
+   "variant": "bright",
+   "cer": 0.1429,
+   "ms": 293,
+   "levelled": 0,
+   "read": [
+    "מחיר חדשו"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__occlude",
+   "variant": "occlude",
+   "cer": 0.2857,
+   "ms": 286,
+   "levelled": 0,
+   "read": [
+    "מחירו דשו"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__tight",
+   "variant": "tight",
+   "cer": 0.1429,
+   "ms": 149,
+   "levelled": 0,
+   "read": [
+    "מחיר חדשו"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 292,
+   "levelled": -8,
+   "read": [
+    "מחיר חדש"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "new-price__bilingual",
+   "variant": "bilingual",
+   "cer": 0.1429,
+   "ms": 292,
+   "levelled": 0,
+   "read": [
+    "מחיר חדשו"
+   ],
+   "english": [
+    "New Price"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 216,
+   "levelled": 0,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 226,
+   "levelled": 0,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__occlude",
+   "variant": "occlude",
+   "cer": 0.25,
+   "ms": 190,
+   "levelled": 0,
+   "read": [
+    "אי בניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__tight",
+   "variant": "tight",
+   "cer": 0.125,
+   "ms": 111,
+   "levelled": 0,
+   "read": [
+    "אין בניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 338,
+   "levelled": 8,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 302,
+   "levelled": 0,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-entry__nikkud",
+   "variant": "nikkud",
+   "cer": 0.25,
+   "ms": 314,
+   "levelled": 0,
+   "read": [
+    "אִיך בְּנִיסָה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 185,
+   "levelled": 0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 207,
+   "levelled": 0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__occlude",
+   "variant": "occlude",
+   "cer": 0.4286,
+   "ms": 329,
+   "levelled": 0,
+   "read": [
+    "וותים"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 113,
+   "levelled": 0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 211,
+   "levelled": -7.9,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 194,
+   "levelled": 0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "restrooms__nikkud",
+   "variant": "nikkud",
+   "cer": 0.1429,
+   "ms": 336,
+   "levelled": 0,
+   "read": [
+    "שרוּתים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 255,
+   "levelled": 0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 180,
+   "levelled": 0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__occlude",
+   "variant": "occlude",
+   "cer": 0.125,
+   "ms": 175,
+   "levelled": 0,
+   "read": [
+    "רח ב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 130,
+   "levelled": 0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 226,
+   "levelled": -7.9,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "herzl-street__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 109,
+   "levelled": 0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 199,
+   "levelled": 0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 170,
+   "levelled": 0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__occlude",
+   "variant": "occlude",
+   "cer": 0.1667,
+   "ms": 313,
+   "levelled": 0,
+   "read": [
+    "שדרות 1 יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 101,
+   "levelled": 0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 293,
+   "levelled": 8,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "ben-yehuda-blvd__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 254,
+   "levelled": 0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 234,
+   "levelled": 0,
+   "read": [
+    "כיכר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__bright",
+   "variant": "bright",
+   "cer": 0.1818,
+   "ms": 337,
+   "levelled": 0,
+   "read": [
+    "ביבר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__occlude",
+   "variant": "occlude",
+   "cer": 0.1818,
+   "ms": 388,
+   "levelled": 0,
+   "read": [
+    "ביו ר דיזנגוף"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__tight",
+   "variant": "tight",
+   "cer": 0.1818,
+   "ms": 159,
+   "levelled": 0,
+   "read": [
+    "ביבר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__angle",
+   "variant": "angle",
+   "cer": 0.1818,
+   "ms": 310,
+   "levelled": 8,
+   "read": [
+    "ביבר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "dizengoff-square__bilingual",
+   "variant": "bilingual",
+   "cer": 0.0909,
+   "ms": 215,
+   "levelled": 0,
+   "read": [
+    "ביכר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 259,
+   "levelled": 0,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 257,
+   "levelled": 0,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__occlude",
+   "variant": "occlude",
+   "cer": 0.1818,
+   "ms": 308,
+   "levelled": 0,
+   "read": [
+    "תחנ וטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 188,
+   "levelled": 0,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 245,
+   "levelled": 8,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 197,
+   "levelled": 0,
+   "read": [
+    "תחנת אוטובוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "bus-stop__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 252,
+   "levelled": 0,
+   "read": [
+    "תחִנת אוטובּוס"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 189,
+   "levelled": 0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 187,
+   "levelled": 0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__occlude",
+   "variant": "occlude",
+   "cer": 0.4286,
+   "ms": 388,
+   "levelled": 0,
+   "read": [
+    "| כנסת"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 170,
+   "levelled": 0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 260,
+   "levelled": 8.1,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 300,
+   "levelled": 0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "synagogue__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 351,
+   "levelled": 0,
+   "read": [
+    "בִּית כְנָסֶת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 288,
+   "levelled": 0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 296,
+   "levelled": 0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__occlude",
+   "variant": "occlude",
+   "cer": 0.5714,
+   "ms": 288,
+   "levelled": 0,
+   "read": [
+    "ריט",
+    "ה 12"
+   ],
+   "english": [
+    null,
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 154,
+   "levelled": 0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 508,
+   "levelled": -7.6,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-drinks__bilingual",
+   "variant": "bilingual",
+   "cer": 0.1429,
+   "ms": 444,
+   "levelled": 0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה סו"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 335,
+   "levelled": 0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 330,
+   "levelled": 0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food__occlude",
+   "variant": "occlude",
+   "cer": 0.1053,
+   "ms": 621,
+   "levelled": 0,
+   "read": [
+    "חומ!ו +18",
+    "פלא יל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": [
+    "חומ!ו +18 -> Hummus (word-list-near)"
+   ]
+  },
+  {
+   "id": "menu-food__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 241,
+   "levelled": 0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 418,
+   "levelled": 8,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-food__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 674,
+   "levelled": 0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 276,
+   "levelled": 0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 334,
+   "levelled": 0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__occlude",
+   "variant": "occlude",
+   "cer": 0.1053,
+   "ms": 523,
+   "levelled": 0,
+   "read": [
+    "מנה ראטונה",
+    "מרק",
+    "קינוחי"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 194,
+   "levelled": 0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 323,
+   "levelled": 8.1,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 486,
+   "levelled": 0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "menu-courses__nikkud",
+   "variant": "nikkud",
+   "cer": 0.0526,
+   "ms": 424,
+   "levelled": 0,
+   "read": [
+    "מנָה ראשונה",
+    "מָרֶק",
+    "קנוּחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__dark",
+   "variant": "dark",
+   "cer": 0.05,
+   "ms": 408,
+   "levelled": 0,
+   "read": [
+    "מסעדה כשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__bright",
+   "variant": "bright",
+   "cer": 0.1,
+   "ms": 454,
+   "levelled": 0,
+   "read": [
+    "מסעדה כבשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__occlude",
+   "variant": "occlude",
+   "cer": 0.1,
+   "ms": 374,
+   "levelled": 0,
+   "read": [
+    "מסי דה כשרה",
+    "ברו ים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__tight",
+   "variant": "tight",
+   "cer": 0.1,
+   "ms": 310,
+   "levelled": 0,
+   "read": [
+    "מסעדה בשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__angle",
+   "variant": "angle",
+   "cer": 0.05,
+   "ms": 421,
+   "levelled": 8.1,
+   "read": [
+    "מסעדה כשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__bilingual",
+   "variant": "bilingual",
+   "cer": 0.1,
+   "ms": 305,
+   "levelled": 0,
+   "read": [
+    "מסעדה בשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "kosher-restaurant__nikkud",
+   "variant": "nikkud",
+   "cer": 0.05,
+   "ms": 454,
+   "levelled": 0,
+   "read": [
+    "מִסְעָדָה בְּשָרֶה",
+    "בְּרוּכִים הַבָּאִים"
+   ],
+   "english": [
+    "Kosher Restaurant",
+    "Welcome"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 202,
+   "levelled": 0,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 307,
+   "levelled": 0,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__occlude",
+   "variant": "occlude",
+   "cer": 0.5,
+   "ms": 199,
+   "levelled": 0,
+   "read": [
+    "אסור -"
+   ],
+   "english": [
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 214,
+   "levelled": 0,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 191,
+   "levelled": 8,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 242,
+   "levelled": 0,
+   "read": [
+    "אסור לעשן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "no-smoking__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 299,
+   "levelled": 0,
+   "read": [
+    "אִסוּר לְעשַן"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__dark",
+   "variant": "dark",
+   "cer": 0,
+   "ms": 291,
+   "levelled": 0,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__bright",
+   "variant": "bright",
+   "cer": 0,
+   "ms": 289,
+   "levelled": 0,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__occlude",
+   "variant": "occlude",
+   "cer": 0.25,
+   "ms": 480,
+   "levelled": 0,
+   "read": [
+    "זהזרות",
+    "מ גות"
+   ],
+   "english": [
+    "Caution",
+    null
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__tight",
+   "variant": "tight",
+   "cer": 0,
+   "ms": 161,
+   "levelled": 0,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__angle",
+   "variant": "angle",
+   "cer": 0,
+   "ms": 320,
+   "levelled": 7.8,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__bilingual",
+   "variant": "bilingual",
+   "cer": 0,
+   "ms": 455,
+   "levelled": 0,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  },
+  {
+   "id": "caution-stairs__nikkud",
+   "variant": "nikkud",
+   "cer": 0,
+   "ms": 421,
+   "levelled": 0,
+   "read": [
+    "זְהִירוּת",
+    "מַדְרְגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "wrong": []
+  }
+ ],
+ "pageErrors": [],
+ "nonGetRequests": [],
+ "otherOrigins": []
+}

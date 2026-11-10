@@ -54,7 +54,7 @@ export const en = {
 };
 /** Hebrew UI labels. FLAGGED: machine-assisted drafts, need native-speaker review. */
 export const he = {
-  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
+  'nav.home': 'בית', 'nav.learn': 'לימוד', 'nav.ask': 'שאלות על התורה', 'nav.letters': 'אותיות', 'nav.sounds': 'צלילים',
   'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת',
   // DRAFT, unreviewed machine-assisted labels for the new Learn sub-screens:
   'nav.loanwords': 'מילים שאפשר לקרוא', 'nav.checkpoint': 'בדיקת אותיות דומות', 'nav.dialogues': 'שיחות בישראל',

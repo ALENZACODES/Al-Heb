@@ -4,7 +4,13 @@ A question page and a small service for Aleph. Someone types a question such as 
 
 The page only answers questions about the Torah, the Tanakh and Jewish texts.
 
-## Run locally
+## In the app: static answers, no server
+
+The app does not call this service. `python build_static.py` runs the same vetted, no-model pipeline once, offline, over every bank question and writes `data/ask/` (a question bank, 32 answer files and the topic list). The page `#/ask` loads those files only when it opens and finds the answer in the browser with `src/ask/match.js`; when nothing matches well it says it has no vetted answer yet. Rebuild `data/ask/` after changing the pipeline, then run `node eval/eval_static_match.mjs` from this directory's parent repo root (`node tools/ask-torah/eval/eval_static_match.mjs`). See `docs/review/ASK-TORAH-STATIC-2026-11-10.md`.
+
+The server below, the Gradio demo and `render.yaml` are for offline testing only and are not on the learner's path.
+
+## Run the service locally (testing only)
 
 ```bash
 python3 -m venv .venv
@@ -14,7 +20,7 @@ pip install -r requirements.txt
 python server.py
 ```
 
-Open http://127.0.0.1:8787/demo or, in the Aleph app, set `window.ALEF_ASK_TORAH_URL = 'http://127.0.0.1:8787'` and visit `#/ask`.
+Open http://127.0.0.1:8787/demo.
 
 An optional Gradio demo is `python gradio_app.py` if Gradio is installed. It is not required.
 

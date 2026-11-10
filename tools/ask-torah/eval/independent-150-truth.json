@@ -1,0 +1,1724 @@
+[
+{
+"id": "u001",
+"question": "whats the deal with moruning in the torah?? like when someone dies",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 23:2",
+"Genesis 37:34",
+"Genesis 50:10",
+"Deuteronomy 34:8",
+"Leviticus 21:1"
+]
+},
+{
+"id": "u002",
+"question": "sorry i meant mourning, not morning — where does it talk about grieving",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 23:2",
+"Genesis 37:34",
+"Genesis 50:10",
+"Deuteronomy 34:8",
+"Leviticus 21:1"
+]
+},
+{
+"id": "u003",
+"question": "gods comandments, the main ones, where r they",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:1",
+"Deuteronomy 6:1",
+"Deuteronomy 5:1"
+]
+},
+{
+"id": "u004",
+"question": "like what is evle according to the 5 books",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 2:9",
+"Genesis 2:17",
+"Genesis 3:5",
+"Genesis 6:5",
+"Genesis 8:21"
+]
+},
+{
+"id": "u005",
+"question": "is evill even mentioned or is that a later thing",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 17:1",
+"Deuteronomy 17:5",
+"Genesis 38:10",
+"Deuteronomy 4:25",
+"Deuteronomy 23:10"
+]
+},
+{
+"id": "u006",
+"question": "addam and ev — are they in chumash or just sunday school",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 2:7",
+"Genesis 2:8",
+"Genesis 2:15",
+"Genesis 2:21",
+"Genesis 2:22"
+]
+},
+{
+"id": "u007",
+"question": "ok but like who was eve actually, the first woman right?",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 2:7",
+"Genesis 2:8",
+"Genesis 2:15",
+"Genesis 2:21",
+"Genesis 2:22"
+]
+},
+{
+"id": "u008",
+"question": "what even is a rabbi??",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u009",
+"question": "is rabbi in torah tho or did they make that up later",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u010",
+"question": "wait is the word rabbi anywhere in the five books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u011",
+"question": "what about their kids then",
+"has_history": true,
+"history": [
+"addam and ev — are they in chumash or just sunday school"
+],
+"verdict": "in_torah",
+"refs": [
+"Genesis 4:1",
+"Genesis 4:8"
+]
+},
+{
+"id": "u012",
+"question": "and after she died, did he mourn?",
+"has_history": true,
+"history": [
+"whats the deal with moruning in the torah?? like when someone dies",
+"tell me about Sarah"
+],
+"verdict": "in_torah",
+"refs": [
+"Genesis 23:2",
+"Genesis 37:34",
+"Genesis 50:10",
+"Deuteronomy 34:8",
+"Leviticus 21:1"
+]
+},
+{
+"id": "u013",
+"question": "so then what is a rebbe, is that in the chumash too",
+"has_history": true,
+"history": [
+"what even is a rabbi??"
+],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u014",
+"question": "ok so where does it actually say i cant eat that",
+"has_history": true,
+"history": [
+"why is bacon not kosher"
+],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:7",
+"Deuteronomy 14:8"
+]
+},
+{
+"id": "u015",
+"question": "can i cook on it or no",
+"has_history": true,
+"history": [
+"what does the torah say about shabbat"
+],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:8",
+"Exodus 16:23",
+"Exodus 35:3",
+"Deuteronomy 5:12"
+]
+},
+{
+"id": "u016",
+"question": "why cant i eat bacon lol where does it SAY that",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:7",
+"Deuteronomy 14:8"
+]
+},
+{
+"id": "u017",
+"question": "casherut — pigs, shellfish, is that in the 5 books or just rabbis",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:7",
+"Deuteronomy 14:8"
+]
+},
+{
+"id": "u018",
+"question": "milk and meat together, is that a torah thing or later",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 23:19",
+"Exodus 34:26",
+"Deuteronomy 14:21"
+]
+},
+{
+"id": "u019",
+"question": "shabbos — can i drive?? where in the five books",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:8",
+"Exodus 16:23",
+"Exodus 35:3",
+"Deuteronomy 5:12"
+]
+},
+{
+"id": "u020",
+"question": "whats the actual shabbat commandment, not the later rules",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 2:3",
+"Exodus 20:8",
+"Exodus 31:16",
+"Deuteronomy 5:12"
+]
+},
+{
+"id": "u021",
+"question": "saturday rest, is that genesis or the 10 comandments or both",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 26:35",
+"Exodus 34:21",
+"Exodus 23:12",
+"Exodus 33:14",
+"Leviticus 26:14"
+]
+},
+{
+"id": "u022",
+"question": "is it kosher to eat camel? i think the torah mentions this",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:3",
+"Leviticus 11:7",
+"Leviticus 11:9",
+"Deuteronomy 14:3",
+"Leviticus 11:4"
+]
+},
+{
+"id": "u023",
+"question": "do u have to have split hooves AND chew cud? where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:3",
+"Deuteronomy 14:6"
+]
+},
+{
+"id": "u024",
+"question": "does the torah talk about the afterlife or olam haba",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u025",
+"question": "is heaven and hell in the chumash or is that later",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u026",
+"question": "what happens after you die according to the five books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u027",
+"question": "is resurrection in the torah??",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u028",
+"question": "sheol — is that in the torah or only psalms/job",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u029",
+"question": "angels in the torah? like actual malachim?",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 16:7",
+"Genesis 19:1",
+"Genesis 22:11",
+"Genesis 28:12"
+]
+},
+{
+"id": "u030",
+"question": "did angels visit abraham or is that midrash",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 18:1",
+"Genesis 18:2",
+"Genesis 19:1"
+]
+},
+{
+"id": "u031",
+"question": "the angel in the burning bush wait was it an angel or god",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 3:2",
+"Exodus 3:4",
+"Exodus 3:6"
+]
+},
+{
+"id": "u032",
+"question": "is the messiah in the torah or only later prophets",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 4:3",
+"Numbers 24:17"
+]
+},
+{
+"id": "u033",
+"question": "does chumash mention mashiach as a future king",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 4:3",
+"Numbers 24:17"
+]
+},
+{
+"id": "u034",
+"question": "a star out of jacob — is that the messiah or are people reading that in",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 4:3",
+"Numbers 24:17"
+]
+},
+{
+"id": "u035",
+"question": "what about the satan, is he in the 5 books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 3:1",
+"Genesis 3:13"
+]
+},
+{
+"id": "u036",
+"question": "is the snake in eden supposed to be satan?? does it say that",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 3:1",
+"Genesis 3:13"
+]
+},
+{
+"id": "u037",
+"question": "the devil / ha-satan — torah or job",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 3:1",
+"Genesis 3:13"
+]
+},
+{
+"id": "u038",
+"question": "lucifer in the torah??",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 3:1",
+"Genesis 3:13"
+]
+},
+{
+"id": "u039",
+"question": "what does the torah actually say about women, not later commentators",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 1:19",
+"Deuteronomy 17:14",
+"Numbers 31:15",
+"Exodus 35:26",
+"Numbers 31:35"
+]
+},
+{
+"id": "u040",
+"question": "are there any women prophets or leaders in the five books",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 15:20",
+"Exodus 15:21",
+"Numbers 12:1"
+]
+},
+{
+"id": "u041",
+"question": "miriam — is she in the torah, what did she do",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 15:20",
+"Exodus 15:21",
+"Numbers 12:1"
+]
+},
+{
+"id": "u042",
+"question": "why are the inheritance laws for daughters in the torah (zelophehad?)",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 27:1",
+"Numbers 27:7"
+]
+},
+{
+"id": "u043",
+"question": "teffilin — is that word in the torah or just 'frontlets'",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 13:9",
+"Exodus 13:16",
+"Deuteronomy 6:8",
+"Deuteronomy 11:18"
+]
+},
+{
+"id": "u044",
+"question": "tffilin, the black boxes, does chumash describe the boxes or just the command",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 13:9",
+"Exodus 13:16",
+"Deuteronomy 6:8",
+"Deuteronomy 11:18"
+]
+},
+{
+"id": "u045",
+"question": "sign upon thy hand, between the eyes — where is that",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 6:8",
+"Deuteronomy 11:18",
+"Exodus 13:9"
+]
+},
+{
+"id": "u046",
+"question": "is mezuzah the little case in the torah or just the doorposts command",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 6:9",
+"Deuteronomy 11:20"
+]
+},
+{
+"id": "u047",
+"question": "שמע ישראל — where is this and what does it say",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 6:4",
+"Deuteronomy 6:5",
+"Deuteronomy 6:7"
+]
+},
+{
+"id": "u048",
+"question": "מה זה כשרות בתורה",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 11:3",
+"Leviticus 11:7",
+"Leviticus 11:9",
+"Deuteronomy 14:3"
+]
+},
+{
+"id": "u049",
+"question": "is רבי in the chumash",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u050",
+"question": "whats בראשית about, first parsha",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 1:1"
+]
+},
+{
+"id": "u051",
+"question": "האם יש שבת בתורה",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 2:3",
+"Exodus 20:8",
+"Exodus 31:16",
+"Deuteronomy 5:12"
+]
+},
+{
+"id": "u052",
+"question": "ציצית — is tzitzit in the 5 books",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 15:38",
+"Deuteronomy 22:12"
+]
+},
+{
+"id": "u053",
+"question": "עשרת הדיברות typo wait the ten words, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:1",
+"Exodus 20:2",
+"Exodus 20:3",
+"Deuteronomy 5:6"
+]
+},
+{
+"id": "u054",
+"question": "בראשית ברא אלהים — which verse is that",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 1:1"
+]
+},
+{
+"id": "u055",
+"question": "ואהבת לרעך כמוך is that in torah",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 19:18"
+]
+},
+{
+"id": "u056",
+"question": "parashat נח, the flood one, what happens",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 6:9",
+"Genesis 6:14",
+"Genesis 7:6",
+"Genesis 9:13"
+]
+},
+{
+"id": "u057",
+"question": "is hanukkah in the torah??? my uncle says everything is",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u058",
+"question": "purim — five books or esther",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u059",
+"question": "rosh hashanah, is that the actual name in chumash",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 23:24",
+"Numbers 29:1"
+]
+},
+{
+"id": "u060",
+"question": "yom kippur, the day of atonement, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 16:29",
+"Leviticus 16:30",
+"Leviticus 23:27"
+]
+},
+{
+"id": "u061",
+"question": "sukkot booths, is that commanded",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 23:34",
+"Leviticus 23:42",
+"Deuteronomy 16:13"
+]
+},
+{
+"id": "u062",
+"question": "simchat torah, dancing with the scrolls, is that biblical",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 23:36",
+"Numbers 29:35",
+"Deuteronomy 31:10"
+]
+},
+{
+"id": "u063",
+"question": "tisha bav fasting — torah or later",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u064",
+"question": "passover / pesach, the lamb, where does it describe it",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 12:3",
+"Exodus 12:8",
+"Exodus 12:14",
+"Leviticus 23:5",
+"Deuteronomy 16:1"
+]
+},
+{
+"id": "u065",
+"question": "shavuot, is that when we got the torah according to the text itself",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 34:22",
+"Leviticus 23:15",
+"Leviticus 23:16",
+"Deuteronomy 16:10"
+]
+},
+{
+"id": "u066",
+"question": "kol nidrei — is that a torah text",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 16:29",
+"Leviticus 23:27",
+"Numbers 30:3"
+]
+},
+{
+"id": "u067",
+"question": "the golden caff, when moses comes down, where is that story",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 32:4",
+"Exodus 32:19",
+"Exodus 32:20",
+"Exodus 2:10",
+"Exodus 3:2"
+]
+},
+{
+"id": "u068",
+"question": "noahs ark, rainbow, is that genesis",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 6:9",
+"Genesis 6:14",
+"Genesis 7:6",
+"Genesis 9:13"
+]
+},
+{
+"id": "u069",
+"question": "did god really ask abraham to sacrifice isaac or is that not in the five books",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 22:2",
+"Genesis 22:12"
+]
+},
+{
+"id": "u070",
+"question": "the sea splitting, yam suf, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 14:21",
+"Exodus 14:22"
+]
+},
+{
+"id": "u071",
+"question": "tower of babel — torah yes?",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 11:4",
+"Genesis 11:9"
+]
+},
+{
+"id": "u072",
+"question": "joseph and the funky coat, is that in genesis or musical only",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 37:3",
+"Genesis 37:28",
+"Genesis 41:40"
+]
+},
+{
+"id": "u073",
+"question": "burning bush, which book",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 3:2",
+"Exodus 3:4",
+"Exodus 3:6"
+]
+},
+{
+"id": "u074",
+"question": "ten plagues list, are they all in shemot",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 7:20",
+"Exodus 8:2",
+"Exodus 9:23",
+"Exodus 10:14",
+"Exodus 12:29"
+]
+},
+{
+"id": "u075",
+"question": "who is korach and what happened",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 16:1",
+"Numbers 16:32"
+]
+},
+{
+"id": "u076",
+"question": "balaam and the talking donkey... is that actually in the torah",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 22:5",
+"Numbers 22:28",
+"Numbers 24:5"
+]
+},
+{
+"id": "u077",
+"question": "the red heifer / red cow, i keep hearing about it, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 19:2"
+]
+},
+{
+"id": "u078",
+"question": "moses death, does the torah say who buried him",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 34:5",
+"Deuteronomy 34:6"
+]
+},
+{
+"id": "u079",
+"question": "is lilith in the torah, adams first wife or whatever",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 2:22",
+"Genesis 3:20"
+]
+},
+{
+"id": "u080",
+"question": "reincarnation / gilgul, is that in the five books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u081",
+"question": "kabbalah, sefirot, is any of that in chumash",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u082",
+"question": "is the talmud part of the torah",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 24:12",
+"Deuteronomy 17:8"
+]
+},
+{
+"id": "u083",
+"question": "do you need a minyan of 10, is that written in the 5 books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Numbers 14:27",
+"Genesis 18:32"
+]
+},
+{
+"id": "u084",
+"question": "bar mitzvah at 13, torah or later",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u085",
+"question": "kippah / yarmulke required in the torah?",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 28:4",
+"Exodus 28:40"
+]
+},
+{
+"id": "u086",
+"question": "star of david — biblical?",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u087",
+"question": "is the siddur / amidah in the torah",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 24:63",
+"Genesis 25:21",
+"Exodus 32:11"
+]
+},
+{
+"id": "u088",
+"question": "synagogue, is that a torah institution",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 25:8",
+"Leviticus 23:2"
+]
+},
+{
+"id": "u089",
+"question": "hasidism, the baal shem tov, any of that in tanakh let alone torah",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u090",
+"question": "dreidel on chanukah, biblical?? obviously wait is it",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u091",
+"question": "david and goliath — is that in the five books",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u092",
+"question": "the lord is my shepherd, psalm 23, is that torah",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u093",
+"question": "jonah and the whale, chumash or later book",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u094",
+"question": "esther and haman, in the torah?",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u095",
+"question": "is the book of job in the torah",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u096",
+"question": "elijah the prophet, five books or kings",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u097",
+"question": "is jerusalem even named in the torah",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 14:18",
+"Genesis 22:2"
+]
+},
+{
+"id": "u098",
+"question": "ruth and boaz, torah or writings",
+"has_history": false,
+"history": [],
+"verdict": "tanakh_outside_torah",
+"refs": []
+},
+{
+"id": "u099",
+"question": "love your neighbor, is that leviticus, ppl always quote it",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 19:18"
+]
+},
+{
+"id": "u100",
+"question": "eye for an eye — does it actually say that, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 21:24",
+"Leviticus 24:20",
+"Deuteronomy 19:21"
+]
+},
+{
+"id": "u101",
+"question": "justice justice shalt thou pursue, where is that",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 16:20"
+]
+},
+{
+"id": "u102",
+"question": "tzedakah / open your hand to the poor, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 15:7",
+"Deuteronomy 15:8",
+"Deuteronomy 15:11",
+"Leviticus 19:9",
+"Leviticus 25:35"
+]
+},
+{
+"id": "u103",
+"question": "the stranger, treat them like, where does it say",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 19:34",
+"Deuteronomy 10:19",
+"Exodus 22:20"
+]
+},
+{
+"id": "u104",
+"question": "honour your parents, which of the 10",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:12",
+"Deuteronomy 5:16",
+"Leviticus 19:3"
+]
+},
+{
+"id": "u105",
+"question": "is slavery in the torah and what does it say, honestly",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 21:2",
+"Exodus 21:16",
+"Leviticus 25:39",
+"Deuteronomy 15:12"
+]
+},
+{
+"id": "u106",
+"question": "polygamy, did the torah allow more than one wife",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 21:10",
+"Deuteronomy 21:15",
+"Deuteronomy 17:17"
+]
+},
+{
+"id": "u107",
+"question": "witchcraft / a witch, does exodus really say that",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 22:17",
+"Deuteronomy 18:10"
+]
+},
+{
+"id": "u108",
+"question": "cities of refuge, what are those",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 35:11",
+"Deuteronomy 19:2"
+]
+},
+{
+"id": "u109",
+"question": "shatnez, linen and wool, is that a real torah law",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 19:19",
+"Deuteronomy 22:11"
+]
+},
+{
+"id": "u110",
+"question": "jubilee year, 50th year, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 25:10"
+]
+},
+{
+"id": "u111",
+"question": "brit milah 8th day, where commanded",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 17:10",
+"Genesis 17:12",
+"Leviticus 12:3"
+]
+},
+{
+"id": "u112",
+"question": "niddah / family purity, is the basic idea in the torah",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Leviticus 15:19",
+"Leviticus 15:25",
+"Leviticus 18:19"
+]
+},
+{
+"id": "u113",
+"question": "is god a man or a woman in the torah, or neither",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 23:19",
+"Deuteronomy 4:15",
+"Deuteronomy 4:16"
+]
+},
+{
+"id": "u114",
+"question": "does the torah say israel is chosen, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 19:5",
+"Exodus 19:6",
+"Deuteronomy 7:6"
+]
+},
+{
+"id": "u115",
+"question": "the nephilim / giants, genesis 6, what does it actually say",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 6:4"
+]
+},
+{
+"id": "u116",
+"question": "who wrote the torah, does the text say moses wrote it",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 31:9",
+"Deuteronomy 31:24",
+"Exodus 2:10",
+"Exodus 3:2",
+"Exodus 3:10"
+]
+},
+{
+"id": "u117",
+"question": "is original sin a torah idea",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 3:6",
+"Genesis 3:23"
+]
+},
+{
+"id": "u118",
+"question": "the trinity, is that in the Hebrew bible's first five books",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Deuteronomy 6:4"
+]
+},
+{
+"id": "u119",
+"question": "is jesus mentioned in the torah",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u120",
+"question": "does the torah mention prayer, like people praying",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 20:7",
+"Genesis 20:17",
+"Genesis 25:21",
+"Exodus 32:11",
+"Numbers 12:13"
+]
+},
+{
+"id": "u121",
+"question": "ya but the boxes themselves",
+"has_history": true,
+"history": [
+"sign upon thy hand, between the eyes — where is that"
+],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 6:8",
+"Deuteronomy 11:18",
+"Exodus 13:9"
+]
+},
+{
+"id": "u122",
+"question": "and milk+meat?? my grandma was strict about that",
+"has_history": true,
+"history": [
+"casherut — pigs, shellfish, is that in the 5 books or just rabbis"
+],
+"verdict": "in_torah",
+"refs": [
+"Exodus 23:19",
+"Exodus 34:26",
+"Deuteronomy 14:21"
+]
+},
+{
+"id": "u123",
+"question": "so is that a no",
+"has_history": true,
+"history": [
+"does the torah talk about the afterlife or olam haba"
+],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u124",
+"question": "then where DID the title come from",
+"has_history": true,
+"history": [
+"is rabbi in torah tho or did they make that up later"
+],
+"verdict": "not_in_torah",
+"refs": [
+"Exodus 3:10",
+"Deuteronomy 34:10",
+"Numbers 12:7"
+]
+},
+{
+"id": "u125",
+"question": "ok name one woman who leads something",
+"has_history": true,
+"history": [
+"what does the torah actually say about women, not later commentators"
+],
+"verdict": "in_torah",
+"refs": [
+"Exodus 15:20",
+"Exodus 15:21",
+"Numbers 12:1"
+]
+},
+{
+"id": "u126",
+"question": "btw is amalek in the 5 books and what r we supposed to do",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 17:8",
+"Exodus 17:14",
+"Deuteronomy 25:17"
+]
+},
+{
+"id": "u127",
+"question": "chosen people thing feels messy, what does the text say exactly",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 19:5",
+"Exodus 19:6",
+"Deuteronomy 7:6"
+]
+},
+{
+"id": "u128",
+"question": "is the word 'angel' in english translations of genesis",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 16:7",
+"Genesis 19:1",
+"Genesis 22:11",
+"Genesis 28:12"
+]
+},
+{
+"id": "u129",
+"question": "frontlets vs tefillin im confused which is biblical",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 13:9",
+"Exodus 13:16",
+"Deuteronomy 6:8",
+"Deuteronomy 11:18"
+]
+},
+{
+"id": "u130",
+"question": "do animals go to heaven, does torah say anything about afterlife for people even",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Genesis 37:35",
+"Numbers 16:33",
+"Deuteronomy 32:22"
+]
+},
+{
+"id": "u131",
+"question": "whats a good recipe for challah, not the blessing, the baking",
+"has_history": false,
+"history": [],
+"verdict": "off_topic",
+"refs": []
+},
+{
+"id": "u132",
+"question": "who won the world series and also is baseball in the torah (spoiler no but im asking about the game)",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": []
+},
+{
+"id": "u133",
+"question": "can you help me write a python loop, this isnt a torah question",
+"has_history": false,
+"history": [],
+"verdict": "off_topic",
+"refs": []
+},
+{
+"id": "u134",
+"question": "weather in tel aviv tomorrow",
+"has_history": false,
+"history": [],
+"verdict": "off_topic",
+"refs": []
+},
+{
+"id": "u135",
+"question": "best sushi near me",
+"has_history": false,
+"history": [],
+"verdict": "off_topic",
+"refs": []
+},
+{
+"id": "u136",
+"question": "i heard 'let there be light' — exact ref pls",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 1:3"
+]
+},
+{
+"id": "u137",
+"question": "in the beginning, first line, hebrew + english",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 1:1"
+]
+},
+{
+"id": "u138",
+"question": "is the shema only deut 6 or also the other paragraphs",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 6:4",
+"Deuteronomy 6:5",
+"Deuteronomy 6:7"
+]
+},
+{
+"id": "u139",
+"question": "priestly blessing, yevarechecha, numbers right?",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 6:24",
+"Numbers 6:25",
+"Numbers 6:26"
+]
+},
+{
+"id": "u140",
+"question": "nazirite, no wine no haircut, where are the rules",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 6:2",
+"Numbers 6:5"
+]
+},
+{
+"id": "u141",
+"question": "did pharaohs heart get hardened, is that in shemot",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 8:28",
+"Exodus 10:20",
+"Exodus 9:35",
+"Exodus 11:10",
+"Exodus 7:22"
+]
+},
+{
+"id": "u142",
+"question": "manna, what was it, what does the text say not legends",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 16:15",
+"Exodus 16:35"
+]
+},
+{
+"id": "u143",
+"question": "the spies, 12 guys, caleb and joshua, which book",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Numbers 13:1",
+"Numbers 13:30",
+"Numbers 14:6"
+]
+},
+{
+"id": "u144",
+"question": "water from a rock, merivah, why was moses punished",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 17:6",
+"Numbers 20:11",
+"Exodus 2:10",
+"Exodus 3:2",
+"Exodus 3:10"
+]
+},
+{
+"id": "u145",
+"question": "is 'an eye for an eye' literal money or what, just quote it first",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 21:24",
+"Leviticus 24:20",
+"Deuteronomy 19:21"
+]
+},
+{
+"id": "u146",
+"question": "g-d's name, the four letters, i dont want it voiced, but is the name written in the torah",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Deuteronomy 28:58",
+"Deuteronomy 29:19",
+"Genesis 35:10",
+"Genesis 4:19",
+"Leviticus 19:12"
+]
+},
+{
+"id": "u147",
+"question": "how many times is egypt mentioned, actually just tell me a verse where they leave egypt",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 12:41",
+"Exodus 12:51"
+]
+},
+{
+"id": "u148",
+"question": "is 'thou shalt not kill' or 'not murder', the commandment, where",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Exodus 20:13",
+"Deuteronomy 5:17"
+]
+},
+{
+"id": "u149",
+"question": "sodom and gomorrah, what does genesis actually say happened",
+"has_history": false,
+"history": [],
+"verdict": "in_torah",
+"refs": [
+"Genesis 19:24"
+]
+},
+{
+"id": "u150",
+"question": "if someone asks 'is there a messiah in the pentateuch' how would you answer plainly",
+"has_history": false,
+"history": [],
+"verdict": "not_in_torah",
+"refs": [
+"Leviticus 4:3",
+"Numbers 24:17"
+]
+}
+]

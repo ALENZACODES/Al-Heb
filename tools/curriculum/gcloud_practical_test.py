@@ -89,14 +89,26 @@ def redact(s: str) -> str:
     return s
 
 
-def http_json(url, payload, headers, timeout=60):
+def http_json(url, payload, headers, timeout=180, retries=4):
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, method="POST", headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as res:
-            body = res.read()
-            return res.status, json.loads(body.decode("utf-8")), dict(res.headers)
-    except urllib.error.HTTPError as e:
+    last = None
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as res:
+                body = res.read()
+                return res.status, json.loads(body.decode("utf-8")), dict(res.headers)
+        except urllib.error.HTTPError as e:
+            last = e
+            break
+        except (TimeoutError, urllib.error.URLError, OSError) as e:
+            last = e
+            if attempt == retries - 1:
+                raise
+            time.sleep(min(30, 2 ** attempt))
+            continue
+    if isinstance(last, urllib.error.HTTPError):
+        e = last
         raw = e.read().decode("utf-8", "replace")
         try:
             parsed = json.loads(raw)
@@ -158,6 +170,23 @@ def letter_wer(ref: str, hyp: str) -> float:
     if not r:
         return 0.0 if not h else 1.0
     return levenshtein(list(r), list(h)) / len(r)
+
+def fold_mater(s: str) -> str:
+    """Letters only, nikkud gone, vowel letters vav/yod dropped so בוקר and בֹּקֶר can match."""
+    s = strip_nikkud(s or "")
+    return s.replace("ו", "").replace("י", "").replace(" ", "")
+
+
+def stt_close(ref: str, hyp: str) -> bool:
+    if not hyp:
+        return False
+    if wer(ref, hyp) == 0 or letter_wer(ref, hyp) == 0:
+        return True
+    if letter_wer(ref, hyp) <= 0.15:
+        return True
+    if fold_mater(ref) == fold_mater(hyp) and fold_mater(ref):
+        return True
+    return False
 
 
 def held_name(he: str) -> bool:
@@ -678,14 +707,7 @@ def decide(job, stt, he_en, en_he, judge=None):
         return {"pass": False, "blocked": True, "reason": "divine-name-not-voiced"}
     w = stt.get("wer")
     lw = stt.get("letter_wer")
-    stt_ok = False
-    if stt.get("text") is not None and w is not None:
-        if w == 0:
-            stt_ok = True
-        elif len(tokens(job["he"])) == 1 and (lw or 1) <= 0.15:
-            stt_ok = True
-        elif (lw or 1) == 0:
-            stt_ok = True
+    stt_ok = bool(stt.get("text")) and stt_close(job["he"], stt.get("text") or "")
     if not stt_ok:
         reason.append("stt-wer" + (f"={w:.2f}" if w is not None else ":missing"))
     fwd_ok = meaning_close(job["en"], he_en or "") or (judge and judge.get("fwd"))
@@ -723,6 +745,7 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--resume", action="store_true", default=True)
     ap.add_argument("--smoke", action="store_true")
+    ap.add_argument("--redecide", action="store_true", help="Recompute pass/fail from the checkpoint (no new Cloud calls)")
     args = ap.parse_args()
     env = load_secrets()
     api_key = os.environ.get("GOOGLE_TTS_API_KEY") or env.get("GOOGLE_TTS_API_KEY")
@@ -735,6 +758,29 @@ def main():
         jobs = jobs[:1]
     elif args.limit:
         jobs = jobs[: args.limit]
+    if args.redecide:
+        if not CHECKPOINT.exists():
+            raise SystemExit("no checkpoint to redecide")
+        checkpoint = json.loads(CHECKPOINT.read_text())
+        results = checkpoint.get("results") or {}
+        items = load_items()
+        results_by_tuple = {}
+        for k, rec in results.items():
+            try:
+                id_, he, en = json.loads(k)
+            except Exception:
+                continue
+            job = {"id": id_, "he": he, "en": en, "source": rec.get("source") or "", "unitId": rec.get("unitId") or ""}
+            stt_pack = {"text": rec.get("stt_text"), "wer": rec.get("wer"), "letter_wer": rec.get("letter_wer"), "model": rec.get("stt_model")}
+            prelim = decide(job, stt_pack, rec.get("he_to_en"), rec.get("en_to_he"), judge=rec.get("judge"))
+            rec.update(prelim)
+            rec["done"] = True
+            results[k] = rec
+            results_by_tuple[(id_, he, en)] = rec
+        checkpoint["results"] = results
+        save_checkpoint(checkpoint)
+        write_outputs(items, results_by_tuple, checkpoint, stt_note=checkpoint.get("stt_note") or "")
+        return
 
     checkpoint = {"spent_usd": 0, "results": {}, "stt_note": ""}
     if args.resume and CHECKPOINT.exists() and not args.smoke:
@@ -750,60 +796,66 @@ def main():
 
     for n, job in enumerate(jobs, 1):
         key = json.dumps([job["id"], job["he"], job["en"]], ensure_ascii=False)
-        if key in results and results[key].get("done"):
+        if key in results and (results[key].get("done") or results[key].get("speech_done")):
             continue
         if held_name(job["he"]):
             results[key] = {"done": True, "blocked": True, "pass": False, "reason": "divine-name-not-voiced", **{k: job[k] for k in ("id", "he", "en")}}
             continue
-        tts_res, tts_err = tts(job["he"], api_key)
-        if tts_err or not tts_res:
-            results[key] = {"done": True, "pass": False, "reason": "tts-failed: " + str(tts_err), "id": job["id"], "he": job["he"], "en": job["en"]}
-            save_checkpoint(checkpoint)
-            print(f"[{n}/{len(jobs)}] tts fail {job['id']}", file=sys.stderr)
-            continue
-        charge(checkpoint, tts_res["usd"], "tts", TTS_VOICE, {"chars": tts_res["chars"]})
-        stt_res, stt_err = None, None
-        if not checkpoint.get("chirp_unusable"):
-            stt_res, stt_err = stt_chirp(tts_res["audio"], api_key, project, checkpoint)
-            if not stt_res or stt_res.get("fallback"):
-                checkpoint["chirp_unusable"] = True
-                checkpoint["stt_note"] = (
-                    "Google Cloud STT Chirp (Speech-to-Text v2) is not callable with the existing API keys "
-                    "(v2 requires OAuth; Speech v1 is blocked on the TTS key). "
-                    "Each WaveNet he-IL clip was instead transcribed on Vertex by gemini-3.5-flash. "
-                    + (stt_err or "")
-                )
-                stt_res, stt_err = None, checkpoint["stt_note"]
-        if not stt_res:
-            stt_res, stt_err = stt_vertex_audio(tts_res["audio"], env)
+        try:
+            tts_res, tts_err = tts(job["he"], api_key)
+            if tts_err or not tts_res:
+                results[key] = {"done": True, "pass": False, "reason": "tts-failed: " + str(tts_err), "id": job["id"], "he": job["he"], "en": job["en"]}
+                save_checkpoint(checkpoint)
+                print(f"[{n}/{len(jobs)}] tts fail {job['id']}", file=sys.stderr)
+                continue
+            charge(checkpoint, tts_res["usd"], "tts", TTS_VOICE, {"chars": tts_res["chars"]})
+            stt_res, stt_err = None, None
+            if not checkpoint.get("chirp_unusable"):
+                stt_res, stt_err = stt_chirp(tts_res["audio"], api_key, project, checkpoint)
+                if not stt_res or stt_res.get("fallback"):
+                    checkpoint["chirp_unusable"] = True
+                    checkpoint["stt_note"] = (
+                        "Google Cloud STT Chirp (Speech-to-Text v2) is not callable with the existing API keys "
+                        "(v2 requires OAuth; Speech v1 is blocked on the TTS key). "
+                        "Each WaveNet he-IL clip was instead transcribed on Vertex by gemini-3.5-flash. "
+                        + (stt_err or "")
+                    )
+                    stt_res, stt_err = None, checkpoint["stt_note"]
+            if not stt_res:
+                stt_res, stt_err = stt_vertex_audio(tts_res["audio"], env)
+                if stt_res:
+                    stt_res["note"] = checkpoint.get("stt_note")
             if stt_res:
-                stt_res["note"] = checkpoint.get("stt_note")
-        if stt_res:
-            charge(checkpoint, stt_res["usd"], "stt", stt_res["model"], stt_res.get("usage") or {}, route="vertex" if "gemini" in (stt_res.get("model") or "") else "google-cloud")
-        stt_text = (stt_res or {}).get("text") or ""
-        stt_pack = {
-            "text": stt_text,
-            "model": (stt_res or {}).get("model"),
-            "wer": wer(job["he"], stt_text) if stt_res else None,
-            "letter_wer": letter_wer(job["he"], stt_text) if stt_res else None,
-        }
-        if not stt_res:
-            stt_pack["error"] = stt_err
+                charge(checkpoint, stt_res["usd"], "stt", stt_res["model"], stt_res.get("usage") or {}, route="vertex" if "gemini" in (stt_res.get("model") or "") else "google-cloud")
+            stt_text = (stt_res or {}).get("text") or ""
+            stt_pack = {
+                "text": stt_text,
+                "model": (stt_res or {}).get("model"),
+                "wer": wer(job["he"], stt_text) if stt_res else None,
+                "letter_wer": letter_wer(job["he"], stt_text) if stt_res else None,
+            }
+            if not stt_res:
+                stt_pack["error"] = stt_err
 
-        # Translation is batched after the speech loop (Cloud Translation API is disabled on the TTS key project).
-        prelim = decide(job, stt_pack, None, None, judge=None)
-        rec = {
-            "done": False,
-            "speech_done": True,
-            "id": job["id"], "he": job["he"], "en": job["en"], "source": job["source"], "unitId": job["unitId"],
-            "stt_text": stt_text, "wer": stt_pack["wer"], "letter_wer": stt_pack["letter_wer"],
-            "stt_model": stt_pack.get("model"), "stt_ok": prelim.get("stt_ok"),
-        }
-        results[key] = rec
-        if n % 10 == 0 or args.smoke:
+            # Translation is batched after the speech loop (Cloud Translation API is disabled on the TTS key project).
+            prelim = decide(job, stt_pack, None, None, judge=None)
+            rec = {
+                "done": False,
+                "speech_done": True,
+                "id": job["id"], "he": job["he"], "en": job["en"], "source": job["source"], "unitId": job["unitId"],
+                "stt_text": stt_text, "wer": stt_pack["wer"], "letter_wer": stt_pack["letter_wer"],
+                "stt_model": stt_pack.get("model"), "stt_ok": prelim.get("stt_ok"),
+            }
+            results[key] = rec
+            if n % 10 == 0 or args.smoke:
+                save_checkpoint(checkpoint)
+                print(f"[{n}/{len(jobs)}] {job['id']} stt_ok={rec.get('stt_ok')} wer={stt_pack['wer']} spent=${checkpoint['spent_usd']:.4f}", file=sys.stderr)
+            time.sleep(0.02)
+        except (TimeoutError, urllib.error.URLError, OSError) as e:
+            print(f"[{n}/{len(jobs)}] transient {job['id']}: {type(e).__name__}: {e}", file=sys.stderr)
             save_checkpoint(checkpoint)
-            print(f"[{n}/{len(jobs)}] {job['id']} stt_ok={rec.get('stt_ok')} wer={stt_pack['wer']} spent=${checkpoint['spent_usd']:.4f}", file=sys.stderr)
-        time.sleep(0.02)
+            time.sleep(5)
+            continue
 
     save_checkpoint(checkpoint)
 

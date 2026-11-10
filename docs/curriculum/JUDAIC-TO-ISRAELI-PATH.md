@@ -50,3 +50,9 @@ Only notes and goals inside existing lessons were touched (see the "Wire Hallel 
 ## How a rabbi can read this path in an hour
 
 Start at `r22` and `r36` (Shema), `r41` and `I-05` (Kiddush), `I-07` (Hallel), `I-29`–`I-32` (festivals), `I-50` (greetings). If those five stops make liturgical sense, the path is doing its job even though the Israel track is a separate belt.
+
+## Fourth-pass notes (10 November 2026, still overnight)
+
+`il01` and `r51` now tell the learner how the two paths meet, and `I-11` and `I-19` point at their synagogue companions (`I-19`/`I-50`, and `I-05`/`I-06`), still without any cross-track prerequisite. No new lesson words and no new audio slots were added.
+
+The Israel track can also be opened as 13 Babbel-style units at `#/israel-units` (Claude lane C, folded 10 November 2026). That grouping does not change prerequisites. Everyday phrase practice, including greetings that sit on the synagogue track, stays at `#/practical`.

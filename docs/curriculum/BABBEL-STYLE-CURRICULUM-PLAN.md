@@ -176,3 +176,7 @@ These Israel-track lessons still have unused clean words and were left out of th
 - **il16, il19, il23, il24** — these are grammar or pronunciation lessons (present, past, accent markers, capstone), not situation packs. Their words can fill later pages if Claude's schema asks for grammar screens; they were not invented into new "verified" lines.
 
 Room to 200 pages should be filled only with further sourced lines, or with Claude's first 20 pages once they land and pass a source check.
+
+## Placement next to Claude's Israel units (10 November 2026)
+
+Claude lane C's `#/israel-units` (preview) groups the existing Israel-track lessons into 13 Babbel-style units. That is the map of the 24 il lessons and the 30 Israel B1 lessons; it does not invent Hebrew and it does not add a 126th lesson. `#/practical` stays as extra situation practice from the phrasebook and cited lessons, including synagogue-track greetings that israel-units does not cover. Both routes are preview and on-demand.

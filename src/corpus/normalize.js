@@ -153,7 +153,14 @@ export function applyTransforms(rawLines, t = {}) {
   for (const [from0, to0] of t.corrections || []) {
     const from = from0.normalize('NFC'), to = to0.normalize('NFC');
     let hit = 0;
-    lines = lines.map((l) => l.split(' ').map((w) => (w.replace(/׃$/, '') === from ? (hit++, w.replace(from, to)) : w)).join(' '));
+    lines = lines.map((l) => l.split(' ').map((w) => {
+      const base = w.replace(/׃$/, '');
+      // The fetched source may already include the vowel the correction was written to add.
+      // Count that as a hit and leave the word unchanged so a later snapshot does not break the build.
+      if (base === from) { hit++; return w.replace(from, to); }
+      if (base === to) { hit++; return w; }
+      return w;
+    }).join(' '));
     if (!hit) throw new Error('correction did not match: ' + from);
   }
   lines = lines.map((l) => l.normalize('NFC'));

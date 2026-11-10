@@ -200,12 +200,9 @@ const SIDDUR_ATTR = {
 };
 
 const OLD_IDS = new Set(Object.keys(META).slice(0, 27)); // round-1/2 records: original derivation path, unchanged
-const appendNew = process.argv.includes('--append-new');
-const already = appendNew ? new Set(JSON.parse(fs.readFileSync(path.join(root, 'data/corpus/registry.json'), 'utf8')).entries.map((e) => e.id)) : new Set();
 const entries = [];
 const bySnap = new Map();
 for (const [id, meta] of Object.entries(META)) {
-  if (already.has(id)) continue;
   const src = meta.derive ? snap.items[meta.derive.from] : snap.items[id];
   if (!src) throw new Error('no snapshot for ' + id);
   const big = meta.keepLarge ? largeLetters(src.rawLines.join(' ')) : [];
@@ -273,27 +270,33 @@ for (const [id, meta] of Object.entries(META)) {
 
 const order = Object.keys(META);
 const registryPath = path.join(root, 'data/corpus/registry.json');
-let out;
-if (appendNew) {
-  // Full rebuild currently fails on a stale vowel correction for vezot-hatorah
-  // (the snapshot already has the holam). Append only ids that are not yet in the
-  // registry; leave existing entries and the file-level generated date untouched.
+const built = {
+  schema: 'alef-corpus-registry/1',
+  note: 'Built by src/corpus/tools/build-registry.mjs from data/corpus/source-snapshot.json. Do not edit by hand; edit META in the builder and re-run. See docs/corpus/LICENSES.md.',
+  generated: FETCHED,
+  normalisation: 'Pointed Hebrew, cantillation removed, NFC; see src/corpus/normalize.js header.',
+  entries: order.map((id) => entries.find((e) => e.id === id)),
+};
+let out = built;
+if (fs.existsSync(registryPath)) {
+  // A later Metsudah re-source pass stamps `resourced` and sometimes adjusts nusach,
+  // attribution and dropTokens. A fresh META build would drop that work (and, for a
+  // few lines, change the Hebrew). Preserve every already-committed record; only add
+  // ids that are not yet in the file. applyTransforms still ran for every META id so
+  // a stale vowel correction cannot hide in an unbuilt record.
   const prev = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
-  const have = new Set(prev.entries.map((e) => e.id));
-  const added = entries.filter((e) => !have.has(e.id));
-  const unexpected = added.filter((e) => have.has(e.id));
-  if (unexpected.length) throw new Error('append-new overlap');
-  out = { ...prev, entries: prev.entries.concat(added) };
-  fs.writeFileSync(registryPath, JSON.stringify(out, null, 1) + '\n');
-  console.log('appended', added.map((e) => e.id).join(', ') || '(nothing)', '->', out.entries.length, 'entries');
+  const prevBy = new Map(prev.entries.map((e) => [e.id, e]));
+  const preserved = [];
+  const added = [];
+  out = { ...prev, entries: order.map((id) => {
+    if (prevBy.has(id)) { preserved.push(id); return prevBy.get(id); }
+    added.push(id);
+    return built.entries.find((e) => e.id === id);
+  }) };
+  const dropped = prev.entries.filter((e) => !order.includes(e.id)).map((e) => e.id);
+  if (dropped.length) throw new Error('refusing to drop registry ids: ' + dropped.join(', '));
+  console.log('registry: preserved', preserved.length, 'existing records, added', added.length || 0, added.join(', ') || '');
 } else {
-  out = {
-    schema: 'alef-corpus-registry/1',
-    note: 'Built by src/corpus/tools/build-registry.mjs from data/corpus/source-snapshot.json. Do not edit by hand; edit META in the builder and re-run. See docs/corpus/LICENSES.md.',
-    generated: FETCHED,
-    normalisation: 'Pointed Hebrew, cantillation removed, NFC; see src/corpus/normalize.js header.',
-    entries: order.map((id) => entries.find((e) => e.id === id)),
-  };
-  fs.writeFileSync(registryPath, JSON.stringify(out, null, 1) + '\n');
-  console.log('wrote registry.json with', entries.length, 'entries');
+  console.log('wrote new registry.json with', built.entries.length, 'entries');
 }
+fs.writeFileSync(registryPath, JSON.stringify(out, null, 1) + '\n');

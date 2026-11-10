@@ -144,12 +144,12 @@ test('refuses instead of guessing: a near line with a different thing in it is n
   assert.equal(french.ok, false, 'the stored line is about Hebrew');
   assert.equal(french.translation, '');
   assert.ok(french.suggestions.some((s) => /Hebrew/.test(s.en)), 'the Hebrew line is offered as a suggestion, labelled as such');
-  for (const src of ['The quarterly report is late again', 'It is raining', 'Can I leave my suitcase here?', 'Where do I get off?', 'See you at show']) {
+  for (const src of ['The quarterly report is late again', 'It snowed all night', 'Can I leave my suitcase here?', 'Where do I get off?', 'See you at show']) {
     const r = he(src);
     assert.equal(r.ok, false, src);
     assert.equal(r.method, 'none');
   }
-  for (const src of ['הילד נפל', 'תן לי רגע', 'אתמול הלכתי לים', 'החשבון בפרטנר, בבקשה']) assert.equal(en(src).ok, false, src);
+  for (const src of ['הילד נפל', 'תביא לי את זה מחר', 'אתמול הלכתי לים', 'החשבון בפרטנר, בבקשה']) assert.equal(en(src).ok, false, src);
 });
 
 test('small extra words do not block a stored line, and the match is named', () => {
@@ -260,6 +260,36 @@ test('describing words follow the noun or the speaker; clock times; when things 
   for (const [src, want] of back) assert.equal(en(src).translation, want, src);
 });
 
+test('describing words beside a noun, comparatives, my, another, per night, someone else wants', () => {
+  const cases = [
+    ['Do you have a bigger room?', 'יש לכם חדר יותר גדול?'],
+    ['Cold water, please', 'מים קרים, בבקשה'],
+    ['I want a small coffee', 'אני רוצה קפה קטן'],
+    ['Can I have another towel?', 'אפשר עוד מגבת?'],
+    ['How much is the room per night?', 'כמה עולה החדר ללילה?'],
+    ['Where is my room?', 'איפה החדר שלי?'],
+    ['My wife is tired', 'האישה שלי עייפה'],
+    ['We are from Canada', 'אנחנו מקנדה'],
+    ['The children want ice cream', 'הילדים רוצים גלידה'],
+    ['My daughter needs a doctor', 'הבת שלי צריכה רופא'],
+    ['The children want to eat', 'הילדים רוצים לאכול'],
+    ['See you on Sunday', 'נתראה ביום ראשון'],
+    ['Is the tour in English?', 'הסיור באנגלית?'],
+  ];
+  for (const [src, want] of cases) assert.equal(he(src).translation, want, src);
+  const back = [
+    ['יש לכם חדר יותר גדול?', 'Do you have a bigger room?'],
+    ['אפשר עוד מגבת?', 'Can I have another towel?'],
+    ['אפשר עוד לחם?', 'Can I have more bread?'],
+    ['איפה החדר שלי?', 'Where is my room?'],
+    ['אנחנו מקנדה', 'We are from Canada'],
+    ['הילדים רוצים גלידה', 'The children want ice cream'],
+    ['נתראה ביום ראשון', 'See you on Sunday'],
+    ['מים קרים, בבקשה', 'Cold water, please'],
+  ];
+  for (const [src, want] of back) assert.equal(en(src).translation, want, src);
+});
+
 test('a refused line that sounds like a stored line is offered as "did you mean", never given as the answer', () => {
   const cases = [
     ['מי בא לי קרח?', 'he-en', 'מים, בלי קרח'],
@@ -296,7 +326,7 @@ test('dictionary: used only after it is loaded, first meanings only, always mark
   assert.equal(he('Where do I get off?').ok, false, 'a small word is not a thing');
   assert.equal(en('יער').translation, 'forest');
   assert.equal(en('יער').method, 'word');
-  assert.equal(en('תן לי רגע').ok, false, 'dictionary glosses are never strung into a sentence');
+  assert.equal(en('תביא לי את זה מחר').ok, false, 'dictionary glosses are never strung into a sentence');
   const w = en('קפה ועוגה');
   assert.equal(w.method, 'words');
   assert.match(w.note, /Word by word/);
@@ -359,12 +389,19 @@ test('score: the round 1 and round 2 fresh sets, both since used to widen the en
 test('score: the round 2 end set, since used to guide new frames (a regression check)', () => {
   const r = score('tests/fixtures/talk.fresh3.json');
   assert.equal(r.n, 40);
-  assert.ok(r.score >= 82, `score ${r.score.toFixed(2)}`);
+  assert.ok(r.score >= 90, `score ${r.score.toFixed(2)}`);
 });
 
-test('score: 40 held-out lines written at the end of round 3 (the honest number; must not fall)', () => {
+test('score: the round 3 end set, since used to guide new frames (a regression check)', () => {
   const r = score('tests/fixtures/talk.fresh4.json');
   assert.equal(r.n, 40);
-  assert.ok(r.score >= 59, `score ${r.score.toFixed(2)}`);
-  assert.ok(r.refused <= 14, `refused ${r.refused}`);
+  assert.ok(r.score >= 93, `score ${r.score.toFixed(2)}`);
+});
+
+test('score: 40 held-out lines written at the end of round 4 (the honest number; must not fall)', () => {
+  const r = score('tests/fixtures/talk.fresh5.json');
+  assert.equal(r.n, 40);
+  assert.ok(r.score >= 47, `score ${r.score.toFixed(2)}`);
+  assert.equal(en('הרב כאן היום?').translation, 'Is the rabbi here today?', 'a question stays a question');
+  assert.equal(en('הרב כאן היום').translation, 'The rabbi is here today');
 });

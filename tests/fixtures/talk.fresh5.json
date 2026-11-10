@@ -1,0 +1,246 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "40 everyday lines written at the end of round 4, after every engine and pack change of that round. It scored 47.5 when first run, with 17 of 40 refused. One fault it exposed was then fixed (a Hebrew question came back as a statement); no line or frame was added for it. The reference is one acceptable answer.",
+ "samples": [
+  {
+   "id": "m-en-01",
+   "direction": "en-he",
+   "source": "Is there a cheaper hotel nearby?",
+   "reference": "יש כאן מלון יותר זול?"
+  },
+  {
+   "id": "m-en-02",
+   "direction": "en-he",
+   "source": "My husband is sick.",
+   "reference": "בעלי חולה."
+  },
+  {
+   "id": "m-en-03",
+   "direction": "en-he",
+   "source": "Two glasses of red wine, please.",
+   "reference": "שתי כוסות יין אדום, בבקשה."
+  },
+  {
+   "id": "m-en-04",
+   "direction": "en-he",
+   "source": "The shower doesn't work.",
+   "reference": "המקלחת לא עובדת."
+  },
+  {
+   "id": "m-en-05",
+   "direction": "en-he",
+   "source": "Can you wake me at six?",
+   "reference": "אפשר להעיר אותי בשש?"
+  },
+  {
+   "id": "m-en-06",
+   "direction": "en-he",
+   "source": "I'll be back in an hour.",
+   "reference": "אני חוזר בעוד שעה."
+  },
+  {
+   "id": "m-en-07",
+   "direction": "en-he",
+   "source": "How many stops to the center?",
+   "reference": "כמה תחנות עד מרכז העיר?"
+  },
+  {
+   "id": "m-en-08",
+   "direction": "en-he",
+   "source": "Is it open on Friday?",
+   "reference": "זה פתוח ביום שישי?"
+  },
+  {
+   "id": "m-en-09",
+   "direction": "en-he",
+   "source": "Our room is not ready.",
+   "reference": "החדר שלנו לא מוכן."
+  },
+  {
+   "id": "m-en-10",
+   "direction": "en-he",
+   "source": "I'm looking for a gift for my mother.",
+   "reference": "אני מחפש מתנה לאמא שלי."
+  },
+  {
+   "id": "m-en-11",
+   "direction": "en-he",
+   "source": "What do you want to drink?",
+   "reference": "מה אתה רוצה לשתות?"
+  },
+  {
+   "id": "m-en-12",
+   "direction": "en-he",
+   "source": "The fish is very fresh.",
+   "reference": "הדג טרי מאוד."
+  },
+  {
+   "id": "m-en-13",
+   "direction": "en-he",
+   "source": "Can I change money here?",
+   "reference": "אפשר להחליף כאן כסף?"
+  },
+  {
+   "id": "m-en-14",
+   "direction": "en-he",
+   "source": "This bus goes to Haifa.",
+   "reference": "האוטובוס הזה נוסע לחיפה."
+  },
+  {
+   "id": "m-en-15",
+   "direction": "en-he",
+   "source": "I don't need a bag.",
+   "reference": "אני לא צריך שקית."
+  },
+  {
+   "id": "m-en-16",
+   "direction": "en-he",
+   "source": "Is the rabbi here today?",
+   "reference": "הרב כאן היום?"
+  },
+  {
+   "id": "m-en-17",
+   "direction": "en-he",
+   "source": "We want a quiet table.",
+   "reference": "אנחנו רוצים שולחן שקט."
+  },
+  {
+   "id": "m-en-18",
+   "direction": "en-he",
+   "source": "The prayer book is on the chair.",
+   "reference": "הסידור על הכיסא."
+  },
+  {
+   "id": "m-en-19",
+   "direction": "en-he",
+   "source": "Which platform?",
+   "reference": "איזה רציף?"
+  },
+  {
+   "id": "m-en-20",
+   "direction": "en-he",
+   "source": "My son wants to sleep.",
+   "reference": "הבן שלי רוצה לישון."
+  },
+  {
+   "id": "m-en-21",
+   "direction": "en-he",
+   "source": "It was very good.",
+   "reference": "זה היה טוב מאוד."
+  },
+  {
+   "id": "m-en-22",
+   "direction": "en-he",
+   "source": "Three nights, please.",
+   "reference": "שלושה לילות, בבקשה."
+  },
+  {
+   "id": "m-en-23",
+   "direction": "en-he",
+   "source": "Where can I wash my hands?",
+   "reference": "איפה אפשר לרחוץ ידיים?"
+  },
+  {
+   "id": "m-en-24",
+   "direction": "en-he",
+   "source": "I need help with my bag.",
+   "reference": "אני צריך עזרה עם התיק שלי."
+  },
+  {
+   "id": "m-en-25",
+   "direction": "en-he",
+   "source": "The service was beautiful.",
+   "reference": "התפילה הייתה יפה."
+  },
+  {
+   "id": "m-he-26",
+   "direction": "he-en",
+   "source": "המקלחת לא עובדת.",
+   "reference": "The shower doesn't work."
+  },
+  {
+   "id": "m-he-27",
+   "direction": "he-en",
+   "source": "החדר שלנו לא מוכן.",
+   "reference": "Our room is not ready."
+  },
+  {
+   "id": "m-he-28",
+   "direction": "he-en",
+   "source": "הדג טרי מאוד.",
+   "reference": "The fish is very fresh."
+  },
+  {
+   "id": "m-he-29",
+   "direction": "he-en",
+   "source": "אני לא צריך שקית.",
+   "reference": "I don't need a bag."
+  },
+  {
+   "id": "m-he-30",
+   "direction": "he-en",
+   "source": "אנחנו רוצים שולחן שקט.",
+   "reference": "We want a quiet table."
+  },
+  {
+   "id": "m-he-31",
+   "direction": "he-en",
+   "source": "הבן שלי רוצה לישון.",
+   "reference": "My son wants to sleep."
+  },
+  {
+   "id": "m-he-32",
+   "direction": "he-en",
+   "source": "זה היה טוב מאוד.",
+   "reference": "It was very good."
+  },
+  {
+   "id": "m-he-33",
+   "direction": "he-en",
+   "source": "שלושה לילות, בבקשה.",
+   "reference": "Three nights, please."
+  },
+  {
+   "id": "m-he-34",
+   "direction": "he-en",
+   "source": "איפה אפשר לרחוץ ידיים?",
+   "reference": "Where can I wash my hands?"
+  },
+  {
+   "id": "m-he-35",
+   "direction": "he-en",
+   "source": "התפילה הייתה יפה.",
+   "reference": "The service was beautiful."
+  },
+  {
+   "id": "m-he-36",
+   "direction": "he-en",
+   "source": "יש כאן מלון יותר זול?",
+   "reference": "Is there a cheaper hotel here?"
+  },
+  {
+   "id": "m-he-37",
+   "direction": "he-en",
+   "source": "הרב כאן היום?",
+   "reference": "Is the rabbi here today?"
+  },
+  {
+   "id": "m-he-38",
+   "direction": "he-en",
+   "source": "אפשר להחליף כאן כסף?",
+   "reference": "Can I change money here?"
+  },
+  {
+   "id": "m-he-39",
+   "direction": "he-en",
+   "source": "בעלי חולה.",
+   "reference": "My husband is sick."
+  },
+  {
+   "id": "m-he-40",
+   "direction": "he-en",
+   "source": "מה אתה רוצה לשתות?",
+   "reference": "What do you want to drink?"
+  }
+ ]
+}

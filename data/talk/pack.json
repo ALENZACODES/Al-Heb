@@ -160,7 +160,7 @@
   {"id": "t-shana-tova", "cat": "shul", "en": ["Happy New Year", "Shana tova"], "he": "שנה טובה"},
   {"id": "t-mazal-tov", "cat": "shul", "en": ["Congratulations", "Mazel tov", "Mazal tov"], "he": "מזל טוב"},
   {"id": "t-what-page", "cat": "shul", "en": ["What page are we on?", "Which page are we on?", "What page is it?"], "he": "באיזה עמוד אנחנו?"},
-  {"id": "t-sit-here", "cat": "shul", "en": ["May I sit here?", "Can I sit here?", "Is this seat free?", "Is this seat taken?"], "he": "אפשר לשבת כאן?"},
+  {"id": "t-sit-here", "cat": "shul", "en": ["May I sit here?", "Can I sit here?", "Is this seat taken?"], "he": "אפשר לשבת כאן?"},
   {"id": "t-where-sit", "cat": "shul", "en": ["Where can I sit?"], "he": "איפה אפשר לשבת?"},
   {"id": "t-shabbat-start", "cat": "shul", "en": ["When does Shabbat start?", "What time does Shabbat start?", "When does Shabbat begin?"], "he": "מתי נכנסת השבת?", "alt": ["מתי שבת נכנסת?"]},
   {"id": "t-shabbat-end", "cat": "shul", "en": ["When does Shabbat end?", "What time does Shabbat end?", "When is Shabbat over?"], "he": "מתי יוצאת השבת?", "alt": ["מתי שבת יוצאת?"]},
@@ -315,7 +315,13 @@
   {"id": "t-this-morning", "cat": "numbers", "en": ["This morning"], "he": "הבוקר"},
   {"id": "t-this-week", "cat": "numbers", "en": ["This week"], "he": "השבוע"},
   {"id": "t-next-week", "cat": "numbers", "en": ["Next week"], "he": "בשבוע הבא"},
-  {"id": "t-every-day", "cat": "numbers", "en": ["Every day"], "he": "כל יום"}
+  {"id": "t-every-day", "cat": "numbers", "en": ["Every day"], "he": "כל יום"},
+  {"id": "t-weather", "cat": "smalltalk", "en": ["What is the weather today?", "What's the weather today?", "How is the weather today?", "What is the weather like today?"], "he": "מה מזג האוויר היום?"},
+  {"id": "t-raining", "cat": "smalltalk", "en": ["It's raining", "It is raining"], "he": "יורד גשם"},
+  {"id": "t-seat-free", "cat": "shul", "en": ["Is this seat free?", "Is this place free?"], "he": "המקום הזה פנוי?"},
+  {"id": "t-safe-drink", "cat": "ordering", "en": ["Is the water safe to drink?", "Can I drink the tap water?", "Is the tap water safe to drink?"], "he": "אפשר לשתות את המים מהברז?"},
+  {"id": "t-wait-for-me", "cat": "smalltalk", "en": ["Please wait for me", "Wait for me", "Wait for me, please"], "he": "חכה לי, בבקשה", "toF": "חכי לי, בבקשה"},
+  {"id": "t-give-moment", "cat": "politeness", "en": ["Give me a moment", "Give me a minute", "Give me a second"], "he": "תן לי רגע", "toF": "תני לי רגע"}
  ],
  "nouns": [
   {"en": ["child", "kid"], "he": "ילד", "pl": "ילדים"},
@@ -699,6 +705,8 @@
   {"en": ["included"], "m": "כלול", "f": "כלולה", "mp": "כלולים", "fp": "כלולות"},
   {"en": ["fine", "okay", "ok", "all right"], "m": "בסדר", "f": "בסדר", "mp": "בסדר", "fp": "בסדר"}
  ],
+ "comparatives": {"bigger": "big", "larger": "big", "smaller": "small", "cheaper": "cheap", "better": "good", "quieter": "quiet", "cleaner": "clean", "closer": "near", "nearer": "near", "hotter": "hot", "colder": "cold", "newer": "new", "older": "old", "nicer": "nice", "longer": "long", "shorter": "short", "easier": "easy", "sweeter": "sweet", "fresher": "fresh", "safer": "safe"},
+ "days": [["sunday", "יום ראשון"], ["monday", "יום שני"], ["tuesday", "יום שלישי"], ["wednesday", "יום רביעי"], ["thursday", "יום חמישי"], ["friday", "יום שישי"], ["saturday", "שבת"], ["shabbat", "שבת"]],
  "places": [
   {"en": ["jerusalem"], "he": "ירושלים"},
   {"en": ["tel aviv"], "he": "תל אביב"},

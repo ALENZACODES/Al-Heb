@@ -1,6 +1,6 @@
 {
  "schema": "alef-talk-utterances/1",
- "note": "40 everyday lines written at the end of round 3, after every engine and pack change of that round. The reference is one acceptable answer.",
+ "note": "40 everyday lines written at the end of round 3, after every engine and pack change of that round. It scored 60.3 then. In round 4 its refusals guided new frames and three of its lines were stored, so it is now a regression check. The reference is one acceptable answer.",
  "samples": [
   {
    "id": "k-en-01",

@@ -22,7 +22,7 @@ A line that differs from a stored line by a real word is refused, not matched. "
 
 | File | Use |
 |---|---|
-| `data/talk/pack.json` | 311 sentence pairs with their English wordings, 258 nouns with gender and plural where needed, 56 describing words in their four forms, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
+| `data/talk/pack.json` | 317 sentence pairs with their English wordings, 258 nouns with gender and plural where needed, 56 describing words in their four forms, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
 | `data/corpus/phrasebook.json` | The 204 phrasebook lines. |
 | `data/curriculum/dialogues.json`, `data/israel/scenarios.json` | Dialogue lines and the natural option of each scene. |
 | `data/vocab/index.json` | The dictionary index. Fetched only when a line needs it. Only a word's first meaning is used, only for nouns inside a pattern or for a single word, and the answer is always marked low. Dictionary glosses are never strung into a sentence. |
@@ -37,7 +37,8 @@ A line that differs from a stored line by a real word is refused, not matched. "
 - Things joined by with, without, and, of, to a place, outside, inside, in English.
 - Describing words that follow the noun or the speaker ("The room is very dirty", "I am tired", "The soup was cold").
 - Clock times with half and quarter past, and when things start and end ("The service starts at nine").
-- I live in, I work in, I am a number of years old.
+- I live in, I work in, I am a number of years old, we are from.
+- A describing word beside a noun ("cold water", "a bigger room"), my, another, per night, and someone else wanting or needing ("The children want ice cream").
 
 ## Lines As They Are Heard
 
@@ -79,17 +80,18 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on five files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
+`tests/talk.engine.test.js` scores the engine on six files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
 | `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack was written with these lines in view. A regression check. |
 | `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1. It scored 69.6 then and has since been used to widen the pack. A regression check. |
 | `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
-| `tests/fixtures/talk.fresh3.json` | 40 | 84.4 | 6 | Written at the end of round 2. It scored 74.4 then; its refusals guided the round 3 frames. A regression check. |
-| `tests/fixtures/talk.fresh4.json` | 40 | 60.3 | 14 | Written at the end of round 3. Nothing was changed after it was scored. This is the honest number for everyday lines near the pack's topics. |
+| `tests/fixtures/talk.fresh3.json` | 40 | 91.9 | 3 | Written at the end of round 2. It scored 74.4 then. A regression check. |
+| `tests/fixtures/talk.fresh4.json` | 40 | 95.1 | 0 | Written at the end of round 3. It scored 60.3 then; its refusals guided the round 4 frames. A regression check. |
+| `tests/fixtures/talk.fresh5.json` | 40 | 48.5 | 17 | Written at the end of round 4. It scored 47.5 when first run. No line or frame was added for it. This is the honest number for a new everyday line. |
 
-Each new held-out file has scored between 60 and 75 when first run, whatever the earlier files had reached by then. That range is the fair expectation for a new everyday line. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+The held-out files scored 69.6, 62.7, 74.4, 60.3 and 47.5 when first run, whatever the earlier files had reached by then. Widening the stored lines and frames lifts the files it was done against and does not lift the next new file. A new everyday line has roughly an even chance of being answered. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
 
 ## Scoring The Shipped Engine From A Speech Review
 
@@ -108,4 +110,4 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
 - Past and future sentences, and anything said about a third person ("The children are hungry").
 - Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (93 of the 204 today).
-- "My wife", "we are from", "per night", "a bigger room", "on Sunday": the round 3 held-out file lists what is still refused.
+- "Doesn't work", "our", "on Friday", "I don't need", "is on the chair", colours: the round 4 held-out file lists what is still refused.

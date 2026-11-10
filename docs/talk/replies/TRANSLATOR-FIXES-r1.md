@@ -136,3 +136,15 @@ The fail list sent for round 3 is the same file as before: same tip, same 20,000
 A line made of real words that were misheard is still not given as the answer. The engine now ranks stored lines by how they sound, and the screen shows the nearest ones for the learner to tap. In the command-line tool these still come back as `ok: false` and score 0.
 
 With these changes the 37 example lines score 83.8 with 5 refusals (81.8 with 6 in round 2).
+
+## Round 4 Addendum
+
+The round 4 fail list reports more lines scored (31,530) and the same examples as before. Every example was run through the shipped engine again: 83.8 with 5 refusals over the 37 lines, unchanged from round 3. Nothing in the list needed a new fix.
+
+The list still scores `feature/live-translator-2026-11-10` at `b0fe32d71`, the server pipeline. That code is not on the learner's path and is not being changed, so its score will not move however many lines are run. To score what ships, check out `claude/live-translator-2026-11-10` and replace the translation call with:
+
+```
+node tools/talk/translate.mjs --jsonl < transcripts.jsonl > results.jsonl
+```
+
+Expect a lower headline number than the server pipeline on open lines, because the shipped engine refuses what it does not know. Please report refusals separately from wrong answers.

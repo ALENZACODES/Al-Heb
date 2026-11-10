@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book38-p01.mp3"
    },
    "illustration": "an empty apartment, boxes, afternoon light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book38-p02.mp3"
    },
    "illustration": "a couple carrying a mattress through a door",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book38-p03.mp3"
    },
    "illustration": "a tower of boxes labelled kitchen, books, more books",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book38-p04.mp3"
    },
    "illustration": "the couple sitting on boxes eating pizza",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book38-p05.mp3"
    },
    "illustration": "a bare wire where a lamp should be",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book38-p06.mp3"
    },
    "illustration": "a drip from the ceiling into a pot",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book38-p07.mp3"
    },
    "illustration": "the two staring up at the stain",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book38-p08.mp3"
    },
    "illustration": "the door, knuckles",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book38-p09.mp3"
    },
    "illustration": "an older woman holding a loaf and a small dish of salt",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book38-p10.mp3"
    },
    "illustration": "the neighbour smiling warmly",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book38-p11.mp3"
    },
    "illustration": "the neighbour glancing at the drip, waving a small blank card",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book38-p12.mp3"
    },
    "illustration": "the three eating bread with salt on the boxes, laughing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

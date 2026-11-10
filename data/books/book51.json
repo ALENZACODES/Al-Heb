@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book51-p01.mp3"
    },
    "illustration": "a man in a kitchen with a cookbook open and three screens showing recipes",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book51-p02.mp3"
    },
    "illustration": "a clock reading 5:30, panic in his eyes",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book51-p03.mp3"
    },
    "illustration": "finger on a line, lips moving",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book51-p04.mp3"
    },
    "illustration": "tears streaming, knife in hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book51-p05.mp3"
    },
    "illustration": "a whole head of garlic going in",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book51-p06.mp3"
    },
    "illustration": "smoke from a pan, the alarm beeping",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book51-p07.mp3"
    },
    "illustration": "smoke pouring out, a neighbour staring",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book51-p08.mp3"
    },
    "illustration": "the clock, the door, his apron stained, hair wild",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book51-p09.mp3"
    },
    "illustration": "the woman sniffing the smoky air",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book51-p10.mp3"
    },
    "illustration": "her raised eyebrow",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book51-p11.mp3"
    },
    "illustration": "the man's embarrassed shrug",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book51-p12.mp3"
    },
    "illustration": "the two on the floor with a pizza box, candles, laughing",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

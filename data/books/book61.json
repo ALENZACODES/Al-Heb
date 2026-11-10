@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book61-p01.mp3"
    },
    "illustration": "a neon street, scooters, people everywhere",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book61-p02.mp3"
    },
    "illustration": "open bars, a falafel stand, music spilling out",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book61-p03.mp3"
    },
    "illustration": "a bartender untying her apron",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book61-p04.mp3"
    },
    "illustration": "the woman stretching outside the bar, looking at the sky",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book61-p05.mp3"
    },
    "illustration": "dark streets opening to the beach",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book61-p06.mp3"
    },
    "illustration": "sand, dark water, distant lights",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book61-p07.mp3"
    },
    "illustration": "a few figures: a guitar player, a couple, a man with a dog",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book61-p08.mp3"
    },
    "illustration": "the man and dog at the water's edge",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book61-p09.mp3"
    },
    "illustration": "the man tipping his cap",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book61-p10.mp3"
    },
    "illustration": "her grin, the first grey light on the horizon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book61-p11.mp3"
    },
    "illustration": "the sky half dark, half light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book61-p12.mp3"
    },
    "illustration": "the waves, the woman sitting, the dog running",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

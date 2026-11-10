@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book44-p01.mp3"
    },
    "illustration": "a tiny café with three tables, a tree beside it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book44-p02.mp3"
    },
    "illustration": "a couple behind the counter, flour and espresso",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book44-p03.mp3"
    },
    "illustration": "regulars at their tables: a student, a retiree, a courier",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book44-p04.mp3"
    },
    "illustration": "a young woman with a laptop and three empty cups",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book44-p05.mp3"
    },
    "illustration": "an old man behind a newspaper, dog under the table",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book44-p06.mp3"
    },
    "illustration": "a courier gulping espresso, helmet on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book44-p07.mp3"
    },
    "illustration": "a handwritten sign on the door, the regulars outside confused",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book44-p08.mp3"
    },
    "illustration": "the three regulars looking at each other",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book44-p09.mp3"
    },
    "illustration": "a note taped to the glass",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book44-p10.mp3"
    },
    "illustration": "the student with a spare key the owners once gave her",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book44-p11.mp3"
    },
    "illustration": "the three running the café, badly and happily",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book44-p12.mp3"
    },
    "illustration": "the sign flipped to open, a line forming",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

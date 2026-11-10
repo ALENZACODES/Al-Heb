@@ -24,7 +24,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Pass the white-belt 1 check: 6 letters, 3 vowels
 - **r05** Meet the Priestly Blessing (listen and spot) (15 min)
   - Hear the whole Priestly Blessing (Numbers 6:24-26)
-  - Spot the letters you already know (Shin, Lamed, Mem, Vav) in the three lines
+  - Spot the letters you already know (Shin, Bet, Lamed, Vav and final Mem) in the three lines
   - Understand this is the page-1 text you will fully decode by lesson 27
 - **r06** Yod and the 'ee' vowel (20 min)
   - Read chirik as 'ee' (the words here have a yod after it; chirik without a yod sounds the same)
@@ -85,7 +85,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Peel off one-letter prefixes before decoding the root
 - **r34** Final-letter and gershayim / abbreviation marks (20 min)
   - Know that the written Name is read aloud as Adonai in prayer
-  - Recognise abbreviation marks in a siddur (no example word is in this lesson yet)
+  - Recognise abbreviation marks (geresh and gershayim) in a siddur
 - **r35** Reading with no help: unpointed words you already know (20 min)
   - Read the unpointed familiar words here (exploration; not required for synagogue reading)
 
@@ -134,7 +134,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Read the three-dot kubutz as 'oo'
 - **r14** Shva at the start of a syllable (25 min)
   - Read a shva at the start of a word as a quick 'e'
-  - Start applying the shva rules (lane 3 drills)
+  - Start applying the shva rules in the practice drills
 - **r15** Priestly Blessing, line 1 (25 min)
   - Decode and read Numbers 6:24 aloud, 3 times
 - **r16** Pe and final Pe (20 min)
@@ -145,19 +145,19 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **r18** Dalet and Gimel (25 min)
   - Tell Dalet from Resh and Gimel from Nun
 - **r19** Ayin (20 min)
-  - Ayin: silent in Ashkenazi, silent or a glottal stop in Israeli; Sephardi data lists a throat sound [ʕ] but the app's English line says silent
+  - Ayin: silent in Ashkenazi reading and in most Israeli speech (sometimes a light catch in the throat); many Sephardi and Mizrahi readers sound it deep in the throat
 
 ### Grey belt (4 lessons, 95 min)
 
 - **r48** Timed reading 1: Priestly Blessing + Shema (20 min)
   - Read the five lines in the target time
-  - Record words per minute; see belts.json
+  - Record your words per minute and compare it with the grey-belt target
 - **r49** Timed reading 2: V'ahavta and the blessing formula (20 min)
-  - Read at the grey-belt proposed rate without errors
+  - Read at the grey-belt target speed without errors
 - **r50** Timed reading 3: new siddur page you have never seen (25 min)
   - Read an unseen pointed page aloud; note the speed and the mistakes
-- **r51** Grey-belt assessment (30 min)
-  - Pass the grey-belt gate in belts.json
+- **r51** Grey-belt check (30 min)
+  - Pass the grey-belt check: read a siddur page inside the time limit
 
 ### Intermediate (20 lessons, 635 min)
 
@@ -188,7 +188,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-07** Hallel refrains: the lines the congregation sings back (30 min)
   - Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments
   - Recognise the Psalm 118 lines that are sung responsively
-  - Know that the full Hallel text is not yet in the corpus
+  - Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur
 - **I-08** Aleinu: the closing prayer and where to bow (30 min)
   - Read the first paragraph of Aleinu at the speed it is said
   - Find the words where many congregations bow
@@ -200,7 +200,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-10** Mi Shebeirach, healing and thanksgiving: the blessings said for people (35 min)
   - Recognise the opening of Mi Shebeirach and answer it
   - Answer Birkat Hagomel with the congregation's response
-  - Answer Shehecheyanu and the Priestly Blessing with Amen
+  - Answer Shehecheyanu with Amen, and the Priestly Blessing with Amen or Ken yehi ratzon
 - **I-26** The full Torah service in order: ark, reading, lifting, returning (45 min)
   - Name the twelve moments of a Shabbat-morning Torah service in order
   - Join the lines the congregation sings: Ein Kamocha, Gadlu, Lecha Adonai, Etz Chaim
@@ -209,22 +209,22 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Answer the Kedushah at each cue
   - Say Amen after the peace blessing
   - Recognise the three closing verses of the Amidah in order
-- **I-28** Yom Kippur: the few lines the corpus holds and the words around them (30 min)
+- **I-28** Yom Kippur: the Shema line said aloud and the words of the day (30 min)
   - Know the one day a year when 'Baruch shem' is said aloud and answer it
   - Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness
   - Say 'a good year' and ask and give forgiveness politely
-- **I-29** Pesach: the seder blessings the corpus holds (30 min)
+- **I-29** Pesach: the seder blessings and the words of the festival (30 min)
   - Say the wine blessing and the Shehecheyanu that open the seder
   - Find 'the exodus from Egypt' in the Kiddush text
-  - Wish 'chag sameach' and know which seder texts the corpus does not hold
+  - Wish 'chag sameach', and know that the Haggadah is not in ALEF yet
 - **I-30** Sukkot: sukkah words and the blessings that carry over (25 min)
   - Greet people with chag sameach and recognise the word sukkah
   - Say Shehecheyanu and the wine blessing at the sukkah
-  - Know which Sukkot texts (lulav, Hallel) are not yet in the corpus
+  - Know that the lulav blessing and Hallel are not in ALEF yet
 - **I-31** Purim: the miracle blessing and the words of the day (25 min)
   - Say the blessing for miracles used on Purim and Hanukkah
   - Greet and toast in Hebrew
-  - Know that the Megillah itself is not in the corpus
+  - Know that the Megillah reading is not in ALEF yet
 - **I-32** Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur (35 min)
   - Say the candle-lighting blessing and answer Amen
   - Follow the order of blessings on the first night
@@ -236,7 +236,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-34** Before and after a journey: Hagomel, peace and the vocabulary of the road (25 min)
   - Say Hagomel after a safe journey and answer the congregation's reply
   - Wish a traveller peace in Hebrew
-  - Know that Tefillat HaDerekh is not yet in the corpus
+  - Know that Tefillat HaDerekh (the traveller's prayer) is not in ALEF yet
 - **I-35** Shabbat-day Kiddush: V'shamru, Zachor, wine and bread (30 min)
   - Read V'shamru and Zachor as the Kiddush before the Shabbat lunch
   - Say the wine and bread blessings and answer Amen
@@ -299,7 +299,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **il22** Phone, WhatsApp and appointments (30 min)
   - Set up and move an appointment by phone or WhatsApp
 - **il23** Sound less like an outsider: pronunciation markers (30 min)
-  - Run the lane 3 foreigner-marker drills for resh, chet and stress
+  - Practise the three sounds that mark a foreign accent: resh, chet and word stress
 - **il24** Capstone: an A2-B1 conversation (40 min)
   - Hold a 5-minute conversation covering greetings, a purchase, directions and a plan
 - **I-11** Bus and train: tickets, platforms and getting off (30 min)

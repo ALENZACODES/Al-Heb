@@ -61,3 +61,15 @@ Reviewer: ____________  Movement/community: ____________  Date: ________
 25. We hid, for beginners, 41 יָא (vocative particle used before slurs) and 165 לַעֲזָאזֵל (mild curse), and removed the sexual senses of גָּמַר, שָׁכַב, בָּשָׂר, אֵבֶר, שָׁפַךְ and three example sentences (a remark about legs, one about masturbation, one saying "I personally killed Jesus"). Agree, or should any come back with a register label (colloquial, vulgar)? ________
 26. Biblical words with sexual or violent senses left visible (עֶרְוָה, זוֹנָה, זָנָה, קָדֵשׁ, אֹנֶס, הָרַג, רָצַח, שָׁחַט and others listed in `OPEN.md`): fine for adult and teen learners, or label or hide? ________
 27. Examples that mention other religions or sensitive events (heretics, suicide, bomb): keep, replace or hide? ________
+
+## G. Other names of God, and two responses (added 2026-11-10; see `docs/review/LESSON-INTEGRITY-2026-11-10.md`)
+28. Lesson 8 teaches אֵל ("God") as an ordinary practice word, with audio that says "el". Many teachers say "Kel" outside prayer. Keep it,
+    replace it with a non-name word, or say "Kel" in the practice audio?  Keep / Replace / Kel: ________
+29. Practice words built on Elohim (אֱלֹהִים, אֱלֹהֵינוּ, אֱלֹהֵי), on Adonai written as a word (אֲדֹנָי) and on Yah (הַלְלוּ־יָהּ) are pronounced in
+    full in vocabulary audio and pronunciation lines. Is that right for a Reform learner, and should the app offer an optional
+    "practice substitutes" setting (Elokim, Hashem, Kah), off by default?  ________
+30. English: lessons use "the LORD" (JPS 1917), the daily prompts "the Eternal", the day pages "God". Which should the app's own English use? ________
+31. When the leader (not kohanim) says the Priestly Blessing, the lessons now teach the answer "Ken yehi ratzon", and Amen when kohanim bless.
+    Is that what your congregation does?  Yes / No: ________
+32. The zimun call "Rabotai nevarech" is now glossed "Friends, let us bless" and the lesson names "Chaverai nevarech". Is that right, and
+    which form should the lesson teach first?  ________

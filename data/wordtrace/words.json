@@ -503,7 +503,7 @@
   {
    "he": "לְךָ",
    "plain": "לך",
-   "en": "to you",
+   "en": "to you (m.)",
    "letters": [
     "lamed",
     "kaf-final"
@@ -533,7 +533,7 @@
   {
    "he": "לָךְ",
    "plain": "לך",
-   "en": "to you",
+   "en": "to you (f.)",
    "letters": [
     "lamed",
     "kaf-final"
@@ -2344,7 +2344,7 @@
   {
    "he": "אָנִי",
    "plain": "אני",
-   "en": "I",
+   "en": "I (verse-end form)",
    "letters": [
     "alef",
     "nun",
@@ -2632,7 +2632,7 @@
   {
    "he": "הַכֹּל",
    "plain": "הכל",
-   "en": "the all",
+   "en": "all; everything",
    "letters": [
     "he",
     "kaf",
@@ -5871,7 +5871,7 @@
   {
    "he": "בּוֹרֵא",
    "plain": "בורא",
-   "en": "creator",
+   "en": "who creates",
    "letters": [
     "bet",
     "vav",
@@ -6654,7 +6654,7 @@
   {
    "he": "לַאֲדוֹן",
    "plain": "לאדון",
-   "en": "to the Lord",
+   "en": "to the Master (of)",
    "letters": [
     "lamed",
     "alef",

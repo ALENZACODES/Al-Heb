@@ -1,12 +1,12 @@
 {
  "schema": "alef-vocab-themes-index/1",
- "generated": "2026-11-07",
+ "generated": "2026-11-10",
  "count": 40,
  "themeSize": 125,
  "counts": {
   "words": 4786,
-  "withExample": 1047,
-  "withoutExample": 3739,
+  "withExample": 1046,
+  "withoutExample": 3740,
   "droppedFromWordsJson": 1513
  },
  "themes": [
@@ -71,7 +71,7 @@
    "topic": "doing-verbs",
    "title": "Doing verbs, set 2 of 8",
    "size": 125,
-   "withExample": 44,
+   "withExample": 43,
    "file": "doing-verbs-set02.json"
   },
   {

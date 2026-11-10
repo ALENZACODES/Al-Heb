@@ -12,7 +12,7 @@
  "words": [
   {
    "he": "רַבּוֹתַי נְבָרֵךְ",
-   "en": "gentlemen, let us bless",
+   "en": "friends, let us bless (literally \"my masters\")",
    "translit": null,
    "pronunciation": {
     "israeli": "rabotai nevarekh",
@@ -233,14 +233,14 @@
   {
    "id": "I-33-e01",
    "type": "respond",
-   "cue": "The leader invites: 'Rabotai nevarech'. Answer with the line that follows.",
+   "cue": "The leader invites: 'Rabotai nevarech' (many Reform and egalitarian tables say 'Chaverai nevarech'). Answer with the line that follows.",
    "answer": {
     "he": "יְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם",
     "en": "May the name of the LORD be blessed from now and for ever."
    },
    "prompt": {
     "he": "רַבּוֹתַי נְבָרֵךְ",
-    "en": "Gentlemen, let us bless."
+    "en": "Friends, let us bless."
    }
   },
   {
@@ -253,7 +253,7 @@
    "id": "I-33-e03",
    "type": "fade",
    "line": "zimun-opening",
-   "en": "Gentlemen, let us bless."
+   "en": "Friends, let us bless."
   },
   {
    "id": "I-33-e04",
@@ -294,14 +294,10 @@
   {
    "id": "I-33-e09",
    "type": "respond",
-   "cue": "The first blessing ends 'ki l'olam chasdo'. Answer.",
+   "cue": "The first blessing closes 'Baruch atah Adonai, hazan et hakol'. Answer.",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"
-   },
-   "prompt": {
-    "he": "כִּי לְעוֹלָם חַסְדּוֹ",
-    "en": "for his kindness is for ever"
    }
   },
   {

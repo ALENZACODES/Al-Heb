@@ -131,7 +131,7 @@
    }
   },
   {
-   "he": "בֵּן כַּמָּה?",
+   "he": "בֶּן כַּמָּה?",
    "en": "how old (lit. son of how much)?",
    "translit": null,
    "pronunciation": {
@@ -140,7 +140,7 @@
    "source": {
     "file": "composed",
     "tokens": [
-     "בֵּן",
+     "בֶּן",
      "כַּמָּה"
     ]
    }
@@ -259,7 +259,7 @@
     },
     {
      "speaker": "a",
-     "he": "חֲמוּדִים!",
+     "he": "חָמוּד!",
      "en": "Cute!"
     }
    ],

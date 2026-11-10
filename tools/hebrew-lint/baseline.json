@@ -1,7 +1,7 @@
 {
  "note": "Counts of current findings. The test fails only on definite-error fingerprints (file|rule|path|hash of string) absent here. Regenerate deliberately with: node tools/hebrew-lint/cli.mjs --update-baseline",
  "counts": {
-  "mark-order": 1195,
+  "mark-order": 1193,
   "stray-mark": 111,
   "conflicting-marks": 76,
   "duplicate-mark": 22,
@@ -23,10 +23,8 @@
   "ascii-geresh": 22
  },
  "definiteFingerprints": [
-  "data/corpus/registry.json|mark-order|.entries[43].transforms.corrections[1][0]|6bc44d2b",
-  "data/corpus/registry.json|mark-order|.entries[43].transforms.corrections[1][1]|63035bd4",
-  "data/corpus/registry.json|mark-order|.entries[43].verifiedAgainst|7795cf41",
-  "data/corpus/registry.json|mark-order|.entries[43].verifiedAgainst|7795cf41",
+  "data/corpus/registry.json|mark-order|.entries[43].verifiedAgainst|82710ccb",
+  "data/corpus/registry.json|mark-order|.entries[43].verifiedAgainst|82710ccb",
   "data/corpus/registry.json|mark-order|.entries[56].transforms.corrections[0][0]|8e7dffa3",
   "data/corpus/registry.json|mark-order|.entries[56].transforms.corrections[0][1]|67bca349",
   "data/corpus/registry.json|mark-order|.entries[56].verifiedAgainst|1ac56c0b",
@@ -1491,7 +1489,7 @@
   "data/pronunciation/runtime/lookup-02.json|conflicting-marks|.w.<key>|624565e5",
   "data/pronunciation/variants/_vocab-2.json|conflicting-marks|.records[590].he|624565e5",
   "data/vocab/corrections.json|duplicate-mark|.corrections[69].old|dedaa7fa",
-  "data/vocab/frequency.json|conflicting-marks|.entries[3181].he|624565e5",
+  "data/vocab/frequency.json|conflicting-marks|.entries[3180].he|624565e5",
   "data/vocab/index.json|conflicting-marks|.rows[2590][1]|624565e5",
   "data/vocab/packs/describing-words-10.json|conflicting-marks|.words[28].forms.plural|03257bd6",
   "data/vocab/packs/doing-verbs-14.json|nonfinal-letter-at-end|.words[7].example.he|2ba20ab9",
@@ -1502,7 +1500,7 @@
   "data/vocab/packs/read-society-work-law-1.json|conflicting-marks|.words[5].example.he|32bd6aa6",
   "data/vocab/packs/vocab5k-tier-5000.json|conflicting-marks|.entries[614].pointed|624565e5",
   "data/vocab/themes/describing-words-set03.json|conflicting-marks|.words[94].forms.plural|03257bd6",
-  "data/vocab/themes/doing-verbs-set06.json|conflicting-marks|.words[30].he|624565e5",
+  "data/vocab/themes/doing-verbs-set06.json|conflicting-marks|.words[29].he|624565e5",
   "data/vocab/themes/general-things-set06.json|conflicting-marks|.words[88].forms.plural|221ec1e9",
   "data/vocab/themes/general-things-set06.json|conflicting-marks|.words[88].forms.plural|221ec1e9",
   "data/vocab/vocab5000.json|conflicting-marks|.entries[2614].pointed|624565e5",

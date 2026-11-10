@@ -33,7 +33,7 @@ ElevenLabs subscription alternative (included characters are for v4 and vary by 
 
 ## Core + prayer lines + prayer words
 
-Per voice: 3069 clips, 42,094 characters with niqqud (23,603 letters only). Both voices plus 25% contingency: 105,235 (59,008 letters only).
+Per voice: 3069 clips, 42,096 characters with niqqud (23,603 letters only). Both voices plus 25% contingency: 105,240 (59,008 letters only).
 
 | provider / tier | US$ per 1M chars | price verified | free chars / month | cost range, list price | cost range after one free month |
 |---|---:|---|---:|---:|---:|
@@ -49,7 +49,7 @@ ElevenLabs subscription alternative (included characters are for v4 and vary by 
 
 ## Core + prayers + vocabulary packs (data/vocab, 6k+ items; NOT in the audio manifest, no screen plays them yet)
 
-Per voice: 9372 clips, 89,126 characters with niqqud (49,596 letters only). Both voices plus 25% contingency: 222,815 (123,990 letters only).
+Per voice: 9372 clips, 89,128 characters with niqqud (49,596 letters only). Both voices plus 25% contingency: 222,820 (123,990 letters only).
 
 | provider / tier | US$ per 1M chars | price verified | free chars / month | cost range, list price | cost range after one free month |
 |---|---:|---|---:|---:|---:|

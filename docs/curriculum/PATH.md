@@ -65,7 +65,7 @@ Intermediate split: I-01 to I-10 and I-26 to I-35 synagogue (reading track, 20),
 | 48 | r48 | read | Timed reading 1: Priestly Blessing + Shema | r47 | 20 |
 | 49 | r49 | read | Timed reading 2: V'ahavta and the blessing formula | r48 | 20 |
 | 50 | r50 | read | Timed reading 3: new siddur page you have never seen | r49 | 25 |
-| 51 | r51 | read | Grey-belt assessment | r50 | 30 |
+| 51 | r51 | read | Grey-belt check | r50 | 30 |
 
 ## Israel (beginner)
 
@@ -127,8 +127,8 @@ Intermediate split: I-01 to I-10 and I-26 to I-35 synagogue (reading track, 20),
 | 25 | I-25 | israel | Small talk: where you're from, how long you've been here, keeping in touch | I-19 | 25 |
 | 26 | I-26 | read | The full Torah service in order: ark, reading, lifting, returning | I-03 | 45 |
 | 27 | I-27 | read | Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses | I-02 | 35 |
-| 28 | I-28 | read | Yom Kippur: the few lines the corpus holds and the words around them | I-01 | 30 |
-| 29 | I-29 | read | Pesach: the seder blessings the corpus holds | I-05 | 30 |
+| 28 | I-28 | read | Yom Kippur: the Shema line said aloud and the words of the day | I-01 | 30 |
+| 29 | I-29 | read | Pesach: the seder blessings and the words of the festival | I-05 | 30 |
 | 30 | I-30 | read | Sukkot: sukkah words and the blessings that carry over | I-29 | 25 |
 | 31 | I-31 | read | Purim: the miracle blessing and the words of the day | I-29 | 25 |
 | 32 | I-32 | read | Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur | I-05 | 35 |

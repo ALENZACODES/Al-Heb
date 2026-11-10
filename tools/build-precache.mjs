@@ -52,6 +52,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/service/',
   // Brain Lab: drill code and its two small lists, fetched when the Lab first opens, runtime-cached.
   'src/lab/', 'data/lab/',
+  // Retention (streak freezes, XP, gems, hearts, practice league, reminders): loaded after first paint by boot-hooks.js armRetention, runtime-cached.
+  'src/retention/',
   // Library: the article view and the articles, fetched when the Library first opens, runtime-cached.
   'src/library/', 'data/library/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.

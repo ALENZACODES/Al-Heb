@@ -343,6 +343,7 @@ async function boot() {
     })).catch(() => {});
   }
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
+  shownFirst.then(() => import('./shell/boot-hooks.js')).then((m) => m.armRetention(ctxBase)).catch(() => {}); // streak freezes, XP, gems, hearts, league (src/retention/, lazy)
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);
   startShardLoading(audio);

@@ -51,6 +51,8 @@ export const ROUTES = [
   { name: 'library', pattern: '/library', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', quick: 'nav.route.library' },
   { name: 'libraryarticle', pattern: '/library/:id', module: '../library/library.view.js', title: 'Library', tier: 'v0', owner: 'library', paramQuery: { id: 'article' } },
   { name: 'lab', pattern: '/lab', module: '../lab/lab.view.js', title: 'Brain Lab', tier: 'v0', owner: 'lab', quick: 'nav.route.lab' },
+  { name: 'league', pattern: '/league', module: '../retention/league.view.js', title: 'League', owner: 'retention', quick: 'nav.route.league' },
+  { name: 'shop', pattern: '/shop', module: '../retention/shop.view.js', title: 'Shop', owner: 'retention', quick: 'nav.route.shop' },
   { name: 'labgame', pattern: '/lab/:game', module: '../lab/lab.view.js', title: 'Brain Lab', tier: 'v0', owner: 'lab', paramQuery: { game: 'game' } },
   { name: 'letterchomp', pattern: '/letterchomp', module: '../games/letterchomp.view.js', title: 'Letter Chomp', tier: 'preview', owner: 'games' },
   { name: 'fallingletters', pattern: '/fallingletters', module: '../games/fallingletters.view.js', title: 'Falling Letters', tier: 'preview', owner: 'games' },

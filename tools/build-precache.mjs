@@ -37,6 +37,7 @@ const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronuncia
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
 const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
+  'data/curriculum/practical-pages/', // Practical course outline and written pages: not read at first install
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',

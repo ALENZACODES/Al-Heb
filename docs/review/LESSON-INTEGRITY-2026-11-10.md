@@ -190,3 +190,38 @@ demand, and the grammar notes say they are not yet reviewed by a teacher.
 ### Score
 
 **81 / 100** (estimate). The gain is the unit structure and drills; the rest of the plan above needs a decision, a source or a person.
+
+## Round 3 (Review Round 2 of 5)
+
+### Gaps Closed
+
+- **Two parallel courses.** The Practical course on `feature/lesson-integrity-2026-11-10` (`#/practical`, 33 units) and this
+  branch's `#/israel-units` cover the same ground. The plan now converges on `#/practical` and retires `#/israel-units` at merge
+  ([`../curriculum/PRACTICAL-200-PAGE-PLAN.md`](../curriculum/PRACTICAL-200-PAGE-PLAN.md)).
+- **Lessons with no unit.** il16, il19, il23, il24 and I-18 had no Practical unit. Three units were added (`pu-verbs`,
+  `pu-conversation`, `pu-army`), and a test now fails if any Israel-track lesson is left out.
+- **Grammar notes that described files.** The Practical branch's page notes read "This page uses only Hebrew already stored in
+  data/corpus/phrasebook.json…". The first 20 pages now have real grammar points, and a test bans file talk in a page note.
+- **Woman's forms missing.** The phrasebook gives only the man's form of how are you, I'm sorry, I don't understand and do you
+  speak English. The audio manifests hold both forms with clips, so the pages teach them as pairs.
+
+### Built This Round
+
+- A 194-page outline in 36 units and five levels, with ids, kinds, titles, routes and lesson links
+  (`data/curriculum/practical-pages/outline.json`).
+- The first 20 pages written in full: 103 items with pointed Hebrew, transliteration, English and clip ids; 20 grammar points;
+  speaking prompts; listening rounds; spaced review of earlier items (`first-20.json`, readable copy in
+  [`../curriculum/PRACTICAL-FIRST-20-PAGES.md`](../curriculum/PRACTICAL-FIRST-20-PAGES.md)).
+- A v3 page schema that only adds optional fields to the v2 page (`page.schema.json`).
+- 10 tests. Every Hebrew line must match its source byte for byte after NFC normalisation. Grammar Hebrew must come from the
+  page's own items or earlier ones. Clips must be in a manifest in both voices, or be marked as gaps. Review items must come from
+  earlier pages. The outline must have 100 to 200 pages and cover every lesson.
+
+### Score
+
+**85 / 100** (estimate). Raised by the outline, the 20 written pages and the convergence plan. To raise it further:
+
+- the merge decision and v3 support in `practical.view.js` (+3)
+- the remaining 174 pages to the same standard (+4)
+- native-speaker and cantor review (+6)
+- John's decisions on the divine-name holds (+2)

@@ -1,6 +1,4 @@
 // Aleph boot: wires store, settings, audio, router, and lazily mounted views.
-import { mountRimon } from './shell/rimon.js';
-import { mountRimonStillsLazy } from './shell/rimon-stills-lazy.js';
 import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
@@ -327,9 +325,12 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
-  mountRimon({store});
-  // Bold stills are decoration: a missing file or a mount fault must not break boot.
-  try { mountRimonStillsLazy(); } catch (e) { console.warn('rimon stills failed', e); } // fetched on the first big moment, not on Home
+  // Rimon's greeting (the companion module is about 101 KB with its imports) waits until after first paint
+  // and the first-load JS window, like the other after-paint work, so Home stays under the 532 KB budget.
+  shownFirst.then(() => afterPaint(() => {
+    import('./shell/rimon.js').then((m) => m.mountRimon({ store })).catch((e) => console.warn('rimon failed', e));
+    import('./shell/rimon-stills-lazy.js').then((m) => { try { m.mountRimonStillsLazy(); } catch (e) { console.warn('rimon stills failed', e); } }).catch((e) => console.warn('rimon stills failed', e));
+  }, { waitMs: 8000, minMs: 8000 })).catch(() => {});
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.

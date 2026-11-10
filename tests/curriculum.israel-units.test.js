@@ -82,11 +82,17 @@ test("speaking drill: every Hebrew line comes from the unit's lessons", () => {
   }
 });
 
-test("routes: the unit list and unit pages are registered as preview", async () => {
+test("routes: old #/israel-units paths stay registered and map into the live Practical course", async () => {
   const { ROUTES } = await import("../src/shell/router.js");
   const r = ROUTES.filter((x) => x.module === "../curriculum/israel-units.view.js");
   assert.deepEqual(r.map((x) => x.pattern), ["/israel-units", "/israel-units/:id"]);
   assert.ok(r.every((x) => x.tier === "preview"));
+  const { PREVIEW_HIDDEN } = await import("../src/shell/nav-model.js");
+  assert.ok(PREVIEW_HIDDEN.has("israelunits"), "the duplicate course is hidden from the Preview nav");
+  assert.equal(U.practicalHref(), "#/practical");
+  assert.equal(U.practicalHref("u04"), "#/practical/pu-cafe");
+  assert.equal(U.practicalHref("u08"), "#/practical/pu-verbs-now");
+  assert.equal(U.practicalHref("unknown"), "#/practical");
   assert.equal(U.lessonHref("il06"), "#/learn?lesson=il06");
   assert.equal(U.lessonHref("I-13"), "#/intermediate/I-13");
 });
@@ -106,19 +112,22 @@ globalThis.document ||= { createElement: (t) => new N(t), createTextNode: (d) =>
 const wait = async (pred) => { for (let i = 0; i < 200 && !pred(); i++) await new Promise((r) => setTimeout(r, 5)); assert.ok(pred()); };
 const ctxWith = (m, query = {}) => ({ query, t: (k) => k, store: { get: (k) => m[k], set: (k, v) => { m[k] = JSON.parse(JSON.stringify(v)); } }, settings: { get: () => undefined }, audio: { play: async () => ({ source: "file" }), status: () => ({ source: "file", entryStatus: "tts" }) } });
 
-test("view: the list shows 13 units; a unit page shows lessons, grammar and three working drills", async () => {
+test("view: old routes redirect into Practical and leave a working link (no dead page)", async () => {
   const V = await import("../src/curriculum/israel-units.view.js");
+  const went = [];
   const root = new N("main");
-  V.mount(root, ctxWith({}));
-  await wait(() => root.find((n) => n.attrs["data-unit"]).length === 13);
-  assert.match(root.text, /Cafe and Ordering Food/);
+  V.mount(root, { ...ctxWith({}), route: (p) => went.push(p) });
+  const link = root.find((n) => n.attrs["data-redirect"])[0];
+  assert.ok(link, "list route shows a Practical link");
+  assert.equal(link.attrs.href, "#/practical");
+  assert.deepEqual(went, ["/practical"]);
+  assert.match(root.text, /Practical/);
+
+  const went2 = [];
   const root2 = new N("main");
-  V.mount(root2, ctxWith({}, { id: "u04" }));
-  await wait(() => root2.find((n) => n.attrs["data-drill"]).length === 3);
-  assert.match(root2.text, /il06/); assert.match(root2.text, /I-13/); assert.match(root2.text, /אֶפְשָׁר לְהַזְמִין\?/);
-  for (const d of ["review", "listening", "speaking"]) {
-    await root2.find((n) => n.attrs["data-drill"] === d)[0].click();
-    const body = root2.find((n) => n.className === "alef-unit-drill")[0];
-    assert.ok(body.text.length > 10, `${d} drill shows a first item`);
-  }
+  V.mount(root2, { ...ctxWith({}, { id: "u04" }), route: (p) => went2.push(p) });
+  const link2 = root2.find((n) => n.attrs["data-redirect"])[0];
+  assert.equal(link2.attrs.href, "#/practical/pu-cafe");
+  assert.deepEqual(went2, ["/practical/pu-cafe"]);
+  assert.equal(root2.find((n) => n.attrs["data-drill"]).length, 0, "the old preview drills are gone");
 });

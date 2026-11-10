@@ -15,7 +15,9 @@
   }
  ],
  "phrasebookSituation": null,
- "speakSets": [],
+ "speakSets": [
+  "speak-survival-shop-1"
+ ],
  "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
  "items": [
   {
@@ -24,7 +26,11 @@
    "he": "שׁוּק",
    "en": "market",
    "translit": "shuk",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w1"
+   }
   },
   {
    "id": "i-12-w2",
@@ -32,7 +38,11 @@
    "he": "כַּמָּה זֶה עוֹלֶה?",
    "en": "how much does it cost?",
    "translit": "kamah zeh oleh?",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w2"
+   }
   },
   {
    "id": "i-12-w3",
@@ -40,7 +50,11 @@
    "he": "מָה הַמְּחִיר?",
    "en": "what is the price?",
    "translit": "mah hamechir?",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w3"
+   }
   },
   {
    "id": "i-12-w4",
@@ -48,7 +62,11 @@
    "he": "זֶה יָקָר",
    "en": "it's expensive",
    "translit": "zeh yakar",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w4"
+   }
   },
   {
    "id": "i-12-w5",
@@ -56,7 +74,11 @@
    "he": "זֶה זוֹל",
    "en": "it's cheap",
    "translit": "zeh zol",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w5"
+   }
   },
   {
    "id": "i-12-w6",
@@ -64,7 +86,11 @@
    "he": "יֵשׁ הַנָּחָה?",
    "en": "is there a discount?",
    "translit": "yesh hanachah?",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w6"
+   }
   },
   {
    "id": "i-12-w7",
@@ -72,7 +98,11 @@
    "he": "חֲצִי",
    "en": "half",
    "translit": "chatzi",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w7"
+   }
   },
   {
    "id": "i-12-w8",
@@ -80,7 +110,11 @@
    "he": "טָרִי",
    "en": "fresh",
    "translit": "tari",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w8"
+   }
   },
   {
    "id": "i-12-w9",
@@ -88,7 +122,11 @@
    "he": "עַגְבָנִיָּה",
    "en": "tomato",
    "translit": "agvaniyah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w9"
+   }
   },
   {
    "id": "i-12-w10",
@@ -96,7 +134,11 @@
    "he": "מְלָפְפוֹן",
    "en": "cucumber",
    "translit": "melafefon",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w10"
+   }
   },
   {
    "id": "i-12-w11",
@@ -104,7 +146,11 @@
    "he": "גְּבִינָה",
    "en": "cheese",
    "translit": "gevinah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w11"
+   }
   },
   {
    "id": "i-12-w12",
@@ -112,7 +158,11 @@
    "he": "זֵיתִים",
    "en": "olives",
    "translit": "zeitim",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w12"
+   }
   },
   {
    "id": "i-12-w13",
@@ -120,7 +170,11 @@
    "he": "אֶקַּח אֶת זֶה",
    "en": "I'll take this",
    "translit": "ekach et zeh",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-12-w13"
+   }
   },
   {
    "id": "i-12-w14",
@@ -128,7 +182,11 @@
    "he": "מְזֻמָּן",
    "en": "cash",
    "translit": "mezuman",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w14"
+   }
   },
   {
    "id": "i-12-w15",
@@ -136,28 +194,165 @@
    "he": "שַׂקִּית",
    "en": "bag",
    "translit": "sakit",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-12-w15"
+   }
   }
  ],
  "srsQueue": [
-  "i-12-w1",
-  "i-12-w2",
-  "i-12-w3",
-  "i-12-w4",
-  "i-12-w5",
-  "i-12-w6",
-  "i-12-w7",
-  "i-12-w8",
-  "i-12-w9",
-  "i-12-w10",
-  "i-12-w11",
-  "i-12-w12",
-  "i-12-w13",
-  "i-12-w14",
-  "i-12-w15"
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-12-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "i-12-w2",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "i-12-w3",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "line",
+   "id": "i-12-w4",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "i-12-w5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "i-12-w6",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-12-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-12-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-12-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-12-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-12-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-12-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "line",
+   "id": "i-12-w13",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-12-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-12-w15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
  ],
- "listenDrills": [],
- "speakDrills": [],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-12-w1",
+    "i-12-w2",
+    "i-12-w3",
+    "i-12-w4",
+    "i-12-w5",
+    "i-12-w6",
+    "i-12-w7",
+    "i-12-w8",
+    "i-12-w9",
+    "i-12-w10",
+    "i-12-w11",
+    "i-12-w12",
+    "i-12-w13",
+    "i-12-w14",
+    "i-12-w15"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-shop-1.json.",
+   "set": "speak-survival-shop-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
  "pages": [
   {
    "id": "pu-shuk-p01",
@@ -171,7 +366,11 @@
      "he": "שׁוּק",
      "en": "market",
      "translit": "shuk",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w1"
+     }
     },
     {
      "id": "i-12-w2",
@@ -179,7 +378,11 @@
      "he": "כַּמָּה זֶה עוֹלֶה?",
      "en": "how much does it cost?",
      "translit": "kamah zeh oleh?",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w2"
+     }
     },
     {
      "id": "i-12-w3",
@@ -187,7 +390,11 @@
      "he": "מָה הַמְּחִיר?",
      "en": "what is the price?",
      "translit": "mah hamechir?",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w3"
+     }
     },
     {
      "id": "i-12-w4",
@@ -195,7 +402,11 @@
      "he": "זֶה יָקָר",
      "en": "it's expensive",
      "translit": "zeh yakar",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w4"
+     }
     },
     {
      "id": "i-12-w5",
@@ -203,9 +414,63 @@
      "he": "זֶה זוֹל",
      "en": "it's cheap",
      "translit": "zeh zol",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w5"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "i-12-w2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "i-12-w3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "i-12-w4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "i-12-w5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-12-w1",
+    "i-12-w2",
+    "i-12-w3",
+    "i-12-w4",
+    "i-12-w5"
+   ],
+   "speakSet": "speak-survival-shop-1"
   },
   {
    "id": "pu-shuk-p02",
@@ -219,7 +484,11 @@
      "he": "יֵשׁ הַנָּחָה?",
      "en": "is there a discount?",
      "translit": "yesh hanachah?",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w6"
+     }
     },
     {
      "id": "i-12-w7",
@@ -227,7 +496,11 @@
      "he": "חֲצִי",
      "en": "half",
      "translit": "chatzi",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w7"
+     }
     },
     {
      "id": "i-12-w8",
@@ -235,7 +508,11 @@
      "he": "טָרִי",
      "en": "fresh",
      "translit": "tari",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w8"
+     }
     },
     {
      "id": "i-12-w9",
@@ -243,7 +520,11 @@
      "he": "עַגְבָנִיָּה",
      "en": "tomato",
      "translit": "agvaniyah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w9"
+     }
     },
     {
      "id": "i-12-w10",
@@ -251,9 +532,63 @@
      "he": "מְלָפְפוֹן",
      "en": "cucumber",
      "translit": "melafefon",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w10"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-12-w6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-12-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-12-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-12-w6",
+    "i-12-w7",
+    "i-12-w8",
+    "i-12-w9",
+    "i-12-w10"
+   ],
+   "speakSet": "speak-survival-shop-1"
   },
   {
    "id": "pu-shuk-p03",
@@ -267,7 +602,11 @@
      "he": "גְּבִינָה",
      "en": "cheese",
      "translit": "gevinah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w11"
+     }
     },
     {
      "id": "i-12-w12",
@@ -275,7 +614,11 @@
      "he": "זֵיתִים",
      "en": "olives",
      "translit": "zeitim",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w12"
+     }
     },
     {
      "id": "i-12-w13",
@@ -283,7 +626,11 @@
      "he": "אֶקַּח אֶת זֶה",
      "en": "I'll take this",
      "translit": "ekach et zeh",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-12-w13"
+     }
     },
     {
      "id": "i-12-w14",
@@ -291,7 +638,11 @@
      "he": "מְזֻמָּן",
      "en": "cash",
      "translit": "mezuman",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w14"
+     }
     },
     {
      "id": "i-12-w15",
@@ -299,9 +650,63 @@
      "he": "שַׂקִּית",
      "en": "bag",
      "translit": "sakit",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-12-w15"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-12-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-12-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "i-12-w13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-12-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-12-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-12-w11",
+    "i-12-w12",
+    "i-12-w13",
+    "i-12-w14",
+    "i-12-w15"
+   ],
+   "speakSet": "speak-survival-shop-1"
   }
  ]
 }

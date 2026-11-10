@@ -26,7 +26,7 @@ test('the bar has at most 5 controls (section tabs + More), for every availabili
   for (const av of [ALL, BUILD, new Set(['home'])]) assert.ok(tabs(ROUTES, av).length + 1 <= 5);
   const v0Sections = new Set(ROUTES.filter((r) => tierOf(r) === 'v0').map((r) => SECTIONS.find((s) => SECTION_ROUTES[s.id].includes(r.name)).id));
   assert.deepEqual(tabs(ROUTES, ALL).map((x) => x.section.id), SECTIONS.filter((s) => s.id !== 'more' && v0Sections.has(s.id)).map((s) => s.id));
-  assert.deepEqual(tabs(ROUTES, ALL).map((x) => x.section.id), ['learn', 'progress']);
+  assert.deepEqual(tabs(ROUTES, ALL).map((x) => x.section.id), ['learn', 'read', 'speak', 'progress']);
 });
 test('no route is unreachable: static routes are in the menu or search; parameterised routes have a reachable static parent', () => {
   for (const av of [ALL, BUILD]) {
@@ -35,7 +35,7 @@ test('no route is unreachable: static routes are in the menu or search; paramete
     for (const r of ROUTES) {
       if (!av.has(r.name)) continue;
       if (isStatic(r)) { assert.ok(search.has(r.name), `${r.name} not searchable`); assert.ok(menu.has(r.name) || r.name === 'welcome' || PREVIEW_HIDDEN.has(r.name), `${r.name} not in the menu`); }
-      else { const p = PARENT[r.name]; assert.ok(p, `${r.name} has no parent`); assert.ok(isStatic(ROUTES.find((x) => x.name === p))); assert.ok(!av.has(p) || (search.has(p) && menu.has(p)), `${r.name} parent ${p} unreachable`); }
+      else { const p = PARENT[r.name]; assert.ok(p, `${r.name} has no parent`); assert.ok(isStatic(ROUTES.find((x) => x.name === p))); assert.ok(!av.has(p) || (search.has(p) && (menu.has(p) || PREVIEW_HIDDEN.has(p))), `${r.name} parent ${p} unreachable`); }
     }
   }
 });

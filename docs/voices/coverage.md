@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 21456 of 23801 required clips exist (90.1%); Recorded by a human reader: 0; Israeli voice: 19661; No audio yet: 2345.**
+**Overall: 22282 of 23801 required clips exist (93.6%); Recorded by a human reader: 0; Israeli voice: 21093; No audio yet: 1519.**
 
 ## By talent and group
 
@@ -33,7 +33,7 @@ Required 3369; have 2971; missing 398.
 
 ### Ashkenazi reader (man)  (voice=m, tradition=ashkenazi)
 
-Required 3366; have 2141; missing 1225.
+Required 3366; have 2967; missing 399.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -44,11 +44,11 @@ Required 3366; have 2141; missing 1225.
 | letter-variant-sound | 4 | 0 | 0 | 0 | 4 | 0/0 | human only |
 | niqqud | 15 | 0 | 0 | 0 | 15 | 0/0 | human only |
 | syllable | 110 | 0 | 0 | 0 | 110 | 0/0 | human only |
-| lesson-word | 418 | 0 | 415 | 0 | 3 | 0/0 | human only |
+| lesson-word | 418 | 0 | 416 | 0 | 2 | 0/0 | human only |
 | prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 21/21 | human only |
-| vocab-word | 1000 | 0 | 18 | 0 | 982 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 843 | 0 | 157 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 41 | 0 | 6 | 0 | 35 | 0/0 | human only |
 
@@ -148,7 +148,7 @@ Required 3368; have 3343; missing 25.
 | prayer-line | 152 | 0 | 129 | 0 | 23 | 0/0 | human only |
 | prayer-word | 1573 | 0 | 1573 | 0 | 0 | 0/0 | human only |
 | prayer-whole | 0 | 0 | 0 | 0 | 0 | 3/21 | human only |
-| vocab-word | 1000 | 0 | 16 | 984 | 0 | 0/0 | human only |
+| vocab-word | 1000 | 0 | 622 | 378 | 0 | 0/0 | human only |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human only |
 | vocab-extra | 43 | 0 | 8 | 35 | 0 | 0/0 | human only |
 

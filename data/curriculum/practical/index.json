@@ -358,6 +358,16 @@
    "nativeReview": true
   },
   {
+   "id": "pu-army",
+   "title": "Army slang basics",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-army.json",
+   "pageCount": 3,
+   "itemCount": 15,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-news",
    "title": "Reading a headline",
    "level": "L3",
@@ -516,21 +526,11 @@
     "titleEn": "The Taxi Driver",
     "href": "#/book/book42"
    }
-  },
-  {
-   "id": "pu-army",
-   "title": "Army slang basics",
-   "level": "L3",
-   "file": "data/curriculum/practical/pu-army.json",
-   "pageCount": 4,
-   "itemCount": 16,
-   "status": "built-draft",
-   "nativeReview": true
   }
  ],
  "totals": {
   "units": 45,
-  "pages": 197,
-  "items": 873
+  "pages": 196,
+  "items": 872
  }
 }

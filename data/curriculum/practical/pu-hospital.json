@@ -15,7 +15,9 @@
   }
  ],
  "phrasebookSituation": null,
- "speakSets": [],
+ "speakSets": [
+  "speak-body-health-2"
+ ],
  "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
  "items": [
   {
@@ -24,7 +26,11 @@
    "he": "בֵּית חוֹלִים",
    "en": "hospital",
    "translit": "beit cholim",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-20-w1"
+   }
   },
   {
    "id": "i-20-w2",
@@ -32,7 +38,11 @@
    "he": "רוֹפֵא",
    "en": "medical doctor, physician",
    "translit": "rofe",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w2"
+   }
   },
   {
    "id": "i-20-w3",
@@ -40,7 +50,11 @@
    "he": "רוֹפְאָה",
    "en": "doctor (f)",
    "translit": "rofe'ah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w3"
+   }
   },
   {
    "id": "i-20-w4",
@@ -48,7 +62,11 @@
    "he": "אָחוֹת",
    "en": "nurse (f)",
    "translit": "achot",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w4"
+   }
   },
   {
    "id": "i-20-w5",
@@ -56,7 +74,11 @@
    "he": "תּוֹר",
    "en": "appointment, turn",
    "translit": "tor",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w5"
+   }
   },
   {
    "id": "i-20-w6",
@@ -64,7 +86,11 @@
    "he": "בִּטּוּחַ",
    "en": "insurance",
    "translit": "bituach",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w6"
+   }
   },
   {
    "id": "i-20-w7",
@@ -72,7 +98,11 @@
    "he": "כּוֹאֵב",
    "en": "it hurts",
    "translit": "ko'ev",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w7"
+   }
   },
   {
    "id": "i-20-w8",
@@ -80,7 +110,11 @@
    "he": "בְּדִיקָה",
    "en": "test, examination",
    "translit": "bedikah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w8"
+   }
   },
   {
    "id": "i-20-w9",
@@ -88,7 +122,11 @@
    "he": "דָּם",
    "en": "blood",
    "translit": "dam",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w9"
+   }
   },
   {
    "id": "i-20-w10",
@@ -96,7 +134,11 @@
    "he": "חֵרוּם",
    "en": "emergency",
    "translit": "cherum",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w10"
+   }
   },
   {
    "id": "i-20-w11",
@@ -104,7 +146,11 @@
    "he": "אַמְבּוּלַנְס",
    "en": "ambulance",
    "translit": "ambulans",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w11"
+   }
   },
   {
    "id": "i-20-w12",
@@ -112,7 +158,11 @@
    "he": "הַדַּרְכּוֹן",
    "en": "the passport",
    "translit": "hadarkon",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w12"
+   }
   },
   {
    "id": "i-20-w13",
@@ -120,7 +170,11 @@
    "he": "מִשְׁפָּחָה",
    "en": "family",
    "translit": "mishpachah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-20-w13"
+   }
   },
   {
    "id": "directions-17",
@@ -148,24 +202,157 @@
   }
  ],
  "srsQueue": [
-  "i-20-w1",
-  "i-20-w2",
-  "i-20-w3",
-  "i-20-w4",
-  "i-20-w5",
-  "i-20-w6",
-  "i-20-w7",
-  "i-20-w8",
-  "i-20-w9",
-  "i-20-w10",
-  "i-20-w11",
-  "i-20-w12",
-  "i-20-w13",
-  "directions-17",
-  "help-02"
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "i-20-w1",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-20-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-20-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-20-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-20-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-20-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-20-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-20-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-20-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-20-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-20-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-20-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-20-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "directions-17",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "line",
+   "id": "help-02",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
  ],
- "listenDrills": [],
- "speakDrills": [],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-20-w1",
+    "i-20-w2",
+    "i-20-w3",
+    "i-20-w4",
+    "i-20-w5",
+    "i-20-w6",
+    "i-20-w7",
+    "i-20-w8",
+    "i-20-w9",
+    "i-20-w10",
+    "i-20-w11",
+    "i-20-w12",
+    "i-20-w13",
+    "directions-17",
+    "help-02"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-body-health-2.json.",
+   "set": "speak-body-health-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
  "pages": [
   {
    "id": "pu-hospital-p01",
@@ -179,7 +366,11 @@
      "he": "בֵּית חוֹלִים",
      "en": "hospital",
      "translit": "beit cholim",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-20-w1"
+     }
     },
     {
      "id": "i-20-w2",
@@ -187,7 +378,11 @@
      "he": "רוֹפֵא",
      "en": "medical doctor, physician",
      "translit": "rofe",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w2"
+     }
     },
     {
      "id": "i-20-w3",
@@ -195,7 +390,11 @@
      "he": "רוֹפְאָה",
      "en": "doctor (f)",
      "translit": "rofe'ah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w3"
+     }
     },
     {
      "id": "i-20-w4",
@@ -203,7 +402,11 @@
      "he": "אָחוֹת",
      "en": "nurse (f)",
      "translit": "achot",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w4"
+     }
     },
     {
      "id": "i-20-w5",
@@ -211,9 +414,63 @@
      "he": "תּוֹר",
      "en": "appointment, turn",
      "translit": "tor",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w5"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-20-w1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-20-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-20-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-20-w1",
+    "i-20-w2",
+    "i-20-w3",
+    "i-20-w4",
+    "i-20-w5"
+   ],
+   "speakSet": "speak-body-health-2"
   },
   {
    "id": "pu-hospital-p02",
@@ -227,7 +484,11 @@
      "he": "בִּטּוּחַ",
      "en": "insurance",
      "translit": "bituach",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w6"
+     }
     },
     {
      "id": "i-20-w7",
@@ -235,7 +496,11 @@
      "he": "כּוֹאֵב",
      "en": "it hurts",
      "translit": "ko'ev",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w7"
+     }
     },
     {
      "id": "i-20-w8",
@@ -243,7 +508,11 @@
      "he": "בְּדִיקָה",
      "en": "test, examination",
      "translit": "bedikah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w8"
+     }
     },
     {
      "id": "i-20-w9",
@@ -251,7 +520,11 @@
      "he": "דָּם",
      "en": "blood",
      "translit": "dam",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w9"
+     }
     },
     {
      "id": "i-20-w10",
@@ -259,9 +532,63 @@
      "he": "חֵרוּם",
      "en": "emergency",
      "translit": "cherum",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w10"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-20-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-20-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-20-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-20-w6",
+    "i-20-w7",
+    "i-20-w8",
+    "i-20-w9",
+    "i-20-w10"
+   ],
+   "speakSet": "speak-body-health-2"
   },
   {
    "id": "pu-hospital-p03",
@@ -275,7 +602,11 @@
      "he": "אַמְבּוּלַנְס",
      "en": "ambulance",
      "translit": "ambulans",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w11"
+     }
     },
     {
      "id": "i-20-w12",
@@ -283,7 +614,11 @@
      "he": "הַדַּרְכּוֹן",
      "en": "the passport",
      "translit": "hadarkon",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w12"
+     }
     },
     {
      "id": "i-20-w13",
@@ -291,9 +626,45 @@
      "he": "מִשְׁפָּחָה",
      "en": "family",
      "translit": "mishpachah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-20-w13"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-20-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-20-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-20-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-20-w11",
+    "i-20-w12",
+    "i-20-w13"
+   ],
+   "speakSet": "speak-body-health-2"
   },
   {
    "id": "pu-hospital-p04",
@@ -325,7 +696,30 @@
       "id": "help-02"
      }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "directions-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "help-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "directions-17",
+    "help-02"
+   ],
+   "speakSet": "speak-body-health-2"
   }
  ],
  "relatedBook": {

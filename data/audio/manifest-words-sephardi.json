@@ -45143,10 +45143,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "blessed",
-  "phonetic": "barukh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "barukh"
  },
  {
   "path": "audio/f/sephardi/word/h70669df5.mp3",
@@ -45208,10 +45205,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "you, thou",
-  "phonetic": "atah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "atah"
  },
  {
   "path": "audio/f/sephardi/word/h36d595e4.mp3",
@@ -45239,10 +45233,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "he; used as a copula",
-  "phonetic": "hu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hu"
  },
  {
   "path": "audio/f/sephardi/word/h1ef19acb.mp3",
@@ -45270,10 +45261,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "king",
-  "phonetic": "melekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "melekh"
  },
  {
   "path": "audio/f/sephardi/word/h58d8d8fe.mp3",
@@ -45301,10 +45289,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "used to introduce a semantically definite direct object; to, with",
-  "phonetic": "et",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "et"
  },
  {
   "path": "audio/f/sephardi/word/h7c9d2ffe.mp3",
@@ -45332,10 +45317,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "day",
-  "phonetic": "yom",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yom"
  },
  {
   "path": "audio/f/sephardi/word/h50cf3648.mp3",
@@ -45465,10 +45447,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "I",
-  "phonetic": "ani",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ani"
  },
  {
   "path": "audio/f/sephardi/word/h103e7d27.mp3",
@@ -45564,10 +45543,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "on, on top of; on; about",
-  "phonetic": "al",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "al"
  },
  {
   "path": "audio/f/sephardi/word/h7d05bcca.mp3",
@@ -45595,10 +45571,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a yoke; servitude, subjugation",
-  "phonetic": "ol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ol"
  },
  {
   "path": "audio/f/sephardi/word/h277eae86.mp3",
@@ -45660,10 +45633,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to, towards, into; at, by",
-  "phonetic": "el",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "el"
  },
  {
   "path": "audio/f/sephardi/word/h68843f80.mp3",
@@ -45725,10 +45695,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "not, do not",
-  "phonetic": "al",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "al"
  },
  {
   "path": "audio/f/sephardi/word/h9d36c656.mp3",
@@ -45824,10 +45791,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "there is not, there are not; used in expressing non-possession in the present tense; not, is not, are not",
-  "phonetic": "ein",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ein"
  },
  {
   "path": "audio/f/sephardi/word/h8828bfb6.mp3",
@@ -45855,10 +45819,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to bless; to curse",
-  "phonetic": "berekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "berekh"
  },
  {
   "path": "audio/f/sephardi/word/h9dabc184.mp3",
@@ -45886,10 +45847,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "instruction, teaching; the Written Torah and Oral Torah; theory",
-  "phonetic": "torah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "torah"
  },
  {
   "path": "audio/f/sephardi/word/h16b7af50.mp3",
@@ -45917,10 +45875,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "not; no",
-  "phonetic": "lo",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lo"
  },
  {
   "path": "audio/f/sephardi/word/h8e3e6f50.mp3",
@@ -45948,10 +45903,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to give; to allow, permit, let; to put, place",
-  "phonetic": "natan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "natan"
  },
  {
   "path": "audio/f/sephardi/word/h8982ad83.mp3",
@@ -45979,10 +45931,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "one, one of",
-  "phonetic": "echad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "echad"
  },
  {
   "path": "audio/f/sephardi/word/h66252016.mp3",
@@ -46010,10 +45959,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "goodness, virtue",
-  "phonetic": "tuv",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tuv"
  },
  {
   "path": "audio/f/sephardi/word/h5f11d31e.mp3",
@@ -46075,10 +46021,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "this, this one; it; this",
-  "phonetic": "zeh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zeh"
  },
  {
   "path": "audio/f/sephardi/word/h67c6be75.mp3",
@@ -46106,10 +46049,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "holy; a saint",
-  "phonetic": "kadosh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kadosh"
  },
  {
   "path": "audio/f/sephardi/word/h39244df3.mp3",
@@ -46137,10 +46077,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "what; that which, the thing that; that (followed by שֶׁ־)",
-  "phonetic": "mah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mah"
  },
  {
   "path": "audio/f/sephardi/word/h364cadf4.mp3",
@@ -46168,10 +46105,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to put, place; to turn on; to put on, don (gloves)",
-  "phonetic": "sam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sam"
  },
  {
   "path": "audio/f/sephardi/word/h39d32f55.mp3",
@@ -46199,10 +46133,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a name; a first name",
-  "phonetic": "shem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shem"
  },
  {
   "path": "audio/f/sephardi/word/h65a05fb2.mp3",
@@ -46230,10 +46161,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to assess, appraise",
-  "phonetic": "sham",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sham"
  },
  {
   "path": "audio/f/sephardi/word/h8e3fbf43.mp3",
@@ -46295,10 +46223,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "time; a time (duration of time); a time",
-  "phonetic": "zeman",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zeman"
  },
  {
   "path": "audio/f/sephardi/word/h8f42d584.mp3",
@@ -46326,10 +46251,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "life; life (state of being alive)",
-  "phonetic": "chayim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chayim"
  },
  {
   "path": "audio/f/sephardi/word/h51ed2ee5.mp3",
@@ -46357,10 +46279,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "house; school; stanza",
-  "phonetic": "bayit",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bayit"
  },
  {
   "path": "audio/f/sephardi/word/h9c8ddecf.mp3",
@@ -46515,10 +46434,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "for the sake (benefit or regard) of (a person or thing); with the intent or purpose of (a result)",
-  "phonetic": "lema'an",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lema'an"
  },
  {
   "path": "audio/f/sephardi/word/h7ac4d731.mp3",
@@ -46614,10 +46530,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "again, once more; again and again, repeatedly; also, additionally, furthermore",
-  "phonetic": "od",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "od"
  },
  {
   "path": "audio/f/sephardi/word/h14635975.mp3",
@@ -46645,10 +46558,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a nation, a people",
-  "phonetic": "am",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "am"
  },
  {
   "path": "audio/f/sephardi/word/h020c4fa8.mp3",
@@ -46676,10 +46586,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "between, among, amid",
-  "phonetic": "bein",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bein"
  },
  {
   "path": "audio/f/sephardi/word/h412b4a37.mp3",
@@ -46707,10 +46614,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "manna",
-  "phonetic": "man",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "man"
  },
  {
   "path": "audio/f/sephardi/word/h5c96df63.mp3",
@@ -46738,10 +46642,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sanctity, holiness",
-  "phonetic": "kodesh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kodesh"
  },
  {
   "path": "audio/f/sephardi/word/h6a0c1de1.mp3",
@@ -46803,10 +46704,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sea; a lot; the bottom grindstone (used for grinding flour)",
-  "phonetic": "yam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yam"
  },
  {
   "path": "audio/f/sephardi/word/h4692cd32.mp3",
@@ -46834,10 +46732,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to speak (say words)",
-  "phonetic": "diber",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "diber"
  },
  {
   "path": "audio/f/sephardi/word/h5e4080cc.mp3",
@@ -46899,10 +46794,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "honor; respect; esteem",
-  "phonetic": "kavod",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kavod"
  },
  {
   "path": "audio/f/sephardi/word/h9dcc35dc.mp3",
@@ -46930,10 +46822,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "first of all, first",
-  "phonetic": "reshit",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "reshit"
  },
  {
   "path": "audio/f/sephardi/word/h2a58afab.mp3",
@@ -46961,10 +46850,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "who, what person or persons; the person or persons that",
-  "phonetic": "mi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mi"
  },
  {
   "path": "audio/f/sephardi/word/h8913b4db.mp3",
@@ -47128,10 +47014,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "will, volition, desire; a surname; a male given name",
-  "phonetic": "ratzon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ratzon"
  },
  {
   "path": "audio/f/sephardi/word/h470c7870.mp3",
@@ -47159,10 +47042,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to want; accept, choose",
-  "phonetic": "ratzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ratzah"
  },
  {
   "path": "audio/f/sephardi/word/h645365e7.mp3",
@@ -47190,10 +47070,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to hear, to be able to hear; to listen",
-  "phonetic": "shama",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shama"
  },
  {
   "path": "audio/f/sephardi/word/h5d62592f.mp3",
@@ -47221,10 +47098,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "salvation, help, rescue",
-  "phonetic": "yeshu'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yeshu'ah"
  },
  {
   "path": "audio/f/sephardi/word/h4299f50f.mp3",
@@ -47252,10 +47126,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be; to happen, take place, occur",
-  "phonetic": "hayah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hayah"
  },
  {
   "path": "audio/f/sephardi/word/h2cd963e3.mp3",
@@ -47283,10 +47154,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to say, tell; to intend; to mean",
-  "phonetic": "amar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "amar"
  },
  {
   "path": "audio/f/sephardi/word/h28a30a60.mp3",
@@ -47342,10 +47210,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to shine, be illuminated",
-  "phonetic": "or",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "or"
  },
  {
   "path": "audio/f/sephardi/word/h5b150aaf.mp3",
@@ -47441,10 +47306,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "before, in advance of, prior to; before, in front of, facing; ago",
-  "phonetic": "lifnei",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lifnei"
  },
  {
   "path": "audio/f/sephardi/word/h40502f8d.mp3",
@@ -47472,10 +47334,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "container, bin",
-  "phonetic": "mekhol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mekhol"
  },
  {
   "path": "audio/f/sephardi/word/h7439bf9d.mp3",
@@ -47503,10 +47362,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "with; and also; near to, next to",
-  "phonetic": "im",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "im"
  },
  {
   "path": "audio/f/sephardi/word/h583b5633.mp3",
@@ -47534,10 +47390,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to help, to assist",
-  "phonetic": "azar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "azar"
  },
  {
   "path": "audio/f/sephardi/word/h5ad6806e.mp3",
@@ -47599,10 +47452,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to lift; to bear, carry, support; to endure",
-  "phonetic": "nasa",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nasa"
  },
  {
   "path": "audio/f/sephardi/word/h3676c260.mp3",
@@ -47630,10 +47480,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to hit, smite, strike",
-  "phonetic": "hikah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hikah"
  },
  {
   "path": "audio/f/sephardi/word/h75de47f9.mp3",
@@ -47661,10 +47508,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a military (armed forces); an army; a host, a mob, a multitude",
-  "phonetic": "tzava",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzava"
  },
  {
   "path": "audio/f/sephardi/word/h0fde2ff0.mp3",
@@ -47726,10 +47570,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to live (to be alive, to have life); to live",
-  "phonetic": "chai",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chai"
  },
  {
   "path": "audio/f/sephardi/word/h2d58afb3.mp3",
@@ -47893,10 +47734,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to laugh; to joke",
-  "phonetic": "tzachak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzachak"
  },
  {
   "path": "audio/f/sephardi/word/h532fdc70.mp3",
@@ -47958,10 +47796,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "here is, here’s; lo, behold; used as a copula",
-  "phonetic": "hineh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hineh"
  },
  {
   "path": "audio/f/sephardi/word/h7ef4abda.mp3",
@@ -47989,10 +47824,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "father; Father, especially the speaker's own father",
-  "phonetic": "aba",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "aba"
  },
  {
   "path": "audio/f/sephardi/word/h0a70642a.mp3",
@@ -48020,10 +47852,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to choose, to opt, to select; to prefer; to appoint",
-  "phonetic": "bachar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bachar"
  },
  {
   "path": "audio/f/sephardi/word/h23e0b2a4.mp3",
@@ -48051,10 +47880,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fruit",
-  "phonetic": "peri",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "peri"
  },
  {
   "path": "audio/f/sephardi/word/h166d92b0.mp3",
@@ -48082,10 +47908,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hero; protagonist; strong, powerful",
-  "phonetic": "gibor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gibor"
  },
  {
   "path": "audio/f/sephardi/word/h59a7d1fc.mp3",
@@ -48147,10 +47970,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "order, the state of being well-arranged, in the sense of putting things in order",
-  "phonetic": "seder",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "seder"
  },
  {
   "path": "audio/f/sephardi/word/h6ad3ddd8.mp3",
@@ -48178,10 +47998,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "enough, sufficient, adequate; stop!, enough!, cease!",
-  "phonetic": "dai",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dai"
  },
  {
   "path": "audio/f/sephardi/word/h29e4f547.mp3",
@@ -48209,10 +48026,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "quite, fairly",
-  "phonetic": "dei",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dei"
  },
  {
   "path": "audio/f/sephardi/word/h708c9d2f.mp3",
@@ -48274,10 +48088,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "book; a writing",
-  "phonetic": "sefer",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sefer"
  },
  {
   "path": "audio/f/sephardi/word/h231c624a.mp3",
@@ -48305,10 +48116,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a sign, an omen; a signal, a cue; letter (symbol)",
-  "phonetic": "ot",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ot"
  },
  {
   "path": "audio/f/sephardi/word/h22100765.mp3",
@@ -48336,10 +48144,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "vine, grapevine",
-  "phonetic": "gefen",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gefen"
  },
  {
   "path": "audio/f/sephardi/word/h85cda534.mp3",
@@ -48367,10 +48172,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to tell (a story), to narrate, to recount; to cut the hair of, to give a haircut to; to speak",
-  "phonetic": "siper",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "siper"
  },
  {
   "path": "audio/f/sephardi/word/h1be0a47a.mp3",
@@ -48398,10 +48200,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a road, a path, a way; a journey; a custom",
-  "phonetic": "derekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "derekh"
  },
  {
   "path": "audio/f/sephardi/word/h5ae20314.mp3",
@@ -48429,10 +48228,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "family",
-  "phonetic": "mishpachah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mishpachah"
  },
  {
   "path": "audio/f/sephardi/word/h9f3caed1.mp3",
@@ -48460,10 +48256,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to increase, to multiply",
-  "phonetic": "ravah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ravah"
  },
  {
   "path": "audio/f/sephardi/word/h6c9f6f29.mp3",
@@ -48491,10 +48284,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "multiplicative particle",
-  "phonetic": "pi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pi"
  },
  {
   "path": "audio/f/sephardi/word/h04345345.mp3",
@@ -48522,10 +48312,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to visit; to inspect; to criticize",
-  "phonetic": "biker",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "biker"
  },
  {
   "path": "audio/f/sephardi/word/h12bba18d.mp3",
@@ -48655,10 +48442,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "father; ancestor; progenitor",
-  "phonetic": "av",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "av"
  },
  {
   "path": "audio/f/sephardi/word/h821319f2.mp3",
@@ -48754,10 +48538,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hour; time",
-  "phonetic": "sha'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sha'ah"
  },
  {
   "path": "audio/f/sephardi/word/h4640fc14.mp3",
@@ -48785,10 +48566,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to take or bring out or forth; to present",
-  "phonetic": "hotzi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hotzi"
  },
  {
   "path": "audio/f/sephardi/word/h804d2347.mp3",
@@ -48816,10 +48594,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "strait, isthmus; distress, straits",
-  "phonetic": "metzar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "metzar"
  },
  {
   "path": "audio/f/sephardi/word/h50ac3ea7.mp3",
@@ -48847,10 +48622,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "prophet",
-  "phonetic": "navi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "navi"
  },
  {
   "path": "audio/f/sephardi/word/h8b8a2576.mp3",
@@ -48980,10 +48752,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mental, psychological",
-  "phonetic": "nafshi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nafshi"
  },
  {
   "path": "audio/f/sephardi/word/h6999e1e4.mp3",
@@ -49011,10 +48780,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "she, it; used as an intensifier for a third-person singular feminine subject",
-  "phonetic": "hi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hi"
  },
  {
   "path": "audio/f/sephardi/word/h0b842943.mp3",
@@ -49076,10 +48842,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to admit, acknowledge, confess; to thank, acknowledge, express gratitude",
-  "phonetic": "hodah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hodah"
  },
  {
   "path": "audio/f/sephardi/word/h67e9e6f3.mp3",
@@ -49107,10 +48870,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a moment; a hand gesture indicating waiting or patience; a minute (one sixtieth of an hour of time), or a very short amount of time",
-  "phonetic": "rega",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rega"
  },
  {
   "path": "audio/f/sephardi/word/h8f6944f1.mp3",
@@ -49138,10 +48898,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rely on, to have faith in, to depend on",
-  "phonetic": "batach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "batach"
  },
  {
   "path": "audio/f/sephardi/word/h5cae87cc.mp3",
@@ -49169,10 +48926,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "below; underneath; in lieu of",
-  "phonetic": "tachat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tachat"
  },
  {
   "path": "audio/f/sephardi/word/h62c2a993.mp3",
@@ -49200,10 +48954,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "please, if you please",
-  "phonetic": "na",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "na"
  },
  {
   "path": "audio/f/sephardi/word/h1be64280.mp3",
@@ -49231,10 +48982,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "I (first-person singular nominative pronoun)",
-  "phonetic": "anokhi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "anokhi"
  },
  {
   "path": "audio/f/sephardi/word/h8eec7f08.mp3",
@@ -49262,10 +49010,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "month; new moon, the day of the new moon",
-  "phonetic": "chodesh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chodesh"
  },
  {
   "path": "audio/f/sephardi/word/h168cf034.mp3",
@@ -49293,10 +49038,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "new, recently made; new, current, recent (as opposed to former); grain from a new crop",
-  "phonetic": "chadash",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chadash"
  },
  {
   "path": "audio/f/sephardi/word/h53c53bdf.mp3",
@@ -49324,10 +49066,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be happy, glad, joyous, cheerful, merry",
-  "phonetic": "samach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "samach"
  },
  {
   "path": "audio/f/sephardi/word/h78d6aa81.mp3",
@@ -49355,10 +49094,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "earth, soil, land",
-  "phonetic": "adamah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "adamah"
  },
  {
   "path": "audio/f/sephardi/word/h2d90f840.mp3",
@@ -49488,10 +49224,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a miracle; a flag, a standard, a banner; a staff, a pole, a flagpole",
-  "phonetic": "nes",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nes"
  },
  {
   "path": "audio/f/sephardi/word/h3674f19e.mp3",
@@ -49519,10 +49252,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fill, to become full; to complete; to reach an age, to become a number of years old",
-  "phonetic": "male",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "male"
  },
  {
   "path": "audio/f/sephardi/word/h1f510ba1.mp3",
@@ -49618,10 +49348,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "so, therefore, then, thus; then, next; then, at that time",
-  "phonetic": "az",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "az"
  },
  {
   "path": "audio/f/sephardi/word/h7121d7fe.mp3",
@@ -49649,10 +49376,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "head; head, chief, leader, chairperson; head, beginning, start",
-  "phonetic": "rosh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rosh"
  },
  {
   "path": "audio/f/sephardi/word/h4fed6814.mp3",
@@ -49680,10 +49404,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to send (someone or something); to move (something) physically away from one's body; to send messengers or letters",
-  "phonetic": "shalach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shalach"
  },
  {
   "path": "audio/f/sephardi/word/h059e9e22.mp3",
@@ -49745,10 +49466,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be right",
-  "phonetic": "tzadak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzadak"
  },
  {
   "path": "audio/f/sephardi/word/h13673f80.mp3",
@@ -49844,10 +49562,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a station, such as a bus station, a train station, or a space station; an outpost, a station; a stage, a phase",
-  "phonetic": "tachanah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tachanah"
  },
  {
   "path": "audio/f/sephardi/word/h447bb433.mp3",
@@ -49909,10 +49624,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to come; to want; to enter, to go in",
-  "phonetic": "ba",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ba"
  },
  {
   "path": "audio/f/sephardi/word/h66c2ffb6.mp3",
@@ -49940,10 +49652,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a (male) friend; a (male) fellow, associate, companion, comrade; a boyfriend",
-  "phonetic": "chaver",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chaver"
  },
  {
   "path": "audio/f/sephardi/word/h2280b9b6.mp3",
@@ -49971,10 +49680,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to tell, say",
-  "phonetic": "higid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "higid"
  },
  {
   "path": "audio/f/sephardi/word/h0902557b.mp3",
@@ -50002,10 +49708,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "obligated, required, bound, must; owing, having a debt; guilty, culpable",
-  "phonetic": "chayav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chayav"
  },
  {
   "path": "audio/f/sephardi/word/h9f3ab68a.mp3",
@@ -50033,10 +49736,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to ascend, rise, go up; to cost; to grow",
-  "phonetic": "alah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "alah"
  },
  {
   "path": "audio/f/sephardi/word/h888649f8.mp3",
@@ -50098,10 +49798,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to change, to alter; to matter, to make a difference",
-  "phonetic": "shinah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shinah"
  },
  {
   "path": "audio/f/sephardi/word/h4a2ee830.mp3",
@@ -50197,10 +49894,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "-teen",
-  "phonetic": "asar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "asar"
  },
  {
   "path": "audio/f/sephardi/word/h7b44b8a0.mp3",
@@ -50296,10 +49990,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "covenant, alliance; brit milah, bris, circumcision ritual",
-  "phonetic": "berit",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "berit"
  },
  {
   "path": "audio/f/sephardi/word/h39b463af.mp3",
@@ -50361,10 +50052,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to open (something); to start",
-  "phonetic": "patach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "patach"
  },
  {
   "path": "audio/f/sephardi/word/h46c75bab.mp3",
@@ -50392,10 +50080,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "week, period of seven days",
-  "phonetic": "shavu'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shavu'a"
  },
  {
   "path": "audio/f/sephardi/word/h92151b55.mp3",
@@ -50423,10 +50108,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "second",
-  "phonetic": "sheni",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sheni"
  },
  {
   "path": "audio/f/sephardi/word/h42410d5e.mp3",
@@ -50488,10 +50170,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Egyptian (person); Egyptian",
-  "phonetic": "mitzri",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mitzri"
  },
  {
   "path": "audio/f/sephardi/word/h5ad2503a.mp3",
@@ -50519,10 +50198,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "charity; tzedakah; righteousness",
-  "phonetic": "tzedakah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzedakah"
  },
  {
   "path": "audio/f/sephardi/word/h967f68e9.mp3",
@@ -50550,10 +50226,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "right, straight; right, correct (complying with justice); honestly, straightforwardly, forthrightly",
-  "phonetic": "yashar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yashar"
  },
  {
   "path": "audio/f/sephardi/word/h38dc1dcd.mp3",
@@ -50581,10 +50254,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "arithmetic, mathematics; a bill, a check; an account",
-  "phonetic": "cheshbon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "cheshbon"
  },
  {
   "path": "audio/f/sephardi/word/h64706707.mp3",
@@ -50612,10 +50282,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "shekel, the name of Israel's currency unit since 24 February 1980",
-  "phonetic": "shekel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shekel"
  },
  {
   "path": "audio/f/sephardi/word/h90377d47.mp3",
@@ -50711,10 +50378,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Hot",
-  "phonetic": "cham",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "cham"
  },
  {
   "path": "audio/f/sephardi/word/h5c2548dc.mp3",
@@ -50742,10 +50406,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "can, to be able to",
-  "phonetic": "yakhol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yakhol"
  },
  {
   "path": "audio/f/sephardi/word/h5aed8aaa.mp3",
@@ -50773,10 +50434,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to read; to call; to crow",
-  "phonetic": "kara",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kara"
  },
  {
   "path": "audio/f/sephardi/word/h8ff6123b.mp3",
@@ -50804,10 +50462,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to eat; to consume, to use up; to devour, to eat up",
-  "phonetic": "akhal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "akhal"
  },
  {
   "path": "audio/f/sephardi/word/h11b691b9.mp3",
@@ -50835,10 +50490,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "child, a kid, a boy",
-  "phonetic": "yeled",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yeled"
  },
  {
   "path": "audio/f/sephardi/word/h1301ecc3.mp3",
@@ -50934,10 +50586,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bad; evil, wicked; an evil, trouble",
-  "phonetic": "ra",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ra"
  },
  {
   "path": "audio/f/sephardi/word/h3e375762.mp3",
@@ -50965,10 +50614,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cold",
-  "phonetic": "kar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kar"
  },
  {
   "path": "audio/f/sephardi/word/h35a8fcbe.mp3",
@@ -50996,10 +50642,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "flesh, meat; body, person; male genitals",
-  "phonetic": "basar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "basar"
  },
  {
   "path": "audio/f/sephardi/word/h5b57ed79.mp3",
@@ -51027,10 +50670,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to apply (of a law, method, etc.); to fall on, to occur, to take place (of an event); to wait",
-  "phonetic": "chal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chal"
  },
  {
   "path": "audio/f/sephardi/word/h58023e1f.mp3",
@@ -51086,10 +50726,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sick person; sick, ill",
-  "phonetic": "choleh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "choleh"
  },
  {
   "path": "audio/f/sephardi/word/h8123d4c2.mp3",
@@ -51151,10 +50788,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "really, in truth; Really?",
-  "phonetic": "be'emet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "be'emet"
  },
  {
   "path": "audio/f/sephardi/word/h5658dbbe.mp3",
@@ -51182,10 +50816,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "holiday; any of Passover, Shavuot, Sukkot, or Shemini Atzeret",
-  "phonetic": "chag",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chag"
  },
  {
   "path": "audio/f/sephardi/word/h81fd04d9.mp3",
@@ -51247,10 +50878,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "far, distant",
-  "phonetic": "rachok",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rachok"
  },
  {
   "path": "audio/f/sephardi/word/h372b7277.mp3",
@@ -51278,10 +50906,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "far",
-  "phonetic": "rachok",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rachok"
  },
  {
   "path": "audio/f/sephardi/word/h1f23dde2.mp3",
@@ -51309,10 +50934,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "marine, of the sea",
-  "phonetic": "yami",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yami"
  },
  {
   "path": "audio/f/sephardi/word/h40319b13.mp3",
@@ -51340,10 +50962,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "son; a direct male descendant; a guy, a boy",
-  "phonetic": "ben",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ben"
  },
  {
   "path": "audio/f/sephardi/word/h4aa6ad2a.mp3",
@@ -51371,10 +50990,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to walk, go, especially on foot; to happen, go on; to go away, depart",
-  "phonetic": "halakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "halakh"
  },
  {
   "path": "audio/f/sephardi/word/h81e8c0d1.mp3",
@@ -51402,10 +51018,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "here, at this place",
-  "phonetic": "kan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kan"
  },
  {
   "path": "audio/f/sephardi/word/h64c48ca3.mp3",
@@ -51433,10 +51046,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "arm; hand; forelimb (anterior limb)",
-  "phonetic": "yad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yad"
  },
  {
   "path": "audio/f/sephardi/word/h1a3574d3.mp3",
@@ -51464,10 +51074,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to precede, to come before",
-  "phonetic": "kadam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kadam"
  },
  {
   "path": "audio/f/sephardi/word/h3fbb59c8.mp3",
@@ -51529,10 +51136,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to return; to repent",
-  "phonetic": "shav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shav"
  },
  {
   "path": "audio/f/sephardi/word/h842147e5.mp3",
@@ -51622,10 +51226,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an end, a finish",
-  "phonetic": "sof",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sof"
  },
  {
   "path": "audio/f/sephardi/word/h2d1e4a74.mp3",
@@ -51687,10 +51288,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "now",
-  "phonetic": "atah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "atah"
  },
  {
   "path": "audio/f/sephardi/word/h8453bf6a.mp3",
@@ -51718,10 +51316,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to write",
-  "phonetic": "katav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "katav"
  },
  {
   "path": "audio/f/sephardi/word/h5d30bc42.mp3",
@@ -51783,10 +51378,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "seed; semen; offspring, descendants, scions",
-  "phonetic": "zera",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zera"
  },
  {
   "path": "audio/f/sephardi/word/h2f9c8fe9.mp3",
@@ -51814,10 +51406,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to penetrate, imbue, infuse; to invade",
-  "phonetic": "chadar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chadar"
  },
  {
   "path": "audio/f/sephardi/word/h3d1c89af.mp3",
@@ -51879,10 +51468,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a body; a corps, an organisation, an institution (group of people); an element",
-  "phonetic": "guf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "guf"
  },
  {
   "path": "audio/f/sephardi/word/h6c2b8669.mp3",
@@ -51944,10 +51530,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "red",
-  "phonetic": "adom",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "adom"
  },
  {
   "path": "audio/f/sephardi/word/h3398235f.mp3",
@@ -52043,10 +51626,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "together",
-  "phonetic": "yachdav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yachdav"
  },
  {
   "path": "audio/f/sephardi/word/h355e67cb.mp3",
@@ -52074,10 +51654,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Happy, content",
-  "phonetic": "me'ushar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "me'ushar"
  },
  {
   "path": "audio/f/sephardi/word/h8633259a.mp3",
@@ -52105,10 +51682,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "thus (in this way, like so)",
-  "phonetic": "kakhah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kakhah"
  },
  {
   "path": "audio/f/sephardi/word/h3777d988.mp3",
@@ -52136,10 +51710,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "memory; a memory; memory, computer memory",
-  "phonetic": "zikaron",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zikaron"
  },
  {
   "path": "audio/f/sephardi/word/h725d19e2.mp3",
@@ -52269,10 +51840,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Jew, Jewish person; Jewish; Judahite",
-  "phonetic": "yehudi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yehudi"
  },
  {
   "path": "audio/f/sephardi/word/h1999d835.mp3",
@@ -52300,10 +51868,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pine tree",
-  "phonetic": "oren",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "oren"
  },
  {
   "path": "audio/f/sephardi/word/h8d837a2a.mp3",
@@ -52331,10 +51896,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "of, belonging to, owned by, pertaining to",
-  "phonetic": "shel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shel"
  },
  {
   "path": "audio/f/sephardi/word/h32c69c06.mp3",
@@ -52430,10 +51992,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "until, till, up until (a time); by (a time); to",
-  "phonetic": "ad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ad"
  },
  {
   "path": "audio/f/sephardi/word/h46f7979e.mp3",
@@ -52495,10 +52054,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to take (grasp with the hands); to take (carry somewhere, remove); to take (get possession of)",
-  "phonetic": "lakach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lakach"
  },
  {
   "path": "audio/f/sephardi/word/h4f9b4058.mp3",
@@ -52526,10 +52082,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a time; a step, a footstep, a pace; a stroke, a beat, as a heartbeat",
-  "phonetic": "pa'am",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pa'am"
  },
  {
   "path": "audio/f/sephardi/word/h00fd9c4f.mp3",
@@ -52557,10 +52110,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "also, too, additionally; also, additionally, in addition, further, besides, on top of that; even (though, if)",
-  "phonetic": "gam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gam"
  },
  {
   "path": "audio/f/sephardi/word/h04c271fe.mp3",
@@ -52820,10 +52370,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to flow as water (that is, to rain); to lay or throw",
-  "phonetic": "yarah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yarah"
  },
  {
   "path": "audio/f/sephardi/word/h448b5d1a.mp3",
@@ -52851,10 +52398,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "tooth; clove (piece of garlic)",
-  "phonetic": "shen",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shen"
  },
  {
   "path": "audio/f/sephardi/word/h85ac8666.mp3",
@@ -52882,10 +52426,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to use, to make use of",
-  "phonetic": "hishtamesh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hishtamesh"
  },
  {
   "path": "audio/f/sephardi/word/h326c520d.mp3",
@@ -52941,10 +52482,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to pull; to stretch, to extend",
-  "phonetic": "mashakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mashakh"
  },
  {
   "path": "audio/f/sephardi/word/h7efc375e.mp3",
@@ -53074,10 +52612,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "how; the manner in which, the way how; way, manner (followed by שֶׁ־)",
-  "phonetic": "eikh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "eikh"
  },
  {
   "path": "audio/f/sephardi/word/h84e47f20.mp3",
@@ -53105,10 +52640,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be sated; to be satisfied",
-  "phonetic": "sava",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sava"
  },
  {
   "path": "audio/f/sephardi/word/h264da105.mp3",
@@ -53136,10 +52668,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a shape, a situation, a state",
-  "phonetic": "matzav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "matzav"
  },
  {
   "path": "audio/f/sephardi/word/h524e52f1.mp3",
@@ -53167,10 +52696,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to win (in a game, an election, or the like); to beat (someone), to defeat (someone) (in a game, an election, or the like)",
-  "phonetic": "nitzeach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nitzeach"
  },
  {
   "path": "audio/f/sephardi/word/h35fcbc75.mp3",
@@ -53198,10 +52724,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sending, commission; occupation, business; handicrafts",
-  "phonetic": "melakhah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "melakhah"
  },
  {
   "path": "audio/f/sephardi/word/h75485886.mp3",
@@ -53297,10 +52820,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "worship, service; work, job, labor; work",
-  "phonetic": "avodah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avodah"
  },
  {
   "path": "audio/f/sephardi/word/h7e5cc0c5.mp3",
@@ -53328,10 +52848,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "yesterday",
-  "phonetic": "etmol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "etmol"
  },
  {
   "path": "audio/f/sephardi/word/h1b39a6b6.mp3",
@@ -53359,10 +52876,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "chelev; the best part (of something)",
-  "phonetic": "chelev",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chelev"
  },
  {
   "path": "audio/f/sephardi/word/h01ebb4ee.mp3",
@@ -53458,10 +52972,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "air",
-  "phonetic": "avir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avir"
  },
  {
   "path": "audio/f/sephardi/word/h5dbeb151.mp3",
@@ -53489,10 +53000,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to swap, exchange, change; to grow new branches; to change one's mind",
-  "phonetic": "hechlif",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hechlif"
  },
  {
   "path": "audio/f/sephardi/word/h8f0ac707.mp3",
@@ -53520,10 +53028,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hunger",
-  "phonetic": "ra'av",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ra'av"
  },
  {
   "path": "audio/f/sephardi/word/h10354ca3.mp3",
@@ -53551,10 +53056,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a turn; an appointment; period",
-  "phonetic": "tor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tor"
  },
  {
   "path": "audio/f/sephardi/word/h87abbddd.mp3",
@@ -53582,10 +53084,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "again",
-  "phonetic": "shuv",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shuv"
  },
  {
   "path": "audio/f/sephardi/word/h99a070bb.mp3",
@@ -53613,10 +53112,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "darkness; evil, forces of darkness",
-  "phonetic": "choshekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "choshekh"
  },
  {
   "path": "audio/f/sephardi/word/h82e76dfb.mp3",
@@ -53712,10 +53208,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "queen (female monarch); queen",
-  "phonetic": "malkah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "malkah"
  },
  {
   "path": "audio/f/sephardi/word/h571c298a.mp3",
@@ -53805,10 +53298,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "tasty (having a pleasant taste)",
-  "phonetic": "ta'im",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ta'im"
  },
  {
   "path": "audio/f/sephardi/word/h99bdff0e.mp3",
@@ -53870,10 +53360,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to see, to have vision; to observe, look at",
-  "phonetic": "ra'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ra'ah"
  },
  {
   "path": "audio/f/sephardi/word/h28ecb454.mp3",
@@ -53901,10 +53388,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "needing, in need of (something)",
-  "phonetic": "tzarikh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzarikh"
  },
  {
   "path": "audio/f/sephardi/word/h4b81aad7.mp3",
@@ -53932,10 +53416,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "or; either",
-  "phonetic": "o",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "o"
  },
  {
   "path": "audio/f/sephardi/word/h8ba0beaa.mp3",
@@ -54099,10 +53580,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to guard; to keep; to save",
-  "phonetic": "shamar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shamar"
  },
  {
   "path": "audio/f/sephardi/word/h19eb6a83.mp3",
@@ -54130,10 +53608,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rise, stand up; to become in charge; to remain valid",
-  "phonetic": "kam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kam"
  },
  {
   "path": "audio/f/sephardi/word/h7ef1471c.mp3",
@@ -54161,10 +53636,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "always, regularly",
-  "phonetic": "tamid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tamid"
  },
  {
   "path": "audio/f/sephardi/word/h749f736f.mp3",
@@ -54226,10 +53698,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mouth",
-  "phonetic": "peh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "peh"
  },
  {
   "path": "audio/f/sephardi/word/h60b16793.mp3",
@@ -54257,10 +53726,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "silver; money",
-  "phonetic": "kesef",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kesef"
  },
  {
   "path": "audio/f/sephardi/word/h215beb3e.mp3",
@@ -54322,10 +53788,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mother",
-  "phonetic": "ima",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ima"
  },
  {
   "path": "audio/f/sephardi/word/h1306c935.mp3",
@@ -54523,10 +53986,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "three",
-  "phonetic": "sheloshah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sheloshah"
  },
  {
   "path": "audio/f/sephardi/word/h3dfe9831.mp3",
@@ -54588,10 +54048,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "individual; private individual, private owner; singular",
-  "phonetic": "yachid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yachid"
  },
  {
   "path": "audio/f/sephardi/word/h1c9d2f5e.mp3",
@@ -54619,10 +54076,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "door (portal of entry)",
-  "phonetic": "delet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "delet"
  },
  {
   "path": "audio/f/sephardi/word/h80c0273d.mp3",
@@ -54650,10 +54104,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "whither",
-  "phonetic": "le'an",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "le'an"
  },
  {
   "path": "audio/f/sephardi/word/h79df22f0.mp3",
@@ -54709,10 +54160,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to sort",
-  "phonetic": "miyen",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "miyen"
  },
  {
   "path": "audio/f/sephardi/word/h60dd9be7.mp3",
@@ -54740,10 +54188,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "someone who is evil, wicked; criminal",
-  "phonetic": "rasha",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rasha"
  },
  {
   "path": "audio/f/sephardi/word/h3ed1bb74.mp3",
@@ -54805,10 +54250,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "astrological sign; luck, chance, fortune; luck, good luck, good fortune",
-  "phonetic": "mazal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mazal"
  },
  {
   "path": "audio/f/sephardi/word/h66ce9ca4.mp3",
@@ -54836,10 +54278,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to learn, to study",
-  "phonetic": "lamad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lamad"
  },
  {
   "path": "audio/f/sephardi/word/h10798813.mp3",
@@ -54867,10 +54306,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stay overnight (at a hotel or other lodging)",
-  "phonetic": "lan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lan"
  },
  {
   "path": "audio/f/sephardi/word/h4fa970c1.mp3",
@@ -54898,10 +54334,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to disappear",
-  "phonetic": "ne'elam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ne'elam"
  },
  {
   "path": "audio/f/sephardi/word/h012c72d5.mp3",
@@ -54963,10 +54396,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to investigate, to research, to study",
-  "phonetic": "chakar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chakar"
  },
  {
   "path": "audio/f/sephardi/word/h80a03385.mp3",
@@ -55062,10 +54492,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to become sick, to be ill",
-  "phonetic": "chalah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chalah"
  },
  {
   "path": "audio/f/sephardi/word/h3e4e6cff.mp3",
@@ -55127,10 +54554,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "maidservant, female slave, maid, handmaid",
-  "phonetic": "shifchah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shifchah"
  },
  {
   "path": "audio/f/sephardi/word/h2a0d492e.mp3",
@@ -55158,10 +54582,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "saintly, pious; righteous; tzaddik",
-  "phonetic": "tzadik",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzadik"
  },
  {
   "path": "audio/f/sephardi/word/h4bff7a16.mp3",
@@ -55189,10 +54610,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sister; nurse",
-  "phonetic": "achot",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "achot"
  },
  {
   "path": "audio/f/sephardi/word/h18108dff.mp3",
@@ -55322,10 +54740,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "alien, foreigner; foreign",
-  "phonetic": "zar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zar"
  },
  {
   "path": "audio/f/sephardi/word/h3b09d299.mp3",
@@ -55387,10 +54802,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "corps; army; valiance, valor, virtue",
-  "phonetic": "chayil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chayil"
  },
  {
   "path": "audio/f/sephardi/word/h620aed09.mp3",
@@ -55418,10 +54830,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Exceptional",
-  "phonetic": "metzuyan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "metzuyan"
  },
  {
   "path": "audio/f/sephardi/word/h37034142.mp3",
@@ -55449,10 +54858,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a delay",
-  "phonetic": "ichur",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ichur"
  },
  {
   "path": "audio/f/sephardi/word/h0edcb196.mp3",
@@ -55480,10 +54886,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ibex",
-  "phonetic": "ya'el",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ya'el"
  },
  {
   "path": "audio/f/sephardi/word/h95d75fdd.mp3",
@@ -55573,10 +54976,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cute, sweet, charming",
-  "phonetic": "chamud",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chamud"
  },
  {
   "path": "audio/f/sephardi/word/h4105e713.mp3",
@@ -55604,10 +55004,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an end, a finish",
-  "phonetic": "ketz",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ketz"
  },
  {
   "path": "audio/f/sephardi/word/h0849ff56.mp3",
@@ -55635,10 +55032,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "rope; clothesline",
-  "phonetic": "chevel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chevel"
  },
  {
   "path": "audio/f/sephardi/word/h9d27e0b4.mp3",
@@ -55734,10 +55128,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "if, whether; in case, if; or",
-  "phonetic": "im",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "im"
  },
  {
   "path": "audio/f/sephardi/word/h0f231144.mp3",
@@ -55765,10 +55156,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to think",
-  "phonetic": "chashav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chashav"
  },
  {
   "path": "audio/f/sephardi/word/h93bb64ad.mp3",
@@ -55796,10 +55184,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "only; however, nonetheless; indeed, truly",
-  "phonetic": "rak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rak"
  },
  {
   "path": "audio/f/sephardi/word/h9ea65725.mp3",
@@ -55861,10 +55246,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "that; such, so, thus, in this way, in that way",
-  "phonetic": "kakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kakh"
  },
  {
   "path": "audio/f/sephardi/word/h8875eeda.mp3",
@@ -55892,10 +55274,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to love",
-  "phonetic": "ahav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ahav"
  },
  {
   "path": "audio/f/sephardi/word/h1b96f9f4.mp3",
@@ -55957,10 +55336,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to return; to repeat",
-  "phonetic": "chazar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chazar"
  },
  {
   "path": "audio/f/sephardi/word/h320463c0.mp3",
@@ -55988,10 +55364,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "from, of, from inside; Than, more than; without, without the existence or presence of",
-  "phonetic": "mi-",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mi-"
  },
  {
   "path": "audio/f/sephardi/word/h2adc4b80.mp3",
@@ -56019,10 +55392,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a slave, a serf; a servant, a worshipper (of God)",
-  "phonetic": "eved",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "eved"
  },
  {
   "path": "audio/f/sephardi/word/h1414a3a2.mp3",
@@ -56050,10 +55420,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "something; anything",
-  "phonetic": "mashehu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mashehu"
  },
  {
   "path": "audio/f/sephardi/word/h92e1aa5f.mp3",
@@ -56081,10 +55448,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to come out, come away; to come out, result, be produced; to come out, turn out to be",
-  "phonetic": "yatza",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yatza"
  },
  {
   "path": "audio/f/sephardi/word/h5b39e0f1.mp3",
@@ -56112,10 +55476,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bone; a thing, object; gist, essence",
-  "phonetic": "etzem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "etzem"
  },
  {
   "path": "audio/f/sephardi/word/h788c5f0a.mp3",
@@ -56143,10 +55504,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "very, quite",
-  "phonetic": "me'od",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "me'od"
  },
  {
   "path": "audio/f/sephardi/word/h81024165.mp3",
@@ -56174,10 +55532,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be sorry, remorseful",
-  "phonetic": "hitzta'er",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitzta'er"
  },
  {
   "path": "audio/f/sephardi/word/h69ab7cef.mp3",
@@ -56369,10 +55724,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to feel, sense",
-  "phonetic": "hirgish",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hirgish"
  },
  {
   "path": "audio/f/sephardi/word/h511bbb6f.mp3",
@@ -56434,10 +55786,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to bewail",
-  "phonetic": "aval",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "aval"
  },
  {
   "path": "audio/f/sephardi/word/h95fec412.mp3",
@@ -56465,10 +55814,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "heart; heart, core, center; heart (a heart-shape)",
-  "phonetic": "lev",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lev"
  },
  {
   "path": "audio/f/sephardi/word/h890d1505.mp3",
@@ -56496,10 +55842,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "everyone",
-  "phonetic": "kulam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kulam"
  },
  {
   "path": "audio/f/sephardi/word/h14eb0d0c.mp3",
@@ -56561,10 +55904,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to contend, dispute",
-  "phonetic": "rav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rav"
  },
  {
   "path": "audio/f/sephardi/word/h8dcac995.mp3",
@@ -56660,10 +56000,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "simply (merely)",
-  "phonetic": "pashut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pashut"
  },
  {
   "path": "audio/f/sephardi/word/h88b16213.mp3",
@@ -56691,10 +56028,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gold (metal); gold",
-  "phonetic": "zahav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zahav"
  },
  {
   "path": "audio/f/sephardi/word/h761c6cb9.mp3",
@@ -56722,10 +56056,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to go down, descend; to go down, decline, decrease; to criticize, lambaste, roast [with על (al) ‘on’]",
-  "phonetic": "yarad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yarad"
  },
  {
   "path": "audio/f/sephardi/word/h3f2d70f7.mp3",
@@ -56753,10 +56084,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to command",
-  "phonetic": "tzivah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzivah"
  },
  {
   "path": "audio/f/sephardi/word/h7a29d871.mp3",
@@ -56846,10 +56174,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fully burnt offering",
-  "phonetic": "olah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "olah"
  },
  {
   "path": "audio/f/sephardi/word/h15d39df8.mp3",
@@ -56877,10 +56202,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "many, much; Great; Enough",
-  "phonetic": "rav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rav"
  },
  {
   "path": "audio/f/sephardi/word/h31e27ee8.mp3",
@@ -56908,10 +56230,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to organize, manage, handle, arrange, set up; to formulate, draw up; to lead (a ceremony)",
-  "phonetic": "arakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "arakh"
  },
  {
   "path": "audio/f/sephardi/word/h31c26fec.mp3",
@@ -56939,10 +56258,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "nose; the region of the nose, the face; nostril",
-  "phonetic": "af",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "af"
  },
  {
   "path": "audio/f/sephardi/word/h21e009ad.mp3",
@@ -56970,10 +56286,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "voice; sound (see also צליל); vote",
-  "phonetic": "kol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kol"
  },
  {
   "path": "audio/f/sephardi/word/h640d9686.mp3",
@@ -57057,10 +56370,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to look at",
-  "phonetic": "histakel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "histakel"
  },
  {
   "path": "audio/f/sephardi/word/h41683f4b.mp3",
@@ -57088,10 +56398,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "simple; plain",
-  "phonetic": "pashut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pashut"
  },
  {
   "path": "audio/f/sephardi/word/h1a07a738.mp3",
@@ -57119,10 +56426,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "little, small, diminutive",
-  "phonetic": "katan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "katan"
  },
  {
   "path": "audio/f/sephardi/word/h7be38218.mp3",
@@ -57184,10 +56488,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "you, y'all, you guys",
-  "phonetic": "atem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "atem"
  },
  {
   "path": "audio/f/sephardi/word/h5ed3483f.mp3",
@@ -57249,10 +56550,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "confident, sure, certain",
-  "phonetic": "batuach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "batuach"
  },
  {
   "path": "audio/f/sephardi/word/h5f280d64.mp3",
@@ -57280,10 +56578,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to give up (on)",
-  "phonetic": "viter",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "viter"
  },
  {
   "path": "audio/f/sephardi/word/h3e8123a0.mp3",
@@ -57345,10 +56640,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "car",
-  "phonetic": "mekhonit",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mekhonit"
  },
  {
   "path": "audio/f/sephardi/word/h5fc50b7a.mp3",
@@ -57376,10 +56668,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "meal",
-  "phonetic": "aruchah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "aruchah"
  },
  {
   "path": "audio/f/sephardi/word/h6b636d7b.mp3",
@@ -57503,10 +56792,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to do something out of habit or custom; to be customary; to behave (in a particular way)",
-  "phonetic": "nahag",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nahag"
  },
  {
   "path": "audio/f/sephardi/word/h4ec736eb.mp3",
@@ -57534,10 +56820,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to gather, to collect; to take, to gather to oneself; to pick up, to collect",
-  "phonetic": "asaf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "asaf"
  },
  {
   "path": "audio/f/sephardi/word/h5eb1d4fa.mp3",
@@ -57565,10 +56848,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "old person; elder, sage; grandfather",
-  "phonetic": "zaken",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zaken"
  },
  {
   "path": "audio/f/sephardi/word/h5fa9ade9.mp3",
@@ -57630,10 +56910,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "dollar",
-  "phonetic": "dolar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dolar"
  },
  {
   "path": "audio/f/sephardi/word/h845d92fd.mp3",
@@ -57695,10 +56972,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cow, heifer",
-  "phonetic": "parah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "parah"
  },
  {
   "path": "audio/f/sephardi/word/h80d6f3f0.mp3",
@@ -57726,10 +57000,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to manage",
-  "phonetic": "nihel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nihel"
  },
  {
   "path": "audio/f/sephardi/word/h08c10040.mp3",
@@ -57757,10 +57028,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to count; to visit, befall, remember; to muster troops, to assemble, to summon",
-  "phonetic": "pakad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pakad"
  },
  {
   "path": "audio/f/sephardi/word/h950019e4.mp3",
@@ -57850,10 +57118,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stop (a pipe or opening), to stop up, clog, to close or seal; to block; to stuff oneself",
-  "phonetic": "satam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "satam"
  },
  {
   "path": "audio/f/sephardi/word/h01c48de6.mp3",
@@ -57881,10 +57146,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "photograph, photo, picture; image",
-  "phonetic": "temunah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "temunah"
  },
  {
   "path": "audio/f/sephardi/word/h08e1b712.mp3",
@@ -57946,10 +57208,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to steal",
-  "phonetic": "ganav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ganav"
  },
  {
   "path": "audio/f/sephardi/word/h3f5ee27e.mp3",
@@ -57977,10 +57236,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "against; opposite",
-  "phonetic": "neged",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "neged"
  },
  {
   "path": "audio/f/sephardi/word/h5965e00c.mp3",
@@ -58008,10 +57264,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cloud",
-  "phonetic": "anan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "anan"
  },
  {
   "path": "audio/f/sephardi/word/h770abeb5.mp3",
@@ -58107,10 +57360,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "street; open square, market",
-  "phonetic": "rechov",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rechov"
  },
  {
   "path": "audio/f/sephardi/word/h18b1e15c.mp3",
@@ -58138,10 +57388,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to hurry; to be fast (of a watch)",
-  "phonetic": "miher",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "miher"
  },
  {
   "path": "audio/f/sephardi/word/h1ce30358.mp3",
@@ -58203,10 +57450,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "high, important; loud",
-  "phonetic": "ram",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ram"
  },
  {
   "path": "audio/f/sephardi/word/h346f78ec.mp3",
@@ -58234,10 +57478,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "better, preferable",
-  "phonetic": "adif",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "adif"
  },
  {
   "path": "audio/f/sephardi/word/h899d2134.mp3",
@@ -58265,10 +57506,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "warfare, war; a war; a battle",
-  "phonetic": "milchamah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "milchamah"
  },
  {
   "path": "audio/f/sephardi/word/h8e236dac.mp3",
@@ -58330,10 +57568,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rejoice, be happy",
-  "phonetic": "sas",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sas"
  },
  {
   "path": "audio/f/sephardi/word/h731d1356.mp3",
@@ -58463,10 +57698,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "star; relating to fame",
-  "phonetic": "kokhav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kokhav"
  },
  {
   "path": "audio/f/sephardi/word/h233af6f2.mp3",
@@ -58494,10 +57726,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "line; bus line",
-  "phonetic": "kav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kav"
  },
  {
   "path": "audio/f/sephardi/word/h7f894a5c.mp3",
@@ -58525,10 +57754,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Noon, midday",
-  "phonetic": "tzohorayim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzohorayim"
  },
  {
   "path": "audio/f/sephardi/word/h25aa368e.mp3",
@@ -58556,10 +57782,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "regular, usual; used to; usual, norm",
-  "phonetic": "ragil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ragil"
  },
  {
   "path": "audio/f/sephardi/word/h1a8a7259.mp3",
@@ -58587,10 +57810,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "audience; public, community; clientele",
-  "phonetic": "kahal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kahal"
  },
  {
   "path": "audio/f/sephardi/word/h679e72c6.mp3",
@@ -58652,10 +57872,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be left, to remain",
-  "phonetic": "notar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "notar"
  },
  {
   "path": "audio/f/sephardi/word/h3a789358.mp3",
@@ -58785,10 +58002,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "medicine, medication, medicament, drug",
-  "phonetic": "terufah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "terufah"
  },
  {
   "path": "audio/f/sephardi/word/h0047024c.mp3",
@@ -58850,10 +58064,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "doctor",
-  "phonetic": "doketor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "doketor"
  },
  {
   "path": "audio/f/sephardi/word/h565b3652.mp3",
@@ -58881,10 +58092,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "client; customer",
-  "phonetic": "lakoach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lakoach"
  },
  {
   "path": "audio/f/sephardi/word/h731dbce2.mp3",
@@ -58912,10 +58120,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "humid; moist, damp",
-  "phonetic": "lach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lach"
  },
  {
   "path": "audio/f/sephardi/word/h263f168c.mp3",
@@ -58977,10 +58182,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an examination, check-up, test, trial",
-  "phonetic": "bedikah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bedikah"
  },
  {
   "path": "audio/f/sephardi/word/h33f66dda.mp3",
@@ -59110,10 +58312,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "abdomen, belly",
-  "phonetic": "beten",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "beten"
  },
  {
   "path": "audio/f/sephardi/word/h06f78f5d.mp3",
@@ -59141,10 +58340,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "wall",
-  "phonetic": "kir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kir"
  },
  {
   "path": "audio/f/sephardi/word/h1c0ffa13.mp3",
@@ -59172,10 +58368,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "matzo, unleavened bread; dispute, quarrel, strife",
-  "phonetic": "matzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "matzah"
  },
  {
   "path": "audio/f/sephardi/word/h4ebf1a3c.mp3",
@@ -59271,10 +58464,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a window; a free period",
-  "phonetic": "chalon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chalon"
  },
  {
   "path": "audio/f/sephardi/word/h495d2c04.mp3",
@@ -59302,10 +58492,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a base",
-  "phonetic": "basis",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "basis"
  },
  {
   "path": "audio/f/sephardi/word/h37908437.mp3",
@@ -59367,10 +58554,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "restaurant",
-  "phonetic": "mis'adah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mis'adah"
  },
  {
   "path": "audio/f/sephardi/word/h6d121ed3.mp3",
@@ -59398,10 +58582,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Broken; Broken, dead",
-  "phonetic": "shavur",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shavur"
  },
  {
   "path": "audio/f/sephardi/word/h28d30511.mp3",
@@ -59531,10 +58712,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lamb, kid (young of Caprinae)",
-  "phonetic": "seh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "seh"
  },
  {
   "path": "audio/f/sephardi/word/h93f568f7.mp3",
@@ -59800,10 +58978,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to die; to be crazy or mad about something",
-  "phonetic": "met",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "met"
  },
  {
   "path": "audio/f/sephardi/word/h24f17330.mp3",
@@ -59865,10 +59040,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to direct (as traffic)",
-  "phonetic": "kiven",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kiven"
  },
  {
   "path": "audio/f/sephardi/word/h22a20328.mp3",
@@ -59896,10 +59068,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to pass, to cross; to pass; to spend, to pass",
-  "phonetic": "avar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avar"
  },
  {
   "path": "audio/f/sephardi/word/h1561ca15.mp3",
@@ -59961,10 +59130,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "eye; spring, fountain",
-  "phonetic": "ayin",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ayin"
  },
  {
   "path": "audio/f/sephardi/word/h9d6352ee.mp3",
@@ -59992,10 +59158,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to select, to pick, to sort",
-  "phonetic": "barar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "barar"
  },
  {
   "path": "audio/f/sephardi/word/h8d0e13f2.mp3",
@@ -60091,10 +59254,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stay, spend (time); to delay, be late, tarry",
-  "phonetic": "shahah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shahah"
  },
  {
   "path": "audio/f/sephardi/word/h139c94a9.mp3",
@@ -60122,10 +59282,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "base, pedestal, socket",
-  "phonetic": "eden",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "eden"
  },
  {
   "path": "audio/f/sephardi/word/h36fae7b2.mp3",
@@ -60153,10 +59310,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to shape",
-  "phonetic": "tzar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzar"
  },
  {
   "path": "audio/f/sephardi/word/h1797f84f.mp3",
@@ -60184,10 +59338,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hard (resistant to pressure); hard (difficult); hard",
-  "phonetic": "kasheh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kasheh"
  },
  {
   "path": "audio/f/sephardi/word/h29ebe493.mp3",
@@ -60283,10 +59434,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "place (location or position); place, stead, lieu; the Omnipresent, God",
-  "phonetic": "makom",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "makom"
  },
  {
   "path": "audio/f/sephardi/word/h342fd0de.mp3",
@@ -60314,10 +59462,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "for, for the sake of, for the benefit of, in order for",
-  "phonetic": "bishvil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bishvil"
  },
  {
   "path": "audio/f/sephardi/word/h4d5ad9e4.mp3",
@@ -60481,10 +59626,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to start, to begin; to hit on someone, make a move",
-  "phonetic": "hitchil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitchil"
  },
  {
   "path": "audio/f/sephardi/word/h0fc2ca76.mp3",
@@ -60512,10 +59654,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "thus, in this way",
-  "phonetic": "koh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "koh"
  },
  {
   "path": "audio/f/sephardi/word/h352b83f7.mp3",
@@ -60543,10 +59682,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to contain",
-  "phonetic": "hekhil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hekhil"
  },
  {
   "path": "audio/f/sephardi/word/h13c6683f.mp3",
@@ -60608,10 +59744,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "forearm; Hebrew cubit, usually 44.3 cm; middle finger",
-  "phonetic": "amah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "amah"
  },
  {
   "path": "audio/f/sephardi/word/h720b8d19.mp3",
@@ -60639,10 +59772,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a collective term for all that covers a dead body or that a dead body covers; ohel",
-  "phonetic": "ohel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ohel"
  },
  {
   "path": "audio/f/sephardi/word/h3c9f9b9b.mp3",
@@ -60704,10 +59834,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "someone, somebody; anyone, anybody",
-  "phonetic": "mishehu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mishehu"
  },
  {
   "path": "audio/f/sephardi/word/h0faf39fb.mp3",
@@ -60735,10 +59862,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to pause",
-  "phonetic": "damam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "damam"
  },
  {
   "path": "audio/f/sephardi/word/h0aeb9756.mp3",
@@ -60766,10 +59890,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "this, this one; this",
-  "phonetic": "zo",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zo"
  },
  {
   "path": "audio/f/sephardi/word/h7494d535.mp3",
@@ -60865,10 +59986,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to recognize (a country or legal entity)",
-  "phonetic": "hikir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hikir"
  },
  {
   "path": "audio/f/sephardi/word/h131877e3.mp3",
@@ -60896,10 +60014,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "gentile (a non-Jewish person), goy; a nation; a nation other than Israel",
-  "phonetic": "goy",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "goy"
  },
  {
   "path": "audio/f/sephardi/word/h3b32dc48.mp3",
@@ -60927,10 +60042,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be informed; to be made definite, to be put into definite form",
-  "phonetic": "yuda",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yuda"
  },
  {
   "path": "audio/f/sephardi/word/h0e071b5c.mp3",
@@ -60958,10 +60070,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "even",
-  "phonetic": "afilu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "afilu"
  },
  {
   "path": "audio/f/sephardi/word/h97be2e78.mp3",
@@ -60989,10 +60098,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pharaoh",
-  "phonetic": "par'oh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "par'oh"
  },
  {
   "path": "audio/f/sephardi/word/h0073b076.mp3",
@@ -61020,10 +60126,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to believe",
-  "phonetic": "he'emin",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "he'emin"
  },
  {
   "path": "audio/f/sephardi/word/h26a32615.mp3",
@@ -61085,10 +60188,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to stop, to cease, to desist, to terminate",
-  "phonetic": "hifsik",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hifsik"
  },
  {
   "path": "audio/f/sephardi/word/h5d60ac4a.mp3",
@@ -61150,10 +60250,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "last (final); one of the Acharonim, modern sages of Jewish law",
-  "phonetic": "acharon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "acharon"
  },
  {
   "path": "audio/f/sephardi/word/h6bc4e030.mp3",
@@ -61181,10 +60278,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "interest, something one finds interesting; matter, issue; business",
-  "phonetic": "inyan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "inyan"
  },
  {
   "path": "audio/f/sephardi/word/h23fb4faa.mp3",
@@ -61212,10 +60306,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an interrogative particle, introducing a yes-no question",
-  "phonetic": "ha-",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ha-"
  },
  {
   "path": "audio/f/sephardi/word/h432cf2d0.mp3",
@@ -61413,10 +60504,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fabric, cloth, linen; screen (film or television); liars",
-  "phonetic": "bad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bad"
  },
  {
   "path": "audio/f/sephardi/word/h2b39dcf2.mp3",
@@ -61444,10 +60532,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to tie, link together; to relate, associate; to conspire",
-  "phonetic": "kashar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kashar"
  },
  {
   "path": "audio/f/sephardi/word/h524464c5.mp3",
@@ -61509,10 +60594,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to succeed",
-  "phonetic": "hitzliach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitzliach"
  },
  {
   "path": "audio/f/sephardi/word/h07f9e1d9.mp3",
@@ -61642,10 +60724,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to meet",
-  "phonetic": "pagash",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pagash"
  },
  {
   "path": "audio/f/sephardi/word/h07a5230b.mp3",
@@ -61673,10 +60752,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "OK, okay",
-  "phonetic": "okei",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "okei"
  },
  {
   "path": "audio/f/sephardi/word/h95c54aba.mp3",
@@ -61704,10 +60780,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to camp; to park",
-  "phonetic": "chanah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chanah"
  },
  {
   "path": "audio/f/sephardi/word/h66f194fe.mp3",
@@ -61769,10 +60842,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to ask (a question), to query; to borrow (an item)",
-  "phonetic": "sha'al",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sha'al"
  },
  {
   "path": "audio/f/sephardi/word/h129dd70a.mp3",
@@ -61834,10 +60904,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "man (an adult male human being); man, dude; rooster, cock, chicken (only male)",
-  "phonetic": "gever",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gever"
  },
  {
   "path": "audio/f/sephardi/word/h8cde0416.mp3",
@@ -61899,10 +60966,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fitting, suitable; convenient, desirable, worthwhile (impersonal)",
-  "phonetic": "keday",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "keday"
  },
  {
   "path": "audio/f/sephardi/word/h32049c3e.mp3",
@@ -61930,10 +60994,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sheep, flock of sheep",
-  "phonetic": "tzon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzon"
  },
  {
   "path": "audio/f/sephardi/word/h72ac53a6.mp3",
@@ -61961,10 +61022,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cause",
-  "phonetic": "sibah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sibah"
  },
  {
   "path": "audio/f/sephardi/word/h5385f0f3.mp3",
@@ -61992,10 +61050,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to answer, to reply; to respond, to react; to speak",
-  "phonetic": "anah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "anah"
  },
  {
   "path": "audio/f/sephardi/word/h6670eb72.mp3",
@@ -62023,10 +61078,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to halve; to split, to divide; to cross",
-  "phonetic": "chatzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chatzah"
  },
  {
   "path": "audio/f/sephardi/word/h5e8154a0.mp3",
@@ -62088,10 +61140,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "exactly, precisely; just, just now",
-  "phonetic": "bediyuk",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bediyuk"
  },
  {
   "path": "audio/f/sephardi/word/h49a493f0.mp3",
@@ -62119,10 +61168,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to continue, to still do",
-  "phonetic": "himshikh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "himshikh"
  },
  {
   "path": "audio/f/sephardi/word/h3312eae8.mp3",
@@ -62150,10 +61196,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be enough, to suffice; to manage, to be able",
-  "phonetic": "hispik",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hispik"
  },
  {
   "path": "audio/f/sephardi/word/h871db71d.mp3",
@@ -62181,10 +61224,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "we",
-  "phonetic": "anu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "anu"
  },
  {
   "path": "audio/f/sephardi/word/h706adec4.mp3",
@@ -62212,10 +61252,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "guy, boy; youth (countable), young man; a young man over 13 who is required to perform mitzvoth but has never married",
-  "phonetic": "bachur",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bachur"
  },
  {
   "path": "audio/f/sephardi/word/h0c96b2f5.mp3",
@@ -62277,10 +61314,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "appointed or agreed-upon time; year; meeting",
-  "phonetic": "mo'ed",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mo'ed"
  },
  {
   "path": "audio/f/sephardi/word/h84e985fd.mp3",
@@ -62376,10 +61410,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "battle, war; fight",
-  "phonetic": "kerav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kerav"
  },
  {
   "path": "audio/f/sephardi/word/h386e6ad7.mp3",
@@ -62407,10 +61438,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "opinion, point of view; knowledge",
-  "phonetic": "de'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "de'ah"
  },
  {
   "path": "audio/f/sephardi/word/h6fd09fff.mp3",
@@ -62438,10 +61466,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "strength",
-  "phonetic": "koach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "koach"
  },
  {
   "path": "audio/f/sephardi/word/h5795e8db.mp3",
@@ -62469,10 +61494,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to touch, lay a hand on; to reach, extend to; to be stricken",
-  "phonetic": "naga",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "naga"
  },
  {
   "path": "audio/f/sephardi/word/h32a7c780.mp3",
@@ -62568,10 +61590,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to catch (something); to comprehend, to grasp (someone); to apprehend",
-  "phonetic": "tafas",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tafas"
  },
  {
   "path": "audio/f/sephardi/word/h8db088fc.mp3",
@@ -62599,10 +61618,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to daub",
-  "phonetic": "tach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tach"
  },
  {
   "path": "audio/f/sephardi/word/h6a579e02.mp3",
@@ -62630,10 +61646,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "expresses a warning not to do something",
-  "phonetic": "bal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bal"
  },
  {
   "path": "audio/f/sephardi/word/h1d7368c3.mp3",
@@ -62661,10 +61674,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to check, examine, verify; to put to the test; to repair",
-  "phonetic": "badak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "badak"
  },
  {
   "path": "audio/f/sephardi/word/h6a3b1b97.mp3",
@@ -62692,10 +61702,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to dwell",
-  "phonetic": "dar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dar"
  },
  {
   "path": "audio/f/sephardi/word/h2f12d5bf.mp3",
@@ -62723,10 +61730,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "non-infant child; boy, physically able young man. Also, a servant; adolescent, teenager",
-  "phonetic": "na'ar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "na'ar"
  },
  {
   "path": "audio/f/sephardi/word/h729919fd.mp3",
@@ -62754,10 +61758,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "law, statute; rule; chok, a Jewish religious rule which doesn't have a rational explanation",
-  "phonetic": "chok",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chok"
  },
  {
   "path": "audio/f/sephardi/word/h44d68d1e.mp3",
@@ -62785,10 +61786,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to obtain, procure, come by; to catch up with",
-  "phonetic": "hisig",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hisig"
  },
  {
   "path": "audio/f/sephardi/word/h8674bd4c.mp3",
@@ -62850,10 +61848,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to place, set",
-  "phonetic": "shat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shat"
  },
  {
   "path": "audio/f/sephardi/word/h7715384f.mp3",
@@ -62881,10 +61876,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to divide, to partition, to split; to share; to disagree",
-  "phonetic": "chalak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chalak"
  },
  {
   "path": "audio/f/sephardi/word/h082fa7e3.mp3",
@@ -63048,10 +62040,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "if, should, had",
-  "phonetic": "ilu",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ilu"
  },
  {
   "path": "audio/f/sephardi/word/h36173537.mp3",
@@ -63147,10 +62136,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "death",
-  "phonetic": "mavet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mavet"
  },
  {
   "path": "audio/f/sephardi/word/h9034f8b8.mp3",
@@ -63178,10 +62164,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to murder (to kill deliberately)",
-  "phonetic": "ratzach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ratzach"
  },
  {
   "path": "audio/f/sephardi/word/h01851b40.mp3",
@@ -63277,10 +62260,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bull, ox",
-  "phonetic": "par",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "par"
  },
  {
   "path": "audio/f/sephardi/word/h69a35691.mp3",
@@ -63376,10 +62356,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "stick, staff, wand; headquarters; tribe",
-  "phonetic": "mateh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mateh"
  },
  {
   "path": "audio/f/sephardi/word/h779cc60c.mp3",
@@ -63407,10 +62384,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "real, true, actual",
-  "phonetic": "amiti",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "amiti"
  },
  {
   "path": "audio/f/sephardi/word/h64e266b0.mp3",
@@ -63438,10 +62412,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to need; to need to, have to, be obligated to (do something), should",
-  "phonetic": "hitztarekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitztarekh"
  },
  {
   "path": "audio/f/sephardi/word/h12364093.mp3",
@@ -63503,10 +62474,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be added",
-  "phonetic": "nosaf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nosaf"
  },
  {
   "path": "audio/f/sephardi/word/h5ba7d704.mp3",
@@ -63534,10 +62502,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to bring, to present, to offer; to sacrifice, to offer a sacrifice",
-  "phonetic": "hikriv",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hikriv"
  },
  {
   "path": "audio/f/sephardi/word/h39a5cc8a.mp3",
@@ -63599,10 +62564,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to sin",
-  "phonetic": "chata",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chata"
  },
  {
   "path": "audio/f/sephardi/word/h2035ee1a.mp3",
@@ -63664,10 +62626,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be or become great, prince-like; to contend, struggle, wrestle, overcome",
-  "phonetic": "sarah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sarah"
  },
  {
   "path": "audio/f/sephardi/word/h84ac4111.mp3",
@@ -63695,10 +62654,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ritually unclean",
-  "phonetic": "tame",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tame"
  },
  {
   "path": "audio/f/sephardi/word/h68cc83f7.mp3",
@@ -63726,10 +62682,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to remove, to take off (one's clothing); to extend (a limb); to spread, to proliferate",
-  "phonetic": "pashat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pashat"
  },
  {
   "path": "audio/f/sephardi/word/h1eeebe32.mp3",
@@ -63791,10 +62744,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "little, few (not much)",
-  "phonetic": "me'at",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "me'at"
  },
  {
   "path": "audio/f/sephardi/word/h57ed7970.mp3",
@@ -63822,10 +62772,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "less, fewer",
-  "phonetic": "pachot",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pachot"
  },
  {
   "path": "audio/f/sephardi/word/h54cf41d4.mp3",
@@ -63853,10 +62800,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "around",
-  "phonetic": "saviv",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "saviv"
  },
  {
   "path": "audio/f/sephardi/word/h4cedaa9e.mp3",
@@ -63918,10 +62862,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "because of, for, for the sake of, in order to",
-  "phonetic": "avur",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avur"
  },
  {
   "path": "audio/f/sephardi/word/h39e6c15a.mp3",
@@ -63949,10 +62890,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to finish, to complete",
-  "phonetic": "siyem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "siyem"
  },
  {
   "path": "audio/f/sephardi/word/h4d33d20c.mp3",
@@ -64014,10 +62952,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to rest",
-  "phonetic": "nach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nach"
  },
  {
   "path": "audio/f/sephardi/word/h94b9c92d.mp3",
@@ -64045,10 +62980,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "where",
-  "phonetic": "ayeh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ayeh"
  },
  {
   "path": "audio/f/sephardi/word/h40e5a2de.mp3",
@@ -64076,10 +63008,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to greatly desire, want, long for, lust for",
-  "phonetic": "ivah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ivah"
  },
  {
   "path": "audio/f/sephardi/word/h0cdd730a.mp3",
@@ -64141,10 +63070,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ram",
-  "phonetic": "ayil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ayil"
  },
  {
   "path": "audio/f/sephardi/word/h8aa6404d.mp3",
@@ -64206,10 +63132,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a sin; a sin offering",
-  "phonetic": "chatat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chatat"
  },
  {
   "path": "audio/f/sephardi/word/h08f064b2.mp3",
@@ -64271,10 +63194,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "already; Indicates an impatient request",
-  "phonetic": "kevar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kevar"
  },
  {
   "path": "audio/f/sephardi/word/h1475ee81.mp3",
@@ -64302,10 +63222,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "together",
-  "phonetic": "yachad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yachad"
  },
  {
   "path": "audio/f/sephardi/word/h4d766086.mp3",
@@ -64435,10 +63352,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to lie down, to be lying down, to recline; to have sex",
-  "phonetic": "shakhav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shakhav"
  },
  {
   "path": "audio/f/sephardi/word/h327ac347.mp3",
@@ -64534,10 +63448,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to forget",
-  "phonetic": "shakhach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shakhach"
  },
  {
   "path": "audio/f/sephardi/word/h0c76d311.mp3",
@@ -64565,10 +63476,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to move",
-  "phonetic": "na",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "na"
  },
  {
   "path": "audio/f/sephardi/word/h18885c51.mp3",
@@ -64630,10 +63538,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "idea; concept; thought",
-  "phonetic": "ra'ayon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ra'ayon"
  },
  {
   "path": "audio/f/sephardi/word/h7a3505d0.mp3",
@@ -64695,10 +63600,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a Philistine; Philistine",
-  "phonetic": "pelishti",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pelishti"
  },
  {
   "path": "audio/f/sephardi/word/h6554536b.mp3",
@@ -64760,10 +63662,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "without",
-  "phonetic": "lelo",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lelo"
  },
  {
   "path": "audio/f/sephardi/word/h52191bbf.mp3",
@@ -64825,10 +63724,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "word",
-  "phonetic": "milah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "milah"
  },
  {
   "path": "audio/f/sephardi/word/h95c52e9c.mp3",
@@ -64924,10 +63820,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to run; to run for office as a candidate",
-  "phonetic": "ratz",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ratz"
  },
  {
   "path": "audio/f/sephardi/word/h1982ccc7.mp3",
@@ -64989,10 +63882,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lest, in order that … not, for otherwise",
-  "phonetic": "pen",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pen"
  },
  {
   "path": "audio/f/sephardi/word/h07407da8.mp3",
@@ -65088,10 +63978,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to roll (literally or figuratively); to scroll",
-  "phonetic": "galal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "galal"
  },
  {
   "path": "audio/f/sephardi/word/h4639e00e.mp3",
@@ -65255,10 +64142,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mikveh",
-  "phonetic": "mikveh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mikveh"
  },
  {
   "path": "audio/f/sephardi/word/h19702c85.mp3",
@@ -65286,10 +64170,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "late, belated",
-  "phonetic": "me'uchar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "me'uchar"
  },
  {
   "path": "audio/f/sephardi/word/h68394bec.mp3",
@@ -65317,10 +64198,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to promise",
-  "phonetic": "hivtiach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hivtiach"
  },
  {
   "path": "audio/f/sephardi/word/h6fa87858.mp3",
@@ -65348,10 +64226,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a president; a prince; a chairman, a head",
-  "phonetic": "nasi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nasi"
  },
  {
   "path": "audio/f/sephardi/word/h4e4b99b1.mp3",
@@ -65379,10 +64254,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "palm, paw; power, control; socket, cavity, hollow",
-  "phonetic": "kaf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kaf"
  },
  {
   "path": "audio/f/sephardi/word/h4646b41c.mp3",
@@ -65410,10 +64282,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "yard, courtyard",
-  "phonetic": "chatzer",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chatzer"
  },
  {
   "path": "audio/f/sephardi/word/h9324911c.mp3",
@@ -65509,10 +64378,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "accuracy, precision",
-  "phonetic": "diyuk",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "diyuk"
  },
  {
   "path": "audio/f/sephardi/word/h426c201d.mp3",
@@ -65574,10 +64440,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to sell",
-  "phonetic": "makhar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "makhar"
  },
  {
   "path": "audio/f/sephardi/word/h54d02a94.mp3",
@@ -65605,10 +64468,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bag, satchel; case; portfolio",
-  "phonetic": "tik",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tik"
  },
  {
   "path": "audio/f/sephardi/word/h378062a7.mp3",
@@ -65670,10 +64530,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to photograph, to take a photograph of; to photocopy, to xerox, to copy, to make a copy of",
-  "phonetic": "tzilem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzilem"
  },
  {
   "path": "audio/f/sephardi/word/h37cac81b.mp3",
@@ -65735,10 +64592,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bad, of poor quality",
-  "phonetic": "garu'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "garu'a"
  },
  {
   "path": "audio/f/sephardi/word/h1202f1e7.mp3",
@@ -65766,10 +64620,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to throw, to toss; to throw away, to toss out, to discard; to dash, to sprinkle",
-  "phonetic": "zarak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zarak"
  },
  {
   "path": "audio/f/sephardi/word/h057ec4b3.mp3",
@@ -65797,10 +64648,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to covet, to treasure",
-  "phonetic": "chamad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chamad"
  },
  {
   "path": "audio/f/sephardi/word/h9e7f90af.mp3",
@@ -65828,10 +64676,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "about, regarding, in connection with, with respect to",
-  "phonetic": "legabei",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "legabei"
  },
  {
   "path": "audio/f/sephardi/word/h00bec4fa.mp3",
@@ -65859,10 +64704,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lip; lip (rim of an open container); language, speech",
-  "phonetic": "safah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "safah"
  },
  {
   "path": "audio/f/sephardi/word/h34d7be76.mp3",
@@ -65958,10 +64800,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Where",
-  "phonetic": "heikhan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "heikhan"
  },
  {
   "path": "audio/f/sephardi/word/h761f6283.mp3",
@@ -65989,10 +64828,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fall, to drop, to shed; to drop out, to quit",
-  "phonetic": "nashar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nashar"
  },
  {
   "path": "audio/f/sephardi/word/h2c1f5534.mp3",
@@ -66020,10 +64856,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to hate",
-  "phonetic": "sane",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sane"
  },
  {
   "path": "audio/f/sephardi/word/h62b4707b.mp3",
@@ -66085,10 +64918,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a border, a boundary, a limit, a line; the area within a set of borders; an edge, an end, a limit",
-  "phonetic": "gevul",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gevul"
  },
  {
   "path": "audio/f/sephardi/word/h46a5a512.mp3",
@@ -66116,10 +64946,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "therefore, so",
-  "phonetic": "lakhen",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lakhen"
  },
  {
   "path": "audio/f/sephardi/word/h4397b702.mp3",
@@ -66147,10 +64974,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "at or to the home or office of (a person), or the like; with, in the possession of; Next to, by, alongside",
-  "phonetic": "etzel",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "etzel"
  },
  {
   "path": "audio/f/sephardi/word/h24b72cb6.mp3",
@@ -66212,10 +65036,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fear, to be scared, afraid, frightened of (a person or thing)",
-  "phonetic": "pachad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pachad"
  },
  {
   "path": "audio/f/sephardi/word/h1694966b.mp3",
@@ -66243,10 +65064,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to close (a door, a window, or the like); to close, close up (a store, a restaurant, or the like); to settle on, agree upon, finalize, or lock in (a date, deal, or plan)",
-  "phonetic": "sagar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sagar"
  },
  {
   "path": "audio/f/sephardi/word/h64945368.mp3",
@@ -66308,10 +65126,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to do; to make; to act",
-  "phonetic": "pa'al",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pa'al"
  },
  {
   "path": "audio/f/sephardi/word/h1fad8eb0.mp3",
@@ -66407,10 +65222,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to breathe; to be devastated",
-  "phonetic": "nasham",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nasham"
  },
  {
   "path": "audio/f/sephardi/word/h516d731a.mp3",
@@ -66438,10 +65250,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be cut down, to be cut off",
-  "phonetic": "nikhrat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nikhrat"
  },
  {
   "path": "audio/f/sephardi/word/h88d247ca.mp3",
@@ -66469,10 +65278,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to return, restore",
-  "phonetic": "hechzir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hechzir"
  },
  {
   "path": "audio/f/sephardi/word/h40790488.mp3",
@@ -66534,10 +65340,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "lack, absence, deficiency, in-",
-  "phonetic": "choser",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "choser"
  },
  {
   "path": "audio/f/sephardi/word/h5f7ddcf4.mp3",
@@ -66565,10 +65368,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "drug, narcotic; poison; an aromatic, sweet-smelling spice used to make incense",
-  "phonetic": "sam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sam"
  },
  {
   "path": "audio/f/sephardi/word/h9720c378.mp3",
@@ -66596,10 +65396,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fool",
-  "phonetic": "tipesh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tipesh"
  },
  {
   "path": "audio/f/sephardi/word/h955b62a0.mp3",
@@ -66695,10 +65492,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fly; to zoom (move rapidly)",
-  "phonetic": "tas",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tas"
  },
  {
   "path": "audio/f/sephardi/word/h91e9b8f2.mp3",
@@ -66726,10 +65520,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "unique, special",
-  "phonetic": "meyuchad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "meyuchad"
  },
  {
   "path": "audio/f/sephardi/word/h1a99c4ab.mp3",
@@ -66757,10 +65548,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "anything; used to turn a statement of fact into a question of fact",
-  "phonetic": "kelum",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kelum"
  },
  {
   "path": "audio/f/sephardi/word/h23f7ab73.mp3",
@@ -66788,10 +65576,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to trust, rely on",
-  "phonetic": "samakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "samakh"
  },
  {
   "path": "audio/f/sephardi/word/h42829564.mp3",
@@ -66819,10 +65604,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a unit of liquid measurement",
-  "phonetic": "log",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "log"
  },
  {
   "path": "audio/f/sephardi/word/h2111adc7.mp3",
@@ -66850,10 +65632,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "tip, end",
-  "phonetic": "katzeh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "katzeh"
  },
  {
   "path": "audio/f/sephardi/word/h2056d9ad.mp3",
@@ -66983,10 +65762,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "copper",
-  "phonetic": "nechoshet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nechoshet"
  },
  {
   "path": "audio/f/sephardi/word/h5cc95d6e.mp3",
@@ -67014,10 +65790,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to prepare (something)",
-  "phonetic": "hekhin",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hekhin"
  },
  {
   "path": "audio/f/sephardi/word/h2f27d2ce.mp3",
@@ -67079,10 +65852,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hook",
-  "phonetic": "vav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "vav"
  },
  {
   "path": "audio/f/sephardi/word/h29a2e2b8.mp3",
@@ -67110,10 +65880,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cupboard, closet, cabinet, or similar piece of furniture; coffin or casket; closet",
-  "phonetic": "aron",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "aron"
  },
  {
   "path": "audio/f/sephardi/word/h16acb4dc.mp3",
@@ -67175,10 +65942,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "estate, territory; legacy; inheritance, estate",
-  "phonetic": "nachalah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nachalah"
  },
  {
   "path": "audio/f/sephardi/word/h2e1e8caf.mp3",
@@ -67206,10 +65970,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to dwell, reside; to be housed, located",
-  "phonetic": "shakhan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shakhan"
  },
  {
   "path": "audio/f/sephardi/word/h982871fa.mp3",
@@ -67271,10 +66032,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a tribe; a wand, a staff; a troop",
-  "phonetic": "shevet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shevet"
  },
  {
   "path": "audio/f/sephardi/word/h5188f01f.mp3",
@@ -67302,10 +66060,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "crew, squad, team",
-  "phonetic": "tzevet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzevet"
  },
  {
   "path": "audio/f/sephardi/word/h6b43040f.mp3",
@@ -67333,10 +66088,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Young (in the early part of life or growth); a young (male) person, a (male) youth",
-  "phonetic": "tza'ir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tza'ir"
  },
  {
   "path": "audio/f/sephardi/word/h78cf1c7a.mp3",
@@ -67364,10 +66116,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a concept; a notion; an idea",
-  "phonetic": "musag",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "musag"
  },
  {
   "path": "audio/f/sephardi/word/h812fda2f.mp3",
@@ -67429,10 +66178,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "park",
-  "phonetic": "park",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "park"
  },
  {
   "path": "audio/f/sephardi/word/h8a450588.mp3",
@@ -67494,10 +66240,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "angel; messenger",
-  "phonetic": "mal'akh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mal'akh"
  },
  {
   "path": "audio/f/sephardi/word/h07aab9ea.mp3",
@@ -67525,10 +66268,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Sweet",
-  "phonetic": "matok",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "matok"
  },
  {
   "path": "audio/f/sephardi/word/h9790d078.mp3",
@@ -67624,10 +66364,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an opportunity, a chance",
-  "phonetic": "hizdamenut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hizdamenut"
  },
  {
   "path": "audio/f/sephardi/word/h0e0c5c6e.mp3",
@@ -67655,10 +66392,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "iniquity; an intentional sin, done for the purpose of pleasure",
-  "phonetic": "avon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avon"
  },
  {
   "path": "audio/f/sephardi/word/h5271b622.mp3",
@@ -67754,10 +66488,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to inherit; to take possession of",
-  "phonetic": "yarash",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yarash"
  },
  {
   "path": "audio/f/sephardi/word/h7832f163.mp3",
@@ -67785,10 +66516,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "judgement; logical argument",
-  "phonetic": "din",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "din"
  },
  {
   "path": "audio/f/sephardi/word/h8b7d0341.mp3",
@@ -67850,10 +66578,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a chance, probability, possibility",
-  "phonetic": "sikuy",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sikuy"
  },
  {
   "path": "audio/f/sephardi/word/h1182302d.mp3",
@@ -67881,10 +66606,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mighty, powerful",
-  "phonetic": "adir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "adir"
  },
  {
   "path": "audio/f/sephardi/word/h12c1eeaf.mp3",
@@ -67946,10 +66668,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to let in, allow in, admit",
-  "phonetic": "hikhnis",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hikhnis"
  },
  {
   "path": "audio/f/sephardi/word/h3430ee89.mp3",
@@ -68011,10 +66730,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to cut down, to cut off",
-  "phonetic": "karat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "karat"
  },
  {
   "path": "audio/f/sephardi/word/h9618213e.mp3",
@@ -68042,10 +66758,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a cairn",
-  "phonetic": "gal'ed",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gal'ed"
  },
  {
   "path": "audio/f/sephardi/word/h3db72062.mp3",
@@ -68141,10 +66854,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to appear",
-  "phonetic": "hofi'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hofi'a"
  },
  {
   "path": "audio/f/sephardi/word/h999f1fb1.mp3",
@@ -68206,10 +66916,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "group; team; set",
-  "phonetic": "kevutzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kevutzah"
  },
  {
   "path": "audio/f/sephardi/word/h447cab37.mp3",
@@ -68271,10 +66978,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "piece, chunk; item; large piece, large hunk",
-  "phonetic": "chatikhah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chatikhah"
  },
  {
   "path": "audio/f/sephardi/word/h3dcbac32.mp3",
@@ -68302,10 +67006,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fight, wage war",
-  "phonetic": "nilcham",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nilcham"
  },
  {
   "path": "audio/f/sephardi/word/h32580d06.mp3",
@@ -68333,10 +67034,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to take down, to bring down, to lower; to remove, to take off; to download",
-  "phonetic": "horid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "horid"
  },
  {
   "path": "audio/f/sephardi/word/h5ea1ecdf.mp3",
@@ -68364,10 +67062,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to knead",
-  "phonetic": "lash",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lash"
  },
  {
   "path": "audio/f/sephardi/word/h77ef11e1.mp3",
@@ -68395,10 +67090,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "error, mistake",
-  "phonetic": "ta'ut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ta'ut"
  },
  {
   "path": "audio/f/sephardi/word/h0c4906f8.mp3",
@@ -68488,10 +67180,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to knock; to beat; to get even (with someone), to get back (at someone)",
-  "phonetic": "dafak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dafak"
  },
  {
   "path": "audio/f/sephardi/word/h5ba22cfa.mp3",
@@ -68553,10 +67242,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to lie, to tell a lie",
-  "phonetic": "shiker",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shiker"
  },
  {
   "path": "audio/f/sephardi/word/h87fe453e.mp3",
@@ -68584,10 +67270,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ox",
-  "phonetic": "shor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shor"
  },
  {
   "path": "audio/f/sephardi/word/h26f014a5.mp3",
@@ -68683,10 +67366,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cell, cubicle, locker, stall; cell (basic unit of an organism)",
-  "phonetic": "ta",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ta"
  },
  {
   "path": "audio/f/sephardi/word/h57f79164.mp3",
@@ -68714,10 +67394,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sort (kind, type); genus",
-  "phonetic": "sug",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sug"
  },
  {
   "path": "audio/f/sephardi/word/h7ab6c1a8.mp3",
@@ -68779,10 +67456,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cistern",
-  "phonetic": "gev",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gev"
  },
  {
   "path": "audio/f/sephardi/word/h6568e5f7.mp3",
@@ -68810,10 +67484,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to forget; to act as a usurer, to lend on interest",
-  "phonetic": "nashah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nashah"
  },
  {
   "path": "audio/f/sephardi/word/h595f9b33.mp3",
@@ -68875,10 +67546,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Suggest, propose, recommend, offer; Spread",
-  "phonetic": "hitzi'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitzi'a"
  },
  {
   "path": "audio/f/sephardi/word/h730c9015.mp3",
@@ -68906,10 +67574,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Kodashim, an order of the Mishna",
-  "phonetic": "kodashim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kodashim"
  },
  {
   "path": "audio/f/sephardi/word/h6bc55d67.mp3",
@@ -68937,10 +67602,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to compete or contend (with); to cope or deal (with)",
-  "phonetic": "hitmoded",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitmoded"
  },
  {
   "path": "audio/f/sephardi/word/h166782f3.mp3",
@@ -68968,10 +67630,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to cover, to hide",
-  "phonetic": "kisah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kisah"
  },
  {
   "path": "audio/f/sephardi/word/h650c6032.mp3",
@@ -68999,10 +67658,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fast, quick, swift; skilled, skillful, proficient (in a craft or task); prompt, ready, diligent",
-  "phonetic": "mahir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mahir"
  },
  {
   "path": "audio/f/sephardi/word/h23d5cdb5.mp3",
@@ -69030,10 +67686,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to be angry; to get angry, to become angry, to anger",
-  "phonetic": "ka'as",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ka'as"
  },
  {
   "path": "audio/f/sephardi/word/h8012e24c.mp3",
@@ -69129,10 +67782,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a handgun, pistol, revolver",
-  "phonetic": "ekdach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ekdach"
  },
  {
   "path": "audio/f/sephardi/word/h5db22897.mp3",
@@ -69160,10 +67810,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "demand; require, need; seek, search for",
-  "phonetic": "darash",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "darash"
  },
  {
   "path": "audio/f/sephardi/word/h6066f5e4.mp3",
@@ -69225,10 +67872,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "rage, wrath, fury; venom, poison",
-  "phonetic": "chemah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chemah"
  },
  {
   "path": "audio/f/sephardi/word/h4739925f.mp3",
@@ -69256,10 +67900,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "armory; dishes",
-  "phonetic": "keli",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "keli"
  },
  {
   "path": "audio/f/sephardi/word/h3ea8601d.mp3",
@@ -69287,10 +67928,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "women; an order of the Mishnah",
-  "phonetic": "nashim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nashim"
  },
  {
   "path": "audio/f/sephardi/word/h637ad9ae.mp3",
@@ -69352,10 +67990,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to shine (emit light); to rise",
-  "phonetic": "zarach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zarach"
  },
  {
   "path": "audio/f/sephardi/word/h3e9837b3.mp3",
@@ -69417,10 +68052,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "function, role, job; role",
-  "phonetic": "tafkid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tafkid"
  },
  {
   "path": "audio/f/sephardi/word/h8877d6a8.mp3",
@@ -69550,10 +68182,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "horse; a strong or muscular man",
-  "phonetic": "sus",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sus"
  },
  {
   "path": "audio/f/sephardi/word/h6296d0d9.mp3",
@@ -69581,10 +68210,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a target, aim; a cause, a goal, aim",
-  "phonetic": "matarah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "matarah"
  },
  {
   "path": "audio/f/sephardi/word/h01f4a63f.mp3",
@@ -69646,10 +68272,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to inform, to announce, to make known",
-  "phonetic": "hodi'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hodi'a"
  },
  {
   "path": "audio/f/sephardi/word/h2b9299a8.mp3",
@@ -69677,10 +68300,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "board, plank",
-  "phonetic": "keresh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "keresh"
  },
  {
   "path": "audio/f/sephardi/word/h0284af7f.mp3",
@@ -69742,10 +68362,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a unit, an organizational unit; a unit, a unit of measure; a unit",
-  "phonetic": "yechidah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yechidah"
  },
  {
   "path": "audio/f/sephardi/word/h572c48d4.mp3",
@@ -69807,10 +68424,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "major general; a champion (someone who has been winner in a contest); a close friend",
-  "phonetic": "aluf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "aluf"
  },
  {
   "path": "audio/f/sephardi/word/h7bacd4a2.mp3",
@@ -69872,10 +68486,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to fire, lay off, terminate, terminate the employment of",
-  "phonetic": "piter",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "piter"
  },
  {
   "path": "audio/f/sephardi/word/h6bd07f03.mp3",
@@ -69903,10 +68514,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to feel embarrassed, be ashamed",
-  "phonetic": "bosh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bosh"
  },
  {
   "path": "audio/f/sephardi/word/h130343ba.mp3",
@@ -69934,10 +68542,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "distillation, refining; flare, flash, firework, rocket",
-  "phonetic": "zikuk",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zikuk"
  },
  {
   "path": "audio/f/sephardi/word/h010999c9.mp3",
@@ -69965,10 +68570,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "question",
-  "phonetic": "she'elah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "she'elah"
  },
  {
   "path": "audio/f/sephardi/word/h75012f54.mp3",
@@ -70030,10 +68632,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "vow, promise, pledge, oath",
-  "phonetic": "neder",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "neder"
  },
  {
   "path": "audio/f/sephardi/word/h4f87a7b9.mp3",
@@ -70061,10 +68660,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "jackass, donkey; jackass (foolish person); sawhorse",
-  "phonetic": "chamor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chamor"
  },
  {
   "path": "audio/f/sephardi/word/h19cf953f.mp3",
@@ -70126,10 +68722,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "awake (conscious)",
-  "phonetic": "er",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "er"
  },
  {
   "path": "audio/f/sephardi/word/h8917f673.mp3",
@@ -70157,10 +68750,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "boxwood, box tree",
-  "phonetic": "ashur",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ashur"
  },
  {
   "path": "audio/f/sephardi/word/h2eaba841.mp3",
@@ -70188,10 +68778,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "kahen; any rabbi of Beta Israel origin",
-  "phonetic": "kes",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kes"
  },
  {
   "path": "audio/f/sephardi/word/h13b46b09.mp3",
@@ -70219,10 +68806,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "well (hole sunk into the ground)",
-  "phonetic": "be'er",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "be'er"
  },
  {
   "path": "audio/f/sephardi/word/h9e50969f.mp3",
@@ -70250,10 +68834,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "nakedness, nudity; genitalia, pudenda; a sexually forbidden relation",
-  "phonetic": "ervah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ervah"
  },
  {
   "path": "audio/f/sephardi/word/h450c4832.mp3",
@@ -70281,10 +68862,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a ritual sacrifice, as of an animal; victim",
-  "phonetic": "korban",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "korban"
  },
  {
   "path": "audio/f/sephardi/word/h89486b6f.mp3",
@@ -70312,10 +68890,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a (male) boss, manager, supervisor; a (male) authority; a term of address for a (male) friend",
-  "phonetic": "bos",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bos"
  },
  {
   "path": "audio/f/sephardi/word/h62c7d533.mp3",
@@ -70377,10 +68952,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "middle, center",
-  "phonetic": "emtza",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "emtza"
  },
  {
   "path": "audio/f/sephardi/word/h56eaa7d0.mp3",
@@ -70408,10 +68980,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an area, region, zone; a sector; a girdle",
-  "phonetic": "ezor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ezor"
  },
  {
   "path": "audio/f/sephardi/word/h1d79f7b0.mp3",
@@ -70439,10 +69008,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to lead (a person); to lead (a group), to conduct (a ceremony); to lead (to)",
-  "phonetic": "hovil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hovil"
  },
  {
   "path": "audio/f/sephardi/word/h8c0bec4d.mp3",
@@ -70470,10 +69036,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fine flower; semolina",
-  "phonetic": "solet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "solet"
  },
  {
   "path": "audio/f/sephardi/word/h3a6be4d0.mp3",
@@ -70501,10 +69064,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "used to indicate someone's care or concern about something",
-  "phonetic": "ikhpat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ikhpat"
  },
  {
   "path": "audio/f/sephardi/word/h319721ae.mp3",
@@ -70600,10 +69160,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to spill (a fluid, a powder, or the like); to pour; to ejaculate (semen)",
-  "phonetic": "shafakh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shafakh"
  },
  {
   "path": "audio/f/sephardi/word/h38459da3.mp3",
@@ -70665,10 +69222,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a captain, a skipper; a captain (a military rank); a captain (chief or leader)",
-  "phonetic": "kapitan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kapitan"
  },
  {
   "path": "audio/f/sephardi/word/h62371cee.mp3",
@@ -70798,10 +69352,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "wig; a face (of a polyhedron); a sidelock",
-  "phonetic": "pe'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pe'ah"
  },
  {
   "path": "audio/f/sephardi/word/h34aee9cc.mp3",
@@ -70829,10 +69380,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "strange, odd, bizarre, unusual, weird",
-  "phonetic": "muzar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "muzar"
  },
  {
   "path": "audio/f/sephardi/word/h3e44d72d.mp3",
@@ -70860,10 +69408,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "space, void (empty volume); outer space; cavity",
-  "phonetic": "chalal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chalal"
  },
  {
   "path": "audio/f/sephardi/word/h9e375a8d.mp3",
@@ -70925,10 +69470,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to anoint with oil",
-  "phonetic": "mashach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mashach"
  },
  {
   "path": "audio/f/sephardi/word/h25e14407.mp3",
@@ -70956,10 +69498,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a (male) idiot",
-  "phonetic": "idivot",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "idivot"
  },
  {
   "path": "audio/f/sephardi/word/h17825deb.mp3",
@@ -71021,10 +69560,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to miss, to long for",
-  "phonetic": "hitga'age'a",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hitga'age'a"
  },
  {
   "path": "audio/f/sephardi/word/h0e1d6c8d.mp3",
@@ -71052,10 +69588,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "chair",
-  "phonetic": "kise",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kise"
  },
  {
   "path": "audio/f/sephardi/word/h568e3e03.mp3",
@@ -71083,10 +69616,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "wing; fender, mudguard",
-  "phonetic": "kanaf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kanaf"
  },
  {
   "path": "audio/f/sephardi/word/h850a3966.mp3",
@@ -71148,10 +69678,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "dream",
-  "phonetic": "chalom",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chalom"
  },
  {
   "path": "audio/f/sephardi/word/h3c6a06b3.mp3",
@@ -71179,10 +69706,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "million",
-  "phonetic": "mileyon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mileyon"
  },
  {
   "path": "audio/f/sephardi/word/h81a7a0c1.mp3",
@@ -71210,10 +69734,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "might",
-  "phonetic": "alul",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "alul"
  },
  {
   "path": "audio/f/sephardi/word/h13b625ed.mp3",
@@ -71241,10 +69762,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a right, a legal right, a moral right; a privilege; a merit",
-  "phonetic": "zekhut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zekhut"
  },
  {
   "path": "audio/f/sephardi/word/h0a99b68d.mp3",
@@ -71272,10 +69790,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "age, period; joy, happiness",
-  "phonetic": "gil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gil"
  },
  {
   "path": "audio/f/sephardi/word/h0aa6bd95.mp3",
@@ -71303,10 +69818,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "partner, affiliate, copartner; roommate",
-  "phonetic": "shutaf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shutaf"
  },
  {
   "path": "audio/f/sephardi/word/h26e6f8c5.mp3",
@@ -71334,10 +69846,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Canaanite; a Canaanite person",
-  "phonetic": "kena'ani",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kena'ani"
  },
  {
   "path": "audio/f/sephardi/word/h271a18af.mp3",
@@ -71365,10 +69874,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "biblical blue; wool dyed biblical blue",
-  "phonetic": "tekhelet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tekhelet"
  },
  {
   "path": "audio/f/sephardi/word/h834701b7.mp3",
@@ -71396,10 +69902,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "libation, drink-offering",
-  "phonetic": "nesekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nesekh"
  },
  {
   "path": "audio/f/sephardi/word/h67ba809e.mp3",
@@ -71461,10 +69964,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "to respect, to honor; to offer refreshments to, to share food with; to honor, fulfill (an agreement, obligation)",
-  "phonetic": "kibed",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kibed"
  },
  {
   "path": "audio/f/sephardi/word/h1b791b4d.mp3",
@@ -71526,10 +70026,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "careful, cautious",
-  "phonetic": "zahir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zahir"
  },
  {
   "path": "audio/f/sephardi/word/h8db1b2e3.mp3",
@@ -71591,10 +70088,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "dear, beloved",
-  "phonetic": "yakir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yakir"
  },
  {
   "path": "audio/f/sephardi/word/h943beaa8.mp3",
@@ -71622,10 +70116,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a detail; an individual",
-  "phonetic": "perat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "perat"
  },
  {
   "path": "audio/f/sephardi/word/h12ec8adc.mp3",
@@ -71653,10 +70144,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "camel",
-  "phonetic": "gamal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gamal"
  },
  {
   "path": "audio/f/sephardi/word/h3a77b486.mp3",
@@ -71752,10 +70240,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mistress, grande dame, a wealthy upper class woman, lady; queen mother",
-  "phonetic": "gevirah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gevirah"
  },
  {
   "path": "audio/f/sephardi/word/h6e6c1bf1.mp3",
@@ -71817,10 +70302,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "turtle, tortoise; mastigure; a kind of carriage",
-  "phonetic": "tzav",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzav"
  },
  {
   "path": "audio/f/sephardi/word/h342c3c55.mp3",
@@ -71916,10 +70398,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "inwards, inside",
-  "phonetic": "penimah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "penimah"
  },
  {
   "path": "audio/f/sephardi/word/h4760a2a0.mp3",
@@ -71947,10 +70426,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "deep",
-  "phonetic": "amok",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "amok"
  },
  {
   "path": "audio/f/sephardi/word/h79f1f8cd.mp3",
@@ -71978,10 +70454,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a hill",
-  "phonetic": "giv'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "giv'ah"
  },
  {
   "path": "audio/f/sephardi/word/h5bebb792.mp3",
@@ -72043,10 +70516,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "broad bean, fava bean, fava (Vicia faba)",
-  "phonetic": "pol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pol"
  },
  {
   "path": "audio/f/sephardi/word/h27d68eba.mp3",
@@ -72074,10 +70544,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pigeon, dove; dove (pacifist)",
-  "phonetic": "yonah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yonah"
  },
  {
   "path": "audio/f/sephardi/word/h9cbc0f35.mp3",
@@ -72105,10 +70572,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "building; building, construction; a conjugation pattern, a construction",
-  "phonetic": "binyan",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "binyan"
  },
  {
   "path": "audio/f/sephardi/word/h2c8086bd.mp3",
@@ -72136,10 +70600,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "labdanum; the meaning of this term is uncertain. Usually taken to mean",
-  "phonetic": "lot",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lot"
  },
  {
   "path": "audio/f/sephardi/word/h242d7d42.mp3",
@@ -72201,10 +70662,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "blindfold, eye covering; bandage",
-  "phonetic": "afer",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "afer"
  },
  {
   "path": "audio/f/sephardi/word/h14bf163a.mp3",
@@ -72334,10 +70792,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "shoulder, upper part of the back",
-  "phonetic": "shekhem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shekhem"
  },
  {
   "path": "audio/f/sephardi/word/h1e92d681.mp3",
@@ -72365,10 +70820,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a (male) friend; darling, beloved",
-  "phonetic": "yadid",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yadid"
  },
  {
   "path": "audio/f/sephardi/word/h4d76dd5a.mp3",
@@ -72396,10 +70848,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "babies, infants, small children; children",
-  "phonetic": "taf",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "taf"
  },
  {
   "path": "audio/f/sephardi/word/h0cc80aed.mp3",
@@ -72495,10 +70944,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a crowd, a mass (of people); Plenty, lots, loads, tons (of)",
-  "phonetic": "hamon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hamon"
  },
  {
   "path": "audio/f/sephardi/word/h64713a3a.mp3",
@@ -72594,10 +71040,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mark; sign (indication); paragraph",
-  "phonetic": "siman",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "siman"
  },
  {
   "path": "audio/f/sephardi/word/h2ce7109c.mp3",
@@ -72625,10 +71068,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "responsible",
-  "phonetic": "achra'i",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "achra'i"
  },
  {
   "path": "audio/f/sephardi/word/h0aed18d2.mp3",
@@ -72656,10 +71096,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "club (association of members); club",
-  "phonetic": "mo'adon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mo'adon"
  },
  {
   "path": "audio/f/sephardi/word/h56319802.mp3",
@@ -72687,10 +71124,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a ruler of a Philistine principality or town",
-  "phonetic": "avimelekh",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "avimelekh"
  },
  {
   "path": "audio/f/sephardi/word/h5be380fa.mp3",
@@ -72718,10 +71152,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "enemy",
-  "phonetic": "oyev",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "oyev"
  },
  {
   "path": "audio/f/sephardi/word/h333a5dcb.mp3",
@@ -72749,10 +71180,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "eyelash; stadion",
-  "phonetic": "ris",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ris"
  },
  {
   "path": "audio/f/sephardi/word/h14d8720e.mp3",
@@ -72780,10 +71208,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "glance, look (the act of looking); gaze, look",
-  "phonetic": "mabat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mabat"
  },
  {
   "path": "audio/f/sephardi/word/h97dc517a.mp3",
@@ -72913,10 +71338,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "nonsense, drivel, idiocy, bullcrap, poppycock",
-  "phonetic": "shetut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shetut"
  },
  {
   "path": "audio/f/sephardi/word/h0a3f1a37.mp3",
@@ -73012,10 +71434,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "blame",
-  "phonetic": "ashmah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ashmah"
  },
  {
   "path": "audio/f/sephardi/word/hd492fef5.mp3",
@@ -73077,10 +71496,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pillar, column, post; page (of a book)",
-  "phonetic": "amud",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "amud"
  },
  {
   "path": "audio/f/sephardi/word/h3820d95e.mp3",
@@ -73108,10 +71524,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a worm",
-  "phonetic": "tola'at",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tola'at"
  },
  {
   "path": "audio/f/sephardi/word/h80c149b6.mp3",
@@ -73139,10 +71552,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "arrow",
-  "phonetic": "chetz",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chetz"
  },
  {
   "path": "audio/f/sephardi/word/h4a3da4c1.mp3",
@@ -73170,10 +71580,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Chinese",
-  "phonetic": "sini",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sini"
  },
  {
   "path": "audio/f/sephardi/word/h6884e387.mp3",
@@ -73201,10 +71608,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "accident (all senses); car wreck",
-  "phonetic": "te'unah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "te'unah"
  },
  {
   "path": "audio/f/sephardi/word/h0c2df2e4.mp3",
@@ -73232,10 +71636,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Amazing, stunning, astounding",
-  "phonetic": "madhim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "madhim"
  },
  {
   "path": "audio/f/sephardi/word/h1b73383e.mp3",
@@ -73263,10 +71664,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "river",
-  "phonetic": "nahar",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "nahar"
  },
  {
   "path": "audio/f/sephardi/word/h91ac0d37.mp3",
@@ -73294,10 +71692,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Possibility; a possibility; a possibility, an option",
-  "phonetic": "efsharut",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "efsharut"
  },
  {
   "path": "audio/f/sephardi/word/h4548c2ea.mp3",
@@ -73325,10 +71720,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "fact",
-  "phonetic": "uvdah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "uvdah"
  },
  {
   "path": "audio/f/sephardi/word/h2adc37eb.mp3",
@@ -73390,10 +71782,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "busy",
-  "phonetic": "asuk",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "asuk"
  },
  {
   "path": "audio/f/sephardi/word/h0764a400.mp3",
@@ -73421,10 +71810,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "young woman",
-  "phonetic": "bachurah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "bachurah"
  },
  {
   "path": "audio/f/sephardi/word/h19e80411.mp3",
@@ -73452,10 +71838,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "judge; a referee, an umpire, a judge; a judge",
-  "phonetic": "shofet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shofet"
  },
  {
   "path": "audio/f/sephardi/word/h9aaba801.mp3",
@@ -73585,10 +71968,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "giant; necklace; giant, gigantic, huge",
-  "phonetic": "anak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "anak"
  },
  {
   "path": "audio/f/sephardi/word/h82f267e3.mp3",
@@ -73684,10 +72064,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "English; Englishman",
-  "phonetic": "angeli",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "angeli"
  },
  {
   "path": "audio/f/sephardi/word/h3f469e92.mp3",
@@ -73715,10 +72092,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an action, a move",
-  "phonetic": "pe'ulah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pe'ulah"
  },
  {
   "path": "audio/f/sephardi/word/h97e97e5b.mp3",
@@ -73780,10 +72154,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "down, downward; down there, downstairs; below, hereafter",
-  "phonetic": "lematah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lematah"
  },
  {
   "path": "audio/f/sephardi/word/h46266386.mp3",
@@ -73845,10 +72216,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a sack",
-  "phonetic": "sak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sak"
  },
  {
   "path": "audio/f/sephardi/word/h9a35778f.mp3",
@@ -73910,10 +72278,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "completely, totally",
-  "phonetic": "lachalutin",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lachalutin"
  },
  {
   "path": "audio/f/sephardi/word/h00ca167b.mp3",
@@ -73941,10 +72306,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a tree of the genus Acacia; acacia, shittah",
-  "phonetic": "shitah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shitah"
  },
  {
   "path": "audio/f/sephardi/word/h15edfdd8.mp3",
@@ -74074,10 +72436,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "north",
-  "phonetic": "tzafon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzafon"
  },
  {
   "path": "audio/f/sephardi/word/h7097c7a9.mp3",
@@ -74173,10 +72532,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "nail polish",
-  "phonetic": "lak",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "lak"
  },
  {
   "path": "audio/f/sephardi/word/h4b14c918.mp3",
@@ -74204,10 +72560,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Tyrian purple, or a garment dyed with it; argaman (an Israeli wine grape); argaman (Israeli variety of wine)",
-  "phonetic": "argaman",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "argaman"
  },
  {
   "path": "audio/f/sephardi/word/h88af0fba.mp3",
@@ -74235,10 +72588,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a wall, a structure built for defense around a city, castle, etc",
-  "phonetic": "chomah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chomah"
  },
  {
   "path": "audio/f/sephardi/word/h293be884.mp3",
@@ -74266,10 +72616,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an era, age, epoch, period",
-  "phonetic": "tekufah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tekufah"
  },
  {
   "path": "audio/f/sephardi/word/h3e5d0f9c.mp3",
@@ -74331,10 +72678,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ice",
-  "phonetic": "kerach",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kerach"
  },
  {
   "path": "audio/f/sephardi/word/h7efa21d2.mp3",
@@ -74362,10 +72706,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "birth",
-  "phonetic": "huledet",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "huledet"
  },
  {
   "path": "audio/f/sephardi/word/h1ac1f2cd.mp3",
@@ -74393,10 +72734,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "grandmother",
-  "phonetic": "saveta",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "saveta"
  },
  {
   "path": "audio/f/sephardi/word/h8359d19c.mp3",
@@ -74424,10 +72762,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a piece of advice or counsel, a suggestion; xylem; the meaning of this term is uncertain. Possibilities include",
-  "phonetic": "etzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "etzah"
  },
  {
   "path": "audio/f/sephardi/word/h426417f9.mp3",
@@ -74455,10 +72790,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hay",
-  "phonetic": "shachat",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shachat"
  },
  {
   "path": "audio/f/sephardi/word/h09f2621b.mp3",
@@ -74520,10 +72852,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bomb; a bombshell; someone who is very physically attractive",
-  "phonetic": "petzatzah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "petzatzah"
  },
  {
   "path": "audio/f/sephardi/word/h74789994.mp3",
@@ -74551,10 +72880,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "vineyard",
-  "phonetic": "kerem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kerem"
  },
  {
   "path": "audio/f/sephardi/word/h9be743b3.mp3",
@@ -74616,10 +72942,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "ha",
-  "phonetic": "cha",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "cha"
  },
  {
   "path": "audio/f/sephardi/word/h064edcbd.mp3",
@@ -74715,10 +73038,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Noah's ark; coffin, casket; rectangular cuboid",
-  "phonetic": "tevah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tevah"
  },
  {
   "path": "audio/f/sephardi/word/h7af5d439.mp3",
@@ -74780,10 +73100,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cedar (chiefly Cedrus libani); scholar, renowned person; a tree of the genus Cedrus",
-  "phonetic": "erez",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "erez"
  },
  {
   "path": "audio/f/sephardi/word/h2299e4b3.mp3",
@@ -74811,10 +73128,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pair, couple, twosome; pair, two-of-a-kind",
-  "phonetic": "zug",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "zug"
  },
  {
   "path": "audio/f/sephardi/word/h2334782c.mp3",
@@ -74910,10 +73224,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a spell, enchantment, magic; charm, allure; an illusion, sleight of hand",
-  "phonetic": "kesem",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kesem"
  },
  {
   "path": "audio/f/sephardi/word/h68581174.mp3",
@@ -74975,10 +73286,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pregnancy",
-  "phonetic": "heraivon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "heraivon"
  },
  {
   "path": "audio/f/sephardi/word/h45474028.mp3",
@@ -75108,10 +73416,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "along, forward, onward, next; farther, further, beyond; away, off, hence",
-  "phonetic": "hale'ah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "hale'ah"
  },
  {
   "path": "audio/f/sephardi/word/h146d3d91.mp3",
@@ -75139,10 +73444,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "hunter",
-  "phonetic": "tzayad",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzayad"
  },
  {
   "path": "audio/f/sephardi/word/h2d4006ef.mp3",
@@ -75170,10 +73472,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "high school; a median; middle, central",
-  "phonetic": "tikhon",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tikhon"
  },
  {
   "path": "audio/f/sephardi/word/h65a6c7e5.mp3",
@@ -75201,10 +73500,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "bear",
-  "phonetic": "dov",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "dov"
  },
  {
   "path": "audio/f/sephardi/word/h5bd1f5e1.mp3",
@@ -75232,10 +73528,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "pilot",
-  "phonetic": "tayas",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tayas"
  },
  {
   "path": "audio/f/sephardi/word/h882ed65b.mp3",
@@ -75297,10 +73590,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "an affliction of the skin, clothes, or house as a punishment for sins of speech; leprosy",
-  "phonetic": "tzara'at",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzara'at"
  },
  {
   "path": "audio/f/sephardi/word/h54170135.mp3",
@@ -75362,10 +73652,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "baby, infant (female)",
-  "phonetic": "tinoket",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tinoket"
  },
  {
   "path": "audio/f/sephardi/word/h3e763177.mp3",
@@ -75427,10 +73714,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "rock",
-  "phonetic": "sela",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sela"
  },
  {
   "path": "audio/f/sephardi/word/h68594418.mp3",
@@ -75458,10 +73742,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a bird of any kind; a small bird, a sparrow",
-  "phonetic": "tzipor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzipor"
  },
  {
   "path": "audio/f/sephardi/word/h817ec28c.mp3",
@@ -75489,10 +73770,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "mule, hinny; dried pomegranate seeds; odd number",
-  "phonetic": "pered",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pered"
  },
  {
   "path": "audio/f/sephardi/word/h404d10ed.mp3",
@@ -75520,10 +73798,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "a harvest; a bough, tree branch",
-  "phonetic": "katzir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "katzir"
  },
  {
   "path": "audio/f/sephardi/word/h519ce338.mp3",
@@ -75551,10 +73826,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "widower",
-  "phonetic": "alman",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "alman"
  },
  {
   "path": "audio/f/sephardi/word/h093f1db7.mp3",
@@ -75616,10 +73888,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "roof; circumflex; maximum",
-  "phonetic": "gag",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "gag"
  },
  {
   "path": "audio/f/sephardi/word/h921e79c9.mp3",
@@ -75681,10 +73950,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "flesh, blood; food, sustenance; kin, relative",
-  "phonetic": "she'er",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "she'er"
  },
  {
   "path": "audio/f/sephardi/word/h0210d79f.mp3",
@@ -75712,10 +73978,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "held, grasped; held in place, fastened, fixed; taken proportionally",
-  "phonetic": "achuz",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "achuz"
  },
  {
   "path": "audio/f/sephardi/word/h61ba0237.mp3",
@@ -75777,10 +74040,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "business; businesslike",
-  "phonetic": "iski",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "iski"
  },
  {
   "path": "audio/f/sephardi/word/h4fadd60b.mp3",
@@ -75808,10 +74068,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "clean; net",
-  "phonetic": "naki",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "naki"
  },
  {
   "path": "audio/f/sephardi/word/h331ea4dc.mp3",
@@ -75975,10 +74232,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "official; formal",
-  "phonetic": "rishmi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "rishmi"
  },
  {
   "path": "audio/f/sephardi/word/h7410d5ab.mp3",
@@ -76006,10 +74260,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Public",
-  "phonetic": "tziburi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tziburi"
  },
  {
   "path": "audio/f/sephardi/word/h54471e7b.mp3",
@@ -76037,10 +74288,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "natural (of or relating to nature); natural, not artificial",
-  "phonetic": "tiv'i",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tiv'i"
  },
  {
   "path": "audio/f/sephardi/word/h6117e9f5.mp3",
@@ -76068,10 +74316,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "yellow (color)",
-  "phonetic": "tzahov",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "tzahov"
  },
  {
   "path": "audio/f/sephardi/word/h02ca8410.mp3",
@@ -76099,10 +74344,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "political",
-  "phonetic": "politi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "politi"
  },
  {
   "path": "audio/f/sephardi/word/h36dea5a7.mp3",
@@ -76164,10 +74406,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Electric, electrical",
-  "phonetic": "chashmali",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chashmali"
  },
  {
   "path": "audio/f/sephardi/word/h558a0857.mp3",
@@ -76195,10 +74434,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "family, familial",
-  "phonetic": "mishpachti",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mishpachti"
  },
  {
   "path": "audio/f/sephardi/word/h62a328ef.mp3",
@@ -76260,10 +74496,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "public",
-  "phonetic": "pumbi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "pumbi"
  },
  {
   "path": "audio/f/sephardi/word/h3e5331a2.mp3",
@@ -76393,10 +74626,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "violet, purple",
-  "phonetic": "sagol",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "sagol"
  },
  {
   "path": "audio/f/sephardi/word/h975e3b85.mp3",
@@ -76492,10 +74722,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Slightly ill, sickly, weakened; Unhealthy, morbid",
-  "phonetic": "cholani",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "cholani"
  },
  {
   "path": "audio/f/sephardi/word/h34530899.mp3",
@@ -76591,10 +74818,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "civilian, nonmilitary; civilian, secular; civilian, civil",
-  "phonetic": "ezrachi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "ezrachi"
  },
  {
   "path": "audio/f/sephardi/word/h796a7887.mp3",
@@ -76622,10 +74846,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "black",
-  "phonetic": "shachor",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "shachor"
  },
  {
   "path": "audio/f/sephardi/word/h8dd44157.mp3",
@@ -76653,10 +74874,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Brown, brown-colored; brown",
-  "phonetic": "chum",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chum"
  },
  {
   "path": "audio/f/sephardi/word/h603fd1ca.mp3",
@@ -76684,10 +74902,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "South, southern, southerly",
-  "phonetic": "deromi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "deromi"
  },
  {
   "path": "audio/f/sephardi/word/h5c559f1a.mp3",
@@ -76749,10 +74964,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "sour; a pickle",
-  "phonetic": "chamutz",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chamutz"
  },
  {
   "path": "audio/f/sephardi/word/h9499a4fd.mp3",
@@ -76814,10 +75026,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "cool, cold in a pleasant way",
-  "phonetic": "karir",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "karir"
  },
  {
   "path": "audio/f/sephardi/word/h453ca6b4.mp3",
@@ -76845,10 +75054,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "spoiled, rotten (of food or similar); spoiled (of a child); out of order, broken (not functioning properly)",
-  "phonetic": "mekulkal",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mekulkal"
  },
  {
   "path": "audio/f/sephardi/word/h00cdb883.mp3",
@@ -76910,10 +75116,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "scientific",
-  "phonetic": "mada'i",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "mada'i"
  },
  {
   "path": "audio/f/sephardi/word/h9247f58c.mp3",
@@ -76941,10 +75144,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "childish (suitable for a child); juvenile, immature",
-  "phonetic": "yalduti",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "yalduti"
  },
  {
   "path": "audio/f/sephardi/word/h233116f1.mp3",
@@ -76972,10 +75172,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "Digital",
-  "phonetic": "digitali",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "digitali"
  },
  {
   "path": "audio/f/sephardi/word/h0a9333f1.mp3",
@@ -77003,10 +75200,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "back",
-  "phonetic": "chazarah",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chazarah"
  },
  {
   "path": "audio/f/sephardi/word/h7944f080.mp3",
@@ -77034,10 +75228,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "very light; very easy",
-  "phonetic": "kalil",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "kalil"
  },
  {
   "path": "audio/f/sephardi/word/h8886e1be.mp3",
@@ -77065,10 +75256,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "reddish",
-  "phonetic": "adamdam",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "adamdam"
  },
  {
   "path": "audio/f/sephardi/word/h995f8ab2.mp3",
@@ -77096,10 +75284,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "warm",
-  "phonetic": "chamim",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "chamim"
  },
  {
   "path": "audio/f/sephardi/word/h0986ff35.mp3",
@@ -77161,10 +75346,7 @@
   "source": "tts-respelled-israeli-voice",
   "group": "vocab-word",
   "english": "surgical",
-  "phonetic": "khiruregi",
-  "equivalentTo": [
-   "israeli"
-  ]
+  "phonetic": "khiruregi"
  },
  {
   "path": "audio/f/sephardi/word/h254a987e.mp3",

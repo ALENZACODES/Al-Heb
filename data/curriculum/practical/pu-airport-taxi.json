@@ -15,7 +15,9 @@
   }
  ],
  "phrasebookSituation": null,
- "speakSets": [],
+ "speakSets": [
+  "speak-survival-taxi-1"
+ ],
  "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
  "items": [
   {
@@ -24,7 +26,11 @@
    "he": "מוֹנִית",
    "en": "taxi",
    "translit": "monit",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w1"
+   }
   },
   {
    "id": "i-23-w2",
@@ -32,7 +38,11 @@
    "he": "לְאָן?",
    "en": "where to?",
    "translit": "le'an?",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-23-w2"
+   }
   },
   {
    "id": "i-23-w3",
@@ -40,7 +50,11 @@
    "he": "לִשְׂדֵה הַתְּעוּפָה",
    "en": "to the airport",
    "translit": "lisdeh hate'ufah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-23-w3"
+   }
   },
   {
    "id": "i-23-w4",
@@ -48,7 +62,11 @@
    "he": "לַמָּלוֹן",
    "en": "to the hotel",
    "translit": "lamalon",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w4"
+   }
   },
   {
    "id": "i-23-w5",
@@ -56,7 +74,11 @@
    "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
    "en": "to the central station",
    "translit": "latachanah hamerkazit",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-23-w5"
+   }
   },
   {
    "id": "i-23-w6",
@@ -64,7 +86,11 @@
    "he": "מוֹנֶה",
    "en": "meter",
    "translit": "moneh",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w6"
+   }
   },
   {
    "id": "i-23-w7",
@@ -72,7 +98,11 @@
    "he": "כַּמָּה זֶה יַעֲלֶה?",
    "en": "how much will it cost?",
    "translit": "kamah zeh ya'aleh?",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-23-w7"
+   }
   },
   {
    "id": "i-23-w8",
@@ -80,7 +110,11 @@
    "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
    "en": "stop here, please",
    "translit": "atzor kan, bevakashah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-23-w8"
+   }
   },
   {
    "id": "i-23-w9",
@@ -88,7 +122,11 @@
    "he": "לְאַט",
    "en": "slowly",
    "translit": "le'at",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w9"
+   }
   },
   {
    "id": "i-23-w10",
@@ -96,7 +134,11 @@
    "he": "קַבָּלָה",
    "en": "receipt",
    "translit": "kabalah",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w10"
+   }
   },
   {
    "id": "i-23-w11",
@@ -104,7 +146,11 @@
    "he": "מְמַהֵר",
    "en": "in a hurry (m)",
    "translit": "memaher",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w11"
+   }
   },
   {
    "id": "i-23-w12",
@@ -112,7 +158,11 @@
    "he": "שֵׁרוּת",
    "en": "service; shared taxi (sherut)",
    "translit": "sherut",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w12"
+   }
   },
   {
    "id": "i-23-w13",
@@ -120,7 +170,11 @@
    "he": "חַלּוֹן",
    "en": "window",
    "translit": "chalon",
-   "review": "native-speaker-needed: pointing and register"
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-23-w13"
+   }
   },
   {
    "id": "taxi-03",
@@ -136,23 +190,148 @@
   }
  ],
  "srsQueue": [
-  "i-23-w1",
-  "i-23-w2",
-  "i-23-w3",
-  "i-23-w4",
-  "i-23-w5",
-  "i-23-w6",
-  "i-23-w7",
-  "i-23-w8",
-  "i-23-w9",
-  "i-23-w10",
-  "i-23-w11",
-  "i-23-w12",
-  "i-23-w13",
-  "taxi-03"
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-23-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "line",
+   "id": "i-23-w2",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "line",
+   "id": "i-23-w3",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-23-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "i-23-w5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-23-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "i-23-w7",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "line",
+   "id": "i-23-w8",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-23-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-23-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-23-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-23-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-23-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "line",
+   "id": "taxi-03",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
  ],
- "listenDrills": [],
- "speakDrills": [],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-23-w1",
+    "i-23-w2",
+    "i-23-w3",
+    "i-23-w4",
+    "i-23-w5",
+    "i-23-w6",
+    "i-23-w7",
+    "i-23-w8",
+    "i-23-w9",
+    "i-23-w10",
+    "i-23-w11",
+    "i-23-w12",
+    "i-23-w13",
+    "taxi-03"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-taxi-1.json.",
+   "set": "speak-survival-taxi-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
  "pages": [
   {
    "id": "pu-airport-taxi-p01",
@@ -166,7 +345,11 @@
      "he": "מוֹנִית",
      "en": "taxi",
      "translit": "monit",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w1"
+     }
     },
     {
      "id": "i-23-w2",
@@ -174,7 +357,11 @@
      "he": "לְאָן?",
      "en": "where to?",
      "translit": "le'an?",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-23-w2"
+     }
     },
     {
      "id": "i-23-w3",
@@ -182,7 +369,11 @@
      "he": "לִשְׂדֵה הַתְּעוּפָה",
      "en": "to the airport",
      "translit": "lisdeh hate'ufah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-23-w3"
+     }
     },
     {
      "id": "i-23-w4",
@@ -190,7 +381,11 @@
      "he": "לַמָּלוֹן",
      "en": "to the hotel",
      "translit": "lamalon",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w4"
+     }
     },
     {
      "id": "i-23-w5",
@@ -198,9 +393,63 @@
      "he": "לַתַּחֲנָה הַמֶּרְכָּזִית",
      "en": "to the central station",
      "translit": "latachanah hamerkazit",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-23-w5"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-23-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "i-23-w2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "i-23-w3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-23-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "i-23-w5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-23-w1",
+    "i-23-w2",
+    "i-23-w3",
+    "i-23-w4",
+    "i-23-w5"
+   ],
+   "speakSet": "speak-survival-taxi-1"
   },
   {
    "id": "pu-airport-taxi-p02",
@@ -214,7 +463,11 @@
      "he": "מוֹנֶה",
      "en": "meter",
      "translit": "moneh",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w6"
+     }
     },
     {
      "id": "i-23-w7",
@@ -222,7 +475,11 @@
      "he": "כַּמָּה זֶה יַעֲלֶה?",
      "en": "how much will it cost?",
      "translit": "kamah zeh ya'aleh?",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-23-w7"
+     }
     },
     {
      "id": "i-23-w8",
@@ -230,7 +487,11 @@
      "he": "עֲצֹר כָּאן, בְּבַקָּשָׁה",
      "en": "stop here, please",
      "translit": "atzor kan, bevakashah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-23-w8"
+     }
     },
     {
      "id": "i-23-w9",
@@ -238,7 +499,11 @@
      "he": "לְאַט",
      "en": "slowly",
      "translit": "le'at",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w9"
+     }
     },
     {
      "id": "i-23-w10",
@@ -246,9 +511,63 @@
      "he": "קַבָּלָה",
      "en": "receipt",
      "translit": "kabalah",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w10"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-23-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "i-23-w7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "i-23-w8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-23-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-23-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-23-w6",
+    "i-23-w7",
+    "i-23-w8",
+    "i-23-w9",
+    "i-23-w10"
+   ],
+   "speakSet": "speak-survival-taxi-1"
   },
   {
    "id": "pu-airport-taxi-p03",
@@ -262,7 +581,11 @@
      "he": "מְמַהֵר",
      "en": "in a hurry (m)",
      "translit": "memaher",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w11"
+     }
     },
     {
      "id": "i-23-w12",
@@ -270,7 +593,11 @@
      "he": "שֵׁרוּת",
      "en": "service; shared taxi (sherut)",
      "translit": "sherut",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w12"
+     }
     },
     {
      "id": "i-23-w13",
@@ -278,9 +605,45 @@
      "he": "חַלּוֹן",
      "en": "window",
      "translit": "chalon",
-     "review": "native-speaker-needed: pointing and register"
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-23-w13"
+     }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-23-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-23-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-23-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-23-w11",
+    "i-23-w12",
+    "i-23-w13"
+   ],
+   "speakSet": "speak-survival-taxi-1"
   },
   {
    "id": "pu-airport-taxi-p04",
@@ -300,7 +663,21 @@
       "id": "taxi-03"
      }
     }
-   ]
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "taxi-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "taxi-03"
+   ],
+   "speakSet": "speak-survival-taxi-1"
   }
  ],
  "relatedBook": {

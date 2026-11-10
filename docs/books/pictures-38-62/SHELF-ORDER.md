@@ -20,7 +20,7 @@ The bookshelf groups books by level and, inside each level, follows the array or
 
 Nothing else moved. Each book keeps its id, title, level, page pictures, and audio. Grade 1 and Beginner 1 are unchanged.
 
-Books 52 (The Old Photo) and 60 (The Lost Wallet) do not have pictures yet. On this shelf they are treated as watercolour and 2D cartoon, one each, and are placed far apart.
+Books 52 (The Old Photo) and 60 (The Lost Wallet) now have their 12 page pictures each. On this shelf they are treated as watercolour and 2D cartoon, one each, and are placed far apart.
 
 ## Grade 1
 

@@ -104,26 +104,62 @@ test('prior March, garlic, cucumber, sandek, blue, and the 370 earlier correctio
   assert.equal(byW.get('h1782f762').en, 'sandek (the person who holds the baby at a circumcision)');
   const corr = read('data/vocab/corrections.json');
   const prior = corr.corrections.filter((c) => !String(c.reason).includes('sense-noise lane'));
-  assert.equal(prior.length, 370);
-  assert.equal(corr.corrections.length, 392);
+  assert.equal(prior.length, 373);
+  assert.equal(corr.corrections.length, 410);
 });
 
-test('disposition sheet counts 279 rows, 19 applied, 260 held, and matches the built glosses', () => {
+test('disposition sheet counts 279 rows, 34 applied, 245 held, and matches the built glosses', () => {
   const text = fs.readFileSync(path.join(ROOT, 'docs/vocab/sense-noise-disposition.csv'), 'utf8');
   const lines = text.trim().split('\n');
   assert.equal(lines.length, 280);
   const body = lines.slice(1);
   const applied = body.filter((l) => l.includes(',applied,'));
   const held = body.filter((l) => l.includes(',held,'));
-  assert.equal(applied.length, 19);
-  assert.equal(held.length, 260);
+  assert.equal(applied.length, 34);
+  assert.equal(held.length, 245);
   for (const [wid, [, gloss]] of Object.entries(APPLIED)) {
     assert.ok(text.includes(gloss), gloss);
     assert.ok(text.includes(wid), wid);
   }
 });
 
-test('audio bytes for the fact and manna clips are unchanged', () => {
+
+const ROUND_2026_11_10 = {
+  h0a69f537: 'to perish, to be lost',
+  hc7778ee0: 'to be healed, to be cured',
+  h54170135: 'tzaraat, a biblical affliction of skin, clothes or a house (often compared to leprosy)',
+  h2761f10d: 'to volunteer',
+  hf6cc5993: 'standing; the Amidah (the standing prayer)',
+  h80a9b98b: 'inflammation',
+  h6dbe0be6: 'to be made fit or approved; to be kashered',
+  hce2879fb: 'the debir, the Holy of Holies (the innermost room of the Temple)',
+  h33e8c3ac: 'a meter or gauge; the numerator of a fraction; one who counts',
+  hc83a9175: 'a snail or sea-snail; in Jewish law, the creature from which tekhelet dye is taken',
+  he6cb9a45: 'go (the board game)',
+  hc79f8a66: 'tank (an armored fighting vehicle)',
+  hf466322e: 'salmon (the fish)',
+  hf19f0a88: 'bank (a financial institution)',
+  h3a9e580d: 'pin (a peg or fastener)',
+};
+const ROUND_2026_11_10_V5 = {
+  he6cb9a45: ['v1d519995', 'go (the board game)'],
+  hc79f8a66: ['v92bbb2f2', 'tank (an armored fighting vehicle)'],
+  hf466322e: ['v35787d85', 'salmon (the fish)'],
+  hf19f0a88: ['v390aa9b9', 'bank (a financial institution)'],
+  h3a9e580d: ['vdee4ee61', 'pin (a peg or fastener)'],
+};
+
+test('fifteen 2026-11-10 sense-noise glosses match words.json; the five loanwords also match vocab5000', () => {
+  for (const [wid, gloss] of Object.entries(ROUND_2026_11_10)) {
+    assert.equal(byW.get(wid).en, gloss, wid);
+  }
+  for (const [wid, [vid, gloss]] of Object.entries(ROUND_2026_11_10_V5)) {
+    assert.equal(byV.get(vid).gloss, gloss, vid);
+    assert.equal(byV.get(vid).proofread, false, vid);
+  }
+});
+
+test('audio bytes for the fact and manna clips are unchanged', { skip: !fs.existsSync(path.join(ROOT, 'audio/f/ashkenazi/word/h2adc37eb.mp3')) && 'audio files are not in this worktree' }, () => {
   const expect = {
     'audio/f/ashkenazi/word/h2adc37eb.mp3': '8c20ec9fa0031f1acebcbfe2815a1c81684dc30a994fa3ef66b222afb3ac8d68',
     'audio/f/israeli/word/h2adc37eb.mp3': '3ec9db5648515f518e709de65c06309e788744d59b0b759e7511f16e8d9c21d6',
@@ -144,5 +180,5 @@ test('a second apply of the correction chain is a no-op', async () => {
   const report = applyCorrections(ROOT, { dry: true });
   assert.equal(report.conflicts.length, 0);
   assert.equal(report.applied.length, 0);
-  assert.equal(report.already.length, 392);
+  assert.equal(report.already.length, 410);
 });

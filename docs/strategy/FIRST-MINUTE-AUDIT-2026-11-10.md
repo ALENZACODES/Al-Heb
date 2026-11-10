@@ -106,6 +106,25 @@ The plan from here (each item says what done looks like):
 6. **Progress and Brain Lab screen by screen.** They use the tokens; a pass on each with the same eye as setup is next.
 7. **Hero images.** Orders written (docs/images/orders/HERO-HOME-PRAYER-2026-11-10.md); swap-in code is written there for when the files land.
 
+## Round 5 (2026-11-10, about 4 AM): review of 587b503 (review round 3 of 5) and the next build
+
+**Review of the branch at 587b503 (score 84/100).** What it got right: one question per screen with Rimon, the lesson path as stops, every lesson ending with Rimon and the live flame, the gold prayer lettering as real text, hero orders that keep lettering out of generated images. What was wrong at that commit, found by the accessibility gate and fixed in e8de60b: header chips spoken without their number (every page), the header 260 px wide at 200% zoom, the memory-card button below contrast on dark green, the keyboard walk still on the old setup. Still wrong at that commit and fixed now:
+
+| # | Weakness | Fix (this round) |
+|---|---|---|
+| 1 | Progress had its own "daily goal" counted in review cards, next to the minutes goal shown in setup, Home, Learn and the header | Progress opens with the header's two numbers, large (streak and minutes against the setup goal); its card goal is now called the review goal |
+| 2 | A tapped locked stop did nothing | It now says which lesson opens it ("Opens after you finish ...") |
+| 3 | A new badge was saved silently (only the corner Rimon stretched) | A toast names the badge with a link to Awards, the moment it is saved |
+
+Checks this round: unit tier 3,368 tests, 1 failure (the `/calendar` axe finding outside this lane, listed in round 4); `tests/firstminute.browser.test.js` passes; the accessibility gate passes with no regression (keyboard, axe and zoom on 15 routes including Progress, contrast).
+
+**Plan to 95 to 100** (what done looks like):
+1. Real iPhone with VoiceOver and Android with TalkBack through setup, the first lesson, Learn and Progress (a person, about 30 minutes). Biggest remaining risk; no amount of headless checking replaces it.
+2. One Rimon: transparent stills plus one situation map; `rimonInline` uses a still where one exists.
+3. Hero images generated from the orders and swapped in; gold lettering stills checked by a Hebrew reader.
+4. The opening prayer after setup on day one (owner decision; kept as ordered until then).
+5. The `/calendar` label-in-name findings fixed by the calendar's owner.
+
 ## Score
 
-Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

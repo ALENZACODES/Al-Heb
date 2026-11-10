@@ -73,7 +73,26 @@ export function mountStatbar({ store, settings, doc = globalThis.document, now =
     import('../audio/sfx.js').then((m) => { if (settings.get('soundEffects') !== false && settings.get('audioFree') !== true) m.sfx.play('streak'); }).catch(() => {});
     setTimeout(() => toast.remove(), 4200);
   }
-  const off = store?.subscribe?.((key) => { if (key === STREAK_KEY || key === DAILY_GOAL_KEY || key === 'settings') refresh(); });
+  // A new badge, the moment it is saved (awards.v1): a short toast with its name and a link to Awards. Names come from the badge
+  // lists in src/awards/eligibility.js, loaded only when a badge actually lands.
+  const badgeIds = (rec) => Object.keys(rec?.awards || {});
+  let knownBadges = null; try { knownBadges = new Set(badgeIds(store.get('awards.v1'))); } catch { knownBadges = new Set(); }
+  function badgeLanded(ids) {
+    if (!statbarWanted(settings)) return;
+    import('../awards/eligibility.js').then((m) => {
+      const all = [...(m.PRACTICE_BADGES || []), ...(m.MILESTONE_BADGES || []), ...(m.COMPLETION_BADGE ? [m.COMPLETION_BADGE] : [])];
+      const name = all.find((b) => b && ids.includes(b.id))?.name;
+      if (!name) return;
+      const toast = h('div', { class: 'stat-toast stat-toast-badge', role: 'status' }, h('span', { class: 'stat-badge-ico', 'aria-hidden': 'true' }),
+        h('span', {}, h('strong', {}, `New badge: ${name}`), ' ', h('a', { href: '#/awards' }, 'See it')));
+      doc.body.append(toast);
+      setTimeout(() => toast.remove(), 5200);
+    }).catch(() => {});
+  }
+  const off = store?.subscribe?.((key, value) => {
+    if (key === 'awards.v1') { const ids = badgeIds(value); const fresh = ids.filter((id) => !knownBadges.has(id)); knownBadges = new Set(ids); if (fresh.length) badgeLanded(fresh); return; }
+    if (key === STREAK_KEY || key === DAILY_GOAL_KEY || key === 'settings') refresh();
+  });
   const timer = setInterval(refresh, 30000); // the engine saves seconds every 10 s; the minute count follows within half a minute
   refresh();
   return { refresh, destroy() { clearInterval(timer); try { off?.(); } catch { /* ignore */ } bar.remove(); } };

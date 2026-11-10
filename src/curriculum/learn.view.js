@@ -103,7 +103,12 @@ function mountMap(root, ctx) {
           const state = isDone ? "done" : ready ? "available" : "locked";
           return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null,
             // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
-            onclick: state === "locked" ? null : (e) => { if (e?.target?.closest?.("button, a, summary")) return; ctx?.route?.(`/learn?lesson=${l.id}`); } },
+            onclick: (e) => {
+              if (e?.target?.closest?.("button, a, summary")) return;
+              if (state !== "locked") { ctx?.route?.(`/learn?lesson=${l.id}`); return; }
+              // a locked stop says what opens it, instead of doing nothing
+              const note = e?.currentTarget?.querySelector?.(".alef-locked-note"); if (note) { note.hidden = !note.hidden; if (note.hidden) note.setAttribute("hidden", ""); else note.removeAttribute("hidden"); }
+            } },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",
@@ -115,6 +120,7 @@ function mountMap(root, ctx) {
             // U-13: completing a lesson without opening it is a test-out, and
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
+            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it."; })()) : null,
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete without studying it (test out): ${l.title}`,
               onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),

@@ -145,3 +145,15 @@ test('Rimon in the page falls back to the single picture when a sheet cannot loa
     assert.match(r.el.attrs.style, /MASCOT_rimon\.800\.webp/);
   } finally { globalThis.Image = saved; }
 });
+
+// ---------- round 5 ----------
+test('Progress opens with the header numbers (streak, minutes against the setup goal) and calls its card goal the review goal', () => {
+  const src = read('src/progress/progress.view.js');
+  assert.match(src, /statModel\(\{ streak: store\.get\('streak'\), dailyGoal: store\.get\(DAILY_GOAL_KEY\)/);
+  assert.match(src, /'Review goal '/); assert.doesNotMatch(src, /'Daily goal '\), sel/);
+});
+test('a tapped locked stop names the lesson that opens it; a new badge gets a toast with its name', () => {
+  assert.match(read('src/curriculum/learn.view.js'), /alef-locked-note[\s\S]*Opens after you finish/);
+  const sb = read('src/shell/statbar.js');
+  assert.match(sb, /key === 'awards\.v1'/); assert.match(sb, /New badge: \$\{name\}/);
+});

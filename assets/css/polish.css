@@ -372,3 +372,24 @@ html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
 }
 /* memory card on dark green: the primary button text follows the accent pair (white on gold failed contrast) */
 :root .mc .mc-btn.primary { color: var(--accent-fg); }
+
+/* ---------- 15. Round 5: Progress opens with the header's two numbers, large ---------- */
+.pg-hero { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-block: var(--s-2) var(--s-4); }
+.pg-hero > div { flex: 1 1 9rem; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; align-items: center; column-gap: var(--s-3);
+  padding: var(--s-3) var(--s-4); border-radius: var(--r-lg); border: 2px solid color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.pg-hero > div > :first-child { grid-row: 1 / 3; }
+.pg-hero strong { font-size: var(--fs-2xl); font-weight: var(--fw-heavy); line-height: 1; font-variant-numeric: tabular-nums; }
+.pg-hero span:last-child { font-size: var(--fs-sm); color: var(--muted); }
+.pg-hero .stat-flame { inline-size: 2.4rem; block-size: 2.4rem; background: color-mix(in srgb, var(--fg) 30%, transparent); }
+.pg-hero-flame.is-lit { border-color: var(--flame); }
+.pg-hero-flame.is-lit .stat-flame { background: linear-gradient(180deg, #ffd166, var(--flame) 55%, var(--flame-deep)); }
+.pg-hero-flame.is-lit strong { color: var(--flame); }
+.pg-hero-ring { --p: inherit; inline-size: 2.6rem; block-size: 2.6rem; border-radius: 50%;
+  background: radial-gradient(closest-side, var(--card) 64%, transparent 66% 100%), conic-gradient(var(--gold-500) calc(var(--p) * 1%), color-mix(in srgb, var(--fg) 15%, transparent) 0); }
+.pg-hero-goal { --p: 0; }
+/* a new badge: the same toast, gold edge and a medal mark */
+.stat-toast-badge { border-color: var(--gold-500); }
+.stat-toast-badge a { color: var(--green-700); font-weight: var(--fw-heavy); }
+.stat-badge-ico { inline-size: 1.6rem; block-size: 1.6rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff4d0, var(--gold-500) 55%, #a8741f); box-shadow: inset 0 -3px 0 rgba(0,0,0,.2); }
+.alef-lesson-locked { cursor: pointer; }
+.alef-locked-note { flex-basis: 100%; margin: var(--s-1) 0 0; padding: var(--s-2) var(--s-3); border-radius: var(--r-md); background: color-mix(in srgb, var(--accent) 10%, transparent); font-size: var(--fs-sm); }

@@ -1,0 +1,25 @@
+# Clips both reviewers still flag after four rounds of re-recording (12 kinds of take). A person should listen or record these.
+audio/f/israeli/line/torah-deuteronomy-11-19.mp3
+audio/f/israeli/line/torah-exodus-22-26.mp3
+audio/f/israeli/line/torah-exodus-31-14.mp3
+audio/f/israeli/line/torah-genesis-25-23.mp3
+audio/f/israeli/line/torah-genesis-29-25.mp3
+audio/f/israeli/line/torah-genesis-3-20.mp3
+audio/f/israeli/line/torah-genesis-42-38.mp3
+audio/f/israeli/line/torah-leviticus-10-13.mp3
+audio/f/israeli/line/torah-leviticus-10-17.mp3
+audio/f/israeli/line/torah-leviticus-13-42.mp3
+audio/f/israeli/line/torah-leviticus-13-55.mp3
+audio/f/israeli/line/torah-leviticus-18-23.mp3
+audio/f/israeli/line/torah-leviticus-23-3.mp3
+audio/f/israeli/line/torah-numbers-13-27.mp3
+audio/f/israeli/line/torah-numbers-5-27.mp3
+audio/f/israeli/line/torah-numbers-8-4.mp3
+audio/f/israeli/prayer/kaddish-1.mp3
+audio/m/israeli/line/brich-shmei.mp3
+audio/m/israeli/line/torah-exodus-22-26.mp3
+audio/m/israeli/line/torah-exodus-22-3.mp3
+audio/m/israeli/line/torah-leviticus-26-40.mp3
+audio/m/israeli/line/torah-leviticus-4-2.mp3
+audio/m/israeli/line/torah-numbers-5-27.mp3
+audio/m/israeli/prayer/brich-shmei.mp3

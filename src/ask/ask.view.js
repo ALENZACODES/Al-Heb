@@ -5,7 +5,7 @@
 // guesses a verse. A named verse with no note in the bank is shown as the verse itself. The Name is shown as ה׳, never spelled or voiced.
 // Rimon does not appear here: like the prayer pages, this is a quiet place for the text itself.
 // Deep links: #/ask?q=What%20does%20Genesis%202%3A4%20say%3F asks at once (the Torah reader's "Ask" button uses this).
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
 import { INTRO, PLACEHOLDER, passageHref } from './model.js';
 import { buildIndex, buildTopics, lookup, parseRef, shardOf } from './match.js';
 
@@ -20,11 +20,7 @@ const BOOK_EN = { genesis: 'Genesis', exodus: 'Exodus', leviticus: 'Leviticus', 
 const style = `
 .ask-torah { max-width: 40rem; }
 .ask-torah .ask-hero { display: flex; gap: .9rem; align-items: center; margin: .4rem 0 .8rem; }
-.ask-torah .ask-seal { flex: none; inline-size: 3.4rem; block-size: 3.4rem; border-radius: 50%; position: relative;
-  background: radial-gradient(circle at 50% 35%, #1f4a2a, #0f1f17 75%); box-shadow: inset 0 0 0 3px #d9a441, inset 0 0 0 5px #0f1f17, inset 0 0 0 6px #b8862b; }
-.ask-torah .ask-seal::after { content: ""; position: absolute; inset: 26%; background: #e8c97a;
-  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M2.5 5.5C5 4 8.5 4 12 6c3.5-2 7-2 9.5-.5v13c-2.5-1.5-6-1.5-9.5.5-3.5-2-7-2-9.5-.5z'/><path d='M12 6v13'/></svg>") center / contain no-repeat;
-          mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M2.5 5.5C5 4 8.5 4 12 6c3.5-2 7-2 9.5-.5v13c-2.5-1.5-6-1.5-9.5.5-3.5-2-7-2-9.5-.5z'/><path d='M12 6v13'/></svg>") center / contain no-repeat; }
+.ask-torah .ask-hero .alef-medal { flex: none; inline-size: 3.4rem; block-size: 3.4rem; }
 .ask-torah .ask-log { display: flex; flex-direction: column; gap: .85rem; margin: 1rem 0; }
 .ask-torah .ask-msg { border-radius: 1rem; padding: .8rem 1rem; }
 .ask-torah .ask-msg.user { background: color-mix(in srgb, var(--accent) 16%, transparent); margin-inline-start: 2rem; }
@@ -132,7 +128,7 @@ export async function mount(root, ctx) {
     h('style', {}, style),
     h('header', {},
       h('h1', { id: 'view-title', tabindex: '-1' }, 'Ask the Torah ', heSpan('שְׁאֵלוֹת עַל הַתּוֹרָה')),
-      h('div', { class: 'ask-hero' }, h('span', { class: 'ask-seal', 'aria-hidden': 'true' }), h('p', { class: 'muted' }, INTRO))),
+      h('div', { class: 'ask-hero' }, medal('home', 'ask', 54), h('p', { class: 'muted' }, INTRO))),
     empty, log, status, form));
 
   try {

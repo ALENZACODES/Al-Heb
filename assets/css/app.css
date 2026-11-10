@@ -151,6 +151,7 @@ main .alef-trace .notice, main .alef-atlas .warn { color: #1b1b1f; }
 @media (max-width: 719.98px) {
   main .alef-trace > div:has(> .stage) { display: flex; flex-direction: column; }
   main .alef-trace > div:has(> .stage) > * { order: 20; margin-block: 0 .6rem; }
+  main .alef-trace > div:has(> .stage) > .alef-letter-title { order: 0; }
   main .alef-trace > div:has(> .stage) > .tabs { order: 1; }
   main .alef-trace > div:has(> .stage) > .grid { order: 2; display: flex !important; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; gap: .4rem; padding-block-end: .35rem; -webkit-overflow-scrolling: touch; }
   main .alef-trace > div:has(> .stage) > .grid > button { flex: 0 0 max(3rem, var(--tap, 48px)); min-block-size: var(--tap, 48px); scroll-snap-align: center; }

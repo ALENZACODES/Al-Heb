@@ -3,7 +3,7 @@
 These Practical items have no existing clip in the audio manifests (by listen id or by the same pointed Hebrew text).
 The games lane can render them with Google Cloud TTS. This lane did not render them.
 
-Mapped to an existing clip: 682. Gaps (per unit item): 52. Unique texts to render: 52.
+Mapped to an existing clip: 697. Gaps (per unit item): 53. Unique texts to render: 53.
 Tradition for new clips should be `israeli` (the Practical track is Israeli Hebrew).
 
 ```json
@@ -321,6 +321,12 @@ Tradition for new clips should be `israeli` (the Practical track is Israeli Hebr
       "id": "d-hotel-l8",
       "hebrew": "תּוֹדָה רַבָּה!",
       "translit": "toda raba!",
+      "tradition": "israeli"
+    },
+    {
+      "id": "i-50-w13",
+      "hebrew": "גְּמַר חֲתִימָה טוֹבָה",
+      "translit": "gemar chatimah tovah",
       "tradition": "israeli"
     }
   ]

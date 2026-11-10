@@ -1,0 +1,180 @@
+{
+ "id": "pu-decide",
+ "title": "What happened, and deciding",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il24",
+   "title": "Capstone: an A2-B1 conversation",
+   "track": "israel",
+   "wordCount": 3
+  }
+ ],
+ "speakSets": [
+  "speak-survival-small-talk-1"
+ ],
+ "grammarNote": "il24 already stores מַה קָרָה, תַּסְבִּיר לִי and בּוֹא נַחֲלִיט as capstone conversation lines. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "il24-w1",
+   "source": "data/curriculum/lessons.json#il24.words[0]",
+   "he": "מַה קָרָה",
+   "en": "what happened",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il24-w1"
+   }
+  },
+  {
+   "id": "il24-w2",
+   "source": "data/curriculum/lessons.json#il24.words[1]",
+   "he": "תַּסְבִּיר לִי",
+   "en": "explain it to me (to a man)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il24-w2"
+   }
+  },
+  {
+   "id": "il24-w3",
+   "source": "data/curriculum/lessons.json#il24.words[2]",
+   "he": "בּוֹא נַחֲלִיט",
+   "en": "let's decide",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il24-w3"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il24-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il24-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il24-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il24-w1",
+    "il24-w2",
+    "il24-w3"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-survival-small-talk-1.json.",
+   "set": "speak-survival-small-talk-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-decide-p01",
+   "title": "What happened",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מַה קָרָה. il24 already stores מַה קָרָה, תַּסְבִּיר לִי and בּוֹא נַחֲלִיט as capstone conversation lines.",
+   "items": [
+    {
+     "id": "il24-w1",
+     "source": "data/curriculum/lessons.json#il24.words[0]",
+     "he": "מַה קָרָה",
+     "en": "what happened",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il24-w1"
+     }
+    },
+    {
+     "id": "il24-w2",
+     "source": "data/curriculum/lessons.json#il24.words[1]",
+     "he": "תַּסְבִּיר לִי",
+     "en": "explain it to me (to a man)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il24-w2"
+     }
+    },
+    {
+     "id": "il24-w3",
+     "source": "data/curriculum/lessons.json#il24.words[2]",
+     "he": "בּוֹא נַחֲלִיט",
+     "en": "let's decide",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il24-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il24-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il24-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il24-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il24-w1",
+    "il24-w2",
+    "il24-w3"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  }
+ ]
+}

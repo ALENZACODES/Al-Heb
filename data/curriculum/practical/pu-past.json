@@ -1,0 +1,264 @@
+{
+ "id": "pu-past",
+ "title": "What I did",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il19",
+   "title": "Past tense (A2/B1 bridge)",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "speakSets": [
+  "speak-doing-verbs-2"
+ ],
+ "grammarNote": "il19 already stores past-tense forms such as הָלַכְתִּי, אָכַלְתִּי and אָמַרְתִּי, and הָיָה. The ending ־תִּי is 'I' in those stored forms. These notes only name forms already in il19.",
+ "items": [
+  {
+   "id": "il19-w1",
+   "source": "data/curriculum/lessons.json#il19.words[0]",
+   "he": "הָלַכְתִּי",
+   "en": "I went",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il19-w1"
+   }
+  },
+  {
+   "id": "il19-w2",
+   "source": "data/curriculum/lessons.json#il19.words[1]",
+   "he": "אָכַלְתִּי",
+   "en": "I ate",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il19-w2"
+   }
+  },
+  {
+   "id": "il19-w3",
+   "source": "data/curriculum/lessons.json#il19.words[2]",
+   "he": "רָאִיתִי",
+   "en": "I saw",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il19-w3"
+   }
+  },
+  {
+   "id": "il19-w4",
+   "source": "data/curriculum/lessons.json#il19.words[3]",
+   "he": "אָמַרְתִּי",
+   "en": "I said",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il19-w4"
+   }
+  },
+  {
+   "id": "il19-w5",
+   "source": "data/curriculum/lessons.json#il19.words[4]",
+   "he": "הָיָה",
+   "en": "there was; he was",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il19-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il19-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il19-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il19-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il19-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il19-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il19-w1",
+    "il19-w2",
+    "il19-w3",
+    "il19-w4",
+    "il19-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-doing-verbs-2.json.",
+   "set": "speak-doing-verbs-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-past-p01",
+   "title": "I went",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הָלַכְתִּי. il19 already stores past-tense forms such as הָלַכְתִּי, אָכַלְתִּי and אָמַרְתִּי, and הָיָה.",
+   "items": [
+    {
+     "id": "il19-w1",
+     "source": "data/curriculum/lessons.json#il19.words[0]",
+     "he": "הָלַכְתִּי",
+     "en": "I went",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w1"
+     }
+    },
+    {
+     "id": "il19-w2",
+     "source": "data/curriculum/lessons.json#il19.words[1]",
+     "he": "אָכַלְתִּי",
+     "en": "I ate",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w2"
+     }
+    },
+    {
+     "id": "il19-w3",
+     "source": "data/curriculum/lessons.json#il19.words[2]",
+     "he": "רָאִיתִי",
+     "en": "I saw",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w3"
+     }
+    },
+    {
+     "id": "il19-w4",
+     "source": "data/curriculum/lessons.json#il19.words[3]",
+     "he": "אָמַרְתִּי",
+     "en": "I said",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w4"
+     }
+    },
+    {
+     "id": "il19-w5",
+     "source": "data/curriculum/lessons.json#il19.words[4]",
+     "he": "הָיָה",
+     "en": "there was; he was",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il19-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il19-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il19-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il19-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il19-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il19-w1",
+    "il19-w2",
+    "il19-w3",
+    "il19-w4",
+    "il19-w5"
+   ],
+   "speakSet": "speak-doing-verbs-2"
+  }
+ ]
+}

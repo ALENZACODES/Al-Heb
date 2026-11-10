@@ -1,0 +1,264 @@
+{
+ "id": "pu-verbs-now",
+ "title": "What I do now",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il16",
+   "title": "Present tense: the verb that does the work",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "speakSets": [
+  "speak-doing-verbs-1"
+ ],
+ "grammarNote": "il16 already stores present-tense phrases such as אֲנִי הוֹלֵךְ, אֲנִי אוֹכֵל and אֲנִי מְדַבֵּר. These are the masculine forms in that lesson; the lesson itself does not store the feminine partners here. These notes only name forms already in il16.",
+ "items": [
+  {
+   "id": "il16-w1",
+   "source": "data/curriculum/lessons.json#il16.words[0]",
+   "he": "אֲנִי הוֹלֵךְ",
+   "en": "I go (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il16-w1"
+   }
+  },
+  {
+   "id": "il16-w2",
+   "source": "data/curriculum/lessons.json#il16.words[1]",
+   "he": "אֲנִי אוֹכֵל",
+   "en": "I eat (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il16-w2"
+   }
+  },
+  {
+   "id": "il16-w3",
+   "source": "data/curriculum/lessons.json#il16.words[2]",
+   "he": "אֲנִי לוֹמֵד",
+   "en": "I study (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il16-w3"
+   }
+  },
+  {
+   "id": "il16-w4",
+   "source": "data/curriculum/lessons.json#il16.words[3]",
+   "he": "אֲנִי כּוֹתֵב",
+   "en": "I write (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il16-w4"
+   }
+  },
+  {
+   "id": "il16-w5",
+   "source": "data/curriculum/lessons.json#il16.words[4]",
+   "he": "אֲנִי מְדַבֵּר",
+   "en": "I speak (m.)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il16-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il16-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il16-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il16-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il16-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il16-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il16-w1",
+    "il16-w2",
+    "il16-w3",
+    "il16-w4",
+    "il16-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-doing-verbs-1.json.",
+   "set": "speak-doing-verbs-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-verbs-now-p01",
+   "title": "I go (m.)",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אֲנִי הוֹלֵךְ. il16 already stores present-tense phrases such as אֲנִי הוֹלֵךְ, אֲנִי אוֹכֵל and אֲנִי מְדַבֵּר.",
+   "items": [
+    {
+     "id": "il16-w1",
+     "source": "data/curriculum/lessons.json#il16.words[0]",
+     "he": "אֲנִי הוֹלֵךְ",
+     "en": "I go (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w1"
+     }
+    },
+    {
+     "id": "il16-w2",
+     "source": "data/curriculum/lessons.json#il16.words[1]",
+     "he": "אֲנִי אוֹכֵל",
+     "en": "I eat (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w2"
+     }
+    },
+    {
+     "id": "il16-w3",
+     "source": "data/curriculum/lessons.json#il16.words[2]",
+     "he": "אֲנִי לוֹמֵד",
+     "en": "I study (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w3"
+     }
+    },
+    {
+     "id": "il16-w4",
+     "source": "data/curriculum/lessons.json#il16.words[3]",
+     "he": "אֲנִי כּוֹתֵב",
+     "en": "I write (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w4"
+     }
+    },
+    {
+     "id": "il16-w5",
+     "source": "data/curriculum/lessons.json#il16.words[4]",
+     "he": "אֲנִי מְדַבֵּר",
+     "en": "I speak (m.)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il16-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il16-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il16-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il16-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il16-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il16-w1",
+    "il16-w2",
+    "il16-w3",
+    "il16-w4",
+    "il16-w5"
+   ],
+   "speakSet": "speak-doing-verbs-1"
+  }
+ ]
+}

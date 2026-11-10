@@ -34,7 +34,7 @@ Israel-track openers are `il01`–`il24`. Intermediate Israel lessons already si
 | Unit (planned id) | Situation | Existing lessons to reuse | Phrasebook | Speak set | Status |
 |---|---|---|---|---|---|
 | pu-greetings | Greetings and courtesy | il01, I-50 | greetings, politeness | speak-first-day, speak-survival-fillers-1 | planned — native review |
-| pu-fillers | Sounding local (fillers) | il02, il23 | fillers | speak-survival-fillers-1 | planned — native review |
+| pu-fillers | Sounding local (fillers) | il02, il23 | fillers | speak-survival-fillers-1 | built-draft — native review |
 | pu-intro | Introducing yourself | il03, I-25 | small-talk (name / from) | speak-talking-asking-1 | planned — native review |
 | pu-numbers | Numbers and prices | il04, il05 | numbers | speak-time-numbers-2 | planned — native review |
 | **pu-cafe** | **Ordering at a cafe** | **il06, il07, I-13** | **cafe (27)** | **speak-survival-cafe-1** | **built-draft — native review still required** |
@@ -46,10 +46,11 @@ Israel-track openers are `il01`–`il24`. Intermediate Israel lessons already si
 | **pu-small-talk** | **How are you, where from, work** | **il13, I-25, I-36** | **small-talk (19)** | **speak-survival-small-talk-1** | **built-draft — native review still required** |
 | pu-family | Family and who you are | il14, I-42 | (lesson words) | speak-people-family-1 | planned — native review |
 | pu-weather | Weather and what to take | il15, I-24 | (lesson words) | speak-nature-animals-3 | planned — native review |
-| pu-verbs-now | Present-tense “I do” | il16 | (lesson words; grammar-led) | speak-doing-verbs-1 | planned — native review |
+| pu-verbs-now | What I do now | il16 | (lesson words; grammar-led) | speak-doing-verbs-1 | built-draft — native review |
 | pu-hotel | Hotel and booking | il17, I-17 | directions (hotel), taxi | speak-places-travel-1 | planned — native review |
 | pu-help | Help, health, pharmacy | il18, I-14, I-20 | help | speak-body-health-2 | planned — native review |
-| pu-past-future | Past and future (bridge) | il19, il20 | (grammar-led) | speak-doing-verbs-2 | planned — native review |
+| pu-past | What I did | il19 | (lesson words; grammar-led) | speak-doing-verbs-2 | built-draft — native review |
+| pu-decide | What happened, and deciding | il24 | (capstone conversation lines) | speak-survival-small-talk-1 | built-draft — native review |
 | pu-opinions | Opinions and plans with someone | il21, il24, I-38 | small-talk | speak-feelings-mind-2 | planned — native review |
 | pu-phone | Phone, SIM, messages | I-16, il22 | (lesson words) | speak-tech-media-1 | planned — native review |
 | pu-transit | Bus, train, tickets | I-11, il10 | taxi, directions (station) | speak-places-travel-2 | planned — native review |

@@ -35,8 +35,8 @@
    "title": "Sounding local: fillers",
    "level": "L0",
    "file": "data/curriculum/practical/pu-fillers.json",
-   "pageCount": 6,
-   "itemCount": 28,
+   "pageCount": 7,
+   "itemCount": 31,
    "status": "built-draft",
    "nativeReview": true
   },
@@ -321,6 +321,36 @@
    "nativeReview": true
   },
   {
+   "id": "pu-verbs-now",
+   "title": "What I do now",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-verbs-now.json",
+   "pageCount": 1,
+   "itemCount": 5,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-past",
+   "title": "What I did",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-past.json",
+   "pageCount": 1,
+   "itemCount": 5,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-decide",
+   "title": "What happened, and deciding",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-decide.json",
+   "pageCount": 1,
+   "itemCount": 3,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-shabbat",
    "title": "Being invited for Shabbat",
    "level": "L4",
@@ -342,8 +372,8 @@
   }
  ],
  "totals": {
-  "units": 33,
-  "pages": 162,
-  "items": 734
+  "units": 36,
+  "pages": 166,
+  "items": 750
  }
 }

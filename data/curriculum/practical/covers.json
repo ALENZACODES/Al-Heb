@@ -100,6 +100,15 @@
   },
   "pu-holidays": {
    "imageId": "BG_synagogue"
+  },
+  "pu-verbs-now": {
+   "imageId": "VERB_talk_01"
+  },
+  "pu-past": {
+   "imageId": "VERB_change_01"
+  },
+  "pu-decide": {
+   "imageId": "VERB_talk_02"
   }
  }
 }

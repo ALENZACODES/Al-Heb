@@ -11,6 +11,12 @@
    "title": "Fillers that make you sound local",
    "track": "israel",
    "wordCount": 6
+  },
+  {
+   "id": "il23",
+   "title": "Sound less like an outsider: pronunciation markers",
+   "track": "israel",
+   "wordCount": 3
   }
  ],
  "phrasebookSituation": "fillers",
@@ -354,6 +360,42 @@
     "kind": "word",
     "id": "il02-w6"
    }
+  },
+  {
+   "id": "il23-w1",
+   "source": "data/curriculum/lessons.json#il23.words[0]",
+   "he": "רֹאשׁ",
+   "en": "head (uvular vs tapped resh)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w1"
+   }
+  },
+  {
+   "id": "il23-w2",
+   "source": "data/curriculum/lessons.json#il23.words[1]",
+   "he": "חַיִּים",
+   "en": "life (chet, not kaf)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w2"
+   }
+  },
+  {
+   "id": "il23-w3",
+   "source": "data/curriculum/lessons.json#il23.words[2]",
+   "he": "מַה שְׁלוֹמְךָ",
+   "en": "how are you (to a man; stress on the last syllable)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il23-w3"
+   }
   }
  ],
  "srsQueue": [
@@ -580,6 +622,30 @@
    "source": "item",
    "srsKind": "word",
    "band": "extend"
+  },
+  {
+   "position": 29,
+   "kind": "word",
+   "id": "il23-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 30,
+   "kind": "word",
+   "id": "il23-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 31,
+   "kind": "word",
+   "id": "il23-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
   }
  ],
  "listenDrills": [
@@ -613,7 +679,10 @@
     "il02-w3",
     "il02-w4",
     "il02-w5",
-    "il02-w6"
+    "il02-w6",
+    "il23-w1",
+    "il23-w2",
+    "il23-w3"
    ],
    "source": "audio manifest, phrasebook and lesson-word ids"
   }
@@ -1257,6 +1326,30 @@
       "kind": "word",
       "id": "il02-w6"
      }
+    },
+    {
+     "id": "il23-w1",
+     "source": "data/curriculum/lessons.json#il23.words[0]",
+     "he": "רֹאשׁ",
+     "en": "head (uvular vs tapped resh)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w1"
+     }
+    },
+    {
+     "id": "il23-w2",
+     "source": "data/curriculum/lessons.json#il23.words[1]",
+     "he": "חַיִּים",
+     "en": "life (chet, not kaf)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w2"
+     }
     }
    ],
    "srsQueue": [
@@ -1283,12 +1376,64 @@
      "source": "item",
      "srsKind": "word",
      "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il23-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il23-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
     }
    ],
    "listenIds": [
     "il02-w4",
     "il02-w5",
-    "il02-w6"
+    "il02-w6",
+    "il23-w1",
+    "il23-w2"
+   ],
+   "speakSet": "speak-survival-fillers-1"
+  },
+  {
+   "id": "pu-fillers-p07",
+   "title": "How are you (to a man; stress on the last syllable)",
+   "order": 7,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מַה שְׁלוֹמְךָ. Fillers already stored in the phrasebook (יָעַנִי, כְּאִלּוּ and the rest of the situation) are frozen phrases, not a new grammar lesson.",
+   "items": [
+    {
+     "id": "il23-w3",
+     "source": "data/curriculum/lessons.json#il23.words[2]",
+     "he": "מַה שְׁלוֹמְךָ",
+     "en": "how are you (to a man; stress on the last syllable)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il23-w3"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il23-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il23-w3"
    ],
    "speakSet": "speak-survival-fillers-1"
   }

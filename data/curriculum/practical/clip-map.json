@@ -750,6 +750,33 @@
    "via": "listen-id",
    "status": "tts"
   },
+  "pu-fillers|il23-w1": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w1",
+   "kind": "word",
+   "clipId": "il23-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il23-w2": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w2",
+   "kind": "word",
+   "clipId": "il23-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-fillers|il23-w3": {
+   "unitId": "pu-fillers",
+   "itemId": "il23-w3",
+   "kind": "word",
+   "clipId": "il23-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
   "pu-numbers|numbers-01": {
    "unitId": "pu-numbers",
    "itemId": "numbers-01",
@@ -5898,6 +5925,123 @@
    "via": "listen-id",
    "status": "tts"
   },
+  "pu-verbs-now|il16-w1": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w1",
+   "kind": "word",
+   "clipId": "il16-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w2": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w2",
+   "kind": "word",
+   "clipId": "il16-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w3": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w3",
+   "kind": "word",
+   "clipId": "il16-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w4": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w4",
+   "kind": "word",
+   "clipId": "il16-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-verbs-now|il16-w5": {
+   "unitId": "pu-verbs-now",
+   "itemId": "il16-w5",
+   "kind": "word",
+   "clipId": "il16-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w1": {
+   "unitId": "pu-past",
+   "itemId": "il19-w1",
+   "kind": "word",
+   "clipId": "il19-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w2": {
+   "unitId": "pu-past",
+   "itemId": "il19-w2",
+   "kind": "word",
+   "clipId": "il19-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w3": {
+   "unitId": "pu-past",
+   "itemId": "il19-w3",
+   "kind": "word",
+   "clipId": "il19-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w4": {
+   "unitId": "pu-past",
+   "itemId": "il19-w4",
+   "kind": "word",
+   "clipId": "il19-w4",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-past|il19-w5": {
+   "unitId": "pu-past",
+   "itemId": "il19-w5",
+   "kind": "word",
+   "clipId": "il19-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w1": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w1",
+   "kind": "word",
+   "clipId": "il24-w1",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w2": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w2",
+   "kind": "word",
+   "clipId": "il24-w2",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-decide|il24-w3": {
+   "unitId": "pu-decide",
+   "itemId": "il24-w3",
+   "kind": "word",
+   "clipId": "il24-w3",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
   "pu-shabbat|i-19-w1": {
    "unitId": "pu-shabbat",
    "itemId": "i-19-w1",
@@ -6060,20 +6204,11 @@
    "via": "listen-id",
    "status": "tts"
   },
-  "pu-holidays|i-50-w13": {
-   "unitId": "pu-holidays",
-   "itemId": "i-50-w13",
-   "kind": "word",
-   "clipId": "i-50-w5",
-   "tradition": "israeli",
-   "via": "listen-id",
-   "status": "tts"
-  },
   "pu-holidays|i-50-w5": {
    "unitId": "pu-holidays",
    "itemId": "i-50-w5",
    "kind": "word",
-   "clipId": "i-50-w6",
+   "clipId": "i-50-w5",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6082,7 +6217,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w6",
    "kind": "word",
-   "clipId": "i-50-w7",
+   "clipId": "i-50-w6",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6091,7 +6226,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w7",
    "kind": "word",
-   "clipId": "i-50-w8",
+   "clipId": "i-50-w7",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6100,16 +6235,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w8",
    "kind": "word",
-   "clipId": "i-50-w9",
-   "tradition": "israeli",
-   "via": "listen-id",
-   "status": "tts"
-  },
-  "pu-holidays|i-50-w14": {
-   "unitId": "pu-holidays",
-   "itemId": "i-50-w14",
-   "kind": "word",
-   "clipId": "i-50-w10",
+   "clipId": "i-50-w8",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6118,7 +6244,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w9",
    "kind": "word",
-   "clipId": "i-50-w11",
+   "clipId": "i-50-w9",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6129,22 +6255,31 @@
    "kind": "word",
    "clipId": "i-50-w11",
    "tradition": "israeli",
-   "via": "same-pointed-text",
+   "via": "listen-id",
    "status": "tts"
   },
   "pu-holidays|i-50-w12": {
    "unitId": "pu-holidays",
    "itemId": "i-50-w12",
    "kind": "word",
-   "clipId": "il01-w4",
+   "clipId": "i-50-w12",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w14": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w14",
+   "kind": "line",
+   "clipId": "greetings-27-f",
    "tradition": "israeli",
    "via": "same-pointed-text",
    "status": "tts"
   }
  },
  "totals": {
-  "mapped": 682,
-  "gaps": 52,
-  "items": 734
+  "mapped": 697,
+  "gaps": 53,
+  "items": 750
  }
 }

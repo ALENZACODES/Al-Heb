@@ -15,6 +15,7 @@ import { settle, leagueView } from '../../src/retention/leagues.js';
 import { logSession, plan, recordSent, answerAsk, mayShow, nextFire } from '../../src/retention/notify.js';
 import { questProgress, questView } from '../../src/retention/quests.js';
 import { isQuiet } from '../../src/retention/quiet.js';
+import { monthProgress, monthView } from '../../src/retention/month.js';
 
 function check(rec, streak, now, prevXp, tag) {
   assert.ok(rec.xp.total >= prevXp, `${tag}: XP went down`);
@@ -32,7 +33,7 @@ function check(rec, streak, now, prevXp, tag) {
 }
 
 test('random sequences of everything a learner can do keep the record well-formed (60 learners, 400 steps each, about 8 months)', () => {
-  const seen = { freezeUsed: 0, broken: 0, repaired: 0, leagueWeeks: 0, promoted: 0, planned: 0, chest: 0, heartsEmpty: 0, restCovered: 0, goalDays: 0 };
+  const seen = { month: 0, freezeUsed: 0, broken: 0, repaired: 0, leagueWeeks: 0, promoted: 0, planned: 0, chest: 0, heartsEmpty: 0, restCovered: 0, goalDays: 0 };
   for (let seed = 1; seed <= 60; seed++) {
     const rand = mulberry32(seed * 7919), pick = (n) => Math.floor(rand() * n);
     let now = T('2026-03-01T08:00') + pick(86400000), rec = defaults(now, 'fuzz-' + seed), streak = null, id = 0;
@@ -55,6 +56,7 @@ test('random sequences of everything a learner can do keep the record well-forme
         case 10: { const entries = plan(rec, projectStreak(streak, now), now); for (const e of entries) { assert.ok(e.fireAt > now, `${tag}: a reminder planned in the past`); assert.equal(isQuiet(e.fireAt), false, `${tag}: a reminder planned in quiet time (${new Date(e.fireAt)})`); } if (entries[0]) { seen.planned++; assert.equal(mayShow(rec, entries[0], entries[0].fireAt), true, `${tag}: planned but not showable`); rec = recordSent(rec, entries[0].id, entries[0].fireAt); } break; }
         default: rec = rand() < 0.5 ? earn(rec, pick(40), 'goal', now) : answerAsk(rec, ['yes', 'later', 'denied'][pick(3)], 'kind');
       }
+      { const mo = monthProgress(rec, now); rec = mo.rec; if (mo.completed) seen.month = (seen.month || 0) + 1; const mv = monthView(rec, now); assert.ok(mv.xp <= mv.target && mv.daysLeft >= 0 && mv.daysLeft <= 29, `${tag}: month view`); }
       rec = normalize(rec, now);
       check(rec, streak, now, prevXp, tag);
       const st = streakStatus(streak, rec, now); assert.ok(['rest', 'done', 'freeze-used', 'at-risk', 'open', 'broken', 'new'].includes(st.state), tag);

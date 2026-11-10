@@ -14,6 +14,7 @@ import { logSession, createScheduler, readShown, recordSent, registerPeriodicSyn
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { questProgress, questView, questsOn } from './quests.js';
+import { monthProgress, monthView } from './month.js';
 import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 
 const STREAK_KEY = 'streak';
@@ -43,7 +44,10 @@ export function retention(ctx, g = globalThis) {
     if (out.rec !== cur) update(() => out.rec);
     for (const text of out.done) say(`Quest done: ${text}. +5 gems.`);
     if (out.chest) { say('All three quests done! +10 gems.'); later(() => showRimon('daily_goal'), 1500); }
-    return out;
+    const cur2 = load(store, t), mo = monthProgress(cur2, t, { calm: calm() }); // the month's challenge is checked wherever XP can change
+    if (mo.rec !== cur2) update(() => mo.rec);
+    if (mo.completed) { say(`${monthView(mo.rec, t).title} complete! +50 gems.`); later(() => showRimon('streak_milestone'), 2200); }
+    return { ...out, month: mo.completed ? monthView(mo.rec, t).title : null, gems: out.gems + (mo.completed ? 50 : 0) };
   }
   /** Has the learner earned anything yet? Until then the top bar and the Home cards stay out of the way of a first visit. */
   const revealed = () => { const r = load(store, now()); return r.xp.total > 0 || r.lessonsFinished > 0 || r.gems.balance > 0 || projectStreak(streakRaw(), now()).count > 0; };
@@ -85,7 +89,7 @@ export function retention(ctx, g = globalThis) {
     scheduler?.arm();
     const q = questStep({ xp: pay.xp, lesson: partial ? 0 : 1, sharp: !partial && Number(detail.accuracy) >= 0.9 ? 1 : 0, combo: bestRun });
     const lg = leagueOn(saved, { calm: calm() }) && saved.league.joined ? leagueView(load(store, t), t) : null;
-    return { unlocked: unlockedBy(saved, lessonsBefore, saved.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
+    return { month: q.month, unlocked: unlockedBy(saved, lessonsBefore, saved.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
       quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
   }
@@ -189,6 +193,7 @@ export function retention(ctx, g = globalThis) {
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
     comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
     recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
+    monthView: () => monthView(get(), now(), { calm: calm() }),
     questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode }), questsShown: () => questsOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
     admit: (hash) => { lessonHash = hash; } };

@@ -43,6 +43,7 @@ test('top bar, daily-goal ring, shop purchase and league table at 320, 360 and 3
       assert.equal(await a.page.$eval('.ret-goal-text', (n) => n.textContent), '0 of 20 XP today.');
       assert.equal(await a.page.$$eval('.ret-strip .ret-dot', (n) => n.length), 7);
       assert.equal(await a.page.$$eval('.ret-quests .ret-quest-list li', (n) => n.length), new Date().getDay() === 6 ? 0 : 3, 'three quests (none on Saturday)');
+      assert.match(await a.page.$eval('.ret-month', (n) => n.textContent), /Challenge.*of \d+ XP/s); assert.equal(await a.page.$eval('.ret-month-bar', (n) => n.getAttribute('role')), 'progressbar');
       assert.ok(await noSideScroll(a.page), `home ${width}`);
       assert.deepEqual(await stray(a.page), [], `home ${width}`);
       if (width === 360) {

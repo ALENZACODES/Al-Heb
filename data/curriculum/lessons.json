@@ -1957,7 +1957,7 @@
    "id": "r51",
    "track": "read",
    "level": "grey",
-   "title": "Grey-belt assessment",
+   "title": "Grey-belt check",
    "letters": [],
    "vowels": [],
    "words": [
@@ -5601,7 +5601,7 @@
    "goals": [
     "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
     "Recognise the Psalm 118 lines that are sung responsively",
-    "Know that the full Hallel text is not yet in the corpus"
+    "Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -13496,7 +13496,7 @@
    "track": "read",
    "level": "intermediate",
    "unit": "synagogue",
-   "title": "Yom Kippur: the few lines the corpus holds and the words around them",
+   "title": "Yom Kippur: the Shema line said aloud and the words of the day",
    "status": "draft",
    "proofread": false,
    "needsNativeReview": true,
@@ -13862,7 +13862,7 @@
    "track": "read",
    "level": "intermediate",
    "unit": "synagogue",
-   "title": "Pesach: the seder blessings the corpus holds",
+   "title": "Pesach: the seder blessings and the words of the festival",
    "status": "draft",
    "proofread": false,
    "needsNativeReview": true,
@@ -14065,7 +14065,7 @@
    "goals": [
     "Say the wine blessing and the Shehecheyanu that open the seder",
     "Find 'the exodus from Egypt' in the Kiddush text",
-    "Wish 'chag sameach' and know which seder texts the corpus does not hold"
+    "Wish 'chag sameach', and know that the Haggadah is not in ALEF yet"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -14435,7 +14435,7 @@
    "goals": [
     "Greet people with chag sameach and recognise the word sukkah",
     "Say Shehecheyanu and the wine blessing at the sukkah",
-    "Know which Sukkot texts (lulav, Hallel) are not yet in the corpus"
+    "Know that the lulav blessing and Hallel are not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -14769,7 +14769,7 @@
    "goals": [
     "Say the blessing for miracles used on Purim and Hanukkah",
     "Greet and toast in Hebrew",
-    "Know that the Megillah itself is not in the corpus"
+    "Know that the Megillah reading is not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -15859,7 +15859,7 @@
    "goals": [
     "Say Hagomel after a safe journey and answer the congregation's reply",
     "Wish a traveller peace in Hebrew",
-    "Know that Tefillat HaDerekh is not yet in the corpus"
+    "Know that Tefillat HaDerekh (the traveller's prayer) is not in ALEF yet"
    ],
    "estMinutes": 25,
    "prerequisites": [

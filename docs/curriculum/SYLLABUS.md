@@ -156,7 +156,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Read at the grey-belt target speed without errors
 - **r50** Timed reading 3: new siddur page you have never seen (25 min)
   - Read an unseen pointed page aloud; note the speed and the mistakes
-- **r51** Grey-belt assessment (30 min)
+- **r51** Grey-belt check (30 min)
   - Pass the grey-belt check: read a siddur page inside the time limit
 
 ### Intermediate (20 lessons, 635 min)
@@ -188,7 +188,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-07** Hallel refrains: the lines the congregation sings back (30 min)
   - Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments
   - Recognise the Psalm 118 lines that are sung responsively
-  - Know that the full Hallel text is not yet in the corpus
+  - Know that the full Hallel is not in ALEF yet; follow it in your congregation's siddur
 - **I-08** Aleinu: the closing prayer and where to bow (30 min)
   - Read the first paragraph of Aleinu at the speed it is said
   - Find the words where many congregations bow
@@ -209,22 +209,22 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Answer the Kedushah at each cue
   - Say Amen after the peace blessing
   - Recognise the three closing verses of the Amidah in order
-- **I-28** Yom Kippur: the few lines the corpus holds and the words around them (30 min)
+- **I-28** Yom Kippur: the Shema line said aloud and the words of the day (30 min)
   - Know the one day a year when 'Baruch shem' is said aloud and answer it
   - Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness
   - Say 'a good year' and ask and give forgiveness politely
-- **I-29** Pesach: the seder blessings the corpus holds (30 min)
+- **I-29** Pesach: the seder blessings and the words of the festival (30 min)
   - Say the wine blessing and the Shehecheyanu that open the seder
   - Find 'the exodus from Egypt' in the Kiddush text
-  - Wish 'chag sameach' and know which seder texts the corpus does not hold
+  - Wish 'chag sameach', and know that the Haggadah is not in ALEF yet
 - **I-30** Sukkot: sukkah words and the blessings that carry over (25 min)
   - Greet people with chag sameach and recognise the word sukkah
   - Say Shehecheyanu and the wine blessing at the sukkah
-  - Know which Sukkot texts (lulav, Hallel) are not yet in the corpus
+  - Know that the lulav blessing and Hallel are not in ALEF yet
 - **I-31** Purim: the miracle blessing and the words of the day (25 min)
   - Say the blessing for miracles used on Purim and Hanukkah
   - Greet and toast in Hebrew
-  - Know that the Megillah itself is not in the corpus
+  - Know that the Megillah reading is not in ALEF yet
 - **I-32** Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur (35 min)
   - Say the candle-lighting blessing and answer Amen
   - Follow the order of blessings on the first night
@@ -236,7 +236,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-34** Before and after a journey: Hagomel, peace and the vocabulary of the road (25 min)
   - Say Hagomel after a safe journey and answer the congregation's reply
   - Wish a traveller peace in Hebrew
-  - Know that Tefillat HaDerekh is not yet in the corpus
+  - Know that Tefillat HaDerekh (the traveller's prayer) is not in ALEF yet
 - **I-35** Shabbat-day Kiddush: V'shamru, Zachor, wine and bread (30 min)
   - Read V'shamru and Zachor as the Kiddush before the Shabbat lunch
   - Say the wine and bread blessings and answer Amen

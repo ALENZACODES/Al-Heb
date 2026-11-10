@@ -510,5 +510,9 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 .alef-plan-link { font-size: .8rem; line-height: 1.3; max-inline-size: 16rem; }
 .alef-first-glyph { display: block; font-family: var(--font-he); font-size: 6rem; line-height: 1.1; min-block-size: 10rem; inline-size: 100%; }
 .letter-meta { font-size: .8rem; line-height: 1.25; max-inline-size: 12rem; }
-.alef-medal{display:block;flex:none;border-radius:50%;margin:0 auto .4rem;box-shadow:0 2px 6px #0b1a1240}
-@media (forced-colors:active){.alef-medal{display:none}}
+.alef-medal,.alef-coin{display:block;flex:none;border-radius:50%;margin:0 auto .4rem;box-shadow:0 2px 6px #0b1a1240}
+.alef-coin{display:grid;place-items:center;inline-size:var(--z);block-size:var(--z);background:url(../img/icons/ICON_coin_blank.224.webp) center/contain}
+.alef-coin .he{font:700 calc(var(--z)*.44)/1 var(--font-he);background:linear-gradient(#fff4d0,#e8c372 45%,#b8862b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.alef-coin.is-long .he{font-size:calc(var(--z)*.28)}
+.wf-level-tile>.alef-medal:last-child{margin:.5rem 0 0}
+@media (forced-colors:active){.alef-medal{display:none}.alef-coin{background:none}.alef-coin .he{color:CanvasText;background:none}}

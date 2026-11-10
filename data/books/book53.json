@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book53-p01.mp3"
    },
    "illustration": "a lit bakery window on a dark street",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book53-p02.mp3"
    },
    "illustration": "a baker kneading, forearms floury",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book53-p03.mp3"
    },
    "illustration": "a yellowed photo on the wall: the same man, young, same bakery",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book53-p04.mp3"
    },
    "illustration": "a framed graduation photo, a city far away",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book53-p05.mp3"
    },
    "illustration": "the baker alone with the ovens",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book53-p06.mp3"
    },
    "illustration": "a woman in her twenties with a notebook",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book53-p07.mp3"
    },
    "illustration": "her eager face, flour in the air",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book53-p08.mp3"
    },
    "illustration": "the baker looking at her, then at the dough",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book53-p09.mp3"
    },
    "illustration": "an old apron passed over the counter",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book53-p10.mp3"
    },
    "illustration": "her hands in dough, his hands guiding",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book53-p11.mp3"
    },
    "illustration": "a loaf, golden, his approving nod",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book53-p12.mp3"
    },
    "illustration": "the two of them at the counter at dawn, the first customer",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

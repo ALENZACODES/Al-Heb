@@ -154,7 +154,11 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off
     'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop',
     // Brain Lab (src/lab/lab.view.js): a 0.3 s one-shot shake on a wrong tile, never looping; reduced motion switches it off
-    'lab-shake'];
+    'lab-shake',
+    // Brain Lab 3D Studio (src/lab/lab.view.js, 2026-11-10): birds cross the sky once (lab-fly), syllables fall once (lab-fall),
+    // a card turns in once (lab-flipin, 0.35 s), and gold particles fade out once on a right answer (lab-pop, 0.45 s, no flashing).
+    // None loops; the global reduced-motion and calm-mode rules switch all four off, and the games show a still layout instead.
+    'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

@@ -78,6 +78,9 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/speak/speak.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
+  // Record and compare (preview route /record-compare, 9.5 KB): view code only, loaded lazily by the router, fetched on first open and
+  // runtime-cached. Moved here when the Brain Lab offline fix met the music pack on main: together they went 3 KB over the 3.95 MiB install.
+  'src/recordcompare/recordcompare.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',
   'data/curriculum/dialogues.json', 'data/curriculum/gender-pairs.json', 'data/curriculum/loanwords.json', 'data/curriculum/prompts.json', 'data/curriculum/word-vocab-map.json',
   'data/firstday/minute-one.json', 'data/firstday/buildable-words.json' /* word builder list (168 KB): preview route #/firstwin, fetched when it opens, runtime-cached */, 'data/homepage/prayers.json', 'data/morning-verses.json', 'data/torah-quotes.json',

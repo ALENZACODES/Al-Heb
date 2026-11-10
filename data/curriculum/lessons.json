@@ -5594,12 +5594,21 @@
     }
    ],
    "prayerLines": [
-    "yehalelu"
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
    ],
    "goals": [
     "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
-    "Recognise the Psalm 118 lines that are sung responsively",
-    "Know that the full Hallel text is not yet in the corpus (gap g-hallel). Yehalelu, a praise verse from the Torah service, is attached only so this synagogue lesson has a real corpus line; it is not a stand-in for Hallel itself"
+    "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in the corpus",
+    "Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -5746,9 +5755,16 @@
       "הַלְלוּ־יָהּ"
      ],
      "answer": 0
+    },
+    {
+     "id": "I-07-e16",
+     "type": "fade",
+     "line": "hallel-118-1-4",
+     "lineIndex": 1,
+     "en": "Give thanks to the LORD, for he is good; his kindness is for ever."
     }
    ],
-   "note": "Hallel itself is a corpus gap (g-hallel). This lesson teaches only refrain fragments whose words are all present in the corpus or the vocabulary file; 'hodu' is not in any source file, so the first word of the refrain cannot be shown. Register the full Hallel in the registry before extending this lesson."
+   "note": "Selected Hallel refrain verses are now in the registry (hallel-113-1, 115-1, 116-13, 117, 118:1-6, 118:24-25, 118:28). The rest of Psalms 113-118, half-Hallel, and the repetitions remain a corpus gap (g-hallel). This lesson does not present those selected verses as the complete Hallel."
   },
   {
    "id": "I-08",
@@ -14093,15 +14109,17 @@
    ],
    "prayerLines": [
     "kiddush-wine-1",
-    "kiddush-shabbat-eve",
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-eve-close",
     "shehecheyanu",
     "mi-chamocha-1",
     "hamotzi"
    ],
    "goals": [
     "Say the wine blessing and the Shehecheyanu that open the seder",
-    "Find 'the exodus from Egypt' in the Friday-night Kiddush you already know (the festival Kiddush itself is not yet in the corpus)",
-    "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus does not hold"
+    "Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'",
+    "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus still does not hold"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -14170,7 +14188,7 @@
     {
      "id": "I-29-e06",
      "type": "spot",
-     "line": "kiddush-shabbat-eve",
+     "line": "kiddush-festival-eve-close",
      "target": "מִצְרָיִם",
      "en": "Egypt"
     },
@@ -14249,7 +14267,7 @@
     {
      "id": "I-29-e13",
      "type": "respond",
-     "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer. (The festival Kiddush that follows, which ends 'who sanctifies Israel and the seasons', is not yet in the corpus.)",
+     "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer amen. The festival Kiddush that follows names 'this Festival of Matzot, the time of our freedom' and ends 'who sanctifies Israel and the seasons'.",
      "answer": {
       "he": "אָמֵן",
       "en": "Amen"
@@ -14271,9 +14289,21 @@
       "שַׁבָּת שָׁלוֹם"
      ],
      "answer": 0
+    },
+    {
+     "id": "I-29-e16",
+     "type": "fade",
+     "line": "kiddush-festival-pesach",
+     "en": "this Festival of Matzot, the time of our freedom"
+    },
+    {
+     "id": "I-29-e17",
+     "type": "fade",
+     "line": "kiddush-festival-eve-close",
+     "en": "...a remembrance of the exodus from Egypt... who makes Israel and the seasons holy."
     }
    ],
-   "note": "The Haggadah (Mah Nishtanah, the four sons, Dayenu, Hallel, the Four Questions) is not in any source file; g-hallel, g-festival-kiddush and the matzo blessings are gaps, and the festival Kiddush text is replaced here by the Shabbat Kiddush lines in the registry. The holiday Kiddush is a gap (g-festival-kiddush); do not treat I-29 as a seder guide."
+   "note": "The weekday festival Kiddush (opening, Pesach insert, and close) is now in the registry from Sefaria Torat Emet 357. The Haggadah (Mah Nishtanah, the four sons, Dayenu, the Four Questions) is not; the matzo blessings and the rest of Hallel remain gaps (g-hallel still names the unsourced psalm verses). Do not treat I-29 as a complete seder guide. The Friday-night Shabbat Kiddush is a related but different blessing and is not used here as a stand-in."
   },
   {
    "id": "I-30",
@@ -14475,12 +14505,15 @@
    "prayerLines": [
     "shehecheyanu",
     "kiddush-wine-1",
+    "kiddush-festival-sukkot",
+    "kiddush-festival-eve-close",
+    "leshev-basukkah",
     "hamotzi"
    ],
    "goals": [
     "Greet people with chag sameach and recognise the word sukkah",
-    "Say Shehecheyanu and the wine blessing at the sukkah",
-    "Know that the sukkah blessing, lulav blessing and Hallel are not yet in the corpus, so this lesson does not borrow prayers from other days to stand in for them"
+    "Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah",
+    "Know that the lulav blessing, Hoshanot, and the unsourced remainder of Hallel are still not in the corpus (g-hallel)"
    ],
    "estMinutes": 25,
    "prerequisites": [
@@ -14603,10 +14636,9 @@
     {
      "id": "I-30-e12",
      "type": "spot",
-     "line": "havdalah-opening",
-     "target": "וְשָׂשׁוֹן",
-     "en": "joy, gladness",
-     "lineIndex": 1
+     "line": "leshev-basukkah",
+     "target": "בַּסֻּכָּה",
+     "en": "in the sukkah"
     },
     {
      "id": "I-30-e13",
@@ -14624,9 +14656,21 @@
       "חַג שָׂמֵחַ"
      ],
      "answer": 0
+    },
+    {
+     "id": "I-30-e15",
+     "type": "fade",
+     "line": "leshev-basukkah",
+     "en": "Blessed are you... who commanded us to dwell in the sukkah."
+    },
+    {
+     "id": "I-30-e16",
+     "type": "fade",
+     "line": "kiddush-festival-sukkot",
+     "en": "this Festival of Sukkot, the time of our gladness"
     }
    ],
-   "note": "Lulav and etrog, the Hallel and Hoshanot, Hakafot, Simchat Torah and Shemini Atzeret texts are not in any source file (g-hallel, g-festival-kiddush, g-high-holidays). The words lulav, etrog and ushpizin have no pointed token, so they are left out."
+   "note": "Leshev basukkah and the weekday festival Kiddush (including the Sukkot insert) are now in the registry from Sefaria Torat Emet 357. Lulav and etrog, Hoshanot, Hakafot, and Shemini Atzeret / Simchat Torah liturgy beyond the Kiddush insert are not (g-festival-kiddush still names the festival Amidah; g-hallel names the unsourced Hallel verses). The words lulav, etrog and ushpizin have no pointed token in the source files, so they are left out."
   },
   {
    "id": "I-31",

@@ -217,12 +217,21 @@
   }
  ],
  "prayerLines": [
-  "yehalelu"
+  "hallel-113-1",
+  "hallel-115-1",
+  "hallel-116-13",
+  "hallel-117",
+  "hallel-118-1-4",
+  "hallel-118-5",
+  "hallel-118-6",
+  "hallel-118-24",
+  "hallel-118-25",
+  "hallel-118-28"
  ],
  "goals": [
   "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
-  "Recognise the Psalm 118 lines that are sung responsively",
-  "Know that the full Hallel text is not yet in the corpus (gap g-hallel). Yehalelu, a praise verse from the Torah service, is attached only so this synagogue lesson has a real corpus line; it is not a stand-in for Hallel itself"
+  "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in the corpus",
+  "Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only"
  ],
  "estMinutes": 30,
  "prerequisites": [
@@ -369,7 +378,14 @@
     "הַלְלוּ־יָהּ"
    ],
    "answer": 0
+  },
+  {
+   "id": "I-07-e16",
+   "type": "fade",
+   "line": "hallel-118-1-4",
+   "lineIndex": 1,
+   "en": "Give thanks to the LORD, for he is good; his kindness is for ever."
   }
  ],
- "note": "Hallel itself is a corpus gap (g-hallel). This lesson teaches only refrain fragments whose words are all present in the corpus or the vocabulary file; 'hodu' is not in any source file, so the first word of the refrain cannot be shown. Register the full Hallel in the registry before extending this lesson."
+ "note": "Selected Hallel refrain verses are now in the registry (hallel-113-1, 115-1, 116-13, 117, 118:1-6, 118:24-25, 118:28). The rest of Psalms 113-118, half-Hallel, and the repetitions remain a corpus gap (g-hallel). This lesson does not present those selected verses as the complete Hallel."
 }

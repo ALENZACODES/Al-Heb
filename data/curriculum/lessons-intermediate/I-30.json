@@ -198,12 +198,15 @@
  "prayerLines": [
   "shehecheyanu",
   "kiddush-wine-1",
+  "kiddush-festival-sukkot",
+  "kiddush-festival-eve-close",
+  "leshev-basukkah",
   "hamotzi"
  ],
  "goals": [
   "Greet people with chag sameach and recognise the word sukkah",
-  "Say Shehecheyanu and the wine blessing at the sukkah",
-  "Know that the sukkah blessing, lulav blessing and Hallel are not yet in the corpus, so this lesson does not borrow prayers from other days to stand in for them"
+  "Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah",
+  "Know that the lulav blessing, Hoshanot, and the unsourced remainder of Hallel are still not in the corpus (g-hallel)"
  ],
  "estMinutes": 25,
  "prerequisites": [
@@ -326,10 +329,9 @@
   {
    "id": "I-30-e12",
    "type": "spot",
-   "line": "havdalah-opening",
-   "target": "וְשָׂשׁוֹן",
-   "en": "joy, gladness",
-   "lineIndex": 1
+   "line": "leshev-basukkah",
+   "target": "בַּסֻּכָּה",
+   "en": "in the sukkah"
   },
   {
    "id": "I-30-e13",
@@ -347,7 +349,19 @@
     "חַג שָׂמֵחַ"
    ],
    "answer": 0
+  },
+  {
+   "id": "I-30-e15",
+   "type": "fade",
+   "line": "leshev-basukkah",
+   "en": "Blessed are you... who commanded us to dwell in the sukkah."
+  },
+  {
+   "id": "I-30-e16",
+   "type": "fade",
+   "line": "kiddush-festival-sukkot",
+   "en": "this Festival of Sukkot, the time of our gladness"
   }
  ],
- "note": "Lulav and etrog, the Hallel and Hoshanot, Hakafot, Simchat Torah and Shemini Atzeret texts are not in any source file (g-hallel, g-festival-kiddush, g-high-holidays). The words lulav, etrog and ushpizin have no pointed token, so they are left out."
+ "note": "Leshev basukkah and the weekday festival Kiddush (including the Sukkot insert) are now in the registry from Sefaria Torat Emet 357. Lulav and etrog, Hoshanot, Hakafot, and Shemini Atzeret / Simchat Torah liturgy beyond the Kiddush insert are not (g-festival-kiddush still names the festival Amidah; g-hallel names the unsourced Hallel verses). The words lulav, etrog and ushpizin have no pointed token in the source files, so they are left out."
 }

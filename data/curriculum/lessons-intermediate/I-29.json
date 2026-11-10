@@ -212,15 +212,17 @@
  ],
  "prayerLines": [
   "kiddush-wine-1",
-  "kiddush-shabbat-eve",
+  "kiddush-festival-eve-open",
+  "kiddush-festival-pesach",
+  "kiddush-festival-eve-close",
   "shehecheyanu",
   "mi-chamocha-1",
   "hamotzi"
  ],
  "goals": [
   "Say the wine blessing and the Shehecheyanu that open the seder",
-  "Find 'the exodus from Egypt' in the Friday-night Kiddush you already know (the festival Kiddush itself is not yet in the corpus)",
-  "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus does not hold"
+  "Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'",
+  "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus still does not hold"
  ],
  "estMinutes": 30,
  "prerequisites": [
@@ -289,7 +291,7 @@
   {
    "id": "I-29-e06",
    "type": "spot",
-   "line": "kiddush-shabbat-eve",
+   "line": "kiddush-festival-eve-close",
    "target": "מִצְרָיִם",
    "en": "Egypt"
   },
@@ -368,7 +370,7 @@
   {
    "id": "I-29-e13",
    "type": "respond",
-   "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer. (The festival Kiddush that follows, which ends 'who sanctifies Israel and the seasons', is not yet in the corpus.)",
+   "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer amen. The festival Kiddush that follows names 'this Festival of Matzot, the time of our freedom' and ends 'who sanctifies Israel and the seasons'.",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"
@@ -390,7 +392,19 @@
     "שַׁבָּת שָׁלוֹם"
    ],
    "answer": 0
+  },
+  {
+   "id": "I-29-e16",
+   "type": "fade",
+   "line": "kiddush-festival-pesach",
+   "en": "this Festival of Matzot, the time of our freedom"
+  },
+  {
+   "id": "I-29-e17",
+   "type": "fade",
+   "line": "kiddush-festival-eve-close",
+   "en": "...a remembrance of the exodus from Egypt... who makes Israel and the seasons holy."
   }
  ],
- "note": "The Haggadah (Mah Nishtanah, the four sons, Dayenu, Hallel, the Four Questions) is not in any source file; g-hallel, g-festival-kiddush and the matzo blessings are gaps, and the festival Kiddush text is replaced here by the Shabbat Kiddush lines in the registry. The holiday Kiddush is a gap (g-festival-kiddush); do not treat I-29 as a seder guide."
+ "note": "The weekday festival Kiddush (opening, Pesach insert, and close) is now in the registry from Sefaria Torat Emet 357. The Haggadah (Mah Nishtanah, the four sons, Dayenu, the Four Questions) is not; the matzo blessings and the rest of Hallel remain gaps (g-hallel still names the unsourced psalm verses). Do not treat I-29 as a complete seder guide. The Friday-night Shabbat Kiddush is a related but different blessing and is not used here as a stand-in."
 }

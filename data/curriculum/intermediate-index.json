@@ -172,11 +172,18 @@
     ],
     "estMinutes": 30,
     "words": 11,
-    "exercises": 15,
+    "exercises": 16,
     "prayerLines": [
-     "birkat-hamazon-1",
-     "yehalelu",
-     "havdalah-opening"
+     "hallel-113-1",
+     "hallel-115-1",
+     "hallel-116-13",
+     "hallel-117",
+     "hallel-118-1-4",
+     "hallel-118-5",
+     "hallel-118-6",
+     "hallel-118-24",
+     "hallel-118-25",
+     "hallel-118-28"
     ]
    },
    {
@@ -323,10 +330,12 @@
     ],
     "estMinutes": 30,
     "words": 13,
-    "exercises": 15,
+    "exercises": 17,
     "prayerLines": [
      "kiddush-wine-1",
-     "kiddush-shabbat-eve",
+     "kiddush-festival-eve-open",
+     "kiddush-festival-pesach",
+     "kiddush-festival-eve-close",
      "shehecheyanu",
      "mi-chamocha-1",
      "hamotzi"
@@ -344,13 +353,14 @@
     ],
     "estMinutes": 25,
     "words": 12,
-    "exercises": 14,
+    "exercises": 16,
     "prayerLines": [
      "shehecheyanu",
      "kiddush-wine-1",
-     "hamotzi",
-     "havdalah-opening",
-     "kiddush-veshamru"
+     "kiddush-festival-sukkot",
+     "kiddush-festival-eve-close",
+     "leshev-basukkah",
+     "hamotzi"
     ]
    },
    {
@@ -1051,9 +1061,18 @@
    ],
    "estMinutes": 30,
    "words": 11,
-   "exercises": 15,
+   "exercises": 16,
    "prayerLines": [
-    "yehalelu"
+    "hallel-113-1",
+    "hallel-115-1",
+    "hallel-116-13",
+    "hallel-117",
+    "hallel-118-1-4",
+    "hallel-118-5",
+    "hallel-118-6",
+    "hallel-118-24",
+    "hallel-118-25",
+    "hallel-118-28"
    ]
   },
   {
@@ -1425,10 +1444,12 @@
    ],
    "estMinutes": 30,
    "words": 13,
-   "exercises": 15,
+   "exercises": 17,
    "prayerLines": [
     "kiddush-wine-1",
-    "kiddush-shabbat-eve",
+    "kiddush-festival-eve-open",
+    "kiddush-festival-pesach",
+    "kiddush-festival-eve-close",
     "shehecheyanu",
     "mi-chamocha-1",
     "hamotzi"
@@ -1446,10 +1467,13 @@
    ],
    "estMinutes": 25,
    "words": 12,
-   "exercises": 14,
+   "exercises": 16,
    "prayerLines": [
     "shehecheyanu",
     "kiddush-wine-1",
+    "kiddush-festival-sukkot",
+    "kiddush-festival-eve-close",
+    "leshev-basukkah",
     "hamotzi"
    ]
   },

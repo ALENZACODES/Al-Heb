@@ -16,6 +16,24 @@ from render_word_takes import synth, key
 
 VOICES = {'m': {'chirp': 'he-IL-Chirp3-HD-Charon', 'wavenet': 'he-IL-Wavenet-B'},
           'f': {'chirp': 'he-IL-Chirp3-HD-Kore', 'wavenet': 'he-IL-Wavenet-A'}}
+STANDARD = {'m': 'he-IL-Standard-B', 'f': 'he-IL-Standard-A'}
+NIQQUD = re.compile('[\u0591-\u05C7]')
+
+
+def candidates(v, text, rnd):
+    """(name, voice, text to speak, speaking rate)"""
+    if rnd == 4:
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart-0.8', VOICES[v]['wavenet'], apart, 0.8), ('standard-apart', STANDARD[v], apart, 0.9),
+                ('wavenet-apart-plain', VOICES[v]['wavenet'], NIQQUD.sub('', apart), 0.9), ('chirp-apart-0.75', VOICES[v]['chirp'], apart, 0.75)]
+    if rnd == 3:
+        apart = ', '.join(text.replace('.', '').split()) + '.'
+        return [('wavenet-apart', VOICES[v]['wavenet'], apart, 0.9), ('chirp-apart', VOICES[v]['chirp'], apart, 0.9),
+                ('wavenet-0.75', VOICES[v]['wavenet'], text, 0.75), ('chirp-0.75', VOICES[v]['chirp'], text, 0.75)]
+    if rnd == 1:
+        return [(n, voice, text, 1.0) for n, voice in VOICES[v].items()]
+    return [('wavenet-slow', VOICES[v]['wavenet'], text, 0.85), ('chirp-slow', VOICES[v]['chirp'], text, 0.85),
+            ('wavenet-plain', VOICES[v]['wavenet'], NIQQUD.sub('', text), 1.0), ('standard', STANDARD[v], text, 1.0)]
 CANT = re.compile('[֑-ֽ֯׀׃׆]')
 # the divine name, alone or with a one-letter prefix, read as Adonai (Elohim where it is pointed with hiriq)
 NAME = re.compile('([ולבכמש]?[ְ-ּ]*)י[ְ-ּ]*ה[ְ-ּ]*ו[ְ-ּ]*ה(?![א-ת])')
@@ -49,6 +67,7 @@ def main():
         ap.add_argument(x, required=True)
     ap.add_argument('--shard', type=int, default=0)
     ap.add_argument('--of', type=int, default=1)
+    ap.add_argument('--round', type=int, default=1)
     a = ap.parse_args()
     k = key()
     print('voice key found:', 'yes' if k else 'NO', flush=True)
@@ -62,13 +81,15 @@ def main():
             continue
         v = rel.split('/')[1]
         clip = os.path.join(ROOT, rel)
-        text = spoken(S.torah_he(os.path.basename(rel)[:-4]))
+        mp = clip + '.meta.json'
+        meta = json.load(open(mp, encoding='utf-8')) if os.path.exists(mp) else {}
+        text = spoken(meta.get('stitchedFromText') or meta.get('inputText') or S.torah_he(os.path.basename(rel)[:-4]))
         cur = judge(clip, text, a.model)
         best, best_name, cands = None, None, {}
-        for name, voice in VOICES[v].items():
+        for name, voice, say, rate in candidates(v, text, a.round):
             tmp = os.path.join(tempfile.gettempdir(), f'{name}-{os.path.basename(rel)}')
             try:
-                open(tmp, 'wb').write(synth(text, voice, k))
+                open(tmp, 'wb').write(synth(say, voice, k, rate))
             except urllib.error.HTTPError as e:
                 cands[name] = {'error': e.code}; continue
             except Exception as e:

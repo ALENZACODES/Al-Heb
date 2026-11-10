@@ -53,7 +53,7 @@ jobs:
       - name: Fix slice ${{ matrix.shard }} of 20
         run: |
           mkdir -p docs/torah/audio-verification/fix
-          python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 \
+          python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 --round 4 \
             --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
       - name: Push to john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
         if: always()
@@ -64,7 +64,7 @@ jobs:
           [ -f "$f" ] || exit 0
           b=john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
           mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
-          changed=$(git diff --name-only -- 'audio/*/israeli/line/torah-*.mp3')
+          changed=$(git diff --name-only -- 'audio/*/israeli/line/*.mp3' 'audio/*/israeli/prayer/*.mp3')
           for c in $changed; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; done
           # a brand-new repository holding only the log and the replaced clips, so the push carries nothing else
           auth=$(git config --get http.https://github.com/.extraheader)

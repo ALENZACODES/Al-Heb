@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (40)
+# Practical Hebrew: The Written Pages (56)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -843,3 +843,320 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - You arrive with a friend. Ask for a table. → שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה (shulchan lishnayim, bevakasha) · audio `cafe-01`
 
 **Review queue from earlier pages:** `cafe-04`, `cafe-03-f`, `cafe-03-m`, `cafe-14`, `cafe-15`, `cafe-25`, `cafe-23-f`, `cafe-26`, `cafe-27`, `cafe-19`
+
+## pu-restaurant-p01: A Table for Two
+
+*Learn page.* Ask for a table and say how many you are.
+
+**Grammar: For how many: לְכַמָּה.** The host asks לְכַמָּה אֲנָשִׁים? (for how many people?). It is לְ (for) joined to כַּמָּה (how many). You answer the same way: לִשְׁנַיִם, for two.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Host and waiter (woman): שָׁלוֹם. לְכַמָּה אֲנָשִׁים? | shalom. lekama anashim? | Hello. For how many people? | `d-restaurant-l1` gap |
+| Guest (man): לִשְׁנַיִם, בְּבַקָּשָׁה. | lishnayim, bevakasha. | For two, please. | `d-restaurant-l2` gap |
+| מִסְעָדָה | mis'ada \* | restaurant | `i-38-w3` tts, f+m |
+| הָעֶרֶב | ha'erev \* | this evening | `i-38-w10` tts, f+m |
+
+**Speak.**
+
+- You are two. Answer the host. → לִשְׁנַיִם, בְּבַקָּשָׁה. (lishnayim, bevakasha.) · audio `d-restaurant-l2`
+
+**Review queue from earlier pages:** `cafe-01`, `il05-w5`
+
+## pu-restaurant-p02: The Menu
+
+*Learn page.* Ask for the menu and order a main dish.
+
+**Grammar: Here is: הִנֵּה.** הִנֵּה points at something you hand over: הִנֵּה הַתַּפְרִיט, here is the menu. וְ joins two dishes into one order: שְׁנִיצֶל וְסָלָט.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? | efshar lir'ot et hatafrit? | can I see the menu? | `cafe-02` tts, f+m |
+| Host and waiter (woman): בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט. | bevakasha, po. hine hatafrit. | Please, here. Here is the menu. | `d-restaurant-l3` gap |
+| Guest (man): אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט. | ani rotse shnitsel vesalat. | I'd like a schnitzel and a salad. | `d-restaurant-l4` gap |
+
+**Speak.**
+
+- Ask to see the menu. → אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? (efshar lir'ot et hatafrit?) · audio `cafe-02`
+- You are a man. Order a schnitzel and a salad. → אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט. (ani rotse shnitsel vesalat.) · audio `d-restaurant-l4`
+
+**Review queue from earlier pages:** `cafe-03-m`, `cafe-20`
+
+## pu-restaurant-p03: Adjectives That Match
+
+*Grammar page.* Ask for a big or small portion and cold water.
+
+**Grammar: The describing word matches the noun.** גָּדוֹל and קָטָן are the forms for a masculine noun. Water is plural in Hebrew, so cold water is מַיִם קָרִים, with the plural ending -im on the describing word too.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גָּדוֹל | gadol \* | big (m) | `i-13-w9` tts, f+m |
+| קָטָן | katan \* | small (m) | `i-13-w10` tts, f+m |
+| מַיִם קָרִים, בְּבַקָּשָׁה | mayim karim, bevakasha | cold water, please | `cafe-10` tts, f+m |
+
+**Speak.**
+
+- Ask for cold water. → מַיִם קָרִים, בְּבַקָּשָׁה (mayim karim, bevakasha) · audio `cafe-10`
+
+**Review queue from earlier pages:** `greetings-04`, `greetings-10`
+
+## pu-restaurant-p04: Ordering a Meal
+
+*Dialogue page.* Follow a meal from the door to the bill.
+
+**Grammar: Short answers are enough.** Most answers in this scene are a word or two plus please: לִשְׁנַיִם, בְּבַקָּשָׁה and מַיִם, בְּבַקָּשָׁה. בְּבַקָּשָׁה turns a bare word into a polite request.
+
+**Dialogue setting.** Two people get a table, order, and ask for the bill.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Host and waiter (woman): שָׁלוֹם. לְכַמָּה אֲנָשִׁים? | shalom. lekama anashim? | Hello. For how many people? | `d-restaurant-l1` gap |
+| Guest (man): לִשְׁנַיִם, בְּבַקָּשָׁה. | lishnayim, bevakasha. | For two, please. | `d-restaurant-l2` gap |
+| Host and waiter (woman): בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט. | bevakasha, po. hine hatafrit. | Please, here. Here is the menu. | `d-restaurant-l3` gap |
+| Guest (man): אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט. | ani rotse shnitsel vesalat. | I'd like a schnitzel and a salad. | `d-restaurant-l4` gap |
+| Guest (man): מַיִם, בְּבַקָּשָׁה. | mayim, bevakasha. | Water, please. | `d-restaurant-l6` gap |
+| Guest (man): סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן? | slicha, efshar et hacheshbon? | Excuse me, can I have the bill? | `d-restaurant-l7` gap |
+| Host and waiter (woman): בֶּטַח, רֶגַע. | betach, rega. | Sure, one moment. | `d-restaurant-l8` gap |
+
+**Speak.**
+
+- The waiter asks what you will drink. Water. → מַיִם, בְּבַקָּשָׁה. (mayim, bevakasha.) · audio `d-restaurant-l6`
+
+**Review queue from earlier pages:** `politeness-03`, `cafe-26`, `politeness-20`
+
+## pu-restaurant-p05: With and Without
+
+*Learn page.* Ask for milk, sugar, or none at all.
+
+**Grammar: Without: בְּלִי.** בְּלִי (without) is the opposite of עִם (with): one asks for milk or sugar, the other leaves it out. Put the food straight after it.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חָלָב | chalav \* | milk | `i-13-w6` tts, f+m |
+| סֻכָּר | sukar \* | sugar | `i-13-w7` tts, f+m |
+| בְּלִי | bli \* | without | `i-13-w8` tts, f+m |
+
+**Speak.**
+
+- Say: without. → בְּלִי (bli) · audio `i-13-w8`
+- Ask for sugar. → סֻכָּר (sukar) · audio `i-13-w7`
+
+**Review queue from earlier pages:** `cafe-07`, `cafe-06`
+
+## pu-restaurant-p06: Ask for the Bill
+
+*Speak page.* Get the waiter's attention and ask for the bill.
+
+**Grammar: Excuse me first.** Start with סְלִיחָה to get attention, then ask: סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן? אֶפְשָׁר with a noun asks for that thing.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Guest (man): סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן? | slicha, efshar et hacheshbon? | Excuse me, can I have the bill? | `d-restaurant-l7` gap |
+| הַחֶשְׁבּוֹן, בְּבַקָּשָׁה | hacheshbon, bevakasha | the bill, please | `cafe-26` tts, f+m |
+| אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? | efshar leshalem bekartis? | can I pay by card? | `cafe-27` tts, f+m |
+
+**Speak.**
+
+- Catch the waiter and ask for the bill. → הַחֶשְׁבּוֹן, בְּבַקָּשָׁה (hacheshbon, bevakasha) · audio `cafe-26`
+- Ask if you can pay by card. → אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? (efshar leshalem bekartis?) · audio `cafe-27`
+
+**Review queue from earlier pages:** `politeness-06`, `cafe-14`
+
+## pu-restaurant-p07: Gladly, and Unit Review
+
+*Review page.* Accept an invitation out, then review the restaurant unit.
+
+**Grammar: Gladly: בְּשִׂמְחָה.** בְּשִׂמְחָה is with joy, the warm way to say yes to an invitation. It uses בְּ (with, in), as in בְּכַרְטִיס.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בְּשִׂמְחָה | besimcha \* | gladly, with pleasure | `i-38-w12` tts, f+m |
+
+**Speak.**
+
+- A friend invites you to a restaurant this evening. Accept. → בְּשִׂמְחָה (besimcha) · audio `i-38-w12`
+
+**Review queue from earlier pages:** `i-38-w3`, `i-38-w10`, `cafe-02`, `i-13-w8`, `i-13-w9`, `cafe-10`, `cafe-26`, `d-restaurant-l2`
+
+## pu-shop-p01: In the Shop
+
+*Learn page.* Ask the price, say you are just looking, and ask if they have it.
+
+**Grammar: There is and there isn't: יֵשׁ and אֵין.** יֵשׁ means there is, and as a question it asks do you have it. אֵין is the opposite, as in אֵין בְּעָיָה. A man says אֲנִי רַק מִסְתַּכֵּל, a woman אֲנִי רַק מִסְתַּכֶּלֶת.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כַּמָּה זֶה עוֹלֶה? | kama ze ole? | how much does it cost? | `shop-01` tts, f+m |
+| מָה הַמְּחִיר? | ma hamechir? | what is the price? | `shop-02` tts, f+m |
+| אֲנִי רַק מִסְתַּכֵּל | ani rak mistakel | I'm just looking (to or by a man) | `shop-06-m` tts, f+m |
+| אֲנִי רַק מִסְתַּכֶּלֶת | ani rak mistakelet \* | I'm just looking (to or by a woman) | `shop-06-f` tts, f+m |
+| יֵשׁ | yesh \* | there is | `il08-w5` tts, f+m |
+| אֵין | ein \* | there isn't | `il08-w6` tts, f+m |
+
+**Speak.**
+
+- The assistant comes over. You are a woman. Say you are just looking. → אֲנִי רַק מִסְתַּכֶּלֶת (ani rak mistakelet) · audio `shop-06-f`
+- Ask how much it costs. → כַּמָּה זֶה עוֹלֶה? (kama ze ole?) · audio `shop-01`
+
+**Review queue from earlier pages:** `politeness-04`, `il05-w5`
+
+## pu-shop-p02: Numbers with Nouns
+
+*Grammar page.* Read a price in shekels.
+
+**Grammar: Masculine nouns take the long set.** שֶׁקֶל is masculine, so in careful speech a price uses the set from page 1 that ends in -a: מֵאָה וַעֲשָׂרָה שְׁקָלִים. You will also hear the shorter counting forms in shops.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שֶׁקֶל | shekel | shekel (Israeli currency) | `shop-19` tts, f+m |
+| Shop assistant (man): מֵאָה וַעֲשָׂרָה שְׁקָלִים. | me'a va'asara shekalim. | A hundred and ten shekels. | `d-shop-l3` gap |
+| שְׁלוֹשָׁה | shlosha | three (3) (to or by a man) | `numbers-03-m` tts, f+m |
+| חֲמִשָּׁה | chamisha | five (5) (to or by a man) | `numbers-05-m` tts, f+m |
+| עֲשָׂרָה | asara | ten (10) (to or by a man) | `numbers-10-m` tts, f+m |
+
+**Speak.**
+
+- Say ten, the form used with shekels. → עֲשָׂרָה (asara) · audio `numbers-10-m`
+
+**Review queue from earlier pages:** `numbers-03-f`, `numbers-14`
+
+## pu-shop-p03: Sizes
+
+*Learn page.* Ask for a size and ask to try it on.
+
+**Grammar: Small for a feminine noun: קְטַנָּה.** מִדָּה (size) is feminine, so small becomes קְטַנָּה, not קָטָן. יֵשׁ לָכֶם ...? asks a shop whether they have something.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Customer (woman): יֵשׁ מִדָּה קְטַנָּה? | yesh mida ktana? | Do you have a small size? | `d-shop-l4` gap |
+| יֵשׁ לָכֶם ...? | yesh lachem ...? | do you have ...? | `shop-08` tts, f+m |
+| אֶפְשָׁר לִמְדֹּד? | efshar limdod? | can I try it on? | `shop-09` tts, f+m |
+
+**Speak.**
+
+- Ask if they have a small size. → יֵשׁ מִדָּה קְטַנָּה? (yesh mida ktana?) · audio `d-shop-l4`
+- Ask to try it on. → אֶפְשָׁר לִמְדֹּד? (efshar limdod?) · audio `shop-09`
+
+**Review queue from earlier pages:** `i-13-w10`, `il08-w5`
+
+## pu-shop-p04: Trying On a Shirt
+
+*Dialogue page.* Follow a purchase from hello to paying.
+
+**Grammar: This shirt: הַחֻלְצָה הַזֹּאת.** To say this one, put זֹאת after the noun and give both the הַ: הַחֻלְצָה הַזֹּאת. The customer is a woman, so she says אֲנִי לוֹקַחַת אֶת זֶה.
+
+**Dialogue setting.** A woman buys a shirt in a small shop.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Shop assistant (man): שָׁלוֹם. אֲנִי יָכוֹל לַעֲזֹר? | shalom. ani yachol la'azor? | Hello. Can I help? | `d-shop-l1` gap |
+| Customer (woman): כַּמָּה הַחֻלְצָה הַזֹּאת? | kama hachultsa hazot? | How much is this shirt? | `d-shop-l2` gap |
+| Shop assistant (man): מֵאָה וַעֲשָׂרָה שְׁקָלִים. | me'a va'asara shekalim. | A hundred and ten shekels. | `d-shop-l3` gap |
+| Customer (woman): יֵשׁ מִדָּה קְטַנָּה? | yesh mida ktana? | Do you have a small size? | `d-shop-l4` gap |
+| Shop assistant (man): כֵּן, רֶגַע. הִנֵּה. | ken, rega. hine. | Yes, one moment. Here. | `d-shop-l5` gap |
+| Customer (woman): אֶפְשָׁר לִמְדֹּד? | efshar limdod? | Can I try it on? | `d-shop-l6` gap |
+| Shop assistant (man): בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם. | betach. chadar halbasha sham. | Of course. The fitting room is there. | `d-shop-l7` gap |
+| Customer (woman): אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה. | ani lokachat et ze. bekartis, bevakasha. | I'll take it. By card, please. | `d-shop-l8` gap |
+
+**Speak.**
+
+- Ask to try it on. → אֶפְשָׁר לִמְדֹּד? (efshar limdod?) · audio `d-shop-l6`
+
+**Review queue from earlier pages:** `shop-06-f`, `cafe-27`, `politeness-20`
+
+## pu-shop-p05: This: זֶה and זֹאת
+
+*Grammar page.* Point at things and say you will take one.
+
+**Grammar: זֶה and זֹאת.** זֶה is this for a masculine noun, and for things in general: זֶה יָקָר, it's expensive. זֹאת is this for a feminine noun. אֶת comes before a definite object: אֶקַּח אֶת זֶה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֶקַּח אֶת זֶה | ekach et ze | I'll take this | `shop-07` tts, f+m |
+| זֶה יָקָר | ze yakar | it's expensive | `shop-03` tts, f+m |
+| זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל | zot hapa'am harishona sheli beyisrael | it's my first time in Israel | `small-talk-06` tts, f+m |
+
+**Speak.**
+
+- Decide to buy it. → אֶקַּח אֶת זֶה (ekach et ze) · audio `shop-07`
+- Say it's expensive. → זֶה יָקָר (ze yakar) · audio `shop-03`
+
+**Review queue from earlier pages:** `d-shop-l2`, `shop-01`
+
+## pu-shop-p06: Hear the Price
+
+*Listen page.* Catch the numbers in a price.
+
+**Grammar: Listen for the tens.** Prices are said big part first: the hundreds, then the tens ending in -im, then the shekels. מֵאָה at the start means more than a hundred.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֶשְׂרִים | esrim | twenty (20) | `numbers-11` tts, f+m |
+| שְׁלוֹשִׁים | shloshim | thirty (30) | `numbers-12` tts, f+m |
+| חֲמִשִּׁים | chamishim | fifty (50) | `numbers-13` tts, f+m |
+| מֵאָה | me'a | one hundred (100) | `numbers-14` tts, f+m |
+| שֶׁקֶל | shekel | shekel (Israeli currency) | `shop-19` tts, f+m |
+| מָה הַמְּחִיר? | ma hamechir? | what is the price? | `shop-02` tts, f+m |
+
+**Speak.**
+
+- Ask what the price is. → מָה הַמְּחִיר? (ma hamechir?) · audio `shop-02`
+
+**Review queue from earlier pages:** `numbers-10-m`, `d-shop-l3`, `shop-01`
+
+## pu-shop-p07: Ask to Try It On
+
+*Speak page.* Ask for what you need in a shop, out loud.
+
+**Grammar: One polite opener for many requests.** אֶפְשָׁר opens most shop requests: אֶפְשָׁר לִמְדֹּד? with a to-verb. אֵיפֹה asks where, as in אֵיפֹה הַשֵּׁרוּתִים?
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֶפְשָׁר לִמְדֹּד? | efshar limdod? | can I try it on? | `shop-09` tts, f+m |
+| יֵשׁ לָכֶם ...? | yesh lachem ...? | do you have ...? | `shop-08` tts, f+m |
+| אֵיפֹה הַשֵּׁרוּתִים? | eifo hasherutim? | where is the restroom? | `shop-20` tts, f+m |
+
+**Speak.**
+
+- Ask to try it on. → אֶפְשָׁר לִמְדֹּד? (efshar limdod?) · audio `shop-09`
+- Ask where the restroom is. → אֵיפֹה הַשֵּׁרוּתִים? (eifo hasherutim?) · audio `shop-20`
+
+**Review queue from earlier pages:** `fillers-18`, `d-shop-l4`
+
+## pu-shop-p08: Paying and the Receipt
+
+*Learn page.* Pay by cash or card and ask for a receipt and a bag.
+
+**Grammar: Can I have: אֶפְשָׁר and a noun.** With a noun, אֶפְשָׁר asks for the thing: אֶפְשָׁר קַבָּלָה?, אֶפְשָׁר שַׂקִּית? With a to-verb, it asks to do something.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מְזֻמָּן | mezuman | cash | `shop-12` tts, f+m |
+| כַּרְטִיס אַשְׁרַאי | kartis ashrai | credit card | `shop-13` tts, f+m |
+| עוֹדֶף | odef \* | change | `il09-w3` tts, f+m |
+| אֶפְשָׁר קַבָּלָה? | efshar kabala? | can I have a receipt? | `shop-14` tts, f+m |
+| אֶפְשָׁר שַׂקִּית? | efshar sakit? | can I have a bag? | `shop-15` tts, f+m |
+
+**Speak.**
+
+- Ask for a receipt. → אֶפְשָׁר קַבָּלָה? (efshar kabala?) · audio `shop-14`
+- Ask for a bag. → אֶפְשָׁר שַׂקִּית? (efshar sakit?) · audio `shop-15`
+
+**Review queue from earlier pages:** `cafe-27`, `cafe-26`
+
+## pu-shop-p09: Closing Time and Unit Review
+
+*Review page.* Ask when the shop closes, then review the unit.
+
+**Grammar: You, plural: אַתֶּם.** When you ask a shop, you speak to everyone who works there, so you use the plural: מָתַי אַתֶּם סוֹגְרִים? The verb takes the plural ending -im too.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| סָגוּר | sagur | closed | `shop-17` tts, f+m |
+| מָתַי אַתֶּם סוֹגְרִים? | matai atem sogrim? | when do you close? | `shop-18` tts, f+m |
+
+**Speak.**
+
+- Ask when they close. → מָתַי אַתֶּם סוֹגְרִים? (matai atem sogrim?) · audio `shop-18`
+
+**Review queue from earlier pages:** `shop-01`, `shop-06-m`, `d-shop-l4`, `shop-07`, `shop-09`, `shop-13`, `shop-14`, `shop-19`

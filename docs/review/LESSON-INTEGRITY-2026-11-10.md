@@ -258,3 +258,14 @@ Built:
 - **Reply on the fails.** `PRACTICAL-FIXES-r2.md`: all 67 kept as sourced and pulled from learner pages; none rewritten.
 
 Final review: [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md). **91 / 100** (estimate).
+
+## Round 7 (Final Review, Second Pass)
+
+Built:
+- **Two more units written.** `pu-restaurant` (7 pages) and `pu-shop` (9 pages): 56 written Practical pages are live, and none
+  uses an item whose clip failed.
+- **Restaurant outline cut** to what the sources can honestly fill. The outline is now 191 pages.
+- **Hidden-item test widened** to every unit.
+
+**92 / 100** (estimate). See the second pass in
+[`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md).

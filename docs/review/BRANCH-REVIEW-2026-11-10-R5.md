@@ -49,3 +49,27 @@ To reach 95 to 100:
 - John's held decisions (+2).
 
 None of those can be done honestly by this lane alone, except the remaining pages.
+
+## Re-review at f43e68137 (Final Round, Second Pass)
+
+**GitHub CI on `f43e68137`** was still running when this was written. The run before it, on `85dfa18fb`, passed.
+
+**Local runs on this pass's work:** all unit tests pass, the precache is unchanged by the generator, the text scan finds only the
+finding already on `main`, and links are clean.
+
+| # | Finding at f43e68137 | Status |
+|---|---|---|
+| 1 | Level 1 had only the cafe unit written. | **Partly fixed:** `pu-restaurant` (7 pages) and `pu-shop` (9 pages) are written, so 56 pages are live. Directions, transport and small talk remain (24 outline pages). |
+| 2 | The restaurant outline promised pages the sources cannot fill: "Complaints, Politely" and a listening page made of lines with no clips. | **Fixed:** the restaurant unit is 7 pages, not 10. The outline is now 191 pages, still inside the 100 to 200 band. |
+| 3 | The test that keeps hidden items off new pages checked only the cafe unit, and only by unit key. | **Fixed:** every page from the cafe on is checked against every hidden item id, in any unit. |
+| 4 | **Dialogue pages are mostly silent.** 42 of the 253 written items are dialogue lines with no clip. | Open. Needs a render of the `d-*` dialogue lines. |
+| 5 | **One grammar note needs a native check.** `pu-shop-p02` teaches the masculine number set with שֶׁקֶל, and notes that shorter counting forms are also heard in shops. | Open. Needs a native speaker; the note is hedged. |
+| 6 | People and held decisions (native and cantor review, divine-name items, the two lexicon greetings). | Unchanged. |
+
+**Score:** 91 at `f43e68137`, and **92 / 100** with this pass (estimate).
+
+To reach 95:
+- directions, transport and small talk written (+1);
+- dialogue clips (+1);
+- native and cantor review (+4);
+- John's held decisions (+2).

@@ -27,8 +27,8 @@
  },
  "totals": {
   "units": 36,
-  "pages": 194,
-  "written": 40
+  "pages": 191,
+  "written": 56
  },
  "units": [
   {
@@ -458,7 +458,7 @@
      "order": 1,
      "kind": "learn",
      "title": "A Table for Two",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p01"
     },
     {
@@ -466,15 +466,15 @@
      "order": 2,
      "kind": "learn",
      "title": "The Menu",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p02"
     },
     {
      "id": "pu-restaurant-p03",
      "order": 3,
      "kind": "grammar",
-     "title": "The: הַ and Adjectives",
-     "status": "planned",
+     "title": "Adjectives That Match",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p03"
     },
     {
@@ -482,56 +482,32 @@
      "order": 4,
      "kind": "dialogue",
      "title": "Ordering a Meal",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p04"
     },
     {
      "id": "pu-restaurant-p05",
      "order": 5,
      "kind": "learn",
-     "title": "Dietary Needs",
-     "status": "planned",
+     "title": "With and Without",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p05"
     },
     {
      "id": "pu-restaurant-p06",
      "order": 6,
-     "kind": "listen",
-     "title": "Hear the Waiter",
-     "status": "planned",
+     "kind": "speak",
+     "title": "Ask for the Bill",
+     "status": "written",
      "route": "#/practical/pu-restaurant/pu-restaurant-p06"
     },
     {
      "id": "pu-restaurant-p07",
      "order": 7,
-     "kind": "speak",
-     "title": "Ask for the Bill",
-     "status": "planned",
-     "route": "#/practical/pu-restaurant/pu-restaurant-p07"
-    },
-    {
-     "id": "pu-restaurant-p08",
-     "order": 8,
-     "kind": "learn",
-     "title": "Complaints, Politely",
-     "status": "planned",
-     "route": "#/practical/pu-restaurant/pu-restaurant-p08"
-    },
-    {
-     "id": "pu-restaurant-p09",
-     "order": 9,
-     "kind": "grammar",
-     "title": "Can I Have...?",
-     "status": "planned",
-     "route": "#/practical/pu-restaurant/pu-restaurant-p09"
-    },
-    {
-     "id": "pu-restaurant-p10",
-     "order": 10,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
-     "route": "#/practical/pu-restaurant/pu-restaurant-p10"
+     "title": "Gladly, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-restaurant/pu-restaurant-p07"
     }
    ]
   },
@@ -555,7 +531,7 @@
      "order": 1,
      "kind": "learn",
      "title": "In the Shop",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p01"
     },
     {
@@ -563,15 +539,15 @@
      "order": 2,
      "kind": "grammar",
      "title": "Numbers with Nouns",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p02"
     },
     {
      "id": "pu-shop-p03",
      "order": 3,
      "kind": "learn",
-     "title": "Sizes and Colours",
-     "status": "planned",
+     "title": "Sizes",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p03"
     },
     {
@@ -579,15 +555,15 @@
      "order": 4,
      "kind": "dialogue",
      "title": "Trying On a Shirt",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p04"
     },
     {
      "id": "pu-shop-p05",
      "order": 5,
      "kind": "grammar",
-     "title": "This and That",
-     "status": "planned",
+     "title": "This: זֶה and זֹאת",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p05"
     },
     {
@@ -595,7 +571,7 @@
      "order": 6,
      "kind": "listen",
      "title": "Hear the Price",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p06"
     },
     {
@@ -603,23 +579,23 @@
      "order": 7,
      "kind": "speak",
      "title": "Ask to Try It On",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p07"
     },
     {
      "id": "pu-shop-p08",
      "order": 8,
      "kind": "learn",
-     "title": "Paying by Card",
-     "status": "planned",
+     "title": "Paying and the Receipt",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p08"
     },
     {
      "id": "pu-shop-p09",
      "order": 9,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Closing Time and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-shop/pu-shop-p09"
     }
    ]

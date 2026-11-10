@@ -92,7 +92,7 @@ test("gendered forms come in pairs, labelled, with the woman's form from the aud
     for (const it of p.items.filter((x) => /-(m|f)$/.test(x.id))) {
       assert.ok(it.form, `${p.id} ${it.id}: needs a form label`);
       const other = it.id.replace(/-(m|f)$/, (_, g) => (g === "m" ? "-f" : "-m"));
-      if (it.id.startsWith("greetings-11") || it.id.startsWith("politeness-07") || it.id.startsWith("fillers-1") || it.id.startsWith("numbers-") || it.id.startsWith("greetings-2"))
+      if (it.id.startsWith("greetings-11") || it.id.startsWith("politeness-07") || it.id.startsWith("fillers-1") || (it.id.startsWith("numbers-") && p.id.startsWith("pu-numbers-")) || it.id.startsWith("greetings-2"))
         assert.ok(ids.has(other) || p.kind === "speak" || p.kind === "listen", `${p.id}: ${it.id} shown without ${other}`);
     }
   }

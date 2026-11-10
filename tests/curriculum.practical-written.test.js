@@ -18,11 +18,11 @@ test("a fully written unit shows exactly its written pages, in order", () => {
   }
   const counts = writtenPageCounts(index, written);
   assert.equal(counts["pu-introducing"], 5);
-  assert.equal(counts["pu-restaurant"], index.units.find((u) => u.id === "pu-restaurant").pageCount, "unwritten units keep their draft count");
+  assert.equal(counts["pu-directions"], index.units.find((u) => u.id === "pu-directions").pageCount, "unwritten units keep their draft count");
 });
 
 test("units without written pages are unchanged", () => {
-  const cafe = unitOf("pu-restaurant");
+  const cafe = unitOf("pu-directions");
   assert.equal(applyWritten(cafe, written), cafe);
 });
 
@@ -107,10 +107,10 @@ test("the committed hide list keeps failed clips off learner pages, even without
   const p04 = g.pages.find((p) => p.id === "pu-greetings-p04");
   assert.ok(p04.items.some((it) => it.id === "greetings-17"));
   assert.ok(!visibleItems("pu-greetings", p04.items, results).some((it) => it.id === "greetings-17"));
-  // Pages written this round use no item whose clip failed.
-  for (const p of written.pages.filter((x) => x.id.startsWith("pu-cafe-"))) {
-    for (const it of p.items) assert.ok(!hidden.items.some((h) => h.key === `pu-cafe|${it.id}`), `${p.id} uses hidden ${it.id}`);
-  }
+  // Pages written after the hide list existed (cafe onward) use no item whose clip failed, in any unit.
+  const hiddenIds = new Set(hidden.items.map((h) => h.item));
+  const after = written.pages.slice(written.pages.findIndex((x) => x.id === "pu-cafe-p01"));
+  for (const p of after) for (const it of p.items) assert.ok(!hiddenIds.has(it.id), `${p.id} uses hidden ${it.id}`);
 });
 
 test("a hidden item's speaking prompt is left out of the rendered page", async () => {

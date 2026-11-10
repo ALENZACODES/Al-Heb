@@ -11997,6 +11997,3941 @@
     "cafe-27",
     "cafe-19"
    ]
+  },
+  {
+   "id": "pu-restaurant-p01",
+   "title": "A Table for Two",
+   "order": 1,
+   "kind": "learn",
+   "can": "Ask for a table and say how many you are.",
+   "grammarNote": "For how many: לְכַמָּה. The host asks לְכַמָּה אֲנָשִׁים? (for how many people?). It is לְ (for) joined to כַּמָּה (how many). You answer the same way: לִשְׁנַיִם, for two.",
+   "grammar": {
+    "point": "For how many: לְכַמָּה",
+    "body": "The host asks לְכַמָּה אֲנָשִׁים? (for how many people?). It is לְ (for) joined to כַּמָּה (how many). You answer the same way: לִשְׁנַיִם, for two.",
+    "examples": [
+     {
+      "itemId": "d-restaurant-l1",
+      "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+      "en": "Hello. For how many people?"
+     },
+     {
+      "itemId": "d-restaurant-l2",
+      "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+      "en": "For two, please."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-restaurant-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+     "en": "Hello. For how many people?",
+     "translit": "shalom. lekama anashim?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l1"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Host and waiter (woman)"
+    },
+    {
+     "id": "d-restaurant-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+     "en": "For two, please.",
+     "translit": "lishnayim, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l2"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "i-38-w3",
+     "source": "data/curriculum/lessons.json#I-38.words[2]",
+     "he": "מִסְעָדָה",
+     "en": "restaurant",
+     "translit": "mis'ada",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-38-w3"
+     },
+     "audio": {
+      "clipId": "i-38-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-38-w10",
+     "source": "data/curriculum/lessons.json#I-38.words[9]",
+     "he": "הָעֶרֶב",
+     "en": "this evening",
+     "translit": "ha'erev",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-38-w10"
+     },
+     "audio": {
+      "clipId": "i-38-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-restaurant-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-restaurant-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-38-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-38-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-01",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-restaurant-l1",
+    "d-restaurant-l2",
+    "i-38-w3",
+    "i-38-w10"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-38-w3"
+     },
+     "answer": "i-38-w3",
+     "options": [
+      "d-restaurant-l1",
+      "d-restaurant-l2",
+      "i-38-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-38-w10"
+     },
+     "answer": "i-38-w10",
+     "options": [
+      "d-restaurant-l1",
+      "d-restaurant-l2",
+      "i-38-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are two. Answer the host.",
+     "answer": "d-restaurant-l2",
+     "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+     "translit": "lishnayim, bevakasha.",
+     "en": "For two, please.",
+     "audio": {
+      "clipId": "d-restaurant-l2",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-01",
+    "il05-w5"
+   ]
+  },
+  {
+   "id": "pu-restaurant-p02",
+   "title": "The Menu",
+   "order": 2,
+   "kind": "learn",
+   "can": "Ask for the menu and order a main dish.",
+   "grammarNote": "Here is: הִנֵּה. הִנֵּה points at something you hand over: הִנֵּה הַתַּפְרִיט, here is the menu. וְ joins two dishes into one order: שְׁנִיצֶל וְסָלָט.",
+   "grammar": {
+    "point": "Here is: הִנֵּה",
+    "body": "הִנֵּה points at something you hand over: הִנֵּה הַתַּפְרִיט, here is the menu. וְ joins two dishes into one order: שְׁנִיצֶל וְסָלָט.",
+    "examples": [
+     {
+      "itemId": "d-restaurant-l3",
+      "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+      "en": "Please, here. Here is the menu."
+     },
+     {
+      "itemId": "d-restaurant-l4",
+      "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+      "en": "I'd like a schnitzel and a salad."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+     "en": "can I see the menu?",
+     "translit": "efshar lir'ot et hatafrit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-02"
+     },
+     "audio": {
+      "clipId": "cafe-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "d-restaurant-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+     "en": "Please, here. Here is the menu.",
+     "translit": "bevakasha, po. hine hatafrit.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l3"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Host and waiter (woman)"
+    },
+    {
+     "id": "d-restaurant-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+     "en": "I'd like a schnitzel and a salad.",
+     "translit": "ani rotse shnitsel vesalat.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l4"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-restaurant-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-restaurant-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-03-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-20",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-02",
+    "d-restaurant-l3",
+    "d-restaurant-l4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-02"
+     },
+     "answer": "cafe-02",
+     "options": [
+      "d-restaurant-l3",
+      "d-restaurant-l4",
+      "cafe-02"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask to see the menu.",
+     "answer": "cafe-02",
+     "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+     "translit": "efshar lir'ot et hatafrit?",
+     "en": "can I see the menu?",
+     "audio": {
+      "clipId": "cafe-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You are a man. Order a schnitzel and a salad.",
+     "answer": "d-restaurant-l4",
+     "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+     "translit": "ani rotse shnitsel vesalat.",
+     "en": "I'd like a schnitzel and a salad.",
+     "audio": {
+      "clipId": "d-restaurant-l4",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-03-m",
+    "cafe-20"
+   ]
+  },
+  {
+   "id": "pu-restaurant-p03",
+   "title": "Adjectives That Match",
+   "order": 3,
+   "kind": "grammar",
+   "can": "Ask for a big or small portion and cold water.",
+   "grammarNote": "The describing word matches the noun. גָּדוֹל and קָטָן are the forms for a masculine noun. Water is plural in Hebrew, so cold water is מַיִם קָרִים, with the plural ending -im on the describing word too.",
+   "grammar": {
+    "point": "The describing word matches the noun",
+    "body": "גָּדוֹל and קָטָן are the forms for a masculine noun. Water is plural in Hebrew, so cold water is מַיִם קָרִים, with the plural ending -im on the describing word too.",
+    "examples": [
+     {
+      "itemId": "i-13-w9",
+      "he": "גָּדוֹל",
+      "en": "big (m)"
+     },
+     {
+      "itemId": "cafe-10",
+      "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+      "en": "cold water, please"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-13-w9",
+     "source": "data/curriculum/lessons.json#I-13.words[8]",
+     "he": "גָּדוֹל",
+     "en": "big (m)",
+     "translit": "gadol",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-13-w9"
+     },
+     "audio": {
+      "clipId": "i-13-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-13-w10",
+     "source": "data/curriculum/lessons.json#I-13.words[9]",
+     "he": "קָטָן",
+     "en": "small (m)",
+     "translit": "katan",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-13-w10"
+     },
+     "audio": {
+      "clipId": "i-13-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+     "en": "cold water, please",
+     "translit": "mayim karim, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-10"
+     },
+     "audio": {
+      "clipId": "cafe-10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-13-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-13-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "greetings-10",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-13-w9",
+    "i-13-w10",
+    "cafe-10"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-13-w9"
+     },
+     "answer": "i-13-w9",
+     "options": [
+      "i-13-w10",
+      "cafe-10",
+      "i-13-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-13-w10"
+     },
+     "answer": "i-13-w10",
+     "options": [
+      "i-13-w9",
+      "cafe-10",
+      "i-13-w10"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-10"
+     },
+     "answer": "cafe-10",
+     "options": [
+      "i-13-w9",
+      "i-13-w10",
+      "cafe-10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for cold water.",
+     "answer": "cafe-10",
+     "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+     "translit": "mayim karim, bevakasha",
+     "en": "cold water, please",
+     "audio": {
+      "clipId": "cafe-10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "greetings-04",
+    "greetings-10"
+   ]
+  },
+  {
+   "id": "pu-restaurant-p04",
+   "title": "Ordering a Meal",
+   "order": 4,
+   "kind": "dialogue",
+   "can": "Follow a meal from the door to the bill.",
+   "grammarNote": "Short answers are enough. Most answers in this scene are a word or two plus please: לִשְׁנַיִם, בְּבַקָּשָׁה and מַיִם, בְּבַקָּשָׁה. בְּבַקָּשָׁה turns a bare word into a polite request.",
+   "grammar": {
+    "point": "Short answers are enough",
+    "body": "Most answers in this scene are a word or two plus please: לִשְׁנַיִם, בְּבַקָּשָׁה and מַיִם, בְּבַקָּשָׁה. בְּבַקָּשָׁה turns a bare word into a polite request.",
+    "examples": [
+     {
+      "itemId": "d-restaurant-l6",
+      "he": "מַיִם, בְּבַקָּשָׁה.",
+      "en": "Water, please."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-restaurant-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+     "en": "Hello. For how many people?",
+     "translit": "shalom. lekama anashim?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l1"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Host and waiter (woman)"
+    },
+    {
+     "id": "d-restaurant-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+     "en": "For two, please.",
+     "translit": "lishnayim, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l2"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "d-restaurant-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+     "en": "Please, here. Here is the menu.",
+     "translit": "bevakasha, po. hine hatafrit.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l3"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Host and waiter (woman)"
+    },
+    {
+     "id": "d-restaurant-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+     "en": "I'd like a schnitzel and a salad.",
+     "translit": "ani rotse shnitsel vesalat.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l4"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "d-restaurant-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מַיִם, בְּבַקָּשָׁה.",
+     "en": "Water, please.",
+     "translit": "mayim, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l6"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "d-restaurant-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+     "en": "Excuse me, can I have the bill?",
+     "translit": "slicha, efshar et hacheshbon?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l7"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "d-restaurant-l8",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בֶּטַח, רֶגַע.",
+     "en": "Sure, one moment.",
+     "translit": "betach, rega.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l8"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l8",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Host and waiter (woman)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-restaurant-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-restaurant-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-restaurant-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-restaurant-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-restaurant-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-restaurant-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-restaurant-l8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "politeness-03",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "politeness-20",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-restaurant-l1",
+    "d-restaurant-l2",
+    "d-restaurant-l3",
+    "d-restaurant-l4",
+    "d-restaurant-l6",
+    "d-restaurant-l7",
+    "d-restaurant-l8"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "The waiter asks what you will drink. Water.",
+     "answer": "d-restaurant-l6",
+     "he": "מַיִם, בְּבַקָּשָׁה.",
+     "translit": "mayim, bevakasha.",
+     "en": "Water, please.",
+     "audio": {
+      "clipId": "d-restaurant-l6",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-03",
+    "cafe-26",
+    "politeness-20"
+   ],
+   "dialogue": {
+    "id": "d-restaurant",
+    "setting": "Two people get a table, order, and ask for the bill.",
+    "lines": [
+     "d-restaurant-l1",
+     "d-restaurant-l2",
+     "d-restaurant-l3",
+     "d-restaurant-l4",
+     "d-restaurant-l6",
+     "d-restaurant-l7",
+     "d-restaurant-l8"
+    ]
+   }
+  },
+  {
+   "id": "pu-restaurant-p05",
+   "title": "With and Without",
+   "order": 5,
+   "kind": "learn",
+   "can": "Ask for milk, sugar, or none at all.",
+   "grammarNote": "Without: בְּלִי. בְּלִי (without) is the opposite of עִם (with): one asks for milk or sugar, the other leaves it out. Put the food straight after it.",
+   "grammar": {
+    "point": "Without: בְּלִי",
+    "body": "בְּלִי (without) is the opposite of עִם (with): one asks for milk or sugar, the other leaves it out. Put the food straight after it.",
+    "examples": [
+     {
+      "itemId": "i-13-w8",
+      "he": "בְּלִי",
+      "en": "without"
+     },
+     {
+      "itemId": "i-13-w7",
+      "he": "סֻכָּר",
+      "en": "sugar"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-13-w6",
+     "source": "data/curriculum/lessons.json#I-13.words[5]",
+     "he": "חָלָב",
+     "en": "milk",
+     "translit": "chalav",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-13-w6"
+     },
+     "audio": {
+      "clipId": "i-13-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-13-w7",
+     "source": "data/curriculum/lessons.json#I-13.words[6]",
+     "he": "סֻכָּר",
+     "en": "sugar",
+     "translit": "sukar",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-13-w7"
+     },
+     "audio": {
+      "clipId": "i-13-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-13-w8",
+     "source": "data/curriculum/lessons.json#I-13.words[7]",
+     "he": "בְּלִי",
+     "en": "without",
+     "translit": "bli",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-13-w8"
+     },
+     "audio": {
+      "clipId": "i-13-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-13-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-13-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-13-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-07",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-06",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-13-w6",
+    "i-13-w7",
+    "i-13-w8"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-13-w6"
+     },
+     "answer": "i-13-w6",
+     "options": [
+      "i-13-w7",
+      "i-13-w8",
+      "i-13-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-13-w7"
+     },
+     "answer": "i-13-w7",
+     "options": [
+      "i-13-w6",
+      "i-13-w8",
+      "i-13-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-13-w8"
+     },
+     "answer": "i-13-w8",
+     "options": [
+      "i-13-w6",
+      "i-13-w7",
+      "i-13-w8"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: without.",
+     "answer": "i-13-w8",
+     "he": "בְּלִי",
+     "translit": "bli",
+     "en": "without",
+     "audio": {
+      "clipId": "i-13-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask for sugar.",
+     "answer": "i-13-w7",
+     "he": "סֻכָּר",
+     "translit": "sukar",
+     "en": "sugar",
+     "audio": {
+      "clipId": "i-13-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-07",
+    "cafe-06"
+   ]
+  },
+  {
+   "id": "pu-restaurant-p06",
+   "title": "Ask for the Bill",
+   "order": 6,
+   "kind": "speak",
+   "can": "Get the waiter's attention and ask for the bill.",
+   "grammarNote": "Excuse me first. Start with סְלִיחָה to get attention, then ask: סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן? אֶפְשָׁר with a noun asks for that thing.",
+   "grammar": {
+    "point": "Excuse me first",
+    "body": "Start with סְלִיחָה to get attention, then ask: סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן? אֶפְשָׁר with a noun asks for that thing.",
+    "examples": [
+     {
+      "itemId": "d-restaurant-l7",
+      "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+      "en": "Excuse me, can I have the bill?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-restaurant-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+     "en": "Excuse me, can I have the bill?",
+     "translit": "slicha, efshar et hacheshbon?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-restaurant-l7"
+     },
+     "audio": {
+      "clipId": "d-restaurant-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Guest (man)"
+    },
+    {
+     "id": "cafe-26",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+     "en": "the bill, please",
+     "translit": "hacheshbon, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-26"
+     },
+     "audio": {
+      "clipId": "cafe-26",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-27",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "en": "can I pay by card?",
+     "translit": "efshar leshalem bekartis?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-27"
+     },
+     "audio": {
+      "clipId": "cafe-27",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-restaurant-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "politeness-06",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-restaurant-l7",
+    "cafe-26",
+    "cafe-27"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-26"
+     },
+     "answer": "cafe-26",
+     "options": [
+      "d-restaurant-l7",
+      "cafe-27",
+      "cafe-26"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-27"
+     },
+     "answer": "cafe-27",
+     "options": [
+      "d-restaurant-l7",
+      "cafe-26",
+      "cafe-27"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Catch the waiter and ask for the bill.",
+     "answer": "cafe-26",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+     "translit": "hacheshbon, bevakasha",
+     "en": "the bill, please",
+     "audio": {
+      "clipId": "cafe-26",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask if you can pay by card.",
+     "answer": "cafe-27",
+     "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "translit": "efshar leshalem bekartis?",
+     "en": "can I pay by card?",
+     "audio": {
+      "clipId": "cafe-27",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-06",
+    "cafe-14"
+   ]
+  },
+  {
+   "id": "pu-restaurant-p07",
+   "title": "Gladly, and Unit Review",
+   "order": 7,
+   "kind": "review",
+   "can": "Accept an invitation out, then review the restaurant unit.",
+   "grammarNote": "Gladly: בְּשִׂמְחָה. בְּשִׂמְחָה is with joy, the warm way to say yes to an invitation. It uses בְּ (with, in), as in בְּכַרְטִיס.",
+   "grammar": {
+    "point": "Gladly: בְּשִׂמְחָה",
+    "body": "בְּשִׂמְחָה is with joy, the warm way to say yes to an invitation. It uses בְּ (with, in), as in בְּכַרְטִיס.",
+    "examples": [
+     {
+      "itemId": "i-38-w12",
+      "he": "בְּשִׂמְחָה",
+      "en": "gladly, with pleasure"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-38-w12",
+     "source": "data/curriculum/lessons.json#I-38.words[11]",
+     "he": "בְּשִׂמְחָה",
+     "en": "gladly, with pleasure",
+     "translit": "besimcha",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-38-w12"
+     },
+     "audio": {
+      "clipId": "i-38-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-38-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-38-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-38-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-13-w8",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-13-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-10",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "d-restaurant-l2",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-38-w12"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-38-w12"
+     },
+     "answer": "i-38-w12",
+     "options": [
+      "i-38-w12"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "A friend invites you to a restaurant this evening. Accept.",
+     "answer": "i-38-w12",
+     "he": "בְּשִׂמְחָה",
+     "translit": "besimcha",
+     "en": "gladly, with pleasure",
+     "audio": {
+      "clipId": "i-38-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-38-w3",
+    "i-38-w10",
+    "cafe-02",
+    "i-13-w8",
+    "i-13-w9",
+    "cafe-10",
+    "cafe-26",
+    "d-restaurant-l2"
+   ]
+  },
+  {
+   "id": "pu-shop-p01",
+   "title": "In the Shop",
+   "order": 1,
+   "kind": "learn",
+   "can": "Ask the price, say you are just looking, and ask if they have it.",
+   "grammarNote": "There is and there isn't: יֵשׁ and אֵין. יֵשׁ means there is, and as a question it asks do you have it. אֵין is the opposite, as in אֵין בְּעָיָה. A man says אֲנִי רַק מִסְתַּכֵּל, a woman אֲנִי רַק מִסְתַּכֶּלֶת.",
+   "grammar": {
+    "point": "There is and there isn't: יֵשׁ and אֵין",
+    "body": "יֵשׁ means there is, and as a question it asks do you have it. אֵין is the opposite, as in אֵין בְּעָיָה. A man says אֲנִי רַק מִסְתַּכֵּל, a woman אֲנִי רַק מִסְתַּכֶּלֶת.",
+    "examples": [
+     {
+      "itemId": "il08-w5",
+      "he": "יֵשׁ",
+      "en": "there is"
+     },
+     {
+      "itemId": "shop-06-f",
+      "he": "אֲנִי רַק מִסְתַּכֶּלֶת",
+      "en": "I'm just looking"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "en": "how much does it cost?",
+     "translit": "kama ze ole?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-01"
+     },
+     "audio": {
+      "clipId": "shop-01",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמְּחִיר?",
+     "en": "what is the price?",
+     "translit": "ma hamechir?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-02"
+     },
+     "audio": {
+      "clipId": "shop-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-06-m",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי רַק מִסְתַּכֵּל",
+     "en": "I'm just looking",
+     "translit": "ani rak mistakel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-06-m"
+     },
+     "audio": {
+      "clipId": "shop-06-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "shop-06-f",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי רַק מִסְתַּכֶּלֶת",
+     "en": "I'm just looking",
+     "translit": "ani rak mistakelet",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-06-f"
+     },
+     "audio": {
+      "clipId": "shop-06-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "il08-w5",
+     "source": "data/curriculum/lessons.json#il08.words[4]",
+     "he": "יֵשׁ",
+     "en": "there is",
+     "translit": "yesh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w5"
+     },
+     "audio": {
+      "clipId": "il08-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il08-w6",
+     "source": "data/curriculum/lessons.json#il08.words[5]",
+     "he": "אֵין",
+     "en": "there isn't",
+     "translit": "ein",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il08-w6"
+     },
+     "audio": {
+      "clipId": "il08-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-06-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-06-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il08-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il08-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "politeness-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-01",
+    "shop-02",
+    "shop-06-m",
+    "shop-06-f",
+    "il08-w5",
+    "il08-w6"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-01"
+     },
+     "answer": "shop-01",
+     "options": [
+      "shop-02",
+      "shop-06-m",
+      "shop-01"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-02"
+     },
+     "answer": "shop-02",
+     "options": [
+      "shop-01",
+      "shop-06-m",
+      "shop-02"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-06-m"
+     },
+     "answer": "shop-06-m",
+     "options": [
+      "shop-01",
+      "shop-02",
+      "shop-06-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-06-f"
+     },
+     "answer": "shop-06-f",
+     "options": [
+      "shop-01",
+      "shop-02",
+      "shop-06-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il08-w5"
+     },
+     "answer": "il08-w5",
+     "options": [
+      "shop-01",
+      "shop-02",
+      "il08-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il08-w6"
+     },
+     "answer": "il08-w6",
+     "options": [
+      "shop-01",
+      "shop-02",
+      "il08-w6"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The assistant comes over. You are a woman. Say you are just looking.",
+     "answer": "shop-06-f",
+     "he": "אֲנִי רַק מִסְתַּכֶּלֶת",
+     "translit": "ani rak mistakelet",
+     "en": "I'm just looking",
+     "audio": {
+      "clipId": "shop-06-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask how much it costs.",
+     "answer": "shop-01",
+     "he": "כַּמָּה זֶה עוֹלֶה?",
+     "translit": "kama ze ole?",
+     "en": "how much does it cost?",
+     "audio": {
+      "clipId": "shop-01",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-04",
+    "il05-w5"
+   ]
+  },
+  {
+   "id": "pu-shop-p02",
+   "title": "Numbers with Nouns",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Read a price in shekels.",
+   "grammarNote": "Masculine nouns take the long set. שֶׁקֶל is masculine, so in careful speech a price uses the set from page 1 that ends in -a: מֵאָה וַעֲשָׂרָה שְׁקָלִים. You will also hear the shorter counting forms in shops.",
+   "grammar": {
+    "point": "Masculine nouns take the long set",
+    "body": "שֶׁקֶל is masculine, so in careful speech a price uses the set from page 1 that ends in -a: מֵאָה וַעֲשָׂרָה שְׁקָלִים. You will also hear the shorter counting forms in shops.",
+    "examples": [
+     {
+      "itemId": "d-shop-l3",
+      "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+      "en": "A hundred and ten shekels."
+     },
+     {
+      "itemId": "numbers-10-m",
+      "he": "עֲשָׂרָה",
+      "en": "ten (10)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שֶׁקֶל",
+     "en": "shekel (Israeli currency)",
+     "translit": "shekel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-19"
+     },
+     "audio": {
+      "clipId": "shop-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "d-shop-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+     "en": "A hundred and ten shekels.",
+     "translit": "me'a va'asara shekalim.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l3"
+     },
+     "audio": {
+      "clipId": "d-shop-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Shop assistant (man)"
+    },
+    {
+     "id": "numbers-03-m",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "שְׁלוֹשָׁה",
+     "en": "three (3)",
+     "translit": "shlosha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-03-m"
+     },
+     "audio": {
+      "clipId": "numbers-03-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "numbers-05-m",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "חֲמִשָּׁה",
+     "en": "five (5)",
+     "translit": "chamisha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-05-m"
+     },
+     "audio": {
+      "clipId": "numbers-05-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "numbers-10-m",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "עֲשָׂרָה",
+     "en": "ten (10)",
+     "translit": "asara",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-10-m"
+     },
+     "audio": {
+      "clipId": "numbers-10-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "shop-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-shop-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-03-m",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-05-m",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-10-m",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-03-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-19",
+    "d-shop-l3",
+    "numbers-03-m",
+    "numbers-05-m",
+    "numbers-10-m"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "shop-19"
+     },
+     "answer": "shop-19",
+     "options": [
+      "d-shop-l3",
+      "numbers-03-m",
+      "shop-19"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-03-m"
+     },
+     "answer": "numbers-03-m",
+     "options": [
+      "shop-19",
+      "d-shop-l3",
+      "numbers-03-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-05-m"
+     },
+     "answer": "numbers-05-m",
+     "options": [
+      "shop-19",
+      "d-shop-l3",
+      "numbers-05-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-10-m"
+     },
+     "answer": "numbers-10-m",
+     "options": [
+      "shop-19",
+      "d-shop-l3",
+      "numbers-10-m"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say ten, the form used with shekels.",
+     "answer": "numbers-10-m",
+     "he": "עֲשָׂרָה",
+     "translit": "asara",
+     "en": "ten (10)",
+     "audio": {
+      "clipId": "numbers-10-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-03-f",
+    "numbers-14"
+   ]
+  },
+  {
+   "id": "pu-shop-p03",
+   "title": "Sizes",
+   "order": 3,
+   "kind": "learn",
+   "can": "Ask for a size and ask to try it on.",
+   "grammarNote": "Small for a feminine noun: קְטַנָּה. מִדָּה (size) is feminine, so small becomes קְטַנָּה, not קָטָן. יֵשׁ לָכֶם ...? asks a shop whether they have something.",
+   "grammar": {
+    "point": "Small for a feminine noun: קְטַנָּה",
+    "body": "מִדָּה (size) is feminine, so small becomes קְטַנָּה, not קָטָן. יֵשׁ לָכֶם ...? asks a shop whether they have something.",
+    "examples": [
+     {
+      "itemId": "d-shop-l4",
+      "he": "יֵשׁ מִדָּה קְטַנָּה?",
+      "en": "Do you have a small size?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-shop-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "יֵשׁ מִדָּה קְטַנָּה?",
+     "en": "Do you have a small size?",
+     "translit": "yesh mida ktana?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l4"
+     },
+     "audio": {
+      "clipId": "d-shop-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Customer (woman)"
+    },
+    {
+     "id": "shop-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ לָכֶם ...?",
+     "en": "do you have ...?",
+     "translit": "yesh lachem ...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-08"
+     },
+     "audio": {
+      "clipId": "shop-08",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "en": "can I try it on?",
+     "translit": "efshar limdod?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-09"
+     },
+     "audio": {
+      "clipId": "shop-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-shop-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-13-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il08-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-shop-l4",
+    "shop-08",
+    "shop-09"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-08"
+     },
+     "answer": "shop-08",
+     "options": [
+      "d-shop-l4",
+      "shop-09",
+      "shop-08"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-09"
+     },
+     "answer": "shop-09",
+     "options": [
+      "d-shop-l4",
+      "shop-08",
+      "shop-09"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask if they have a small size.",
+     "answer": "d-shop-l4",
+     "he": "יֵשׁ מִדָּה קְטַנָּה?",
+     "translit": "yesh mida ktana?",
+     "en": "Do you have a small size?",
+     "audio": {
+      "clipId": "d-shop-l4",
+      "status": "gap",
+      "voices": []
+     }
+    },
+    {
+     "prompt": "Ask to try it on.",
+     "answer": "shop-09",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "translit": "efshar limdod?",
+     "en": "can I try it on?",
+     "audio": {
+      "clipId": "shop-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-13-w10",
+    "il08-w5"
+   ]
+  },
+  {
+   "id": "pu-shop-p04",
+   "title": "Trying On a Shirt",
+   "order": 4,
+   "kind": "dialogue",
+   "can": "Follow a purchase from hello to paying.",
+   "grammarNote": "This shirt: הַחֻלְצָה הַזֹּאת. To say this one, put זֹאת after the noun and give both the הַ: הַחֻלְצָה הַזֹּאת. The customer is a woman, so she says אֲנִי לוֹקַחַת אֶת זֶה.",
+   "grammar": {
+    "point": "This shirt: הַחֻלְצָה הַזֹּאת",
+    "body": "To say this one, put זֹאת after the noun and give both the הַ: הַחֻלְצָה הַזֹּאת. The customer is a woman, so she says אֲנִי לוֹקַחַת אֶת זֶה.",
+    "examples": [
+     {
+      "itemId": "d-shop-l2",
+      "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+      "en": "How much is this shirt?"
+     },
+     {
+      "itemId": "d-shop-l8",
+      "he": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+      "en": "I'll take it. By card, please."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-shop-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם. אֲנִי יָכוֹל לַעֲזֹר?",
+     "en": "Hello. Can I help?",
+     "translit": "shalom. ani yachol la'azor?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l1"
+     },
+     "audio": {
+      "clipId": "d-shop-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Shop assistant (man)"
+    },
+    {
+     "id": "d-shop-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+     "en": "How much is this shirt?",
+     "translit": "kama hachultsa hazot?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l2"
+     },
+     "audio": {
+      "clipId": "d-shop-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Customer (woman)"
+    },
+    {
+     "id": "d-shop-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+     "en": "A hundred and ten shekels.",
+     "translit": "me'a va'asara shekalim.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l3"
+     },
+     "audio": {
+      "clipId": "d-shop-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Shop assistant (man)"
+    },
+    {
+     "id": "d-shop-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "יֵשׁ מִדָּה קְטַנָּה?",
+     "en": "Do you have a small size?",
+     "translit": "yesh mida ktana?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l4"
+     },
+     "audio": {
+      "clipId": "d-shop-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Customer (woman)"
+    },
+    {
+     "id": "d-shop-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כֵּן, רֶגַע. הִנֵּה.",
+     "en": "Yes, one moment. Here.",
+     "translit": "ken, rega. hine.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l5"
+     },
+     "audio": {
+      "clipId": "d-shop-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Shop assistant (man)"
+    },
+    {
+     "id": "d-shop-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "en": "Can I try it on?",
+     "translit": "efshar limdod?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l6"
+     },
+     "audio": {
+      "clipId": "d-shop-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Customer (woman)"
+    },
+    {
+     "id": "d-shop-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+     "en": "Of course. The fitting room is there.",
+     "translit": "betach. chadar halbasha sham.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l7"
+     },
+     "audio": {
+      "clipId": "d-shop-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Shop assistant (man)"
+    },
+    {
+     "id": "d-shop-l8",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+     "en": "I'll take it. By card, please.",
+     "translit": "ani lokachat et ze. bekartis, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-shop-l8"
+     },
+     "audio": {
+      "clipId": "d-shop-l8",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Customer (woman)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-shop-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-shop-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-shop-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-shop-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-shop-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-shop-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-shop-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "d-shop-l8",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "shop-06-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 11,
+     "kind": "word",
+     "id": "politeness-20",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-shop-l1",
+    "d-shop-l2",
+    "d-shop-l3",
+    "d-shop-l4",
+    "d-shop-l5",
+    "d-shop-l6",
+    "d-shop-l7",
+    "d-shop-l8"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Ask to try it on.",
+     "answer": "d-shop-l6",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "translit": "efshar limdod?",
+     "en": "Can I try it on?",
+     "audio": {
+      "clipId": "d-shop-l6",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "shop-06-f",
+    "cafe-27",
+    "politeness-20"
+   ],
+   "dialogue": {
+    "id": "d-shop",
+    "setting": "A woman buys a shirt in a small shop.",
+    "lines": [
+     "d-shop-l1",
+     "d-shop-l2",
+     "d-shop-l3",
+     "d-shop-l4",
+     "d-shop-l5",
+     "d-shop-l6",
+     "d-shop-l7",
+     "d-shop-l8"
+    ]
+   }
+  },
+  {
+   "id": "pu-shop-p05",
+   "title": "This: זֶה and זֹאת",
+   "order": 5,
+   "kind": "grammar",
+   "can": "Point at things and say you will take one.",
+   "grammarNote": "זֶה and זֹאת. זֶה is this for a masculine noun, and for things in general: זֶה יָקָר, it's expensive. זֹאת is this for a feminine noun. אֶת comes before a definite object: אֶקַּח אֶת זֶה.",
+   "grammar": {
+    "point": "זֶה and זֹאת",
+    "body": "זֶה is this for a masculine noun, and for things in general: זֶה יָקָר, it's expensive. זֹאת is this for a feminine noun. אֶת comes before a definite object: אֶקַּח אֶת זֶה.",
+    "examples": [
+     {
+      "itemId": "shop-07",
+      "he": "אֶקַּח אֶת זֶה",
+      "en": "I'll take this"
+     },
+     {
+      "itemId": "shop-03",
+      "he": "זֶה יָקָר",
+      "en": "it's expensive"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶקַּח אֶת זֶה",
+     "en": "I'll take this",
+     "translit": "ekach et ze",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-07"
+     },
+     "audio": {
+      "clipId": "shop-07",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֶה יָקָר",
+     "en": "it's expensive",
+     "translit": "ze yakar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-03"
+     },
+     "audio": {
+      "clipId": "shop-03",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "small-talk-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+     "en": "it's my first time in Israel",
+     "translit": "zot hapa'am harishona sheli beyisrael",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-06"
+     },
+     "audio": {
+      "clipId": "small-talk-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-03",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-shop-l2",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-01",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-07",
+    "shop-03",
+    "small-talk-06"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-07"
+     },
+     "answer": "shop-07",
+     "options": [
+      "shop-03",
+      "small-talk-06",
+      "shop-07"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-03"
+     },
+     "answer": "shop-03",
+     "options": [
+      "shop-07",
+      "small-talk-06",
+      "shop-03"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-06"
+     },
+     "answer": "small-talk-06",
+     "options": [
+      "shop-07",
+      "shop-03",
+      "small-talk-06"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Decide to buy it.",
+     "answer": "shop-07",
+     "he": "אֶקַּח אֶת זֶה",
+     "translit": "ekach et ze",
+     "en": "I'll take this",
+     "audio": {
+      "clipId": "shop-07",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say it's expensive.",
+     "answer": "shop-03",
+     "he": "זֶה יָקָר",
+     "translit": "ze yakar",
+     "en": "it's expensive",
+     "audio": {
+      "clipId": "shop-03",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "d-shop-l2",
+    "shop-01"
+   ]
+  },
+  {
+   "id": "pu-shop-p06",
+   "title": "Hear the Price",
+   "order": 6,
+   "kind": "listen",
+   "can": "Catch the numbers in a price.",
+   "grammarNote": "Listen for the tens. Prices are said big part first: the hundreds, then the tens ending in -im, then the shekels. מֵאָה at the start means more than a hundred.",
+   "grammar": {
+    "point": "Listen for the tens",
+    "body": "Prices are said big part first: the hundreds, then the tens ending in -im, then the shekels. מֵאָה at the start means more than a hundred.",
+    "examples": [
+     {
+      "itemId": "numbers-14",
+      "he": "מֵאָה",
+      "en": "one hundred (100)"
+     },
+     {
+      "itemId": "numbers-12",
+      "he": "שְׁלוֹשִׁים",
+      "en": "thirty (30)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "numbers-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶשְׂרִים",
+     "en": "twenty (20)",
+     "translit": "esrim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "audio": {
+      "clipId": "numbers-11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁלוֹשִׁים",
+     "en": "thirty (30)",
+     "translit": "shloshim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-12"
+     },
+     "audio": {
+      "clipId": "numbers-12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲמִשִּׁים",
+     "en": "fifty (50)",
+     "translit": "chamishim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-13"
+     },
+     "audio": {
+      "clipId": "numbers-13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מֵאָה",
+     "en": "one hundred (100)",
+     "translit": "me'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "audio": {
+      "clipId": "numbers-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שֶׁקֶל",
+     "en": "shekel (Israeli currency)",
+     "translit": "shekel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-19"
+     },
+     "audio": {
+      "clipId": "shop-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמְּחִיר?",
+     "en": "what is the price?",
+     "translit": "ma hamechir?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-02"
+     },
+     "audio": {
+      "clipId": "shop-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "shop-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "shop-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "numbers-10-m",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "d-shop-l3",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "shop-01",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "numbers-11",
+    "numbers-12",
+    "numbers-13",
+    "numbers-14",
+    "shop-19",
+    "shop-02"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "answer": "numbers-11",
+     "options": [
+      "numbers-12",
+      "numbers-13",
+      "numbers-11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-12"
+     },
+     "answer": "numbers-12",
+     "options": [
+      "numbers-11",
+      "numbers-13",
+      "numbers-12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-13"
+     },
+     "answer": "numbers-13",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "numbers-13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "answer": "numbers-14",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "numbers-14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "shop-19"
+     },
+     "answer": "shop-19",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "shop-19"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-02"
+     },
+     "answer": "shop-02",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "shop-02"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask what the price is.",
+     "answer": "shop-02",
+     "he": "מָה הַמְּחִיר?",
+     "translit": "ma hamechir?",
+     "en": "what is the price?",
+     "audio": {
+      "clipId": "shop-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-10-m",
+    "d-shop-l3",
+    "shop-01"
+   ]
+  },
+  {
+   "id": "pu-shop-p07",
+   "title": "Ask to Try It On",
+   "order": 7,
+   "kind": "speak",
+   "can": "Ask for what you need in a shop, out loud.",
+   "grammarNote": "One polite opener for many requests. אֶפְשָׁר opens most shop requests: אֶפְשָׁר לִמְדֹּד? with a to-verb. אֵיפֹה asks where, as in אֵיפֹה הַשֵּׁרוּתִים?",
+   "grammar": {
+    "point": "One polite opener for many requests",
+    "body": "אֶפְשָׁר opens most shop requests: אֶפְשָׁר לִמְדֹּד? with a to-verb. אֵיפֹה asks where, as in אֵיפֹה הַשֵּׁרוּתִים?",
+    "examples": [
+     {
+      "itemId": "shop-09",
+      "he": "אֶפְשָׁר לִמְדֹּד?",
+      "en": "can I try it on?"
+     },
+     {
+      "itemId": "shop-20",
+      "he": "אֵיפֹה הַשֵּׁרוּתִים?",
+      "en": "where is the restroom?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "en": "can I try it on?",
+     "translit": "efshar limdod?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-09"
+     },
+     "audio": {
+      "clipId": "shop-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יֵשׁ לָכֶם ...?",
+     "en": "do you have ...?",
+     "translit": "yesh lachem ...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-08"
+     },
+     "audio": {
+      "clipId": "shop-08",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה הַשֵּׁרוּתִים?",
+     "en": "where is the restroom?",
+     "translit": "eifo hasherutim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-20"
+     },
+     "audio": {
+      "clipId": "shop-20",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "shop-09",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-08",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-20",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "fillers-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-shop-l4",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-09",
+    "shop-08",
+    "shop-20"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-09"
+     },
+     "answer": "shop-09",
+     "options": [
+      "shop-08",
+      "shop-20",
+      "shop-09"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-08"
+     },
+     "answer": "shop-08",
+     "options": [
+      "shop-09",
+      "shop-20",
+      "shop-08"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-20"
+     },
+     "answer": "shop-20",
+     "options": [
+      "shop-09",
+      "shop-08",
+      "shop-20"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask to try it on.",
+     "answer": "shop-09",
+     "he": "אֶפְשָׁר לִמְדֹּד?",
+     "translit": "efshar limdod?",
+     "en": "can I try it on?",
+     "audio": {
+      "clipId": "shop-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask where the restroom is.",
+     "answer": "shop-20",
+     "he": "אֵיפֹה הַשֵּׁרוּתִים?",
+     "translit": "eifo hasherutim?",
+     "en": "where is the restroom?",
+     "audio": {
+      "clipId": "shop-20",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "fillers-18",
+    "d-shop-l4"
+   ]
+  },
+  {
+   "id": "pu-shop-p08",
+   "title": "Paying and the Receipt",
+   "order": 8,
+   "kind": "learn",
+   "can": "Pay by cash or card and ask for a receipt and a bag.",
+   "grammarNote": "Can I have: אֶפְשָׁר and a noun. With a noun, אֶפְשָׁר asks for the thing: אֶפְשָׁר קַבָּלָה?, אֶפְשָׁר שַׂקִּית? With a to-verb, it asks to do something.",
+   "grammar": {
+    "point": "Can I have: אֶפְשָׁר and a noun",
+    "body": "With a noun, אֶפְשָׁר asks for the thing: אֶפְשָׁר קַבָּלָה?, אֶפְשָׁר שַׂקִּית? With a to-verb, it asks to do something.",
+    "examples": [
+     {
+      "itemId": "shop-14",
+      "he": "אֶפְשָׁר קַבָּלָה?",
+      "en": "can I have a receipt?"
+     },
+     {
+      "itemId": "shop-15",
+      "he": "אֶפְשָׁר שַׂקִּית?",
+      "en": "can I have a bag?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מְזֻמָּן",
+     "en": "cash",
+     "translit": "mezuman",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-12"
+     },
+     "audio": {
+      "clipId": "shop-12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּרְטִיס אַשְׁרַאי",
+     "en": "credit card",
+     "translit": "kartis ashrai",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-13"
+     },
+     "audio": {
+      "clipId": "shop-13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il09-w3",
+     "source": "data/curriculum/lessons.json#il09.words[2]",
+     "he": "עוֹדֶף",
+     "en": "change",
+     "translit": "odef",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il09-w3"
+     },
+     "audio": {
+      "clipId": "il09-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר קַבָּלָה?",
+     "en": "can I have a receipt?",
+     "translit": "efshar kabala?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-14"
+     },
+     "audio": {
+      "clipId": "shop-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר שַׂקִּית?",
+     "en": "can I have a bag?",
+     "translit": "efshar sakit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-15"
+     },
+     "audio": {
+      "clipId": "shop-15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "shop-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-13",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il09-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "shop-15",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-12",
+    "shop-13",
+    "il09-w3",
+    "shop-14",
+    "shop-15"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "shop-12"
+     },
+     "answer": "shop-12",
+     "options": [
+      "shop-13",
+      "il09-w3",
+      "shop-12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-13"
+     },
+     "answer": "shop-13",
+     "options": [
+      "shop-12",
+      "il09-w3",
+      "shop-13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il09-w3"
+     },
+     "answer": "il09-w3",
+     "options": [
+      "shop-12",
+      "shop-13",
+      "il09-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-14"
+     },
+     "answer": "shop-14",
+     "options": [
+      "shop-12",
+      "shop-13",
+      "shop-14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-15"
+     },
+     "answer": "shop-15",
+     "options": [
+      "shop-12",
+      "shop-13",
+      "shop-15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for a receipt.",
+     "answer": "shop-14",
+     "he": "אֶפְשָׁר קַבָּלָה?",
+     "translit": "efshar kabala?",
+     "en": "can I have a receipt?",
+     "audio": {
+      "clipId": "shop-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask for a bag.",
+     "answer": "shop-15",
+     "he": "אֶפְשָׁר שַׂקִּית?",
+     "translit": "efshar sakit?",
+     "en": "can I have a bag?",
+     "audio": {
+      "clipId": "shop-15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-27",
+    "cafe-26"
+   ]
+  },
+  {
+   "id": "pu-shop-p09",
+   "title": "Closing Time and Unit Review",
+   "order": 9,
+   "kind": "review",
+   "can": "Ask when the shop closes, then review the unit.",
+   "grammarNote": "You, plural: אַתֶּם. When you ask a shop, you speak to everyone who works there, so you use the plural: מָתַי אַתֶּם סוֹגְרִים? The verb takes the plural ending -im too.",
+   "grammar": {
+    "point": "You, plural: אַתֶּם",
+    "body": "When you ask a shop, you speak to everyone who works there, so you use the plural: מָתַי אַתֶּם סוֹגְרִים? The verb takes the plural ending -im too.",
+    "examples": [
+     {
+      "itemId": "shop-18",
+      "he": "מָתַי אַתֶּם סוֹגְרִים?",
+      "en": "when do you close?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "shop-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סָגוּר",
+     "en": "closed",
+     "translit": "sagur",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "shop-17"
+     },
+     "audio": {
+      "clipId": "shop-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "shop-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָתַי אַתֶּם סוֹגְרִים?",
+     "en": "when do you close?",
+     "translit": "matai atem sogrim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "shop-18"
+     },
+     "audio": {
+      "clipId": "shop-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "shop-17",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "shop-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "shop-01",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "shop-06-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-shop-l4",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "shop-07",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "shop-09",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "shop-13",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "shop-14",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "shop-19",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "shop-17",
+    "shop-18"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "shop-17"
+     },
+     "answer": "shop-17",
+     "options": [
+      "shop-18",
+      "shop-17"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "shop-18"
+     },
+     "answer": "shop-18",
+     "options": [
+      "shop-17",
+      "shop-18"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask when they close.",
+     "answer": "shop-18",
+     "he": "מָתַי אַתֶּם סוֹגְרִים?",
+     "translit": "matai atem sogrim?",
+     "en": "when do you close?",
+     "audio": {
+      "clipId": "shop-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "shop-01",
+    "shop-06-m",
+    "d-shop-l4",
+    "shop-07",
+    "shop-09",
+    "shop-13",
+    "shop-14",
+    "shop-19"
+   ]
   }
  ],
  "completeUnits": [
@@ -12005,6 +15940,8 @@
   "pu-fillers",
   "pu-numbers",
   "pu-introducing",
-  "pu-cafe"
+  "pu-cafe",
+  "pu-restaurant",
+  "pu-shop"
  ]
 }

@@ -41,6 +41,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `read-my-way` | keep | Tradition-aware reading. |
 | `rules` | keep | Pronunciation rules reference. |
 | `intermediate` | keep | After r10. |
+| `israelunits` | keep | The Israel track as practical units (grammar notes, spaced unit review, listening and speaking); draft notes, no new Hebrew. |
 | `grammar` | keep | Reference notes. |
 | `compare` | keep | Target for `record-compare`. |
 | `vocab-themes` | keep | Theme packs (shared audio button). |

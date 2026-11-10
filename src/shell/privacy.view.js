@@ -124,6 +124,7 @@ export const STORE_KEYS = [
   ['curriculum.loanwords', 'Loanword practice', 'src/curriculum/actions.js'],
   ['curriculum.scaffold', 'Read-without-Latin progress', 'src/curriculum/scaffold.js'],
   ['intermediate.v1', 'Intermediate lessons progress', 'src/curriculum/intermediate.view.js'],
+  ['israelUnits.v1', 'Israel unit review schedule (when each unit review was done)', 'src/curriculum/israel-units.js'],
   ['service.prefs', 'Follow-the-service choices (order, tradition, whether to show transliteration)', 'src/service/service.view.js'],
   ['progress.milestones.v1', 'Which progress milestones you have reached, and when', 'src/progress/store.js'],
   ['__meta', 'Storage format version number only (no learner data; left out of backups)', 'src/store.js'],

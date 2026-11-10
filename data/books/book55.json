@@ -1,0 +1,177 @@
+{
+ "id": "book55",
+ "titleHe": "שֶׁלֶג בִּירוּשָׁלַיִם",
+ "titleTranslit": "Sheleg Bi-Yerushalayim",
+ "titleEn": "Snow in Jerusalem",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יְרוּשָׁלַיִם. יָנוּאָר.",
+   "translit": "Yerushalayim. Yanu'ar.",
+   "en": "Jerusalem. January.",
+   "img": "assets/books/book55/BOOK55_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p01.mp3",
+    "m": "audio/m/israeli/book/book55-p01.mp3"
+   },
+   "illustration": "grey sky over stone buildings",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הָרַדְיוֹ אוֹמֵר: \"שֶׁלֶג מָחָר.\"",
+   "translit": "Ha-radyo omer: \"Sheleg machar.\"",
+   "en": "The radio says: \"Snow tomorrow.\"",
+   "img": "assets/books/book55/BOOK55_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p02.mp3",
+    "m": "audio/m/israeli/book/book55-p02.mp3"
+   },
+   "illustration": "a radio, a family gathered round it",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "אַף אֶחָד לֹא מַאֲמִין.",
+   "translit": "Af echad lo ma'amin.",
+   "en": "Nobody believes it.",
+   "img": "assets/books/book55/BOOK55_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p03.mp3",
+    "m": "audio/m/israeli/book/book55-p03.mp3"
+   },
+   "illustration": "shrugging neighbours on a stairwell",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "בַּבֹּקֶר: לָבָן.",
+   "translit": "Ba-boker: lavan.",
+   "en": "In the morning: white.",
+   "img": "assets/books/book55/BOOK55_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p04.mp3",
+    "m": "audio/m/israeli/book/book55-p04.mp3"
+   },
+   "illustration": "the city under snow, domes and roofs white",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַכֹּל סָגוּר.",
+   "translit": "Ha-kol sagur.",
+   "en": "Everything is closed.",
+   "img": "assets/books/book55/BOOK55_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p05.mp3",
+    "m": "audio/m/israeli/book/book55-p05.mp3"
+   },
+   "illustration": "shuttered shops, no buses",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַיְּלָדִים בַּחוּץ.",
+   "translit": "Ha-yeladim ba-chutz.",
+   "en": "The children are outside.",
+   "img": "assets/books/book55/BOOK55_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p06.mp3",
+    "m": "audio/m/israeli/book/book55-p06.mp3"
+   },
+   "illustration": "kids in mismatched gloves and plastic bags on their feet",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "גַּם הַמְּבֻגָּרִים.",
+   "translit": "Gam ha-mevugarim.",
+   "en": "The adults too.",
+   "img": "assets/books/book55/BOOK55_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p07.mp3",
+    "m": "audio/m/israeli/book/book55-p07.mp3"
+   },
+   "illustration": "grown men throwing snowballs in suits",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "שִׁירָה בּוֹנָה אִישׁ שֶׁלֶג.",
+   "translit": "Shira bonah ish sheleg.",
+   "en": "Shira builds a snowman.",
+   "img": "assets/books/book55/BOOK55_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p08.mp3",
+    "m": "audio/m/israeli/book/book55-p08.mp3"
+   },
+   "illustration": "a woman rolling a lopsided snowball",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "אִישׁ שֶׁלֶג קָטָן. עָקוּם.",
+   "translit": "Ish sheleg katan. Akum.",
+   "en": "A small snowman. Crooked.",
+   "img": "assets/books/book55/BOOK55_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p09.mp3",
+    "m": "audio/m/israeli/book/book55-p09.mp3"
+   },
+   "illustration": "a tiny leaning snowman with an olive for a nose",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הִיא נוֹתֶנֶת לוֹ כִּפָּה.",
+   "translit": "Hi notenet lo kipah.",
+   "en": "She gives it a kippah.",
+   "img": "assets/books/book55/BOOK55_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p10.mp3",
+    "m": "audio/m/israeli/book/book55-p10.mp3"
+   },
+   "illustration": "a knitted kippah on the snowman's head",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "בַּצָּהֳרַיִם: שֶׁמֶשׁ.",
+   "translit": "Ba-tzohorayim: shemesh.",
+   "en": "At noon: sun.",
+   "img": "assets/books/book55/BOOK55_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p11.mp3",
+    "m": "audio/m/israeli/book/book55-p11.mp3"
+   },
+   "illustration": "sunlight breaking through, drips everywhere",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "אִישׁ הַשֶּׁלֶג הוֹלֵךְ. הַכִּפָּה נִשְׁאֶרֶת.",
+   "translit": "Ish ha-sheleg holech. Ha-kipah nish'eret.",
+   "en": "The snowman goes. The kippah stays.",
+   "img": "assets/books/book55/BOOK55_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book55-p12.mp3",
+    "m": "audio/m/israeli/book/book55-p12.mp3"
+   },
+   "illustration": "a puddle, the kippah on the wet stone, the woman smiling",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

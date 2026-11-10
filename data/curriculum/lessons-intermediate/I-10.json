@@ -1,0 +1,385 @@
+{
+ "id": "I-10",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Mi Shebeirach, healing and thanksgiving: the blessings said for people",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "מִי שֶׁבֵּרַךְ",
+   "en": "he who blessed",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mi sheberakh",
+    "sephardi": "mi sheberakh",
+    "ashkenazi": "mi shebeirakh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִי",
+     "שֶׁבֵּרַךְ"
+    ]
+   }
+  },
+  {
+   "he": "אֲבוֹתֵינוּ",
+   "en": "our ancestors",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avoteinu",
+    "sephardi": "avoteinu",
+    "ashkenazi": "avoseinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֲבוֹתֵינוּ"
+    ]
+   }
+  },
+  {
+   "he": "אַבְרָהָם יִצְחָק וְיַעֲקֹב",
+   "en": "Abraham, Isaac and Jacob",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avraham yitzchak veya'akov",
+    "sephardi": "avraham yitzchak veya'akov",
+    "ashkenazi": "avrohom yitzchok veya'akov"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אַבְרָהָם",
+     "יִצְחָק",
+     "וְיַעֲקֹב"
+    ]
+   }
+  },
+  {
+   "he": "רְפוּאָה",
+   "en": "healing",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "refu'ah",
+    "sephardi": "refu'ah",
+    "ashkenazi": "refu'oh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3a561e77"
+   }
+  },
+  {
+   "he": "חוֹלֶה",
+   "en": "a sick person (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "choleh",
+    "sephardi": "choleh",
+    "ashkenazi": "choleh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3e4e6cff#forms.present"
+   }
+  },
+  {
+   "he": "חוֹלָה",
+   "en": "a sick person (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "cholah",
+    "sephardi": "cholah",
+    "ashkenazi": "choloh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8123d4c2#forms.feminine"
+   }
+  },
+  {
+   "he": "אֵל נָא רְפָא נָא לָהּ",
+   "en": "God, please heal her",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "el na refa na lah",
+    "sephardi": "el na refa na lah",
+    "ashkenazi": "eil no refo no loh"
+   },
+   "source": {
+    "file": "data/corpus/registry.json",
+    "id": "num-12-13"
+   }
+  },
+  {
+   "he": "הַגּוֹמֵל",
+   "en": "who bestows good",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hagomel",
+    "sephardi": "hagomel",
+    "ashkenazi": "hagomeil"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַגּוֹמֵל"
+    ]
+   }
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ",
+   "en": "who has kept us alive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shehecheyainu",
+    "sephardi": "shehecheyainu",
+    "ashkenazi": "shehecheyoynu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁהֶחֱיָינוּ"
+    ]
+   }
+  },
+  {
+   "he": "כֵּן יְהִי רָצוֹן",
+   "en": "may it be so",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ken yehi ratzon",
+    "sephardi": "ken yehi ratzon",
+    "ashkenazi": "kein yehi rotzon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כֵּן",
+     "יְהִי",
+     "רָצוֹן"
+    ]
+   }
+  },
+  {
+   "he": "יְבָרֶכְךָ",
+   "en": "may he bless you",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yevarekhkha",
+    "sephardi": "yevarekhkha",
+    "ashkenazi": "yevorekhkho"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pfe83972b"
+   }
+  },
+  {
+   "he": "שָׁלוֹם",
+   "en": "peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shalom",
+    "sephardi": "shalom",
+    "ashkenazi": "sholom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf8c8316a"
+   }
+  }
+ ],
+ "prayerLines": [
+  "mi-sheberach-opening",
+  "num-12-13",
+  "hagomel",
+  "shehecheyanu",
+  "bless-priestly-1",
+  "bless-priestly-2",
+  "bless-priestly-3"
+ ],
+ "goals": [
+  "Recognise the opening of Mi Shebeirach and answer it",
+  "Answer Birkat Hagomel with the congregation's response",
+  "Answer Shehecheyanu and the Priestly Blessing with Amen"
+ ],
+ "estMinutes": 35,
+ "prerequisites": [
+  "I-03"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-10-e01",
+   "type": "fade",
+   "line": "mi-sheberach-opening",
+   "en": "He who blessed our ancestors Abraham, Isaac and Jacob"
+  },
+  {
+   "id": "I-10-e02",
+   "type": "order",
+   "he": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
+   "en": "He who blessed our ancestors Abraham, Isaac and Jacob"
+  },
+  {
+   "id": "I-10-e03",
+   "type": "respond",
+   "cue": "The Mi Shebeirach for the sick ends with a wish; the congregation answers.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   }
+  },
+  {
+   "id": "I-10-e04",
+   "type": "gender",
+   "m": "חוֹלֶה",
+   "f": "חוֹלָה",
+   "en": "a sick person"
+  },
+  {
+   "id": "I-10-e05",
+   "type": "order",
+   "he": "אֵל נָא רְפָא נָא לָהּ",
+   "en": "God, please heal her."
+  },
+  {
+   "id": "I-10-e06",
+   "type": "fade",
+   "line": "num-12-13",
+   "en": "God, please, heal her, please."
+  },
+  {
+   "id": "I-10-e07",
+   "type": "recall",
+   "he": "רְפוּאָה",
+   "en": "healing"
+  },
+  {
+   "id": "I-10-e08",
+   "type": "respond",
+   "cue": "Someone who recovered or travelled safely says Hagomel. Answer with the congregation's line.",
+   "answer": {
+    "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
+    "en": "May the one who bestowed good on you bestow every good on you. Selah."
+   },
+   "prompt": {
+    "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב",
+    "en": "who bestows good things on the undeserving, and has bestowed every good on me"
+   }
+  },
+  {
+   "id": "I-10-e09",
+   "type": "fade",
+   "line": "hagomel",
+   "en": "May the one who bestowed good on you bestow every good on you. Selah.",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-10-e10",
+   "type": "fade",
+   "line": "shehecheyanu",
+   "en": "Blessed are you... who has kept us alive, sustained us and brought us to this time."
+  },
+  {
+   "id": "I-10-e11",
+   "type": "respond",
+   "cue": "Shehecheyanu ends 'lazman hazeh'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה",
+    "en": "who has kept us alive, sustained us and brought us to this time"
+   }
+  },
+  {
+   "id": "I-10-e12",
+   "type": "produce",
+   "en": "who has kept us alive",
+   "options": [
+    "שֶׁהֶחֱיָינוּ",
+    "וְקִיְּמָנוּ",
+    "וְהִגִּיעָנוּ"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-10-e13",
+   "type": "respond",
+   "cue": "The leader says each line of the Priestly Blessing; answer after the first.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+    "en": "May the LORD bless you and keep you."
+   }
+  },
+  {
+   "id": "I-10-e14",
+   "type": "respond",
+   "cue": "After the third line of the Priestly Blessing.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם",
+    "en": "May the LORD lift his face to you and give you peace."
+   }
+  },
+  {
+   "id": "I-10-e15",
+   "type": "produce",
+   "en": "may it be so",
+   "options": [
+    "כֵּן יְהִי רָצוֹן",
+    "וְאִמְרוּ אָמֵן",
+    "בְּרִיךְ הוּא"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-10-e16",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מִי שֶׁבֵּרַךְ",
+     "en": "he who blessed"
+    },
+    {
+     "he": "רְפוּאָה",
+     "en": "healing"
+    },
+    {
+     "he": "הַגּוֹמֵל",
+     "en": "who bestows good"
+    },
+    {
+     "he": "שָׁלוֹם",
+     "en": "peace"
+    }
+   ]
+  }
+ ],
+ "note": "Only the opening words of Mi Shebeirach are in the corpus (g-mi-sheberach-full); 'refuah shleimah' is not in any source file and is not shown."
+}

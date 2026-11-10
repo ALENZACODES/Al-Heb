@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aleph</title>
+  <meta name="description" content="Aleph: learn to read Hebrew aloud and speak it in Israel.">
+  <meta name="theme-color" content="#16301c">
+  <meta name="theme-color" content="#f6efe0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101a13" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Aleph">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/learn.css">
+  <link rel="stylesheet" href="assets/css/games.css">
+  <link rel="stylesheet" href="assets/css/arcade.css">
+  <link rel="stylesheet" href="assets/css/start-theme.css">
+  <link rel="stylesheet" href="assets/css/theme-olive.css">
+  <link rel="stylesheet" href="assets/css/books.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+  <link rel="stylesheet" href="assets/css/astral-home.css">
+  <link rel="stylesheet" href="assets/css/player.css">
+  <link rel="stylesheet" href="assets/css/builder.css">
+  <link rel="stylesheet" href="assets/css/rimon.css">
+  <link rel="preload" href="assets/fonts/web/frank-ruhl-libre.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div id="alef-prayer-veil" class="prayer-veil" role="region" aria-label="Opening prayer" data-prayer-ready="1">
+    <div class="prayer-veil-stars" aria-hidden="true"></div>
+    <div class="prayer-veil-glow" aria-hidden="true"></div>
+    <div class="prayer-words">
+      <p id="alef-prayer-he" class="prayer-he" lang="he" dir="rtl">מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה. רַבָּה אֱמוּנָתֶךָ</p>
+      <p id="alef-prayer-tr" class="prayer-tr" lang="en">Modeh ani lefanecha, Melech chai vekayam, shehechezarta bi nishmati bechemla. Raba emunatecha.</p>
+      <p id="alef-prayer-en" class="prayer-en" lang="en">I thank You, living and eternal King, for returning my soul to me with compassion. Great is Your faithfulness.</p>
+      <p id="alef-prayer-audio-prompt" class="prayer-audio-prompt" role="status" hidden></p>
+    </div>
+    <button type="button" class="prayer-veil-close" id="alef-prayer-close" aria-label="Close the opening prayer">&times;</button>
+    <p class="prayer-audio-note" id="alef-prayer-audio-note" hidden>Israeli voice</p>
+    <button type="button" class="prayer-listen" id="alef-prayer-listen" aria-pressed="false" hidden>Listen to this prayer</button>
+    <button type="button" class="prayer-noshow" id="alef-prayer-noshow">Don&rsquo;t show again</button>
+    <button type="button" class="prayer-skip" id="alef-prayer-skip">Skip opening prayer</button>
+  </div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <a class="brand" href="#/" aria-label="Aleph אָלֶף, home"><span>Aleph</span> <span lang="he" dir="rtl" class="he">אָלֶף</span></a>
+  </header>
+  <nav class="site-nav" aria-label="Main"><ul id="nav"></ul><button type="button" class="more-btn" id="more-btn" aria-expanded="false" aria-controls="nav-more" hidden><span>More</span><span lang="he" dir="rtl" class="he nav-he">עוד</span></button><ul id="nav-more" class="nav-more" aria-label="More sections"></ul></nav>
+  <div class="sound-bar" hidden role="region" aria-label="Sound status"><p id="sound-status" role="status" aria-live="polite">Sound: checking audio support...</p> <button type="button" class="sound-bar-more" aria-expanded="false" aria-controls="sound-status">Full message</button> <a class="sound-bar-details" href="#/how" aria-label="Details: how audio works">Details</a><button type="button" class="sound-bar-x" aria-label="Dismiss audio notice">&times;</button></div>
+  <div id="alef-companions" class="companions" role="complementary" aria-label="Your teachers"></div>
+  <main id="main" tabindex="-1" aria-live="off"><p class="muted">Loading Aleph…</p></main>
+  <footer class="fine-print"><a href="#/terms">Terms &amp; sources</a></footer>
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite"></div>
+  <noscript><style>#alef-prayer-veil{display:none}</style><p class="card">ALEF needs JavaScript enabled.</p></noscript>
+  <script type="module" src="src/shell/prayer-veil.js"></script>
+  <script type="module" src="src/app.js"></script>
+  <script type="module" src="src/shell/install-notice.js"></script>
+</body>
+</html>

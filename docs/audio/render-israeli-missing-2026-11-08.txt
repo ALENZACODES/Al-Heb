@@ -1,0 +1,5 @@
+# Israeli dictionary words with no clip and no lesson-word alias (manifest status 'missing'), 2026-11-08: the only Israeli words with no sound anywhere.
+# GOOGLE_TTS_API_KEY=... node tools/audio/render_tts.mjs --provider google --voice both --kinds word --ids docs/audio/render-israeli-missing-2026-11-08.txt --execute
+h1eeebe32   # פָּשַׁט  to remove, to take off (one's clothing);
+h3e5d0f9c   # תְּקוּפָה  an era, age, epoch, period
+h53c53bdf   # חָדָשׁ  new, recently made; new, current, recent

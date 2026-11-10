@@ -1,0 +1,346 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "deuteronomy",
+ "bookHe": "דְּבָרִים",
+ "chapter": 21,
+ "ref": "Deuteronomy 21",
+ "parshaIds": [
+  "shoftim",
+  "ki-teitzei"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-08",
+ "verses": [
+  {
+   "n": 1,
+   "he": "כִּי־יִמָּצֵא חָלָל בָּאֲדָמָה אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לְךָ לְרִשְׁתָּהּ נֹפֵל בַּשָּׂדֶה לֹא נוֹדַע מִי הִכָּהוּ׃",
+   "heTrope": "כִּי־יִמָּצֵ֣א חָלָ֗ל בָּאֲדָמָה֙ אֲשֶׁר֩ יְהוָ֨ה אֱלֹהֶ֜יךָ נֹתֵ֤ן לְךָ֙ לְרִשְׁתָּ֔הּ נֹפֵ֖ל בַּשָּׂדֶ֑ה לֹ֥א נוֹדַ֖ע מִ֥י הִכָּֽהוּ׃",
+   "en": "If one be found slain in the land which the LORD thy God giveth thee to possess it, lying in the field, and it be not known who hath smitten him;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 2,
+   "he": "וְיָצְאוּ זְקֵנֶיךָ וְשֹׁפְטֶיךָ וּמָדְדוּ אֶל־הֶעָרִים אֲשֶׁר סְבִיבֹת הֶחָלָל׃",
+   "heTrope": "וְיָצְא֥וּ זְקֵנֶ֖יךָ וְשֹׁפְטֶ֑יךָ וּמָדְדוּ֙ אֶל־הֶ֣עָרִ֔ים אֲשֶׁ֖ר סְבִיבֹ֥ת הֶחָלָֽל׃",
+   "en": "then thy elders and thy judges shall come forth, and they shall measure unto the cities which are round about him that is slain.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וְהָיָה הָעִיר הַקְּרֹבָה אֶל־הֶחָלָל וְלָקְחוּ זִקְנֵי הָעִיר הַהִוא עֶגְלַת בָּקָר אֲשֶׁר לֹא־עֻבַּד בָּהּ אֲשֶׁר לֹא־מָשְׁכָה בְּעֹל׃",
+   "heTrope": "וְהָיָ֣ה הָעִ֔יר הַקְּרֹבָ֖ה אֶל־הֶחָלָ֑ל וְלָֽקְח֡וּ זִקְנֵי֩ הָעִ֨יר הַהִ֜וא עֶגְלַ֣ת בָּקָ֗ר אֲשֶׁ֤ר לֹֽא־עֻבַּד֙ בָּ֔הּ אֲשֶׁ֥ר לֹא־מָשְׁכָ֖ה בְּעֹֽל׃",
+   "en": "And it shall be, that the city which is nearest unto the slain man, even the elders of that city shall take a heifer of the herd, which hath not been wrought with, and which hath not drawn in the yoke.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 4,
+   "he": "וְהוֹרִדוּ זִקְנֵי הָעִיר הַהִוא אֶת־הָעֶגְלָה אֶל־נַחַל אֵיתָן אֲשֶׁר לֹא־יֵעָבֵד בּוֹ וְלֹא יִזָּרֵעַ וְעָרְפוּ־שָׁם אֶת־הָעֶגְלָה בַּנָּחַל׃",
+   "heTrope": "וְהוֹרִ֡דוּ זִקְנֵי֩ הָעִ֨יר הַהִ֤וא אֶת־הָֽעֶגְלָה֙ אֶל־נַ֣חַל אֵיתָ֔ן אֲשֶׁ֛ר לֹא־יֵעָבֵ֥ד בּ֖וֹ וְלֹ֣א יִזָּרֵ֑עַ וְעָֽרְפוּ־שָׁ֥ם אֶת־הָעֶגְלָ֖ה בַּנָּֽחַל׃",
+   "en": "And the elders of that city shall bring down the heifer unto a rough valley, which may neither be plowed nor sown, and shall break the heifer’s neck there in the valley.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "וְנִגְּשׁוּ הַכֹּהֲנִים בְּנֵי לֵוִי כִּי בָם בָּחַר יְהוָה אֱלֹהֶיךָ לְשָׁרְתוֹ וּלְבָרֵךְ בְּשֵׁם יְהוָה וְעַל־פִּיהֶם יִהְיֶה כָּל־רִיב וְכָל־נָגַע׃",
+   "heTrope": "וְנִגְּשׁ֣וּ הַכֹּהֲנִים֮ בְּנֵ֣י לֵוִי֒ כִּ֣י בָ֗ם בָּחַ֞ר יְהוָ֤ה אֱלֹהֶ֙יךָ֙ לְשָׁ֣רְת֔וֹ וּלְבָרֵ֖ךְ בְּשֵׁ֣ם יְהוָ֑ה וְעַל־פִּיהֶ֥ם יִהְיֶ֖ה כָּל־רִ֥יב וְכָל־נָֽגַע׃",
+   "en": "And the priests the sons of Levi shall come near—for them the LORD thy God hath chosen to minister unto Him, and to bless in the name of the LORD; and according to their word shall every controversy and every stroke be.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 6,
+   "he": "וְכֹל זִקְנֵי הָעִיר הַהִוא הַקְּרֹבִים אֶל־הֶחָלָל יִרְחֲצוּ אֶת־יְדֵיהֶם עַל־הָעֶגְלָה הָעֲרוּפָה בַנָּחַל׃",
+   "heTrope": "וְכֹ֗ל זִקְנֵי֙ הָעִ֣יר הַהִ֔וא הַקְּרֹבִ֖ים אֶל־הֶחָלָ֑ל יִרְחֲצוּ֙ אֶת־יְדֵיהֶ֔ם עַל־הָעֶגְלָ֖ה הָעֲרוּפָ֥ה בַנָּֽחַל׃",
+   "en": "And all the elders of that city, who are nearest unto the slain man, shall wash their hands over the heifer whose neck was broken in the valley.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 7,
+   "he": "וְעָנוּ וְאָמְרוּ יָדֵינוּ לֹא שָׁפְכוּ אֶת־הַדָּם הַזֶּה וְעֵינֵינוּ לֹא רָאוּ׃",
+   "heTrope": "וְעָנ֖וּ וְאָמְר֑וּ יָדֵ֗ינוּ לֹ֤א שָֽׁפְכוּ֙ אֶת־הַדָּ֣ם הַזֶּ֔ה וְעֵינֵ֖ינוּ לֹ֥א רָאֽוּ׃",
+   "en": "And they shall speak and say: ‘Our hands have not shed this blood, neither have our eyes seen it.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 8,
+   "he": "כַּפֵּר לְעַמְּךָ יִשְׂרָאֵל אֲשֶׁר־פָּדִיתָ יְהוָה וְאַל־תִּתֵּן דָּם נָקִי בְּקֶרֶב עַמְּךָ יִשְׂרָאֵל וְנִכַּפֵּר לָהֶם הַדָּם׃",
+   "heTrope": "כַּפֵּר֩ לְעַמְּךָ֨ יִשְׂרָאֵ֤ל אֲשֶׁר־פָּדִ֙יתָ֙ יְהוָ֔ה וְאַל־תִּתֵּן֙ דָּ֣ם נָקִ֔י בְּקֶ֖רֶב עַמְּךָ֣ יִשְׂרָאֵ֑ל וְנִכַּפֵּ֥ר לָהֶ֖ם הַדָּֽם׃",
+   "en": "Forgive, O LORD, Thy people Israel, whom Thou hast redeemed, and suffer not innocent blood to remain in the midst of Thy people Israel.’ And the blood shall be forgiven them.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "וְאַתָּה תְּבַעֵר הַדָּם הַנָּקִי מִקִּרְבֶּךָ כִּי־תַעֲשֶׂה הַיָּשָׁר בְּעֵינֵי יְהוָה׃",
+   "heTrope": "וְאַתָּ֗ה תְּבַעֵ֛ר הַדָּ֥ם הַנָּקִ֖י מִקִּרְבֶּ֑ךָ כִּֽי־תַעֲשֶׂ֥ה הַיָּשָׁ֖ר בְּעֵינֵ֥י יְהוָֽה׃",
+   "en": "So shalt thou put away the innocent blood from the midst of thee, when thou shalt do that which is right in the eyes of the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 10,
+   "he": "כִּי־תֵצֵא לַמִּלְחָמָה עַל־אֹיְבֶיךָ וּנְתָנוֹ יְהוָה אֱלֹהֶיךָ בְּיָדֶךָ וְשָׁבִיתָ שִׁבְיוֹ׃",
+   "heTrope": "כִּֽי־תֵצֵ֥א לַמִּלְחָמָ֖ה עַל־אֹיְבֶ֑יךָ וּנְתָנ֞וֹ יְהוָ֧ה אֱלֹהֶ֛יךָ בְּיָדֶ֖ךָ וְשָׁבִ֥יתָ שִׁבְיֽוֹ׃",
+   "en": "When thou goest forth to battle against thine enemies, and the LORD thy God delivereth them into thy hands, and thou carriest them away captive,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 11,
+   "he": "וְרָאִיתָ בַּשִּׁבְיָה אֵשֶׁת יְפַת־תֹּאַר וְחָשַׁקְתָּ בָהּ וְלָקַחְתָּ לְךָ לְאִשָּׁה׃",
+   "heTrope": "וְרָאִיתָ֙ בַּשִּׁבְיָ֔ה אֵ֖שֶׁת יְפַת־תֹּ֑אַר וְחָשַׁקְתָּ֣ בָ֔הּ וְלָקַחְתָּ֥ לְךָ֖ לְאִשָּֽׁה׃",
+   "en": "and seest among the captives a woman of goodly form, and thou hast a desire unto her, and wouldest take her to thee to wife;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "וַהֲבֵאתָהּ אֶל־תּוֹךְ בֵּיתֶךָ וְגִלְּחָה אֶת־רֹאשָׁהּ וְעָשְׂתָה אֶת־צִפָּרְנֶיהָ׃",
+   "heTrope": "וַהֲבֵאתָ֖הּ אֶל־תּ֣וֹךְ בֵּיתֶ֑ךָ וְגִלְּחָה֙ אֶת־רֹאשָׁ֔הּ וְעָשְׂתָ֖ה אֶת־צִפָּרְנֶֽיהָ׃",
+   "en": "then thou shalt bring her home to thy house; and she shall shave her head, and pare her nails;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 13,
+   "he": "וְהֵסִירָה אֶת־שִׂמְלַת שִׁבְיָהּ מֵעָלֶיהָ וְיָשְׁבָה בְּבֵיתֶךָ וּבָכְתָה אֶת־אָבִיהָ וְאֶת־אִמָּהּ יֶרַח יָמִים וְאַחַר כֵּן תָּבוֹא אֵלֶיהָ וּבְעַלְתָּהּ וְהָיְתָה לְךָ לְאִשָּׁה׃",
+   "heTrope": "וְהֵסִ֩ירָה֩ אֶת־שִׂמְלַ֨ת שִׁבְיָ֜הּ מֵעָלֶ֗יהָ וְיָֽשְׁבָה֙ בְּבֵיתֶ֔ךָ וּבָ֥כְתָ֛ה אֶת־אָבִ֥יהָ וְאֶת־אִמָּ֖הּ יֶ֣רַח יָמִ֑ים וְאַ֨חַר כֵּ֜ן תָּב֤וֹא אֵלֶ֙יהָ֙ וּבְעַלְתָּ֔הּ וְהָיְתָ֥ה לְךָ֖ לְאִשָּֽׁה׃",
+   "en": "and she shall put the raiment of her captivity from off her, and shall remain in thy house, and bewail her father and her mother a full month; and after that thou mayest go in unto her, and be her husband, and she shall be thy wife.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 14,
+   "he": "וְהָיָה אִם־לֹא חָפַצְתָּ בָּהּ וְשִׁלַּחְתָּהּ לְנַפְשָׁהּ וּמָכֹר לֹא־תִמְכְּרֶנָּה בַּכָּסֶף לֹא־תִתְעַמֵּר בָּהּ תַּחַת אֲשֶׁר עִנִּיתָהּ׃",
+   "heTrope": "וְהָיָ֞ה אִם־לֹ֧א חָפַ֣צְתָּ בָּ֗הּ וְשִׁלַּחְתָּהּ֙ לְנַפְשָׁ֔הּ וּמָכֹ֥ר לֹא־תִמְכְּרֶ֖נָּה בַּכָּ֑סֶף לֹא־תִתְעַמֵּ֣ר בָּ֔הּ תַּ֖חַת אֲשֶׁ֥ר עִנִּיתָֽהּ׃",
+   "en": "And it shall be, if thou have no delight in her, then thou shalt let her go whither she will; but thou shalt not sell her at all for money, thou shalt not deal with her as a slave, because thou hast humbled her.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 15,
+   "he": "כִּי־תִהְיֶיןָ לְאִישׁ שְׁתֵּי נָשִׁים הָאַחַת אֲהוּבָה וְהָאַחַת שְׂנוּאָה וְיָלְדוּ־לוֹ בָנִים הָאֲהוּבָה וְהַשְּׂנוּאָה וְהָיָה הַבֵּן הַבְּכוֹר לַשְּׂנִיאָה׃",
+   "heTrope": "כִּֽי־תִהְיֶ֨יןָ לְאִ֜ישׁ שְׁתֵּ֣י נָשִׁ֗ים הָאַחַ֤ת אֲהוּבָה֙ וְהָאַחַ֣ת שְׂנוּאָ֔ה וְיָֽלְדוּ־ל֣וֹ בָנִ֔ים הָאֲהוּבָ֖ה וְהַשְּׂנוּאָ֑ה וְהָיָ֛ה הַבֵּ֥ן הַבְּכ֖וֹר לַשְּׂנִיאָֽה׃",
+   "en": "If a man have two wives, the one beloved, and the other hated, and they have borne him children, both the beloved and the hated; and if the first-born son be hers that was hated;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 16,
+   "he": "וְהָיָה בְּיוֹם הַנְחִילוֹ אֶת־בָּנָיו אֵת אֲשֶׁר־יִהְיֶה לוֹ לֹא יוּכַל לְבַכֵּר אֶת־בֶּן־הָאֲהוּבָה עַל־פְּנֵי בֶן־הַשְּׂנוּאָה הַבְּכֹר׃",
+   "heTrope": "וְהָיָ֗ה בְּיוֹם֙ הַנְחִיל֣וֹ אֶת־בָּנָ֔יו אֵ֥ת אֲשֶׁר־יִהְיֶ֖ה ל֑וֹ לֹ֣א יוּכַ֗ל לְבַכֵּר֙ אֶת־בֶּן־הָ֣אֲהוּבָ֔ה עַל־פְּנֵ֥י בֶן־הַשְּׂנוּאָ֖ה הַבְּכֹֽר׃",
+   "en": "then it shall be, in the day that he causeth his sons to inherit that which he hath, that he may not make the son of the beloved the first-born before the son of the hated, who is the first-born;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 17,
+   "he": "כִּי אֶת־הַבְּכֹר בֶּן־הַשְּׂנוּאָה יַכִּיר לָתֶת לוֹ פִּי שְׁנַיִם בְּכֹל אֲשֶׁר־יִמָּצֵא לוֹ כִּי־הוּא רֵאשִׁית אֹנוֹ לוֹ מִשְׁפַּט הַבְּכֹרָה׃",
+   "heTrope": "כִּי֩ אֶת־הַבְּכֹ֨ר בֶּן־הַשְּׂנוּאָ֜ה יַכִּ֗יר לָ֤תֶת לוֹ֙ פִּ֣י שְׁנַ֔יִם בְּכֹ֥ל אֲשֶׁר־יִמָּצֵ֖א ל֑וֹ כִּי־הוּא֙ רֵאשִׁ֣ית אֹנ֔וֹ ל֖וֹ מִשְׁפַּ֥ט הַבְּכֹרָֽה׃",
+   "en": "but he shall acknowledge the first-born, the son of the hated, by giving him a double portion of all that he hath; for he is the first-fruits of his strength, the right of the first-born is his.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 18,
+   "he": "כִּי־יִהְיֶה לְאִישׁ בֵּן סוֹרֵר וּמוֹרֶה אֵינֶנּוּ שֹׁמֵעַ בְּקוֹל אָבִיו וּבְקוֹל אִמּוֹ וְיסְּרוּ אֹתוֹ וְלֹא יִשְׁמַע אֲלֵיהֶם׃",
+   "heTrope": "כִּֽי־יִהְיֶ֣ה לְאִ֗ישׁ בֵּ֚ן סוֹרֵ֣ר וּמוֹרֶ֔ה אֵינֶ֣נּוּ שֹׁמֵ֔עַ בְּק֥וֹל אָבִ֖יו וּבְק֣וֹל אִמּ֑וֹ וְיסְּר֣וּ אֹת֔וֹ וְלֹ֥א יִשְׁמַ֖ע אֲלֵיהֶֽם׃",
+   "en": "If a man have a stubborn and rebellious son, that will not hearken to the voice of his father, or the voice of his mother, and though they chasten him, will not hearken unto them;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 19,
+   "he": "וְתָפְשׂוּ בוֹ אָבִיו וְאִמּוֹ וְהוֹצִיאוּ אֹתוֹ אֶל־זִקְנֵי עִירוֹ וְאֶל־שַׁעַר מְקֹמוֹ׃",
+   "heTrope": "וְתָ֥פְשׂוּ ב֖וֹ אָבִ֣יו וְאִמּ֑וֹ וְהוֹצִ֧יאוּ אֹת֛וֹ אֶל־זִקְנֵ֥י עִיר֖וֹ וְאֶל־שַׁ֥עַר מְקֹמֽוֹ׃",
+   "en": "then shall his father and his mother lay hold on him, and bring him out unto the elders of his city, and unto the gate of his place;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 20,
+   "he": "וְאָמְרוּ אֶל־זִקְנֵי עִירוֹ בְּנֵנוּ זֶה סוֹרֵר וּמֹרֶה אֵינֶנּוּ שֹׁמֵעַ בְּקֹלֵנוּ זוֹלֵל וְסֹבֵא׃",
+   "heTrope": "וְאָמְר֞וּ אֶל־זִקְנֵ֣י עִיר֗וֹ בְּנֵ֤נוּ זֶה֙ סוֹרֵ֣ר וּמֹרֶ֔ה אֵינֶ֥נּוּ שֹׁמֵ֖עַ בְּקֹלֵ֑נוּ זוֹלֵ֖ל וְסֹבֵֽא׃",
+   "en": "and they shall say unto the elders of his city: ‘This our son is stubborn and rebellious, he doth not hearken to our voice; he is a glutton, and a drunkard.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 21,
+   "he": "וּרְגָמֻהוּ כָּל־אַנְשֵׁי עִירוֹ בָאֲבָנִים וָמֵת וּבִעַרְתָּ הָרָע מִקִּרְבֶּךָ וְכָל־יִשְׂרָאֵל יִשְׁמְעוּ וְיִרָאוּ׃",
+   "heTrope": "וּ֠רְגָמֻהוּ כָּל־אַנְשֵׁ֨י עִיר֤וֹ בָֽאֲבָנִים֙ וָמֵ֔ת וּבִֽעַרְתָּ֥ הָרָ֖ע מִקִּרְבֶּ֑ךָ וְכָל־יִשְׂרָאֵ֖ל יִשְׁמְע֥וּ וְיִרָֽאוּ׃",
+   "en": "And all the men of his city shall stone him with stones, that he die; so shalt thou put away the evil from the midst of thee; and all Israel shall hear, and fear.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 22,
+   "he": "וְכִי־יִהְיֶה בְאִישׁ חֵטְא מִשְׁפַּט־מָוֶת וְהוּמָת וְתָלִיתָ אֹתוֹ עַל־עֵץ׃",
+   "heTrope": "וְכִֽי־יִהְיֶ֣ה בְאִ֗ישׁ חֵ֛טְא מִשְׁפַּט־מָ֖וֶת וְהוּמָ֑ת וְתָלִ֥יתָ אֹת֖וֹ עַל־עֵֽץ׃",
+   "en": "And if a man have committed a sin worthy of death, and he be put to death, and thou hang him on a tree;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 23,
+   "he": "לֹא־תָלִין נִבְלָתוֹ עַל־הָעֵץ כִּי־קָבוֹר תִּקְבְּרֶנּוּ בַּיּוֹם הַהוּא כִּי־קִלְלַת אֱלֹהִים תָּלוּי וְלֹא תְטַמֵּא אֶת־אַדְמָתְךָ אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לְךָ נַחֲלָה׃",
+   "heTrope": "לֹא־תָלִ֨ין נִבְלָת֜וֹ עַל־הָעֵ֗ץ כִּֽי־קָב֤וֹר תִּקְבְּרֶ֙נּוּ֙ בַּיּ֣וֹם הַה֔וּא כִּֽי־קִלְלַ֥ת אֱלֹהִ֖ים תָּל֑וּי וְלֹ֤א תְטַמֵּא֙ אֶת־אַדְמָ֣תְךָ֔ אֲשֶׁר֙ יְהוָ֣ה אֱלֹהֶ֔יךָ נֹתֵ֥ן לְךָ֖ נַחֲלָֽה׃",
+   "en": "his body shall not remain all night upon the tree, but thou shalt surely bury him the same day; for he that is hanged is a reproach unto God; that thou defile not thy land which the LORD thy God giveth thee for an inheritance.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

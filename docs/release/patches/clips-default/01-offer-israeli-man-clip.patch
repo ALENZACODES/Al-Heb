@@ -1,0 +1,37 @@
+diff --git a/src/shell/audio-access.js b/src/shell/audio-access.js
+--- a/src/shell/audio-access.js
++++ b/src/shell/audio-access.js
+@@ -36,6 +36,16 @@ export function audioAccess(audio, kind, id, o = {}) {
+   return { level: 'none', label: NO_AUDIO, reason: 'error' };
+ }
+ 
++/** The one voice and style the shipped synthetic clips exist for (data/audio/manifest*.json: voice m, tradition israeli). */
++export const ALT_CLIP = Object.freeze({ voice: 'm', tradition: 'israeli' });
++/** Is there a clip for this item in ANOTHER voice/tradition than the learner's setting? Returns the access result for it, or null. Never throws. */
++export function altClipAccess(audio, kind, id) {
++  try {
++    const s = audio && typeof audio.status === 'function' ? audio.status(kind, id, { ...ALT_CLIP }) : null;
++    return s && s.source === 'file' ? { level: 'file', label: fileLabel(s.entryStatus, s.fileTradition || s.tradition, s.entrySource) } : null;
++  } catch { return null; }
++}
++
+ /** One-line status chip text for an access result ('' when nothing to say). */
+ export function chipText(a) { return a.level === 'none' ? NO_AUDIO : a.label; }
+ 
+@@ -85,6 +95,16 @@ export function audioButton(h, ctx, o) {
+       if (!o.note) note.textContent = now.label;
+     }).catch(() => {});
+   }
++  // Opt-in stand-in: the learner's own setting has no clip (default Sephardi/Woman never does) but a synthetic Israeli man clip exists. Offer it, named, never silently.
++  if (a.level !== 'file' && !a.checking) {
++    const alt = altClipAccess(ctx && ctx.audio, kind, id);
++    if (alt) {
++      const altNote = h('span', { class: 'audio-chip muted', role: 'status', 'aria-live': 'polite' }, `Not your setting (${alt.label}). It is an Israeli-style man's voice.`);
++      wrap.append(' ', h('button', { type: 'button', class: 'btn secondary alef-play', 'data-audio': `${kind}/${id}`, 'data-audio-state': 'alt-clip',
++        onclick: async () => { try { const r = await ctx.audio.play(kind, id, { ...ALT_CLIP }); altNote.textContent = r && r.source === 'file' ? `Played a computer-made clip, not your setting: ${alt.label}.` : NO_AUDIO; } catch { altNote.textContent = NO_AUDIO; } } },
++        h('span', { 'aria-hidden': 'true' }, '▶'), ' Hear the synthetic Israeli man clip'), ' ', altNote);
++    }
++  }
+   return wrap;
+ }
+ 

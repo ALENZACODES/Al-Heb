@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+ "inputSha256": "bb7be538901732a0c1a4ebe4c2c3d405b37e271c6f1cd90d8947eb72edcc0cb5",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מִי־כָמֹכָה בָּאֵלִם אֲדֹנָי מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/mi-chamocha-1-w1.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/h8913b4db.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w5.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w6.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w7.mp3",
+  "audio/m/israeli/word/adon-olam-1-w22.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w9.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w10.mp3",
+  "audio/m/israeli/word/mi-chamocha-1-w11.mp3"
+ ]
+}

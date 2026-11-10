@@ -1,0 +1,2821 @@
+[
+  {
+    "id": "hf8c8316a",
+    "hebrew": "שלום",
+    "nikud": "שָׁלוֹם",
+    "translit_israeli": "shalom",
+    "translit_sephardi": "shalom",
+    "translit_ashkenazi": "sholoym",
+    "meaning_en": "hello / peace",
+    "letters": [
+      "ש",
+      "ל",
+      "ו",
+      "ם"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf8c8316a_ari.mp3",
+    "audio_noa": "audio/builder/hf8c8316a_noa.mp3"
+  },
+  {
+    "id": "hf63de22c",
+    "hebrew": "כן",
+    "nikud": "כֵּן",
+    "translit_israeli": "ken",
+    "translit_sephardi": "ken",
+    "translit_ashkenazi": "kein",
+    "meaning_en": "yes",
+    "letters": [
+      "כ",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf63de22c_ari.mp3",
+    "audio_noa": "audio/builder/hf63de22c_noa.mp3"
+  },
+  {
+    "id": "h8e3e6f50",
+    "hebrew": "לא",
+    "nikud": "לֹא",
+    "translit_israeli": "lo",
+    "translit_sephardi": "lo",
+    "translit_ashkenazi": "loy",
+    "meaning_en": "no / not",
+    "letters": [
+      "ל",
+      "א"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h8e3e6f50_ari.mp3",
+    "audio_noa": "audio/builder/h8e3e6f50_noa.mp3"
+  },
+  {
+    "id": "he0b2f96b",
+    "hebrew": "תודה",
+    "nikud": "תּוֹדָה",
+    "translit_israeli": "todah",
+    "translit_sephardi": "toda",
+    "translit_ashkenazi": "toydo",
+    "meaning_en": "thank you",
+    "letters": [
+      "ת",
+      "ו",
+      "ד",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/he0b2f96b_ari.mp3",
+    "audio_noa": "audio/builder/he0b2f96b_noa.mp3"
+  },
+  {
+    "id": "p580df509",
+    "hebrew": "בבקשה",
+    "nikud": "בְּבַקָּשָׁה",
+    "translit_israeli": "bevakashah",
+    "translit_sephardi": "bevakasha",
+    "translit_ashkenazi": "bevakosho",
+    "meaning_en": "please / you're welcome",
+    "letters": [
+      "ב",
+      "ב",
+      "ק",
+      "ש",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/p580df509_ari.mp3",
+    "audio_noa": "audio/builder/p580df509_noa.mp3"
+  },
+  {
+    "id": "h0a70642a",
+    "hebrew": "אבא",
+    "nikud": "אַבָּא",
+    "translit_israeli": "aba",
+    "translit_sephardi": "aba",
+    "translit_ashkenazi": "abo",
+    "meaning_en": "dad",
+    "letters": [
+      "א",
+      "ב",
+      "א"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h0a70642a_ari.mp3",
+    "audio_noa": "audio/builder/h0a70642a_noa.mp3"
+  },
+  {
+    "id": "h1306c935",
+    "hebrew": "אמא",
+    "nikud": "אִמָּא",
+    "translit_israeli": "ima",
+    "translit_sephardi": "ima",
+    "translit_ashkenazi": "imo",
+    "meaning_en": "mum",
+    "letters": [
+      "א",
+      "מ",
+      "א"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h1306c935_ari.mp3",
+    "audio_noa": "audio/builder/h1306c935_noa.mp3"
+  },
+  {
+    "id": "p7f7d7b8f",
+    "hebrew": "מים",
+    "nikud": "מַיִם",
+    "translit_israeli": "mayim",
+    "translit_sephardi": "mayim",
+    "translit_ashkenazi": "mayim",
+    "meaning_en": "water",
+    "letters": [
+      "מ",
+      "י",
+      "ם"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/p7f7d7b8f_ari.mp3",
+    "audio_noa": "audio/builder/p7f7d7b8f_noa.mp3"
+  },
+  {
+    "id": "hf22f36ee",
+    "hebrew": "לחם",
+    "nikud": "לֶחֶם",
+    "translit_israeli": "lechem",
+    "translit_sephardi": "lechem",
+    "translit_ashkenazi": "lechem",
+    "meaning_en": "bread",
+    "letters": [
+      "ל",
+      "ח",
+      "ם"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hf22f36ee_ari.mp3",
+    "audio_noa": "audio/builder/hf22f36ee_noa.mp3"
+  },
+  {
+    "id": "h231c624a",
+    "hebrew": "ספר",
+    "nikud": "סֵפֶר",
+    "translit_israeli": "sefer",
+    "translit_sephardi": "sefer",
+    "translit_ashkenazi": "seifer",
+    "meaning_en": "book",
+    "letters": [
+      "ס",
+      "פ",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h231c624a_ari.mp3",
+    "audio_noa": "audio/builder/h231c624a_noa.mp3"
+  },
+  {
+    "id": "h35be21c5",
+    "hebrew": "חלב",
+    "nikud": "חָלָב",
+    "translit_israeli": "chalav",
+    "translit_sephardi": "chalav",
+    "translit_ashkenazi": "cholov",
+    "meaning_en": "milk",
+    "letters": [
+      "ח",
+      "ל",
+      "ב"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h35be21c5_ari.mp3",
+    "audio_noa": "audio/builder/h35be21c5_noa.mp3"
+  },
+  {
+    "id": "hf9047f4b",
+    "hebrew": "כוס",
+    "nikud": "כּוֹס",
+    "translit_israeli": "kos",
+    "translit_sephardi": "kos",
+    "translit_ashkenazi": "koys",
+    "meaning_en": "cup",
+    "letters": [
+      "כ",
+      "ו",
+      "ס"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf9047f4b_ari.mp3",
+    "audio_noa": "audio/builder/hf9047f4b_noa.mp3"
+  },
+  {
+    "id": "hf5bee50d",
+    "hebrew": "לילה",
+    "nikud": "לַיְלָה",
+    "translit_israeli": "laylah",
+    "translit_sephardi": "layla",
+    "translit_ashkenazi": "laylo",
+    "meaning_en": "night",
+    "letters": [
+      "ל",
+      "י",
+      "ל",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf5bee50d_ari.mp3",
+    "audio_noa": "audio/builder/hf5bee50d_noa.mp3"
+  },
+  {
+    "id": "h1643d708",
+    "hebrew": "תה",
+    "nikud": "תֵּה",
+    "translit_israeli": "teh",
+    "translit_sephardi": "te",
+    "translit_ashkenazi": "tei",
+    "meaning_en": "tea",
+    "letters": [
+      "ת",
+      "ה"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h1643d708_ari.mp3",
+    "audio_noa": "audio/builder/h1643d708_noa.mp3"
+  },
+  {
+    "id": "h18108dff",
+    "hebrew": "אחות",
+    "nikud": "אָחוֹת",
+    "translit_israeli": "achot",
+    "translit_sephardi": "achot",
+    "translit_ashkenazi": "ochoys",
+    "meaning_en": "sister",
+    "letters": [
+      "א",
+      "ח",
+      "ו",
+      "ת"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h18108dff_ari.mp3",
+    "audio_noa": "audio/builder/h18108dff_noa.mp3"
+  },
+  {
+    "id": "ha7545fff",
+    "hebrew": "אח",
+    "nikud": "אָח",
+    "translit_israeli": "ach",
+    "translit_sephardi": "ach",
+    "translit_ashkenazi": "och",
+    "meaning_en": "brother",
+    "letters": [
+      "א",
+      "ח"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/ha7545fff_ari.mp3",
+    "audio_noa": "audio/builder/ha7545fff_noa.mp3"
+  },
+  {
+    "id": "h9974efdc",
+    "hebrew": "ביצה",
+    "nikud": "בֵּיצָה",
+    "translit_israeli": "beitzah",
+    "translit_sephardi": "beitza",
+    "translit_ashkenazi": "beitzo",
+    "meaning_en": "egg",
+    "letters": [
+      "ב",
+      "י",
+      "צ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h9974efdc_ari.mp3",
+    "audio_noa": "audio/builder/h9974efdc_noa.mp3"
+  },
+  {
+    "id": "h4692cd32",
+    "hebrew": "ים",
+    "nikud": "יָם",
+    "translit_israeli": "yam",
+    "translit_sephardi": "yam",
+    "translit_ashkenazi": "yom",
+    "meaning_en": "sea",
+    "letters": [
+      "י",
+      "ם"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h4692cd32_ari.mp3",
+    "audio_noa": "audio/builder/h4692cd32_noa.mp3"
+  },
+  {
+    "id": "h86027352",
+    "hebrew": "שמש",
+    "nikud": "שֶׁמֶשׁ",
+    "translit_israeli": "shemesh",
+    "translit_sephardi": "shemesh",
+    "translit_ashkenazi": "shemesh",
+    "meaning_en": "sun",
+    "letters": [
+      "ש",
+      "מ",
+      "ש"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h86027352_ari.mp3",
+    "audio_noa": "audio/builder/h86027352_noa.mp3"
+  },
+  {
+    "id": "hc06c43b6",
+    "hebrew": "טוב",
+    "nikud": "טוֹב",
+    "translit_israeli": "tov",
+    "translit_sephardi": "tov",
+    "translit_ashkenazi": "toyv",
+    "meaning_en": "good",
+    "letters": [
+      "ט",
+      "ו",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hc06c43b6_ari.mp3",
+    "audio_noa": "audio/builder/hc06c43b6_noa.mp3"
+  },
+  {
+    "id": "h9f3caed1",
+    "hebrew": "משפחה",
+    "nikud": "מִשְׁפָּחָה",
+    "translit_israeli": "mishpachah",
+    "translit_sephardi": "mishpacha",
+    "translit_ashkenazi": "mishpocho",
+    "meaning_en": "family",
+    "letters": [
+      "מ",
+      "ש",
+      "פ",
+      "ח",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h9f3caed1_ari.mp3",
+    "audio_noa": "audio/builder/h9f3caed1_noa.mp3"
+  },
+  {
+    "id": "h80c0273d",
+    "hebrew": "דלת",
+    "nikud": "דֶּלֶת",
+    "translit_israeli": "delet",
+    "translit_sephardi": "delet",
+    "translit_ashkenazi": "deles",
+    "meaning_en": "door (portal of entry)",
+    "letters": [
+      "ד",
+      "ל",
+      "ת"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h80c0273d_ari.mp3",
+    "audio_noa": "audio/builder/h80c0273d_noa.mp3"
+  },
+  {
+    "id": "h155e306b",
+    "hebrew": "אחד",
+    "nikud": "אֶחָד",
+    "translit_israeli": "echad",
+    "translit_sephardi": "echad",
+    "translit_ashkenazi": "echod",
+    "meaning_en": "one",
+    "letters": [
+      "א",
+      "ח",
+      "ד"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h155e306b_ari.mp3",
+    "audio_noa": "audio/builder/h155e306b_noa.mp3"
+  },
+  {
+    "id": "h4fed6814",
+    "hebrew": "ראש",
+    "nikud": "רֹאשׁ",
+    "translit_israeli": "rosh",
+    "translit_sephardi": "rosh",
+    "translit_ashkenazi": "roysh",
+    "meaning_en": "head",
+    "letters": [
+      "ר",
+      "א",
+      "ש"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h4fed6814_ari.mp3",
+    "audio_noa": "audio/builder/h4fed6814_noa.mp3"
+  },
+  {
+    "id": "h9c8ddecf",
+    "hebrew": "בית",
+    "nikud": "בַּיִת",
+    "translit_israeli": "bayit",
+    "translit_sephardi": "bayit",
+    "translit_ashkenazi": "bayis",
+    "meaning_en": "house / home",
+    "letters": [
+      "ב",
+      "י",
+      "ת"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h9c8ddecf_ari.mp3",
+    "audio_noa": "audio/builder/h9c8ddecf_noa.mp3"
+  },
+  {
+    "id": "h1a3574d3",
+    "hebrew": "יד",
+    "nikud": "יָד",
+    "translit_israeli": "yad",
+    "translit_sephardi": "yad",
+    "translit_ashkenazi": "yod",
+    "meaning_en": "hand",
+    "letters": [
+      "י",
+      "ד"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h1a3574d3_ari.mp3",
+    "audio_noa": "audio/builder/h1a3574d3_noa.mp3"
+  },
+  {
+    "id": "h50cf3648",
+    "hebrew": "יום",
+    "nikud": "יוֹם",
+    "translit_israeli": "yom",
+    "translit_sephardi": "yom",
+    "translit_ashkenazi": "yoym",
+    "meaning_en": "day",
+    "letters": [
+      "י",
+      "ו",
+      "ם"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h50cf3648_ari.mp3",
+    "audio_noa": "audio/builder/h50cf3648_noa.mp3"
+  },
+  {
+    "id": "hd2fac0d2",
+    "hebrew": "עץ",
+    "nikud": "עֵץ",
+    "translit_israeli": "etz",
+    "translit_sephardi": "etz",
+    "translit_ashkenazi": "eitz",
+    "meaning_en": "tree",
+    "letters": [
+      "ע",
+      "ץ"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hd2fac0d2_ari.mp3",
+    "audio_noa": "audio/builder/hd2fac0d2_noa.mp3"
+  },
+  {
+    "id": "h80d6f3f0",
+    "hebrew": "פרה",
+    "nikud": "פָּרָה",
+    "translit_israeli": "parah",
+    "translit_sephardi": "para",
+    "translit_ashkenazi": "poro",
+    "meaning_en": "cow",
+    "letters": [
+      "פ",
+      "ר",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h80d6f3f0_ari.mp3",
+    "audio_noa": "audio/builder/h80d6f3f0_noa.mp3"
+  },
+  {
+    "id": "h4f61c9d1",
+    "hebrew": "דג",
+    "nikud": "דָּג",
+    "translit_israeli": "dag",
+    "translit_sephardi": "dag",
+    "translit_ashkenazi": "dog",
+    "meaning_en": "fish",
+    "letters": [
+      "ד",
+      "ג"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h4f61c9d1_ari.mp3",
+    "audio_noa": "audio/builder/h4f61c9d1_noa.mp3"
+  },
+  {
+    "id": "h95c54aba",
+    "hebrew": "אוקי",
+    "nikud": "אוֹקֵי",
+    "translit_israeli": "okei",
+    "translit_sephardi": "okei",
+    "translit_ashkenazi": "oykei",
+    "meaning_en": "OK, okay",
+    "letters": [
+      "א",
+      "ו",
+      "ק",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h95c54aba_ari.mp3",
+    "audio_noa": "audio/builder/h95c54aba_noa.mp3"
+  },
+  {
+    "id": "he90efaca",
+    "hebrew": "בי",
+    "nikud": "בַּי",
+    "translit_israeli": "bai",
+    "translit_sephardi": "bai",
+    "translit_ashkenazi": "bai",
+    "meaning_en": "bye",
+    "letters": [
+      "ב",
+      "י"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/he90efaca_ari.mp3",
+    "audio_noa": "audio/builder/he90efaca_noa.mp3"
+  },
+  {
+    "id": "pae09e148",
+    "hebrew": "אחלה",
+    "nikud": "אַחְלָה",
+    "translit_israeli": "achlah",
+    "translit_sephardi": "achla",
+    "translit_ashkenazi": "achlo",
+    "meaning_en": "great",
+    "letters": [
+      "א",
+      "ח",
+      "ל",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/pae09e148_ari.mp3",
+    "audio_noa": "audio/builder/pae09e148_noa.mp3"
+  },
+  {
+    "id": "pec9a400e",
+    "hebrew": "שמי",
+    "nikud": "שְׁמִי",
+    "translit_israeli": "shemi",
+    "translit_sephardi": "shemi",
+    "translit_ashkenazi": "shemi",
+    "meaning_en": "my name is",
+    "letters": [
+      "ש",
+      "מ",
+      "י"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/pec9a400e_ari.mp3",
+    "audio_noa": "audio/builder/pec9a400e_noa.mp3"
+  },
+  {
+    "id": "hd4c8080b",
+    "hebrew": "אנא",
+    "nikud": "אָנָּא",
+    "translit_israeli": "ana",
+    "translit_sephardi": "ana",
+    "translit_ashkenazi": "ono",
+    "meaning_en": "please",
+    "letters": [
+      "א",
+      "נ",
+      "א"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hd4c8080b_ari.mp3",
+    "audio_noa": "audio/builder/hd4c8080b_noa.mp3"
+  },
+  {
+    "id": "hdcd31646",
+    "hebrew": "אולי",
+    "nikud": "אוּלַי",
+    "translit_israeli": "ulai",
+    "translit_sephardi": "ulai",
+    "translit_ashkenazi": "ulai",
+    "meaning_en": "maybe",
+    "letters": [
+      "א",
+      "ו",
+      "ל",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hdcd31646_ari.mp3",
+    "audio_noa": "audio/builder/hdcd31646_noa.mp3"
+  },
+  {
+    "id": "h44404757",
+    "hebrew": "סבא",
+    "nikud": "סַבָּא",
+    "translit_israeli": "saba",
+    "translit_sephardi": "saba",
+    "translit_ashkenazi": "sabo",
+    "meaning_en": "grandfather",
+    "letters": [
+      "ס",
+      "ב",
+      "א"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h44404757_ari.mp3",
+    "audio_noa": "audio/builder/h44404757_noa.mp3"
+  },
+  {
+    "id": "h1301ecc3",
+    "hebrew": "ילד",
+    "nikud": "יֶלֶד",
+    "translit_israeli": "yeled",
+    "translit_sephardi": "yeled",
+    "translit_ashkenazi": "yeled",
+    "meaning_en": "child, a kid, a boy",
+    "letters": [
+      "י",
+      "ל",
+      "ד"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h1301ecc3_ari.mp3",
+    "audio_noa": "audio/builder/h1301ecc3_noa.mp3"
+  },
+  {
+    "id": "hb92174cf",
+    "hebrew": "ילדה",
+    "nikud": "יַלְדָּה",
+    "translit_israeli": "yaldah",
+    "translit_sephardi": "yalda",
+    "translit_ashkenazi": "yaldo",
+    "meaning_en": "girl (female child)",
+    "letters": [
+      "י",
+      "ל",
+      "ד",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hb92174cf_ari.mp3",
+    "audio_noa": "audio/builder/hb92174cf_noa.mp3"
+  },
+  {
+    "id": "hc6cdec2b",
+    "hebrew": "דוד",
+    "nikud": "דּוֹד",
+    "translit_israeli": "dod",
+    "translit_sephardi": "dod",
+    "translit_ashkenazi": "doyd",
+    "meaning_en": "uncle",
+    "letters": [
+      "ד",
+      "ו",
+      "ד"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hc6cdec2b_ari.mp3",
+    "audio_noa": "audio/builder/hc6cdec2b_noa.mp3"
+  },
+  {
+    "id": "hfe4ebf2c",
+    "hebrew": "אדם",
+    "nikud": "אָדָם",
+    "translit_israeli": "adam",
+    "translit_sephardi": "adam",
+    "translit_ashkenazi": "odom",
+    "meaning_en": "person",
+    "letters": [
+      "א",
+      "ד",
+      "ם"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hfe4ebf2c_ari.mp3",
+    "audio_noa": "audio/builder/hfe4ebf2c_noa.mp3"
+  },
+  {
+    "id": "h19e80411",
+    "hebrew": "בחורה",
+    "nikud": "בַּחוּרָה",
+    "translit_israeli": "bachurah",
+    "translit_sephardi": "bachura",
+    "translit_ashkenazi": "bachuro",
+    "meaning_en": "young woman",
+    "letters": [
+      "ב",
+      "ח",
+      "ו",
+      "ר",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h19e80411_ari.mp3",
+    "audio_noa": "audio/builder/h19e80411_noa.mp3"
+  },
+  {
+    "id": "h2280b9b6",
+    "hebrew": "חבר",
+    "nikud": "חָבֵר",
+    "translit_israeli": "chaver",
+    "translit_sephardi": "chaver",
+    "translit_ashkenazi": "choveir",
+    "meaning_en": "a (male) friend",
+    "letters": [
+      "ח",
+      "ב",
+      "ר"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h2280b9b6_ari.mp3",
+    "audio_noa": "audio/builder/h2280b9b6_noa.mp3"
+  },
+  {
+    "id": "h020c4fa8",
+    "hebrew": "עם",
+    "nikud": "עַם",
+    "translit_israeli": "am",
+    "translit_sephardi": "am",
+    "translit_ashkenazi": "am",
+    "meaning_en": "a nation, a people",
+    "letters": [
+      "ע",
+      "ם"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h020c4fa8_ari.mp3",
+    "audio_noa": "audio/builder/h020c4fa8_noa.mp3"
+  },
+  {
+    "id": "h8b8a2576",
+    "hebrew": "נביא",
+    "nikud": "נָבִיא",
+    "translit_israeli": "navi",
+    "translit_sephardi": "navi",
+    "translit_ashkenazi": "novi",
+    "meaning_en": "prophet",
+    "letters": [
+      "נ",
+      "ב",
+      "י",
+      "א"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8b8a2576_ari.mp3",
+    "audio_noa": "audio/builder/h8b8a2576_noa.mp3"
+  },
+  {
+    "id": "hc8e03f62",
+    "hebrew": "רופא",
+    "nikud": "רוֹפֵא",
+    "translit_israeli": "rofe",
+    "translit_sephardi": "rofe",
+    "translit_ashkenazi": "royfei",
+    "meaning_en": "medical doctor, physician",
+    "letters": [
+      "ר",
+      "ו",
+      "פ",
+      "א"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hc8e03f62_ari.mp3",
+    "audio_noa": "audio/builder/hc8e03f62_noa.mp3"
+  },
+  {
+    "id": "hc008b0a9",
+    "hebrew": "דבש",
+    "nikud": "דְּבַשׁ",
+    "translit_israeli": "devash",
+    "translit_sephardi": "devash",
+    "translit_ashkenazi": "devash",
+    "meaning_en": "honey",
+    "letters": [
+      "ד",
+      "ב",
+      "ש"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hc008b0a9_ari.mp3",
+    "audio_noa": "audio/builder/hc008b0a9_noa.mp3"
+  },
+  {
+    "id": "h6b636d7b",
+    "hebrew": "ארוחה",
+    "nikud": "אֲרוּחָה",
+    "translit_israeli": "aruchah",
+    "translit_sephardi": "arucha",
+    "translit_ashkenazi": "arucho",
+    "meaning_en": "meal",
+    "letters": [
+      "א",
+      "ר",
+      "ו",
+      "ח",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h6b636d7b_ari.mp3",
+    "audio_noa": "audio/builder/h6b636d7b_noa.mp3"
+  },
+  {
+    "id": "h166d92b0",
+    "hebrew": "פרי",
+    "nikud": "פְּרִי",
+    "translit_israeli": "peri",
+    "translit_sephardi": "peri",
+    "translit_ashkenazi": "peri",
+    "meaning_en": "fruit",
+    "letters": [
+      "פ",
+      "ר",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h166d92b0_ari.mp3",
+    "audio_noa": "audio/builder/h166d92b0_noa.mp3"
+  },
+  {
+    "id": "h6d121ed3",
+    "hebrew": "מסעדה",
+    "nikud": "מִסְעָדָה",
+    "translit_israeli": "mis'adah",
+    "translit_sephardi": "mis'ada",
+    "translit_ashkenazi": "mis'odo",
+    "meaning_en": "restaurant",
+    "letters": [
+      "מ",
+      "ס",
+      "ע",
+      "ד",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h6d121ed3_ari.mp3",
+    "audio_noa": "audio/builder/h6d121ed3_noa.mp3"
+  },
+  {
+    "id": "ha664d093",
+    "hebrew": "עוגה",
+    "nikud": "עוּגָה",
+    "translit_israeli": "ugah",
+    "translit_sephardi": "uga",
+    "translit_ashkenazi": "ugo",
+    "meaning_en": "cake",
+    "letters": [
+      "ע",
+      "ו",
+      "ג",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/ha664d093_ari.mp3",
+    "audio_noa": "audio/builder/ha664d093_noa.mp3"
+  },
+  {
+    "id": "hd22f2e01",
+    "hebrew": "בקבוק",
+    "nikud": "בַּקְבּוּק",
+    "translit_israeli": "bakbuk",
+    "translit_sephardi": "bakbuk",
+    "translit_ashkenazi": "bakbuk",
+    "meaning_en": "bottle",
+    "letters": [
+      "ב",
+      "ק",
+      "ב",
+      "ו",
+      "ק"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/hd22f2e01_ari.mp3",
+    "audio_noa": "audio/builder/hd22f2e01_noa.mp3"
+  },
+  {
+    "id": "h9790d078",
+    "hebrew": "מתוק",
+    "nikud": "מָתוֹק",
+    "translit_israeli": "matok",
+    "translit_sephardi": "matok",
+    "translit_ashkenazi": "mosoyk",
+    "meaning_en": "Sweet",
+    "letters": [
+      "מ",
+      "ת",
+      "ו",
+      "ק"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h9790d078_ari.mp3",
+    "audio_noa": "audio/builder/h9790d078_noa.mp3"
+  },
+  {
+    "id": "h03763c94",
+    "hebrew": "יין",
+    "nikud": "יַיִן",
+    "translit_israeli": "yayin",
+    "translit_sephardi": "yayin",
+    "translit_ashkenazi": "yayin",
+    "meaning_en": "wine",
+    "letters": [
+      "י",
+      "י",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h03763c94_ari.mp3",
+    "audio_noa": "audio/builder/h03763c94_noa.mp3"
+  },
+  {
+    "id": "hbb1dc7a2",
+    "hebrew": "תפוח",
+    "nikud": "תַּפּוּחַ",
+    "translit_israeli": "tapuach",
+    "translit_sephardi": "tapuach",
+    "translit_ashkenazi": "tapuach",
+    "meaning_en": "apple",
+    "letters": [
+      "ת",
+      "פ",
+      "ו",
+      "ח"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hbb1dc7a2_ari.mp3",
+    "audio_noa": "audio/builder/hbb1dc7a2_noa.mp3"
+  },
+  {
+    "id": "h568e3e03",
+    "hebrew": "כסא",
+    "nikud": "כִּסֵּא",
+    "translit_israeli": "kise",
+    "translit_sephardi": "kise",
+    "translit_ashkenazi": "kisei",
+    "meaning_en": "chair",
+    "letters": [
+      "כ",
+      "ס",
+      "א"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h568e3e03_ari.mp3",
+    "audio_noa": "audio/builder/h568e3e03_noa.mp3"
+  },
+  {
+    "id": "h11b6d758",
+    "hebrew": "מטה",
+    "nikud": "מִטָּה",
+    "translit_israeli": "mitah",
+    "translit_sephardi": "mita",
+    "translit_ashkenazi": "mito",
+    "meaning_en": "bed",
+    "letters": [
+      "מ",
+      "ט",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h11b6d758_ari.mp3",
+    "audio_noa": "audio/builder/h11b6d758_noa.mp3"
+  },
+  {
+    "id": "h1c0ffa13",
+    "hebrew": "קיר",
+    "nikud": "קִיר",
+    "translit_israeli": "kir",
+    "translit_sephardi": "kir",
+    "translit_ashkenazi": "kir",
+    "meaning_en": "wall",
+    "letters": [
+      "ק",
+      "י",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h1c0ffa13_ari.mp3",
+    "audio_noa": "audio/builder/h1c0ffa13_noa.mp3"
+  },
+  {
+    "id": "h63142367",
+    "hebrew": "ניר",
+    "nikud": "נְיָר",
+    "translit_israeli": "neyar",
+    "translit_sephardi": "neyar",
+    "translit_ashkenazi": "neyor",
+    "meaning_en": "paper",
+    "letters": [
+      "נ",
+      "י",
+      "ר"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h63142367_ari.mp3",
+    "audio_noa": "audio/builder/h63142367_noa.mp3"
+  },
+  {
+    "id": "h192ef310",
+    "hebrew": "רצפה",
+    "nikud": "רִצְפָּה",
+    "translit_israeli": "ritzpah",
+    "translit_sephardi": "ritzpa",
+    "translit_ashkenazi": "ritzpo",
+    "meaning_en": "floor",
+    "letters": [
+      "ר",
+      "צ",
+      "פ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h192ef310_ari.mp3",
+    "audio_noa": "audio/builder/h192ef310_noa.mp3"
+  },
+  {
+    "id": "hae5f6946",
+    "hebrew": "סל",
+    "nikud": "סַל",
+    "translit_israeli": "sal",
+    "translit_sephardi": "sal",
+    "translit_ashkenazi": "sal",
+    "meaning_en": "basket",
+    "letters": [
+      "ס",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hae5f6946_ari.mp3",
+    "audio_noa": "audio/builder/hae5f6946_noa.mp3"
+  },
+  {
+    "id": "h470d40b1",
+    "hebrew": "ספה",
+    "nikud": "סַפָּה",
+    "translit_israeli": "sapah",
+    "translit_sephardi": "sapa",
+    "translit_ashkenazi": "sapo",
+    "meaning_en": "a sofa",
+    "letters": [
+      "ס",
+      "פ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h470d40b1_ari.mp3",
+    "audio_noa": "audio/builder/h470d40b1_noa.mp3"
+  },
+  {
+    "id": "hf73dc598",
+    "hebrew": "עט",
+    "nikud": "עֵט",
+    "translit_israeli": "et",
+    "translit_sephardi": "et",
+    "translit_ashkenazi": "eit",
+    "meaning_en": "a pen",
+    "letters": [
+      "ע",
+      "ט"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf73dc598_ari.mp3",
+    "audio_noa": "audio/builder/hf73dc598_noa.mp3"
+  },
+  {
+    "id": "hc5b0c1a0",
+    "hebrew": "מתנה",
+    "nikud": "מַתָּנָה",
+    "translit_israeli": "matanah",
+    "translit_sephardi": "matana",
+    "translit_ashkenazi": "matono",
+    "meaning_en": "gift",
+    "letters": [
+      "מ",
+      "ת",
+      "נ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hc5b0c1a0_ari.mp3",
+    "audio_noa": "audio/builder/hc5b0c1a0_noa.mp3"
+  },
+  {
+    "id": "ha6e16125",
+    "hebrew": "סכין",
+    "nikud": "סַכִּין",
+    "translit_israeli": "sakin",
+    "translit_sephardi": "sakin",
+    "translit_ashkenazi": "sakin",
+    "meaning_en": "knife, blade",
+    "letters": [
+      "ס",
+      "כ",
+      "י",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/ha6e16125_ari.mp3",
+    "audio_noa": "audio/builder/ha6e16125_noa.mp3"
+  },
+  {
+    "id": "h64fb7d35",
+    "hebrew": "נר",
+    "nikud": "נֵר",
+    "translit_israeli": "ner",
+    "translit_sephardi": "ner",
+    "translit_ashkenazi": "neir",
+    "meaning_en": "oil lamp, candle",
+    "letters": [
+      "נ",
+      "ר"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h64fb7d35_ari.mp3",
+    "audio_noa": "audio/builder/h64fb7d35_noa.mp3"
+  },
+  {
+    "id": "he028e6f0",
+    "hebrew": "אריה",
+    "nikud": "אַרְיֵה",
+    "translit_israeli": "aryeh",
+    "translit_sephardi": "arye",
+    "translit_ashkenazi": "aryei",
+    "meaning_en": "lion",
+    "letters": [
+      "א",
+      "ר",
+      "י",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/he028e6f0_ari.mp3",
+    "audio_noa": "audio/builder/he028e6f0_noa.mp3"
+  },
+  {
+    "id": "h3a77b486",
+    "hebrew": "גמל",
+    "nikud": "גָּמָל",
+    "translit_israeli": "gamal",
+    "translit_sephardi": "gamal",
+    "translit_ashkenazi": "gomol",
+    "meaning_en": "camel",
+    "letters": [
+      "ג",
+      "מ",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h3a77b486_ari.mp3",
+    "audio_noa": "audio/builder/h3a77b486_noa.mp3"
+  },
+  {
+    "id": "h16d3c412",
+    "hebrew": "פיל",
+    "nikud": "פִּיל",
+    "translit_israeli": "pil",
+    "translit_sephardi": "pil",
+    "translit_ashkenazi": "pil",
+    "meaning_en": "elephant",
+    "letters": [
+      "פ",
+      "י",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h16d3c412_ari.mp3",
+    "audio_noa": "audio/builder/h16d3c412_noa.mp3"
+  },
+  {
+    "id": "h55a56675",
+    "hebrew": "נחש",
+    "nikud": "נָחָשׁ",
+    "translit_israeli": "nachash",
+    "translit_sephardi": "nachash",
+    "translit_ashkenazi": "nochosh",
+    "meaning_en": "snake",
+    "letters": [
+      "נ",
+      "ח",
+      "ש"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h55a56675_ari.mp3",
+    "audio_noa": "audio/builder/h55a56675_noa.mp3"
+  },
+  {
+    "id": "h5bd1f5e1",
+    "hebrew": "דב",
+    "nikud": "דֹּב",
+    "translit_israeli": "dov",
+    "translit_sephardi": "dov",
+    "translit_ashkenazi": "doyv",
+    "meaning_en": "bear",
+    "letters": [
+      "ד",
+      "ב"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h5bd1f5e1_ari.mp3",
+    "audio_noa": "audio/builder/h5bd1f5e1_noa.mp3"
+  },
+  {
+    "id": "hb119536d",
+    "hebrew": "קוף",
+    "nikud": "קוֹף",
+    "translit_israeli": "kof",
+    "translit_sephardi": "kof",
+    "translit_ashkenazi": "koyf",
+    "meaning_en": "monkey, ape",
+    "letters": [
+      "ק",
+      "ו",
+      "ף"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hb119536d_ari.mp3",
+    "audio_noa": "audio/builder/hb119536d_noa.mp3"
+  },
+  {
+    "id": "h85cda534",
+    "hebrew": "גפן",
+    "nikud": "גֶּפֶן",
+    "translit_israeli": "gefen",
+    "translit_sephardi": "gefen",
+    "translit_ashkenazi": "gefen",
+    "meaning_en": "vine, grapevine",
+    "letters": [
+      "ג",
+      "פ",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h85cda534_ari.mp3",
+    "audio_noa": "audio/builder/h85cda534_noa.mp3"
+  },
+  {
+    "id": "h5bebb792",
+    "hebrew": "גבעה",
+    "nikud": "גִּבְעָה",
+    "translit_israeli": "giv'ah",
+    "translit_sephardi": "giv'a",
+    "translit_ashkenazi": "giv'o",
+    "meaning_en": "a hill",
+    "letters": [
+      "ג",
+      "ב",
+      "ע",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h5bebb792_ari.mp3",
+    "audio_noa": "audio/builder/h5bebb792_noa.mp3"
+  },
+  {
+    "id": "h91ac0d37",
+    "hebrew": "נהר",
+    "nikud": "נָהָר",
+    "translit_israeli": "nahar",
+    "translit_sephardi": "nahar",
+    "translit_ashkenazi": "nohor",
+    "meaning_en": "river",
+    "letters": [
+      "נ",
+      "ה",
+      "ר"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h91ac0d37_ari.mp3",
+    "audio_noa": "audio/builder/h91ac0d37_noa.mp3"
+  },
+  {
+    "id": "hc427aff6",
+    "hebrew": "ירח",
+    "nikud": "יָרֵחַ",
+    "translit_israeli": "yareach",
+    "translit_sephardi": "yareach",
+    "translit_ashkenazi": "yoreiach",
+    "meaning_en": "Moon",
+    "letters": [
+      "י",
+      "ר",
+      "ח"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hc427aff6_ari.mp3",
+    "audio_noa": "audio/builder/hc427aff6_noa.mp3"
+  },
+  {
+    "id": "hef745501",
+    "hebrew": "יער",
+    "nikud": "יַעַר",
+    "translit_israeli": "ya'ar",
+    "translit_sephardi": "ya'ar",
+    "translit_ashkenazi": "ya'ar",
+    "meaning_en": "forest",
+    "letters": [
+      "י",
+      "ע",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hef745501_ari.mp3",
+    "audio_noa": "audio/builder/hef745501_noa.mp3"
+  },
+  {
+    "id": "h2d90f840",
+    "hebrew": "אדמה",
+    "nikud": "אֲדָמָה",
+    "translit_israeli": "adamah",
+    "translit_sephardi": "adama",
+    "translit_ashkenazi": "adomo",
+    "meaning_en": "earth / soil",
+    "letters": [
+      "א",
+      "ד",
+      "מ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h2d90f840_ari.mp3",
+    "audio_noa": "audio/builder/h2d90f840_noa.mp3"
+  },
+  {
+    "id": "hf1da5ea6",
+    "hebrew": "אש",
+    "nikud": "אֵשׁ",
+    "translit_israeli": "esh",
+    "translit_sephardi": "esh",
+    "translit_ashkenazi": "eish",
+    "meaning_en": "fire",
+    "letters": [
+      "א",
+      "ש"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/hf1da5ea6_ari.mp3",
+    "audio_noa": "audio/builder/hf1da5ea6_noa.mp3"
+  },
+  {
+    "id": "h770abeb5",
+    "hebrew": "ענן",
+    "nikud": "עָנָן",
+    "translit_israeli": "anan",
+    "translit_sephardi": "anan",
+    "translit_ashkenazi": "onon",
+    "meaning_en": "cloud",
+    "letters": [
+      "ע",
+      "נ",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h770abeb5_ari.mp3",
+    "audio_noa": "audio/builder/h770abeb5_noa.mp3"
+  },
+  {
+    "id": "hfb819565",
+    "hebrew": "רוח",
+    "nikud": "רוּחַ",
+    "translit_israeli": "ruach",
+    "translit_sephardi": "ruach",
+    "translit_ashkenazi": "ruach",
+    "meaning_en": "wind, a wind",
+    "letters": [
+      "ר",
+      "ו",
+      "ח"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hfb819565_ari.mp3",
+    "audio_noa": "audio/builder/hfb819565_noa.mp3"
+  },
+  {
+    "id": "h68594418",
+    "hebrew": "סלע",
+    "nikud": "סֶלַע",
+    "translit_israeli": "sela",
+    "translit_sephardi": "sela",
+    "translit_ashkenazi": "sela",
+    "meaning_en": "rock",
+    "letters": [
+      "ס",
+      "ל",
+      "ע"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h68594418_ari.mp3",
+    "audio_noa": "audio/builder/h68594418_noa.mp3"
+  },
+  {
+    "id": "ha9b360ab",
+    "hebrew": "קר",
+    "nikud": "קֹר",
+    "translit_israeli": "kor",
+    "translit_sephardi": "kor",
+    "translit_ashkenazi": "koyr",
+    "meaning_en": "cold",
+    "letters": [
+      "ק",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/ha9b360ab_ari.mp3",
+    "audio_noa": "audio/builder/ha9b360ab_noa.mp3"
+  },
+  {
+    "id": "h5c2548dc",
+    "hebrew": "חם",
+    "nikud": "חַם",
+    "translit_israeli": "cham",
+    "translit_sephardi": "cham",
+    "translit_ashkenazi": "cham",
+    "meaning_en": "hot",
+    "letters": [
+      "ח",
+      "ם"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h5c2548dc_ari.mp3",
+    "audio_noa": "audio/builder/h5c2548dc_noa.mp3"
+  },
+  {
+    "id": "h7d196d47",
+    "hebrew": "מערה",
+    "nikud": "מְעָרָה",
+    "translit_israeli": "me'arah",
+    "translit_sephardi": "me'ara",
+    "translit_ashkenazi": "me'oro",
+    "meaning_en": "cave",
+    "letters": [
+      "מ",
+      "ע",
+      "ר",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h7d196d47_ari.mp3",
+    "audio_noa": "audio/builder/h7d196d47_noa.mp3"
+  },
+  {
+    "id": "hde2302bb",
+    "hebrew": "חוף",
+    "nikud": "חוֹף",
+    "translit_israeli": "chof",
+    "translit_sephardi": "chof",
+    "translit_ashkenazi": "choyf",
+    "meaning_en": "beach, shore, coast",
+    "letters": [
+      "ח",
+      "ו",
+      "ף"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hde2302bb_ari.mp3",
+    "audio_noa": "audio/builder/hde2302bb_noa.mp3"
+  },
+  {
+    "id": "he3b1acbd",
+    "hebrew": "עיר",
+    "nikud": "עִיר",
+    "translit_israeli": "ir",
+    "translit_sephardi": "ir",
+    "translit_ashkenazi": "ir",
+    "meaning_en": "city",
+    "letters": [
+      "ע",
+      "י",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/he3b1acbd_ari.mp3",
+    "audio_noa": "audio/builder/he3b1acbd_noa.mp3"
+  },
+  {
+    "id": "h5ae20314",
+    "hebrew": "דרך",
+    "nikud": "דֶּרֶךְ",
+    "translit_israeli": "derekh",
+    "translit_sephardi": "derekh",
+    "translit_ashkenazi": "derekh",
+    "meaning_en": "a road, a path, a way",
+    "letters": [
+      "ד",
+      "ר",
+      "ך"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h5ae20314_ari.mp3",
+    "audio_noa": "audio/builder/h5ae20314_noa.mp3"
+  },
+  {
+    "id": "h18b1e15c",
+    "hebrew": "רחוב",
+    "nikud": "רְחוֹב",
+    "translit_israeli": "rechov",
+    "translit_sephardi": "rechov",
+    "translit_ashkenazi": "rechoyv",
+    "meaning_en": "street",
+    "letters": [
+      "ר",
+      "ח",
+      "ו",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h18b1e15c_ari.mp3",
+    "audio_noa": "audio/builder/h18b1e15c_noa.mp3"
+  },
+  {
+    "id": "h5fc50b7a",
+    "hebrew": "מכונית",
+    "nikud": "מְכוֹנִית",
+    "translit_israeli": "mekhonit",
+    "translit_sephardi": "mekhonit",
+    "translit_ashkenazi": "mekhoynis",
+    "meaning_en": "car",
+    "letters": [
+      "מ",
+      "כ",
+      "ו",
+      "נ",
+      "י",
+      "ת"
+    ],
+    "level": 5,
+    "audio_ari": "audio/builder/h5fc50b7a_ari.mp3",
+    "audio_noa": "audio/builder/h5fc50b7a_noa.mp3"
+  },
+  {
+    "id": "hf524a1ad",
+    "hebrew": "אוטובוס",
+    "nikud": "אוֹטוֹבּוּס",
+    "translit_israeli": "otobus",
+    "translit_sephardi": "otobus",
+    "translit_ashkenazi": "oytoybus",
+    "meaning_en": "a bus (vehicle)",
+    "letters": [
+      "א",
+      "ו",
+      "ט",
+      "ו",
+      "ב",
+      "ו",
+      "ס"
+    ],
+    "level": 5,
+    "audio_ari": "audio/builder/hf524a1ad_ari.mp3",
+    "audio_noa": "audio/builder/hf524a1ad_noa.mp3"
+  },
+  {
+    "id": "h85c6747d",
+    "hebrew": "מונית",
+    "nikud": "מוֹנִית",
+    "translit_israeli": "monit",
+    "translit_sephardi": "monit",
+    "translit_ashkenazi": "moynis",
+    "meaning_en": "taxi, cab, taxicab",
+    "letters": [
+      "מ",
+      "ו",
+      "נ",
+      "י",
+      "ת"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h85c6747d_ari.mp3",
+    "audio_noa": "audio/builder/h85c6747d_noa.mp3"
+  },
+  {
+    "id": "hf19f0a88",
+    "hebrew": "בנק",
+    "nikud": "בַּנְק",
+    "translit_israeli": "bank",
+    "translit_sephardi": "bank",
+    "translit_ashkenazi": "bank",
+    "meaning_en": "bank",
+    "letters": [
+      "ב",
+      "נ",
+      "ק"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf19f0a88_ari.mp3",
+    "audio_noa": "audio/builder/hf19f0a88_noa.mp3"
+  },
+  {
+    "id": "h8a450588",
+    "hebrew": "פרק",
+    "nikud": "פַּרְק",
+    "translit_israeli": "park",
+    "translit_sephardi": "park",
+    "translit_ashkenazi": "park",
+    "meaning_en": "park",
+    "letters": [
+      "פ",
+      "ר",
+      "ק"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8a450588_ari.mp3",
+    "audio_noa": "audio/builder/h8a450588_noa.mp3"
+  },
+  {
+    "id": "hd53e0a60",
+    "hebrew": "קרוב",
+    "nikud": "קָרוֹב",
+    "translit_israeli": "karov",
+    "translit_sephardi": "karov",
+    "translit_ashkenazi": "koroyv",
+    "meaning_en": "a relative, a family member",
+    "letters": [
+      "ק",
+      "ר",
+      "ו",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hd53e0a60_ari.mp3",
+    "audio_noa": "audio/builder/hd53e0a60_noa.mp3"
+  },
+  {
+    "id": "h372b7277",
+    "hebrew": "רחוק",
+    "nikud": "רָחוֹק",
+    "translit_israeli": "rachok",
+    "translit_sephardi": "rachok",
+    "translit_ashkenazi": "rochoyk",
+    "meaning_en": "far, distant",
+    "letters": [
+      "ר",
+      "ח",
+      "ו",
+      "ק"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h372b7277_ari.mp3",
+    "audio_noa": "audio/builder/h372b7277_noa.mp3"
+  },
+  {
+    "id": "h591afdf8",
+    "hebrew": "דרום",
+    "nikud": "דָּרוֹם",
+    "translit_israeli": "darom",
+    "translit_sephardi": "darom",
+    "translit_ashkenazi": "doroym",
+    "meaning_en": "south",
+    "letters": [
+      "ד",
+      "ר",
+      "ו",
+      "ם"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h591afdf8_ari.mp3",
+    "audio_noa": "audio/builder/h591afdf8_noa.mp3"
+  },
+  {
+    "id": "h7097c7a9",
+    "hebrew": "צפון",
+    "nikud": "צָפוֹן",
+    "translit_israeli": "tzafon",
+    "translit_sephardi": "tzafon",
+    "translit_ashkenazi": "tzofoyn",
+    "meaning_en": "north",
+    "letters": [
+      "צ",
+      "פ",
+      "ו",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h7097c7a9_ari.mp3",
+    "audio_noa": "audio/builder/h7097c7a9_noa.mp3"
+  },
+  {
+    "id": "p0381993d",
+    "hebrew": "שמאלה",
+    "nikud": "שְׂמֹאלָה",
+    "translit_israeli": "semolah",
+    "translit_sephardi": "semola",
+    "translit_ashkenazi": "semoylo",
+    "meaning_en": "left",
+    "letters": [
+      "ש",
+      "מ",
+      "א",
+      "ל",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/p0381993d_ari.mp3",
+    "audio_noa": "audio/builder/p0381993d_noa.mp3"
+  },
+  {
+    "id": "hd82a3079",
+    "hebrew": "ארץ",
+    "nikud": "אֶרֶץ",
+    "translit_israeli": "eretz",
+    "translit_sephardi": "eretz",
+    "translit_ashkenazi": "eretz",
+    "meaning_en": "country, land",
+    "letters": [
+      "א",
+      "ר",
+      "ץ"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hd82a3079_ari.mp3",
+    "audio_noa": "audio/builder/hd82a3079_noa.mp3"
+  },
+  {
+    "id": "hdd727873",
+    "hebrew": "מלון",
+    "nikud": "מָלוֹן",
+    "translit_israeli": "malon",
+    "translit_sephardi": "malon",
+    "translit_ashkenazi": "moloyn",
+    "meaning_en": "hotel",
+    "letters": [
+      "מ",
+      "ל",
+      "ו",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hdd727873_ari.mp3",
+    "audio_noa": "audio/builder/hdd727873_noa.mp3"
+  },
+  {
+    "id": "h50241e1c",
+    "hebrew": "בקר",
+    "nikud": "בֹּקֶר",
+    "translit_israeli": "boker",
+    "translit_sephardi": "boker",
+    "translit_ashkenazi": "boyker",
+    "meaning_en": "morning",
+    "letters": [
+      "ב",
+      "ק",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h50241e1c_ari.mp3",
+    "audio_noa": "audio/builder/h50241e1c_noa.mp3"
+  },
+  {
+    "id": "he074d347",
+    "hebrew": "ערב",
+    "nikud": "עֶרֶב",
+    "translit_israeli": "erev",
+    "translit_sephardi": "erev",
+    "translit_ashkenazi": "erev",
+    "meaning_en": "evening, night",
+    "letters": [
+      "ע",
+      "ר",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/he074d347_ari.mp3",
+    "audio_noa": "audio/builder/he074d347_noa.mp3"
+  },
+  {
+    "id": "hf07c1580",
+    "hebrew": "שנה",
+    "nikud": "שָׁנָה",
+    "translit_israeli": "shanah",
+    "translit_sephardi": "shana",
+    "translit_ashkenazi": "shono",
+    "meaning_en": "year",
+    "letters": [
+      "ש",
+      "נ",
+      "ה"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hf07c1580_ari.mp3",
+    "audio_noa": "audio/builder/hf07c1580_noa.mp3"
+  },
+  {
+    "id": "h92151b55",
+    "hebrew": "שבוע",
+    "nikud": "שָׁבוּעַ",
+    "translit_israeli": "shavu'a",
+    "translit_sephardi": "shavu'a",
+    "translit_ashkenazi": "shovu'a",
+    "meaning_en": "week, period of seven days",
+    "letters": [
+      "ש",
+      "ב",
+      "ו",
+      "ע"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h92151b55_ari.mp3",
+    "audio_noa": "audio/builder/h92151b55_noa.mp3"
+  },
+  {
+    "id": "hbb3bc5fd",
+    "hebrew": "דקה",
+    "nikud": "דַּקָּה",
+    "translit_israeli": "dakah",
+    "translit_sephardi": "daka",
+    "translit_ashkenazi": "dako",
+    "meaning_en": "minute",
+    "letters": [
+      "ד",
+      "ק",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hbb3bc5fd_ari.mp3",
+    "audio_noa": "audio/builder/hbb3bc5fd_noa.mp3"
+  },
+  {
+    "id": "h1b39a6b6",
+    "hebrew": "אתמול",
+    "nikud": "אֶתְמוֹל",
+    "translit_israeli": "etmol",
+    "translit_sephardi": "etmol",
+    "translit_ashkenazi": "esmoyl",
+    "meaning_en": "yesterday",
+    "letters": [
+      "א",
+      "ת",
+      "מ",
+      "ו",
+      "ל"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h1b39a6b6_ari.mp3",
+    "audio_noa": "audio/builder/h1b39a6b6_noa.mp3"
+  },
+  {
+    "id": "hcb5a058a",
+    "hebrew": "עכשו",
+    "nikud": "עַכְשָׁו",
+    "translit_israeli": "akhshav",
+    "translit_sephardi": "akhshav",
+    "translit_ashkenazi": "akhshov",
+    "meaning_en": "now",
+    "letters": [
+      "ע",
+      "כ",
+      "ש",
+      "ו"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hcb5a058a_ari.mp3",
+    "audio_noa": "audio/builder/hcb5a058a_noa.mp3"
+  },
+  {
+    "id": "hf9a1a55b",
+    "hebrew": "שנים",
+    "nikud": "שְׁנַיִם",
+    "translit_israeli": "shenayim",
+    "translit_sephardi": "shenayim",
+    "translit_ashkenazi": "shenayim",
+    "meaning_en": "two",
+    "letters": [
+      "ש",
+      "נ",
+      "י",
+      "ם"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hf9a1a55b_ari.mp3",
+    "audio_noa": "audio/builder/hf9a1a55b_noa.mp3"
+  },
+  {
+    "id": "h3dfe9831",
+    "hebrew": "שלושה",
+    "nikud": "שְׁלוֹשָׁה",
+    "translit_israeli": "sheloshah",
+    "translit_sephardi": "shelosha",
+    "translit_ashkenazi": "sheloysho",
+    "meaning_en": "three",
+    "letters": [
+      "ש",
+      "ל",
+      "ו",
+      "ש",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h3dfe9831_ari.mp3",
+    "audio_noa": "audio/builder/h3dfe9831_noa.mp3"
+  },
+  {
+    "id": "h769a6c3e",
+    "hebrew": "ארבעה",
+    "nikud": "אַרְבָּעָה",
+    "translit_israeli": "arba'ah",
+    "translit_sephardi": "arba'a",
+    "translit_ashkenazi": "arbo'o",
+    "meaning_en": "four",
+    "letters": [
+      "א",
+      "ר",
+      "ב",
+      "ע",
+      "ה"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h769a6c3e_ari.mp3",
+    "audio_noa": "audio/builder/h769a6c3e_noa.mp3"
+  },
+  {
+    "id": "h29aadfe4",
+    "hebrew": "חמשה",
+    "nikud": "חֲמִשָּׁה",
+    "translit_israeli": "chamishah",
+    "translit_sephardi": "chamisha",
+    "translit_ashkenazi": "chamisho",
+    "meaning_en": "five",
+    "letters": [
+      "ח",
+      "מ",
+      "ש",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h29aadfe4_ari.mp3",
+    "audio_noa": "audio/builder/h29aadfe4_noa.mp3"
+  },
+  {
+    "id": "pc9b3fcc6",
+    "hebrew": "ששה",
+    "nikud": "שִׁשָּׁה",
+    "translit_israeli": "shishah",
+    "translit_sephardi": "shisha",
+    "translit_ashkenazi": "shisho",
+    "meaning_en": "six",
+    "letters": [
+      "ש",
+      "ש",
+      "ה"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/pc9b3fcc6_ari.mp3",
+    "audio_noa": "audio/builder/pc9b3fcc6_noa.mp3"
+  },
+  {
+    "id": "h68a92f84",
+    "hebrew": "שבעה",
+    "nikud": "שִׁבְעָה",
+    "translit_israeli": "shiv'ah",
+    "translit_sephardi": "shiv'a",
+    "translit_ashkenazi": "shiv'o",
+    "meaning_en": "seven",
+    "letters": [
+      "ש",
+      "ב",
+      "ע",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h68a92f84_ari.mp3",
+    "audio_noa": "audio/builder/h68a92f84_noa.mp3"
+  },
+  {
+    "id": "h1de12f34",
+    "hebrew": "תשעה",
+    "nikud": "תִּשְׁעָה",
+    "translit_israeli": "tish'ah",
+    "translit_sephardi": "tish'a",
+    "translit_ashkenazi": "tish'o",
+    "meaning_en": "nine",
+    "letters": [
+      "ת",
+      "ש",
+      "ע",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h1de12f34_ari.mp3",
+    "audio_noa": "audio/builder/h1de12f34_noa.mp3"
+  },
+  {
+    "id": "h4589871d",
+    "hebrew": "עשרה",
+    "nikud": "עֲשָׂרָה",
+    "translit_israeli": "asarah",
+    "translit_sephardi": "asara",
+    "translit_ashkenazi": "asoro",
+    "meaning_en": "ten",
+    "letters": [
+      "ע",
+      "ש",
+      "ר",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h4589871d_ari.mp3",
+    "audio_noa": "audio/builder/h4589871d_noa.mp3"
+  },
+  {
+    "id": "h2d27796a",
+    "hebrew": "עשרים",
+    "nikud": "עֶשְׂרִים",
+    "translit_israeli": "esrim",
+    "translit_sephardi": "esrim",
+    "translit_ashkenazi": "esrim",
+    "meaning_en": "twenty",
+    "letters": [
+      "ע",
+      "ש",
+      "ר",
+      "י",
+      "ם"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h2d27796a_ari.mp3",
+    "audio_noa": "audio/builder/h2d27796a_noa.mp3"
+  },
+  {
+    "id": "h83f51398",
+    "hebrew": "ארבעים",
+    "nikud": "אַרְבָּעִים",
+    "translit_israeli": "arba'im",
+    "translit_sephardi": "arba'im",
+    "translit_ashkenazi": "arbo'im",
+    "meaning_en": "forty",
+    "letters": [
+      "א",
+      "ר",
+      "ב",
+      "ע",
+      "י",
+      "ם"
+    ],
+    "level": 5,
+    "audio_ari": "audio/builder/h83f51398_ari.mp3",
+    "audio_noa": "audio/builder/h83f51398_noa.mp3"
+  },
+  {
+    "id": "hffd9b904",
+    "hebrew": "מאה",
+    "nikud": "מֵאָה",
+    "translit_israeli": "me'ah",
+    "translit_sephardi": "me'a",
+    "translit_ashkenazi": "mei'o",
+    "meaning_en": "hundred, one hundred",
+    "letters": [
+      "מ",
+      "א",
+      "ה"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/hffd9b904_ari.mp3",
+    "audio_noa": "audio/builder/hffd9b904_noa.mp3"
+  },
+  {
+    "id": "h26154c1a",
+    "hebrew": "אלף",
+    "nikud": "אֶלֶף",
+    "translit_israeli": "elef",
+    "translit_sephardi": "elef",
+    "translit_ashkenazi": "elef",
+    "meaning_en": "thousand, one thousand",
+    "letters": [
+      "א",
+      "ל",
+      "ף"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h26154c1a_ari.mp3",
+    "audio_noa": "audio/builder/h26154c1a_noa.mp3"
+  },
+  {
+    "id": "h3739ff77",
+    "hebrew": "קיץ",
+    "nikud": "קַיִץ",
+    "translit_israeli": "kayitz",
+    "translit_sephardi": "kayitz",
+    "translit_ashkenazi": "kayitz",
+    "meaning_en": "summer",
+    "letters": [
+      "ק",
+      "י",
+      "ץ"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h3739ff77_ari.mp3",
+    "audio_noa": "audio/builder/h3739ff77_noa.mp3"
+  },
+  {
+    "id": "h25aa368e",
+    "hebrew": "צהרים",
+    "nikud": "צׇהֳרַיִם",
+    "translit_israeli": "tzohorayim",
+    "translit_sephardi": "tzohorayim",
+    "translit_ashkenazi": "tzohorayim",
+    "meaning_en": "Noon, midday",
+    "letters": [
+      "צ",
+      "ה",
+      "ר",
+      "י",
+      "ם"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h25aa368e_ari.mp3",
+    "audio_noa": "audio/builder/h25aa368e_noa.mp3"
+  },
+  {
+    "id": "h47a142a6",
+    "hebrew": "חצי",
+    "nikud": "חֲצִי",
+    "translit_israeli": "chatzi",
+    "translit_sephardi": "chatzi",
+    "translit_ashkenazi": "chatzi",
+    "meaning_en": "half",
+    "letters": [
+      "ח",
+      "צ",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h47a142a6_ari.mp3",
+    "audio_noa": "audio/builder/h47a142a6_noa.mp3"
+  },
+  {
+    "id": "h42410d5e",
+    "hebrew": "שני",
+    "nikud": "שֵׁנִי",
+    "translit_israeli": "sheni",
+    "translit_sephardi": "sheni",
+    "translit_ashkenazi": "sheini",
+    "meaning_en": "second",
+    "letters": [
+      "ש",
+      "נ",
+      "י"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h42410d5e_ari.mp3",
+    "audio_noa": "audio/builder/h42410d5e_noa.mp3"
+  },
+  {
+    "id": "h0b1cfbd9",
+    "hebrew": "שלישי",
+    "nikud": "שְׁלִישִׁי",
+    "translit_israeli": "shelishi",
+    "translit_sephardi": "shelishi",
+    "translit_ashkenazi": "shelishi",
+    "meaning_en": "third",
+    "letters": [
+      "ש",
+      "ל",
+      "י",
+      "ש",
+      "י"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h0b1cfbd9_ari.mp3",
+    "audio_noa": "audio/builder/h0b1cfbd9_noa.mp3"
+  },
+  {
+    "id": "h9160d23f",
+    "hebrew": "רביעי",
+    "nikud": "רְבִיעִי",
+    "translit_israeli": "revi'i",
+    "translit_sephardi": "revi'i",
+    "translit_ashkenazi": "revi'i",
+    "meaning_en": "fourth",
+    "letters": [
+      "ר",
+      "ב",
+      "י",
+      "ע",
+      "י"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h9160d23f_ari.mp3",
+    "audio_noa": "audio/builder/h9160d23f_noa.mp3"
+  },
+  {
+    "id": "h5c689c60",
+    "hebrew": "חמישי",
+    "nikud": "חֲמִישִׁי",
+    "translit_israeli": "chamishi",
+    "translit_sephardi": "chamishi",
+    "translit_ashkenazi": "chamishi",
+    "meaning_en": "fifth",
+    "letters": [
+      "ח",
+      "מ",
+      "י",
+      "ש",
+      "י"
+    ],
+    "level": 4,
+    "audio_ari": "audio/builder/h5c689c60_ari.mp3",
+    "audio_noa": "audio/builder/h5c689c60_noa.mp3"
+  },
+  {
+    "id": "hdd2bd792",
+    "hebrew": "גדול",
+    "nikud": "גָּדוֹל",
+    "translit_israeli": "gadol",
+    "translit_sephardi": "gadol",
+    "translit_ashkenazi": "godoyl",
+    "meaning_en": "big, large",
+    "letters": [
+      "ג",
+      "ד",
+      "ו",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hdd2bd792_ari.mp3",
+    "audio_noa": "audio/builder/hdd2bd792_noa.mp3"
+  },
+  {
+    "id": "h7be38218",
+    "hebrew": "קטן",
+    "nikud": "קָטָן",
+    "translit_israeli": "katan",
+    "translit_sephardi": "katan",
+    "translit_ashkenazi": "koton",
+    "meaning_en": "little, small, diminutive",
+    "letters": [
+      "ק",
+      "ט",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h7be38218_ari.mp3",
+    "audio_noa": "audio/builder/h7be38218_noa.mp3"
+  },
+  {
+    "id": "hb4ac356a",
+    "hebrew": "יפה",
+    "nikud": "יָפֶה",
+    "translit_israeli": "yafeh",
+    "translit_sephardi": "yafe",
+    "translit_ashkenazi": "yofe",
+    "meaning_en": "beautiful, comely, fair, goodly, pleasant",
+    "letters": [
+      "י",
+      "פ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hb4ac356a_ari.mp3",
+    "audio_noa": "audio/builder/hb4ac356a_noa.mp3"
+  },
+  {
+    "id": "h64e266b0",
+    "hebrew": "אמתי",
+    "nikud": "אֲמִתִּי",
+    "translit_israeli": "amiti",
+    "translit_sephardi": "amiti",
+    "translit_ashkenazi": "amiti",
+    "meaning_en": "real, true, actual",
+    "letters": [
+      "א",
+      "מ",
+      "ת",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h64e266b0_ari.mp3",
+    "audio_noa": "audio/builder/h64e266b0_noa.mp3"
+  },
+  {
+    "id": "h8349e150",
+    "hebrew": "טרי",
+    "nikud": "טָרִי",
+    "translit_israeli": "tari",
+    "translit_sephardi": "tari",
+    "translit_ashkenazi": "tori",
+    "meaning_en": "fresh",
+    "letters": [
+      "ט",
+      "ר",
+      "י"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8349e150_ari.mp3",
+    "audio_noa": "audio/builder/h8349e150_noa.mp3"
+  },
+  {
+    "id": "hb814461b",
+    "hebrew": "ירק",
+    "nikud": "יָרֹק",
+    "translit_israeli": "yarok",
+    "translit_sephardi": "yarok",
+    "translit_ashkenazi": "yoroyk",
+    "meaning_en": "green",
+    "letters": [
+      "י",
+      "ר",
+      "ק"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hb814461b_ari.mp3",
+    "audio_noa": "audio/builder/hb814461b_noa.mp3"
+  },
+  {
+    "id": "hadfa84bd",
+    "hebrew": "קל",
+    "nikud": "קַל",
+    "translit_israeli": "kal",
+    "translit_sephardi": "kal",
+    "translit_ashkenazi": "kal",
+    "meaning_en": "light (of low weight)",
+    "letters": [
+      "ק",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hadfa84bd_ari.mp3",
+    "audio_noa": "audio/builder/hadfa84bd_noa.mp3"
+  },
+  {
+    "id": "h8a9b78b8",
+    "hebrew": "רגוע",
+    "nikud": "רָגוּעַ",
+    "translit_israeli": "ragu'a",
+    "translit_sephardi": "ragu'a",
+    "translit_ashkenazi": "rogu'a",
+    "meaning_en": "relaxed, calm",
+    "letters": [
+      "ר",
+      "ג",
+      "ו",
+      "ע"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8a9b78b8_ari.mp3",
+    "audio_noa": "audio/builder/h8a9b78b8_noa.mp3"
+  },
+  {
+    "id": "h8633259a",
+    "hebrew": "מאשר",
+    "nikud": "מְאֻשָּׁר",
+    "translit_israeli": "me'ushar",
+    "translit_sephardi": "me'ushar",
+    "translit_ashkenazi": "me'ushor",
+    "meaning_en": "Happy, content",
+    "letters": [
+      "מ",
+      "א",
+      "ש",
+      "ר"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8633259a_ari.mp3",
+    "audio_noa": "audio/builder/h8633259a_noa.mp3"
+  },
+  {
+    "id": "h3c6a06b3",
+    "hebrew": "חלום",
+    "nikud": "חֲלוֹם",
+    "translit_israeli": "chalom",
+    "translit_sephardi": "chalom",
+    "translit_ashkenazi": "chaloym",
+    "meaning_en": "dream",
+    "letters": [
+      "ח",
+      "ל",
+      "ו",
+      "ם"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h3c6a06b3_ari.mp3",
+    "audio_noa": "audio/builder/h3c6a06b3_noa.mp3"
+  },
+  {
+    "id": "he7f4c5c3",
+    "hebrew": "רגש",
+    "nikud": "רֶגֶשׁ",
+    "translit_israeli": "regesh",
+    "translit_sephardi": "regesh",
+    "translit_ashkenazi": "regesh",
+    "meaning_en": "emotion, feeling",
+    "letters": [
+      "ר",
+      "ג",
+      "ש"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/he7f4c5c3_ari.mp3",
+    "audio_noa": "audio/builder/he7f4c5c3_noa.mp3"
+  },
+  {
+    "id": "hc8e59638",
+    "hebrew": "תקוה",
+    "nikud": "תִּקְוָה",
+    "translit_israeli": "tikvah",
+    "translit_sephardi": "tikva",
+    "translit_ashkenazi": "tikvo",
+    "meaning_en": "hope",
+    "letters": [
+      "ת",
+      "ק",
+      "ו",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hc8e59638_ari.mp3",
+    "audio_noa": "audio/builder/hc8e59638_noa.mp3"
+  },
+  {
+    "id": "h7c05b190",
+    "hebrew": "חשוב",
+    "nikud": "חָשׁוּב",
+    "translit_israeli": "chashuv",
+    "translit_sephardi": "chashuv",
+    "translit_ashkenazi": "choshuv",
+    "meaning_en": "important",
+    "letters": [
+      "ח",
+      "ש",
+      "ו",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h7c05b190_ari.mp3",
+    "audio_noa": "audio/builder/h7c05b190_noa.mp3"
+  },
+  {
+    "id": "h48d3db84",
+    "hebrew": "חלש",
+    "nikud": "חַלָּשׁ",
+    "translit_israeli": "chalash",
+    "translit_sephardi": "chalash",
+    "translit_ashkenazi": "chalosh",
+    "meaning_en": "weak",
+    "letters": [
+      "ח",
+      "ל",
+      "ש"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h48d3db84_ari.mp3",
+    "audio_noa": "audio/builder/h48d3db84_noa.mp3"
+  },
+  {
+    "id": "hba98874f",
+    "hebrew": "נכון",
+    "nikud": "נָכוֹן",
+    "translit_israeli": "nakhon",
+    "translit_sephardi": "nakhon",
+    "translit_ashkenazi": "nokhoyn",
+    "meaning_en": "right, correct",
+    "letters": [
+      "נ",
+      "כ",
+      "ו",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hba98874f_ari.mp3",
+    "audio_noa": "audio/builder/hba98874f_noa.mp3"
+  },
+  {
+    "id": "h4d766086",
+    "hebrew": "יחד",
+    "nikud": "יַחַד",
+    "translit_israeli": "yachad",
+    "translit_sephardi": "yachad",
+    "translit_ashkenazi": "yachad",
+    "meaning_en": "together",
+    "letters": [
+      "י",
+      "ח",
+      "ד"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h4d766086_ari.mp3",
+    "audio_noa": "audio/builder/h4d766086_noa.mp3"
+  },
+  {
+    "id": "hf2bba104",
+    "hebrew": "שם",
+    "nikud": "שָׁם",
+    "translit_israeli": "sham",
+    "translit_sephardi": "sham",
+    "translit_ashkenazi": "shom",
+    "meaning_en": "there",
+    "letters": [
+      "ש",
+      "ם"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/hf2bba104_ari.mp3",
+    "audio_noa": "audio/builder/hf2bba104_noa.mp3"
+  },
+  {
+    "id": "h0c3016b2",
+    "hebrew": "כאן",
+    "nikud": "כָּאן",
+    "translit_israeli": "kan",
+    "translit_sephardi": "kan",
+    "translit_ashkenazi": "kon",
+    "meaning_en": "here, at this place",
+    "letters": [
+      "כ",
+      "א",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h0c3016b2_ari.mp3",
+    "audio_noa": "audio/builder/h0c3016b2_noa.mp3"
+  },
+  {
+    "id": "h8453bf6a",
+    "hebrew": "עתה",
+    "nikud": "עַתָּה",
+    "translit_israeli": "atah",
+    "translit_sephardi": "ata",
+    "translit_ashkenazi": "ato",
+    "meaning_en": "now",
+    "letters": [
+      "ע",
+      "ת",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h8453bf6a_ari.mp3",
+    "audio_noa": "audio/builder/h8453bf6a_noa.mp3"
+  },
+  {
+    "id": "h99a070bb",
+    "hebrew": "שוב",
+    "nikud": "שׁוּב",
+    "translit_israeli": "shuv",
+    "translit_sephardi": "shuv",
+    "translit_ashkenazi": "shuv",
+    "meaning_en": "again",
+    "letters": [
+      "ש",
+      "ו",
+      "ב"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h99a070bb_ari.mp3",
+    "audio_noa": "audio/builder/h99a070bb_noa.mp3"
+  },
+  {
+    "id": "h81024165",
+    "hebrew": "מאוד",
+    "nikud": "מְאוֹד",
+    "translit_israeli": "me'od",
+    "translit_sephardi": "me'od",
+    "translit_ashkenazi": "me'oyd",
+    "meaning_en": "very, quite",
+    "letters": [
+      "מ",
+      "א",
+      "ו",
+      "ד"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h81024165_ari.mp3",
+    "audio_noa": "audio/builder/h81024165_noa.mp3"
+  },
+  {
+    "id": "h79df22f0",
+    "hebrew": "לאן",
+    "nikud": "לְאָן",
+    "translit_israeli": "le'an",
+    "translit_sephardi": "le'an",
+    "translit_ashkenazi": "le'on",
+    "meaning_en": "whither",
+    "letters": [
+      "ל",
+      "א",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h79df22f0_ari.mp3",
+    "audio_noa": "audio/builder/h79df22f0_noa.mp3"
+  },
+  {
+    "id": "h749f736f",
+    "hebrew": "תמיד",
+    "nikud": "תָּמִיד",
+    "translit_israeli": "tamid",
+    "translit_sephardi": "tamid",
+    "translit_ashkenazi": "tomid",
+    "meaning_en": "always, regularly",
+    "letters": [
+      "ת",
+      "מ",
+      "י",
+      "ד"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h749f736f_ari.mp3",
+    "audio_noa": "audio/builder/h749f736f_noa.mp3"
+  },
+  {
+    "id": "h60b16793",
+    "hebrew": "פה",
+    "nikud": "פֶּה",
+    "translit_israeli": "peh",
+    "translit_sephardi": "pe",
+    "translit_ashkenazi": "pe",
+    "meaning_en": "mouth",
+    "letters": [
+      "פ",
+      "ה"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h60b16793_ari.mp3",
+    "audio_noa": "audio/builder/h60b16793_noa.mp3"
+  },
+  {
+    "id": "hc0616a4b",
+    "hebrew": "אזן",
+    "nikud": "אֹזֶן",
+    "translit_israeli": "ozen",
+    "translit_sephardi": "ozen",
+    "translit_ashkenazi": "oyzen",
+    "meaning_en": "ear",
+    "letters": [
+      "א",
+      "ז",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/hc0616a4b_ari.mp3",
+    "audio_noa": "audio/builder/hc0616a4b_noa.mp3"
+  },
+  {
+    "id": "h9d6352ee",
+    "hebrew": "עין",
+    "nikud": "עַיִן",
+    "translit_israeli": "ayin",
+    "translit_sephardi": "ayin",
+    "translit_ashkenazi": "ayin",
+    "meaning_en": "eye",
+    "letters": [
+      "ע",
+      "י",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h9d6352ee_ari.mp3",
+    "audio_noa": "audio/builder/h9d6352ee_noa.mp3"
+  },
+  {
+    "id": "h890d1505",
+    "hebrew": "לב",
+    "nikud": "לֵב",
+    "translit_israeli": "lev",
+    "translit_sephardi": "lev",
+    "translit_ashkenazi": "leiv",
+    "meaning_en": "heart",
+    "letters": [
+      "ל",
+      "ב"
+    ],
+    "level": 1,
+    "audio_ari": "audio/builder/h890d1505_ari.mp3",
+    "audio_noa": "audio/builder/h890d1505_noa.mp3"
+  },
+  {
+    "id": "h3fc254f5",
+    "hebrew": "גב",
+    "nikud": "גַּב",
+    "translit_israeli": "gav",
+    "translit_sephardi": "gav",
+    "translit_ashkenazi": "gav",
+    "meaning_en": "back",
+    "letters": [
+      "ג",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h3fc254f5_ari.mp3",
+    "audio_noa": "audio/builder/h3fc254f5_noa.mp3"
+  },
+  {
+    "id": "h06f78f5d",
+    "hebrew": "בטן",
+    "nikud": "בֶּטֶן",
+    "translit_israeli": "beten",
+    "translit_sephardi": "beten",
+    "translit_ashkenazi": "beten",
+    "meaning_en": "abdomen, belly",
+    "letters": [
+      "ב",
+      "ט",
+      "ן"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h06f78f5d_ari.mp3",
+    "audio_noa": "audio/builder/h06f78f5d_noa.mp3"
+  },
+  {
+    "id": "h1c939a81",
+    "hebrew": "ירך",
+    "nikud": "יָרֵךְ",
+    "translit_israeli": "yarekh",
+    "translit_sephardi": "yarekh",
+    "translit_ashkenazi": "yoreikh",
+    "meaning_en": "thigh",
+    "letters": [
+      "י",
+      "ר",
+      "ך"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h1c939a81_ari.mp3",
+    "audio_noa": "audio/builder/h1c939a81_noa.mp3"
+  },
+  {
+    "id": "h5b150aaf",
+    "hebrew": "אור",
+    "nikud": "אוֹר",
+    "translit_israeli": "or",
+    "translit_sephardi": "or",
+    "translit_ashkenazi": "oyr",
+    "meaning_en": "to shine, be illuminated",
+    "letters": [
+      "א",
+      "ו",
+      "ר"
+    ],
+    "level": 2,
+    "audio_ari": "audio/builder/h5b150aaf_ari.mp3",
+    "audio_noa": "audio/builder/h5b150aaf_noa.mp3"
+  },
+  {
+    "id": "h58d8d8fe",
+    "hebrew": "מלך",
+    "nikud": "מֶלֶךְ",
+    "translit_israeli": "melekh",
+    "translit_sephardi": "melekh",
+    "translit_ashkenazi": "melekh",
+    "meaning_en": "king",
+    "letters": [
+      "מ",
+      "ל",
+      "ך"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/h58d8d8fe_ari.mp3",
+    "audio_noa": "audio/builder/h58d8d8fe_noa.mp3"
+  },
+  {
+    "id": "kelev",
+    "hebrew": "כלב",
+    "nikud": "כֶּלֶב",
+    "translit_israeli": "kelev",
+    "translit_sephardi": "kelev",
+    "translit_ashkenazi": "kelev",
+    "meaning_en": "dog",
+    "letters": [
+      "כ",
+      "ל",
+      "ב"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/kelev_ari.mp3",
+    "audio_noa": "audio/builder/kelev_noa.mp3"
+  },
+  {
+    "id": "chatul",
+    "hebrew": "חתול",
+    "nikud": "חָתוּל",
+    "translit_israeli": "chatul",
+    "translit_sephardi": "chatul",
+    "translit_ashkenazi": "chosul",
+    "meaning_en": "cat",
+    "letters": [
+      "ח",
+      "ת",
+      "ו",
+      "ל"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/chatul_ari.mp3",
+    "audio_noa": "audio/builder/chatul_noa.mp3"
+  },
+  {
+    "id": "perach",
+    "hebrew": "פרח",
+    "nikud": "פֶּרַח",
+    "translit_israeli": "perach",
+    "translit_sephardi": "perach",
+    "translit_ashkenazi": "perach",
+    "meaning_en": "flower",
+    "letters": [
+      "פ",
+      "ר",
+      "ח"
+    ],
+    "level": 3,
+    "audio_ari": "audio/builder/perach_ari.mp3",
+    "audio_noa": "audio/builder/perach_noa.mp3"
+  }
+]

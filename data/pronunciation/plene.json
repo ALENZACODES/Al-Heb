@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "proofread": false,
+  "description": "Plene (full) versus defective spellings for the five-family vowel board. DRAFT: every spelling and gloss needs a check against a dictionary / the Academy ktiv male rules and a native speaker. defective = spelled the way pointed (siddur/biblical style) text often does; plene = with a vowel letter (vav or yod). Both spellings of a pair are the same word and the same sound; that is checked by transliterate() in tests. Short vs long: the traditional names (kamatz gadol, patach, ...) are NOT claimed here as an audible length difference in Israeli Hebrew.",
+  "shortLongNote": "Textbooks sometimes call some signs 'long' and some 'short'. In Israeli Hebrew the five vowels are not distinguished by length, so this app teaches by sound family and does not claim an audible short/long difference. Where a Sephardi IPA value in niqqud.json carries a length mark it is shown as data, flagged unverified.",
+  "families": {
+    "a": {
+      "pair": null,
+      "pairNote": "No vav/yod spelling for the a sound in this set. The a sound is also written with a final he or alef as a vowel letter.",
+      "finalVowelLetter": [
+        { "he": "שָׂרָה", "gloss": "Sarah (name)", "note": "kamatz then a final he with no dot: the he is a vowel letter, it is not a consonant" },
+        { "he": "בָּרָא", "gloss": "he created", "note": "kamatz then a final alef that is not read as a consonant" }
+      ]
+    },
+    "e": { "pair": { "defective": "פֵּרוֹת", "plene": "פֵּירוֹת", "gloss": "fruit (plural)", "note": "yod added after the tzere in everyday spelling" } },
+    "i": { "pair": { "defective": "דָּוִד", "plene": "דָּוִיד", "gloss": "David", "note": "yod added after the chirik" } },
+    "o": { "pair": { "defective": "בֹּקֶר", "plene": "בּוֹקֶר", "gloss": "morning", "note": "vav added after the consonant, the cholam dot sits on the vav" } },
+    "u": { "pair": { "defective": "סֻכָּה", "plene": "סוּכָּה", "gloss": "booth (sukkah)", "note": "kubutz (three dots) versus shuruk (vav with a dot): same sound" } }
+  },
+  "finalHe": {
+    "summary": "A final he with no dot is a vowel letter: it marks a vowel (usually a, e or o) and is not a consonant, so you do not hear an h.",
+    "caution": "It is not true that a final he is just 'not read': it tells you which vowel the last syllable has. A final he WITH a dot inside (mappiq) is a consonant he. Check with a native speaker how often modern speech says the mappiq h.",
+    "examples": [
+      { "he": "גְּבִינָה", "gloss": "cheese", "kind": "vowel-letter" },
+      { "he": "לָהּ", "gloss": "to her", "kind": "mappiq" }
+    ]
+  }
+}

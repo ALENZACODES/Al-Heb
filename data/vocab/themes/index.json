@@ -1,0 +1,334 @@
+{
+ "schema": "alef-vocab-themes-index/1",
+ "generated": "2026-11-07",
+ "count": 40,
+ "themeSize": 125,
+ "counts": {
+  "words": 4786,
+  "withExample": 1047,
+  "withoutExample": 3739,
+  "droppedFromWordsJson": 1513
+ },
+ "themes": [
+  {
+   "id": "arts-sports-set01",
+   "topic": "arts-sports",
+   "title": "Arts and sports, set 1 of 1",
+   "size": 69,
+   "withExample": 5,
+   "file": "arts-sports-set01.json"
+  },
+  {
+   "id": "body-health-set01",
+   "topic": "body-health",
+   "title": "Body and health, set 1 of 1",
+   "size": 125,
+   "withExample": 32,
+   "file": "body-health-set01.json"
+  },
+  {
+   "id": "clothes-shopping-set01",
+   "topic": "clothes-shopping",
+   "title": "Clothes and shopping, set 1 of 1",
+   "size": 90,
+   "withExample": 27,
+   "file": "clothes-shopping-set01.json"
+  },
+  {
+   "id": "describing-words-set01",
+   "topic": "describing-words",
+   "title": "Describing words, set 1 of 3",
+   "size": 125,
+   "withExample": 82,
+   "file": "describing-words-set01.json"
+  },
+  {
+   "id": "describing-words-set02",
+   "topic": "describing-words",
+   "title": "Describing words, set 2 of 3",
+   "size": 125,
+   "withExample": 0,
+   "file": "describing-words-set02.json"
+  },
+  {
+   "id": "describing-words-set03",
+   "topic": "describing-words",
+   "title": "Describing words, set 3 of 3",
+   "size": 125,
+   "withExample": 0,
+   "file": "describing-words-set03.json"
+  },
+  {
+   "id": "doing-verbs-set01",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 1 of 8",
+   "size": 125,
+   "withExample": 121,
+   "file": "doing-verbs-set01.json"
+  },
+  {
+   "id": "doing-verbs-set02",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 2 of 8",
+   "size": 125,
+   "withExample": 44,
+   "file": "doing-verbs-set02.json"
+  },
+  {
+   "id": "doing-verbs-set03",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 3 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set03.json"
+  },
+  {
+   "id": "doing-verbs-set04",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 4 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set04.json"
+  },
+  {
+   "id": "doing-verbs-set05",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 5 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set05.json"
+  },
+  {
+   "id": "doing-verbs-set06",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 6 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set06.json"
+  },
+  {
+   "id": "doing-verbs-set07",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 7 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set07.json"
+  },
+  {
+   "id": "doing-verbs-set08",
+   "topic": "doing-verbs",
+   "title": "Doing verbs, set 8 of 8",
+   "size": 125,
+   "withExample": 0,
+   "file": "doing-verbs-set08.json"
+  },
+  {
+   "id": "feelings-mind-set01",
+   "topic": "feelings-mind",
+   "title": "Feelings and mind, set 1 of 1",
+   "size": 118,
+   "withExample": 19,
+   "file": "feelings-mind-set01.json"
+  },
+  {
+   "id": "food-drink-set01",
+   "topic": "food-drink",
+   "title": "Food and drink, set 1 of 1",
+   "size": 125,
+   "withExample": 40,
+   "file": "food-drink-set01.json"
+  },
+  {
+   "id": "general-things-set01",
+   "topic": "general-things",
+   "title": "General things, set 1 of 11",
+   "size": 125,
+   "withExample": 113,
+   "file": "general-things-set01.json"
+  },
+  {
+   "id": "general-things-set02",
+   "topic": "general-things",
+   "title": "General things, set 2 of 11",
+   "size": 125,
+   "withExample": 24,
+   "file": "general-things-set02.json"
+  },
+  {
+   "id": "general-things-set03",
+   "topic": "general-things",
+   "title": "General things, set 3 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set03.json"
+  },
+  {
+   "id": "general-things-set04",
+   "topic": "general-things",
+   "title": "General things, set 4 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set04.json"
+  },
+  {
+   "id": "general-things-set05",
+   "topic": "general-things",
+   "title": "General things, set 5 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set05.json"
+  },
+  {
+   "id": "general-things-set06",
+   "topic": "general-things",
+   "title": "General things, set 6 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set06.json"
+  },
+  {
+   "id": "general-things-set07",
+   "topic": "general-things",
+   "title": "General things, set 7 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set07.json"
+  },
+  {
+   "id": "general-things-set08",
+   "topic": "general-things",
+   "title": "General things, set 8 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set08.json"
+  },
+  {
+   "id": "general-things-set09",
+   "topic": "general-things",
+   "title": "General things, set 9 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set09.json"
+  },
+  {
+   "id": "general-things-set10",
+   "topic": "general-things",
+   "title": "General things, set 10 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set10.json"
+  },
+  {
+   "id": "general-things-set11",
+   "topic": "general-things",
+   "title": "General things, set 11 of 11",
+   "size": 125,
+   "withExample": 0,
+   "file": "general-things-set11.json"
+  },
+  {
+   "id": "home-things-set01",
+   "topic": "home-things",
+   "title": "Home things, set 1 of 1",
+   "size": 113,
+   "withExample": 16,
+   "file": "home-things-set01.json"
+  },
+  {
+   "id": "moving-doing-set01",
+   "topic": "moving-doing",
+   "title": "Moving and doing, set 1 of 1",
+   "size": 125,
+   "withExample": 29,
+   "file": "moving-doing-set01.json"
+  },
+  {
+   "id": "nature-animals-set01",
+   "topic": "nature-animals",
+   "title": "Nature and animals, set 1 of 1",
+   "size": 125,
+   "withExample": 28,
+   "file": "nature-animals-set01.json"
+  },
+  {
+   "id": "people-family-set01",
+   "topic": "people-family",
+   "title": "People and family, set 1 of 1",
+   "size": 125,
+   "withExample": 37,
+   "file": "people-family-set01.json"
+  },
+  {
+   "id": "places-travel-set01",
+   "topic": "places-travel",
+   "title": "Places and travel, set 1 of 1",
+   "size": 125,
+   "withExample": 59,
+   "file": "places-travel-set01.json"
+  },
+  {
+   "id": "religion-prayer-set01",
+   "topic": "religion-prayer",
+   "title": "Religion and prayer, set 1 of 1",
+   "size": 125,
+   "withExample": 114,
+   "file": "religion-prayer-set01.json"
+  },
+  {
+   "id": "school-learning-set01",
+   "topic": "school-learning",
+   "title": "School and learning, set 1 of 1",
+   "size": 47,
+   "withExample": 9,
+   "file": "school-learning-set01.json"
+  },
+  {
+   "id": "science-ideas-set01",
+   "topic": "science-ideas",
+   "title": "Science and ideas, set 1 of 1",
+   "size": 125,
+   "withExample": 23,
+   "file": "science-ideas-set01.json"
+  },
+  {
+   "id": "small-words-set01",
+   "topic": "small-words",
+   "title": "Small words, set 1 of 1",
+   "size": 125,
+   "withExample": 52,
+   "file": "small-words-set01.json"
+  },
+  {
+   "id": "society-work-law-set01",
+   "topic": "society-work-law",
+   "title": "Society, work and law, set 1 of 1",
+   "size": 125,
+   "withExample": 20,
+   "file": "society-work-law-set01.json"
+  },
+  {
+   "id": "talking-asking-set01",
+   "topic": "talking-asking",
+   "title": "Talking and asking, set 1 of 1",
+   "size": 125,
+   "withExample": 95,
+   "file": "talking-asking-set01.json"
+  },
+  {
+   "id": "tech-media-set01",
+   "topic": "tech-media",
+   "title": "Tech and media, set 1 of 1",
+   "size": 99,
+   "withExample": 8,
+   "file": "tech-media-set01.json"
+  },
+  {
+   "id": "time-numbers-set01",
+   "topic": "time-numbers",
+   "title": "Time and numbers, set 1 of 1",
+   "size": 125,
+   "withExample": 50,
+   "file": "time-numbers-set01.json"
+  }
+ ]
+}

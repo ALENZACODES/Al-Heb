@@ -1,0 +1,15 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "עֲסוּקָה",
+ "ingestedAt": "2026-11-08T15:52:16.238Z",
+ "licence": "customer-owned",
+ "note": "2026-11-08: built from Ari's own passing clips: 'asu-' from his עָסוּק (audio/m/israeli/word/h0764a400.mp3, cut at the silence before the k) + his קַ syllable (audio/m/israeli/syllable/qof-a.mp3). No voice said asuka correctly in the retries (heard asuko / ha-sukka). Heard as עסוקה by the Hebrew check and 'Asuka' in English letters.",
+ "renderedAt": "2026-11-08T15:52:16.238Z",
+ "redistributionCleared": false,
+ "spokenText": "עֲסוּקָה",
+ "normalized": true
+}

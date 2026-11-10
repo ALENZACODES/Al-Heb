@@ -1,0 +1,168 @@
+{
+  "pack": "alef-original-music",
+  "created": "2026-11-09",
+  "timezone": "America/Toronto",
+  "owner": "John Khan / ALENZA CODES",
+  "license": "All rights reserved, John Khan / ALENZA CODES",
+  "provenance": "Original compositions created for ALEF. No third-party recordings. Metadata stripped (no ID3, no C2PA/JUMBF, no encoder provenance).",
+  "usage_rules": [
+    "Optional game/background beds and songs only.",
+    "Never place under prayers/cantor audio.",
+    "Never play over learner speech.",
+    "Respect mute / audioFree / calm mode."
+  ],
+  "tracks": [
+    {
+      "id": "klezmer-loop-a",
+      "file": "klezmer-loop-a.mp3",
+      "title": "Klezmer Loop A",
+      "kind": "instrumental",
+      "style": "Jewish folk / klezmer dance loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 53.524898,
+      "bytes": 1285223,
+      "sha256_16": "77f414e1582fc6e8",
+      "loopable": true,
+      "loop_bars": 32,
+      "loop_bpm": 143.55
+    },
+    {
+      "id": "klezmer-loop-b",
+      "file": "klezmer-loop-b.mp3",
+      "title": "Klezmer Loop B",
+      "kind": "instrumental",
+      "style": "Jewish folk / klezmer dance loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 27.533061,
+      "bytes": 661419,
+      "sha256_16": "1e17433f3ee4767f",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 139.67
+    },
+    {
+      "id": "niggun-calm-loop-a",
+      "file": "niggun-calm-loop-a.mp3",
+      "title": "Niggun Calm Loop A",
+      "kind": "instrumental",
+      "style": "Calm niggun / contemplative loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 54.857143,
+      "bytes": 1317197,
+      "sha256_16": "7cf9467fb61a94fa",
+      "loopable": true,
+      "loop_bars": 32,
+      "loop_bpm": 139.67
+    },
+    {
+      "id": "niggun-calm-loop-b",
+      "file": "niggun-calm-loop-b.mp3",
+      "title": "Niggun Calm Loop B",
+      "kind": "instrumental",
+      "style": "Calm niggun / contemplative loop",
+      "role": "optional game/background bed",
+      "duration_seconds": 29.126531,
+      "bytes": 699662,
+      "sha256_16": "9d262cf1adb28cad",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 132.51
+    },
+    {
+      "id": "cantor-strings-a",
+      "file": "cantor-strings-a.mp3",
+      "title": "Cantor Strings A",
+      "kind": "instrumental",
+      "style": "Cantorial-inspired strings",
+      "role": "optional game/background bed",
+      "duration_seconds": 26.853878,
+      "bytes": 645119,
+      "sha256_16": "db1621c2646c9610",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 143.55
+    },
+    {
+      "id": "cantor-strings-b",
+      "file": "cantor-strings-b.mp3",
+      "title": "Cantor Strings B",
+      "kind": "instrumental",
+      "style": "Cantorial-inspired strings",
+      "role": "optional game/background bed",
+      "duration_seconds": 29.910204,
+      "bytes": 718470,
+      "sha256_16": "37f07b5d17002244",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 129.2
+    },
+    {
+      "id": "yachad",
+      "file": "yachad.mp3",
+      "title": "Yachad",
+      "kind": "vocal",
+      "style": "Jewish folk / Reform-friendly communal song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Come sit close, the candles glow / Friends and family, row by row / Bread is warm and hearts are wide / No one waiting left outside / Yachad, yachad, we sing as one / Shalom from dusk to rising sun / Lai lai lai, lai lai lai lai",
+      "duration_seconds": 126.876735,
+      "bytes": 3045667,
+      "sha256_16": "456d6fbd577ecac6"
+    },
+    {
+      "id": "open-hands",
+      "file": "open-hands.mp3",
+      "title": "Open Hands",
+      "kind": "vocal",
+      "style": "Reform Judaism–friendly worship song",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "In every hand a little flame / In every voice a gentle name / We open doors and build with care / We mend the world with what we share / Shalom, shalom, let peace begin / With open hands we welcome in",
+      "duration_seconds": 59.663673,
+      "bytes": 1432554,
+      "sha256_16": "6ca58d0d920488b6"
+    },
+    {
+      "id": "gates-of-morning-a",
+      "file": "gates-of-morning-a.mp3",
+      "title": "Gates of Morning A",
+      "kind": "vocal",
+      "style": "Cantorial / liturgical-inspired original",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
+      "duration_seconds": 89.338776,
+      "bytes": 2144756,
+      "sha256_16": "823f9bbdfdebf18a"
+    },
+    {
+      "id": "gates-of-morning-b",
+      "file": "gates-of-morning-b.mp3",
+      "title": "Gates of Morning B",
+      "kind": "vocal",
+      "style": "Cantorial / liturgical-inspired original",
+      "role": "optional song (never under prayer screens or over learner speech)",
+      "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
+      "duration_seconds": 70.034286,
+      "bytes": 1681448,
+      "sha256_16": "69f850d5b2de7257"
+    }
+  ],
+  "stings": [
+    {
+      "id": "yachad-sting",
+      "file": "stings/yachad-sting.mp3",
+      "source": "yachad.mp3",
+      "chorus_at_seconds": 110.75,
+      "sha256_16": "28fe632b106ad085",
+      "bytes": 96965,
+      "duration_seconds": 6.034286
+    },
+    {
+      "id": "open-hands-sting",
+      "file": "stings/open-hands-sting.mp3",
+      "source": "open-hands.mp3",
+      "chorus_at_seconds": 37.25,
+      "sha256_16": "9c6c3640dd2d2a26",
+      "bytes": 96965,
+      "duration_seconds": 6.034286
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "deuteronomy-6-4-he-ari",
+    "book": "deuteronomy",
+    "chapter": 6,
+    "verse": 4,
+    "lang": "he",
+    "speaker": "ari",
+    "voice": "de-DE-Chirp3-HD-Charon",
+    "text": "Shema Yisrael Adonai Eloheinu Adonai Echad.",
+    "displayText": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+    "fingerprint": "1ba2cfb64e63d85b90dc288ca674dd2dc82fdb9d1cf200668ab5b38faf5467a6",
+    "path": "clips/deuteronomy-6-4-he-ari.mp3",
+    "reviewRequired": true,
+    "recognitionReference": "שמע ישראל אדני אלהינו אדני אחד",
+    "pronunciations": [
+      {
+        "phrase": "Shema",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ʃe.ˈma"
+      },
+      {
+        "phrase": "Yisrael",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "jiːs.ʁa.ˈel"
+      },
+      {
+        "phrase": "Adonai",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "a.do.ˈnaj"
+      },
+      {
+        "phrase": "Eloheinu",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.lo.ˈhej.nu"
+      },
+      {
+        "phrase": "Echad",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.ˈxad"
+      }
+    ]
+  },
+  {
+    "id": "deuteronomy-6-4-he-noa",
+    "book": "deuteronomy",
+    "chapter": 6,
+    "verse": 4,
+    "lang": "he",
+    "speaker": "noa",
+    "voice": "de-DE-Chirp3-HD-Kore",
+    "text": "Shema Yisrael Adonai Eloheinu Adonai Echad.",
+    "displayText": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+    "fingerprint": "4007a0ac77d2e6e92a45acc78ad00442c197df86526355f8f0eea2999aafc34e",
+    "path": "clips/deuteronomy-6-4-he-noa.mp3",
+    "reviewRequired": true,
+    "recognitionReference": "שמע ישראל אדני אלהינו אדני אחד",
+    "pronunciations": [
+      {
+        "phrase": "Shema",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "ʃe.ˈma"
+      },
+      {
+        "phrase": "Yisrael",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "jiːs.ʁa.ˈel"
+      },
+      {
+        "phrase": "Adonai",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "a.do.ˈnaj"
+      },
+      {
+        "phrase": "Eloheinu",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.lo.ˈhej.nu"
+      },
+      {
+        "phrase": "Echad",
+        "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+        "pronunciation": "e.ˈxad"
+      }
+    ]
+  }
+]

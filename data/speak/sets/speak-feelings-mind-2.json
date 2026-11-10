@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-feelings-mind-2",
+ "title": "Feelings and thinking 2",
+ "theme": "feelings-mind",
+ "level": "B1",
+ "track": "israel",
+ "pack": "feelings-mind-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h645365e7",
+   "he": "רָצָה",
+   "translit": "ratzah",
+   "en": "to want",
+   "kind": "word",
+   "audioId": "h645365e7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4b81aad7",
+   "he": "צָרִיךְ",
+   "translit": "tzarikh",
+   "en": "needing, in need of (something)",
+   "kind": "word",
+   "audioId": "h4b81aad7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfd4bf43b",
+   "he": "זָכַר",
+   "translit": "zakhar",
+   "en": "to remember",
+   "kind": "word",
+   "audioId": "hfd4bf43b",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5f280d64",
+   "he": "בָּטוּחַ",
+   "translit": "batuach",
+   "en": "confident, sure, certain",
+   "kind": "word",
+   "audioId": "h5f280d64",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc8edded2",
+   "he": "הֶחְלִיט",
+   "translit": "hechlit",
+   "en": "to opt, choose, decide",
+   "kind": "word",
+   "audioId": "hc8edded2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h12364093",
+   "he": "הִצְטָרֵךְ",
+   "translit": "hitztarekh",
+   "en": "to need",
+   "kind": "word",
+   "audioId": "h12364093",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd499f4c4",
+   "he": "טִפֵּל",
+   "translit": "tipel",
+   "en": "to care for, to look after, to take care of",
+   "kind": "word",
+   "audioId": "hd499f4c4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha82bf37a",
+   "he": "קָלַט",
+   "translit": "kalat",
+   "en": "to know",
+   "kind": "word",
+   "audioId": "ha82bf37a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd354fb0e",
+   "he": "הִזְכִּיר",
+   "translit": "hizkir",
+   "en": "to remind (i.e. to cause to remember)",
+   "kind": "word",
+   "audioId": "hd354fb0e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h11b79132",
+   "he": "זָקוּק",
+   "translit": "zakuk",
+   "en": "in need (of)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc8e59638",
+   "he": "תִּקְוָה",
+   "translit": "tikvah",
+   "en": "hope",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha57a2fee",
+   "he": "צֹרֶךְ",
+   "translit": "tzorekh",
+   "en": "need, necessity, requirement",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

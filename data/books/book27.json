@@ -1,0 +1,177 @@
+{
+ "id": "book27",
+ "titleHe": "פָלָאפֶל אוֹ שַׁוַּארְמָה?",
+ "titleTranslit": "Falafel O Shawarma?",
+ "titleEn": "Falafel or Shawarma?",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "צָהֳרַיִם.",
+   "translit": "Tzohorayim.",
+   "en": "Noon.",
+   "img": "assets/books/book27/BOOK27_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p01.mp3",
+    "m": "audio/m/israeli/book/book27-p01.mp3"
+   },
+   "illustration": "a busy lunch street, two food stands side by side",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "רוֹנִי רָעֵב.",
+   "translit": "Roni ra'ev.",
+   "en": "Roni is hungry.",
+   "img": "assets/books/book27/BOOK27_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p02.mp3",
+    "m": "audio/m/israeli/book/book27-p02.mp3"
+   },
+   "illustration": "a man clutching his stomach dramatically",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "פָלָאפֶל אוֹ שַׁוַּארְמָה?",
+   "translit": "Falafel o shawarma?",
+   "en": "Falafel or shawarma?",
+   "img": "assets/books/book27/BOOK27_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p03.mp3",
+    "m": "audio/m/israeli/book/book27-p03.mp3"
+   },
+   "illustration": "the two signs, one green, one red",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הַפָלָאפֶל זוֹל.",
+   "translit": "Ha-falafel zol.",
+   "en": "The falafel is cheap.",
+   "img": "assets/books/book27/BOOK27_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p04.mp3",
+    "m": "audio/m/israeli/book/book27-p04.mp3"
+   },
+   "illustration": "a price sign, a smiling vendor frying balls",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַשַּׁוַּארְמָה טְעִימָה.",
+   "translit": "Ha-shawarma te'imah.",
+   "en": "The shawarma is tasty.",
+   "img": "assets/books/book27/BOOK27_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p05.mp3",
+    "m": "audio/m/israeli/book/book27-p05.mp3"
+   },
+   "illustration": "meat turning on a spit, a knife shaving slices",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "רוֹנִי חוֹשֵׁב.",
+   "translit": "Roni choshev.",
+   "en": "Roni thinks.",
+   "img": "assets/books/book27/BOOK27_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p06.mp3",
+    "m": "audio/m/israeli/book/book27-p06.mp3"
+   },
+   "illustration": "the man frozen between the two stands, people passing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הוּא חוֹשֵׁב עוֹד.",
+   "translit": "Hu choshev od.",
+   "en": "He thinks more.",
+   "img": "assets/books/book27/BOOK27_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p07.mp3",
+    "m": "audio/m/israeli/book/book27-p07.mp3"
+   },
+   "illustration": "a queue forming behind him, annoyed faces",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"נוּ, אַחִי!\"",
+   "translit": "\"Nu, achi!\"",
+   "en": "\"Come on, man!\"",
+   "img": "assets/books/book27/BOOK27_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p08.mp3",
+    "m": "audio/m/israeli/book/book27-p08.mp3"
+   },
+   "illustration": "a man behind him throwing up his hands",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"פָלָאפֶל. לֹא, שַׁוַּארְמָה.\"",
+   "translit": "\"Falafel. Lo, shawarma.\"",
+   "en": "\"Falafel. No, shawarma.\"",
+   "img": "assets/books/book27/BOOK27_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p09.mp3",
+    "m": "audio/m/israeli/book/book27-p09.mp3"
+   },
+   "illustration": "the man pointing left, then right",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַמּוֹכֵר צוֹחֵק.",
+   "translit": "Ha-mocher tzochek.",
+   "en": "The vendor laughs.",
+   "img": "assets/books/book27/BOOK27_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p10.mp3",
+    "m": "audio/m/israeli/book/book27-p10.mp3"
+   },
+   "illustration": "the vendor leaning on the counter, amused",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"חֲצִי חֲצִי?\"",
+   "translit": "\"Chatzi chatzi?\"",
+   "en": "\"Half and half?\"",
+   "img": "assets/books/book27/BOOK27_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p11.mp3",
+    "m": "audio/m/israeli/book/book27-p11.mp3"
+   },
+   "illustration": "the vendor holding a pita with both fillings",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "רוֹנִי שָׂמֵחַ. כֻּלָּם שְׂמֵחִים.",
+   "translit": "Roni sameach. Kulam smechim.",
+   "en": "Roni is happy. Everyone is happy.",
+   "img": "assets/books/book27/BOOK27_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book27-p12.mp3",
+    "m": "audio/m/israeli/book/book27-p12.mp3"
+   },
+   "illustration": "the man biting the pita, the queue finally moving",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

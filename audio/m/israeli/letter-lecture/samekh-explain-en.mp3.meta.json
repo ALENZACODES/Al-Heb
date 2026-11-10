@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Samekh — SAH-mekh. Sound: S as in sun. Shape hook: closed round life ring. Tip: Smoothly curved closed loop unlike square final Mem or open folded Mem; do not mix it up with Final Mem, Mem, Tet.",
+ "inputSha256": "edde8f86da66d40172dba914dedfe6b956bb8a9e510a57e3507782ee56ecc95a",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

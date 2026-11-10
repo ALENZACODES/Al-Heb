@@ -1,0 +1,8 @@
+# Keeps the SHA-pinned actions in .github/workflows current. Each update arrives as a pull request that changes the
+# commit SHA and the version comment together, so nothing moves without review.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: monthly }
+    open-pull-requests-limit: 5

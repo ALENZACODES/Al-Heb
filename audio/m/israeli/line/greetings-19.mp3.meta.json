@@ -1,0 +1,18 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "נָעִים מְאֹד",
+ "inputSha256": "a391481072ae8b246e64a1eb1f4575936b8f9307b9309a76a6b748ec9ccad981",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "נָעִים מְאֹד",
+ "stitchedFrom": [
+  "audio/m/israeli/word/tug-pleasant_disgusting-1.mp3",
+  "audio/m/israeli/word/ashrei-145-1-3-w19.mp3"
+ ]
+}

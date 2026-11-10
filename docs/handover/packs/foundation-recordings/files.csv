@@ -1,0 +1,729 @@
+path,file,tradition,voice,kind,id,read_this,english,phonetic
+audio/f/ashkenazi/letter/alef-sound.mp3,alef-sound.mp3,ashkenazi,f,letter,alef-sound,א,Silent letter glottal-stop practice for Alef,ʔ
+audio/f/ashkenazi/letter/alef.mp3,alef.mp3,ashkenazi,f,letter,alef,אָלֶף,Hebrew letter Alef,alef
+audio/f/ashkenazi/letter/ayin-sound.mp3,ayin-sound.mp3,ashkenazi,f,letter,ayin-sound,ע,Silent letter glottal-stop practice for Ayin,ʔ
+audio/f/ashkenazi/letter/ayin.mp3,ayin.mp3,ashkenazi,f,letter,ayin,עַיִן,Hebrew letter Ayin,ayin
+audio/f/ashkenazi/letter/bet-sound.mp3,bet-sound.mp3,ashkenazi,f,letter,bet-sound,ב,Sound practice for Bet,b
+audio/f/ashkenazi/letter/bet.mp3,bet.mp3,ashkenazi,f,letter,bet,בֵּית,Hebrew letter Bet,beit
+audio/f/ashkenazi/letter/chet-sound.mp3,chet-sound.mp3,ashkenazi,f,letter,chet-sound,ח,Sound practice for Chet,χ
+audio/f/ashkenazi/letter/chet.mp3,chet.mp3,ashkenazi,f,letter,chet,חֵית,Hebrew letter Chet,cheit
+audio/f/ashkenazi/letter/dalet-sound.mp3,dalet-sound.mp3,ashkenazi,f,letter,dalet-sound,ד,Sound practice for Dalet,d
+audio/f/ashkenazi/letter/dalet.mp3,dalet.mp3,ashkenazi,f,letter,dalet,דָּלֶת,Hebrew letter Dalet,dalet
+audio/f/ashkenazi/letter/fe-sound.mp3,fe-sound.mp3,ashkenazi,f,letter,fe-sound,פ,Sound practice for Fe,f
+audio/f/ashkenazi/letter/fe.mp3,fe.mp3,ashkenazi,f,letter,fe,פֵא,Hebrew letter Fe,fe
+audio/f/ashkenazi/letter/gimel-sound.mp3,gimel-sound.mp3,ashkenazi,f,letter,gimel-sound,ג,Sound practice for Gimel,ɡ
+audio/f/ashkenazi/letter/gimel.mp3,gimel.mp3,ashkenazi,f,letter,gimel,גִּימֶל,Hebrew letter Gimel,gimel
+audio/f/ashkenazi/letter/he-sound.mp3,he-sound.mp3,ashkenazi,f,letter,he-sound,ה,Sound practice for He,h
+audio/f/ashkenazi/letter/he.mp3,he.mp3,ashkenazi,f,letter,he,הֵא,Hebrew letter He,he
+audio/f/ashkenazi/letter/kaf-final.mp3,kaf-final.mp3,ashkenazi,f,letter,kaf-final,כַּף סוֹפִית,Final-form Hebrew letter Kaf,kaf sofit
+audio/f/ashkenazi/letter/kaf-sound.mp3,kaf-sound.mp3,ashkenazi,f,letter,kaf-sound,כ,Sound practice for Kaf,k
+audio/f/ashkenazi/letter/kaf.mp3,kaf.mp3,ashkenazi,f,letter,kaf,כַּף,Hebrew letter Kaf,kaf
+audio/f/ashkenazi/letter/khaf-sound.mp3,khaf-sound.mp3,ashkenazi,f,letter,khaf-sound,כ,Sound practice for Khaf,χ
+audio/f/ashkenazi/letter/khaf.mp3,khaf.mp3,ashkenazi,f,letter,khaf,כַף,Hebrew letter Khaf,khaf
+audio/f/ashkenazi/letter/lamed-sound.mp3,lamed-sound.mp3,ashkenazi,f,letter,lamed-sound,ל,Sound practice for Lamed,l
+audio/f/ashkenazi/letter/lamed.mp3,lamed.mp3,ashkenazi,f,letter,lamed,לָמֶד,Hebrew letter Lamed,lamed
+audio/f/ashkenazi/letter/mem-final.mp3,mem-final.mp3,ashkenazi,f,letter,mem-final,מֵם סוֹפִית,Final-form Hebrew letter Mem,mem sofit
+audio/f/ashkenazi/letter/mem-sound.mp3,mem-sound.mp3,ashkenazi,f,letter,mem-sound,מ,Sound practice for Mem,m
+audio/f/ashkenazi/letter/mem.mp3,mem.mp3,ashkenazi,f,letter,mem,מֵם,Hebrew letter Mem,mem
+audio/f/ashkenazi/letter/nun-final.mp3,nun-final.mp3,ashkenazi,f,letter,nun-final,נוּן סוֹפִית,Final-form Hebrew letter Nun,nun sofit
+audio/f/ashkenazi/letter/nun-sound.mp3,nun-sound.mp3,ashkenazi,f,letter,nun-sound,נ,Sound practice for Nun,n
+audio/f/ashkenazi/letter/nun.mp3,nun.mp3,ashkenazi,f,letter,nun,נוּן,Hebrew letter Nun,nun
+audio/f/ashkenazi/letter/pe-final.mp3,pe-final.mp3,ashkenazi,f,letter,pe-final,פֵּא סוֹפִית,Final-form Hebrew letter Pe,pe sofit
+audio/f/ashkenazi/letter/pe-sound.mp3,pe-sound.mp3,ashkenazi,f,letter,pe-sound,פ,Sound practice for Pe,p
+audio/f/ashkenazi/letter/pe.mp3,pe.mp3,ashkenazi,f,letter,pe,פֵּא,Hebrew letter Pe,pe
+audio/f/ashkenazi/letter/qof-sound.mp3,qof-sound.mp3,ashkenazi,f,letter,qof-sound,ק,Sound practice for Qof,k
+audio/f/ashkenazi/letter/qof.mp3,qof.mp3,ashkenazi,f,letter,qof,קוֹף,Hebrew letter Qof,kof
+audio/f/ashkenazi/letter/resh-sound.mp3,resh-sound.mp3,ashkenazi,f,letter,resh-sound,ר,Sound practice for Resh,ʁ
+audio/f/ashkenazi/letter/resh.mp3,resh.mp3,ashkenazi,f,letter,resh,רֵישׁ,Hebrew letter Resh,reish
+audio/f/ashkenazi/letter/samekh-sound.mp3,samekh-sound.mp3,ashkenazi,f,letter,samekh-sound,ס,Sound practice for Samekh,s
+audio/f/ashkenazi/letter/samekh.mp3,samekh.mp3,ashkenazi,f,letter,samekh,סָמֶך,Hebrew letter Samekh,samekh
+audio/f/ashkenazi/letter/shin-sound.mp3,shin-sound.mp3,ashkenazi,f,letter,shin-sound,ש,Sound practice for Shin,ʃ
+audio/f/ashkenazi/letter/shin.mp3,shin.mp3,ashkenazi,f,letter,shin,שִׁין,Hebrew letter Shin,shin
+audio/f/ashkenazi/letter/sin-sound.mp3,sin-sound.mp3,ashkenazi,f,letter,sin-sound,שׂ,Sound practice for Sin,s
+audio/f/ashkenazi/letter/sin.mp3,sin.mp3,ashkenazi,f,letter,sin,שִׂין,Hebrew letter Sin,sin
+audio/f/ashkenazi/letter/tav-sound.mp3,tav-sound.mp3,ashkenazi,f,letter,tav-sound,ת,Sound practice for Tav,t
+audio/f/ashkenazi/letter/tav.mp3,tav.mp3,ashkenazi,f,letter,tav,תָּו,Hebrew letter Tav,tav
+audio/f/ashkenazi/letter/tet-sound.mp3,tet-sound.mp3,ashkenazi,f,letter,tet-sound,ט,Sound practice for Tet,t
+audio/f/ashkenazi/letter/tet.mp3,tet.mp3,ashkenazi,f,letter,tet,טֵית,Hebrew letter Tet,teit
+audio/f/ashkenazi/letter/tsadi-final.mp3,tsadi-final.mp3,ashkenazi,f,letter,tsadi-final,צָדִי סוֹפִית,Final-form Hebrew letter Tsadi,tzadi sofit
+audio/f/ashkenazi/letter/tsadi-sound.mp3,tsadi-sound.mp3,ashkenazi,f,letter,tsadi-sound,צ,Sound practice for Tsadi,ts
+audio/f/ashkenazi/letter/tsadi.mp3,tsadi.mp3,ashkenazi,f,letter,tsadi,צָדִי,Hebrew letter Tsadi,tzadi
+audio/f/ashkenazi/letter/vav-sound.mp3,vav-sound.mp3,ashkenazi,f,letter,vav-sound,ו,Sound practice for Vav,v
+audio/f/ashkenazi/letter/vav.mp3,vav.mp3,ashkenazi,f,letter,vav,וָו,Hebrew letter Vav,vav
+audio/f/ashkenazi/letter/vet-sound.mp3,vet-sound.mp3,ashkenazi,f,letter,vet-sound,ב,Sound practice for Vet,v
+audio/f/ashkenazi/letter/vet.mp3,vet.mp3,ashkenazi,f,letter,vet,בֵית,Hebrew letter Vet,veit
+audio/f/ashkenazi/letter/yod-sound.mp3,yod-sound.mp3,ashkenazi,f,letter,yod-sound,י,Sound practice for Yod,j
+audio/f/ashkenazi/letter/yod.mp3,yod.mp3,ashkenazi,f,letter,yod,יוֹד,Hebrew letter Yod,yod
+audio/f/ashkenazi/letter/zayin-sound.mp3,zayin-sound.mp3,ashkenazi,f,letter,zayin-sound,ז,Sound practice for Zayin,z
+audio/f/ashkenazi/letter/zayin.mp3,zayin.mp3,ashkenazi,f,letter,zayin,זַיִן,Hebrew letter Zayin,zayin
+audio/m/ashkenazi/letter/alef-sound.mp3,alef-sound.mp3,ashkenazi,m,letter,alef-sound,א,Silent letter glottal-stop practice for Alef,ʔ
+audio/m/ashkenazi/letter/alef.mp3,alef.mp3,ashkenazi,m,letter,alef,אָלֶף,Hebrew letter Alef,alef
+audio/m/ashkenazi/letter/ayin-sound.mp3,ayin-sound.mp3,ashkenazi,m,letter,ayin-sound,ע,Silent letter glottal-stop practice for Ayin,ʔ
+audio/m/ashkenazi/letter/ayin.mp3,ayin.mp3,ashkenazi,m,letter,ayin,עַיִן,Hebrew letter Ayin,ayin
+audio/m/ashkenazi/letter/bet-sound.mp3,bet-sound.mp3,ashkenazi,m,letter,bet-sound,ב,Sound practice for Bet,b
+audio/m/ashkenazi/letter/bet.mp3,bet.mp3,ashkenazi,m,letter,bet,בֵּית,Hebrew letter Bet,beit
+audio/m/ashkenazi/letter/chet-sound.mp3,chet-sound.mp3,ashkenazi,m,letter,chet-sound,ח,Sound practice for Chet,χ
+audio/m/ashkenazi/letter/chet.mp3,chet.mp3,ashkenazi,m,letter,chet,חֵית,Hebrew letter Chet,cheit
+audio/m/ashkenazi/letter/dalet-sound.mp3,dalet-sound.mp3,ashkenazi,m,letter,dalet-sound,ד,Sound practice for Dalet,d
+audio/m/ashkenazi/letter/dalet.mp3,dalet.mp3,ashkenazi,m,letter,dalet,דָּלֶת,Hebrew letter Dalet,dalet
+audio/m/ashkenazi/letter/fe-sound.mp3,fe-sound.mp3,ashkenazi,m,letter,fe-sound,פ,Sound practice for Fe,f
+audio/m/ashkenazi/letter/fe.mp3,fe.mp3,ashkenazi,m,letter,fe,פֵא,Hebrew letter Fe,fe
+audio/m/ashkenazi/letter/gimel-sound.mp3,gimel-sound.mp3,ashkenazi,m,letter,gimel-sound,ג,Sound practice for Gimel,ɡ
+audio/m/ashkenazi/letter/gimel.mp3,gimel.mp3,ashkenazi,m,letter,gimel,גִּימֶל,Hebrew letter Gimel,gimel
+audio/m/ashkenazi/letter/he-sound.mp3,he-sound.mp3,ashkenazi,m,letter,he-sound,ה,Sound practice for He,h
+audio/m/ashkenazi/letter/he.mp3,he.mp3,ashkenazi,m,letter,he,הֵא,Hebrew letter He,he
+audio/m/ashkenazi/letter/kaf-final.mp3,kaf-final.mp3,ashkenazi,m,letter,kaf-final,כַּף סוֹפִית,Final-form Hebrew letter Kaf,kaf sofit
+audio/m/ashkenazi/letter/kaf-sound.mp3,kaf-sound.mp3,ashkenazi,m,letter,kaf-sound,כ,Sound practice for Kaf,k
+audio/m/ashkenazi/letter/kaf.mp3,kaf.mp3,ashkenazi,m,letter,kaf,כַּף,Hebrew letter Kaf,kaf
+audio/m/ashkenazi/letter/khaf-sound.mp3,khaf-sound.mp3,ashkenazi,m,letter,khaf-sound,כ,Sound practice for Khaf,χ
+audio/m/ashkenazi/letter/khaf.mp3,khaf.mp3,ashkenazi,m,letter,khaf,כַף,Hebrew letter Khaf,khaf
+audio/m/ashkenazi/letter/lamed-sound.mp3,lamed-sound.mp3,ashkenazi,m,letter,lamed-sound,ל,Sound practice for Lamed,l
+audio/m/ashkenazi/letter/lamed.mp3,lamed.mp3,ashkenazi,m,letter,lamed,לָמֶד,Hebrew letter Lamed,lamed
+audio/m/ashkenazi/letter/mem-final.mp3,mem-final.mp3,ashkenazi,m,letter,mem-final,מֵם סוֹפִית,Final-form Hebrew letter Mem,mem sofit
+audio/m/ashkenazi/letter/mem-sound.mp3,mem-sound.mp3,ashkenazi,m,letter,mem-sound,מ,Sound practice for Mem,m
+audio/m/ashkenazi/letter/mem.mp3,mem.mp3,ashkenazi,m,letter,mem,מֵם,Hebrew letter Mem,mem
+audio/m/ashkenazi/letter/nun-final.mp3,nun-final.mp3,ashkenazi,m,letter,nun-final,נוּן סוֹפִית,Final-form Hebrew letter Nun,nun sofit
+audio/m/ashkenazi/letter/nun-sound.mp3,nun-sound.mp3,ashkenazi,m,letter,nun-sound,נ,Sound practice for Nun,n
+audio/m/ashkenazi/letter/nun.mp3,nun.mp3,ashkenazi,m,letter,nun,נוּן,Hebrew letter Nun,nun
+audio/m/ashkenazi/letter/pe-final.mp3,pe-final.mp3,ashkenazi,m,letter,pe-final,פֵּא סוֹפִית,Final-form Hebrew letter Pe,pe sofit
+audio/m/ashkenazi/letter/pe-sound.mp3,pe-sound.mp3,ashkenazi,m,letter,pe-sound,פ,Sound practice for Pe,p
+audio/m/ashkenazi/letter/pe.mp3,pe.mp3,ashkenazi,m,letter,pe,פֵּא,Hebrew letter Pe,pe
+audio/m/ashkenazi/letter/qof-sound.mp3,qof-sound.mp3,ashkenazi,m,letter,qof-sound,ק,Sound practice for Qof,k
+audio/m/ashkenazi/letter/qof.mp3,qof.mp3,ashkenazi,m,letter,qof,קוֹף,Hebrew letter Qof,kof
+audio/m/ashkenazi/letter/resh-sound.mp3,resh-sound.mp3,ashkenazi,m,letter,resh-sound,ר,Sound practice for Resh,ʁ
+audio/m/ashkenazi/letter/resh.mp3,resh.mp3,ashkenazi,m,letter,resh,רֵישׁ,Hebrew letter Resh,reish
+audio/m/ashkenazi/letter/samekh-sound.mp3,samekh-sound.mp3,ashkenazi,m,letter,samekh-sound,ס,Sound practice for Samekh,s
+audio/m/ashkenazi/letter/samekh.mp3,samekh.mp3,ashkenazi,m,letter,samekh,סָמֶך,Hebrew letter Samekh,samekh
+audio/m/ashkenazi/letter/shin-sound.mp3,shin-sound.mp3,ashkenazi,m,letter,shin-sound,ש,Sound practice for Shin,ʃ
+audio/m/ashkenazi/letter/shin.mp3,shin.mp3,ashkenazi,m,letter,shin,שִׁין,Hebrew letter Shin,shin
+audio/m/ashkenazi/letter/sin-sound.mp3,sin-sound.mp3,ashkenazi,m,letter,sin-sound,שׂ,Sound practice for Sin,s
+audio/m/ashkenazi/letter/sin.mp3,sin.mp3,ashkenazi,m,letter,sin,שִׂין,Hebrew letter Sin,sin
+audio/m/ashkenazi/letter/tav-sound.mp3,tav-sound.mp3,ashkenazi,m,letter,tav-sound,ת,Sound practice for Tav,t
+audio/m/ashkenazi/letter/tav.mp3,tav.mp3,ashkenazi,m,letter,tav,תָּו,Hebrew letter Tav,tav
+audio/m/ashkenazi/letter/tet-sound.mp3,tet-sound.mp3,ashkenazi,m,letter,tet-sound,ט,Sound practice for Tet,t
+audio/m/ashkenazi/letter/tet.mp3,tet.mp3,ashkenazi,m,letter,tet,טֵית,Hebrew letter Tet,teit
+audio/m/ashkenazi/letter/tsadi-final.mp3,tsadi-final.mp3,ashkenazi,m,letter,tsadi-final,צָדִי סוֹפִית,Final-form Hebrew letter Tsadi,tzadi sofit
+audio/m/ashkenazi/letter/tsadi-sound.mp3,tsadi-sound.mp3,ashkenazi,m,letter,tsadi-sound,צ,Sound practice for Tsadi,ts
+audio/m/ashkenazi/letter/tsadi.mp3,tsadi.mp3,ashkenazi,m,letter,tsadi,צָדִי,Hebrew letter Tsadi,tzadi
+audio/m/ashkenazi/letter/vav-sound.mp3,vav-sound.mp3,ashkenazi,m,letter,vav-sound,ו,Sound practice for Vav,v
+audio/m/ashkenazi/letter/vav.mp3,vav.mp3,ashkenazi,m,letter,vav,וָו,Hebrew letter Vav,vav
+audio/m/ashkenazi/letter/vet-sound.mp3,vet-sound.mp3,ashkenazi,m,letter,vet-sound,ב,Sound practice for Vet,v
+audio/m/ashkenazi/letter/vet.mp3,vet.mp3,ashkenazi,m,letter,vet,בֵית,Hebrew letter Vet,veit
+audio/m/ashkenazi/letter/yod-sound.mp3,yod-sound.mp3,ashkenazi,m,letter,yod-sound,י,Sound practice for Yod,j
+audio/m/ashkenazi/letter/yod.mp3,yod.mp3,ashkenazi,m,letter,yod,יוֹד,Hebrew letter Yod,yod
+audio/m/ashkenazi/letter/zayin-sound.mp3,zayin-sound.mp3,ashkenazi,m,letter,zayin-sound,ז,Sound practice for Zayin,z
+audio/m/ashkenazi/letter/zayin.mp3,zayin.mp3,ashkenazi,m,letter,zayin,זַיִן,Hebrew letter Zayin,zayin
+audio/f/ashkenazi/syllable/alef-a.mp3,alef-a.mp3,ashkenazi,f,syllable,alef-a,אַ,Reading practice: Alef A,a
+audio/f/ashkenazi/syllable/alef-e.mp3,alef-e.mp3,ashkenazi,f,syllable,alef-e,אֶ,Reading practice: Alef E,e
+audio/f/ashkenazi/syllable/alef-i.mp3,alef-i.mp3,ashkenazi,f,syllable,alef-i,אִ,Reading practice: Alef I,i
+audio/f/ashkenazi/syllable/alef-o.mp3,alef-o.mp3,ashkenazi,f,syllable,alef-o,אֹ,Reading practice: Alef O,o
+audio/f/ashkenazi/syllable/alef-u.mp3,alef-u.mp3,ashkenazi,f,syllable,alef-u,אֻ,Reading practice: Alef U,u
+audio/f/ashkenazi/syllable/ayin-a.mp3,ayin-a.mp3,ashkenazi,f,syllable,ayin-a,עַ,Reading practice: Ayin A,a
+audio/f/ashkenazi/syllable/ayin-e.mp3,ayin-e.mp3,ashkenazi,f,syllable,ayin-e,עֶ,Reading practice: Ayin E,e
+audio/f/ashkenazi/syllable/ayin-i.mp3,ayin-i.mp3,ashkenazi,f,syllable,ayin-i,עִ,Reading practice: Ayin I,i
+audio/f/ashkenazi/syllable/ayin-o.mp3,ayin-o.mp3,ashkenazi,f,syllable,ayin-o,עֹ,Reading practice: Ayin O,o
+audio/f/ashkenazi/syllable/ayin-u.mp3,ayin-u.mp3,ashkenazi,f,syllable,ayin-u,עֻ,Reading practice: Ayin U,u
+audio/f/ashkenazi/syllable/bet-a.mp3,bet-a.mp3,ashkenazi,f,syllable,bet-a,בַּ,Reading practice: Bet A,ba
+audio/f/ashkenazi/syllable/bet-e.mp3,bet-e.mp3,ashkenazi,f,syllable,bet-e,בֶּ,Reading practice: Bet E,be
+audio/f/ashkenazi/syllable/bet-i.mp3,bet-i.mp3,ashkenazi,f,syllable,bet-i,בִּ,Reading practice: Bet I,bi
+audio/f/ashkenazi/syllable/bet-o.mp3,bet-o.mp3,ashkenazi,f,syllable,bet-o,בֹּ,Reading practice: Bet O,bo
+audio/f/ashkenazi/syllable/bet-u.mp3,bet-u.mp3,ashkenazi,f,syllable,bet-u,בֻּ,Reading practice: Bet U,bu
+audio/f/ashkenazi/syllable/chet-a.mp3,chet-a.mp3,ashkenazi,f,syllable,chet-a,חַ,Reading practice: Chet A,cha
+audio/f/ashkenazi/syllable/chet-e.mp3,chet-e.mp3,ashkenazi,f,syllable,chet-e,חֶ,Reading practice: Chet E,che
+audio/f/ashkenazi/syllable/chet-i.mp3,chet-i.mp3,ashkenazi,f,syllable,chet-i,חִ,Reading practice: Chet I,chi
+audio/f/ashkenazi/syllable/chet-o.mp3,chet-o.mp3,ashkenazi,f,syllable,chet-o,חֹ,Reading practice: Chet O,cho
+audio/f/ashkenazi/syllable/chet-u.mp3,chet-u.mp3,ashkenazi,f,syllable,chet-u,חֻ,Reading practice: Chet U,chu
+audio/f/ashkenazi/syllable/dalet-a.mp3,dalet-a.mp3,ashkenazi,f,syllable,dalet-a,דַ,Reading practice: Dalet A,da
+audio/f/ashkenazi/syllable/dalet-e.mp3,dalet-e.mp3,ashkenazi,f,syllable,dalet-e,דֶ,Reading practice: Dalet E,de
+audio/f/ashkenazi/syllable/dalet-i.mp3,dalet-i.mp3,ashkenazi,f,syllable,dalet-i,דִ,Reading practice: Dalet I,di
+audio/f/ashkenazi/syllable/dalet-o.mp3,dalet-o.mp3,ashkenazi,f,syllable,dalet-o,דֹ,Reading practice: Dalet O,do
+audio/f/ashkenazi/syllable/dalet-u.mp3,dalet-u.mp3,ashkenazi,f,syllable,dalet-u,דֻ,Reading practice: Dalet U,du
+audio/f/ashkenazi/syllable/gimel-a.mp3,gimel-a.mp3,ashkenazi,f,syllable,gimel-a,גַ,Reading practice: Gimel A,ga
+audio/f/ashkenazi/syllable/gimel-e.mp3,gimel-e.mp3,ashkenazi,f,syllable,gimel-e,גֶ,Reading practice: Gimel E,ge
+audio/f/ashkenazi/syllable/gimel-i.mp3,gimel-i.mp3,ashkenazi,f,syllable,gimel-i,גִ,Reading practice: Gimel I,gi
+audio/f/ashkenazi/syllable/gimel-o.mp3,gimel-o.mp3,ashkenazi,f,syllable,gimel-o,גֹ,Reading practice: Gimel O,go
+audio/f/ashkenazi/syllable/gimel-u.mp3,gimel-u.mp3,ashkenazi,f,syllable,gimel-u,גֻ,Reading practice: Gimel U,gu
+audio/f/ashkenazi/syllable/he-a.mp3,he-a.mp3,ashkenazi,f,syllable,he-a,הַ,Reading practice: He A,ha
+audio/f/ashkenazi/syllable/he-e.mp3,he-e.mp3,ashkenazi,f,syllable,he-e,הֶ,Reading practice: He E,he
+audio/f/ashkenazi/syllable/he-i.mp3,he-i.mp3,ashkenazi,f,syllable,he-i,הִ,Reading practice: He I,hi
+audio/f/ashkenazi/syllable/he-o.mp3,he-o.mp3,ashkenazi,f,syllable,he-o,הֹ,Reading practice: He O,ho
+audio/f/ashkenazi/syllable/he-u.mp3,he-u.mp3,ashkenazi,f,syllable,he-u,הֻ,Reading practice: He U,hu
+audio/f/ashkenazi/syllable/kaf-a.mp3,kaf-a.mp3,ashkenazi,f,syllable,kaf-a,כַּ,Reading practice: Kaf A,ka
+audio/f/ashkenazi/syllable/kaf-e.mp3,kaf-e.mp3,ashkenazi,f,syllable,kaf-e,כֶּ,Reading practice: Kaf E,ke
+audio/f/ashkenazi/syllable/kaf-i.mp3,kaf-i.mp3,ashkenazi,f,syllable,kaf-i,כִּ,Reading practice: Kaf I,ki
+audio/f/ashkenazi/syllable/kaf-o.mp3,kaf-o.mp3,ashkenazi,f,syllable,kaf-o,כֹּ,Reading practice: Kaf O,ko
+audio/f/ashkenazi/syllable/kaf-u.mp3,kaf-u.mp3,ashkenazi,f,syllable,kaf-u,כֻּ,Reading practice: Kaf U,ku
+audio/f/ashkenazi/syllable/lamed-a.mp3,lamed-a.mp3,ashkenazi,f,syllable,lamed-a,לַ,Reading practice: Lamed A,la
+audio/f/ashkenazi/syllable/lamed-e.mp3,lamed-e.mp3,ashkenazi,f,syllable,lamed-e,לֶ,Reading practice: Lamed E,le
+audio/f/ashkenazi/syllable/lamed-i.mp3,lamed-i.mp3,ashkenazi,f,syllable,lamed-i,לִ,Reading practice: Lamed I,li
+audio/f/ashkenazi/syllable/lamed-o.mp3,lamed-o.mp3,ashkenazi,f,syllable,lamed-o,לֹ,Reading practice: Lamed O,lo
+audio/f/ashkenazi/syllable/lamed-u.mp3,lamed-u.mp3,ashkenazi,f,syllable,lamed-u,לֻ,Reading practice: Lamed U,lu
+audio/f/ashkenazi/syllable/mem-a.mp3,mem-a.mp3,ashkenazi,f,syllable,mem-a,מַ,Reading practice: Mem A,ma
+audio/f/ashkenazi/syllable/mem-e.mp3,mem-e.mp3,ashkenazi,f,syllable,mem-e,מֶ,Reading practice: Mem E,me
+audio/f/ashkenazi/syllable/mem-i.mp3,mem-i.mp3,ashkenazi,f,syllable,mem-i,מִ,Reading practice: Mem I,mi
+audio/f/ashkenazi/syllable/mem-o.mp3,mem-o.mp3,ashkenazi,f,syllable,mem-o,מֹ,Reading practice: Mem O,mo
+audio/f/ashkenazi/syllable/mem-u.mp3,mem-u.mp3,ashkenazi,f,syllable,mem-u,מֻ,Reading practice: Mem U,mu
+audio/f/ashkenazi/syllable/nun-a.mp3,nun-a.mp3,ashkenazi,f,syllable,nun-a,נַ,Reading practice: Nun A,na
+audio/f/ashkenazi/syllable/nun-e.mp3,nun-e.mp3,ashkenazi,f,syllable,nun-e,נֶ,Reading practice: Nun E,ne
+audio/f/ashkenazi/syllable/nun-i.mp3,nun-i.mp3,ashkenazi,f,syllable,nun-i,נִ,Reading practice: Nun I,ni
+audio/f/ashkenazi/syllable/nun-o.mp3,nun-o.mp3,ashkenazi,f,syllable,nun-o,נֹ,Reading practice: Nun O,no
+audio/f/ashkenazi/syllable/nun-u.mp3,nun-u.mp3,ashkenazi,f,syllable,nun-u,נֻ,Reading practice: Nun U,nu
+audio/f/ashkenazi/syllable/pe-a.mp3,pe-a.mp3,ashkenazi,f,syllable,pe-a,פַּ,Reading practice: Pe A,pa
+audio/f/ashkenazi/syllable/pe-e.mp3,pe-e.mp3,ashkenazi,f,syllable,pe-e,פֶּ,Reading practice: Pe E,pe
+audio/f/ashkenazi/syllable/pe-i.mp3,pe-i.mp3,ashkenazi,f,syllable,pe-i,פִּ,Reading practice: Pe I,pi
+audio/f/ashkenazi/syllable/pe-o.mp3,pe-o.mp3,ashkenazi,f,syllable,pe-o,פֹּ,Reading practice: Pe O,po
+audio/f/ashkenazi/syllable/pe-u.mp3,pe-u.mp3,ashkenazi,f,syllable,pe-u,פֻּ,Reading practice: Pe U,pu
+audio/f/ashkenazi/syllable/qof-a.mp3,qof-a.mp3,ashkenazi,f,syllable,qof-a,קַ,Reading practice: Qof A,ka
+audio/f/ashkenazi/syllable/qof-e.mp3,qof-e.mp3,ashkenazi,f,syllable,qof-e,קֶ,Reading practice: Qof E,ke
+audio/f/ashkenazi/syllable/qof-i.mp3,qof-i.mp3,ashkenazi,f,syllable,qof-i,קִ,Reading practice: Qof I,ki
+audio/f/ashkenazi/syllable/qof-o.mp3,qof-o.mp3,ashkenazi,f,syllable,qof-o,קֹ,Reading practice: Qof O,ko
+audio/f/ashkenazi/syllable/qof-u.mp3,qof-u.mp3,ashkenazi,f,syllable,qof-u,קֻ,Reading practice: Qof U,ku
+audio/f/ashkenazi/syllable/resh-a.mp3,resh-a.mp3,ashkenazi,f,syllable,resh-a,רַ,Reading practice: Resh A,ra
+audio/f/ashkenazi/syllable/resh-e.mp3,resh-e.mp3,ashkenazi,f,syllable,resh-e,רֶ,Reading practice: Resh E,re
+audio/f/ashkenazi/syllable/resh-i.mp3,resh-i.mp3,ashkenazi,f,syllable,resh-i,רִ,Reading practice: Resh I,ri
+audio/f/ashkenazi/syllable/resh-o.mp3,resh-o.mp3,ashkenazi,f,syllable,resh-o,רֹ,Reading practice: Resh O,ro
+audio/f/ashkenazi/syllable/resh-u.mp3,resh-u.mp3,ashkenazi,f,syllable,resh-u,רֻ,Reading practice: Resh U,ru
+audio/f/ashkenazi/syllable/samekh-a.mp3,samekh-a.mp3,ashkenazi,f,syllable,samekh-a,סַ,Reading practice: Samekh A,sa
+audio/f/ashkenazi/syllable/samekh-e.mp3,samekh-e.mp3,ashkenazi,f,syllable,samekh-e,סֶ,Reading practice: Samekh E,se
+audio/f/ashkenazi/syllable/samekh-i.mp3,samekh-i.mp3,ashkenazi,f,syllable,samekh-i,סִ,Reading practice: Samekh I,si
+audio/f/ashkenazi/syllable/samekh-o.mp3,samekh-o.mp3,ashkenazi,f,syllable,samekh-o,סֹ,Reading practice: Samekh O,so
+audio/f/ashkenazi/syllable/samekh-u.mp3,samekh-u.mp3,ashkenazi,f,syllable,samekh-u,סֻ,Reading practice: Samekh U,su
+audio/f/ashkenazi/syllable/shin-a.mp3,shin-a.mp3,ashkenazi,f,syllable,shin-a,שַׁ,Reading practice: Shin A,sha
+audio/f/ashkenazi/syllable/shin-e.mp3,shin-e.mp3,ashkenazi,f,syllable,shin-e,שֶׁ,Reading practice: Shin E,she
+audio/f/ashkenazi/syllable/shin-i.mp3,shin-i.mp3,ashkenazi,f,syllable,shin-i,שִׁ,Reading practice: Shin I,shi
+audio/f/ashkenazi/syllable/shin-o.mp3,shin-o.mp3,ashkenazi,f,syllable,shin-o,שֹׁ,Reading practice: Shin O,sho
+audio/f/ashkenazi/syllable/shin-u.mp3,shin-u.mp3,ashkenazi,f,syllable,shin-u,שֻׁ,Reading practice: Shin U,shu
+audio/f/ashkenazi/syllable/tav-a.mp3,tav-a.mp3,ashkenazi,f,syllable,tav-a,תַ,Reading practice: Tav A,ta
+audio/f/ashkenazi/syllable/tav-e.mp3,tav-e.mp3,ashkenazi,f,syllable,tav-e,תֶ,Reading practice: Tav E,te
+audio/f/ashkenazi/syllable/tav-i.mp3,tav-i.mp3,ashkenazi,f,syllable,tav-i,תִ,Reading practice: Tav I,ti
+audio/f/ashkenazi/syllable/tav-o.mp3,tav-o.mp3,ashkenazi,f,syllable,tav-o,תֹ,Reading practice: Tav O,to
+audio/f/ashkenazi/syllable/tav-u.mp3,tav-u.mp3,ashkenazi,f,syllable,tav-u,תֻ,Reading practice: Tav U,tu
+audio/f/ashkenazi/syllable/tet-a.mp3,tet-a.mp3,ashkenazi,f,syllable,tet-a,טַ,Reading practice: Tet A,ta
+audio/f/ashkenazi/syllable/tet-e.mp3,tet-e.mp3,ashkenazi,f,syllable,tet-e,טֶ,Reading practice: Tet E,te
+audio/f/ashkenazi/syllable/tet-i.mp3,tet-i.mp3,ashkenazi,f,syllable,tet-i,טִ,Reading practice: Tet I,ti
+audio/f/ashkenazi/syllable/tet-o.mp3,tet-o.mp3,ashkenazi,f,syllable,tet-o,טֹ,Reading practice: Tet O,to
+audio/f/ashkenazi/syllable/tet-u.mp3,tet-u.mp3,ashkenazi,f,syllable,tet-u,טֻ,Reading practice: Tet U,tu
+audio/f/ashkenazi/syllable/tsadi-a.mp3,tsadi-a.mp3,ashkenazi,f,syllable,tsadi-a,צַ,Reading practice: Tsadi A,tza
+audio/f/ashkenazi/syllable/tsadi-e.mp3,tsadi-e.mp3,ashkenazi,f,syllable,tsadi-e,צֶ,Reading practice: Tsadi E,tze
+audio/f/ashkenazi/syllable/tsadi-i.mp3,tsadi-i.mp3,ashkenazi,f,syllable,tsadi-i,צִ,Reading practice: Tsadi I,tzi
+audio/f/ashkenazi/syllable/tsadi-o.mp3,tsadi-o.mp3,ashkenazi,f,syllable,tsadi-o,צֹ,Reading practice: Tsadi O,tzo
+audio/f/ashkenazi/syllable/tsadi-u.mp3,tsadi-u.mp3,ashkenazi,f,syllable,tsadi-u,צֻ,Reading practice: Tsadi U,tzu
+audio/f/ashkenazi/syllable/vav-a.mp3,vav-a.mp3,ashkenazi,f,syllable,vav-a,וַ,Reading practice: Vav A,va
+audio/f/ashkenazi/syllable/vav-e.mp3,vav-e.mp3,ashkenazi,f,syllable,vav-e,וֶ,Reading practice: Vav E,ve
+audio/f/ashkenazi/syllable/vav-i.mp3,vav-i.mp3,ashkenazi,f,syllable,vav-i,וִ,Reading practice: Vav I,vi
+audio/f/ashkenazi/syllable/vav-o.mp3,vav-o.mp3,ashkenazi,f,syllable,vav-o,וֹ,Reading practice: Vav O,vo
+audio/f/ashkenazi/syllable/vav-u.mp3,vav-u.mp3,ashkenazi,f,syllable,vav-u,וֻ,Reading practice: Vav U,vu
+audio/f/ashkenazi/syllable/yod-a.mp3,yod-a.mp3,ashkenazi,f,syllable,yod-a,יַ,Reading practice: Yod A,ya
+audio/f/ashkenazi/syllable/yod-e.mp3,yod-e.mp3,ashkenazi,f,syllable,yod-e,יֶ,Reading practice: Yod E,ye
+audio/f/ashkenazi/syllable/yod-i.mp3,yod-i.mp3,ashkenazi,f,syllable,yod-i,יִ,Reading practice: Yod I,yi
+audio/f/ashkenazi/syllable/yod-o.mp3,yod-o.mp3,ashkenazi,f,syllable,yod-o,יֹ,Reading practice: Yod O,yo
+audio/f/ashkenazi/syllable/yod-u.mp3,yod-u.mp3,ashkenazi,f,syllable,yod-u,יֻ,Reading practice: Yod U,yu
+audio/f/ashkenazi/syllable/zayin-a.mp3,zayin-a.mp3,ashkenazi,f,syllable,zayin-a,זַ,Reading practice: Zayin A,za
+audio/f/ashkenazi/syllable/zayin-e.mp3,zayin-e.mp3,ashkenazi,f,syllable,zayin-e,זֶ,Reading practice: Zayin E,ze
+audio/f/ashkenazi/syllable/zayin-i.mp3,zayin-i.mp3,ashkenazi,f,syllable,zayin-i,זִ,Reading practice: Zayin I,zi
+audio/f/ashkenazi/syllable/zayin-o.mp3,zayin-o.mp3,ashkenazi,f,syllable,zayin-o,זֹ,Reading practice: Zayin O,zo
+audio/f/ashkenazi/syllable/zayin-u.mp3,zayin-u.mp3,ashkenazi,f,syllable,zayin-u,זֻ,Reading practice: Zayin U,zu
+audio/m/ashkenazi/syllable/alef-a.mp3,alef-a.mp3,ashkenazi,m,syllable,alef-a,אַ,Reading practice: Alef A,a
+audio/m/ashkenazi/syllable/alef-e.mp3,alef-e.mp3,ashkenazi,m,syllable,alef-e,אֶ,Reading practice: Alef E,e
+audio/m/ashkenazi/syllable/alef-i.mp3,alef-i.mp3,ashkenazi,m,syllable,alef-i,אִ,Reading practice: Alef I,i
+audio/m/ashkenazi/syllable/alef-o.mp3,alef-o.mp3,ashkenazi,m,syllable,alef-o,אֹ,Reading practice: Alef O,o
+audio/m/ashkenazi/syllable/alef-u.mp3,alef-u.mp3,ashkenazi,m,syllable,alef-u,אֻ,Reading practice: Alef U,u
+audio/m/ashkenazi/syllable/ayin-a.mp3,ayin-a.mp3,ashkenazi,m,syllable,ayin-a,עַ,Reading practice: Ayin A,a
+audio/m/ashkenazi/syllable/ayin-e.mp3,ayin-e.mp3,ashkenazi,m,syllable,ayin-e,עֶ,Reading practice: Ayin E,e
+audio/m/ashkenazi/syllable/ayin-i.mp3,ayin-i.mp3,ashkenazi,m,syllable,ayin-i,עִ,Reading practice: Ayin I,i
+audio/m/ashkenazi/syllable/ayin-o.mp3,ayin-o.mp3,ashkenazi,m,syllable,ayin-o,עֹ,Reading practice: Ayin O,o
+audio/m/ashkenazi/syllable/ayin-u.mp3,ayin-u.mp3,ashkenazi,m,syllable,ayin-u,עֻ,Reading practice: Ayin U,u
+audio/m/ashkenazi/syllable/bet-a.mp3,bet-a.mp3,ashkenazi,m,syllable,bet-a,בַּ,Reading practice: Bet A,ba
+audio/m/ashkenazi/syllable/bet-e.mp3,bet-e.mp3,ashkenazi,m,syllable,bet-e,בֶּ,Reading practice: Bet E,be
+audio/m/ashkenazi/syllable/bet-i.mp3,bet-i.mp3,ashkenazi,m,syllable,bet-i,בִּ,Reading practice: Bet I,bi
+audio/m/ashkenazi/syllable/bet-o.mp3,bet-o.mp3,ashkenazi,m,syllable,bet-o,בֹּ,Reading practice: Bet O,bo
+audio/m/ashkenazi/syllable/bet-u.mp3,bet-u.mp3,ashkenazi,m,syllable,bet-u,בֻּ,Reading practice: Bet U,bu
+audio/m/ashkenazi/syllable/chet-a.mp3,chet-a.mp3,ashkenazi,m,syllable,chet-a,חַ,Reading practice: Chet A,cha
+audio/m/ashkenazi/syllable/chet-e.mp3,chet-e.mp3,ashkenazi,m,syllable,chet-e,חֶ,Reading practice: Chet E,che
+audio/m/ashkenazi/syllable/chet-i.mp3,chet-i.mp3,ashkenazi,m,syllable,chet-i,חִ,Reading practice: Chet I,chi
+audio/m/ashkenazi/syllable/chet-o.mp3,chet-o.mp3,ashkenazi,m,syllable,chet-o,חֹ,Reading practice: Chet O,cho
+audio/m/ashkenazi/syllable/chet-u.mp3,chet-u.mp3,ashkenazi,m,syllable,chet-u,חֻ,Reading practice: Chet U,chu
+audio/m/ashkenazi/syllable/dalet-a.mp3,dalet-a.mp3,ashkenazi,m,syllable,dalet-a,דַ,Reading practice: Dalet A,da
+audio/m/ashkenazi/syllable/dalet-e.mp3,dalet-e.mp3,ashkenazi,m,syllable,dalet-e,דֶ,Reading practice: Dalet E,de
+audio/m/ashkenazi/syllable/dalet-i.mp3,dalet-i.mp3,ashkenazi,m,syllable,dalet-i,דִ,Reading practice: Dalet I,di
+audio/m/ashkenazi/syllable/dalet-o.mp3,dalet-o.mp3,ashkenazi,m,syllable,dalet-o,דֹ,Reading practice: Dalet O,do
+audio/m/ashkenazi/syllable/dalet-u.mp3,dalet-u.mp3,ashkenazi,m,syllable,dalet-u,דֻ,Reading practice: Dalet U,du
+audio/m/ashkenazi/syllable/gimel-a.mp3,gimel-a.mp3,ashkenazi,m,syllable,gimel-a,גַ,Reading practice: Gimel A,ga
+audio/m/ashkenazi/syllable/gimel-e.mp3,gimel-e.mp3,ashkenazi,m,syllable,gimel-e,גֶ,Reading practice: Gimel E,ge
+audio/m/ashkenazi/syllable/gimel-i.mp3,gimel-i.mp3,ashkenazi,m,syllable,gimel-i,גִ,Reading practice: Gimel I,gi
+audio/m/ashkenazi/syllable/gimel-o.mp3,gimel-o.mp3,ashkenazi,m,syllable,gimel-o,גֹ,Reading practice: Gimel O,go
+audio/m/ashkenazi/syllable/gimel-u.mp3,gimel-u.mp3,ashkenazi,m,syllable,gimel-u,גֻ,Reading practice: Gimel U,gu
+audio/m/ashkenazi/syllable/he-a.mp3,he-a.mp3,ashkenazi,m,syllable,he-a,הַ,Reading practice: He A,ha
+audio/m/ashkenazi/syllable/he-e.mp3,he-e.mp3,ashkenazi,m,syllable,he-e,הֶ,Reading practice: He E,he
+audio/m/ashkenazi/syllable/he-i.mp3,he-i.mp3,ashkenazi,m,syllable,he-i,הִ,Reading practice: He I,hi
+audio/m/ashkenazi/syllable/he-o.mp3,he-o.mp3,ashkenazi,m,syllable,he-o,הֹ,Reading practice: He O,ho
+audio/m/ashkenazi/syllable/he-u.mp3,he-u.mp3,ashkenazi,m,syllable,he-u,הֻ,Reading practice: He U,hu
+audio/m/ashkenazi/syllable/kaf-a.mp3,kaf-a.mp3,ashkenazi,m,syllable,kaf-a,כַּ,Reading practice: Kaf A,ka
+audio/m/ashkenazi/syllable/kaf-e.mp3,kaf-e.mp3,ashkenazi,m,syllable,kaf-e,כֶּ,Reading practice: Kaf E,ke
+audio/m/ashkenazi/syllable/kaf-i.mp3,kaf-i.mp3,ashkenazi,m,syllable,kaf-i,כִּ,Reading practice: Kaf I,ki
+audio/m/ashkenazi/syllable/kaf-o.mp3,kaf-o.mp3,ashkenazi,m,syllable,kaf-o,כֹּ,Reading practice: Kaf O,ko
+audio/m/ashkenazi/syllable/kaf-u.mp3,kaf-u.mp3,ashkenazi,m,syllable,kaf-u,כֻּ,Reading practice: Kaf U,ku
+audio/m/ashkenazi/syllable/lamed-a.mp3,lamed-a.mp3,ashkenazi,m,syllable,lamed-a,לַ,Reading practice: Lamed A,la
+audio/m/ashkenazi/syllable/lamed-e.mp3,lamed-e.mp3,ashkenazi,m,syllable,lamed-e,לֶ,Reading practice: Lamed E,le
+audio/m/ashkenazi/syllable/lamed-i.mp3,lamed-i.mp3,ashkenazi,m,syllable,lamed-i,לִ,Reading practice: Lamed I,li
+audio/m/ashkenazi/syllable/lamed-o.mp3,lamed-o.mp3,ashkenazi,m,syllable,lamed-o,לֹ,Reading practice: Lamed O,lo
+audio/m/ashkenazi/syllable/lamed-u.mp3,lamed-u.mp3,ashkenazi,m,syllable,lamed-u,לֻ,Reading practice: Lamed U,lu
+audio/m/ashkenazi/syllable/mem-a.mp3,mem-a.mp3,ashkenazi,m,syllable,mem-a,מַ,Reading practice: Mem A,ma
+audio/m/ashkenazi/syllable/mem-e.mp3,mem-e.mp3,ashkenazi,m,syllable,mem-e,מֶ,Reading practice: Mem E,me
+audio/m/ashkenazi/syllable/mem-i.mp3,mem-i.mp3,ashkenazi,m,syllable,mem-i,מִ,Reading practice: Mem I,mi
+audio/m/ashkenazi/syllable/mem-o.mp3,mem-o.mp3,ashkenazi,m,syllable,mem-o,מֹ,Reading practice: Mem O,mo
+audio/m/ashkenazi/syllable/mem-u.mp3,mem-u.mp3,ashkenazi,m,syllable,mem-u,מֻ,Reading practice: Mem U,mu
+audio/m/ashkenazi/syllable/nun-a.mp3,nun-a.mp3,ashkenazi,m,syllable,nun-a,נַ,Reading practice: Nun A,na
+audio/m/ashkenazi/syllable/nun-e.mp3,nun-e.mp3,ashkenazi,m,syllable,nun-e,נֶ,Reading practice: Nun E,ne
+audio/m/ashkenazi/syllable/nun-i.mp3,nun-i.mp3,ashkenazi,m,syllable,nun-i,נִ,Reading practice: Nun I,ni
+audio/m/ashkenazi/syllable/nun-o.mp3,nun-o.mp3,ashkenazi,m,syllable,nun-o,נֹ,Reading practice: Nun O,no
+audio/m/ashkenazi/syllable/nun-u.mp3,nun-u.mp3,ashkenazi,m,syllable,nun-u,נֻ,Reading practice: Nun U,nu
+audio/m/ashkenazi/syllable/pe-a.mp3,pe-a.mp3,ashkenazi,m,syllable,pe-a,פַּ,Reading practice: Pe A,pa
+audio/m/ashkenazi/syllable/pe-e.mp3,pe-e.mp3,ashkenazi,m,syllable,pe-e,פֶּ,Reading practice: Pe E,pe
+audio/m/ashkenazi/syllable/pe-i.mp3,pe-i.mp3,ashkenazi,m,syllable,pe-i,פִּ,Reading practice: Pe I,pi
+audio/m/ashkenazi/syllable/pe-o.mp3,pe-o.mp3,ashkenazi,m,syllable,pe-o,פֹּ,Reading practice: Pe O,po
+audio/m/ashkenazi/syllable/pe-u.mp3,pe-u.mp3,ashkenazi,m,syllable,pe-u,פֻּ,Reading practice: Pe U,pu
+audio/m/ashkenazi/syllable/qof-a.mp3,qof-a.mp3,ashkenazi,m,syllable,qof-a,קַ,Reading practice: Qof A,ka
+audio/m/ashkenazi/syllable/qof-e.mp3,qof-e.mp3,ashkenazi,m,syllable,qof-e,קֶ,Reading practice: Qof E,ke
+audio/m/ashkenazi/syllable/qof-i.mp3,qof-i.mp3,ashkenazi,m,syllable,qof-i,קִ,Reading practice: Qof I,ki
+audio/m/ashkenazi/syllable/qof-o.mp3,qof-o.mp3,ashkenazi,m,syllable,qof-o,קֹ,Reading practice: Qof O,ko
+audio/m/ashkenazi/syllable/qof-u.mp3,qof-u.mp3,ashkenazi,m,syllable,qof-u,קֻ,Reading practice: Qof U,ku
+audio/m/ashkenazi/syllable/resh-a.mp3,resh-a.mp3,ashkenazi,m,syllable,resh-a,רַ,Reading practice: Resh A,ra
+audio/m/ashkenazi/syllable/resh-e.mp3,resh-e.mp3,ashkenazi,m,syllable,resh-e,רֶ,Reading practice: Resh E,re
+audio/m/ashkenazi/syllable/resh-i.mp3,resh-i.mp3,ashkenazi,m,syllable,resh-i,רִ,Reading practice: Resh I,ri
+audio/m/ashkenazi/syllable/resh-o.mp3,resh-o.mp3,ashkenazi,m,syllable,resh-o,רֹ,Reading practice: Resh O,ro
+audio/m/ashkenazi/syllable/resh-u.mp3,resh-u.mp3,ashkenazi,m,syllable,resh-u,רֻ,Reading practice: Resh U,ru
+audio/m/ashkenazi/syllable/samekh-a.mp3,samekh-a.mp3,ashkenazi,m,syllable,samekh-a,סַ,Reading practice: Samekh A,sa
+audio/m/ashkenazi/syllable/samekh-e.mp3,samekh-e.mp3,ashkenazi,m,syllable,samekh-e,סֶ,Reading practice: Samekh E,se
+audio/m/ashkenazi/syllable/samekh-i.mp3,samekh-i.mp3,ashkenazi,m,syllable,samekh-i,סִ,Reading practice: Samekh I,si
+audio/m/ashkenazi/syllable/samekh-o.mp3,samekh-o.mp3,ashkenazi,m,syllable,samekh-o,סֹ,Reading practice: Samekh O,so
+audio/m/ashkenazi/syllable/samekh-u.mp3,samekh-u.mp3,ashkenazi,m,syllable,samekh-u,סֻ,Reading practice: Samekh U,su
+audio/m/ashkenazi/syllable/shin-a.mp3,shin-a.mp3,ashkenazi,m,syllable,shin-a,שַׁ,Reading practice: Shin A,sha
+audio/m/ashkenazi/syllable/shin-e.mp3,shin-e.mp3,ashkenazi,m,syllable,shin-e,שֶׁ,Reading practice: Shin E,she
+audio/m/ashkenazi/syllable/shin-i.mp3,shin-i.mp3,ashkenazi,m,syllable,shin-i,שִׁ,Reading practice: Shin I,shi
+audio/m/ashkenazi/syllable/shin-o.mp3,shin-o.mp3,ashkenazi,m,syllable,shin-o,שֹׁ,Reading practice: Shin O,sho
+audio/m/ashkenazi/syllable/shin-u.mp3,shin-u.mp3,ashkenazi,m,syllable,shin-u,שֻׁ,Reading practice: Shin U,shu
+audio/m/ashkenazi/syllable/tav-a.mp3,tav-a.mp3,ashkenazi,m,syllable,tav-a,תַ,Reading practice: Tav A,ta
+audio/m/ashkenazi/syllable/tav-e.mp3,tav-e.mp3,ashkenazi,m,syllable,tav-e,תֶ,Reading practice: Tav E,te
+audio/m/ashkenazi/syllable/tav-i.mp3,tav-i.mp3,ashkenazi,m,syllable,tav-i,תִ,Reading practice: Tav I,ti
+audio/m/ashkenazi/syllable/tav-o.mp3,tav-o.mp3,ashkenazi,m,syllable,tav-o,תֹ,Reading practice: Tav O,to
+audio/m/ashkenazi/syllable/tav-u.mp3,tav-u.mp3,ashkenazi,m,syllable,tav-u,תֻ,Reading practice: Tav U,tu
+audio/m/ashkenazi/syllable/tet-a.mp3,tet-a.mp3,ashkenazi,m,syllable,tet-a,טַ,Reading practice: Tet A,ta
+audio/m/ashkenazi/syllable/tet-e.mp3,tet-e.mp3,ashkenazi,m,syllable,tet-e,טֶ,Reading practice: Tet E,te
+audio/m/ashkenazi/syllable/tet-i.mp3,tet-i.mp3,ashkenazi,m,syllable,tet-i,טִ,Reading practice: Tet I,ti
+audio/m/ashkenazi/syllable/tet-o.mp3,tet-o.mp3,ashkenazi,m,syllable,tet-o,טֹ,Reading practice: Tet O,to
+audio/m/ashkenazi/syllable/tet-u.mp3,tet-u.mp3,ashkenazi,m,syllable,tet-u,טֻ,Reading practice: Tet U,tu
+audio/m/ashkenazi/syllable/tsadi-a.mp3,tsadi-a.mp3,ashkenazi,m,syllable,tsadi-a,צַ,Reading practice: Tsadi A,tza
+audio/m/ashkenazi/syllable/tsadi-e.mp3,tsadi-e.mp3,ashkenazi,m,syllable,tsadi-e,צֶ,Reading practice: Tsadi E,tze
+audio/m/ashkenazi/syllable/tsadi-i.mp3,tsadi-i.mp3,ashkenazi,m,syllable,tsadi-i,צִ,Reading practice: Tsadi I,tzi
+audio/m/ashkenazi/syllable/tsadi-o.mp3,tsadi-o.mp3,ashkenazi,m,syllable,tsadi-o,צֹ,Reading practice: Tsadi O,tzo
+audio/m/ashkenazi/syllable/tsadi-u.mp3,tsadi-u.mp3,ashkenazi,m,syllable,tsadi-u,צֻ,Reading practice: Tsadi U,tzu
+audio/m/ashkenazi/syllable/vav-a.mp3,vav-a.mp3,ashkenazi,m,syllable,vav-a,וַ,Reading practice: Vav A,va
+audio/m/ashkenazi/syllable/vav-e.mp3,vav-e.mp3,ashkenazi,m,syllable,vav-e,וֶ,Reading practice: Vav E,ve
+audio/m/ashkenazi/syllable/vav-i.mp3,vav-i.mp3,ashkenazi,m,syllable,vav-i,וִ,Reading practice: Vav I,vi
+audio/m/ashkenazi/syllable/vav-o.mp3,vav-o.mp3,ashkenazi,m,syllable,vav-o,וֹ,Reading practice: Vav O,vo
+audio/m/ashkenazi/syllable/vav-u.mp3,vav-u.mp3,ashkenazi,m,syllable,vav-u,וֻ,Reading practice: Vav U,vu
+audio/m/ashkenazi/syllable/yod-a.mp3,yod-a.mp3,ashkenazi,m,syllable,yod-a,יַ,Reading practice: Yod A,ya
+audio/m/ashkenazi/syllable/yod-e.mp3,yod-e.mp3,ashkenazi,m,syllable,yod-e,יֶ,Reading practice: Yod E,ye
+audio/m/ashkenazi/syllable/yod-i.mp3,yod-i.mp3,ashkenazi,m,syllable,yod-i,יִ,Reading practice: Yod I,yi
+audio/m/ashkenazi/syllable/yod-o.mp3,yod-o.mp3,ashkenazi,m,syllable,yod-o,יֹ,Reading practice: Yod O,yo
+audio/m/ashkenazi/syllable/yod-u.mp3,yod-u.mp3,ashkenazi,m,syllable,yod-u,יֻ,Reading practice: Yod U,yu
+audio/m/ashkenazi/syllable/zayin-a.mp3,zayin-a.mp3,ashkenazi,m,syllable,zayin-a,זַ,Reading practice: Zayin A,za
+audio/m/ashkenazi/syllable/zayin-e.mp3,zayin-e.mp3,ashkenazi,m,syllable,zayin-e,זֶ,Reading practice: Zayin E,ze
+audio/m/ashkenazi/syllable/zayin-i.mp3,zayin-i.mp3,ashkenazi,m,syllable,zayin-i,זִ,Reading practice: Zayin I,zi
+audio/m/ashkenazi/syllable/zayin-o.mp3,zayin-o.mp3,ashkenazi,m,syllable,zayin-o,זֹ,Reading practice: Zayin O,zo
+audio/m/ashkenazi/syllable/zayin-u.mp3,zayin-u.mp3,ashkenazi,m,syllable,zayin-u,זֻ,Reading practice: Zayin U,zu
+audio/f/ashkenazi/vowel/chataf-kamatz.mp3,chataf-kamatz.mp3,ashkenazi,f,vowel,chataf-kamatz,אֳ,Hebrew vowel/mark: Chataf Kamatz,[o̞]
+audio/f/ashkenazi/vowel/chataf-patach.mp3,chataf-patach.mp3,ashkenazi,f,vowel,chataf-patach,אֲ,Hebrew vowel/mark: Chataf Patach,[a]
+audio/f/ashkenazi/vowel/chataf-segol.mp3,chataf-segol.mp3,ashkenazi,f,vowel,chataf-segol,אֱ,Hebrew vowel/mark: Chataf Segol,[e̞]
+audio/f/ashkenazi/vowel/chirik.mp3,chirik.mp3,ashkenazi,f,vowel,chirik,אִ,Hebrew vowel/mark: Chirik,[i]
+audio/f/ashkenazi/vowel/cholam.mp3,cholam.mp3,ashkenazi,f,vowel,cholam,אֹ,Hebrew vowel/mark: Cholam,[o̞]
+audio/f/ashkenazi/vowel/dagesh.mp3,dagesh.mp3,ashkenazi,f,vowel,dagesh,בּ,Hebrew vowel/mark: Dagesh consonant mark,hardens bet/kaf/pe to [b][k][p]; gemination absent
+audio/f/ashkenazi/vowel/kamatz.mp3,kamatz.mp3,ashkenazi,f,vowel,kamatz,אָ,Hebrew vowel/mark: Kamatz,[a]
+audio/f/ashkenazi/vowel/kubutz.mp3,kubutz.mp3,ashkenazi,f,vowel,kubutz,אֻ,Hebrew vowel/mark: Kubutz,[u]
+audio/f/ashkenazi/vowel/patach.mp3,patach.mp3,ashkenazi,f,vowel,patach,אַ,Hebrew vowel/mark: Patach,[a]
+audio/f/ashkenazi/vowel/segol.mp3,segol.mp3,ashkenazi,f,vowel,segol,אֶ,Hebrew vowel/mark: Segol,[e̞]
+audio/f/ashkenazi/vowel/shin-dot.mp3,shin-dot.mp3,ashkenazi,f,vowel,shin-dot,שׁ,Hebrew vowel/mark: Shin Dot consonant mark,[ʃ]
+audio/f/ashkenazi/vowel/shuruk.mp3,shuruk.mp3,ashkenazi,f,vowel,shuruk,וּ,Hebrew vowel/mark: Shuruk,[u]
+audio/f/ashkenazi/vowel/shva.mp3,shva.mp3,ashkenazi,f,vowel,shva,בְ,Hebrew vowel/mark: Shva,[e̞] or ∅ (no vowel)
+audio/f/ashkenazi/vowel/sin-dot.mp3,sin-dot.mp3,ashkenazi,f,vowel,sin-dot,שׂ,Hebrew vowel/mark: Sin Dot consonant mark,[s]
+audio/f/ashkenazi/vowel/tzere.mp3,tzere.mp3,ashkenazi,f,vowel,tzere,אֵ,Hebrew vowel/mark: Tzere,[e̞]
+audio/m/ashkenazi/vowel/chataf-kamatz.mp3,chataf-kamatz.mp3,ashkenazi,m,vowel,chataf-kamatz,אֳ,Hebrew vowel/mark: Chataf Kamatz,[o̞]
+audio/m/ashkenazi/vowel/chataf-patach.mp3,chataf-patach.mp3,ashkenazi,m,vowel,chataf-patach,אֲ,Hebrew vowel/mark: Chataf Patach,[a]
+audio/m/ashkenazi/vowel/chataf-segol.mp3,chataf-segol.mp3,ashkenazi,m,vowel,chataf-segol,אֱ,Hebrew vowel/mark: Chataf Segol,[e̞]
+audio/m/ashkenazi/vowel/chirik.mp3,chirik.mp3,ashkenazi,m,vowel,chirik,אִ,Hebrew vowel/mark: Chirik,[i]
+audio/m/ashkenazi/vowel/cholam.mp3,cholam.mp3,ashkenazi,m,vowel,cholam,אֹ,Hebrew vowel/mark: Cholam,[o̞]
+audio/m/ashkenazi/vowel/dagesh.mp3,dagesh.mp3,ashkenazi,m,vowel,dagesh,בּ,Hebrew vowel/mark: Dagesh consonant mark,hardens bet/kaf/pe to [b][k][p]; gemination absent
+audio/m/ashkenazi/vowel/kamatz.mp3,kamatz.mp3,ashkenazi,m,vowel,kamatz,אָ,Hebrew vowel/mark: Kamatz,[a]
+audio/m/ashkenazi/vowel/kubutz.mp3,kubutz.mp3,ashkenazi,m,vowel,kubutz,אֻ,Hebrew vowel/mark: Kubutz,[u]
+audio/m/ashkenazi/vowel/patach.mp3,patach.mp3,ashkenazi,m,vowel,patach,אַ,Hebrew vowel/mark: Patach,[a]
+audio/m/ashkenazi/vowel/segol.mp3,segol.mp3,ashkenazi,m,vowel,segol,אֶ,Hebrew vowel/mark: Segol,[e̞]
+audio/m/ashkenazi/vowel/shin-dot.mp3,shin-dot.mp3,ashkenazi,m,vowel,shin-dot,שׁ,Hebrew vowel/mark: Shin Dot consonant mark,[ʃ]
+audio/m/ashkenazi/vowel/shuruk.mp3,shuruk.mp3,ashkenazi,m,vowel,shuruk,וּ,Hebrew vowel/mark: Shuruk,[u]
+audio/m/ashkenazi/vowel/shva.mp3,shva.mp3,ashkenazi,m,vowel,shva,בְ,Hebrew vowel/mark: Shva,[e̞] or ∅ (no vowel)
+audio/m/ashkenazi/vowel/sin-dot.mp3,sin-dot.mp3,ashkenazi,m,vowel,sin-dot,שׂ,Hebrew vowel/mark: Sin Dot consonant mark,[s]
+audio/m/ashkenazi/vowel/tzere.mp3,tzere.mp3,ashkenazi,m,vowel,tzere,אֵ,Hebrew vowel/mark: Tzere,[e̞]
+audio/f/sephardi/letter/alef-sound.mp3,alef-sound.mp3,sephardi,f,letter,alef-sound,א,Silent letter glottal-stop practice for Alef,ʔ
+audio/f/sephardi/letter/alef.mp3,alef.mp3,sephardi,f,letter,alef,אָלֶף,Hebrew letter Alef,alef
+audio/f/sephardi/letter/ayin-sound.mp3,ayin-sound.mp3,sephardi,f,letter,ayin-sound,ע,Silent letter glottal-stop practice for Ayin,ʔ
+audio/f/sephardi/letter/ayin.mp3,ayin.mp3,sephardi,f,letter,ayin,עַיִן,Hebrew letter Ayin,ayin
+audio/f/sephardi/letter/bet-sound.mp3,bet-sound.mp3,sephardi,f,letter,bet-sound,ב,Sound practice for Bet,b
+audio/f/sephardi/letter/bet.mp3,bet.mp3,sephardi,f,letter,bet,בֵּית,Hebrew letter Bet,beit
+audio/f/sephardi/letter/chet-sound.mp3,chet-sound.mp3,sephardi,f,letter,chet-sound,ח,Sound practice for Chet,χ
+audio/f/sephardi/letter/chet.mp3,chet.mp3,sephardi,f,letter,chet,חֵית,Hebrew letter Chet,cheit
+audio/f/sephardi/letter/dalet-sound.mp3,dalet-sound.mp3,sephardi,f,letter,dalet-sound,ד,Sound practice for Dalet,d
+audio/f/sephardi/letter/dalet.mp3,dalet.mp3,sephardi,f,letter,dalet,דָּלֶת,Hebrew letter Dalet,dalet
+audio/f/sephardi/letter/fe-sound.mp3,fe-sound.mp3,sephardi,f,letter,fe-sound,פ,Sound practice for Fe,f
+audio/f/sephardi/letter/fe.mp3,fe.mp3,sephardi,f,letter,fe,פֵא,Hebrew letter Fe,fe
+audio/f/sephardi/letter/gimel-sound.mp3,gimel-sound.mp3,sephardi,f,letter,gimel-sound,ג,Sound practice for Gimel,ɡ
+audio/f/sephardi/letter/gimel.mp3,gimel.mp3,sephardi,f,letter,gimel,גִּימֶל,Hebrew letter Gimel,gimel
+audio/f/sephardi/letter/he-sound.mp3,he-sound.mp3,sephardi,f,letter,he-sound,ה,Sound practice for He,h
+audio/f/sephardi/letter/he.mp3,he.mp3,sephardi,f,letter,he,הֵא,Hebrew letter He,he
+audio/f/sephardi/letter/kaf-final.mp3,kaf-final.mp3,sephardi,f,letter,kaf-final,כַּף סוֹפִית,Final-form Hebrew letter Kaf,kaf sofit
+audio/f/sephardi/letter/kaf-sound.mp3,kaf-sound.mp3,sephardi,f,letter,kaf-sound,כ,Sound practice for Kaf,k
+audio/f/sephardi/letter/kaf.mp3,kaf.mp3,sephardi,f,letter,kaf,כַּף,Hebrew letter Kaf,kaf
+audio/f/sephardi/letter/khaf-sound.mp3,khaf-sound.mp3,sephardi,f,letter,khaf-sound,כ,Sound practice for Khaf,χ
+audio/f/sephardi/letter/khaf.mp3,khaf.mp3,sephardi,f,letter,khaf,כַף,Hebrew letter Khaf,khaf
+audio/f/sephardi/letter/lamed-sound.mp3,lamed-sound.mp3,sephardi,f,letter,lamed-sound,ל,Sound practice for Lamed,l
+audio/f/sephardi/letter/lamed.mp3,lamed.mp3,sephardi,f,letter,lamed,לָמֶד,Hebrew letter Lamed,lamed
+audio/f/sephardi/letter/mem-final.mp3,mem-final.mp3,sephardi,f,letter,mem-final,מֵם סוֹפִית,Final-form Hebrew letter Mem,mem sofit
+audio/f/sephardi/letter/mem-sound.mp3,mem-sound.mp3,sephardi,f,letter,mem-sound,מ,Sound practice for Mem,m
+audio/f/sephardi/letter/mem.mp3,mem.mp3,sephardi,f,letter,mem,מֵם,Hebrew letter Mem,mem
+audio/f/sephardi/letter/nun-final.mp3,nun-final.mp3,sephardi,f,letter,nun-final,נוּן סוֹפִית,Final-form Hebrew letter Nun,nun sofit
+audio/f/sephardi/letter/nun-sound.mp3,nun-sound.mp3,sephardi,f,letter,nun-sound,נ,Sound practice for Nun,n
+audio/f/sephardi/letter/nun.mp3,nun.mp3,sephardi,f,letter,nun,נוּן,Hebrew letter Nun,nun
+audio/f/sephardi/letter/pe-final.mp3,pe-final.mp3,sephardi,f,letter,pe-final,פֵּא סוֹפִית,Final-form Hebrew letter Pe,pe sofit
+audio/f/sephardi/letter/pe-sound.mp3,pe-sound.mp3,sephardi,f,letter,pe-sound,פ,Sound practice for Pe,p
+audio/f/sephardi/letter/pe.mp3,pe.mp3,sephardi,f,letter,pe,פֵּא,Hebrew letter Pe,pe
+audio/f/sephardi/letter/qof-sound.mp3,qof-sound.mp3,sephardi,f,letter,qof-sound,ק,Sound practice for Qof,k
+audio/f/sephardi/letter/qof.mp3,qof.mp3,sephardi,f,letter,qof,קוֹף,Hebrew letter Qof,kof
+audio/f/sephardi/letter/resh-sound.mp3,resh-sound.mp3,sephardi,f,letter,resh-sound,ר,Sound practice for Resh,ʁ
+audio/f/sephardi/letter/resh.mp3,resh.mp3,sephardi,f,letter,resh,רֵישׁ,Hebrew letter Resh,reish
+audio/f/sephardi/letter/samekh-sound.mp3,samekh-sound.mp3,sephardi,f,letter,samekh-sound,ס,Sound practice for Samekh,s
+audio/f/sephardi/letter/samekh.mp3,samekh.mp3,sephardi,f,letter,samekh,סָמֶך,Hebrew letter Samekh,samekh
+audio/f/sephardi/letter/shin-sound.mp3,shin-sound.mp3,sephardi,f,letter,shin-sound,ש,Sound practice for Shin,ʃ
+audio/f/sephardi/letter/shin.mp3,shin.mp3,sephardi,f,letter,shin,שִׁין,Hebrew letter Shin,shin
+audio/f/sephardi/letter/sin-sound.mp3,sin-sound.mp3,sephardi,f,letter,sin-sound,שׂ,Sound practice for Sin,s
+audio/f/sephardi/letter/sin.mp3,sin.mp3,sephardi,f,letter,sin,שִׂין,Hebrew letter Sin,sin
+audio/f/sephardi/letter/tav-sound.mp3,tav-sound.mp3,sephardi,f,letter,tav-sound,ת,Sound practice for Tav,t
+audio/f/sephardi/letter/tav.mp3,tav.mp3,sephardi,f,letter,tav,תָּו,Hebrew letter Tav,tav
+audio/f/sephardi/letter/tet-sound.mp3,tet-sound.mp3,sephardi,f,letter,tet-sound,ט,Sound practice for Tet,t
+audio/f/sephardi/letter/tet.mp3,tet.mp3,sephardi,f,letter,tet,טֵית,Hebrew letter Tet,teit
+audio/f/sephardi/letter/tsadi-final.mp3,tsadi-final.mp3,sephardi,f,letter,tsadi-final,צָדִי סוֹפִית,Final-form Hebrew letter Tsadi,tzadi sofit
+audio/f/sephardi/letter/tsadi-sound.mp3,tsadi-sound.mp3,sephardi,f,letter,tsadi-sound,צ,Sound practice for Tsadi,ts
+audio/f/sephardi/letter/tsadi.mp3,tsadi.mp3,sephardi,f,letter,tsadi,צָדִי,Hebrew letter Tsadi,tzadi
+audio/f/sephardi/letter/vav-sound.mp3,vav-sound.mp3,sephardi,f,letter,vav-sound,ו,Sound practice for Vav,v
+audio/f/sephardi/letter/vav.mp3,vav.mp3,sephardi,f,letter,vav,וָו,Hebrew letter Vav,vav
+audio/f/sephardi/letter/vet-sound.mp3,vet-sound.mp3,sephardi,f,letter,vet-sound,ב,Sound practice for Vet,v
+audio/f/sephardi/letter/vet.mp3,vet.mp3,sephardi,f,letter,vet,בֵית,Hebrew letter Vet,veit
+audio/f/sephardi/letter/yod-sound.mp3,yod-sound.mp3,sephardi,f,letter,yod-sound,י,Sound practice for Yod,j
+audio/f/sephardi/letter/yod.mp3,yod.mp3,sephardi,f,letter,yod,יוֹד,Hebrew letter Yod,yod
+audio/f/sephardi/letter/zayin-sound.mp3,zayin-sound.mp3,sephardi,f,letter,zayin-sound,ז,Sound practice for Zayin,z
+audio/f/sephardi/letter/zayin.mp3,zayin.mp3,sephardi,f,letter,zayin,זַיִן,Hebrew letter Zayin,zayin
+audio/m/sephardi/letter/alef-sound.mp3,alef-sound.mp3,sephardi,m,letter,alef-sound,א,Silent letter glottal-stop practice for Alef,ʔ
+audio/m/sephardi/letter/alef.mp3,alef.mp3,sephardi,m,letter,alef,אָלֶף,Hebrew letter Alef,alef
+audio/m/sephardi/letter/ayin-sound.mp3,ayin-sound.mp3,sephardi,m,letter,ayin-sound,ע,Silent letter glottal-stop practice for Ayin,ʔ
+audio/m/sephardi/letter/ayin.mp3,ayin.mp3,sephardi,m,letter,ayin,עַיִן,Hebrew letter Ayin,ayin
+audio/m/sephardi/letter/bet-sound.mp3,bet-sound.mp3,sephardi,m,letter,bet-sound,ב,Sound practice for Bet,b
+audio/m/sephardi/letter/bet.mp3,bet.mp3,sephardi,m,letter,bet,בֵּית,Hebrew letter Bet,beit
+audio/m/sephardi/letter/chet-sound.mp3,chet-sound.mp3,sephardi,m,letter,chet-sound,ח,Sound practice for Chet,χ
+audio/m/sephardi/letter/chet.mp3,chet.mp3,sephardi,m,letter,chet,חֵית,Hebrew letter Chet,cheit
+audio/m/sephardi/letter/dalet-sound.mp3,dalet-sound.mp3,sephardi,m,letter,dalet-sound,ד,Sound practice for Dalet,d
+audio/m/sephardi/letter/dalet.mp3,dalet.mp3,sephardi,m,letter,dalet,דָּלֶת,Hebrew letter Dalet,dalet
+audio/m/sephardi/letter/fe-sound.mp3,fe-sound.mp3,sephardi,m,letter,fe-sound,פ,Sound practice for Fe,f
+audio/m/sephardi/letter/fe.mp3,fe.mp3,sephardi,m,letter,fe,פֵא,Hebrew letter Fe,fe
+audio/m/sephardi/letter/gimel-sound.mp3,gimel-sound.mp3,sephardi,m,letter,gimel-sound,ג,Sound practice for Gimel,ɡ
+audio/m/sephardi/letter/gimel.mp3,gimel.mp3,sephardi,m,letter,gimel,גִּימֶל,Hebrew letter Gimel,gimel
+audio/m/sephardi/letter/he-sound.mp3,he-sound.mp3,sephardi,m,letter,he-sound,ה,Sound practice for He,h
+audio/m/sephardi/letter/he.mp3,he.mp3,sephardi,m,letter,he,הֵא,Hebrew letter He,he
+audio/m/sephardi/letter/kaf-final.mp3,kaf-final.mp3,sephardi,m,letter,kaf-final,כַּף סוֹפִית,Final-form Hebrew letter Kaf,kaf sofit
+audio/m/sephardi/letter/kaf-sound.mp3,kaf-sound.mp3,sephardi,m,letter,kaf-sound,כ,Sound practice for Kaf,k
+audio/m/sephardi/letter/kaf.mp3,kaf.mp3,sephardi,m,letter,kaf,כַּף,Hebrew letter Kaf,kaf
+audio/m/sephardi/letter/khaf-sound.mp3,khaf-sound.mp3,sephardi,m,letter,khaf-sound,כ,Sound practice for Khaf,χ
+audio/m/sephardi/letter/khaf.mp3,khaf.mp3,sephardi,m,letter,khaf,כַף,Hebrew letter Khaf,khaf
+audio/m/sephardi/letter/lamed-sound.mp3,lamed-sound.mp3,sephardi,m,letter,lamed-sound,ל,Sound practice for Lamed,l
+audio/m/sephardi/letter/lamed.mp3,lamed.mp3,sephardi,m,letter,lamed,לָמֶד,Hebrew letter Lamed,lamed
+audio/m/sephardi/letter/mem-final.mp3,mem-final.mp3,sephardi,m,letter,mem-final,מֵם סוֹפִית,Final-form Hebrew letter Mem,mem sofit
+audio/m/sephardi/letter/mem-sound.mp3,mem-sound.mp3,sephardi,m,letter,mem-sound,מ,Sound practice for Mem,m
+audio/m/sephardi/letter/mem.mp3,mem.mp3,sephardi,m,letter,mem,מֵם,Hebrew letter Mem,mem
+audio/m/sephardi/letter/nun-final.mp3,nun-final.mp3,sephardi,m,letter,nun-final,נוּן סוֹפִית,Final-form Hebrew letter Nun,nun sofit
+audio/m/sephardi/letter/nun-sound.mp3,nun-sound.mp3,sephardi,m,letter,nun-sound,נ,Sound practice for Nun,n
+audio/m/sephardi/letter/nun.mp3,nun.mp3,sephardi,m,letter,nun,נוּן,Hebrew letter Nun,nun
+audio/m/sephardi/letter/pe-final.mp3,pe-final.mp3,sephardi,m,letter,pe-final,פֵּא סוֹפִית,Final-form Hebrew letter Pe,pe sofit
+audio/m/sephardi/letter/pe-sound.mp3,pe-sound.mp3,sephardi,m,letter,pe-sound,פ,Sound practice for Pe,p
+audio/m/sephardi/letter/pe.mp3,pe.mp3,sephardi,m,letter,pe,פֵּא,Hebrew letter Pe,pe
+audio/m/sephardi/letter/qof-sound.mp3,qof-sound.mp3,sephardi,m,letter,qof-sound,ק,Sound practice for Qof,k
+audio/m/sephardi/letter/qof.mp3,qof.mp3,sephardi,m,letter,qof,קוֹף,Hebrew letter Qof,kof
+audio/m/sephardi/letter/resh-sound.mp3,resh-sound.mp3,sephardi,m,letter,resh-sound,ר,Sound practice for Resh,ʁ
+audio/m/sephardi/letter/resh.mp3,resh.mp3,sephardi,m,letter,resh,רֵישׁ,Hebrew letter Resh,reish
+audio/m/sephardi/letter/samekh-sound.mp3,samekh-sound.mp3,sephardi,m,letter,samekh-sound,ס,Sound practice for Samekh,s
+audio/m/sephardi/letter/samekh.mp3,samekh.mp3,sephardi,m,letter,samekh,סָמֶך,Hebrew letter Samekh,samekh
+audio/m/sephardi/letter/shin-sound.mp3,shin-sound.mp3,sephardi,m,letter,shin-sound,ש,Sound practice for Shin,ʃ
+audio/m/sephardi/letter/shin.mp3,shin.mp3,sephardi,m,letter,shin,שִׁין,Hebrew letter Shin,shin
+audio/m/sephardi/letter/sin-sound.mp3,sin-sound.mp3,sephardi,m,letter,sin-sound,שׂ,Sound practice for Sin,s
+audio/m/sephardi/letter/sin.mp3,sin.mp3,sephardi,m,letter,sin,שִׂין,Hebrew letter Sin,sin
+audio/m/sephardi/letter/tav-sound.mp3,tav-sound.mp3,sephardi,m,letter,tav-sound,ת,Sound practice for Tav,t
+audio/m/sephardi/letter/tav.mp3,tav.mp3,sephardi,m,letter,tav,תָּו,Hebrew letter Tav,tav
+audio/m/sephardi/letter/tet-sound.mp3,tet-sound.mp3,sephardi,m,letter,tet-sound,ט,Sound practice for Tet,t
+audio/m/sephardi/letter/tet.mp3,tet.mp3,sephardi,m,letter,tet,טֵית,Hebrew letter Tet,teit
+audio/m/sephardi/letter/tsadi-final.mp3,tsadi-final.mp3,sephardi,m,letter,tsadi-final,צָדִי סוֹפִית,Final-form Hebrew letter Tsadi,tzadi sofit
+audio/m/sephardi/letter/tsadi-sound.mp3,tsadi-sound.mp3,sephardi,m,letter,tsadi-sound,צ,Sound practice for Tsadi,ts
+audio/m/sephardi/letter/tsadi.mp3,tsadi.mp3,sephardi,m,letter,tsadi,צָדִי,Hebrew letter Tsadi,tzadi
+audio/m/sephardi/letter/vav-sound.mp3,vav-sound.mp3,sephardi,m,letter,vav-sound,ו,Sound practice for Vav,v
+audio/m/sephardi/letter/vav.mp3,vav.mp3,sephardi,m,letter,vav,וָו,Hebrew letter Vav,vav
+audio/m/sephardi/letter/vet-sound.mp3,vet-sound.mp3,sephardi,m,letter,vet-sound,ב,Sound practice for Vet,v
+audio/m/sephardi/letter/vet.mp3,vet.mp3,sephardi,m,letter,vet,בֵית,Hebrew letter Vet,veit
+audio/m/sephardi/letter/yod-sound.mp3,yod-sound.mp3,sephardi,m,letter,yod-sound,י,Sound practice for Yod,j
+audio/m/sephardi/letter/yod.mp3,yod.mp3,sephardi,m,letter,yod,יוֹד,Hebrew letter Yod,yod
+audio/m/sephardi/letter/zayin-sound.mp3,zayin-sound.mp3,sephardi,m,letter,zayin-sound,ז,Sound practice for Zayin,z
+audio/m/sephardi/letter/zayin.mp3,zayin.mp3,sephardi,m,letter,zayin,זַיִן,Hebrew letter Zayin,zayin
+audio/f/sephardi/syllable/alef-a.mp3,alef-a.mp3,sephardi,f,syllable,alef-a,אַ,Reading practice: Alef A,a
+audio/f/sephardi/syllable/alef-e.mp3,alef-e.mp3,sephardi,f,syllable,alef-e,אֶ,Reading practice: Alef E,e
+audio/f/sephardi/syllable/alef-i.mp3,alef-i.mp3,sephardi,f,syllable,alef-i,אִ,Reading practice: Alef I,i
+audio/f/sephardi/syllable/alef-o.mp3,alef-o.mp3,sephardi,f,syllable,alef-o,אֹ,Reading practice: Alef O,o
+audio/f/sephardi/syllable/alef-u.mp3,alef-u.mp3,sephardi,f,syllable,alef-u,אֻ,Reading practice: Alef U,u
+audio/f/sephardi/syllable/ayin-a.mp3,ayin-a.mp3,sephardi,f,syllable,ayin-a,עַ,Reading practice: Ayin A,a
+audio/f/sephardi/syllable/ayin-e.mp3,ayin-e.mp3,sephardi,f,syllable,ayin-e,עֶ,Reading practice: Ayin E,e
+audio/f/sephardi/syllable/ayin-i.mp3,ayin-i.mp3,sephardi,f,syllable,ayin-i,עִ,Reading practice: Ayin I,i
+audio/f/sephardi/syllable/ayin-o.mp3,ayin-o.mp3,sephardi,f,syllable,ayin-o,עֹ,Reading practice: Ayin O,o
+audio/f/sephardi/syllable/ayin-u.mp3,ayin-u.mp3,sephardi,f,syllable,ayin-u,עֻ,Reading practice: Ayin U,u
+audio/f/sephardi/syllable/bet-a.mp3,bet-a.mp3,sephardi,f,syllable,bet-a,בַּ,Reading practice: Bet A,ba
+audio/f/sephardi/syllable/bet-e.mp3,bet-e.mp3,sephardi,f,syllable,bet-e,בֶּ,Reading practice: Bet E,be
+audio/f/sephardi/syllable/bet-i.mp3,bet-i.mp3,sephardi,f,syllable,bet-i,בִּ,Reading practice: Bet I,bi
+audio/f/sephardi/syllable/bet-o.mp3,bet-o.mp3,sephardi,f,syllable,bet-o,בֹּ,Reading practice: Bet O,bo
+audio/f/sephardi/syllable/bet-u.mp3,bet-u.mp3,sephardi,f,syllable,bet-u,בֻּ,Reading practice: Bet U,bu
+audio/f/sephardi/syllable/chet-a.mp3,chet-a.mp3,sephardi,f,syllable,chet-a,חַ,Reading practice: Chet A,cha
+audio/f/sephardi/syllable/chet-e.mp3,chet-e.mp3,sephardi,f,syllable,chet-e,חֶ,Reading practice: Chet E,che
+audio/f/sephardi/syllable/chet-i.mp3,chet-i.mp3,sephardi,f,syllable,chet-i,חִ,Reading practice: Chet I,chi
+audio/f/sephardi/syllable/chet-o.mp3,chet-o.mp3,sephardi,f,syllable,chet-o,חֹ,Reading practice: Chet O,cho
+audio/f/sephardi/syllable/chet-u.mp3,chet-u.mp3,sephardi,f,syllable,chet-u,חֻ,Reading practice: Chet U,chu
+audio/f/sephardi/syllable/dalet-a.mp3,dalet-a.mp3,sephardi,f,syllable,dalet-a,דַ,Reading practice: Dalet A,da
+audio/f/sephardi/syllable/dalet-e.mp3,dalet-e.mp3,sephardi,f,syllable,dalet-e,דֶ,Reading practice: Dalet E,de
+audio/f/sephardi/syllable/dalet-i.mp3,dalet-i.mp3,sephardi,f,syllable,dalet-i,דִ,Reading practice: Dalet I,di
+audio/f/sephardi/syllable/dalet-o.mp3,dalet-o.mp3,sephardi,f,syllable,dalet-o,דֹ,Reading practice: Dalet O,do
+audio/f/sephardi/syllable/dalet-u.mp3,dalet-u.mp3,sephardi,f,syllable,dalet-u,דֻ,Reading practice: Dalet U,du
+audio/f/sephardi/syllable/gimel-a.mp3,gimel-a.mp3,sephardi,f,syllable,gimel-a,גַ,Reading practice: Gimel A,ga
+audio/f/sephardi/syllable/gimel-e.mp3,gimel-e.mp3,sephardi,f,syllable,gimel-e,גֶ,Reading practice: Gimel E,ge
+audio/f/sephardi/syllable/gimel-i.mp3,gimel-i.mp3,sephardi,f,syllable,gimel-i,גִ,Reading practice: Gimel I,gi
+audio/f/sephardi/syllable/gimel-o.mp3,gimel-o.mp3,sephardi,f,syllable,gimel-o,גֹ,Reading practice: Gimel O,go
+audio/f/sephardi/syllable/gimel-u.mp3,gimel-u.mp3,sephardi,f,syllable,gimel-u,גֻ,Reading practice: Gimel U,gu
+audio/f/sephardi/syllable/he-a.mp3,he-a.mp3,sephardi,f,syllable,he-a,הַ,Reading practice: He A,ha
+audio/f/sephardi/syllable/he-e.mp3,he-e.mp3,sephardi,f,syllable,he-e,הֶ,Reading practice: He E,he
+audio/f/sephardi/syllable/he-i.mp3,he-i.mp3,sephardi,f,syllable,he-i,הִ,Reading practice: He I,hi
+audio/f/sephardi/syllable/he-o.mp3,he-o.mp3,sephardi,f,syllable,he-o,הֹ,Reading practice: He O,ho
+audio/f/sephardi/syllable/he-u.mp3,he-u.mp3,sephardi,f,syllable,he-u,הֻ,Reading practice: He U,hu
+audio/f/sephardi/syllable/kaf-a.mp3,kaf-a.mp3,sephardi,f,syllable,kaf-a,כַּ,Reading practice: Kaf A,ka
+audio/f/sephardi/syllable/kaf-e.mp3,kaf-e.mp3,sephardi,f,syllable,kaf-e,כֶּ,Reading practice: Kaf E,ke
+audio/f/sephardi/syllable/kaf-i.mp3,kaf-i.mp3,sephardi,f,syllable,kaf-i,כִּ,Reading practice: Kaf I,ki
+audio/f/sephardi/syllable/kaf-o.mp3,kaf-o.mp3,sephardi,f,syllable,kaf-o,כֹּ,Reading practice: Kaf O,ko
+audio/f/sephardi/syllable/kaf-u.mp3,kaf-u.mp3,sephardi,f,syllable,kaf-u,כֻּ,Reading practice: Kaf U,ku
+audio/f/sephardi/syllable/lamed-a.mp3,lamed-a.mp3,sephardi,f,syllable,lamed-a,לַ,Reading practice: Lamed A,la
+audio/f/sephardi/syllable/lamed-e.mp3,lamed-e.mp3,sephardi,f,syllable,lamed-e,לֶ,Reading practice: Lamed E,le
+audio/f/sephardi/syllable/lamed-i.mp3,lamed-i.mp3,sephardi,f,syllable,lamed-i,לִ,Reading practice: Lamed I,li
+audio/f/sephardi/syllable/lamed-o.mp3,lamed-o.mp3,sephardi,f,syllable,lamed-o,לֹ,Reading practice: Lamed O,lo
+audio/f/sephardi/syllable/lamed-u.mp3,lamed-u.mp3,sephardi,f,syllable,lamed-u,לֻ,Reading practice: Lamed U,lu
+audio/f/sephardi/syllable/mem-a.mp3,mem-a.mp3,sephardi,f,syllable,mem-a,מַ,Reading practice: Mem A,ma
+audio/f/sephardi/syllable/mem-e.mp3,mem-e.mp3,sephardi,f,syllable,mem-e,מֶ,Reading practice: Mem E,me
+audio/f/sephardi/syllable/mem-i.mp3,mem-i.mp3,sephardi,f,syllable,mem-i,מִ,Reading practice: Mem I,mi
+audio/f/sephardi/syllable/mem-o.mp3,mem-o.mp3,sephardi,f,syllable,mem-o,מֹ,Reading practice: Mem O,mo
+audio/f/sephardi/syllable/mem-u.mp3,mem-u.mp3,sephardi,f,syllable,mem-u,מֻ,Reading practice: Mem U,mu
+audio/f/sephardi/syllable/nun-a.mp3,nun-a.mp3,sephardi,f,syllable,nun-a,נַ,Reading practice: Nun A,na
+audio/f/sephardi/syllable/nun-e.mp3,nun-e.mp3,sephardi,f,syllable,nun-e,נֶ,Reading practice: Nun E,ne
+audio/f/sephardi/syllable/nun-i.mp3,nun-i.mp3,sephardi,f,syllable,nun-i,נִ,Reading practice: Nun I,ni
+audio/f/sephardi/syllable/nun-o.mp3,nun-o.mp3,sephardi,f,syllable,nun-o,נֹ,Reading practice: Nun O,no
+audio/f/sephardi/syllable/nun-u.mp3,nun-u.mp3,sephardi,f,syllable,nun-u,נֻ,Reading practice: Nun U,nu
+audio/f/sephardi/syllable/pe-a.mp3,pe-a.mp3,sephardi,f,syllable,pe-a,פַּ,Reading practice: Pe A,pa
+audio/f/sephardi/syllable/pe-e.mp3,pe-e.mp3,sephardi,f,syllable,pe-e,פֶּ,Reading practice: Pe E,pe
+audio/f/sephardi/syllable/pe-i.mp3,pe-i.mp3,sephardi,f,syllable,pe-i,פִּ,Reading practice: Pe I,pi
+audio/f/sephardi/syllable/pe-o.mp3,pe-o.mp3,sephardi,f,syllable,pe-o,פֹּ,Reading practice: Pe O,po
+audio/f/sephardi/syllable/pe-u.mp3,pe-u.mp3,sephardi,f,syllable,pe-u,פֻּ,Reading practice: Pe U,pu
+audio/f/sephardi/syllable/qof-a.mp3,qof-a.mp3,sephardi,f,syllable,qof-a,קַ,Reading practice: Qof A,ka
+audio/f/sephardi/syllable/qof-e.mp3,qof-e.mp3,sephardi,f,syllable,qof-e,קֶ,Reading practice: Qof E,ke
+audio/f/sephardi/syllable/qof-i.mp3,qof-i.mp3,sephardi,f,syllable,qof-i,קִ,Reading practice: Qof I,ki
+audio/f/sephardi/syllable/qof-o.mp3,qof-o.mp3,sephardi,f,syllable,qof-o,קֹ,Reading practice: Qof O,ko
+audio/f/sephardi/syllable/qof-u.mp3,qof-u.mp3,sephardi,f,syllable,qof-u,קֻ,Reading practice: Qof U,ku
+audio/f/sephardi/syllable/resh-a.mp3,resh-a.mp3,sephardi,f,syllable,resh-a,רַ,Reading practice: Resh A,ra
+audio/f/sephardi/syllable/resh-e.mp3,resh-e.mp3,sephardi,f,syllable,resh-e,רֶ,Reading practice: Resh E,re
+audio/f/sephardi/syllable/resh-i.mp3,resh-i.mp3,sephardi,f,syllable,resh-i,רִ,Reading practice: Resh I,ri
+audio/f/sephardi/syllable/resh-o.mp3,resh-o.mp3,sephardi,f,syllable,resh-o,רֹ,Reading practice: Resh O,ro
+audio/f/sephardi/syllable/resh-u.mp3,resh-u.mp3,sephardi,f,syllable,resh-u,רֻ,Reading practice: Resh U,ru
+audio/f/sephardi/syllable/samekh-a.mp3,samekh-a.mp3,sephardi,f,syllable,samekh-a,סַ,Reading practice: Samekh A,sa
+audio/f/sephardi/syllable/samekh-e.mp3,samekh-e.mp3,sephardi,f,syllable,samekh-e,סֶ,Reading practice: Samekh E,se
+audio/f/sephardi/syllable/samekh-i.mp3,samekh-i.mp3,sephardi,f,syllable,samekh-i,סִ,Reading practice: Samekh I,si
+audio/f/sephardi/syllable/samekh-o.mp3,samekh-o.mp3,sephardi,f,syllable,samekh-o,סֹ,Reading practice: Samekh O,so
+audio/f/sephardi/syllable/samekh-u.mp3,samekh-u.mp3,sephardi,f,syllable,samekh-u,סֻ,Reading practice: Samekh U,su
+audio/f/sephardi/syllable/shin-a.mp3,shin-a.mp3,sephardi,f,syllable,shin-a,שַׁ,Reading practice: Shin A,sha
+audio/f/sephardi/syllable/shin-e.mp3,shin-e.mp3,sephardi,f,syllable,shin-e,שֶׁ,Reading practice: Shin E,she
+audio/f/sephardi/syllable/shin-i.mp3,shin-i.mp3,sephardi,f,syllable,shin-i,שִׁ,Reading practice: Shin I,shi
+audio/f/sephardi/syllable/shin-o.mp3,shin-o.mp3,sephardi,f,syllable,shin-o,שֹׁ,Reading practice: Shin O,sho
+audio/f/sephardi/syllable/shin-u.mp3,shin-u.mp3,sephardi,f,syllable,shin-u,שֻׁ,Reading practice: Shin U,shu
+audio/f/sephardi/syllable/tav-a.mp3,tav-a.mp3,sephardi,f,syllable,tav-a,תַ,Reading practice: Tav A,ta
+audio/f/sephardi/syllable/tav-e.mp3,tav-e.mp3,sephardi,f,syllable,tav-e,תֶ,Reading practice: Tav E,te
+audio/f/sephardi/syllable/tav-i.mp3,tav-i.mp3,sephardi,f,syllable,tav-i,תִ,Reading practice: Tav I,ti
+audio/f/sephardi/syllable/tav-o.mp3,tav-o.mp3,sephardi,f,syllable,tav-o,תֹ,Reading practice: Tav O,to
+audio/f/sephardi/syllable/tav-u.mp3,tav-u.mp3,sephardi,f,syllable,tav-u,תֻ,Reading practice: Tav U,tu
+audio/f/sephardi/syllable/tet-a.mp3,tet-a.mp3,sephardi,f,syllable,tet-a,טַ,Reading practice: Tet A,ta
+audio/f/sephardi/syllable/tet-e.mp3,tet-e.mp3,sephardi,f,syllable,tet-e,טֶ,Reading practice: Tet E,te
+audio/f/sephardi/syllable/tet-i.mp3,tet-i.mp3,sephardi,f,syllable,tet-i,טִ,Reading practice: Tet I,ti
+audio/f/sephardi/syllable/tet-o.mp3,tet-o.mp3,sephardi,f,syllable,tet-o,טֹ,Reading practice: Tet O,to
+audio/f/sephardi/syllable/tet-u.mp3,tet-u.mp3,sephardi,f,syllable,tet-u,טֻ,Reading practice: Tet U,tu
+audio/f/sephardi/syllable/tsadi-a.mp3,tsadi-a.mp3,sephardi,f,syllable,tsadi-a,צַ,Reading practice: Tsadi A,tza
+audio/f/sephardi/syllable/tsadi-e.mp3,tsadi-e.mp3,sephardi,f,syllable,tsadi-e,צֶ,Reading practice: Tsadi E,tze
+audio/f/sephardi/syllable/tsadi-i.mp3,tsadi-i.mp3,sephardi,f,syllable,tsadi-i,צִ,Reading practice: Tsadi I,tzi
+audio/f/sephardi/syllable/tsadi-o.mp3,tsadi-o.mp3,sephardi,f,syllable,tsadi-o,צֹ,Reading practice: Tsadi O,tzo
+audio/f/sephardi/syllable/tsadi-u.mp3,tsadi-u.mp3,sephardi,f,syllable,tsadi-u,צֻ,Reading practice: Tsadi U,tzu
+audio/f/sephardi/syllable/vav-a.mp3,vav-a.mp3,sephardi,f,syllable,vav-a,וַ,Reading practice: Vav A,va
+audio/f/sephardi/syllable/vav-e.mp3,vav-e.mp3,sephardi,f,syllable,vav-e,וֶ,Reading practice: Vav E,ve
+audio/f/sephardi/syllable/vav-i.mp3,vav-i.mp3,sephardi,f,syllable,vav-i,וִ,Reading practice: Vav I,vi
+audio/f/sephardi/syllable/vav-o.mp3,vav-o.mp3,sephardi,f,syllable,vav-o,וֹ,Reading practice: Vav O,vo
+audio/f/sephardi/syllable/vav-u.mp3,vav-u.mp3,sephardi,f,syllable,vav-u,וֻ,Reading practice: Vav U,vu
+audio/f/sephardi/syllable/yod-a.mp3,yod-a.mp3,sephardi,f,syllable,yod-a,יַ,Reading practice: Yod A,ya
+audio/f/sephardi/syllable/yod-e.mp3,yod-e.mp3,sephardi,f,syllable,yod-e,יֶ,Reading practice: Yod E,ye
+audio/f/sephardi/syllable/yod-i.mp3,yod-i.mp3,sephardi,f,syllable,yod-i,יִ,Reading practice: Yod I,yi
+audio/f/sephardi/syllable/yod-o.mp3,yod-o.mp3,sephardi,f,syllable,yod-o,יֹ,Reading practice: Yod O,yo
+audio/f/sephardi/syllable/yod-u.mp3,yod-u.mp3,sephardi,f,syllable,yod-u,יֻ,Reading practice: Yod U,yu
+audio/f/sephardi/syllable/zayin-a.mp3,zayin-a.mp3,sephardi,f,syllable,zayin-a,זַ,Reading practice: Zayin A,za
+audio/f/sephardi/syllable/zayin-e.mp3,zayin-e.mp3,sephardi,f,syllable,zayin-e,זֶ,Reading practice: Zayin E,ze
+audio/f/sephardi/syllable/zayin-i.mp3,zayin-i.mp3,sephardi,f,syllable,zayin-i,זִ,Reading practice: Zayin I,zi
+audio/f/sephardi/syllable/zayin-o.mp3,zayin-o.mp3,sephardi,f,syllable,zayin-o,זֹ,Reading practice: Zayin O,zo
+audio/f/sephardi/syllable/zayin-u.mp3,zayin-u.mp3,sephardi,f,syllable,zayin-u,זֻ,Reading practice: Zayin U,zu
+audio/m/sephardi/syllable/alef-a.mp3,alef-a.mp3,sephardi,m,syllable,alef-a,אַ,Reading practice: Alef A,a
+audio/m/sephardi/syllable/alef-e.mp3,alef-e.mp3,sephardi,m,syllable,alef-e,אֶ,Reading practice: Alef E,e
+audio/m/sephardi/syllable/alef-i.mp3,alef-i.mp3,sephardi,m,syllable,alef-i,אִ,Reading practice: Alef I,i
+audio/m/sephardi/syllable/alef-o.mp3,alef-o.mp3,sephardi,m,syllable,alef-o,אֹ,Reading practice: Alef O,o
+audio/m/sephardi/syllable/alef-u.mp3,alef-u.mp3,sephardi,m,syllable,alef-u,אֻ,Reading practice: Alef U,u
+audio/m/sephardi/syllable/ayin-a.mp3,ayin-a.mp3,sephardi,m,syllable,ayin-a,עַ,Reading practice: Ayin A,a
+audio/m/sephardi/syllable/ayin-e.mp3,ayin-e.mp3,sephardi,m,syllable,ayin-e,עֶ,Reading practice: Ayin E,e
+audio/m/sephardi/syllable/ayin-i.mp3,ayin-i.mp3,sephardi,m,syllable,ayin-i,עִ,Reading practice: Ayin I,i
+audio/m/sephardi/syllable/ayin-o.mp3,ayin-o.mp3,sephardi,m,syllable,ayin-o,עֹ,Reading practice: Ayin O,o
+audio/m/sephardi/syllable/ayin-u.mp3,ayin-u.mp3,sephardi,m,syllable,ayin-u,עֻ,Reading practice: Ayin U,u
+audio/m/sephardi/syllable/bet-a.mp3,bet-a.mp3,sephardi,m,syllable,bet-a,בַּ,Reading practice: Bet A,ba
+audio/m/sephardi/syllable/bet-e.mp3,bet-e.mp3,sephardi,m,syllable,bet-e,בֶּ,Reading practice: Bet E,be
+audio/m/sephardi/syllable/bet-i.mp3,bet-i.mp3,sephardi,m,syllable,bet-i,בִּ,Reading practice: Bet I,bi
+audio/m/sephardi/syllable/bet-o.mp3,bet-o.mp3,sephardi,m,syllable,bet-o,בֹּ,Reading practice: Bet O,bo
+audio/m/sephardi/syllable/bet-u.mp3,bet-u.mp3,sephardi,m,syllable,bet-u,בֻּ,Reading practice: Bet U,bu
+audio/m/sephardi/syllable/chet-a.mp3,chet-a.mp3,sephardi,m,syllable,chet-a,חַ,Reading practice: Chet A,cha
+audio/m/sephardi/syllable/chet-e.mp3,chet-e.mp3,sephardi,m,syllable,chet-e,חֶ,Reading practice: Chet E,che
+audio/m/sephardi/syllable/chet-i.mp3,chet-i.mp3,sephardi,m,syllable,chet-i,חִ,Reading practice: Chet I,chi
+audio/m/sephardi/syllable/chet-o.mp3,chet-o.mp3,sephardi,m,syllable,chet-o,חֹ,Reading practice: Chet O,cho
+audio/m/sephardi/syllable/chet-u.mp3,chet-u.mp3,sephardi,m,syllable,chet-u,חֻ,Reading practice: Chet U,chu
+audio/m/sephardi/syllable/dalet-a.mp3,dalet-a.mp3,sephardi,m,syllable,dalet-a,דַ,Reading practice: Dalet A,da
+audio/m/sephardi/syllable/dalet-e.mp3,dalet-e.mp3,sephardi,m,syllable,dalet-e,דֶ,Reading practice: Dalet E,de
+audio/m/sephardi/syllable/dalet-i.mp3,dalet-i.mp3,sephardi,m,syllable,dalet-i,דִ,Reading practice: Dalet I,di
+audio/m/sephardi/syllable/dalet-o.mp3,dalet-o.mp3,sephardi,m,syllable,dalet-o,דֹ,Reading practice: Dalet O,do
+audio/m/sephardi/syllable/dalet-u.mp3,dalet-u.mp3,sephardi,m,syllable,dalet-u,דֻ,Reading practice: Dalet U,du
+audio/m/sephardi/syllable/gimel-a.mp3,gimel-a.mp3,sephardi,m,syllable,gimel-a,גַ,Reading practice: Gimel A,ga
+audio/m/sephardi/syllable/gimel-e.mp3,gimel-e.mp3,sephardi,m,syllable,gimel-e,גֶ,Reading practice: Gimel E,ge
+audio/m/sephardi/syllable/gimel-i.mp3,gimel-i.mp3,sephardi,m,syllable,gimel-i,גִ,Reading practice: Gimel I,gi
+audio/m/sephardi/syllable/gimel-o.mp3,gimel-o.mp3,sephardi,m,syllable,gimel-o,גֹ,Reading practice: Gimel O,go
+audio/m/sephardi/syllable/gimel-u.mp3,gimel-u.mp3,sephardi,m,syllable,gimel-u,גֻ,Reading practice: Gimel U,gu
+audio/m/sephardi/syllable/he-a.mp3,he-a.mp3,sephardi,m,syllable,he-a,הַ,Reading practice: He A,ha
+audio/m/sephardi/syllable/he-e.mp3,he-e.mp3,sephardi,m,syllable,he-e,הֶ,Reading practice: He E,he
+audio/m/sephardi/syllable/he-i.mp3,he-i.mp3,sephardi,m,syllable,he-i,הִ,Reading practice: He I,hi
+audio/m/sephardi/syllable/he-o.mp3,he-o.mp3,sephardi,m,syllable,he-o,הֹ,Reading practice: He O,ho
+audio/m/sephardi/syllable/he-u.mp3,he-u.mp3,sephardi,m,syllable,he-u,הֻ,Reading practice: He U,hu
+audio/m/sephardi/syllable/kaf-a.mp3,kaf-a.mp3,sephardi,m,syllable,kaf-a,כַּ,Reading practice: Kaf A,ka
+audio/m/sephardi/syllable/kaf-e.mp3,kaf-e.mp3,sephardi,m,syllable,kaf-e,כֶּ,Reading practice: Kaf E,ke
+audio/m/sephardi/syllable/kaf-i.mp3,kaf-i.mp3,sephardi,m,syllable,kaf-i,כִּ,Reading practice: Kaf I,ki
+audio/m/sephardi/syllable/kaf-o.mp3,kaf-o.mp3,sephardi,m,syllable,kaf-o,כֹּ,Reading practice: Kaf O,ko
+audio/m/sephardi/syllable/kaf-u.mp3,kaf-u.mp3,sephardi,m,syllable,kaf-u,כֻּ,Reading practice: Kaf U,ku
+audio/m/sephardi/syllable/lamed-a.mp3,lamed-a.mp3,sephardi,m,syllable,lamed-a,לַ,Reading practice: Lamed A,la
+audio/m/sephardi/syllable/lamed-e.mp3,lamed-e.mp3,sephardi,m,syllable,lamed-e,לֶ,Reading practice: Lamed E,le
+audio/m/sephardi/syllable/lamed-i.mp3,lamed-i.mp3,sephardi,m,syllable,lamed-i,לִ,Reading practice: Lamed I,li
+audio/m/sephardi/syllable/lamed-o.mp3,lamed-o.mp3,sephardi,m,syllable,lamed-o,לֹ,Reading practice: Lamed O,lo
+audio/m/sephardi/syllable/lamed-u.mp3,lamed-u.mp3,sephardi,m,syllable,lamed-u,לֻ,Reading practice: Lamed U,lu
+audio/m/sephardi/syllable/mem-a.mp3,mem-a.mp3,sephardi,m,syllable,mem-a,מַ,Reading practice: Mem A,ma
+audio/m/sephardi/syllable/mem-e.mp3,mem-e.mp3,sephardi,m,syllable,mem-e,מֶ,Reading practice: Mem E,me
+audio/m/sephardi/syllable/mem-i.mp3,mem-i.mp3,sephardi,m,syllable,mem-i,מִ,Reading practice: Mem I,mi
+audio/m/sephardi/syllable/mem-o.mp3,mem-o.mp3,sephardi,m,syllable,mem-o,מֹ,Reading practice: Mem O,mo
+audio/m/sephardi/syllable/mem-u.mp3,mem-u.mp3,sephardi,m,syllable,mem-u,מֻ,Reading practice: Mem U,mu
+audio/m/sephardi/syllable/nun-a.mp3,nun-a.mp3,sephardi,m,syllable,nun-a,נַ,Reading practice: Nun A,na
+audio/m/sephardi/syllable/nun-e.mp3,nun-e.mp3,sephardi,m,syllable,nun-e,נֶ,Reading practice: Nun E,ne
+audio/m/sephardi/syllable/nun-i.mp3,nun-i.mp3,sephardi,m,syllable,nun-i,נִ,Reading practice: Nun I,ni
+audio/m/sephardi/syllable/nun-o.mp3,nun-o.mp3,sephardi,m,syllable,nun-o,נֹ,Reading practice: Nun O,no
+audio/m/sephardi/syllable/nun-u.mp3,nun-u.mp3,sephardi,m,syllable,nun-u,נֻ,Reading practice: Nun U,nu
+audio/m/sephardi/syllable/pe-a.mp3,pe-a.mp3,sephardi,m,syllable,pe-a,פַּ,Reading practice: Pe A,pa
+audio/m/sephardi/syllable/pe-e.mp3,pe-e.mp3,sephardi,m,syllable,pe-e,פֶּ,Reading practice: Pe E,pe
+audio/m/sephardi/syllable/pe-i.mp3,pe-i.mp3,sephardi,m,syllable,pe-i,פִּ,Reading practice: Pe I,pi
+audio/m/sephardi/syllable/pe-o.mp3,pe-o.mp3,sephardi,m,syllable,pe-o,פֹּ,Reading practice: Pe O,po
+audio/m/sephardi/syllable/pe-u.mp3,pe-u.mp3,sephardi,m,syllable,pe-u,פֻּ,Reading practice: Pe U,pu
+audio/m/sephardi/syllable/qof-a.mp3,qof-a.mp3,sephardi,m,syllable,qof-a,קַ,Reading practice: Qof A,ka
+audio/m/sephardi/syllable/qof-e.mp3,qof-e.mp3,sephardi,m,syllable,qof-e,קֶ,Reading practice: Qof E,ke
+audio/m/sephardi/syllable/qof-i.mp3,qof-i.mp3,sephardi,m,syllable,qof-i,קִ,Reading practice: Qof I,ki
+audio/m/sephardi/syllable/qof-o.mp3,qof-o.mp3,sephardi,m,syllable,qof-o,קֹ,Reading practice: Qof O,ko
+audio/m/sephardi/syllable/qof-u.mp3,qof-u.mp3,sephardi,m,syllable,qof-u,קֻ,Reading practice: Qof U,ku
+audio/m/sephardi/syllable/resh-a.mp3,resh-a.mp3,sephardi,m,syllable,resh-a,רַ,Reading practice: Resh A,ra
+audio/m/sephardi/syllable/resh-e.mp3,resh-e.mp3,sephardi,m,syllable,resh-e,רֶ,Reading practice: Resh E,re
+audio/m/sephardi/syllable/resh-i.mp3,resh-i.mp3,sephardi,m,syllable,resh-i,רִ,Reading practice: Resh I,ri
+audio/m/sephardi/syllable/resh-o.mp3,resh-o.mp3,sephardi,m,syllable,resh-o,רֹ,Reading practice: Resh O,ro
+audio/m/sephardi/syllable/resh-u.mp3,resh-u.mp3,sephardi,m,syllable,resh-u,רֻ,Reading practice: Resh U,ru
+audio/m/sephardi/syllable/samekh-a.mp3,samekh-a.mp3,sephardi,m,syllable,samekh-a,סַ,Reading practice: Samekh A,sa
+audio/m/sephardi/syllable/samekh-e.mp3,samekh-e.mp3,sephardi,m,syllable,samekh-e,סֶ,Reading practice: Samekh E,se
+audio/m/sephardi/syllable/samekh-i.mp3,samekh-i.mp3,sephardi,m,syllable,samekh-i,סִ,Reading practice: Samekh I,si
+audio/m/sephardi/syllable/samekh-o.mp3,samekh-o.mp3,sephardi,m,syllable,samekh-o,סֹ,Reading practice: Samekh O,so
+audio/m/sephardi/syllable/samekh-u.mp3,samekh-u.mp3,sephardi,m,syllable,samekh-u,סֻ,Reading practice: Samekh U,su
+audio/m/sephardi/syllable/shin-a.mp3,shin-a.mp3,sephardi,m,syllable,shin-a,שַׁ,Reading practice: Shin A,sha
+audio/m/sephardi/syllable/shin-e.mp3,shin-e.mp3,sephardi,m,syllable,shin-e,שֶׁ,Reading practice: Shin E,she
+audio/m/sephardi/syllable/shin-i.mp3,shin-i.mp3,sephardi,m,syllable,shin-i,שִׁ,Reading practice: Shin I,shi
+audio/m/sephardi/syllable/shin-o.mp3,shin-o.mp3,sephardi,m,syllable,shin-o,שֹׁ,Reading practice: Shin O,sho
+audio/m/sephardi/syllable/shin-u.mp3,shin-u.mp3,sephardi,m,syllable,shin-u,שֻׁ,Reading practice: Shin U,shu
+audio/m/sephardi/syllable/tav-a.mp3,tav-a.mp3,sephardi,m,syllable,tav-a,תַ,Reading practice: Tav A,ta
+audio/m/sephardi/syllable/tav-e.mp3,tav-e.mp3,sephardi,m,syllable,tav-e,תֶ,Reading practice: Tav E,te
+audio/m/sephardi/syllable/tav-i.mp3,tav-i.mp3,sephardi,m,syllable,tav-i,תִ,Reading practice: Tav I,ti
+audio/m/sephardi/syllable/tav-o.mp3,tav-o.mp3,sephardi,m,syllable,tav-o,תֹ,Reading practice: Tav O,to
+audio/m/sephardi/syllable/tav-u.mp3,tav-u.mp3,sephardi,m,syllable,tav-u,תֻ,Reading practice: Tav U,tu
+audio/m/sephardi/syllable/tet-a.mp3,tet-a.mp3,sephardi,m,syllable,tet-a,טַ,Reading practice: Tet A,ta
+audio/m/sephardi/syllable/tet-e.mp3,tet-e.mp3,sephardi,m,syllable,tet-e,טֶ,Reading practice: Tet E,te
+audio/m/sephardi/syllable/tet-i.mp3,tet-i.mp3,sephardi,m,syllable,tet-i,טִ,Reading practice: Tet I,ti
+audio/m/sephardi/syllable/tet-o.mp3,tet-o.mp3,sephardi,m,syllable,tet-o,טֹ,Reading practice: Tet O,to
+audio/m/sephardi/syllable/tet-u.mp3,tet-u.mp3,sephardi,m,syllable,tet-u,טֻ,Reading practice: Tet U,tu
+audio/m/sephardi/syllable/tsadi-a.mp3,tsadi-a.mp3,sephardi,m,syllable,tsadi-a,צַ,Reading practice: Tsadi A,tza
+audio/m/sephardi/syllable/tsadi-e.mp3,tsadi-e.mp3,sephardi,m,syllable,tsadi-e,צֶ,Reading practice: Tsadi E,tze
+audio/m/sephardi/syllable/tsadi-i.mp3,tsadi-i.mp3,sephardi,m,syllable,tsadi-i,צִ,Reading practice: Tsadi I,tzi
+audio/m/sephardi/syllable/tsadi-o.mp3,tsadi-o.mp3,sephardi,m,syllable,tsadi-o,צֹ,Reading practice: Tsadi O,tzo
+audio/m/sephardi/syllable/tsadi-u.mp3,tsadi-u.mp3,sephardi,m,syllable,tsadi-u,צֻ,Reading practice: Tsadi U,tzu
+audio/m/sephardi/syllable/vav-a.mp3,vav-a.mp3,sephardi,m,syllable,vav-a,וַ,Reading practice: Vav A,va
+audio/m/sephardi/syllable/vav-e.mp3,vav-e.mp3,sephardi,m,syllable,vav-e,וֶ,Reading practice: Vav E,ve
+audio/m/sephardi/syllable/vav-i.mp3,vav-i.mp3,sephardi,m,syllable,vav-i,וִ,Reading practice: Vav I,vi
+audio/m/sephardi/syllable/vav-o.mp3,vav-o.mp3,sephardi,m,syllable,vav-o,וֹ,Reading practice: Vav O,vo
+audio/m/sephardi/syllable/vav-u.mp3,vav-u.mp3,sephardi,m,syllable,vav-u,וֻ,Reading practice: Vav U,vu
+audio/m/sephardi/syllable/yod-a.mp3,yod-a.mp3,sephardi,m,syllable,yod-a,יַ,Reading practice: Yod A,ya
+audio/m/sephardi/syllable/yod-e.mp3,yod-e.mp3,sephardi,m,syllable,yod-e,יֶ,Reading practice: Yod E,ye
+audio/m/sephardi/syllable/yod-i.mp3,yod-i.mp3,sephardi,m,syllable,yod-i,יִ,Reading practice: Yod I,yi
+audio/m/sephardi/syllable/yod-o.mp3,yod-o.mp3,sephardi,m,syllable,yod-o,יֹ,Reading practice: Yod O,yo
+audio/m/sephardi/syllable/yod-u.mp3,yod-u.mp3,sephardi,m,syllable,yod-u,יֻ,Reading practice: Yod U,yu
+audio/m/sephardi/syllable/zayin-a.mp3,zayin-a.mp3,sephardi,m,syllable,zayin-a,זַ,Reading practice: Zayin A,za
+audio/m/sephardi/syllable/zayin-e.mp3,zayin-e.mp3,sephardi,m,syllable,zayin-e,זֶ,Reading practice: Zayin E,ze
+audio/m/sephardi/syllable/zayin-i.mp3,zayin-i.mp3,sephardi,m,syllable,zayin-i,זִ,Reading practice: Zayin I,zi
+audio/m/sephardi/syllable/zayin-o.mp3,zayin-o.mp3,sephardi,m,syllable,zayin-o,זֹ,Reading practice: Zayin O,zo
+audio/m/sephardi/syllable/zayin-u.mp3,zayin-u.mp3,sephardi,m,syllable,zayin-u,זֻ,Reading practice: Zayin U,zu
+audio/f/sephardi/vowel/chataf-kamatz.mp3,chataf-kamatz.mp3,sephardi,f,vowel,chataf-kamatz,אֳ,Hebrew vowel/mark: Chataf Kamatz,[o̞]
+audio/f/sephardi/vowel/chataf-patach.mp3,chataf-patach.mp3,sephardi,f,vowel,chataf-patach,אֲ,Hebrew vowel/mark: Chataf Patach,[a]
+audio/f/sephardi/vowel/chataf-segol.mp3,chataf-segol.mp3,sephardi,f,vowel,chataf-segol,אֱ,Hebrew vowel/mark: Chataf Segol,[e̞]
+audio/f/sephardi/vowel/chirik.mp3,chirik.mp3,sephardi,f,vowel,chirik,אִ,Hebrew vowel/mark: Chirik,[i]
+audio/f/sephardi/vowel/cholam.mp3,cholam.mp3,sephardi,f,vowel,cholam,אֹ,Hebrew vowel/mark: Cholam,[o̞]
+audio/f/sephardi/vowel/dagesh.mp3,dagesh.mp3,sephardi,f,vowel,dagesh,בּ,Hebrew vowel/mark: Dagesh consonant mark,hardens bet/kaf/pe to [b][k][p]; gemination absent
+audio/f/sephardi/vowel/kamatz.mp3,kamatz.mp3,sephardi,f,vowel,kamatz,אָ,Hebrew vowel/mark: Kamatz,[a]
+audio/f/sephardi/vowel/kubutz.mp3,kubutz.mp3,sephardi,f,vowel,kubutz,אֻ,Hebrew vowel/mark: Kubutz,[u]
+audio/f/sephardi/vowel/patach.mp3,patach.mp3,sephardi,f,vowel,patach,אַ,Hebrew vowel/mark: Patach,[a]
+audio/f/sephardi/vowel/segol.mp3,segol.mp3,sephardi,f,vowel,segol,אֶ,Hebrew vowel/mark: Segol,[e̞]
+audio/f/sephardi/vowel/shin-dot.mp3,shin-dot.mp3,sephardi,f,vowel,shin-dot,שׁ,Hebrew vowel/mark: Shin Dot consonant mark,[ʃ]
+audio/f/sephardi/vowel/shuruk.mp3,shuruk.mp3,sephardi,f,vowel,shuruk,וּ,Hebrew vowel/mark: Shuruk,[u]
+audio/f/sephardi/vowel/shva.mp3,shva.mp3,sephardi,f,vowel,shva,בְ,Hebrew vowel/mark: Shva,[e̞] or ∅ (no vowel)
+audio/f/sephardi/vowel/sin-dot.mp3,sin-dot.mp3,sephardi,f,vowel,sin-dot,שׂ,Hebrew vowel/mark: Sin Dot consonant mark,[s]
+audio/f/sephardi/vowel/tzere.mp3,tzere.mp3,sephardi,f,vowel,tzere,אֵ,Hebrew vowel/mark: Tzere,[e̞]
+audio/m/sephardi/vowel/chataf-kamatz.mp3,chataf-kamatz.mp3,sephardi,m,vowel,chataf-kamatz,אֳ,Hebrew vowel/mark: Chataf Kamatz,[o̞]
+audio/m/sephardi/vowel/chataf-patach.mp3,chataf-patach.mp3,sephardi,m,vowel,chataf-patach,אֲ,Hebrew vowel/mark: Chataf Patach,[a]
+audio/m/sephardi/vowel/chataf-segol.mp3,chataf-segol.mp3,sephardi,m,vowel,chataf-segol,אֱ,Hebrew vowel/mark: Chataf Segol,[e̞]
+audio/m/sephardi/vowel/chirik.mp3,chirik.mp3,sephardi,m,vowel,chirik,אִ,Hebrew vowel/mark: Chirik,[i]
+audio/m/sephardi/vowel/cholam.mp3,cholam.mp3,sephardi,m,vowel,cholam,אֹ,Hebrew vowel/mark: Cholam,[o̞]
+audio/m/sephardi/vowel/dagesh.mp3,dagesh.mp3,sephardi,m,vowel,dagesh,בּ,Hebrew vowel/mark: Dagesh consonant mark,hardens bet/kaf/pe to [b][k][p]; gemination absent
+audio/m/sephardi/vowel/kamatz.mp3,kamatz.mp3,sephardi,m,vowel,kamatz,אָ,Hebrew vowel/mark: Kamatz,[a]
+audio/m/sephardi/vowel/kubutz.mp3,kubutz.mp3,sephardi,m,vowel,kubutz,אֻ,Hebrew vowel/mark: Kubutz,[u]
+audio/m/sephardi/vowel/patach.mp3,patach.mp3,sephardi,m,vowel,patach,אַ,Hebrew vowel/mark: Patach,[a]
+audio/m/sephardi/vowel/segol.mp3,segol.mp3,sephardi,m,vowel,segol,אֶ,Hebrew vowel/mark: Segol,[e̞]
+audio/m/sephardi/vowel/shin-dot.mp3,shin-dot.mp3,sephardi,m,vowel,shin-dot,שׁ,Hebrew vowel/mark: Shin Dot consonant mark,[ʃ]
+audio/m/sephardi/vowel/shuruk.mp3,shuruk.mp3,sephardi,m,vowel,shuruk,וּ,Hebrew vowel/mark: Shuruk,[u]
+audio/m/sephardi/vowel/shva.mp3,shva.mp3,sephardi,m,vowel,shva,בְ,Hebrew vowel/mark: Shva,[e̞] or ∅ (no vowel)
+audio/m/sephardi/vowel/sin-dot.mp3,sin-dot.mp3,sephardi,m,vowel,sin-dot,שׂ,Hebrew vowel/mark: Sin Dot consonant mark,[s]
+audio/m/sephardi/vowel/tzere.mp3,tzere.mp3,sephardi,m,vowel,tzere,אֵ,Hebrew vowel/mark: Tzere,[e̞]

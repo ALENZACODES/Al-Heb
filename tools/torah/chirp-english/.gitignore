@@ -1,0 +1,10 @@
+clips/
+models/
+delivery/
+__pycache__/
+plan.json
+chapters.json
+manifest-english.json
+provenance.json
+concat.txt
+PAUSE_AFTER_CURRENT

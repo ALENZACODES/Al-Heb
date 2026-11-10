@@ -1,0 +1,66 @@
+diff --git a/src/progress/progress.view.js b/src/progress/progress.view.js
+index 45f2e0a..bb715ef 100644
+--- a/src/progress/progress.view.js
++++ b/src/progress/progress.view.js
+@@ -2,6 +2,7 @@
+ // Everything is computed offline from the store (see model.js). Nothing here is estimated: reading speed comes only from
+ // the learner's own timed reads (#/timedread), which are self-reported, and is labelled so (see docs/progress/timed-read-spec.md).
+ import { plain } from '../shell/plain-copy.js';
++import { ROUTES } from '../shell/router.js';
+ import { h, heSpan } from '../shell/ui.js';
+ import { streakVisible } from '../shell/comfort.js';
+ import { loadProgressData } from './data.js';
+@@ -56,6 +57,8 @@ export async function mount(root, ctx) {
+   let alive = true;
+   const { store } = ctx;
+   const has = (name) => (typeof ctx.hasRoute === 'function' ? ctx.hasRoute(name) : true);
++  // A link from this v0 page to a preview page says so (docs/v0/SCOPE.md: links to preview routes carry the same honesty).
++  const pv = (name) => { const r = ROUTES.find((x) => x.name === name); return r && r.tier !== 'v0' ? ' (Preview)' : ''; };
+   const style = h('style', {}); style.textContent = CSS;
+   const main = h('div', { class: 'pg' });
+   root.replaceChildren(style, h('h1', { id: 'view-title', tabindex: '-1' }, 'Your progress'), h('p', { class: 'muted', role: 'status' }, 'Loading your progress...'), main);
+@@ -118,7 +121,7 @@ export async function mount(root, ctx) {
+       h('ul', { class: 'pg-now' }, ...nowRows.map((row) => h('li', { 'data-now': row.id },
+         h('span', {}, row.label, row.measured === 'self' ? h('span', { class: 'pg-self' }, 'self-reported') : null),
+         h('span', { class: 'pg-now-v' }, row.value),
+-        h('span', { class: 'small muted pg-now-d' }, row.detail, has(HREF_ROUTE[row.href] ?? '') ? h('span', {}, ' ', h('a', { href: row.href }, 'Open')) : null))))));
++        h('span', { class: 'small muted pg-now-d' }, row.detail, has(HREF_ROUTE[row.href] ?? '') ? h('span', {}, ' ', h('a', { href: row.href }, 'Open' + pv(HREF_ROUTE[row.href] ?? ''))) : null))))));
+ 
+     // 2. lines and words in detail (the hook)
+     const r = c.read, cnt = lessonCounts(s, d.lessons);
+@@ -145,7 +148,7 @@ export async function mount(root, ctx) {
+     }
+     const sc = siddurCoverage(s, d, c);
+     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
+-      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
++      `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service' + pv('service'))),
+       h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
+     sections.push(readSec);
+ 
+@@ -173,7 +176,7 @@ export async function mount(root, ctx) {
+         h('ul', { class: 'pg-ms' }, ...rows.map((m) => h('li', { 'data-ms': m.id, 'data-done': m.achieved ? '1' : '0' },
+           h('span', { class: `pg-tag ${m.achieved ? 'done' : ''}` }, m.achieved ? 'Reached' : 'Not yet'), m.label,
+           m.achieved ? h('span', { class: 'small muted' }, ` (${m.dateText})`) : h('span', { class: 'small muted' }, m.need > 1 ? ` (${m.have} of ${m.need})` : ''),
+-          !m.achieved && has(({ '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service' })[m.href] ?? '') ? h('span', {}, ' ', h('a', { href: m.href }, 'Go')) : null)))));
++          !m.achieved && has(({ '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service' })[m.href] ?? '') ? h('span', {}, ' ', h('a', { href: m.href }, 'Go' + pv(({ '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service' })[m.href] ?? ''))) : null)))));
+     }
+ 
+     // 3. paths
+@@ -186,7 +189,7 @@ export async function mount(root, ctx) {
+         h('ol', {}, ...p.items.map((m) => h('li', {}, h('span', { class: `pg-tag ${m.status}` }, m.status === 'done' ? 'Done' : m.status === 'next' ? 'Next' : 'Later'), m.label,
+           m.status !== 'done' && m.measurable !== false && m.need > 1 ? h('span', { class: 'small muted' }, ` (${m.have} of ${m.need})`) : null,
+           m.note && m.status !== 'done' ? h('span', { class: 'small muted' }, ` (${m.note})`) : null,
+-          m.status === 'next' ? h('span', {}, ' ', h('a', { href: m.href }, 'Go')) : null)))));
++          m.status === 'next' ? h('span', {}, ' ', h('a', { href: m.href }, 'Go' + pv(({ '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service' })[m.href] ?? ''))) : null)))));
+     }
+ 
+     // 4. belts
+@@ -199,7 +202,7 @@ export async function mount(root, ctx) {
+         h('p', { class: 'small' }, b.gate),
+         h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
+           g.note && g.measurable ? h('span', { class: 'muted' }, ` (${g.note})`) : null,
+-          g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read')) : null)))))));
++          g.kind === 'timedRead' && !g.done && has('timedread') ? h('span', {}, ' ', h('a', { href: '#/timedread' }, 'Time a read' + pv('timedread'))) : null)))))));
+ 
+     // 5. weak spots: up to 10, merged across sources, each with a plain-English next step
+     const weak = weakReport(s, d, c, { max: 10, has });

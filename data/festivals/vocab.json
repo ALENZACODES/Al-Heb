@@ -1,0 +1,1467 @@
+{
+ "schema": "alef-festival-vocab/1",
+ "note": "Draft. Words are records of data/vocab/words.json picked by id; reading lines are copied verbatim from data/corpus (registry.json, phrasebook.json), shortest line holding the word (exact spelling or one prefix letter). Whether the word means the same in the line, or in the festival, was not checked by a Hebrew speaker.",
+ "packSize": 12,
+ "packs": [
+  {
+   "id": "rosh-hashanah",
+   "size": 12,
+   "short": 0,
+   "withLine": 6,
+   "words": [
+    {
+     "id": "h88576753",
+     "he": "שׁוֹפָר",
+     "translit": "shofar",
+     "en": "shofar",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hbb1dc7a2",
+     "he": "תַּפּוּחַ",
+     "translit": "tapuach",
+     "en": "apple",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hc008b0a9",
+     "he": "דְּבַשׁ",
+     "translit": "devash",
+     "en": "honey",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hf07c1580",
+     "he": "שָׁנָה",
+     "translit": "shanah",
+     "en": "year",
+     "pos": "noun",
+     "line": {
+      "he": "שָׁנָה טוֹבָה",
+      "source": "phrasebook",
+      "id": "greetings-10",
+      "n": 1,
+      "title": "happy new year (Rosh Hashana greeting)"
+     }
+    },
+    {
+     "id": "h53c53bdf",
+     "he": "חָדָשׁ",
+     "translit": "chadash",
+     "en": "new, recently made",
+     "pos": "adj",
+     "line": {
+      "he": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+      "source": "registry",
+      "id": "hashivenu",
+      "n": 1,
+      "title": "Hashivenu (sung as the Torah is returned; 'Chadesh yameinu kekedem')"
+     }
+    },
+    {
+     "id": "h61f0d2fb",
+     "he": "תָּקַע",
+     "translit": "taka",
+     "en": "to sound, blow",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h725d19e2",
+     "he": "זִכָּרוֹן",
+     "translit": "zikaron",
+     "en": "memory",
+     "pos": "noun",
+     "senseNote": "Memory; Rosh Hashanah is called Yom HaZikaron in the liturgy.",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית כִּי הוּא יוֹם תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת׃",
+      "source": "registry",
+      "id": "kiddush-shabbat-eve",
+      "n": 1,
+      "title": "Kiddush for Shabbat evening (the sanctification blessing)"
+     }
+    },
+    {
+     "id": "h8b7d0341",
+     "he": "דִּין",
+     "translit": "din",
+     "en": "judgement",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h58d8d8fe",
+     "he": "מֶלֶךְ",
+     "translit": "melekh",
+     "en": "king",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+      "source": "registry",
+      "id": "bless-formula-1",
+      "n": 1,
+      "title": "Blessing formula (Baruch atah Adonai Eloheinu Melech ha'olam)"
+     }
+    },
+    {
+     "id": "h93295b86",
+     "he": "בְּרָכָה",
+     "translit": "berakhah",
+     "en": "blessing, congratulation",
+     "pos": "noun",
+     "line": {
+      "he": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃",
+      "source": "registry",
+      "id": "sim-shalom",
+      "n": 1,
+      "title": "Sim shalom (peace blessing of the morning Amidah)"
+     }
+    },
+    {
+     "id": "h9790d078",
+     "he": "מָתוֹק",
+     "translit": "matok",
+     "en": "Sweet",
+     "pos": "adj",
+     "line": null
+    },
+    {
+     "id": "h51ed2ee5",
+     "he": "חַיִּים",
+     "translit": "chayim",
+     "en": "life",
+     "pos": "noun",
+     "line": {
+      "he": "לְחַיִּים!",
+      "source": "phrasebook",
+      "id": "cafe-13",
+      "n": 1,
+      "title": "cheers!"
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "en": "round (challah)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "yom-kippur",
+   "size": 12,
+   "short": 0,
+   "withLine": 2,
+   "words": [
+    {
+     "id": "hb7990a7a",
+     "he": "כִּפּוּר",
+     "translit": "kipur",
+     "en": "Repentance, atonement",
+     "pos": "noun",
+     "senseNote": "Gloss is \"repentance, atonement\"; the festival name is Yom Kippur.",
+     "line": null
+    },
+    {
+     "id": "hf8b5d278",
+     "he": "צוֹם",
+     "translit": "tzom",
+     "en": "fast",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h33cf0d1b",
+     "he": "סְלִיחָה",
+     "translit": "selichah",
+     "en": "forgiveness, pardon",
+     "pos": "noun",
+     "line": {
+      "he": "סְלִיחָה",
+      "source": "phrasebook",
+      "id": "politeness-06",
+      "n": 1,
+      "title": "excuse me / sorry"
+     }
+    },
+    {
+     "id": "hdd847ae4",
+     "he": "סָלַח",
+     "translit": "salach",
+     "en": "to forgive",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "hb59a3ee1",
+     "he": "חֵטְא",
+     "translit": "chet",
+     "en": "sin",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h2035ee1a",
+     "he": "חָטָא",
+     "translit": "chata",
+     "en": "to sin",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h89d3ba77",
+     "he": "חֲרָטָה",
+     "translit": "charatah",
+     "en": "regret (instance of such an emotion), remorse",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5271b622",
+     "he": "עָווֹן",
+     "translit": "avon",
+     "en": "iniquity",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hccd921cd",
+     "he": "אָשָׁם",
+     "translit": "asham",
+     "en": "guilt",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hc09d494d",
+     "he": "טָהוֹר",
+     "translit": "tahor",
+     "en": "pure",
+     "pos": "adj",
+     "line": null
+    },
+    {
+     "id": "h9a1ab3f5",
+     "he": "רַחֲמִים",
+     "translit": "rachamim",
+     "en": "mercy",
+     "pos": "noun",
+     "line": {
+      "he": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃",
+      "source": "registry",
+      "id": "sim-shalom",
+      "n": 1,
+      "title": "Sim shalom (peace blessing of the morning Amidah)"
+     }
+    },
+    {
+     "id": "h0d9fc785",
+     "he": "חָתַם",
+     "translit": "chatam",
+     "en": "to sign, to affix a seal",
+     "pos": "verb",
+     "senseNote": "Gloss is \"to sign, seal\"; the Yom Kippur use is being sealed in the Book of Life.",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "confession (vidui)"
+    },
+    {
+     "en": "atonement (kapparah)"
+    },
+    {
+     "en": "pardon (mechilah)"
+    },
+    {
+     "en": "Ne'ilah"
+    }
+   ],
+   "notes": [
+    "The entry spelled like teshuvah is glossed \"answer, response\", not repentance, so it is not used."
+   ]
+  },
+  {
+   "id": "sukkot",
+   "size": 12,
+   "short": 0,
+   "withLine": 6,
+   "words": [
+    {
+     "id": "ha76619e4",
+     "he": "הֲדַס",
+     "translit": "hadas",
+     "en": "myrtle",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h81fd04d9",
+     "he": "חַג",
+     "translit": "chag",
+     "en": "holiday",
+     "pos": "noun",
+     "line": {
+      "he": "חַג שָׂמֵחַ",
+      "source": "phrasebook",
+      "id": "greetings-09",
+      "n": 1,
+      "title": "happy holiday"
+     }
+    },
+    {
+     "id": "hff7974cf",
+     "he": "אוֹרֵחַ",
+     "translit": "oreach",
+     "en": "guest, visitor",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hfcd9d9b6",
+     "he": "יָשַׁב",
+     "translit": "yashav",
+     "en": "to sit; to live (somewhere)",
+     "pos": "verb",
+     "line": {
+      "he": "שַׂמְּחֵנוּ יְהוָה אֱלֹהֵינוּ בְּאֵלִיָהוּ הַנָּבִיא עַבְדָּךְ וּבְמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ בִּמְהֵרָה יָבֹא וְיָגֵל לִבֵּנוּ עַל כִּסְאוֹ לֹא יֵשֵׁב זָר וְלֹא יִנְחֲלוּ עוֹד אֲחֵרִים אֶת כְּבוֹדוֹ כִּי בְשֵׁם קָדְשְׁךָ נִשְׁבַּעְתָּ לּוֹ שֶׁלֹּא יִכְבֶּה נֵרוֹ לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה יְהוָה מָגֵן דָּוִד׃",
+      "source": "registry",
+      "id": "haftarah-after",
+      "n": 3,
+      "title": "Haftarah blessings after the reading (Shabbat)"
+     }
+    },
+    {
+     "id": "h519ce338",
+     "he": "קָצִיר",
+     "translit": "katzir",
+     "en": "a harvest",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hc5e80001",
+     "he": "גֶּשֶׁם",
+     "translit": "geshem",
+     "en": "rain",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h3612be9c",
+     "he": "שִׂמְחָה",
+     "translit": "simchah",
+     "en": "joy, happiness, glee",
+     "pos": "noun",
+     "line": {
+      "he": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד׃ כִּי עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי לִי לִישׁוּעָה׃ וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה׃ לַיהֹוָה הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה׃ יְהוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה׃ יְהוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ׃ יְהוָה הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ׃ כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְהוָה אֶקְרָא׃",
+      "source": "registry",
+      "id": "havdalah-opening",
+      "n": 1,
+      "title": "Hinei El yeshuati (opening of Havdalah)"
+     }
+    },
+    {
+     "id": "h991d080e",
+     "he": "עָנָף",
+     "translit": "anaf",
+     "en": "branch",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h769a6c3e",
+     "he": "אַרְבָּעָה",
+     "translit": "arba'ah",
+     "en": "four",
+     "pos": "num",
+     "line": {
+      "he": "אַרְבָּעָה",
+      "source": "phrasebook",
+      "id": "numbers-04",
+      "n": 1,
+      "title": "four (4)"
+     }
+    },
+    {
+     "id": "h5b3d2b4c",
+     "he": "מִין",
+     "translit": "min",
+     "en": "kind",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h166d92b0",
+     "he": "פְּרִי",
+     "translit": "peri",
+     "en": "fruit",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+      "source": "registry",
+      "id": "kiddush-wine-1",
+      "n": 1,
+      "title": "Blessing over wine"
+     }
+    },
+    {
+     "id": "hd2fac0d2",
+     "he": "עֵץ",
+     "translit": "etz",
+     "en": "tree",
+     "pos": "noun",
+     "line": {
+      "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+      "source": "registry",
+      "id": "etz-chaim",
+      "n": 1,
+      "title": "Etz chaim hi (sung as the Torah is returned to the ark)"
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "en": "sukkah"
+    },
+    {
+     "en": "lulav"
+    },
+    {
+     "en": "etrog"
+    },
+    {
+     "en": "s'chach (roof covering)"
+    },
+    {
+     "en": "ingathering (asif)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "shemini-atzeret",
+   "size": 12,
+   "short": 0,
+   "withLine": 4,
+   "words": [
+    {
+     "id": "h63ca5856",
+     "he": "עֲצֶרֶת",
+     "translit": "atzeret",
+     "en": "Gathering of an organization",
+     "pos": "noun",
+     "senseNote": "Gloss is a general word for a gathering; Atzeret is the festival's name.",
+     "line": null
+    },
+    {
+     "id": "h1f7cf03f",
+     "he": "שְׁמִינִי",
+     "translit": "shemini",
+     "en": "eighth",
+     "pos": "adj",
+     "line": null
+    },
+    {
+     "id": "h16b7af50",
+     "he": "תּוֹרָה",
+     "translit": "torah",
+     "en": "instruction, teaching",
+     "pos": "noun",
+     "line": {
+      "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי יְהוָה בְּיַד מֹשֶׁה׃",
+      "source": "registry",
+      "id": "vezot-hatorah",
+      "n": 1,
+      "title": "V'zot haTorah (said when the Torah is lifted)"
+     }
+    },
+    {
+     "id": "h3612be9c",
+     "he": "שִׂמְחָה",
+     "translit": "simchah",
+     "en": "joy, happiness, glee",
+     "pos": "noun",
+     "line": {
+      "he": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד׃ כִּי עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי לִי לִישׁוּעָה׃ וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה׃ לַיהֹוָה הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה׃ יְהוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה׃ יְהוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ׃ יְהוָה הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ׃ כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְהוָה אֶקְרָא׃",
+      "source": "registry",
+      "id": "havdalah-opening",
+      "n": 1,
+      "title": "Hinei El yeshuati (opening of Havdalah)"
+     }
+    },
+    {
+     "id": "h57665cd9",
+     "he": "שָׂמֵחַ",
+     "translit": "sameach",
+     "en": "happy, glad, pleased",
+     "pos": "adj",
+     "line": {
+      "he": "חַג שָׂמֵחַ",
+      "source": "phrasebook",
+      "id": "greetings-09",
+      "n": 1,
+      "title": "happy holiday"
+     }
+    },
+    {
+     "id": "h06992de5",
+     "he": "סִיּוּם",
+     "translit": "siyum",
+     "en": "completion, finishing",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h617c6136",
+     "he": "דֶּגֶל",
+     "translit": "degel",
+     "en": "a flag",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hc5e80001",
+     "he": "גֶּשֶׁם",
+     "translit": "geshem",
+     "en": "rain",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h231c624a",
+     "he": "סֵפֶר",
+     "translit": "sefer",
+     "en": "book",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h0fc2ca76",
+     "he": "הִתְחִיל",
+     "translit": "hitchil",
+     "en": "to start, to begin",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h2d1e4a74",
+     "he": "סוֹף",
+     "translit": "sof",
+     "en": "an end, a finish",
+     "pos": "noun",
+     "line": {
+      "he": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ׃",
+      "source": "registry",
+      "id": "yigdal",
+      "n": 10,
+      "title": "Yigdal (hymn of the Thirteen Principles)"
+     }
+    },
+    {
+     "id": "h8cbd3155",
+     "he": "רָקַד",
+     "translit": "rakad",
+     "en": "dance, skip",
+     "pos": "verb",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "dancing (rikud)"
+    },
+    {
+     "en": "hakafot"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "hanukkah",
+   "size": 12,
+   "short": 0,
+   "withLine": 7,
+   "words": [
+    {
+     "id": "h64fb7d35",
+     "he": "נֵר",
+     "translit": "ner",
+     "en": "oil lamp, candle",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה׃",
+      "source": "registry",
+      "id": "hanukkah-candle",
+      "n": 1,
+      "title": "Hanukkah: blessing to light the candles"
+     }
+    },
+    {
+     "id": "h8459058d",
+     "he": "שֶׁמֶן",
+     "translit": "shemen",
+     "en": "oil (liquid fat)",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h3674f19e",
+     "he": "נֵס",
+     "translit": "nes",
+     "en": "a miracle",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hf1772ec6",
+     "he": "מִקְדָּשׁ",
+     "translit": "mikdash",
+     "en": "temple",
+     "pos": "noun",
+     "line": {
+      "he": "עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם הַשַּׁבָּת הַזֶּה שֶׁנָּתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ לִקְדֻשָּׁה וְלִמְנוּחָה לְכָבוֹד וּלְתִפְאָרֶת עַל הַכֹּל יְהוָה אֱלֹהֵינוּ אֲנַחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ יִתְבָּרַךְ שִׁמְךָ בְּפִי כָּל־חַי תָּמִיד לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת אָמֵן׃",
+      "source": "registry",
+      "id": "haftarah-after",
+      "n": 4,
+      "title": "Haftarah blessings after the reading (Shabbat)"
+     }
+    },
+    {
+     "id": "he10c2446",
+     "he": "מְנוֹרָה",
+     "translit": "menorah",
+     "en": "a light, a lamp",
+     "pos": "noun",
+     "senseNote": "Gloss is \"a light, a lamp\"; this is the word for the menorah.",
+     "line": null
+    },
+    {
+     "id": "h4700de9c",
+     "he": "אוֹר",
+     "translit": "or",
+     "en": "light, visible light",
+     "pos": "noun",
+     "senseNote": "Light in general; Hanukkah is the Festival of Lights.",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל וּבֵין אוֹר לְחֹשֶׁךְ וּבֵין יִשְׂרָאֵל לָעַמִּים וּבֵין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה בָּרוּךְ אַתָּה יְהוָה הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל׃",
+      "source": "registry",
+      "id": "havdalah-hamavdil",
+      "n": 1,
+      "title": "Havdalah: Hamavdil bein kodesh lechol"
+     }
+    },
+    {
+     "id": "h8246132a",
+     "he": "הִדְלִיק",
+     "translit": "hidlik",
+     "en": "to light, light up, ignite (a fire, lamp, or the like)",
+     "pos": "verb",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה׃",
+      "source": "registry",
+      "id": "hanukkah-candle",
+      "n": 1,
+      "title": "Hanukkah: blessing to light the candles"
+     }
+    },
+    {
+     "id": "h8e236dac",
+     "he": "מִלְחָמָה",
+     "translit": "milchamah",
+     "en": "warfare, war",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h745593b8",
+     "he": "שְׁמוֹנָה",
+     "translit": "shemonah",
+     "en": "eight",
+     "pos": "num",
+     "line": {
+      "he": "שְׁמוֹנָה",
+      "source": "phrasebook",
+      "id": "numbers-08",
+      "n": 1,
+      "title": "eight (8)"
+     }
+    },
+    {
+     "id": "h1999d835",
+     "he": "יְהוּדִי",
+     "translit": "yehudi",
+     "en": "Jew, Jewish person",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h81fd04d9",
+     "he": "חַג",
+     "translit": "chag",
+     "en": "holiday",
+     "pos": "noun",
+     "line": {
+      "he": "חַג שָׂמֵחַ",
+      "source": "phrasebook",
+      "id": "greetings-09",
+      "n": 1,
+      "title": "happy holiday"
+     }
+    },
+    {
+     "id": "hf16db4f8",
+     "he": "שִׁיר",
+     "translit": "shir",
+     "en": "song",
+     "pos": "noun",
+     "line": {
+      "he": "שִׁיר הַמַּעֲלוֹת בְּשׁוּב יְהוָה אֶת־שִׁיבַת צִיּוֹן הָיִינוּ כְּחֹלְמִים׃",
+      "source": "registry",
+      "id": "shir-hamaalot",
+      "n": 1,
+      "title": "Shir hamaalot (sung before Birkat Hamazon on Shabbat and festivals)"
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "en": "Hanukkah"
+    },
+    {
+     "en": "hanukkiah"
+    },
+    {
+     "en": "dreidel (sevivon)"
+    },
+    {
+     "en": "Maccabee"
+    },
+    {
+     "en": "victory"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "tu-bishvat",
+   "size": 12,
+   "short": 0,
+   "withLine": 5,
+   "words": [
+    {
+     "id": "hd2fac0d2",
+     "he": "עֵץ",
+     "translit": "etz",
+     "en": "tree",
+     "pos": "noun",
+     "line": {
+      "he": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר׃ דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם׃ אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד׃ יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר׃",
+      "source": "registry",
+      "id": "etz-chaim",
+      "n": 1,
+      "title": "Etz chaim hi (sung as the Torah is returned to the ark)"
+     }
+    },
+    {
+     "id": "h166d92b0",
+     "he": "פְּרִי",
+     "translit": "peri",
+     "en": "fruit",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+      "source": "registry",
+      "id": "kiddush-wine-1",
+      "n": 1,
+      "title": "Blessing over wine"
+     }
+    },
+    {
+     "id": "hb67e1917",
+     "he": "שָׁקֵד",
+     "translit": "shaked",
+     "en": "almond",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h08e0fe5b",
+     "he": "זַיִת",
+     "translit": "zayit",
+     "en": "olive (species)",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5d939fef",
+     "he": "תָּמָר",
+     "translit": "tamar",
+     "en": "date palm, palm tree in general",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5ef32c54",
+     "he": "תְּאֵנָה",
+     "translit": "te'enah",
+     "en": "a fig tree",
+     "pos": "noun",
+     "senseNote": "Fig tree; one of the seven species named for Tu BiShvat.",
+     "line": null
+    },
+    {
+     "id": "hf1b8cedf",
+     "he": "עֵנָב",
+     "translit": "enav",
+     "en": "the grains of various plants that grow in bunches",
+     "pos": "noun",
+     "senseNote": "Gloss is \"the grains of various...\"; the entry is about grapes, one of the seven species.",
+     "line": null
+    },
+    {
+     "id": "h2a49fab3",
+     "he": "נָטַע",
+     "translit": "nata",
+     "en": "to plant, implant (also figurative)",
+     "pos": "verb",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר נָתַן לָנוּ תּוֹרַת אֱמֶת וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵנוּ׃ בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה׃",
+      "source": "registry",
+      "id": "torah-bless-2",
+      "n": 1,
+      "title": "Torah blessing (after reading)"
+     }
+    },
+    {
+     "id": "hef745501",
+     "he": "יַעַר",
+     "translit": "ya'ar",
+     "en": "forest",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h85cda534",
+     "he": "גֶּפֶן",
+     "translit": "gefen",
+     "en": "vine, grapevine",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃",
+      "source": "registry",
+      "id": "kiddush-wine-1",
+      "n": 1,
+      "title": "Blessing over wine"
+     }
+    },
+    {
+     "id": "h2d90f840",
+     "he": "אֲדָמָה",
+     "translit": "adamah",
+     "en": "earth, soil, land",
+     "pos": "noun",
+     "line": {
+      "he": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל־הֲמוֹנָם שֶׁהֵם מִשְׁתַּחֲוִים לָהֶבֶל וָרִיק וּמִתְפַּלְּלִים אֶל־אֵל לֹא יוֹשִׁיעַ וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא שֶׁהוּא נוֹטֶה שָׁמַיִם וְיוֹסֵד אָרֶץ וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ כַּכָּתוּב בַּתּוֹרָה וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+      "source": "registry",
+      "id": "aleinu-1",
+      "n": 1,
+      "title": "Aleinu, first paragraph"
+     }
+    },
+    {
+     "id": "h991d080e",
+     "he": "עָנָף",
+     "translit": "anaf",
+     "en": "branch",
+     "pos": "noun",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "pomegranate"
+    },
+    {
+     "en": "carob"
+    },
+    {
+     "en": "wheat"
+    },
+    {
+     "en": "barley"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "purim",
+   "size": 12,
+   "short": 0,
+   "withLine": 3,
+   "words": [
+    {
+     "id": "h58d8d8fe",
+     "he": "מֶלֶךְ",
+     "translit": "melekh",
+     "en": "king",
+     "pos": "noun",
+     "line": {
+      "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+      "source": "registry",
+      "id": "bless-formula-1",
+      "n": 1,
+      "title": "Blessing formula (Baruch atah Adonai Eloheinu Melech ha'olam)"
+     }
+    },
+    {
+     "id": "h571c298a",
+     "he": "מַלְכָּה",
+     "translit": "malkah",
+     "en": "queen (female monarch)",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hffd4de51",
+     "he": "מִשְׁלוֹחַ",
+     "translit": "mishloach",
+     "en": "shipment",
+     "pos": "noun",
+     "senseNote": "Gloss is \"shipment\"; the Purim custom is mishloach manot, gifts of food.",
+     "line": null
+    },
+    {
+     "id": "h3612be9c",
+     "he": "שִׂמְחָה",
+     "translit": "simchah",
+     "en": "joy, happiness, glee",
+     "pos": "noun",
+     "line": {
+      "he": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד׃ כִּי עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי לִי לִישׁוּעָה׃ וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה׃ לַיהֹוָה הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה׃ יְהוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה׃ יְהוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ׃ יְהוָה הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ׃ כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְהוָה אֶקְרָא׃",
+      "source": "registry",
+      "id": "havdalah-opening",
+      "n": 1,
+      "title": "Hinei El yeshuati (opening of Havdalah)"
+     }
+    },
+    {
+     "id": "h03763c94",
+     "he": "יַיִן",
+     "translit": "yayin",
+     "en": "wine",
+     "pos": "noun",
+     "line": {
+      "he": "יַיִן",
+      "source": "phrasebook",
+      "id": "cafe-12",
+      "n": 1,
+      "title": "wine"
+     }
+    },
+    {
+     "id": "hfcc1a370",
+     "he": "גּוֹרָל",
+     "translit": "goral",
+     "en": "a lot",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "he1fb2094",
+     "he": "פּוּר",
+     "translit": "pur",
+     "en": "lot, fate",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hb88ee2ce",
+     "he": "הָפַךְ",
+     "translit": "hafakh",
+     "en": "to turn about, to turn over, to invert, to flip, to change",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h407a8f11",
+     "he": "רָעַשׁ",
+     "translit": "ra'ash",
+     "en": "to be noisy",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "hc5b0c1a0",
+     "he": "מַתָּנָה",
+     "translit": "matanah",
+     "en": "gift",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h492d82b0",
+     "he": "אֶבְיוֹן",
+     "translit": "evyon",
+     "en": "poor, needy",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h6e73aa1f",
+     "he": "סְעוּדָה",
+     "translit": "se'udah",
+     "en": "banquet, feast",
+     "pos": "noun",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "Purim"
+    },
+    {
+     "en": "megillah"
+    },
+    {
+     "en": "Esther"
+    },
+    {
+     "en": "Mordechai"
+    },
+    {
+     "en": "Haman"
+    },
+    {
+     "en": "costume"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "pesach",
+   "size": 12,
+   "short": 0,
+   "withLine": 2,
+   "words": [
+    {
+     "id": "h4ebf1a3c",
+     "he": "מַצָּה",
+     "translit": "matzah",
+     "en": "matzo, unleavened bread",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5f4ecfc7",
+     "he": "חָמֵץ",
+     "translit": "chametz",
+     "en": "chametz",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h6ad3ddd8",
+     "he": "סֵדֶר",
+     "translit": "seder",
+     "en": "order, arrangement; the Passover seder",
+     "pos": "noun",
+     "senseNote": "\"Order\"; the Pesach seder is the ordered meal.",
+     "line": {
+      "he": "בְּסֵדֶר",
+      "source": "phrasebook",
+      "id": "greetings-15",
+      "n": 1,
+      "title": "OK / fine / alright"
+     }
+    },
+    {
+     "id": "hd60cd96a",
+     "he": "יְצִיאָה",
+     "translit": "yetzi'ah",
+     "en": "exit (a place to exit)",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h1414a3a2",
+     "he": "עֶבֶד",
+     "translit": "eved",
+     "en": "a slave, a serf",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h8c6b1e0c",
+     "he": "חֵרוּת",
+     "translit": "cherut",
+     "en": "liberty, freedom",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h129dd70a",
+     "he": "שָׁאַל",
+     "translit": "sha'al",
+     "en": "to ask (a question), to query",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "hf9047f4b",
+     "he": "כּוֹס",
+     "translit": "kos",
+     "en": "cup",
+     "pos": "noun",
+     "line": {
+      "he": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד׃ כִּי עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי לִי לִישׁוּעָה׃ וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה׃ לַיהֹוָה הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה׃ יְהוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה׃ יְהוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ׃ יְהוָה הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ׃ כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְהוָה אֶקְרָא׃",
+      "source": "registry",
+      "id": "havdalah-opening",
+      "n": 1,
+      "title": "Hinei El yeshuati (opening of Havdalah)"
+     }
+    },
+    {
+     "id": "h050cbd4d",
+     "he": "גָּאַל",
+     "translit": "ga'al",
+     "en": "to redeem",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h0073b076",
+     "he": "פַּרְעֹה",
+     "translit": "par'oh",
+     "en": "pharaoh",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5ad2503a",
+     "he": "מִצְרִי",
+     "translit": "mitzri",
+     "en": "Egyptian (person)",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h8f56fc93",
+     "he": "אָבִיב",
+     "translit": "aviv",
+     "en": "early stage of ripening, especially of grains",
+     "pos": "noun",
+     "senseNote": "Spring; Pesach is the spring festival, the word is not a Pesach term as such.",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "maror (bitter herbs)"
+    },
+    {
+     "en": "charoset"
+    },
+    {
+     "en": "Haggadah"
+    },
+    {
+     "en": "Egypt (Mitzrayim)"
+    },
+    {
+     "en": "Moses"
+    },
+    {
+     "en": "afikoman"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "shavuot",
+   "size": 11,
+   "short": 1,
+   "withLine": 4,
+   "words": [
+    {
+     "id": "h16b7af50",
+     "he": "תּוֹרָה",
+     "translit": "torah",
+     "en": "instruction, teaching",
+     "pos": "noun",
+     "line": {
+      "he": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי יְהוָה בְּיַד מֹשֶׁה׃",
+      "source": "registry",
+      "id": "vezot-hatorah",
+      "n": 1,
+      "title": "V'zot haTorah (said when the Torah is lifted)"
+     }
+    },
+    {
+     "id": "h8b8da70a",
+     "he": "בִּכּוּרִים",
+     "translit": "bikurim",
+     "en": "first fruits, early crops",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h35be21c5",
+     "he": "חָלָב",
+     "translit": "chalav",
+     "en": "milk",
+     "pos": "noun",
+     "senseNote": "Milk; the Shavuot custom of dairy foods is a custom, not a rule.",
+     "line": {
+      "he": "קָפֶה עִם חָלָב",
+      "source": "phrasebook",
+      "id": "cafe-07",
+      "n": 1,
+      "title": "coffee with milk"
+     }
+    },
+    {
+     "id": "h4ef6ec03",
+     "he": "גְּבִינָה",
+     "translit": "gevinah",
+     "en": "cheese",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "ha664d093",
+     "he": "עוּגָה",
+     "translit": "ugah",
+     "en": "cake",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hc91c0d80",
+     "he": "הַר",
+     "translit": "har",
+     "en": "mountain (mass of earth and rock)",
+     "pos": "noun",
+     "line": {
+      "he": "לְךָ יְהוָה הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד כִּי כֹל בַּשָּׁמַיִם וּבָאָרֶץ׃ לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא׃ רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ׃",
+      "source": "registry",
+      "id": "lecha-hashem",
+      "n": 1,
+      "title": "Lecha Adonai hagedulah (carrying the Torah around)"
+     }
+    },
+    {
+     "id": "h44a725b6",
+     "he": "עֲשֶׂרֶת",
+     "translit": "aseret",
+     "en": "group of ten",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h519ce338",
+     "he": "קָצִיר",
+     "translit": "katzir",
+     "en": "a harvest",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h2ff06831",
+     "he": "מִצְוָה",
+     "translit": "mitzvah",
+     "en": "commandment",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h39b463af",
+     "he": "בְּרִית",
+     "translit": "berit",
+     "en": "covenant, alliance",
+     "pos": "noun",
+     "line": {
+      "he": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃",
+      "source": "registry",
+      "id": "kiddush-veshamru",
+      "n": 1,
+      "title": "V'shamru (Shabbat-day Kiddush; also in the Shabbat Amidah)"
+     }
+    },
+    {
+     "id": "ha3fb2785",
+     "he": "סְפִירָה",
+     "translit": "sefirah",
+     "en": "an act of counting",
+     "pos": "noun",
+     "line": null
+    }
+   ],
+   "gaps": [
+    {
+     "en": "Shavuot"
+    },
+    {
+     "en": "Omer"
+    },
+    {
+     "en": "(Ten) Utterances"
+    }
+   ],
+   "notes": [
+    "The 5,000-word list has an entry spelled like Sinai with the gloss \"Chinese\", and one spelled like Ruth with the gloss \"roger\"; neither is used."
+   ]
+  },
+  {
+   "id": "tisha-bav",
+   "size": 12,
+   "short": 0,
+   "withLine": 5,
+   "words": [
+    {
+     "id": "hf8b5d278",
+     "he": "צוֹם",
+     "translit": "tzom",
+     "en": "fast",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "hf1772ec6",
+     "he": "מִקְדָּשׁ",
+     "translit": "mikdash",
+     "en": "temple",
+     "pos": "noun",
+     "line": {
+      "he": "עַל הַתּוֹרָה וְעַל הָעֲבוֹדָה וְעַל הַנְּבִיאִים וְעַל יוֹם הַשַּׁבָּת הַזֶּה שֶׁנָּתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ לִקְדֻשָּׁה וְלִמְנוּחָה לְכָבוֹד וּלְתִפְאָרֶת עַל הַכֹּל יְהוָה אֱלֹהֵינוּ אֲנַחְנוּ מוֹדִים לָךְ וּמְבָרְכִים אוֹתָךְ יִתְבָּרַךְ שִׁמְךָ בְּפִי כָּל־חַי תָּמִיד לְעוֹלָם וָעֶד בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת אָמֵן׃",
+      "source": "registry",
+      "id": "haftarah-after",
+      "n": 4,
+      "title": "Haftarah blessings after the reading (Shabbat)"
+     }
+    },
+    {
+     "id": "hb629c4c6",
+     "he": "אֵבֶל",
+     "translit": "evel",
+     "en": "mourning, bereavement",
+     "pos": "noun",
+     "line": {
+      "he": "אֲבָל",
+      "source": "phrasebook",
+      "id": "fillers-12",
+      "n": 1,
+      "title": "but"
+     }
+    },
+    {
+     "id": "he945f31c",
+     "he": "חֶרֶב",
+     "translit": "cherev",
+     "en": "sword",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h4bb1b2a9",
+     "he": "גָּלוּת",
+     "translit": "galut",
+     "en": "exile",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h2d75f6cf",
+     "he": "דִּמְעָה",
+     "translit": "dim'ah",
+     "en": "tear",
+     "pos": "noun",
+     "line": {
+      "he": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃",
+      "source": "registry",
+      "id": "shir-hamaalot",
+      "n": 5,
+      "title": "Shir hamaalot (sung before Birkat Hamazon on Shabbat and festivals)"
+     }
+    },
+    {
+     "id": "h9432ab7f",
+     "he": "בָּכָה",
+     "translit": "bakhah",
+     "en": "to cry, weep",
+     "pos": "verb",
+     "line": {
+      "he": "הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
+      "source": "registry",
+      "id": "shir-hamaalot",
+      "n": 6,
+      "title": "Shir hamaalot (sung before Birkat Hamazon on Shabbat and festivals)"
+     }
+    },
+    {
+     "id": "ha8df8ecd",
+     "he": "הָרַס",
+     "translit": "haras",
+     "en": "to destroy, to demolish, to tear down",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h4981fa93",
+     "he": "שָׂרַף",
+     "translit": "saraf",
+     "en": "to burn",
+     "pos": "verb",
+     "line": null
+    },
+    {
+     "id": "h141dc740",
+     "he": "גּוֹלֶה",
+     "translit": "goleh",
+     "en": "an exile",
+     "pos": "noun",
+     "line": null
+    },
+    {
+     "id": "h5b3adbaf",
+     "he": "אֵיכָה",
+     "translit": "eikhah",
+     "en": "how, alas",
+     "pos": "intj",
+     "senseNote": "\"How, alas\"; the opening word of the Book of Lamentations read on Tisha B'Av.",
+     "line": null
+    },
+    {
+     "id": "h1de12f34",
+     "he": "תִּשְׁעָה",
+     "translit": "tish'ah",
+     "en": "nine",
+     "pos": "num",
+     "line": {
+      "he": "תִּשְׁעָה",
+      "source": "phrasebook",
+      "id": "numbers-09",
+      "n": 1,
+      "title": "nine (9)"
+     }
+    }
+   ],
+   "gaps": [
+    {
+     "en": "destruction (churban)"
+    },
+    {
+     "en": "lamentation (kinah)"
+    },
+    {
+     "en": "weeping"
+    }
+   ],
+   "notes": []
+  }
+ ]
+}

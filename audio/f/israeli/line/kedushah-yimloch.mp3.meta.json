@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "יִמְלֹךְ אֲדֹנָי לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ׃",
+ "inputSha256": "9746f299b0fb7a95503bbc99c37785f58bfc378d6596cd3ecad359e6643a0b3f",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִמְלֹךְ אֲדֹנָי לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w21.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/ashrei-145-1-3-w14.mp3",
+  "audio/f/israeli/word/kedushah-yimloch-w4.mp3",
+  "audio/f/israeli/word/haftarah-after-w48.mp3",
+  "audio/f/israeli/word/kedushah-yimloch-w6.mp3",
+  "audio/f/israeli/word/kedushah-yimloch-w7.mp3",
+  "audio/f/israeli/word/i-07-w2.mp3"
+ ]
+}

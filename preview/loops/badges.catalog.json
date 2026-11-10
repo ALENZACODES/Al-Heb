@@ -1,0 +1,434 @@
+{
+ "schema": "alef-badges/1",
+ "status": "draft: names and thresholds are the owner's to tune; not tried with any learner",
+ "levelNames": [
+  "First",
+  "Steady",
+  "Deep"
+ ],
+ "families": [
+  {
+   "id": "rhythm",
+   "name": "Rhythm"
+  },
+  {
+   "id": "letters",
+   "name": "Letters"
+  },
+  {
+   "id": "words",
+   "name": "Words"
+  },
+  {
+   "id": "reading",
+   "name": "Reading"
+  },
+  {
+   "id": "listening",
+   "name": "Listening"
+  },
+  {
+   "id": "speaking",
+   "name": "Speaking"
+  },
+  {
+   "id": "traditions",
+   "name": "Traditions"
+  },
+  {
+   "id": "review",
+   "name": "Review"
+  },
+  {
+   "id": "minutes",
+   "name": "Minutes"
+  },
+  {
+   "id": "offline",
+   "name": "Offline"
+  },
+  {
+   "id": "quiet",
+   "name": "Quiet badges"
+  }
+ ],
+ "tiers": [
+  {
+   "id": "newcomer",
+   "name": "Newcomer",
+   "min": 0,
+   "line": "You have just begun."
+  },
+  {
+   "id": "reader",
+   "name": "Reader",
+   "min": 100,
+   "line": "You are building a base."
+  },
+  {
+   "id": "regular",
+   "name": "Regular",
+   "min": 500,
+   "line": "Practice has become familiar."
+  },
+  {
+   "id": "scribe",
+   "name": "Scribe",
+   "min": 2000,
+   "line": "A steady body of work."
+  },
+  {
+   "id": "sage",
+   "name": "Sage",
+   "min": 6000,
+   "line": "A long, patient practice."
+  }
+ ],
+ "badges": [
+  {
+   "id": "rhythm-start",
+   "family": "rhythm",
+   "name": "Rhythm: finding it",
+   "glyph": "wave",
+   "signal": "rhythmBest",
+   "unit": "days",
+   "levels": [
+    3,
+    7,
+    14
+   ],
+   "earn": [
+    "You practiced on 3 days in your practice rhythm. Rest days did not interrupt it.",
+    "Your practice rhythm reached 7 days. Rest days did not interrupt it.",
+    "Your practice rhythm reached 14 days. Rest days did not interrupt it."
+   ],
+   "hint": "practice days in a run"
+  },
+  {
+   "id": "rhythm-long",
+   "family": "rhythm",
+   "name": "Rhythm: long run",
+   "glyph": "wave-long",
+   "signal": "rhythmBest",
+   "unit": "days",
+   "levels": [
+    30,
+    100,
+    365
+   ],
+   "earn": [
+    "Your practice rhythm reached 30 days.",
+    "Your practice rhythm reached 100 days.",
+    "Your practice rhythm reached 365 days."
+   ],
+   "hint": "practice days in a run"
+  },
+  {
+   "id": "letters-base",
+   "family": "letters",
+   "name": "Letters: the alphabet",
+   "glyph": "letter-alef",
+   "signal": "lettersBase",
+   "unit": "letters",
+   "levels": [
+    5,
+    10,
+    22
+   ],
+   "earn": [
+    "You answered 5 of the 22 base letters right at least twice.",
+    "You answered 10 of the 22 base letters right at least twice.",
+    "You answered all 22 base letters right at least twice."
+   ],
+   "hint": "base letters known"
+  },
+  {
+   "id": "letters-finals",
+   "family": "letters",
+   "name": "Letters: final forms",
+   "glyph": "letter-final",
+   "signal": "lettersFinal",
+   "unit": "final forms",
+   "levels": [
+    1,
+    3,
+    5
+   ],
+   "earn": [
+    "You answered 1 final-form letter right at least twice.",
+    "You answered 3 final-form letters right at least twice.",
+    "You answered all 5 final-form letters right at least twice. With the 22 base letters that is 27."
+   ],
+   "hint": "final-form letters known"
+  },
+  {
+   "id": "words-known",
+   "family": "words",
+   "name": "Words you know",
+   "glyph": "lines",
+   "signal": "words",
+   "unit": "words",
+   "levels": [
+    25,
+    100,
+    500
+   ],
+   "earn": [
+    "You answered 25 words right at least twice.",
+    "You answered 100 words right at least twice.",
+    "You answered 500 words right at least twice."
+   ],
+   "hint": "words known"
+  },
+  {
+   "id": "words-many",
+   "family": "words",
+   "name": "Words: a large store",
+   "glyph": "lines-many",
+   "signal": "words",
+   "unit": "words",
+   "levels": [
+    1000,
+    2000,
+    4000
+   ],
+   "earn": [
+    "You answered 1,000 words right at least twice.",
+    "You answered 2,000 words right at least twice.",
+    "You answered 4,000 words right at least twice."
+   ],
+   "hint": "words known"
+  },
+  {
+   "id": "read-timed",
+   "family": "reading",
+   "name": "Reading aloud, timed",
+   "glyph": "book",
+   "signal": "timedReads",
+   "unit": "timed reads",
+   "levels": [
+    1,
+    10,
+    50
+   ],
+   "earn": [
+    "You saved your first timed read-aloud of a prayer or text.",
+    "You saved 10 timed reads.",
+    "You saved 50 timed reads."
+   ],
+   "hint": "timed reads saved"
+  },
+  {
+   "id": "read-texts",
+   "family": "reading",
+   "name": "Reading: different texts",
+   "glyph": "book-pages",
+   "signal": "readTexts",
+   "unit": "different texts",
+   "levels": [
+    1,
+    5,
+    20
+   ],
+   "earn": [
+    "You timed a read of 1 text or line.",
+    "You timed reads of 5 different texts or lines.",
+    "You timed reads of 20 different texts or lines."
+   ],
+   "hint": "different texts or lines read"
+  },
+  {
+   "id": "read-shema",
+   "family": "reading",
+   "name": "Reading: the whole Shema passage",
+   "glyph": "book-line",
+   "signal": "shemaReads",
+   "unit": "read-throughs",
+   "levels": [
+    1,
+    3,
+    10
+   ],
+   "earn": [
+    "You read the whole Shema passage (Deuteronomy 6:4-9) aloud once, start to finish, and saved the time.",
+    "You read the whole Shema passage aloud 3 times.",
+    "You read the whole Shema passage aloud 10 times."
+   ],
+   "hint": "full read-throughs of the Shema passage"
+  },
+  {
+   "id": "listen-tries",
+   "family": "listening",
+   "name": "Listening tries",
+   "glyph": "waves",
+   "signal": "listenTries",
+   "unit": "tries",
+   "levels": [
+    10,
+    50,
+    200
+   ],
+   "earn": [
+    "You made 10 tries at telling two sounds apart. This counts tries, not how many were right.",
+    "You made 50 listening tries. This counts tries, not how many were right.",
+    "You made 200 listening tries. This counts tries, not how many were right."
+   ],
+   "hint": "listening tries"
+  },
+  {
+   "id": "speak-tries",
+   "family": "speaking",
+   "name": "Speaking tries",
+   "glyph": "bubble",
+   "signal": "speakTries",
+   "unit": "tries",
+   "levels": [
+    10,
+    50,
+    200
+   ],
+   "earn": [
+    "You made 10 tries at saying something aloud. This counts tries, not how well they went.",
+    "You made 50 speaking tries. This counts tries, not how well they went.",
+    "You made 200 speaking tries. This counts tries, not how well they went."
+   ],
+   "hint": "speaking tries"
+  },
+  {
+   "id": "traditions",
+   "family": "traditions",
+   "name": "Three ways of saying it",
+   "glyph": "trio",
+   "signal": "traditions",
+   "unit": "traditions",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "earn": [
+    "You tried a pronunciation drill in 1 tradition.",
+    "You tried pronunciation drills in 2 traditions.",
+    "You tried pronunciation drills in all 3 traditions."
+   ],
+   "hint": "traditions tried"
+  },
+  {
+   "id": "review-cards",
+   "family": "review",
+   "name": "Cards reviewed",
+   "glyph": "cycle",
+   "signal": "reviews",
+   "unit": "card reviews",
+   "levels": [
+    100,
+    500,
+    2000
+   ],
+   "earn": [
+    "You rated 100 review cards.",
+    "You rated 500 review cards.",
+    "You rated 2,000 review cards."
+   ],
+   "hint": "review cards rated"
+  },
+  {
+   "id": "minutes",
+   "family": "minutes",
+   "name": "Time with the course",
+   "glyph": "clock",
+   "signal": "minutes",
+   "unit": "minutes",
+   "levels": [
+    60,
+    300,
+    1000
+   ],
+   "earn": [
+    "You spent about 60 minutes of practice time here.",
+    "You spent about 300 minutes of practice time here.",
+    "You spent about 1,000 minutes of practice time here."
+   ],
+   "hint": "minutes of practice time"
+  },
+  {
+   "id": "offline",
+   "family": "offline",
+   "name": "Used without a connection",
+   "glyph": "house",
+   "signal": "offlineDays",
+   "unit": "days",
+   "levels": [
+    1,
+    3,
+    10
+   ],
+   "earn": [
+    "You used the course with no internet connection.",
+    "You used the course with no internet connection on 3 different days.",
+    "You used the course with no internet connection on 10 different days."
+   ],
+   "hint": "days used with no connection"
+  },
+  {
+   "id": "quiet-return",
+   "family": "quiet",
+   "name": "Welcome back",
+   "glyph": "moon",
+   "signal": "comebacks",
+   "unit": "returns",
+   "levels": [
+    1,
+    3,
+    10
+   ],
+   "earn": [
+    "You came back to practice after a week or more away. The door is always open.",
+    "You came back to practice 3 times after a week or more away.",
+    "You came back to practice 10 times after a week or more away."
+   ],
+   "hint": "returns after a week or more",
+   "hidden": true
+  },
+  {
+   "id": "quiet-enough",
+   "family": "quiet",
+   "name": "Enough for today",
+   "glyph": "target",
+   "signal": "goalDays",
+   "unit": "days",
+   "levels": [
+    5,
+    20,
+    60
+   ],
+   "earn": [
+    "You reached your daily goal on 5 days.",
+    "You reached your daily goal on 20 days.",
+    "You reached your daily goal on 60 days."
+   ],
+   "hint": "days reaching the goal",
+   "hidden": true
+  },
+  {
+   "id": "quiet-unhurried",
+   "family": "quiet",
+   "name": "Unhurried",
+   "glyph": "hourglass",
+   "signal": "longDays",
+   "unit": "days",
+   "levels": [
+    1,
+    5,
+    20
+   ],
+   "earn": [
+    "You spent 15 minutes or more with the course in one day.",
+    "You spent 15 minutes or more with the course on 5 days.",
+    "You spent 15 minutes or more with the course on 20 days."
+   ],
+   "hint": "days of 15 minutes or more",
+   "hidden": true
+  }
+ ]
+}

@@ -1,0 +1,402 @@
+{
+ "id": "I-27",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Shabbat-morning Amidah responses: Kedushah, Sim Shalom, closing verses",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "קָדוֹשׁ",
+   "en": "holy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kadosh",
+    "sephardi": "kadosh",
+    "ashkenazi": "kodosh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h39244df3"
+   }
+  },
+  {
+   "he": "מְלֹא כָל הָאָרֶץ",
+   "en": "the whole earth is full",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "melo khol ha'aretz",
+    "sephardi": "melo khol ha'aretz",
+    "ashkenazi": "melo khol ho'oretz"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מְלֹא",
+     "כָל",
+     "הָאָרֶץ"
+    ]
+   }
+  },
+  {
+   "he": "כְּבוֹדוֹ",
+   "en": "his glory",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kevodo",
+    "sephardi": "kevodo",
+    "ashkenazi": "kevodo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּבוֹדוֹ"
+    ]
+   }
+  },
+  {
+   "he": "מִמְּקוֹמוֹ",
+   "en": "from his place",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mimekomo",
+    "sephardi": "mimekomo",
+    "ashkenazi": "mimekomo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִמְּקוֹמוֹ"
+    ]
+   }
+  },
+  {
+   "he": "יִמְלֹךְ",
+   "en": "he will reign",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yimlokh",
+    "sephardi": "yimlokh",
+    "ashkenazi": "yimlokh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "heba57078#forms.future"
+   }
+  },
+  {
+   "he": "שִׂים שָׁלוֹם",
+   "en": "grant peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sim shalom",
+    "sephardi": "sim shalom",
+    "ashkenazi": "sim sholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שִׂים",
+     "שָׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "בָּרְכֵנוּ",
+   "en": "bless us",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "barekhenu",
+    "sephardi": "barekhenu",
+    "ashkenazi": "borekheinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בָּרְכֵנוּ"
+    ]
+   }
+  },
+  {
+   "he": "בְּאוֹר פָּנֶיךָ",
+   "en": "with the light of your face",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "be'or panekha",
+    "sephardi": "be'or panekha",
+    "ashkenazi": "be'or ponekho"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּאוֹר",
+     "פָּנֶיךָ"
+    ]
+   }
+  },
+  {
+   "he": "הַמְבָרֵךְ אֶת עַמּוֹ",
+   "en": "who blesses his people",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hamvarekh et amo",
+    "sephardi": "hamvarekh et amo",
+    "ashkenazi": "hamvoreikh es amo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַמְבָרֵךְ",
+     "אֶת",
+     "עַמּוֹ"
+    ]
+   }
+  },
+  {
+   "he": "יִהְיוּ לְרָצוֹן",
+   "en": "may they be acceptable",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yihyu leratzon",
+    "sephardi": "yihyu leratzon",
+    "ashkenazi": "yihyu lerotzon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יִהְיוּ",
+     "לְרָצוֹן"
+    ]
+   }
+  },
+  {
+   "he": "אֱלֹהַי נְצוֹר לְשׁוֹנִי",
+   "en": "my God, guard my tongue",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "elohai netzor leshoni",
+    "sephardi": "elohai netzor leshoni",
+    "ashkenazi": "elohai netzor leshoni"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֱלֹהַי",
+     "נְצוֹר",
+     "לְשׁוֹנִי"
+    ]
+   }
+  },
+  {
+   "he": "עֹשֶׂה שָׁלוֹם",
+   "en": "who makes peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "oseh shalom",
+    "sephardi": "oseh shalom",
+    "ashkenazi": "oseh sholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עֹשֶׂה",
+     "שָׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "צוּרִי וְגוֹאֲלִי",
+   "en": "my rock and my redeemer",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzuri vego'ali",
+    "sephardi": "tzuri vego'ali",
+    "ashkenazi": "tzuri vego'ali"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "צוּרִי",
+     "וְגוֹאֲלִי"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "kedushah-kadosh",
+  "kedushah-baruch",
+  "kedushah-yimloch",
+  "sim-shalom",
+  "amidah-yihyu",
+  "amidah-elohai-netzor",
+  "oseh-shalom",
+  "kiddush-veshamru"
+ ],
+ "goals": [
+  "Answer the Kedushah at each cue",
+  "Say Amen after the peace blessing",
+  "Recognise the three closing verses of the Amidah in order"
+ ],
+ "estMinutes": 35,
+ "prerequisites": [
+  "I-02"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-27-e01",
+   "type": "respond",
+   "cue": "The leader reads 'v'kara zeh el zeh v'amar'. Answer with the first response.",
+   "answer": {
+    "he": "קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ",
+    "en": "Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory."
+   }
+  },
+  {
+   "id": "I-27-e02",
+   "type": "respond",
+   "cue": "Second Kedushah response.",
+   "answer": {
+    "he": "בָּרוּךְ כְּבוֹד־יְהוָה מִמְּקוֹמוֹ",
+    "en": "Blessed is the glory of the LORD from his place."
+   }
+  },
+  {
+   "id": "I-27-e03",
+   "type": "respond",
+   "cue": "Third Kedushah response.",
+   "answer": {
+    "he": "יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ",
+    "en": "The LORD will reign for ever, your God, Zion, from generation to generation. Halleluyah."
+   }
+  },
+  {
+   "id": "I-27-e04",
+   "type": "fade",
+   "line": "kedushah-kadosh",
+   "en": "Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory."
+  },
+  {
+   "id": "I-27-e05",
+   "type": "spot",
+   "line": "kedushah-baruch",
+   "target": "מִמְּקוֹמוֹ",
+   "en": "from his place"
+  },
+  {
+   "id": "I-27-e06",
+   "type": "order",
+   "he": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים",
+   "en": "Grant peace, goodness and blessing, grace, kindness and mercy"
+  },
+  {
+   "id": "I-27-e07",
+   "type": "fade",
+   "line": "sim-shalom",
+   "en": "Grant peace, goodness and blessing... upon us and upon all Israel your people."
+  },
+  {
+   "id": "I-27-e08",
+   "type": "respond",
+   "cue": "The peace blessing ends 'hamevarech et amo Yisrael bashalom'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בָּרוּךְ אַתָּה יְהוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם",
+    "en": "Blessed are you, LORD, who blesses his people Israel with peace."
+   }
+  },
+  {
+   "id": "I-27-e09",
+   "type": "spot",
+   "line": "sim-shalom",
+   "target": "אָבִינוּ",
+   "en": "our father",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-27-e10",
+   "type": "fade",
+   "line": "amidah-yihyu",
+   "en": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer."
+  },
+  {
+   "id": "I-27-e11",
+   "type": "order",
+   "he": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ",
+   "en": "May the words of my mouth and the thoughts of my heart be acceptable before you"
+  },
+  {
+   "id": "I-27-e12",
+   "type": "fade",
+   "line": "amidah-elohai-netzor",
+   "en": "My God, guard my tongue from evil and my lips from speaking deceit."
+  },
+  {
+   "id": "I-27-e13",
+   "type": "spot",
+   "line": "amidah-elohai-netzor",
+   "target": "לְשׁוֹנִי",
+   "en": "my tongue"
+  },
+  {
+   "id": "I-27-e14",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "קָדוֹשׁ",
+     "en": "holy"
+    },
+    {
+     "he": "כְּבוֹדוֹ",
+     "en": "his glory"
+    },
+    {
+     "he": "בָּרְכֵנוּ",
+     "en": "bless us"
+    },
+    {
+     "he": "צוּרִי וְגוֹאֲלִי",
+     "en": "my rock and my redeemer"
+    }
+   ]
+  },
+  {
+   "id": "I-27-e15",
+   "type": "respond",
+   "cue": "Take three steps back and finish with 'v'imru'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "וְאִמְרוּ אָמֵן",
+    "en": "and say: Amen"
+   }
+  },
+  {
+   "id": "I-27-e16",
+   "type": "spot",
+   "line": "kiddush-veshamru",
+   "target": "בְּרִית",
+   "en": "covenant",
+   "lineIndex": 1
+  }
+ ],
+ "note": "The Shabbat Amidah's middle blessings and Modim are gaps (g-shabbat-amidah-middle, g-modim), as is the Musaf Amidah (g-musaf-amidah). V'shamru is the verse added on Shabbat morning."
+}

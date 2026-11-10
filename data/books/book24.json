@@ -1,0 +1,177 @@
+{
+ "id": "book24",
+ "titleHe": "עָיֵף",
+ "titleTranslit": "Ayef",
+ "titleEn": "Tired",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "אֵיתָן עָיֵף.",
+   "translit": "Eitan ayef.",
+   "en": "Eitan is tired.",
+   "img": "assets/books/book24/BOOK24_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p01.mp3",
+    "m": "audio/m/israeli/book/book24-p01.mp3"
+   },
+   "illustration": "a man slumped at an office desk, late afternoon",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "עָיֵף מְאוֹד.",
+   "translit": "Ayef me'od.",
+   "en": "Very tired.",
+   "img": "assets/books/book24/BOOK24_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p02.mp3",
+    "m": "audio/m/israeli/book/book24-p02.mp3"
+   },
+   "illustration": "his head on the keyboard, the screen glowing with blurred lines of type",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הוּא שׁוֹתֶה קָפֶה.",
+   "translit": "Hu shoteh kafeh.",
+   "en": "He drinks coffee.",
+   "img": "assets/books/book24/BOOK24_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p03.mp3",
+    "m": "audio/m/israeli/book/book24-p03.mp3"
+   },
+   "illustration": "a third empty cup joining two others",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "עֲדַיִן עָיֵף.",
+   "translit": "Adayin ayef.",
+   "en": "Still tired.",
+   "img": "assets/books/book24/BOOK24_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p04.mp3",
+    "m": "audio/m/israeli/book/book24-p04.mp3"
+   },
+   "illustration": "yawning at the screen",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הוּא הוֹלֵךְ הַבַּיְתָה.",
+   "translit": "Hu holech ha-baitah.",
+   "en": "He goes home.",
+   "img": "assets/books/book24/BOOK24_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p05.mp3",
+    "m": "audio/m/israeli/book/book24-p05.mp3"
+   },
+   "illustration": "the man on a bus with his eyes closed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הוּא אוֹכֵל.",
+   "translit": "Hu ochel.",
+   "en": "He eats.",
+   "img": "assets/books/book24/BOOK24_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p06.mp3",
+    "m": "audio/m/israeli/book/book24-p06.mp3"
+   },
+   "illustration": "eating cereal standing at the counter",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הוּא רוֹאֶה טֶלֶוִיזְיָה.",
+   "translit": "Hu ro'eh televizyah.",
+   "en": "He watches television.",
+   "img": "assets/books/book24/BOOK24_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p07.mp3",
+    "m": "audio/m/israeli/book/book24-p07.mp3"
+   },
+   "illustration": "the sofa, the glow, his eyes half shut",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הוּא יָשֵׁן עַל הַסַּפָּה.",
+   "translit": "Hu yashen al ha-sapah.",
+   "en": "He sleeps on the couch.",
+   "img": "assets/books/book24/BOOK24_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p08.mp3",
+    "m": "audio/m/israeli/book/book24-p08.mp3"
+   },
+   "illustration": "asleep in his work clothes, remote on his chest",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הַטֶּלֶפוֹן מְצַלְצֵל.",
+   "translit": "Ha-telefon metzaltzel.",
+   "en": "The phone rings.",
+   "img": "assets/books/book24/BOOK24_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p09.mp3",
+    "m": "audio/m/israeli/book/book24-p09.mp3"
+   },
+   "illustration": "the phone buzzing on the floor",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"אֵיתָן, בָּא לָרוּץ?\"",
+   "translit": "\"Eitan, ba larutz?\"",
+   "en": "\"Eitan, want to run?\"",
+   "img": "assets/books/book24/BOOK24_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p10.mp3",
+    "m": "audio/m/israeli/book/book24-p10.mp3"
+   },
+   "illustration": "a friend in running gear on a video call",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"לֹא. אֲנִי יָשֵׁן.\"",
+   "translit": "\"Lo. Ani yashen.\"",
+   "en": "\"No. I'm sleeping.\"",
+   "img": "assets/books/book24/BOOK24_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p11.mp3",
+    "m": "audio/m/israeli/book/book24-p11.mp3"
+   },
+   "illustration": "the man answering with eyes closed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "לַיְלָה טוֹב, אֵיתָן.",
+   "translit": "Lailah tov, Eitan.",
+   "en": "Good night, Eitan.",
+   "img": "assets/books/book24/BOOK24_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book24-p12.mp3",
+    "m": "audio/m/israeli/book/book24-p12.mp3"
+   },
+   "illustration": "the man asleep, the TV still on, the cat on his feet",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

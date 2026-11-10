@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+ "inputSha256": "fce15d2716a35066a93ef17465194624c71d22fa487c772d4b4439958b483bc7",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w23.mp3",
+  "audio/f/israeli/word/adon-olam-1-w45.mp3",
+  "audio/f/israeli/word/adon-olam-1-w46.mp3",
+  "audio/f/israeli/word/adon-olam-1-w47.mp3",
+  "audio/f/israeli/word/adon-olam-1-w48.mp3",
+  "audio/f/israeli/word/adon-olam-1-w49.mp3",
+  "audio/f/israeli/word/adon-olam-1-w50.mp3",
+  "audio/f/israeli/word/adon-olam-1-w51.mp3"
+ ]
+}

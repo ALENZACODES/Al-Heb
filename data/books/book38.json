@@ -1,0 +1,177 @@
+{
+ "id": "book38",
+ "titleHe": "לֶחֶם וּמֶלַח",
+ "titleTranslit": "Lechem U-Melach",
+ "titleEn": "Bread and Salt",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "דִּירָה חֲדָשָׁה.",
+   "translit": "Dirah chadashah.",
+   "en": "A new apartment.",
+   "img": "assets/books/book38/BOOK38_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p01.mp3",
+    "m": "audio/m/israeli/book/book38-p01.mp3"
+   },
+   "illustration": "an empty apartment, boxes, afternoon light",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "תָּמָר וְעוֹמֶר עוֹבְרִים.",
+   "translit": "Tamar ve-Omer ovrim.",
+   "en": "Tamar and Omer move in.",
+   "img": "assets/books/book38/BOOK38_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p02.mp3",
+    "m": "audio/m/israeli/book/book38-p02.mp3"
+   },
+   "illustration": "a couple carrying a mattress through a door",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַרְבֵּה קוּפְסָאוֹת.",
+   "translit": "Harbeh kufsa'ot.",
+   "en": "Many boxes.",
+   "img": "assets/books/book38/BOOK38_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p03.mp3",
+    "m": "audio/m/israeli/book/book38-p03.mp3"
+   },
+   "illustration": "a tower of boxes labelled kitchen, books, more books",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "אֵין כִּסְאוֹת.",
+   "translit": "Ein kis'ot.",
+   "en": "No chairs.",
+   "img": "assets/books/book38/BOOK38_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p04.mp3",
+    "m": "audio/m/israeli/book/book38-p04.mp3"
+   },
+   "illustration": "the couple sitting on boxes eating pizza",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "אֵין אוֹר בַּמִּטְבָּח.",
+   "translit": "Ein or ba-mitbach.",
+   "en": "No light in the kitchen.",
+   "img": "assets/books/book38/BOOK38_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p05.mp3",
+    "m": "audio/m/israeli/book/book38-p05.mp3"
+   },
+   "illustration": "a bare wire where a lamp should be",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "יֵשׁ גֶּשֶׁם בִּפְנִים?",
+   "translit": "Yesh geshem bifnim?",
+   "en": "Is there rain inside?",
+   "img": "assets/books/book38/BOOK38_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p06.mp3",
+    "m": "audio/m/israeli/book/book38-p06.mp3"
+   },
+   "illustration": "a drip from the ceiling into a pot",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "\"אוֹי.\"",
+   "translit": "\"Oy.\"",
+   "en": "\"Oh no.\"",
+   "img": "assets/books/book38/BOOK38_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p07.mp3",
+    "m": "audio/m/israeli/book/book38-p07.mp3"
+   },
+   "illustration": "the two staring up at the stain",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "דְּפִיקָה בַּדֶּלֶת.",
+   "translit": "Dfikah ba-delet.",
+   "en": "A knock at the door.",
+   "img": "assets/books/book38/BOOK38_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p08.mp3",
+    "m": "audio/m/israeli/book/book38-p08.mp3"
+   },
+   "illustration": "the door, knuckles",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הַשְּׁכֵנָה. לֶחֶם וּמֶלַח.",
+   "translit": "Ha-shchenah. Lechem u-melach.",
+   "en": "The neighbour. Bread and salt.",
+   "img": "assets/books/book38/BOOK38_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p09.mp3",
+    "m": "audio/m/israeli/book/book38-p09.mp3"
+   },
+   "illustration": "an older woman holding a loaf and a small dish of salt",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"בְּרוּכִים הַבָּאִים.\"",
+   "translit": "\"Bruchim ha-ba'im.\"",
+   "en": "\"Welcome.\"",
+   "img": "assets/books/book38/BOOK38_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p10.mp3",
+    "m": "audio/m/israeli/book/book38-p10.mp3"
+   },
+   "illustration": "the neighbour smiling warmly",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"וְהַגֶּשֶׁם? זֶה תָּמִיד. יֵשׁ לִי אִינְסְטָלָטוֹר.\"",
+   "translit": "\"Ve-ha-geshem? Zeh tamid. Yesh li instalator.\"",
+   "en": "\"And the leak? It always does that. I have a plumber.\"",
+   "img": "assets/books/book38/BOOK38_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p11.mp3",
+    "m": "audio/m/israeli/book/book38-p11.mp3"
+   },
+   "illustration": "the neighbour glancing at the drip, waving a small blank card",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַבַּיִת הֶחָדָשׁ מַתְחִיל.",
+   "translit": "Ha-bayit he-chadash matchil.",
+   "en": "The new home begins.",
+   "img": "assets/books/book38/BOOK38_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book38-p12.mp3",
+    "m": "audio/m/israeli/book/book38-p12.mp3"
+   },
+   "illustration": "the three eating bread with salt on the boxes, laughing",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

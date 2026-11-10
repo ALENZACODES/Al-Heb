@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-nature-animals-3",
+ "title": "Nature and animals 3",
+ "theme": "nature-animals",
+ "level": "B1",
+ "track": "both",
+ "pack": "nature-animals-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h0b6d88f4",
+   "he": "זָרַע",
+   "translit": "zara",
+   "en": "to seed, to sow",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h342c3c55",
+   "he": "צָב",
+   "translit": "tzav",
+   "en": "turtle, tortoise",
+   "kind": "word",
+   "audioId": "h342c3c55",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3e5d0f9c",
+   "he": "תְּקוּפָה",
+   "translit": "tekufah",
+   "en": "an era, age, epoch, period",
+   "kind": "word",
+   "audioId": "h3e5d0f9c",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha9b360ab",
+   "he": "קֹר",
+   "translit": "kor",
+   "en": "cold, coldness",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2a49fab3",
+   "he": "נָטַע",
+   "translit": "nata",
+   "en": "to plant, implant (also figurative)",
+   "kind": "word",
+   "audioId": "torah-bless-2-w14",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h817ec28c",
+   "he": "צִפּוֹר",
+   "translit": "tzipor",
+   "en": "a bird of any kind",
+   "kind": "word",
+   "audioId": "anchor-tsadi",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8246132a",
+   "he": "הִדְלִיק",
+   "translit": "hidlik",
+   "en": "to light, light up, ignite (a fire, lamp, or the like)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8532e471",
+   "he": "קֶשֶׁת",
+   "translit": "keshet",
+   "en": "rainbow",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h94e18733",
+   "he": "נָקַר",
+   "translit": "nakar",
+   "en": "to bore, pierce through",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0db32713",
+   "he": "קֵן",
+   "translit": "ken",
+   "en": "nest (bird-built structure)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0210d621",
+   "he": "חִטָּה",
+   "translit": "chitah",
+   "en": "wheat",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb5d32923",
+   "he": "קַרְקַע",
+   "translit": "karka",
+   "en": "earth, soil",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

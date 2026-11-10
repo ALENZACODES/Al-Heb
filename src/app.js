@@ -291,12 +291,15 @@ async function boot() {
       muted: settings.get('gameMusicMuted') === true,
       volume: settings.get('gameMusicVolume'),
       trackId: settings.get('gameMusicTrack'),
+      picked: settings.get('gameMusicPicked') === true,
     }),
     writePrefs: (p) => settings.set({
-      gameMusic: !!p.want, gameMusicMuted: !!p.muted, gameMusicVolume: p.volume, gameMusicTrack: p.trackId,
+      gameMusic: !!p.want, gameMusicMuted: !!p.muted, gameMusicVolume: p.volume, gameMusicTrack: p.trackId, gameMusicPicked: !!p.picked,
     }),
   });
   try { mountGameMusic(document.body); } catch { /* the bar appears once a game route asks for it */ }
+  // Lesson finished: a few seconds of an original song, only with music turned on (rules in src/audio/sting.js).
+  document.addEventListener('alef:celebrate', () => { import('./audio/sting.js').then((m) => m.playSting({ settings })).catch(() => {}); });
   try { mountMediaPrompt(document.body, settings); } catch { /* the prompt is optional */ }
   const mainEl = document.getElementById('main');
   const gesture = (e) => { touched = true; if (!(e.target instanceof Element && e.target.closest('input, textarea, select'))) touchedOutsideField = true; };

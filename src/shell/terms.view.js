@@ -2,7 +2,7 @@
 // roll of credits: music and sounds, the historic recordings, text sources, fonts, and the
 // synthetic-voice note. The full source-by-source licence ledger stays on /credits.
 import { h } from './ui.js';
-import { LISTEN_ITEMS, MUSIC_TRACKS } from '../listen/catalog.js';
+import { LISTEN_ITEMS, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS } from '../listen/catalog.js';
 
 const FONTS = ['Heebo', 'Frank Ruhl Libre', 'Gveret Levin', 'Alef', 'Noto Sans Hebrew', 'Noto Serif Hebrew'];
 
@@ -16,8 +16,10 @@ export function mount(root, ctx) {
       h('p', { class: 'muted' }, 'Material that comes from elsewhere keeps its own licence, set out below. This page is a plain-language summary, not legal advice; the full source-by-source ledger is on the Credits page.')),
     h('section', { class: 'card', 'aria-labelledby': 'terms-music' },
       h('h2', { id: 'terms-music' }, 'Music and sound effects'),
-      h('p', {}, 'The game music loops and the interface sound effects are by Kenney (kenney.nl), released under CC0 1.0 — free for any use, no attribution required. They are credited here because credit is due.'),
-      h('ul', {}, ...MUSIC_TRACKS.map((m) => h('li', {}, `${m.title} — ${m.role} music`)))),
+      h('p', {}, 'The arcade loops and the interface sound effects are by Kenney (kenney.nl), released under CC0 1.0 — free for any use, no attribution required. They are credited here because credit is due.'),
+      h('ul', {}, ...MUSIC_TRACKS.map((m) => h('li', {}, `${m.title} — ${m.role} music`))),
+      h('p', {}, 'The original beds and songs were made for Aleph. © 2026 John Khan. All rights reserved.'),
+      h('ul', {}, ...[...ORIGINAL_MUSIC_TRACKS, ...ORIGINAL_SONG_TRACKS].map((m) => h('li', {}, `${m.title} — ${m.role}`)))),
     h('section', { class: 'card', 'aria-labelledby': 'terms-recordings' },
       h('h2', { id: 'terms-recordings' }, 'Historic recordings (Sacred Listen)'),
       h('p', {}, 'These are real recordings, kept with their performers and licences. The playback copies were enhanced for clarity (gentle denoise, de-click and loudness levelling) from the originals, which are preserved unchanged; for CC BY-SA items the enhanced copy is an adaptation under the same licence.'),

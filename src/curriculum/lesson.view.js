@@ -55,9 +55,9 @@ export function mountLesson(root, ctx, lessonId) {
     const section = (id, title, ...kids) => el("section", { class: "card", "aria-labelledby": id }, el("h2", { id }, title), ...kids);
     const parts = [
       ctx.img?.(el, { kind: 'lesson', id: lesson.id, class: 'l-scene', width: 900 }),
-      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min (an estimate — lessons have not been timed on a learner yet) · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
+      el("p", { class: "muted alef-meta" }, `${levelLabel(lesson.level)} · about ${lesson.estMinutes} min · ${lesson.track === "read" ? "Read the prayer book" : "Speak in Israel"}`),
       el("details", { class: "draft-flag alef-draft" }, el("summary", {}, "About This Lesson"),
-        el("p", {}, plain("lessonDraft")),
+        // review status is stated once, on the credits page
         el("h2", { id: "l-goals", class: "alef-draft-h" }, tr(ctx, "lesson.goals", "Goals")), el("ul", {}, ...lesson.goals.map((g) => el("li", {}, g)))),
       unmet.length ? el("p", { class: "alef-locked", role: "note" }, `Locked: finish ${unmet.map((p) => byId[p]?.title || p).join(", ")} first. You can still look around.`) : null,
       lesson.onramp && !isDone ? el("p", { class: "card alef-onramp", role: "note" }, el("strong", {}, "Short steps: "), `${lesson.steps?.length || 5} steps, about 2 minutes each. `,
@@ -162,8 +162,9 @@ export function mountLesson(root, ctx, lessonId) {
       // after the next frame, so the card's final height is in the layout; scrolling in the same task stopped about 300 px short (the page grew after the target was fixed)
       if (typeof requestAnimationFrame === "function") requestAnimationFrame(bring); else bring();
     } }, isDone ? "Check again" : carried ? "Continue quick check" : "Start quick check");
-    // The primary action sits in the sticky action bar (same one exercises use), so it is reachable without scrolling the whole lesson.
-    const actions = el("div", { class: "row alef-actions alef-actionbar" }, startBtn);
+    // The start button sits in the page, after the letters it checks: a sticky bar here covered the letter cards before
+    // the learner had read them. Inside the quick check, Continue/Undo/Skip keep the sticky action bar.
+    const actions = el("div", { class: "row alef-actions alef-start-row" }, startBtn);
     const more = el("div", { class: "row alef-actions" },
       el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards"),
       el("a", { class: "btn secondary", href: "#/learn" }, "All lessons"));

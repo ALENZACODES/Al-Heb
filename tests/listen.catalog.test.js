@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { HELD_FILE, LISTEN_ITEMS, MUSIC_TRACKS, SHELVES, itemsOn } from '../src/listen/catalog.js';
+import { HELD_FILE, LISTEN_ITEMS, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS, SHELVES, itemsOn } from '../src/listen/catalog.js';
 import { createShelfPlayer } from '../src/listen/player.js';
 import { matchRoute, tierOf } from '../src/shell/router.js';
 import { listShipFiles } from '../tools/deploy/make-dist.mjs';
@@ -60,6 +60,7 @@ test('cleared listen and music files match the audit hashes and ship outside the
   const asael = LISTEN_ITEMS.find((row) => row.originalFile);
   assert.equal(sha16(`audio/listen/${asael.originalFile}`), asael.sha256_16);
   for (const row of MUSIC_TRACKS) assert.equal(sha16(`audio/music/${row.file}`), row.sha256_16, row.file);
+  for (const row of [...ORIGINAL_MUSIC_TRACKS, ...ORIGINAL_SONG_TRACKS]) assert.equal(sha16(`audio/music/${row.file}`), row.sha256_16, row.file);
   const ship = listShipFiles();
   const manifest = computeManifest(root);
   for (const row of LISTEN_ITEMS) {
@@ -67,7 +68,7 @@ test('cleared listen and music files match the audit hashes and ship outside the
     assert.ok(!manifest.files.includes(`audio/listen/${row.file}`));
     assert.ok(!manifest.onDemand.includes(`audio/listen/${row.file}`));
   }
-  for (const row of MUSIC_TRACKS) {
+  for (const row of [...MUSIC_TRACKS, ...ORIGINAL_MUSIC_TRACKS, ...ORIGINAL_SONG_TRACKS]) {
     assert.ok(ship.includes(`audio/music/${row.file}`), row.file);
     assert.ok(!manifest.files.includes(`audio/music/${row.file}`));
   }

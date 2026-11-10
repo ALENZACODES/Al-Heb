@@ -1,13 +1,19 @@
 {
  "status": "tts",
  "source": "paid-cloud",
- "engine": "google-cloud-tts",
+ "engine": "stitched-from-word-clips",
  "voiceId": "he-IL-Wavenet-A",
  "tradition": "israeli",
  "inputText": "תֵּה עִם נַעֲנָע",
  "inputSha256": "ff2a26d298e127495347909acc8848fed3d551ca2021bb4f50f07b4a8e9c7347",
  "ingestedAt": null,
  "licence": "customer-owned",
- "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
- "inputTextKind": "hebrew"
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "תֵּה עִם נַעֲנָע",
+ "stitchedFrom": [
+  "audio/f/israeli/word/h1643d708.mp3",
+  "audio-takes/f/w8843197d1d-u.mp3",
+  "audio-takes/f/w46f8d321c3-p.mp3"
+ ]
 }

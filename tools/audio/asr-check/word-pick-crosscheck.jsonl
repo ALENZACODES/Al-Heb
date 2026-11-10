@@ -73,3 +73,28 @@
 {"file": "audio/m/israeli/prayer/vayehi-binsoa.mp3", "before": 1, "after": 1, "issues": [{"say": "בִּנְסֹעַ", "heard": "בנשואה", "score": 0.57}]}
 {"file": "audio/m/israeli/prayer/yehalelu.mp3", "before": 1, "after": 1, "issues": [{"say": "יָהּ", "heard": "(nothing)", "score": 0.0}]}
 {"file": "audio/m/israeli/prayer/yigdal.mp3", "before": 3, "after": 2, "issues": [{"say": "כְּמֹשֶׁה", "heard": "כמו", "score": 0.8}, {"say": "עוֹד", "heard": "שעוד", "score": 0.8}]}
+{"file": "audio/m/israeli/line/brich-shmei.mp3", "before": 9, "after": 6, "issues": [{"say": "דְּהוּא", "heard": "דהו", "score": 0.67}, {"say": "וּמַסְגֵּא", "heard": "ומשגה", "score": 0.67}, {"say": "בֵּהּ אֲנָא", "heard": "באנה", "score": 0.0}, {"say": "מִשְׁאֲלִין", "heard": "משלין", "score": 0.89}, {"say": "דְכָל", "heard": "דיכא", "score": 0.8}, {"say": "עַמָּךְ", "heard": "למך", "score": 0.67}]}
+{"file": "audio/m/israeli/prayer/brich-shmei.mp3", "before": 9, "after": 6, "issues": [{"say": "דְּהוּא", "heard": "דהו", "score": 0.67}, {"say": "וּמַסְגֵּא", "heard": "ומשגה", "score": 0.67}, {"say": "בֵּהּ אֲנָא", "heard": "באנה", "score": 0.0}, {"say": "מִשְׁאֲלִין", "heard": "משלין", "score": 0.89}, {"say": "דְכָל", "heard": "דיכא", "score": 0.8}, {"say": "עַמָּךְ", "heard": "למך", "score": 0.67}]}
+{"file": "audio/f/israeli/prayer/vahavta-full.mp3", "before": 1, "after": 1, "issues": [{"say": "מְצַוְּךָ", "heard": "מצוך", "score": 0.86}]}
+{"file": "audio/m/israeli/prayer/kiddush-zachor.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/brich-shmei.mp3", "before": 9, "after": 7, "issues": [{"say": "יִשְׂרָאֵל", "heard": "ישראר", "score": 0.75}, {"say": "וְיַת", "heard": "ויד", "score": 0.0}, {"say": "יִשְׂרָאֵל", "heard": "ישראיר", "score": 0.75}, {"say": "דְּהוּא", "heard": "דהו", "score": 0.67}, {"say": "וּמַסְגֵּא", "heard": "ומזגה", "score": 0.67}, {"say": "מִשְׁאֲלִין", "heard": "משלין", "score": 0.89}, {"say": "יִשְׂרָאֵל", "heard": "ישראיר", "score": 0.75}]}
+{"file": "audio/f/israeli/prayer/brich-shmei.mp3", "before": 9, "after": 7, "issues": [{"say": "יִשְׂרָאֵל", "heard": "ישראר", "score": 0.75}, {"say": "וְיַת", "heard": "ויד", "score": 0.0}, {"say": "יִשְׂרָאֵל", "heard": "ישראיר", "score": 0.75}, {"say": "דְּהוּא", "heard": "דהו", "score": 0.67}, {"say": "וּמַסְגֵּא", "heard": "ומזגה", "score": 0.67}, {"say": "מִשְׁאֲלִין", "heard": "משלין", "score": 0.89}, {"say": "יִשְׂרָאֵל", "heard": "ישראיר", "score": 0.75}]}
+{"file": "audio/m/israeli/line/kiddush-shabbat-eve.mp3", "before": 1, "after": 1, "issues": [{"say": "מִכָּל", "heard": "מקהל", "score": 0.86}]}
+{"file": "audio/m/israeli/prayer/kiddush-shabbat-eve.mp3", "before": 1, "after": 1, "issues": [{"say": "מִכָּל", "heard": "מקהל", "score": 0.86}]}
+{"file": "audio/f/israeli/line/cafe-06.mp3", "before": 1, "after": 0, "issues": []}
+{"file": "audio/m/israeli/line/cafe-26.mp3", "before": 1, "after": 0, "issues": []}
+{"file": "audio/m/israeli/line/cafe-08.mp3", "before": 1, "after": 0, "issues": []}
+{"file": "audio/m/israeli/line/cafe-01.mp3", "before": 2, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/cafe-01.mp3", "before": 1, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/small-talk-03-m.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/cafe-08.mp3", "before": 1, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/bless-priestly-2.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/torah-numbers-6-25.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/prayer/bless-priestly-2.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/cafe-03-m.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/line/kaddish-1-l6.mp3", "before": 1, "after": 1, "issues": [{"say": "שְׁמַיָּא", "heard": "שמעיה", "score": 0.8}]}
+{"file": "audio/m/israeli/line/torah-numbers-6-24.mp3", "before": 1, "after": 1, "issues": [{"say": "יְבָרֶכְךָ", "heard": "יברך", "score": 0.86}]}
+{"file": "audio/f/israeli/line/aleinu-1.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/prayer/aleinu-1.mp3", "before": 0, "after": 0, "issues": []}
+{"file": "audio/f/israeli/prayer/vahavta-2.mp3", "before": 2, "after": 1, "issues": [{"say": "מְצַוְּךָ", "heard": "מצוך", "score": 0.86}]}
+{"file": "audio/m/israeli/line/haftarah-after-l1.mp3", "before": 0, "after": 0, "issues": []}

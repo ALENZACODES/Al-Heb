@@ -245,9 +245,10 @@ test("pack view: 12 words with Hebrew lang/dir, corpus line where one exists, ga
   assert.equal(root.queryAll("li").filter((l) => l.attrs["data-word"]).length, 12);
   assert.equal(root.queryAll(".fv-line").length, VOCAB.packs.find((p) => p.id === "hanukkah").withLine);
   assert.match(root.querySelector('[data-part="gaps"]').textContent, /dreidel/);
+  assert.match(root.textContent, /Words to know for Hanukkah/); assert.doesNotMatch(root.textContent, /No reading line|copied from Aleph's texts/);
   assert.ok(hrefs(root).includes("#/read/hanukkah-candle"));
   const sh = new N("div"); await mount(sh, ctxOf({ query: { id: "shavuot" } }));
-  assert.equal(sh.queryAll("li").filter((l) => l.attrs["data-word"]).length, 11); assert.match(sh.textContent, /Short by 1/); assert.match(sh.textContent, /"Chinese"/);
+  assert.equal(sh.queryAll("li").filter((l) => l.attrs["data-word"]).length, 11); assert.ok(sh.querySelector('[data-part="gaps"]'), "missing words are named in their own section"); assert.match(sh.textContent, /"Chinese"/);
   const bad = new N("div"); await mount(bad, ctxOf({ query: { id: "nope" } })); assert.match(bad.textContent, /No such festival pack/);
 });
 test("Shabbat-ready view: three phrases, fresh learner 0 of 3, skipped phrases named, links guarded; learner who has all signs sees full coverage", async () => {

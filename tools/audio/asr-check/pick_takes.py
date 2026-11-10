@@ -43,9 +43,9 @@ def main():
             key = (v, w, f)
             if key not in done:
                 p = os.path.join(ROOT, f)
-                _, ws = P.review(k, P.hear(p, a.model))
+                _, ws = P.review(k, P.hear(p, a.model, max_tokens=40))
                 snd = ws[0]['match'] if ws else 0.0
-                heard = S.transcribe(p)
+                heard = L.hear(p)
                 wrd = L.score(k, heard)
                 done[key] = {'voice': v, 'word': w, 'file': f, 'sound': snd, 'word_score': round(wrd, 3), 'heard': heard}
                 out.write(json.dumps(done[key], ensure_ascii=False) + '\n'); out.flush()

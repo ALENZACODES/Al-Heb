@@ -19,10 +19,12 @@
       "kind": "instrumental",
       "style": "Jewish folk / klezmer dance loop",
       "role": "optional game/background bed",
-      "duration_seconds": 170.292245,
-      "bytes": 4087639,
-      "sha256_16": "360919ba7a548956",
-      "loopable": true
+      "duration_seconds": 53.524898,
+      "bytes": 1285223,
+      "sha256_16": "77f414e1582fc6e8",
+      "loopable": true,
+      "loop_bars": 32,
+      "loop_bpm": 143.55
     },
     {
       "id": "klezmer-loop-b",
@@ -31,10 +33,12 @@
       "kind": "instrumental",
       "style": "Jewish folk / klezmer dance loop",
       "role": "optional game/background bed",
-      "duration_seconds": 167.627755,
-      "bytes": 4023692,
-      "sha256_16": "d1504a46525c42a3",
-      "loopable": true
+      "duration_seconds": 27.533061,
+      "bytes": 661419,
+      "sha256_16": "1e17433f3ee4767f",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 139.67
     },
     {
       "id": "niggun-calm-loop-a",
@@ -43,10 +47,12 @@
       "kind": "instrumental",
       "style": "Calm niggun / contemplative loop",
       "role": "optional game/background bed",
-      "duration_seconds": 184.084898,
-      "bytes": 4418663,
-      "sha256_16": "ec9ed32bf01831f8",
-      "loopable": true
+      "duration_seconds": 54.857143,
+      "bytes": 1317197,
+      "sha256_16": "7cf9467fb61a94fa",
+      "loopable": true,
+      "loop_bars": 32,
+      "loop_bpm": 139.67
     },
     {
       "id": "niggun-calm-loop-b",
@@ -55,10 +61,12 @@
       "kind": "instrumental",
       "style": "Calm niggun / contemplative loop",
       "role": "optional game/background bed",
-      "duration_seconds": 186.331429,
-      "bytes": 4472580,
-      "sha256_16": "280f273c6fc3b07d",
-      "loopable": true
+      "duration_seconds": 29.126531,
+      "bytes": 699662,
+      "sha256_16": "9d262cf1adb28cad",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 132.51
     },
     {
       "id": "cantor-strings-a",
@@ -67,10 +75,12 @@
       "kind": "instrumental",
       "style": "Cantorial-inspired strings",
       "role": "optional game/background bed",
-      "duration_seconds": 204.59102,
-      "bytes": 4910810,
-      "sha256_16": "74363c8a4419f6b1",
-      "loopable": true
+      "duration_seconds": 26.853878,
+      "bytes": 645119,
+      "sha256_16": "db1621c2646c9610",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 143.55
     },
     {
       "id": "cantor-strings-b",
@@ -79,10 +89,12 @@
       "kind": "instrumental",
       "style": "Cantorial-inspired strings",
       "role": "optional game/background bed",
-      "duration_seconds": 183.536327,
-      "bytes": 4405497,
-      "sha256_16": "d8d750ee17f73c8a",
-      "loopable": true
+      "duration_seconds": 29.910204,
+      "bytes": 718470,
+      "sha256_16": "37f07b5d17002244",
+      "loopable": true,
+      "loop_bars": 16,
+      "loop_bpm": 129.2
     },
     {
       "id": "yachad",

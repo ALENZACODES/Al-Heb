@@ -223,13 +223,13 @@ export const SUGGESTED_BED = Object.freeze({
   lab: 'niggun-calm-loop-a', labgame: 'niggun-calm-loop-b',
   tenwords: 'cantor-strings-a', mitzvot613: 'cantor-strings-a', noahseven: 'cantor-strings-b',
 });
-/** Original beds are 3 to 5 MB, 3 to 4 minutes: streamed by an <audio> element. Decoding one whole (the gapless engine below)
- *  holds about 75 MB of PCM for a 213-second track, which a phone may answer by reloading the tab. Short loops stay gapless. */
-const STREAMED = new Set(ORIGINAL_MUSIC_TRACKS.map((t) => MUSIC_BASE + playableFile(t.file)));
+/** Original beds used to be 3 to 4 minute files, streamed with an <audio> element because decoding one
+ *  held about 75 MB of PCM. They are now short downbeat loops (about 13 to 55 s, under ~20 MB of PCM),
+ *  so they use the same gapless Web Audio engine as the arcade loops. HTMLAudio.loop plus the 1.2 s
+ *  seam-volume dip above was what made the long beds fail to loop musically. */
 /** The music engine (src/audio/synth-music.js, ~20 KB) loads only when someone presses Play music, not at app start; until then this
  *  stand-in records volume and listeners and hands them over. Same <audio>-like surface the controller drives. */
 function makeGameAudio(url) {
-  if (STREAMED.has(String(url))) return new globalThis.Audio(url);
   const listeners = []; let vol = 0.22; let real = null; let loading = null; let want = false;
   const load = () => (loading ||= import('./synth-music.js').then((m) => {
     const id = (/synth:([\w-]+)$/.exec(String(url)) || [])[1];

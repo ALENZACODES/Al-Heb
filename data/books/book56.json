@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book56-p01.mp3"
    },
    "illustration": "a platform, commuters, a train pulling in",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book56-p02.mp3"
    },
    "illustration": "a man with a backpack boarding",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book56-p03.mp3"
    },
    "illustration": "standing room only, elbows",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book56-p04.mp3"
    },
    "illustration": "the man holding a strap, swaying",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book56-p05.mp3"
    },
    "illustration": "a young woman in uniform asleep sitting up, huge bag",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book56-p06.mp3"
    },
    "illustration": "a loud man gesturing with a phone",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book56-p07.mp3"
    },
    "illustration": "a tired mother with a wailing baby",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book56-p08.mp3"
    },
    "illustration": "the window: blue sea rushing past",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book56-p09.mp3"
    },
    "illustration": "his face calm, reflected in the glass",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book56-p10.mp3"
    },
    "illustration": "the baby staring at the sea too, mouth open",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book56-p11.mp3"
    },
    "illustration": "the whole car turned toward the window, silent",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book56-p12.mp3"
    },
    "illustration": "the platform under the green mountain",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

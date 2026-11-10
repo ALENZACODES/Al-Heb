@@ -13,6 +13,8 @@ import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabe
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from './camera-client.js';
 
 export const ON_DEVICE_NOTICE = 'Your photo stays on this device. It is read and translated here, in your browser, and nothing is sent anywhere. Common sign and menu words get the best results; other lines are translated word for word from the ALEF dictionary when every word is found.';
+export const PACK_READY_NOTE = 'The Hebrew to English language pack is on this device, so lines outside the sign list are translated as whole lines.';
+export const PACK_MISSING_NOTE = 'For whole-line translation of signs outside the sign list, add the Hebrew to English language pack on the Talk screen. It is a large download, so use Wi-Fi.';
 export const ACCURACY_NOTICE = 'This reader has only been measured on computer-made sign images, not on real photos. Expect mistakes with glare, angles, small or decorative lettering. Do not rely on it for anything important.';
 
 const CSS = `
@@ -63,6 +65,24 @@ export function mount(root, ctx = {}) {
   const dropUrls = () => { for (const u of urls) URL.revokeObjectURL(u); urls.clear(); };
   let glossary = null; let engine = null; let photo = null; let result = null; let showing = 'english'; let selected = null; let alive = true;
 
+  // The Hebrew to English language pack (shared with the Talk screen): used when it is already on this device; never downloaded from here.
+  /** @type {((he:string)=>Promise<string>)|null} */
+  let translator = ctx.cameraTranslator || null;
+  const packNote = h('p', { class: 'muted camera-pack', role: 'note', hidden: true });
+  const armPack = async () => {
+    if (translator || typeof Worker !== 'function' || typeof caches === 'undefined') return;
+    try {
+      const [{ sharedPack }, { finishLine }] = await Promise.all([import('../talk/nmt/client.js'), import('../talk/nmt/postedit.js')]);
+      const pack = sharedPack();
+      const st = await pack.state('he-en');
+      if (!alive) return;
+      if (!st.ready) { packNote.hidden = false; packNote.replaceChildren(PACK_MISSING_NOTE + ' ', h('a', { href: '#/talk' }, 'Open Talk')); return; }
+      if (!(await pack.load('he-en')) || !alive) return;
+      let terms = null; try { terms = await (await fetch(new URL('../../data/talk/terms.json', import.meta.url))).json(); } catch { /* optional */ }
+      translator = async (he) => finishLine(await pack.translate('he-en', he), he, 'he-en', terms);
+      packNote.hidden = false; packNote.textContent = PACK_READY_NOTE;
+    } catch { /* no pack list (offline and nothing kept): the word list and the dictionary still work */ }
+  };
   const status = h('p', { class: 'camera-status', role: 'status', 'aria-live': 'polite' });
   const modeNote = h('p', { class: 'note camera-mode', role: 'note' }, ON_DEVICE_NOTICE);
   const takeInput = h('input', { type: 'file', accept: 'image/*', capture: 'environment', 'aria-label': 'Take a photo' });
@@ -74,7 +94,7 @@ export function mount(root, ctx = {}) {
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Camera Translator'),
     h('div', { class: 'alef-feature-hero' }, medal('home', 'camera', 54), helper.el),
     h('p', {}, 'Take a photo of a Hebrew sign or menu. The English is drawn over the Hebrew, right on your photo. Tap any line to hear the Hebrew and see how to say it.'),
-    modeNote,
+    modeNote, packNote,
     h('div', { class: 'row' },
       h('label', { class: 'btn pick' }, 'Take A Photo', takeInput),
       h('label', { class: 'btn secondary pick' }, 'Choose A Photo', chooseInput),
@@ -203,7 +223,7 @@ export function mount(root, ctx = {}) {
     out.replaceChildren(h('figure', {}, h('img', { src: objectUrl(photo.blob), width: String(photo.width), height: String(photo.height), alt: 'Your photo as taken', style: 'max-inline-size:100%;block-size:auto;border-radius:6px' })));
     try {
       const { translateOnDevice } = await import('./on-device.js');
-      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc, dictionaryLoader: getDictionary,
+      const r = await translateOnDevice(photo.blob, { glossary, engine: ctx.cameraEngine || engine || undefined, doc, dictionaryLoader: getDictionary, translator: translator || undefined,
         onProgress: (m) => { if (alive && m?.status) status.textContent = `Reading on this device: ${m.status}${typeof m.progress === 'number' ? ` ${Math.round(m.progress * 100)}%` : ''}`; } });
       engine = r.engine;
       if (!alive) return;
@@ -233,6 +253,7 @@ export function mount(root, ctx = {}) {
     sampleBtn.removeAttribute('disabled');
   });
 
+  armPack().finally(() => { if (alive) wrap.dataset.pack = translator ? 'ready' : 'none'; });
   wrap.dataset.mode = 'device';
 
   return () => {

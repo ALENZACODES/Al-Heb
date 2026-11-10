@@ -116,6 +116,10 @@
     {
       "path": "tests/shell.display-art.test.js",
       "reason": "Negative check: asserts the display art source names no tool."
+    },
+    {
+      "path": "assets/vendor/_nmt/*/vocab.json",
+      "reason": "Translation word tables: tens of thousands of word pieces, some of which happen to spell a tool name."
     }
   ]
 }

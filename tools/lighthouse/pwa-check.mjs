@@ -140,7 +140,7 @@ await page.goto(base + '#/settings'); await openSettingsGroups(); await page.wai
 // a bad file is refused and changes nothing
 const badPath = join((await import('node:os')).tmpdir(), 'alef-pwa-bad.json'); (await import('node:fs')).writeFileSync(badPath, '{"hello":1}');
 await page.setInputFiles('#s-import', badPath); await page.waitForTimeout(300);
-note('restore: a file that is not an Aleph backup is refused with a message and changes nothing', /not an Aleph backup/i.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
+note('restore: a file that is not an Aleph backup is refused with a message and changes nothing', /not an (?:ALEF|Aleph) backup/i.test(await page.textContent('main')) && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));
 // a good file: nothing happens until the learner confirms
 await page.setInputFiles('#s-import', backupPath); await page.waitForTimeout(300);
 note('restore: choosing a good file only asks for confirmation (nothing is written yet)', await page.isVisible('button:has-text("Replace my progress")') && await page.evaluate(() => !localStorage.getItem('alef:curriculum.progress')));

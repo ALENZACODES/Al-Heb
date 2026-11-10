@@ -184,19 +184,33 @@ export function mountRimonStills({ doc = globalThis.document, base = 'data/image
       try { fromStage = globalThis.alefRimonStage?.urlsForSituation?.(plan.situation) ?? null; } catch { fromStage = null; }
       if (Array.isArray(fromStage) && !fromStage.length) return false;
       if (fromStage?.[0]) plan.flip = null; // the flip-books belong to this module's own pictures
+      const src = fromStage?.[0] || stillUrl(plan.id, base);
+      // Offline, a picture is asked for only when a copy is kept on the device (no request that can only fail), and without its flip-book.
+      if ((win.navigator || globalThis.navigator)?.onLine === false) {
+        keptCopy(src).then((ok) => { if (ok && alive) { plan.flip = null; paint(plan, src, now); } }).catch(() => {});
+        return false;
+      }
+      paint(plan, src, now);
+      return true;
+    } catch { hide(); return false; }
+  }
+  async function keptCopy(url) {
+    try { const kept = win.caches || globalThis.caches; return !!(kept && await kept.match(new URL(url, win.location?.href || globalThis.location?.href).href)); } catch { return false; }
+  }
+  function paint(plan, src, now) {
+    try {
       last = plan.id; shownAt = now;
       hide();
       fig.dataset.situation = plan.situation;
       fig.dataset.still = plan.id;
       if (plan.flip) fig.dataset.flip = plan.flip;
-      img.src = fromStage?.[0] || stillUrl(plan.id, base);
+      img.src = src;
       fig.hidden = false;
       if (plan.situation === 'streak' && plan.animate) fig.classList.add('is-streak-glow');
       if (plan.animate) { void fig.offsetWidth; fig.classList.add(ENTRANCE_CLASS[plan.entrance] || 'is-burst'); }
       playFlip(plan);
       timer = setTimeout(hide, Math.round(holdMs * (plan.hold || (plan.situation === 'shabbat' ? 1.5 : 1))));
-      return true;
-    } catch { hide(); return false; }
+    } catch { hide(); }
   }
   const onEvent = (e) => { const s = situationForAction(e?.detail?.action); if (s) show(s); };
   const onRoute = () => { const s = situationForHash(win.location?.hash); if (s) show(s); };

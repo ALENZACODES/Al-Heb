@@ -85,3 +85,28 @@ Each has an expected effect that is an estimate, not a measurement.
 Run: `node tools/qa/pwa_audit.mjs` gives 61 ok, 0 FAIL on 2026-11-04. Checked by hand: manifest fields (name, short_name, id, description, lang, display, background and theme colour), `start_url` inside `scope` and both relative (works under a `/repo/` prefix), theme-color meta equal to the manifest, real PNG dimensions equal to the declared ones (192, 512 any; 512 maskable; 180 apple-touch), separate any and maskable icons, shortcuts inside scope, narrow and wide screenshots present, `sw.js` with a fetch handler registered at the root (scope equals the origin root in the browser), offline.html present, precached and self-contained, every precache entry exists on disk, `_headers` no-cache for `sw.js` and the precache list, manifest media type. Browser part: shell cache filled, Chromium's own installability errors (`Page.getInstallabilityErrors`) empty, manifest parsed without errors, and offline reloads of `/`, `#/learn` and `#/read/bless-priestly-1` show the app (offline.html is also served from cache).
 
 Lighthouse 13 is in `tools/lighthouse/node_modules` but it dropped its PWA category, so there is no Lighthouse PWA score; the hand checks above plus `tools/lighthouse/pwa-check.mjs` replace it. Limits: headless Chromium over localhost; no real install prompt, no iOS or Safari Add to Home Screen, and the maskable icon's safe zone was not checked visually. The offline fallback page itself is only reached when index.html is not cached (the service worker serves index.html first), so the offline reloads above do not exercise it; it was checked for presence, precaching and cached delivery only.
+
+## First-Load JS Back Under The Budget (2026-11-10)
+
+The big fixes branch (2026-11-10). Same tool, same machine, slow 4G, 4x CPU, three cold loads each (`node tools/qa/perf.mjs --runs 3 --routes /`). The budget is unchanged: 532,480 bytes from the 502448-byte baseline.
+
+| | JS bytes on first load of / | Requests |
+|---|---|---|
+| Before (branch base) | 622,013 | 77 |
+| After | 525,670 | 71 |
+
+A run by the owner measured 657,717 before; the difference from 622,013 is the retention code, which started 8 s after first paint and so landed inside or outside the measured window depending on the run.
+
+Nothing was removed or made smaller. Four things now start after the first screen instead of with it:
+
+| What | Bytes | Starts |
+|---|---|---|
+| Rimon's stills: `rimon-stage.js`, `rimon-triggers.js`, `rimon-stills.generated.js` | 74,776 | At the first tap, key, scroll or change of screen, or after 9 s on a screen left alone. The blinking Rimon is on screen from the start as before. |
+| The update banner and storage notice: `update.js`, `settings.data.js` | 19,310 | At once on any visit a service worker already controls (an update can only be waiting then, and the file comes from the device). After 10 s on a first visit. A "page not found" asks for it at once. |
+| The no-Hebrew-voice note: `voice-help.js` | 4,253 | After 10 s. |
+| Retention, the practical due badge, Brain Lab warming | not in either row above | After 10 s instead of 8 s, so they no longer land on the edge of the window. |
+
+The trade: on a first visit left untouched, Rimon's first still appears up to 9 s after the page instead of within a second. If that is not wanted, the other way to pass is to raise the budget with a written reason, which is the owner's decision.
+
+Headroom is 6,810 bytes. Any new module on the first screen of about that size will put it over again.
+

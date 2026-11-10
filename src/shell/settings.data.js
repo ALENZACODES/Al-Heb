@@ -53,7 +53,8 @@ export async function wipeAllData(o) {
   // alef-shell-* and alef-runtime-* hold the app and static audio, not learner progress, so they stay unless the worker
   // is being removed too: wiping them would leave the installed app unable to open offline. alef-data, alef-music-v1 and
   // alef-retention (which reminders were already shown) are removed with the rest of the learner's data.
-  try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (!o.unregisterServiceWorker && /^alef-(shell|runtime)-/.test(k)) continue; if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
+  // alef-talk-pack-v1 (the Talk language packs, a large download with nothing of the learner's in it) stays with the app copy.
+  try { const c = o.caches; if (c?.keys) { for (const k of await c.keys()) { if (!o.unregisterServiceWorker && /^alef-(shell|runtime|talk-pack)-/.test(k)) continue; if (await c.delete(k)) rep.caches++; } } } catch (e) { rep.errors.push('offline copies: ' + (/** @type {any} */ (e)?.message || e)); }
   if (o.unregisterServiceWorker) {
     try { const sw = o.navigator?.serviceWorker; const regs = sw?.getRegistrations ? await sw.getRegistrations() : []; for (const r of regs) { if (await r.unregister()) rep.serviceWorkers++; } }
     catch (e) { rep.errors.push('service worker: ' + (/** @type {any} */ (e)?.message || e)); }

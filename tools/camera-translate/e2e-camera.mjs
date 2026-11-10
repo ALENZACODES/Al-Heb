@@ -18,10 +18,10 @@ export function siteCsp() {
 }
 
 /** Open the app with the production CSP on the page. Returns {server, browser, page, base, errors, reqs, posts}. */
-export async function openApp({ viewport = { width: 390, height: 1100 } } = {}) {
+export async function openApp({ viewport = { width: 390, height: 1100 }, launchArgs = [] } = {}) {
   const server = createAppServer(); await new Promise((r) => server.listen(0, r));
   const base = `http://localhost:${server.address().port}`;
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(launchArgs.length ? { args: launchArgs } : {});
   const ctx = await browser.newContext({ viewport, deviceScaleFactor: 2, serviceWorkers: 'block' });
   const page = await ctx.newPage();
   const errors = []; const reqs = []; const posts = [];

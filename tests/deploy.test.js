@@ -16,7 +16,10 @@ test('_headers: within Cloudflare limits, CSP has no third-party origin', () => 
   assert.ok(rules.length <= 100);
   const csp = headersFor(rules, '/index.html').get('content-security-policy').value;
   assert.match(csp, /default-src 'self'/);
-  assert.deepEqual([...csp.matchAll(/https?:\/\/[^\s;]+/g)].map((m) => m[0]).filter((u) => !/127\.0\.0\.1|localhost/.test(u)), []);
+  // the one other address is the project's own pack host (data/talk/pack-host.json), and only for reading data
+  const packHosts = JSON.parse(readFileSync(join(root, 'data/talk/pack-host.json'), 'utf8')).hosts.map((h) => new URL(h).origin);
+  assert.deepEqual([...csp.matchAll(/https?:\/\/[^\s;]+/g)].map((m) => m[0]).filter((u) => !/127\.0\.0\.1|localhost/.test(u)), packHosts);
+  for (const h of packHosts) assert.ok(!csp.replace(/connect-src [^;]*/, '').includes(h), 'the pack host appears in connect-src only');
 });
 test('_headers: cache rules per file kind, and never two Cache-Control rules on one path', () => {
   const cc = (p) => headersFor(rules, p).get('cache-control')?.value;

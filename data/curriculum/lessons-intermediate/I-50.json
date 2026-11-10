@@ -388,5 +388,5 @@
    "answer": 0
   }
  ],
- "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it."
+ "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it. Liturgical forms for the same holidays live on the read track in I-28–I-32 (Yom Kippur, Pesach, Sukkot, Purim, Hanukkah). This Israel-track lesson cannot list those as prerequisites; treat them as companions, not as required earlier lessons."
 }

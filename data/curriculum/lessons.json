@@ -5608,7 +5608,8 @@
    "goals": [
     "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
     "Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in the corpus",
-    "Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only"
+    "Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only",
+    "Know that these refrains are sung on festivals, Rosh Chodesh and Hanukkah; I-29, I-30 and I-32 sit on those days"
    ],
    "estMinutes": 30,
    "prerequisites": [
@@ -14303,7 +14304,7 @@
      "en": "...a remembrance of the exodus from Egypt... who makes Israel and the seasons holy."
     }
    ],
-   "note": "The weekday festival Kiddush (opening, Pesach insert, and close) is now in the registry from Sefaria Torat Emet 357. The Haggadah (Mah Nishtanah, the four sons, Dayenu, the Four Questions) is not; the matzo blessings and the rest of Hallel remain gaps (g-hallel still names the unsourced psalm verses). Do not treat I-29 as a complete seder guide. The Friday-night Shabbat Kiddush is a related but different blessing and is not used here as a stand-in."
+   "note": "The weekday festival Kiddush (opening, Pesach insert, and close) is now in the registry from Sefaria Torat Emet 357. The Haggadah (Mah Nishtanah, the four sons, Dayenu, the Four Questions) is not; the matzo blessings and the rest of Hallel remain gaps (g-hallel still names the unsourced psalm verses). Do not treat I-29 as a complete seder guide. The Friday-night Shabbat Kiddush is a related but different blessing and is not used here as a stand-in. The same weekday festival-Kiddush pattern, with different inserts, is used on Shavuot (kiddush-festival-shavuot) and Shemini Atzeret (kiddush-festival-shemini); those inserts are in the registry but this lesson stays with Pesach."
   },
   {
    "id": "I-30",
@@ -21515,7 +21516,7 @@
      "answer": 0
     }
    ],
-   "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it."
+   "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it. Liturgical forms for the same holidays live on the read track in I-28–I-32 (Yom Kippur, Pesach, Sukkot, Purim, Hanukkah). This Israel-track lesson cannot list those as prerequisites; treat them as companions, not as required earlier lessons."
   }
  ]
 }

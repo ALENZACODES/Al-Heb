@@ -6,43 +6,78 @@ Every Hebrew item a Brain Lab game shows, checked against the recordings the gam
 
 | Game | Items | Recorded | Record first (1) | Next (2) | Later (3) |
 |---|---|---|---|---|---|
-| Calendar Puzzle | 27 | 4 | 10 | 0 | 13 |
 | Prayer Chain, Siddur Flash | 41 | 37 | 1 | 3 | 0 |
-| Count Up, Number Ear | 18 | 17 | 0 | 1 | 0 |
+| Café Order | 29 | 28 | 0 | 1 | 0 |
 | Letter Pattern | 929 | 803 | 0 | 126 | 0 |
+| Sound Match, Vowel Rain | 110 | 83 | 0 | 27 | 0 |
+| Taxi Turns | 5 | 4 | 0 | 1 | 0 |
+| Vowel Rain | 73 | 39 | 0 | 15 | 19 |
+| Calendar Puzzle | 27 | 14 | 0 | 0 | 13 |
 | Sound Twins | 32 | 26 | 0 | 0 | 6 |
-| Vowel Rain | 73 | 51 | 0 | 0 | 22 |
-| Café Order | 29 | 29 | 0 | 0 | 0 |
+| Count Up, Number Ear | 18 | 18 | 0 | 0 | 0 |
 | Letter Hunt, Letter Matrix, Middle Letter, Gematria | 27 | 27 | 0 | 0 | 0 |
-| Sound Match, Vowel Rain | 110 | 110 | 0 | 0 | 0 |
-| Taxi Turns | 5 | 5 | 0 | 0 | 0 |
 
 Priority 1: a game plays it, or asks for it by sound, and beginners meet it first. Priority 2: a game plays it but higher up, or shows it silently to beginners. Priority 3: everything else.
+
+**Held:** 44 recordings failed 2 of 3 transcription checks and are not played in Brain Lab (`data/lab/clip-holds.json`); the game shows the written sound instead. Each needs a person to listen before it is replaced or released. They are the rows marked "held: needs a listen" in the CSV.
 
 ## Record First
 
 | Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |
 |---|---|---|---|---|---|---|
-| Calendar Puzzle | `rosh-hashanah` | רֹאשׁ הַשָּׁנָה | Rosh Hashanah | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `yom-kippur` | יוֹם כִּפּוּר | Yom Kippur | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `sukkot` | סֻכּוֹת | Sukkot | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `shemini-atzeret` | שְׁמִינִי עֲצֶרֶת וְשִׂמְחַת תּוֹרָה | Shemini Atzeret / Simchat Torah | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `tu-bishvat` | טוּ בִּשְׁבָט | Tu BiShvat | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `yom-hashoah` | יוֹם הַשּׁוֹאָה | Yom HaShoah (Holocaust Remembrance Day) | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `yom-hazikaron` | יוֹם הַזִּכָּרוֹן | Yom HaZikaron (Israel Memorial Day) | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `yom-haatzmaut` | יוֹם הָעַצְמָאוּת | Yom HaAtzmaut (Israel Independence Day) | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `shavuot` | שָׁבוּעוֹת | Shavuot | missing | missing | Israeli clip for all three settings |
-| Calendar Puzzle | `tisha-bav` | תִּשְׁעָה בְּאָב | Tisha B'Av | missing | missing | Israeli clip for all three settings |
-| Prayer Chain, Siddur Flash | `torah-barchu` | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ | Barchu (call to the Torah blessing) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `torah-barchu` | בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃ | Barchu (call to the Torah blessing) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
 
 ## Next
 
 | Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |
 |---|---|---|---|---|---|---|
-| Count Up, Number Ear | `h0b5f5c41` | תִּשְׁעִים | 90 (ninety) | dictionary list only | dictionary list only | Israeli clip for all three settings |
-| Prayer Chain, Siddur Flash | `hagomel` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ | Birkat Hagomel (after recovery or safe travel) and the congregation's response | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
-| Prayer Chain, Siddur Flash | `sim-shalom` | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Sim shalom (peace blessing of the morning Amidah) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
-| Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Israeli clip (prayer voice); the divine name is spoken as Adonai |
+| Café Order | `pf8630913` | פִּיתָה | pita bread | recorded | held: needs a listen | Israeli clip for all three settings |
+| Prayer Chain, Siddur Flash | `hagomel` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב׃ | Birkat Hagomel (after recovery or safe travel) and the congregation's response | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `sim-shalom` | שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ וְעַל כָּל־יִשְׂרָאֵל עַמֶּךָ בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ יְהוָה אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד וּצְדָקָה וּבְרָכָה וְרַחֲמִים וְחַיִּים וְשָׁלוֹם וְטוֹב בְּעֵינֶיךָ לְבָרֵךְ אֶת עַמְּךָ יִשְׂרָאֵל בְּכָל־עֵת וּבְכָל־שָׁעָה בִּשְׁלוֹמֶךָ׃ | Sim shalom (peace blessing of the morning Amidah) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
+| Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
+| Sound Match, Vowel Rain | `alef-i` | אִ | syllable "i" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `bet-u` | בֻּ | syllable "bu" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `gimel-a` | גַ | syllable "ga" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `gimel-o` | גֹ | syllable "go" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `dalet-e` | דֶ | syllable "de" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `dalet-o` | דֹ | syllable "do" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `dalet-u` | דֻ | syllable "du" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `zayin-a` | זַ | syllable "za" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `chet-u` | חֻ | syllable "chu" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tet-e` | טֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tet-i` | טִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tet-u` | טֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `yod-i` | יִ | syllable "yi" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `yod-u` | יֻ | syllable "yu" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `samekh-o` | סֹ | syllable "so" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `ayin-i` | עִ | syllable "i" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `pe-a` | פַּ | syllable "pa" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `pe-o` | פֹּ | syllable "po" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tsadi-i` | צִ | syllable "tzi" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tsadi-o` | צֹ | syllable "tzo" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tsadi-u` | צֻ | syllable "tzu" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `qof-u` | קֻ | syllable "ku" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `resh-o` | רֹ | syllable "ro" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `resh-u` | רֻ | syllable "ru" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tav-e` | תֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tav-i` | תִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
+| Sound Match, Vowel Rain | `tav-u` | תֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Taxi Turns | `p84a865c5` | לֵךְ יָשָׁר | go straight | held: needs a listen | recorded | Israeli clip for all three settings |
+| Vowel Rain | `gimel+kamatz` | גָ | gimel with kamatz, says "a" | held: needs a listen | recorded | Israeli and Sephardi: plays gimel-a, the same sound. Ashkenazi says "o": own Ashkenazi clip needed |
+| Vowel Rain | `zayin+kamatz` | זָ | zayin with kamatz, says "a" | held: needs a listen | held: needs a listen | Israeli and Sephardi: plays zayin-a, the same sound. Ashkenazi says "o": own Ashkenazi clip needed |
+| Vowel Rain | `pe+kamatz` | פָּ | pe with kamatz, says "a" | recorded | held: needs a listen | Israeli and Sephardi: plays pe-a, the same sound. Ashkenazi says "o": own Ashkenazi clip needed |
+| Vowel Rain | `dalet+tzere` | דֵ | dalet with tzere, says "e" | held: needs a listen | recorded | Israeli and Sephardi: plays dalet-e, the same sound; not played in Ashkenazi |
+| Vowel Rain | `tet+tzere` | טֵ | tet with tzere, says "e" | recorded | held: needs a listen | Israeli and Sephardi: plays tet-e, the same sound; not played in Ashkenazi |
+| Vowel Rain | `tav+tzere` | תֵ | tav with tzere, says "e" | recorded | held: needs a listen | Israeli and Sephardi: plays tav-e, the same sound; not played in Ashkenazi |
+| Vowel Rain | `bet+shuruk` | בּוּ | bet with shuruk, says "u" | recorded | held: needs a listen | plays bet-u, the same sound, in all three settings |
+| Vowel Rain | `dalet+shuruk` | דוּ | dalet with shuruk, says "u" | held: needs a listen | recorded | plays dalet-u, the same sound, in all three settings |
+| Vowel Rain | `chet+shuruk` | חוּ | chet with shuruk, says "u" | recorded | held: needs a listen | plays chet-u, the same sound, in all three settings |
+| Vowel Rain | `tet+shuruk` | טוּ | tet with shuruk, says "u" | held: needs a listen | recorded | plays tet-u, the same sound, in all three settings |
+| Vowel Rain | `yod+shuruk` | יוּ | yod with shuruk, says "u" | held: needs a listen | recorded | plays yod-u, the same sound, in all three settings |
+| Vowel Rain | `tsadi+shuruk` | צוּ | tsadi with shuruk, says "u" | held: needs a listen | held: needs a listen | plays tsadi-u, the same sound, in all three settings |
+| Vowel Rain | `qof+shuruk` | קוּ | qof with shuruk, says "u" | held: needs a listen | recorded | plays qof-u, the same sound, in all three settings |
+| Vowel Rain | `resh+shuruk` | רוּ | resh with shuruk, says "u" | held: needs a listen | recorded | plays resh-u, the same sound, in all three settings |
+| Vowel Rain | `tav+shuruk` | תוּ | tav with shuruk, says "u" | held: needs a listen | recorded | plays tav-u, the same sound, in all three settings |
 
 Letter Pattern words without a recording are listed only in the CSV: 0 beginner words (level A1 or A2, priority 1), 126 at priority 2.
 

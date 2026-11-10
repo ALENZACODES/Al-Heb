@@ -23,13 +23,14 @@ test('rule table: sephardi and ashkenazi fall back to israeli; the two admitted 
   assert.deepEqual(ACCENT_SOURCES, { israeliVoice: 'tts-respelled-israeli-voice', tempoCapped: 'tts-respelled-tempo-capped' });
 });
 
-test('real manifest: no Sephardi or Ashkenazi row carries an admitted provenance yet, so every own-tradition file is retired', () => {
-  const admitted = all.filter((e) => isAccentClip(e));
-  assert.deepEqual(admitted.map((e) => e.path), [], 'when the first accent clips land, this list names them and the test below covers them');
+test('real manifest: admitted Sephardi and Ashkenazi rows are the Brain Lab game-word recordings of 2026-11-10', () => {
+  const admitted = all.filter((e) => isAccentClip(e)).map((e) => e.path).sort();
+  const expected = JSON.parse(readFileSync(new URL('./fixtures/admitted-accent-clips.json', import.meta.url), 'utf8'));
+  assert.deepEqual(admitted, expected);
 });
 
 for (const setting of ACCENT) {
-  test(`real manifest, ${setting} setting: every id with an Israeli file of that voice resolves to that Israeli file, for every kind and both voices`, () => {
+  test(`real manifest, ${setting} setting: every id with an Israeli file of that voice plays that Israeli file, unless an admitted ${setting} clip of the same id exists`, () => {
     const counts = {};
     for (const voice of ['m', 'f']) {
       const audio = player(voice, setting);
@@ -39,10 +40,21 @@ for (const setting of ACCENT) {
         for (const isr of ids) {
           const r = audio.status(kind, isr.id);
           assert.equal(r.source, 'file', `${voice} ${kind} ${isr.id}: ${r.reason || r.source}`);
-          assert.equal(r.path, isr.path, `${voice} ${kind} ${isr.id} plays its Israeli file`);
           assert.equal(r.voice, voice);
-          if (isr.scope === 'israeli-only') { assert.equal(r.tradition, 'israeli', `${isr.id}: israeli-only items ignore the setting, as before`); assert.equal(r.fileTradition, undefined); }
-          else { assert.equal(r.tradition, setting, isr.id); assert.equal(r.fileTradition, 'israeli', isr.id); }
+          const own = all.find((e) => e.tradition === setting && e.voice === voice && e.kind === kind && e.id === isr.id && e.status !== 'missing');
+          if (isr.scope === 'israeli-only') {
+            assert.equal(r.path, isr.path, `${voice} ${kind} ${isr.id} is Israeli-only`);
+            assert.equal(r.tradition, 'israeli', `${isr.id}: israeli-only items ignore the setting, as before`);
+            assert.equal(r.fileTradition, undefined);
+          } else if (isAccentClip(own)) {
+            assert.equal(r.path, own.path, `${voice} ${kind} ${isr.id} plays its admitted ${setting} file`);
+            assert.equal(r.tradition, setting, isr.id);
+            assert.equal(r.fileTradition, undefined, isr.id);
+          } else {
+            assert.equal(r.path, isr.path, `${voice} ${kind} ${isr.id} plays its Israeli file`);
+            assert.equal(r.tradition, setting, isr.id);
+            assert.equal(r.fileTradition, 'israeli', isr.id);
+          }
         }
         counts[`${voice}|${kind}`] = ids.length;
       }
@@ -50,7 +62,7 @@ for (const setting of ACCENT) {
     assert.ok(Object.values(counts).reduce((a, b) => a + b, 0) > 8000, JSON.stringify(counts));
   });
 
-  test(`real manifest, ${setting} setting: no result ever points at a /${setting}/ file (the respelled line and word clips stay retired), and nothing falls silent`, () => {
+  test(`real manifest, ${setting} setting: retired own-tradition files stay unused, admitted game-word clips play as themselves, and nothing falls silent`, () => {
     for (const voice of ['m', 'f']) {
       const audio = player(voice, setting);
       const own = all.filter((e) => e.tradition === setting && e.voice === voice && e.status !== 'missing');
@@ -58,7 +70,13 @@ for (const setting of ACCENT) {
       for (const e of own) {
         const r = audio.status(e.kind, e.id);
         assert.equal(r.source, 'file', `${e.path}: an Israeli counterpart exists for every ${setting} clip, so this must still play`);
-        assert.doesNotMatch(r.path, new RegExp(`/${setting}/`), `${e.path} was selected`);
+        if (isAccentClip(e)) {
+          assert.equal(r.path, e.path, `${e.path} is admitted and plays as itself`);
+          assert.equal(r.tradition, setting, e.path);
+          assert.equal(r.fileTradition, undefined, e.path);
+        } else {
+          assert.doesNotMatch(r.path, new RegExp(`/${setting}/`), `${e.path} was selected`);
+        }
       }
     }
   });

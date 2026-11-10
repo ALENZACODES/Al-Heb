@@ -76,17 +76,33 @@ export function build() {
   const loaded = [...readJSON('data/audio/manifest.json'), ...readJSON('data/audio/manifest-kind-word.json'), ...readJSON('data/audio/manifest-words-israeli.json')]
     .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
   const known = new Set(loaded.map((r) => `${r.kind}|${r.id}|${r.voice}|${r.text}`));
-  const clipByText = (he) => { const k = String(he).normalize('NFC'); const m = loaded.find((r) => r.voice === 'm' && r.text === k && (r.kind === 'word' || r.kind === 'line'));
-    return m && loaded.some((r) => r.voice === 'f' && r.kind === m.kind && r.id === m.id) ? { kind: m.kind, id: m.id } : null; };
   const both = (kind, id) => ['m', 'f'].every((v) => loaded.some((r) => r.kind === kind && r.id === id && r.voice === v));
+  /** A clip of exactly this pointed text that the player loads (core manifest or word shard), in both voices; word clips first. */
+  const shardClipFor = (he) => {
+    const idsByKind = new Map();
+    for (const r of loaded) {
+      if (r.text !== he || (r.voice !== 'm' && r.voice !== 'f')) continue;
+      const key = `${r.kind}|${r.id}`;
+      const rec = idsByKind.get(key) || { kind: r.kind, id: r.id, voices: new Set() };
+      rec.voices.add(r.voice);
+      idsByKind.set(key, rec);
+    }
+    const two = [...idsByKind.values()].filter((x) => x.voices.has('m') && x.voices.has('f'));
+    two.sort((x, y) => (x.kind === 'word' ? 0 : 1) - (y.kind === 'word' ? 0 : 1) || String(x.id).localeCompare(String(y.id)));
+    return two[0] ? { kind: two[0].kind, id: two[0].id } : null;
+  };
+  const clipByText = (he) => shardClipFor(String(he).normalize('NFC'));
   // Recordings that exist only in the dictionary list (data/vocab/audio-dictionary.json, 1.2 MB, not loaded by games): the two
   // rows a game needs are copied into `extraClips`, which Brain Lab hands to the player (ctx.audio.extend) when the game loads.
+  // Used only when no clip of that text is in the lists the player loads.
   const dictRows = readJSON('data/vocab/audio-dictionary.json');
   const extraClips = [];
   const clipFor = (he) => {
     const c = clips[he]; const m = c?.['m|israeli'], f = c?.['f|israeli'];
+    if (m && f && m.id === f.id && m.kind === f.kind && known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`)) return { kind: m.kind, id: m.id };
+    const shard = shardClipFor(he);
+    if (shard) return shard;
     if (!(m && f && m.id === f.id && m.kind === f.kind)) return null;
-    if (known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`)) return { kind: m.kind, id: m.id };
     const rows = dictRows.filter((r) => r.id === m.id && r.kind === m.kind && r.tradition === 'israeli' && r.text === he && r.status !== 'missing');
     if (rows.length !== 2 || !rows.every((r) => existsSync(join(ROOT, r.path)))) return null;
     for (const r of rows) if (!extraClips.some((x) => x.id === r.id && x.voice === r.voice)) extraClips.push(r);

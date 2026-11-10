@@ -21,15 +21,18 @@ const key = (s) => String(s ?? '').normalize('NFC').replace(/[֑-ֽ֯׀׃]/g, ''
 export function build() {
   const rows = [...J('data/audio/manifest.json'), ...J('data/audio/manifest-kind-word.json'), ...J('data/audio/manifest-words-israeli.json')]
     .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
-  const byId = new Set(rows.map((r) => `${r.kind}|${r.id}|${r.voice}`));
-  const byText = new Map(); for (const r of rows) { const k = `${key(r.text)}|${r.voice}`; if (!byText.has(k)) byText.set(k, `${r.kind}:${r.id}`); }
+  // Held recordings (data/lab/clip-holds.json): failed 2 of 3 transcription checks, so Brain Lab does not play them.
+  const held = new Set(J('data/lab/clip-holds.json').paths || []);
+  const byId = new Map(rows.map((r) => [`${r.kind}|${r.id}|${r.voice}`, r.path]));
+  const byText = new Map(); for (const r of rows) { const k = `${key(r.text)}|${r.voice}`; if (!byText.has(k)) byText.set(k, [`${r.kind}:${r.id}`, r.path]); }
+  const ok = (path, clip) => (held.has(path) ? { s: 'held: needs a listen', clip } : { s: 'recorded', clip });
   const dict = J('data/vocab/clip-lookup.json').clips;
   const W0 = J('data/lab/words.json');
   const listed = new Set([...(W0.extraClips || []).map((r) => `${r.kind}|${r.id}|${r.voice}`), // dictionary files Brain Lab now hands the player
     ...(W0.familyClips || []).filter((x) => x[1] === 'd').flatMap((x) => ['m', 'f'].map((v) => `word|dict-${x[2]}|${v}`))]);
   const status = (he, kind, id) => Object.fromEntries(['m', 'f'].map((v) => {
-    if (kind && id && byId.has(`${kind}|${id}|${v}`)) return [v, { s: 'recorded', clip: `${kind}:${id}` }];
-    const t = byText.get(`${key(he)}|${v}`); if (t) return [v, { s: 'recorded', clip: t }];
+    if (kind && id && byId.has(`${kind}|${id}|${v}`)) return [v, ok(byId.get(`${kind}|${id}|${v}`), `${kind}:${id}`)];
+    const t = byText.get(`${key(he)}|${v}`); if (t) return [v, ok(t[1], t[0])];
     const d = dict[key(he)]?.[`${v}|israeli`];
     if (d && listed.has(`${d.kind}|${d.id}|${v}`)) return [v, { s: 'recorded', clip: `${d.kind}:${d.id}` }];
     if (d) return [v, { s: 'dictionary list only', clip: `word:${d.id}` }];
@@ -58,14 +61,15 @@ export function build() {
     const ash = v.sound.ashkenazi !== v.sound.israeli;
     if (v.sayAs) { out.push({ game: 'Vowel Rain', what: 'syllable', id: `${v.letter}+${v.sign}`, he: v.he, tr: '', en: `${v.letter} with ${v.sign}, says "${v.sound.israeli}"`, tier: v.from <= 4 ? 1 : 2, spoken: 'after a right answer',
       trad: ash ? (v.sound.ashkenazi ? `Israeli and Sephardi: plays ${v.sayAs}, the same sound. Ashkenazi says "${v.sound.ashkenazi}": own Ashkenazi clip needed` : `Israeli and Sephardi: plays ${v.sayAs}, the same sound; not played in Ashkenazi`) : `plays ${v.sayAs}, the same sound, in all three settings`,
-      m: 'recorded', f: 'recorded', clip: `syllable:${v.sayAs}` }); continue; }
+      ...Object.fromEntries(['m', 'f'].map((vv) => [vv, held.has(`audio/${vv}/israeli/syllable/${v.sayAs}.mp3`) ? 'held: needs a listen' : 'recorded'])), clip: `syllable:${v.sayAs}` }); continue; }
     add({ game: 'Vowel Rain', what: 'syllable', id: `${v.letter}+${v.sign}`, he: v.he, tr: '', en: `${v.letter} with ${v.sign}, says "${v.sound.israeli}"`, tier: v.from <= 4 ? 1 : 2, spoken: 'after a right answer',
       trad: ash ? (v.sound.ashkenazi ? `Israeli says "${v.sound.israeli}", Ashkenazi "${v.sound.ashkenazi}": own Ashkenazi clip needed` : 'not played in Ashkenazi (the sign reads as a glide there)') : 'Israeli clip for all three settings' });
   }
   for (const d of HOLIDAY_DEFS) add({ game: 'Calendar Puzzle', what: 'holy day', id: d.id, he: d.he, tr: '', en: d.en, tier: 1, spoken: 'after each answer (when recorded); listen button on results', trad: 'Israeli clip for all three settings' });
   for (const [id, m] of Object.entries(HEBREW_MONTH_NAMES)) add({ game: 'Calendar Puzzle', what: 'month', id, he: m.he, tr: '', en: m.en, tier: 2, spoken: 'not played yet', trad: 'Israeli clip for all three settings' });
   for (const e of J('data/corpus/registry.json').entries.filter((x) => x.category === 'siddur' && x.he && !NOT_A_GAME.has(x.id)))
-    add({ game: 'Prayer Chain, Siddur Flash', what: 'prayer line', id: e.id, he: e.he.split('\n')[0], tr: '', en: e.title, tier: lineWords(e.he).length <= 16 ? 1 : 2, kind: 'line', clipId: e.id, spoken: 'Prayer Chain plays the whole line when it is finished (levels 1 to 3)', trad: 'Israeli clip (prayer voice); the divine name is spoken as Adonai' });
+    add({ game: 'Prayer Chain, Siddur Flash', what: 'prayer line', id: e.id, he: e.he.split('\n')[0], tr: '', en: e.title, tier: lineWords(e.he).length <= 16 ? 1 : 2, kind: 'line', clipId: e.id, spoken: 'Prayer Chain plays the whole line when it is finished (levels 1 to 3)',
+      trad: hasDivineName(e.he) ? 'Holds the divine name: recording held for John\'s decision; when recorded, the name is spoken as Adonai' : 'Israeli clip (prayer voice)' });
   // Letter Pattern: the root-family words the game can show.
   const fam = J('data/roots/families.json').families || [];
   const seen = new Set();
@@ -80,6 +84,7 @@ export function build() {
   // 3 = everything else missing; 0 = done.
   for (const r of out) {
     const heard = r.m === 'recorded' && r.f === 'recorded';
+    if (/held/.test(r.m + r.f)) { r.priority = 2; continue; } // a person listens first (handoff: never replace a held clip unheard)
     const plays = !/not played yet/.test(r.spoken);
     r.priority = heard ? 0 : plays && r.tier === 1 ? 1 : plays || r.tier === 1 ? 2 : 3;
     if (heard && /own (Ashkenazi )?clip needed/.test(r.trad)) r.priority = 3;
@@ -110,6 +115,8 @@ export function writeMd(rows) {
   for (const g of games) { const r = rows.filter((x) => x.game === g); L.push(`| ${g} | ${r.length} | ${r.filter((x) => x.priority === 0).length} | ${r.filter((x) => x.priority === 1).length} | ${r.filter((x) => x.priority === 2).length} | ${r.filter((x) => x.priority === 3).length} |`); }
   L.push('', 'Priority 1: a game plays it, or asks for it by sound, and beginners meet it first. Priority 2: a game plays it but higher up, or shows it silently to beginners. Priority 3: everything else.', '');
   const table = (list) => { L.push('| Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |', '|---|---|---|---|---|---|---|'); for (const r of list) L.push(`| ${r.game} | \`${r.id}\` | ${r.he} | ${r.en} | ${r.m} | ${r.f} | ${r.trad} |`); L.push(''); };
+  const heldRows = rows.filter((r) => /held/.test(r.m + r.f));
+  L.push(`**Held:** ${heldRows.length} recordings failed 2 of 3 transcription checks and are not played in Brain Lab (\`data/lab/clip-holds.json\`); the game shows the written sound instead. Each needs a person to listen before it is replaced or released. They are the rows marked "held: needs a listen" in the CSV.`, '');
   L.push('## Record First', ''); const first = by(1).filter((r) => r.game !== 'Letter Pattern'); if (first.length) table(first); else L.push('Nothing: every item a game plays to beginners can be heard.', '');
   const next = by(2).filter((r) => r.game !== 'Letter Pattern');
   const lpFirst = by(1).filter((r) => r.game === 'Letter Pattern');

@@ -1,4 +1,4 @@
-// Brain Lab on the real page in headless Chromium: every one of the sixteen games starts, plays to its results card by tapping
+// Brain Lab on the real page in headless Chromium: every game starts, plays to its results card by tapping
 // answers, and shows stars and the "Hebrew You Met" list, with no page error. Run with No time limits on (ten rounds, no clock),
 // so each game ends after ten answers. Taps are random: this checks that nothing breaks, not how well anyone plays.
 // Skipped when Playwright is not installed (browser tier: node tools/test/run.mjs browser).
@@ -39,21 +39,24 @@ async function playToResults(page, maxMs) {
   return !!(await page.$('.lab-results'));
 }
 
-test('browser: the Brain Lab page lists all sixteen games by skill, with a token for each and New on the six added games', { skip, timeout: 60000 }, async () => {
+test('browser: the Brain Lab page lists every game in its pack, with a token or cover for each and New on the added games', { skip, timeout: 60000 }, async () => {
   await withLab({}, async (ctx, base) => {
     const page = await ctx.newPage(); const errors = [];
     page.on('pageerror', (e) => errors.push(String(e)));
     await page.goto(base + '#/lab', { waitUntil: 'load' });
     await page.waitForSelector('.lab-games .lab-game', { timeout: 30000 });
     assert.equal(await page.locator('.lab-game').count(), GAMES.length);
-    assert.equal(await page.locator('.lab-game .lab-token').count(), GAMES.length);
+    assert.equal(await page.locator('.lab-game .lab-token').count(), GAMES.filter((g) => g.pack !== 'studio').length, 'a round token beside every classic and synagogue-and-Israel game');
+    assert.equal(await page.locator('.lab-game.is-studio').count(), GAMES.filter((g) => g.pack === 'studio').length);
     assert.equal(await page.locator('.lab-game .lab-new').count(), GAMES.filter((g) => g.added).length);
-    assert.equal(await page.locator('h3.lab-group').count(), 5);
+    assert.equal(await page.locator('h3.lab-group').count(), 5, 'the classic drills are grouped by skill');
+    assert.deepEqual(await page.locator('h2.lab-pack-h').evaluateAll((hs) => hs.map((h) => [...h.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join('').trim())), ['Hebrew for Synagogue and Israel', '3D Studio', 'Quick Drills']);
+    assert.doesNotMatch(await page.locator('#main').innerText(), /\u0063laude|grok|\u0063hatgpt|lumosity/i, 'no tool or brand names on the page');
     assert.deepEqual(errors, []);
   });
 });
 
-test('browser: every game plays to its results card with No time limits on: stars, score and the Hebrew you met, no page error', { skip, timeout: 900000 }, async () => {
+test('browser: every game (all packs) plays to its results card with No time limits on: stars, score and the Hebrew you met, no page error', { skip, timeout: 900000 }, async () => {
   await withLab({ untimed: true }, async (ctx, base) => {
     for (const g of GAMES) {
       const page = await ctx.newPage(); const errors = [];

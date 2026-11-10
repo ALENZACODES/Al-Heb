@@ -1,0 +1,19 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "tts-hebrew",
+ "engine": "google",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "גְּלִידָה",
+ "inputSha256": "1e2c676bb4b75f372eee1c4fea5428263ae0aacb68f048a3ba5fcedb388ce994",
+ "ingestedAt": "2026-11-10T07:35:19.197Z",
+ "licence": "customer-owned",
+ "note": "Synthetic voice; licence customer-owned under the vendor terms (docs/audio/CONTRACT.md); redistribution clearance still needs counsel",
+ "renderedAt": "2026-11-10T07:35:19.197Z",
+ "redistributionCleared": false,
+ "spokenText": "גְּלִידָה",
+ "normalized": true,
+ "speakingRate": 1,
+ "batch": "brain-lab-game-words-2026-11-10",
+ "metadataStripped": true
+}

@@ -35,7 +35,7 @@ Checked by running the branch: the Brain Lab unit tests, axe (WCAG A and AA) in 
 6. **Content:** Mourner's Kaddish is played as a game, and chataf vowels fall under letters that never take them. Fixed here.
 7. **No browser test** of the sixteen games. Added here (`tests/lab.browser.test.js`).
 
-Merging this branch (`claude/brain-lab-games-2026-11-10`) into the integration branch brings all seven, and conflicts only in the generated `precache-manifest.js`.
+Merging the Brain Lab games branch into the integration branch brings all seven, and conflicts only in the generated `precache-manifest.js`.
 
 ## Round 8 (after the review): Letter Pattern Speaks
 

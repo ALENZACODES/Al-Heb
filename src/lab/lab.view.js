@@ -1,13 +1,14 @@
-// Brain Lab (#/lab, #/lab/:game). Daily three-drill workout, ten short timed drills that adjust to you, five skill scores.
+// Brain Lab (#/lab, #/lab/:game). Daily three-drill workout, classic timed drills, and a 3D studio of Lumosity-style games.
 import { h, heSpan } from '../shell/ui.js';
 import { isAudioFree } from '../shell/audiofree.js';
 import { sfx } from '../audio/sfx.js';
 import { playRecordedClip, hasRecordedClip } from '../games/engine.js';
 import {
-  STORE_KEY, SESSION_SECONDS, SKILLS, GAMES, gameById, dayKey, dailyWorkout, step, trialPoints, startLevel, summarize,
-  readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded,
+  STORE_KEY, SESSION_SECONDS, SKILLS, GAMES, CLASSIC_GAMES, STUDIO_GAMES, CLAUDE_GAMES, gameById, dayKey, dailyWorkout, step, trialPoints, startLevel, summarize,
+  readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, sessionSeconds,
 } from './lab.core.js';
 import { DRILLS } from './lab.games.js';
+import { artImg, artPath, NEW_BEST_ART, WORKOUT_DONE_ART } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
@@ -86,9 +87,59 @@ const CSS = `
 .lab-actions{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-block-start:.6rem}
 .lab-intro .how{font-size:1.05rem}
 @keyframes lab-shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
-@media (prefers-reduced-motion:reduce){.lab-cell,.lab-time>span{transition:none}.lab-cell.is-wrong{animation:none}}
+.lab-art{display:block;max-inline-size:100%;block-size:auto;margin-inline:auto;pointer-events:none;user-select:none}
+.lab-art.cover{aspect-ratio:3/2;inline-size:100%;max-inline-size:30rem;border-radius:14px;border:2px solid #d4a647;object-fit:cover;margin-block:.4rem .8rem}
+.lab-art.win{inline-size:9rem;block-size:9rem;object-fit:contain;margin-block:.2rem}
+.lab-art.done{aspect-ratio:3/2;inline-size:100%;border-radius:12px;object-fit:cover;margin-block:.2rem .8rem}
+@media (prefers-reduced-data:reduce){.lab-art{display:none}}
+.lab-pack{font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#8a6d1f;margin:1.1rem 0 .35rem}
+.lab-stage{perspective:900px;transform-style:preserve-3d}
+.lab-tile3d{transform-style:preserve-3d;background:linear-gradient(180deg,#fffaf0 0%,#f4e6c0 100%);box-shadow:0 8px 18px #1028182e,0 2px 0 #c9a24a, inset 0 1px 0 #fff}
+.lab-tile3d:hover,.lab-tile3d:focus-visible{transform:translateY(-3px) rotateX(7deg) rotateY(-4deg)}
+.lab-tile3d:active{transform:translateY(1px) rotateX(0)}
+.lab-tile3d.is-static{pointer-events:none;cursor:default}
+.lab-tile3d.is-ask{background:linear-gradient(180deg,#1e4634,#16301C);color:#f2d27c;border-color:#d4a647}
+.lab-seq{display:flex;gap:.45rem;justify-content:center;flex-wrap:wrap;inline-size:100%}
+.lab-seq .lab-cell{inline-size:3.4rem;block-size:3.4rem;aspect-ratio:auto}
+.lab-sky,.lab-rain{position:relative;overflow:hidden;inline-size:min(100%,28rem);min-block-size:16rem;border-radius:18px;background:linear-gradient(180deg,#1e4634 0%,#16301C 70%,#102818 100%);border:2px solid #d4a647;box-shadow:inset 0 0 40px #0005}
+.lab-bird{position:absolute;inset-block-start:calc(10% + var(--lane) * 8%);inset-inline-start:0;display:flex;align-items:center;gap:.25rem;min-inline-size:4.6rem;padding:.25rem .5rem;border-radius:999px;animation:lab-fly var(--ms) linear forwards;color:#16301C}
+.lab-bird-body{color:#d4a647;font-size:1.1rem}
+.lab-bird-he{font-size:1.15rem !important;color:#16301C}
+.lab-sky.is-still .lab-bird,.lab-rain.is-still .lab-drop{animation:none;position:relative;inset:auto;display:inline-flex;margin:.3rem}
+.lab-sky.is-still,.lab-rain.is-still{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem}
+.lab-drop{position:absolute;inset-block-start:0;inset-inline-start:var(--x);inline-size:3.6rem;block-size:3.6rem;animation:lab-fall var(--ms) var(--delay,0ms) linear forwards}
+.lab-star{clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);background:linear-gradient(180deg,#f8e7a2,#d4a647)}
+.lab-star.is-four{clip-path:polygon(50% 0%,80% 50%,50% 100%,20% 50%)}
+.lab-star.is-six{clip-path:polygon(50% 0%,80% 20%,100% 50%,80% 80%,50% 100%,20% 80%,0 50%,20% 20%)}
+.lab-turned{transform:rotateZ(var(--rot,90deg)) rotateY(18deg) rotateX(8deg);margin-block-end:.6rem}
+.lab-flip{animation:lab-flipin .35s ease}
+.lab-spark-bit{position:absolute;inline-size:8px;block-size:8px;border-radius:50%;background:#d4a647;box-shadow:0 0 6px #f2d27c;offset-path:none;animation:lab-pop .45s ease-out forwards;top:50%;left:50%;transform:rotate(var(--a)) translateY(calc(-1 * var(--d))) scale(1)}
+.lab-cell.is-burst{position:relative;overflow:visible}
+.lab-built{font-size:1.4rem;direction:rtl}
+@keyframes lab-fly{from{transform:translate3d(-30%,0,0)}to{transform:translate3d(170%,0,40px)}}
+@keyframes lab-fall{from{transform:translate3d(0,-20%,0) rotateX(0)}to{transform:translate3d(0,16rem,20px) rotateX(16deg)}}
+@keyframes lab-pop{to{opacity:0;transform:rotate(var(--a)) translateY(calc(-3 * var(--d))) scale(.2)}}
+@keyframes lab-flipin{from{transform:rotateY(90deg)}to{transform:rotateY(0)}}
+@media (prefers-reduced-motion:reduce){
+  .lab-cell,.lab-time>span,.lab-tile3d{transition:none}
+  .lab-cell.is-wrong{animation:none}
+  .lab-tile3d:hover,.lab-tile3d:focus-visible{transform:none}
+  .lab-bird,.lab-drop,.lab-flip{animation:none}
+  .lab-turned{transform:rotate(var(--rot,90deg))}
+  .lab-spark-bit{display:none}
+}
 `;
 function style(doc) { if (doc && !doc.getElementById('lab-css')) { const s = doc.createElement('style'); s.id = 'lab-css'; s.textContent = CSS; doc.head.append(s); } }
+
+/** Optional mascot feedback. Safe when the companion is not loaded. */
+function reactRimon(action) {
+  try { if (typeof globalThis.showRimon === 'function') globalThis.showRimon(action); } catch { /* companion is optional */ }
+  try {
+    if (typeof globalThis.document?.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+      document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action } }));
+    }
+  } catch { /* companion is optional */ }
+}
 
 const store = (ctx) => ({
   get: () => readState(ctx.store?.get?.(STORE_KEY)),
@@ -109,16 +160,35 @@ function spark(values) {
 }
 
 // ------------------------------------------------------------------ Hub
+function gameCard(g, st) {
+  const gs = st.games[g.id];
+  return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
+    artImg(h, artPath(g.id, 'cover'), 'cover'),
+    h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he')),
+    h('span', { class: 'm' }, `${skillOf(g.skill).name} · ${g.seconds || SESSION_SECONDS}s · ${gs ? `best ${gs.best} · level ${gs.lastMax}` : 'not played yet'}`),
+    h('span', { class: 'm' }, g.blurb),
+    gs ? spark(gs.history.map((x) => x.s)) : null);
+}
+function gamePack(title, lead, list, st) {
+  return [
+    h('h2', {}, title),
+    h('p', { class: 'lab-note' }, lead),
+    h('div', { class: 'lab-games' }, ...list.map((g) => gameCard(g, st))),
+  ];
+}
+
 function hub(root, ctx) {
+
   const st = store(ctx).get(), today = dayKey();
   const plan = dailyWorkout(today, st), prog = workoutProgress(st, today, plan), streak = workoutStreak(st, today);
   const next = plan.find((id) => !prog.done.includes(id));
   const overall = overallScore(st);
   const wrap = h('div', { class: 'lab' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Brain Lab ', heSpan('מַעְבָּדָה', 'he')),
-    h('p', { class: 'lab-sub' }, 'Short, fast drills that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
+    h('p', { class: 'lab-sub' }, 'Short, fast drills that train your Hebrew eyes, ears and memory. The daily workout is three 45-second drills. The 3D Studio games each take 75 seconds and get harder as you get better.'),
     h('section', { class: 'lab-hero', 'aria-labelledby': 'lab-today' },
       h('h2', { id: 'lab-today' }, prog.complete ? 'Today’s workout is done' : 'Today’s Workout'),
+      prog.complete ? artImg(h, WORKOUT_DONE_ART, 'done') : null,
       h('p', {}, prog.complete ? `Well done. Come back tomorrow for a new mix.${streak > 1 ? ` ${streak} days in a row.` : ''}` : `Three drills, about three minutes. ${prog.done.length} of 3 done.${streak > 0 ? ` Streak: ${streak} ${streak === 1 ? 'day' : 'days'}.` : ''}`),
       h('ol', { class: 'lab-plan' }, ...plan.map((id, i) => {
         const g = gameById(id), done = prog.done.includes(id);
@@ -133,15 +203,9 @@ function hub(root, ctx) {
       const v = skillScore(st, s.id);
       return h('div', { class: 'lab-skill', style: `--sk:${SKILL_COLOR[s.id]}` }, h('span', {}, s.name, ' ', heSpan(s.he, 'he lab-val')), h('b', {}, v == null ? '–' : String(v)), h('small', {}, s.blurb));
     })),
-    h('h2', {}, 'All Drills'),
-    h('div', { class: 'lab-games' }, ...GAMES.map((g) => {
-      const gs = st.games[g.id];
-      return h('a', { class: 'lab-game', href: `#/lab/${g.id}`, style: `--sk:${SKILL_COLOR[g.skill]}` },
-        h('span', { class: 't' }, g.title, ' ', heSpan(g.titleHe, 'he')),
-        h('span', { class: 'm' }, `${skillOf(g.skill).name} · ${gs ? `best ${gs.best} · level ${gs.lastMax}` : 'not played yet'}`),
-        h('span', { class: 'm' }, g.blurb),
-        gs ? spark(gs.history.map((x) => x.s)) : null);
-    })));
+    ...gamePack('Quick Drills', 'The original 45-second trainers. Today’s workout is drawn from this set.', CLASSIC_GAMES, st),
+    ...gamePack('3D Studio', 'Ten Lumosity-style games with a modern 3D look, each 75 seconds.', STUDIO_GAMES, st),
+    ...(CLAUDE_GAMES.length ? gamePack('More Studio Games', 'Additional Brain Lab games from the overnight design lane.', CLAUDE_GAMES, st) : []));
   root.replaceChildren(wrap);
   return () => {};
 }
@@ -154,7 +218,13 @@ function drill(root, ctx, id) {
   let alive = true; const timers = new Set(); let keyHandler = null;
   const later = (fn, ms) => { const t = setTimeout(() => { timers.delete(t); if (alive) fn(); }, ms); timers.add(t); return t; };
   const clearAll = () => { for (const t of timers) clearTimeout(t); timers.clear(); keyHandler = null; };
-  const onKey = (e) => { if (keyHandler && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { e.preventDefault(); keyHandler(e.key); } };
+  const onKey = (e) => {
+    if (!keyHandler) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target?.closest?.('input, textarea, select, [contenteditable="true"]')) return;
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', ' ', 'Enter'].includes(e.key) || /^[1-9]$/.test(e.key)) e.preventDefault();
+    keyHandler(e.key);
+  };
   document.addEventListener('keydown', onKey);
   const wrap = h('div', { class: 'lab' });
   root.replaceChildren(wrap);
@@ -170,9 +240,10 @@ function drill(root, ctx, id) {
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
+        artImg(h, artPath(id, 'cover'), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout drill ${pos + 1} of 3` : ''),
         h('p', { class: 'how' }, game.blurb),
-        h('p', { class: 'lab-note' }, `${globalThis.document?.documentElement?.hasAttribute?.('data-calm') ? 'Ten rounds, no clock (calm mode is on).' : `${SESSION_SECONDS} seconds.`} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
+        h('p', { class: 'lab-note' }, `${globalThis.document?.documentElement?.hasAttribute?.('data-calm') ? 'Ten rounds, no clock (calm mode is on).' : `${sessionSeconds(id)} seconds.`} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
         h('div', { class: 'lab-actions' }, start)));
     start.focus();
   };
@@ -200,7 +271,7 @@ function drill(root, ctx, id) {
     const board = h('div', { class: 'lab-board' });
     const feedback = h('p', { class: 'lab-feedback', 'aria-live': 'polite' });
     wrap.replaceChildren(back, h('div', { class: 'lab-play' },
-      h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(SESSION_SECONDS) }, timeBar), lvlEl, h('span', {}, 'Score ', scoreEl)),
+      h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(sessionSeconds(id)) }, timeBar), lvlEl, h('span', {}, 'Score ', scoreEl)),
       prompt, trialBar, board, feedback));
     const rnd = seeded(`${id}:${Date.now()}`);
     const audioOn = !isAudioFree(ctx);
@@ -230,7 +301,7 @@ function drill(root, ctx, id) {
       playClip: (kind, cid, text) => (audioOn ? playRecordedClip(ctx, kind, cid, { text }) : Promise.resolve(false)),
       sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playRecordedClip(ctx, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
     };
-    const t0 = Date.now(), total = SESSION_SECONDS * 1000;
+    const t0 = Date.now(), total = sessionSeconds(id) * 1000;
     const clock = setInterval(() => {
       if (calm) { timeBar.style.transform = `scaleX(${1 - trials.length / CALM_ROUNDS})`; return; }
       const left = Math.max(0, total - (Date.now() - t0));
@@ -253,6 +324,7 @@ function drill(root, ctx, id) {
       trials.push({ ok: r.ok, ms: r.ms, level, pts });
       const before = ladder.level; ladder = step(ladder, r.ok);
       try { sfx.play(r.ok ? (ladder.level > before ? 'streak' : 'success') : 'error_soft'); } catch { /* sound is optional */ }
+      reactRimon(r.ok ? (ladder.level > before ? 'streak' : 'correct') : 'wrong');
       if (r.ok) feedback.textContent = ladder.level > before ? `Level ${ladder.level}!` : `+${pts}`;
       if (calm && trials.length >= CALM_ROUNDS) { over = true; finish(); return; }
       later(next, r.ok ? 380 : 1100);
@@ -278,6 +350,7 @@ function drill(root, ctx, id) {
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
+      artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win'),
       h('p', { class: 'score' }, String(sum.score)),
       h('p', {}, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this drill.') : `Best: ${prevGame?.best ?? sum.score}`),
       h('div', { class: 'lab-stats' },

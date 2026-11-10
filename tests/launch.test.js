@@ -68,7 +68,12 @@ test('launch: Privacy and Terms are linked from the footer, Settings and first-r
 
 test('launch: 404.html is a self-contained not-found page that can map a path to a hash route', () => {
   assert.ok(existsSync(join(root, '404.html')), '404.html missing');
-  const off404 = read('404.html');
+  const page404 = read('404.html');
+  // the mapping lives in 404.js next to it: the site's CSP (script-src 'self', _headers) blocks inline scripts, and
+  // tools/deploy/check-deploy.mjs fails a build that has one
+  assert.match(page404, /<script src="404\.js"><\/script>/);
+  assert.doesNotMatch(page404, /<script(?![^>]*\bsrc=)[^>]*>/, 'no inline script in 404.html');
+  const off404 = page404 + read('404.js');
   assert.ok(!/(?:href|src)="https?:/.test(off404), '404.html must not request an external URL (it may be served from a nested path)');
   assert.match(off404, /Page not found/);
   assert.match(off404, /Open ALEF/);

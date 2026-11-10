@@ -43,7 +43,36 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
   } finally { await browser.close(); server.close(); }
 }
 
+/** The Camera Translator with the Hebrew to English pack on the device: a sign outside the sign list is translated as a whole line. */
+export async function runCameraWithPack({ images, timeout = 240000 }) {
+  const { server, browser, page, base, errors, reqs, posts } = await openApp();
+  try {
+    await page.goto(`${base}/#/talk`, { waitUntil: 'load' });
+    await page.waitForFunction(() => /MB to download/.test(document.querySelector('.talk-pack')?.textContent || ''));
+    await page.click('.talk-pack [data-pack="he-en"]');
+    await page.waitForFunction(() => /is ready\. It works offline/.test(document.querySelector('.talk-pack')?.textContent || ''), null, { timeout });
+    await page.evaluate(() => { location.hash = '#/camera'; });
+    await page.waitForSelector('.camera-tr[data-pack="ready"]', { timeout: 60000 });
+    const packNote = await page.textContent('.camera-pack');
+    const out = [];
+    for (const image of images) {
+      await page.evaluate(() => { const o = document.querySelector('.camera-out'); if (o) o.dataset.done = ''; });
+      await page.setInputFiles('.camera-tr input[type=file]:not([capture])', image);
+      await page.waitForSelector('.camera-out[data-done="1"]', { timeout: 120000 });
+      const lines = await page.evaluate(() => [...document.querySelectorAll('.camera-region-btn')].map((b) => b.textContent));
+      let detail = null;
+      if (lines.length) { await page.click('.camera-region-btn'); await page.waitForFunction(() => /English:|Sacred|No English/.test(document.querySelector('.camera-detail')?.textContent || '')); detail = await page.textContent('.camera-detail'); }
+      out.push({ image: image.split('/').pop(), lines, detail });
+    }
+    const origins = [...new Set(reqs.map((u) => new URL(u).origin))];
+    return { packNote, out, errors: errors.filter((e) => !/Estimating resolution/.test(e)), posts, externalOrigins: origins.filter((o) => o !== base && !o.startsWith('blob:') && o !== 'null') };
+  } finally { await browser.close(); server.close(); }
+}
+
 if (process.argv[1] && process.argv[1].endsWith('e2e-talk.mjs')) {
-  const r = await runTalk({ direction: process.argv[2] || 'he-en' });
-  console.log(JSON.stringify({ ...r, progress: `${r.progress.length} updates, last ${r.progress[r.progress.length - 1]}` }, null, 1));
+  if (process.argv[2] === 'camera') console.log(JSON.stringify(await runCameraWithPack({ images: process.argv.slice(3) }), null, 1));
+  else {
+    const r = await runTalk({ direction: process.argv[2] || 'he-en' });
+    console.log(JSON.stringify({ ...r, progress: `${r.progress.length} updates, last ${r.progress[r.progress.length - 1]}` }, null, 1));
+  }
 }

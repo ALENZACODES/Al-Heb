@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book62-p01.mp3"
    },
    "illustration": "a man with two suitcases at the airport exit, overwhelmed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book62-p02.mp3"
    },
    "illustration": "Hebrew signs swirling around him",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book62-p03.mp3"
    },
    "illustration": "the man saying shalom to a cat, a bus, a fridge",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book62-p04.mp3"
    },
    "illustration": "pointing at a loaf, holding up fingers",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book62-p05.mp3"
    },
    "illustration": "a bus heading into the desert, his face at the window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book62-p06.mp3"
    },
    "illustration": "flashcards on a bus, on a beach, in bed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book62-p07.mp3"
    },
    "illustration": "a crowd laughing kindly at something he said",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book62-p08.mp3"
    },
    "illustration": "a vendor gently repeating a word",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book62-p09.mp3"
    },
    "illustration": "the man at a stall, confident",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book62-p10.mp3"
    },
    "illustration": "bargaining, both grinning",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book62-p11.mp3"
    },
    "illustration": "the vendor slapping his shoulder",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book62-p12.mp3"
    },
    "illustration": "the man walking home with a full bag, the city in gold light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

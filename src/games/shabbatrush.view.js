@@ -32,7 +32,7 @@ export function mount(root,ctx) {
   let alive=true,deadline=null,clock=0,deck=[],R=null,cue=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading sunset and word clips…');
   const board=h('div',{class:'game-board'}),timer=h('p',{class:'game-rush-timer',role:'timer'});
-  const article=h('article',{class:'card game-card game-shabbatrush'},h('h1',{id:'view-title'},'Endless Runner: Shabbat Rush'),
+  const article=h('article',{class:'card game-card game-shabbatrush'},h('h1',{id:'view-title'},'Shabbat Rush'),
     h('p',{},'Hear a Hebrew category before collecting matching objects on the way to sunset.'),timer,status,board);
   root.replaceChildren(article);
   function stopClock(){if(clock){clearInterval(clock);clock=0;}}

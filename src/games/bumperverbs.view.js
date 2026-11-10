@@ -15,7 +15,7 @@ export function mount(root,ctx){
   let alive=true,deck=[],R=null,round=0,session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{role:'status',class:'game-status','aria-live':'polite'},'Loading attested agreement forms…');
   const board=h('div',{class:'game-board'});
-  const article=h('article',{class:'card game-card game-bumperverbs'},h('h1',{id:'view-title'},'Bumper Car Verb Conjugations'),
+  const article=h('article',{class:'card game-card game-bumperverbs'},h('h1',{id:'view-title'},'Verb Bumper Cars'),
     h('p',{},'Drive toward the verb phrase whose agreement matches the active character.'),
     h('p',{class:'muted'},'Forms are source records awaiting native-speaker review.'),status,board);
   root.replaceChildren(article);

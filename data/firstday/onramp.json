@@ -9,7 +9,7 @@
   "steps": [
     {
       "id": "shin", "kind": "letter", "minutes": 2, "letter": "shin",
-      "title": "Your First Letter: Shin",
+      "title": "Your first letter: Shin",
       "action": "Tap Hear it. Then tap Trace it and draw it once with your finger.",
       "win": "Win 1 of 5: you practised Shin.",
       "why": "mnemonic",
@@ -56,7 +56,7 @@
   "done": {
     "title": "Five wins. You read your first Hebrew word.",
     "body": "שָׁב (shav) means \"returned\". You just read a real Hebrew word, with its vowel marks. The next lesson adds one more letter and the dot inside Bet, so you can read שַׁבָּת (Shabbat).",
-    "tomorrow": "Come back tomorrow for your next letter. A few minutes a day is all it takes.",
+    "tomorrow": "Come back tomorrow for your next letter.",
     "preview": "Optional preview: read שָׁלוֹם today (about 10 minutes). Lesson 3 teaches these letters properly; this is a head start, not a shortcut."
   }
 }

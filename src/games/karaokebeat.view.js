@@ -22,7 +22,7 @@ export function mount(root, ctx) {
   const status = h('p', { class:'game-status', role:'status', 'aria-live':'polite' }, 'Loading sourced speaking phrases…');
   const board = h('div', { class:'game-board' });
   const article = h('article', { class:'card game-card game-karaokebeat' },
-    h('h1', { id:'view-title' }, 'The Karaoke Beat Matcher'),
+    h('h1', { id:'view-title' }, 'Karaoke Beat'),
     h('p', {}, 'Manual rhythm training: tap each Hebrew word in reading order while speaking aloud.'),
     h('p', { class:'muted' }, 'No syllable-timestamped recordings are supplied. This is self-paced word rhythm, not audio-synchronised karaoke. Sacred prayers and cantorial clips are excluded.'), status, board);
   root.replaceChildren(article);

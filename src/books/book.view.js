@@ -103,7 +103,7 @@ export async function mount(root, ctx) {
       },
     }, "Slower");
     stage.append(h("div", { class: "book-listen-row" },
-      listen("f", "▶ Listen — Noa"), listen("m", "▶ Listen — Ari"), slower, audioState));
+      listen("f", "▶ Listen (Noa)"), listen("m", "▶ Listen (Ari)"), slower, audioState));
 
     const prev = h("button", { type: "button", class: "btn", onclick: () => { if (page > 0) { page--; render(); } } }, "← Previous");
     const next = h("button", { type: "button", class: "btn primary", onclick: () => { if (page < book.pages.length - 1) { page++; render(); } } },

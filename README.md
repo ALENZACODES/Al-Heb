@@ -1,10 +1,10 @@
-# ALEF
+# Aleph
 
 [![CI on main: test, browser, build-dist](https://github.com/ALENZACODES/Al-Heb/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ALENZACODES/Al-Heb/actions/workflows/ci.yml?query=branch%3Amain)
 
 An interactive Hebrew course (web app plus a companion book) with two goals: read Torah and prayers aloud with a
 congregation, and get around in Israel without sounding like an outsider. It is a zero-dependency static PWA: plain ES
-modules, no build step, served by any static file server. The course is called ALEF. This private repository is Al-Heb.
+modules, no build step, served by any static file server. The course is called Aleph. This private repository is Al-Heb.
 
 ## Inspiration
 
@@ -16,7 +16,7 @@ Four screens of the running app, from [`assets/screens/`](assets/screens/) (1280
 
 | Home | Letters |
 |---|---|
-| ![Wide home. ALEF, tagline Read Hebrew aloud. Speak it in Israel. Today's lesson is the first 10 minutes. A banner says no recordings exist yet.](assets/screens/wide-home.png) | ![Wide letters. A quiz titled find the letter, with Hebrew tiles and Latin names.](assets/screens/wide-letters.png) |
+| ![Wide home. Aleph, tagline Read Hebrew aloud. Speak it in Israel. Today's lesson is the first 10 minutes. A banner says no recordings exist yet.](assets/screens/wide-home.png) | ![Wide letters. A quiz titled find the letter, with Hebrew tiles and Latin names.](assets/screens/wide-letters.png) |
 | Review | Torah reading |
 | ![Wide review. Card 1 of 6, Shin and Bet, asks to name the letter bet and say its sound.](assets/screens/wide-lesson.png) | ![Wide Torah reading. A draft banner says the page is not reviewed. A ladder for reading the Priestly Blessing without vowels.](assets/screens/wide-torah-line.png) |
 
@@ -24,7 +24,7 @@ A 1280×640 crop of the wide home screen sits at [`.github/social-preview.png`](
 
 ## Status
 
-Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 35,134 short clips with a synthetic voice that no native speaker has reviewed (20,595 counted by `cat data/audio/summary.json`, plus 14,539 the summary does not yet count — 11,692 Torah-reading lines, 1,488 book-page clips, 408 word-builder clips, 374 English Torah clips, 370 arcade-game lines, 160 home-screen clips, 30 interface sounds, 14 listen clips and 3 music clips; counts as of 2026-11-08, counted from the `main` tree at ed69a1b3a7), and many tests have not been run on real devices. A directory full of drafts is not a finished course. The review build is deployed at https://alef-review.onrender.com/ (Render, auto-deploys from `main`), no learner has used it, and no native speaker, teacher or clergy member has reviewed any
+Early draft. The code runs and has unit tests; the lessons, vocabulary and other Hebrew content are drafts built by programs, the audio has no recorded teacher: 35,134 short clips with a synthetic voice that no native speaker has reviewed (20,595 counted by `cat data/audio/summary.json`, plus 14,539 the summary does not yet count :  11,692 Torah-reading lines, 1,488 book-page clips, 408 word-builder clips, 374 English Torah clips, 370 arcade-game lines, 160 home-screen clips, 30 interface sounds, 14 listen clips and 3 music clips; counts as of 2026-11-08, counted from the `main` tree at ed69a1b3a7), and many tests have not been run on real devices. A directory full of drafts is not a finished course. The review build is deployed at https://alef-review.onrender.com/ (Render, auto-deploys from `main`), no learner has used it, and no native speaker, teacher or clergy member has reviewed any
 Hebrew. Measured counts and known gaps are in [docs/STATUS.md](docs/STATUS.md).
 
 What has been checked, and how: scripted walks in headless Chromium (plus Firefox and WebKit emulation for one cross-engine
@@ -53,7 +53,7 @@ node tools/serve.mjs 8080     # static server, default port 8080; also `npm run 
 ```
 
 Then open http://localhost:8080/. (Checked on 2026-11-04: started on another port, `GET /` returned 200 `text/html` with
-title "ALEF", then the server was stopped.)
+title "Aleph", then the server was stopped.)
 
 ## Tests
 
@@ -89,7 +89,7 @@ Folder-by-folder guide to the docs: [docs/INDEX.md](docs/INDEX.md).
 
 Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Build contract: [docs/CONTRACT.md](docs/CONTRACT.md).
 Tooling notes: [docs/TOOLING.md](docs/TOOLING.md). Handoff: [docs/HANDOFF.md](docs/HANDOFF.md).
-Hosting: Render serves the review site from `main` — see [docs/DEPLOY.md](docs/DEPLOY.md). The Cloudflare Pages notes in [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md) are an archived alternative, not the live host.
+Hosting: Render serves the review site from `main`. See [docs/DEPLOY.md](docs/DEPLOY.md). The Cloudflare Pages notes in [docs/deploy/CLOUDFLARE-PAGES.md](docs/deploy/CLOUDFLARE-PAGES.md) are an archived alternative, not the live host.
 
 ## Decisions needed
 

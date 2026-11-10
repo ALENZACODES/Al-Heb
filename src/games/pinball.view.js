@@ -69,7 +69,7 @@ export function mount(root, ctx) {
   for (const side of ['Left flipper', 'Right flipper']) controls.append(h('button', { type: 'button', class: 'btn', onclick: flip }, side));
   controls.append(pauseBtn);
   root.replaceChildren(h('article', { class: 'card game-card' },
-    h('h1', { id: 'view-title', tabindex: '-1' }, 'The Hebrew Pinball Bouncer'),
+    h('h1', { id: 'view-title', tabindex: '-1' }, 'Hebrew Pinball'),
     h('p', {}, 'Find the named Hebrew letter. Tap its bumper to aim, then press a flipper. Only matching shots score. Keyboard: arrows aim; Space launches.'), status, speechNote, board));
   function newRound() {
     expected = shuffled(deck)[0];

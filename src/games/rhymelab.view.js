@@ -26,7 +26,7 @@ export function mount(root,ctx) {
   let session=createSession({store:ctx?.store,storeKey:STORE_KEY,par:6});
   const status=h('p',{class:'game-status',role:'status','aria-live':'polite'},'Loading real rhyme recordings…');
   const board=h('div',{class:'game-board'});
-  const article=h('article',{class:'card game-card game-rhymelab'},h('h1',{id:'view-title'},'Hebrew Rhyme Laboratory'),
+  const article=h('article',{class:'card game-card game-rhymelab'},h('h1',{id:'view-title'},'Rhyme Lab'),
     h('p',{},'Hear a recorded word and find the real transliteration-ending match.'),status,board);
   root.replaceChildren(article);
   // The music-lab backdrop made for this game (approved art, decorative only —

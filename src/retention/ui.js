@@ -1,11 +1,11 @@
 // @ts-check
 // Retention UI pieces that live inside other screens: the top-bar chips (streak flame, gems, hearts), the daily-goal
 // ring on Home, the end-of-lesson reward panel, and the out-of-hearts gate. Text always sits beside every drawing.
-import { h, countUp, confetti, reducedMotion } from './dom.js';
+import { h, countUp, confetti } from './dom.js';
 import { goalProgress, GOALS, setGoal } from './xp.js';
-import { CURRENCY, gemsText, PRICES } from './gems.js';
-import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems, heartCount } from './hearts.js';
-import { streakLine, repairOffer, STREAK } from './streak.js';
+import { gemsText, PRICES } from './gems.js';
+import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems } from './hearts.js';
+import { streakLine, STREAK } from './streak.js';
 import { shouldAsk, answerAsk, reminderICS } from './notify.js';
 import { showRimon } from './rimon.js';
 import { recapLine } from './recap.js';
@@ -194,6 +194,26 @@ export function routeShown(R, g = globalThis, gate = false) {
 }
 
 // ---------- end-of-lesson reward ----------
+const NEW = {
+  quests: ['Daily quests are open.', 'Three small goals wait on Home each day, with a few gems for each.', '#/', 'See today\u2019s quests'],
+  hearts: ['Hearts are on.', 'You have 5. A wrong first answer in a lesson costs one, and practising old words wins it back. You can switch hearts off in the shop.', '#/shop', 'Open the shop'],
+  league: ['The practice league is open.', 'See how your week compares. The other players are pretend, and the page says so.', '#/league', 'See the league'],
+};
+/** One short introduction the first time a part of the system opens, so nothing new appears unexplained. */
+function whatsNew(list) {
+  if (!list || !list.length) return null;
+  return h('section', { class: 'card ret-new', 'aria-labelledby': 'ret-new-h' }, h('h3', { id: 'ret-new-h' }, 'New for You'),
+    ...list.filter((k) => NEW[k]).map((k) => h('p', {}, h('strong', {}, NEW[k][0]), ' ', NEW[k][1], ' ', h('a', { href: NEW[k][2] }, NEW[k][3]))));
+}
+/** A milestone is worth telling someone: the phone's own share sheet, or the clipboard where there is none. Only ever from a tap. */
+function shareButton(count, g = globalThis) {
+  const status = h('span', { role: 'status', class: 'ret-share-status' });
+  const text = `I am on a ${count}-day Hebrew streak with ALEF.`, url = (() => { try { return g.location.origin + g.location.pathname; } catch { return ''; } })();
+  return h('p', { class: 'ret-share' }, h('button', { type: 'button', class: 'btn secondary', onclick: async () => {
+    try { if (g.navigator?.share) { await g.navigator.share({ text, url }); status.textContent = ''; return; } await g.navigator.clipboard.writeText(`${text} ${url}`.trim()); status.textContent = ' Copied. Paste it anywhere.'; }
+    catch (e) { status.textContent = e && e.name === 'AbortError' ? '' : ' Sharing is not available in this browser.'; }
+  } }, 'Share your streak'), status);
+}
 function optInCard(R) {
   if (onIphoneTab()) {
     const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' }, h('h3', { id: 'ret-optin-h' }, 'Want a nudge from Rimon?'),
@@ -238,6 +258,7 @@ export function showReward(R, out, g = globalThis) {
     for (const q of out.quests || []) lines.push(`Quest done: ${q}`);
     if (out.chest) lines.push('All three quests done!');
     if (out.gems) lines.push(`+${gemsText(out.gems)}`);
+    if (out.league) lines.push(`Practice league: number ${out.league.rank} of 30 in ${out.league.tier}.${out.league.toPromote ? ` ${out.league.toPromote} XP to the move-up line.` : ' You are above the move-up line.'}`);
     const sentence = `Lesson finished. ${out.xp} XP.${out.goalCrossed ? ' Daily goal reached.' : ''}${out.streak.grew ? ` ${out.streak.count}-day streak.` : ''}${out.gems ? ` ${gemsText(out.gems)} earned.` : ''}`;
     const panel = h('section', { class: 'ret-reward alef-retention', 'aria-label': 'Your reward' },
       out.goalCrossed || out.streak.milestone ? confetti() : null,
@@ -254,6 +275,8 @@ export function showReward(R, out, g = globalThis) {
       (card.querySelector('.alef-summary-actions') || card).before(heartsBlock(R));
       g.setTimeout(() => showRimon('hearts_empty'), 2400);
     }
+    if (out.streak.milestone) panel.append(shareButton(out.streak.count, g));
+    const fresh = whatsNew(out.unlocked); if (fresh) card.append(fresh);
     if (shouldAsk(R.get(), { calm: R.calm() })) { card.append(optInCard(R)); }
     // Rimon: the lesson cheer already fired; follow with the goal or the streak, spaced so they queue.
     if (out.goalCrossed) g.setTimeout(() => showRimon('daily_goal'), 1200);
@@ -279,4 +302,3 @@ export function showQuickDone(R, out, g = globalThis) {
   try { g.scrollTo?.(0, 0); card.querySelector('h2')?.focus({ preventScroll: true }); } catch { /* optional */ }
   g.setTimeout(() => showRimon(out.goalCrossed ? 'daily_goal' : out.streak.grew ? (out.streak.milestone ? 'streak_milestone' : 'streak_extended') : 'xp_payout'), 600);
 }
-export { reducedMotion, heartCount, repairOffer, CURRENCY };

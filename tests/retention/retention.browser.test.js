@@ -121,7 +121,7 @@ test('zero hearts gates a new lesson but not review; reduced motion runs no anim
     await a.go('#/learn?lesson=r02', '.ret-hearts-out');
     assert.match(await a.page.$eval('.ret-hearts-out', (n) => n.textContent), /Practise to earn a heart/);
     await a.go('#/learn?review=1', 'body[data-ready="1"]'); await a.page.waitForTimeout(800);
-    assert.equal(await a.page.$('.ret-hearts-out'), null, 'review is always open');
+    assert.equal(!!(await a.page.$('.ret-hearts-out')), false, 'review is always open');
     await a.go('#/', '.ret-goal');
     assert.equal(await a.page.evaluate(() => [...document.querySelectorAll('.alef-retention, .alef-retention *')].reduce((n, el) => n + el.getAnimations().length, 0)), 0);
     assert.deepEqual(a.errors, []); await a.close();
@@ -153,8 +153,8 @@ test('a real 3-minute lesson: clicking through the short parts reaches the stopp
       const r = await stored(a.page, 'alef:retention.v1'), s = await stored(a.page, 'alef:streak');
       assert.deepEqual([r.xp.total, r.lessonsFinished, s.count], [10, 0, 1]);
       await a.page.click('.ret-quick-done button');
-      assert.equal(await a.page.$('.ret-quick-done'), null); assert.ok(await a.page.$('.alef-chunked #alef-part-title'), 'the lesson carries on');
-    } else assert.ok(await a.page.$('.alef-summary'), 'a short lesson ends with its own end card');
+      assert.equal(!!(await a.page.$('.ret-quick-done')), false); assert.ok(!!(await a.page.$('.alef-chunked #alef-part-title')), 'the lesson carries on');
+    } else assert.ok(!!(await a.page.$('.alef-summary')), 'a short lesson ends with its own end card');
     assert.deepEqual(a.errors, []);
     await a.close();
   });
@@ -198,7 +198,7 @@ test('Home after a week away shows the welcome card; on Monday it shows last wee
     assert.match(await a.page.$eval('.ret-comeback', (n) => n.textContent), /Welcome Back.*Warm up with old words/s);
     assert.equal((await stored(a.page, 'alef:retention.v1')).hearts.n, 5, 'hearts are filled on return');
     if (!shabbat) { assert.match(await a.page.$eval('.ret-recap', (n) => n.textContent), /Your Last Week/); assert.equal(await a.page.$$eval('.ret-bars li', (n) => n.length), 7);
-      await a.page.evaluate(() => document.querySelector('.ret-recap button').click()); assert.equal(await a.page.$('.ret-recap'), null); }
+      await a.page.evaluate(() => document.querySelector('.ret-recap button').click()); assert.equal(!!(await a.page.$('.ret-recap')), false); }
     assert.ok(await noSideScroll(a.page)); assert.deepEqual(a.errors, []);
     await a.close();
   });

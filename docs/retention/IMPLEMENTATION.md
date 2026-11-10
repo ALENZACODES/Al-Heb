@@ -148,6 +148,14 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - **Settings** now links to "Streak, hearts and reminders" (`#/shop`).
 - Review round 3 is recorded in `REVIEW-ROUND-3.md`.
 
+## Added in the Sixth Pass
+
+- **New parts introduce themselves.** The lesson end card shows a short "New for You" note the first time something opens: daily quests after the 2nd lesson, hearts after the 3rd, the practice league after the 5th. Code: `unlockedBy` in `xp.js`.
+- **League line on the end card**: "Practice league: number 12 of 30 in Sprout. 9 XP to the move-up line."
+- **Share a milestone.** At a streak milestone the end card has a "Share your streak" button: the phone's own share sheet, or the clipboard where there is none. Only ever from a tap.
+- **A lesson pays at most twice a day**, and the same end card can no longer pay in two tabs. Re-doing one lesson over and over is practice, not a way to mint XP. Numbers: `LESSON_PAYS_PER_DAY` and `SAME_FINISH_MS` in `xp.js`.
+- Review round 4 is recorded in `REVIEW-ROUND-4.md`.
+
 ## Hebrew
 
 The ten tier names are unreviewed. See `HEBREW-REVIEW.md`.

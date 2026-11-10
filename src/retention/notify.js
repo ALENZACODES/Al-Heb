@@ -123,7 +123,7 @@ export function plan(rec, streak = { count: 0, activeToday: false }, now = Date.
       if (tier === 'S09') m = pickMessage({ tier: 'S09' });
       else if (tier) {
         const afterRest = weekdayOf(dayKey(c)) === 0 && !N.sent.some((s) => c - s.at < 2 * 86400000 && s.id === 'S01');
-        if (rec.freezes.unseen && n >= 2) m = pickMessage({ tier: 'S03', n });
+        if (rec.freezes.unseen && !rec.freezes.shownAt && n >= 2) m = pickMessage({ tier: 'S03', n }); // not when the learner already saw the note in the app
         else if (afterChag(c) && d >= 1 && !N.sent.some((s) => c - s.at < 2 * 86400000 && s.id === 'S02')) m = pickMessage({ tier: 'S02' });
         else if (afterRest && d >= 1) m = pickMessage({ tier: 'S01' });
         else if (opt.leagueDone && weekdayOf(dayKey(c)) === 5) { m = pickMessage({ tier: 'S06' }); route = '#/league'; }

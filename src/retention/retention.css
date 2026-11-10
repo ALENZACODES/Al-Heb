@@ -97,6 +97,12 @@
 .ret-bar-num { order: 1; font-variant-numeric: tabular-nums; }
 .ret-bar-day { order: 3; color: var(--muted); }
 
+.ret-new { margin-block: .8rem; text-align: start; border-inline-start: 4px solid #c9a227; }
+.ret-new h3 { margin: 0 0 .3rem; }
+.ret-new p { margin: .3rem 0; }
+.ret-share { margin: .6rem 0 0; }
+.ret-reward .ret-share .btn.secondary { color: #f7ecc9; border-color: #c9a227; }
+
 @media (prefers-reduced-motion: reduce) {
   .alef-retention, .alef-retention * { animation: none !important; transition: none !important; }
   .ret-confetti { display: none; }

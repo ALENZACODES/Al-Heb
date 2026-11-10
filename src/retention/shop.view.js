@@ -46,7 +46,7 @@ export function mount(root, ctx) {
       offer ? item('Repair Your Streak', `Bring back your ${offer.prev}-day streak. The offer ends in about ${offer.hoursLeft} hour${offer.hoursLeft === 1 ? '' : 's'}.`, gemsText(offer.price),
         h('button', { type: 'button', class: 'btn', 'data-buy': 'repair', disabled: bal < offer.price, onclick: () => ask(`Spend ${gemsText(offer.price)} to repair your streak?`, 'Yes, repair it', () => {
           const out = repairStreak(R.streakRaw(), R.get()); if (!out.ok) { status.textContent = out.reason === 'balance' ? `You need ${gemsText(offer.price)}.` : 'The repair offer has ended.'; return; }
-          R.setStreak(out.streak); R.update(() => out.rec); status.textContent = 'Streak repaired. Welcome back to it!'; showRimon('streak_repaired');
+          R.setStreak(out.streak); R.update(() => out.rec); status.textContent = 'Streak repaired. One lesson today keeps it going.'; showRimon('streak_repaired');
         }) }, bal < offer.price ? `Needs ${gemsText(offer.price)}` : 'Repair my streak')) : null,
       item('Streak Freeze', `Covers one missed day automatically. You hold ${rec.freezes.held} of ${STREAK.freezeMax}. Shabbat and holidays never need one.`, gemsText(PRICES.freeze), freezeBtn),
       heartsOn ? item('Refill Hearts', rec.hearts.n >= HEARTS.max ? 'Your hearts are full.' : `You have ${rec.hearts.n} of ${HEARTS.max} hearts. Practising old words also earns them back.${nextHeartInMs(rec) ? ' One returns by itself every 4 hours.' : ''}`, gemsText(PRICES.hearts),

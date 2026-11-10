@@ -6,8 +6,8 @@ import { projectStreak, normalizeRecord } from '../curriculum/streak.js';
 import { calmOn, streakVisible } from '../shell/comfort.js';
 import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
-import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen } from './streak.js';
-import { award, lessonPayout, todayXp, XP } from './xp.js';
+import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen, freezeNoteShown as markFreezeNote } from './streak.js';
+import { award, lessonPayout, todayXp, XP, lessonAward, unlockedBy } from './xp.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount } from './hearts.js';
 import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
@@ -25,7 +25,7 @@ export function retention(ctx, g = globalThis) {
   const store = ctx.store, doc = g.document;
   const combo = { run: 0, max: 0 };
   const QUICK_PARTS = 4; // parts of a lesson (about three minutes) that make one quick session
-  const quick = { hash: null, parts: 0 }; let lastFinish = { hash: '', at: 0 }, freezeNoteShown = false;
+  const quick = { hash: null, parts: 0 }; let freezeNoteShown = false;
   let lessonHash = null, lastTouch = 0, quietOpt = { loc: null, mode: 'reform' }, scheduler = null, muteStreakSub = false, lastCount = 0, seq = 0;
   const now = () => Date.now();
   const get = () => refillByTime(load(store, now()), now());
@@ -62,12 +62,19 @@ export function retention(ctx, g = globalThis) {
 
   /** A lesson's end card appeared. Returns what to show, or null when this finish was already paid. */
   function lessonFinished(detail = {}) {
-    const t = now(), rec = load(store, t), before = streakRaw(), here = g.location?.hash || '';
-    if (!detail.quick && lastFinish.hash === here && t - lastFinish.at < 30000) return null; // the same end card drawn again
-    if (!detail.quick) lastFinish = { hash: here, at: t };
-    const awardId = detail.quick ? `quick|${detail.lessonId}|${dayKey(t)}` : `lesson|${here}|${detail.ms ?? ''}|${dayKey(t)}`;
+    const t = now(), before = streakRaw(), here = g.location?.hash || '';
+    let rec = load(store, t), awardId = `quick|${detail.lessonId}|${dayKey(t)}`;
+    const isRound = /^Round\b/.test(String(detail.title || ''));
+    if (isRound) awardId = `round|${here}|${detail.ms ?? ''}|${dayKey(t)}`; // each round of a longer lesson pays once
+    else if (!detail.quick) { // the same end card again (here or in another tab), or a third run of one lesson today: nothing to pay
+      const a = lessonAward(rec, here.replace(/[?&]quick=1/, ''), t);
+      if (a.rec !== rec) save(store, () => a.rec, t);
+      if (!a.id) return null;
+      rec = a.rec; awardId = a.id;
+    }
+    const lessonsBefore = rec.lessonsFinished;
     const todayBefore = todayXp(rec, t);
-    const partial = !!detail.quick || /^Round\b/.test(String(detail.title || '')), bestRun = combo.max; // one round of a longer lesson pays XP but is not a finished lesson
+    const partial = !!detail.quick || isRound, bestRun = combo.max; // one round of a longer lesson pays XP but is not a finished lesson
     const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t, partial });
     if (pay.duplicate) return null;
     const after = completeLessonDay(before, t);
@@ -77,7 +84,9 @@ export function retention(ctx, g = globalThis) {
     lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; if (!detail.quick) lessonHash = null;
     scheduler?.arm();
     const q = questStep({ xp: pay.xp, lesson: partial ? 0 : 1, sharp: !partial && Number(detail.accuracy) >= 0.9 ? 1 : 0, combo: bestRun });
-    return { quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
+    const lg = leagueOn(saved, { calm: calm() }) && saved.league.joined ? leagueView(load(store, t), t) : null;
+    return { unlocked: unlockedBy(saved, lessonsBefore, saved.lessonsFinished), league: lg && !lg.closed ? { rank: lg.you.rank, tier: lg.tier.en, toPromote: lg.toPromote } : null,
+      quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
   }
   /** The 3-minute lesson (?quick=1): after four parts in one sitting the day counts and XP is paid; the lesson's place is already saved. */
@@ -174,7 +183,7 @@ export function retention(ctx, g = globalThis) {
     return p;
   }
 
-  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDots(streakRaw(), get(), now()), freezeNoteShown: () => { freezeNoteShown = true; }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
+  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDots(streakRaw(), get(), now()), freezeNoteShown: () => { if (!freezeNoteShown) { freezeNoteShown = true; save(store, (r) => markFreezeNote(r, now()), now()); } }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,

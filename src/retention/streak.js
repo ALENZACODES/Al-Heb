@@ -43,6 +43,7 @@ const lastSessionEnd = (ret) => (ret.sessions.length ? ret.sessions[ret.sessions
  */
 export function applyRollover(streakRaw, ret, now = Date.now(), opt = {}) {
   const events = []; let r = clone(ret);
+  if (r.freezes.unseen && r.freezes.shownAt) { r.freezes.unseen = false; r.freezes.shownAt = 0; } // the learner already saw the last freeze note
   let streak = normalizeRecord(streakRaw).v === STREAK_V ? streakRaw : rollover(streakRaw, now);
   const rec = normalizeRecord(streak), today = dayKey(now), to = addDaysISO(today, -1);
   if (opt.tz) { if (r.lastTz && r.lastTz !== opt.tz) r.tzChangedAt = now; r.lastTz = opt.tz; } // remembered until the next missed day is judged, not only for this one call
@@ -183,4 +184,6 @@ export function weekDots(streakRaw, ret, now = Date.now()) {
   });
 }
 /** The learner has seen the "a freeze covered a day" note. */
-export function freezeNoteSeen(ret) { if (!ret.freezes.unseen) return ret; const r = clone(ret); r.freezes.unseen = false; return r; }
+export function freezeNoteSeen(ret) { if (!ret.freezes.unseen && !ret.freezes.shownAt) return ret; const r = clone(ret); r.freezes.unseen = false; r.freezes.shownAt = 0; return r; }
+/** The note is on screen now. It stays for this visit and is retired at the next page or the next visit (also after the app was closed). */
+export function freezeNoteShown(ret, now = Date.now()) { if (!ret.freezes.unseen || ret.freezes.shownAt) return ret; const r = clone(ret); r.freezes.shownAt = now; return r; }

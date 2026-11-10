@@ -4,12 +4,12 @@
  "reader": "in-browser reader, mode binary",
  "total": {
   "images": 576,
-  "cerPooled": 0.0439,
+  "cerPooled": 0.0447,
   "lines": 576,
   "linesReadExactly": 495,
-  "linesTranslatedEndToEnd": 545,
+  "linesTranslatedEndToEnd": 539,
   "wrongEnglishDrawn": 7,
-  "meanMs": 197
+  "meanMs": 210
  },
  "byWear": {
   "clean": {
@@ -19,7 +19,7 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 47,
    "wrongEnglishDrawn": 0,
-   "meanMs": 216
+   "meanMs": 227
   },
   "noise": {
    "images": 48,
@@ -28,7 +28,7 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 47,
    "wrongEnglishDrawn": 0,
-   "meanMs": 203
+   "meanMs": 212
   },
   "blur": {
    "images": 48,
@@ -37,7 +37,7 @@
    "linesReadExactly": 47,
    "linesTranslatedEndToEnd": 48,
    "wrongEnglishDrawn": 0,
-   "meanMs": 189
+   "meanMs": 200
   },
   "rotate": {
    "images": 48,
@@ -46,7 +46,7 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 48,
    "wrongEnglishDrawn": 0,
-   "meanMs": 201
+   "meanMs": 220
   },
   "perspective": {
    "images": 48,
@@ -55,16 +55,16 @@
    "linesReadExactly": 45,
    "linesTranslatedEndToEnd": 48,
    "wrongEnglishDrawn": 0,
-   "meanMs": 192
+   "meanMs": 211
   },
   "lowcontrast": {
    "images": 48,
-   "cerPooled": 0.0128,
+   "cerPooled": 0.016,
    "lines": 48,
    "linesReadExactly": 45,
-   "linesTranslatedEndToEnd": 48,
+   "linesTranslatedEndToEnd": 47,
    "wrongEnglishDrawn": 0,
-   "meanMs": 183
+   "meanMs": 196
   },
   "dark": {
    "images": 48,
@@ -73,7 +73,7 @@
    "linesReadExactly": 45,
    "linesTranslatedEndToEnd": 47,
    "wrongEnglishDrawn": 0,
-   "meanMs": 200
+   "meanMs": 210
   },
   "bright": {
    "images": 48,
@@ -82,16 +82,16 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 48,
    "wrongEnglishDrawn": 0,
-   "meanMs": 201
+   "meanMs": 215
   },
   "occlude": {
    "images": 48,
-   "cerPooled": 0.3738,
+   "cerPooled": 0.3802,
    "lines": 48,
    "linesReadExactly": 3,
-   "linesTranslatedEndToEnd": 23,
+   "linesTranslatedEndToEnd": 18,
    "wrongEnglishDrawn": 6,
-   "meanMs": 245
+   "meanMs": 257
   },
   "tight": {
    "images": 48,
@@ -100,7 +100,7 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 46,
    "wrongEnglishDrawn": 1,
-   "meanMs": 96
+   "meanMs": 102
   },
   "angle": {
    "images": 48,
@@ -109,7 +109,7 @@
    "linesReadExactly": 44,
    "linesTranslatedEndToEnd": 47,
    "wrongEnglishDrawn": 0,
-   "meanMs": 201
+   "meanMs": 216
   },
   "bilingual": {
    "images": 48,
@@ -118,7 +118,7 @@
    "linesReadExactly": 46,
    "linesTranslatedEndToEnd": 48,
    "wrongEnglishDrawn": 0,
-   "meanMs": 234
+   "meanMs": 255
   }
  },
  "rows": [
@@ -126,7 +126,7 @@
    "id": "p00__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 624,
+   "ms": 688,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -140,7 +140,7 @@
    "id": "p00__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 215,
+   "ms": 232,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -154,7 +154,7 @@
    "id": "p00__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 255,
+   "ms": 252,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -168,7 +168,7 @@
    "id": "p00__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 199,
+   "ms": 192,
    "levelled": -4,
    "read": [
     "אין כניסה"
@@ -182,7 +182,7 @@
    "id": "p00__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 185,
+   "ms": 191,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -196,7 +196,7 @@
    "id": "p00__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 215,
+   "ms": 239,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -210,7 +210,7 @@
    "id": "p00__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 206,
+   "ms": 208,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -224,7 +224,7 @@
    "id": "p00__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 169,
+   "ms": 202,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -238,7 +238,7 @@
    "id": "p00__occlude",
    "variant": "occlude",
    "cer": 0.125,
-   "ms": 332,
+   "ms": 323,
    "levelled": 0,
    "read": [
     "אין כניי ה"
@@ -252,7 +252,7 @@
    "id": "p00__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 80,
+   "ms": 89,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -266,7 +266,7 @@
    "id": "p00__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 209,
+   "ms": 177,
    "levelled": -8,
    "read": [
     "אין כניסה"
@@ -280,7 +280,7 @@
    "id": "p00__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 281,
+   "ms": 270,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -294,7 +294,7 @@
    "id": "p01__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 223,
+   "ms": 287,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -308,7 +308,7 @@
    "id": "p01__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 359,
+   "ms": 388,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -322,7 +322,7 @@
    "id": "p01__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 170,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -336,7 +336,7 @@
    "id": "p01__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 202,
+   "ms": 228,
    "levelled": 4,
    "read": [
     "אסור לעשן"
@@ -350,7 +350,7 @@
    "id": "p01__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 158,
+   "ms": 182,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -364,7 +364,7 @@
    "id": "p01__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 165,
+   "ms": 176,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -378,7 +378,7 @@
    "id": "p01__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 166,
+   "ms": 192,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -392,7 +392,7 @@
    "id": "p01__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 186,
+   "ms": 185,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -406,23 +406,21 @@
    "id": "p01__occlude",
    "variant": "occlude",
    "cer": 0.5,
-   "ms": 250,
+   "ms": 288,
    "levelled": 0,
    "read": [
     "אסור 2"
    ],
    "english": [
-    "Forbidden 2"
+    null
    ],
-   "wrong": [
-    "אסור 2 -> Forbidden 2 (word-for-word)"
-   ]
+   "wrong": []
   },
   {
    "id": "p01__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 125,
+   "ms": 121,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -436,7 +434,7 @@
    "id": "p01__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 202,
+   "ms": 183,
    "levelled": -8,
    "read": [
     "אסור לעשן"
@@ -450,7 +448,7 @@
    "id": "p01__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 283,
+   "ms": 301,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -464,7 +462,7 @@
    "id": "p02__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 209,
+   "ms": 202,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -478,7 +476,7 @@
    "id": "p02__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 152,
+   "ms": 216,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -492,7 +490,7 @@
    "id": "p02__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 181,
+   "ms": 246,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -506,7 +504,7 @@
    "id": "p02__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 216,
+   "ms": 268,
    "levelled": 4.1,
    "read": [
     "בית חולים"
@@ -520,7 +518,7 @@
    "id": "p02__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 183,
+   "ms": 203,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -534,7 +532,7 @@
    "id": "p02__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 175,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -548,7 +546,7 @@
    "id": "p02__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 180,
+   "ms": 233,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -562,7 +560,7 @@
    "id": "p02__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 173,
+   "ms": 203,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -576,7 +574,7 @@
    "id": "p02__occlude",
    "variant": "occlude",
    "cer": 0.125,
-   "ms": 133,
+   "ms": 171,
    "levelled": 0,
    "read": [
     "בית וולים"
@@ -590,7 +588,7 @@
    "id": "p02__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 95,
+   "ms": 99,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -604,7 +602,7 @@
    "id": "p02__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 178,
+   "ms": 199,
    "levelled": 8.2,
    "read": [
     "בית חולים"
@@ -618,7 +616,7 @@
    "id": "p02__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 229,
+   "ms": 318,
    "levelled": 0,
    "read": [
     "בית חולים"
@@ -632,7 +630,7 @@
    "id": "p03__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 200,
+   "ms": 247,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -646,7 +644,7 @@
    "id": "p03__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 168,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -660,7 +658,7 @@
    "id": "p03__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 208,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -674,7 +672,7 @@
    "id": "p03__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 184,
+   "ms": 233,
    "levelled": -3.9,
    "read": [
     "בית כנסת"
@@ -688,7 +686,7 @@
    "id": "p03__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 165,
+   "ms": 254,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -702,7 +700,7 @@
    "id": "p03__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 167,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -716,7 +714,7 @@
    "id": "p03__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 184,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -730,7 +728,7 @@
    "id": "p03__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 203,
+   "ms": 244,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -744,21 +742,23 @@
    "id": "p03__occlude",
    "variant": "occlude",
    "cer": 0.5714,
-   "ms": 202,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "בית -"
    ],
    "english": [
-    null
+    "House"
    ],
-   "wrong": []
+   "wrong": [
+    "בית - -> House (word-list)"
+   ]
   },
   {
    "id": "p03__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 135,
+   "ms": 150,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -772,7 +772,7 @@
    "id": "p03__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 182,
+   "ms": 203,
    "levelled": -8,
    "read": [
     "בית כנסת"
@@ -786,7 +786,7 @@
    "id": "p03__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 160,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -800,7 +800,7 @@
    "id": "p04__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 175,
+   "ms": 200,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -814,7 +814,7 @@
    "id": "p04__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 148,
+   "ms": 203,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -828,7 +828,7 @@
    "id": "p04__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 176,
+   "ms": 221,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -842,7 +842,7 @@
    "id": "p04__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 189,
+   "ms": 222,
    "levelled": -4,
    "read": [
     "בית מרקחת"
@@ -856,7 +856,7 @@
    "id": "p04__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 177,
+   "ms": 207,
    "levelled": -0.9,
    "read": [
     "בית מרקחת"
@@ -870,7 +870,7 @@
    "id": "p04__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 181,
+   "ms": 179,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -884,7 +884,7 @@
    "id": "p04__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 165,
+   "ms": 166,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -898,7 +898,7 @@
    "id": "p04__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 170,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -912,7 +912,7 @@
    "id": "p04__occlude",
    "variant": "occlude",
    "cer": 0.625,
-   "ms": 200,
+   "ms": 215,
    "levelled": 0,
    "read": [
     "בית 2"
@@ -921,14 +921,14 @@
     "House 2"
    ],
    "wrong": [
-    "בית 2 -> House 2 (word-for-word)"
+    "בית 2 -> House 2 (word-list)"
    ]
   },
   {
    "id": "p04__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 114,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -942,7 +942,7 @@
    "id": "p04__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 193,
+   "ms": 267,
    "levelled": -8,
    "read": [
     "בית מרקחת"
@@ -956,7 +956,7 @@
    "id": "p04__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 222,
+   "ms": 310,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -970,7 +970,7 @@
    "id": "p05__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 286,
+   "ms": 330,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -984,7 +984,7 @@
    "id": "p05__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 168,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -998,7 +998,7 @@
    "id": "p05__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 190,
+   "ms": 196,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1012,7 +1012,7 @@
    "id": "p05__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 175,
+   "ms": 192,
    "levelled": -3.9,
    "read": [
     "בית ספר"
@@ -1026,7 +1026,7 @@
    "id": "p05__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 193,
+   "ms": 198,
    "levelled": -0.9,
    "read": [
     "בית ספר"
@@ -1040,7 +1040,7 @@
    "id": "p05__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 179,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1054,7 +1054,7 @@
    "id": "p05__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 217,
+   "ms": 196,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1068,7 +1068,7 @@
    "id": "p05__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 178,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1082,7 +1082,7 @@
    "id": "p05__occlude",
    "variant": "occlude",
    "cer": 0.1667,
-   "ms": 331,
+   "ms": 361,
    "levelled": 0,
    "read": [
     "בית ס יר"
@@ -1096,7 +1096,7 @@
    "id": "p05__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 66,
+   "ms": 93,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1110,7 +1110,7 @@
    "id": "p05__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 185,
+   "ms": 225,
    "levelled": -8,
    "read": [
     "בית ספר"
@@ -1124,7 +1124,7 @@
    "id": "p05__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 305,
+   "ms": 289,
    "levelled": 0,
    "read": [
     "בית ספר"
@@ -1138,7 +1138,7 @@
    "id": "p06__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 191,
+   "ms": 185,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1152,7 +1152,7 @@
    "id": "p06__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 231,
+   "ms": 170,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1166,7 +1166,7 @@
    "id": "p06__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 209,
+   "ms": 179,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1180,7 +1180,7 @@
    "id": "p06__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 179,
+   "ms": 213,
    "levelled": -4,
    "read": [
     "בית קפה"
@@ -1194,7 +1194,7 @@
    "id": "p06__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 162,
+   "ms": 217,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1208,7 +1208,7 @@
    "id": "p06__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 215,
+   "ms": 221,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1222,7 +1222,7 @@
    "id": "p06__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 199,
+   "ms": 226,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1236,7 +1236,7 @@
    "id": "p06__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 187,
+   "ms": 221,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1250,7 +1250,7 @@
    "id": "p06__occlude",
    "variant": "occlude",
    "cer": 0.3333,
-   "ms": 375,
+   "ms": 343,
    "levelled": 0,
    "read": [
     "בו קפה"
@@ -1264,7 +1264,7 @@
    "id": "p06__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 86,
+   "ms": 91,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1278,7 +1278,7 @@
    "id": "p06__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 210,
+   "ms": 197,
    "levelled": -8,
    "read": [
     "בית קפה"
@@ -1292,7 +1292,7 @@
    "id": "p06__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 174,
+   "ms": 167,
    "levelled": 0,
    "read": [
     "בית קפה"
@@ -1306,7 +1306,7 @@
    "id": "p07__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 127,
+   "ms": 137,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1320,7 +1320,7 @@
    "id": "p07__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 154,
+   "ms": 133,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1334,7 +1334,7 @@
    "id": "p07__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 152,
+   "ms": 149,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1348,7 +1348,7 @@
    "id": "p07__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 151,
+   "ms": 175,
    "levelled": 4.1,
    "read": [
     "בנק"
@@ -1362,7 +1362,7 @@
    "id": "p07__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 131,
+   "ms": 142,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1376,7 +1376,7 @@
    "id": "p07__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 137,
+   "ms": 121,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1390,7 +1390,7 @@
    "id": "p07__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 141,
+   "ms": 142,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1404,7 +1404,7 @@
    "id": "p07__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 129,
+   "ms": 167,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1432,7 +1432,7 @@
    "id": "p07__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 48,
+   "ms": 47,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1446,7 +1446,7 @@
    "id": "p07__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 153,
+   "ms": 128,
    "levelled": 8.2,
    "read": [
     "בנק"
@@ -1460,7 +1460,7 @@
    "id": "p07__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 318,
+   "ms": 298,
    "levelled": 0,
    "read": [
     "בנק"
@@ -1474,7 +1474,7 @@
    "id": "p08__clean",
    "variant": "clean",
    "cer": 0.0909,
-   "ms": 167,
+   "ms": 166,
    "levelled": 0,
    "read": [
     "ברובים הבאים"
@@ -1488,7 +1488,7 @@
    "id": "p08__noise",
    "variant": "noise",
    "cer": 0.0909,
-   "ms": 166,
+   "ms": 196,
    "levelled": 0,
    "read": [
     "ברובים הבאים"
@@ -1502,7 +1502,7 @@
    "id": "p08__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 173,
+   "ms": 162,
    "levelled": 0,
    "read": [
     "ברוכים הבאים"
@@ -1516,7 +1516,7 @@
    "id": "p08__rotate",
    "variant": "rotate",
    "cer": 0.0909,
-   "ms": 199,
+   "ms": 206,
    "levelled": 4,
    "read": [
     "ברובים הבאים"
@@ -1530,7 +1530,7 @@
    "id": "p08__perspective",
    "variant": "perspective",
    "cer": 0.0909,
-   "ms": 246,
+   "ms": 265,
    "levelled": 0,
    "read": [
     "ברוכבים הבאים"
@@ -1544,7 +1544,7 @@
    "id": "p08__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 168,
+   "ms": 163,
    "levelled": 0,
    "read": [
     "ברוכים הבאים"
@@ -1558,7 +1558,7 @@
    "id": "p08__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 181,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "ברוכים הבאים"
@@ -1572,7 +1572,7 @@
    "id": "p08__bright",
    "variant": "bright",
    "cer": 0.0909,
-   "ms": 212,
+   "ms": 190,
    "levelled": 0,
    "read": [
     "ברובים הבאים"
@@ -1586,7 +1586,7 @@
    "id": "p08__occlude",
    "variant": "occlude",
    "cer": 0.5455,
-   "ms": 226,
+   "ms": 198,
    "levelled": 0,
    "read": [
     ":: הבאים"
@@ -1600,7 +1600,7 @@
    "id": "p08__tight",
    "variant": "tight",
    "cer": 0.0909,
-   "ms": 92,
+   "ms": 93,
    "levelled": 0,
    "read": [
     "ברובים הבאים"
@@ -1614,7 +1614,7 @@
    "id": "p08__angle",
    "variant": "angle",
    "cer": 0.0909,
-   "ms": 165,
+   "ms": 214,
    "levelled": 8,
    "read": [
     "ברובים הבאים"
@@ -1628,7 +1628,7 @@
    "id": "p08__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 192,
+   "ms": 208,
    "levelled": 0,
    "read": [
     "ברוכים הבאים"
@@ -1642,7 +1642,7 @@
    "id": "p09__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 158,
+   "ms": 146,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1656,7 +1656,7 @@
    "id": "p09__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 169,
+   "ms": 174,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1670,7 +1670,7 @@
    "id": "p09__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 138,
+   "ms": 162,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1684,7 +1684,7 @@
    "id": "p09__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 136,
+   "ms": 178,
    "levelled": -4,
    "read": [
     "דואר"
@@ -1698,7 +1698,7 @@
    "id": "p09__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 171,
+   "ms": 153,
    "levelled": -1.8,
    "read": [
     "דואר"
@@ -1712,7 +1712,7 @@
    "id": "p09__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 143,
+   "ms": 170,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1726,7 +1726,7 @@
    "id": "p09__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 171,
+   "ms": 179,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1740,7 +1740,7 @@
    "id": "p09__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 157,
+   "ms": 170,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1754,7 +1754,7 @@
    "id": "p09__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 266,
+   "ms": 360,
    "levelled": 0,
    "read": [
     "דוצ ר"
@@ -1768,7 +1768,7 @@
    "id": "p09__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 45,
+   "ms": 74,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1782,7 +1782,7 @@
    "id": "p09__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 155,
+   "ms": 178,
    "levelled": -8,
    "read": [
     "דואר"
@@ -1796,7 +1796,7 @@
    "id": "p09__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 177,
+   "ms": 195,
    "levelled": 0,
    "read": [
     "דואר"
@@ -1824,7 +1824,7 @@
    "id": "p10__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 169,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1838,7 +1838,7 @@
    "id": "p10__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 150,
+   "ms": 239,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1852,7 +1852,7 @@
    "id": "p10__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 189,
+   "ms": 172,
    "levelled": 3.9,
    "read": [
     "דחיפה"
@@ -1866,7 +1866,7 @@
    "id": "p10__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 185,
+   "ms": 181,
    "levelled": -1,
    "read": [
     "דחיפה"
@@ -1880,7 +1880,7 @@
    "id": "p10__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 169,
+   "ms": 167,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1894,7 +1894,7 @@
    "id": "p10__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 217,
+   "ms": 165,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1908,7 +1908,7 @@
    "id": "p10__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 164,
+   "ms": 173,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1922,7 +1922,7 @@
    "id": "p10__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 298,
+   "ms": 285,
    "levelled": 0,
    "read": [
     "דחקפה"
@@ -1936,7 +1936,7 @@
    "id": "p10__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 89,
+   "ms": 79,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1950,7 +1950,7 @@
    "id": "p10__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 199,
+   "ms": 190,
    "levelled": -8,
    "read": [
     "דחיפה"
@@ -1964,7 +1964,7 @@
    "id": "p10__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 250,
+   "ms": 252,
    "levelled": 0,
    "read": [
     "דחיפה"
@@ -1978,7 +1978,7 @@
    "id": "p11__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 172,
+   "ms": 182,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -1992,7 +1992,7 @@
    "id": "p11__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 204,
+   "ms": 177,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2006,7 +2006,7 @@
    "id": "p11__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 229,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2020,7 +2020,7 @@
    "id": "p11__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 187,
+   "ms": 207,
    "levelled": -4,
    "read": [
     "זהירות"
@@ -2034,7 +2034,7 @@
    "id": "p11__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 163,
+   "ms": 196,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2048,7 +2048,7 @@
    "id": "p11__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 181,
+   "ms": 192,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2062,7 +2062,7 @@
    "id": "p11__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 177,
+   "ms": 215,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2076,7 +2076,7 @@
    "id": "p11__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 177,
+   "ms": 228,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2090,7 +2090,7 @@
    "id": "p11__occlude",
    "variant": "occlude",
    "cer": 0.3333,
-   "ms": 330,
+   "ms": 379,
    "levelled": 0,
    "read": [
     "זהי ת"
@@ -2104,7 +2104,7 @@
    "id": "p11__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 101,
+   "ms": 117,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2118,7 +2118,7 @@
    "id": "p11__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 219,
+   "ms": 233,
    "levelled": 8,
    "read": [
     "זהירות"
@@ -2132,7 +2132,7 @@
    "id": "p11__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 289,
+   "ms": 274,
    "levelled": 0,
    "read": [
     "זהירות"
@@ -2146,7 +2146,7 @@
    "id": "p12__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 184,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2160,7 +2160,7 @@
    "id": "p12__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 187,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2174,7 +2174,7 @@
    "id": "p12__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 173,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2188,7 +2188,7 @@
    "id": "p12__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 158,
+   "ms": 220,
    "levelled": -3.9,
    "read": [
     "חומוס"
@@ -2202,7 +2202,7 @@
    "id": "p12__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 153,
+   "ms": 211,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2216,7 +2216,7 @@
    "id": "p12__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 176,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2230,7 +2230,7 @@
    "id": "p12__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 155,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2244,7 +2244,7 @@
    "id": "p12__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 189,
+   "ms": 190,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2258,13 +2258,13 @@
    "id": "p12__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 155,
+   "ms": 186,
    "levelled": 0,
    "read": [
     "ח מוס"
    ],
    "english": [
-    "Hummus"
+    null
    ],
    "wrong": []
   },
@@ -2272,7 +2272,7 @@
    "id": "p12__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 87,
+   "ms": 97,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2286,7 +2286,7 @@
    "id": "p12__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 187,
+   "ms": 198,
    "levelled": -7.8,
    "read": [
     "חומוס"
@@ -2300,7 +2300,7 @@
    "id": "p12__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 250,
+   "ms": 244,
    "levelled": 0,
    "read": [
     "חומוס"
@@ -2314,7 +2314,7 @@
    "id": "p13__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 163,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2328,7 +2328,7 @@
    "id": "p13__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 164,
+   "ms": 147,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2342,7 +2342,7 @@
    "id": "p13__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 149,
+   "ms": 171,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2356,7 +2356,7 @@
    "id": "p13__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 148,
+   "ms": 198,
    "levelled": 4,
    "read": [
     "חנות אופטיקה"
@@ -2370,7 +2370,7 @@
    "id": "p13__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 179,
+   "ms": 210,
    "levelled": -1.1,
    "read": [
     "חנות אופטיקה"
@@ -2384,7 +2384,7 @@
    "id": "p13__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 170,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2398,7 +2398,7 @@
    "id": "p13__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 151,
+   "ms": 164,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2412,7 +2412,7 @@
    "id": "p13__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 164,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2426,7 +2426,7 @@
    "id": "p13__occlude",
    "variant": "occlude",
    "cer": 0.6364,
-   "ms": 181,
+   "ms": 185,
    "levelled": 0,
    "read": [
     "חנות 1"
@@ -2442,7 +2442,7 @@
    "id": "p13__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 106,
+   "ms": 112,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2456,7 +2456,7 @@
    "id": "p13__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 166,
+   "ms": 183,
    "levelled": 8,
    "read": [
     "חנות אופטיקה"
@@ -2470,7 +2470,7 @@
    "id": "p13__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 105,
+   "ms": 158,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -2484,7 +2484,7 @@
    "id": "p14__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 268,
+   "ms": 363,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2498,7 +2498,7 @@
    "id": "p14__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 204,
+   "ms": 226,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2512,7 +2512,7 @@
    "id": "p14__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 201,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2526,7 +2526,7 @@
    "id": "p14__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 296,
+   "ms": 325,
    "levelled": 4.1,
    "read": [
     "חנות ספרים"
@@ -2540,7 +2540,7 @@
    "id": "p14__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 239,
+   "ms": 299,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2554,7 +2554,7 @@
    "id": "p14__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 248,
+   "ms": 348,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2568,7 +2568,7 @@
    "id": "p14__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 243,
+   "ms": 239,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2582,7 +2582,7 @@
    "id": "p14__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 253,
+   "ms": 281,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2596,7 +2596,7 @@
    "id": "p14__occlude",
    "variant": "occlude",
    "cer": 0.1111,
-   "ms": 170,
+   "ms": 155,
    "levelled": 0,
    "read": [
     "חנות י פרים"
@@ -2610,7 +2610,7 @@
    "id": "p14__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 144,
+   "ms": 141,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2624,7 +2624,7 @@
    "id": "p14__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 251,
+   "ms": 254,
    "levelled": 8.1,
    "read": [
     "חנות ספרים"
@@ -2638,7 +2638,7 @@
    "id": "p14__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 169,
+   "ms": 242,
    "levelled": 0,
    "read": [
     "חנות ספרים"
@@ -2652,7 +2652,7 @@
    "id": "p15__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 136,
+   "ms": 199,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2666,7 +2666,7 @@
    "id": "p15__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 141,
+   "ms": 170,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2680,7 +2680,7 @@
    "id": "p15__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 143,
+   "ms": 171,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2694,7 +2694,7 @@
    "id": "p15__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 186,
+   "ms": 191,
    "levelled": -3.6,
    "read": [
     "חניה"
@@ -2708,7 +2708,7 @@
    "id": "p15__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 187,
+   "ms": 231,
    "levelled": -1.4,
    "read": [
     "חניה"
@@ -2722,7 +2722,7 @@
    "id": "p15__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 172,
+   "ms": 149,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2736,7 +2736,7 @@
    "id": "p15__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 184,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2750,7 +2750,7 @@
    "id": "p15__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 154,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2764,7 +2764,7 @@
    "id": "p15__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 303,
+   "ms": 310,
    "levelled": 0,
    "read": [
     "וניה"
@@ -2778,7 +2778,7 @@
    "id": "p15__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 51,
+   "ms": 59,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2792,7 +2792,7 @@
    "id": "p15__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 151,
+   "ms": 157,
    "levelled": -7.6,
    "read": [
     "חניה"
@@ -2806,7 +2806,7 @@
    "id": "p15__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 267,
+   "ms": 235,
    "levelled": 0,
    "read": [
     "חניה"
@@ -2820,7 +2820,7 @@
    "id": "p16__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 183,
+   "ms": 178,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2834,7 +2834,7 @@
    "id": "p16__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 195,
+   "ms": 155,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2848,7 +2848,7 @@
    "id": "p16__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 161,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2862,7 +2862,7 @@
    "id": "p16__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 177,
+   "ms": 191,
    "levelled": 4,
    "read": [
     "יציאה"
@@ -2876,7 +2876,7 @@
    "id": "p16__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 188,
+   "ms": 149,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2890,7 +2890,7 @@
    "id": "p16__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 176,
+   "ms": 160,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2904,7 +2904,7 @@
    "id": "p16__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 164,
+   "ms": 177,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2918,7 +2918,7 @@
    "id": "p16__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 170,
+   "ms": 171,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2932,7 +2932,7 @@
    "id": "p16__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 258,
+   "ms": 364,
    "levelled": 0,
    "read": [
     "יי יאה"
@@ -2946,7 +2946,7 @@
    "id": "p16__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 63,
+   "ms": 70,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2960,7 +2960,7 @@
    "id": "p16__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 161,
+   "ms": 206,
    "levelled": -8,
    "read": [
     "יציאה"
@@ -2974,7 +2974,7 @@
    "id": "p16__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 282,
+   "ms": 305,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -2988,7 +2988,7 @@
    "id": "p17__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 155,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3002,7 +3002,7 @@
    "id": "p17__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 155,
+   "ms": 181,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3016,7 +3016,7 @@
    "id": "p17__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 177,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3030,7 +3030,7 @@
    "id": "p17__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 166,
+   "ms": 217,
    "levelled": 4,
    "read": [
     "יציאת חירום"
@@ -3044,7 +3044,7 @@
    "id": "p17__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 162,
+   "ms": 200,
    "levelled": -1.3,
    "read": [
     "יציאת חירום"
@@ -3058,7 +3058,7 @@
    "id": "p17__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 152,
+   "ms": 181,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3072,7 +3072,7 @@
    "id": "p17__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 253,
+   "ms": 261,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3086,7 +3086,7 @@
    "id": "p17__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 184,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3100,7 +3100,7 @@
    "id": "p17__occlude",
    "variant": "occlude",
    "cer": 0.5,
-   "ms": 214,
+   "ms": 204,
    "levelled": 0,
    "read": [
     "1 חירום"
@@ -3114,7 +3114,7 @@
    "id": "p17__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 126,
+   "ms": 90,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3128,7 +3128,7 @@
    "id": "p17__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 172,
+   "ms": 204,
    "levelled": -8,
    "read": [
     "יציאת חירום"
@@ -3142,7 +3142,7 @@
    "id": "p17__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 182,
+   "ms": 207,
    "levelled": 0,
    "read": [
     "יציאת חירום"
@@ -3156,7 +3156,7 @@
    "id": "p18__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 148,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3170,7 +3170,7 @@
    "id": "p18__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 147,
+   "ms": 159,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3184,7 +3184,7 @@
    "id": "p18__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 162,
+   "ms": 207,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3198,7 +3198,7 @@
    "id": "p18__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 160,
+   "ms": 256,
    "levelled": 4.1,
    "read": [
     "כיכר דיזנגוף"
@@ -3212,7 +3212,7 @@
    "id": "p18__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 245,
+   "ms": 313,
    "levelled": -0.8,
    "read": [
     "כיכר דיזנגוף"
@@ -3226,7 +3226,7 @@
    "id": "p18__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 165,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3254,7 +3254,7 @@
    "id": "p18__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 183,
+   "ms": 222,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3268,7 +3268,7 @@
    "id": "p18__occlude",
    "variant": "occlude",
    "cer": 0.3636,
-   "ms": 193,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "2 דיזנגוף"
@@ -3284,7 +3284,7 @@
    "id": "p18__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 122,
+   "ms": 102,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3298,7 +3298,7 @@
    "id": "p18__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 261,
+   "ms": 305,
    "levelled": 8.1,
    "read": [
     "כיכר דיזנגוף"
@@ -3312,7 +3312,7 @@
    "id": "p18__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 258,
+   "ms": 282,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -3326,7 +3326,7 @@
    "id": "p19__clean",
    "variant": "clean",
    "cer": 0.2,
-   "ms": 316,
+   "ms": 274,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3340,7 +3340,7 @@
    "id": "p19__noise",
    "variant": "noise",
    "cer": 0.2,
-   "ms": 323,
+   "ms": 320,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3354,7 +3354,7 @@
    "id": "p19__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 305,
+   "ms": 391,
    "levelled": 0,
    "read": [
     "כניסה"
@@ -3368,7 +3368,7 @@
    "id": "p19__rotate",
    "variant": "rotate",
    "cer": 0.2,
-   "ms": 363,
+   "ms": 338,
    "levelled": 4.4,
    "read": [
     "כנביסה"
@@ -3382,7 +3382,7 @@
    "id": "p19__perspective",
    "variant": "perspective",
    "cer": 0.2,
-   "ms": 343,
+   "ms": 312,
    "levelled": -1.1,
    "read": [
     "בניסה"
@@ -3396,7 +3396,7 @@
    "id": "p19__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0.2,
-   "ms": 153,
+   "ms": 160,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3410,7 +3410,7 @@
    "id": "p19__dark",
    "variant": "dark",
    "cer": 0.2,
-   "ms": 317,
+   "ms": 410,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3424,7 +3424,7 @@
    "id": "p19__bright",
    "variant": "bright",
    "cer": 0.2,
-   "ms": 294,
+   "ms": 410,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3438,7 +3438,7 @@
    "id": "p19__occlude",
    "variant": "occlude",
    "cer": 0.4,
-   "ms": 180,
+   "ms": 233,
    "levelled": 0,
    "read": [
     "בנ סה"
@@ -3452,7 +3452,7 @@
    "id": "p19__tight",
    "variant": "tight",
    "cer": 0.2,
-   "ms": 111,
+   "ms": 152,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3466,7 +3466,7 @@
    "id": "p19__angle",
    "variant": "angle",
    "cer": 0.2,
-   "ms": 343,
+   "ms": 309,
    "levelled": -7.7,
    "read": [
     "בניסה"
@@ -3480,7 +3480,7 @@
    "id": "p19__bilingual",
    "variant": "bilingual",
    "cer": 0.2,
-   "ms": 246,
+   "ms": 305,
    "levelled": 0,
    "read": [
     "בניסה"
@@ -3494,7 +3494,7 @@
    "id": "p20__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 189,
+   "ms": 173,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3508,7 +3508,7 @@
    "id": "p20__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 169,
+   "ms": 213,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3522,7 +3522,7 @@
    "id": "p20__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 224,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3536,7 +3536,7 @@
    "id": "p20__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 197,
+   "ms": 188,
    "levelled": 4.1,
    "read": [
     "מאפייה"
@@ -3550,7 +3550,7 @@
    "id": "p20__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 191,
+   "ms": 210,
    "levelled": -1.7,
    "read": [
     "מאפייה"
@@ -3564,7 +3564,7 @@
    "id": "p20__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 176,
+   "ms": 219,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3578,7 +3578,7 @@
    "id": "p20__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 190,
+   "ms": 195,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3592,7 +3592,7 @@
    "id": "p20__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 205,
+   "ms": 235,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3606,7 +3606,7 @@
    "id": "p20__occlude",
    "variant": "occlude",
    "cer": 0.3333,
-   "ms": 319,
+   "ms": 309,
    "levelled": 0,
    "read": [
     "מא יה"
@@ -3620,7 +3620,7 @@
    "id": "p20__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 62,
+   "ms": 67,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3634,7 +3634,7 @@
    "id": "p20__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 189,
+   "ms": 178,
    "levelled": -8,
    "read": [
     "מאפייה"
@@ -3648,7 +3648,7 @@
    "id": "p20__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 175,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -3662,7 +3662,7 @@
    "id": "p21__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 167,
+   "ms": 207,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3676,7 +3676,7 @@
    "id": "p21__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 188,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3690,7 +3690,7 @@
    "id": "p21__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 193,
+   "ms": 230,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3704,7 +3704,7 @@
    "id": "p21__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 191,
+   "ms": 244,
    "levelled": -4,
    "read": [
     "מדרגות"
@@ -3718,7 +3718,7 @@
    "id": "p21__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 171,
+   "ms": 199,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3732,7 +3732,7 @@
    "id": "p21__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 174,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3746,7 +3746,7 @@
    "id": "p21__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 218,
+   "ms": 194,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3760,7 +3760,7 @@
    "id": "p21__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 214,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3774,7 +3774,7 @@
    "id": "p21__occlude",
    "variant": "occlude",
    "cer": 0.1667,
-   "ms": 211,
+   "ms": 183,
    "levelled": 0,
    "read": [
     "מדו גות"
@@ -3788,7 +3788,7 @@
    "id": "p21__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 75,
+   "ms": 71,
    "levelled": 0,
    "read": [
     "מדרגות"
@@ -3802,7 +3802,7 @@
    "id": "p21__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 213,
+   "ms": 182,
    "levelled": 8,
    "read": [
     "מדרגות"
@@ -3830,7 +3830,7 @@
    "id": "p22__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 267,
+   "ms": 319,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3844,7 +3844,7 @@
    "id": "p22__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 176,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3858,7 +3858,7 @@
    "id": "p22__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 167,
+   "ms": 221,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3872,7 +3872,7 @@
    "id": "p22__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 178,
+   "ms": 207,
    "levelled": 3.8,
    "read": [
     "מוזיאון"
@@ -3886,7 +3886,7 @@
    "id": "p22__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 187,
+   "ms": 207,
    "levelled": -0.8,
    "read": [
     "מוזיאון"
@@ -3900,7 +3900,7 @@
    "id": "p22__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 190,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3914,7 +3914,7 @@
    "id": "p22__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 218,
+   "ms": 205,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3928,7 +3928,7 @@
    "id": "p22__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 184,
+   "ms": 186,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3942,7 +3942,7 @@
    "id": "p22__occlude",
    "variant": "occlude",
    "cer": 0.2857,
-   "ms": 328,
+   "ms": 349,
    "levelled": 0,
    "read": [
     "מוד]און"
@@ -3956,7 +3956,7 @@
    "id": "p22__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 81,
+   "ms": 70,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3970,7 +3970,7 @@
    "id": "p22__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 238,
+   "ms": 226,
    "levelled": -8.2,
    "read": [
     "מוזיאון"
@@ -3984,7 +3984,7 @@
    "id": "p22__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 275,
+   "ms": 306,
    "levelled": 0,
    "read": [
     "מוזיאון"
@@ -3998,7 +3998,7 @@
    "id": "p23__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 178,
+   "ms": 171,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4012,7 +4012,7 @@
    "id": "p23__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 190,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4026,7 +4026,7 @@
    "id": "p23__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 238,
+   "ms": 270,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4040,7 +4040,7 @@
    "id": "p23__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 159,
+   "ms": 169,
    "levelled": 3.6,
    "read": [
     "מוצא"
@@ -4054,7 +4054,7 @@
    "id": "p23__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 260,
+   "ms": 290,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4068,7 +4068,7 @@
    "id": "p23__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 195,
+   "ms": 178,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4082,7 +4082,7 @@
    "id": "p23__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 207,
+   "ms": 194,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4096,7 +4096,7 @@
    "id": "p23__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 174,
+   "ms": 204,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4110,7 +4110,7 @@
    "id": "p23__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 281,
+   "ms": 315,
    "levelled": 0,
    "read": [
     "מווא"
@@ -4124,7 +4124,7 @@
    "id": "p23__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 84,
+   "ms": 78,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4138,7 +4138,7 @@
    "id": "p23__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 169,
+   "ms": 160,
    "levelled": 7.7,
    "read": [
     "מוצא"
@@ -4152,7 +4152,7 @@
    "id": "p23__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 337,
+   "ms": 271,
    "levelled": 0,
    "read": [
     "מוצא"
@@ -4166,7 +4166,7 @@
    "id": "p24__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 213,
+   "ms": 192,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4180,7 +4180,7 @@
    "id": "p24__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 196,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4194,7 +4194,7 @@
    "id": "p24__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 191,
+   "ms": 232,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4208,7 +4208,7 @@
    "id": "p24__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 177,
+   "ms": 181,
    "levelled": -3.9,
    "read": [
     "מחיר מיוחד"
@@ -4222,7 +4222,7 @@
    "id": "p24__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 178,
+   "ms": 196,
    "levelled": -0.8,
    "read": [
     "מחיר מיוחד"
@@ -4236,7 +4236,7 @@
    "id": "p24__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 205,
+   "ms": 222,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4250,7 +4250,7 @@
    "id": "p24__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 182,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4264,7 +4264,7 @@
    "id": "p24__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 188,
+   "ms": 193,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4278,7 +4278,7 @@
    "id": "p24__occlude",
    "variant": "occlude",
    "cer": 0.5556,
-   "ms": 204,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "מחיר ."
@@ -4294,7 +4294,7 @@
    "id": "p24__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 112,
+   "ms": 110,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4308,7 +4308,7 @@
    "id": "p24__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 187,
+   "ms": 194,
    "levelled": -7.9,
    "read": [
     "מחיר מיוחד"
@@ -4322,7 +4322,7 @@
    "id": "p24__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 162,
+   "ms": 113,
    "levelled": 0,
    "read": [
     "מחיר מיוחד"
@@ -4336,7 +4336,7 @@
    "id": "p25__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 298,
+   "ms": 293,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4350,7 +4350,7 @@
    "id": "p25__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 303,
+   "ms": 268,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4364,7 +4364,7 @@
    "id": "p25__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 202,
+   "ms": 157,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4378,7 +4378,7 @@
    "id": "p25__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 300,
+   "ms": 349,
    "levelled": -4,
    "read": [
     "מכולת"
@@ -4392,7 +4392,7 @@
    "id": "p25__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 288,
+   "ms": 337,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4406,7 +4406,7 @@
    "id": "p25__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 259,
+   "ms": 302,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4420,7 +4420,7 @@
    "id": "p25__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 274,
+   "ms": 275,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4434,7 +4434,7 @@
    "id": "p25__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 265,
+   "ms": 325,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4448,7 +4448,7 @@
    "id": "p25__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 291,
+   "ms": 356,
    "levelled": 0,
    "read": [
     "מכועת"
@@ -4462,7 +4462,7 @@
    "id": "p25__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 96,
+   "ms": 123,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4476,7 +4476,7 @@
    "id": "p25__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 260,
+   "ms": 340,
    "levelled": -8,
    "read": [
     "מכולת"
@@ -4490,7 +4490,7 @@
    "id": "p25__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 218,
+   "ms": 387,
    "levelled": 0,
    "read": [
     "מכולת"
@@ -4504,7 +4504,7 @@
    "id": "p26__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 145,
+   "ms": 162,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4518,7 +4518,7 @@
    "id": "p26__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 154,
+   "ms": 156,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4532,7 +4532,7 @@
    "id": "p26__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 160,
+   "ms": 176,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4546,7 +4546,7 @@
    "id": "p26__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 152,
+   "ms": 179,
    "levelled": -4,
    "read": [
     "מלון"
@@ -4560,7 +4560,7 @@
    "id": "p26__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 149,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4574,7 +4574,7 @@
    "id": "p26__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 168,
+   "ms": 177,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4588,7 +4588,7 @@
    "id": "p26__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 170,
+   "ms": 168,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4602,7 +4602,7 @@
    "id": "p26__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 155,
+   "ms": 168,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4616,7 +4616,7 @@
    "id": "p26__occlude",
    "variant": "occlude",
    "cer": 0,
-   "ms": 147,
+   "ms": 153,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4630,7 +4630,7 @@
    "id": "p26__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 43,
+   "ms": 49,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4644,7 +4644,7 @@
    "id": "p26__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 162,
+   "ms": 155,
    "levelled": -8,
    "read": [
     "מלון"
@@ -4658,7 +4658,7 @@
    "id": "p26__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 254,
+   "ms": 326,
    "levelled": 0,
    "read": [
     "מלון"
@@ -4672,7 +4672,7 @@
    "id": "p27__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 195,
+   "ms": 217,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4686,7 +4686,7 @@
    "id": "p27__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 181,
+   "ms": 218,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4700,7 +4700,7 @@
    "id": "p27__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 193,
+   "ms": 191,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4714,7 +4714,7 @@
    "id": "p27__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 188,
+   "ms": 212,
    "levelled": -3.7,
    "read": [
     "מסעדה"
@@ -4728,7 +4728,7 @@
    "id": "p27__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 175,
+   "ms": 202,
    "levelled": -0.8,
    "read": [
     "מסעדה"
@@ -4742,7 +4742,7 @@
    "id": "p27__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 183,
+   "ms": 214,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4756,7 +4756,7 @@
    "id": "p27__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 173,
+   "ms": 205,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4770,7 +4770,7 @@
    "id": "p27__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 201,
+   "ms": 205,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4798,7 +4798,7 @@
    "id": "p27__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 76,
+   "ms": 78,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4812,7 +4812,7 @@
    "id": "p27__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 193,
+   "ms": 244,
    "levelled": -7.7,
    "read": [
     "מסעדה"
@@ -4826,7 +4826,7 @@
    "id": "p27__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 263,
+   "ms": 281,
    "levelled": 0,
    "read": [
     "מסעדה"
@@ -4840,7 +4840,7 @@
    "id": "p28__clean",
    "variant": "clean",
    "cer": 0.3333,
-   "ms": 421,
+   "ms": 274,
    "levelled": 0,
    "read": [
     "מסעדה לעורה"
@@ -4854,7 +4854,7 @@
    "id": "p28__noise",
    "variant": "noise",
    "cer": 0.3333,
-   "ms": 310,
+   "ms": 295,
    "levelled": 0,
    "read": [
     "מסעדה לעורה"
@@ -4868,7 +4868,7 @@
    "id": "p28__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 307,
+   "ms": 281,
    "levelled": 0,
    "read": [
     "מסעדה כשרה"
@@ -4882,7 +4882,7 @@
    "id": "p28__rotate",
    "variant": "rotate",
    "cer": 0.1111,
-   "ms": 330,
+   "ms": 267,
    "levelled": -4,
    "read": [
     "מסעדה לשרה"
@@ -4896,7 +4896,7 @@
    "id": "p28__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 317,
+   "ms": 322,
    "levelled": -0.8,
    "read": [
     "מסעדה כשרה"
@@ -4909,14 +4909,14 @@
   {
    "id": "p28__lowcontrast",
    "variant": "lowcontrast",
-   "cer": 0.2222,
-   "ms": 194,
+   "cer": 0.3333,
+   "ms": 203,
    "levelled": 0,
    "read": [
-    "מסעדה לשורה"
+    "מסעדה לעורה"
    ],
    "english": [
-    "Kosher Restaurant"
+    null
    ],
    "wrong": []
   },
@@ -4924,7 +4924,7 @@
    "id": "p28__dark",
    "variant": "dark",
    "cer": 0.3333,
-   "ms": 180,
+   "ms": 209,
    "levelled": 0,
    "read": [
     "מסעדה לעורה"
@@ -4938,7 +4938,7 @@
    "id": "p28__bright",
    "variant": "bright",
    "cer": 0.1111,
-   "ms": 282,
+   "ms": 300,
    "levelled": 0,
    "read": [
     "מסעדה לשרה"
@@ -4951,14 +4951,14 @@
   {
    "id": "p28__occlude",
    "variant": "occlude",
-   "cer": 0.2222,
-   "ms": 279,
+   "cer": 0.4444,
+   "ms": 296,
    "levelled": 0,
    "read": [
-    "מסע ה לשרה"
+    "מסע ה לעורה"
    ],
    "english": [
-    "Kosher Restaurant"
+    null
    ],
    "wrong": []
   },
@@ -4966,7 +4966,7 @@
    "id": "p28__tight",
    "variant": "tight",
    "cer": 0.3333,
-   "ms": 243,
+   "ms": 240,
    "levelled": 0,
    "read": [
     "מסעדה לעשורה"
@@ -4980,7 +4980,7 @@
    "id": "p28__angle",
    "variant": "angle",
    "cer": 0.3333,
-   "ms": 289,
+   "ms": 365,
    "levelled": 8,
    "read": [
     "מסעדה לעורה"
@@ -4994,7 +4994,7 @@
    "id": "p28__bilingual",
    "variant": "bilingual",
    "cer": 0.1111,
-   "ms": 185,
+   "ms": 216,
    "levelled": 0,
    "read": [
     "מסעדה לשרה"
@@ -5008,7 +5008,7 @@
    "id": "p29__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 213,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5022,7 +5022,7 @@
    "id": "p29__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 205,
+   "ms": 191,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5036,7 +5036,7 @@
    "id": "p29__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 213,
+   "ms": 200,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5050,7 +5050,7 @@
    "id": "p29__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 180,
+   "ms": 260,
    "levelled": 4,
    "read": [
     "מעליות"
@@ -5064,7 +5064,7 @@
    "id": "p29__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 196,
+   "ms": 210,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5078,7 +5078,7 @@
    "id": "p29__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 199,
+   "ms": 219,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5092,7 +5092,7 @@
    "id": "p29__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 186,
+   "ms": 254,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5106,7 +5106,7 @@
    "id": "p29__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 172,
+   "ms": 245,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5120,7 +5120,7 @@
    "id": "p29__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 301,
+   "ms": 393,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -5130,7 +5130,7 @@
    "id": "p29__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 93,
+   "ms": 104,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5144,7 +5144,7 @@
    "id": "p29__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 183,
+   "ms": 201,
    "levelled": -8,
    "read": [
     "מעליות"
@@ -5158,7 +5158,7 @@
    "id": "p29__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 247,
+   "ms": 268,
    "levelled": 0,
    "read": [
     "מעליות"
@@ -5172,7 +5172,7 @@
    "id": "p30__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 284,
+   "ms": 311,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5186,7 +5186,7 @@
    "id": "p30__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 303,
+   "ms": 350,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5200,7 +5200,7 @@
    "id": "p30__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 182,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5214,7 +5214,7 @@
    "id": "p30__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 190,
+   "ms": 228,
    "levelled": -3.8,
    "read": [
     "משיכה"
@@ -5228,7 +5228,7 @@
    "id": "p30__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 196,
+   "ms": 276,
    "levelled": -1.7,
    "read": [
     "משיכה"
@@ -5242,7 +5242,7 @@
    "id": "p30__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 202,
+   "ms": 254,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5256,7 +5256,7 @@
    "id": "p30__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 297,
+   "ms": 316,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5270,7 +5270,7 @@
    "id": "p30__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 300,
+   "ms": 278,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5284,7 +5284,7 @@
    "id": "p30__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 317,
+   "ms": 296,
    "levelled": 0,
    "read": [
     "משיוה"
@@ -5298,7 +5298,7 @@
    "id": "p30__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 123,
+   "ms": 141,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5312,7 +5312,7 @@
    "id": "p30__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 201,
+   "ms": 256,
    "levelled": 8.1,
    "read": [
     "משיכה"
@@ -5326,7 +5326,7 @@
    "id": "p30__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 242,
+   "ms": 312,
    "levelled": 0,
    "read": [
     "משיכה"
@@ -5340,7 +5340,7 @@
    "id": "p31__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 137,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5354,7 +5354,7 @@
    "id": "p31__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 147,
+   "ms": 206,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5368,7 +5368,7 @@
    "id": "p31__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 136,
+   "ms": 176,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5382,7 +5382,7 @@
    "id": "p31__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 146,
+   "ms": 172,
    "levelled": 4,
    "read": [
     "סגור"
@@ -5396,7 +5396,7 @@
    "id": "p31__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 167,
+   "ms": 169,
    "levelled": -1,
    "read": [
     "סגור"
@@ -5410,7 +5410,7 @@
    "id": "p31__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 144,
+   "ms": 173,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5424,7 +5424,7 @@
    "id": "p31__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 161,
+   "ms": 168,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5438,7 +5438,7 @@
    "id": "p31__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 133,
+   "ms": 157,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5452,7 +5452,7 @@
    "id": "p31__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 250,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "סזור"
@@ -5466,7 +5466,7 @@
    "id": "p31__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 48,
+   "ms": 64,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5480,7 +5480,7 @@
    "id": "p31__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 132,
+   "ms": 209,
    "levelled": 8.2,
    "read": [
     "סגור"
@@ -5494,7 +5494,7 @@
    "id": "p31__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 168,
+   "ms": 237,
    "levelled": 0,
    "read": [
     "סגור"
@@ -5508,7 +5508,7 @@
    "id": "p32__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 172,
+   "ms": 233,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5522,7 +5522,7 @@
    "id": "p32__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 178,
+   "ms": 183,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5536,7 +5536,7 @@
    "id": "p32__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 158,
+   "ms": 163,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5550,7 +5550,7 @@
    "id": "p32__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 272,
+   "ms": 274,
    "levelled": 4,
    "read": [
     "סופרמרקט"
@@ -5564,7 +5564,7 @@
    "id": "p32__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 151,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5578,7 +5578,7 @@
    "id": "p32__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 154,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5592,7 +5592,7 @@
    "id": "p32__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 182,
+   "ms": 165,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5606,7 +5606,7 @@
    "id": "p32__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 164,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5620,7 +5620,7 @@
    "id": "p32__occlude",
    "variant": "occlude",
    "cer": 0.375,
-   "ms": 312,
+   "ms": 292,
    "levelled": 0,
    "read": [
     "סופרם וט"
@@ -5634,7 +5634,7 @@
    "id": "p32__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 140,
+   "ms": 118,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5648,7 +5648,7 @@
    "id": "p32__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 202,
+   "ms": 171,
    "levelled": -8,
    "read": [
     "סופרמרקט"
@@ -5662,7 +5662,7 @@
    "id": "p32__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 225,
+   "ms": 252,
    "levelled": 0,
    "read": [
     "סופרמרקט"
@@ -5676,7 +5676,7 @@
    "id": "p33__clean",
    "variant": "clean",
    "cer": 0.25,
-   "ms": 239,
+   "ms": 246,
    "levelled": 0,
    "read": [
     "סבנה"
@@ -5690,7 +5690,7 @@
    "id": "p33__noise",
    "variant": "noise",
    "cer": 0.25,
-   "ms": 263,
+   "ms": 252,
    "levelled": 0,
    "read": [
     "סננה"
@@ -5704,7 +5704,7 @@
    "id": "p33__blur",
    "variant": "blur",
    "cer": 0.25,
-   "ms": 163,
+   "ms": 159,
    "levelled": 0,
    "read": [
     "סבנה"
@@ -5718,7 +5718,7 @@
    "id": "p33__rotate",
    "variant": "rotate",
    "cer": 0.25,
-   "ms": 242,
+   "ms": 270,
    "levelled": 4.3,
    "read": [
     "סננה"
@@ -5732,7 +5732,7 @@
    "id": "p33__perspective",
    "variant": "perspective",
    "cer": 0.25,
-   "ms": 151,
+   "ms": 161,
    "levelled": -1.4,
    "read": [
     "סננה"
@@ -5746,7 +5746,7 @@
    "id": "p33__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0.25,
-   "ms": 290,
+   "ms": 249,
    "levelled": 0,
    "read": [
     "סננה"
@@ -5760,7 +5760,7 @@
    "id": "p33__dark",
    "variant": "dark",
    "cer": 0.25,
-   "ms": 185,
+   "ms": 155,
    "levelled": 0,
    "read": [
     "סבנה"
@@ -5774,7 +5774,7 @@
    "id": "p33__bright",
    "variant": "bright",
    "cer": 0.25,
-   "ms": 278,
+   "ms": 246,
    "levelled": 0,
    "read": [
     "סבנה"
@@ -5788,7 +5788,7 @@
    "id": "p33__occlude",
    "variant": "occlude",
    "cer": 0.5,
-   "ms": 169,
+   "ms": 156,
    "levelled": 0,
    "read": [
     "סב ה"
@@ -5802,7 +5802,7 @@
    "id": "p33__tight",
    "variant": "tight",
    "cer": 0.5,
-   "ms": 84,
+   "ms": 89,
    "levelled": 0,
    "read": [
     "סבבה"
@@ -5818,7 +5818,7 @@
    "id": "p33__angle",
    "variant": "angle",
    "cer": 0.25,
-   "ms": 273,
+   "ms": 259,
    "levelled": -7.8,
    "read": [
     "סננה"
@@ -5832,7 +5832,7 @@
    "id": "p33__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 258,
+   "ms": 232,
    "levelled": 0,
    "read": [
     "סכנה"
@@ -5846,7 +5846,7 @@
    "id": "p34__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 129,
+   "ms": 153,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5860,7 +5860,7 @@
    "id": "p34__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 147,
+   "ms": 161,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5874,7 +5874,7 @@
    "id": "p34__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 148,
+   "ms": 155,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5888,7 +5888,7 @@
    "id": "p34__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 131,
+   "ms": 155,
    "levelled": -4,
    "read": [
     "סלט"
@@ -5902,7 +5902,7 @@
    "id": "p34__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 142,
+   "ms": 129,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5916,7 +5916,7 @@
    "id": "p34__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 139,
+   "ms": 147,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5930,7 +5930,7 @@
    "id": "p34__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 129,
+   "ms": 188,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5944,7 +5944,7 @@
    "id": "p34__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 123,
+   "ms": 135,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5958,7 +5958,7 @@
    "id": "p34__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 260,
+   "ms": 208,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -5968,7 +5968,7 @@
    "id": "p34__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 38,
+   "ms": 31,
    "levelled": 0,
    "read": [
     "סלט"
@@ -5982,7 +5982,7 @@
    "id": "p34__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 145,
+   "ms": 153,
    "levelled": 8,
    "read": [
     "סלט"
@@ -5996,7 +5996,7 @@
    "id": "p34__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 328,
+   "ms": 264,
    "levelled": 0,
    "read": [
     "סלט"
@@ -6010,7 +6010,7 @@
    "id": "p35__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 222,
+   "ms": 198,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6024,7 +6024,7 @@
    "id": "p35__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 197,
+   "ms": 208,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6038,7 +6038,7 @@
    "id": "p35__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 222,
+   "ms": 213,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6052,7 +6052,7 @@
    "id": "p35__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 242,
+   "ms": 229,
    "levelled": -3.9,
    "read": [
     "ספרייה"
@@ -6066,7 +6066,7 @@
    "id": "p35__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 250,
+   "ms": 244,
    "levelled": -1.1,
    "read": [
     "ספרייה"
@@ -6080,7 +6080,7 @@
    "id": "p35__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 231,
+   "ms": 204,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6094,7 +6094,7 @@
    "id": "p35__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 238,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6108,7 +6108,7 @@
    "id": "p35__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 237,
+   "ms": 203,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6122,13 +6122,13 @@
    "id": "p35__occlude",
    "variant": "occlude",
    "cer": 0.1667,
-   "ms": 242,
+   "ms": 237,
    "levelled": 0,
    "read": [
     "ספ ייה"
    ],
    "english": [
-    "Library"
+    null
    ],
    "wrong": []
   },
@@ -6136,7 +6136,7 @@
    "id": "p35__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 65,
+   "ms": 80,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6150,7 +6150,7 @@
    "id": "p35__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 211,
+   "ms": 217,
    "levelled": -8,
    "read": [
     "ספרייה"
@@ -6164,7 +6164,7 @@
    "id": "p35__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 289,
+   "ms": 250,
    "levelled": 0,
    "read": [
     "ספרייה"
@@ -6178,7 +6178,7 @@
    "id": "p36__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 224,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6192,7 +6192,7 @@
    "id": "p36__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 395,
+   "ms": 346,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6206,7 +6206,7 @@
    "id": "p36__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 225,
+   "ms": 186,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6220,7 +6220,7 @@
    "id": "p36__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 210,
+   "ms": 211,
    "levelled": -3.7,
    "read": [
     "פלאפל"
@@ -6234,7 +6234,7 @@
    "id": "p36__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 244,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6248,7 +6248,7 @@
    "id": "p36__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 266,
+   "ms": 204,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6262,7 +6262,7 @@
    "id": "p36__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 251,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6276,7 +6276,7 @@
    "id": "p36__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 225,
+   "ms": 228,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6290,7 +6290,7 @@
    "id": "p36__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 302,
+   "ms": 451,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -6300,7 +6300,7 @@
    "id": "p36__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 87,
+   "ms": 112,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6314,7 +6314,7 @@
    "id": "p36__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 230,
+   "ms": 205,
    "levelled": -7.7,
    "read": [
     "פלאפל"
@@ -6328,7 +6328,7 @@
    "id": "p36__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 286,
+   "ms": 263,
    "levelled": 0,
    "read": [
     "פלאפל"
@@ -6342,7 +6342,7 @@
    "id": "p37__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 307,
+   "ms": 287,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6356,7 +6356,7 @@
    "id": "p37__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 333,
+   "ms": 279,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6370,7 +6370,7 @@
    "id": "p37__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 171,
+   "ms": 165,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6384,7 +6384,7 @@
    "id": "p37__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 157,
+   "ms": 174,
    "levelled": -4,
    "read": [
     "פתוח"
@@ -6398,7 +6398,7 @@
    "id": "p37__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 172,
+   "ms": 177,
    "levelled": -2.1,
    "read": [
     "פתוח"
@@ -6412,7 +6412,7 @@
    "id": "p37__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 160,
+   "ms": 174,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6426,7 +6426,7 @@
    "id": "p37__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 249,
+   "ms": 292,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6440,7 +6440,7 @@
    "id": "p37__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 293,
+   "ms": 285,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6454,7 +6454,7 @@
    "id": "p37__occlude",
    "variant": "occlude",
    "cer": 0,
-   "ms": 185,
+   "ms": 195,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6468,7 +6468,7 @@
    "id": "p37__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 112,
+   "ms": 110,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6482,7 +6482,7 @@
    "id": "p37__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 181,
+   "ms": 197,
    "levelled": 8,
    "read": [
     "פתוח"
@@ -6496,7 +6496,7 @@
    "id": "p37__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 284,
+   "ms": 252,
    "levelled": 0,
    "read": [
     "פתוח"
@@ -6510,7 +6510,7 @@
    "id": "p38__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 155,
+   "ms": 187,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6524,7 +6524,7 @@
    "id": "p38__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 160,
+   "ms": 166,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6538,7 +6538,7 @@
    "id": "p38__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 162,
+   "ms": 164,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6552,7 +6552,7 @@
    "id": "p38__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 162,
+   "ms": 214,
    "levelled": -4,
    "read": [
     "פתוח 24 שעות"
@@ -6566,7 +6566,7 @@
    "id": "p38__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 163,
+   "ms": 217,
    "levelled": -1.1,
    "read": [
     "פתוח 24 שעות"
@@ -6580,7 +6580,7 @@
    "id": "p38__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 164,
+   "ms": 177,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6594,7 +6594,7 @@
    "id": "p38__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 173,
+   "ms": 163,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6608,7 +6608,7 @@
    "id": "p38__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 184,
+   "ms": 159,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6622,7 +6622,7 @@
    "id": "p38__occlude",
    "variant": "occlude",
    "cer": 0.5,
-   "ms": 173,
+   "ms": 167,
    "levelled": 0,
    "read": [
     "-] 4 שעות"
@@ -6638,7 +6638,7 @@
    "id": "p38__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 111,
+   "ms": 115,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6652,7 +6652,7 @@
    "id": "p38__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 196,
+   "ms": 187,
    "levelled": -8,
    "read": [
     "פתוח 24 שעות"
@@ -6666,7 +6666,7 @@
    "id": "p38__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 208,
+   "ms": 236,
    "levelled": 0,
    "read": [
     "פתוח 24 שעות"
@@ -6680,7 +6680,7 @@
    "id": "p39__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 133,
+   "ms": 144,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6694,7 +6694,7 @@
    "id": "p39__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 131,
+   "ms": 137,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6708,7 +6708,7 @@
    "id": "p39__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 227,
+   "ms": 257,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6722,7 +6722,7 @@
    "id": "p39__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 174,
+   "ms": 168,
    "levelled": -4,
    "read": [
     "קפה"
@@ -6736,7 +6736,7 @@
    "id": "p39__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 153,
+   "ms": 144,
    "levelled": -1.6,
    "read": [
     "קפה"
@@ -6750,7 +6750,7 @@
    "id": "p39__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 123,
+   "ms": 143,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6764,7 +6764,7 @@
    "id": "p39__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 141,
+   "ms": 157,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6778,7 +6778,7 @@
    "id": "p39__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 174,
+   "ms": 140,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6792,7 +6792,7 @@
    "id": "p39__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 213,
+   "ms": 238,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -6802,7 +6802,7 @@
    "id": "p39__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 36,
+   "ms": 59,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6816,7 +6816,7 @@
    "id": "p39__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 148,
+   "ms": 176,
    "levelled": 7.9,
    "read": [
     "קפה"
@@ -6830,7 +6830,7 @@
    "id": "p39__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 162,
+   "ms": 203,
    "levelled": 0,
    "read": [
     "קפה"
@@ -6844,7 +6844,7 @@
    "id": "p40__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 188,
+   "ms": 185,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6858,7 +6858,7 @@
    "id": "p40__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 173,
+   "ms": 178,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6872,7 +6872,7 @@
    "id": "p40__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 180,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6886,7 +6886,7 @@
    "id": "p40__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 232,
+   "ms": 169,
    "levelled": -3.8,
    "read": [
     "רחוב הרצל"
@@ -6900,7 +6900,7 @@
    "id": "p40__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 149,
+   "ms": 158,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6914,7 +6914,7 @@
    "id": "p40__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 170,
+   "ms": 166,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6928,7 +6928,7 @@
    "id": "p40__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 179,
+   "ms": 196,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6942,7 +6942,7 @@
    "id": "p40__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 194,
+   "ms": 231,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6956,7 +6956,7 @@
    "id": "p40__occlude",
    "variant": "occlude",
    "cer": 0.125,
-   "ms": 166,
+   "ms": 224,
    "levelled": 0,
    "read": [
     "רחוב ו רצל"
@@ -6970,7 +6970,7 @@
    "id": "p40__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 86,
+   "ms": 104,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -6984,7 +6984,7 @@
    "id": "p40__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 172,
+   "ms": 186,
    "levelled": 8.1,
    "read": [
     "רחוב הרצל"
@@ -6998,7 +6998,7 @@
    "id": "p40__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 122,
+   "ms": 140,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -7012,7 +7012,7 @@
    "id": "p41__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 186,
+   "ms": 212,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7026,7 +7026,7 @@
    "id": "p41__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 176,
+   "ms": 167,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7040,7 +7040,7 @@
    "id": "p41__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 208,
+   "ms": 182,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7054,7 +7054,7 @@
    "id": "p41__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 223,
+   "ms": 199,
    "levelled": -3.9,
    "read": [
     "שדרות בן יהודה"
@@ -7068,7 +7068,7 @@
    "id": "p41__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 169,
+   "ms": 173,
    "levelled": -0.8,
    "read": [
     "שדרות בן יהודה"
@@ -7082,7 +7082,7 @@
    "id": "p41__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 202,
+   "ms": 194,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7096,7 +7096,7 @@
    "id": "p41__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 183,
+   "ms": 156,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7110,7 +7110,7 @@
    "id": "p41__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 161,
+   "ms": 175,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7124,7 +7124,7 @@
    "id": "p41__occlude",
    "variant": "occlude",
    "cer": 0.5833,
-   "ms": 184,
+   "ms": 164,
    "levelled": 0,
    "read": [
     "2 יהודה"
@@ -7138,7 +7138,7 @@
    "id": "p41__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 121,
+   "ms": 125,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7152,7 +7152,7 @@
    "id": "p41__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 215,
+   "ms": 225,
    "levelled": -7.9,
    "read": [
     "שדרות בן יהודה"
@@ -7166,7 +7166,7 @@
    "id": "p41__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 226,
+   "ms": 241,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -7180,7 +7180,7 @@
    "id": "p42__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 359,
+   "ms": 349,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7194,7 +7194,7 @@
    "id": "p42__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 335,
+   "ms": 302,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7208,7 +7208,7 @@
    "id": "p42__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 223,
+   "ms": 201,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7222,7 +7222,7 @@
    "id": "p42__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 354,
+   "ms": 348,
    "levelled": 4,
    "read": [
     "שירותים"
@@ -7236,7 +7236,7 @@
    "id": "p42__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 299,
+   "ms": 344,
    "levelled": -1.2,
    "read": [
     "שירותים"
@@ -7250,7 +7250,7 @@
    "id": "p42__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 161,
+   "ms": 181,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7264,7 +7264,7 @@
    "id": "p42__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 310,
+   "ms": 328,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7278,7 +7278,7 @@
    "id": "p42__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 348,
+   "ms": 336,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7292,13 +7292,13 @@
    "id": "p42__occlude",
    "variant": "occlude",
    "cer": 0.1429,
-   "ms": 353,
+   "ms": 337,
    "levelled": 0,
    "read": [
     "שירות ם"
    ],
    "english": [
-    "Restrooms"
+    null
    ],
    "wrong": []
   },
@@ -7306,7 +7306,7 @@
    "id": "p42__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 126,
+   "ms": 163,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7320,7 +7320,7 @@
    "id": "p42__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 330,
+   "ms": 384,
    "levelled": -8,
    "read": [
     "שירותים"
@@ -7334,7 +7334,7 @@
    "id": "p42__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 270,
+   "ms": 283,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -7348,7 +7348,7 @@
    "id": "p43__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 128,
+   "ms": 134,
    "levelled": 0,
    "read": [
     "תה"
@@ -7362,7 +7362,7 @@
    "id": "p43__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 128,
+   "ms": 156,
    "levelled": 0,
    "read": [
     "תה"
@@ -7376,7 +7376,7 @@
    "id": "p43__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 136,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "תה"
@@ -7390,7 +7390,7 @@
    "id": "p43__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 136,
+   "ms": 166,
    "levelled": 4.1,
    "read": [
     "תה"
@@ -7404,7 +7404,7 @@
    "id": "p43__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 144,
+   "ms": 133,
    "levelled": 0,
    "read": [
     "תה"
@@ -7418,7 +7418,7 @@
    "id": "p43__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 116,
+   "ms": 139,
    "levelled": 0,
    "read": [
     "תה"
@@ -7432,7 +7432,7 @@
    "id": "p43__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 135,
+   "ms": 129,
    "levelled": 0,
    "read": [
     "תה"
@@ -7446,7 +7446,7 @@
    "id": "p43__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 112,
+   "ms": 157,
    "levelled": 0,
    "read": [
     "תה"
@@ -7460,7 +7460,7 @@
    "id": "p43__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 237,
+   "ms": 217,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -7470,7 +7470,7 @@
    "id": "p43__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 63,
+   "ms": 51,
    "levelled": 0,
    "read": [
     "תה"
@@ -7484,7 +7484,7 @@
    "id": "p43__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 156,
+   "ms": 143,
    "levelled": -8,
    "read": [
     "תה"
@@ -7498,7 +7498,7 @@
    "id": "p43__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 278,
+   "ms": 335,
    "levelled": 0,
    "read": [
     "תה"
@@ -7512,7 +7512,7 @@
    "id": "p44__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 166,
+   "ms": 205,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7526,7 +7526,7 @@
    "id": "p44__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 191,
+   "ms": 201,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7540,7 +7540,7 @@
    "id": "p44__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 190,
+   "ms": 176,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7554,7 +7554,7 @@
    "id": "p44__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 189,
+   "ms": 177,
    "levelled": 4,
    "read": [
     "תחנת אוטובוס"
@@ -7568,7 +7568,7 @@
    "id": "p44__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 162,
+   "ms": 180,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7582,7 +7582,7 @@
    "id": "p44__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 178,
+   "ms": 170,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7596,7 +7596,7 @@
    "id": "p44__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 202,
+   "ms": 153,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7610,7 +7610,7 @@
    "id": "p44__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 164,
+   "ms": 174,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7624,13 +7624,13 @@
    "id": "p44__occlude",
    "variant": "occlude",
    "cer": 0.1818,
-   "ms": 160,
+   "ms": 191,
    "levelled": 0,
    "read": [
     "תחו ז אוטובוס"
    ],
    "english": [
-    "Bus Stop"
+    null
    ],
    "wrong": []
   },
@@ -7638,7 +7638,7 @@
    "id": "p44__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 109,
+   "ms": 100,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7652,7 +7652,7 @@
    "id": "p44__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 192,
+   "ms": 180,
    "levelled": 8,
    "read": [
     "תחנת אוטובוס"
@@ -7666,7 +7666,7 @@
    "id": "p44__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 115,
+   "ms": 111,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -7680,7 +7680,7 @@
    "id": "p45__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 174,
+   "ms": 172,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7694,7 +7694,7 @@
    "id": "p45__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 164,
+   "ms": 217,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7708,7 +7708,7 @@
    "id": "p45__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 174,
+   "ms": 185,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7722,7 +7722,7 @@
    "id": "p45__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 183,
+   "ms": 197,
    "levelled": -3.9,
    "read": [
     "תחנת דלק"
@@ -7736,7 +7736,7 @@
    "id": "p45__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 167,
+   "ms": 184,
    "levelled": -1,
    "read": [
     "תחנת דלק"
@@ -7750,7 +7750,7 @@
    "id": "p45__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 159,
+   "ms": 163,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7764,7 +7764,7 @@
    "id": "p45__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 200,
+   "ms": 210,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7778,7 +7778,7 @@
    "id": "p45__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 208,
+   "ms": 189,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7792,7 +7792,7 @@
    "id": "p45__occlude",
    "variant": "occlude",
    "cer": 0,
-   "ms": 349,
+   "ms": 286,
    "levelled": 0,
    "read": [
     "תחנת]דלק"
@@ -7806,7 +7806,7 @@
    "id": "p45__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 110,
+   "ms": 106,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7820,7 +7820,7 @@
    "id": "p45__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 185,
+   "ms": 216,
    "levelled": -7.9,
    "read": [
     "תחנת דלק"
@@ -7834,7 +7834,7 @@
    "id": "p45__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 259,
+   "ms": 325,
    "levelled": 0,
    "read": [
     "תחנת דלק"
@@ -7848,7 +7848,7 @@
    "id": "p46__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 278,
+   "ms": 298,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7862,7 +7862,7 @@
    "id": "p46__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 239,
+   "ms": 323,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7876,7 +7876,7 @@
    "id": "p46__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 162,
+   "ms": 166,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7890,7 +7890,7 @@
    "id": "p46__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 292,
+   "ms": 309,
    "levelled": -4,
    "read": [
     "תחנת רכבת"
@@ -7904,7 +7904,7 @@
    "id": "p46__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 195,
+   "ms": 212,
    "levelled": -0.8,
    "read": [
     "תחנת רכבת"
@@ -7918,7 +7918,7 @@
    "id": "p46__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 275,
+   "ms": 262,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7932,7 +7932,7 @@
    "id": "p46__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 246,
+   "ms": 304,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7946,7 +7946,7 @@
    "id": "p46__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 324,
+   "ms": 287,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7960,7 +7960,7 @@
    "id": "p46__occlude",
    "variant": "occlude",
    "cer": 0.75,
-   "ms": 242,
+   "ms": 208,
    "levelled": 0,
    "read": [
     "תח 1"
@@ -7974,7 +7974,7 @@
    "id": "p46__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 196,
+   "ms": 204,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -7988,7 +7988,7 @@
    "id": "p46__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 260,
+   "ms": 302,
    "levelled": 8,
    "read": [
     "תחנת רכבת"
@@ -8002,7 +8002,7 @@
    "id": "p46__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 245,
+   "ms": 299,
    "levelled": 0,
    "read": [
     "תחנת רכבת"
@@ -8016,7 +8016,7 @@
    "id": "p47__clean",
    "variant": "clean",
    "cer": 0,
-   "ms": 335,
+   "ms": 344,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8030,7 +8030,7 @@
    "id": "p47__noise",
    "variant": "noise",
    "cer": 0,
-   "ms": 206,
+   "ms": 220,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8044,7 +8044,7 @@
    "id": "p47__blur",
    "variant": "blur",
    "cer": 0,
-   "ms": 192,
+   "ms": 162,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8058,7 +8058,7 @@
    "id": "p47__rotate",
    "variant": "rotate",
    "cer": 0,
-   "ms": 199,
+   "ms": 202,
    "levelled": -3.6,
    "read": [
     "תפריט"
@@ -8072,7 +8072,7 @@
    "id": "p47__perspective",
    "variant": "perspective",
    "cer": 0,
-   "ms": 193,
+   "ms": 195,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8086,7 +8086,7 @@
    "id": "p47__lowcontrast",
    "variant": "lowcontrast",
    "cer": 0,
-   "ms": 202,
+   "ms": 248,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8100,7 +8100,7 @@
    "id": "p47__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 311,
+   "ms": 297,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8114,7 +8114,7 @@
    "id": "p47__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 278,
+   "ms": 305,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8128,7 +8128,7 @@
    "id": "p47__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 158,
+   "ms": 194,
    "levelled": 0,
    "read": [
     "תפויט"
@@ -8142,7 +8142,7 @@
    "id": "p47__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 86,
+   "ms": 85,
    "levelled": 0,
    "read": [
     "תפריט"
@@ -8156,7 +8156,7 @@
    "id": "p47__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 190,
+   "ms": 224,
    "levelled": -7.8,
    "read": [
     "תפריט"
@@ -8170,7 +8170,7 @@
    "id": "p47__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 275,
+   "ms": 309,
    "levelled": 0,
    "read": [
     "תפריט"

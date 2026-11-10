@@ -42,9 +42,12 @@ test('e2e #/camera: a tilted sign is straightened, and the tap targets follow th
   assert.notEqual(r.hits[0].top, r.afterToggle.hits[0].top, 'on the photo as taken the target sits where the tilted line is');
 });
 
-test('e2e #/camera: lines outside the sign list: the app dictionary translates word for word, or the line is left alone', { skip: !runCamera || !existsSync(fixture('outside-list-big-house.jpg')) }, async () => {
-  const house = await runCamera({ image: fixture('outside-list-big-house.jpg') }); clean(house);
-  assert.deepEqual(house.lines, ['1. Big House']); assert.match(house.detail, /Word for word from the Aleph dictionary/); assert.equal(house.dictionaryFetched, true);
+test('e2e #/camera: lines outside the sign list: the app dictionary translates word for word, or the line is left alone', { skip: !runCamera || !existsSync(fixture('outside-list-big-lemon.jpg')) }, async () => {
+  const lemon = await runCamera({ image: fixture('outside-list-big-lemon.jpg') }); clean(lemon);
+  assert.deepEqual(lemon.lines, ['1. Big Lemon']); assert.match(lemon.detail, /Word for word from the Aleph dictionary/); assert.equal(lemon.dictionaryFetched, true);
+  const salt = await runCamera({ image: fixture('outside-list-salt.jpg') }); clean(salt);
+  assert.deepEqual(salt.lines, ['1. Not translated'], 'salt or sailor: a spelling with two meanings is not drawn');
+  assert.equal(salt.words.length, 1); assert.match(salt.words[0], /This spelling can also be/);
   const shoes = await runCamera({ image: sign('shoe-shop.jpg') }); clean(shoes);
   assert.deepEqual(shoes.lines, ['1. Not translated']);
   assert.equal(shoes.toggle, null, 'nothing was drawn, so there is no translated photo to switch to');

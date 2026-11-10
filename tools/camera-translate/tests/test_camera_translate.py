@@ -100,10 +100,8 @@ def test_word_list_matches_the_shared_cases_and_the_app_copy():
 
 def test_guard_list_of_real_words_is_current():
     import subprocess, sys
-    before = (ROOT / 'data/camera/sign-glossary.json').read_bytes()
-    r = subprocess.run([sys.executable, str(HERE.parent / 'build_real_neighbours.py')], capture_output=True, text=True, timeout=300)
-    assert r.returncode == 0, r.stderr[-500:]
-    assert (ROOT / 'data/camera/sign-glossary.json').read_bytes() == before, 'realNeighbours was stale: commit the rebuilt word list'
+    r = subprocess.run([sys.executable, str(HERE.parent / 'build_real_neighbours.py'), '--check'], capture_output=True, text=True, timeout=300)
+    assert r.returncode == 0, (r.stdout + r.stderr)[-500:]
 
 
 def test_sacred_name_guard():

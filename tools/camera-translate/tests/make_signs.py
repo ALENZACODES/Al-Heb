@@ -106,8 +106,8 @@ def main():
     # sign list (drawn word for word), kept here so the measured set stays at twenty.
     fx = HERE / 'fixtures'; fx.mkdir(exist_ok=True)
     cv2.imwrite(str(fx / 'bilingual-exit.jpg'), render(['יציאה / Exit'], 'alef-bold', 70, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
+    cv2.imwrite(str(fx / 'outside-list-big-lemon.jpg'), render(['לימון גדול'], 'alef-bold', 84, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
     cv2.imwrite(str(fx / 'outside-list-salt.jpg'), render(['מלח'], 'alef-bold', 96, DARK, CREAM, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
-    cv2.imwrite(str(fx / 'outside-list-big-house.jpg'), render(['בית גדול'], 'alef-bold', 84, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
     # One extra file for the metadata tests: the first sign saved the way a phone would, with camera details and a GPS position.
     phone = Image.open(OUT / 'optical-store.jpg')
     exif = Image.Exif(); exif[0x010F] = 'TestCam'; gps = exif.get_ifd(0x8825)

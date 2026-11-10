@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-small-words-2",
+ "title": "Little words 2",
+ "theme": "small-words",
+ "level": "A2",
+ "track": "both",
+ "pack": "small-words-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h67c6be75",
+   "he": "זֶה",
+   "translit": "zeh",
+   "en": "this, this one",
+   "kind": "word",
+   "audioId": "r23-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hea14727f",
+   "he": "זֹאת",
+   "translit": "zot",
+   "en": "this (feminine)",
+   "kind": "word",
+   "audioId": "hea14727f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbd079057",
+   "he": "קְצָת",
+   "translit": "ketzat",
+   "en": "a little, a bit, a little bit",
+   "kind": "word",
+   "audioId": "hbd079057",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h62c2a993",
+   "he": "תַּחַת",
+   "translit": "tachat",
+   "en": "below",
+   "kind": "word",
+   "audioId": "h62c2a993",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0faf39fb",
+   "he": "מִישֶׁהוּ",
+   "translit": "mishehu",
+   "en": "someone, somebody",
+   "kind": "word",
+   "audioId": "h0faf39fb",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h14eb0d0c",
+   "he": "כֻּלָּם",
+   "translit": "kulam",
+   "en": "everyone",
+   "kind": "word",
+   "audioId": "r13-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7494d535",
+   "he": "זוֹ",
+   "translit": "zo",
+   "en": "this, this one",
+   "kind": "word",
+   "audioId": "h7494d535",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h97be2e78",
+   "he": "אֲפִלּוּ",
+   "translit": "afilu",
+   "en": "even",
+   "kind": "word",
+   "audioId": "h97be2e78",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf3892816",
+   "he": "אֵיזֶה",
+   "translit": "eizeh",
+   "en": "what, which",
+   "kind": "word",
+   "audioId": "hf3892816",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h432cf2d0",
+   "he": "הֲ־",
+   "translit": "ha",
+   "en": "an interrogative particle, introducing a yes-no question",
+   "kind": "word",
+   "audioId": "h432cf2d0",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h324e6752",
+   "he": "דֶּרֶךְ",
+   "translit": "derekh",
+   "en": "through, via, by way of",
+   "kind": "word",
+   "audioId": "r18-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha7a8a47a",
+   "he": "אַחֲרֵי",
+   "translit": "acharei",
+   "en": "after",
+   "kind": "word",
+   "audioId": "i-14-w12",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

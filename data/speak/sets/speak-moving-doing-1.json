@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-moving-doing-1",
+ "title": "Moving and doing 1",
+ "theme": "moving-doing",
+ "level": "A1",
+ "track": "both",
+ "pack": "moving-doing-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h81e8c0d1",
+   "he": "הָלַךְ",
+   "translit": "halakh",
+   "en": "to walk, go, especially on foot",
+   "kind": "word",
+   "audioId": "h81e8c0d1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h66c2ffb6",
+   "he": "בָּא",
+   "translit": "ba",
+   "en": "to come",
+   "kind": "word",
+   "audioId": "r07-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h39d32f55",
+   "he": "שָׂם",
+   "translit": "sam",
+   "en": "to put, place",
+   "kind": "word",
+   "audioId": "aleinu-1-w18",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfd3118ed",
+   "he": "הִגִּיעַ",
+   "translit": "higi'a",
+   "en": "to arrive, to get, to reach",
+   "kind": "word",
+   "audioId": "hfd3118ed",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1561ca15",
+   "he": "עָבַר",
+   "translit": "avar",
+   "en": "to pass, to cross",
+   "kind": "word",
+   "audioId": "h1561ca15",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfcd9d9b6",
+   "he": "יָשַׁב",
+   "translit": "yashav",
+   "en": "to sit; to live (somewhere)",
+   "kind": "word",
+   "audioId": "hfcd9d9b6",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h888649f8",
+   "he": "עָלָה",
+   "translit": "alah",
+   "en": "to ascend, rise, go up",
+   "kind": "word",
+   "audioId": "h888649f8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd04514bf",
+   "he": "הָרַג",
+   "translit": "harag",
+   "en": "to kill (put to death)",
+   "kind": "word",
+   "audioId": "hd04514bf",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h842147e5",
+   "he": "שָׁב",
+   "translit": "shav",
+   "en": "to return",
+   "kind": "word",
+   "audioId": "r01-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h059e9e22",
+   "he": "שָׁלַח",
+   "translit": "shalach",
+   "en": "to send (someone or something)",
+   "kind": "word",
+   "audioId": "h059e9e22",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb9b267e3",
+   "he": "עָמַד",
+   "translit": "amad",
+   "en": "to stand",
+   "kind": "word",
+   "audioId": "hb9b267e3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbd47566a",
+   "he": "נִכְנַס",
+   "translit": "nikhnas",
+   "en": "to enter",
+   "kind": "word",
+   "audioId": "hbd47566a",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

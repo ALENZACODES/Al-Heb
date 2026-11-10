@@ -1,0 +1,331 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "deuteronomy",
+ "bookHe": "דְּבָרִים",
+ "chapter": 18,
+ "ref": "Deuteronomy 18",
+ "parshaIds": [
+  "shoftim"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-08",
+ "verses": [
+  {
+   "n": 1,
+   "he": "לֹא־יִהְיֶה לַכֹּהֲנִים הַלְוִיִּם כָּל־שֵׁבֶט לֵוִי חֵלֶק וְנַחֲלָה עִם־יִשְׂרָאֵל אִשֵּׁי יְהוָה וְנַחֲלָתוֹ יֹאכֵלוּן׃",
+   "heTrope": "לֹֽא־יִ֠הְיֶה לַכֹּהֲנִ֨ים הַלְוִיִּ֜ם כָּל־שֵׁ֧בֶט לֵוִ֛י חֵ֥לֶק וְנַחֲלָ֖ה עִם־יִשְׂרָאֵ֑ל אִשֵּׁ֧י יְהוָ֛ה וְנַחֲלָת֖וֹ יֹאכֵלֽוּן׃",
+   "en": "The priests the Levites, even all the tribe of Levi, shall have no portion nor inheritance with Israel; they shall eat the offerings of the LORD made by fire, and His inheritance.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 2,
+   "he": "וְנַחֲלָה לֹא־יִהְיֶה־לּוֹ בְּקֶרֶב אֶחָיו יְהוָה הוּא נַחֲלָתוֹ כַּאֲשֶׁר דִּבֶּר־לוֹ׃",
+   "heTrope": "וְנַחֲלָ֥ה לֹא־יִֽהְיֶה־לּ֖וֹ בְּקֶ֣רֶב אֶחָ֑יו יְהוָה֙ ה֣וּא נַחֲלָת֔וֹ כַּאֲשֶׁ֖ר דִּבֶּר־לֽוֹ׃",
+   "en": "And they shall have no inheritance among their brethren; the LORD is their inheritance, as He hath spoken unto them.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וְזֶה יִהְיֶה מִשְׁפַּט הַכֹּהֲנִים מֵאֵת הָעָם מֵאֵת זֹבְחֵי הַזֶּבַח אִם־שׁוֹר אִם־שֶׂה וְנָתַן לַכֹּהֵן הַזְּרֹעַ וְהַלְּחָיַיִם וְהַקֵּבָה׃",
+   "heTrope": "וְזֶ֡ה יִהְיֶה֩ מִשְׁפַּ֨ט הַכֹּהֲנִ֜ים מֵאֵ֣ת הָעָ֗ם מֵאֵ֛ת זֹבְחֵ֥י הַזֶּ֖בַח אִם־שׁ֣וֹר אִם־שֶׂ֑ה וְנָתַן֙ לַכֹּהֵ֔ן הַזְּרֹ֥עַ וְהַלְּחָיַ֖יִם וְהַקֵּבָֽה׃",
+   "en": "And this shall be the priests’due from the people, from them that offer a sacrifice, whether it be ox or sheep, that they shall give unto the priest the shoulder, and the two cheeks, and the maw.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 4,
+   "he": "רֵאשִׁית דְּגָנְךָ תִּירֹשְׁךָ וְיִצְהָרֶךָ וְרֵאשִׁית גֵּז צֹאנְךָ תִּתֶּן־לּוֹ׃",
+   "heTrope": "רֵאשִׁ֨ית דְּגֽ͏ָנְךָ֜ תִּֽירֹשְׁךָ֣ וְיִצְהָרֶ֗ךָ וְרֵאשִׁ֛ית גֵּ֥ז צֹאנְךָ֖ תִּתֶּן־לּֽוֹ׃",
+   "en": "The first-fruits of thy corn, of thy wine, and of thine oil, and the first of the fleece of thy sheep, shalt thou give him.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "כִּי בוֹ בָּחַר יְהוָה אֱלֹהֶיךָ מִכָּל־שְׁבָטֶיךָ לַעֲמֹד לְשָׁרֵת בְּשֵׁם־יְהוָה הוּא וּבָנָיו כָּל־הַיָּמִים׃",
+   "heTrope": "כִּ֣י ב֗וֹ בָּחַ֛ר יְהוָ֥ה אֱלֹהֶ֖יךָ מִכָּל־שְׁבָטֶ֑יךָ לַעֲמֹ֨ד לְשָׁרֵ֧ת בְּשֵׁם־יְהוָ֛ה ה֥וּא וּבָנָ֖יו כָּל־הַיָּמִֽים׃",
+   "en": "For the LORD thy God hath chosen him out of all thy tribes, to stand to minister in the name of the LORD, him and his sons for ever.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 6,
+   "he": "וְכִי־יָבֹא הַלֵּוִי מֵאַחַד שְׁעָרֶיךָ מִכָּל־יִשְׂרָאֵל אֲשֶׁר־הוּא גָּר שָׁם וּבָא בְּכָל־אַוַּת נַפְשׁוֹ אֶל־הַמָּקוֹם אֲשֶׁר־יִבְחַר יְהוָה׃",
+   "heTrope": "וְכִֽי־יָבֹ֨א הַלֵּוִ֜י מֵאַחַ֤ד שְׁעָרֶ֙יךָ֙ מִכָּל־יִשְׂרָאֵ֔ל אֲשֶׁר־ה֖וּא גָּ֣ר שָׁ֑ם וּבָא֙ בְּכָל־אַוַּ֣ת נַפְשׁ֔וֹ אֶל־הַמָּק֖וֹם אֲשֶׁר־יִבְחַ֥ר יְהוָֽה׃",
+   "en": "And if a Levite come from any of thy gates out of all Israel, where he sojourneth, and come with all the desire of his soul unto the place which the LORD shall choose;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 7,
+   "he": "וְשֵׁרֵת בְּשֵׁם יְהוָה אֱלֹהָיו כְּכָל־אֶחָיו הַלְוִיִּם הָעֹמְדִים שָׁם לִפְנֵי יְהוָה׃",
+   "heTrope": "וְשֵׁרֵ֕ת בְּשֵׁ֖ם יְהוָ֣ה אֱלֹהָ֑יו כְּכָל־אֶחָיו֙ הַלְוִיִּ֔ם הָעֹמְדִ֥ים שָׁ֖ם לִפְנֵ֥י יְהוָֽה׃",
+   "en": "then he shall minister in the name of the LORD his God, as all his brethren the Levites do, who stand there before the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 8,
+   "he": "חֵלֶק כְּחֵלֶק יֹאכֵלוּ לְבַד מִמְכָּרָיו עַל־הָאָבוֹת׃",
+   "heTrope": "חֵ֥לֶק כְּחֵ֖לֶק יֹאכֵ֑לוּ לְבַ֥ד מִמְכָּרָ֖יו עַל־הָאָבֽוֹת׃",
+   "en": "They shall have like portions to eat, beside that which is his due according to the fathers’houses. .",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "כִּי אַתָּה בָּא אֶל־הָאָרֶץ אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ לֹא־תִלְמַד לַעֲשׂוֹת כְּתוֹעֲבֹת הַגּוֹיִם הָהֵם׃",
+   "heTrope": "כִּ֤י אַתָּה֙ בָּ֣א אֶל־הָאָ֔רֶץ אֲשֶׁר־יְהוָ֥ה אֱלֹהֶ֖יךָ נֹתֵ֣ן לָ֑ךְ לֹֽא־תִלְמַ֣ד לַעֲשׂ֔וֹת כְּתוֹעֲבֹ֖ת הַגּוֹיִ֥ם הָהֵֽם׃",
+   "en": "When thou art come into the land which the LORD thy God giveth thee, thou shalt not learn to do after the abominations of those nations.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 10,
+   "he": "לֹא־יִמָּצֵא בְךָ מַעֲבִיר בְּנוֹ־וּבִתּוֹ בָּאֵשׁ קֹסֵם קְסָמִים מְעוֹנֵן וּמְנַחֵשׁ וּמְכַשֵּׁף׃",
+   "heTrope": "לֹֽא־יִמָּצֵ֣א בְךָ֔ מַעֲבִ֥יר בְּנֽוֹ־וּבִתּ֖וֹ בָּאֵ֑שׁ קֹסֵ֣ם קְסָמִ֔ים מְעוֹנֵ֥ן וּמְנַחֵ֖שׁ וּמְכַשֵּֽׁף׃",
+   "en": "There shall not be found among you any one that maketh his son or his daughter to pass through the fire, one that useth divination, a soothsayer, or an enchanter, or a sorcerer,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 11,
+   "he": "וְחֹבֵר חָבֶר וְשֹׁאֵל אוֹב וְיִדְּעֹנִי וְדֹרֵשׁ אֶל־הַמֵּתִים׃",
+   "heTrope": "וְחֹבֵ֖ר חָ֑בֶר וְשֹׁאֵ֥ל אוֹב֙ וְיִדְּעֹנִ֔י וְדֹרֵ֖שׁ אֶל־הַמֵּתִֽים׃",
+   "en": "or a charmer, or one that consulteth a ghost or a familiar spirit, or a necromancer.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "כִּי־תוֹעֲבַת יְהוָה כָּל־עֹשֵׂה אֵלֶּה וּבִגְלַל הַתּוֹעֵבֹת הָאֵלֶּה יְהוָה אֱלֹהֶיךָ מוֹרִישׁ אוֹתָם מִפָּנֶיךָ׃",
+   "heTrope": "כִּֽי־תוֹעֲבַ֥ת יְהוָ֖ה כָּל־עֹ֣שֵׂה אֵ֑לֶּה וּבִגְלַל֙ הַתּוֹעֵבֹ֣ת הָאֵ֔לֶּה יְהוָ֣ה אֱלֹהֶ֔יךָ מוֹרִ֥ישׁ אוֹתָ֖ם מִפָּנֶֽיךָ׃",
+   "en": "For whosoever doeth these things is an abomination unto the LORD; and because of these abominations the LORD thy God is driving them out from before thee.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 13,
+   "he": "תָּמִים תִּהְיֶה עִם יְהוָה אֱלֹהֶיךָ׃",
+   "heTrope": "תָּמִ֣ים תִּֽהְיֶ֔ה עִ֖ם יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+   "en": "Thou shalt be whole-hearted with the LORD thy God.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 14,
+   "he": "כִּי הַגּוֹיִם הָאֵלֶּה אֲשֶׁר אַתָּה יוֹרֵשׁ אוֹתָם אֶל־מְעֹנְנִים וְאֶל־קֹסְמִים יִשְׁמָעוּ וְאַתָּה לֹא כֵן נָתַן לְךָ יְהוָה אֱלֹהֶיךָ׃",
+   "heTrope": "כִּ֣י ׀ הַגּוֹיִ֣ם הָאֵ֗לֶּה אֲשֶׁ֤ר אַתָּה֙ יוֹרֵ֣שׁ אוֹתָ֔ם אֶל־מְעֹנְנִ֥ים וְאֶל־קֹסְמִ֖ים יִשְׁמָ֑עוּ וְאַתָּ֕ה לֹ֣א כֵ֔ן נָ֥תַן לְךָ֖ יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+   "en": "For these nations, that thou art to dispossess, hearken unto soothsayers, and unto diviners; but as for thee, the LORD thy God hath not suffered thee so to do.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 15,
+   "he": "נָבִיא מִקִּרְבְּךָ מֵאַחֶיךָ כָּמֹנִי יָקִים לְךָ יְהוָה אֱלֹהֶיךָ אֵלָיו תִּשְׁמָעוּן׃",
+   "heTrope": "נָבִ֨יא מִקִּרְבְּךָ֤ מֵאַחֶ֙יךָ֙ כָּמֹ֔נִי יָקִ֥ים לְךָ֖ יְהוָ֣ה אֱלֹהֶ֑יךָ אֵלָ֖יו תִּשְׁמָעֽוּן׃",
+   "en": "A prophet will the LORD thy God raise up unto thee, from the midst of thee, of thy brethren, like unto me; unto him ye shall hearken;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 16,
+   "he": "כְּכֹל אֲשֶׁר־שָׁאַלְתָּ מֵעִם יְהוָה אֱלֹהֶיךָ בְּחֹרֵב בְּיוֹם הַקָּהָל לֵאמֹר לֹא אֹסֵף לִשְׁמֹעַ אֶת־קוֹל יְהוָה אֱלֹהָי וְאֶת־הָאֵשׁ הַגְּדֹלָה הַזֹּאת לֹא־אֶרְאֶה עוֹד וְלֹא אָמוּת׃",
+   "heTrope": "כְּכֹ֨ל אֲשֶׁר־שָׁאַ֜לְתָּ מֵעִ֨ם יְהוָ֤ה אֱלֹהֶ֙יךָ֙ בְּחֹרֵ֔ב בְּי֥וֹם הַקָּהָ֖ל לֵאמֹ֑ר לֹ֣א אֹסֵ֗ף לִשְׁמֹ֙עַ֙ אֶת־קוֹל֙ יְהוָ֣ה אֱלֹהָ֔י וְאֶת־הָאֵ֨שׁ הַגְּדֹלָ֥ה הַזֹּ֛את לֹֽא־אֶרְאֶ֥ה ע֖וֹד וְלֹ֥א אָמֽוּת׃",
+   "en": "according to all that thou didst desire of the LORD thy God in Horeb in the day of the assembly, saying: ‘Let me not hear again the voice of the LORD my God, neither let me see this great fire any more, that I die not.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 17,
+   "he": "וַיֹּאמֶר יְהוָה אֵלָי הֵיטִיבוּ אֲשֶׁר דִּבֵּרוּ׃",
+   "heTrope": "וַיֹּ֥אמֶר יְהוָ֖ה אֵלָ֑י הֵיטִ֖יבוּ אֲשֶׁ֥ר דִּבֵּֽרוּ׃",
+   "en": "And the LORD said unto me: ‘They have well said that which they have spoken.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 18,
+   "he": "נָבִיא אָקִים לָהֶם מִקֶּרֶב אֲחֵיהֶם כָּמוֹךָ וְנָתַתִּי דְבָרַי בְּפִיו וְדִבֶּר אֲלֵיהֶם אֵת כָּל־אֲשֶׁר אֲצַוֶּנּוּ׃",
+   "heTrope": "נָבִ֨יא אָקִ֥ים לָהֶ֛ם מִקֶּ֥רֶב אֲחֵיהֶ֖ם כָּמ֑וֹךָ וְנָתַתִּ֤י דְבָרַי֙ בְּפִ֔יו וְדִבֶּ֣ר אֲלֵיהֶ֔ם אֵ֖ת כָּל־אֲשֶׁ֥ר אֲצַוֶּֽנּוּ׃",
+   "en": "I will raise them up a prophet from among their brethren, like unto thee; and I will put My words in his mouth, and he shall speak unto them all that I shall command him.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 19,
+   "he": "וְהָיָה הָאִישׁ אֲשֶׁר לֹא־יִשְׁמַע אֶל־דְּבָרַי אֲשֶׁר יְדַבֵּר בִּשְׁמִי אָנֹכִי אֶדְרֹשׁ מֵעִמּוֹ׃",
+   "heTrope": "וְהָיָ֗ה הָאִישׁ֙ אֲשֶׁ֤ר לֹֽא־יִשְׁמַע֙ אֶל־דְּבָרַ֔י אֲשֶׁ֥ר יְדַבֵּ֖ר בִּשְׁמִ֑י אָנֹכִ֖י אֶדְרֹ֥שׁ מֵעִמּֽוֹ׃",
+   "en": "And it shall come to pass, that whosoever will not hearken unto My words which he shall speak in My name, I will require it of him.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 20,
+   "he": "אַךְ הַנָּבִיא אֲשֶׁר יָזִיד לְדַבֵּר דָּבָר בִּשְׁמִי אֵת אֲשֶׁר לֹא־צִוִּיתִיו לְדַבֵּר וַאֲשֶׁר יְדַבֵּר בְּשֵׁם אֱלֹהִים אֲחֵרִים וּמֵת הַנָּבִיא הַהוּא׃",
+   "heTrope": "אַ֣ךְ הַנָּבִ֡יא אֲשֶׁ֣ר יָזִיד֩ לְדַבֵּ֨ר דָּבָ֜ר בִּשְׁמִ֗י אֵ֣ת אֲשֶׁ֤ר לֹֽא־צִוִּיתִיו֙ לְדַבֵּ֔ר וַאֲשֶׁ֣ר יְדַבֵּ֔ר בְּשֵׁ֖ם אֱלֹהִ֣ים אֲחֵרִ֑ים וּמֵ֖ת הַנָּבִ֥יא הַהֽוּא׃",
+   "en": "But the prophet, that shall speak a word presumptuously in My name, which I have not commanded him to speak, or that shall speak in the name of other gods, that same prophet shall die.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 21,
+   "he": "וְכִי תֹאמַר בִּלְבָבֶךָ אֵיכָה נֵדַע אֶת־הַדָּבָר אֲשֶׁר לֹא־דִבְּרוֹ יְהוָה׃",
+   "heTrope": "וְכִ֥י תֹאמַ֖ר בִּלְבָבֶ֑ךָ אֵיכָה֙ נֵדַ֣ע אֶת־הַדָּבָ֔ר אֲשֶׁ֥ר לֹא־דִבְּר֖וֹ יְהוָֽה׃",
+   "en": "And if thou say in thy heart: ‘How shall we know the word which the LORD hath not spoken?’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 22,
+   "he": "אֲשֶׁר יְדַבֵּר הַנָּבִיא בְּשֵׁם יְהוָה וְלֹא־יִהְיֶה הַדָּבָר וְלֹא יָבוֹא הוּא הַדָּבָר אֲשֶׁר לֹא־דִבְּרוֹ יְהוָה בְּזָדוֹן דִּבְּרוֹ הַנָּבִיא לֹא תָגוּר מִמֶּנּוּ׃",
+   "heTrope": "אֲשֶׁר֩ יְדַבֵּ֨ר הַנָּבִ֜יא בְּשֵׁ֣ם יְהוָ֗ה וְלֹֽא־יִהְיֶ֤ה הַדָּבָר֙ וְלֹ֣א יָב֔וֹא ה֣וּא הַדָּבָ֔ר אֲשֶׁ֥ר לֹא־דִבְּר֖וֹ יְהוָ֑ה בְּזָדוֹן֙ דִּבְּר֣וֹ הַנָּבִ֔יא לֹ֥א תָג֖וּר מִמֶּֽנּוּ׃",
+   "en": "When a prophet speaketh in the name of the LORD, if the thing follow not, nor come to pass, that is the thing which the LORD hath not spoken; the prophet hath spoken it presumptuously, thou shalt not be afraid of him.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

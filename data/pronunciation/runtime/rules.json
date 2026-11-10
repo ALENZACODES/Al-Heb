@@ -1,0 +1,838 @@
+{
+ "schemaVersion": 1,
+ "rulesVersion": 1,
+ "proofread": false,
+ "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
+ "notice": "See how each tradition says the same word.",
+ "description": "One static page per pronunciation rule; examples come from the lookup data (most frequent words that show the rule, one per first letter).",
+ "pages": [
+  {
+   "id": "kamatz",
+   "title": "Kamatz (ָ)",
+   "nav": "Kamatz",
+   "summary": "The T-shaped vowel sign under a letter. Israeli and Sephardi readers say [a], like the a in \"father\". The Ashkenazi reading says [ɔ], like the o in \"saw\", so בָּרוּךְ is barukh in one and borukh in the other.",
+   "rows": [
+    [
+     "israeli",
+     "[a]",
+     "ba-RUKH"
+    ],
+    [
+     "sephardi",
+     "[a]",
+     "ba-RUKH"
+    ],
+    [
+     "ashkenazi",
+     "[ɔ]",
+     "BO-rukh"
+    ]
+   ],
+   "who": "Rule-generated: the [a] reading is the one used here for Israeli and Sephardi, the [ɔ] reading for Ashkenazi (the rule is \"kamatz gadol is generally [ɔ]\" in the cited description of Ashkenazi Hebrew). Not checked by a native speaker.",
+   "limits": "A few words use a kamatz that is read as a short o in every tradition (kamatz katan, as in כָּל \"kol\"). Only a short list of such words is recognised here, so other words of that kind are read wrongly.",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Kamatz",
+     "url": "https://en.wikipedia.org/wiki/Kamatz"
+    }
+   ],
+   "why": "Kamatz (ָ): a in Israeli and Sephardi, but [ɔ] (\"o\" as in \"saw\") in Ashkenazi.",
+   "examples": [
+    {
+     "he": "הָיָה",
+     "gloss": "to be",
+     "ipa": [
+      "ha.ˈja",
+      "ha.ˈja",
+      "ˈhɔ.jə"
+     ],
+     "simple": [
+      "hayah",
+      "hoyeh"
+     ]
+    },
+    {
+     "he": "מָה",
+     "gloss": "what",
+     "ipa": [
+      "ˈma",
+      "ˈma",
+      "ˈmɔ"
+     ],
+     "simple": [
+      "mah",
+      "moh"
+     ]
+    },
+    {
+     "he": "אָמַר",
+     "gloss": "to say, tell",
+     "ipa": [
+      "a.ˈmaʁ",
+      "ʔa.ˈmar",
+      "ˈɔ.mar"
+     ],
+     "simple": [
+      "amar",
+      "omar"
+     ]
+    },
+    {
+     "he": "עָשָׂה",
+     "gloss": "to do (to perform an action, to accompli",
+     "ipa": [
+      "a.ˈsa",
+      "ʕa.ˈsa",
+      "ˈɔ.sə"
+     ],
+     "simple": [
+      "asah",
+      "oseh"
+     ]
+    },
+    {
+     "he": "יָכֹל",
+     "gloss": "can, to be able to",
+     "ipa": [
+      "ja.ˈχol",
+      "ja.ˈxol",
+      "ˈjɔ.xojl"
+     ],
+     "simple": [
+      "yakhol",
+      "yokhoyl"
+     ]
+    },
+    {
+     "he": "רָאָה",
+     "gloss": "to see, to have vision",
+     "ipa": [
+      "ʁa.ˈa",
+      "ra.ˈʔa",
+      "ˈrɔ.ə"
+     ],
+     "simple": [
+      "ra'ah",
+      "ro'eh"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tav",
+   "title": "Tav without a dot (ת)",
+   "nav": "Tav",
+   "summary": "A tav with no dagesh dot is t in the Israeli and Sephardi readings. In the Ashkenazi reading it is s, which is why שַׁבָּת is shabat in one and shabos in the other. A tav with a dot is t in all three.",
+   "rows": [
+    [
+     "israeli",
+     "t",
+     "shabat"
+    ],
+    [
+     "sephardi",
+     "t",
+     "shabat"
+    ],
+    [
+     "ashkenazi",
+     "s",
+     "shabos"
+    ]
+   ],
+   "who": "Rule-generated: Ashkenazi s for a tav without dagesh, as in the cited description (\"ungeminated tav is pronounced [s]\"). Some Sephardi communities say th or d here; those are not generated.",
+   "limits": "The rule needs the dagesh to be written in the pointed text. A word with the dot missing is read with s in the Ashkenazi column.",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "why": "Tav without a dagesh (ת): t in Israeli and Sephardi, but s in Ashkenazi (shabat / shabos).",
+   "examples": [
+    {
+     "he": "אֵת",
+     "gloss": "(marks a definite direct object; not tra",
+     "ipa": [
+      "ˈet",
+      "ˈʔet",
+      "ˈejs"
+     ],
+     "simple": [
+      "et",
+      "eis"
+     ]
+    },
+    {
+     "he": "בַּיִת",
+     "gloss": "house",
+     "ipa": [
+      "ˈba.jit",
+      "ˈba.jit",
+      "ˈba.jis"
+     ],
+     "simple": [
+      "bayit",
+      "bayis"
+     ]
+    },
+    {
+     "he": "נָתַן",
+     "gloss": "to give",
+     "ipa": [
+      "na.ˈtan",
+      "na.ˈtan",
+      "ˈnɔ.san"
+     ],
+     "simple": [
+      "natan",
+      "nosan"
+     ]
+    },
+    {
+     "he": "יוֹתֵר",
+     "gloss": "more",
+     "ipa": [
+      "jo.ˈteʁ",
+      "jo.ˈter",
+      "ˈjoj.sejr"
+     ],
+     "simple": [
+      "yoter",
+      "yoyseir"
+     ]
+    },
+    {
+     "he": "זֹאת",
+     "gloss": "this (feminine)",
+     "ipa": [
+      "ˈzot",
+      "ˈzot",
+      "ˈzojs"
+     ],
+     "simple": [
+      "zot",
+      "zoys"
+     ]
+    },
+    {
+     "he": "מֵת",
+     "gloss": "to die",
+     "ipa": [
+      "ˈmet",
+      "ˈmet",
+      "ˈmejs"
+     ],
+     "simple": [
+      "met",
+      "meis"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "holam",
+   "title": "Holam (ֹ)",
+   "nav": "Holam",
+   "summary": "The dot above a letter. Israeli and Sephardi readers say a plain o. The Ashkenazi reading used here says \"oy\" [oj], the Polish and Galician value, so תּוֹרָה is torah in one and toyreh in the other.",
+   "rows": [
+    [
+     "israeli",
+     "[o]",
+     "to-RA"
+    ],
+    [
+     "sephardi",
+     "[o]",
+     "to-RA"
+    ],
+    [
+     "ashkenazi",
+     "[oj]",
+     "TOY-reh"
+    ]
+   ],
+   "who": "Rule-generated: one Ashkenazi value is chosen. Other Ashkenazi communities say o, ey or au; they are not shown. Not checked by a native speaker.",
+   "limits": "Only the Polish-style value is generated, so a reader from another Ashkenazi tradition will disagree with the Ashkenazi column.",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "why": "Cholam (ֹ): o in Israeli and Sephardi, but \"oy\" [oj] in the Polish-style Ashkenazi reading used here (other Ashkenazi readings differ and are not shown).",
+   "examples": [
+    {
+     "he": "לֹא",
+     "gloss": "not",
+     "ipa": [
+      "ˈlo",
+      "ˈlo",
+      "ˈloj"
+     ],
+     "simple": [
+      "lo",
+      "loy"
+     ]
+    },
+    {
+     "he": "יָכֹל",
+     "gloss": "can, to be able to",
+     "ipa": [
+      "ja.ˈχol",
+      "ja.ˈxol",
+      "ˈjɔ.xojl"
+     ],
+     "simple": [
+      "yakhol",
+      "yokhoyl"
+     ]
+    },
+    {
+     "he": "טוֹב",
+     "gloss": "good, fair, fine",
+     "ipa": [
+      "ˈtov",
+      "ˈtov",
+      "ˈtojv"
+     ],
+     "simple": [
+      "tov",
+      "toyv"
+     ]
+    },
+    {
+     "he": "אוֹ",
+     "gloss": "or",
+     "ipa": [
+      "ˈo",
+      "ˈʔo",
+      "ˈoj"
+     ],
+     "simple": [
+      "o",
+      "oy"
+     ]
+    },
+    {
+     "he": "כְּמוֹ",
+     "gloss": "like, as",
+     "ipa": [
+      "ke.ˈmo",
+      "ke.ˈmo",
+      "kə.ˈmoj"
+     ],
+     "simple": [
+      "kemo",
+      "kemoy"
+     ]
+    },
+    {
+     "he": "זֹאת",
+     "gloss": "this (feminine)",
+     "ipa": [
+      "ˈzot",
+      "ˈzot",
+      "ˈzojs"
+     ],
+     "simple": [
+      "zot",
+      "zoys"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "het",
+   "title": "Het (ח)",
+   "nav": "Het",
+   "summary": "Israeli readers say [χ], a rasp at the back of the mouth, the same as khaf. The Sephardi reading used here is a deeper throat sound [ħ]. The Ashkenazi reading is [x], like khaf.",
+   "rows": [
+    [
+     "israeli",
+     "[χ]",
+     "like kh in \"Bach\""
+    ],
+    [
+     "sephardi",
+     "[ħ]",
+     "breathy, from the throat"
+    ],
+    [
+     "ashkenazi",
+     "[x]",
+     "like kh in \"Bach\""
+    ]
+   ],
+   "who": "Rule-generated from the cited tables. In practice many Ashkenazi and Sephardi readers say het and khaf alike, and some Sephardi and Mizrahi readers keep the throat sound.",
+   "limits": "The difference between [χ] and [x] is too small to hear in most voices; the [ħ] is the audible one.",
+   "sources": [
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    }
+   ],
+   "why": "Het (ח): [χ] in Israeli, a deeper throat sound [ħ] in Sephardi, [x] in Ashkenazi.",
+   "examples": [
+    {
+     "he": "אֲנַחְנוּ",
+     "gloss": "we",
+     "ipa": [
+      "a.naχ.ˈnu",
+      "ʔa.naħ.ˈnu",
+      "a.ˈnax.nu"
+     ],
+     "simple": [
+      "anachnu",
+      "anachnu"
+     ]
+    },
+    {
+     "he": "חָשַׁב",
+     "gloss": "to think",
+     "ipa": [
+      "χa.ˈʃav",
+      "ħa.ˈʃav",
+      "ˈxɔ.ʃav"
+     ],
+     "simple": [
+      "chashav",
+      "choshav"
+     ]
+    },
+    {
+     "he": "לָקַח",
+     "gloss": "to take (grasp with the hands)",
+     "ipa": [
+      "la.ˈkaχ",
+      "la.ˈkaħ",
+      "ˈlɔ.kax"
+     ],
+     "simple": [
+      "lakach",
+      "lokach"
+     ]
+    },
+    {
+     "he": "זָבַח",
+     "gloss": "to slaughter, to kill",
+     "ipa": [
+      "za.ˈvaχ",
+      "za.ˈvaħ",
+      "ˈzɔ.vax"
+     ],
+     "simple": [
+      "zavach",
+      "zovach"
+     ]
+    },
+    {
+     "he": "הִתְחִיל",
+     "gloss": "to start, to begin",
+     "ipa": [
+      "hit.ˈχil",
+      "hit.ˈħil",
+      "ˈhis.xil"
+     ],
+     "simple": [
+      "hitchil",
+      "hischil"
+     ]
+    },
+    {
+     "he": "שָׁלַח",
+     "gloss": "to send (someone or something)",
+     "ipa": [
+      "ʃa.ˈlaχ",
+      "ʃa.ˈlaħ",
+      "ˈʃɔ.lax"
+     ],
+     "simple": [
+      "shalach",
+      "sholach"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ayin",
+   "title": "Ayin (ע)",
+   "nav": "Ayin",
+   "summary": "Israeli and Ashkenazi readers say nothing for an ayin (it behaves like alef). The Sephardi reading used here keeps a throat sound [ʕ], a squeezed \"ah\" from deep in the throat.",
+   "rows": [
+    [
+     "israeli",
+     "(silent)",
+     "no sound"
+    ],
+    [
+     "sephardi",
+     "[ʕ]",
+     "squeezed throat sound"
+    ],
+    [
+     "ashkenazi",
+     "(silent)",
+     "no sound"
+    ]
+   ],
+   "who": "Rule-generated: [ʕ] for Sephardi follows the cited description. Spanish-Portuguese communities use a different sound [ŋ] that is not generated.",
+   "limits": "A silent ayin still splits the syllables, which the spelled-out respelling shows as an apostrophe.",
+   "sources": [
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "why": "Ayin (ע): silent in Israeli and Ashkenazi, a throat sound [ʕ] in Sephardi.",
+   "examples": [
+    {
+     "he": "עַל",
+     "gloss": "on, on top of",
+     "ipa": [
+      "ˈal",
+      "ˈʕal",
+      "ˈal"
+     ],
+     "simple": [
+      "al",
+      "al"
+     ]
+    },
+    {
+     "he": "יָדַע",
+     "gloss": "to know (a fact)",
+     "ipa": [
+      "ja.ˈda",
+      "ja.ˈdaʕ",
+      "ˈjɔ.da"
+     ],
+     "simple": [
+      "yada",
+      "yoda"
+     ]
+    },
+    {
+     "he": "פַּעַם",
+     "gloss": "a time",
+     "ipa": [
+      "ˈpa.am",
+      "ˈpa.ʕam",
+      "ˈpa.am"
+     ],
+     "simple": [
+      "pa'am",
+      "pa'am"
+     ]
+    },
+    {
+     "he": "שָׁמַע",
+     "gloss": "to hear, to be able to hear",
+     "ipa": [
+      "ʃa.ˈma",
+      "ʃa.ˈmaʕ",
+      "ˈʃɔ.ma"
+     ],
+     "simple": [
+      "shama",
+      "shoma"
+     ]
+    },
+    {
+     "he": "הִגִּיעַ",
+     "gloss": "to arrive, to get, to reach",
+     "ipa": [
+      "hi.ˈɡi.a",
+      "hi.ˈɡi.aʕ",
+      "hi.ˈɡi.a"
+     ],
+     "simple": [
+      "higi'a",
+      "higi'a"
+     ]
+    },
+    {
+     "he": "רֶגַע",
+     "gloss": "a moment",
+     "ipa": [
+      "ˈʁe.ɡa",
+      "ˈre.ɡaʕ",
+      "ˈre.ɡa"
+     ],
+     "simple": [
+      "rega",
+      "rega"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "resh",
+   "title": "Resh (ר)",
+   "nav": "Resh",
+   "summary": "Israeli readers say a back-of-the-throat [ʁ], like the French r. The Sephardi and Ashkenazi readings used here say a front r, rolled or tapped like the Spanish r.",
+   "rows": [
+    [
+     "israeli",
+     "[ʁ]",
+     "French-style r"
+    ],
+    [
+     "sephardi",
+     "[r]",
+     "rolled or tapped"
+    ],
+    [
+     "ashkenazi",
+     "[r]",
+     "rolled or tapped"
+    ]
+   ],
+   "who": "Rule-generated: the Sephardi value follows the cited description. The Ashkenazi value is chosen from \"alveolar flap or trill, or uvular by region\"; a uvular Ashkenazi reader will disagree.",
+   "limits": "The respelling writes r for all three, so only the IPA line shows this difference.",
+   "sources": [
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Modern Hebrew phonology",
+     "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+    }
+   ],
+   "why": "Resh (ר): a back-of-the-throat [ʁ] in Israeli, a front rolled or tapped r in Sephardi and Ashkenazi.",
+   "examples": [
+    {
+     "he": "אֲשֶׁר",
+     "gloss": "introduces a subordinate clause",
+     "ipa": [
+      "a.ˈʃeʁ",
+      "ʔa.ˈʃer",
+      "a.ˈʃer"
+     ],
+     "simple": [
+      "asher",
+      "asher"
+     ]
+    },
+    {
+     "he": "רָאָה",
+     "gloss": "to see, to have vision",
+     "ipa": [
+      "ʁa.ˈa",
+      "ra.ˈʔa",
+      "ˈrɔ.ə"
+     ],
+     "simple": [
+      "ra'ah",
+      "ro'eh"
+     ]
+    },
+    {
+     "he": "צָרִיךְ",
+     "gloss": "needing, in need of (something)",
+     "ipa": [
+      "tsa.ˈʁiχ",
+      "tsa.ˈrix",
+      "ˈtsɔ.rix"
+     ],
+     "simple": [
+      "tzarikh",
+      "tzorikh"
+     ]
+    },
+    {
+     "he": "יוֹתֵר",
+     "gloss": "more",
+     "ipa": [
+      "jo.ˈteʁ",
+      "jo.ˈter",
+      "ˈjoj.sejr"
+     ],
+     "simple": [
+      "yoter",
+      "yoyseir"
+     ]
+    },
+    {
+     "he": "דָּבָר",
+     "gloss": "thing",
+     "ipa": [
+      "da.ˈvaʁ",
+      "da.ˈvar",
+      "ˈdɔ.vɔr"
+     ],
+     "simple": [
+      "davar",
+      "dovor"
+     ]
+    },
+    {
+     "he": "סִדֵּר",
+     "gloss": "to organize",
+     "ipa": [
+      "si.ˈdeʁ",
+      "si.ˈder",
+      "ˈsi.dejr"
+     ],
+     "simple": [
+      "sider",
+      "sideir"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stress",
+   "title": "Which syllable is stressed",
+   "nav": "Stress",
+   "summary": "Israeli and Sephardi readers stress the last syllable of most words (שַׁבָּת is sha-BAT). The Ashkenazi reading stresses the next-to-last syllable (SHA-bes). Some words are stressed earlier in every tradition, such as מֶלֶךְ (ME-lekh).",
+   "rows": [
+    [
+     "israeli",
+     "last syllable",
+     "sha-BAT"
+    ],
+    [
+     "sephardi",
+     "last syllable",
+     "sha-BAT"
+    ],
+    [
+     "ashkenazi",
+     "next-to-last",
+     "SHA-bes"
+    ]
+   ],
+   "who": "Rule-generated: last-syllable stress is the default and exceptions come only from short existing lists; next-to-last stress is the default for Ashkenazi. Not checked by a native speaker.",
+   "limits": "About 240 words that look like two-syllable nouns ending in segol are read with last-syllable stress by default and may be wrong. Prefixed words (וּבְכָל) get an Ashkenazi stress a trained reader would not give.",
+   "sources": [
+    {
+     "label": "Wikipedia: Ashkenazi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew"
+    },
+    {
+     "label": "Wikipedia: Sephardi Hebrew",
+     "url": "https://en.wikipedia.org/wiki/Sephardi_Hebrew"
+    }
+   ],
+   "why": "",
+   "examples": [
+    {
+     "he": "הִוָּה",
+     "gloss": "to constitute",
+     "ipa": [
+      "hi.ˈva",
+      "hi.ˈva",
+      "ˈhi.və"
+     ],
+     "simple": [
+      "hivah",
+      "hiveh"
+     ]
+    },
+    {
+     "he": "אָמַר",
+     "gloss": "to say, tell",
+     "ipa": [
+      "a.ˈmaʁ",
+      "ʔa.ˈmar",
+      "ˈɔ.mar"
+     ],
+     "simple": [
+      "amar",
+      "omar"
+     ]
+    },
+    {
+     "he": "עָשָׂה",
+     "gloss": "to do (to perform an action, to accompli",
+     "ipa": [
+      "a.ˈsa",
+      "ʕa.ˈsa",
+      "ˈɔ.sə"
+     ],
+     "simple": [
+      "asah",
+      "oseh"
+     ]
+    },
+    {
+     "he": "יָכֹל",
+     "gloss": "can, to be able to",
+     "ipa": [
+      "ja.ˈχol",
+      "ja.ˈxol",
+      "ˈjɔ.xojl"
+     ],
+     "simple": [
+      "yakhol",
+      "yokhoyl"
+     ]
+    },
+    {
+     "he": "רָאָה",
+     "gloss": "to see, to have vision",
+     "ipa": [
+      "ʁa.ˈa",
+      "ra.ˈʔa",
+      "ˈrɔ.ə"
+     ],
+     "simple": [
+      "ra'ah",
+      "ro'eh"
+     ]
+    },
+    {
+     "he": "צָרִיךְ",
+     "gloss": "needing, in need of (something)",
+     "ipa": [
+      "tsa.ˈʁiχ",
+      "tsa.ˈrix",
+      "ˈtsɔ.rix"
+     ],
+     "simple": [
+      "tzarikh",
+      "tzorikh"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-tsadi" viewBox="0 0 200 200" role="img" aria-labelledby="tsadi-t tsadi-d"><title id="tsadi-t">Tsadi becomes a pizza slice with a bird on the box</title><desc id="tsadi-d">A slice of pizza on a flat pizza box, with a small blue bird perched on the box at the right. The slice has yellow melted cheese, round red pepperoni and a few green basil leaves. The letter diagonal and base are the baked crust edge, and the curved second stroke is a long string of stretched cheese pulled up from the slice.</desc><style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-tsadi .o{stroke:var(--m-ink);stroke-width:12}svg.morph-tsadi .morph-pop{transform-origin:50% 100%}</style><defs><path id="tsadi-1" d="M330 240 C355 272 433 367 480 430 C527 493 573 572 610 620 C647 668 685 704 700 721 C715 738 700 721 700 721 L700 721 C663 721 549 721 480 721 C411 721 318 721 285 721"/><path id="tsadi-2" d="M681 240 C681 258 687 315 681 350 C675 385 663 423 645 450 C627 477 587 500 575 510"/></defs><g transform="translate(-26 -34) scale(.25)"><g class="morph-b"><rect x="215" y="705" width="660" height="95" rx="14" class="mtile o" style="fill-opacity:.2"/><path d="M215 735H855" class="ml msi" style="--w:8;opacity:.5"/>
+<path d="M330 240L700 721H285Z" class="mf3"/>
+<path d="M330 240L285 721" class="ml ms1" style="--w:42"/>
+<g class="morph-pop"><circle cx="430" cy="560" r="62" class="mf1"/><circle cx="560" cy="650" r="50" class="mf1"/><circle cx="395" cy="410" r="40" class="mf1"/><path d="M470 400l30-22 14 40ZM480 640l40-10 4 40Z" class="mf4"/></g>
+<use href="#tsadi-1" class="mk ms1" style="stroke-width:85"/>
+<g class="morph-pop morph-pop-late" transform="translate(-22 0)"><path d="M820 640L905 600L880 650Z" class="mf2"/><ellipse cx="790" cy="645" rx="52" ry="42" class="mf2 o" style="stroke-width:10"/><circle cx="745" cy="598" r="30" class="mf2 o" style="stroke-width:10"/><path d="M718 588L682 604L718 614Z" class="mf1"/><circle cx="750" cy="590" r="7" class="mfi"/><path d="M780 686V705M805 686V705" class="ml msi" style="--w:9"/></g>
+<use href="#tsadi-2" class="ml ms3" style="--w:44"/><use href="#tsadi-2" class="ml msi" style="--w:12;stroke-opacity:.35"/>
+</g><g class="morph-a morph-strokes morph-trace"><use href="#tsadi-1"/><use href="#tsadi-2"/></g></g></svg>

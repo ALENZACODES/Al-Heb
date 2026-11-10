@@ -1,0 +1,821 @@
+{
+ "schema": "alef-word-cues/1",
+ "reviewed": "2026-11-06",
+ "rule": "Each entry pairs one vocabulary id with one already-approved asset after the picture was looked at. A theme title is not evidence. One asset is used for one word only. The same word may have both a words.json id and a five-thousand-word id. A word with no entry stays text. Held stills are not ids here.",
+ "cues": {
+  "h9d6352ee": {
+   "asset": "VOC_body_02",
+   "gloss": "eye",
+   "he": "עַיִן",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A single eye.",
+   "basis": "VOC_body_02 is one eye, centred, with no person and no text."
+  },
+  "v8d4641ea": {
+   "asset": "VOC_body_02",
+   "gloss": "eye",
+   "he": "עַיִן",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A single eye.",
+   "basis": "VOC_body_02 is one eye, centred, with no person and no text."
+  },
+  "hc0616a4b": {
+   "asset": "VOC_body_03",
+   "gloss": "ear",
+   "he": "אֹזֶן",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A single ear.",
+   "basis": "VOC_body_03 is one ear, centred, object only."
+  },
+  "v4f6779c4": {
+   "asset": "VOC_body_03",
+   "gloss": "ear",
+   "he": "אֹזֶן",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A single ear.",
+   "basis": "VOC_body_03 is one ear, centred, object only."
+  },
+  "h1a3574d3": {
+   "asset": "VOC_body_04",
+   "gloss": "arm",
+   "he": "יָד",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "An open hand.",
+   "basis": "VOC_body_04 is one open hand. The Hebrew word is יד. words.json glosses that entry as arm; the picture is the hand, so it is not paired with a different arm word."
+  },
+  "v3e03f25c": {
+   "asset": "VOC_body_04",
+   "gloss": "hand, arm",
+   "he": "יָד",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "An open hand.",
+   "basis": "VOC_body_04 is one open hand. The Hebrew word is יד. words.json glosses that entry as arm; the picture is the hand, so it is not paired with a different arm word."
+  },
+  "hdb3c45eb": {
+   "asset": "VOC_body_05",
+   "gloss": "foot, leg",
+   "he": "רֶגֶל",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A single foot.",
+   "basis": "VOC_body_05 is one bare foot. The spy-verb sense of the same letters is not paired."
+  },
+  "v3f0221c1": {
+   "asset": "VOC_body_05",
+   "gloss": "foot, leg",
+   "he": "רֶגֶל",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A single foot.",
+   "basis": "VOC_body_05 is one bare foot. The spy-verb sense of the same letters is not paired."
+  },
+  "h890d1505": {
+   "asset": "VOC_body_06",
+   "gloss": "heart",
+   "he": "לֵב",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A heart.",
+   "basis": "VOC_body_06 is one heart shape and nothing else."
+  },
+  "vd09c1bb6": {
+   "asset": "VOC_body_06",
+   "gloss": "heart",
+   "he": "לֵב",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A heart.",
+   "basis": "VOC_body_06 is one heart shape and nothing else."
+  },
+  "ha8d63bab": {
+   "asset": "VOC_body_07",
+   "gloss": "smile",
+   "he": "חִיּוּךְ",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A smile.",
+   "basis": "VOC_body_07 is an open smiling mouth. It is the smile, not the separate word for mouth."
+  },
+  "v0fe7fcf8": {
+   "asset": "VOC_body_07",
+   "gloss": "smile",
+   "he": "חִיּוּךְ",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A smile.",
+   "basis": "VOC_body_07 is an open smiling mouth. It is the smile, not the separate word for mouth."
+  },
+  "h9c8ddecf": {
+   "asset": "VOC_home_01",
+   "gloss": "house",
+   "he": "בַּיִת",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A house.",
+   "basis": "VOC_home_01 is one house with a roof, door and windows. No people."
+  },
+  "v0a377305": {
+   "asset": "VOC_home_01",
+   "gloss": "house; home",
+   "he": "בַּיִת",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A house.",
+   "basis": "VOC_home_01 is one house with a roof, door and windows. No people."
+  },
+  "h80c0273d": {
+   "asset": "VOC_home_02",
+   "gloss": "door (portal of entry)",
+   "he": "דֶּלֶת",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A door.",
+   "basis": "VOC_home_02 is one closed door and nothing else."
+  },
+  "v0b29e752": {
+   "asset": "VOC_home_02",
+   "gloss": "door (portal of entry)",
+   "he": "דֶּלֶת",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A door.",
+   "basis": "VOC_home_02 is one closed door and nothing else."
+  },
+  "pb0633ed7": {
+   "asset": "VOC_home_03",
+   "gloss": "key",
+   "he": "מַפְתֵּחַ",
+   "pos": "unknown",
+   "source": "words.json",
+   "alt": "A key.",
+   "basis": "VOC_home_03 is one key. No five-thousand-word entry uses this spelling."
+  },
+  "hfac8b79e": {
+   "asset": "VOC_home_04",
+   "gloss": "table (piece of furniture), desk",
+   "he": "שֻׁלְחָן",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A table.",
+   "basis": "VOC_home_04 is one four-legged table and nothing on it."
+  },
+  "v40aec0e4": {
+   "asset": "VOC_home_04",
+   "gloss": "table, desk",
+   "he": "שֻׁלְחָן",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A table.",
+   "basis": "VOC_home_04 is one four-legged table and nothing on it."
+  },
+  "h11b6d758": {
+   "asset": "VOC_home_05",
+   "gloss": "a bed",
+   "he": "מִטָּה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A bed.",
+   "basis": "VOC_home_05 is one bed with a pillow and blanket."
+  },
+  "v9c39f968": {
+   "asset": "VOC_home_05",
+   "gloss": "bed",
+   "he": "מִטָּה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A bed.",
+   "basis": "VOC_home_05 is one bed with a pillow and blanket."
+  },
+  "h495d2c04": {
+   "asset": "VOC_home_06",
+   "gloss": "a window",
+   "he": "חַלּוֹן",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A window.",
+   "basis": "VOC_home_06 is one window with curtains. The secularization homograph is not paired."
+  },
+  "v447138f7": {
+   "asset": "VOC_home_06",
+   "gloss": "window",
+   "he": "חַלּוֹן",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A window.",
+   "basis": "VOC_home_06 is one window with curtains. The secularization homograph is not paired."
+  },
+  "vfe8e622e": {
+   "asset": "VOC_home_10",
+   "gloss": "dog",
+   "he": "כֶּלֶב",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A dog.",
+   "basis": "VOC_home_10 is one sitting dog. words.json has no כלב entry, so only the five-thousand-word id is paired."
+  },
+  "h06440deb": {
+   "asset": "VOC_cafe_02",
+   "gloss": "coffee",
+   "he": "קָפֶה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A cup of coffee.",
+   "basis": "VOC_cafe_02 is a steaming cup of coffee. It is coffee, not the word cup, because the drink fills the cup."
+  },
+  "ved7fcd23": {
+   "asset": "VOC_cafe_02",
+   "gloss": "coffee",
+   "he": "קָפֶה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A cup of coffee.",
+   "basis": "VOC_cafe_02 is a steaming cup of coffee. It is coffee, not the word cup, because the drink fills the cup."
+  },
+  "hd22f2e01": {
+   "asset": "VOC_cafe_03",
+   "gloss": "bottle",
+   "he": "בַּקְבּוּק",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A bottle.",
+   "basis": "VOC_cafe_03 is one capped bottle. The liquid is unlabeled, so this is the bottle and not the word water."
+  },
+  "h2e6632ab": {
+   "asset": "VOC_cafe_04",
+   "gloss": "Chickpeas, garbanzo beans",
+   "he": "חוּמוּס",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A plate of hummus.",
+   "basis": "VOC_cafe_04 is a plate of hummus. Two pita triangles sit at the back, so pita is not given this picture."
+  },
+  "p43836f09": {
+   "asset": "VOC_cafe_05",
+   "gloss": "shakshuka (eggs poached in tomato sauce)",
+   "he": "שַׁקְשׁוּקָה",
+   "pos": "unknown",
+   "source": "words.json",
+   "alt": "Shakshuka in a pan.",
+   "basis": "VOC_cafe_05 is eggs in red sauce in a pan, which is shakshuka, not the word egg."
+  },
+  "pa04b1f3c": {
+   "asset": "VOC_cafe_06",
+   "gloss": "falafel",
+   "he": "פָלָאפֶל",
+   "pos": "unknown",
+   "source": "words.json",
+   "alt": "Falafel in a pita.",
+   "basis": "VOC_cafe_06 is falafel balls in a pita. The pictured dish is falafel, so pita, salad and tomato are not given this picture."
+  },
+  "ha664d093": {
+   "asset": "VOC_cafe_07",
+   "gloss": "cake",
+   "he": "עוּגָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A slice of cake.",
+   "basis": "VOC_cafe_07 is one slice of layer cake. The cherry is a garnish, so this is cake, not cherry or chocolate."
+  },
+  "v5074d7c1": {
+   "asset": "VOC_cafe_07",
+   "gloss": "cake",
+   "he": "עוּגָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A slice of cake.",
+   "basis": "VOC_cafe_07 is one slice of layer cake. The cherry is a garnish, so this is cake, not cherry or chocolate."
+  },
+  "hf1b8cedf": {
+   "asset": "VOC_market_03",
+   "gloss": "the grains of various plants that grow in bunches",
+   "he": "עֵנָב",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A bunch of grapes.",
+   "basis": "VOC_market_03 is one bunch of grapes. The glossary calls ענב the fruit that grows in bunches."
+  },
+  "v45d1d6f9": {
+   "asset": "VOC_market_03",
+   "gloss": "grains of various plants that grow in bunches",
+   "he": "עֵנָב",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A bunch of grapes.",
+   "basis": "VOC_market_03 is one bunch of grapes. The glossary calls ענב the fruit that grows in bunches."
+  },
+  "h95d4df2c": {
+   "asset": "VOC_market_07",
+   "gloss": "challah",
+   "he": "חַלָּה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A braided challah.",
+   "basis": "VOC_market_07 is one braided loaf. That is challah, not the plain word bread."
+  },
+  "v685efde9": {
+   "asset": "VOC_market_07",
+   "gloss": "challah",
+   "he": "חַלָּה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A braided challah.",
+   "basis": "VOC_market_07 is one braided loaf. That is challah, not the plain word bread."
+  },
+  "h4ef6ec03": {
+   "asset": "VOC_market_09",
+   "gloss": "cheese",
+   "he": "גְּבִינָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A wedge of cheese.",
+   "basis": "VOC_market_09 is one wedge of cheese and nothing else."
+  },
+  "ve90061d4": {
+   "asset": "VOC_market_09",
+   "gloss": "cheese",
+   "he": "גְּבִינָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A wedge of cheese.",
+   "basis": "VOC_market_09 is one wedge of cheese and nothing else."
+  },
+  "h231c624a": {
+   "asset": "VOC_synagogue_01",
+   "gloss": "book",
+   "he": "סֵפֶר",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A closed book.",
+   "basis": "VOC_synagogue_01 is a closed book with a blank cover. Nothing marks it as a prayer book, so it is book, not siddur. The tell, count and barber homographs are not paired."
+  },
+  "vd735f7d7": {
+   "asset": "VOC_synagogue_01",
+   "gloss": "book",
+   "he": "סֵפֶר",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A closed book.",
+   "basis": "VOC_synagogue_01 is a closed book with a blank cover. Nothing marks it as a prayer book, so it is book, not siddur. The tell, count and barber homographs are not paired."
+  },
+  "h16b7af50": {
+   "asset": "VOC_synagogue_02",
+   "gloss": "instruction, teaching",
+   "he": "תּוֹרָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A Torah scroll.",
+   "basis": "VOC_synagogue_02 is blank parchment on two wooden rollers, the form of a Torah scroll, with no letters. It is not paired with megillah."
+  },
+  "va539b888": {
+   "asset": "VOC_synagogue_02",
+   "gloss": "Torah; instruction, teaching",
+   "he": "תּוֹרָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A Torah scroll.",
+   "basis": "VOC_synagogue_02 is blank parchment on two wooden rollers, the form of a Torah scroll, with no letters. It is not paired with megillah."
+  },
+  "h6fc590a9": {
+   "asset": "VOC_transport_01",
+   "gloss": "plane (an airplane",
+   "he": "מָטוֹס",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "An airplane.",
+   "basis": "VOC_transport_01 is one airplane and nothing else."
+  },
+  "vda91462c": {
+   "asset": "VOC_transport_01",
+   "gloss": "plane (an airplane",
+   "he": "מָטוֹס",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "An airplane.",
+   "basis": "VOC_transport_01 is one airplane and nothing else."
+  },
+  "h91b785a8": {
+   "asset": "VOC_transport_02",
+   "gloss": "a briefcase, a suitcase",
+   "he": "מִזְוָדָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A suitcase.",
+   "basis": "VOC_transport_02 is one rolling suitcase."
+  },
+  "v8a51db0d": {
+   "asset": "VOC_transport_02",
+   "gloss": "briefcase, a suitcase",
+   "he": "מִזְוָדָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A suitcase.",
+   "basis": "VOC_transport_02 is one rolling suitcase."
+  },
+  "hc90eb03f": {
+   "asset": "VOC_transport_06",
+   "gloss": "bicycle, bike",
+   "he": "אוֹפַנַּיִם",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A bicycle.",
+   "basis": "VOC_transport_06 is one bicycle and nothing else."
+  },
+  "vc5ca03d5": {
+   "asset": "VOC_transport_06",
+   "gloss": "bicycle, bike",
+   "he": "אוֹפַנַּיִם",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A bicycle.",
+   "basis": "VOC_transport_06 is one bicycle and nothing else."
+  },
+  "h51ef0cf9": {
+   "asset": "VOC_transport_09",
+   "gloss": "satchel, backpack, pouch",
+   "he": "תַּרְמִיל",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A backpack.",
+   "basis": "VOC_transport_09 is one backpack. The tote bag is a different picture and a different word."
+  },
+  "v25aee76e": {
+   "asset": "VOC_transport_09",
+   "gloss": "satchel, backpack, pouch",
+   "he": "תַּרְמִיל",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A backpack.",
+   "basis": "VOC_transport_09 is one backpack. The tote bag is a different picture and a different word."
+  },
+  "h60aa7df9": {
+   "asset": "VOC_transport_10",
+   "gloss": "hat",
+   "he": "כּוֹבַע",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A hat.",
+   "basis": "VOC_transport_10 is one sun hat, which is a hat."
+  },
+  "v38ba9cb6": {
+   "asset": "VOC_transport_10",
+   "gloss": "hat",
+   "he": "כּוֹבַע",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A hat.",
+   "basis": "VOC_transport_10 is one sun hat, which is a hat."
+  },
+  "h85c6747d": {
+   "asset": "VOC_directions_03",
+   "gloss": "taxi, cab, taxicab",
+   "he": "מוֹנִית",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A taxi.",
+   "basis": "VOC_directions_03 is one car with a taxi lamp on the roof, so it is a taxi rather than a plain car."
+  },
+  "v4875a5b2": {
+   "asset": "VOC_directions_03",
+   "gloss": "taxi, cab, taxicab",
+   "he": "מוֹנִית",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A taxi.",
+   "basis": "VOC_directions_03 is one car with a taxi lamp on the roof, so it is a taxi rather than a plain car."
+  },
+  "h96dd5fec": {
+   "asset": "VOC_directions_05",
+   "gloss": "installation of traffic lights",
+   "he": "רִמְזוּר",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A traffic light.",
+   "basis": "VOC_directions_05 is one traffic signal with red, yellow and green lamps."
+  },
+  "h378062a7": {
+   "asset": "VOC_market_06",
+   "gloss": "bag, satchel",
+   "he": "תִּיק",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A bag.",
+   "basis": "VOC_market_06 is one tote bag. It is not the backpack."
+  },
+  "v56c6aba0": {
+   "asset": "VOC_market_06",
+   "gloss": "bag, satchel",
+   "he": "תִּיק",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A bag.",
+   "basis": "VOC_market_06 is one tote bag. It is not the backpack."
+  },
+  "h86027352": {
+   "asset": "VOC_colours_09",
+   "gloss": "sun",
+   "he": "שֶׁמֶשׁ",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "The sun.",
+   "basis": "VOC_colours_09 shows the sun over two hills. The sun is the subject, so this is not the word day. The verb to serve is a different word."
+  },
+  "vd7085110": {
+   "asset": "VOC_colours_09",
+   "gloss": "sun",
+   "he": "שֶׁמֶשׁ",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "The sun.",
+   "basis": "VOC_colours_09 shows the sun over two hills. The sun is the subject, so this is not the word day. The verb to serve is a different word."
+  },
+  "hc427aff6": {
+   "asset": "VOC_colours_10",
+   "gloss": "Moon",
+   "he": "יָרֵחַ",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A crescent moon.",
+   "basis": "VOC_colours_10 is a large crescent moon. Two small stars sit inside the curve, so this is the moon and not the word night or star. The word for month is not paired."
+  },
+  "vb6e48ca8": {
+   "asset": "VOC_colours_10",
+   "gloss": "moon",
+   "he": "יָרֵחַ",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A crescent moon.",
+   "basis": "VOC_colours_10 is a large crescent moon. Two small stars sit inside the curve, so this is the moon and not the word night or star. The word for month is not paired."
+  },
+  "h77944f4c": {
+   "asset": "VOC_numbers_01",
+   "gloss": "lemon",
+   "he": "לִימוֹן",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A lemon.",
+   "basis": "VOC_numbers_01 is one lemon. It was drawn for the number one, but the picture is a lemon, so it is not paired with the word one."
+  },
+  "v7062bf6d": {
+   "asset": "VOC_numbers_01",
+   "gloss": "lemon",
+   "he": "לִימוֹן",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A lemon.",
+   "basis": "VOC_numbers_01 is one lemon. It was drawn for the number one, but the picture is a lemon, so it is not paired with the word one."
+  },
+  "h50cf3648": {
+   "asset": "GAME_prefix_day",
+   "gloss": "day",
+   "he": "יוֹם",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A sun rising over low hills.",
+   "basis": "Sunrise over low hills, no clock. This is day (יום), not the sun word and not the older sun blot."
+  },
+  "v4b1f7879": {
+   "asset": "GAME_prefix_day",
+   "gloss": "day",
+   "he": "יוֹם",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A sun rising over low hills.",
+   "basis": "Same day picture for the five-thousand-word יום entry."
+  },
+  "ha39cf3c9": {
+   "asset": "GAME_prefix_world",
+   "gloss": "world",
+   "he": "עוֹלָם",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A distant horizon of sky, land and water.",
+   "basis": "A far panorama. This is world (עולם), not the close soil picture used for earth."
+  },
+  "h2d90f840": {
+   "asset": "GAME_prefix_earth",
+   "gloss": "earth, soil, land",
+   "he": "אֲדָמָה",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "Close plough furrows in soil.",
+   "basis": "Furrows of soil. This is earth/soil (אדמה), not the distant world horizon."
+  },
+  "h4700de9c": {
+   "asset": "GAME_prefix_light",
+   "gloss": "light, visible light",
+   "he": "אוֹר",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A single lit lamp on a plain surface.",
+   "basis": "One lamp, no sun and no person. This is light (אור)."
+  },
+  "h58d8d8fe": {
+   "asset": "GAME_prefix_king",
+   "gloss": "king",
+   "he": "מֶלֶךְ",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "An empty throne with a crown and no person.",
+   "basis": "Empty throne and a crown. No figure and no sacred object. This is king (מלך)."
+  },
+  "h51ed2ee5": {
+   "asset": "GAME_prefix_life",
+   "gloss": "life",
+   "he": "חַיִּים",
+   "pos": "noun",
+   "source": "words.json",
+   "alt": "A seedling in soil.",
+   "basis": "A seedling. This is life (חיים), not a person."
+  },
+  "v216ac014": {
+   "asset": "GAME_prefix_world",
+   "gloss": "world",
+   "he": "עוֹלָם",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A distant horizon of sky, land and water.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vd4782306": {
+   "asset": "GAME_prefix_earth",
+   "gloss": "earth, soil, land",
+   "he": "אֲדָמָה",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "Close plough furrows in soil.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vc91fc0e3": {
+   "asset": "GAME_prefix_light",
+   "gloss": "light, visible light",
+   "he": "אוֹר",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A single lit lamp on a plain surface.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "v6af84384": {
+   "asset": "GAME_prefix_king",
+   "gloss": "king",
+   "he": "מֶלֶךְ",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "An empty throne with a crown and no person.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  },
+  "vbf41d95c": {
+   "asset": "GAME_prefix_life",
+   "gloss": "life",
+   "he": "חַיִּים",
+   "pos": "noun",
+   "source": "vocab5k",
+   "alt": "A seedling in soil.",
+   "basis": "Same picture for the matching five-thousand-word entry."
+  }
+ },
+ "rejected": [
+  {
+   "wordId": "hf22f36ee",
+   "also": [
+    "v737f7196"
+   ],
+   "asset": "VOC_market_07",
+   "why": "The braided loaf is challah. It is not mapped to bread, and the cafe theme is not mapped to every food word."
+  },
+  {
+   "wordId": "p7f7d7b8f",
+   "also": [
+    "vaa98c647"
+   ],
+   "asset": "VOC_cafe_03",
+   "why": "The bottle picture is a bottle. The liquid is unlabeled, so it is not water."
+  },
+  {
+   "wordId": "hf9047f4b",
+   "also": [
+    "v4d9a0889"
+   ],
+   "asset": "VOC_cafe_02",
+   "why": "The coffee cup is full of coffee, so it is not the word cup."
+  },
+  {
+   "wordId": "pf8630913",
+   "asset": "VOC_cafe_04",
+   "why": "Pita appears only as a side of the hummus plate, so it is not given that picture."
+  },
+  {
+   "wordId": "h9974efdc",
+   "also": [
+    "ve3e3337b"
+   ],
+   "asset": "VOC_cafe_05",
+   "why": "The eggs are inside shakshuka, so the picture is not the word egg."
+  },
+  {
+   "wordId": "h60b16793",
+   "also": [
+    "vdd2835c3"
+   ],
+   "asset": "VOC_body_07",
+   "why": "The open smile is the word smile, not the word mouth."
+  },
+  {
+   "wordId": "h6afe7619",
+   "also": [
+    "v48a22a69"
+   ],
+   "asset": "VOC_synagogue_02",
+   "why": "Two wooden rollers are a Torah scroll, not a megillah."
+  },
+  {
+   "wordId": "h50cf3648",
+   "also": [
+    "v4b1f7879"
+   ],
+   "asset": "VOC_colours_09",
+   "why": "The sunrise picture is the sun, not the word day."
+  },
+  {
+   "wordId": "hf5bee50d",
+   "also": [
+    "v1a7f8a15"
+   ],
+   "asset": "VOC_colours_10",
+   "why": "The crescent is the moon, not the word night."
+  },
+  {
+   "wordId": "ve7006170",
+   "asset": "VOC_numbers_01",
+   "why": "One lemon depicts a lemon. It is not the number one, and the other number slots are counted foods, not numerals."
+  },
+  {
+   "wordId": "h89e110bd",
+   "also": [
+    "v54e5ed65"
+   ],
+   "asset": "VOC_market_02",
+   "why": "Tomatoes sit in a basket, so the picture is not tomato alone and not basket alone."
+  },
+  {
+   "wordId": "h3398235f",
+   "also": [
+    "v7412cb0f"
+   ],
+   "asset": "VOC_colours_01",
+   "why": "The red paint blot is flower-shaped, so it is not a clean cue for red."
+  },
+  {
+   "wordId": "hf2a00590",
+   "asset": "VOC_cafe_04",
+   "why": "A food-theme slot is not mapped to the general word food."
+  }
+ ],
+ "gaps": [
+  {
+   "asset": "VOC_transport_05",
+   "why": "The picture is one kick scooter. No vocabulary entry is named scooter, so there is no word to pair."
+  },
+  {
+   "asset": "VOC_transport_07",
+   "why": "The picture is one beach umbrella. No vocabulary entry is named umbrella, so there is no word to pair."
+  },
+  {
+   "asset": "VOC_body_09",
+   "why": "A glass of water with a pill beside it depicts neither water nor cup nor medicine alone."
+  },
+  {
+   "asset": "VOC_market_08",
+   "why": "An unlabeled jar of beige paste is not clearly tahini."
+  },
+  {
+   "asset": "VOC_home_07",
+   "why": "A woman in a green shirt and a child. The woman is not Noa in the terracotta collared blouse, and the picture is two people."
+  },
+  {
+   "asset": "VOC_home_08",
+   "why": "A man in a green shirt and a child. He is not Ari in navy with a chain, and the picture is two people."
+  },
+  {
+   "asset": "VOC_home_09",
+   "why": "Two elders on a bench, in a red cardigan and a green sweater, not the frozen cast, and not one word."
+  },
+  {
+   "asset": "VOC_body_01",
+   "why": "A head-and-shoulders profile in a navy collar, with no chain. It is not the frozen Ari portrait, and it can be read as head, face or boy."
+  },
+  {
+   "asset": "VERB_eat_all_02",
+   "why": "Noa here wears the terracotta collared blouse, a gold hoop and wavy hair, but she is eating at a table with food, so the scene is not one word."
+  },
+  {
+   "asset": "VOC_directions_02",
+   "why": "A bus shelter, bench and sign. There is no bus in the picture."
+  }
+ ]
+}

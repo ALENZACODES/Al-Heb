@@ -1,0 +1,58 @@
+id,kind,group,he
+alef,letter,letter,אָלֶף
+alef-sound,letter,letter-sound,א
+bet,letter,letter,בֵּית
+bet-sound,letter,letter-sound,ב
+gimel,letter,letter,גִּימֶל
+gimel-sound,letter,letter-sound,ג
+dalet,letter,letter,דָּלֶת
+dalet-sound,letter,letter-sound,ד
+he,letter,letter,הֵא
+he-sound,letter,letter-sound,ה
+vav,letter,letter,וָו
+vav-sound,letter,letter-sound,ו
+zayin,letter,letter,זַיִן
+zayin-sound,letter,letter-sound,ז
+chet,letter,letter,חֵית
+chet-sound,letter,letter-sound,ח
+tet,letter,letter,טֵית
+tet-sound,letter,letter-sound,ט
+yod,letter,letter,יוֹד
+yod-sound,letter,letter-sound,י
+kaf,letter,letter,כַּף
+kaf-sound,letter,letter-sound,כ
+lamed,letter,letter,לָמֶד
+lamed-sound,letter,letter-sound,ל
+mem,letter,letter,מֵם
+mem-sound,letter,letter-sound,מ
+nun,letter,letter,נוּן
+nun-sound,letter,letter-sound,נ
+samekh,letter,letter,סָמֶך
+samekh-sound,letter,letter-sound,ס
+ayin,letter,letter,עַיִן
+ayin-sound,letter,letter-sound,ע
+pe,letter,letter,פֵּא
+pe-sound,letter,letter-sound,פ
+tsadi,letter,letter,צָדִי
+tsadi-sound,letter,letter-sound,צ
+qof,letter,letter,קוֹף
+qof-sound,letter,letter-sound,ק
+resh,letter,letter,רֵישׁ
+resh-sound,letter,letter-sound,ר
+shin,letter,letter,שִׁין
+shin-sound,letter,letter-sound,ש
+tav,letter,letter,תָּו
+tav-sound,letter,letter-sound,ת
+kaf-final,letter,letter-final,כַּף סוֹפִית
+mem-final,letter,letter-final,מֵם סוֹפִית
+nun-final,letter,letter-final,נוּן סוֹפִית
+pe-final,letter,letter-final,פֵּא סוֹפִית
+tsadi-final,letter,letter-final,צָדִי סוֹפִית
+vet,letter,letter-variant,בֵית
+vet-sound,letter,letter-variant-sound,ב
+khaf,letter,letter-variant,כַף
+khaf-sound,letter,letter-variant-sound,כ
+fe,letter,letter-variant,פֵא
+fe-sound,letter,letter-variant-sound,פ
+sin,letter,letter-variant,שִׂין
+sin-sound,letter,letter-variant-sound,שׂ

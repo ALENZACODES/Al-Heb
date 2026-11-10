@@ -1,0 +1,166 @@
+/* ALEF service worker. Precache list comes from the generated precache-manifest.js
+   (node tools/build-precache.mjs). Strategies:
+   - navigation: network first, fall back to cached index.html, then offline.html
+   - audio/images/fonts: cache first, filled at runtime (audio in alef-runtime-v1; the rest in the per-version alef-data-<version>, dropped on activate)
+     Music (audio/music/*) goes to its own alef-music-v1 cache: larger cap (MAX_MUSIC_BYTES), never trimmed by MAX_CLIPS.
+     Range requests for audio (what <audio> sends): answered from a cached full copy as a 206 slice; otherwise passed to the network and the clip is
+     then fetched in full in the background and cached, small files only (MAX_CLIP_BYTES) and at most MAX_CLIPS clips (oldest dropped). Never at install.
+     Range requests for anything else bypass the worker. See docs/audio/RANGE-AND-OFFLINE.md.
+     A cached clip is revalidated once per worker lifetime while online (conditional GET in the background, after the cached
+     answer has gone out): a clip re-rendered at the same path reaches a phone that already played the old one on the next play.
+   - data/audio/manifest-words-*.json (lazy per-tradition word shards, NOT precached): stale-while-revalidate into the runtime cache,
+     so the learner's own shard is available offline after first use; a plain network error when neither exists (never offline.html)
+   - everything else same-origin: stale-while-revalidate
+   Lifecycle: a new worker installs its shell cache and then WAITS. It takes over only when the page posts {type:'SKIP_WAITING'}
+   (src/shell/update.js does that when the learner presses "Reload now" in the update banner) or when every ALEF tab is closed.
+   So a running page is never switched to a newer cache under it. activate still claims clients so the reload lands on the new worker. */
+importScripts('precache-manifest.js');
+const VERSION = self.ALEF_VERSION || 'dev';
+const SHELL = `alef-shell-${VERSION}`;
+const RUNTIME = 'alef-runtime-v1'; // audio clips only (cache first, kept across versions)
+const DATA = `alef-data-${VERSION}`;  // every other runtime-cached file (vocab shards, audio manifest, word shard, images, fonts): one cache per version
+const AUDIO = /\.(mp3|m4a|ogg|wav)$/i;
+const MAX_CLIP_BYTES = 2048 * 1024; // 2 MiB, so the longest prayer recordings (about 1.8 MiB) also work offline; a clip bigger than this is never cached by the worker (plain network, no offline copy)
+const MAX_CLIPS = 600;             // audio entries kept in RUNTIME; past this the oldest-inserted are deleted
+// Music beds and songs (audio/music/*.mp3, 0.2 to 5.1 MB each, 13 files) get their own cache: over MAX_CLIP_BYTES they were never
+// stored (no offline music), and in RUNTIME the word clips would push them out. Not trimmed; same per-lifetime revalidation.
+const MUSIC = 'alef-music-v1';
+const MUSIC_PATH = /\/audio\/music\/[^/]+\.(mp3|ogg)$/i;
+const MAX_MUSIC_BYTES = 8 * 1024 * 1024;
+const isMusic = (u) => MUSIC_PATH.test(new URL(u, self.location.origin).pathname);
+const capFor = (u) => (isMusic(u) ? MAX_MUSIC_BYTES : MAX_CLIP_BYTES);
+const clipCache = (u) => caches.open(isMusic(u) ? MUSIC : RUNTIME);
+
+/** Drop the oldest clips beyond MAX_CLIPS (Cache keys() is in insertion order); putClip = put + trim. */
+async function trimClips() {
+  try { const c = await caches.open(RUNTIME); const keys = await c.keys(); for (let i = 0; i < keys.length - MAX_CLIPS; i++) await c.delete(keys[i]); } catch { /* ignore */ }
+}
+async function putClip(req, res) { const u = typeof req === 'string' ? req : req.url; await (await clipCache(u)).put(req, res); if (!isMusic(u)) await trimClips(); }
+const revalidated = new Set();
+/** Background conditional GET for a clip served from the cache. Replaces the copy when the host has different bytes; never throws, never blocks the answer. */
+async function revalidateClip(url, hit) {
+  if (revalidated.has(url) || !(self.navigator && self.navigator.onLine)) return;
+  revalidated.add(url);
+  try {
+    const headers = {};
+    const etag = hit.headers.get('etag'); const lm = hit.headers.get('last-modified');
+    if (etag) headers['If-None-Match'] = etag;
+    if (lm) headers['If-Modified-Since'] = lm;
+    const res = await fetch(url, { headers, cache: 'no-cache' });
+    if (res.status !== 200) return; // 304: unchanged; anything else: keep what we have
+    const fresh = new Uint8Array(await res.clone().arrayBuffer());
+    if (fresh.byteLength > capFor(url)) { await (await clipCache(url)).delete(url); return; }
+    const old = new Uint8Array(await hit.clone().arrayBuffer());
+    if (old.byteLength === fresh.byteLength && old.every((b, i) => b === fresh[i])) return;
+    await putClip(url, res);
+  } catch { /* offline or aborted: the cached copy stays */ }
+}
+const inFlight = new Set();
+/** Background full GET for a clip the page is reading with Range requests. Small files only; never throws. */
+async function fillClip(url, total) {
+  if (inFlight.has(url)) return;
+  if (!(total > 0 && total <= capFor(url))) return; // unknown or too big: leave it to the network
+  inFlight.add(url);
+  try {
+    if (await (await clipCache(url)).match(url)) return;
+    const res = await fetch(url);
+    if (res.status !== 200) return;
+    const buf = await res.clone().arrayBuffer();
+    if (buf.byteLength > capFor(url)) return;
+    await putClip(url, res);
+  } catch { /* offline or aborted: the next play tries again */ } finally { inFlight.delete(url); }
+}
+/** "bytes=a-b" | "bytes=a-" | "bytes=-n" against a body of `len` bytes -> {a,b} | 'bad' (ignore Range, send all) | 'unsat' (416). */
+function parseRange(h, len) {
+  const m = /^bytes=(\d*)-(\d*)$/.exec((h || '').trim());
+  if (!m || (m[1] === '' && m[2] === '')) return 'bad';
+  let a, b;
+  if (m[1] === '') { const n = +m[2]; if (n === 0) return 'unsat'; a = Math.max(0, len - n); b = len - 1; }
+  else { a = +m[1]; b = m[2] === '' ? len - 1 : Math.min(+m[2], len - 1); }
+  return a >= len || a > b ? 'unsat' : { a, b };
+}
+async function audioRange(req, event) {
+  const cache = await clipCache(req.url);
+  const hit = await cache.match(req.url); // by URL: the Range header is not part of the key
+  if (hit && hit.status === 200) {
+    if (event) event.waitUntil(revalidateClip(req.url, hit.clone()));
+    const buf = await hit.clone().arrayBuffer(); const len = buf.byteLength;
+    const r = parseRange(req.headers.get('range'), len);
+    const type = hit.headers.get('content-type') || 'audio/mpeg';
+    if (r === 'unsat') return new Response(null, { status: 416, headers: { 'content-range': `bytes */${len}` } });
+    if (r === 'bad') return new Response(buf, { status: 200, headers: { 'content-type': type, 'content-length': String(len), 'accept-ranges': 'bytes' } });
+    return new Response(buf.slice(r.a, r.b + 1), { status: 206, headers: { 'content-type': type, 'content-length': String(r.b - r.a + 1), 'content-range': `bytes ${r.a}-${r.b}/${len}`, 'accept-ranges': 'bytes' } });
+  }
+  const res = await fetch(req); // not cached yet: network answers (offline: this rejects, as before)
+  const cr = /\/(\d+)$/.exec(res.headers.get('content-range') || '');
+  const total = res.status === 206 && cr ? +cr[1] : res.status === 200 ? +(res.headers.get('content-length') || 0) : 0;
+  return { res, total };
+}
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(self.ALEF_PRECACHE || [])));
+});
+// Consent-only takeover: the page's update banner posts this after the learner presses Reload (and not mid-exercise).
+self.addEventListener('message', (event) => {
+  const d = event.data;
+  if (d && (d === 'SKIP_WAITING' || d.type === 'SKIP_WAITING')) event.waitUntil(self.skipWaiting());
+});
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    for (const k of await caches.keys()) if ((k.startsWith('alef-shell-') && k !== SHELL) || (k.startsWith('alef-data-') && k !== DATA)) await caches.delete(k);
+    // older workers also put data/images in RUNTIME; those copies would win cache lookups and stay stale, so drop everything but audio clips
+    try { const c = await caches.open(RUNTIME); for (const r of await c.keys()) if (!AUDIO.test(new URL(r.url).pathname)) await c.delete(r); } catch { /* ignore */ }
+    await self.clients.claim();
+  })());
+});
+
+const MEDIA = /\.(mp3|m4a|ogg|wav|png|jpe?g|webp|gif|svg|woff2?|ttf|otf)$/i;
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+  if (req.headers.has('range')) {
+    if (!AUDIO.test(url.pathname)) return; // other media: the network handles Range as before
+    event.respondWith((async () => {
+      const out = await audioRange(req, event);
+      if (out instanceof Response) return out;
+      event.waitUntil(fillClip(req.url, out.total));
+      return out.res;
+    })());
+    return;
+  }
+
+  if (req.mode === 'navigate') {
+    event.respondWith((async () => {
+      try { const res = await fetch(req); if (res.ok) return res; } catch { /* offline */ }
+      return (await caches.match('index.html')) || (await caches.match('offline.html')) || Response.error();
+    })());
+    return;
+  }
+  if (/\/data\/audio\/manifest-words-[a-z]+\.json$/.test(url.pathname)) {
+    event.respondWith((async () => {
+      const hit = await caches.match(req);
+      const net = fetch(req).then(async (res) => { if (res.ok) { const c = await caches.open(DATA); c.put(req, res.clone()); } return res; }).catch(() => null);
+      return hit || (await net) || Response.error();
+    })());
+    return;
+  }
+  if (MEDIA.test(url.pathname)) {
+    event.respondWith((async () => {
+      const hit = await caches.match(req);
+      if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(revalidateClip(req.url, hit.clone())); return hit; }
+      const res = await fetch(req);
+      if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > capFor(req.url))) { const name = AUDIO.test(url.pathname) ? RUNTIME : DATA; const c = await caches.open(isMusic(req.url) ? MUSIC : name); c.put(req, res.clone()); if (AUDIO.test(url.pathname) && !isMusic(req.url)) event.waitUntil(trimClips()); }
+      return res;
+    })());
+    return;
+  }
+  event.respondWith((async () => {
+    const hit = await caches.match(req, { ignoreSearch: false });
+    const hitInData = hit && !!(await (await caches.open(DATA)).match(req));
+    const net = fetch(req).then(async (res) => { if (res.ok) { if (!(hit && !hitInData)) { const c = await caches.open(DATA); c.put(req, res.clone()); } } return res; }).catch(() => null);
+    return hit || (await net) || (await caches.match('offline.html')) || Response.error();
+  })());
+});

@@ -1,0 +1,8 @@
+# Python packages the test suite uses. Exact pins, so a clean runner installs the same versions every time.
+# Resolved on 4 November 2026 with `pip install --dry-run --python-version 3.12 --only-binary=:all:` for the CI interpreter (3.12).
+# To change a version: edit it here, run `npm test`, and keep the log of the "Toolchain report" step with the change.
+segno==1.6.6
+Pillow==13.0.0
+pypdf==6.21.4
+numpy==2.5.4
+opencv-python-headless==5.0.0.93

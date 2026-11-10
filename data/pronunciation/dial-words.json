@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "proofread": false,
+  "description": "Words for the niqqud dial. DRAFT: pointing, ordinary spelling and glosses are drafts, not checked against a dictionary or by a native speaker. unpointed = how an Israeli would normally write it; full = siddur-style pointing. When stripping the points from full does not give unpointed, the word has a plene note explaining the extra vowel letter.",
+  "words": [
+    { "id": "shalom", "gloss": "peace / hello", "unpointed": "שלום", "full": "שָׁלוֹם" },
+    { "id": "toda", "gloss": "thank you", "unpointed": "תודה", "full": "תּוֹדָה" },
+    { "id": "boker", "gloss": "morning", "unpointed": "בוקר", "full": "בֹּקֶר", "plene": { "extra": "vav", "note": "Everyday spelling adds a vav for the o sound; the pointed form writes only the cholam dot." } },
+    { "id": "perot", "gloss": "fruit", "unpointed": "פירות", "full": "פֵּרוֹת", "plene": { "extra": "yod", "note": "Everyday spelling adds a yod for the e sound." } },
+    { "id": "sukka", "gloss": "booth (sukkah)", "unpointed": "סוכה", "full": "סֻכָּה", "plene": { "extra": "vav", "note": "Everyday spelling adds a vav for the u sound; kubutz is replaced by a vav letter." } },
+    { "id": "kulam", "gloss": "all of them", "unpointed": "כולם", "full": "כֻּלָּם", "plene": { "extra": "vav", "note": "Everyday spelling adds a vav for the u sound." } },
+    { "id": "tora", "gloss": "Torah", "unpointed": "תורה", "full": "תּוֹרָה" },
+    { "id": "yeled", "gloss": "boy / child", "unpointed": "ילד", "full": "יֶלֶד" },
+    { "id": "ima", "gloss": "mom", "unpointed": "אמא", "full": "אִמָּא" },
+    { "id": "shabbat", "gloss": "Sabbath", "unpointed": "שבת", "full": "שַׁבָּת" },
+    { "id": "bayit", "gloss": "house", "unpointed": "בית", "full": "בַּיִת" },
+    { "id": "lechem", "gloss": "bread", "unpointed": "לחם", "full": "לֶחֶם" },
+    { "id": "gvina", "gloss": "cheese", "unpointed": "גבינה", "full": "גְּבִינָה" },
+    { "id": "ani", "gloss": "I", "unpointed": "אני", "full": "אֲנִי" },
+    { "id": "sefer", "gloss": "book", "unpointed": "ספר", "full": "סֵפֶר" },
+    { "id": "lama", "gloss": "why", "unpointed": "למה", "full": "לָמָּה" }
+  ]
+}

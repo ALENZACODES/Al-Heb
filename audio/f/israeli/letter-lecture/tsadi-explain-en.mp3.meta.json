@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Tsadi — TSAH-dee. Sound: TS as in cats. Shape hook: hockey stick standing on its blade, with a little branch leaning on the shaft halfway up. Tip: Right-hand shaft bends at the bottom into a blade running left along the floor; not Ayin, Aleph.",
+ "inputSha256": "033c23ec7afca0f69c69aabdee3276bf531c50250e6aee3cec432230b492eba2",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

@@ -1,0 +1,21 @@
+{
+  "v": 1,
+  "status": "draft",
+  "note": "Composer costumes for Today's Mix. Content ids are resolved at runtime from due queue + unlock tier. Day-1 / depth tier 0 must NOT show this card.",
+  "revealAfterSpokenTurns": 3,
+  "revealAfterDistinctDays": 2,
+  "sessionMinutes": 5,
+  "tiles": 3,
+  "costumes": [
+    { "id": "letter-rush", "title": "Letter Rush", "minutes": 1, "route": "letters", "href": "#/letters?tab=rush", "skill": "letter-recognition" },
+    { "id": "say-it", "title": "Say it", "minutes": 2, "route": "speak", "href": "#/speak", "skill": "spoken-production" },
+    { "id": "sprint", "title": "Word Sprint", "minutes": 2, "route": "sprint", "href": "#/sprint", "skill": "vocab-recall" },
+    { "id": "tradition", "title": "Tradition Detective", "minutes": 2, "route": "tradition-quiz", "href": "#/tradition-quiz", "skill": "tradition-discrimination" },
+    { "id": "fade", "title": "Niqqud Fade", "minutes": 2, "route": "fade", "href": "#/fade", "skill": "unpointed-reading" },
+    { "id": "karaoke", "title": "Prayer line", "minutes": 2, "route": "speak", "href": "#/speak?tab=read", "skill": "prayer-fluency" },
+    { "id": "morning", "title": "Morning verse", "minutes": 1, "route": "morning", "href": "#/morning", "skill": "daily-verse" }
+  ],
+  "beginnerBias": ["letter-rush", "say-it", "sprint"],
+  "prayerBias": ["karaoke", "fade", "tradition"],
+  "israelBias": ["say-it", "sprint", "morning"]
+}

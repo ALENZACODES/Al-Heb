@@ -1,0 +1,177 @@
+{
+ "id": "book30",
+ "titleHe": "חֲדַר כֹּשֶׁר",
+ "titleTranslit": "Chadar Kosher",
+ "titleEn": "The Gym",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "חֲדַר כֹּשֶׁר.",
+   "translit": "Chadar kosher.",
+   "en": "The gym.",
+   "img": "assets/books/book30/BOOK30_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p01.mp3",
+    "m": "audio/m/israeli/book/book30-p01.mp3"
+   },
+   "illustration": "a gym with mirrors and machines, early morning",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "יוֹסִי בָּא בַּפַּעַם הָרִאשׁוֹנָה.",
+   "translit": "Yossi ba ba-pa'am ha-rishonah.",
+   "en": "Yossi comes for the first time.",
+   "img": "assets/books/book30/BOOK30_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p02.mp3",
+    "m": "audio/m/israeli/book/book30-p02.mp3"
+   },
+   "illustration": "a man in brand new sneakers looking lost",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַכֹּל חָדָשׁ.",
+   "translit": "Ha-kol chadash.",
+   "en": "Everything is new.",
+   "img": "assets/books/book30/BOOK30_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p03.mp3",
+    "m": "audio/m/israeli/book/book30-p03.mp3"
+   },
+   "illustration": "shiny machines, a confusing panel of buttons",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא עוֹלֶה עַל הַמַּכְשִׁיר.",
+   "translit": "Hu oleh al ha-machshir.",
+   "en": "He gets on the machine.",
+   "img": "assets/books/book30/BOOK30_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p04.mp3",
+    "m": "audio/m/israeli/book/book30-p04.mp3"
+   },
+   "illustration": "climbing onto a treadmill",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַמַּכְשִׁיר מָהִיר.",
+   "translit": "Ha-machshir mahir.",
+   "en": "The machine is fast.",
+   "img": "assets/books/book30/BOOK30_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p05.mp3",
+    "m": "audio/m/israeli/book/book30-p05.mp3"
+   },
+   "illustration": "the belt racing, his legs a blur",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "מָהִיר מְאוֹד!",
+   "translit": "Mahir me'od!",
+   "en": "Very fast!",
+   "img": "assets/books/book30/BOOK30_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p06.mp3",
+    "m": "audio/m/israeli/book/book30-p06.mp3"
+   },
+   "illustration": "the man clinging to the handles",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הוּא לוֹחֵץ עַל כַּפְתּוֹר.",
+   "translit": "Hu lochetz al kaftor.",
+   "en": "He presses a button.",
+   "img": "assets/books/book30/BOOK30_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p07.mp3",
+    "m": "audio/m/israeli/book/book30-p07.mp3"
+   },
+   "illustration": "a finger jabbing a red button",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַמַּכְשִׁיר עוֹצֵר.",
+   "translit": "Ha-machshir otzer.",
+   "en": "The machine stops.",
+   "img": "assets/books/book30/BOOK30_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p08.mp3",
+    "m": "audio/m/israeli/book/book30-p08.mp3"
+   },
+   "illustration": "the man lurching forward, then still",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "אִשָּׁה לְיָדוֹ מְחַיֶּכֶת.",
+   "translit": "Ishah le-yado mechayechet.",
+   "en": "A woman next to him smiles.",
+   "img": "assets/books/book30/BOOK30_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p09.mp3",
+    "m": "audio/m/israeli/book/book30-p09.mp3"
+   },
+   "illustration": "a fit older woman on the next treadmill, amused",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"יוֹם רִאשׁוֹן?\"",
+   "translit": "\"Yom rishon?\"",
+   "en": "\"First day?\"",
+   "img": "assets/books/book30/BOOK30_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p10.mp3",
+    "m": "audio/m/israeli/book/book30-p10.mp3"
+   },
+   "illustration": "her raised eyebrow",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"כֵּן.\"",
+   "translit": "\"Ken.\"",
+   "en": "\"Yes.\"",
+   "img": "assets/books/book30/BOOK30_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p11.mp3",
+    "m": "audio/m/israeli/book/book30-p11.mp3"
+   },
+   "illustration": "the man wiping his forehead, sheepish",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "\"גַּם אֲנִי. לִפְנֵי עֶשְׂרִים שָׁנָה.\"",
+   "translit": "\"Gam ani. Lifnei esrim shanah.\"",
+   "en": "\"Me too. Twenty years ago.\"",
+   "img": "assets/books/book30/BOOK30_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book30-p12.mp3",
+    "m": "audio/m/israeli/book/book30-p12.mp3"
+   },
+   "illustration": "the woman winking, running easily",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

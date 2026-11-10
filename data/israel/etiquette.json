@@ -1,0 +1,155 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, transliteration (capitals mark the stressed syllable), register labels and gender forms have NOT been checked by a native speaker. No audio exists for any item. Nothing here was tested with learners.",
+ "cards": [
+  {
+   "id": "et-shabbat",
+   "title": "Shabbat",
+   "body": "From Friday afternoon until Saturday night, many shops, restaurants and offices close. Buses and trains generally do not run on Shabbat in most places. Plan food and transport before Friday afternoon.",
+   "tags": [
+    "shabbat",
+    "transport"
+   ],
+   "confidence": "high",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "et-shabbat-greeting",
+   "title": "Greetings for Shabbat and holidays",
+   "body": "On Friday people say shabbat shalom. After Shabbat ends, shavua tov ('a good week') is the greeting. Before a festival, chag sameach is common.",
+   "tags": [
+    "shabbat",
+    "greetings"
+   ],
+   "confidence": "high",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "et-kashrut",
+   "title": "Kosher signs",
+   "body": "Many restaurants display a kashrut certificate. 'Basari' means meat, 'chalavi' means dairy, and 'parve' means neither. Meat and dairy are not mixed in a kosher place. Some places are not kosher: check the sign.",
+   "tags": [
+    "food",
+    "kashrut"
+   ],
+   "confidence": "high",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "et-tipping",
+   "title": "Tipping",
+   "body": "At a restaurant with table service, a tip of roughly ten to fifteen percent is commonly given when service is not already added to the bill. Check the bill. Tipping at a counter is less usual.",
+   "tags": [
+    "money",
+    "food"
+   ],
+   "confidence": "medium",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "General impression of practice; check the current norm with a local."
+  },
+  {
+   "id": "et-taxi-tip",
+   "title": "Taxis and tips",
+   "body": "Rounding up a taxi fare is welcome but is not an obligation. Ask for the meter or agree the price first when there is no meter.",
+   "tags": [
+    "money",
+    "taxi"
+   ],
+   "confidence": "low",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Not verified; check with a local."
+  },
+  {
+   "id": "et-haggling",
+   "title": "Haggling",
+   "body": "At a market stall, asking for a better price is often accepted, especially for non-food goods. Prices of fruit and vegetables sold by the kilo are usually posted. In a shop with price tags, do not haggle.",
+   "tags": [
+    "money",
+    "shuk"
+   ],
+   "confidence": "medium",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "General impression; varies by seller."
+  },
+  {
+   "id": "et-directness",
+   "title": "Directness",
+   "body": "Many learners report that Israelis are direct: short questions, quick answers and strong opinions are common. This is not always rudeness. Reply in the same plain way and add bevakasha and toda.",
+   "tags": [
+    "social"
+   ],
+   "confidence": "medium",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "A common description, not a measured fact."
+  },
+  {
+   "id": "et-security",
+   "title": "Bag checks",
+   "body": "Some malls, stations and public venues check bags at the entrance. Have your bag open and be patient.",
+   "tags": [
+    "safety"
+   ],
+   "confidence": "medium",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Common in practice, but not every venue."
+  },
+  {
+   "id": "et-holy-sites",
+   "title": "Dress at holy places",
+   "body": "At synagogues, churches, mosques and the Western Wall, cover shoulders and knees, and follow signs and staff. Men may be asked to cover their heads at some Jewish sites.",
+   "tags": [
+    "dress",
+    "sites"
+   ],
+   "confidence": "high",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "et-ravkav",
+   "title": "Rav-Kav card",
+   "body": "The Rav-Kav is a rechargeable transit card used across public transport. Ask staff or check the official site for where to buy and top it up.",
+   "tags": [
+    "transport"
+   ],
+   "confidence": "medium",
+   "regionClaim": false,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Details about where to buy and load were not verified."
+  },
+  {
+   "id": "et-tel-aviv",
+   "title": "What is spoken in Tel Aviv?",
+   "body": "Everyday life in Tel Aviv is conducted in modern Hebrew, the same language as elsewhere in Israel, with casual forms and slang like the words on the fillers page. Visitors often report that English is widely understood, and some people may reply to you in English. How a local sounds depends on age, background and neighbourhood.",
+   "tags": [
+    "language"
+   ],
+   "confidence": "medium",
+   "regionClaim": true,
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "General impressions, not measured; regional variation not verified."
+  }
+ ]
+}

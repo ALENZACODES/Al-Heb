@@ -1,0 +1,811 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original draft content written from general knowledge, unreviewed. Nothing was copied from a course, book, phrasebook or website. Pointing, transliteration (capitals mark the stressed syllable), register labels and gender forms have NOT been checked by a native speaker. No audio exists for any item. Nothing here was tested with learners.",
+ "roles": {
+  "natural": "The most natural reply",
+  "stiff": "Correct, but stiff or textbook-like",
+  "off": "Wrong register, tone or timing"
+ },
+ "scenarios": [
+  {
+   "id": "sc-cafe",
+   "title": "Order a milky coffee",
+   "place": "cafe",
+   "situation": "You are at a counter in a cafe. The server is waiting for your order.",
+   "other": {
+    "he": "אֶפְשָׁר לַעֲזוֹר?",
+    "translit": "efSHAR la'aZOR?",
+    "en": "Can I help?"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "אֶפְשָׁר הָפוּךְ, בְּבַקָּשָׁה?",
+     "translit": "efSHAR haFUCH, bevakaSHA?",
+     "en": "A hafuch, please?",
+     "explain": "Short, polite, no gender to choose.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי רוֹצֶה לְהַזְמִין קָפֶה הָפוּךְ, בְּבַקָּשָׁה",
+     "translit": "ani roTSE lehazMIN kaFE haFUCH, bevakaSHA",
+     "en": "I want to order a coffee hafuch, please.",
+     "explain": "Correct but wordy and textbook-like.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי רוֹצֶה לְהַזְמִין קָפֶה הָפוּךְ, בְּבַקָּשָׁה",
+       "translit": "ani roTSE lehazMIN kaFE haFUCH, bevakaSHA"
+      },
+      "f": {
+       "he": "אֲנִי רוֹצָה לְהַזְמִין קָפֶה הָפוּךְ, בְּבַקָּשָׁה",
+       "translit": "ani roTSA lehazMIN kaFE haFUCH, bevakaSHA"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "הָפוּךְ, יַאלְלָה, מַהֵר",
+     "translit": "haFUCH, yaLA, maHER",
+     "en": "Hafuch, come on, quickly.",
+     "explain": "Yalla plus 'quickly' sounds pushy to a stranger who is serving you.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-bill",
+   "title": "Ask for the bill",
+   "place": "cafe",
+   "situation": "You have finished your meal and the waiter walks by.",
+   "other": {
+    "he": "הַכֹּל בְּסֵדֶר?",
+    "translit": "haKOL beSEder?",
+    "en": "Is everything okay?"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "הַכֹּל מְצֻיָּן. אֶפְשָׁר חֶשְׁבּוֹן?",
+     "translit": "haKOL metsuYAN. efSHAR cheshBON?",
+     "en": "Everything's great. Bill, please?",
+     "explain": "Answers the question, then asks briefly.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "הַאִם אֶפְשָׁר לְקַבֵּל אֶת הַחֶשְׁבּוֹן לְשֻׁלְחָנֵנוּ?",
+     "translit": "ha'IM efSHAR lekaBEL et hacheshBON leshulchaNEnu?",
+     "en": "May we receive the bill for our table?",
+     "explain": "Formal, like a letter.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "נוּ, חֶשְׁבּוֹן! כְּבָר!",
+     "translit": "NU, cheshBON! KVAR!",
+     "en": "Come on, the bill! Already!",
+     "explain": "Impatient. Nu and kvar with a stranger can sound rude.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-shuk-bargain",
+   "title": "Ask for a better price",
+   "place": "shuk",
+   "situation": "A vendor says 'twenty shekels a kilo'. You would like a lower price.",
+   "other": {
+    "he": "עֶשְׂרִים שֶׁקֶל לַקִּילוֹ",
+    "translit": "esRIM SHEkel lakiLO",
+    "en": "Twenty shekels a kilo."
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "תַּעֲשֶׂה לִי מְחִיר?",
+     "translit": "ta'aSE li meCHIR?",
+     "en": "Give me a price?",
+     "explain": "A light request that is commonly heard in markets (to a male vendor).",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "הַאִם תִּהְיֶה מוּכָן לְהוֹרִיד אֶת הַמְּחִיר?",
+     "translit": "ha'IM tihYE muCHAN lehoRID et hamechIR?",
+     "en": "Would you be prepared to lower the price?",
+     "explain": "Grammatical but much too formal for a stall.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "זֶה גְּנֵבָה! אֲנִי לֹא מְשַׁלֵּם כָּל כָּךְ הַרְבֵּה!",
+     "translit": "ze gneVA! ani lo meshaLEM kol KACH harBE!",
+     "en": "That's robbery! I won't pay so much!",
+     "explain": "Accusing the seller will not help.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "זֶה גְּנֵבָה! אֲנִי לֹא מְשַׁלֵּם כָּל כָּךְ הַרְבֵּה!",
+       "translit": "ze gneVA! ani lo meshaLEM kol KACH harBE!"
+      },
+      "f": {
+       "he": "זֶה גְּנֵבָה! אֲנִי לֹא מְשַׁלֶּמֶת כָּל כָּךְ הַרְבֵּה!",
+       "translit": "ze gneVA! ani lo meshaLEmet kol KACH harBE!"
+      }
+     }
+    }
+   ],
+   "confidence": "medium",
+   "note": "Assumes a male vendor.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Assumes a male vendor."
+  },
+  {
+   "id": "sc-pharmacy",
+   "title": "Ask for something for a headache",
+   "place": "pharmacy",
+   "situation": "The pharmacist (a man) asks how he can help.",
+   "other": {
+    "he": "אֶפְשָׁר לַעֲזוֹר?",
+    "translit": "efSHAR la'aZOR?",
+    "en": "Can I help?"
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "כּוֹאֵב לִי הָרֹאשׁ. יֵשׁ מַשֶּׁהוּ לָזֶה?",
+     "translit": "ko'EV li haROSH. YESH maSHEhu laZE?",
+     "en": "My head hurts. Is there something for it?",
+     "explain": "Clear and simple.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי סוֹבֵל מִכְּאֵב רֹאשׁ. אֶפְשָׁר תְּרוּפָה?",
+     "translit": "ani soVEL mike'EV rosh. efSHAR tru'FA?",
+     "en": "I suffer from a headache. Is a medicine possible?",
+     "explain": "Heavy: 'I suffer' sounds like a medical report.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי סוֹבֵל מִכְּאֵב רֹאשׁ. אֶפְשָׁר תְּרוּפָה?",
+       "translit": "ani soVEL mike'EV rosh. efSHAR tru'FA?"
+      },
+      "f": {
+       "he": "אֲנִי סוֹבֶלֶת מִכְּאֵב רֹאשׁ. אֶפְשָׁר תְּרוּפָה?",
+       "translit": "ani soVElet mike'EV rosh. efSHAR tru'FA?"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "אָחִי, הָרֹאשׁ שֶׁלִּי בָּלָגָן, תֵּן מַשֶּׁהוּ",
+     "translit": "aCHI, haROSH sheLI balaGAN, TEN maSHEhu",
+     "en": "Mate, my head is a mess, give me something.",
+     "explain": "Slang for a professional, and balagan means 'mess', not pain.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Assumes a male pharmacist.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Assumes a male pharmacist."
+  },
+  {
+   "id": "sc-bus",
+   "title": "Check the bus",
+   "place": "bus",
+   "situation": "You are at a stop. The bus arrives and the driver opens the door.",
+   "other": {
+    "silent": true,
+    "en": "(the driver waits)"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "זֶה הוֹלֵךְ לַמֶּרְכָּז?",
+     "translit": "ZE hoLECH lamerKAZ?",
+     "en": "Does this go to the centre?",
+     "explain": "Short and common.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "הַאִם הָאוֹטוֹבּוּס הַזֶּה נוֹסֵעַ לַמֶּרְכָּז?",
+     "translit": "ha'IM ha'otoBUS haZE noSEa lamerKAZ?",
+     "en": "Does this bus travel to the centre?",
+     "explain": "Correct but formal.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "נֶהָג, הַמֶּרְכָּז, כֵּן אוֹ לֹא?",
+     "translit": "neHAG, hamerKAZ, KEN o LO?",
+     "en": "Driver, the centre, yes or no?",
+     "explain": "Curt, and 'driver' as a form of address sounds blunt.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-taxi",
+   "title": "Stop the taxi",
+   "place": "taxi",
+   "situation": "You are near your hotel and want the taxi to stop.",
+   "other": {
+    "silent": true,
+    "en": "(the driver, a man)"
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "תַּעֲצֹר פֹּה, בְּבַקָּשָׁה",
+     "translit": "ta'aTSOR PO, bevakaSHA",
+     "en": "Stop here, please.",
+     "explain": "Natural for a male driver.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "הַאִם תִּהְיֶה מוּכָן לַעֲצֹר בְּמָקוֹם זֶה?",
+     "translit": "ha'IM tihYE muCHAN la'aTSOR bemaKOM ze?",
+     "en": "Would you be prepared to stop at this place?",
+     "explain": "Too formal.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "דַּי, דַּי, תַּעֲצֹר כְּבָר!",
+     "translit": "DAI, DAI, ta'aTSOR KVAR!",
+     "en": "Enough, enough, stop already!",
+     "explain": "Sounds panicky or annoyed for a simple request.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Assumes a male driver.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Assumes a male driver."
+  },
+  {
+   "id": "sc-train",
+   "title": "Buy a train ticket",
+   "place": "train",
+   "situation": "You are at a ticket window for a train to Haifa.",
+   "other": {
+    "he": "שָׁלוֹם, לְאָן?",
+    "translit": "shaLOM, leAN?",
+    "en": "Hello, where to?"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "הָלוֹךְ וָשׁוֹב לְחֵיפָה, בְּבַקָּשָׁה",
+     "translit": "haLOCH vaSHOV lecheiFA, bevakaSHA",
+     "en": "Return to Haifa, please.",
+     "explain": "Short and clear.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי רוֹצֶה לִרְכֹּשׁ כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+     "translit": "ani roTSE lirKOSH karTIS haLOCH vaSHOV lecheiFA",
+     "en": "I want to purchase a return ticket to Haifa.",
+     "explain": "Correct but long and formal.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי רוֹצֶה לִרְכֹּשׁ כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+       "translit": "ani roTSE lirKOSH karTIS haLOCH vaSHOV lecheiFA"
+      },
+      "f": {
+       "he": "אֲנִי רוֹצָה לִרְכֹּשׁ כַּרְטִיס הָלוֹךְ וָשׁוֹב לְחֵיפָה",
+       "translit": "ani roTSA lirKOSH karTIS haLOCH vaSHOV lecheiFA"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "הַיי, חֵיפָה, הָלוֹךְ וָשׁוֹב, יַאלְלָה",
+     "translit": "HAI, cheiFA, haLOCH vaSHOV, yaLA",
+     "en": "Hi, Haifa, return, come on.",
+     "explain": "Too slangy and pushy for a window.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-directions",
+   "title": "Ask an older stranger the way",
+   "place": "street",
+   "situation": "You want the post office and see an older man on the street.",
+   "other": {
+    "silent": true,
+    "en": "(an older man)"
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "סְלִיחָה, אֵיפֹה הַדֹּאַר?",
+     "translit": "sliCHA, eiFO haDO'ar?",
+     "en": "Excuse me, where is the post office?",
+     "explain": "Polite and short.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "סְלִיחָה אֲדוֹנִי, הַאִם תּוּכַל לוֹמַר לִי הֵיכָן נִמְצָא סְנִיף הַדֹּאַר?",
+     "translit": "sliCHA adoNI, ha'IM tuCHAL lo'MAR li hei'CHAN nimTSA snif haDO'ar?",
+     "en": "Excuse me sir, could you tell me where the post office branch is located?",
+     "explain": "Heichan and the long frame are formal.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "הֵי אָחִי, אֵיפֹה הַדֹּאַר?",
+     "translit": "HEI aCHI, eiFO haDO'ar?",
+     "en": "Hey mate, where's the post office?",
+     "explain": "Slang for an older stranger. Save achi for peers.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-thanks",
+   "title": "Thank a stranger",
+   "place": "street",
+   "situation": "A man you do not know holds the door for you.",
+   "other": {
+    "silent": true,
+    "en": "(holds the door)"
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "תּוֹדָה!",
+     "translit": "toDA!",
+     "en": "Thanks!",
+     "explain": "Light and right.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי מוֹדֶה לְךָ מְאוֹד עַל כָּךְ",
+     "translit": "ani moDE lecha me'OD al KACH",
+     "en": "I thank you very much for that.",
+     "explain": "Much too grand for a held door.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי מוֹדֶה לְךָ מְאוֹד עַל כָּךְ",
+       "translit": "ani moDE lecha me'OD al KACH"
+      },
+      "f": {
+       "he": "אֲנִי מוֹדָה לְךָ מְאוֹד עַל כָּךְ",
+       "translit": "ani moDA lecha me'OD al KACH"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "בְּכֵיף!",
+     "translit": "bekEIF!",
+     "en": "My pleasure!",
+     "explain": "That is a reply to thanks, not a way to give it.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "high",
+   "note": "The wrong option is wrong in function.",
+   "proofread": false,
+   "needsNativeReview": true
+  },
+  {
+   "id": "sc-late",
+   "title": "Say sorry for being late",
+   "place": "friend",
+   "situation": "You meet a friend and you are ten minutes late.",
+   "other": {
+    "silent": true,
+    "en": "(your friend waits)"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "סְלִיחָה שֶׁאֵחַרְתִּי!",
+     "translit": "sliCHA she'echARti!",
+     "en": "Sorry I'm late!",
+     "explain": "Natural, no gender.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי מִצְטַעֵר מְאוֹד עַל הָאִחוּר",
+     "translit": "ani mitsta'ER me'OD al ha'iCHUR",
+     "en": "I regret the delay very much.",
+     "explain": "Formal, like an email.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי מִצְטַעֵר מְאוֹד עַל הָאִחוּר",
+       "translit": "ani mitsta'ER me'OD al ha'iCHUR"
+      },
+      "f": {
+       "he": "אֲנִי מִצְטַעֶרֶת מְאוֹד עַל הָאִחוּר",
+       "translit": "ani mitsta'Eret me'OD al ha'iCHUR"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "לֹא אָשֵׁם, הָיְתָה תְּנוּעָה",
+     "translit": "lo aSHEM, haYTA tnu'A",
+     "en": "Not my fault, there was traffic.",
+     "explain": "Defensive instead of apologising.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "לֹא אָשֵׁם, הָיְתָה תְּנוּעָה",
+       "translit": "lo aSHEM, haYTA tnu'A"
+      },
+      "f": {
+       "he": "לֹא אֲשֵׁמָה, הָיְתָה תְּנוּעָה",
+       "translit": "lo asheMA, haYTA tnu'A"
+      }
+     }
+    }
+   ],
+   "confidence": "medium",
+   "note": "The wrong option is wrong in tone, not grammar.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The wrong option is wrong in tone, not grammar."
+  },
+  {
+   "id": "sc-phone",
+   "title": "Answer a call",
+   "place": "phone",
+   "situation": "Your phone rings from an unknown number.",
+   "other": {
+    "silent": true,
+    "en": "(it rings)"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "הַלּוֹ?",
+     "translit": "haLO?",
+     "en": "Hello?",
+     "explain": "The usual way to answer.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "שָׁלוֹם, מִי מְדַבֵּר, אִם אֶפְשָׁר?",
+     "translit": "shaLOM, MI medaBER, im efSHAR?",
+     "en": "Hello, who is speaking, if possible?",
+     "explain": "Too formal for a phone.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "יַאלְלָה, מִי זֶה?",
+     "translit": "yaLA, MI ze?",
+     "en": "Come on, who is this?",
+     "explain": "Rude for an unknown caller.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-omw",
+   "title": "Text that you are on the way",
+   "place": "whatsapp",
+   "situation": "A friend writes: 'How much longer?' You are on the way.",
+   "other": {
+    "he": "כַּמָּה זְמַן עוֹד?",
+    "translit": "kaMA zeMAN od?",
+    "en": "How much longer?"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "בַּדֶּרֶךְ, עוֹד חָמֵשׁ דַּקּוֹת",
+     "translit": "baDErech, od chaMESH daKOT",
+     "en": "On the way, five more minutes.",
+     "explain": "Short chat style.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי נִמְצָא בַּדֶּרֶךְ וְאַגִּיעַ בְּעוֹד כַּחֲמֵשׁ דַּקּוֹת",
+     "translit": "ani nimTSA baDErech ve'agIa be'OD kachaMESH daKOT",
+     "en": "I am on the way and will arrive in about five minutes.",
+     "explain": "Correct but far too formal for a chat.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי נִמְצָא בַּדֶּרֶךְ וְאַגִּיעַ בְּעוֹד כַּחֲמֵשׁ דַּקּוֹת",
+       "translit": "ani nimTSA baDErech ve'agIa be'OD kachaMESH daKOT"
+      },
+      "f": {
+       "he": "אֲנִי נִמְצֵאת בַּדֶּרֶךְ וְאַגִּיעַ בְּעוֹד כַּחֲמֵשׁ דַּקּוֹת",
+       "translit": "ani nimTSEt baDErech ve'agIa be'OD kachaMESH daKOT"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "הִנְנִי בַּדֶּרֶךְ",
+     "translit": "hineNI baDErech",
+     "en": "Behold, I'm on the way.",
+     "explain": "Hineni is a biblical word; it sounds like a joke here.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "The wrong option sounds archaic.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "The wrong option sounds archaic."
+  },
+  {
+   "id": "sc-meet-parent",
+   "title": "Meet a friend's father",
+   "place": "home",
+   "situation": "You are introduced to your friend's father at his home.",
+   "other": {
+    "silent": true,
+    "en": "(he smiles at you)"
+   },
+   "otherGender": "m",
+   "options": [
+    {
+     "role": "natural",
+     "he": "נָעִים מְאוֹד",
+     "translit": "na'IM me'OD",
+     "en": "Very nice to meet you.",
+     "explain": "Warm and short.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי שָׂמֵחַ לְהִתְוַדַּע אֵלֶיךָ בְּאֹפֶן אִישִׁי",
+     "translit": "ani saMEaCH lehitvaDA eLEcha be'OfEN ishi",
+     "en": "I am pleased to make your personal acquaintance.",
+     "explain": "A formal-letter phrase.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי שָׂמֵחַ לְהִתְוַדַּע אֵלֶיךָ בְּאֹפֶן אִישִׁי",
+       "translit": "ani saMEaCH lehitvaDA eLEcha be'OfEN ishi"
+      },
+      "f": {
+       "he": "אֲנִי שְׂמֵחָה לְהִתְוַדַּע אֵלֶיךָ בְּאֹפֶן אִישִׁי",
+       "translit": "ani semeCHA lehitvaDA eLEcha be'OfEN ishi"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "מָה קוֹרֶה אָחִי?",
+     "translit": "ma koREH aCHI?",
+     "en": "What's up, mate?",
+     "explain": "Too casual for meeting a friend's father.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-repeat",
+   "title": "Ask someone to slow down",
+   "place": "street",
+   "situation": "Someone answers you very quickly and you did not follow.",
+   "other": {
+    "silent": true,
+    "en": "(speaks fast)"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "סְלִיחָה, אֶפְשָׁר יוֹתֵר לְאַט?",
+     "translit": "sliCHA, efSHAR yoTER le'AT?",
+     "en": "Sorry, could you go slower?",
+     "explain": "Short and polite.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "הַאִם יִתָּכֵן לַחֲזֹר עַל הַדְּבָרִים לְאַט יוֹתֵר?",
+     "translit": "ha'IM yitaKEN lachaZOR al hadvaRIM le'AT yoTER?",
+     "en": "Would it be possible to repeat the matter more slowly?",
+     "explain": "Stiff, like an announcement.",
+     "gender": "none"
+    },
+    {
+     "role": "off",
+     "he": "מָה? מָה? אֲנִי לֹא מֵבִין כְּלוּם!",
+     "translit": "MA? MA? ani lo meVIN kluM!",
+     "en": "What? What? I understand nothing!",
+     "explain": "Blunt and a little panicky.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "מָה? מָה? אֲנִי לֹא מֵבִין כְּלוּם!",
+       "translit": "MA? MA? ani lo meVIN kluM!"
+      },
+      "f": {
+       "he": "מָה? מָה? אֲנִי לֹא מְבִינָה כְּלוּם!",
+       "translit": "MA? MA? ani lo mevinA kluM!"
+      }
+     }
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-agree",
+   "title": "Agree to an appointment time",
+   "place": "office",
+   "situation": "A clerk asks: 'Is ten o'clock okay for the appointment?'",
+   "other": {
+    "he": "עֲשָׂרָה בְּסֵדֶר?",
+    "translit": "asaRA beSEder?",
+    "en": "Is ten okay?"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "כֵּן, עֲשָׂרָה בְּסֵדֶר",
+     "translit": "KEN, asaRA beSEder",
+     "en": "Yes, ten is fine.",
+     "explain": "Clear, neutral.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי מַסְכִּים לַמּוֹעֵד הַמּוּצָע",
+     "translit": "ani masKIM lamo'ED hamuTSA",
+     "en": "I agree to the proposed date.",
+     "explain": "Official-sounding.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי מַסְכִּים לַמּוֹעֵד הַמּוּצָע",
+       "translit": "ani masKIM lamo'ED hamuTSA"
+      },
+      "f": {
+       "he": "אֲנִי מַסְכִּימָה לַמּוֹעֵד הַמּוּצָע",
+       "translit": "ani maskiMA lamo'ED hamuTSA"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "סַבָּבָּה אָחִי",
+     "translit": "saBAba aCHI",
+     "en": "Cool mate.",
+     "explain": "Slang for an official.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "medium",
+   "note": "Register judgements are general impressions.",
+   "proofread": false,
+   "needsNativeReview": true,
+   "confidenceReason": "Register judgements are general impressions."
+  },
+  {
+   "id": "sc-shabbat",
+   "title": "Say goodbye on Friday",
+   "place": "shop",
+   "situation": "It is Friday afternoon and you leave a shop.",
+   "other": {
+    "silent": true,
+    "en": "(the shopkeeper)"
+   },
+   "otherGender": "none",
+   "options": [
+    {
+     "role": "natural",
+     "he": "שַׁבָּת שָׁלוֹם!",
+     "translit": "shaBAT shaLOM!",
+     "en": "Shabbat shalom!",
+     "explain": "The usual Friday goodbye.",
+     "gender": "none"
+    },
+    {
+     "role": "stiff",
+     "he": "אֲנִי מְאַחֵל לְךָ שַׁבָּת שָׁלוֹם",
+     "translit": "ani me'aCHEL lecha shaBAT shaLOM",
+     "en": "I wish you a peaceful Sabbath.",
+     "explain": "Wordy and formal.",
+     "gender": "speaker",
+     "forms": {
+      "m": {
+       "he": "אֲנִי מְאַחֵל לְךָ שַׁבָּת שָׁלוֹם",
+       "translit": "ani me'aCHEL lecha shaBAT shaLOM"
+      },
+      "f": {
+       "he": "אֲנִי מְאַחֶלֶת לְךָ שַׁבָּת שָׁלוֹם",
+       "translit": "ani me'aCHElet lecha shaBAT shaLOM"
+      }
+     }
+    },
+    {
+     "role": "off",
+     "he": "שָׁבוּעַ טוֹב!",
+     "translit": "shaVUa TOV!",
+     "en": "Good week!",
+     "explain": "Said once Shabbat has ended, not on Friday.",
+     "gender": "none"
+    }
+   ],
+   "confidence": "high",
+   "note": "The wrong option is wrong in timing.",
+   "proofread": false,
+   "needsNativeReview": true
+  }
+ ]
+}

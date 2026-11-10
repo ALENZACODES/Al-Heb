@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-mem-final" viewBox="0 0 200 200" role="img" aria-labelledby="mem-final-t mem-final-d">
+<title id="mem-final-t">Final mem becomes a zipped tent by the sea with mom at the door</title>
+<desc id="mem-final-d">A green camping tent with a zipped orange door flap, the letter box is the door with a zipper and pull. Pegs and a guy rope hold it down on the shore with waves at the foot, and a mother in a blue dress stands at the door.</desc>
+<style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-mem-final .msi{fill:none;stroke-width:3;stroke-linecap:round}svg.morph-mem-final .mo{stroke:var(--m-ink);stroke-width:3;stroke-linejoin:round}@media (forced-colors:active){svg.morph-mem-final .morph-b *{stroke:CanvasText;stroke-width:.8}}</style>
+<defs><path id="mem-final-g" fill-rule="evenodd" d="M737 756H263V218H495Q563 218 609 232Q655 246 683 277Q712 308 724 354Q737 399 737 465ZM352 287V687H648V452Q648 357 616 322Q585 287 496 287Z"/></defs><g class="morph-b"><rect class="mtile" x="6" y="6" width="188" height="188" rx="26"/><path class="msi" style="opacity:.45" d="M10 184q10-9 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0"/><path class="mshade" d="M16 172H184V176H16Z"/>
+<path class="msi" style="stroke-width:2.5" d="M92 14V7M92 7L106 10L92 13"/>
+<path class="mo mf4" style="fill-opacity:.8" d="M26 170L92 14L158 170Z"/><path class="mtile" d="M92 14L26 170H62Z"/>
+<path class="msi" style="stroke-width:2;opacity:.7" d="M62 96L14 164"/>
+<path class="mo mf1" d="M14 164L9 172H19Z"/>
+<rect class="mf1" x="73.5" y="109.4" width="37.0" height="50.0"/>
+<path class="msi" style="stroke-dasharray:3 2.5;stroke-width:3.5" d="M92 109.4 V159.4"/><rect class="mf3 mo" style="stroke-width:2" x="87" y="124" width="10" height="16" rx="4"/>
+<use href="#mem-final-g" transform="translate(29.50 73.50) scale(0.125)" class="mfi"/>
+<g class="morph-pop"><path class="mf2" d="M138 172L146 118Q166 108 186 118L194 172Z"/><circle class="mf3 mo" style="stroke-width:2" cx="166" cy="98" r="13"/><path class="mf1" d="M153 98Q151 80 166 82Q181 80 179 98Q173 90 166 92Q159 90 153 98Z"/><path class="ml msi" style="--w:4" d="M147 124L126 140"/><path class="msi" d="M161 100h.1M171 100h.1" style="stroke-width:3"/><path class="msi" style="stroke-width:2" d="M162 106Q166 110 170 106"/></g></g><g class="morph-a"><use href="#mem-final-g" transform="translate(0 0) scale(.2)" class="mfi"/></g>
+</svg>

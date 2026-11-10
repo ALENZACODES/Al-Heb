@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-home-things-1",
+ "title": "Home and things 1",
+ "theme": "home-things",
+ "level": "B1",
+ "track": "both",
+ "pack": "home-things-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hd4a691d3",
+   "he": "דָּבָר",
+   "translit": "davar",
+   "en": "thing",
+   "kind": "word",
+   "audioId": "yigdal-w82",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7439bf9d",
+   "he": "מְכָל",
+   "translit": "mekhol",
+   "en": "container, bin",
+   "kind": "word",
+   "audioId": "h7439bf9d",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h231c624a",
+   "he": "סֵפֶר",
+   "translit": "sefer",
+   "en": "book",
+   "kind": "word",
+   "audioId": "r20-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h568e3e03",
+   "he": "כִּסֵּא",
+   "translit": "kise",
+   "en": "chair",
+   "kind": "word",
+   "audioId": "h568e3e03",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h4caf86ab",
+   "he": "דִּמְיֵן",
+   "translit": "dimyen",
+   "en": "to imagine, envision, picture",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h293be884",
+   "he": "חוֹמָה",
+   "translit": "chomah",
+   "en": "a wall, a structure built for defense around a city, castle, etc",
+   "kind": "word",
+   "audioId": "h293be884",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9d27e0b4",
+   "he": "חֶבֶל",
+   "translit": "chevel",
+   "en": "rope",
+   "kind": "word",
+   "audioId": "h9d27e0b4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfac8b79e",
+   "he": "שֻׁלְחָן",
+   "translit": "shulchan",
+   "en": "table (piece of furniture), desk",
+   "kind": "word",
+   "audioId": "hfac8b79e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h921e79c9",
+   "he": "גַּג",
+   "translit": "gag",
+   "en": "roof",
+   "kind": "word",
+   "audioId": "h921e79c9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h33829f74",
+   "he": "שַׁי",
+   "translit": "shai",
+   "en": "gift (present)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha6e16125",
+   "he": "סַכִּין",
+   "translit": "sakin",
+   "en": "knife, blade",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd85d74d3",
+   "he": "עִתּוֹן",
+   "translit": "iton",
+   "en": "newspaper",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

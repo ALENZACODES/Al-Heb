@@ -1,0 +1,13 @@
+# Hebrew recordings: remaining work
+
+The entire Hebrew audio set is not complete. One Noa Deuteronomy 6:4 clip was selected as a limited pilot with combined word-ASR and phoneme evidence; it is not human-listening-reviewed. No Ari Hebrew clip or whole Hebrew chapter has been cleared by this work.
+
+Google Chirp with pointed Hebrew produced substantial recognition errors. Unpointed input and modern vowel-letter spellings improved consonantal recognition, but the recognizer discards vowel marks, leaving incorrect or uncertain vowels, stress, names and Biblical readings undetected. Selective points, slower pace, longer context, Latin transcription and mixed Hebrew/Latin input did not demonstrate a reliable general policy. Raw reports remain preserved; spelling mismatches are not all proven speech errors.
+
+Explicit IPA with the same Chirp Kore/Charon personas under supported de-DE synthesis locale is promising, but is not yet a validated corpus-wide solution. The exact request text uses Latin labels plus IPA, while the source Hebrew is unchanged. Noa Shema has corroborating independent phonemes. Ari Shema variants still have unresolved phoneme discrepancies. Both Genesis 1:1 explicit-IPA variants recognize as בראשית ברא אלוהים את השמיים ואת הארץ: two raw spelling differences, without a consonantal-word substitution. Their phoneme predictions nevertheless contain bara/para and stress uncertainty. The phoneme model makes similar errors on an independent human reference, so these results cannot establish that the synthesized sounds are wrong or that they are fully correct. These Genesis clips remain held.
+
+The supplemental ReNikud recognizer is independently trained but still an automatic model; calibration against a human Sephardic Bible reading reveals consonant and stress errors. Neither it nor ordinary unpointed ASR certifies exact pronunciation. Human reference audio was used only for analysis and is not republished or substituted for Chirp.
+
+Concrete next step: establish a checked Biblical Hebrew source-to-IPA policy covering vocal/silent sheva, vowel quality, lexical stress, prefixes, divine-name substitutions and ketiv/qere; validate a representative set in both Chirp personas with audio-only word and phoneme checks, resolving model disagreements through a reliable listening assessment where automatic evidence is insufficient. Only then generate resumable chapter chunks, retaining source/request/hash provenance and holding unresolved clips. A full paid Hebrew batch was deliberately not launched on an unvalidated global pronunciation assumption.
+
+This does not affect the separate English chapter recordings or the complete displayed Hebrew, pronunciation guide and English source corpus.

@@ -1,0 +1,18 @@
+{
+ "status": "synthetic-unreviewed",
+ "source": "outside-synthetic",
+ "synth": {
+  "origin": "outside-synthetic",
+  "reviewed": false,
+  "redistributionCleared": false,
+  "licence": "unknown: not cleared",
+  "batch": "2026-11 synthetic batch A (machine-checked, unreviewed)",
+  "note": "Synthetic default voice; unanimous machine pass only; no native review; voice gender and tradition style not verified",
+  "inputSha256": "a2e1826556d59787fce21fdd053ddebab19ecc90d3bc47320a8a0cd68b3c32f5",
+  "ingestedAt": "2026-11-05T15:07:41.325Z",
+  "ingestedBy": "tools/audio/ingest.mjs"
+ },
+ "reviewed": false,
+ "redistributionCleared": false,
+ "note": "Synthetic clip from an outside source (provenance and licence not verified). Not a human recording. No human has listened to it; whether the speech is correct Hebrew is unknown. Converted by tools/audio/ingest.mjs (original file name and tags not kept)."
+}

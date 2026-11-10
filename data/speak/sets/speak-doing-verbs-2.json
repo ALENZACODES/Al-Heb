@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-doing-verbs-2",
+ "title": "Everyday actions 2",
+ "theme": "doing-verbs",
+ "level": "A2",
+ "track": "both",
+ "pack": "doing-verbs-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "he2254785",
+   "he": "הִרְשָׁה",
+   "translit": "hirshah",
+   "en": "to allow",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8dd9c07b",
+   "he": "הִתְאִים",
+   "translit": "hit'im",
+   "en": "to adapt, to fit, to adjust",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h514dffeb",
+   "he": "שָׁבַר",
+   "translit": "shavar",
+   "en": "to break",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h773c8e0b",
+   "he": "מִמֵּשׁ",
+   "translit": "mimesh",
+   "en": "to implement, to realize",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb929e764",
+   "he": "אִשֵּׁר",
+   "translit": "isher",
+   "en": "to approve, allow",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9f615037",
+   "he": "כָּלָה",
+   "translit": "kalah",
+   "en": "to be finished, to be over, to be done, to be completed",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb3ab3d3a",
+   "he": "בִּיֵּם",
+   "translit": "biyem",
+   "en": "to stage, to produce",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfe2811e5",
+   "he": "תִּכְנֵן",
+   "translit": "tikhnen",
+   "en": "to plan, to intend",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb70ca08b",
+   "he": "אִתֵּר",
+   "translit": "iter",
+   "en": "to localize",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf4d56823",
+   "he": "שֵׁרֵת",
+   "translit": "sheret",
+   "en": "to serve",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0c806e7a",
+   "he": "נִתַּן",
+   "translit": "nitan",
+   "en": "to be given",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0fab4286",
+   "he": "בָּרָא",
+   "translit": "bara",
+   "en": "to create (when act of a deity)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

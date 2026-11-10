@@ -1,0 +1,45 @@
+{
+  "sourceHebrew": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+  "recognitionReference": "שמע ישראל אדני אלהינו אדני אחד",
+  "input": {
+    "text": "Shema Yisrael Adonai Eloheinu Adonai Echad.",
+    "customPronunciations": {
+      "pronunciations": [
+        {
+          "phrase": "Shema",
+          "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+          "pronunciation": "ʃe.ˈma"
+        },
+        {
+          "phrase": "Yisrael",
+          "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+          "pronunciation": "jiːs.ʁa.ˈel"
+        },
+        {
+          "phrase": "Adonai",
+          "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+          "pronunciation": "a.do.ˈnaj"
+        },
+        {
+          "phrase": "Eloheinu",
+          "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+          "pronunciation": "e.lo.ˈhej.nu"
+        },
+        {
+          "phrase": "Echad",
+          "phoneticEncoding": "PHONETIC_ENCODING_IPA",
+          "pronunciation": "e.ˈxad"
+        }
+      ]
+    }
+  },
+  "voice": {
+    "languageCode": "de-DE",
+    "name": "de-DE-Chirp3-HD-Kore"
+  },
+  "audioConfig": {
+    "audioEncoding": "MP3",
+    "sampleRateHertz": 24000
+  },
+  "audioSha256": "e2b247146a6e9844151f0e12559bb6d418627293df8cbcadb520d699c8121def"
+}

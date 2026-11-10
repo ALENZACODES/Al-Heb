@@ -1,0 +1,1 @@
+{"name":"alef-lighthouse-tools","private":true,"version":"0.0.0","description":"dev-only Lighthouse runner; not part of the app","dependencies":{"lighthouse":"^13.0.0"}}

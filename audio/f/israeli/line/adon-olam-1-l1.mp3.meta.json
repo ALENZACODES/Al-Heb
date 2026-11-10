@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
+ "inputSha256": "b2f91c1ce014b892103d76cffbc3e037129bb576f4e8ef1db1d5cb3128954c8a",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w1.mp3",
+  "audio/f/israeli/word/adon-olam-1-w2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w3.mp3",
+  "audio/f/israeli/word/adon-olam-1-w4.mp3",
+  "audio/f/israeli/word/adon-olam-1-w5.mp3",
+  "audio/f/israeli/word/adon-olam-1-w6.mp3",
+  "audio/f/israeli/word/adon-olam-1-w7.mp3",
+  "audio/f/israeli/word/adon-olam-1-w8.mp3"
+ ]
+}

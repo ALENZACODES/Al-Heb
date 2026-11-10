@@ -1,0 +1,119 @@
+{
+  "batch": "batch02",
+  "status": "DRAFT_CAST_REVIEW_REQUIRED",
+  "referencesUploaded": [
+    "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/aleph-meet.png",
+    "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/bet-meet.png",
+    "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch01/yod-meet.png"
+  ],
+  "generationMethod": "Ten separate generated image outputs in one image series; downloaded via “Download 10 images in this series”; not a contact sheet and not crops.",
+  "previousCurrentSet": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/prev-cast-drift-2",
+  "qa": {
+    "glyphMapping": "Visually verified in sequence: כ, ך, ל, מ, ם, נ, ן, ס, ע, פ; individual glyph cards match the filenames.",
+    "memPair": "Mem uses a lower-left seam/corner opening; Final Mem shows the same square lunchbox shut.",
+    "cast": "Ari and Noa now closely match batch01 face, hair, outfit and color references. Rimon remains inconsistent: some cards omit the green leaf ears or show a red-only crown rather than the reference gold crown/leaf details. Overall cast is not yet fully acceptable.",
+    "production": "Draft pending final Rimon cast correction."
+  },
+  "items": [
+    {
+      "id": "kaf",
+      "he": "כ",
+      "fileName": "kaf-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/kaf-meet.png",
+      "sequence": 1,
+      "shapeHook": "Rounded open-left mitten; no floor or inner stroke.",
+      "glyphVisuallyVerified": true,
+      "sha256": "d41f292b9fcbc86086efe9bd9f0994723c54b6b009b13765fd5cc04f3f3a2396"
+    },
+    {
+      "id": "kaf-final",
+      "he": "ך",
+      "fileName": "kaf-final-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/kaf-final-meet.png",
+      "sequence": 2,
+      "shapeHook": "Long-necked hook with straight descender.",
+      "glyphVisuallyVerified": true,
+      "sha256": "cb2078ecf7fbb883cc90661f5516505a19536e64f316942341f76ac097c733bb"
+    },
+    {
+      "id": "lamed",
+      "he": "ל",
+      "fileName": "lamed-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/lamed-meet.png",
+      "sequence": 3,
+      "shapeHook": "Hooked flagpole rising above a low fence.",
+      "glyphVisuallyVerified": true,
+      "sha256": "07df2322c0c6a081e83a15523def616cbff038345623e454cc4bf9f53acb2632"
+    },
+    {
+      "id": "mem",
+      "he": "מ",
+      "fileName": "mem-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/mem-meet.png",
+      "sequence": 4,
+      "shapeHook": "Lunchbox with lower-left corner/seam visibly open.",
+      "glyphVisuallyVerified": true,
+      "sha256": "0c075a2b16134e883e6548c969312344f87fc4648ebcb92c3ec8528312a7633c"
+    },
+    {
+      "id": "mem-final",
+      "he": "ם",
+      "fileName": "mem-final-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/mem-final-meet.png",
+      "sequence": 5,
+      "shapeHook": "Same lunchbox completely shut.",
+      "glyphVisuallyVerified": true,
+      "sha256": "217cfa384ea29912697c7482cb230f0273f4f281c9534c6541eedf1a02f20d75"
+    },
+    {
+      "id": "nun",
+      "he": "נ",
+      "fileName": "nun-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/nun-meet.png",
+      "sequence": 6,
+      "shapeHook": "Small right-backed seat with short leftward baseline foot.",
+      "glyphVisuallyVerified": true,
+      "sha256": "0a2906bc412e2b60eeafed006baa053b5c146309a082070bafafe4cea2cdada5"
+    },
+    {
+      "id": "nun-final",
+      "he": "ן",
+      "fileName": "nun-final-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/nun-final-meet.png",
+      "sequence": 7,
+      "shapeHook": "Long slender vertical form below baseline; no foot.",
+      "glyphVisuallyVerified": true,
+      "sha256": "1602a39c86019c9a0d326916ef2b16f0b54c96848900dac5110a387fbd7cc9ed"
+    },
+    {
+      "id": "samekh",
+      "he": "ס",
+      "fileName": "samekh-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/samekh-meet.png",
+      "sequence": 8,
+      "shapeHook": "Closed circular ring.",
+      "glyphVisuallyVerified": true,
+      "sha256": "d016f1766d5ba6d236fc4682f53ff0f7e719d5a3608344c629fef5d2ed3c74d3"
+    },
+    {
+      "id": "ayin",
+      "he": "ע",
+      "fileName": "ayin-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/ayin-meet.png",
+      "sequence": 9,
+      "shapeHook": "Two arms meeting low; one curled, one slanted.",
+      "glyphVisuallyVerified": true,
+      "sha256": "5431620ffe16537f382aa13715059bb1fb0c5771f4a12d7a545cd7aadd44c7a7"
+    },
+    {
+      "id": "pe",
+      "he": "פ",
+      "fileName": "pe-meet.png",
+      "path": "/workspace/shared/al-heb/letter-cartoons-2026-11-05/images/batch02/pe-meet.png",
+      "sequence": 10,
+      "shapeHook": "Rounded form with inward upper-left tooth.",
+      "glyphVisuallyVerified": true,
+      "sha256": "4e2f8e232fb811a1bfa5d32e09a9a0cd7a5212992af4946cf8c0b5eefec8189a"
+    }
+  ]
+}

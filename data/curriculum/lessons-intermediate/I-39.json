@@ -1,0 +1,329 @@
+{
+ "id": "I-39",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Driving: car, road, signs, fuel and parking",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "מְכוֹנִית",
+   "en": "car",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mekhonit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5fc50b7a"
+   }
+  },
+  {
+   "he": "כְּבִישׁ",
+   "en": "road",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kevish"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9d3d8331"
+   }
+  },
+  {
+   "he": "תַּמְרוּר",
+   "en": "road sign",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tamrur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h049ff339"
+   }
+  },
+  {
+   "he": "דֶּלֶק",
+   "en": "fuel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "delek"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h9c60c651"
+   }
+  },
+  {
+   "he": "חֲנָיָה",
+   "en": "parking",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chanayah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd7b6e838"
+   }
+  },
+  {
+   "he": "מָנוֹעַ",
+   "en": "engine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mano'a"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h411fe0c1"
+   }
+  },
+  {
+   "he": "צְמִיג",
+   "en": "tyre",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzemig"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h550cdc9e"
+   }
+  },
+  {
+   "he": "נָתִיב",
+   "en": "lane",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nativ"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hba3a74f8"
+   }
+  },
+  {
+   "he": "רִמְזוּר",
+   "en": "traffic light",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rimzur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h96dd5fec"
+   }
+  },
+  {
+   "he": "יָשָׁר",
+   "en": "right, straight",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yashar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h38dc1dcd"
+   }
+  },
+  {
+   "he": "עֲצֹר",
+   "en": "stop!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "atzor"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עֲצֹר"
+    ]
+   }
+  },
+  {
+   "he": "לְאַט",
+   "en": "slowly",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'at"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2d8a8058"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask where parking or fuel is",
+  "Describe a car problem (tyre, engine) briefly",
+  "Understand stop, slow and straight on the road"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-15"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-39-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מְכוֹנִית",
+     "en": "car"
+    },
+    {
+     "he": "כְּבִישׁ",
+     "en": "road"
+    },
+    {
+     "he": "תַּמְרוּר",
+     "en": "road sign"
+    },
+    {
+     "he": "צְמִיג",
+     "en": "tyre"
+    },
+    {
+     "he": "דֶּלֶק",
+     "en": "fuel"
+    }
+   ]
+  },
+  {
+   "id": "I-39-e02",
+   "type": "respond",
+   "cue": "Ask where there is parking.",
+   "answer": {
+    "he": "אֵיפֹה יֵשׁ חֲנָיָה?",
+    "en": "Where is there parking?"
+   }
+  },
+  {
+   "id": "I-39-e03",
+   "type": "order",
+   "he": "אֵיפֹה יֵשׁ דֶּלֶק?",
+   "en": "Where is there fuel?"
+  },
+  {
+   "id": "I-39-e04",
+   "type": "produce",
+   "en": "slowly",
+   "options": [
+    "לְאַט",
+    "יָשָׁר",
+    "מַהֵר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-39-e05",
+   "type": "produce",
+   "en": "stop here, please",
+   "options": [
+    "עֲצֹר כָּאן, בְּבַקָּשָׁה",
+    "לֵךְ יָשָׁר",
+    "פְּנֵה שְׂמֹאלָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-39-e06",
+   "type": "recall",
+   "he": "רִמְזוּר",
+   "en": "traffic light"
+  },
+  {
+   "id": "I-39-e07",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "סְלִיחָה, אֵיפֹה יֵשׁ חֲנָיָה?",
+     "en": "Excuse me, where is there parking?"
+    },
+    {
+     "speaker": "b",
+     "he": "לֵךְ יָשָׁר, זֶה עַל יַד הַבַּיִת.",
+     "en": "Go straight, it's next to the building."
+    }
+   ],
+   "task": "Ask and repeat the directions."
+  },
+  {
+   "id": "I-39-e08",
+   "type": "produce",
+   "en": "the engine",
+   "options": [
+    "מָנוֹעַ",
+    "צְמִיג",
+    "מְכוֹנִית"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-39-e09",
+   "type": "respond",
+   "cue": "The car has a problem. Say you need help.",
+   "answer": {
+    "he": "אֲנִי צָרִיךְ עֶזְרָה",
+    "en": "I need help"
+   }
+  },
+  {
+   "id": "I-39-e10",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה חֲנָיָה",
+   "f": "אֲנִי רוֹצָה חֲנָיָה",
+   "en": "I want parking"
+  },
+  {
+   "id": "I-39-e11",
+   "type": "respond",
+   "cue": "Say it is urgent.",
+   "answer": {
+    "he": "זֶה דָּחוּף",
+    "en": "It's urgent"
+   }
+  },
+  {
+   "id": "I-39-e12",
+   "type": "recall",
+   "he": "נָתִיב",
+   "en": "lane"
+  },
+  {
+   "id": "I-39-e13",
+   "type": "produce",
+   "en": "it's far",
+   "options": [
+    "זֶה רָחוֹק",
+    "זֶה קָרוֹב",
+    "זֶה כָּאן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-39-e14",
+   "type": "respond",
+   "cue": "Ask whether it is far.",
+   "answer": {
+    "he": "זֶה רָחוֹק?",
+    "en": "Is it far?"
+   }
+  }
+ ],
+ "note": "Licence, accident, insurance for a car, jack, mechanic and 'to overtake' have no pointed token in the sources."
+}

@@ -1,0 +1,19 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+ "inputSha256": "7c52893a17c4c74e8a8900a158836f16b49eb850a61d1fa8045075b9479dee91",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+ "stitchedFrom": [
+  "audio/f/israeli/word/hfac8b79e.mp3",
+  "audio-takes/f/w47bc89a991-p.mp3",
+  "audio/f/israeli/word/il01-w3.mp3"
+ ]
+}

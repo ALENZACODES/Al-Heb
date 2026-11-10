@@ -1,0 +1,1617 @@
+{
+ "schema": "alef-corpus-trope/1",
+ "id": "shema",
+ "title": "Shema and V'ahavta",
+ "ref": "Deuteronomy 6:4-9",
+ "system": "prose (21 books)",
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "sourceUrl": "https://tanach.us/Books/Deuteronomy.xml",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text with cantillation: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (\"may be viewed or copied without restriction\"). Not the WLC.",
+ "checkedAgainstXml": true,
+ "note": "Machine parse of the UXLC code points. Mark names follow the table in data/corpus/trope/table.json; the musical motifs are not described and nothing here was reviewed by a cantor.",
+ "registryIds": [
+  "shema-vahavta"
+ ],
+ "registryVerses": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "markCounts": {
+  "tipcha": 10,
+  "etnachta": 4,
+  "mercha": 7,
+  "pasek": 1,
+  "siluk": 6,
+  "sof-pasuk": 6,
+  "munach": 5,
+  "zakef-katan": 3,
+  "gershayim": 1,
+  "revia": 1,
+  "kadma": 1,
+  "darga": 1,
+  "tevir": 2,
+  "mahpach": 1,
+  "pashta": 2,
+  "meteg": 1
+ },
+ "words": 48,
+ "verses": [
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 4,
+   "ref": "Deuteronomy 6:4",
+   "raw": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְהוָ֥ה אֱלֹהֵ֖ינוּ יְהוָ֥ה ׀ אֶחָֽד׃",
+   "he": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+   "largeLetters": [
+    "ע",
+    "ד"
+   ],
+   "words": [
+    {
+     "i": 0,
+     "text": "שְׁמַ֖ע",
+     "plain": "שְׁמַע",
+     "letters": 3,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 1,
+       "letter": "מ"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "יִשְׂרָאֵ֑ל",
+     "plain": "יִשְׂרָאֵל",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "etnachta",
+       "unicode": "U+0591",
+       "unicodeName": "HEBREW ACCENT ETNAHTA",
+       "char": "֑",
+       "ashkenazi": "Etnachta",
+       "sephardi": "Atnach",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "א"
+      }
+     ],
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "יְהוָ֥ה",
+     "plain": "יְהוָה",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "ו"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "אֱלֹהֵ֖ינוּ",
+     "plain": "אֱלֹהֵינוּ",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ה"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "יְהוָ֥ה׀",
+     "plain": "יְהוָה",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "ו"
+      },
+      {
+       "id": "pasek",
+       "unicode": "U+05C0",
+       "unicodeName": "HEBREW PUNCTUATION PASEQ",
+       "char": "׀",
+       "ashkenazi": "Pesik",
+       "sephardi": "Pasek",
+       "cls": "separator",
+       "level": null,
+       "placement": "after the word",
+       "at": 7,
+       "letterIndex": 3,
+       "letter": "ה"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 2,
+     "pasek": true,
+     "sofPasuk": false
+    },
+    {
+     "i": 5,
+     "text": "אֶחָֽד׃",
+     "plain": "אֶחָד׃",
+     "letters": 3,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 4,
+       "letterIndex": 1,
+       "letter": "ח"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ד"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "markCounts": {
+    "tipcha": 2,
+    "etnachta": 1,
+    "mercha": 2,
+    "pasek": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  },
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 5,
+   "ref": "Deuteronomy 6:5",
+   "raw": "וְאָ֣הַבְתָּ֔ אֵ֖ת יְהוָ֣ה אֱלֹהֶ֑יךָ בְּכָל־ לְבָבְךָ֥ וּבְכָל־ נַפְשְׁךָ֖ וּבְכָל־ מְאֹדֶֽךָ׃",
+   "he": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+   "largeLetters": [],
+   "words": [
+    {
+     "i": 0,
+     "text": "וְאָ֣הַבְתָּ֔",
+     "plain": "וְאָהַבְתָּ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "munach",
+       "unicode": "U+05A3",
+       "unicodeName": "HEBREW ACCENT MUNAH",
+       "char": "֣",
+       "ashkenazi": "Munach",
+       "sephardi": "Shofar holech",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 4,
+       "letterIndex": 1,
+       "letter": "א"
+      },
+      {
+       "id": "zakef-katan",
+       "unicode": "U+0594",
+       "unicodeName": "HEBREW ACCENT ZAQEF QATAN",
+       "char": "֔",
+       "ashkenazi": "Zakef katan",
+       "sephardi": "Zakef katon",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 12,
+       "letterIndex": 4,
+       "letter": "ת"
+      }
+     ],
+     "trope": "zakef-katan",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "אֵ֖ת",
+     "plain": "אֵת",
+     "letters": 2,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 2,
+       "letterIndex": 0,
+       "letter": "א"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 0,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "יְהוָ֣ה",
+     "plain": "יְהוָה",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "munach",
+       "unicode": "U+05A3",
+       "unicodeName": "HEBREW ACCENT MUNAH",
+       "char": "֣",
+       "ashkenazi": "Munach",
+       "sephardi": "Shofar holech",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "ו"
+      }
+     ],
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "אֱלֹהֶ֑יךָ",
+     "plain": "אֱלֹהֶיךָ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "etnachta",
+       "unicode": "U+0591",
+       "unicodeName": "HEBREW ACCENT ETNAHTA",
+       "char": "֑",
+       "ashkenazi": "Etnachta",
+       "sephardi": "Atnach",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ה"
+      }
+     ],
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "בְּכָל־",
+     "plain": "בְּכָל־",
+     "letters": 3,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 5,
+     "text": "לְבָבְךָ֥",
+     "plain": "לְבָבְךָ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 8,
+       "letterIndex": 3,
+       "letter": "ך"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 6,
+     "text": "וּבְכָל־",
+     "plain": "וּבְכָל־",
+     "letters": 4,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 7,
+     "text": "נַפְשְׁךָ֖",
+     "plain": "נַפְשְׁךָ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "ך"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 8,
+     "text": "וּבְכָל־",
+     "plain": "וּבְכָל־",
+     "letters": 4,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 9,
+     "text": "מְאֹדֶֽךָ׃",
+     "plain": "מְאֹדֶךָ׃",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ד"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "ך"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     3
+    ],
+    [
+     4,
+     9
+    ]
+   ],
+   "markCounts": {
+    "munach": 2,
+    "zakef-katan": 1,
+    "tipcha": 2,
+    "etnachta": 1,
+    "mercha": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  },
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 6,
+   "ref": "Deuteronomy 6:6",
+   "raw": "וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־ לְבָבֶֽךָ׃",
+   "he": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+   "largeLetters": [],
+   "words": [
+    {
+     "i": 0,
+     "text": "וְהָי֞וּ",
+     "plain": "וְהָיוּ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "gershayim",
+       "unicode": "U+059E",
+       "unicodeName": "HEBREW ACCENT GERSHAYIM",
+       "char": "֞",
+       "ashkenazi": "Gershayim",
+       "sephardi": "Shenei gerishin",
+       "cls": "disjunctive",
+       "level": 4,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "י"
+      }
+     ],
+     "trope": "gershayim",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 4,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "הַדְּבָרִ֣ים",
+     "plain": "הַדְּבָרִים",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "munach",
+       "unicode": "U+05A3",
+       "unicodeName": "HEBREW ACCENT MUNAH",
+       "char": "֣",
+       "ashkenazi": "Munach",
+       "sephardi": "Shofar holech",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "ר"
+      }
+     ],
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "הָאֵ֗לֶּה",
+     "plain": "הָאֵלֶּה",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "revia",
+       "unicode": "U+0597",
+       "unicodeName": "HEBREW ACCENT REVIA",
+       "char": "֗",
+       "ashkenazi": "Revia",
+       "sephardi": "Revia",
+       "cls": "disjunctive",
+       "level": 3,
+       "placement": "impositive",
+       "at": 4,
+       "letterIndex": 1,
+       "letter": "א"
+      }
+     ],
+     "trope": "revia",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 3,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "אֲשֶׁ֨ר",
+     "plain": "אֲשֶׁר",
+     "letters": 3,
+     "marks": [
+      {
+       "id": "kadma",
+       "unicode": "U+05A8",
+       "unicodeName": "HEBREW ACCENT QADMA",
+       "char": "֨",
+       "ashkenazi": "Kadma",
+       "sephardi": "Azla",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 1,
+       "letter": "ש"
+      }
+     ],
+     "trope": "kadma",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "אָנֹכִ֧י",
+     "plain": "אָנֹכִי",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "darga",
+       "unicode": "U+05A7",
+       "unicodeName": "HEBREW ACCENT DARGA",
+       "char": "֧",
+       "ashkenazi": "Darga",
+       "sephardi": "Darga",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "כ"
+      }
+     ],
+     "trope": "darga",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 5,
+     "text": "מְצַוְּךָ֛",
+     "plain": "מְצַוְּךָ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "tevir",
+       "unicode": "U+059B",
+       "unicodeName": "HEBREW ACCENT TEVIR",
+       "char": "֛",
+       "ashkenazi": "Tevir",
+       "sephardi": "Tevir",
+       "cls": "disjunctive",
+       "level": 3,
+       "placement": "impositive",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "ך"
+      }
+     ],
+     "trope": "tevir",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 3,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 6,
+     "text": "הַיּ֖וֹם",
+     "plain": "הַיּוֹם",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 4,
+       "letterIndex": 1,
+       "letter": "י"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 7,
+     "text": "עַל־",
+     "plain": "עַל־",
+     "letters": 2,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 8,
+     "text": "לְבָבֶֽךָ׃",
+     "plain": "לְבָבֶךָ׃",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ב"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 9,
+       "letterIndex": 3,
+       "letter": "ך"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     8
+    ]
+   ],
+   "markCounts": {
+    "gershayim": 1,
+    "munach": 1,
+    "revia": 1,
+    "kadma": 1,
+    "darga": 1,
+    "tevir": 1,
+    "tipcha": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  },
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 7,
+   "ref": "Deuteronomy 6:7",
+   "raw": "וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשָׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃",
+   "he": "וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ׃",
+   "largeLetters": [],
+   "words": [
+    {
+     "i": 0,
+     "text": "וְשִׁנַּנְתָּ֣ם",
+     "plain": "וְשִׁנַּנְתָּם",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "munach",
+       "unicode": "U+05A3",
+       "unicodeName": "HEBREW ACCENT MUNAH",
+       "char": "֣",
+       "ashkenazi": "Munach",
+       "sephardi": "Shofar holech",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 13,
+       "letterIndex": 4,
+       "letter": "ת"
+      }
+     ],
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "לְבָנֶ֔יךָ",
+     "plain": "לְבָנֶיךָ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "zakef-katan",
+       "unicode": "U+0594",
+       "unicodeName": "HEBREW ACCENT ZAQEF QATAN",
+       "char": "֔",
+       "ashkenazi": "Zakef katan",
+       "sephardi": "Zakef katon",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "נ"
+      }
+     ],
+     "trope": "zakef-katan",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "וְדִבַּרְתָּ֖",
+     "plain": "וְדִבַּרְתָּ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 12,
+       "letterIndex": 4,
+       "letter": "ת"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "בָּ֑ם",
+     "plain": "בָּם",
+     "letters": 2,
+     "marks": [
+      {
+       "id": "etnachta",
+       "unicode": "U+0591",
+       "unicodeName": "HEBREW ACCENT ETNAHTA",
+       "char": "֑",
+       "ashkenazi": "Etnachta",
+       "sephardi": "Atnach",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 3,
+       "letterIndex": 0,
+       "letter": "ב"
+      }
+     ],
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 0,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "בְּשִׁבְתְּךָ֤",
+     "plain": "בְּשִׁבְתְּךָ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "mahpach",
+       "unicode": "U+05A4",
+       "unicodeName": "HEBREW ACCENT MAHAPAKH",
+       "char": "֤",
+       "ashkenazi": "Mahpach",
+       "sephardi": "Shofar mehupach",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 13,
+       "letterIndex": 4,
+       "letter": "ך"
+      }
+     ],
+     "trope": "mahpach",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 5,
+     "text": "בְּבֵיתֶ֙ךָ֙",
+     "plain": "בְּבֵיתֶךָ",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "pashta",
+       "unicode": "U+0599",
+       "unicodeName": "HEBREW ACCENT PASHTA",
+       "char": "֙",
+       "ashkenazi": "Pashta",
+       "sephardi": "Kadma",
+       "cls": "disjunctive",
+       "level": 3,
+       "placement": "postpositive",
+       "at": 8,
+       "letterIndex": 3,
+       "letter": "ת",
+       "role": "stress",
+       "doubled": true
+      },
+      {
+       "id": "pashta",
+       "unicode": "U+0599",
+       "unicodeName": "HEBREW ACCENT PASHTA",
+       "char": "֙",
+       "ashkenazi": "Pashta",
+       "sephardi": "Kadma",
+       "cls": "disjunctive",
+       "level": 3,
+       "placement": "postpositive",
+       "at": 11,
+       "letterIndex": 4,
+       "letter": "ך",
+       "role": "mark",
+       "doubled": true
+      }
+     ],
+     "trope": "pashta",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 3,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 6,
+     "text": "וּבְלֶכְתְּךָ֣",
+     "plain": "וּבְלֶכְתְּךָ",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "munach",
+       "unicode": "U+05A3",
+       "unicodeName": "HEBREW ACCENT MUNAH",
+       "char": "֣",
+       "ashkenazi": "Munach",
+       "sephardi": "Shofar holech",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 13,
+       "letterIndex": 5,
+       "letter": "ך"
+      }
+     ],
+     "trope": "munach",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 5,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 7,
+     "text": "בַדֶּ֔רֶךְ",
+     "plain": "בַדֶּרֶךְ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "zakef-katan",
+       "unicode": "U+0594",
+       "unicodeName": "HEBREW ACCENT ZAQEF QATAN",
+       "char": "֔",
+       "ashkenazi": "Zakef katan",
+       "sephardi": "Zakef katon",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 1,
+       "letter": "ד"
+      }
+     ],
+     "trope": "zakef-katan",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 8,
+     "text": "וּֽבְשָׁכְבְּךָ֖",
+     "plain": "וּבְשָׁכְבְּךָ",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "meteg",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Meteg",
+       "sephardi": "Meteg (Gaya)",
+       "cls": "secondary-stress",
+       "level": null,
+       "placement": "impositive",
+       "at": 2,
+       "letterIndex": 0,
+       "letter": "ו"
+      },
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 15,
+       "letterIndex": 5,
+       "letter": "ך"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 5,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 9,
+     "text": "וּבְקוּמֶֽךָ׃",
+     "plain": "וּבְקוּמֶךָ׃",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 9,
+       "letterIndex": 4,
+       "letter": "מ"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 12,
+       "letterIndex": 5,
+       "letter": "ך"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     3
+    ],
+    [
+     4,
+     9
+    ]
+   ],
+   "markCounts": {
+    "munach": 2,
+    "zakef-katan": 2,
+    "tipcha": 2,
+    "etnachta": 1,
+    "mahpach": 1,
+    "pashta": 2,
+    "meteg": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  },
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 8,
+   "ref": "Deuteronomy 6:8",
+   "raw": "וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־ יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ׃",
+   "he": "וּקְשַׁרְתָּם לְאוֹת עַל־יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ׃",
+   "largeLetters": [],
+   "words": [
+    {
+     "i": 0,
+     "text": "וּקְשַׁרְתָּ֥ם",
+     "plain": "וּקְשַׁרְתָּם",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 12,
+       "letterIndex": 4,
+       "letter": "ת"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "לְא֖וֹת",
+     "plain": "לְאוֹת",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 3,
+       "letterIndex": 1,
+       "letter": "א"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "עַל־",
+     "plain": "עַל־",
+     "letters": 2,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "יָדֶ֑ךָ",
+     "plain": "יָדֶךָ",
+     "letters": 3,
+     "marks": [
+      {
+       "id": "etnachta",
+       "unicode": "U+0591",
+       "unicodeName": "HEBREW ACCENT ETNAHTA",
+       "char": "֑",
+       "ashkenazi": "Etnachta",
+       "sephardi": "Atnach",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 4,
+       "letterIndex": 1,
+       "letter": "ד"
+      }
+     ],
+     "trope": "etnachta",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 1,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "וְהָי֥וּ",
+     "plain": "וְהָיוּ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "י"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 5,
+     "text": "לְטֹטָפֹ֖ת",
+     "plain": "לְטֹטָפֹת",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 8,
+       "letterIndex": 3,
+       "letter": "פ"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 6,
+     "text": "בֵּ֥ין",
+     "plain": "בֵּין",
+     "letters": 3,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 3,
+       "letterIndex": 0,
+       "letter": "ב"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 0,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 7,
+     "text": "עֵינֶֽיךָ׃",
+     "plain": "עֵינֶיךָ׃",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 5,
+       "letterIndex": 2,
+       "letter": "נ"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 9,
+       "letterIndex": 4,
+       "letter": "ך"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     3
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "markCounts": {
+    "mercha": 3,
+    "tipcha": 2,
+    "etnachta": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  },
+  {
+   "book": "Deuteronomy",
+   "chapter": 6,
+   "verse": 9,
+   "ref": "Deuteronomy 6:9",
+   "raw": "וּכְתַבְתָּ֛ם עַל־ מְזוּזֹ֥ת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃",
+   "he": "וּכְתַבְתָּם עַל־מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ׃",
+   "largeLetters": [],
+   "words": [
+    {
+     "i": 0,
+     "text": "וּכְתַבְתָּ֛ם",
+     "plain": "וּכְתַבְתָּם",
+     "letters": 6,
+     "marks": [
+      {
+       "id": "tevir",
+       "unicode": "U+059B",
+       "unicodeName": "HEBREW ACCENT TEVIR",
+       "char": "֛",
+       "ashkenazi": "Tevir",
+       "sephardi": "Tevir",
+       "cls": "disjunctive",
+       "level": 3,
+       "placement": "impositive",
+       "at": 11,
+       "letterIndex": 4,
+       "letter": "ת"
+      }
+     ],
+     "trope": "tevir",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 3,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 1,
+     "text": "עַל־",
+     "plain": "עַל־",
+     "letters": 2,
+     "marks": [],
+     "trope": null,
+     "tropeClass": "none",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": null,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 2,
+     "text": "מְזוּזֹ֥ת",
+     "plain": "מְזוּזֹת",
+     "letters": 5,
+     "marks": [
+      {
+       "id": "mercha",
+       "unicode": "U+05A5",
+       "unicodeName": "HEBREW ACCENT MERKHA",
+       "char": "֥",
+       "ashkenazi": "Mercha",
+       "sephardi": "Maarich",
+       "cls": "conjunctive",
+       "level": null,
+       "placement": "impositive",
+       "at": 7,
+       "letterIndex": 3,
+       "letter": "ז"
+      }
+     ],
+     "trope": "mercha",
+     "tropeClass": "conjunctive",
+     "disjunctiveLevel": null,
+     "stressLetterIndex": 3,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 3,
+     "text": "בֵּיתֶ֖ךָ",
+     "plain": "בֵּיתֶךָ",
+     "letters": 4,
+     "marks": [
+      {
+       "id": "tipcha",
+       "unicode": "U+0596",
+       "unicodeName": "HEBREW ACCENT TIPEHA",
+       "char": "֖",
+       "ashkenazi": "Tipcha",
+       "sephardi": "Tarcha",
+       "cls": "disjunctive",
+       "level": 2,
+       "placement": "impositive",
+       "at": 6,
+       "letterIndex": 2,
+       "letter": "ת"
+      }
+     ],
+     "trope": "tipcha",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 2,
+     "stressLetterIndex": 2,
+     "pasek": false,
+     "sofPasuk": false
+    },
+    {
+     "i": 4,
+     "text": "וּבִשְׁעָרֶֽיךָ׃",
+     "plain": "וּבִשְׁעָרֶיךָ׃",
+     "letters": 7,
+     "marks": [
+      {
+       "id": "siluk",
+       "unicode": "U+05BD",
+       "unicodeName": "HEBREW POINT METEG",
+       "char": "ֽ",
+       "ashkenazi": "Sof pasuk",
+       "sephardi": "Siluk",
+       "cls": "disjunctive",
+       "level": 1,
+       "placement": "impositive",
+       "at": 11,
+       "letterIndex": 4,
+       "letter": "ר"
+      },
+      {
+       "id": "sof-pasuk",
+       "unicode": "U+05C3",
+       "unicodeName": "HEBREW PUNCTUATION SOF PASUQ",
+       "char": "׃",
+       "ashkenazi": "Sof pasuk (the sign)",
+       "sephardi": "Sof pasuk",
+       "cls": "verse-end",
+       "level": null,
+       "placement": "after the word",
+       "at": 15,
+       "letterIndex": 6,
+       "letter": "ך"
+      }
+     ],
+     "trope": "siluk",
+     "tropeClass": "disjunctive",
+     "disjunctiveLevel": 1,
+     "stressLetterIndex": 4,
+     "pasek": false,
+     "sofPasuk": true
+    }
+   ],
+   "halves": [
+    [
+     0,
+     4
+    ]
+   ],
+   "markCounts": {
+    "tevir": 1,
+    "mercha": 1,
+    "tipcha": 1,
+    "siluk": 1,
+    "sof-pasuk": 1
+   }
+  }
+ ]
+}

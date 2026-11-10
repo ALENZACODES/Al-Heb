@@ -1,0 +1,73 @@
+diff --git a/src/app.js b/src/app.js
+index d0f8bb8..ad9dd81 100644
+--- a/src/app.js
++++ b/src/app.js
+@@ -226,7 +226,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
+     try { const L = await (await fetch(new URL('../data/letters/letters.json', import.meta.url))).json(); nm = (Array.isArray(L) ? L : L.letters || []).find((x) => x.id === params.id)?.name || ''; } catch { /* keep the generic title */ }
+     if (token === navToken) document.title = `${route.title} ${nm || params.id.charAt(0).toUpperCase() + params.id.slice(1)} - Aleph`;
+   }
+-  try { mountPreviewBanner(root, route); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
++  try { mountPreviewBanner(root, route, query); } catch (e) { console.warn('preview banner failed', e); } // preview-tier note (docs/v0/SCOPE.md); a banner fault must not replace a view that mounted
+   root.removeAttribute('aria-busy');
+   finish();
+ 
+diff --git a/src/shell/preview-banner.js b/src/shell/preview-banner.js
+index 8b8342b..a40c75f 100644
+--- a/src/shell/preview-banner.js
++++ b/src/shell/preview-banner.js
+@@ -7,19 +7,25 @@ import './nav.strings.js';
+ 
+ export const BANNER_SELECTOR = '.preview-banner';
+ /** @param {any} route a ROUTES entry (or null) @returns {boolean} */
+-export const needsBanner = (route) => !!route && route.tier !== 'v0';
++/** Practice screens that the v0 `learn` route draws for `#/learn?<key>=...` (see src/curriculum/learn.view.js). They are the preview content of the routes
++ *  loanwords, spotit, checkpoint, ladder, fade, gender/roles, scaffold and dialogues, so they get the banner although the URL matches `learn`. */
++export const PREVIEW_LEARN_QUERY = Object.freeze(['loanwords', 'spotit', 'checkpoint', 'ladder', 'fade', 'gender', 'scaffold', 'dialogues', 'dialogue']);
++/** True when a v0 `learn` URL actually opens preview content: one of the keys above, or an intermediate lesson (I-nn) without the review flag. @param {Record<string,string>} [query] */
++export const learnQueryIsPreview = (route, query) => !!route && route.name === 'learn' && !!query
++  && (PREVIEW_LEARN_QUERY.some((k) => query[k]) || (!query.review && /^I-\d+$/.test(String(query.lesson || ''))));
++export const needsBanner = (route, query) => !!route && (route.tier !== 'v0' || learnQueryIsPreview(route, query));
+ 
+ /**
+  * Add (or refresh) the banner on `root` when `route` is a preview route; remove any stale banner otherwise.
+  * @param {HTMLElement} root the view container (#main) @param {any} route @returns {HTMLElement|null} the banner element, or null
+  */
+ let watcher = null; // one observer, for the current page only
+-export function mountPreviewBanner(root, route) {
++export function mountPreviewBanner(root, route, query) {
+   if (watcher) { watcher.disconnect(); watcher = null; }
+   if (!root) return null;
+   const stale = root.queryAll ? root.queryAll(BANNER_SELECTOR) : [...root.querySelectorAll(BANNER_SELECTOR)];
+   for (const old of stale) { if (typeof old.remove === 'function') old.remove(); else if (Array.isArray(root.children)) root.children = root.children.filter((c) => c !== old); }
+-  if (!needsBanner(route)) return null;
++  if (!needsBanner(route, query)) return null;
+   const el = h('p', { class: 'preview-banner muted', 'data-tier': 'preview', role: 'note' },
+     h('strong', {}, t('nav.preview.banner')), h('span', { class: 'visually-hidden' }, ' ' + t('nav.preview.banner.more')));
+   root.prepend(el);
+diff --git a/tests/v0.learn-query-banner.test.js b/tests/v0.learn-query-banner.test.js
+new file mode 100644
+index 0000000..c2bdae3
+--- /dev/null
++++ b/tests/v0.learn-query-banner.test.js
+@@ -0,0 +1,21 @@
++// The v0 `learn` route also draws preview practice screens from the query string (#/learn?loanwords=1 and so on). They must carry the
++// Preview banner; the lesson list, a reading lesson and the review must not.
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import { N } from './torahread.fakedom.js';
++import { ROUTES } from '../src/shell/router.js';
++import { needsBanner, learnQueryIsPreview, mountPreviewBanner, BANNER_SELECTOR } from '../src/shell/preview-banner.js';
++
++const learn = ROUTES.find((r) => r.name === 'learn');
++test('learn query: preview practice screens need the banner, v0 screens do not', () => {
++  for (const q of [{ loanwords: '1' }, { loanwords: 'lw1' }, { checkpoint: '1' }, { ladder: '1' }, { fade: '1' }, { gender: 'pairs' }, { gender: 'roles' },
++    { scaffold: '1' }, { dialogues: '1' }, { dialogue: 'd-cafe' }, { spotit: 'alef' }, { lesson: 'I-01' }]) assert.equal(needsBanner(learn, q), true, JSON.stringify(q));
++  for (const q of [{}, { review: '1' }, { lesson: 'r01' }, { lesson: 'r05' }, { review: '1', lesson: 'I-01' }, undefined]) assert.equal(needsBanner(learn, q), false, JSON.stringify(q));
++  assert.equal(learnQueryIsPreview(ROUTES.find((r) => r.name === 'letters'), { loanwords: '1' }), false, 'only the learn route is affected');
++  assert.equal(needsBanner(ROUTES.find((r) => r.name === 'calendar')), true, 'a preview route still needs it without a query');
++});
++test('learn query: the banner is mounted for #/learn?fade=1 and cleared for #/learn', () => {
++  const main = new N('main'); main.append(new N('h1'));
++  assert.ok(mountPreviewBanner(main, learn, { fade: '1' })); assert.equal(main.queryAll(BANNER_SELECTOR).length, 1);
++  mountPreviewBanner(main, learn, {}); assert.equal(main.queryAll(BANNER_SELECTOR).length, 0);
++});

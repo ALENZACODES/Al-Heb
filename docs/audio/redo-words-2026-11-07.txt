@@ -1,0 +1,4 @@
+# Lesson-word shalom clips flagged in docs/audio/ISRAELI-VOICE-2026-11-07.md (not re-rendered on Nov 7; listen first, redo if they sound wrong)
+r03-w1
+r04-w2
+r04-w3

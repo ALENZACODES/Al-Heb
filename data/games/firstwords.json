@@ -1,0 +1,1930 @@
+{
+  "schema": "alef-firstwords/1",
+  "status": "DRAFT: Hebrew and transliteration copied from the existing Aleph lexicon. Short English glosses and use prompts are editorial and native-educator review is pending.",
+  "attribution": "Source IDs and pointed Hebrew: data/vocab/index.json; derives from Wiktionary/Kaikki (CC BY-SA 4.0) and FrequencyWords. See docs/vocab/LICENSES.md and data/vocab/attribution.json.",
+  "count": 240,
+  "starterCount": 24,
+  "words": [
+    {
+      "id": "hf8c8316a",
+      "he": "שָׁלוֹם",
+      "translit": "shalom",
+      "en": "hello / peace",
+      "use": "Say this to greet someone; it also means peace.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "hf63de22c",
+      "he": "כֵּן",
+      "translit": "ken",
+      "en": "yes",
+      "use": "Say this to agree.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "h8e3e6f50",
+      "he": "לֹא",
+      "translit": "lo",
+      "en": "no / not",
+      "use": "Say this to say no.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "he0b2f96b",
+      "he": "תּוֹדָה",
+      "translit": "todah",
+      "en": "thank you",
+      "use": "Say this when someone helps you.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "p580df509",
+      "he": "בְּבַקָּשָׁה",
+      "translit": "bevakashah",
+      "en": "please / you're welcome",
+      "use": "Say this when asking politely or replying to thanks.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "h0a70642a",
+      "he": "אַבָּא",
+      "translit": "aba",
+      "en": "dad",
+      "use": "Use this when talking about your dad.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h1306c935",
+      "he": "אִמָּא",
+      "translit": "ima",
+      "en": "mum",
+      "use": "Use this when talking about your mum.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "p7f7d7b8f",
+      "he": "מַיִם",
+      "translit": "mayim",
+      "en": "water",
+      "use": "Ask for this when you want a drink.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "hf22f36ee",
+      "he": "לֶחֶם",
+      "translit": "lechem",
+      "en": "bread",
+      "use": "Use this when choosing bread at a shop.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h231c624a",
+      "he": "סֵפֶר",
+      "translit": "sefer",
+      "en": "book",
+      "use": "Use this when talking about a book.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h35be21c5",
+      "he": "חָלָב",
+      "translit": "chalav",
+      "en": "milk",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "hf9047f4b",
+      "he": "כּוֹס",
+      "translit": "kos",
+      "en": "cup",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "hf5bee50d",
+      "he": "לַיְלָה",
+      "translit": "laylah",
+      "en": "night",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h1643d708",
+      "he": "תֵּה",
+      "translit": "teh",
+      "en": "tea",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h18108dff",
+      "he": "אָחוֹת",
+      "translit": "achot",
+      "en": "sister",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "ha7545fff",
+      "he": "אָח",
+      "translit": "ach",
+      "en": "brother",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h9974efdc",
+      "he": "בֵּיצָה",
+      "translit": "beitzah",
+      "en": "egg",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h4692cd32",
+      "he": "יָם",
+      "translit": "yam",
+      "en": "sea",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h86027352",
+      "he": "שֶׁמֶשׁ",
+      "translit": "shemesh",
+      "en": "sun",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hc06c43b6",
+      "he": "טוֹב",
+      "translit": "tov",
+      "en": "good",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h9f3caed1",
+      "he": "מִשְׁפָּחָה",
+      "translit": "mishpachah",
+      "en": "family",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h80c0273d",
+      "he": "דֶּלֶת",
+      "translit": "delet",
+      "en": "door (portal of entry)",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h155e306b",
+      "he": "אֶחָד",
+      "translit": "echad",
+      "en": "one",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h4fed6814",
+      "he": "רֹאשׁ",
+      "translit": "rosh",
+      "en": "head",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h9c8ddecf",
+      "he": "בַּיִת",
+      "translit": "bayit",
+      "en": "house / home",
+      "use": "Use this when talking about where you live.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h1a3574d3",
+      "he": "יָד",
+      "translit": "yad",
+      "en": "hand",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h50cf3648",
+      "he": "יוֹם",
+      "translit": "yom",
+      "en": "day",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hd2fac0d2",
+      "he": "עֵץ",
+      "translit": "etz",
+      "en": "tree",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h80d6f3f0",
+      "he": "פָּרָה",
+      "translit": "parah",
+      "en": "cow",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h4f61c9d1",
+      "he": "דָּג",
+      "translit": "dag",
+      "en": "fish",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h95c54aba",
+      "he": "אוֹקֵי",
+      "translit": "okei",
+      "en": "OK, okay",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "he90efaca",
+      "he": "בַּי",
+      "translit": "bai",
+      "en": "bye",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "pae09e148",
+      "he": "אַחְלָה",
+      "translit": "achlah",
+      "en": "great",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "pec9a400e",
+      "he": "שְׁמִי",
+      "translit": "shemi",
+      "en": "my name is",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "hd4c8080b",
+      "he": "אָנָּא",
+      "translit": "ana",
+      "en": "please",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "hdcd31646",
+      "he": "אוּלַי",
+      "translit": "ulai",
+      "en": "maybe",
+      "use": "Use this when greeting, thanking or talking with someone.",
+      "theme": "Hello & helpful words"
+    },
+    {
+      "id": "h44404757",
+      "he": "סַבָּא",
+      "translit": "saba",
+      "en": "grandfather",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h8359d19c",
+      "he": "סָבְתָא",
+      "translit": "saveta",
+      "en": "grandmother",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h1301ecc3",
+      "he": "יֶלֶד",
+      "translit": "yeled",
+      "en": "child, a kid, a boy",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "hb92174cf",
+      "he": "יַלְדָּה",
+      "translit": "yaldah",
+      "en": "girl (female child)",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "hc6cdec2b",
+      "he": "דּוֹד",
+      "translit": "dod",
+      "en": "uncle",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "hfe4ebf2c",
+      "he": "אָדָם",
+      "translit": "adam",
+      "en": "person",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h19e80411",
+      "he": "בַּחוּרָה",
+      "translit": "bachurah",
+      "en": "young woman",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h565b3652",
+      "he": "דּוֹקְטוֹר",
+      "translit": "doketor",
+      "en": "doctor",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h2280b9b6",
+      "he": "חָבֵר",
+      "translit": "chaver",
+      "en": "a (male) friend",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h020c4fa8",
+      "he": "עַם",
+      "translit": "am",
+      "en": "a nation, a people",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "h8b8a2576",
+      "he": "נָבִיא",
+      "translit": "navi",
+      "en": "prophet",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "hc8e03f62",
+      "he": "רוֹפֵא",
+      "translit": "rofe",
+      "en": "medical doctor, physician",
+      "use": "Use this when talking about family and people.",
+      "theme": "Family & people"
+    },
+    {
+      "id": "hc008b0a9",
+      "he": "דְּבַשׁ",
+      "translit": "devash",
+      "en": "honey",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h6b636d7b",
+      "he": "אֲרוּחָה",
+      "translit": "aruchah",
+      "en": "meal",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h166d92b0",
+      "he": "פְּרִי",
+      "translit": "peri",
+      "en": "fruit",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h6d121ed3",
+      "he": "מִסְעָדָה",
+      "translit": "mis'adah",
+      "en": "restaurant",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "ha664d093",
+      "he": "עוּגָה",
+      "translit": "ugah",
+      "en": "cake",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "hd22f2e01",
+      "he": "בַּקְבּוּק",
+      "translit": "bakbuk",
+      "en": "bottle",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h9790d078",
+      "he": "מָתוֹק",
+      "translit": "matok",
+      "en": "Sweet",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h03763c94",
+      "he": "יַיִן",
+      "translit": "yayin",
+      "en": "wine",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "hbb1dc7a2",
+      "he": "תַּפּוּחַ",
+      "translit": "tapuach",
+      "en": "apple",
+      "use": "Use this when eating, drinking or ordering food.",
+      "theme": "Food & drinks"
+    },
+    {
+      "id": "h568e3e03",
+      "he": "כִּסֵּא",
+      "translit": "kise",
+      "en": "chair",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h11b6d758",
+      "he": "מִטָּה",
+      "translit": "mitah",
+      "en": "bed",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h1c0ffa13",
+      "he": "קִיר",
+      "translit": "kir",
+      "en": "wall",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h63142367",
+      "he": "נְיָר",
+      "translit": "neyar",
+      "en": "paper",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h192ef310",
+      "he": "רִצְפָּה",
+      "translit": "ritzpah",
+      "en": "floor",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "hae5f6946",
+      "he": "סַל",
+      "translit": "sal",
+      "en": "basket",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h470d40b1",
+      "he": "סַפָּה",
+      "translit": "sapah",
+      "en": "a sofa",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "hf73dc598",
+      "he": "עֵט",
+      "translit": "et",
+      "en": "a pen",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "hc5b0c1a0",
+      "he": "מַתָּנָה",
+      "translit": "matanah",
+      "en": "gift",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "ha6e16125",
+      "he": "סַכִּין",
+      "translit": "sakin",
+      "en": "knife, blade",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h64fb7d35",
+      "he": "נֵר",
+      "translit": "ner",
+      "en": "oil lamp, candle",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "h7439bf9d",
+      "he": "מְכָל",
+      "translit": "mekhol",
+      "en": "container, bin",
+      "use": "Use this to name things you find at home.",
+      "theme": "Around the home"
+    },
+    {
+      "id": "he028e6f0",
+      "he": "אַרְיֵה",
+      "translit": "aryeh",
+      "en": "lion",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h3a77b486",
+      "he": "גָּמָל",
+      "translit": "gamal",
+      "en": "camel",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h16d3c412",
+      "he": "פִּיל",
+      "translit": "pil",
+      "en": "elephant",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h55a56675",
+      "he": "נָחָשׁ",
+      "translit": "nachash",
+      "en": "snake",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h5bd1f5e1",
+      "he": "דֹּב",
+      "translit": "dov",
+      "en": "bear",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hb119536d",
+      "he": "קוֹף",
+      "translit": "kof",
+      "en": "monkey, ape",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h85cda534",
+      "he": "גֶּפֶן",
+      "translit": "gefen",
+      "en": "vine, grapevine",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h5bebb792",
+      "he": "גִּבְעָה",
+      "translit": "giv'ah",
+      "en": "a hill",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h91ac0d37",
+      "he": "נָהָר",
+      "translit": "nahar",
+      "en": "river",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hc427aff6",
+      "he": "יָרֵחַ",
+      "translit": "yareach",
+      "en": "Moon",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hef745501",
+      "he": "יַעַר",
+      "translit": "ya'ar",
+      "en": "forest",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h2d90f840",
+      "he": "אֲדָמָה",
+      "translit": "adamah",
+      "en": "earth / soil",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hf1da5ea6",
+      "he": "אֵשׁ",
+      "translit": "esh",
+      "en": "fire",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h770abeb5",
+      "he": "עָנָן",
+      "translit": "anan",
+      "en": "cloud",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hfb819565",
+      "he": "רוּחַ",
+      "translit": "ruach",
+      "en": "wind, a wind",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h68594418",
+      "he": "סֶלַע",
+      "translit": "sela",
+      "en": "rock",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "ha9b360ab",
+      "he": "קֹר",
+      "translit": "kor",
+      "en": "cold",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h5c2548dc",
+      "he": "חַם",
+      "translit": "cham",
+      "en": "hot",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "h7d196d47",
+      "he": "מְעָרָה",
+      "translit": "me'arah",
+      "en": "cave",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "hde2302bb",
+      "he": "חוֹף",
+      "translit": "chof",
+      "en": "beach, shore, coast",
+      "use": "Use this when talking about animals and nature.",
+      "theme": "Animals & outdoors"
+    },
+    {
+      "id": "he3b1acbd",
+      "he": "עִיר",
+      "translit": "ir",
+      "en": "city",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h5ae20314",
+      "he": "דֶּרֶךְ",
+      "translit": "derekh",
+      "en": "a road, a path, a way",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h18b1e15c",
+      "he": "רְחוֹב",
+      "translit": "rechov",
+      "en": "street",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h5fc50b7a",
+      "he": "מְכוֹנִית",
+      "translit": "mekhonit",
+      "en": "car",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "hf524a1ad",
+      "he": "אוֹטוֹבּוּס",
+      "translit": "otobus",
+      "en": "a bus (vehicle)",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h85c6747d",
+      "he": "מוֹנִית",
+      "translit": "monit",
+      "en": "taxi, cab, taxicab",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "hf19f0a88",
+      "he": "בַּנְק",
+      "translit": "bank",
+      "en": "bank",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h8a450588",
+      "he": "פַּרְק",
+      "translit": "park",
+      "en": "park",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "hd53e0a60",
+      "he": "קָרוֹב",
+      "translit": "karov",
+      "en": "a relative, a family member",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h372b7277",
+      "he": "רָחוֹק",
+      "translit": "rachok",
+      "en": "far, distant",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h591afdf8",
+      "he": "דָּרוֹם",
+      "translit": "darom",
+      "en": "south",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h7097c7a9",
+      "he": "צָפוֹן",
+      "translit": "tzafon",
+      "en": "north",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "p0381993d",
+      "he": "שְׂמֹאלָה",
+      "translit": "semolah",
+      "en": "left",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "hd82a3079",
+      "he": "אֶרֶץ",
+      "translit": "eretz",
+      "en": "country, land",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "hdd727873",
+      "he": "מָלוֹן",
+      "translit": "malon",
+      "en": "hotel",
+      "use": "Use this when travelling or finding your way.",
+      "theme": "Getting around"
+    },
+    {
+      "id": "h50241e1c",
+      "he": "בֹּקֶר",
+      "translit": "boker",
+      "en": "morning",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "he074d347",
+      "he": "עֶרֶב",
+      "translit": "erev",
+      "en": "evening, night",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hf07c1580",
+      "he": "שָׁנָה",
+      "translit": "shanah",
+      "en": "year",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h92151b55",
+      "he": "שָׁבוּעַ",
+      "translit": "shavu'a",
+      "en": "week, period of seven days",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hbb3bc5fd",
+      "he": "דַּקָּה",
+      "translit": "dakah",
+      "en": "minute",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h1b39a6b6",
+      "he": "אֶתְמוֹל",
+      "translit": "etmol",
+      "en": "yesterday",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hcb5a058a",
+      "he": "עַכְשָׁו",
+      "translit": "akhshav",
+      "en": "now",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hf9a1a55b",
+      "he": "שְׁנַיִם",
+      "translit": "shenayim",
+      "en": "two",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h3dfe9831",
+      "he": "שְׁלוֹשָׁה",
+      "translit": "sheloshah",
+      "en": "three",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h769a6c3e",
+      "he": "אַרְבָּעָה",
+      "translit": "arba'ah",
+      "en": "four",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h29aadfe4",
+      "he": "חֲמִשָּׁה",
+      "translit": "chamishah",
+      "en": "five",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "pc9b3fcc6",
+      "he": "שִׁשָּׁה",
+      "translit": "shishah",
+      "en": "six",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h68a92f84",
+      "he": "שִׁבְעָה",
+      "translit": "shiv'ah",
+      "en": "seven",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h1de12f34",
+      "he": "תִּשְׁעָה",
+      "translit": "tish'ah",
+      "en": "nine",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h4589871d",
+      "he": "עֲשָׂרָה",
+      "translit": "asarah",
+      "en": "ten",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h2d27796a",
+      "he": "עֶשְׂרִים",
+      "translit": "esrim",
+      "en": "twenty",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h83f51398",
+      "he": "אַרְבָּעִים",
+      "translit": "arba'im",
+      "en": "forty",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hffd9b904",
+      "he": "מֵאָה",
+      "translit": "me'ah",
+      "en": "hundred, one hundred",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h26154c1a",
+      "he": "אֶלֶף",
+      "translit": "elef",
+      "en": "thousand, one thousand",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h3739ff77",
+      "he": "קַיִץ",
+      "translit": "kayitz",
+      "en": "summer",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h25aa368e",
+      "he": "צׇהֳרַיִם",
+      "translit": "tzohorayim",
+      "en": "Noon, midday",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h47a142a6",
+      "he": "חֲצִי",
+      "translit": "chatzi",
+      "en": "half",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h42410d5e",
+      "he": "שֵׁנִי",
+      "translit": "sheni",
+      "en": "second",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h0b1cfbd9",
+      "he": "שְׁלִישִׁי",
+      "translit": "shelishi",
+      "en": "third",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h9160d23f",
+      "he": "רְבִיעִי",
+      "translit": "revi'i",
+      "en": "fourth",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "h5c689c60",
+      "he": "חֲמִישִׁי",
+      "translit": "chamishi",
+      "en": "fifth",
+      "use": "Use this when telling time or counting.",
+      "theme": "Time & numbers"
+    },
+    {
+      "id": "hdd2bd792",
+      "he": "גָּדוֹל",
+      "translit": "gadol",
+      "en": "big, large",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h7be38218",
+      "he": "קָטָן",
+      "translit": "katan",
+      "en": "little, small, diminutive",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hb4ac356a",
+      "he": "יָפֶה",
+      "translit": "yafeh",
+      "en": "beautiful, comely, fair, goodly, pleasant",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h64e266b0",
+      "he": "אֲמִתִּי",
+      "translit": "amiti",
+      "en": "real, true, actual",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h8349e150",
+      "he": "טָרִי",
+      "translit": "tari",
+      "en": "fresh",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hb814461b",
+      "he": "יָרֹק",
+      "translit": "yarok",
+      "en": "green",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hadfa84bd",
+      "he": "קַל",
+      "translit": "kal",
+      "en": "light (of low weight)",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h8a9b78b8",
+      "he": "רָגוּעַ",
+      "translit": "ragu'a",
+      "en": "relaxed, calm",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h8633259a",
+      "he": "מְאֻשָּׁר",
+      "translit": "me'ushar",
+      "en": "Happy, content",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h3c6a06b3",
+      "he": "חֲלוֹם",
+      "translit": "chalom",
+      "en": "dream",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "he7f4c5c3",
+      "he": "רֶגֶשׁ",
+      "translit": "regesh",
+      "en": "emotion, feeling",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hc8e59638",
+      "he": "תִּקְוָה",
+      "translit": "tikvah",
+      "en": "hope",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h7c05b190",
+      "he": "חָשׁוּב",
+      "translit": "chashuv",
+      "en": "important",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h48d3db84",
+      "he": "חַלָּשׁ",
+      "translit": "chalash",
+      "en": "weak",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hba98874f",
+      "he": "נָכוֹן",
+      "translit": "nakhon",
+      "en": "right, correct",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h4d766086",
+      "he": "יַחַד",
+      "translit": "yachad",
+      "en": "together",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "hf2bba104",
+      "he": "שָׁם",
+      "translit": "sham",
+      "en": "there",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h0c3016b2",
+      "he": "כָּאן",
+      "translit": "kan",
+      "en": "here, at this place",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h8453bf6a",
+      "he": "עַתָּה",
+      "translit": "atah",
+      "en": "now",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h99a070bb",
+      "he": "שׁוּב",
+      "translit": "shuv",
+      "en": "again",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h81024165",
+      "he": "מְאוֹד",
+      "translit": "me'od",
+      "en": "very, quite",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h79df22f0",
+      "he": "לְאָן",
+      "translit": "le'an",
+      "en": "whither",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h749f736f",
+      "he": "תָּמִיד",
+      "translit": "tamid",
+      "en": "always, regularly",
+      "use": "Use this to say what something is like.",
+      "theme": "Descriptions & feelings"
+    },
+    {
+      "id": "h60b16793",
+      "he": "פֶּה",
+      "translit": "peh",
+      "en": "mouth",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "hc0616a4b",
+      "he": "אֹזֶן",
+      "translit": "ozen",
+      "en": "ear",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h9d6352ee",
+      "he": "עַיִן",
+      "translit": "ayin",
+      "en": "eye",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h890d1505",
+      "he": "לֵב",
+      "translit": "lev",
+      "en": "heart",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h3fc254f5",
+      "he": "גַּב",
+      "translit": "gav",
+      "en": "back",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h06f78f5d",
+      "he": "בֶּטֶן",
+      "translit": "beten",
+      "en": "abdomen, belly",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h1c939a81",
+      "he": "יָרֵךְ",
+      "translit": "yarekh",
+      "en": "thigh",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h96db6897",
+      "he": "נַעַל",
+      "translit": "na'al",
+      "en": "shoe",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h60aa7df9",
+      "he": "כּוֹבַע",
+      "translit": "kova",
+      "en": "hat",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "hf1200b64",
+      "he": "חֻלְצָה",
+      "translit": "chultzah",
+      "en": "shirt",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "he1a5e616",
+      "he": "בֶּגֶד",
+      "translit": "beged",
+      "en": "clothing, garment",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "heca8ed1e",
+      "he": "טַבַּעַת",
+      "translit": "taba'at",
+      "en": "ring",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "h85ac8666",
+      "he": "שֵׁן",
+      "translit": "shen",
+      "en": "tooth",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "hdb3c45eb",
+      "he": "רֶגֶל",
+      "translit": "regel",
+      "en": "foot / leg",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "hb91b91be",
+      "he": "טַל",
+      "translit": "tal",
+      "en": "dew",
+      "use": "Use this when naming the body or what you wear.",
+      "theme": "Body & clothing"
+    },
+    {
+      "id": "ha39cf3c9",
+      "he": "עוֹלָם",
+      "translit": "olam",
+      "en": "world",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h51ed2ee5",
+      "he": "חַיִּים",
+      "translit": "chayim",
+      "en": "life",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h2d1e4a74",
+      "he": "סוֹף",
+      "translit": "sof",
+      "en": "an end, a finish",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hcfccb5de",
+      "he": "בְּעָיָה",
+      "translit": "be'ayah",
+      "en": "problem",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "he5c23387",
+      "he": "אֱמֶת",
+      "translit": "emet",
+      "en": "truth",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h845d92fd",
+      "he": "דּוֹלָר",
+      "translit": "dolar",
+      "en": "dollar",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h9324911c",
+      "he": "חָצֵר",
+      "translit": "chatzer",
+      "en": "yard, courtyard",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hbd15d64c",
+      "he": "יֹפִי",
+      "translit": "yofi",
+      "en": "beauty",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h2056d9ad",
+      "he": "קָצֶה",
+      "translit": "katzeh",
+      "en": "tip, end",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h0c4906f8",
+      "he": "טָעוּת",
+      "translit": "ta'ut",
+      "en": "error, mistake",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h57072da4",
+      "he": "סוֹד",
+      "translit": "sod",
+      "en": "secret",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h0284af7f",
+      "he": "קֶרֶשׁ",
+      "translit": "keresh",
+      "en": "board, plank",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h10354ca3",
+      "he": "רָעָב",
+      "translit": "ra'av",
+      "en": "hunger",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h56eaa7d0",
+      "he": "אֶמְצַע",
+      "translit": "emtza",
+      "en": "middle, center",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hef13c381",
+      "he": "חַוָּה",
+      "translit": "chavah",
+      "en": "farm",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hcbe6cbe0",
+      "he": "חֲתֻנָּה",
+      "translit": "chatunah",
+      "en": "wedding",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h80c149b6",
+      "he": "תּוֹלַעַת",
+      "translit": "tola'at",
+      "en": "a worm",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h4a3da4c1",
+      "he": "חֵץ",
+      "translit": "chetz",
+      "en": "arrow",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hea59fdfe",
+      "he": "שֵׁרוּת",
+      "translit": "sherut",
+      "en": "a service",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h2adc37eb",
+      "he": "עֻבְדָּה",
+      "translit": "uvdah",
+      "en": "fact",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hc0a3c428",
+      "he": "רֹחַב",
+      "translit": "rochav",
+      "en": "width",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h97e97e5b",
+      "he": "פְּעֻלָּה",
+      "translit": "pe'ulah",
+      "en": "an action, a move",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h9a35778f",
+      "he": "שַׂק",
+      "translit": "sak",
+      "en": "a sack",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "hc637d8a6",
+      "he": "דּוֹר",
+      "translit": "dor",
+      "en": "generation",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h7efa21d2",
+      "he": "קֶרַח",
+      "translit": "kerach",
+      "en": "ice",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h9be743b3",
+      "he": "כֶּרֶם",
+      "translit": "kerem",
+      "en": "vineyard",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "he973e381",
+      "he": "רְשִׁימָה",
+      "translit": "reshimah",
+      "en": "list",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h79bdbce1",
+      "he": "סִפּוּר",
+      "translit": "sipur",
+      "en": "a story",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h91c309d9",
+      "he": "חֵרוּם",
+      "translit": "cherum",
+      "en": "emergency",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h2fce7c98",
+      "he": "מֶרְחָק",
+      "translit": "merchak",
+      "en": "distance",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h203e7414",
+      "he": "קוֹד",
+      "translit": "kod",
+      "en": "code",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h8a97b4ba",
+      "he": "נֵזֶר",
+      "translit": "nezer",
+      "en": "crown, wreath",
+      "use": "Use this when talking about ordinary things.",
+      "theme": "Everyday things"
+    },
+    {
+      "id": "h11b691b9",
+      "he": "אָכַל",
+      "translit": "akhal",
+      "en": "to eat",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hd59a2d59",
+      "he": "שָׁתָה",
+      "translit": "shatah",
+      "en": "to drink",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hbea3a906",
+      "he": "יָשַׁן",
+      "translit": "yashan",
+      "en": "to sleep, to be asleep",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h81e8c0d1",
+      "he": "הָלַךְ",
+      "translit": "halakh",
+      "en": "to walk",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h1982ccc7",
+      "he": "רָץ",
+      "translit": "ratz",
+      "en": "to run",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h8ff6123b",
+      "he": "קָרָא",
+      "translit": "kara",
+      "en": "to read",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hcd826bec",
+      "he": "שָׁר",
+      "translit": "shar",
+      "en": "to sing",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h5e4080cc",
+      "he": "דִּבֵּר",
+      "translit": "diber",
+      "en": "to speak",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h5d30bc42",
+      "he": "כָּתַב",
+      "translit": "katav",
+      "en": "to write",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h10798813",
+      "he": "לָמַד",
+      "translit": "lamad",
+      "en": "to learn",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hfcd9d9b6",
+      "he": "יָשַׁב",
+      "translit": "yashav",
+      "en": "to sit",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hb9b267e3",
+      "he": "עָמַד",
+      "translit": "amad",
+      "en": "to stand",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h46c75bab",
+      "he": "פָּתַח",
+      "translit": "patach",
+      "en": "to open",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h64945368",
+      "he": "סָגַר",
+      "translit": "sagar",
+      "en": "to close",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h66c2ffb6",
+      "he": "בָּא",
+      "translit": "ba",
+      "en": "to come",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h28a30a60",
+      "he": "אָמַר",
+      "translit": "amar",
+      "en": "to say",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h5ad6806e",
+      "he": "עָזַר",
+      "translit": "azar",
+      "en": "to help",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h28ecb454",
+      "he": "רָאָה",
+      "translit": "ra'ah",
+      "en": "to see",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h5d62592f",
+      "he": "שָׁמַע",
+      "translit": "shama",
+      "en": "to hear",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "heb070da2",
+      "he": "קָנָה",
+      "translit": "kanah",
+      "en": "to buy",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h54d02a94",
+      "he": "מָכַר",
+      "translit": "makhar",
+      "en": "to sell",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hbb24a2a3",
+      "he": "שִׂחֵק",
+      "translit": "sichek",
+      "en": "to play",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h4d9534fe",
+      "he": "חִיֵּךְ",
+      "translit": "chiyekh",
+      "en": "to smile",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h532fdc70",
+      "he": "צָחַק",
+      "translit": "tzachak",
+      "en": "to laugh",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h9432ab7f",
+      "he": "בָּכָה",
+      "translit": "bakhah",
+      "en": "to cry",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hc2edb232",
+      "he": "קָפַץ",
+      "translit": "kafatz",
+      "en": "to jump",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hd8a5c2cf",
+      "he": "מָצָא",
+      "translit": "matza",
+      "en": "to find",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h1b96f9f4",
+      "he": "אָהַב",
+      "translit": "ahav",
+      "en": "to love",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hbbc4974c",
+      "he": "צִיֵּר",
+      "translit": "tziyer",
+      "en": "to draw",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "ha70e3427",
+      "he": "נִקָּה",
+      "translit": "nikah",
+      "en": "to clean",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h07a5230b",
+      "he": "פָּגַשׁ",
+      "translit": "pagash",
+      "en": "to meet",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h94b9c92d",
+      "he": "נָח",
+      "translit": "nach",
+      "en": "to rest",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hfd4bf43b",
+      "he": "זָכַר",
+      "translit": "zakhar",
+      "en": "to remember",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h129dd70a",
+      "he": "שָׁאַל",
+      "translit": "sha'al",
+      "en": "to ask",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h6670eb72",
+      "he": "עָנָה",
+      "translit": "anah",
+      "en": "to answer",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hc6c367ff",
+      "he": "עָבַד",
+      "translit": "avad",
+      "en": "to work",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hd11a9c4c",
+      "he": "הִקְשִׁיב",
+      "translit": "hikshiv",
+      "en": "to listen",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hd83852fd",
+      "he": "הֵבִין",
+      "translit": "hevin",
+      "en": "to understand",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "h645365e7",
+      "he": "רָצָה",
+      "translit": "ratzah",
+      "en": "to want",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    },
+    {
+      "id": "hc30c99f6",
+      "he": "חִכָּה",
+      "translit": "chikah",
+      "en": "to wait",
+      "use": "Use this to talk about what someone does.",
+      "theme": "Everyday actions"
+    }
+  ],
+  "starterAudioSelection": "The first 24 headwords have existing Israeli female/male audio entries in the project's clip lookup; playback still depends on the actual device/network and can be synthetic."
+}

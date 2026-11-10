@@ -1,0 +1,62 @@
+{
+  "schema": "alef-torahread-ladder/1",
+  "note": "Order and grouping of the 'Reading without vowels' ladder. Items of kind 'registry' point at data/corpus/registry.json (Hebrew, English, licence and attribution come from there); items of kind 'verse' point at data/torahread/verses.json. Hebrew in this file is limited to the example words inside 'tips' (הוא, אור, אל), typed by the author; a test checks that each occurs in the Torah data of this course (words30.json or verses.json).",
+  "levels": [
+    { "id": "1", "level": 1, "label": "1. Pointed", "short": "All points shown, like a siddur or Chumash." },
+    { "id": "2a", "level": 2, "stage": 1, "label": "2a. Points fading", "short": "Two words in three keep their points." },
+    { "id": "2b", "level": 2, "stage": 2, "label": "2b. Points fading more", "short": "Only one word in three keeps its points." },
+    { "id": "3", "level": 3, "label": "3. No points", "short": "Letters only, like a Torah scroll." }
+  ],
+  "groups": [
+    {
+      "id": "priestly",
+      "title": "The Priestly Blessing",
+      "intro": "Three short lines from the Torah (Numbers 6:24-26). They are also the text the registry opens with, so they are a good first step.",
+      "items": [
+        { "kind": "registry", "id": "bless-priestly-1" },
+        { "kind": "registry", "id": "bless-priestly-2" },
+        { "kind": "registry", "id": "bless-priestly-3" }
+      ]
+    },
+    {
+      "id": "shema",
+      "title": "Shema",
+      "intro": "The Shema verse (Deuteronomy 6:4) and the verse after it (6:5, the first verse of V'ahavta). You will meet both in the service and in the Torah itself (Deuteronomy 6).",
+      "items": [
+        { "kind": "registry", "id": "shema-1" },
+        { "kind": "registry", "id": "vahavta-1" }
+      ]
+    },
+    {
+      "id": "torah-blessings",
+      "title": "Torah blessings (the ones you say at an aliyah)",
+      "intro": "The call to bless, the blessing before the reading and the blessing after it. These are the words you would say if you are called up. Wording is from the registry; it has not been checked by a rabbi or cantor, and your congregation's siddur may differ slightly (see the Aliyah section).",
+      "items": [
+        { "kind": "registry", "id": "torah-barchu" },
+        { "kind": "registry", "id": "torah-bless-1" },
+        { "kind": "registry", "id": "torah-bless-2" }
+      ]
+    },
+    {
+      "id": "verses",
+      "title": "Short Torah verses",
+      "intro": "Simple verses from the five books. Hebrew from the Leningrad Codex edition on tanach.us, English from JPS 1917 (see Sources).",
+      "items": [
+        { "kind": "verse", "id": "gen-1-1" },
+        { "kind": "verse", "id": "gen-1-3" },
+        { "kind": "verse", "id": "deut-33-4" },
+        { "kind": "verse", "id": "exod-20-2" },
+        { "kind": "verse", "id": "exod-20-12" },
+        { "kind": "verse", "id": "lev-19-18" },
+        { "kind": "verse", "id": "deut-16-20" }
+      ]
+    }
+  ],
+  "tips": [
+    "Learn the fixed texts by heart first. The blessings never change, so once you know them the unpointed line is only a reminder.",
+    "Look for the small joining letters at the front of a word: vav (and), he (the), lamed (to), bet (in), mem (from). Peel them off, then read the rest.",
+    "The letters vav, yod and alef often show a vowel sound inside a word. In הוא the vav is the sound u; in אור it is o.",
+    "One unpointed spelling can be several words. The Words section shows אל read as el (to), al (do not) and El (God). Context decides, and in the Torah you also know the text.",
+    "The divine name is written יהוה in the scroll and in this app's pointed texts, but it is never read as written. Say Adonai."
+  ]
+}

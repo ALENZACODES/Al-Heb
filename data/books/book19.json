@@ -1,0 +1,177 @@
+{
+ "id": "book19",
+ "titleHe": "מָה הַשָּׁעָה?",
+ "titleTranslit": "Mah Ha-Sha'ah?",
+ "titleEn": "What Time Is It?",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "\"מָה הַשָּׁעָה?\"",
+   "translit": "\"Mah ha-sha'ah?\"",
+   "en": "\"What time is it?\"",
+   "img": "assets/books/book19/BOOK19_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p01.mp3",
+    "m": "audio/m/israeli/book/book19-p01.mp3"
+   },
+   "illustration": "a man in bed asking, half asleep, a woman already dressed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "\"שֶׁבַע.\"",
+   "translit": "\"Sheva.\"",
+   "en": "\"Seven.\"",
+   "img": "assets/books/book19/BOOK19_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p02.mp3",
+    "m": "audio/m/israeli/book/book19-p02.mp3"
+   },
+   "illustration": "a wall clock reading seven",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "\"מְאֻחָר!\"",
+   "translit": "\"Me'uchar!\"",
+   "en": "\"Late!\"",
+   "img": "assets/books/book19/BOOK19_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p03.mp3",
+    "m": "audio/m/israeli/book/book19-p03.mp3"
+   },
+   "illustration": "the man leaping out of bed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא מִתְלַבֵּשׁ מַהֵר.",
+   "translit": "Hu mitlabesh maher.",
+   "en": "He gets dressed fast.",
+   "img": "assets/books/book19/BOOK19_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p04.mp3",
+    "m": "audio/m/israeli/book/book19-p04.mp3"
+   },
+   "illustration": "one sock on, shirt half buttoned",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "אֵין זְמַן לְקָפֶה.",
+   "translit": "Ein zman le-kafeh.",
+   "en": "No time for coffee.",
+   "img": "assets/books/book19/BOOK19_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p05.mp3",
+    "m": "audio/m/israeli/book/book19-p05.mp3"
+   },
+   "illustration": "a sad glance at the coffee maker",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הוּא רָץ לָאוֹטוֹבּוּס.",
+   "translit": "Hu ratz la-otobus.",
+   "en": "He runs to the bus.",
+   "img": "assets/books/book19/BOOK19_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p06.mp3",
+    "m": "audio/m/israeli/book/book19-p06.mp3"
+   },
+   "illustration": "running down the stairs two at a time",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "בָּאוֹטוֹבּוּס: \"מָה הַשָּׁעָה?\"",
+   "translit": "Ba-otobus: \"Mah ha-sha'ah?\"",
+   "en": "On the bus: \"What time is it?\"",
+   "img": "assets/books/book19/BOOK19_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p07.mp3",
+    "m": "audio/m/israeli/book/book19-p07.mp3"
+   },
+   "illustration": "asking a teenager with headphones",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"שֶׁבַע וָחֵצִי.\"",
+   "translit": "\"Sheva va-chetzi.\"",
+   "en": "\"Seven thirty.\"",
+   "img": "assets/books/book19/BOOK19_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p08.mp3",
+    "m": "audio/m/israeli/book/book19-p08.mp3"
+   },
+   "illustration": "the teenager showing his phone screen",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הוּא מַגִּיעַ לַמִּשְׂרָד.",
+   "translit": "Hu magi'a la-misrad.",
+   "en": "He arrives at the office.",
+   "img": "assets/books/book19/BOOK19_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p09.mp3",
+    "m": "audio/m/israeli/book/book19-p09.mp3"
+   },
+   "illustration": "an office lobby, out of breath",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַמִּשְׂרָד סָגוּר.",
+   "translit": "Ha-misrad sagur.",
+   "en": "The office is closed.",
+   "img": "assets/books/book19/BOOK19_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p10.mp3",
+    "m": "audio/m/israeli/book/book19-p10.mp3"
+   },
+   "illustration": "dark glass doors, lights off",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַיּוֹם שַׁבָּת.",
+   "translit": "Ha-yom Shabat.",
+   "en": "Today is Saturday.",
+   "img": "assets/books/book19/BOOK19_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p11.mp3",
+    "m": "audio/m/israeli/book/book19-p11.mp3"
+   },
+   "illustration": "the man staring at the calendar on his phone",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הוּא הוֹלֵךְ לְקָפֶה.",
+   "translit": "Hu holech le-kafeh.",
+   "en": "He goes for coffee.",
+   "img": "assets/books/book19/BOOK19_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book19-p12.mp3",
+    "m": "audio/m/israeli/book/book19-p12.mp3"
+   },
+   "illustration": "the man strolling slowly to a café, relieved",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

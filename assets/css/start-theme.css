@@ -1,0 +1,100 @@
+/* ALEF start theme — dark green & gold, inspired by the golden olive tree.
+   Applies ONLY while the first-run Welcome card (.card.onboarding) is on the
+   page, via :has(); every other view keeps the standard theme untouched.
+   Palette: deep olive green, brand gold #D9A441, paper cream #F6F1E7.
+   Hero artwork: OPP_two_04 — a young sapling beside an old olive tree with a
+   golden trunk (approved image, assets/img/gen). */
+
+body:has(.card.onboarding) {
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(217, 164, 65, 0.22), rgba(217, 164, 65, 0) 60%),
+    linear-gradient(180deg, #0f2413 0%, #16301c 55%, #1c4023 100%);
+  background-attachment: fixed;
+}
+
+.card.onboarding {
+  background: linear-gradient(180deg, #17351e 0%, #122a17 100%);
+  border: 1.5px solid #d9a441;
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45), 0 0 0 4px rgba(217, 164, 65, 0.12);
+  color: #f6f1e7;
+  overflow: hidden;
+}
+
+/* The golden olive tree, as a framed band at the top of the card. The
+   artwork sits on paper cream, so the band uses the same cream and the
+   picture blends edge-to-edge; a gold rule closes it. */
+.card.onboarding::before {
+  content: "";
+  display: block;
+  height: 230px;
+  margin: -1rem -1.25rem 1.1rem;
+  background: #f4efe1 url("../img/gen/OPP_two_04.800.webp") center / contain no-repeat;
+  border-bottom: 3px solid #d9a441;
+}
+
+.card.onboarding h1,
+.card.onboarding h2,
+.card.onboarding legend {
+  color: #e8c97a;
+}
+.card.onboarding .muted {
+  color: #b9c9a4;
+}
+.card.onboarding a {
+  color: #e8c97a;
+}
+.card.onboarding .opt {
+  background: rgba(246, 241, 231, 0.06);
+  border-color: rgba(217, 164, 65, 0.45);
+  color: #f6f1e7;
+}
+.card.onboarding .opt:has(:checked) {
+  border-color: #d9a441;
+  box-shadow: 0 0 0 2px rgba(217, 164, 65, 0.55);
+  background: rgba(217, 164, 65, 0.14);
+}
+.card.onboarding .btn {
+  background: #d9a441;
+  border-color: #d9a441;
+  color: #122a17;
+  font-weight: 700;
+}
+.card.onboarding .btn:hover {
+  background: #e8c97a;
+  border-color: #e8c97a;
+}
+.card.onboarding .btn.secondary {
+  background: transparent;
+  border-color: rgba(217, 164, 65, 0.7);
+  color: #e8c97a;
+}
+.card.onboarding input[type="radio"],
+.card.onboarding input[type="checkbox"] {
+  accent-color: #d9a441;
+}
+.card.onboarding .draft-flag {
+  color: #d8e2c4;
+}
+
+/* Cards inside the dark welcome card (the week plan): dark too, so the cream text stays readable. */
+.card.onboarding .card {
+  background: rgba(246, 241, 231, 0.06);
+  border: 1px solid rgba(217, 164, 65, 0.45);
+  color: #f6f1e7;
+}
+.card.onboarding .card strong { color: #f6f1e7; }
+
+/* Keep the first decision visible instead of placing it below a decorative banner. */
+.card.onboarding:has(#ob-form-letters)::before { display: none; }
+#ob-form-letters .opt {
+  padding: .75rem;
+  margin-block: .5rem;
+  border: 1px solid rgba(217, 164, 65, .45);
+  border-radius: .6rem;
+  gap: .65rem;
+  cursor: pointer;
+}
+#ob-form-letters .opt:focus-within { outline: 2px solid #e8c97a; outline-offset: 2px; }
+#ob-form-letters .field + .field { margin-top: 1.5rem; }
+#ob-next-step { padding: .75rem; border-inline-start: 3px solid #d9a441; }

@@ -1,0 +1,16 @@
+{
+  "id": "genesis-15-8-he-noa",
+  "fingerprint": "b8d1c5c3a5e964af04507814b071596ef5a17b7f0a5bd094d4d6012f709cb843",
+  "audioSha256": "294623335d33d4a6561b81b23e3350517e7794d1e2aaf23dd111124d6418720c",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "ויאמר אדני אלוהים במה אדע כי אירשנה",
+  "transcript": "ויאמר עדיני אלוהים במה אדע, כי יירשנה.",
+  "wordEdits": 2,
+  "referenceWords": 7,
+  "wer": 0.2857142857142857,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

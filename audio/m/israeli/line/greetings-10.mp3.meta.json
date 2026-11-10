@@ -1,0 +1,18 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "שָׁנָה טוֹבָה",
+ "inputSha256": "a61be45ee4a135ea1310ce11de2a0885b30cbc283ec50848b8dd86c2e3f4031a",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "שָׁנָה טוֹבָה",
+ "stitchedFrom": [
+  "audio/m/israeli/word/hd1ed8938.mp3",
+  "audio/m/israeli/word/i-17-w13.mp3"
+ ]
+}

@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (56)
+# Practical Hebrew: The Written Pages (80)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -1160,3 +1160,492 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Ask when they close. → מָתַי אַתֶּם סוֹגְרִים? (matai atem sogrim?) · audio `shop-18`
 
 **Review queue from earlier pages:** `shop-01`, `shop-06-m`, `d-shop-l4`, `shop-07`, `shop-09`, `shop-13`, `shop-14`, `shop-19`
+
+## pu-directions-p01: Where Is...?
+
+*Learn page.* Ask where a station, hotel, hospital or pharmacy is.
+
+**Grammar: Where: אֵיפֹה.** אֵיפֹה asks where. Put the place after it, with הַ for the: אֵיפֹה הַמָּלוֹן? Start with סְלִיחָה to stop someone politely.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיפֹה ...? | eifo ...? | where is ...? | `directions-01` tts, f+m |
+| אֵיפֹה הַתַּחֲנָה? | eifo hatachana? | where is the station? | `directions-20` tts, f+m |
+| אֵיפֹה הַמָּלוֹן? | eifo hamalon? | where is the hotel? | `directions-19` tts, f+m |
+| אֵיפֹה בֵּית הַחוֹלִים? | eifo beit hacholim? | where is the hospital? | `directions-17` tts, f+m |
+| אֵיפֹה בֵּית הַמִּרְקַחַת? | eifo beit hamirkachat? | where is the pharmacy? | `directions-18` tts, f+m |
+
+**Speak.**
+
+- Ask where the station is. → אֵיפֹה הַתַּחֲנָה? (eifo hatachana?) · audio `directions-20`
+- You feel unwell. Ask where the pharmacy is. → אֵיפֹה בֵּית הַמִּרְקַחַת? (eifo beit hamirkachat?) · audio `directions-18`
+
+**Review queue from earlier pages:** `politeness-06`, `shop-20`
+
+## pu-directions-p02: Right, Left, Straight
+
+*Grammar page.* Understand and give turn-by-turn directions, to a man or a woman.
+
+**Grammar: Commands to a man and to a woman.** To a man: לֵךְ יָשָׁר, פְּנֵה שְׂמֹאלָה. To a woman: לְכִי יָשָׁר, פְּנִי שְׂמֹאלָה. The ending ה on יָמִינָה and שְׂמֹאלָה means toward: to the right, to the left.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יָשָׁר | yashar | straight ahead | `directions-05` tts, f+m |
+| יָמִינָה | yamina | right | `directions-07` tts, f+m |
+| שְׂמֹאלָה | smola \* | to the left | `il11-w2` tts, f+m |
+| לֵךְ יָשָׁר | lech yashar | go straight (to or by a man) | `directions-08-m` tts, f+m |
+| לְכִי יָשָׁר | lechi yashar \* | go straight (to or by a woman) | `directions-08-f` tts, f+m |
+| פְּנֵה שְׂמֹאלָה | pne smola | turn left (to or by a man) | `directions-09-m` tts, f+m |
+| פְּנִי שְׂמֹאלָה | pni smola \* | turn left (to or by a woman) | `directions-09-f` tts, f+m |
+
+**Speak.**
+
+- Tell a woman to turn left. → פְּנִי שְׂמֹאלָה (pni smola) · audio `directions-09-f`
+- Tell a man to go straight. → לֵךְ יָשָׁר (lech yashar) · audio `directions-08-m`
+
+**Review queue from earlier pages:** `greetings-27-f`, `fillers-16-f`
+
+## pu-directions-p03: Where Is the Central Station?
+
+*Dialogue page.* Follow directions from a passer-by.
+
+**Grammar: And then: וְאַחַר כָּךְ.** Directions come in steps joined by וְאַחַר כָּךְ (and then): לֵךְ יָשָׁר, וְאַחַר כָּךְ פְּנֵה שְׂמֹאלָה. The passer-by is talking to a man, so she uses the man's commands.
+
+**Dialogue setting.** A tourist asks a passer-by for the way.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Tourist (man): סְלִיחָה, אֵיפֹה הַתַּחֲנָה הַמֶּרְכָּזִית? | slicha, eifo hatachana hamerkazit? | Excuse me, where is the central station? | `d-directions-l1` gap |
+| Passer-by (woman): לֵךְ יָשָׁר, וְאַחַר כָּךְ פְּנֵה שְׂמֹאלָה. | lech yashar, ve'achar kach pne smola. | Go straight, and then turn left. | `d-directions-l2` gap |
+| Tourist (man): זֶה רָחוֹק? | ze rachok? | Is it far? | `d-directions-l3` gap |
+| Passer-by (woman): לֹא, חָמֵשׁ דַּקּוֹת. | lo, chamesh dakot. | No, five minutes. | `d-directions-l4` gap |
+| Tourist (man): תּוֹדָה רַבָּה! | toda raba! | Thank you very much! | `d-directions-l5` gap |
+| Passer-by (woman): בְּבַקָּשָׁה. | bevakasha. | You're welcome. | `d-directions-l6` gap |
+
+**Speak.**
+
+- Ask if it is far. → זֶה רָחוֹק? (ze rachok?) · audio `d-directions-l3`
+
+**Review queue from earlier pages:** `directions-20`, `politeness-02`, `numbers-05-f`
+
+## pu-directions-p04: Near and Far
+
+*Learn page.* Ask how far it is and understand where things are.
+
+**Grammar: No word for is.** Hebrew needs no word for is: זֶה קָרוֹב is it near. A rising voice turns it into a question: זֶה רָחוֹק? You met the same pattern in זֶה יָקָר.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| זֶה רָחוֹק? | ze rachok? | is it far? | `directions-03` tts, f+m |
+| זֶה קָרוֹב | ze karov | it's near | `directions-04` tts, f+m |
+| כַּמָּה זְמַן זֶה לוֹקֵחַ? | kama zman ze lokeach? | how long does it take? | `directions-16` tts, f+m |
+| מוּל | mul | opposite | `directions-12` tts, f+m |
+| בַּפִּנָּה | bapina | on the corner | `directions-13` tts, f+m |
+
+**Speak.**
+
+- Ask how long it takes. → כַּמָּה זְמַן זֶה לוֹקֵחַ? (kama zman ze lokeach?) · audio `directions-16`
+- Ask if it is far. → זֶה רָחוֹק? (ze rachok?) · audio `directions-03`
+
+**Review queue from earlier pages:** `shop-03`, `fillers-06`
+
+## pu-directions-p05: Follow the Directions
+
+*Listen page.* Catch the turn in quick directions.
+
+**Grammar: Listen for the last word.** In a direction the last word decides the turn: יָמִינָה or שְׂמֹאלָה. Hearing יָשָׁר means carry on.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יָשָׁר | yashar | straight ahead | `directions-05` tts, f+m |
+| יָמִינָה | yamina | right | `directions-07` tts, f+m |
+| שְׂמֹאלָה | smola \* | to the left | `il11-w2` tts, f+m |
+| פְּנֵה שְׂמֹאלָה | pne smola | turn left (to or by a man) | `directions-09-m` tts, f+m |
+| פְּנֵה יָמִינָה | pne yamina | turn right (to or by a man) | `directions-10-m` tts, f+m |
+| בַּפִּנָּה | bapina | on the corner | `directions-13` tts, f+m |
+
+**Speak.**
+
+- Repeat: turn right. → פְּנֵה יָמִינָה (pne yamina) · audio `directions-10-m`
+
+**Review queue from earlier pages:** `directions-04`, `directions-12`, `directions-01`
+
+## pu-directions-p06: Ask the Way
+
+*Speak page.* Say you are lost and ask how to get somewhere.
+
+**Grammar: How does one get there: מַגִּיעִים.** אֵיךְ מַגִּיעִים לְ...? uses the plural verb with no named person, like אֵיךְ אוֹמְרִים: how do people get to... A man says אֲנִי אָבוּד, a woman אֲנִי אֲבוּדָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵיךְ מַגִּיעִים לְ...? | eich magi'im le...? | how do you get to ...? | `directions-02` tts, f+m |
+| אֲנִי אָבוּד | ani avud | I'm lost (to or by a man) | `directions-14-m` tts, f+m |
+| אֲנִי אֲבוּדָה | ani avuda \* | I'm lost (to or by a woman) | `directions-14-f` tts, f+m |
+| אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה? | efshar lehar'ot li al hamapa? | can you show me on the map? | `directions-15` tts, f+m |
+
+**Speak.**
+
+- You are a woman and lost. Say so. → אֲנִי אֲבוּדָה (ani avuda) · audio `directions-14-f`
+- Ask someone to show you on the map. → אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה? (efshar lehar'ot li al hamapa?) · audio `directions-15`
+
+**Review queue from earlier pages:** `fillers-18`, `directions-19`
+
+## pu-directions-p07: Two Words, One Place, and Unit Review
+
+*Review page.* Name a street and a hospital, then review the unit.
+
+**Grammar: Two nouns as one: בֵּית חוֹלִים.** Some places are two nouns that work as one: בֵּית חוֹלִים is a hospital. To say the hospital, the הַ goes on the second word: בֵּית הַחוֹלִים.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רְחוֹב | rechov \* | street | `i-15-w10` tts, f+m |
+| בֵּית חוֹלִים | beit cholim \* | hospital | `i-15-w11` tts, f+m |
+
+**Speak.**
+
+- Say: a street. → רְחוֹב (rechov) · audio `i-15-w10`
+
+**Review queue from earlier pages:** `directions-17`, `directions-01`, `directions-09-f`, `directions-08-m`, `directions-03`, `directions-02`, `directions-14-m`, `directions-13`
+
+## pu-transport-p01: Taking a Taxi
+
+*Learn page.* Ask for a taxi and the meter.
+
+**Grammar: Need: צָרִיךְ and צְרִיכָה.** A man says אֲנִי צָרִיךְ מוֹנִית; a woman says אֲנִי צְרִיכָה מוֹנִית. The driver asks לְאָן? (where to?). Asking for the meter is normal.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מוֹנִית | monit \* | taxi | `il10-w1` tts, f+m |
+| אֲנִי צָרִיךְ מוֹנִית | ani tsarich monit | I need a taxi (to or by a man) | `taxi-01-m` tts, f+m |
+| אֲנִי צְרִיכָה מוֹנִית | ani tsricha monit \* | I need a taxi (to or by a woman) | `taxi-01-f` tts, f+m |
+| לְאָן? | le'an? | where to? | `taxi-02` tts, f+m |
+| אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? | efshar moneh, bevakasha? | can you use the meter, please? | `taxi-07` tts, f+m |
+
+**Speak.**
+
+- You are a woman. Say you need a taxi. → אֲנִי צְרִיכָה מוֹנִית (ani tsricha monit) · audio `taxi-01-f`
+- Ask for the meter. → אֶפְשָׁר מוֹנֶה, בְּבַקָּשָׁה? (efshar moneh, bevakasha?) · audio `taxi-07`
+
+**Review queue from earlier pages:** `cafe-03-f`, `fillers-18`
+
+## pu-transport-p02: To and From: לְ and מִ
+
+*Grammar page.* Tell the driver where you are going.
+
+**Grammar: To the: לַ is לְ plus הַ.** To is לְ and from is מִ, both joined to the word. When to meets the, they merge: לְ plus הַתַּחֲנָה becomes לַתַּחֲנָה, to the station.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה | lisde hate'ufa, bevakasha | to the airport, please | `taxi-03` tts, f+m |
+| לַתַּחֲנָה הַמֶּרְכָּזִית | latachana hamerkazit | to the central station | `taxi-04` tts, f+m |
+
+**Speak.**
+
+- Tell the driver: to the airport, please. → לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה (lisde hate'ufa, bevakasha) · audio `taxi-03`
+- Say: to the central station. → לַתַּחֲנָה הַמֶּרְכָּזִית (latachana hamerkazit) · audio `taxi-04`
+
+**Review queue from earlier pages:** `small-talk-04`, `d-smalltalk-l4`, `directions-20`
+
+## pu-transport-p03: A Taxi to the Airport
+
+*Dialogue page.* Follow a whole taxi ride, from getting in to paying.
+
+**Grammar: How long and how much: כַּמָּה.** כַּמָּה with a noun asks how much of it: כַּמָּה זְמַן? is how long. כַּמָּה אֲנִי חַיָּב? is how much do I owe.
+
+**Dialogue setting.** A passenger takes a taxi to the airport.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Passenger (man): שָׁלוֹם. לִשְׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה. | shalom. lisde hate'ufa, bevakasha. | Hello. To the airport, please. | `d-taxi-l1` gap |
+| Driver (man): בְּסֵדֶר. עֲלֵה. | beseder. ale. | OK. Get in. | `d-taxi-l2` gap |
+| Driver (man): כֵּן, בְּלִי בְּעָיָה. | ken, bli be'aya. | Yes, no problem. | `d-taxi-l4` gap |
+| Passenger (man): כַּמָּה זְמַן? | kama zman? | How long will it take? | `d-taxi-l5` gap |
+| Driver (man): בְּעֵרֶךְ עֶשְׂרִים דַּקּוֹת. | be'erech esrim dakot. | About twenty minutes. | `d-taxi-l6` gap |
+| Driver (man): הִגַּעְנוּ. | higanu. | We've arrived. | `d-taxi-l7` gap |
+| Passenger (man): כַּמָּה אֲנִי חַיָּב? | kama ani chayav? | How much do I owe? | `d-taxi-l8` gap |
+| Driver (man): מֵאָה שְׁקָלִים. | me'a shekalim. | A hundred shekels. | `d-taxi-l9` gap |
+| Passenger (man): הִנֵּה, תּוֹדָה. יוֹם טוֹב! | hine, toda. yom tov! | Here you go, thanks. Have a good day! | `d-taxi-l10` gap |
+
+**Speak.**
+
+- Ask how long it will take. → כַּמָּה זְמַן? (kama zman?) · audio `d-taxi-l5`
+- Ask how much you owe. → כַּמָּה אֲנִי חַיָּב? (kama ani chayav?) · audio `d-taxi-l8`
+
+**Review queue from earlier pages:** `taxi-03`, `il05-w5`, `numbers-14`
+
+## pu-transport-p04: The Bus
+
+*Learn page.* Find the bus stop and the right bus.
+
+**Grammar: Two nouns as one: תַּחֲנַת הָאוֹטוֹבּוּס.** When two nouns work as one, the first can change its ending: תַּחֲנָה (stop) becomes תַּחֲנַת in תַּחֲנַת הָאוֹטוֹבּוּס, the bus stop. הַאִם at the start of a question is formal; in speech the tone does the job.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אוֹטוֹבּוּס | otobus \* | bus | `il10-w2` tts, f+m |
+| תַּחֲנָה | tachana \* | station; stop | `il10-w4` tts, f+m |
+| אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? | eifo tachanat ha'otobus? | where is the bus stop? | `taxi-10` tts, f+m |
+| אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? | eize otobus holech le...? | which bus goes to ...? | `taxi-11` tts, f+m |
+| הַאִם זֶה הָאוֹטוֹבּוּס לְ...? | ha'im ze ha'otobus le...? | is this the bus to ...? (formal) | `taxi-14` tts, f+m |
+
+**Speak.**
+
+- Ask where the bus stop is. → אֵיפֹה תַּחֲנַת הָאוֹטוֹבּוּס? (eifo tachanat ha'otobus?) · audio `taxi-10`
+- Ask which bus goes to the station. → אֵיזֶה אוֹטוֹבּוּס הוֹלֵךְ לְ...? (eize otobus holech le...?) · audio `taxi-11`
+
+**Review queue from earlier pages:** `directions-01`, `fillers-06`
+
+## pu-transport-p05: The Train
+
+*Learn page.* Ask about the next train and find the platform.
+
+**Grammar: The next: הַבָּאָה.** When the noun has הַ, its describing word takes הַ too: הַתַּחֲנָה הַבָּאָה, the next stop, and הָרַכֶּבֶת הַבָּאָה, the next train.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רַכֶּבֶת | rakevet \* | train | `il10-w3` tts, f+m |
+| מָתַי הָרַכֶּבֶת הַבָּאָה? | matai harakevet haba'a? | when is the next train? | `taxi-12` tts, f+m |
+| רְצִיף | retsif \* | platform | `i-11-w6` tts, f+m |
+| הַתַּחֲנָה הַבָּאָה | hatachana haba'a \* | the next stop | `i-11-w8` tts, f+m |
+
+**Speak.**
+
+- Ask when the next train is. → מָתַי הָרַכֶּבֶת הַבָּאָה? (matai harakevet haba'a?) · audio `taxi-12`
+
+**Review queue from earlier pages:** `d-shop-l2`, `i-13-w9`
+
+## pu-transport-p06: Hear the Stop
+
+*Listen page.* Catch the announcements and the seat questions.
+
+**Grammar: Taken and free: תָּפוּס and פָּנוּי.** Before you sit, ask with a rising voice: פָּנוּי? (free?). The answer may be תָּפוּס (taken). When your stop comes, a woman says יוֹרֶדֶת, I'm getting off.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַתַּחֲנָה הַבָּאָה | hatachana haba'a \* | the next stop | `i-11-w8` tts, f+m |
+| יוֹרֶדֶת | yoredet \* | getting off (f) | `i-11-w10` tts, f+m |
+| תָּפוּס | tafus \* | taken (seat) | `i-11-w11` tts, f+m |
+| פָּנוּי | panui \* | free (seat) | `i-11-w12` tts, f+m |
+| נַהָג | nahag \* | driver | `i-11-w7` tts, f+m |
+
+**Speak.**
+
+- Ask if the seat is free. → פָּנוּי (panui) · audio `i-11-w12`
+
+**Review queue from earlier pages:** `taxi-12`, `il10-w2`, `taxi-14`
+
+## pu-transport-p07: Tell the Driver Where
+
+*Speak page.* Ask the driver to stop, slow down and say the price.
+
+**Grammar: Stop: עֲצֹר and עִצְרִי.** To a man: עֲצֹר כָּאן, בְּבַקָּשָׁה. To a woman: עִצְרִי כָּאן, בְּבַקָּשָׁה. The woman's command adds י, as with פְּנִי and לְכִי.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֲצֹר כָּאן, בְּבַקָּשָׁה | atsor kan, bevakasha | stop here, please (to or by a man) | `taxi-09-m` tts, f+m |
+| עִצְרִי כָּאן, בְּבַקָּשָׁה | itsri kan, bevakasha \* | stop here, please (to or by a woman) | `taxi-09-f` tts, f+m |
+| כַּמָּה זֶה יַעֲלֶה? | kama ze ya'ale? | how much will it cost? | `taxi-08` tts, f+m |
+| לְאַט | le'at \* | slowly | `i-23-w9` tts, f+m |
+
+**Speak.**
+
+- Your driver is a woman. Ask her to stop here. → עִצְרִי כָּאן, בְּבַקָּשָׁה (itsri kan, bevakasha) · audio `taxi-09-f`
+- Ask how much it will cost. → כַּמָּה זֶה יַעֲלֶה? (kama ze ya'ale?) · audio `taxi-08`
+- Say: slowly. → לְאַט (le'at) · audio `i-23-w9`
+
+**Review queue from earlier pages:** `directions-09-f`, `fillers-18`
+
+## pu-transport-p08: Tickets and the Rav-Kav
+
+*Learn page.* Buy a ticket and use the transit card.
+
+**Grammar: One word, two things: כַּרְטִיס.** כַּרְטִיס is both a ticket and a card, so כַּרְטִיס אֶחָד לְ... is one ticket to... The Rav-Kav is the transit card you top up for buses and trains.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כַּרְטִיס | kartis \* | ticket | `il10-w5` tts, f+m |
+| כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה | kartis echad le..., bevakasha | one ticket to ..., please | `taxi-13` tts, f+m |
+| רַב-קַו | rav-kav \* | Rav-Kav (the transit card) | `i-11-w5` tts, f+m |
+| נְסִיעָה | nesi'a \* | ride; trip | `il10-w6` tts, f+m |
+
+**Speak.**
+
+- Ask for one ticket. → כַּרְטִיס אֶחָד לְ..., בְּבַקָּשָׁה (kartis echad le..., bevakasha) · audio `taxi-13`
+
+**Review queue from earlier pages:** `cafe-27`, `shop-13`
+
+## pu-transport-p09: A Pleasant Ride and Unit Review
+
+*Review page.* Thank the driver, then review the unit.
+
+**Grammar: Was: הָיְתָה.** הַנְּסִיעָה הָיְתָה נָעִימָה is the ride was pleasant. הָיְתָה is was for a feminine noun, and נָעִימָה matches it, as נָעִים does with a masculine one.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה | hanesi'a hayta na'ima, toda | it was a pleasant ride, thanks | `taxi-15` tts, f+m |
+
+**Speak.**
+
+- Thank the driver for a pleasant ride. → הַנְּסִיעָה הָיְתָה נָעִימָה, תּוֹדָה (hanesi'a hayta na'ima, toda) · audio `taxi-15`
+
+**Review queue from earlier pages:** `taxi-01-m`, `taxi-03`, `taxi-04`, `taxi-09-f`, `taxi-10`, `taxi-12`, `i-11-w8`, `i-11-w12`, `taxi-13`
+
+## pu-small-talk-p01: How Long Have You Been Here?
+
+*Learn page.* Say how long you have been in Israel.
+
+**Grammar: The country: בָּאָרֶץ.** Israelis often call Israel simply the country: בָּאָרֶץ is in the country. כַּמָּה זְמַן asks how long, the same כַּמָּה as in the taxi.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| כַּמָּה זְמַן | kama zman \* | how long | `i-25-w5` tts, f+m |
+| בָּאָרֶץ | ba'arets \* | in the country (Israel) | `i-25-w6` tts, f+m |
+| שָׁבוּעַ | shavua \* | a week | `i-25-w7` tts, f+m |
+| חֹדֶשׁ | chodesh \* | month | `i-25-w8` tts, f+m |
+
+**Speak.**
+
+- Say: a week. → שָׁבוּעַ (shavua) · audio `i-25-w7`
+- Say: a month. → חֹדֶשׁ (chodesh) · audio `i-25-w8`
+
+**Review queue from earlier pages:** `d-taxi-l5`, `small-talk-06`
+
+## pu-small-talk-p02: Questions: מָה and מָתַי
+
+*Grammar page.* Ask what someone does, how old they are and when.
+
+**Grammar: The question word comes first.** Hebrew puts the question word first and then the person: מָה אַתָּה עוֹשֶׂה? To ask age you say son of how much to a man, בֶּן כַּמָּה אַתָּה?, and daughter of how much to a woman, בַּת כַּמָּה אַתְּ?
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מָה אַתָּה עוֹשֶׂה? | ma ata ose? | what do you do (for work)? (to or by a man) | `small-talk-07-m` tts, f+m |
+| מָה אַתְּ עוֹשָׂה? | ma at osa? \* | what do you do (for work)? (to or by a woman) | `small-talk-07-f` tts, f+m |
+| בֶּן כַּמָּה אַתָּה? | ben kama ata? | how old are you? (lit. son of how much) (to or by a man) | `small-talk-08-m` tts, f+m |
+| בַּת כַּמָּה אַתְּ? | bat kama at? \* | how old are you? (to a woman; lit. daughter of how much) (to or by a woman) | `small-talk-08-f` tts, f+m |
+| מָתַי? | matai? \* | when? | `i-38-w9` tts, f+m |
+
+**Speak.**
+
+- Ask a woman what she does. → מָה אַתְּ עוֹשָׂה? (ma at osa?) · audio `small-talk-07-f`
+- Ask a man how old he is. → בֶּן כַּמָּה אַתָּה? (ben kama ata?) · audio `small-talk-08-m`
+- Ask: when? → מָתַי? (matai?) · audio `i-38-w9`
+
+**Review queue from earlier pages:** `small-talk-03-f`, `shop-18`
+
+## pu-small-talk-p03: How Do You Feel?
+
+*Learn page.* Say you are hungry, tired, or hot.
+
+**Grammar: Hot to me: חַם לִי.** Hebrew says the heat is to you: חַם לִי, literally hot to me, is the same for everyone. Hungry and tired change for a woman: אֲנִי רְעֵבָה, אֲנִי עֲיֵפָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי רָעֵב | ani ra'ev | I'm hungry (to or by a man) | `small-talk-09-m` tts, f+m |
+| אֲנִי רְעֵבָה | ani re'eva \* | I'm hungry (to or by a woman) | `small-talk-09-f` tts, f+m |
+| אֲנִי עָיֵף | ani ayef | I'm tired (to or by a man) | `small-talk-11-m` tts, f+m |
+| אֲנִי עֲיֵפָה | ani ayefa \* | I'm tired (to or by a woman) | `small-talk-11-f` tts, f+m |
+| חַם לִי | cham li | I'm hot | `small-talk-12` tts, f+m |
+
+**Speak.**
+
+- You are a woman. Say you are hungry. → אֲנִי רְעֵבָה (ani re'eva) · audio `small-talk-09-f`
+- Say you are hot. → חַם לִי (cham li) · audio `small-talk-12`
+
+**Review queue from earlier pages:** `shop-06-f`, `cafe-23-f`
+
+## pu-small-talk-p04: Work and Studies
+
+*Learn page.* Talk about your job and your studies.
+
+**Grammar: Working, studying: the man's form.** עוֹבֵד and לוֹמֵד are the man's forms of working and studying. The woman's forms end in -et, as with מִסְתַּכֶּלֶת in the shop.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֲבוֹדָה | avoda \* | work, job | `i-36-w1` tts, f+m |
+| מִשְׂרָד | misrad \* | office | `i-36-w2` tts, f+m |
+| מְנַהֵל | menahel \* | manager, boss | `i-36-w4` tts, f+m |
+| עוֹבֵד | oved \* | working (m) | `i-36-w11` tts, f+m |
+| לוֹמֵד | lomed \* | studying (m) | `i-25-w9` tts, f+m |
+
+**Speak.**
+
+- Say: work. → עֲבוֹדָה (avoda) · audio `i-36-w1`
+- Say: office. → מִשְׂרָד (misrad) · audio `i-36-w2`
+
+**Review queue from earlier pages:** `small-talk-07-m`, `shop-06-m`
+
+## pu-small-talk-p05: Hear the Question
+
+*Listen page.* Recognise the small-talk questions people ask you.
+
+**Grammar: Listen for the start and the end.** The first word tells you the question: מָה, מֵאֵיפֹה, בֶּן or בַּת כַּמָּה. The ending tells you who is asked: אַתָּה for a man, אַתְּ for a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מַה שִּׁמְךָ? | ma shimcha? | what's your name? (to or by a man) | `small-talk-01-m` tts, f+m |
+| מֵאֵיפֹה אַתְּ? | me'eifo at? \* | where are you from? (to or by a woman) | `small-talk-03-f` tts, f+m |
+| מָה אַתָּה עוֹשֶׂה? | ma ata ose? | what do you do (for work)? (to or by a man) | `small-talk-07-m` tts, f+m |
+| בַּת כַּמָּה אַתְּ? | bat kama at? \* | how old are you? (to a woman; lit. daughter of how much) (to or by a woman) | `small-talk-08-f` tts, f+m |
+| הַכֹּל בְּסֵדֶר אִתְּךָ? | hakol beseder itcha? | are you OK? (to or by a man) | `small-talk-14-m` tts, f+m |
+| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) (slang) | `small-talk-16` tts, f+m |
+
+**Speak.**
+
+- Answer: what's up? Say how's it going back. → מָה הַמַּצָּב? (ma hamatsav?) · audio `small-talk-16`
+
+**Review queue from earlier pages:** `small-talk-02`, `small-talk-04`, `i-25-w7`
+
+## pu-small-talk-p06: Friends and Goodbyes
+
+*Speak page.* Talk about a friend and say you will miss someone.
+
+**Grammar: To you, again: ךָ and ךְ.** אֶתְגַּעְגֵּעַ אֵלֶיךָ is I'll miss you to a man; to a woman it is אֶתְגַּעְגֵּעַ אֵלַיִךְ. A friend is חָבֵר, or חֲבֵרָה for a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חָבֵר | chaver | friend (to or by a man) | `small-talk-18-m` tts, f+m |
+| חֲבֵרָה | chavera \* | friend (to or by a woman) | `small-talk-18-f` tts, f+m |
+| אֶתְגַּעְגֵּעַ אֵלֶיךָ | etga'age'a elecha | I'll miss you (to or by a man) | `small-talk-19-m` tts, f+m |
+| אֶתְגַּעְגֵּעַ אֵלַיִךְ | etga'age'a elayich \* | I'll miss you (to or by a woman) | `small-talk-19-f` tts, f+m |
+
+**Speak.**
+
+- Your friend Noa is leaving. Say you'll miss her. → אֶתְגַּעְגֵּעַ אֵלַיִךְ (etga'age'a elayich) · audio `small-talk-19-f`
+- Say: a friend (a woman). → חֲבֵרָה (chavera) · audio `small-talk-18-f`
+
+**Review queue from earlier pages:** `greetings-20`, `greetings-27-f`
+
+## pu-small-talk-p07: Keeping It Going
+
+*Learn page.* Check on someone and calm them down.
+
+**Grammar: With you: אִתְּךָ and אִתָּךְ.** הַכֹּל בְּסֵדֶר אִתְּךָ? asks a man if he is OK; to a woman, אִתָּךְ. Calm down is תִּרְגַּע to a man and תִּרְגְּעִי to a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַכֹּל בְּסֵדֶר אִתְּךָ? | hakol beseder itcha? | are you OK? (to or by a man) | `small-talk-14-m` tts, f+m |
+| הַכֹּל בְּסֵדֶר אִתָּךְ? | hakol beseder itach? \* | are you OK? (to or by a woman) | `small-talk-14-f` tts, f+m |
+| תִּרְגַּע | tirga | chill / calm down (to or by a man) (slang) | `small-talk-15-m` tts, f+m |
+| תִּרְגְּעִי | tirgi \* | chill / calm down (to or by a woman) (slang) | `small-talk-15-f` tts, f+m |
+
+**Speak.**
+
+- Your friend looks upset. Ask her if she is OK. → הַכֹּל בְּסֵדֶר אִתָּךְ? (hakol beseder itach?) · audio `small-talk-14-f`
+- Tell a man to calm down. → תִּרְגַּע (tirga) · audio `small-talk-15-m`
+
+**Review queue from earlier pages:** `greetings-14`, `politeness-22`
+
+## pu-small-talk-p08: Level 1 Check
+
+*Check page.* Show you can order, shop, find your way, travel and chat.
+
+**Grammar: Putting level 1 together.** This check mixes every level 1 unit. One new phrase: אֵין מָה לַעֲשׂוֹת, there's nothing to be done, uses the same אֵין as אֵין בְּעָיָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֵין מָה לַעֲשׂוֹת | ein ma la'asot | there's nothing to be done | `small-talk-17` tts, f+m |
+
+**Speak.**
+
+- The bus is late. Shrug it off. → אֵין מָה לַעֲשׂוֹת (ein ma la'asot) · audio `small-talk-17`
+
+**Review queue from earlier pages:** `cafe-04`, `cafe-03-f`, `d-restaurant-l2`, `shop-01`, `shop-07`, `directions-20`, `directions-09-f`, `taxi-03`, `taxi-12`, `small-talk-08-f`, `small-talk-09-m`

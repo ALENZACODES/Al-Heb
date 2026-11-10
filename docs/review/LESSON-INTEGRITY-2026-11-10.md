@@ -269,3 +269,22 @@ Built:
 
 **92 / 100** (estimate). See the second pass in
 [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md).
+
+## Round 8
+
+**Built:** level 1 is finished. `pu-directions` (7 pages), `pu-transport` (9) and `pu-small-talk` (8) are written to the same
+sourced standard, so all 80 pages of levels 0 and 1 are live.
+
+**Kept out:**
+- every item on the hidden list;
+- `il13-w4` (בְּרוּךְ הַשֵּׁם), which names God and stays with John's decisions.
+
+**One English gloss corrected:** the woman's form of "how old are you?" now reads "daughter of how much", not "son".
+
+**Open:**
+- 57 dialogue lines with no audio;
+- levels 2 to 4 (111 pages);
+- native and cantor review;
+- John's held decisions.
+
+**93 / 100** (estimate).

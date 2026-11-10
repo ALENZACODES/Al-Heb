@@ -2,10 +2,10 @@
 
 Lane C, round 3. This plan turns the Israel track into a structured conversation course of 191 pages in 36 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 56 pages (all of level 0, and the cafe, restaurant and shop units) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+The first 80 pages (all of levels 0 and 1) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- Written pages (56): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
+- Written pages (80): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
@@ -160,36 +160,36 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 
 **`pu-directions` Asking for and Following Directions** (7 pages) · lessons il11, I-15 · dialogue `d-directions` · phrasebook `directions`
 
-- `pu-directions-p01` learn: Where Is...?
-- `pu-directions-p02` grammar: Right, Left, Straight
-- `pu-directions-p03` dialogue: Where Is the Bus Station?
-- `pu-directions-p04` learn: Near and Far
-- `pu-directions-p05` listen: Follow the Directions
-- `pu-directions-p06` speak: Ask the Way
-- `pu-directions-p07` review: Unit Review
+- `pu-directions-p01` learn: Where Is...? **(written)**
+- `pu-directions-p02` grammar: Right, Left, Straight **(written)**
+- `pu-directions-p03` dialogue: Where Is the Central Station? **(written)**
+- `pu-directions-p04` learn: Near and Far **(written)**
+- `pu-directions-p05` listen: Follow the Directions **(written)**
+- `pu-directions-p06` speak: Ask the Way **(written)**
+- `pu-directions-p07` review: Two Words, One Place, and Unit Review **(written)**
 
 **`pu-transport` Taxi, Bus and Train** (9 pages) · lessons il10, I-11, I-23 · dialogue `d-taxi` · phrasebook `taxi`
 
-- `pu-transport-p01` learn: Taking a Taxi
-- `pu-transport-p02` grammar: To and From: לְ and מִ
-- `pu-transport-p03` dialogue: A Taxi to the Airport
-- `pu-transport-p04` learn: The Bus
-- `pu-transport-p05` learn: The Train
-- `pu-transport-p06` listen: Hear the Stop
-- `pu-transport-p07` speak: Tell the Driver Where
-- `pu-transport-p08` learn: Tickets and the Rav-Kav
-- `pu-transport-p09` review: Unit Review
+- `pu-transport-p01` learn: Taking a Taxi **(written)**
+- `pu-transport-p02` grammar: To and From: לְ and מִ **(written)**
+- `pu-transport-p03` dialogue: A Taxi to the Airport **(written)**
+- `pu-transport-p04` learn: The Bus **(written)**
+- `pu-transport-p05` learn: The Train **(written)**
+- `pu-transport-p06` listen: Hear the Stop **(written)**
+- `pu-transport-p07` speak: Tell the Driver Where **(written)**
+- `pu-transport-p08` learn: Tickets and the Rav-Kav **(written)**
+- `pu-transport-p09` review: Unit Review **(written)**
 
 **`pu-small-talk` Small Talk** (8 pages) · lessons il13, I-25, I-36 · dialogue `d-smalltalk` · phrasebook `small-talk`
 
-- `pu-small-talk-p01` learn: Where Are You From?
-- `pu-small-talk-p02` grammar: Questions: מָה, מִי, אֵיפֹה
-- `pu-small-talk-p03` dialogue: Nice to Meet You
-- `pu-small-talk-p04` learn: Work and Studies
-- `pu-small-talk-p05` listen: Hear the Question
-- `pu-small-talk-p06` speak: Talk About Yourself
-- `pu-small-talk-p07` learn: Keeping It Going
-- `pu-small-talk-p08` check: Level 1 Check
+- `pu-small-talk-p01` learn: How Long Have You Been Here? **(written)**
+- `pu-small-talk-p02` grammar: Questions: מָה and מָתַי **(written)**
+- `pu-small-talk-p03` learn: How Do You Feel? **(written)**
+- `pu-small-talk-p04` learn: Work and Studies **(written)**
+- `pu-small-talk-p05` listen: Hear the Question **(written)**
+- `pu-small-talk-p06` speak: Friends and Goodbyes **(written)**
+- `pu-small-talk-p07` learn: Keeping It Going **(written)**
+- `pu-small-talk-p08` check: Level 1 Check **(written)**
 
 
 ### L2: Daily life
@@ -389,7 +389,7 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 ## The Written Pages
 
 Round 3 wrote `pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02. Round 4 added
-`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 7 added `pu-restaurant` (7 pages; its outline was cut from 10 because the sources hold no complaint or listening lines worth a page) and `pu-shop` (9 pages): 56 written, 191 in the outline. Round 3's 20 pages hold 103 items,
+`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 7 added `pu-restaurant` (7 pages; its outline was cut from 10 because the sources hold no complaint or listening lines worth a page) and `pu-shop` (9 pages): 56 written, 191 in the outline. Round 8 finished level 1 with `pu-directions` (7), `pu-transport` (9) and `pu-small-talk` (8): 80 written. Round 3's 20 pages hold 103 items,
 each with pointed Hebrew, transliteration, English and an audio clip id. Every page has a real grammar point, 1–3 speaking
 prompts, a listening round, and from page 2 on, earlier items queued for review. The readable copy is
 `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`.
@@ -404,13 +404,16 @@ yourself as a man or a woman. Round 6 adds עִם (with), רוֹצֶה and רו�
 future question מָה תִּרְצִי?, to-verbs starting with ל, the woman's ending ת, בְּ (by), and לְ said li before a shva.
 Round 7 adds לְכַמָּה, הִנֵּה, adjectives that match the noun, בְּלִי, בְּשִׂמְחָה, יֵשׁ and אֵין, masculine nouns with the
 long number set, קְטַנָּה for a feminine noun, הַחֻלְצָה הַזֹּאת, זֶה and זֹאת with אֶת, אֶפְשָׁר with a noun, and plural אַתֶּם.
+Round 8 adds commands to a man and a woman, the ה of direction, וְאַחַר כָּךְ, no word for is, מַגִּיעִים, two nouns as
+one (בֵּית חוֹלִים, תַּחֲנַת), צָרִיךְ and צְרִיכָה, לַ as לְ plus הַ, הַבָּאָה, תָּפוּס and פָּנוּי, הָיְתָה, בֶּן and בַּת כַּמָּה,
+חַם לִי, and אִתְּךָ and אִתָּךְ.
 
 **Sources.** Every Hebrew line is copied by id from `data/corpus/phrasebook.json`, the audio manifests (which hold the woman's
 forms the phrasebook leaves out, such as מַה שְׁלוֹמֵךְ? and אֲנִי מִצְטַעֶרֶת) or `data/curriculum/dialogues.json`. The test
 re-reads each source and fails on any difference.
 
-**Audio.** 211 of the 253 items on the 56 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
-clips, not human recordings. The 42 gaps are all dialogue lines (`d-smalltalk`, `d-cafe`, `d-restaurant`, `d-shop`), which have no clips yet; the test allows gaps only on dialogue lines.
+**Audio.** 304 of the 361 items on the 80 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
+clips, not human recordings. The 57 gaps are all dialogue lines (`d-smalltalk`, `d-cafe`, `d-restaurant`, `d-shop`, `d-directions`, `d-taxi`), which have no clips yet; the test allows gaps only on dialogue lines.
 
 **Transliteration.** Phrasebook rows keep the phrasebook's transliteration. Thirty items (woman's forms and counting-set numbers that come only from the audio manifest,
 and four lesson words with no transliteration of their own) have transliteration written for these pages in the same spoken style ("ma shlomech?").
@@ -438,7 +441,7 @@ Found while writing; nothing changed in the sources:
 
 ## What Is Left
 
-- Write the remaining 135 pages to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
+- Write the remaining 111 pages (levels 2 to 4) to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
 - View support for the v3 fields, listed above.
 - Clips for the dialogue lines, so dialogue pages can play.
 - A native-speaker read of everything marked `nativeReview`.

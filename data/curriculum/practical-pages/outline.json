@@ -28,7 +28,7 @@
  "totals": {
   "units": 36,
   "pages": 191,
-  "written": 56
+  "written": 80
  },
  "units": [
   {
@@ -618,7 +618,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Where Is...?",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p01"
     },
     {
@@ -626,15 +626,15 @@
      "order": 2,
      "kind": "grammar",
      "title": "Right, Left, Straight",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p02"
     },
     {
      "id": "pu-directions-p03",
      "order": 3,
      "kind": "dialogue",
-     "title": "Where Is the Bus Station?",
-     "status": "planned",
+     "title": "Where Is the Central Station?",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p03"
     },
     {
@@ -642,7 +642,7 @@
      "order": 4,
      "kind": "learn",
      "title": "Near and Far",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p04"
     },
     {
@@ -650,7 +650,7 @@
      "order": 5,
      "kind": "listen",
      "title": "Follow the Directions",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p05"
     },
     {
@@ -658,15 +658,15 @@
      "order": 6,
      "kind": "speak",
      "title": "Ask the Way",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p06"
     },
     {
      "id": "pu-directions-p07",
      "order": 7,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Two Words, One Place, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-directions/pu-directions-p07"
     }
    ]
@@ -690,7 +690,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Taking a Taxi",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p01"
     },
     {
@@ -698,7 +698,7 @@
      "order": 2,
      "kind": "grammar",
      "title": "To and From: לְ and מִ",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p02"
     },
     {
@@ -706,7 +706,7 @@
      "order": 3,
      "kind": "dialogue",
      "title": "A Taxi to the Airport",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p03"
     },
     {
@@ -714,7 +714,7 @@
      "order": 4,
      "kind": "learn",
      "title": "The Bus",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p04"
     },
     {
@@ -722,7 +722,7 @@
      "order": 5,
      "kind": "learn",
      "title": "The Train",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p05"
     },
     {
@@ -730,7 +730,7 @@
      "order": 6,
      "kind": "listen",
      "title": "Hear the Stop",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p06"
     },
     {
@@ -738,7 +738,7 @@
      "order": 7,
      "kind": "speak",
      "title": "Tell the Driver Where",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p07"
     },
     {
@@ -746,7 +746,7 @@
      "order": 8,
      "kind": "learn",
      "title": "Tickets and the Rav-Kav",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p08"
     },
     {
@@ -754,7 +754,7 @@
      "order": 9,
      "kind": "review",
      "title": "Unit Review",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-transport/pu-transport-p09"
     }
    ]
@@ -777,24 +777,24 @@
      "id": "pu-small-talk-p01",
      "order": 1,
      "kind": "learn",
-     "title": "Where Are You From?",
-     "status": "planned",
+     "title": "How Long Have You Been Here?",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p01"
     },
     {
      "id": "pu-small-talk-p02",
      "order": 2,
      "kind": "grammar",
-     "title": "Questions: מָה, מִי, אֵיפֹה",
-     "status": "planned",
+     "title": "Questions: מָה and מָתַי",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p02"
     },
     {
      "id": "pu-small-talk-p03",
      "order": 3,
-     "kind": "dialogue",
-     "title": "Nice to Meet You",
-     "status": "planned",
+     "kind": "learn",
+     "title": "How Do You Feel?",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p03"
     },
     {
@@ -802,7 +802,7 @@
      "order": 4,
      "kind": "learn",
      "title": "Work and Studies",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p04"
     },
     {
@@ -810,15 +810,15 @@
      "order": 5,
      "kind": "listen",
      "title": "Hear the Question",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p05"
     },
     {
      "id": "pu-small-talk-p06",
      "order": 6,
      "kind": "speak",
-     "title": "Talk About Yourself",
-     "status": "planned",
+     "title": "Friends and Goodbyes",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p06"
     },
     {
@@ -826,7 +826,7 @@
      "order": 7,
      "kind": "learn",
      "title": "Keeping It Going",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p07"
     },
     {
@@ -834,7 +834,7 @@
      "order": 8,
      "kind": "check",
      "title": "Level 1 Check",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-small-talk/pu-small-talk-p08"
     }
    ]

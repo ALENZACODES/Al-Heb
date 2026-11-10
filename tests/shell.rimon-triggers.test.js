@@ -210,3 +210,24 @@ test('a screen that says Rimon stays away is a quiet route (Ask the Torah, the T
     if (/Rimon (does not|doesn't|never) (appear|show)/i.test(head)) assert.ok(QUIET_ROUTES.includes(r.name), `${r.name} (${r.module}) says Rimon stays away but is not quiet`);
   }
 });
+
+test("the owner's streak rule: Friday, Saturday, Yom Tov and its eve never break a streak in Rimon's eyes either", async () => {
+  const { freeRestDays } = await import('../src/shell/rimon-triggers.js');
+  const { projectStreak, STREAK_V } = await import('../src/curriculum/streak.js');
+  const rec = { v: STREAK_V, count: 5, best: 5, last: '2026-11-12', frozenDates: [], mode: 'reform' }; // last studied Thursday
+  const at = (d, iso) => projectStreak(rec, d, freeRestDays(rec, iso));
+  const fri = at(new Date(2026, 10, 13, 19), '2026-11-13');
+  assert.equal(fri.restToday, true, 'Friday evening is a rest day: no "streak at risk"');
+  assert.ok(!greetingCandidates({ iso: '2026-11-13', hour: 19, weekday: 5, holidays: [], shabbat: 'evening' }, { streak: fri }).includes('streak.atrisk'));
+  const sat = at(new Date(2026, 10, 14, 22), '2026-11-14');
+  assert.equal(sat.count, 5); assert.ok(!sat.broken, 'Saturday night after a missed Friday: still 5');
+  assert.equal(at(new Date(2026, 10, 15, 10), '2026-11-15').count, 5, 'Sunday after Friday and Saturday off: still 5');
+  assert.ok(at(new Date(2026, 10, 17, 10), '2026-11-17').broken, 'a missed Sunday and Monday still break it');
+});
+
+test('with retention running, a break is retention\'s news (freezes, repair), not a second "streaks start again"', () => {
+  const ctx = { iso: '2026-11-17', hour: 10, weekday: 2, holidays: [], shabbat: null };
+  const st = { broken: true, best: 6, count: 0 };
+  assert.ok(greetingCandidates(ctx, { streak: st }).includes('streak.lost'));
+  assert.ok(!greetingCandidates(ctx, { streak: st, retention: true }).includes('streak.lost'));
+});

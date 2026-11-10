@@ -16,7 +16,7 @@ body.fd-player #game-music,
 body.fd-player .rimon-corner,
 body.fd-player .rimon-bubble,
 body.fd-player .rimon-restore { display: none !important; }
-body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1rem calc(11rem + env(safe-area-inset-bottom)); } /* room for Continue plus Rimon and the “Tap Hear it” line */
+body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1rem calc(15rem + env(safe-area-inset-bottom)); } /* room for Hear it / Trace it above the pinned Continue button */
 
 .alef-firstday { --fd-gold: #d9a441; --fd-gold-hi: #e8c97a; --fd-cream: #f6f1e7; --fd-sage: #b9c9a4; --fd-ok: #7fb069; --fd-bad: #e07a5f; color: var(--fd-cream); }
 .alef-firstday a { color: var(--fd-gold-hi); }

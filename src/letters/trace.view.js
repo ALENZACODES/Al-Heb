@@ -74,8 +74,8 @@ const CSS = `
 .alef-trace .notice{background:#fff4e0;border:1px solid #e0b060;border-radius:8px;padding:8px 10px;font-size:.9rem}
 .alef-trace .notice-high{background:#fde8e8;border-color:#c0392b;color:#5a1010;font-weight:bold}
 .alef-trace .feedback{min-height:2.2em;font-size:1.05rem;margin:6px 0}
-.alef-trace .stage{background:#fff;border:1px solid #ccd;border-radius:12px;padding:6px}
-.alef-trace .big{font-size:4rem;line-height:1.1}
+.alef-trace .stage{background:#fff;border:1px solid #ccd;border-radius:12px;padding:6px;min-height:min(70vw,22rem)}
+.alef-trace .big{font-size:4rem;line-height:1.1}.alef-trace .letter-meta{min-height:0}
 .alef-trace .kb{direction:ltr;display:flex;flex-direction:column;gap:4px;margin:10px 0;user-select:none}
 .alef-trace .kb .r{display:flex;gap:4px;justify-content:center}
 .alef-trace .kb .k{min-width:34px;min-height:44px;padding:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.2rem}
@@ -109,13 +109,25 @@ export function mount(root, ctx = {}) {
   const progress0 = createProgress(ctx.store);
   let assistedRun = false; // true once "Next stroke" was used in this run: the run then counts as walked through, not drawn
   let attempt = []; // raw learner strokes since the last reset, for the whole-shape fallback hint
-  let tracer = null, keyHandler = null, unmounted = false, trainer = null;
+  let tracer = null, keyHandler = null, unmounted = false, trainer = null, memCard = null;
   const cleanups = [];
 
-  root.textContent = '';
+  const keptTitle = root.querySelector && root.querySelector('#view-title');
+  const keptGlyph = root.querySelector && root.querySelector('.alef-first-glyph');
+  // Keep the first-paint title (and glyph) in #main. Clearing or reparenting them resets LCP.
+  if (keptTitle || keptGlyph) {
+    const kids = root.children ? [...root.children] : (root.childNodes ? [...root.childNodes] : []);
+    for (const n of kids) {
+      if (n === keptTitle || n === keptGlyph) continue;
+      if (n.remove) n.remove();
+    }
+  } else {
+    root.textContent = '';
+  }
   const wrap = h('div', { class: 'alef-trace' });
   wrap.appendChild(h('style', { text: CSS }));
   const body = h('div', {});
+  body.style.minBlockSize = 'calc(100svh - 9.5rem)';
   wrap.appendChild(body);
   root.appendChild(wrap);
   body.appendChild(h('p', { role: 'status', text: t('trace.loading', 'Loading letters...') }));
@@ -140,7 +152,6 @@ export function mount(root, ctx = {}) {
     body.appendChild(h('p', { role: 'alert', text: t('trace.loadError', 'The letter data did not load. Please reload the page and try again.') }));
   });
 
-  let memCard = null;
   function teardownInner() {
     if (memCard) { try { memCard.destroy(); } catch (e) { /* ignore */ } memCard = null; }
     if (tracer) { try { tracer.destroy(); } catch (e) { /* ignore */ } tracer = null; }
@@ -179,7 +190,14 @@ export function mount(root, ctx = {}) {
       ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));
     { const cur = letterById(state.letterId) || state.letters[0];
-      if (cur) body.appendChild(h('h1', { id: 'view-title', tabindex: '-1', class: 'alef-letter-title' }, cur.name + ' ', he(cur.he, { class: 'he' }))); }
+      if (cur) {
+        if (keptTitle) {
+          keptTitle.classList?.add?.('alef-letter-title');
+          keptTitle.textContent = cur.name + ' ' + (cur.he || '');
+        } else {
+          body.appendChild(h('h1', { id: 'view-title', tabindex: '-1', class: 'alef-letter-title' }, cur.name + ' ', he(cur.he, { class: 'he' })));
+        }
+      } }
     body.appendChild(tabs);
     
     if (state.tab === 'trace') { renderTrace(); inVisualOrder(body); }

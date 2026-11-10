@@ -20,6 +20,7 @@ import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 import { mountMediaPrompt } from './audio/media-prompt.js';
 import { stampDayStart } from './awards/daystart.js';
+import { rosterById } from './letters/roster.js';
 import { installSpeechChunker } from './shell/speech-chunker.js';
 import { sfx } from './audio/sfx.js';
 installSpeechChunker(); // the device voice never gets one long utterance (phones cut it off after a few seconds)
@@ -197,6 +198,22 @@ let heldFocusId = '';
 let navFocusOwed = false; // a real navigation has begun but its heading has not been focused yet (a quiet re-render that supersedes it must still do that)
 let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
 
+
+function firstPaintTitle(route, params) {
+  if (route?.name === 'letter' && params?.id && rosterById[params.id]) {
+    const L = rosterById[params.id];
+    return `${L.name} ${L.he}`;
+  }
+  if (route?.name === 'learn') return 'Lessons';
+  if (route?.name === 'sounds') return 'Vowels and sounds';
+  return route?.title ?? 'ALEF';
+}
+function firstPaintClass(route) {
+  if (route?.name === 'learn') return 'alef-first-paint alef-learn-hero';
+  if (route?.name === 'letter') return 'alef-first-paint alef-letter-hero';
+  return 'alef-first-paint';
+}
+
 async function show(match, ctxBase, { quiet = false } = {}) {
   const token = ++navToken;
   const root = document.getElementById('main');
@@ -225,10 +242,33 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
-  if (!quiet) root.replaceChildren(
-    h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
-      h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
-    h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
+  // Keep a first-paint title on Learn, Letters and Sounds so LCP can be the heading, not a late view block.
+  if (!quiet) {
+    const keepTitle = route.name === 'learn' || route.name === 'letter' || route.name === 'sounds';
+    const existing = root.querySelector('#view-title');
+    const glyph = root.querySelector('.alef-first-glyph');
+    if (keepTitle) {
+      const title = existing || h('h1', { id: 'view-title', tabindex: '-1' }, firstPaintTitle(route, params));
+      title.id = 'view-title';
+      title.setAttribute('tabindex', '-1');
+      title.className = firstPaintClass(route);
+      title.textContent = firstPaintTitle(route, params);
+      for (const n of [...root.childNodes]) {
+        if (n === title || (route.name === 'letter' && n === glyph)) continue;
+        n.remove?.();
+      }
+      if (!title.parentNode) root.prepend(title);
+      if (route.name === 'letter' && glyph && params?.id && rosterById[params.id]) glyph.textContent = rosterById[params.id].he;
+    } else {
+      root.replaceChildren();
+    }
+    if (!root.querySelector('.alef-skeleton')) {
+      root.append(
+        h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
+          h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
+        h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
+    }
+  }
   root.setAttribute('aria-busy', 'true');
   let mod;
   try { mod = await loadRouteModule(route); }
@@ -241,7 +281,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (token !== navToken) return;
   try {
     if (typeof mod.mount !== 'function') throw new Error('module has no mount(root, ctx) export');
-    root.replaceChildren();
+    // Keep #view-title (already painted, often the LCP element) and only drop the skeleton.
+    for (const n of [...root.querySelectorAll('.alef-skeleton, .alef-skeleton-note')]) n.remove();
     const u = await mod.mount(root, ctx);
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
     if (token !== navToken) { if (typeof u === 'function') { try { u(); } catch (e) { console.warn('unmount failed', e); } } return; }

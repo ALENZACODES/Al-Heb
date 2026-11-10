@@ -369,7 +369,7 @@ function drill(root, ctx, id) {
 
   // Number, café and taxi games play word recordings, which the app fetches the first time a word clip is asked about. Ask on the intro
   // screen, before the learner has touched anything, so the list is ready when the drill starts.
-  if (['numberear', 'countup', 'cafe', 'taxi'].includes(id) && !isAudioFree(ctx)) { try { ctx.audio?.status?.('word', id === 'cafe' || id === 'taxi' ? 'directions-07' : 'numbers-01-m'); } catch { /* optional */ } }
+  if (['numberear', 'countup', 'cafe', 'taxi', 'echo'].includes(id) && !isAudioFree(ctx)) { try { ctx.audio?.status?.('word', id === 'cafe' || id === 'taxi' || id === 'echo' ? 'directions-07' : 'numbers-01-m'); } catch { /* optional */ } }
   const intro = () => {
     const st = S.get(), gs = st.games[id];
     const plan = dailyWorkout(dayKey(), st), pos = plan.indexOf(id);

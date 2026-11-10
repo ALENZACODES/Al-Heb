@@ -12,14 +12,31 @@ export const SONG_WORDS = Object.freeze({
   'open-hands': 'In every hand a little flame / In every voice a gentle name / We open doors and build with care / We mend the world with what we share / Shalom, shalom, let peace begin / With open hands we welcome in',
   'gates-of-morning-a': 'Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring',
   'gates-of-morning-b': 'Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring',
+  'adon-olam': 'Ai, ai, ai, yai-dai-dai, bim-bam',
+  'hava-nagila': 'Ai, ai, ai, yai-dai-dai, bim-bam',
+  'ma-oz-tzur': "Ma'oz tzur y'shu'ati / l'cha na'eh l'shabe'ach / tikon beit t'filati / v'sham todah n'zabe'ach",
+  dayenu: 'Ilu hotzi hotzianu, hotzianu mimitzrayim, dayenu / Day-dayenu, day-dayenu, day-dayenu, dayenu dayenu',
+  'hevenu-shalom-aleichem': 'Hevenu shalom aleichem / hevenu shalom aleichem / hevenu shalom, shalom, shalom aleichem',
+  'yom-zeh-l-yisrael': "Yom zeh l'Yisrael orah v'simcha / Shabbat m'nuchah",
 });
 
 /** Hebrew heard in the songs. `clip` is a word recording that already exists (data/audio/manifest-kind-word.json); no clip, no Hear button. */
 export const SONG_HEBREW = Object.freeze([
   { word: 'yachad', he: 'יַחַד', say: 'yah-KHAHD', en: 'together', songs: ['yachad'] },
-  { word: 'shalom', he: 'שָׁלוֹם', say: 'shah-LOHM', en: 'peace; also hello and goodbye', songs: ['yachad', 'open-hands', 'gates-of-morning-a', 'gates-of-morning-b'], clip: 'r03-w1' },
+  { word: 'shalom', he: 'שָׁלוֹם', say: 'shah-LOHM', en: 'peace; also hello and goodbye', songs: ['yachad', 'open-hands', 'gates-of-morning-a', 'gates-of-morning-b', 'hevenu-shalom-aleichem'], clip: 'r03-w1' },
   { word: 'ana', he: 'אָנָּא', say: 'AH-nah', en: 'please (an old word from the prayers)', songs: ['gates-of-morning-a', 'gates-of-morning-b'] },
   { word: 'lai', he: '', say: 'lai lai lai', en: 'no meaning: tune syllables, sung the way a niggun is sung', songs: ['yachad'] },
+  { word: 'yai-dai-dai', he: '', say: 'yai-dai-dai', en: 'no meaning: tune syllables, sung the way a niggun is sung', songs: ['adon-olam', 'hava-nagila'] },
+  { word: 'bim-bam', he: '', say: 'bim-bam', en: 'no meaning: tune syllables, sung the way a niggun is sung', songs: ['adon-olam', 'hava-nagila'] },
+  { word: "ma'oz", he: 'מָעוֹז', say: 'mah-OHZ', en: 'stronghold; a fortress', songs: ['ma-oz-tzur'] },
+  { word: 'tzur', he: 'צוּר', say: 'tsoor', en: 'rock', songs: ['ma-oz-tzur'] },
+  { word: 'dayenu', he: 'דַּיֵּנוּ', say: 'dah-YAY-noo', en: 'it would have been enough for us', songs: ['dayenu'] },
+  { word: 'mitzrayim', he: 'מִצְרַיִם', say: 'meets-RAH-yeem', en: 'Egypt', songs: ['dayenu'] },
+  { word: 'hevenu', he: 'הֵבֵאנוּ', say: 'hay-VAY-noo', en: 'we have brought', songs: ['hevenu-shalom-aleichem'] },
+  { word: 'aleichem', he: 'עֲלֵיכֶם', say: 'ah-LAY-khem', en: 'upon you', songs: ['hevenu-shalom-aleichem'] },
+  { word: 'yisrael', he: 'יִשְׂרָאֵל', say: 'yis-rah-EL', en: 'Israel', songs: ['yom-zeh-l-yisrael'] },
+  { word: 'shabbat', he: 'שַׁבָּת', say: 'shah-BAHT', en: 'Shabbat', songs: ['yom-zeh-l-yisrael'] },
+  { word: 'simcha', he: 'שִׂמְחָה', say: 'sim-KHAH', en: 'joy', songs: ['yom-zeh-l-yisrael'] },
 ]);
 
 const CSS = `
@@ -65,7 +82,7 @@ export function mount(root, ctx = {}) {
   });
   root.replaceChildren(h('div', { class: 'songs' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Songs'),
-    h('p', {}, 'Songs made for ALEF. Press play to listen; nothing starts by itself. If a lesson voice plays, the song pauses.'),
+    h('p', {}, 'Songs made for ALEF, including modern arrangements of traditional public-domain melodies. Press play to listen; nothing starts by itself. If a lesson voice plays, the song pauses.'),
     status,
     ...songs,
     h('p', {}, h('a', { href: '#/games' }, 'Play a game with music'))));

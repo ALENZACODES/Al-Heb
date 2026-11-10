@@ -75,11 +75,13 @@ export function isShabbatQuiet(date = new Date()) {
   return (d === 5 && hr >= 18) || (d === 6 && hr < 21);
 }
 
-// Prefer the Claude-order v2 file when it exists; otherwise the original numbered still.
+// The numbered still for an id. The v2 folder is a different catalogue (docs/images/RIMON-STILLS.md): its 018 is not this
+// set's 018, so a v2 picture is used only when asked for by name, as 'v2:018'. Rimon's stage (src/shell/rimon-stage.js)
+// places the v2 pictures by meaning.
 export function stillUrl(id, base = 'data/images/rimon/', v2 = RIMON_STILLS_V2) {
-  const slug = v2 && v2[id];
-  if (slug) return `${base}v2/rimon-${id}-${slug}.webp`;
-  return `${base}rimon-${id}.webp`;
+  const m = /^v2:(\d{3})$/.exec(String(id));
+  if (m && v2 && v2[m[1]]) return `${base}v2/rimon-${m[1]}-${v2[m[1]]}.webp`;
+  return `${base}rimon-${String(id).replace(/^v2:/, '')}.webp`;
 }
 
 // Pick one still for a situation. Pure: random and the available set are injectable.
@@ -172,12 +174,18 @@ export function mountRimonStills({ doc = globalThis.document, base = 'data/image
       if (!fig.hidden && now - shownAt < 450 && fig.dataset.situation === situation) return false;
       const plan = planMoment(situation, { now: new Date(), reduceMotion: !!media?.matches, avoid: last });
       if (!plan) return false;
+      // Rimon's stage (src/shell/rimon-stage.js), when running, chooses the picture from the one map for every Rimon surface and
+      // knows quiet days, prayer and Torah screens and Hide Rimon: [] means no Rimon now, null means use this module's own pick.
+      let fromStage = null;
+      try { fromStage = globalThis.alefRimonStage?.urlsForSituation?.(plan.situation) ?? null; } catch { fromStage = null; }
+      if (Array.isArray(fromStage) && !fromStage.length) return false;
+      if (fromStage?.[0]) plan.flip = null; // the flip-books belong to this module's own pictures
       last = plan.id; shownAt = now;
       hide();
       fig.dataset.situation = plan.situation;
       fig.dataset.still = plan.id;
       if (plan.flip) fig.dataset.flip = plan.flip;
-      img.src = stillUrl(plan.id, base);
+      img.src = fromStage?.[0] || stillUrl(plan.id, base);
       fig.hidden = false;
       if (plan.situation === 'streak' && plan.animate) fig.classList.add('is-streak-glow');
       if (plan.animate) { void fig.offsetWidth; fig.classList.add(ENTRANCE_CLASS[plan.entrance] || 'is-burst'); }

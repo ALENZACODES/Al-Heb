@@ -1,7 +1,7 @@
 # Rimon 200-pose catalogue
 
-Drafted 2026-11-10 (America/Toronto) for overnight ALEF lane 2, ahead of Claude lane A.
-If a later file appears at `claude-lanes/replies/LANE-A*.md`, ids and prompts should be aligned to that catalogue.
+Drafted 2026-11-10 (America/Toronto) for overnight ALEF lane 2, ahead of the 200-still catalogue (docs/images/RIMON-STILLS.md).
+That catalogue (drawn into `data/images/rimon/v2/`) is the one the app follows; this set's pictures are matched to it in tools/images/rimon/art-map.mjs.
 
 ## Character lock (do not drift)
 

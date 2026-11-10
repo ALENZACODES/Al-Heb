@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { STILLS, TRIGGER_DOCS, CHARACTER, STYLE, FRAMING, NEVER, RESPECT, PALETTE, REFERENCE, promptFor, pathOf, fileId } from '../tools/images/rimon/stills.mjs';
+import { STILLS, TRIGGER_DOCS, CHARACTER, STYLE, FRAMING, NEVER, RESPECT, PALETTE, REFERENCE, promptFor, pathOf, fileId, fileStem } from '../tools/images/rimon/stills.mjs';
 import { ART } from '../tools/images/rimon/art-map.mjs';
 import { validate, buildOutputs, stillIds, scanPresent, presentText, OUT, shortPrompt, MASTER_PROMPT } from '../tools/images/rimon/build.mjs';
 import { TRIGGERS, SURFACES, STILL_COUNT, stillPath, QUIET_DAYS } from '../src/shell/rimon-triggers.js';
@@ -90,7 +90,9 @@ test('the order sheet feeds the image ingest: 200 rows, every path has the 512 x
 test('two sets, one map: drawn pictures keep plain numbers and come first; catalogue stills are the a set', () => {
   const ids = stillIds();
   for (const [t, drawn] of Object.entries(ART)) assert.deepEqual(ids[t].slice(0, drawn.length), drawn, t);
-  for (const s of STILLS) { assert.match(fileId(s.n), /^a\d{3}$/); assert.ok(ids[s.trigger].includes(fileId(s.n))); }
+  for (const s of STILLS) { assert.match(fileId(s.n), /^a\d{3}$/); assert.ok(ids[s.trigger].includes(fileId(s.n))); assert.equal(pathOf(s.n), `data/images/rimon/v2/rimon-${String(s.n).padStart(3, '0')}-${s.slug}.webp`); }
+  // the catalogue pictures already drawn into v2/ are found by their exact file name and listed as present
+  for (const id of scanPresent().filter((x) => x.startsWith('a'))) assert.ok(fs.existsSync(path.join(ROOT, stillPath(id))), id);
   assert.ok(Object.keys(ART).length >= 90, 'most triggers already have a drawn picture');
   for (const block of [CHARACTER, STYLE, FRAMING, NEVER, RESPECT]) assert.ok(MASTER_PROMPT.includes(block));
 });

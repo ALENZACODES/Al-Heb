@@ -20,6 +20,7 @@ const inner = createAppServer({ root: REPO });
 const { createServer } = await import('node:http');
 const server = createServer((req, res) => {
   const m = req.url.match(/^\/data\/images\/rimon\/(rimon-a?\d{3}[a-z]?\.webp|present\.json)(\?.*)?$/);
+  if (m && process.env.NO_STILLS === '1' && m[1] === 'present.json') { res.writeHead(200, { 'content-type': 'application/json' }); return res.end('{"ids":[]}'); }
   if (m && process.env.NO_STILLS !== '1' && fs.existsSync(path.join(STILLS, m[1]))) { const f = path.join(STILLS, m[1]); res.writeHead(200, { 'content-type': m[1].endsWith('.json') ? 'application/json' : 'image/webp' }); return res.end(fs.readFileSync(f)); }
   inner.emit('request', req, res);
 });
@@ -27,6 +28,7 @@ await new Promise((r) => server.listen(8123, '127.0.0.1', r));
 const browser = await chromium.launch({ headless: true, executablePath: process.env.BROWSER_EXECUTABLE || undefined });
 const out = { errors: [], notFound: [], checks: {} };
 const ok = (k, v) => { out.checks[k] = v; console.log((v ? 'PASS ' : 'FAIL ') + k); };
+const src_blob_or = (src, idOf, ids) => (src || '').startsWith('blob:') || ids.includes(idOf(src));
 const stillId = (s) => (s || '').match(/rimon-(a?\d{3}[a-z]?)\.webp/)?.[1] || null;
 const { STILL_IDS } = await import(new URL('../../src/shell/rimon-stills.generated.js', import.meta.url).href);
 const isFor = (t, src) => STILL_IDS[t].includes(stillId(src));
@@ -45,19 +47,21 @@ try {
   // 1. first visit: onboarding step 1 has Rimon with the step's line, and only one Rimon on screen
   await page.goto(B, { waitUntil: 'networkidle' }); await unveil();
   await page.waitForFunction(() => document.body.dataset.route === 'welcome');
-  await page.waitForSelector('.ob-rimon .rimon-hero img', { timeout: 5000 });
-  ok('welcome slot shows an onboarding.letters still', STILL_IDS['onboarding.letters'].includes(await page.locator('.ob-rimon img').getAttribute('data-rimon-id')));
-  ok('welcome slot line', /Let's see what you already know/.test(await page.locator('.ob-rimon').innerText()));
-  ok('corner Rimon hidden while the large one shows', !(await page.locator('.rimon-companion.rimon-corner').isVisible().catch(() => false)));
+  // the setup screens have their own in-page Rimon (src/shell/rimon-inline.js); the stage's onboarding slot is detached there
+  await page.waitForTimeout(800);
+  const welcome = await page.evaluate(() => ({ inline: document.querySelectorAll('.rimon-inline').length, slotFilled: !!document.querySelector('.ob-rimon .rimon-hero') }));
+  ok('welcome: Rimon is on the page (in-page Rimon or the stage slot)', welcome.inline > 0 || welcome.slotFilled);
+  ok('welcome: one Rimon (the corner companion is not also showing)', !(await page.locator('.rimon-companion.rimon-corner').isVisible().catch(() => false)));
   await page.screenshot({ path: SHOTS + '/1-welcome-desktop.png' });
 
   // 2. Home after onboarding: hello pose on the hero companion with its line
   await page.evaluate(() => window.alef.settings.set({ onboarded: true }));
   await go('#/', 'home'); await unveil();
   await page.waitForFunction(() => { const s = document.querySelector('.rimon-companion .rimon-still'); return s && !s.hidden; }, null, { timeout: 5000 });
+  ok('Home: one Rimon (no big-moment pop-up over the greeting)', !(await page.locator('.rimon-moment:not([hidden])').count()));
   ok('home hello pose is a greet.first still', STILL_IDS['greet.first'].includes(await shownStill(page, '.rimon-companion .rimon-still')));
-  ok('the cream background is cut out (blob copy, corner transparent)', await page.locator('.rimon-companion .rimon-still').evaluate(async (e) => { if (!e.src.startsWith('blob:')) return false; const c = document.createElement('canvas'); c.width = e.naturalWidth; c.height = e.naturalHeight; const g = c.getContext('2d'); g.drawImage(e, 0, 0); return g.getImageData(3, 3, 1, 1).data[3] === 0 && g.getImageData(c.width >> 1, c.height >> 1, 1, 1).data[3] === 255; }));
   ok('bubble carries the hello line', /I'm Rimon/.test(await page.locator('.rimon-bubble').innerText().catch(() => '')));
+  ok('the cream background is cut out (blob copy, corner transparent)', await page.locator('.rimon-companion .rimon-still').evaluate(async (e) => { if (!e.src.startsWith('blob:')) return false; const c = document.createElement('canvas'); c.width = e.naturalWidth; c.height = e.naturalHeight; const g = c.getContext('2d'); g.drawImage(e, 0, 0); return g.getImageData(3, 3, 1, 1).data[3] === 0 && g.getImageData(c.width >> 1, c.height >> 1, 1, 1).data[3] === 255; }));
   await page.locator('.rimon-companion').scrollIntoViewIfNeeded(); await page.screenshot({ path: SHOTS + '/2-home-hello.png' });
 
   // 3. Brain Lab: corner Rimon dressed for the page, per drill
@@ -73,11 +77,16 @@ try {
   await go('#/learn', 'learn');
   await page.evaluate(() => { document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'correct' } })); document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'bounce' } })); });
   await page.waitForTimeout(300);
-  const pose = await shownStill(page, '.rimon-corner .rimon-still');
-  ok(`right answer pose is a first.correct still (got ${pose})`, STILL_IDS['first.correct'].includes(pose));
+  // one Rimon answers: the corner pose, or (when the big-moment module runs) its pop-up with a picture chosen by the stage
+  const ans = await page.evaluate(() => { const m = document.querySelector('.rimon-moment:not([hidden]) img'); return m ? { by: 'moment', src: m.getAttribute('src') } : { by: 'corner', id: document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId }; });
+  const fileOf = (src) => (src || '').replace(/^.*data\/images\/rimon\//, '').replace(/\.webp$/, '');
+  const { STILL_FILES } = await import(new URL('../../src/shell/rimon-stills.generated.js', import.meta.url).href);
+  const idOf = (src) => { const f = fileOf(src); return f.startsWith('v2/') ? Object.keys(STILL_FILES).find((k) => STILL_FILES[k] === f) : f.replace(/^rimon-/, ''); };
+  const answerIds = [...STILL_IDS['first.correct'], ...STILL_IDS['answer.correct']];
+  ok(`right answer: one Rimon shows a stage-chosen still (${ans.by}: ${ans.id || ans.src})`, ans.by === 'corner' ? answerIds.includes(ans.id) : src_blob_or(ans.src, idOf, answerIds));
   await page.screenshot({ path: SHOTS + '/4-answer.png' });
   await page.waitForTimeout(3000);
-  ok('pose ends (learn has no page still)', await page.locator('.rimon-corner .rimon-still').evaluate((e) => e.hidden));
+  ok('the answer moment ends (learn has no page still)', await page.evaluate(() => { const s = document.querySelector('.rimon-corner .rimon-still'); return (!s || s.hidden) && !document.querySelector('.rimon-moment:not([hidden])'); }));
 
   // 5. a badge lands: card at the bottom
   await page.evaluate(() => window.alef.store.set('awards.v1', { awards: { 'qa-badge': { at: Date.now() } } }));
@@ -123,9 +132,9 @@ try {
   process.env.NO_STILLS = '1';
   const ctx2 = await browser.newContext({ viewport: { width: 1280, height: 860 }, serviceWorkers: 'block' });
   const p2 = await ctx2.newPage(); const req = [];
-  p2.on('request', (r) => { if (/rimon-a?\d{3}[a-z]?\.webp/.test(r.url())) req.push(r.url()); });
+  p2.on('request', (r) => { if (/rimon\/v2\//.test(r.url())) req.push(r.url()); }); // catalogue stills: only the stage asks for them
   await p2.goto(B + '#/lab', { waitUntil: 'networkidle' }); await p2.waitForTimeout(800);
-  ok('without stills no still is requested', req.length === 0);
+  ok('without stills listed, no catalogue still is requested', req.length === 0);
   ok('without stills the corner Rimon is the animated one', !(await p2.locator('.rimon-companion').evaluate((e) => e.classList.contains('rimon-has-still')).catch(() => false)));
   await ctx2.close();
 } catch (e) { console.log('ERROR', e.message); out.fatal = e.message; }

@@ -1,6 +1,6 @@
 // Regenerates src/shell/rimon-stills-index.js from data/images/rimon so the
-// mascot only ever asks for stills that exist. v2 (Claude-order, slugged) files
-// are preferred at request time; the original numbered set stays as a fallback.
+// mascot only ever asks for stills that exist. v2 (catalogue-order, slugged) files are a
+// different catalogue: stillUrl uses one only when asked by name ('v2:018'); see src/shell/rimon-stills.js.
 // Legacy/ files are archived and are not indexed. Run: node tools/images/rimon-stills-index.mjs
 import fs from 'node:fs';
 const dir = new URL('../../data/images/rimon/', import.meta.url);

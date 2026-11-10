@@ -160,7 +160,10 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // rises 3 px every 2.4 s (transform only, no colour or brightness change). The global reduced-motion and calm rules switch all off.
     'ob-page-in', 'rimon-say-in', 'fd-glyph-in', 'stat-pop', 'path-here',
     // Rimon stills card (assets/css/rimon.css): a 0.3 s one-shot slide-in, never looping; reduced motion and calm mode switch it off
-    'rimon-toast-in'];
+    'rimon-toast-in',
+    // Rimon big moments (assets/css/rimon.css, feature/rimon-stills): one-shot entrances of 0.5 to 0.6 s and a 1.1 s gold pulse on streak
+    // moments (under two cycles per second); the reduced-motion block and the global calm rule switch all of them off
+    'rimon-burst', 'rimon-bounce', 'rimon-crash', 'rimon-peek-in', 'rimon-gold-pulse'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

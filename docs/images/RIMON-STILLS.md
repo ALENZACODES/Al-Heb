@@ -7,8 +7,8 @@ Built from `tools/images/rimon/stills.mjs` by `node tools/images/rimon/build.mjs
 ## How a Still Gets Into the App
 
 1. Make the picture from its prompt (full prompts: `docs/images/rimon-stills.csv` or `docs/images/rimon-stills.json`; one prompt per row, ready to paste). Attach the reference picture `assets/img/gen/MASCOT_rimon.800.webp` every time, and one cell of assets/img/rimon/wave.png (any one cell) when the tool takes a second picture, for size and position.
-2. Save it with the still id as its name, for example `rimon-a007.png`, in any drop folder.
-3. Run `node tools/images/ingest_queue.mjs <drop folder>`. It checks the picture, makes it a 512 x 512 WebP with a transparent background, strips metadata, saves it as `data/images/rimon/rimon-a007.webp` and updates `data/images/rimon/present.json`.
+2. Save it with its file name from the order sheet, for example `rimon-007-starting-line.png`, in any drop folder.
+3. Run `node tools/images/ingest_queue.mjs <drop folder>`. It checks the picture, makes it a 512 x 512 WebP with a transparent background, strips metadata, saves it as `data/images/rimon/v2/rimon-007-starting-line.webp` and updates `data/images/rimon/present.json`.
 4. Commit both. The app shows a still only when its number is in `present.json`, so nothing changes on screen until the picture is really there.
 
 A contact sheet of all 200 slots, with each prompt and a copy button, is at `docs/images/rimon-stills.html` (run `npm run serve`, then open `/docs/images/rimon-stills.html`). It shows which pictures exist and puts them side by side so off-model drawings stand out.
@@ -17,7 +17,7 @@ To check the app with the pictures in place, run `node tools/qa/qa-rimon-stills.
 
 ## Two Sets of Pictures, One Map
 
-The pictures already drawn on feature/rimon-stills-2026-11-10 (data/images/rimon/manifest.csv) keep their plain numbers (`rimon-023.webp`, `rimon-025b.webp`). The 200 stills in this catalogue are the "a" set (`rimon-a023.webp`), so neither set can overwrite the other. `tools/images/rimon/art-map.mjs` matches drawn pictures to triggers by what they show; for each trigger the app tries those first, then the catalogue still once it exists. The "Drawn now" column lists them. 93 of 142 triggers already have a drawn picture.
+The pictures already drawn on feature/rimon-stills-2026-11-10 (data/images/rimon/manifest.csv) keep their plain numbers (`rimon-023.webp`, `rimon-025b.webp`). The 200 stills in this catalogue are drawn into `data/images/rimon/v2/` as `rimon-023-twirl.webp` (runtime id `a023`), so neither set can overwrite the other. `tools/images/rimon/art-map.mjs` matches drawn pictures to triggers by what they show; for each trigger the app tries those first, then the catalogue still once it exists. The "Drawn now" column lists them. 93 of 142 triggers already have a drawn picture.
 
 The drawn set has a cream background; the app cuts it out in the browser (src/shell/rimon-stage.js) so Rimon sits cleanly on any page colour. New catalogue stills should have a transparent background.
 

@@ -13,7 +13,8 @@ const all = (ids = STILL_IDS) => new Set(Object.values(ids).flat());
 const TORONTO = { lat: 43.6532, lon: -79.3832 };
 
 test('still paths are data/images/rimon/rimon-NNN.webp', () => {
-  assert.equal(stillPath('a007'), 'data/images/rimon/rimon-a007.webp');
+  assert.equal(stillPath('a007'), 'data/images/rimon/v2/rimon-007-starting-line.webp');
+  assert.equal(stillPath('a999'), 'data/images/rimon/rimon-a999.webp', 'unknown catalogue id: a plain name that will not be listed as present');
   assert.equal(stillPath('025b'), 'data/images/rimon/rimon-025b.webp');
 });
 

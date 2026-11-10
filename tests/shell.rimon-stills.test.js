@@ -106,12 +106,10 @@ test('planMoment uses burst for cheers, bounce for misses, and none when motion 
   assert.equal(shabbat.animate, false);
   assert.equal(planMoment('storybooks', { now: midweek, available }), null);
   assert.equal(stillUrl('025b'), 'data/images/rimon/rimon-025b.webp');
-  // v2, when present, is preferred; a missing v2 id falls back to the numbered file.
-  if (RIMON_STILLS_V2['001']) {
-    assert.equal(stillUrl('001'), `data/images/rimon/v2/rimon-001-${RIMON_STILLS_V2['001']}.webp`);
-  } else {
-    assert.equal(stillUrl('001'), 'data/images/rimon/rimon-001.webp');
-  }
+  // v2 is a different catalogue (its 018 is not this set's 018): a plain id always means the numbered file; v2 only by name.
+  assert.equal(stillUrl('018'), 'data/images/rimon/rimon-018.webp');
+  if (RIMON_STILLS_V2['001']) assert.equal(stillUrl('v2:001'), `data/images/rimon/v2/rimon-001-${RIMON_STILLS_V2['001']}.webp`);
+  assert.equal(stillUrl('v2:999'), 'data/images/rimon/rimon-999.webp');
   assert.equal(stillUrl('025b', 'data/images/rimon/', {}), 'data/images/rimon/rimon-025b.webp');
 
 });
@@ -233,4 +231,24 @@ test('idle and offline can appear using fallback stills before later catalogue f
   const off = planMoment('offline', { now: midweek, available: HAVE, random: () => 0 });
   assert.ok(off && HAVE.has(off.id));
   assert.equal(off.flip, 'peek');
+});
+
+test("big moments take their picture from Rimon's stage when it runs, and stay away when it says no Rimon now", () => {
+  const saved = globalThis.alefRimonStage;
+  try {
+    const { doc } = fakeDoc();
+    const m = mountRimonStills({ doc, holdMs: 50, base: 'data/images/rimon/' });
+    const fig = m.element, img = fig.children[0];
+    globalThis.alefRimonStage = { urlsForSituation: (s) => (s === 'correct' ? ['data/images/rimon/v2/rimon-018-thumbs-up.webp'] : []) };
+    doc.dispatch('alef:rimon', { action: 'correct' });
+    assert.equal(fig.hidden, false);
+    assert.equal(img.src, 'data/images/rimon/v2/rimon-018-thumbs-up.webp');
+    doc.dispatch('alef:rimon', { action: 'wrong' });
+    assert.equal(fig.hidden, false, 'a quiet answer from the stage shows nothing new');
+    assert.equal(img.src, 'data/images/rimon/v2/rimon-018-thumbs-up.webp');
+    globalThis.alefRimonStage = { urlsForSituation: () => null };
+    doc.dispatch('alef:rimon', { action: 'sad' });
+    assert.match(img.src, /rimon-\d{3}[a-z]?\.webp$/, 'null: this module picks its own still');
+    m.destroy();
+  } finally { globalThis.alefRimonStage = saved; }
 });

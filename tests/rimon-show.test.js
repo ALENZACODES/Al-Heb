@@ -62,3 +62,15 @@ test('answer band: colour class, words rotate, never throws', () => {
   assert.notEqual(bandWord(true, 0), bandWord(true, 1));
   assert.equal(showAnswerBand(true, { doc: null }), false);
 });
+
+test("Rimon's stage answers first: its pictures, [] for no Rimon (quiet day, hidden), null falls back to the map", () => {
+  const saved = globalThis.alefRimonStage;
+  try {
+    globalThis.alefRimonStage = { urlsForSituation: (s) => (s === 'correct' ? ['data/images/rimon/v2/rimon-018-thumbs-up.webp'] : s === 'wrong' ? [] : null) };
+    assert.deepEqual(rimonCandidates('correct'), ['data/images/rimon/v2/rimon-018-thumbs-up.webp']);
+    assert.deepEqual(rimonCandidates('wrong'), [], 'the stage says no Rimon now');
+    assert.ok(rimonCandidates('home').length > 0, 'null: the shared map is used');
+    globalThis.alefRimonStage = { urlsForSituation: () => { throw new Error('boom'); } };
+    assert.ok(rimonCandidates('home').length > 0, 'a fault in the stage never blanks Rimon');
+  } finally { globalThis.alefRimonStage = saved; }
+});

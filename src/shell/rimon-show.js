@@ -43,6 +43,9 @@ export function registerRimonProvider(fn) {
 
 /** Pure: candidate URLs for a situation, rotated so the same still does not repeat back to back. */
 export function rimonCandidates(situation, { rotate = true } = {}) {
+  // Rimon's stage (src/shell/rimon-stage.js) answers first when it is running: it knows the 200-still map, quiet days
+  // (Yom HaShoah, Yom HaZikaron, Tisha B'Av), prayer and Torah screens, and Hide Rimon. [] from it means "no Rimon now".
+  try { const s = globalThis.alefRimonStage?.urlsForSituation?.(situation); if (Array.isArray(s)) return s.filter((u) => typeof u === 'string'); } catch { /* fall back to the map below */ }
   for (const p of providers) {
     try { const r = p(situation); if (Array.isArray(r) && r.length) return r.filter((u) => typeof u === 'string'); } catch { /* fall through */ }
   }

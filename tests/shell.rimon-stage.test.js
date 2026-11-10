@@ -2,13 +2,15 @@
 import test, { afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { mountRimonStage, SEEN_KEY } from '../src/shell/rimon-stage.js';
-import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
+import { STILL_IDS, STILL_FILES } from '../src/shell/rimon-stills.generated.js';
 import { createDocument, createWindow, createStore, ev, flush } from './rimon.fakedom.js';
 
 const ALL = Object.values(STILL_IDS).flat();
 const live = [];
 afterEach(() => { for (const st of live.splice(0)) st.destroy(); }); // a failed assertion must not leave timers running
-const num = (src) => String(src).match(/rimon-(a?\d{3}[a-z]?)\.webp/)?.[1] ?? null;
+const BY_FILE = Object.fromEntries(Object.entries(STILL_FILES).map(([id, f]) => [f, id]));
+/** Still id from a URL: v2/rimon-007-starting-line.webp -> 'a007'; rimon-023.webp -> '023'. */
+const num = (src) => { const m = String(src).match(/rimon\/(v2\/rimon-\d{3}-[a-z0-9-]+|rimon-[a-z0-9]+)\.webp/); if (!m) return null; return m[1].startsWith('v2/') ? BY_FILE[m[1]] ?? null : m[1].slice(6); };
 
 function setup({ present = ALL, store = createStore(), date = new Date(2026, 10, 12, 14), route = 'home', hash = '#/' } = {}) {
   const doc = createDocument(), win = createWindow();
@@ -231,7 +233,8 @@ test('the shared showRimon hook can ask the stage: URLs for a situation, none on
   await s.stage.ready;
   const [u] = s.stage.urlsForSituation('correct');
   assert.ok(STILL_IDS['answer.correct'].includes(num(u)));
-  assert.deepEqual(s.stage.urlsForSituation('no-such-situation'), []);
+  assert.equal(s.stage.urlsForSituation('no-such-situation'), null, 'unknown situation: the hook uses its own map');
+  assert.deepEqual(s.stage.urlsForSituation('home'), [], 'Home already has Rimon greeting in the page: no second one');
   s.store.set('rimon.dismissed', true);
   assert.deepEqual(s.stage.urlsForSituation('correct'), []);
   const q = setup({ route: 'learn', date: new Date(2027, 7, 12, 10) }); // Tisha B'Av

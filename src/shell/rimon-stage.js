@@ -21,6 +21,8 @@ export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimo
   + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}';
 /** Rimon pictures that views draw without a mark: the selector and how to pick the trigger. */
 const IMPLICIT = [['img.alef-celebrate-rimon', (acc) => (acc >= 0.9 ? 'lesson.complete.perfect' : acc >= 0.7 ? 'lesson.complete.great' : 'lesson.complete.done')]];
+/** Screens where Rimon is already on the page (the Home greeting, the setup screens): other Rimon surfaces stay away there. */
+export const STAGE_OWNS = Object.freeze(['home', 'welcome', 'onboarding', 'welcome-back', 'welcomeBack']);
 /**
  * Situations used by the shared showRimon(situation) hook (src/shell/rimon-show.js on overnight/launch-ready-2026-11-10)
  * mapped to triggers, so that hook can ask the stage: registerRimonProvider(stage.urlsForSituation).
@@ -31,6 +33,10 @@ export const SITUATION_TRIGGERS = Object.freeze({
   comeback: 'answer.comeback', 'lesson-complete': 'lesson.complete.great', 'next-lesson': 'lesson.next', idle: 'idle.fidget', loading: 'loading.slow',
   empty: 'awards.empty', error: 'error.view', offline: 'offline.lost', shabbat: 'shabbat.day', 'brain-lab': 'lab.home', library: 'library.home',
   award: 'award.new', reminder: 'reminder.streak',
+  // the big-moment situations of src/shell/rimon-stills.js
+  welcomeBack: 'greet.back', lessonStart: 'learn.continue.next', bigCorrect: 'answer.correct.streak5', streakRisk: 'streak.atrisk',
+  rest: 'streak.rest', lessonComplete: 'lesson.complete.great', unitComplete: 'lessons.10', recovered: 'offline.back', holiday: 'calendar.home',
+  brainLab: 'lab.home', brainLabWin: 'lab.result.best', brainLabMiss: 'answer.wrong', storybooks: 'books.shelf', storyReader: 'books.shelf',
 });
 const WATCHED = ['streak', 'awards.v1', 'lab.v1', 'books.finished.v1', 'curriculum.progress'];
 const IDLE_FIDGET_MS = 45000, IDLE_REPEAT_MS = 40000, IDLE_SLEEP_MS = 180000, LOADING_MS = 700, FLUSH_MS = 120;
@@ -52,7 +58,7 @@ async function defaultFetchJson(url) {
  */
 export function mountRimonStage({ store, companion = null, doc = globalThis.document, win = globalThis, fetchJson = defaultFetchJson, now = () => new Date(), present: given = null, loadImage = null } = {}) {
   let alive = true, present = new Set(), observer = null, scanTimer = 0, flushTimer = 0, idleTimer = 0, loadTimer = 0, mainObserver = null;
-  const counters = new Map(), tracker = createAnswerTracker(), images = new Map(), toasts = [];
+  const counters = new Map(), tracker = createAnswerTracker(), images = new Map(), toasts = [], ready2 = new Map();
   const last = Object.fromEntries(WATCHED.map((k) => [k, read(k)]));
   let lastActivity = now().getTime(), fidgets = 0, lastFidget = 0, slept = false, activeMs = 0, lastTick = lastActivity, wasOffline = false;
   const breaksShown = new Set();
@@ -100,7 +106,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     if (!images.has(src)) images.set(src, (loadImage ? Promise.resolve(loadImage(src)) : new Promise((resolve) => {
       const Img = win?.Image; if (typeof Img !== 'function') { resolve(false); return; }
       const im = new Img(); im.decoding = 'async'; im.onload = () => resolve(im); im.onerror = () => resolve(false); im.src = src;
-    })).then((r) => (r === true ? src : typeof r === 'string' ? r : r ? cutout(r, src) : null)).catch(() => null));
+    })).then((r) => (r === true ? src : typeof r === 'string' ? r : r ? cutout(r, src) : null)).then((u) => { if (u) ready2.set(src, u); return u; }).catch(() => null));
     return images.get(src);
   }
   /**
@@ -441,13 +447,19 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
       return false;
     },
     get present() { return new Set(present); },
-    /** For the shared showRimon hook: still URLs for a situation, best first; [] means "show no Rimon now" (hidden, quiet, or none drawn). */
+    /**
+     * For the shared showRimon hook: still URLs for a situation, best first. [] means "show no Rimon now" (hidden, or a quiet
+     * day or screen); null means "the stage has no picture for this": the hook then uses its own map.
+     */
     urlsForSituation(situation) {
+      if (hidden() || quiet() || STAGE_OWNS.includes(situation)) return [];
       const t = SITUATION_TRIGGERS[situation];
-      if (!t || hidden() || quiet()) return [];
-      const ctx = ctxNow(), season = situation === 'shabbat' || situation === 'home' ? seasonTrigger(ctx) : null;
+      if (!t) return null;
+      const ctx = ctxNow(), season = situation === 'shabbat' || situation === 'home' || situation === 'holiday' ? seasonTrigger(ctx) : null;
       const p = choose(season || t, { ignoreSeen: true });
-      return p ? [new URL(`../../${stillPath(p.id)}`, import.meta.url).href] : [];
+      if (!p) return null;
+      preload(p.src); // the cut-out copy is used from the next time on
+      return [ready2.get(p.src) || p.src];
     },
     _test: { onReady, onRimon, onStore, tick, scan, greet, facts, ctxNow, get activeMs() { return activeMs; }, set activeMs(v) { activeMs = v; }, set lastActivity(v) { lastActivity = v; lastTick = v; } },
     destroy() {

@@ -455,9 +455,13 @@ export const STILLS = Object.freeze([
 ]);
 
 const pad3 = (n) => String(n).padStart(3, '0');
-/** Catalogue stills are the "a" set (rimon-a007.webp); plain numbers belong to the drawn set in art-map.mjs. */
+/**
+ * Catalogue stills: runtime id 'a007'; file data/images/rimon/v2/rimon-007-<slug>.webp (the folder the catalogue is being
+ * drawn into on feature/rimon-stills-2026-11-10). Plain numbers at the top of data/images/rimon belong to the drawn set in art-map.mjs.
+ */
 export const fileId = (n) => `a${pad3(n)}`;
-export const pathOf = (n) => `data/images/rimon/rimon-${fileId(n)}.webp`;
+export const fileStem = (n) => `v2/rimon-${pad3(n)}-${STILLS[n - 1].slug}`;
+export const pathOf = (n) => `data/images/rimon/${fileStem(n)}.webp`;
 
 /** The full prompt for one still, ready to paste. */
 export function promptFor(s) {

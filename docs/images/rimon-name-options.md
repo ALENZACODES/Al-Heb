@@ -1,4 +1,4 @@
-# Rimon name options (for John and Claude — do not rename yet)
+# Rimon name options (for John — do not rename yet)
 
 Updated 2026-11-10, 12:59 AM ET (America/Toronto).
 

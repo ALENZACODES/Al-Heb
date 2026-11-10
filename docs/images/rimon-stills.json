@@ -374,7 +374,7 @@
    "id": 1,
    "file_id": "a001",
    "file": "rimon-a001.webp",
-   "path": "data/images/rimon/rimon-a001.webp",
+   "path": "data/images/rimon/v2/rimon-001-hello-arms-wide.webp",
    "drawn_set": [
     "002",
     "001"
@@ -397,7 +397,7 @@
    "id": 2,
    "file_id": "a002",
    "file": "rimon-a002.webp",
-   "path": "data/images/rimon/rimon-a002.webp",
+   "path": "data/images/rimon/v2/rimon-002-came-back-run.webp",
    "drawn_set": [
     "020"
    ],
@@ -419,7 +419,7 @@
    "id": 3,
    "file_id": "a003",
    "file": "rimon-a003.webp",
-   "path": "data/images/rimon/rimon-a003.webp",
+   "path": "data/images/rimon/v2/rimon-003-curious-letter-tile.webp",
    "drawn_set": [
     "005"
    ],
@@ -441,7 +441,7 @@
    "id": 4,
    "file_id": "a004",
    "file": "rimon-a004.webp",
-   "path": "data/images/rimon/rimon-a004.webp",
+   "path": "data/images/rimon/v2/rimon-004-listening-cupped-hand.webp",
    "drawn_set": [
     "010",
     "015"
@@ -464,7 +464,7 @@
    "id": 5,
    "file_id": "a005",
    "file": "rimon-a005.webp",
-   "path": "data/images/rimon/rimon-a005.webp",
+   "path": "data/images/rimon/v2/rimon-005-small-hourglass.webp",
    "drawn_set": [
     "008"
    ],
@@ -486,7 +486,7 @@
    "id": 6,
    "file_id": "a006",
    "file": "rimon-a006.webp",
-   "path": "data/images/rimon/rimon-a006.webp",
+   "path": "data/images/rimon/v2/rimon-006-plan-map.webp",
    "drawn_set": [
     "019"
    ],
@@ -508,7 +508,7 @@
    "id": 7,
    "file_id": "a007",
    "file": "rimon-a007.webp",
-   "path": "data/images/rimon/rimon-a007.webp",
+   "path": "data/images/rimon/v2/rimon-007-starting-line.webp",
    "drawn_set": [
     "017"
    ],
@@ -530,7 +530,7 @@
    "id": 8,
    "file_id": "a008",
    "file": "rimon-a008.webp",
-   "path": "data/images/rimon/rimon-a008.webp",
+   "path": "data/images/rimon/v2/rimon-008-ladder-climb.webp",
    "drawn_set": [
     "018"
    ],
@@ -552,7 +552,7 @@
    "id": 9,
    "file_id": "a009",
    "file": "rimon-a009.webp",
-   "path": "data/images/rimon/rimon-a009.webp",
+   "path": "data/images/rimon/v2/rimon-009-tiles-together.webp",
    "drawn_set": [
     "011"
    ],
@@ -574,7 +574,7 @@
    "id": 10,
    "file_id": "a010",
    "file": "rimon-a010.webp",
-   "path": "data/images/rimon/rimon-a010.webp",
+   "path": "data/images/rimon/v2/rimon-010-magnifying-glass.webp",
    "drawn_set": [
     "008"
    ],
@@ -596,7 +596,7 @@
    "id": 11,
    "file_id": "a011",
    "file": "rimon-a011.webp",
-   "path": "data/images/rimon/rimon-a011.webp",
+   "path": "data/images/rimon/v2/rimon-011-hop-out-of-phone.webp",
    "drawn_set": [
     "098"
    ],
@@ -618,7 +618,7 @@
    "id": 12,
    "file_id": "a012",
    "file": "rimon-a012.webp",
-   "path": "data/images/rimon/rimon-a012.webp",
+   "path": "data/images/rimon/v2/rimon-012-first-correct-gasp.webp",
    "drawn_set": [
     "012"
    ],
@@ -640,7 +640,7 @@
    "id": 13,
    "file_id": "a013",
    "file": "rimon-a013.webp",
-   "path": "data/images/rimon/rimon-a013.webp",
+   "path": "data/images/rimon/v2/rimon-013-first-mistake-shrug.webp",
    "drawn_set": [
     "014"
    ],
@@ -662,7 +662,7 @@
    "id": 14,
    "file_id": "a014",
    "file": "rimon-a014.webp",
-   "path": "data/images/rimon/rimon-a014.webp",
+   "path": "data/images/rimon/v2/rimon-014-first-lesson-jump.webp",
    "drawn_set": [
     "071"
    ],
@@ -684,7 +684,7 @@
    "id": 15,
    "file_id": "a015",
    "file": "rimon-a015.webp",
-   "path": "data/images/rimon/rimon-a015.webp",
+   "path": "data/images/rimon/v2/rimon-015-first-badge-surprise.webp",
    "drawn_set": [
     "076"
    ],
@@ -706,7 +706,7 @@
    "id": 16,
    "file_id": "a016",
    "file": "rimon-a016.webp",
-   "path": "data/images/rimon/rimon-a016.webp",
+   "path": "data/images/rimon/v2/rimon-016-first-book-hug.webp",
    "drawn_set": [],
    "slug": "first-book-hug",
    "group": "onboarding",
@@ -726,7 +726,7 @@
    "id": 17,
    "file_id": "a017",
    "file": "rimon-a017.webp",
-   "path": "data/images/rimon/rimon-a017.webp",
+   "path": "data/images/rimon/v2/rimon-017-goggles-thumbs-up.webp",
    "drawn_set": [],
    "slug": "goggles-thumbs-up",
    "group": "onboarding",
@@ -746,7 +746,7 @@
    "id": 18,
    "file_id": "a018",
    "file": "rimon-a018.webp",
-   "path": "data/images/rimon/rimon-a018.webp",
+   "path": "data/images/rimon/v2/rimon-018-thumbs-up.webp",
    "drawn_set": [
     "021",
     "023",
@@ -782,7 +782,7 @@
    "id": 19,
    "file_id": "a019",
    "file": "rimon-a019.webp",
-   "path": "data/images/rimon/rimon-a019.webp",
+   "path": "data/images/rimon/v2/rimon-019-fist-pump.webp",
    "drawn_set": [
     "021",
     "023",
@@ -818,7 +818,7 @@
    "id": 20,
    "file_id": "a020",
    "file": "rimon-a020.webp",
-   "path": "data/images/rimon/rimon-a020.webp",
+   "path": "data/images/rimon/v2/rimon-020-hop-arms-up.webp",
    "drawn_set": [
     "021",
     "023",
@@ -854,7 +854,7 @@
    "id": 21,
    "file_id": "a021",
    "file": "rimon-a021.webp",
-   "path": "data/images/rimon/rimon-a021.webp",
+   "path": "data/images/rimon/v2/rimon-021-clapping.webp",
    "drawn_set": [
     "021",
     "023",
@@ -890,7 +890,7 @@
    "id": 22,
    "file_id": "a022",
    "file": "rimon-a022.webp",
-   "path": "data/images/rimon/rimon-a022.webp",
+   "path": "data/images/rimon/v2/rimon-022-proud-hands-on-hips.webp",
    "drawn_set": [
     "021",
     "023",
@@ -926,7 +926,7 @@
    "id": 23,
    "file_id": "a023",
    "file": "rimon-a023.webp",
-   "path": "data/images/rimon/rimon-a023.webp",
+   "path": "data/images/rimon/v2/rimon-023-twirl.webp",
    "drawn_set": [
     "021",
     "023",
@@ -962,7 +962,7 @@
    "id": 24,
    "file_id": "a024",
    "file": "rimon-a024.webp",
-   "path": "data/images/rimon/rimon-a024.webp",
+   "path": "data/images/rimon/v2/rimon-024-double-thumbs-up.webp",
    "drawn_set": [
     "021",
     "023",
@@ -998,7 +998,7 @@
    "id": 25,
    "file_id": "a025",
    "file": "rimon-a025.webp",
-   "path": "data/images/rimon/rimon-a025.webp",
+   "path": "data/images/rimon/v2/rimon-025-dance-step.webp",
    "drawn_set": [
     "021",
     "023",
@@ -1034,7 +1034,7 @@
    "id": 26,
    "file_id": "a026",
    "file": "rimon-a026.webp",
-   "path": "data/images/rimon/rimon-a026.webp",
+   "path": "data/images/rimon/v2/rimon-026-wink-point.webp",
    "drawn_set": [
     "022"
    ],
@@ -1056,7 +1056,7 @@
    "id": 27,
    "file_id": "a027",
    "file": "rimon-a027.webp",
-   "path": "data/images/rimon/rimon-a027.webp",
+   "path": "data/images/rimon/v2/rimon-027-high-five.webp",
    "drawn_set": [
     "025b",
     "025"
@@ -1079,7 +1079,7 @@
    "id": 28,
    "file_id": "a028",
    "file": "rimon-a028.webp",
-   "path": "data/images/rimon/rimon-a028.webp",
+   "path": "data/images/rimon/v2/rimon-028-on-a-roll.webp",
    "drawn_set": [
     "083"
    ],
@@ -1101,7 +1101,7 @@
    "id": 29,
    "file_id": "a029",
    "file": "rimon-a029.webp",
-   "path": "data/images/rimon/rimon-a029.webp",
+   "path": "data/images/rimon/v2/rimon-029-flex.webp",
    "drawn_set": [
     "068"
    ],
@@ -1123,7 +1123,7 @@
    "id": 30,
    "file_id": "a030",
    "file": "rimon-a030.webp",
-   "path": "data/images/rimon/rimon-a030.webp",
+   "path": "data/images/rimon/v2/rimon-030-oops.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1152,7 +1152,7 @@
    "id": 31,
    "file_id": "a031",
    "file": "rimon-a031.webp",
-   "path": "data/images/rimon/rimon-a031.webp",
+   "path": "data/images/rimon/v2/rimon-031-almost-tilt.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1181,7 +1181,7 @@
    "id": 32,
    "file_id": "a032",
    "file": "rimon-a032.webp",
-   "path": "data/images/rimon/rimon-a032.webp",
+   "path": "data/images/rimon/v2/rimon-032-crown-scratch.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1210,7 +1210,7 @@
    "id": 33,
    "file_id": "a033",
    "file": "rimon-a033.webp",
-   "path": "data/images/rimon/rimon-a033.webp",
+   "path": "data/images/rimon/v2/rimon-033-so-close-pinch.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1239,7 +1239,7 @@
    "id": 34,
    "file_id": "a034",
    "file": "rimon-a034.webp",
-   "path": "data/images/rimon/rimon-a034.webp",
+   "path": "data/images/rimon/v2/rimon-034-sheepish-grin.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1268,7 +1268,7 @@
    "id": 35,
    "file_id": "a035",
    "file": "rimon-a035.webp",
-   "path": "data/images/rimon/rimon-a035.webp",
+   "path": "data/images/rimon/v2/rimon-035-its-okay.webp",
    "drawn_set": [
     "041",
     "042",
@@ -1297,7 +1297,7 @@
    "id": 36,
    "file_id": "a036",
    "file": "rimon-a036.webp",
-   "path": "data/images/rimon/rimon-a036.webp",
+   "path": "data/images/rimon/v2/rimon-036-idea-bulb.webp",
    "drawn_set": [
     "047",
     "051",
@@ -1321,7 +1321,7 @@
    "id": 37,
    "file_id": "a037",
    "file": "rimon-a037.webp",
-   "path": "data/images/rimon/rimon-a037.webp",
+   "path": "data/images/rimon/v2/rimon-037-calm-tea.webp",
    "drawn_set": [
     "050"
    ],
@@ -1343,7 +1343,7 @@
    "id": 38,
    "file_id": "a038",
    "file": "rimon-a038.webp",
-   "path": "data/images/rimon/rimon-a038.webp",
+   "path": "data/images/rimon/v2/rimon-038-nervous-nibble.webp",
    "drawn_set": [
     "043"
    ],
@@ -1365,7 +1365,7 @@
    "id": 39,
    "file_id": "a039",
    "file": "rimon-a039.webp",
-   "path": "data/images/rimon/rimon-a039.webp",
+   "path": "data/images/rimon/v2/rimon-039-belly-laugh.webp",
    "drawn_set": [
     "026"
    ],
@@ -1387,7 +1387,7 @@
    "id": 40,
    "file_id": "a040",
    "file": "rimon-a040.webp",
-   "path": "data/images/rimon/rimon-a040.webp",
+   "path": "data/images/rimon/v2/rimon-040-onward-point.webp",
    "drawn_set": [
     "078",
     "004"
@@ -1410,7 +1410,7 @@
    "id": 41,
    "file_id": "a041",
    "file": "rimon-a041.webp",
-   "path": "data/images/rimon/rimon-a041.webp",
+   "path": "data/images/rimon/v2/rimon-041-backpack-on.webp",
    "drawn_set": [
     "018"
    ],
@@ -1432,7 +1432,7 @@
    "id": 42,
    "file_id": "a042",
    "file": "rimon-a042.webp",
-   "path": "data/images/rimon/rimon-a042.webp",
+   "path": "data/images/rimon/v2/rimon-042-come-on-wave.webp",
    "drawn_set": [
     "011",
     "019"
@@ -1455,7 +1455,7 @@
    "id": 43,
    "file_id": "a043",
    "file": "rimon-a043.webp",
-   "path": "data/images/rimon/rimon-a043.webp",
+   "path": "data/images/rimon/v2/rimon-043-jog-in-place.webp",
    "drawn_set": [
     "011",
     "019"
@@ -1478,7 +1478,7 @@
    "id": 44,
    "file_id": "a044",
    "file": "rimon-a044.webp",
-   "path": "data/images/rimon/rimon-a044.webp",
+   "path": "data/images/rimon/v2/rimon-044-hourglass-nudge.webp",
    "drawn_set": [
     "062"
    ],
@@ -1500,7 +1500,7 @@
    "id": 45,
    "file_id": "a045",
    "file": "rimon-a045.webp",
-   "path": "data/images/rimon/rimon-a045.webp",
+   "path": "data/images/rimon/v2/rimon-045-graduate.webp",
    "drawn_set": [
     "082",
     "081"
@@ -1523,7 +1523,7 @@
    "id": 46,
    "file_id": "a046",
    "file": "rimon-a046.webp",
-   "path": "data/images/rimon/rimon-a046.webp",
+   "path": "data/images/rimon/v2/rimon-046-confetti-dance.webp",
    "drawn_set": [
     "073",
     "074",
@@ -1548,7 +1548,7 @@
    "id": 47,
    "file_id": "a047",
    "file": "rimon-a047.webp",
-   "path": "data/images/rimon/rimon-a047.webp",
+   "path": "data/images/rimon/v2/rimon-047-star-overhead.webp",
    "drawn_set": [
     "073",
     "074",
@@ -1573,7 +1573,7 @@
    "id": 48,
    "file_id": "a048",
    "file": "rimon-a048.webp",
-   "path": "data/images/rimon/rimon-a048.webp",
+   "path": "data/images/rimon/v2/rimon-048-thumb-and-star.webp",
    "drawn_set": [
     "071",
     "077",
@@ -1597,7 +1597,7 @@
    "id": 49,
    "file_id": "a049",
    "file": "rimon-a049.webp",
-   "path": "data/images/rimon/rimon-a049.webp",
+   "path": "data/images/rimon/v2/rimon-049-skip.webp",
    "drawn_set": [
     "071",
     "077",
@@ -1621,7 +1621,7 @@
    "id": 50,
    "file_id": "a050",
    "file": "rimon-a050.webp",
-   "path": "data/images/rimon/rimon-a050.webp",
+   "path": "data/images/rimon/v2/rimon-050-pennant.webp",
    "drawn_set": [
     "085",
     "079",
@@ -1645,7 +1645,7 @@
    "id": 51,
    "file_id": "a051",
    "file": "rimon-a051.webp",
-   "path": "data/images/rimon/rimon-a051.webp",
+   "path": "data/images/rimon/v2/rimon-051-phew.webp",
    "drawn_set": [
     "085",
     "079",
@@ -1669,7 +1669,7 @@
    "id": 52,
    "file_id": "a052",
    "file": "rimon-a052.webp",
-   "path": "data/images/rimon/rimon-a052.webp",
+   "path": "data/images/rimon/v2/rimon-052-compare-tiles.webp",
    "drawn_set": [
     "043"
    ],
@@ -1691,7 +1691,7 @@
    "id": 53,
    "file_id": "a053",
    "file": "rimon-a053.webp",
-   "path": "data/images/rimon/rimon-a053.webp",
+   "path": "data/images/rimon/v2/rimon-053-flashcards.webp",
    "drawn_set": [
     "080"
    ],
@@ -1713,7 +1713,7 @@
    "id": 54,
    "file_id": "a054",
    "file": "rimon-a054.webp",
-   "path": "data/images/rimon/rimon-a054.webp",
+   "path": "data/images/rimon/v2/rimon-054-sprout-pot.webp",
    "drawn_set": [
     "056"
    ],
@@ -1735,7 +1735,7 @@
    "id": 55,
    "file_id": "a055",
    "file": "rimon-a055.webp",
-   "path": "data/images/rimon/rimon-a055.webp",
+   "path": "data/images/rimon/v2/rimon-055-watering-sprout.webp",
    "drawn_set": [
     "057"
    ],
@@ -1757,7 +1757,7 @@
    "id": 56,
    "file_id": "a056",
    "file": "rimon-a056.webp",
-   "path": "data/images/rimon/rimon-a056.webp",
+   "path": "data/images/rimon/v2/rimon-056-gold-medal.webp",
    "drawn_set": [
     "058"
    ],
@@ -1779,7 +1779,7 @@
    "id": 57,
    "file_id": "a057",
    "file": "rimon-a057.webp",
-   "path": "data/images/rimon/rimon-a057.webp",
+   "path": "data/images/rimon/v2/rimon-057-sapling.webp",
    "drawn_set": [
     "059"
    ],
@@ -1801,7 +1801,7 @@
    "id": 58,
    "file_id": "a058",
    "file": "rimon-a058.webp",
-   "path": "data/images/rimon/rimon-a058.webp",
+   "path": "data/images/rimon/v2/rimon-058-trophy-overhead.webp",
    "drawn_set": [
     "060"
    ],
@@ -1823,7 +1823,7 @@
    "id": 59,
    "file_id": "a059",
    "file": "rimon-a059.webp",
-   "path": "data/images/rimon/rimon-a059.webp",
+   "path": "data/images/rimon/v2/rimon-059-gold-cape.webp",
    "drawn_set": [
     "066"
    ],
@@ -1845,7 +1845,7 @@
    "id": 60,
    "file_id": "a060",
    "file": "rimon-a060.webp",
-   "path": "data/images/rimon/rimon-a060.webp",
+   "path": "data/images/rimon/v2/rimon-060-podium-fireworks.webp",
    "drawn_set": [
     "067"
    ],
@@ -1867,7 +1867,7 @@
    "id": 61,
    "file_id": "a061",
    "file": "rimon-a061.webp",
-   "path": "data/images/rimon/rimon-a061.webp",
+   "path": "data/images/rimon/v2/rimon-061-pomegranate-tree.webp",
    "drawn_set": [
     "069"
    ],
@@ -1889,7 +1889,7 @@
    "id": 62,
    "file_id": "a062",
    "file": "rimon-a062.webp",
-   "path": "data/images/rimon/rimon-a062.webp",
+   "path": "data/images/rimon/v2/rimon-062-hourglass-low.webp",
    "drawn_set": [
     "062"
    ],
@@ -1911,7 +1911,7 @@
    "id": 63,
    "file_id": "a063",
    "file": "rimon-a063.webp",
-   "path": "data/images/rimon/rimon-a063.webp",
+   "path": "data/images/rimon/v2/rimon-063-brow-wipe-relief.webp",
    "drawn_set": [
     "063"
    ],
@@ -1933,7 +1933,7 @@
    "id": 64,
    "file_id": "a064",
    "file": "rimon-a064.webp",
-   "path": "data/images/rimon/rimon-a064.webp",
+   "path": "data/images/rimon/v2/rimon-064-drooping-sprout.webp",
    "drawn_set": [
     "055"
    ],
@@ -1955,7 +1955,7 @@
    "id": 65,
    "file_id": "a065",
    "file": "rimon-a065.webp",
-   "path": "data/images/rimon/rimon-a065.webp",
+   "path": "data/images/rimon/v2/rimon-065-tighten-sash.webp",
    "drawn_set": [
     "068"
    ],
@@ -1977,7 +1977,7 @@
    "id": 66,
    "file_id": "a066",
    "file": "rimon-a066.webp",
-   "path": "data/images/rimon/rimon-a066.webp",
+   "path": "data/images/rimon/v2/rimon-066-cozy-blanket.webp",
    "drawn_set": [
     "064"
    ],
@@ -1999,7 +1999,7 @@
    "id": 67,
    "file_id": "a067",
    "file": "rimon-a067.webp",
-   "path": "data/images/rimon/rimon-a067.webp",
+   "path": "data/images/rimon/v2/rimon-067-laurel-wreath.webp",
    "drawn_set": [
     "061"
    ],
@@ -2021,7 +2021,7 @@
    "id": 68,
    "file_id": "a068",
    "file": "rimon-a068.webp",
-   "path": "data/images/rimon/rimon-a068.webp",
+   "path": "data/images/rimon/v2/rimon-068-reading.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2051,7 +2051,7 @@
    "id": 69,
    "file_id": "a069",
    "file": "rimon-a069.webp",
-   "path": "data/images/rimon/rimon-a069.webp",
+   "path": "data/images/rimon/v2/rimon-069-sipping-tea.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2081,7 +2081,7 @@
    "id": 70,
    "file_id": "a070",
    "file": "rimon-a070.webp",
-   "path": "data/images/rimon/rimon-a070.webp",
+   "path": "data/images/rimon/v2/rimon-070-juggling-seeds.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2111,7 +2111,7 @@
    "id": 71,
    "file_id": "a071",
    "file": "rimon-a071.webp",
-   "path": "data/images/rimon/rimon-a071.webp",
+   "path": "data/images/rimon/v2/rimon-071-whistling.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2141,7 +2141,7 @@
    "id": 72,
    "file_id": "a072",
    "file": "rimon-a072.webp",
-   "path": "data/images/rimon/rimon-a072.webp",
+   "path": "data/images/rimon/v2/rimon-072-peeking.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2171,7 +2171,7 @@
    "id": 73,
    "file_id": "a073",
    "file": "rimon-a073.webp",
-   "path": "data/images/rimon/rimon-a073.webp",
+   "path": "data/images/rimon/v2/rimon-073-side-step.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2201,7 +2201,7 @@
    "id": 74,
    "file_id": "a074",
    "file": "rimon-a074.webp",
-   "path": "data/images/rimon/rimon-a074.webp",
+   "path": "data/images/rimon/v2/rimon-074-butterfly.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2231,7 +2231,7 @@
    "id": 75,
    "file_id": "a075",
    "file": "rimon-a075.webp",
-   "path": "data/images/rimon/rimon-a075.webp",
+   "path": "data/images/rimon/v2/rimon-075-polish-crown.webp",
    "drawn_set": [
     "089",
     "090",
@@ -2261,7 +2261,7 @@
    "id": 76,
    "file_id": "a076",
    "file": "rimon-a076.webp",
-   "path": "data/images/rimon/rimon-a076.webp",
+   "path": "data/images/rimon/v2/rimon-076-asleep-standing.webp",
    "drawn_set": [
     "087",
     "099"
@@ -2284,7 +2284,7 @@
    "id": 77,
    "file_id": "a077",
    "file": "rimon-a077.webp",
-   "path": "data/images/rimon/rimon-a077.webp",
+   "path": "data/images/rimon/v2/rimon-077-water-bottle.webp",
    "drawn_set": [],
    "slug": "water-bottle",
    "group": "idle",
@@ -2304,7 +2304,7 @@
    "id": 78,
    "file_id": "a078",
    "file": "rimon-a078.webp",
-   "path": "data/images/rimon/rimon-a078.webp",
+   "path": "data/images/rimon/v2/rimon-078-side-stretch.webp",
    "drawn_set": [
     "100"
    ],
@@ -2326,7 +2326,7 @@
    "id": 79,
    "file_id": "a079",
    "file": "rimon-a079.webp",
-   "path": "data/images/rimon/rimon-a079.webp",
+   "path": "data/images/rimon/v2/rimon-079-offer-seeds.webp",
    "drawn_set": [],
    "slug": "offer-seeds",
    "group": "idle",
@@ -2346,7 +2346,7 @@
    "id": 80,
    "file_id": "a080",
    "file": "rimon-a080.webp",
-   "path": "data/images/rimon/rimon-a080.webp",
+   "path": "data/images/rimon/v2/rimon-080-sunrise-stretch.webp",
    "drawn_set": [
     "100"
    ],
@@ -2368,7 +2368,7 @@
    "id": 81,
    "file_id": "a081",
    "file": "rimon-a081.webp",
-   "path": "data/images/rimon/rimon-a081.webp",
+   "path": "data/images/rimon/v2/rimon-081-morning-tea.webp",
    "drawn_set": [
     "100"
    ],
@@ -2390,7 +2390,7 @@
    "id": 82,
    "file_id": "a082",
    "file": "rimon-a082.webp",
-   "path": "data/images/rimon/rimon-a082.webp",
+   "path": "data/images/rimon/v2/rimon-082-wave-hello.webp",
    "drawn_set": [
     "001"
    ],
@@ -2412,7 +2412,7 @@
    "id": 83,
    "file_id": "a083",
    "file": "rimon-a083.webp",
-   "path": "data/images/rimon/rimon-a083.webp",
+   "path": "data/images/rimon/v2/rimon-083-lantern.webp",
    "drawn_set": [
     "020"
    ],
@@ -2434,7 +2434,7 @@
    "id": 84,
    "file_id": "a084",
    "file": "rimon-a084.webp",
-   "path": "data/images/rimon/rimon-a084.webp",
+   "path": "data/images/rimon/v2/rimon-084-nightcap-moon.webp",
    "drawn_set": [
     "099"
    ],
@@ -2456,7 +2456,7 @@
    "id": 85,
    "file_id": "a085",
    "file": "rimon-a085.webp",
-   "path": "data/images/rimon/rimon-a085.webp",
+   "path": "data/images/rimon/v2/rimon-085-blanket-wave.webp",
    "drawn_set": [
     "099"
    ],
@@ -2478,7 +2478,7 @@
    "id": 86,
    "file_id": "a086",
    "file": "rimon-a086.webp",
-   "path": "data/images/rimon/rimon-a086.webp",
+   "path": "data/images/rimon/v2/rimon-086-bouquet.webp",
    "drawn_set": [
     "038",
     "020"
@@ -2501,7 +2501,7 @@
    "id": 87,
    "file_id": "a087",
    "file": "rimon-a087.webp",
-   "path": "data/images/rimon/rimon-a087.webp",
+   "path": "data/images/rimon/v2/rimon-087-new-week-backpack.webp",
    "drawn_set": [
     "018"
    ],
@@ -2523,7 +2523,7 @@
    "id": 88,
    "file_id": "a088",
    "file": "rimon-a088.webp",
-   "path": "data/images/rimon/rimon-a088.webp",
+   "path": "data/images/rimon/v2/rimon-088-carrying-candlesticks.webp",
    "drawn_set": [
     "118"
    ],
@@ -2545,7 +2545,7 @@
    "id": 89,
    "file_id": "a089",
    "file": "rimon-a089.webp",
-   "path": "data/images/rimon/rimon-a089.webp",
+   "path": "data/images/rimon/v2/rimon-089-carrying-challah.webp",
    "drawn_set": [
     "118"
    ],
@@ -2567,7 +2567,7 @@
    "id": 90,
    "file_id": "a090",
    "file": "rimon-a090.webp",
-   "path": "data/images/rimon/rimon-a090.webp",
+   "path": "data/images/rimon/v2/rimon-090-beside-candles.webp",
    "drawn_set": [
     "117"
    ],
@@ -2589,7 +2589,7 @@
    "id": 91,
    "file_id": "a091",
    "file": "rimon-a091.webp",
-   "path": "data/images/rimon/rimon-a091.webp",
+   "path": "data/images/rimon/v2/rimon-091-kiddush-cup.webp",
    "drawn_set": [
     "117"
    ],
@@ -2611,7 +2611,7 @@
    "id": 92,
    "file_id": "a092",
    "file": "rimon-a092.webp",
-   "path": "data/images/rimon/rimon-a092.webp",
+   "path": "data/images/rimon/v2/rimon-092-cushion-reading.webp",
    "drawn_set": [
     "116",
     "119"
@@ -2634,7 +2634,7 @@
    "id": 93,
    "file_id": "a093",
    "file": "rimon-a093.webp",
-   "path": "data/images/rimon/rimon-a093.webp",
+   "path": "data/images/rimon/v2/rimon-093-shabbat-stroll.webp",
    "drawn_set": [
     "116",
     "119"
@@ -2657,7 +2657,7 @@
    "id": 94,
    "file_id": "a094",
    "file": "rimon-a094.webp",
-   "path": "data/images/rimon/rimon-a094.webp",
+   "path": "data/images/rimon/v2/rimon-094-singing.webp",
    "drawn_set": [
     "116",
     "119"
@@ -2680,7 +2680,7 @@
    "id": 95,
    "file_id": "a095",
    "file": "rimon-a095.webp",
-   "path": "data/images/rimon/rimon-a095.webp",
+   "path": "data/images/rimon/v2/rimon-095-havdalah.webp",
    "drawn_set": [
     "120"
    ],
@@ -2702,7 +2702,7 @@
    "id": 96,
    "file_id": "a096",
    "file": "rimon-a096.webp",
-   "path": "data/images/rimon/rimon-a096.webp",
+   "path": "data/images/rimon/v2/rimon-096-shavua-tov-wave.webp",
    "drawn_set": [],
    "slug": "shavua-tov-wave",
    "group": "shabbat",
@@ -2722,7 +2722,7 @@
    "id": 97,
    "file_id": "a097",
    "file": "rimon-a097.webp",
-   "path": "data/images/rimon/rimon-a097.webp",
+   "path": "data/images/rimon/v2/rimon-097-shabbat-nap.webp",
    "drawn_set": [
     "116",
     "070"
@@ -2745,7 +2745,7 @@
    "id": 98,
    "file_id": "a098",
    "file": "rimon-a098.webp",
-   "path": "data/images/rimon/rimon-a098.webp",
+   "path": "data/images/rimon/v2/rimon-098-apple-and-honey.webp",
    "drawn_set": [
     "121",
     "122"
@@ -2768,7 +2768,7 @@
    "id": 99,
    "file_id": "a099",
    "file": "rimon-a099.webp",
-   "path": "data/images/rimon/rimon-a099.webp",
+   "path": "data/images/rimon/v2/rimon-099-shofar.webp",
    "drawn_set": [
     "121",
     "122"
@@ -2791,7 +2791,7 @@
    "id": 100,
    "file_id": "a100",
    "file": "rimon-a100.webp",
-   "path": "data/images/rimon/rimon-a100.webp",
+   "path": "data/images/rimon/v2/rimon-100-round-challah.webp",
    "drawn_set": [
     "121",
     "122"
@@ -2814,7 +2814,7 @@
    "id": 101,
    "file_id": "a101",
    "file": "rimon-a101.webp",
-   "path": "data/images/rimon/rimon-a101.webp",
+   "path": "data/images/rimon/v2/rimon-101-pomegranate-pride.webp",
    "drawn_set": [
     "121",
     "122"
@@ -2837,7 +2837,7 @@
    "id": 102,
    "file_id": "a102",
    "file": "rimon-a102.webp",
-   "path": "data/images/rimon/rimon-a102.webp",
+   "path": "data/images/rimon/v2/rimon-102-quiet-reflection.webp",
    "drawn_set": [
     "123"
    ],
@@ -2859,7 +2859,7 @@
    "id": 103,
    "file_id": "a103",
    "file": "rimon-a103.webp",
-   "path": "data/images/rimon/rimon-a103.webp",
+   "path": "data/images/rimon/v2/rimon-103-gentle-bow.webp",
    "drawn_set": [
     "123"
    ],
@@ -2881,7 +2881,7 @@
    "id": 104,
    "file_id": "a104",
    "file": "rimon-a104.webp",
-   "path": "data/images/rimon/rimon-a104.webp",
+   "path": "data/images/rimon/v2/rimon-104-lulav-etrog.webp",
    "drawn_set": [
     "125",
     "124"
@@ -2904,7 +2904,7 @@
    "id": 105,
    "file_id": "a105",
    "file": "rimon-a105.webp",
-   "path": "data/images/rimon/rimon-a105.webp",
+   "path": "data/images/rimon/v2/rimon-105-in-the-sukkah.webp",
    "drawn_set": [
     "125",
     "124"
@@ -2927,7 +2927,7 @@
    "id": 106,
    "file_id": "a106",
    "file": "rimon-a106.webp",
-   "path": "data/images/rimon/rimon-a106.webp",
+   "path": "data/images/rimon/v2/rimon-106-paper-chain.webp",
    "drawn_set": [
     "125",
     "124"
@@ -2950,7 +2950,7 @@
    "id": 107,
    "file_id": "a107",
    "file": "rimon-a107.webp",
-   "path": "data/images/rimon/rimon-a107.webp",
+   "path": "data/images/rimon/v2/rimon-107-rain-umbrella.webp",
    "drawn_set": [],
    "slug": "rain-umbrella",
    "group": "festivals",
@@ -2970,7 +2970,7 @@
    "id": 108,
    "file_id": "a108",
    "file": "rimon-a108.webp",
-   "path": "data/images/rimon/rimon-a108.webp",
+   "path": "data/images/rimon/v2/rimon-108-flag-dance.webp",
    "drawn_set": [],
    "slug": "flag-dance",
    "group": "festivals",
@@ -2990,7 +2990,7 @@
    "id": 109,
    "file_id": "a109",
    "file": "rimon-a109.webp",
-   "path": "data/images/rimon/rimon-a109.webp",
+   "path": "data/images/rimon/v2/rimon-109-circle-dance.webp",
    "drawn_set": [],
    "slug": "circle-dance",
    "group": "festivals",
@@ -3010,7 +3010,7 @@
    "id": 110,
    "file_id": "a110",
    "file": "rimon-a110.webp",
-   "path": "data/images/rimon/rimon-a110.webp",
+   "path": "data/images/rimon/v2/rimon-110-hanukkah-lights.webp",
    "drawn_set": [],
    "slug": "hanukkah-lights",
    "group": "festivals",
@@ -3030,7 +3030,7 @@
    "id": 111,
    "file_id": "a111",
    "file": "rimon-a111.webp",
-   "path": "data/images/rimon/rimon-a111.webp",
+   "path": "data/images/rimon/v2/rimon-111-dreidel.webp",
    "drawn_set": [],
    "slug": "dreidel",
    "group": "festivals",
@@ -3050,7 +3050,7 @@
    "id": 112,
    "file_id": "a112",
    "file": "rimon-a112.webp",
-   "path": "data/images/rimon/rimon-a112.webp",
+   "path": "data/images/rimon/v2/rimon-112-sufganiyah.webp",
    "drawn_set": [],
    "slug": "sufganiyah",
    "group": "festivals",
@@ -3070,7 +3070,7 @@
    "id": 113,
    "file_id": "a113",
    "file": "rimon-a113.webp",
-   "path": "data/images/rimon/rimon-a113.webp",
+   "path": "data/images/rimon/v2/rimon-113-latkes.webp",
    "drawn_set": [],
    "slug": "latkes",
    "group": "festivals",
@@ -3090,7 +3090,7 @@
    "id": 114,
    "file_id": "a114",
    "file": "rimon-a114.webp",
-   "path": "data/images/rimon/rimon-a114.webp",
+   "path": "data/images/rimon/v2/rimon-114-planting.webp",
    "drawn_set": [],
    "slug": "planting",
    "group": "festivals",
@@ -3110,7 +3110,7 @@
    "id": 115,
    "file_id": "a115",
    "file": "rimon-a115.webp",
-   "path": "data/images/rimon/rimon-a115.webp",
+   "path": "data/images/rimon/v2/rimon-115-seven-species.webp",
    "drawn_set": [],
    "slug": "seven-species",
    "group": "festivals",
@@ -3130,7 +3130,7 @@
    "id": 116,
    "file_id": "a116",
    "file": "rimon-a116.webp",
-   "path": "data/images/rimon/rimon-a116.webp",
+   "path": "data/images/rimon/v2/rimon-116-purim-mask.webp",
    "drawn_set": [],
    "slug": "purim-mask",
    "group": "festivals",
@@ -3150,7 +3150,7 @@
    "id": 117,
    "file_id": "a117",
    "file": "rimon-a117.webp",
-   "path": "data/images/rimon/rimon-a117.webp",
+   "path": "data/images/rimon/v2/rimon-117-grogger.webp",
    "drawn_set": [],
    "slug": "grogger",
    "group": "festivals",
@@ -3170,7 +3170,7 @@
    "id": 118,
    "file_id": "a118",
    "file": "rimon-a118.webp",
-   "path": "data/images/rimon/rimon-a118.webp",
+   "path": "data/images/rimon/v2/rimon-118-gift-basket.webp",
    "drawn_set": [],
    "slug": "gift-basket",
    "group": "festivals",
@@ -3190,7 +3190,7 @@
    "id": 119,
    "file_id": "a119",
    "file": "rimon-a119.webp",
-   "path": "data/images/rimon/rimon-a119.webp",
+   "path": "data/images/rimon/v2/rimon-119-hamantash.webp",
    "drawn_set": [],
    "slug": "hamantash",
    "group": "festivals",
@@ -3210,7 +3210,7 @@
    "id": 120,
    "file_id": "a120",
    "file": "rimon-a120.webp",
-   "path": "data/images/rimon/rimon-a120.webp",
+   "path": "data/images/rimon/v2/rimon-120-matzah.webp",
    "drawn_set": [],
    "slug": "matzah",
    "group": "festivals",
@@ -3230,7 +3230,7 @@
    "id": 121,
    "file_id": "a121",
    "file": "rimon-a121.webp",
-   "path": "data/images/rimon/rimon-a121.webp",
+   "path": "data/images/rimon/v2/rimon-121-seder-plate.webp",
    "drawn_set": [],
    "slug": "seder-plate",
    "group": "festivals",
@@ -3250,7 +3250,7 @@
    "id": 122,
    "file_id": "a122",
    "file": "rimon-a122.webp",
-   "path": "data/images/rimon/rimon-a122.webp",
+   "path": "data/images/rimon/v2/rimon-122-four-questions.webp",
    "drawn_set": [],
    "slug": "four-questions",
    "group": "festivals",
@@ -3270,7 +3270,7 @@
    "id": 123,
    "file_id": "a123",
    "file": "rimon-a123.webp",
-   "path": "data/images/rimon/rimon-a123.webp",
+   "path": "data/images/rimon/v2/rimon-123-afikoman.webp",
    "drawn_set": [],
    "slug": "afikoman",
    "group": "festivals",
@@ -3290,7 +3290,7 @@
    "id": 124,
    "file_id": "a124",
    "file": "rimon-a124.webp",
-   "path": "data/images/rimon/rimon-a124.webp",
+   "path": "data/images/rimon/v2/rimon-124-israeli-flag.webp",
    "drawn_set": [],
    "slug": "israeli-flag",
    "group": "festivals",
@@ -3310,7 +3310,7 @@
    "id": 125,
    "file_id": "a125",
    "file": "rimon-a125.webp",
-   "path": "data/images/rimon/rimon-a125.webp",
+   "path": "data/images/rimon/v2/rimon-125-balloons.webp",
    "drawn_set": [],
    "slug": "balloons",
    "group": "festivals",
@@ -3330,7 +3330,7 @@
    "id": 126,
    "file_id": "a126",
    "file": "rimon-a126.webp",
-   "path": "data/images/rimon/rimon-a126.webp",
+   "path": "data/images/rimon/v2/rimon-126-mangal.webp",
    "drawn_set": [],
    "slug": "mangal",
    "group": "festivals",
@@ -3350,7 +3350,7 @@
    "id": 127,
    "file_id": "a127",
    "file": "rimon-a127.webp",
-   "path": "data/images/rimon/rimon-a127.webp",
+   "path": "data/images/rimon/v2/rimon-127-first-fruits.webp",
    "drawn_set": [],
    "slug": "first-fruits",
    "group": "festivals",
@@ -3370,7 +3370,7 @@
    "id": 128,
    "file_id": "a128",
    "file": "rimon-a128.webp",
-   "path": "data/images/rimon/rimon-a128.webp",
+   "path": "data/images/rimon/v2/rimon-128-cheesecake.webp",
    "drawn_set": [],
    "slug": "cheesecake",
    "group": "festivals",
@@ -3390,7 +3390,7 @@
    "id": 129,
    "file_id": "a129",
    "file": "rimon-a129.webp",
-   "path": "data/images/rimon/rimon-a129.webp",
+   "path": "data/images/rimon/v2/rimon-129-tablets.webp",
    "drawn_set": [],
    "slug": "tablets",
    "group": "festivals",
@@ -3410,7 +3410,7 @@
    "id": 130,
    "file_id": "a130",
    "file": "rimon-a130.webp",
-   "path": "data/images/rimon/rimon-a130.webp",
+   "path": "data/images/rimon/v2/rimon-130-new-moon.webp",
    "drawn_set": [],
    "slug": "new-moon",
    "group": "festivals",
@@ -3430,7 +3430,7 @@
    "id": 131,
    "file_id": "a131",
    "file": "rimon-a131.webp",
-   "path": "data/images/rimon/rimon-a131.webp",
+   "path": "data/images/rimon/v2/rimon-131-flowers-for-the-table.webp",
    "drawn_set": [],
    "slug": "flowers-for-the-table",
    "group": "festivals",
@@ -3450,7 +3450,7 @@
    "id": 132,
    "file_id": "a132",
    "file": "rimon-a132.webp",
-   "path": "data/images/rimon/rimon-a132.webp",
+   "path": "data/images/rimon/v2/rimon-132-toy-bow.webp",
    "drawn_set": [],
    "slug": "toy-bow",
    "group": "festivals",
@@ -3470,7 +3470,7 @@
    "id": 133,
    "file_id": "a133",
    "file": "rimon-a133.webp",
-   "path": "data/images/rimon/rimon-a133.webp",
+   "path": "data/images/rimon/v2/rimon-133-campfire.webp",
    "drawn_set": [],
    "slug": "campfire",
    "group": "festivals",
@@ -3490,7 +3490,7 @@
    "id": 134,
    "file_id": "a134",
    "file": "rimon-a134.webp",
-   "path": "data/images/rimon/rimon-a134.webp",
+   "path": "data/images/rimon/v2/rimon-134-heart-balloon.webp",
    "drawn_set": [],
    "slug": "heart-balloon",
    "group": "festivals",
@@ -3510,7 +3510,7 @@
    "id": 135,
    "file_id": "a135",
    "file": "rimon-a135.webp",
-   "path": "data/images/rimon/rimon-a135.webp",
+   "path": "data/images/rimon/v2/rimon-135-lab-goggles-clipboard.webp",
    "drawn_set": [],
    "slug": "lab-goggles-clipboard",
    "group": "lab",
@@ -3530,7 +3530,7 @@
    "id": 136,
    "file_id": "a136",
    "file": "rimon-a136.webp",
-   "path": "data/images/rimon/rimon-a136.webp",
+   "path": "data/images/rimon/v2/rimon-136-bubbling-flask.webp",
    "drawn_set": [],
    "slug": "bubbling-flask",
    "group": "lab",
@@ -3550,7 +3550,7 @@
    "id": 137,
    "file_id": "a137",
    "file": "rimon-a137.webp",
-   "path": "data/images/rimon/rimon-a137.webp",
+   "path": "data/images/rimon/v2/rimon-137-binoculars.webp",
    "drawn_set": [],
    "slug": "binoculars",
    "group": "lab",
@@ -3570,7 +3570,7 @@
    "id": 138,
    "file_id": "a138",
    "file": "rimon-a138.webp",
-   "path": "data/images/rimon/rimon-a138.webp",
+   "path": "data/images/rimon/v2/rimon-138-flip-tile.webp",
    "drawn_set": [],
    "slug": "flip-tile",
    "group": "lab",
@@ -3590,7 +3590,7 @@
    "id": 139,
    "file_id": "a139",
    "file": "rimon-a139.webp",
-   "path": "data/images/rimon/rimon-a139.webp",
+   "path": "data/images/rimon/v2/rimon-139-headphones-listen.webp",
    "drawn_set": [],
    "slug": "headphones-listen",
    "group": "lab",
@@ -3610,7 +3610,7 @@
    "id": 140,
    "file_id": "a140",
    "file": "rimon-a140.webp",
-   "path": "data/images/rimon/rimon-a140.webp",
+   "path": "data/images/rimon/v2/rimon-140-quick-read-stopwatch.webp",
    "drawn_set": [],
    "slug": "quick-read-stopwatch",
    "group": "lab",
@@ -3630,7 +3630,7 @@
    "id": 141,
    "file_id": "a141",
    "file": "rimon-a141.webp",
-   "path": "data/images/rimon/rimon-a141.webp",
+   "path": "data/images/rimon/v2/rimon-141-lever.webp",
    "drawn_set": [],
    "slug": "lever",
    "group": "lab",
@@ -3650,7 +3650,7 @@
    "id": 142,
    "file_id": "a142",
    "file": "rimon-a142.webp",
-   "path": "data/images/rimon/rimon-a142.webp",
+   "path": "data/images/rimon/v2/rimon-142-abacus.webp",
    "drawn_set": [],
    "slug": "abacus",
    "group": "lab",
@@ -3670,7 +3670,7 @@
    "id": 143,
    "file_id": "a143",
    "file": "rimon-a143.webp",
-   "path": "data/images/rimon/rimon-a143.webp",
+   "path": "data/images/rimon/v2/rimon-143-counting-fingers.webp",
    "drawn_set": [],
    "slug": "counting-fingers",
    "group": "lab",
@@ -3690,7 +3690,7 @@
    "id": 144,
    "file_id": "a144",
    "file": "rimon-a144.webp",
-   "path": "data/images/rimon/rimon-a144.webp",
+   "path": "data/images/rimon/v2/rimon-144-bell-ear.webp",
    "drawn_set": [],
    "slug": "bell-ear",
    "group": "lab",
@@ -3710,7 +3710,7 @@
    "id": 145,
    "file_id": "a145",
    "file": "rimon-a145.webp",
-   "path": "data/images/rimon/rimon-a145.webp",
+   "path": "data/images/rimon/v2/rimon-145-calendar-page.webp",
    "drawn_set": [],
    "slug": "calendar-page",
    "group": "lab",
@@ -3730,7 +3730,7 @@
    "id": 146,
    "file_id": "a146",
    "file": "rimon-a146.webp",
-   "path": "data/images/rimon/rimon-a146.webp",
+   "path": "data/images/rimon/v2/rimon-146-shape-pattern.webp",
    "drawn_set": [],
    "slug": "shape-pattern",
    "group": "lab",
@@ -3750,7 +3750,7 @@
    "id": 147,
    "file_id": "a147",
    "file": "rimon-a147.webp",
-   "path": "data/images/rimon/rimon-a147.webp",
+   "path": "data/images/rimon/v2/rimon-147-medal-high.webp",
    "drawn_set": [],
    "slug": "medal-high",
    "group": "lab",
@@ -3770,7 +3770,7 @@
    "id": 148,
    "file_id": "a148",
    "file": "rimon-a148.webp",
-   "path": "data/images/rimon/rimon-a148.webp",
+   "path": "data/images/rimon/v2/rimon-148-clipboard-thumbs-up.webp",
    "drawn_set": [],
    "slug": "clipboard-thumbs-up",
    "group": "lab",
@@ -3790,7 +3790,7 @@
    "id": 149,
    "file_id": "a149",
    "file": "rimon-a149.webp",
-   "path": "data/images/rimon/rimon-a149.webp",
+   "path": "data/images/rimon/v2/rimon-149-step-up.webp",
    "drawn_set": [],
    "slug": "step-up",
    "group": "lab",
@@ -3810,7 +3810,7 @@
    "id": 150,
    "file_id": "a150",
    "file": "rimon-a150.webp",
-   "path": "data/images/rimon/rimon-a150.webp",
+   "path": "data/images/rimon/v2/rimon-150-sweatband-flex.webp",
    "drawn_set": [],
    "slug": "sweatband-flex",
    "group": "lab",
@@ -3830,7 +3830,7 @@
    "id": 151,
    "file_id": "a151",
    "file": "rimon-a151.webp",
-   "path": "data/images/rimon/rimon-a151.webp",
+   "path": "data/images/rimon/v2/rimon-151-towel-jog.webp",
    "drawn_set": [],
    "slug": "towel-jog",
    "group": "lab",
@@ -3850,7 +3850,7 @@
    "id": 152,
    "file_id": "a152",
    "file": "rimon-a152.webp",
-   "path": "data/images/rimon/rimon-a152.webp",
+   "path": "data/images/rimon/v2/rimon-152-armful-of-books.webp",
    "drawn_set": [],
    "slug": "armful-of-books",
    "group": "books",
@@ -3870,7 +3870,7 @@
    "id": 153,
    "file_id": "a153",
    "file": "rimon-a153.webp",
-   "path": "data/images/rimon/rimon-a153.webp",
+   "path": "data/images/rimon/v2/rimon-153-reading-on-books.webp",
    "drawn_set": [],
    "slug": "reading-on-books",
    "group": "books",
@@ -3890,7 +3890,7 @@
    "id": 154,
    "file_id": "a154",
    "file": "rimon-a154.webp",
-   "path": "data/images/rimon/rimon-a154.webp",
+   "path": "data/images/rimon/v2/rimon-154-closing-book.webp",
    "drawn_set": [],
    "slug": "closing-book",
    "group": "books",
@@ -3910,7 +3910,7 @@
    "id": 155,
    "file_id": "a155",
    "file": "rimon-a155.webp",
-   "path": "data/images/rimon/rimon-a155.webp",
+   "path": "data/images/rimon/v2/rimon-155-book-held-high.webp",
    "drawn_set": [],
    "slug": "book-held-high",
    "group": "books",
@@ -3930,7 +3930,7 @@
    "id": 156,
    "file_id": "a156",
    "file": "rimon-a156.webp",
-   "path": "data/images/rimon/rimon-a156.webp",
+   "path": "data/images/rimon/v2/rimon-156-tower-of-books.webp",
    "drawn_set": [],
    "slug": "tower-of-books",
    "group": "books",
@@ -3950,7 +3950,7 @@
    "id": 157,
    "file_id": "a157",
    "file": "rimon-a157.webp",
-   "path": "data/images/rimon/rimon-a157.webp",
+   "path": "data/images/rimon/v2/rimon-157-library-cart.webp",
    "drawn_set": [],
    "slug": "library-cart",
    "group": "books",
@@ -3970,7 +3970,7 @@
    "id": 158,
    "file_id": "a158",
    "file": "rimon-a158.webp",
-   "path": "data/images/rimon/rimon-a158.webp",
+   "path": "data/images/rimon/v2/rimon-158-tambourine.webp",
    "drawn_set": [
     "094"
    ],
@@ -3992,7 +3992,7 @@
    "id": 159,
    "file_id": "a159",
    "file": "rimon-a159.webp",
-   "path": "data/images/rimon/rimon-a159.webp",
+   "path": "data/images/rimon/v2/rimon-159-headphones-sway.webp",
    "drawn_set": [
     "015"
    ],
@@ -4014,7 +4014,7 @@
    "id": 160,
    "file_id": "a160",
    "file": "rimon-a160.webp",
-   "path": "data/images/rimon/rimon-a160.webp",
+   "path": "data/images/rimon/v2/rimon-160-phrasebook.webp",
    "drawn_set": [],
    "slug": "phrasebook",
    "group": "books",
@@ -4034,7 +4034,7 @@
    "id": 161,
    "file_id": "a161",
    "file": "rimon-a161.webp",
-   "path": "data/images/rimon/rimon-a161.webp",
+   "path": "data/images/rimon/v2/rimon-161-rega-gesture.webp",
    "drawn_set": [],
    "slug": "rega-gesture",
    "group": "books",
@@ -4054,7 +4054,7 @@
    "id": 162,
    "file_id": "a162",
    "file": "rimon-a162.webp",
-   "path": "data/images/rimon/rimon-a162.webp",
+   "path": "data/images/rimon/v2/rimon-162-sunhat-falafel.webp",
    "drawn_set": [],
    "slug": "sunhat-falafel",
    "group": "books",
@@ -4074,7 +4074,7 @@
    "id": 163,
    "file_id": "a163",
    "file": "rimon-a163.webp",
-   "path": "data/images/rimon/rimon-a163.webp",
+   "path": "data/images/rimon/v2/rimon-163-trophy-chest-high.webp",
    "drawn_set": [
     "075"
    ],
@@ -4096,7 +4096,7 @@
    "id": 164,
    "file_id": "a164",
    "file": "rimon-a164.webp",
-   "path": "data/images/rimon/rimon-a164.webp",
+   "path": "data/images/rimon/v2/rimon-164-polish-pedestal.webp",
    "drawn_set": [
     "114"
    ],
@@ -4118,7 +4118,7 @@
    "id": 165,
    "file_id": "a165",
    "file": "rimon-a165.webp",
-   "path": "data/images/rimon/rimon-a165.webp",
+   "path": "data/images/rimon/v2/rimon-165-badge-up.webp",
    "drawn_set": [
     "076",
     "077"
@@ -4141,7 +4141,7 @@
    "id": 166,
    "file_id": "a166",
    "file": "rimon-a166.webp",
-   "path": "data/images/rimon/rimon-a166.webp",
+   "path": "data/images/rimon/v2/rimon-166-pin-badge.webp",
    "drawn_set": [
     "076",
     "077"
@@ -4164,7 +4164,7 @@
    "id": 167,
    "file_id": "a167",
    "file": "rimon-a167.webp",
-   "path": "data/images/rimon/rimon-a167.webp",
+   "path": "data/images/rimon/v2/rimon-167-bar-chart.webp",
    "drawn_set": [
     "065",
     "066"
@@ -4187,7 +4187,7 @@
    "id": 168,
    "file_id": "a168",
    "file": "rimon-a168.webp",
-   "path": "data/images/rimon/rimon-a168.webp",
+   "path": "data/images/rimon/v2/rimon-168-height-chart.webp",
    "drawn_set": [
     "065",
     "066"
@@ -4210,7 +4210,7 @@
    "id": 169,
    "file_id": "a169",
    "file": "rimon-a169.webp",
-   "path": "data/images/rimon/rimon-a169.webp",
+   "path": "data/images/rimon/v2/rimon-169-envelope.webp",
    "drawn_set": [
     "067"
    ],
@@ -4232,7 +4232,7 @@
    "id": 170,
    "file_id": "a170",
    "file": "rimon-a170.webp",
-   "path": "data/images/rimon/rimon-a170.webp",
+   "path": "data/images/rimon/v2/rimon-170-treasure-map.webp",
    "drawn_set": [
     "065"
    ],
@@ -4254,7 +4254,7 @@
    "id": 171,
    "file_id": "a171",
    "file": "rimon-a171.webp",
-   "path": "data/images/rimon/rimon-a171.webp",
+   "path": "data/images/rimon/v2/rimon-171-block-tower-three.webp",
    "drawn_set": [
     "081"
    ],
@@ -4276,7 +4276,7 @@
    "id": 172,
    "file_id": "a172",
    "file": "rimon-a172.webp",
-   "path": "data/images/rimon/rimon-a172.webp",
+   "path": "data/images/rimon/v2/rimon-172-block-tower-six.webp",
    "drawn_set": [
     "082"
    ],
@@ -4298,7 +4298,7 @@
    "id": 173,
    "file_id": "a173",
    "file": "rimon-a173.webp",
-   "path": "data/images/rimon/rimon-a173.webp",
+   "path": "data/images/rimon/v2/rimon-173-on-the-tower.webp",
    "drawn_set": [
     "066"
    ],
@@ -4320,7 +4320,7 @@
    "id": 174,
    "file_id": "a174",
    "file": "rimon-a174.webp",
-   "path": "data/images/rimon/rimon-a174.webp",
+   "path": "data/images/rimon/v2/rimon-174-keystone-arch.webp",
    "drawn_set": [
     "081"
    ],
@@ -4342,7 +4342,7 @@
    "id": 175,
    "file_id": "a175",
    "file": "rimon-a175.webp",
-   "path": "data/images/rimon/rimon-a175.webp",
+   "path": "data/images/rimon/v2/rimon-175-tap-hourglass.webp",
    "drawn_set": [
     "062",
     "065"
@@ -4365,7 +4365,7 @@
    "id": 176,
    "file_id": "a176",
    "file": "rimon-a176.webp",
-   "path": "data/images/rimon/rimon-a176.webp",
+   "path": "data/images/rimon/v2/rimon-176-lean-in-wave.webp",
    "drawn_set": [
     "062",
     "065"
@@ -4388,7 +4388,7 @@
    "id": 177,
    "file_id": "a177",
    "file": "rimon-a177.webp",
-   "path": "data/images/rimon/rimon-a177.webp",
+   "path": "data/images/rimon/v2/rimon-177-alarm-clock.webp",
    "drawn_set": [
     "110"
    ],
@@ -4410,7 +4410,7 @@
    "id": 178,
    "file_id": "a178",
    "file": "rimon-a178.webp",
-   "path": "data/images/rimon/rimon-a178.webp",
+   "path": "data/images/rimon/v2/rimon-178-checklist.webp",
    "drawn_set": [
     "065"
    ],
@@ -4432,7 +4432,7 @@
    "id": 179,
    "file_id": "a179",
    "file": "rimon-a179.webp",
-   "path": "data/images/rimon/rimon-a179.webp",
+   "path": "data/images/rimon/v2/rimon-179-big-calendar.webp",
    "drawn_set": [
     "065"
    ],
@@ -4454,7 +4454,7 @@
    "id": 180,
    "file_id": "a180",
    "file": "rimon-a180.webp",
-   "path": "data/images/rimon/rimon-a180.webp",
+   "path": "data/images/rimon/v2/rimon-180-map-upside-down.webp",
    "drawn_set": [
     "104",
     "102"
@@ -4477,7 +4477,7 @@
    "id": 181,
    "file_id": "a181",
    "file": "rimon-a181.webp",
-   "path": "data/images/rimon/rimon-a181.webp",
+   "path": "data/images/rimon/v2/rimon-181-flashlight.webp",
    "drawn_set": [
     "104",
     "102"
@@ -4500,7 +4500,7 @@
    "id": 182,
    "file_id": "a182",
    "file": "rimon-a182.webp",
-   "path": "data/images/rimon/rimon-a182.webp",
+   "path": "data/images/rimon/v2/rimon-182-toolbox.webp",
    "drawn_set": [
     "101",
     "108",
@@ -4524,7 +4524,7 @@
    "id": 183,
    "file_id": "a183",
    "file": "rimon-a183.webp",
-   "path": "data/images/rimon/rimon-a183.webp",
+   "path": "data/images/rimon/v2/rimon-183-unplugged.webp",
    "drawn_set": [
     "106",
     "105"
@@ -4547,7 +4547,7 @@
    "id": 184,
    "file_id": "a184",
    "file": "rimon-a184.webp",
-   "path": "data/images/rimon/rimon-a184.webp",
+   "path": "data/images/rimon/v2/rimon-184-plugged-in.webp",
    "drawn_set": [
     "112",
     "107"
@@ -4570,7 +4570,7 @@
    "id": 185,
    "file_id": "a185",
    "file": "rimon-a185.webp",
-   "path": "data/images/rimon/rimon-a185.webp",
+   "path": "data/images/rimon/v2/rimon-185-packing-suitcase.webp",
    "drawn_set": [
     "107"
    ],
@@ -4592,7 +4592,7 @@
    "id": 186,
    "file_id": "a186",
    "file": "rimon-a186.webp",
-   "path": "data/images/rimon/rimon-a186.webp",
+   "path": "data/images/rimon/v2/rimon-186-patient-hourglass.webp",
    "drawn_set": [
     "110"
    ],
@@ -4614,7 +4614,7 @@
    "id": 187,
    "file_id": "a187",
    "file": "rimon-a187.webp",
-   "path": "data/images/rimon/rimon-a187.webp",
+   "path": "data/images/rimon/v2/rimon-187-gear-wrench.webp",
    "drawn_set": [],
    "slug": "gear-wrench",
    "group": "screens",
@@ -4634,7 +4634,7 @@
    "id": 188,
    "file_id": "a188",
    "file": "rimon-a188.webp",
-   "path": "data/images/rimon/rimon-a188.webp",
+   "path": "data/images/rimon/v2/rimon-188-lifebuoy.webp",
    "drawn_set": [
     "047"
    ],
@@ -4656,7 +4656,7 @@
    "id": 189,
    "file_id": "a189",
    "file": "rimon-a189.webp",
-   "path": "data/images/rimon/rimon-a189.webp",
+   "path": "data/images/rimon/v2/rimon-189-nice-to-meet-you.webp",
    "drawn_set": [
     "003b",
     "003"
@@ -4679,7 +4679,7 @@
    "id": 190,
    "file_id": "a190",
    "file": "rimon-a190.webp",
-   "path": "data/images/rimon/rimon-a190.webp",
+   "path": "data/images/rimon/v2/rimon-190-peek-in-box.webp",
    "drawn_set": [
     "114"
    ],
@@ -4701,7 +4701,7 @@
    "id": 191,
    "file_id": "a191",
    "file": "rimon-a191.webp",
-   "path": "data/images/rimon/rimon-a191.webp",
+   "path": "data/images/rimon/v2/rimon-191-tile-weightlifter.webp",
    "drawn_set": [
     "005"
    ],
@@ -4723,7 +4723,7 @@
    "id": 192,
    "file_id": "a192",
    "file": "rimon-a192.webp",
-   "path": "data/images/rimon/rimon-a192.webp",
+   "path": "data/images/rimon/v2/rimon-192-typing.webp",
    "drawn_set": [],
    "slug": "typing",
    "group": "screens",
@@ -4743,7 +4743,7 @@
    "id": 193,
    "file_id": "a193",
    "file": "rimon-a193.webp",
-   "path": "data/images/rimon/rimon-a193.webp",
+   "path": "data/images/rimon/v2/rimon-193-camera.webp",
    "drawn_set": [],
    "slug": "camera",
    "group": "screens",
@@ -4763,7 +4763,7 @@
    "id": 194,
    "file_id": "a194",
    "file": "rimon-a194.webp",
-   "path": "data/images/rimon/rimon-a194.webp",
+   "path": "data/images/rimon/v2/rimon-194-game-controller.webp",
    "drawn_set": [],
    "slug": "game-controller",
    "group": "screens",
@@ -4783,7 +4783,7 @@
    "id": 195,
    "file_id": "a195",
    "file": "rimon-a195.webp",
-   "path": "data/images/rimon/rimon-a195.webp",
+   "path": "data/images/rimon/v2/rimon-195-map-pin.webp",
    "drawn_set": [],
    "slug": "map-pin",
    "group": "screens",
@@ -4803,7 +4803,7 @@
    "id": 196,
    "file_id": "a196",
    "file": "rimon-a196.webp",
-   "path": "data/images/rimon/rimon-a196.webp",
+   "path": "data/images/rimon/v2/rimon-196-puzzle-pieces.webp",
    "drawn_set": [],
    "slug": "puzzle-pieces",
    "group": "screens",
@@ -4823,7 +4823,7 @@
    "id": 197,
    "file_id": "a197",
    "file": "rimon-a197.webp",
-   "path": "data/images/rimon/rimon-a197.webp",
+   "path": "data/images/rimon/v2/rimon-197-root-sprout.webp",
    "drawn_set": [],
    "slug": "root-sprout",
    "group": "screens",
@@ -4843,7 +4843,7 @@
    "id": 198,
    "file_id": "a198",
    "file": "rimon-a198.webp",
-   "path": "data/images/rimon/rimon-a198.webp",
+   "path": "data/images/rimon/v2/rimon-198-big-dictionary.webp",
    "drawn_set": [],
    "slug": "big-dictionary",
    "group": "screens",
@@ -4863,7 +4863,7 @@
    "id": 199,
    "file_id": "a199",
    "file": "rimon-a199.webp",
-   "path": "data/images/rimon/rimon-a199.webp",
+   "path": "data/images/rimon/v2/rimon-199-microphone.webp",
    "drawn_set": [
     "016"
    ],
@@ -4885,7 +4885,7 @@
    "id": 200,
    "file_id": "a200",
    "file": "rimon-a200.webp",
-   "path": "data/images/rimon/rimon-a200.webp",
+   "path": "data/images/rimon/v2/rimon-200-three-voices.webp",
    "drawn_set": [],
    "slug": "three-voices",
    "group": "screens",

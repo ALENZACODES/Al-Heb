@@ -15,15 +15,15 @@
 //   swap  - an existing picture of Rimon in a view (img[data-rimon-still]) is replaced by the still
 //   toast - a small card with the still and one line, at the bottom of the screen, gone after a few seconds
 import { holidaysBetween, roshChodeshInHebrewYear, toHebrew, parseISO, weekday, candleLighting, havdalah } from '../curriculum/calendar.js';
-import { STILL_IDS } from './rimon-stills.generated.js';
+import { STILL_IDS, STILL_FILES } from './rimon-stills.generated.js';
 
 export const STILL_DIR = 'data/images/rimon';
 export const PRESENT_URL = 'data/images/rimon/present.json';
 export const STILL_COUNT = 200;
 /** Still ids are file stems: '023' and '025b' (drawn set, tools/images/rimon/art-map.mjs) or 'a023' (the 200-still catalogue). */
 export const STILL_ID = /^a?\d{3}[a-z]?$/;
-/** data/images/rimon/rimon-a007.webp for 'a007'. */
-export const stillPath = (id) => `${STILL_DIR}/rimon-${id}.webp`;
+/** 'a007' -> data/images/rimon/v2/rimon-007-starting-line.webp (catalogue); '023' -> data/images/rimon/rimon-023.webp (drawn set). */
+export const stillPath = (id, files = STILL_FILES) => `${STILL_DIR}/${(id.startsWith('a') && files[id]) || `rimon-${id}`}.webp`;
 
 // ---------------------------------------------------------------- respect rules
 /**

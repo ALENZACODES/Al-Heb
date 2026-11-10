@@ -850,7 +850,7 @@
       "key": "lab",
       "title": "Brain Lab",
       "why": "Brain Lab is ten drills on a text-only page (src/lab/lab.core.js GAMES). A header picture and one token per drill make the workout list scannable at a glance, the way fitness-style brain apps look.",
-      "plan": "One wide header and ten round tokens, shown at 56 px beside each drill name.",
+      "plan": "One wide header and ten round tokens, shown at 56 px beside each drill name. A cover, an in-game picture and a results picture for every drill are ordered in [BRAIN-LAB-ORDERS-2026-11-09.md](BRAIN-LAB-ORDERS-2026-11-09.md).",
       "wiring": "src/lab/lab.view.js: the header above the h1 and each token (alt=\"\", 56 px) at the start of its drill row; ids LAB_v2_<game id> match GAMES ids.",
       "supersedes": [],
       "images": [

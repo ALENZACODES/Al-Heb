@@ -468,7 +468,7 @@ Reference pictures (already in the repo): `assets/img/gen/CHAR_ari_sheet.800.web
 
 **Why:** Brain Lab is ten drills on a text-only page (src/lab/lab.core.js GAMES). A header picture and one token per drill make the workout list scannable at a glance, the way fitness-style brain apps look.
 
-**Plan:** One wide header and ten round tokens, shown at 56 px beside each drill name.
+**Plan:** One wide header and ten round tokens, shown at 56 px beside each drill name. A cover, an in-game picture and a results picture for every drill are ordered in [BRAIN-LAB-ORDERS-2026-11-09.md](BRAIN-LAB-ORDERS-2026-11-09.md).
 
 ### 9.1 `LAB_v2_hero.png`
 

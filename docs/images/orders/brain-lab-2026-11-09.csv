@@ -1,0 +1,33 @@
+game,role,filename,shape,pixels,transparent,screen,status
+hunt,cover,LAB_v2_hunt_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+hunt,in-game,LAB_v2_hunt_play.png,2:3,1024x1536,no,"Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",not drawn
+hunt,results,LAB_v2_hunt_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+matrix,cover,LAB_v2_matrix_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+matrix,in-game,LAB_v2_matrix_play.png,1:1,1024x1024,no,"Face of every hidden tile (.lab-cell.is-hidden background, shown at about 64 to 90 px)",not drawn
+matrix,results,LAB_v2_matrix_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+soundmatch,cover,LAB_v2_soundmatch_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+soundmatch,in-game,LAB_v2_soundmatch_play.png,1:1,1024x1024,yes,"Beside the prompt while the syllable plays (lab.games.js Sound Match trial, about 96 px)",not drawn
+soundmatch,results,LAB_v2_soundmatch_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+siddurflash,cover,LAB_v2_siddurflash_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+siddurflash,in-game,LAB_v2_siddurflash_play.png,3:2,1536x1024,no,Behind the flashing word (.lab-flash background; the word is real type on top),not drawn
+siddurflash,results,LAB_v2_siddurflash_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+switch,cover,LAB_v2_switch_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+switch,in-game,LAB_v2_switch_play.png,2:3,1024x1536,no,Behind the big letter on the rule card (.lab-card background; the rule colour stays on the card border),not drawn
+switch,results,LAB_v2_switch_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+gematria,cover,LAB_v2_gematria_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+gematria,in-game,LAB_v2_gematria_play.png,1:1,1024x1024,yes,"Beside ""Your total"" under the tiles (lab.games.js Gematria trial, about 110 px)",not drawn
+gematria,results,LAB_v2_gematria_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+countup,cover,LAB_v2_countup_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+countup,in-game,LAB_v2_countup_play.png,2:3,1024x1536,no,"Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",not drawn
+countup,results,LAB_v2_countup_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+numberear,cover,LAB_v2_numberear_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+numberear,in-game,LAB_v2_numberear_play.png,1:1,1024x1024,yes,"Beside the prompt while the number plays (lab.games.js Number Ear trial, about 96 px)",not drawn
+numberear,results,LAB_v2_numberear_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+calendar,cover,LAB_v2_calendar_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+calendar,in-game,LAB_v2_calendar_play.png,2:3,1024x1536,no,"Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",not drawn
+calendar,results,LAB_v2_calendar_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+pattern,cover,LAB_v2_pattern_cover.png,3:2,1536x1024,no,"Intro card above the drill title (lab.view.js intro(), 2:1 crop, full card width) and the drill card in the hub ""All Drills"" grid (2:1 thumbnail)",not drawn
+pattern,in-game,LAB_v2_pattern_play.png,2:3,1024x1536,no,"Behind the game board (.lab-board background, cover-fitted); hidden under prefers-contrast: more and forced colours",not drawn
+pattern,results,LAB_v2_pattern_win.png,1:1,1024x1024,yes,"Results card above the score (lab.view.js results(), about 180 px)",not drawn
+shared,shared,LAB_v2_workout_done.png,3:2,1536x1024,no,"Brain Lab hub, Today's Workout card when all three drills are done (lab.view.js hub(), prog.complete); other days show LAB_v2_hero from the commercial orders",not drawn
+shared,shared,LAB_v2_new_best.png,1:1,1024x1024,yes,"Results card beside ""A new best score!"" (lab.view.js results(), isBest), about 96 px",not drawn

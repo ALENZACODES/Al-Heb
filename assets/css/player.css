@@ -38,7 +38,7 @@ body.fd-player main { max-inline-size: 40rem; margin-inline: auto; padding: 0 1r
   transition: inline-size .45s cubic-bezier(.2, .8, .2, 1);
 }
 
-.fd-body { display: grid; gap: .8rem; padding-block: .5rem 1rem; }
+.fd-body { display: grid; gap: .8rem; padding-block: .5rem 9rem; } /* clear the two-row footer (Hear it / Trace it + Continue) */
 .fd-steplabel { margin: 0; font-size: .8rem; color: var(--fd-sage); letter-spacing: .02em; }
 .fd-kicker { margin: .25rem 0 0; font-size: .82rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--fd-gold); }
 .alef-firstday .fd-q { text-transform: none; margin: 0; font-size: clamp(1.45rem, 5.2vw, 1.9rem); line-height: 1.25; color: var(--fd-cream); }

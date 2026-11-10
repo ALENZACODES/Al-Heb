@@ -4,7 +4,7 @@
 // All Hebrew comes from the app's data: data/lab/words.json (built by tools/lab/build-lab-words.mjs from the dictionary and the
 // sound tables), the letter table and the prayer registry. env.met(item) adds a word to the "Hebrew you met" list on the
 // results card; env.rimon(action) lets Rimon react (optional, never needed to play).
-import { randInt, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, chainTrial, lineWords } from './lab.core.js';
+import { randInt, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, chainTrial, lineWords, NOT_A_GAME } from './lab.core.js';
 import { kit } from './lab.games.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 
@@ -230,7 +230,7 @@ const cafe = {
 const chain = {
   load: (env) => once('chainlines', async () => {
     const reg = await getJSON(env, 'data/corpus/registry.json');
-    return reg.entries.filter((e) => e.category === 'siddur' && e.he).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
+    return reg.entries.filter((e) => e.category === 'siddur' && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
   }),
   trial(env, level) {
     const t = chainTrial(env.data, level, env.rnd);

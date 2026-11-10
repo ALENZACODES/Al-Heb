@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   GAMES, GLYPHS, seeded, sameSound, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, cafeSize,
-  chainTrial, lineWords, bare, hasDivineName, normTradition, starsFor, uniqueMet, isNewGame, recordSession, emptyState, MAX_LEVEL,
+  chainTrial, lineWords, bare, hasDivineName, NOT_A_GAME, normTradition, starsFor, uniqueMet, isNewGame, recordSession, emptyState, MAX_LEVEL,
 } from '../src/lab/lab.core.js';
 import { build, firstSound, vowelOf, CAFE_IDS } from '../tools/lab/build-lab-words.mjs';
 import { NEW_DRILLS } from '../src/lab/lab.games2.js';
@@ -101,6 +101,7 @@ test('Vowel Rain: each drop has one sound per tradition, new signs arrive by lev
   const syl = new Map(json('data/lab/syllables.json').syllables.map((s) => [s.id, s]));
   for (const v of W.vowels.filter((x) => x.syllable)) assert.equal(syl.get(v.syllable).he.normalize('NFC'), v.he, v.syllable);
   assert.ok(W.vowels.filter((x) => x.syllable).length >= 100);
+  assert.ok(W.vowels.filter((x) => x.sign.startsWith('chataf')).every((v) => ['alef', 'he', 'chet', 'ayin'].includes(v.letter)), 'chataf vowels only under the throat letters');
   // Identity: a random tap is right about one time in five
   const rnd = seeded('rain'); let hits = 0; const N = 4000;
   for (let i = 0; i < N; i++) { const pool = rainPool(W.vowels, 1 + (i % 12), 'israeli'); const d = pool[Math.floor(rnd() * pool.length)]; const keys = rainKeys(W.vowels, 'israeli'); if (keys[Math.floor(rnd() * keys.length)] === d.sound.israeli) hits++; }
@@ -165,8 +166,10 @@ test('Café Order: order size grows with level, every ordered thing is on the me
 });
 
 test('Prayer Chain: real prayer words in order; the divine name is filled in, never a choice; a distractor never reads as the answer', () => {
-  const lines = json('data/corpus/registry.json').entries.filter((e) => e.category === 'siddur' && e.he).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
+  assert.ok(NOT_A_GAME.has('kaddish-1'), "Mourner's Kaddish is never a game");
+  const lines = json('data/corpus/registry.json').entries.filter((e) => e.category === 'siddur' && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
   assert.ok(lines.length >= 30);
+  for (const f of ['src/lab/lab.games.js', 'src/lab/lab.games2.js']) assert.match(readFileSync(f, 'utf8'), /!NOT_A_GAME\.has\(e\.id\)/, `${f} leaves those prayers out`);
   let fixedSeen = 0;
   for (let level = 1; level <= MAX_LEVEL; level++) for (let i = 0; i < 60; i++) {
     const t = chainTrial(lines, level, seeded(`chain${level}:${i}`));

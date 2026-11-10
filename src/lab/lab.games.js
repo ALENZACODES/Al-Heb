@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME } from './lab.core.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -136,7 +136,7 @@ const soundmatch = {
 const siddurflash = {
   load: (env) => once('siddurlines', async () => {
     const reg = await getJSON(env, 'data/corpus/registry.json');
-    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
+    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
   }),
   trial(env, level) {
     const lines = env.data;

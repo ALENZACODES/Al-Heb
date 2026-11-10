@@ -33,6 +33,8 @@ export const DIRECTION_IDS = Object.freeze([
 /** English names of the second form of the letters whose sound changes with a dot. */
 export const VARIANT_NAMES = Object.freeze({ 'bet:without dagesh': 'Vet', 'kaf:without dagesh': 'Khaf', 'pe:without dagesh': 'Fe', 'shin:with sin dot': 'Sin' });
 const DAGESH = 'ּ', SHIN_DOT = 'ׁ', SIN_DOT = 'ׂ';
+/** Letters that take the reduced (chataf) vowels: alef, he, chet, ayin. */
+const GUTTURALS = new Set(['alef', 'he', 'chet', 'ayin']);
 /** Vowel signs Vowel Rain uses, by niqqud.json id, and the level a sign first falls at. */
 export const VOWEL_SIGNS = Object.freeze([
   { id: 'patach', from: 1 }, { id: 'segol', from: 1 }, { id: 'chirik', from: 1 }, { id: 'cholam', from: 1 }, { id: 'kubutz', from: 1 },
@@ -119,6 +121,7 @@ export function build() {
     const sound = Object.fromEntries(TRADITIONS.map((t) => [t, vowelOf(r.ipa?.[t])]));
     for (const [letter, base] of bases) {
       if (sid === 'shuruk' && letter === 'vav') continue;
+      if (sid.startsWith('chataf') && !GUTTURALS.has(letter)) continue; // the reduced vowels sit under the throat letters
       const he = (base + mark).normalize('NFC');
       const rec = bySyl.get(he.normalize('NFD'));
       vowels.push({ he, letter, sign: sid, from, sound, ...(rec ? { syllable: rec.id } : {}) });

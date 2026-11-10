@@ -32,7 +32,7 @@ const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f',
 const SKILL_INK = { speed: '#163527' };
 
 const CSS = `
-.lab{max-inline-size:44rem;margin-inline:auto;--lab-accent:var(--accent,#1e4634);--lab-gold:#8a6d1f}
+.lab{max-inline-size:44rem;margin-inline:auto;--lab-accent:var(--accent,#1e4634);--lab-gold:#75591a}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="contrast"]) .lab{--lab-gold:#e2cd8f}}
 :root[data-theme="dark"] .lab,:root[data-theme="contrast-dark"] .lab{--lab-gold:#e2cd8f}
 /* Light "paper" tiles keep dark ink in every theme; text straight on the page card follows the theme. */
@@ -135,7 +135,8 @@ const CSS = `
 .lab-twin-stage{display:flex;align-items:center;justify-content:center;gap:1.2rem;min-block-size:9rem}
 .lab-twin{min-inline-size:8rem;min-block-size:8rem;display:grid;place-items:center;background:#fffaf0;border:3px solid #d4a647;border-radius:22px;box-shadow:0 4px 0 #d9cba5;transform:scale(.94);transition:transform .16s ease}
 .lab-twin.is-in{transform:scale(1)}
-.lab-twin-before{opacity:.45;min-inline-size:3rem;text-align:center}
+.lab-twin-before{min-inline-size:3rem;text-align:center;color:#5d6b60}
+.lab-twin-before:not(:empty){border:2px dashed #d9cba5;border-radius:14px;padding:.2rem .5rem;background:#fffaf0}
 /* Vowel Rain */
 .lab-sky{position:relative;inline-size:min(100%,22rem);block-size:13rem;border-radius:18px;background:linear-gradient(#e9f0ea,#fffaf0);border:2px solid #d9cba5;overflow:hidden;--lab-fall:10.4rem}
 .lab-drop{position:absolute;inset-inline-start:50%;inset-block-start:.3rem;translate:-50% 0;min-inline-size:4.2rem;min-block-size:4.2rem;display:grid;place-items:center;background:#fffaf0;border:3px solid #2f6b4f;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;box-shadow:0 3px 0 #1e4634}

@@ -10,6 +10,11 @@ import {
 } from './talk.model.js';
 import { loadEngine } from './data.js';
 import { canListen, listenOnce } from './speech.js';
+import { translateLine } from './hybrid.js';
+import { maskName, showsName } from './nmt/postedit.js';
+import { sharedPack } from './nmt/client.js';
+import { DIRECTIONS, DIRECTION_LABEL, megabytes, connectionKind, tooFull } from './nmt/pack.js';
+import { loadJSON } from '../curriculum/data.js';
 
 export const METHOD_LABEL = Object.freeze({
   phrase: 'A stored line',
@@ -17,9 +22,19 @@ export const METHOD_LABEL = Object.freeze({
   close: 'The closest stored line',
   word: 'A single word',
   words: 'Word by word',
+  model: 'Translated on this device',
 });
 export const NO_LINE = 'ALEF does not have that line yet. Try fewer words, or one of the lines below.';
-export const HELD_LINE = 'A sacred Name is in that line. ALEF does not speak it or reword it, so the line is left as it is.';
+export const HELD_LINE = 'A sacred Name is in that line. ALEF shows it as ה׳, does not speak it and does not reword it, so the line is left as it is.';
+export const NAME_NOT_READ = 'This line shows the Name as ה׳, so it is not read aloud.';
+export const PACK_LEAD = 'For lines ALEF has not stored, add a language pack. It translates on this device and sends nothing anywhere. A pack is a large download, so use Wi-Fi.';
+export const PACK_OFFER = 'ALEF has no stored line for that. A language pack can translate it on this device.';
+export const PACK_CELLULAR = 'You seem to be on mobile data. Wait for Wi-Fi if your plan is limited.';
+export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or turn it off for this download.';
+export const PACK_FULL = 'This device reports too little free space for the pack.';
+export const PACK_FAILED = 'The download stopped. What arrived is kept; press the button again to carry on.';
+export const PACK_CANNOT_RUN = 'This browser could not start the language pack. Stored lines still work.';
+export const PACK_NONE = 'Language packs are not available on this browser. Stored lines still work.';
 export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. ALEF sends nothing anywhere and keeps only the text of your last lines on this device.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
 export const DEVICE_VOICE = 'Read aloud by your device voice, not by a recorded teacher.';
@@ -49,6 +64,10 @@ const CSS = `
 .talk-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem}
 .talk-list button{width:100%;text-align:start;display:flex;flex-direction:column;gap:.15rem}
 .talk-small{font-size:.85rem}
+.talk-pack{border:1px solid var(--border);border-radius:var(--radius,.75rem);padding:.8rem 1rem;display:flex;flex-direction:column;gap:.5rem}
+.talk-pack h2{margin:0;font-size:1.05rem}
+.talk-pack-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.talk-pack-row progress{flex:1 1 10rem;min-width:8rem;height:.8rem}
 `;
 function injectCss() {
   try {
@@ -75,10 +94,11 @@ export function mount(root, ctx = {}) {
   let listening = null;
   /** @type {any} */
   let last = null;
+  let runSeq = 0;
   const hearing = canListen();
 
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Talk');
-  const lead = h('p', {}, 'Say or type a short everyday line in English or Hebrew. ALEF shows it in the other language and can read it aloud. It works from stored lines, so it knows travel, shop, table and synagogue talk, not every sentence.');
+  const lead = h('p', {}, 'Say or type a short everyday line in English or Hebrew. ALEF shows it in the other language and can read it aloud. Stored lines for travel, shop, table and synagogue talk answer at once. With a language pack on this device, other everyday lines are translated too.');
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' }, 'Getting the lines ready…');
 
   const dirBtn = (value, label, lang) => h('button', { type: 'button', class: 'btn secondary', 'data-dir': value, lang, onclick: () => { settings = { ...settings, direction: value }; save(); paintLangs(); } }, label);
@@ -111,6 +131,24 @@ export function mount(root, ctx = {}) {
   const send = h('button', { type: 'button', class: 'btn', onclick: () => run(ta.value) }, 'Translate');
   const input = h('div', { class: 'talk-input' }, ta, send);
 
+  // Language packs: one row per direction (size, a button, progress while it downloads).
+  const pack = ctx.pack || (typeof Worker === 'function' && typeof caches !== 'undefined' ? sharedPack() : null);
+  /** @type {any} */ let terms = null;
+  /** @type {Record<string, {row:HTMLElement, text:HTMLElement, btn:HTMLButtonElement, bar:HTMLProgressElement, busy:boolean, stop:AbortController|null}>} */
+  const packRows = {};
+  const packNote = h('p', { class: 'muted talk-small', role: 'status', 'aria-live': 'polite' });
+  const packRemove = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: removePack }, 'Remove The Packs From This Device');
+  const packBox = h('section', { class: 'talk-pack', 'aria-labelledby': 'talk-pack-title', hidden: !pack }, h('h2', { id: 'talk-pack-title' }, 'Language Packs'), h('p', { class: 'talk-small' }, PACK_LEAD));
+  for (const d of DIRECTIONS) {
+    const text = h('span', { class: 'talk-small' }, DIRECTION_LABEL[d]);
+    const btn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'btn secondary', 'data-pack': d, onclick: () => getPack(d) }, `Get ${DIRECTION_LABEL[d]}`));
+    const bar = /** @type {HTMLProgressElement} */ (h('progress', { max: 100, value: 0, hidden: true, 'aria-label': `${DIRECTION_LABEL[d]} pack download` }));
+    const row = h('div', { class: 'talk-pack-row' }, text, bar, btn);
+    packRows[d] = { row, text, btn, bar, busy: false, stop: null };
+    packBox.append(row);
+  }
+  packBox.append(packNote, packRemove);
+
   const suggestTitle = h('h2', { hidden: true }, 'Lines ALEF Knows');
   const suggest = h('ul', { class: 'talk-list', hidden: true });
 
@@ -141,7 +179,7 @@ export function mount(root, ctx = {}) {
   tryPick.addEventListener('change', paintExamples);
 
   root.replaceChildren(h('section', { class: 'talk-screen', 'aria-labelledby': 'view-title' },
-    title, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
+    title, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, packBox, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
 
   function save() { write(SETTINGS_KEY, settings); }
 
@@ -159,9 +197,85 @@ export function mount(root, ctx = {}) {
       h('span', { lang: 'en' }, item.en), h('span', { lang: 'he', dir: 'rtl' }, item.he), label ? h('span', { class: 'muted talk-small' }, label) : null));
   }
 
+  async function paintPack() {
+    if (!pack) return;
+    let any = false;
+    for (const d of DIRECTIONS) {
+      const p = packRows[d];
+      if (p.busy) continue;
+      try {
+        const st = await pack.state(d);
+        if (!alive) return;
+        if (st.ready) {
+          any = true; p.bar.hidden = true;
+          p.btn.hidden = true;
+          p.text.textContent = pack.ready(d) ? `${DIRECTION_LABEL[d]}: on this device and ready.` : `${DIRECTION_LABEL[d]}: on this device.`;
+        } else {
+          p.btn.hidden = false; p.btn.disabled = false;
+          const part = st.have > 0 && st.missing > 0;
+          p.btn.textContent = part ? `Carry On With ${DIRECTION_LABEL[d]}` : `Get ${DIRECTION_LABEL[d]}`;
+          p.text.textContent = `${DIRECTION_LABEL[d]}: about ${megabytes(st.missing)} MB to download.`;
+          if (st.have > 0) any = true;
+        }
+      } catch { p.text.textContent = `${DIRECTION_LABEL[d]}: the pack list could not be read. Check your connection.`; p.btn.disabled = false; }
+    }
+    packRemove.hidden = !any;
+  }
+
+  /** Loads the packs that are already on this device, quietly. */
+  async function warmPacks() {
+    if (!pack) return;
+    for (const d of DIRECTIONS) {
+      try { if ((await pack.state(d)).ready) { const ok = await pack.load(d); if (!alive) return; if (!ok) packNote.textContent = PACK_CANNOT_RUN; } } catch { /* no pack list while offline and nothing kept */ }
+    }
+    paintPack();
+  }
+
+  async function getPack(d) {
+    if (!pack) return;
+    const p = packRows[d];
+    if (p.busy) { p.stop?.abort(); return; }
+    packNote.textContent = '';
+    try {
+      const st = await pack.state(d);
+      if (await tooFull(st.missing)) { packNote.textContent = PACK_FULL; return; }
+      const kind = connectionKind();
+      if (kind && !p.btn.dataset.asked) { p.btn.dataset.asked = '1'; packNote.textContent = `${kind === 'saver' ? PACK_SAVER : PACK_CELLULAR} Press the button again to download about ${megabytes(st.missing)} MB now.`; return; }
+      p.busy = true; p.stop = new AbortController();
+      p.bar.hidden = false; p.bar.value = 0; p.btn.textContent = 'Stop';
+      let shown = -1;
+      await pack.download(d, { signal: p.stop.signal, onProgress: (have, total) => {
+        if (!alive) return;
+        const pct = total ? Math.floor((100 * have) / total) : 0;
+        if (pct === shown) return; shown = pct;
+        p.bar.value = pct; p.text.textContent = `${DIRECTION_LABEL[d]}: ${megabytes(have)} of ${megabytes(total)} MB.`;
+      } });
+      if (!alive) return;
+      p.text.textContent = `${DIRECTION_LABEL[d]}: getting it ready…`;
+      const ok = await pack.load(d);
+      if (!alive) return;
+      p.busy = false; p.stop = null;
+      packNote.textContent = ok ? `${DIRECTION_LABEL[d]} is ready. It works offline from now on.` : PACK_CANNOT_RUN;
+      await paintPack();
+      if (ok && last && last.needsPack === d) run(last.source, last.direction);
+    } catch (e) {
+      p.busy = false; p.stop = null; p.bar.hidden = true;
+      if (alive) { packNote.textContent = /** @type {any} */ (e)?.message === 'no-storage' ? PACK_NONE : PACK_FAILED; paintPack(); }
+    }
+  }
+
+  async function removePack() {
+    if (!pack) return;
+    for (const d of DIRECTIONS) packRows[d].stop?.abort();
+    await pack.remove();
+    if (!alive) return;
+    packNote.textContent = 'The packs were removed from this device.';
+    paintPack();
+  }
+
   function show(r) {
     last = r;
-    setText(srcEl, r.source);
+    setText(srcEl, r.held ? maskName(r.source) : r.source);
     srcEl.classList.remove('is-partial');
     const toHe = r.direction === 'en-he';
     const text = r.ok ? (toHe ? shownHebrew(r) : r.translation) : '';
@@ -169,7 +283,8 @@ export function mount(root, ctx = {}) {
     if (r.held) trEl.textContent = '';
     setText(themTr, text);
     badge.hidden = !r.ok; badge.textContent = r.ok ? METHOD_LABEL[r.method] || '' : '';
-    const msg = r.held ? HELD_LINE : (!r.ok ? NO_LINE : (r.note || ''));
+    const offer = !r.held && r.needsPack && pack ? PACK_OFFER : '';
+    const msg = r.held ? HELD_LINE : (!r.ok ? (offer || NO_LINE) : [r.note || '', offer].filter(Boolean).join(' '));
     note.hidden = !msg; note.textContent = msg;
     const vs = r.ok ? (r.variants || []) : [];
     variants.hidden = !vs.length;
@@ -186,14 +301,20 @@ export function mount(root, ctx = {}) {
     if (!t || !engine) return;
     err.hidden = true;
     const opts = { direction: forced || settings.direction, speaker: settings.speaker };
-    let r = engine.translate(t, opts);
-    if (!r.held && (!r.ok || r.method === 'words') && !engine.hasDictionary) {
+    const ticket = ++runSeq;
+    paneMe.setAttribute('aria-busy', 'true');
+    if (pack && DIRECTIONS.some((d) => pack.ready(d))) status.textContent = 'Translating…';
+    let r;
+    try { r = await translateLine(engine, pack, t, { ...opts, terms }); } finally { if (ticket === runSeq) { paneMe.removeAttribute('aria-busy'); if (alive && status.textContent === 'Translating…') status.textContent = ''; } }
+    if (!alive || ticket !== runSeq) return;
+    if (!r.held && r.method !== 'model' && (!r.ok || r.method === 'words') && !engine.hasDictionary) {
       // the dictionary index is only fetched when a line needs it
       status.textContent = 'Looking in the dictionary…';
       await engine.loadDictionary();
-      if (!alive) return;
+      if (!alive || ticket !== runSeq) return;
       status.textContent = '';
-      r = engine.translate(t, opts);
+      r = await translateLine(engine, pack, t, { ...opts, terms });
+      if (!alive || ticket !== runSeq) return;
     }
     show(r);
     if (r.ok) {
@@ -208,6 +329,7 @@ export function mount(root, ctx = {}) {
     const r = last;
     if (!r || !r.ok) return;
     said.textContent = '';
+    if (showsName(r.translation) || showsName(r.source)) { if (asked) said.textContent = NAME_NOT_READ; return; }
     try {
       if (r.direction === 'en-he') {
         stopEnglish();
@@ -281,12 +403,15 @@ export function mount(root, ctx = {}) {
     status.textContent = '';
     tryPick.replaceChildren(...e.categories().map((c) => h('option', { value: c }, CAT_LABEL[c] || c)));
     paintExamples();
+    paintPack().then(warmPacks);
+    loadJSON('data/talk/terms.json').then((t) => { terms = t; }).catch(() => { /* optional */ });
   }).catch(() => {
     if (alive) status.textContent = 'The stored lines could not be loaded. Check your connection once and open this screen again; after that it works offline.';
   });
 
   return () => {
     alive = false;
+    for (const d of DIRECTIONS) packRows[d].stop?.abort(); // parts that arrived are kept; the rest waits for the next visit
     stopListening();
     stopEnglish();
     try { ctx.audio?.stop?.(); } catch { /* nothing playing */ }

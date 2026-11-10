@@ -16,13 +16,10 @@
    "id": "x-en-002",
    "direction": "en-he",
    "category": "travel",
-   "source": "Is this seat taken?",
-   "reference": "המקום הזה תפוס?",
+   "source": "The train was cancelled this morning.",
+   "reference": "הרכבת בוטלה הבוקר.",
    "accept": [
-    "הכיסא הזה תפוס?",
-    "האם המקום הזה תפוס?",
-    "המושב הזה תפוס?",
-    "האם המושב הזה תפוס?"
+    "הרכבת בוטלה היום בבוקר."
    ]
   },
   {
@@ -91,12 +88,14 @@
    "id": "x-en-008",
    "direction": "en-he",
    "category": "travel",
-   "source": "Where can I charge my phone?",
-   "reference": "איפה אפשר להטעין את הטלפון?",
+   "source": "My phone battery is dead.",
+   "reference": "הסוללה של הטלפון שלי נגמרה.",
    "accept": [
-    "איפה אפשר להטעין את הטלפון שלי?",
-    "איפה אני יכול להטעין את הטלפון שלי?",
-    "איפה אני יכולה להטעין את הטלפון שלי?"
+    "נגמרה לי הסוללה בטלפון.",
+    "הסוללה של הטלפון שלי מתה.",
+    "סוללת הטלפון שלי נגמרה.",
+    "סוללת הטלפון שלי מתה.",
+    "נגמרה הסוללה של הטלפון שלי."
    ]
   },
   {
@@ -153,11 +152,12 @@
    "id": "x-en-013",
    "direction": "en-he",
    "category": "travel",
-   "source": "What is the next stop?",
-   "reference": "מה התחנה הבאה?",
+   "source": "We want to visit the old market tomorrow.",
+   "reference": "אנחנו רוצים לבקר בשוק הישן מחר.",
    "accept": [
-    "מהי התחנה הבאה?",
-    "מה העצירה הבאה?"
+    "אנחנו רוצים לבקר מחר בשוק הישן.",
+    "אנו רוצים לבקר בשוק הישן מחר.",
+    "אנחנו רוצים לבקר בשוק העתיק מחר."
    ]
   },
   {
@@ -223,13 +223,18 @@
    "id": "x-en-019",
    "direction": "en-he",
    "category": "travel",
-   "source": "Can you take our picture?",
-   "reference": "אפשר לצלם אותנו?",
+   "source": "Could you write that down for me?",
+   "reference": "אפשר לכתוב לי את זה?",
    "accept": [
-    "אתה יכול לצלם אותנו?",
-    "את יכולה לצלם אותנו?",
-    "אתם יכולים לצלם אותנו?",
-    "תוכל לצלם אותנו?"
+    "אתה יכול לכתוב לי את זה?",
+    "את יכולה לכתוב לי את זה?",
+    "תוכל לכתוב לי את זה?",
+    "אתה יכול לרשום לי את זה?",
+    "תוכל לרשום לי את זה?",
+    "אתה יכול לרשום את זה בשבילי?",
+    "תוכל לרשום את זה בשבילי?",
+    "אתה יכול לכתוב את זה בשבילי?",
+    "תוכל לכתוב את זה בשבילי?"
    ]
   },
   {
@@ -246,11 +251,12 @@
    "id": "x-en-021",
    "direction": "en-he",
    "category": "food",
-   "source": "I am allergic to nuts.",
-   "reference": "אני אלרגי לאגוזים.",
+   "source": "I don't eat eggs or cheese.",
+   "reference": "אני לא אוכל ביצים או גבינה.",
    "accept": [
-    "אני אלרגית לאגוזים.",
-    "יש לי אלרגיה לאגוזים."
+    "אני לא אוכלת ביצים או גבינה.",
+    "אני לא אוכל ביצים וגבינה.",
+    "אני לא אוכל ביצים או גבינות."
    ]
   },
   {
@@ -277,14 +283,14 @@
    "id": "x-en-024",
    "direction": "en-he",
    "category": "food",
-   "source": "What do you recommend?",
-   "reference": "על מה אתה ממליץ?",
+   "source": "Which dish is the most popular?",
+   "reference": "איזו מנה הכי פופולרית?",
    "accept": [
-    "מה אתה ממליץ?",
-    "על מה את ממליצה?",
-    "מה את ממליצה?",
-    "על מה אתם ממליצים?",
-    "מה אתם ממליצים?"
+    "איזו מנה היא הכי פופולרית?",
+    "איזו מנה הכי אהובה?",
+    "איזו מנה היא הפופולרית ביותר?",
+    "איזו מנה הפופולרית ביותר?",
+    "מהי המנה הפופולרית ביותר?"
    ]
   },
   {
@@ -336,27 +342,23 @@
    "id": "x-en-029",
    "direction": "en-he",
    "category": "food",
-   "source": "Is the tip included?",
-   "reference": "הטיפ כלול?",
+   "source": "The waiter forgot our drinks.",
+   "reference": "המלצר שכח את המשקאות שלנו.",
    "accept": [
-    "האם הטיפ כלול?",
-    "השירות כלול?",
-    "האם התשר כלול?",
-    "התשר כלול?"
+    "המלצר שכח את השתייה שלנו."
    ]
   },
   {
    "id": "x-en-030",
    "direction": "en-he",
    "category": "food",
-   "source": "Can I pay by credit card?",
-   "reference": "אפשר לשלם בכרטיס אשראי?",
+   "source": "Do you take dollars?",
+   "reference": "אתם מקבלים דולרים?",
    "accept": [
-    "אני יכול לשלם בכרטיס אשראי?",
-    "אני יכולה לשלם בכרטיס אשראי?",
-    "אפשר לשלם באשראי?",
-    "האם אפשר לשלם בכרטיס אשראי?",
-    "האם אני יכול לשלם בכרטיס אשראי?"
+    "אתה מקבל דולרים?",
+    "האם אתם מקבלים דולרים?",
+    "אתם לוקחים דולרים?",
+    "אתה לוקח דולרים?"
    ]
   },
   {
@@ -497,49 +499,58 @@
    "id": "x-en-042",
    "direction": "en-he",
    "category": "shop",
-   "source": "That is too expensive.",
-   "reference": "זה יקר מדי.",
+   "source": "This bag is too heavy.",
+   "reference": "התיק הזה כבד מדי.",
    "accept": [
-    "זה יותר מדי יקר.",
-    "זה יקר מדיי."
+    "התיק הזה יותר מדי כבד.",
+    "התיק הזה כבד מדיי.",
+    "השקית הזאת כבדה מדי.",
+    "התיק הזה כבד מידי."
    ]
   },
   {
    "id": "x-en-043",
    "direction": "en-he",
    "category": "shop",
-   "source": "Can I try it on?",
-   "reference": "אפשר למדוד?",
+   "source": "I am looking for a birthday present for my husband.",
+   "reference": "אני מחפשת מתנת יום הולדת לבעלי.",
    "accept": [
-    "אפשר למדוד את זה?",
-    "אני יכול למדוד את זה?",
-    "אני יכולה למדוד את זה?",
-    "אני יכול למדוד?"
+    "אני מחפשת מתנת יום הולדת לבעל שלי.",
+    "אני מחפש מתנת יום הולדת לבעלי.",
+    "אני מחפש מתנת יום הולדת לבעל שלי.",
+    "אני מחפשת מתנה ליום הולדת לבעלי.",
+    "אני מחפש מתנה ליום הולדת לבעלי.",
+    "אני מחפשת מתנה ליום ההולדת של בעלי.",
+    "אני מחפש מתנה ליום ההולדת של בעלי."
    ]
   },
   {
    "id": "x-en-044",
    "direction": "en-he",
    "category": "shop",
-   "source": "I'm just looking, thanks.",
-   "reference": "אני רק מסתכל, תודה.",
+   "source": "Do you have a smaller one?",
+   "reference": "יש לכם קטן יותר?",
    "accept": [
-    "אני רק מסתכלת, תודה.",
-    "רק מסתכל, תודה.",
-    "רק מסתכלת, תודה."
+    "יש לך קטן יותר?",
+    "יש לכם אחד קטן יותר?",
+    "יש לך אחד קטן יותר?",
+    "יש לכם יותר קטן?",
+    "יש לך יותר קטן?",
+    "יש לך אחד יותר קטן?",
+    "יש לכם אחד יותר קטן?"
    ]
   },
   {
    "id": "x-en-045",
    "direction": "en-he",
    "category": "shop",
-   "source": "Where is the nearest ATM?",
-   "reference": "איפה הכספומט הקרוב?",
+   "source": "Somebody took my seat.",
+   "reference": "מישהו לקח את המקום שלי.",
    "accept": [
-    "איפה הכספומט הכי קרוב?",
-    "איפה הכספומט הקרוב ביותר?",
-    "איפה נמצא הכספומט הקרוב ביותר?",
-    "היכן הכספומט הקרוב ביותר?"
+    "מישהו תפס את המקום שלי.",
+    "מישהו לקח לי את המקום.",
+    "מישהו לקח את הכיסא שלי.",
+    "מישהו לקח את המושב שלי."
    ]
   },
   {
@@ -693,40 +704,34 @@
    "id": "x-en-058",
    "direction": "en-he",
    "category": "health",
-   "source": "Someone stole my wallet.",
-   "reference": "מישהו גנב לי את הארנק.",
+   "source": "My daughter swallowed a coin.",
+   "reference": "הבת שלי בלעה מטבע.",
    "accept": [
-    "מישהו גנב את הארנק שלי.",
-    "גנבו לי את הארנק.",
-    "גנבו את הארנק שלי."
+    "בתי בלעה מטבע."
    ]
   },
   {
    "id": "x-en-059",
    "direction": "en-he",
    "category": "health",
-   "source": "Call an ambulance!",
-   "reference": "תזמינו אמבולנס!",
+   "source": "His leg is bleeding.",
+   "reference": "הרגל שלו מדממת.",
    "accept": [
-    "תקראו לאמבולנס!",
-    "תתקשרו לאמבולנס!",
-    "תזמין אמבולנס!",
-    "הזמינו אמבולנס!",
-    "קראו לאמבולנס!",
-    "תקרא לאמבולנס!",
-    "התקשרו לאמבולנס!"
+    "יורד לו דם מהרגל.",
+    "רגלו מדממת."
    ]
   },
   {
    "id": "x-en-060",
    "direction": "en-he",
    "category": "health",
-   "source": "My head hurts.",
-   "reference": "כואב לי הראש.",
+   "source": "We need help right now.",
+   "reference": "אנחנו צריכים עזרה עכשיו.",
    "accept": [
-    "הראש שלי כואב.",
-    "יש לי כאב ראש.",
-    "הראש כואב לי."
+    "אנחנו צריכים עזרה מיד.",
+    "אנחנו צריכים עזרה ברגע זה.",
+    "אנו זקוקים לעזרה עכשיו.",
+    "אנחנו זקוקים לעזרה עכשיו."
    ]
   },
   {
@@ -744,13 +749,13 @@
    "id": "x-en-062",
    "direction": "en-he",
    "category": "health",
-   "source": "Where is the nearest pharmacy?",
-   "reference": "איפה בית המרקחת הקרוב?",
+   "source": "I can't find my glasses.",
+   "reference": "אני לא מוצא את המשקפיים שלי.",
    "accept": [
-    "איפה בית המרקחת הכי קרוב?",
-    "איפה בית המרקחת הקרוב ביותר?",
-    "היכן בית המרקחת הקרוב ביותר?",
-    "איפה נמצא בית המרקחת הקרוב ביותר?"
+    "אני לא מוצאת את המשקפיים שלי.",
+    "אני לא יכול למצוא את המשקפיים שלי.",
+    "אני לא יכולה למצוא את המשקפיים שלי.",
+    "אני לא מוצא את המשקפיים."
    ]
   },
   {
@@ -771,13 +776,14 @@
    "id": "x-en-064",
    "direction": "en-he",
    "category": "health",
-   "source": "Is there a doctor here?",
-   "reference": "יש כאן רופא?",
+   "source": "She has trouble breathing.",
+   "reference": "קשה לה לנשום.",
    "accept": [
-    "יש פה רופא?",
-    "האם יש כאן רופא?",
-    "האם יש פה רופא?",
-    "יש רופא כאן?"
+    "יש לה קשיי נשימה.",
+    "היא מתקשה לנשום.",
+    "יש לה בעיות נשימה.",
+    "יש לה בעיה לנשום.",
+    "יש לה קושי לנשום."
    ]
   },
   {
@@ -841,14 +847,12 @@
   {
    "id": "x-en-070",
    "direction": "en-he",
-   "category": "health",
-   "source": "I feel dizzy.",
-   "reference": "יש לי סחרחורת.",
+   "category": "hotel",
+   "source": "The window in our room does not close.",
+   "reference": "החלון בחדר שלנו לא נסגר.",
    "accept": [
-    "אני מרגיש סחרחורת.",
-    "אני מרגישה סחרחורת.",
-    "אני מסוחרר.",
-    "אני מסוחררת."
+    "החלון בחדר שלנו אינו נסגר.",
+    "החלון בחדר שלנו לא סוגר."
    ]
   },
   {
@@ -902,15 +906,14 @@
    "id": "x-en-075",
    "direction": "en-he",
    "category": "hotel",
-   "source": "What time is checkout?",
-   "reference": "מתי הצ'ק-אאוט?",
+   "source": "Could we have a quieter room?",
+   "reference": "אפשר לקבל חדר שקט יותר?",
    "accept": [
-    "באיזו שעה הצ'ק-אאוט?",
-    "מתי צ'ק אאוט?",
-    "באיזו שעה הצ'ק אאוט?",
-    "מתי הצ'ק אאוט?",
-    "באיזו שעה צריך לפנות את החדר?",
-    "מתי צריך לפנות את החדר?"
+    "אפשר לקבל חדר יותר שקט?",
+    "נוכל לקבל חדר שקט יותר?",
+    "נוכל לקבל חדר יותר שקט?",
+    "אנחנו יכולים לקבל חדר שקט יותר?",
+    "אנחנו יכולים לקבל חדר יותר שקט?"
    ]
   },
   {
@@ -976,34 +979,34 @@
    "id": "x-en-081",
    "direction": "en-he",
    "category": "social",
-   "source": "What is your name?",
-   "reference": "מה שמך?",
+   "source": "How old are your children?",
+   "reference": "בני כמה הילדים שלך?",
    "accept": [
-    "איך קוראים לך?",
-    "מה השם שלך?"
+    "בני כמה הילדים שלכם?",
+    "בני כמה ילדיך?",
+    "מה הגיל של הילדים שלך?"
    ]
   },
   {
    "id": "x-en-082",
    "direction": "en-he",
    "category": "social",
-   "source": "Where are you from?",
-   "reference": "מאיפה אתה?",
+   "source": "I grew up in a small town.",
+   "reference": "גדלתי בעיירה קטנה.",
    "accept": [
-    "מאיפה את?",
-    "מאין אתה?",
-    "מאיפה אתם?",
-    "מאין את?"
+    "גדלתי בעיר קטנה.",
+    "אני גדלתי בעיירה קטנה.",
+    "אני גדלתי בעיר קטנה."
    ]
   },
   {
    "id": "x-en-083",
    "direction": "en-he",
    "category": "social",
-   "source": "I am learning Hebrew.",
-   "reference": "אני לומד עברית.",
+   "source": "We met at university.",
+   "reference": "נפגשנו באוניברסיטה.",
    "accept": [
-    "אני לומדת עברית."
+    "הכרנו באוניברסיטה."
    ]
   },
   {
@@ -1137,16 +1140,12 @@
    "id": "x-en-094",
    "direction": "en-he",
    "category": "social",
-   "source": "I'm sorry I'm late.",
-   "reference": "סליחה על האיחור.",
+   "source": "I forgot to call my mother.",
+   "reference": "שכחתי להתקשר לאמא שלי.",
    "accept": [
-    "סליחה שאיחרתי.",
-    "אני מצטער שאיחרתי.",
-    "אני מצטערת שאיחרתי.",
-    "מצטער שאיחרתי.",
-    "אני מצטער על האיחור.",
-    "מצטער על האיחור.",
-    "אני מצטער שאני מאחר."
+    "שכחתי להתקשר לאמי.",
+    "שכחתי לצלצל לאמא שלי.",
+    "שכחתי להתקשר אל אמא שלי."
    ]
   },
   {
@@ -2119,12 +2118,15 @@
    "id": "x-he-048",
    "direction": "he-en",
    "category": "shop",
-   "source": "איפה תאי המדידה?",
-   "reference": "Where are the fitting rooms?",
+   "source": "איפה אפשר למדוד את המכנסיים?",
+   "reference": "Where can I try on the pants?",
    "accept": [
-    "Where are the dressing rooms?",
-    "Where are the changing rooms?",
-    "Where is the fitting room?"
+    "Where can I try the pants on?",
+    "Where can I try on the trousers?",
+    "Where can I try on these pants?",
+    "Where can I try the trousers on?",
+    "Where can I try on pants?",
+    "Where can you try on the pants?"
    ]
   },
   {
@@ -2238,15 +2240,13 @@
    "id": "x-he-056",
    "direction": "he-en",
    "category": "health",
-   "source": "אני לא מרגיש טוב.",
-   "reference": "I don't feel well.",
+   "source": "אני מרגיש הרבה יותר טוב היום.",
+   "reference": "I feel much better today.",
    "accept": [
-    "I am not feeling well.",
-    "I don't feel good.",
-    "I am not feeling good.",
-    "I don't feel so good.",
-    "I don't feel so well.",
-    "I don't feel very well."
+    "I am feeling much better today.",
+    "I feel a lot better today.",
+    "I am feeling a lot better today.",
+    "I feel so much better today."
    ]
   },
   {
@@ -3211,17 +3211,16 @@
    "id": "x-he-120",
    "direction": "he-en",
    "category": "shul",
-   "source": "שבת שלום ומבורך.",
-   "reference": "A peaceful and blessed Shabbat.",
+   "source": "שבת שלום לכל המשפחה.",
+   "reference": "Shabbat shalom to the whole family.",
    "accept": [
-    "Shabbat shalom and blessings.",
-    "Shabbat shalom and blessed.",
-    "Have a peaceful and blessed Shabbat.",
-    "A peaceful and blessed Sabbath.",
-    "Shabbat shalom and be blessed.",
-    "Peaceful and blessed Shabbat.",
-    "A blessed and peaceful Shabbat.",
-    "Good Shabbat and blessed."
+    "Shabbat shalom to all the family.",
+    "Shabbat shalom to the entire family.",
+    "Good Shabbat to the whole family.",
+    "Shabbat shalom to all of the family.",
+    "A peaceful Sabbath to the whole family.",
+    "Good Sabbath to the whole family.",
+    "Shabbat shalom to the family."
    ]
   }
  ]

@@ -3,7 +3,7 @@
  "generated": "2026-11-10",
  "proofread": false,
  "nativeReview": "required",
- "note": "Draft practical conversation units for the Israeli track. Every Hebrew line is copied from data/corpus/phrasebook.json or cited by lesson id from data/curriculum/lessons.json. No new Hebrew was composed. The phrasebook itself is marked native-speaker-needed (pointing and register); these units inherit that hold. Not a 126th lesson and not wired into the router. Spaced repetition reuses src/curriculum/srs.js (and the existing vocab review queue under srs.vocab). Listening uses existing manifest ids (phrasebook rows and lesson-word ids). Speaking uses the existing speak survival sets. Written 10 November 2026, America/Toronto.",
+ "note": "Draft practical conversation units for the Israeli track. Every Hebrew line is copied from data/corpus/phrasebook.json or cited by lesson id from data/curriculum/lessons.json. No new Hebrew was composed. The phrasebook itself is marked native-speaker-needed (pointing and register); these units inherit that hold. Not a 126th lesson. Wired behind the Practical preview route (#/practical). Spaced repetition reuses src/curriculum/srs.js (and the existing vocab review queue under srs.vocab). Listening uses existing manifest ids (phrasebook rows and lesson-word ids). Speaking uses the existing speak survival sets. Written 10 November 2026, America/Toronto.",
  "srs": {
   "scheduler": "src/curriculum/srs.js",
   "also": "src/vocab/vocab.view.js reviews stored under srs.vocab",

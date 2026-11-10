@@ -1,6 +1,6 @@
 // @ts-check
 // #/league: the weekly practice league. The honesty line is always first, above the table, and is never shortened.
-import { h, confetti } from './dom.js';
+import { h, confetti, setKids } from './dom.js';
 import { retention } from './boot.js';
 import { HONESTY_LINE, LEAGUE, leagueView, timeLeftText, tierOf } from './leagues.js';
 import { gemsText } from './gems.js';
@@ -12,9 +12,9 @@ export function mount(root, ctx) {
   let greeted = false;
   function draw() {
     const rec = R.get();
-    if (R.calm()) { body.replaceChildren(h('p', {}, 'Calm mode is on, so the practice league is resting.')); return; }
-    if (rec.league.enabled === false) { body.replaceChildren(h('p', {}, 'The practice league is off.'), h('button', { type: 'button', class: 'btn', onclick: () => R.update((r) => { r.league.enabled = true; return r; }) }, 'Show the practice league')); return; }
-    if (!R.leagueShown()) { body.replaceChildren(h('p', {}, `Leagues open after ${LEAGUE.unlockLessons} lessons. You have finished ${rec.lessonsFinished}.`), h('a', { class: 'btn', href: '#/learn' }, 'Go to lessons')); return; }
+    if (R.calm()) { setKids(body, h('p', {}, 'Calm mode is on, so the practice league is resting.')); return; }
+    if (rec.league.enabled === false) { setKids(body, h('p', {}, 'The practice league is off.'), h('button', { type: 'button', class: 'btn', onclick: () => R.update((r) => { r.league.enabled = true; return r; }) }, 'Show the practice league')); return; }
+    if (!R.leagueShown()) { setKids(body, h('p', {}, `Leagues open after ${LEAGUE.unlockLessons} lessons. You have finished ${rec.lessonsFinished}.`), h('a', { class: 'btn', href: '#/learn' }, 'Go to lessons')); return; }
     const v = leagueView(rec), kids = [];
     kids.push(h('p', { class: 'ret-honest' }, HONESTY_LINE));
     if (v.resultUnseen && v.last) {
@@ -37,7 +37,7 @@ export function mount(root, ctx) {
     kids.push(h('table', { class: 'ret-table' }, h('caption', {}, `${v.tier.en} league, 30 players. You are number ${v.you.rank}.`),
       h('thead', {}, h('tr', {}, h('th', { scope: 'col' }, 'Rank'), h('th', { scope: 'col' }, 'Player'), h('th', { scope: 'col' }, 'XP'), h('th', { scope: 'col' }, 'This week'))), h('tbody', {}, ...rows)));
     kids.push(h('p', { class: 'muted' }, `Moving up pays ${gemsText(50)}; first place pays ${gemsText(100)}. No results change between Friday evening and Saturday night.`));
-    body.replaceChildren(...kids);
+    setKids(body, ...kids);
   }
   root.replaceChildren(h('div', { class: 'stack ret-league alef-retention' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'League'), body));
   const on = () => { try { draw(); } catch { /* keep the last drawing */ } };

@@ -177,3 +177,23 @@ test('streak card: every state has its line; Friday night and Yom Tov are rest, 
   assert.deepEqual(line({}, '2026-11-10T09:00'), ['new', 'Finish one quick lesson to start a streak.']);
   for (const s of ['rest', 'done', 'freeze-used', 'at-risk', 'open', 'broken', 'new']) assert.doesNotMatch(streakLine({ state: s, count: 3, best: 5, held: 1 }), /undefined|NaN/);
 });
+test('review round 2 fix: a zone change noticed on one visit still covers the day judged on the next', () => {
+  const end = T('2026-11-09T23:00');
+  const r0 = ret(); r0.lastTz = 'America/Toronto'; r0.sessions = [{ s: end - 600000, e: end }];
+  process.env.TZ = 'Asia/Jerusalem';
+  try {
+    const first = applyRollover(streakRec(), r0, end + 2 * 3600000, { tz: 'Asia/Jerusalem' }); // landed; still Tuesday morning there, nothing missed yet
+    assert.deepEqual(first.events, []); assert.equal(first.ret.lastTz, 'Asia/Jerusalem');
+    const second = applyRollover(first.streak, first.ret, end + 20 * 3600000, { tz: 'Asia/Jerusalem' }); // Wednesday there: Tuesday was skipped
+    assert.deepEqual(second.events, ['travel_covered']); assert.equal(projectStreak(second.streak, end + 20 * 3600000).count, 10);
+  } finally { process.env.TZ = 'America/Toronto'; }
+});
+test('owner switch: a repair can also count today (off by default)', () => {
+  const thu = T('2026-11-05T10:00'), r0 = ret({ gems: 600 }); r0.freezes.evaluatedThrough = '2026-11-01';
+  const a = applyRollover(streakRec({ last: '2026-11-02' }), r0, thu);
+  assert.equal(STREAK.repairCountsToday, false);
+  const plain = repairStreak(a.streak, a.ret, thu); assert.deepEqual([projectStreak(plain.streak, thu).count, projectStreak(plain.streak, thu).activeToday], [10, false]);
+  const counted = repairStreak(a.streak, a.ret, thu, { countToday: true }); assert.deepEqual([projectStreak(counted.streak, thu).count, projectStreak(counted.streak, thu).activeToday], [11, true]);
+  assert.equal(projectStreak(counted.streak, T('2026-11-06T10:00')).count, 11, 'and tomorrow it is still standing');
+  assert.equal(projectStreak(plain.streak, T('2026-11-06T10:00')).broken, true, 'with the switch off, skipping the day of the repair breaks it again');
+});

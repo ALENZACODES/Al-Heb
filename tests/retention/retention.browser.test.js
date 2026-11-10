@@ -15,6 +15,8 @@ const ret = (o = {}) => ({ v: 1, installId: 'browser-test', createdAt: day(-9), 
   hearts: { enabled: null, n: 3, lastRefillAt: Date.now(), lost: [] }, league: { tier: 2, weekXp: 40, joined: true }, ...o });
 const streak = { v: 2, count: 4, best: 6, last: day(-1), frozenDates: [], doneDates: [day(-1)], freeze: false, mode: 'reform' };
 const stored = (page, key) => page.evaluate((k) => JSON.parse(localStorage.getItem(k)), key);
+/** Text that should never reach a learner: an empty slot printed as a word. */
+const stray = (page) => page.evaluate(() => { const bad = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); for (let n = w.nextNode(); n; n = w.nextNode()) if (n.parentElement?.closest('.alef-retention, .ret-bar') && /^(null|undefined|NaN|false|true|\[object Object\])$/.test(n.textContent.trim())) bad.push(n.parentElement.className + ': ' + n.textContent); return bad; });
 const noSideScroll = (page) => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1);
 
 async function open(browser, base, seed, opts = {}) {
@@ -42,6 +44,7 @@ test('top bar, daily-goal ring, shop purchase and league table at 320, 360 and 3
       assert.equal(await a.page.$$eval('.ret-strip .ret-dot', (n) => n.length), 7);
       assert.equal(await a.page.$$eval('.ret-quests .ret-quest-list li', (n) => n.length), new Date().getDay() === 6 ? 0 : 3, 'three quests (none on Saturday)');
       assert.ok(await noSideScroll(a.page), `home ${width}`);
+      assert.deepEqual(await stray(a.page), [], `home ${width}`);
       if (width === 360) {
         await a.page.waitForFunction(() => /quick=1/.test(document.querySelector('.ret-quick')?.getAttribute('href') || ''), null, { timeout: 15000 });
         await a.go('#/shop', '[data-buy="freeze"]');
@@ -52,12 +55,19 @@ test('top bar, daily-goal ring, shop purchase and league table at 320, 360 and 3
         const r = await stored(a.page, 'alef:retention.v1');
         assert.deepEqual([r.gems.balance, r.freezes.held], [250, 1]);
       }
-      await a.go('#/shop', '.ret-shop'); assert.ok(await noSideScroll(a.page), `shop ${width}`);
+      await a.go('#/shop', '.ret-shop'); assert.ok(await noSideScroll(a.page), `shop ${width}`); assert.deepEqual(await stray(a.page), [], `shop ${width}`);
+      if (width === 390) { // keyboard: the question takes focus, and after the answer focus returns to the page, not to nowhere
+        await a.page.focus('[data-buy="freeze"]'); await a.page.keyboard.press('Enter');
+        assert.equal(await a.page.evaluate(() => document.activeElement.getAttribute('data-act')), 'confirm');
+        await a.page.keyboard.press('Enter');
+        assert.ok(await a.page.evaluate(() => document.activeElement !== document.body && !!document.activeElement.closest('.ret-shop')), 'focus stays in the shop after buying');
+        assert.match(await a.page.$eval('.ret-how', (n) => n.textContent), /How It All Works.*pretend/s);
+      }
       await a.go('#/league', '.ret-table tbody tr');
       assert.equal(await a.page.$$eval('.ret-table tbody tr', (n) => n.length), 30);
       assert.ok(await a.page.evaluate(() => { const line = document.querySelector('.ret-honest'), table = document.querySelector('.ret-table'); return /pretend/.test(line.textContent) && !!(line.compareDocumentPosition(table) & 4); }), 'the honesty line comes before the table');
       assert.match(await a.page.$eval('.ret-table .is-you', (n) => n.textContent), /You/);
-      assert.ok(await noSideScroll(a.page), `league ${width}`);
+      assert.ok(await noSideScroll(a.page), `league ${width}`); assert.deepEqual(await stray(a.page), [], `league ${width}`);
       assert.deepEqual(a.errors, []);
       await a.close();
     }
@@ -125,6 +135,11 @@ test('zero hearts gates a new lesson but not review; reduced motion runs no anim
     await a.go('#/', '.ret-goal');
     assert.equal(await a.page.evaluate(() => [...document.querySelectorAll('.alef-retention, .alef-retention *')].reduce((n, el) => n + el.getAnimations().length, 0)), 0);
     assert.deepEqual(a.errors, []); await a.close();
+    const hid = await open(browser, base, { 'alef:settings': { onboarded: true, showStreak: false }, 'alef:retention.v1': ret() });
+    await hid.go('#/', '.ret-goal');
+    assert.deepEqual([await hid.page.$$eval('.ret-flame, .ret-strip', (n) => n.length), await stray(hid.page)], [0, []], 'with streaks hidden there is no flame, no strip and no stray text');
+    await hid.go('#/shop', '.ret-shop'); assert.deepEqual(await stray(hid.page), []);
+    await hid.close();
     const c = await open(browser, base, { 'alef:settings': { onboarded: true, calmMode: true }, 'alef:retention.v1': ret() });
     await c.go('#/', 'body[data-ready="1"]'); await c.page.waitForSelector('.ret-bar', { state: 'attached' });
     assert.deepEqual(await c.page.evaluate(() => [document.querySelector('.ret-bar').hidden, !!document.querySelector('.ret-goal')]), [true, false]);
@@ -201,5 +216,32 @@ test('Home after a week away shows the welcome card; on Monday it shows last wee
       await a.page.evaluate(() => document.querySelector('.ret-recap button').click()); assert.equal(!!(await a.page.$('.ret-recap')), false); }
     assert.ok(await noSideScroll(a.page)); assert.deepEqual(a.errors, []);
     await a.close();
+  });
+});
+
+test('by hand until now: the goal picker keeps focus and stays open by keyboard; a finished lesson stays open at zero hearts while a new one is gated', { skip: !chromium, timeout: 240000 }, async () => {
+  await withApp(async (browser, base) => {
+    const a = await open(browser, base, { 'alef:retention.v1': ret() });
+    await a.go('#/', '.ret-goal');
+    await a.page.keyboard.press('Escape'); await a.page.waitForTimeout(400); await a.page.evaluate(() => document.querySelectorAll('[class*="veil"]').forEach((v) => v.remove())); // the opening prayer, when shown, takes the keys first
+    await a.page.focus('.ret-goal-pick summary'); await a.page.keyboard.press('Enter');
+    await a.page.focus('[data-goal="30"]'); await a.page.keyboard.press('Enter'); await a.page.waitForTimeout(300);
+    assert.deepEqual(await a.page.evaluate(() => [JSON.parse(localStorage.getItem('alef:retention.v1')).goal, document.activeElement.getAttribute('data-goal'), document.activeElement.getAttribute('aria-pressed'), document.querySelector('.ret-goal-pick').open, document.querySelector('.ret-goal-text').textContent]),
+      [30, '30', 'true', true, '0 of 30 XP today.']);
+    await a.close();
+
+    const b = await open(browser, base, { 'alef:retention.v1': { v: 1, installId: 'gate', lessonsFinished: 0 } });
+    await b.go('#/learn?lesson=r01&quick=1', '.alef-chunked #alef-part-title');
+    for (let i = 0; i < 90 && !(await b.page.$('.alef-summary')); i++) {
+      await b.page.evaluate(() => { const vis = (x) => x && !x.hidden && !x.disabled && x.offsetParent !== null; const opt = [...document.querySelectorAll('.alef-chunked .alef-int-opt')].find(vis); if (opt) return opt.click();
+        const main = [...document.querySelectorAll('.alef-chunked button.btn:not(.secondary)')].filter((x) => vis(x) && !/Listen|Hear/.test(x.textContent)); main[main.length - 1]?.click(); });
+      await b.page.waitForTimeout(150);
+    }
+    assert.ok(!!(await b.page.$('.alef-summary')), 'the first lesson was finished by clicking through it');
+    await b.page.evaluate(() => { const r = JSON.parse(localStorage.getItem('alef:retention.v1')); r.lessonsFinished = 5; r.hearts = { enabled: null, n: 0, lastRefillAt: Date.now(), lost: [] }; localStorage.setItem('alef:retention.v1', JSON.stringify(r)); });
+    const at = async (hash) => { await b.page.goto(base + '#/'); await b.page.goto(base + hash); await b.page.reload(); await b.page.waitForSelector('body[data-ready="1"]'); await b.page.waitForTimeout(1500); return b.page.evaluate(() => [!!document.querySelector('.ret-hearts-out'), !!document.querySelector('.alef-lesson-page')]); };
+    assert.deepEqual(await at('#/learn?lesson=r01'), [false, true], 'the finished lesson opens');
+    assert.deepEqual(await at('#/learn?lesson=r02'), [true, false], 'a new lesson is gated');
+    assert.deepEqual(b.errors, []); await b.close();
   });
 });

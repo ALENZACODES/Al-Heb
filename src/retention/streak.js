@@ -15,6 +15,8 @@ export const STREAK = Object.freeze({
   freezeMax: 2,
   repairWindowHours: 48, repairMaxDays: 3, repairMinStreak: 2,
   travelGraceHours: 36,
+  // Owner switch: should buying a repair also count today as done? Off: the learner still needs one lesson today (the shop says so).
+  repairCountsToday: false,
   // Owner rule: no streak is lost between Friday 18:00 and Saturday 21:00. A missed Friday would be lost at midnight,
   // inside that window, so Friday and Saturday (and Yom Tov with its eve) never count as missed days.
   shabbatCoversFriday: true,
@@ -95,10 +97,10 @@ export function repairOffer(ret, now = Date.now()) {
 }
 /**
  * Repair a broken streak inside the window: the missed days become rest days and the earlier count comes back
- * (added to any days already earned since the break).
+ * (added to any days already earned since the break). opt.countToday (default STREAK.repairCountsToday) also marks today done.
  * @returns {{ok:boolean, reason?:'none'|'balance', streak:object, rec:object}}
  */
-export function repairStreak(streakRaw, ret, now = Date.now()) {
+export function repairStreak(streakRaw, ret, now = Date.now(), opt = {}) {
   const offer = repairOffer(ret, now);
   if (!offer) return { ok: false, reason: 'none', streak: streakRaw, rec: ret };
   const s = spend(ret, offer.price, 'buy-repair', now);
@@ -110,6 +112,7 @@ export function repairStreak(streakRaw, ret, now = Date.now()) {
     const count = ret.repair.prev + rec.count;
     streak = toStored({ ...rec, count, best: Math.max(rec.best, count) });
   }
+  if ((opt.countToday ?? STREAK.repairCountsToday) && !projectStreak(streak, now).activeToday) streak = completeDay(streak, now);
   s.rec.repair = null;
   return { ok: true, streak, rec: s.rec };
 }

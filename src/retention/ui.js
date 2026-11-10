@@ -1,7 +1,7 @@
 // @ts-check
 // Retention UI pieces that live inside other screens: the top-bar chips (streak flame, gems, hearts), the daily-goal
 // ring on Home, the end-of-lesson reward panel, and the out-of-hearts gate. Text always sits beside every drawing.
-import { h, countUp, confetti } from './dom.js';
+import { h, countUp, confetti, setKids } from './dom.js';
 import { goalProgress, GOALS, setGoal } from './xp.js';
 import { gemsText, PRICES } from './gems.js';
 import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems } from './hearts.js';
@@ -36,7 +36,7 @@ export function mountTopBar(R, g = globalThis) {
       if (R.heartsShown()) kids.push(h('a', { class: 'ret-chip ret-hearts', href: '#/shop', 'aria-label': `${rec.hearts.n} of ${HEARTS.max} hearts. Open the shop.` },
         h('span', { class: 'ret-ico ret-ico-heart', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(rec.hearts.n))));
       if (R.leagueShown()) kids.push(h('a', { class: 'ret-chip ret-league', href: '#/league', 'aria-label': 'Practice league' }, h('span', { class: 'ret-ico ret-ico-cup', 'aria-hidden': 'true' })));
-      bar.replaceChildren(...kids);
+      setKids(bar, kids);
     } catch { /* the bar is optional */ }
   };
   doc.addEventListener('alef:retention', draw);
@@ -58,7 +58,7 @@ export function goalRingNode(R) {
     ring.append(svg('circle', { class: 'ret-ring-track', cx: 32, cy: 32, r: RING_R }), svg('circle', { class: `ret-ring-fill${p.done ? ' is-done' : ''}`, cx: 32, cy: 32, r: RING_R, 'stroke-dasharray': RING_C.toFixed(1), 'stroke-dashoffset': (RING_C * (1 - p.fraction)).toFixed(1), transform: 'rotate(-90 32 32)' }));
     const picker = h('details', { class: 'ret-goal-pick' }, h('summary', {}, 'Change XP goal'),
       h('div', { class: 'row', role: 'group', 'aria-label': 'Daily XP goal' }, ...GOALS.map((gl) => h('button', { type: 'button', class: 'btn secondary', 'data-goal': gl.xp, 'aria-pressed': String(rec.goal === gl.xp), onclick: () => { R.update((r) => setGoal(r, gl.xp)); R.say(`Daily goal set to ${gl.xp} XP.`); } }, `${gl.label} · ${gl.xp} XP`))));
-    wrap.replaceChildren(
+    setKids(wrap, 
       h('div', { class: 'ret-goal-row' }, ring,
         h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily XP Goal'),
           h('p', { class: 'ret-goal-text' }, p.done ? `Goal reached: ${p.xp} of ${p.goal} XP today.` : `${p.xp} of ${p.goal} XP today.`),
@@ -107,7 +107,7 @@ export function comebackNode(R) {
   const wrap = h('section', { class: 'card ret-comeback alef-retention', 'aria-labelledby': 'ret-back-h' });
   const draw = () => {
     const c = R.comeback(); wrap.hidden = !c; if (!c || wrap.childNodes.length) return;
-    wrap.replaceChildren(h('h2', { id: 'ret-back-h' }, 'Welcome Back'),
+    setKids(wrap, h('h2', { id: 'ret-back-h' }, 'Welcome Back'),
       h('p', {}, "Good to see you. Your hearts are full, and nothing you learned is lost. Start small: a few old words bring it all back."),
       h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/learn?review=1' }, 'Warm up with old words'), h('a', { class: 'btn secondary', href: '#/learn' }, 'Go to lessons')));
   };
@@ -136,7 +136,7 @@ export function questsNode(R) {
     const v = R.questView(), next = JSON.stringify(v);
     if (next === sig) return; sig = next;
     wrap.hidden = !v.on;
-    wrap.replaceChildren(h('h2', { id: 'ret-quests-h' }, "Today's Quests"),
+    setKids(wrap, h('h2', { id: 'ret-quests-h' }, "Today's Quests"),
       v.rest ? h('p', {}, 'A rest day. No quests today.')
         : h('ul', { class: 'ret-quest-list' }, ...v.items.map((q) => h('li', { class: q.done ? 'is-done' : '' },
           h('span', { class: 'ret-quest-mark', 'aria-hidden': 'true' }, q.done ? '\u2713' : ''), h('span', { class: 'ret-quest-text' }, q.text),

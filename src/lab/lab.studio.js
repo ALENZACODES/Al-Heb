@@ -405,6 +405,13 @@ const loadLabWords = (env) => once('lab-words', async () => {
 });
 
 /** Echo Hunt: one recorded (or written) target word among other verified words from the same lists. */
+/** Prefer a vocab-id word recording when the player has it, else the listed clip (phrasebook or lesson id). */
+export function resolveWordClip(word, hasClip) {
+  if (word?.id && hasClip?.('word', word.id)) return { kind: 'word', id: word.id };
+  if (word?.clip?.kind && word.clip.id && (!hasClip || hasClip(word.clip.kind, word.clip.id))) return word.clip;
+  return word?.clip?.kind && word.clip.id ? word.clip : null;
+}
+
 export function echoHuntPuzzle(words, level, rnd = Math.random) {
   const pool = uniqueBy(words.filter((w) => w.he && !holdsDivineName(w.he) && (w.tr || w.en)), (w) => consonants(w.he));
   const n = level <= 3 ? 3 : level <= 6 ? 4 : 5;
@@ -755,7 +762,7 @@ const echo = {
   async trial(env, level) {
     const pz = echoHuntPuzzle(env.data, level, env.rnd);
     const t0 = env.now();
-    const clip = pz.target.clip;
+    const clip = resolveWordClip(pz.target, env.hasClip);
     let heard = false;
     if (clip && env.hasClip?.(clip.kind, clip.id)) {
       heard = !!(await env.playClip(clip.kind, clip.id, pz.target.he));
@@ -795,5 +802,5 @@ export const STUDIO_DRILLS = Object.freeze({
 export const _studioTest = {
   holdsDivineName, VOWEL_SAY, wordBurstPuzzle, migrationPuzzle, starSearchPuzzle, rootForgePuzzle, rootForgeNextOk,
   letterSequencePuzzle, speedMatchPuzzle, letterSpanPuzzle, letterSpanOk, vowelRainPuzzle, tileTurnPuzzle,
-  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, shortEnglish,
+  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, resolveWordClip, shortEnglish,
 };

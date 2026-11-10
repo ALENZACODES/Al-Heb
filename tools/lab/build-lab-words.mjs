@@ -72,12 +72,32 @@ export function build() {
   const clips = readJSON('data/vocab/clip-lookup.json').clips;
   // Only recordings the shared player knows without the separate dictionary list (the lesson manifest and its word shards),
   // so a Brain Lab round never waits on a large download before it can speak.
-  const known = new Set([...readJSON('data/audio/manifest.json'), ...readJSON('data/audio/manifest-kind-word.json'), ...readJSON('data/audio/manifest-words-israeli.json')]
-    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing').map((r) => `${r.kind}|${r.id}|${r.voice}|${r.text}`));
+  const knownRows = [...readJSON('data/audio/manifest.json'), ...readJSON('data/audio/manifest-kind-word.json'), ...readJSON('data/audio/manifest-words-israeli.json')]
+    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
+  const known = new Set(knownRows.map((r) => `${r.kind}|${r.id}|${r.voice}|${r.text}`));
+  /** A clip the Brain Lab player can load (core manifest or word shard), never a dictionary-only recording. */
+  const shardClipFor = (he) => {
+    const idsByKind = new Map();
+    for (const r of knownRows) {
+      if (r.text !== he || (r.voice !== 'm' && r.voice !== 'f')) continue;
+      const key = `${r.kind}|${r.id}`;
+      const rec = idsByKind.get(key) || { kind: r.kind, id: r.id, voices: new Set() };
+      rec.voices.add(r.voice);
+      idsByKind.set(key, rec);
+    }
+    const both = [...idsByKind.values()].filter((x) => x.voices.has('m') && x.voices.has('f'));
+    both.sort((a, b) => (a.kind === 'word' ? 0 : 1) - (b.kind === 'word' ? 0 : 1) || String(a.id).localeCompare(String(b.id)));
+    return both[0] ? { kind: both[0].kind, id: both[0].id } : null;
+  };
   const clipFor = (he) => {
     const c = clips[he]; const m = c?.['m|israeli'], f = c?.['f|israeli'];
-    if (!(m && f && m.id === f.id && m.kind === f.kind)) return null;
-    return known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`) ? { kind: m.kind, id: m.id } : null;
+    if (m && f && m.id === f.id && m.kind === f.kind
+      && known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`)) {
+      return { kind: m.kind, id: m.id };
+    }
+    // Dictionary lookups often point at audio-dictionary.json, which Brain Lab does not load (Café Order's ten
+    // formerly silent food words: cake, juice, ice cream, chocolate, soup, apple, orange, sandwich, lemonade, challah).
+    return shardClipFor(he);
   };
   const word = (id) => { const w = dict.get(id); if (!w) throw new Error(`dictionary id ${id} not found`); return w; };
 

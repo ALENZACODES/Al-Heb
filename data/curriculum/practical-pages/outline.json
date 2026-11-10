@@ -27,8 +27,8 @@
  },
  "totals": {
   "units": 37,
-  "pages": 191,
-  "written": 94
+  "pages": 189,
+  "written": 101
  },
  "units": [
   {
@@ -1025,7 +1025,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Days of the Week",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-time/pu-time-p01"
     },
     {
@@ -1033,32 +1033,16 @@
      "order": 2,
      "kind": "grammar",
      "title": "Telling the Time",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-time/pu-time-p02"
     },
     {
      "id": "pu-time-p03",
      "order": 3,
-     "kind": "learn",
-     "title": "Dates and Months",
-     "status": "planned",
-     "route": "#/practical/pu-time/pu-time-p03"
-    },
-    {
-     "id": "pu-time-p04",
-     "order": 4,
-     "kind": "listen",
-     "title": "Hear the Time",
-     "status": "planned",
-     "route": "#/practical/pu-time/pu-time-p04"
-    },
-    {
-     "id": "pu-time-p05",
-     "order": 5,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
-     "route": "#/practical/pu-time/pu-time-p05"
+     "title": "Today and Tomorrow, and Unit Review",
+     "status": "written",
+     "route": "#/practical/pu-time/pu-time-p03"
     }
    ]
   },
@@ -1080,7 +1064,7 @@
      "order": 1,
      "kind": "learn",
      "title": "Hot, Cold, Rain",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-weather/pu-weather-p01"
     },
     {
@@ -1088,23 +1072,23 @@
      "order": 2,
      "kind": "grammar",
      "title": "It Is: No Word Needed",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-weather/pu-weather-p02"
     },
     {
      "id": "pu-weather-p03",
      "order": 3,
      "kind": "speak",
-     "title": "Talk About the Weather",
-     "status": "planned",
+     "title": "Seasons and What to Take",
+     "status": "written",
      "route": "#/practical/pu-weather/pu-weather-p03"
     },
     {
      "id": "pu-weather-p04",
      "order": 4,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Rain, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-weather/pu-weather-p04"
     }
    ]

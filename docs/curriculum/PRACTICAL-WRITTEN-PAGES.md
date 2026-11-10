@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (94)
+# Practical Hebrew: The Written Pages (101)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -1918,3 +1918,140 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Ask for help. → עֶזְרָה (ezra) · audio `i-44-w11`
 
 **Review queue from earlier pages:** `i-44-w3`, `i-44-w6`, `i-44-w2`, `i-44-w5`, `i-44-w8`, `i-44-w7`
+
+## pu-time-p01: Days of the Week
+
+*Learn page.* Name the first day of the week and Shabbat.
+
+**Grammar: Days are numbered: יוֹם רִאשׁוֹן.** In Israel the week starts on Sunday, and the days are counted: יוֹם רִאשׁוֹן is the first day, Sunday. Saturday is שַׁבָּת, the day of rest, so Sunday is a working day.
+
+**Culture.** Most buses and many shops stop from Friday afternoon until Saturday night; plan errands for Sunday to Thursday.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יוֹם רִאשׁוֹן | yom rishon \* | Sunday (first day) | `il12-w5` tts, f+m |
+| שַׁבָּת | shabat \* | Saturday; Sabbath | `il12-w6` tts, f+m |
+| שָׁעָה | sha'a \* | hour; time | `il12-w4` tts, f+m |
+
+**Speak.**
+
+- Say: Sunday. → יוֹם רִאשׁוֹן (yom rishon) · audio `il12-w5`
+- Say: Shabbat. → שַׁבָּת (shabat) · audio `il12-w6`
+
+**Review queue from earlier pages:** `greetings-07`, `greetings-08`
+
+## pu-time-p02: Telling the Time
+
+*Grammar page.* Ask and say the time, with half and quarter.
+
+**Grammar: The hour, then the part.** שָׁעָה is hour and also time. Say הַשָּׁעָה and the hour in the counting set, then add half or quarter after it: חֲצִי, רֶבַע.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שָׁעָה | sha'a \* | hour; time | `il12-w4` tts, f+m |
+| הַשָּׁעָה שָׁלוֹשׁ | hasha'a shalosh | it's three o'clock | `numbers-17` tts, f+m |
+| חֲצִי | chetsi | half | `numbers-18` tts, f+m |
+| רֶבַע | reva | quarter | `numbers-19` tts, f+m |
+
+**Speak.**
+
+- It is three. Say the time. → הַשָּׁעָה שָׁלוֹשׁ (hasha'a shalosh) · audio `numbers-17`
+- Say: half. → חֲצִי (chetsi) · audio `numbers-18`
+
+**Review queue from earlier pages:** `numbers-03-f`, `numbers-05-f`
+
+## pu-time-p03: Today and Tomorrow, and Unit Review
+
+*Review page.* Place a plan in time, then review the unit.
+
+**Grammar: Time words at the start or the end.** הַיּוֹם, מָחָר and אֶתְמוֹל can open the sentence or close it. Put them first when the time is the news: מָחָר, not today.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַיּוֹם | hayom \* | today | `il12-w1` tts, f+m |
+| מָחָר | machar \* | tomorrow | `il12-w2` synthetic-unreviewed, f+m |
+| אֶתְמוֹל | etmol \* | yesterday | `il12-w3` tts, f+m |
+
+**Speak.**
+
+- Say: tomorrow. → מָחָר (machar) · audio `il12-w2`
+
+**Review queue from earlier pages:** `il12-w5`, `il12-w6`, `il12-w4`, `numbers-17`, `il19-w1`, `i-38-w10`
+
+## pu-weather-p01: Hot, Cold, Rain
+
+*Learn page.* Say what the weather is like.
+
+**Grammar: The weather: two nouns as one.** מֶזֶג אֲוִיר is the weather, two nouns that work as one, like בֵּית חוֹלִים. חַם, קַר, גֶּשֶׁם and שֶׁמֶשׁ are enough to describe most Israeli days.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מֶזֶג אֲוִיר | mezeg avir \* | weather | `i-24-w1` tts, f+m |
+| חַם | cham \* | hot | `i-24-w2` tts, f+m |
+| קַר | kar \* | cold | `i-24-w3` tts, f+m |
+| גֶּשֶׁם | geshem \* | rain | `i-24-w4` tts, f+m |
+| שֶׁמֶשׁ | shemesh \* | sun | `i-24-w5` tts, f+m |
+
+**Speak.**
+
+- Say: hot. → חַם (cham) · audio `i-24-w2`
+- Say: rain. → גֶּשֶׁם (geshem) · audio `i-24-w4`
+
+**Review queue from earlier pages:** `small-talk-12`, `i-15-w11`
+
+## pu-weather-p02: It Is: No Word Needed
+
+*Grammar page.* Say it is windy, cloudy or snowing.
+
+**Grammar: It is: no word needed.** To say it is hot, Hebrew says just חַם. There is no word for it and no word for is. חַם לִי is different: I'm hot.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| רוּחַ | ruach \* | wind | `i-24-w6` tts, f+m |
+| עָנָן | anan \* | cloud | `i-24-w7` tts, f+m |
+| שֶׁלֶג | sheleg \* | snow | `i-24-w8` tts, f+m |
+
+**Speak.**
+
+- Say: wind. → רוּחַ (ruach) · audio `i-24-w6`
+- Say: snow. → שֶׁלֶג (sheleg) · audio `i-24-w8`
+
+**Review queue from earlier pages:** `i-24-w2`, `small-talk-12`, `directions-04`
+
+## pu-weather-p03: Seasons and What to Take
+
+*Speak page.* Name the seasons and what to bring.
+
+**Grammar: Seasons and clothes.** קַיִץ is summer, סְתָו autumn and אָבִיב spring. In the Israeli summer take a כּוֹבַע against the sun; in the cold months a מְעִיל.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קַיִץ | kayits \* | summer | `i-24-w10` tts, f+m |
+| אָבִיב | aviv \* | spring | `i-24-w12` tts, f+m |
+| סְתָו | stav \* | autumn | `i-24-w13` tts, f+m |
+| כּוֹבַע | kova \* | hat | `i-24-w14` tts, f+m |
+| מְעִיל | me'il \* | coat | `i-24-w15` tts, f+m |
+
+**Speak.**
+
+- Say: summer. → קַיִץ (kayits) · audio `i-24-w10`
+- Say: a hat. → כּוֹבַע (kova) · audio `i-24-w14`
+- Say: a coat. → מְעִיל (me'il) · audio `i-24-w15`
+
+**Review queue from earlier pages:** `i-24-w5`, `i-24-w3`
+
+## pu-weather-p04: Rain, and Unit Review
+
+*Review page.* Talk about the rain, then review the weather unit.
+
+**Grammar: Rain comes in winter.** In Israel גֶּשֶׁם falls mostly in the winter months; the summer is dry. Pair it with קַר when you describe a winter day.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גֶּשֶׁם | geshem \* | rain | `il15-w3` tts, f+m |
+
+**Speak.**
+
+- Say: rain. → גֶּשֶׁם (geshem) · audio `il15-w3`
+
+**Review queue from earlier pages:** `i-24-w1`, `i-24-w2`, `i-24-w3`, `i-24-w6`, `i-24-w10`, `i-24-w15`

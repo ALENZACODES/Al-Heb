@@ -1,11 +1,11 @@
-# Practical Hebrew: The 191-Page Plan
+# Practical Hebrew: The 189-Page Plan
 
-Lane C, round 3. This plan turns the Israel track into a structured conversation course of 191 pages in 36 units: one real
+Lane C, round 3. This plan turns the Israel track into a structured conversation course of 189 pages in 36 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 94 pages (levels 0 and 1, and the first four units of level 2) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+The first 101 pages (levels 0 and 1, and the first six units of level 2) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- Written pages (94): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
+- Written pages (101): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
@@ -71,7 +71,7 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 | Spaced repetition reviews | `review` (31 pages), plus `reviewOf[]` on every page | Earlier items come back on a 1, 3, 7, 14, 30-day schedule |
 | Level checks | `check` (5 pages) | Mixed items from every unit in the level |
 
-## Full Outline (191 Pages)
+## Full Outline (189 Pages)
 
 ### L0: First words
 
@@ -220,20 +220,18 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 - `pu-home-p03` speak: Call the Landlord **(written)**
 - `pu-home-p04` review: Help, and Unit Review **(written)**
 
-**`pu-time` Days, Time and Dates** (5 pages) · lessons il12
+**`pu-time` Days, Time and Dates** (3 pages) · lessons il12
 
-- `pu-time-p01` learn: Days of the Week
-- `pu-time-p02` grammar: Telling the Time
-- `pu-time-p03` learn: Dates and Months
-- `pu-time-p04` listen: Hear the Time
-- `pu-time-p05` review: Unit Review
+- `pu-time-p01` learn: Days of the Week **(written)**
+- `pu-time-p02` grammar: Telling the Time **(written)**
+- `pu-time-p03` review: Today and Tomorrow, and Unit Review **(written)**
 
 **`pu-weather` Weather and What to Take** (4 pages) · lessons il15, I-24
 
-- `pu-weather-p01` learn: Hot, Cold, Rain
-- `pu-weather-p02` grammar: It Is: No Word Needed
-- `pu-weather-p03` speak: Talk About the Weather
-- `pu-weather-p04` review: Unit Review
+- `pu-weather-p01` learn: Hot, Cold, Rain **(written)**
+- `pu-weather-p02` grammar: It Is: No Word Needed **(written)**
+- `pu-weather-p03` speak: Seasons and What to Take **(written)**
+- `pu-weather-p04` review: Rain, and Unit Review **(written)**
 
 **`pu-hotel` Hotel and Booking** (5 pages) · lessons il17 · dialogue `d-hotel`
 
@@ -394,7 +392,8 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 Round 3 wrote `pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02. Round 4 added
 `pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 7 added `pu-restaurant` (7 pages; its outline was cut from 10 because the sources hold no complaint or listening lines worth a page) and `pu-shop` (9 pages): 56 written, 191 in the outline. Round 8 finished level 1 with `pu-directions` (7), `pu-transport` (9) and `pu-small-talk` (8): 80 written. Round 9 added
 `pu-verbs-now` (3), `pu-past` (2), `pu-family` (5) and `pu-home` (4): 94 written. It also uses the gender pairs in
-`data/curriculum/gender-pairs.json` as a source for women's forms that the phrasebook lacks; those lines have no clip yet. Round 3's 20 pages hold 103 items,
+`data/curriculum/gender-pairs.json` as a source for women's forms that the phrasebook lacks; those lines have no clip yet. Round 10 added `pu-time` (3 pages, cut from 5 because the source has six words) and
+`pu-weather` (4): 101 written, 189 in the outline. Round 3's 20 pages hold 103 items,
 each with pointed Hebrew, transliteration, English and an audio clip id. Every page has a real grammar point, 1–3 speaking
 prompts, a listening round, and from page 2 on, earlier items queued for review. The readable copy is
 `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`.
@@ -419,7 +418,7 @@ one (בֵּית חוֹלִים, תַּחֲנַת), צָרִיךְ and צְרִי
 forms the phrasebook leaves out, such as מַה שְׁלוֹמֵךְ? and אֲנִי מִצְטַעֶרֶת) or `data/curriculum/dialogues.json`. The test
 re-reads each source and fails on any difference.
 
-**Audio.** 341 of the 408 items on the 94 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
+**Audio.** 365 of the 432 items on the 101 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
 clips, not human recordings. The 67 gaps are dialogue lines and gender-pair lines, which have no clips yet; the test allows gaps only on those two kinds of line.
 
 **Transliteration.** Phrasebook rows keep the phrasebook's transliteration. Thirty items (woman's forms and counting-set numbers that come only from the audio manifest,
@@ -448,7 +447,7 @@ Found while writing; nothing changed in the sources:
 
 ## What Is Left
 
-- Write the remaining 97 pages (the rest of level 2, then levels 3 and 4) to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
+- Write the remaining 88 pages (the rest of level 2, then levels 3 and 4) to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
 - View support for the v3 fields, listed above.
 - Clips for the dialogue lines, so dialogue pages can play.
 - A native-speaker read of everything marked `nativeReview`.

@@ -18,11 +18,11 @@ test("a fully written unit shows exactly its written pages, in order", () => {
   }
   const counts = writtenPageCounts(index, written);
   assert.equal(counts["pu-introducing"], 5);
-  assert.equal(counts["pu-weather"], index.units.find((u) => u.id === "pu-weather").pageCount, "unwritten units keep their draft count");
+  assert.equal(counts["pu-hotel"], index.units.find((u) => u.id === "pu-hotel").pageCount, "unwritten units keep their draft count");
 });
 
 test("units without written pages are unchanged", () => {
-  const cafe = unitOf("pu-weather");
+  const cafe = unitOf("pu-hotel");
   assert.equal(applyWritten(cafe, written), cafe);
 });
 

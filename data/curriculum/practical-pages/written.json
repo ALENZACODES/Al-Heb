@@ -26067,6 +26067,1754 @@
     "i-44-w8",
     "i-44-w7"
    ]
+  },
+  {
+   "id": "pu-time-p01",
+   "title": "Days of the Week",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the first day of the week and Shabbat.",
+   "grammarNote": "Days are numbered: יוֹם רִאשׁוֹן. In Israel the week starts on Sunday, and the days are counted: יוֹם רִאשׁוֹן is the first day, Sunday. Saturday is שַׁבָּת, the day of rest, so Sunday is a working day.",
+   "grammar": {
+    "point": "Days are numbered: יוֹם רִאשׁוֹן",
+    "body": "In Israel the week starts on Sunday, and the days are counted: יוֹם רִאשׁוֹן is the first day, Sunday. Saturday is שַׁבָּת, the day of rest, so Sunday is a working day.",
+    "examples": [
+     {
+      "itemId": "il12-w5",
+      "he": "יוֹם רִאשׁוֹן",
+      "en": "Sunday (first day)"
+     },
+     {
+      "itemId": "il12-w6",
+      "he": "שַׁבָּת",
+      "en": "Saturday; Sabbath"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il12-w5",
+     "source": "data/curriculum/lessons.json#il12.words[4]",
+     "he": "יוֹם רִאשׁוֹן",
+     "en": "Sunday (first day)",
+     "translit": "yom rishon",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w5"
+     },
+     "audio": {
+      "clipId": "il12-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il12-w6",
+     "source": "data/curriculum/lessons.json#il12.words[5]",
+     "he": "שַׁבָּת",
+     "en": "Saturday; Sabbath",
+     "translit": "shabat",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w6"
+     },
+     "audio": {
+      "clipId": "il12-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il12-w4",
+     "source": "data/curriculum/lessons.json#il12.words[3]",
+     "he": "שָׁעָה",
+     "en": "hour; time",
+     "translit": "sha'a",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w4"
+     },
+     "audio": {
+      "clipId": "il12-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il12-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il12-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il12-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "greetings-07",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "greetings-08",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il12-w5",
+    "il12-w6",
+    "il12-w4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w5"
+     },
+     "answer": "il12-w5",
+     "options": [
+      "il12-w6",
+      "il12-w4",
+      "il12-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w6"
+     },
+     "answer": "il12-w6",
+     "options": [
+      "il12-w5",
+      "il12-w4",
+      "il12-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w4"
+     },
+     "answer": "il12-w4",
+     "options": [
+      "il12-w5",
+      "il12-w6",
+      "il12-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: Sunday.",
+     "answer": "il12-w5",
+     "he": "יוֹם רִאשׁוֹן",
+     "translit": "yom rishon",
+     "en": "Sunday (first day)",
+     "audio": {
+      "clipId": "il12-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: Shabbat.",
+     "answer": "il12-w6",
+     "he": "שַׁבָּת",
+     "translit": "shabat",
+     "en": "Saturday; Sabbath",
+     "audio": {
+      "clipId": "il12-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "greetings-07",
+    "greetings-08"
+   ],
+   "culture": "Most buses and many shops stop from Friday afternoon until Saturday night; plan errands for Sunday to Thursday."
+  },
+  {
+   "id": "pu-time-p02",
+   "title": "Telling the Time",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Ask and say the time, with half and quarter.",
+   "grammarNote": "The hour, then the part. שָׁעָה is hour and also time. Say הַשָּׁעָה and the hour in the counting set, then add half or quarter after it: חֲצִי, רֶבַע.",
+   "grammar": {
+    "point": "The hour, then the part",
+    "body": "שָׁעָה is hour and also time. Say הַשָּׁעָה and the hour in the counting set, then add half or quarter after it: חֲצִי, רֶבַע.",
+    "examples": [
+     {
+      "itemId": "numbers-17",
+      "he": "הַשָּׁעָה שָׁלוֹשׁ",
+      "en": "it's three o'clock"
+     },
+     {
+      "itemId": "numbers-18",
+      "he": "חֲצִי",
+      "en": "half"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il12-w4",
+     "source": "data/curriculum/lessons.json#il12.words[3]",
+     "he": "שָׁעָה",
+     "en": "hour; time",
+     "translit": "sha'a",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w4"
+     },
+     "audio": {
+      "clipId": "il12-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "en": "it's three o'clock",
+     "translit": "hasha'a shalosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "audio": {
+      "clipId": "numbers-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chetsi",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-18"
+     },
+     "audio": {
+      "clipId": "numbers-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "רֶבַע",
+     "en": "quarter",
+     "translit": "reva",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-19"
+     },
+     "audio": {
+      "clipId": "numbers-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il12-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-18",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-03-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-05-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il12-w4",
+    "numbers-17",
+    "numbers-18",
+    "numbers-19"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w4"
+     },
+     "answer": "il12-w4",
+     "options": [
+      "numbers-17",
+      "numbers-18",
+      "il12-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "answer": "numbers-17",
+     "options": [
+      "il12-w4",
+      "numbers-18",
+      "numbers-17"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-18"
+     },
+     "answer": "numbers-18",
+     "options": [
+      "il12-w4",
+      "numbers-17",
+      "numbers-18"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-19"
+     },
+     "answer": "numbers-19",
+     "options": [
+      "il12-w4",
+      "numbers-17",
+      "numbers-19"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "It is three. Say the time.",
+     "answer": "numbers-17",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "translit": "hasha'a shalosh",
+     "en": "it's three o'clock",
+     "audio": {
+      "clipId": "numbers-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: half.",
+     "answer": "numbers-18",
+     "he": "חֲצִי",
+     "translit": "chetsi",
+     "en": "half",
+     "audio": {
+      "clipId": "numbers-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-03-f",
+    "numbers-05-f"
+   ]
+  },
+  {
+   "id": "pu-time-p03",
+   "title": "Today and Tomorrow, and Unit Review",
+   "order": 3,
+   "kind": "review",
+   "can": "Place a plan in time, then review the unit.",
+   "grammarNote": "Time words at the start or the end. הַיּוֹם, מָחָר and אֶתְמוֹל can open the sentence or close it. Put them first when the time is the news: מָחָר, not today.",
+   "grammar": {
+    "point": "Time words at the start or the end",
+    "body": "הַיּוֹם, מָחָר and אֶתְמוֹל can open the sentence or close it. Put them first when the time is the news: מָחָר, not today.",
+    "examples": [
+     {
+      "itemId": "il12-w2",
+      "he": "מָחָר",
+      "en": "tomorrow"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il12-w1",
+     "source": "data/curriculum/lessons.json#il12.words[0]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w1"
+     },
+     "audio": {
+      "clipId": "il12-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il12-w2",
+     "source": "data/curriculum/lessons.json#il12.words[1]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w2"
+     },
+     "audio": {
+      "clipId": "il12-w2",
+      "status": "synthetic-unreviewed",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il12-w3",
+     "source": "data/curriculum/lessons.json#il12.words[2]",
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": "etmol",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w3"
+     },
+     "audio": {
+      "clipId": "il12-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il12-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il12-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il12-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il12-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il12-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il12-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "il19-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "i-38-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il12-w1",
+    "il12-w2",
+    "il12-w3"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w1"
+     },
+     "answer": "il12-w1",
+     "options": [
+      "il12-w2",
+      "il12-w3",
+      "il12-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w2"
+     },
+     "answer": "il12-w2",
+     "options": [
+      "il12-w1",
+      "il12-w3",
+      "il12-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il12-w3"
+     },
+     "answer": "il12-w3",
+     "options": [
+      "il12-w1",
+      "il12-w2",
+      "il12-w3"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: tomorrow.",
+     "answer": "il12-w2",
+     "he": "מָחָר",
+     "translit": "machar",
+     "en": "tomorrow",
+     "audio": {
+      "clipId": "il12-w2",
+      "status": "synthetic-unreviewed",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il12-w5",
+    "il12-w6",
+    "il12-w4",
+    "numbers-17",
+    "il19-w1",
+    "i-38-w10"
+   ]
+  },
+  {
+   "id": "pu-weather-p01",
+   "title": "Hot, Cold, Rain",
+   "order": 1,
+   "kind": "learn",
+   "can": "Say what the weather is like.",
+   "grammarNote": "The weather: two nouns as one. מֶזֶג אֲוִיר is the weather, two nouns that work as one, like בֵּית חוֹלִים. חַם, קַר, גֶּשֶׁם and שֶׁמֶשׁ are enough to describe most Israeli days.",
+   "grammar": {
+    "point": "The weather: two nouns as one",
+    "body": "מֶזֶג אֲוִיר is the weather, two nouns that work as one, like בֵּית חוֹלִים. חַם, קַר, גֶּשֶׁם and שֶׁמֶשׁ are enough to describe most Israeli days.",
+    "examples": [
+     {
+      "itemId": "i-24-w1",
+      "he": "מֶזֶג אֲוִיר",
+      "en": "weather"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-24-w1",
+     "source": "data/curriculum/lessons.json#I-24.words[0]",
+     "he": "מֶזֶג אֲוִיר",
+     "en": "weather",
+     "translit": "mezeg avir",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w1"
+     },
+     "audio": {
+      "clipId": "i-24-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w2",
+     "source": "data/curriculum/lessons.json#I-24.words[1]",
+     "he": "חַם",
+     "en": "hot",
+     "translit": "cham",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w2"
+     },
+     "audio": {
+      "clipId": "i-24-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w3",
+     "source": "data/curriculum/lessons.json#I-24.words[2]",
+     "he": "קַר",
+     "en": "cold",
+     "translit": "kar",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w3"
+     },
+     "audio": {
+      "clipId": "i-24-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w4",
+     "source": "data/curriculum/lessons.json#I-24.words[3]",
+     "he": "גֶּשֶׁם",
+     "en": "rain",
+     "translit": "geshem",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w4"
+     },
+     "audio": {
+      "clipId": "i-24-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w5",
+     "source": "data/curriculum/lessons.json#I-24.words[4]",
+     "he": "שֶׁמֶשׁ",
+     "en": "sun",
+     "translit": "shemesh",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w5"
+     },
+     "audio": {
+      "clipId": "i-24-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-24-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-24-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-24-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-24-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-24-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-12",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-15-w11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-24-w1",
+    "i-24-w2",
+    "i-24-w3",
+    "i-24-w4",
+    "i-24-w5"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w1"
+     },
+     "answer": "i-24-w1",
+     "options": [
+      "i-24-w2",
+      "i-24-w3",
+      "i-24-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w2"
+     },
+     "answer": "i-24-w2",
+     "options": [
+      "i-24-w1",
+      "i-24-w3",
+      "i-24-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w3"
+     },
+     "answer": "i-24-w3",
+     "options": [
+      "i-24-w1",
+      "i-24-w2",
+      "i-24-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w4"
+     },
+     "answer": "i-24-w4",
+     "options": [
+      "i-24-w1",
+      "i-24-w2",
+      "i-24-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w5"
+     },
+     "answer": "i-24-w5",
+     "options": [
+      "i-24-w1",
+      "i-24-w2",
+      "i-24-w5"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: hot.",
+     "answer": "i-24-w2",
+     "he": "חַם",
+     "translit": "cham",
+     "en": "hot",
+     "audio": {
+      "clipId": "i-24-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: rain.",
+     "answer": "i-24-w4",
+     "he": "גֶּשֶׁם",
+     "translit": "geshem",
+     "en": "rain",
+     "audio": {
+      "clipId": "i-24-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-12",
+    "i-15-w11"
+   ]
+  },
+  {
+   "id": "pu-weather-p02",
+   "title": "It Is: No Word Needed",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Say it is windy, cloudy or snowing.",
+   "grammarNote": "It is: no word needed. To say it is hot, Hebrew says just חַם. There is no word for it and no word for is. חַם לִי is different: I'm hot.",
+   "grammar": {
+    "point": "It is: no word needed",
+    "body": "To say it is hot, Hebrew says just חַם. There is no word for it and no word for is. חַם לִי is different: I'm hot.",
+    "examples": [
+     {
+      "itemId": "i-24-w6",
+      "he": "רוּחַ",
+      "en": "wind"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-24-w6",
+     "source": "data/curriculum/lessons.json#I-24.words[5]",
+     "he": "רוּחַ",
+     "en": "wind",
+     "translit": "ruach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w6"
+     },
+     "audio": {
+      "clipId": "i-24-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w7",
+     "source": "data/curriculum/lessons.json#I-24.words[6]",
+     "he": "עָנָן",
+     "en": "cloud",
+     "translit": "anan",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w7"
+     },
+     "audio": {
+      "clipId": "i-24-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w8",
+     "source": "data/curriculum/lessons.json#I-24.words[7]",
+     "he": "שֶׁלֶג",
+     "en": "snow",
+     "translit": "sheleg",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w8"
+     },
+     "audio": {
+      "clipId": "i-24-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-24-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-24-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-24-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-24-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "small-talk-12",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "directions-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-24-w6",
+    "i-24-w7",
+    "i-24-w8"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w6"
+     },
+     "answer": "i-24-w6",
+     "options": [
+      "i-24-w7",
+      "i-24-w8",
+      "i-24-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w7"
+     },
+     "answer": "i-24-w7",
+     "options": [
+      "i-24-w6",
+      "i-24-w8",
+      "i-24-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w8"
+     },
+     "answer": "i-24-w8",
+     "options": [
+      "i-24-w6",
+      "i-24-w7",
+      "i-24-w8"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: wind.",
+     "answer": "i-24-w6",
+     "he": "רוּחַ",
+     "translit": "ruach",
+     "en": "wind",
+     "audio": {
+      "clipId": "i-24-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: snow.",
+     "answer": "i-24-w8",
+     "he": "שֶׁלֶג",
+     "translit": "sheleg",
+     "en": "snow",
+     "audio": {
+      "clipId": "i-24-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-24-w2",
+    "small-talk-12",
+    "directions-04"
+   ]
+  },
+  {
+   "id": "pu-weather-p03",
+   "title": "Seasons and What to Take",
+   "order": 3,
+   "kind": "speak",
+   "can": "Name the seasons and what to bring.",
+   "grammarNote": "Seasons and clothes. קַיִץ is summer, סְתָו autumn and אָבִיב spring. In the Israeli summer take a כּוֹבַע against the sun; in the cold months a מְעִיל.",
+   "grammar": {
+    "point": "Seasons and clothes",
+    "body": "קַיִץ is summer, סְתָו autumn and אָבִיב spring. In the Israeli summer take a כּוֹבַע against the sun; in the cold months a מְעִיל.",
+    "examples": [
+     {
+      "itemId": "i-24-w10",
+      "he": "קַיִץ",
+      "en": "summer"
+     },
+     {
+      "itemId": "i-24-w14",
+      "he": "כּוֹבַע",
+      "en": "hat"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-24-w10",
+     "source": "data/curriculum/lessons.json#I-24.words[9]",
+     "he": "קַיִץ",
+     "en": "summer",
+     "translit": "kayits",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w10"
+     },
+     "audio": {
+      "clipId": "i-24-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w12",
+     "source": "data/curriculum/lessons.json#I-24.words[11]",
+     "he": "אָבִיב",
+     "en": "spring",
+     "translit": "aviv",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w12"
+     },
+     "audio": {
+      "clipId": "i-24-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w13",
+     "source": "data/curriculum/lessons.json#I-24.words[12]",
+     "he": "סְתָו",
+     "en": "autumn",
+     "translit": "stav",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w13"
+     },
+     "audio": {
+      "clipId": "i-24-w13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w14",
+     "source": "data/curriculum/lessons.json#I-24.words[13]",
+     "he": "כּוֹבַע",
+     "en": "hat",
+     "translit": "kova",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w14"
+     },
+     "audio": {
+      "clipId": "i-24-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-24-w15",
+     "source": "data/curriculum/lessons.json#I-24.words[14]",
+     "he": "מְעִיל",
+     "en": "coat",
+     "translit": "me'il",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-24-w15"
+     },
+     "audio": {
+      "clipId": "i-24-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-24-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-24-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-24-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-24-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-24-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-24-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-24-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-24-w10",
+    "i-24-w12",
+    "i-24-w13",
+    "i-24-w14",
+    "i-24-w15"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w10"
+     },
+     "answer": "i-24-w10",
+     "options": [
+      "i-24-w12",
+      "i-24-w13",
+      "i-24-w10"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w12"
+     },
+     "answer": "i-24-w12",
+     "options": [
+      "i-24-w10",
+      "i-24-w13",
+      "i-24-w12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w13"
+     },
+     "answer": "i-24-w13",
+     "options": [
+      "i-24-w10",
+      "i-24-w12",
+      "i-24-w13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w14"
+     },
+     "answer": "i-24-w14",
+     "options": [
+      "i-24-w10",
+      "i-24-w12",
+      "i-24-w14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-24-w15"
+     },
+     "answer": "i-24-w15",
+     "options": [
+      "i-24-w10",
+      "i-24-w12",
+      "i-24-w15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: summer.",
+     "answer": "i-24-w10",
+     "he": "קַיִץ",
+     "translit": "kayits",
+     "en": "summer",
+     "audio": {
+      "clipId": "i-24-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: a hat.",
+     "answer": "i-24-w14",
+     "he": "כּוֹבַע",
+     "translit": "kova",
+     "en": "hat",
+     "audio": {
+      "clipId": "i-24-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: a coat.",
+     "answer": "i-24-w15",
+     "he": "מְעִיל",
+     "translit": "me'il",
+     "en": "coat",
+     "audio": {
+      "clipId": "i-24-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-24-w5",
+    "i-24-w3"
+   ]
+  },
+  {
+   "id": "pu-weather-p04",
+   "title": "Rain, and Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Talk about the rain, then review the weather unit.",
+   "grammarNote": "Rain comes in winter. In Israel גֶּשֶׁם falls mostly in the winter months; the summer is dry. Pair it with קַר when you describe a winter day.",
+   "grammar": {
+    "point": "Rain comes in winter",
+    "body": "In Israel גֶּשֶׁם falls mostly in the winter months; the summer is dry. Pair it with קַר when you describe a winter day.",
+    "examples": [
+     {
+      "itemId": "il15-w3",
+      "he": "גֶּשֶׁם",
+      "en": "rain"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il15-w3",
+     "source": "data/curriculum/lessons.json#il15.words[2]",
+     "he": "גֶּשֶׁם",
+     "en": "rain",
+     "translit": "geshem",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il15-w3"
+     },
+     "audio": {
+      "clipId": "il15-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il15-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-24-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-24-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-24-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-24-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-24-w10",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-24-w15",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il15-w3"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il15-w3"
+     },
+     "answer": "il15-w3",
+     "options": [
+      "il15-w3"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: rain.",
+     "answer": "il15-w3",
+     "he": "גֶּשֶׁם",
+     "translit": "geshem",
+     "en": "rain",
+     "audio": {
+      "clipId": "il15-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-24-w1",
+    "i-24-w2",
+    "i-24-w3",
+    "i-24-w6",
+    "i-24-w10",
+    "i-24-w15"
+   ]
   }
  ],
  "completeUnits": [
@@ -26084,6 +27832,8 @@
   "pu-verbs-now",
   "pu-past",
   "pu-family",
-  "pu-home"
+  "pu-home",
+  "pu-time",
+  "pu-weather"
  ]
 }

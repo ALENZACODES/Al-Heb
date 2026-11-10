@@ -20,6 +20,7 @@ import { gameMusic } from './audio/music.js';
 import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 import { mountMediaPrompt } from './audio/media-prompt.js';
 import { stampDayStart } from './awards/daystart.js';
+import { rosterById } from './letters/roster.js';
 import { installSpeechChunker } from './shell/speech-chunker.js';
 installSpeechChunker(); // the device voice never gets one long utterance (phones cut it off after a few seconds)
 document.querySelectorAll('link[data-defer-style]').forEach((link)=>{link.media='all';}); // non-critical CSS is linked with media=print so it is not render-blocking
@@ -190,6 +191,17 @@ let heldFocusId = '';
 let navFocusOwed = false; // a real navigation has begun but its heading has not been focused yet (a quiet re-render that supersedes it must still do that)
 let firstShow = true; // do not steal focus on the initial page load (keyboard users start at the skip link)
 
+
+function firstPaintTitle(route, params) {
+  if (route?.name === 'letter' && params?.id && rosterById[params.id]) {
+    const L = rosterById[params.id];
+    return `${L.name} ${L.he}`;
+  }
+  if (route?.name === 'learn') return 'Lessons';
+  if (route?.name === 'sounds') return 'Vowels and sounds';
+  return route?.title ?? 'Aleph';
+}
+
 async function show(match, ctxBase, { quiet = false } = {}) {
   const token = ++navToken;
   const root = document.getElementById('main');
@@ -214,10 +226,18 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   const ctx = { ...ctxBase, params, query, path, routeName: route.name };
   // U-24: never a blank page while a view module loads — a named skeleton
   // stands in, replaced the moment the view mounts (or by the error card).
-  if (!quiet) root.replaceChildren(
-    h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
-      h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
-    h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
+  if (!quiet) {
+    const existing = root.querySelector('#view-title');
+    if (!existing) {
+      root.replaceChildren(h('h1', { id: 'view-title', tabindex: '-1', class: route?.name === 'learn' ? 'alef-first-paint alef-learn-hero' : route?.name === 'letter' ? 'alef-first-paint alef-letter-hero' : 'alef-first-paint' }, firstPaintTitle(route, params)));
+    }
+    if (!root.querySelector('.alef-skeleton')) {
+      root.append(
+        h('div', { class: 'alef-skeleton', 'aria-hidden': 'true' },
+          h('div', { class: 'skel-bar skel-title' }), h('div', { class: 'skel-bar' }), h('div', { class: 'skel-bar short' })),
+        h('p', { class: 'muted alef-skeleton-note' }, `Loading ${route.title}…`));
+    }
+  }
   root.setAttribute('aria-busy', 'true');
   let mod;
   try { mod = await loadRouteModule(route); }
@@ -229,7 +249,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
   if (token !== navToken) return;
   try {
     if (typeof mod.mount !== 'function') throw new Error('module has no mount(root, ctx) export');
-    root.replaceChildren();
+    // Keep #view-title (already painted, often the LCP element) and only drop the skeleton.
+    for (const n of [...root.querySelectorAll('.alef-skeleton, .alef-skeleton-note')]) n.remove();
     const u = await mod.mount(root, ctx);
     // Superseded while mounting: this view's cleanup would never be registered (unmount now belongs to the newer navigation), so run it here.
     if (token !== navToken) { if (typeof u === 'function') { try { u(); } catch (e) { console.warn('unmount failed', e); } } return; }
@@ -325,24 +346,16 @@ async function boot() {
     if (!r.ok) throw new Error(String(r.status));
     return r.json();
   }), { settings });
-  // The Home and Welcome tree does not use the optional image resolver.
-  // Let the first route paint before fetching image approvals; deep-linked
-  // lessons still receive the resolver before mounting as before.
-  const firstIsHome = !location.hash || location.hash === '#/' || location.hash === '#/welcome';
-  if (!firstIsHome) {
-    try { images = await resolveImages(); } catch { images = null; }
-  }
+  // No route waits for picture approvals or the image index before first paint.
+  // After the first view has painted, load the resolver and fill the teacher band;
+  // the next navigation (or a later quiet refresh) can draw pictures.
   const ctxBase = { settings, store, audio, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();
-  if (firstIsHome) {
-    // Deferring the optional resolver avoids blocking the hero and the first
-    // usable lesson. A later route sees the loaded resolver in the shared ctx.
-    shownFirst.then(() => afterPaint(async () => {
-      try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
-    })).catch(() => {});
-  }
+  shownFirst.then(() => afterPaint(async () => {
+    try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
+  }, { waitMs: 4000 })).catch(() => {});
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   scheduleManifest(audio);

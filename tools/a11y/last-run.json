@@ -1,0 +1,569 @@
+{
+ "axe": "4.14.0",
+ "when": "2026-11-04T22:54:32.597Z",
+ "routes": {
+  "/": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/learn": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/letters": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/letters/atlas": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/letters/bet": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/loanwords": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/loanwords/lw1": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/spotit/bet": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/checkpoint": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/dialogues": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/dialogues/d-cafe": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/ladder": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/fade": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/fade/bless-priestly-1": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/progress": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/words/trace": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/israel": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/israel/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions/guide": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/traditions/hear": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/classtrack": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/classtrack/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/classtrack/x/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/morning": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/timedread": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/share": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/classsummary": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/service": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/firstday": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/firstday/ladder": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/placement": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/reminders": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/install": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/typing": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/festivals": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/festivals/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/listen": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/trope": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/tradition-quiz": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/read-my-way": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/rules": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/rules/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/intermediate": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/intermediate/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/grammar": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/grammar/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/credits": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/privacy": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/compare": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/offline": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/vocab/themes": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/speak": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/sprint": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/gender": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/gender/roles": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/scaffold": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/sounds": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/read": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/read/priestly-blessing": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/scan": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/calendar": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/settings": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/welcome": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/how": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/workbook": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/soundgap": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/vowelboard": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/niqquddial": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/dottile": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/syllablechips": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/torahread": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/torahreader": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/torahread/x": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/vocab": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/search": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/about": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/learn?lesson=r01": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/learn?lesson=r05": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/learn?review=1": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/letters/alef": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/letters?tab=type": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/vocab?review=1": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/nope": {
+   "phone-light": [],
+   "phone-dark": [],
+   "desktop-light": [],
+   "desktop-dark": []
+  },
+  "/ (More sheet open)": {
+   "phone-light": [],
+   "phone-dark": []
+  }
+ },
+ "keyboard": [
+  {
+   "name": "first Tab stop is the skip link",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "skip link moves focus into #main",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Tab order on a phone: skip link, brand, the v0 tab-bar links (Learn, Progress), More (the sheet items are not tabbable while closed)",
+   "ok": true,
+   "detail": "Skip to main content | ALEF אלף | Learnלימוד | Progress | Moreעוד | Details | × | Learn your first letter: | Study goal: 5 min | Letters | WordsPreview | ReadPreview | Progress | More"
+  },
+  {
+   "name": "focused nav link has a visible outline",
+   "ok": true,
+   "detail": "solid 3px"
+  },
+  {
+   "name": "Enter on nav link navigates and focus moves to the page heading",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Start button opens the lesson by keyboard",
+   "ok": true,
+   "detail": "{\"hash\":\"#/learn?lesson=r01\",\"id\":\"view-title\"}"
+  },
+  {
+   "name": "Listen is a real button operable with Enter (indicator updated)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Show answer moves focus to the answer region",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "rating key 3 advances to the next card",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "summary": {
+  "routes": 84,
+  "configs": 4,
+  "groups": 0,
+  "nodes": 0,
+  "byImpact": {},
+  "byRule": {}
+ }
+}

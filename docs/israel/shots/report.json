@@ -1,0 +1,67 @@
+{
+ "overview": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "ladder": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "ladder-gendered": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "fillers": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "giveaways": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "say-question": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "say-answered": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "etiquette": {
+  "scrollW": 390,
+  "innerW": 390,
+  "h1": "Sound like a local",
+  "smallTargets": [],
+  "hebrewNotRtl": 0,
+  "overflowX": false
+ },
+ "consoleErrors": []
+}

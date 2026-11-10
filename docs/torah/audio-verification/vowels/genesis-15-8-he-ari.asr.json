@@ -1,0 +1,25 @@
+{
+  "id": "genesis-15-8-he-ari",
+  "fingerprint": "f1b989d087c491052f6e743b60dff6ac04c265c66454f7cecc2bbc9f0af20dc1",
+  "audioSha256": "85fccd45a2bbf9e6af147312017345919b387070e4dbe3bdee06a3ac6950475a",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "וַיֹאמַר אֲדֹנָי אֱלֹהִים בַמָה אֵדַע כִי אִירָשֶנָה",
+  "transcript": "ויאמר אדוני עליהם במעדה כי הרשנה.",
+  "wordEdits": 5,
+  "referenceWords": 7,
+  "wer": 0.7142857142857143,
+  "asrExact": false,
+  "orthographicWordEdits": 5,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-2-he-ari",
+  "fingerprint": "025fe52d06dbc81ce005d89eb9978db5fee4e7a31e1b7482db0414ac9d0d6bd6",
+  "audioSha256": "4f10cabfc17e94bada642d44911e3475291622d1ae0b72724391b6db4b0da46b",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "והארץ היתה תהו ובהו וחשך על פני תהום ורוח אלהים מרחפת על פני המים",
+  "transcript": "והארץ הייתה תהו ובהו וחשך על פני תהום ורוח אליהם מרחפת על פני המים.",
+  "wordEdits": 2,
+  "referenceWords": 14,
+  "wer": 0.14285714285714285,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

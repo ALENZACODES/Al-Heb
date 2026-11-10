@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-shin" viewBox="0 0 200 200" role="img" aria-labelledby="shin-t shin-d"><title id="shin-t">Shin: a birthday shortcake with three candle flames</title><desc id="shin-d">A blue shortcake with orange icing dripping over the side, a few red strawberries on top and three candles. The three prongs of shin are the yellow candles, each with an orange flame.</desc><style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-shin .morph-pop{transform-origin:50% 100%}@media (forced-colors:active){svg.morph-shin .morph-b *{stroke:CanvasText;stroke-width:.8}}</style><defs><path id="shin-g" fill-rule="evenodd" d="M358 756H268L194 218H283L318 471Q341 471 359 467Q377 464 390 456Q404 448 413 439Q423 431 430 416Q437 400 441 388Q445 375 449 353Q452 330 454 314Q456 297 459 268Q462 239 465 218H544Q536 343 524 393Q505 475 453 508Q407 537 327 540L348 687Q395 687 431 684Q467 680 502 671Q537 661 563 645Q589 629 612 604Q636 578 653 543Q669 508 683 461Q696 414 704 354Q712 294 717 218H806Q797 298 787 359Q777 419 763 474Q748 528 730 568Q712 607 687 640Q662 672 631 693Q600 714 559 729Q518 744 469 750Q420 756 358 756Z"/></defs><g class="morph-b"><rect class="mtile" x="6" y="6" width="188" height="188" rx="26"/>
+<rect class="mshade" x="22" y="164" width="156" height="8" rx="4"/>
+<path class="mf2" d="M30 106Q30 96 40 96H160Q170 96 170 106V164H30Z"/>
+<path class="mf1" d="M30 106Q30 96 40 96H160Q170 96 170 106V120Q158 120 158 130Q158 138 150 138Q142 138 142 128Q142 120 130 120H112Q104 120 104 130V134Q104 140 96 140Q88 140 88 132V122Q88 120 78 120H60Q50 120 50 130Q50 138 42 138Q34 138 34 128Q34 122 30 120Z"/>
+<circle class="mf3" cx="60" cy="154" r="4"/><circle class="mf3" cx="100" cy="150" r="4"/><circle class="mf3" cx="140" cy="154" r="4"/>
+<path d="M64 84Q72 80 80 84Q78 98 72 100Q66 98 64 84Z" class="mf1 msi" style="stroke-width:1.5"/><path d="M68 82L72 77L76 82Z" class="mf4"/><path d="M120 84Q128 80 136 84Q134 98 128 100Q122 98 120 84Z" class="mf1 msi" style="stroke-width:1.5"/><path d="M124 82L128 77L132 82Z" class="mf4"/><path d="M164 90Q172 86 180 90Q178 104 172 106Q166 104 164 90Z" class="mf1 msi" style="stroke-width:1.5"/><path d="M168 88L172 83L176 88Z" class="mf4"/><path d="M20 90Q28 86 36 90Q34 104 28 106Q22 104 20 90Z" class="mf1 msi" style="stroke-width:1.5"/><path d="M24 88L28 83L32 88Z" class="mf4"/><use href="#shin-g" transform="translate(0 0) scale(.2)" class="mf3 msi" style="stroke-width:10;paint-order:stroke;stroke-linejoin:round"/>
+<g class="morph-pop"><path class="mf1" d="M47 20C50 28 55 31 55 36A8 8 0 0 1 39 36C39 31 44 28 47 20ZM100 20C103 28 108 31 108 36A8 8 0 0 1 92 36C92 31 97 28 100 20ZM152 14C155.9 24.4 162.4 28.3 162.4 34.8A10.4 10.4 0 0 1 141.6 34.8C141.6 28.3 148.1 24.4 152 14Z"/><path class="mf3" d="M47 30C48.35 33.6 50.6 34.95 50.6 37.2A3.6 3.6 0 0 1 43.4 37.2C43.4 34.95 45.65 33.6 47 30ZM100 30C101.35 33.6 103.6 34.95 103.6 37.2A3.6 3.6 0 0 1 96.4 37.2C96.4 34.95 98.65 33.6 100 30ZM152 26C153.35 29.6 155.6 30.95 155.6 33.2A3.6 3.6 0 0 1 148.4 33.2C148.4 30.95 150.65 29.6 152 26Z"/></g></g><g class="morph-a"><use href="#shin-g" transform="translate(0 0) scale(.2)" class="mfi"/><circle class="mfi" cx="152" cy="28" r="7"/></g></svg>

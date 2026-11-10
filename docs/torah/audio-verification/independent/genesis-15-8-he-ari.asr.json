@@ -1,0 +1,23 @@
+{
+  "id": "genesis-15-8-he-ari",
+  "fingerprint": "88daf26072e1f041c558b478c20649bee6d686c38063d6dffb6a39fa8e3ced15",
+  "audioSha256": "65cb0a2423109bb88edde363aec7108fede41f88b8cce5d3fbaf1660a9b2aadb",
+  "model": "Systran/faster-whisper-small",
+  "reference": "ויאמר אדני אלוהים במה אדע כי אירשנה",
+  "transcript": "ויומר, אדני אלוהים, במהעדה, כי עיר שינה",
+  "wordEdits": 5,
+  "referenceWords": 7,
+  "wer": 0.7142857142857143,
+  "asrExact": false,
+  "orthographicWordEdits": 5,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

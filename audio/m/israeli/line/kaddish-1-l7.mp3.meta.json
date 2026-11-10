@@ -1,0 +1,28 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+ "inputSha256": "6388929a7f019a0cdaeb154af98c1f2ce93ac0130be9554f423ea6dd51a4f2b8",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "עוֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/kaddish-1-w58.mp3",
+  "audio/m/israeli/word/anchor-shin.mp3",
+  "audio/m/israeli/word/kaddish-1-w60.mp3",
+  "audio/m/israeli/word/aleinu-1-w39.mp3",
+  "audio/m/israeli/word/kaddish-1-w62.mp3",
+  "audio/m/israeli/word/anchor-shin.mp3",
+  "audio/m/israeli/word/aleinu-1-w1.mp3",
+  "audio/m/israeli/word/haftarah-after-w106.mp3",
+  "audio/m/israeli/word/adon-olam-1-w6.mp3",
+  "audio/m/israeli/word/brich-shmei-w115.mp3",
+  "audio/m/israeli/word/kaddish-1-w19.mp3",
+  "audio/m/israeli/word/haftarah-after-w143.mp3"
+ ]
+}

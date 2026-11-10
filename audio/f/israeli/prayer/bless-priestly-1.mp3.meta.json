@@ -1,0 +1,19 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
+ "inputSha256": "de1631a3125be7fd2343dfc6e97b36f0d2ea176f1fbda5c62e96943c2845054c",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יְבָרֶכְךָ אֲדֹנָי וְיִשְׁמְרֶךָ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/bless-priestly-1-w1.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/bless-priestly-1-w3.mp3"
+ ]
+}

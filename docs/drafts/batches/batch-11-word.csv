@@ -1,0 +1,101 @@
+id,kind,group,he
+il04-w10,word,lesson-word,עֶשֶׂר
+il05-w1,word,lesson-word,עֶשְׂרִים
+il05-w2,word,lesson-word,שְׁלוֹשִׁים
+il05-w3,word,lesson-word,מֵאָה
+il05-w4,word,lesson-word,שֶׁקֶל
+il05-w5,word,lesson-word,כַּמָּה
+il06-w1,word,lesson-word,אֶפְשָׁר
+il06-w2,word,lesson-word,קָפֶה
+il06-w3,word,lesson-word,הָפוּךְ
+il06-w4,word,lesson-word,מַיִם
+il06-w5,word,lesson-word,לְהַזְמִין
+il06-w6,word,lesson-word,חֶשְׁבּוֹן
+il07-w1,word,lesson-word,אֹכֶל
+il07-w2,word,lesson-word,לֶחֶם
+il07-w3,word,lesson-word,גְּבִינָה
+il07-w4,word,lesson-word,בֵּיצָה
+il07-w5,word,lesson-word,סָלָט
+il07-w6,word,lesson-word,תֵּה
+il08-w1,word,lesson-word,כַּמָּה זֶה עוֹלֶה
+il08-w2,word,lesson-word,יָקָר
+il08-w3,word,lesson-word,זוֹל
+il08-w4,word,lesson-word,אֲנִי רוֹצֶה
+il08-w5,word,lesson-word,יֵשׁ
+il08-w6,word,lesson-word,אֵין
+il09-w1,word,lesson-word,מְזֻמָּן
+il09-w2,word,lesson-word,כַּרְטִיס אַשְׁרַאי
+il09-w3,word,lesson-word,עוֹדֶף
+il09-w4,word,lesson-word,שַׂקִּית
+il09-w5,word,lesson-word,קַבָּלָה
+il10-w1,word,lesson-word,מוֹנִית
+il10-w2,word,lesson-word,אוֹטוֹבּוּס
+il10-w3,word,lesson-word,רַכֶּבֶת
+il10-w4,word,lesson-word,תַּחֲנָה
+il10-w5,word,lesson-word,כַּרְטִיס
+il10-w6,word,lesson-word,נְסִיעָה
+il11-w1,word,lesson-word,יָמִינָה
+il11-w2,word,lesson-word,שְׂמֹאלָה
+il11-w3,word,lesson-word,יָשָׁר
+il11-w4,word,lesson-word,קָרוֹב
+il11-w5,word,lesson-word,רָחוֹק
+il11-w6,word,lesson-word,אֵיפֹה
+il12-w1,word,lesson-word,הַיּוֹם
+il12-w2,word,lesson-word,מָחָר
+il12-w3,word,lesson-word,אֶתְמוֹל
+il12-w4,word,lesson-word,שָׁעָה
+il12-w5,word,lesson-word,יוֹם רִאשׁוֹן
+il12-w6,word,lesson-word,שַׁבָּת
+il13-w1,word,lesson-word,מַה נִּשְׁמָע
+il13-w2,word,lesson-word,הַכֹּל בְּסֵדֶר
+il13-w3,word,lesson-word,מַה קּוֹרֶה
+il13-w4,word,lesson-word,בְּרוּךְ הַשֵּׁם
+il13-w5,word,lesson-word,לֹא רַע
+il14-w1,word,lesson-word,מִשְׁפָּחָה
+il14-w2,word,lesson-word,אָח
+il14-w3,word,lesson-word,אָחוֹת
+il14-w4,word,lesson-word,יֶלֶד
+il14-w5,word,lesson-word,יַלְדָּה
+il14-w6,word,lesson-word,נָשׂוּי
+il15-w1,word,lesson-word,חַם
+il15-w2,word,lesson-word,קַר
+il15-w3,word,lesson-word,גֶּשֶׁם
+il15-w4,word,lesson-word,שֶׁמֶשׁ
+il15-w5,word,lesson-word,מֶזֶג אֲוִיר
+il16-w1,word,lesson-word,אֲנִי הוֹלֵךְ
+il16-w2,word,lesson-word,אֲנִי אוֹכֵל
+il16-w3,word,lesson-word,אֲנִי לוֹמֵד
+il16-w4,word,lesson-word,אֲנִי כּוֹתֵב
+il16-w5,word,lesson-word,אֲנִי מְדַבֵּר
+il17-w1,word,lesson-word,חֶדֶר
+il17-w2,word,lesson-word,הַזְמָנָה
+il17-w3,word,lesson-word,לַיְלָה
+il17-w4,word,lesson-word,מַפְתֵּחַ
+il17-w5,word,lesson-word,אַרוּחַת בֹּקֶר
+il18-w1,word,lesson-word,אֲנִי לֹא מֵבִין
+il18-w2,word,lesson-word,אֶפְשָׁר לְדַבֵּר לְאַט
+il18-w3,word,lesson-word,תַּגִּידוּ בְּאַנְגְּלִית
+il18-w4,word,lesson-word,רוֹפֵא
+il18-w5,word,lesson-word,בֵּית מֶרְקַחַת
+il18-w6,word,lesson-word,עֶזְרָה
+il19-w1,word,lesson-word,הָלַכְתִּי
+il19-w2,word,lesson-word,אָכַלְתִּי
+il19-w3,word,lesson-word,רָאִיתִי
+il19-w4,word,lesson-word,אָמַרְתִּי
+il19-w5,word,lesson-word,הָיָה
+il20-w1,word,lesson-word,אֲנִי אֵלֵךְ
+il20-w2,word,lesson-word,אֲנִי אֹכַל
+il20-w3,word,lesson-word,נִתְרָאֶה
+il20-w4,word,lesson-word,אוּלַי
+il20-w5,word,lesson-word,בְּעוֹד שָׁבוּעַ
+il21-w1,word,lesson-word,אֲנִי חוֹשֵׁב שֶׁ...
+il21-w2,word,lesson-word,לְדַעְתִּי
+il21-w3,word,lesson-word,אֲנִי מַעֲדִיף
+il21-w4,word,lesson-word,מַסְכִּים
+il21-w5,word,lesson-word,לֹא מַסְכִּים
+il22-w1,word,lesson-word,הַלּוֹ
+il22-w2,word,lesson-word,לְהִתְקַשֵּׁר
+il22-w3,word,lesson-word,פְּגִישָׁה
+il22-w4,word,lesson-word,לְקַבֵּעַ
+il22-w5,word,lesson-word,הוֹדָעָה
+il23-w1,word,lesson-word,רֹאשׁ

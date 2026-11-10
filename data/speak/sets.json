@@ -1,0 +1,618 @@
+{
+ "schema": "alef-speak-sets/1",
+ "generated": "2026-11-07",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "count": 61,
+ "sets": [
+  {
+   "id": "speak-first-day",
+   "title": "First day: hello, thanks, water",
+   "theme": "first-day",
+   "level": "A1",
+   "track": "israel",
+   "pack": "first-day",
+   "size": 7,
+   "withClip": 6
+  },
+  {
+   "id": "speak-survival-cafe-1",
+   "title": "Survival: cafe",
+   "theme": "food-drink",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-cafe-1",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-survival-directions-1",
+   "title": "Survival: directions",
+   "theme": "places-travel",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-directions-1",
+   "size": 12,
+   "withClip": 7
+  },
+  {
+   "id": "speak-survival-fillers-1",
+   "title": "Survival: fillers",
+   "theme": "talking-asking",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-fillers-1",
+   "size": 11,
+   "withClip": 3
+  },
+  {
+   "id": "speak-survival-greetings-1",
+   "title": "Survival: greetings",
+   "theme": "talking-asking",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-greetings-1",
+   "size": 12,
+   "withClip": 9
+  },
+  {
+   "id": "speak-survival-help-1",
+   "title": "Survival: help",
+   "theme": "body-health",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-help-1",
+   "size": 6,
+   "withClip": 1
+  },
+  {
+   "id": "speak-survival-lesson-israel-1",
+   "title": "Survival: lesson israel",
+   "theme": "talking-asking",
+   "level": "A2",
+   "track": "israel",
+   "pack": "survival-lesson-israel-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-survival-lesson-read-1",
+   "title": "Survival: lesson read",
+   "theme": "religion-prayer",
+   "level": "A1",
+   "track": "read",
+   "pack": "survival-lesson-read-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-survival-politeness-1",
+   "title": "Survival: politeness",
+   "theme": "talking-asking",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-politeness-1",
+   "size": 12,
+   "withClip": 7
+  },
+  {
+   "id": "speak-survival-shop-1",
+   "title": "Survival: shop",
+   "theme": "clothes-shopping",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-shop-1",
+   "size": 12,
+   "withClip": 7
+  },
+  {
+   "id": "speak-survival-small-talk-1",
+   "title": "Survival: small talk",
+   "theme": "talking-asking",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-small-talk-1",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-survival-taxi-1",
+   "title": "Survival: taxi",
+   "theme": "places-travel",
+   "level": "A1",
+   "track": "israel",
+   "pack": "survival-taxi-1",
+   "size": 11,
+   "withClip": 6
+  },
+  {
+   "id": "speak-doing-verbs-1",
+   "title": "Everyday actions 1",
+   "theme": "doing-verbs",
+   "level": "A1",
+   "track": "both",
+   "pack": "doing-verbs-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-moving-doing-1",
+   "title": "Moving and doing 1",
+   "theme": "moving-doing",
+   "level": "A1",
+   "track": "both",
+   "pack": "moving-doing-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-small-words-1",
+   "title": "Little words 1",
+   "theme": "small-words",
+   "level": "A1",
+   "track": "both",
+   "pack": "small-words-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-time-numbers-1",
+   "title": "Time and numbers 1",
+   "theme": "time-numbers",
+   "level": "A1",
+   "track": "both",
+   "pack": "time-numbers-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-body-health-1",
+   "title": "Body and health 1",
+   "theme": "body-health",
+   "level": "A2",
+   "track": "both",
+   "pack": "body-health-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-describing-words-1",
+   "title": "Describing words 1",
+   "theme": "describing-words",
+   "level": "A2",
+   "track": "both",
+   "pack": "describing-words-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-feelings-mind-1",
+   "title": "Feelings and thinking 1",
+   "theme": "feelings-mind",
+   "level": "A2",
+   "track": "both",
+   "pack": "feelings-mind-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-general-things-1",
+   "title": "More everyday nouns 1",
+   "theme": "general-things",
+   "level": "A2",
+   "track": "both",
+   "pack": "general-things-1",
+   "size": 12,
+   "withClip": 10
+  },
+  {
+   "id": "speak-nature-animals-1",
+   "title": "Nature and animals 1",
+   "theme": "nature-animals",
+   "level": "A2",
+   "track": "both",
+   "pack": "nature-animals-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-people-family-1",
+   "title": "People and family 1",
+   "theme": "people-family",
+   "level": "A2",
+   "track": "both",
+   "pack": "people-family-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-religion-prayer-1",
+   "title": "Prayer and Jewish life 1",
+   "theme": "religion-prayer",
+   "level": "A2",
+   "track": "both",
+   "pack": "religion-prayer-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-science-ideas-1",
+   "title": "Science and ideas 1",
+   "theme": "science-ideas",
+   "level": "A2",
+   "track": "both",
+   "pack": "science-ideas-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-society-work-law-1",
+   "title": "Work, money and society 1",
+   "theme": "society-work-law",
+   "level": "A2",
+   "track": "both",
+   "pack": "society-work-law-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-talking-asking-1",
+   "title": "Talking and asking",
+   "theme": "talking-asking",
+   "level": "A2",
+   "track": "israel",
+   "pack": "talking-asking-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-clothes-shopping-1",
+   "title": "Clothes, colours and shopping",
+   "theme": "clothes-shopping",
+   "level": "B1",
+   "track": "both",
+   "pack": "clothes-shopping-1",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-food-drink-1",
+   "title": "Food and drink 1",
+   "theme": "food-drink",
+   "level": "B1",
+   "track": "both",
+   "pack": "food-drink-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-home-things-1",
+   "title": "Home and things 1",
+   "theme": "home-things",
+   "level": "B1",
+   "track": "both",
+   "pack": "home-things-1",
+   "size": 12,
+   "withClip": 8
+  },
+  {
+   "id": "speak-places-travel-1",
+   "title": "Places and travel 1",
+   "theme": "places-travel",
+   "level": "B1",
+   "track": "both",
+   "pack": "places-travel-1",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-school-learning-1",
+   "title": "School and learning",
+   "theme": "school-learning",
+   "level": "B1",
+   "track": "israel",
+   "pack": "school-learning-1",
+   "size": 12,
+   "withClip": 7
+  },
+  {
+   "id": "speak-tech-media-1",
+   "title": "Tech and media 1",
+   "theme": "tech-media",
+   "level": "B1",
+   "track": "israel",
+   "pack": "tech-media-1",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-arts-sports-1",
+   "title": "Arts and sport",
+   "theme": "arts-sports",
+   "level": "B2",
+   "track": "israel",
+   "pack": "arts-sports-1",
+   "size": 12,
+   "withClip": 10
+  },
+  {
+   "id": "speak-doing-verbs-2",
+   "title": "Everyday actions 2",
+   "theme": "doing-verbs",
+   "level": "A2",
+   "track": "both",
+   "pack": "doing-verbs-2",
+   "size": 12,
+   "withClip": 0
+  },
+  {
+   "id": "speak-small-words-2",
+   "title": "Little words 2",
+   "theme": "small-words",
+   "level": "A2",
+   "track": "both",
+   "pack": "small-words-2",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-body-health-2",
+   "title": "Body and health 2",
+   "theme": "body-health",
+   "level": "B1",
+   "track": "israel",
+   "pack": "body-health-2",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-feelings-mind-2",
+   "title": "Feelings and thinking 2",
+   "theme": "feelings-mind",
+   "level": "B1",
+   "track": "israel",
+   "pack": "feelings-mind-2",
+   "size": 12,
+   "withClip": 9
+  },
+  {
+   "id": "speak-general-things-2",
+   "title": "More everyday nouns 2",
+   "theme": "general-things",
+   "level": "B1",
+   "track": "both",
+   "pack": "general-things-2",
+   "size": 12,
+   "withClip": 4
+  },
+  {
+   "id": "speak-moving-doing-2",
+   "title": "Moving and doing 2",
+   "theme": "moving-doing",
+   "level": "B1",
+   "track": "both",
+   "pack": "moving-doing-2",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-nature-animals-2",
+   "title": "Nature and animals 2",
+   "theme": "nature-animals",
+   "level": "B1",
+   "track": "israel",
+   "pack": "nature-animals-2",
+   "size": 12,
+   "withClip": 8
+  },
+  {
+   "id": "speak-people-family-2",
+   "title": "People and family 2",
+   "theme": "people-family",
+   "level": "B1",
+   "track": "both",
+   "pack": "people-family-2",
+   "size": 12,
+   "withClip": 8
+  },
+  {
+   "id": "speak-places-travel-2",
+   "title": "Places and travel 2",
+   "theme": "places-travel",
+   "level": "B1",
+   "track": "israel",
+   "pack": "places-travel-2",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-religion-prayer-2",
+   "title": "Prayer and Jewish life 2",
+   "theme": "religion-prayer",
+   "level": "B1",
+   "track": "both",
+   "pack": "religion-prayer-2",
+   "size": 12,
+   "withClip": 4
+  },
+  {
+   "id": "speak-science-ideas-2",
+   "title": "Science and ideas 2",
+   "theme": "science-ideas",
+   "level": "B1",
+   "track": "both",
+   "pack": "science-ideas-2",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-society-work-law-2",
+   "title": "Work, money and society 2",
+   "theme": "society-work-law",
+   "level": "B1",
+   "track": "israel",
+   "pack": "society-work-law-2",
+   "size": 12,
+   "withClip": 2
+  },
+  {
+   "id": "speak-time-numbers-2",
+   "title": "Time and numbers 2",
+   "theme": "time-numbers",
+   "level": "B1",
+   "track": "both",
+   "pack": "time-numbers-2",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-describing-words-2",
+   "title": "Describing words 2",
+   "theme": "describing-words",
+   "level": "B2",
+   "track": "israel",
+   "pack": "describing-words-2",
+   "size": 12,
+   "withClip": 6
+  },
+  {
+   "id": "speak-food-drink-2",
+   "title": "Food and drink 2",
+   "theme": "food-drink",
+   "level": "B2",
+   "track": "israel",
+   "pack": "food-drink-2",
+   "size": 12,
+   "withClip": 4
+  },
+  {
+   "id": "speak-home-things-2",
+   "title": "Home and things 2",
+   "theme": "home-things",
+   "level": "B2",
+   "track": "israel",
+   "pack": "home-things-2",
+   "size": 12,
+   "withClip": 5
+  },
+  {
+   "id": "speak-tech-media-2",
+   "title": "Tech and media 2",
+   "theme": "tech-media",
+   "level": "B2",
+   "track": "israel",
+   "pack": "tech-media-2",
+   "size": 12,
+   "withClip": 6
+  },
+  {
+   "id": "speak-describing-words-3",
+   "title": "Describing words 3",
+   "theme": "describing-words",
+   "level": "A2",
+   "track": "both",
+   "pack": "describing-words-3",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-moving-doing-3",
+   "title": "Moving and doing 3",
+   "theme": "moving-doing",
+   "level": "A2",
+   "track": "both",
+   "pack": "moving-doing-3",
+   "size": 12,
+   "withClip": 12
+  },
+  {
+   "id": "speak-society-work-law-3",
+   "title": "Work, money and society 3",
+   "theme": "society-work-law",
+   "level": "A2",
+   "track": "israel",
+   "pack": "society-work-law-3",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-body-health-3",
+   "title": "Body and health 3",
+   "theme": "body-health",
+   "level": "B1",
+   "track": "israel",
+   "pack": "body-health-3",
+   "size": 12,
+   "withClip": 4
+  },
+  {
+   "id": "speak-doing-verbs-3",
+   "title": "Everyday actions 3",
+   "theme": "doing-verbs",
+   "level": "B1",
+   "track": "both",
+   "pack": "doing-verbs-3",
+   "size": 12,
+   "withClip": 0
+  },
+  {
+   "id": "speak-nature-animals-3",
+   "title": "Nature and animals 3",
+   "theme": "nature-animals",
+   "level": "B1",
+   "track": "both",
+   "pack": "nature-animals-3",
+   "size": 12,
+   "withClip": 4
+  },
+  {
+   "id": "speak-religion-prayer-3",
+   "title": "Prayer and Jewish life 3",
+   "theme": "religion-prayer",
+   "level": "B1",
+   "track": "both",
+   "pack": "religion-prayer-3",
+   "size": 12,
+   "withClip": 10
+  },
+  {
+   "id": "speak-science-ideas-3",
+   "title": "Science and ideas 3",
+   "theme": "science-ideas",
+   "level": "B1",
+   "track": "israel",
+   "pack": "science-ideas-3",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-general-things-3",
+   "title": "More everyday nouns 3",
+   "theme": "general-things",
+   "level": "B2",
+   "track": "israel",
+   "pack": "general-things-3",
+   "size": 12,
+   "withClip": 0
+  },
+  {
+   "id": "speak-people-family-3",
+   "title": "People and family 3",
+   "theme": "people-family",
+   "level": "B2",
+   "track": "israel",
+   "pack": "people-family-3",
+   "size": 12,
+   "withClip": 11
+  },
+  {
+   "id": "speak-general-things-4",
+   "title": "More everyday nouns 4",
+   "theme": "general-things",
+   "level": "A1",
+   "track": "both",
+   "pack": "general-things-4",
+   "size": 12,
+   "withClip": 12
+  }
+ ]
+}

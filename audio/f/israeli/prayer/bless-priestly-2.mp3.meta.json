@@ -1,0 +1,21 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+ "inputSha256": "1d8169fdab160694e672eeed41926a10117be48da7306fb6940f807ab9d2e02e",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יָאֵר אֲדֹנָי פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/bless-priestly-2-w1.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w3.mp3",
+  "audio/f/israeli/word/bless-priestly-2-w4.mp3",
+  "audio-takes/f/w75b43bf36e-p.mp3"
+ ]
+}

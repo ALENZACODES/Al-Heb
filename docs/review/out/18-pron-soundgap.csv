@@ -1,0 +1,144 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+pron-soundgap:chet-khaf-he,pron-soundgap,,"chet, kaf, he","Chet and khaf versus plain English h
+Trap: English speakers say chet as a plain h (no scrape) or as a k, or as the ch of church. Chet, khaf (no dot) and he are three different sounds in Hebrew writing.
+israeli: Chet and khaf (no dot) are ONE sound, a scraped ch as in loch. He is a separate, soft h.
+sephardi: Strict Sephardi/Mizrahi reading keeps chet as a throaty pharyngeal sound, different from khaf. Most American synagogues do not do this and say both as ch.
+ashkenazi: Chet and khaf are one sound, ch as in Bach.
+american_synagogue: Usually ch as in Bach for both. Saying h for chet is the common slip to fix.
+Mouth cues:
+khaf / chet (Israeli, Ashkenazi, most American synagogues): Say a plain h, like fogging a mirror. Notice nothing touches anywhere. Now lift the back of your tongue up toward the roof of your mouth, near the soft part at the back, until air has to scrape through. The sound is the ch in Scottish loch, German Bach or the start of Chanukah said the Hebrew way. It is friction, not a k and not a church ch.
+pharyngeal chet (strict Sephardi / Mizrahi): Whisper a long ha as if breathing on glasses to clean them. Tighten the muscles low in your throat while you do it, so the air is squeezed rather than scraped near the tongue. It is smoother than the scrape of khaf. Treat this as a listen-and-copy sound; a native speaker should model it.
+he: A light h with no scrape. Keep it quiet: ha-ha, not kha-kha.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[0]
+pron-soundgap:chet-khaf-he:p1,pron-soundgap,"הוֹרִים
+חוֹרִים","horim
+chorim",parents / holes,"Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[0].pairs[0]
+pron-soundgap:chet-khaf-he:p2,pron-soundgap,"הֵן
+חֵן","hen
+chen","they (f.) / charm, grace","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[0].pairs[1]
+pron-soundgap:chet-khaf-he:p3,pron-soundgap,"הֶבֶל
+חֶבֶל","hevel
+chevel","breath, vapor / rope","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[0].pairs[2]
+pron-soundgap:chet-khaf-he:p4,pron-soundgap,"חַף
+כַּף","chaf
+kaf","innocent / spoon, palm","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[0].pairs[3]
+pron-soundgap:chet-khaf-he:p5,pron-soundgap,"אָח
+אַךְ","ach
+akh","brother / only, but","Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[0].pairs[4]
+pron-soundgap:alef-ayin,pron-soundgap,,"alef, ayin","Alef and ayin
+Trap: English has neither letter as a sound. Learners either pronounce nothing (usually fine in Israel) or add a hard k, h or a long vowel. The real gap is a spelling gap: two letters, often one sound.
+israeli: Alef and ayin are the same: a tiny catch of the throat between vowels (the middle of uh-oh) or nothing at the start of a word.
+sephardi: Strict Sephardi/Mizrahi keeps ayin as a pharyngeal consonant, different from alef.
+ashkenazi: Both silent as consonants; the vowel is just said.
+american_synagogue: Usually silent, or a catch between vowels.
+Mouth cues:
+alef / ayin (Israeli): Say uh-oh slowly. The little stop between uh and oh is the glottal stop. Between two vowels (sha-AL, ma-A-seh) use that catch very lightly. At the start of a word say nothing: just begin with the vowel.
+pharyngeal ayin (strict Sephardi / Mizrahi): Start from ah. Tighten the muscles low in your throat as if straining to lift something heavy, and keep the voice on. It sounds strained and slightly choked. Do not use this in everyday Israeli speech; there it can mark you as reading from a prayerbook. A native speaker should model it.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[1]
+pron-soundgap:alef-ayin:p1,pron-soundgap,"אִם
+עִם","im
+im",if / with,"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[1].pairs[0]
+pron-soundgap:alef-ayin:p2,pron-soundgap,"אוֹר
+עוֹר","or
+or",light / skin,"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[1].pairs[1]
+pron-soundgap:alef-ayin:p3,pron-soundgap,"אֵת
+עֵת","et
+et",(object marker) / time (literary),"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[1].pairs[2]
+pron-soundgap:alef-ayin:p4,pron-soundgap,"אָב
+עָב","av
+av",father / thick cloud (literary),"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[1].pairs[3]
+pron-soundgap:alef-ayin:p5,pron-soundgap,"קָרָא
+קָרַע","kara
+kara","called, read / tore","Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[1].pairs[4]
+pron-soundgap:resh,pron-soundgap,,resh,"Resh versus the English r
+Trap: The English r (tongue pulled back, lips slightly rounded) is the biggest outsider marker in Israel (see the resh drill).
+israeli: Back-of-the-throat r (uvular), tongue tip not involved.
+sephardi: A tapped or rolled r made with the tongue tip, as in Spanish.
+ashkenazi: Depends on the family: tapped or back-of-the-throat.
+american_synagogue: Most Americans use the English r. A single tap is a better choice if the back-of-the-throat r is too hard.
+Mouth cues:
+Israeli resh: Keep the tip of your tongue resting behind your lower front teeth and do not move it. Say a soft gargle, or the g in a long, lazy ghhh, but without water. Let the back of the tongue lift toward the dangling uvula. Aim for a light buzz or breathy rub, softer than the French r in rouge. Try kar, rishon, gar.
+tap resh (Sephardi, or a fallback): Say butter or ladder fast in American English. The tongue tip flicks once off the ridge behind the upper teeth. Use that single flick for the resh, with no English r colour in the vowel.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[2]
+pron-soundgap:resh:p1,pron-soundgap,"קַר
+קַל","kar
+kal","cold / light, easy","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[2].pairs[0]
+pron-soundgap:resh:p2,pron-soundgap,"גָּר
+גָּל","gar
+gal","lives (m. sg.) / wave, heap","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[2].pairs[1]
+pron-soundgap:tsadi,pron-soundgap,,"tsadi, tsadi-final","Tsadi: a ts at the start of a syllable
+Trap: English only has ts at the END of words (cats, bits). At the start of a word learners drop the t, say s or z, or put a vowel before it.
+israeli: Always ts.
+sephardi: ts; a few traditional communities say a plain s (needs native speaker).
+ashkenazi: ts.
+american_synagogue: ts, written tz in English (tzedakah, Tzfat).
+Mouth cues:
+initial ts: Say cats slowly. Stop right before the a and hold the t-s at the end. Now say it with no vowel before: ts, ts, ts. Add the vowel after it: tsa, tsi, tso. It is one quick t+s, not z and not a separate t followed by a pause.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[3]
+pron-soundgap:tsadi:p1,pron-soundgap,"צַל
+סַל","tzal
+sal",shadow / basket,"Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[3].pairs[0]
+pron-soundgap:tsadi:p2,pron-soundgap,"צוֹר
+שׁוֹר","tzor
+shor",Tyre (city) / ox,"Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[3].pairs[1]
+pron-soundgap:kaf-qof,pron-soundgap,,"kaf, qof","Kaf (with dot) and qof
+Trap: English speakers rarely worry about this one because both sound like k. The gap is spelling: two letters, one sound. Also Hebrew k is crisper than English k (less puff of air).
+israeli: Same k.
+sephardi: Same k in most American Sephardi-style use. Some Mizrahi communities say qof further back in the throat (uvular q). Which ones was not in our sources.
+ashkenazi: Same k.
+american_synagogue: Same k.
+Mouth cues:
+k (both letters): Say sky, not key. In sky the k has almost no puff of air. Use that k. Do not breathe out hard after the k.
+uvular qof (some Mizrahi communities): Say k, then slide the contact point back until the very back of the tongue touches the soft flap at the back of the mouth (the uvula). It feels deeper and slightly darker than k. Native speaker needed.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[4]
+pron-soundgap:kaf-qof:p1,pron-soundgap,"כֵּן
+קֵן","ken
+ken",yes / nest,"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[4].pairs[0]
+pron-soundgap:kaf-qof:p2,pron-soundgap,"כָּל
+קוֹל","kol
+kol",all / voice,"Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[4].pairs[1]
+pron-soundgap:kaf-qof:p3,pron-soundgap,"כַּר
+קַר","kar
+kar","pillow, cushion / cold","Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[4].pairs[2]
+pron-soundgap:tet-tav,pron-soundgap,,"tet, tav","Tet and tav
+Trap: Both are a plain t for you; the gap is spelling. Ashkenazi tav without a dot becomes s, which is its own trap (Shabbos).
+israeli: Same t.
+sephardi: Same t in American Sephardi-style use. Emphatic tet survives in some traditional communities (which ones was not in our sources).
+ashkenazi: Tet is t. Tav with a dot is t, tav without a dot is s (Shabbos).
+american_synagogue: Same t.
+Mouth cues:
+t (Israeli): Touch the tongue tip to the ridge just behind the upper front teeth (a little farther forward than English t) and release without a big puff, as in stop.
+emphatic tet (some traditional communities): Say t while pulling the back of the tongue down and tightening the throat, so the vowel after it sounds darker. Native speaker needed.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[5]
+pron-soundgap:tet-tav:p1,pron-soundgap,"טוֹר
+תּוֹר","tor
+tor","column, row / turn, queue","Pair type ""homophone""; claimed israeliSame=true; heard in: sephardi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[5].pairs[0]
+pron-soundgap:tet-tav:p2,pron-soundgap,"שַׁבָּת
+שַׁבָּת","shabat
+shabos","Sabbath (Israeli, Sephardi) / Sabbath (Ashkenazi)","Pair type ""tradition""; claimed israeliSame=false; heard in: ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[5].pairs[1]
+pron-soundgap:samekh-sin,pron-soundgap,,"samekh, shin","Samekh, sin and shin
+Trap: Samekh and sin are both s. The gap is that one dot swaps sin and shin (sh), and learners miss the dot.
+israeli: Samekh and sin (left dot) are both s. Shin (right dot) is sh.
+sephardi: Same.
+ashkenazi: Same (Lithuanian speech historically merged shin into s as well; not in current use as a model).
+american_synagogue: Same.
+Mouth cues:
+s versus sh: For s keep the tongue tip near the ridge behind the top teeth and lips relaxed: ssss. For sh pull the tongue back a little and round the lips slightly: shhh. Check the dot: left dot s (sin), right dot sh (shin).","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[6]
+pron-soundgap:samekh-sin:p1,pron-soundgap,"סָר
+שָׂר","sar
+sar",turned aside / minister,"Pair type ""homophone""; claimed israeliSame=true; heard in: . Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[6].pairs[0]
+pron-soundgap:samekh-sin:p2,pron-soundgap,"סַם
+שָׂם","sam
+sam","drug, poison / put, placed","Pair type ""homophone""; claimed israeliSame=true; heard in: . Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[6].pairs[1]
+pron-soundgap:samekh-sin:p3,pron-soundgap,"שָׂם
+שָׁם","sam
+sham","put, placed / there","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[6].pairs[2]
+pron-soundgap:vav-bet,pron-soundgap,,"vav, bet","Vav and vet versus b and w
+Trap: English speakers say vav as w (lips round) or confuse vet with bet. Israeli vav and vet are a v with the lower lip on the upper teeth. Bet with a dot is b.
+israeli: Vav and bet without the dot (vet) are the same v. Bet with the dot is b.
+sephardi: Usually the same; some Mizrahi communities (e.g., Yemenite, Iraqi) say vav as w (needs native speaker).
+ashkenazi: Same v.
+american_synagogue: Same v.
+Mouth cues:
+v: Rest your upper teeth lightly on your lower lip and hum: vvvv. Feel the buzz. Do not round the lips; that is w.
+b with the dot: Close both lips and release a voiced pop: b.","Phonetics text, not Hebrew spelling. Are the claims about each tradition (Israeli / Sephardi / Ashkenazi / American synagogue) correct? Are the mouth instructions accurate and safe to follow? Pair rows follow.",,,,,,5,data/pronunciation/soundgap.json#gaps[7]
+pron-soundgap:vav-bet:p1,pron-soundgap,"וַעַד
+בַּעַד","va'ad
+ba'ad","committee / for, behind, through","Pair type ""minimal""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[7].pairs[0]
+pron-soundgap:vav-bet:p2,pron-soundgap,"דָּבָר
+דִּבֵּר","davar
+diber","thing, word / spoke","Pair type ""alternation""; claimed israeliSame=false; heard in: israeli, sephardi, ashkenazi. Are both words real, pointed correctly and glossed correctly? Is the claim about whether they sound the same correct?",,,,,,5,data/pronunciation/soundgap.json#gaps[7].pairs[1]

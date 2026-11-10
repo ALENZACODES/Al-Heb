@@ -1,0 +1,389 @@
+{
+ "id": "I-13",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Cafe ordering: milk, sugar, sizes and the bill",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אֶפְשָׁר לְהַזְמִין?",
+   "en": "can I order?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "efshar lehazmin?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p1c368ea1"
+   }
+  },
+  {
+   "he": "קָפֶה הָפוּךְ",
+   "en": "milky coffee (hafuch)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kafeh hafukh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p80064ddc"
+   }
+  },
+  {
+   "he": "אֶסְפְּרֶסוֹ",
+   "en": "espresso",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "espereso"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p6296527a"
+   }
+  },
+  {
+   "he": "קָפֶה שָׁחוֹר",
+   "en": "black coffee",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kafeh shachor"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pce477866"
+   }
+  },
+  {
+   "he": "תֵּה עִם נַעֲנָע",
+   "en": "tea with mint",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "teh im na'ana"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p2de095da"
+   }
+  },
+  {
+   "he": "חָלָב",
+   "en": "milk",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chalav"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h35be21c5"
+   }
+  },
+  {
+   "he": "סֻכָּר",
+   "en": "sugar",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sukar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7631737e"
+   }
+  },
+  {
+   "he": "בְּלִי",
+   "en": "without",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beli"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּלִי"
+    ]
+   }
+  },
+  {
+   "he": "גָּדוֹל",
+   "en": "big (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gadol"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hdd2bd792"
+   }
+  },
+  {
+   "he": "קָטָן",
+   "en": "small (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "katan"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7be38218"
+   }
+  },
+  {
+   "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+   "en": "eat here or take away?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "le'ekhol kan o lakachat?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p2b2c75da"
+   }
+  },
+  {
+   "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+   "en": "the bill, please",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hacheshbon, bevakashah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p9dfd4133"
+   }
+  },
+  {
+   "he": "צִמְחוֹנִי",
+   "en": "vegetarian (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzimchoni"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h54c1d6e4"
+   }
+  },
+  {
+   "he": "צִמְחוֹנִית",
+   "en": "vegetarian (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzimchonit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h54c1d6e4#forms.feminine"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Order a coffee with the milk, sugar and size you want",
+  "Answer 'eat here or take away?'",
+  "Ask for the bill and pay by card"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-13-e01",
+   "type": "produce",
+   "en": "can I order?",
+   "options": [
+    "אֶפְשָׁר לְהַזְמִין?",
+    "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+    "אֶפְשָׁר עוֹד אֶחָד?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-13-e02",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה קָפֶה",
+   "f": "אֲנִי רוֹצָה קָפֶה",
+   "en": "I would like a coffee"
+  },
+  {
+   "id": "I-13-e03",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "קָפֶה הָפוּךְ",
+     "en": "milky coffee"
+    },
+    {
+     "he": "אֶסְפְּרֶסוֹ",
+     "en": "espresso"
+    },
+    {
+     "he": "קָפֶה שָׁחוֹר",
+     "en": "black coffee"
+    },
+    {
+     "he": "תֵּה עִם נַעֲנָע",
+     "en": "tea with mint"
+    }
+   ]
+  },
+  {
+   "id": "I-13-e04",
+   "type": "order",
+   "he": "קָפֶה הָפוּךְ בְּלִי סֻכָּר, בְּבַקָּשָׁה",
+   "en": "A hafuch without sugar, please"
+  },
+  {
+   "id": "I-13-e05",
+   "type": "produce",
+   "en": "without milk",
+   "options": [
+    "בְּלִי חָלָב",
+    "עִם חָלָב",
+    "בְּלִי סֻכָּר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-13-e06",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, אֶפְשָׁר לְהַזְמִין?",
+     "en": "Hello, can I order?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּטַח. מָה אַתָּה רוֹצֶה?",
+     "en": "Sure. What do you want?"
+    },
+    {
+     "speaker": "a",
+     "he": "קָפֶה הָפוּךְ גָּדוֹל, בְּלִי סֻכָּר.",
+     "en": "A large hafuch, without sugar."
+    },
+    {
+     "speaker": "b",
+     "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+     "en": "Eat here or take away?"
+    },
+    {
+     "speaker": "a",
+     "he": "לָקַחַת, תּוֹדָה.",
+     "en": "Take away, thanks."
+    }
+   ],
+   "task": "Say the customer's lines."
+  },
+  {
+   "id": "I-13-e07",
+   "type": "gender",
+   "m": "מָה אַתָּה רוֹצֶה?",
+   "f": "מָה אַתְּ רוֹצָה?",
+   "en": "What do you want?"
+  },
+  {
+   "id": "I-13-e08",
+   "type": "produce",
+   "en": "big or small?",
+   "options": [
+    "גָּדוֹל אוֹ קָטָן?",
+    "כָּאן אוֹ לָקַחַת?",
+    "עִם אוֹ בְּלִי?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-13-e09",
+   "type": "respond",
+   "cue": "The server asks 'eat here or take away?'. You are staying.",
+   "answer": {
+    "he": "לֶאֱכֹל כָּאן",
+    "en": "To eat here"
+   }
+  },
+  {
+   "id": "I-13-e10",
+   "type": "produce",
+   "en": "anything else?",
+   "options": [
+    "עוֹד מַשֶּׁהוּ?",
+    "אֶפְשָׁר עוֹד אֶחָד?",
+    "מָה זֶה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-13-e11",
+   "type": "gender",
+   "m": "אֲנִי צִמְחוֹנִי",
+   "f": "אֲנִי צִמְחוֹנִית",
+   "en": "I'm vegetarian"
+  },
+  {
+   "id": "I-13-e12",
+   "type": "recall",
+   "he": "טָעִים מְאֹד",
+   "en": "very tasty"
+  },
+  {
+   "id": "I-13-e13",
+   "type": "respond",
+   "cue": "You have finished and want to pay.",
+   "answer": {
+    "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+    "en": "The bill, please"
+   }
+  },
+  {
+   "id": "I-13-e14",
+   "type": "order",
+   "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+   "en": "Can I pay by card?"
+  },
+  {
+   "id": "I-13-e15",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה. אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "en": "The bill, please. Can I pay by card?"
+    },
+    {
+     "speaker": "b",
+     "he": "כֵּן, בְּטַח.",
+     "en": "Yes, of course."
+    }
+   ],
+   "task": "Say the customer's line."
+  },
+  {
+   "id": "I-13-e16",
+   "type": "register",
+   "he": "בְּטַח",
+   "en": "sure / of course",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  }
+ ],
+ "note": "The polite future 'ma tirtse / tirtsi' (what would you like) has no pointed token in the allowed sources, so the server asks with the present tense."
+}

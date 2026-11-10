@@ -1,0 +1,28 @@
+{
+  "v": 1,
+  "status": "draft",
+  "note": "Draft, untested with learners. Day templates for the first-week plan. Every href is an existing route in src/shell/router.js; `route` is the route name so the view can hide items whose view file is missing in this build (ctx.hasRoute). Minutes are design targets, not measured.",
+  "minutesOptions": [5, 10, 15, 20, 30],
+  "defaultMinutes": 10,
+  "firstLesson": "r01",
+  "lessonSplitMaxParts": 4,
+  "starts": {
+    "none":   { "route": "firstday",  "href": "#/firstday",  "title": "Your first 10 minutes", "minutes": 10, "why": "Five letters, two vowels, three real words. Nothing is assumed." },
+    "some":   { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "letters": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "sentences": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." },
+    "vowels": { "route": "placement", "href": "#/placement", "title": "Placement check", "minutes": 8, "why": "A short reading check suggests where to begin. You can choose an earlier lesson." }
+  },
+  "extras": [
+    { "id": "letters",   "route": "letters",   "href": "#/letters",       "title": "Trace letters",             "minutes": 5,  "minLesson": "r01" },
+    { "id": "sounds",    "route": "sounds",    "href": "#/sounds",        "title": "Sounds: vowel values",      "minutes": 5,  "minLesson": "r01" },
+    { "id": "loanwords", "route": "loanwords", "href": "#/loanwords",     "title": "Words you can already read", "minutes": 5,  "minLesson": "r03" },
+    { "id": "ladder",    "route": "ladder",    "href": "#/ladder",        "title": "Syllable ladder",           "minutes": 5,  "minLesson": "r06" },
+    { "id": "checkpoint","route": "checkpoint","href": "#/checkpoint",    "title": "Look-alike checkpoint",     "minutes": 5,  "minLesson": "r09" },
+    { "id": "fade",      "route": "fade",      "href": "#/fade",          "title": "Fade-out recall",           "minutes": 5,  "minLesson": "r15" },
+    { "id": "firstday-ladder", "route": "firstday-ladder", "href": "#/firstday/ladder", "title": "Pointed to unpointed ladder", "minutes": 5, "minLesson": "r24" },
+    { "id": "read",      "route": "read",      "href": "#/read",          "title": "Read a prayer line",        "minutes": 5,  "minLesson": "r05" }
+  ],
+  "review": { "route": "learn", "href": "#/learn?review=1", "title": "Review due cards", "minutes": 5 },
+  "dayLabels": ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"]
+}

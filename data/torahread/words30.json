@@ -1,0 +1,469 @@
+{
+ "schema": "alef-torahread-words30/1",
+ "generated": "2026-11-03",
+ "method": "Counted over the five books of the Torah in UXLC 2.6 (tanach.us): each <w> word, with the <q> reading where the text has a ketiv/qere pair; cantillation removed; words joined by a maqaf are counted as separate words; the written spelling is the unit, so a prefix such as vav, he, lamed or bet stays part of the word (for example וְאֶת and וְלֹא are separate entries) and several different words that share one unpointed spelling are counted together (for example אֶל \"to\" and אֵל \"God\"). Ties are broken alphabetically. This is an orthographic count, not a count of dictionary lemmas.",
+ "totals": {
+  "tokens": 79985,
+  "distinctSpellings": 12833
+ },
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026) (all five books carry the same version string)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "glossNote": "English glosses are original, short and literal (data/torahread/gloss-input.json); not taken from data/vocab, whose Wiktionary-derived glosses are CC BY-SA. vocabId is only a cross-reference to a data/vocab entry whose pointed headword equals the pointed form here.",
+ "proofread": false,
+ "words": [
+  {
+   "rank": 1,
+   "unpointed": "את",
+   "count": 2622,
+   "pointed": "אֶת",
+   "pointedCount": 2396,
+   "gloss": "marks the definite direct object (not translated into English)",
+   "others": [
+    {
+     "he": "אֵת",
+     "count": 219,
+     "gloss": "the same object marker when it carries the stress; a different word meaning 'with' is spelled the same"
+    },
+    {
+     "he": "אַתְּ",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "unpointed": "אשר",
+   "count": 1664,
+   "pointed": "אֲשֶׁר",
+   "pointedCount": 1650,
+   "gloss": "that, which, who",
+   "others": [
+    {
+     "he": "אָשֵׁר",
+     "count": 14
+    }
+   ],
+   "vocabId": "ha8f1d06f"
+  },
+  {
+   "rank": 3,
+   "unpointed": "יהוה",
+   "count": 1526,
+   "pointed": "יְהוָה",
+   "pointedCount": 1522,
+   "gloss": "the divine name; read aloud as Adonai",
+   "say": "אֲדֹנָי",
+   "others": [],
+   "vocabId": "p6584b7dc"
+  },
+  {
+   "rank": 4,
+   "unpointed": "אל",
+   "count": 1282,
+   "pointed": "אֶל",
+   "pointedCount": 1151,
+   "gloss": "to, toward",
+   "others": [
+    {
+     "he": "אַל",
+     "count": 86,
+     "gloss": "do not"
+    },
+    {
+     "he": "אֵל",
+     "count": 45,
+     "gloss": "God (El)"
+    }
+   ],
+   "vocabId": "h68843f80"
+  },
+  {
+   "rank": 5,
+   "unpointed": "על",
+   "count": 995,
+   "pointed": "עַל",
+   "pointedCount": 993,
+   "gloss": "on, upon, over, about",
+   "others": [
+    {
+     "he": "עֹל",
+     "count": 2,
+     "gloss": "a yoke"
+    }
+   ],
+   "vocabId": "h7d05bcca"
+  },
+  {
+   "rank": 6,
+   "unpointed": "כי",
+   "count": 988,
+   "pointed": "כִּי",
+   "pointedCount": 981,
+   "gloss": "because, that, when, for",
+   "others": [
+    {
+     "he": "כִי",
+     "count": 7
+    }
+   ],
+   "vocabId": "hb7b6cc8b"
+  },
+  {
+   "rank": 7,
+   "unpointed": "כל",
+   "count": 967,
+   "pointed": "כָּל",
+   "pointedCount": 813,
+   "gloss": "all, every",
+   "others": [
+    {
+     "he": "כֹּל",
+     "count": 91,
+     "gloss": "all (same word, a second pointing)"
+    },
+    {
+     "he": "כָל",
+     "count": 62
+    }
+   ],
+   "vocabId": "pefce5ddb"
+  },
+  {
+   "rank": 8,
+   "unpointed": "לא",
+   "count": 944,
+   "pointed": "לֹא",
+   "pointedCount": 942,
+   "gloss": "not, no",
+   "others": [],
+   "vocabId": "h8e3e6f50"
+  },
+  {
+   "rank": 9,
+   "unpointed": "ואת",
+   "count": 828,
+   "pointed": "וְאֶת",
+   "pointedCount": 641,
+   "gloss": "and + the object marker",
+   "others": [
+    {
+     "he": "וְאֵת",
+     "count": 185,
+     "gloss": "and + the object marker (stressed form)"
+    }
+   ]
+  },
+  {
+   "rank": 10,
+   "unpointed": "ויאמר",
+   "count": 632,
+   "pointed": "וַיֹּאמֶר",
+   "pointedCount": 590,
+   "gloss": "and he said",
+   "others": [
+    {
+     "he": "וַיֹּאמַר",
+     "count": 40,
+     "gloss": "and he said (a second pointing of the same spelling)"
+    }
+   ]
+  },
+  {
+   "rank": 11,
+   "unpointed": "בני",
+   "count": 623,
+   "pointed": "בְּנֵי",
+   "pointedCount": 478,
+   "gloss": "sons of, children of",
+   "others": [
+    {
+     "he": "בְנֵי",
+     "count": 106,
+     "gloss": "sons of (a second pointing)"
+    },
+    {
+     "he": "בְּנִי",
+     "count": 27,
+     "gloss": "my son"
+    },
+    {
+     "he": "בְנִי",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "rank": 12,
+   "unpointed": "משה",
+   "count": 616,
+   "pointed": "מֹשֶׁה",
+   "pointedCount": 614,
+   "gloss": "Moses",
+   "others": []
+  },
+  {
+   "rank": 13,
+   "unpointed": "ישראל",
+   "count": 547,
+   "pointed": "יִשְׂרָאֵל",
+   "pointedCount": 547,
+   "gloss": "Israel",
+   "others": [],
+   "vocabId": "p41545921"
+  },
+  {
+   "rank": 14,
+   "unpointed": "הוא",
+   "count": 451,
+   "pointed": "הוּא",
+   "pointedCount": 323,
+   "gloss": "he, it",
+   "others": [
+    {
+     "he": "הִוא",
+     "count": 128,
+     "gloss": "she, it: in the Torah the word for 'she' is usually spelled exactly like 'he' and is read hi"
+    }
+   ],
+   "vocabId": "h1ef19acb"
+  },
+  {
+   "rank": 15,
+   "unpointed": "הארץ",
+   "count": 364,
+   "pointed": "הָאָרֶץ",
+   "pointedCount": 364,
+   "gloss": "the land, the earth",
+   "others": []
+  },
+  {
+   "rank": 16,
+   "unpointed": "ולא",
+   "count": 358,
+   "pointed": "וְלֹא",
+   "pointedCount": 358,
+   "gloss": "and not",
+   "others": []
+  },
+  {
+   "rank": 17,
+   "unpointed": "לו",
+   "count": 351,
+   "pointed": "לוֹ",
+   "pointedCount": 306,
+   "gloss": "to him, for him",
+   "others": [
+    {
+     "he": "לּוֹ",
+     "count": 37,
+     "gloss": "to him, for him (a second pointing)"
+    },
+    {
+     "he": "לוּ",
+     "count": 8,
+     "gloss": "if only, if"
+    }
+   ]
+  },
+  {
+   "rank": 18,
+   "unpointed": "בן",
+   "count": 324,
+   "pointed": "בֶּן",
+   "pointedCount": 253,
+   "gloss": "son (of)",
+   "others": [
+    {
+     "he": "בֵּן",
+     "count": 34,
+     "gloss": "son"
+    },
+    {
+     "he": "בִּן",
+     "count": 17
+    },
+    {
+     "he": "בֶן",
+     "count": 14
+    },
+    {
+     "he": "בֵן",
+     "count": 5
+    }
+   ]
+  },
+  {
+   "rank": 19,
+   "unpointed": "לך",
+   "count": 323,
+   "pointed": "לְךָ",
+   "pointedCount": 192,
+   "gloss": "to you (masculine singular)",
+   "others": [
+    {
+     "he": "לָךְ",
+     "count": 86,
+     "gloss": "to you (a second pointing)"
+    },
+    {
+     "he": "לָּךְ",
+     "count": 17
+    },
+    {
+     "he": "לֵךְ",
+     "count": 16
+    },
+    {
+     "he": "לְּךָ",
+     "count": 7
+    }
+   ],
+   "vocabId": "pb9484fba"
+  },
+  {
+   "rank": 20,
+   "unpointed": "לאמר",
+   "count": 305,
+   "pointed": "לֵאמֹר",
+   "pointedCount": 228,
+   "gloss": "saying (introduces what someone says)",
+   "others": [
+    {
+     "he": "לֵּאמֹר",
+     "count": 77,
+     "gloss": "saying (a second pointing)"
+    }
+   ]
+  },
+  {
+   "rank": 21,
+   "unpointed": "אתו",
+   "count": 303,
+   "pointed": "אֹתוֹ",
+   "pointedCount": 248,
+   "gloss": "him, it (as the object of a verb)",
+   "others": [
+    {
+     "he": "אִתּוֹ",
+     "count": 55,
+     "gloss": "with him"
+    }
+   ]
+  },
+  {
+   "rank": 22,
+   "unpointed": "איש",
+   "count": 287,
+   "pointed": "אִישׁ",
+   "pointedCount": 286,
+   "gloss": "man, person",
+   "others": [],
+   "vocabId": "hef6e1613"
+  },
+  {
+   "rank": 23,
+   "unpointed": "עד",
+   "count": 280,
+   "pointed": "עַד",
+   "pointedCount": 266,
+   "gloss": "until, as far as",
+   "others": [
+    {
+     "he": "עֵד",
+     "count": 12,
+     "gloss": "a witness"
+    }
+   ],
+   "vocabId": "h46f7979e"
+  },
+  {
+   "rank": 24,
+   "unpointed": "אתם",
+   "count": 264,
+   "pointed": "אֹתָם",
+   "pointedCount": 183,
+   "gloss": "them (as the object of a verb)",
+   "others": [
+    {
+     "he": "אַתֶּם",
+     "count": 63,
+     "gloss": "you (plural)"
+    },
+    {
+     "he": "אִתָּם",
+     "count": 17,
+     "gloss": "with them"
+    }
+   ]
+  },
+  {
+   "rank": 25,
+   "unpointed": "או",
+   "count": 256,
+   "pointed": "אוֹ",
+   "pointedCount": 256,
+   "gloss": "or",
+   "others": [],
+   "vocabId": "h8ba0beaa"
+  },
+  {
+   "rank": 26,
+   "unpointed": "ליהוה",
+   "count": 255,
+   "pointed": "לַיהוָה",
+   "pointedCount": 252,
+   "gloss": "to the LORD, for the LORD; read aloud as la-Adonai",
+   "say": "לַאדֹנָי",
+   "others": []
+  },
+  {
+   "rank": 27,
+   "unpointed": "אלהיך",
+   "count": 252,
+   "pointed": "אֱלֹהֶיךָ",
+   "pointedCount": 252,
+   "gloss": "your God (you = one man)",
+   "others": []
+  },
+  {
+   "rank": 28,
+   "unpointed": "לפני",
+   "count": 247,
+   "pointed": "לִפְנֵי",
+   "pointedCount": 235,
+   "gloss": "before, in front of",
+   "others": [
+    {
+     "he": "לְפָנַי",
+     "count": 9,
+     "gloss": "before me"
+    }
+   ],
+   "vocabId": "h40502f8d"
+  },
+  {
+   "rank": 29,
+   "unpointed": "מצרים",
+   "count": 244,
+   "pointed": "מִצְרַיִם",
+   "pointedCount": 143,
+   "gloss": "Egypt",
+   "others": [
+    {
+     "he": "מִצְרָיִם",
+     "count": 101,
+     "gloss": "Egypt (a second pointing)"
+    }
+   ]
+  },
+  {
+   "rank": 30,
+   "unpointed": "הכהן",
+   "count": 235,
+   "pointed": "הַכֹּהֵן",
+   "pointedCount": 235,
+   "gloss": "the priest",
+   "others": []
+  }
+ ]
+}

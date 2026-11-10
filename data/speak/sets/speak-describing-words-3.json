@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-describing-words-3",
+ "title": "Describing words 3",
+ "theme": "describing-words",
+ "level": "A2",
+ "track": "both",
+ "pack": "describing-words-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hfa746c05",
+   "he": "עֲדַיִן",
+   "translit": "adayin",
+   "en": "still, yet",
+   "kind": "word",
+   "audioId": "hfa746c05",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf4b5a979",
+   "he": "אֵיפֹה",
+   "translit": "eifoh",
+   "en": "where",
+   "kind": "word",
+   "audioId": "il11-w6",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he0448a86",
+   "he": "פֹּה",
+   "translit": "poh",
+   "en": "here, this place, at this place, in this place",
+   "kind": "word",
+   "audioId": "he0448a86",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3e375762",
+   "he": "רַע",
+   "translit": "ra",
+   "en": "bad",
+   "kind": "word",
+   "audioId": "h3e375762",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6bc4e030",
+   "he": "אַחֲרוֹן",
+   "translit": "acharon",
+   "en": "last (final)",
+   "kind": "word",
+   "audioId": "h6bc4e030",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8453bf6a",
+   "he": "עַתָּה",
+   "translit": "atah",
+   "en": "now",
+   "kind": "word",
+   "audioId": "h8453bf6a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha756b5b6",
+   "he": "אַחֵר",
+   "translit": "acher",
+   "en": "other, further",
+   "kind": "word",
+   "audioId": "aleinu-1-w57",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h32049c3e",
+   "he": "כְּדַאי",
+   "translit": "keday",
+   "en": "fitting, suitable",
+   "kind": "word",
+   "audioId": "h32049c3e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h53c53bdf",
+   "he": "חָדָשׁ",
+   "translit": "chadash",
+   "en": "new, recently made",
+   "kind": "word",
+   "audioId": "h53c53bdf",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hdd2bd792",
+   "he": "גָּדוֹל",
+   "translit": "gadol",
+   "en": "big, large",
+   "kind": "word",
+   "audioId": "r18-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb694815f",
+   "he": "נֶהֱדָר",
+   "translit": "nehedar",
+   "en": "great, wonderful",
+   "kind": "word",
+   "audioId": "hb694815f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h64e266b0",
+   "he": "אֲמִתִּי",
+   "translit": "amiti",
+   "en": "real, true, actual",
+   "kind": "word",
+   "audioId": "h64e266b0",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

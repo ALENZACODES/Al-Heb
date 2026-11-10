@@ -1,0 +1,25 @@
+{
+  "id": "genesis-15-2-he-ari",
+  "fingerprint": "9f8687b80b497b7105bd43c50f5304e84eb0d8c549ae29f70366a2e562b8f615",
+  "audioSha256": "32d86ca8521b8425b8562a977def415ae81467b34e8ad8960bd8fbf83e2d6797",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "ויאמר אברם אדני אלוהים מה תתן לי ואנכי הולך ערירי ובן משק ביתי הוא דמשק אליעזר",
+  "transcript": "ויאמר אברהם, אדני אלוהים, מה תיתן לי, ואנחי הולך ערירי ובין משק ביתי ודמשק אליעזר.",
+  "wordEdits": 6,
+  "referenceWords": 16,
+  "wer": 0.375,
+  "asrExact": false,
+  "orthographicWordEdits": 6,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "domainPrompt": "הקלטה של קריאה מספר בראשית בתורה בעברית מקראית.",
+  "limitation": "Domain-prompted supplemental check, not independent primary evidence. Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

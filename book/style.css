@@ -1,0 +1,199 @@
+/* ALEF book - print CSS. build.mjs injects (before this sheet): the :root size variables, the @font-face block (relative file URLs to assets/fonts), and the @page rules. */
+:root {
+  --cream: #F6F1E7; --blue: #1F3A5F; --red: #B0373B; --olive: #6B7F3A; --gold: #D9A441; --ink: #2B2B2B;
+  /* Print face: Noto Serif Hebrew (full niqqud coverage, checked visually); Frank Ruhl Libre as fallback; Gveret Levin = Israeli cursive (ktav yad) */
+  --he-font: "Noto Serif Hebrew", "Frank Ruhl Libre", "FreeSerif", serif;
+  --cursive-font: "Gveret Levin", "Noto Serif Hebrew", serif;
+  --body-font: "Liberation Serif", "DejaVu Serif", Georgia, serif;
+  --ui-font: "Liberation Sans", "DejaVu Sans", Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font: 11pt/1.4 var(--body-font); color: var(--ink); background: #fff; }
+.he { font-family: var(--he-font); direction: rtl; unicode-bidi: isolate; }
+.he-cursive { font-family: var(--cursive-font) !important; }
+h1, h2, h3 { font-family: var(--ui-font); color: var(--blue); margin: 0 0 .3em; }
+h1 { font-size: 26pt; } h2 { font-size: 18pt; } h3 { font-size: 12pt; }
+a { color: inherit; text-decoration: none; }
+/* Keep headings and "New:" chips with what follows; give a heading room after a table or card grid. */
+h2, h3 { break-after: avoid; }
+p:has(+ table), p:has(+ .two), p:has(+ .wgrid) { break-after: avoid; }
+.babystep > ul { break-after: avoid; } /* lesson heading + goals stay with the New: chips and the word table */
+* + h3 { margin-top: 10pt; }
+.chapter { break-before: page; }
+.cover { page: nofoot; width: var(--page-w); height: var(--page-h); background: var(--cream); position: relative; overflow: hidden; break-after: page; }
+.cover .art { position: absolute; inset: 0; }
+.cover .art img { width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+.cover .titles { position: relative; padding: calc(var(--bleed) + 0.9in) 0.9in 0; text-align: center; }
+.cover .titles .he-big { font-size: 96pt; line-height: 1.2; color: var(--blue); display: block; }
+.cover .titles h1 { font-size: 40pt; margin-top: .2in; }
+.cover .titles p { font: 14pt var(--ui-font); color: var(--ink); }
+.todo { border: 1.5pt dashed var(--red); border-radius: 6pt; padding: 8pt 10pt; color: var(--red); font: 9.5pt/1.35 var(--ui-font); background: #fff7f5; }
+.todo b { text-transform: uppercase; letter-spacing: .06em; }
+.draft-flag { border: 1.5pt solid var(--red); color: var(--red); font: bold 9.5pt var(--ui-font); padding: 4pt 8pt; display: inline-block; border-radius: 4pt; letter-spacing: .04em; margin-bottom: 6pt; }
+.slot { border: 1pt dashed #999; border-radius: 6pt; padding: 8pt 10pt; font: 9.5pt/1.35 var(--ui-font); color: #555; background: #fbfaf6; }
+.front-page { page: main; }
+.opening-prayer p { margin: 0 0 .9em; font-size: 12pt; line-height: 1.55; }
+.opening-prayer em { color: var(--blue); }
+
+/* ---- letter page: content box is 7in x 9.5in on 8.5x11 ---- */
+.letter { break-before: page; break-inside: avoid; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.12in 0.16in; align-content: start; grid-template-rows: auto 1.9in 2.3in 1.75in 1.5in auto; zoom: var(--letter-zoom, 1); }
+.letter header { grid-column: 1 / -1; display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2pt solid var(--gold); padding-bottom: 3pt; }
+.letter header .num { font: 11pt var(--ui-font); color: #777; }
+.letter header h2 { margin: 0; font-size: 22pt; }
+.letter header .sound { font: 12pt var(--ui-font); color: var(--red); }
+.glyph-card { background: var(--cream); border: 1.2pt solid var(--gold); border-radius: 10pt; text-align: center; padding: 4pt; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+.glyph-card .he { font-size: 76pt; line-height: 1.35; color: var(--blue); display: block; }
+.glyph-card .label { font: 8pt var(--ui-font); color: #666; text-transform: uppercase; letter-spacing: .08em; }
+.glyph-card .note { font: 7pt/1.2 var(--ui-font); color: #888; }
+.glyph-card.cursive .he { font-size: 66pt; line-height: 1.5; color: var(--blue); }
+.mnemonic { grid-column: 1 / 3; border: 1.2pt solid var(--gold); border-radius: 10pt; overflow: hidden; background: var(--cream); }
+.mnemonic svg { width: 100%; height: 100%; display: block; }
+.side { display: flex; flex-direction: column; gap: .1in; min-height: 0; }
+.mnemonic-cap { font: 9pt/1.3 var(--ui-font); color: #444; }
+.stroke { background: #fff; border: 1pt solid #ddd; border-radius: 8pt; padding: 4pt; text-align: center; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.stroke .pair { display: flex; gap: 4pt; justify-content: center; }
+.stroke .pair div { width: 1.05in; }
+.stroke svg { width: 1.05in; height: 1.05in; display: block; }
+.stroke .cap { font: 6.5pt/1.2 var(--ui-font); color: #777; }
+.vocab { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: .16in; }
+.vocab figure { margin: 0; display: flex; align-items: center; gap: 5pt; border: 1pt solid #e5dfd0; border-radius: 8pt; padding: 4pt 6pt; background: #fff; overflow: hidden; justify-content: center; text-align: center; }
+.vocab img { width: .8in; height: .8in; object-fit: contain; flex: none; }
+.vocab figcaption { font: 9pt/1.25 var(--ui-font); min-width: 0; }
+.vocab figcaption .he { font-size: 22pt; line-height: 1.5; display: block; color: var(--blue); }
+.vocab figcaption i { color: var(--red); font-style: normal; display: block; }
+.vocab .src { font: 6pt var(--ui-font); color: #aaa; display: block; }
+.sound-panel { grid-column: 1 / -1; border-left: 3pt solid var(--olive); background: #fbfaf6; padding: 5pt 9pt; font: 8.6pt/1.35 var(--ui-font); color: #333; }
+.sound-panel b.t { color: var(--olive); text-transform: uppercase; letter-spacing: .06em; font-size: 7.5pt; }
+.sound-panel .ipa { color: #666; }
+.link-slot { display: flex; gap: .1in; align-items: center; padding: 5pt 7pt !important; }
+.qr { width: 0.95in; height: 0.95in; flex: none; background: #fff; border: .5pt solid #ddd; }
+.qr svg { width: 100%; height: 100%; display: block; }
+.url { font: 7.6pt/1.25 var(--ui-font); word-break: break-all; }
+.url .ph { color: var(--red); font-size: 6.5pt; display: block; margin-top: 2pt; word-break: normal; overflow-wrap: break-word; }
+/* Writing space on the 27 letter pages (two ruled rows: print, then cursive; the first cells carry a grey model letter to trace). */
+.writing { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 3pt; break-inside: avoid; }
+.writing .wlabel { font: 8pt var(--ui-font); color: #555; text-transform: uppercase; letter-spacing: .06em; }
+.writing .wrow { display: grid; grid-template-columns: repeat(7, 1fr); height: .6in; border-top: .5pt solid #bbb; border-bottom: 1pt solid #666; }
+.writing .wc { display: flex; align-items: center; justify-content: center; border-left: .5pt dotted #bbb; background: linear-gradient(to bottom, transparent 32%, #ddd 32%, #ddd calc(32% + .5pt), transparent calc(32% + .5pt)); overflow: visible; }
+.writing .wc:last-child { border-right: .5pt dotted #bbb; }
+.writing .wc .he { font-size: 30pt; line-height: 1; }
+.writing .wc.tr .he { color: #c9c9c9; }
+
+/* ---- tables and chapters ---- */
+table { border-collapse: collapse; width: 100%; font: 10pt var(--ui-font); }
+th, td { border: .6pt solid #ccc; padding: 3pt 5pt; vertical-align: middle; }
+th { background: var(--cream); text-align: left; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+td.he { font-size: 18pt; text-align: center; line-height: 1.6; }
+.alphabet { font-size: 9.5pt; }
+.alphabet td.he { font-size: 17pt; line-height: 1.1; padding: 0 5pt; }
+.alphabet td, .alphabet th { padding: 0.8pt 5pt; }
+.blessing { font-size: 26pt; line-height: 2; text-align: center; background: var(--cream); border: 1.2pt solid var(--gold); border-radius: 10pt; padding: 10pt 12pt; margin: .2in 0; }
+.blessing .line { display: block; }
+.grid td.he { font-size: 22pt; }
+.toc { list-style: none; padding: 0; margin: 0; font: 10.5pt var(--ui-font); }
+.toc li { display: flex; gap: 6pt; margin: 2.5pt 0; border-bottom: .5pt dotted #bbb; }
+.toc li span.t { flex: 1; } .toc li span.pg { font-variant-numeric: tabular-nums; min-width: 22pt; text-align: right; }
+.small { font: 9pt var(--ui-font); color: #666; }
+.vimg { width: .8in; height: .8in; object-fit: contain; }
+.end-page { page: nofoot; }
+.letter, .chapter:not(.front-page):not(.end-page) { page: main; }
+.pcard { break-inside: avoid; border: 1pt solid #e5dfd0; border-radius: 8pt; padding: 6pt 10pt; margin: 0 0 9pt; background: #fff; position: relative; }
+.pcard h3 { margin: 0 0 2pt; }
+.pbot { display: flex; gap: 8pt; align-items: flex-start; flex-direction: row-reverse; justify-content: space-between; }
+.pbot > div { flex: 1; min-width: 0; direction: ltr; }
+.pcard .pq { width: .72in; height: .72in; background: #fff; flex: none; }
+.pcard .pq svg { width: 100%; height: 100%; display: block; }
+.pheb { font-size: 15pt; line-height: 1.75; text-align: right; }
+.pen { margin: 3pt 0; font: 9pt/1.35 var(--body-font); }
+.pfoot { font: 6.8pt/1.3 var(--ui-font); color: #777; border-top: .5pt solid #eee; padding-top: 3pt; margin-top: 3pt; }
+.pfoot .nf { color: var(--red); font-weight: bold; }
+
+/* vowels */
+.vgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6pt; }
+.vcard { break-inside: avoid; border: 1pt solid #e5dfd0; border-radius: 8pt; padding: 4pt 7pt; display: grid; grid-template-columns: .85in 1fr; gap: 1pt 7pt; background: #fff; }
+.vcard .big { font-size: 40pt; line-height: 1.3; text-align: center; color: var(--blue); grid-row: 1 / 3; align-self: center; }
+.vcard h3 { margin: 0; font-size: 11pt; }
+.vcard h3 .he { font-size: 13pt; color: #666; font-weight: normal; margin-left: 4pt; }
+.vcard .pos { font: 7.6pt/1.3 var(--ui-font); color: #666; }
+.vcard .trad { grid-column: 1 / -1; font: 7.4pt/1.25 var(--ui-font); }
+.vcard .trad b { color: var(--olive); }
+.vcard .ex { grid-column: 1 / -1; font: 8pt var(--ui-font); }
+.vcard .ex .he { font-size: 14pt; }
+.vcard .vn { grid-column: 1 / -1; font: 7.2pt/1.3 var(--ui-font); color: #666; }
+.vcard .vars { grid-column: 1 / -1; font: 7.2pt/1.3 var(--ui-font); color: #444; }
+.vcard .vars .he { font-size: 12pt; }
+
+/* survival + index */
+.sit h3 { margin-top: 12pt; border-bottom: 1.5pt solid var(--gold); }
+.sit td.he { font-size: 17pt; width: 1.9in; } .sit td.say { width: 1.7in; font-weight: bold; color: var(--blue); } .sit .nt { color: #777; font-size: 8pt; display: block; font-weight: normal; }
+.sit .tag { font: 7pt var(--ui-font); color: var(--red); border: .5pt solid var(--red); border-radius: 3pt; padding: 0 2pt; margin-left: 3pt; }
+.index { columns: 2; column-gap: .35in; font: 9.5pt/1.35 var(--ui-font); }
+.index h3 { break-after: avoid; margin-top: 10pt; border-bottom: 1pt solid var(--gold); }
+.index div { display: flex; gap: 4pt; break-inside: avoid; border-bottom: .5pt dotted #ccc; }
+.index div span.t { flex: 1; } .index .he { font-size: 12pt; }
+.trad3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8pt; margin: 6pt 0; }
+.trad3 > div { border: 1pt solid #e5dfd0; border-radius: 8pt; padding: 6pt 8pt; font: 8.8pt/1.35 var(--ui-font); }
+.card2 { break-inside: avoid; border: 1pt solid #e5dfd0; border-radius: 8pt; padding: 5pt 9pt; margin: 0 0 7pt; font: 9pt/1.35 var(--ui-font); }
+.card2 .he { font-size: 15pt; }
+.blank { break-before: page; page: nofoot; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 8pt; }
+.two .card2 { margin: 0 0 5pt; font-size: 8.4pt; padding: 3pt 7pt; }
+.pairs td.he { font-size: 16pt; line-height: 1.4; } .pairs td, .pairs th { padding: 2pt 5pt; }
+.index { font: 8.4pt/1.25 var(--ui-font); }
+.index .he { font-size: 10.5pt; }
+/* Chromium shrinks a printed document to fit when a multi-column box overflows its width by a fraction of a pixel. That scaled every page
+   by a hair and clipped the right border of every rounded box and table. Clipping the column containers removes the overflow. */
+.ilcols, .vcols, .keys, .index, .wl { overflow: clip; }
+
+.wgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5pt 6pt; margin-top: 8pt; }
+.wcell { border: 1pt solid #e5dfd0; border-radius: 6pt; padding: 3pt 5pt; text-align: center; font: 8pt/1.25 var(--ui-font); break-inside: avoid; }
+.wcell .he { font-size: 17pt; line-height: 1.5; display: block; color: var(--blue); }
+.wcell b { color: var(--red); display: block; } .wcell span:last-child { color: #555; }
+
+/* ---- Remember every letter: 6 mnemonic cards per page (2 x 3) ---- */
+.mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: .06in .14in; margin-top: .08in; }
+.mcard { break-inside: avoid; border: 1.2pt solid var(--gold); border-radius: 9pt; background: #fff; padding: 5pt 7pt; display: grid; grid-template-columns: .85in 1fr; grid-template-rows: auto; align-content: start; column-gap: 7pt; font: 7.3pt/1.26 var(--ui-font); height: 3.1in; padding-bottom: 1pt; overflow: hidden; }
+.mgrid.p1 .mcard { height: auto; min-height: 2.9in; }
+.mcard .mpic { grid-row: 1 / 2; grid-column: 1; width: .85in; height: .85in; border: .8pt solid var(--gold); border-radius: 6pt; overflow: hidden; }
+.mcard .mpic svg { width: 100%; height: 100%; display: block; }
+.mcard .mhead { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.mcard .mhead b { font-size: 11pt; color: var(--blue); }
+.mcard .mhead .mn { color: #888; font-size: 7pt; }
+.mcard .mhead .mg { font-size: 34pt; line-height: 1.15; color: var(--blue); align-self: flex-end; }
+.mcard p { margin: 0 0 1.6pt; grid-column: 1 / -1; }
+.mcard .k { color: var(--olive); font-weight: bold; text-transform: uppercase; letter-spacing: .05em; font-size: 6pt; display: block; }
+.mcard .warn .k { color: var(--red); }
+.mcard .anchor .aw { font-size: 14pt; line-height: 1.6; color: var(--blue); }
+.mcard .anchor i { color: var(--red); font-style: normal; font-weight: bold; }
+.mcard .body { grid-column: 1 / -1; }
+.pheb-l { font-size: 12.5pt; line-height: 1.65; }
+.pheb-xl { font-size: 10.5pt; line-height: 1.55; }
+.pcard.long .pq { width: .6in; height: .6in; }
+
+/* word list (5,000 words) and class-week table */
+.wl { columns: 3; column-gap: .25in; font: 7.4pt/1.2 var(--ui-font); }
+.wl h3 { break-after: avoid; column-span: all; margin: 8pt 0 3pt; border-bottom: 1pt solid var(--gold); }
+.wl .wi { display: grid; grid-template-columns: 33% 1fr; gap: 4pt; break-inside: avoid; border-bottom: .4pt dotted #ccc; align-items: baseline; }
+.wl .wi .he { font-size: 10.5pt; text-align: right; line-height: 1.25; }
+.wl .wi .g { color: #333; } .wl .wi .g b { color: #999; font-weight: normal; font-size: 6pt; margin-right: 2pt; }
+.classweeks td, .classweeks th { vertical-align: top; font-size: 9pt; } .classweeks td:first-child { text-align: center; font-weight: bold; }
+
+/* Letters you will never forget (book/memorychain/section.mjs): framed cells, readable in black and white */
+.mcgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-left: 1pt solid #000; border-top: 1pt solid #000; margin-top: 8pt; }
+/* Memory chain: two framed grids (12 + 15 letters) so a grid never splits across pages; the second starts on a fresh page. */
+.mcgrid + .mcgrid { break-before: page; }
+.mcgrid { break-inside: avoid; }
+.mc { break-inside: avoid; border-right: 1pt solid #000; border-bottom: 1pt solid #000; padding: 4pt 6pt; font: 8.4pt/1.3 var(--ui-font); display: flex; flex-direction: column; gap: 2pt; }
+.mc.fin { outline: 1.4pt solid #000; outline-offset: -3pt; }
+.mct { display: flex; gap: 6pt; align-items: center; }
+.mcl { flex: none; width: 40pt; height: 40pt; border: 2pt solid #000; border-radius: 4pt; display: flex; align-items: center; justify-content: center; font-size: 28pt; line-height: 1; }
+.mcp { flex: 1; height: 54pt; border: .75pt solid #000; display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 7pt; }
+.mcp img { width: 100%; height: 100%; filter: grayscale(1) contrast(1.2); }
+.mch { font-size: 9.4pt; }
+.mcw .he { font-size: 15pt; }
+.mcn { font-size: 7pt; color: #333; }
+.mcd { font-size: 6.6pt; border-top: .5pt dotted #000; padding-top: 1pt; }

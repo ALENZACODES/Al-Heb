@@ -1,0 +1,13 @@
+{
+  "clip": "genesis-15-8-he-noa.mp3",
+  "audioSha256": "dc458aec451fef02ee5fb030e3fbe991a8a6c9d5d4a8614d4185f926b67eeb01",
+  "model": "renikud/whisper-he-ipa",
+  "modelRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "inferencePolicy": "ct2-int8-beam1-no-source-prompt",
+  "asciiPhonemes": "vaj'omer qadon'aj qeloh'im, bam'e qed'a, k'i jeraS'ena.",
+  "ipa": "vajˈomeʁ ʔadonˈaj ʔelohˈim, bamˈe ʔedˈa, kˈi jeʁaʃˈena.",
+  "status": "supplemental-phoneme-evidence",
+  "publishable": false,
+  "limitation": "Model-predicted phonemes, not a human listening certification; compare against separately established source pronunciation."
+}

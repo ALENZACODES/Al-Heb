@@ -1,0 +1,177 @@
+{
+ "id": "book61",
+ "titleHe": "לַיְלָה בְּתֵל אָבִיב",
+ "titleTranslit": "Lailah Be-Tel Aviv",
+ "titleEn": "Night in Tel Aviv",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "אַחַת בַּלַּיְלָה.",
+   "translit": "Achat ba-lailah.",
+   "en": "One in the morning.",
+   "img": "assets/books/book61/BOOK61_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p01.mp3",
+    "m": "audio/m/israeli/book/book61-p01.mp3"
+   },
+   "illustration": "a neon street, scooters, people everywhere",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הָעִיר לֹא יְשֵׁנָה.",
+   "translit": "Ha-ir lo yeshenah.",
+   "en": "The city doesn't sleep.",
+   "img": "assets/books/book61/BOOK61_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p02.mp3",
+    "m": "audio/m/israeli/book/book61-p02.mp3"
+   },
+   "illustration": "open bars, a falafel stand, music spilling out",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "נֹעָה גּוֹמֶרֶת לַעֲבֹד.",
+   "translit": "Noa gomeret la'avod.",
+   "en": "Noa finishes work.",
+   "img": "assets/books/book61/BOOK61_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p03.mp3",
+    "m": "audio/m/israeli/book/book61-p03.mp3"
+   },
+   "illustration": "a bartender untying her apron",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הִיא עֲיֵפָה אֲבָל לֹא רוֹצָה לִישֹׁן.",
+   "translit": "Hi ayefah aval lo rotzah lishon.",
+   "en": "She is tired but doesn't want to sleep.",
+   "img": "assets/books/book61/BOOK61_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p04.mp3",
+    "m": "audio/m/israeli/book/book61-p04.mp3"
+   },
+   "illustration": "the woman stretching outside the bar, looking at the sky",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הִיא הוֹלֶכֶת לַיָּם.",
+   "translit": "Hi holechet la-yam.",
+   "en": "She walks to the sea.",
+   "img": "assets/books/book61/BOOK61_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p05.mp3",
+    "m": "audio/m/israeli/book/book61-p05.mp3"
+   },
+   "illustration": "dark streets opening to the beach",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַחוֹף רֵיק.",
+   "translit": "Ha-chof reik.",
+   "en": "The beach is empty.",
+   "img": "assets/books/book61/BOOK61_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p06.mp3",
+    "m": "audio/m/israeli/book/book61-p06.mp3"
+   },
+   "illustration": "sand, dark water, distant lights",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "לֹא לְגַמְרֵי.",
+   "translit": "Lo legamrei.",
+   "en": "Not completely.",
+   "img": "assets/books/book61/BOOK61_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p07.mp3",
+    "m": "audio/m/israeli/book/book61-p07.mp3"
+   },
+   "illustration": "a few figures: a guitar player, a couple, a man with a dog",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "אִישׁ זָקֵן מְטַיֵּל עִם כֶּלֶב.",
+   "translit": "Ish zaken metayel im kelev.",
+   "en": "An old man walks with a dog.",
+   "img": "assets/books/book61/BOOK61_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p08.mp3",
+    "m": "audio/m/israeli/book/book61-p08.mp3"
+   },
+   "illustration": "the man and dog at the water's edge",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"לַיְלָה טוֹב,\" הוּא אוֹמֵר.",
+   "translit": "\"Lailah tov,\" hu omer.",
+   "en": "\"Good night,\" he says.",
+   "img": "assets/books/book61/BOOK61_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p09.mp3",
+    "m": "audio/m/israeli/book/book61-p09.mp3"
+   },
+   "illustration": "the man tipping his cap",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"בֹּקֶר טוֹב,\" אוֹמֶרֶת נֹעָה.",
+   "translit": "\"Boker tov,\" omeret Noa.",
+   "en": "\"Good morning,\" says Noa.",
+   "img": "assets/books/book61/BOOK61_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p10.mp3",
+    "m": "audio/m/israeli/book/book61-p10.mp3"
+   },
+   "illustration": "her grin, the first grey light on the horizon",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "שְׁנֵיהֶם צוֹדְקִים.",
+   "translit": "Shneihem tzodkim.",
+   "en": "They are both right.",
+   "img": "assets/books/book61/BOOK61_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p11.mp3",
+    "m": "audio/m/israeli/book/book61-p11.mp3"
+   },
+   "illustration": "the sky half dark, half light",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַיָּם לֹא אוֹמֵר כְּלוּם.",
+   "translit": "Ha-yam lo omer klum.",
+   "en": "The sea says nothing.",
+   "img": "assets/books/book61/BOOK61_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book61-p12.mp3",
+    "m": "audio/m/israeli/book/book61-p12.mp3"
+   },
+   "illustration": "the waves, the woman sitting, the dog running",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

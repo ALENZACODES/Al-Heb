@@ -1,0 +1,16 @@
+{
+  "id": "deuteronomy-6-4-he-ari",
+  "fingerprint": "e6e0b6a31d303c6808804eb7babd661d37c754af88db37355011c1f7940f50c9",
+  "audioSha256": "94ec4b9417452b77e14ebe0b1365be296d35de8cdb4261f37f08683e546da0cc",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "שמע ישראל אדני אלהינו אדני אחד",
+  "transcript": "שמע ישראל עדני אלהינו עדני אחד.",
+  "wordEdits": 2,
+  "referenceWords": 6,
+  "wer": 0.3333333333333333,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

@@ -1,0 +1,177 @@
+{
+ "id": "book23",
+ "titleHe": "יָם בַּבֹּקֶר",
+ "titleTranslit": "Yam Ba-Boker",
+ "titleEn": "Sea in the Morning",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הַיָּם.",
+   "translit": "Ha-yam.",
+   "en": "The sea.",
+   "img": "assets/books/book23/BOOK23_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p01.mp3",
+    "m": "audio/m/israeli/book/book23-p01.mp3"
+   },
+   "illustration": "a wide calm sea at first light",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "אֵין אֲנָשִׁים.",
+   "translit": "Ein anashim.",
+   "en": "There are no people.",
+   "img": "assets/books/book23/BOOK23_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p02.mp3",
+    "m": "audio/m/israeli/book/book23-p02.mp3"
+   },
+   "illustration": "an empty beach, footprints only",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "יֵשׁ אִישׁ אֶחָד.",
+   "translit": "Yesh ish echad.",
+   "en": "There is one man.",
+   "img": "assets/books/book23/BOOK23_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p03.mp3",
+    "m": "audio/m/israeli/book/book23-p03.mp3"
+   },
+   "illustration": "an older man in a swim cap walking to the water",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא שׂוֹחֶה כָּל יוֹם.",
+   "translit": "Hu socheh kol yom.",
+   "en": "He swims every day.",
+   "img": "assets/books/book23/BOOK23_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p04.mp3",
+    "m": "audio/m/israeli/book/book23-p04.mp3"
+   },
+   "illustration": "the man wading in, calm",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "חֹרֶף, קַיִץ.",
+   "translit": "Choref, kayitz.",
+   "en": "Winter, summer.",
+   "img": "assets/books/book23/BOOK23_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p05.mp3",
+    "m": "audio/m/israeli/book/book23-p05.mp3"
+   },
+   "illustration": "split frame: grey waves and bright sun, the same man",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַמַּיִם קָרִים.",
+   "translit": "Ha-mayim karim.",
+   "en": "The water is cold.",
+   "img": "assets/books/book23/BOOK23_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p06.mp3",
+    "m": "audio/m/israeli/book/book23-p06.mp3"
+   },
+   "illustration": "his face as the water reaches his chest",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הוּא שׂוֹחֶה.",
+   "translit": "Hu socheh.",
+   "en": "He swims.",
+   "img": "assets/books/book23/BOOK23_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p07.mp3",
+    "m": "audio/m/israeli/book/book23-p07.mp3"
+   },
+   "illustration": "steady strokes, far out",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הוּא רוֹאֶה דָּג.",
+   "translit": "Hu ro'eh dag.",
+   "en": "He sees a fish.",
+   "img": "assets/books/book23/BOOK23_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p08.mp3",
+    "m": "audio/m/israeli/book/book23-p08.mp3"
+   },
+   "illustration": "a silver fish beneath the surface",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הוּא רוֹאֶה אֶת הָעִיר.",
+   "translit": "Hu ro'eh et ha-ir.",
+   "en": "He sees the city.",
+   "img": "assets/books/book23/BOOK23_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p09.mp3",
+    "m": "audio/m/israeli/book/book23-p09.mp3"
+   },
+   "illustration": "the skyline from the water, tiny and gold",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הוּא יוֹצֵא.",
+   "translit": "Hu yotzeh.",
+   "en": "He comes out.",
+   "img": "assets/books/book23/BOOK23_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p10.mp3",
+    "m": "audio/m/israeli/book/book23-p10.mp3"
+   },
+   "illustration": "the man walking out, dripping, towel waiting",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "קָפֶה שָׁחֹר.",
+   "translit": "Kafeh shachor.",
+   "en": "Black coffee.",
+   "img": "assets/books/book23/BOOK23_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p11.mp3",
+    "m": "audio/m/israeli/book/book23-p11.mp3"
+   },
+   "illustration": "a thermos cup on the sand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "יוֹם טוֹב מַתְחִיל.",
+   "translit": "Yom tov matchil.",
+   "en": "A good day begins.",
+   "img": "assets/books/book23/BOOK23_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book23-p12.mp3",
+    "m": "audio/m/israeli/book/book23-p12.mp3"
+   },
+   "illustration": "the man sitting on the sand facing the sun",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

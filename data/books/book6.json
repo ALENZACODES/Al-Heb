@@ -1,0 +1,177 @@
+{
+ "id": "book6",
+ "titleHe": "קָפֶה קֹדֶם",
+ "titleTranslit": "Kafeh Kodem",
+ "titleEn": "Coffee First",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "בֹּקֶר.",
+   "translit": "Boker.",
+   "en": "Morning.",
+   "img": "assets/books/book6/BOOK6_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p01.mp3",
+    "m": "audio/m/israeli/book/book6-p01.mp3"
+   },
+   "illustration": "dim bedroom, grey light at the window, phone alarm glowing on the nightstand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "דָּנָה עֲיֵפָה.",
+   "translit": "Dana ayefah.",
+   "en": "Dana is tired.",
+   "img": "assets/books/book6/BOOK6_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p02.mp3",
+    "m": "audio/m/israeli/book/book6-p02.mp3"
+   },
+   "illustration": "a woman in her thirties sitting up in bed, hair messy, eyes half closed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "דָּנָה רוֹצָה קָפֶה.",
+   "translit": "Dana rotzah kafeh.",
+   "en": "Dana wants coffee.",
+   "img": "assets/books/book6/BOOK6_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p03.mp3",
+    "m": "audio/m/israeli/book/book6-p03.mp3"
+   },
+   "illustration": "the woman shuffling to a small kitchen in a bathrobe",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "אֵין קָפֶה!",
+   "translit": "Ein kafeh!",
+   "en": "There is no coffee!",
+   "img": "assets/books/book6/BOOK6_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p04.mp3",
+    "m": "audio/m/israeli/book/book6-p04.mp3"
+   },
+   "illustration": "an empty coffee jar held upside down, one bean falling out",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "אֵין חָלָב.",
+   "translit": "Ein chalav.",
+   "en": "There is no milk.",
+   "img": "assets/books/book6/BOOK6_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p05.mp3",
+    "m": "audio/m/israeli/book/book6-p05.mp3"
+   },
+   "illustration": "open fridge, bare shelves, a single lemon",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "דָּנָה הוֹלֶכֶת.",
+   "translit": "Dana holechet.",
+   "en": "Dana goes out.",
+   "img": "assets/books/book6/BOOK6_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p06.mp3",
+    "m": "audio/m/israeli/book/book6-p06.mp3"
+   },
+   "illustration": "the woman pulling a coat over pajamas, keys in hand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הַקָּפֶה בַּפִּנָּה.",
+   "translit": "Ha-kafeh ba-pinah.",
+   "en": "The café is on the corner.",
+   "img": "assets/books/book6/BOOK6_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p07.mp3",
+    "m": "audio/m/israeli/book/book6-p07.mp3"
+   },
+   "illustration": "a small corner café with a striped awning, morning street",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "קָפֶה, בְּבַקָּשָׁה.",
+   "translit": "Kafeh, bevakashah.",
+   "en": "Coffee, please.",
+   "img": "assets/books/book6/BOOK6_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p08.mp3",
+    "m": "audio/m/israeli/book/book6-p08.mp3"
+   },
+   "illustration": "the woman at the counter, barista smiling, espresso machine steaming",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "קָפֶה חַם.",
+   "translit": "Kafeh cham.",
+   "en": "Hot coffee.",
+   "img": "assets/books/book6/BOOK6_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p09.mp3",
+    "m": "audio/m/israeli/book/book6-p09.mp3"
+   },
+   "illustration": "close-up of a paper cup, steam curling, hands around it",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "קָפֶה טוֹב.",
+   "translit": "Kafeh tov.",
+   "en": "Good coffee.",
+   "img": "assets/books/book6/BOOK6_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p10.mp3",
+    "m": "audio/m/israeli/book/book6-p10.mp3"
+   },
+   "illustration": "the woman with eyes closed, first sip, pure relief",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "עַכְשָׁו בֹּקֶר טוֹב.",
+   "translit": "Achshav boker tov.",
+   "en": "Now it is a good morning.",
+   "img": "assets/books/book6/BOOK6_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p11.mp3",
+    "m": "audio/m/israeli/book/book6-p11.mp3"
+   },
+   "illustration": "the woman walking back along a sunny street, cup in hand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "קָפֶה קֹדֶם.",
+   "translit": "Kafeh kodem.",
+   "en": "Coffee first.",
+   "img": "assets/books/book6/BOOK6_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book6-p12.mp3",
+    "m": "audio/m/israeli/book/book6-p12.mp3"
+   },
+   "illustration": "the coffee cup on a desk beside a laptop, sunlight, the day begins",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

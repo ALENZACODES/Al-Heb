@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+ "inputSha256": "3e3d929d0b6fba0ae2b4e42e5d8ca67ca1b0c35e536285d377eed39763046f4a",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל־לְבָבֶךָ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/shema-vahavta-w14.mp3",
+  "audio/f/israeli/word/shema-vahavta-w15.mp3",
+  "audio/f/israeli/word/shema-vahavta-w16.mp3",
+  "audio/f/israeli/word/adon-olam-1-w3.mp3",
+  "audio/f/israeli/word/h8eec7f08.mp3",
+  "audio/f/israeli/word/shema-vahavta-w19.mp3",
+  "audio/f/israeli/word/aleinu-1-w65.mp3",
+  "audio/f/israeli/word/shema-vahavta-w21.mp3"
+ ]
+}

@@ -1,0 +1,122 @@
+{
+  "click": {
+    "src": "click_002.ogg",
+    "use": "generic tap / button"
+  },
+  "click_soft": {
+    "src": "click_001.ogg",
+    "use": "soft hover/secondary"
+  },
+  "click_hard": {
+    "src": "click_005.ogg",
+    "use": "primary press"
+  },
+  "select": {
+    "src": "select_002.ogg",
+    "use": "select option"
+  },
+  "select_alt": {
+    "src": "select_005.ogg",
+    "use": "alt select"
+  },
+  "confirm": {
+    "src": "confirmation_002.ogg",
+    "use": "confirm / continue"
+  },
+  "success": {
+    "src": "confirmation_001.ogg",
+    "use": "correct answer / win beat"
+  },
+  "streak": {
+    "src": "confirmation_004.ogg",
+    "use": "streak up"
+  },
+  "error": {
+    "src": "error_003.ogg",
+    "use": "wrong answer"
+  },
+  "miss": {
+    "src": "error_001.ogg",
+    "use": "miss / timeout"
+  },
+  "error_soft": {
+    "src": "error_005.ogg",
+    "use": "soft fail"
+  },
+  "pop": {
+    "src": "drop_002.ogg",
+    "use": "prefix bubble pop (#10)"
+  },
+  "bubble_pop": {
+    "src": "glass_002.ogg",
+    "use": "alt bubble / glass pop"
+  },
+  "collect": {
+    "src": "pluck_001.ogg",
+    "use": "collect / catch (#3)"
+  },
+  "pluck": {
+    "src": "pluck_002.ogg",
+    "use": "memory station unlock (#25)"
+  },
+  "whoosh": {
+    "src": "maximize_006.ogg",
+    "use": "whoosh / launch"
+  },
+  "swoosh": {
+    "src": "open_002.ogg",
+    "use": "screen transition"
+  },
+  "flipper": {
+    "src": "switch_002.ogg",
+    "use": "pinball flipper (#6)"
+  },
+  "catch": {
+    "src": "bong_001.ogg",
+    "use": "catch hit (#3)"
+  },
+  "tick": {
+    "src": "tick_002.ogg",
+    "use": "timer tick"
+  },
+  "toggle": {
+    "src": "toggle_001.ogg",
+    "use": "toggle setting"
+  },
+  "back": {
+    "src": "back_001.ogg",
+    "use": "navigate back"
+  },
+  "open": {
+    "src": "open_001.ogg",
+    "use": "open panel"
+  },
+  "close": {
+    "src": "close_001.ogg",
+    "use": "close panel"
+  },
+  "maximize": {
+    "src": "maximize_001.ogg",
+    "use": "expand"
+  },
+  "minimize": {
+    "src": "minimize_001.ogg",
+    "use": "collapse"
+  },
+  "scroll": {
+    "src": "scroll_001.ogg",
+    "use": "scroll"
+  },
+  "drop": {
+    "src": "drop_001.ogg",
+    "use": "drop / place"
+  },
+  "question": {
+    "src": "question_001.ogg",
+    "use": "hint / question"
+  },
+  "glitch": {
+    "src": "glitch_001.ogg",
+    "use": "niqqud fade glitch accent"
+  }
+}

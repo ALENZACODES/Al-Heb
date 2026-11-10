@@ -1,0 +1,177 @@
+{
+ "id": "book60",
+ "titleHe": "הָאַרְנָק",
+ "titleTranslit": "Ha-Arnak",
+ "titleEn": "The Lost Wallet",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "אֵיתָן מְחַפֵּשׂ אֶת הָאַרְנָק.",
+   "translit": "Eitan mechapes et ha-arnak.",
+   "en": "Eitan looks for his wallet.",
+   "img": "assets/books/book60/BOOK60_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p01.mp3",
+    "m": "audio/m/israeli/book/book60-p01.mp3"
+   },
+   "illustration": "a man turning out pockets at a kiosk, coffee in hand",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "אֵין אַרְנָק.",
+   "translit": "Ein arnak.",
+   "en": "No wallet.",
+   "img": "assets/books/book60/BOOK60_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p02.mp3",
+    "m": "audio/m/israeli/book/book60-p02.mp3"
+   },
+   "illustration": "empty pockets",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הוּא חוֹזֵר לַקָּפֶה. לֹא שָׁם.",
+   "translit": "Hu chozer la-kafeh. Lo sham.",
+   "en": "He goes back to the café. Not there.",
+   "img": "assets/books/book60/BOOK60_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p03.mp3",
+    "m": "audio/m/israeli/book/book60-p03.mp3"
+   },
+   "illustration": "the barista shaking her head",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא חוֹזֵר לַתַּחֲנָה. לֹא שָׁם.",
+   "translit": "Hu chozer la-tachanah. Lo sham.",
+   "en": "He goes back to the bus stop. Not there.",
+   "img": "assets/books/book60/BOOK60_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p04.mp3",
+    "m": "audio/m/israeli/book/book60-p04.mp3"
+   },
+   "illustration": "the empty bench, a pigeon",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "בָּאַרְנָק: כֶּסֶף, כַּרְטִיסִים, תְּמוּנָה שֶׁל הַבַּת.",
+   "translit": "Ba-arnak: kesef, kartisim, tmunah shel ha-bat.",
+   "en": "In the wallet: money, cards, a photo of his daughter.",
+   "img": "assets/books/book60/BOOK60_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p05.mp3",
+    "m": "audio/m/israeli/book/book60-p05.mp3"
+   },
+   "illustration": "a thought bubble of the wallet's contents",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַתְּמוּנָה. זֶה מָה שֶׁכּוֹאֵב.",
+   "translit": "Ha-tmunah. Zeh mah she-ko'ev.",
+   "en": "The photo. That's what hurts.",
+   "img": "assets/books/book60/BOOK60_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p06.mp3",
+    "m": "audio/m/israeli/book/book60-p06.mp3"
+   },
+   "illustration": "the man sitting heavily on a step",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "בָּעֶרֶב: הַטֶּלֶפוֹן.",
+   "translit": "Ba-erev: ha-telefon.",
+   "en": "In the evening: the phone.",
+   "img": "assets/books/book60/BOOK60_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p07.mp3",
+    "m": "audio/m/israeli/book/book60-p07.mp3"
+   },
+   "illustration": "a phone lit up and buzzing on the table, its screen a blank glow",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"שָׁלוֹם? מָצָאתִי אַרְנָק.\"",
+   "translit": "\"Shalom? Matzati arnak.\"",
+   "en": "\"Hello? I found a wallet.\"",
+   "img": "assets/books/book60/BOOK60_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p08.mp3",
+    "m": "audio/m/israeli/book/book60-p08.mp3"
+   },
+   "illustration": "a teenager's voice, a bubble of the wallet in a hand",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"אֵיפֹה אַתָּה?\"",
+   "translit": "\"Eifoh atah?\"",
+   "en": "\"Where are you?\"",
+   "img": "assets/books/book60/BOOK60_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p09.mp3",
+    "m": "audio/m/israeli/book/book60-p09.mp3"
+   },
+   "illustration": "the man jumping up",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הֵם נִפְגָּשִׁים בַּתַּחֲנָה.",
+   "translit": "Hem nifgashim ba-tachanah.",
+   "en": "They meet at the station.",
+   "img": "assets/books/book60/BOOK60_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p10.mp3",
+    "m": "audio/m/israeli/book/book60-p10.mp3"
+   },
+   "illustration": "a boy of sixteen holding out the wallet",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַכֹּל בִּפְנִים. גַּם הַתְּמוּנָה.",
+   "translit": "Ha-kol bifnim. Gam ha-tmunah.",
+   "en": "Everything is inside. Even the photo.",
+   "img": "assets/books/book60/BOOK60_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p11.mp3",
+    "m": "audio/m/israeli/book/book60-p11.mp3"
+   },
+   "illustration": "the man checking, relief",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "אֵיתָן נוֹתֵן לוֹ אֶת הַכֶּסֶף. הַיֶּלֶד לֹא לוֹקֵחַ.",
+   "translit": "Eitan noten lo et ha-kesef. Ha-yeled lo loke'ach.",
+   "en": "Eitan offers him the money. The boy won't take it.",
+   "img": "assets/books/book60/BOOK60_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book60-p12.mp3",
+    "m": "audio/m/israeli/book/book60-p12.mp3"
+   },
+   "illustration": "the boy waving it away, both smiling",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

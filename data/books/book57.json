@@ -1,0 +1,177 @@
+{
+ "id": "book57",
+ "titleHe": "יוֹם רִאשׁוֹן",
+ "titleTranslit": "Yom Rishon",
+ "titleEn": "Sunday",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יוֹם רִאשׁוֹן.",
+   "translit": "Yom rishon.",
+   "en": "Sunday.",
+   "img": "assets/books/book57/BOOK57_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p01.mp3",
+    "m": "audio/m/israeli/book/book57-p01.mp3"
+   },
+   "illustration": "an alarm clock, a man groaning",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "בְּיִשְׂרָאֵל, יוֹם רִאשׁוֹן הוּא יוֹם עֲבוֹדָה.",
+   "translit": "Be-Yisrael, yom rishon hu yom avodah.",
+   "en": "In Israel, Sunday is a workday.",
+   "img": "assets/books/book57/BOOK57_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p02.mp3",
+    "m": "audio/m/israeli/book/book57-p02.mp3"
+   },
+   "illustration": "a packed bus, suits, coffee cups",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "מַארְק חָדָשׁ בָּאָרֶץ.",
+   "translit": "Mark chadash ba-aretz.",
+   "en": "Mark is new in the country.",
+   "img": "assets/books/book57/BOOK57_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p03.mp3",
+    "m": "audio/m/israeli/book/book57-p03.mp3"
+   },
+   "illustration": "a man with visibly foreign confusion",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא לֹא מֵבִין.",
+   "translit": "Hu lo mevin.",
+   "en": "He doesn't understand.",
+   "img": "assets/books/book57/BOOK57_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p04.mp3",
+    "m": "audio/m/israeli/book/book57-p04.mp3"
+   },
+   "illustration": "the man looking at a calendar, counting days",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "\"יוֹם רִאשׁוֹן? עֲבוֹדָה?\"",
+   "translit": "\"Yom rishon? Avodah?\"",
+   "en": "\"Sunday? Work?\"",
+   "img": "assets/books/book57/BOOK57_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p05.mp3",
+    "m": "audio/m/israeli/book/book57-p05.mp3"
+   },
+   "illustration": "his disbelief",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "\"כֵּן,\" אוֹמֵר הַבּוֹס. \"וְיוֹם שִׁישִׁי חֹפֶשׁ.\"",
+   "translit": "\"Ken,\" omer ha-bos. \"Ve-yom shishi chofesh.\"",
+   "en": "\"Yes,\" says the boss. \"And Friday is off.\"",
+   "img": "assets/books/book57/BOOK57_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p06.mp3",
+    "m": "audio/m/israeli/book/book57-p06.mp3"
+   },
+   "illustration": "the boss shrugging cheerfully",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "מַארְק חוֹשֵׁב.",
+   "translit": "Mark choshev.",
+   "en": "Mark thinks.",
+   "img": "assets/books/book57/BOOK57_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p07.mp3",
+    "m": "audio/m/israeli/book/book57-p07.mp3"
+   },
+   "illustration": "gears turning over his head",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "יוֹם רִאשׁוֹן: עֲבוֹדָה. יוֹם שִׁישִׁי: יָם.",
+   "translit": "Yom rishon: avodah. Yom shishi: yam.",
+   "en": "Sunday: work. Friday: beach.",
+   "img": "assets/books/book57/BOOK57_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p08.mp3",
+    "m": "audio/m/israeli/book/book57-p08.mp3"
+   },
+   "illustration": "a split image, desk and beach",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"זֶה בְּסֵדֶר,\" הוּא אוֹמֵר.",
+   "translit": "\"Zeh beseder,\" hu omer.",
+   "en": "\"That's fine,\" he says.",
+   "img": "assets/books/book57/BOOK57_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p09.mp3",
+    "m": "audio/m/israeli/book/book57-p09.mp3"
+   },
+   "illustration": "his slow approving nod",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "אַחֲרֵי שָׁנָה הוּא חוֹזֵר לְקָנָדָה.",
+   "translit": "Acharei shanah hu chozer le-Kanadah.",
+   "en": "After a year he goes back to Canada.",
+   "img": "assets/books/book57/BOOK57_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p10.mp3",
+    "m": "audio/m/israeli/book/book57-p10.mp3"
+   },
+   "illustration": "a snowy street, a maple leaf flag",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "יוֹם רִאשׁוֹן בַּבֹּקֶר הוּא הוֹלֵךְ לַמִּשְׂרָד.",
+   "translit": "Yom rishon ba-boker hu holech la-misrad.",
+   "en": "Sunday morning he goes to the office.",
+   "img": "assets/books/book57/BOOK57_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p11.mp3",
+    "m": "audio/m/israeli/book/book57-p11.mp3"
+   },
+   "illustration": "the man at a locked dark office in the snow",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "סָגוּר. הוּא צוֹחֵק.",
+   "translit": "Sagur. Hu tzochek.",
+   "en": "Closed. He laughs.",
+   "img": "assets/books/book57/BOOK57_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book57-p12.mp3",
+    "m": "audio/m/israeli/book/book57-p12.mp3"
+   },
+   "illustration": "the man laughing alone in the snow, breath visible",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

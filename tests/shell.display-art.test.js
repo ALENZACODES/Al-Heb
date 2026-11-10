@@ -66,10 +66,10 @@ test('Talk, Camera and Light mount a gold coin and an in-page Rimon helper', () 
   assert.match(read('src/shell/home.view.js'), /medalFor\(r\.name/);
 });
 
-test('Talk, Camera, Light and Welcome have Rimon page triggers that resolve a still', () => {
+test('Talk, Camera and Welcome have Rimon page triggers that resolve a still', () => {
   const ctx = dayContext(new Date(2026, 10, 10, 12)); // a Tuesday, not Shabbat
   const present = new Set(Object.values(STILL_IDS).flat());
-  const map = { talk: 'talk.home', camera: 'camera.home', light: 'light.home', welcome: 'greet.first' };
+  const map = { talk: 'speak.home', camera: 'scan.home', welcome: 'greet.first' }; // reuse catalogued triggers (each needs drawn stills + TRIGGER_DOCS)
   for (const [route, trigger] of Object.entries(map)) {
     assert.equal(routeTrigger(route, ctx), trigger, route);
     assert.ok(TRIGGERS[trigger], trigger);

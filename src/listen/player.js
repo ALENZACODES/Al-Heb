@@ -3,7 +3,7 @@
 import { mediaPolicy } from '../audio/policy.js';
 import { playableFile } from './catalog.js';
 
-export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(url), base = 'audio/listen/' } = {}) {
+export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(url), base = 'audio/listen/', pauseOnSpeech = false } = {}) {
   let node = null;
   let currentId = null;
   let phase = 'idle';
@@ -93,8 +93,16 @@ export function createShelfPlayer({ makeAudio = (url) => new globalThis.Audio(ur
     if (currentId === item.id && node && node.paused === false && phase === 'playing') pause();
     else play(item);
   }
+  // Songs page: a lesson voice or word clip that starts pauses the song (never music over learner speech). The learner presses play again.
+  // pause() itself emits a policy change (releaseLayer), so the guard stops it re-entering.
+  let hushing = false;
+  const unSpeech = pauseOnSpeech ? mediaPolicy.subscribe((s) => {
+    if (!s.speech || hushing || !(phase === 'playing' || phase === 'loading')) return;
+    hushing = true; try { pause(); } finally { hushing = false; }
+  }) : () => {};
   return {
     play, pause, toggle, stop,
+    dispose() { unSpeech(); stop(); },
     snapshot: snap,
     subscribe(fn) { subs.add(fn); fn(snap()); return () => subs.delete(fn); },
   };

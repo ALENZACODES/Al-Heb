@@ -6,6 +6,7 @@
 // from the install-time precache, or "alef-runtime-v1" from runtime caching). It does NOT prove the feature works offline end to end:
 // no browser has been run in airplane mode for this module. Audio clips are not part of any group (no recorded teacher; the few synthetic word clips are fetched when played and not tested offline).
 import { requestPersistence, storageStatus } from "./backup.js";
+import { MUSIC_BASE, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS, playableFile } from "../listen/catalog.js";
 
 export const PRECACHE_URL = "precache-manifest.js";
 /** Approximate Web Storage limit in UTF-16 code units per origin: browsers differ (about 5 million characters in Chromium and Firefox, about 5 MB in Safari); used only for a warning. */
@@ -37,6 +38,9 @@ export function optionalGroups(tradition = "sephardi") {
   return [
     { id: "audio-shard", label: `Word audio list (${t})`, urls: [`data/audio/manifest-words-${t}.json`], approxMB: 0.9 },
     { id: "vocab-packs", label: "Vocabulary lists (5,000 words)", urls: [500, 1000, 2000, 5000].map((n) => `data/vocab/packs/vocab5k-tier-${n}.json`), approxMB: 0.95 },
+    // Music is optional, so it is never part of "ready": these let a learner take it offline on purpose (sw.js keeps it in alef-music-v1).
+    { id: "music-beds", label: "Game music (optional)", urls: [...MUSIC_TRACKS, ...ORIGINAL_MUSIC_TRACKS].map((m) => MUSIC_BASE + playableFile(m.file)), approxMB: 27.4 },
+    { id: "songs", label: "Songs (optional)", urls: ORIGINAL_SONG_TRACKS.map((m) => MUSIC_BASE + m.file), approxMB: 8.3 },
     { id: "ocr", label: "Photo reader (text recognition)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
   ];
 }
@@ -76,7 +80,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
-  { id: "od-music", label: "Game music player and English read-aloud", test: /^src\/(audio\/synth-music|shell\/speak-english)\.js$/, approxMB: 0.03 },
+  { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */

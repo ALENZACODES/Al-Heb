@@ -1,6 +1,6 @@
 // Optional secular game beds. Off until the learner turns them on.
 // Prayer, cantorial listen, and learner speech all pause the bed. Speech is never ducked.
-import { MUSIC_BASE, MUSIC_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
+import { MUSIC_BASE, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, SACRED_ROUTES, playableFile } from '../listen/catalog.js';
 import { mediaPolicy } from './policy.js';
 import { SYNTH_STYLE_LIST } from './synth-styles.js';
 
@@ -18,7 +18,8 @@ export function createMusicController({
   let writePrefs = writeArg;
   // Default volume 0.22 (owner report, Nov 7 2026: the bed was too loud at
   // 0.4). A learner's own saved volume always wins via applyStored.
-  const prefs = { want: false, muted: false, volume: 0.22, trackId: tracks[0]?.id || '' };
+  // picked: the learner chose a track in the bar. Until then a game may suggest its own bed (setContext suggest).
+  const prefs = { want: false, muted: false, volume: 0.22, trackId: tracks[0]?.id || '', picked: false };
   let audio = null;
   let audioId = '';
   let speech = false;
@@ -31,10 +32,11 @@ export function createMusicController({
   const subs = new Set();
   const snap = () => ({ phase, want: prefs.want, muted: prefs.muted, volume: prefs.volume, trackId: prefs.trackId, speech, sacred, game, quiet, error, armed });
   const emit = () => { for (const fn of subs) { try { fn(snap()); } catch { /* ignore */ } } };
-  function save() { try { writePrefs({ want: prefs.want, muted: prefs.muted, volume: prefs.volume, trackId: prefs.trackId }); } catch { /* prefs are optional */ } }
+  function save() { try { writePrefs({ want: prefs.want, muted: prefs.muted, volume: prefs.volume, trackId: prefs.trackId, picked: prefs.picked }); } catch { /* prefs are optional */ } }
   function applyStored(raw) {
     if (!raw || typeof raw !== 'object') return;
     if (typeof raw.want === 'boolean') { prefs.want = raw.want; armed = raw.want; }
+    if (typeof raw.picked === 'boolean') prefs.picked = raw.picked;
     if (typeof raw.muted === 'boolean') prefs.muted = raw.muted;
     if (Number.isFinite(Number(raw.volume))) prefs.volume = clamp(raw.volume);
     if (tracks.some((t) => t.id === raw.trackId)) prefs.trackId = raw.trackId;
@@ -71,6 +73,13 @@ export function createMusicController({
     phase = next;
     emit();
   }
+  /** Drop the current node before another track takes over (a streamed <audio> would otherwise stay in the page, still buffering). */
+  function release() {
+    try { audio?.pause?.(); } catch { /* ignore */ }
+    try { if (globalThis.Node && audio instanceof globalThis.Node) { audio.removeAttribute('src'); audio.load?.(); audio.remove(); } } catch { /* ignore */ }
+    audio = null;
+    audioId = '';
+  }
   function ensure() {
     const row = track();
     if (!row) return null;
@@ -82,7 +91,8 @@ export function createMusicController({
     audio = created;
     audioId = row.id;
     seamFade = 1;
-    try { audio?.setAttribute?.('data-alef-audio', 'music'); globalThis.document?.body?.append?.(audio); } catch { /* off-DOM still plays */ }
+    // Only a real element goes into the page: body.append() turns a plain stand-in object into the text "[object Object]".
+    try { audio?.setAttribute?.('data-alef-audio', 'music'); if (globalThis.Node && audio instanceof globalThis.Node) globalThis.document?.body?.append?.(audio); } catch { /* off-DOM still plays */ }
     if (!audio) { phase = 'missing'; error = 'This browser could not open the music file.'; emit(); return null; }
     audio.loop = true;
     audio.preload = 'none';
@@ -135,10 +145,12 @@ export function createMusicController({
       if (typeof io.writePrefs === 'function') writePrefs = io.writePrefs;
       emit();
     },
-    setContext({ sacred: isSacred = false, game: isGame = false, quiet: isQuiet = false } = {}) {
+    setContext({ sacred: isSacred = false, game: isGame = false, quiet: isQuiet = false, suggest = '' } = {}) {
       sacred = !!isSacred;
       game = !!isGame;
       quiet = !!isQuiet;
+      // A game's own bed, only while the learner has not picked one; not saved, so the next game can suggest its own.
+      if (!prefs.picked && suggest && suggest !== prefs.trackId && tracks.some((t) => t.id === suggest)) { release(); prefs.trackId = suggest; }
       if (!allowed()) halt(sacred || quiet ? 'blocked' : (armed && prefs.want ? 'paused' : 'off'));
       else start();
     },
@@ -186,10 +198,9 @@ export function createMusicController({
     choose(id) {
       if (!tracks.some((t) => t.id === id)) return false;
       prefs.trackId = id;
+      prefs.picked = true;
       save();
-      try { audio?.pause?.(); } catch { /* ignore */ }
-      audio = null;
-      audioId = '';
+      release();
       if (allowed()) start();
       else emit();
       return true;
@@ -197,11 +208,25 @@ export function createMusicController({
   };
 }
 
-/** Every track the game bar offers: the styles composed live in the browser first, then the three Kenney loops. */
+/** Every track the game bar offers: the styles composed live in the browser first, then the arcade loops and the original beds.
+ *  The original songs (vocals) are not game beds: sung words would sit between the Hebrew clips a game plays and stop-start on
+ *  every clip. They live on the Songs page (#/songs, src/listen/songs.view.js). Group labels name no vendor or artist (credits: Terms page). */
 export const GAME_TRACKS = [
   ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for Aleph' })),
-  ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Kenney loops' })),
+  ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Arcade loops' })),
+  ...ORIGINAL_MUSIC_TRACKS.map((t) => ({ ...t, group: 'Original beds' })),
 ];
+/** The bed a game starts on until the learner picks a track in the bar (their pick then wins everywhere). Edit freely; tests check the ids. */
+export const SUGGESTED_BED = Object.freeze({
+  shabbatrush: 'klezmer-loop-a', petclinic: 'klezmer-loop-a', barter: 'klezmer-loop-b', shuktaxi: 'klezmer-loop-b', rentalagent: 'klezmer-loop-b',
+  memorypalace: 'niggun-calm-loop-a', minicross: 'niggun-calm-loop-a', roottree: 'niggun-calm-loop-a', lettersudoku: 'niggun-calm-loop-b', wordsearch: 'niggun-calm-loop-b',
+  lab: 'niggun-calm-loop-a', labgame: 'niggun-calm-loop-b',
+  tenwords: 'cantor-strings-a', mitzvot613: 'cantor-strings-a', noahseven: 'cantor-strings-b',
+});
+/** Original beds used to be 3 to 4 minute files, streamed with an <audio> element because decoding one
+ *  held about 75 MB of PCM. They are now short downbeat loops (about 13 to 55 s, under ~20 MB of PCM),
+ *  so they use the same gapless Web Audio engine as the arcade loops. HTMLAudio.loop plus the 1.2 s
+ *  seam-volume dip above was what made the long beds fail to loop musically. */
 /** The music engine (src/audio/synth-music.js, ~20 KB) loads only when someone presses Play music, not at app start; until then this
  *  stand-in records volume and listeners and hands them over. Same <audio>-like surface the controller drives. */
 function makeGameAudio(url) {
@@ -232,7 +257,9 @@ export function musicContextFor(route, { calm = false, audioFree = false } = {})
   const name = route?.name || '';
   return {
     sacred: SACRED_ROUTES.has(name),
-    game: route?.owner === 'games',
+    // Brain Lab drills take the same optional bed as games (it still pauses for every clip they play).
+    game: route?.owner === 'games' || route?.owner === 'lab',
     quiet: !!(calm || audioFree),
+    suggest: SUGGESTED_BED[name] || '',
   };
 }

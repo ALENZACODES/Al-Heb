@@ -127,11 +127,14 @@ test('calm mode and audio-free keep the bed off', () => {
   assert.equal(media.made.length, 0);
 });
 
-test('the game bar offers the live-composed styles plus the Kenney loops, each with a unique id', async () => {
+test('the game bar offers the live-composed styles, the arcade loops and the original beds (not the songs), each with a unique id', async () => {
   const { GAME_TRACKS } = await import('../src/audio/music.js');
   const { SYNTH_STYLES } = await import('../src/audio/synth-music.js');
+  const { ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS } = await import('../src/listen/catalog.js');
   assert.ok(SYNTH_STYLES.length >= 12);
-  assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length);
+  assert.equal(GAME_TRACKS.length, SYNTH_STYLES.length + MUSIC_TRACKS.length + ORIGINAL_MUSIC_TRACKS.length);
+  for (const song of ORIGINAL_SONG_TRACKS) assert.ok(!GAME_TRACKS.some((t) => t.id === song.id), `${song.id} is a song: Songs page, not a game bed`);
+  for (const t of GAME_TRACKS) assert.doesNotMatch(t.group, /kenney|suno|eleven|openai|google|ai\b/i, 'no vendor or AI name in the bar');
   assert.equal(new Set(GAME_TRACKS.map((t) => t.id)).size, GAME_TRACKS.length);
   for (const st of SYNTH_STYLES) { assert.ok(st.bpm > 40 && st.bpm < 200, st.id); assert.ok(st.scale.length >= 5 && st.prog.length >= 4, st.id); }
 });
@@ -140,4 +143,56 @@ test('the installed track-name list matches the music engine, so the track list 
   const { SYNTH_STYLE_LIST } = await import('../src/audio/synth-styles.js');
   const { SYNTH_STYLES } = await import('../src/audio/synth-music.js');
   assert.deepEqual(SYNTH_STYLE_LIST.map((s) => [s.id, s.title, s.role]), SYNTH_STYLES.map((s) => [s.id, s.title, s.role]));
+});
+
+test('a stand-in node is never appended to the page (body.append would print "[object Object]"); a real element is', () => {
+  const appended = [];
+  const saved = { Node: globalThis.Node, document: globalThis.document };
+  class FakeNode { setAttribute() {} addEventListener() {} play() { return Promise.resolve(); } pause() {} removeAttribute() {} load() {} remove() { appended.splice(appended.indexOf(this), 1); } }
+  globalThis.Node = FakeNode;
+  globalThis.document = { body: { append: (x) => appended.push(x) } };
+  try {
+    const plain = createMusicController({ makeAudio: () => ({ addEventListener() {}, play: () => Promise.resolve(), pause() {} }), policy: { allowsMusic: () => true, snapshot: () => ({}), quiet: () => false } });
+    plain.setContext({ game: true }); plain.enable();
+    assert.equal(appended.length, 0);
+    const real = createMusicController({ makeAudio: () => new FakeNode(), tracks: [{ id: 'a', file: 'a.mp3', title: 'A' }, { id: 'b', file: 'b.mp3', title: 'B' }], policy: { allowsMusic: () => true, snapshot: () => ({}), quiet: () => false } });
+    real.setContext({ game: true }); real.enable();
+    assert.equal(appended.length, 1);
+    real.choose('b');
+    assert.equal(appended.length, 1, 'switching tracks removes the old element');
+  } finally { globalThis.Node = saved.Node; globalThis.document = saved.document; }
+});
+
+test('a game suggests its own bed until the learner picks one; the pick is saved and then wins everywhere', async () => {
+  const { GAME_TRACKS, SUGGESTED_BED } = await import('../src/audio/music.js');
+  const { ROUTES } = await import('../src/shell/router.js');
+  for (const [route, id] of Object.entries(SUGGESTED_BED)) {
+    assert.ok(GAME_TRACKS.some((t) => t.id === id), `${route}: ${id} is not in the bar`);
+    const r = ROUTES.find((x) => x.name === route);
+    assert.ok(r && (r.owner === 'games' || r.owner === 'lab'), `${route} is a game or Brain Lab route`);
+  }
+  const { media, music, stored } = controller({ tracks: GAME_TRACKS });
+  music.setContext(musicContextFor({ name: 'shabbatrush', owner: 'games' }));
+  music.enable();
+  assert.equal(music.snapshot().trackId, 'klezmer-loop-a');
+  assert.match(media.made.at(-1).url, /klezmer-loop-a\.mp3$/);
+  music.setContext(musicContextFor({ name: 'memorypalace', owner: 'games' }));
+  assert.equal(music.snapshot().trackId, 'niggun-calm-loop-a');
+  music.choose('night_at_the_beach');
+  assert.equal(stored().picked, true);
+  music.setContext(musicContextFor({ name: 'shabbatrush', owner: 'games' }));
+  assert.equal(music.snapshot().trackId, 'night_at_the_beach', 'a picked track is not overridden');
+  assert.equal(musicContextFor({ name: 'labgame', owner: 'lab' }).game, true, 'Brain Lab takes the bed too');
+  assert.equal(musicContextFor({ name: 'songs', owner: 'listen' }).game, false);
+});
+
+test('the music settings are real settings, so a learner\'s on/off, volume and track survive a reload', async () => {
+  const { validate, createSettings } = await import('../src/shell/settings.js');
+  for (const [k, v] of [['gameMusic', true], ['gameMusicMuted', false], ['gameMusicVolume', 0.4], ['gameMusicTrack', 'klezmer-loop-a'], ['gameMusicPicked', true]]) assert.equal(validate(k, v).ok, true, k);
+  assert.equal(validate('gameMusicVolume', 2).ok, false);
+  assert.equal(validate('gameMusicTrack', '<x>').ok, false);
+  const m = {}; const st = { get: (k, d) => (k in m ? m[k] : d), set: (k, v) => { m[k] = JSON.parse(JSON.stringify(v)); } };
+  const s = createSettings(st);
+  assert.deepEqual(s.set({ gameMusic: true, gameMusicTrack: 'niggun-calm-loop-b', gameMusicVolume: 0.3, gameMusicPicked: true }), []);
+  assert.equal(createSettings(st).get('gameMusicTrack'), 'niggun-calm-loop-b');
 });

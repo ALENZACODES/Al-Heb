@@ -92,16 +92,16 @@
   }
  },
  "summary": {
-  "items": 5675,
+  "items": 5686,
   "byConfidence": {
-   "high": 1670,
-   "medium": 3358,
+   "high": 1677,
+   "medium": 3362,
    "low": 551,
    "unvoiced": 96
   },
   "byFlag": {
-   "final-stress-assumed": 3317,
-   "mobile-shva": 1531,
+   "final-stress-assumed": 3320,
+   "mobile-shva": 1532,
    "stress-from-small-list": 493,
    "possible-segolate": 205,
    "aramaic": 197,
@@ -112,7 +112,7 @@
    "unpointed": 69,
    "alef-vav-mater-repaired": 63,
    "non-hebrew-token": 54,
-   "words-ipa-colloquial-shva-drop": 53,
+   "words-ipa-colloquial-shva-drop": 54,
    "vav-dagesh-consonantal": 29,
    "no-vowel-derived": 27,
    "vav-cholam-consonantal": 18,
@@ -248,8 +248,8 @@
     "unvoiced": 1
    },
    "vocab-extra": {
-    "high": 23,
-    "medium": 11,
+    "high": 30,
+    "medium": 15,
     "low": 1,
     "unvoiced": 0
    }
@@ -5930,6 +5930,17 @@
   {"id":"h1f49bdd9","kind":"word","group":"vocab-word","voices":["m","f"],"he":"לֶסְבִּית","soundtext":"lés-bit","confidence":"high","flags":[]},
   {"id":"h8e2f5367","kind":"word","group":"vocab-word","voices":["m","f"],"he":"כְּדֵי","soundtext":"ke-dé","confidence":"medium","flags":["mobile-shva"]},
   {"id":"hb3d76616","kind":"word","group":"vocab-word","voices":["m","f"],"he":"הִתְנִיעַ","soundtext":"hit-ní-a","confidence":"medium","flags":["furtive-stress-own-rule"]},
-  {"id":"hdab2dcff","kind":"word","group":"vocab-word","voices":["m","f"],"he":"בְּעֶצֶם","soundtext":"be-e-tsém","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]}
+  {"id":"hdab2dcff","kind":"word","group":"vocab-word","voices":["m","f"],"he":"בְּעֶצֶם","soundtext":"be-e-tsém","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
+  {"id":"ha664d093","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"עוּגָה","soundtext":"u-gá","confidence":"high","flags":[]},
+  {"id":"h1f02450d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מִיץ","soundtext":"míts","confidence":"high","flags":[]},
+  {"id":"hd2715ab4","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"גְּלִידָה","soundtext":"gue-lí-da","confidence":"medium","flags":["mobile-shva","words-ipa-colloquial-shva-drop"]},
+  {"id":"h6cc8112a","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"שׁוֹקוֹלָד","soundtext":"sho-ko-lád","confidence":"high","flags":[]},
+  {"id":"h1efbc546","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"מָרָק","soundtext":"ma-rák","confidence":"high","flags":[]},
+  {"id":"hbb1dc7a2","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תַּפּוּחַ","soundtext":"ta-pú-aj","confidence":"high","flags":[]},
+  {"id":"hec23eb47","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תַּפּוּז","soundtext":"ta-púz","confidence":"high","flags":[]},
+  {"id":"h08c16650","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"כָּרִיךְ","soundtext":"ka-ríj","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h8417ff6d","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"לִימוֹנָדָה","soundtext":"li-mo-ná-da","confidence":"high","flags":[]},
+  {"id":"h95d4df2c","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"חַלָּה","soundtext":"ja-lá","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"h0b5f5c41","kind":"word","group":"vocab-extra","voices":["m","f"],"he":"תִּשְׁעִים","soundtext":"tish-ím","confidence":"medium","flags":["final-stress-assumed"]}
  ]
 }

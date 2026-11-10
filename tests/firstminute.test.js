@@ -175,3 +175,20 @@ test('"in a row" moments: 3, 5, 10 and every 5 after; a wrong answer or a new pa
   showAnswerBand(false, { doc, win }); assert.equal(answerRun(), 0);
   showAnswerBand(true, { doc, win }); listeners.hashchange?.(); assert.equal(answerRun(), 0, 'a new page starts again');
 });
+
+test('first screen stays light: the plan reads the slim lesson index, which matches the full lesson file and gives the same plans', async () => {
+  const { lessonsIndex, serialize } = await import('../tools/curriculum/lessons-index.mjs');
+  const { buildPlan, answerLetters } = await import('../src/onboarding/model.js');
+  const full = JSON.parse(readFileSync(new URL('../data/curriculum/lessons.json', import.meta.url), 'utf8'));
+  const onDisk = readFileSync(new URL('../data/curriculum/lessons.index.json', import.meta.url), 'utf8');
+  assert.equal(onDisk, serialize(lessonsIndex(full)), 'stale: run node tools/curriculum/lessons-index.mjs');
+  assert.ok(onDisk.length < 40 * 1024, 'index stays small');
+  const slim = JSON.parse(onDisk).lessons;
+  const plans = JSON.parse(readFileSync(new URL('../data/onboarding/plans.json', import.meta.url), 'utf8'));
+  for (const letters of ['none', 'some', 'letters', 'vowels']) for (const goal of ['read', 'israel', 'both']) for (const completed of [[], full.lessons.slice(0, 3).map((l) => l.id)]) {
+    const rec = { ...answerLetters(null, letters, '2026-11-10T00:00:00Z'), minutesPerDay: 10 };
+    const o = { record: rec, plans, hasRoute: () => true, completed, goal };
+    assert.deepEqual(buildPlan({ ...o, lessons: slim }), buildPlan({ ...o, lessons: full.lessons }), `${letters} ${goal} ${completed.length}`);
+  }
+  assert.match(readFileSync(new URL('../src/onboarding/loader.js', import.meta.url), 'utf8'), /lessons\.index\.json[\s\S]*catch\(\(\) => loadJson\('data\/curriculum\/lessons\.json'\)/);
+});

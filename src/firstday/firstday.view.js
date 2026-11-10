@@ -129,8 +129,7 @@ export function mount(root, ctx) {
     } catch { /* test DOMs and missing document: the letter still renders without the drawing */ }
     const tools = el('div', { class: 'fd-foot-tools' }, listen(hook));
     if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
-    // Instruction stays in the lesson body; Hear it / Trace it sit in the footer so Continue cannot cover them.
-    nodes.push(el('p', { class: 'fd-action' }, s.action));
+    // Instruction, Hear it and Trace it all live in the footer so Continue cannot cover them.
     // memory hooks and explanations stay behind "Why?"
     const why = [];
     // the chain is the one story for a letter that has an entry; the old story prints only once the chain is known to lack it (upgradeCard adds it if the file arrives later without the letter)
@@ -141,7 +140,7 @@ export function mount(root, ctx) {
     if (s.kind === 'letter' && ctx?.hasRoute?.('learn') !== false) why.push(el('p', { class: 'fd-spot' }, 'Optional: ', el('a', { class: 'btn secondary', href: `#/learn?spotit=${s.letter}` }, `Spot It: ${L?.name || s.letter}`)));
     if (why.length) nodes.push(el('details', { class: 'fd-why' }, el('summary', {}, 'Why?'), ...why));
     body.replaceChildren(...nodes);
-    footSet(tools, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
+    footSet(el('p', { class: 'fd-action fd-foot-action' }, s.action), tools, el('button', { class: 'btn fd-cta', type: 'button', id: 'fd-continue', onclick: () => { if (!qs.length) { win(s); return; } stage = 'q'; answered = { qi: 0 }; sel = null; verdict = null; say(''); renderStep(); focusFirst(); } }, qs.length ? 'Continue' : 'Next'));
   }
 
   function renderQuestion(s, i, stepLabel, qs, qi) {

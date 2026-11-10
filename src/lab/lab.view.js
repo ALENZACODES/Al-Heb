@@ -8,7 +8,7 @@ import {
   readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded,
 } from './lab.core.js';
 import { DRILLS } from './lab.games.js';
-import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART } from './lab.art.js';
+import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
@@ -20,6 +20,11 @@ const CSS = `
 .lab-art.win{inline-size:9rem;block-size:9rem;object-fit:contain;margin-block:.2rem}
 .lab-art.done{aspect-ratio:3/2;inline-size:100%;border-radius:12px;object-fit:cover;margin-block:.2rem .8rem}
 @media (prefers-reduced-data:reduce){.lab-art{display:none}}
+.lab-board.has-mat{background:var(--lab-mat) center/cover no-repeat;border-radius:14px;padding:1.1rem .8rem}
+.lab-board.has-mat>*{background:#fffaf0;border-radius:14px;padding:.5rem;box-shadow:0 0 0 1px #e2d6b8}
+.lab-cell.is-hidden{background-image:var(--lab-tileback,none);background-size:cover;background-position:center}
+.lab-art.figure{inline-size:5.5rem;block-size:5.5rem;object-fit:contain;margin:.2rem auto 0}
+@media (forced-colors:active){.lab-board.has-mat{background:none}.lab-cell.is-hidden{background-image:none}}
 .lab{max-inline-size:44rem;margin-inline:auto}
 .lab h1{margin-block:.2em .3em}
 .lab-sub{color:var(--muted,#5d6b60);margin-block:0 1rem}
@@ -177,7 +182,7 @@ function drill(root, ctx, id) {
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
-        artImg(h, artPath(id, 'cover'), 'cover'),
+        artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout drill ${pos + 1} of 3` : ''),
         h('p', { class: 'how' }, game.blurb),
         h('p', { class: 'lab-note' }, `${globalThis.document?.documentElement?.hasAttribute?.('data-calm') ? 'Ten rounds, no clock (calm mode is on).' : `${SESSION_SECONDS} seconds.`} Two right in a row takes you up a level; a miss takes you down one.${gs ? ` Your best: ${gs.best}. You start at level ${startLevel(gs)}.` : ''}`),
@@ -207,9 +212,11 @@ function drill(root, ctx, id) {
     const trialBar = h('div', { class: 'lab-trialbar', hidden: true });
     const board = h('div', { class: 'lab-board' });
     const feedback = h('p', { class: 'lab-feedback', 'aria-live': 'polite' });
+    const figure = matKind(id) === 'figure' ? artImg(h, playArtPath(id), 'figure') : null;
     wrap.replaceChildren(back, h('div', { class: 'lab-play' },
       h('div', { class: 'lab-hud' }, h('div', { class: 'lab-time', role: 'progressbar', 'aria-label': 'Time left', 'aria-valuemin': '0', 'aria-valuemax': String(SESSION_SECONDS) }, timeBar), lvlEl, h('span', {}, 'Score ', scoreEl)),
-      prompt, trialBar, board, feedback));
+      prompt, trialBar, board, feedback, figure));
+    applyMat(id, { board, root: wrap });
     const rnd = seeded(`${id}:${Date.now()}`);
     const audioOn = !isAudioFree(ctx);
     // Calm mode (Settings > Accessibility): no clocks at all. Rounds wait for you and the drill ends after ten rounds.

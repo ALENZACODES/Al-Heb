@@ -191,6 +191,21 @@ Progress showed the streak as a number and the week as sentences further down. D
 
 Each day has a spoken name ("Saturday: Shabbat, a rest day"); the marks are hidden from screen readers. In forced-colours mode the marks are drawn in the system text colour. Checked headless at phone size with a seeded record, and by a unit test of all four states.
 
+## Round 10 (2026-11-10, about 9 AM): launch hardening and review of c4532801f (review round 5 of 5)
+
+**Review of the branch at c4532801f (score 95/100).** CI passed on that commit. Defects found by looking at the new pieces in the light and high-contrast themes (the app defaults to dark, but both are in Settings):
+
+| # | Defect | Fix |
+|---|---|---|
+| 1 | The week strip's Shabbat candle was cream on a cream card in the light and contrast themes, close to invisible | The candle has a thin outline in the text colour and a stronger gold flame |
+| 2 | Today's ring (gold) and the missed-day dots were faint on light backgrounds | The ring is mixed toward the text colour and the dots are darker, in every theme |
+
+**Hardening sweep (headless Chromium, local server).**
+- 12 routes (welcome, Home, Learn, a lesson, Progress, Brain Lab, Games, Settings, Read, Calendar, the first lesson, Awards) × 3 themes (dark, light, contrast) × 2 sizes (320 px with reduced motion, 390 px): 72 page loads with no script errors, no console errors and no sideways scrolling.
+- Offline: after the service worker filled its cache (372 files), the welcome screen opened with the network off. Learn and Progress show the existing "needs a connection the first time" page, as designed for on-demand routes.
+
+Not checked: a real phone, a screen reader, a slow network.
+
 ## Score
 
-Round 9: 95/100 (before this round: 95; the strip closes a visible Duolingo gap, the real-phone pass is still open). Round 8: 95/100 (before this round: 94; the first screen downloads about 660 KB less). Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 10: 95/100 (before this round: 95; the c4532801f commit reviewed at 95). Round 9: 95/100 (before this round: 95; the strip closes a visible Duolingo gap, the real-phone pass is still open). Round 8: 95/100 (before this round: 94; the first screen downloads about 660 KB less). Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

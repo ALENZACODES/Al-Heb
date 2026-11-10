@@ -218,6 +218,9 @@ export const TRIGGERS = Object.freeze({
   'roots.home': { surface: 'page', fallback: 'letters.home', line: L('Most Hebrew words grow from a three-letter root.') },
   'vocab.home': { surface: 'page' },
   'speak.home': { surface: 'page' },
+  'talk.home': { surface: 'page', fallback: 'speak.home', line: L('Say a short everyday line. I will help with the other language.') },
+  'camera.home': { surface: 'page', fallback: 'scan.home', line: L('Point me at a sign. We will read it together.') },
+  'light.home': { surface: 'page', fallback: 'greet.first', line: L('A quiet gold light, when you want it.') },
   'traditions.home': { surface: 'page' },
 });
 
@@ -256,7 +259,8 @@ export const ROUTE_TRIGGERS = Object.freeze({
   festival: (_c, _f, p) => (HOLIDAY_TRIGGERS.includes(p.id) ? `holiday.${p.id}` : p.id === 'shemini-atzeret' ? 'holiday.shemini-atzeret' : null),
   day: (_c, _f, p) => dateTrigger(p.date),
   offline: 'offline.page', settings: 'settings.home', help: 'help.home', how: 'help.home', about: 'about.home', search: 'search.home',
-  letters: 'letters.home', atlas: 'letters.home', typing: 'typing.home', scan: 'scan.home', synagogues: 'synagogues.home',
+  letters: 'letters.home', atlas: 'letters.home', typing: 'typing.home', scan: 'scan.home', camera: 'camera.home', synagogues: 'synagogues.home',
+  talk: 'talk.home', light: 'light.home', welcome: 'greet.first',
   grammar: 'grammar.home', roots: 'roots.home', vocab: 'vocab.home', 'vocab-themes': 'vocab.home', speak: 'speak.home',
   traditions: 'traditions.home', 'traditions-guide': 'traditions.home', 'traditions-hear': 'traditions.home',
 });

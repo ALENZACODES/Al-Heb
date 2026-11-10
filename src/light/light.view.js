@@ -1,7 +1,8 @@
 // @ts-check
 // Star of David light (#/light): a full-screen gold Magen David, an optional phone-flash sparkle,
 // and a printable stencil. Torch permission is requested only on a tap. No inline handlers.
-import { h, heSpan } from '../shell/ui.js';
+import { h, heSpan, medal } from '../shell/ui.js';
+import { rimonSays } from '../shell/rimon-inline.js';
 import { quietNow } from '../shell/comfort.js';
 import { resolveQuietLocation } from '../shell/notify.js';
 import {
@@ -218,6 +219,7 @@ export async function mount(root, ctx) {
         h('p', { class: 'alef-light-caption' }, heSpan('מגן דוד'), ' ', h('span', {}, 'Star of David'))),
       h('div', { class: 'alef-light-panel' },
         h('header', { class: 'alef-light-head' },
+          h('div', { class: 'alef-feature-hero' }, medal('home', 'light', 48), rimonSays('A quiet gold light, when you want it.', { action: 'wave', size: 80 }).el),
           h('h1', { id: 'view-title', tabindex: '-1' }, 'Star of David light'),
           h('a', { class: 'alef-light-close', href: '#/', 'aria-label': 'Close the light and go home' }, 'Close')),
         h('label', { class: 'alef-light-slider' },

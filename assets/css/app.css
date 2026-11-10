@@ -516,3 +516,8 @@ details.draft-flag { background: none; border: 0; padding: 0; font-weight: inher
 .alef-coin.is-long .he{font-size:calc(var(--z)*.28)}
 .wf-level-tile>.alef-medal:last-child{margin:.5rem 0 0}
 @media (forced-colors:active){.alef-medal{display:none}.alef-coin{background:none}.alef-coin .he{color:CanvasText;background:none}}
+
+/* Feature-screen gold coin + Rimon helper (Talk, Camera, Light, Scan). Icons lazy-load; onerror removes a missing file. */
+.alef-feature-hero{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin:0 0 1rem}
+.alef-feature-hero .alef-medal{margin:0}
+.alef-feature-hero .rimon-say{flex:1 1 12rem;min-inline-size:0}

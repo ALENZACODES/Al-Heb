@@ -5,7 +5,8 @@
 // There is no server and no upload. Every photo is redrawn through a canvas first, which drops location and camera
 // details, so a saved translated photo carries none. Nothing is stored: the photo is gone when the screen closes.
 // The four-letter name is never drawn, shown as text or spoken: such a line is left as photographed.
-import { h, heSpan, deviceVoiceState } from '../shell/ui.js';
+import { h, heSpan, deviceVoiceState, medal } from '../shell/ui.js';
+import { rimonSays } from '../shell/rimon-inline.js';
 import { speechSafeText } from '../shell/names.js';
 import { isPointed } from '../photo/hebrew.js';
 import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabel, MAX_PHOTO_SIDE, HELD_NOTE } from './camera-model.js';
@@ -68,8 +69,10 @@ export function mount(root, ctx = {}) {
   const chooseInput = h('input', { type: 'file', accept: 'image/jpeg,image/png,image/webp', 'aria-label': 'Choose a photo' });
   const sampleBtn = h('button', { type: 'button', class: 'btn secondary', id: 'camera-sample' }, 'Try A Sample Sign');
   const out = h('div', { class: 'camera-out' });
+  const helper = rimonSays('Point me at a sign. We will read it together.', { action: 'point', size: 96 });
   const wrap = h('section', { class: 'card camera-tr', 'aria-labelledby': 'view-title' },
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Camera Translator'),
+    h('div', { class: 'alef-feature-hero' }, medal('home', 'camera', 54), helper.el),
     h('p', {}, 'Take a photo of a Hebrew sign or menu. The English is drawn over the Hebrew, right on your photo. Tap any line to hear the Hebrew and see how to say it.'),
     modeNote,
     h('div', { class: 'row' },

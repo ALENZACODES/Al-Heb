@@ -33,3 +33,29 @@ export { audioAccess, audioButton, deviceVoiceState, DEVICE_LABEL, NO_AUDIO } fr
 // Gold coin icons, lazy (assets/img/ is never precached); decorative. coin(): blank coin, the letter is live text.
 export const medal = (g, id, z = 48, b = `assets/img/icons/ICON_${g}_${id}`) => h('img', { class: 'alef-medal', src: b + '.112.webp', srcset: [112, 160, 224, 320].map((w) => `${b}.${w}.webp ${w}w`).join(), sizes: z + 'px', width: z, height: z, alt: '', loading: 'lazy', decoding: 'async', onerror: (e) => e.target.remove() });
 export const coin = (t, z = 56) => h('span', { class: 'alef-coin' + (t.replace(/[\u0591-\u05C7]/g, '').length > 2 ? ' is-long' : ''), style: `--z:${z}px`, 'aria-hidden': 'true' }, heSpan(t));
+
+/** Route or feature name -> [group, id] for medal(). Unknown names return null (no broken image). */
+export const MEDAL_FOR = Object.freeze({
+  letters: ['home', 'letters'], vocab: ['home', 'vocab'], read: ['home', 'read'], progress: ['home', 'progress'],
+  calendar: ['home', 'calendar'], sounds: ['home', 'sounds'], scan: ['home', 'scan'], workbook: ['home', 'workbook'],
+  ask: ['home', 'ask'], talk: ['home', 'talk'], camera: ['home', 'camera'], light: ['home', 'light'],
+  games: ['home', 'games'], books: ['home', 'books'], lab: ['home', 'lab'], learn: ['home', 'learn'],
+  speak: ['home', 'speak'], firstday: ['home', 'firstday'], morning: ['home', 'firstday'],
+  wordfinder: ['home', 'vocab'], sprint: ['home', 'vocab'], traditions: ['home', 'sounds'],
+  torahreader: ['home', 'read'], 'listen-shelf': ['home', 'sounds'],
+  tugowar: ['word', 'tugowar'], vowelcatcher: ['word', 'vowelcatcher'], pinball: ['word', 'pinball'],
+  prefixblast: ['word', 'prefixblast'], memorypalace: ['word', 'memorypalace'],
+  archbuilder: ['word', 'archbuilder'], barter: ['word', 'barter'], bumperverbs: ['word', 'bumperverbs'],
+  ciphergrid: ['word', 'ciphergrid'], karaokebeat: ['word', 'karaokebeat'], lasermaze: ['word', 'lasermaze'],
+  letterbridge: ['word', 'letterbridge'], museumcurator: ['word', 'museumcurator'], petclinic: ['word', 'petclinic'],
+  rentalagent: ['word', 'rentalagent'], rhymelab: ['word', 'rhymelab'], roottree: ['word', 'roottree'],
+  shabbatrush: ['word', 'shabbatrush'], shadowcraft: ['word', 'shadowcraft'], shuktaxi: ['word', 'shuktaxi'],
+  submarinesonar: ['word', 'submarinesonar'], trainswitch: ['word', 'trainswitch'], typewriter: ['word', 'typewriter'],
+  weatherstudio: ['word', 'weatherstudio'],
+});
+/** Decorative gold coin for a route name, or null if we have no emblem yet. */
+export function medalFor(name, z = 48) {
+  const pair = MEDAL_FOR[name];
+  return pair ? medal(pair[0], pair[1], z) : null;
+}
+

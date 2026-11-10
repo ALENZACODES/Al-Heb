@@ -1,0 +1,176 @@
+{
+ "schema": "alef.talk.nmt.manifest.v1",
+ "version": "895d1a21fed7",
+ "runtime": {
+  "base": "../_ort/",
+  "bytes": 14927315,
+  "files": [
+   {
+    "path": "ort.wasm.min.mjs",
+    "bytes": 53725,
+    "sha256": "c21d9c326d453a4a61398270c804d5979e118540597cb0c07f7b3d64e6098234"
+   },
+   {
+    "path": "ort-wasm-simd-threaded.mjs",
+    "bytes": 24738,
+    "sha256": "30ed0b5cd1182ede931fea448afb567d4dc705ec957af09f108a2be5f770dac3"
+   },
+   {
+    "path": "ort-wasm-simd-threaded.wasm",
+    "bytes": 14848852,
+    "sha256": "4b884c203b0fa48d057be3332c65513ff85aa3c5bddd6946acc0fab7ecda001d"
+   }
+  ]
+ },
+ "packs": {
+  "en-he": {
+   "schema": "alef.talk.nmt.pack.v1",
+   "direction": "en-he",
+   "model": "OPUS-MT en-he (Helsinki-NLP/opus-mt-en-he)",
+   "licence": "Apache-2.0",
+   "bytes": 82461171,
+   "files": [
+    {
+     "name": "table.onnx",
+     "bytes": 34237058,
+     "sha256": "f88ebbdfd26472644a0d5f77510ef7a997052dd8eb4de0a5e7f58c563f1e6ab3",
+     "parts": [
+      {
+       "path": "en-he/table.p0.bin",
+       "bytes": 16777216,
+       "sha256": "4ee7626d8a7f1f557c78e51fa4ed0a7c8b90ed5d9fafcbac4ef9c1c112cb74ef"
+      },
+      {
+       "path": "en-he/table.p1.bin",
+       "bytes": 16777216,
+       "sha256": "46fea5d530f3af45c9e36d19da6ead040c16d70c0a7708a8d8adfd0f17fe33cf"
+      },
+      {
+       "path": "en-he/table.p2.bin",
+       "bytes": 682626,
+       "sha256": "e884a0924d403a793bbac882a08fcc19c67eeaca6574304edab9d82437e832d9"
+      }
+     ]
+    },
+    {
+     "name": "encoder.onnx",
+     "bytes": 23435432,
+     "sha256": "7e5906335405c460cefae7a620e16da66347882e37811217876c777035e227c9",
+     "parts": [
+      {
+       "path": "en-he/encoder.p0.bin",
+       "bytes": 16777216,
+       "sha256": "54b7215fb7a946d8aa94de1dcc06183bbbb0129326109adc344e42b388b9719a"
+      },
+      {
+       "path": "en-he/encoder.p1.bin",
+       "bytes": 6658216,
+       "sha256": "502350afd7bc4d0fc7caee7c337ff6224d18cefaa74fb28dc96184a04c742a33"
+      }
+     ]
+    },
+    {
+     "name": "decoder.onnx",
+     "bytes": 23476730,
+     "sha256": "89ee6743f8cb790d94b93bb943a285c8012eddf9eea9bb127ee43fea8579cf0d",
+     "parts": [
+      {
+       "path": "en-he/decoder.p0.bin",
+       "bytes": 16777216,
+       "sha256": "ddd52831793ef900dfbd2f39997cf67857602696c19ce246fa75e5e243168ea0"
+      },
+      {
+       "path": "en-he/decoder.p1.bin",
+       "bytes": 6699514,
+       "sha256": "4217a0ae5e91d05d048f3601b194378a5f3012f4d75ab6430b8d5cf0f89fb55d"
+      }
+     ]
+    },
+    {
+     "name": "vocab.json",
+     "bytes": 1311951,
+     "sha256": "37e4283db6e3ee7fe4150ce922bc824e58a72441d4566e2db4e053ded2b06820",
+     "parts": [
+      {
+       "path": "en-he/vocab.json",
+       "bytes": 1311951,
+       "sha256": "37e4283db6e3ee7fe4150ce922bc824e58a72441d4566e2db4e053ded2b06820"
+      }
+     ]
+    }
+   ]
+  },
+  "he-en": {
+   "schema": "alef.talk.nmt.pack.v1",
+   "direction": "he-en",
+   "model": "OPUS-MT Tatoeba heb-eng (opus-2021-02-19)",
+   "licence": "Apache-2.0",
+   "bytes": 80904865,
+   "files": [
+    {
+     "name": "table.onnx",
+     "bytes": 32737378,
+     "sha256": "e4d6851b6074b3985679207a1927fbfdf9117b9503a52571aa48f9739b770e6c",
+     "parts": [
+      {
+       "path": "he-en/table.p0.bin",
+       "bytes": 16777216,
+       "sha256": "e6e55476d3ce8852e6bf3835512b6de765152c37cb0e73fad12a7e4589b053df"
+      },
+      {
+       "path": "he-en/table.p1.bin",
+       "bytes": 15960162,
+       "sha256": "fa47f451933018974d34884ed04b8382a1994629746f160e7c5223293d7a082d"
+      }
+     ]
+    },
+    {
+     "name": "encoder.onnx",
+     "bytes": 23435438,
+     "sha256": "8de9ea9e92a9247faf4992c428f1205769f542a49f9630ef8570d794c48537ba",
+     "parts": [
+      {
+       "path": "he-en/encoder.p0.bin",
+       "bytes": 16777216,
+       "sha256": "4e75c71d5021fa387158223b1721ce4a935ea8559bb2bfd55fd1eed53f79a908"
+      },
+      {
+       "path": "he-en/encoder.p1.bin",
+       "bytes": 6658222,
+       "sha256": "4f2fa1dd58250386385d3370b1552d2fbe92dd62e84d73582aa551f6a2062e63"
+      }
+     ]
+    },
+    {
+     "name": "decoder.onnx",
+     "bytes": 23476736,
+     "sha256": "7a934851980113a8f8b76d1f6db71e600032722077414dcba7993f95aa64273d",
+     "parts": [
+      {
+       "path": "he-en/decoder.p0.bin",
+       "bytes": 16777216,
+       "sha256": "a94fa1a042e0bf1525451b27833da2032b40dd0fa85f52031ab82906254d2fd7"
+      },
+      {
+       "path": "he-en/decoder.p1.bin",
+       "bytes": 6699520,
+       "sha256": "e56b73dc5b2d7c0f9da9fcf74d093882acc54ca564123f1bec3af24790c63b2d"
+      }
+     ]
+    },
+    {
+     "name": "vocab.json",
+     "bytes": 1255313,
+     "sha256": "384dc6ccdee32af477f807abdad674e9214c7ad3cfeb661dd0ed323e7efed6c9",
+     "parts": [
+      {
+       "path": "he-en/vocab.json",
+       "bytes": 1255313,
+       "sha256": "384dc6ccdee32af477f807abdad674e9214c7ad3cfeb661dd0ed323e7efed6c9"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -21,7 +21,9 @@ There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-1
 2. **`#/israel-units` retires when the branches merge.** Its grammar points move into the grammar pages listed below. The route
    then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates).
 3. **Three units are added** so every Israel-track lesson has a home: `pu-verbs` (il16, il19), `pu-conversation` (il23, il24) and
-   `pu-army` (I-18). The test fails if any Israel-track lesson is left out.
+   `pu-army` (I-18). The test fails if any Israel-track lesson is left out. The Practical branch's own plan left il16, il19, il23 and il24 out
+   because they teach grammar or pronunciation, not a situation. Here they become `pu-verbs` and `pu-conversation`: units built
+   around a grammar point, placed where a learner needs it.
 
 ## Where Each Piece Lives
 

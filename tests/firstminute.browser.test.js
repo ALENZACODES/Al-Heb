@@ -66,3 +66,23 @@ test('first minute in a browser: one question per screen by keyboard, no jump on
     assert.deepEqual(errors, [], 'no page errors');
   });
 });
+
+test('one Rimon per screen: the corner Rimon steps aside where the page draws its own, and his bubble ducks with him on a phone', { skip, timeout: 120000 }, async () => {
+  const server = createAppServer({ root }); await new Promise((r) => server.listen(0, r));
+  const base = `http://localhost:${server.address().port}/`;
+  const browser = await chromium.launch();
+  try {
+    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true, serviceWorkers: 'block' });
+    await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true, veilOptOut: true })); });
+    const page = await ctx.newPage();
+    await page.goto(base + '#/learn'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(1500);
+    assert.ok(await page.locator('.alef-continue-rimon, .rimon-inline').count(), 'Learn draws its own Rimon');
+    assert.equal(await page.locator('.rimon-corner').isVisible().catch(() => false), false, 'corner Rimon steps aside on Learn');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('alef:rimon.dismissed') || 'false')), false, 'stepping aside is not a dismissal');
+    await page.goto(base + '#/progress'); await page.waitForSelector('body[data-ready="1"]'); await page.waitForTimeout(3200);
+    if (await page.locator('.rimon-corner.rimon-peek').count()) {
+      const shown = await page.locator('.rimon-bubble').evaluateAll((els) => els.filter((e) => getComputedStyle(e).display !== 'none' && !e.hidden && e.textContent.trim()).length);
+      assert.equal(shown, 0, 'no bubble floats over the page once he has ducked');
+    }
+  } finally { await browser.close(); server.close(); }
+});

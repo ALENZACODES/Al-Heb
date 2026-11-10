@@ -393,3 +393,7 @@ html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
 .stat-badge-ico { inline-size: 1.6rem; block-size: 1.6rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff4d0, var(--gold-500) 55%, #a8741f); box-shadow: inset 0 -3px 0 rgba(0,0,0,.2); }
 .alef-lesson-locked { cursor: pointer; }
 .alef-locked-note { flex-basis: 100%; margin: var(--s-1) 0 0; padding: var(--s-2) var(--s-3); border-radius: var(--r-md); background: color-mix(in srgb, var(--accent) 10%, transparent); font-size: var(--fs-sm); }
+
+/* 16. One Rimon per screen: the corner Rimon steps aside when the page draws its own; on phones his bubble ducks with him */
+.rimon-corner.rimon-yield{display:none}
+@media(max-width:600px){body.rimon-peeking .rimon-bubble{display:none}}

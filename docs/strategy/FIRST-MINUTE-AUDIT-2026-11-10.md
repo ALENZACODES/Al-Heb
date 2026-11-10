@@ -125,6 +125,25 @@ Checks this round: unit tier 3,368 tests, 1 failure (the `/calendar` axe finding
 4. The opening prayer after setup on day one (owner decision; kept as ordered until then).
 5. The `/calendar` label-in-name findings fixed by the calendar's owner.
 
+## Round 6 (2026-11-10, about 5 AM): review of 10cc015 (review round 4 of 5) and the next build
+
+**Review of the branch at 10cc015 (score 91/100).** CI passed on that commit. Screens checked headless at phone size after the opening prayer (Home, Learn, Progress, the first lesson). What it got right: one goal number everywhere (header, Learn ring, Progress), a locked stop that says why, badge toasts. Still wrong at that commit and fixed now:
+
+| # | Weakness | Fix (this round) |
+|---|---|---|
+| 1 | Two Rimons at once: on Learn the corner Rimon stood under the lesson card's own Rimon, and his speech bubble covered the study plan text | One Rimon per screen: when a page draws its own Rimon (Learn card, a lesson summary, a say-bubble) the corner one steps aside. This is not saved as a dismissal; he is back on the next page that has no Rimon of its own |
+| 2 | On phones the corner Rimon ducks behind the bottom bar after two seconds, but his bubble stayed and floated over Progress text | The bubble ducks with him |
+| 3 | `/calendar`: 12 axe label-in-name findings (the day cells and the download buttons), the one unit-tier failure since round 4 | Day cells: the visible numbers are hidden from screen readers and the full spoken name rides in a visually hidden span, so no label can mismatch. Download buttons: the name starts with the visible "Download file". Outside this lane but small; the calendar tests were updated to read the spoken name |
+
+Checks this round: `tests/firstminute.browser.test.js` (now 2 tests, one for the Rimon rules) and `tests/a11y.fixes.test.js` pass with the `/calendar` scan included; the calendar unit tests pass; the accessibility gate passes (keyboard 152 ok, 15 routes with 0 findings, contrast with its one documented exception).
+
+**Plan to 95 to 100** (unchanged at the top, because only a person can do it):
+1. Real iPhone with VoiceOver and Android with TalkBack through setup, the first lesson, Learn and Progress.
+2. Rimon stills with transparent backgrounds and one situation map; `rimonInline` uses a still where one exists.
+3. Hero images generated from the orders and swapped in; gold lettering stills checked by a Hebrew reader.
+4. The opening prayer after setup on day one (owner decision). It also opens before a shared deep link such as `#/ask?q=...`; worth deciding together.
+5. A tap-to-open card on path stops if testers miss it.
+
 ## Score
 
-Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

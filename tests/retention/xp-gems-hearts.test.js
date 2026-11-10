@@ -118,3 +118,21 @@ test('a 3-minute sitting pays XP but is not a finished lesson (no unlock, no fir
   const b = lessonPayout(a.rec, { awardId: 'lesson|r05', accuracy: 0, now: NOW });
   assert.deepEqual([b.xp, b.first, b.gems, b.rec.lessonsFinished], [10, true, 60, 1], 'finishing the lesson later still pays, and reaches the daily goal');
 });
+test('review round 4: a finished lesson pays once per end card (also across tabs) and at most twice a day', async () => {
+  const { lessonAward, unlockedBy, LESSON_PAYS_PER_DAY } = await import('../../src/retention/xp.js');
+  const H = '#/learn?lesson=r04';
+  const a = lessonAward(fresh(), H, NOW); assert.equal(a.id, 'lesson|#/learn?lesson=r04|2026-11-10|0');
+  assert.equal(lessonAward(a.rec, H, NOW + 5000).id, null, 'the same end card, here or in a second tab reading the same record');
+  assert.equal(lessonAward(a.rec, '#/learn?lesson=r05', NOW + 5000).id, 'lesson|#/learn?lesson=r05|2026-11-10|0', 'another lesson is its own');
+  const b = lessonAward(a.rec, H, NOW + 10 * 60000); assert.match(b.id, /\|1$/);
+  const c = lessonAward(b.rec, H, NOW + 20 * 60000); assert.equal(c.id, null, 'a third run today is practice only'); assert.equal(LESSON_PAYS_PER_DAY, 2);
+  assert.match(lessonAward(c.rec, H, NOW + 86400000).id, /2026-11-11\|0$/, 'tomorrow it pays again');
+  assert.equal(lessonAward({ ...fresh(), lessonRuns: 'junk', lastLesson: 7 }, H, NOW).id.endsWith('|0'), true);
+});
+test('new parts are introduced when they open: quests at 2 lessons, hearts at 3, the league at 5', async () => {
+  const { unlockedBy } = await import('../../src/retention/xp.js');
+  const r = fresh();
+  assert.deepEqual([unlockedBy(r, 0, 1), unlockedBy(r, 1, 2), unlockedBy(r, 2, 3), unlockedBy(r, 3, 4), unlockedBy(r, 4, 5), unlockedBy(r, 5, 6)], [[], ['quests'], ['hearts'], [], ['league'], []]);
+  const off = fresh(); off.hearts.enabled = false; off.league.enabled = false;
+  assert.deepEqual([unlockedBy(off, 2, 3), unlockedBy(off, 4, 5)], [[], []], 'nothing is announced for a part the learner switched off');
+});

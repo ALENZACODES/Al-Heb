@@ -3,7 +3,9 @@
 import { clone, CAPS, GOAL_CHOICES } from './state.js';
 import { dayKey } from './clock.js';
 import { earn, EARN } from './gems.js';
-import { addLeagueXp } from './leagues.js';
+import { addLeagueXp, LEAGUE } from './leagues.js';
+import { HEARTS } from './hearts.js';
+import { QUESTS } from './quests.js';
 
 /** Daily goal choices shown to the learner. */
 export const GOALS = Object.freeze([
@@ -59,4 +61,29 @@ export function lessonPayout(rec, { awardId, accuracy = 0, maxCombo = 0, now = D
   if (parts.accuracy) r = earn(r, EARN.accuracy, 'accuracy', now);
   if (first) r = earn(r, EARN.first, 'first', now);
   return { rec: r, xp: paid, parts, gems: r.gems.balance - gemsBefore, goalCrossed, first, duplicate: false };
+}
+
+/** A lesson pays at most this many times a day (re-doing the same lesson over and over is practice, not a way to mint XP). */
+export const LESSON_PAYS_PER_DAY = 2;
+export const SAME_FINISH_MS = 60000;
+/**
+ * The award id for a finished lesson at `hash`, or null when this finish must not pay: the same end card drawn again
+ * (also in another tab: the note is in the stored record), or the lesson already paid twice today.
+ * @returns {{id:string|null, rec:object}} rec carries the note of this finish
+ */
+export function lessonAward(rec, hash, now = Date.now()) {
+  const today = dayKey(now), last = rec.lastLesson;
+  if (last && last.hash === hash && now - last.at >= 0 && now - last.at < SAME_FINISH_MS) return { id: null, rec };
+  const runs = rec.lessonRuns && rec.lessonRuns.day === today && rec.lessonRuns.h && typeof rec.lessonRuns.h === 'object' ? rec.lessonRuns.h : {};
+  const n = Number(runs[hash]) || 0, r = clone(rec);
+  r.lastLesson = { hash, at: now }; r.lessonRuns = { day: today, h: { ...runs, [hash]: n + 1 } };
+  return { id: n >= LESSON_PAYS_PER_DAY ? null : `lesson|${hash}|${today}|${n}`, rec: r };
+}
+/** Which parts of the system open when the finished-lesson count goes from `before` to `after`: 'quests' (2), 'hearts' (3), 'league' (5). */
+export function unlockedBy(rec, before, after) {
+  const crossed = (n) => before < n && after >= n, out = [];
+  if (crossed(QUESTS.unlockLessons)) out.push('quests');
+  if (crossed(HEARTS.unlockLessons) && rec.hearts.enabled !== false) out.push('hearts');
+  if (crossed(LEAGUE.unlockLessons) && rec.league.enabled !== false) out.push('league');
+  return out;
 }

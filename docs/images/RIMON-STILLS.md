@@ -27,12 +27,6 @@ Held pictures exist on disk but the app does not show them; their triggers use t
 
 | Still | Status | What to fix |
 | --- | --- | --- |
-| a012 | held | A thin cream bar floats above the crown (left over from a frame). Redraw with nothing above the confetti. |
-| a014 | held | A broken cream corner bracket sits right of and below Rimon (left over from a frame). Redraw with no frame lines. |
-| a067 | held | A thin cream bar joins the tips of the laurel wreath (left over from a frame). Redraw with nothing between the tips. |
-| a117 | held | Faint thin lines box in the grogger (left over from a frame). Redraw with no lines around the prop. |
-| a149 | held | A thin light vertical line runs from the sash down to the step (left over from a frame). Redraw with no frame lines. |
-| a158 | held | Frame lines sit around the tambourine, and its skin came out see-through. Redraw with a solid cream skin and no lines. |
 | a019 | redraw | Fist pump reads weakly: the raised fist is small and sits against the body. Raise it clear of the body outline. |
 | a021 | redraw | Clapping hands overlap the sash and blend into it. Keep both hands above the sash, clearly apart from it. |
 | a030 | redraw | Hands blend into the sash. Move them clear of the sash so the gesture reads at small sizes. |

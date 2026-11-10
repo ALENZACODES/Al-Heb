@@ -113,14 +113,7 @@ export const ART = Object.freeze({
 
 // Catalogue stills that exist but must not be shown yet, with the reason. The app skips them (present.json leaves them
 // out) and each trigger falls back to the drawn set above. Remove an id once its fixed drawing is saved.
-export const HOLD = Object.freeze({
-  a012: 'A thin cream bar floats above the crown (left over from a frame). Redraw with nothing above the confetti.',
-  a014: 'A broken cream corner bracket sits right of and below Rimon (left over from a frame). Redraw with no frame lines.',
-  a067: 'A thin cream bar joins the tips of the laurel wreath (left over from a frame). Redraw with nothing between the tips.',
-  a117: 'Faint thin lines box in the grogger (left over from a frame). Redraw with no lines around the prop.',
-  a149: 'A thin light vertical line runs from the sash down to the step (left over from a frame). Redraw with no frame lines.',
-  a158: 'Frame lines sit around the tambourine, and its skin came out see-through. Redraw with a solid cream skin and no lines.',
-});
+export const HOLD = Object.freeze({});
 
 // Shown, but worth a second drawing when the next batch is made. Same prompt, plus the note.
 export const REDRAW = Object.freeze({

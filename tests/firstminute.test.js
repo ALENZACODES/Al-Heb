@@ -100,3 +100,28 @@ test('the dark green and gold look is the default theme; the teachers band takes
   assert.equal(DEFAULTS.theme, 'dark');
   assert.doesNotMatch(read('src/shell/companions.js'), /style\.background\s*=/);
 });
+
+// ---------- round 2 ----------
+test('every lesson summary has Rimon in the page and the streak flame from the shared record', async () => {
+  const UI = await import('../src/curriculum/exercises.ui.js');
+  const store = { get: (k) => (k === 'streak' ? v2({ todaySeconds: 120 }) : null), subscribe: () => () => {} };
+  const node = UI.summaryNode({ store, stats: { accuracy: 0.9, missed: [], skipped: [] }, ms: 60000, countText: 'x', goodLabels: [], missedLabels: [], skippedN: 0, cardsUpdated: 1 });
+  const find = (n, pred) => (pred(n) ? n : (n.children || []).reduce((a, c) => a || (c.nodeType === 1 ? find(c, pred) : null), null));
+  assert.ok(find(node, (n) => (n.className || '').includes('rimon-inline')), 'Rimon sprite, not a still image');
+  const flame = find(node, (n) => n.attrs?.['data-flame'] === '1');
+  assert.ok(flame); assert.match(flame.textContent, /2 of 5 minutes today/);
+  const quiet = UI.summaryNode({ store, showStreak: false, stats: { accuracy: 0.5, missed: [], skipped: [] }, ms: 1, countText: 'x', goodLabels: [], missedLabels: [], skippedN: 0, cardsUpdated: 0 });
+  assert.equal(find(quiet, (n) => n.attrs?.['data-flame'] === '1'), null, 'no flame when streaks are hidden or in calm mode');
+});
+test('the flame card lights live when the record changes and calls back once', async () => {
+  const { flameCard } = await import('../src/shell/flame.js');
+  const { el } = await import('../src/curriculum/dom.js');
+  let listener = null, lit = 0;
+  const store = { get: () => v2({ todaySeconds: 200 }), subscribe: (f) => { listener = f; return () => {}; } };
+  const card = flameCard({ make: el, store, now: () => NOW, onLit: () => { lit++; } });
+  assert.equal(card.el.attrs.class, 'fd-flame');
+  listener('streak', v2({ count: 1, best: 1, last: today, todaySeconds: 300 }));
+  assert.equal(card.el.attrs.class, 'fd-flame is-lit'); assert.equal(lit, 1);
+  listener('streak', v2({ count: 1, best: 1, last: today, todaySeconds: 320 }));
+  assert.equal(lit, 1, 'only the moment it lights');
+});

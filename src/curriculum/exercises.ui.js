@@ -5,6 +5,8 @@ import { el, heText, heLabeled } from "./dom.js";
 import { createSession, fmtDuration, pct, feedbackText, closingLine, fireFeedback, buildChoiceQuestions } from "./exercises.session.js";
 import { onKeys } from "./ex-ui.js";
 import { confirmOn } from "../shell/motor.js";
+import { rimonInline } from "../shell/rimon-inline.js";
+import { flameCard } from "../shell/flame.js";
 
 /** Accessible lesson progress bar. `update(fraction, label)` changes it. */
 export function progressBar(label = "Lesson progress") {
@@ -26,15 +28,21 @@ export function summaryNode(d) {
   // Celebration first: Rimon, confetti (still for reduced motion) and a cheer that matches the score.
   try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:rimon", { detail: { action: st.accuracy >= 0.8 ? "highfive" : "bounce" } })); } catch { /* the cheer is optional */ }
   try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
+  // Rimon in the page plays his move (high five for a strong lesson); the streak flame follows the shared record and lights live.
+  let rimon = null; try { rimon = rimonInline({ action: st.accuracy >= 0.8 ? "highfive" : "bounce", size: 132, label: "Rimon cheers" }); } catch { rimon = null; }
+  const store = d.store ?? globalThis.alef?.store ?? null;
+  let flame = null;
+  if (store && d.showStreak !== false) { try { flame = flameCard({ make: el, store, onLit: () => { try { if (d.sfx?.play) d.sfx.play("streak"); } catch { /* sound is never the only cue */ } rimon?.play?.("stretch"); } }); } catch { flame = null; } }
   const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
-    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+    rimon ? rimon.el : el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),
     el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Lesson finished"),
     el("p", { role: "status" }, d.countText),
+    flame ? flame.el : null,
     el("dl", { class: "alef-summary-stats" },
       el("div", {}, el("dt", {}, "Accuracy (first try)"), el("dd", { "data-stat": "accuracy" }, pct(st.accuracy))),
       el("div", {}, el("dt", {}, "Time"), el("dd", { "data-stat": "time" }, fmtDuration(d.ms))),

@@ -158,7 +158,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // First-minute pass (assets/css/polish.css, 2026-11-10), reviewed: the welcome page slides in once (0.22 s), Rimon's bubble pops in
     // once (0.42 s), the first letter grows in once, the streak flame pops once when the day lights; the current lesson on the path
     // rises 3 px every 2.4 s (transform only, no colour or brightness change). The global reduced-motion and calm rules switch all off.
-    'ob-page-in', 'rimon-say-in', 'fd-glyph-in', 'stat-pop', 'path-here'];
+    'ob-page-in', 'rimon-say-in', 'fd-glyph-in', 'stat-pop', 'path-here',
+    // round 2: the "Today counts" toast drops in once (0.42 s) and leaves after about 4 s; reduced motion and calm switch it off
+    'stat-toast-in'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

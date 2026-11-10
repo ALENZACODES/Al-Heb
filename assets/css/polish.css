@@ -281,3 +281,18 @@ body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; 
 .fd-hero-glyph { animation: fd-glyph-in var(--dur-3) var(--ease-spring) both; }
 @keyframes fd-glyph-in { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .fd-hero-glyph { animation: none; } }
+
+/* ---------- 11. "Today counts" toast (src/shell/statbar.js): once, when the day lights anywhere in the app ---------- */
+.stat-toast {
+  position: fixed; inset-block-start: calc(env(safe-area-inset-top) + 3.6rem); inset-inline: 0; margin-inline: auto; z-index: 70; inline-size: max-content; max-inline-size: calc(100vw - 2rem);
+  display: flex; align-items: center; gap: var(--s-3); padding: var(--s-3) var(--s-5); border-radius: var(--r-pill);
+  background: var(--cream); color: var(--ink); border: 2px solid var(--flame); box-shadow: var(--shadow-2); font-size: var(--fs-sm);
+  animation: stat-toast-in var(--dur-3) var(--ease-spring) both;
+}
+.stat-toast .stat-flame { inline-size: 1.6rem; block-size: 1.6rem; background: linear-gradient(180deg, #ffd166, var(--flame) 55%, var(--flame-deep)); }
+@keyframes stat-toast-in { from { opacity: 0; transform: translateY(-12px) scale(.94); } to { opacity: 1; transform: none; } }
+/* locked stops on the trail: dark green, not the light-theme grey, so they sit quietly on the green page */
+:root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-lesson-locked::before { background: #24402b; box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .35); border: 2px solid rgba(217, 164, 65, .35); }
+.alef-summary .rimon-inline { --rimon-size: 132px; position: relative; z-index: 1; }
+.alef-summary .fd-flame { color: inherit; }
+:root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-celebrate-cheer { color: var(--gold-400); }

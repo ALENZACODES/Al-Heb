@@ -56,7 +56,7 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/library/', 'data/library/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-book63.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).

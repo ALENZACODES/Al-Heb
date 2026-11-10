@@ -82,6 +82,8 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
   { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
+  { id: "od-firstwin-code", label: "First-win word builder page (preview-route code)", test: /^src\/firstday\/minuteone\.view\.js$/, approxMB: 0.03 },
+  { id: "od-phrases-code", label: "Common phrases page (preview-route code)", test: /^src\/phrases\/phrases\.view\.js$/, approxMB: 0.02 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

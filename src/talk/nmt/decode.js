@@ -16,6 +16,9 @@ export function createDecoder(rt) {
   const noHidden = new ort.Tensor('float32', new Float32Array(D), [1, D]);
   const noIds = i64([0], [1]);
 
+  /** Frees a tensor that lives on the graphics card. Tensors in ordinary memory need nothing. */
+  const drop = (t) => { try { if (t && t.location && t.location !== 'cpu') t.dispose(); } catch { /* already freed */ } };
+
   /** Word vectors of `ids`, as a tensor [b, s, D] (b * s = ids.length). */
   async function embed(ids, b, s) {
     const out = await table.run({ ids: i64(ids, [ids.length]), hidden: noHidden }, ['emb']);
@@ -44,6 +47,7 @@ export function createDecoder(rt) {
       const b = live.length;
       const lastIds = live.map((x) => (x.ids.length ? x.ids[x.ids.length - 1] : vocab.start));
       const step = await decoder.run({ emb: await embed(lastIds, b, 1), pos: new ort.Tensor('int64', BigInt64Array.from([BigInt(t)]), []), cross_k, cross_v, past_k, past_v, beam_idx: i64(order, [b]) });
+      drop(past_k); drop(past_v);   // on a graphics card the cache lives there: hand the old one back at once
       past_k = step.new_k; past_v = step.new_v;
       const logits = /** @type {Float32Array} */ ((await table.run({ ids: noIds, hidden: step.hidden }, ['logits'])).logits.data);
       /** @type {{from:number, id:number, score:number}[]} */
@@ -79,6 +83,7 @@ export function createDecoder(rt) {
         if (live.every((x) => x.score / (x.ids.length + 1) < bestDone)) break;
       }
     }
+    drop(past_k); drop(past_v); drop(cross_k); drop(cross_v);
     if (!done.length) for (const x of live) done.push({ ids: x.ids, score: x.score / (x.ids.length + 1) });
     done.sort((p, q) => q.score - p.score);
     return done[0] ? done[0].ids : [];

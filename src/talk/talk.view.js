@@ -34,6 +34,7 @@ export const PACK_SAVER = 'Data saving is on in this browser. Wait for Wi-Fi, or
 export const PACK_FULL = 'This device reports too little free space for the pack.';
 export const PACK_FAILED = 'The download stopped. What arrived is kept; press the button again to carry on.';
 export const PACK_CANNOT_RUN = 'This browser could not start the language pack. Stored lines still work.';
+export const ENGINE_WORDS = Object.freeze({ webgpu: 'the graphics chip', wasm: 'the processor' });
 export const PACK_NONE = 'Language packs are not available on this browser. Stored lines still work.';
 export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. ALEF sends nothing anywhere and keeps only the text of your last lines on this device.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
@@ -147,7 +148,8 @@ export function mount(root, ctx = {}) {
     packRows[d] = { row, text, btn, bar, busy: false, stop: null };
     packBox.append(row);
   }
-  packBox.append(packNote, packRemove);
+  const packSpeed = h('button', { type: 'button', class: 'btn secondary', hidden: true, onclick: speedCheck }, 'Check Translation Speed');
+  packBox.append(packNote, h('div', { class: 'talk-pack-row' }, packSpeed, packRemove));
 
   const suggestTitle = h('h2', { hidden: true }, 'Lines ALEF Knows');
   const suggest = h('ul', { class: 'talk-list', hidden: true });
@@ -210,6 +212,7 @@ export function mount(root, ctx = {}) {
           any = true; p.bar.hidden = true;
           p.btn.hidden = true;
           p.text.textContent = pack.ready(d) ? `${DIRECTION_LABEL[d]}: on this device and ready.` : `${DIRECTION_LABEL[d]}: on this device.`;
+          p.row.dataset.engine = pack.engine?.(d)?.engine || ''; p.row.dataset.gpu = pack.engine?.(d)?.gpu || '';
         } else {
           p.btn.hidden = false; p.btn.disabled = false;
           const part = st.have > 0 && st.missing > 0;
@@ -220,6 +223,27 @@ export function mount(root, ctx = {}) {
       } catch { p.text.textContent = `${DIRECTION_LABEL[d]}: the pack list could not be read. Check your connection.`; p.btn.disabled = false; }
     }
     packRemove.hidden = !any;
+    packSpeed.hidden = !DIRECTIONS.some((d) => pack.ready(d));
+  }
+
+  /** Times a few lines each way the pack can run on this device and says which one is in use. */
+  async function speedCheck() {
+    if (!pack) return;
+    packSpeed.disabled = true; packNote.textContent = 'Timing a few lines on this device…';
+    const said2 = [];
+    for (const d of DIRECTIONS) {
+      if (!pack.ready(d)) continue;
+      try {
+        const b = await pack.bench(d); const e = pack.engine(d);
+        const parts = [];
+        if (typeof b.webgpu === 'number') parts.push(`${b.webgpu} ms a line on ${ENGINE_WORDS.webgpu}`);
+        if (typeof b.wasm === 'number') parts.push(`${b.wasm} ms a line on ${ENGINE_WORDS.wasm}`);
+        said2.push(`${DIRECTION_LABEL[d]}: ${parts.join(', ')}. In use: ${ENGINE_WORDS[e?.engine] || ENGINE_WORDS.wasm}.`);
+      } catch { said2.push(`${DIRECTION_LABEL[d]}: the speed check did not finish.`); }
+      if (!alive) return;
+    }
+    packNote.textContent = said2.join(' ');
+    packSpeed.disabled = false;
   }
 
   /** Loads the packs that are already on this device, quietly. */
@@ -307,6 +331,7 @@ export function mount(root, ctx = {}) {
     let r;
     try { r = await translateLine(engine, pack, t, { ...opts, terms }); } finally { if (ticket === runSeq) { paneMe.removeAttribute('aria-busy'); if (alive && status.textContent === 'Translating…') status.textContent = ''; } }
     if (!alive || ticket !== runSeq) return;
+    if (r.method === 'model' && pack?.engine) { const row = packRows[r.direction]?.row; const e = pack.engine(r.direction); if (row && e) { row.dataset.engine = e.engine || ''; row.dataset.gpu = e.gpu || ''; } }
     if (!r.held && r.method !== 'model' && (!r.ok || r.method === 'words') && !engine.hasDictionary) {
       // the dictionary index is only fetched when a line needs it
       status.textContent = 'Looking in the dictionary…';

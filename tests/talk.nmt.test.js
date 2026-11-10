@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { createTokenizer, normalizeLine } from '../src/talk/nmt/tokenizer.js';
 import { maskName, showsName, finishLine, applyTerms, NAME_SHOWN } from '../src/talk/nmt/postedit.js';
 import { translateLine, FAST_PATH } from '../src/talk/hybrid.js';
-import { packFiles, packState, downloadPack, megabytes, connectionKind, PACK_CACHE, NMT_BASE } from '../src/talk/nmt/pack.js';
+import { packFiles, packState, downloadPack, megabytes, connectionKind, hasGraphics, PACK_CACHE, NMT_BASE } from '../src/talk/nmt/pack.js';
 import { loadEngine } from '../src/talk/data.js';
 import { strictScore, acceptedScore, summarize, openContractions } from '../tools/talk/nmt/scoring.mjs';
 import { loadDirection, readManifest } from '../tools/talk/nmt/node-runtime.mjs';
@@ -138,7 +138,7 @@ test('download: part by part with rising progress, a wrong part is refused and n
   assert.ok(files[1].key.startsWith(NMT_BASE));
   const caches = fakeCaches(); const fetched = []; let corrupt = true;
   const fetch = async (url) => { fetched.push(url); const k = url.includes('a.bin') ? 'a' : url.includes('b.bin') ? 'b' : 'rt'; const text = k === 'b' && corrupt ? 'bbbbbbbbbbbX' : body[k]; return new Response(text); };
-  assert.deepEqual(await packState(mini, 'he-en', { caches }), { ready: false, have: 0, total: 27, missing: 27 });
+  assert.deepEqual(await packState(mini, 'he-en', { caches }), { ready: false, gpu: false, have: 0, total: 27, missing: 27 });
   const seen = [];
   await assert.rejects(downloadPack(mini, 'he-en', { caches, fetch, subtle: globalThis.crypto.subtle, onProgress: (h) => seen.push(h) }), /hash-mismatch/);
   assert.deepEqual((await packState(mini, 'he-en', { caches })).have, 15, 'the two good files are kept, the bad part is not');
@@ -191,5 +191,38 @@ test('the shipped pack itself: loads under the vendored runtime and gives the re
     assert.ok(pick.length >= 5);
     for (const r of pick) assert.equal(finishLine(await rt.translate(r.source, { beams: 2 }), r.source, d, terms), r.translation, r.source);
     assert.equal(await rt.translate('', {}), '');
+  }
+});
+
+test('graphics-card files: two small graphs per direction that hold no weights, a runtime in parts under 16 MiB, and the same pack parts either way', () => {
+  assert.ok(manifest.gpuRuntime.files.every((f) => f.bytes <= 16 * 1048576));
+  for (const f of manifest.gpuRuntime.files) assert.equal(createHash('sha256').update(readFileSync(join(NMT, manifest.gpuRuntime.base, f.path))).digest('hex'), f.sha256, f.path);
+  for (const d of ['he-en', 'en-he']) {
+    const pack = manifest.packs[d];
+    assert.deepEqual(pack.gpu.map((g) => g.name), ['encoder.gpu.onnx', 'decoder.gpu.onnx']);
+    for (const g of pack.gpu) { assert.ok(g.bytes < 300 * 1024, `${g.name} is wiring only (${g.bytes} bytes)`); assert.equal(createHash('sha256').update(readFileSync(join(NMT, g.parts[0].path))).digest('hex'), g.sha256); }
+    assert.equal(pack.probe.length, 2);
+    const plain = packFiles(manifest, d); const fast = packFiles(manifest, d, { gpu: true });
+    const parts = (l) => l.filter((f) => /\.p\d+\.bin\?|vocab\.json/.test(f.key) && f.key.includes('/_nmt/')).map((f) => f.key);
+    assert.deepEqual(parts(fast), parts(plain), 'no second copy of the weights');
+    assert.ok(fast.some((f) => /ort\.webgpu\.min\.mjs$/.test(f.key)) && !fast.some((f) => /ort\.wasm\.min\.mjs$/.test(f.key)));
+    const extra = fast.reduce((a, f) => a + f.bytes, 0) - plain.reduce((a, f) => a + f.bytes, 0);
+    assert.ok(extra < 16 * 1048576, `the graphics-card set costs ${megabytes(extra)} MB more, all of it runtime`);
+  }
+});
+
+test('a software stand-in for a graphics card does not count as one; no adapter, no graphics', async () => {
+  assert.equal(await hasGraphics({}, false), false);
+  assert.equal(await hasGraphics({ gpu: { requestAdapter: async () => null } }, false), false);
+  assert.equal(await hasGraphics({ gpu: { requestAdapter: async () => ({ info: { architecture: 'swiftshader' } }) } }, false), false);
+  assert.equal(await hasGraphics({ gpu: { requestAdapter: async () => ({ isFallbackAdapter: true, info: {} }) } }, false), false);
+  assert.equal(await hasGraphics({ gpu: { requestAdapter: async () => ({ info: { architecture: 'gen-12lp', vendor: 'intel' } }) } }, false), true);
+  assert.equal(await hasGraphics({ gpu: { requestAdapter: async () => { throw new Error('x'); } } }, false), false);
+});
+
+test('the graphics-card graphs, run on the processor: they read their weights from the 8-bit files and give the recorded check lines', async () => {
+  for (const d of ['he-en', 'en-he']) {
+    const rt = await loadDirection(d, 'float');
+    for (const p of manifest.packs[d].probe) assert.equal(await rt.translate(p.text, { beams: 2 }), p.expect, p.text);
   }
 });

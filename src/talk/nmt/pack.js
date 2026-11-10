@@ -16,16 +16,21 @@ export const megabytes = (bytes) => Math.max(1, Math.round(bytes / 1048576));
 /**
  * Every file one direction needs: the runtime (shared by both directions) and the parts of the pack.
  * `key` is the address the file is kept under; `url` is where it is fetched from.
- * @param {any} manifest @param {string} direction @param {string} [base]
+ * With `gpu` the list is the one for a browser with a usable graphics card: the runtime that can use it (it also runs the
+ * ordinary way) and two small graphs that read their weights from the same pack parts. The pack parts are the same either way.
+ * @param {any} manifest @param {string} direction @param {string|{base?:string, gpu?:boolean}} [opts]
  * @returns {{key:string, url:string, bytes:number, sha256:string}[]}
  */
-export function packFiles(manifest, direction, base = NMT_BASE) {
+export function packFiles(manifest, direction, opts = {}) {
+  const base = (typeof opts === 'string' ? opts : opts.base) || NMT_BASE;
+  const gpu = typeof opts === 'object' && !!opts.gpu && !!manifest?.gpuRuntime && !!manifest?.packs?.[direction]?.gpu?.length;
   const pack = manifest?.packs?.[direction];
   if (!pack) return [];
   const out = [];
-  const rt = new URL(manifest.runtime.base, base).href;
-  for (const f of manifest.runtime.files) out.push({ key: rt + f.path, url: versioned(rt + f.path, f.sha256), bytes: f.bytes, sha256: f.sha256 });
-  for (const f of pack.files) for (const p of f.parts) { const u = versioned(base + p.path, p.sha256); out.push({ key: u, url: u, bytes: p.bytes, sha256: p.sha256 }); }
+  const runtime = gpu ? manifest.gpuRuntime : manifest.runtime;
+  const rt = new URL(runtime.base, base).href;
+  for (const f of runtime.files) out.push({ key: rt + f.path, url: versioned(rt + f.path, f.sha256), bytes: f.bytes, sha256: f.sha256 });
+  for (const f of [...pack.files, ...(gpu ? pack.gpu : [])]) for (const p of f.parts) { const u = versioned(base + p.path, p.sha256); out.push({ key: u, url: u, bytes: p.bytes, sha256: p.sha256 }); }
   return out;
 }
 
@@ -54,30 +59,41 @@ async function kept(cache, f) {
 }
 
 /**
- * @param {any} manifest @param {string} direction @param {{caches?:any}} [env]
- * @returns {Promise<{ready:boolean, have:number, total:number, missing:number}>} bytes kept, bytes needed, bytes still to fetch
+ * What is on the device for one direction. `gpu` in env says this browser has a usable graphics card.
+ * A pack counts as ready when either set of files is complete; the graphics-card set is preferred when it is complete,
+ * and it is the set a new download fetches on a browser that can use it.
+ * @param {any} manifest @param {string} direction @param {{caches?:any, gpu?:boolean}} [env]
+ * @returns {Promise<{ready:boolean, gpu:boolean, have:number, total:number, missing:number}>} bytes kept, needed and still to fetch
  */
 export async function packState(manifest, direction, env = {}) {
-  const files = packFiles(manifest, direction);
-  const total = files.reduce((a, f) => a + f.bytes, 0);
   const cachesApi = env.caches ?? globalThis.caches;
-  if (!cachesApi || !files.length) return { ready: false, have: 0, total, missing: total };
-  const cache = await cachesApi.open(PACK_CACHE);
-  let have = 0;
-  for (const f of files) if (await kept(cache, f)) have += f.bytes;
-  return { ready: have === total, have, total, missing: total - have };
+  const count = async (gpu) => {
+    const files = packFiles(manifest, direction, { gpu });
+    const total = files.reduce((a, f) => a + f.bytes, 0);
+    if (!cachesApi || !files.length) return { ready: false, gpu, have: 0, total, missing: total };
+    const cache = await cachesApi.open(PACK_CACHE);
+    let have = 0;
+    for (const f of files) if (await kept(cache, f)) have += f.bytes;
+    return { ready: have === total, gpu, have, total, missing: total - have };
+  };
+  const plain = await count(false);
+  const canGpu = !!env.gpu && packFiles(manifest, direction, { gpu: true }).some((f) => /\.gpu\.onnx/.test(f.key));
+  if (!canGpu) return plain;
+  const fast = await count(true);
+  if (fast.ready || !plain.ready) return fast;
+  return plain;
 }
 
 /**
  * Fetches what is missing, one part at a time. A part that fails its check is not kept. Safe to call again after a break:
  * parts already kept are skipped.
  * @param {any} manifest @param {string} direction
- * @param {{onProgress?:(have:number,total:number)=>void, signal?:AbortSignal, caches?:any, fetch?:any, subtle?:any}} [opts]
+ * @param {{onProgress?:(have:number,total:number)=>void, signal?:AbortSignal, caches?:any, fetch?:any, subtle?:any, gpu?:boolean}} [opts]
  */
 export async function downloadPack(manifest, direction, opts = {}) {
   const cachesApi = opts.caches ?? globalThis.caches; const fetchImpl = opts.fetch ?? globalThis.fetch; const subtle = opts.subtle ?? globalThis.crypto?.subtle;
   if (!cachesApi) throw new Error('no-storage');
-  const files = packFiles(manifest, direction);
+  const files = packFiles(manifest, direction, { gpu: !!opts.gpu });
   const total = files.reduce((a, f) => a + f.bytes, 0);
   const cache = await cachesApi.open(PACK_CACHE);
   let have = 0;
@@ -100,16 +116,17 @@ export async function downloadPack(manifest, direction, opts = {}) {
   }
   await prune(manifest, cachesApi);
   try { await globalThis.navigator?.storage?.persist?.(); } catch { /* the browser decides */ }
-  return { ready: true, have, total, missing: 0 };
+  return { ready: true, gpu: !!opts.gpu, have, total, missing: 0 };
 }
 
 /** Drops kept files the current manifest no longer names (an older pack version). */
 async function prune(manifest, cachesApi) {
   try {
     const keep = new Set([NMT_BASE + 'manifest.json']);
-    for (const d of Object.keys(manifest.packs || {})) for (const f of packFiles(manifest, d)) keep.add(f.key);
+    for (const d of Object.keys(manifest.packs || {})) for (const gpu of [false, true]) for (const f of packFiles(manifest, d, { gpu })) keep.add(f.key);
     const cache = await cachesApi.open(PACK_CACHE);
-    for (const req of await cache.keys()) if (!keep.has(req.url)) await cache.delete(req);
+    // engine-<direction>.json is the remembered outcome of the graphics-card check (src/talk/nmt/worker.js); it carries the pack version
+    for (const req of await cache.keys()) if (!keep.has(req.url) && !(req.url.includes('/engine-') && req.url.endsWith(`?v=${manifest.version}`))) await cache.delete(req);
   } catch { /* tidy-up only */ }
 }
 
@@ -117,6 +134,17 @@ async function prune(manifest, cachesApi) {
 export async function removePacks(env = {}) {
   const cachesApi = env.caches ?? globalThis.caches;
   try { return cachesApi ? await cachesApi.delete(PACK_CACHE) : false; } catch { return false; }
+}
+
+/** True when this browser hands out a real graphics adapter. A browser without one, or one that refuses, gets the ordinary files. */
+export async function hasGraphics(nav = globalThis.navigator, force = !!(/** @type {any} */ (globalThis).__alefSoftwareGraphics)) {
+  try {
+    const gpu = /** @type {any} */ (nav)?.gpu; const adapter = gpu && await gpu.requestAdapter();
+    if (!adapter) return false;
+    // A software stand-in for a graphics card is many times slower than the processor way: not worth the larger runtime. (Tests force it.)
+    const soft = adapter.isFallbackAdapter === true || adapter.info?.isFallbackAdapter === true || /swiftshader|llvmpipe|software/i.test(`${adapter.info?.architecture || ''} ${adapter.info?.description || ''} ${adapter.info?.device || ''}`);
+    return force || !soft;
+  } catch { return false; }
 }
 
 /** What the browser says about the connection, when it says anything. @returns {'cellular'|'saver'|''} */

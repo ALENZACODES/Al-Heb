@@ -39,6 +39,17 @@ A line that differs from a stored line by a real word is never matched to it. "I
 - **Size.** The stock export of these models is about 143 MiB a direction at 8 bits because the 60,000-row word table is stored three times. `tools/talk/nmt/export.py` stores it once, with one scale per row, and splits the model into three graphs. On the held-out file the 8-bit packs score within one point of the full-precision models (greedy decoding, first-choice wording: 69.8 against 70.0 Hebrew to English, 79.9 against 80.8 English to Hebrew).
 - **Synagogue words.** `data/talk/terms.json` lists words the packs get wrong (כיפה as "dome", קידוש as "sanctification") with the wrong renderings, found by `tools/talk/nmt/terms.mjs`. A rendering is replaced only when the source line holds the word and the output holds that exact rendering. Words with a second everyday meaning are left out.
 
+## The Graphics Card (WebGPU)
+
+The encoder and decoder can run on the device's graphics card. The word table stays on the processor.
+
+- **No second download of the weights.** A graphics card runs floating-point graphs; the pack is 8-bit. Each direction has two small graph files (`encoder.gpu.onnx`, 114 KB, and `decoder.gpu.onnx`, 124 KB) that hold the wiring only. Every weight in them points at the byte range where the same weight already sits inside the 8-bit file, and is turned into floats as the graph loads (`tools/talk/nmt/gpu_graph.py`). The repository grew by the runtime, not by a second copy of the models.
+- **What a graphics-capable browser fetches.** The runtime that can use the card (27.5 MiB in two parts; it also runs the ordinary way) in place of the 14.2 MiB one, plus the two small graphs: about 14 MB more. A browser with no adapter, or only a software stand-in, fetches the ordinary files.
+- **It has to prove itself on each device.** The processor way is ready first, so nobody waits. The card is then tried once in the background on two check lines. It is used only if both answers match the recorded ones and the second comes back within 1.5 seconds. The outcome is remembered with the pack. `src/talk/nmt/worker.js`.
+- **Quality.** On the held-out file the float graphs score the same as the 8-bit ones to within a point (greedy, first-choice wording: 70.6 and 70.6 Hebrew to English, 83.6 and 82.6 English to Hebrew).
+- **What was tested.** Headless Chromium with a software adapter, under the site's content policy: the files load, the answers match, a line is answered on the card when the slow adapter is accepted for the test, and the slow adapter is otherwise turned down (about 20 seconds a line against half a second on the processor). `tests/talk.nmt.browser.test.js`; the graphs also run on the processor in `tests/talk.nmt.test.js`.
+- **What was not tested.** Any real graphics card. Whether it is faster than the processor for lines this short is not known; small models often are not. "Check Translation Speed" on the Talk screen times both ways on the device and says which is in use.
+
 ## Where The Lines Come From
 
 | File | Use |
@@ -159,7 +170,7 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 
 ## Not Built
 
-- WebGPU. The packs run on WebAssembly. A WebGPU path would need full-precision copies of the models (about twice the download) and a test on real devices; it was not built or tested.
+- A timing of the graphics-card path on a real graphics card. See "The Graphics Card" above.
 - A test on a phone: speed, memory with both packs loaded, and what the browser does with a 90 MB cache when space runs low.
 - A native speaker's check of the stored lines, the term list and the held-out references.
 - Speaker forms for pack lines. A pack line comes out as said by and to a man unless the English says otherwise; the screen says so.

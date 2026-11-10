@@ -4,8 +4,12 @@
 // Usage: node tools/talk/nmt/e2e-talk.mjs [he-en|en-he]
 import { openApp } from '../../camera-translate/e2e-camera.mjs';
 
-export async function runTalk({ direction = 'he-en', lines = null, timeout = 240000 } = {}) {
-  const { server, browser, page, base, errors, reqs, posts } = await openApp();
+/** Chromium flags that give a software WebGPU adapter where there is no graphics card (correctness only: it is far slower than a real one). */
+export const SOFTWARE_GPU = ['--enable-unsafe-webgpu', '--enable-features=Vulkan', '--use-angle=swiftshader', '--use-webgpu-adapter=swiftshader', '--ignore-gpu-blocklist'];
+
+export async function runTalk({ direction = 'he-en', lines = null, timeout = 240000, launchArgs = null, speedCheck = false, acceptSlowGpu = false } = {}) {
+  const { server, browser, page, base, errors, reqs, posts } = await openApp(launchArgs ? { launchArgs } : {});
+  if (launchArgs) await page.addInitScript((slow) => { globalThis.__alefSoftwareGraphics = true; if (slow) globalThis.__alefGpuSlowMs = 1e9; }, acceptSlowGpu);
   const say = lines || (direction === 'he-en' ? ['הכלב שלנו ברח אתמול.', 'איפה המעלית?'] : ['Our dog ran away yesterday.', 'Where is the elevator?']);
   const ask = async (text) => {
     await page.waitForFunction(() => !document.querySelector('.talk-pane-me')?.hasAttribute('aria-busy'));
@@ -31,6 +35,16 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
     const downloadMs = Date.now() - t0;
     const results = [];
     for (const l of say) { const t = Date.now(); results.push({ line: l, ...(await ask(l)), ms: Date.now() - t }); }
+    // with a slow software adapter accepted, wait for the background check to hand over to the graphics card, then ask again on it
+    let onGpu = null;
+    if (acceptSlowGpu) {
+      const row = () => page.evaluate((d) => document.querySelector(`.talk-pack [data-pack="${d}"]`)?.closest('.talk-pack-row')?.dataset.engine || '', direction);
+      for (let i = 0; i < 60; i++) { const t = Date.now(); const r = await ask(say[0]); onGpu = { ...r, ms: Date.now() - t, engine: await row() }; if (onGpu.engine === 'webgpu') break; await page.waitForTimeout(5000); }
+    }
+    const engine = await page.evaluate((d) => { const row = document.querySelector(`.talk-pack [data-pack="${d}"]`)?.closest('.talk-pack-row'); return { engine: row?.dataset.engine || '', gpu: row?.dataset.gpu || '' }; }, direction);
+    let speed = null;
+    if (speedCheck) { await page.click('.talk-pack button:has-text("Check Translation Speed")'); await page.waitForFunction(() => /In use:|did not finish/.test(document.querySelector('.talk-pack [role=status]')?.textContent || ''), null, { timeout }); speed = await page.textContent('.talk-pack [role=status]'); }
+    const gpuFetched = { runtime: reqs.some((u) => /ort\.webgpu\.min\.mjs/.test(u)), plainRuntime: reqs.some((u) => /ort\.wasm\.min\.mjs/.test(u)), graphs: reqs.filter((u) => /\.gpu\.onnx/.test(u)).length };
     const cache = await page.evaluate(async () => { const c = await caches.open('alef-talk-pack-v1'); const keys = await c.keys(); let bytes = 0; for (const k of keys) bytes += Number((await c.match(k)).headers.get('content-length') || 0); return { files: keys.length, bytes, names: await caches.keys() }; });
     // a new visit: the pack is already on the device and loads without a download
     const partsFetched = reqs.filter((u) => /\.p\d+\.bin/.test(u)).length;
@@ -39,7 +53,7 @@ export async function runTalk({ direction = 'he-en', lines = null, timeout = 240
     const refetched = reqs.filter((u) => /\.p\d+\.bin/.test(u)).length - partsFetched;
     const again = await ask(say[0]);
     const origins = [...new Set(reqs.map((u) => new URL(u).origin))];
-    return { packText, before, packRequestsBefore, progress, packNote, downloadMs, results, cache, refetched, again, errors, posts, externalOrigins: origins.filter((o) => o !== base && !o.startsWith('blob:') && o !== 'null') };
+    return { packText, before, packRequestsBefore, progress, packNote, downloadMs, results, onGpu, engine, speed, gpuFetched, cache, refetched, again, errors, posts, externalOrigins: origins.filter((o) => o !== base && !o.startsWith('blob:') && o !== 'null') };
   } finally { await browser.close(); server.close(); }
 }
 
@@ -72,7 +86,8 @@ export async function runCameraWithPack({ images, timeout = 240000 }) {
 if (process.argv[1] && process.argv[1].endsWith('e2e-talk.mjs')) {
   if (process.argv[2] === 'camera') console.log(JSON.stringify(await runCameraWithPack({ images: process.argv.slice(3) }), null, 1));
   else {
-    const r = await runTalk({ direction: process.argv[2] || 'he-en' });
+    const gpu = process.argv.includes('--software-gpu');
+    const r = await runTalk({ direction: process.argv[2] || 'he-en', launchArgs: gpu ? SOFTWARE_GPU : null, speedCheck: process.argv.includes('--speed'), acceptSlowGpu: process.argv.includes('--accept-slow') });
     console.log(JSON.stringify({ ...r, progress: `${r.progress.length} updates, last ${r.progress[r.progress.length - 1]}` }, null, 1));
   }
 }

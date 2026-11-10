@@ -68,5 +68,41 @@
     }
    ]
   }
+ ],
+ "gpu": [
+  {
+   "name": "encoder.gpu.onnx",
+   "bytes": 113766,
+   "sha256": "3edb195df863e0f251f3484c8124fa86cdd17627661c472c3037046210c40c42",
+   "parts": [
+    {
+     "path": "he-en/encoder.gpu.onnx",
+     "bytes": 113766,
+     "sha256": "3edb195df863e0f251f3484c8124fa86cdd17627661c472c3037046210c40c42"
+    }
+   ]
+  },
+  {
+   "name": "decoder.gpu.onnx",
+   "bytes": 124276,
+   "sha256": "b0949042de52ff3c18e0076840ecaa86e067515b59faf902792de8bf6c5bae12",
+   "parts": [
+    {
+     "path": "he-en/decoder.gpu.onnx",
+     "bytes": 124276,
+     "sha256": "b0949042de52ff3c18e0076840ecaa86e067515b59faf902792de8bf6c5bae12"
+    }
+   ]
+  }
+ ],
+ "probe": [
+  {
+   "text": "שלום, מה שלומך היום?",
+   "expect": "Hello. How are you today?"
+  },
+  {
+   "text": "אנחנו רוצים לאכול ארוחת ערב במסעדה טובה.",
+   "expect": "We want to have dinner at a good restaurant."
+  }
  ]
 }

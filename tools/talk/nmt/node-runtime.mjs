@@ -24,10 +24,13 @@ export async function loadOrt() {
   return ortP;
 }
 
-/** @param {'he-en'|'en-he'} direction */
-export async function loadDirection(direction) {
+/**
+ * @param {'he-en'|'en-he'} direction
+ * @param {'wasm'|'float'} [device] 'float' runs the graphics-card graphs on the processor (same graphs, same weights, no graphics card needed)
+ */
+export async function loadDirection(direction, device = 'wasm') {
   const pack = readManifest().packs[direction];
   if (!pack) throw new Error(`no pack for ${direction}`);
   const ort = await loadOrt();
-  return createRuntime({ ort, pack, read: async (p) => { const b = readFileSync(join(NMT, p)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); } });
+  return createRuntime({ ort, pack, device, read: async (p) => { const b = readFileSync(join(NMT, p)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); } });
 }

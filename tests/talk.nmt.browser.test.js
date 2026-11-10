@@ -5,8 +5,8 @@ import assert from 'node:assert/strict';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-let runTalk = null; let runCameraWithPack = null;
-try { ({ runTalk, runCameraWithPack } = await import('../tools/talk/nmt/e2e-talk.mjs')); } catch { /* no playwright */ }
+let runTalk = null; let runCameraWithPack = null; let SOFTWARE_GPU = null;
+try { ({ runTalk, runCameraWithPack, SOFTWARE_GPU } = await import('../tools/talk/nmt/e2e-talk.mjs')); } catch { /* no playwright */ }
 
 test('e2e #/talk: nothing of the pack is fetched until asked; download with progress; a new line is translated; a reload finds the pack on the device', { skip: !runTalk, timeout: 400000 }, async () => {
   const r = await runTalk({ direction: 'he-en' });
@@ -32,4 +32,12 @@ test('e2e #/camera with the pack on the device: a sign outside the sign list is 
   assert.match(r.out[0].lines[0], /Shoe/i); assert.match(r.out[0].detail, /Translated on this device by the language pack/);
   assert.deepEqual(r.out[1].lines, ['1. Not translated'], 'one word with two meanings stays with the dictionary rule');
   assert.deepEqual(r.out[2].lines, ['1. Optical Store']); assert.match(r.out[2].detail, /From the built-in word list/);
+});
+
+test('e2e #/talk with a (software) graphics adapter: the larger runtime and the two small graphs are fetched, the processor answers at once, the slow adapter is turned down, the speed check reports both', { skip: !runTalk, timeout: 600000 }, async () => {
+  const r = await runTalk({ direction: 'he-en', launchArgs: SOFTWARE_GPU, speedCheck: true });
+  assert.deepEqual(r.errors, []); assert.deepEqual(r.externalOrigins, []);
+  assert.deepEqual(r.gpuFetched, { runtime: true, plainRuntime: false, graphs: 2 });
+  assert.match(r.results[0].translation, /dog/i);
+  assert.match(r.speed, /ms a line on the graphics chip, \d+ ms a line on the processor\. In use: the processor\./);
 });

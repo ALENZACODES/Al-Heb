@@ -107,7 +107,74 @@ export function createGlossary(data) {
       translit: segs.filter((s) => s.translit).map((s) => s.translit).join(' '),
       pointed: segs.map((s) => s.pointed || s.he).join(' ') };
   }
-  return { translate };
+  /** One listed word (single-word entries only), or null. */
+  const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null } : null; };
+  /** Longest listed phrase starting at toks[i]: {n, entry} or null. */
+  const longest = (toks, i) => {
+    for (let n = Math.min(maxLen, toks.length - i); n > 0; n--) { const e = entry(toks.slice(i, i + n).join(' ')); if (e) return { n, entry: e }; }
+    return null;
+  };
+  return { translate, entry, longest };
+}
+
+// ---------------------------------------------------------------- word by word (the tap panel's deeper layer)
+
+/** Letters that attach to the front of a Hebrew word, with the plain meaning shown to a learner. */
+export const PREFIX_MEANING = Object.freeze({ 'ה': 'the', 'ו': 'and', 'ב': 'in', 'ל': 'to', 'מ': 'from' });
+
+/**
+ * The app's own dictionary (data/vocab/index.json: {fields, rows}) as a lookup by unpointed spelling.
+ * A spelling can be several words, so up to three are returned: names of things before verbs, then by how common the word is.
+ */
+export function createDictionary(index) {
+  const f = index?.fields || []; const at = (name) => f.indexOf(name);
+  const iHe = at('he'); const iKey = at('heUnpointed'); const iEn = at('en'); const iTr = at('translit'); const iRank = at('frequencyRank'); const iPos = at('pos');
+  const by = new Map();
+  if (iHe >= 0 && iKey >= 0 && iEn >= 0) {
+    for (const r of index.rows || []) {
+      const key = String(r[iKey] ?? '').trim(); if (!key || key.includes(' ')) continue;
+      const list = by.get(key) || []; list.push({ he: r[iHe], en: String(r[iEn] ?? '').slice(0, 80), translit: iTr >= 0 ? r[iTr] || null : null, rank: Number.isFinite(r[iRank]) ? r[iRank] : Infinity, verb: iPos >= 0 && r[iPos] === 'verb' });
+      by.set(key, list);
+    }
+    // Signs and menus name things: nouns and describing words come before verbs, then the more frequent word first.
+    for (const list of by.values()) list.sort((a, b) => (a.verb - b.verb) || (a.rank - b.rank));
+  }
+  const senses = (key) => (by.get(key) || []).slice(0, 3).map(({ he, en, translit }) => ({ he, en, translit }));
+  return { size: by.size, senses };
+}
+
+/**
+ * Break one line into words for the learner. Each word is looked up in the sign list, then in the app dictionary as written,
+ * then with one attached prefix letter removed, then as a possible joined form or plural of a dictionary word (always labelled
+ * as a possibility). A word that matches none of these is reported as unknown.
+ * @returns {Array<{word:string, kind:'number'|'sign-list'|'dictionary'|'prefix'|'joined'|'plural'|'unknown', senses:Array<{he:string,en:string,translit:string|null}>, prefix?:{letter:string,meaning:string}}>}
+ */
+export function wordBreakdown(he, glossary, dictionary) {
+  if (containsSacredName(he)) return [];
+  const toks = tokens(he); const out = [];
+  for (let i = 0; i < toks.length;) {
+    const word = toks[i];
+    if (NUM_RE.test(word) || LATIN_RE.test(word)) { out.push({ word, kind: 'number', senses: [] }); i++; continue; }
+    const listed = glossary?.longest?.(toks, i);          // a listed phrase ("kosher restaurant") stays together
+    if (listed) { out.push({ word: toks.slice(i, i + listed.n).join(' '), kind: 'sign-list', senses: [{ he: listed.entry.pointed || listed.entry.he, en: listed.entry.en, translit: listed.entry.translit }] }); i += listed.n; continue; }
+    i++;
+    const exact = dictionary?.senses(word) || [];
+    if (exact.length) { out.push({ word, kind: 'dictionary', senses: exact }); continue; }
+    const letter = word[0]; const rest = word.slice(1);
+    if (PREFIX_MEANING[letter] && [...rest].length >= 2) {
+      const inner = glossary?.entry?.(rest);
+      const found = inner ? [{ he: inner.pointed || inner.he, en: inner.en, translit: inner.translit }] : (dictionary?.senses(rest) || []);
+      if (found.length) { out.push({ word, kind: 'prefix', prefix: { letter, meaning: PREFIX_MEANING[letter] }, senses: found }); continue; }
+    }
+    // Two very common sign shapes, offered as possibilities only: a joined (construct) form ending in tav, and a plural.
+    const base = (stem) => { const e = glossary?.entry?.(stem); return e ? [{ he: e.pointed || e.he, en: e.en, translit: e.translit }] : (dictionary?.senses(stem) || []); };
+    const n = [...word].length;
+    if (n >= 4 && word.endsWith('ת') && !word.endsWith('ות')) { const f = base(`${word.slice(0, -1)}ה`); if (f.length) { out.push({ word, kind: 'joined', senses: f }); continue; } }
+    if (n >= 4 && word.endsWith('ים')) { const f = base(word.slice(0, -2)); if (f.length) { out.push({ word, kind: 'plural', senses: f }); continue; } }
+    if (n >= 4 && word.endsWith('ות')) { const f = [...base(`${word.slice(0, -2)}ה`), ...base(word.slice(0, -2))].slice(0, 3); if (f.length) { out.push({ word, kind: 'plural', senses: f }); continue; } }
+    out.push({ word, kind: 'unknown', senses: [] });
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------- regions

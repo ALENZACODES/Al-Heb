@@ -4,7 +4,8 @@
 Usage (from tools/camera-translate):
   python3 eval.py                                  on-server reader (Tesseract heb) + built-in word list
   python3 eval.py --ocr vision --translate google  Cloud Vision + Cloud Translation (needs GOOGLE_APPLICATION_CREDENTIALS; sends the test images to Google)
-Writes tests/signs/results-<ocr>-<translate>.json and prints a summary.
+  python3 eval.py --wear                           the same 20 signs under each of six kinds of simulated wear (120 images made in memory)
+Writes tests/signs/results-<ocr>-<translate>.json (or results-wear-<ocr>-<translate>.json) and prints a summary.
 
 Scores
   OCR CER        character error rate = edit distance / reference length, on letters and digits only (vowel points, spaces and
@@ -51,10 +52,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--ocr', choices=['tesseract', 'vision'], default='tesseract')
     ap.add_argument('--translate', choices=['word-list', 'google'], default='word-list')
+    ap.add_argument('--wear', action='store_true', help='run every sign under every kind of simulated wear')
     args = ap.parse_args()
     ocr = GoogleVisionOCR() if args.ocr == 'vision' else TesseractOCR()
     words = GlossaryTranslator()
     translator = ChainTranslator([GoogleTranslator(), words]) if args.translate == 'google' else ChainTranslator([words])
+    if args.wear:
+        return wear(args, ocr, translator)
     gt = json.loads((HERE / 'tests/signs/ground-truth.json').read_text(encoding='utf-8'))
     rows, tot_edits, tot_ref = [], 0, 0
     lines_total = lines_exact = tr_e2e = tr_oracle = 0
@@ -91,6 +95,32 @@ def main():
     for r in rows:
         if r['cer']:
             print(f"  {r['id']:22s} CER {r['cer']:.2f}  read: {r['read']}")
+
+
+def wear(args, ocr, translator):
+    sys.path.insert(0, str(HERE / 'tests'))
+    from make_signs import wear_set
+    by: dict = {}
+    for sid, variant, lines, data in wear_set():
+        res = translate_photo(data, ocr, translator)
+        ref = ''.join(norm_he(l['he']) for l in lines)
+        hyp = ''.join(norm_he(r['he'] or '') for r in res['regions'])
+        hyp_lines = {norm_he(r['he'] or '') for r in res['regions']}
+        hyp_en = {norm_en(r['en']) for r in res['regions'] if r['en']}
+        b = by.setdefault(variant, {'images': 0, 'edits': 0, 'ref': 0, 'lines': 0, 'linesReadExactly': 0, 'linesTranslatedEndToEnd': 0, 'worst': []})
+        e = edit_distance(hyp, ref)
+        b['images'] += 1; b['edits'] += e; b['ref'] += len(ref)
+        for l in lines:
+            b['lines'] += 1; b['linesReadExactly'] += norm_he(l['he']) in hyp_lines; b['linesTranslatedEndToEnd'] += norm_en(l['en']) in hyp_en
+        if e:
+            b['worst'].append([sid, round(e / max(1, len(ref)), 3)])
+    for b in by.values():
+        b['cerPooled'] = round(b['edits'] / max(1, b['ref']), 4)
+        b['worst'] = sorted(b['worst'], key=lambda x: -x[1])[:5]
+    out = {'synthetic': True, 'note': 'Rendered text with simulated wear. NOT photographs.', 'ocr': ocr.name, 'translate': translator.name, 'byWear': by}
+    (HERE / f'tests/signs/results-wear-{args.ocr}-{args.translate}.json').write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding='utf-8')
+    for name, b in by.items():
+        print(f"{name:12s} images {b['images']:3d}  CER {b['cerPooled']:.3f}  lines read {b['linesReadExactly']}/{b['lines']}  translated {b['linesTranslatedEndToEnd']}/{b['lines']}")
 
 
 if __name__ == '__main__':

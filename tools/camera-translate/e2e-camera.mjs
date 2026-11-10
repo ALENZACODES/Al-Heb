@@ -72,12 +72,14 @@ export async function runCamera({ image, service = false, shot, timeout = 120000
     }));
     const first = await read();
     if (shot) await page.screenshot({ path: shot, fullPage: true });
-    let afterToggle = null; let detail = null;
+    let afterToggle = null; let detail = null; let words = null;
     if (first.toggle) { await page.click('#camera-toggle'); afterToggle = await read(); await page.click('#camera-toggle'); }
-    if (first.hits.length) { await page.click('.camera-region-btn'); await page.waitForFunction(() => /English:|Sacred|No English/.test(document.querySelector('.camera-detail')?.textContent || '')); detail = (await read()).detail; }
+    if (first.hits.length) { await page.click('.camera-region-btn'); await page.waitForFunction(() => /English:|Sacred|No English/.test(document.querySelector('.camera-detail')?.textContent || '')); detail = (await read()).detail;
+      await page.click('.camera-words-btn'); await page.waitForSelector('.camera-words .words, .camera-words h3 + p');
+      words = await page.evaluate(() => [...document.querySelectorAll('.camera-words .words li')].map((li) => li.textContent)); }
     const imgNatural = await page.evaluate(() => { const i = document.querySelector('.camera-out .stage img'); return [i.naturalWidth, i.naturalHeight]; });
     const origins = [...new Set(reqs.map((u) => new URL(u).origin))];
-    return { ms, modeNote, sendNotice, ...first, afterToggle, detail, imgNatural, errors, origins, posts, health: svc?.health ?? null,
+    return { ms, modeNote, sendNotice, ...first, afterToggle, detail, words, dictionaryFetched: reqs.some((u) => u.endsWith('/data/vocab/index.json')), imgNatural, errors, origins, posts, health: svc?.health ?? null,
       externalOrigins: origins.filter((o) => !/^http:\/\/(localhost|127\.0\.0\.1)(:|$)/.test(o) && !o.startsWith('blob:') && o !== 'null') };
   } finally { await browser.close(); server.close(); svc?.proc.kill(); }
 }

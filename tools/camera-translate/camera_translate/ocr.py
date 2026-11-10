@@ -193,8 +193,42 @@ def parse_tsv(tsv: str, scale: float = 1.0) -> list[dict]:
     return words
 
 
-def prepare_for_tesseract(img: Image.Image, target_side: int = 1800) -> tuple[bytes, float]:
-    """Grey, upscale small photos, even out lighting, make the text dark on light. Returns PNG bytes and the scale used."""
+def estimate_skew(binary: np.ndarray, max_angle: float = 10.0, step: float = 0.5) -> float:
+    """Tilt of dark text on a white page, in degrees: the rotation (OpenCV sense, counter-clockwise positive) that makes
+    the text lines level. Same idea as estimateSkew in src/photo/preprocess.js: try angles, keep the one whose row sums are
+    sharpest. Returns 0 when no angle is clearly better than leaving the picture alone."""
+    h, w = binary.shape
+    k = 600 / max(h, w)
+    small = cv2.resize(binary, (max(8, int(w * k)), max(8, int(h * k))), interpolation=cv2.INTER_AREA) if k < 1 else binary
+    ink = (255 - small).astype(np.float32)
+    if ink.sum() < 255 * 20:
+        return 0.0
+    sh, sw = ink.shape
+
+    def score(angle: float) -> float:
+        m = cv2.getRotationMatrix2D((sw / 2, sh / 2), angle, 1.0)
+        rows = cv2.warpAffine(ink, m, (sw, sh), flags=cv2.INTER_LINEAR, borderValue=0).sum(axis=1)
+        return float(((rows[1:] - rows[:-1]) ** 2).sum())
+
+    base = score(0.0)
+    best, best_score = 0.0, base
+    a = -max_angle
+    while a <= max_angle + 1e-9:
+        if abs(a) > 1e-9:
+            sc = score(a)
+            if sc > best_score:
+                best, best_score = a, sc
+        a += step
+    return best if abs(best) >= 1.0 and best_score >= base * 1.15 else 0.0
+
+
+BORDER = 20
+
+
+def prepare_for_tesseract(img: Image.Image, target_side: int = 1800, deskew: bool = True) -> tuple[bytes, float, np.ndarray | None]:
+    """Grey, upscale small photos, make the text dark on light, level tilted text.
+    Returns PNG bytes, the scale used, and (when the picture was levelled) the 2x3 matrix that maps a point in the
+    levelled picture back to the scaled original."""
     a = cv2.cvtColor(np.asarray(img.convert('RGB')), cv2.COLOR_RGB2GRAY)
     h, w = a.shape
     scale = min(3.0, max(1.0, target_side / max(h, w)))
@@ -205,11 +239,18 @@ def prepare_for_tesseract(img: Image.Image, target_side: int = 1800) -> tuple[by
     border = np.concatenate([binary[0, :], binary[-1, :], binary[:, 0], binary[:, -1]])
     if border.mean() < 127:          # dark background (white letters on a blue sign): invert
         binary = 255 - binary
-    binary = cv2.copyMakeBorder(binary, 20, 20, 20, 20, cv2.BORDER_CONSTANT, value=255)
+    back = None
+    angle = estimate_skew(binary) if deskew else 0.0
+    if angle:
+        bh, bw = binary.shape
+        m = cv2.getRotationMatrix2D((bw / 2, bh / 2), angle, 1.0)
+        binary = cv2.warpAffine(binary, m, (bw, bh), flags=cv2.INTER_CUBIC, borderValue=255)
+        back = cv2.invertAffineTransform(m)
+    binary = cv2.copyMakeBorder(binary, BORDER, BORDER, BORDER, BORDER, cv2.BORDER_CONSTANT, value=255)
     ok, enc = cv2.imencode('.png', binary)
     if not ok:
         raise OCRError('could not prepare the image')
-    return enc.tobytes(), scale
+    return enc.tobytes(), scale, back
 
 
 class TesseractOCR:
@@ -239,18 +280,28 @@ class TesseractOCR:
         return r.stdout.decode('utf-8', 'replace')
 
     def detect(self, img: Image.Image) -> list[dict]:
-        png, scale = prepare_for_tesseract(img)
+        png, scale, back = prepare_for_tesseract(img)
         best, best_score = [], -1.0
         for psm in self.psms:
-            words = [w for w in parse_tsv(self._run(png, psm), scale) if w['conf'] >= 0]
-            for w in words:      # undo the 20 px white border added in prepare_for_tesseract
-                w['x'] -= 20 / scale; w['y'] -= 20 / scale
+            words = [w for w in parse_tsv(self._run(png, psm)) if w['conf'] >= 0]
+            for w in words:      # undo the white border added in prepare_for_tesseract
+                w['x'] -= BORDER; w['y'] -= BORDER
             heb = [w for w in words if has_hebrew(w['text'])]
             score = sum(w['conf'] * len(w['text']) for w in heb)
             if score > best_score:
                 best, best_score = words, score
         W, H = img.size
-        for w in best:
-            w['x'] = max(0, min(W - 1, w['x'])); w['y'] = max(0, min(H - 1, w['y']))
-            w['w'] = max(1, min(W - w['x'], w['w'])); w['h'] = max(1, min(H - w['y'], w['h']))
-        return lines_to_regions(order_words(best))
+        regions = lines_to_regions(order_words(best))      # reading order is worked out on the levelled picture
+        for r in regions:
+            x, y, w, h = r['box']
+            cx, cy, angle = x + w / 2, y + h / 2, 0.0
+            if back is not None:                           # put the line back where it sits in the photo, and remember its tilt
+                cx, cy = (float(back[0, 0] * cx + back[0, 1] * cy + back[0, 2]), float(back[1, 0] * cx + back[1, 1] * cy + back[1, 2]))
+                angle = math.degrees(math.atan2(back[1, 0], back[0, 0]))
+            w, h, cx, cy = w / scale, h / scale, cx / scale, cy / scale
+            x0 = max(0.0, min(W - 1.0, cx - w / 2)); y0 = max(0.0, min(H - 1.0, cy - h / 2))
+            w = max(1.0, min(W - x0, w)); h = max(1.0, min(H - y0, h))
+            r['box'] = (x0, y0, w, h)
+            r['polygon'] = [(x0, y0), (x0 + w, y0), (x0 + w, y0 + h), (x0, y0 + h)]
+            r['angle'] = round(angle, 2)
+        return regions

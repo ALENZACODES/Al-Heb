@@ -10,8 +10,8 @@
 import { h, heSpan, deviceVoiceState } from '../shell/ui.js';
 import { speechSafeText } from '../shell/names.js';
 import { isPointed } from '../photo/hebrew.js';
-import { createGlossary, percentBox, sourceLabel, MAX_UPLOAD_SIDE, HELD_NOTE } from './camera-model.js';
-import { loadConfig, loadGlossaryData, translateViaService } from './camera-client.js';
+import { createGlossary, createDictionary, wordBreakdown, percentBox, sourceLabel, MAX_UPLOAD_SIDE, HELD_NOTE } from './camera-model.js';
+import { loadConfig, loadGlossaryData, loadDictionaryIndex, translateViaService } from './camera-client.js';
 
 export const NOT_SET_UP_NOTICE = 'The full translation service is not set up for this site yet. Until it is, your photo is read on this device and only words from the built-in list of common sign and menu words are translated. Nothing leaves your device.';
 export const SEND_NOTICE = 'To translate everything on the sign, your photo is sent to the Aleph translation service, which may pass it to Google Cloud to read the Hebrew and translate it. Location and camera details are removed from the photo first. The photo is not kept after the answer is sent back.';
@@ -31,6 +31,9 @@ const CSS = `
 .camera-tr .hit:hover,.camera-tr .hit:focus-visible,.camera-tr .hit[aria-pressed="true"]{border-color:var(--gold,#c9a227);box-shadow:0 0 0 2px rgba(0,0,0,.55)}
 .camera-tr .detail{display:grid;gap:.4rem}
 .camera-tr .detail .he{font-size:1.9rem}
+.camera-tr .words{display:grid;gap:.5rem;padding:0;margin:0;list-style:none}
+.camera-tr .words li{display:grid;gap:.15rem;padding:.4rem 0;border-block-start:1px solid var(--line,#d7d0c4)}
+.camera-tr .words .he{font-size:1.4rem}
 .camera-tr .regions{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
 .camera-tr button,.camera-tr a.btn{min-block-size:44px}
 `;
@@ -109,6 +112,33 @@ export function mount(root, ctx = {}) {
     return null;
   };
 
+  // Word-by-word help: the second layer, opened on request. It loads the app's own dictionary the first time (about 0.9 MB).
+  let dictionary = null;
+  const KIND_NOTE = { 'sign-list': 'From the built-in sign word list.', dictionary: 'From the Aleph dictionary.', unknown: 'Not in the Aleph dictionary as written.', number: '',
+    joined: 'This may be the joined form of the word shown here (the form a noun takes before another noun, as in \u201cstation of\u201d). Check it against the sign.',
+    plural: 'This may be the plural of the word shown here. Check it against the sign.' };
+  const showWords = async (r, btn) => {
+    const box = btn.closest('.camera-detail')?.querySelector('.camera-words'); if (!box) return;
+    btn.setAttribute('disabled', ''); box.replaceChildren(h('p', { class: 'muted' }, 'Looking up each word…'));
+    if (!dictionary) { try { dictionary = createDictionary(ctx.cameraDictionary || await loadDictionaryIndex()); } catch { dictionary = createDictionary(null); } }
+    if (!alive) return;
+    const words = wordBreakdown(r.he, glossary, dictionary).filter((w) => w.kind !== 'number');
+    const item = (w) => {
+      const first = w.senses[0];
+      const more = w.senses.length > 1 ? `This spelling can also be: ${w.senses.slice(1).map((x) => `${x.translit || x.he} (${x.en})`).join('; ')}.` : '';
+      const note = w.kind === 'prefix' ? `The first letter ${w.prefix.letter} may be the prefix \u201c${w.prefix.meaning}\u201d, joined to the word shown here. Check it against the sign.` : KIND_NOTE[w.kind];
+      return h('li', {},
+        h('span', {}, heSpan(first ? first.he : w.word)),
+        first ? h('span', {}, first.translit ? h('strong', {}, `${first.translit}: `) : null, first.en) : null,
+        h('span', { class: 'muted' }, [note, more].filter(Boolean).join(' ')),
+        h('span', {}, h('button', { type: 'button', class: 'btn secondary', onclick: (e) => { const s = speak(first ? first.he : w.word); e.currentTarget.nextSibling.textContent = ` ${VOICE_NOTE[s]}`; } }, 'Hear This Word'), h('span', { class: 'muted', role: 'status' })));
+    };
+    box.replaceChildren(h('h3', {}, 'Word By Word'),
+      words.length ? h('ul', { class: 'words' }, ...words.map(item)) : h('p', { class: 'muted' }, 'There are no words to look up on this line.'),
+      h('p', { class: 'muted' }, 'Signs are written without vowel points, so one spelling can be more than one word. The most common one is shown first.'));
+    btn.removeAttribute('disabled');
+  };
+
   const detail = h('div', { class: 'card detail camera-detail', role: 'region', 'aria-live': 'polite', 'aria-label': 'Selected line' });
   const showDetail = async (r, autoplay) => {
     selected = r.id;
@@ -116,15 +146,17 @@ export function mount(root, ctx = {}) {
     if (r.held) { detail.replaceChildren(h('p', {}, HELD_NOTE)); return; }
     const audioNote = h('p', { class: 'muted', role: 'status' });
     const hear = () => { audioNote.textContent = VOICE_NOTE[speak(r.pointed || r.he)]; };
+    const wordsBox = h('div', { class: 'camera-words', 'aria-live': 'polite' });
     const say = await sayIt(r);
     if (!alive || selected !== r.id) return;
-    detail.replaceChildren(
+    detail.replaceChildren(...[
       h('p', {}, heSpan(r.pointed || r.he)),
       say ? h('p', {}, h('strong', {}, 'Sounds like: '), say) : h('p', { class: 'muted' }, 'This line has no vowel points and is not in the built-in word list, so a reliable way to say it cannot be shown.'),
       r.en ? h('p', {}, h('strong', {}, 'English: '), r.en) : h('p', {}, 'No English is available for this line here.'),
       r.en ? h('p', { class: 'muted' }, sourceLabel(r.translationSource)) : null,
-      h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: hear }, 'Hear The Hebrew')),
-      audioNote);
+      h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: hear }, 'Hear The Hebrew'),
+        h('button', { type: 'button', class: 'btn secondary camera-words-btn', onclick: (e) => showWords(r, e.currentTarget) }, 'Word By Word')),
+      audioNote, wordsBox].filter(Boolean));
     if (autoplay) hear();
   };
 

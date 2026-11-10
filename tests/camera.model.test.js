@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolveBackend, containsSacredName, tokens, createGlossary, regionsFromBoxes, normaliseResponse, decodeJpegDataUrl, percentBox,
-  sourceLabel, fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
+  sourceLabel, createDictionary, wordBreakdown, PREFIX_MEANING, fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
 import { translateViaService, loadConfig, ServiceError } from '../src/camera/camera-client.js';
 import { NAME_SKELETON } from '../src/shell/names.js';
 import { ROUTES, matchRoute } from '../src/shell/router.js';
@@ -52,6 +52,29 @@ test('camera: word boxes become right-to-left lines; a line with the name is hel
   assert.deepEqual([regs[1].held, regs[1].he, regs[1].en, regs[1].note], [true, null, null, HELD_NOTE]);
   assert.deepEqual([regs[2].he, regs[2].en, regs[2].translationSource], ['ספרים', null, null]);
   assert.ok(!JSON.stringify(regs).includes(NAME_SKELETON));
+});
+
+test('camera: word-by-word help uses the sign list, then the app dictionary, then one prefix letter, and never guesses', () => {
+  const dict = createDictionary({ fields: ['id', 'he', 'heUnpointed', 'en', 'pos', 'frequencyRank', 'translit'], rows: [
+    ['a', 'סִפֵּר', 'ספר', 'to tell', 'verb', 10, 'siper'], ['b', 'סֵפֶר', 'ספר', 'book', 'noun', 50, 'sefer'], ['c', 'סַפָּר', 'ספר', 'barber', 'noun', 900, 'sapar'], ['d', 'סְפָר', 'ספר', 'frontier', 'noun', 2000, 'sefar'],
+    ['e', 'שֶׁל', 'של', 'of', 'prep', 5, 'shel'], ['f', 'בֵּית סֵפֶר', 'בית ספר', 'school', 'phrase', 7, 'beit sefer']] });
+  assert.equal(dict.size, 2);                                              // multi-word rows are not single-word lookups
+  assert.deepEqual(dict.senses('ספר').map((x) => x.en), ['book', 'barber', 'frontier']);   // things before verbs, then by frequency, three at most
+  assert.deepEqual(dict.senses('אבג'), []);
+  const w = wordBreakdown('מסעדה כשרה 12 הספר של זזז', glossary, dict);
+  assert.deepEqual(w.map((x) => [x.word, x.kind]), [['מסעדה כשרה', 'sign-list'], ['12', 'number'], ['הספר', 'prefix'], ['של', 'dictionary'], ['זזז', 'unknown']]);
+  assert.deepEqual(w[0].senses, [{ he: 'מִסְעָדָה כְּשֵׁרָה', en: 'Kosher Restaurant', translit: "mis'ada kshera" }]);
+  assert.deepEqual(w[2].prefix, { letter: 'ה', meaning: 'the' }); assert.equal(w[2].senses[0].en, 'book');
+  assert.deepEqual(w[4].senses, []);
+  assert.deepEqual(wordBreakdown(`ברוך ${NAME_SKELETON}`, glossary, dict), [], 'a line with the name is not broken down');
+  assert.deepEqual(Object.keys(PREFIX_MEANING), ['ה', 'ו', 'ב', 'ל', 'מ']);
+  const d2 = createDictionary({ fields: ['he', 'heUnpointed', 'en', 'pos', 'frequencyRank', 'translit'], rows: [['תַּחֲנָה', 'תחנה', 'station', 'noun', 9, 'tachanah'], ['סֵפֶר', 'ספר', 'book', 'noun', 5, 'sefer'], ['חֲנוּת', 'חנות', 'shop', 'noun', 6, 'chanut']] });
+  const j = wordBreakdown('תחנת ספרים בית', createGlossary({ entries: [] }), d2);
+  assert.deepEqual(j.map((x) => [x.kind, x.senses[0]?.en]), [['joined', 'station'], ['plural', 'book'], ['unknown', undefined]]);   // a short word is never taken apart
+  assert.equal(wordBreakdown('חנות', createGlossary({ entries: [] }), d2)[0].kind, 'dictionary', 'a word found as written is not treated as a plural');
+  assert.equal(createDictionary(null).size, 0); assert.deepEqual(wordBreakdown('יציאה', glossary, createDictionary(null))[0].kind, 'sign-list');
+  const real = createDictionary(JSON.parse(read('data/vocab/index.json')));     // the shipped dictionary has the fields this code reads
+  assert.ok(real.size > 4000); assert.ok(real.senses('של').some((x) => x.translit === 'shel'));
 });
 
 test('camera: a service answer is tidied before use (boxes clamped, name rule re-applied, only a JPEG data URL accepted)', () => {
@@ -148,6 +171,16 @@ test('camera: view source keeps the page rules (no inline script, no HTML string
     assert.ok(!src.includes(NAME_SKELETON), `${f}: the name is never written out`);
   }
   const view = read('src/camera/camera.view.js');
-  for (const s of ['Camera Translator', 'Take A Photo', 'Choose A Photo', 'Show The Original', 'Hear The Hebrew', 'NOT_SET_UP_NOTICE', 'SEND_NOTICE', 'speechSafeText', "imageOrientation: 'from-image'"]) assert.ok(view.includes(s), s);
+  for (const s of ['Camera Translator', 'Take A Photo', 'Choose A Photo', 'Show The Original', 'Hear The Hebrew', 'Word By Word', 'NOT_SET_UP_NOTICE', 'SEND_NOTICE', 'speechSafeText', "imageOrientation: 'from-image'"]) assert.ok(view.includes(s), s);
   assert.match(view, /Location and camera details are removed/);
+});
+
+test('camera: the privacy page lists the camera service as a request that can carry a photo, and Scan links to the screen', async () => {
+  const { FLOWS, LOCAL_ONLY } = await import('../src/shell/privacy.view.js');
+  const flow = FLOWS.find((f) => f.id === 'camera-service');
+  assert.equal(flow.sendsUserData, true);
+  assert.match(flow.when, /only after you press Send Photo And Translate/); assert.match(flow.to, /No address is set in this build/);
+  for (const f of flow.files) assert.ok(existsSync(new URL(`../${f}`, import.meta.url)), f);
+  assert.ok(LOCAL_ONLY.some((l) => /Camera Translator reads your photo in your browser/.test(l)));
+  assert.ok(read('src/photo/scan.view.js').includes("href: '#/camera'"));
 });

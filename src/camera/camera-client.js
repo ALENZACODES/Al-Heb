@@ -16,6 +16,13 @@ export async function loadGlossaryData(fetchImpl = globalThis.fetch) {
   return r.json();
 }
 
+/** The app's own dictionary index (about 0.9 MB, already used by the vocabulary pages). Fetched only when the learner asks for word-by-word help. */
+export async function loadDictionaryIndex(fetchImpl = globalThis.fetch) {
+  const r = await fetchImpl(new URL('../../data/vocab/index.json', import.meta.url));
+  if (!r.ok) throw new Error('dictionary missing');
+  return r.json();
+}
+
 export class ServiceError extends Error {
   /** @param {'blocked'|'offline'|'busy'|'rejected'|'failed'} kind */
   constructor(kind, message) { super(message); this.kind = kind; }

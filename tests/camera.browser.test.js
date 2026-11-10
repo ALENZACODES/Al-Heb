@@ -23,6 +23,8 @@ test('e2e #/camera with no service: read on the device, English drawn on the pho
   assert.equal(r.toggle, 'Show The Original'); assert.equal(r.afterToggle.toggle, 'Show The English'); assert.equal(r.afterToggle.alt, 'Your photo as taken');
   assert.match(r.detail, /Sounds like: chanut optika/); assert.match(r.detail, /English: Optical Store/);
   assert.equal(r.save, 'aleph-translated-photo.jpg');
+  assert.equal(r.words.length, 1); assert.match(r.words[0], /chanut optika: Optical Store/); assert.match(r.words[0], /built-in sign word list/);
+  assert.equal(r.dictionaryFetched, true, 'the dictionary is fetched only after Word By Word is pressed (from the app\'s own origin)');
   assert.deepEqual(r.posts, []); assert.deepEqual(r.externalOrigins, []);
   assert.equal(r.origins.length, 1, 'only the app\'s own origin is contacted');
 });
@@ -41,5 +43,16 @@ test('e2e #/camera with the service on a loopback port: notice before sending, o
   const body = r.posts[0].body;
   assert.deepEqual([body[0], body[1], body[2]], [0xff, 0xd8, 0xff]);
   assert.ok(!body.includes(Buffer.from('Exif\0\0')) && !body.includes(Buffer.from('TestCam')), 'the uploaded photo carries no camera details');
+  assert.deepEqual(r.externalOrigins, []);
+});
+
+test('e2e #/camera: a sign outside the word list stays untranslated on the photo, and Word By Word still explains each word', { skip: !runCamera || !existsSync(sign('bookshop.jpg')) }, async () => {
+  const r = await runCamera({ image: sign('bookshop.jpg') });
+  assert.deepEqual(r.errors.filter((e) => !TESSERACT_LOG.test(e)), []);
+  assert.deepEqual(r.lines, ['1. Not translated']);
+  assert.equal(r.toggle, null, 'nothing was drawn, so there is no translated photo to switch to');
+  assert.match(r.detail, /No English is available for this line here/); assert.doesNotMatch(r.detail, /null|undefined/);
+  assert.equal(r.words.length, 2);
+  assert.match(r.words[0], /chanut: Store/); assert.match(r.words[1], /sefer: book/); assert.match(r.words[1], /may be the plural/);
   assert.deepEqual(r.externalOrigins, []);
 });

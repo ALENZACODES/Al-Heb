@@ -78,6 +78,17 @@ def v_lowc(a):
     return np.clip((f + np_rng.normal(0, 5, f.shape)) * g, 0, 255).astype(np.uint8)
 VARIANTS = {'clean': lambda a: a, 'noise': v_noise, 'blur': v_blur, 'rotate': v_rotate, 'perspective': v_persp, 'lowcontrast': v_lowc}
 
+def wear_set():
+    """Every sign under every kind of wear (20 x 6 = 120 images), built in memory: yields (id, variant, lines, jpeg bytes)."""
+    global rng, np_rng
+    rng = random.Random(77); np_rng = np.random.default_rng(77)
+    for sid, kind, pairs, font, size, fg, bg, align, _ in SIGNS:
+        base = render([p[0] for p in pairs], font, size, fg, bg, align, 300 if sid == 'bus-stop' else 600)
+        for name, fn in VARIANTS.items():
+            ok, enc = cv2.imencode('.jpg', fn(base.copy()), [cv2.IMWRITE_JPEG_QUALITY, 88])
+            yield sid, name, [{'he': h, 'en': e} for h, e in pairs], enc.tobytes()
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     items = []

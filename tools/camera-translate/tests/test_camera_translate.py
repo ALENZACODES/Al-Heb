@@ -16,7 +16,7 @@ from PIL import Image
 
 from camera_translate import intake, overlay
 from camera_translate.hebrew import NAME_SKELETON, Glossary, contains_sacred_name, has_latin_name, strip_marks, tokens
-from camera_translate.ocr import GoogleVisionOCR, OCRError, TesseractOCR, order_words, lines_to_regions, parse_tsv, regions_from_vision
+from camera_translate.ocr import GoogleVisionOCR, OCRError, TesseractOCR, estimate_skew, order_words, lines_to_regions, parse_tsv, prepare_for_tesseract, regions_from_vision
 from camera_translate.pipeline import translate_photo
 from camera_translate.translate import ChainTranslator, GlossaryTranslator, GoogleTranslator, TranslateError
 
@@ -153,6 +153,32 @@ def test_tesseract_tsv_parser():
     head = 'level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext\n'
     tsv = head + '4\t1\t1\t1\t1\t0\t0\t0\t10\t10\t-1\t\n5\t1\t1\t1\t1\t1\t100\t20\t60\t30\t91.5\tיציאה\n'
     assert parse_tsv(tsv, scale=2.0) == [{'text': 'יציאה', 'x': 50.0, 'y': 10.0, 'w': 30.0, 'h': 15.0, 'conf': 91.5, 'block': 1}]
+
+
+def test_tilted_text_is_levelled_and_untilted_text_is_left_alone():
+    import cv2
+    from make_signs import render, DARK, CREAM
+    flat = render(['מנה ראשונה', 'קינוחים'], 'alef-bold', 70, DARK, CREAM, 'center')
+    h, w = flat.shape[:2]
+    tilted = cv2.warpAffine(flat, cv2.getRotationMatrix2D((w / 2, h / 2), 5, 1.0), (w, h), borderMode=cv2.BORDER_REPLICATE)
+    to_binary = lambda a: cv2.threshold(cv2.cvtColor(a, cv2.COLOR_BGR2GRAY), 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+    assert estimate_skew(to_binary(flat)) == 0.0
+    assert abs(estimate_skew(to_binary(tilted)) + 5) <= 0.5          # the levelling turn is the opposite of the tilt
+    assert estimate_skew(np.full((200, 300), 255, np.uint8)) == 0.0   # a blank page has no tilt
+    _, _, back_flat = prepare_for_tesseract(Image.fromarray(cv2.cvtColor(flat, cv2.COLOR_BGR2RGB)))
+    _, _, back_tilt = prepare_for_tesseract(Image.fromarray(cv2.cvtColor(tilted, cv2.COLOR_BGR2RGB)))
+    assert back_flat is None and back_tilt is not None and back_tilt.shape == (2, 3)
+
+
+@pytest.mark.skipif(not TesseractOCR().available(), reason='Tesseract with the heb model is not installed')
+def test_tilted_sign_is_read_and_its_line_keeps_the_tilt_for_drawing():
+    regs = TesseractOCR().detect(Image.open(SIGNS / 'caution-stairs.jpg'))    # the stored sign is tilted by 4 degrees
+    assert [r['text'] for r in regs] == ['זהירות', 'מדרגות']
+    assert all(3 <= abs(r['angle']) <= 5 for r in regs)
+    img = Image.open(SIGNS / 'caution-stairs.jpg')
+    for r in regs:
+        x, y, w, h = r['box']
+        assert 0 <= x and 0 <= y and x + w <= img.width and y + h <= img.height
 
 
 def test_vision_request_uses_document_text_detection_with_hebrew_hint_and_parses_lines():
@@ -315,7 +341,7 @@ def test_twenty_synthetic_signs_exist_and_are_labelled_synthetic():
 
 @pytest.mark.skipif(not TesseractOCR().available(), reason='Tesseract with the heb model is not installed')
 def test_on_server_reader_and_word_list_on_the_synthetic_signs():
-    """Regression floor only (measured 2026-11-10: pooled CER 0.024, 25 of 28 lines translated end to end). Synthetic images, not photos."""
+    """Regression floor only (measured 2026-11-10: pooled CER 0.029, 24 of 28 lines translated end to end). Synthetic images, not photos."""
     import subprocess, sys
     r = subprocess.run([sys.executable, str(HERE.parent / 'eval.py')], capture_output=True, text=True, timeout=600)
     assert r.returncode == 0, r.stderr[-800:]

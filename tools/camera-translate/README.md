@@ -9,7 +9,7 @@ The screen also works without it (on-device reading plus a small built-in word l
 2. Rebuilds it from its pixels: upright, at most 2000 px on the long side, no EXIF, GPS or other metadata.
 3. Finds the Hebrew lines and their boxes.
    - Google Cloud Vision `DOCUMENT_TEXT_DETECTION` with language hint `he` when credentials are set.
-   - Otherwise Tesseract with the `heb` model, on the server itself. It is also the fallback when Vision fails.
+   - Otherwise Tesseract with the `heb` model, on the server itself, after levelling tilted text. It is also the fallback when Vision fails.
 4. Translates each line to English.
    - Google Cloud Translation when credentials are set.
    - The built-in sign word list (87 entries) otherwise, and for lines the cloud translator could not answer.
@@ -55,9 +55,10 @@ The cloud calls cost money past the free allowance, and the service has no login
 ## Test And Measure
 
 ```
-python3 -m pytest tools/camera-translate/tests -q        # 17 tests; no cloud calls
+python3 -m pytest tools/camera-translate/tests -q        # 19 tests; no cloud calls
 python3 tools/camera-translate/tests/make_signs.py       # regenerate the 20 synthetic signs
 cd tools/camera-translate && python3 eval.py             # Tesseract + word list
+python3 eval.py --wear                                   # the 20 signs under six kinds of wear (120 images)
 python3 eval.py --ocr vision --translate google          # the cloud path; needs credentials, sends the 20 test images to Google
 node --test tests/camera.model.test.js                   # app-side logic (from the repo root)
 node --test tests/camera.browser.test.js                 # real Chromium, under the site security policy

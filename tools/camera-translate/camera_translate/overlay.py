@@ -197,7 +197,9 @@ def render_overlay(img: Image.Image, regions: list[dict]) -> Image.Image:
     groups = choose_alignment(todo, arr.shape[1])
     plans = []
     for r in todo:
-        info = analyse_region(arr, r['box'])
+        x, y, w, h = r['box']
+        lift = abs(np.sin(np.radians(float(r.get('angle') or 0)))) * w / 2   # a tilted line climbs above and below its level box
+        info = analyse_region(arr, (x, y - lift, w, h + 2 * lift) if lift >= 1 else r['box'])
         plans.append((r, info, text_colour(info)))
     for r, info, _ in plans:           # erase everything first so one region's text never bleeds into another's analysis
         r['erase'] = erase_text(arr, info, r['box'][3])

@@ -22792,6 +22792,3281 @@
     "small-talk-08-f",
     "small-talk-09-m"
    ]
+  },
+  {
+   "id": "pu-verbs-now-p01",
+   "title": "Present Tense: Man and Woman",
+   "order": 1,
+   "kind": "grammar",
+   "can": "Say what you do now, as a man or a woman.",
+   "grammarNote": "One verb, a man's form and a woman's form. Present-tense verbs change with the person, not with time. The man's forms here are הוֹלֵךְ, אוֹכֵל, לוֹמֵד. The woman's form adds an ending: גָּר becomes גָּרָה, and you met מְדַבֶּרֶת earlier.",
+   "grammar": {
+    "point": "One verb, a man's form and a woman's form",
+    "body": "Present-tense verbs change with the person, not with time. The man's forms here are הוֹלֵךְ, אוֹכֵל, לוֹמֵד. The woman's form adds an ending: גָּר becomes גָּרָה, and you met מְדַבֶּרֶת earlier.",
+    "examples": [
+     {
+      "itemId": "gp-05-m",
+      "he": "אֲנִי גָּר בְּתֵל אָבִיב",
+      "en": "I live in Tel Aviv."
+     },
+     {
+      "itemId": "gp-05-f",
+      "he": "אֲנִי גָּרָה בְּתֵל אָבִיב",
+      "en": "I live in Tel Aviv."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il16-w1",
+     "source": "data/curriculum/lessons.json#il16.words[0]",
+     "he": "אֲנִי הוֹלֵךְ",
+     "en": "I go (m.)",
+     "translit": "ani holech",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w1"
+     },
+     "audio": {
+      "clipId": "il16-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il16-w2",
+     "source": "data/curriculum/lessons.json#il16.words[1]",
+     "he": "אֲנִי אוֹכֵל",
+     "en": "I eat (m.)",
+     "translit": "ani ochel",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w2"
+     },
+     "audio": {
+      "clipId": "il16-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il16-w3",
+     "source": "data/curriculum/lessons.json#il16.words[2]",
+     "he": "אֲנִי לוֹמֵד",
+     "en": "I study (m.)",
+     "translit": "ani lomed",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w3"
+     },
+     "audio": {
+      "clipId": "il16-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "gp-05-m",
+     "source": "data/curriculum/gender-pairs.json#gp-05.m",
+     "he": "אֲנִי גָּר בְּתֵל אָבִיב",
+     "en": "I live in Tel Aviv.",
+     "translit": "ani gar be-tel aviv",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-05-m"
+     },
+     "audio": {
+      "clipId": "gp-05-m",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "gp-05-f",
+     "source": "data/curriculum/gender-pairs.json#gp-05.f",
+     "he": "אֲנִי גָּרָה בְּתֵל אָבִיב",
+     "en": "I live in Tel Aviv.",
+     "translit": "ani gara be-tel aviv",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-05-f"
+     },
+     "audio": {
+      "clipId": "gp-05-f",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il16-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il16-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il16-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "gp-05-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "gp-05-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "fillers-15-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "shop-06-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il16-w1",
+    "il16-w2",
+    "il16-w3",
+    "gp-05-m",
+    "gp-05-f"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il16-w1"
+     },
+     "answer": "il16-w1",
+     "options": [
+      "il16-w2",
+      "il16-w3",
+      "il16-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il16-w2"
+     },
+     "answer": "il16-w2",
+     "options": [
+      "il16-w1",
+      "il16-w3",
+      "il16-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il16-w3"
+     },
+     "answer": "il16-w3",
+     "options": [
+      "il16-w1",
+      "il16-w2",
+      "il16-w3"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman. Say you live in Tel Aviv.",
+     "answer": "gp-05-f",
+     "he": "אֲנִי גָּרָה בְּתֵל אָבִיב",
+     "translit": "ani gara be-tel aviv",
+     "en": "I live in Tel Aviv.",
+     "audio": {
+      "clipId": "gp-05-f",
+      "status": "gap",
+      "voices": []
+     }
+    },
+    {
+     "prompt": "Say: I go.",
+     "answer": "il16-w1",
+     "he": "אֲנִי הוֹלֵךְ",
+     "translit": "ani holech",
+     "en": "I go (m.)",
+     "audio": {
+      "clipId": "il16-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "fillers-15-f",
+    "shop-06-f"
+   ]
+  },
+  {
+   "id": "pu-verbs-now-p02",
+   "title": "Everyday Verbs",
+   "order": 2,
+   "kind": "learn",
+   "can": "Say you write, speak and study.",
+   "grammarNote": "Keep the אֲנִי. A present-tense verb shows a man or a woman, but not who: כּוֹתֵב could be I, you or he. So Hebrew keeps the pronoun: אֲנִי כּוֹתֵב.",
+   "grammar": {
+    "point": "Keep the אֲנִי",
+    "body": "A present-tense verb shows a man or a woman, but not who: כּוֹתֵב could be I, you or he. So Hebrew keeps the pronoun: אֲנִי כּוֹתֵב.",
+    "examples": [
+     {
+      "itemId": "il16-w4",
+      "he": "אֲנִי כּוֹתֵב",
+      "en": "I write (m.)"
+     },
+     {
+      "itemId": "gp-07-f",
+      "he": "אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית",
+      "en": "I speak a little Hebrew."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il16-w4",
+     "source": "data/curriculum/lessons.json#il16.words[3]",
+     "he": "אֲנִי כּוֹתֵב",
+     "en": "I write (m.)",
+     "translit": "ani kotev",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w4"
+     },
+     "audio": {
+      "clipId": "il16-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il16-w5",
+     "source": "data/curriculum/lessons.json#il16.words[4]",
+     "he": "אֲנִי מְדַבֵּר",
+     "en": "I speak (m.)",
+     "translit": "ani medaber",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il16-w5"
+     },
+     "audio": {
+      "clipId": "il16-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "gp-07-m",
+     "source": "data/curriculum/gender-pairs.json#gp-07.m",
+     "he": "אֲנִי מְדַבֵּר קְצָת עִבְרִית",
+     "en": "I speak a little Hebrew.",
+     "translit": "ani medaber ktsat ivrit",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-07-m"
+     },
+     "audio": {
+      "clipId": "gp-07-m",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "gp-07-f",
+     "source": "data/curriculum/gender-pairs.json#gp-07.f",
+     "he": "אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית",
+     "en": "I speak a little Hebrew.",
+     "translit": "ani medaberet ktsat ivrit",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-07-f"
+     },
+     "audio": {
+      "clipId": "gp-07-f",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il16-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il16-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "gp-07-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "gp-07-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il16-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "fillers-17-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il16-w4",
+    "il16-w5",
+    "gp-07-m",
+    "gp-07-f"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il16-w4"
+     },
+     "answer": "il16-w4",
+     "options": [
+      "il16-w5",
+      "gp-07-m",
+      "il16-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il16-w5"
+     },
+     "answer": "il16-w5",
+     "options": [
+      "il16-w4",
+      "gp-07-m",
+      "il16-w5"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman. Say you speak a little Hebrew.",
+     "answer": "gp-07-f",
+     "he": "אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית",
+     "translit": "ani medaberet ktsat ivrit",
+     "en": "I speak a little Hebrew.",
+     "audio": {
+      "clipId": "gp-07-f",
+      "status": "gap",
+      "voices": []
+     }
+    },
+    {
+     "prompt": "Say: I write.",
+     "answer": "il16-w4",
+     "he": "אֲנִי כּוֹתֵב",
+     "translit": "ani kotev",
+     "en": "I write (m.)",
+     "audio": {
+      "clipId": "il16-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il16-w3",
+    "fillers-17-m"
+   ]
+  },
+  {
+   "id": "pu-verbs-now-p03",
+   "title": "Come Here, and Unit Review",
+   "order": 3,
+   "kind": "review",
+   "can": "Call someone over, then review the present tense.",
+   "grammarNote": "Come: בּוֹא and בּוֹאִי. To a man, come is בּוֹא; to a woman, בּוֹאִי. Like פְּנִי and עִצְרִי, the woman's command adds י.",
+   "grammar": {
+    "point": "Come: בּוֹא and בּוֹאִי",
+    "body": "To a man, come is בּוֹא; to a woman, בּוֹאִי. Like פְּנִי and עִצְרִי, the woman's command adds י.",
+    "examples": [
+     {
+      "itemId": "gp-14-m",
+      "he": "בּוֹא הֵנָּה",
+      "en": "Come here."
+     },
+     {
+      "itemId": "gp-14-f",
+      "he": "בּוֹאִי הֵנָּה",
+      "en": "Come here."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "gp-14-m",
+     "source": "data/curriculum/gender-pairs.json#gp-14.m",
+     "he": "בּוֹא הֵנָּה",
+     "en": "Come here.",
+     "translit": "bo hena",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-14-m"
+     },
+     "audio": {
+      "clipId": "gp-14-m",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "gp-14-f",
+     "source": "data/curriculum/gender-pairs.json#gp-14.f",
+     "he": "בּוֹאִי הֵנָּה",
+     "en": "Come here.",
+     "translit": "bo'i hena",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-14-f"
+     },
+     "audio": {
+      "clipId": "gp-14-f",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "gp-14-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "gp-14-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il16-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il16-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "gp-05-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "gp-07-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "il16-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "gp-14-m",
+    "gp-14-f"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Call a woman over.",
+     "answer": "gp-14-f",
+     "he": "בּוֹאִי הֵנָּה",
+     "translit": "bo'i hena",
+     "en": "Come here.",
+     "audio": {
+      "clipId": "gp-14-f",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il16-w1",
+    "il16-w5",
+    "gp-05-f",
+    "gp-07-m",
+    "il16-w3"
+   ]
+  },
+  {
+   "id": "pu-past-p01",
+   "title": "Past Tense: What I Did",
+   "order": 1,
+   "kind": "grammar",
+   "can": "Say what you did.",
+   "grammarNote": "I did: the ending תִּי. The past tense of I ends in תִּי: הָלַכְתִּי (I went), אָכַלְתִּי (I ate), רָאִיתִי (I saw). It is the same for a man and a woman, so there is no form to choose.",
+   "grammar": {
+    "point": "I did: the ending תִּי",
+    "body": "The past tense of I ends in תִּי: הָלַכְתִּי (I went), אָכַלְתִּי (I ate), רָאִיתִי (I saw). It is the same for a man and a woman, so there is no form to choose.",
+    "examples": [
+     {
+      "itemId": "il19-w1",
+      "he": "הָלַכְתִּי",
+      "en": "I went"
+     },
+     {
+      "itemId": "il19-w2",
+      "he": "אָכַלְתִּי",
+      "en": "I ate"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il19-w1",
+     "source": "data/curriculum/lessons.json#il19.words[0]",
+     "he": "הָלַכְתִּי",
+     "en": "I went",
+     "translit": "halachti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w1"
+     },
+     "audio": {
+      "clipId": "il19-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il19-w2",
+     "source": "data/curriculum/lessons.json#il19.words[1]",
+     "he": "אָכַלְתִּי",
+     "en": "I ate",
+     "translit": "achalti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w2"
+     },
+     "audio": {
+      "clipId": "il19-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il19-w3",
+     "source": "data/curriculum/lessons.json#il19.words[2]",
+     "he": "רָאִיתִי",
+     "en": "I saw",
+     "translit": "ra'iti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w3"
+     },
+     "audio": {
+      "clipId": "il19-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il19-w4",
+     "source": "data/curriculum/lessons.json#il19.words[3]",
+     "he": "אָמַרְתִּי",
+     "en": "I said",
+     "translit": "amarti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w4"
+     },
+     "audio": {
+      "clipId": "il19-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il19-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il19-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il19-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il19-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il16-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il16-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il19-w1",
+    "il19-w2",
+    "il19-w3",
+    "il19-w4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w1"
+     },
+     "answer": "il19-w1",
+     "options": [
+      "il19-w2",
+      "il19-w3",
+      "il19-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w2"
+     },
+     "answer": "il19-w2",
+     "options": [
+      "il19-w1",
+      "il19-w3",
+      "il19-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w3"
+     },
+     "answer": "il19-w3",
+     "options": [
+      "il19-w1",
+      "il19-w2",
+      "il19-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w4"
+     },
+     "answer": "il19-w4",
+     "options": [
+      "il19-w1",
+      "il19-w2",
+      "il19-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: I went.",
+     "answer": "il19-w1",
+     "he": "הָלַכְתִּי",
+     "translit": "halachti",
+     "en": "I went",
+     "audio": {
+      "clipId": "il19-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: I saw.",
+     "answer": "il19-w3",
+     "he": "רָאִיתִי",
+     "translit": "ra'iti",
+     "en": "I saw",
+     "audio": {
+      "clipId": "il19-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il16-w1",
+    "il16-w2"
+   ]
+  },
+  {
+   "id": "pu-past-p02",
+   "title": "What I Did Yesterday, and Unit Review",
+   "order": 2,
+   "kind": "review",
+   "can": "Talk about yesterday, then review the past tense.",
+   "grammarNote": "Was: הָיָה. הָיָה is was for a masculine noun, and also there was. You met הָיְתָה, its partner for a feminine noun. Put אֶתְמוֹל first or last to place the story in time.",
+   "grammar": {
+    "point": "Was: הָיָה",
+    "body": "הָיָה is was for a masculine noun, and also there was. You met הָיְתָה, its partner for a feminine noun. Put אֶתְמוֹל first or last to place the story in time.",
+    "examples": [
+     {
+      "itemId": "il19-w5",
+      "he": "הָיָה",
+      "en": "there was; he was"
+     },
+     {
+      "itemId": "numbers-22",
+      "he": "אֶתְמוֹל",
+      "en": "yesterday"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il19-w5",
+     "source": "data/curriculum/lessons.json#il19.words[4]",
+     "he": "הָיָה",
+     "en": "there was; he was",
+     "translit": "haya",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w5"
+     },
+     "audio": {
+      "clipId": "il19-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": "etmol",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-22"
+     },
+     "audio": {
+      "clipId": "numbers-22",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il19-w1",
+     "source": "data/curriculum/lessons.json#il19.words[0]",
+     "he": "הָלַכְתִּי",
+     "en": "I went",
+     "translit": "halachti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w1"
+     },
+     "audio": {
+      "clipId": "il19-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il19-w2",
+     "source": "data/curriculum/lessons.json#il19.words[1]",
+     "he": "אָכַלְתִּי",
+     "en": "I ate",
+     "translit": "achalti",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il19-w2"
+     },
+     "audio": {
+      "clipId": "il19-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il19-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-22",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il19-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il19-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "taxi-15",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il19-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "il19-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "il16-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "il16-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "gp-14-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il19-w5",
+    "numbers-22",
+    "il19-w1",
+    "il19-w2"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w5"
+     },
+     "answer": "il19-w5",
+     "options": [
+      "numbers-22",
+      "il19-w1",
+      "il19-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-22"
+     },
+     "answer": "numbers-22",
+     "options": [
+      "il19-w5",
+      "il19-w1",
+      "numbers-22"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w1"
+     },
+     "answer": "il19-w1",
+     "options": [
+      "il19-w5",
+      "numbers-22",
+      "il19-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il19-w2"
+     },
+     "answer": "il19-w2",
+     "options": [
+      "il19-w5",
+      "numbers-22",
+      "il19-w2"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: yesterday.",
+     "answer": "numbers-22",
+     "he": "אֶתְמוֹל",
+     "translit": "etmol",
+     "en": "yesterday",
+     "audio": {
+      "clipId": "numbers-22",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say what you did: I ate.",
+     "answer": "il19-w2",
+     "he": "אָכַלְתִּי",
+     "translit": "achalti",
+     "en": "I ate",
+     "audio": {
+      "clipId": "il19-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: there was.",
+     "answer": "il19-w5",
+     "he": "הָיָה",
+     "translit": "haya",
+     "en": "there was; he was",
+     "audio": {
+      "clipId": "il19-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "taxi-15",
+    "il19-w3",
+    "il19-w4",
+    "il16-w1",
+    "il16-w2",
+    "gp-14-f"
+   ]
+  },
+  {
+   "id": "pu-family-p01",
+   "title": "My Family",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the people in your family.",
+   "grammarNote": "Brother and sister: אָח and אָחוֹת. אָחוֹת is the feminine partner of אָח. אִמָּא and אַבָּא are what children and adults alike call their parents.",
+   "grammar": {
+    "point": "Brother and sister: אָח and אָחוֹת",
+    "body": "אָחוֹת is the feminine partner of אָח. אִמָּא and אַבָּא are what children and adults alike call their parents.",
+    "examples": [
+     {
+      "itemId": "il14-w2",
+      "he": "אָח",
+      "en": "brother"
+     },
+     {
+      "itemId": "il14-w3",
+      "he": "אָחוֹת",
+      "en": "sister"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il14-w1",
+     "source": "data/curriculum/lessons.json#il14.words[0]",
+     "he": "מִשְׁפָּחָה",
+     "en": "family",
+     "translit": "mishpacha",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w1"
+     },
+     "audio": {
+      "clipId": "il14-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il14-w2",
+     "source": "data/curriculum/lessons.json#il14.words[1]",
+     "he": "אָח",
+     "en": "brother",
+     "translit": "ach",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w2"
+     },
+     "audio": {
+      "clipId": "il14-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il14-w3",
+     "source": "data/curriculum/lessons.json#il14.words[2]",
+     "he": "אָחוֹת",
+     "en": "sister",
+     "translit": "achot",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w3"
+     },
+     "audio": {
+      "clipId": "il14-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w9",
+     "source": "data/curriculum/lessons.json#I-42.words[8]",
+     "he": "אִמָּא",
+     "en": "mother",
+     "translit": "ima",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w9"
+     },
+     "audio": {
+      "clipId": "i-42-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w10",
+     "source": "data/curriculum/lessons.json#I-42.words[9]",
+     "he": "אַבָּא",
+     "en": "father",
+     "translit": "aba",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w10"
+     },
+     "audio": {
+      "clipId": "i-42-w10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il14-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il14-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il14-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-42-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-42-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "small-talk-18-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "small-talk-18-m",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il14-w1",
+    "il14-w2",
+    "il14-w3",
+    "i-42-w9",
+    "i-42-w10"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w1"
+     },
+     "answer": "il14-w1",
+     "options": [
+      "il14-w2",
+      "il14-w3",
+      "il14-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w2"
+     },
+     "answer": "il14-w2",
+     "options": [
+      "il14-w1",
+      "il14-w3",
+      "il14-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w3"
+     },
+     "answer": "il14-w3",
+     "options": [
+      "il14-w1",
+      "il14-w2",
+      "il14-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w9"
+     },
+     "answer": "i-42-w9",
+     "options": [
+      "il14-w1",
+      "il14-w2",
+      "i-42-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w10"
+     },
+     "answer": "i-42-w10",
+     "options": [
+      "il14-w1",
+      "il14-w2",
+      "i-42-w10"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: my family.",
+     "answer": "il14-w1",
+     "he": "מִשְׁפָּחָה",
+     "translit": "mishpacha",
+     "en": "family",
+     "audio": {
+      "clipId": "il14-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: sister.",
+     "answer": "il14-w3",
+     "he": "אָחוֹת",
+     "translit": "achot",
+     "en": "sister",
+     "audio": {
+      "clipId": "il14-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-18-f",
+    "small-talk-18-m"
+   ]
+  },
+  {
+   "id": "pu-family-p02",
+   "title": "One and Many: -ים",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Talk about one child or several.",
+   "grammarNote": "Plural -im, and the vowels move. Many masculine nouns make the plural with -im: יֶלֶד becomes יְלָדִים. The vowels inside the word often change too, so learn the plural as its own word. A girl is יַלְדָּה.",
+   "grammar": {
+    "point": "Plural -im, and the vowels move",
+    "body": "Many masculine nouns make the plural with -im: יֶלֶד becomes יְלָדִים. The vowels inside the word often change too, so learn the plural as its own word. A girl is יַלְדָּה.",
+    "examples": [
+     {
+      "itemId": "il14-w4",
+      "he": "יֶלֶד",
+      "en": "boy; child"
+     },
+     {
+      "itemId": "i-42-w3",
+      "he": "יְלָדִים",
+      "en": "children"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il14-w4",
+     "source": "data/curriculum/lessons.json#il14.words[3]",
+     "he": "יֶלֶד",
+     "en": "boy; child",
+     "translit": "yeled",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w4"
+     },
+     "audio": {
+      "clipId": "il14-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il14-w5",
+     "source": "data/curriculum/lessons.json#il14.words[4]",
+     "he": "יַלְדָּה",
+     "en": "girl",
+     "translit": "yalda",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w5"
+     },
+     "audio": {
+      "clipId": "il14-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w3",
+     "source": "data/curriculum/lessons.json#I-42.words[2]",
+     "he": "יְלָדִים",
+     "en": "children",
+     "translit": "yeladim",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w3"
+     },
+     "audio": {
+      "clipId": "i-42-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w4",
+     "source": "data/curriculum/lessons.json#I-42.words[3]",
+     "he": "תִּינוֹק",
+     "en": "baby",
+     "translit": "tinok",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w4"
+     },
+     "audio": {
+      "clipId": "i-42-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il14-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il14-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-42-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-42-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-restaurant-l1",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il14-w4",
+    "il14-w5",
+    "i-42-w3",
+    "i-42-w4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w4"
+     },
+     "answer": "il14-w4",
+     "options": [
+      "il14-w5",
+      "i-42-w3",
+      "il14-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w5"
+     },
+     "answer": "il14-w5",
+     "options": [
+      "il14-w4",
+      "i-42-w3",
+      "il14-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w3"
+     },
+     "answer": "i-42-w3",
+     "options": [
+      "il14-w4",
+      "il14-w5",
+      "i-42-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w4"
+     },
+     "answer": "i-42-w4",
+     "options": [
+      "il14-w4",
+      "il14-w5",
+      "i-42-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: children.",
+     "answer": "i-42-w3",
+     "he": "יְלָדִים",
+     "translit": "yeladim",
+     "en": "children",
+     "audio": {
+      "clipId": "i-42-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: a baby.",
+     "answer": "i-42-w4",
+     "he": "תִּינוֹק",
+     "translit": "tinok",
+     "en": "baby",
+     "audio": {
+      "clipId": "i-42-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-11",
+    "d-restaurant-l1"
+   ]
+  },
+  {
+   "id": "pu-family-p03",
+   "title": "School and Play",
+   "order": 3,
+   "kind": "learn",
+   "can": "Talk about kindergarten, games and teachers.",
+   "grammarNote": "One word, two meanings: גַּן. גַּן is a garden and also a kindergarten; the context tells you which. חָמוּד (cute, sweet) is what everyone says about a small child.",
+   "grammar": {
+    "point": "One word, two meanings: גַּן",
+    "body": "גַּן is a garden and also a kindergarten; the context tells you which. חָמוּד (cute, sweet) is what everyone says about a small child.",
+    "examples": [
+     {
+      "itemId": "i-42-w5",
+      "he": "גַּן",
+      "en": "garden, kindergarten"
+     },
+     {
+      "itemId": "i-42-w12",
+      "he": "חָמוּד",
+      "en": "cute, sweet, charming"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-42-w5",
+     "source": "data/curriculum/lessons.json#I-42.words[4]",
+     "he": "גַּן",
+     "en": "garden, kindergarten",
+     "translit": "gan",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w5"
+     },
+     "audio": {
+      "clipId": "i-42-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w7",
+     "source": "data/curriculum/lessons.json#I-42.words[6]",
+     "he": "מוֹרֶה",
+     "en": "teacher (m)",
+     "translit": "more",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w7"
+     },
+     "audio": {
+      "clipId": "i-42-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w8",
+     "source": "data/curriculum/lessons.json#I-42.words[7]",
+     "he": "מִשְׂחָק",
+     "en": "game",
+     "translit": "mischak",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w8"
+     },
+     "audio": {
+      "clipId": "i-42-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-42-w12",
+     "source": "data/curriculum/lessons.json#I-42.words[11]",
+     "he": "חָמוּד",
+     "en": "cute, sweet, charming",
+     "translit": "chamud",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w12"
+     },
+     "audio": {
+      "clipId": "i-42-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-42-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-42-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-42-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-42-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il14-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il10-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-42-w5",
+    "i-42-w7",
+    "i-42-w8",
+    "i-42-w12"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w5"
+     },
+     "answer": "i-42-w5",
+     "options": [
+      "i-42-w7",
+      "i-42-w8",
+      "i-42-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w7"
+     },
+     "answer": "i-42-w7",
+     "options": [
+      "i-42-w5",
+      "i-42-w8",
+      "i-42-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w8"
+     },
+     "answer": "i-42-w8",
+     "options": [
+      "i-42-w5",
+      "i-42-w7",
+      "i-42-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-42-w12"
+     },
+     "answer": "i-42-w12",
+     "options": [
+      "i-42-w5",
+      "i-42-w7",
+      "i-42-w12"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: a game.",
+     "answer": "i-42-w8",
+     "he": "מִשְׂחָק",
+     "translit": "mischak",
+     "en": "game",
+     "audio": {
+      "clipId": "i-42-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say the child is cute.",
+     "answer": "i-42-w12",
+     "he": "חָמוּד",
+     "translit": "chamud",
+     "en": "cute, sweet, charming",
+     "audio": {
+      "clipId": "i-42-w12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il14-w4",
+    "il10-w5"
+   ]
+  },
+  {
+   "id": "pu-family-p04",
+   "title": "Describe Your Family",
+   "order": 4,
+   "kind": "speak",
+   "can": "Say who you are: married, a student.",
+   "grammarNote": "Describing words match the person. נָשׂוּי is married for a man. A student is תַּלְמִיד, or תַּלְמִידָה for a woman: the same ending -a as יַלְדָּה.",
+   "grammar": {
+    "point": "Describing words match the person",
+    "body": "נָשׂוּי is married for a man. A student is תַּלְמִיד, or תַּלְמִידָה for a woman: the same ending -a as יַלְדָּה.",
+    "examples": [
+     {
+      "itemId": "gp-01-m",
+      "he": "אֲנִי תַּלְמִיד",
+      "en": "I am a student."
+     },
+     {
+      "itemId": "gp-01-f",
+      "he": "אֲנִי תַּלְמִידָה",
+      "en": "I am a student."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il14-w6",
+     "source": "data/curriculum/lessons.json#il14.words[5]",
+     "he": "נָשׂוּי",
+     "en": "married (m.)",
+     "translit": "nasui",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il14-w6"
+     },
+     "audio": {
+      "clipId": "il14-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "gp-01-m",
+     "source": "data/curriculum/gender-pairs.json#gp-01.m",
+     "he": "אֲנִי תַּלְמִיד",
+     "en": "I am a student.",
+     "translit": "ani talmid",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-01-m"
+     },
+     "audio": {
+      "clipId": "gp-01-m",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "gp-01-f",
+     "source": "data/curriculum/gender-pairs.json#gp-01.f",
+     "he": "אֲנִי תַּלְמִידָה",
+     "en": "I am a student.",
+     "translit": "ani talmida",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-01-f"
+     },
+     "audio": {
+      "clipId": "gp-01-f",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il14-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "gp-01-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "gp-01-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-08-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "small-talk-07-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il14-w6",
+    "gp-01-m",
+    "gp-01-f"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il14-w6"
+     },
+     "answer": "il14-w6",
+     "options": [
+      "gp-01-m",
+      "gp-01-f",
+      "il14-w6"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman. Say you are a student.",
+     "answer": "gp-01-f",
+     "he": "אֲנִי תַּלְמִידָה",
+     "translit": "ani talmida",
+     "en": "I am a student.",
+     "audio": {
+      "clipId": "gp-01-f",
+      "status": "gap",
+      "voices": []
+     }
+    },
+    {
+     "prompt": "Say: married (a man).",
+     "answer": "il14-w6",
+     "he": "נָשׂוּי",
+     "translit": "nasui",
+     "en": "married (m.)",
+     "audio": {
+      "clipId": "il14-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-08-f",
+    "small-talk-07-m"
+   ]
+  },
+  {
+   "id": "pu-family-p05",
+   "title": "Happy, and Unit Review",
+   "order": 5,
+   "kind": "review",
+   "can": "Say you are happy, then review the family unit.",
+   "grammarNote": "Happy: שָׂמֵחַ and שְׂמֵחָה. שָׂמֵחַ is happy for a man and שְׂמֵחָה for a woman, the same pattern as רָעֵב and רְעֵבָה.",
+   "grammar": {
+    "point": "Happy: שָׂמֵחַ and שְׂמֵחָה",
+    "body": "שָׂמֵחַ is happy for a man and שְׂמֵחָה for a woman, the same pattern as רָעֵב and רְעֵבָה.",
+    "examples": [
+     {
+      "itemId": "gp-08-m",
+      "he": "אֲנִי שָׂמֵחַ",
+      "en": "I am happy."
+     },
+     {
+      "itemId": "gp-08-f",
+      "he": "אֲנִי שְׂמֵחָה",
+      "en": "I am happy."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "gp-08-m",
+     "source": "data/curriculum/gender-pairs.json#gp-08.m",
+     "he": "אֲנִי שָׂמֵחַ",
+     "en": "I am happy.",
+     "translit": "ani sameach",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-08-m"
+     },
+     "audio": {
+      "clipId": "gp-08-m",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a man"
+    },
+    {
+     "id": "gp-08-f",
+     "source": "data/curriculum/gender-pairs.json#gp-08.f",
+     "he": "אֲנִי שְׂמֵחָה",
+     "en": "I am happy.",
+     "translit": "ani smecha",
+     "review": "native-speaker-needed: gender pair",
+     "listen": {
+      "kind": "line",
+      "id": "gp-08-f"
+     },
+     "audio": {
+      "clipId": "gp-08-f",
+      "status": "gap",
+      "voices": []
+     },
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "gp-08-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "gp-08-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il14-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il14-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il14-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-42-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-42-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "gp-01-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "il14-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "gp-08-m",
+    "gp-08-f"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "You are a woman. Say you are happy.",
+     "answer": "gp-08-f",
+     "he": "אֲנִי שְׂמֵחָה",
+     "translit": "ani smecha",
+     "en": "I am happy.",
+     "audio": {
+      "clipId": "gp-08-f",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il14-w1",
+    "il14-w2",
+    "il14-w3",
+    "i-42-w3",
+    "i-42-w5",
+    "gp-01-f",
+    "il14-w6"
+   ]
+  },
+  {
+   "id": "pu-home-p01",
+   "title": "Rooms and Things",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the things that break at home.",
+   "grammarNote": "Name it first. When something breaks, start with the thing: דֶּלֶת, מְקָרֵר, מַנְעוּל. The person on the phone needs the noun before anything else.",
+   "grammar": {
+    "point": "Name it first",
+    "body": "When something breaks, start with the thing: דֶּלֶת, מְקָרֵר, מַנְעוּל. The person on the phone needs the noun before anything else.",
+    "examples": [
+     {
+      "itemId": "i-44-w3",
+      "he": "דֶּלֶת",
+      "en": "door"
+     },
+     {
+      "itemId": "i-44-w6",
+      "he": "מְקָרֵר",
+      "en": "refrigerator"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-44-w3",
+     "source": "data/curriculum/lessons.json#I-44.words[2]",
+     "he": "דֶּלֶת",
+     "en": "door",
+     "translit": "delet",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w3"
+     },
+     "audio": {
+      "clipId": "i-44-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w7",
+     "source": "data/curriculum/lessons.json#I-44.words[6]",
+     "he": "קִיר",
+     "en": "wall",
+     "translit": "kir",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w7"
+     },
+     "audio": {
+      "clipId": "i-44-w7",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w6",
+     "source": "data/curriculum/lessons.json#I-44.words[5]",
+     "he": "מְקָרֵר",
+     "en": "refrigerator",
+     "translit": "mekarer",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w6"
+     },
+     "audio": {
+      "clipId": "i-44-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w2",
+     "source": "data/curriculum/lessons.json#I-44.words[1]",
+     "he": "מַנְעוּל",
+     "en": "lock",
+     "translit": "man'ul",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w2"
+     },
+     "audio": {
+      "clipId": "i-44-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-44-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-44-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-44-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-44-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "shop-17",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "il08-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-44-w3",
+    "i-44-w7",
+    "i-44-w6",
+    "i-44-w2"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w3"
+     },
+     "answer": "i-44-w3",
+     "options": [
+      "i-44-w7",
+      "i-44-w6",
+      "i-44-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w7"
+     },
+     "answer": "i-44-w7",
+     "options": [
+      "i-44-w3",
+      "i-44-w6",
+      "i-44-w7"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w6"
+     },
+     "answer": "i-44-w6",
+     "options": [
+      "i-44-w3",
+      "i-44-w7",
+      "i-44-w6"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w2"
+     },
+     "answer": "i-44-w2",
+     "options": [
+      "i-44-w3",
+      "i-44-w7",
+      "i-44-w2"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: the door.",
+     "answer": "i-44-w3",
+     "he": "דֶּלֶת",
+     "translit": "delet",
+     "en": "door",
+     "audio": {
+      "clipId": "i-44-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: the fridge.",
+     "answer": "i-44-w6",
+     "he": "מְקָרֵר",
+     "translit": "mekarer",
+     "en": "refrigerator",
+     "audio": {
+      "clipId": "i-44-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "shop-17",
+    "il08-w6"
+   ]
+  },
+  {
+   "id": "pu-home-p02",
+   "title": "Something Is Broken",
+   "order": 2,
+   "kind": "learn",
+   "can": "Ask for an electrician and ask when they can come.",
+   "grammarNote": "The ending -ai makes a trade. חַשְׁמַל is electricity; add -ai and you get the person who works with it: חַשְׁמַלַּאי, an electrician. מָתַי? asks when.",
+   "grammar": {
+    "point": "The ending -ai makes a trade",
+    "body": "חַשְׁמַל is electricity; add -ai and you get the person who works with it: חַשְׁמַלַּאי, an electrician. מָתַי? asks when.",
+    "examples": [
+     {
+      "itemId": "i-44-w4",
+      "he": "חַשְׁמַל",
+      "en": "electricity"
+     },
+     {
+      "itemId": "i-44-w5",
+      "he": "חַשְׁמַלַּאי",
+      "en": "electrician"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-44-w4",
+     "source": "data/curriculum/lessons.json#I-44.words[3]",
+     "he": "חַשְׁמַל",
+     "en": "electricity",
+     "translit": "chashmal",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w4"
+     },
+     "audio": {
+      "clipId": "i-44-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w5",
+     "source": "data/curriculum/lessons.json#I-44.words[4]",
+     "he": "חַשְׁמַלַּאי",
+     "en": "electrician",
+     "translit": "chashmalai",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w5"
+     },
+     "audio": {
+      "clipId": "i-44-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w9",
+     "source": "data/curriculum/lessons.json#I-44.words[8]",
+     "he": "מָתַי?",
+     "en": "when?",
+     "translit": "matai?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w9"
+     },
+     "audio": {
+      "clipId": "i-44-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-44-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-44-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-44-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-38-w9",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-36-w1",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-44-w4",
+    "i-44-w5",
+    "i-44-w9"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w4"
+     },
+     "answer": "i-44-w4",
+     "options": [
+      "i-44-w5",
+      "i-44-w9",
+      "i-44-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w5"
+     },
+     "answer": "i-44-w5",
+     "options": [
+      "i-44-w4",
+      "i-44-w9",
+      "i-44-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w9"
+     },
+     "answer": "i-44-w9",
+     "options": [
+      "i-44-w4",
+      "i-44-w5",
+      "i-44-w9"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: an electrician.",
+     "answer": "i-44-w5",
+     "he": "חַשְׁמַלַּאי",
+     "translit": "chashmalai",
+     "en": "electrician",
+     "audio": {
+      "clipId": "i-44-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask: when?",
+     "answer": "i-44-w9",
+     "he": "מָתַי?",
+     "translit": "matai?",
+     "en": "when?",
+     "audio": {
+      "clipId": "i-44-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-38-w9",
+    "i-36-w1"
+   ]
+  },
+  {
+   "id": "pu-home-p03",
+   "title": "Call the Landlord",
+   "order": 3,
+   "kind": "speak",
+   "can": "Name the landlord and ask when the repair will be.",
+   "grammarNote": "Owner of the house: בַּעַל הַבַּיִת. בַּעַל הַבַּיִת is the landlord, literally the owner of the house: two nouns as one, with הַ on the second, as in בֵּית הַחוֹלִים.",
+   "grammar": {
+    "point": "Owner of the house: בַּעַל הַבַּיִת",
+    "body": "בַּעַל הַבַּיִת is the landlord, literally the owner of the house: two nouns as one, with הַ on the second, as in בֵּית הַחוֹלִים.",
+    "examples": [
+     {
+      "itemId": "i-44-w8",
+      "he": "בַּעַל הַבַּיִת",
+      "en": "the landlord"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-44-w8",
+     "source": "data/curriculum/lessons.json#I-44.words[7]",
+     "he": "בַּעַל הַבַּיִת",
+     "en": "the landlord",
+     "translit": "ba'al habayit",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w8"
+     },
+     "audio": {
+      "clipId": "i-44-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-44-w9",
+     "source": "data/curriculum/lessons.json#I-44.words[8]",
+     "he": "מָתַי?",
+     "en": "when?",
+     "translit": "matai?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w9"
+     },
+     "audio": {
+      "clipId": "i-44-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-44-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-44-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-15-w11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-44-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-44-w8",
+    "i-44-w9"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w8"
+     },
+     "answer": "i-44-w8",
+     "options": [
+      "i-44-w9",
+      "i-44-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w9"
+     },
+     "answer": "i-44-w9",
+     "options": [
+      "i-44-w8",
+      "i-44-w9"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: the landlord.",
+     "answer": "i-44-w8",
+     "he": "בַּעַל הַבַּיִת",
+     "translit": "ba'al habayit",
+     "en": "the landlord",
+     "audio": {
+      "clipId": "i-44-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask when he can come.",
+     "answer": "i-44-w9",
+     "he": "מָתַי?",
+     "translit": "matai?",
+     "en": "when?",
+     "audio": {
+      "clipId": "i-44-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-15-w11",
+    "i-44-w5"
+   ]
+  },
+  {
+   "id": "pu-home-p04",
+   "title": "Help, and Unit Review",
+   "order": 4,
+   "kind": "review",
+   "can": "Ask for help, then review the home unit.",
+   "grammarNote": "Help: עֶזְרָה. עֶזְרָה is help, the noun. Say it on its own with a rising voice to ask for it.",
+   "grammar": {
+    "point": "Help: עֶזְרָה",
+    "body": "עֶזְרָה is help, the noun. Say it on its own with a rising voice to ask for it.",
+    "examples": [
+     {
+      "itemId": "i-44-w11",
+      "he": "עֶזְרָה",
+      "en": "help"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-44-w11",
+     "source": "data/curriculum/lessons.json#I-44.words[10]",
+     "he": "עֶזְרָה",
+     "en": "help",
+     "translit": "ezra",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-44-w11"
+     },
+     "audio": {
+      "clipId": "i-44-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-44-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-44-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-44-w6",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-44-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-44-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-44-w8",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-44-w7",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-44-w11"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-44-w11"
+     },
+     "answer": "i-44-w11",
+     "options": [
+      "i-44-w11"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for help.",
+     "answer": "i-44-w11",
+     "he": "עֶזְרָה",
+     "translit": "ezra",
+     "en": "help",
+     "audio": {
+      "clipId": "i-44-w11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "i-44-w3",
+    "i-44-w6",
+    "i-44-w2",
+    "i-44-w5",
+    "i-44-w8",
+    "i-44-w7"
+   ]
   }
  ],
  "completeUnits": [
@@ -22805,6 +26080,10 @@
   "pu-shop",
   "pu-directions",
   "pu-transport",
-  "pu-small-talk"
+  "pu-small-talk",
+  "pu-verbs-now",
+  "pu-past",
+  "pu-family",
+  "pu-home"
  ]
 }

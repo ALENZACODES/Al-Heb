@@ -2,10 +2,10 @@
 
 Lane C, round 3. This plan turns the Israel track into a structured conversation course of 191 pages in 36 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 80 pages (all of levels 0 and 1) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+The first 94 pages (levels 0 and 1, and the first four units of level 2) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- Written pages (80): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
+- Written pages (94): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
@@ -21,10 +21,10 @@ There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-1
 2. **`#/israel-units` retires when the branches merge.** Its grammar points move into the grammar pages listed below. The route
    then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates). It stays until then
    so the branch keeps a working Israel course on its own.
-3. **Three units are added** so every Israel-track lesson has a home: `pu-verbs` (il16, il19), `pu-conversation` (il23, il24) and
-   `pu-army` (I-18). The test fails if any Israel-track lesson is left out. The Practical branch's own plan left il16, il19, il23 and il24 out
-   because they teach grammar or pronunciation, not a situation. Here they become `pu-verbs` and `pu-conversation`: units built
-   around a grammar point, placed where a learner needs it.
+3. **Every Israel-track lesson has a unit.** il16 and il19 sit in the live units `pu-verbs-now` and `pu-past`, il23 and il24 in
+   `pu-decide`, and I-18 in `pu-army` (outlined, held off the live set). An earlier draft of this plan used its own ids
+   (`pu-verbs`, `pu-conversation`); round 9 renamed them to the live ids so their written pages can show. The test fails if any
+   Israel-track lesson is left out, or if an outline unit has no live unit.
 
 ## Where Each Piece Lives
 
@@ -194,28 +194,31 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 
 ### L2: Daily life
 
-**`pu-verbs` Verbs: Now and Yesterday** (5 pages) · lessons il16, il19
+**`pu-verbs-now` What I Do Now** (3 pages) · lessons il16
 
-- `pu-verbs-p01` grammar: Present Tense: Four Forms
-- `pu-verbs-p02` learn: Everyday Verbs
-- `pu-verbs-p03` grammar: Past Tense: What I Did
-- `pu-verbs-p04` speak: Say What You Did Yesterday
-- `pu-verbs-p05` review: Unit Review
+- `pu-verbs-now-p01` grammar: Present Tense: Man and Woman **(written)**
+- `pu-verbs-now-p02` learn: Everyday Verbs **(written)**
+- `pu-verbs-now-p03` review: Come Here, and Unit Review **(written)**
+
+**`pu-past` What I Did** (2 pages) · lessons il19
+
+- `pu-past-p01` grammar: Past Tense: What I Did **(written)**
+- `pu-past-p02` review: What I Did Yesterday, and Unit Review **(written)**
 
 **`pu-family` Family and Who You Are** (5 pages) · lessons il14, I-42
 
-- `pu-family-p01` learn: My Family
-- `pu-family-p02` grammar: My, Your, His, Her
-- `pu-family-p03` learn: Ages and Birthdays
-- `pu-family-p04` speak: Describe Your Family
-- `pu-family-p05` review: Unit Review
+- `pu-family-p01` learn: My Family **(written)**
+- `pu-family-p02` grammar: One and Many: -ים **(written)**
+- `pu-family-p03` learn: School and Play **(written)**
+- `pu-family-p04` speak: Describe Your Family **(written)**
+- `pu-family-p05` review: Happy, and Unit Review **(written)**
 
 **`pu-home` Home and Repairs** (4 pages) · lessons I-44
 
-- `pu-home-p01` learn: Rooms and Things
-- `pu-home-p02` learn: Something Is Broken
-- `pu-home-p03` speak: Call the Landlord
-- `pu-home-p04` review: Unit Review
+- `pu-home-p01` learn: Rooms and Things **(written)**
+- `pu-home-p02` learn: Something Is Broken **(written)**
+- `pu-home-p03` speak: Call the Landlord **(written)**
+- `pu-home-p04` review: Help, and Unit Review **(written)**
 
 **`pu-time` Days, Time and Dates** (5 pages) · lessons il12
 
@@ -288,12 +291,12 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 - `pu-beach-p02` speak: At the Beach Kiosk
 - `pu-beach-p03` review: Unit Review
 
-**`pu-conversation` Putting It Together** (4 pages) · lessons il23, il24
+**`pu-decide` Putting It Together** (4 pages) · lessons il23, il24
 
-- `pu-conversation-p01` learn: Sound Less Like an Outsider
-- `pu-conversation-p02` dialogue: A Longer Conversation
-- `pu-conversation-p03` speak: Your Turn
-- `pu-conversation-p04` check: Level 2 Check
+- `pu-decide-p01` learn: Sound Less Like an Outsider
+- `pu-decide-p02` dialogue: A Longer Conversation
+- `pu-decide-p03` speak: Your Turn
+- `pu-decide-p04` check: Level 2 Check
 
 
 ### L3: Living in Israel
@@ -389,7 +392,9 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 ## The Written Pages
 
 Round 3 wrote `pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02. Round 4 added
-`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 7 added `pu-restaurant` (7 pages; its outline was cut from 10 because the sources hold no complaint or listening lines worth a page) and `pu-shop` (9 pages): 56 written, 191 in the outline. Round 8 finished level 1 with `pu-directions` (7), `pu-transport` (9) and `pu-small-talk` (8): 80 written. Round 3's 20 pages hold 103 items,
+`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 7 added `pu-restaurant` (7 pages; its outline was cut from 10 because the sources hold no complaint or listening lines worth a page) and `pu-shop` (9 pages): 56 written, 191 in the outline. Round 8 finished level 1 with `pu-directions` (7), `pu-transport` (9) and `pu-small-talk` (8): 80 written. Round 9 added
+`pu-verbs-now` (3), `pu-past` (2), `pu-family` (5) and `pu-home` (4): 94 written. It also uses the gender pairs in
+`data/curriculum/gender-pairs.json` as a source for women's forms that the phrasebook lacks; those lines have no clip yet. Round 3's 20 pages hold 103 items,
 each with pointed Hebrew, transliteration, English and an audio clip id. Every page has a real grammar point, 1–3 speaking
 prompts, a listening round, and from page 2 on, earlier items queued for review. The readable copy is
 `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`.
@@ -406,14 +411,16 @@ Round 7 adds לְכַמָּה, הִנֵּה, adjectives that match the noun, ב�
 long number set, קְטַנָּה for a feminine noun, הַחֻלְצָה הַזֹּאת, זֶה and זֹאת with אֶת, אֶפְשָׁר with a noun, and plural אַתֶּם.
 Round 8 adds commands to a man and a woman, the ה of direction, וְאַחַר כָּךְ, no word for is, מַגִּיעִים, two nouns as
 one (בֵּית חוֹלִים, תַּחֲנַת), צָרִיךְ and צְרִיכָה, לַ as לְ plus הַ, הַבָּאָה, תָּפוּס and פָּנוּי, הָיְתָה, בֶּן and בַּת כַּמָּה,
-חַם לִי, and אִתְּךָ and אִתָּךְ.
+חַם לִי, and אִתְּךָ and אִתָּךְ. Round 9 adds the present tense for a man and a woman, keeping אֲנִי, the past ending תִּי,
+הָיָה, בּוֹא and בּוֹאִי, אָח and אָחוֹת, the plural -im with moving vowels, גַּן with two meanings, תַּלְמִיד and תַּלְמִידָה,
+שָׂמֵחַ and שְׂמֵחָה, the trade ending -ai, and בַּעַל הַבַּיִת.
 
 **Sources.** Every Hebrew line is copied by id from `data/corpus/phrasebook.json`, the audio manifests (which hold the woman's
 forms the phrasebook leaves out, such as מַה שְׁלוֹמֵךְ? and אֲנִי מִצְטַעֶרֶת) or `data/curriculum/dialogues.json`. The test
 re-reads each source and fails on any difference.
 
-**Audio.** 304 of the 361 items on the 80 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
-clips, not human recordings. The 57 gaps are all dialogue lines (`d-smalltalk`, `d-cafe`, `d-restaurant`, `d-shop`, `d-directions`, `d-taxi`), which have no clips yet; the test allows gaps only on dialogue lines.
+**Audio.** 341 of the 408 items on the 94 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
+clips, not human recordings. The 67 gaps are dialogue lines and gender-pair lines, which have no clips yet; the test allows gaps only on those two kinds of line.
 
 **Transliteration.** Phrasebook rows keep the phrasebook's transliteration. Thirty items (woman's forms and counting-set numbers that come only from the audio manifest,
 and four lesson words with no transliteration of their own) have transliteration written for these pages in the same spoken style ("ma shlomech?").
@@ -441,7 +448,7 @@ Found while writing; nothing changed in the sources:
 
 ## What Is Left
 
-- Write the remaining 111 pages (levels 2 to 4) to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
+- Write the remaining 97 pages (the rest of level 2, then levels 3 and 4) to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
 - View support for the v3 fields, listed above.
 - Clips for the dialogue lines, so dialogue pages can play.
 - A native-speaker read of everything marked `nativeReview`.

@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (80)
+# Practical Hebrew: The Written Pages (94)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -1649,3 +1649,272 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - The bus is late. Shrug it off. → אֵין מָה לַעֲשׂוֹת (ein ma la'asot) · audio `small-talk-17`
 
 **Review queue from earlier pages:** `cafe-04`, `cafe-03-f`, `d-restaurant-l2`, `shop-01`, `shop-07`, `directions-20`, `directions-09-f`, `taxi-03`, `taxi-12`, `small-talk-08-f`, `small-talk-09-m`
+
+## pu-verbs-now-p01: Present Tense: Man and Woman
+
+*Grammar page.* Say what you do now, as a man or a woman.
+
+**Grammar: One verb, a man's form and a woman's form.** Present-tense verbs change with the person, not with time. The man's forms here are הוֹלֵךְ, אוֹכֵל, לוֹמֵד. The woman's form adds an ending: גָּר becomes גָּרָה, and you met מְדַבֶּרֶת earlier.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי הוֹלֵךְ | ani holech \* | I go (m.) | `il16-w1` tts, f+m |
+| אֲנִי אוֹכֵל | ani ochel \* | I eat (m.) | `il16-w2` tts, f+m |
+| אֲנִי לוֹמֵד | ani lomed \* | I study (m.) | `il16-w3` tts, f+m |
+| אֲנִי גָּר בְּתֵל אָבִיב | ani gar be-tel aviv | I live in Tel Aviv. (to or by a man) | `gp-05-m` gap |
+| אֲנִי גָּרָה בְּתֵל אָבִיב | ani gara be-tel aviv | I live in Tel Aviv. (to or by a woman) | `gp-05-f` gap |
+
+**Speak.**
+
+- You are a woman. Say you live in Tel Aviv. → אֲנִי גָּרָה בְּתֵל אָבִיב (ani gara be-tel aviv) · audio `gp-05-f`
+- Say: I go. → אֲנִי הוֹלֵךְ (ani holech) · audio `il16-w1`
+
+**Review queue from earlier pages:** `fillers-15-f`, `shop-06-f`
+
+## pu-verbs-now-p02: Everyday Verbs
+
+*Learn page.* Say you write, speak and study.
+
+**Grammar: Keep the אֲנִי.** A present-tense verb shows a man or a woman, but not who: כּוֹתֵב could be I, you or he. So Hebrew keeps the pronoun: אֲנִי כּוֹתֵב.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי כּוֹתֵב | ani kotev \* | I write (m.) | `il16-w4` tts, f+m |
+| אֲנִי מְדַבֵּר | ani medaber \* | I speak (m.) | `il16-w5` tts, f+m |
+| אֲנִי מְדַבֵּר קְצָת עִבְרִית | ani medaber ktsat ivrit | I speak a little Hebrew. (to or by a man) | `gp-07-m` gap |
+| אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית | ani medaberet ktsat ivrit | I speak a little Hebrew. (to or by a woman) | `gp-07-f` gap |
+
+**Speak.**
+
+- You are a woman. Say you speak a little Hebrew. → אֲנִי מְדַבֶּרֶת קְצָת עִבְרִית (ani medaberet ktsat ivrit) · audio `gp-07-f`
+- Say: I write. → אֲנִי כּוֹתֵב (ani kotev) · audio `il16-w4`
+
+**Review queue from earlier pages:** `il16-w3`, `fillers-17-m`
+
+## pu-verbs-now-p03: Come Here, and Unit Review
+
+*Review page.* Call someone over, then review the present tense.
+
+**Grammar: Come: בּוֹא and בּוֹאִי.** To a man, come is בּוֹא; to a woman, בּוֹאִי. Like פְּנִי and עִצְרִי, the woman's command adds י.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בּוֹא הֵנָּה | bo hena | Come here. (to or by a man) | `gp-14-m` gap |
+| בּוֹאִי הֵנָּה | bo'i hena | Come here. (to or by a woman) | `gp-14-f` gap |
+
+**Speak.**
+
+- Call a woman over. → בּוֹאִי הֵנָּה (bo'i hena) · audio `gp-14-f`
+
+**Review queue from earlier pages:** `il16-w1`, `il16-w5`, `gp-05-f`, `gp-07-m`, `il16-w3`
+
+## pu-past-p01: Past Tense: What I Did
+
+*Grammar page.* Say what you did.
+
+**Grammar: I did: the ending תִּי.** The past tense of I ends in תִּי: הָלַכְתִּי (I went), אָכַלְתִּי (I ate), רָאִיתִי (I saw). It is the same for a man and a woman, so there is no form to choose.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הָלַכְתִּי | halachti \* | I went | `il19-w1` tts, f+m |
+| אָכַלְתִּי | achalti \* | I ate | `il19-w2` tts, f+m |
+| רָאִיתִי | ra'iti \* | I saw | `il19-w3` tts, f+m |
+| אָמַרְתִּי | amarti \* | I said | `il19-w4` tts, f+m |
+
+**Speak.**
+
+- Say: I went. → הָלַכְתִּי (halachti) · audio `il19-w1`
+- Say: I saw. → רָאִיתִי (ra'iti) · audio `il19-w3`
+
+**Review queue from earlier pages:** `il16-w1`, `il16-w2`
+
+## pu-past-p02: What I Did Yesterday, and Unit Review
+
+*Review page.* Talk about yesterday, then review the past tense.
+
+**Grammar: Was: הָיָה.** הָיָה is was for a masculine noun, and also there was. You met הָיְתָה, its partner for a feminine noun. Put אֶתְמוֹל first or last to place the story in time.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הָיָה | haya \* | there was; he was | `il19-w5` tts, f+m |
+| אֶתְמוֹל | etmol | yesterday | `numbers-22` tts, f+m |
+| הָלַכְתִּי | halachti \* | I went | `il19-w1` tts, f+m |
+| אָכַלְתִּי | achalti \* | I ate | `il19-w2` tts, f+m |
+
+**Speak.**
+
+- Say: yesterday. → אֶתְמוֹל (etmol) · audio `numbers-22`
+- Say what you did: I ate. → אָכַלְתִּי (achalti) · audio `il19-w2`
+- Say: there was. → הָיָה (haya) · audio `il19-w5`
+
+**Review queue from earlier pages:** `taxi-15`, `il19-w3`, `il19-w4`, `il16-w1`, `il16-w2`, `gp-14-f`
+
+## pu-family-p01: My Family
+
+*Learn page.* Name the people in your family.
+
+**Grammar: Brother and sister: אָח and אָחוֹת.** אָחוֹת is the feminine partner of אָח. אִמָּא and אַבָּא are what children and adults alike call their parents.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מִשְׁפָּחָה | mishpacha \* | family | `il14-w1` tts, f+m |
+| אָח | ach \* | brother | `il14-w2` tts, f+m |
+| אָחוֹת | achot \* | sister | `il14-w3` tts, f+m |
+| אִמָּא | ima \* | mother | `i-42-w9` tts, f+m |
+| אַבָּא | aba \* | father | `i-42-w10` tts, f+m |
+
+**Speak.**
+
+- Say: my family. → מִשְׁפָּחָה (mishpacha) · audio `il14-w1`
+- Say: sister. → אָחוֹת (achot) · audio `il14-w3`
+
+**Review queue from earlier pages:** `small-talk-18-f`, `small-talk-18-m`
+
+## pu-family-p02: One and Many: -ים
+
+*Grammar page.* Talk about one child or several.
+
+**Grammar: Plural -im, and the vowels move.** Many masculine nouns make the plural with -im: יֶלֶד becomes יְלָדִים. The vowels inside the word often change too, so learn the plural as its own word. A girl is יַלְדָּה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| יֶלֶד | yeled \* | boy; child | `il14-w4` tts, f+m |
+| יַלְדָּה | yalda \* | girl | `il14-w5` tts, f+m |
+| יְלָדִים | yeladim \* | children | `i-42-w3` tts, f+m |
+| תִּינוֹק | tinok \* | baby | `i-42-w4` tts, f+m |
+
+**Speak.**
+
+- Say: children. → יְלָדִים (yeladim) · audio `i-42-w3`
+- Say: a baby. → תִּינוֹק (tinok) · audio `i-42-w4`
+
+**Review queue from earlier pages:** `numbers-11`, `d-restaurant-l1`
+
+## pu-family-p03: School and Play
+
+*Learn page.* Talk about kindergarten, games and teachers.
+
+**Grammar: One word, two meanings: גַּן.** גַּן is a garden and also a kindergarten; the context tells you which. חָמוּד (cute, sweet) is what everyone says about a small child.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| גַּן | gan \* | garden, kindergarten | `i-42-w5` tts, f+m |
+| מוֹרֶה | more \* | teacher (m) | `i-42-w7` tts, f+m |
+| מִשְׂחָק | mischak \* | game | `i-42-w8` tts, f+m |
+| חָמוּד | chamud \* | cute, sweet, charming | `i-42-w12` tts, f+m |
+
+**Speak.**
+
+- Say: a game. → מִשְׂחָק (mischak) · audio `i-42-w8`
+- Say the child is cute. → חָמוּד (chamud) · audio `i-42-w12`
+
+**Review queue from earlier pages:** `il14-w4`, `il10-w5`
+
+## pu-family-p04: Describe Your Family
+
+*Speak page.* Say who you are: married, a student.
+
+**Grammar: Describing words match the person.** נָשׂוּי is married for a man. A student is תַּלְמִיד, or תַּלְמִידָה for a woman: the same ending -a as יַלְדָּה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| נָשׂוּי | nasui \* | married (m.) | `il14-w6` tts, f+m |
+| אֲנִי תַּלְמִיד | ani talmid | I am a student. (to or by a man) | `gp-01-m` gap |
+| אֲנִי תַּלְמִידָה | ani talmida | I am a student. (to or by a woman) | `gp-01-f` gap |
+
+**Speak.**
+
+- You are a woman. Say you are a student. → אֲנִי תַּלְמִידָה (ani talmida) · audio `gp-01-f`
+- Say: married (a man). → נָשׂוּי (nasui) · audio `il14-w6`
+
+**Review queue from earlier pages:** `small-talk-08-f`, `small-talk-07-m`
+
+## pu-family-p05: Happy, and Unit Review
+
+*Review page.* Say you are happy, then review the family unit.
+
+**Grammar: Happy: שָׂמֵחַ and שְׂמֵחָה.** שָׂמֵחַ is happy for a man and שְׂמֵחָה for a woman, the same pattern as רָעֵב and רְעֵבָה.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי שָׂמֵחַ | ani sameach | I am happy. (to or by a man) | `gp-08-m` gap |
+| אֲנִי שְׂמֵחָה | ani smecha | I am happy. (to or by a woman) | `gp-08-f` gap |
+
+**Speak.**
+
+- You are a woman. Say you are happy. → אֲנִי שְׂמֵחָה (ani smecha) · audio `gp-08-f`
+
+**Review queue from earlier pages:** `il14-w1`, `il14-w2`, `il14-w3`, `i-42-w3`, `i-42-w5`, `gp-01-f`, `il14-w6`
+
+## pu-home-p01: Rooms and Things
+
+*Learn page.* Name the things that break at home.
+
+**Grammar: Name it first.** When something breaks, start with the thing: דֶּלֶת, מְקָרֵר, מַנְעוּל. The person on the phone needs the noun before anything else.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| דֶּלֶת | delet \* | door | `i-44-w3` tts, f+m |
+| קִיר | kir \* | wall | `i-44-w7` tts, f+m |
+| מְקָרֵר | mekarer \* | refrigerator | `i-44-w6` tts, f+m |
+| מַנְעוּל | man'ul \* | lock | `i-44-w2` tts, f+m |
+
+**Speak.**
+
+- Say: the door. → דֶּלֶת (delet) · audio `i-44-w3`
+- Say: the fridge. → מְקָרֵר (mekarer) · audio `i-44-w6`
+
+**Review queue from earlier pages:** `shop-17`, `il08-w6`
+
+## pu-home-p02: Something Is Broken
+
+*Learn page.* Ask for an electrician and ask when they can come.
+
+**Grammar: The ending -ai makes a trade.** חַשְׁמַל is electricity; add -ai and you get the person who works with it: חַשְׁמַלַּאי, an electrician. מָתַי? asks when.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חַשְׁמַל | chashmal \* | electricity | `i-44-w4` tts, f+m |
+| חַשְׁמַלַּאי | chashmalai \* | electrician | `i-44-w5` tts, f+m |
+| מָתַי? | matai? \* | when? | `i-44-w9` tts, f+m |
+
+**Speak.**
+
+- Say: an electrician. → חַשְׁמַלַּאי (chashmalai) · audio `i-44-w5`
+- Ask: when? → מָתַי? (matai?) · audio `i-44-w9`
+
+**Review queue from earlier pages:** `i-38-w9`, `i-36-w1`
+
+## pu-home-p03: Call the Landlord
+
+*Speak page.* Name the landlord and ask when the repair will be.
+
+**Grammar: Owner of the house: בַּעַל הַבַּיִת.** בַּעַל הַבַּיִת is the landlord, literally the owner of the house: two nouns as one, with הַ on the second, as in בֵּית הַחוֹלִים.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| בַּעַל הַבַּיִת | ba'al habayit \* | the landlord | `i-44-w8` tts, f+m |
+| מָתַי? | matai? \* | when? | `i-44-w9` tts, f+m |
+
+**Speak.**
+
+- Say: the landlord. → בַּעַל הַבַּיִת (ba'al habayit) · audio `i-44-w8`
+- Ask when he can come. → מָתַי? (matai?) · audio `i-44-w9`
+
+**Review queue from earlier pages:** `i-15-w11`, `i-44-w5`
+
+## pu-home-p04: Help, and Unit Review
+
+*Review page.* Ask for help, then review the home unit.
+
+**Grammar: Help: עֶזְרָה.** עֶזְרָה is help, the noun. Say it on its own with a rising voice to ask for it.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֶזְרָה | ezra \* | help | `i-44-w11` tts, f+m |
+
+**Speak.**
+
+- Ask for help. → עֶזְרָה (ezra) · audio `i-44-w11`
+
+**Review queue from earlier pages:** `i-44-w3`, `i-44-w6`, `i-44-w2`, `i-44-w5`, `i-44-w8`, `i-44-w7`

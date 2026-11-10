@@ -16,6 +16,7 @@ const wordClips = new Map(read("data/audio/manifest-kind-word.json").map((x) => 
 const dialogues = read("data/curriculum/dialogues.json").dialogues;
 const dlgLines = new Map(dialogues.flatMap((d) => d.lines.map((l) => [l.id, l])));
 const lessons = read("data/curriculum/lessons.json").lessons;
+const genderPairs = new Map(read("data/curriculum/gender-pairs.json").pairs.map((p) => [p.id, p]));
 const lessonIds = new Set(lessons.map((l) => l.id));
 
 /** The Hebrew a source holds for an item id, or undefined. */
@@ -24,6 +25,8 @@ function sourceHebrew(it) {
   if (it.source === "data/audio/manifest.json") return lineClips.get(it.id)?.text;
   if (it.source === "data/audio/manifest-kind-word.json") return wordClips.get(it.id)?.text;
   if (it.source === "data/curriculum/dialogues.json") return dlgLines.get(it.id)?.he;
+  const g = /^data\/curriculum\/gender-pairs\.json#(gp-\d+)\.(m|f)$/.exec(it.source);
+  if (g) return genderPairs.get(g[1])?.forms[g[2]]?.he;
   const m = /^data\/curriculum\/lessons\.json#(.+)\.words\[(\d+)\]$/.exec(it.source);
   if (m) return lessons.find((l) => l.id === m[1])?.words[+m[2]]?.he;
   return undefined;
@@ -71,10 +74,10 @@ test("grammar, speak and example Hebrew come from the page's own items or earlie
   }
 });
 
-test("audio: every clip id is in a manifest with both voices; only dialogue lines may be gaps", () => {
+test("audio: every clip id is in a manifest with both voices; only dialogue lines and gender pairs may be gaps", () => {
   const check = (where, a) => {
     if (a.status === "gap") {
-      assert.match(a.clipId, /^d-[a-z]+-l\d+$/, `${where}: only dialogue lines may lack a clip`); assert.ok(!lineClips.has(a.clipId) && !wordClips.has(a.clipId), `${where}: marked gap but a clip exists`); return; }
+      assert.match(a.clipId, /^(d-[a-z]+-l\d+|gp-\d+-[mf])$/, `${where}: only dialogue lines and gender pairs may lack a clip`); assert.ok(!lineClips.has(a.clipId) && !wordClips.has(a.clipId), `${where}: marked gap but a clip exists`); return; }
     const row = wordClips.get(a.clipId) || lineClips.get(a.clipId);
     assert.ok(row, `${where}: ${a.clipId} not in a manifest`);
     assert.deepEqual(a.voices, ["f", "m"], `${where}: both voices`);

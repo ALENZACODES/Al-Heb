@@ -42,3 +42,5 @@ The two sting files are present under `audio/music/stings/`.
 ## Seamless loop recut (2026-11-09)
 
 Klezmer A/B, Niggun Calm A/B and Cantor Strings A/B were trimmed (trailing silence / fade-out removed) and crossfade-looped (~1.2–1.8 s) so HTML audio loop joins cleanly. Metadata stripped again after re-encode.
+
+A further pass the same evening trimmed the remaining lead-in / tail silence, recut each bed with an equal-power (half-sine) crossfade of about 1.6–2.7 s, applied a gentle high-shelf lift (+3 to +6 dB at 8 kHz) so the beds are less muffled than the Kenney loops, and ran a −1 dBTP true-peak limiter on the hot tracks while keeping loudness around −14 to −16 LUFS. Stings were rebuilt from the limited songs with the same commands as above. Files are 192 kbps stereo 44.1 kHz MP3, metadata stripped again after re-encode.

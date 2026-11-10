@@ -19,9 +19,10 @@
       "kind": "instrumental",
       "style": "Jewish folk / klezmer dance loop",
       "role": "optional game/background bed",
-      "duration_seconds": 172.826,
-      "bytes": 4147826,
-      "sha256_16": "4559f10529db04d8"
+      "duration_seconds": 170.292245,
+      "bytes": 4087639,
+      "sha256_16": "360919ba7a548956",
+      "loopable": true
     },
     {
       "id": "klezmer-loop-b",
@@ -30,9 +31,10 @@
       "kind": "instrumental",
       "style": "Jewish folk / klezmer dance loop",
       "role": "optional game/background bed",
-      "duration_seconds": 169.221,
-      "bytes": 4061309,
-      "sha256_16": "edf80c547bde5b4d"
+      "duration_seconds": 167.627755,
+      "bytes": 4023692,
+      "sha256_16": "d1504a46525c42a3",
+      "loopable": true
     },
     {
       "id": "niggun-calm-loop-a",
@@ -41,9 +43,10 @@
       "kind": "instrumental",
       "style": "Calm niggun / contemplative loop",
       "role": "optional game/background bed",
-      "duration_seconds": 186.07,
-      "bytes": 4465684,
-      "sha256_16": "541e80c5bc5bf33f"
+      "duration_seconds": 184.084898,
+      "bytes": 4418663,
+      "sha256_16": "ec9ed32bf01831f8",
+      "loopable": true
     },
     {
       "id": "niggun-calm-loop-b",
@@ -52,9 +55,10 @@
       "kind": "instrumental",
       "style": "Calm niggun / contemplative loop",
       "role": "optional game/background bed",
-      "duration_seconds": 189.074,
-      "bytes": 4537782,
-      "sha256_16": "a3b4bae2e1e1ad1b"
+      "duration_seconds": 186.331429,
+      "bytes": 4472580,
+      "sha256_16": "280f273c6fc3b07d",
+      "loopable": true
     },
     {
       "id": "cantor-strings-a",
@@ -63,9 +67,10 @@
       "kind": "instrumental",
       "style": "Cantorial-inspired strings",
       "role": "optional game/background bed",
-      "duration_seconds": 206.864,
-      "bytes": 4964728,
-      "sha256_16": "db2250d3b78ff5a1"
+      "duration_seconds": 204.59102,
+      "bytes": 4910810,
+      "sha256_16": "74363c8a4419f6b1",
+      "loopable": true
     },
     {
       "id": "cantor-strings-b",
@@ -74,9 +79,10 @@
       "kind": "instrumental",
       "style": "Cantorial-inspired strings",
       "role": "optional game/background bed",
-      "duration_seconds": 185.365,
-      "bytes": 4448757,
-      "sha256_16": "320aaefe1676e2a8"
+      "duration_seconds": 183.536327,
+      "bytes": 4405497,
+      "sha256_16": "d8d750ee17f73c8a",
+      "loopable": true
     },
     {
       "id": "yachad",
@@ -86,21 +92,21 @@
       "style": "Jewish folk / Reform-friendly communal song",
       "role": "optional song (never under prayer screens or over learner speech)",
       "lyrics": "Come sit close, the candles glow / Friends and family, row by row / Bread is warm and hearts are wide / No one waiting left outside / Yachad, yachad, we sing as one / Shalom from dusk to rising sun / Lai lai lai, lai lai lai lai",
-      "duration_seconds": 126.851,
-      "bytes": 3044414,
-      "sha256_16": "197c1e3e47c58ee9"
+      "duration_seconds": 126.876735,
+      "bytes": 3045667,
+      "sha256_16": "456d6fbd577ecac6"
     },
     {
       "id": "open-hands",
       "file": "open-hands.mp3",
       "title": "Open Hands",
       "kind": "vocal",
-      "style": "Reform Judaism\u2013friendly worship song",
+      "style": "Reform Judaism–friendly worship song",
       "role": "optional song (never under prayer screens or over learner speech)",
       "lyrics": "In every hand a little flame / In every voice a gentle name / We open doors and build with care / We mend the world with what we share / Shalom, shalom, let peace begin / With open hands we welcome in",
-      "duration_seconds": 59.638,
-      "bytes": 1431301,
-      "sha256_16": "9f97ef47f9c4a0a6"
+      "duration_seconds": 59.663673,
+      "bytes": 1432554,
+      "sha256_16": "6ca58d0d920488b6"
     },
     {
       "id": "gates-of-morning-a",
@@ -110,9 +116,9 @@
       "style": "Cantorial / liturgical-inspired original",
       "role": "optional song (never under prayer screens or over learner speech)",
       "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
-      "duration_seconds": 89.313,
-      "bytes": 2143503,
-      "sha256_16": "842f51fc1351f843"
+      "duration_seconds": 89.338776,
+      "bytes": 2144756,
+      "sha256_16": "823f9bbdfdebf18a"
     },
     {
       "id": "gates-of-morning-b",
@@ -122,9 +128,9 @@
       "style": "Cantorial / liturgical-inspired original",
       "role": "optional song (never under prayer screens or over learner speech)",
       "lyrics": "Ah, ah, ah / Open the gates of morning light / Carry my voice beyond the night / Every breath a quiet prayer / Rising slowly through the air / Ana, ana, hear me sing / Shalom upon the dawn you bring",
-      "duration_seconds": 70.008,
-      "bytes": 1680195,
-      "sha256_16": "b7dc1c7103e9bfb3"
+      "duration_seconds": 70.034286,
+      "bytes": 1681448,
+      "sha256_16": "69f850d5b2de7257"
     }
   ],
   "stings": [
@@ -133,18 +139,18 @@
       "file": "stings/yachad-sting.mp3",
       "source": "yachad.mp3",
       "chorus_at_seconds": 110.75,
-      "sha256_16": "01cdc3a93a1e6393",
-      "bytes": 96966,
-      "duration_seconds": 6.06
+      "sha256_16": "28fe632b106ad085",
+      "bytes": 96965,
+      "duration_seconds": 6.034286
     },
     {
       "id": "open-hands-sting",
       "file": "stings/open-hands-sting.mp3",
       "source": "open-hands.mp3",
       "chorus_at_seconds": 37.25,
-      "sha256_16": "14cc6a09fbfe773b",
-      "bytes": 96966,
-      "duration_seconds": 6.06
+      "sha256_16": "9c6c3640dd2d2a26",
+      "bytes": 96965,
+      "duration_seconds": 6.034286
     }
   ]
 }

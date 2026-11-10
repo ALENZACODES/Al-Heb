@@ -106,6 +106,8 @@ const ON_DEMAND_FILES = new Set([
   // Sound like a local (#/israel) and Common phrases (#/phrases). Fetched on first open and runtime-cached; moved here when the
   // first-minute pass added the design tokens, the polish layer, the header stat bar and Rimon in the page (keeps first install under 3.95 MiB).
   'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
+  // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
+  'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

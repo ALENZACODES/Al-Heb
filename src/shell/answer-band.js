@@ -3,7 +3,12 @@
 import { showRimon } from './rimon-show.js';
 export const OK_WORDS = Object.freeze(['Nice!', 'Yes!', "That's it!", 'Sharp!', 'Spot on!']);
 export const NO_WORDS = Object.freeze(['Not quite. Keep going!', 'Almost. Try the next one!', 'Close! It will come back.']);
-let n = 0, timer = 0;
+let n = 0, timer = 0, run = 0, watching = false;
+/** Pure: the combo word at a run of right answers in a row (3, 5, 10, then every 5), or null. Duolingo-style "in a row" moment. */
+export function comboWord(count) { return count === 3 || count === 5 || (count >= 10 && count % 5 === 0) ? `${count} in a row!` : null; }
+/** Current run of right answers (for tests). A wrong answer or a new page starts it again. */
+export const answerRun = () => run;
+export function resetAnswerRun() { run = 0; }
 /** Pure: the band word for the nth answer. */
 export function bandWord(ok, i = 0) { const list = ok ? OK_WORDS : NO_WORDS; return list[Math.abs(i) % list.length]; }
 /** Show the band and Rimon's reaction. Returns true when the band was shown. Never throws. */
@@ -18,17 +23,20 @@ export function showAnswerBand(ok, { doc = globalThis.document, win = globalThis
       band.setAttribute('aria-hidden', 'true');
       doc.body.append(band);
     }
-    const word = bandWord(ok, n++);
+    if (!watching) { watching = true; try { win.addEventListener?.('hashchange', resetAnswerRun); } catch { /* ignore */ } }
+    run = ok ? run + 1 : 0;
+    const combo = ok ? comboWord(run) : null;
+    const word = combo || bandWord(ok, n++);
     band.replaceChildren();
     const ico = doc.createElement('b'); const s = doc.createElement('span'); s.textContent = ok ? '✓' : '✕'; ico.append(s);
     const txt = doc.createElement('span'); txt.textContent = word;
     band.append(ico, txt);
-    band.className = `alef-answer-band ${ok ? 'is-ok' : 'is-no'}`;
+    band.className = `alef-answer-band ${ok ? 'is-ok' : 'is-no'}${combo ? ' is-combo' : ''}`;
     void band.offsetWidth;
     band.classList.add('is-on');
     if (timer) win.clearTimeout?.(timer);
     timer = win.setTimeout?.(() => band.classList.remove('is-on'), ms) || 0;
-    showRimon(ok ? 'correct' : 'wrong', { doc, win, settings, ms: ms + 300 });
+    showRimon(combo ? 'streak' : ok ? 'correct' : 'wrong', { doc, win, settings, ms: ms + 300 });
     return true;
   } catch { return false; }
 }

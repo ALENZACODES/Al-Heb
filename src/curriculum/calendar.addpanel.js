@@ -53,7 +53,7 @@ export function addToCalendarPanel(el, opt = {}) {
       link(l?.google, "Google Calendar", `Add ${name} to Google Calendar`, true),
       link(l?.apple, "Apple Calendar", `Add ${name} to Apple Calendar on iPhone, iPad or Mac`, false),
       link(l?.outlook, "Outlook", `Add ${name} to Outlook`, true),
-      el("button", { type: "button", "aria-label": `Download ${name} as a calendar file`, onclick: onDownload }, "Download file"));
+      el("button", { type: "button", "aria-label": `Download file: ${name}, as a calendar file`, onclick: onDownload }, "Download file"));
   }
   const timeSelect = (slot, times) => el("label", {}, "Reminder time",
     el("select", { id: `alef-add-${slot}-time`, onchange: (e) => { choice = { ...choice, [slot]: e.target.value }; save(); draw(); status.textContent = `${slot === "morning" ? "Morning" : "Bedtime"} reminder set to ${label12(e.target.value)}. Tap a calendar button to add it.`; } },

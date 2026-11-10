@@ -5,6 +5,7 @@ import { h, heSpan, medal } from '../shell/ui.js';
 import { LEVEL_DESCRIPTIONS } from './wordfinder.model.js';
 import { loadGameImages, imgOf, GAME_ENV } from './engine.js';
 import { ARCADE_GAMES } from './arcade.catalog.js';
+import { rimonInline } from '../shell/rimon-inline.js';
 import { gameOfTheDay, dayKey, ARCADE_KEY } from './arcade.model.js';
 
 /** Hub id -> GAME_ENV key, for the games whose backdrop key differs from the route id. */
@@ -113,10 +114,8 @@ export function mount(root, ctx) {
       const im = imgOf(R, 'id', envId);
       if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
     }
-    const mascot = imgOf(R, 'id', 'MASCOT_rimon');
-    if (mascot?.src) article.insertBefore(
-      h('img', { class: 'wf-hub-mascot', src: mascot.src, alt: mascot.alt, width: mascot.width, height: mascot.height, 'data-rimon-still': 'games.hub' }),
-      article.children[1] || null);
+    // the same animated Rimon as setup, Learn and the lesson summary (one Rimon system); the corner Rimon steps aside while he is here
+    try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
 }

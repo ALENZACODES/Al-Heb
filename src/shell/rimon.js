@@ -142,8 +142,22 @@ export function mountRimon({store,doc=document}={}) {
     }
   };
   const reduce=()=>{reset();host.classList.toggle('rimon-static',!!media?.matches);};
+  // One Rimon per screen: when the page draws its own Rimon (a lesson summary, the Learn card, a say-bubble) the corner one steps aside, without counting as dismissed.
+  const OWN='.rimon-inline,.alef-continue-rimon,.alef-celebrate-rimon';
+  let yielded=false;
+  const yieldCheck=()=>{
+    if(!alive)return;
+    const own=!!doc.querySelector?.(OWN) && host.classList.contains('rimon-corner');
+    if(own===yielded)return;
+    yielded=own;host.classList.toggle('rimon-yield',own);host.hidden=hidden||own;speech.refresh();
+  };
+  const yieldTimer=setInterval(yieldCheck,700);
+  // When he ducks behind the bottom bar his speech bubble goes with him, so it never floats over the page on its own.
+  const syncPeek=()=>doc.body?.classList?.toggle('rimon-peeking',host.classList.contains('rimon-peek'));
+  const peekWatch=typeof MutationObserver==='function'?new MutationObserver(syncPeek):null;peekWatch?.observe(host,{attributes:true,attributeFilter:['class']});
+  const onReadyYield=()=>setTimeout(yieldCheck,0);doc.addEventListener('alef:ready',onReadyYield);
   dismiss.onclick=()=>{hidden=true;remember();reset();host.hidden=true;speech.refresh();restore.hidden=false;restore.focus();};
-  restore.onclick=()=>{hidden=false;remember();host.hidden=false;speech.refresh();restore.hidden=true;reset();play('wave');dismiss.focus();};
+  restore.onclick=()=>{hidden=false;remember();host.hidden=yielded;speech.refresh();restore.hidden=true;reset();play('wave');dismiss.focus();};
   doc.addEventListener('alef:rimon',event);doc.addEventListener('alef:ready',ready);
   doc.addEventListener('pointerdown',activity,{passive:true});doc.addEventListener('keydown',activity);
   media?.addEventListener('change',reduce);
@@ -159,7 +173,7 @@ export function mountRimon({store,doc=document}={}) {
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();const greet=()=>{if(alive&&!hidden)play('wave');};const win=doc.defaultView;if(win?.requestIdleCallback)win.requestIdleCallback(greet,{timeout:2000});else win?.setTimeout(greet,400);return true;});
   let stage=null;
-  const api={element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){stage?.destroy?.();speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  const api={element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){stage?.destroy?.();clearInterval(yieldTimer);peekWatch?.disconnect();doc.body?.classList?.remove('rimon-peeking');doc.removeEventListener('alef:ready',onReadyYield);speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
   // Rimon's 200 stills (src/shell/rimon-stage.js) load after boot, on demand; until a picture exists nothing changes on screen.
   if(doc===globalThis.document)import('./rimon-stage.js').then(m=>{if(alive)stage=m.mountRimonStage({store,companion:api});}).catch(()=>{});
   return api;

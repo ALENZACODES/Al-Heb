@@ -157,3 +157,21 @@ test('a tapped locked stop names the lesson that opens it; a new badge gets a to
   const sb = read('src/shell/statbar.js');
   assert.match(sb, /key === 'awards\.v1'/); assert.match(sb, /New badge: \$\{name\}/);
 });
+
+test('"in a row" moments: 3, 5, 10 and every 5 after; a wrong answer or a new page starts the run again', async () => {
+  const { comboWord, answerRun, resetAnswerRun, showAnswerBand } = await import('../src/shell/answer-band.js');
+  assert.equal(comboWord(3), '3 in a row!'); assert.equal(comboWord(5), '5 in a row!'); assert.equal(comboWord(10), '10 in a row!'); assert.equal(comboWord(15), '15 in a row!');
+  for (const n of [0, 1, 2, 4, 6, 9, 11]) assert.equal(comboWord(n), null, String(n));
+  const mk = () => { const node = { children: [], classList: { add() {}, remove() {}, toggle() {} }, setAttribute() {}, append(...c) { this.children.push(...c); }, replaceChildren(...c) { this.children = c; }, set textContent(v) { this._t = v; }, get textContent() { return this._t ?? this.children.map((c) => c.textContent ?? '').join(''); }, offsetWidth: 0, style: {} }; return node; };
+  const nodes = {}; const listeners = {};
+  const doc = { body: mk(), createElement: () => mk(), getElementById: (id) => nodes[id] || null, querySelector: () => null };
+  doc.body.append = function (...c) { for (const x of c) if (x.id) nodes[x.id] = x; this.children.push(...c); };
+  const win = { setTimeout: () => 1, clearTimeout() {}, addEventListener: (t, f) => { listeners[t] = f; }, matchMedia: () => ({ matches: true }) };
+  resetAnswerRun();
+  for (let i = 0; i < 3; i++) showAnswerBand(true, { doc, win });
+  assert.equal(answerRun(), 3);
+  const band = nodes['alef-answer-band']; assert.match(band.className, /is-combo/); assert.match(band.textContent, /3 in a row!/);
+  showAnswerBand(true, { doc, win }); assert.doesNotMatch(band.className, /is-combo/);
+  showAnswerBand(false, { doc, win }); assert.equal(answerRun(), 0);
+  showAnswerBand(true, { doc, win }); listeners.hashchange?.(); assert.equal(answerRun(), 0, 'a new page starts again');
+});

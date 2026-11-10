@@ -16,6 +16,13 @@ export function itemKey(unitId, itemId) {
   return `${unitId}|${itemId}`;
 }
 
+/** The check results with the committed hide list folded in, so failed clips stay hidden without the untracked results file. */
+export function withHidden(results, hidden) {
+  const keys = (hidden && hidden.items || []).map((x) => x.key);
+  if (!keys.length) return results;
+  return { ...(results || {}), failing_keys: [...new Set([...((results && results.failing_keys) || []), ...keys])] };
+}
+
 export function failingKeySet(results) {
   return new Set((results && results.failing_keys) || []);
 }

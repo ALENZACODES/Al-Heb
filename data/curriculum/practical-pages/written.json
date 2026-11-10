@@ -9260,6 +9260,2743 @@
     "small-talk-02",
     "small-talk-04"
    ]
+  },
+  {
+   "id": "pu-cafe-p01",
+   "title": "Coffee and Tea",
+   "order": 1,
+   "kind": "learn",
+   "can": "Name the drinks on an Israeli cafe board.",
+   "grammarNote": "With: עִם. קָפֶה עִם חָלָב is coffee with milk. The describing word still follows the noun, as on the greetings pages: קָפֶה שָׁחוֹר is coffee black. קָפֶה הָפוּךְ (upside-down coffee) is the everyday milky coffee.",
+   "grammar": {
+    "point": "With: עִם",
+    "body": "קָפֶה עִם חָלָב is coffee with milk. The describing word still follows the noun, as on the greetings pages: קָפֶה שָׁחוֹר is coffee black. קָפֶה הָפוּךְ (upside-down coffee) is the everyday milky coffee.",
+    "examples": [
+     {
+      "itemId": "cafe-07",
+      "he": "קָפֶה עִם חָלָב",
+      "en": "coffee with milk"
+     },
+     {
+      "itemId": "cafe-06",
+      "he": "קָפֶה שָׁחוֹר",
+      "en": "black coffee"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה הָפוּךְ",
+     "en": "latte-style milky coffee (lit. upside-down coffee)",
+     "translit": "kafe hafuch",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-04"
+     },
+     "audio": {
+      "clipId": "cafe-04",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶסְפְּרֶסוֹ",
+     "en": "espresso",
+     "translit": "espresso",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-05"
+     },
+     "audio": {
+      "clipId": "cafe-05",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה שָׁחוֹר",
+     "en": "black coffee",
+     "translit": "kafe shachor",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-06"
+     },
+     "audio": {
+      "clipId": "cafe-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה עִם חָלָב",
+     "en": "coffee with milk",
+     "translit": "kafe im chalav",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-07"
+     },
+     "audio": {
+      "clipId": "cafe-07",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם",
+     "en": "water",
+     "translit": "mayim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-09"
+     },
+     "audio": {
+      "clipId": "cafe-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "cafe-05",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-09",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "politeness-03",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-04",
+    "cafe-05",
+    "cafe-06",
+    "cafe-07",
+    "cafe-09"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-04"
+     },
+     "answer": "cafe-04",
+     "options": [
+      "cafe-05",
+      "cafe-06",
+      "cafe-04"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-05"
+     },
+     "answer": "cafe-05",
+     "options": [
+      "cafe-04",
+      "cafe-06",
+      "cafe-05"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-06"
+     },
+     "answer": "cafe-06",
+     "options": [
+      "cafe-04",
+      "cafe-05",
+      "cafe-06"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-07"
+     },
+     "answer": "cafe-07",
+     "options": [
+      "cafe-04",
+      "cafe-05",
+      "cafe-07"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-09"
+     },
+     "answer": "cafe-09",
+     "options": [
+      "cafe-04",
+      "cafe-05",
+      "cafe-09"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Order the usual milky coffee.",
+     "answer": "cafe-04",
+     "he": "קָפֶה הָפוּךְ",
+     "translit": "kafe hafuch",
+     "en": "latte-style milky coffee (lit. upside-down coffee)",
+     "audio": {
+      "clipId": "cafe-04",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask for coffee with milk.",
+     "answer": "cafe-07",
+     "he": "קָפֶה עִם חָלָב",
+     "translit": "kafe im chalav",
+     "en": "coffee with milk",
+     "audio": {
+      "clipId": "cafe-07",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-11",
+    "politeness-03"
+   ],
+   "culture": "Kafe hafuch is what most Israelis order; it is close to a latte."
+  },
+  {
+   "id": "pu-cafe-p02",
+   "title": "I Want: Man and Woman",
+   "order": 2,
+   "kind": "grammar",
+   "can": "Say what you want, as a man or a woman, and ask to order.",
+   "grammarNote": "רוֹצֶה and רוֹצָה. A man says אֲנִי רוֹצֶה; a woman says אֲנִי רוֹצָה. It is the same pattern as מֵבִין and מְבִינָה. אֶפְשָׁר לְהַזְמִין? uses the polite אֶפְשָׁר from the fillers unit and needs no gender.",
+   "grammar": {
+    "point": "רוֹצֶה and רוֹצָה",
+    "body": "A man says אֲנִי רוֹצֶה; a woman says אֲנִי רוֹצָה. It is the same pattern as מֵבִין and מְבִינָה. אֶפְשָׁר לְהַזְמִין? uses the polite אֶפְשָׁר from the fillers unit and needs no gender.",
+    "examples": [
+     {
+      "itemId": "cafe-03-m",
+      "he": "אֲנִי רוֹצֶה קָפֶה",
+      "en": "I would like a coffee"
+     },
+     {
+      "itemId": "cafe-03-f",
+      "he": "אֲנִי רוֹצָה קָפֶה",
+      "en": "I would like a coffee"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-03-m",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי רוֹצֶה קָפֶה",
+     "en": "I would like a coffee",
+     "translit": "ani rotse kafe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-03-m"
+     },
+     "audio": {
+      "clipId": "cafe-03-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "cafe-03-f",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי רוֹצָה קָפֶה",
+     "en": "I would like a coffee",
+     "translit": "ani rotsa kafe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-03-f"
+     },
+     "audio": {
+      "clipId": "cafe-03-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "d-cafe-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה.",
+     "en": "I'd like a cafe hafuch (a milky coffee), please.",
+     "translit": "ani rotsa kafe hafuch, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l2"
+     },
+     "audio": {
+      "clipId": "d-cafe-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "cafe-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְהַזְמִין?",
+     "en": "can I order?",
+     "translit": "efshar lehazmin?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-14"
+     },
+     "audio": {
+      "clipId": "cafe-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-03-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-03-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-cafe-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "fillers-15-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "fillers-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-03-m",
+    "cafe-03-f",
+    "d-cafe-l2",
+    "cafe-14"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-03-m"
+     },
+     "answer": "cafe-03-m",
+     "options": [
+      "cafe-03-f",
+      "d-cafe-l2",
+      "cafe-03-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-03-f"
+     },
+     "answer": "cafe-03-f",
+     "options": [
+      "cafe-03-m",
+      "d-cafe-l2",
+      "cafe-03-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-14"
+     },
+     "answer": "cafe-14",
+     "options": [
+      "cafe-03-m",
+      "cafe-03-f",
+      "cafe-14"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman. Say you would like a coffee.",
+     "answer": "cafe-03-f",
+     "he": "אֲנִי רוֹצָה קָפֶה",
+     "translit": "ani rotsa kafe",
+     "en": "I would like a coffee",
+     "audio": {
+      "clipId": "cafe-03-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Catch the waiter: ask if you can order.",
+     "answer": "cafe-14",
+     "he": "אֶפְשָׁר לְהַזְמִין?",
+     "translit": "efshar lehazmin?",
+     "en": "can I order?",
+     "audio": {
+      "clipId": "cafe-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "fillers-15-f",
+    "fillers-18"
+   ]
+  },
+  {
+   "id": "pu-cafe-p03",
+   "title": "Something to Eat",
+   "order": 3,
+   "kind": "learn",
+   "can": "Order the food you will see on every menu.",
+   "grammarNote": "Words you can read by sound. Many menu words came from other languages and sound almost the same: חוּמוּס, פָלָאפֶל, סָלָט. Read them letter by letter and you will recognise them.",
+   "grammar": {
+    "point": "Words you can read by sound",
+    "body": "Many menu words came from other languages and sound almost the same: חוּמוּס, פָלָאפֶל, סָלָט. Read them letter by letter and you will recognise them.",
+    "examples": [
+     {
+      "itemId": "cafe-16",
+      "he": "חוּמוּס",
+      "en": "hummus"
+     },
+     {
+      "itemId": "cafe-20",
+      "he": "סָלָט",
+      "en": "salad"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חוּמוּס",
+     "en": "hummus",
+     "translit": "humus",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-16"
+     },
+     "audio": {
+      "clipId": "cafe-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פָלָאפֶל",
+     "en": "falafel",
+     "translit": "falafel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-17"
+     },
+     "audio": {
+      "clipId": "cafe-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שַׁקְשׁוּקָה",
+     "en": "shakshuka (eggs poached in tomato sauce)",
+     "translit": "shakshuka",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-18"
+     },
+     "audio": {
+      "clipId": "cafe-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פִּיתָה",
+     "en": "pita bread",
+     "translit": "pita",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-19"
+     },
+     "audio": {
+      "clipId": "cafe-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סָלָט",
+     "en": "salad",
+     "translit": "salat",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-20"
+     },
+     "audio": {
+      "clipId": "cafe-20",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "cafe-16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "cafe-17",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "cafe-18",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "cafe-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-20",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-03-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-16",
+    "cafe-17",
+    "cafe-18",
+    "cafe-19",
+    "cafe-20"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-16"
+     },
+     "answer": "cafe-16",
+     "options": [
+      "cafe-17",
+      "cafe-18",
+      "cafe-16"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-17"
+     },
+     "answer": "cafe-17",
+     "options": [
+      "cafe-16",
+      "cafe-18",
+      "cafe-17"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-18"
+     },
+     "answer": "cafe-18",
+     "options": [
+      "cafe-16",
+      "cafe-17",
+      "cafe-18"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-19"
+     },
+     "answer": "cafe-19",
+     "options": [
+      "cafe-16",
+      "cafe-17",
+      "cafe-19"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-20"
+     },
+     "answer": "cafe-20",
+     "options": [
+      "cafe-16",
+      "cafe-17",
+      "cafe-20"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Order a pita.",
+     "answer": "cafe-19",
+     "he": "פִּיתָה",
+     "translit": "pita",
+     "en": "pita bread",
+     "audio": {
+      "clipId": "cafe-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Order a salad.",
+     "answer": "cafe-20",
+     "he": "סָלָט",
+     "translit": "salat",
+     "en": "salad",
+     "audio": {
+      "clipId": "cafe-20",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-04",
+    "cafe-03-m"
+   ]
+  },
+  {
+   "id": "pu-cafe-p04",
+   "title": "How Much Is It?",
+   "order": 4,
+   "kind": "grammar",
+   "can": "Ask the price and ask for one more.",
+   "grammarNote": "More and also: עוֹד and גַּם. עוֹד means more or another: אֶפְשָׁר עוֹד אֶחָד? is can I have another one? גַּם means also: גַּם עוּגָה is a cake too. A price comes as a number and then שְׁקָלִים.",
+   "grammar": {
+    "point": "More and also: עוֹד and גַּם",
+    "body": "עוֹד means more or another: אֶפְשָׁר עוֹד אֶחָד? is can I have another one? גַּם means also: גַּם עוּגָה is a cake too. A price comes as a number and then שְׁקָלִים.",
+    "examples": [
+     {
+      "itemId": "cafe-15",
+      "he": "אֶפְשָׁר עוֹד אֶחָד?",
+      "en": "can I have another one?"
+     },
+     {
+      "itemId": "d-cafe-l4",
+      "he": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+      "en": "Yes, a cake too. How much is it?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-cafe-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+     "en": "Yes, a cake too. How much is it?",
+     "translit": "ken, gam uga. kama ze?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l4"
+     },
+     "audio": {
+      "clipId": "d-cafe-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "d-cafe-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+     "en": "Forty-eight shekels.",
+     "translit": "arba'im ushmone shekalim.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l5"
+     },
+     "audio": {
+      "clipId": "d-cafe-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    },
+    {
+     "id": "cafe-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר עוֹד אֶחָד?",
+     "en": "can I have another one?",
+     "translit": "efshar od echad?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-15"
+     },
+     "audio": {
+      "clipId": "cafe-15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-cafe-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-cafe-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-15",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-12",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-13",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-cafe-l4",
+    "d-cafe-l5",
+    "cafe-15"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-15"
+     },
+     "answer": "cafe-15",
+     "options": [
+      "d-cafe-l4",
+      "d-cafe-l5",
+      "cafe-15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for another one.",
+     "answer": "cafe-15",
+     "he": "אֶפְשָׁר עוֹד אֶחָד?",
+     "translit": "efshar od echad?",
+     "en": "can I have another one?",
+     "audio": {
+      "clipId": "cafe-15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "il05-w5",
+    "numbers-12",
+    "numbers-13"
+   ]
+  },
+  {
+   "id": "pu-cafe-p05",
+   "title": "At the Counter",
+   "order": 5,
+   "kind": "dialogue",
+   "can": "Follow a whole order from hello to paying.",
+   "grammarNote": "The polite question to a woman: מָה תִּרְצִי?. The waiter asks Dana מָה תִּרְצִי? (what would you like?). The future form is the polite way to ask, and the ending י shows he is speaking to a woman.",
+   "grammar": {
+    "point": "The polite question to a woman: מָה תִּרְצִי?",
+    "body": "The waiter asks Dana מָה תִּרְצִי? (what would you like?). The future form is the polite way to ask, and the ending י shows he is speaking to a woman.",
+    "examples": [
+     {
+      "itemId": "d-cafe-l1",
+      "he": "שָׁלוֹם! מָה תִּרְצִי?",
+      "en": "Hello! What would you like?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-cafe-l1",
+     "source": "data/curriculum/dialogues.json",
+     "he": "שָׁלוֹם! מָה תִּרְצִי?",
+     "en": "Hello! What would you like?",
+     "translit": "shalom! ma tirtsi?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l1"
+     },
+     "audio": {
+      "clipId": "d-cafe-l1",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    },
+    {
+     "id": "d-cafe-l2",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה.",
+     "en": "I'd like a cafe hafuch (a milky coffee), please.",
+     "translit": "ani rotsa kafe hafuch, bevakasha.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l2"
+     },
+     "audio": {
+      "clipId": "d-cafe-l2",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "d-cafe-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "עוֹד מַשֶּׁהוּ?",
+     "en": "Anything else?",
+     "translit": "od mashehu?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l3"
+     },
+     "audio": {
+      "clipId": "d-cafe-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    },
+    {
+     "id": "d-cafe-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+     "en": "Yes, a cake too. How much is it?",
+     "translit": "ken, gam uga. kama ze?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l4"
+     },
+     "audio": {
+      "clipId": "d-cafe-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "d-cafe-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+     "en": "Forty-eight shekels.",
+     "translit": "arba'im ushmone shekalim.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l5"
+     },
+     "audio": {
+      "clipId": "d-cafe-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    },
+    {
+     "id": "d-cafe-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֶפְשָׁר בְּכַרְטִיס?",
+     "en": "Can I pay by card?",
+     "translit": "efshar bekartis?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l6"
+     },
+     "audio": {
+      "clipId": "d-cafe-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "d-cafe-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בֶּטַח. תּוֹדָה רַבָּה!",
+     "en": "Of course. Thanks a lot!",
+     "translit": "betach. toda raba!",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l7"
+     },
+     "audio": {
+      "clipId": "d-cafe-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-cafe-l1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-cafe-l2",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-cafe-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-cafe-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-cafe-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "d-cafe-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-cafe-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "cafe-03-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "cafe-15",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-cafe-l1",
+    "d-cafe-l2",
+    "d-cafe-l3",
+    "d-cafe-l4",
+    "d-cafe-l5",
+    "d-cafe-l6",
+    "d-cafe-l7"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Answer: what would you like? A milky coffee.",
+     "answer": "d-cafe-l2",
+     "he": "אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה.",
+     "translit": "ani rotsa kafe hafuch, bevakasha.",
+     "en": "I'd like a cafe hafuch (a milky coffee), please.",
+     "audio": {
+      "clipId": "d-cafe-l2",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-03-f",
+    "cafe-15",
+    "cafe-04"
+   ],
+   "dialogue": {
+    "id": "d-cafe",
+    "setting": "A woman orders a coffee and a cake at a cafe counter.",
+    "lines": [
+     "d-cafe-l1",
+     "d-cafe-l2",
+     "d-cafe-l3",
+     "d-cafe-l4",
+     "d-cafe-l5",
+     "d-cafe-l6",
+     "d-cafe-l7"
+    ]
+   }
+  },
+  {
+   "id": "pu-cafe-p06",
+   "title": "Hear the Order",
+   "order": 6,
+   "kind": "listen",
+   "can": "Pick out drinks and food in a quick order.",
+   "grammarNote": "Listen for the first word. Orders start with the drink or the dish, then the detail: קָפֶה שָׁחוֹר, קָפֶה עִם חָלָב. Catch the first word and you know what is coming.",
+   "grammar": {
+    "point": "Listen for the first word",
+    "body": "Orders start with the drink or the dish, then the detail: קָפֶה שָׁחוֹר, קָפֶה עִם חָלָב. Catch the first word and you know what is coming.",
+    "examples": [
+     {
+      "itemId": "cafe-06",
+      "he": "קָפֶה שָׁחוֹר",
+      "en": "black coffee"
+     },
+     {
+      "itemId": "cafe-07",
+      "he": "קָפֶה עִם חָלָב",
+      "en": "coffee with milk"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה הָפוּךְ",
+     "en": "latte-style milky coffee (lit. upside-down coffee)",
+     "translit": "kafe hafuch",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-04"
+     },
+     "audio": {
+      "clipId": "cafe-04",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה שָׁחוֹר",
+     "en": "black coffee",
+     "translit": "kafe shachor",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-06"
+     },
+     "audio": {
+      "clipId": "cafe-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה עִם חָלָב",
+     "en": "coffee with milk",
+     "translit": "kafe im chalav",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-07"
+     },
+     "audio": {
+      "clipId": "cafe-07",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם",
+     "en": "water",
+     "translit": "mayim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-09"
+     },
+     "audio": {
+      "clipId": "cafe-09",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חוּמוּס",
+     "en": "hummus",
+     "translit": "humus",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-16"
+     },
+     "audio": {
+      "clipId": "cafe-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פִּיתָה",
+     "en": "pita bread",
+     "translit": "pita",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-19"
+     },
+     "audio": {
+      "clipId": "cafe-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-07",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "cafe-09",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "cafe-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "cafe-18",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "cafe-17",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "cafe-05",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-04",
+    "cafe-06",
+    "cafe-07",
+    "cafe-09",
+    "cafe-16",
+    "cafe-19"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-04"
+     },
+     "answer": "cafe-04",
+     "options": [
+      "cafe-06",
+      "cafe-07",
+      "cafe-04"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-06"
+     },
+     "answer": "cafe-06",
+     "options": [
+      "cafe-04",
+      "cafe-07",
+      "cafe-06"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-07"
+     },
+     "answer": "cafe-07",
+     "options": [
+      "cafe-04",
+      "cafe-06",
+      "cafe-07"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-09"
+     },
+     "answer": "cafe-09",
+     "options": [
+      "cafe-04",
+      "cafe-06",
+      "cafe-09"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-16"
+     },
+     "answer": "cafe-16",
+     "options": [
+      "cafe-04",
+      "cafe-06",
+      "cafe-16"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-19"
+     },
+     "answer": "cafe-19",
+     "options": [
+      "cafe-04",
+      "cafe-06",
+      "cafe-19"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Repeat the order you hear: black coffee.",
+     "answer": "cafe-06",
+     "he": "קָפֶה שָׁחוֹר",
+     "translit": "kafe shachor",
+     "en": "black coffee",
+     "audio": {
+      "clipId": "cafe-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-18",
+    "cafe-17",
+    "cafe-05"
+   ]
+  },
+  {
+   "id": "pu-cafe-p07",
+   "title": "Here or To Go",
+   "order": 7,
+   "kind": "learn",
+   "can": "Answer eat here or take away, and order a drink.",
+   "grammarNote": "To-verbs start with ל. לֶאֱכֹל (to eat) and לָקַחַת (to take) are to-verbs: they start with ל, like לְדַבֵּר in the fillers unit. כָּאן means here and אוֹ means or.",
+   "grammar": {
+    "point": "To-verbs start with ל",
+    "body": "לֶאֱכֹל (to eat) and לָקַחַת (to take) are to-verbs: they start with ל, like לְדַבֵּר in the fillers unit. כָּאן means here and אוֹ means or.",
+    "examples": [
+     {
+      "itemId": "cafe-25",
+      "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+      "en": "eat here or take away?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-25",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+     "en": "eat here or take away?",
+     "translit": "le'echol kan o lakachat?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-25"
+     },
+     "audio": {
+      "clipId": "cafe-25",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+     "en": "cold water, please",
+     "translit": "mayim karim, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-10"
+     },
+     "audio": {
+      "clipId": "cafe-10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בִּירָה",
+     "en": "beer",
+     "translit": "bira",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-11"
+     },
+     "audio": {
+      "clipId": "cafe-11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יַיִן",
+     "en": "wine",
+     "translit": "yayin",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-12"
+     },
+     "audio": {
+      "clipId": "cafe-12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לְחַיִּים!",
+     "en": "cheers!",
+     "translit": "lechayim!",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-13"
+     },
+     "audio": {
+      "clipId": "cafe-13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-25",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "cafe-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "cafe-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "fillers-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "cafe-09",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-25",
+    "cafe-10",
+    "cafe-11",
+    "cafe-12",
+    "cafe-13"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-25"
+     },
+     "answer": "cafe-25",
+     "options": [
+      "cafe-10",
+      "cafe-11",
+      "cafe-25"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-10"
+     },
+     "answer": "cafe-10",
+     "options": [
+      "cafe-25",
+      "cafe-11",
+      "cafe-10"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-11"
+     },
+     "answer": "cafe-11",
+     "options": [
+      "cafe-25",
+      "cafe-10",
+      "cafe-11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-12"
+     },
+     "answer": "cafe-12",
+     "options": [
+      "cafe-25",
+      "cafe-10",
+      "cafe-12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "cafe-13"
+     },
+     "answer": "cafe-13",
+     "options": [
+      "cafe-25",
+      "cafe-10",
+      "cafe-13"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The cashier asks. Say cold water, please.",
+     "answer": "cafe-10",
+     "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+     "translit": "mayim karim, bevakasha",
+     "en": "cold water, please",
+     "audio": {
+      "clipId": "cafe-10",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Raise your glass.",
+     "answer": "cafe-13",
+     "he": "לְחַיִּים!",
+     "translit": "lechayim!",
+     "en": "cheers!",
+     "audio": {
+      "clipId": "cafe-13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-14",
+    "fillers-18",
+    "cafe-09"
+   ]
+  },
+  {
+   "id": "pu-cafe-p08",
+   "title": "Order for Yourself",
+   "order": 8,
+   "kind": "speak",
+   "can": "Say what you eat and what you cannot eat, as a man or a woman.",
+   "grammarNote": "Describing yourself: add ת for a woman. A man says אֲנִי טִבְעוֹנִי; a woman says אֲנִי טִבְעוֹנִית. The same ending turns אָלֶרְגִּי into אָלֶרְגִּית. After allergic comes לְ (to) and the food.",
+   "grammar": {
+    "point": "Describing yourself: add ת for a woman",
+    "body": "A man says אֲנִי טִבְעוֹנִי; a woman says אֲנִי טִבְעוֹנִית. The same ending turns אָלֶרְגִּי into אָלֶרְגִּית. After allergic comes לְ (to) and the food.",
+    "examples": [
+     {
+      "itemId": "cafe-23-m",
+      "he": "אֲנִי טִבְעוֹנִי",
+      "en": "I'm vegan"
+     },
+     {
+      "itemId": "cafe-23-f",
+      "he": "אֲנִי טִבְעוֹנִית",
+      "en": "I'm vegan"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-23-m",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי טִבְעוֹנִי",
+     "en": "I'm vegan",
+     "translit": "ani tiv'oni",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-23-m"
+     },
+     "audio": {
+      "clipId": "cafe-23-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "cafe-23-f",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי טִבְעוֹנִית",
+     "en": "I'm vegan",
+     "translit": "ani tiv'onit",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-23-f"
+     },
+     "audio": {
+      "clipId": "cafe-23-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "cafe-24-m",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי אָלֶרְגִּי לְ",
+     "en": "I'm allergic to ...",
+     "translit": "ani alergi le-",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-24-m"
+     },
+     "audio": {
+      "clipId": "cafe-24-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "cafe-24-f",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי אָלֶרְגִּית לְ",
+     "en": "I'm allergic to ...",
+     "translit": "ani alergit le-",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-24-f"
+     },
+     "audio": {
+      "clipId": "cafe-24-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "cafe-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+     "en": "can I see the menu?",
+     "translit": "efshar lir'ot et hatafrit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-02"
+     },
+     "audio": {
+      "clipId": "cafe-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-23-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-23-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-24-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-24-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-05-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-03-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-23-m",
+    "cafe-23-f",
+    "cafe-24-m",
+    "cafe-24-f",
+    "cafe-02"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-23-m"
+     },
+     "answer": "cafe-23-m",
+     "options": [
+      "cafe-23-f",
+      "cafe-24-m",
+      "cafe-23-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-23-f"
+     },
+     "answer": "cafe-23-f",
+     "options": [
+      "cafe-23-m",
+      "cafe-24-m",
+      "cafe-23-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-24-m"
+     },
+     "answer": "cafe-24-m",
+     "options": [
+      "cafe-23-m",
+      "cafe-23-f",
+      "cafe-24-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-24-f"
+     },
+     "answer": "cafe-24-f",
+     "options": [
+      "cafe-23-m",
+      "cafe-23-f",
+      "cafe-24-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-02"
+     },
+     "answer": "cafe-02",
+     "options": [
+      "cafe-23-m",
+      "cafe-23-f",
+      "cafe-02"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman and vegan. Tell the waiter.",
+     "answer": "cafe-23-f",
+     "he": "אֲנִי טִבְעוֹנִית",
+     "translit": "ani tiv'onit",
+     "en": "I'm vegan",
+     "audio": {
+      "clipId": "cafe-23-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask to see the menu.",
+     "answer": "cafe-02",
+     "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+     "translit": "efshar lir'ot et hatafrit?",
+     "en": "can I see the menu?",
+     "audio": {
+      "clipId": "cafe-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "You are a man with an allergy. Start the sentence.",
+     "answer": "cafe-24-m",
+     "he": "אֲנִי אָלֶרְגִּי לְ",
+     "translit": "ani alergi le-",
+     "en": "I'm allergic to ...",
+     "audio": {
+      "clipId": "cafe-24-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-05-f",
+    "cafe-03-f"
+   ]
+  },
+  {
+   "id": "pu-cafe-p09",
+   "title": "Paying and Thanks",
+   "order": 9,
+   "kind": "learn",
+   "can": "Ask for the bill, pay by card and say thank you.",
+   "grammarNote": "By and with: בְּ. בְּ joined to a word means in or by: בְּכַרְטִיס is by card. הַחֶשְׁבּוֹן is the bill, with הַ for the.",
+   "grammar": {
+    "point": "By and with: בְּ",
+    "body": "בְּ joined to a word means in or by: בְּכַרְטִיס is by card. הַחֶשְׁבּוֹן is the bill, with הַ for the.",
+    "examples": [
+     {
+      "itemId": "cafe-27",
+      "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+      "en": "can I pay by card?"
+     },
+     {
+      "itemId": "cafe-26",
+      "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+      "en": "the bill, please"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-26",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+     "en": "the bill, please",
+     "translit": "hacheshbon, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-26"
+     },
+     "audio": {
+      "clipId": "cafe-26",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "cafe-27",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "en": "can I pay by card?",
+     "translit": "efshar leshalem bekartis?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-27"
+     },
+     "audio": {
+      "clipId": "cafe-27",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "d-cafe-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֶפְשָׁר בְּכַרְטִיס?",
+     "en": "Can I pay by card?",
+     "translit": "efshar bekartis?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l6"
+     },
+     "audio": {
+      "clipId": "d-cafe-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Dana (woman)"
+    },
+    {
+     "id": "d-cafe-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "בֶּטַח. תּוֹדָה רַבָּה!",
+     "en": "Of course. Thanks a lot!",
+     "translit": "betach. toda raba!",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-cafe-l7"
+     },
+     "audio": {
+      "clipId": "d-cafe-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Waiter (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-cafe-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-cafe-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "politeness-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "politeness-03",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-26",
+    "cafe-27",
+    "d-cafe-l6",
+    "d-cafe-l7"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-26"
+     },
+     "answer": "cafe-26",
+     "options": [
+      "cafe-27",
+      "d-cafe-l6",
+      "cafe-26"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-27"
+     },
+     "answer": "cafe-27",
+     "options": [
+      "cafe-26",
+      "d-cafe-l6",
+      "cafe-27"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask for the bill.",
+     "answer": "cafe-26",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+     "translit": "hacheshbon, bevakasha",
+     "en": "the bill, please",
+     "audio": {
+      "clipId": "cafe-26",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask if you can pay by card.",
+     "answer": "cafe-27",
+     "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "translit": "efshar leshalem bekartis?",
+     "en": "can I pay by card?",
+     "audio": {
+      "clipId": "cafe-27",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-02",
+    "politeness-03"
+   ]
+  },
+  {
+   "id": "pu-cafe-p10",
+   "title": "A Table for Two and Unit Review",
+   "order": 10,
+   "kind": "review",
+   "can": "Ask for a table, then review the cafe unit.",
+   "grammarNote": "For two: לִשְׁנַיִם. לִשְׁנַיִם is for two: לְ (for) joined to שְׁנַיִם (two). Before a word that starts with a shva, the ל is said li.",
+   "grammar": {
+    "point": "For two: לִשְׁנַיִם",
+    "body": "לִשְׁנַיִם is for two: לְ (for) joined to שְׁנַיִם (two). Before a word that starts with a shva, the ל is said li.",
+    "examples": [
+     {
+      "itemId": "cafe-01",
+      "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+      "en": "a table for two, please"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "cafe-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+     "en": "a table for two, please",
+     "translit": "shulchan lishnayim, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-01"
+     },
+     "audio": {
+      "clipId": "cafe-01",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-01",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-03-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-03-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-15",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-25",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "cafe-23-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 11,
+     "kind": "word",
+     "id": "cafe-19",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "cafe-01"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "cafe-01"
+     },
+     "answer": "cafe-01",
+     "options": [
+      "cafe-01"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You arrive with a friend. Ask for a table.",
+     "answer": "cafe-01",
+     "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+     "translit": "shulchan lishnayim, bevakasha",
+     "en": "a table for two, please",
+     "audio": {
+      "clipId": "cafe-01",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "cafe-04",
+    "cafe-03-f",
+    "cafe-03-m",
+    "cafe-14",
+    "cafe-15",
+    "cafe-25",
+    "cafe-23-f",
+    "cafe-26",
+    "cafe-27",
+    "cafe-19"
+   ]
   }
  ],
  "completeUnits": [
@@ -9267,6 +12004,7 @@
   "pu-politeness",
   "pu-fillers",
   "pu-numbers",
-  "pu-introducing"
+  "pu-introducing",
+  "pu-cafe"
  ]
 }

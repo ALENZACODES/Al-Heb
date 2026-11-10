@@ -13,7 +13,7 @@ import { loadJson } from "../grammar/loader.js";
 import { showRimon } from "../shell/rimon-events.js";
 import {
   PROGRESS_KEY, completedSet, pageKey,
-  visibleItems, visiblePages, progressFraction, dueCardCount, paintDueBadge,
+  visibleItems, visiblePages, progressFraction, dueCardCount, paintDueBadge, withHidden,
 } from "./practical-progress.js";
 import { isAudioFree } from "../shell/audiofree.js";
 import { WRITTEN_URL, applyWritten, reviewItems, writtenPageCounts } from "./practical-written.js";
@@ -22,6 +22,7 @@ export const STORE_KEY = "srs.practical";
 export { PROGRESS_KEY };
 export const INDEX_URL = "data/curriculum/practical/index.json";
 export const RESULTS_URL = "data/curriculum/practical/gcloud-results.json";
+export const HIDDEN_URL = "data/curriculum/practical/hidden-items.json";
 export const CLIP_MAP_URL = "data/curriculum/practical/clip-map.json";
 export const COVERS_URL = "data/curriculum/practical/covers.json";
 export const DRAFT_TEXT = "Short practice pages for real situations. They add practice to your lessons and do not change them. A native speaker has not checked them yet.";
@@ -327,7 +328,10 @@ async function renderPage(root, ctx, index, unit, page, extras) {
   const srsMount = el("div", { class: "alef-practical-srs" });
   const review = reviewItems(page, written).filter((it) => !failingAnywhere(results, it.id));
   const kinds = new Map([...(page.items || []), ...review].map((it) => [it.id, it.listen?.kind || "line"]));
-  const speak = page.speak && page.speak.length ? speakCards(ctx, page, (id) => kinds.get(id) || "line")
+  const shown = new Set([...items, ...review].map((it) => it.id));
+  const livePageView = { ...page, speak: (page.speak || []).filter((x) => shown.has(x.answer)) };
+  const speak = page.speak
+    ? (livePageView.speak.length ? speakCards(ctx, livePageView, (id) => kinds.get(id) || "line") : null)
     : await speakBlock(ctx, page.speakSet || (unit.speakSets || [])[0], (unit.speakDrills || [])[0]?.goal);
   const srsItems = [...items, ...review];
   const imgId = covers?.units?.[unit.id]?.imageId;
@@ -363,14 +367,16 @@ export function mount(root, ctx) {
   const id = ctx?.params?.id || ctx?.query?.id || "";
   const pageId = ctx?.params?.page || ctx?.query?.page || "";
   (async () => {
-    const [index, covers, results, clipMap, progress, written] = await Promise.all([
+    const [index, covers, rawResults, clipMap, progress, written, hidden] = await Promise.all([
       loadIndex(),
       loadOptional(COVERS_URL),
       loadOptional(RESULTS_URL),
       loadOptional(CLIP_MAP_URL),
       loadProgress(ctx),
       loadOptional(WRITTEN_URL),
+      loadOptional(HIDDEN_URL),
     ]);
+    const results = withHidden(rawResults, hidden);
     if (!alive) return;
     await paintPracticalDueBadge(ctx);
     if (!id) {

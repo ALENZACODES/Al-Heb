@@ -2,10 +2,10 @@
 
 Lane C, round 3. This plan turns the Israel track into a structured conversation course of 194 pages in 36 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 30 pages (all of level 0) are written in full. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+The first 40 pages (all of level 0, and the cafe unit) are written in full, and they show in the live `#/practical` course. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- Written pages (30): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
+- Written pages (40): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
@@ -125,16 +125,16 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 
 **`pu-cafe` Ordering at a Cafe** (10 pages) · lessons il06, il07, I-13 · dialogue `d-cafe` · phrasebook `cafe`
 
-- `pu-cafe-p01` learn: Coffee and Tea
-- `pu-cafe-p02` grammar: I Want: Man and Woman
-- `pu-cafe-p03` learn: Something to Eat
-- `pu-cafe-p04` grammar: How Much Is It?
-- `pu-cafe-p05` dialogue: At the Counter
-- `pu-cafe-p06` listen: Hear the Order
-- `pu-cafe-p07` learn: Here or To Go
-- `pu-cafe-p08` speak: Order for Yourself
-- `pu-cafe-p09` learn: Paying and Thanks
-- `pu-cafe-p10` review: Unit Review
+- `pu-cafe-p01` learn: Coffee and Tea **(written)**
+- `pu-cafe-p02` grammar: I Want: Man and Woman **(written)**
+- `pu-cafe-p03` learn: Something to Eat **(written)**
+- `pu-cafe-p04` grammar: How Much Is It? **(written)**
+- `pu-cafe-p05` dialogue: At the Counter **(written)**
+- `pu-cafe-p06` listen: Hear the Order **(written)**
+- `pu-cafe-p07` learn: Here or To Go **(written)**
+- `pu-cafe-p08` speak: Order for Yourself **(written)**
+- `pu-cafe-p09` learn: Paying and Thanks **(written)**
+- `pu-cafe-p10` review: Unit Review **(written)**
 
 **`pu-restaurant` Ordering at a Restaurant** (10 pages) · lessons il06, il07, I-13, I-38 · dialogue `d-restaurant`
 
@@ -357,7 +357,7 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 - `pu-social-p03` speak: Reply to a Friend
 - `pu-social-p04` review: Unit Review
 
-**`pu-army` Army Slang Basics** (3 pages) · lessons I-18
+**`pu-army` Army Slang Basics** (3 pages) · lessons I-18 · held off the live set
 
 - `pu-army-p01` learn: Words From the Army
 - `pu-army-p02` listen: Hear It in Conversation
@@ -392,7 +392,7 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 ## The Written Pages
 
 Round 3 wrote `pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02. Round 4 added
-`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 3's 20 pages hold 103 items,
+`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 6 added all ten `pu-cafe` pages (40 written). Round 3's 20 pages hold 103 items,
 each with pointed Hebrew, transliteration, English and an audio clip id. Every page has a real grammar point, 1–3 speaking
 prompts, a listening round, and from page 2 on, earlier items queued for review. The readable copy is
 `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`.
@@ -403,14 +403,15 @@ to do something; בְּבַקָּשָׁה with two jobs; present tense changing 
 filler words; questions made by tone; man's and woman's present-tense forms; אַתָּה and אַתְּ; אֶפְשָׁר with a to-verb as a
 polite request with no gender; the impersonal אוֹמְרִים; and the two sets of numbers. Round 4 adds tens ending in -im; hours
 in the counting set; הַיּוֹם as the day; כַּמָּה; two ways to say my name; מִ (from) and וְ (and) as prefixes; and describing
-yourself as a man or a woman.
+yourself as a man or a woman. Round 6 adds עִם (with), רוֹצֶה and רוֹצָה, menu loanwords, עוֹד and גַּם, the polite
+future question מָה תִּרְצִי?, to-verbs starting with ל, the woman's ending ת, בְּ (by), and לְ said li before a shva.
 
 **Sources.** Every Hebrew line is copied by id from `data/corpus/phrasebook.json`, the audio manifests (which hold the woman's
 forms the phrasebook leaves out, such as מַה שְׁלוֹמֵךְ? and אֲנִי מִצְטַעֶרֶת) or `data/curriculum/dialogues.json`. The test
 re-reads each source and fails on any difference.
 
-**Audio.** 135 of the 143 items on the 30 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
-clips, not human recordings. The eight gaps are all `d-smalltalk` dialogue lines, which have no clips yet; the test allows gaps only on dialogue lines.
+**Audio.** 168 of the 188 items on the 40 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
+clips, not human recordings. The 20 gaps are all dialogue lines (`d-smalltalk`, `d-cafe`), which have no clips yet; the test allows gaps only on dialogue lines.
 
 **Transliteration.** Phrasebook rows keep the phrasebook's transliteration. Thirty items (woman's forms and counting-set numbers that come only from the audio manifest,
 and four lesson words with no transliteration of their own) have transliteration written for these pages in the same spoken style ("ma shlomech?").
@@ -438,7 +439,7 @@ Found while writing; nothing changed in the sources:
 
 ## What Is Left
 
-- Write the remaining 164 pages to this standard. The builder already checks every source, clip and grammar run.
+- Write the remaining 154 pages to this standard. Pages avoid any item on the hidden list (`data/curriculum/practical/hidden-items.json`). The builder already checks every source, clip and grammar run.
 - View support for the v3 fields, listed above.
 - Clips for the dialogue lines, so dialogue pages can play.
 - A native-speaker read of everything marked `nativeReview`.

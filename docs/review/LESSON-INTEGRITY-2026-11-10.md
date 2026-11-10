@@ -248,3 +248,13 @@ Built:
 - **Tests.** Seven new tests, two of them rendering real pages.
 
 Review: [`BRANCH-REVIEW-2026-11-10-R4.md`](BRANCH-REVIEW-2026-11-10-R4.md). **90 / 100** (estimate).
+
+## Round 6 (Review Round 5 of 5)
+
+Built:
+- **Failed clips pulled for good.** The 67 items whose clips failed are now hidden through a committed list. Before, the hiding
+  depended on an untracked file.
+- **The cafe unit written in full.** All ten `pu-cafe` pages are written, for 40 written pages.
+- **Reply on the fails.** `PRACTICAL-FIXES-r2.md`: all 67 kept as sourced and pulled from learner pages; none rewritten.
+
+Final review: [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md). **91 / 100** (estimate).

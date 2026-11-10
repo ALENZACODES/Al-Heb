@@ -18,11 +18,11 @@ test("a fully written unit shows exactly its written pages, in order", () => {
   }
   const counts = writtenPageCounts(index, written);
   assert.equal(counts["pu-introducing"], 5);
-  assert.equal(counts["pu-cafe"], index.units.find((u) => u.id === "pu-cafe").pageCount, "unwritten units keep their draft count");
+  assert.equal(counts["pu-restaurant"], index.units.find((u) => u.id === "pu-restaurant").pageCount, "unwritten units keep their draft count");
 });
 
 test("units without written pages are unchanged", () => {
-  const cafe = unitOf("pu-cafe");
+  const cafe = unitOf("pu-restaurant");
   assert.equal(applyWritten(cafe, written), cafe);
 });
 
@@ -91,4 +91,38 @@ test("draft pages never show learners notes about data files, item ids or source
     }
   }
   assert.doesNotMatch(DRAFT_TEXT, /track|125|lesson track/);
+});
+
+test("the committed hide list keeps failed clips off learner pages, even without the untracked check results", async () => {
+  const hidden = read("data/curriculum/practical/hidden-items.json");
+  const { withHidden, visibleItems } = await import("../src/curriculum/practical-progress.js");
+  assert.equal(hidden.items.length, hidden.count);
+  for (const h of hidden.items) {
+    const u = read(index.units.find((x) => x.id === h.unit).file);
+    const ids = new Set([...(u.items || []), ...u.pages.flatMap((p) => p.items)].map((it) => it.id));
+    assert.ok(ids.has(h.item), `${h.key} is a real item`);
+  }
+  const results = withHidden(null, hidden);
+  const g = applyWritten(unitOf("pu-greetings"), written);
+  const p04 = g.pages.find((p) => p.id === "pu-greetings-p04");
+  assert.ok(p04.items.some((it) => it.id === "greetings-17"));
+  assert.ok(!visibleItems("pu-greetings", p04.items, results).some((it) => it.id === "greetings-17"));
+  // Pages written this round use no item whose clip failed.
+  for (const p of written.pages.filter((x) => x.id.startsWith("pu-cafe-"))) {
+    for (const it of p.items) assert.ok(!hidden.items.some((h) => h.key === `pu-cafe|${it.id}`), `${p.id} uses hidden ${it.id}`);
+  }
+});
+
+test("a hidden item's speaking prompt is left out of the rendered page", async () => {
+  const root = newRoot();
+  globalThis.document = root.ownerDocument;
+  const store = new Map();
+  const ctx = { params: { id: "pu-numbers", page: "pu-numbers-p04" }, query: {},
+    store: { get: async (k) => store.get(k), set: async (k, v) => store.set(k, v) }, settings: {} };
+  const V = await import("../src/curriculum/practical.view.js");
+  const un = V.mount(root, ctx);
+  await loaded(root, () => /Grammar:/.test(root.textContent));
+  assert.equal(all(root, (x) => x.getAttribute("data-speak") === "numbers-16").length, 0, "numbers-16 failed the clip check");
+  assert.equal(all(root, (x) => x.getAttribute("data-speak") === "numbers-17").length, 1);
+  if (typeof un === "function") un();
 });

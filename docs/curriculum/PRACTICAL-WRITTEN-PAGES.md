@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (30)
+# Practical Hebrew: The Written Pages (40)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -637,3 +637,209 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Say you don't understand, as a man. → אֲנִי לֹא מֵבִין (ani lo mevin) · audio `fillers-14-m`
 
 **Review queue from earlier pages:** `greetings-03`, `greetings-11-m`, `politeness-03`, `politeness-07-f`, `fillers-14-m`, `fillers-18`, `fillers-16-m`, `numbers-17`, `il05-w5`, `small-talk-02`, `small-talk-04`
+
+## pu-cafe-p01: Coffee and Tea
+
+*Learn page.* Name the drinks on an Israeli cafe board.
+
+**Grammar: With: עִם.** קָפֶה עִם חָלָב is coffee with milk. The describing word still follows the noun, as on the greetings pages: קָפֶה שָׁחוֹר is coffee black. קָפֶה הָפוּךְ (upside-down coffee) is the everyday milky coffee.
+
+**Culture.** Kafe hafuch is what most Israelis order; it is close to a latte.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קָפֶה הָפוּךְ | kafe hafuch | latte-style milky coffee (lit. upside-down coffee) | `cafe-04` tts, f+m |
+| אֶסְפְּרֶסוֹ | espresso | espresso | `cafe-05` tts, f+m |
+| קָפֶה שָׁחוֹר | kafe shachor | black coffee | `cafe-06` tts, f+m |
+| קָפֶה עִם חָלָב | kafe im chalav | coffee with milk | `cafe-07` tts, f+m |
+| מַיִם | mayim | water | `cafe-09` tts, f+m |
+
+**Speak.**
+
+- Order the usual milky coffee. → קָפֶה הָפוּךְ (kafe hafuch) · audio `cafe-04`
+- Ask for coffee with milk. → קָפֶה עִם חָלָב (kafe im chalav) · audio `cafe-07`
+
+**Review queue from earlier pages:** `numbers-11`, `politeness-03`
+
+## pu-cafe-p02: I Want: Man and Woman
+
+*Grammar page.* Say what you want, as a man or a woman, and ask to order.
+
+**Grammar: רוֹצֶה and רוֹצָה.** A man says אֲנִי רוֹצֶה; a woman says אֲנִי רוֹצָה. It is the same pattern as מֵבִין and מְבִינָה. אֶפְשָׁר לְהַזְמִין? uses the polite אֶפְשָׁר from the fillers unit and needs no gender.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי רוֹצֶה קָפֶה | ani rotse kafe | I would like a coffee (to or by a man) | `cafe-03-m` tts, f+m |
+| אֲנִי רוֹצָה קָפֶה | ani rotsa kafe \* | I would like a coffee (to or by a woman) | `cafe-03-f` tts, f+m |
+| Dana (woman): אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה. | ani rotsa kafe hafuch, bevakasha. | I'd like a cafe hafuch (a milky coffee), please. | `d-cafe-l2` gap |
+| אֶפְשָׁר לְהַזְמִין? | efshar lehazmin? | can I order? | `cafe-14` tts, f+m |
+
+**Speak.**
+
+- You are a woman. Say you would like a coffee. → אֲנִי רוֹצָה קָפֶה (ani rotsa kafe) · audio `cafe-03-f`
+- Catch the waiter: ask if you can order. → אֶפְשָׁר לְהַזְמִין? (efshar lehazmin?) · audio `cafe-14`
+
+**Review queue from earlier pages:** `fillers-15-f`, `fillers-18`
+
+## pu-cafe-p03: Something to Eat
+
+*Learn page.* Order the food you will see on every menu.
+
+**Grammar: Words you can read by sound.** Many menu words came from other languages and sound almost the same: חוּמוּס, פָלָאפֶל, סָלָט. Read them letter by letter and you will recognise them.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חוּמוּס | humus | hummus | `cafe-16` tts, f+m |
+| פָלָאפֶל | falafel | falafel | `cafe-17` tts, f+m |
+| שַׁקְשׁוּקָה | shakshuka | shakshuka (eggs poached in tomato sauce) | `cafe-18` tts, f+m |
+| פִּיתָה | pita | pita bread | `cafe-19` tts, f+m |
+| סָלָט | salat | salad | `cafe-20` tts, f+m |
+
+**Speak.**
+
+- Order a pita. → פִּיתָה (pita) · audio `cafe-19`
+- Order a salad. → סָלָט (salat) · audio `cafe-20`
+
+**Review queue from earlier pages:** `cafe-04`, `cafe-03-m`
+
+## pu-cafe-p04: How Much Is It?
+
+*Grammar page.* Ask the price and ask for one more.
+
+**Grammar: More and also: עוֹד and גַּם.** עוֹד means more or another: אֶפְשָׁר עוֹד אֶחָד? is can I have another one? גַּם means also: גַּם עוּגָה is a cake too. A price comes as a number and then שְׁקָלִים.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Dana (woman): כֵּן, גַּם עוּגָה. כַּמָּה זֶה? | ken, gam uga. kama ze? | Yes, a cake too. How much is it? | `d-cafe-l4` gap |
+| Waiter (man): אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים. | arba'im ushmone shekalim. | Forty-eight shekels. | `d-cafe-l5` gap |
+| אֶפְשָׁר עוֹד אֶחָד? | efshar od echad? | can I have another one? | `cafe-15` tts, f+m |
+
+**Speak.**
+
+- Ask for another one. → אֶפְשָׁר עוֹד אֶחָד? (efshar od echad?) · audio `cafe-15`
+
+**Review queue from earlier pages:** `il05-w5`, `numbers-12`, `numbers-13`
+
+## pu-cafe-p05: At the Counter
+
+*Dialogue page.* Follow a whole order from hello to paying.
+
+**Grammar: The polite question to a woman: מָה תִּרְצִי?.** The waiter asks Dana מָה תִּרְצִי? (what would you like?). The future form is the polite way to ask, and the ending י shows he is speaking to a woman.
+
+**Dialogue setting.** A woman orders a coffee and a cake at a cafe counter.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Waiter (man): שָׁלוֹם! מָה תִּרְצִי? | shalom! ma tirtsi? | Hello! What would you like? | `d-cafe-l1` gap |
+| Dana (woman): אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה. | ani rotsa kafe hafuch, bevakasha. | I'd like a cafe hafuch (a milky coffee), please. | `d-cafe-l2` gap |
+| Waiter (man): עוֹד מַשֶּׁהוּ? | od mashehu? | Anything else? | `d-cafe-l3` gap |
+| Dana (woman): כֵּן, גַּם עוּגָה. כַּמָּה זֶה? | ken, gam uga. kama ze? | Yes, a cake too. How much is it? | `d-cafe-l4` gap |
+| Waiter (man): אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים. | arba'im ushmone shekalim. | Forty-eight shekels. | `d-cafe-l5` gap |
+| Dana (woman): אֶפְשָׁר בְּכַרְטִיס? | efshar bekartis? | Can I pay by card? | `d-cafe-l6` gap |
+| Waiter (man): בֶּטַח. תּוֹדָה רַבָּה! | betach. toda raba! | Of course. Thanks a lot! | `d-cafe-l7` gap |
+
+**Speak.**
+
+- Answer: what would you like? A milky coffee. → אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה. (ani rotsa kafe hafuch, bevakasha.) · audio `d-cafe-l2`
+
+**Review queue from earlier pages:** `cafe-03-f`, `cafe-15`, `cafe-04`
+
+## pu-cafe-p06: Hear the Order
+
+*Listen page.* Pick out drinks and food in a quick order.
+
+**Grammar: Listen for the first word.** Orders start with the drink or the dish, then the detail: קָפֶה שָׁחוֹר, קָפֶה עִם חָלָב. Catch the first word and you know what is coming.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קָפֶה הָפוּךְ | kafe hafuch | latte-style milky coffee (lit. upside-down coffee) | `cafe-04` tts, f+m |
+| קָפֶה שָׁחוֹר | kafe shachor | black coffee | `cafe-06` tts, f+m |
+| קָפֶה עִם חָלָב | kafe im chalav | coffee with milk | `cafe-07` tts, f+m |
+| מַיִם | mayim | water | `cafe-09` tts, f+m |
+| חוּמוּס | humus | hummus | `cafe-16` tts, f+m |
+| פִּיתָה | pita | pita bread | `cafe-19` tts, f+m |
+
+**Speak.**
+
+- Repeat the order you hear: black coffee. → קָפֶה שָׁחוֹר (kafe shachor) · audio `cafe-06`
+
+**Review queue from earlier pages:** `cafe-18`, `cafe-17`, `cafe-05`
+
+## pu-cafe-p07: Here or To Go
+
+*Learn page.* Answer eat here or take away, and order a drink.
+
+**Grammar: To-verbs start with ל.** לֶאֱכֹל (to eat) and לָקַחַת (to take) are to-verbs: they start with ל, like לְדַבֵּר in the fillers unit. כָּאן means here and אוֹ means or.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| לֶאֱכֹל כָּאן אוֹ לָקַחַת? | le'echol kan o lakachat? | eat here or take away? | `cafe-25` tts, f+m |
+| מַיִם קָרִים, בְּבַקָּשָׁה | mayim karim, bevakasha | cold water, please | `cafe-10` tts, f+m |
+| בִּירָה | bira | beer | `cafe-11` tts, f+m |
+| יַיִן | yayin | wine | `cafe-12` tts, f+m |
+| לְחַיִּים! | lechayim! | cheers! | `cafe-13` tts, f+m |
+
+**Speak.**
+
+- The cashier asks. Say cold water, please. → מַיִם קָרִים, בְּבַקָּשָׁה (mayim karim, bevakasha) · audio `cafe-10`
+- Raise your glass. → לְחַיִּים! (lechayim!) · audio `cafe-13`
+
+**Review queue from earlier pages:** `cafe-14`, `fillers-18`, `cafe-09`
+
+## pu-cafe-p08: Order for Yourself
+
+*Speak page.* Say what you eat and what you cannot eat, as a man or a woman.
+
+**Grammar: Describing yourself: add ת for a woman.** A man says אֲנִי טִבְעוֹנִי; a woman says אֲנִי טִבְעוֹנִית. The same ending turns אָלֶרְגִּי into אָלֶרְגִּית. After allergic comes לְ (to) and the food.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי טִבְעוֹנִי | ani tiv'oni | I'm vegan (to or by a man) | `cafe-23-m` tts, f+m |
+| אֲנִי טִבְעוֹנִית | ani tiv'onit \* | I'm vegan (to or by a woman) | `cafe-23-f` tts, f+m |
+| אֲנִי אָלֶרְגִּי לְ | ani alergi le- | I'm allergic to ... (to or by a man) | `cafe-24-m` tts, f+m |
+| אֲנִי אָלֶרְגִּית לְ | ani alergit le- \* | I'm allergic to ... (to or by a woman) | `cafe-24-f` tts, f+m |
+| אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? | efshar lir'ot et hatafrit? | can I see the menu? | `cafe-02` tts, f+m |
+
+**Speak.**
+
+- You are a woman and vegan. Tell the waiter. → אֲנִי טִבְעוֹנִית (ani tiv'onit) · audio `cafe-23-f`
+- Ask to see the menu. → אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט? (efshar lir'ot et hatafrit?) · audio `cafe-02`
+- You are a man with an allergy. Start the sentence. → אֲנִי אָלֶרְגִּי לְ (ani alergi le-) · audio `cafe-24-m`
+
+**Review queue from earlier pages:** `small-talk-05-f`, `cafe-03-f`
+
+## pu-cafe-p09: Paying and Thanks
+
+*Learn page.* Ask for the bill, pay by card and say thank you.
+
+**Grammar: By and with: בְּ.** בְּ joined to a word means in or by: בְּכַרְטִיס is by card. הַחֶשְׁבּוֹן is the bill, with הַ for the.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַחֶשְׁבּוֹן, בְּבַקָּשָׁה | hacheshbon, bevakasha | the bill, please | `cafe-26` tts, f+m |
+| אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? | efshar leshalem bekartis? | can I pay by card? | `cafe-27` tts, f+m |
+| Dana (woman): אֶפְשָׁר בְּכַרְטִיס? | efshar bekartis? | Can I pay by card? | `d-cafe-l6` gap |
+| Waiter (man): בֶּטַח. תּוֹדָה רַבָּה! | betach. toda raba! | Of course. Thanks a lot! | `d-cafe-l7` gap |
+
+**Speak.**
+
+- Ask for the bill. → הַחֶשְׁבּוֹן, בְּבַקָּשָׁה (hacheshbon, bevakasha) · audio `cafe-26`
+- Ask if you can pay by card. → אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס? (efshar leshalem bekartis?) · audio `cafe-27`
+
+**Review queue from earlier pages:** `politeness-02`, `politeness-03`
+
+## pu-cafe-p10: A Table for Two and Unit Review
+
+*Review page.* Ask for a table, then review the cafe unit.
+
+**Grammar: For two: לִשְׁנַיִם.** לִשְׁנַיִם is for two: לְ (for) joined to שְׁנַיִם (two). Before a word that starts with a shva, the ל is said li.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה | shulchan lishnayim, bevakasha | a table for two, please | `cafe-01` tts, f+m |
+
+**Speak.**
+
+- You arrive with a friend. Ask for a table. → שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה (shulchan lishnayim, bevakasha) · audio `cafe-01`
+
+**Review queue from earlier pages:** `cafe-04`, `cafe-03-f`, `cafe-03-m`, `cafe-14`, `cafe-15`, `cafe-25`, `cafe-23-f`, `cafe-26`, `cafe-27`, `cafe-19`

@@ -41,7 +41,7 @@ test('café and direction words match the dictionary, and every linked recording
     if (!it.clip) continue;
     for (const v of ['m', 'f']) assert.ok(man.some((r) => r.kind === it.clip.kind && r.id === it.clip.id && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === it.he), `${it.he} ${v}`);
   }
-  assert.ok(W.cafe.filter((x) => x.clip).length >= 18 && W.directions.every((d) => d.clip), 'most café words and every direction can be heard');
+  assert.ok(W.cafe.every((x) => x.clip) && W.directions.every((d) => d.clip), 'every café word and every direction can be heard');
   assert.equal(W.cafe.length, CAFE_IDS[1].length + CAFE_IDS[2].length);
   assert.deepEqual(new Set(W.directions.map((d) => d.dir)), new Set(['left', 'right', 'straight']));
 });

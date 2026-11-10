@@ -137,7 +137,7 @@ test('prayer lines split into words; maqaf words stay whole', () => {
 });
 
 test('number recordings: each linked clip says exactly the same Hebrew, in both voices', () => {
-  const words = json('data/audio/manifest-kind-word.json');
+  const words = [...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json')];
   for (const n of json('data/lab/numbers.json').numbers.filter((x) => x.clip)) {
     for (const v of ['m', 'f']) assert.ok(words.some((r) => r.id === n.clip && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === n.he), `${n.value} ${v}`);
   }

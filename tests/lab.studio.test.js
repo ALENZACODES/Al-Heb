@@ -7,7 +7,7 @@ import { hebrewNumeral } from '../src/curriculum/calendar.js';
 import {
   holdsDivineName, wordBurstPuzzle, migrationPuzzle, starSearchPuzzle, rootForgePuzzle, rootForgeNextOk,
   letterSequencePuzzle, speedMatchPuzzle, letterSpanPuzzle, letterSpanOk, vowelRainPuzzle, tileTurnPuzzle,
-  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, shortEnglish,
+  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, resolveWordClip, shortEnglish,
 } from '../src/lab/lab.studio.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
@@ -231,4 +231,15 @@ test('Echo Hunt: a unique target from the verified lists, no divine name, choice
     assert.equal(new Set(pz.choices.map((c) => c.he)).size, pz.choices.length);
     assert.ok(pz.choices.length >= 3);
   }
+});
+
+test('resolveWordClip prefers a vocab-id word recording when the player has it, else the listed clip', () => {
+  const cake = { id: 'ha664d093', he: 'עוּגָה', clip: { kind: 'word', id: 'ha664d093' } };
+  const water = { id: 'p7f7d7b8f', he: 'מַיִם', clip: { kind: 'word', id: 'cafe-09' } };
+  const has = (kind, id) => kind === 'word' && (id === 'ha664d093' || id === 'cafe-09');
+  assert.deepEqual(resolveWordClip(cake, has), { kind: 'word', id: 'ha664d093' });
+  assert.deepEqual(resolveWordClip(water, has), { kind: 'word', id: 'cafe-09' }, 'water has no vocab-id file in this fake player, so the phrasebook clip stays');
+  const hasVocab = (kind, id) => kind === 'word' && id === 'p7f7d7b8f';
+  assert.deepEqual(resolveWordClip(water, hasVocab), { kind: 'word', id: 'p7f7d7b8f' });
+  assert.equal(resolveWordClip({ he: 'x' }, has), null);
 });

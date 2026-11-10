@@ -91,7 +91,7 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
-        if (envId) { thumbs.push({ a, envId }); a.append(medal('word', id, 56)); }
+        if (envId) { thumbs.push({ a, envId }); a.append(id === 'wordfinder' ? medal('home', 'vocab', 56) : medal('word', id, 56)); } // no ICON_word_wordfinder exists: the vocab coin
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
           a.prepend(arcadeThumb(id));
           a.append(medal('arcade', id, 56));

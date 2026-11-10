@@ -129,3 +129,14 @@ test('home coins (including More) are struck relief, not flat, and carry no meta
     assert.ok(!a.includes(Buffer.from('Exif')) && !a.includes(Buffer.from('XMP ')), id + ' carries no metadata');
   }
 });
+
+test('badge sizing: awards are fixed squares over the inline aspect-ratio, coins in Brain Lab rows do not drift, Lab uses every game glyph', () => {
+  const css = read('assets/css/polish.css');
+  assert.match(css, /\.aw-art img\.aw-badge-art \{[^}]*block-size: 64px !important;[^}]*aspect-ratio: 1 \/ 1 !important;/);
+  assert.match(css, /\.lab-plan li > \.alef-coin[^{]*\{ margin: 0; flex: none; \}/);
+  assert.match(css, /\.wf-game-grid \.wf-level-tile > \.wf-game-thumb \{[^}]*aspect-ratio: 16 \/ 9;/);
+  const lab = read('src/lab/lab.view.js');
+  assert.doesNotMatch(lab, /coin\(GLYPH\[g\.id\] \|\| 'א'/, 'no game falls back to a placeholder alef while GLYPHS has its own');
+  assert.match(read('src/games/games.view.js'), /id === 'wordfinder' \? medal\('home', 'vocab', 56\)/);
+  assert.ok(existsSync(join(root, 'assets/img/icons/ICON_home_vocab.112.webp')));
+});

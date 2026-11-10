@@ -469,3 +469,24 @@ html:has(body.ob-player) { scroll-padding-block-end: 12rem; }
   :root .alef-lesson[data-glyph]::before { background: Canvas; color: CanvasText; border: 2px solid CanvasText; text-shadow: none; filter: none; }
   .alef-lesson[data-glyph]::after { background: CanvasText; }
 }
+
+/* ---------- 11. Badge sizing and alignment (live check 2026-11-10 13:05) ----------
+   - Awards: five badge pictures are 800x533 (the medal sits centred on paper); app.css `.alef-img{height:auto}` made them 64x43
+     ovals. Every badge is now a fixed 64px square, the medal centred (cover crops only the empty paper at the sides).
+   - Coins in flex rows: `.alef-medal,.alef-coin{margin:0 auto}` centred each coin in the row's free space, so coins in Brain Lab
+     rows sat at different x positions. In rows they now sit at the start with a fixed size. */
+.aw-art { inline-size: 64px; block-size: 64px; flex: none; display: grid; place-items: center; overflow: hidden; border-radius: 50%; }
+.aw-art img.aw-badge-art { inline-size: 64px; block-size: 64px !important; height: 64px !important; max-inline-size: none; aspect-ratio: 1 / 1 !important; /* the image helper writes an inline aspect-ratio and height:auto */ object-fit: cover; object-position: 50% 50%; border-radius: 50%; }
+.aw-art > svg { inline-size: 64px; block-size: 64px; display: block; }
+.lab-plan li > .alef-coin, .lab-plan li > .alef-medal, .lab-game > .alef-coin, .lab-fresh-card > .alef-coin,
+.lab-plan li > .lab-token, .lab-fresh-card > .lab-token { margin: 0; flex: none; }
+.lab-plan li > span:not(.dot):not(.alef-coin):not(.visually-hidden) { flex: 1 1 auto; min-inline-size: 0; text-align: start; }
+.alef-medal { object-fit: contain; aspect-ratio: 1 / 1; }
+.wf-level-tile > .alef-medal { inline-size: 56px; block-size: 56px; }
+/* Games grid: every card picture is the same 16:9 box (some scenes are square, some 8:3), and the coin sits on the card's bottom
+   line, so cards in a row line up. */
+.wf-game-grid > li { display: flex; }
+.wf-game-grid .wf-level-tile { display: flex; flex-direction: column; align-items: flex-start; inline-size: 100%; }
+.wf-game-grid .wf-level-tile > .wf-game-thumb { inline-size: 100%; block-size: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 50%; }
+.wf-game-grid .wf-level-tile > .alef-medal:last-child { margin: auto 0 0; padding-block-start: .5rem; box-sizing: content-box; box-shadow: none; filter: drop-shadow(0 2px 4px #0b1a1240); }
+.wf-game-grid .wf-level-tile > .wf-arcade-thumb { object-fit: contain; background: #f4ecdc; } /* 8:3 arcade scenes: show the whole scene, letterboxed on paper */

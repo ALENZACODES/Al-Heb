@@ -156,13 +156,13 @@ const CSS = `
 .lab-twin-before{min-inline-size:3rem;text-align:center;color:#5d6b60}
 .lab-twin-before:not(:empty){border:2px dashed #d9cba5;border-radius:14px;padding:.2rem .5rem;background:#fffaf0}
 /* Vowel Rain */
-.lab-sky{position:relative;inline-size:min(100%,22rem);block-size:13rem;border-radius:18px;background:linear-gradient(#e9f0ea,#fffaf0);border:2px solid #d9cba5;overflow:hidden;--lab-fall:10.4rem}
+.lab-sky{position:relative;inline-size:min(100%,22rem);block-size:clamp(9rem,32vh,13rem);border-radius:18px;background:linear-gradient(#e9f0ea,#fffaf0);border:2px solid #d9cba5;overflow:hidden}
 .lab-drop{position:absolute;inset-inline-start:50%;inset-block-start:.3rem;translate:-50% 0;min-inline-size:4.2rem;min-block-size:4.2rem;display:grid;place-items:center;background:#fffaf0;border:3px solid #2f6b4f;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;box-shadow:0 3px 0 #1e4634}
 .lab-drop.is-caught{border-color:#d4a647;background:#f6e6b8;transition:none!important}
 .lab-drop.is-missed{border-color:#a8442f;background:#f6d6cf}
 .lab-ground{position:absolute;inset-inline:0;inset-block-end:0;block-size:.8rem;background:#6b7f3a}
-.lab-vowels{flex-wrap:wrap;gap:.5rem}
-.lab-vowel{min-inline-size:3.6rem;min-block-size:3.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1}
+.lab-vowels{flex-wrap:nowrap;gap:.35rem}
+.lab-vowel{min-inline-size:3rem;min-block-size:3.4rem;padding-inline:.2rem;flex:1 1 0;max-inline-size:4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1}
 .lab-vowel-hint{font-size:1.35rem;font-weight:400;line-height:1.2}
 /* Middle Letter */
 .lab-flank{display:flex;gap:.15rem;justify-content:center;background:#fffaf0;border:2px solid #d9cba5;border-radius:16px;padding:.4rem .8rem}

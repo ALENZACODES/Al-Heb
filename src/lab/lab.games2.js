@@ -102,7 +102,8 @@ const rain = {
       env.keys((key) => { const k = String(key).toLowerCase(); const i = keys.indexOf(k); if (i >= 0) pick(k, row.children[i]); });
       if (!env.calm) {
         d.style.transition = 'none'; d.style.transform = 'translateY(0)';
-        requestAnimationFrame(() => requestAnimationFrame(() => { d.style.transition = `transform ${fall}ms linear`; d.style.transform = 'translateY(var(--lab-fall, 11rem))'; }));
+        // fall to the ground line, however tall the sky is on this screen
+        requestAnimationFrame(() => requestAnimationFrame(() => { const dist = Math.max(0, sky.clientHeight - d.offsetHeight - 20); d.style.transition = `transform ${fall}ms linear`; d.style.transform = `translateY(${dist}px)`; }));
       }
       env.timeLimit(fall, () => { d.classList.add('is-missed'); env.say(`${drop.he} says "${drop.sound[trad]}".`); finish({ ok: false, ms: fall }); });
     });

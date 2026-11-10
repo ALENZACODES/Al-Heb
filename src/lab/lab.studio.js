@@ -1,7 +1,7 @@
 // 3D Studio Brain Lab games (2026-11-10). Lumosity-style timed trainers with CSS 3D depth.
 // All Hebrew comes from Aleph's verified lists (letters, syllables, number words, word families).
 // Nothing is typed in by hand. The four-letter divine name and its prefixed forms are never used as targets.
-import { randInt, shuffle, sample, choices, consonants, hasPattern } from './lab.core.js';
+import { randInt, shuffle, sample, choices, consonants, hasPattern, familyClipRows, syllableTraditions } from './lab.core.js';
 import { hebrewNumeral } from '../curriculum/calendar.js';
 import { isNameWord, findName } from '../shell/names.js';
 
@@ -30,17 +30,30 @@ const loadLetters = (env) => once('letters', async () => {
     confusableWith: l.confusableWith || [], isFinal: /-final$/.test(l.id),
   }));
 });
-const loadSyllables = (env) => once('syllables', async () => (await getJSON(env, 'data/lab/syllables.json')).syllables);
+// Each syllable carries the traditions that say its consonant as the Israeli recording does (syllableTraditions).
+const loadSyllables = (env) => once('syllables', async () => {
+  const list = (await getJSON(env, 'data/lab/syllables.json')).syllables;
+  let cards = [];
+  try { cards = (await getJSON(env, 'data/lab/words.json')).cards || []; } catch { /* then only Israeli learners hear them */ }
+  return list.map((s) => ({ ...s, says: syllableTraditions(s.he, cards) }));
+});
 const loadNumbers = (env) => once('numbers', async () => (await getJSON(env, 'data/lab/numbers.json')).numbers);
 const loadFamilies = (env) => once('families', async () => {
   const raw = await getJSON(env, 'data/roots/families.json');
+  // The same family-word recordings as Letter Pattern (data/lab/words.json familyClips).
+  let clips = new Map();
+  try {
+    const he = new Map((raw.families || []).flatMap((f) => (f.words || []).map((w) => [w.id, w.he])));
+    const rows = familyClipRows((await getJSON(env, 'data/lab/words.json')).familyClips, he);
+    clips = rows.clips; env.ctx?.audio?.extend?.(rows.extra);
+  } catch { /* the words stay silent */ }
   const fams = [];
   const allWords = [];
   for (const f of raw.families || []) {
     const root = consonants(f.root);
     const words = (f.words || []).filter((w) => w.he && w.en && !holdsDivineName(w.he)).map((w) => ({
       id: w.id, he: w.he, en: shortEnglish(w.en), unpointed: w.unpointed || consonants(w.he),
-      level: w.level, translit: w.translit, root, rootHe: f.root,
+      level: w.level, translit: w.translit, root, rootHe: f.root, clip: clips.get(w.id) || null,
     }));
     allWords.push(...words);
     const withRoot = root.length === 3 ? words.filter((w) => hasPattern(w.he, root)) : words;
@@ -51,6 +64,11 @@ const loadFamilies = (env) => once('families', async () => {
 
 const big = (env, he, cls = 'lab-glyph') => env.heSpan(he, `he ${cls}`);
 const mark = (b, ok) => { b.classList.add(ok ? 'is-right' : 'is-wrong'); };
+/** Say a recording when the player has it (and it is not held); silent otherwise. */
+const say = (env, clip, he) => { if (clip?.kind && clip.id && env.hasClip?.(clip.kind, clip.id)) env.playClip(clip.kind, clip.id, he); };
+const letterClip = (l) => (l?.id ? { kind: 'letter', id: l.id } : null);
+/** A syllable recording, only for a learner whose tradition says its consonant the Israeli way. */
+const syllableClip = (env, s) => (s?.id && (s.says || ['israeli']).includes(env.tradition || 'israeli') ? { kind: 'syllable', id: s.id } : null);
 const reduced = () => !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
 function burst(el) {
   if (!el || reduced()) { el?.classList.add('is-burst'); return; }
@@ -73,6 +91,12 @@ function grid(env, n, cols, render, onTap, label, cellClass = 'lab-cell lab-tile
   return { el, cells };
 }
 
+/** The vowel signs named beside a sound. In the Ashkenazi tradition kamatz says "o" and tzere is a glide (data/pronunciation/niqqud.json), so neither is named for "a" or "e". */
+export function vowelSignsFor(v, tradition) {
+  if (tradition === 'ashkenazi' && v === 'a') return 'פַּתָּח';
+  if (tradition === 'ashkenazi' && v === 'e') return 'סֶגּוֹל';
+  return VOWEL_SAY[v]?.he || '';
+}
 const VOWEL_SAY = Object.freeze({
   a: { en: 'the “a” sound', he: 'פַּתָּח / קָמַץ' },
   e: { en: 'the “e” sound', he: 'סֶגּוֹל / צֵירֵי' },
@@ -123,6 +147,8 @@ export function wordBurstPuzzle(words, level, rnd = Math.random) {
 }
 
 /** Migration Birds: a flock with a unique highest value, labelled as a Hebrew numeral or a number word. */
+// numbers.json clips are a bare word-recording id.
+const numberClip = (x) => (x?.clip ? (typeof x.clip === 'string' ? { kind: 'word', id: x.clip } : x.clip) : null);
 export function migrationPuzzle(numbers, level, rnd = Math.random) {
   const pool = numbers.filter((x) => Number.isInteger(x.value) && x.value > 0);
   const n = level <= 2 ? 4 : level <= 5 ? 6 : level <= 8 ? 8 : 10;
@@ -136,7 +162,7 @@ export function migrationPuzzle(numbers, level, rnd = Math.random) {
         // 1000 has no standard 1..999 numeral form in this app; that bird always shows the number word.
         const asNumeral = x.value <= 999 && (level >= 4 ? true : rnd() < 0.5);
         const label = asNumeral ? hebrewNumeral(x.value) : x.he;
-        return { i, value: x.value, he: x.he, tr: x.tr, label, asNumeral, kind: asNumeral ? 'numeral' : 'word' };
+        return { i, value: x.value, he: x.he, tr: x.tr, label, asNumeral, kind: asNumeral ? 'numeral' : 'word', clip: numberClip(x) };
       });
       break;
     }
@@ -146,7 +172,7 @@ export function migrationPuzzle(numbers, level, rnd = Math.random) {
     const sorted = shuffle(pool, rnd).slice(0, Math.min(n, pool.length));
     const high = Math.max(...sorted.map((x) => x.value));
     const unique = sorted.filter((x) => x.value !== high).concat([pool.find((x) => x.value === high) || sorted[0]]);
-    birds = unique.slice(0, n).map((x, i) => ({ i, value: x.value, he: x.he, tr: x.tr, label: x.value <= 999 && level >= 4 ? hebrewNumeral(x.value) : x.he, asNumeral: x.value <= 999 && level >= 4, kind: x.value <= 999 && level >= 4 ? 'numeral' : 'word' }));
+    birds = unique.slice(0, n).map((x, i) => ({ i, value: x.value, he: x.he, tr: x.tr, clip: numberClip(x), label: x.value <= 999 && level >= 4 ? hebrewNumeral(x.value) : x.he, asNumeral: x.value <= 999 && level >= 4, kind: x.value <= 999 && level >= 4 ? 'numeral' : 'word' }));
   }
   const answerValue = Math.max(...birds.map((b) => b.value));
   const speedMs = Math.max(2600, 8800 - level * 480);
@@ -170,7 +196,7 @@ export function starSearchPuzzle(letters, syllables, level, rnd = Math.random) {
     const oddIndex = randInt(rnd, n);
     const items = Array.from({ length: n }, (_, i) => {
       const s = i === oddIndex ? odds[randInt(rnd, odds.length)] : majors[randInt(rnd, majors.length)];
-      return { i, he: s.he, tr: s.tr, id: s.id, vowel: s.vowel, letter: s.letter, shape: 'five', odd: i === oddIndex };
+      return { i, he: s.he, tr: s.tr, id: s.id, vowel: s.vowel, letter: s.letter, says: s.says, shape: 'five', odd: i === oddIndex };
     });
     return { kind, items, oddIndex, cols, prompt: { en: `the star whose vowel is not ${VOWEL_SAY[major].en.replace('the ', '')}`, he: VOWEL_SAY[oddV].he } };
   }
@@ -442,7 +468,7 @@ const wordburst = {
         const hit = consonants(pz.board[i].he) === consonants(pz.target.he);
         if (hit) {
           b.disabled = true; mark(b, true); burst(b); found++;
-          if (found === pz.targets) resolve({ ok: true, ms: env.now() - t0, par: 900 * pz.targets + 900 });
+          if (found === pz.targets) { say(env, pz.target.clip, pz.target.he); resolve({ ok: true, ms: env.now() - t0, par: 900 * pz.targets + 900 }); }
         } else { mark(b, false); env.say(`That is ${pz.board[i].en}.`); resolve({ ok: false, ms: env.now() - t0 }); }
       }, 'Word field', 'lab-cell lab-tile3d lab-wordcell');
       env.board.replaceChildren(g.el);
@@ -477,7 +503,7 @@ const migration = {
             if (!ok) {
               env.say(`The highest was ${pz.birds[pz.answerIndex].label}, ${pz.answerValue}.`);
               buttons[pz.answerIndex].classList.add('is-reveal');
-            } else burst(btn);
+            } else { burst(btn); say(env, b.clip, b.he); }
             finish({ ok, ms: env.now() - t0, par: Math.min(2200, pz.speedMs * 0.35) });
           },
         }, env.h('span', { class: 'lab-bird-body', 'aria-hidden': 'true' }, '✦'), big(env, b.label, 'lab-word lab-bird-he'));
@@ -498,7 +524,10 @@ const starsearch = {
   load: async (env) => ({ letters: await loadLetters(env), syllables: await loadSyllables(env) }),
   trial(env, level) {
     const pz = starSearchPuzzle(env.data.letters, env.data.syllables, level, env.rnd);
-    if (pz.prompt?.he) env.met?.({ he: pz.prompt.he, en: 'the odd one out' });
+    { // the odd one out, as a letter (with its name) or a syllable (with its sound)
+      const odd = pz.items[pz.oddIndex];
+      if (odd?.he) env.met?.(odd.vowel ? { he: odd.he, en: `"${odd.vowel}"`, clip: syllableClip(env, odd) } : { he: odd.he, en: odd.tr || '', clip: odd.letter ? { kind: 'letter', id: odd.letter } : null });
+    }
     return new Promise((resolve) => {
       const t0 = env.now();
       env.prompt(env.h('span', {}, 'Tap ', env.h('b', {}, pz.prompt.en), '.'));
@@ -541,7 +570,7 @@ const rootforge = {
         if (rootForgeNextOk(pz.spelling, soFar, ch)) {
           b.disabled = true; mark(b, true); soFar.push(ch);
           built.textContent = soFar.join('');
-          if (soFar.length === pz.spelling.length) { burst(b); resolve({ ok: true, ms: env.now() - t0, par: 1400 * pz.spelling.length }); }
+          if (soFar.length === pz.spelling.length) { burst(b); say(env, pz.target.clip, pz.target.he); resolve({ ok: true, ms: env.now() - t0, par: 1400 * pz.spelling.length }); }
         } else {
           mark(b, false);
           env.say(`The word is ${pz.target.he}, ${pz.target.en}.`);
@@ -571,7 +600,7 @@ const letterseq = {
         const ok = pz.choices[i].id === pz.answer.id;
         mark(b, ok);
         if (!ok) env.say(`It was ${pz.answer.name}, ${pz.answer.he}.`);
-        else burst(b);
+        else { burst(b); if (level <= 3) say(env, letterClip(pz.answer), pz.answer.he); }
         resolve({ ok, ms: env.now() - t0, par: 2000 });
       }, 'Next letter');
       env.board.replaceChildren(row, g.el);
@@ -589,7 +618,7 @@ const speedmatch = {
     const limit = Math.max(900, 3400 - level * 180);
     const playCompare = (resolve, prev) => {
       const pz = speedMatchPuzzle(prev, env.data, level, env.rnd);
-      if (pz.item?.he) env.met?.({ he: pz.item.he, en: `"${pz.item.vowel}"`, clip: pz.item.id ? { kind: 'syllable', id: pz.item.id } : null });
+      if (pz.item?.he) env.met?.({ he: pz.item.he, en: `"${pz.item.vowel}"`, clip: syllableClip(env, pz.item) });
       env.memo.smPrev = pz.item;
       const t0 = env.now(); let done = false;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -597,6 +626,7 @@ const speedmatch = {
         const ok = yes === pz.answer;
         mark(b, ok);
         if (!ok) env.say(pz.answer ? 'Yes, it matched.' : 'No, it was different.');
+        else if (level <= 3) say(env, syllableClip(env, pz.item), pz.item.he);
         finish({ ok, ms: env.now() - t0, par: 1100 });
       };
       env.prompt(pz.question);
@@ -657,11 +687,11 @@ const vowelrain = {
   load: loadSyllables,
   trial(env, level) {
     const pz = vowelRainPuzzle(env.data, level, env.rnd);
-    for (const f of pz.falling.filter((x) => x.match).slice(0, 2)) if (f.he) env.met?.({ he: f.he, en: `"${f.vowel}"`, clip: f.id ? { kind: 'syllable', id: f.id } : null });
+    for (const f of pz.falling.filter((x) => x.match).slice(0, 2)) if (f.he) env.met?.({ he: f.he, en: `"${f.vowel}"`, clip: syllableClip(env, f) });
     return new Promise((resolve) => {
       const t0 = env.now(); let done = false, found = 0;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
-      env.prompt(env.h('span', {}, 'Tap every syllable with ', env.h('b', {}, pz.label.en), ' ', env.heSpan(pz.label.he, 'he lab-inline-sm')));
+      env.prompt(env.h('span', {}, 'Tap every syllable with ', env.h('b', {}, pz.label.en), ' ', env.heSpan(vowelSignsFor(pz.targetVowel, env.tradition), 'he lab-inline-sm')));
       const sky = env.h('div', { class: `lab-rain lab-stage${reduced() ? ' is-still' : ''}`, role: 'group', 'aria-label': 'Falling syllables' });
       const buttons = pz.falling.map((s) => {
         const b = env.h('button', {
@@ -671,7 +701,7 @@ const vowelrain = {
           'aria-label': s.tr,
           onclick: () => {
             if (b.disabled || done) return;
-            if (s.match) { b.disabled = true; mark(b, true); burst(b); found++; if (found === pz.matchCount) finish({ ok: true, ms: env.now() - t0, par: pz.fallMs * 0.5 }); }
+            if (s.match) { b.disabled = true; mark(b, true); burst(b); found++; if (level <= 3) say(env, syllableClip(env, s), s.he); if (found === pz.matchCount) finish({ ok: true, ms: env.now() - t0, par: pz.fallMs * 0.5 }); }
             else { mark(b, false); env.say(`That one has the “${s.vowel}” sound.`); finish({ ok: false, ms: env.now() - t0 }); }
           },
         }, big(env, s.he, 'lab-glyph'));
@@ -712,7 +742,7 @@ const tileturn = {
         const ok = pz.choices[i].id === pz.letter.id;
         mark(b, ok);
         if (!ok) env.say(`It was ${pz.letter.name}.`);
-        else burst(b);
+        else { burst(b); if (level <= 3) say(env, letterClip(pz.letter), pz.letter.he); }
         resolve({ ok, ms: env.now() - t0, par: 1800 });
       }, 'Letter choices');
       env.board.replaceChildren(tile, g.el);
@@ -755,7 +785,7 @@ const pathword = {
           path.push(at); b.classList.add('is-picked');
           if (path.length === pz.spelling.length) {
             const ok = pathWordReads(pz.grid, path) === pz.spelling.join('');
-            if (ok) { mark(b, true); burst(b); resolve({ ok: true, ms: env.now() - t0, par: 1600 * pz.spelling.length }); }
+            if (ok) { mark(b, true); burst(b); say(env, pz.word.clip, pz.word.he); resolve({ ok: true, ms: env.now() - t0, par: 1600 * pz.spelling.length }); }
             else { mark(b, false); env.say(`The word is ${pz.word.he}, ${pz.word.en}.`); resolve({ ok: false, ms: env.now() - t0 }); }
           }
         });

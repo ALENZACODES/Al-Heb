@@ -44,3 +44,41 @@ Merging the Brain Lab games branch into the integration branch brings all seven,
 | 8 | this push | 96 | Merged `8102de32`. Letter Pattern says each right word (830 words have a recording; 518 of them were only in the dictionary list and are handed to the player by the game); prayer lines on the results list; contrast of Prayer Chain choices on the mat in dark mode. 1,109 of the 1,291 Hebrew items in Brain Lab can be heard (was 615). | Record Barchu and the ten holy-day names; the 23 pictures still on order; a real phone and a screen reader. |
 
 The data Brain Lab fetches once per build grew to about 470 KB (the test budget moved from 450 to 500 KB for the Letter Pattern recordings list).
+
+## Review of the Brain Lab Games Branch With the 3D Studio Merged (Review Round 3 of 5)
+
+This lane now owns the 3D Studio work as well (handoff of the `feature/brain-lab-games-2026-11-10` branch at `8cef9ebc`). I merged it into this branch (`4546c9b9`) and reviewed the result. For the review I ran:
+- the full unit tier on a full checkout;
+- the browser test of every game;
+- axe (WCAG A and AA) on the page and all eleven studio games in light and dark;
+- the audio each game requests in Chromium.
+
+**Score for the merged branch as it arrived: 82/100.** The studio games are real games and play cleanly. Eight things held it back:
+
+1. **Four unit failures already on the handed-over branch** (`data/audio/summary.json` counts, "every counted clip on disk", Man/Woman, clip lookup). Its holy-day clips were added without rebuilding the two generated audio files. Fixed: rebuilt with `tools/audio/summary.mjs` and `tools/vocab/build-clip-lookup.mjs`. The full unit tier now passes (3,502 tests, 0 failures).
+2. **A learner-facing pack label named an outside tool** and the code used branch names. Fixed: the pack is "Hebrew for Synagogue and Israel" (`LIFE_GAMES`).
+3. **Layout:** every pack section was upper-cased, and studio covers filled the card. Fixed: pack headings are in normal case, and covers are a 3:2 frame.
+4. **Two class-name collisions** (`.lab-sky`, `.lab-drop`): studio CSS restyled Taxi Turns and Vowel Rain. Fixed: the studio uses `.lab-flock` and `.lab-sdrop`.
+5. **Studio games left the "Hebrew You Met" list empty.** Fixed in all eleven. Star Search now lists the odd letter or syllable, not the vowel sign names.
+6. **Ten of the eleven studio games were silent.** Only Echo Hunt played Hebrew. Word Burst, Root Forge and Path Word had no recordings attached even though Letter Pattern has them for the same words. Fixed (round 9 below).
+7. **Vowel Storm named kamatz and tzere for "a" and "e" to Ashkenazi learners**, who say kamatz as "o" and tzere as a glide (`niqqud.json`). Fixed: those learners see patach and segol only.
+8. **Some studio covers draw Hebrew letters into the picture,** which the house style avoids. Not fixed here: that is for the images lane.
+
+After the fixes, axe found nothing on the page or any studio game, in light or dark, and the browser test plays all 27 games to their results card.
+
+## Round 9: The Studio Games Speak
+
+| Round | Commit | Score | What changed | What would raise it |
+|---|---|---|---|---|
+| 9 | this push | 95 | Merged the 3D Studio games (27 games in three packs), with the eight fixes above. Studio games speak their Hebrew on a right answer: the word in Word Burst, Root Forge and Path Word (803 of 929 family words have a recording, shared with Letter Pattern through `familyClipRows`); the number in Migration Birds; and, to level 3, the letter name in Letter Sequence and Tile Turn and the syllable in Speed Match and Vowel Storm. A syllable plays only where the learner's tradition says its consonant the Israeli way (`syllableTraditions`, from the consonant tables), so a Sephardi learner never hears an Israeli Chet or Resh as theirs. The audio list names the studio games beside the items they share. | Below. |
+
+Checked in Chromium: Word Burst, Migration Birds, Letter Sequence, Speed Match, Tile Turn and Vowel Storm request their recordings when answered correctly. Root Forge and Path Word use the same code path and are covered by the unit test of their word lists, but were not played to a correct answer in the browser.
+
+## What Would Take It From 95 to 98 and Up
+
+1. **John's held decisions:** Barchu and the other prayer items holding a divine name (Hagomel, Sim Shalom, the after-Haftarah blessing, Elohim and Eloheinu in Prayer Chain, Mourner's Kaddish). The four-letter Name is never voiced.
+2. **35 held recordings** (44 rows in the audio list) need a person to listen. Until then Brain Lab shows their written sound.
+3. **Recordings not made here (no voice service in this workspace):** the 14 month names, then priority 2 in the audio list (126 family words, 27 syllables). The 28 Sephardi and Ashkenazi items need checked respellings before any recording.
+4. **Pictures:** the 23 still on order for the six synagogue-and-Israel games, and studio covers redrawn without letters.
+5. **A native speaker** checks the game titles and the café and direction transliterations.
+6. **A real phone and a screen reader.** Everything here ran in headless Chromium.

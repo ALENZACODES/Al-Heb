@@ -1,5 +1,6 @@
 // Aleph boot: wires store, settings, audio, router, and lazily mounted views.
 import { mountRimon } from './shell/rimon.js';
+import { mountRimonStills } from './shell/rimon-stills.js';
 import { watchTitleCase, titleCase } from './shell/title-case.js';
 import { store } from './store.js';
 import { createSettings } from './shell/settings.js';
@@ -272,6 +273,8 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
   mountRimon({store});
+  // Bold stills are decoration: a missing file or a mount fault must not break boot.
+  try { mountRimonStills(); } catch (e) { console.warn('rimon stills failed', e); }
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.

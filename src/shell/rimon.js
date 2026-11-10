@@ -87,8 +87,8 @@ export function mountRimon({store,doc=document}={}) {
     const parent=anchor || doc.body;if(host.parentNode!==parent)parent.append(host);
     host.classList.toggle('rimon-corner',!anchor);speech.refresh();
   }
-  // Phones: after he has said his piece Rimon ducks behind the bottom bar (two seconds after he reacts, and at once on a new page) and peeks over it, so he never sits on a lesson.
-  // Anything he reacts to (a right answer, a streak) brings him back up; a tap on his head does too.
+  // Phones: after a line of speech, Rimon ducks behind the bottom bar (two seconds after a reaction, and at once on a new page) and peeks over it, so the companion never sits on a lesson.
+  // A reaction (a right answer, a streak) brings Rimon back up; a tap on the crown does too.
   const phone=()=>{try{return !!doc.defaultView?.matchMedia?.('(max-width:600px)')?.matches;}catch{return false;}};
   let peekTimer=0;
   function peekSoon(ms=2000){clearTimeout(peekTimer);host.classList.remove('rimon-peek');if(phone())peekTimer=setTimeout(()=>{if(alive&&host.classList.contains('rimon-corner'))host.classList.add('rimon-peek');},ms);}
@@ -110,7 +110,7 @@ export function mountRimon({store,doc=document}={}) {
   });
   const activity=()=>{lastActivity=Date.now();yawned=false;thought=false;};
   const ready=()=>{
-    // a page greeting: he waves from where he is; when already peeking he stays down so the new page is clear
+    // a page greeting: Rimon waves from the current spot; when already peeking, Rimon stays down so the new page is clear
     const wasPeeking=host.classList.contains('rimon-peek');
     next.hidden=true;observer?.disconnect();inlineVisible=true;place();reset();activity();play('wave');
     if(wasPeeking&&phone()&&host.classList.contains('rimon-corner')){clearTimeout(peekTimer);host.classList.add('rimon-peek');}

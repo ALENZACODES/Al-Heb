@@ -360,7 +360,7 @@ export function cafeOrder(items, level, rnd = Math.random) {
 // Prayer Chain ---------------------------------------------------------------------------------------------------------------
 /**
  * Prayers the games leave out. Mourner's Kaddish is said for the dead; it is studied in the reader with its recording, not
- * raced or scored. (A choice made for the games, open to the owner's review: docs/lab/README.md.)
+ * raced or scored. (A choice made for the games, open to the owner's review: docs/games/BRAIN-LAB.md.)
  */
 export const NOT_A_GAME = Object.freeze(new Set(['kaddish-1']));
 /** Hebrew text without vowel points or cantillation, for comparing two words. */

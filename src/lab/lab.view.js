@@ -16,7 +16,7 @@ import { NEW_DRILLS } from './lab.games2.js';
 const DRILLS = Object.freeze({ ...FIRST_TEN, ...NEW_DRILLS });
 /** Games whose ordered in-game picture is a mat behind the whole board (the others place theirs inside the round). */
 const BOARD_MATS = new Set(['hunt', 'countup', 'calendar', 'pattern']);
-/** Pictures ordered for Brain Lab (docs/lab/GRAPHICS-ORDER.md and the commercial orders): shown only once ingested and approved. */
+/** Pictures ordered for Brain Lab (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md and the first ten games' orders): shown only once ingested and approved. */
 const art = (ctx, id, cls, width) => { try { return ctx.img?.(h, { kind: 'id', id, class: cls, width, decorative: true }) || null; } catch { return null; } };
 /** The round token beside a game: its approved picture, or its letter on a green-and-gold disc. */
 const token = (ctx, g) => {

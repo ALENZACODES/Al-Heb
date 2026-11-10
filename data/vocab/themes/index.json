@@ -5,8 +5,8 @@
  "themeSize": 125,
  "counts": {
   "words": 4786,
-  "withExample": 1066,
-  "withoutExample": 3720,
+  "withExample": 1065,
+  "withoutExample": 3721,
   "droppedFromWordsJson": 1513
  },
  "themes": [
@@ -71,7 +71,7 @@
    "topic": "doing-verbs",
    "title": "Doing verbs, set 2 of 8",
    "size": 125,
-   "withExample": 47,
+   "withExample": 46,
    "file": "doing-verbs-set02.json"
   },
   {

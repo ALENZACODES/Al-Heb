@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book46-p01.mp3"
    },
    "illustration": "an open-plan office with five desks and a whiteboard",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book46-p02.mp3"
    },
    "illustration": "the team around a whiteboard covered in arrows",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book46-p03.mp3"
    },
    "illustration": "a woman with a marker, listening",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book46-p04.mp3"
    },
    "illustration": "the clock reading 9:40",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book46-p05.mp3"
    },
    "illustration": "a laptop with a spinning wheel, panic",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book46-p06.mp3"
    },
    "illustration": "everyone looking at everyone",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book46-p07.mp3"
    },
    "illustration": "a man hammering keys",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book46-p08.mp3"
    },
    "illustration": "an older man with a mop",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book46-p09.mp3"
    },
    "illustration": "the cleaner leaning over, pressing one key",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book46-p10.mp3"
    },
    "illustration": "the screen alive, the team cheering",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book46-p11.mp3"
    },
    "illustration": "the manager shaking the cleaner's hand",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book46-p12.mp3"
    },
    "illustration": "the cleaner smiling modestly, the clock striking ten",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book55-p01.mp3"
    },
    "illustration": "grey sky over stone buildings",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book55-p02.mp3"
    },
    "illustration": "a radio, a family gathered round it",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book55-p03.mp3"
    },
    "illustration": "shrugging neighbours on a stairwell",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book55-p04.mp3"
    },
    "illustration": "the city under snow, domes and roofs white",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book55-p05.mp3"
    },
    "illustration": "shuttered shops, no buses",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book55-p06.mp3"
    },
    "illustration": "kids in mismatched gloves and plastic bags on their feet",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book55-p07.mp3"
    },
    "illustration": "grown men throwing snowballs in suits",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book55-p08.mp3"
    },
    "illustration": "a woman rolling a lopsided snowball",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book55-p09.mp3"
    },
    "illustration": "a tiny leaning snowman with an olive for a nose",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book55-p10.mp3"
    },
    "illustration": "a knitted kippah on the snowman's head",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book55-p11.mp3"
    },
    "illustration": "sunlight breaking through, drips everywhere",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book55-p12.mp3"
    },
    "illustration": "a puddle, the kippah on the wet stone, the woman smiling",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

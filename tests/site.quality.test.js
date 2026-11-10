@@ -54,7 +54,12 @@ test('every games-hub card has a backdrop scene that resolves approved', () => {
 
 test('home reserves Rimon placement and the shell mounts the animated companion', () => {
   assert.match(read('src/shell/showcase.js'), /show-mascot-box/);
-  assert.match(read('src/app.js'), /mountRimon\(\{store\}\)/);
+  const app = read('src/app.js');
+  // The companion still mounts, but after first paint, so it stays out of the Home first-load JS budget.
+  assert.doesNotMatch(app, /from '\.\/shell\/rimon\.js'/);
+  assert.match(app, /import\('\.\/shell\/rimon\.js'\)/);
+  assert.match(app, /mountRimon\(\{ store \}\)/);
+  assert.match(app, /afterPaint/);
   assert.match(read('src/shell/rimon.js'), /alef:ready/);
 });
 

@@ -16,6 +16,7 @@
 //   toast - a small card with the still and one line, at the bottom of the screen, gone after a few seconds
 import { holidaysBetween, roshChodeshInHebrewYear, toHebrew, parseISO, weekday, candleLighting, havdalah } from '../curriculum/calendar.js';
 import { STILL_IDS } from './rimon-stills.generated.js';
+import { isRestDay, addDaysISO, normalizeRecord } from '../curriculum/streak.js';
 
 export const STILL_DIR = 'data/images/rimon';
 export const PRESENT_URL = 'data/images/rimon/present.json';
@@ -350,6 +351,23 @@ export function dateTrigger(iso) {
  * (or ever, for once:'ever') are skipped by the caller through `seen`.
  * facts: { firstVisit, daysAway, streak:{count,best,activeToday,restToday,broken} }
  */
+/**
+ * The owner's streak rule (src/retention/streak.js isFreeRestDay, confirmed 2026-11-10): Saturday, Yom Tov, Friday and the eve of
+ * Yom Tov never break a streak. Retention writes those days into the streak record at its rollover, which now runs some seconds
+ * after first paint; Rimon reads the record at boot, so it applies the same rule itself: the free days from the last study day
+ * through today, for projectStreak's extraRest. Freezes and travel grace stay retention's (it announces those itself).
+ */
+export function freeRestDays(raw, todayISO, maxDays = 45) {
+  const out = new Set();
+  try {
+    const rec = normalizeRecord(raw);
+    if (!rec.last || !todayISO || rec.last >= todayISO) { if (todayISO && isFreeRest(todayISO, rec.mode)) out.add(todayISO); return out; }
+    for (let d = addDaysISO(rec.last, 1), i = 0; d <= todayISO && i < maxDays; d = addDaysISO(d, 1), i++) if (isFreeRest(d, rec.mode)) out.add(d);
+  } catch { /* no record: nothing to free */ }
+  return out;
+}
+const isFreeRest = (iso, mode) => isRestDay(iso, mode) || weekday(parseISO(iso)) === 5 || isRestDay(addDaysISO(iso, 1), mode);
+
 export function greetingCandidates(ctx, facts = {}) {
   const out = [];
   const st = facts.streak || {};
@@ -359,7 +377,7 @@ export function greetingCandidates(ctx, facts = {}) {
   const season = seasonTrigger(ctx);
   if (season) out.push(season);
   if (ctx.shabbat === 'havdalah' && ctx.hour >= 21) out.push('shabbat.shavuatov');
-  if (st.broken && (st.best || 0) >= 2) out.push('streak.lost');
+  if (st.broken && (st.best || 0) >= 2 && !facts.retention) out.push('streak.lost'); // with retention running, it tells of a break (freezes, repair)
   if (st.count > 0 && !st.activeToday && !st.restToday && ctx.hour >= 18) out.push('streak.atrisk');
   if (st.restToday && !ctx.shabbat && !season) out.push('streak.rest');
   if (ctx.weekday === 0 && ctx.hour < 14) out.push('greet.week');

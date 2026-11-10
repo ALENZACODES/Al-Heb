@@ -51,6 +51,12 @@ Every game's rules live in `src/lab/lab.core.js` as plain functions with tests. 
 
 Review rounds for this work, with scores and what would raise them: [`BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md`](BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md).
 
+## Spoken Hebrew
+
+Every Brain Lab game can now say its Hebrew in the learner's chosen voice (Ari or Noa): café orders and taxi directions as they appear, letter names in Middle Letter and on the results list, both letter sounds after a Sound Twins answer while learning, each caught syllable in Vowel Rain (kamatz and tzere syllables play the recorded syllable that sounds the same), holy-day names in Calendar Puzzle where recorded, and every item on the "Hebrew You Met" list that has a recording. A letter sound or syllable plays only where the learner's tradition says it the Israeli way. Ten café words and the number 90 were recorded only in the large dictionary list; their rows now travel in `data/lab/words.json` (`extraClips`).
+
+What is still missing, and what to record first: [`docs/audio/BRAIN-LAB-AUDIO-2026-11-10.md`](../audio/BRAIN-LAB-AUDIO-2026-11-10.md) (one row per item in the CSV beside it; rebuild with `node tools/lab/build-audio-manifest.mjs`).
+
 ## Rimon
 
 Brain Lab tells the companion what is happening (`alef:rimon` with `{ action, moment, game }`): a wave when the page opens, thinking during the memory phase of Letter Matrix and Café Order, a bounce on every second level reached, and a high five, wink or "you can do it" on the results card by how the game went. The moments and the Rimon stills they can map to are listed at the end of the new games' picture orders.

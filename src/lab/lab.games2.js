@@ -9,7 +9,12 @@ import { kit } from './lab.games.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 
 const { getJSON, once, grid, big, mark, loadLetters } = kit;
-const loadWords = (env) => once('labwords', () => getJSON(env, 'data/lab/words.json'));
+const loadWords = (env) => once('labwords', async () => {
+  const w = await getJSON(env, 'data/lab/words.json');
+  // Recordings that live only in the dictionary list: hand the player the few rows these games need.
+  try { env.ctx?.audio?.extend?.(w.extraClips || []); } catch { /* sound is optional */ }
+  return w;
+});
 const btn = (env, label, onclick, cls = 'btn') => env.h('button', { type: 'button', class: cls, onclick }, label);
 /** Resolve a round once, whatever fires first (an answer or the clock). */
 function once1(resolve) { let done = false; return (r) => { if (!done) { done = true; resolve(r); } }; }
@@ -50,8 +55,13 @@ const twins = {
         const t0 = env.now();
         const pick = (yes, b) => {
           const ok = yes === same; mark(b, ok);
-          if (!ok || level <= 2) env.say(`${c.he} ${nm(c)} and ${ref.he} ${nm(ref)}: ${same ? 'the same sound' : 'different sounds'}.`);
-          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${nm(ref)} and ${nm(c)} sound the same` } : { he: c.he, en: nm(c) });
+          if (!ok || level <= 2) {
+            env.say(`${c.he} ${nm(c)} and ${ref.he} ${nm(ref)}: ${same ? 'the same sound' : 'different sounds'}.`);
+            // Hear both: the recorded Israeli letter sounds, only where the learner's tradition says them the same way.
+            const say = (x) => (x.clip && x.sound[trad] === x.sound.israeli && env.hasClip('letter', x.clip) ? env.playClip('letter', x.clip, x.he) : Promise.resolve(false));
+            say(ref).then(() => say(c));
+          }
+          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${nm(ref)} and ${nm(c)} sound the same` } : { he: c.he, en: nm(c), clip: c.clip && c.sound[trad] === c.sound.israeli ? { kind: 'letter', id: c.clip } : null });
           finish({ ok, ms: env.now() - t0, par: 1100 });
         };
         const no = btn(env, '✗ Different', () => pick(false, no), 'btn secondary lab-yn');
@@ -91,9 +101,11 @@ const rain = {
         const want = drop.sound[trad];
         const ok = k === want; mark(b, ok);
         d.classList.add(ok ? 'is-caught' : 'is-missed');
-        if (ok && drop.syllable && env.hasClip('syllable', drop.syllable)) env.playClip('syllable', drop.syllable, drop.he);
+        // its own recording, or the recorded syllable that says it the same way (בָּ as בַּ) where the tradition reads it so
+        const sayId = drop.syllable || (drop.sound[trad] === drop.sound.israeli ? drop.sayAs : null);
+        if (ok && sayId && env.hasClip('syllable', sayId)) env.playClip('syllable', sayId, drop.he);
         if (!ok || level <= 2) env.say(`${drop.he}: ${signName(W, drop.sign)} says "${want}".`);
-        env.met({ he: drop.he, en: `${signName(W, drop.sign)}, "${want}"` });
+        env.met({ he: drop.he, en: `${signName(W, drop.sign)}, "${want}"`, clip: sayId ? { kind: 'syllable', id: sayId } : null });
         finish({ ok, ms: env.now() - t0, par: Math.round(fall * 0.45) });
       };
       for (const k of keys) {
@@ -131,7 +143,8 @@ const middle = {
       }, (i, b) => {
         const ok = t.options[i].id === t.target.id; mark(b, ok);
         if (!ok) { g.cells[t.options.indexOf(t.target)].classList.add('is-reveal'); env.say(`The middle letter is ${t.target.he} ${t.target.name}${t.tricky ? `; the letters around it are ${t.row[0].name}` : ''}.`); }
-        env.met({ he: t.target.he, en: t.target.name });
+        if (level <= 2 && env.hasClip('letter', t.target.id)) env.playClip('letter', t.target.id, t.target.he); // hear its name while learning them
+        env.met({ he: t.target.he, en: t.target.name, clip: { kind: 'letter', id: t.target.id } });
         finish({ ok, ms: env.now() - t0, par: 1500 });
       }, 'Letter names');
       env.board.replaceChildren(row, g.el);

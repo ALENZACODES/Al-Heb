@@ -11,7 +11,8 @@
 //   vowels     Vowel Rain: letter + vowel sign, the vowel's sound in each tradition from data/pronunciation/niqqud.json,
 //              and the syllable recording when data/lab/syllables.json has exactly that syllable.
 //   signs      Vowel Rain: each sign's name and its mark (the point, or vav + point for shuruk), for the button hints.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { HOLIDAY_DEFS } from '../../src/curriculum/calendar.js';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -72,13 +73,26 @@ export function build() {
   const clips = readJSON('data/vocab/clip-lookup.json').clips;
   // Only recordings the shared player knows without the separate dictionary list (the lesson manifest and its word shards),
   // so a Brain Lab round never waits on a large download before it can speak.
-  const known = new Set([...readJSON('data/audio/manifest.json'), ...readJSON('data/audio/manifest-kind-word.json'), ...readJSON('data/audio/manifest-words-israeli.json')]
-    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing').map((r) => `${r.kind}|${r.id}|${r.voice}|${r.text}`));
+  const loaded = [...readJSON('data/audio/manifest.json'), ...readJSON('data/audio/manifest-kind-word.json'), ...readJSON('data/audio/manifest-words-israeli.json')]
+    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
+  const known = new Set(loaded.map((r) => `${r.kind}|${r.id}|${r.voice}|${r.text}`));
+  const clipByText = (he) => { const k = String(he).normalize('NFC'); const m = loaded.find((r) => r.voice === 'm' && r.text === k && (r.kind === 'word' || r.kind === 'line'));
+    return m && loaded.some((r) => r.voice === 'f' && r.kind === m.kind && r.id === m.id) ? { kind: m.kind, id: m.id } : null; };
+  const both = (kind, id) => ['m', 'f'].every((v) => loaded.some((r) => r.kind === kind && r.id === id && r.voice === v));
+  // Recordings that exist only in the dictionary list (data/vocab/audio-dictionary.json, 1.2 MB, not loaded by games): the two
+  // rows a game needs are copied into `extraClips`, which Brain Lab hands to the player (ctx.audio.extend) when the game loads.
+  const dictRows = readJSON('data/vocab/audio-dictionary.json');
+  const extraClips = [];
   const clipFor = (he) => {
     const c = clips[he]; const m = c?.['m|israeli'], f = c?.['f|israeli'];
     if (!(m && f && m.id === f.id && m.kind === f.kind)) return null;
-    return known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`) ? { kind: m.kind, id: m.id } : null;
+    if (known.has(`${m.kind}|${m.id}|m|${he}`) && known.has(`${m.kind}|${m.id}|f|${he}`)) return { kind: m.kind, id: m.id };
+    const rows = dictRows.filter((r) => r.id === m.id && r.kind === m.kind && r.tradition === 'israeli' && r.text === he && r.status !== 'missing');
+    if (rows.length !== 2 || !rows.every((r) => existsSync(join(ROOT, r.path)))) return null;
+    for (const r of rows) if (!extraClips.some((x) => x.id === r.id && x.voice === r.voice)) extraClips.push(r);
+    return { kind: m.kind, id: m.id };
   };
+
   const word = (id) => { const w = dict.get(id); if (!w) throw new Error(`dictionary id ${id} not found`); return w; };
 
   // A menu picture: the word's own picture when the image index already has one ordered (kind 'word'), otherwise the Brain Lab
@@ -96,10 +110,14 @@ export function build() {
   const raw = readJSON('data/letters/letters.json');
   const names = new Map((Array.isArray(raw) ? raw : raw.letters).map((l) => [l.id, l.name]));
   const cards = [];
+  // The recorded letter sound each card makes in Israeli Hebrew (kind letter, id <name>-sound), played after an answer.
+  const SOUND_CLIP = { 'bet-plain': 'vet', 'bet-dagesh': 'bet', 'kaf-plain': 'khaf', 'kaf-dagesh': 'kaf', 'pe-plain': 'fe', 'pe-dagesh': 'pe', 'shin-shin': 'shin', 'shin-sin': 'sin',
+    'tav-plain': 'tav', 'tav-dagesh': 'tav', 'kaf-final': 'khaf', 'mem-final': 'mem', 'nun-final': 'nun', 'pe-final': 'fe', 'tsadi-final': 'tsadi' };
+  const soundClip = (cardId, letter) => { const id = `${SOUND_CLIP[cardId] || letter}-sound`; return both('letter', id) ? id : null; };
   for (const [id, rec] of Object.entries(cons)) {
     const vs = rec.variants || [];
     if (!vs.length) {
-      cards.push({ id, letter: id, he: rec.he, name: names.get(id) || rec.name, sound: Object.fromEntries(TRADITIONS.map((t) => [t, soundKey(firstSound(rec.ipa?.[t])) || id])) });
+      cards.push({ id, letter: id, he: rec.he, name: names.get(id) || rec.name, sound: Object.fromEntries(TRADITIONS.map((t) => [t, soundKey(firstSound(rec.ipa?.[t])) || id])), ...(soundClip(id, id) ? { clip: soundClip(id, id) } : {}) });
       continue;
     }
     for (const v of vs) {
@@ -108,6 +126,7 @@ export function build() {
       cards.push({ id: `${id}${mark === DAGESH ? '-dagesh' : mark === SHIN_DOT ? '-shin' : mark === SIN_DOT ? '-sin' : '-plain'}`, letter: id, he: rec.he + mark,
         name: VARIANT_NAMES[key] || names.get(id) || rec.name, ...(TRADITION_NAMES[key] ? { names: TRADITION_NAMES[key] } : {}),
         sound: Object.fromEntries(TRADITIONS.map((t) => [t, soundKey(firstSound(v.ipa?.[t])) || key])) });
+      const made = cards.at(-1), sc = soundClip(made.id, id); if (sc) made.clip = sc;
     }
   }
 
@@ -127,7 +146,10 @@ export function build() {
       if (sid.startsWith('chataf') && !GUTTURALS.has(letter)) continue; // the reduced vowels sit under the throat letters
       const he = (base + mark).normalize('NFC');
       const rec = bySyl.get(he.normalize('NFD'));
-      vowels.push({ he, letter, sign: sid, from, sound, ...(rec ? { syllable: rec.id } : {}) });
+      // No recording of this exact syllable: the recorded syllable of the same letter with the same Israeli vowel sound says it
+      // the same way (בָּ and בַּ are both "ba"); played only where the learner's tradition reads the sign that way too.
+      const standIn = !rec && sound.israeli ? syl.find((x) => x.letter === letter && x.vowel === sound.israeli && bases.get(letter) === [...x.he.normalize('NFD')].filter((c) => /[\u05D0-\u05EA\u05BC\u05C1\u05C2]/.test(c)).join('')) : null;
+      vowels.push({ he, letter, sign: sid, from, sound, ...(rec ? { syllable: rec.id } : standIn ? { sayAs: standIn.id } : {}) });
     }
   }
   return {
@@ -135,6 +157,9 @@ export function build() {
     source: 'data/vocab/words.json, data/vocab/clip-lookup.json, data/pronunciation/consonants.json, data/pronunciation/niqqud.json, data/letters/letters.json, data/lab/syllables.json (tools/lab/build-lab-words.mjs)',
     note: 'Built, not typed: re-run the tool after the dictionary or the sound tables change. `clip` is a recording with exactly the same pointed text in both voices.',
     cafe, directions, cards, vowels,
+    // Calendar Puzzle: the recorded name of each holy day (exact pointed text, both Israeli voices), said with the answer.
+    holyDays: HOLIDAY_DEFS.map((d) => ({ id: d.id, clip: clipByText(d.he) })).filter((d) => d.clip),
+    extraClips,
     signs: VOWEL_SIGNS.map(({ id }) => { const r = signs.get(id); return { id, name: String(r.name).split('(')[0].trim(), mark: r.shape.slice(1) }; }),
   };
 }

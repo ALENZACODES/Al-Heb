@@ -3,7 +3,7 @@
 // and the Identity Test from GAMES-START-HERE.md holds: tapping at random, or always the same button, scores at chance.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import {
   GAMES, GLYPHS, seeded, sameSound, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, cafeSize,
   chainTrial, lineWords, bare, hasDivineName, NOT_A_GAME, normTradition, starsFor, uniqueMet, isNewGame, recordSession, emptyState, MAX_LEVEL,
@@ -34,7 +34,7 @@ test('data/lab/words.json is exactly what tools/lab/build-lab-words.mjs builds f
 
 test('café and direction words match the dictionary, and every linked recording says exactly that Hebrew in both voices', () => {
   const dict = new Map(json('data/vocab/words.json').words.map((w) => [w.id, w]));
-  const man = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json')];
+  const man = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json'), ...W.extraClips];
   for (const it of [...W.cafe, ...W.directions]) {
     const w = dict.get(it.id); assert.ok(w, it.id);
     assert.equal(it.he, w.he); assert.equal(it.tr, w.translit); assert.ok(w.en.startsWith(it.en), `${it.en} is the start of "${w.en}"`);
@@ -213,4 +213,22 @@ test('the Brain Lab page wires the new games: No time limits stops the clock, Ri
   const g2 = readFileSync('src/lab/lab.games2.js', 'utf8');
   assert.match(g2, /if \(!env\.calm\)/, 'the vowel drop does not move in calm mode or with reduced motion');
   for (const what of ['card', 'sky', 'road']) assert.match(g2, new RegExp(`env\\.playArt\\?\\.\\(${what}\\)`), `${what}: the game places its own drawn picture`);
+});
+
+test('audio: every word a Brain Lab game says can be played, in both Israeli voices, from a clip of exactly that Hebrew', async () => {
+  const { csvText, build: buildAudio } = await import('../tools/lab/build-audio-manifest.mjs');
+  const rows = [...json('data/audio/manifest.json'), ...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json'), ...W.extraClips]
+    .filter((r) => r.tradition === 'israeli' && r.status !== 'missing');
+  const has = (kind, id, v, text) => rows.some((r) => r.kind === kind && r.id === id && r.voice === v && (text == null || r.text === text));
+  for (const r of W.extraClips) assert.ok(existsSync(r.path), r.path);
+  for (const it of [...W.cafe, ...W.directions]) for (const v of ['m', 'f']) assert.ok(it.clip && has(it.clip.kind, it.clip.id, v, it.he), `${it.en} ${v}`);
+  for (const c of W.cards) for (const v of ['m', 'f']) assert.ok(c.clip && has('letter', c.clip, v), `${c.name} sound ${v}`);
+  const syl = new Map(json('data/lab/syllables.json').syllables.map((x) => [x.id, x]));
+  for (const d of W.vowels.filter((x) => x.sayAs)) { const st = syl.get(d.sayAs); assert.ok(st && st.letter === d.letter && st.vowel === d.sound.israeli, `${d.he} as ${d.sayAs}`); }
+  assert.ok(W.vowels.every((d) => d.syllable || d.sayAs), 'every vowel drop can be heard in Israeli Hebrew');
+  for (const d of W.holyDays) for (const v of ['m', 'f']) assert.ok(has(d.clip.kind, d.clip.id, v), d.id);
+  assert.equal(readFileSync('docs/audio/BRAIN-LAB-AUDIO-2026-11-10.csv', 'utf8'), csvText(buildAudio()), 'the audio manifest is fresh: node tools/lab/build-audio-manifest.mjs');
+  const g2 = readFileSync('src/lab/lab.games2.js', 'utf8');
+  assert.match(g2, /audio\?\.extend\?\.\(w\.extraClips/, 'the dictionary-only recordings are handed to the player');
+  assert.match(g2, /x\.sound\[trad\] === x\.sound\.israeli/, 'a letter sound plays only where the tradition says it the Israeli way');
 });

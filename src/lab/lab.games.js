@@ -49,7 +49,7 @@ const hunt = {
     const fill = Array.from({ length: n - targets }, () => (level >= 3 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)]));
     const board = shuffle([...Array(targets).fill(target), ...fill], env.rnd);
     let found = 0;
-    env.met?.({ he: target.he, en: target.name });
+    env.met?.({ he: target.he, en: target.name, clip: { kind: 'letter', id: target.id } });
     return new Promise((resolve) => {
       const t0 = env.now();
       env.prompt(env.h('span', {}, 'Find every ', big(env, target.he, 'lab-inline'), ` ${target.name}`));
@@ -79,7 +79,7 @@ const matrix = {
     const spots = sample([...Array(n).keys()], shown, env.rnd);
     const at = new Map(spots.map((s, k) => [s, k < targets ? target : (level >= 5 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)])]));
     let found = 0, open = false, t0 = 0;
-    env.met?.({ he: target.he, en: target.name });
+    env.met?.({ he: target.he, en: target.name, clip: { kind: 'letter', id: target.id } });
     return new Promise((resolve) => {
       env.prompt('Remember the letters…'); env.rimon?.('thinking');
       const g = grid(env, n, side, (i, b) => { const l = at.get(i); if (l) b.append(big(env, l.he, 'lab-glyph')); b.setAttribute('aria-label', l ? l.name : 'empty'); b.disabled = true; }, (i, b) => {
@@ -302,7 +302,12 @@ const shortName = (d) => d.en.replace(/\s*\(.*\)$/, '');
 const dateEn = (d) => `${d.day} ${monthOf(d).en}`;
 const dateHe = (d) => `${hebrewNumeral(d.day)} ${monthOf(d).he}`;
 const calendar = {
-  load: async () => HOLIDAY_DEFS.slice(),
+  // The holy days, with the recorded name of each one that has a recording (data/lab/words.json holyDays).
+  load: (env) => once('calendardays', async () => {
+    let clips = {};
+    try { clips = Object.fromEntries(((await getJSON(env, 'data/lab/words.json')).holyDays || []).map((d) => [d.id, d.clip])); } catch { /* names stay silent */ }
+    return HOLIDAY_DEFS.map((d) => ({ ...d, clip: clips[d.id] || null }));
+  }),
   trial(env, level) {
     const days = env.data;
     const d = days[randInt(env.rnd, days.length)];
@@ -310,7 +315,7 @@ const calendar = {
     const kind = level <= 2 ? 'which' : level <= 5 ? (env.rnd() < 0.5 ? 'which' : 'when') : (env.rnd() < 0.5 ? 'when' : 'whenHe');
     const opts = choices(d, days, n, env.rnd, (a, b) => a.id === b.id || (a.month === b.month && a.day === b.day));
     const limit = Math.max(3200, 9500 - level * 480);
-    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}` });
+    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}`, clip: d.clip });
     return new Promise((resolve) => {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -324,6 +329,7 @@ const calendar = {
       }, (i, b) => {
         const ok = opts[i].id === d.id; mark(b, ok);
         env.say(`${shortName(d)}: ${dateEn(d)}.`);
+        if (d.clip && env.hasClip(d.clip.kind, d.clip.id)) env.playClip(d.clip.kind, d.clip.id, d.he); // hear the day's Hebrew name
         finish({ ok, ms: env.now() - t0, par: 2500 });
       }, 'Answers');
       env.board.replaceChildren(g.el);

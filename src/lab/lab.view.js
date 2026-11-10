@@ -32,7 +32,12 @@ const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f',
 const SKILL_INK = { speed: '#163527' };
 
 const CSS = `
-.lab{max-inline-size:44rem;margin-inline:auto}
+.lab{max-inline-size:44rem;margin-inline:auto;--lab-accent:var(--accent,#1e4634);--lab-gold:#8a6d1f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="contrast"]) .lab{--lab-gold:#e2cd8f}}
+:root[data-theme="dark"] .lab,:root[data-theme="contrast-dark"] .lab{--lab-gold:#e2cd8f}
+/* Light "paper" tiles keep dark ink in every theme; text straight on the page card follows the theme. */
+.lab-cell,.lab-stats div,.lab-met li,.lab-ticket,.lab-flash,.lab-chain,.lab-flank,.lab-twin,.lab-drop,.lab-slots li,.lab-rule,.lab-card,.lab-sky{color:#1b2a20}
+.lab-met li .en,.lab-cell .lab-val,.lab-ticket .lab-val{color:#5d4a2a}
 .lab h1{margin-block:.2em .3em}
 .lab-sub{color:var(--muted,#5d6b60);margin-block:0 1rem}
 .lab-hero{background:linear-gradient(160deg,#1e4634,#163527);color:#fffaf0;border-radius:18px;padding:1.1rem 1.2rem;border:2px solid #d4a647;box-shadow:0 6px 18px #10281826}
@@ -52,7 +57,7 @@ const CSS = `
 .lab-games{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem;margin:.6rem 0 1.4rem}
 .lab-game{display:flex;flex-direction:column;gap:.25rem;background:var(--card,#fffdf6);border:1px solid var(--border,#e2d6b8);border-radius:14px;padding:.8rem .9rem;text-decoration:none;color:inherit;border-inline-start:6px solid var(--sk);min-block-size:48px}
 .lab-game:hover{box-shadow:0 3px 12px #1e46341f}
-.lab-game .t{font-weight:800;font-size:1.05rem}.lab-game .he{color:#8a6d1f}
+.lab-game .t{font-weight:800;font-size:1.05rem}.lab-game .he{color:var(--lab-gold)}
 .lab-game .m{font-size:.85rem;color:var(--muted,#5d6b60)}
 .lab-spark{inline-size:100%;block-size:28px}
 .lab-note{font-size:.85rem;color:var(--muted,#5d6b60)}
@@ -61,7 +66,7 @@ const CSS = `
 .lab-time{flex:1;block-size:10px;border-radius:99px;background:#e9e1cb;overflow:hidden}
 .lab-time>span{display:block;block-size:100%;background:linear-gradient(90deg,#d4a647,#2f6b4f);transform-origin:left;transition:transform .2s linear}
 .lab-lvl{font-size:.85rem;background:#1e4634;color:#fffaf0;border-radius:99px;padding:.2rem .6rem}
-.lab-run{font-size:.8rem;color:#7a5a12;white-space:nowrap}.lab-run.is-on{background:#f6e6b8;border:1px solid #d4a647;border-radius:99px;padding:.1rem .5rem}
+.lab-run{font-size:.8rem;color:var(--lab-gold);white-space:nowrap}.lab-run.is-on{color:#7a5a12}.lab-run.is-on{background:#f6e6b8;border:1px solid #d4a647;border-radius:99px;padding:.1rem .5rem}
 .lab-prompt{font-size:1.15rem;font-weight:600;min-block-size:3.2rem;display:flex;align-items:center;justify-content:center;text-align:center;gap:.4rem;flex-wrap:wrap}
 .lab-board{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem}
 .lab-trialbar{block-size:4px;border-radius:99px;background:#d4a647;transform-origin:left;inline-size:100%}
@@ -78,12 +83,12 @@ const CSS = `
 .lab-glyph{font-size:clamp(1.8rem,8vw,2.6rem);line-height:1.2}
 .lab-huge{font-size:clamp(4rem,22vw,6.5rem)}
 .lab-word{font-size:clamp(1.3rem,6vw,1.9rem);line-height:1.35}
-.lab-inline{font-size:1.6em;color:#1e4634;font-weight:700}.lab-inline-sm{font-size:1.15em;color:#1e4634}
-.lab-val{font-size:.78rem;color:#6a5a2c;margin-block-start:.15rem}
+.lab-inline{font-size:1.6em;color:var(--lab-accent);font-weight:700}.lab-inline-sm{font-size:1.15em;color:var(--lab-accent)}
+.lab-val{font-size:.78rem;color:var(--lab-gold);margin-block-start:.15rem}
 .lab-badge{font-size:.8rem;font-weight:800;color:#2f6b4f}
 .lab-digit{font-size:2rem;font-weight:800}
 .lab-text{font-weight:700;font-size:1rem;text-align:center}
-.lab-target{font-size:1.6rem;color:#1e4634}
+.lab-target{font-size:1.6rem;color:var(--lab-accent)}
 .lab-sum{font-weight:700;margin:0}
 .lab-flash{min-block-size:7rem;display:grid;place-items:center;inline-size:100%;border-radius:16px;background:#fffaf0;border:2px solid #d9cba5}
 .lab-flash .lab-word{font-size:clamp(2.2rem,10vw,3.4rem)}.lab-flash .lab-preview{color:#8a6d1f}
@@ -95,10 +100,10 @@ const CSS = `
 .lab-card.rule-dot,.lab-rule.rule-dot{border-color:#d4a647;color:#7a5a12}
 .lab-card.rule-fin,.lab-rule.rule-fin{border-color:#2f6b4f;color:#1e4634}
 .lab-rule{border:3px solid;border-radius:99px;padding:.2rem .9rem;background:#fffaf0}
-.lab-feedback{min-block-size:1.4rem;text-align:center;color:#5d4a17;font-weight:600}
-.lab-count{font-size:4rem;font-weight:800;color:#1e4634;text-align:center;margin:auto}
+.lab-feedback{min-block-size:1.4rem;text-align:center;color:var(--lab-gold);font-weight:600}
+.lab-count{font-size:4rem;font-weight:800;color:var(--lab-accent);text-align:center;margin:auto}
 .lab-results{text-align:center}
-.lab-results .score{font-size:3rem;font-weight:800;color:#1e4634;margin:.2rem 0}
+.lab-results .score{font-size:3rem;font-weight:800;color:var(--lab-accent);margin:.2rem 0}
 .lab-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(6.5rem,1fr));gap:.5rem;margin:1rem 0}
 .lab-stats div{background:#fffaf0;border:1px solid #e2d6b8;border-radius:12px;padding:.5rem}
 .lab-stats b{display:block;font-size:1.3rem}
@@ -113,14 +118,14 @@ const CSS = `
 .lab-game{flex-direction:row;align-items:flex-start;gap:.75rem}
 .lab-game .body{display:flex;flex-direction:column;gap:.2rem;min-inline-size:0;flex:1}
 .lab-new{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:#a8442f;color:#fffaf0;border-radius:99px;padding:.05rem .5rem;margin-inline-start:.35rem;vertical-align:middle}
-.lab-teaches{font-size:.85rem;color:#1e4634;font-weight:600}
+.lab-teaches{font-size:.85rem;color:var(--lab-accent);font-weight:600}
 .lab-group{margin:1rem 0 .3rem;font-size:1.05rem;display:flex;align-items:center;gap:.5rem}
 .lab-group::before{content:"";inline-size:.8rem;block-size:.8rem;border-radius:3px;background:var(--sk)}
 .lab-plan .lab-token{inline-size:40px;block-size:40px}.lab-plan .lab-token-glyph .he{font-size:.95rem}
 /* intro and results */
 .lab-cover{display:block;inline-size:100%;block-size:auto;aspect-ratio:2/1;object-fit:cover;border-radius:14px}
 .lab-win-art{display:block;inline-size:180px;block-size:180px;margin:0 auto;object-fit:contain}
-.lab-stars{font-size:2rem;letter-spacing:.2rem;color:#c9952c;margin:0}
+.lab-stars{font-size:2rem;letter-spacing:.2rem;color:var(--lab-gold);margin:0}
 .lab-met{list-style:none;padding:0;margin:.6rem 0;display:grid;gap:.4rem;text-align:start}
 .lab-met li{display:flex;align-items:center;gap:.6rem;background:#fffaf0;border:1px solid #e2d6b8;border-radius:12px;padding:.4rem .7rem}
 .lab-met .he{font-size:1.35rem;line-height:1.3}
@@ -158,7 +163,7 @@ const CSS = `
 .lab-turns .btn{min-inline-size:6rem;min-block-size:56px;font-size:1.05rem;display:inline-flex;align-items:center;justify-content:center;gap:.4rem}
 /* Café Order */
 .lab-cafe{display:flex;flex-direction:column;align-items:center;gap:.4rem;inline-size:100%}
-.lab-who{margin:0;font-weight:700;color:#1e4634;display:flex;align-items:center;gap:.5rem}
+.lab-who{margin:0;font-weight:700;color:var(--lab-accent);display:flex;align-items:center;gap:.5rem}
 .lab-face{inline-size:56px;block-size:56px;border-radius:50%;object-fit:cover;border:3px solid #d4a647;background:#fffaf0}
 .lab-menu-pic{inline-size:56px;block-size:56px;object-fit:contain}
 .lab-ticket{min-block-size:6.5rem;min-inline-size:12rem;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fffaf0;border:2px dashed #b38a2e;border-radius:12px;padding:.4rem 1rem}
@@ -171,11 +176,12 @@ const CSS = `
 .lab-link.is-given{color:#5d6b60}
 .lab-link.is-right{color:#1e4634;font-weight:700}
 .lab-link.is-name{color:#8a6d1f;font-weight:700}
-.lab-link.is-next{color:#b38a2e}
+.lab-link.is-next{color:#8a6d1f}
 .lab-link.is-reveal{color:#a8442f;text-decoration:underline dotted}
 .lab-chain-en{display:block;margin-block-start:.2rem;font-weight:400}
 .lab-chain-opts{flex-wrap:wrap;gap:.5rem}
-.lab-chain-opt{min-block-size:56px;min-inline-size:7rem}
+.lab-chain-opt{min-block-size:56px;min-inline-size:7rem;display:inline-flex;flex-direction:column;align-items:center;gap:0;line-height:1.2}
+.lab-chain-opt .lab-val{font-size:.8rem;font-weight:400}
 /* ordered board pictures (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md), shown once approved; never under high contrast */
 .lab-has-art{background-size:cover;background-position:center}
 .lab-board.lab-has-art{border-radius:14px;padding:.6rem}

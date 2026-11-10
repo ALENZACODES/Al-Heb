@@ -6,6 +6,7 @@
 // results card; env.rimon(action) lets Rimon react (optional, never needed to play).
 import { randInt, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, chainTrial, lineWords } from './lab.core.js';
 import { kit } from './lab.games.js';
+import { transliterate } from '../pronunciation/transliterate.js';
 
 const { getJSON, once, grid, big, mark, loadLetters } = kit;
 const loadWords = (env) => once('labwords', () => getJSON(env, 'data/lab/words.json'));
@@ -254,7 +255,10 @@ const chain = {
         const step = t.steps[k];
         said.append(env.h('span', { class: 'lab-link is-next', 'aria-hidden': 'true' }, '…'));
         opts.replaceChildren(...step.options.map((w) => {
-          const b = env.h('button', { type: 'button', class: 'btn secondary lab-chain-opt', lang: 'he', dir: 'rtl', onclick: () => {
+          // Levels 1 to 3: each choice also shows how it is said, in the learner's tradition (barukh / borukh), so a
+          // beginner who cannot read every vowel yet can still follow the congregation.
+          const say = level <= 3 ? (() => { try { return transliterate(w, { tradition: env.tradition }); } catch { return ''; } })() : '';
+          const b = env.h('button', { type: 'button', class: 'btn secondary lab-chain-opt', lang: 'he', dir: 'rtl', 'aria-label': say ? `${w}, ${say}` : null, onclick: () => {
             said.lastChild.remove();
             if (w === step.word) { mark(b, true); said.append(env.h('span', { class: 'lab-link is-right' }, w)); k++; next(); }
             else {
@@ -264,7 +268,7 @@ const chain = {
               env.met({ he: [...t.given, ...t.steps.map((s) => s.word)].join(' '), en: title });
               finish({ ok: false, ms: env.now() - t0 });
             }
-          } }, env.heSpan(w, 'he lab-word'));
+          } }, env.heSpan(w, 'he lab-word'), say ? env.h('span', { class: 'lab-val', lang: 'en', dir: 'ltr' }, say) : null);
           return b;
         }));
       };

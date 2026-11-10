@@ -116,3 +116,13 @@ test('Rimon has a bubble line for every line a situation asks for; the 3-minute 
   assert.match(readFileSync('src/curriculum/lesson.parts.js', 'utf8'), /alef:lesson-part/);
   assert.match(readFileSync('src/retention/ui.js', 'utf8'), /&quick=1/);
 });
+
+test('launch hardening: the offline warm-up list names every file in the folder; one switch turns the system off', async () => {
+  const B = await import('../../src/retention/boot.js');
+  assert.deepEqual([...B.RETENTION_FILES].sort(), readdirSync('src/retention').sort(), 'RETENTION_FILES in boot.js must list the folder exactly');
+  assert.equal(B.RETENTION_ENABLED, true); assert.equal(B.RETENTION_OFF_KEY, 'retention.off');
+  const store = mem(); store.set(B.RETENTION_OFF_KEY, true);
+  assert.equal(await B.armRetention({ store }, { document: null }), null, 'switched off on this device: nothing is armed, nothing is touched');
+  assert.equal(store.get(RETENTION_KEY) ?? null, null);
+  assert.equal(await B.warmRetentionCache({ navigator: {} }), 0, 'no service worker: nothing to warm, no error');
+});

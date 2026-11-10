@@ -52,3 +52,21 @@ These are the honest limits of everything above.
 ## Bugs Found Across the Five Rounds
 
 Fifteen in the lane's own code, plus one in older code it touched: the 3-minute card wiped by the lesson redraw; a sitting and a round counted as finished lessons (two); finished lessons gated at zero hearts; league XP ranked before the league opened; travel grace lost; an unshown reminder recorded as sent; a calendar file starting on Friday; redraws dropping focus; a mismatched button name; an empty top bar on a first visit; the freeze note returning; double pay across tabs; focus lost after a purchase; and the printed "null". The older in-app streak banner showing on Saturday was the one in existing code. Fourteen of these have an automated test now (two were added after this round). One is still checked by hand only: the mismatched button name, by an axe run.
+
+## Launch Hardening (After Round 5, Before the 10 AM Check)
+
+The production build was made with `tools/build-static.mjs` and opened in Chrome under the GitHub Pages path `/Al-Heb/`, with the service worker on.
+
+| Check | Result |
+| --- | --- |
+| All 21 retention files are in the build, and none is in the first-install list | Yes |
+| Stylesheet applied, service-worker scope and the reminder plan file under the subpath | Correct (`/Al-Heb/__alef/rimon-plan.json`) |
+| Failed requests | One, not from retention: `data/images/approvals.json` is left out of the build by the build script |
+| **Offline right after a first visit** | **Failed, now fixed.** The retention files of a first visit were fetched before the service worker was in charge, so they were not cached; a learner who then went offline lost the top bar, the Shop and the League until the next online visit. Retention now fetches its own files once the worker controls the page (`warmRetentionCache` in `boot.js`). Re-checked on the production build and added as a browser test. |
+
+Also added for launch day:
+
+- **An off switch.** `RETENTION_ENABLED` in `src/retention/boot.js`: set it to `false` and deploy, and the whole system is off (nothing shown, nothing counted, stored data left alone). A single device can be switched off by setting the store key `retention.off` to `true`.
+- Friday as a free streak day was confirmed by the owner and is recorded in the code.
+
+Sixteen bugs in the lane's own code have now been found and fixed across the rounds; the offline one above is the sixteenth.

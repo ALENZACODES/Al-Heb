@@ -1,12 +1,14 @@
 // @ts-check
 // #/league: the weekly practice league. The honesty line is always first, above the table, and is never shortened.
 import { h, confetti, setKids } from './dom.js';
-import { retention } from './boot.js';
+import { retention, RETENTION_ENABLED, RETENTION_OFF_KEY } from './boot.js';
 import { HONESTY_LINE, LEAGUE, leagueView, timeLeftText, tierOf } from './leagues.js';
 import { gemsText } from './gems.js';
 import { showRimon } from './rimon.js';
 
 export function mount(root, ctx) {
+  let off = !RETENTION_ENABLED; try { off = off || ctx.store.get(RETENTION_OFF_KEY) === true; } catch { /* treat as on */ }
+  if (off) { root.replaceChildren(h('div', { class: 'stack' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'League'), h('p', {}, 'This part of ALEF is switched off for now.'), h('a', { class: 'btn', href: '#/' }, 'Back to Home'))); return () => {}; }
   const R = retention(ctx);
   const body = h('div', { class: 'stack' });
   let greeted = false;

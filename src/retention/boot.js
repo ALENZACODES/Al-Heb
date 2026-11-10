@@ -18,6 +18,28 @@ import { monthProgress, monthView } from './month.js';
 import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 
 const STREAK_KEY = 'streak';
+/** Owner switch: false turns the whole retention system off at the next deploy (nothing is shown, nothing is counted, stored data is left alone). */
+export const RETENTION_ENABLED = true;
+/** Store key a single device can set to true to switch retention off for itself (support and testing). */
+export const RETENTION_OFF_KEY = 'retention.off';
+/** Every file of this folder, so one online visit is enough for retention to work offline afterwards (kept in step by a test). */
+export const RETENTION_FILES = Object.freeze(['boot.js', 'clock.js', 'dom.js', 'gems.js', 'hearts.js', 'league.names.js', 'league.view.js', 'leagues.js', 'messages.js', 'month.js', 'notify.js', 'quests.js',
+  'quiet.js', 'recap.js', 'retention.css', 'rimon.js', 'shop.view.js', 'state.js', 'streak.js', 'ui.js', 'xp.js']);
+/**
+ * Fetch every retention file once the service worker controls the page, so its runtime cache holds them. Without this
+ * the files of a first visit are loaded before the worker is in charge and a learner who then goes offline loses the
+ * top bar and the two screens until the next online visit. Best effort; never throws.
+ */
+export async function warmRetentionCache(g = globalThis) {
+  try {
+    const swc = g.navigator?.serviceWorker; if (!swc || g.navigator.onLine === false) return 0;
+    await swc.ready;
+    if (!swc.controller) await Promise.race([new Promise((r) => swc.addEventListener('controllerchange', r, { once: true })), new Promise((r) => g.setTimeout(r, 8000))]);
+    if (!swc.controller) return 0;
+    const done = await Promise.all(RETENTION_FILES.map((f) => g.fetch(new URL('./' + f, import.meta.url).href).then((r) => (r.ok ? 1 : 0)).catch(() => 0)));
+    return done.reduce((a, b) => a + b, 0);
+  } catch { return 0; }
+}
 let api = null;
 
 /** The shared controller for this page (created on first use). @param {{store:any, settings?:any}} ctx */
@@ -203,6 +225,8 @@ export function retention(ctx, g = globalThis) {
 /** Boot hook: roll the day over, mount the top bar, listen for lesson events, arm reminders. Safe to call once per page. */
 export async function armRetention(ctx, g = globalThis) {
   if (g.__alefRetentionArmed) return retention(ctx, g);
+  let off = !RETENTION_ENABLED; try { off = off || ctx.store.get(RETENTION_OFF_KEY) === true; } catch { /* treat as on */ }
+  if (off) return null;
   g.__alefRetentionArmed = true;
   const doc = g.document, R = retention(ctx, g);
   const safe = (fn) => (...a) => { try { return fn(...a); } catch (e) { try { console.warn('retention', e); } catch { /* ignore */ } } };
@@ -234,5 +258,6 @@ export async function armRetention(ctx, g = globalThis) {
     if (pick) g.setTimeout(safe(() => showRimon(pick)), 2600);
   })();
   R.armNotifications();
+  warmRetentionCache(g);
   return R;
 }

@@ -2,7 +2,7 @@
 // #/shop: the streak-freeze shop, streak repair, hearts refill, and the retention switches (hearts, league, reminders).
 // Gems are earned in lessons only. Nothing here costs money.
 import { h, setKids } from './dom.js';
-import { retention } from './boot.js';
+import { retention, RETENTION_ENABLED, RETENTION_OFF_KEY } from './boot.js';
 import { CURRENCY, PRICES, gemsText, whyLabel } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
@@ -13,6 +13,8 @@ import { downloadReminder } from './ui.js';
 
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export function mount(root, ctx) {
+  let off = !RETENTION_ENABLED; try { off = off || ctx.store.get(RETENTION_OFF_KEY) === true; } catch { /* treat as on */ }
+  if (off) { root.replaceChildren(h('div', { class: 'stack' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Shop'), h('p', {}, 'This part of ALEF is switched off for now.'), h('a', { class: 'btn', href: '#/' }, 'Back to Home'))); return () => {}; }
   const R = retention(ctx);
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'ret-shop-status', tabindex: '-1' });
   const body = h('div', { class: 'stack' });

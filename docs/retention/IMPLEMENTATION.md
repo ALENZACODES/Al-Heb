@@ -175,6 +175,13 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - **The month's challenge.** One longer goal that runs with the Hebrew month, Rosh Chodesh to Rosh Chodesh, and is named after it ("Kislev Challenge"). The target is the learner's daily goal on 15 days of the month (300 XP at 20 a day), fixed when the month is first seen and smaller for a late start. Reaching it pays 50 gems once. Opens after 5 lessons; never in calm mode. Month names and dates come from the app's own calendar, so no new Hebrew was written. Code: `month.js`; numbers in `MONTH`.
 - **"Your Numbers"** on the Shop: total XP, lessons finished, best streak, freezes used.
 
+## Launch Switches
+
+- `RETENTION_ENABLED` in `src/retention/boot.js`: `false` turns the whole system off at the next deploy. Stored data is left alone.
+- Store key `retention.off` set to `true` turns it off on one device.
+- `STREAK.shabbatCoversFriday` (on, confirmed by the owner) and `STREAK.repairCountsToday` (off) in `streak.js`.
+- After one online visit the retention code is cached for offline use (`warmRetentionCache`).
+
 ## Hebrew
 
 The ten tier names are unreviewed. See `HEBREW-REVIEW.md`.

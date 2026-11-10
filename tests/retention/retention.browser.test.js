@@ -246,3 +246,23 @@ test('by hand until now: the goal picker keeps focus and stays open by keyboard;
     assert.deepEqual(b.errors, []); await b.close();
   });
 });
+
+test('launch hardening: one online visit is enough; offline afterwards the top bar and the league still work', { skip: !chromium || !fullChrome ? 'needs Playwright and a full Chrome' : false, timeout: 180000 }, async (t) => {
+  await withApp(async (_shell, base) => {
+    const browser = await chromium.launch({ executablePath: fullChrome, args: ['--no-sandbox'] }); t.after(() => browser.close());
+    const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+    await ctx.addInitScript((r) => { if (!localStorage.getItem('alef:settings')) { localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); localStorage.setItem('alef:retention.v1', JSON.stringify(r)); } }, ret());
+    const page = await ctx.newPage(); const errors = []; page.on('pageerror', (e) => errors.push(e.message));
+    await page.goto(base + '#/'); await page.waitForSelector('.ret-goal', { timeout: 30000 });
+    assert.ok(await page.evaluate(() => Promise.race([navigator.serviceWorker.ready.then(() => true), new Promise((r) => setTimeout(() => r(false), 90000))])), 'service worker ready');
+    let cached = 0;
+    for (let i = 0; i < 120 && cached < 21; i++) { cached = await page.evaluate(async () => { let n = 0; for (const name of await caches.keys()) for (const r of await (await caches.open(name)).keys()) if (/\/src\/retention\//.test(r.url)) n++; return n; }); if (cached < 21) await page.waitForTimeout(500); }
+    assert.equal(cached, 21, 'every retention file is cached after one visit');
+    await ctx.setOffline(true);
+    await page.goto(base + '#/league'); await page.reload();
+    await page.waitForSelector('.ret-table tbody tr', { timeout: 20000 });
+    assert.equal(await page.$$eval('.ret-bar .ret-chip', (n) => n.length), 4);
+    assert.deepEqual(errors, []);
+    await ctx.close();
+  });
+});

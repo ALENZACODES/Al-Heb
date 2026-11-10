@@ -55,6 +55,10 @@ test('Home: the first visit gets the hello still with its line, once', async () 
   assert.match(s.calls[0].line.en, /I'm Rimon/);
   const seen = s.store.get(SEEN_KEY);
   assert.equal(seen['greet.first'], true); assert.equal(seen.firstDay, '2026-11-12');
+  assert.equal(s.stage.greetedToday(), true, 'a greeting with a line counts for the day (retention keeps its own line back)');
+  s.setNow(new Date(2026, 10, 13, 14));
+  assert.equal(s.stage.greetedToday(), false, 'a new day');
+  s.setNow(new Date(2026, 10, 12, 14));
   s.calls.length = 0; await s.ready();
   assert.ok(!STILL_IDS['greet.first'].includes(s.calls[0]?.id), 'hello is not repeated');
   s.stage.destroy();
@@ -309,4 +313,20 @@ test('section-home screens (settings, vocab, games) get a page still, and urlsFo
     assert.ok(STILL_IDS[trigger].includes(num(urls[0])), `${situation} url ${urls[0]}`);
     s.stage.destroy();
   }
+});
+
+test('one greeting line a day the other way round: after a retention greeting, the stage greets without a line', async () => {
+  const store = () => createStore({ 'curriculum.progress': { completed: { l1: 1, l2: 1 } }, [SEEN_KEY]: { 'greet.first': true, firstDay: '2026-11-01' } });
+  const saturday = new Date(2026, 10, 14, 12); // Shabbat day: the stage's greeting has a line
+  const plain = setup({ store: store(), date: saturday });
+  await plain.stage.ready; await flush(5);
+  const own = plain.calls.find((c) => c.id && c.line);
+  assert.ok(own, 'without a retention greeting the stage says its Shabbat line');
+  const s = setup({ store: store(), date: saturday });
+  s.doc.dispatchEvent(ev('alef:rimon', { action: 'wave', situation: 'shabbat', say: { he: 'בְּרוּכִים הַשָּׁבִים!', en: 'WELCOME BACK!' }, retention: true }));
+  await s.stage.ready; await flush(5);
+  const hello = s.calls.find((c) => c.id && c.ms > 0);
+  assert.ok(hello, 'Rimon still poses for Shabbat');
+  assert.equal(hello.line, null, 'but says no second greeting line');
+  assert.equal(s.stage.greetedToday(), true);
 });

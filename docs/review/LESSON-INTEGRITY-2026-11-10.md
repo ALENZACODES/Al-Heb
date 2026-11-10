@@ -162,3 +162,31 @@ What would raise it:
 - A cantor's pass over the 20 synagogue lessons and a native speaker's over the 30 Israel lessons (+6, and it is the only thing that
   lets any line be marked reviewed).
 - Yom Kippur and festival greetings in I-28 and I-50, and an example word in r34 (+2).
+
+## Round 2 (2026-11-10, later the same night)
+
+### Plan to reach 95 to 100
+
+| Step | Gain | Status |
+|---|---|---|
+| Israel track as practical units: grammar notes, spaced unit review, listening and speaking drills, no new Hebrew | +3 | built this round (`#/israel-units`, [`../curriculum/ISRAEL-UNITS.md`](../curriculum/ISRAEL-UNITS.md)) |
+| Bring in the sourced Hallel verses and festival Kiddush from `feature/lesson-integrity-2026-11-10` | +3 | conflict resolution worked out; blocked on that branch's 35 failing tests ([`BRANCH-REVIEW-2026-11-10-R1.md`](BRANCH-REVIEW-2026-11-10-R1.md)) |
+| John's decisions on the eight name items and on the default rite, then applied | +4 | waiting for John |
+| Reform optional lines (matriarchs, Aleinu alternative) from a licensed source | +4 | needs a source and network access |
+| A cantor on the 20 synagogue lessons, a native speaker on the 30 Israel lessons and the unit grammar notes | +6 | needs people |
+| Sourced entries for the Yom Kippur greetings, then add them to I-28 and I-50 | +1 | needs a source |
+
+### Built this round
+
+The Israel track mapped onto practical units the way a structured conversation course is built: 13 units (Hello and Introductions,
+Sound Like a Local, Numbers and Prices, Cafe and Ordering Food, Shopping and Paying, Getting Around, Time Plans and the Phone, Verbs Now
+and Yesterday, People Family and Opinions, Health Help and Emergencies, Home Work and Study, Israeli Life, Capstone). Every il lesson is
+core and every Israel B1 lesson is "go further"; each unit says what the learner will be able to do, explains the pattern behind its
+phrases in one or two short notes, and has a unit review that comes back after 1, 3, 7, 14 and 30 days, a listening drill (hear the
+word's clip, pick the meaning, graded) and a speaking drill (English cue, say it aloud, check and hear it). Every Hebrew example and drill
+line is a verbatim line of that unit's own lessons, and the test fails on anything else. The route is preview, its code and data load on
+demand, and the grammar notes say they are not yet reviewed by a teacher.
+
+### Score
+
+**81 / 100** (estimate). The gain is the unit structure and drills; the rest of the plan above needs a decision, a source or a person.

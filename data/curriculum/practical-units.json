@@ -674,7 +674,7 @@
    "speakSets": [
     "speak-survival-directions-1"
    ],
-   "grammarNote": "Location questions use אֵיפֹה (“where”) or אֵיךְ מַגִּיעִים לְ… (“how does one get to…”), the second with an impersonal plural. Movement adverbs already in the phrasebook end in ־ָה: יָמִינָה, שְׂמֹאלָה, plus יָשָׁר for “straight.” Imperatives are gendered: לֵךְ / לְכִי, פְּנֵה / פְּנִי, stored on directions-08..10. Close-position phrases are frozen: עַל יַד (next to), מוּל (opposite), בַּפִּנָּה (on the corner). These notes only name forms that are already in the phrasebook and in I-15.",
+   "grammarNote": "Location questions use אֵיפֹה (“where”) or אֵיךְ מַגִּיעִים לְ… (“how does one get to…”), the second with an impersonal plural. Movement adverbs already in the phrasebook take a directional ending: יָמִינָה, שְׂמֹאלָה, plus יָשָׁר for “straight.” Imperatives are gendered: לֵךְ / לְכִי, פְּנֵה / פְּנִי, stored on directions-08..10. Close-position phrases are frozen: עַל יַד (next to), מוּל (opposite), בַּפִּנָּה (on the corner). These notes only name forms that are already in the phrasebook and in I-15.",
    "srsQueue": [
     {
      "position": 1,

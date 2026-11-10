@@ -3,9 +3,9 @@
 Automated check of every Practical item. This replaces the learner-facing native-review badge.
 The divine Name was never sent to text-to-speech.
 
-- Unique items tested: 677 (applied to 750 unit occurrences).
-- Pass: 645. Fail: 105. Blocked (Name): 0.
-- Estimated spend this run: US$0.4474 of a US$15 cap.
+- Unique items tested: 702 (applied to 750 unit occurrences).
+- Pass: 669. Fail: 81. Blocked (Name): 0.
+- Estimated spend this run: US$0.4644 of a US$15 cap.
 - TTS: he-IL-Wavenet-B (he-IL). STT: Google Cloud Chirp he-IL (see note). Translation: Cloud Translation or Gemini on Vertex.
 
 **STT note:** Google Cloud STT Chirp (Speech-to-Text v2) is not callable with the existing API keys (v2 requires OAuth; Speech v1 is blocked on the TTS key). Each WaveNet he-IL clip was instead transcribed on Vertex by gemini-3.5-flash.
@@ -101,9 +101,9 @@ Items that still fail are hidden from the Practical UI and listed for Claude in 
 | pu-fillers | il02-w4 | בְּסֵדֶר | OK; all right | בסדר | 0.00 | OK; all right | בְּסֵדֶר | pass | ok |
 | pu-fillers | il02-w5 | אַחְלָה | great | אחלה | 0.00 | great | אַחְלָה | pass | ok |
 | pu-fillers | il02-w6 | וַואלָה | really? wow | וואלה | 0.00 | really? wow | וַואלָה | pass | ok |
-| pu-fillers | il23-w1 | רֹאשׁ | head (uvular vs tapped resh) |  |  |  |  | fail | not-tested |
-| pu-fillers | il23-w2 | חַיִּים | life (chet, not kaf) |  |  |  |  | fail | not-tested |
-| pu-fillers | il23-w3 | מַה שְׁלוֹמְךָ | how are you (to a man; stress on the last syllable) |  |  |  |  | fail | not-tested |
+| pu-fillers | il23-w1 | רֹאשׁ | head (uvular vs tapped resh) | ראש | 0.00 | head (uvular vs tapped resh) | רֹאשׁ | pass | ok |
+| pu-fillers | il23-w2 | חַיִּים | life (chet, not kaf) | חיים | 0.00 | life (chet, not kaf) | חַיִּים | pass | ok |
+| pu-fillers | il23-w3 | מַה שְׁלוֹמְךָ | how are you (to a man; stress on the last syllable) | מה שלומך | 0.00 | how are you (to a man; stress on the last syllable) | מַה שְׁלוֹמְךָ | pass | ok |
 | pu-numbers | numbers-01 | אֶחָד | one (1) | אחת | 1.00 | one (1) | אֶחָד | fail | stt-wer=1.00 |
 | pu-numbers | numbers-02 | שְׁנַיִם | two (2) | שניים | 1.00 | two (2) | שְׁנַיִם | pass | ok |
 | pu-numbers | numbers-03 | שְׁלוֹשָׁה | three (3) | שלושה | 0.00 | three (3) | שְׁלוֹשָׁה | pass | ok |
@@ -728,19 +728,19 @@ Items that still fail are hidden from the Practical UI and listed for Claude in 
 | pu-news | i-47-w10 | אֶתְמוֹל | yesterday | אתמול | 0.00 | yesterday | אֶתְמוֹל | pass | ok |
 | pu-news | i-47-w11 | אֵין | there isn't | ן | 1.00 | there isn't | אֵין | fail | stt-wer=1.00 |
 | pu-news | i-47-w12 | יֵשׁ | there is | יש | 0.00 | there is | יֵשׁ | pass | ok |
-| pu-verbs-now | il16-w1 | אֲנִי הוֹלֵךְ | I go (m.) |  |  |  |  | fail | not-tested |
-| pu-verbs-now | il16-w2 | אֲנִי אוֹכֵל | I eat (m.) |  |  |  |  | fail | not-tested |
-| pu-verbs-now | il16-w3 | אֲנִי לוֹמֵד | I study (m.) |  |  |  |  | fail | not-tested |
-| pu-verbs-now | il16-w4 | אֲנִי כּוֹתֵב | I write (m.) |  |  |  |  | fail | not-tested |
-| pu-verbs-now | il16-w5 | אֲנִי מְדַבֵּר | I speak (m.) |  |  |  |  | fail | not-tested |
-| pu-past | il19-w1 | הָלַכְתִּי | I went |  |  |  |  | fail | not-tested |
-| pu-past | il19-w2 | אָכַלְתִּי | I ate |  |  |  |  | fail | not-tested |
-| pu-past | il19-w3 | רָאִיתִי | I saw |  |  |  |  | fail | not-tested |
-| pu-past | il19-w4 | אָמַרְתִּי | I said |  |  |  |  | fail | not-tested |
-| pu-past | il19-w5 | הָיָה | there was; he was |  |  |  |  | fail | not-tested |
-| pu-decide | il24-w1 | מַה קָרָה | what happened |  |  |  |  | fail | not-tested |
-| pu-decide | il24-w2 | תַּסְבִּיר לִי | explain it to me (to a man) |  |  |  |  | fail | not-tested |
-| pu-decide | il24-w3 | בּוֹא נַחֲלִיט | let's decide |  |  |  |  | fail | not-tested |
+| pu-verbs-now | il16-w1 | אֲנִי הוֹלֵךְ | I go (m.) | אני הולך | 0.00 | I go (m.) | אֲנִי הוֹלֵךְ | pass | ok |
+| pu-verbs-now | il16-w2 | אֲנִי אוֹכֵל | I eat (m.) | אני אוכל | 0.00 | I eat (m.) | אֲנִי אוֹכֵל | pass | ok |
+| pu-verbs-now | il16-w3 | אֲנִי לוֹמֵד | I study (m.) | אני לומד | 0.00 | I study (m.) | אֲנִי לוֹמֵד | pass | ok |
+| pu-verbs-now | il16-w4 | אֲנִי כּוֹתֵב | I write (m.) | אני כותב | 0.00 | I write (m.) | אֲנִי כּוֹתֵב | pass | ok |
+| pu-verbs-now | il16-w5 | אֲנִי מְדַבֵּר | I speak (m.) | אני מדבר | 0.00 | I speak (m.) | אֲנִי מְדַבֵּר | pass | ok |
+| pu-past | il19-w1 | הָלַכְתִּי | I went | הלכתי | 0.00 | I went | הָלַכְתִּי | pass | ok |
+| pu-past | il19-w2 | אָכַלְתִּי | I ate | אכלתי | 0.00 | I ate | אָכַלְתִּי | pass | ok |
+| pu-past | il19-w3 | רָאִיתִי | I saw | ראיתי | 0.00 | I saw | רָאִיתִי | pass | ok |
+| pu-past | il19-w4 | אָמַרְתִּי | I said | אמרתי | 0.00 | I said | אָמַרְתִּי | pass | ok |
+| pu-past | il19-w5 | הָיָה | there was; he was | היה | 0.00 | there was; he was | הָיָה | pass | ok |
+| pu-decide | il24-w1 | מַה קָרָה | what happened | מה קרה | 0.00 | what happened | מַה קָרָה | pass | ok |
+| pu-decide | il24-w2 | תַּסְבִּיר לִי | explain it to me (to a man) | תסבירי לי | 0.50 | explain it to me (to a man) | תַּסְבִּיר לִי | pass | ok |
+| pu-decide | il24-w3 | בּוֹא נַחֲלִיט | let's decide | בואנה חלית | 1.00 | let's decide | בּוֹא נַחֲלִיט | fail | stt-wer=1.00 |
 | pu-shabbat | i-19-w1 | שַׁבָּת שָׁלוֹם | peaceful Sabbath (greeting from Friday afternoon to Saturday) | שבת שלום | 0.00 | peaceful Sabbath (greeting from Friday afternoon to Saturday) | שַׁבָּת שָׁלוֹם | pass | ok |
 | pu-shabbat | i-19-w2 | שָׁבוּעַ טוֹב | a good week (said once Shabbat ends) | שבוע טוב | 0.00 | a good week (said once Shabbat ends) | שָׁבוּעַ טוֹב | pass | ok |
 | pu-shabbat | i-19-w3 | אֲרוּחָה | meal | ארוחה | 0.00 | meal | אֲרוּחָה | pass | ok |
@@ -759,12 +759,12 @@ Items that still fail are hidden from the Practical UI and listed for Claude in 
 | pu-holidays | i-50-w2 | שָׁבוּעַ טוֹב | good week | שבוע טוב | 0.00 | good week | שָׁבוּעַ טוֹב | pass | ok |
 | pu-holidays | i-50-w3 | חַג שָׂמֵחַ | happy holiday | חג שמח | 0.00 | happy holiday | חַג שָׂמֵחַ | pass | ok |
 | pu-holidays | i-50-w4 | שָׁנָה טוֹבָה | happy new year (Rosh Hashana greeting) | שנה טובה | 0.00 | happy new year (Rosh Hashana greeting) | שָׁנָה טוֹבָה | pass | ok |
-| pu-holidays | i-50-w5 | מַזָּל טוֹב | congratulations |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w6 | לְחַיִּים | cheers! |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w7 | בְּהַצְלָחָה | good luck |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w8 | תִּשְׁמֹר עַל עַצְמְךָ | take care of yourself (said to a man) |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w9 | לִבְרִיאוּת | to your health |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w11 | יוֹם נָעִים | have a nice day |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w12 | סְלִיחָה | forgiveness, pardon |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w13 | גְּמַר חֲתִימָה טוֹבָה | a good final sealing (Yom Kippur greeting) |  |  |  |  | fail | not-tested |
-| pu-holidays | i-50-w14 | תִּשְׁמְרִי עַל עַצְמֵךְ | take care of yourself (said to a woman) |  |  |  |  | fail | not-tested |
+| pu-holidays | i-50-w5 | מַזָּל טוֹב | congratulations | מזל טוב | 0.00 | congratulations | מַזָּל טוֹב | pass | ok |
+| pu-holidays | i-50-w6 | לְחַיִּים | cheers! | לחיים | 0.00 | cheers! | לְחַיִּים | pass | ok |
+| pu-holidays | i-50-w7 | בְּהַצְלָחָה | good luck | בהצלחה | 0.00 | good luck | בְּהַצְלָחָה | pass | ok |
+| pu-holidays | i-50-w8 | תִּשְׁמֹר עַל עַצְמְךָ | take care of yourself (said to a man) | תשמור על עצמך | 0.33 | take care of yourself (said to a man) | תִּשְׁמֹר עַל עַצְמְךָ | pass | ok |
+| pu-holidays | i-50-w9 | לִבְרִיאוּת | to your health | לבריאות | 0.00 | to your health | לִבְרִיאוּת | pass | ok |
+| pu-holidays | i-50-w11 | יוֹם נָעִים | have a nice day | יום נעים | 0.00 | have a nice day | יוֹם נָעִים | pass | ok |
+| pu-holidays | i-50-w12 | סְלִיחָה | forgiveness, pardon | סליחה | 0.00 | forgiveness, pardon | סְלִיחָה | pass | ok |
+| pu-holidays | i-50-w13 | גְּמַר חֲתִימָה טוֹבָה | a good final sealing (Yom Kippur greeting) | גמר חתימה טובה | 0.00 | a good final sealing (Yom Kippur greeting) | גְּמַר חֲתִימָה טוֹבָה | pass | ok |
+| pu-holidays | i-50-w14 | תִּשְׁמְרִי עַל עַצְמֵךְ | take care of yourself (said to a woman) | תשמרי על עצמך | 0.00 | take care of yourself (said to a woman) | תִּשְׁמְרִי עַל עַצְמֵךְ | pass | ok |

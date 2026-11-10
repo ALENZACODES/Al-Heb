@@ -130,7 +130,10 @@ export function mount(root, ctx) {
     const goalFs = fieldset(GOAL_QUESTION, 'This is your goal, not your level. You can choose any goal as a beginner.', ...GOAL_CHOICES.map((g) => radio('goal', g.id, g.label, g.desc, goal === g.id, (v) => { goal = v; explainNext(); setMeter(page, goal); }, icon(g.id))));
     const dailyFs = fieldset(DAILY_QUESTION, 'Your streak counts any day you study 5 minutes or more. Change this any time.',
       ...DAILY_CHOICES.map((c) => radio('daily', String(c.min), `${c.min} minutes a day`, c.note ? `${c.label} · ${c.note}` : c.label, daily === c.min, (v) => { daily = Number(v); }, h('span', { class: 'ob-min', 'aria-hidden': 'true' }, String(c.min)))));
-    const pageBox = (name, ...kids) => h('div', { class: 'ob-page', 'data-page': name }, rimon(RIMON_LINES[name], name === 'level' ? 'wave' : name === 'goal' ? 'point' : 'bounce'), ...kids);
+    // each page's Rimon starts on the wave sheet the first page already loaded, and plays its own move when its page opens,
+    // so the first screen downloads one move sheet, not three
+    const pageMove = { level: 'wave', goal: 'point', daily: 'bounce' }, pageRimon = {};
+    const pageBox = (name, ...kids) => { const r = rimonSays(RIMON_LINES[name], { action: 'wave', ariaHidden: true }); pageRimon[name] = r.rimon; return h('div', { class: 'ob-page', 'data-page': name }, r.el, ...kids); };
     const levelNext = h('button', { type: 'button', class: picked ? 'btn ob-cta' : 'btn ob-cta is-waiting', id: 'ob-page-next', 'aria-disabled': picked ? null : 'true', onclick: () => nextPage() }, 'Continue');
     const goalNext = h('button', { type: 'button', class: 'btn ob-cta', id: 'ob-goal-next', onclick: () => nextPage() }, 'Continue');
     const form = h('form', { id: 'ob-form-letters', 'data-page': page, onsubmit: (e) => {
@@ -149,7 +152,7 @@ export function mount(root, ctx) {
         h('div', { class: 'ob-foot-page', 'data-page': 'goal' }, goalNext),
         h('div', { class: 'ob-foot-page', 'data-page': 'daily' }, h('button', { type: 'submit', class: 'btn ob-cta', id: 'ob-letters-continue' }, 'Continue'))));
     const showPage = (name) => {
-      page = name; form.setAttribute('data-page', name); setMeter(name, goal);
+      page = name; form.setAttribute('data-page', name); setMeter(name, goal); try { if (name !== 'level') pageRimon[name]?.play?.(pageMove[name]); } catch { /* Rimon is decoration */ }
       setTop(name === 'level' ? (rec ? backBtn(() => go('plan'), 'Back to my plan') : null) : backBtn(() => showPage(name === 'daily' ? 'goal' : 'level')));
       toTop();
       const first = form.querySelector(`.ob-page[data-page="${name}"] input:checked`) || form.querySelector(`.ob-page[data-page="${name}"] input`);

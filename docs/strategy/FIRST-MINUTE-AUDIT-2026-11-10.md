@@ -166,6 +166,21 @@ Checks this round: the new unit test for the run of right answers and the browse
 
 Headless sweep at phone size of Home, Learn, Progress, Brain Lab, Games, Settings and Read: no script errors, no sideways scrolling. One fix: Brain Lab's "Your Skills" heading sat against the workout card; it now has the standard 1.5 rem gap.
 
+## Round 8 (2026-11-10, about 7 AM): a lighter first screen
+
+Measured with headless Chromium on the local server, cold load of the welcome screen, no service worker (uncompressed bytes; GitHub Pages compresses JSON, so the real transfer is smaller):
+
+| | Before | After |
+|---|---|---|
+| Bytes before the first question can be answered | 2,301 KB, 104 requests | 1,642 KB, 102 requests |
+
+| # | What was heavy | Fix |
+|---|---|---|
+| 1 | Setup downloaded the whole lesson file (462 KB) to build the plan | Setup reads `data/curriculum/lessons.index.json` (17 KB: id, track, level, title, minutes, prerequisites), written by `tools/curriculum/lessons-index.mjs`. If the index cannot be read it falls back to the full file. A unit test fails if the index is stale, and checks that every starting level and goal gives the same plan from the index as from the full file |
+| 2 | All three setup pages loaded their own Rimon move sheet (about 100 KB each) up front | Each page's Rimon starts on the wave sheet the first page already uses and plays its own move when its page opens |
+
+Not measured: a real phone on a slow network.
+
 ## Score
 
-Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 8: 95/100 (before this round: 94; the first screen downloads about 660 KB less). Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

@@ -210,8 +210,8 @@ async function speakBlock(ctx, setId, fallbackNote) {
     el("p", {}, el("a", { href: "#/speak" }, "Open the Say it page"), " for more speaking practice."),
     set ? el("ul", {}, ...(set.items || []).map((it) => el("li", { "data-speak": it.id },
       heText(it.he, "alef-he"), " ", el("span", { class: "muted" }, it.en || ""),
-      it.audioId ? playBtn(ctx, it.kind === "word" ? "word" : "line", it.audioId, it.en) : el("span", { class: "muted" }, " No clip id yet."))))
-      : el("p", { class: "muted" }, `Could not load ${setId}.`));
+      it.audioId ? playBtn(ctx, it.kind === "word" ? "word" : "line", it.audioId, it.en) : el("span", { class: "muted" }, " No recording yet."))))
+      : el("p", { class: "muted" }, "The speaking lines could not be loaded. Try again when you are online."));
 }
 
 function listenList(ctx, unit, ids, items, clipMap) {
@@ -398,12 +398,11 @@ export function mount(root, ctx) {
       return;
     }
     renderUnit(root, ctx, index, unit, { covers, progress, results });
-  })().catch((err) => {
+  })().catch(() => {
     if (!alive) return;
     root.replaceChildren(el("article", { class: "card" },
       el("h1", { id: "view-title" }, "Practical"),
-      el("p", {}, "The practical units could not be loaded."),
-      el("p", { class: "muted" }, String(err && err.message ? err.message : err))));
+      el("p", { role: "alert" }, "The practical units could not be loaded. Check your connection and try again.")));
   });
   return () => { alive = false; };
 }

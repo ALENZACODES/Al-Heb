@@ -98,7 +98,7 @@ export function leagueOn(rec, { calm = false } = {}) {
 
 /** Count XP toward the league: inside the week it adds to weekXp; from Friday 14:00 to Saturday night it is carried to next week. */
 export function addLeagueXp(rec, amount, now = Date.now()) {
-  if (!(amount > 0)) return rec;
+  if (!(amount > 0) || !leagueOn(rec)) return rec; // XP earned before the league opens (5 lessons) or while it is switched off is not ranked
   const r = clone(rec), wk = weekIdOf(now);
   if (!r.league.weekId) { r.league.weekId = wk; r.league.weekXp = 0; r.league.joined = false; }
   if (r.league.weekId === wk && now < leagueEnd(wk) && r.league.settled !== wk) { r.league.weekXp += amount; r.league.joined = true; }

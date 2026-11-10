@@ -108,5 +108,7 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const visibility=()=>render();doc.addEventListener('visibilitychange',visibility);
   globalThis.addEventListener('resize',position);globalThis.addEventListener('scroll',position,{passive:true,capture:true});
   render();
-  return {say,line,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
+  /** Say one {he,en} pair now. */
+  function sayLine(line){if(!line||!line.en)return;message=line;expires=now().getTime()+Math.max(6500,line.en.length*160);render();}
+  return {say,line,sayLine,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
 }

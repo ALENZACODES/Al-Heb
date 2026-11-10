@@ -94,6 +94,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     const goTo = (n) => {
       cur = Math.max(0, Math.min(plan.length - 1, n));
       persist({ chunk: cur });
+      try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:lesson-part", { detail: { lessonId: lesson.id, part: cur, of: plan.length } })); } catch { /* optional: the 3-minute lesson listens for this (src/retention/) */ }
       draw();
       wrap.querySelector?.("#alef-part-title")?.focus?.({ preventScroll: true });
       try { globalThis.scrollTo?.(0, 0); } catch { /* optional */ }

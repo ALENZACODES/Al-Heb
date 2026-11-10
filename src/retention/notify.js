@@ -8,6 +8,7 @@ import { clone, CAPS } from './state.js';
 import { dayKey, addDaysISO, localAt, minuteOfDay, weekdayOf, daysBetween } from './clock.js';
 import { isQuiet, quietRanges, NIGHT } from './quiet.js';
 import { isFreeRestDay } from './streak.js';
+import { yomTovDates } from '../curriculum/streak.js';
 import { MESSAGES, byTier, messageById } from './messages.js';
 import { fnv1a } from './leagues.js';
 
@@ -16,7 +17,7 @@ export const NOTIFY = Object.freeze({
   sessionGapMs: 30 * 60000, defaultMinute: 19 * 60, aboutADayMs: 23.5 * 3600000, nearMs: 2 * 3600000,
   minGapMs: 3 * 3600000, noRepeatWindow: 10, maxAheadDays: 8, lateGraceMs: 10 * 60000, maxTimerMs: 6 * 3600000,
   saverMinute: 20 * 60, saverMinStreak: 3, saverKindStreak: 7, stopAfterDays: 14,
-  askAgainAfterLessons: 3, maxAsks: 2,
+  askAgainAfterLessons: 3, maxAsks: 2, nearPromoteXp: 30,
   cacheName: 'alef-retention', planPath: '__alef/rimon-plan.json', syncTag: 'alef-rimon', syncMinIntervalMs: 12 * 3600000,
 });
 
@@ -113,21 +114,24 @@ export function plan(rec, streak = { count: 0, activeToday: false }, now = Date.
   const tooSoon = (ms) => N.sent.some((s) => Math.abs(ms - s.at) < NOTIFY.minGapMs);
   const entry = (fireAt, m, route = NOTIFY.route) => ({ fireAt, id: m.id, title: NOTIFY.title, body: m.body, route });
   const n = streak.count || 0, mode = opt.mode || 'reform';
+  const afterChag = (ms) => { const y = addDaysISO(dayKey(ms), -1); return yomTovDates(y, y, mode).has(y); }; // the day after a Yom Tov day
   let c = nextFire(rec, now, opt);
   for (let guard = 0; c && guard < NOTIFY.maxAheadDays; guard++) {
-    const d = daysAway(rec, c, mode); let m = null;
+    const d = daysAway(rec, c, mode); let m = null, route = NOTIFY.route;
     if (!sentToday(c) && !tooSoon(c)) {
       const tier = tierFor(d, N.tone);
       if (tier === 'S09') m = pickMessage({ tier: 'S09' });
       else if (tier) {
         const afterRest = weekdayOf(dayKey(c)) === 0 && !N.sent.some((s) => c - s.at < 2 * 86400000 && s.id === 'S01');
         if (rec.freezes.unseen && n >= 2) m = pickMessage({ tier: 'S03', n });
+        else if (afterChag(c) && d >= 1 && !N.sent.some((s) => c - s.at < 2 * 86400000 && s.id === 'S02')) m = pickMessage({ tier: 'S02' });
         else if (afterRest && d >= 1) m = pickMessage({ tier: 'S01' });
-        else if (opt.leagueDone && weekdayOf(dayKey(c)) === 5) m = pickMessage({ tier: 'S06' });
+        else if (opt.leagueDone && weekdayOf(dayKey(c)) === 5) { m = pickMessage({ tier: 'S06' }); route = '#/league'; }
+        else if (opt.toPromote > 0 && opt.toPromote <= NOTIFY.nearPromoteXp && weekdayOf(dayKey(c)) === 4) { m = pickMessage({ tier: 'S07' }); route = '#/league'; }
         m = m || pickMessage({ tier, sent: N.sent, installId: rec.installId, n, next: opt.next });
       }
     }
-    if (m) { out.push(entry(c, m)); break; }
+    if (m) { out.push(entry(c, m, route)); break; }
     if (d > NOTIFY.stopAfterDays) break;
     const nextDay = addDaysISO(dayKey(c), 1); c = localAt(nextDay, clampDay(typicalMinute(rec.sessions, now)));
     while (c && isQuiet(c, opt) && daysBetween(dayKey(now), dayKey(c)) <= NOTIFY.maxAheadDays) c = localAt(addDaysISO(dayKey(c), 1), clampDay(typicalMinute(rec.sessions, now)));
@@ -204,7 +208,7 @@ export function createScheduler(env) {
     const t = now(), rec = env.load(), o = env.opt?.() || {};
     for (const e of entries) {
       if (!mayShow(rec, e, t, o)) continue;
-      try { await env.show(e.title, e.body, { tag: NOTIFY.tag, icon: NOTIFY.icon, route: e.route }); env.save((r) => recordSent(r, e.id, t)); } catch { /* showing is best effort */ }
+      try { const res = await env.show(e.title, e.body, { tag: NOTIFY.tag, icon: NOTIFY.icon, route: e.route }); if (!res || res.ok !== false) env.save((r) => recordSent(r, e.id, t)); } catch { /* showing is best effort */ }
       break;
     }
     arm();
@@ -221,4 +225,23 @@ export function createScheduler(env) {
   }
   return { arm, entries: () => entries, stop() { alive = false; if (timer !== null) clear(timer); timer = null; } };
 }
+
+// ---------- calendar fallback (iPhone, Firefox, any closed app) ----------
+const p2 = (n) => String(n).padStart(2, '0');
+/**
+ * A calendar file with one daily reminder at the learner's usual time, Sunday to Thursday only (never Friday or
+ * Saturday). Floating local time, so it follows the phone's own zone. Returns text/calendar with CRLF line endings.
+ */
+export function reminderICS(rec, now = Date.now()) {
+  const min = clampDay(typicalMinute(rec.sessions, now)); let d = new Date(now);
+  while (d.getDay() === 5 || d.getDay() === 6) d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1, 12); // the first event is never on a Friday or Saturday
+  const day = `${d.getFullYear()}${p2(d.getMonth() + 1)}${p2(d.getDate())}`, hhmm = `${p2(Math.floor(min / 60))}${p2(min % 60)}00`;
+  const end = min + 5, stamp = new Date(now).toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+  return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Aleph//Rimon reminder 1.0//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+    `UID:rimon-daily-${rec.installId}@alef.local`, `DTSTAMP:${stamp}`, `DTSTART:${day}T${hhmm}`, `DTEND:${day}T${p2(Math.floor(end / 60))}${p2(end % 60)}00`,
+    'RRULE:FREQ=DAILY;BYDAY=SU,MO,TU,WE,TH', 'SUMMARY:ALEF: a 3-minute Hebrew lesson', 'DESCRIPTION:A short reminder from Rimon. Open ALEF for one quick lesson.', 'TRANSP:TRANSPARENT',
+    'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:ALEF: a 3-minute Hebrew lesson', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
+}
+/** "7:15 pm": the time Rimon usually nudges, for the shop screen. */
+export function usualTimeText(rec, now = Date.now()) { const m = clampDay(typicalMinute(rec.sessions, now)), h = Math.floor(m / 60); return `${((h + 11) % 12) + 1}:${p2(m % 60)} ${h < 12 ? 'am' : 'pm'}`; }
 export { MESSAGES };

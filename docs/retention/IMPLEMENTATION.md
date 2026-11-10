@@ -41,6 +41,8 @@ New code, all under `src/retention/` and all loaded on demand (none of it is in 
 | `leagues.js`, `league.names.js` | Tiers, seeded cohort, standings, `settle`, 120 names |
 | `notify.js`, `messages.js`, `quiet.js` | Timing, tone ladder, message pick, in-page scheduler, plan file for the service worker, quiet hours |
 | `rimon.js` | `showRimon(situation)`: sends the app's `alef:rimon` event using the twelve drawn actions only |
+| `recap.js` | Weekly recap and welcome back: `lastWeek`, `recapDue`, `welcomeBack` |
+| `quests.js` | Daily quests: `dailyQuests`, `questProgress`, `questView` |
 | `boot.js` | Controller: listens for lesson, review and game events, rolls the day over, arms reminders |
 | `ui.js`, `dom.js`, `retention.css` | Top bar, goal ring, reward panel, out-of-hearts block |
 | `league.view.js`, `shop.view.js` | The two screens |
@@ -53,6 +55,8 @@ Small additions to existing files:
 | `src/shell/router.js`, `nav.strings.js`, `nav-model.js`, `views.generated.js` | Routes `/league` and `/shop` (preview tier) |
 | `src/curriculum/exercises.ui.js` | The answer event carries the question id and whether it is a retry; the end-card event carries the lesson time |
 | `src/curriculum/review.view.js` | Sends `alef:review-rated` after a card is rated |
+| `src/curriculum/lesson.view.js`, `lesson.parts.js` | `?quick=1` opens the short-parts player; it sends `alef:lesson-part` when a part changes |
+| `src/shell/rimon.js`, `rimon-speech.js` | Rimon's bubble can say a line sent with the event (`detail.say`) |
 | `src/games/engine.js`, `src/games/arcade.js` | Send `alef:game-finished` with the stars |
 | `sw.js` | `periodicsync` reminder check and a `notificationclick` handler |
 | `src/shell/privacy.view.js`, `src/shell/offline.js` | The new storage key and the on-demand group are listed for the learner |
@@ -105,14 +109,44 @@ The lane rules win over the spec where they disagree.
 
 ## Not Built
 
-- The "3-minute lesson" button and `?quick=1` lesson mode.
-- Rimon's new speech-bubble lines (welcome back, one more heart, moving up). Rimon animates for each moment; the bubble text needs a small change in `src/shell/rimon-speech.js`.
-- The seven-state streak card and the snowflake in the week strip. The streak line is shown inside the daily-goal card instead.
 - Settings-page controls. The switches are on `#/shop` and the goal picker is in the goal card.
-- The iPhone calendar-file fallback for reminders.
-- Situational lines S02, S05, S07 and S08 are in the catalogue but nothing sends them yet. S01, S03, S04, S06 and S09 are wired.
-- Automated browser tests for these screens. The screens were checked by hand in Chrome at 360 px (top bar, goal ring, shop purchase, league table, reward panel, zero-hearts gate, reduced motion, calm mode); the reward panel was driven with the app's own events, not a full lesson click-through.
+- Situational lines S05 and S08 are in the catalogue but nothing sends them. S05 (a Friday streak nudge) has no use while Friday is a free day; S08 (hearts full) would have to be sent on a day the learner already studied, which the "never after a session today" rule forbids. S01, S02, S03, S04, S06, S07 and S09 are wired.
 - Real leagues with other learners. That needs accounts, a server and a privacy review.
+
+## Added in the Second Pass
+
+- **3-minute lesson.** The Home goal card has a "3-minute lesson" button that opens the learner's next lesson with `?quick=1`, which uses the app's existing short-parts player. After four parts in one sitting a "Three Minutes Done" card pays 10 XP, counts the day for the streak (it does not count as a finished lesson, so it unlocks nothing and pays no first-lesson gems) and offers "Keep going" or "Done for today"; the lesson's place is already saved by the player. A lesson of four parts or fewer simply ends with its normal end card. The number of parts is `QUICK_PARTS` in `boot.js`.
+- **Rimon's bubble lines** for welcome back, goal reached, one more heart, moving up, the holiday greeting and the after-Shabbat greeting (`LINES` in `rimon.js`; the shell's Rimon shows a line sent as `detail.say`).
+- **Seven-day strip** in the goal card (`weekDots` in `streak.js`).
+- **Calendar fallback.** "Add a daily reminder to my calendar" on `#/shop`, and on iPhone in a browser tab the opt-in card offers it together with "How to add" to the Home Screen. The file repeats Sunday to Thursday at the learner's usual time, never Friday or Saturday (`reminderICS` in `notify.js`).
+- **Situational lines S02 and S07** (the day after Yom Tov; Thursday when the move-up line is within 30 XP).
+- **Browser tests**: `tests/retention/retention.browser.test.js` (advisory tier, like the repo's other browser tests). They pass locally in headless Chrome at 320, 360 and 390 px. A real 3-minute lesson was also walked by hand from the Home button to the end card: the reward panel and the reminder opt-in card appeared and XP, gems and the streak were saved.
+
+## Added in the Third Pass
+
+- **Streak card states.** The goal card on Home carries all seven states (`rest`, `done`, `freeze-used`, `at-risk`, `open`, `broken`, `new`) with its own line for each, and is a rest day from Friday 18:00, all Saturday, and on Yom Tov and its eve from 18:00, so it never says "at risk" then. Once a day, in the evening, Rimon looks worried about an unfinished day.
+- **The app's older in-app streak banner** (`src/morning/nudge.js`, "Rimon says: Please keep your streak going") used to stay quiet on Saturday only for learners in observant mode. It is now quiet for everyone from Friday 18:00, all Saturday and on Yom Tov.
+- **Fix:** the "Three Minutes Done" card was being wiped when the lesson player redrew the next part. It now sits above the lesson. This was found by clicking through a real six-part lesson, and that click-through is now a browser test.
+- Checked by hand in a real lesson: two wrong first answers took hearts from 5 to 3 and the top-bar chip followed.
+
+### Badges
+
+The app's 25 badges (`src/awards/`) already include the streak medallions, and they still come from the streak engine; a retention milestone and its badge arrive together. No new badges were added for leagues or daily goals, because each badge needs its own medallion picture.
+
+## Added in the Fourth Pass
+
+- **Daily quests.** Three small goals a day on Home ("Earn 20 XP", "Review 5 old cards", "Get 5 right in a row" and so on), the same three all day, chosen on the device from a seeded shuffle. Each pays 5 gems and all three pay 10 more. None on Saturday or Yom Tov, none in calm mode, and they open after the 2nd finished lesson. Code: `quests.js`; numbers in `QUESTS` and `POOL`.
+- **A first visit is left alone.** The top bar and the Home cards stay hidden until the learner has earned something (XP, a gem or a streak day), so the first screen is as simple as before. The lesson reward panel is where the system introduces itself.
+- **Reminder transparency.** The shop says when Rimon usually nudges ("around 7:15 pm") and has a "Send a test reminder" button, which also rests on Shabbat and holidays.
+- The Home card is headed "Daily XP Goal", because Home's own lesson card already has a "Daily goal" in minutes.
+- Review round 2 fixes are listed in `REVIEW-ROUND-2.md`.
+
+## Added in the Fifth Pass
+
+- **Welcome back.** After 7 or more days away the learner's hearts are filled for free and Home shows a "Welcome Back" card with one small step ("Warm up with old words"). It goes away once any XP is earned that day. Code: `recap.js` (`welcomeBack`); the number of days is `RECAP.comebackDays`.
+- **Weekly recap.** From Sunday, one card on Home sums up the week that just ended: XP, days studied, best day, the league result, and a bar for each day with its number. Shown once a week, never during Shabbat, never in calm mode. Code: `recap.js` (`lastWeek`, `recapDue`).
+- **Settings** now links to "Streak, hearts and reminders" (`#/shop`).
+- Review round 3 is recorded in `REVIEW-ROUND-3.md`.
 
 ## Hebrew
 

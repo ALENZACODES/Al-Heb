@@ -6,13 +6,15 @@ import { projectStreak, normalizeRecord } from '../curriculum/streak.js';
 import { calmOn, streakVisible } from '../shell/comfort.js';
 import { load, save, RETENTION_KEY } from './state.js';
 import { dayKey, deviceZone, localAt, addDaysISO } from './clock.js';
-import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus } from './streak.js';
+import { applyRollover, completeLessonDay, afterDayCompleted, streakStatus, weekDots, freezeNoteSeen } from './streak.js';
 import { award, lessonPayout, todayXp, XP } from './xp.js';
 import { heartsOn, loseHeart, practiceCard, refillByTime, startLesson, canStartLesson, isLessonHash, heartCount } from './hearts.js';
-import { settle, leagueOn } from './leagues.js';
+import { settle, leagueOn, leagueView } from './leagues.js';
 import { logSession, createScheduler, readShown, recordSent, registerPeriodicSync, daysAway } from './notify.js';
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
+import { questProgress, questView, questsOn } from './quests.js';
+import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 
 const STREAK_KEY = 'streak';
 let api = null;
@@ -22,6 +24,8 @@ export function retention(ctx, g = globalThis) {
   if (api) return api;
   const store = ctx.store, doc = g.document;
   const combo = { run: 0, max: 0 };
+  const QUICK_PARTS = 4; // parts of a lesson (about three minutes) that make one quick session
+  const quick = { hash: null, parts: 0 }; let lastFinish = { hash: '', at: 0 }, freezeNoteShown = false;
   let lessonHash = null, lastTouch = 0, quietOpt = { loc: null, mode: 'reform' }, scheduler = null, muteStreakSub = false, lastCount = 0, seq = 0;
   const now = () => Date.now();
   const get = () => refillByTime(load(store, now()), now());
@@ -33,39 +37,64 @@ export function retention(ctx, g = globalThis) {
   const opts = () => ({ calm: calm(), hash: g.location?.hash || '' });
   const later = (fn, ms) => g.setTimeout(() => { try { fn(); } catch { /* Rimon is optional */ } }, ms);
 
+  /** Count progress on today's quests, save it, and say each finished quest once. */
+  function questStep(amounts) {
+    const t = now(), cur = load(store, t), out = questProgress(cur, amounts, t, { calm: calm(), mode: quietOpt.mode });
+    if (out.rec !== cur) update(() => out.rec);
+    for (const text of out.done) say(`Quest done: ${text}. +5 gems.`);
+    if (out.chest) { say('All three quests done! +10 gems.'); later(() => showRimon('daily_goal'), 1500); }
+    return out;
+  }
+  /** Has the learner earned anything yet? Until then the top bar and the Home cards stay out of the way of a first visit. */
+  const revealed = () => { const r = load(store, now()); return r.xp.total > 0 || r.lessonsFinished > 0 || r.gems.balance > 0 || projectStreak(streakRaw(), now()).count > 0; };
   function rollover() {
     const t = now(), raw = streakRaw();
     const out = applyRollover(raw, load(store, t), t, { tz: deviceZone() });
     const s = settle(out.ret, t);
     if (out.streak !== raw && out.streak) { muteStreakSub = true; try { store.set(STREAK_KEY, out.streak); } finally { muteStreakSub = false; } }
-    update(() => refillByTime(s.rec, t));
+    const wb = welcomeBack(refillByTime(s.rec, t), t); // a week or more away: full hearts, and Home offers a small first step
+    update(() => wb.rec);
     lastCount = projectStreak(streakRaw(), t).count;
     quietOpt.mode = normalizeRecord(streakRaw()).mode;
-    return { events: out.events, result: s.result };
+    return { events: wb.back ? [...out.events, 'welcome_back'] : out.events, result: s.result };
   }
   function touch() { const t = now(); if (t - lastTouch < 60000) return; lastTouch = t; update((r) => logSession(r, t)); scheduler?.arm(); }
 
   /** A lesson's end card appeared. Returns what to show, or null when this finish was already paid. */
   function lessonFinished(detail = {}) {
-    const t = now(), rec = load(store, t), before = streakRaw();
-    const awardId = `lesson|${g.location?.hash || ''}|${detail.ms ?? ''}|${dayKey(t)}`;
+    const t = now(), rec = load(store, t), before = streakRaw(), here = g.location?.hash || '';
+    if (!detail.quick && lastFinish.hash === here && t - lastFinish.at < 30000) return null; // the same end card drawn again
+    if (!detail.quick) lastFinish = { hash: here, at: t };
+    const awardId = detail.quick ? `quick|${detail.lessonId}|${dayKey(t)}` : `lesson|${here}|${detail.ms ?? ''}|${dayKey(t)}`;
     const todayBefore = todayXp(rec, t);
-    const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t });
+    const partial = !!detail.quick || /^Round\b/.test(String(detail.title || '')), bestRun = combo.max; // one round of a longer lesson pays XP but is not a finished lesson
+    const pay = lessonPayout(rec, { awardId, accuracy: Number(detail.accuracy) || 0, maxCombo: combo.max, now: t, partial });
     if (pay.duplicate) return null;
     const after = completeLessonDay(before, t);
     muteStreakSub = true; try { store.set(STREAK_KEY, after); } finally { muteStreakSub = false; }
     const st = afterDayCompleted(before, after, pay.rec, t);
     const saved = update(() => logSession(startLesson(st.rec), t));
-    lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; lessonHash = null;
+    lastTouch = t; lastCount = st.count; combo.run = 0; combo.max = 0; if (!detail.quick) lessonHash = null;
     scheduler?.arm();
-    return { xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
+    const q = questStep({ xp: pay.xp, lesson: partial ? 0 : 1, sharp: !partial && Number(detail.accuracy) >= 0.9 ? 1 : 0, combo: bestRun });
+    return { quests: q.done, chest: q.chest, xp: pay.xp, parts: pay.parts, gems: pay.gems + st.gems + q.gems, goalCrossed: pay.goalCrossed, first: pay.first, todayBefore, todayAfter: todayXp(saved, t), goal: saved.goal,
       streak: { count: st.count, grew: st.grew, milestone: st.milestone }, heartsEmpty: heartsOn(saved, { calm: calm() }) && heartCount(saved, t) <= 0, calm: calm() };
+  }
+  /** The 3-minute lesson (?quick=1): after four parts in one sitting the day counts and XP is paid; the lesson's place is already saved. */
+  function partShown(detail = {}) {
+    const hash = g.location?.hash || '';
+    if (!/[?&]quick=1/.test(hash) || calm()) return null;
+    if (quick.hash !== hash) { quick.hash = hash; quick.parts = 0; }
+    quick.parts += 1;
+    if (quick.parts !== QUICK_PARTS || detail.part >= detail.of - 1) return null; // the last part leads to the lesson's own end card
+    const out = lessonFinished({ quick: true, lessonId: detail.lessonId || hash, accuracy: 0 });
+    return out ? { ...out, quick: true } : null;
   }
   function answered(detail = {}) {
     const hash = g.location?.hash || '';
     if (!/^#\/learn/.test(hash) || /[?&]review=1/.test(hash)) return;
     touch();
-    if (detail.action === 'correct') { combo.run += 1; combo.max = Math.max(combo.max, combo.run); return; }
+    if (detail.action === 'correct') { combo.run += 1; combo.max = Math.max(combo.max, combo.run); if (combo.run === 5 || combo.run === 8) questStep({ combo: combo.run }); return; }
     combo.run = 0;
     const rec = get();
     if (detail.retry || !heartsOn(rec, opts())) return;
@@ -84,12 +113,14 @@ export function retention(ctx, g = globalThis) {
     if (p.roundDone && p.xpEarned) rec = award(rec, { awardId: `refill|${t}|${seq}`, kind: 'refill', amount: XP.refillRound, now: t }).rec;
     update(() => rec);
     if (p.heartBack && heartsOn(rec, { calm: calm() })) { say('+1 heart! Memory, meet muscle.'); showRimon('heart_back'); }
+    questStep({ review: 1, xp: res.paid });
     if (res.goalCrossed) goalReached();
   }
   function gameFinished(detail = {}) {
     if (!(Number(detail.stars) >= 1)) return;
     const t = now(); const res = award(get(), { awardId: `game|${t}|${++seq}`, kind: 'game', amount: XP.game, now: t });
     update(() => logSession(res.rec, t));
+    questStep({ game: 1, xp: res.paid });
     if (res.goalCrossed) goalReached();
   }
   function goalReached() { if (calm()) return; say('Daily goal reached!'); later(() => showRimon('daily_goal'), 500); }
@@ -107,10 +138,11 @@ export function retention(ctx, g = globalThis) {
   /** A page was shown. Gate a NEW lesson at zero hearts; a lesson already under way is never interrupted. */
   function routeShown() {
     const hash = g.location?.hash || '';
+    if (freezeNoteShown) { freezeNoteShown = false; update((r) => freezeNoteSeen(r)); }
     if (!isLessonHash(hash)) { lessonHash = null; return { gate: false }; }
     if (hash === lessonHash) return { gate: false };
     const rec = get();
-    if (!canStartLesson(rec, opts(), now())) return { gate: true };
+    if (!canStartLesson(rec, opts(), now())) return { gate: true, hash };
     lessonHash = hash; combo.run = 0; combo.max = 0; update((r) => startLesson(r));
     return { gate: false };
   }
@@ -125,7 +157,7 @@ export function retention(ctx, g = globalThis) {
         load: () => load(store, now()), save: (fn) => save(store, fn, now()),
         streak: () => projectStreak(streakRaw(), now()),
         show: (title, body, o) => N.showNow(title, body, o),
-        opt: () => ({ ...quietOpt, calm: calm(), leagueDone: (() => { const r = load(store, now()); return r.league.joined && r.league.settled === r.league.weekId; })() }),
+        opt: () => { const r = load(store, now()), on = leagueOn(r, { calm: calm() }); return { ...quietOpt, calm: calm(), leagueDone: on && r.league.joined && r.league.settled === r.league.weekId, toPromote: on && r.league.joined ? leagueView(r, now()).toPromote : 0 }; },
         g,
       });
       scheduler.arm();
@@ -142,10 +174,15 @@ export function retention(ctx, g = globalThis) {
     return p;
   }
 
-  api = { get, update, streakRaw, calm, rollover, lessonFinished, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
+  api = { get, update, streakRaw, calm, rollover, lessonFinished, partShown, weekDots: () => weekDots(streakRaw(), get(), now()), freezeNoteShown: () => { freezeNoteShown = true; }, answered, reviewRated, gameFinished, streakChanged, routeShown, armNotifications, turnOnReminders,
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
-    rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx };
+    rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
+    comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
+    recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
+    questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode }), questsShown: () => questsOn(get(), { calm: calm() }),
+    /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
+    admit: (hash) => { lessonHash = hash; } };
   return api;
 }
 
@@ -163,6 +200,7 @@ export async function armRetention(ctx, g = globalThis) {
   doc.addEventListener('alef:ready', onReady);
   doc.addEventListener('alef:celebrate', safe((e) => { if (e.detail?.kind !== 'lesson') return; const out = R.lessonFinished(e.detail); if (out) UI.showReward(R, out, g); }));
   doc.addEventListener('alef:rimon', safe((e) => { const d = e.detail || {}; if (!d.retention && (d.action === 'correct' || d.action === 'wrong')) R.answered(d); }));
+  doc.addEventListener('alef:lesson-part', safe((e) => { const out = R.partShown(e.detail || {}); if (out) UI.showQuickDone(R, out, g); }));
   doc.addEventListener('alef:review-rated', safe((e) => R.reviewRated(e.detail || {})));
   doc.addEventListener('alef:game-finished', safe((e) => R.gameFinished(e.detail || {})));
   doc.addEventListener('visibilitychange', safe(() => { if (!doc.hidden) { R.rollover(); R.rearm(); } }));
@@ -177,7 +215,7 @@ export async function armRetention(ctx, g = globalThis) {
     if (rec.lastBootDay === today || R.calm()) return;
     const away = daysAway(rec, t, R.quietOpt().mode), rest = restNow(t, R.quietOpt());
     const pick = first.events.includes('freeze_used') ? 'freeze_used' : first.events.includes('streak_broken') ? 'streak_broken' : rest === 'shabbat' ? 'shabbat' : rest === 'yomtov' ? 'chag'
-      : away >= 3 ? 'welcome_back' : new Date(t).getDay() === 0 ? 'shavua_tov' : null;
+      : away >= 3 || first.events.includes('welcome_back') ? 'welcome_back' : new Date(t).getDay() === 0 ? 'shavua_tov' : null;
     R.update((r) => { r.lastBootDay = today; return r; });
     if (pick) g.setTimeout(safe(() => showRimon(pick)), 2600);
   })();

@@ -28,6 +28,16 @@ export const SITUATIONS = Object.freeze({
   chag: { action: 'wave', line: 'chag' },
   shavua_tov: { action: 'wave', line: 'shavuaTov' },
 });
+/** Rimon's bubble line for a moment, sent with the event as detail.say. The Hebrew of the new ones awaits native review (docs/retention/HEBREW-REVIEW.md). */
+export const LINES = Object.freeze({
+  shabbat: { he: 'שַׁבָּת שָׁלוֹם!', en: 'SHABBAT SHALOM!' },
+  goal: { he: 'כָּל הַכָּבוֹד!', en: 'GOAL REACHED!' },
+  welcomeBack: { he: 'בְּרוּכִים הַשָּׁבִים!', en: 'WELCOME BACK!' },
+  chag: { he: 'חַג שָׂמֵחַ!', en: 'CHAG SAMEACH!' },
+  shavuaTov: { he: 'שָׁבוּעַ טוֹב!', en: 'HAVE A GOOD WEEK!' },
+  heartBack: { he: 'עוֹד לֵב!', en: 'ONE MORE HEART!' },
+  moveUp: { he: 'עוֹלִים שָׁלָב!', en: 'MOVING UP!' },
+});
 export const THEN_MS = 1500;
 let thenTimer = null;
 /**
@@ -40,8 +50,8 @@ export function showRimon(situation, data = {}, doc = globalThis.document, timer
   if (!s || !doc || typeof doc.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return false;
   const action = typeof s.action === 'function' ? s.action(data) : s.action;
   if (thenTimer !== null) { try { (timers.clearTimeout || clearTimeout)(thenTimer); } catch { /* ignore */ } thenTimer = null; }
-  const send = (a) => doc.dispatchEvent(new CustomEvent('alef:rimon', { bubbles: true, detail: { ...data, action: a, situation, line: s.line || null, retention: true } }));
-  send(action);
+  const send = (a) => doc.dispatchEvent(new CustomEvent('alef:rimon', { bubbles: true, detail: { ...data, action: a, situation, line: s.line || null, say: first && s.line ? LINES[s.line] || null : null, retention: true } }));
+  let first = true; send(action); first = false;
   if (s.then) thenTimer = (timers.setTimeout || setTimeout)(() => { thenTimer = null; try { send(s.then); } catch { /* Rimon is optional */ } }, THEN_MS);
   if (s.confetti) { try { doc.dispatchEvent(new CustomEvent('alef:celebrate', { bubbles: true, detail: { kind: situation } })); } catch { /* optional */ } }
   return true;

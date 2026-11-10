@@ -54,15 +54,25 @@ jobs:
         run: |
           mkdir -p docs/torah/audio-verification/fix
           python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 \
-            --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
+            --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
       - name: Push to john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
         if: always()
         run: |
           git config user.name "John Khan"
           git config user.email "johnnykhan1@gmail.com"
-          f=docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
+          f=docs/torah/audio-verification/fix/fix-r${{ github.run_number }}-${{ matrix.shard }}.jsonl
           [ -f "$f" ] || exit 0
-          git checkout -q -B john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
-          git add "$f" audio/*/israeli/line/torah-*.mp3
-          git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed)"
-          git push -q --force origin HEAD:refs/heads/john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
+          b=john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
+          mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
+          changed=$(git diff --name-only -- 'audio/*/israeli/line/torah-*.mp3')
+          for c in $changed; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; done
+          # a brand-new repository holding only the log and the replaced clips, so the push carries nothing else
+          auth=$(git config --get http.https://github.com/.extraheader)
+          rm -rf /tmp/out && mkdir -p /tmp/out && cp -r /tmp/keep/. /tmp/out/ && cd /tmp/out
+          mkdir -p "$(dirname "$f")" && mv log.jsonl "$f"
+          git init -q && git checkout -q -b "$b"
+          git config user.name "John Khan" && git config user.email "johnnykhan1@gmail.com"
+          git add -A
+          git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed, $(echo $changed | wc -w) replaced)"
+          du -sh .git
+          for i in 1 2 3 4 5; do git -c http.https://github.com/.extraheader="$auth" push -q --force "https://github.com/${{ github.repository }}.git" HEAD:refs/heads/$b && break; sleep $((i*20)); done

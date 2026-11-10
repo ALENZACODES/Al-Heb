@@ -151,3 +151,29 @@ test('status: rest on Saturday, at risk in the evening, done after a lesson', ()
   assert.equal(streakStatus(streakRec({ last: '2026-11-10' }), r, T('2026-11-10T19:00')).state, 'done');
   assert.equal(streakStatus({}, r, T('2026-11-10T19:00')).state, 'new');
 });
+test('week strip: a bought freeze shows as its own state, Shabbat as rest, never as a failure', async () => {
+  const { weekDots, freezeNoteSeen } = await import('../../src/retention/streak.js');
+  const sun = T('2026-11-15T10:00');
+  const a = applyRollover(streakRec({ last: '2026-11-10', doneDates: ['2026-11-09', '2026-11-10'] }), ret({ freezes: { held: 2, evaluatedThrough: '2026-11-10' } }), sun);
+  assert.deepEqual(a.ret.freezes.used, ['2026-11-11', '2026-11-12']);
+  const dots = weekDots(a.streak, a.ret, sun);
+  assert.deepEqual(dots.map((d) => d.state), ['done', 'done', 'freeze', 'freeze', 'rest', 'rest', 'today']);
+  assert.equal(dots[2].label, 'Wednesday: covered by a streak freeze'); assert.equal(dots[5].label, 'Saturday: rest day');
+  assert.equal(freezeNoteSeen(a.ret).freezes.unseen, false); assert.equal(a.ret.freezes.unseen, true);
+});
+test('streak card: every state has its line; Friday night and Yom Tov are rest, never "at risk"', async () => {
+  const { streakLine } = await import('../../src/retention/streak.js');
+  const r = ret(), line = (rec, at) => { const st = streakStatus(rec, r, T(at)); return [st.state, streakLine(st)]; };
+  assert.deepEqual(line(streakRec({ last: '2026-11-12' }), '2026-11-13T17:59'), ['open', 'Keep your 10-day streak going.']);
+  assert.deepEqual(line(streakRec({ last: '2026-11-12' }), '2026-11-13T19:00'), ['rest', 'Shabbat Shalom. Your streak rests today too.']);
+  assert.deepEqual(line(streakRec({ last: '2026-11-13' }), '2026-11-14T22:00'), ['rest', 'Shabbat Shalom. Your streak rests today too.']);
+  const yt = [...yomTovDates('2027-01-01', '2027-12-31', 'reform')].find((d) => [2, 3].includes(weekdayOf(d)));
+  assert.deepEqual(streakStatus(streakRec({ last: addDaysISO(yt, -1) }), r, localAt(yt, 19 * 60)).restKind, 'yomtov');
+  assert.match(streakLine(streakStatus(streakRec({ last: addDaysISO(yt, -1) }), r, localAt(yt, 19 * 60))), /^Chag sameach/);
+  assert.deepEqual(line(streakRec({ last: '2026-11-09' }), '2026-11-10T19:00'), ['at-risk', 'Keep your 10-day streak: one 3-minute lesson does it.']);
+  assert.deepEqual(line(streakRec({ last: '2026-11-10', count: 1, best: 1 }), '2026-11-10T19:00'), ['done', 'Day 1 done. See you tomorrow!']);
+  assert.deepEqual(line(streakRec({ last: '2026-11-10' }), '2026-11-10T19:00'), ['done', '10 days in a row. See you tomorrow!']);
+  assert.deepEqual(line(streakRec({ last: '2026-11-05' }), '2026-11-10T09:00'), ['broken', "Fresh start. Your best is 10 days. Let's build again."]);
+  assert.deepEqual(line({}, '2026-11-10T09:00'), ['new', 'Finish one quick lesson to start a streak.']);
+  for (const s of ['rest', 'done', 'freeze-used', 'at-risk', 'open', 'broken', 'new']) assert.doesNotMatch(streakLine({ state: s, count: 3, best: 5, held: 1 }), /undefined|NaN/);
+});

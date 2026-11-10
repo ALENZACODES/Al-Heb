@@ -12,8 +12,9 @@ export const NUDGE_DELAY_MS = 4000;
 /** @returns {{show:boolean, count:number}} */
 export function nudgeDue(now, record, prefs, { observant = false, mode = "reform", extraRest } = {}) {
   const p = projectStreak(record, now, extraRest);
-  const today = dayKey(now);
-  const show = p.count > 0 && !p.activeToday && !p.restToday && prefs.lastRescue !== today && !(observant && isRestDay(today, mode));
+  const today = dayKey(now), d = new Date(now), m = d.getHours() * 60 + d.getMinutes();
+  const rest = isRestDay(today, mode) || (d.getDay() === 5 && m >= 1080); // quiet from Friday 18:00, all Saturday, and on Yom Tov, for everyone
+  const show = p.count > 0 && !p.activeToday && !p.restToday && prefs.lastRescue !== today && !rest;
   return { show, count: p.count };
 }
 

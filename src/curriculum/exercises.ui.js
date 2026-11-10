@@ -27,7 +27,7 @@ export function summaryNode(d) {
   const next = d.nextHref ? el("a", { class: "btn alef-next-primary", href: d.nextHref }, d.nextLabel || "Next lesson") : null;
   // Celebration first: Rimon, confetti (still for reduced motion) and a cheer that matches the score.
   try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:rimon", { detail: { action: st.accuracy >= 0.8 ? "highfive" : "bounce" } })); } catch { /* the cheer is optional */ }
-  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy, ms: d.ms } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
+  try { globalThis.document?.dispatchEvent?.(new CustomEvent("alef:celebrate", { detail: { kind: "lesson", accuracy: st.accuracy, ms: d.ms, title: d.title } })); } catch { /* the sting is optional (src/audio/sting.js) */ }
   // Rimon in the page plays his move (high five for a strong lesson); the streak flame follows the shared record and lights live.
   let rimon = null; try { rimon = rimonInline({ action: st.accuracy >= 0.8 ? "highfive" : "bounce", size: 132, label: "Rimon cheers" }); } catch { rimon = null; }
   const store = d.store ?? d.ctx?.store ?? globalThis.alef?.store ?? null;

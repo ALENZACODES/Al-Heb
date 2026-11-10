@@ -146,7 +146,7 @@ export function mount(root, ctx) {
     labelled('lineLength', 'Line length', { normal: 'Normal', narrow: 'Short lines' })];
   root.replaceChildren(h('article', { class: 'card' },
     h('h1', { id: 'view-title', tabindex: '-1' }, t('settings.title')),
-    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how ALEF works, in plain words')),
+    h('p', {}, h('a', { href: '#/accessibility', id: 's-a11y-link' }, 'Accessibility: text, sound, colour, touch and calm settings'), ' · ', h('a', { href: '#/shop' }, 'Streak, hearts and reminders'), ' · ', h('a', { href: '#/help', id: 's-help-link' }, 'Help: how ALEF works, in plain words')),
     h('p', { class: 'muted' }, plain('settingsIntro')),
     // The sound statement and the "what is ready" list live on About (one place for notes about the app), linked here.
     h('p', { class: 'small muted' }, 'About the voices and what is still being built: ', h('a', { href: '#/about' }, 'About ALEF'), '.'),

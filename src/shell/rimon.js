@@ -117,7 +117,8 @@ export function mountRimon({store,doc=document}={}) {
   doc.defaultView?.addEventListener?.('hashchange',onRoute);
   host.addEventListener('click',e=>{if(host.classList.contains('rimon-peek')&&e.target!==dismiss){e.preventDefault();peekSoon();play('wave');}});
   const event=e=>{
-    const {action,nextHref}=e.detail || {};
+    const {action,nextHref,say}=e.detail || {};
+    if(say && say.en && say.he && !hidden){try{speech.sayLine(say);}catch{}} // a named moment brings its own line (src/retention/rimon.js)
     if(action==='lesson' && /^#\/(learn|lesson|intermediate)(\/|\?|$)/.test(nextHref || '')){next.href=nextHref;next.hidden=false;}
     play(({correct:'bounce',wrong:'sad',lesson:'point',streak:'stretch',winkLeft:'wink',winkRight:'wink'})[action] || action);
   };

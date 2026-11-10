@@ -547,9 +547,9 @@
    "titleEn": "The Old Photo",
    "level": "Beginner 3",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {
@@ -739,9 +739,9 @@
    "titleEn": "The Lost Wallet",
    "level": "Beginner 3",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   }
  ]

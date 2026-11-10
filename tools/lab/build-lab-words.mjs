@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { HOLIDAY_DEFS } from '../../src/curriculum/calendar.js';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..', '..');
 const readJSON = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
@@ -155,6 +156,8 @@ export function build() {
     source: 'data/vocab/words.json, data/vocab/clip-lookup.json, data/pronunciation/consonants.json, data/pronunciation/niqqud.json, data/letters/letters.json, data/lab/syllables.json (tools/lab/build-lab-words.mjs)',
     note: 'Built, not typed: re-run the tool after the dictionary or the sound tables change. `clip` is a recording with exactly the same pointed text in both voices.',
     cafe, directions, cards, vowels,
+    // Calendar Puzzle: the recorded name of each holy day (same pointed text, both Israeli voices), said with the answer.
+    holyDays: HOLIDAY_DEFS.map((d) => ({ id: d.id, clip: shardClipFor(d.he) })).filter((d) => d.clip),
     signs: VOWEL_SIGNS.map(({ id }) => { const r = signs.get(id); return { id, name: String(r.name).split('(')[0].trim(), mark: r.shape.slice(1) }; }),
   };
 }

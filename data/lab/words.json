@@ -259,6 +259,21 @@
 {"he":"חֱ","letter":"chet","sign":"chataf-segol","from":9,"sound":{"israeli":"e","sephardi":"e","ashkenazi":"e"}},
 {"he":"עֱ","letter":"ayin","sign":"chataf-segol","from":9,"sound":{"israeli":"e","sephardi":"e","ashkenazi":"e"}}
 ],
+"holyDays": [
+{"id":"rosh-hashanah","clip":{"kind":"word","id":"calendar-rosh-hashanah"}},
+{"id":"yom-kippur","clip":{"kind":"word","id":"calendar-yom-kippur"}},
+{"id":"sukkot","clip":{"kind":"word","id":"calendar-sukkot"}},
+{"id":"shemini-atzeret","clip":{"kind":"word","id":"calendar-shemini-atzeret"}},
+{"id":"hanukkah","clip":{"kind":"word","id":"hanerot-halalu-w19"}},
+{"id":"tu-bishvat","clip":{"kind":"word","id":"calendar-tu-bishvat"}},
+{"id":"purim","clip":{"kind":"word","id":"i-31-w1"}},
+{"id":"pesach","clip":{"kind":"word","id":"i-29-w1"}},
+{"id":"yom-hashoah","clip":{"kind":"word","id":"calendar-yom-hashoah"}},
+{"id":"yom-hazikaron","clip":{"kind":"word","id":"calendar-yom-hazikaron"}},
+{"id":"yom-haatzmaut","clip":{"kind":"word","id":"calendar-yom-haatzmaut"}},
+{"id":"shavuot","clip":{"kind":"word","id":"calendar-shavuot"}},
+{"id":"tisha-bav","clip":{"kind":"word","id":"calendar-tisha-bav"}}
+],
 "signs": [
 {"id":"patach","name":"Patach","mark":"ַ"},
 {"id":"segol","name":"Segol","mark":"ֶ"},

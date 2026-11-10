@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 22342 of 24529 required clips exist (91.1%); Recorded by a human reader: 0; Israeli voice: 20547; No audio yet: 2187.**
+**Overall: 22362 of 24549 required clips exist (91.1%); Recorded by a human reader: 0; Israeli voice: 20567; No audio yet: 2187.**
 
 ## By talent and group
 
@@ -54,7 +54,7 @@ Required 3491; have 2291; missing 1200.
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
-Required 5279; have 4972; missing 307.
+Required 5289; have 4982; missing 307.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -76,14 +76,14 @@ Required 5279; have 4972; missing 307.
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | dot-tile | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| screen-word | 541 | 0 | 541 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| screen-word | 551 | 0 | 551 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-word | 1333 | 0 | 1026 | 0 | 307 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 46 | 0 | 46 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 5279; have 4972; missing 307.
+Required 5289; have 4982; missing 307.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -105,7 +105,7 @@ Required 5279; have 4972; missing 307.
 | explain-en | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | explain-he | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | dot-tile | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| screen-word | 541 | 0 | 541 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| screen-word | 551 | 0 | 551 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-word | 1333 | 0 | 1026 | 0 | 307 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-alias | 0 | 0 | 0 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | vocab-extra | 46 | 0 | 46 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |

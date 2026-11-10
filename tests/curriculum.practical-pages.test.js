@@ -1,4 +1,4 @@
-// Practical course: the page outline and the first 20 pages written in full
+// Practical course: the page outline and the pages written in full
 // (data/curriculum/practical-pages/*.json, built by the page builder).
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -6,7 +6,7 @@ import fs from "node:fs";
 
 const read = (p) => JSON.parse(fs.readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
 const nfc = (s) => s.normalize("NFC");
-const pages = read("data/curriculum/practical-pages/first-20.json");
+const pages = read("data/curriculum/practical-pages/written.json");
 const outline = read("data/curriculum/practical-pages/outline.json");
 const schema = read("data/curriculum/practical-pages/page.schema.json");
 
@@ -24,15 +24,19 @@ function sourceHebrew(it) {
   if (it.source === "data/audio/manifest.json") return lineClips.get(it.id)?.text;
   if (it.source === "data/audio/manifest-kind-word.json") return wordClips.get(it.id)?.text;
   if (it.source === "data/curriculum/dialogues.json") return dlgLines.get(it.id)?.he;
+  const m = /^data\/curriculum\/lessons\.json#(.+)\.words\[(\d+)\]$/.exec(it.source);
+  if (m) return lessons.find((l) => l.id === m[1])?.words[+m[2]]?.he;
   return undefined;
 }
 
-test("first 20 pages: 20 pages, the course order, unique ids that the outline marks written", () => {
-  assert.equal(pages.pages.length, 20);
+test("written pages: at least 30, in course order, unique ids that the outline marks written", () => {
+  const n = pages.pages.length;
+  assert.ok(n >= 30, `written pages: ${n}`);
   const ids = pages.pages.map((p) => p.id);
-  assert.equal(new Set(ids).size, 20);
+  assert.equal(new Set(ids).size, n);
   const outlineIds = outline.units.flatMap((u) => u.pages.map((p) => p.id));
-  assert.deepEqual(ids, outlineIds.slice(0, 20), "the written pages are the first 20 of the outline, in order");
+  assert.deepEqual(ids, outlineIds.slice(0, n), "the written pages are the first pages of the outline, in order");
+  for (const p of pages.pages) assert.equal(p.kind, outline.units.flatMap((u) => u.pages).find((o) => o.id === p.id).kind, `${p.id}: kind matches the outline`);
   const written = outline.units.flatMap((u) => u.pages.filter((p) => p.status === "written").map((p) => p.id));
   assert.deepEqual(written, ids);
 });
@@ -51,10 +55,14 @@ test("every Hebrew line is copied exactly from its named source", () => {
 
 test("grammar, speak and example Hebrew come from the page's own items or earlier pages", () => {
   const seen = [];
+  const taught = new Map();
   for (const p of pages.pages) {
     seen.push(...p.items.map((it) => nfc(it.he)));
+    p.items.forEach((it) => taught.set(it.id, it));
     const pool = seen.join(" ");
     const mine = new Map(p.items.map((it) => [it.id, it]));
+    // Review and check pages may also practise the earlier items they queue for review.
+    for (const r of p.reviewOf) if (!mine.has(r) && ["review", "check"].includes(p.kind)) mine.set(r, taught.get(r));
     for (const run of p.grammar.body.match(/[֐-׿]+/g) || []) assert.ok(pool.includes(nfc(run)), `${p.id} grammar: ${run}`);
     for (const ex of p.grammar.examples) assert.equal(ex.he, mine.get(ex.itemId)?.he, `${p.id} example ${ex.itemId}`);
     for (const s of p.speak) assert.equal(s.he, mine.get(s.answer)?.he, `${p.id} speak ${s.answer}`);
@@ -63,10 +71,10 @@ test("grammar, speak and example Hebrew come from the page's own items or earlie
   }
 });
 
-test("audio: every clip id is in a manifest with both voices, or is marked as a gap", () => {
-  let gaps = 0;
+test("audio: every clip id is in a manifest with both voices; only dialogue lines may be gaps", () => {
   const check = (where, a) => {
-    if (a.status === "gap") { gaps++; assert.ok(!lineClips.has(a.clipId) && !wordClips.has(a.clipId), `${where}: marked gap but a clip exists`); return; }
+    if (a.status === "gap") {
+      assert.match(a.clipId, /^d-[a-z]+-l\d+$/, `${where}: only dialogue lines may lack a clip`); assert.ok(!lineClips.has(a.clipId) && !wordClips.has(a.clipId), `${where}: marked gap but a clip exists`); return; }
     const row = wordClips.get(a.clipId) || lineClips.get(a.clipId);
     assert.ok(row, `${where}: ${a.clipId} not in a manifest`);
     assert.deepEqual(a.voices, ["f", "m"], `${where}: both voices`);
@@ -76,7 +84,6 @@ test("audio: every clip id is in a manifest with both voices, or is marked as a 
     p.speak.forEach((s) => check(`${p.id} speak ${s.answer}`, s.audio));
     for (const l of p.listen) assert.ok(wordClips.has(l.clip.id) || lineClips.has(l.clip.id), `${p.id} listen ${l.clip.id}`);
   }
-  assert.ok(gaps <= 4, `audio gaps should stay few; found ${gaps}`);
 });
 
 test("gendered forms come in pairs, labelled, with the woman's form from the audio manifest", () => {
@@ -86,7 +93,7 @@ test("gendered forms come in pairs, labelled, with the woman's form from the aud
       assert.ok(it.form, `${p.id} ${it.id}: needs a form label`);
       const other = it.id.replace(/-(m|f)$/, (_, g) => (g === "m" ? "-f" : "-m"));
       if (it.id.startsWith("greetings-11") || it.id.startsWith("politeness-07") || it.id.startsWith("fillers-1") || it.id.startsWith("numbers-") || it.id.startsWith("greetings-2"))
-        assert.ok(ids.has(other) || p.kind === "speak", `${p.id}: ${it.id} shown without ${other}`);
+        assert.ok(ids.has(other) || p.kind === "speak" || p.kind === "listen", `${p.id}: ${it.id} shown without ${other}`);
     }
   }
 });

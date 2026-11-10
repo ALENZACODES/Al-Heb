@@ -210,8 +210,8 @@ demand, and the grammar notes say they are not yet reviewed by a teacher.
 - A 194-page outline in 36 units and five levels, with ids, kinds, titles, routes and lesson links
   (`data/curriculum/practical-pages/outline.json`).
 - The first 20 pages written in full: 103 items with pointed Hebrew, transliteration, English and clip ids; 20 grammar points;
-  speaking prompts; listening rounds; spaced review of earlier items (`first-20.json`, readable copy in
-  [`../curriculum/PRACTICAL-FIRST-20-PAGES.md`](../curriculum/PRACTICAL-FIRST-20-PAGES.md)).
+  speaking prompts; listening rounds; spaced review of earlier items (now `written.json`, readable copy in
+  [`../curriculum/PRACTICAL-WRITTEN-PAGES.md`](../curriculum/PRACTICAL-WRITTEN-PAGES.md)).
 - A v3 page schema that only adds optional fields to the v2 page (`page.schema.json`).
 - 10 tests. Every Hebrew line must match its source byte for byte after NFC normalisation. Grammar Hebrew must come from the
   page's own items or earlier ones. Clips must be in a manifest in both voices, or be marked as gaps. Review items must come from
@@ -225,3 +225,19 @@ demand, and the grammar notes say they are not yet reviewed by a teacher.
 - the remaining 174 pages to the same standard (+4)
 - native-speaker and cantor review (+6)
 - John's decisions on the divine-name holds (+2)
+
+## Round 4 (Review Round 3 of 5)
+
+### Plan to Reach 95 to 100
+
+| Step | Gain | Status |
+|---|---|---|
+| Fix lesson words that mean something else, and the clips that say them | +2 | built: charger, course and map, with clip rows marked missing and a clip-text test |
+| Finish level 0 of the Practical course | +2 | built: 30 of 30 level-0 pages written |
+| Merge decision and v3 support in the Practical view | +3 | waiting for John |
+| Clips for corrected words and dialogue lines | +1 | needs a rendering run |
+| Native-speaker and cantor review; divine-name decisions | +6 | needs people and John |
+
+### Score
+
+**88 / 100** (estimate). See [`BRANCH-REVIEW-2026-11-10-R3.md`](BRANCH-REVIEW-2026-11-10-R3.md).

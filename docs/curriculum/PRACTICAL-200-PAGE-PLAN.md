@@ -2,10 +2,10 @@
 
 Lane C, round 3. This plan turns the Israel track into a structured conversation course of 194 pages in 36 units: one real
 situation per unit, one clear grammar point per grammar page, spaced review on every page, and listening and speaking drills.
-The first 20 pages are written in full. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
+The first 30 pages (all of level 0) are written in full. The model is the way Babbel builds a course; the Hebrew is ALEF's own.
 
 - Outline data: `data/curriculum/practical-pages/outline.json` (every unit and page id, kind, title, status and route)
-- First 20 pages: `data/curriculum/practical-pages/first-20.json`, readable copy in `docs/curriculum/PRACTICAL-FIRST-20-PAGES.md`
+- Written pages (30): `data/curriculum/practical-pages/written.json`, readable copy in `docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`
 - Page schema: `data/curriculum/practical-pages/page.schema.json` (v3, a superset of the v2 page)
 - Tests: `tests/curriculum.practical-pages.test.js` (10 tests)
 - Builder: the page builder script kept with the lane's working files; it reads only repo data
@@ -17,9 +17,10 @@ There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-1
 `#/israel-units`, 13 units built from whole lessons. They should not both ship. The plan:
 
 1. **`#/practical` is the home.** Its unit ids, file layout and v2 page shape stay. Every page id in this plan uses its pattern
-   (`pu-<unit>-pNN`), and the first 20 pages replace the first 20 v2 pages one for one.
+   (`pu-<unit>-pNN`), and the written pages replace the matching v2 pages one for one.
 2. **`#/israel-units` retires when the branches merge.** Its grammar points move into the grammar pages listed below. The route
-   then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates).
+   then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates). It stays until then
+   so the branch keeps a working Israel course on its own.
 3. **Three units are added** so every Israel-track lesson has a home: `pu-verbs` (il16, il19), `pu-conversation` (il23, il24) and
    `pu-army` (I-18). The test fails if any Israel-track lesson is left out. The Practical branch's own plan left il16, il19, il23 and il24 out
    because they teach grammar or pronunciation, not a situation. Here they become `pu-verbs` and `pu-conversation`: units built
@@ -30,7 +31,7 @@ There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-1
 | Piece | Path | Status |
 |---|---|---|
 | Course index (units, totals) | `data/curriculum/practical-units.json` → `data/curriculum/practical/index.json` | on the Practical branch |
-| One file per unit, with its pages | `data/curriculum/practical/<unit>.json` | on the Practical branch; first 20 pages here in v3 |
+| One file per unit, with its pages | `data/curriculum/practical/<unit>.json` | on the Practical branch; first 30 pages here in v3 |
 | Page outline | `data/curriculum/practical-pages/outline.json` | this branch |
 | Page schema | `data/curriculum/practical-pages/page.schema.json` | this branch |
 | Clip map | `data/curriculum/practical/clip-map.json` | on the Practical branch |
@@ -105,19 +106,19 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 
 - `pu-numbers-p01` grammar: One to Five **(written)**
 - `pu-numbers-p02` learn: Six to Ten **(written)**
-- `pu-numbers-p03` learn: Twenty, Thirty, a Hundred, a Thousand
-- `pu-numbers-p04` grammar: What Time Is It?
-- `pu-numbers-p05` learn: Today, Tomorrow, Yesterday
-- `pu-numbers-p06` listen: Hear the Number
-- `pu-numbers-p07` review: Unit Review
+- `pu-numbers-p03` learn: Twenty, Thirty, a Hundred, a Thousand **(written)**
+- `pu-numbers-p04` grammar: What Time Is It? **(written)**
+- `pu-numbers-p05` learn: Today, Tomorrow, Yesterday **(written)**
+- `pu-numbers-p06` listen: Hear the Number **(written)**
+- `pu-numbers-p07` review: Unit Review **(written)**
 
 **`pu-introducing` Introducing Yourself** (5 pages) · lessons il03 · dialogue `d-smalltalk`
 
-- `pu-introducing-p01` grammar: My Name Is
-- `pu-introducing-p02` learn: Where Are You From?
-- `pu-introducing-p03` dialogue: Small Talk at a Party
-- `pu-introducing-p04` speak: Say It About Yourself
-- `pu-introducing-p05` check: Level 0 Check
+- `pu-introducing-p01` grammar: My Name Is **(written)**
+- `pu-introducing-p02` learn: Where Are You From? **(written)**
+- `pu-introducing-p03` dialogue: Small Talk at a Party **(written)**
+- `pu-introducing-p04` speak: Say It About Yourself **(written)**
+- `pu-introducing-p05` check: Level 0 Check **(written)**
 
 
 ### L1: Getting around
@@ -388,29 +389,31 @@ v3 only adds optional fields, so the current view keeps working on a v3 page. Re
 - `pu-holidays-p04` speak: Wish Someone Well
 - `pu-holidays-p05` check: Final Check
 
+## The Written Pages
 
-## The First 20 Pages
-
-`pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02, written in full: 103 items,
+Round 3 wrote `pu-greetings` p01–p07, `pu-politeness` p01–p05, `pu-fillers` p01–p06 and `pu-numbers` p01–p02. Round 4 added
+`pu-numbers` p03–p07 and `pu-introducing` p01–p05, so all of level 0 is written (30 pages). Round 3's 20 pages hold 103 items,
 each with pointed Hebrew, transliteration, English and an audio clip id. Every page has a real grammar point, 1–3 speaking
 prompts, a listening round, and from page 2 on, earlier items queued for review. The readable copy is
-`docs/curriculum/PRACTICAL-FIRST-20-PAGES.md`.
+`docs/curriculum/PRACTICAL-WRITTEN-PAGES.md`.
 
 Grammar covered in order: one word with two jobs; adjective after the noun, matching it; the your-ending for a man (ךָ) and a
 woman (ךְ); negating with לֹא; three forms of welcome and הַ for the; masculine and feminine nouns; telling a man or a woman
 to do something; בְּבַקָּשָׁה with two jobs; present tense changing with the speaker; לֹא as no and not; register; הַשֵּׁם;
 filler words; questions made by tone; man's and woman's present-tense forms; אַתָּה and אַתְּ; אֶפְשָׁר with a to-verb as a
-polite request with no gender; the impersonal אוֹמְרִים; and the two sets of numbers.
+polite request with no gender; the impersonal אוֹמְרִים; and the two sets of numbers. Round 4 adds tens ending in -im; hours
+in the counting set; הַיּוֹם as the day; כַּמָּה; two ways to say my name; מִ (from) and וְ (and) as prefixes; and describing
+yourself as a man or a woman.
 
 **Sources.** Every Hebrew line is copied by id from `data/corpus/phrasebook.json`, the audio manifests (which hold the woman's
 forms the phrasebook leaves out, such as מַה שְׁלוֹמֵךְ? and אֲנִי מִצְטַעֶרֶת) or `data/curriculum/dialogues.json`. The test
 re-reads each source and fails on any difference.
 
-**Audio.** 101 of the 103 items have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
-clips, not human recordings. The two gaps are dialogue lines `d-smalltalk-l1` and `d-smalltalk-l2`, which have no clips yet.
+**Audio.** 135 of the 143 items on the 30 pages have clips in the manifests, in both the man's and the woman's voice. These are text-to-speech
+clips, not human recordings. The eight gaps are all `d-smalltalk` dialogue lines, which have no clips yet; the test allows gaps only on dialogue lines.
 
-**Transliteration.** Phrasebook rows keep the phrasebook's transliteration. The 19 woman's forms and counting-set numbers that
-come only from the audio manifest have transliteration written for these pages in the same spoken style ("ma shlomech?").
+**Transliteration.** Phrasebook rows keep the phrasebook's transliteration. Thirty items (woman's forms and counting-set numbers that come only from the audio manifest,
+and four lesson words with no transliteration of their own) have transliteration written for these pages in the same spoken style ("ma shlomech?").
 Each is marked `translitSource` and needs a native check.
 
 ## For Native Review
@@ -431,11 +434,11 @@ Found while writing; nothing changed in the sources:
    is held for you. Delete the page's grammar block to drop it.
 3. **The eight divine-name holds from round 1 are unchanged** (see `docs/review/LESSON-INTEGRITY-2026-11-10.md`).
 4. **L4 (Shabbat and holidays)** sits at the end of the Israel course. Another option is to link it to the synagogue track.
-5. **Native review** of the 20 pages, the 19 transliterations, and the items above, before any page leaves draft.
+5. **Native review** of the 30 pages, the 30 written transliterations, and the items above, before any page leaves draft.
 
 ## What Is Left
 
-- Write the remaining 174 pages to this standard. The builder already checks every source, clip and grammar run.
+- Write the remaining 164 pages to this standard. The builder already checks every source, clip and grammar run.
 - View support for the v3 fields, listed above.
 - Clips for the dialogue lines, so dialogue pages can play.
 - A native-speaker read of everything marked `nativeReview`.

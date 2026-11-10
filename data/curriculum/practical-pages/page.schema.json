@@ -2,7 +2,7 @@
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "alef-practical-pages/3",
  "title": "Practical page (v3, extends the v2 page shape)",
- "description": "A page in data/curriculum/practical/<unit>.json (v2) or data/curriculum/practical-pages/first-20.json (v3). Every v2 field keeps its meaning. Fields marked v3 are optional, so a v2 reader still works on a v3 page.",
+ "description": "A page in data/curriculum/practical/<unit>.json (v2) or data/curriculum/practical-pages/written.json (v3). Every v2 field keeps its meaning. Fields marked v3 are optional, so a v2 reader still works on a v3 page.",
  "type": "object",
  "required": ["id", "title", "order", "grammarNote", "items", "srsQueue", "listenIds"],
  "properties": {

@@ -4,7 +4,7 @@
  "generated": "2026-11-10",
  "proofread": false,
  "nativeReview": "required",
- "note": "The first 20 pages of the Practical course, written in full. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones.",
+ "note": "The written pages of the Practical course, in course order. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json, data/curriculum/lessons.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones.",
  "reviewDays": [
   1,
   3,
@@ -6518,6 +6518,2743 @@
     "numbers-03-f",
     "numbers-01-f",
     "numbers-05-f"
+   ]
+  },
+  {
+   "id": "pu-numbers-p03",
+   "title": "Twenty, Thirty, a Hundred, a Thousand",
+   "order": 3,
+   "kind": "learn",
+   "can": "Say round numbers for prices and amounts.",
+   "grammarNote": "Tens end in -im. Twenty, thirty and fifty all end in -im: עֶשְׂרִים, שְׁלוֹשִׁים, חֲמִשִּׁים. The same ending marks many plural nouns. מֵאָה (a hundred) and אֶלֶף (a thousand) need no word for one in front.",
+   "grammar": {
+    "point": "Tens end in -im",
+    "body": "Twenty, thirty and fifty all end in -im: עֶשְׂרִים, שְׁלוֹשִׁים, חֲמִשִּׁים. The same ending marks many plural nouns. מֵאָה (a hundred) and אֶלֶף (a thousand) need no word for one in front.",
+    "examples": [
+     {
+      "itemId": "numbers-11",
+      "he": "עֶשְׂרִים",
+      "en": "twenty (20)"
+     },
+     {
+      "itemId": "numbers-13",
+      "he": "חֲמִשִּׁים",
+      "en": "fifty (50)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "numbers-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶשְׂרִים",
+     "en": "twenty (20)",
+     "translit": "esrim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "audio": {
+      "clipId": "numbers-11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׁלוֹשִׁים",
+     "en": "thirty (30)",
+     "translit": "shloshim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-12"
+     },
+     "audio": {
+      "clipId": "numbers-12",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲמִשִּׁים",
+     "en": "fifty (50)",
+     "translit": "chamishim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-13"
+     },
+     "audio": {
+      "clipId": "numbers-13",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מֵאָה",
+     "en": "one hundred (100)",
+     "translit": "me'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "audio": {
+      "clipId": "numbers-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶלֶף",
+     "en": "one thousand (1000)",
+     "translit": "elef",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-15"
+     },
+     "audio": {
+      "clipId": "numbers-15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-05-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "numbers-10-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "numbers-11",
+    "numbers-12",
+    "numbers-13",
+    "numbers-14",
+    "numbers-15"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "answer": "numbers-11",
+     "options": [
+      "numbers-12",
+      "numbers-13",
+      "numbers-11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-12"
+     },
+     "answer": "numbers-12",
+     "options": [
+      "numbers-11",
+      "numbers-13",
+      "numbers-12"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-13"
+     },
+     "answer": "numbers-13",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "numbers-13"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "answer": "numbers-14",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "numbers-14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-15"
+     },
+     "answer": "numbers-15",
+     "options": [
+      "numbers-11",
+      "numbers-12",
+      "numbers-15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The coffee costs twenty shekels. Say the number.",
+     "answer": "numbers-11",
+     "he": "עֶשְׂרִים",
+     "translit": "esrim",
+     "en": "twenty (20)",
+     "audio": {
+      "clipId": "numbers-11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say a hundred.",
+     "answer": "numbers-14",
+     "he": "מֵאָה",
+     "translit": "me'a",
+     "en": "one hundred (100)",
+     "audio": {
+      "clipId": "numbers-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-05-f",
+    "numbers-10-f"
+   ]
+  },
+  {
+   "id": "pu-numbers-p04",
+   "title": "What Time Is It?",
+   "order": 4,
+   "kind": "grammar",
+   "can": "Ask the time and say the hour.",
+   "grammarNote": "Hours use the counting set. The word for hour is feminine, so the hour takes the counting set from page 1: הַשָּׁעָה שָׁלוֹשׁ, not שְׁלוֹשָׁה. הַ before a word means the: הַשָּׁעָה is the hour.",
+   "grammar": {
+    "point": "Hours use the counting set",
+    "body": "The word for hour is feminine, so the hour takes the counting set from page 1: הַשָּׁעָה שָׁלוֹשׁ, not שְׁלוֹשָׁה. הַ before a word means the: הַשָּׁעָה is the hour.",
+    "examples": [
+     {
+      "itemId": "numbers-17",
+      "he": "הַשָּׁעָה שָׁלוֹשׁ",
+      "en": "it's three o'clock"
+     },
+     {
+      "itemId": "numbers-16",
+      "he": "מָה הַשָּׁעָה?",
+      "en": "what time is it?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "numbers-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַשָּׁעָה?",
+     "en": "what time is it?",
+     "translit": "ma hasha'a?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-16"
+     },
+     "audio": {
+      "clipId": "numbers-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "en": "it's three o'clock",
+     "translit": "hasha'a shalosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "audio": {
+      "clipId": "numbers-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חֲצִי",
+     "en": "half",
+     "translit": "chetsi",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-18"
+     },
+     "audio": {
+      "clipId": "numbers-18",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "רֶבַע",
+     "en": "quarter",
+     "translit": "reva",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-19"
+     },
+     "audio": {
+      "clipId": "numbers-19",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "numbers-16",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-18",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-19",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-03-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-03-m",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "numbers-16",
+    "numbers-17",
+    "numbers-18",
+    "numbers-19"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "numbers-16"
+     },
+     "answer": "numbers-16",
+     "options": [
+      "numbers-17",
+      "numbers-18",
+      "numbers-16"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "answer": "numbers-17",
+     "options": [
+      "numbers-16",
+      "numbers-18",
+      "numbers-17"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-18"
+     },
+     "answer": "numbers-18",
+     "options": [
+      "numbers-16",
+      "numbers-17",
+      "numbers-18"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-19"
+     },
+     "answer": "numbers-19",
+     "options": [
+      "numbers-16",
+      "numbers-17",
+      "numbers-19"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You have no watch. Ask a passer-by the time.",
+     "answer": "numbers-16",
+     "he": "מָה הַשָּׁעָה?",
+     "translit": "ma hasha'a?",
+     "en": "what time is it?",
+     "audio": {
+      "clipId": "numbers-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Someone asks. It is three.",
+     "answer": "numbers-17",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "translit": "hasha'a shalosh",
+     "en": "it's three o'clock",
+     "audio": {
+      "clipId": "numbers-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-03-f",
+    "numbers-03-m"
+   ]
+  },
+  {
+   "id": "pu-numbers-p05",
+   "title": "Today, Tomorrow, Yesterday",
+   "order": 5,
+   "kind": "learn",
+   "can": "Say when something happens.",
+   "grammarNote": "Today is the day. הַיּוֹם is literally the day; Hebrew uses it for today. מָחָר and אֶתְמוֹל are single words with no the.",
+   "grammar": {
+    "point": "Today is the day",
+    "body": "הַיּוֹם is literally the day; Hebrew uses it for today. מָחָר and אֶתְמוֹל are single words with no the.",
+    "examples": [
+     {
+      "itemId": "numbers-20",
+      "he": "הַיּוֹם",
+      "en": "today"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "numbers-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": "hayom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-20"
+     },
+     "audio": {
+      "clipId": "numbers-20",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-21",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": "machar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-21"
+     },
+     "audio": {
+      "clipId": "numbers-21",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": "etmol",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-22"
+     },
+     "audio": {
+      "clipId": "numbers-22",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-20",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-21",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-22",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "numbers-16",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-12",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "numbers-20",
+    "numbers-21",
+    "numbers-22"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-20"
+     },
+     "answer": "numbers-20",
+     "options": [
+      "numbers-21",
+      "numbers-22",
+      "numbers-20"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-21"
+     },
+     "answer": "numbers-21",
+     "options": [
+      "numbers-20",
+      "numbers-22",
+      "numbers-21"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-22"
+     },
+     "answer": "numbers-22",
+     "options": [
+      "numbers-20",
+      "numbers-21",
+      "numbers-22"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "The shop asks when you will come back. Tomorrow.",
+     "answer": "numbers-21",
+     "he": "מָחָר",
+     "translit": "machar",
+     "en": "tomorrow",
+     "audio": {
+      "clipId": "numbers-21",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "When did you arrive? Yesterday.",
+     "answer": "numbers-22",
+     "he": "אֶתְמוֹל",
+     "translit": "etmol",
+     "en": "yesterday",
+     "audio": {
+      "clipId": "numbers-22",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-16",
+    "numbers-12"
+   ]
+  },
+  {
+   "id": "pu-numbers-p06",
+   "title": "Hear the Number",
+   "order": 6,
+   "kind": "listen",
+   "can": "Pick out numbers in quick speech.",
+   "grammarNote": "Listen for the ending. Counting forms are short: שָׁלוֹשׁ, שֶׁבַע, עֶשֶׂר. Tens end in -im. When you hear הַשָּׁעָה first, a counting number follows.",
+   "grammar": {
+    "point": "Listen for the ending",
+    "body": "Counting forms are short: שָׁלוֹשׁ, שֶׁבַע, עֶשֶׂר. Tens end in -im. When you hear הַשָּׁעָה first, a counting number follows.",
+    "examples": [
+     {
+      "itemId": "numbers-07-f",
+      "he": "שֶׁבַע",
+      "en": "seven (7)"
+     },
+     {
+      "itemId": "numbers-17",
+      "he": "הַשָּׁעָה שָׁלוֹשׁ",
+      "en": "it's three o'clock"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "numbers-03-f",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "שָׁלוֹשׁ",
+     "en": "three (3)",
+     "translit": "shalosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-03-f"
+     },
+     "audio": {
+      "clipId": "numbers-03-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "numbers-07-f",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "שֶׁבַע",
+     "en": "seven (7)",
+     "translit": "sheva",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-07-f"
+     },
+     "audio": {
+      "clipId": "numbers-07-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "numbers-10-f",
+     "source": "data/audio/manifest-kind-word.json",
+     "he": "עֶשֶׂר",
+     "en": "ten (10)",
+     "translit": "eser",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-10-f"
+     },
+     "audio": {
+      "clipId": "numbers-10-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "numbers-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עֶשְׂרִים",
+     "en": "twenty (20)",
+     "translit": "esrim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "audio": {
+      "clipId": "numbers-11",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מֵאָה",
+     "en": "one hundred (100)",
+     "translit": "me'a",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "audio": {
+      "clipId": "numbers-14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "numbers-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַשָּׁעָה שָׁלוֹשׁ",
+     "en": "it's three o'clock",
+     "translit": "hasha'a shalosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "audio": {
+      "clipId": "numbers-17",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "numbers-03-f",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "numbers-07-f",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-10-f",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "numbers-21",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "numbers-19",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "numbers-02-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "numbers-03-f",
+    "numbers-07-f",
+    "numbers-10-f",
+    "numbers-11",
+    "numbers-14",
+    "numbers-17"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-03-f"
+     },
+     "answer": "numbers-03-f",
+     "options": [
+      "numbers-07-f",
+      "numbers-10-f",
+      "numbers-03-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-07-f"
+     },
+     "answer": "numbers-07-f",
+     "options": [
+      "numbers-03-f",
+      "numbers-10-f",
+      "numbers-07-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-10-f"
+     },
+     "answer": "numbers-10-f",
+     "options": [
+      "numbers-03-f",
+      "numbers-07-f",
+      "numbers-10-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-11"
+     },
+     "answer": "numbers-11",
+     "options": [
+      "numbers-03-f",
+      "numbers-07-f",
+      "numbers-11"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "numbers-14"
+     },
+     "answer": "numbers-14",
+     "options": [
+      "numbers-03-f",
+      "numbers-07-f",
+      "numbers-14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "numbers-17"
+     },
+     "answer": "numbers-17",
+     "options": [
+      "numbers-03-f",
+      "numbers-07-f",
+      "numbers-17"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Repeat the number you hear: seven.",
+     "answer": "numbers-07-f",
+     "he": "שֶׁבַע",
+     "translit": "sheva",
+     "en": "seven (7)",
+     "audio": {
+      "clipId": "numbers-07-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-21",
+    "numbers-19",
+    "numbers-02-f"
+   ]
+  },
+  {
+   "id": "pu-numbers-p07",
+   "title": "Shekels and Unit Review",
+   "order": 7,
+   "kind": "review",
+   "can": "Ask how much and understand a price, then review the unit.",
+   "grammarNote": "How much: כַּמָּה. כַּמָּה asks how much or how many. A price is a number and then the currency: one שֶׁקֶל, or a number of shekels. In a longer number the parts are joined with and.",
+   "grammar": {
+    "point": "How much: כַּמָּה",
+    "body": "כַּמָּה asks how much or how many. A price is a number and then the currency: one שֶׁקֶל, or a number of shekels. In a longer number the parts are joined with and.",
+    "examples": [
+     {
+      "itemId": "il05-w5",
+      "he": "כַּמָּה",
+      "en": "how much"
+     },
+     {
+      "itemId": "il05-w4",
+      "he": "שֶׁקֶל",
+      "en": "shekel"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "il05-w4",
+     "source": "data/curriculum/lessons.json#il05.words[3]",
+     "he": "שֶׁקֶל",
+     "en": "shekel",
+     "translit": "shekel",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il05-w4"
+     },
+     "audio": {
+      "clipId": "il05-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il05-w5",
+     "source": "data/curriculum/lessons.json#il05.words[4]",
+     "he": "כַּמָּה",
+     "en": "how much",
+     "translit": "kama",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il05-w5"
+     },
+     "audio": {
+      "clipId": "il05-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il05-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "numbers-01-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "numbers-05-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "numbers-08-f",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "numbers-11",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "numbers-14",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "numbers-16",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "numbers-20",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "il05-w4",
+    "il05-w5"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il05-w4"
+     },
+     "answer": "il05-w4",
+     "options": [
+      "il05-w5",
+      "il05-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il05-w5"
+     },
+     "answer": "il05-w5",
+     "options": [
+      "il05-w4",
+      "il05-w5"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Point at a cake and ask how much.",
+     "answer": "il05-w5",
+     "he": "כַּמָּה",
+     "translit": "kama",
+     "en": "how much",
+     "audio": {
+      "clipId": "il05-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say the currency.",
+     "answer": "il05-w4",
+     "he": "שֶׁקֶל",
+     "translit": "shekel",
+     "en": "shekel",
+     "audio": {
+      "clipId": "il05-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "numbers-01-f",
+    "numbers-05-f",
+    "numbers-08-f",
+    "numbers-11",
+    "numbers-14",
+    "numbers-16",
+    "numbers-20"
+   ]
+  },
+  {
+   "id": "pu-introducing-p01",
+   "title": "My Name Is",
+   "order": 1,
+   "kind": "grammar",
+   "can": "Say your name and ask someone theirs.",
+   "grammarNote": "Two ways to say my name is. Everyday speech says קוֹרְאִים לִי, literally they call me. שְׁמִי is shorter and more formal; its ending -i means my. To ask, use the your-endings from greetings: ךָ to a man, ךְ to a woman.",
+   "grammar": {
+    "point": "Two ways to say my name is",
+    "body": "Everyday speech says קוֹרְאִים לִי, literally they call me. שְׁמִי is shorter and more formal; its ending -i means my. To ask, use the your-endings from greetings: ךָ to a man, ךְ to a woman.",
+    "examples": [
+     {
+      "itemId": "small-talk-02",
+      "he": "קוֹרְאִים לִי ...",
+      "en": "my name is ... (lit. they call me ...)"
+     },
+     {
+      "itemId": "il03-w1",
+      "he": "שְׁמִי",
+      "en": "my name is"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "small-talk-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קוֹרְאִים לִי ...",
+     "en": "my name is ... (lit. they call me ...)",
+     "translit": "kor'im li ...",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-02"
+     },
+     "audio": {
+      "clipId": "small-talk-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il03-w1",
+     "source": "data/curriculum/lessons.json#il03.words[0]",
+     "he": "שְׁמִי",
+     "en": "my name is",
+     "translit": "shmi",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w1"
+     },
+     "audio": {
+      "clipId": "il03-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "small-talk-01-m",
+     "source": "data/audio/manifest.json",
+     "he": "מַה שִּׁמְךָ?",
+     "en": "what's your name?",
+     "translit": "ma shimcha?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-01-m"
+     },
+     "audio": {
+      "clipId": "small-talk-01-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "small-talk-01-f",
+     "source": "data/audio/manifest.json",
+     "he": "מַה שְּׁמֵךְ?",
+     "en": "what's your name?",
+     "translit": "ma shmech?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-01-f"
+     },
+     "audio": {
+      "clipId": "small-talk-01-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-02",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il03-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-01-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-01-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "greetings-19",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "greetings-11-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "small-talk-02",
+    "il03-w1",
+    "small-talk-01-m",
+    "small-talk-01-f"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-02"
+     },
+     "answer": "small-talk-02",
+     "options": [
+      "il03-w1",
+      "small-talk-01-m",
+      "small-talk-02"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il03-w1"
+     },
+     "answer": "il03-w1",
+     "options": [
+      "small-talk-02",
+      "small-talk-01-m",
+      "il03-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-01-m"
+     },
+     "answer": "small-talk-01-m",
+     "options": [
+      "small-talk-02",
+      "il03-w1",
+      "small-talk-01-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-01-f"
+     },
+     "answer": "small-talk-01-f",
+     "options": [
+      "small-talk-02",
+      "il03-w1",
+      "small-talk-01-f"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Tell someone your name.",
+     "answer": "small-talk-02",
+     "he": "קוֹרְאִים לִי ...",
+     "translit": "kor'im li ...",
+     "en": "my name is ... (lit. they call me ...)",
+     "audio": {
+      "clipId": "small-talk-02",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask a woman her name.",
+     "answer": "small-talk-01-f",
+     "he": "מַה שְּׁמֵךְ?",
+     "translit": "ma shmech?",
+     "en": "what's your name?",
+     "audio": {
+      "clipId": "small-talk-01-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask a man his name.",
+     "answer": "small-talk-01-m",
+     "he": "מַה שִּׁמְךָ?",
+     "translit": "ma shimcha?",
+     "en": "what's your name?",
+     "audio": {
+      "clipId": "small-talk-01-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "greetings-19",
+    "greetings-11-f"
+   ]
+  },
+  {
+   "id": "pu-introducing-p02",
+   "title": "Where Are You From?",
+   "order": 2,
+   "kind": "learn",
+   "can": "Ask where someone is from and say where you are from.",
+   "grammarNote": "מִ means from, joined to the word. From is a prefix: מִקָּנָדָה is from Canada, מִתֵּל אָבִיב is from Tel Aviv. The question מֵאֵיפֹה starts with the same prefix: from where.",
+   "grammar": {
+    "point": "מִ means from, joined to the word",
+    "body": "From is a prefix: מִקָּנָדָה is from Canada, מִתֵּל אָבִיב is from Tel Aviv. The question מֵאֵיפֹה starts with the same prefix: from where.",
+    "examples": [
+     {
+      "itemId": "small-talk-04",
+      "he": "אֲנִי מִקָּנָדָה",
+      "en": "I'm from Canada"
+     },
+     {
+      "itemId": "d-smalltalk-l4",
+      "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+      "en": "I'm from Tel Aviv. And you?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "small-talk-03-m",
+     "source": "data/audio/manifest.json",
+     "he": "מֵאֵיפֹה אַתָּה?",
+     "en": "where are you from?",
+     "translit": "me'eifo ata?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-03-m"
+     },
+     "audio": {
+      "clipId": "small-talk-03-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "small-talk-03-f",
+     "source": "data/audio/manifest.json",
+     "he": "מֵאֵיפֹה אַתְּ?",
+     "en": "where are you from?",
+     "translit": "me'eifo at?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-03-f"
+     },
+     "audio": {
+      "clipId": "small-talk-03-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "small-talk-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי מִקָּנָדָה",
+     "en": "I'm from Canada",
+     "translit": "ani mikanada",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-04"
+     },
+     "audio": {
+      "clipId": "small-talk-04",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "il03-w4",
+     "source": "data/curriculum/lessons.json#il03.words[3]",
+     "he": "אֲנִי מִ...",
+     "en": "I am from...",
+     "translit": "ani mi...",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w4"
+     },
+     "audio": {
+      "clipId": "il03-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "d-smalltalk-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+     "en": "I'm from Tel Aviv. And you?",
+     "translit": "ani mitel aviv. ve'ata?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l4"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Maya (woman)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-03-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-03-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-04",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il03-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-smalltalk-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "fillers-16-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "small-talk-03-m",
+    "small-talk-03-f",
+    "small-talk-04",
+    "il03-w4",
+    "d-smalltalk-l4"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-03-m"
+     },
+     "answer": "small-talk-03-m",
+     "options": [
+      "small-talk-03-f",
+      "small-talk-04",
+      "small-talk-03-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-03-f"
+     },
+     "answer": "small-talk-03-f",
+     "options": [
+      "small-talk-03-m",
+      "small-talk-04",
+      "small-talk-03-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-04"
+     },
+     "answer": "small-talk-04",
+     "options": [
+      "small-talk-03-m",
+      "small-talk-03-f",
+      "small-talk-04"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "il03-w4"
+     },
+     "answer": "il03-w4",
+     "options": [
+      "small-talk-03-m",
+      "small-talk-03-f",
+      "il03-w4"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Ask a man where he is from.",
+     "answer": "small-talk-03-m",
+     "he": "מֵאֵיפֹה אַתָּה?",
+     "translit": "me'eifo ata?",
+     "en": "where are you from?",
+     "audio": {
+      "clipId": "small-talk-03-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask a woman where she is from.",
+     "answer": "small-talk-03-f",
+     "he": "מֵאֵיפֹה אַתְּ?",
+     "translit": "me'eifo at?",
+     "en": "where are you from?",
+     "audio": {
+      "clipId": "small-talk-03-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say you are from Canada.",
+     "answer": "small-talk-04",
+     "he": "אֲנִי מִקָּנָדָה",
+     "translit": "ani mikanada",
+     "en": "I'm from Canada",
+     "audio": {
+      "clipId": "small-talk-04",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-02",
+    "fillers-16-f"
+   ]
+  },
+  {
+   "id": "pu-introducing-p03",
+   "title": "Small Talk at a Party",
+   "order": 3,
+   "kind": "dialogue",
+   "can": "Follow a short first conversation from start to finish.",
+   "grammarNote": "וְ means and, joined to the word. And is a prefix too: וְאַתָּה? is and you? It turns a question around in one word, as the speakers do here.",
+   "grammar": {
+    "point": "וְ means and, joined to the word",
+    "body": "And is a prefix too: וְאַתָּה? is and you? It turns a question around in one word, as the speakers do here.",
+    "examples": [
+     {
+      "itemId": "d-smalltalk-l4",
+      "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+      "en": "I'm from Tel Aviv. And you?"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "d-smalltalk-l3",
+     "source": "data/curriculum/dialogues.json",
+     "he": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+     "en": "All good. Where are you from?",
+     "translit": "hakol tov. me'eifo at?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l3"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l3",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Yossi (man)"
+    },
+    {
+     "id": "d-smalltalk-l4",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+     "en": "I'm from Tel Aviv. And you?",
+     "translit": "ani mitel aviv. ve'ata?",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l4"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l4",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Maya (woman)"
+    },
+    {
+     "id": "d-smalltalk-l5",
+     "source": "data/curriculum/dialogues.json",
+     "he": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+     "en": "I'm from Canada. I speak a little Hebrew.",
+     "translit": "ani mikanada. ani medaber ivrit ktsat.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l5"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l5",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Yossi (man)"
+    },
+    {
+     "id": "d-smalltalk-l6",
+     "source": "data/curriculum/dialogues.json",
+     "he": "מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב.",
+     "en": "Excellent! You speak well.",
+     "translit": "metsuyan! ata medaber tov.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l6"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l6",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Maya (woman)"
+    },
+    {
+     "id": "d-smalltalk-l7",
+     "source": "data/curriculum/dialogues.json",
+     "he": "נָעִים מְאוֹד.",
+     "en": "Very nice to meet you.",
+     "translit": "na'im me'od.",
+     "review": "native-speaker-needed: dialogue line",
+     "listen": {
+      "kind": "line",
+      "id": "d-smalltalk-l7"
+     },
+     "audio": {
+      "clipId": "d-smalltalk-l7",
+      "status": "gap",
+      "voices": []
+     },
+     "speaker": "Yossi (man)"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "d-smalltalk-l3",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "d-smalltalk-l4",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "d-smalltalk-l5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "d-smalltalk-l6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "d-smalltalk-l7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-03-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "d-smalltalk-l2",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "greetings-16",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "d-smalltalk-l3",
+    "d-smalltalk-l4",
+    "d-smalltalk-l5",
+    "d-smalltalk-l6",
+    "d-smalltalk-l7"
+   ],
+   "listen": [],
+   "speak": [
+    {
+     "prompt": "Answer: where are you from? Canada.",
+     "answer": "d-smalltalk-l5",
+     "he": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+     "translit": "ani mikanada. ani medaber ivrit ktsat.",
+     "en": "I'm from Canada. I speak a little Hebrew.",
+     "audio": {
+      "clipId": "d-smalltalk-l5",
+      "status": "gap",
+      "voices": []
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-03-f",
+    "d-smalltalk-l2",
+    "greetings-16"
+   ],
+   "dialogue": {
+    "id": "d-smalltalk",
+    "setting": "Two people meet at a party and chat.",
+    "lines": [
+     "d-smalltalk-l3",
+     "d-smalltalk-l4",
+     "d-smalltalk-l5",
+     "d-smalltalk-l6",
+     "d-smalltalk-l7"
+    ]
+   }
+  },
+  {
+   "id": "pu-introducing-p04",
+   "title": "Say It About Yourself",
+   "order": 4,
+   "kind": "speak",
+   "can": "Say you are a tourist, it is your first time, and ask what someone does.",
+   "grammarNote": "Describing yourself: man's and woman's forms again. A man says אֲנִי תַּיָּר, a woman אֲנִי תַּיֶּרֶת. The question changes with the person asked: מָה אַתָּה עוֹשֶׂה? to a man, מָה אַתְּ עוֹשָׂה? to a woman.",
+   "grammar": {
+    "point": "Describing yourself: man's and woman's forms again",
+    "body": "A man says אֲנִי תַּיָּר, a woman אֲנִי תַּיֶּרֶת. The question changes with the person asked: מָה אַתָּה עוֹשֶׂה? to a man, מָה אַתְּ עוֹשָׂה? to a woman.",
+    "examples": [
+     {
+      "itemId": "small-talk-05-m",
+      "he": "אֲנִי תַּיָּר",
+      "en": "I'm a tourist"
+     },
+     {
+      "itemId": "small-talk-05-f",
+      "he": "אֲנִי תַּיֶּרֶת",
+      "en": "I'm a tourist"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "small-talk-05-m",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי תַּיָּר",
+     "en": "I'm a tourist",
+     "translit": "ani tayar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-05-m"
+     },
+     "audio": {
+      "clipId": "small-talk-05-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "small-talk-05-f",
+     "source": "data/audio/manifest.json",
+     "he": "אֲנִי תַּיֶּרֶת",
+     "en": "I'm a tourist",
+     "translit": "ani tayeret",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-05-f"
+     },
+     "audio": {
+      "clipId": "small-talk-05-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    },
+    {
+     "id": "small-talk-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+     "en": "it's my first time in Israel",
+     "translit": "zot hapa'am harishona sheli beyisrael",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-06"
+     },
+     "audio": {
+      "clipId": "small-talk-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "small-talk-07-m",
+     "source": "data/audio/manifest.json",
+     "he": "מָה אַתָּה עוֹשֶׂה?",
+     "en": "what do you do (for work)?",
+     "translit": "ma ata ose?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-07-m"
+     },
+     "audio": {
+      "clipId": "small-talk-07-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "phrasebook",
+     "form": "to or by a man"
+    },
+    {
+     "id": "small-talk-07-f",
+     "source": "data/audio/manifest.json",
+     "he": "מָה אַתְּ עוֹשָׂה?",
+     "en": "what do you do (for work)?",
+     "translit": "ma at osa?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-07-f"
+     },
+     "audio": {
+      "clipId": "small-talk-07-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "translitSource": "spoken style written for this page; native check",
+     "form": "to or by a woman"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-05-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "small-talk-05-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "small-talk-06",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "small-talk-07-m",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "small-talk-07-f",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "fillers-17-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "small-talk-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "small-talk-05-m",
+    "small-talk-05-f",
+    "small-talk-06",
+    "small-talk-07-m",
+    "small-talk-07-f"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-05-m"
+     },
+     "answer": "small-talk-05-m",
+     "options": [
+      "small-talk-05-f",
+      "small-talk-06",
+      "small-talk-05-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-05-f"
+     },
+     "answer": "small-talk-05-f",
+     "options": [
+      "small-talk-05-m",
+      "small-talk-06",
+      "small-talk-05-f"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-06"
+     },
+     "answer": "small-talk-06",
+     "options": [
+      "small-talk-05-m",
+      "small-talk-05-f",
+      "small-talk-06"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-07-m"
+     },
+     "answer": "small-talk-07-m",
+     "options": [
+      "small-talk-05-m",
+      "small-talk-05-f",
+      "small-talk-07-m"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-07-f"
+     },
+     "answer": "small-talk-07-f",
+     "options": [
+      "small-talk-05-m",
+      "small-talk-05-f",
+      "small-talk-07-f"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "You are a woman visiting. Say you are a tourist.",
+     "answer": "small-talk-05-f",
+     "he": "אֲנִי תַּיֶּרֶת",
+     "translit": "ani tayeret",
+     "en": "I'm a tourist",
+     "audio": {
+      "clipId": "small-talk-05-f",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say it is your first time in Israel.",
+     "answer": "small-talk-06",
+     "he": "זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל",
+     "translit": "zot hapa'am harishona sheli beyisrael",
+     "en": "it's my first time in Israel",
+     "audio": {
+      "clipId": "small-talk-06",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Ask a man what he does for work.",
+     "answer": "small-talk-07-m",
+     "he": "מָה אַתָּה עוֹשֶׂה?",
+     "translit": "ma ata ose?",
+     "en": "what do you do (for work)?",
+     "audio": {
+      "clipId": "small-talk-07-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-04",
+    "fillers-17-m",
+    "small-talk-02"
+   ]
+  },
+  {
+   "id": "pu-introducing-p05",
+   "title": "First Words Check",
+   "order": 5,
+   "kind": "check",
+   "can": "Show you can greet, be polite, count and introduce yourself.",
+   "grammarNote": "Putting the first level together. This check mixes every unit of the first level. One new phrase: מָה הַמַּצָּב? is another casual how's it going, built like מָה נִשְׁמָע?.",
+   "grammar": {
+    "point": "Putting the first level together",
+    "body": "This check mixes every unit of the first level. One new phrase: מָה הַמַּצָּב? is another casual how's it going, built like מָה נִשְׁמָע?.",
+    "examples": [
+     {
+      "itemId": "small-talk-16",
+      "he": "מָה הַמַּצָּב?",
+      "en": "how's it going? (lit. what's the situation)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "small-talk-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מָה הַמַּצָּב?",
+     "en": "how's it going? (lit. what's the situation)",
+     "translit": "ma hamatsav?",
+     "review": "native-speaker-needed: slang/register and spelling",
+     "listen": {
+      "kind": "line",
+      "id": "small-talk-16"
+     },
+     "audio": {
+      "clipId": "small-talk-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     },
+     "register": "slang"
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "small-talk-16",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "greetings-03",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "greetings-11-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "politeness-03",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "politeness-07-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "fillers-14-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "fillers-18",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "fillers-16-m",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "numbers-17",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "il05-w5",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 11,
+     "kind": "line",
+     "id": "small-talk-02",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 12,
+     "kind": "line",
+     "id": "small-talk-04",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "small-talk-16"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "line",
+      "id": "small-talk-16"
+     },
+     "answer": "small-talk-16",
+     "options": [
+      "small-talk-16"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Greet a friend casually.",
+     "answer": "small-talk-16",
+     "he": "מָה הַמַּצָּב?",
+     "translit": "ma hamatsav?",
+     "en": "how's it going? (lit. what's the situation)",
+     "audio": {
+      "clipId": "small-talk-16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say you don't understand, as a man.",
+     "answer": "fillers-14-m",
+     "he": "אֲנִי לֹא מֵבִין",
+     "translit": "ani lo mevin",
+     "en": "I don't understand",
+     "audio": {
+      "clipId": "fillers-14-m",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "greetings-03",
+    "greetings-11-m",
+    "politeness-03",
+    "politeness-07-f",
+    "fillers-14-m",
+    "fillers-18",
+    "fillers-16-m",
+    "numbers-17",
+    "il05-w5",
+    "small-talk-02",
+    "small-talk-04"
    ]
   }
  ]

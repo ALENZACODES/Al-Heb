@@ -1,8 +1,8 @@
-# Practical Hebrew: The First 20 Pages
+# Practical Hebrew: The Written Pages (30)
 
-Generated from `data/curriculum/practical-pages/first-20.json` by the page builder. Do not edit by hand.
+Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
-Every Hebrew line is copied from the repo's phrasebook, audio manifests or dialogues. Nothing here has had a native-speaker read yet; the transliteration marked *spoken style* on gendered forms was written for these pages and needs a native check.
+Every Hebrew line is copied from the repo's phrasebook, audio manifests, lessons or dialogues. Nothing here has had a native-speaker read yet; transliteration marked \* was written for these pages in the phrasebook's spoken style and needs a native check.
 
 Spaced review: each page queues its new items, plus earlier items marked review. Intervals: 1, 3, 7, 14, 30 days.
 
@@ -53,7 +53,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
 | מַה שְׁלוֹמְךָ? | ma shlomcha? | how are you? (to or by a man) | `greetings-11-m` tts, f+m |
-| מַה שְׁלוֹמֵךְ? | ma shlomech? | how are you? (to or by a woman) | `greetings-11-f` tts, f+m |
+| מַה שְׁלוֹמֵךְ? | ma shlomech? \* | how are you? (to or by a woman) | `greetings-11-f` tts, f+m |
 | מָה נִשְׁמָע? | ma nishma? | what's up? (lit. what is heard?) | `greetings-12` tts, f+m |
 | מָה קוֹרֶה? | ma kore? | what's happening? (slang) | `greetings-13` tts, f+m |
 
@@ -100,7 +100,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | Maya (woman): הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה? | hakol beseder, toda. ve'ata? | All fine, thanks. And you? | `d-smalltalk-l2` gap |
 | נָעִים מְאֹד | naim meod | nice to meet you | `greetings-19` tts, f+m |
 | בָּרוּךְ הַבָּא | baruch haba | welcome (to one person) (to or by a man) | `greetings-22-m` tts, f+m |
-| בְּרוּכָה הַבָּאָה | brucha haba'a | welcome (to one person) (to or by a woman) | `greetings-22-f` tts, f+m |
+| בְּרוּכָה הַבָּאָה | brucha haba'a \* | welcome (to one person) (to or by a woman) | `greetings-22-f` tts, f+m |
 | בְּרוּכִים הַבָּאִים | brukhim haba'im | welcome (to several people) | `greetings-23` tts, f+m |
 
 **Speak.**
@@ -144,7 +144,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | בְּהַצְלָחָה | behatslacha | good luck / all the best | `greetings-25` tts, f+m |
 | לִבְרִיאוּת | livri'ut | bless you (after a sneeze) / to your health | `greetings-26` tts, f+m |
 | תִּשְׁמֹר עַל עַצְמְךָ | tishmor al atsmecha | take care of yourself (to or by a man) | `greetings-27-m` tts, f+m |
-| תִּשְׁמְרִי עַל עַצְמֵךְ | tishmeri al atsmech | take care of yourself (to or by a woman) | `greetings-27-f` tts, f+m |
+| תִּשְׁמְרִי עַל עַצְמֵךְ | tishmeri al atsmech \* | take care of yourself (to or by a woman) | `greetings-27-f` tts, f+m |
 
 **Speak.**
 
@@ -185,7 +185,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 |---|---|---|---|
 | סְלִיחָה | slicha | excuse me / sorry | `politeness-06` tts, f+m |
 | אֲנִי מִצְטַעֵר | ani mitsta'er | I'm sorry (to or by a man) | `politeness-07-m` tts, f+m |
-| אֲנִי מִצְטַעֶרֶת | ani mitsta'eret | I'm sorry (to or by a woman) | `politeness-07-f` tts, f+m |
+| אֲנִי מִצְטַעֶרֶת | ani mitsta'eret \* | I'm sorry (to or by a woman) | `politeness-07-f` tts, f+m |
 | רֶגַע | rega | one moment | `politeness-20` tts, f+m |
 
 **Speak.**
@@ -311,11 +311,11 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
 | אֲנִי לֹא מֵבִין | ani lo mevin | I don't understand (to or by a man) | `fillers-14-m` tts, f+m |
-| אֲנִי לֹא מְבִינָה | ani lo mevina | I don't understand (to or by a woman) | `fillers-14-f` tts, f+m |
+| אֲנִי לֹא מְבִינָה | ani lo mevina \* | I don't understand (to or by a woman) | `fillers-14-f` tts, f+m |
 | אֲנִי מֵבִין | ani mevin | I understand (to or by a man) | `fillers-15-m` tts, f+m |
-| אֲנִי מְבִינָה | ani mevina | I understand (to or by a woman) | `fillers-15-f` tts, f+m |
+| אֲנִי מְבִינָה | ani mevina \* | I understand (to or by a woman) | `fillers-15-f` tts, f+m |
 | אֲנִי לֹא יוֹדֵעַ | ani lo yode'a | I don't know (to or by a man) | `fillers-13-m` tts, f+m |
-| אֲנִי לֹא יוֹדַעַת | ani lo yoda'at | I don't know (to or by a woman) | `fillers-13-f` tts, f+m |
+| אֲנִי לֹא יוֹדַעַת | ani lo yoda'at \* | I don't know (to or by a woman) | `fillers-13-f` tts, f+m |
 
 **Speak.**
 
@@ -333,9 +333,9 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
 | אַתָּה מְדַבֵּר אַנְגְּלִית? | ata medaber anglit? | do you speak English? (to or by a man) | `fillers-16-m` tts, f+m |
-| אַתְּ מְדַבֶּרֶת אַנְגְּלִית? | at medaberet anglit? | do you speak English? (to or by a woman) | `fillers-16-f` tts, f+m |
+| אַתְּ מְדַבֶּרֶת אַנְגְּלִית? | at medaberet anglit? \* | do you speak English? (to or by a woman) | `fillers-16-f` tts, f+m |
 | אֲנִי לֹא מְדַבֵּר עִבְרִית טוֹב | ani lo medaber ivrit tov | I don't speak Hebrew well (to or by a man) | `fillers-17-m` tts, f+m |
-| אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב | ani lo medaberet ivrit tov | I don't speak Hebrew well (to or by a woman) | `fillers-17-f` tts, f+m |
+| אֲנִי לֹא מְדַבֶּרֶת עִבְרִית טוֹב | ani lo medaberet ivrit tov \* | I don't speak Hebrew well (to or by a woman) | `fillers-17-f` tts, f+m |
 
 **Speak.**
 
@@ -391,15 +391,15 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
-| אַחַת | achat | one (1) (to or by a woman) | `numbers-01-f` tts, f+m |
+| אַחַת | achat \* | one (1) (to or by a woman) | `numbers-01-f` tts, f+m |
 | אֶחָד | echad | one (1) (to or by a man) | `numbers-01-m` tts, f+m |
-| שְׁתַּיִם | shtayim | two (2) (to or by a woman) | `numbers-02-f` tts, f+m |
+| שְׁתַּיִם | shtayim \* | two (2) (to or by a woman) | `numbers-02-f` tts, f+m |
 | שְׁנַיִם | shnayim | two (2) (to or by a man) | `numbers-02-m` tts, f+m |
-| שָׁלוֹשׁ | shalosh | three (3) (to or by a woman) | `numbers-03-f` tts, f+m |
+| שָׁלוֹשׁ | shalosh \* | three (3) (to or by a woman) | `numbers-03-f` tts, f+m |
 | שְׁלוֹשָׁה | shlosha | three (3) (to or by a man) | `numbers-03-m` tts, f+m |
-| אַרְבַּע | arba | four (4) (to or by a woman) | `numbers-04-f` tts, f+m |
+| אַרְבַּע | arba \* | four (4) (to or by a woman) | `numbers-04-f` tts, f+m |
 | אַרְבָּעָה | arba'a | four (4) (to or by a man) | `numbers-04-m` tts, f+m |
-| חָמֵשׁ | chamesh | five (5) (to or by a woman) | `numbers-05-f` tts, f+m |
+| חָמֵשׁ | chamesh \* | five (5) (to or by a woman) | `numbers-05-f` tts, f+m |
 | חֲמִשָּׁה | chamisha | five (5) (to or by a man) | `numbers-05-m` tts, f+m |
 
 **Speak.**
@@ -417,15 +417,15 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|
-| שֵׁשׁ | shesh | six (6) (to or by a woman) | `numbers-06-f` tts, f+m |
+| שֵׁשׁ | shesh \* | six (6) (to or by a woman) | `numbers-06-f` tts, f+m |
 | שִׁשָּׁה | shisha | six (6) (to or by a man) | `numbers-06-m` tts, f+m |
-| שֶׁבַע | sheva | seven (7) (to or by a woman) | `numbers-07-f` tts, f+m |
+| שֶׁבַע | sheva \* | seven (7) (to or by a woman) | `numbers-07-f` tts, f+m |
 | שִׁבְעָה | shiv'a | seven (7) (to or by a man) | `numbers-07-m` tts, f+m |
-| שְׁמוֹנֶה | shmone | eight (8) (to or by a woman) | `numbers-08-f` tts, f+m |
+| שְׁמוֹנֶה | shmone \* | eight (8) (to or by a woman) | `numbers-08-f` tts, f+m |
 | שְׁמוֹנָה | shmona | eight (8) (to or by a man) | `numbers-08-m` tts, f+m |
-| תֵּשַׁע | tesha | nine (9) (to or by a woman) | `numbers-09-f` tts, f+m |
+| תֵּשַׁע | tesha \* | nine (9) (to or by a woman) | `numbers-09-f` tts, f+m |
 | תִּשְׁעָה | tish'a | nine (9) (to or by a man) | `numbers-09-m` tts, f+m |
-| עֶשֶׂר | eser | ten (10) (to or by a woman) | `numbers-10-f` tts, f+m |
+| עֶשֶׂר | eser \* | ten (10) (to or by a woman) | `numbers-10-f` tts, f+m |
 | עֲשָׂרָה | asara | ten (10) (to or by a man) | `numbers-10-m` tts, f+m |
 
 **Speak.**
@@ -434,3 +434,206 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Count from eight to ten. → עֶשֶׂר (eser) · audio `numbers-10-f`
 
 **Review queue from earlier pages:** `numbers-03-f`, `numbers-01-f`, `numbers-05-f`
+
+## pu-numbers-p03: Twenty, Thirty, a Hundred, a Thousand
+
+*Learn page.* Say round numbers for prices and amounts.
+
+**Grammar: Tens end in -im.** Twenty, thirty and fifty all end in -im: עֶשְׂרִים, שְׁלוֹשִׁים, חֲמִשִּׁים. The same ending marks many plural nouns. מֵאָה (a hundred) and אֶלֶף (a thousand) need no word for one in front.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| עֶשְׂרִים | esrim | twenty (20) | `numbers-11` tts, f+m |
+| שְׁלוֹשִׁים | shloshim | thirty (30) | `numbers-12` tts, f+m |
+| חֲמִשִּׁים | chamishim | fifty (50) | `numbers-13` tts, f+m |
+| מֵאָה | me'a | one hundred (100) | `numbers-14` tts, f+m |
+| אֶלֶף | elef | one thousand (1000) | `numbers-15` tts, f+m |
+
+**Speak.**
+
+- The coffee costs twenty shekels. Say the number. → עֶשְׂרִים (esrim) · audio `numbers-11`
+- Say a hundred. → מֵאָה (me'a) · audio `numbers-14`
+
+**Review queue from earlier pages:** `numbers-05-f`, `numbers-10-f`
+
+## pu-numbers-p04: What Time Is It?
+
+*Grammar page.* Ask the time and say the hour.
+
+**Grammar: Hours use the counting set.** The word for hour is feminine, so the hour takes the counting set from page 1: הַשָּׁעָה שָׁלוֹשׁ, not שְׁלוֹשָׁה. הַ before a word means the: הַשָּׁעָה is the hour.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מָה הַשָּׁעָה? | ma hasha'a? | what time is it? | `numbers-16` tts, f+m |
+| הַשָּׁעָה שָׁלוֹשׁ | hasha'a shalosh | it's three o'clock | `numbers-17` tts, f+m |
+| חֲצִי | chetsi | half | `numbers-18` tts, f+m |
+| רֶבַע | reva | quarter | `numbers-19` tts, f+m |
+
+**Speak.**
+
+- You have no watch. Ask a passer-by the time. → מָה הַשָּׁעָה? (ma hasha'a?) · audio `numbers-16`
+- Someone asks. It is three. → הַשָּׁעָה שָׁלוֹשׁ (hasha'a shalosh) · audio `numbers-17`
+
+**Review queue from earlier pages:** `numbers-03-f`, `numbers-03-m`
+
+## pu-numbers-p05: Today, Tomorrow, Yesterday
+
+*Learn page.* Say when something happens.
+
+**Grammar: Today is the day.** הַיּוֹם is literally the day; Hebrew uses it for today. מָחָר and אֶתְמוֹל are single words with no the.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| הַיּוֹם | hayom | today | `numbers-20` tts, f+m |
+| מָחָר | machar | tomorrow | `numbers-21` tts, f+m |
+| אֶתְמוֹל | etmol | yesterday | `numbers-22` tts, f+m |
+
+**Speak.**
+
+- The shop asks when you will come back. Tomorrow. → מָחָר (machar) · audio `numbers-21`
+- When did you arrive? Yesterday. → אֶתְמוֹל (etmol) · audio `numbers-22`
+
+**Review queue from earlier pages:** `numbers-16`, `numbers-12`
+
+## pu-numbers-p06: Hear the Number
+
+*Listen page.* Pick out numbers in quick speech.
+
+**Grammar: Listen for the ending.** Counting forms are short: שָׁלוֹשׁ, שֶׁבַע, עֶשֶׂר. Tens end in -im. When you hear הַשָּׁעָה first, a counting number follows.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שָׁלוֹשׁ | shalosh \* | three (3) (to or by a woman) | `numbers-03-f` tts, f+m |
+| שֶׁבַע | sheva \* | seven (7) (to or by a woman) | `numbers-07-f` tts, f+m |
+| עֶשֶׂר | eser \* | ten (10) (to or by a woman) | `numbers-10-f` tts, f+m |
+| עֶשְׂרִים | esrim | twenty (20) | `numbers-11` tts, f+m |
+| מֵאָה | me'a | one hundred (100) | `numbers-14` tts, f+m |
+| הַשָּׁעָה שָׁלוֹשׁ | hasha'a shalosh | it's three o'clock | `numbers-17` tts, f+m |
+
+**Speak.**
+
+- Repeat the number you hear: seven. → שֶׁבַע (sheva) · audio `numbers-07-f`
+
+**Review queue from earlier pages:** `numbers-21`, `numbers-19`, `numbers-02-f`
+
+## pu-numbers-p07: Shekels and Unit Review
+
+*Review page.* Ask how much and understand a price, then review the unit.
+
+**Grammar: How much: כַּמָּה.** כַּמָּה asks how much or how many. A price is a number and then the currency: one שֶׁקֶל, or a number of shekels. In a longer number the parts are joined with and.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| שֶׁקֶל | shekel \* | shekel | `il05-w4` tts, f+m |
+| כַּמָּה | kama \* | how much | `il05-w5` tts, f+m |
+
+**Speak.**
+
+- Point at a cake and ask how much. → כַּמָּה (kama) · audio `il05-w5`
+- Say the currency. → שֶׁקֶל (shekel) · audio `il05-w4`
+
+**Review queue from earlier pages:** `numbers-01-f`, `numbers-05-f`, `numbers-08-f`, `numbers-11`, `numbers-14`, `numbers-16`, `numbers-20`
+
+## pu-introducing-p01: My Name Is
+
+*Grammar page.* Say your name and ask someone theirs.
+
+**Grammar: Two ways to say my name is.** Everyday speech says קוֹרְאִים לִי, literally they call me. שְׁמִי is shorter and more formal; its ending -i means my. To ask, use the your-endings from greetings: ךָ to a man, ךְ to a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| קוֹרְאִים לִי ... | kor'im li ... | my name is ... (lit. they call me ...) | `small-talk-02` tts, f+m |
+| שְׁמִי | shmi \* | my name is | `il03-w1` tts, f+m |
+| מַה שִּׁמְךָ? | ma shimcha? | what's your name? (to or by a man) | `small-talk-01-m` tts, f+m |
+| מַה שְּׁמֵךְ? | ma shmech? \* | what's your name? (to or by a woman) | `small-talk-01-f` tts, f+m |
+
+**Speak.**
+
+- Tell someone your name. → קוֹרְאִים לִי ... (kor'im li ...) · audio `small-talk-02`
+- Ask a woman her name. → מַה שְּׁמֵךְ? (ma shmech?) · audio `small-talk-01-f`
+- Ask a man his name. → מַה שִּׁמְךָ? (ma shimcha?) · audio `small-talk-01-m`
+
+**Review queue from earlier pages:** `greetings-19`, `greetings-11-f`
+
+## pu-introducing-p02: Where Are You From?
+
+*Learn page.* Ask where someone is from and say where you are from.
+
+**Grammar: מִ means from, joined to the word.** From is a prefix: מִקָּנָדָה is from Canada, מִתֵּל אָבִיב is from Tel Aviv. The question מֵאֵיפֹה starts with the same prefix: from where.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מֵאֵיפֹה אַתָּה? | me'eifo ata? | where are you from? (to or by a man) | `small-talk-03-m` tts, f+m |
+| מֵאֵיפֹה אַתְּ? | me'eifo at? \* | where are you from? (to or by a woman) | `small-talk-03-f` tts, f+m |
+| אֲנִי מִקָּנָדָה | ani mikanada | I'm from Canada | `small-talk-04` tts, f+m |
+| אֲנִי מִ... | ani mi... \* | I am from... | `il03-w4` tts, f+m |
+| Maya (woman): אֲנִי מִתֵּל אָבִיב. וְאַתָּה? | ani mitel aviv. ve'ata? | I'm from Tel Aviv. And you? | `d-smalltalk-l4` gap |
+
+**Speak.**
+
+- Ask a man where he is from. → מֵאֵיפֹה אַתָּה? (me'eifo ata?) · audio `small-talk-03-m`
+- Ask a woman where she is from. → מֵאֵיפֹה אַתְּ? (me'eifo at?) · audio `small-talk-03-f`
+- Say you are from Canada. → אֲנִי מִקָּנָדָה (ani mikanada) · audio `small-talk-04`
+
+**Review queue from earlier pages:** `small-talk-02`, `fillers-16-f`
+
+## pu-introducing-p03: Small Talk at a Party
+
+*Dialogue page.* Follow a short first conversation from start to finish.
+
+**Grammar: וְ means and, joined to the word.** And is a prefix too: וְאַתָּה? is and you? It turns a question around in one word, as the speakers do here.
+
+**Dialogue setting.** Two people meet at a party and chat.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| Yossi (man): הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ? | hakol tov. me'eifo at? | All good. Where are you from? | `d-smalltalk-l3` gap |
+| Maya (woman): אֲנִי מִתֵּל אָבִיב. וְאַתָּה? | ani mitel aviv. ve'ata? | I'm from Tel Aviv. And you? | `d-smalltalk-l4` gap |
+| Yossi (man): אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת. | ani mikanada. ani medaber ivrit ktsat. | I'm from Canada. I speak a little Hebrew. | `d-smalltalk-l5` gap |
+| Maya (woman): מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב. | metsuyan! ata medaber tov. | Excellent! You speak well. | `d-smalltalk-l6` gap |
+| Yossi (man): נָעִים מְאוֹד. | na'im me'od. | Very nice to meet you. | `d-smalltalk-l7` gap |
+
+**Speak.**
+
+- Answer: where are you from? Canada. → אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת. (ani mikanada. ani medaber ivrit ktsat.) · audio `d-smalltalk-l5`
+
+**Review queue from earlier pages:** `small-talk-03-f`, `d-smalltalk-l2`, `greetings-16`
+
+## pu-introducing-p04: Say It About Yourself
+
+*Speak page.* Say you are a tourist, it is your first time, and ask what someone does.
+
+**Grammar: Describing yourself: man's and woman's forms again.** A man says אֲנִי תַּיָּר, a woman אֲנִי תַּיֶּרֶת. The question changes with the person asked: מָה אַתָּה עוֹשֶׂה? to a man, מָה אַתְּ עוֹשָׂה? to a woman.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| אֲנִי תַּיָּר | ani tayar | I'm a tourist (to or by a man) | `small-talk-05-m` tts, f+m |
+| אֲנִי תַּיֶּרֶת | ani tayeret \* | I'm a tourist (to or by a woman) | `small-talk-05-f` tts, f+m |
+| זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל | zot hapa'am harishona sheli beyisrael | it's my first time in Israel | `small-talk-06` tts, f+m |
+| מָה אַתָּה עוֹשֶׂה? | ma ata ose? | what do you do (for work)? (to or by a man) | `small-talk-07-m` tts, f+m |
+| מָה אַתְּ עוֹשָׂה? | ma at osa? \* | what do you do (for work)? (to or by a woman) | `small-talk-07-f` tts, f+m |
+
+**Speak.**
+
+- You are a woman visiting. Say you are a tourist. → אֲנִי תַּיֶּרֶת (ani tayeret) · audio `small-talk-05-f`
+- Say it is your first time in Israel. → זֹאת הַפַּעַם הָרִאשׁוֹנָה שֶׁלִּי בְּיִשְׂרָאֵל (zot hapa'am harishona sheli beyisrael) · audio `small-talk-06`
+- Ask a man what he does for work. → מָה אַתָּה עוֹשֶׂה? (ma ata ose?) · audio `small-talk-07-m`
+
+**Review queue from earlier pages:** `small-talk-04`, `fillers-17-m`, `small-talk-02`
+
+## pu-introducing-p05: First Words Check
+
+*Check page.* Show you can greet, be polite, count and introduce yourself.
+
+**Grammar: Putting the first level together.** This check mixes every unit of the first level. One new phrase: מָה הַמַּצָּב? is another casual how's it going, built like מָה נִשְׁמָע?.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| מָה הַמַּצָּב? | ma hamatsav? | how's it going? (lit. what's the situation) (slang) | `small-talk-16` tts, f+m |
+
+**Speak.**
+
+- Greet a friend casually. → מָה הַמַּצָּב? (ma hamatsav?) · audio `small-talk-16`
+- Say you don't understand, as a man. → אֲנִי לֹא מֵבִין (ani lo mevin) · audio `fillers-14-m`
+
+**Review queue from earlier pages:** `greetings-03`, `greetings-11-m`, `politeness-03`, `politeness-07-f`, `fillers-14-m`, `fillers-18`, `fillers-16-m`, `numbers-17`, `il05-w5`, `small-talk-02`, `small-talk-04`

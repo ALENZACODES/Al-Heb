@@ -1,4 +1,4 @@
-"""Specs for the 88 remaining Practical pages after Claude's time and weather units."""
+"""Specs for the 88 remaining Practical pages after the time and weather units."""
 
 SPECS = []
 

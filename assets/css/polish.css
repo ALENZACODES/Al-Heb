@@ -405,3 +405,6 @@ html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
 /* 18. "3 in a row!": the answer band turns gold on a run of right answers */
 .alef-answer-band.is-combo { background: #fff1c2; color: #3a2700; border-block-start-color: #b8860b; }
 @media (forced-colors: active) { .alef-answer-band.is-combo { border: 2px solid CanvasText; } }
+
+/* 19. Brain Lab: room between the workout card and "Your Skills", on the spacing scale */
+.lab-hero + h2 { margin-block-start: var(--s-6, 1.5rem); }

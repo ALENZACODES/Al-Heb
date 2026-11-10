@@ -4,6 +4,7 @@
 import { en } from './i18n.js';
 
 export const NAV_EN = {
+  'nav.ask': 'Ask the Torah',
   'nav.section.learn': 'Learn', 'nav.section.read': 'Read', 'nav.section.speak': 'Speak & Listen', 'nav.section.progress': 'Progress', 'nav.section.more': 'More',
   'nav.section.learn.desc': 'Lessons, letters, vocabulary, grammar and typing.',
   'nav.section.read.desc': 'Torah, prayers, the service and chanting marks.',

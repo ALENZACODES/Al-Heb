@@ -1,0 +1,35 @@
+# PROPOSAL ONLY. Do not apply this file as a live Render Blueprint and do not deploy
+# without John. This is a draft of a private web service for Ask the Torah.
+#
+# Service type: web
+# Runtime: python
+# Region: oregon (or the project's usual region)
+# Build: pip install -r tools/ask-torah/requirements.txt
+# Start: python tools/ask-torah/server.py
+# Health check: /health
+#
+# Environment (set in the Render dashboard, do not commit secrets):
+#   GOOGLE_CLOUD_PROJECT, VERTEX_API_KEY, GOOGLE_CLOUD_LOCATION
+#   ASK_TORAH_HOST=0.0.0.0
+#   ASK_TORAH_PORT=10000
+#   ASK_TORAH_CORS=https://<the-alef-site>
+#   ASK_TORAH_SPEND_STOP=36
+#   ASK_TORAH_SPEND_CAP=40
+#
+# The Aleph front end reads the public URL from a meta tag
+#   <meta name="alef-ask-torah" content="https://ask-torah.onrender.com">
+# or window.ALEF_ASK_TORAH_URL. When that is unset, #/ask shows a calm
+# “not connected yet” message and does not call a server.
+
+services:
+  - type: web
+    name: alef-ask-torah
+    runtime: python
+    plan: starter
+    autoDeploy: false
+    buildCommand: pip install -r tools/ask-torah/requirements.txt
+    startCommand: bash -lc 'cd tools/ask-torah && ASK_TORAH_HOST=0.0.0.0 ASK_TORAH_PORT=$PORT python server.py'
+    healthCheckPath: /health
+    envVars:
+      - key: ASK_TORAH_HOST
+        value: 0.0.0.0

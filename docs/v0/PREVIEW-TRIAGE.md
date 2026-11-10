@@ -63,6 +63,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `dottile` | hide | Same vowel signs as `vowelboard`; to be merged into it. |
 | `syllablechips` | keep | Linked from the silent-reading steps. |
 | `torahread` | keep | Target for `torahreader`. |
+| `ask` | keep | Ask the Torah: answers from the written text, with links into the reader. Static answers, no server; reached from each verse in the Torah reader, the Read page, More and the full Home. |
 | `torahreader` | hide | Second Torah screen; `torahread` covers the same need. |
 | `vocab` | keep | Vocabulary list and review (shared audio button). |
 | `nikkud-fade` | hide | Same idea as `fade`; to be merged into it. |

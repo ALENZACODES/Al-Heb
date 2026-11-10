@@ -12,3 +12,7 @@ data/images/review/
 tools/torah/snapshot/
 audio/_review/
 .env
+
+# Ask the Torah local env and caches
+tools/ask-torah/.venv/
+tools/ask-torah/**/__pycache__/

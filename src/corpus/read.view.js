@@ -475,7 +475,10 @@ export async function mount(root, ctx = /** @type {any} */ ({})) {
     // The full Torah reader (all five books, Hebrew and English, recording speeds, finger guide) is linked first, in view.
     const torahDoor = el('p', { class: 'crp-torahdoor' }, el('a', { href: '#/torahreader', class: 'btn' }, 'Open the Torah reader'),
       ' All five books in Hebrew and English: slow the recording down, choose Ari or Noa, and follow with your finger.');
-    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), torahDoor, silentReadingNode(el, ctx), tabs, panel, live);
+    // Ask the Torah sits next to the Torah reader: the place a learner is when a question comes up (#/ask, checked answers only).
+    const askDoor = ctx?.hasRoute?.('ask') === false ? null : el('p', { class: 'crp-torahdoor crp-askdoor' }, el('a', { href: '#/ask', class: 'btn secondary', id: 'crp-ask' }, 'Ask the Torah'),
+      ' Ask about a person, a law, a festival or a verse. Each answer quotes the verses and links to them in the reader.');
+    wrap.replaceChildren(el('h1', { id: 'view-title', tabindex: '-1' }, 'Read'), torahDoor, askDoor, silentReadingNode(el, ctx), tabs, panel, live);
     if (keepFocus) wrap.querySelector('#' + CSS_escape(keepFocus))?.focus();
   }
   const CSS_escape = (s) => (globalThis.CSS?.escape ? globalThis.CSS.escape(s) : s.replace(/[^\w-]/g, '\\$&'));

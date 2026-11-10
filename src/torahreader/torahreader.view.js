@@ -63,6 +63,7 @@ const CSS = FINGER_CSS + `
 .alef-trd .trd-w.trd-sel{border-style:dashed}
 .alef-trd .trd-stop{font-size:calc(1.5rem * var(--trd-scale,1));line-height:1.6}
 .alef-trd .trd-en{margin:.15rem 0;font-style:italic}
+.alef-trd .trd-ask{display:inline-flex;align-items:center;min-block-size:44px;padding:0 .8rem;margin-inline-start:.4rem;border-radius:999px;border:1.5px solid currentColor;text-decoration:none;font-size:.9rem}
 .alef-trd .trd-say{margin:.3rem 0 .1rem;font-size:1.1rem;font-weight:600;letter-spacing:.01em}
 .alef-trd .trd-say-k{font-style:normal;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin-inline-end:.3em}
 .alef-trd .trd-en-only{font-size:1.35rem;line-height:1.5;margin:.3rem 0 .5rem}
@@ -556,6 +557,7 @@ export function mount(root, ctx) {
         el('button', { type: 'button', class: 'trd-sounds', 'data-translit': String(v.n), 'aria-pressed': (state.showPronunciation !== shownTranslit.has(v.n)) ? 'true' : 'false',
           onclick: () => { if (shownTranslit.has(v.n)) shownTranslit.delete(v.n); else shownTranslit.add(v.n); render(); } }, 'Sounds'),
         (state.showPronunciation !== shownTranslit.has(v.n)) ? el('p', { class: 'trd-translit', lang: 'en', dir: 'ltr', 'data-pronunciation-verse': String(v.n) }, translit(v.he), el('span', { class: 'trd-translit-note' }, ` ${TRANSLIT_LABEL}`)) : null,
+        ctx?.hasRoute?.('ask') !== false ? el('a', { class: 'trd-ask', href: `#/ask?q=${encodeURIComponent(`What does ${chapterData.ref}:${v.n} say?`)}`, 'aria-label': `Ask the Torah about ${chapterData.ref}:${v.n}` }, 'Ask') : null,
         study ? el('button', { type: 'button', class: 'trd-study-link', onclick: () => { setState({ passage: study, view: 'reader', screen: 'study' }); render(); } }, 'Study this passage in depth') : null),
       state.showEnglish ? el('div', { class: 'trd-cell-en' }, el('p', { class: 'trd-en' }, v.en)) : null);
     chapterRows.set(v.n, row);

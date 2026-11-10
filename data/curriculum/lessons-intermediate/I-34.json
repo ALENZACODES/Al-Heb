@@ -226,7 +226,7 @@
   {
    "id": "I-34-e02",
    "type": "respond",
-   "cue": "A traveller says Hagomel. Answer with the congregation's line.",
+   "cue": "A traveller says Hagomel. Answer with the congregation's line (said to a man; to a woman it is shegmalekh ... yigmalekh).",
    "answer": {
     "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
     "en": "May the one who bestowed good on you bestow every good on you. Selah."
@@ -317,7 +317,7 @@
   {
    "id": "I-34-e12",
    "type": "respond",
-   "cue": "A friend says 'may it be so'. Reply with the wish.",
+   "cue": "A friend wishes you a safe trip home. Answer 'may it be so'.",
    "answer": {
     "he": "כֵּן יְהִי רָצוֹן",
     "en": "So may it be his will"

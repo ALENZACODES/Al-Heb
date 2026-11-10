@@ -8,7 +8,7 @@
 // Nothing here changes scores, streaks or saved progress. Only stills listed in data/images/rimon/present.json are
 // ever requested, so until the pictures exist the app looks and behaves exactly as before. Every failure is silent.
 import {
-  TRIGGERS, stillPath, presentSet, presentFiles, pickStill, alreadySeen, lineFor, dayContext, greetingCandidates, routeTrigger,
+  TRIGGERS, stillPath, presentSet, presentFiles, freeRestDays, pickStill, alreadySeen, lineFor, dayContext, greetingCandidates, routeTrigger,
   createAnswerTracker, ACTION_TRIGGERS, ANSWER_WINDOW_MS, streakChangeTrigger, labChangeTrigger, booksChangeTrigger,
   awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES, seasonTrigger,
 } from './rimon-triggers.js';
@@ -90,12 +90,12 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   function facts(ctx) {
     const s = seen(), rec = read('streak', null);
     let streak = {};
-    try { streak = projectStreak(rec, now()); } catch { streak = {}; }
+    try { streak = projectStreak(rec, now(), freeRestDays(rec, ctx.iso)); } catch { streak = {}; }
     const lessonsDone = Object.keys(read('curriculum.progress', null)?.completed || {}).length;
     const veteran = lessonsDone > 0 || (streak.best || 0) > 0;
     const daysAway = s.lastDay && s.lastDay < ctx.iso ? Math.round((Date.parse(`${ctx.iso}T12:00:00Z`) - Date.parse(`${s.lastDay}T12:00:00Z`)) / 86400000) : 0;
     return {
-      streak, lessonsDone, newLearner: lessonsDone === 0,
+      streak, lessonsDone, newLearner: lessonsDone === 0, retention: read('retention.v1', null) != null,
       badges: Object.keys(read('awards.v1', null)?.awards || {}).length,
       // the hello belongs to a new learner's first day (the welcome steps may already have recorded that day)
       firstVisit: !veteran && !s['greet.first'] && (!s.firstDay || s.firstDay === ctx.iso),
@@ -382,7 +382,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     const ctx = ctxNow();
     if (key === 'streak') {
       let a = null, b = null;
-      try { a = before ? projectStreak(before, now()) : null; b = projectStreak(value, now()); } catch { return; }
+      try { const iso = ctxNow().iso; a = before ? projectStreak(before, now(), freeRestDays(before, iso)) : null; b = projectStreak(value, now(), freeRestDays(value, iso)); } catch { return; }
       const t = streakChangeTrigger(a, b, ctx.hour);
       if (t) toast(t, { n: b.count });
     } else if (key === 'awards.v1') {

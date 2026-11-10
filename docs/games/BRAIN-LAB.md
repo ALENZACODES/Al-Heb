@@ -4,6 +4,8 @@ Brain Lab (`#/lab`) is ALEF's brain-training page: twenty-seven games in three p
 
 Calm mode and Settings > No time limits both take the clocks away: rounds wait for you and a game ends after ten rounds.
 
+Every game can be played by keyboard (Tab to a choice, Enter to pick it; twelve games also take the number keys). When a new round replaces the board, focus moves to its first choice, so the player keeps their place. The feedback line says "Right." or "Not quite." in words for a screen reader. Once a round is decided, further taps on its board are ignored. On the results card, focus is on the next step, which is described by one sentence with the stars, the score and how many were right.
+
 A finished game with at least one star counts toward the daily goal: the results card sends `alef:game-finished`, and the retention code pays game XP, with its own daily cap (`src/retention/xp.js`).
 
 ## The Games
@@ -88,5 +90,5 @@ Brain Lab tells the companion what is happening (`alef:rimon` with `{ action, mo
 
 - `node tools/lab/build-lab-words.mjs` rebuilds `data/lab/words.json` from the dictionary, the clip list and the sound tables. Run it after any of those change; a test fails if the file drifts from a fresh build.
 - `node --test tests/lab.core.test.js tests/lab.games2.test.js tests/warm-routes.test.js` checks the rules, the data against its sources, and that tapping at random scores at chance in every new game.
-- `node --test tests/lab.browser.test.js` (browser tier, about 10 minutes) plays all twenty-seven games to their results card in Chromium and checks that a finished game pays XP. `LAB_ENGINE=webkit` runs the same test in WebKit, Safari's engine, with an iPhone 13's screen and touch; `LAB_GAMES=hunt,twins` limits it to some games.
+- `node --test tests/lab.browser.test.js` (browser tier, about 10 minutes) plays all twenty-seven games to their results card in Chromium and checks that a finished game pays XP, and plays six games by Enter alone (focus, spoken right and wrong, the results sentence). `LAB_ENGINE=webkit` runs the same test in WebKit, Safari's engine, with an iPhone 13's screen and touch; `LAB_GAMES=hunt,twins` limits it to some games.
 - Brain Lab's code and data are not in the first install; the shell keeps them on the device once per build (`src/shell/warm-routes.js`, about 525 KB).

@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book54-p01.mp3"
    },
    "illustration": "a grey apartment block, a bicycle, a man at a window",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book54-p02.mp3"
    },
    "illustration": "a sunny low house, a lemon tree",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book54-p03.mp3"
    },
    "illustration": "a phone, a calendar with Sundays marked",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book54-p04.mp3"
    },
    "illustration": "the man on a video call, his mother's face filling the screen",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book54-p05.mp3"
    },
    "illustration": "the mother squinting into the camera",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book54-p06.mp3"
    },
    "illustration": "the man hiding an empty plate",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book54-p07.mp3"
    },
    "illustration": "the mother's unimpressed face",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book54-p08.mp3"
    },
    "illustration": "a sad slice of bread",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book54-p09.mp3"
    },
    "illustration": "the mother's silence, louder than words",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book54-p10.mp3"
    },
    "illustration": "the mother already packing a box: spices, cookies, a jar",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book54-p11.mp3"
    },
    "illustration": "the box arriving in Berlin, smelling of home",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book54-p12.mp3"
    },
    "illustration": "the man eating cookies at his window, eyes closed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

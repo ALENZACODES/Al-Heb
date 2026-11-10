@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book59-p01.mp3"
    },
    "illustration": "a bowl of hummus with olive oil and paprika",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book59-p02.mp3"
    },
    "illustration": "a woman with a bag of dried chickpeas",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book59-p03.mp3"
    },
    "illustration": "a bowl of chickpeas soaking on the counter",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book59-p04.mp3"
    },
    "illustration": "a pot bubbling, foam skimmed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book59-p05.mp3"
    },
    "illustration": "the clock, the woman reading nearby",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book59-p06.mp3"
    },
    "illustration": "four ingredients lined up",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book59-p07.mp3"
    },
    "illustration": "a food processor whirring",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book59-p08.mp3"
    },
    "illustration": "a finger in the bowl, a thinking face",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book59-p09.mp3"
    },
    "illustration": "the market hummus stall pictured in her mind",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book59-p10.mp3"
    },
    "illustration": "squeezing a lemon",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book59-p11.mp3"
    },
    "illustration": "her satisfied shrug",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,8 +170,9 @@
     "m": "audio/m/israeli/book/book59-p12.mp3"
    },
    "illustration": "a bowl, a pita, a window with afternoon light",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
- ]
+ ],
+ "hasImages": true
 }

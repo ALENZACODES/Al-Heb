@@ -1,0 +1,62 @@
+# Render static site for the review host (https://alef-review.onrender.com).
+# Render ignores the Cloudflare-format `_headers` file in the repo. This
+# `headers` block is the service-native equivalent of the security rules in
+# `_headers` (and the key cache / Content-Type rules the live host also lacks).
+# autoDeploy is on so a merge to main can go live without a manual trigger.
+# The live service is not Blueprint-managed, so these fields also need to be
+# set on the service itself (headers and autoDeploy) to take effect.
+services:
+  - type: web
+    name: alef-review
+    runtime: static
+    repo: https://github.com/ALENZACODES/Al-Heb
+    branch: main
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' http://127.0.0.1:* http://localhost:*; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+      - path: /*
+        name: Permissions-Policy
+        value: "camera=(self), geolocation=(self), microphone=(self), payment=(), usb=(), bluetooth=(), serial=(), interest-cohort=()"
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Cross-Origin-Opener-Policy
+        value: same-origin
+      - path: /manifest.webmanifest
+        name: Content-Type
+        value: application/manifest+json
+      - path: /manifest.webmanifest
+        name: Cache-Control
+        value: no-cache
+      - path: /
+        name: Cache-Control
+        value: no-cache
+      - path: /index.html
+        name: Cache-Control
+        value: no-cache
+      - path: /offline.html
+        name: Cache-Control
+        value: no-cache
+      - path: /404.html
+        name: Cache-Control
+        value: no-cache
+      - path: /404.js
+        name: Cache-Control
+        value: no-cache
+      - path: /sw.js
+        name: Cache-Control
+        value: no-cache
+      - path: /precache-manifest.js
+        name: Cache-Control
+        value: no-cache

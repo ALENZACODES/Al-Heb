@@ -122,3 +122,45 @@ WebKit in this workspace is the Safari engine, not an iPhone: real Safari on a r
 4. **Pictures:** the 23 on order, and the studio covers redrawn without letters.
 5. **A native speaker** checks titles and transliterations.
 6. **Real Safari on an iPhone, and VoiceOver.**
+
+## Review of the Pushed Branch at `9afd77cc` (Review Round 5 of 5)
+
+GitHub at the time of the review:
+- `main` had three new Torah audio commits;
+- no new pictures had landed for Brain Lab;
+- the integration branch had not moved since this branch merged it.
+
+So this round looked at the one area no earlier round had tested: playing without a touchscreen or without sight. I drove every game by keyboard in Chromium and WebKit, and checked what a screen reader is told.
+
+**Score for `9afd77cc`: 93/100.** Each round's board replaces the last, and nothing put focus back:
+
+1. **Focus was lost after every answer.** The pressed button went away with its round, and focus fell back to the page body, in Chromium and WebKit alike. A keyboard or switch player had to Tab through the header for every round of every game. Fixed: while the player is on the board, focus moves to the new round's first choice, including after a memory phase (Letter Matrix, Café Order, Letter Span). On multi-tap boards (Count Up, Root Forge, Word Burst), a tile that becomes disabled passes focus to the next free one. Checked on all 27 games: focus stays on a choice through six rounds of each.
+2. **Right and wrong were not said in words.** A right answer was announced only as "+40". A miss was announced only if that game had something to say, and Sound Match, for one, said nothing. Fixed: the feedback line, a polite live region, starts with "Right." or "Not quite."
+3. **A second press during the pause after an answer ran the round's handler again.** In Café Order it rewrote the feedback, and a stray tap anywhere did the same. Fixed: once a round is decided, taps on the board are ignored until the next round. The board carries `is-decided` meanwhile.
+4. **The results card put focus on "Back to Brain Lab"**, so a screen reader heard the link's name and not the result. Fixed: the link is described by one hidden sentence, for example "Middle Letter: 2 of 3 stars, 210 points, 8 of 10 right. Your first score in this game."
+
+## Round 11: Play by Keyboard and Screen Reader
+
+| Round | Commit | Score | What changed | What would raise it |
+|---|---|---|---|---|
+| 11 | this push | 97 | The four fixes above, in `src/lab/lab.view.js`, so they hold for every game in every pack. A new browser test plays six games by Enter alone, one of each board style, in Chromium and in WebKit. It checks that focus is back on a live choice after every press, that right or wrong is said in words, and that the game ends on a link carrying the result. | Below. |
+
+Checked after the changes:
+- full unit tier: 3,567 tests, 0 failures;
+- axe (WCAG A and AA), light and dark: nothing on the page, in Middle Letter, in Root Forge, or on the results card of Middle Letter and Word Burst;
+- meta scan: only the finding already on `main`.
+
+The full browser test results are in the commit message.
+
+Still not done: an actual screen reader (VoiceOver, TalkBack, NVDA). What is checked here is what the page gives a screen reader (live regions, labels, focus), not how one reads it aloud.
+
+## Where Brain Lab Stands After Five Review Rounds
+
+27 games in three packs, all playable to their results card in Chromium and in WebKit with iPhone settings, by touch, mouse or keyboard. Every pack speaks its Hebrew in Ari's or Noa's voice, and follows the learner's tradition where the sound differs. Finished games count toward the daily goal. What remains needs a person or a service this workspace does not have:
+
+1. **John:** the prayer items holding a divine name (Barchu, Hagomel, Sim Shalom, the after-Haftarah blessing, Elohim and Eloheinu in Prayer Chain, Mourner's Kaddish). The four-letter Name is never voiced.
+2. **A listener:** 35 held recordings (`data/lab/clip-holds.json`).
+3. **Recording:** the 14 month names, then the priority-2 list in `docs/audio/BRAIN-LAB-AUDIO-2026-11-10.csv`. The 28 Sephardi and Ashkenazi items need checked respellings first.
+4. **The images lane:** 23 pictures on order, studio covers without letters, and Rimon's cream square in dark mode for the Rimon lane.
+5. **A native speaker:** titles and transliterations.
+6. **Real devices:** Safari on an iPhone, Android Chrome, and a screen reader on each.

@@ -321,6 +321,30 @@ test('round 5 frames: not wanting, not working, where a thing is, which, our and
   for (const [src, want] of back) assert.equal(en(src).translation, want, src);
 });
 
+test('hardening: odd input never throws, never leaks a built-in, and never answers with nothing', () => {
+  const odd = ['', '   ', '?', '...', '😀', '123', 'a', 'אב', 'the', 'i want', 'i need to', 'how much is', 'אני רוצה', 'איפה', 'two of', 'my my my', 'at', 'in', 'for', 'to',
+    '.*+?^${}()|[]\\', '<script>alert(1)</script>', 'x'.repeat(5000), 'שלום '.repeat(400), 'Hello שלום mixed', 'constructor', '__proto__', 'toString', 'hasOwnProperty please',
+    'constructor tickets', 'twenty constructor', '0 tickets', '101 shekels', 'I am 500 years old', 'see you at 99', 'it is 99 oclock', 'a table for 0', 'half past', '\n\t'];
+  for (const text of odd) for (const direction of ['auto', 'en-he', 'he-en']) for (const speaker of ['', 'f']) {
+    const r = engine.translate(text, { direction, speaker });
+    assert.equal(typeof r.ok, 'boolean');
+    assert.equal(typeof r.translation, 'string');
+    if (r.ok) assert.ok(r.translation.length > 0, JSON.stringify(text));
+    else assert.equal(r.translation, '');
+    assert.doesNotMatch(r.translation, /undefined|null|NaN|\[object|function/, JSON.stringify(text));
+  }
+});
+
+test('hardening: round trips and small faults from the last review', () => {
+  assert.equal(he('Can I change money here?').translation, 'אפשר להחליף כאן כסף?');
+  assert.equal(en('אפשר להחליף כאן כסף?').translation, 'Can I change money here?');
+  assert.equal(en('אני לא צריך שקית').translation, "I don't need a bag");
+  assert.equal(en('אני צריכה שקית, בבקשה').translation, 'I need a bag, please');
+  const welcome = he('welcome');
+  for (const v of welcome.variants || []) if (v.label === 'Feminine form') assert.match(v.text, /[\u05B0-\u05C7]/, 'the feminine phrasebook form keeps its vowel marks');
+  assert.equal(he('It is 99 oclock').ok, false);
+});
+
 test('a refused line that sounds like a stored line is offered as "did you mean", never given as the answer', () => {
   const cases = [
     ['מי בא לי קרח?', 'he-en', 'מים, בלי קרח'],
@@ -382,7 +406,7 @@ test('lines as a listener or a speech recogniser hears them (from the speech rev
   assert.match(fixed.note, /Read “שקיד” as “שקית”/, 'the correction is shown, not hidden');
   // a real word that was misheard is a different request: it is translated as heard or refused, never bent to a stored line
   assert.equal(en('בלי ביצים בבקשה').translation, 'No eggs, please');
-  assert.equal(en('אני צריך שקיות בבקשה').translation, 'I need shopping bags, please');
+  assert.equal(en('אני צריך שקיות בבקשה').translation, 'I need bags, please');
   assert.equal(en('החשבון בפרטנר, בבקשה').ok, false);
   assert.equal(he('See you at show').ok, false);
 });

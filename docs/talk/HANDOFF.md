@@ -1,6 +1,6 @@
 # Talk Handoff
 
-State of the Talk screen (`#/talk`) after five build and review rounds on `claude/live-translator-2026-11-10`. Nothing here is merged to `main`.
+State of the Talk screen (`#/talk`) after five build and review rounds and a hardening pass on `claude/live-translator-2026-11-10`. Nothing here is merged to `main`.
 
 ## What It Is
 
@@ -16,7 +16,8 @@ An English and Hebrew phrase helper that runs in the browser with no server. It 
 | Listening with a microphone | Not tested |
 | iPhone, Android, Firefox | Not tested |
 | Hebrew checked by a native speaker | Not done (322 lines, 265 nouns, 62 describing words, 62 to-forms) |
-| GitHub Actions run for this branch | Not looked at |
+| GitHub Actions `ci` run for this branch | Passed for the round 2, 3 and 4 pushes; the round 5 run was still in progress when last looked at |
+| Odd input (empty, very long, symbols, mixed scripts, words such as "constructor") | No error and no empty answer over 56 inputs in every direction |
 
 ## The Number That Matters
 
@@ -36,9 +37,7 @@ So: on the topics and frames it holds, Talk answers well. On a new everyday line
 
 ## Known Faults
 
-- Feminine forms of phrasebook lines are shown without vowel marks beside a main line that has them.
-- "Can I change money here?" puts "here" last in Hebrew; a speaker would put it before the thing.
-- "A bag" is תיק in frames and שקית in the stored shop line, so the two directions do not always round-trip.
+- "A bag" is תיק in frames and שקית in the stored shop line. Hebrew שקית now reads back as "bag", but English "a bag" in a new frame still gives תיק.
 - Dictionary answers (first meanings only, marked low) can still pick the wrong sense.
 
 ## Where Things Are

@@ -3,7 +3,7 @@
  "note": "Everyday sentence pairs, nouns, places, names and numbers for the Talk screen. Written for this project; no phrasebook was copied. Hebrew is unpointed everyday spelling. Not yet checked by a native speaker.",
  "review": "native-speaker-needed",
  "license": "original (project-owned)",
- "fields": {"en": "English wordings that mean this line (first is the one shown)", "he": "Hebrew line; when the speaker's gender changes the words this is the man's form", "f": "the same line said by a woman, when it differs", "toF": "the same line said to a woman, when it differs", "alt": "other Hebrew wordings that mean the same (matched when heard, never shown as the answer)", "g": "noun gender for agreement: f feminine, p plural; masculine when absent", "pl": "plural of a countable noun, used after a number", "verbs": "to-forms that follow want, need and may I unchanged whoever speaks; thing = may be followed by a thing (buy a ticket)", "own": "a noun that already says whose it is (my husband): no article is added", "food": "the form used for the food in general (I do not eat fish)", "adjectives": "m, f, mp, fp = masculine, feminine, masculine plural, feminine plural", "g values": "f feminine, p plural, pf feminine plural; masculine when absent"},
+ "fields": {"en": "English wordings that mean this line (first is the one shown)", "he": "Hebrew line; when the speaker's gender changes the words this is the man's form", "f": "the same line said by a woman, when it differs", "toF": "the same line said to a woman, when it differs", "alt": "other Hebrew wordings that mean the same (matched when heard, never shown as the answer)", "g": "noun gender for agreement: f feminine, p plural; masculine when absent", "pl": "plural of a countable noun, used after a number", "verbs": "to-forms that follow want, need and may I unchanged whoever speaks; thing = may be followed by a thing (buy a ticket)", "back": "the English word to use when reading the Hebrew back, when the plain word belongs to another noun", "own": "a noun that already says whose it is (my husband): no article is added", "food": "the form used for the food in general (I do not eat fish)", "adjectives": "m, f, mp, fp = masculine, feminine, masculine plural, feminine plural", "g values": "f feminine, p plural, pf feminine plural; masculine when absent"},
  "phrases": [
   {"id": "t-hello", "cat": "greetings", "en": ["Hello", "Hi", "Hey", "Hello there"], "he": "שלום"},
   {"id": "t-morning", "cat": "greetings", "en": ["Good morning"], "he": "בוקר טוב"},
@@ -457,7 +457,7 @@
   {"en": ["old city"], "he": "העיר העתיקה", "def": "העיר העתיקה", "g": "f"},
   {"en": ["city center", "city centre", "downtown", "center", "centre"], "he": "מרכז העיר", "def": "מרכז העיר"},
   {"en": ["bag", "handbag", "backpack"], "he": "תיק", "pl": "תיקים"},
-  {"en": ["shopping bag", "plastic bag"], "he": "שקית", "g": "f", "pl": "שקיות"},
+  {"en": ["shopping bag", "plastic bag"], "back": "bag", "he": "שקית", "g": "f", "pl": "שקיות"},
   {"en": ["suitcase"], "he": "מזוודה", "g": "f", "pl": "מזוודות"},
   {"en": ["phone", "telephone"], "he": "טלפון"},
   {"en": ["charger"], "he": "מטען"},

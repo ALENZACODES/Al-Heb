@@ -66,8 +66,8 @@ export function editDistance(a, b, cap = 2) {
   return prev[b.length];
 }
 
-const EN_TENS = { twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
-const EN_UNITS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9 };
+const EN_TENS = { __proto__: null, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+const EN_UNITS = { __proto__: null, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9 };
 /** "twenty five" -> "25", "a hundred" -> "100". Words for 0 to 19 are left alone (the number table knows them). */
 export function foldNumbersEn(q) {
   const t = String(q).replace(/\b(?:a|one) hundred\b/g, '100').split(' ');
@@ -78,7 +78,7 @@ export function foldNumbersEn(q) {
   }
   return out.join(' ');
 }
-const EN_PLURAL = { person: 'people' };
+const EN_PLURAL = { __proto__: null, person: 'people' };
 const pluralEn = (en) => EN_PLURAL[en] || (/(s|sh|ch|x)$/.test(en) ? en + 'es' : en + 's');
 
 /** Dice overlap of two token lists (0..1). */
@@ -116,11 +116,11 @@ const MASS = new Set(['coffee', 'tea', 'water', 'milk', 'bread', 'wine', 'beer',
 const withArticle = (en) => (MASS.has(en) || /s$/.test(en) ? en : (/^[aeiou]/.test(en) ? 'an ' : 'a ') + en);
 const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
 const hasHebrewText = (s) => /[א-ת]/.test(String(s));
-const PREFIX_GLOSS = { 'ו': 'and', 'ה': 'the', 'ב': 'in', 'ל': 'to' };
+const PREFIX_GLOSS = { __proto__: null, 'ו': 'and', 'ה': 'the', 'ב': 'in', 'ל': 'to' };
 const SMALL_WORDS = new Map([['אפשר', 'may I'], ['עוד', 'more'], ['בלי', 'without'], ['עם', 'with'], ['יש', 'there is'], ['אין', 'there is no'], ['מה', 'what'], ['אתה', 'you'], ['את', 'you'], ['אתם', 'you'], ['אני', 'I'], ['אנחנו', 'we'], ['הוא', 'he'], ['היא', 'she'], ['זה', 'this'], ['זאת', 'this'], ['כאן', 'here'], ['פה', 'here'], ['שם', 'there'], ['לא', 'not'], ['כן', 'yes'], ['גם', 'also'], ['רק', 'only'], ['מאוד', 'very'], ['עכשיו', 'now'], ['היום', 'today'], ['מחר', 'tomorrow'], ['של', 'of'], ['שלי', 'my'], ['על', 'on'], ['אחרי', 'after'], ['לפני', 'before'], ['ליד', 'next to'], ['בבקשה', 'please'], ['תודה', 'thanks'], ['איפה', 'where'], ['מתי', 'when'], ['כמה', 'how much'], ['למה', 'why'], ['מי', 'who'], ['איך', 'how'], ['או', 'or'], ['אבל', 'but'], ['כי', 'because'], ['אם', 'if'], ['לי', 'to me'], ['לך', 'to you'], ['לנו', 'to us'], ['צריך', 'need'], ['צריכה', 'need'], ['רוצה', 'want'], ['יכול', 'can'], ['יכולה', 'can']]);
 
 /**
- * @typedef {{id:string, src:string, en:string[], he:string, pointed?:string, f?:string, toF?:string, alt?:string[], other?:string, clip?:string}} Pair
+ * @typedef {{id:string, src:string, en:string[], he:string, pointed?:string, f?:string, toF?:string, alt?:string[], other?:string, otherPointed?:string, clip?:string}} Pair
  * @typedef {{ok:boolean, held?:boolean, direction:'en-he'|'he-en', source:string, translation:string, pointed?:string,
  *   method:'phrase'|'pattern'|'close'|'word'|'words'|'none'|'held', confidence:'high'|'medium'|'low'|'none',
  *   matched?:{id:string, en:string, he:string}, variants?:{label:string, text:string}[], note?:string, clip?:{kind:string, id:string}, soundsLike?:boolean,
@@ -138,7 +138,7 @@ export function pairsFromPhrasebook(phrasebook) {
     /** @type {Pair} */
     const p = { id: `pb-${e.id}`, src: 'phrasebook', clip: String(e.id), en, he: stripNikkud(e.he).replace(/[.]$/, ''), pointed: e.he.replace(/[.]$/, '') };
     const f = e.forms?.f?.he; const m = e.forms?.m?.he;
-    if (f && m && stripNikkud(f) !== stripNikkud(m)) p.other = stripNikkud(f);
+    if (f && m && stripNikkud(f) !== stripNikkud(m)) { p.other = stripNikkud(f); p.otherPointed = f; }
     out.push(p);
   }
   return out;
@@ -200,9 +200,10 @@ export function createEngine(data) {
     const def = n.def || 'ה' + n.he;
     const kind = n.own ? 'own' : 'noun';
     for (const e of n.en) if (!nounEn.has(e)) nounEn.set(e, { en: n.en[0], he: n.he, def, kind, g: n.g || 'm', pl: n.pl || '', food: n.food || '' });
-    if (!nounHe.has(n.he)) nounHe.set(n.he, { en: n.en[0], definite: n.he === def, kind });
-    if (!nounHe.has(def)) nounHe.set(def, { en: n.en[0], definite: true, kind });
-    if (n.pl && !nounHe.has(n.pl)) nounHe.set(n.pl, { en: pluralEn(n.en[0]), definite: false, kind: 'noun' });
+    const back = n.back || n.en[0];
+    if (!nounHe.has(n.he)) nounHe.set(n.he, { en: back, definite: n.he === def, kind });
+    if (!nounHe.has(def)) nounHe.set(def, { en: back, definite: true, kind });
+    if (n.pl && !nounHe.has(n.pl)) nounHe.set(n.pl, { en: pluralEn(back), definite: false, kind: 'noun' });
   }
   for (const pl of pack.places || []) {
     const shown = pl.en[0].replace(/\b[a-z]/g, (c) => c.toUpperCase()).replace(/^The /, 'the ');
@@ -458,7 +459,7 @@ export function createEngine(data) {
       if (!rest) return { he: v + tail, from: /** @type {'table'|'dictionary'} */ ('table') };
       if (!takesThing.has(key)) return null;
       const n = np(rest);
-      if (n) return { he: `${v} ${obj(n)}${tail}`, from: n.from };
+      if (n) return { he: tail === ' כאן' ? `${v} כאן ${obj(n)}` : `${v} ${obj(n)}${tail}`, from: n.from };
     }
     return null;
   }
@@ -471,7 +472,9 @@ export function createEngine(data) {
       const key = words.slice(0, k).join(' ');
       const v = verbHe.get(key);
       if (!v) continue;
-      const rest = words.slice(k).join(' ').replace(/^את /, '');
+      let rest = words.slice(k).join(' ');
+      if (!tail && /^כאן /.test(rest)) { tail = ' here'; rest = rest.slice(4); } // "להחליף כאן כסף"
+      rest = rest.replace(/^את /, '');
       if (!rest) return { en: v + tail, from: /** @type {'table'|'dictionary'} */ ('table') };
       if (!takesThing.has(key)) return null;
       const n = enOf(rest);
@@ -528,7 +531,7 @@ export function createEngine(data) {
       if (m[1].split(' ').length <= 3) return { he: `קוראים לי ${m[1].replace(/\b[a-z]/g, (c) => c.toUpperCase())}`, from: 'table', note: 'The name is left in English letters.' };
     }
     if ((m = /^i am from (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'place') return { he: `אני מ${n.he}`, from: 'table' }; }
-    if ((m = /^it is (\w+) oclock$/.exec(q))) { const n = numEn.get(m[1]); if (n && n.n >= 1) return { he: `השעה ${n.count}`, from: 'table' }; }
+    if ((m = /^it is (\w+) oclock$/.exec(q))) { const n = numEn.get(m[1]); if (n && n.n >= 1 && n.n <= 24) return { he: `השעה ${n.count}`, from: 'table' }; }
     if ((m = /^the number is (.+)$/.exec(q))) { const he = numbersToHe(m[1]); if (he) return { he: `המספר הוא ${he}`, from: 'table' }; }
     if ((m = /^see you tomorrow at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `נתראה מחר ב${t}`, from: 'table' }; }
     if ((m = /^see you at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `נתראה ב${t}`, from: 'table' }; }
@@ -954,7 +957,7 @@ export function createEngine(data) {
         /** @type {{label:string, text:string}[]} */ const variants = [];
         if (p.f) variants.push(woman ? { label: 'Said by a man', text: please(p.he) } : { label: 'Said by a woman', text: please(p.f) });
         if (p.toF) variants.push({ label: 'Said to a woman', text: please(p.toF) });
-        if (p.other) variants.push({ label: 'Feminine form', text: please(p.other) });
+        if (p.other) variants.push({ label: 'Feminine form', text: please(p.otherPointed || p.other) }); // shown as stored, with its vowel marks
         /** @type {TalkResult} */
         const r = { ok: true, direction, source, translation: please(main), method, confidence, matched: brief(p), variants };
         if (p.pointed && main === p.he) r.pointed = please(p.pointed);

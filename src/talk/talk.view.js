@@ -3,7 +3,8 @@
 // Lazy-loaded by the router at #/talk. There is no server: the sentence pairs are files of the site itself
 // (src/talk/data.js), listening is the browser's own speech recognition (src/talk/speech.js) and the voice is the
 // device voice. Where the browser cannot listen, typing still works, online or offline.
-import { h } from '../shell/ui.js';
+import { h, medal } from '../shell/ui.js';
+import { rimonSays } from '../shell/rimon-inline.js';
 import { speakEnglish, stopEnglish } from '../shell/speak-english.js';
 import {
   hasHebrew, pushHistory, stripNikkud, uid, HISTORY_KEY, SETTINGS_KEY, loadSettings, loadHistory,
@@ -49,6 +50,8 @@ const CSS = `
 .talk-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem}
 .talk-list button{width:100%;text-align:start;display:flex;flex-direction:column;gap:.15rem}
 .talk-small{font-size:.85rem}
+.talk-hero{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.talk-hero .alef-medal{margin:0}
 `;
 function injectCss() {
   try {
@@ -78,6 +81,8 @@ export function mount(root, ctx = {}) {
   const hearing = canListen();
 
   const title = h('h1', { id: 'view-title', tabindex: '-1' }, 'Talk');
+  const helper = rimonSays('Say a short line. I will help you find it in the other language.', { action: 'wave', size: 96 });
+  const hero = h('div', { class: 'alef-feature-hero talk-hero' }, medal('home', 'talk', 54), helper.el);
   const lead = h('p', {}, 'Say or type a short everyday line in English or Hebrew. ALEF shows it in the other language and can read it aloud. It works from stored lines, so it knows travel, shop, table and synagogue talk, not every sentence.');
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' }, 'Getting the lines ready…');
 
@@ -141,7 +146,7 @@ export function mount(root, ctx = {}) {
   tryPick.addEventListener('change', paintExamples);
 
   root.replaceChildren(h('section', { class: 'talk-screen', 'aria-labelledby': 'view-title' },
-    title, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
+    title, hero, lead, status, langs, face, mics, err, input, listenNote, suggestTitle, suggest, toggles, tryTitle, tryPick, tryList, histTitle, hist, clear));
 
   function save() { write(SETTINGS_KEY, settings); }
 

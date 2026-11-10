@@ -257,7 +257,8 @@ export const ROUTE_TRIGGERS = Object.freeze({
   festival: (_c, _f, p) => (HOLIDAY_TRIGGERS.includes(p.id) ? `holiday.${p.id}` : p.id === 'shemini-atzeret' ? 'holiday.shemini-atzeret' : null),
   day: (_c, _f, p) => dateTrigger(p.date),
   offline: 'offline.page', settings: 'settings.home', help: 'help.home', how: 'help.home', about: 'about.home', search: 'search.home',
-  letters: 'letters.home', atlas: 'letters.home', typing: 'typing.home', scan: 'scan.home', synagogues: 'synagogues.home',
+  letters: 'letters.home', atlas: 'letters.home', typing: 'typing.home', scan: 'scan.home', camera: 'scan.home', synagogues: 'synagogues.home',
+  talk: 'speak.home', welcome: 'greet.first',
   grammar: 'grammar.home', roots: 'roots.home', vocab: 'vocab.home', 'vocab-themes': 'vocab.home', speak: 'speak.home',
   traditions: 'traditions.home', 'traditions-guide': 'traditions.home', 'traditions-hear': 'traditions.home',
 });

@@ -91,9 +91,9 @@ export function mount(root, ctx) {
           h('span', { class: 'show-tile-title' }, title, ' ', heSpan('מִשְׂחָק')),
           h('span', { class: 'show-tile-hook' }, hook),
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
-        if (envId) { thumbs.push({ a, envId }); a.append(medal('word', id, 56)); }
+        if (envId) thumbs.push({ a, id, envId }); // the game's own scene is the card picture (owner, 2026-11-10: pictures over gold icons)
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
-          a.prepend(medal('arcade', id, 96));
+          a.prepend(arcadeThumb(id, a));
         }
         return h('li', {}, a);
       })));
@@ -110,14 +110,23 @@ export function mount(root, ctx) {
   // its text-only card, exactly as before.
   loadGameImages({}).then((R) => {
     if (!R || !article.isConnected) return;
-    for (const { a, envId } of thumbs) {
+    for (const { a, id, envId } of thumbs) {
       const im = imgOf(R, 'id', envId);
       if (im?.src) a.prepend(h('img', { class: 'wf-game-thumb', src: im.src, alt: '', width: im.width, height: im.height, loading: 'lazy' }));
+      else a.append(medal('word', id, 56)); // last resort only: no approved scene for this game
     }
     // the same animated Rimon as setup, Learn and the lesson summary (one Rimon system); the corner Rimon steps aside while he is here
     try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
+}
+
+/** Light WebP card picture from the arcade game's own scene (the main card image; no coin on game cards) (assets/img/arcade-thumbs, made from assets/games/arcade/<id>/env.png
+ *  by tools/images/arcade-thumbs.py; 14-27 KB instead of ~850 KB, never precached). Lazy; removes itself if the file is missing. */
+export function arcadeThumb(id, card) {
+  const b = `assets/img/arcade-thumbs/${id}`;
+  return h('img', { class: 'wf-game-thumb wf-arcade-thumb', src: b + '.480.webp', srcset: `${b}.480.webp 480w, ${b}.800.webp 800w`, sizes: '(max-width: 719px) 92vw, 320px', width: 480, height: 180, alt: '', loading: 'lazy', decoding: 'async',
+    onerror: (e) => { e.target.remove(); card?.append?.(medal('arcade', id, 56)); } }); // a coin only if the scene is missing
 }
 
 /** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */

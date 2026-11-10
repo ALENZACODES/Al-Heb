@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  GAMES, SKILLS, MAX_LEVEL, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
-  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords,
+  GAMES, CLASSIC_GAMES, STUDIO_GAMES, LIFE_GAMES, WORKOUT_GAMES, SKILLS, MAX_LEVEL, STUDIO_SECONDS, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
+  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords, sessionSeconds, comboBonus, comboLabel,
 } from '../src/lab/lab.core.js';
 import { DRILLS, _test } from '../src/lab/lab.games.js';
 import { NEW_DRILLS } from '../src/lab/lab.games2.js';
@@ -11,12 +11,25 @@ import { HOLIDAY_DEFS } from '../src/curriculum/calendar.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-test('sixteen games, every skill has at least two, every game has code (the first ten here, the six added 2026-11-10 in lab.games2.js)', () => {
-  assert.equal(GAMES.length, 16);
-  for (const s of SKILLS) assert.ok(GAMES.filter((g) => g.skill === s.id).length >= 2, s.id);
+test('classic pack stays ten drills; synagogue and Israel adds six; studio adds eleven; every drill has code', () => {
+  assert.equal(CLASSIC_GAMES.length, 10);
+  assert.equal(LIFE_GAMES.length, 6);
+  assert.equal(STUDIO_GAMES.length, 11);
+  assert.equal(GAMES.length, 27);
+  for (const s of SKILLS) {
+    assert.ok(CLASSIC_GAMES.some((g) => g.skill === s.id), s.id);
+    assert.ok(STUDIO_GAMES.some((g) => g.skill === s.id), `studio ${s.id}`);
+    assert.ok(GAMES.filter((g) => g.skill === s.id).length >= 2, s.id);
+  }
   const all = { ...DRILLS, ...NEW_DRILLS };
-  for (const g of GAMES) assert.equal(typeof all[g.id]?.trial, 'function', g.id);
-  assert.deepEqual(Object.keys(NEW_DRILLS).sort(), GAMES.filter((g) => g.added).map((g) => g.id).sort(), 'every new game is marked with the day it was added');
+  for (const g of GAMES) {
+    assert.equal(typeof all[g.id]?.trial, 'function', g.id);
+    assert.ok(['classic', 'studio', 'life'].includes(g.pack), g.id);
+  }
+  assert.deepEqual(Object.keys(NEW_DRILLS).sort(), LIFE_GAMES.map((g) => g.id).sort(), 'the six synagogue-and-Israel games are marked as added and live in lab.games2.js');
+  for (const g of CLASSIC_GAMES) assert.equal(sessionSeconds(g.id), 45);
+  for (const g of LIFE_GAMES) assert.equal(sessionSeconds(g.id), 45);
+  for (const g of STUDIO_GAMES) assert.equal(sessionSeconds(g.id), STUDIO_SECONDS);
 });
 
 test('daily workout: three drills, three different skills, same all day, changes across days', () => {
@@ -25,6 +38,18 @@ test('daily workout: three drills, three different skills, same all day, changes
   assert.equal(new Set(a.map((id) => GAMES.find((g) => g.id === id).skill)).size, 3);
   const week = new Set(['2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12'].map((d) => dailyWorkout(d).join()));
   assert.ok(week.size > 1);
+  const workoutIds = new Set(WORKOUT_GAMES.map((g) => g.id));
+  for (const id of dailyWorkout('2026-11-10')) assert.ok(workoutIds.has(id), id);
+  assert.ok(!STUDIO_GAMES.some((g) => dailyWorkout('2026-11-10').includes(g.id)));
+});
+
+test('studio combo bonus starts at three in a row and the label stays empty before that', () => {
+  assert.equal(comboBonus(0), 0); assert.equal(comboBonus(2), 0); assert.equal(comboBonus(3), 5);
+  assert.equal(comboBonus(10, 1), comboBonus(12, 1), 'bonus steps cap at eight (a run of ten)');
+  assert.ok(comboBonus(3, 4) > comboBonus(3, 1));
+  assert.equal(comboLabel(2), '');
+  assert.equal(comboLabel(3), 'Combo ×3');
+  assert.match(comboLabel(8), /Combo ×8/);
 });
 
 test('staircase: two right goes up, a miss goes down, bounded', () => {
@@ -112,7 +137,7 @@ test('prayer lines split into words; maqaf words stay whole', () => {
 });
 
 test('number recordings: each linked clip says exactly the same Hebrew, in both voices', () => {
-  const words = json('data/audio/manifest-kind-word.json');
+  const words = [...json('data/audio/manifest-kind-word.json'), ...json('data/audio/manifest-words-israeli.json')];
   for (const n of json('data/lab/numbers.json').numbers.filter((x) => x.clip)) {
     for (const v of ['m', 'f']) assert.ok(words.some((r) => r.id === n.clip && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === n.he), `${n.value} ${v}`);
   }

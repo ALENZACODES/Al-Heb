@@ -3,6 +3,7 @@
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
 import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME } from './lab.core.js';
+import { STUDIO_DRILLS } from './lab.studio.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -315,7 +316,7 @@ const calendar = {
     const kind = level <= 2 ? 'which' : level <= 5 ? (env.rnd() < 0.5 ? 'which' : 'when') : (env.rnd() < 0.5 ? 'when' : 'whenHe');
     const opts = choices(d, days, n, env.rnd, (a, b) => a.id === b.id || (a.month === b.month && a.day === b.day));
     const limit = Math.max(3200, 9500 - level * 480);
-    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}`, clip: d.clip });
+    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}`, ...(d.clip ? { clip: d.clip } : {}) });
     return new Promise((resolve) => {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -395,7 +396,8 @@ const pattern = {
   },
 };
 
-export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern });
+// Studio drills sit in DRILLS too; the six synagogue-and-Israel games (lab.games2.js) are NEW_DRILLS and the view merges both.
+export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern, ...STUDIO_DRILLS });
 /** Shared pieces for the games in lab.games2.js. */
 export const kit = Object.freeze({ getJSON, once, grid, big, mark, loadLetters });
 export const _test = { SWITCH_ITEMS, dateEn, dateHe, shortName };

@@ -15,3 +15,18 @@ Contact sheets live at `docs/images/commercial-2026-11-10-contact-*.jpg`.
 Held for John: screenshot caption wording, iPad screenshot set, re-cropping five already-approved Awards medallions.
 
 These pictures are not yet wired into the app. After approval, ingest from this folder and replace `assets/icons/*` from `icon-set/` on the launch-readiness branch.
+
+## Second pass (r2), 2026-11-10
+Use these in place of the first versions when ingesting. The originals stay in the repo; nothing was overwritten.
+
+| r2 file | Replaces | Why |
+|---|---|---|
+| `ONB_v2_letters_r2.webp` | `ONB_v2_letters.webp` | Exactly three steps (stepping stones); one Noa, one Rimon |
+| `EMPTY_v2_review_r2.webp` | `EMPTY_v2_review.webp` | No drawn circle frame |
+| `EMPTY_v2_offline_r2.webp` | `EMPTY_v2_offline.webp` | No drawn circle frame |
+| `EMPTY_v2_notfound_r2.webp` | `EMPTY_v2_notfound.webp` | No circular vignette |
+| `EMPTY_v2_awards_r2.webp` | `EMPTY_v2_awards.webp` | No pale round backdrop |
+| `STREAK_v2_lamp_gold_r2.webp` | `STREAK_v2_lamp_gold.webp` | The first version kept an opaque magenta background. Rebuilt from the lit lamp with a gold ring, real alpha |
+| `STREAK_v2_lamp_lit_r2.webp` | `STREAK_v2_lamp_lit.webp` | Removed about 6,800 stray magenta pixels around the lamp |
+
+The empty states keep every subject inside the central 80%, so the app can still crop them to a circle. The manifest rows above keep the original order text. The r2 files are delivery fixes against those same orders.

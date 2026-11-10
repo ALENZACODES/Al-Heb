@@ -44,8 +44,11 @@ export function playArtPath(gameId) {
   const p = artPath(gameId, 'play');
   return p && REVISED[`${gameId}_play`] ? p.replace(/\.webp$/, `${REVISED[`${gameId}_play`]}.webp`) : p;
 }
+/** The ten classic drills have modern 3D covers (2026-11-10, objects only, no characters); the flat versions stay on disk. */
+export const COVER_3D = Object.freeze(['hunt', 'matrix', 'soundmatch', 'siddurflash', 'switch', 'gematria', 'countup', 'numberear', 'calendar', 'pattern']);
 export function coverArtPath(gameId) {
   const p = artPath(gameId, 'cover');
+  if (p && COVER_3D.includes(gameId)) return `${ART_DIR}/LAB_v3_${gameId}_cover.webp`;
   return p && REVISED[`${gameId}_cover`] ? p.replace(/\.webp$/, `${REVISED[`${gameId}_cover`]}.webp`) : p;
 }
 function saveData() {

@@ -1,0 +1,46 @@
+name: pages
+# Always builds the Cloudflare-style dist/ and runs the deploy check (headers, MIME, service worker scope, fonts, CSP, size limits).
+# Publishing to GitHub Pages is OFF by default: GitHub Pages is not available on a private repo without a paid plan, and the
+# deploy step fails with "Pages not enabled" when it is off. To turn it on: enable Pages (Settings -> Pages -> Source: GitHub Actions)
+# and add the repository variable ENABLE_GITHUB_PAGES = true (Settings -> Secrets and variables -> Actions -> Variables).
+# The primary host is Cloudflare Pages (docs/deploy/GO-LIVE-CHECKLIST.md), which builds from the repo itself and does not use this workflow.
+# The unit tests run in ci.yml, not here, so a test failure cannot block a deploy and is not reported twice.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version: 22 }
+      - name: Build dist/ (same command as Cloudflare Pages)
+        run: node tools/deploy/build_site.mjs
+      - name: Deploy check
+        run: node tools/deploy/check-deploy.mjs --root dist
+      - name: Upload Pages artifact
+        if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with: { path: dist }
+  deploy:
+    needs: build
+    timeout-minutes: 10
+    if: ${{ vars.ENABLE_GITHUB_PAGES == 'true' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

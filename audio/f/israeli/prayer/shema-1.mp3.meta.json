@@ -1,0 +1,22 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃",
+ "inputSha256": "d3912f34831531974ca3ec1fc51f6fefe1eaa017dc44e11e320e0b5fceac8d71",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "שְׁמַע יִשְׂרָאֵל אֲדֹנָי אֱלֹהֵינוּ אֲדֹנָי אֶחָד׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/i-01-w3.mp3",
+  "audio/f/israeli/word/brich-shmei-w115.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/aleinu-1-w54.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/adon-olam-1-w31.mp3"
+ ]
+}

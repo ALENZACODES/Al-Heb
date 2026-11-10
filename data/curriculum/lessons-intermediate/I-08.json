@@ -1,0 +1,345 @@
+{
+ "id": "I-08",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Aleinu: the closing prayer and where to bow",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "עָלֵינוּ",
+   "en": "it is upon us",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aleinu",
+    "sephardi": "aleinu",
+    "ashkenazi": "oleinu"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p52c330da"
+   }
+  },
+  {
+   "he": "לְשַׁבֵּחַ",
+   "en": "to praise",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "leshabeach",
+    "sephardi": "leshabeach",
+    "ashkenazi": "leshabeiach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h731df85b#forms.infinitive"
+   }
+  },
+  {
+   "he": "לַאֲדוֹן הַכֹּל",
+   "en": "to the Master of all",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "la'adon hakol",
+    "sephardi": "la'adon hakol",
+    "ashkenazi": "la'adon hakol"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לַאֲדוֹן",
+     "הַכֹּל"
+    ]
+   }
+  },
+  {
+   "he": "גְּדֻלָּה",
+   "en": "greatness",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "gedulah",
+    "sephardi": "gedulah",
+    "ashkenazi": "geduloh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "גְּדֻלָּה"
+    ]
+   }
+  },
+  {
+   "he": "וַאֲנַחְנוּ",
+   "en": "and we",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "va'anachnu",
+    "sephardi": "va'anachnu",
+    "ashkenazi": "va'anachnu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וַאֲנַחְנוּ"
+    ]
+   }
+  },
+  {
+   "he": "מִשְׁתַּחֲוִים",
+   "en": "bow down",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mishtachavim",
+    "sephardi": "mishtachavim",
+    "ashkenazi": "mishtachavim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִשְׁתַּחֲוִים"
+    ]
+   }
+  },
+  {
+   "he": "מֶלֶךְ מַלְכֵי הַמְּלָכִים",
+   "en": "the King of kings of kings",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "melekh malkhei hamelakhim",
+    "sephardi": "melekh malkhei hamelakhim",
+    "ashkenazi": "melekh malkhei hamelokhim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מֶלֶךְ",
+     "מַלְכֵי",
+     "הַמְּלָכִים"
+    ]
+   }
+  },
+  {
+   "he": "הַקָּדוֹשׁ בָּרוּךְ הוּא",
+   "en": "the Holy One, blessed is he",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hakadosh barukh hu",
+    "sephardi": "hakadosh barukh hu",
+    "ashkenazi": "hakodosh borukh hu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַקָּדוֹשׁ",
+     "בָּרוּךְ",
+     "הוּא"
+    ]
+   }
+  },
+  {
+   "he": "שָׁמַיִם",
+   "en": "heaven",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shamayim",
+    "sephardi": "shamayim",
+    "ashkenazi": "shomayim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb6ae069f"
+   }
+  },
+  {
+   "he": "אָרֶץ",
+   "en": "earth",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aretz",
+    "sephardi": "aretz",
+    "ashkenazi": "oretz"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אָרֶץ"
+    ]
+   }
+  },
+  {
+   "he": "אֱמֶת",
+   "en": "truth",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "emet",
+    "sephardi": "emet",
+    "ashkenazi": "emes"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he5c23387"
+   }
+  },
+  {
+   "he": "אֵין עוֹד",
+   "en": "there is none else",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ein od",
+    "sephardi": "ein od",
+    "ashkenazi": "ein od"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֵין",
+     "עוֹד"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "aleinu-1"
+ ],
+ "goals": [
+  "Read the first paragraph of Aleinu at the speed it is said",
+  "Find the words where many congregations bow",
+  "Say the closing 'ein od' line from memory"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-02"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-08-e01",
+   "type": "order",
+   "he": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל",
+   "en": "It is upon us to praise the Master of all"
+  },
+  {
+   "id": "I-08-e02",
+   "type": "spot",
+   "line": "aleinu-1",
+   "target": "לְשַׁבֵּחַ",
+   "en": "to praise"
+  },
+  {
+   "id": "I-08-e03",
+   "type": "recall",
+   "he": "לַאֲדוֹן הַכֹּל",
+   "en": "to the Master of all"
+  },
+  {
+   "id": "I-08-e04",
+   "type": "respond",
+   "cue": "Many congregations bow at the words 'va'anachnu'. Say the phrase that begins the bow.",
+   "answer": {
+    "he": "וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא",
+    "en": "And we bow before the King of kings of kings, the Holy One, blessed is he."
+   }
+  },
+  {
+   "id": "I-08-e05",
+   "type": "spot",
+   "line": "aleinu-1",
+   "target": "מִשְׁתַּחֲוִים",
+   "en": "bow down"
+  },
+  {
+   "id": "I-08-e06",
+   "type": "order",
+   "he": "מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא",
+   "en": "the King of kings of kings, the Holy One, blessed is he"
+  },
+  {
+   "id": "I-08-e07",
+   "type": "produce",
+   "en": "the Holy One, blessed is he",
+   "options": [
+    "הַקָּדוֹשׁ בָּרוּךְ הוּא",
+    "מֶלֶךְ מַלְכֵי הַמְּלָכִים",
+    "לַאֲדוֹן הַכֹּל"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-08-e08",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "שָׁמַיִם",
+     "en": "heaven"
+    },
+    {
+     "he": "אָרֶץ",
+     "en": "earth"
+    },
+    {
+     "he": "אֱמֶת",
+     "en": "truth"
+    },
+    {
+     "he": "אֵין עוֹד",
+     "en": "there is none else"
+    }
+   ]
+  },
+  {
+   "id": "I-08-e09",
+   "type": "spot",
+   "line": "aleinu-1",
+   "target": "אֱמֶת",
+   "en": "truth"
+  },
+  {
+   "id": "I-08-e10",
+   "type": "order",
+   "he": "הוּא אֱלֹהֵינוּ וְאֵין עוֹד אַחֵר",
+   "en": "He is our God and there is no other"
+  },
+  {
+   "id": "I-08-e11",
+   "type": "order",
+   "he": "כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד",
+   "en": "that the LORD is God in heaven above and on the earth below; there is none else"
+  },
+  {
+   "id": "I-08-e12",
+   "type": "fade",
+   "line": "aleinu-1",
+   "en": "It is our duty to praise the Master of all... there is none else."
+  },
+  {
+   "id": "I-08-e13",
+   "type": "produce",
+   "en": "there is none else",
+   "options": [
+    "אֵין עוֹד",
+    "וְאֵין עוֹד אַחֵר",
+    "אֱמֶת"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-08-e14",
+   "type": "recall",
+   "he": "גְּדֻלָּה",
+   "en": "greatness"
+  }
+ ],
+ "note": "Registry text is Edot HaMizrach; Ashkenazi texts read 'va'anachnu kor'im umishtachavim' and differ in small details. The second paragraph (Al ken nekaveh) is a corpus gap (g-aleinu-second-paragraph)."
+}

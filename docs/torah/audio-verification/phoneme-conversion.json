@@ -1,0 +1,8 @@
+{
+  "sourceModel": "renikud/whisper-he-ipa",
+  "converter": "ctranslate2-4.8.5",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "sourceRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "quantization": "int8",
+  "convertedWeightsSha256": "bcd37aad2f27ac4856065e879aa4cd1a869d728eeb40c856f158da29e030a6dd"
+}

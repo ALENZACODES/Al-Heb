@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-politeness-1",
+ "title": "Survival: politeness",
+ "theme": "talking-asking",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-politeness-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p580df509",
+   "he": "בְּבַקָּשָׁה",
+   "translit": "bevakashah",
+   "en": "please / you're welcome",
+   "kind": "word",
+   "audioId": "il01-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb100e90c",
+   "he": "אַחִי",
+   "translit": "achi",
+   "en": "my brother (bro)",
+   "kind": "word",
+   "audioId": "i-18-w12",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p2e5897fb",
+   "he": "יוֹפִי",
+   "translit": "yofi",
+   "en": "great / nice",
+   "kind": "word",
+   "audioId": "politeness-16",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pe712578e",
+   "he": "וָואלָה",
+   "translit": "vavlah",
+   "en": "really? / wow / honestly",
+   "kind": "word",
+   "audioId": "politeness-14",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9a26e069",
+   "he": "סַבָּבָה",
+   "translit": "sabavah",
+   "en": "cool / great / fine by me",
+   "kind": "word",
+   "audioId": "i-18-w11",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p9bac7cff",
+   "he": "אֵין בְּעָיָה",
+   "translit": "ein be'ayah",
+   "en": "no problem",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p95269b12",
+   "he": "מָה פִּתְאוֹם?",
+   "translit": "mah pit'om?",
+   "en": "no way! / what do you mean?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pb298d766",
+   "he": "תּוֹדָה רַבָּה",
+   "translit": "todah rabah",
+   "en": "thank you very much",
+   "kind": "phrase",
+   "audioId": "i-19-w13",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p4345f7a9",
+   "he": "אֵין בַּעַד מָה",
+   "translit": "ein ba'ad mah",
+   "en": "you're welcome (lit. nothing for what)",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p3226cfe7",
+   "he": "אֲנִי מִצְטַעֵר",
+   "translit": "ani mitzta'er",
+   "en": "I'm sorry",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p74d8e456",
+   "he": "יִהְיֶה בְּסֵדֶר",
+   "translit": "yihyeh beseder",
+   "en": "it'll be OK",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p4e01b1a2",
+   "he": "חֲבָל עַל הַזְּמַן",
+   "translit": "chaval al hazeman",
+   "en": "awesome (lit. a waste of the time)",
+   "kind": "phrase",
+   "audioId": "i-18-w13",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "clip": "shema-ari-plain-a.mp3",
+  "audioSha256": "537ce6c6c3bee9761cd89398a1de2376d888bd90b19f847e73d381c1266b66c2",
+  "model": "renikud/whisper-he-ipa",
+  "modelRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "inferencePolicy": "ct2-int8-beam1-no-source-prompt",
+  "asciiPhonemes": "Sam'a, jizraq'el, qaron'aj qeloh'enu, qaron'aj qex'ad.",
+  "ipa": "ʃamˈa, jizʁaʔˈel, ʔaʁonˈaj ʔelohˈenu, ʔaʁonˈaj ʔeχˈad.",
+  "status": "supplemental-phoneme-evidence",
+  "publishable": false,
+  "limitation": "Model-predicted phonemes, not a human listening certification; compare against separately established source pronunciation."
+}

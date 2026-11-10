@@ -1,0 +1,416 @@
+{
+ "id": "I-18",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Army slang basics: how soldiers and their friends talk",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "צָבָא",
+   "en": "army",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tzava"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0fde2ff0"
+   }
+  },
+  {
+   "he": "חַיָּל",
+   "en": "soldier (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chayal"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he3294d36"
+   }
+  },
+  {
+   "he": "חַיֶּלֶת",
+   "en": "soldier (f)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chayelet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he3294d36#forms.feminine"
+   }
+  },
+  {
+   "he": "מִלּוּאִים",
+   "en": "reserve duty",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "milu'im"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8601ee5c"
+   }
+  },
+  {
+   "he": "מְפַקֵּד",
+   "en": "commander (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mefaked"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7475c7c8#forms.present"
+   }
+  },
+  {
+   "he": "בָּסִיס",
+   "en": "base",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "basis"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h37908437"
+   }
+  },
+  {
+   "he": "נֶשֶׁק",
+   "en": "weapon",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "neshek"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "ha457bf9e"
+   }
+  },
+  {
+   "he": "שְׁמִירָה",
+   "en": "guard duty",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shemirah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h859bd8c7"
+   }
+  },
+  {
+   "he": "חֻפְשָׁה",
+   "en": "leave, vacation",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chufshah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3b6e7044"
+   }
+  },
+  {
+   "he": "יַאלְלָה",
+   "en": "come on / let's go",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yalelah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h89be12e3"
+   }
+  },
+  {
+   "he": "סַבָּבָה",
+   "en": "cool, fine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sabavah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p9a26e069"
+   }
+  },
+  {
+   "he": "אַחִי",
+   "en": "bro (my brother)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "achi"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pb100e90c"
+   }
+  },
+  {
+   "he": "חֲבָל עַל הַזְּמַן",
+   "en": "awesome (lit. a waste of the time)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaval al hazeman"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p4e01b1a2"
+   }
+  },
+  {
+   "he": "מָה הַמַּצָּב?",
+   "en": "how's it going?",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mah hamatzav?"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "paf26ae56"
+   }
+  },
+  {
+   "he": "אֵין מַצָּב",
+   "en": "no way",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ein matzav"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֵין",
+     "מַצָּב"
+    ]
+   }
+  },
+  {
+   "he": "תִּרְגַּע",
+   "en": "chill, calm down",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tirga"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "pe8db5142"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Recognise the basic army words you will hear from Israelis in their twenties",
+  "Use the slang greetings and reactions at the right register",
+  "Know which of these not to say to officials or elders"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-18-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "צָבָא",
+     "en": "army"
+    },
+    {
+     "he": "חַיָּל",
+     "en": "soldier"
+    },
+    {
+     "he": "מִלּוּאִים",
+     "en": "reserve duty"
+    },
+    {
+     "he": "בָּסִיס",
+     "en": "base"
+    },
+    {
+     "he": "חֻפְשָׁה",
+     "en": "leave"
+    }
+   ]
+  },
+  {
+   "id": "I-18-e02",
+   "type": "gender",
+   "m": "חַיָּל",
+   "f": "חַיֶּלֶת",
+   "en": "soldier"
+  },
+  {
+   "id": "I-18-e03",
+   "type": "recall",
+   "he": "מִלּוּאִים",
+   "en": "reserve duty"
+  },
+  {
+   "id": "I-18-e04",
+   "type": "produce",
+   "en": "guard duty",
+   "options": [
+    "שְׁמִירָה",
+    "חֻפְשָׁה",
+    "נֶשֶׁק"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-18-e05",
+   "type": "register",
+   "he": "מָה הַמַּצָּב?",
+   "en": "how's it going?",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-18-e06",
+   "type": "register",
+   "he": "אַחִי",
+   "en": "bro",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-18-e07",
+   "type": "register",
+   "he": "מַה שְׁלוֹמְךָ?",
+   "en": "how are you?",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-18-e08",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "אַחִי, מָה הַמַּצָּב?",
+     "en": "Bro, how's it going?"
+    },
+    {
+     "speaker": "b",
+     "he": "סַבָּבָה. יֵשׁ לִי מִלּוּאִים.",
+     "en": "Fine. I have reserve duty."
+    },
+    {
+     "speaker": "a",
+     "he": "וָואלָה? תִּרְגַּע, יַאלְלָה.",
+     "en": "Really? Take it easy, come on."
+    }
+   ],
+   "task": "Say A's lines, then swap."
+  },
+  {
+   "id": "I-18-e09",
+   "type": "produce",
+   "en": "no way!",
+   "options": [
+    "אֵין מַצָּב",
+    "אֵין בְּעָיָה",
+    "אֵין בַּעַד מָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-18-e10",
+   "type": "produce",
+   "en": "no problem",
+   "options": [
+    "אֵין בְּעָיָה",
+    "אֵין מַצָּב",
+    "מָה פִּתְאוֹם?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-18-e11",
+   "type": "recall",
+   "he": "חֲבָל עַל הַזְּמַן",
+   "en": "awesome (lit. a waste of the time)"
+  },
+  {
+   "id": "I-18-e12",
+   "type": "respond",
+   "cue": "A friend is stressed before guard duty. Tell them to chill.",
+   "answer": {
+    "he": "תִּרְגַּע",
+    "en": "Chill"
+   }
+  },
+  {
+   "id": "I-18-e13",
+   "type": "register",
+   "he": "וָואלָה",
+   "en": "really? / wow",
+   "answer": "slang",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-18-e14",
+   "type": "register",
+   "he": "בְּעֶזְרַת הַשֵּׁם",
+   "en": "God willing",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  },
+  {
+   "id": "I-18-e15",
+   "type": "produce",
+   "en": "commander",
+   "options": [
+    "מְפַקֵּד",
+    "חַיָּל",
+    "נַהָג"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-18-e16",
+   "type": "recall",
+   "he": "יַאלְלָה",
+   "en": "come on / let's go"
+  }
+ ],
+ "note": "Only slang present in the phrasebook or vocabulary file is used; army-specific slang (e.g. words for a new recruit or for the end of service) is not in any source file and is left out."
+}

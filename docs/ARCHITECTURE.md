@@ -1,0 +1,66 @@
+# Aleph architecture (lane 8)
+
+## Boot
+`index.html` -> `src/app.js`: creates `settings` (over `store`), `audio` (lane 4 `createAudio({settings})` via dynamic
+import; else `src/shell/audio-stub.js`, which speaks via `speechSynthesis` he-IL and exposes `flags: ['tts-fallback']`),
+starts the hash router, registers `sw.js`.
+
+## Router (`src/shell/router.js`)
+Table `ROUTES` (name, pattern, lazy module path relative to `src/shell/`). `matchRoute(hash)` is pure and tested.
+Routes: `/`, `/learn`, `/letters`, `/letters/:id` (QR deep link), `/sounds`, `/read`, `/read/:textId`, `/scan`, `/calendar`,
+`/settings`, `/about`. Params must match `[\p{L}\p{N}_.-]{1,80}`. Views are imported lazily; an import failure renders a
+"Not available yet" card, a throwing `mount` renders an error card. On every navigation the previous view is unmounted,
+focus moves to `#view-title`/`h1`, the title is announced through a polite live region, and scroll resets.
+
+## View contract
+`export function mount(root, ctx): void | (() => void) | Promise<...>`. `ctx` = contract fields
+`{settings, store, audio, route(path), t(key)}` plus extras added by the shell: `params`, `query`, `path`, `routeName`,
+`installPrompt`. Views should read `ctx.params.id` (letters) / `ctx.params.textId` (reader) and give the main heading
+`id="view-title" tabindex="-1"` so focus lands on it.
+
+## Settings (`src/shell/settings.js`)
+Keys: `voice` m|f (default **f**, arbitrary; both voices are first class), `congregation` israeli|sephardi|ashkenazi (default
+**sephardi**, per the contract's American-synagogue default), `israelTrack` bool, `script` print|cursive, `theme`
+auto|light|dark, `lat`/`lon` (null until the user opts in). Access: `settings.get(k)`, `settings.voice`, `settings.set(patch)`
+(returns rejected keys), `settings.subscribe(fn)`.
+
+## Store (`src/store.js`)
+localStorage (prefix `alef:`), JSON values, in-memory fallback when storage is missing/denied/over quota (data kept in
+memory, `store.persistent === false`). Schema version 1 with a `migrations[]` hook; `exportJSON()` / `importData()`
+(`replace` or `merge`). Keys in use: `settings`, `progress.completed` (lesson ids), `srs.cards` (lane 1 cards; the home
+screen calls lane 1 `due(cards, now)`). IndexedDB intentionally not used yet.
+
+## Service worker
+`tools/build-precache.mjs` writes `precache-manifest.js` (shell, `src/`, `assets/` minus `assets/img/`, `data/**/*.json`
+minus `_`-prefixed dirs; content-hash version). `sw.js`: precache on install, delete old `alef-shell-*` caches on activate,
+navigation network-first with cached `index.html` then `offline.html`, media (audio/images/fonts) cache-first filled at
+runtime, other same-origin GETs stale-while-revalidate. Range requests for audio are answered from a cached full copy (206 slice) or passed to the network, and
+small clips are then fetched whole in the background and cached (512 KiB per file, 600 clips, see `docs/audio/RANGE-AND-OFFLINE.md`); Range requests for
+other files bypass the cache. A clip never played on the device is not available offline; a pre-download of the audio set is not implemented.
+
+## Lane hooks the home screen guesses
+Lane 1: tries `src/curriculum/index.js` then `lessons.js` for `export const lessons`; `srs.js` `due`. If lane 1 ships a
+different entry point, change `home.view.js` (one place).
+
+## Shell chrome on a phone
+`index.html` has header, `.site-nav` (`#nav` = Home/Learn/Letters/Sounds/Read, `#more-btn`, `#nav-more` = the other routes with a `nav` key) and the one-line `.sound-bar`. Below 720px the nav is a fixed bottom tab bar and `#nav-more` is the sheet; from 720px it is the old top row. The split is `MAIN_NAV` in `src/app.js`. `assets/css/app.css` also re-orders lane 2's Letters markup on phones (tabs, grid as a scroll strip, letter card, stage first); it selects on `.alef-trace > div:has(> .stage) > .tabs/.grid/.row/.feedback/.notice/details.remember`, so keep that child structure or update the CSS block "Letters / tracing on a phone".
+
+## Accessibility and RTL
+Skip link, `banner`/`nav`/`main` landmarks, focus management on route change, 48px targets, visible `:focus-visible`,
+`prefers-reduced-motion`, `forced-colors`, dark mode (device or manual), logical CSS properties. Hebrew text is always
+`lang="he" dir="rtl"` (`heSpan` helper), with `unicode-bidi: isolate`.
+
+## Fonts
+Stack is local only (Ezra SIL / SBL Hebrew if installed, FreeSerif, DejaVu Sans). Plan once downloads are possible:
+self-host OFL FiraGO (UI), Ezra SIL (pointed prayer text), Gveret Levin (cursive) under `assets/fonts/`, add `@font-face`
+in `assets/css/app.css`, record licences. Not done. Avoid Rubik/Noto Sans for pointed text.
+
+## i18n
+`t(key, vars)` English; `tHe(key)` Hebrew nav labels, **machine-drafted and flagged for native review**
+(`HEBREW_REVIEW_NEEDED`).
+
+## Optional routes and precache limits (round 3)
+ROUTES entries with `optional: true` are shown only if their file is in `src/shell/views.generated.js` (generated by `tools/build-precache.mjs`; `availableRoutes()` in router.js). The precache skips `assets/vendor/`, `assets/workbook/`, PDFs, `data/vocab/packs/` and any file over `MAX_FILE_BYTES` (2 MiB); those are fetched on demand and cached at runtime by sw.js.
+
+## Audio manifest loading (core + lazy word shards)
+Boot fetches only `data/audio/manifest.json` (core, 1.29 MiB, precached) and builds the player. After first paint (`requestAnimationFrame`, then `requestIdleCallback`) `src/shell/audio-shards.js` fetches ONLY `data/audio/manifest-words-<congregation>.json` (~0.85 MiB, group `prayer-word`) and calls `player.extend(entries)`; changing the congregation setting loads that tradition's shard (each shard is given to the player once). If the sephardi shard is absent (404) the israeli shard is used and the player's existing tts-pronunciation-mismatch warning stays. Offline with nothing cached (network error, or a non-JSON offline page) is not an error: state `offline`, and the sound bar gets the note "(audio info unavailable offline)" via `audio.setNote`. Until the shard has loaded, `audio.status` for a reader word is `unknown-item` (source `none`). The shards are skipped by the precache builder and runtime-cached by `sw.js` (stale-while-revalidate; plain network error, never `offline.html`, when neither network nor cache has it), so a learner's own shard works offline after first use.

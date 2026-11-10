@@ -1,0 +1,7 @@
+plan.json
+clips/
+models/
+phoneme-model/
+chapters.json
+.venv/
+__pycache__/

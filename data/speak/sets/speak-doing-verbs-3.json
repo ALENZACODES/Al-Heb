@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-doing-verbs-3",
+ "title": "Everyday actions 3",
+ "theme": "doing-verbs",
+ "level": "B1",
+ "track": "both",
+ "pack": "doing-verbs-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h65a6363e",
+   "he": "לִוָּה",
+   "translit": "livah",
+   "en": "to accompany",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc9766f29",
+   "he": "נָשַׁךְ",
+   "translit": "nashakh",
+   "en": "to bite",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc1da6daa",
+   "he": "אִכֵּל",
+   "translit": "ikel",
+   "en": "to corrode",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h83157e63",
+   "he": "הִתְכַּוֵּן",
+   "translit": "hitkaven",
+   "en": "to mean, intend",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hdd8f02e6",
+   "he": "נִבְהַל",
+   "translit": "nivhal",
+   "en": "to be frightened, to be alarmed, to be terrified",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7a85525a",
+   "he": "שִׁמֵּר",
+   "translit": "shimer",
+   "en": "to preserve, to conserve, to maintain",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8d72d084",
+   "he": "מִמֵּן",
+   "translit": "mimen",
+   "en": "to fund, to finance",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfd48c471",
+   "he": "כִּלָּה",
+   "translit": "kilah",
+   "en": "to eliminate, annihilate, destroy completely",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb883c73f",
+   "he": "בִּרְבֵּר",
+   "translit": "birber",
+   "en": "to gibber, to babble, to chatter",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfb8393ff",
+   "he": "אִלֵּם",
+   "translit": "ilem",
+   "en": "to bundle, bind",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h05a7fab0",
+   "he": "הִתְבּוֹנֵן",
+   "translit": "hitbonen",
+   "en": "to contemplate",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h692598a8",
+   "he": "נָם",
+   "translit": "nam",
+   "en": "to slumber",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

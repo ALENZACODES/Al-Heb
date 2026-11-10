@@ -1,0 +1,8 @@
+# One line per chapter to record, e.g. "genesis 1", or a whole book "exodus", or "all".
+# Saving this file on main starts the recording on GitHub (workflow torah-hebrew). Verses already in the app are skipped.
+# The whole Torah, one book at a time (each book is saved as soon as it is done; a failed verse is skipped and listed, not fatal).
+genesis
+exodus
+leviticus
+numbers
+deuteronomy

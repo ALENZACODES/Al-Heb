@@ -1,0 +1,338 @@
+{
+ "id": "I-45",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Ordering delivery: pizza, address, floor and the courier",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "מִשְׁלוֹחַ",
+   "en": "delivery, shipment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mishloach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hffd4de51"
+   }
+  },
+  {
+   "he": "הַזְמָנָה",
+   "en": "order, invitation",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hazmanah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h96c3d6d7"
+   }
+  },
+  {
+   "he": "שָׁלִיחַ",
+   "en": "courier",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shaliach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h61ca6070"
+   }
+  },
+  {
+   "he": "פִּיצָה",
+   "en": "pizza",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "pitzah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5086962b"
+   }
+  },
+  {
+   "he": "כְּתֹבֶת",
+   "en": "address",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ketovet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h47a17dab"
+   }
+  },
+  {
+   "he": "קוֹמָה",
+   "en": "story, floor",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "komah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hfcbe3a9c"
+   }
+  },
+  {
+   "he": "דֶּלֶת",
+   "en": "door",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "delet"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h80c0273d"
+   }
+  },
+  {
+   "he": "סָלָט",
+   "en": "salad",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "salat"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p5e953ba9"
+   }
+  },
+  {
+   "he": "מַיִם",
+   "en": "water",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mayim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p7f7d7b8f"
+   }
+  },
+  {
+   "he": "כַּמָּה זְמַן",
+   "en": "how long",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kamah zeman"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כַּמָּה",
+     "זְמַן"
+    ]
+   }
+  },
+  {
+   "he": "טָעִים",
+   "en": "tasty",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ta'im"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h99bdff0e"
+   }
+  },
+  {
+   "he": "תּוֹדָה",
+   "en": "thanks",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "todah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he0b2f96b"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Place a simple order by phone",
+  "Give the address, floor and door",
+  "Ask how long it takes and thank the courier"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-13"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-45-e01",
+   "type": "respond",
+   "cue": "Say you'd like to order.",
+   "answer": {
+    "he": "אֶפְשָׁר לְהַזְמִין?",
+    "en": "Can I order?"
+   }
+  },
+  {
+   "id": "I-45-e02",
+   "type": "order",
+   "he": "אֲנִי רוֹצֶה פִּיצָה, סָלָט",
+   "en": "I want a pizza, a salad"
+  },
+  {
+   "id": "I-45-e03",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "אֲנִי רוֹצֶה פִּיצָה, בְּבַקָּשָׁה.",
+     "en": "I want a pizza, please."
+    },
+    {
+     "speaker": "b",
+     "he": "כְּתֹבֶת, בְּבַקָּשָׁה.",
+     "en": "Address, please."
+    },
+    {
+     "speaker": "a",
+     "he": "קוֹמָה שְׁנַיִם.",
+     "en": "Floor two."
+    }
+   ],
+   "task": "Order and give an address."
+  },
+  {
+   "id": "I-45-e04",
+   "type": "produce",
+   "en": "address, please",
+   "options": [
+    "כְּתֹבֶת, בְּבַקָּשָׁה",
+    "קַבָּלָה, בְּבַקָּשָׁה",
+    "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-45-e05",
+   "type": "respond",
+   "cue": "Ask how long it will take.",
+   "answer": {
+    "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "en": "How long does it take?"
+   }
+  },
+  {
+   "id": "I-45-e06",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "מִשְׁלוֹחַ",
+     "en": "delivery"
+    },
+    {
+     "he": "הַזְמָנָה",
+     "en": "order"
+    },
+    {
+     "he": "שָׁלִיחַ",
+     "en": "courier"
+    },
+    {
+     "he": "כְּתֹבֶת",
+     "en": "address"
+    },
+    {
+     "he": "קוֹמָה",
+     "en": "floor"
+    }
+   ]
+  },
+  {
+   "id": "I-45-e07",
+   "type": "recall",
+   "he": "שָׁלִיחַ",
+   "en": "courier"
+  },
+  {
+   "id": "I-45-e08",
+   "type": "produce",
+   "en": "pizza",
+   "options": [
+    "פִּיצָה",
+    "סָלָט",
+    "חוּמוּס"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-45-e09",
+   "type": "respond",
+   "cue": "The courier is at the door. Say thanks.",
+   "answer": {
+    "he": "תּוֹדָה רַבָּה",
+    "en": "Thank you very much"
+   }
+  },
+  {
+   "id": "I-45-e10",
+   "type": "respond",
+   "cue": "Say you'll pay by card.",
+   "answer": {
+    "he": "אֲנִי מְשַׁלֵּם בְּכַרְטִיס",
+    "en": "I pay by card"
+   }
+  },
+  {
+   "id": "I-45-e11",
+   "type": "produce",
+   "en": "cash",
+   "options": [
+    "מְזֻמָּן",
+    "קַבָּלָה",
+    "שַׂקִּית"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-45-e12",
+   "type": "respond",
+   "cue": "Say it was tasty.",
+   "answer": {
+    "he": "טָעִים מְאֹד",
+    "en": "Very tasty"
+   }
+  },
+  {
+   "id": "I-45-e13",
+   "type": "recall",
+   "he": "הַזְמָנָה",
+   "en": "order"
+  },
+  {
+   "id": "I-45-e14",
+   "type": "register",
+   "he": "תּוֹדָה",
+   "en": "thanks",
+   "answer": "neutral",
+   "options": [
+    "formal",
+    "neutral",
+    "slang"
+   ]
+  }
+ ],
+ "note": "App names, 'tip' and 'delivery fee' are not in the sources."
+}

@@ -1,0 +1,111 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-fillers-1",
+ "title": "Survival: fillers",
+ "theme": "talking-asking",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-fillers-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p83275774",
+   "he": "מָה זֶה?",
+   "translit": "mah zeh?",
+   "en": "what is this?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p311192c9",
+   "he": "כְּלוֹמַר",
+   "translit": "kelomar",
+   "en": "that is / I mean",
+   "kind": "word",
+   "audioId": "fillers-11",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p877578e9",
+   "he": "בֶּאֱמֶת?",
+   "translit": "be'emet?",
+   "en": "really?",
+   "kind": "word",
+   "audioId": "i-38-w8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pa650cbd6",
+   "he": "לֹא נָכוֹן",
+   "translit": "lo nakhon",
+   "en": "not right / wrong",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0fc6d2ec",
+   "he": "אֲנִי מֵבִין",
+   "translit": "ani mevin",
+   "en": "I understand",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pd7ec61e7",
+   "he": "מָה זֶה אוֹמֵר?",
+   "translit": "mah zeh omer?",
+   "en": "what does that mean?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p0f23ebb4",
+   "he": "אֲנִי לֹא מֵבִין",
+   "translit": "ani lo mevin",
+   "en": "I don't understand",
+   "kind": "phrase",
+   "audioId": "il18-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p8576419e",
+   "he": "אֲנִי לֹא יוֹדֵעַ",
+   "translit": "ani lo yode'a",
+   "en": "I don't know",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p63bb9809",
+   "he": "אֶפְשָׁר לְדַבֵּר לְאַט?",
+   "translit": "efshar ledaber le'at?",
+   "en": "can you speak slowly?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p7197f463",
+   "he": "אַתָּה מְדַבֵּר אַנְגְּלִית?",
+   "translit": "atah medaber angelit?",
+   "en": "do you speak English?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p8e0e58db",
+   "he": "אֵיךְ אוֹמְרִים ... בְּעִבְרִית?",
+   "translit": "eikh omerim ... be'ivrit?",
+   "en": "how do you say ... in Hebrew?",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

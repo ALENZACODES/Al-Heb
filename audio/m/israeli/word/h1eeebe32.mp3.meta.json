@@ -1,0 +1,17 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "פָּשַׁט",
+ "inputSha256": "965f28b66d3f1f3ab7b572f8dd898c2153969e1c0eaf80820324970b84904342",
+ "ingestedAt": "2026-11-08T03:23:52.736Z",
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): re-rendered 2026-11-08 with the recorded voice he-IL-Wavenet-B; the voice id and render time are taken from the render-time sidecar, not guessed.",
+ "inputTextKind": "hebrew",
+ "renderedAt": "2026-11-08T03:23:52.736Z",
+ "spokenText": "פָּשַׁט",
+ "normalized": true,
+ "redistributionCleared": false
+}

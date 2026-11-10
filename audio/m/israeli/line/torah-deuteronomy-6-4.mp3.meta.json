@@ -1,0 +1,16 @@
+{
+ "inputText": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+ "tradition": "israeli",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "stitchedFromText": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/i-01-w3.mp3",
+  "audio/m/israeli/word/brich-shmei-w115.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/aleinu-1-w54.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/adon-olam-1-w31.mp3"
+ ],
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md)."
+}

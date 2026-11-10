@@ -1,0 +1,25 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+ "inputSha256": "22224b8ca96178c3130496a63b0838d33f6c27f1afaddaad8f24d6ed9038f244",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w31.mp3",
+  "audio/f/israeli/word/adon-olam-1-w32.mp3",
+  "audio/f/israeli/word/h1c9d2f5e.mp3",
+  "audio/f/israeli/word/yigdal-w13.mp3",
+  "audio/f/israeli/word/yigdal-w14.mp3",
+  "audio/f/israeli/word/yigdal-w15.mp3",
+  "audio/f/israeli/word/aleinu-1-w76.mp3",
+  "audio/f/israeli/word/h2d1e4a74.mp3",
+  "audio/f/israeli/word/yigdal-w18.mp3"
+ ]
+}

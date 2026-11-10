@@ -1,0 +1,32 @@
+{
+ "note": "Real (non-placeholder) image files present in assets/img/. Regenerate with node tools/images/make_placeholders.mjs after images arrive.",
+ "files": [
+  "BRAND_cover_a.webp",
+  "L01_alef_quirky.webp",
+  "L02_bet_quirky.webp",
+  "L03_gimel_quirky.webp",
+  "L04_dalet_quirky.webp",
+  "L05_he_quirky.webp",
+  "L06_vav_quirky.webp",
+  "L08_chet_quirky.webp",
+  "L09_tet_quirky.webp",
+  "L11_kaf_quirky.webp",
+  "L12_lamed_quirky.webp",
+  "L13_mem_quirky.webp",
+  "L14_nun_quirky.webp",
+  "L15_samekh_quirky.webp",
+  "L16_ayin_quirky.webp",
+  "L17_pe_quirky.webp",
+  "L18_tsadi_quirky.webp",
+  "L19_qof_quirky.webp",
+  "L20_resh_quirky.webp",
+  "L21_shin_quirky.webp",
+  "L22_tav_quirky.webp",
+  "L23_kaf_final_quirky.webp",
+  "L24_mem_final_quirky.webp",
+  "L25_nun_final_quirky.webp",
+  "L26_pe_final_quirky.webp",
+  "L27_tsadi_final_quirky.webp",
+  "PRAY_blessing_01.webp"
+ ]
+}

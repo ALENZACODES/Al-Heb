@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "proofread": false,
+  "reviewNote": "DRAFT, unreviewed by any Hebrew teacher. Pronunciation shown is Israeli only. Not user-tested; the 10-minute figure is a design budget, not a measured result.",
+  "goal": "Read 3 real Hebrew words aloud after 5 letters and 2 vowels, within a 10-minute budget.",
+  "tradition": "israeli",
+  "letters": [
+    { "id": "shin", "he": "שׁ", "sound": "sh", "audio": { "kind": "letter", "id": "shin" } },
+    { "id": "lamed", "he": "ל", "sound": "l", "audio": { "kind": "letter", "id": "lamed" } },
+    { "id": "vav", "he": "ו", "sound": "v (or part of the vowel o/u)", "audio": { "kind": "letter", "id": "vav" } },
+    { "id": "mem", "he": "מ", "finalForm": "ם", "sound": "m", "audio": { "kind": "letter", "id": "mem" } },
+    { "id": "he", "he": "ה", "sound": "h at the start, silent at the end of a word", "audio": { "kind": "letter", "id": "he" } }
+  ],
+  "vowels": [
+    { "id": "kamatz", "example": "מָ", "sound": "ah", "note": "Kamatz: the T-shaped sign under the letter." },
+    { "id": "holam-male", "example": "לוֹ", "sound": "oh", "note": "Vav with a dot above it reads as the vowel oh; the vav is not a v here." }
+  ],
+  "words": [
+    { "id": "shalom", "he": "שָׁלוֹם", "bare": "שלום", "sound": "shah-LOHM", "gloss": "peace", "source": "Priestly Blessing, Numbers 6:26 (last word); also Oseh Shalom", "fromBlessing": true, "letters": ["shin", "lamed", "vav", "mem"], "vowels": ["kamatz", "holam-male"], "audio": { "kind": "word", "id": "firstday-shalom" } },
+    { "id": "sham", "he": "שָׁם", "bare": "שם", "sound": "shahm", "gloss": "there", "source": "Common word, not from the Priestly Blessing", "fromBlessing": false, "letters": ["shin", "mem"], "vowels": ["kamatz"], "audio": { "kind": "word", "id": "firstday-sham" } },
+    { "id": "mah", "he": "מָה", "bare": "מה", "sound": "mah", "gloss": "what", "source": "Common word, not from the Priestly Blessing", "fromBlessing": false, "letters": ["mem", "he"], "vowels": ["kamatz"], "audio": { "kind": "word", "id": "firstday-mah" } }
+  ],
+  "honestyNote": "Only one of the three words (shalom) is in the Priestly Blessing. The blessing's other words need letters (yod, bet, resh, kaf, final kaf, nun, and so on) and vowels (tzere, segol, shva) outside the 5 letters and 2 vowels taught here. Extending to the full verse is a later step.",
+  "steps": [
+    { "id": "s1", "kind": "intro", "minutes": 1, "title": "Hebrew reads right to left", "body": "Start at the right edge. You will learn 5 letters and 2 vowel signs, then read 3 real words." },
+    { "id": "s2", "kind": "letter", "minutes": 2, "title": "Five letters", "items": ["shin", "lamed", "vav", "mem", "he"] },
+    { "id": "s3", "kind": "vowel", "minutes": 1.5, "title": "Two vowel signs", "items": ["kamatz", "holam-male"] },
+    { "id": "s4", "kind": "read", "minutes": 1.5, "title": "Read your first word", "word": "shalom" },
+    { "id": "s5", "kind": "read", "minutes": 1, "title": "Read a second word", "word": "sham" },
+    { "id": "s6", "kind": "read", "minutes": 1, "title": "Read a third word", "word": "mah" },
+    { "id": "s7", "kind": "check", "minutes": 1.5, "title": "Which one says shalom?", "words": ["shalom", "sham", "mah"] },
+    { "id": "s8", "kind": "done", "minutes": 0.5, "title": "You read 3 Hebrew words", "body": "Self-reported. Nothing here has been tested with learners yet." }
+  ]
+}

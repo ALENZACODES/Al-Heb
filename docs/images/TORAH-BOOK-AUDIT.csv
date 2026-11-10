@@ -1,0 +1,212 @@
+page,images_needed,github_present,prepared_present,notes
+Cover,BRAND_cover_a,0,1,Cover illustration generated; typeset title remains separate.
+section-1 Prayer for the One Who Begins,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-blessing,PRAY_blessing_01,0,1,Existing generated HTML section; physical pagination must be rebuilt.
+ch-how,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-class,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-firstday,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-babysteps,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-memchain,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-trad,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+"section-9 Same word, two traditions",None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-sounds,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-alphabet,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+letter-alef,L01_alef_print_mnemonic; L01_alef_print_v1; L01_alef_print_v2; L01_alef_print_v3,4,4,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-bet,L02_bet_print_mnemonic; L02_bet_print_v1,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-gimel,L03_gimel_print_mnemonic; L03_gimel_print_v2,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-dalet,L04_dalet_print_mnemonic; L04_dalet_print_v1,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-he,L05_he_print_mnemonic; L05_he_print_v2; L05_he_print_v1,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-vav,L06_vav_print_mnemonic,1,1,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-zayin,L07_zayin_print_mnemonic; L07_zayin_print_v2,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-chet,L08_chet_print_mnemonic; L08_chet_print_v1,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-tet,L09_tet_print_mnemonic; L09_tet_print_v1; L09_tet_print_v2,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-yod,L10_yod_print_mnemonic; L10_yod_print_v2,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-kaf,L11_kaf_print_mnemonic; L11_kaf_print_v2,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-lamed,L12_lamed_print_mnemonic; L12_lamed_print_v1; L12_lamed_print_v2,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-mem,L13_mem_print_mnemonic; L13_mem_print_v1; L13_mem_print_v2; L13_mem_print_v3,4,4,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-nun,L14_nun_print_mnemonic; L14_nun_print_v1; L14_nun_print_v3,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-samekh,L15_samekh_print_mnemonic; L15_samekh_print_v3; L15_samekh_print_v1,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-ayin,L16_ayin_print_mnemonic,1,1,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-pe,L17_pe_print_mnemonic; L17_pe_print_v3,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-tsadi,L18_tsadi_print_mnemonic,1,1,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-qof,L19_qof_print_mnemonic; L19_qof_print_v2; L19_qof_print_v1; L19_qof_print_v3,4,4,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-resh,L20_resh_print_mnemonic; L20_resh_print_v1; L20_resh_print_v3,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-shin,L21_shin_print_mnemonic; L21_shin_print_v1; L21_shin_print_v2,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-tav,L22_tav_print_mnemonic; L22_tav_print_v2; L22_tav_print_v3,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-kaf-final,L23_kaf_final_print_mnemonic; L23_kaf_final_print_v1; L23_kaf_final_print_v2,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-mem-final,L24_mem_final_print_mnemonic; L24_mem_final_print_v1; L24_mem_final_print_v3,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-nun-final,L25_nun_final_print_mnemonic; L25_nun_final_print_v3; L25_nun_final_print_v2; L25_nun_final_print_v1,4,4,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-pe-final,L26_pe_final_print_mnemonic; L26_pe_final_print_v3,2,2,"Letter glyphs, highlights and stroke overlays are vector/text."
+letter-tsadi-final,L27_tsadi_final_print_mnemonic; L27_tsadi_final_print_v2; L27_tsadi_final_print_v3,3,3,"Letter glyphs, highlights and stroke overlays are vector/text."
+ch-remember,L01_alef_quirky; L02_bet_quirky; L03_gimel_quirky; L04_dalet_quirky; L05_he_quirky; L06_vav_quirky; L07_zayin_quirky; L08_chet_quirky; L09_tet_quirky; L10_yod_quirky; L11_kaf_quirky; L12_lamed_quirky; L13_mem_quirky; L14_nun_quirky; L15_samekh_quirky; L16_ayin_quirky; L17_pe_quirky; L18_tsadi_quirky; L19_qof_quirky; L20_resh_quirky; L21_shin_quirky; L22_tav_quirky; L23_kaf_final_quirky; L24_mem_final_quirky; L25_nun_final_quirky; L26_pe_final_quirky; L27_tsadi_final_quirky,2,27,Existing generated HTML section; physical pagination must be rebuilt.
+ch-vowels,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-reading,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-practice,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-blessing-words,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-prayers,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-pg-torah-service,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-pg-amidah,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-pg-shabbat,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-pg-hanukkah,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-survival,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-inter-syn,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-01,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-01-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-02,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-02-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-03,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-03-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-04,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-04-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-05,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-05-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-06,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-06-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-07,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-07-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-08,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-08-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-09,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-09-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-10,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-10-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-26,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-26-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-27,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-27-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-28,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-28-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-29,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-29-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-30,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-30-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-31,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-31-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-32,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-32-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-33,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-33-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-34,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-34-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-35,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-35-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-inter-isr,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-11,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-11-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-12,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-12-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-13,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-13-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-14,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-14-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-15,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-15-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-16,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-16-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-17,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-17-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-18,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-18-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-19,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-19-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-20,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-20-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-21,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-21-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-22,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-22-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-23,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-23-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-24,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-24-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-25,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-25-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-36,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-36-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-37,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-37-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-38,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-38-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-39,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-39-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-40,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-40-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-41,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-41-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-42,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-42-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-43,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-43-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-44,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-44-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-45,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-45-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-46,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-46-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-47,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-47-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-48,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-48-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-49,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-49-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-50,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+int-I-50-p2,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-wordlist,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-vocab-app,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-int-key,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-index,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+ch-colophon,None specified by existing page,0,0,Existing generated HTML section; physical pagination must be rebuilt.
+Mnemonic card: alef,L01_alef_quirky,0,1,"cartoon mime in a handstand with a finger to the lips, audience clapping"
+Mnemonic card: bet,L02_bet_quirky,0,1,a cozy cartoon bungalow with its front door open and a beach ball visible inside
+Mnemonic card: gimel,L03_gimel_quirky,0,1,"a grumpy camel stomping forward, one foot kicked out, wearing a tiny sweatband"
+Mnemonic card: dalet,L04_dalet_quirky,0,1,a diving board sticking out from one wooden post over a pool
+Mnemonic card: he,L05_he_quirky,0,1,a small hut with a hole in one wall and a person leaning out shouting
+Mnemonic card: vav,L06_vav_quirky,0,1,"a single straight vine dangling from a ceiling, with a small vacuum cleaner humming nearby"
+Mnemonic card: chet,L08_chet_quirky,0,1,"a closed garden gate on the shore of a lake, a jug of milk beside it"
+Mnemonic card: tet,L09_tet_quirky,0,1,"a round teapot with its spout curling inward, steam rising"
+Mnemonic card: kaf,L11_kaf_quirky,0,1,"a cup lying on its side on a table, one popcorn kernel beside it"
+Mnemonic card: lamed,L12_lamed_quirky,0,1,a tall lamp post with a bent arm lighting a row of short letters on a desk
+Mnemonic card: mem,L13_mem_quirky,0,1,"a mailbox on a post with its door open and a letter sliding out, a glass of water beside it"
+Mnemonic card: nun,L14_nun_quirky,0,1,"a cat curled up asleep in an open box, side view"
+Mnemonic card: samekh,L15_samekh_quirky,0,1,"a striped swim ring floating on water, a little air hissing out"
+Mnemonic card: ayin,L16_ayin_quirky,0,1,a large cartoon eye winking
+Mnemonic card: pe,L17_pe_quirky,0,1,"a mouth blowing a bubble with a party horn, side view"
+Mnemonic card: tsadi,L18_tsadi_quirky,0,1,a slice of pizza on a flat box with a small bird perched on the box
+Mnemonic card: qof,L19_qof_quirky,0,1,a red kite in the sky with a long string dangling down
+Mnemonic card: resh,L20_resh_quirky,0,1,"a smooth round head in profile growling, with a ball rolling down a ramp behind"
+Mnemonic card: shin,L21_shin_quirky,0,1,a birthday cake with three candle flames and a finger to the lips
+Mnemonic card: tav,L22_tav_quirky,0,1,a small table with one leg ending in a toe tapping the floor
+Mnemonic card: kaf-final,L23_kaf_final_quirky,0,1,a king in a long robe whose cloak trails behind him on the floor
+Mnemonic card: mem-final,L24_mem_final_quirky,0,1,a tent zipped shut beside the sea
+Mnemonic card: nun-final,L25_nun_final_quirky,0,1,a single long nail standing upright in a garden bed
+Mnemonic card: pe-final,L26_pe_final_quirky,0,1,"a big feather held off the tip of a nose, long quill pointing down"
+Mnemonic card: tsadi-final,L27_tsadi_final_quirky,0,1,a leafy tree with Y-shaped branches and a long straight trunk
+craft-scroll-1,CRAFT_scroll_01; CRAFT_scroll_02; CRAFT_scroll_03; CRAFT_scroll_04,4,4,New print section uses existing assets.
+craft-scroll-2,CRAFT_scroll_05; CRAFT_scroll_06; CRAFT_scroll_07; CRAFT_scroll_08,4,4,New print section uses existing assets.
+craft-scroll-3,CRAFT_scroll_09; CRAFT_scroll_10,2,2,New print section uses existing assets.
+craft-bimah-1,CRAFT_bimah_01; CRAFT_bimah_02; CRAFT_bimah_03; CRAFT_bimah_04,4,4,New print section uses existing assets.
+craft-bimah-2,CRAFT_bimah_05; CRAFT_bimah_06; CRAFT_bimah_07; CRAFT_bimah_08,4,4,New print section uses existing assets.
+craft-bimah-3,CRAFT_bimah_09; CRAFT_bimah_10,2,2,New print section uses existing assets.
+craft-practice-1,CRAFT_practice_01; CRAFT_practice_02; CRAFT_practice_03; CRAFT_practice_04,4,4,New print section uses existing assets.
+craft-practice-2,CRAFT_practice_05; CRAFT_practice_06; CRAFT_practice_07; CRAFT_practice_08,4,4,New print section uses existing assets.
+craft-practice-3,CRAFT_practice_09; CRAFT_practice_10,2,2,New print section uses existing assets.
+craft-haftarah-1,CRAFT_haftarah_01; CRAFT_haftarah_02; CRAFT_haftarah_03; CRAFT_haftarah_04,4,4,New print section uses existing assets.
+craft-haftarah-2,CRAFT_haftarah_05; CRAFT_haftarah_06; CRAFT_haftarah_07; CRAFT_haftarah_08,4,4,New print section uses existing assets.
+craft-haftarah-3,CRAFT_haftarah_09; CRAFT_haftarah_10,2,2,New print section uses existing assets.
+craft-wheel-1,CRAFT_wheel_01; CRAFT_wheel_02; CRAFT_wheel_03; CRAFT_wheel_04,4,4,New print section uses existing assets.
+craft-wheel-2,CRAFT_wheel_05; CRAFT_wheel_06; CRAFT_wheel_07; CRAFT_wheel_08,4,4,New print section uses existing assets.
+craft-wheel-3,CRAFT_wheel_09; CRAFT_wheel_10,2,2,New print section uses existing assets.
+craft-qa-1,CRAFT_qa_01; CRAFT_qa_02; CRAFT_qa_03; CRAFT_qa_04,4,4,New print section uses existing assets.
+craft-qa-2,CRAFT_qa_05; CRAFT_qa_06; CRAFT_qa_07; CRAFT_qa_08,4,4,New print section uses existing assets.
+craft-qa-3,CRAFT_qa_09; CRAFT_qa_10,2,2,New print section uses existing assets.
+trope-plates-1,TROPE_etnachta_mnemonic; TROPE_etnachta_card; TROPE_kadma_mnemonic; TROPE_kadma_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-2,TROPE_karney_para_mnemonic; TROPE_karney_para_card; TROPE_mahapakh_mnemonic; TROPE_mahapakh_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-3,TROPE_mercha_mnemonic; TROPE_mercha_card; TROPE_munach_mnemonic; TROPE_munach_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-4,TROPE_pashta_mnemonic; TROPE_pashta_card; TROPE_pazer_mnemonic; TROPE_pazer_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-5,TROPE_segolta_mnemonic; TROPE_segolta_card; TROPE_sof_pasuk_mnemonic; TROPE_sof_pasuk_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-6,TROPE_telisha_mnemonic; TROPE_telisha_card; TROPE_tifcha_mnemonic; TROPE_tifcha_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-7,TROPE_zakef_gadol_mnemonic; TROPE_zakef_gadol_card; TROPE_zakef_katan_mnemonic; TROPE_zakef_katan_card,4,4,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-plates-8,TROPE_zarka_mnemonic; TROPE_zarka_card,2,2,Exact mark is typeset from corpus data; pictures do not specify melody.
+trope-hands-1,TROPE_hand_01; TROPE_hand_02; TROPE_hand_03; TROPE_hand_04,4,4,"Illustration reference, not an instruction for a community hand signal."
+trope-hands-2,TROPE_hand_05; TROPE_hand_06; TROPE_hand_07; TROPE_hand_08,4,4,"Illustration reference, not an instruction for a community hand signal."
+trope-hands-3,TROPE_hand_09; TROPE_hand_10,2,2,"Illustration reference, not an instruction for a community hand signal."

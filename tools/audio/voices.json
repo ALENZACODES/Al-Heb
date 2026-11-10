@@ -1,0 +1,8 @@
+{
+  "languageCode": "he-IL",
+  "ari": "he-IL-Chirp3-HD-Charon",
+  "noa": "he-IL-Chirp3-HD-Kore",
+  "bitrateKbps": 48,
+  "sampleRateHertz": 24000,
+  "outputDirectory": "audio/builder"
+}

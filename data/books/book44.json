@@ -1,0 +1,177 @@
+{
+ "id": "book44",
+ "titleHe": "הַקָּפֶה בַּפִּנָּה",
+ "titleTranslit": "Ha-Kafeh Ba-Pinah",
+ "titleEn": "The Café on the Corner",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "בַּפִּנָּה יֵשׁ קָפֶה קָטָן.",
+   "translit": "Ba-pinah yesh kafeh katan.",
+   "en": "On the corner there is a small café.",
+   "img": "assets/books/book44/BOOK44_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p01.mp3",
+    "m": "audio/m/israeli/book/book44-p01.mp3"
+   },
+   "illustration": "a tiny café with three tables, a tree beside it",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הַבְּעָלִים: אָדָם וְרִינָה.",
+   "translit": "Ha-be'alim: Adam ve-Rinah.",
+   "en": "The owners: Adam and Rina.",
+   "img": "assets/books/book44/BOOK44_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p02.mp3",
+    "m": "audio/m/israeli/book/book44-p02.mp3"
+   },
+   "illustration": "a couple behind the counter, flour and espresso",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "כָּל בֹּקֶר אוֹתָם אֲנָשִׁים.",
+   "translit": "Kol boker otam anashim.",
+   "en": "Every morning the same people.",
+   "img": "assets/books/book44/BOOK44_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p03.mp3",
+    "m": "audio/m/israeli/book/book44-p03.mp3"
+   },
+   "illustration": "regulars at their tables: a student, a retiree, a courier",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הַסְּטוּדֶנְטִית לוֹמֶדֶת.",
+   "translit": "Ha-studentit lomedet.",
+   "en": "The student studies.",
+   "img": "assets/books/book44/BOOK44_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p04.mp3",
+    "m": "audio/m/israeli/book/book44-p04.mp3"
+   },
+   "illustration": "a young woman with a laptop and three empty cups",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַזָּקֵן קוֹרֵא עִתּוֹן.",
+   "translit": "Ha-zaken koreh iton.",
+   "en": "The old man reads a newspaper.",
+   "img": "assets/books/book44/BOOK44_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p05.mp3",
+    "m": "audio/m/israeli/book/book44-p05.mp3"
+   },
+   "illustration": "an old man behind a newspaper, dog under the table",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַשַּׁלִּיחַ שׁוֹתֶה מַהֵר.",
+   "translit": "Ha-shaliach shoteh maher.",
+   "en": "The courier drinks fast.",
+   "img": "assets/books/book44/BOOK44_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p06.mp3",
+    "m": "audio/m/israeli/book/book44-p06.mp3"
+   },
+   "illustration": "a courier gulping espresso, helmet on",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "יוֹם אֶחָד הַקָּפֶה סָגוּר.",
+   "translit": "Yom echad ha-kafeh sagur.",
+   "en": "One day the café is closed.",
+   "img": "assets/books/book44/BOOK44_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p07.mp3",
+    "m": "audio/m/israeli/book/book44-p07.mp3"
+   },
+   "illustration": "a handwritten sign on the door, the regulars outside confused",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"מָה קָרָה?\"",
+   "translit": "\"Mah karah?\"",
+   "en": "\"What happened?\"",
+   "img": "assets/books/book44/BOOK44_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p08.mp3",
+    "m": "audio/m/israeli/book/book44-p08.mp3"
+   },
+   "illustration": "the three regulars looking at each other",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "רִינָה חוֹלָה. אָדָם בַּבַּיִת.",
+   "translit": "Rinah cholah. Adam ba-bayit.",
+   "en": "Rina is sick. Adam is at home.",
+   "img": "assets/books/book44/BOOK44_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p09.mp3",
+    "m": "audio/m/israeli/book/book44-p09.mp3"
+   },
+   "illustration": "a note taped to the glass",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַסְּטוּדֶנְטִית פּוֹתַחַת אֶת הַדֶּלֶת.",
+   "translit": "Ha-studentit potachat et ha-delet.",
+   "en": "The student opens the door.",
+   "img": "assets/books/book44/BOOK44_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p10.mp3",
+    "m": "audio/m/israeli/book/book44-p10.mp3"
+   },
+   "illustration": "the student with a spare key the owners once gave her",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַזָּקֵן מְכִין קָפֶה. הַשַּׁלִּיחַ מֵבִיא לֶחֶם.",
+   "translit": "Ha-zaken mechin kafeh. Ha-shaliach mevi lechem.",
+   "en": "The old man makes coffee. The courier brings bread.",
+   "img": "assets/books/book44/BOOK44_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p11.mp3",
+    "m": "audio/m/israeli/book/book44-p11.mp3"
+   },
+   "illustration": "the three running the café, badly and happily",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַקָּפֶה פָּתוּחַ.",
+   "translit": "Ha-kafeh patuach.",
+   "en": "The café is open.",
+   "img": "assets/books/book44/BOOK44_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book44-p12.mp3",
+    "m": "audio/m/israeli/book/book44-p12.mp3"
+   },
+   "illustration": "the sign flipped to open, a line forming",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

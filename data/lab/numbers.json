@@ -1,0 +1,148 @@
+{
+"schema": "alef-lab-numbers/1",
+"source": "data/vocab/themes/time-numbers-set01.json (word ids kept so the dictionary recordings play)",
+"note": "Number words in the form the dictionary lists them. `clip` is a word recording with exactly the same Hebrew text, in both voices.",
+"numbers": [
+{
+"value": 1,
+"id": "h155e306b",
+"he": "אֶחָד",
+"tr": "echad",
+"en": "one",
+"clip": "numbers-01-m"
+},
+{
+"value": 2,
+"id": "hf9a1a55b",
+"he": "שְׁנַיִם",
+"tr": "shenayim",
+"en": "two",
+"clip": "numbers-02-m"
+},
+{
+"value": 3,
+"id": "h3dfe9831",
+"he": "שְׁלוֹשָׁה",
+"tr": "sheloshah",
+"en": "three",
+"clip": "numbers-03-m"
+},
+{
+"value": 4,
+"id": "h769a6c3e",
+"he": "אַרְבָּעָה",
+"tr": "arba'ah",
+"en": "four",
+"clip": "numbers-04-m"
+},
+{
+"value": 5,
+"id": "h29aadfe4",
+"he": "חֲמִשָּׁה",
+"tr": "chamishah",
+"en": "five",
+"clip": "numbers-05-m"
+},
+{
+"value": 6,
+"id": "pc9b3fcc6",
+"he": "שִׁשָּׁה",
+"tr": "shishah",
+"en": "six",
+"clip": "numbers-06-m"
+},
+{
+"value": 7,
+"id": "h68a92f84",
+"he": "שִׁבְעָה",
+"tr": "shiv'ah",
+"en": "seven",
+"clip": "numbers-07-m"
+},
+{
+"value": 8,
+"id": "h745593b8",
+"he": "שְׁמוֹנָה",
+"tr": "shemonah",
+"en": "eight",
+"clip": "numbers-08-m"
+},
+{
+"value": 9,
+"id": "h1de12f34",
+"he": "תִּשְׁעָה",
+"tr": "tish'ah",
+"en": "nine",
+"clip": "numbers-09-m"
+},
+{
+"value": 10,
+"id": "h4589871d",
+"he": "עֲשָׂרָה",
+"tr": "asarah",
+"en": "ten",
+"clip": "numbers-10-m"
+},
+{
+"value": 20,
+"id": "h2d27796a",
+"he": "עֶשְׂרִים",
+"tr": "esrim",
+"en": "twenty",
+"clip": "numbers-11"
+},
+{
+"value": 30,
+"id": "h6c51044e",
+"he": "שְׁלוֹשִׁים",
+"tr": "sheloshim",
+"en": "thirty",
+"clip": "numbers-12"
+},
+{
+"value": 40,
+"id": "h83f51398",
+"he": "אַרְבָּעִים",
+"tr": "arba'im",
+"en": "forty"
+},
+{
+"value": 50,
+"id": "h5b285a5d",
+"he": "חֲמִשִּׁים",
+"tr": "chamishim",
+"en": "fifty",
+"clip": "numbers-13"
+},
+{
+"value": 70,
+"id": "h2c308e65",
+"he": "שִׁבְעִים",
+"tr": "shiv'im",
+"en": "seventy"
+},
+{
+"value": 90,
+"id": "h0b5f5c41",
+"he": "תִּשְׁעִים",
+"tr": "tish'im",
+"en": "ninety"
+},
+{
+"value": 100,
+"id": "hffd9b904",
+"he": "מֵאָה",
+"tr": "me'ah",
+"en": "hundred",
+"clip": "numbers-14"
+},
+{
+"value": 1000,
+"id": "h26154c1a",
+"he": "אֶלֶף",
+"tr": "elef",
+"en": "thousand",
+"clip": "numbers-15"
+}
+]
+}

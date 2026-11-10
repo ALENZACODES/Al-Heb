@@ -1,0 +1,37 @@
+/* ALEF cohesive theme — deep olive green & gold across the whole app.
+   Variable-level only: this file recolours the design tokens defined in
+   app.css (accent, focus, surfaces) so every screen shares the start
+   screen's identity. No layout rules live here; delete this file (and its
+   <link>) to return to the original blue theme untouched.
+   Palette: deep green #1C4023, gold #D9A441 / light gold #E8C97A,
+   paper cream #F6F1E7 (the artwork's own background). */
+
+:root {
+  --accent: #1c4023;
+  --accent-fg: #f6f1e7;
+  --focus: #a87b1f;
+  --border: #cfc096;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1f12;
+    --fg: #ece7da;
+    --muted: #a9bfa0;
+    --card: #16281a;
+    --border: #2c4630;
+    --accent: #d9a441;
+    --accent-fg: #14260f;
+    --focus: #e8c97a;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1f12;
+  --fg: #ece7da;
+  --muted: #a9bfa0;
+  --card: #16281a;
+  --border: #2c4630;
+  --accent: #d9a441;
+  --accent-fg: #14260f;
+  --focus: #e8c97a;
+}

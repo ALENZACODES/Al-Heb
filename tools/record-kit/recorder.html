@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALEF voice recorder</title>
+<style>
+:root{--bg:#faf8f3;--fg:#1d1b16;--mut:#5b574c;--card:#fff;--line:#d9d3c3;--acc:#1f4e8c;--acc-fg:#fff;--ok:#1b6b3a;--warn:#9a4d00;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root{--bg:#15140f;--fg:#f1eee4;--mut:#b7b1a0;--card:#1f1d16;--line:#3a3729;--acc:#8ab4f8;--acc-fg:#0b1a2e;--ok:#7ad39a;--warn:#ffb25e;--bad:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:env(safe-area-inset-top) 12px env(safe-area-inset-bottom)}
+main{max-width:760px;margin:0 auto;padding:12px 0 40px}
+h1{font-size:1.25rem;margin:.6rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+label{display:block;margin:.6rem 0 .2rem;font-weight:600}
+input[type=text],select{width:100%;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.chk{display:flex;gap:10px;align-items:flex-start;margin:.7rem 0;font-weight:400}
+.chk input{width:24px;height:24px;flex:none;margin-top:2px}
+button{font:inherit;font-weight:600;min-height:48px;padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+button.primary{background:var(--acc);color:var(--acc-fg);border-color:var(--acc)}
+button.rec{background:var(--bad);color:#fff;border-color:var(--bad)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.row>button{flex:1 1 130px}
+.draft{border:2px solid var(--warn);color:var(--warn);padding:8px 12px;border-radius:10px;font-weight:700}
+.he{font-family:"SBL Hebrew","Ezra SIL","Frank Ruhl Libre","Noto Serif Hebrew","Noto Sans Hebrew","Times New Roman",serif;font-size:clamp(56px,17vw,128px);line-height:1.35;text-align:center;margin:.1em 0;word-break:keep-all}
+.tr{text-align:center;font-size:1.6rem;font-weight:600}
+.en{text-align:center;color:var(--mut);font-size:1.1rem}
+.note{text-align:center;color:var(--mut);font-size:.95rem}
+.meter{height:18px;border-radius:9px;background:var(--line);overflow:hidden;position:relative;margin-top:12px}
+.meter>i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ok);transition:width .05s}
+.meter>i.hot{background:var(--bad)}
+.lamp{font-size:.9rem;color:var(--mut);margin-top:4px;display:flex;justify-content:space-between}
+.msg{margin-top:10px;font-weight:600}.msg.warn{color:var(--warn)}.msg.bad{color:var(--bad)}.msg.ok{color:var(--ok)}
+progress{width:100%;height:12px}
+.hidden{display:none!important}
+small,.small{color:var(--mut);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>ALEF voice recorder</h1>
+
+<section id="s-resume" class="card hidden" aria-live="polite">
+  <p><b>Welcome back.</b> A session for <span id="r-name"></span> (<span id="r-count"></span>) was saved on this device.</p>
+  <div class="row"><button id="b-resume" class="primary">Continue recording</button><button id="b-wipe">Discard it and start over</button></div>
+</section>
+
+<section id="s-consent" class="card hidden">
+  <h2 style="margin-top:0">Before you start</h2>
+  <div class="draft" role="note">Draft wording: have a lawyer review before relying on this.</div>
+  <div id="c-text"></div>
+  <label for="f-name">Your full name</label>
+  <input id="f-name" type="text" autocomplete="name">
+  <label for="f-trad">Reading tradition</label>
+  <select id="f-trad"><option value="sephardi">Sephardi</option><option value="ashkenazi">Ashkenazi</option><option value="israeli">Israeli</option></select>
+  <label for="f-voice">Voice</label>
+  <select id="f-voice"><option value="m">Male voice (m)</option><option value="f">Female voice (f)</option></select>
+  <div id="c-boxes"></div>
+  <label for="f-credit">Optional: name to credit you by (leave blank to stay anonymous)</label>
+  <input id="f-credit" type="text">
+  <div class="row"><button id="b-consent" class="primary" disabled>I agree, continue</button></div>
+  <p class="small" id="c-hint">Tick the three required boxes and enter your name to continue.</p>
+</section>
+
+<section id="s-script" class="card hidden">
+  <h2 style="margin-top:0">Choose the reading list</h2>
+  <p id="sc-bundled" class="hidden"></p>
+  <label for="f-file">Reading list file (.csv from ALEF, or .json)</label>
+  <input id="f-file" type="file" accept=".csv,.json,text/csv,application/json">
+  <p class="msg" id="sc-msg" role="status"></p>
+  <div class="row"><button id="b-bundle" class="primary hidden">Use the built-in list</button></div>
+</section>
+
+<section id="s-rec" class="hidden">
+  <div class="card">
+    <progress id="p-bar" value="0" max="1" aria-label="Progress"></progress>
+    <div class="small" id="p-text" aria-live="polite"></div>
+    <div class="he" id="i-he" lang="he" dir="rtl"></div>
+    <div class="tr" id="i-tr" lang="en"></div>
+    <div class="en" id="i-en"></div>
+    <div class="note" id="i-note"></div>
+    <div class="meter" aria-hidden="true"><i id="m-bar"></i></div>
+    <div class="lamp"><span id="m-state">Microphone off</span><span id="m-clip"></span></div>
+    <div class="msg" id="m-msg" role="status" aria-live="polite"></div>
+    <div class="row">
+      <button id="b-rec" class="rec">Record</button>
+      <button id="b-play" disabled>Play back</button>
+      <button id="b-next" class="primary">Next</button>
+    </div>
+    <div class="row">
+      <button id="b-prev">Back</button>
+      <button id="b-skip">Next not yet recorded</button>
+      <button id="b-export">Export a zip</button>
+    </div>
+    <p class="small">Keys: Space = record / stop, P = play back, Right arrow = next, Left arrow = back.</p>
+  </div>
+</section>
+</main>
+
+<script>
+// Pure logic for the Aleph record kit. No Node-only APIs: this file is inlined verbatim (minus the `export` keywords) into
+// recorder.html by build.mjs, and imported as a module by ingest.mjs and the tests.
+
+const TRADITIONS = ['israeli', 'sephardi', 'ashkenazi'];
+const VOICES = ['m', 'f'];
+const KINDS = ['letter', 'vowel', 'syllable', 'line', 'prayer', 'word'];
+const CONSENT_VERSION = '2026-11-draft-1';
+
+/** Plain-language grant shown on the first screen and written into every export. Mirrors docs/voices/donor-rights-grant.md. */
+const CONSENT_TEXT = [
+  'DRAFT: have a lawyer review before relying on this. Plain-language summary, not legal advice.',
+  'What you are doing: you will read aloud words, letters, syllables and prayer lines from a list, and the page will record your voice on this device. Nothing is sent anywhere by the page. You choose when to send the exported file, and to whom.',
+  'What you give: a permanent, worldwide, royalty-free right for Aleph to copy, edit (trim, adjust volume, clean up noise, join pieces together), distribute and play your recordings in the Aleph Hebrew-learning app and website (free or paid), in the audio that goes with the Aleph book, and in marketing and demos for Aleph.',
+  'Sale: Aleph may be sold, or its rights transferred to a buyer or successor, and your recordings may go with it, including in a product that is sold or subscribed to. You will not be paid royalties or a share of income.',
+  'Voice cloning and AI: your recordings will NOT be used to clone your voice, or to train or adjust any voice model, unless you tick the separate optional box below. Leaving it unticked has no effect on whether your recordings are accepted.',
+  'Changing your mind: you may withdraw in writing at any time. This stops future use in new releases and new marketing as soon as reasonably practical. It does not reach copies already shipped, downloaded, printed or published.',
+  'Privacy: your name is kept private and used only for this agreement and legal records. Your recordings are not published with your name unless you ask for credit.',
+];
+
+const CONSENT_REQUIRED = [
+  ['age18', 'I am 18 or older (if I am not, a parent or guardian is helping me and agrees to all of this).'],
+  ['grant', 'I have read the summary above and I agree to the use of my recordings described in it, including that Aleph may be sold and that I will not be paid royalties.'],
+  ['own_voice', 'The voice is mine, I am free to give these rights, and I will read only what is on the screen.'],
+];
+const CONSENT_OPTIONAL_CLONE = ['ai_clone', 'OPTIONAL. I also agree that my recordings may be used as a reference for, or to train or adjust, a computer-generated voice that sounds like me, used inside Aleph, its book audio and its marketing. (Leave unticked for NO.)'];
+
+const consentComplete = (c) => !!c && CONSENT_REQUIRED.every(([k]) => c.required && c.required[k] === true) && !!String(c.volunteer_name || '').trim();
+
+function consentRecord({ volunteerName, required, aiClone, creditName, acceptedAt, donorRef, tradition, voice }) {
+  return {
+    version: CONSENT_VERSION, donor_ref: donorRef, accepted_at: acceptedAt, volunteer_name: String(volunteerName || '').trim(),
+    tradition, voice, required: Object.fromEntries(CONSENT_REQUIRED.map(([k]) => [k, !!(required && required[k])])),
+    ai_clone_consent: aiClone === true, credit_name: String(creditName || '').trim(),
+    note: 'Ticked on screen. A signed form (docs/voices/donor-rights-grant.md) is still the legal record until a lawyer says otherwise.',
+    text: CONSENT_TEXT, required_boxes: Object.fromEntries(CONSENT_REQUIRED), optional_box: CONSENT_OPTIONAL_CLONE[1],
+  };
+}
+
+// ---------- CSV ----------
+const csvCell = (v) => { const s = String(v ?? ''); return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+const toCsv = (cols, rows) => [cols.join(','), ...rows.map((r) => cols.map((c) => csvCell(r[c])).join(','))].join('\r\n') + '\r\n';
+function parseCsv(text) {
+  text = String(text).replace(/^﻿/, '');
+  const rows = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += c; }
+    else if (c === '"') q = true;
+    else if (c === ',') { row.push(cell); cell = ''; }
+    else if (c === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+    else if (c !== '\r') cell += c;
+  }
+  if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+  const [h = [], ...body] = rows;
+  return body.filter((r) => r.length > 1 || (r[0] || '') !== '').map((r) => Object.fromEntries(h.map((k, i) => [k.trim(), r[i] ?? ''])));
+}
+
+// ---------- items and filenames ----------
+/** Ids become path segments: keep [A-Za-z0-9._-], collapse anything else to '-'. Returns '' if nothing usable is left. */
+const safeId = (s) => String(s ?? '').trim().replace(/[^A-Za-z0-9._-]+/g, '-').replace(/^[-.]+|[-.]+$/g, '');
+
+/** Repo audio path convention (tools/audio/hebrew_data.mjs audioPath): audio/<voice>/<tradition>/<kind>/<id>.<ext>; the shipped ext is mp3, the recorder writes wav. */
+function clipPath(voice, tradition, kind, id, ext = 'wav') {
+  if (!VOICES.includes(voice)) throw new Error(`voice must be m or f, got "${voice}"`);
+  if (!TRADITIONS.includes(tradition)) throw new Error(`unknown tradition "${tradition}"`);
+  if (!KINDS.includes(kind)) throw new Error(`unknown kind "${kind}"`);
+  const sid = safeId(id);
+  if (!sid) throw new Error(`unusable id "${id}"`);
+  return `audio/${voice}/${tradition}/${kind}/${sid}.${ext}`;
+}
+function parseClipPath(p) {
+  const m = /^audio\/([mf])\/(israeli|sephardi|ashkenazi)\/(letter|vowel|syllable|line|prayer|word)\/([A-Za-z0-9._-]+)\.([A-Za-z0-9]+)$/.exec(String(p).replace(/\\/g, '/'));
+  return m ? { voice: m[1], tradition: m[2], kind: m[3], id: m[4], ext: m[5].toLowerCase() } : null;
+}
+
+const pick = (r, ...ks) => { for (const k of ks) if (r[k] != null && String(r[k]).trim() !== '') return String(r[k]).trim(); return ''; };
+/** Rows from any of the repo's script CSVs (recording-script-<tradition>.csv, recording-script.csv, recordings_needed.csv) -> items. */
+function normalizeItems(rows, { tradition = '', voice = '', kind = 'word' } = {}) {
+  const out = []; const seen = new Set();
+  for (const r of rows) {
+    const id = safeId(pick(r, 'id', 'item_id'));
+    const he = pick(r, 'pointed_hebrew', 'text_niqqud', 'text', 'text_he');
+    if (!id || !he) continue;
+    const t = pick(r, 'tradition') || tradition; const v = pick(r, 'voice') || voice; const k = pick(r, 'kind') || kind;
+    if (voice && pick(r, 'voice') && pick(r, 'voice') !== voice) continue; // master slate has one row per voice
+    if (tradition && pick(r, 'tradition') && pick(r, 'tradition') !== tradition) continue;
+    const key = `${t}/${v}/${k}/${id}`; if (seen.has(key)) continue; seen.add(key);
+    out.push({ id, kind: k, tradition: t, he, translit: pick(r, 'read_aloud', 'transliteration', 'translit'), english: pick(r, 'gloss', 'english', 'meaning'), note: pick(r, 'check', 'direction', 'donor_note', 'notes') });
+  }
+  return out;
+}
+function itemsFromJson(text) {
+  const j = JSON.parse(text);
+  const list = Array.isArray(j) ? j : j.items;
+  if (!Array.isArray(list)) throw new Error('JSON must be an array of items or {items:[...]}');
+  return { items: list.map((x) => ({ id: safeId(x.id), kind: x.kind || 'word', tradition: x.tradition || '', he: x.he || '', translit: x.translit || '', english: x.english || '', note: x.note || '' })).filter((x) => x.id && x.he), tradition: j.tradition || '' };
+}
+/** Guess the tradition from a file name such as recording-script-sephardi.csv. */
+const traditionFromName = (n) => (TRADITIONS.find((t) => String(n).toLowerCase().includes(t)) || '');
+
+// ---------- audio analysis ----------
+const dbfs = (x) => (x > 0 ? 20 * Math.log10(x) : -Infinity);
+const THRESH = { clipPeak: 0.989, clipRun: 3, silentPeakDb: -40, quietPeakDb: -24, minSeconds: 0.25 };
+function analyze(samples, sampleRate) {
+  let peak = 0, sum = 0, run = 0, runs = 0;
+  for (let i = 0; i < samples.length; i++) {
+    const a = Math.abs(samples[i]); if (a > peak) peak = a; sum += a * a;
+    if (a >= THRESH.clipPeak) { run++; if (run === THRESH.clipRun) runs++; } else run = 0;
+  }
+  const rms = samples.length ? Math.sqrt(sum / samples.length) : 0;
+  return { duration: samples.length / sampleRate, sampleRate, peak, peakDb: dbfs(peak), rmsDb: dbfs(rms), clipRuns: runs };
+}
+function warningsFor(a) {
+  const w = [];
+  if (a.peak >= THRESH.clipPeak || a.clipRuns > 0) w.push('clipping');
+  if (a.peakDb < THRESH.silentPeakDb) w.push('silent');
+  else if (a.peakDb < THRESH.quietPeakDb) w.push('quiet');
+  if (a.duration < THRESH.minSeconds) w.push('too-short');
+  return w;
+}
+const WARNING_TEXT = {
+  clipping: 'Too loud: the recording distorts. Move the phone a little further away or speak softer, then re-record.',
+  silent: 'Nothing was heard. Check the microphone is not muted, then re-record.',
+  quiet: 'Rather quiet. Move a little closer to the microphone, then re-record.',
+  'too-short': 'Very short. Make sure you started speaking after pressing Record, then re-record.',
+};
+
+/** Mono 16-bit PCM WAV. samples: Float32Array in [-1,1]. */
+function encodeWav(samples, sampleRate) {
+  const n = samples.length, buf = new ArrayBuffer(44 + n * 2), v = new DataView(buf);
+  const s = (o, t) => { for (let i = 0; i < t.length; i++) v.setUint8(o + i, t.charCodeAt(i)); };
+  s(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); s(8, 'WAVE'); s(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, sampleRate, true); v.setUint32(28, sampleRate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); s(36, 'data'); v.setUint32(40, n * 2, true);
+  for (let i = 0; i < n; i++) { const x = Math.max(-1, Math.min(1, samples[i])); v.setInt16(44 + i * 2, x < 0 ? Math.round(x * 32768) : Math.round(x * 32767), true); }
+  return new Uint8Array(buf);
+}
+
+// ---------- manifest.csv ----------
+const MANIFEST_COLS = ['item_id', 'kind', 'voice', 'tradition', 'path', 'duration_s', 'peak_dbfs', 'rms_dbfs', 'sample_rate', 'warnings', 'volunteer_name', 'donor_ref', 'ai_clone_consent', 'recorded_at'];
+const r3 = (x) => (Number.isFinite(x) ? Math.round(x * 1000) / 1000 : '');
+function manifestRow(clip, ctx) {
+  return { item_id: clip.id, kind: clip.kind, voice: ctx.voice, tradition: clip.tradition || ctx.tradition, path: clip.path, duration_s: r3(clip.duration), peak_dbfs: Number.isFinite(clip.peakDb) ? Math.round(clip.peakDb * 100) / 100 : '-inf', rms_dbfs: Number.isFinite(clip.rmsDb) ? Math.round(clip.rmsDb * 100) / 100 : '-inf', sample_rate: clip.sampleRate, warnings: (clip.warnings || []).join(' '), volunteer_name: ctx.volunteerName, donor_ref: ctx.donorRef, ai_clone_consent: ctx.aiClone ? 'yes' : 'no', recorded_at: clip.recordedAt };
+}
+
+// ---------- zip (store only) ----------
+let CRC_T = null;
+function crc32(u8) {
+  if (!CRC_T) { CRC_T = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; CRC_T[n] = c >>> 0; } }
+  let c = 0xffffffff; for (let i = 0; i < u8.length; i++) c = CRC_T[(c ^ u8[i]) & 255] ^ (c >>> 8);
+  return (c ^ 0xffffffff) >>> 0;
+}
+const utf8 = (s) => new TextEncoder().encode(s);
+/** files: [{name, data: Uint8Array|string}] -> Uint8Array of a ZIP (method 0, UTF-8 names). */
+function zipStore(files, date = new Date()) {
+  const dt = Math.max(0, date.getFullYear() - 1980) << 9 | (date.getMonth() + 1) << 5 | date.getDate(), tm = date.getHours() << 11 | date.getMinutes() << 5 | (date.getSeconds() >> 1);
+  const parts = [], central = []; let off = 0;
+  for (const f of files) {
+    const name = utf8(f.name), data = typeof f.data === 'string' ? utf8(f.data) : f.data, crc = crc32(data);
+    const h = new DataView(new ArrayBuffer(30));
+    h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true); h.setUint16(10, tm, true); h.setUint16(12, dt, true);
+    h.setUint32(14, crc, true); h.setUint32(18, data.length, true); h.setUint32(22, data.length, true); h.setUint16(26, name.length, true); h.setUint16(28, 0, true);
+    const c = new DataView(new ArrayBuffer(46));
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, 0, true); c.setUint16(12, tm, true); c.setUint16(14, dt, true);
+    c.setUint32(16, crc, true); c.setUint32(20, data.length, true); c.setUint32(24, data.length, true); c.setUint16(28, name.length, true); c.setUint32(42, off, true);
+    parts.push(new Uint8Array(h.buffer), name, data); central.push(new Uint8Array(c.buffer), name);
+    off += 30 + name.length + data.length;
+  }
+  const cdSize = central.reduce((n, p) => n + p.length, 0);
+  const e = new DataView(new ArrayBuffer(22));
+  e.setUint32(0, 0x06054b50, true); e.setUint16(8, files.length, true); e.setUint16(10, files.length, true); e.setUint32(12, cdSize, true); e.setUint32(16, off, true);
+  const all = [...parts, ...central, new Uint8Array(e.buffer)], out = new Uint8Array(off + cdSize + 22); let p = 0;
+  for (const a of all) { out.set(a, p); p += a.length; }
+  return out;
+}
+/** Minimal reader. inflate(u8)->u8 is needed only for deflated entries (zips made by an OS tool). Returns [{name, data}]. */
+function zipRead(u8, inflate) {
+  const v = new DataView(u8.buffer, u8.byteOffset, u8.byteLength);
+  let e = u8.length - 22; while (e >= 0 && v.getUint32(e, true) !== 0x06054b50) e--;
+  if (e < 0) throw new Error('not a zip file (no end-of-central-directory record)');
+  const n = v.getUint16(e + 10, true); let p = v.getUint32(e + 16, true); const out = [];
+  for (let i = 0; i < n; i++) {
+    if (v.getUint32(p, true) !== 0x02014b50) throw new Error('corrupt zip central directory');
+    const method = v.getUint16(p + 10, true), crc = v.getUint32(p + 16, true), csize = v.getUint32(p + 20, true), nl = v.getUint16(p + 28, true), xl = v.getUint16(p + 30, true), cl = v.getUint16(p + 32, true), lo = v.getUint32(p + 42, true);
+    const name = new TextDecoder().decode(u8.subarray(p + 46, p + 46 + nl));
+    const ln = v.getUint16(lo + 26, true), lx = v.getUint16(lo + 28, true), ds = lo + 30 + ln + lx;
+    let data = u8.subarray(ds, ds + csize);
+    if (method === 8) { if (!inflate) throw new Error('deflated entry needs an inflate function'); data = inflate(data); } else if (method !== 0) throw new Error(`unsupported zip method ${method}`);
+    if (crc32(data) !== crc) throw new Error(`CRC mismatch for ${name}`);
+    if (!name.endsWith('/')) out.push({ name, data: new Uint8Array(data) });
+    p += 46 + nl + xl + cl;
+  }
+  return out;
+}
+
+const slug = (s) => String(s || 'volunteer').toLowerCase().normalize('NFKD').replace(/\p{M}/gu, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'volunteer';
+const exportName = (name, date) => `alef-recordings-${slug(name)}-${String(date).slice(0, 10)}.zip`;
+
+</script>
+<script>
+const BUNDLE = null;
+const $ = (id) => document.getElementById(id);
+const show = (id, on) => $(id).classList.toggle('hidden', !on);
+const MAX_SECONDS = 60;
+// ---------- IndexedDB (key/value). Falls back to memory when blocked, with a visible notice. ----------
+const idb = (() => {
+  let db = null, mem = new Map(), ok = false;
+  const open = () => new Promise((res) => {
+    try { const r = indexedDB.open('alef-record-kit', 1); r.onupgradeneeded = () => r.result.createObjectStore('kv'); r.onsuccess = () => { db = r.result; ok = true; res(); }; r.onerror = () => res(); r.onblocked = () => res(); } catch (e) { res(); }
+  });
+  const tx = (mode, fn) => new Promise((res, rej) => { const t = db.transaction('kv', mode), s = t.objectStore('kv'); const q = fn(s); t.oncomplete = () => res(q && q.result); t.onerror = () => rej(t.error); });
+  return {
+    open, get ok() { return ok; },
+    get: (k) => ok ? tx('readonly', (s) => s.get(k)) : Promise.resolve(mem.get(k)),
+    set: (k, v) => ok ? tx('readwrite', (s) => s.put(v, k)) : (mem.set(k, v), Promise.resolve()),
+    del: (k) => ok ? tx('readwrite', (s) => s.delete(k)) : (mem.delete(k), Promise.resolve()),
+    keys: () => ok ? tx('readonly', (s) => s.getAllKeys()) : Promise.resolve([...mem.keys()]),
+  };
+})();
+
+let S = null;            // session
+let clips = new Map();   // path -> clip record (with wav bytes)
+let stream = null, actx = null, analyser = null, rec = null, chunks = [], recStart = 0, recTimer = null, meterRaf = 0, hotUntil = 0, seenPeak = 0;
+let playing = null, busy = false;
+
+const itemPath = (it) => clipPath(S.voice, it.tradition || S.tradition, it.kind, it.id, 'wav');
+const cur = () => S.items[S.index];
+const msg = (t, cls = '') => { const m = $('m-msg'); m.textContent = t; m.className = 'msg ' + cls; };
+
+function renderConsent() {
+  $('c-text').innerHTML = '';
+  for (const p of CONSENT_TEXT) { const e = document.createElement('p'); e.textContent = p; $('c-text').appendChild(e); }
+  const box = $('c-boxes'); box.innerHTML = '';
+  const mk = ([k, t], id) => { const l = document.createElement('label'); l.className = 'chk'; const i = document.createElement('input'); i.type = 'checkbox'; i.id = id; i.dataset.key = k; const s = document.createElement('span'); s.textContent = t; l.append(i, s); box.appendChild(l); i.addEventListener('change', checkConsent); };
+  CONSENT_REQUIRED.forEach((r) => mk(r, 'cb-' + r[0]));
+  mk(CONSENT_OPTIONAL_CLONE, 'cb-ai_clone');
+  $('f-name').addEventListener('input', checkConsent);
+}
+function consentState() {
+  const required = {}; for (const [k] of CONSENT_REQUIRED) required[k] = $('cb-' + k).checked;
+  return { required, aiClone: $('cb-ai_clone').checked, name: $('f-name').value.trim() };
+}
+function checkConsent() { const c = consentState(); const ok = CONSENT_REQUIRED.every(([k]) => c.required[k]) && c.name.length > 1; $('b-consent').disabled = !ok; }
+
+function uuid() { const a = new Uint8Array(8); (crypto.getRandomValues ? crypto.getRandomValues(a) : a.forEach((_, i) => a[i] = Math.random() * 256)); return [...a].map((x) => x.toString(16).padStart(2, '0')).join(''); }
+
+async function acceptConsent() {
+  const c = consentState();
+  const rec_ = consentRecord({ volunteerName: c.name, required: c.required, aiClone: c.aiClone, creditName: $('f-credit').value, acceptedAt: new Date().toISOString(), donorRef: uuid(), tradition: $('f-trad').value, voice: $('f-voice').value });
+  S = { version: 1, consent: rec_, tradition: rec_.tradition, voice: rec_.voice, volunteerName: rec_.volunteer_name, items: [], index: 0, scriptName: '', startedAt: rec_.accepted_at };
+  await idb.set('session', S);
+  show('s-consent', false); show('s-script', true);
+  if (BUNDLE) {
+    const list = BUNDLE.items.filter((x) => (!x.tradition || x.tradition === S.tradition) && (!x.voice || x.voice === S.voice));
+    $('sc-bundled').textContent = `A built-in list is included (${list.length} items for the ${S.tradition} tradition, ${S.voice === 'f' ? 'woman' : 'man'} voice).`; show('sc-bundled', true); show('b-bundle', true);
+    $('b-bundle').onclick = () => setItems(list, 'built-in list');
+  }
+}
+
+async function setItems(items, name) {
+  if (!items.length) { $('sc-msg').textContent = 'No usable rows found. The file needs an id column and a pointed_hebrew (or text_niqqud) column.'; $('sc-msg').className = 'msg bad'; return; }
+  S.items = items; S.scriptName = name; S.index = 0;
+  await idb.set('session', S);
+  await startRecorderUi(); show('s-script', false); show('s-rec', true);
+}
+
+$('f-file').addEventListener('change', async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const text = await f.text(); let items;
+    if (/\.json$/i.test(f.name)) { const r = itemsFromJson(text); items = r.items.filter((x) => !x.tradition || x.tradition === S.tradition); }
+    else { const named = traditionFromName(f.name); if (named && named !== S.tradition) throw new Error(`This list is for the ${named} tradition but you chose ${S.tradition}. Go back and pick the matching tradition, or choose another file.`); items = normalizeItems(parseCsv(text), { tradition: S.tradition, voice: S.voice, kind: 'word' }); }
+    items = items.map((x) => ({ ...x, tradition: x.tradition || S.tradition }));
+    await setItems(items, f.name);
+  } catch (err) { $('sc-msg').textContent = String(err.message || err); $('sc-msg').className = 'msg bad'; }
+});
+
+async function loadClips() {
+  clips = new Map();
+  for (const k of await idb.keys()) if (String(k).startsWith('clip:')) { const c = await idb.get(k); if (c) clips.set(c.path, c); }
+}
+async function startRecorderUi() {
+  await loadClips(); render();
+}
+
+function render() {
+  const it = cur(); if (!it) return;
+  $('i-he').textContent = it.he; $('i-tr').textContent = it.translit || ''; $('i-en').textContent = it.english || ''; $('i-note').textContent = it.note || '';
+  const done = S.items.filter((x) => clips.has(itemPath(x))).length;
+  $('p-bar').max = S.items.length; $('p-bar').value = done;
+  $('p-text').textContent = `Item ${S.index + 1} of ${S.items.length}. ${done} recorded.`;
+  const c = clips.get(itemPath(it));
+  $('b-play').disabled = !c;
+  $('b-rec').textContent = c ? 'Re-record' : 'Record';
+  if (!rec) { if (c) showClipMsg(c); else msg(''); }
+}
+function showClipMsg(c) {
+  if (c.warnings.length) msg(c.warnings.map((w) => WARNING_TEXT[w]).join(' '), c.warnings.includes('clipping') || c.warnings.includes('silent') ? 'bad' : 'warn');
+  else msg(`Saved. ${c.duration.toFixed(1)} s, peak ${c.peakDb.toFixed(1)} dBFS. Play it back, or press Next.`, 'ok');
+}
+
+async function ensureMic() {
+  if (stream && stream.active) return;
+  stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+  actx = new (window.AudioContext || window.webkitAudioContext)();
+  const src = actx.createMediaStreamSource(stream); analyser = actx.createAnalyser(); analyser.fftSize = 1024; src.connect(analyser);
+  $('m-state').textContent = 'Microphone on';
+  meterLoop();
+}
+function meterLoop() {
+  const buf = new Float32Array(analyser.fftSize);
+  const tick = () => {
+    analyser.getFloatTimeDomainData(buf); let p = 0; for (let i = 0; i < buf.length; i++) { const a = Math.abs(buf[i]); if (a > p) p = a; }
+    const now = performance.now(); if (rec) seenPeak = Math.max(seenPeak, p);
+    if (p >= THRESH.clipPeak) hotUntil = now + 1200;
+    const db = dbfs(p), w = Math.max(0, Math.min(1, (db + 60) / 60));
+    const bar = $('m-bar'); bar.style.width = (w * 100).toFixed(0) + '%'; bar.classList.toggle('hot', db > -6);
+    $('m-clip').textContent = now < hotUntil ? 'TOO LOUD' : ''; $('m-clip').style.color = 'var(--bad)';
+    if (rec && now - recStart > 2000 && dbfs(seenPeak) < -50) msg('We cannot hear you. Check the microphone is not muted.', 'bad');
+    meterRaf = requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+async function startRec() {
+  if (busy) return; stopPlay();
+  try { await ensureMic(); } catch (e) { msg('The microphone is not available: ' + (e.message || e.name) + '. Allow microphone access in the browser and try again.', 'bad'); return; }
+  if (actx.state === 'suspended') await actx.resume();
+  chunks = []; seenPeak = 0;
+  rec = new MediaRecorder(stream); rec.ondataavailable = (e) => { if (e.data && e.data.size) chunks.push(e.data); };
+  rec.onstop = onStopped; rec.start(); recStart = performance.now();
+  $('b-rec').textContent = 'Stop'; $('b-next').disabled = $('b-prev').disabled = $('b-skip').disabled = true; $('b-play').disabled = true; msg('Recording. Speak after a short pause.', '');
+  recTimer = setTimeout(() => { if (rec) stopRec(); }, MAX_SECONDS * 1000);
+}
+function stopRec() { if (rec && rec.state !== 'inactive') { clearTimeout(recTimer); setTimeout(() => rec && rec.state !== 'inactive' && rec.stop(), 250); } }
+async function onStopped() {
+  const it = cur(); const r = rec; rec = null; busy = true; msg('Processing...');
+  try {
+    const blob = new Blob(chunks, { type: r.mimeType || 'audio/webm' });
+    const ab = await blob.arrayBuffer();
+    const dec = await actx.decodeAudioData(ab.slice(0));
+    const n = dec.length, mono = new Float32Array(n);
+    for (let ch = 0; ch < dec.numberOfChannels; ch++) { const d = dec.getChannelData(ch); for (let i = 0; i < n; i++) mono[i] += d[i] / dec.numberOfChannels; }
+    for (let i = 0; i < n; i++) mono[i] = Math.max(-1, Math.min(1, mono[i]));
+    const a = analyze(mono, dec.sampleRate), warnings = warningsFor(a);
+    const path = itemPath(it);
+    const c = { path, id: it.id, kind: it.kind, tradition: it.tradition || S.tradition, duration: a.duration, peak: a.peak, peakDb: a.peakDb, rmsDb: a.rmsDb, sampleRate: a.sampleRate, warnings, recordedAt: new Date().toISOString(), wav: encodeWav(mono, dec.sampleRate) };
+    clips.set(path, c); await idb.set('clip:' + path, c); await idb.set('session', S);
+  } catch (e) { msg('Could not process that take: ' + (e.message || e) + '. Please record it again.', 'bad'); }
+  busy = false; $('b-next').disabled = $('b-prev').disabled = $('b-skip').disabled = false; render();
+}
+function stopPlay() { if (playing) { playing.pause(); URL.revokeObjectURL(playing.src); playing = null; } }
+function play() {
+  const c = clips.get(itemPath(cur())); if (!c) return; stopPlay();
+  playing = new Audio(URL.createObjectURL(new Blob([c.wav], { type: 'audio/wav' }))); playing.onended = stopPlay; playing.play().catch((e) => msg('Playback failed: ' + e.message, 'bad'));
+}
+async function go(i) { if (rec || busy) return; stopPlay(); S.index = Math.max(0, Math.min(S.items.length - 1, i)); await idb.set('session', S); render(); }
+async function nextUnrecorded() { const n = S.items.length; for (let k = 1; k <= n; k++) { const j = (S.index + k) % n; if (!clips.has(itemPath(S.items[j]))) return go(j); } msg('Every item has a recording. Press Export a zip.', 'ok'); }
+
+async function doExport() {
+  if (rec || busy) return;
+  const date = new Date().toISOString(), files = [], rows = [];
+  const ctx = { voice: S.voice, tradition: S.tradition, volunteerName: S.volunteerName, donorRef: S.consent.donor_ref, aiClone: S.consent.ai_clone_consent };
+  for (const it of S.items) { const c = clips.get(itemPath(it)); if (!c) continue; files.push({ name: c.path, data: c.wav }); rows.push(manifestRow(c, ctx)); }
+  if (!files.length) { msg('Nothing recorded yet.', 'warn'); return; }
+  files.push({ name: 'manifest.csv', data: toCsv(MANIFEST_COLS, rows) });
+  files.push({ name: 'consent.json', data: JSON.stringify(S.consent, null, 2) });
+  files.push({ name: 'consent.txt', data: [`ALEF voice recording consent (${S.consent.version})`, '', ...CONSENT_TEXT, '', ...Object.entries(S.consent.required_boxes).map(([k, t]) => `[${S.consent.required[k] ? 'x' : ' '}] ${t}`), `[${S.consent.ai_clone_consent ? 'x' : ' '}] ${S.consent.optional_box}`, '', `Name: ${S.consent.volunteer_name}`, `Credit: ${S.consent.credit_name || '(anonymous)'}`, `Accepted at: ${S.consent.accepted_at}`, `Donor ref: ${S.consent.donor_ref}`].join('\r\n') });
+  const zip = zipStore(files, new Date());
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([zip], { type: 'application/zip' })); a.download = exportName(S.volunteerName, date); document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+  msg(`Exported ${rows.length} recordings as ${a.download}. Send that one file back to the person who sent you this page. Your progress stays saved here.`, 'ok');
+}
+
+async function wipe() { for (const k of await idb.keys()) await idb.del(k); location.reload(); }
+
+$('b-consent').onclick = acceptConsent;
+$('b-rec').onclick = () => (rec ? stopRec() : startRec());
+$('b-play').onclick = play;
+$('b-next').onclick = () => go(S.index + 1);
+$('b-prev').onclick = () => go(S.index - 1);
+$('b-skip').onclick = nextUnrecorded;
+$('b-export').onclick = doExport;
+$('b-wipe').onclick = () => { if (confirm('Delete the saved session and all recordings on this device?')) wipe(); };
+$('b-resume').onclick = async () => { await startRecorderUi(); show('s-resume', false); show('s-rec', true); };
+document.addEventListener('keydown', (e) => {
+  if (!S || $('s-rec').classList.contains('hidden') || /INPUT|SELECT|TEXTAREA/.test((e.target.tagName || ''))) return;
+  if (e.code === 'Space') { e.preventDefault(); $('b-rec').click(); } else if (e.key === 'p' || e.key === 'P') play(); else if (e.key === 'ArrowRight') go(S.index + 1); else if (e.key === 'ArrowLeft') go(S.index - 1);
+});
+window.addEventListener('pagehide', () => { if (S) idb.set('session', S); });
+
+// ?tradition=sephardi&voice=m preselects (and locks) the two choices, so a page opened from the first-100 list matches that list.
+function applyUrlChoices() {
+  const q = new URLSearchParams(location.search); const notes = [];
+  for (const [param, id, label] of [['tradition', 'f-trad', 'reading tradition'], ['voice', 'f-voice', 'voice']]) {
+    const want = (q.get(param) || '').toLowerCase(); if (!want) continue;
+    const sel = $(id);
+    if (![...sel.options].some((o) => o.value === want)) { notes.push(`The link asks for ${label} "${want}", which this page does not offer. Pick one yourself.`); continue; }
+    sel.value = want; sel.disabled = true; notes.push(`${label}: ${sel.selectedOptions[0].textContent} (set by the link)`);
+  }
+  if (notes.length) { const h = $('c-hint'); const p = document.createElement('p'); p.className = 'small'; p.id = 'c-url'; p.textContent = notes.join('. ') + '.'; h.after(p); }
+}
+(async () => {
+  renderConsent(); applyUrlChoices(); await idb.open();
+  if (!idb.ok) { const n = document.createElement('p'); n.className = 'msg warn'; n.textContent = 'This browser is blocking local storage (private mode?). Recordings will be lost if you close this tab: export often.'; document.querySelector('main').prepend(n); }
+  const saved = await idb.get('session');
+  if (saved && saved.items && saved.items.length) {
+    S = saved; await loadClips();
+    $('r-name').textContent = S.volunteerName; $('r-count').textContent = `${S.items.filter((x) => clips.has(itemPath(x))).length} of ${S.items.length} recorded`; show('s-resume', true);
+  } else show('s-consent', true);
+})();
+</script>
+</body>
+</html>

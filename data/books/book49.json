@@ -1,0 +1,177 @@
+{
+ "id": "book49",
+ "titleHe": "הַמִּדְבָּר בַּלַּיְלָה",
+ "titleTranslit": "Ha-Midbar Ba-Lailah",
+ "titleEn": "The Desert at Night",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הַנֶּגֶב. הַמִּדְבָּר.",
+   "translit": "Ha-Negev. Ha-midbar.",
+   "en": "The Negev. The desert.",
+   "img": "assets/books/book49/BOOK49_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p01.mp3",
+    "m": "audio/m/israeli/book/book49-p01.mp3"
+   },
+   "illustration": "an endless rocky plain, a jeep track",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "דָּנָה וְרוֹנִי נוֹסְעִים דָּרוֹמָה.",
+   "translit": "Dana ve-Roni nos'im daromah.",
+   "en": "Dana and Roni drive south.",
+   "img": "assets/books/book49/BOOK49_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p02.mp3",
+    "m": "audio/m/israeli/book/book49-p02.mp3"
+   },
+   "illustration": "a dusty car, windows down",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "אֵין קְלִיטָה.",
+   "translit": "Ein klitah.",
+   "en": "No signal.",
+   "img": "assets/books/book49/BOOK49_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p03.mp3",
+    "m": "audio/m/israeli/book/book49-p03.mp3"
+   },
+   "illustration": "a phone with no bars, held up to the sky",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "\"טוֹב,\" אוֹמֶרֶת דָּנָה.",
+   "translit": "\"Tov,\" omeret Dana.",
+   "en": "\"Good,\" says Dana.",
+   "img": "assets/books/book49/BOOK49_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p04.mp3",
+    "m": "audio/m/israeli/book/book49-p04.mp3"
+   },
+   "illustration": "the woman tossing the phone in the back seat",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הֵם מְקִימִים אֹהֶל.",
+   "translit": "Hem mekimim ohel.",
+   "en": "They put up a tent.",
+   "img": "assets/books/book49/BOOK49_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p05.mp3",
+    "m": "audio/m/israeli/book/book49-p05.mp3"
+   },
+   "illustration": "a small tent against a huge red cliff",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַשֶּׁמֶשׁ יוֹרֶדֶת. הַכֹּל אָדֹם.",
+   "translit": "Ha-shemesh yoredet. Ha-kol adom.",
+   "en": "The sun sets. Everything is red.",
+   "img": "assets/books/book49/BOOK49_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p06.mp3",
+    "m": "audio/m/israeli/book/book49-p06.mp3"
+   },
+   "illustration": "the cliffs glowing crimson",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "וְאָז קַר. קַר מְאוֹד.",
+   "translit": "Ve-az kar. Kar me'od.",
+   "en": "And then cold. Very cold.",
+   "img": "assets/books/book49/BOOK49_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p07.mp3",
+    "m": "audio/m/israeli/book/book49-p07.mp3"
+   },
+   "illustration": "the two wrapped in blankets, breath visible",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "אֵשׁ קְטַנָּה. תֵּה.",
+   "translit": "Esh ktanah. Teh.",
+   "en": "A small fire. Tea.",
+   "img": "assets/books/book49/BOOK49_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p08.mp3",
+    "m": "audio/m/israeli/book/book49-p08.mp3"
+   },
+   "illustration": "a campfire, a blackened kettle",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הֵם מִסְתַּכְּלִים לְמַעְלָה.",
+   "translit": "Hem mistaklim lemalah.",
+   "en": "They look up.",
+   "img": "assets/books/book49/BOOK49_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p09.mp3",
+    "m": "audio/m/israeli/book/book49-p09.mp3"
+   },
+   "illustration": "two faces lit by firelight, tilted to the sky",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "כּוֹכָבִים. מִילְיוֹנִים.",
+   "translit": "Kochavim. Milyonim.",
+   "en": "Stars. Millions.",
+   "img": "assets/books/book49/BOOK49_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p10.mp3",
+    "m": "audio/m/israeli/book/book49-p10.mp3"
+   },
+   "illustration": "the Milky Way across the whole sky",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "אַף אֶחָד לֹא מְדַבֵּר.",
+   "translit": "Af echad lo medaber.",
+   "en": "Nobody speaks.",
+   "img": "assets/books/book49/BOOK49_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p11.mp3",
+    "m": "audio/m/israeli/book/book49-p11.mp3"
+   },
+   "illustration": "the silhouettes, the fire, the stars",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַמִּדְבָּר מְדַבֵּר.",
+   "translit": "Ha-midbar medaber.",
+   "en": "The desert speaks.",
+   "img": "assets/books/book49/BOOK49_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book49-p12.mp3",
+    "m": "audio/m/israeli/book/book49-p12.mp3"
+   },
+   "illustration": "the tent tiny under the sky, a shooting star",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

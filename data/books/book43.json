@@ -1,0 +1,177 @@
+{
+ "id": "book43",
+ "titleHe": "לוֹמֵד עִבְרִית",
+ "titleTranslit": "Lomed Ivrit",
+ "titleEn": "Learning Hebrew",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "מַארְק לוֹמֵד עִבְרִית.",
+   "translit": "Mark lomed ivrit.",
+   "en": "Mark is learning Hebrew.",
+   "img": "assets/books/book43/BOOK43_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p01.mp3",
+    "m": "audio/m/israeli/book/book43-p01.mp3"
+   },
+   "illustration": "a man at a kitchen table with flashcards",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הוּא בֶּן חֲמִשִּׁים.",
+   "translit": "Hu ben chamishim.",
+   "en": "He is fifty.",
+   "img": "assets/books/book43/BOOK43_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p02.mp3",
+    "m": "audio/m/israeli/book/book43-p02.mp3"
+   },
+   "illustration": "reading glasses, a determined face",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הָאוֹתִיּוֹת קָשׁוֹת.",
+   "translit": "Ha-otiyot kashot.",
+   "en": "The letters are hard.",
+   "img": "assets/books/book43/BOOK43_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p03.mp3",
+    "m": "audio/m/israeli/book/book43-p03.mp3"
+   },
+   "illustration": "a worksheet page of blank letter tiles, some circled, some crossed out in pencil",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "מִיָּמִין לִשְׂמֹאל.",
+   "translit": "Mi-yamin li-smol.",
+   "en": "From right to left.",
+   "img": "assets/books/book43/BOOK43_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p04.mp3",
+    "m": "audio/m/israeli/book/book43-p04.mp3"
+   },
+   "illustration": "his finger moving across a line, an arrow drawn above",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "\"בֵּית אוֹ וֵית?\"",
+   "translit": "\"Bet o vet?\"",
+   "en": "\"Bet or vet?\"",
+   "img": "assets/books/book43/BOOK43_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p05.mp3",
+    "m": "audio/m/israeli/book/book43-p05.mp3"
+   },
+   "illustration": "two matching blank tiles side by side on the table, one with a single dot in its centre",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הוּא לֹא מֵבִין.",
+   "translit": "Hu lo mevin.",
+   "en": "He doesn't understand.",
+   "img": "assets/books/book43/BOOK43_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p06.mp3",
+    "m": "audio/m/israeli/book/book43-p06.mp3"
+   },
+   "illustration": "the man rubbing his eyes",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הוּא רוֹצֶה לְהַפְסִיק.",
+   "translit": "Hu rotzeh lehafsik.",
+   "en": "He wants to quit.",
+   "img": "assets/books/book43/BOOK43_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p07.mp3",
+    "m": "audio/m/israeli/book/book43-p07.mp3"
+   },
+   "illustration": "the book closed, pushed away",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הוּא שׁוֹמֵעַ שִׁיר בָּרַדְיוֹ.",
+   "translit": "Hu shome'a shir ba-radyo.",
+   "en": "He hears a song on the radio.",
+   "img": "assets/books/book43/BOOK43_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p08.mp3",
+    "m": "audio/m/israeli/book/book43-p08.mp3"
+   },
+   "illustration": "a radio on the counter",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הוּא מֵבִין מִלָּה אַחַת.",
+   "translit": "Hu mevin milah achat.",
+   "en": "He understands one word.",
+   "img": "assets/books/book43/BOOK43_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p09.mp3",
+    "m": "audio/m/israeli/book/book43-p09.mp3"
+   },
+   "illustration": "his head lifting, eyes wide",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"אַהֲבָה.\"",
+   "translit": "\"Ahavah.\"",
+   "en": "\"Love.\"",
+   "img": "assets/books/book43/BOOK43_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p10.mp3",
+    "m": "audio/m/israeli/book/book43-p10.mp3"
+   },
+   "illustration": "a flashcard held up in his hand, its face blank, his eyes on it",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הוּא פּוֹתֵחַ אֶת הַסֵּפֶר.",
+   "translit": "Hu pote'ach et ha-sefer.",
+   "en": "He opens the book.",
+   "img": "assets/books/book43/BOOK43_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p11.mp3",
+    "m": "audio/m/israeli/book/book43-p11.mp3"
+   },
+   "illustration": "the book open again, pencil in hand",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "עוֹד מִלָּה. וְעוֹד אַחַת.",
+   "translit": "Od milah. Ve-od achat.",
+   "en": "Another word. And another.",
+   "img": "assets/books/book43/BOOK43_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book43-p12.mp3",
+    "m": "audio/m/israeli/book/book43-p12.mp3"
+   },
+   "illustration": "the table covered with cards, the man smiling",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

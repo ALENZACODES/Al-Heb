@@ -5,38 +5,42 @@ import { RIMON_STILLS_AVAILABLE, RIMON_STILLS_V2 } from './rimon-stills-index.js
 import { FLIPS, SITUATION_FLIP, flipUrl, flipForSituation } from './rimon-flips.js';
 export { FLIPS, SITUATION_FLIP, flipUrl, flipForSituation };
 
-// Preferred stills per situation (see docs/images/rimon-placements.md). A `b` id is a
-// bolder reroll of the same pose and is tried first; ids that are not in the
-// available list are skipped.
+// Preferred stills per situation (see docs/images/rimon-placements.md).
+// Plain ids (023, 025b) are the original drawn set (data/images/rimon/rimon-###.webp).
+// Catalogue stills are asked for by name as v2:NNN (data/images/rimon/v2/rimon-NNN-<slug>.webp).
+// The two catalogues share numbers but not poses, so a v2 file is never treated as a
+// replacement for the same-numbered drawn still. Drawn ids are tried first, then v2.
+// Ids that are not in the available list are skipped. A `b` id is a bolder reroll
+// of a drawn pose and is tried first among that pair.
 export const SITUATIONS = Object.freeze({
-  home: ['057', '056', '002', '006'],
-  onboarding: ['003b', '002', '001', '006', '004'],
-  welcomeBack: ['020', '001'],
-  lessonStart: ['017', '018', '046', '055'],
-  correct: ['023', '024', '026', '027', '030', '031', '035', '039', '022', '013'],
-  bigCorrect: ['025b', '025', '027', '030', '040'],
-  wrong: ['041', '042', '043', '048', '044', '045'],
-  hint: ['047', '052', '053', '046'],
-  streak: ['058', '057', '059', '061', '069', '056'],
-  streakRisk: ['062', '063', '195', '043', '041'],
-  rest: ['064', '196', '116', '050', '015'],
-  lessonComplete: ['071', '073', '074', '075', '083', '084', '027', '026', '030', '035'],
-  unitComplete: ['081', '082', '180', '027', '058'],
-  idle: ['086', '089', '100', '098', '015', '050', '001'],
-  loading: ['043', '148', '018'],
-  empty: ['114', '103', '049'],
-  error: ['101', '108', '047'],
-  recovered: ['112', '027'],
-  offline: ['105', '106', '107', '049', '043', '033'],
-  shabbat: ['116', '117', '064', '050', '015', '037'],
-  holiday: ['144', '145', '050', '037'],
-  brainLab: ['146', '147', '160', '017', '018', '027'],
-  brainLabWin: ['151', '158', '149', '027'],
-  brainLabMiss: ['152', '159', '049'],
-  storybooks: ['161', '170', '173', '033', '011'],
-  storyReader: ['162', '163', '164', '169', '015', '033'],
-  award: ['176', '178', '180', '184', '187', '029'],
-  reminder: ['191', '192', '194', '197', '199', '033', '020', '011'],
+  home: ['002', '001', 'v2:001', 'v2:082', '100', 'v2:080', 'v2:081', '020', 'v2:083', '018', 'v2:087', '038', 'v2:086'],
+  onboarding: ['005', 'v2:003', '010', '015', 'v2:004', '008', 'v2:005', '019', 'v2:006'],
+  welcomeBack: ['020', 'v2:002', '038', 'v2:086'],
+  lessonStart: ['017', 'v2:007', '018', 'v2:008', '008', 'v2:010', '011', 'v2:009', '078', '004', 'v2:040', 'v2:041', '019', 'v2:042', 'v2:043', '062', 'v2:044'],
+  correct: ['012', 'v2:012', '021', '023', '024', '026', '027', '028', '030', '031', '033', '034', '035', '036', '037', '039', '040', 'v2:018', 'v2:019', 'v2:020', 'v2:021', 'v2:022', 'v2:023', 'v2:024', 'v2:025', '022', 'v2:026'],
+  bigCorrect: ['025b', '025', 'v2:027', '083', 'v2:028', '026', 'v2:039', '076', 'v2:015', '068', 'v2:029'],
+  wrong: ['014', 'v2:013', '041', '042', '044', '045', '048', '049', '054', '055', 'v2:030', 'v2:031', 'v2:032', 'v2:033', 'v2:034', 'v2:035', '050', 'v2:037'],
+  hint: ['047', '051', '052', 'v2:036'],
+  streak: ['056', 'v2:054', '057', 'v2:055', '058', 'v2:056', '059', 'v2:057', '060', 'v2:058', '066', 'v2:059', '067', 'v2:060', '069', 'v2:061', '061', 'v2:067'],
+  streakRisk: ['062', 'v2:062', '063', 'v2:063', '055', 'v2:064', '068', 'v2:065', '065', 'v2:175', 'v2:176'],
+  rest: ['064', 'v2:066', '100', 'v2:078', 'v2:077', 'v2:079'],
+  lessonComplete: ['071', 'v2:014', '073', '074', '083', '084', 'v2:046', 'v2:047', '077', '075', 'v2:048', 'v2:049', '085', '079', '080', 'v2:050', 'v2:051'],
+  unitComplete: ['082', '081', 'v2:045', 'v2:171', 'v2:172', '066', 'v2:173', 'v2:174'],
+  idle: ['089', '090', '091', '092', '093', '094', '095', '096', '097', 'v2:068', 'v2:069', 'v2:070', 'v2:071', 'v2:072', 'v2:073', 'v2:074', 'v2:075', '087', '099', 'v2:076', '098', 'v2:011'],
+  loading: ['110', 'v2:186', '043', 'v2:038', 'v2:052', '080', 'v2:053'],
+  empty: ['114', 'v2:164', 'v2:190'],
+  error: ['104', '102', 'v2:180', 'v2:181', '101', '108', '109', 'v2:182'],
+  recovered: ['112', '107', 'v2:184'],
+  offline: ['106', '105', 'v2:183', '107', 'v2:185'],
+  shabbat: ['118', 'v2:088', 'v2:089', '117', 'v2:090', 'v2:091', '116', '119', 'v2:092', 'v2:093', 'v2:094', '120', 'v2:095', '070', 'v2:097', 'v2:096'],
+  holiday: ['121', '122', 'v2:098', 'v2:099', 'v2:100', 'v2:101', '123', 'v2:102', 'v2:103', '125', '124', 'v2:104', 'v2:105', 'v2:106', 'v2:107', 'v2:108', 'v2:109', 'v2:110', 'v2:111', 'v2:112', 'v2:113', 'v2:114', 'v2:115', 'v2:116', 'v2:117', 'v2:118', 'v2:119', 'v2:120', 'v2:121', 'v2:122', 'v2:123', 'v2:124', 'v2:125', 'v2:126', 'v2:127', 'v2:128', 'v2:129', 'v2:130', 'v2:131', 'v2:132', 'v2:133', 'v2:134'],
+  brainLab: ['v2:017', 'v2:135', 'v2:136', 'v2:137', 'v2:138', 'v2:139', 'v2:140', 'v2:141', 'v2:142', 'v2:143', 'v2:144', 'v2:145', 'v2:146'],
+  brainLabWin: ['v2:147', 'v2:148', 'v2:149', 'v2:150', 'v2:151'],
+  brainLabMiss: ['049', '054', 'v2:030', 'v2:031', 'v2:034'],
+  storybooks: ['v2:016', 'v2:152', 'v2:153', 'v2:156', 'v2:157'],
+  storyReader: ['v2:154', 'v2:155'],
+  award: ['075', 'v2:163', '076', '077', 'v2:165', 'v2:166', '065', '066', 'v2:167', 'v2:168', '067', 'v2:169', 'v2:170'],
+  reminder: ['110', 'v2:177', '062', '065', 'v2:175', 'v2:176', '099', 'v2:084', 'v2:085', 'v2:178', 'v2:179'],
 });
 
 // Quiet situations never animate in and never show a "burst".
@@ -75,11 +79,12 @@ export function isShabbatQuiet(date = new Date()) {
   return (d === 5 && hr >= 18) || (d === 6 && hr < 21);
 }
 
-// Prefer the Claude-order v2 file when it exists; otherwise the original numbered still.
+// The numbered still for an id. The v2 folder is a different catalogue (docs/images/RIMON-STILLS.md): its 018 is not this
+// set's 018, so a v2 picture is used only when asked for by name, as 'v2:018'.
 export function stillUrl(id, base = 'data/images/rimon/', v2 = RIMON_STILLS_V2) {
-  const slug = v2 && v2[id];
-  if (slug) return `${base}v2/rimon-${id}-${slug}.webp`;
-  return `${base}rimon-${id}.webp`;
+  const m = /^v2:(\d{3})$/.exec(String(id));
+  if (m && v2 && v2[m[1]]) return `${base}v2/rimon-${m[1]}-${v2[m[1]]}.webp`;
+  return `${base}rimon-${String(id).replace(/^v2:/, '')}.webp`;
 }
 
 // Pick one still for a situation. Pure: random and the available set are injectable.

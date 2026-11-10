@@ -275,7 +275,7 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append(f"**Sample:** {n} items with on-disk clips in all three traditions (male voice).  ")
     lines.append("**Spend cap:** US$5  ")
     lines.append(f"**Spend so far:** ${spend:.4f}  ")
-    lines.append("**Claude plan:** `claude-lanes/replies/STYLES-G-r1.md` had not landed when this was started.")
+    lines.append("**Claude plan:** `claude-lanes/replies/STYLES-G-r1.md` landed overnight; the playback and spelling-flag fixes from that verdict are in `eefe184b7`.")
     lines.append("")
     lines.append("Nothing here was merged to `main` or deployed. The divine Name was not sent to TTS or STT. The full audio tree was not checked out; clips were read in place from `/workspace/Al-Heb-overnight/audio`.")
     lines.append("")
@@ -283,7 +283,7 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append("")
     lines.append("John asked whether the three tradition styles are actually different and accurate. Claude is being asked the same question separately. This file is the Google Cloud / rule-check pass, not a rabbi review.")
     lines.append("")
-    lines.append("Israeli and Sephardi Latin letters are identical in the current engine (`src/pronunciation/transliterate.js`); their differences are meant to show up in IPA, vowel wording, and in the audio files. Ashkenazi Latin should use **s** for a tav without dagesh and **o** for kamatz gadol, where Israeli and Sephardi use **t** and **a** (for example Shabbat vs Shabbos).")
+    lines.append("Israeli and Sephardi Latin letters stay identical in the current engine (`src/pronunciation/transliterate.js`) unless John turns on the held flags. Their differences are meant to show up in IPA, vowel wording, and in the audio files. Ashkenazi Latin uses **s** for a tav without dagesh and **o** for kamatz gadol, where Israeli and Sephardi use **t** and **a** (for example Shabbat vs Shabbos). Sephardi ḥ/ʿ for ח and ע, and doubled letters such as Shabbos, are built behind `STYLE_FLAGS.sephardiPharyngeals` and `STYLE_FLAGS.geminateDisplay`, default off; this lane did not turn them on.")
     lines.append("")
     lines.append("## File identity (the clips themselves)")
     lines.append("")
@@ -296,7 +296,7 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append(f"- Israeli file equals Ashkenazi file: {same_is_as}/{n}")
     lines.append(f"- Sephardi file equals Ashkenazi file: {same_se_as}/{n}")
     lines.append("")
-    lines.append("These files exist in the manifests, but see the settings-switch result below: the player does not currently play the Sephardi or Ashkenazi files unless a clip carries an admitted accent provenance, and no such rows exist yet (owner decision 7 November 2026, `PLAYBACK_TRADITION` maps both settings to the Israeli file).")
+    lines.append("These files exist in the manifests and on disk. After `eefe184b7`, each congregation setting prefers its own bank file. The Israeli file is only used when the own-tradition row is missing or unplayable (for example a `:mock` source). Device TTS is still refused as an Ashkenazi stand-in.")
     lines.append("")
     lines.append("## Transliteration rule check")
     lines.append("")
@@ -326,9 +326,12 @@ def write_partial_md(sample, files, node, stt=None, spend=0.0, note=""):
     lines.append(f"- All three settings resolve to an `/israeli/` path: {israeli_paths}/{len(switch)}.")
     lines.append("")
     pt = (node or {}).get("audio") or {}
-    lines.append(f"`PLAYBACK_TRADITION` is `{pt.get('PLAYBACK_TRADITION')}`. Admitted accent clips in the live manifests: {len(pt.get('admittedAccentClips') or [])}.")
+    lines.append(f"`PLAYBACK_TRADITION` is `{pt.get('PLAYBACK_TRADITION')}` (identity map: each setting prefers its own bank). Admitted accent provenance labels in the live manifests: {len(pt.get('admittedAccentClips') or [])} — labels are separate from whether a present bank file is played.")
     lines.append("")
-    lines.append("This is honest, not a silent bug in the switch widget: Settings already says the Israeli voice is used and the chosen tradition is shown in English letters. The retired Sephardi and Ashkenazi mp3s stay in the manifest and on disk. **Playback audio does not change with the style setting today.** That is a product fact to confirm with Claude and John, not something this lane will flip overnight.")
+    if switch and audio_changes == len(switch) and israeli_paths == 0:
+        lines.append("**Playback audio now changes with the style setting** when that tradition has a present bank file. Sephardi and Ashkenazi routes use their own recorded or paid-cloud mp3s from the shared audio bank. Letters, vowels, and some prayer rows that are still missing in those banks fall back to the Israeli file. Held for John: Sephardi ḥ/ʿ spelling and doubled-letter display; both flags stay off.")
+    else:
+        lines.append("The settings switch did not fully resolve to own-tradition paths in this sample. See the counts above. Held for John: Sephardi ḥ/ʿ spelling and doubled-letter display; both flags stay off.")
     lines.append("")
     lines.append("## Speech-to-text of the on-disk tradition clips")
     lines.append("")
@@ -416,11 +419,12 @@ def main():
 
     # Claude packet for systemic issues (not item STT yet)
     claude = []
-    if not (node.get("switchResults") and any(s.get("audioChangesWithSetting") for s in node["switchResults"])):
+    switch_ok = node.get("switchResults") and any(s.get("audioChangesWithSetting") for s in node["switchResults"])
+    if not switch_ok:
         claude.append({
             "id": "settings-switch",
             "kind": "product",
-            "reason": "The congregation setting changes on-screen Latin (Ashkenazi vs Israeli/Sephardi) but PLAYBACK_TRADITION maps sephardi and ashkenazi to the Israeli mp3. Distinct tradition files exist on disk for the sample (see file identity) and are retired unless an admitted accent provenance is set. No admitted rows exist. Should those files be admitted, remade, or should the UI stay as 'Israeli voice, tradition shown in English letters'?",
+            "reason": "The congregation setting did not change the resolved audio path in this sample. Distinct tradition files exist on disk (see file identity). Check src/audio/player.js own-bank playback.",
         })
     for t in node.get("translit") or []:
         if t.get("itemFails"):
@@ -506,7 +510,7 @@ def main():
         if r.get("done") and not r.get("stt_ok"):
             claude.append({"id": r["id"], "kind": r["kind"], "tradition": r["tradition"], "he": r["he"],
                            "stt_text": r.get("stt_text"), "reason": f"STT fail wer={r.get('wer')} letter_wer={r.get('letter_wer')} unintelligible={r.get('unintelligible')}"})
-    write_claude_fails(claude, "Include STT mismatches. Distinct retired clips that transcribe well are evidence they could be admitted; unintelligible ones should stay retired or be remade.")
+    write_claude_fails(claude, "Include STT mismatches on the clips the app now actually plays. High-WER Ashkenazi or Sephardi rows may need a remake or a closer listen; do not invent Hebrew or voice the divine Name.")
     OUT_JSON.write_text(json.dumps({
         "audio_root": str(aroot), "stats": stats, "sample": sample, "files": files,
         "node": node, "stt": stt_rows, "spend_usd": checkpoint["spent_usd"],

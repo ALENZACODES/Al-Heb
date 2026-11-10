@@ -263,3 +263,8 @@ Vertex STT of the 50×3 existing clips is running (`--stt`, cap US$5). The repor
 - r34 now points at the sourced calendar date ט״וּ בִּשְׁבָט as a gershayim example (no new invented abbreviation).
 - Lesson-integrity score note updated to **81 / 100** (estimate) in `docs/review/LESSON-INTEGRITY-2026-11-10.md`.
 - Local unpushed work is ahead of origin; next push should include the map rebuild, precache for the new Practical pages, style playback change, r34 note, and tests. `gcloud-results.json` must stay out of the commit.
+
+
+## Overnight hand-off — about 3:14 AM ET
+
+Pushed `eefe184b7` (non-force) on `feature/lesson-integrity-2026-11-10`. Sephardi and Ashkenazi settings now play their own bank clips first, Israeli only when the own row is missing or a `:mock`. Ashkenazi tav-without-dagesh stays `s`. Sephardi ḥ/ʿ and geminate display are behind flags, default off; not decided. Kamatz-katan covers a kamatz immediately before a chataf-kamatz, plus `אָזְנַיִם`. Rebuilt the stale I-28 word-vocab map. Standin tests skip unrecorded liturgy word rows (`hallel`/`kiddush`/`leshev`) and do not require the audio tree on disk. Practical Cloud report is in `docs/review/PRACTICAL-GCLOUD-TEST-2026-11-10.md` (645/105, US$0.45). `gcloud-results.json` stays untracked. Tradition Vertex STT still running (PID 2655907, `/tmp/tradition-styles-stt.log`); report will be finalized when it finishes. Disk still above 2.5 GB.

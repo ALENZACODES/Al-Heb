@@ -1,0 +1,154 @@
+// @ts-check
+// Retention UI pieces that live inside other screens: the top-bar chips (streak flame, gems, hearts), the daily-goal
+// ring on Home, the end-of-lesson reward panel, and the out-of-hearts gate. Text always sits beside every drawing.
+import { h, countUp, confetti, reducedMotion } from './dom.js';
+import { goalProgress, GOALS, setGoal } from './xp.js';
+import { CURRENCY, gemsText, PRICES } from './gems.js';
+import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems, heartCount } from './hearts.js';
+import { streakLine, repairOffer } from './streak.js';
+import { shouldAsk, answerAsk } from './notify.js';
+import { showRimon } from './rimon.js';
+
+const RING_R = 26, RING_C = 2 * Math.PI * RING_R;
+const svg = (tag, attrs) => { const n = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v)); return n; };
+
+// ---------- top bar ----------
+export function mountTopBar(R, g = globalThis) {
+  const doc = g.document, header = doc.querySelector('.site-header');
+  if (!header || header.querySelector('.ret-bar')) return;
+  const live = h('p', { class: 'visually-hidden ret-live', role: 'status', 'aria-live': 'polite' });
+  const bar = h('div', { class: 'ret-bar alef-retention', role: 'group', 'aria-label': 'Your streak, gems and hearts' });
+  header.append(bar, live);
+  const draw = () => {
+    try {
+      if (R.calm()) { bar.hidden = true; return; }
+      bar.hidden = false;
+      const rec = R.get(), st = R.status(), kids = [];
+      if (R.streakShown()) kids.push(h('a', { class: `ret-chip ret-flame${st.activeToday ? ' is-lit' : ''}`, href: '#/shop', 'aria-label': `${st.count}-day streak${st.activeToday ? ', done today' : ''}. Open the shop.` },
+        h('span', { class: 'ret-ico ret-ico-flame', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(st.count))));
+      kids.push(h('a', { class: 'ret-chip ret-gems', href: '#/shop', 'aria-label': `${gemsText(rec.gems.balance)}. Open the shop.` },
+        h('span', { class: 'ret-ico ret-ico-gem', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(rec.gems.balance))));
+      if (R.heartsShown()) kids.push(h('a', { class: 'ret-chip ret-hearts', href: '#/shop', 'aria-label': `${rec.hearts.n} of ${HEARTS.max} hearts. Open the shop.` },
+        h('span', { class: 'ret-ico ret-ico-heart', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(rec.hearts.n))));
+      if (R.leagueShown()) kids.push(h('a', { class: 'ret-chip ret-league', href: '#/league', 'aria-label': 'Practice league' }, h('span', { class: 'ret-ico ret-ico-cup', 'aria-hidden': 'true' })));
+      bar.replaceChildren(...kids);
+    } catch { /* the bar is optional */ }
+  };
+  doc.addEventListener('alef:retention', draw);
+  doc.addEventListener('alef:retention-say', (e) => { live.textContent = ''; g.setTimeout(() => { live.textContent = e.detail?.text || ''; }, 50); });
+  draw();
+}
+
+// ---------- daily-goal ring (Home) ----------
+export function goalRingNode(R) {
+  const wrap = h('section', { class: 'card ret-goal alef-retention', 'aria-labelledby': 'ret-goal-h' });
+  const draw = () => {
+    const rec = R.get(), p = goalProgress(rec), st = R.status();
+    const ring = svg('svg', { class: 'ret-ring', viewBox: '0 0 64 64', width: 72, height: 72, 'aria-hidden': 'true', focusable: 'false' });
+    ring.append(svg('circle', { class: 'ret-ring-track', cx: 32, cy: 32, r: RING_R }), svg('circle', { class: `ret-ring-fill${p.done ? ' is-done' : ''}`, cx: 32, cy: 32, r: RING_R, 'stroke-dasharray': RING_C.toFixed(1), 'stroke-dashoffset': (RING_C * (1 - p.fraction)).toFixed(1), transform: 'rotate(-90 32 32)' }));
+    const picker = h('details', { class: 'ret-goal-pick' }, h('summary', {}, 'Change daily goal'),
+      h('div', { class: 'row', role: 'group', 'aria-label': 'Daily goal' }, ...GOALS.map((gl) => h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': String(rec.goal === gl.xp), onclick: () => { R.update((r) => setGoal(r, gl.xp)); R.say(`Daily goal set to ${gl.xp} XP.`); } }, `${gl.label} · ${gl.xp} XP`))));
+    wrap.replaceChildren(
+      h('div', { class: 'ret-goal-row' }, ring,
+        h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily Goal'),
+          h('p', { class: 'ret-goal-text' }, p.done ? `Goal reached: ${p.xp} of ${p.goal} XP today.` : `${p.xp} of ${p.goal} XP today.`),
+          R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
+      picker);
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on);
+  draw();
+  return wrap;
+}
+
+// ---------- out of hearts ----------
+const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
+/** The block shown instead of "Next lesson" when hearts are gone, and as the gate on a new lesson. */
+export function heartsBlock(R, { gate = false } = {}) {
+  const rec = R.get(), wait = nextHeartInMs(rec);
+  const refill = rec.gems.balance >= PRICES.hearts ? h('button', { type: 'button', class: 'btn secondary', onclick: () => {
+    const out = refillByGems(R.get()); if (!out.ok) return;
+    R.update(() => out.rec); R.say('Hearts full. Off you go!'); showRimon('hearts_refilled');
+    if (gate) globalThis.location.reload(); else box.replaceChildren(h('p', { role: 'status' }, 'Hearts full. Off you go!'));
+  } }, `Refill all hearts for ${gemsText(PRICES.hearts)}`) : null;
+  const box = h('section', { class: 'card ret-hearts-out alef-retention', 'aria-labelledby': 'ret-out-h' },
+    h(gate ? 'h1' : 'h3', { id: gate ? 'view-title' : 'ret-out-h', tabindex: '-1' }, 'Out of hearts for now'),
+    h('p', {}, 'Practise a few old words to earn one back.'),
+    h('div', { class: 'row' }, h('a', { class: 'btn', href: REFILL_ROUTE }, 'Practise to earn a heart'), refill),
+    wait ? h('p', { class: 'muted' }, `Next heart in ${hm(wait)}.`) : null,
+    h('p', { class: 'muted' }, 'Review is always open. Practising old words is how memory sticks.'));
+  if (gate) box.setAttribute('aria-labelledby', 'view-title');
+  return box;
+}
+
+// ---------- route hook ----------
+export function routeShown(R, g = globalThis, gate = false) {
+  const doc = g.document, main = doc.getElementById('main');
+  if (!main || R.calm()) return;
+  if (gate) { main.replaceChildren(heartsBlock(R, { gate: true })); showRimon('hearts_empty'); return; }
+  if (doc.body.dataset.route === 'home' && !main.querySelector('.ret-goal')) {
+    const head = main.querySelector('.stack > header') || main.querySelector('header');
+    const ring = goalRingNode(R);
+    if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
+  }
+}
+
+// ---------- end-of-lesson reward ----------
+function optInCard(R) {
+  const tone = (v, label, checked) => h('label', { class: 'ret-radio' }, h('input', { type: 'radio', name: 'ret-tone', value: v, checked }), ' ', label);
+  const status = h('p', { role: 'status', class: 'muted' });
+  const card = h('section', { class: 'card ret-optin', 'aria-labelledby': 'ret-optin-h' },
+    h('h3', { id: 'ret-optin-h' }, 'Want a nudge from Rimon?'),
+    h('p', {}, "Rimon can send one short reminder on days you haven't practised. Never on Shabbat or holidays."),
+    h('fieldset', { class: 'ret-tone' }, h('legend', {}, 'Tone'), tone('kind', 'Kind Rimon: gentle reminders', true), tone('playful', 'Playful Rimon: gentle, then teasing jokes (for adults)', false)),
+    h('div', { class: 'row' },
+      h('button', { type: 'button', class: 'btn', onclick: async () => {
+        const picked = card.querySelector('input[name="ret-tone"]:checked')?.value || 'kind';
+        const p = await R.turnOnReminders(picked);
+        status.textContent = p === 'granted' ? 'Reminders are on. They only arrive while ALEF is open on this device, or on Android with ALEF installed.'
+          : p === 'unsupported' ? 'This browser cannot show reminders. On iPhone, add ALEF to your Home Screen first.' : 'No problem. You can turn reminders on later in the shop.';
+        card.querySelector('.row')?.remove();
+      } }, 'Yes, remind me'),
+      h('button', { type: 'button', class: 'btn secondary', onclick: () => { R.update((r) => answerAsk(r, 'later')); card.remove(); } }, 'Not now')),
+    status);
+  return card;
+}
+/** Insert the reward panel into the lesson's end card: XP count-up, confetti, goal, streak, gems, and Rimon. */
+export function showReward(R, out, g = globalThis) {
+  if (out.calm) return;
+  const doc = g.document;
+  const place = (tries = 0) => {
+    const card = doc.querySelector('.alef-summary');
+    if (!card) { if (tries < 20) g.setTimeout(() => place(tries + 1), 50); return; }
+    if (card.querySelector('.ret-reward')) return;
+    const total = h('strong', { class: 'ret-total' }, String(out.todayBefore));
+    const lines = [];
+    if (out.parts.accuracy) lines.push(`Sharp lesson bonus: +${out.parts.accuracy} XP`);
+    if (out.parts.combo) lines.push(`Combo bonus: +${out.parts.combo} XP`);
+    if (out.goalCrossed) lines.push('Daily goal reached!');
+    if (out.streak.grew) lines.push(out.streak.milestone ? `${out.streak.count}-day streak! A milestone.` : `${out.streak.count}-day streak!`);
+    if (out.gems) lines.push(`+${gemsText(out.gems)}`);
+    const sentence = `Lesson finished. ${out.xp} XP.${out.goalCrossed ? ' Daily goal reached.' : ''}${out.streak.grew ? ` ${out.streak.count}-day streak.` : ''}${out.gems ? ` ${gemsText(out.gems)} earned.` : ''}`;
+    const panel = h('section', { class: 'ret-reward alef-retention', 'aria-label': 'Your reward' },
+      out.goalCrossed || out.streak.milestone ? confetti() : null,
+      h('p', { class: 'ret-xp-chip' }, `+${out.xp} XP`),
+      h('p', { class: 'ret-today' }, total, ` of ${out.goal} XP today`),
+      lines.length ? h('ul', { class: 'ret-reward-lines' }, ...lines.map((t) => h('li', {}, t))) : null,
+      h('p', { class: 'visually-hidden', role: 'status' }, sentence));
+    const anchor = card.querySelector('.alef-celebrate-cheer');
+    if (anchor?.parentNode) anchor.parentNode.insertBefore(panel, anchor.nextSibling); else card.prepend(panel);
+    const stop = countUp(total, out.todayBefore, out.todayAfter, 600, g);
+    card.addEventListener('click', stop, { once: true }); // any tap skips the count-up
+    if (out.heartsEmpty) {
+      const next = card.querySelector('.alef-next-primary'); if (next) { next.hidden = true; next.setAttribute('hidden', ''); }
+      (card.querySelector('.alef-summary-actions') || card).before(heartsBlock(R));
+      g.setTimeout(() => showRimon('hearts_empty'), 2400);
+    }
+    if (shouldAsk(R.get(), { calm: R.calm() })) { card.append(optInCard(R)); }
+    // Rimon: the lesson cheer already fired; follow with the goal or the streak, spaced so they queue.
+    if (out.goalCrossed) g.setTimeout(() => showRimon('daily_goal'), 1200);
+    if (out.streak.grew) g.setTimeout(() => showRimon(out.streak.milestone ? 'streak_milestone' : 'streak_extended'), out.goalCrossed ? 3200 : 1200);
+  };
+  place();
+}
+export { reducedMotion, heartCount, repairOffer, CURRENCY };

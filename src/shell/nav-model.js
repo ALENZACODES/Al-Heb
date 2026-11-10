@@ -19,6 +19,8 @@ export const SECTION_ROUTES = {
     'soundgap', 'vowelboard', 'niqquddial', 'dottile', 'syllablechips', 'nikkud-fade', 'roots', 'gender-drill', 'scheduler', 'known-words',
     // Brain Lab (daily drills) and the Library (articles, letter videos), with their detail pages
     'lab', 'labgame', 'library', 'libraryarticle',
+    // Retention: weekly practice league and the streak-freeze shop
+    'league', 'shop',
     // games hub and every game (owner 'games'), arcade included
     'games', 'letterchomp', 'fallingletters', 'lettertwins', 'soundsnap', 'lookalikes', 'alefbetrun', 'finalfive', 'letterdrop', 'vowelstack', 'syllablesnake', 'wordbuilder', 'meltdown', 'flapvowel', 'bingoletters', 'wordsearch', 'minicross', 'wordmaze', 'scramble', 'bubbleword', 'trueornot', 'lettercrush', 'lettersudoku', 'quizladder', 'speedtype', 'gendersplit', 'pluralpop', 'sentencetrain', 'noahseven', 'tenwords', 'mitzvot613',
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',

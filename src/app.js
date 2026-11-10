@@ -403,6 +403,7 @@ async function boot() {
     })).catch(() => {});
   }
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
+  shownFirst.then(() => import('./shell/boot-hooks.js')).then((m) => m.armRetention(ctxBase)).catch(() => {}); // streak freezes, XP, gems, hearts, league (src/retention/, lazy)
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});
   shownFirst.then(() => import('./shell/statbar.js')).then((m) => { statbar = m.mountStatbar({ store, settings }); }).catch(() => {});
   scheduleManifest(audio);

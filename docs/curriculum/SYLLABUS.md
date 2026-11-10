@@ -187,8 +187,9 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Greet people with shavua tov after Havdalah
 - **I-07** Hallel refrains: the lines the congregation sings back (30 min)
   - Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments
-  - Recognise the Psalm 118 lines that are sung responsively
-  - Know that the full Hallel text is not yet in the corpus
+  - Recognise the Psalm 118 lines that are sung responsively, from the Hallel verses now in the corpus
+  - Know that the full Hallel (all of Psalms 113-118, half-Hallel cuts, and the customary repetitions) is still a corpus gap (g-hallel); this lesson uses selected refrain verses only
+  - Know that these refrains are sung on festivals, Rosh Chodesh and Hanukkah; I-29, I-30 and I-32 sit on those days
 - **I-08** Aleinu: the closing prayer and where to bow (30 min)
   - Read the first paragraph of Aleinu at the speed it is said
   - Find the words where many congregations bow
@@ -211,18 +212,18 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Recognise the three closing verses of the Amidah in order
 - **I-28** Yom Kippur: the few lines the corpus holds and the words around them (30 min)
   - Know the one day a year when 'Baruch shem' is said aloud and answer it
-  - Recognise the Yom Kippur words: fast, atonement, shofar, forgiveness
-  - Say 'a good year' and ask and give forgiveness politely
+  - Recognise the Yom Kippur words: fast, atonement, shofar at the close, forgiveness
+  - Greet people with 'gmar chatimah tovah' on Yom Kippur (not only 'shanah tovah', which belongs to Rosh Hashana and the days around it)
 - **I-29** Pesach: the seder blessings the corpus holds (30 min)
   - Say the wine blessing and the Shehecheyanu that open the seder
-  - Find 'the exodus from Egypt' in the Kiddush text
-  - Wish 'chag sameach' and know which seder texts the corpus does not hold
+  - Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'
+  - Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus still does not hold
 - **I-30** Sukkot: sukkah words and the blessings that carry over (25 min)
   - Greet people with chag sameach and recognise the word sukkah
-  - Say Shehecheyanu and the wine blessing at the sukkah
-  - Know which Sukkot texts (lulav, Hallel) are not yet in the corpus
+  - Say Shehecheyanu, the wine blessing, the Sukkot Kiddush insert, and the blessing to dwell in the sukkah
+  - Know that the lulav blessing, Hoshanot, and the unsourced remainder of Hallel are still not in the corpus (g-hallel)
 - **I-31** Purim: the miracle blessing and the words of the day (25 min)
-  - Say the blessing for miracles used on Purim and Hanukkah
+  - Say the blessing for miracles, whose wording is shared by Purim and Hanukkah (the corpus stores that wording under the Hanukkah source)
   - Greet and toast in Hebrew
   - Know that the Megillah itself is not in the corpus
 - **I-32** Hanukkah: the three blessings, Hanerot Halalu and Maoz Tzur (35 min)
@@ -418,8 +419,8 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Send and ask for a message or picture
   - Ask for someone's profile and say 'one moment'
   - Know the word for password and keep it private
-- **I-50** Holiday greetings by festival: who says what, and when (25 min)
-  - Choose the right greeting for Shabbat, a holiday, the new year and after Shabbat
+- **I-50** Holiday greetings by festival, plus everyday wishes (25 min)
+  - Choose the right greeting for Shabbat, a festival, Rosh Hashana, Yom Kippur and after Shabbat
   - Know which greetings are for a person and which are for a time
-  - Reply naturally and keep the register neutral
+  - Reply naturally; when a greeting is gendered, use the form that matches the person you are speaking to
 

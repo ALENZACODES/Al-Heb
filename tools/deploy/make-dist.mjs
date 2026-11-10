@@ -20,7 +20,7 @@ export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudfla
 export const EXTRAS = [
   ['sw.js', 'service worker'],
   ['404.html', 'self-contained not-found page for static hosts (not in the first-install precache)'],
-  ['404.js', 'the not-found page script (external: the CSP blocks inline scripts)'],
+  ['404.js', '404 page helper: maps an unknown path to a #/ route (not in the first-install precache)'],
   ['_headers', 'Cloudflare Pages headers'],
   ['robots.txt', 'search crawler rules'],
   ['sitemap.xml', 'search sitemap for the app shell'],

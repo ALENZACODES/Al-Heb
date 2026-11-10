@@ -1,5 +1,7 @@
 # Practical conversation units (Babbel-style) for the Israeli track
 
+The scale-up plan for 100–200 pages (levels, units, pages, routes, split JSON) is in `docs/curriculum/BABBEL-STYLE-CURRICULUM-PLAN.md`.
+
 John asked for a structured, practical curriculum in ALEF: short conversation units (ordering food, directions, shopping, small talk, and the rest of daily life), each with a clear grammar note, a spaced-repetition review queue, and targeted listening and speaking drills.
 
 This is a plan for that shape, mapped onto the lessons and phrasebook that already exist. It is not a new track and it does not add a 126th lesson (the integrity tests lock the count at 125; a prerequisite may only point at a lesson on the same track). It does not change the divine Name, the default rite, or גּוֹי data.

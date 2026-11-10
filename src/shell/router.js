@@ -164,6 +164,7 @@ export const ROUTES = [
   // Optional routes: other lanes add these view files over time. When the file is missing the route is hidden from nav/quick
   // links (see probeRoutes) and a direct visit shows the "not available yet" card; nothing else breaks.
   { name: 'workbook', pattern: '/workbook',        module: './workbook.view.js',                  nav: 'nav.workbook', title: 'Workbook', owner: 'lane8' },
+  { name: 'light', pattern: '/light', module: '../light/light.view.js', title: 'Star of David light', owner: 'light', optional: true, quick: 'nav.light' },
   { name: 'soundgap', pattern: '/soundgap',       module: '../pronunciation/soundgap.view.js',   title: 'Sound gap', owner: 'lane3', optional: true, quick: 'nav.soundgap' },
   { name: 'vowelboard',   pattern: '/vowelboard',    module: '../pronunciation/vowelboard.view.js',    title: 'Vowel board', owner: 'lane3', optional: true, quick: 'nav.vowelboard' },
   { name: 'niqquddial',   pattern: '/niqquddial',    module: '../pronunciation/niqquddial.view.js',    title: 'Vowel-point dial', owner: 'lane3', optional: true, quick: 'nav.niqquddial' },

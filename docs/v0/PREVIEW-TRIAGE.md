@@ -186,3 +186,4 @@ Home shows a backup reminder after three finished lessons (`docs/progress/BACKUP
 | `karaoke` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `cipher` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
 | `fleamarket` | keep | Game; reached from the `games` hub. Preview until native review of its words. |
+| `light` | keep | Star of David light: on-screen glow, optional phone flash, and a printable stencil. Preview until a real-phone check. |

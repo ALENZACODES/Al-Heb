@@ -11,7 +11,7 @@ async function tryImport(paths) {
   return null;
 }
 
-export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook']];
+export const QUICK = [['letters', '#/letters'], ['sounds', '#/sounds'], ['read', '#/read'], ['scan', '#/scan'], ['calendar', '#/calendar'], ['workbook', '#/workbook'], ['light', '#/light']];
 
 export function mount(root, ctx) {
   const { settings, store, t } = ctx;

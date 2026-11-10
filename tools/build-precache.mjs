@@ -56,6 +56,8 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/lab/', 'data/lab/',
   // Library: the article view and the articles, fetched when the Library first opens, runtime-cached.
   'src/library/', 'data/library/',
+  // Star of David light: route code, style and stencil, fetched when #/light first opens.
+  'src/light/', 'assets/light/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/'];
 const ON_DEMAND_FILES = new Set([
@@ -113,7 +115,9 @@ const ON_DEMAND_FILES = new Set([
   // Scan a photo, Sounds and Word Sprint (preview routes): view code only, fetched on first open (keeps first install under 3.95 MiB with the launch branch).
   'src/photo/scan.view.js', 'src/pronunciation/sounds.view.js', 'src/sprint/sprint.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
-  'assets/fonts/web/gveret-levin.woff2']);
+  'assets/fonts/web/gveret-levin.woff2',
+  // Star of David light stylesheet: loaded when #/light first opens, runtime-cached.
+  'assets/css/light.css']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));
 const DATA_ONLY_JSON = (rel) => !rel.startsWith('data/') || rel.endsWith('.json');
 

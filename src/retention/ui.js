@@ -8,6 +8,7 @@ import { HEARTS, REFILL_ROUTE, nextHeartInMs, refillByGems, heartCount } from '.
 import { streakLine, repairOffer, STREAK } from './streak.js';
 import { shouldAsk, answerAsk, reminderICS } from './notify.js';
 import { showRimon } from './rimon.js';
+import { recapLine } from './recap.js';
 
 const RING_R = 26, RING_C = 2 * Math.PI * RING_R;
 const svg = (tag, attrs) => { const n = document.createElementNS('http://www.w3.org/2000/svg', tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, String(v)); return n; };
@@ -100,6 +101,33 @@ export async function downloadReminder(R) {
 }
 const onIphoneTab = (g = globalThis) => { try { const n = g.navigator, ua = String(n?.userAgent || ''); const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && (n?.maxTouchPoints || 0) > 1); return ios && !(n?.standalone === true || g.matchMedia?.('(display-mode: standalone)')?.matches); } catch { return false; } };
 
+// ---------- welcome back and weekly recap (Home) ----------
+/** After a week or more away: a warm card with one small step. Gone once any XP is earned today. */
+export function comebackNode(R) {
+  const wrap = h('section', { class: 'card ret-comeback alef-retention', 'aria-labelledby': 'ret-back-h' });
+  const draw = () => {
+    const c = R.comeback(); wrap.hidden = !c; if (!c || wrap.childNodes.length) return;
+    wrap.replaceChildren(h('h2', { id: 'ret-back-h' }, 'Welcome Back'),
+      h('p', {}, "Good to see you. Your hearts are full, and nothing you learned is lost. Start small: a few old words bring it all back."),
+      h('div', { class: 'row' }, h('a', { class: 'btn', href: '#/learn?review=1' }, 'Warm up with old words'), h('a', { class: 'btn secondary', href: '#/learn' }, 'Go to lessons')));
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on); draw();
+  return wrap;
+}
+/** From Sunday: last week in one card, with a bar for each day and the same numbers in words. */
+export function recapNode(R) {
+  const w = R.recap(); if (!w) return null;
+  const max = Math.max(1, ...w.bars.map((b) => b.xp));
+  const card = h('section', { class: 'card ret-recap alef-retention', 'aria-labelledby': 'ret-recap-h' },
+    h('h2', { id: 'ret-recap-h' }, 'Your Last Week'),
+    h('p', {}, recapLine(w)),
+    h('ol', { class: 'ret-bars', 'aria-label': 'XP for each day of last week' }, ...w.bars.map((b) => h('li', { 'aria-label': `${b.name}: ${b.xp} XP` },
+      h('span', { class: 'ret-bar-fill', 'aria-hidden': 'true', style: `--h:${Math.round((b.xp / max) * 100)}` }), h('span', { class: 'ret-bar-num', 'aria-hidden': 'true' }, String(b.xp)), h('span', { class: 'ret-bar-day', 'aria-hidden': 'true' }, b.name.slice(0, 2))))),
+    h('button', { type: 'button', class: 'btn secondary', onclick: () => { R.recapSeen(); card.remove(); document.querySelector('.ret-goal h2')?.focus?.(); } }, 'Got it'));
+  return card;
+}
+
 // ---------- daily quests (Home) ----------
 export function questsNode(R) {
   const wrap = h('section', { class: 'card ret-quests alef-retention', 'aria-labelledby': 'ret-quests-h' });
@@ -157,6 +185,8 @@ export function routeShown(R, g = globalThis, gate = false) {
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
     ring.after(questsNode(R));
+    const back = comebackNode(R); ring.before(back);
+    const recap = recapNode(R); if (recap) ring.before(recap); // welcome first, then last week, then today's goal
     // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.
     const st = R.status(), today = new Date().toDateString();
     if (st.state === 'at-risk' && R.streakShown() && R.get().lastRiskDay !== today) { R.update((r) => { r.lastRiskDay = today; return r; }); g.setTimeout(() => showRimon('streak_at_risk'), 3000); }

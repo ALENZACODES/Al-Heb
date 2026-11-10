@@ -41,6 +41,7 @@ New code, all under `src/retention/` and all loaded on demand (none of it is in 
 | `leagues.js`, `league.names.js` | Tiers, seeded cohort, standings, `settle`, 120 names |
 | `notify.js`, `messages.js`, `quiet.js` | Timing, tone ladder, message pick, in-page scheduler, plan file for the service worker, quiet hours |
 | `rimon.js` | `showRimon(situation)`: sends the app's `alef:rimon` event using the twelve drawn actions only |
+| `recap.js` | Weekly recap and welcome back: `lastWeek`, `recapDue`, `welcomeBack` |
 | `quests.js` | Daily quests: `dailyQuests`, `questProgress`, `questView` |
 | `boot.js` | Controller: listens for lesson, review and game events, rolls the day over, arms reminders |
 | `ui.js`, `dom.js`, `retention.css` | Top bar, goal ring, reward panel, out-of-hearts block |
@@ -139,6 +140,13 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - **Reminder transparency.** The shop says when Rimon usually nudges ("around 7:15 pm") and has a "Send a test reminder" button, which also rests on Shabbat and holidays.
 - The Home card is headed "Daily XP Goal", because Home's own lesson card already has a "Daily goal" in minutes.
 - Review round 2 fixes are listed in `REVIEW-ROUND-2.md`.
+
+## Added in the Fifth Pass
+
+- **Welcome back.** After 7 or more days away the learner's hearts are filled for free and Home shows a "Welcome Back" card with one small step ("Warm up with old words"). It goes away once any XP is earned that day. Code: `recap.js` (`welcomeBack`); the number of days is `RECAP.comebackDays`.
+- **Weekly recap.** From Sunday, one card on Home sums up the week that just ended: XP, days studied, best day, the league result, and a bar for each day with its number. Shown once a week, never during Shabbat, never in calm mode. Code: `recap.js` (`lastWeek`, `recapDue`).
+- **Settings** now links to "Streak, hearts and reminders" (`#/shop`).
+- Review round 3 is recorded in `REVIEW-ROUND-3.md`.
 
 ## Hebrew
 

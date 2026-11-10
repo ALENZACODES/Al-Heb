@@ -159,3 +159,47 @@ test('a real 3-minute lesson: clicking through the short parts reaches the stopp
     await a.close();
   });
 });
+
+const fullChrome = ['/usr/bin/google-chrome', '/usr/bin/chromium', '/usr/bin/chromium-browser'].find(existsSync); // the bundled headless shell cannot show notifications
+test('the real service worker shows a planned reminder on a weekday, records it, and stays silent on Saturday and in a quiet range', { skip: !chromium || !fullChrome ? 'needs Playwright and a full Chrome' : false, timeout: 180000 }, async (t) => {
+  await withApp(async (_shell, base) => {
+    const browser = await chromium.launch({ executablePath: fullChrome, args: ['--no-sandbox'] }); t.after(() => browser.close());
+    const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
+    await ctx.grantPermissions(['notifications'], { origin: base.replace(/\/$/, '') });
+    await ctx.addInitScript(() => { if (!localStorage.getItem('alef:settings')) localStorage.setItem('alef:settings', JSON.stringify({ onboarded: true })); });
+    const page = await ctx.newPage();
+    await page.goto(base + '#/shop'); await page.waitForSelector('.ret-shop');
+    assert.ok(await page.evaluate(() => Promise.race([navigator.serviceWorker.ready.then(() => true), new Promise((r) => setTimeout(() => r(false), 60000))])), 'service worker ready');
+    const sw = ctx.serviceWorkers()[0] || await ctx.waitForEvent('serviceworker', { timeout: 30000 });
+    if (await sw.evaluate(() => self.Notification && self.Notification.permission) !== 'granted') return t.skip('this browser build does not grant notifications to a service worker');
+    const run = (entry, at, quiet = []) => sw.evaluate(async ([entry, at, quiet]) => {
+      for (const n of await self.registration.getNotifications()) n.close();
+      const cache = await caches.open('alef-retention'), url = new URL('__alef/rimon-plan.json', self.registration.scope).href;
+      await cache.put(url, new Response(JSON.stringify({ v: 1, entries: [entry], quiet, shown: [], lastSessionAt: at - 3 * 86400000 })));
+      const real = Date.now; Date.now = () => at; try { await rimonCheck(); } finally { Date.now = real; }
+      const after = await (await cache.match(url)).json();
+      return { shown: (await self.registration.getNotifications()).map((n) => ({ title: n.title, body: n.body, icon: n.icon.split('/').pop(), route: n.data && n.data.route })), left: after.entries.length, recorded: after.shown.length };
+    }, [entry, at, quiet]);
+    const tue = new Date(2026, 10, 17, 12, 0).getTime(), sat = new Date(2026, 10, 14, 12, 0).getTime();
+    const e = (at) => ({ fireAt: at - 60000, id: 'E01', title: 'Rimon', body: 'Three minutes. One lesson.', route: '#/learn' });
+    assert.deepEqual(await run(e(tue), tue), { shown: [{ title: 'Rimon', body: 'Three minutes. One lesson.', icon: 'icon-192.png', route: '#/learn' }], left: 0, recorded: 1 });
+    assert.deepEqual(await run(e(sat), sat), { shown: [], left: 1, recorded: 0 });
+    assert.deepEqual(await run(e(tue), tue, [[tue - 3600000, tue + 3600000]]), { shown: [], left: 1, recorded: 0 });
+    await ctx.close();
+  });
+});
+
+test('Home after a week away shows the welcome card; on Monday it shows last week', { skip: !chromium, timeout: 120000 }, async () => {
+  await withApp(async (browser, base) => {
+    const days = {}; for (let i = 7; i <= 13; i++) days[day(-i - new Date().getDay())] = 10; // seven days somewhere in the week before this one
+    const a = await open(browser, base, { 'alef:retention.v1': ret({ xp: { total: 70, days }, sessions: [{ s: Date.now() - 9 * 86400000, e: Date.now() - 9 * 86400000 + 60000 }], hearts: { enabled: null, n: 1, lastRefillAt: Date.now() - 1000, lost: [] } }) });
+    await a.go('#/', '.ret-goal');
+    const dow = new Date().getDay(), min = new Date().getHours() * 60 + new Date().getMinutes(), shabbat = (dow === 5 && min >= 1080) || (dow === 6 && min < 1260);
+    assert.match(await a.page.$eval('.ret-comeback', (n) => n.textContent), /Welcome Back.*Warm up with old words/s);
+    assert.equal((await stored(a.page, 'alef:retention.v1')).hearts.n, 5, 'hearts are filled on return');
+    if (!shabbat) { assert.match(await a.page.$eval('.ret-recap', (n) => n.textContent), /Your Last Week/); assert.equal(await a.page.$$eval('.ret-bars li', (n) => n.length), 7);
+      await a.page.evaluate(() => document.querySelector('.ret-recap button').click()); assert.equal(await a.page.$('.ret-recap'), null); }
+    assert.ok(await noSideScroll(a.page)); assert.deepEqual(a.errors, []);
+    await a.close();
+  });
+});

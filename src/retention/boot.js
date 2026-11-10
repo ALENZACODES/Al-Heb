@@ -14,6 +14,7 @@ import { logSession, createScheduler, readShown, recordSent, registerPeriodicSyn
 import { restNow } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { questProgress, questView, questsOn } from './quests.js';
+import { welcomeBack, isComebackDay, recapDue, recapSeen, lastWeek } from './recap.js';
 
 const STREAK_KEY = 'streak';
 let api = null;
@@ -51,10 +52,11 @@ export function retention(ctx, g = globalThis) {
     const out = applyRollover(raw, load(store, t), t, { tz: deviceZone() });
     const s = settle(out.ret, t);
     if (out.streak !== raw && out.streak) { muteStreakSub = true; try { store.set(STREAK_KEY, out.streak); } finally { muteStreakSub = false; } }
-    update(() => refillByTime(s.rec, t));
+    const wb = welcomeBack(refillByTime(s.rec, t), t); // a week or more away: full hearts, and Home offers a small first step
+    update(() => wb.rec);
     lastCount = projectStreak(streakRaw(), t).count;
     quietOpt.mode = normalizeRecord(streakRaw()).mode;
-    return { events: out.events, result: s.result };
+    return { events: wb.back ? [...out.events, 'welcome_back'] : out.events, result: s.result };
   }
   function touch() { const t = now(); if (t - lastTouch < 60000) return; lastTouch = t; update((r) => logSession(r, t)); scheduler?.arm(); }
 
@@ -176,6 +178,8 @@ export function retention(ctx, g = globalThis) {
     status: () => streakStatus(streakRaw(), get(), now()), streakShown: () => streakVisible(ctx), heartsShown: () => heartsOn(get(), { calm: calm() }), leagueShown: () => leagueOn(get(), { calm: calm() }),
     setStreak: (v) => { muteStreakSub = true; try { store.set(STREAK_KEY, v); } finally { muteStreakSub = false; } lastCount = projectStreak(v, now()).count; emit(); },
     rearm: () => scheduler?.arm(), quietOpt: () => quietOpt, say, ctx, revealed,
+    comeback: () => { const r = get(); return isComebackDay(r, now()) && todayXp(r, now()) === 0 ? { days: r.comebackAway || 7 } : null; },
+    recap: () => (recapDue(get(), now(), { calm: calm() }) ? lastWeek(get(), now()) : null), recapSeen: () => update((r) => recapSeen(r, now())),
     questView: () => questView(get(), now(), { calm: calm(), mode: quietOpt.mode }), questsShown: () => questsOn(get(), { calm: calm() }),
     /** A lesson the learner has been let into (so a later redraw of the same page never gates it). */
     admit: (hash) => { lessonHash = hash; } };
@@ -211,7 +215,7 @@ export async function armRetention(ctx, g = globalThis) {
     if (rec.lastBootDay === today || R.calm()) return;
     const away = daysAway(rec, t, R.quietOpt().mode), rest = restNow(t, R.quietOpt());
     const pick = first.events.includes('freeze_used') ? 'freeze_used' : first.events.includes('streak_broken') ? 'streak_broken' : rest === 'shabbat' ? 'shabbat' : rest === 'yomtov' ? 'chag'
-      : away >= 3 ? 'welcome_back' : new Date(t).getDay() === 0 ? 'shavua_tov' : null;
+      : away >= 3 || first.events.includes('welcome_back') ? 'welcome_back' : new Date(t).getDay() === 0 ? 'shavua_tov' : null;
     R.update((r) => { r.lastBootDay = today; return r; });
     if (pick) g.setTimeout(safe(() => showRimon(pick)), 2600);
   })();

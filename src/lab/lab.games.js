@@ -3,6 +3,7 @@
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
 import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords } from './lab.core.js';
+import { STUDIO_DRILLS } from './lab.studio.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -365,5 +366,5 @@ const pattern = {
   },
 };
 
-export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern });
+export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern, ...STUDIO_DRILLS });
 export const _test = { SWITCH_ITEMS, dateEn, dateHe, shortName };

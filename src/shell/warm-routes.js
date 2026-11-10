@@ -21,8 +21,8 @@ const ROOT = new URL('../../', import.meta.url);
  * games add lab.studio.js and lab.art.js; their 3D scene module lab.fx3d.js and the studio pictures load only when a studio game opens).
  */
 export const LAB_FILES = Object.freeze([
-  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/lab/lab.games2.js', 'src/lab/lab.studio.js', 'src/lab/lab.art.js', 'src/games/engine.js',
-  'data/lab/syllables.json', 'data/lab/numbers.json', 'data/lab/words.json', 'data/roots/families.json',
+  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/lab/lab.games2.js', 'src/lab/lab.studio.js', 'src/lab/lab.art.js', 'src/lab/lab.holds.js', 'src/games/engine.js',
+  'data/lab/syllables.json', 'data/lab/numbers.json', 'data/lab/words.json', 'data/lab/clip-holds.json', 'data/roots/families.json',
 ]);
 
 /**

@@ -25,7 +25,7 @@ test('LAB_FILES is exactly what Brain Lab needs that the first install leaves ou
   const installed = new Set(m.files), onDemand = new Set(m.onDemand);
   const modules = importGraph('src/lab/lab.view.js');
   const labFiles = fs.readdirSync(path.join(ROOT, 'src/lab')).filter((f) => f.endsWith('.js')).map((f) => `src/lab/${f}`);
-  const dataFiles = [...new Set(labFiles.flatMap((f) => [...read(f).matchAll(/getJSON\(env, '([^']+)'\)/g)].map((x) => x[1])))];
+  const dataFiles = [...new Set(labFiles.flatMap((f) => [...read(f).matchAll(/getJSON\(env, '([^']+)'\)|new URL\('\.\.\/\.\.\/(data\/[^']+)'/g)].map((x) => x[1] || x[2])))];
   assert.ok(dataFiles.includes('data/lab/words.json') && dataFiles.includes('data/lab/syllables.json'), 'data files are read from every Brain Lab module');
   for (const f of [...modules, ...dataFiles]) assert.ok(installed.has(f) || onDemand.has(f), `${f} is shipped`);
   const needed = [...modules, ...dataFiles].filter((f) => !installed.has(f)).sort();

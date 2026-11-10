@@ -5,7 +5,7 @@ import { isAudioFree } from '../shell/audiofree.js';
 import { untimedOn, shortcutsOn } from '../shell/motor.js';
 import { signalRimon } from '../shell/rimon-events.js';
 import { sfx } from '../audio/sfx.js';
-import { playRecordedClip, hasRecordedClip } from '../games/engine.js';
+import { loadHolds, hasLabClip, playLabClip } from './lab.holds.js';
 import {
   STORE_KEY, SESSION_SECONDS, SKILLS, GAMES, gameById, dayKey, dailyWorkout, step, trialPoints, startLevel, summarize,
   readState, recordSession, workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded,
@@ -397,12 +397,15 @@ function drill(root, ctx, id) {
   };
 
   const env0 = { ctx, data: null };
+  let heldRef = new Set(); // clip holds, for the results card's listen buttons
 
   const play = async () => {
     const st = S.get(), gs = st.games[id];
     let data;
     try { data = env0.data || await impl.load(env0); }
     catch { wrap.replaceChildren(back, h('div', { class: 'lab-play' }, h('p', { role: 'alert' }, 'This game could not load its words. Check your connection, then try again.'), h('button', { type: 'button', class: 'btn', onclick: () => intro() }, 'Try again'))); return; }
+    const held = await loadHolds(ctx);
+    heldRef = held;
     if (!alive) return;
     const timeBar = h('span'), scoreEl = h('span', { 'aria-live': 'off' }, '0'), lvlEl = h('span', { class: 'lab-lvl' }, '');
     const runEl = h('span', { class: isStudio(id) ? 'lab-run lab-combo' : 'lab-run', 'aria-hidden': 'true' });
@@ -451,9 +454,9 @@ function drill(root, ctx, id) {
         requestAnimationFrame(() => { trialBar.style.transition = `transform ${ms}ms linear`; trialBar.style.transform = 'scaleX(0)'; });
         roundLater(() => { feedback.textContent = 'Out of time.'; fn(); }, ms);
       },
-      hasClip: (kind, cid) => audioOn && hasRecordedClip(ctx, kind, cid),
-      playClip: (kind, cid, text) => (audioOn ? playRecordedClip(ctx, kind, cid, { text }) : Promise.resolve(false)),
-      sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playRecordedClip(ctx, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
+      hasClip: (kind, cid) => audioOn && hasLabClip(ctx, held, kind, cid),
+      playClip: (kind, cid, text) => (audioOn ? playLabClip(ctx, held, kind, cid, { text }) : Promise.resolve(false)),
+      sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playLabClip(ctx, held, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
     };
     if (BOARD_MATS.has(id)) env.backdrop(board, `LAB_v2_${id}_play`, 900);
     const t0 = Date.now(), total = sessionSeconds(id) * 1000;
@@ -524,8 +527,8 @@ function drill(root, ctx, id) {
     const pose = workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous';
     rimon(pose, workout && prog.complete ? 'workout-done' : 'results', id);
     const audioOn = !isAudioFree(ctx);
-    const listen = (it) => (audioOn && it.clip && hasRecordedClip(ctx, it.clip.kind, it.clip.id)
-      ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playRecordedClip(ctx, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
+    const listen = (it) => (audioOn && it.clip && hasLabClip(ctx, heldRef, it.clip.kind, it.clip.id)
+      ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playLabClip(ctx, heldRef, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
     const again = h('button', { type: 'button', class: 'btn secondary', onclick: () => intro() }, 'Play again');
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');

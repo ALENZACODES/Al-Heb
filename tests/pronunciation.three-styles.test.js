@@ -1,4 +1,4 @@
-// Claude STYLES-G-r1 test plan, part A (no cloud). Default flags only.
+// Lane C STYLES-G-r1 test plan, part A (no cloud). Default flags only.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';

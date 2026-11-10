@@ -5,13 +5,13 @@
 **Sample:** 50 items with on-disk clips in all three traditions (male voice).  
 **Spend cap:** US$5  
 **Spend so far:** $0.2047  
-**Claude plan:** `claude-lanes/replies/STYLES-G-r1.md` landed overnight; the playback and spelling-flag fixes from that verdict are in `eefe184b7`.
+**Lane C plan:** `lanes/replies/STYLES-G-r1.md` landed overnight; the playback and spelling-flag fixes from that verdict are in `eefe184b7`.
 
 Nothing here was merged to `main` or deployed. The divine Name was not sent to TTS or STT. The full audio tree was not checked out; clips were read in place from `/workspace/Al-Heb-overnight/audio`.
 
 ## How to read this
 
-John asked whether the three tradition styles are actually different and accurate. Claude is being asked the same question separately. This file is the Google Cloud / rule-check pass, not a rabbi review.
+John asked whether the three tradition styles are actually different and accurate. Lane C is being asked the same question separately. This file is the Google Cloud / rule-check pass, not a rabbi review.
 
 Israeli and Sephardi Latin letters stay identical in the current engine (`src/pronunciation/transliterate.js`) unless John turns on the held flags. Their differences are meant to show up in IPA, vowel wording, and in the audio files. Ashkenazi Latin uses **s** for a tav without dagesh and **o** for kamatz gadol, where Israeli and Sephardi use **t** and **a** (for example Shabbat vs Shabbos). Sephardi ḥ/ʿ for ח and ע, and doubled letters such as Shabbos, are built behind `STYLE_FLAGS.sephardiPharyngeals` and `STYLE_FLAGS.geminateDisplay`, default off; this lane did not turn them on.
 
@@ -89,7 +89,7 @@ Sephardi bank clips are systematically slow. That is a real production issue for
 - **Wrong or unintelligible long lines.** On several prayer lines the aware transcript is a *different* liturgy: Maoz Tzur coming back as a Mi Sheberach or a “what do we ask of heaven” speech; Lecha Dodi as Psalm 144 (“לדוד ברוך ה' צורי”); Kaddish as Yizkor (“יזכור אלהים את נשמת אבי מורי”). Israeli of the same lines transcribes correctly. These need a human listen and, if the file is the wrong text or mush, a remake from the pointed source / a checked respelling. Do not invent Hebrew. Do not voice the divine Name.
 - **Tempo alone is not the fix.** 64 over-cap copies were sped to the agreed caps and re-heard. Sephardi gained 0 passes; Ashkenazi gained 1. So this lane did **not** write tempo-capped files back over the bank.
 
-Suggested next step (for Claude / a later render, still under the $5 tradition cap leftover of about US$4.80): remake the unintelligible long-line fails, not a blanket 1.33/1.15 rewrite of clips that already transcribe well. A bank-wide Sephardi tempo cap may still be worth it for *listening comfort*, as a separate, reviewed pass.
+Suggested next step (for lane C / a later render, still under the $5 tradition cap leftover of about US$4.80): remake the unintelligible long-line fails, not a blanket 1.33/1.15 rewrite of clips that already transcribe well. A bank-wide Sephardi tempo cap may still be worth it for *listening comfort*, as a separate, reviewed pass.
 
 Tradition-styles Cloud spend across the first pass, the aware pass, and the tempo experiment: **US$0.2047 of US$5**.
 

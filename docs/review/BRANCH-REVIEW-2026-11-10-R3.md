@@ -1,6 +1,6 @@
 # Branch Review, Round 3 of 5: This Lane's Branch at 57d6522ea
 
-The branch is `claude/lesson-integrity-2026-11-10` (lane C, lessons). It was checked against `main` at `b574744f6`.
+The branch is the lane C branch (lane C, lessons). It was checked against `main` at `b574744f6`.
 
 What was run at `57d6522ea`:
 - 3,342 unit tests pass, 0 fail.

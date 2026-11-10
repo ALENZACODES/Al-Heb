@@ -10,13 +10,13 @@ The divine Name was never sent to text-to-speech.
 
 **STT note:** Google Cloud STT Chirp (Speech-to-Text v2) is not callable with the existing API keys (v2 requires OAuth; Speech v1 is blocked on the TTS key). Each WaveNet he-IL clip was instead transcribed on Vertex by gemini-3.5-flash.
 
-After Claude's PRACTICAL-FIXES-r1 verdict (keep all 71 source lines; no invented Hebrew), the tester was updated only to treat Arabic numerals in a transcript as Hebrew number words. That cleared d-cafe-l5, d-taxi-l6 and d-hotel-l6 on a --redecide with no new Cloud calls. Other speech-loop misses stay hidden. בְּעֶזְרַת הַשֵּׁם and I-18 army slang were not decided or added to the live set.
+After lane C's PRACTICAL-FIXES-r1 verdict (keep all 71 source lines; no invented Hebrew), the tester was updated only to treat Arabic numerals in a transcript as Hebrew number words. That cleared d-cafe-l5, d-taxi-l6 and d-hotel-l6 on a --redecide with no new Cloud calls. Other speech-loop misses stay hidden. בְּעֶזְרַת הַשֵּׁם and I-18 army slang were not decided or added to the live set.
 
 Pass rule: (1) STT word-error rate is 0 after nikkud is stripped, or letter-error rate is at most 0.15 for a single token;
 (2) Hebrew→English meaning matches the stored gloss;
 (3) English→Hebrew matches the source after nikkud is stripped, or a Vertex judge agrees the meaning is the same.
 Glosses that only failed because they drifted from the lesson or phrasebook source were restored from that source and re-checked.
-Items that still fail are hidden from the Practical UI and listed for Claude in `PRACTICAL-FAILS-FOR-CLAUDE.md`.
+Items that still fail are hidden from the Practical UI and listed for lane C in the Practical fails list in the lanes hub.
 
 | unit | id | Hebrew | gloss | STT | WER | HE→EN | EN→HE | result | why |
 |---|---|---|---|---|---:|---|---|---|---|

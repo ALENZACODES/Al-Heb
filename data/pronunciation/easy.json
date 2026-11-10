@@ -1,0 +1,70 @@
+{
+ "schemaVersion": 1,
+ "description": "The \"it is easy\" summary: cited facts only.",
+ "facts": [
+  {
+   "id": "five-vowels",
+   "text": "Modern Hebrew has a simple five-vowel system, and vowel length does not change meaning.",
+   "source": {
+    "label": "Wikipedia: Modern Hebrew phonology",
+    "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+   },
+   "quote": "Vowel length is non-contrastive."
+  },
+  {
+   "id": "twenty-seven",
+   "text": "The alphabet has 22 letters; five of them have a different form at the end of a word, so a reader meets 27 shapes.",
+   "source": {
+    "label": "Wikipedia: Hebrew alphabet",
+    "url": "https://en.wikipedia.org/wiki/Hebrew_alphabet"
+   },
+   "quote": "The Hebrew alphabet has 22 letters. ... Five letters have different forms when used at the end of a word.",
+   "note": "\"27 shapes\" is the arithmetic 22 + 5, not a quoted figure."
+  },
+  {
+   "id": "no-capitals",
+   "text": "There are no capital letters.",
+   "source": {
+    "label": "Wikipedia: Hebrew alphabet",
+    "url": "https://en.wikipedia.org/wiki/Hebrew_alphabet"
+   },
+   "quote": "It does not have case."
+  },
+  {
+   "id": "one-standard",
+   "text": "In Israel there is a more or less consistent standard of pronunciation.",
+   "source": {
+    "label": "Pealim: Pronunciations of Hebrew",
+    "url": "https://www.pealim.com/articles/pronunciations-of-hebrew/"
+   },
+   "quote": "there is a more or less consistent standard of pronunciation"
+  },
+  {
+   "id": "doubling-gone",
+   "text": "The doubling dagesh is not pronounced in Modern Hebrew, so it needs no special sound.",
+   "source": {
+    "label": "Wikipedia: Niqqud",
+    "url": "https://en.wikipedia.org/wiki/Niqqud"
+   },
+   "quote": "acoustically and phonologically nonexistent in Modern Hebrew"
+  },
+  {
+   "id": "three-letters",
+   "text": "Only bet, kaf and pe change their sound with a dagesh; gimel, dalet and tav do not alternate.",
+   "source": {
+    "label": "Wikipedia: Modern Hebrew phonology",
+    "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology"
+   }
+  },
+  {
+   "id": "hard-g",
+   "text": "Gimel is always a hard g as in game.",
+   "source": {
+    "label": "Judaism 101: Guide to Transliteration",
+    "url": "https://jewfaq.org/translitguide.htm"
+   },
+   "quote": "Always a hard g as in game; never a soft g as in George."
+  }
+ ],
+ "pendingCitation": []
+}

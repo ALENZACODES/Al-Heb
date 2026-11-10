@@ -1,0 +1,29 @@
+# Service worker update QA: stale on-demand data after a version bump (observed, Chromium only)
+
+Date: 2026-11-04. Headless Chromium through Playwright, desktop-sized 390x844 viewport, `context.setOffline(true)` for offline. Not run in Firefox, WebKit or on a device.
+Method: the site was copied to a temp directory (index.html, offline.html, manifest.webmanifest, sw.js, src, data, assets/screens, assets/fonts, tools/build-precache.mjs), `build-precache` run there only (v1), served with `tools/serve.mjs`, installed, reloaded until controlled, on-demand files fetched twice through the worker, offline probe, back online, then files changed in the copy, precache rebuilt (v2), `registration.update()`, "Reload now" pressed. Repo files were not rebuilt; the temp copy was deleted.
+Files probed (sha-256 of the bytes the page received): `data/vocab/packs/vocab5k-tier-500.json` (6 records added, ranks shifted by 6), `data/vocab/index.json`, `data/audio/manifest.json`, `data/audio/manifest-words-sephardi.json`, `data/audio/summary.json`, `assets/screens/narrow-home.png` (4 bytes appended), `src/app.js` (comment appended), and `data/vocab/themes/index.json` (not changed, control).
+Classification by `build-precache`: summary.json and src/app.js precached; vocab/index.json, audio/manifest.json, themes/index.json, the png on demand; the tier pack and the word shard in neither list (runtime only).
+
+## Before the change to sw.js (original worker)
+- v1 install: caches `alef-shell-<v1>` and `alef-runtime-v1`. Offline probe in v1: all 8 files 200 with v1 bytes. summary.json was in the shell cache.
+- After v2: new worker installed and waited (`alef-shell-<v2>` created alongside), exactly 1 visible `#alef-update-banner` ("A new version of Aleph is ready ..."), still 1 after a second `update()`. While waiting, every file still returned v1 bytes. "Reload now": no banner afterwards, `alef-shell-<v1>` deleted, `alef-runtime-v1` kept.
+- Stale data served after the upgrade (first fetch): tier pack, vocab/index.json, audio/manifest.json, word shard and the png returned the OLD v1 bytes. Second fetch 2 s later: the word shard became v2, the tier pack, vocab/index.json, audio/manifest.json and the png were still v1. Offline after the upgrade: the same four files (tier pack, vocab/index.json, manifest.json, png) still v1. summary.json, src/app.js and the unchanged themes index were v2.
+- Cause seen in the cache listing: the old copy stayed in `alef-runtime-v1` (never versioned or pruned); the stale-while-revalidate branch wrote the fresh response into the new shell cache when the hit came from the runtime cache, but `caches.match` kept returning the older runtime entry. The cache-first media branch (png) never revalidates. The word shard became fresh only because its own branch writes back into the runtime cache.
+
+## Fix (sw.js)
+Runtime-cached files other than audio clips now go to `alef-data-<version>` (deleted on activate when the version differs); `alef-runtime-v1` is kept only for audio clips (cache first); on activate any non-audio entries left in `alef-runtime-v1` by an older worker are deleted; the generic branch writes back to the cache that holds the entry. Cost: after each release the learner's cached vocab shards, audio manifest, word shard and images are re-fetched on first use, so an on-demand file is not available offline until it has been opened once online after the update (the word shard is re-warmed by `warmShardAfterInstall` once the new worker controls the page; I did not check that step in this run).
+
+## After the change (same procedure, temp copy)
+- Banner: 1 visible before reload, 1 after a second `update()`, 0 after "Reload now". Caches while waiting: old shell, `alef-runtime-v1`, old `alef-data-<v1>`, new shell. After reload: `alef-runtime-v1`, `alef-shell-<v2>`, `alef-data-<v2>` only.
+- While waiting, the old worker still returned v1 bytes for the on-demand files. (Precached files such as src/app.js and summary.json are stale-while-revalidate inside the old worker and can show v2 bytes before the reload; seen in the browser test run, not judged.)
+- First fetch after the upgrade: all 8 files returned v2 bytes (tier pack with the 6 added records and shifted ranks, both audio manifests, the word shard, the png, app.js, summary.json). Same on the second fetch. Offline after the upgrade: all 8 v2.
+- localStorage: the same 5 keys with identical values before and after (including a marker key `alef:progress-qa`). Cache changes do not touch Web Storage; only that is claimed. No page errors.
+
+## Tests
+- Added `tests/pwa.update-data.browser.test.js` (browser tier; same procedure on a temp copy; asserts v1 baseline, one banner, on-demand files stay v1 while waiting, v2 on first fetch online and offline, one shell and one data cache, localStorage identical). It passed with the fix; it was not run against the original sw.js as a test (the original behaviour above is from the ad hoc script).
+- Added a case in `tests/sw.lifecycle.test.js` (activate drops the previous data cache and non-audio runtime entries, keeps audio clips).
+- Ran: sw.lifecycle, offline, store.safety, settings.update, pwa.manifest, pwa.backup and the new browser test: 73 passed, 0 failed. `tools/lighthouse/pwa-check.mjs --quick`: 23 ok, 0 FAIL. The full unit tier (`tools/test/run.mjs unit`) did not finish in the time available and was stopped, so it is not claimed. `scan.mjs --text` passed (tracked files only; the new test file and this doc are untracked and were not scanned).
+
+## Not checked
+Audio clip caching (none recorded), Range requests, multiple tabs, a second update arriving while one waits, cache-first behaviour for audio after a change, the busy-exercise guard, Firefox/WebKit, real devices. A same-version change (data changed without a precache rebuild) is still served stale-while-revalidate by design.

@@ -1,0 +1,1685 @@
+{
+ "schema": "alef-arcade-extra/1",
+ "status": "DRAFT: gendered nouns copied from data/vocab/words.json (dictionary gender tags); plurals and sentences are editorial, written for the arcade games; no native educator review yet.",
+ "gender": {
+  "m": [
+   {
+    "id": "h4aa6ad2a",
+    "he": "בֵּן",
+    "translit": "ben",
+    "en": "son",
+    "gender": "m"
+   },
+   {
+    "id": "h50cf3648",
+    "he": "יוֹם",
+    "translit": "yom",
+    "en": "day",
+    "gender": "m"
+   },
+   {
+    "id": "h9c8ddecf",
+    "he": "בַּיִת",
+    "translit": "bayit",
+    "en": "house",
+    "gender": "m"
+   },
+   {
+    "id": "h4692cd32",
+    "he": "יָם",
+    "translit": "yam",
+    "en": "sea",
+    "gender": "m"
+   },
+   {
+    "id": "hd4a691d3",
+    "he": "דָּבָר",
+    "translit": "davar",
+    "en": "thing",
+    "gender": "m"
+   },
+   {
+    "id": "hf1ccd0e6",
+    "he": "אֱלוֹהַּ",
+    "translit": "eloah",
+    "en": "a god",
+    "gender": "m"
+   },
+   {
+    "id": "h8f42d584",
+    "he": "זְמַן",
+    "translit": "zeman",
+    "en": "time",
+    "gender": "m"
+   },
+   {
+    "id": "h821319f2",
+    "he": "אָב",
+    "translit": "av",
+    "en": "father",
+    "gender": "m"
+   },
+   {
+    "id": "hf5a50e5d",
+    "he": "אִי",
+    "translit": "i",
+    "en": "an island",
+    "gender": "m"
+   },
+   {
+    "id": "h5c96df63",
+    "he": "מָן",
+    "translit": "man",
+    "en": "manna",
+    "gender": "m"
+   },
+   {
+    "id": "h65a05fb2",
+    "he": "שֵׁם",
+    "translit": "shem",
+    "en": "a name",
+    "gender": "m"
+   },
+   {
+    "id": "h020c4fa8",
+    "he": "עַם",
+    "translit": "am",
+    "en": "a nation, a people",
+    "gender": "m"
+   },
+   {
+    "id": "h1414a3a2",
+    "he": "עֶבֶד",
+    "translit": "eved",
+    "en": "a slave, a serf",
+    "gender": "m"
+   },
+   {
+    "id": "ha7545fff",
+    "he": "אָח",
+    "translit": "ach",
+    "en": "brother",
+    "gender": "m"
+   },
+   {
+    "id": "ha39cf3c9",
+    "he": "עוֹלָם",
+    "translit": "olam",
+    "en": "world",
+    "gender": "m"
+   },
+   {
+    "id": "h1301ecc3",
+    "he": "יֶלֶד",
+    "translit": "yeled",
+    "en": "child, a kid, a boy",
+    "gender": "m"
+   },
+   {
+    "id": "h0a70642a",
+    "he": "אַבָּא",
+    "translit": "aba",
+    "en": "father",
+    "gender": "m"
+   },
+   {
+    "id": "h8f6944f1",
+    "he": "רֶגַע",
+    "translit": "rega",
+    "en": "a moment",
+    "gender": "m"
+   },
+   {
+    "id": "h36fae7b2",
+    "he": "אֶדֶן",
+    "translit": "eden",
+    "en": "base, pedestal, socket",
+    "gender": "m"
+   },
+   {
+    "id": "habcfc77f",
+    "he": "חֹר",
+    "translit": "chor",
+    "en": "hole",
+    "gender": "m"
+   },
+   {
+    "id": "h4fed6814",
+    "he": "רֹאשׁ",
+    "translit": "rosh",
+    "en": "head",
+    "gender": "m"
+   },
+   {
+    "id": "hf5bee50d",
+    "he": "לַיְלָה",
+    "translit": "laylah",
+    "en": "night",
+    "gender": "m"
+   },
+   {
+    "id": "hc6cdec2b",
+    "he": "דּוֹד",
+    "translit": "dod",
+    "en": "uncle",
+    "gender": "m"
+   },
+   {
+    "id": "h6a0c1de1",
+    "he": "קֹדֶשׁ",
+    "translit": "kodesh",
+    "en": "sanctity, holiness",
+    "gender": "m"
+   },
+   {
+    "id": "h3c9f9b9b",
+    "he": "אֹהֶל",
+    "translit": "ohel",
+    "en": "tent",
+    "gender": "m"
+   },
+   {
+    "id": "hfe4ebf2c",
+    "he": "אָדָם",
+    "translit": "adam",
+    "en": "a man, a human",
+    "gender": "m"
+   },
+   {
+    "id": "h890d1505",
+    "he": "לֵב",
+    "translit": "lev",
+    "en": "heart",
+    "gender": "m"
+   },
+   {
+    "id": "hddb7aae9",
+    "he": "אָדוֹן",
+    "translit": "adon",
+    "en": "lord",
+    "gender": "m"
+   },
+   {
+    "id": "h6b853dd5",
+    "he": "אֱלֹהִים",
+    "translit": "elohim",
+    "en": "a god",
+    "gender": "m"
+   },
+   {
+    "id": "h5f11d31e",
+    "he": "טוּב",
+    "translit": "tuv",
+    "en": "goodness, virtue",
+    "gender": "m"
+   },
+   {
+    "id": "hc43effe9",
+    "he": "דָּם",
+    "translit": "dam",
+    "en": "blood",
+    "gender": "m"
+   },
+   {
+    "id": "h0073b076",
+    "he": "פַּרְעֹה",
+    "translit": "par'oh",
+    "en": "pharaoh",
+    "gender": "m"
+   },
+   {
+    "id": "h168cf034",
+    "he": "חֹדֶשׁ",
+    "translit": "chodesh",
+    "en": "month",
+    "gender": "m"
+   },
+   {
+    "id": "hb9aef784",
+    "he": "אֵל",
+    "translit": "el",
+    "en": "god",
+    "gender": "m"
+   },
+   {
+    "id": "h60b16793",
+    "he": "פֶּה",
+    "translit": "peh",
+    "en": "mouth",
+    "gender": "m"
+   },
+   {
+    "id": "h215beb3e",
+    "he": "כֶּסֶף",
+    "translit": "kesef",
+    "en": "silver",
+    "gender": "m"
+   },
+   {
+    "id": "h2d1e4a74",
+    "he": "סוֹף",
+    "translit": "sof",
+    "en": "an end, a finish",
+    "gender": "m"
+   },
+   {
+    "id": "h15d39df8",
+    "he": "עֹלָה",
+    "translit": "olah",
+    "en": "fully burnt offering",
+    "gender": "m"
+   },
+   {
+    "id": "h2b39dcf2",
+    "he": "בַּד",
+    "translit": "bad",
+    "en": "fabric, cloth, linen",
+    "gender": "m"
+   },
+   {
+    "id": "h21e009ad",
+    "he": "אַף",
+    "translit": "af",
+    "en": "nose",
+    "gender": "m"
+   },
+   {
+    "id": "hf22f36ee",
+    "he": "לֶחֶם",
+    "translit": "lechem",
+    "en": "bread",
+    "gender": "m"
+   },
+   {
+    "id": "hc7113076",
+    "he": "דַּבָּר",
+    "translit": "dabar",
+    "en": "leader",
+    "gender": "m"
+   },
+   {
+    "id": "hd2fac0d2",
+    "he": "עֵץ",
+    "translit": "etz",
+    "en": "tree",
+    "gender": "m"
+   },
+   {
+    "id": "h640d9686",
+    "he": "קוֹל",
+    "translit": "kol",
+    "en": "voice",
+    "gender": "m"
+   },
+   {
+    "id": "h72ac53a6",
+    "he": "צֹאן",
+    "translit": "tzon",
+    "en": "sheep, flock of sheep",
+    "gender": "m"
+   },
+   {
+    "id": "hf95173f3",
+    "he": "מִשְׁפָּט",
+    "translit": "mishpat",
+    "en": "a trial",
+    "gender": "m"
+   },
+   {
+    "id": "h0c96b2f5",
+    "he": "בָּחוּר",
+    "translit": "bachur",
+    "en": "guy, boy",
+    "gender": "m"
+   },
+   {
+    "id": "hfb819565",
+    "he": "רוּחַ",
+    "translit": "ruach",
+    "en": "wind, a wind",
+    "gender": "m"
+   },
+   {
+    "id": "h7439bf9d",
+    "he": "מְכָל",
+    "translit": "mekhol",
+    "en": "container, bin",
+    "gender": "m"
+   },
+   {
+    "id": "h386e6ad7",
+    "he": "קְרָב",
+    "translit": "kerav",
+    "en": "battle, war",
+    "gender": "m"
+   },
+   {
+    "id": "h2f9c8fe9",
+    "he": "זֶרַע",
+    "translit": "zera",
+    "en": "seed",
+    "gender": "m"
+   },
+   {
+    "id": "hea4f6fcc",
+    "he": "חֵן",
+    "translit": "chen",
+    "en": "charm, grace, likeability",
+    "gender": "m"
+   },
+   {
+    "id": "h5795e8db",
+    "he": "כֹּחַ",
+    "translit": "koach",
+    "en": "strength",
+    "gender": "m"
+   },
+   {
+    "id": "h729919fd",
+    "he": "נַעַר",
+    "translit": "na'ar",
+    "en": "non-infant child",
+    "gender": "m"
+   },
+   {
+    "id": "h44d68d1e",
+    "he": "חֹק",
+    "translit": "chok",
+    "en": "law, statute",
+    "gender": "m"
+   },
+   {
+    "id": "he1a5e616",
+    "he": "בֶּגֶד",
+    "translit": "beged",
+    "en": "clothing, garment",
+    "gender": "m"
+   },
+   {
+    "id": "he22b4a86",
+    "he": "שַׂר",
+    "translit": "sar",
+    "en": "captain, commander",
+    "gender": "m"
+   },
+   {
+    "id": "hf94d4d72",
+    "he": "אֵד",
+    "translit": "ed",
+    "en": "a vapour, a fume",
+    "gender": "m"
+   },
+   {
+    "id": "h9034f8b8",
+    "he": "מָוֶת",
+    "translit": "mavet",
+    "en": "death",
+    "gender": "m"
+   },
+   {
+    "id": "he9d6c9ab",
+    "he": "כַּר",
+    "translit": "kar",
+    "en": "cushion",
+    "gender": "m"
+   },
+   {
+    "id": "h69a35691",
+    "he": "פַּר",
+    "translit": "par",
+    "en": "bull, ox",
+    "gender": "m"
+   },
+   {
+    "id": "hc086f897",
+    "he": "מֹתֶק",
+    "translit": "motek",
+    "en": "sweetness",
+    "gender": "m"
+   },
+   {
+    "id": "h779cc60c",
+    "he": "מַטֶּה",
+    "translit": "mateh",
+    "en": "stick, staff, wand",
+    "gender": "m"
+   },
+   {
+    "id": "hb8cb40c1",
+    "he": "גִּדּוּל",
+    "translit": "gidul",
+    "en": "growing, growth",
+    "gender": "m"
+   },
+   {
+    "id": "h231c624a",
+    "he": "סֵפֶר",
+    "translit": "sefer",
+    "en": "book",
+    "gender": "m"
+   },
+   {
+    "id": "h1c9d2f5e",
+    "he": "יָחִיד",
+    "translit": "yachid",
+    "en": "individual",
+    "gender": "m"
+   },
+   {
+    "id": "he1477da0",
+    "he": "גֵּר",
+    "translit": "ger",
+    "en": "foreigner, stranger",
+    "gender": "m"
+   },
+   {
+    "id": "h5b57ed79",
+    "he": "בָּשָׂר",
+    "translit": "basar",
+    "en": "flesh, meat",
+    "gender": "m"
+   },
+   {
+    "id": "h8aa6404d",
+    "he": "אַיִל",
+    "translit": "ayil",
+    "en": "ram",
+    "gender": "m"
+   },
+   {
+    "id": "h277eae86",
+    "he": "עֹל",
+    "translit": "ol",
+    "en": "a yoke",
+    "gender": "m"
+   }
+  ],
+  "f": [
+   {
+    "id": "hd82a3079",
+    "he": "אֶרֶץ",
+    "translit": "eretz",
+    "en": "country, land",
+    "gender": "f"
+   },
+   {
+    "id": "h1a3574d3",
+    "he": "יָד",
+    "translit": "yad",
+    "en": "arm",
+    "gender": "f"
+   },
+   {
+    "id": "hf07c1580",
+    "he": "שָׁנָה",
+    "translit": "shanah",
+    "en": "year",
+    "gender": "f"
+   },
+   {
+    "id": "he3b1acbd",
+    "he": "עִיר",
+    "translit": "ir",
+    "en": "city",
+    "gender": "f"
+   },
+   {
+    "id": "h00fd9c4f",
+    "he": "פַּעַם",
+    "translit": "pa'am",
+    "en": "a time",
+    "gender": "f"
+   },
+   {
+    "id": "h9d6352ee",
+    "he": "עַיִן",
+    "translit": "ayin",
+    "en": "eye",
+    "gender": "f"
+   },
+   {
+    "id": "h788c5f0a",
+    "he": "עֶצֶם",
+    "translit": "etzem",
+    "en": "bone",
+    "gender": "f"
+   },
+   {
+    "id": "hb5913147",
+    "he": "נֶפֶשׁ",
+    "translit": "nefesh",
+    "en": "a soul, psyche",
+    "gender": "f"
+   },
+   {
+    "id": "h720b8d19",
+    "he": "אַמָּה",
+    "translit": "amah",
+    "en": "forearm",
+    "gender": "f"
+   },
+   {
+    "id": "hcb31fc0d",
+    "he": "בַּת",
+    "translit": "bat",
+    "en": "daughter",
+    "gender": "f"
+   },
+   {
+    "id": "h5ae20314",
+    "he": "דֶּרֶךְ",
+    "translit": "derekh",
+    "en": "a road, a path, a way",
+    "gender": "f"
+   },
+   {
+    "id": "hf1da5ea6",
+    "he": "אֵשׁ",
+    "translit": "esh",
+    "en": "fire",
+    "gender": "f"
+   },
+   {
+    "id": "h85ac8666",
+    "he": "שֵׁן",
+    "translit": "shen",
+    "en": "tooth",
+    "gender": "f"
+   },
+   {
+    "id": "hcfccb5de",
+    "he": "בְּעָיָה",
+    "translit": "be'ayah",
+    "en": "problem",
+    "gender": "f"
+   },
+   {
+    "id": "h1306c935",
+    "he": "אִמָּא",
+    "translit": "ima",
+    "en": "mother",
+    "gender": "f"
+   },
+   {
+    "id": "h4640fc14",
+    "he": "שָׁעָה",
+    "translit": "sha'ah",
+    "en": "hour",
+    "gender": "f"
+   },
+   {
+    "id": "h5385f0f3",
+    "he": "סִבָּה",
+    "translit": "sibah",
+    "en": "cause",
+    "gender": "f"
+   },
+   {
+    "id": "h9f3caed1",
+    "he": "מִשְׁפָּחָה",
+    "translit": "mishpachah",
+    "en": "family",
+    "gender": "f"
+   },
+   {
+    "id": "he945f31c",
+    "he": "חֶרֶב",
+    "translit": "cherev",
+    "en": "sword",
+    "gender": "f"
+   },
+   {
+    "id": "he53d1d1d",
+    "he": "אֶבֶן",
+    "translit": "even",
+    "en": "stone",
+    "gender": "f"
+   },
+   {
+    "id": "hd08812d6",
+    "he": "עֵת",
+    "translit": "et",
+    "en": "a time",
+    "gender": "f"
+   },
+   {
+    "id": "h6fd09fff",
+    "he": "דֵּעָה",
+    "translit": "de'ah",
+    "en": "opinion, point of view",
+    "gender": "f"
+   },
+   {
+    "id": "h39b463af",
+    "he": "בְּרִית",
+    "translit": "berit",
+    "en": "covenant, alliance",
+    "gender": "f"
+   },
+   {
+    "id": "h2d90f840",
+    "he": "אֲדָמָה",
+    "translit": "adamah",
+    "en": "earth, soil, land",
+    "gender": "f"
+   },
+   {
+    "id": "hdb3c45eb",
+    "he": "רֶגֶל",
+    "translit": "regel",
+    "en": "foot, leg",
+    "gender": "f"
+   },
+   {
+    "id": "hc444e8d9",
+    "he": "יְכֹלֶת",
+    "translit": "yekholet",
+    "en": "ability, capability, power",
+    "gender": "f"
+   },
+   {
+    "id": "hdf8bcf60",
+    "he": "תׇּכְנִית",
+    "translit": "tokhnit",
+    "en": "a program, a plan",
+    "gender": "f"
+   },
+   {
+    "id": "h08f064b2",
+    "he": "חַטָּאת",
+    "translit": "chatat",
+    "en": "a sin",
+    "gender": "f"
+   },
+   {
+    "id": "h16b7af50",
+    "he": "תּוֹרָה",
+    "translit": "torah",
+    "en": "instruction, teaching",
+    "gender": "f"
+   },
+   {
+    "id": "h5fc50b7a",
+    "he": "מְכוֹנִית",
+    "translit": "mekhonit",
+    "en": "car",
+    "gender": "f"
+   },
+   {
+    "id": "h6b636d7b",
+    "he": "אֲרוּחָה",
+    "translit": "aruchah",
+    "en": "meal",
+    "gender": "f"
+   },
+   {
+    "id": "he5c23387",
+    "he": "אֱמֶת",
+    "translit": "emet",
+    "en": "truth",
+    "gender": "f"
+   },
+   {
+    "id": "h75485886",
+    "he": "מְלָאכָה",
+    "translit": "melakhah",
+    "en": "sending, commission",
+    "gender": "f"
+   },
+   {
+    "id": "hbe4076c4",
+    "he": "כִי",
+    "translit": "khi",
+    "en": "chi",
+    "gender": "f"
+   },
+   {
+    "id": "h80d6f3f0",
+    "he": "פָּרָה",
+    "translit": "parah",
+    "en": "cow, heifer",
+    "gender": "f"
+   },
+   {
+    "id": "h95c52e9c",
+    "he": "מִלָּה",
+    "translit": "milah",
+    "en": "word",
+    "gender": "f"
+   },
+   {
+    "id": "hc0616a4b",
+    "he": "אֹזֶן",
+    "translit": "ozen",
+    "en": "ear",
+    "gender": "f"
+   },
+   {
+    "id": "h4646b41c",
+    "he": "כַּף",
+    "translit": "kaf",
+    "en": "palm, paw",
+    "gender": "f"
+   },
+   {
+    "id": "h7e5cc0c5",
+    "he": "עֲבוֹדָה",
+    "translit": "avodah",
+    "en": "worship, service",
+    "gender": "f"
+   },
+   {
+    "id": "h9324911c",
+    "he": "חָצֵר",
+    "translit": "chatzer",
+    "en": "yard, courtyard",
+    "gender": "f"
+   },
+   {
+    "id": "h08e1b712",
+    "he": "תְּמוּנָה",
+    "translit": "temunah",
+    "en": "photograph, photo, picture",
+    "gender": "f"
+   },
+   {
+    "id": "hb59c5cdb",
+    "he": "שִׂיחָה",
+    "translit": "sichah",
+    "en": "conversation",
+    "gender": "f"
+   },
+   {
+    "id": "h34d7be76",
+    "he": "שָׂפָה",
+    "translit": "safah",
+    "en": "lip",
+    "gender": "f"
+   },
+   {
+    "id": "hc1aff898",
+    "he": "רָחֵל",
+    "translit": "rachel",
+    "en": "ewe",
+    "gender": "f"
+   }
+  ]
+ },
+ "plurals": [
+  {
+   "he": "יֶלֶד",
+   "translit": "yeled",
+   "en": "boy",
+   "plural": "יְלָדִים",
+   "pluralTranslit": "yeladim",
+   "ending": "im"
+  },
+  {
+   "he": "יַלְדָּה",
+   "translit": "yaldah",
+   "en": "girl",
+   "plural": "יְלָדוֹת",
+   "pluralTranslit": "yeladot",
+   "ending": "ot"
+  },
+  {
+   "he": "סֵפֶר",
+   "translit": "sefer",
+   "en": "book",
+   "plural": "סְפָרִים",
+   "pluralTranslit": "sfarim",
+   "ending": "im"
+  },
+  {
+   "he": "בַּיִת",
+   "translit": "bayit",
+   "en": "house",
+   "plural": "בָּתִּים",
+   "pluralTranslit": "batim",
+   "ending": "im"
+  },
+  {
+   "he": "שֻׁלְחָן",
+   "translit": "shulchan",
+   "en": "table",
+   "plural": "שֻׁלְחָנוֹת",
+   "pluralTranslit": "shulchanot",
+   "ending": "ot"
+  },
+  {
+   "he": "כִּסֵּא",
+   "translit": "kise",
+   "en": "chair",
+   "plural": "כִּסְאוֹת",
+   "pluralTranslit": "kis'ot",
+   "ending": "ot"
+  },
+  {
+   "he": "חָתוּל",
+   "translit": "chatul",
+   "en": "cat",
+   "plural": "חֲתוּלִים",
+   "pluralTranslit": "chatulim",
+   "ending": "im"
+  },
+  {
+   "he": "כֶּלֶב",
+   "translit": "kelev",
+   "en": "dog",
+   "plural": "כְּלָבִים",
+   "pluralTranslit": "klavim",
+   "ending": "im"
+  },
+  {
+   "he": "מוֹרֶה",
+   "translit": "moreh",
+   "en": "teacher (m)",
+   "plural": "מוֹרִים",
+   "pluralTranslit": "morim",
+   "ending": "im"
+  },
+  {
+   "he": "מוֹרָה",
+   "translit": "morah",
+   "en": "teacher (f)",
+   "plural": "מוֹרוֹת",
+   "pluralTranslit": "morot",
+   "ending": "ot"
+  },
+  {
+   "he": "תַּלְמִיד",
+   "translit": "talmid",
+   "en": "student (m)",
+   "plural": "תַּלְמִידִים",
+   "pluralTranslit": "talmidim",
+   "ending": "im"
+  },
+  {
+   "he": "תַּלְמִידָה",
+   "translit": "talmidah",
+   "en": "student (f)",
+   "plural": "תַּלְמִידוֹת",
+   "pluralTranslit": "talmidot",
+   "ending": "ot"
+  },
+  {
+   "he": "יוֹם",
+   "translit": "yom",
+   "en": "day",
+   "plural": "יָמִים",
+   "pluralTranslit": "yamim",
+   "ending": "im"
+  },
+  {
+   "he": "שָׁנָה",
+   "translit": "shanah",
+   "en": "year",
+   "plural": "שָׁנִים",
+   "pluralTranslit": "shanim",
+   "ending": "im"
+  },
+  {
+   "he": "עִיר",
+   "translit": "ir",
+   "en": "city",
+   "plural": "עָרִים",
+   "pluralTranslit": "arim",
+   "ending": "im"
+  },
+  {
+   "he": "אִישׁ",
+   "translit": "ish",
+   "en": "man",
+   "plural": "אֲנָשִׁים",
+   "pluralTranslit": "anashim",
+   "ending": "im"
+  },
+  {
+   "he": "אִשָּׁה",
+   "translit": "ishah",
+   "en": "woman",
+   "plural": "נָשִׁים",
+   "pluralTranslit": "nashim",
+   "ending": "im"
+  },
+  {
+   "he": "חָבֵר",
+   "translit": "chaver",
+   "en": "friend (m)",
+   "plural": "חֲבֵרִים",
+   "pluralTranslit": "chaverim",
+   "ending": "im"
+  },
+  {
+   "he": "חֲבֵרָה",
+   "translit": "chaverah",
+   "en": "friend (f)",
+   "plural": "חֲבֵרוֹת",
+   "pluralTranslit": "chaverot",
+   "ending": "ot"
+  },
+  {
+   "he": "מִלָּה",
+   "translit": "milah",
+   "en": "word",
+   "plural": "מִלִּים",
+   "pluralTranslit": "milim",
+   "ending": "im"
+  },
+  {
+   "he": "דֶּלֶת",
+   "translit": "delet",
+   "en": "door",
+   "plural": "דְּלָתוֹת",
+   "pluralTranslit": "dlatot",
+   "ending": "ot"
+  },
+  {
+   "he": "חַלּוֹן",
+   "translit": "chalon",
+   "en": "window",
+   "plural": "חַלּוֹנוֹת",
+   "pluralTranslit": "chalonot",
+   "ending": "ot"
+  },
+  {
+   "he": "אוֹטוֹבּוּס",
+   "translit": "otobus",
+   "en": "bus",
+   "plural": "אוֹטוֹבּוּסִים",
+   "pluralTranslit": "otobusim",
+   "ending": "im"
+  },
+  {
+   "he": "מְכוֹנִית",
+   "translit": "mechonit",
+   "en": "car",
+   "plural": "מְכוֹנִיּוֹת",
+   "pluralTranslit": "mechoniyot",
+   "ending": "ot"
+  },
+  {
+   "he": "תַּפּוּחַ",
+   "translit": "tapuach",
+   "en": "apple",
+   "plural": "תַּפּוּחִים",
+   "pluralTranslit": "tapuchim",
+   "ending": "im"
+  },
+  {
+   "he": "בָּנָנָה",
+   "translit": "bananah",
+   "en": "banana",
+   "plural": "בָּנָנוֹת",
+   "pluralTranslit": "bananot",
+   "ending": "ot"
+  },
+  {
+   "he": "עַגְבָנִיָּה",
+   "translit": "agvaniyah",
+   "en": "tomato",
+   "plural": "עַגְבָנִיּוֹת",
+   "pluralTranslit": "agvaniyot",
+   "ending": "ot"
+  },
+  {
+   "he": "בֵּיצָה",
+   "translit": "beitzah",
+   "en": "egg",
+   "plural": "בֵּיצִים",
+   "pluralTranslit": "beitzim",
+   "ending": "im"
+  },
+  {
+   "he": "כּוֹס",
+   "translit": "kos",
+   "en": "glass",
+   "plural": "כּוֹסוֹת",
+   "pluralTranslit": "kosot",
+   "ending": "ot"
+  },
+  {
+   "he": "צַלַּחַת",
+   "translit": "tzalachat",
+   "en": "plate",
+   "plural": "צַלָּחוֹת",
+   "pluralTranslit": "tzalachot",
+   "ending": "ot"
+  },
+  {
+   "he": "מִטָּה",
+   "translit": "mitah",
+   "en": "bed",
+   "plural": "מִטּוֹת",
+   "pluralTranslit": "mitot",
+   "ending": "ot"
+  },
+  {
+   "he": "מַפְתֵּחַ",
+   "translit": "mafteach",
+   "en": "key",
+   "plural": "מַפְתְּחוֹת",
+   "pluralTranslit": "maftechot",
+   "ending": "ot"
+  },
+  {
+   "he": "פֶּרַח",
+   "translit": "perach",
+   "en": "flower",
+   "plural": "פְּרָחִים",
+   "pluralTranslit": "prachim",
+   "ending": "im"
+  },
+  {
+   "he": "עֵץ",
+   "translit": "etz",
+   "en": "tree",
+   "plural": "עֵצִים",
+   "pluralTranslit": "etzim",
+   "ending": "im"
+  },
+  {
+   "he": "דָּג",
+   "translit": "dag",
+   "en": "fish",
+   "plural": "דָּגִים",
+   "pluralTranslit": "dagim",
+   "ending": "im"
+  },
+  {
+   "he": "צִפּוֹר",
+   "translit": "tzipor",
+   "en": "bird",
+   "plural": "צִפֳּרִים",
+   "pluralTranslit": "tziporim",
+   "ending": "im"
+  },
+  {
+   "he": "שִׁיר",
+   "translit": "shir",
+   "en": "song",
+   "plural": "שִׁירִים",
+   "pluralTranslit": "shirim",
+   "ending": "im"
+  },
+  {
+   "he": "תְּמוּנָה",
+   "translit": "tmunah",
+   "en": "picture",
+   "plural": "תְּמוּנוֹת",
+   "pluralTranslit": "tmunot",
+   "ending": "ot"
+  },
+  {
+   "he": "שָׁעָה",
+   "translit": "sha'ah",
+   "en": "hour",
+   "plural": "שָׁעוֹת",
+   "pluralTranslit": "sha'ot",
+   "ending": "ot"
+  },
+  {
+   "he": "רְחוֹב",
+   "translit": "rechov",
+   "en": "street",
+   "plural": "רְחוֹבוֹת",
+   "pluralTranslit": "rechovot",
+   "ending": "ot"
+  },
+  {
+   "he": "מִשְׁפָּחָה",
+   "translit": "mishpachah",
+   "en": "family",
+   "plural": "מִשְׁפָּחוֹת",
+   "pluralTranslit": "mishpachot",
+   "ending": "ot"
+  },
+  {
+   "he": "חֲנוּת",
+   "translit": "chanut",
+   "en": "shop",
+   "plural": "חֲנוּיוֹת",
+   "pluralTranslit": "chanuyot",
+   "ending": "ot"
+  },
+  {
+   "he": "לַיְלָה",
+   "translit": "lailah",
+   "en": "night",
+   "plural": "לֵילוֹת",
+   "pluralTranslit": "leilot",
+   "ending": "ot"
+  },
+  {
+   "he": "שָׁבוּעַ",
+   "translit": "shavu'a",
+   "en": "week",
+   "plural": "שָׁבוּעוֹת",
+   "pluralTranslit": "shavu'ot",
+   "ending": "ot"
+  },
+  {
+   "he": "אוֹת",
+   "translit": "ot",
+   "en": "letter (of the alphabet)",
+   "plural": "אוֹתִיּוֹת",
+   "pluralTranslit": "otiyot",
+   "ending": "ot"
+  },
+  {
+   "he": "נֵר",
+   "translit": "ner",
+   "en": "candle",
+   "plural": "נֵרוֹת",
+   "pluralTranslit": "nerot",
+   "ending": "ot"
+  },
+  {
+   "he": "חַג",
+   "translit": "chag",
+   "en": "holiday",
+   "plural": "חַגִּים",
+   "pluralTranslit": "chagim",
+   "ending": "im"
+  },
+  {
+   "he": "מָקוֹם",
+   "translit": "makom",
+   "en": "place",
+   "plural": "מְקוֹמוֹת",
+   "pluralTranslit": "mekomot",
+   "ending": "ot"
+  }
+ ],
+ "sentences": [
+  {
+   "he": "דָּנָה רוֹצָה קָפֶה.",
+   "en": "Dana wants coffee.",
+   "words": [
+    "דָּנָה",
+    "רוֹצָה",
+    "קָפֶה"
+   ]
+  },
+  {
+   "he": "הַקָּפֶה בַּפִּנָּה.",
+   "en": "The café is on the corner.",
+   "words": [
+    "הַקָּפֶה",
+    "בַּפִּנָּה"
+   ]
+  },
+  {
+   "he": "אֵין לִי זְמַן.",
+   "en": "I do not have time.",
+   "words": [
+    "אֵין",
+    "לִי",
+    "זְמַן"
+   ]
+  },
+  {
+   "he": "יֵשׁ לִי חָתוּל.",
+   "en": "I have a cat.",
+   "words": [
+    "יֵשׁ",
+    "לִי",
+    "חָתוּל"
+   ]
+  },
+  {
+   "he": "הַכֶּלֶב רוֹצֶה לָלֶכֶת.",
+   "en": "The dog wants to go out.",
+   "words": [
+    "הַכֶּלֶב",
+    "רוֹצֶה",
+    "לָלֶכֶת"
+   ]
+  },
+  {
+   "he": "הֵם רוֹאִים אֶת הַשֶּׁמֶשׁ.",
+   "en": "They see the sun.",
+   "words": [
+    "הֵם",
+    "רוֹאִים",
+    "אֶת",
+    "הַשֶּׁמֶשׁ"
+   ]
+  },
+  {
+   "he": "הִיא יוֹשֶׁבֶת לְיַד הַחַלּוֹן.",
+   "en": "She sits by the window.",
+   "words": [
+    "הִיא",
+    "יוֹשֶׁבֶת",
+    "לְיַד",
+    "הַחַלּוֹן"
+   ]
+  },
+  {
+   "he": "הוּא שׁוֹתֶה קָפֶה בַּמִּרְפֶּסֶת.",
+   "en": "He drinks coffee on the balcony.",
+   "words": [
+    "הוּא",
+    "שׁוֹתֶה",
+    "קָפֶה",
+    "בַּמִּרְפֶּסֶת"
+   ]
+  },
+  {
+   "he": "אֲנִי לֹא מַכִּיר אוֹתוֹ.",
+   "en": "I do not know him.",
+   "words": [
+    "אֲנִי",
+    "לֹא",
+    "מַכִּיר",
+    "אוֹתוֹ"
+   ]
+  },
+  {
+   "he": "הַשָּׁכֵן פּוֹתֵחַ אֶת הַדֶּלֶת.",
+   "en": "The neighbour opens the door.",
+   "words": [
+    "הַשָּׁכֵן",
+    "פּוֹתֵחַ",
+    "אֶת",
+    "הַדֶּלֶת"
+   ]
+  },
+  {
+   "he": "תָּמָר נוֹסַעַת לְלוֹנְדוֹן.",
+   "en": "Tamar is flying to London.",
+   "words": [
+    "תָּמָר",
+    "נוֹסַעַת",
+    "לְלוֹנְדוֹן"
+   ]
+  },
+  {
+   "he": "הַתִּיק כָּבֵד מְאוֹד.",
+   "en": "The bag is very heavy.",
+   "words": [
+    "הַתִּיק",
+    "כָּבֵד",
+    "מְאוֹד"
+   ]
+  },
+  {
+   "he": "הוּא לֹא יוֹדֵעַ מָה לוֹמַר.",
+   "en": "He does not know what to say.",
+   "words": [
+    "הוּא",
+    "לֹא",
+    "יוֹדֵעַ",
+    "מָה",
+    "לוֹמַר"
+   ]
+  },
+  {
+   "he": "סָבְתָא מְבַשֶּׁלֶת מָרָק.",
+   "en": "Grandma cooks soup.",
+   "words": [
+    "סָבְתָא",
+    "מְבַשֶּׁלֶת",
+    "מָרָק"
+   ]
+  },
+  {
+   "he": "זֶה הַמָּרָק הֲכִי טוֹב.",
+   "en": "This is the best soup.",
+   "words": [
+    "זֶה",
+    "הַמָּרָק",
+    "הֲכִי",
+    "טוֹב"
+   ]
+  },
+  {
+   "he": "הִיא שׁוֹאֶלֶת אִישׁ זָקֵן.",
+   "en": "She asks an old man.",
+   "words": [
+    "הִיא",
+    "שׁוֹאֶלֶת",
+    "אִישׁ",
+    "זָקֵן"
+   ]
+  },
+  {
+   "he": "הַטֶּלֶפוֹן הֶחָדָשׁ יָפֶה.",
+   "en": "The new phone is beautiful.",
+   "words": [
+    "הַטֶּלֶפוֹן",
+    "הֶחָדָשׁ",
+    "יָפֶה"
+   ]
+  },
+  {
+   "he": "יָעֵל מַתְחִילָה לַעֲבֹד.",
+   "en": "Yael starts work.",
+   "words": [
+    "יָעֵל",
+    "מַתְחִילָה",
+    "לַעֲבֹד"
+   ]
+  },
+  {
+   "he": "הַלַּיְלָה שָׁקֵט מְאוֹד.",
+   "en": "The night is very quiet.",
+   "words": [
+    "הַלַּיְלָה",
+    "שָׁקֵט",
+    "מְאוֹד"
+   ]
+  },
+  {
+   "he": "שִׁירָה רוֹצָה גַּן עַל הַגַּג.",
+   "en": "Shira wants a garden on the roof.",
+   "words": [
+    "שִׁירָה",
+    "רוֹצָה",
+    "גַּן",
+    "עַל",
+    "הַגַּג"
+   ]
+  },
+  {
+   "he": "הוּא הוֹלֵךְ לָרוֹפְאָה.",
+   "en": "He goes to the doctor.",
+   "words": [
+    "הוּא",
+    "הוֹלֵךְ",
+    "לָרוֹפְאָה"
+   ]
+  },
+  {
+   "he": "כֻּלָּם קוֹנִים בַּשּׁוּק.",
+   "en": "Everyone is buying at the market.",
+   "words": [
+    "כֻּלָּם",
+    "קוֹנִים",
+    "בַּשּׁוּק"
+   ]
+  },
+  {
+   "he": "הַחֲבֵרִים בָּאִים לַיָּם.",
+   "en": "The friends come to the sea.",
+   "words": [
+    "הַחֲבֵרִים",
+    "בָּאִים",
+    "לַיָּם"
+   ]
+  },
+  {
+   "he": "יֵשׁ גֶּשֶׁם בִּפְנִים.",
+   "en": "There is rain inside.",
+   "words": [
+    "יֵשׁ",
+    "גֶּשֶׁם",
+    "בִּפְנִים"
+   ]
+  },
+  {
+   "he": "הָאוֹטוֹ לֹא זָז.",
+   "en": "The car does not move.",
+   "words": [
+    "הָאוֹטוֹ",
+    "לֹא",
+    "זָז"
+   ]
+  },
+  {
+   "he": "הָאִישׁ שָׁר בָּאוֹטוֹ.",
+   "en": "The man sings in the car.",
+   "words": [
+    "הָאִישׁ",
+    "שָׁר",
+    "בָּאוֹטוֹ"
+   ]
+  },
+  {
+   "he": "הִיא קוֹרֵאת אֶת הַמִּכְתָּב לְאַט.",
+   "en": "She reads the letter slowly.",
+   "words": [
+    "הִיא",
+    "קוֹרֵאת",
+    "אֶת",
+    "הַמִּכְתָּב",
+    "לְאַט"
+   ]
+  },
+  {
+   "he": "דָּוִד הוֹלֵךְ לַיָּם לְבַד.",
+   "en": "David goes to the sea alone.",
+   "words": [
+    "דָּוִד",
+    "הוֹלֵךְ",
+    "לַיָּם",
+    "לְבַד"
+   ]
+  },
+  {
+   "he": "הַנַּהָג שׁוֹתֵק.",
+   "en": "The driver is silent.",
+   "words": [
+    "הַנַּהָג",
+    "שׁוֹתֵק"
+   ]
+  },
+  {
+   "he": "מַארְק לוֹמֵד עִבְרִית כָּל יוֹם.",
+   "en": "Mark studies Hebrew every day.",
+   "words": [
+    "מַארְק",
+    "לוֹמֵד",
+    "עִבְרִית",
+    "כָּל",
+    "יוֹם"
+   ]
+  },
+  {
+   "he": "הוּא מֵבִין מִלָּה אַחַת.",
+   "en": "He understands one word.",
+   "words": [
+    "הוּא",
+    "מֵבִין",
+    "מִלָּה",
+    "אַחַת"
+   ]
+  },
+  {
+   "he": "הַזָּקֵן קוֹרֵא עִתּוֹן.",
+   "en": "The old man reads a newspaper.",
+   "words": [
+    "הַזָּקֵן",
+    "קוֹרֵא",
+    "עִתּוֹן"
+   ]
+  },
+  {
+   "he": "הוּא קוֹנֶה סֵפֶר יָשָׁן.",
+   "en": "He buys an old book.",
+   "words": [
+    "הוּא",
+    "קוֹנֶה",
+    "סֵפֶר",
+    "יָשָׁן"
+   ]
+  },
+  {
+   "he": "הַמַּחְשֵׁב לֹא עוֹבֵד.",
+   "en": "The computer is not working.",
+   "words": [
+    "הַמַּחְשֵׁב",
+    "לֹא",
+    "עוֹבֵד"
+   ]
+  },
+  {
+   "he": "אִמָּא יוֹשֶׁבֶת עַל הָרִצְפָּה.",
+   "en": "Mom sits on the floor.",
+   "words": [
+    "אִמָּא",
+    "יוֹשֶׁבֶת",
+    "עַל",
+    "הָרִצְפָּה"
+   ]
+  },
+  {
+   "he": "הֵם רוֹקְדִים בְּיַחַד.",
+   "en": "They dance together.",
+   "words": [
+    "הֵם",
+    "רוֹקְדִים",
+    "בְּיַחַד"
+   ]
+  },
+  {
+   "he": "אֵין קְלִיטָה בַּמִּדְבָּר.",
+   "en": "There is no signal in the desert.",
+   "words": [
+    "אֵין",
+    "קְלִיטָה",
+    "בַּמִּדְבָּר"
+   ]
+  },
+  {
+   "he": "הִיא לֹא עוֹצֶרֶת.",
+   "en": "She does not stop.",
+   "words": [
+    "הִיא",
+    "לֹא",
+    "עוֹצֶרֶת"
+   ]
+  },
+  {
+   "he": "הֵם מַזְמִינִים פִּיצָה.",
+   "en": "They order pizza.",
+   "words": [
+    "הֵם",
+    "מַזְמִינִים",
+    "פִּיצָה"
+   ]
+  },
+  {
+   "he": "הַתְּמוּנָה חוֹזֶרֶת הַבַּיְתָה.",
+   "en": "The photo goes home.",
+   "words": [
+    "הַתְּמוּנָה",
+    "חוֹזֶרֶת",
+    "הַבַּיְתָה"
+   ]
+  },
+  {
+   "he": "אַבְרָהָם מְכִין לֶחֶם.",
+   "en": "Avraham makes bread.",
+   "words": [
+    "אַבְרָהָם",
+    "מְכִין",
+    "לֶחֶם"
+   ]
+  },
+  {
+   "he": "אֲנִי שׁוֹלַחַת לְךָ חֲבִילָה.",
+   "en": "I am sending you a package.",
+   "words": [
+    "אֲנִי",
+    "שׁוֹלַחַת",
+    "לְךָ",
+    "חֲבִילָה"
+   ]
+  },
+  {
+   "he": "הַיְּלָדִים בַּחוּץ.",
+   "en": "The children are outside.",
+   "words": [
+    "הַיְּלָדִים",
+    "בַּחוּץ"
+   ]
+  },
+  {
+   "he": "הָרַכֶּבֶת מְלֵאָה.",
+   "en": "The train is full.",
+   "words": [
+    "הָרַכֶּבֶת",
+    "מְלֵאָה"
+   ]
+  },
+  {
+   "he": "כֻּלָּם מִסְתַּכְּלִים עַל הַיָּם.",
+   "en": "Everyone looks at the sea.",
+   "words": [
+    "כֻּלָּם",
+    "מִסְתַּכְּלִים",
+    "עַל",
+    "הַיָּם"
+   ]
+  },
+  {
+   "he": "יוֹם רִאשׁוֹן הוּא יוֹם עֲבוֹדָה.",
+   "en": "Sunday is a workday.",
+   "words": [
+    "יוֹם",
+    "רִאשׁוֹן",
+    "הוּא",
+    "יוֹם",
+    "עֲבוֹדָה"
+   ]
+  },
+  {
+   "he": "הוּא מְחַפֵּשׂ עֲבוֹדָה.",
+   "en": "He is looking for a job.",
+   "words": [
+    "הוּא",
+    "מְחַפֵּשׂ",
+    "עֲבוֹדָה"
+   ]
+  },
+  {
+   "he": "הִיא טוֹעֶמֶת אֶת הַחוּמוּס.",
+   "en": "She tastes the hummus.",
+   "words": [
+    "הִיא",
+    "טוֹעֶמֶת",
+    "אֶת",
+    "הַחוּמוּס"
+   ]
+  },
+  {
+   "he": "הַכֹּל בִּפְנִים.",
+   "en": "Everything is inside.",
+   "words": [
+    "הַכֹּל",
+    "בִּפְנִים"
+   ]
+  },
+  {
+   "he": "הָעִיר לֹא יְשֵׁנָה.",
+   "en": "The city does not sleep.",
+   "words": [
+    "הָעִיר",
+    "לֹא",
+    "יְשֵׁנָה"
+   ]
+  },
+  {
+   "he": "הַיָּם לֹא אוֹמֵר כְּלוּם.",
+   "en": "The sea says nothing.",
+   "words": [
+    "הַיָּם",
+    "לֹא",
+    "אוֹמֵר",
+    "כְּלוּם"
+   ]
+  },
+  {
+   "he": "הוּא עָשָׂה הַרְבֵּה טְעוּיוֹת.",
+   "en": "He made many mistakes.",
+   "words": [
+    "הוּא",
+    "עָשָׂה",
+    "הַרְבֵּה",
+    "טְעוּיוֹת"
+   ]
+  }
+ ]
+}

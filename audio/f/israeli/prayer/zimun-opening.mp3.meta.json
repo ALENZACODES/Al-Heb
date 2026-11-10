@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "רַבּוֹתַי נְבָרֵךְ׃ יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
+ "inputSha256": "cd43d98b36f045c57c0f4f53a10a8a510f19bdd0f8bcb198f166c7a8ee161022",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "רַבּוֹתַי נְבָרֵךְ׃ יְהִי שֵׁם אֲדֹנָי מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/zimun-opening-w1.mp3",
+  "audio/f/israeli/word/zimun-opening-w2.mp3",
+  "audio/f/israeli/word/zimun-opening-w3.mp3",
+  "audio/f/israeli/word/h65a05fb2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/zimun-opening-w6.mp3",
+  "audio/f/israeli/word/zimun-opening-w7.mp3",
+  "audio/f/israeli/word/zimun-opening-w8.mp3"
+ ]
+}

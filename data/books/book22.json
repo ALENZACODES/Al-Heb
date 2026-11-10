@@ -1,0 +1,177 @@
+{
+ "id": "book22",
+ "titleHe": "בַּבַּנְק",
+ "titleTranslit": "Ba-Bank",
+ "titleEn": "At the Bank",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הַבַּנְק.",
+   "translit": "Ha-bank.",
+   "en": "The bank.",
+   "img": "assets/books/book22/BOOK22_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p01.mp3",
+    "m": "audio/m/israeli/book/book22-p01.mp3"
+   },
+   "illustration": "a bank branch with glass doors and a ticket machine",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "שִׁירָה לוֹקַחַת מִסְפָּר.",
+   "translit": "Shira lokachat mispar.",
+   "en": "Shira takes a number.",
+   "img": "assets/books/book22/BOOK22_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p02.mp3",
+    "m": "audio/m/israeli/book/book22-p02.mp3"
+   },
+   "illustration": "a hand pulling a paper ticket: 87",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "מִסְפָּר שְׁמוֹנִים וָשֶׁבַע.",
+   "translit": "Mispar shmonim va-sheva.",
+   "en": "Number eighty-seven.",
+   "img": "assets/books/book22/BOOK22_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p03.mp3",
+    "m": "audio/m/israeli/book/book22-p03.mp3"
+   },
+   "illustration": "the ticket in her hand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "עַכְשָׁו: עֶשְׂרִים.",
+   "translit": "Achshav: esrim.",
+   "en": "Now: twenty.",
+   "img": "assets/books/book22/BOOK22_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p04.mp3",
+    "m": "audio/m/israeli/book/book22-p04.mp3"
+   },
+   "illustration": "the display board showing 20",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "שִׁירָה יוֹשֶׁבֶת.",
+   "translit": "Shira yoshevet.",
+   "en": "Shira sits.",
+   "img": "assets/books/book22/BOOK22_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p05.mp3",
+    "m": "audio/m/israeli/book/book22-p05.mp3"
+   },
+   "illustration": "rows of chairs, people waiting, a child drawing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "שִׁירָה קוֹרֵאת.",
+   "translit": "Shira koret.",
+   "en": "Shira reads.",
+   "img": "assets/books/book22/BOOK22_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p06.mp3",
+    "m": "audio/m/israeli/book/book22-p06.mp3"
+   },
+   "illustration": "the woman reading a paperback",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "שִׁירָה יְשֵׁנָה.",
+   "translit": "Shira yeshenah.",
+   "en": "Shira sleeps.",
+   "img": "assets/books/book22/BOOK22_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p07.mp3",
+    "m": "audio/m/israeli/book/book22-p07.mp3"
+   },
+   "illustration": "her head tilted, book on her lap",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"שְׁמוֹנִים וָשֶׁבַע!\"",
+   "translit": "\"Shmonim va-sheva!\"",
+   "en": "\"Eighty-seven!\"",
+   "img": "assets/books/book22/BOOK22_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p08.mp3",
+    "m": "audio/m/israeli/book/book22-p08.mp3"
+   },
+   "illustration": "the board flashing 87, a clerk calling out",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "שִׁירָה קָמָה מַהֵר.",
+   "translit": "Shira kamah maher.",
+   "en": "Shira gets up fast.",
+   "img": "assets/books/book22/BOOK22_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p09.mp3",
+    "m": "audio/m/israeli/book/book22-p09.mp3"
+   },
+   "illustration": "the woman jolting awake, book falling",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"שָׁלוֹם, אֲנִי רוֹצָה...\"",
+   "translit": "\"Shalom, ani rotzah...\"",
+   "en": "\"Hello, I want...\"",
+   "img": "assets/books/book22/BOOK22_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p10.mp3",
+    "m": "audio/m/israeli/book/book22-p10.mp3"
+   },
+   "illustration": "the woman at the counter, the clerk smiling",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"סְלִיחָה, הַמַּחְשֵׁב לֹא עוֹבֵד.\"",
+   "translit": "\"Slichah, ha-machshev lo oved.\"",
+   "en": "\"Sorry, the computer isn't working.\"",
+   "img": "assets/books/book22/BOOK22_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p11.mp3",
+    "m": "audio/m/israeli/book/book22-p11.mp3"
+   },
+   "illustration": "the clerk pointing at a frozen screen",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "שִׁירָה לוֹקַחַת מִסְפָּר.",
+   "translit": "Shira lokachat mispar.",
+   "en": "Shira takes a number.",
+   "img": "assets/books/book22/BOOK22_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book22-p12.mp3",
+    "m": "audio/m/israeli/book/book22-p12.mp3"
+   },
+   "illustration": "the woman pulling a fresh blank ticket from the dispenser, deadpan",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

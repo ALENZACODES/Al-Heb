@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 768" width="512" height="768" role="img" aria-label="placeholder for BRAND_cover_b">
+<rect width="512" height="768" fill="#F6F1E7"/>
+<rect x="26" y="26" width="460" height="716" rx="14" fill="none" stroke="#B0373B" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="256" y="380" text-anchor="middle" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="22" fill="#2B2B2B">BRAND_cover_b</text>
+<text x="256" y="412" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#B0373B">PLACEHOLDER</text>
+</svg>

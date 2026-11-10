@@ -1,0 +1,63 @@
+{
+  "_note": "TTS list prices used by tools/audio/cost_plan.mjs. Every row says where it came from and whether it was actually seen on a fetched page during the lane-4 round-2 session (2026-11-03). verified:true means the figure appeared on the cited page/API response that day; it does NOT mean the quote is what a contract would charge (taxes, currency, region, enterprise discounts, free-tier resets are not modelled). No live TTS API was called to produce this file.",
+  "fetchedAt": "2026-11-03",
+  "providers": {
+    "azure": {
+      "label": "Azure AI Speech (Foundry Tools), text to speech",
+      "hebrewVoices": { "m": "he-IL-AvriNeural", "f": "he-IL-HilaNeural", "verified": false, "note": "Voice names come from the project notes; not re-checked against Microsoft's voice list this session." },
+      "rows": [
+        {
+          "id": "neural", "label": "Neural (standard) real-time", "usdPerMillionChars": 15, "verified": true,
+          "source": "https://prices.azure.com/api/retail/prices (Azure Retail Prices REST API; filter serviceName eq 'Foundry Tools', meterName contains 'Neural', armRegionName eq 'eastus', USD)",
+          "evidence": "Item: productName 'Azure Speech', meterName 'S1 Neural Text To Speech Characters', unitOfMeasure '1M', retailPrice 15.0, effectiveStartDate 2024-02-01. Also 'Emb Neural Text to Speech Characters' 15.0 effective 2026-11-01.",
+          "caveat": "That he-IL-AvriNeural / HilaNeural are billed under this S1 Neural meter is inferred, not read from a page. The retail API does not name voices."
+        },
+        {
+          "id": "neural-hd", "label": "Neural HD", "usdPerMillionChars": 22, "verified": true,
+          "source": "https://prices.azure.com/api/retail/prices (same query)",
+          "evidence": "meterName 'Neural HD Text to Speech Characters', unitOfMeasure '1M', retailPrice 22.0, effectiveStartDate 2026-03-01.",
+          "caveat": "Whether any he-IL voice exists in the HD family is not verified."
+        }
+      ],
+      "freeTier": { "charsPerMonth": 500000, "verified": true, "source": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/", "evidence": "Page text: 'Current F0 tier: Neural | 0.5 million characters free per month'. The same fetch rendered every price cell as '$-' ('Pricing is not available in the selected region'), so the page itself gave no USD prices; the USD figures above come from the Retail Prices API." },
+      "charCounting": { "verified": false, "note": "How Azure counts combining niqqud marks and SSML tags was not confirmed on a fetched page. The plan shows both with-niqqud and letters-only counts." }
+    },
+    "google": {
+      "label": "Google Cloud Text-to-Speech",
+      "hebrewVoices": { "m": "he-IL-Chirp3-HD-Charon", "f": "he-IL-Chirp3-HD-Kore", "verified": false, "note": "Voice names from the project notes (arbitrary starting picks). Which voice types offer he-IL was not re-verified; the Chirp 3 HD docs page (per the evaluation protocol) lists he-IL with custom pronunciation and pause control NOT available." },
+      "rows": [
+        { "id": "chirp3-hd", "label": "Chirp 3: HD voices", "usdPerMillionChars": 30, "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'Chirp 3: HD voices | 0 to 1 million characters | US$0.00003 per character (US$30 per 1 million characters)'", "freeCharsPerMonth": 1000000 },
+        { "id": "wavenet", "label": "WaveNet voices", "usdPerMillionChars": 4, "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'WaveNet voices | 0 to 4 million characters | US$0.000004 per character (US$4per 1 million characters)'", "freeCharsPerMonth": 4000000, "caveat": "Whether WaveNet has Hebrew voices that suit this use was not verified this session (the evaluation protocol lists Wavenet B/D (m), A/C (f) from the notes)." },
+        { "id": "neural2", "label": "Neural2 voices", "usdPerMillionChars": 16, "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'Neural2 voices | 0 to 1 million characters | US$0.000016 per character (US$16 per 1 million characters)'", "freeCharsPerMonth": 1000000, "caveat": "Hebrew availability for Neural2 not verified." }
+      ],
+      "charCounting": { "verified": true, "source": "https://cloud.google.com/text-to-speech/pricing", "evidence": "'The total number of characters in the input string are counted for billing purposes, including spaces and newline characters. All SSML tags (except the <mark> tag) are also included in the character count.' For WaveNet/Standard the character count is 'equal to or less than the number of bytes'; the page does not say how combining marks (niqqud) are counted." },
+      "otherNotes": "Gemini-TTS is priced per token, not per character (for example Gemini 2.5 Flash TTS input $0.50 per 1M text tokens, output $10.00 per 1M audio tokens; 25 audio tokens per second). It is not in this plan because per-character budgeting does not apply and Hebrew suitability is untested."
+    },
+    "elevenlabs": {
+      "label": "ElevenLabs text to speech",
+      "hebrewVoices": { "m": "(voice id chosen in listening test)", "f": "(voice id chosen in listening test)", "verified": false },
+      "hebrewSupport": { "verified": true, "source": "https://elevenlabs.io/docs/overview/models", "evidence": "Eleven v4, Eleven v4 Turbo, Eleven v3 and Eleven v3 Conversational list Hebrew (he). Multilingual v2 and Flash v2.5 do not list Hebrew." },
+      "rows": [
+        { "id": "v3-api", "label": "Eleven v3 / v4 API, per character", "usdPerMillionChars": 80, "verified": true, "source": "https://elevenlabs.io/pricing/api", "evidence": "Page table: v4 $0.08 per 1K characters; v3 $0.08 per 1K characters (so $80 per 1M).", "caveat": "Billing basis (credits vs characters) on the page is stated in characters; the page states no credit-per-character ratio." },
+        { "id": "v4-turbo-api", "label": "Eleven v4 Turbo API, per character", "usdPerMillionChars": 40, "verified": true, "source": "https://elevenlabs.io/pricing/api", "evidence": "Page table: v4 Turbo $0.04 per 1K characters.", "caveat": "Quality for Hebrew pointed text untested." }
+      ],
+      "plans": [
+        { "name": "Free", "usdPerMonth": 0, "includedCharsV4": 10000 },
+        { "name": "Starter", "usdPerMonth": 6, "includedCharsV4": 75000 },
+        { "name": "Creator", "usdPerMonth": 22, "includedCharsV4": 275000 },
+        { "name": "Pro", "usdPerMonth": 99, "includedCharsV4": 1238000 },
+        { "name": "Scale", "usdPerMonth": 299, "includedCharsV4": 3738000 },
+        { "name": "Business", "usdPerMonth": 990, "includedCharsV4": 12375000 }
+      ],
+      "plansVerified": true,
+      "plansSource": "https://elevenlabs.io/pricing/api (tier table, monthly billing, included characters for v4; included amounts differ per model)",
+      "licenceNote": { "verified": true, "source": "https://elevenlabs.io/pricing", "evidence": "'Commercial License' is listed under Starter ('Everything in free, plus'); Free lists none. The notes say commercial rights apply only to output generated during a paid subscription (not re-verified)." }
+    }
+  },
+  "unverified": [
+    "Redistribution rights for Azure and Google TTS output inside a shipped app (counsel; files are tagged redistributionCleared:false).",
+    "Whether any engine bills or pronounces niqqud (combining marks) correctly.",
+    "OpenAI TTS and other providers: not checked this session.",
+    "Volume discounts, committed-use tiers, taxes, currency conversion."
+  ]
+}

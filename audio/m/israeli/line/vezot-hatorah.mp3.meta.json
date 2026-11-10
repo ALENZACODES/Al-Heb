@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי אֲדֹנָי בְּיַד מֹשֶׁה׃",
+ "inputSha256": "20320fd1e106e9b294e18797ddc36e8b04f32d68a59cdb606bd3d40cd0ae17cd",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל׃ עַל פִּי אֲדֹנָי בְּיַד מֹשֶׁה׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/vezot-hatorah-w1.mp3",
+  "audio/m/israeli/word/haftarah-after-w105.mp3",
+  "audio/m/israeli/word/adon-olam-1-w3.mp3",
+  "audio/m/israeli/word/aleinu-1-w18.mp3",
+  "audio/m/israeli/word/vayehi-binsoa-w5.mp3",
+  "audio/m/israeli/word/aleinu-1-w33.mp3",
+  "audio/m/israeli/word/kiddush-veshamru-w11.mp3",
+  "audio/m/israeli/word/brich-shmei-w115.mp3",
+  "audio/m/israeli/word/haftarah-after-w104.mp3",
+  "audio/m/israeli/word/h04345345.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/vezot-hatorah-w12.mp3",
+  "audio/m/israeli/word/vayehi-binsoa-w5.mp3"
+ ]
+}

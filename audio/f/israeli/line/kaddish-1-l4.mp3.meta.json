@@ -1,0 +1,28 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא",
+ "inputSha256": "122e809b9ddb68043550e3e98b593240167874fae9328bfe0770408aaabc5233",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִתְבָּרַךְ וְיִשְׁתַּבַּח וְיִתְפָּאַר וְיִתְרוֹמַם וְיִתְנַשֵּׂא וְיִתְהַדָּר וְיִתְעַלֶּה וְיִתְהַלָּל שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא",
+ "stitchedFrom": [
+  "audio/f/israeli/word/haftarah-after-w131.mp3",
+  "audio/f/israeli/word/kaddish-1-w29.mp3",
+  "audio/f/israeli/word/kaddish-1-w30.mp3",
+  "audio/f/israeli/word/kaddish-1-w31.mp3",
+  "audio/f/israeli/word/kaddish-1-w32.mp3",
+  "audio/f/israeli/word/kaddish-1-w33.mp3",
+  "audio/f/israeli/word/kaddish-1-w34.mp3",
+  "audio/f/israeli/word/kaddish-1-w35.mp3",
+  "audio/f/israeli/word/brich-shmei-w2.mp3",
+  "audio/f/israeli/word/kaddish-1-w37.mp3",
+  "audio/f/israeli/word/brich-shmei-w1.mp3",
+  "audio/f/israeli/word/aleinu-1-w39.mp3"
+ ]
+}

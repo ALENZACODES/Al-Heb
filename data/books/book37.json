@@ -1,0 +1,177 @@
+{
+ "id": "book37",
+ "titleHe": "יוֹם שִׁישִׁי",
+ "titleTranslit": "Yom Shishi",
+ "titleEn": "Friday",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יוֹם שִׁישִׁי בַּבֹּקֶר.",
+   "translit": "Yom shishi ba-boker.",
+   "en": "Friday morning.",
+   "img": "assets/books/book37/BOOK37_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p01.mp3",
+    "m": "audio/m/israeli/book/book37-p01.mp3"
+   },
+   "illustration": "a sunny street, people with bags and flowers",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הָעִיר מְהִירָה.",
+   "translit": "Ha-ir mehirah.",
+   "en": "The city is fast.",
+   "img": "assets/books/book37/BOOK37_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p02.mp3",
+    "m": "audio/m/israeli/book/book37-p02.mp3"
+   },
+   "illustration": "shoppers rushing, a market in full swing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "כֻּלָּם קוֹנִים.",
+   "translit": "Kulam konim.",
+   "en": "Everyone is buying.",
+   "img": "assets/books/book37/BOOK37_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p03.mp3",
+    "m": "audio/m/israeli/book/book37-p03.mp3"
+   },
+   "illustration": "overflowing bags, a man with a cake box",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "כֻּלָּם מְבַשְּׁלִים.",
+   "translit": "Kulam mevashlim.",
+   "en": "Everyone is cooking.",
+   "img": "assets/books/book37/BOOK37_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p04.mp3",
+    "m": "audio/m/israeli/book/book37-p04.mp3"
+   },
+   "illustration": "open windows, steam, pots in every kitchen",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "נֹעָה לֹא.",
+   "translit": "Noa lo.",
+   "en": "Not Noa.",
+   "img": "assets/books/book37/BOOK37_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p05.mp3",
+    "m": "audio/m/israeli/book/book37-p05.mp3"
+   },
+   "illustration": "a woman in a hammock reading",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "נֹעָה שׁוֹתָה קָפֶה בַּמִּרְפֶּסֶת.",
+   "translit": "Noa shotah kafeh ba-mirpeset.",
+   "en": "Noa drinks coffee on the balcony.",
+   "img": "assets/books/book37/BOOK37_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p06.mp3",
+    "m": "audio/m/israeli/book/book37-p06.mp3"
+   },
+   "illustration": "the woman watching the busy street from above",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "אַחַר הַצָּהֳרַיִם.",
+   "translit": "Achar ha-tzohorayim.",
+   "en": "Afternoon.",
+   "img": "assets/books/book37/BOOK37_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p07.mp3",
+    "m": "audio/m/israeli/book/book37-p07.mp3"
+   },
+   "illustration": "the sun lower, the street emptying",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הָעִיר שְׁקֵטָה.",
+   "translit": "Ha-ir shketah.",
+   "en": "The city is quiet.",
+   "img": "assets/books/book37/BOOK37_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p08.mp3",
+    "m": "audio/m/israeli/book/book37-p08.mp3"
+   },
+   "illustration": "shuttered shops, a cat on a warm car",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "נֹעָה הוֹלֶכֶת לַיָּם.",
+   "translit": "Noa holechet la-yam.",
+   "en": "Noa goes to the sea.",
+   "img": "assets/books/book37/BOOK37_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p09.mp3",
+    "m": "audio/m/israeli/book/book37-p09.mp3"
+   },
+   "illustration": "the woman with a towel walking down to the beach",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַשֶּׁמֶשׁ יוֹרֶדֶת.",
+   "translit": "Ha-shemesh yoredet.",
+   "en": "The sun sets.",
+   "img": "assets/books/book37/BOOK37_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p10.mp3",
+    "m": "audio/m/israeli/book/book37-p10.mp3"
+   },
+   "illustration": "the sun touching the sea",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַחֲבֵרִים בָּאִים.",
+   "translit": "Ha-chaverim ba'im.",
+   "en": "The friends come.",
+   "img": "assets/books/book37/BOOK37_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p11.mp3",
+    "m": "audio/m/israeli/book/book37-p11.mp3"
+   },
+   "illustration": "friends arriving on the sand with a guitar and food",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "שַׁבָּת שָׁלוֹם, תֵּל אָבִיב.",
+   "translit": "Shabat shalom, Tel Aviv.",
+   "en": "Shabbat shalom, Tel Aviv.",
+   "img": "assets/books/book37/BOOK37_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book37-p12.mp3",
+    "m": "audio/m/israeli/book/book37-p12.mp3"
+   },
+   "illustration": "the group on the beach at dusk, candles in the sand",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

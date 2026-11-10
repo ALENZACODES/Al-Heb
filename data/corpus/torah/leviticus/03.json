@@ -1,0 +1,259 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "leviticus",
+ "bookHe": "וַיִּקְרָא",
+ "chapter": 3,
+ "ref": "Leviticus 3",
+ "parshaIds": [
+  "vayikra"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-08",
+ "verses": [
+  {
+   "n": 1,
+   "he": "וְאִם־זֶבַח שְׁלָמִים קָרְבָּנוֹ אִם מִן־הַבָּקָר הוּא מַקְרִיב אִם־זָכָר אִם־נְקֵבָה תָּמִים יַקְרִיבֶנּוּ לִפְנֵי יְהוָה׃",
+   "heTrope": "וְאִם־זֶ֥בַח שְׁלָמִ֖ים קָרְבָּנ֑וֹ אִ֤ם מִן־הַבָּקָר֙ ה֣וּא מַקְרִ֔יב אִם־זָכָר֙ אִם־נְקֵבָ֔ה תָּמִ֥ים יַקְרִיבֶ֖נּוּ לִפְנֵ֥י יְהוָֽה׃",
+   "en": "And if his offering be a sacrifice of peace-offerings: if he offer of the herd, whether male or female, he shall offer it without blemish before the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 2,
+   "he": "וְסָמַךְ יָדוֹ עַל־רֹאשׁ קָרְבָּנוֹ וּשְׁחָטוֹ פֶּתַח אֹהֶל מוֹעֵד וְזָרְקוּ בְּנֵי אַהֲרֹן הַכֹּהֲנִים אֶת־הַדָּם עַל־הַמִּזְבֵּחַ סָבִיב׃",
+   "heTrope": "וְסָמַ֤ךְ יָדוֹ֙ עַל־רֹ֣אשׁ קָרְבָּנ֔וֹ וּשְׁחָט֕וֹ פֶּ֖תַח אֹ֣הֶל מוֹעֵ֑ד וְזָרְק֡וּ בְּנֵי֩ אַהֲרֹ֨ן הַכֹּהֲנִ֧ים אֶת־הַדָּ֛ם עַל־הַמִּזְבֵּ֖חַ סָבִֽיב׃",
+   "en": "And he shall lay his hand upon the head of his offering, and kill it at the door of the tent of meeting; and Aaron’s sons the priests shall dash the blood against the altar round about.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וְהִקְרִיב מִזֶּבַח הַשְּׁלָמִים אִשֶּׁה לַיהוָה אֶת־הַחֵלֶב הַמְכַסֶּה אֶת־הַקֶּרֶב וְאֵת כָּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב׃",
+   "heTrope": "וְהִקְרִיב֙ מִזֶּ֣בַח הַשְּׁלָמִ֔ים אִשֶּׁ֖ה לַיהוָ֑ה אֶת־הַחֵ֙לֶב֙ הַֽמְכַסֶּ֣ה אֶת־הַקֶּ֔רֶב וְאֵת֙ כָּל־הַחֵ֔לֶב אֲשֶׁ֖ר עַל־הַקֶּֽרֶב׃",
+   "en": "And he shall present of the sacrifice of peace-offerings an offering made by fire unto the LORD: the fat that covereth the inwards, and all the fat that is upon the inwards,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 4,
+   "he": "וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵהֶן אֲשֶׁר עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיוֹת יְסִירֶנָּה׃",
+   "heTrope": "וְאֵת֙ שְׁתֵּ֣י הַכְּלָיֹ֔ת וְאֶת־הַחֵ֙לֶב֙ אֲשֶׁ֣ר עֲלֵהֶ֔ן אֲשֶׁ֖ר עַל־הַכְּסָלִ֑ים וְאֶת־הַיֹּתֶ֙רֶת֙ עַל־הַכָּבֵ֔ד עַל־הַכְּלָי֖וֹת יְסִירֶֽנָּה׃",
+   "en": "and the two kidneys, and the fat that is on them, which is by the loins, and the lobe above the liver, which he shall take away hard by the kidneys.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "וְהִקְטִירוּ אֹתוֹ בְנֵי־אַהֲרֹן הַמִּזְבֵּחָה עַל־הָעֹלָה אֲשֶׁר עַל־הָעֵצִים אֲשֶׁר עַל־הָאֵשׁ אִשֵּׁה רֵיחַ נִיחֹחַ לַיהוָה׃",
+   "heTrope": "וְהִקְטִ֨ירוּ אֹת֤וֹ בְנֵֽי־אַהֲרֹן֙ הַמִּזְבֵּ֔חָה עַל־הָ֣עֹלָ֔ה אֲשֶׁ֥ר עַל־הָעֵצִ֖ים אֲשֶׁ֣ר עַל־הָאֵ֑שׁ אִשֵּׁ֛ה רֵ֥יחַ נִיחֹ֖חַ לַֽיהוָֽה׃",
+   "en": "And Aaron’s sons shall make it smoke on the altar upon the burnt-offering, which is upon the wood that is on the fire; it is an offering made by fire, of a sweet savour unto the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 6,
+   "he": "וְאִם־מִן־הַצֹּאן קָרְבָּנוֹ לְזֶבַח שְׁלָמִים לַיהוָה זָכָר אוֹ נְקֵבָה תָּמִים יַקְרִיבֶנּוּ׃",
+   "heTrope": "וְאִם־מִן־הַצֹּ֧אן קָרְבָּנ֛וֹ לְזֶ֥בַח שְׁלָמִ֖ים לַיהוָ֑ה זָכָר֙ א֣וֹ נְקֵבָ֔ה תָּמִ֖ים יַקְרִיבֶֽנּוּ׃",
+   "en": "And if his offering for a sacrifice of peace-offerings unto the LORD be of the flock, male or female, he shall offer it without blemish.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 7,
+   "he": "אִם־כֶּשֶׂב הוּא־מַקְרִיב אֶת־קָרְבָּנוֹ וְהִקְרִיב אֹתוֹ לִפְנֵי יְהוָה׃",
+   "heTrope": "אִם־כֶּ֥שֶׂב הֽוּא־מַקְרִ֖יב אֶת־קָרְבָּנ֑וֹ וְהִקְרִ֥יב אֹת֖וֹ לִפְנֵ֥י יְהוָֽה׃",
+   "en": "If he bring a lamb for his offering, then shall he present it before the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 8,
+   "he": "וְסָמַךְ אֶת־יָדוֹ עַל־רֹאשׁ קָרְבָּנוֹ וְשָׁחַט אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד וְזָרְקוּ בְּנֵי אַהֲרֹן אֶת־דָּמוֹ עַל־הַמִּזְבֵּחַ סָבִיב׃",
+   "heTrope": "וְסָמַ֤ךְ אֶת־יָדוֹ֙ עַל־רֹ֣אשׁ קָרְבָּנ֔וֹ וְשָׁחַ֣ט אֹת֔וֹ לִפְנֵ֖י אֹ֣הֶל מוֹעֵ֑ד וְ֠זָרְקוּ בְּנֵ֨י אַהֲרֹ֧ן אֶת־דָּמ֛וֹ עַל־הַמִּזְבֵּ֖חַ סָבִֽיב׃",
+   "en": "And he shall lay his hand upon the head of his offering, and kill it before the tent of meeting; and Aaron’s sons shall dash the blood thereof against the altar round about.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "וְהִקְרִיב מִזֶּבַח הַשְּׁלָמִים אִשֶּׁה לַיהוָה חֶלְבּוֹ הָאַלְיָה תְמִימָה לְעֻמַּת הֶעָצֶה יְסִירֶנָּה וְאֶת־הַחֵלֶב הַמְכַסֶּה אֶת־הַקֶּרֶב וְאֵת כָּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב׃",
+   "heTrope": "וְהִקְרִ֨יב מִזֶּ֣בַח הַשְּׁלָמִים֮ אִשֶּׁ֣ה לַיהוָה֒ חֶלְבּוֹ֙ הָאַלְיָ֣ה תְמִימָ֔ה לְעֻמַּ֥ת הֶעָצֶ֖ה יְסִירֶ֑נָּה וְאֶת־הַחֵ֙לֶב֙ הַֽמְכַסֶּ֣ה אֶת־הַקֶּ֔רֶב וְאֵת֙ כָּל־הַחֵ֔לֶב אֲשֶׁ֖ר עַל־הַקֶּֽרֶב׃",
+   "en": "And he shall present of the sacrifice of peace-offerings an offering made by fire unto the LORD: the fat thereof, the fat tail entire, which he shall take away hard by the rump-bone; and the fat that covereth the inwards, and all the fat that is upon the inwards,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 10,
+   "he": "וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵהֶן אֲשֶׁר עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיֹת יְסִירֶנָּה׃",
+   "heTrope": "וְאֵת֙ שְׁתֵּ֣י הַכְּלָיֹ֔ת וְאֶת־הַחֵ֙לֶב֙ אֲשֶׁ֣ר עֲלֵהֶ֔ן אֲשֶׁ֖ר עַל־הַכְּסָלִ֑ים וְאֶת־הַיֹּתֶ֙רֶת֙ עַל־הַכָּבֵ֔ד עַל־הַכְּלָיֹ֖ת יְסִירֶֽנָּה׃",
+   "en": "and the two kidneys, and the fat that is upon them, which is by the loins, and the lobe above the liver, which he shall take away by the kidneys.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 11,
+   "he": "וְהִקְטִירוֹ הַכֹּהֵן הַמִּזְבֵּחָה לֶחֶם אִשֶּׁה לַיהוָה׃",
+   "heTrope": "וְהִקְטִיר֥וֹ הַכֹּהֵ֖ן הַמִּזְבֵּ֑חָה לֶ֥חֶם אִשֶּׁ֖ה לַיהוָֽה׃",
+   "en": "And the priest shall make it smoke upon the altar; it is the food of the offering made by fire unto the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "וְאִם עֵז קָרְבָּנוֹ וְהִקְרִיבוֹ לִפְנֵי יְהוָה׃",
+   "heTrope": "וְאִ֥ם עֵ֖ז קָרְבָּנ֑וֹ וְהִקְרִיב֖וֹ לִפְנֵ֥י יְהוָֽה׃",
+   "en": "And if his offering be a goat, then he shall present it before the LORD.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "open"
+  },
+  {
+   "n": 13,
+   "he": "וְסָמַךְ אֶת־יָדוֹ עַל־רֹאשׁוֹ וְשָׁחַט אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד וְזָרְקוּ בְּנֵי אַהֲרֹן אֶת־דָּמוֹ עַל־הַמִּזְבֵּחַ סָבִיב׃",
+   "heTrope": "וְסָמַ֤ךְ אֶת־יָדוֹ֙ עַל־רֹאשׁ֔וֹ וְשָׁחַ֣ט אֹת֔וֹ לִפְנֵ֖י אֹ֣הֶל מוֹעֵ֑ד וְ֠זָרְקוּ בְּנֵ֨י אַהֲרֹ֧ן אֶת־דָּמ֛וֹ עַל־הַמִּזְבֵּ֖חַ סָבִֽיב׃",
+   "en": "And he shall lay his hand upon the head of it, and kill it before the tent of meeting; and the sons of Aaron shall dash the blood thereof against the altar round about.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 14,
+   "he": "וְהִקְרִיב מִמֶּנּוּ קָרְבָּנוֹ אִשֶּׁה לַיהוָה אֶת־הַחֵלֶב הַמְכַסֶּה אֶת־הַקֶּרֶב וְאֵת כָּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב׃",
+   "heTrope": "וְהִקְרִ֤יב מִמֶּ֙נּוּ֙ קָרְבָּנ֔וֹ אִשֶּׁ֖ה לַֽיהוָ֑ה אֶת־הַחֵ֙לֶב֙ הַֽמְכַסֶּ֣ה אֶת־הַקֶּ֔רֶב וְאֵת֙ כָּל־הַחֵ֔לֶב אֲשֶׁ֖ר עַל־הַקֶּֽרֶב׃",
+   "en": "And he shall present thereof his offering, even an offering made by fire unto the LORD: the fat that covereth the inwards, and all the fat that is upon the inwards,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 15,
+   "he": "וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵהֶן אֲשֶׁר עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיֹת יְסִירֶנָּה׃",
+   "heTrope": "וְאֵת֙ שְׁתֵּ֣י הַכְּלָיֹ֔ת וְאֶת־הַחֵ֙לֶב֙ אֲשֶׁ֣ר עֲלֵהֶ֔ן אֲשֶׁ֖ר עַל־הַכְּסָלִ֑ים וְאֶת־הַיֹּתֶ֙רֶת֙ עַל־הַכָּבֵ֔ד עַל־הַכְּלָיֹ֖ת יְסִירֶֽנָּה׃",
+   "en": "and the two kidneys, and the fat that is upon them, which is by the loins, and the lobe above the liver, which he shall take away by the kidneys.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 16,
+   "he": "וְהִקְטִירָם הַכֹּהֵן הַמִּזְבֵּחָה לֶחֶם אִשֶּׁה לְרֵיחַ נִיחֹחַ כָּל־חֵלֶב לַיהוָה׃",
+   "heTrope": "וְהִקְטִירָ֥ם הַכֹּהֵ֖ן הַמִּזְבֵּ֑חָה לֶ֤חֶם אִשֶּׁה֙ לְרֵ֣יחַ נִיחֹ֔חַ כָּל־חֵ֖לֶב לַיהוָֽה׃",
+   "en": "And the priest shall make them smoke upon the altar; it is the food of the offering made by fire, for a sweet savour; all the fat is the LORD’S.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 17,
+   "he": "חֻקַּת עוֹלָם לְדֹרֹתֵיכֶם בְּכֹל מוֹשְׁבֹתֵיכֶם כָּל־חֵלֶב וְכָל־דָּם לֹא תֹאכֵלוּ׃",
+   "heTrope": "חֻקַּ֤ת עוֹלָם֙ לְדֹרֹ֣תֵיכֶ֔ם בְּכֹ֖ל מֽוֹשְׁבֹתֵיכֶ֑ם כָּל־חֵ֥לֶב וְכָל־דָּ֖ם לֹ֥א תֹאכֵֽלוּ׃",
+   "en": "It shall be a perpetual statute throughout your generations in all your dwellings, that ye shall eat neither fat nor blood.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

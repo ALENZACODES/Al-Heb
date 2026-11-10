@@ -1,0 +1,627 @@
+{
+ "id": "si-1452",
+ "name": "Israeli standard SI-1452 (2013 revision, first part)",
+ "source": "xkeyboard-config symbols/il, xkb_symbols \"basic\" (header: 'implementation of the Israeli standard SI-1452 (2013)'); AltGr niqqud list cross-checked with Wikipedia 'Hebrew keyboard'",
+ "notes": [
+  "'qwerty' is the key legend of the US layout at the same physical position, which is what an Israeli keyboard also prints.",
+  "Final letters (ך ם ן ף ץ) each have their own base-layer key.",
+  "shuruk has no key of its own: type vav then AltGr+vav-position dagesh (U+05BC), i.e. ו + dagesh. Flagged as a gap for lane 3 to confirm.",
+  "This is the 2013 layout. The 2018 'si2' variant (SI-1452-2) moves ת ץ ן; NOT included here.",
+  "The extra Yiddish and nun-hafukha entries in the xkb file are omitted from the trainer.",
+  "Physical key positions beyond the letter rows (number row punctuation) are listed in 'keys' for completeness only."
+ ],
+ "keys": [
+  {
+   "code": "TLDE",
+   "qwerty": "`",
+   "base": ";",
+   "shift": "~",
+   "altgr": "׳"
+  },
+  {
+   "code": "AE01",
+   "qwerty": "1",
+   "base": "1",
+   "shift": "!",
+   "altgr": null
+  },
+  {
+   "code": "AE02",
+   "qwerty": "2",
+   "base": "2",
+   "shift": "@",
+   "altgr": null
+  },
+  {
+   "code": "AE03",
+   "qwerty": "3",
+   "base": "3",
+   "shift": "#",
+   "altgr": "€"
+  },
+  {
+   "code": "AE04",
+   "qwerty": "4",
+   "base": "4",
+   "shift": "$",
+   "altgr": "₪"
+  },
+  {
+   "code": "AE05",
+   "qwerty": "5",
+   "base": "5",
+   "shift": "%",
+   "altgr": "°"
+  },
+  {
+   "code": "AE06",
+   "qwerty": "6",
+   "base": "6",
+   "shift": "^",
+   "altgr": "֫"
+  },
+  {
+   "code": "AE07",
+   "qwerty": "7",
+   "base": "7",
+   "shift": "&",
+   "altgr": "ֽ"
+  },
+  {
+   "code": "AE08",
+   "qwerty": "8",
+   "base": "8",
+   "shift": "*",
+   "altgr": "×"
+  },
+  {
+   "code": "AE09",
+   "qwerty": "9",
+   "base": "9",
+   "shift": ")",
+   "altgr": "‎"
+  },
+  {
+   "code": "AE10",
+   "qwerty": "0",
+   "base": "0",
+   "shift": "(",
+   "altgr": "‏"
+  },
+  {
+   "code": "AE11",
+   "qwerty": "-",
+   "base": "-",
+   "shift": "_",
+   "altgr": "־"
+  },
+  {
+   "code": "AE12",
+   "qwerty": "=",
+   "base": "=",
+   "shift": "+",
+   "altgr": "–"
+  },
+  {
+   "code": "AD01",
+   "qwerty": "q",
+   "base": "/",
+   "shift": "Q",
+   "altgr": "ׂ"
+  },
+  {
+   "code": "AD02",
+   "qwerty": "w",
+   "base": "'",
+   "shift": "W",
+   "altgr": "ׁ"
+  },
+  {
+   "code": "AD03",
+   "qwerty": "e",
+   "base": "ק",
+   "shift": "E",
+   "altgr": "ָ"
+  },
+  {
+   "code": "AD04",
+   "qwerty": "r",
+   "base": "ר",
+   "shift": "R",
+   "altgr": "ֳ"
+  },
+  {
+   "code": "AD05",
+   "qwerty": "t",
+   "base": "א",
+   "shift": "T",
+   "altgr": null
+  },
+  {
+   "code": "AD06",
+   "qwerty": "y",
+   "base": "ט",
+   "shift": "Y",
+   "altgr": "װ"
+  },
+  {
+   "code": "AD07",
+   "qwerty": "u",
+   "base": "ו",
+   "shift": "U",
+   "altgr": "ֹ"
+  },
+  {
+   "code": "AD08",
+   "qwerty": "i",
+   "base": "ן",
+   "shift": "I",
+   "altgr": null
+  },
+  {
+   "code": "AD09",
+   "qwerty": "o",
+   "base": "ם",
+   "shift": "O",
+   "altgr": null
+  },
+  {
+   "code": "AD10",
+   "qwerty": "p",
+   "base": "פ",
+   "shift": "P",
+   "altgr": "ַ"
+  },
+  {
+   "code": "AC01",
+   "qwerty": "a",
+   "base": "ש",
+   "shift": "A",
+   "altgr": "ְ"
+  },
+  {
+   "code": "AC02",
+   "qwerty": "s",
+   "base": "ד",
+   "shift": "S",
+   "altgr": "ּ"
+  },
+  {
+   "code": "AC03",
+   "qwerty": "d",
+   "base": "ג",
+   "shift": "D",
+   "altgr": null
+  },
+  {
+   "code": "AC04",
+   "qwerty": "f",
+   "base": "כ",
+   "shift": "F",
+   "altgr": null
+  },
+  {
+   "code": "AC05",
+   "qwerty": "g",
+   "base": "ע",
+   "shift": "G",
+   "altgr": "ױ"
+  },
+  {
+   "code": "AC06",
+   "qwerty": "h",
+   "base": "י",
+   "shift": "H",
+   "altgr": "ײ"
+  },
+  {
+   "code": "AC07",
+   "qwerty": "j",
+   "base": "ח",
+   "shift": "J",
+   "altgr": "ִ"
+  },
+  {
+   "code": "AC08",
+   "qwerty": "k",
+   "base": "ל",
+   "shift": "K",
+   "altgr": null
+  },
+  {
+   "code": "AC09",
+   "qwerty": "l",
+   "base": "ך",
+   "shift": "L",
+   "altgr": "”"
+  },
+  {
+   "code": "AC10",
+   "qwerty": ";",
+   "base": "ף",
+   "shift": ":",
+   "altgr": "„"
+  },
+  {
+   "code": "AB01",
+   "qwerty": "z",
+   "base": "ז",
+   "shift": "Z",
+   "altgr": null
+  },
+  {
+   "code": "AB02",
+   "qwerty": "x",
+   "base": "ס",
+   "shift": "X",
+   "altgr": "ֶ"
+  },
+  {
+   "code": "AB03",
+   "qwerty": "c",
+   "base": "ב",
+   "shift": "C",
+   "altgr": "ֱ"
+  },
+  {
+   "code": "AB04",
+   "qwerty": "v",
+   "base": "ה",
+   "shift": "V",
+   "altgr": null
+  },
+  {
+   "code": "AB05",
+   "qwerty": "b",
+   "base": "נ",
+   "shift": "B",
+   "altgr": null
+  },
+  {
+   "code": "AB06",
+   "qwerty": "n",
+   "base": "מ",
+   "shift": "N",
+   "altgr": null
+  },
+  {
+   "code": "AB07",
+   "qwerty": "m",
+   "base": "צ",
+   "shift": "M",
+   "altgr": "ֵ"
+  },
+  {
+   "code": "AB08",
+   "qwerty": ",",
+   "base": "ת",
+   "shift": ">",
+   "altgr": "’"
+  },
+  {
+   "code": "AB09",
+   "qwerty": ".",
+   "base": "ץ",
+   "shift": "<",
+   "altgr": "‚"
+  },
+  {
+   "code": "AD11",
+   "qwerty": "[",
+   "base": "]",
+   "shift": "}",
+   "altgr": "ֲ"
+  },
+  {
+   "code": "AD12",
+   "qwerty": "]",
+   "base": "[",
+   "shift": "{",
+   "altgr": "ֿ"
+  },
+  {
+   "code": "AC11",
+   "qwerty": "'",
+   "base": ",",
+   "shift": "\"",
+   "altgr": "״"
+  },
+  {
+   "code": "BKSL",
+   "qwerty": "\\",
+   "base": "\\",
+   "shift": "|",
+   "altgr": "ֻ"
+  },
+  {
+   "code": "AB10",
+   "qwerty": "/",
+   "base": ".",
+   "shift": "?",
+   "altgr": "÷"
+  }
+ ],
+ "letters": {
+  "qof": {
+   "code": "AD03",
+   "qwerty": "e",
+   "char": "ק",
+   "layer": "base"
+  },
+  "resh": {
+   "code": "AD04",
+   "qwerty": "r",
+   "char": "ר",
+   "layer": "base"
+  },
+  "alef": {
+   "code": "AD05",
+   "qwerty": "t",
+   "char": "א",
+   "layer": "base"
+  },
+  "tet": {
+   "code": "AD06",
+   "qwerty": "y",
+   "char": "ט",
+   "layer": "base"
+  },
+  "vav": {
+   "code": "AD07",
+   "qwerty": "u",
+   "char": "ו",
+   "layer": "base"
+  },
+  "nun-final": {
+   "code": "AD08",
+   "qwerty": "i",
+   "char": "ן",
+   "layer": "base"
+  },
+  "mem-final": {
+   "code": "AD09",
+   "qwerty": "o",
+   "char": "ם",
+   "layer": "base"
+  },
+  "pe": {
+   "code": "AD10",
+   "qwerty": "p",
+   "char": "פ",
+   "layer": "base"
+  },
+  "shin": {
+   "code": "AC01",
+   "qwerty": "a",
+   "char": "ש",
+   "layer": "base"
+  },
+  "dalet": {
+   "code": "AC02",
+   "qwerty": "s",
+   "char": "ד",
+   "layer": "base"
+  },
+  "gimel": {
+   "code": "AC03",
+   "qwerty": "d",
+   "char": "ג",
+   "layer": "base"
+  },
+  "kaf": {
+   "code": "AC04",
+   "qwerty": "f",
+   "char": "כ",
+   "layer": "base"
+  },
+  "ayin": {
+   "code": "AC05",
+   "qwerty": "g",
+   "char": "ע",
+   "layer": "base"
+  },
+  "yod": {
+   "code": "AC06",
+   "qwerty": "h",
+   "char": "י",
+   "layer": "base"
+  },
+  "chet": {
+   "code": "AC07",
+   "qwerty": "j",
+   "char": "ח",
+   "layer": "base"
+  },
+  "lamed": {
+   "code": "AC08",
+   "qwerty": "k",
+   "char": "ל",
+   "layer": "base"
+  },
+  "kaf-final": {
+   "code": "AC09",
+   "qwerty": "l",
+   "char": "ך",
+   "layer": "base"
+  },
+  "pe-final": {
+   "code": "AC10",
+   "qwerty": ";",
+   "char": "ף",
+   "layer": "base"
+  },
+  "zayin": {
+   "code": "AB01",
+   "qwerty": "z",
+   "char": "ז",
+   "layer": "base"
+  },
+  "samekh": {
+   "code": "AB02",
+   "qwerty": "x",
+   "char": "ס",
+   "layer": "base"
+  },
+  "bet": {
+   "code": "AB03",
+   "qwerty": "c",
+   "char": "ב",
+   "layer": "base"
+  },
+  "he": {
+   "code": "AB04",
+   "qwerty": "v",
+   "char": "ה",
+   "layer": "base"
+  },
+  "nun": {
+   "code": "AB05",
+   "qwerty": "b",
+   "char": "נ",
+   "layer": "base"
+  },
+  "mem": {
+   "code": "AB06",
+   "qwerty": "n",
+   "char": "מ",
+   "layer": "base"
+  },
+  "tsadi": {
+   "code": "AB07",
+   "qwerty": "m",
+   "char": "צ",
+   "layer": "base"
+  },
+  "tav": {
+   "code": "AB08",
+   "qwerty": ",",
+   "char": "ת",
+   "layer": "base"
+  },
+  "tsadi-final": {
+   "code": "AB09",
+   "qwerty": ".",
+   "char": "ץ",
+   "layer": "base"
+  }
+ },
+ "niqqud": {
+  "sin-dot": {
+   "code": "AD01",
+   "qwerty": "q",
+   "char": "ׂ",
+   "codepoint": "U+05C2",
+   "modifier": "AltGr",
+   "keycapBase": "/"
+  },
+  "shin-dot": {
+   "code": "AD02",
+   "qwerty": "w",
+   "char": "ׁ",
+   "codepoint": "U+05C1",
+   "modifier": "AltGr",
+   "keycapBase": "'"
+  },
+  "kamatz": {
+   "code": "AD03",
+   "qwerty": "e",
+   "char": "ָ",
+   "codepoint": "U+05B8",
+   "modifier": "AltGr",
+   "keycapBase": "ק"
+  },
+  "chataf-kamatz": {
+   "code": "AD04",
+   "qwerty": "r",
+   "char": "ֳ",
+   "codepoint": "U+05B3",
+   "modifier": "AltGr",
+   "keycapBase": "ר"
+  },
+  "cholam": {
+   "code": "AD07",
+   "qwerty": "u",
+   "char": "ֹ",
+   "codepoint": "U+05B9",
+   "modifier": "AltGr",
+   "keycapBase": "ו"
+  },
+  "patach": {
+   "code": "AD10",
+   "qwerty": "p",
+   "char": "ַ",
+   "codepoint": "U+05B7",
+   "modifier": "AltGr",
+   "keycapBase": "פ"
+  },
+  "shva": {
+   "code": "AC01",
+   "qwerty": "a",
+   "char": "ְ",
+   "codepoint": "U+05B0",
+   "modifier": "AltGr",
+   "keycapBase": "ש"
+  },
+  "dagesh": {
+   "code": "AC02",
+   "qwerty": "s",
+   "char": "ּ",
+   "codepoint": "U+05BC",
+   "modifier": "AltGr",
+   "keycapBase": "ד"
+  },
+  "chirik": {
+   "code": "AC07",
+   "qwerty": "j",
+   "char": "ִ",
+   "codepoint": "U+05B4",
+   "modifier": "AltGr",
+   "keycapBase": "ח"
+  },
+  "segol": {
+   "code": "AB02",
+   "qwerty": "x",
+   "char": "ֶ",
+   "codepoint": "U+05B6",
+   "modifier": "AltGr",
+   "keycapBase": "ס"
+  },
+  "chataf-segol": {
+   "code": "AB03",
+   "qwerty": "c",
+   "char": "ֱ",
+   "codepoint": "U+05B1",
+   "modifier": "AltGr",
+   "keycapBase": "ב"
+  },
+  "tzere": {
+   "code": "AB07",
+   "qwerty": "m",
+   "char": "ֵ",
+   "codepoint": "U+05B5",
+   "modifier": "AltGr",
+   "keycapBase": "צ"
+  },
+  "chataf-patach": {
+   "code": "AD11",
+   "qwerty": "[",
+   "char": "ֲ",
+   "codepoint": "U+05B2",
+   "modifier": "AltGr",
+   "keycapBase": "]"
+  },
+  "kubutz": {
+   "code": "BKSL",
+   "qwerty": "\\",
+   "char": "ֻ",
+   "codepoint": "U+05BB",
+   "modifier": "AltGr",
+   "keycapBase": "\\"
+  }
+ },
+ "gaps": [
+  "shuruk (composed: vav + dagesh)",
+  "SI-1452-2 (2018) variant not encoded",
+  "verified against xkb file and Wikipedia AltGr list only, not against the SI-1452 standard document itself"
+ ]
+}

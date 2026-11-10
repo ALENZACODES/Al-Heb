@@ -1,0 +1,177 @@
+{
+ "id": "book12",
+ "titleHe": "בֹּקֶר טוֹב, תֵּל אָבִיב",
+ "titleTranslit": "Boker Tov, Tel Aviv",
+ "titleEn": "Good Morning, Tel Aviv",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שֵׁשׁ בַּבֹּקֶר.",
+   "translit": "Shesh ba-boker.",
+   "en": "Six in the morning.",
+   "img": "assets/books/book12/BOOK12_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p01.mp3",
+    "m": "audio/m/israeli/book/book12-p01.mp3"
+   },
+   "illustration": "an empty boulevard, pale sky, sprinklers on",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הַשֶּׁמֶשׁ עוֹלָה.",
+   "translit": "Ha-shemesh olah.",
+   "en": "The sun rises.",
+   "img": "assets/books/book12/BOOK12_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p02.mp3",
+    "m": "audio/m/israeli/book/book12-p02.mp3"
+   },
+   "illustration": "sun lifting over rooftops with water tanks and solar panels",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הַיָּם שָׁקֵט.",
+   "translit": "Ha-yam shaket.",
+   "en": "The sea is quiet.",
+   "img": "assets/books/book12/BOOK12_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p03.mp3",
+    "m": "audio/m/israeli/book/book12-p03.mp3"
+   },
+   "illustration": "flat silver sea, one swimmer",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "אֵיתָן רָץ.",
+   "translit": "Eitan ratz.",
+   "en": "Eitan runs.",
+   "img": "assets/books/book12/BOOK12_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p04.mp3",
+    "m": "audio/m/israeli/book/book12-p04.mp3"
+   },
+   "illustration": "a man jogging along the promenade",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "כֶּלֶב רָץ.",
+   "translit": "Kelev ratz.",
+   "en": "A dog runs.",
+   "img": "assets/books/book12/BOOK12_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p05.mp3",
+    "m": "audio/m/israeli/book/book12-p05.mp3"
+   },
+   "illustration": "a happy dog running ahead of him on a leash",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "אוֹפַנַּיִם.",
+   "translit": "Ofanayim.",
+   "en": "Bicycles.",
+   "img": "assets/books/book12/BOOK12_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p06.mp3",
+    "m": "audio/m/israeli/book/book12-p06.mp3"
+   },
+   "illustration": "riders on the bike lane, one with a surfboard",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הַקָּפֶה פָּתוּחַ.",
+   "translit": "Ha-kafeh patuach.",
+   "en": "The café is open.",
+   "img": "assets/books/book12/BOOK12_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p07.mp3",
+    "m": "audio/m/israeli/book/book12-p07.mp3"
+   },
+   "illustration": "a barista raising the shutter of a corner café",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"בֹּקֶר טוֹב!\"",
+   "translit": "\"Boker tov!\"",
+   "en": "\"Good morning!\"",
+   "img": "assets/books/book12/BOOK12_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p08.mp3",
+    "m": "audio/m/israeli/book/book12-p08.mp3"
+   },
+   "illustration": "the barista waving at the jogger",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"בֹּקֶר אוֹר!\"",
+   "translit": "\"Boker or!\"",
+   "en": "\"Morning of light!\"",
+   "img": "assets/books/book12/BOOK12_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p09.mp3",
+    "m": "audio/m/israeli/book/book12-p09.mp3"
+   },
+   "illustration": "the jogger answering with a thumbs up",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הָעִיר קָמָה.",
+   "translit": "Ha-ir kamah.",
+   "en": "The city wakes up.",
+   "img": "assets/books/book12/BOOK12_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p10.mp3",
+    "m": "audio/m/israeli/book/book12-p10.mp3"
+   },
+   "illustration": "shutters opening, a bus, a fruit stand being set up",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "רַעַשׁ.",
+   "translit": "Ra'ash.",
+   "en": "Noise.",
+   "img": "assets/books/book12/BOOK12_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p11.mp3",
+    "m": "audio/m/israeli/book/book12-p11.mp3"
+   },
+   "illustration": "horns, a scooter, a man shouting into a phone, pigeons",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "בֹּקֶר טוֹב, תֵּל אָבִיב.",
+   "translit": "Boker tov, Tel Aviv.",
+   "en": "Good morning, Tel Aviv.",
+   "img": "assets/books/book12/BOOK12_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book12-p12.mp3",
+    "m": "audio/m/israeli/book/book12-p12.mp3"
+   },
+   "illustration": "the jogger and the dog at the water's edge, city behind them",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "phrases": 30,
+ "words": 54,
+ "wordsAgree": 51,
+ "agreementPct": 94.4,
+ "msMedian": 52,
+ "msMax": 677,
+ "rows": [
+  {
+   "id": "greetings-01",
+   "input": "שלום",
+   "nakdan": "שָׁלוֹם",
+   "phrasebook": "שָׁלוֹם"
+  },
+  {
+   "id": "greetings-07",
+   "input": "שבת שלום",
+   "nakdan": "שַׁבַּת שָׁלוֹם",
+   "phrasebook": "שַׁבָּת שָׁלוֹם"
+  },
+  {
+   "id": "greetings-13",
+   "input": "מה קורה",
+   "nakdan": "מָה קוֹרֶה",
+   "phrasebook": "מָה קוֹרֶה?"
+  },
+  {
+   "id": "greetings-19",
+   "input": "נעים מאד",
+   "nakdan": "נָעִים מְאֹד",
+   "phrasebook": "נָעִים מְאֹד"
+  },
+  {
+   "id": "greetings-25",
+   "input": "בהצלחה",
+   "nakdan": "בְּהַצְלָחָה",
+   "phrasebook": "בְּהַצְלָחָה"
+  },
+  {
+   "id": "politeness-04",
+   "input": "אין בעיה",
+   "nakdan": "אֵין בְּעָיָה",
+   "phrasebook": "אֵין בְּעָיָה"
+  },
+  {
+   "id": "politeness-10",
+   "input": "אולי",
+   "nakdan": "אוּלַי",
+   "phrasebook": "אוּלַי"
+  },
+  {
+   "id": "politeness-16",
+   "input": "יופי",
+   "nakdan": "יֹופִי",
+   "phrasebook": "יוֹפִי"
+  },
+  {
+   "id": "politeness-22",
+   "input": "יהיה בסדר",
+   "nakdan": "יִהְיֶה בְּסֵדֶר",
+   "phrasebook": "יִהְיֶה בְּסֵדֶר"
+  },
+  {
+   "id": "fillers-06",
+   "input": "באמת",
+   "nakdan": "בֶּאֱמֶת",
+   "phrasebook": "בֶּאֱמֶת?"
+  },
+  {
+   "id": "fillers-12",
+   "input": "אבל",
+   "nakdan": "אֲבָל",
+   "phrasebook": "אֲבָל"
+  },
+  {
+   "id": "fillers-18",
+   "input": "אפשר לדבר לאט",
+   "nakdan": "אֶפְשָׁר לְדַבֵּר לְאַט",
+   "phrasebook": "אֶפְשָׁר לְדַבֵּר לְאַט?"
+  },
+  {
+   "id": "cafe-01",
+   "input": "שלחן לשנים בבקשה",
+   "nakdan": "שֻׁלְחָן לִשְׁנַיִם בְּבַקָּשָׁה",
+   "phrasebook": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה"
+  },
+  {
+   "id": "cafe-07",
+   "input": "קפה עם חלב",
+   "nakdan": "קָפֶה עִם חָלָב",
+   "phrasebook": "קָפֶה עִם חָלָב"
+  },
+  {
+   "id": "cafe-13",
+   "input": "לחיים",
+   "nakdan": "לְחַיִּים",
+   "phrasebook": "לְחַיִּים!"
+  },
+  {
+   "id": "cafe-19",
+   "input": "פיתה",
+   "nakdan": "פִּיתָּה",
+   "phrasebook": "פִּיתָה"
+  },
+  {
+   "id": "cafe-25",
+   "input": "לאכל כאן או לקחת",
+   "nakdan": "לֶאֱכֹל כָּאן אוֹ לָקַחַת",
+   "phrasebook": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?"
+  },
+  {
+   "id": "shop-04",
+   "input": "זה זול",
+   "nakdan": "זֶה זוֹל",
+   "phrasebook": "זֶה זוֹל"
+  },
+  {
+   "id": "shop-10",
+   "input": "מה המדה",
+   "nakdan": "מָה הַמִּדָּה",
+   "phrasebook": "מָה הַמִּדָּה?"
+  },
+  {
+   "id": "shop-16",
+   "input": "פתוח",
+   "nakdan": "פָּתוּחַ",
+   "phrasebook": "פָּתוּחַ"
+  },
+  {
+   "id": "taxi-02",
+   "input": "לאן",
+   "nakdan": "לְאָן",
+   "phrasebook": "לְאָן?"
+  },
+  {
+   "id": "taxi-08",
+   "input": "כמה זה יעלה",
+   "nakdan": "כַּמָּה זֶה יַעֲלֶה",
+   "phrasebook": "כַּמָּה זֶה יַעֲלֶה?"
+  },
+  {
+   "id": "taxi-14",
+   "input": "האם זה האוטובוס ל",
+   "nakdan": "הַאִם זֶה הָאוֹטוֹבּוּס ל",
+   "phrasebook": "הַאִם זֶה הָאוֹטוֹבּוּס לְ...?"
+  },
+  {
+   "id": "directions-05",
+   "input": "ישר",
+   "nakdan": "יָשָׁר",
+   "phrasebook": "יָשָׁר"
+  },
+  {
+   "id": "directions-11",
+   "input": "על יד",
+   "nakdan": "עַל יַד",
+   "phrasebook": "עַל יַד"
+  },
+  {
+   "id": "directions-17",
+   "input": "איפה בית החולים",
+   "nakdan": "אֵיפֹה בֵּית הַחוֹלִים",
+   "phrasebook": "אֵיפֹה בֵּית הַחוֹלִים?"
+  },
+  {
+   "id": "numbers-03",
+   "input": "שלושה",
+   "nakdan": "שְׁלוֹשָׁה",
+   "phrasebook": "שְׁלוֹשָׁה"
+  },
+  {
+   "id": "numbers-09",
+   "input": "תשעה",
+   "nakdan": "תִּשְׁעָה",
+   "phrasebook": "תִּשְׁעָה"
+  },
+  {
+   "id": "numbers-15",
+   "input": "אלף",
+   "nakdan": "אֶלֶף",
+   "phrasebook": "אֶלֶף"
+  },
+  {
+   "id": "numbers-21",
+   "input": "מחר",
+   "nakdan": "מָחָר",
+   "phrasebook": "מָחָר"
+  }
+ ]
+}

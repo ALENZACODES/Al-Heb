@@ -1,0 +1,105 @@
+Aleph IMAGE RUN - COMMAND 98: App icon set
+
+No attachments are needed otherwise; everything is described in words below.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+CHARACTERS (keep identical across images):
+CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default.
+CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident.
+MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive but never any writing.
+
+BACKGROUND SCENES (when a prompt mentions BG_...): BG_jerusalem = a blank Jerusalem street scene (warm limestone walls, arched doorways, no signs); BG_market = a blank open-air market scene (stalls with plain striped awnings, no signs); BG_telaviv = a blank Tel Aviv seaside street scene (white modernist buildings, palms, no signs). Reuse the same scene if already generated in this chat.
+
+REFERENCES: where a prompt says "attached" or "the same object", it means the image already generated in this chat for the same set (usually item 1, the mnemonic), or the file attached above. Keep the object identical.
+
+TASK: generate 40 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the aspect hint and the full prompt.
+
+1. FILENAME: ICON_home.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: home.
+2. FILENAME: ICON_letters.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: letters.
+3. FILENAME: ICON_vowels.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: vowels.
+4. FILENAME: ICON_read.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: read.
+5. FILENAME: ICON_speak.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: speak.
+6. FILENAME: ICON_write.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: write.
+7. FILENAME: ICON_trace.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trace.
+8. FILENAME: ICON_camera.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: camera.
+9. FILENAME: ICON_translate.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: translate.
+10. FILENAME: ICON_calendar.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: calendar.
+11. FILENAME: ICON_shabbat_candles.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: shabbat candles.
+12. FILENAME: ICON_synagogue.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: synagogue.
+13. FILENAME: ICON_cafe.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: cafe.
+14. FILENAME: ICON_map.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: map.
+15. FILENAME: ICON_play.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: play.
+16. FILENAME: ICON_pause.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: pause.
+17. FILENAME: ICON_replay.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: replay.
+18. FILENAME: ICON_slow.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: slow.
+19. FILENAME: ICON_man_voice.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: man voice.
+20. FILENAME: ICON_woman_voice.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: woman voice.
+21. FILENAME: ICON_microphone.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: microphone.
+22. FILENAME: ICON_check.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: check.
+23. FILENAME: ICON_retry.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: retry.
+24. FILENAME: ICON_star.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: star.
+25. FILENAME: ICON_streak_flame.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: streak flame.
+26. FILENAME: ICON_settings.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: settings.
+27. FILENAME: ICON_search.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: search.
+28. FILENAME: ICON_bookmark.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: bookmark.
+29. FILENAME: ICON_share.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: share.
+30. FILENAME: ICON_lock.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: lock.
+31. FILENAME: ICON_unlock.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: unlock.
+32. FILENAME: ICON_trophy.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: trophy.
+33. FILENAME: ICON_hint.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: hint.
+34. FILENAME: ICON_sound_on.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound on.
+35. FILENAME: ICON_sound_off.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: sound off.
+36. FILENAME: ICON_next.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: next.
+37. FILENAME: ICON_back.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: back.
+38. FILENAME: ICON_profile.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: profile.
+39. FILENAME: ICON_help.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: help.
+40. FILENAME: ICON_download.png | SIZE: use 1:1 (target 512x512)
+   PROMPT: Simple single-colour line icon, charcoal (#2B2B2B) on transparent background, 512x512, thick rounded strokes, no text: download.
+
+RULES (again):
+- NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos. Signs, screens, pages, books, labels and scrolls stay completely blank.
+- Your image tool may only offer 1:1, 3:2 and 2:3: follow the size hint on each item.
+- Generate exactly 40 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+
+When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

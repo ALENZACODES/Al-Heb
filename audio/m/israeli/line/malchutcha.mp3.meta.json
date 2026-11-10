@@ -1,0 +1,22 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
+ "inputSha256": "baf0ab363e6ce5a4a060e9e2a593f2f95dbca7b1ee92988221672a26a4b753f0",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מַלְכוּתְךָ מַלְכוּת כָּל־עֹלָמִים וּמֶמְשֶׁלְתְּךָ בְּכָל־דּוֹר וָדוֹר׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/malchutcha-w1.mp3",
+  "audio/m/israeli/word/malchutcha-w2.mp3",
+  "audio/m/israeli/word/malchutcha-w3.mp3",
+  "audio/m/israeli/word/malchutcha-w4.mp3",
+  "audio/m/israeli/word/malchutcha-w5.mp3",
+  "audio/m/israeli/word/malchutcha-w6.mp3"
+ ]
+}

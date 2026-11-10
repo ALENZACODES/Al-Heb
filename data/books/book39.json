@@ -1,0 +1,177 @@
+{
+ "id": "book39",
+ "titleHe": "פְּקָק",
+ "titleTranslit": "Pkak",
+ "titleEn": "Traffic Jam",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "שֶׁבַע וָחֵצִי. כְּבִישׁ אַיָּלוֹן.",
+   "translit": "Sheva va-chetzi. Kvish Ayalon.",
+   "en": "Seven thirty. The Ayalon highway.",
+   "img": "assets/books/book39/BOOK39_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p01.mp3",
+    "m": "audio/m/israeli/book/book39-p01.mp3"
+   },
+   "illustration": "a highway packed with cars, towers behind",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "פְּקָק.",
+   "translit": "Pkak.",
+   "en": "Traffic jam.",
+   "img": "assets/books/book39/BOOK39_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p02.mp3",
+    "m": "audio/m/israeli/book/book39-p02.mp3"
+   },
+   "illustration": "bumper to bumper, red tail lights",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "יוֹסִי בָּאוֹטוֹ.",
+   "translit": "Yossi ba-oto.",
+   "en": "Yossi is in the car.",
+   "img": "assets/books/book39/BOOK39_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p03.mp3",
+    "m": "audio/m/israeli/book/book39-p03.mp3"
+   },
+   "illustration": "a man gripping the wheel, radio on",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הָאוֹטוֹ לֹא זָז.",
+   "translit": "Ha-oto lo zaz.",
+   "en": "The car doesn't move.",
+   "img": "assets/books/book39/BOOK39_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p04.mp3",
+    "m": "audio/m/israeli/book/book39-p04.mp3"
+   },
+   "illustration": "the speedometer at zero",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הוּא שׁוֹמֵעַ חֲדָשׁוֹת.",
+   "translit": "Hu shome'a chadashot.",
+   "en": "He listens to the news.",
+   "img": "assets/books/book39/BOOK39_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p05.mp3",
+    "m": "audio/m/israeli/book/book39-p05.mp3"
+   },
+   "illustration": "the radio: traffic report",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "\"פְּקָק בְּאַיָּלוֹן,\" אוֹמֵר הָרַדְיוֹ.",
+   "translit": "\"Pkak be-Ayalon,\" omer ha-radyo.",
+   "en": "\"Traffic jam on the Ayalon,\" says the radio.",
+   "img": "assets/books/book39/BOOK39_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p06.mp3",
+    "m": "audio/m/israeli/book/book39-p06.mp3"
+   },
+   "illustration": "the man giving the radio a look",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "\"תּוֹדָה,\" אוֹמֵר יוֹסִי.",
+   "translit": "\"Todah,\" omer Yossi.",
+   "en": "\"Thanks,\" says Yossi.",
+   "img": "assets/books/book39/BOOK39_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p07.mp3",
+    "m": "audio/m/israeli/book/book39-p07.mp3"
+   },
+   "illustration": "the man saying thanks to the dashboard, deadpan, still not moving",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הוּא רוֹאֶה אִישׁ בָּאוֹטוֹ לְיָדוֹ.",
+   "translit": "Hu ro'eh ish ba-oto le-yado.",
+   "en": "He sees a man in the car next to him.",
+   "img": "assets/books/book39/BOOK39_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p08.mp3",
+    "m": "audio/m/israeli/book/book39-p08.mp3"
+   },
+   "illustration": "the neighbouring driver, also stuck",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הָאִישׁ שָׁר.",
+   "translit": "Ha-ish shar.",
+   "en": "The man is singing.",
+   "img": "assets/books/book39/BOOK39_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p09.mp3",
+    "m": "audio/m/israeli/book/book39-p09.mp3"
+   },
+   "illustration": "the other driver belting out a song, eyes closed",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "יוֹסִי צוֹחֵק.",
+   "translit": "Yossi tzochek.",
+   "en": "Yossi laughs.",
+   "img": "assets/books/book39/BOOK39_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p10.mp3",
+    "m": "audio/m/israeli/book/book39-p10.mp3"
+   },
+   "illustration": "the man laughing despite himself",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "גַּם יוֹסִי שָׁר.",
+   "translit": "Gam Yossi shar.",
+   "en": "Yossi sings too.",
+   "img": "assets/books/book39/BOOK39_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p11.mp3",
+    "m": "audio/m/israeli/book/book39-p11.mp3"
+   },
+   "illustration": "both drivers singing in their cars, windows down",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַפְּקָק אָרֹךְ. הַשִּׁיר יָפֶה.",
+   "translit": "Ha-pkak aroch. Ha-shir yafeh.",
+   "en": "The jam is long. The song is beautiful.",
+   "img": "assets/books/book39/BOOK39_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book39-p12.mp3",
+    "m": "audio/m/israeli/book/book39-p12.mp3"
+   },
+   "illustration": "a whole lane of singing drivers at sunrise",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

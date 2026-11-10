@@ -1,0 +1,4 @@
+# Generated reviewer packets are rebuilt with: node tools/review/build_packet.mjs
+# The PDFs (about 5.8 MB in total, up to 1 MB each) and the 1 MB vocab-rest sheet are not committed.
+out/*.pdf
+out/*-vocab-rest.csv

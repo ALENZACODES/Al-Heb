@@ -1,0 +1,912 @@
+[
+ {
+  "id": "psa-16-8",
+  "hebrew": "שִׁוִּיתִי יְהוָה לְנֶגְדִּי תָמִיד כִּי מִימִינִי בַּל־אֶמּוֹט׃",
+  "tr": "Shiviti Adonai lenegdi tamid, ki mimini bal emot.",
+  "english_jps1917": "I have set the LORD always before me; Surely He is at my right hand, I shall not be moved.",
+  "source_ref": "Psalms 16:8"
+ },
+ {
+  "id": "psa-19-15",
+  "hebrew": "יִהְיוּ־לְרָצוֹן אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהוָה צוּרִי וְגֹאֲלִי׃",
+  "tr": "Yihyu leratzon imrei fi vehegyon libi lefanecha, Adonai tzuri vego'ali.",
+  "english_jps1917": "Let the words of my mouth and the meditation of my heart be acceptable before Thee, O LORD, my Rock, and my Redeemer.",
+  "source_ref": "Psalms 19:15"
+ },
+ {
+  "id": "psa-23-4",
+  "hebrew": "גַּם כִּי־אֵלֵךְ בְּגֵיא צַלְמָוֶת לֹא־אִירָא רָע כִּי־אַתָּה עִמָּדִי שִׁבְטְךָ וּמִשְׁעַנְתֶּךָ הֵמָּה יְנַחֲמֻנִי׃",
+  "tr": "Gam ki elech begei tzalmavet lo ira ra, ki ata imadi; shivtecha umish'antecha hema yenachamuni.",
+  "english_jps1917": "Yea, though I walk through the valley of the shadow of death, I will fear no evil, for Thou art with me; Thy rod and Thy staff, they comfort me.",
+  "source_ref": "Psalms 23:4"
+ },
+ {
+  "id": "psa-27-4",
+  "hebrew": "אַחַת שָׁאַלְתִּי מֵאֵת־יְהוָה אוֹתָהּ אֲבַקֵּשׁ שִׁבְתִּי בְּבֵית־יְהוָה כָּל־יְמֵי חַיַּי לַחֲזוֹת בְּנֹעַם־יְהוָה וּלְבַקֵּר בְּהֵיכָלוֹ׃",
+  "tr": "Achat sha'alti me'et Adonai, otah avakesh: shivti beveit Adonai kol yemei chayai, lachazot beno'am Adonai ulevaker beheichalo.",
+  "english_jps1917": "One thing have I asked of the LORD, that will I seek after: That I may dwell in the house of the LORD all the days of my life, To behold the graciousness of the LORD, and to visit early in His temple.",
+  "source_ref": "Psalms 27:4"
+ },
+ {
+  "id": "psa-27-14",
+  "hebrew": "קַוֵּה אֶל־יְהוָה חֲזַק וְיַאֲמֵץ לִבֶּךָ וְקַוֵּה אֶל־יְהוָה׃",
+  "tr": "Kaveh el Adonai, chazak veya'ametz libecha, vekaveh el Adonai.",
+  "english_jps1917": "Wait on the LORD; Be strong, and let thy heart take courage; Yea, wait thou for the LORD.",
+  "source_ref": "Psalms 27:14"
+ },
+ {
+  "id": "psa-29-11",
+  "hebrew": "יְהוָה עֹז לְעַמּוֹ יִתֵּן יְהוָה יְבָרֵךְ אֶת־עַמּוֹ בַשָּׁלוֹם׃",
+  "tr": "Adonai oz le'amo yiten, Adonai yevarech et amo vashalom.",
+  "english_jps1917": "The LORD will give strength unto His people; The LORD will bless his people with peace.",
+  "source_ref": "Psalms 29:11"
+ },
+ {
+  "id": "psa-30-6",
+  "hebrew": "כִּי רֶגַע בְּאַפּוֹ חַיִּים בִּרְצוֹנוֹ בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה׃",
+  "tr": "Ki rega be'apo, chayim birtzono; ba'erev yalin bechi, velaboker rina.",
+  "english_jps1917": "For His anger is but for a moment, His favour is for a life-time; weeping may tarry for the night, but joy cometh in the morning.",
+  "source_ref": "Psalms 30:6"
+ },
+ {
+  "id": "psa-34-9",
+  "hebrew": "טַעֲמוּ וּרְאוּ כִּי־טוֹב יְהוָה אַשְׁרֵי הַגֶּבֶר יֶחֱסֶה־בּוֹ׃",
+  "tr": "Ta'amu ure'u ki tov Adonai, ashrei hagever yechese bo.",
+  "english_jps1917": "O consider and see that the LORD is good; Happy is the man that taketh refuge in Him.",
+  "source_ref": "Psalms 34:9"
+ },
+ {
+  "id": "psa-34-15",
+  "hebrew": "סוּר מֵרָע וַעֲשֵׂה־טוֹב בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ׃",
+  "tr": "Sur mera va'aseh tov, bakesh shalom verodfehu.",
+  "english_jps1917": "Depart from evil, and do good; Seek peace, and pursue it.",
+  "source_ref": "Psalms 34:15"
+ },
+ {
+  "id": "psa-37-3",
+  "hebrew": "בְּטַח בַּיהוָה וַעֲשֵׂה־טוֹב שְׁכָן־אֶרֶץ וּרְעֵה אֱמוּנָה׃",
+  "tr": "Betach b'Adonai va'aseh tov, shchan eretz ur'eh emuna.",
+  "english_jps1917": "Trust in the LORD, and do good; dwell in the land, and cherish faithfulness.",
+  "source_ref": "Psalms 37:3"
+ },
+ {
+  "id": "psa-46-2",
+  "hebrew": "אֱלֹהִים לָנוּ מַחֲסֶה וָעֹז עֶזְרָה בְצָרוֹת נִמְצָא מְאֹד׃",
+  "tr": "Elohim lanu machaseh va'oz, ezra vetzarot nimtza me'od.",
+  "english_jps1917": "God is our refuge and strength, A very present help in trouble.",
+  "source_ref": "Psalms 46:2"
+ },
+ {
+  "id": "psa-46-11",
+  "hebrew": "הַרְפּוּ וּדְעוּ כִּי־אָנֹכִי אֱלֹהִים אָרוּם בַּגּוֹיִם אָרוּם בָּאָרֶץ׃",
+  "tr": "Harpu ud'u ki anochi Elohim; arum bagoyim, arum ba'aretz.",
+  "english_jps1917": "'Let be, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.'",
+  "source_ref": "Psalms 46:11"
+ },
+ {
+  "id": "psa-51-12",
+  "hebrew": "לֵב טָהוֹר בְּרָא־לִי אֱלֹהִים וְרוּחַ נָכוֹן חַדֵּשׁ בְּקִרְבִּי׃",
+  "tr": "Lev tahor bera li Elohim, veru'ach nachon chadesh bekirbi.",
+  "english_jps1917": "Create me a clean heart, O God; and renew a stedfast spirit within me.",
+  "source_ref": "Psalms 51:12"
+ },
+ {
+  "id": "psa-55-23",
+  "hebrew": "הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ וְהוּא יְכַלְכְּלֶךָ לֹא־יִתֵּן לְעוֹלָם מוֹט לַצַּדִּיק׃",
+  "tr": "Hashlech al Adonai yehavecha vehu yechalkelecha; lo yiten le'olam mot latzadik.",
+  "english_jps1917": "Cast thy burden upon the LORD, and He will sustain thee; He will never suffer the righteous to be moved.",
+  "source_ref": "Psalms 55:23"
+ },
+ {
+  "id": "psa-90-12",
+  "hebrew": "לִמְנוֹת יָמֵינוּ כֵּן הוֹדַע וְנָבִא לְבַב חָכְמָה׃",
+  "tr": "Limnot yameinu ken hoda, venavi levav chochma.",
+  "english_jps1917": "So teach us to number our days, That we may get us a heart of wisdom.",
+  "source_ref": "Psalms 90:12"
+ },
+ {
+  "id": "psa-91-1",
+  "hebrew": "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן בְּצֵל שַׁדַּי יִתְלוֹנָן׃",
+  "tr": "Yoshev beseter Elyon, betzel Shadai yitlonan.",
+  "english_jps1917": "O thou that dwellest in the covert of the Most High, And abidest in the shadow of the Almighty;",
+  "source_ref": "Psalms 91:1"
+ },
+ {
+  "id": "psa-92-2",
+  "hebrew": "טוֹב לְהֹדוֹת לַיהוָה וּלְזַמֵּר לְשִׁמְךָ עֶלְיוֹן׃",
+  "tr": "Tov lehodot l'Adonai, ulzamer l'shimcha Elyon.",
+  "english_jps1917": "It is a good thing to give thanks unto the LORD, And to sing praises unto Thy name, O Most High;",
+  "source_ref": "Psalms 92:2"
+ },
+ {
+  "id": "psa-100-2",
+  "hebrew": "עִבְדוּ אֶת־יְהוָה בְּשִׂמְחָה בֹּאוּ לְפָנָיו בִּרְנָנָה׃",
+  "tr": "Ivdu et Adonai besimcha, bo'u lefanav birnana.",
+  "english_jps1917": "Serve the LORD with gladness; come before His presence with singing.",
+  "source_ref": "Psalms 100:2"
+ },
+ {
+  "id": "psa-100-5",
+  "hebrew": "כִּי־טוֹב יְהוָה לְעוֹלָם חַסְדּוֹ וְעַד־דֹּר וָדֹר אֱמוּנָתוֹ׃",
+  "tr": "Ki tov Adonai, le'olam chasdo, ve'ad dor vador emunato.",
+  "english_jps1917": "For the LORD is good; His mercy endureth for ever; and His faithfulness unto all generations.",
+  "source_ref": "Psalms 100:5"
+ },
+ {
+  "id": "psa-111-10",
+  "hebrew": "רֵאשִׁית חָכְמָה יִרְאַת יְהוָה שֵׂכֶל טוֹב לְכָל־עֹשֵׂיהֶם תְּהִלָּתוֹ עֹמֶדֶת לָעַד׃",
+  "tr": "Reshit chochma yir'at Adonai, sechel tov lechol oseihem; tehilato omedet la'ad.",
+  "english_jps1917": "The fear of the LORD is the beginning of wisdom; A good understanding have all they that do thereafter; His praise endureth for ever.",
+  "source_ref": "Psalms 111:10"
+ },
+ {
+  "id": "psa-118-1",
+  "hebrew": "הוֹדוּ לַיהוָה כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+  "tr": "Hodu l'Adonai ki tov, ki le'olam chasdo.",
+  "english_jps1917": "'O give thanks unto the LORD, for He is good, For His mercy endureth for ever.",
+  "source_ref": "Psalms 118:1"
+ },
+ {
+  "id": "psa-118-24",
+  "hebrew": "זֶה־הַיּוֹם עָשָׂה יְהוָה נָגִילָה וְנִשְׂמְחָה בוֹ׃",
+  "tr": "Zeh hayom asa Adonai, nagila venismecha vo.",
+  "english_jps1917": "This is the day which the LORD hath made; We will rejoice and be glad in it.",
+  "source_ref": "Psalms 118:24"
+ },
+ {
+  "id": "psa-121-2",
+  "hebrew": "עֶזְרִי מֵעִם יְהוָה עֹשֵׂה שָׁמַיִם וָאָרֶץ׃",
+  "tr": "Ezri me'im Adonai, oseh shamayim va'aretz.",
+  "english_jps1917": "My help cometh from the LORD, Who made heaven and earth.",
+  "source_ref": "Psalms 121:2"
+ },
+ {
+  "id": "psa-121-8",
+  "hebrew": "יְהוָה יִשְׁמָר־צֵאתְךָ וּבוֹאֶךָ מֵעַתָּה וְעַד־עוֹלָם׃",
+  "tr": "Adonai yishmor tzetcha uvo'echa, me'ata ve'ad olam.",
+  "english_jps1917": "The LORD shall guard thy going out and thy coming in, From this time forth and for ever.",
+  "source_ref": "Psalms 121:8"
+ },
+ {
+  "id": "psa-126-5",
+  "hebrew": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ׃",
+  "tr": "Hazor'im bedim'a, berina yiktzoru.",
+  "english_jps1917": "They that sow in tears Shall reap in joy.",
+  "source_ref": "Psalms 126:5"
+ },
+ {
+  "id": "psa-139-14",
+  "hebrew": "אוֹדְךָ עַל כִּי נוֹרָאוֹת נִפְלֵיתִי נִפְלָאִים מַעֲשֶׂיךָ וְנַפְשִׁי יֹדַעַת מְאֹד׃",
+  "tr": "Odecha al ki nora'ot nifleiti; nifla'im ma'asecha, venafshi yoda'at me'od.",
+  "english_jps1917": "I will give thanks unto Thee, for I am fearfully and wonderfully made; Wonderful are Thy works; and that my soul knoweth right well.",
+  "source_ref": "Psalms 139:14"
+ },
+ {
+  "id": "psa-145-9",
+  "hebrew": "טוֹב־יְהוָה לַכֹּל וְרַחֲמָיו עַל־כָּל־מַעֲשָׂיו׃",
+  "tr": "Tov Adonai lakol, verachamav al kol ma'asav.",
+  "english_jps1917": "The LORD is good to all; And His tender mercies are over all His works.",
+  "source_ref": "Psalms 145:9"
+ },
+ {
+  "id": "psa-145-18",
+  "hebrew": "קָרוֹב יְהוָה לְכָל־קֹרְאָיו לְכֹל אֲשֶׁר יִקְרָאֻהוּ בֶאֱמֶת׃",
+  "tr": "Karov Adonai lechol kor'av, lechol asher yikra'uhu ve'emet.",
+  "english_jps1917": "The LORD is nigh unto all them that call upon Him, To all that call upon Him in truth.",
+  "source_ref": "Psalms 145:18"
+ },
+ {
+  "id": "psa-147-3",
+  "hebrew": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם׃",
+  "tr": "Harofeh lishvurei lev, umechabesh le'atzvotam.",
+  "english_jps1917": "Who healeth the broken in heart, And bindeth up their wounds.",
+  "source_ref": "Psalms 147:3"
+ },
+ {
+  "id": "psa-150-6",
+  "hebrew": "כֹּל הַנְּשָׁמָה תְּהַלֵּל יָהּ הַלְלוּ־יָהּ׃",
+  "tr": "Kol haneshama tehalel Yah, halelu-Yah.",
+  "english_jps1917": "Let every thing that hath breath praise the LORD. Hallelujah.",
+  "source_ref": "Psalms 150:6"
+ },
+ {
+  "id": "psa-25-4",
+  "hebrew": "דְּרָכֶיךָ יְהוָה הוֹדִיעֵנִי אֹרְחוֹתֶיךָ לַמְּדֵנִי׃",
+  "tr": "Derachecha Adonai hodi'eni, orchotecha lamdeni.",
+  "english_jps1917": "Show me Thy ways, O LORD; teach me Thy paths.",
+  "source_ref": "Psalms 25:4"
+ },
+ {
+  "id": "psa-34-19",
+  "hebrew": "קָרוֹב יְהוָה לְנִשְׁבְּרֵי־לֵב וְאֶת־דַּכְּאֵי־רוּחַ יוֹשִׁיעַ׃",
+  "tr": "Karov Adonai lenishberei lev, ve'et dake'ei ru'ach yoshi'a.",
+  "english_jps1917": "The LORD is nigh unto them that are of a broken heart, And saveth such as are of a contrite spirit.",
+  "source_ref": "Psalms 34:19"
+ },
+ {
+  "id": "psa-62-2",
+  "hebrew": "אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי מִמֶּנּוּ יְשׁוּעָתִי׃",
+  "tr": "Ach el Elohim dumiya nafshi, mimenu yeshu'ati.",
+  "english_jps1917": "Only for God doth my soul wait in stillness; From Him cometh my salvation.",
+  "source_ref": "Psalms 62:2"
+ },
+ {
+  "id": "psa-95-1",
+  "hebrew": "לְכוּ נְרַנְּנָה לַיהוָה נָרִיעָה לְצוּר יִשְׁעֵנוּ׃",
+  "tr": "Lechu neranena l'Adonai, nari'a letzur yish'enu.",
+  "english_jps1917": "O come, let us sing unto the LORD; Let us shout for joy to the Rock of our salvation.",
+  "source_ref": "Psalms 95:1"
+ },
+ {
+  "id": "psa-104-24",
+  "hebrew": "מָה־רַבּוּ מַעֲשֶׂיךָ יְהוָה כֻּלָּם בְּחָכְמָה עָשִׂיתָ מָלְאָה הָאָרֶץ קִנְיָנֶךָ׃",
+  "tr": "Ma rabu ma'asecha Adonai, kulam bechochma asita; mal'a ha'aretz kinyanecha.",
+  "english_jps1917": "How manifold are Thy works, O LORD! In wisdom hast Thou made them all; The earth is full of Thy creatures.",
+  "source_ref": "Psalms 104:24"
+ },
+ {
+  "id": "psa-113-3",
+  "hebrew": "מִמִּזְרַח־שֶׁמֶשׁ עַד־מְבוֹאוֹ מְהֻלָּל שֵׁם יְהוָה׃",
+  "tr": "Mimizrach shemesh ad mevo'o, mehulal shem Adonai.",
+  "english_jps1917": "From the rising of the sun unto the going down thereof The LORD'S name is to be praised.",
+  "source_ref": "Psalms 113:3"
+ },
+ {
+  "id": "psa-118-5",
+  "hebrew": "מִן־הַמֵּצַר קָרָאתִי יָּהּ עָנָנִי בַמֶּרְחָב יָהּ׃",
+  "tr": "Min hameitzar karati Yah, anani bamerchav Yah.",
+  "english_jps1917": "Out of my straits I called upon the LORD; He answered me with great enlargement.",
+  "source_ref": "Psalms 118:5"
+ },
+ {
+  "id": "psa-119-18",
+  "hebrew": "גַּל־עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ׃",
+  "tr": "Gal einai ve'abita, nifla'ot mitoratecha.",
+  "english_jps1917": "Open Thou mine eyes, that I may behold wondrous things out of Thy law.",
+  "source_ref": "Psalms 119:18"
+ },
+ {
+  "id": "psa-130-5",
+  "hebrew": "קִוִּיתִי יְהוָה קִוְּתָה נַפְשִׁי וְלִדְבָרוֹ הוֹחָלְתִּי׃",
+  "tr": "Kiviti Adonai, kivta nafshi, velidvaro hochalti.",
+  "english_jps1917": "I wait for the LORD, my soul doth wait, and in His word do I hope.",
+  "source_ref": "Psalms 130:5"
+ },
+ {
+  "id": "psa-145-3",
+  "hebrew": "גָּדוֹל יְהוָה וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+  "tr": "Gadol Adonai umehulal me'od, veligdulato ein cheker.",
+  "english_jps1917": "Great is the LORD, and highly to be praised; And His greatness is unsearchable.",
+  "source_ref": "Psalms 145:3"
+ },
+ {
+  "id": "psa-20-8",
+  "hebrew": "אֵלֶּה בָרֶכֶב וְאֵלֶּה בַסּוּסִים וַאֲנַחְנוּ בְּשֵׁם־יְהוָה אֱלֹהֵינוּ נַזְכִּיר׃",
+  "tr": "Ele varechev ve'ele vasusim, va'anachnu beshem Adonai Eloheinu nazkir.",
+  "english_jps1917": "Some trust in chariots, and some in horses; But we will make mention of the name of the LORD our God.",
+  "source_ref": "Psalms 20:8"
+ },
+ {
+  "id": "psa-31-25",
+  "hebrew": "חִזְקוּ וְיַאֲמֵץ לְבַבְכֶם כָּל־הַמְיַחֲלִים לַיהוָה׃",
+  "tr": "Chizku veya'ametz levavchem, kol hamyachalim l'Adonai.",
+  "english_jps1917": "Be strong, and let your heart take courage, All ye that wait for the LORD.",
+  "source_ref": "Psalms 31:25"
+ },
+ {
+  "id": "pro-3-5",
+  "hebrew": "בְּטַח אֶל־יְהוָה בְּכָל־לִבֶּךָ וְאֶל־בִּינָתְךָ אַל־תִּשָּׁעֵן׃",
+  "tr": "Betach el Adonai bechol libecha, ve'el binatecha al tisha'en.",
+  "english_jps1917": "Trust in the LORD with all thy heart, And lean not upon thine own understanding.",
+  "source_ref": "Proverbs 3:5"
+ },
+ {
+  "id": "pro-3-6",
+  "hebrew": "בְּכָל־דְּרָכֶיךָ דָעֵהוּ וְהוּא יְיַשֵּׁר אֹרְחֹתֶיךָ׃",
+  "tr": "Bechol derachecha da'ehu, vehu yeyasher orchotecha.",
+  "english_jps1917": "In all thy ways acknowledge Him, And He will direct thy paths.",
+  "source_ref": "Proverbs 3:6"
+ },
+ {
+  "id": "pro-3-13",
+  "hebrew": "אַשְׁרֵי אָדָם מָצָא חָכְמָה וְאָדָם יָפִיק תְּבוּנָה׃",
+  "tr": "Ashrei adam matza chochma, ve'adam yafik tevuna.",
+  "english_jps1917": "Happy is the man that findeth wisdom, And the man that obtaineth understanding.",
+  "source_ref": "Proverbs 3:13"
+ },
+ {
+  "id": "pro-3-17",
+  "hebrew": "דְּרָכֶיהָ דַרְכֵי־נֹעַם וְכָל־נְתִיבוֹתֶיהָ שָׁלוֹם׃",
+  "tr": "Deracheha darchei no'am, vechol netivoteha shalom.",
+  "english_jps1917": "Her ways are ways of pleasantness, And all her paths are peace.",
+  "source_ref": "Proverbs 3:17"
+ },
+ {
+  "id": "pro-4-7",
+  "hebrew": "רֵאשִׁית חָכְמָה קְנֵה חָכְמָה וּבְכָל־קִנְיָנְךָ קְנֵה בִינָה׃",
+  "tr": "Reshit chochma keneh chochma, uvechol kinyanecha keneh vina.",
+  "english_jps1917": "The beginning of wisdom is: Get wisdom; Yea, with all thy getting get understanding.",
+  "source_ref": "Proverbs 4:7"
+ },
+ {
+  "id": "pro-4-23",
+  "hebrew": "מִכָּל־מִשְׁמָר נְצֹר לִבֶּךָ כִּי־מִמֶּנּוּ תּוֹצְאוֹת חַיִּים׃",
+  "tr": "Mikol mishmar netzor libecha, ki mimenu totz'ot chayim.",
+  "english_jps1917": "Above all that thou guardest keep thy heart; For out of it are the issues of life.",
+  "source_ref": "Proverbs 4:23"
+ },
+ {
+  "id": "pro-10-12",
+  "hebrew": "שִׂנְאָה תְּעוֹרֵר מְדָנִים וְעַל כָּל־פְּשָׁעִים תְּכַסֶּה אַהֲבָה׃",
+  "tr": "Sin'a te'orer medanim, ve'al kol pesha'im techaseh ahava.",
+  "english_jps1917": "Hatred stirreth up strifes; but love covereth all transgressions.",
+  "source_ref": "Proverbs 10:12"
+ },
+ {
+  "id": "pro-11-25",
+  "hebrew": "נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וּמַרְוֶה גַּם־הוּא יוֹרֶא׃",
+  "tr": "Nefesh bracha tedushan, umarveh gam hu yoreh.",
+  "english_jps1917": "The beneficent soul shall be made rich, and he that satisfieth abundantly shall be satisfied also himself.",
+  "source_ref": "Proverbs 11:25"
+ },
+ {
+  "id": "pro-12-25",
+  "hebrew": "דְּאָגָה בְלֶב־אִישׁ יַשְׁחֶנָּה וְדָבָר טוֹב יְשַׂמְּחֶנָּה׃",
+  "tr": "De'aga velev ish yashchena, vedavar tov yesamchena.",
+  "english_jps1917": "Care in the heart of a man boweth it down; But a good word maketh it glad.",
+  "source_ref": "Proverbs 12:25"
+ },
+ {
+  "id": "pro-15-1",
+  "hebrew": "מַעֲנֶה־רַּךְ יָשִׁיב חֵמָה וּדְבַר־עֶצֶב יַעֲלֶה־אָף׃",
+  "tr": "Ma'aneh rakh yashiv chema, udevar etzev ya'aleh af.",
+  "english_jps1917": "A soft answer turneth away wrath; But a grievous word stirreth up anger.",
+  "source_ref": "Proverbs 15:1"
+ },
+ {
+  "id": "pro-15-13",
+  "hebrew": "לֵב שָׂמֵחַ יֵיטִב פָּנִים וּבְעַצְּבַת־לֵב רוּחַ נְכֵאָה׃",
+  "tr": "Lev same'ach yeitiv panim, uve'atzvat lev ru'ach neche'a.",
+  "english_jps1917": "A merry heart maketh a cheerful countenance; But by sorrow of heart the spirit is broken.",
+  "source_ref": "Proverbs 15:13"
+ },
+ {
+  "id": "pro-16-3",
+  "hebrew": "גֹּל אֶל־יְהוָה מַעֲשֶׂיךָ וְיִכֹּנוּ מַחְשְׁבֹתֶיךָ׃",
+  "tr": "Gol el Adonai ma'asecha, veyikonu machshevotecha.",
+  "english_jps1917": "Commit thy works unto the LORD, And thy thoughts shall be established.",
+  "source_ref": "Proverbs 16:3"
+ },
+ {
+  "id": "pro-16-24",
+  "hebrew": "צוּף־דְּבַשׁ אִמְרֵי־נֹעַם מָתוֹק לַנֶּפֶשׁ וּמַרְפֵּא לָעָצֶם׃",
+  "tr": "Tzuf devash imrei no'am, matok lanefesh umarpeh la'atzem.",
+  "english_jps1917": "Pleasant words are as a honeycomb, Sweet to the soul, and health to the bones.",
+  "source_ref": "Proverbs 16:24"
+ },
+ {
+  "id": "pro-17-22",
+  "hebrew": "לֵב שָׂמֵחַ יֵיטִב גֵּהָה וְרוּחַ נְכֵאָה תְּיַבֶּשׁ־גָּרֶם׃",
+  "tr": "Lev same'ach yeitiv geha, veru'ach neche'a teyabesh garem.",
+  "english_jps1917": "A merry heart is a good medicine; But a broken spirit drieth the bones.",
+  "source_ref": "Proverbs 17:22"
+ },
+ {
+  "id": "pro-18-10",
+  "hebrew": "מִגְדַּל־עֹז שֵׁם יְהוָה בּוֹ־יָרוּץ צַדִּיק וְנִשְׂגָּב׃",
+  "tr": "Migdal oz shem Adonai, bo yarutz tzadik venisgav.",
+  "english_jps1917": "The name of the LORD is a strong tower: The righteous runneth into it, and is set up on high.",
+  "source_ref": "Proverbs 18:10"
+ },
+ {
+  "id": "pro-19-21",
+  "hebrew": "רַבּוֹת מַחֲשָׁבוֹת בְּלֶב־אִישׁ וַעֲצַת יְהוָה הִיא תָקוּם׃",
+  "tr": "Rabot machshavot velev ish, va'atzat Adonai hi takum.",
+  "english_jps1917": "There are many devices in a man’s heart; But the counsel of the LORD, that shall stand.",
+  "source_ref": "Proverbs 19:21"
+ },
+ {
+  "id": "pro-22-6",
+  "hebrew": "חֲנֹךְ לַנַּעַר עַל־פִּי דַרְכּוֹ גַּם כִּי־יַזְקִין לֹא־יָסוּר מִמֶּנָּה׃",
+  "tr": "Chanoch lana'ar al pi darko; gam ki yazkin lo yasur mimena.",
+  "english_jps1917": "Train up a child in the way he should go, And even when he is old, he will not depart from it.",
+  "source_ref": "Proverbs 22:6"
+ },
+ {
+  "id": "pro-27-17",
+  "hebrew": "בַּרְזֶל בְּבַרְזֶל יָחַד וְאִישׁ יַחַד פְּנֵי־רֵעֵהוּ׃",
+  "tr": "Barzel bevarzel yachad, ve'ish yachad penei re'ehu.",
+  "english_jps1917": "Iron sharpeneth iron; So a man sharpeneth the countenance of his friend.",
+  "source_ref": "Proverbs 27:17"
+ },
+ {
+  "id": "pro-31-26",
+  "hebrew": "פִּיהָ פָּתְחָה בְחָכְמָה וְתוֹרַת חֶסֶד עַל־לְשׁוֹנָהּ׃",
+  "tr": "Piha patcha vechochma, vetorot chesed al leshona.",
+  "english_jps1917": "She openeth her mouth with wisdom; And the law of kindness is on her tongue.",
+  "source_ref": "Proverbs 31:26"
+ },
+ {
+  "id": "pro-31-30",
+  "hebrew": "שֶׁקֶר הַחֵן וְהֶבֶל הַיֹּפִי אִשָּׁה יִרְאַת־יְהוָה הִיא תִתְהַלָּל׃",
+  "tr": "Sheker hachen vehevel hayofi, isha yir'at Adonai hi tithalal.",
+  "english_jps1917": "Grace is deceitful, and beauty is vain; But a woman that feareth the LORD, she shall be praised.",
+  "source_ref": "Proverbs 31:30"
+ },
+ {
+  "id": "pro-14-29",
+  "hebrew": "אֶרֶךְ אַפַּיִם רַב־תְּבוּנָה וּקְצַר־רוּחַ מֵרִים אִוֶּלֶת׃",
+  "tr": "Erech apayim rav tevuna, uktzar ru'ach merim ivelet.",
+  "english_jps1917": "He that is slow to anger is of great understanding; But he that is hasty of spirit exalteth folly.",
+  "source_ref": "Proverbs 14:29"
+ },
+ {
+  "id": "pro-16-32",
+  "hebrew": "טוֹב אֶרֶךְ אַפַּיִם מִגִּבּוֹר וּמֹשֵׁל בְּרוּחוֹ מִלֹּכֵד עִיר׃",
+  "tr": "Tov erech apayim migibor, umoshel berucho miloched ir.",
+  "english_jps1917": "He that is slow to anger is better than the mighty; And he that ruleth his spirit than he that taketh a city.",
+  "source_ref": "Proverbs 16:32"
+ },
+ {
+  "id": "pro-17-17",
+  "hebrew": "בְּכָל־עֵת אֹהֵב הָרֵעַ וְאָח לְצָרָה יִוָּלֵד׃",
+  "tr": "Bechol et ohev hare'a, ve'ach letzara yivaled.",
+  "english_jps1917": "A friend loveth at all times, And a brother is born for adversity.",
+  "source_ref": "Proverbs 17:17"
+ },
+ {
+  "id": "pro-18-21",
+  "hebrew": "מָוֶת וְחַיִּים בְּיַד־לָשׁוֹן וְאֹהֲבֶיהָ יֹאכַל פִּרְיָהּ׃",
+  "tr": "Mavet vechayim beyad lashon, ve'ohaveha yochal pirya.",
+  "english_jps1917": "Death and life are in the power of the tongue; And they that indulge it shall eat the fruit thereof.",
+  "source_ref": "Proverbs 18:21"
+ },
+ {
+  "id": "pro-19-20",
+  "hebrew": "שְׁמַע עֵצָה וְקַבֵּל מוּסָר לְמַעַן תֶּחְכַּם בְּאַחֲרִיתֶךָ׃",
+  "tr": "Shma etza vekabel musar, lema'an techkam be'acharitecha.",
+  "english_jps1917": "Hear counsel, and receive instruction, That thou mayest be wise in thy latter end.",
+  "source_ref": "Proverbs 19:20"
+ },
+ {
+  "id": "pro-21-21",
+  "hebrew": "רֹדֵף צְדָקָה וָחָסֶד יִמְצָא חַיִּים צְדָקָה וְכָבוֹד׃",
+  "tr": "Rodef tzedaka vachesed, yimtza chayim, tzedaka vechavod.",
+  "english_jps1917": "He that followeth after righteousness and mercy Findeth life, prosperity, and honour.",
+  "source_ref": "Proverbs 21:21"
+ },
+ {
+  "id": "pro-28-13",
+  "hebrew": "מְכַסֶּה פְשָׁעָיו לֹא יַצְלִיחַ וּמוֹדֶה וְעֹזֵב יְרֻחָם׃",
+  "tr": "Mechaseh fesha'av lo yatzli'ach, umodeh ve'ozev yerucham.",
+  "english_jps1917": "He that covereth his transgressions shall not prosper; But whoso confesseth and forsaketh them shall obtain mercy.",
+  "source_ref": "Proverbs 28:13"
+ },
+ {
+  "id": "pro-3-27",
+  "hebrew": "אַל־תִּמְנַע־טוֹב מִבְּעָלָיו בִּהְיוֹת לְאֵל יָדְךָ לַעֲשׂוֹת׃",
+  "tr": "Al timna tov mibe'alav, bihyot le'el yadecha la'asot.",
+  "english_jps1917": "Withhold not good from him to whom it is due, When it is in the power of thy hand to do it.",
+  "source_ref": "Proverbs 3:27"
+ },
+ {
+  "id": "isa-2-4",
+  "hebrew": "וְשָׁפַט בֵּין הַגּוֹיִם וְהוֹכִיחַ לְעַמִּים רַבִּים וְכִתְּתוּ חַרְבוֹתָם לְאִתִּים וַחֲנִיתוֹתֵיהֶם לְמַזְמֵרוֹת לֹא־יִשָּׂא גוֹי אֶל־גּוֹי חֶרֶב וְלֹא־יִלְמְדוּ עוֹד מִלְחָמָה׃",
+  "tr": "Veshafat bein hagoyim vehochiach le'amim rabim; vechitetu charvotam le'itim vachanitoteihem lemazmerot; lo yisa goy el goy cherev, velo yilmedu od milchama.",
+  "english_jps1917": "And He shall judge between the nations, And shall decide for many peoples; And they shall beat their swords into plowshares, And their spears into pruninghooks; Nation shall not lift up sword against nation, Neither shall they learn war any more.",
+  "source_ref": "Isaiah 2:4"
+ },
+ {
+  "id": "isa-40-8",
+  "hebrew": "יָבֵשׁ חָצִיר נָבֵל צִיץ וּדְבַר־אֱלֹהֵינוּ יָקוּם לְעוֹלָם׃",
+  "tr": "Yavesh chatzir, navel tzitz, udevar Eloheinu yakum le'olam.",
+  "english_jps1917": "The grass withereth, the flower fadeth; But the word of our God shall stand for ever.’",
+  "source_ref": "Isaiah 40:8"
+ },
+ {
+  "id": "isa-40-31",
+  "hebrew": "וְקוֹיֵ יְהוָה יַחֲלִיפוּ כֹחַ יַעֲלוּ אֵבֶר כַּנְּשָׁרִים יָרוּצוּ וְלֹא יִיגָעוּ יֵלְכוּ וְלֹא יִיעָפוּ׃",
+  "tr": "Vekoyei Adonai yachalifu choach, ya'alu ever kanesharim; yarutzu velo yiga'u, yelchu velo yi'afu.",
+  "english_jps1917": "But they that wait for the LORD shall renew their strength; They shall mount up with wings as eagles; They shall run, and not be weary; They shall walk, and not faint.",
+  "source_ref": "Isaiah 40:31"
+ },
+ {
+  "id": "isa-41-10",
+  "hebrew": "אַל־תִּירָא כִּי עִמְּךָ־אָנִי אַל־תִּשְׁתָּע כִּי־אֲנִי אֱלֹהֶיךָ אִמַּצְתִּיךָ אַף־עֲזַרְתִּיךָ אַף־תְּמַכְתִּיךָ בִּימִין צִדְקִי׃",
+  "tr": "Al tira ki imcha ani, al tishta ki ani Elohecha; imatzticha af azarticha, af temachticha bimin tzidki.",
+  "english_jps1917": "Fear thou not, for I am with thee, Be not dismayed, for I am thy God; I strengthen thee, yea, I help thee; Yea, I uphold thee with My victorious right hand.",
+  "source_ref": "Isaiah 41:10"
+ },
+ {
+  "id": "isa-43-2",
+  "hebrew": "כִּי־תַעֲבֹר בַּמַּיִם אִתְּךָ־אָנִי וּבַנְּהָרוֹת לֹא יִשְׁטְפוּךָ כִּי־תֵלֵךְ בְּמוֹ־אֵשׁ לֹא תִכָּוֶה וְלֶהָבָה לֹא תִבְעַר־בָּךְ׃",
+  "tr": "Ki ta'avor bamayim itcha ani, uvaneharot lo yishtefucha; ki telech bemo esh lo tikaveh, velehava lo tiv'ar bach.",
+  "english_jps1917": "When thou passest through the waters, I will be with thee, And through the rivers, they shall not overflow thee; When thou walkest through the fire, thou shalt not be burned, Neither shall the flame kindle upon thee.",
+  "source_ref": "Isaiah 43:2"
+ },
+ {
+  "id": "isa-55-12",
+  "hebrew": "כִּי־בְשִׂמְחָה תֵצֵאוּ וּבְשָׁלוֹם תּוּבָלוּן הֶהָרִים וְהַגְּבָעוֹת יִפְצְחוּ לִפְנֵיכֶם רִנָּה וְכָל־עֲצֵי הַשָּׂדֶה יִמְחֲאוּ־כָף׃",
+  "tr": "Ki vesimcha tetze'u uveshalom tuvalun; heharim vehageva'ot yiftzechu lifneichem rina, vechol atzei hasadeh yimcha'u chaf.",
+  "english_jps1917": "For ye shall go out with joy, And be led forth with peace; The mountains and the hills shall break forth before you into singing, And all the trees of the field shall clap their hands.",
+  "source_ref": "Isaiah 55:12"
+ },
+ {
+  "id": "isa-58-7",
+  "hebrew": "הֲלוֹא פָרֹס לָרָעֵב לַחְמֶךָ וַעֲנִיִּים מְרוּדִים תָּבִיא בָיִת כִּי־תִרְאֶה עָרֹם וְכִסִּיתוֹ וּמִבְּשָׂרְךָ לֹא תִתְעַלָּם׃",
+  "tr": "Halo faros lara'ev lachmecha, va'aniyim merudim tavi vayit; ki tir'eh arom vechisito, umibesarcha lo tit'alam.",
+  "english_jps1917": "Is it not to deal thy bread to the hungry, And that thou bring the poor that are cast out to thy house? When thou seest the naked, that thou cover him, And that thou hide not thyself from thine own flesh?",
+  "source_ref": "Isaiah 58:7"
+ },
+ {
+  "id": "isa-60-1",
+  "hebrew": "קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ וּכְבוֹד יְהוָה עָלַיִךְ זָרָח׃",
+  "tr": "Kumi ori ki va orech, uchvod Adonai alayich zarach.",
+  "english_jps1917": "Arise, shine, for thy light is come, And the glory of the LORD is risen upon thee.",
+  "source_ref": "Isaiah 60:1"
+ },
+ {
+  "id": "isa-12-2",
+  "hebrew": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד כִּי־עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי־לִי לִישׁוּעָה׃",
+  "tr": "Hineh El yeshu'ati, evtach velo efchad; ki ozi vezimrat Yah Adonai, vayehi li lishu'a.",
+  "english_jps1917": "Behold, God is my salvation; I will trust, and will not be afraid; For GOD the LORD is my strength and song; And He is become my salvation.’",
+  "source_ref": "Isaiah 12:2"
+ },
+ {
+  "id": "isa-26-3",
+  "hebrew": "יֵצֶר סָמוּךְ תִּצֹּר שָׁלוֹם שָׁלוֹם כִּי בְךָ בָּטוּחַ׃",
+  "tr": "Yetzer samuch titzor shalom shalom, ki vecha batu'ach.",
+  "english_jps1917": "The mind stayed on Thee Thou keepest in perfect peace; Because it trusteth in Thee.",
+  "source_ref": "Isaiah 26:3"
+ },
+ {
+  "id": "isa-40-1",
+  "hebrew": "נַחֲמוּ נַחֲמוּ עַמִּי יֹאמַר אֱלֹהֵיכֶם׃",
+  "tr": "Nachamu nachamu ami, yomar Eloheichem.",
+  "english_jps1917": "Comfort ye, comfort ye My people, saith your God.",
+  "source_ref": "Isaiah 40:1"
+ },
+ {
+  "id": "isa-11-9",
+  "hebrew": "לֹא־יָרֵעוּ וְלֹא־יַשְׁחִיתוּ בְּכָל־הַר קָדְשִׁי כִּי־מָלְאָה הָאָרֶץ דֵּעָה אֶת־יְהוָה כַּמַּיִם לַיָּם מְכַסִּים׃",
+  "tr": "Lo yare'u velo yashchitu bechol har kodshi; ki mal'a ha'aretz de'a et Adonai, kamayim layam mechasim.",
+  "english_jps1917": "They shall not hurt nor destroy In all My holy mountain; For the earth shall be full of the knowledge of the LORD, As the waters cover the sea.",
+  "source_ref": "Isaiah 11:9"
+ },
+ {
+  "id": "isa-6-3",
+  "hebrew": "וְקָרָא זֶה אֶל־זֶה וְאָמַר קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ׃",
+  "tr": "Vekara zeh el zeh ve'amar: Kadosh, kadosh, kadosh Adonai Tzeva'ot, melo chol ha'aretz kevodo.",
+  "english_jps1917": "And one called unto another, and said: Holy, holy, holy, is the LORD of hosts; The whole earth is full of His glory.",
+  "source_ref": "Isaiah 6:3"
+ },
+ {
+  "id": "isa-30-15",
+  "hebrew": "כִּי כֹה־אָמַר אֲדֹנָי יְהוִה קְדוֹשׁ יִשְׂרָאֵל בְּשׁוּבָה וָנַחַת תִּוָּשֵׁעוּן בְּהַשְׁקֵט וּבְבִטְחָה תִּהְיֶה גְּבוּרַתְכֶם וְלֹא אֲבִיתֶם׃",
+  "tr": "Ki cho amar Adonai Elohim, Kedosh Yisrael: beshuva vanachat tivashe'un, behashket uvevitcha tihyeh gevuratchem; velo avitem.",
+  "english_jps1917": "For thus said the Lord GOD, the Holy One of Israel: In sitting still and rest shall ye be saved, in quietness and in confidence shall be your strength; And ye would not.",
+  "source_ref": "Isaiah 30:15"
+ },
+ {
+  "id": "isa-55-6",
+  "hebrew": "דִּרְשׁוּ יְהוָה בְּהִמָּצְאוֹ קְרָאֻהוּ בִּהְיוֹתוֹ קָרוֹב׃",
+  "tr": "Dirshu Adonai behimatzo, kera'uhu bihyoto karov.",
+  "english_jps1917": "Seek ye the LORD while He may be found, Call ye upon Him while He is near;",
+  "source_ref": "Isaiah 55:6"
+ },
+ {
+  "id": "isa-1-17",
+  "hebrew": "לִמְדוּ הֵיטֵב דִּרְשׁוּ מִשְׁפָּט אַשְּׁרוּ חָמוֹץ שִׁפְטוּ יָתוֹם רִיבוּ אַלְמָנָה׃",
+  "tr": "Limdu heitev, dirshu mishpat, asheru chamotz; shiftu yatom, rivu almana.",
+  "english_jps1917": "Learn to do well; Seek justice, relieve the oppressed, Judge the fatherless, plead for the widow.",
+  "source_ref": "Isaiah 1:17"
+ },
+ {
+  "id": "mic-6-8",
+  "hebrew": "הִגִּיד לְךָ אָדָם מַה־טּוֹב וּמָה־יְהוָה דּוֹרֵשׁ מִמְּךָ כִּי אִם־עֲשׂוֹת מִשְׁפָּט וְאַהֲבַת חֶסֶד וְהַצְנֵעַ לֶכֶת עִם־אֱלֹהֶיךָ׃",
+  "tr": "Higid lecha adam ma tov, uma Adonai doresh mimcha: ki im asot mishpat ve'ahavat chesed, vehatzne'a lechet im Elohecha.",
+  "english_jps1917": "It hath been told thee, O man, what is good, And what the LORD doth require of thee: Only to do justly, and to love mercy, and to walk humbly with thy God.",
+  "source_ref": "Micah 6:8"
+ },
+ {
+  "id": "mic-4-3",
+  "hebrew": "וְשָׁפַט בֵּין עַמִּים רַבִּים וְהוֹכִיחַ לְגוֹיִם עֲצֻמִים עַד־רָחוֹק וְכִתְּתוּ חַרְבֹתֵיהֶם לְאִתִּים וַחֲנִיתֹתֵיהֶם לְמַזְמֵרוֹת לֹא־יִשְׂאוּ גּוֹי אֶל־גּוֹי חֶרֶב וְלֹא־יִלְמְדוּן עוֹד מִלְחָמָה׃",
+  "tr": "Veshafat bein amim rabim vehochiach legoyim atzumim ad rachok; vechitetu charvoteihem le'itim vachanitoteihem lemazmerot; lo yis'u goy el goy cherev, velo yilmedun od milchama.",
+  "english_jps1917": "And He shall judge between many peoples, And shall decide concerning mighty nations afar off; And they shall beat their swords into plowshares, And their spears into pruninghooks; Nation shall not lift up sword against nation, Neither shall they learn war any more.",
+  "source_ref": "Micah 4:3"
+ },
+ {
+  "id": "jer-29-11",
+  "hebrew": "כִּי אָנֹכִי יָדַעְתִּי אֶת־הַמַּחֲשָׁבֹת אֲשֶׁר אָנֹכִי חֹשֵׁב עֲלֵיכֶם נְאֻם־יְהוָה מַחְשְׁבוֹת שָׁלוֹם וְלֹא לְרָעָה לָתֵת לָכֶם אַחֲרִית וְתִקְוָה׃",
+  "tr": "Ki anochi yadati et hamachashavot asher anochi choshev aleichem, ne'um Adonai: machshevot shalom velo lera'a, latet lachem acharit vetikva.",
+  "english_jps1917": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you a future and a hope.",
+  "source_ref": "Jeremiah 29:11"
+ },
+ {
+  "id": "jer-17-7",
+  "hebrew": "בָּרוּךְ הַגֶּבֶר אֲשֶׁר יִבְטַח בַּיהוָה וְהָיָה יְהוָה מִבְטַחוֹ׃",
+  "tr": "Baruch hagever asher yivtach b'Adonai, vehaya Adonai mivtacho.",
+  "english_jps1917": "Blessed is the man that trusteth in the LORD, And whose trust the LORD is.",
+  "source_ref": "Jeremiah 17:7"
+ },
+ {
+  "id": "jer-31-3",
+  "hebrew": "מֵרָחוֹק יְהוָה נִרְאָה לִי וְאַהֲבַת עוֹלָם אֲהַבְתִּיךְ עַל־כֵּן מְשַׁכְתִּיךְ חָסֶד׃",
+  "tr": "Merachok Adonai nir'a li; ve'ahavat olam ahavtich, al ken meshachtich chased.",
+  "english_jps1917": "’From afar the LORD appeared unto me.’ ’Yea, I have loved thee with an everlasting love; Therefore with affection have I drawn thee.",
+  "source_ref": "Jeremiah 31:3"
+ },
+ {
+  "id": "deu-6-5",
+  "hebrew": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ׃",
+  "tr": "Ve'ahavta et Adonai Elohecha bechol levavcha uvechol nafshecha uvechol me'odecha.",
+  "english_jps1917": "And thou shalt love the LORD thy God with all thy heart, and with all thy soul, and with all thy might.",
+  "source_ref": "Deuteronomy 6:5"
+ },
+ {
+  "id": "deu-30-19",
+  "hebrew": "הַעִידֹתִי בָכֶם הַיּוֹם אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ הַחַיִּים וְהַמָּוֶת נָתַתִּי לְפָנֶיךָ הַבְּרָכָה וְהַקְּלָלָה וּבָחַרְתָּ בַּחַיִּים לְמַעַן תִּחְיֶה אַתָּה וְזַרְעֶךָ׃",
+  "tr": "Ha'idoti vachem hayom et hashamayim ve'et ha'aretz: hachayim vehamavet natati lefanecha, haberacha vehakelala; uvacharta bachayim, lema'an tichyeh ata vezar'echa.",
+  "english_jps1917": "I call heaven and earth to witness against you this day, that I have set before thee life and death, the blessing and the curse; therefore choose life, that thou mayest live, thou and thy seed;",
+  "source_ref": "Deuteronomy 30:19"
+ },
+ {
+  "id": "deu-30-14",
+  "hebrew": "כִּי־קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשֹׂתוֹ׃",
+  "tr": "Ki karov elecha hadavar me'od, beficha uvilvavcha la'asoto.",
+  "english_jps1917": "But the word is very nigh unto thee, in thy mouth, and in thy heart, that thou mayest do it.",
+  "source_ref": "Deuteronomy 30:14"
+ },
+ {
+  "id": "deu-31-6",
+  "hebrew": "חִזְקוּ וְאִמְצוּ אַל־תִּירְאוּ וְאַל־תַּעַרְצוּ מִפְּנֵיהֶם כִּי יְהוָה אֱלֹהֶיךָ הוּא הַהֹלֵךְ עִמָּךְ לֹא יַרְפְּךָ וְלֹא יַעַזְבֶךָּ׃",
+  "tr": "Chizku ve'imtzu, al tir'u ve'al ta'artzu mipeneihem; ki Adonai Elohecha hu haholech imach, lo yarpecha velo ya'azveka.",
+  "english_jps1917": "Be strong and of good courage, fear not, nor be affrighted at them; for the LORD thy God, He it is that doth go with thee; He will not fail thee, nor forsake thee.’",
+  "source_ref": "Deuteronomy 31:6"
+ },
+ {
+  "id": "deu-4-39",
+  "hebrew": "וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל־לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל־הָאָרֶץ מִתָּחַת אֵין עוֹד׃",
+  "tr": "Veyadata hayom vahashevota el levavecha, ki Adonai hu ha'Elohim bashamayim mima'al ve'al ha'aretz mitachat; ein od.",
+  "english_jps1917": "know this day, and lay it to thy heart, that the LORD, He is God in heaven above and upon the earth beneath; there is none else.",
+  "source_ref": "Deuteronomy 4:39"
+ },
+ {
+  "id": "deu-10-19",
+  "hebrew": "וַאֲהַבְתֶּם אֶת־הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃",
+  "tr": "Va'ahavtem et hager, ki gerim heyitem be'eretz Mitzrayim.",
+  "english_jps1917": "Love ye therefore the stranger; for ye were strangers in the land of Egypt.",
+  "source_ref": "Deuteronomy 10:19"
+ },
+ {
+  "id": "deu-16-20",
+  "hebrew": "צֶדֶק צֶדֶק תִּרְדֹּף לְמַעַן תִּחְיֶה וְיָרַשְׁתָּ אֶת־הָאָרֶץ אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ׃",
+  "tr": "Tzedek tzedek tirdof, lema'an tichyeh veyarashta et ha'aretz asher Adonai Elohecha noten lach.",
+  "english_jps1917": "Justice, justice shalt thou follow, that thou mayest live, and inherit the land which the LORD thy God giveth thee.",
+  "source_ref": "Deuteronomy 16:20"
+ },
+ {
+  "id": "lev-19-18",
+  "hebrew": "לֹא־תִקֹּם וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ אֲנִי יְהוָה׃",
+  "tr": "Lo tikom velo titor et benei amecha, ve'ahavta lere'acha kamocha; ani Adonai.",
+  "english_jps1917": "Thou shalt not take vengeance, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD.",
+  "source_ref": "Leviticus 19:18"
+ },
+ {
+  "id": "lev-19-2",
+  "hebrew": "דַּבֵּר אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם׃",
+  "tr": "Daber el kol adat benei Yisrael ve'amarta alehem: kedoshim tihyu, ki kadosh ani Adonai Eloheichem.",
+  "english_jps1917": "Speak unto all the congregation of the children of Israel, and say unto them: Ye shall be holy; for I the LORD your God am holy.",
+  "source_ref": "Leviticus 19:2"
+ },
+ {
+  "id": "lev-19-14",
+  "hebrew": "לֹא־תְקַלֵּל חֵרֵשׁ וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל וְיָרֵאתָ מֵּאֱלֹהֶיךָ אֲנִי יְהוָה׃",
+  "tr": "Lo tekalel cheresh, velifnei iver lo titen michshol; veyareta me'Elohecha, ani Adonai.",
+  "english_jps1917": "Thou shalt not curse the deaf, nor put a stumbling-block before the blind, but thou shalt fear thy God: I am the LORD.",
+  "source_ref": "Leviticus 19:14"
+ },
+ {
+  "id": "num-6-24",
+  "hebrew": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+  "tr": "Yevarechecha Adonai veyishmerecha.",
+  "english_jps1917": "The LORD bless thee, and keep thee;",
+  "source_ref": "Numbers 6:24"
+ },
+ {
+  "id": "num-6-26",
+  "hebrew": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃",
+  "tr": "Yisa Adonai panav elecha veyasem lecha shalom.",
+  "english_jps1917": "The LORD lift up His countenance upon thee, and give thee peace.",
+  "source_ref": "Numbers 6:26"
+ },
+ {
+  "id": "exo-15-2",
+  "hebrew": "עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ׃",
+  "tr": "Ozi vezimrat Yah vayehi li lishu'a; zeh Eli ve'anvehu, Elohei avi va'aromemenhu.",
+  "english_jps1917": "The LORD is my strength and song, And He is become my salvation; This is my God, and I will glorify Him; My father’s God, and I will exalt Him.",
+  "source_ref": "Exodus 15:2"
+ },
+ {
+  "id": "exo-20-12",
+  "hebrew": "כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ לְמַעַן יַאֲרִכוּן יָמֶיךָ עַל הָאֲדָמָה אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ׃",
+  "tr": "Kabed et avicha ve'et imecha, lema'an ya'arichun yamecha al ha'adama asher Adonai Elohecha noten lach.",
+  "english_jps1917": "Honour thy father and thy mother, that thy days may be long upon the land which the LORD thy God giveth thee.",
+  "source_ref": "Exodus 20:12"
+ },
+ {
+  "id": "exo-23-9",
+  "hebrew": "וְגֵר לֹא תִלְחָץ וְאַתֶּם יְדַעְתֶּם אֶת־נֶפֶשׁ הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם׃",
+  "tr": "Veger lo tilchatz; ve'atem yedatem et nefesh hager, ki gerim heyitem be'eretz Mitzrayim.",
+  "english_jps1917": "And a stranger shalt thou not oppress; for ye know the heart of a stranger, seeing ye were strangers in the land of Egypt.",
+  "source_ref": "Exodus 23:9"
+ },
+ {
+  "id": "jos-1-9",
+  "hebrew": "הֲלוֹא צִוִּיתִיךָ חֲזַק וֶאֱמָץ אַל־תַּעֲרֹץ וְאַל־תֵּחָת כִּי עִמְּךָ יְהוָה אֱלֹהֶיךָ בְּכֹל אֲשֶׁר תֵּלֵךְ׃",
+  "tr": "Halo tziviticha chazak ve'ematz, al ta'arotz ve'al techat; ki imcha Adonai Elohecha bechol asher telech.",
+  "english_jps1917": "Have not I commanded thee? Be strong and of good courage; be not affrighted, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.’",
+  "source_ref": "Joshua 1:9"
+ },
+ {
+  "id": "gen-12-2",
+  "hebrew": "וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה בְּרָכָה׃",
+  "tr": "Ve'e'escha legoy gadol va'avarechecha va'agadela shemecha; vehyeh beracha.",
+  "english_jps1917": "And I will make of thee a great nation, and I will bless thee, and make thy name great; and be thou a blessing.",
+  "source_ref": "Genesis 12:2"
+ },
+ {
+  "id": "gen-1-27",
+  "hebrew": "וַיִּבְרָא אֱלֹהִים אֶת־הָאָדָם בְּצַלְמוֹ בְּצֶלֶם אֱלֹהִים בָּרָא אֹתוֹ זָכָר וּנְקֵבָה בָּרָא אֹתָם׃",
+  "tr": "Vayivra Elohim et ha'adam betzalmo, betzelem Elohim bara oto; zachar unekeva bara otam.",
+  "english_jps1917": "And God created man in His own image, in the image of God created He him; male and female created He them.",
+  "source_ref": "Genesis 1:27"
+ },
+ {
+  "id": "gen-2-3",
+  "hebrew": "וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+  "tr": "Vayevarech Elohim et yom hashevi'i vayekadesh oto, ki vo shavat mikol melachto asher bara Elohim la'asot.",
+  "english_jps1917": "And God blessed the seventh day, and hallowed it; because that in it He rested from all His work which God in creating had made.",
+  "source_ref": "Genesis 2:3"
+ },
+ {
+  "id": "zec-4-6",
+  "hebrew": "וַיַּעַן וַיֹּאמֶר אֵלַי לֵאמֹר זֶה דְּבַר־יְהוָה אֶל־זְרֻבָּבֶל לֵאמֹר לֹא בְחַיִל וְלֹא בְכֹחַ כִּי אִם־בְּרוּחִי אָמַר יְהוָה צְבָאוֹת׃",
+  "tr": "Vaya'an vayomer elai lemor: zeh devar Adonai el Zerubavel lemor, lo vechayil velo vechoach ki im beruchi, amar Adonai Tzeva'ot.",
+  "english_jps1917": "Then he answered and spoke unto me, saying: ‘This is the word of the LORD unto Zerubbabel, saying: Not by might, nor by power, but by My spirit, saith the LORD of hosts.",
+  "source_ref": "Zechariah 4:6"
+ },
+ {
+  "id": "zec-8-16",
+  "hebrew": "אֵלֶּה הַדְּבָרִים אֲשֶׁר תַּעֲשׂוּ דַּבְּרוּ אֱמֶת אִישׁ אֶת־רֵעֵהוּ אֱמֶת וּמִשְׁפַּט שָׁלוֹם שִׁפְטוּ בְּשַׁעֲרֵיכֶם׃",
+  "tr": "Ele hadevarim asher ta'asu: daberu emet ish et re'ehu, emet umishpat shalom shiftu besha'areichem.",
+  "english_jps1917": "These are the things that ye shall do: Speak ye every man the truth with his neighbour; execute the judgment of truth and peace in your gates;",
+  "source_ref": "Zechariah 8:16"
+ },
+ {
+  "id": "hab-2-4",
+  "hebrew": "הִנֵּה עֻפְּלָה לֹא־יָשְׁרָה נַפְשׁוֹ בּוֹ וְצַדִּיק בֶּאֱמוּנָתוֹ יִחְיֶה׃",
+  "tr": "Hineh upla lo yashra nafsho bo; vetzadik be'emunato yichyeh.",
+  "english_jps1917": "Behold, his soul is puffed up, it is not upright in him; But the righteous shall live by his faith.",
+  "source_ref": "Habakkuk 2:4"
+ },
+ {
+  "id": "ecc-3-1",
+  "hebrew": "לַכֹּל זְמָן וְעֵת לְכָל־חֵפֶץ תַּחַת הַשָּׁמָיִם׃",
+  "tr": "Lakol zeman, ve'et lechol chefetz tachat hashamayim.",
+  "english_jps1917": "To every thing there is a season, and a time to every purpose under the heaven:",
+  "source_ref": "Ecclesiastes 3:1"
+ },
+ {
+  "id": "ecc-4-9",
+  "hebrew": "טוֹבִים הַשְּׁנַיִם מִן־הָאֶחָד אֲשֶׁר יֵשׁ־לָהֶם שָׂכָר טוֹב בַּעֲמָלָם׃",
+  "tr": "Tovim hashenayim min ha'echad, asher yesh lahem sachar tov ba'amalam.",
+  "english_jps1917": "Two are better than one; because they have a good reward for their labour.",
+  "source_ref": "Ecclesiastes 4:9"
+ },
+ {
+  "id": "ecc-9-7",
+  "hebrew": "לֵךְ אֱכֹל בְּשִׂמְחָה לַחְמֶךָ וּשֲׁתֵה בְלֶב־טוֹב יֵינֶךָ כִּי כְבָר רָצָה הָאֱלֹהִים אֶת־מַעֲשֶׂיךָ׃",
+  "tr": "Lech echol besimcha lachmecha ushteh velev tov yeinecha, ki chevar ratza ha'Elohim et ma'asecha.",
+  "english_jps1917": "Go thy way, eat thy bread with joy, And drink thy wine with a merry heart; For God hath already accepted thy works.",
+  "source_ref": "Ecclesiastes 9:7"
+ },
+ {
+  "id": "lam-3-22",
+  "hebrew": "חַסְדֵי יְהוָה כִּי לֹא־תָמְנוּ כִּי לֹא־כָלוּ רַחֲמָיו׃",
+  "tr": "Chasdei Adonai ki lo tamnu, ki lo chalu rachamav.",
+  "english_jps1917": "Surely the LORD’S mercies are not consumed, Surely His compassions fail not.",
+  "source_ref": "Lamentations 3:22"
+ },
+ {
+  "id": "lam-3-23",
+  "hebrew": "חֲדָשִׁים לַבְּקָרִים רַבָּה אֱמוּנָתֶךָ׃",
+  "tr": "Chadashim labekarim, raba emunatecha.",
+  "english_jps1917": "They are new every morning; Great is Thy faithfulness.",
+  "source_ref": "Lamentations 3:23"
+ },
+ {
+  "id": "lam-5-21",
+  "hebrew": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+  "tr": "Hashivenu Adonai elecha venashuva, chadesh yameinu kekedem.",
+  "english_jps1917": "Turn Thou us unto Thee, O LORD, and we shall be turned; Renew our days as of old.",
+  "source_ref": "Lamentations 5:21"
+ },
+ {
+  "id": "amo-5-24",
+  "hebrew": "וְיִגַּל כַּמַּיִם מִשְׁפָּט וּצְדָקָה כְּנַחַל אֵיתָן׃",
+  "tr": "Veyigal kamayim mishpat, utzedaka kenachal eitan.",
+  "english_jps1917": "But let justice well up as waters, And righteousness as a mighty stream.",
+  "source_ref": "Amos 5:24"
+ },
+ {
+  "id": "rut-1-16",
+  "hebrew": "וַתֹּאמֶר רוּת אַל־תִּפְגְּעִי־בִי לְעָזְבֵךְ לָשׁוּב מֵאַחֲרָיִךְ כִּי אֶל־אֲשֶׁר תֵּלְכִי אֵלֵךְ וּבַאֲשֶׁר תָּלִינִי אָלִין עַמֵּךְ עַמִּי וֵאלֹהַיִךְ אֱלֹהָי׃",
+  "tr": "Vatomer Rut: al tifge'i vi le'ozvech lashuv me'acharayich; ki el asher telchi elech, uva'asher talini alin; amech ami, v'Elohayich Elohai.",
+  "english_jps1917": "And Ruth said: ‘Entreat me not to leave thee, and to return from following after thee; for whither thou goest, I will go; and where thou lodgest, I will lodge; thy people shall be my people, and thy God my God;",
+  "source_ref": "Ruth 1:16"
+ },
+ {
+  "id": "job-28-28",
+  "hebrew": "וַיֹּאמֶר לָאָדָם הֵן יִרְאַת אֲדֹנָי הִיא חָכְמָה וְסוּר מֵרָע בִּינָה׃",
+  "tr": "Vayomer la'adam: hen yir'at Adonai hi chochma, vesur mera bina.",
+  "english_jps1917": "And unto man He said: ‘Behold, the fear of the Lord, that is wisdom; And to depart from evil is understanding.’",
+  "source_ref": "Job 28:28"
+ },
+ {
+  "id": "hos-14-2",
+  "hebrew": "שׁוּבָה יִשְׂרָאֵל עַד יְהוָה אֱלֹהֶיךָ כִּי כָשַׁלְתָּ בַּעֲוֹנֶךָ׃",
+  "tr": "Shuva Yisrael ad Adonai Elohecha, ki chashalta ba'avonecha.",
+  "english_jps1917": "Return, O Israel, unto the LORD thy God; For thou hast stumbled in thine iniquity.",
+  "source_ref": "Hosea 14:2"
+ },
+ {
+  "id": "mal-2-10",
+  "hebrew": "הֲלוֹא אָב אֶחָד לְכֻלָּנוּ הֲלוֹא אֵל אֶחָד בְּרָאָנוּ מַדּוּעַ נִבְגַּד אִישׁ בְּאָחִיו לְחַלֵּל בְּרִית אֲבֹתֵינוּ׃",
+  "tr": "Halo av echad lechulanu, halo El echad bera'anu; madu'a nivgad ish be'achiv, lechalel berit avoteinu.",
+  "english_jps1917": "Have we not all one father? Hath not one God created us? Why do we deal treacherously every man against his brother, Profaning the covenant of our fathers?",
+  "source_ref": "Malachi 2:10"
+ },
+ {
+  "id": "joe-2-13",
+  "hebrew": "וְקִרְעוּ לְבַבְכֶם וְאַל־בִּגְדֵיכֶם וְשׁוּבוּ אֶל־יְהוָה אֱלֹהֵיכֶם כִּי־חַנּוּן וְרַחוּם הוּא אֶרֶךְ אַפַּיִם וְרַב־חֶסֶד וְנִחָם עַל־הָרָעָה׃",
+  "tr": "Vekir'u levavchem ve'al bigdeichem, veshuvu el Adonai Eloheichem; ki chanun verachum hu, erech apayim verav chesed, venicham al hara'a.",
+  "english_jps1917": "And rend your heart, and not your garments, And turn unto the LORD your God; For He is gracious and compassionate, long-suffering, and abundant in mercy, And repenteth Him of the evil.",
+  "source_ref": "Joel 2:13"
+ },
+ {
+  "id": "1ki-3-9",
+  "hebrew": "וְנָתַתָּ לְעַבְדְּךָ לֵב שֹׁמֵעַ לִשְׁפֹּט אֶת־עַמְּךָ לְהָבִין בֵּין־טוֹב לְרָע כִּי מִי יוּכַל לִשְׁפֹּט אֶת־עַמְּךָ הַכָּבֵד הַזֶּה׃",
+  "tr": "Venatata le'avdecha lev shome'a lishpot et amcha, lehavin bein tov lera; ki mi yuchal lishpot et amcha hakaved hazeh.",
+  "english_jps1917": "Give Thy servant therefore an understanding heart to judge Thy people, that I may discern between good and evil; for who is able to judge this Thy great people?’",
+  "source_ref": "1 Kings 3:9"
+ },
+ {
+  "id": "1sa-16-7",
+  "hebrew": "וַיֹּאמֶר יְהוָה אֶל־שְׁמוּאֵל אַל־תַּבֵּט אֶל־מַרְאֵהוּ וְאֶל־גְּבֹהַּ קוֹמָתוֹ כִּי מְאַסְתִּיהוּ כִּי לֹא אֲשֶׁר יִרְאֶה הָאָדָם כִּי הָאָדָם יִרְאֶה לַעֵינַיִם וַיהוָה יִרְאֶה לַלֵּבָב׃",
+  "tr": "Vayomer Adonai el Shmuel: al tabet el mar'ehu ve'el gevoha komato, ki me'astihu; ki lo asher yir'eh ha'adam, ki ha'adam yir'eh la'einayim, v'Adonai yir'eh lalevav.",
+  "english_jps1917": "But the LORD said unto Samuel: ‘Look not on his countenance, or on the height of his stature; because I have rejected him; for it is not as man seeth: for man looketh on the outward appearance, but the LORD looketh on the heart.’",
+  "source_ref": "1 Samuel 16:7"
+ },
+ {
+  "id": "ecc-12-13",
+  "hebrew": "סוֹף דָּבָר הַכֹּל נִשְׁמָע אֶת־הָאֱלֹהִים יְרָא וְאֶת־מִצְוֹתָיו שְׁמוֹר כִּי־זֶה כָּל־הָאָדָם׃",
+  "tr": "Sof davar hakol nishma: et ha'Elohim yera ve'et mitzvotav shemor, ki zeh kol ha'adam.",
+  "english_jps1917": "The end of the matter, all having been heard: fear God, and keep His commandments; for this is the whole man.",
+  "source_ref": "Ecclesiastes 12:13"
+ },
+ {
+  "id": "isa-49-15",
+  "hebrew": "הֲתִשְׁכַּח אִשָּׁה עוּלָהּ מֵרַחֵם בֶּן־בִּטְנָהּ גַּם־אֵלֶּה תִשְׁכַּחְנָה וְאָנֹכִי לֹא אֶשְׁכָּחֵךְ׃",
+  "tr": "Hatishkach isha ulah, merachem ben bitnah? Gam ele tishkachna, ve'anochi lo eshkachech.",
+  "english_jps1917": "Can a woman forget her sucking child, That she should not have compassion on the son of her womb? Yea, these may forget, Yet will not I forget thee.",
+  "source_ref": "Isaiah 49:15"
+ },
+ {
+  "id": "psa-128-2",
+  "hebrew": "יְגִיעַ כַּפֶּיךָ כִּי תֹאכֵל אַשְׁרֶיךָ וְטוֹב לָךְ׃",
+  "tr": "Yegi'a kapecha ki tochel, ashrecha vetov lach.",
+  "english_jps1917": "When thou eatest the labour of thy hands, Happy shalt thou be, and it shall be well with thee.",
+  "source_ref": "Psalms 128:2"
+ }
+]

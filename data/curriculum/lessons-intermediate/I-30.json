@@ -1,0 +1,355 @@
+{
+ "id": "I-30",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Sukkot: sukkah words and the blessings that carry over",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "סֻכָּה",
+   "en": "booth, sukkah",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sukah",
+    "sephardi": "sukah",
+    "ashkenazi": "sukoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h64684490"
+   }
+  },
+  {
+   "he": "חַג",
+   "en": "holiday",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chag",
+    "sephardi": "chag",
+    "ashkenazi": "chag"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h81fd04d9"
+   }
+  },
+  {
+   "he": "חַג שָׂמֵחַ",
+   "en": "happy holiday",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chag sameach",
+    "sephardi": "chag sameach",
+    "ashkenazi": "chag someiach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p6e9bcf25"
+   }
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ",
+   "en": "who has kept us alive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shehecheyainu",
+    "sephardi": "shehecheyainu",
+    "ashkenazi": "shehecheyoynu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁהֶחֱיָינוּ"
+    ]
+   }
+  },
+  {
+   "he": "לַזְּמַן הַזֶּה",
+   "en": "to this time",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lazeman hazeh",
+    "sephardi": "lazeman hazeh",
+    "ashkenazi": "lazeman hazeh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לַזְּמַן",
+     "הַזֶּה"
+    ]
+   }
+  },
+  {
+   "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+   "en": "who creates the fruit of the vine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bore peri hagafen",
+    "sephardi": "bore peri hagafen",
+    "ashkenazi": "borei peri hagofen"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בּוֹרֵא",
+     "פְּרִי",
+     "הַגָּפֶן"
+    ]
+   }
+  },
+  {
+   "he": "הַמּוֹצִיא לֶחֶם",
+   "en": "who brings forth bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hamotzi lechem",
+    "sephardi": "hamotzi lechem",
+    "ashkenazi": "hamotzi lechem"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַמּוֹצִיא",
+     "לֶחֶם"
+    ]
+   }
+  },
+  {
+   "he": "מִצְוָה",
+   "en": "commandment",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mitzvah",
+    "sephardi": "mitzvah",
+    "ashkenazi": "mitzvoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2ff06831"
+   }
+  },
+  {
+   "he": "בְּמִצְוֹתָיו",
+   "en": "with his commandments",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bemitzvotav",
+    "sephardi": "bemitzvotav",
+    "ashkenazi": "bemitzvosov"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּמִצְוֹתָיו"
+    ]
+   }
+  },
+  {
+   "he": "שִׂמְחָה",
+   "en": "joy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "simchah",
+    "sephardi": "simchah",
+    "ashkenazi": "simchoh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h3612be9c"
+   }
+  },
+  {
+   "he": "הוֹשִׁיעָה",
+   "en": "save! (as in hoshia)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hoshi'ah",
+    "sephardi": "hoshi'ah",
+    "ashkenazi": "hoshi'oh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הוֹשִׁיעָה"
+    ]
+   }
+  },
+  {
+   "he": "אוֹרְחִים",
+   "en": "guests",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "orechim",
+    "sephardi": "orechim",
+    "ashkenazi": "orechim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hff7974cf#forms.plural"
+   }
+  }
+ ],
+ "prayerLines": [
+  "shehecheyanu",
+  "kiddush-wine-1",
+  "hamotzi",
+  "havdalah-opening",
+  "kiddush-veshamru"
+ ],
+ "goals": [
+  "Greet people with chag sameach and recognise the word sukkah",
+  "Say Shehecheyanu and the wine blessing at the sukkah",
+  "Know which Sukkot texts (lulav, Hallel) are not yet in the corpus"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-29"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-30-e01",
+   "type": "recall",
+   "he": "סֻכָּה",
+   "en": "booth, sukkah"
+  },
+  {
+   "id": "I-30-e02",
+   "type": "produce",
+   "en": "a booth, a hut",
+   "options": [
+    "סֻכָּה",
+    "מַצָּה",
+    "שׁוֹפָר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-30-e03",
+   "type": "fade",
+   "line": "shehecheyanu",
+   "en": "Blessed are you... who has kept us alive, sustained us and brought us to this time."
+  },
+  {
+   "id": "I-30-e04",
+   "type": "spot",
+   "line": "shehecheyanu",
+   "target": "לַזְּמַן",
+   "en": "to this time"
+  },
+  {
+   "id": "I-30-e05",
+   "type": "respond",
+   "cue": "Shehecheyanu on the first night. Answer Amen.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   }
+  },
+  {
+   "id": "I-30-e06",
+   "type": "fade",
+   "line": "kiddush-wine-1",
+   "en": "Blessed are you... who creates the fruit of the vine."
+  },
+  {
+   "id": "I-30-e07",
+   "type": "spot",
+   "line": "kiddush-wine-1",
+   "target": "פְּרִי",
+   "en": "fruit"
+  },
+  {
+   "id": "I-30-e08",
+   "type": "order",
+   "he": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+   "en": "Blessed are you, LORD our God, king of the world"
+  },
+  {
+   "id": "I-30-e09",
+   "type": "fade",
+   "line": "hamotzi",
+   "en": "Blessed are you... who brings forth bread from the earth."
+  },
+  {
+   "id": "I-30-e10",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "סֻכָּה",
+     "en": "booth"
+    },
+    {
+     "he": "חַג",
+     "en": "holiday"
+    },
+    {
+     "he": "מִצְוָה",
+     "en": "commandment"
+    },
+    {
+     "he": "שִׂמְחָה",
+     "en": "joy"
+    }
+   ]
+  },
+  {
+   "id": "I-30-e11",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "חַג שָׂמֵחַ!",
+     "en": "Happy holiday!"
+    },
+    {
+     "speaker": "b",
+     "he": "חַג שָׂמֵחַ! בָּרוּךְ הַבָּא.",
+     "en": "Happy holiday! Welcome."
+    }
+   ],
+   "task": "Greet your hosts at the sukkah."
+  },
+  {
+   "id": "I-30-e12",
+   "type": "spot",
+   "line": "havdalah-opening",
+   "target": "וְשָׂשׁוֹן",
+   "en": "joy, gladness",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-30-e13",
+   "type": "recall",
+   "he": "חַג",
+   "en": "holiday"
+  },
+  {
+   "id": "I-30-e14",
+   "type": "produce",
+   "en": "welcome (to one person)",
+   "options": [
+    "בָּרוּךְ הַבָּא",
+    "בְּרוּכִים הַבָּאִים",
+    "חַג שָׂמֵחַ"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "Lulav and etrog, the Hallel and Hoshanot, Hakafot, Simchat Torah and Shemini Atzeret texts are not in any source file (g-hallel, g-festival-kiddush, g-high-holidays). The words lulav, etrog and ushpizin have no pointed token, so they are left out."
+}

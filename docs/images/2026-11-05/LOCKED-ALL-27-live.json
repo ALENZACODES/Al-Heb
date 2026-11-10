@@ -1,0 +1,500 @@
+[
+  {
+    "id": "aleph",
+    "he": "א",
+    "nameEn": "Aleph",
+    "analogies": [
+      "a tilted X with a long diagonal spine",
+      "two tiny flags fastened to a diagonal pole",
+      "a lightning-struck X"
+    ],
+    "pick": "tilted X with a diagonal spine",
+    "score": 9.6,
+    "why": "Three strokes cross at a diagonal; unlike Tav, there is no top roof.",
+    "confuseWith": [
+      "ת",
+      "ע"
+    ],
+    "teachingBeat": "Ari traces the slanted spine, then taps its two arms."
+  },
+  {
+    "id": "bet",
+    "he": "ב",
+    "nameEn": "Bet",
+    "analogies": [
+      "a box with its left wall missing and a floor sticking right",
+      "a square backpack open on the left",
+      "a blocky C with a long bottom shoe"
+    ],
+    "pick": "open-left box with an extra-long floor",
+    "score": 9.7,
+    "why": "Flat top plus flat bottom distinguishes rounded Kaf; no inner bar unlike Pe.",
+    "confuseWith": [
+      "כ",
+      "פ"
+    ],
+    "teachingBeat": "Noa slides a little toy car along the long bottom floor."
+  },
+  {
+    "id": "gimel",
+    "he": "ג",
+    "nameEn": "Gimel",
+    "analogies": [
+      "a walking stick with a little forward foot",
+      "a person taking a giant step",
+      "a tall coat hook with one angled leg"
+    ],
+    "pick": "walking stick taking a step",
+    "score": 9.5,
+    "why": "A downward slanting leg gives Gimel its step, missing from Nun or Vav.",
+    "confuseWith": [
+      "נ",
+      "ו"
+    ],
+    "teachingBeat": "Ari says, “Spot the stepping foot!”"
+  },
+  {
+    "id": "dalet",
+    "he": "ד",
+    "nameEn": "Dalet",
+    "analogies": [
+      "the top-right corner of a square table",
+      "a roof with one straight right-hand post",
+      "a squared-off upside-down L"
+    ],
+    "pick": "square table corner",
+    "score": 9.7,
+    "why": "The sharp corner and projecting roof separate Dalet from Resh’s rounded shoulder.",
+    "confuseWith": [
+      "ר"
+    ],
+    "teachingBeat": "Noa points to its sharp table corner."
+  },
+  {
+    "id": "he",
+    "he": "ה",
+    "nameEn": "He",
+    "analogies": [
+      "a doorway with a loose left post",
+      "a square doorway with a gap on the left",
+      "a little house frame missing one wall section"
+    ],
+    "pick": "doorway with detached left post",
+    "score": 9.8,
+    "why": "Left post is visibly detached below the roof; Chet and Tav attach differently.",
+    "confuseWith": [
+      "ח",
+      "ת"
+    ],
+    "teachingBeat": "Noa points at the daylight gap between roof and left post."
+  },
+  {
+    "id": "vav",
+    "he": "ו",
+    "nameEn": "Vav",
+    "analogies": [
+      "a single hanging nail",
+      "a thin wall hook with a short head",
+      "a straight pencil with a tiny top cap"
+    ],
+    "pick": "single hanging nail",
+    "score": 9.5,
+    "why": "One narrow shaft and short hook, with neither Zayin’s broad hat nor final Nun’s greater depth.",
+    "confuseWith": [
+      "ז",
+      "ן",
+      "י"
+    ],
+    "teachingBeat": "Ari hangs one paper tag on a single nail."
+  },
+  {
+    "id": "zayin",
+    "he": "ז",
+    "nameEn": "Zayin",
+    "analogies": [
+      "a nail wearing a wide baseball cap",
+      "a tiny mushroom on a straight stem",
+      "a flat-topped thumbtack"
+    ],
+    "pick": "nail with a wide baseball cap",
+    "score": 9.6,
+    "why": "A distinctly wide top overhang differentiates it from thin Vav.",
+    "confuseWith": [
+      "ו",
+      "ן"
+    ],
+    "teachingBeat": "Noa sets a wide cap above a skinny peg."
+  },
+  {
+    "id": "chet",
+    "he": "ח",
+    "nameEn": "Chet",
+    "analogies": [
+      "a flat bridge on two attached posts",
+      "a rectangular soccer goal without a net",
+      "a sturdy doorway with both posts connected"
+    ],
+    "pick": "bridge with both legs attached",
+    "score": 9.8,
+    "why": "Both verticals touch the horizontal roof; He has a separated left post.",
+    "confuseWith": [
+      "ה",
+      "ת"
+    ],
+    "teachingBeat": "Ari draws the bridge and asks learners to count both connected legs."
+  },
+  {
+    "id": "tet",
+    "he": "ט",
+    "nameEn": "Tet",
+    "analogies": [
+      "a curled handle inside a rounded cup",
+      "a round bowl with one rim curled inward",
+      "a curled-up garden hose making a cup"
+    ],
+    "pick": "cereal bowl, open at the top, with its left rim curling in like a wave",
+    "score": 9.3,
+    "why": "Tet is OPEN at the top: a round bowl whose left side rises and curls inward, right side stands straight. Samekh is a sealed ring (no opening); Mem has a pointed/angular roof and its gap is at the bottom-left, not the top. Test: 'Can you drop a spoon in from above?' Only Tet says yes.",
+    "confuseWith": [
+      "ס",
+      "מ"
+    ],
+    "teachingBeat": "Noa drops a spoon straight into the open top, then traces the little wave curling in on the left.",
+    "status": "LOCKED"
+  },
+  {
+    "id": "yod",
+    "he": "י",
+    "nameEn": "Yod",
+    "analogies": [
+      "a tiny floating comma",
+      "a little apostrophe in the air",
+      "a small paint droplet with a stubby head"
+    ],
+    "pick": "tiny floating comma",
+    "score": 9.7,
+    "why": "It floats above the baseline; Vav and Zayin extend much farther downward.",
+    "confuseWith": [
+      "ו",
+      "ז"
+    ],
+    "teachingBeat": "Rimon bounces beside the tiny floating mark without touching it."
+  },
+  {
+    "id": "kaf",
+    "he": "כ",
+    "nameEn": "Kaf",
+    "analogies": [
+      "a rounded open-left mitten",
+      "a soft C-shaped bend",
+      "a round bowl turned sideways"
+    ],
+    "pick": "rounded open-left mitten",
+    "score": 9.7,
+    "why": "Its upper-left turn is smooth, unlike Bet’s boxy square roof and floor.",
+    "confuseWith": [
+      "ב",
+      "פ"
+    ],
+    "teachingBeat": "Ari rounds his hand to follow the curve."
+  },
+  {
+    "id": "kaf-final",
+    "he": "ך",
+    "nameEn": "Final Kaf",
+    "analogies": [
+      "a tall cane ending in a straight drop",
+      "a long-necked hook",
+      "a curved roof with an extra-long straight leg"
+    ],
+    "pick": "long-necked hook with a straight drop",
+    "score": 9.4,
+    "why": "A rounded shoulder and long descending leg; final Nun lacks that broad hooked shoulder.",
+    "confuseWith": [
+      "ן",
+      "ר"
+    ],
+    "teachingBeat": "Noa traces the curve then runs down its long leg."
+  },
+  {
+    "id": "lamed",
+    "he": "ל",
+    "nameEn": "Lamed",
+    "analogies": [
+      "a tall flagpole with a bent flag top",
+      "a giraffe neck sticking over the fence",
+      "a tall fishing rod with a bent top"
+    ],
+    "pick": "flagpole sticking high above the fence",
+    "score": 9.7,
+    "why": "Only this common letter rises conspicuously above the normal letter height.",
+    "confuseWith": [
+      "כ",
+      "ד"
+    ],
+    "teachingBeat": "Ari points up: “This one reaches higher!”"
+  },
+  {
+    "id": "mem",
+    "he": "מ",
+    "nameEn": "Mem",
+    "analogies": [
+      "a folded camping tent with an open bottom-left seam",
+      "a zigzag mountain with a closing wall",
+      "a little folded map with a gap at the lower left"
+    ],
+    "pick": "square lunchbox with one corner popped open (bottom-left)",
+    "score": 9.4,
+    "why": "Deliberately paired with the locked Final Mem (sealed lunchbox): same boxy body with a bumpy angular lid, but one corner at the lower-left didn't latch. Final Mem is shut all the way round; Samekh is round with no corners and no gap; Tet is a round bowl open at the TOP, not at a bottom corner. The pair teaches itself: open = Mem, shut = Final Mem.",
+    "confuseWith": [
+      "ם",
+      "ס",
+      "ט"
+    ],
+    "teachingBeat": "Ari wiggles a finger through the popped-open bottom-left corner; Noa then shows Final Mem and clicks it shut.",
+    "status": "LOCKED"
+  },
+  {
+    "id": "mem-final",
+    "he": "ם",
+    "nameEn": "Final Mem",
+    "analogies": [
+      "a sealed square lunchbox",
+      "a closed storage box",
+      "a square picture frame with no opening"
+    ],
+    "pick": "sealed square lunchbox",
+    "score": 9.8,
+    "why": "Four squared connected sides, not Samekh’s rounded loop or Mem’s open seam.",
+    "confuseWith": [
+      "ס",
+      "מ"
+    ],
+    "teachingBeat": "Ari clicks the square lunchbox shut."
+  },
+  {
+    "id": "nun",
+    "he": "נ",
+    "nameEn": "Nun",
+    "analogies": [
+      "a little seat with a back on the right",
+      "a tiny bent hockey stick",
+      "a short L-shaped boot"
+    ],
+    "pick": "small right-backed seat",
+    "score": 9.4,
+    "why": "Short bent shape with a foot; Vav and final Nun are long straight stems.",
+    "confuseWith": [
+      "ו",
+      "ן",
+      "ג"
+    ],
+    "teachingBeat": "Noa points to the little seat at the baseline."
+  },
+  {
+    "id": "nun-final",
+    "he": "ן",
+    "nameEn": "Final Nun",
+    "analogies": [
+      "an extra-long straight icicle",
+      "a long pole sinking below the floor",
+      "a thin hanging cord with a top cap"
+    ],
+    "pick": "long icicle below the floor",
+    "score": 9.7,
+    "why": "Much longer descender than Vav or Zayin, without a base foot.",
+    "confuseWith": [
+      "ו",
+      "ז",
+      "ך"
+    ],
+    "teachingBeat": "Ari draws the floor, then shows the icicle reaching below it."
+  },
+  {
+    "id": "samekh",
+    "he": "ס",
+    "nameEn": "Samekh",
+    "analogies": [
+      "a closed round life ring",
+      "a round bagel outline",
+      "a closed oval race track"
+    ],
+    "pick": "closed round life ring",
+    "score": 9.8,
+    "why": "Smoothly curved closed loop unlike square final Mem or open folded Mem.",
+    "confuseWith": [
+      "ם",
+      "מ",
+      "ט"
+    ],
+    "teachingBeat": "Rimon peeks through the round hole."
+  },
+  {
+    "id": "ayin",
+    "he": "ע",
+    "nameEn": "Ayin",
+    "analogies": [
+      "a two-branch slingshot with one bent arm",
+      "a forked tree trunk with a curling branch",
+      "two streams joining into one curved river"
+    ],
+    "pick": "a lowercase y that sits on the floor: two arms from one low join, tail bent flat, right arm taller",
+    "score": 9.3,
+    "why": "Both arms grow from ONE spot down near the floor and nothing continues above or below that join (the tail just bends flat along the baseline). Tsadi's branch joins a stick partway up and the stick keeps going above the join; Aleph's two arms hang off a long diagonal spine. The old slingshot hook was misleading: a slingshot has a handle below the fork, which is actually the Final Tsadi shape.",
+    "confuseWith": [
+      "צ",
+      "א"
+    ],
+    "teachingBeat": "Ari puts one finger on the single spot at the floor where both arms start, then runs up the taller right arm.",
+    "status": "LOCKED"
+  },
+  {
+    "id": "pe",
+    "he": "פ",
+    "nameEn": "Pe",
+    "analogies": [
+      "a rounded mouth with one tooth inside",
+      "a big rounded cup holding one square tooth",
+      "a soft sideways pocket with a little tab inside"
+    ],
+    "pick": "rounded mouth with one tooth",
+    "score": 9.8,
+    "why": "Its clearly visible internal tooth separates Pe from Kaf; curved wall separates it from Bet.",
+    "confuseWith": [
+      "כ",
+      "ב"
+    ],
+    "teachingBeat": "Ari points to the single tooth inside the mouth."
+  },
+  {
+    "id": "pe-final",
+    "he": "ף",
+    "nameEn": "Final Pe",
+    "analogies": [
+      "a long dangling scarf with a curled top",
+      "a tall hanging hook with a little inner tooth",
+      "a long-necked mouth open at the top"
+    ],
+    "pick": "long hanging hook with an inner tooth",
+    "score": 9.3,
+    "why": "Distinctive inner curl/tooth and long downward tail; final Kaf has no inner tooth.",
+    "confuseWith": [
+      "ך",
+      "ן",
+      "פ"
+    ],
+    "teachingBeat": "Noa points to the tiny curl at the top before following the long tail."
+  },
+  {
+    "id": "tsadi",
+    "he": "צ",
+    "nameEn": "Tsadi",
+    "analogies": [
+      "two branches joined like a tilted cactus",
+      "a bent twig with a second branch crossing it",
+      "a diagonal twig attached to a standing branch"
+    ],
+    "pick": "hockey stick standing on its blade, with a little branch leaning on the shaft halfway up",
+    "score": 9.4,
+    "why": "Right-hand shaft bends at the bottom into a blade running left along the floor; a diagonal branch from the upper-left joins the shaft PARTWAY UP, and the shaft continues above the join. Ayin's two arms meet at the bottom with nothing above the join; Aleph has no blade on the floor and its spine is diagonal. Pairs with Final Tsadi (same stick, blade gone).",
+    "confuseWith": [
+      "ע",
+      "א"
+    ],
+    "teachingBeat": "Ari taps the blade on the floor, then the spot halfway up the shaft where the branch leans in.",
+    "status": "LOCKED"
+  },
+  {
+    "id": "tsadi-final",
+    "he": "ץ",
+    "nameEn": "Final Tsadi",
+    "analogies": [
+      "a long stick with a diagonal twig",
+      "a tree branch with one very long trunk",
+      "a diagonal ski pole alongside a longer vertical pole"
+    ],
+    "pick": "the same hockey stick with no blade: the shaft drops straight through the floor, branch still leaning on it",
+    "score": 9.3,
+    "why": "Same leaning branch as Tsadi, but no foot along the baseline; the shaft plunges below the floor. Final Nun is a bare icicle with no branch; Final Kaf has a rounded hooked shoulder and no branch; regular Tsadi keeps its blade and stays on the floor. Test: 'branch + goes below the floor' = Final Tsadi.",
+    "confuseWith": [
+      "ן",
+      "ך",
+      "צ"
+    ],
+    "teachingBeat": "Noa draws the floor line, shows the shaft poking through it, then points to the branch that is still leaning on.",
+    "status": "LOCKED"
+  },
+  {
+    "id": "qof",
+    "he": "ק",
+    "nameEn": "Qof",
+    "analogies": [
+      "a table with one leg dropping through the floor",
+      "a roof over a dangling cord",
+      "a little counter with one extra-long leg"
+    ],
+    "pick": "table with a leg below the floor",
+    "score": 9.7,
+    "why": "One descending post extends below baseline and is detached from the roof, unlike He.",
+    "confuseWith": [
+      "ה",
+      "ך"
+    ],
+    "teachingBeat": "Ari shows the table leg poking below the floor line."
+  },
+  {
+    "id": "resh",
+    "he": "ר",
+    "nameEn": "Resh",
+    "analogies": [
+      "a rounded umbrella handle corner",
+      "a soft bent pipe",
+      "a rounded upside-down L"
+    ],
+    "pick": "rounded bent pipe",
+    "score": 9.7,
+    "why": "Curved shoulder has no sharp Dalet corner or protruding straight roof.",
+    "confuseWith": [
+      "ד",
+      "ך"
+    ],
+    "teachingBeat": "Noa draws a round turn with her finger, not a square corner."
+  },
+  {
+    "id": "shin",
+    "he": "ש",
+    "nameEn": "Shin",
+    "analogies": [
+      "three candle flames on one holder",
+      "a three-pronged garden fork",
+      "three mountain peaks sharing one base"
+    ],
+    "pick": "three candle flames on one holder",
+    "score": 9.8,
+    "why": "Three upward branches joining at bottom; no other letter has this clear triple crown.",
+    "confuseWith": [
+      "ע",
+      "צ"
+    ],
+    "teachingBeat": "Ari counts the three flame tips with Rimon."
+  },
+  {
+    "id": "tav",
+    "he": "ת",
+    "nameEn": "Tav",
+    "analogies": [
+      "a roof with a left boot and a right leg",
+      "a sturdy gate with a bent left foot",
+      "a rectangular doorway with a curled left foot"
+    ],
+    "pick": "gate with a bent left boot",
+    "score": 9.5,
+    "why": "Connected top plus distinct bent left foot separates Tav from Chet’s straight two legs.",
+    "confuseWith": [
+      "ח",
+      "ה",
+      "א"
+    ],
+    "teachingBeat": "Noa taps the bent boot at the left foot of the gate."
+  }
+]

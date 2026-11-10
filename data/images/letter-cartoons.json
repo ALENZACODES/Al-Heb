@@ -1,0 +1,356 @@
+{
+  "version": 2,
+  "freeze_cast": true,
+  "note": "Letter cartoons. ship=[]. style_break atlas-only; some hold.",
+  "count": 27,
+  "images": [
+    {
+      "id": "aleph-meet",
+      "filename": "aleph-meet.png",
+      "path": "assets/letter-cartoons/batch01/aleph-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "ayin-meet",
+      "filename": "ayin-meet.png",
+      "path": "assets/letter-cartoons/batch02/ayin-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "bet-meet",
+      "filename": "bet-meet.png",
+      "path": "assets/letter-cartoons/batch01/bet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "chet-meet",
+      "filename": "chet-meet.png",
+      "path": "assets/letter-cartoons/batch01/chet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "dalet-meet",
+      "filename": "dalet-meet.png",
+      "path": "assets/letter-cartoons/batch01/dalet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "gimel-meet",
+      "filename": "gimel-meet.png",
+      "path": "assets/letter-cartoons/batch01/gimel-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "he-meet",
+      "filename": "he-meet.png",
+      "path": "assets/letter-cartoons/batch01/he-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "kaf-final-meet",
+      "filename": "kaf-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/kaf-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "kaf-meet",
+      "filename": "kaf-meet.png",
+      "path": "assets/letter-cartoons/batch02/kaf-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "lamed-meet",
+      "filename": "lamed-meet.png",
+      "path": "assets/letter-cartoons/batch02/lamed-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "mem-final-meet",
+      "filename": "mem-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/mem-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "mem-meet",
+      "filename": "mem-meet.png",
+      "path": "assets/letter-cartoons/batch02/mem-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "nun-final-meet",
+      "filename": "nun-final-meet.png",
+      "path": "assets/letter-cartoons/batch02/nun-final-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "nun-meet",
+      "filename": "nun-meet.png",
+      "path": "assets/letter-cartoons/batch02/nun-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "pe-final-meet",
+      "filename": "pe-final-meet.png",
+      "path": "assets/letter-cartoons/batch03/pe-final-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "atlas_only": true,
+      "screens": [
+        "LettersAtlasOnly"
+      ]
+    },
+    {
+      "id": "pe-meet",
+      "filename": "pe-meet.png",
+      "path": "assets/letter-cartoons/batch02/pe-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "qof-meet",
+      "filename": "qof-meet.png",
+      "path": "assets/letter-cartoons/batch03/qof-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "atlas_only": true,
+      "screens": [
+        "LettersAtlasOnly"
+      ]
+    },
+    {
+      "id": "resh-meet",
+      "filename": "resh-meet.png",
+      "path": "assets/letter-cartoons/batch03/resh-meet.png",
+      "batch": "batch03",
+      "status": "style_break_atlas_only",
+      "approved": false,
+      "atlas_only": true,
+      "screens": [
+        "LettersAtlasOnly"
+      ]
+    },
+    {
+      "id": "samekh-meet",
+      "filename": "samekh-meet.png",
+      "path": "assets/letter-cartoons/batch02/samekh-meet.png",
+      "batch": "batch02",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "shin-meet",
+      "filename": "shin-meet.png",
+      "path": "assets/letter-cartoons/batch03/shin-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "tav-meet",
+      "filename": "tav-meet.png",
+      "path": "assets/letter-cartoons/batch03/tav-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "tet-meet",
+      "filename": "tet-meet.png",
+      "path": "assets/letter-cartoons/batch01/tet-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "tsadi-final-meet",
+      "filename": "tsadi-final-meet.png",
+      "path": "assets/letter-cartoons/batch03/tsadi-final-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "tsadi-meet",
+      "filename": "tsadi-meet.png",
+      "path": "assets/letter-cartoons/batch03/tsadi-meet.png",
+      "batch": "batch03",
+      "status": "unreviewed_hold",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "vav-meet",
+      "filename": "vav-meet.png",
+      "path": "assets/letter-cartoons/batch01/vav-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "yod-meet",
+      "filename": "yod-meet.png",
+      "path": "assets/letter-cartoons/batch01/yod-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    },
+    {
+      "id": "zayin-meet",
+      "filename": "zayin-meet.png",
+      "path": "assets/letter-cartoons/batch01/zayin-meet.png",
+      "batch": "batch01",
+      "status": "usable_draft_on_github",
+      "approved": false,
+      "atlas_only": false,
+      "screens": [
+        "LettersMeet",
+        "LetterLecture"
+      ]
+    }
+  ]
+}

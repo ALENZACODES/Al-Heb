@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-tav" viewBox="0 0 200 200" role="img" aria-labelledby="tav-t tav-d">
+<title id="tav-t">Tav becomes a small table with a baby beside it</title>
+<desc id="tav-d">A small orange table: the letter's top is the tabletop and its two legs stand on a grey floor. A smiling baby in a blue top sits under the tabletop between the legs, and the left leg ends in a little yellow foot with short curved lines beside it.</desc>
+<style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-tav .msi,svg.morph-tav .ms1,svg.morph-tav .ms2{stroke-width:3;stroke-linecap:round}
+svg.morph-tav .tap{stroke-width:3.5}
+svg.morph-tav .dots{stroke-width:4}
+@media (forced-colors:active){svg.morph-tav .morph-b *{stroke:CanvasText;stroke-width:.8}}</style>
+<defs><path id="tav-g" fill-rule="evenodd" d="M774 465V756H684V464Q684 429 682 405Q680 381 671 357Q662 333 647 319Q632 305 605 296Q578 287 539 287H421V557Q421 660 392 710Q362 760 289 760Q264 760 226 752V684Q258 690 276 690Q310 690 321 663Q332 636 332 557V287H249V218H539Q608 218 654 234Q701 251 727 284Q752 317 763 360Q774 403 774 465Z"/></defs>
+<g class="morph-a"><use href="#tav-g" transform="translate(0 0) scale(.2)" class="mfi"/></g>
+<g class="morph-b"><rect class="mtile" x="6" y="6" width="188" height="188" rx="26"/><rect class="mshade" x="14" y="152" width="172" height="7" rx="3.5"/><rect class="mf2" x="90" y="118" width="40" height="34" rx="13"/><circle class="mf3" cx="110" cy="100" r="21" style="fill-opacity:.55"/><circle fill="none" class="msi" cx="110" cy="100" r="21"/><path fill="none" class="msi dots" d="M102 97h.1M118 97h.1"/><path fill="none" class="msi" d="M102 108Q110 115 118 108M110 79Q106 70 116 70"/><use href="#tav-g" transform="translate(0 0) scale(.2)" class="mf1"/><ellipse class="mf3" cx="50" cy="144" rx="15" ry="11"/><path fill="none" class="ms2 tap" d="M31 134Q23 144 31 156M22 128Q11 144 22 162"/></g>
+</svg>

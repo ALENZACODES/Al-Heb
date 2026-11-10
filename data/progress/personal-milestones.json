@@ -1,0 +1,12 @@
+{
+  "schema": "alef-progress-personal-milestones/1",
+  "status": "draft-needs-expert-review",
+  "note": "Personal markers, not certificates or badges and not a level. Each is derived from what the app stores. 'words' counts vocabulary and lesson word cards reviewed at least once (started, not mastered). 'prayerRead' needs a timed read-aloud of a siddur text, which the learner times and marks themselves (self-reported). 'coverage' is the share of lines Aleph holds, for the best of the three services, whose letters and signs the learner has been taught (not fluent reading). Dates: 'dated' when a stored timestamp shows when; 'noticed' when the app only saw it on the Progress screen.",
+  "milestones": [
+    { "id": "words-100", "kind": "words", "count": 100, "label": "First 100 words started in review", "href": "#/vocab" },
+    { "id": "prayer-read", "kind": "prayerRead", "label": "First prayer text read aloud and timed (self-reported)", "href": "#/timedread" },
+    { "id": "siddur-25", "kind": "coverage", "pct": 25, "label": "Prayer book coverage: 25% of a service's lines", "href": "#/service" },
+    { "id": "siddur-50", "kind": "coverage", "pct": 50, "label": "Prayer book coverage: 50% of a service's lines", "href": "#/service" },
+    { "id": "siddur-75", "kind": "coverage", "pct": 75, "label": "Prayer book coverage: 75% of a service's lines", "href": "#/service" }
+  ]
+}

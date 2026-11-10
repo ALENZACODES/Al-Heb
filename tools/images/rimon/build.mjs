@@ -147,7 +147,7 @@ function markdown(rows) {
   L.push('- **Divine name:** no still contains writing, so none can show it. Spoken lines avoid it too.', '');
   L.push('## How Each Still Is Shown', '');
   for (const [k, v] of Object.entries(SURFACE_WORDS)) L.push(`- **${k}:** ${v}`);
-  L.push('', 'Only one Rimon is on screen at a time: a large Rimon in the page, a card at the bottom, or a swapped Rimon picture inside the page each send the corner Rimon away until they are gone. A still the learner has already seen once (first answer, milestones) is not shown again, and each daily greeting comes once a day. Hide Rimon hides every still too.');
+  L.push('', 'Only one Rimon is on screen at a time: a large Rimon in the page, a card at the bottom, or a swapped Rimon picture inside the page each send the corner Rimon away until they are gone. So does a Rimon drawn into the page by another screen (the animated in-page Rimon, the Brain Lab pictures with Rimon in them: IN_PAGE_RIMON in src/shell/rimon-stage.js), which also keeps the big-moment and floating Rimon away. A still the learner has already seen once (first answer, milestones) is not shown again, and each daily greeting comes once a day. Hide Rimon hides every still too.');
   L.push('', `Hebrew in the lines below is pointed and has not yet been checked by a Hebrew teacher. Every line Rimon can say, in both languages, is in \`${OUT.lines}\` with empty checked_by, ok and fix columns for the reviewer; the build keeps those columns for any line whose words have not changed.`, '');
   for (const [g, title] of GROUPS) {
     const list = rows.filter((r) => r.group === g);

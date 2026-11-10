@@ -72,7 +72,11 @@ try {
   const expect = (t) => { for (let x = t, n = 0; x && n < 10; x = TRIGGERS[x].fallback, n++) { const l = (STILL_IDS[x] || []).filter((id) => present.has(id)); if (l.length) return l; } return []; };
   const cornerIs = (ids) => page.waitForFunction((l) => l.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), ids, { timeout: 5000 }).then(() => true, () => false);
   const labIds = expect('lab.home');
-  ok(`lab page still (${labIds.length ? 'one of ' + labIds.join(' ') : 'none drawn: animated Rimon'})`, labIds.length ? await cornerIs(labIds) : true);
+  // any other Rimon on screen: the corner companion, the big-moment pop-up or the floating one
+  const cornerShown = () => page.evaluate(() => [...document.querySelectorAll('.rimon-companion.rimon-corner, .rimon-moment:not([hidden]), .alef-rimon-spot')].some((c) => getComputedStyle(c).visibility !== 'hidden' && getComputedStyle(c).display !== 'none' && c.getBoundingClientRect().width > 0));
+  const labArt = await page.evaluate(() => !!document.querySelector('#main .lab-art.hero, #main .lab-art.done'));
+  if (labArt) { let extra = false; for (let i = 0; i < 12 && !extra; i++) { extra = await cornerShown(); await page.waitForTimeout(150); } ok('Brain Lab: one Rimon (the page picture has Rimon in it; no corner, pop-up or floating Rimon over it)', !extra); }
+  else ok(`lab page still (${labIds.length ? 'one of ' + labIds.join(' ') : 'none drawn: animated Rimon'})`, labIds.length ? await cornerIs(labIds) : true);
   await page.screenshot({ path: SHOTS + '/3-lab.png' });
   await go('#/lab/gematria', 'labgame');
   const drillIds = expect('lab.drill.gematria');

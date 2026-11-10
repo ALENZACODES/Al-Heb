@@ -244,6 +244,28 @@ test('the shared showRimon hook can ask the stage: URLs for a situation, none on
   assert.deepEqual(q.stage.urlsForSituation('correct'), []);
 });
 
+test('present.json is the whole truth: with nothing listed for a moment the hook is told no still, not left to its own pick', async () => {
+  const s = setup({ route: 'learn', present: ['001'] }); // only a greeting picture is listed
+  await s.stage.ready;
+  assert.deepEqual(s.stage.urlsForSituation('brainLab'), [], 'nothing listed for Brain Lab: no still');
+  assert.equal(s.stage.urlsForSituation('no-such-situation'), null, 'a moment the stage does not know is still the hook\'s own');
+  const none = setup({ route: 'learn', present: [] }); // no stills at all yet
+  await none.stage.ready;
+  assert.deepEqual(none.stage.urlsForSituation('correct'), []);
+});
+
+test('one Rimon: a Rimon drawn into the page (in-page animation, Brain Lab pictures) sends the corner one away', async () => {
+  const { QUIET_CSS, IN_PAGE_RIMON } = await import('../src/shell/rimon-stage.js');
+  for (const sel of IN_PAGE_RIMON) for (const other of ['.rimon-companion.rimon-corner', '.rimon-moment', '.alef-rimon-spot']) assert.ok(QUIET_CSS.includes(`body:has(#main ${sel}) ${other}`), sel + ' ' + other);
+  assert.ok(IN_PAGE_RIMON.includes('.lab-art.hero') && IN_PAGE_RIMON.includes('.rimon-inline'));
+  // and the stage tells the other Rimon pictures to stay away while it is there
+  const s = setup({ route: 'lab' });
+  await s.stage.ready;
+  assert.ok(s.stage.urlsForSituation('brainLab').length > 0);
+  const art = s.doc.createElement('img'); art.className = 'lab-art hero'; s.main.append(art);
+  assert.deepEqual(s.stage.urlsForSituation('brainLab'), []);
+});
+
 test('quiet-day rules are carried by the stage itself (no stylesheet edit needed)', async () => {
   const { QUIET_CSS } = await import('../src/shell/rimon-stage.js');
   for (const sel of ['.rimon-companion', '.rimon-bubble', '.rimon-toast', '.rimon-hero', '.rimon-moment']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet] ${sel}`), sel);

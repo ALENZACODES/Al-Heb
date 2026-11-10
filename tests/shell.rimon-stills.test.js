@@ -6,6 +6,7 @@ import {
   isShabbatQuiet, stillUrl, pickStill, planMoment, mountRimonStills,
 } from '../src/shell/rimon-stills.js';
 import { RIMON_STILLS_AVAILABLE, RIMON_STILLS_V2 } from '../src/shell/rimon-stills-index.js';
+import { HOLD } from '../tools/images/rimon/art-map.mjs';
 import { FLIPS } from '../src/shell/rimon-flips.js';
 
 const HAVE = RIMON_STILLS_AVAILABLE;
@@ -17,14 +18,14 @@ test('every mapped still id is a three-digit (optional letter) slug', () => {
   }
 });
 
-test('the generated index matches files on disk and skips missing stills', () => {
+test('the generated index matches files on disk and skips missing and held stills', () => {
   const dir = new URL('../data/images/rimon/', import.meta.url);
   const v2dir = new URL('../data/images/rimon/v2/', import.meta.url);
   const v1 = fs.readdirSync(dir).filter((f) => /^rimon-\d{3}[a-z]?\.webp$/.test(f)).map((f) => f.slice(6, -5));
   const v2 = fs.existsSync(v2dir)
     ? fs.readdirSync(v2dir).map((f) => /^rimon-(\d{3}[a-z]?)-([a-z0-9-]+)\.webp$/.exec(f)).filter(Boolean)
     : [];
-  const fromDisk = [...v1, ...v2.map((m) => `v2:${m[1]}`)].sort();
+  const fromDisk = [...v1, ...v2.filter((m) => !HOLD[`a${m[1]}`]).map((m) => `v2:${m[1]}`)].sort(); // held stills are on disk but not offered
   // Unique: a v2 file does not also register as the same-numbered drawn still.
   assert.deepEqual([...HAVE].sort(), [...new Set(fromDisk)].sort());
   const v2Map = {};
@@ -250,7 +251,12 @@ test("big moments take their picture from Rimon's stage when it runs, and stay a
     assert.equal(img.src, 'data/images/rimon/v2/rimon-018-thumbs-up.webp');
     globalThis.alefRimonStage = { urlsForSituation: () => null };
     doc.dispatch('alef:rimon', { action: 'sad' });
-    assert.match(img.src, /rimon-\d{3}[a-z]?\.webp$/, 'null: this module picks its own still');
+    assert.match(img.src, /rimon-\d{3}[a-z]?(-[a-z0-9-]+)?\.webp$/, 'null: this module picks its own still (drawn set or v2 by name)');
     m.destroy();
   } finally { globalThis.alefRimonStage = saved; }
+});
+
+test('held catalogue stills are never offered by the big-moment pictures either', async () => {
+  for (const id of Object.keys(HOLD)) assert.ok(!RIMON_STILLS_AVAILABLE.has(`v2:${id.slice(1)}`), id);
+  for (let i = 0; i < 400; i++) { const p = planMoment('correct', { random: () => (i % 97) / 97 }); if (p) assert.ok(!HOLD[`a${p.id.replace('v2:', '')}`] || !p.id.startsWith('v2:'), p.id); }
 });

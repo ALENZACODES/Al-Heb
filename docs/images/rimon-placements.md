@@ -5,7 +5,7 @@ Updated 2026-11-10, 12:47 AM ET (America/Toronto), after John's note that Rimon 
 Two picture catalogues share numbers but not poses:
 
 - Drawn set: `data/images/rimon/rimon-###.webp`, asked for by a plain id such as `023`.
-- Claude-order v2 set: `data/images/rimon/v2/rimon-###-<slug>.webp`, asked for only by name as `v2:023`. A v2 file is never treated as a replacement for the same-numbered drawn still.
+- Catalogue-order v2 set: `data/images/rimon/v2/rimon-###-<slug>.webp`, asked for only by name as `v2:023`. A v2 file is never treated as a replacement for the same-numbered drawn still.
 
 The companion should fail safe: if a file is missing, show nothing (no broken-image icon, no throw). Entrance motion is a CSS burst-in or bounce, and must not run when `prefers-reduced-motion: reduce` is set (show the still only).
 

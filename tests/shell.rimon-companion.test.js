@@ -3,9 +3,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createDocument, createStore, ev, flush } from './rimon.fakedom.js';
 
-async function withCompanion(fn, { store = createStore() } = {}) {
+async function withCompanion(fn, { store = createStore(), image = null } = {}) {
   const saved = { Image: globalThis.Image, add: globalThis.addEventListener, remove: globalThis.removeEventListener, w: globalThis.innerWidth, h: globalThis.innerHeight };
-  globalThis.Image = class { set src(v) { queueMicrotask(() => this.onload?.()); } };
+  globalThis.Image = image || class { set src(v) { queueMicrotask(() => this.onload?.()); } };
   globalThis.addEventListener = () => {}; globalThis.removeEventListener = () => {};
   globalThis.innerWidth = 1024; globalThis.innerHeight = 768;
   const { mountRimon } = await import('../src/shell/rimon.js');
@@ -64,4 +64,16 @@ test('a still line goes into the speech bubble with its Hebrew; English-only lin
     r.showStill(null, { ms: 10, line: { en: 'Just English.' } });
     assert.match(bubble.textContent, /Just English\./);
   });
+});
+
+test('a WebP sheet that cannot load falls back to the original PNG sheet, not to the plain picture', async () => {
+  const tried = [];
+  const image = class { set src(v) { tried.push(v); queueMicrotask(() => (/\.webp$/.test(v) ? this.onerror?.() : this.onload?.())); } };
+  await withCompanion(async ({ host }) => {
+    await flush(5);
+    const sprite = host.querySelector('.rimon-sprite');
+    assert.ok(tried.some((u) => /assets\/img\/rimon\/web\/blink\.webp$/.test(u)), 'tries the light copy first');
+    assert.ok(tried.some((u) => /assets\/img\/rimon\/blink\.png$/.test(u)), 'then the original sheet');
+    assert.match(sprite.style.backgroundImage, /assets\/img\/rimon\/blink\.png/);
+  }, { image });
 });

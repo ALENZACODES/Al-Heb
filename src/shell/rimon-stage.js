@@ -16,9 +16,13 @@ import { projectStreak } from '../curriculum/streak.js';
 
 export const SEEN_KEY = 'rimon.seen.v1';
 /** Quiet days and screens (QUIET_DAYS, QUIET_ROUTES): Rimon and every still step aside. Injected by the stage so it works before any still exists. */
+/** Rimon pictures that other screens draw into the page (src/shell/rimon-inline.js, src/lab/lab.view.js). */
+export const IN_PAGE_RIMON = Object.freeze(['.rimon-inline', '.lab-rimon', '.lab-art.hero', '.lab-art.win', '.lab-art.done']);
 export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero,body[data-rimon-quiet] .rimon-moment{display:none!important}body[data-rimon-quiet=day] img[data-rimon-still],body[data-rimon-quiet=day] img.alef-celebrate-rimon,body[data-rimon-quiet=day] .rimon-inline,body[data-rimon-quiet=day] .alef-rimon-spot{visibility:hidden}'
   // one Rimon on screen: another branch's floating Rimon (.alef-rimon-spot, .rimon-moment) sends the corner one away while it shows
-  + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}';
+  + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}'
+  // ...and so does a Rimon drawn into the page itself: the animated in-page Rimon and the Brain Lab pictures that show Rimon
+  + IN_PAGE_RIMON.map((sel) => `body:has(#main ${sel}) .rimon-companion.rimon-corner,body:has(#main ${sel}) .rimon-bubble,body:has(#main ${sel}) .rimon-moment,body:has(#main ${sel}) .alef-rimon-spot`).join(',') + '{visibility:hidden}';
 /** Rimon pictures that views draw without a mark: the selector and how to pick the trigger. */
 const IMPLICIT = [['img.alef-celebrate-rimon', (acc) => (acc >= 0.9 ? 'lesson.complete.perfect' : acc >= 0.7 ? 'lesson.complete.great' : 'lesson.complete.done')]];
 /** Screens where Rimon is already on the page (the Home greeting, the setup screens): other Rimon surfaces stay away there. */
@@ -63,7 +67,7 @@ async function defaultFetchJson(url) {
  *          fetchJson?:(url:string)=>Promise<any>, now?:()=>Date, present?:Iterable<string>|{ids:string[], files?:Object<string,string>}|null, loadImage?:(src:string)=>Promise<boolean>}} opt
  */
 export function mountRimonStage({ store, companion = null, doc = globalThis.document, win = globalThis, fetchJson = defaultFetchJson, now = () => new Date(), present: given = null, loadImage = null } = {}) {
-  let alive = true, present = new Set(), files = {}, observer = null, scanTimer = 0, flushTimer = 0, idleTimer = 0, loadTimer = 0, mainObserver = null;
+  let alive = true, present = new Set(), files = {}, listKnown = false, observer = null, scanTimer = 0, flushTimer = 0, idleTimer = 0, loadTimer = 0, mainObserver = null;
   const counters = new Map(), tracker = createAnswerTracker(), images = new Map(), toasts = [], ready2 = new Map();
   const last = Object.fromEntries(WATCHED.map((k) => [k, read(k)]));
   let lastActivity = now().getTime(), fidgets = 0, lastFidget = 0, slept = false, activeMs = 0, lastTick = lastActivity, wasOffline = false;
@@ -101,6 +105,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   const quietDay = (ctx) => ctx.quiet;
   const quietRoute = () => QUIET_ROUTES.includes(doc?.body?.dataset?.route || '');
   function quiet() { return quietRoute() || quietDay(ctxNow()); }
+  function inPageRimon() { try { const main = doc?.getElementById?.('main'); return !!main && IN_PAGE_RIMON.some((sel) => main.querySelector(sel)); } catch { return false; } }
   function applyQuiet(ctx) {
     const body = doc?.body; if (!body) return;
     const q = quietDay(ctx) ? 'day' : quietRoute() ? 'route' : '';
@@ -427,7 +432,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   const ready = (given ? Promise.resolve(given.ids ? given : { ids: [...given] }) : fetchJson(presentUrl()).catch(() => null)).then((json) => {
     if (!alive) return false;
     try { applyQuiet(ctxNow()); } catch { /* the calendar is optional here */ }
-    files = presentFiles(json);
+    files = presentFiles(json); listKnown = true;
     const listed = new Set([...presentSet(json)].filter((id) => !id.startsWith('a') || files[id])); // a catalogue still needs its file name
     if (!listed.size) return false; // no stills yet: stay out of the way entirely
     // without the stylesheet a still would sit in the wrong place, so stills switch on only once it has loaded
@@ -460,11 +465,14 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
      */
     urlsForSituation(situation) {
       if (hidden() || quiet() || STAGE_OWNS.includes(situation)) return [];
+      if (inPageRimon()) return []; // the page already shows Rimon (Brain Lab pictures, the in-page animation)
       const t = SITUATION_TRIGGERS[situation];
       if (!t) return null;
       const ctx = ctxNow(), season = situation === 'shabbat' || situation === 'home' || situation === 'holiday' ? seasonTrigger(ctx) : null;
       const p = choose(season || t, { ignoreSeen: true });
-      if (!p) return null;
+      // once present.json is read it is the whole truth: nothing listed for this moment means no still (not another
+      // module's pick, which could be a picture that is not listed or is held)
+      if (!p) return listKnown ? [] : null;
       preload(p.src); // the cut-out copy is used from the next time on
       return [ready2.get(p.src) || p.src];
     },

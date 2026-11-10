@@ -1,7 +1,7 @@
 // Rimon "big moment" stills: a bold burst-in still for each situation, on top of the
 // existing companion. Decoration only: a missing image, an unknown event, or any
 // error shows nothing and never touches scoring, progress, or navigation.
-import { RIMON_STILLS_AVAILABLE } from './rimon-stills-index.js';
+import { RIMON_STILLS_AVAILABLE, RIMON_STILLS_V2 } from './rimon-stills-index.js';
 import { FLIPS, SITUATION_FLIP, flipUrl, flipForSituation } from './rimon-flips.js';
 export { FLIPS, SITUATION_FLIP, flipUrl, flipForSituation };
 
@@ -75,7 +75,10 @@ export function isShabbatQuiet(date = new Date()) {
   return (d === 5 && hr >= 18) || (d === 6 && hr < 21);
 }
 
-export function stillUrl(id, base = 'data/images/rimon/') {
+// Prefer the Claude-order v2 file when it exists; otherwise the original numbered still.
+export function stillUrl(id, base = 'data/images/rimon/', v2 = RIMON_STILLS_V2) {
+  const slug = v2 && v2[id];
+  if (slug) return `${base}v2/rimon-${id}-${slug}.webp`;
   return `${base}rimon-${id}.webp`;
 }
 

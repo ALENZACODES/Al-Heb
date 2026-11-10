@@ -5,7 +5,7 @@ import {
   SITUATIONS, QUIET, situationForAction, situationForHash,
   isShabbatQuiet, stillUrl, pickStill, planMoment, mountRimonStills,
 } from '../src/shell/rimon-stills.js';
-import { RIMON_STILLS_AVAILABLE } from '../src/shell/rimon-stills-index.js';
+import { RIMON_STILLS_AVAILABLE, RIMON_STILLS_V2 } from '../src/shell/rimon-stills-index.js';
 import { FLIPS } from '../src/shell/rimon-flips.js';
 
 const HAVE = RIMON_STILLS_AVAILABLE;
@@ -19,9 +19,16 @@ test('every mapped still id is a three-digit (optional letter) slug', () => {
 
 test('the generated index matches files on disk and skips missing stills', () => {
   const dir = new URL('../data/images/rimon/', import.meta.url);
-  const files = fs.readdirSync(dir).filter((f) => /^rimon-\d{3}[a-z]?\.webp$/.test(f)).sort();
-  const fromDisk = files.map((f) => f.slice(6, -5));
+  const v2dir = new URL('../data/images/rimon/v2/', import.meta.url);
+  const v1 = fs.readdirSync(dir).filter((f) => /^rimon-\d{3}[a-z]?\.webp$/.test(f)).map((f) => f.slice(6, -5));
+  const v2 = fs.existsSync(v2dir)
+    ? fs.readdirSync(v2dir).map((f) => /^rimon-(\d{3}[a-z]?)-([a-z0-9-]+)\.webp$/.exec(f)).filter(Boolean)
+    : [];
+  const fromDisk = [...new Set([...v1, ...v2.map((m) => m[1])])].sort();
   assert.deepEqual([...HAVE].sort(), fromDisk);
+  const v2Map = {};
+  for (const m of v2) if (!v2Map[m[1]]) v2Map[m[1]] = m[2];
+  assert.deepEqual({ ...RIMON_STILLS_V2 }, v2Map);
   assert.ok(HAVE.size >= 50);
   // Never return an id that is not on disk (no 404s). Later catalogue ids are skipped
   // until those files exist; fallbacks that are on disk may still be chosen.
@@ -99,6 +106,14 @@ test('planMoment uses burst for cheers, bounce for misses, and none when motion 
   assert.equal(shabbat.animate, false);
   assert.equal(planMoment('storybooks', { now: midweek, available }), null);
   assert.equal(stillUrl('025b'), 'data/images/rimon/rimon-025b.webp');
+  // v2, when present, is preferred; a missing v2 id falls back to the numbered file.
+  if (RIMON_STILLS_V2['001']) {
+    assert.equal(stillUrl('001'), `data/images/rimon/v2/rimon-001-${RIMON_STILLS_V2['001']}.webp`);
+  } else {
+    assert.equal(stillUrl('001'), 'data/images/rimon/rimon-001.webp');
+  }
+  assert.equal(stillUrl('025b', 'data/images/rimon/', {}), 'data/images/rimon/rimon-025b.webp');
+
 });
 
 function fakeDoc({ reduceMotion = false, hash = '#/' } = {}) {

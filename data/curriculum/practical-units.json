@@ -51,6 +51,16 @@
    "nativeReview": true
   },
   {
+   "id": "pu-introducing",
+   "title": "Introducing yourself",
+   "level": "L0",
+   "file": "data/curriculum/practical/pu-introducing.json",
+   "pageCount": 1,
+   "itemCount": 5,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-cafe",
    "title": "Ordering at a cafe",
    "level": "L1",
@@ -171,6 +181,66 @@
    "nativeReview": true
   },
   {
+   "id": "pu-apartment",
+   "title": "Looking at an apartment",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-apartment.json",
+   "pageCount": 3,
+   "itemCount": 14,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-plans",
+   "title": "Making plans",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-plans.json",
+   "pageCount": 1,
+   "itemCount": 5,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-opinions",
+   "title": "Opinions and preferences",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-opinions.json",
+   "pageCount": 1,
+   "itemCount": 5,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-driving",
+   "title": "Driving and the road",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-driving.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-hiking",
+   "title": "Hiking and the trail",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-hiking.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-beach",
+   "title": "At the beach",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-beach.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-work",
    "title": "Work, office and a course",
    "level": "L3",
@@ -231,6 +301,26 @@
    "nativeReview": true
   },
   {
+   "id": "pu-social",
+   "title": "Messages, photos and social media",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-social.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-news",
+   "title": "Reading a headline",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-news.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-shabbat",
    "title": "Being invited for Shabbat",
    "level": "L4",
@@ -252,8 +342,8 @@
   }
  ],
  "totals": {
-  "units": 24,
-  "pages": 141,
-  "items": 645
+  "units": 33,
+  "pages": 162,
+  "items": 734
  }
 }

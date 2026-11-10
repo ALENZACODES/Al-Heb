@@ -1,0 +1,264 @@
+{
+ "id": "pu-plans",
+ "title": "Making plans",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il20",
+   "title": "Future tense and plans",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "speakSets": [
+  "speak-time-numbers-2"
+ ],
+ "grammarNote": "il20 already stores אֲנִי אֵלֵךְ, אֲנִי אֹכַל, נִתְרָאֶה, אוּלַי and בְּעוֹד שָׁבוּעַ. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "il20-w1",
+   "source": "data/curriculum/lessons.json#il20.words[0]",
+   "he": "אֲנִי אֵלֵךְ",
+   "en": "I will go",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il20-w1"
+   }
+  },
+  {
+   "id": "il20-w2",
+   "source": "data/curriculum/lessons.json#il20.words[1]",
+   "he": "אֲנִי אֹכַל",
+   "en": "I will eat",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il20-w2"
+   }
+  },
+  {
+   "id": "il20-w3",
+   "source": "data/curriculum/lessons.json#il20.words[2]",
+   "he": "נִתְרָאֶה",
+   "en": "we will see each other",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il20-w3"
+   }
+  },
+  {
+   "id": "il20-w4",
+   "source": "data/curriculum/lessons.json#il20.words[3]",
+   "he": "אוּלַי",
+   "en": "maybe",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il20-w4"
+   }
+  },
+  {
+   "id": "il20-w5",
+   "source": "data/curriculum/lessons.json#il20.words[4]",
+   "he": "בְּעוֹד שָׁבוּעַ",
+   "en": "in a week",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il20-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il20-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il20-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il20-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il20-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il20-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il20-w1",
+    "il20-w2",
+    "il20-w3",
+    "il20-w4",
+    "il20-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-time-numbers-2.json.",
+   "set": "speak-time-numbers-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-plans-p01",
+   "title": "I will go",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: אֲנִי אֵלֵךְ. il20 already stores אֲנִי אֵלֵךְ, אֲנִי אֹכַל, נִתְרָאֶה, אוּלַי and בְּעוֹד שָׁבוּעַ.",
+   "items": [
+    {
+     "id": "il20-w1",
+     "source": "data/curriculum/lessons.json#il20.words[0]",
+     "he": "אֲנִי אֵלֵךְ",
+     "en": "I will go",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il20-w1"
+     }
+    },
+    {
+     "id": "il20-w2",
+     "source": "data/curriculum/lessons.json#il20.words[1]",
+     "he": "אֲנִי אֹכַל",
+     "en": "I will eat",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il20-w2"
+     }
+    },
+    {
+     "id": "il20-w3",
+     "source": "data/curriculum/lessons.json#il20.words[2]",
+     "he": "נִתְרָאֶה",
+     "en": "we will see each other",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il20-w3"
+     }
+    },
+    {
+     "id": "il20-w4",
+     "source": "data/curriculum/lessons.json#il20.words[3]",
+     "he": "אוּלַי",
+     "en": "maybe",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il20-w4"
+     }
+    },
+    {
+     "id": "il20-w5",
+     "source": "data/curriculum/lessons.json#il20.words[4]",
+     "he": "בְּעוֹד שָׁבוּעַ",
+     "en": "in a week",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il20-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il20-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il20-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il20-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il20-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il20-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il20-w1",
+    "il20-w2",
+    "il20-w3",
+    "il20-w4",
+    "il20-w5"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  }
+ ]
+}

@@ -80,7 +80,7 @@ test('every item copies phrasebook, lesson or dialogue Hebrew byte for byte', ()
 
 test('family, home, work, health, numbers, time, weather, emergencies and Shabbat units are built', () => {
   const ids = new Set(units.map((u) => u.id));
-  for (const id of ['pu-family', 'pu-home', 'pu-work', 'pu-health', 'pu-numbers', 'pu-time', 'pu-weather', 'pu-emergencies', 'pu-shabbat', 'pu-holidays', 'pu-bank', 'pu-phone']) {
+  for (const id of ['pu-family', 'pu-home', 'pu-work', 'pu-health', 'pu-numbers', 'pu-time', 'pu-weather', 'pu-emergencies', 'pu-shabbat', 'pu-holidays', 'pu-bank', 'pu-phone', 'pu-introducing', 'pu-apartment', 'pu-plans', 'pu-opinions', 'pu-driving', 'pu-hiking', 'pu-beach', 'pu-social', 'pu-news']) {
     assert.ok(ids.has(id), id);
   }
   const restaurant = units.find((u) => u.id === 'pu-restaurant');

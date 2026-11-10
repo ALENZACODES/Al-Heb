@@ -1,0 +1,264 @@
+{
+ "id": "pu-introducing",
+ "title": "Introducing yourself",
+ "level": "L0",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il03",
+   "title": "Introducing yourself",
+   "track": "israel",
+   "wordCount": 5
+  }
+ ],
+ "speakSets": [
+  "speak-people-family-2"
+ ],
+ "grammarNote": "il03 already stores שְׁמִי, מַה שְׁמֶךָ / מַה שְׁמֵךְ, אֲנִי מִ... and נָעִים מְאֹד. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "il03-w1",
+   "source": "data/curriculum/lessons.json#il03.words[0]",
+   "he": "שְׁמִי",
+   "en": "my name is",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il03-w1"
+   }
+  },
+  {
+   "id": "il03-w2",
+   "source": "data/curriculum/lessons.json#il03.words[1]",
+   "he": "מַה שְׁמֶךָ",
+   "en": "what is your name (to a man)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il03-w2"
+   }
+  },
+  {
+   "id": "il03-w3",
+   "source": "data/curriculum/lessons.json#il03.words[2]",
+   "he": "מַה שְׁמֵךְ",
+   "en": "what is your name (to a woman)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il03-w3"
+   }
+  },
+  {
+   "id": "il03-w4",
+   "source": "data/curriculum/lessons.json#il03.words[3]",
+   "he": "אֲנִי מִ...",
+   "en": "I am from...",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il03-w4"
+   }
+  },
+  {
+   "id": "il03-w5",
+   "source": "data/curriculum/lessons.json#il03.words[4]",
+   "he": "נָעִים מְאֹד",
+   "en": "nice to meet you",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il03-w5"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il03-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il03-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il03-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il03-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il03-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il03-w1",
+    "il03-w2",
+    "il03-w3",
+    "il03-w4",
+    "il03-w5"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-people-family-2.json.",
+   "set": "speak-people-family-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-introducing-p01",
+   "title": "My name is",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שְׁמִי. il03 already stores שְׁמִי, מַה שְׁמֶךָ / מַה שְׁמֵךְ, אֲנִי מִ.",
+   "items": [
+    {
+     "id": "il03-w1",
+     "source": "data/curriculum/lessons.json#il03.words[0]",
+     "he": "שְׁמִי",
+     "en": "my name is",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w1"
+     }
+    },
+    {
+     "id": "il03-w2",
+     "source": "data/curriculum/lessons.json#il03.words[1]",
+     "he": "מַה שְׁמֶךָ",
+     "en": "what is your name (to a man)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w2"
+     }
+    },
+    {
+     "id": "il03-w3",
+     "source": "data/curriculum/lessons.json#il03.words[2]",
+     "he": "מַה שְׁמֵךְ",
+     "en": "what is your name (to a woman)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w3"
+     }
+    },
+    {
+     "id": "il03-w4",
+     "source": "data/curriculum/lessons.json#il03.words[3]",
+     "he": "אֲנִי מִ...",
+     "en": "I am from...",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w4"
+     }
+    },
+    {
+     "id": "il03-w5",
+     "source": "data/curriculum/lessons.json#il03.words[4]",
+     "he": "נָעִים מְאֹד",
+     "en": "nice to meet you",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il03-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il03-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il03-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il03-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il03-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il03-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il03-w1",
+    "il03-w2",
+    "il03-w3",
+    "il03-w4",
+    "il03-w5"
+   ],
+   "speakSet": "speak-people-family-2"
+  }
+ ]
+}

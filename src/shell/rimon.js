@@ -3,6 +3,8 @@ import { projectStreak } from '../curriculum/streak.js';
 /** Rimon pictures that screens draw into the page themselves: the corner Rimon steps aside while one is there, and the stage keeps
  * its pop-ups away (src/shell/rimon-stage.js). The in-page animation, the Learn card, the lesson cheer and the Brain Lab pictures that show Rimon. */
 export const IN_PAGE_RIMON=Object.freeze(['.rimon-inline','.alef-continue-rimon','.alef-celebrate-rimon','.lab-rimon','.lab-art.hero','.lab-art.win','.lab-art.done']);
+/** Retention's once-a-day greetings (src/retention/boot.js): their line is dropped when Rimon's stage already greeted today. */
+export const GREETING_SITUATIONS=Object.freeze(['shabbat','chag','shavua_tov','welcome_back']);
 // Twelve drawings per action: start, ten in-betweens, finish.
 export const ACTIONS = Object.freeze({
   blink:{ms:45,label:'Ready to learn',priority:0},
@@ -46,7 +48,7 @@ export function createAnimator() {
   };
 }
 
-export function mountRimon({store,doc=document}={}) {
+export function mountRimon({store,doc=document,stage:givenStage=null}={}) {
   const host=doc.createElement('aside');host.className='rimon-companion rimon-dock';host.setAttribute('aria-label','Rimon, your learning companion');
   const sprite=doc.createElement('span');sprite.className='rimon-sprite';sprite.setAttribute('role','img');
   const caption=doc.createElement('span');caption.className='rimon-caption';
@@ -122,7 +124,9 @@ export function mountRimon({store,doc=document}={}) {
   host.addEventListener('click',e=>{if(host.classList.contains('rimon-peek')&&e.target!==dismiss){e.preventDefault();peekSoon();play('wave');}});
   const event=e=>{
     const {action,nextHref,say}=e.detail || {};
-    if(say && say.en && say.he && !hidden){try{speech.sayLine(say);}catch{}} // a named moment brings its own line (src/retention/rimon.js)
+    // one greeting line a day: when the stage already said one (Shabbat Shalom, welcome back), the retention greeting only waves
+    const repeatGreeting=e.detail?.retention && GREETING_SITUATIONS.includes(e.detail?.situation) && stage?.greetedToday?.();
+    if(say && say.en && say.he && !hidden && !repeatGreeting){try{speech.sayLine(say);}catch{}} // a named moment brings its own line (src/retention/rimon.js)
     if(action==='lesson' && /^#\/(learn|lesson|intermediate)(\/|\?|$)/.test(nextHref || '')){next.href=nextHref;next.hidden=false;}
     play(({correct:'bounce',wrong:'sad',lesson:'point',streak:'stretch',winkLeft:'wink',winkRight:'wink'})[action] || action);
   };
@@ -175,7 +179,7 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();const greet=()=>{if(alive&&!hidden)play('wave');};const win=doc.defaultView;if(win?.requestIdleCallback)win.requestIdleCallback(greet,{timeout:2000});else win?.setTimeout(greet,400);return true;});
-  let stage=null;
+  let stage=givenStage; // tests may pass a stand-in; the app starts the real stage below
   const api={element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){stage?.destroy?.();clearInterval(yieldTimer);peekWatch?.disconnect();doc.body?.classList?.remove('rimon-peeking');doc.removeEventListener('alef:ready',onReadyYield);speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
   // Rimon's 200 stills (src/shell/rimon-stage.js) load after boot, on demand; until a picture exists nothing changes on screen.
   if(doc===globalThis.document)import('./rimon-stage.js').then(m=>{if(alive)stage=m.mountRimonStage({store,companion:api});}).catch(()=>{});

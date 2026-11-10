@@ -13,7 +13,7 @@ import {
   awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES, seasonTrigger,
 } from './rimon-triggers.js';
 import { projectStreak } from '../curriculum/streak.js';
-import { IN_PAGE_RIMON } from './rimon.js';
+import { IN_PAGE_RIMON, GREETING_SITUATIONS } from './rimon.js';
 
 export const SEEN_KEY = 'rimon.seen.v1';
 /** Quiet days and screens (QUIET_DAYS, QUIET_ROUTES): Rimon and every still step aside. Injected by the stage so it works before any still exists. */
@@ -314,7 +314,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     for (const t of greetingCandidates(ctx, f)) {
       const gate = TRIGGERS[t]?.once ? null : `greet:${t}`;
       if (gate && s[gate] === ctx.iso) continue;
-      if (await pose(t, { ms: TRIGGERS[t].ms || 5000 })) { if (gate) writeSeen({ [gate]: ctx.iso }); return t; }
+      if (await pose(t, { ms: TRIGGERS[t].ms || 5000, line: s.greeted !== ctx.iso })) { writeSeen({ ...(gate ? { [gate]: ctx.iso } : {}), ...(lineFor(t) ? { greeted: ctx.iso } : {}) }); return t; }
     }
     return null;
   }
@@ -335,6 +335,9 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   }
   function onRimon(e) {
     const action = e?.detail?.action;
+    // a retention greeting said its line first (src/retention/boot.js): the stage's own hello today comes without one
+    const d = e?.detail;
+    if (d?.retention && d.say && GREETING_SITUATIONS.includes(d.situation)) { try { const iso = ctxNow().iso; if (seen().greeted !== iso) writeSeen({ greeted: iso }); } catch { /* optional */ } }
     if (!action || !present.size) return;
     activity();
     answer(tracker.feed(action, now().getTime()));
@@ -464,6 +467,8 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
      * For the shared showRimon hook: still URLs for a situation, best first. [] means "show no Rimon now" (hidden, or a quiet
      * day or screen); null means "the stage has no picture for this": the hook then uses its own map.
      */
+    /** True when Rimon already said a greeting line today (Shabbat Shalom, welcome back...): other greeters keep quiet. */
+    greetedToday() { try { return seen().greeted === ctxNow().iso; } catch { return false; } },
     urlsForSituation(situation) {
       if (hidden() || quiet() || STAGE_OWNS.includes(situation)) return [];
       if (inPageRimon()) return []; // the page already shows Rimon (Brain Lab pictures, the in-page animation)

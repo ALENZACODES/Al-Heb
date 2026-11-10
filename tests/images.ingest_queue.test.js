@@ -167,9 +167,9 @@ test('Rimon stills: rimon-007-starting-line.png becomes a 512 x 512 WebP with tr
   assert.equal(b.toString('latin1', 0, 4), 'RIFF'); assert.equal(b.toString('latin1', 8, 12), 'WEBP');
   assert.deepEqual(scanFile(out, {}).findings, []);
   const present = JSON.parse(fs.readFileSync(path.join(root, 'data/images/rimon/present.json'), 'utf8'));
-  // a012 is on the hold list (tools/images/rimon/art-map.mjs): saved, but not shown until a fixed drawing replaces it
+  // a012 was redrawn and taken off HOLD (7389516ec). Held stills still stay off present.json; with HOLD empty, all three are listed.
   assert.ok(fs.existsSync(path.join(root, 'data/images/rimon/v2/rimon-012-first-correct-gasp.webp')));
-  assert.deepEqual(present.ids, ['a007', 'a013']);
-  assert.equal(rep.summary.rimonPresent, 2);
+  assert.deepEqual(present.ids, ['a007', 'a012', 'a013']);
+  assert.equal(rep.summary.rimonPresent, 3);
   fs.rmSync(root, { recursive: true, force: true });
 });

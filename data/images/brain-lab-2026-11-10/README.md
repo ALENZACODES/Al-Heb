@@ -30,4 +30,4 @@ Contact sheets: `docs/images/brain-lab-contact-{covers,play,wins}.jpg`.
 
 Cover, board-mat and win pictures for Sound Twins, Vowel Rain, Middle Letter, Taxi Turns, Café Order and Prayer Chain, following `docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`. Covers are 1536x1024. Wins are 1024x1024 with alpha. Play mats keep a calm centre so Hebrew type sits on them. Ari, Noa and Rimon follow the official character sheets. Metadata is stripped. These files stay out of the first-install precache.
 
-Tokens, café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab` are still ordered for the commercial ingest path; the six games work without them (letter tokens and plain boards).
+The six new-game tokens are drawn and wired (`tokenArtPath` in `src/lab/lab.art.js`); they live in the commercial pack. Café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab` are drawn in that same pack and show through the shared image resolver once ingested and approved. The six games already work without those last nineteen pictures.

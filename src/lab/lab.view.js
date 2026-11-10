@@ -57,7 +57,7 @@ const CSS = `
 .lab-art.win{inline-size:9rem;block-size:9rem;object-fit:contain;margin-block:.2rem}
 .lab-art.done{aspect-ratio:3/2;inline-size:100%;border-radius:12px;object-fit:cover;margin-block:.2rem .8rem}
 @media (prefers-reduced-data:reduce){.lab-art{display:none}}
-.lab-board.has-mat{background:var(--lab-mat) center/cover no-repeat;border-radius:14px;padding:1.1rem .8rem}
+.lab-board.has-mat{background:var(--lab-mat) center/contain no-repeat;border-radius:14px;padding:1.1rem .8rem}
 .lab-board.has-mat>*{background:#fffaf0;border-radius:14px;padding:.5rem;box-shadow:0 0 0 1px #e2d6b8}
 .lab-cell.is-hidden{background-image:var(--lab-tileback,none);background-size:cover;background-position:center}
 .lab-art.figure{inline-size:5.5rem;block-size:5.5rem;object-fit:contain;margin:.2rem auto 0}

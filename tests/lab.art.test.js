@@ -31,7 +31,7 @@ test('pictures are decorative and remove themselves when they fail to load', () 
   assert.equal(artImg(() => { throw new Error('no DOM'); }, artPath('hunt', 'win')), null);
 });
 
-import { matKind, playArtPath, coverArtPath, applyMat } from '../src/lab/lab.art.js';
+import { matKind, playArtPath, coverArtPath, applyMat, COVER_3D } from '../src/lab/lab.art.js';
 
 test('every drill has a mat plan, and every planned picture is on disk', () => {
   for (const g of GAMES) {
@@ -40,7 +40,8 @@ test('every drill has a mat plan, and every planned picture is on disk', () => {
     assert.ok(existsSync(coverArtPath(g.id)), coverArtPath(g.id));
   }
   assert.match(playArtPath('switch'), /_r2\.webp$/);
-  assert.match(coverArtPath('calendar'), /_r2\.webp$/);
+  assert.match(coverArtPath('calendar'), /LAB_v3_calendar_cover\.webp$/);
+  for (const id of COVER_3D) assert.ok(existsSync(coverArtPath(id)), coverArtPath(id));
 });
 
 function fakeImage() {
@@ -91,6 +92,6 @@ test('applyBackground sets the picture only after it loads, never on error; toke
   applyBackground(bad, 'y.webp', { ImageCtor: Img }); made[1].onerror(); assert.equal(bad.style.backgroundImage, undefined);
   assert.equal(applyBackground(null, 'x.webp', { ImageCtor: Img }), false);
   for (const g of GAMES) { const p = tokenArtPath(g.id); if (p) assert.ok(existsSync(p), p); }
-  assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 10);
+  assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 16);
   assert.ok(existsSync(HERO_ART));
 });

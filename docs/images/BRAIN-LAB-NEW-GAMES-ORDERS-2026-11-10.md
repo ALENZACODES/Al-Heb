@@ -4,10 +4,12 @@ For the six games added on the Brain Lab games branch of 2026-11-10: Sound Twins
 
 **41 pictures:** 6 round tokens, 6 covers, 6 in-game pictures, 6 results pictures and 17 café menu pictures. They follow the same naming, sizes and house style as the Brain Lab orders for the first ten games (`docs/images/BRAIN-LAB-ORDERS-2026-11-09.md` and rank 9 of `docs/images/COMMERCIAL-ORDERS-2026-11-09.md`, PR #41), so one ingest covers both sets.
 
-## Status (2026-11-10, 3 AM)
+## Status (2026-11-10, ~4:30 AM America/Toronto)
 
 - **Drawn and in the app:** the six covers, the six in-game pictures (`LAB_v2_twins_play`, `LAB_v2_rain_play`, `LAB_v2_middle_play`, `LAB_v2_taxi_play`, `LAB_v2_cafe_play`, `LAB_v2_chain_play`) and the six results pictures, in `data/images/brain-lab-2026-11-10/` (see its README).
-- **Still to draw:** the six tokens, the seventeen café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab` (23 pictures). They show through the shared image resolver once ingested and approved.
+- **Drawn, tokens wired:** the six tokens (`LAB_v2_twins`, `LAB_v2_rain`, `LAB_v2_middle`, `LAB_v2_taxi`, `LAB_v2_cafe`, `LAB_v2_chain`) live in the commercial pack and are listed in `tokenArtPath` on this branch.
+- **Drawn, pending ingest:** the seventeen café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab`, in `data/images/commercial-2026-11-10/` on `feature/commercial-images-2026-11-10`. They show through the shared image resolver once ingested and approved. The six games already work without them.
+- Contact sheets: `docs/images/brain-lab-new-games-contact.jpg` (all 25), `brain-lab-new-games-contact-tokens.jpg`, `brain-lab-new-games-contact-menu.jpg`.
 
 ## What Is Already Wired
 

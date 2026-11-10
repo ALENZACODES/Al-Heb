@@ -126,7 +126,8 @@ export function mount(root, ctx) {
     nodes.push(buddy);
     const row = el('p', { class: 'row fd-tools' }, listen(hook));
     if (s.kind === 'letter') row.append(' ', el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
-    nodes.push(row, el('p', { class: 'fd-action' }, s.action));
+    // Instruction first, then the buttons, so “Tap Hear it. Then tap Trace it…” is never hidden by Continue.
+    nodes.push(el('p', { class: 'fd-action' }, s.action), row);
     // memory hooks and explanations stay behind "Why?"
     const why = [];
     // the chain is the one story for a letter that has an entry; the old story prints only once the chain is known to lack it (upgradeCard adds it if the file arrives later without the letter)

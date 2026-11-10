@@ -194,6 +194,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Read the first paragraph of Aleinu at the speed it is said
   - Find the words where many congregations bow
   - Say the closing 'ein od' line from memory
+  - Know that the wording here follows Edot HaMizrach; some Ashkenazi books word the bowing line differently
 - **I-09** Adon Olam: the closing hymn line by line (30 min)
   - Sing the first and last verses of Adon Olam from the page without stopping
   - Recognise the three-tense line 'hayah, hoveh, yihyeh'
@@ -201,7 +202,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
 - **I-10** Mi Shebeirach, healing and thanksgiving: the blessings said for people (35 min)
   - Recognise the opening of Mi Shebeirach and answer it
   - Answer Birkat Hagomel with the congregation's response
-  - Answer Shehecheyanu with Amen, and the Priestly Blessing with Amen or Ken yehi ratzon
+  - Answer Shehecheyanu with Amen, and answer the Priestly Blessing said by the leader with 'Ken yehi ratzon' (when kohanim bless, the answer is Amen)
 - **I-26** The full Torah service in order: ark, reading, lifting, returning (45 min)
   - Name the twelve moments of a Shabbat-morning Torah service in order
   - Join the lines the congregation sings: Ein Kamocha, Gadlu, Lecha Adonai, Etz Chaim
@@ -214,6 +215,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Know the one day a year when 'Baruch shem' is said aloud and answer it
   - Recognise the Yom Kippur words: fast, atonement, shofar at the close, forgiveness
   - Greet people with 'gmar chatimah tovah' on Yom Kippur (not only 'shanah tovah', which belongs to Rosh Hashana and the days around it)
+  - Know that Kol Nidrei and most of the Yom Kippur liturgy are not in ALEF yet
 - **I-29** Pesach: the seder blessings and the words of the festival (30 min)
   - Say the wine blessing and the Shehecheyanu that open the seder
   - Recognise the Pesach insert and the close of the festival Kiddush, including 'a remembrance of the exodus from Egypt' and 'who makes Israel and the seasons holy'
@@ -230,6 +232,7 @@ Goals are copied word for word from the data. They are draft goals: no Hebrew te
   - Say the candle-lighting blessing and answer Amen
   - Follow the order of blessings on the first night
   - Read the first lines of Hanerot Halalu and Maoz Tzur
+  - Know that the candle blessing here follows Edot HaMizrach, 'ner Chanukah'; Ashkenaz often says 'ner shel Chanukah'
 - **I-33** Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot (30 min)
   - Lead or answer the Zimun invitation
   - Read the first blessing of Birkat Hamazon

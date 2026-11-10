@@ -88,3 +88,26 @@ test("lesson-lexicon.json holds the curated pointed forms the lessons now use", 
     assert.ok(he.has(need), need);
   }
 });
+
+test("I-10 tells the learner when Ken yehi ratzon is the answer, and when Amen is", () => {
+  const g = byId["I-10"].goals.join(" ");
+  assert.match(g, /Ken yehi ratzon/);
+  assert.match(g, /kohanim/i);
+  assert.match(g, /Amen/);
+  const e = (byId["I-10"].exercises || []).find((x) => x.id === "I-10-e13");
+  assert.match(e.cue, /leader \(not kohanim\)/);
+  assert.match(e.cue, /Ken yehi ratzon/);
+  assert.equal(e.answer.he, "כֵּן יְהִי רָצוֹן");
+});
+
+test("I-32 names the Edot HaMizrach candle-blessing wording and the common Ashkenaz variant", () => {
+  const s = blob("I-32");
+  assert.ok(s.includes("נֵר חֲנֻכָּה"));
+  assert.match(s, /Edot HaMizrach/);
+  assert.match(s, /ner shel Chanukah/);
+});
+
+test("I-28 names Kol Nidrei as a gap, and I-08 names the Edot HaMizrach wording of Aleinu", () => {
+  assert.ok(byId["I-28"].goals.some((g) => /Kol Nidrei/.test(g)));
+  assert.ok(byId["I-08"].goals.some((g) => /Edot HaMizrach/.test(g)));
+});

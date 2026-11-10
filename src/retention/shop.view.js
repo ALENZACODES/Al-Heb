@@ -1,7 +1,7 @@
 // @ts-check
 // #/shop: the streak-freeze shop, streak repair, hearts refill, and the retention switches (hearts, league, reminders).
 // Gems are earned in lessons only. Nothing here costs money.
-import { h } from './dom.js';
+import { h, setKids } from './dom.js';
 import { retention } from './boot.js';
 import { CURRENCY, PRICES, gemsText, whyLabel } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
@@ -14,15 +14,17 @@ import { downloadReminder } from './ui.js';
 const DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export function mount(root, ctx) {
   const R = retention(ctx);
-  const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'ret-shop-status' });
+  const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'ret-shop-status', tabindex: '-1' });
   const body = h('div', { class: 'stack' });
   let confirmEl = null;
   /** One question before any purchase; no browser dialog (those block the page). */
   const ask = (question, yes, run) => {
     confirmEl?.remove();
+    const opener = document.activeElement?.getAttribute?.('data-k') || null;
+    const back = () => { confirmEl?.remove(); confirmEl = null; const btn = opener ? body.querySelector(`[data-k="${opener}"]`) : null; (btn && !btn.disabled ? btn : status).focus({ preventScroll: true }); };
     confirmEl = h('div', { class: 'card ret-confirm', role: 'group', 'aria-label': question }, h('p', {}, question),
-      h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', 'data-act': 'confirm', onclick: () => { confirmEl?.remove(); confirmEl = null; run(); } }, yes),
-        h('button', { type: 'button', class: 'btn secondary', onclick: () => { confirmEl?.remove(); confirmEl = null; } }, 'Cancel')));
+      h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', 'data-act': 'confirm', onclick: () => { run(); back(); } }, yes),
+        h('button', { type: 'button', class: 'btn secondary', onclick: back }, 'Cancel')));
     status.after(confirmEl); confirmEl.querySelector('button')?.focus();
   };
   const item = (title, text, price, btn) => h('section', { class: 'card ret-item' }, h('h2', {}, title), h('p', {}, text), h('p', { class: 'ret-price' }, price), btn);
@@ -40,23 +42,33 @@ export function mount(root, ctx) {
       }) }, bal < PRICES.freeze ? `Needs ${gemsText(PRICES.freeze)}` : 'Buy a streak freeze');
     const heartsOn = R.heartsShown();
     const sw = (label, on, set) => h('button', { type: 'button', class: 'btn secondary', role: 'switch', 'data-k': label, 'aria-checked': String(on), onclick: set }, `${label}: ${on ? 'On' : 'Off'}`);
-    body.replaceChildren(
+    setKids(body,
       h('p', { class: 'ret-balance' }, h('span', { class: 'ret-ico ret-ico-gem', 'aria-hidden': 'true' }), ` You have ${gemsText(bal)}. `, h('span', { class: 'muted' }, `${CURRENCY.title} are earned in lessons. They are never sold.`)),
       R.streakShown() ? h('p', {}, streakLine(st)) : null,
       offer ? item('Repair Your Streak', `Bring back your ${offer.prev}-day streak. The offer ends in about ${offer.hoursLeft} hour${offer.hoursLeft === 1 ? '' : 's'}.`, gemsText(offer.price),
-        h('button', { type: 'button', class: 'btn', 'data-buy': 'repair', disabled: bal < offer.price, onclick: () => ask(`Spend ${gemsText(offer.price)} to repair your streak?`, 'Yes, repair it', () => {
+        h('button', { type: 'button', class: 'btn', 'data-buy': 'repair', 'data-k': 'repair', disabled: bal < offer.price, onclick: () => ask(`Spend ${gemsText(offer.price)} to repair your streak?`, 'Yes, repair it', () => {
           const out = repairStreak(R.streakRaw(), R.get()); if (!out.ok) { status.textContent = out.reason === 'balance' ? `You need ${gemsText(offer.price)}.` : 'The repair offer has ended.'; return; }
           R.setStreak(out.streak); R.update(() => out.rec); status.textContent = 'Streak repaired. One lesson today keeps it going.'; showRimon('streak_repaired');
         }) }, bal < offer.price ? `Needs ${gemsText(offer.price)}` : 'Repair my streak')) : null,
       item('Streak Freeze', `Covers one missed day automatically. You hold ${rec.freezes.held} of ${STREAK.freezeMax}. Shabbat and holidays never need one.`, gemsText(PRICES.freeze), freezeBtn),
       heartsOn ? item('Refill Hearts', rec.hearts.n >= HEARTS.max ? 'Your hearts are full.' : `You have ${rec.hearts.n} of ${HEARTS.max} hearts. Practising old words also earns them back.${nextHeartInMs(rec) ? ' One returns by itself every 4 hours.' : ''}`, gemsText(PRICES.hearts),
-        rec.hearts.n >= HEARTS.max ? null : h('button', { type: 'button', class: 'btn', 'data-buy': 'hearts', disabled: bal < PRICES.hearts, onclick: () => ask(`Spend ${gemsText(PRICES.hearts)} to refill your hearts?`, 'Yes, refill', () => {
+        rec.hearts.n >= HEARTS.max ? null : h('button', { type: 'button', class: 'btn', 'data-buy': 'hearts', 'data-k': 'hearts', disabled: bal < PRICES.hearts, onclick: () => ask(`Spend ${gemsText(PRICES.hearts)} to refill your hearts?`, 'Yes, refill', () => {
           const out = refillByGems(R.get()); if (!out.ok) { status.textContent = out.reason === 'full' ? 'Your hearts are already full.' : `You need ${gemsText(PRICES.hearts)}.`; return; }
           R.update(() => out.rec); status.textContent = 'Hearts full. Off you go!'; showRimon('hearts_refilled');
         }) }, bal < PRICES.hearts ? `Needs ${gemsText(PRICES.hearts)}` : 'Refill all hearts')) : null,
       h('section', { class: 'card' }, h('h2', {}, 'Recent'), rec.gems.ledger.length
         ? h('ul', { class: 'ret-ledger' }, ...rec.gems.ledger.slice(-10).reverse().map((e) => h('li', {}, `${e.d > 0 ? '+' : ''}${e.d} ${whyLabel(e.why)}, ${DAY[new Date(e.at).getDay()]}`)))
         : h('p', { class: 'muted' }, 'Nothing yet. Finish a lesson to earn your first gems.')),
+      h('details', { class: 'card ret-how' }, h('summary', {}, 'How It All Works'),
+        h('ul', {},
+          h('li', {}, 'XP: 10 for a lesson, a little more for a sharp one or a run of right answers, 1 for each old card you review. XP is never taken away.'),
+          h('li', {}, 'Streak: one lesson, or five minutes of study, counts the day. Friday evening, Saturday and holidays never break it.'),
+          h('li', {}, 'Streak freeze: covers one missed day by itself. Repair: for two days after a break you can bring a short streak back.'),
+          h('li', {}, 'Hearts: five. A wrong first answer in a lesson costs one. Practising old words wins one back, and one returns every four hours. Reading, prayers, Torah, songs and games never cost hearts.'),
+          h('li', {}, 'Gems: earned by learning. They cannot be bought, and there are no ads.'),
+          h('li', {}, 'Practice league: the other players are pretend, paced to your own weeks. It is a race against your usual self.'),
+          h('li', {}, 'Reminders: one short line from Rimon, only if you say yes, never on Shabbat or holidays, never at night.'),
+          h('li', {}, 'Everything stays on this device. Calm mode switches all of it off.'))),
       h('section', { class: 'card ret-switches' }, h('h2', {}, 'Your Choices'),
         calm ? h('p', { class: 'muted' }, 'Calm mode is on, so hearts, the league and reminders are resting.') : null,
         h('div', { class: 'row' },

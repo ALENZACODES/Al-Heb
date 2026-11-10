@@ -36,6 +36,7 @@ test('ten days: first lesson, a freeze saves a missed day, a milestone, Shabbat 
       await page.waitForSelector('.ret-reward');
       return page;
     };
+    const stray = (page) => page.evaluate(() => { const bad = [], w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); for (let n = w.nextNode(); n; n = w.nextNode()) if (n.parentElement?.closest('.alef-retention, .ret-bar') && /^(null|undefined|NaN|false|true|\[object Object\])$/.test(n.textContent.trim())) bad.push(n.parentElement.className + ': ' + n.textContent); return bad; });
     const state = (page) => page.$eval('.ret-goal', (el) => el.getAttribute('data-state'));
     const flame = (page) => page.$eval('.ret-flame .ret-num', (el) => el.textContent);
 
@@ -75,6 +76,7 @@ test('ten days: first lesson, a freeze saves a missed day, a milestone, Shabbat 
     await p.close();
     p = await visit('2026-11-14T15:00', '#/', '.ret-goal');
     assert.equal(await state(p), 'rest'); assert.match(await p.$eval('.ret-quests', (el) => el.textContent), /No quests today/);
+    assert.deepEqual(await stray(p), [], 'no empty slot printed as a word on a rest day');
     await p.close();
 
     // Sunday: Friday and Saturday cost nothing. Last week is summed up.

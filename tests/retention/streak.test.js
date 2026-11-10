@@ -177,3 +177,14 @@ test('streak card: every state has its line; Friday night and Yom Tov are rest, 
   assert.deepEqual(line({}, '2026-11-10T09:00'), ['new', 'Finish one quick lesson to start a streak.']);
   for (const s of ['rest', 'done', 'freeze-used', 'at-risk', 'open', 'broken', 'new']) assert.doesNotMatch(streakLine({ state: s, count: 3, best: 5, held: 1 }), /undefined|NaN/);
 });
+test('review round 2 fix: a zone change noticed on one visit still covers the day judged on the next', () => {
+  const end = T('2026-11-09T23:00');
+  const r0 = ret(); r0.lastTz = 'America/Toronto'; r0.sessions = [{ s: end - 600000, e: end }];
+  process.env.TZ = 'Asia/Jerusalem';
+  try {
+    const first = applyRollover(streakRec(), r0, end + 2 * 3600000, { tz: 'Asia/Jerusalem' }); // landed; still Tuesday morning there, nothing missed yet
+    assert.deepEqual(first.events, []); assert.equal(first.ret.lastTz, 'Asia/Jerusalem');
+    const second = applyRollover(first.streak, first.ret, end + 20 * 3600000, { tz: 'Asia/Jerusalem' }); // Wednesday there: Tuesday was skipped
+    assert.deepEqual(second.events, ['travel_covered']); assert.equal(projectStreak(second.streak, end + 20 * 3600000).count, 10);
+  } finally { process.env.TZ = 'America/Toronto'; }
+});

@@ -24,3 +24,5 @@ export function countUp(node, from, to, ms = 600, g = globalThis) {
 }
 /** Confetti pieces (CSS animation; hidden under reduced motion and calm mode by retention.css). Decorative. */
 export const confetti = (n = 24) => h('div', { class: 'ret-confetti', 'aria-hidden': 'true' }, ...Array.from({ length: n }, (_, i) => h('i', { style: `--i:${i};--x:${(i * 37) % 100}` })));
+/** node.replaceChildren without the trap: the browser's own method turns a null into the text "null". Empty slots are skipped. */
+export function setKids(node, ...kids) { node.replaceChildren(...kids.flat().filter((k) => k != null && k !== false)); return node; }

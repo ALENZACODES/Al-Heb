@@ -156,6 +156,13 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - **A lesson pays at most twice a day**, and the same end card can no longer pay in two tabs. Re-doing one lesson over and over is practice, not a way to mint XP. Numbers: `LESSON_PAYS_PER_DAY` and `SAME_FINISH_MS` in `xp.js`.
 - Review round 4 is recorded in `REVIEW-ROUND-4.md`.
 
+## Added in the Seventh Pass
+
+- **"How It All Works"** on the Shop: the rules of XP, streak, freezes, hearts, gems, the practice league and reminders in plain words.
+- Fixed the word "null" printed on the Shop, in the goal card and in the quests card (see `REVIEW-ROUND-5.md`).
+- `OWNER-CHECKLIST.md`: a twenty-minute walk on a real phone for everything the automated checks could not reach.
+- `REVIEW-ROUND-5.md` checks the work against the lane's rules one by one and lists what five rounds did not cover.
+
 ## Hebrew
 
 The ten tier names are unreviewed. See `HEBREW-REVIEW.md`.

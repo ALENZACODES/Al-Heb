@@ -181,6 +181,16 @@ Measured with headless Chromium on the local server, cold load of the welcome sc
 
 Not measured: a real phone on a slow network.
 
+## Round 9 (2026-11-10, about 8 AM): the week strip
+
+Progress showed the streak as a number and the week as sentences further down. Duolingo's most-looked-at streak view is the row of days. Progress now has a strip of the last seven days under its two numbers (`src/shell/weekstrip.js`, built from the same streak record as the header flame):
+- a flame for each day studied;
+- a candle for Shabbat, a festival or a declared rest day (never shown as a miss);
+- a gold ring for today until it counts;
+- a small dot for a day without study.
+
+Each day has a spoken name ("Saturday: Shabbat, a rest day"); the marks are hidden from screen readers. In forced-colours mode the marks are drawn in the system text colour. Checked headless at phone size with a seeded record, and by a unit test of all four states.
+
 ## Score
 
-Round 8: 95/100 (before this round: 94; the first screen downloads about 660 KB less). Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 9: 95/100 (before this round: 95; the strip closes a visible Duolingo gap, the real-phone pass is still open). Round 8: 95/100 (before this round: 94; the first screen downloads about 660 KB less). Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

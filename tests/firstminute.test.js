@@ -192,3 +192,21 @@ test('first screen stays light: the plan reads the slim lesson index, which matc
   }
   assert.match(readFileSync(new URL('../src/onboarding/loader.js', import.meta.url), 'utf8'), /lessons\.index\.json[\s\S]*catch\(\(\) => loadJson\('data\/curriculum\/lessons\.json'\)/);
 });
+
+test('week strip: seven days from the shared streak record; studied, Shabbat rest (never a miss), today and missed days each have their own mark and spoken name', async () => {
+  const { weekModel, weekStripNode } = await import('../src/shell/weekstrip.js');
+  const rec = { v: 2, count: 3, best: 3, last: '2026-11-09', doneDates: ['2026-11-05', '2026-11-06', '2026-11-08', '2026-11-09'], frozenDates: ['2026-11-07'], todayDate: '2026-11-10', todaySeconds: 120 };
+  const now = new Date(2026, 10, 10, 12).getTime();
+  const days = weekModel(rec, now);
+  assert.equal(days.length, 7);
+  assert.deepEqual(days.map((d) => d.short), ['We', 'Th', 'Fr', 'Sa', 'Su', 'Mo', 'Tu']);
+  assert.deepEqual(days.map((d) => d.state), ['open', 'done', 'done', 'frozen', 'done', 'done', 'today']);
+  assert.equal(days[3].spoken, 'Saturday: Shabbat, a rest day');
+  assert.equal(days[0].spoken, 'Wednesday: no study');
+  assert.equal(days[6].spoken, 'Today: today, not counted yet');
+  assert.deepEqual(weekModel({ ...rec, doneDates: [...rec.doneDates, '2026-11-10'], last: '2026-11-10' }, now)[6].state, 'done');
+  const node = weekStripNode(rec, { now });
+  assert.equal(node.attrs['aria-label'], 'Last 7 days');
+  assert.match(node.textContent, /Thursday: studied/);
+  assert.match(readFileSync(new URL('../src/progress/progress.view.js', import.meta.url), 'utf8'), /weekStripNode\(store\.get\('streak'\)/);
+});

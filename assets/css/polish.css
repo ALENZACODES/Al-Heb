@@ -408,3 +408,16 @@ html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
 
 /* 19. Brain Lab: room between the workout card and "Your Skills", on the spacing scale */
 .lab-hero + h2 { margin-block-start: var(--s-6, 1.5rem); }
+
+/* 20. The week strip (Progress): seven days, a flame for each day studied, a candle for Shabbat and rest days, a ring for today */
+.wk-strip { flex: 1 1 100%; display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--s-1); list-style: none; margin: 0; padding: var(--s-3) var(--s-2);
+  border: 1px solid color-mix(in srgb, var(--fg) 18%, transparent); border-radius: var(--r-lg, 16px); background: color-mix(in srgb, var(--fg) 4%, transparent); }
+.wk-day { display: grid; justify-items: center; gap: var(--s-1); }
+.wk-name { font-size: var(--fs-xs, .75rem); font-weight: var(--fw-bold); color: var(--muted); }
+.wk-day.is-now .wk-name { color: var(--fg); }
+.wk-mark { inline-size: 1.9rem; block-size: 1.9rem; border-radius: 50%; display: block; background: color-mix(in srgb, var(--fg) 14%, transparent); }
+.wk-day.is-open .wk-mark { inline-size: .55rem; block-size: .55rem; margin-block: .675rem; }
+.wk-day.is-today .wk-mark { background: none; border: 3px solid var(--gold-500); box-sizing: border-box; }
+.wk-day.is-done .wk-mark { border-radius: 0; background: linear-gradient(180deg, #ffd166, var(--flame) 55%, var(--flame-deep)); -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12.6 1.8c.9 3.7 5.9 6.3 5.9 12.1A6.5 6.5 0 0 1 5.5 14c0-2.7 1.3-4.6 2.9-6 .1 1.9.9 3.2 2.3 3.8-.4-3.6.4-7.2 1.9-10z'/></svg>") center / contain no-repeat; mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12.6 1.8c.9 3.7 5.9 6.3 5.9 12.1A6.5 6.5 0 0 1 5.5 14c0-2.7 1.3-4.6 2.9-6 .1 1.9.9 3.2 2.3 3.8-.4-3.6.4-7.2 1.9-10z'/></svg>") center / contain no-repeat; }
+.wk-day.is-frozen .wk-mark { inline-size: .8rem; block-size: 1.7rem; border-radius: 3px 3px 2px 2px; background: linear-gradient(180deg, #ffe7a3 0 22%, #f4efe4 22%); box-shadow: 0 -6px 8px -2px #ffd16688; }
+@media (forced-colors: active) { .wk-mark { forced-color-adjust: none; background: CanvasText; } .wk-day.is-today .wk-mark { background: none; border-color: CanvasText; } }

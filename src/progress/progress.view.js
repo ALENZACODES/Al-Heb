@@ -11,6 +11,7 @@ import { weakReport } from './weak.js';
 import { weeklySummary, weeklySentences, sparklineSVG, WEEKS } from './weekly.js';
 import { evaluateMilestones, milestoneRows } from './milestones.js';
 import { statModel } from '../shell/statbar.js';
+import { weekStripNode } from '../shell/weekstrip.js';
 import { DAILY_GOAL_KEY } from '../home/today.js';
 
 const CSS = `
@@ -98,7 +99,8 @@ export async function mount(root, ctx) {
     let sm = null; try { sm = statModel({ streak: store.get('streak'), dailyGoal: store.get(DAILY_GOAL_KEY), now: t }); } catch { sm = null; }
     const hero = sm ? h('div', { class: 'pg-hero', role: 'group', 'aria-label': 'Streak and study time today' },
       showStreak ? h('div', { class: `pg-hero-flame${sm.lit ? ' is-lit' : ''}` }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }), h('strong', {}, String(sm.count)), h('span', {}, sm.count === 1 ? 'day streak' : 'day streak')) : null,
-      h('div', { class: `pg-hero-goal${sm.met ? ' is-met' : ''}`, style: `--p:${sm.pct}` }, h('span', { class: 'pg-hero-ring', 'aria-hidden': 'true' }), h('strong', {}, `${sm.todayMin}/${sm.goalMin}`), h('span', {}, 'minutes today'))) : null;
+      h('div', { class: `pg-hero-goal${sm.met ? ' is-met' : ''}`, style: `--p:${sm.pct}` }, h('span', { class: 'pg-hero-ring', 'aria-hidden': 'true' }), h('strong', {}, `${sm.todayMin}/${sm.goalMin}`), h('span', {}, 'minutes today')),
+      showStreak ? (() => { try { return weekStripNode(store.get('streak'), { now: t, extraRest: s.rest }); } catch { return null; } })() : null) : null;
     heroSlot.replaceChildren(...(hero ? [hero] : []));
     todaySection.replaceChildren(
       h('h2', { id: 'pg-h-today' }, 'Today'),

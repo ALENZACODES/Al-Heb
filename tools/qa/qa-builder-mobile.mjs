@@ -1,0 +1,47 @@
+import { fileURLToPath } from 'node:url';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const root=fileURLToPath(new URL('../../',import.meta.url));
+const browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_EXECUTABLE || undefined});
+const page=await browser.newPage({viewport:{width:375,height:812},hasTouch:true,isMobile:true});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto(process.env.BUILDER_URL || 'http://127.0.0.1:8080/',{waitUntil:'networkidle'});
+await page.locator('.home-builder .builder-key').first().waitFor();
+if(await page.locator('#alef-prayer-noshow').isVisible())await page.locator('#alef-prayer-noshow').click();
+await page.locator('.home-builder').scrollIntoViewIfNeeded();
+await page.locator('.home-builder').screenshot({path:root+'docs/qa/builder-phone.png'});
+for(const glyph of ['א','ב','א'])await page.locator(`.home-builder > .builder-tray [data-glyph="${glyph}"]`).tap();
+await page.waitForTimeout(2000);
+assert.match(await page.locator('.builder-status').innerText(),/You built/);
+assert.match(await page.locator('.builder-status').innerText(),/badge earned/);
+await page.locator('.builder-target').getByRole('button',{name:/Play slowly/}).tap();
+await page.waitForTimeout(1000);
+assert.ok(!(await page.locator('.builder-status').innerText()).includes('could not start'));
+await page.getByLabel('Builder level',{exact:true}).selectOption('5');
+await page.locator('.home-builder > .builder-tray').screenshot({path:root+'docs/qa/builder-full-alphabet.png'});
+await page.getByLabel('Builder level',{exact:true}).selectOption('1');
+const letter=page.locator('.home-builder > .builder-tray [data-glyph="א"]');
+const box=await letter.boundingBox();
+await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.waitForTimeout(650);await page.mouse.up();
+assert.match(await page.locator('.builder-symbol-info').innerText(),/alef/);
+assert.equal(await page.locator('.builder-slot').first().innerText(),'·');
+await page.setViewportSize({width:1280,height:1200});
+await page.locator('.home-builder').screenshot({path:root+'docs/qa/builder-desktop.png'});
+const replacements=JSON.parse(fs.readFileSync(root+'tools/audio/builder-shalom-replacements.json'));
+const results=await page.evaluate(async rows=>{
+  const result=[];
+  for(let i=0;i<rows.length;i+=8)await Promise.all(rows.slice(i,i+8).map(r=>new Promise(resolve=>{
+    const a=new Audio(r.path);a.muted=true;
+    const timer=setTimeout(()=>finish(false),20000);
+    function finish(ok){clearTimeout(timer);a.pause();resolve(result.push({path:r.path,ok}));}
+    a.onended=()=>finish(true);a.onerror=()=>finish(false);a.play().catch(()=>finish(false));
+  })));
+  return result;
+},replacements);
+assert.ok(results.every(r=>r.ok));assert.deepEqual(errors,[]);
+const report=JSON.parse(fs.readFileSync(root+'docs/qa/builder-results.json'));
+report.shalomReplacementPlayback=results.length;report.phoneTouch=true;report.phoneLongPress=true;report.defaultAutoplayPolicy=true;
+fs.writeFileSync(root+'docs/qa/builder-results.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({replacements:results.length,errors,phoneTouch:true,phoneLongPress:true}));
+await browser.close();

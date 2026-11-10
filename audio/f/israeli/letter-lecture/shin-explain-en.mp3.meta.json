@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "This is Shin — SHEEN. Sound: SH as in ship (with the dot on the right). Shape hook: three candle flames on one holder. Tip: Three upward branches joining at bottom; no other letter has this clear triple crown; do not mix it up with Ayin, Tsadi.",
+ "inputSha256": "3a5aa506690b4730dd9a9584dc4d96d851fdca1838d8b804327086a2bc9293a1",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

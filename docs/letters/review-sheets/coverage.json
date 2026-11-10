@@ -1,0 +1,249 @@
+{
+ "records": 54,
+ "coverage": {
+  "alef": {
+   "print": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "bet": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "gimel": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "dalet": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "he": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "vav": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "zayin": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "chet": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "tet": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "yod": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "kaf": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "lamed": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "mem": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "nun": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "samekh": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "ayin": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "pe": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "tsadi": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "qof": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "resh": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "shin": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "tav": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0,
+    1.0
+   ]
+  },
+  "kaf-final": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "mem-final": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "nun-final": {
+   "print": [
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "pe-final": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  },
+  "tsadi-final": {
+   "print": [
+    1.0,
+    1.0
+   ],
+   "cursive": [
+    1.0
+   ]
+  }
+ },
+ "belowNinetyPercent": []
+}

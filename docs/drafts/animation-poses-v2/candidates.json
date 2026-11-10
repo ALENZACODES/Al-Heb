@@ -1,0 +1,410 @@
+{
+ "scale_svg_units_per_font_unit": 0.07423269093504639,
+ "items": {
+  "shin": {
+   "glyph_contours": 2,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 2,
+   "bbox": [
+    56,
+    54,
+    144,
+    133
+   ]
+  },
+  "bet": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    65,
+    53,
+    135,
+    132
+   ]
+  },
+  "alef": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    66,
+    52,
+    134,
+    134
+   ]
+  },
+  "mem": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    65,
+    52,
+    137,
+    133
+   ]
+  },
+  "lamed": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    71,
+    28,
+    129,
+    130
+   ]
+  },
+  "resh": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    71,
+    53,
+    129,
+    132
+   ]
+  },
+  "vav": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    87,
+    54,
+    113,
+    132
+   ]
+  },
+  "tav": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    63,
+    53,
+    137,
+    132
+   ]
+  },
+  "yod": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    85,
+    53,
+    115,
+    97
+   ]
+  },
+  "dalet": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    67,
+    53,
+    133,
+    133
+   ]
+  },
+  "he": {
+   "glyph_contours": 2,
+   "old_subpaths": 2,
+   "new_subpaths": 2,
+   "old_commands": 98,
+   "new_commands": 98,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    68,
+    53,
+    132,
+    132
+   ]
+  },
+  "kaf": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    71,
+    53,
+    129,
+    133
+   ]
+  },
+  "nun": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    78,
+    54,
+    122,
+    131
+   ]
+  },
+  "samech": {
+   "glyph_contours": 2,
+   "old_subpaths": 2,
+   "new_subpaths": 2,
+   "old_commands": 98,
+   "new_commands": 98,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    65,
+    52,
+    135,
+    134
+   ]
+  },
+  "ayin": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    63,
+    53,
+    137,
+    138
+   ]
+  },
+  "pe": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    69,
+    53,
+    132,
+    133
+   ]
+  },
+  "tsadi": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    68,
+    53,
+    134,
+    133
+   ]
+  },
+  "qof": {
+   "glyph_contours": 2,
+   "old_subpaths": 2,
+   "new_subpaths": 2,
+   "old_commands": 98,
+   "new_commands": 98,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    67,
+    55,
+    133,
+    159
+   ]
+  },
+  "gimel": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    73,
+    53,
+    126,
+    132
+   ]
+  },
+  "zayin": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    76,
+    53,
+    124,
+    133
+   ]
+  },
+  "chet": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    66,
+    53,
+    134,
+    132
+   ]
+  },
+  "tet": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    63,
+    54,
+    137,
+    133
+   ]
+  },
+  "final-kaf": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    73,
+    55,
+    127,
+    158
+   ]
+  },
+  "final-mem": {
+   "glyph_contours": 2,
+   "old_subpaths": 2,
+   "new_subpaths": 2,
+   "old_commands": 98,
+   "new_commands": 98,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    65,
+    53,
+    135,
+    132
+   ]
+  },
+  "final-nun": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    86,
+    57,
+    114,
+    157
+   ]
+  },
+  "final-pe": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    69,
+    54,
+    131,
+    158
+   ]
+  },
+  "final-tsadi": {
+   "glyph_contours": 1,
+   "old_subpaths": 1,
+   "new_subpaths": 1,
+   "old_commands": 49,
+   "new_commands": 49,
+   "same_count": true,
+   "self_intersections_after_rounding": 0,
+   "bbox": [
+    66,
+    55,
+    134,
+    159
+   ]
+  }
+ }
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-tech-media-1",
+ "title": "Tech and media 1",
+ "theme": "tech-media",
+ "level": "B1",
+ "track": "israel",
+ "pack": "tech-media-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h19eb6a83",
+   "he": "שָׁמַר",
+   "translit": "shamar",
+   "en": "to guard",
+   "kind": "word",
+   "audioId": "h19eb6a83",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5ea1ecdf",
+   "he": "הוֹרִיד",
+   "translit": "horid",
+   "en": "to take down, to bring down, to lower",
+   "kind": "word",
+   "audioId": "h5ea1ecdf",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h233af6f2",
+   "he": "כּוֹכָב",
+   "translit": "kokhav",
+   "en": "star",
+   "kind": "word",
+   "audioId": "h233af6f2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hffaabf04",
+   "he": "רֶשֶׁת",
+   "translit": "reshet",
+   "en": "a net",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb7990b70",
+   "he": "דִּוּוּחַ",
+   "translit": "divuach",
+   "en": "a news report",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he174b395",
+   "he": "חַשְׁמַל",
+   "translit": "chashmal",
+   "en": "electricity",
+   "kind": "word",
+   "audioId": "i-44-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he6d29dfd",
+   "he": "פָּתוּחַ",
+   "translit": "patuach",
+   "en": "Open",
+   "kind": "word",
+   "audioId": "i-21-w13",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h84b0f0c7",
+   "he": "רַדְיוֹ",
+   "translit": "radyo",
+   "en": "radio",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he6ac4494",
+   "he": "נָתוּן",
+   "translit": "natun",
+   "en": "datum, data",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd70e8f1b",
+   "he": "תַּהֲלִיךְ",
+   "translit": "tahalikh",
+   "en": "process",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8de48734",
+   "he": "דַּף",
+   "translit": "daf",
+   "en": "a sheet of paper",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h96056f0f",
+   "he": "גִּרְסָה",
+   "translit": "girsah",
+   "en": "version, variant, reading",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

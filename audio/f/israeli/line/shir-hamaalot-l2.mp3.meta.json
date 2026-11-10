@@ -1,0 +1,29 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃",
+ "inputSha256": "d33eb95ee786ed09fbb25076396d480b4ec4577af8784d414991b7e0e6ab7ef9",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אָז יִמָּלֵא שְׂחוֹק פִּינוּ וּלְשׁוֹנֵנוּ רִנָּה אָז יֹאמְרוּ בַגּוֹיִם הִגְדִּיל אֲדֹנָי לַעֲשׂוֹת עִם־אֵלֶּה׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/h7121d7fe.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w10.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w11.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w12.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w13.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w14.mp3",
+  "audio/f/israeli/word/h7121d7fe.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w16.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w17.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w18.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/kiddush-gen-2-1-3-w30.mp3",
+  "audio/f/israeli/word/shir-hamaalot-w21.mp3"
+ ]
+}

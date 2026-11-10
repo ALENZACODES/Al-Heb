@@ -1,0 +1,24 @@
+{
+  "id": "genesis-15-2-he-noa",
+  "fingerprint": "d654c11ac6ba0c7ae5b1f25bdb2a12a91d39f5af0cd0ee5f0309f0a24e9ec830",
+  "audioSha256": "411aaedd500386523fa654f345bc75ca7560d33a69eadcc0cba019548a9c6ab5",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "ויאמר אַבְרָם אֲדֹנָי אלוהים מה תתן לי וְאָנֹכִי הולך ערירי ובן משק ביתי הוא דמשק אליעזר",
+  "transcript": "ויאמר אברהם, אדוני אלוהים, מה תיתן לי ואנוכי הולך ערירי ובין משק ביתי ודמשק אליעזר?",
+  "wordEdits": 7,
+  "referenceWords": 16,
+  "wer": 0.4375,
+  "asrExact": false,
+  "orthographicWordEdits": 7,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

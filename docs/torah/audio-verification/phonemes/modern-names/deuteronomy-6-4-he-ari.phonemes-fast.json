@@ -1,0 +1,13 @@
+{
+  "clip": "deuteronomy-6-4-he-ari.mp3",
+  "audioSha256": "04a276ce9d5a564ab2ff006825c568c24ebe4cbde1a6c04d498dd7399ed99d5b",
+  "model": "renikud/whisper-he-ipa",
+  "modelRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "inferencePolicy": "ct2-int8-beam1-no-source-prompt",
+  "asciiPhonemes": "Sam'a jisraq'el qadon'aj, qeloh'in o qadon'aj qex'ad.",
+  "ipa": "ʃamˈa jisʁaʔˈel ʔadonˈaj, ʔelohˈin o ʔadonˈaj ʔeχˈad.",
+  "status": "supplemental-phoneme-evidence",
+  "publishable": false,
+  "limitation": "Model-predicted phonemes, not a human listening certification; compare against separately established source pronunciation."
+}

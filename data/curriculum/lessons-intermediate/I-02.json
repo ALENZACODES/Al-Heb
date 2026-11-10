@@ -1,0 +1,419 @@
+{
+ "id": "I-02",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Amidah openings: open my lips, Avot, Kedushah responses",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אֲדֹנָי",
+   "en": "my Lord",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "adonai",
+    "sephardi": "adonai",
+    "ashkenazi": "adonoy"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p996ad12f"
+   }
+  },
+  {
+   "he": "שְׂפָתַי",
+   "en": "my lips",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sefatai",
+    "sephardi": "sefatai",
+    "ashkenazi": "sefosai"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׂפָתַי"
+    ]
+   }
+  },
+  {
+   "he": "תִּפְתָּח",
+   "en": "open (you will open)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tiftach",
+    "sephardi": "tiftach",
+    "ashkenazi": "tiftoch"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "תִּפְתָּח"
+    ]
+   }
+  },
+  {
+   "he": "אֲבוֹתֵינוּ",
+   "en": "our ancestors",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avoteinu",
+    "sephardi": "avoteinu",
+    "ashkenazi": "avoseinu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֲבוֹתֵינוּ"
+    ]
+   }
+  },
+  {
+   "he": "אַבְרָהָם",
+   "en": "Abraham",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "avraham",
+    "sephardi": "avraham",
+    "ashkenazi": "avrohom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p86e5156c"
+   }
+  },
+  {
+   "he": "יִצְחָק",
+   "en": "Isaac",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yitzchak",
+    "sephardi": "yitzchak",
+    "ashkenazi": "yitzchok"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p728a4c88"
+   }
+  },
+  {
+   "he": "יַעֲקֹב",
+   "en": "Jacob",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ya'akov",
+    "sephardi": "ya'akov",
+    "ashkenazi": "ya'akov"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hffd88aa2#forms.future"
+   }
+  },
+  {
+   "he": "הַגָּדוֹל",
+   "en": "the great",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hagadol",
+    "sephardi": "hagadol",
+    "ashkenazi": "hagodol"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַגָּדוֹל"
+    ]
+   }
+  },
+  {
+   "he": "הַגִּבּוֹר",
+   "en": "the mighty",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hagibor",
+    "sephardi": "hagibor",
+    "ashkenazi": "hagibor"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַגִּבּוֹר"
+    ]
+   }
+  },
+  {
+   "he": "וְהַנּוֹרָא",
+   "en": "and the awesome",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vehanora",
+    "sephardi": "vehanora",
+    "ashkenazi": "vehanoro"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְהַנּוֹרָא"
+    ]
+   }
+  },
+  {
+   "he": "מָגֵן",
+   "en": "shield",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "magen",
+    "sephardi": "magen",
+    "ashkenazi": "mogein"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h344eb438"
+   }
+  },
+  {
+   "he": "קָדוֹשׁ",
+   "en": "holy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kadosh",
+    "sephardi": "kadosh",
+    "ashkenazi": "kodosh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h39244df3"
+   }
+  },
+  {
+   "he": "כְּבוֹדוֹ",
+   "en": "his glory",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kevodo",
+    "sephardi": "kevodo",
+    "ashkenazi": "kevodo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כְּבוֹדוֹ"
+    ]
+   }
+  },
+  {
+   "he": "מִמְּקוֹמוֹ",
+   "en": "from his place",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mimekomo",
+    "sephardi": "mimekomo",
+    "ashkenazi": "mimekomo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מִמְּקוֹמוֹ"
+    ]
+   }
+  },
+  {
+   "he": "יִמְלֹךְ",
+   "en": "he will reign",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yimlokh",
+    "sephardi": "yimlokh",
+    "ashkenazi": "yimlokh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "heba57078#forms.future"
+   }
+  }
+ ],
+ "prayerLines": [
+  "amidah-lips",
+  "avot-1",
+  "avot-closing",
+  "kedushah-kadosh",
+  "kedushah-baruch",
+  "kedushah-yimloch",
+  "oseh-shalom"
+ ],
+ "goals": [
+  "Say the 'open my lips' verse before stepping into the Amidah",
+  "Read the Avot opening and name the three ancestors in order",
+  "Give the three Kedushah responses at the right cue"
+ ],
+ "estMinutes": 35,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-02-e01",
+   "type": "fade",
+   "line": "amidah-lips",
+   "en": "My Lord, open my lips, and my mouth will declare your praise."
+  },
+  {
+   "id": "I-02-e02",
+   "type": "order",
+   "he": "אֲדֹנָי שְׂפָתַי תִּפְתָּח",
+   "en": "My Lord, open my lips"
+  },
+  {
+   "id": "I-02-e03",
+   "type": "spot",
+   "line": "avot-1",
+   "target": "אַבְרָהָם",
+   "en": "Abraham"
+  },
+  {
+   "id": "I-02-e04",
+   "type": "order",
+   "he": "אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב",
+   "en": "God of Abraham, God of Isaac and God of Jacob"
+  },
+  {
+   "id": "I-02-e05",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "אַבְרָהָם",
+     "en": "Abraham"
+    },
+    {
+     "he": "יִצְחָק",
+     "en": "Isaac"
+    },
+    {
+     "he": "יַעֲקֹב",
+     "en": "Jacob"
+    },
+    {
+     "he": "אֲבוֹתֵינוּ",
+     "en": "our ancestors"
+    }
+   ]
+  },
+  {
+   "id": "I-02-e06",
+   "type": "produce",
+   "en": "the great, the mighty and the awesome",
+   "options": [
+    "הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא",
+    "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן",
+    "גּוֹמֵל חֲסָדִים טוֹבִים"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-02-e07",
+   "type": "fade",
+   "line": "avot-closing",
+   "en": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham."
+  },
+  {
+   "id": "I-02-e08",
+   "type": "respond",
+   "cue": "The leader ends the first blessing: 'Baruch atah Adonai, magen Avraham'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   }
+  },
+  {
+   "id": "I-02-e09",
+   "type": "respond",
+   "cue": "Kedushah. The leader reads the cue; the congregation answers with the three-fold 'holy'.",
+   "answer": {
+    "he": "קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת מְלֹא כָל־הָאָרֶץ כְּבוֹדוֹ",
+    "en": "Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory."
+   },
+   "prompt": {
+    "he": "וְקָרָא זֶה אֶל־זֶה וְאָמַר",
+    "en": "And one called to another and said:"
+   }
+  },
+  {
+   "id": "I-02-e10",
+   "type": "respond",
+   "cue": "Kedushah, second response.",
+   "answer": {
+    "he": "בָּרוּךְ כְּבוֹד־יְהוָה מִמְּקוֹמוֹ",
+    "en": "Blessed is the glory of the LORD from his place."
+   }
+  },
+  {
+   "id": "I-02-e11",
+   "type": "respond",
+   "cue": "Kedushah, third response.",
+   "answer": {
+    "he": "יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר הַלְלוּ־יָהּ",
+    "en": "The LORD will reign for ever, your God, Zion, from generation to generation. Halleluyah."
+   }
+  },
+  {
+   "id": "I-02-e12",
+   "type": "order",
+   "he": "קָדוֹשׁ קָדוֹשׁ קָדוֹשׁ יְהוָה צְבָאוֹת",
+   "en": "Holy, holy, holy is the LORD of hosts"
+  },
+  {
+   "id": "I-02-e13",
+   "type": "fade",
+   "line": "kedushah-baruch",
+   "en": "Blessed is the glory of the LORD from his place."
+  },
+  {
+   "id": "I-02-e14",
+   "type": "spot",
+   "line": "kedushah-yimloch",
+   "target": "צִיּוֹן",
+   "en": "Zion"
+  },
+  {
+   "id": "I-02-e15",
+   "type": "fade",
+   "line": "oseh-shalom",
+   "en": "He who makes peace in his heights, may he make peace for us and for all Israel; and say: Amen."
+  },
+  {
+   "id": "I-02-e16",
+   "type": "respond",
+   "cue": "The Amidah ends with Oseh shalom. The last words are 'v'imru'. Finish them.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "וְאִמְרוּ אָמֵן",
+    "en": "and say: Amen"
+   }
+  },
+  {
+   "id": "I-02-e17",
+   "type": "recall",
+   "he": "מָגֵן",
+   "en": "shield"
+  }
+ ],
+ "note": "Modim and the middle blessings of the Amidah are corpus gaps (g-modim, g-shabbat-amidah-middle). The Kedushah verses here are the three congregational responses only."
+}

@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-doing-verbs-1",
+ "title": "Everyday actions 1",
+ "theme": "doing-verbs",
+ "level": "A1",
+ "track": "both",
+ "pack": "doing-verbs-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "ha3cf2c46",
+   "he": "הִוָּה",
+   "translit": "hivah",
+   "en": "to constitute",
+   "kind": "word",
+   "audioId": "ha3cf2c46",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h2cd963e3",
+   "he": "הָיָה",
+   "translit": "hayah",
+   "en": "to be",
+   "kind": "word",
+   "audioId": "r07-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5aed8aaa",
+   "he": "יָכֹל",
+   "translit": "yakhol",
+   "en": "can, to be able to",
+   "kind": "word",
+   "audioId": "h5aed8aaa",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h28ecb454",
+   "he": "רָאָה",
+   "translit": "ra'ah",
+   "en": "to see, to have vision",
+   "kind": "word",
+   "audioId": "h28ecb454",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8982ad83",
+   "he": "נָתַן",
+   "translit": "natan",
+   "en": "to give",
+   "kind": "word",
+   "audioId": "r38-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h24f17330",
+   "he": "מֵת",
+   "translit": "met",
+   "en": "to die",
+   "kind": "word",
+   "audioId": "h24f17330",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h22a20328",
+   "he": "כִּוֵּן",
+   "translit": "kiven",
+   "en": "to direct (as traffic)",
+   "kind": "word",
+   "audioId": "h22a20328",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8e3fbf43",
+   "he": "שָׁם",
+   "translit": "sham",
+   "en": "to assess, appraise",
+   "kind": "word",
+   "audioId": "h8e3fbf43",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8d0e13f2",
+   "he": "בָּרַר",
+   "translit": "barar",
+   "en": "to select, to pick, to sort",
+   "kind": "word",
+   "audioId": "h8d0e13f2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf14f89e0",
+   "he": "יִבֵּא",
+   "translit": "yibe",
+   "en": "to import",
+   "kind": "word",
+   "audioId": "hf14f89e0",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h13c6683f",
+   "he": "הֵכִיל",
+   "translit": "hekhil",
+   "en": "to contain",
+   "kind": "word",
+   "audioId": "h13c6683f",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h95fec412",
+   "he": "אָבַל",
+   "translit": "aval",
+   "en": "to bewail",
+   "kind": "word",
+   "audioId": "h95fec412",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

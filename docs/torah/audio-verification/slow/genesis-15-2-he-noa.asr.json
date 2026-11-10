@@ -1,0 +1,25 @@
+{
+  "id": "genesis-15-2-he-noa",
+  "fingerprint": "be42bca16c1473a8be233042475514d24f627b4f94a3006d0ab71c7a197f7960",
+  "audioSha256": "a1d0696e62f82ef32e4a873a4a1c05ee5695488570f831a974d68f0ced892323",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "ויאמר אברם אדני אלוהים מה תתן לי ואנכי הולך ערירי ובן משק ביתי הוא דמשק אליעזר",
+  "transcript": "ויאמר אברהם עדני אלוהים, מה תתן לי בן אחי הולך ערירי ובן משק ביתי ובן משק אליעזר?",
+  "wordEdits": 6,
+  "referenceWords": 16,
+  "wer": 0.375,
+  "asrExact": false,
+  "orthographicWordEdits": 6,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

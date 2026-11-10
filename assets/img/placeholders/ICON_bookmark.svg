@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="placeholder for ICON_bookmark">
+<rect width="256" height="256" fill="#F6F1E7"/>
+<rect x="13" y="13" width="230" height="230" rx="14" fill="none" stroke="#B0373B" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="128" y="124" text-anchor="middle" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="22" fill="#2B2B2B">ICON_bookmark</text>
+<text x="128" y="156" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#B0373B">PLACEHOLDER</text>
+</svg>

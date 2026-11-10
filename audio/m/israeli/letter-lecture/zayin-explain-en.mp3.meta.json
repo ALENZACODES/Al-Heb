@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Zayin — ZAH-yeen. Sound: Z as in zoo. Shape hook: nail with a wide baseball cap. Tip: A distinctly wide top overhang differentiates it from thin Vav; do not mix it up with Vav, Final Nun.",
+ "inputSha256": "f75f045410300cfe07a2c36259d9bfd005482fb71522fb61bcdc9031d1bc080b",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

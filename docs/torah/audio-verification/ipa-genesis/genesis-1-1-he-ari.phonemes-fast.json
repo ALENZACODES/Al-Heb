@@ -1,0 +1,14 @@
+{
+  "clip": "genesis-1-1-he-ari.mp3",
+  "audioSha256": "afde397d16d5f7d92a404e1c47422c4446ffd4f4bc7763604011e88424d046e7",
+  "model": "renikud/whisper-he-ipa",
+  "modelRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "convertedWeightsSha256": "bcd37aad2f27ac4856065e879aa4cd1a869d728eeb40c856f158da29e030a6dd",
+  "inferencePolicy": "ct2-int8-beam1-no-source-prompt",
+  "asciiPhonemes": "bereS'it par'a qeloh'im q'et haSamaq'im veq'et haq'arets.",
+  "ipa": "beʁeʃˈit paʁˈa ʔelohˈim ʔˈet haʃamaʔˈim veʔˈet haʔˈaʁets.",
+  "status": "supplemental-phoneme-evidence",
+  "publishable": false,
+  "limitation": "Model-predicted phonemes, not a human listening certification; compare against separately established source pronunciation."
+}

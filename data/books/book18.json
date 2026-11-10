@@ -1,0 +1,177 @@
+{
+ "id": "book18",
+ "titleHe": "עִיר גְּדוֹלָה, דִּירָה קְטַנָּה",
+ "titleTranslit": "Ir Gdolah, Dirah Ktanah",
+ "titleEn": "Big City, Small Apartment",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "תֵּל אָבִיב עִיר גְּדוֹלָה.",
+   "translit": "Tel Aviv ir gdolah.",
+   "en": "Tel Aviv is a big city.",
+   "img": "assets/books/book18/BOOK18_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p01.mp3",
+    "m": "audio/m/israeli/book/book18-p01.mp3"
+   },
+   "illustration": "towers and old buildings crowded together, seen from above",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "הַדִּירָה שֶׁל רוֹנִי קְטַנָּה.",
+   "translit": "Ha-dirah shel Roni ktanah.",
+   "en": "Roni's apartment is small.",
+   "img": "assets/books/book18/BOOK18_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p02.mp3",
+    "m": "audio/m/israeli/book/book18-p02.mp3"
+   },
+   "illustration": "a studio: bed, desk, kitchenette in one view",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "קְטַנָּה מְאוֹד.",
+   "translit": "Ktanah me'od.",
+   "en": "Very small.",
+   "img": "assets/books/book18/BOOK18_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p03.mp3",
+    "m": "audio/m/israeli/book/book18-p03.mp3"
+   },
+   "illustration": "the man touching both walls with outstretched arms",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הַמִּטָּה פֹּה.",
+   "translit": "Ha-mitah poh.",
+   "en": "The bed is here.",
+   "img": "assets/books/book18/BOOK18_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p04.mp3",
+    "m": "audio/m/israeli/book/book18-p04.mp3"
+   },
+   "illustration": "a bed folded up against the wall",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הַמִּטְבָּח פֹּה.",
+   "translit": "Ha-mitbach poh.",
+   "en": "The kitchen is here.",
+   "img": "assets/books/book18/BOOK18_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p05.mp3",
+    "m": "audio/m/israeli/book/book18-p05.mp3"
+   },
+   "illustration": "a two-burner stove under a lofted bed",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַשֻּׁלְחָן? גַּם פֹּה.",
+   "translit": "Ha-shulchan? Gam poh.",
+   "en": "The table? Also here.",
+   "img": "assets/books/book18/BOOK18_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p06.mp3",
+    "m": "audio/m/israeli/book/book18-p06.mp3"
+   },
+   "illustration": "a table that folds down from the wall",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "יֵשׁ חַלּוֹן גָּדוֹל.",
+   "translit": "Yesh chalon gadol.",
+   "en": "There is a big window.",
+   "img": "assets/books/book18/BOOK18_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p07.mp3",
+    "m": "audio/m/israeli/book/book18-p07.mp3"
+   },
+   "illustration": "a tall window with the city spread out",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "יֵשׁ מִרְפֶּסֶת קְטַנָּה.",
+   "translit": "Yesh mirpeset ktanah.",
+   "en": "There is a small balcony.",
+   "img": "assets/books/book18/BOOK18_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p08.mp3",
+    "m": "audio/m/israeli/book/book18-p08.mp3"
+   },
+   "illustration": "a balcony just big enough for one chair and a basil plant",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "רוֹנִי שׁוֹתֶה קָפֶה בַּמִּרְפֶּסֶת.",
+   "translit": "Roni shoteh kafeh ba-mirpeset.",
+   "en": "Roni drinks coffee on the balcony.",
+   "img": "assets/books/book18/BOOK18_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p09.mp3",
+    "m": "audio/m/israeli/book/book18-p09.mp3"
+   },
+   "illustration": "the man with coffee, feet on the railing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הוּא רוֹאֶה אֶת הַיָּם.",
+   "translit": "Hu ro'eh et ha-yam.",
+   "en": "He sees the sea.",
+   "img": "assets/books/book18/BOOK18_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p10.mp3",
+    "m": "audio/m/israeli/book/book18-p10.mp3"
+   },
+   "illustration": "a sliver of blue between two buildings",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַדִּירָה קְטַנָּה.",
+   "translit": "Ha-dirah ktanah.",
+   "en": "The apartment is small.",
+   "img": "assets/books/book18/BOOK18_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p11.mp3",
+    "m": "audio/m/israeli/book/book18-p11.mp3"
+   },
+   "illustration": "the room again, tidy and bright",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הָעוֹלָם גָּדוֹל.",
+   "translit": "Ha-olam gadol.",
+   "en": "The world is big.",
+   "img": "assets/books/book18/BOOK18_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book18-p12.mp3",
+    "m": "audio/m/israeli/book/book18-p12.mp3"
+   },
+   "illustration": "the man on the balcony, the whole city and sea beyond",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

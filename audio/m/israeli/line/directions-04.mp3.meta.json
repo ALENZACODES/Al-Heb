@@ -1,0 +1,18 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "זֶה קָרוֹב",
+ "inputSha256": "8385948da2376e2fc09bd9e88e46f1874cc1cb773382984cd4882b9725fed41f",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "זֶה קָרוֹב",
+ "stitchedFrom": [
+  "audio/m/israeli/word/h67c6be75.mp3",
+  "audio/m/israeli/word/hc5d024c3.mp3"
+ ]
+}

@@ -1,0 +1,435 @@
+{
+ "schema": "alef-prayer-cards-1",
+ "status": "draft-not-clergy-reviewed",
+ "note": "Original short reflections written for Aleph (Lane 1, 2026-11-04) in the spirit of book/opening-prayer.txt. They are NOT reviewed by clergy, a rabbi or a native Hebrew speaker and are not liturgy. The Hebrew phrase in each card is a verbatim slice of a data/corpus/registry.json entry (referenced by registryId); registry statuses vary (tests/calendar.cards.test.js checks the slice is contained in the entry). Glosses are plain English renderings written for Aleph, not published translations. Card pools are 23 long so a given card does not repeat on the same weekday.",
+ "femaleVariants": {
+  "m01": {
+   "from": "מוֹדֶה",
+   "to": "מוֹדָה"
+  }
+ },
+ "morning": [
+  {
+   "id": "m01",
+   "slot": "morning",
+   "registryId": "modeh-ani-1",
+   "piece": "מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם",
+   "gloss": "I give thanks before You, living and enduring King.",
+   "text": "Before the list begins, one breath of thanks. You woke up, and that is where the day starts."
+  },
+  {
+   "id": "m02",
+   "slot": "morning",
+   "registryId": "mah-tovu-1",
+   "piece": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל",
+   "gloss": "How good are your tents, Jacob, your dwellings, Israel.",
+   "text": "Whatever room you walk into today, notice what is good about it before you notice what is missing."
+  },
+  {
+   "id": "m03",
+   "slot": "morning",
+   "registryId": "amidah-lips",
+   "piece": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ",
+   "gloss": "Eternal One, open my lips, and my mouth will declare Your praise.",
+   "text": "You will say some words today that matter. Begin them slowly."
+  },
+  {
+   "id": "m04",
+   "slot": "morning",
+   "registryId": "sim-shalom",
+   "piece": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ",
+   "gloss": "Grant peace, goodness, blessing, grace, kindness and compassion upon us.",
+   "text": "You cannot fix everything today. You can add a little peace to one conversation."
+  },
+  {
+   "id": "m05",
+   "slot": "morning",
+   "registryId": "amidah-elohai-netzor",
+   "piece": "אֱלֹהַי נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה",
+   "gloss": "My God, guard my tongue from evil and my lips from speaking deceit.",
+   "text": "Before you speak: is it true, is it kind, does it need saying? One honest pause is enough."
+  },
+  {
+   "id": "m06",
+   "slot": "morning",
+   "registryId": "amidah-yihyu",
+   "piece": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ",
+   "gloss": "May the words of my mouth and the meditation of my heart be acceptable before You.",
+   "text": "Let what you say and what you think today point in the same direction."
+  },
+  {
+   "id": "m07",
+   "slot": "morning",
+   "registryId": "ashrei-145-16",
+   "piece": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן",
+   "gloss": "You open Your hand and satisfy every living thing with favor.",
+   "text": "Enough is a real amount. Notice one thing today that is already enough."
+  },
+  {
+   "id": "m08",
+   "slot": "morning",
+   "registryId": "hashivenu",
+   "piece": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם",
+   "gloss": "Return us to You, Eternal One, and we shall return; renew our days as of old.",
+   "text": "Starting again is allowed, even in the middle of a week. Especially then."
+  },
+  {
+   "id": "m09",
+   "slot": "morning",
+   "registryId": "yehalelu",
+   "piece": "יְהַלְלוּ אֶת־שֵׁם יְהוָה כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ",
+   "gloss": "Let them praise the name of the Eternal One, for His name alone is exalted.",
+   "text": "Say one thing out loud today that you usually only think: thank you, I was wrong, I am glad you are here."
+  },
+  {
+   "id": "m10",
+   "slot": "morning",
+   "registryId": "bless-priestly-1",
+   "piece": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+   "gloss": "May the Eternal One bless you and keep you.",
+   "text": "Someone near you needs a blessing and has not asked. Give it quietly, in words or in an act."
+  },
+  {
+   "id": "m11",
+   "slot": "morning",
+   "registryId": "bless-priestly-2",
+   "piece": "יָאֵר יְהוָה פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ",
+   "gloss": "May the Eternal One make His face shine upon you and be gracious to you.",
+   "text": "A face that lights up when you arrive is a gift. Be that face for someone today."
+  },
+  {
+   "id": "m12",
+   "slot": "morning",
+   "registryId": "bless-priestly-3",
+   "piece": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם",
+   "gloss": "May the Eternal One lift up His face to you and give you peace.",
+   "text": "Peace is a practice, not a mood. Do one small thing toward it before noon."
+  },
+  {
+   "id": "m13",
+   "slot": "morning",
+   "registryId": "shema-1",
+   "piece": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ",
+   "gloss": "Hear, O Israel: the Eternal One is our God.",
+   "text": "Listen first. Finish hearing one person today before you begin your reply."
+  },
+  {
+   "id": "m14",
+   "slot": "morning",
+   "registryId": "torah-bless-1",
+   "piece": "בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה",
+   "gloss": "Blessed are You, Eternal One, who gives the Torah.",
+   "text": "Learning is a way of showing up. Ten minutes with these letters counts."
+  },
+  {
+   "id": "m15",
+   "slot": "morning",
+   "registryId": "gadlu",
+   "piece": "גַּדְּלוּ לַיהוָה אִתִּי וּנְרוֹמְמָה שְׁמוֹ יַחְדָּו",
+   "gloss": "Magnify the Eternal One with me, and let us exalt His name together.",
+   "text": "Praise and curiosity are stronger shared. Tell someone what you are learning today."
+  },
+  {
+   "id": "m16",
+   "slot": "morning",
+   "registryId": "num-12-13",
+   "piece": "אֵל נָא רְפָא נָא לָהּ",
+   "gloss": "God, please heal her, please.",
+   "text": "The shortest prayer in the Torah is five words (Numbers 12:13). Short is allowed. Is there someone to wish healing for, in five words or fewer?"
+  },
+  {
+   "id": "m17",
+   "slot": "morning",
+   "registryId": "ashrei-84-5",
+   "piece": "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ",
+   "gloss": "Happy are those who dwell in Your house; they will praise You always.",
+   "text": "Some places feel like home when you sit in them. Make one today, even a corner of a table."
+  },
+  {
+   "id": "m18",
+   "slot": "morning",
+   "registryId": "vahavta-1",
+   "piece": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ",
+   "gloss": "You shall love the Eternal One your God with all your heart and all your soul and all your might.",
+   "text": "Bring the whole of yourself to one thing today, not the split-screen version."
+  },
+  {
+   "id": "m19",
+   "slot": "morning",
+   "registryId": "mi-chamocha-1",
+   "piece": "מִי־כָמֹכָה בָּאֵלִם יְהוָה",
+   "gloss": "Who is like You among the mighty, Eternal One?",
+   "text": "Wonder is allowed before breakfast. Look at one ordinary thing as if for the first time."
+  },
+  {
+   "id": "m20",
+   "slot": "morning",
+   "registryId": "kedushah-baruch",
+   "piece": "בָּרוּךְ כְּבוֹד־יְהוָה מִמְּקוֹמוֹ",
+   "gloss": "Blessed be the glory of the Eternal One from its place.",
+   "text": "Meaning is not always where you expect it. Stay alert for it in the commute, the kitchen, the inbox."
+  },
+  {
+   "id": "m21",
+   "slot": "morning",
+   "registryId": "oseh-shalom",
+   "piece": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ",
+   "gloss": "May the One who makes peace in the heights make peace for us.",
+   "text": "Make room for someone who sees it differently. You can disagree and still make peace."
+  },
+  {
+   "id": "m22",
+   "slot": "morning",
+   "registryId": "adonai-oz",
+   "piece": "יְהוָה עֹז לְעַמּוֹ יִתֵּן",
+   "gloss": "The Eternal One gives strength to His people.",
+   "text": "Strength shared is strength doubled. Borrow a little from someone today, and lend a little back."
+  },
+  {
+   "id": "m23",
+   "slot": "morning",
+   "registryId": "zimun-opening",
+   "piece": "רַבּוֹתַי נְבָרֵךְ",
+   "gloss": "Friends, let us bless.",
+   "text": "Before you eat today, take one breath of thanks. Then eat."
+  }
+ ],
+ "evening": [
+  {
+   "id": "e01",
+   "slot": "evening",
+   "registryId": "shema-1",
+   "piece": "שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ",
+   "gloss": "Hear, O Israel: the Eternal One is our God.",
+   "text": "The day is done. What is unfinished can wait. Listen once more, then rest."
+  },
+  {
+   "id": "e02",
+   "slot": "evening",
+   "registryId": "shema-2",
+   "piece": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+   "gloss": "Blessed be the name of His glorious kingdom forever and ever.",
+   "text": "Not everything needs a verdict tonight. Let the day be what it was."
+  },
+  {
+   "id": "e03",
+   "slot": "evening",
+   "registryId": "adon-olam-1",
+   "piece": "וְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא",
+   "gloss": "And with my spirit, my body: the Eternal One is with me, I will not fear.",
+   "text": "Fear is loudest at night. Name one worry, put it down, and let it wait until morning."
+  },
+  {
+   "id": "e04",
+   "slot": "evening",
+   "registryId": "adon-olam-1",
+   "piece": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה",
+   "gloss": "Into His hand I entrust my spirit when I sleep and when I wake.",
+   "text": "Hand the day back. You are allowed to sleep without having solved it."
+  },
+  {
+   "id": "e05",
+   "slot": "evening",
+   "registryId": "oseh-shalom",
+   "piece": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ",
+   "gloss": "May the One who makes peace in the heights make peace for us.",
+   "text": "Name one tension from today. Wish it peace, even if you cannot resolve it."
+  },
+  {
+   "id": "e06",
+   "slot": "evening",
+   "registryId": "sim-shalom",
+   "piece": "שִׂים שָׁלוֹם טוֹבָה וּבְרָכָה חֵן וָחֶסֶד וְרַחֲמִים עָלֵינוּ",
+   "gloss": "Grant peace, goodness, blessing, grace, kindness and compassion upon us.",
+   "text": "Which small kindness did you receive today? Say thank you to it, silently or aloud."
+  },
+  {
+   "id": "e07",
+   "slot": "evening",
+   "registryId": "hashivenu",
+   "piece": "הֲשִׁיבֵנוּ יְהוָה אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם",
+   "gloss": "Return us to You, Eternal One, and we shall return; renew our days as of old.",
+   "text": "Where did you drift today? Notice it without scolding yourself. Tomorrow is another chance to come back."
+  },
+  {
+   "id": "e08",
+   "slot": "evening",
+   "registryId": "amidah-yihyu",
+   "piece": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ",
+   "gloss": "May the words of my mouth and the meditation of my heart be acceptable before You.",
+   "text": "Look back over your words today. Keep the ones you would say again, and quietly drop the rest."
+  },
+  {
+   "id": "e09",
+   "slot": "evening",
+   "registryId": "amidah-elohai-netzor",
+   "piece": "אֱלֹהַי נְצוֹר לְשׁוֹנִי מֵרָע וּשְׂפָתַי מִדַּבֵּר מִרְמָה",
+   "gloss": "My God, guard my tongue from evil and my lips from speaking deceit.",
+   "text": "If you spoke too sharply today, decide on the one sentence of repair you will offer tomorrow."
+  },
+  {
+   "id": "e10",
+   "slot": "evening",
+   "registryId": "bless-priestly-3",
+   "piece": "יִשָּׂא יְהוָה פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם",
+   "gloss": "May the Eternal One lift up His face to you and give you peace.",
+   "text": "Bless the people in your home, or in your thoughts, tonight, by name."
+  },
+  {
+   "id": "e11",
+   "slot": "evening",
+   "registryId": "amidah-lips",
+   "piece": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ",
+   "gloss": "Eternal One, open my lips, and my mouth will declare Your praise.",
+   "text": "What did you learn today, even if it was small? Say it in one sentence."
+  },
+  {
+   "id": "e12",
+   "slot": "evening",
+   "registryId": "ashrei-145-16",
+   "piece": "פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן",
+   "gloss": "You open Your hand and satisfy every living thing with favor.",
+   "text": "List three things that were enough today."
+  },
+  {
+   "id": "e13",
+   "slot": "evening",
+   "registryId": "torah-barchu",
+   "piece": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ",
+   "gloss": "Bless the Eternal One, who is blessed.",
+   "text": "Someone answered you today, in words or in a look. Remember who."
+  },
+  {
+   "id": "e14",
+   "slot": "evening",
+   "registryId": "mah-tovu-1",
+   "piece": "מַה־טֹּבוּ אֹהָלֶיךָ יַעֲקֹב מִשְׁכְּנֹתֶיךָ יִשְׂרָאֵל",
+   "gloss": "How good are your tents, Jacob, your dwellings, Israel.",
+   "text": "Where did you feel at home today? Go back there in your mind for a moment."
+  },
+  {
+   "id": "e15",
+   "slot": "evening",
+   "registryId": "vahavta-1",
+   "piece": "וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל־לְבָבְךָ וּבְכָל־נַפְשְׁךָ וּבְכָל־מְאֹדֶךָ",
+   "gloss": "You shall love the Eternal One your God with all your heart and all your soul and all your might.",
+   "text": "Choose one line from today that you want to remember, and say it once before you sleep."
+  },
+  {
+   "id": "e16",
+   "slot": "evening",
+   "registryId": "adon-olam-1",
+   "piece": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא",
+   "gloss": "Lord of the world, who reigned before any being was created.",
+   "text": "Before all of this there was quiet. Sit in a little of it before you sleep."
+  },
+  {
+   "id": "e17",
+   "slot": "evening",
+   "registryId": "yehalelu",
+   "piece": "יְהַלְלוּ אֶת־שֵׁם יְהוָה כִּי־נִשְׂגָּב שְׁמוֹ לְבַדּוֹ",
+   "gloss": "Let them praise the name of the Eternal One, for His name alone is exalted.",
+   "text": "Close with praise for something small: a meal, a message, a bus that came on time."
+  },
+  {
+   "id": "e18",
+   "slot": "evening",
+   "registryId": "mi-chamocha-1",
+   "piece": "מִי־כָמֹכָה בָּאֵלִם יְהוָה",
+   "gloss": "Who is like You among the mighty, Eternal One?",
+   "text": "Honest wonder tonight: what surprised you today?"
+  },
+  {
+   "id": "e19",
+   "slot": "evening",
+   "registryId": "adonai-oz",
+   "piece": "יְהוָה עֹז לְעַמּוֹ יִתֵּן",
+   "gloss": "The Eternal One gives strength to His people.",
+   "text": "Strength for tomorrow comes from rest. Let the lights go off."
+  },
+  {
+   "id": "e20",
+   "slot": "evening",
+   "registryId": "bless-priestly-1",
+   "piece": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ",
+   "gloss": "May the Eternal One bless you and keep you.",
+   "text": "Say a quiet blessing for yourself. You did your best with what you had."
+  },
+  {
+   "id": "e21",
+   "slot": "evening",
+   "registryId": "num-12-13",
+   "piece": "אֵל נָא רְפָא נָא לָהּ",
+   "gloss": "God, please heal her, please.",
+   "text": "Is someone you know unwell or struggling? Five words for them tonight, or fewer."
+  },
+  {
+   "id": "e22",
+   "slot": "evening",
+   "registryId": "kedushah-yimloch",
+   "piece": "יִמְלֹךְ יְהוָה לְעוֹלָם אֱלֹהַיִךְ צִיּוֹן לְדֹר וָדֹר",
+   "gloss": "The Eternal One will reign forever, your God, Zion, from generation to generation.",
+   "text": "Some things last longer than any one day's worries. Let that be enough for tonight."
+  },
+  {
+   "id": "e23",
+   "slot": "evening",
+   "registryId": "ein-kamocha",
+   "piece": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי",
+   "gloss": "There is none like You among the gods, Eternal One.",
+   "text": "Gratitude for uniqueness: one person or thing today that nothing else could replace."
+  }
+ ],
+ "fridayEvening": [
+  {
+   "id": "f01",
+   "slot": "fridayEvening",
+   "registryId": "candle-shabbat",
+   "piece": "לְהַדְלִיק נֵר שֶׁל שַׁבָּת",
+   "gloss": "...to kindle the Shabbat light.",
+   "text": "The week stops being a to-do list. Light the candles, or simply pause, and let the room change."
+  },
+  {
+   "id": "f02",
+   "slot": "fridayEvening",
+   "registryId": "lecha-dodi-1",
+   "piece": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה",
+   "gloss": "Come, my beloved, to meet the bride; let us welcome Shabbat.",
+   "text": "Welcome Shabbat the way you would welcome a friend you have been waiting for."
+  },
+  {
+   "id": "f03",
+   "slot": "fridayEvening",
+   "registryId": "kiddush-veshamru",
+   "piece": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת",
+   "gloss": "The children of Israel shall keep the Sabbath.",
+   "text": "Shabbat is kept, not just reached. Decide what you will set down until it ends."
+  },
+  {
+   "id": "f04",
+   "slot": "fridayEvening",
+   "registryId": "kiddush-zachor",
+   "piece": "זָכוֹר אֶת־יוֹם הַשַׁבָּת לְקַדְּשׁוֹ",
+   "gloss": "Remember the Sabbath day and keep it holy.",
+   "text": "Remember, then rest. Six days of making, one of being."
+  }
+ ],
+ "saturdayEvening": [
+  {
+   "id": "s01",
+   "slot": "saturdayEvening",
+   "registryId": "havdalah-opening",
+   "piece": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד",
+   "gloss": "Behold, God is my salvation; I will trust and not be afraid.",
+   "text": "As Shabbat ends, choose one thing from the rest to carry into the week."
+  },
+  {
+   "id": "s02",
+   "slot": "saturdayEvening",
+   "registryId": "havdalah-hamavdil",
+   "piece": "הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל וּבֵין אוֹר לְחֹשֶׁךְ",
+   "gloss": "...who separates between holy and ordinary, between light and darkness.",
+   "text": "A difference between rest and work is worth protecting. What will you protect this week?"
+  }
+ ]
+}

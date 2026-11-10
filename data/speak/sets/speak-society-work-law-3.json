@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-society-work-law-3",
+ "title": "Work, money and society 3",
+ "theme": "society-work-law",
+ "level": "A2",
+ "track": "israel",
+ "pack": "society-work-law-3",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h0fde2ff0",
+   "he": "צָבָא",
+   "translit": "tzava",
+   "en": "a military (armed forces)",
+   "kind": "word",
+   "audioId": "i-18-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h386e6ad7",
+   "he": "קְרָב",
+   "translit": "kerav",
+   "en": "battle, war",
+   "kind": "word",
+   "audioId": "h386e6ad7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h524e52f1",
+   "he": "מַצָּב",
+   "translit": "matzav",
+   "en": "a shape, a situation, a state",
+   "kind": "word",
+   "audioId": "h524e52f1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h35fcbc75",
+   "he": "נִצֵּחַ",
+   "translit": "nitzeach",
+   "en": "to win (in a game, an election, or the like)",
+   "kind": "word",
+   "audioId": "h35fcbc75",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha4595016",
+   "he": "שׁוֹטֵר",
+   "translit": "shoter",
+   "en": "policeman, cop",
+   "kind": "word",
+   "audioId": "ha4595016",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h378062a7",
+   "he": "תִּיק",
+   "translit": "tik",
+   "en": "bag, satchel",
+   "kind": "word",
+   "audioId": "h378062a7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "haba8301e",
+   "he": "עֵסֶק",
+   "translit": "esek",
+   "en": "business, enterprise",
+   "kind": "word",
+   "audioId": "haba8301e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hef7b6946",
+   "he": "מִשְׁטָרָה",
+   "translit": "mishtarah",
+   "en": "police",
+   "kind": "word",
+   "audioId": "i-46-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he54faf96",
+   "he": "שָׁלַט",
+   "translit": "shalat",
+   "en": "to rule",
+   "kind": "word",
+   "audioId": "he54faf96",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hde9b27c8",
+   "he": "חֻקָּה",
+   "translit": "chukah",
+   "en": "statute, law",
+   "kind": "word",
+   "audioId": "hde9b27c8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9d86827d",
+   "he": "צִוֵּת",
+   "translit": "tzivet",
+   "en": "to staff",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h8877d6a8",
+   "he": "תַּפְקִיד",
+   "translit": "tafkid",
+   "en": "function, role, job",
+   "kind": "word",
+   "audioId": "h8877d6a8",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

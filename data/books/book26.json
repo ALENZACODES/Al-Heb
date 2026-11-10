@@ -1,0 +1,177 @@
+{
+ "id": "book26",
+ "titleHe": "הַשָּׁכֵן שֶׁלִּי",
+ "titleTranslit": "Ha-Shachen Sheli",
+ "titleEn": "My Neighbour",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יֵשׁ לִי שָׁכֵן חָדָשׁ.",
+   "translit": "Yesh li shachen chadash.",
+   "en": "I have a new neighbour.",
+   "img": "assets/books/book26/BOOK26_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p01.mp3",
+    "m": "audio/m/israeli/book/book26-p01.mp3"
+   },
+   "illustration": "moving boxes outside the apartment next door",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "אֲנִי לֹא מַכִּיר אוֹתוֹ.",
+   "translit": "Ani lo makir oto.",
+   "en": "I don't know him.",
+   "img": "assets/books/book26/BOOK26_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p02.mp3",
+    "m": "audio/m/israeli/book/book26-p02.mp3"
+   },
+   "illustration": "the narrator peeking through a door crack",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הוּא שׁוֹמֵעַ מוּסִיקָה.",
+   "translit": "Hu shome'a musikah.",
+   "en": "He listens to music.",
+   "img": "assets/books/book26/BOOK26_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p03.mp3",
+    "m": "audio/m/israeli/book/book26-p03.mp3"
+   },
+   "illustration": "music notes drifting through a wall",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "מוּסִיקָה חֲזָקָה.",
+   "translit": "Musikah chazakah.",
+   "en": "Loud music.",
+   "img": "assets/books/book26/BOOK26_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p04.mp3",
+    "m": "audio/m/israeli/book/book26-p04.mp3"
+   },
+   "illustration": "a picture frame rattling",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "בַּלַּיְלָה.",
+   "translit": "Ba-lailah.",
+   "en": "At night.",
+   "img": "assets/books/book26/BOOK26_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p05.mp3",
+    "m": "audio/m/israeli/book/book26-p05.mp3"
+   },
+   "illustration": "the narrator in bed with a pillow over his head, 1 a.m.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "אֲנִי כּוֹעֵס.",
+   "translit": "Ani ko'es.",
+   "en": "I am angry.",
+   "img": "assets/books/book26/BOOK26_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p06.mp3",
+    "m": "audio/m/israeli/book/book26-p06.mp3"
+   },
+   "illustration": "the narrator stomping to the door",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "אֲנִי דּוֹפֵק בַּדֶּלֶת.",
+   "translit": "Ani dofek ba-delet.",
+   "en": "I knock on the door.",
+   "img": "assets/books/book26/BOOK26_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p07.mp3",
+    "m": "audio/m/israeli/book/book26-p07.mp3"
+   },
+   "illustration": "a fist on the neighbour's door",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַשָּׁכֵן פּוֹתֵחַ.",
+   "translit": "Ha-shachen pote'ach.",
+   "en": "The neighbour opens.",
+   "img": "assets/books/book26/BOOK26_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p08.mp3",
+    "m": "audio/m/israeli/book/book26-p08.mp3"
+   },
+   "illustration": "a young man in an apron, flour on his face",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"סְלִיחָה! אֲנִי אוֹפֶה.\"",
+   "translit": "\"Slichah! Ani ofeh.\"",
+   "en": "\"Sorry! I'm baking.\"",
+   "img": "assets/books/book26/BOOK26_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p09.mp3",
+    "m": "audio/m/israeli/book/book26-p09.mp3"
+   },
+   "illustration": "a kitchen behind him full of trays of bread",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"בַּלַּיְלָה?\"",
+   "translit": "\"Ba-lailah?\"",
+   "en": "\"At night?\"",
+   "img": "assets/books/book26/BOOK26_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p10.mp3",
+    "m": "audio/m/israeli/book/book26-p10.mp3"
+   },
+   "illustration": "the narrator confused",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"אֲנִי אוֹפֶה. זֹאת הָעֲבוֹדָה שֶׁלִּי.\"",
+   "translit": "\"Ani ofeh. Zot ha-avodah sheli.\"",
+   "en": "\"I'm a baker. It's my job.\"",
+   "img": "assets/books/book26/BOOK26_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p11.mp3",
+    "m": "audio/m/israeli/book/book26-p11.mp3"
+   },
+   "illustration": "the baker shrugging, holding out a warm roll",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "עַכְשָׁו יֵשׁ לִי לֶחֶם כָּל בֹּקֶר.",
+   "translit": "Achshav yesh li lechem kol boker.",
+   "en": "Now I have bread every morning.",
+   "img": "assets/books/book26/BOOK26_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book26-p12.mp3",
+    "m": "audio/m/israeli/book/book26-p12.mp3"
+   },
+   "illustration": "a paper bag of bread hanging on the narrator's door handle",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

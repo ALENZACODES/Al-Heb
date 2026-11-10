@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "proofread": false,
+  "reviewNote": "DRAFT, unreviewed by any Hebrew teacher and not yet tried by a learner. Every Hebrew string is copied from an existing data file named in `source`; nothing here is new Hebrew. The minutes are a design budget, not a measurement.",
+  "goal": "Five short steps, one screen each: one letter, a second letter, one vowel sign, one syllable, one real word. The on-ramp is lesson r01 taken one piece at a time; finishing it completes r01.",
+  "lesson": "r01",
+  "winsTotal": 5,
+  "steps": [
+    {
+      "id": "shin", "kind": "letter", "minutes": 2, "letter": "shin",
+      "title": "Your First Letter: Shin",
+      "action": "Tap Hear it. Then tap Trace it and draw it once with your finger.",
+      "win": "Win 1 of 5: you practised Shin.",
+      "why": "mnemonic",
+      "source": "data/letters/letters.json (shin), data/letters/mnemonics.json (shin)",
+      "check": { "max": 2, "from": "lesson", "cardId": "letter:shin" }
+    },
+    {
+      "id": "bet", "kind": "letter", "minutes": 2, "letter": "bet",
+      "title": "Your second letter: Bet",
+      "action": "Tap Hear it. Then trace it once.",
+      "win": "Win 2 of 5: two letters.",
+      "why": "mnemonic",
+      "source": "data/letters/letters.json (bet), data/letters/mnemonics.json (bet)",
+      "check": { "max": 2, "from": "lesson", "cardId": "letter:bet" }
+    },
+    {
+      "id": "kamatz", "kind": "vowel", "minutes": 2, "vowel": "kamatz", "he": "בָ",
+      "title": "Your first vowel mark: the small T",
+      "action": "Look under the letter. The small T-shaped mark is a vowel mark. Tap Hear it.",
+      "win": "Win 3 of 5: your first vowel mark.",
+      "why": "vowel",
+      "source": "data/pronunciation/niqqud.json (kamatz.shape = base letter bet with the sign); the sound line comes from the same record in your tradition",
+      "check": { "max": 1, "from": "pick", "prompt": "Which one has the vowel mark under it?", "options": [{ "he": "בָ", "right": true }, { "he": "ב" }], "sources": "niqqud.json kamatz.shape; letters.json bet.he" }
+    },
+    {
+      "id": "sha", "kind": "syllable", "minutes": 2, "he": "שָׁ", "parts": ["shin", "kamatz"],
+      "title": "Your first syllable",
+      "action": "Letter first, then the vowel mark under it. Shin plus the small T. Say it aloud, then tap Hear it.",
+      "win": "Win 4 of 5: you practised a syllable.",
+      "why": "syllable",
+      "source": "data/pronunciation/derived/_syllables-001.json (first syllable of שָׁנָה and שָׁמַע)",
+      "check": { "max": 1, "from": "pick", "prompt": "Which one is Shin with its vowel mark?", "options": [{ "he": "שָׁ", "right": true }, { "he": "בָ" }], "sources": "derived syllables; niqqud.json kamatz.shape" }
+    },
+    {
+      "id": "shav", "kind": "word", "minutes": 2, "he": "שָׁב", "en": "he returned", "lessonWord": 1,
+      "title": "Your first word",
+      "action": "Shin with its vowel mark, then Bet with no dot inside. Say it aloud, then tap Hear it.",
+      "win": "Win 5 of 5: you practised a real Hebrew word.",
+      "why": "word",
+      "source": "data/curriculum/lessons.json r01.words[0]; respelling from data/vocab/words.json h842147e5 (translit shav) via the transliteration engine for your tradition",
+      "check": { "max": 1, "from": "lesson", "cardId": "word:r01:1" }
+    }
+  ],
+  "done": {
+    "title": "Five wins. You read your first Hebrew word.",
+    "body": "שָׁב (shav) means \"returned\". You just read a real Hebrew word, with its vowel marks. The next lesson adds one more letter and the dot inside Bet, so you can read שַׁבָּת (Shabbat).",
+    "tomorrow": "Come back tomorrow for your next letter. A few minutes a day is all it takes.",
+    "preview": "Optional preview: read שָׁלוֹם today (about 10 minutes). Lesson 3 teaches these letters properly; this is a head start, not a shortcut."
+  }
+}

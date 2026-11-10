@@ -1,0 +1,270 @@
+// @ts-check
+// Offline readiness (shell). Everything here is DOM-free and takes its environment as arguments (fetch, caches, navigator,
+// localStorage) so it runs in Node tests. See docs/offline/README in docs/offline/SW-PROPOSALS.md for what sw.js does and does not do.
+//
+// WHAT "READY" MEANS HERE: every file of a feature group is present in a Cache Storage cache of this origin ("alef-shell-<version>"
+// from the install-time precache, or "alef-runtime-v1" from runtime caching). It does NOT prove the feature works offline end to end:
+// no browser has been run in airplane mode for this module. Audio clips are not part of any group (no recorded teacher; the few synthetic word clips are fetched when played and not tested offline).
+import { requestPersistence, storageStatus } from "./backup.js";
+import { MUSIC_BASE, MUSIC_TRACKS, ORIGINAL_MUSIC_TRACKS, ORIGINAL_SONG_TRACKS, playableFile } from "../listen/catalog.js";
+
+export const PRECACHE_URL = "precache-manifest.js";
+/** Approximate Web Storage limit in UTF-16 code units per origin: browsers differ (about 5 million characters in Chromium and Firefox, about 5 MB in Safari); used only for a warning. */
+export const LOCAL_LIMIT_CHARS = 5_000_000;
+export const WARN_RATIO = 0.7, CRITICAL_RATIO = 0.9;
+
+// ---------- feature groups (by path prefix of precached files) ----------
+/** First match wins. `route` is where a learner finds it; `needs` lists optional downloads that feature also wants. */
+export const GROUPS = Object.freeze([
+  { id: "calendar", label: "Calendar and reminders", test: /^(src\/curriculum\/(calendar|reminders)[^/]*|data\/calendar\/.*)$/, route: "#/calendar" },
+  { id: "lessons", label: "Lessons, review and Israel dialogues", test: /^(src\/curriculum\/|data\/curriculum\/|data\/speak\/|src\/israel\/|data\/israel\/|src\/firstday\/|data\/firstday\/|src\/placement\/|data\/placement\/|src\/speak\/|src\/listen\/|data\/listen\/|src\/typing\/|data\/typing\/|src\/trope\/|data\/trope-trainer\/|src\/home\/)/, route: "#/learn" },
+  { id: "letters", label: "Letters and tracing", test: /^(src\/letters\/|data\/letters\/|assets\/letters\/|src\/wordtrace\/|data\/wordtrace\/)/, route: "#/letters" },
+  { id: "pronunciation", label: "Sounds and pronunciation", test: /^(src\/pronunciation\/|data\/pronunciation\/)/, route: "#/sounds" },
+  { id: "reading", label: "Reading, Torah and prayer", test: /^(src\/corpus\/|data\/corpus\/|src\/torahread\/|data\/torahread\/|src\/torahreader\/|src\/festivals\/|data\/festivals\/|src\/grammar\/|data\/grammar\/|src\/service\/|src\/morning\/|data\/morning-verses\.json|data\/torah-quotes\.json|data\/service\/|src\/timedread\/|data\/timedread\/)/, route: "#/read" },
+  { id: "vocab", label: "Vocabulary and Word Sprint", test: /^(src\/vocab\/|data\/vocab\/|src\/sprint\/|data\/sprint\/)/, route: "#/vocab", needs: ["vocab-packs"] },
+  { id: "photo", label: "Scan a photo", test: /^(src\/photo\/|data\/photo\/)/, route: "#/scan", needs: ["ocr"] },
+  { id: "progress", label: "Progress, class track and sharing", test: /^(src\/progress\/|data\/progress\/|src\/awards\/|src\/classtrack\/|data\/classtrack\/|src\/teacher\/|src\/traditions\/|data\/traditions\/)/, route: "#/progress" },
+  { id: "practice", label: "Vowel points, roots, gender, record-and-compare, review-spacing preview, known-word checker, syllabus and time budget", test: /^(src\/(nikkudfade|roots|genderdrill|recordcompare|hebrewtext|fsrs|knownwords|coursemap)\/)/, route: "#/nikkud-fade" },
+  { id: "phrases", label: "Common phrases and sentences", test: /^(src\/phrases\/|data\/phrases\/)/, route: "#/phrases" },
+  { id: "games", label: "Hebrew games", test: /^src\/games\//, route: "#/learn" },
+  { id: "books", label: "Little Books (read-aloud stories)", test: /^(src\/books\/|data\/books\/)/, route: "#/books" },
+  { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/motion\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
+]);
+export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
+
+/** Optional downloads that are NOT in the install-time precache (see tools/build-precache.mjs SKIP). Names verified on disk by tests/offline.test.js. */
+export function optionalGroups(tradition = "sephardi") {
+  const t = ["israeli", "sephardi", "ashkenazi"].includes(tradition) ? tradition : "sephardi";
+  return [
+    { id: "audio-shard", label: `Word audio list (${t})`, urls: [`data/audio/manifest-words-${t}.json`], approxMB: 0.9 },
+    { id: "vocab-packs", label: "Vocabulary lists (5,000 words)", urls: [500, 1000, 2000, 5000].map((n) => `data/vocab/packs/vocab5k-tier-${n}.json`), approxMB: 0.95 },
+    // Music is optional, so it is never part of "ready": these let a learner take it offline on purpose (sw.js keeps it in alef-music-v1).
+    { id: "music-beds", label: "Game music (optional)", urls: [...MUSIC_TRACKS, ...ORIGINAL_MUSIC_TRACKS].map((m) => MUSIC_BASE + playableFile(m.file)), approxMB: 27.4 },
+    { id: "songs", label: "Songs (optional)", urls: ORIGINAL_SONG_TRACKS.map((m) => MUSIC_BASE + m.file), approxMB: 8.3 },
+    { id: "ocr", label: "Photo reader (text recognition)", urls: ["assets/vendor/_tesseract/tesseract.esm.min.js", "assets/vendor/_tesseract/worker.min.js", "assets/vendor/_tesseract/tesseract-core-simd-lstm.wasm.js", "assets/vendor/_tesseract/heb.traineddata"], approxMB: 5.0 },
+  ];
+}
+
+/**
+ * Files that tools/build-precache.mjs lists as ALEF_ON_DEMAND: NOT installed with the app (first install is small, v0 pages only),
+ * fetched when a learner first opens the page that needs them or all at once by "Download everything". Same shape as optionalGroups()
+ * so the Use-Aleph-offline card can list them; `approxMB` is measured from the repo on 2026-11-04 and only a hint.
+ * First match wins; anything unmatched lands in "More pages and data".
+ */
+export const ON_DEMAND_GROUPS = Object.freeze([
+  { id: "od-practice", label: "Vowel-point, root, gender, known-word and record-and-compare practice data", test: /^data\/(nikkudfade|roots|gender|knownwords)\//, approxMB: 1.2 },
+  { id: "od-vocab", label: "Vocabulary data and theme packs", test: /^data\/vocab\//, approxMB: 5.9 },
+  { id: "od-audio-index", label: "Audio clip list (core)", test: /^data\/audio\//, approxMB: 2.6 },
+  { id: "od-pronunciation", label: "Sounds and pronunciation data", test: /^data\/pronunciation\//, approxMB: 0.8 },
+  { id: "od-speak", label: "Speaking, Israel dialogues, listening, typing, word tracing", test: /^(data\/(speak|israel|listen|typing|wordtrace)\/|src\/(wordtrace|typing)\/)/, approxMB: 0.5 },
+  { id: "od-reading", label: "Reading, festivals, calendar, grammar and pronunciation-style data", test: /^data\/((corpus|torahread|festivals|calendar|grammar|traditions|trope-trainer)\/|torah-quotes\.json$)/, approxMB: 0.5 },
+  { id: "od-intermediate", label: "Intermediate lessons and class track", test: /^data\/curriculum\//, approxMB: 0.6 },
+  { id: "od-letter-pictures", label: "Letter memory pictures (the rest of the alphabet)", test: /^assets\/letters\/morph\//, approxMB: 0.09 },
+  { id: "od-screens", label: "Install-prompt screenshots", test: /^assets\/screen(s|shots)\//, approxMB: 0.5 },
+  { id: "od-pictures", label: "Book, story and speaking-practice pictures", test: /^assets\/(game-art|letter-cartoons|books|speak-hold|speak-candidates)\//, approxMB: 123.45 },
+  { id: "od-games", label: "Games (preview-game code, word data and arcade art)", test: /^(src\/games\/|data\/games\/|assets\/games\/)/, approxMB: 1.4 },
+  { id: "od-books", label: "Little books (code and book texts)", test: /^(src\/books|data\/books)\//, approxMB: 0.04 },
+  { id: "od-synagogues", label: "Reform Synagogues in Canada", test: /^(src\/synagogues|data\/synagogues|assets\/synagogues)\//, approxMB: 14 },
+  { id: "od-library", label: "Library articles", test: /^(src\/library|data\/library)\//, approxMB: 0.07 },
+  { id: "od-videos", label: "Letter videos", test: /^(assets\/videos|data\/videos)\//, approxMB: 2 },
+  { id: "od-lab", label: "Brain Lab", test: /^(src\/lab|data\/lab)\//, approxMB: 0.06 },
+  { id: "od-service", label: "Follow the Service", test: /^src\/service\//, approxMB: 0.1 },
+  { id: "od-awards", label: "Awards gallery and certificate", test: /^src\/awards\/(?:gallery\.view|proof-font|certificate|icons)\.js$/, approxMB: 0.11 },
+  { id: "od-torahreader", label: "Torah reader page and its Hebrew recording index", test: /^src\/(torahreader\/torahreader\.view|shell\/torah-he-index)\.js$/, approxMB: 0.05 },
+  { id: "od-preview-pages", label: "Class track and pronunciation comparison (preview-route code)", test: /^src\/(classtrack\/classtrack|pronunciation\/compare)\.view\.js$/, approxMB: 0.03 },
+  { id: "od-images", label: "Picture approvals and word cues", test: /^data\/images\//, approxMB: 0.20 },
+  { id: "od-letters", label: "Letter art concepts and keyboard layout", test: /^data\/letters\//, approxMB: 0.08 },
+  { id: "od-home", label: "Home prayers and morning verses", test: /^(data\/homepage\/|data\/morning-verses\.json)/, approxMB: 0.09 },
+  { id: "od-firstday", label: "First-day minute-one data and the word builder list", test: /^data\/firstday\//, approxMB: 0.17 },
+  { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
+  { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
+  { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
+  { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
+  { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
+  { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },
+]);
+/** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
+export function onDemandGroups(onDemand = []) {
+  const by = new Map(); const rest = [];
+  for (const u of onDemand) { const g = ON_DEMAND_GROUPS.find((x) => x.test.test(u)); if (!g) rest.push(u); else by.set(g.id, [...(by.get(g.id) || []), u]); }
+  const out = ON_DEMAND_GROUPS.filter((g) => by.has(g.id)).map((g) => ({ id: g.id, label: g.label, urls: by.get(g.id), approxMB: g.approxMB }));
+  if (rest.length) out.push({ id: "od-other", label: "More pages and data", urls: rest, approxMB: 0.1 });
+  return out;
+}
+
+// ---------- the precache list, read from the page ----------
+/**
+ * Parse tools/build-precache.mjs output WITHOUT eval (the site CSP has no unsafe-eval): version string and the JSON array.
+ * `onDemand` is ALEF_ON_DEMAND (files that are not installed up front; empty for older manifests).
+ * @returns {{version:string|null, files:string[], onDemand:string[]}}
+ */
+export function parsePrecacheText(text) {
+  const v = /self\.ALEF_VERSION\s*=\s*("(?:[^"\\]|\\.)*")/.exec(text);
+  const a = /self\.ALEF_PRECACHE\s*=\s*(\[[\s\S]*?\])\s*;/.exec(text);
+  let files = [];
+  try { if (a) { const j = JSON.parse(a[1]); if (Array.isArray(j)) files = j.filter((x) => typeof x === "string"); } } catch { /* leave empty */ }
+  let version = null; try { if (v) version = JSON.parse(v[1]); } catch { /* ignore */ }
+  let onDemand = [];
+  try { const o = /self\.ALEF_ON_DEMAND\s*=\s*(\[[\s\S]*?\])\s*;/.exec(text); if (o) { const j = JSON.parse(o[1]); if (Array.isArray(j)) onDemand = j.filter((x) => typeof x === "string"); } } catch { /* leave empty */ }
+  return { version, files, onDemand };
+}
+/** Fetch and parse precache-manifest.js (served by the worker/cache, so it works offline once installed). Throws on HTTP failure. */
+export async function loadPrecacheList(fetchFn = globalThis.fetch?.bind(globalThis), url = PRECACHE_URL) {
+  if (!fetchFn) throw new Error("fetch is not available");
+  const res = await fetchFn(url);
+  if (!res.ok) throw new Error(`could not read ${url}: HTTP ${res.status}`);
+  return parsePrecacheText(await res.text());
+}
+
+// ---------- what is in the caches ----------
+/**
+ * Compare a file list with Cache Storage. Never throws (no Cache API => everything "missing", supported:false).
+ * @param {string[]} files
+ * @param {{caches?:any, measure?:boolean, concurrency?:number}} [opt]
+ * @returns {Promise<{supported:boolean, cacheNames:string[], total:number, cached:number, missing:string[], bytes:number|null, groups:{id:string,label:string,route?:string,total:number,cached:number,bytes:number|null,state:"ready"|"partial"|"missing",needs?:string[]}[]}>}
+ */
+export async function cacheReport(files, opt = {}) {
+  const C = opt.caches ?? globalThis.caches;
+  const measure = opt.measure !== false;
+  const empty = (supported) => ({ supported, cacheNames: [], total: files.length, cached: 0, missing: [...files], bytes: null, groups: buildGroups(files, new Map(), measure) });
+  if (!C || typeof C.keys !== "function") return empty(false);
+  let names = [];
+  const opened = [];
+  try {
+    names = (await C.keys()).filter((k) => /^alef-/.test(k));
+    for (const n of names) opened.push(await C.open(n));
+  } catch { return empty(true); }
+  const hit = new Map(); // path -> size|null
+  const queue = [...files];
+  const worker = async () => {
+    while (queue.length) {
+      const f = queue.shift();
+      for (const c of opened) {
+        let res = null;
+        try { res = await c.match(f); } catch { res = null; }
+        if (!res) continue;
+        let size = null;
+        if (measure) { try { size = (await res.clone().blob()).size; } catch { const cl = Number(res.headers?.get?.("content-length")); size = Number.isFinite(cl) ? cl : null; } }
+        hit.set(f, size); break;
+      }
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, opt.concurrency ?? 8) }, worker));
+  const missing = files.filter((f) => !hit.has(f));
+  const bytes = measure ? [...hit.values()].reduce((s, n) => s + (n || 0), 0) : null;
+  return { supported: true, cacheNames: names, total: files.length, cached: hit.size, missing, bytes, groups: buildGroups(files, hit, measure) };
+}
+function buildGroups(files, hit, measure) {
+  const by = new Map();
+  for (const f of files) {
+    const id = groupOf(f);
+    const g = by.get(id) || { id, total: 0, cached: 0, bytes: measure ? 0 : null };
+    g.total++; if (hit.has(f)) { g.cached++; if (measure) g.bytes += hit.get(f) || 0; }
+    by.set(id, g);
+  }
+  const out = [];
+  for (const def of [...GROUPS, { id: "other", label: "Other files", route: undefined }]) {
+    const g = by.get(def.id); if (!g) continue;
+    out.push({ ...g, label: def.label, route: def.route, needs: def.needs, state: g.cached === g.total ? "ready" : g.cached === 0 ? "missing" : "partial" });
+  }
+  return out;
+}
+
+// ---------- warming the cache ----------
+/**
+ * Fetch URLs so the service worker caches them (its fetch handler stores same-origin GETs: precache hits in the shell cache,
+ * everything else in "alef-runtime-v1"). Concurrency-limited, one retry, resumable (call again with only the failed urls), cancellable.
+ * @param {string[]} urls
+ * @param {{fetch?:Function, concurrency?:number, retries?:number, signal?:AbortSignal, onProgress?:(p:{done:number,total:number,url:string,ok:boolean,bytes:number})=>void, sleep?:(ms:number)=>Promise<void>, online?:()=>boolean}} [opt]
+ * @returns {Promise<{total:number, done:number, ok:number, failed:{url:string, reason:string}[], bytes:number, aborted:boolean, offline:boolean}>}
+ */
+export async function warmCache(urls, opt = {}) {
+  const f = opt.fetch ?? globalThis.fetch?.bind(globalThis);
+  const sleep = opt.sleep ?? ((ms) => new Promise((r) => setTimeout(r, ms)));
+  const out = { total: urls.length, done: 0, ok: 0, failed: [], bytes: 0, aborted: false, offline: false };
+  if (!f) { out.failed = urls.map((url) => ({ url, reason: "fetch is not available" })); return out; }
+  if (opt.online && !opt.online()) { out.offline = true; out.failed = urls.map((url) => ({ url, reason: "offline" })); return out; }
+  const queue = [...urls];
+  const one = async (url) => {
+    let reason = "unknown";
+    for (let attempt = 0; attempt <= (opt.retries ?? 1); attempt++) {
+      if (opt.signal?.aborted) { out.aborted = true; return { ok: false, reason: "cancelled", bytes: 0, cancelled: true }; }
+      try {
+        const res = await f(url, { cache: "reload", signal: opt.signal });
+        if (!res.ok) { reason = `HTTP ${res.status}`; if (res.status === 404) break; }
+        else { const buf = await res.arrayBuffer(); return { ok: true, reason: "", bytes: buf.byteLength }; } // reading the body lets the worker finish its cache write
+      } catch (e) {
+        if (opt.signal?.aborted) { out.aborted = true; return { ok: false, reason: "cancelled", bytes: 0, cancelled: true }; }
+        reason = String(e?.message || e || "network error");
+      }
+      if (attempt < (opt.retries ?? 1)) await sleep(500);
+    }
+    return { ok: false, reason, bytes: 0 };
+  };
+  const worker = async () => {
+    while (queue.length && !out.aborted) {
+      const url = queue.shift();
+      const r = await one(url);
+      if (r.cancelled) { out.aborted = true; break; }
+      out.done++; out.bytes += r.bytes;
+      if (r.ok) out.ok++; else out.failed.push({ url, reason: r.reason });
+      try { opt.onProgress?.({ done: out.done, total: out.total, url, ok: r.ok, bytes: out.bytes }); } catch { /* listener bug */ }
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, opt.concurrency ?? 4) }, worker));
+  if (out.aborted) out.failed.push(...queue.map((url) => ({ url, reason: "cancelled" })));
+  return out;
+}
+
+/**
+ * "Download everything": fetch precache files that are missing from the caches (the installed worker already holds the rest),
+ * plus the chosen optional groups (skipping any file already cached). Returns the warm summary plus a fresh report.
+ */
+export async function downloadEverything(opt = {}) {
+  const list = opt.files ?? (await loadPrecacheList(opt.fetch)).files;
+  const before = await cacheReport([...list, ...(opt.extraUrls ?? [])], { caches: opt.caches, measure: false });
+  const todo = opt.force ? [...list, ...(opt.extraUrls ?? [])] : before.missing;
+  const summary = await warmCache(todo, opt);
+  const after = await cacheReport(list, { caches: opt.caches });
+  return { ...summary, skipped: before.total - before.missing.length, requested: todo.length, report: after };
+}
+
+// ---------- storage health ----------
+const level = (r) => (r == null ? "unknown" : r >= CRITICAL_RATIO ? "critical" : r >= WARN_RATIO ? "warn" : "ok");
+
+/** Characters held in Web Storage (all keys of the origin; the quota is per origin) and the part under `prefix`. Never throws. */
+export function localStorageUsage(storage = globalThis.localStorage, prefix = "alef:") {
+  let used = 0, mine = 0, keys = 0;
+  try {
+    for (let i = 0; i < storage.length; i++) {
+      const k = storage.key(i); if (k == null) continue;
+      const n = k.length + String(storage.getItem(k) ?? "").length;
+      used += n; keys++; if (k.startsWith(prefix)) mine += n;
+    }
+  } catch { return { supported: false, usedChars: 0, alefChars: 0, keys: 0, limitChars: LOCAL_LIMIT_CHARS, ratio: null, level: "unknown" }; }
+  const ratio = used / LOCAL_LIMIT_CHARS;
+  return { supported: true, usedChars: used, alefChars: mine, keys, limitChars: LOCAL_LIMIT_CHARS, ratio, level: level(ratio) };
+}
+
+/**
+ * Whole picture for the card. `exportRoute` is where the backup download lives (the Settings screen); null when that route is absent.
+ * @param {{navigator?:any, localStorage?:any, hasRoute?:(name:string)=>boolean}} [env]
+ */
+export async function storageHealth(env = {}) {
+  const nav = env.navigator ?? globalThis.navigator;
+  const st = await storageStatus(nav);
+  const originRatio = st.usage != null && st.quota ? st.usage / st.quota : null;
+  const local = localStorageUsage(env.localStorage ?? globalThis.localStorage);
+  const rank = { unknown: 0, ok: 1, warn: 2, critical: 3 };
+  const overall = [level(originRatio), local.level].sort((a, b) => rank[b] - rank[a])[0];
+  const exportRoute = env.hasRoute ? (env.hasRoute("settings") ? "#/settings" : null) : "#/settings";
+  const advice = [];
+  if (local.level === "warn" || local.level === "critical") advice.push(`Saved progress and settings use about ${Math.round(local.ratio * 100)}% of the space this browser gives the site for them. Download a backup${exportRoute ? " from Settings" : ""} and tell whoever looks after Aleph; saving may start failing near the limit.`);
+  if (level(originRatio) === "warn" || level(originRatio) === "critical") advice.push("The browser says this site uses most of its allowed storage (mostly offline copies). Clearing the offline copies is safe; progress is kept separately.");
+  if (st.supported && st.persisted === false) advice.push("Progress is not protected from automatic browser clean-up. Use \"Protect my progress\", and keep a backup file.");
+  return { persist: { supported: st.supported, persisted: st.persisted }, origin: { usage: st.usage, quota: st.quota, ratio: originRatio, level: level(originRatio) }, local, level: overall, exportRoute, advice };
+}
+/** Call from a click only. */
+export const protectProgress = (nav) => requestPersistence(nav);
+
+export const fmtBytes = (n) => (n == null ? "unknown" : n < 1024 ? `${n} B` : n < 1048576 ? `${(n / 1024).toFixed(0)} KB` : `${(n / 1048576).toFixed(1)} MB`);

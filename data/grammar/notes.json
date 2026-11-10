@@ -1,0 +1,37 @@
+{
+  "schema": "alef-grammar-notes/1",
+  "status": "draft-unreviewed",
+  "note": "English explanations and the construct-chain glosses were written for Aleph and have not been reviewed by a Hebrew teacher. All Hebrew shown by the grammar screens is pulled programmatically from data/vocab/words.json and data/corpus/registry.json; none is typed here. Construct chains are located by registry id and token positions only.",
+  "topics": {
+    "article": {
+      "title": "The word for \"the\": ha- and the doubled letter",
+      "summary": "Hebrew has one word for \"the\", a small prefix glued to the front of a noun.",
+      "explanation": "Hebrew has no separate word for the. It is a prefix, ha-, joined to the front of the noun, and it never changes for gender or number. The ha- is usually pointed with a patach, and the first letter of the noun then takes a dagesh, a dot that doubles the sound. So the dot is a trace of the doubling, not a new sound you must pronounce loudly. A few letters cannot take a dagesh: the guttural letters aleph, ayin and resh, and usually also he and chet. Before those letters ha- stretches to ha with a long a, or sometimes a short vowel, to make up for the missing doubling. That is why one prayer word has a long a after the h and another has a short one. Spot the pattern in the examples below, then try to match each form to its meaning. Remember that the article goes on the noun, and an adjective that follows takes its own copy."
+    },
+    "prefixes": {
+      "title": "One-letter prefixes: ve-, be-, le-, me-, she-",
+      "summary": "Small words such as and, in, to, from and that are written as one letter stuck to the next word.",
+      "explanation": "Several very small words are not written alone. They are single letters attached to the front of the next word: ve- means and, be- means in or with, le- means to or for, me- means from, and she- means that or which. Most of them are pointed with a short sheva, which is a very quick vowel, so ve-, be- and le- sound like one light syllable before the word. The letter me- usually has a hiriq and sounds like mi. The prefix she- has a segol. These prefixes change little: the word they join keeps its own form, which makes them easy to spot once you know the five letters. In the examples the prefix is split off so you can see what is left. Be careful, since a few words simply begin with one of these letters without being prefixed. The rule here only claims a prefix when the leftover word is a listed word."
+    },
+    "construct": {
+      "title": "Construct state: the \"of\" chain",
+      "summary": "Two nouns side by side can mean \"X of Y\" without a separate word for of.",
+      "explanation": "Hebrew often says X of Y by putting two nouns side by side. There is no word for of. This is called the construct state, or smichut. The first noun, the one that owns or describes, often shortens or changes its ending, and it can never take the word for the. Only the second noun can carry it, and then the whole chain counts as definite. A plural first noun often ends in an -ei sound instead of -im. So a tree of life is simply tree, life, and children of Israel is children, Israel. A dash called a maqaf sometimes ties the pair into a single written word. In the examples below, the chains come straight from prayer and Torah lines. The English meaning is written beside each one. Read the English first, then find the two Hebrew words that make the chain."
+    },
+    "plurals": {
+      "title": "Plural patterns: -im and -ot",
+      "summary": "Most masculine nouns take -im and most feminine nouns take -ot, with exceptions.",
+      "explanation": "Hebrew nouns have a gender, and gender helps predict the plural. As a rule, masculine nouns add -im and feminine nouns add -ot. A son becomes sons, and a land becomes lands. This is only a tendency. Some masculine nouns take -ot, and some feminine nouns take -im, and the stem often shifts its vowels when the ending is added, because the stress moves. The plural is therefore best learned together with the singular. The examples are chosen from the vocabulary list, which records a gender and a plural for each noun, and the rule is simply counted over that list. Because the list was built by a program, some entries may be wrong, so treat the count as a guide. Look at the ending first, then at what happened to the vowels in the stem."
+    },
+    "roots": {
+      "title": "The three-letter root",
+      "summary": "Many Hebrew words are built on a skeleton of usually three consonants that carries a core meaning.",
+      "explanation": "Most Hebrew words are built on a root, a skeleton of usually three consonants that carries a core idea. Vowels and extra letters are woven around the root to make verbs, nouns and adjectives that feel related. If you know the root for write, you can often guess that a related noun has something to do with writing. Roots help you remember words in families instead of one at a time. The examples group real words from the vocabulary list that share a recorded root. Do not treat a root as a guarantee: related words can drift far apart in meaning, and some roots have weak letters that disappear in certain forms. The vocabulary list was built by a program, so a recorded root may occasionally be wrong. Use the families below as a memory aid, and match each word to the root it belongs to."
+    },
+    "openings": {
+      "title": "How prayers begin: common opening patterns",
+      "summary": "Many prayer lines start with one of a few stock openings, such as the blessing formula.",
+      "explanation": "Many Hebrew prayers start with a stock opening, so learning a handful of them lets you recognise hundreds of lines. The most common is the blessing formula, which begins with the word for blessed, then you, then the divine name, then our God and king of the world. After that comes a closing clause that says what the blessing is for, such as bringing forth bread or creating the fruit of the vine. Other lines open with a call to listen, with a word for happy or fortunate, with a plea such as lord of the world, or with a word meaning who. The examples below are the first words of real lines in the reading library. Each one shows the English of the line beside it. Match the opening to the meaning, and notice how often the first word alone gives away the type of prayer."
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+ "id": "book14",
+ "titleHe": "הֶחָתוּל עוֹבֵד מֵהַבַּיִת",
+ "titleTranslit": "He-Chatul Oved Me-Ha-Bayit",
+ "titleEn": "The Cat Works From Home",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "לֵאָה עוֹבֶדֶת מֵהַבַּיִת.",
+   "translit": "Leah ovedet me-ha-bayit.",
+   "en": "Leah works from home.",
+   "img": "assets/books/book14/BOOK14_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p01.mp3",
+    "m": "audio/m/israeli/book/book14-p01.mp3"
+   },
+   "illustration": "a woman at a desk by a window, headphones on",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "גַּם הֶחָתוּל.",
+   "translit": "Gam he-chatul.",
+   "en": "So does the cat.",
+   "img": "assets/books/book14/BOOK14_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p02.mp3",
+    "m": "audio/m/israeli/book/book14-p02.mp3"
+   },
+   "illustration": "an orange cat sitting squarely on the keyboard",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "\"לֹא, חָתוּל!\"",
+   "translit": "\"Lo, chatul!\"",
+   "en": "\"No, cat!\"",
+   "img": "assets/books/book14/BOOK14_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p03.mp3",
+    "m": "audio/m/israeli/book/book14-p03.mp3"
+   },
+   "illustration": "the woman lifting the cat off the keyboard",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הֶחָתוּל יוֹשֵׁב.",
+   "translit": "He-chatul yoshev.",
+   "en": "The cat sits.",
+   "img": "assets/books/book14/BOOK14_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p04.mp3",
+    "m": "audio/m/israeli/book/book14-p04.mp3"
+   },
+   "illustration": "the cat sitting on the printed report, unbothered",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הֶחָתוּל יָשֵׁן.",
+   "translit": "He-chatul yashen.",
+   "en": "The cat sleeps.",
+   "img": "assets/books/book14/BOOK14_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p05.mp3",
+    "m": "audio/m/israeli/book/book14-p05.mp3"
+   },
+   "illustration": "the cat asleep across the mouse pad",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "פְּגִישָׁה!",
+   "translit": "Pgishah!",
+   "en": "A meeting!",
+   "img": "assets/books/book14/BOOK14_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p06.mp3",
+    "m": "audio/m/israeli/book/book14-p06.mp3"
+   },
+   "illustration": "a video call ringing on screen",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "לֵאָה מְדַבֶּרֶת.",
+   "translit": "Leah medaberet.",
+   "en": "Leah speaks.",
+   "img": "assets/books/book14/BOOK14_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p07.mp3",
+    "m": "audio/m/israeli/book/book14-p07.mp3"
+   },
+   "illustration": "the woman presenting to a grid of faces",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הֶחָתוּל גַּם מְדַבֵּר.",
+   "translit": "He-chatul gam medaber.",
+   "en": "The cat also speaks.",
+   "img": "assets/books/book14/BOOK14_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p08.mp3",
+    "m": "audio/m/israeli/book/book14-p08.mp3"
+   },
+   "illustration": "the cat's face filling the webcam, mouth open mid-meow",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "כֻּלָּם צוֹחֲקִים.",
+   "translit": "Kulam tzochakim.",
+   "en": "Everyone laughs.",
+   "img": "assets/books/book14/BOOK14_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p09.mp3",
+    "m": "audio/m/israeli/book/book14-p09.mp3"
+   },
+   "illustration": "the grid of coworkers laughing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַבּוֹס אוֹמֵר: \"חָתוּל יָפֶה.\"",
+   "translit": "Ha-bos omer: \"Chatul yafeh.\"",
+   "en": "The boss says: \"Nice cat.\"",
+   "img": "assets/books/book14/BOOK14_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p10.mp3",
+    "m": "audio/m/israeli/book/book14-p10.mp3"
+   },
+   "illustration": "the boss's tile, a grey-haired man smiling",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "לֵאָה שְׂמֵחָה.",
+   "translit": "Leah smechah.",
+   "en": "Leah is happy.",
+   "img": "assets/books/book14/BOOK14_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p11.mp3",
+    "m": "audio/m/israeli/book/book14-p11.mp3"
+   },
+   "illustration": "the woman relieved, hand on chest",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הֶחָתוּל יָשֵׁן עוֹד.",
+   "translit": "He-chatul yashen od.",
+   "en": "The cat sleeps some more.",
+   "img": "assets/books/book14/BOOK14_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book14-p12.mp3",
+    "m": "audio/m/israeli/book/book14-p12.mp3"
+   },
+   "illustration": "the cat curled on the warm laptop, screen dimmed",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+{
+ "id": "I-33",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Birkat Hamazon openings: Zimun, the first blessing and Shir Hamaalot",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "רַבּוֹתַי נְבָרֵךְ",
+   "en": "gentlemen, let us bless",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rabotai nevarekh",
+    "sephardi": "rabotai nevarekh",
+    "ashkenazi": "rabosai nevoreikh"
+   },
+   "source": {
+    "file": "data/corpus/registry.json",
+    "id": "zimun-opening#l1"
+   }
+  },
+  {
+   "he": "יְהִי שֵׁם יְהוָה מְבֹרָךְ",
+   "en": "may the name of the LORD be blessed",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yehi shem adonai mevorakh",
+    "sephardi": "yehi shem adonai mevorakh",
+    "ashkenazi": "yehi sheim adonoy mevorokh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יְהִי",
+     "שֵׁם",
+     "יְהוָה",
+     "מְבֹרָךְ"
+    ]
+   }
+  },
+  {
+   "he": "מֵעַתָּה וְעַד עוֹלָם",
+   "en": "from now and for ever",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "me'atah ve'ad olam",
+    "sephardi": "me'atah ve'ad olam",
+    "ashkenazi": "mei'atoh ve'ad olom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מֵעַתָּה",
+     "וְעַד",
+     "עוֹלָם"
+    ]
+   }
+  },
+  {
+   "he": "הַזָּן אֶת הָעוֹלָם",
+   "en": "who feeds the world",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hazan et ha'olam",
+    "sephardi": "hazan et ha'olam",
+    "ashkenazi": "hazon es ho'olom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַזָּן",
+     "אֶת",
+     "הָעוֹלָם"
+    ]
+   }
+  },
+  {
+   "he": "כֻּלּוֹ",
+   "en": "all of it",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kulo",
+    "sephardi": "kulo",
+    "ashkenazi": "kulo"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p05fe27e4"
+   }
+  },
+  {
+   "he": "בְּטוּבוֹ",
+   "en": "in his goodness",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "betuvo",
+    "sephardi": "betuvo",
+    "ashkenazi": "betuvo"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p7fceebe3"
+   }
+  },
+  {
+   "he": "בְּחֵן בְּחֶסֶד וּבְרַחֲמִים",
+   "en": "with grace, kindness and mercy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bechen bechesed uverachamim",
+    "sephardi": "bechen bechesed uverachamim",
+    "ashkenazi": "bechein bechesed uverachamim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּחֵן",
+     "בְּחֶסֶד",
+     "וּבְרַחֲמִים"
+    ]
+   }
+  },
+  {
+   "he": "לֶחֶם",
+   "en": "bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechem",
+    "sephardi": "lechem",
+    "ashkenazi": "lechem"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf22f36ee"
+   }
+  },
+  {
+   "he": "לְכָל בָּשָׂר",
+   "en": "to all flesh",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lekhol basar",
+    "sephardi": "lekhol basar",
+    "ashkenazi": "lekhol bosor"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְכָל",
+     "בָּשָׂר"
+    ]
+   }
+  },
+  {
+   "he": "שִׁיר הַמַּעֲלוֹת",
+   "en": "a song of ascents",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shir hama'alot",
+    "sephardi": "shir hama'alot",
+    "ashkenazi": "shir hama'alos"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שִׁיר",
+     "הַמַּעֲלוֹת"
+    ]
+   }
+  },
+  {
+   "he": "צִיּוֹן",
+   "en": "Zion",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tziyon",
+    "sephardi": "tziyon",
+    "ashkenazi": "tziyon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "צִיּוֹן"
+    ]
+   }
+  },
+  {
+   "he": "שְׂמֵחִים",
+   "en": "happy (plural)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "semechim",
+    "sephardi": "semechim",
+    "ashkenazi": "semeichim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h57665cd9#forms.plural"
+   }
+  }
+ ],
+ "prayerLines": [
+  "zimun-opening",
+  "birkat-hamazon-1",
+  "shir-hamaalot",
+  "hamotzi"
+ ],
+ "goals": [
+  "Lead or answer the Zimun invitation",
+  "Read the first blessing of Birkat Hamazon",
+  "Recognise Shir Hamaalot, sung before the blessing on Shabbat"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-05"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-33-e01",
+   "type": "respond",
+   "cue": "The leader invites: 'Rabotai nevarech'. Answer with the line that follows.",
+   "answer": {
+    "he": "יְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם",
+    "en": "May the name of the LORD be blessed from now and for ever."
+   },
+   "prompt": {
+    "he": "רַבּוֹתַי נְבָרֵךְ",
+    "en": "Gentlemen, let us bless."
+   }
+  },
+  {
+   "id": "I-33-e02",
+   "type": "order",
+   "he": "יְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם",
+   "en": "May the name of the LORD be blessed from now and for ever."
+  },
+  {
+   "id": "I-33-e03",
+   "type": "fade",
+   "line": "zimun-opening",
+   "en": "Gentlemen, let us bless."
+  },
+  {
+   "id": "I-33-e04",
+   "type": "fade",
+   "line": "birkat-hamazon-1",
+   "en": "Blessed are you... who feeds the whole world in his goodness, with grace, kindness and mercy."
+  },
+  {
+   "id": "I-33-e05",
+   "type": "spot",
+   "line": "birkat-hamazon-1",
+   "target": "לֶחֶם",
+   "en": "bread"
+  },
+  {
+   "id": "I-33-e06",
+   "type": "order",
+   "he": "הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ",
+   "en": "who feeds the whole world in his goodness"
+  },
+  {
+   "id": "I-33-e07",
+   "type": "order",
+   "he": "בְּחֵן בְּחֶסֶד וּבְרַחֲמִים",
+   "en": "with grace, kindness and mercy"
+  },
+  {
+   "id": "I-33-e08",
+   "type": "produce",
+   "en": "who feeds the world",
+   "options": [
+    "הַזָּן אֶת הָעוֹלָם",
+    "הַמּוֹצִיא לֶחֶם",
+    "בּוֹרֵא פְּרִי הַגָּפֶן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-33-e09",
+   "type": "respond",
+   "cue": "The first blessing ends 'ki l'olam chasdo'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+    "en": "for his kindness is for ever"
+   }
+  },
+  {
+   "id": "I-33-e10",
+   "type": "fade",
+   "line": "shir-hamaalot",
+   "en": "A song of ascents. When the LORD brought back the returnees to Zion, we were like dreamers."
+  },
+  {
+   "id": "I-33-e11",
+   "type": "spot",
+   "line": "shir-hamaalot",
+   "target": "צִיּוֹן",
+   "en": "Zion",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-33-e12",
+   "type": "spot",
+   "line": "shir-hamaalot",
+   "target": "שְׂמֵחִים",
+   "en": "happy",
+   "lineIndex": 3
+  },
+  {
+   "id": "I-33-e13",
+   "type": "order",
+   "he": "הַזֹּרְעִים בְּדִמְעָה בְּרִנָּה יִקְצֹרוּ",
+   "en": "Those who sow in tears will reap in joy"
+  },
+  {
+   "id": "I-33-e14",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "רַבּוֹתַי נְבָרֵךְ",
+     "en": "let us bless"
+    },
+    {
+     "he": "הַזָּן",
+     "en": "who feeds"
+    },
+    {
+     "he": "שִׁיר הַמַּעֲלוֹת",
+     "en": "a song of ascents"
+    },
+    {
+     "he": "צִיּוֹן",
+     "en": "Zion"
+    }
+   ]
+  },
+  {
+   "id": "I-33-e15",
+   "type": "fade",
+   "line": "hamotzi",
+   "en": "Blessed are you... who brings forth bread from the earth."
+  }
+ ],
+ "note": "The second to fourth blessings of Birkat Hamazon and the Harachaman petitions are gaps (g-birkat-hamazon-rest). Zimun variants (for women, with a minyan, with guests) are not in the registry; only the opening exchange is."
+}

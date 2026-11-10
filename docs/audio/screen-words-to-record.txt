@@ -1,0 +1,3 @@
+# Screen words with no clip of the same spelling anywhere. Record with:
+#   node tools/audio/render_tts.mjs --provider google --voice both --kinds word --ids docs/audio/screen-words-to-record.txt --execute
+

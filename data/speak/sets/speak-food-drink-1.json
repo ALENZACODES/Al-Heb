@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-food-drink-1",
+ "title": "Food and drink 1",
+ "theme": "food-drink",
+ "level": "B1",
+ "track": "both",
+ "pack": "food-drink-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h11b691b9",
+   "he": "אָכַל",
+   "translit": "akhal",
+   "en": "to eat",
+   "kind": "word",
+   "audioId": "h11b691b9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb91b24f9",
+   "he": "מַר",
+   "translit": "mar",
+   "en": "bitter (having an acrid taste)",
+   "kind": "word",
+   "audioId": "hb91b24f9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h448b5d1a",
+   "he": "יָרָה",
+   "translit": "yarah",
+   "en": "to flow as water (that is, to rain)",
+   "kind": "word",
+   "audioId": "h448b5d1a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf22f36ee",
+   "he": "לֶחֶם",
+   "translit": "lechem",
+   "en": "bread",
+   "kind": "word",
+   "audioId": "il07-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6b636d7b",
+   "he": "אֲרוּחָה",
+   "translit": "aruchah",
+   "en": "meal",
+   "kind": "word",
+   "audioId": "i-19-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd59a2d59",
+   "he": "שָׁתָה",
+   "translit": "shatah",
+   "en": "to drink",
+   "kind": "word",
+   "audioId": "hd59a2d59",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h166d92b0",
+   "he": "פְּרִי",
+   "translit": "peri",
+   "en": "fruit",
+   "kind": "word",
+   "audioId": "r41-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h03763c94",
+   "he": "יַיִן",
+   "translit": "yayin",
+   "en": "wine",
+   "kind": "word",
+   "audioId": "r41-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h25e14407",
+   "he": "מָשַׁח",
+   "translit": "mashach",
+   "en": "to anoint with oil",
+   "kind": "word",
+   "audioId": "h25e14407",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h27d68eba",
+   "he": "פּוֹל",
+   "translit": "pol",
+   "en": "broad bean, fava bean, fava (Vicia faba)",
+   "kind": "word",
+   "audioId": "h27d68eba",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hfb7bf5f4",
+   "he": "לוּל",
+   "translit": "lul",
+   "en": "chicken coop",
+   "kind": "word",
+   "audioId": "hfb7bf5f4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hf9047f4b",
+   "he": "כּוֹס",
+   "translit": "kos",
+   "en": "cup",
+   "kind": "word",
+   "audioId": "i-06-w1",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

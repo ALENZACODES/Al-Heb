@@ -1,0 +1,38 @@
+.rimon-companion{width:180px;position:relative;text-align:center;flex-shrink:0;isolation:isolate}
+.rimon-sprite{display:block;width:100%;aspect-ratio:1;background-size:400% 300%;background-repeat:no-repeat;transform-origin:50% 90%}
+.rimon-companion[data-action=idle] .rimon-sprite{animation:rimon-breathe 4s ease-in-out infinite}
+.rimon-caption{display:block;font:600 12px/1.35 system-ui;color:#29432d;background:#fff9eb;border-radius:12px;padding:5px 8px}
+.rimon-dismiss{position:absolute;right:0;top:0;width:48px;height:48px;border-radius:50%;border:1px solid #ccc;background:#fff9eb;color:#29432d;cursor:pointer;font-size:20px}
+.rimon-corner{position:fixed;right:12px;bottom:16px;width:112px;z-index:35}
+.rimon-restore{position:fixed;right:10px;bottom:12px;z-index:35;font-size:12px;border-radius:18px;padding:8px;background:#fff9eb;color:#29432d;border:1px solid #c6c6a8}
+.rimon-companion[hidden],.rimon-restore[hidden]{display:none!important}
+@keyframes rimon-breathe{50%{transform:scale(1.018,1.03) translateY(-1px)}}
+@media(max-width:600px){.rimon-companion{width:110px}.rimon-corner{width:78px;bottom:calc(76px + env(safe-area-inset-bottom));right:8px}.rimon-corner .rimon-caption{font-size:10px}.rimon-dismiss{width:48px;height:48px}}
+@media(prefers-reduced-motion:reduce){.rimon-sprite{animation:none!important;transform:none!important}}
+.rimon-static .rimon-sprite{animation:none!important;transform:none!important}
+
+@media(max-width:600px){.rimon-restore{bottom:calc(76px + env(safe-area-inset-bottom))}}
+.show-mascot-box{width:140px;height:auto}.show-mascot-box .rimon-companion{width:100%}@media(max-width:600px){.show-mascot-box{width:96px}}
+.rimon-next{display:block;font-size:12px;padding:6px;background:#fff9eb;color:#29432d;border-radius:8px}.rimon-next[hidden]{display:none}
+/* Speech stays beside the character, outside clipped hero artwork. */
+.rimon-caption{display:none}
+.rimon-bubble{position:fixed;z-index:36;box-sizing:border-box;width:min(230px,calc(100vw - 108px));padding:13px 15px;border:2px solid #d4a647;border-radius:20px;background:#fffbed;color:#243c2c;text-align:center;box-shadow:0 5px 20px #10281826;pointer-events:none}
+.rimon-bubble[hidden]{display:none!important}
+.rimon-bubble::after{content:'';position:absolute;right:-9px;top:var(--rimon-tail-top,23px);width:14px;height:14px;background:#fffbed;border-top:2px solid #d4a647;border-right:2px solid #d4a647;transform:rotate(45deg)}
+.rimon-bubble-he{display:block;font-family:'Frank Ruhl Libre',serif;font-size:23px;font-weight:700;line-height:1.4;overflow-wrap:anywhere}
+.rimon-bubble-en{display:block;margin-top:5px;font:700 12px/1.45 system-ui;letter-spacing:.025em;overflow-wrap:anywhere}
+.rimon-shabbat,.rimon-encouragement{display:block}
+.rimon-shabbat + .rimon-encouragement{border-top:1px solid #dccfa8;margin-top:10px;padding-top:9px}
+.rimon-shabbat .rimon-bubble-he{color:#805b11}
+.rimon-bubble.is-popping{animation:rimon-bubble-pop .28s ease-out both;transform-origin:100% 35%}
+@keyframes rimon-bubble-pop{from{opacity:0;transform:scale(.88) translateX(7px)}to{opacity:1;transform:scale(1) translateX(0)}}
+@media(max-width:600px){.rimon-bubble{padding:10px 12px}.rimon-bubble-he{font-size:21px}.rimon-bubble-en{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.rimon-bubble.is-popping{animation:none!important}}
+@media(max-width:600px){.rimon-bubble{width:min(168px,calc(100vw - 100px));padding:8px 10px;border-radius:16px}.rimon-bubble-he{font-size:18px}.rimon-bubble-en{font-size:11px;margin-top:2px}}
+/* Phones: a smaller Rimon, so he does not sit on top of answer buttons at the right edge. */
+@media(max-width:600px){.rimon-corner{width:58px}.rimon-corner .rimon-dismiss{width:48px;height:48px;font-size:18px;right:-14px;top:-16px}}
+
+/* Phones: between moments Rimon ducks behind the bottom bar so only his crown and the top of his head show (about 18 px), keeping buttons near the bar clear. */
+.rimon-corner{transition:transform .35s ease}
+@media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(calc(100% - 1px));cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
+@media(prefers-reduced-motion:reduce){.rimon-corner{transition:none}}

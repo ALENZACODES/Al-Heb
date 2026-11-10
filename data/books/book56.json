@@ -1,0 +1,177 @@
+{
+ "id": "book56",
+ "titleHe": "הָרַכֶּבֶת לְחֵיפָה",
+ "titleTranslit": "Ha-Rakevet Le-Cheifah",
+ "titleEn": "The Train to Haifa",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "תַּחֲנַת הָרַכֶּבֶת. שָׁעָה שֶׁבַע.",
+   "translit": "Tachanat ha-rakevet. Sha'ah sheva.",
+   "en": "The train station. Seven o'clock.",
+   "img": "assets/books/book56/BOOK56_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p01.mp3",
+    "m": "audio/m/israeli/book/book56-p01.mp3"
+   },
+   "illustration": "a platform, commuters, a train pulling in",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "נָדָב נוֹסֵעַ לְחֵיפָה.",
+   "translit": "Nadav nose'a le-Cheifah.",
+   "en": "Nadav is going to Haifa.",
+   "img": "assets/books/book56/BOOK56_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p02.mp3",
+    "m": "audio/m/israeli/book/book56-p02.mp3"
+   },
+   "illustration": "a man with a backpack boarding",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הָרַכֶּבֶת מְלֵאָה.",
+   "translit": "Ha-rakevet mele'ah.",
+   "en": "The train is full.",
+   "img": "assets/books/book56/BOOK56_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p03.mp3",
+    "m": "audio/m/israeli/book/book56-p03.mp3"
+   },
+   "illustration": "standing room only, elbows",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא עוֹמֵד.",
+   "translit": "Hu omed.",
+   "en": "He stands.",
+   "img": "assets/books/book56/BOOK56_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p04.mp3",
+    "m": "audio/m/israeli/book/book56-p04.mp3"
+   },
+   "illustration": "the man holding a strap, swaying",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "לְיָדוֹ: חַיֶּלֶת יְשֵׁנָה.",
+   "translit": "Le-yado: chayelet yeshenah.",
+   "en": "Next to him: a soldier, asleep.",
+   "img": "assets/books/book56/BOOK56_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p05.mp3",
+    "m": "audio/m/israeli/book/book56-p05.mp3"
+   },
+   "illustration": "a young woman in uniform asleep sitting up, huge bag",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "מֵאָחוֹר: אִישׁ מְדַבֵּר בַּטֶּלֶפוֹן.",
+   "translit": "Me-achor: ish medaber ba-telefon.",
+   "en": "Behind: a man talking on the phone.",
+   "img": "assets/books/book56/BOOK56_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p06.mp3",
+    "m": "audio/m/israeli/book/book56-p06.mp3"
+   },
+   "illustration": "a loud man gesturing with a phone",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "מֵאָחוֹר יוֹתֵר: תִּינוֹק בּוֹכֶה.",
+   "translit": "Me-achor yoter: tinok bocheh.",
+   "en": "Further back: a baby crying.",
+   "img": "assets/books/book56/BOOK56_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p07.mp3",
+    "m": "audio/m/israeli/book/book56-p07.mp3"
+   },
+   "illustration": "a tired mother with a wailing baby",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַיָּם מִיָּמִין.",
+   "translit": "Ha-yam mi-yamin.",
+   "en": "The sea on the right.",
+   "img": "assets/books/book56/BOOK56_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p08.mp3",
+    "m": "audio/m/israeli/book/book56-p08.mp3"
+   },
+   "illustration": "the window: blue sea rushing past",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "נָדָב מִסְתַּכֵּל עַל הַיָּם.",
+   "translit": "Nadav mistakel al ha-yam.",
+   "en": "Nadav looks at the sea.",
+   "img": "assets/books/book56/BOOK56_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p09.mp3",
+    "m": "audio/m/israeli/book/book56-p09.mp3"
+   },
+   "illustration": "his face calm, reflected in the glass",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַתִּינוֹק מַפְסִיק לִבְכּוֹת.",
+   "translit": "Ha-tinok mafsik livkot.",
+   "en": "The baby stops crying.",
+   "img": "assets/books/book56/BOOK56_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p10.mp3",
+    "m": "audio/m/israeli/book/book56-p10.mp3"
+   },
+   "illustration": "the baby staring at the sea too, mouth open",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "כֻּלָּם מִסְתַּכְּלִים עַל הַיָּם.",
+   "translit": "Kulam mistaklim al ha-yam.",
+   "en": "Everyone looks at the sea.",
+   "img": "assets/books/book56/BOOK56_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p11.mp3",
+    "m": "audio/m/israeli/book/book56-p11.mp3"
+   },
+   "illustration": "the whole car turned toward the window, silent",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "חֵיפָה. הַכַּרְמֶל. יוֹרְדִים.",
+   "translit": "Cheifah. Ha-Carmel. Yordim.",
+   "en": "Haifa. The Carmel. Everyone gets off.",
+   "img": "assets/books/book56/BOOK56_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book56-p12.mp3",
+    "m": "audio/m/israeli/book/book56-p12.mp3"
+   },
+   "illustration": "the platform under the green mountain",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

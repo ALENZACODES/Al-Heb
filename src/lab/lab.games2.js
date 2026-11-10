@@ -4,12 +4,17 @@
 // All Hebrew comes from the app's data: data/lab/words.json (built by tools/lab/build-lab-words.mjs from the dictionary and the
 // sound tables), the letter table and the prayer registry. env.met(item) adds a word to the "Hebrew you met" list on the
 // results card; env.rimon(action) lets Rimon react (optional, never needed to play).
-import { randInt, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, chainTrial, lineWords } from './lab.core.js';
+import { randInt, twinsNext, twinsBack, rainPool, rainKeys, rainFallMs, middleTrial, taxiTrial, cafeOrder, chainTrial, lineWords, NOT_A_GAME } from './lab.core.js';
 import { kit } from './lab.games.js';
 import { transliterate } from '../pronunciation/transliterate.js';
 
 const { getJSON, once, grid, big, mark, loadLetters } = kit;
-const loadWords = (env) => once('labwords', () => getJSON(env, 'data/lab/words.json'));
+const loadWords = (env) => once('labwords', async () => {
+  const w = await getJSON(env, 'data/lab/words.json');
+  // Recordings that live only in the dictionary list: hand the player the few rows these games need.
+  try { env.ctx?.audio?.extend?.(w.extraClips || []); } catch { /* sound is optional */ }
+  return w;
+});
 const btn = (env, label, onclick, cls = 'btn') => env.h('button', { type: 'button', class: cls, onclick }, label);
 /** Resolve a round once, whatever fires first (an answer or the clock). */
 function once1(resolve) { let done = false; return (r) => { if (!done) { done = true; resolve(r); } }; }
@@ -26,11 +31,13 @@ const twins = {
     const back = twinsBack(level);
     return new Promise((resolve) => {
       const finish = once1(resolve);
-      const card = env.backdrop?.(env.h('div', { class: 'lab-twin', 'aria-live': 'polite' }), 'LAB_v2_twins_play', 400) || env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
+      const card = env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
+      env.playArt?.(card); // the drawn card face
       const before = env.h('div', { class: 'lab-twin-before', 'aria-hidden': 'true' });
       const row = env.h('div', { class: 'lab-row' });
       env.board.replaceChildren(env.h('div', { class: 'lab-twin-stage' }, before, card), row);
-      const paint = (c) => { card.replaceChildren(big(env, c.he, 'lab-glyph lab-huge')); card.setAttribute('aria-label', c.name); card.classList.remove('is-in'); void card.offsetWidth; card.classList.add('is-in'); };
+      const nm = (c) => c.names?.[trad] || c.name; // Tav without its dot is Sav in Ashkenazi
+      const paint = (c) => { card.replaceChildren(big(env, c.he, 'lab-glyph lab-huge')); card.setAttribute('aria-label', nm(c)); card.classList.remove('is-in'); void card.offsetWidth; card.classList.add('is-in'); };
       const warm = () => { // the first card(s) of a game, or after the game starts comparing two back: just look and remember
         const { card: c } = twinsNext(m.hist, W.cards, level, trad, env.rnd);
         m.hist.push(c); paint(c); before.replaceChildren();
@@ -48,8 +55,13 @@ const twins = {
         const t0 = env.now();
         const pick = (yes, b) => {
           const ok = yes === same; mark(b, ok);
-          if (!ok || level <= 2) env.say(`${c.he} ${c.name} and ${ref.he} ${ref.name}: ${same ? 'the same sound' : 'different sounds'}.`);
-          if (same && c.id !== ref.id) env.met({ he: `${ref.he} ${c.he}`, en: `${ref.name} and ${c.name} sound the same` });
+          if (!ok || level <= 2) {
+            env.say(`${c.he} ${nm(c)} and ${ref.he} ${nm(ref)}: ${same ? 'the same sound' : 'different sounds'}.`);
+            // Hear both: the recorded Israeli letter sounds, only where the learner's tradition says them the same way.
+            const say = (x) => (x.clip && x.sound[trad] === x.sound.israeli && env.hasClip('letter', x.clip) ? env.playClip('letter', x.clip, x.he) : Promise.resolve(false));
+            say(ref).then(() => say(c));
+          }
+          env.met(same && c.id !== ref.id ? { he: `${ref.he} ${c.he}`, en: `${nm(ref)} and ${nm(c)} sound the same` } : { he: c.he, en: nm(c), clip: c.clip && c.sound[trad] === c.sound.israeli ? { kind: 'letter', id: c.clip } : null });
           finish({ ok, ms: env.now() - t0, par: 1100 });
         };
         const no = btn(env, '✗ Different', () => pick(false, no), 'btn secondary lab-yn');
@@ -81,7 +93,7 @@ const rain = {
       const d = env.h('div', { class: 'lab-drop', role: 'img', 'aria-label': `Syllable ${drop.he}` }, big(env, drop.he, 'lab-glyph'));
       env.backdrop?.(d, 'LAB_v2_rain_drop', 200);
       const sky = env.h('div', { class: 'lab-sky' }, d, env.h('div', { class: 'lab-ground', 'aria-hidden': 'true' }));
-      env.backdrop?.(sky, 'LAB_v2_rain_play', 700);
+      env.playArt?.(sky); // the drawn sky
       const row = env.h('div', { class: 'lab-row lab-vowels' });
       env.prompt(env.h('span', {}, 'Tap the vowel sound before it lands.'));
       env.board.replaceChildren(sky, row);
@@ -89,9 +101,11 @@ const rain = {
         const want = drop.sound[trad];
         const ok = k === want; mark(b, ok);
         d.classList.add(ok ? 'is-caught' : 'is-missed');
-        if (ok && drop.syllable && env.hasClip('syllable', drop.syllable)) env.playClip('syllable', drop.syllable, drop.he);
+        // its own recording, or the recorded syllable that says it the same way (בָּ as בַּ) where the tradition reads it so
+        const sayId = drop.syllable || (drop.sound[trad] === drop.sound.israeli ? drop.sayAs : null);
+        if (ok && sayId && env.hasClip('syllable', sayId)) env.playClip('syllable', sayId, drop.he);
         if (!ok || level <= 2) env.say(`${drop.he}: ${signName(W, drop.sign)} says "${want}".`);
-        env.met({ he: drop.he, en: `${signName(W, drop.sign)}, "${want}"` });
+        env.met({ he: drop.he, en: `${signName(W, drop.sign)}, "${want}"`, clip: sayId ? { kind: 'syllable', id: sayId } : null });
         finish({ ok, ms: env.now() - t0, par: Math.round(fall * 0.45) });
       };
       for (const k of keys) {
@@ -102,7 +116,8 @@ const rain = {
       env.keys((key) => { const k = String(key).toLowerCase(); const i = keys.indexOf(k); if (i >= 0) pick(k, row.children[i]); });
       if (!env.calm) {
         d.style.transition = 'none'; d.style.transform = 'translateY(0)';
-        requestAnimationFrame(() => requestAnimationFrame(() => { d.style.transition = `transform ${fall}ms linear`; d.style.transform = 'translateY(var(--lab-fall, 11rem))'; }));
+        // fall to the ground line, however tall the sky is on this screen
+        requestAnimationFrame(() => requestAnimationFrame(() => { const dist = Math.max(0, sky.clientHeight - d.offsetHeight - 20); d.style.transition = `transform ${fall}ms linear`; d.style.transform = `translateY(${dist}px)`; }));
       }
       env.timeLimit(fall, () => { d.classList.add('is-missed'); env.say(`${drop.he} says "${drop.sound[trad]}".`); finish({ ok: false, ms: fall }); });
     });
@@ -128,7 +143,8 @@ const middle = {
       }, (i, b) => {
         const ok = t.options[i].id === t.target.id; mark(b, ok);
         if (!ok) { g.cells[t.options.indexOf(t.target)].classList.add('is-reveal'); env.say(`The middle letter is ${t.target.he} ${t.target.name}${t.tricky ? `; the letters around it are ${t.row[0].name}` : ''}.`); }
-        env.met({ he: t.target.he, en: t.target.name });
+        if (level <= 2 && env.hasClip('letter', t.target.id)) env.playClip('letter', t.target.id, t.target.he); // hear its name while learning them
+        env.met({ he: t.target.he, en: t.target.name, clip: { kind: 'letter', id: t.target.id } });
         finish({ ok, ms: env.now() - t0, par: 1500 });
       }, 'Letter names');
       env.board.replaceChildren(row, g.el);
@@ -158,7 +174,7 @@ const taxi = {
       const road = env.h('div', { class: 'lab-road', 'data-side': tr.side, role: 'img', 'aria-label': `A sign on the ${tr.side === 'straight' ? 'middle' : tr.side} of the road says ${tr.word.tr}` },
         env.h('div', { class: 'lab-lane' }, tr.side === 'left' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'straight' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'right' ? sign : null),
         env.backdrop?.(env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }), 'LAB_v2_taxi_cab', 200) || env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }));
-      env.backdrop?.(road, 'LAB_v2_taxi_play', 700);
+      env.playArt?.(road); // the drawn road
       const row = env.h('div', { class: 'lab-row lab-turns' });
       const pick = (k, b) => {
         const ok = k === tr.answer; mark(b, ok);
@@ -189,7 +205,7 @@ const cafe = {
       const ticket = env.h('div', { class: 'lab-ticket', 'aria-live': 'polite' });
       // Noa or Ari, speaking (their approved portraits), takes the order; text only if the picture is not available.
       const face = env.img?.('id', who === 'Noa' ? 'CHAR_noa_speak' : 'CHAR_ari_speak', 'lab-face', 160);
-      env.board.replaceChildren(env.backdrop?.(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots), 'LAB_v2_cafe_play', 900)
+      env.board.replaceChildren(env.playArt?.(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots))
         || env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots));
       env.prompt(env.h('span', {}, `${who} is ordering. Remember it, in order.`));
       env.rimon?.('thinking');
@@ -230,7 +246,7 @@ const cafe = {
 const chain = {
   load: (env) => once('chainlines', async () => {
     const reg = await getJSON(env, 'data/corpus/registry.json');
-    return reg.entries.filter((e) => e.category === 'siddur' && e.he).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
+    return reg.entries.filter((e) => e.category === 'siddur' && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, en: e.english, words: lineWords(e.he) })).filter((e) => e.words.length >= 5);
   }),
   trial(env, level) {
     const t = chainTrial(env.data, level, env.rnd);

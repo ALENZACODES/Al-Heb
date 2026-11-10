@@ -1,0 +1,1154 @@
+{
+ "schema": "alef-practical-units/1",
+ "generated": false,
+ "proofread": false,
+ "nativeReview": "required",
+ "note": "Draft practical conversation units for the Israeli track. Every Hebrew line is copied from data/corpus/phrasebook.json or cited by lesson id from data/curriculum/lessons.json. No new Hebrew was composed. The phrasebook itself is marked native-speaker-needed (pointing and register); these units inherit that hold. Not a 126th lesson and not wired into the router. Spaced repetition reuses src/curriculum/srs.js (and the existing vocab review queue under srs.vocab). Listening uses existing manifest ids (phrasebook rows and lesson-word ids). Speaking uses the existing speak survival sets. Written 10 November 2026, America/Toronto.",
+ "srs": {
+  "scheduler": "src/curriculum/srs.js",
+  "also": "src/vocab/vocab.view.js reviews stored under srs.vocab",
+  "cardShape": "id, kind, state new|review|relearning, stability, difficulty, reps, lapses, lastReview, due",
+  "ratings": "1 Again, 2 Hard, 3 Good, 4 Easy"
+ },
+ "units": [
+  {
+   "id": "pu-cafe",
+   "title": "Ordering at a cafe",
+   "status": "built-draft",
+   "nativeReview": true,
+   "lessons": [
+    {
+     "id": "il06",
+     "title": "Cafe: ordering a coffee",
+     "track": "israel",
+     "wordCount": 6
+    },
+    {
+     "id": "il07",
+     "title": "Cafe and menu words",
+     "track": "israel",
+     "wordCount": 6
+    },
+    {
+     "id": "I-13",
+     "title": "Cafe ordering: milk, sugar, sizes and the bill",
+     "track": "israel",
+     "wordCount": 14
+    }
+   ],
+   "phrasebookSituation": "cafe",
+   "speakSets": [
+    "speak-survival-cafe-1"
+   ],
+   "grammarNote": "A polite request often starts with אֶפְשָׁר (“is it possible / may I”) plus an infinitive: אֶפְשָׁר לְהַזְמִין, אֶפְשָׁר לִרְאוֹת, אֶפְשָׁר לְשַׁלֵּם. Wants use the gendered present-tense adjective-verb רוֹצֶה (said by a man) / רוֹצָה (said by a woman): the phrasebook stores both under cafe-03. בְּבַקָּשָׁה softens a bare noun into a request (מַיִם קָרִים, בְּבַקָּשָׁה). The object marker אֶת appears before a definite menu: אֶת הַתַּפְרִיט. These notes describe forms already in the phrasebook; they are not a new grammar lesson.",
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "cafe-14",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "cafe-02",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "line",
+     "id": "cafe-03",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "cafe-04",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "cafe-09",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "cafe-10",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "cafe-21",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "cafe-25",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "cafe-26",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "cafe-27",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 11,
+     "kind": "line",
+     "id": "cafe-01",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 12,
+     "kind": "line",
+     "id": "cafe-08",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 13,
+     "kind": "word",
+     "id": "cafe-05",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 14,
+     "kind": "line",
+     "id": "cafe-06",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 15,
+     "kind": "line",
+     "id": "cafe-07",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 16,
+     "kind": "word",
+     "id": "cafe-11",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 17,
+     "kind": "word",
+     "id": "cafe-12",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 18,
+     "kind": "word",
+     "id": "cafe-13",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 19,
+     "kind": "line",
+     "id": "cafe-15",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 20,
+     "kind": "word",
+     "id": "cafe-16",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 21,
+     "kind": "word",
+     "id": "cafe-17",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 22,
+     "kind": "word",
+     "id": "cafe-18",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 23,
+     "kind": "word",
+     "id": "cafe-19",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 24,
+     "kind": "word",
+     "id": "cafe-20",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 25,
+     "kind": "line",
+     "id": "cafe-22",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 26,
+     "kind": "line",
+     "id": "cafe-23",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 27,
+     "kind": "line",
+     "id": "cafe-24",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    }
+   ],
+   "listenDrills": [
+    {
+     "goal": "Hear each core line and match it to the English already stored on the phrasebook row.",
+     "items": [
+      "cafe-14",
+      "cafe-02",
+      "cafe-03",
+      "cafe-04",
+      "cafe-09",
+      "cafe-10",
+      "cafe-21",
+      "cafe-25",
+      "cafe-26",
+      "cafe-27",
+      "cafe-01",
+      "cafe-08"
+     ],
+     "source": "audio manifest, phrasebook ids (israeli-only scope)"
+    },
+    {
+     "goal": "Hear the cafe lesson words already on the Israel track.",
+     "items": [
+      "il06-w1",
+      "il06-w2",
+      "il06-w3",
+      "il06-w4",
+      "il06-w5",
+      "il06-w6",
+      "il06-w7",
+      "i-13-w1",
+      "i-13-w2",
+      "i-13-w3",
+      "i-13-w4",
+      "i-13-w5",
+      "i-13-w6",
+      "i-13-w7",
+      "i-13-w8",
+      "i-13-w9"
+     ],
+     "source": "audio manifest, lesson-word ids"
+    }
+   ],
+   "speakDrills": [
+    {
+     "goal": "Repeat the twelve survival-cafe words already in data/speak/sets/speak-survival-cafe-1.json.",
+     "set": "speak-survival-cafe-1",
+     "note": "That set is machine-built and also unverified."
+    }
+   ],
+   "items": [
+    {
+     "id": "cafe-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+     "en": "a table for two, please",
+     "translit": "shulchan lishnayim, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-01"
+     }
+    },
+    {
+     "id": "cafe-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+     "en": "can I see the menu?",
+     "translit": "efshar lir'ot et hatafrit?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-02"
+     }
+    },
+    {
+     "id": "cafe-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי רוֹצֶה קָפֶה",
+     "en": "I would like a coffee",
+     "translit": "ani rotse kafe",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "cafe-03-m",
+       "cafe-03-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "cafe-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה הָפוּךְ",
+     "en": "latte-style milky coffee (lit. upside-down coffee)",
+     "translit": "kafe hafuch",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-04"
+     }
+    },
+    {
+     "id": "cafe-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶסְפְּרֶסוֹ",
+     "en": "espresso",
+     "translit": "espresso",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-05"
+     }
+    },
+    {
+     "id": "cafe-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה שָׁחוֹר",
+     "en": "black coffee",
+     "translit": "kafe shachor",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-06"
+     }
+    },
+    {
+     "id": "cafe-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "קָפֶה עִם חָלָב",
+     "en": "coffee with milk",
+     "translit": "kafe im chalav",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-07"
+     }
+    },
+    {
+     "id": "cafe-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "תֵּה עִם נַעֲנָע",
+     "en": "tea with mint",
+     "translit": "te im na'ana",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-08"
+     }
+    },
+    {
+     "id": "cafe-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם",
+     "en": "water",
+     "translit": "mayim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-09"
+     }
+    },
+    {
+     "id": "cafe-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+     "en": "cold water, please",
+     "translit": "mayim karim, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-10"
+     }
+    },
+    {
+     "id": "cafe-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בִּירָה",
+     "en": "beer",
+     "translit": "bira",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-11"
+     }
+    },
+    {
+     "id": "cafe-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יַיִן",
+     "en": "wine",
+     "translit": "yayin",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-12"
+     }
+    },
+    {
+     "id": "cafe-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לְחַיִּים!",
+     "en": "cheers!",
+     "translit": "lechayim!",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-13"
+     }
+    },
+    {
+     "id": "cafe-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְהַזְמִין?",
+     "en": "can I order?",
+     "translit": "efshar lehazmin?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-14"
+     }
+    },
+    {
+     "id": "cafe-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר עוֹד אֶחָד?",
+     "en": "can I have another one?",
+     "translit": "efshar od echad?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-15"
+     }
+    },
+    {
+     "id": "cafe-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "חוּמוּס",
+     "en": "hummus",
+     "translit": "humus",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-16"
+     }
+    },
+    {
+     "id": "cafe-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פָלָאפֶל",
+     "en": "falafel",
+     "translit": "falafel",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-17"
+     }
+    },
+    {
+     "id": "cafe-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שַׁקְשׁוּקָה",
+     "en": "shakshuka (eggs poached in tomato sauce)",
+     "translit": "shakshuka",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-18"
+     }
+    },
+    {
+     "id": "cafe-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פִּיתָה",
+     "en": "pita bread",
+     "translit": "pita",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-19"
+     }
+    },
+    {
+     "id": "cafe-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "סָלָט",
+     "en": "salad",
+     "translit": "salat",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "cafe-20"
+     }
+    },
+    {
+     "id": "cafe-21",
+     "source": "data/corpus/phrasebook.json",
+     "he": "טָעִים מְאֹד",
+     "en": "very tasty",
+     "translit": "taim meod",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-21"
+     }
+    },
+    {
+     "id": "cafe-22",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי צִמְחוֹנִי",
+     "en": "I'm vegetarian",
+     "translit": "ani tsimchoni",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "cafe-22-m",
+       "cafe-22-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "cafe-23",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי טִבְעוֹנִי",
+     "en": "I'm vegan",
+     "translit": "ani tiv'oni",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "cafe-23-m",
+       "cafe-23-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "cafe-24",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי אָלֶרְגִּי לְ",
+     "en": "I'm allergic to ...",
+     "translit": "ani alergi le-",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "cafe-24-m",
+       "cafe-24-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "cafe-25",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+     "en": "eat here or take away?",
+     "translit": "le'echol kan o lakachat?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-25"
+     }
+    },
+    {
+     "id": "cafe-26",
+     "source": "data/corpus/phrasebook.json",
+     "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+     "en": "the bill, please",
+     "translit": "hacheshbon, bevakasha",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-26"
+     }
+    },
+    {
+     "id": "cafe-27",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+     "en": "can I pay by card?",
+     "translit": "efshar leshalem bekartis?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "cafe-27"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pu-directions",
+   "title": "Asking for and following directions",
+   "status": "built-draft",
+   "nativeReview": true,
+   "lessons": [
+    {
+     "id": "il11",
+     "title": "Directions",
+     "track": "israel",
+     "wordCount": 6
+    },
+    {
+     "id": "I-15",
+     "title": "Directions: streets, corners and 'how do I get to'",
+     "track": "israel",
+     "wordCount": 16
+    }
+   ],
+   "phrasebookSituation": "directions",
+   "speakSets": [
+    "speak-survival-directions-1"
+   ],
+   "grammarNote": "Location questions use אֵיפֹה (“where”) or אֵיךְ מַגִּיעִים לְ… (“how does one get to…”), the second with an impersonal plural. Movement adverbs already in the phrasebook end in ־ָה: יָמִינָה, שְׂמֹאלָה, plus יָשָׁר for “straight.” Imperatives are gendered: לֵךְ / לְכִי, פְּנֵה / פְּנִי, stored on directions-08..10. Close-position phrases are frozen: עַל יַד (next to), מוּל (opposite), בַּפִּנָּה (on the corner). These notes only name forms that are already in the phrasebook and in I-15.",
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "directions-01",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "directions-02",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "directions-05",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "directions-06",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "directions-07",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "directions-08",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "line",
+     "id": "directions-09",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "line",
+     "id": "directions-10",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 9,
+     "kind": "line",
+     "id": "directions-03",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 10,
+     "kind": "line",
+     "id": "directions-04",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 11,
+     "kind": "line",
+     "id": "directions-11",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 12,
+     "kind": "line",
+     "id": "directions-15",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 13,
+     "kind": "word",
+     "id": "directions-12",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 14,
+     "kind": "word",
+     "id": "directions-13",
+     "source": "phrasebook",
+     "srsKind": "word",
+     "band": "extend"
+    },
+    {
+     "position": 15,
+     "kind": "line",
+     "id": "directions-14",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 16,
+     "kind": "line",
+     "id": "directions-16",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 17,
+     "kind": "line",
+     "id": "directions-17",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 18,
+     "kind": "line",
+     "id": "directions-18",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 19,
+     "kind": "line",
+     "id": "directions-19",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    },
+    {
+     "position": 20,
+     "kind": "line",
+     "id": "directions-20",
+     "source": "phrasebook",
+     "srsKind": "prayerLine",
+     "band": "extend"
+    }
+   ],
+   "listenDrills": [
+    {
+     "goal": "Hear each core directions line from the phrasebook manifest rows.",
+     "items": [
+      "directions-01",
+      "directions-02",
+      "directions-05",
+      "directions-06",
+      "directions-07",
+      "directions-08",
+      "directions-09",
+      "directions-10",
+      "directions-03",
+      "directions-04",
+      "directions-11",
+      "directions-15"
+     ],
+     "source": "audio manifest, phrasebook ids (israeli-only scope)"
+    },
+    {
+     "goal": "Hear the directions lesson words already on the Israel track.",
+     "items": [
+      "il11-w1",
+      "il11-w2",
+      "il11-w3",
+      "il11-w4",
+      "il11-w5",
+      "il11-w6",
+      "i-15-w1",
+      "i-15-w2",
+      "i-15-w3",
+      "i-15-w4",
+      "i-15-w5",
+      "i-15-w6",
+      "i-15-w7",
+      "i-15-w8",
+      "i-15-w9",
+      "i-15-w10",
+      "i-15-w11",
+      "i-15-w12",
+      "i-15-w13",
+      "i-15-w14",
+      "i-15-w15"
+     ],
+     "source": "audio manifest, lesson-word ids"
+    }
+   ],
+   "speakDrills": [
+    {
+     "goal": "Repeat the twelve survival-directions items already in data/speak/sets/speak-survival-directions-1.json.",
+     "set": "speak-survival-directions-1",
+     "note": "That set is machine-built and also unverified. Some items have no audioId yet."
+    }
+   ],
+   "items": [
+    {
+     "id": "directions-01",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה ...?",
+     "en": "where is ...?",
+     "translit": "eifo ...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-01"
+     }
+    },
+    {
+     "id": "directions-02",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיךְ מַגִּיעִים לְ...?",
+     "en": "how do you get to ...?",
+     "translit": "eich magi'im le...?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-02"
+     }
+    },
+    {
+     "id": "directions-03",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֶה רָחוֹק?",
+     "en": "is it far?",
+     "translit": "ze rachok?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-03"
+     }
+    },
+    {
+     "id": "directions-04",
+     "source": "data/corpus/phrasebook.json",
+     "he": "זֶה קָרוֹב",
+     "en": "it's near",
+     "translit": "ze karov",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-04"
+     }
+    },
+    {
+     "id": "directions-05",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יָשָׁר",
+     "en": "straight ahead",
+     "translit": "yashar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "directions-05"
+     }
+    },
+    {
+     "id": "directions-06",
+     "source": "data/corpus/phrasebook.json",
+     "he": "שְׂמֹאלָה",
+     "en": "left",
+     "translit": "smola",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "directions-06"
+     }
+    },
+    {
+     "id": "directions-07",
+     "source": "data/corpus/phrasebook.json",
+     "he": "יָמִינָה",
+     "en": "right",
+     "translit": "yamina",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "directions-07"
+     }
+    },
+    {
+     "id": "directions-08",
+     "source": "data/corpus/phrasebook.json",
+     "he": "לֵךְ יָשָׁר",
+     "en": "go straight",
+     "translit": "lech yashar",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "directions-08-m",
+       "directions-08-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "directions-09",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פְּנֵה שְׂמֹאלָה",
+     "en": "turn left",
+     "translit": "pne smola",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "directions-09-m",
+       "directions-09-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "directions-10",
+     "source": "data/corpus/phrasebook.json",
+     "he": "פְּנֵה יָמִינָה",
+     "en": "turn right",
+     "translit": "pne yamina",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "directions-10-m",
+       "directions-10-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "directions-11",
+     "source": "data/corpus/phrasebook.json",
+     "he": "עַל יַד",
+     "en": "next to",
+     "translit": "al yad",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-11"
+     }
+    },
+    {
+     "id": "directions-12",
+     "source": "data/corpus/phrasebook.json",
+     "he": "מוּל",
+     "en": "opposite",
+     "translit": "mul",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "directions-12"
+     }
+    },
+    {
+     "id": "directions-13",
+     "source": "data/corpus/phrasebook.json",
+     "he": "בַּפִּנָּה",
+     "en": "on the corner",
+     "translit": "bapina",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "directions-13"
+     }
+    },
+    {
+     "id": "directions-14",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֲנִי אָבוּד",
+     "en": "I'm lost",
+     "translit": "ani avud",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "ids": [
+       "directions-14-m",
+       "directions-14-f"
+      ]
+     },
+     "gendered": true
+    },
+    {
+     "id": "directions-15",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?",
+     "en": "can you show me on the map?",
+     "translit": "efshar lehar'ot li al hamapa?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-15"
+     }
+    },
+    {
+     "id": "directions-16",
+     "source": "data/corpus/phrasebook.json",
+     "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+     "en": "how long does it take?",
+     "translit": "kama zman ze lokeach?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-16"
+     }
+    },
+    {
+     "id": "directions-17",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַחוֹלִים?",
+     "en": "where is the hospital?",
+     "translit": "eifo beit hacholim?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-17"
+     }
+    },
+    {
+     "id": "directions-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+     "en": "where is the pharmacy?",
+     "translit": "eifo beit hamirkachat?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-18"
+     }
+    },
+    {
+     "id": "directions-19",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה הַמָּלוֹן?",
+     "en": "where is the hotel?",
+     "translit": "eifo hamalon?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-19"
+     }
+    },
+    {
+     "id": "directions-20",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה הַתַּחֲנָה?",
+     "en": "where is the station?",
+     "translit": "eifo hatachana?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-20"
+     }
+    }
+   ]
+  }
+ ]
+}

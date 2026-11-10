@@ -244,7 +244,7 @@ export function lineFor(trigger, vars = {}) {
 export const ROUTE_TRIGGERS = Object.freeze({
   firstday: 'firstday.start', 'firstday-ladder': 'firstday.ladder', placement: 'placement.start', install: 'install.page',
   checkpoint: 'checkpoint.home', scheduler: 'review.home',
-  lab: 'lab.home',
+  lab: 'lab.home', games: 'games.hub', arcade: 'games.hub',
   labgame: (_c, _f, p) => (LAB_DRILLS.includes(p.game) ? `lab.drill.${p.game}` : 'lab.home'),
   books: 'books.shelf', library: 'library.home', songs: 'songs.home', listen: 'listen.home',
   phrases: 'phrases.home', dialogues: 'dialogues.home', israel: 'israel.home',

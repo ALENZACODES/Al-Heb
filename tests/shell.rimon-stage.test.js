@@ -267,3 +267,21 @@ test('living with the shared showRimon hook: its slots and marks are left alone,
   s.setNow(new Date(2026, 10, 12, 14, 6)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); await flush(160);
   assert.equal(s.calls.length, 1);
 });
+
+test('section-home screens (settings, vocab, games) get a page still, and urlsForSituation names them', async () => {
+  for (const [route, situation, trigger] of [
+    ['settings', 'settings', 'settings.home'],
+    ['vocab', 'vocab', 'vocab.home'],
+    ['games', 'games', 'games.hub'],
+  ]) {
+    const s = setup({ route, store: createStore({ 'curriculum.progress': { completed: { l1: 1 } } }) });
+    await s.stage.ready; await s.ready();
+    const page = s.calls.find((c) => c.ms === 0);
+    assert.ok(page, route + ' should dress the companion');
+    assert.ok(STILL_IDS[trigger].includes(page.id), `${route} got ${page?.id}, want one of ${STILL_IDS[trigger]}`);
+    const urls = s.stage.urlsForSituation(situation);
+    assert.ok(Array.isArray(urls) && urls.length === 1, situation + ' urls');
+    assert.ok(STILL_IDS[trigger].includes(num(urls[0])), `${situation} url ${urls[0]}`);
+    s.stage.destroy();
+  }
+});

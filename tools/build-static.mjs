@@ -18,11 +18,13 @@ const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 
 const SHIP_FILES = ['index.html', 'offline.html', 'manifest.webmanifest', 'sw.js'];
 const SHIP_DIRS = ['src', 'assets', 'data', 'audio'];
-const EXCLUDE = (rel) => {
+export const EXCLUDE = (rel) => {
   const parts = rel.split('/');
   if (parts.some((p) => p === 'tools' || p === 'node_modules' || p.startsWith('_') || p === '__pycache__')) return true;
   if (/\.(py|md|test\.js|csv)$/i.test(rel)) return true;
   if (/^assets\/fonts\/[^/]+\.(ttf|otf|txt)$/i.test(rel)) return true;            // original TTFs/licences stay in the repo; woff2 ships
+  // Rimon's stills and their list are fetched at run time (src/shell/rimon-stage.js); the archived ones stay in the repo
+  if (rel.startsWith('data/images/rimon/')) return rel.startsWith('data/images/rimon/legacy/') || !/\.(webp|json)$/i.test(rel);
   if (rel.startsWith('data/images/') || rel === 'data/corpus/source-snapshot.json') return true; // build-time inputs
   if (rel.startsWith('data/') && !rel.endsWith('.json')) return true;
   if (rel.startsWith('audio/') && !/\.(mp3|m4a|ogg)$/i.test(rel)) return true;   // meta files stay in the repo

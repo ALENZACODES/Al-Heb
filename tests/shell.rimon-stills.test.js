@@ -13,7 +13,7 @@ const HAVE = RIMON_STILLS_AVAILABLE;
 test('every mapped still id is a three-digit (optional letter) slug', () => {
   for (const [sit, ids] of Object.entries(SITUATIONS)) {
     assert.ok(ids.length, sit);
-    for (const id of ids) assert.match(id, /^\d{3}[a-z]?$/, `${sit}:${id}`);
+    for (const id of ids) assert.match(id, /^(?:v2:)?\d{3}[a-z]?$/, `${sit}:${id}`);
   }
 });
 
@@ -24,8 +24,9 @@ test('the generated index matches files on disk and skips missing stills', () =>
   const v2 = fs.existsSync(v2dir)
     ? fs.readdirSync(v2dir).map((f) => /^rimon-(\d{3}[a-z]?)-([a-z0-9-]+)\.webp$/.exec(f)).filter(Boolean)
     : [];
-  const fromDisk = [...new Set([...v1, ...v2.map((m) => m[1])])].sort();
-  assert.deepEqual([...HAVE].sort(), fromDisk);
+  const fromDisk = [...v1, ...v2.map((m) => `v2:${m[1]}`)].sort();
+  // Unique: a v2 file does not also register as the same-numbered drawn still.
+  assert.deepEqual([...HAVE].sort(), [...new Set(fromDisk)].sort());
   const v2Map = {};
   for (const m of v2) if (!v2Map[m[1]]) v2Map[m[1]] = m[2];
   assert.deepEqual({ ...RIMON_STILLS_V2 }, v2Map);
@@ -106,10 +107,11 @@ test('planMoment uses burst for cheers, bounce for misses, and none when motion 
   assert.equal(shabbat.animate, false);
   assert.equal(planMoment('storybooks', { now: midweek, available }), null);
   assert.equal(stillUrl('025b'), 'data/images/rimon/rimon-025b.webp');
-  // v2 is a different catalogue (its 018 is not this set's 018): a plain id always means the numbered file; v2 only by name.
-  assert.equal(stillUrl('018'), 'data/images/rimon/rimon-018.webp');
-  if (RIMON_STILLS_V2['001']) assert.equal(stillUrl('v2:001'), `data/images/rimon/v2/rimon-001-${RIMON_STILLS_V2['001']}.webp`);
-  assert.equal(stillUrl('v2:999'), 'data/images/rimon/rimon-999.webp');
+  // Plain ids always mean the drawn set. A v2 picture is used only when asked for as v2:NNN.
+  assert.equal(stillUrl('001'), 'data/images/rimon/rimon-001.webp');
+  if (RIMON_STILLS_V2['001']) {
+    assert.equal(stillUrl('v2:001'), `data/images/rimon/v2/rimon-001-${RIMON_STILLS_V2['001']}.webp`);
+  }
   assert.equal(stillUrl('025b', 'data/images/rimon/', {}), 'data/images/rimon/rimon-025b.webp');
 
 });
@@ -163,7 +165,7 @@ test('mount shows a still on alef:rimon and hides it when the image errors', () 
   doc.dispatch('alef:rimon', { action: 'correct' });
   assert.equal(fig.hidden, false);
   assert.ok(fig.dataset.still);
-  assert.match(img.src, /rimon-\d{3}[a-z]?\.webp$/);
+  assert.match(img.src, /rimon-\d{3}[a-z]?(?:-[a-z0-9-]+)?\.webp$/);
   assert.ok(fig.classList.contains('is-burst'));
   // Fail-safe: a missing file removes the moment instead of leaving a broken image.
   const err = doc._listeners.get('img:error') || [];

@@ -2,7 +2,12 @@
 
 Updated 2026-11-10, 12:47 AM ET (America/Toronto), after John's note that Rimon has to be like the Kool-Aid Man: a big, bold, high-energy, show-up-everywhere mascot. Energy only — no Kool-Aid branding, pitcher, or slogan. Design stays frozen and on-model.
 
-Stills live at `data/images/rimon/rimon-###.webp`. The companion should fail safe: if a file is missing, show nothing (no broken-image icon, no throw). Entrance motion is a CSS burst-in or bounce, and must not run when `prefers-reduced-motion: reduce` is set (show the still only).
+Two picture catalogues share numbers but not poses:
+
+- Drawn set: `data/images/rimon/rimon-###.webp`, asked for by a plain id such as `023`.
+- Claude-order v2 set: `data/images/rimon/v2/rimon-###-<slug>.webp`, asked for only by name as `v2:023`. A v2 file is never treated as a replacement for the same-numbered drawn still.
+
+The companion should fail safe: if a file is missing, show nothing (no broken-image icon, no throw). Entrance motion is a CSS burst-in or bounce, and must not run when `prefers-reduced-motion: reduce` is set (show the still only).
 
 | Situation | Where it appears | Trigger | Still ids (preferred first) | Entrance |
 | --- | --- | --- | --- | --- |
@@ -34,6 +39,8 @@ Stills live at `data/images/rimon/rimon-###.webp`. The companion should fail saf
 | Awards / badges | Badge, certificate, level-up, collection | A new award | 176, 178, 180, 184, 187 | burst-in |
 | Reminders | Daily, morning, evening, streak risk, come back, goodnight | Re-engagement | 191, 192, 194, 197, 199, 200 | burst-in (200 is a soft bounce) |
 
-Bold rerolls of the tamest 001–025 stills, if present, are stored as `rimon-###b.webp` and should be preferred over the quieter original without deleting it.
+Bold rerolls of the tamest drawn 001–025 stills, if present, are stored as `rimon-###b.webp` and should be preferred over the quieter original without deleting it.
+
+Situation lists in `src/shell/rimon-stills.js` now follow the Lane A trigger map: drawn ids first, then the matching `v2:NNN` catalogue stills. Holiday rows use the festival-specific v2 stills (Hanukkah, Purim, Pesach, and the rest) rather than a short fallback-only list.
 
 Existing sprite sheets in `assets/img/rimon/` stay untouched. No main merge, no deploy.

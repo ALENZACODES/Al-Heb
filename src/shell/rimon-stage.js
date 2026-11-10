@@ -37,6 +37,12 @@ export const SITUATION_TRIGGERS = Object.freeze({
   welcomeBack: 'greet.back', lessonStart: 'learn.continue.next', bigCorrect: 'answer.correct.streak5', streakRisk: 'streak.atrisk',
   rest: 'streak.rest', lessonComplete: 'lesson.complete.great', unitComplete: 'lessons.10', recovered: 'offline.back', holiday: 'calendar.home',
   brainLab: 'lab.home', brainLabWin: 'lab.result.best', brainLabMiss: 'answer.wrong', storybooks: 'books.shelf', storyReader: 'books.shelf',
+  // section-home screens: settings, vocab, games, and the other learn hubs
+  settings: 'settings.home', vocab: 'vocab.home', games: 'games.hub', 'games-hub': 'games.hub',
+  phrases: 'phrases.home', typing: 'typing.home', grammar: 'grammar.home', roots: 'roots.home',
+  listen: 'listen.home', speak: 'speak.home', letters: 'letters.home', search: 'search.home',
+  about: 'about.home', help: 'help.home', israel: 'israel.home', synagogues: 'synagogues.home',
+  traditions: 'traditions.home', scan: 'scan.home', dialogues: 'dialogues.home',
 });
 const WATCHED = ['streak', 'awards.v1', 'lab.v1', 'books.finished.v1', 'curriculum.progress'];
 const IDLE_FIDGET_MS = 45000, IDLE_REPEAT_MS = 40000, IDLE_SLEEP_MS = 180000, LOADING_MS = 700, FLUSH_MS = 120;

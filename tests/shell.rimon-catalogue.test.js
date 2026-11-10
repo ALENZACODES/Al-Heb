@@ -135,11 +135,13 @@ test('a festival with no drawing of its own still greets with its own words, on 
   const own = (STILL_IDS['holiday.hanukkah'] || []).filter((id) => present.has(id));
   const p = pickStill('holiday.hanukkah', { present });
   assert.ok(p, 'Hanukkah gets a picture');
-  if (!own.length) assert.notEqual(p.trigger, 'holiday.hanukkah');
+  assert.equal(p.trigger === 'holiday.hanukkah', own.length > 0, 'its own drawing when there is one, a borrowed one otherwise');
   assert.equal(lineFor('holiday.hanukkah').en, 'Happy Hanukkah!');
-  // once the festival's own drawing exists it wins over the borrowed one
+  // with only the borrowed pictures listed it borrows; add one of its own and that one wins
   const mine = STILL_IDS['holiday.hanukkah'].find((id) => id.startsWith('a'));
-  assert.equal(pickStill('holiday.hanukkah', { present: new Set([...present, mine]) }).id, mine);
+  const borrowedOnly = new Set([...present].filter((id) => !STILL_IDS['holiday.hanukkah'].includes(id)));
+  assert.notEqual(pickStill('holiday.hanukkah', { present: borrowedOnly })?.trigger, 'holiday.hanukkah');
+  assert.equal(pickStill('holiday.hanukkah', { present: new Set([...borrowedOnly, mine]) }).id, mine);
 });
 
 test('catalogue file names travel in present.json (drawn ones only), not in the code every visitor loads', () => {

@@ -3,7 +3,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { containsSacredName, tokens, hebrewTokens, createGlossary, regionsFromBoxes, percentBox, sourceLabel, createDictionary, wordBreakdown, wordForWord, shortGloss,
+import { containsSacredName, tokens, hebrewTokens, isJunkToken, lineHadNoise, editDistance, createGlossary, regionsFromBoxes, percentBox, sourceLabel, createDictionary, wordBreakdown, wordForWord, shortGloss,
   PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, readerImage, otsuThreshold, boxOnOriginal,
   fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from '../src/camera/camera-client.js';
@@ -53,10 +53,26 @@ test('camera: bilingual lines, repeats, other forms and look-alike letters', () 
   assert.ok(twoLookAlikes('ביבר', 'כיכר')); assert.ok(!twoLookAlikes('יהורות', 'זהירות')); assert.ok(!twoLookAlikes('ביכר', 'כיכר')); assert.ok(!twoLookAlikes('אב', 'אבג'));
   assert.equal(LOOK_ALIKE.length, 11);
   assert.equal(repairNumber('2ו'), '12'); assert.equal(repairNumber('05ו'), '150'); assert.equal(repairNumber('12'), null); assert.equal(repairNumber('סו'), null); assert.equal(repairNumber('2א'), null);
+  assert.equal(repairNumber('סו', true), '10'); assert.equal(repairNumber('סוס', true), null); assert.equal(repairNumber('08ו001'), null);
   for (const [he, en, status] of [['חנויות אופטיקה', 'Optical Store', 'near'], ['ספריה', 'Library', 'full'], ['השירותים', 'Restrooms', 'full'], ['ביבר דיזנגוף', 'Dizengoff Square', 'near'],
     ['קפה 2ו', 'Coffee 12', 'near'], ['בית קפה', 'Coffee Shop', 'full'], ['מסעדה בשרה', 'Kosher Restaurant', 'near'], ['בשרה', null, 'none']]) {
     const r = glossary.translate(he); assert.deepEqual([r.en, r.status], [en, status], he);
   }
+});
+
+test('camera: reader noise, split lines and hidden letters', () => {
+  for (const junk of ['6ז0ז5', '|08ו001', 'חוש6פג\\', ':2', '05', '(7', 'ווג\\₪']) assert.equal(isJunkToken(junk), true, junk);
+  for (const word of ['חנות', '12', '18.50', '24', '2ו', 'קפה!', '+ית']) assert.equal(isJunkToken(word), false, word);
+  assert.deepEqual(hebrewTokens('חנות אופטיקה 6ז0ז5 |08ו001'), ['חנות', 'אופטיקה']);
+  assert.equal(lineHadNoise('חנות :21'), true); assert.equal(lineHadNoise('חנות אופטיקה'), false); assert.equal(lineHadNoise('יציאה / )+ואת'), false, 'what follows the slash is the other language');
+  assert.equal(editDistance('ביתמקחת', 'ביתמרקחת'), 1); assert.equal(editDistance('', 'אב'), 2);
+  for (const [he, en, status] of [['כיכר דיזנגוף / 50816 806ת6לום', 'Dizengoff Square', 'full'], ['בית מ קחת', 'Pharmacy', 'near'], ['שדרות 1 יהודה', 'Ben Yehuda Boulevard', 'near'],
+    ['אי כניסה', 'No Entry', 'near'], ['ברובים הגאים', 'Welcome', 'near'], ['תה סו', 'Tea 10', 'near'], ['קפה סוס', null, 'none'], ['ו קפה', null, 'none'], ['מכונית', null, 'none'], ['מ גות', null, 'none']]) {
+    const r = glossary.translate(he); assert.deepEqual([r.en, r.status], [en, status], he);
+  }
+  const regs = regionsFromBoxes([{ text: 'יציאה', x: 300, y: 10, w: 100, h: 40, conf: 95 }, { text: '/', x: 270, y: 10, w: 12, h: 40, conf: 90 }, { text: '%|א]', x: 150, y: 10, w: 100, h: 40, conf: 20 }], glossary);
+  assert.deepEqual([regs[0].en, regs[0].he, regs[0].box], ['Exit', 'יציאה', { x: 300, y: 10, w: 100, h: 40 }], 'on a bilingual line only the Hebrew is boxed and replaced');
+  assert.equal(regionsFromBoxes([{ text: 'חנות', x: 300, y: 10, w: 100, h: 40 }, { text: ':21', x: 200, y: 10, w: 50, h: 40 }], glossary)[0].partial, true);
 });
 
 test('camera: a real word is never "corrected" into a listed word (checked against every word in the app dictionary)', () => {
@@ -78,17 +94,21 @@ test('camera: the app phrasebook translates whole lines the word list cannot, an
   assert.deepEqual([regs[0].en, regs[0].translationSource], ['Thank you very much', 'phrasebook']);
 });
 
-test('camera: review round 1 rows (text level): no row gets worse, wrong answers stay rare, every source phrase translates', () => {
-  const { items } = JSON.parse(read('tools/camera-translate/tests/fixtures/review-r1-fails.json'));
-  assert.equal(items.length, 80);
-  let ok = 0; let wrong = 0; let source = 0;
-  for (const it of items) {
-    if (normEn(glossary.translate(it.he).en) === normEn(it.en)) source++;
-    const en = glossary.translate(it.ocr).en;
-    if (normEn(en) === normEn(it.en)) ok++; else if (en) wrong++;
+test('camera: review rows (text level): right answers do not fall, wrong answers stay rare, every source phrase translates', () => {
+  // Measured 2026-11-10. First review file (cloud reader), 80 rows: 15 right and 12 wrong as reviewed; 45 right, 4 wrong now.
+  // Second review file (on-device reader), 88 rows: 33 right and 2 wrong on the rules of the previous push; 50 right, 1 wrong now.
+  for (const [file, n, minRight, maxWrong] of [['review-r1-fails.json', 80, 45, 4], ['review-r2-fails.json', 88, 50, 1]]) {
+    const { items } = JSON.parse(read(`tools/camera-translate/tests/fixtures/${file}`));
+    assert.equal(items.length, n);
+    let ok = 0; let wrong = 0; let source = 0;
+    for (const it of items) {
+      if (normEn(glossary.translate(it.he).en) === normEn(it.en)) source++;
+      const en = glossary.translate(it.ocr).en;
+      if (normEn(en) === normEn(it.en)) ok++; else if (en) wrong++;
+    }
+    assert.equal(source, n, `${file}: every source phrase must translate when read correctly`);
+    assert.ok(ok >= minRight, `${file}: only ${ok} right`); assert.ok(wrong <= maxWrong, `${file}: ${wrong} wrong`);
   }
-  // Measured 2026-11-10: 43 right, 4 wrong (the reader returned a different real listed word), 33 left untranslated. Before the fixes: 15 right, 12 wrong.
-  assert.equal(source, 80); assert.ok(ok >= 43, `only ${ok} right`); assert.ok(wrong <= 4, `${wrong} wrong`);
 });
 
 test('camera: word boxes become right-to-left lines; a line with the name is held and its text is never returned', () => {
@@ -140,7 +160,9 @@ test('camera: word-for-word English is drawn only when every word is found as wr
   assert.equal(wordForWord('מחיר זזז', none, dict), null); assert.equal(wordForWord('12', none, dict), null); assert.equal(wordForWord('ארוך', none, dict), null);
   assert.equal(wordForWord(`מחיר ${NAME_SKELETON}`, none, dict), null);
   assert.equal(shortGloss('to tell (a story), to narrate'), 'Tell'); assert.equal(shortGloss('a bus (vehicle)'), 'Bus'); assert.equal(shortGloss('ice cream'), 'Ice Cream');
-  assert.equal(shortGloss('(marks a definite direct object; not translated)'), null); assert.equal(shortGloss(''), null);
+  assert.equal(shortGloss('(marks a definite direct object; not translated)'), null);
+  const gram = createDictionary({ fields: ['he', 'heUnpointed', 'en', 'pos', 'frequencyRank', 'translit'], rows: [['הֲ', 'ה', 'interrogative particle', 'particle', 3, 'ha'], ['שֶׁל', 'של', 'of', 'prep', 5, 'shel']] });
+  assert.equal(wordForWord('ה 12', none, gram), null); assert.equal(wordForWord('של', none, gram), null, 'grammar words are never drawn word for word'); assert.equal(shortGloss(''), null);
 });
 
 test('camera: reading preparation makes letters dark on light and maps a levelled box back onto the photo', () => {

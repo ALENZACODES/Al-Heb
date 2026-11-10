@@ -17,7 +17,7 @@ export function containsSacredName(he) {
 
 // ---------------------------------------------------------------- sign word list
 
-const EDGE_PUNCT = /^[.,;:!?"'()[\]|\-־׳״]+|[.,;:!?"'()[\]|\-־׳״]+$/g;
+const EDGE_PUNCT = /^[.,;:!?"'()[\]|\-־׳״+*=\\]+|[.,;:!?"'()[\]|\-־׳״+*=\\]+$/g;
 const SPLIT_PUNCT = /[\s.,;:!?\-־׳״"'()[\]|/\\]+/;
 const NUM_RE = /^[0-9]+(?:[.,:][0-9]+)*%?$|^[₪$€]$/;
 const LATIN_RE = /^[A-Za-z][A-Za-z0-9'&.-]*$/;
@@ -32,6 +32,17 @@ export function tokens(text) {
     for (const p of raw.split(SPLIT_PUNCT)) if (p) out.push(p);
   }
   return out;
+}
+
+/** Edit distance between two strings (letters added, removed or changed). */
+export function editDistance(a, b) {
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur.push(Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] !== b[j - 1] ? 1 : 0)));
+    prev = cur;
+  }
+  return prev[b.length];
 }
 
 /** Number of differing letters when a and b have the same length, else Infinity. */
@@ -51,10 +62,12 @@ export function twoLookAlikes(a, b) {
   return d === 2;
 }
 /** "2ו" -> "12": a price whose digit 1 or 0 was read as a look-alike Hebrew letter (the mixed token comes out reversed). Null if not that. */
-export function repairNumber(tok) {
-  if (!/[0-9]/.test(tok) || !/^[0-9וןס.,:]+$/.test(tok) || /^[0-9.,:]+$/.test(tok)) return null;
+export function repairNumber(tok, afterListedWord = false) {
+  // "סו" after a menu item is "10": no digit survived, so this is accepted only in that position and only for two or three such letters
+  if (afterListedWord && /^[וןס]{2,3}$/.test(tok) && tok.includes('ס') && /[ון]/.test(tok)) { const f = [...tok].reverse().join('').replace(/[ון]/g, '1').replace(/ס/g, '0'); return /^[1-9]/.test(f) ? f : null; }
+  if ([...tok].length > 5 || !/[0-9]/.test(tok) || !/^[0-9וןס.,:]+$/.test(tok) || /^[0-9.,:]+$/.test(tok)) return null;
   const fixed = [...tok].reverse().join('').replace(/[ון]/g, '1').replace(/ס/g, '0');
-  return NUM_RE.test(fixed) ? fixed : null;
+  return NUM_RE.test(fixed) && !/^0[0-9]/.test(fixed) ? fixed : null;
 }
 /** True when b is a with exactly one letter added or removed. */
 function oneLetterAddedOrRemoved(a, b) {
@@ -71,13 +84,30 @@ function englishOrder(segs) {
   return en;
 }
 
+const JUNK_INSIDE = /[\\|\]\[%+=*<>{}#@^~₪$€]/;
+/** A piece of reader noise rather than a word: Hebrew letters mixed with digits or symbols, or a number that starts with zero. */
+export function isJunkToken(raw) {
+  const t = stripMarks(String(raw ?? '')).replace(EDGE_PUNCT, '');
+  if (!t) return true;
+  if (NUM_RE.test(t)) return /^0[0-9]/.test(t) || !/^[0-9]+(?:[.,:][0-9]+)*%?[.,!?]?$|^[₪$€]$/.test(stripMarks(String(raw)).trim());   // ":2" or "(7" is noise, "12" and "18.50" are prices
+  if (repairNumber(t)) return false;
+  if (/[0-9]/.test(t)) return true;
+  return isHebrew(t) && JUNK_INSIDE.test(t);
+}
+
+/** True when the reader returned noise on this line besides its words (part of the sign may be hidden or unreadable). */
+export function lineHadNoise(text) {
+  const part = String(text ?? '').split('/').find((x) => isHebrew(x)) ?? '';
+  return part.split(/\s+/).filter(Boolean).some((raw) => { const t = stripMarks(raw).replace(EDGE_PUNCT, ''); return !LATIN_RE.test(t) && isJunkToken(raw); });
+}
+
 /**
  * Hebrew part of a line, as tokens. On a bilingual sign the reader returns both languages on one line; the English is
- * already English, so Latin words (and a number that follows one) are dropped. A line that repeats itself is halved.
- * Returns [] when the line has no Hebrew word at all.
+ * already English, so Latin words (and a number that follows one) are dropped, and so is reader noise (isJunkToken).
+ * A line that repeats itself is halved. Returns [] when the line has no Hebrew word at all.
  */
 export function hebrewTokens(text) {
-  const all = tokens(text);
+  const all = tokens(String(text ?? '').split(/\s+/).filter((raw) => LATIN_RE.test(raw.replace(EDGE_PUNCT, '')) || !isJunkToken(raw)).join(' '));
   if (!all.some((t) => isHebrew(t))) return [];
   const out = []; let inLatin = false;
   for (const t of all) {
@@ -96,14 +126,16 @@ export function hebrewTokens(text) {
  *   its words also count as real words, which are never treated as a misreading of a listed word
  * @returns {{translate:(text:string)=>{en:string|null,status:'full'|'near'|'none',translit:string|null,pointed:string|null,from?:string}}}
  *
- * Near matches (always marked 'near', never 'full'), for a word of four or more letters that is not listed:
+ * Near matches (always marked 'near', never 'full'), for a word that is not listed:
  *   1. a listed other form of a listed word (data.variants, for example a plural);
- *   2. exactly one listed word with one letter different (readers confuse look-alike letters far more often than they add or drop one);
- *   3. failing that, exactly one listed word with one letter added or removed;
- *   4. failing that, exactly one listed word with two letters different where BOTH are look-alike pairs (LOOK_ALIKE).
- * Two candidates at the same step means no guess is made, unless exactly one of them forms a listed phrase with the word
- * beside it. Any other two-letter difference is never accepted: on the round 1 review rows a general two-letter rule
- * produced more wrong answers than right ones.
+ *   2. listed words with one letter different (readers confuse look-alike letters far more often than they add or drop one);
+ *   3. failing that, listed words with one letter added or removed;
+ *   4. failing that (four letters or more), listed words with two letters different where BOTH are look-alike pairs.
+ * A candidate is accepted only if it is the only one at its step AND it makes sense where it stands: the word is alone on
+ * the line, or it forms a listed phrase with the word beside it, or it is a street/square name pattern, or a describing
+ * word beside a listed word. Several candidates: exactly one must form a listed phrase. A word of two or three letters, and
+ * a real Hebrew word (realNeighbours), are corrected only on the evidence of a listed phrase. A line with "/" is read as
+ * two languages: the first part that translates is used.
  */
 export function createGlossary(data, { phrasebook = [] } = {}) {
   const entries = new Map();
@@ -123,40 +155,85 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     for (const t of ts) realWords.add(t);
     if (key && en && !entries.has(key) && !phrases.has(key) && !containsSacredName(e.he)) phrases.set(key, { he: e.he, en: en[0].toUpperCase() + en.slice(1), translit: e.translit || null });
   }
-  const phraseWith = (cand, prev, next) => (prev && entries.has(`${prev} ${cand}`)) || (next && entries.has(`${cand} ${next}`));
-  const near = (tok, prev, next) => {
-    if ([...tok].length < 4) return null;
-    const real = realWords.has(tok);
-    const pool = vocab.filter((v) => v.length >= 3);
-    for (const hits of [pool.filter((v) => substitutions(tok, v) === 1), pool.filter((v) => oneLetterAddedOrRemoved(tok, v)), pool.filter((v) => twoLookAlikes(tok, v))]) {
-      const fit = hits.filter((h) => phraseWith(h, prev, next));
-      if (real) { if (fit.length === 1) return fit[0]; continue; }
-      if (hits.length === 1) return hits[0];
-      if (hits.length > 1) return fit.length === 1 ? fit[0] : null;
-    }
-    return null;
+  const describes = (w) => !!entries.get(w)?.describes;
+  const steps = (tok) => {
+    const n = [...tok].length; const pool = vocab.filter((v) => v.length >= 2);
+    const out = [pool.filter((v) => substitutions(tok, v) === 1), pool.filter((v) => oneLetterAddedOrRemoved(tok, v))];
+    if (n >= 4) out.push(pool.filter((v) => twoLookAlikes(tok, v)));
+    return out;
   };
-  function translate(text) {
-    const none = { en: null, status: 'none', translit: null, pointed: null };
-    let toks = hebrewTokens(text);
-    if (!toks.length) return none;
-    const whole = phrases.get(toks.join(' '));
-    const asPhrase = whole ? { en: whole.en, status: 'full', translit: whole.translit, pointed: whole.he, from: 'phrasebook' } : null;
-    let usedNear = false;
-    const raw = toks;
-    toks = raw.map((t, i) => {
-      if (vocabSet.has(t) || NUM_RE.test(t)) return t;
-      const fixedNumber = repairNumber(t); if (fixedNumber) { usedNear = true; return fixedNumber; }
-      if (t.length > 3 && t[0] === 'ה' && vocabSet.has(t.slice(1))) return t.slice(1);   // "the" joined to a listed word
-      const v = variants.get(t); if (v && vocabSet.has(v.of)) { if (!v.exact) usedNear = true; return v.of; }
-      const n = near(t, raw[i - 1], raw[i + 1]); if (n) usedNear = true; return n || t;
+  /** Candidates for every token: {exact} or {hits:[...first non-empty step], short, real}. */
+  const candidatesFor = (raw) => raw.map((t, i) => {
+    if (vocabSet.has(t) || NUM_RE.test(t)) return { exact: t };
+    const fixedNumber = repairNumber(t, i > 0 && vocabSet.has(raw[i - 1])); if (fixedNumber) return { exact: fixedNumber, near: true };
+    if (t.length > 3 && t[0] === 'ה' && vocabSet.has(t.slice(1))) return { exact: t.slice(1) };   // "the" joined to a listed word
+    const v = variants.get(t); if (v && vocabSet.has(v.of)) return { exact: v.of, near: !v.exact };
+    const n = [...t].length;
+    if (n < 2) return { hits: [] };
+    return { hits: steps(t).find((h) => h.length) || [], short: n < 4, real: realWords.has(t) };
+  });
+  const options = (c) => (c ? (c.exact ? [c.exact] : c.hits) : []);
+  const phraseFit = (h, prevs, nexts) => prevs.some((p) => entries.has(`${p} ${h}`)) || nexts.some((x) => entries.has(`${h} ${x}`));
+  const looseFit = (h, prevs, nexts) => (patterns.has(h) && nexts.some((x) => vocabSet.has(x))) || prevs.some((p) => patterns.has(p))
+    || (describes(h) && prevs.some((p) => vocabSet.has(p) && !describes(p))) || nexts.some((x) => describes(x) && !describes(h));
+  /** Resolve every token to a listed word where the rules allow. Returns {toks, usedNear}. */
+  const resolve = (raw) => {
+    const cands = candidatesFor(raw); let usedNear = false;
+    const words = raw.filter((t) => !NUM_RE.test(t) && !repairNumber(t)).length;
+    const toks = raw.map((t, i) => {
+      const c = cands[i];
+      if (c.exact) { if (c.near) usedNear = true; return c.exact; }
+      if (!c.hits.length) return t;
+      const prevs = options(cands[i - 1]); const nexts = options(cands[i + 1]);
+      const inPhrase = c.hits.filter((h) => phraseFit(h, prevs, nexts));
+      let pick = null;
+      if (inPhrase.length === 1) pick = inPhrase[0];
+      else if (!inPhrase.length && !c.short && !c.real && c.hits.length === 1 && (words === 1 || looseFit(c.hits[0], prevs, nexts))) pick = c.hits[0];
+      if (pick) { usedNear = true; return pick; }
+      return t;
     });
+    return { toks, usedNear };
+  };
+  const none = { en: null, status: 'none', translit: null, pointed: null };
+  // Whole listed phrases (and street, boulevard and square names) with the spaces taken out, for lines where part of a
+  // word is hidden or the reader split a word in two.
+  const targets = [];
+  for (const [key, e] of entries) if (key.replace(/ /g, '').length >= 5) targets.push({ joined: key.replace(/ /g, ''), en: e.en, translit: e.translit || null, pointed: e.pointed || e.he });
+  for (const [head, pattern] of patterns) {
+    const h = entries.get(head); if (!h) continue;
+    for (const [key, e] of entries) if (e.name) targets.push({ joined: (head + key).replace(/ /g, ''), en: pattern.replace('{x}', e.en), translit: [h.translit, e.translit].filter(Boolean).join(' ') || null, pointed: `${h.pointed || h.he} ${e.pointed || e.he}` });
+  }
+  /**
+   * Closest whole phrase for a line that could not be translated word by word. Accepted only when it is clearly the closest:
+   * the line is in two or more pieces, at most a quarter of the phrase's letters differ, and no other listed phrase that is
+   * also that close is within one more letter.
+   */
+  function closestPhrase(raw) {
+    const words = raw.filter((t) => !NUM_RE.test(t)); const letters = words.join(''); const numbers = raw.filter((t) => NUM_RE.test(t) && [...t].length > 1);
+    // One whole word on its own goes through the word rules only; a real word is never part of a guess.
+    if (words.length < 2 || [...letters].length < 4 || words.some((w) => realWords.has(w))) return null;
+    let best = null; let bestD = Infinity; let second = Infinity;
+    for (const t of targets) {
+      const limit = Math.max(1, Math.floor(t.joined.length / 4));
+      if (Math.abs(t.joined.length - letters.length) > limit) continue;
+      const d = editDistance(letters, t.joined);
+      if (d > limit) continue;
+      if (d < bestD) { second = bestD; bestD = d; best = t; } else if (d < second && t.en !== best.en) second = d;
+    }
+    if (!best || bestD === 0 || second - bestD < 2) return null;
+    return { en: [best.en, ...numbers].join(' '), status: 'near', translit: best.translit, pointed: best.pointed, from: 'closest-phrase' };
+  }
+  function translateTokens(raw) {
+    if (!raw.length) return none;
+    const whole = phrases.get(raw.join(' '));
+    const asPhrase = whole ? { en: whole.en, status: 'full', translit: whole.translit, pointed: whole.he, from: 'phrasebook' } : null;
+    const { toks, usedNear } = resolve(raw);
     const segs = [];
     for (let i = 0; i < toks.length;) {
       if (NUM_RE.test(toks[i])) { segs.push({ he: toks[i], en: toks[i], pointed: null, translit: toks[i], kind: 'literal' }); i++; continue; }
       let hit = null; let n = Math.min(maxLen, toks.length - i);
       for (; n > 0; n--) { hit = entries.get(toks.slice(i, i + n).join(' ')); if (hit) break; }
-      if (!hit) return asPhrase || none;
+      if (!hit) return asPhrase || closestPhrase(raw) || none;
       segs.push({ he: hit.he, en: hit.en, pointed: hit.pointed || null, translit: hit.translit || null, kind: 'word', describes: !!hit.describes });
       i += n;
     }
@@ -170,6 +247,13 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     return { en, status: usedNear ? 'near' : 'full',
       translit: segs.filter((s) => s.translit).map((s) => s.translit).join(' '),
       pointed: segs.map((s) => s.pointed || s.he).join(' ') };
+  }
+  function translate(text) {
+    const parts = String(text ?? '').split('/');
+    if (parts.length > 1) {      // two languages on one line: use the first part that translates
+      for (const part of parts) { const r = translateTokens(hebrewTokens(part)); if (r.en) return r; }
+    }
+    return translateTokens(hebrewTokens(text));
   }
   /** One listed word (single-word entries only), or null. */
   const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null, describes: !!e.describes } : null; };
@@ -251,10 +335,18 @@ export function regionsFromBoxes(boxes, glossary) {
   const out = [];
   for (const line of orderLines(boxes)) {
     if (!isHebrew(line.text)) continue;
+    // On a bilingual line ("Hebrew / English") only the Hebrew words are replaced: the box is drawn around them alone.
+    const slash = line.words.findIndex((w) => /\//.test(w.text));
+    const side = slash > 0 && line.words.slice(0, slash).some((w) => isHebrew(w.text)) ? line.words.slice(0, slash) : line.words;
+    const kept = side.filter((w) => isHebrew(w.text) || /[0-9]/.test(w.text)).filter((w) => !isJunkToken(w.text));
+    const words = kept.some((w) => isHebrew(w.text)) ? kept : side;
+    const x0 = Math.min(...words.map((w) => w.x)); const y0 = Math.min(...words.map((w) => w.y));
+    const box = { x: x0, y: y0, w: Math.max(...words.map((w) => w.x + w.w)) - x0, h: Math.max(...words.map((w) => w.y + w.h)) - y0 };
     const held = containsSacredName(line.text);
     const t = held ? { en: null, status: 'none', translit: null, pointed: null } : glossary.translate(line.text);
     if (!held && !t.en && tokens(line.text).join('').length < 2) continue; // a lone letter is almost always noise
-    out.push(makeRegion({ id: `r${out.length + 1}`, box: line.bbox, he: line.text, held, en: t.en,
+    const he = side === line.words ? line.text : side.map((w) => w.text).join(' ');
+    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, partial: !held && lineHadNoise(line.text),
       translationSource: t.en ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
   }
   return out;
@@ -262,7 +354,7 @@ export function regionsFromBoxes(boxes, glossary) {
 
 function makeRegion(r) {
   if (r.held) return { id: r.id, box: r.box, held: true, he: null, en: null, translationSource: null, translit: null, pointed: null, drawn: false, note: HELD_NOTE };
-  return { id: r.id, box: r.box, held: false, he: r.he, en: r.en || null, translationSource: r.en ? r.translationSource : null,
+  return { id: r.id, box: r.box, held: false, he: r.he, en: r.en || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
     translit: r.translit || null, pointed: r.pointed || null, drawn: !!r.drawn };
 }
 
@@ -276,8 +368,8 @@ export function percentBox(box, width, height) {
 export function sourceLabel(src) {
   if (src === 'word-list') return 'From the built-in word list.';
   if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
-  if (src === 'phrasebook') return 'From the Aleph phrasebook.';
-  if (src === 'word-for-word') return 'Word for word from the Aleph dictionary. The word order and the exact meaning can be off.';
+  if (src === 'phrasebook') return 'From the ALEF phrasebook.';
+  if (src === 'word-for-word') return 'Word for word from the ALEF dictionary. The word order and the exact meaning can be off.';
   return '';
 }
 
@@ -301,6 +393,7 @@ export function wordForWord(he, glossary, dictionary) {
   for (const w of words) {
     if (w.kind === 'number') { parts.push({ en: w.word, he: w.word, translit: w.word }); continue; }
     if (w.kind !== 'sign-list' && w.kind !== 'dictionary') return null;
+    if (w.kind === 'dictionary' && ([...w.word].length < 2 || !['noun', 'adj', 'adv', 'num', 'intj'].includes(w.senses[0].pos))) return null;   // no grammar words: their glosses are descriptions, not translations
     const en = w.kind === 'sign-list' ? w.senses[0].en : shortGloss(w.senses[0].en);
     if (!en) return null;
     parts.push({ en, he: w.senses[0].he, translit: w.senses[0].translit, pos: w.senses[0].pos || null });

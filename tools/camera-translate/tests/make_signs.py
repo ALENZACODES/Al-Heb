@@ -105,6 +105,7 @@ def main():
     # Signs for the browser tests that are not part of the measured set: one whose words are in the app dictionary but not in the
     # sign list (drawn word for word), kept here so the measured set stays at twenty.
     fx = HERE / 'fixtures'; fx.mkdir(exist_ok=True)
+    cv2.imwrite(str(fx / 'bilingual-exit.jpg'), render(['יציאה / Exit'], 'alef-bold', 70, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
     cv2.imwrite(str(fx / 'outside-list-salt.jpg'), render(['מלח'], 'alef-bold', 96, DARK, CREAM, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
     cv2.imwrite(str(fx / 'outside-list-big-house.jpg'), render(['בית גדול'], 'alef-bold', 84, WHITE, GREEN, 'center'), [cv2.IMWRITE_JPEG_QUALITY, 88])
     # One extra file for the metadata tests: the first sign saved the way a phone would, with camera details and a GPS position.
@@ -113,6 +114,67 @@ def main():
     gps[1] = 'N'; gps[2] = (43.0, 52.0, 0.0); gps[3] = 'W'; gps[4] = (79.0, 26.0, 0.0)
     phone.save(fx / 'phone-photo-with-exif.jpg', 'JPEG', exif=exif, quality=92)
     print(f'wrote {len(items)} sign images to {OUT}')
+
+# ---------------------------------------------------------------- the hard set (review round 2 categories)
+
+def h_dark(a):
+    f = a.astype(np.float32); f = 18 + (f - f.min()) / max(1, f.max() - f.min()) * 55
+    return np.clip(f + np_rng.normal(0, 4, f.shape), 0, 255).astype(np.uint8)
+def h_bright(a):
+    f = a.astype(np.float32); f = 185 + (f - f.min()) / max(1, f.max() - f.min()) * 65
+    return np.clip(f + np_rng.normal(0, 4, f.shape), 0, 255).astype(np.uint8)
+def h_occlude(a):
+    out = a.copy(); h, w = a.shape[:2]
+    bw = int(w * 0.07); x = rng.randint(int(w * 0.25), int(w * 0.7))
+    cv2.rectangle(out, (x, 0), (x + bw, h), (95, 95, 95), -1)      # a pole in front of the sign
+    return out
+def h_tight(a):
+    g = cv2.cvtColor(a, cv2.COLOR_BGR2GRAY); bgv = int(np.median(np.concatenate([g[0], g[-1]])))
+    ys, xs = np.where(np.abs(g.astype(int) - bgv) > 60)
+    if not len(xs): return a
+    m = 5
+    return a[max(0, ys.min() - m):ys.max() + m, max(0, xs.min() - m):xs.max() + m].copy()
+def h_angle(a):
+    h, w = a.shape[:2]
+    return cv2.warpAffine(a, cv2.getRotationMatrix2D((w / 2, h / 2), rng.choice([-8, 8]), 1.0), (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+HARD = {'dark': h_dark, 'bright': h_bright, 'occlude': h_occlude, 'tight': h_tight, 'angle': h_angle}
+
+
+def hard_set():
+    """Every sign under the harder conditions the second review used: dark, bright, a pole in front, a tight crop, an 8-degree
+    tilt, a bilingual line (Hebrew / English), and vowel-pointed lettering. 20 x 7 = 140 images, built in memory."""
+    global rng, np_rng
+    rng = random.Random(99); np_rng = np.random.default_rng(99)
+    pointed = {}
+    try:
+        for e in json.load(open(ROOT / 'data/camera/sign-glossary.json', encoding='utf-8'))['entries']:
+            pointed[e['he']] = e['pointed']
+    except OSError:
+        pass
+    for sid, kind, pairs, font, size, fg, bg, align, _ in SIGNS:
+        weight = 300 if sid == 'bus-stop' else 600
+        lines = [{'he': h, 'en': e} for h, e in pairs]
+        base = render([p[0] for p in pairs], font, size, fg, bg, align, weight)
+        for name, fn in HARD.items():
+            yield sid, name, lines, cv2.imencode('.jpg', fn(base.copy()), [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
+        both = render([f'{h} / {e}' for h, e in pairs], font, int(size * 0.7), fg, bg, align, weight)
+        yield sid, 'bilingual', lines, cv2.imencode('.jpg', both, [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
+        if all(p[0] in pointed for p in pairs):
+            nik = render([pointed[p[0]] for p in pairs], 'frank-ruhl' if font == 'heebo' else font, size, fg, bg, align, weight, spacing=1.9)
+            yield sid, 'nikkud', lines, cv2.imencode('.jpg', nik, [cv2.IMWRITE_JPEG_QUALITY, 88])[1].tobytes()
+
+
+def write_set_dir(out, gen):
+    out = Path(out); out.mkdir(parents=True, exist_ok=True)
+    items = []
+    for sid, variant, lines, data in gen():
+        name = f'{sid}__{variant}.jpg'
+        (out / name).write_bytes(data)
+        items.append({'id': f'{sid}__{variant}', 'file': name, 'variant': variant, 'lines': lines, 'synthetic': True})
+    json.dump({'synthetic': True, 'note': 'Rendered text with simulated conditions. NOT photographs.', 'count': len(items), 'items': items},
+              open(out / 'ground-truth.json', 'w'), ensure_ascii=False, indent=1)
+    print(f'wrote {len(items)} images to {out}')
+
 
 def write_wear_dir(out):
     """Write the 120 wear images and a ground-truth.json to a folder (for tools/camera-translate/e2e-batch.mjs)."""
@@ -131,5 +193,7 @@ if __name__ == '__main__':
     import sys
     if len(sys.argv) == 3 and sys.argv[1] == '--wear-dir':
         write_wear_dir(sys.argv[2])
+    elif len(sys.argv) == 3 and sys.argv[1] == '--hard-dir':
+        write_set_dir(sys.argv[2], hard_set)
     else:
         main()

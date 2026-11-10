@@ -508,43 +508,50 @@
    "he": "ירושלים",
    "pointed": "יְרוּשָׁלַיִם",
    "translit": "yerushalayim",
-   "en": "Jerusalem"
+   "en": "Jerusalem",
+   "name": true
   },
   {
    "he": "תל אביב",
    "pointed": "תֵּל אָבִיב",
    "translit": "tel aviv",
-   "en": "Tel Aviv"
+   "en": "Tel Aviv",
+   "name": true
   },
   {
    "he": "חיפה",
    "pointed": "חֵיפָה",
    "translit": "cheifa",
-   "en": "Haifa"
+   "en": "Haifa",
+   "name": true
   },
   {
    "he": "הרצל",
    "pointed": "הֶרְצְל",
    "translit": "hertzel",
-   "en": "Herzl"
+   "en": "Herzl",
+   "name": true
   },
   {
    "he": "בן יהודה",
    "pointed": "בֶּן יְהוּדָה",
    "translit": "ben yehuda",
-   "en": "Ben Yehuda"
+   "en": "Ben Yehuda",
+   "name": true
   },
   {
    "he": "יפו",
    "pointed": "יָפוֹ",
    "translit": "yafo",
-   "en": "Jaffa"
+   "en": "Jaffa",
+   "name": true
   },
   {
    "he": "דיזנגוף",
    "pointed": "דִּיזֶנְגּוֹף",
    "translit": "dizengof",
-   "en": "Dizengoff"
+   "en": "Dizengoff",
+   "name": true
   },
   {
    "he": "סכנה",
@@ -1011,6 +1018,13 @@
    "pointed": "רוֹפֵא שִׁנַּיִם",
    "translit": "rofe shinayim",
    "en": "Dentist"
+  },
+  {
+   "he": "מיוחד",
+   "pointed": "מְיֻחָד",
+   "translit": "meyuchad",
+   "en": "Special",
+   "describes": true
   }
  ],
  "variants": [
@@ -1242,6 +1256,7 @@
   "מחקר",
   "מטרה",
   "מידי",
+  "מיחד",
   "מכון",
   "מכונית",
   "מכיר",

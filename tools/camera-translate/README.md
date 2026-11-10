@@ -2,10 +2,10 @@
 
 **The app does not use anything in this folder at run time.** The Camera Translator (`#/camera`) runs entirely in the browser, with no server and no upload (owner decision, 2026-11-10). This folder is what measures it:
 
-- `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes all 120 wear variants).
+- `tests/signs/`: the 20 computer-made test signs, their ground truth and the saved results; `tests/make_signs.py` regenerates them (`--wear-dir DIR` writes the 120 wear variants, `--hard-dir DIR` the 133 harder ones).
 - `e2e-camera.mjs`, `e2e-batch.mjs`: drive the real screen and the real in-browser reader in headless Chromium, under the site security policy.
 - `build_real_neighbours.py`: rebuilds the guard list in the sign word list after the list is edited.
-- `camera_translate/hebrew.py`: a Python copy of the word-list rules, held to the same cases file as the app (`data/camera/glossary-cases.json`).
+- `translate-cli.mjs`: runs the app's own word-list rules from the command line; `camera_translate/hebrew.py` calls it, so the rig has no second copy of the rules. Needs Node.
 - `eval.py`: a second measuring stick using Tesseract on this machine.
 - `camera_translate/app.py` and the rest: a FastAPI service built before the no-server decision (Tesseract or Google Cloud reading, Pillow/OpenCV overlay). It is not deployed and the app has no code that can call it. Its Google adapters have never been run against Google. The sections below describe that service as built.
 

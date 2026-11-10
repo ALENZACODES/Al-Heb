@@ -41,6 +41,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `read-my-way` | keep | Tradition-aware reading. |
 | `rules` | keep | Pronunciation rules reference. |
 | `intermediate` | keep | After r10. |
+| `practical` | keep | Babbel-style conversation units behind Practical; draft, needs native review; not a 126th lesson. |
 | `grammar` | keep | Reference notes. |
 | `compare` | keep | Target for `record-compare`. |
 | `vocab-themes` | keep | Theme packs (shared audio button). |

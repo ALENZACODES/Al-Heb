@@ -23,7 +23,7 @@ Each unit is a small, situation-shaped pack, closer to a Babbel lesson than to a
 3. **Listening drills** that play existing audio-manifest rows: phrasebook ids (Israeli-only scope, same as the survival phrasebook) and lesson-word ids such as `il06-w4` or `i-13-w2`. Missing files are a known worktree/audio issue, not a reason to invent clips.
 4. **Speaking drills** that reuse the machine-built survival speak sets (`data/speak/sets/speak-survival-*.json`). Those sets are also unverified and some items have no `audioId` yet.
 
-The two built units live in `data/curriculum/practical-units.json`. They are not wired into the router in this change.
+The built units live in `data/curriculum/practical-units.json` and are wired behind the Practical preview route (`#/practical`, `#/practical/:id`). They are not a 126th lesson.
 
 ## Map: Israeli-track lessons → practical units
 
@@ -36,11 +36,12 @@ Israel-track openers are `il01`–`il24`. Intermediate Israel lessons already si
 | pu-intro | Introducing yourself | il03, I-25 | small-talk (name / from) | speak-talking-asking-1 | planned — native review |
 | pu-numbers | Numbers and prices | il04, il05 | numbers | speak-time-numbers-2 | planned — native review |
 | **pu-cafe** | **Ordering at a cafe** | **il06, il07, I-13** | **cafe (27)** | **speak-survival-cafe-1** | **built-draft — native review still required** |
-| pu-shop | Shops, markets, paying | il08, il09, I-12, I-43 | shop | speak-survival-shop-1 | planned — native review |
-| pu-taxi | Taxi and getting a ride | il10, I-23 | taxi | speak-places-travel-1 | planned — native review |
+| **pu-restaurant** | **Ordering at a restaurant** | **il06, il07, I-13, I-38** | **cafe lines used at a restaurant; no separate restaurant phrasebook** | **speak-survival-cafe-1** | **built-draft — native review still required** |
+| **pu-shop** | **Shops, markets, paying** | **il08, il09, I-12, I-43** | **shop (20)** | **speak-survival-shop-1** | **built-draft — native review still required** |
+| **pu-transport** | **Taxi, bus and train** | **il10, I-11, I-23** | **taxi (15)** | **speak-survival-taxi-1** | **built-draft — native review still required** |
 | **pu-directions** | **Asking for and following directions** | **il11, I-15** | **directions (20)** | **speak-survival-directions-1** | **built-draft — native review still required** |
 | pu-time | Days, time, appointments | il12, il22 | (lesson words; no dedicated situation) | speak-time-numbers-2 | planned — native review |
-| pu-small-talk | How are you, where from, work | il13, I-25, I-36 | small-talk | speak-survival-small-talk-1 | planned — native review |
+| **pu-small-talk** | **How are you, where from, work** | **il13, I-25, I-36** | **small-talk (19)** | **speak-survival-small-talk-1** | **built-draft — native review still required** |
 | pu-family | Family and who you are | il14, I-42 | (lesson words) | speak-people-family-1 | planned — native review |
 | pu-weather | Weather and what to take | il15, I-24 | (lesson words) | speak-nature-animals-3 | planned — native review |
 | pu-verbs-now | Present-tense “I do” | il16 | (lesson words; grammar-led) | speak-doing-verbs-1 | planned — native review |
@@ -86,7 +87,7 @@ Speak set ids are the ones already generated under `data/speak/sets/`. If a plan
 - Divine Name, default rite, and גּוֹי / גּוֹיָה cards — unchanged, including in pu-shabbat-table.
 - Festival-specific greetings still without a sourced token stay in their existing hold (see `docs/review/JOHN-DECISIONS.md`); I-50 already has the greetings that were accepted into lessons.
 - Audio files are not in this worktree; listening drills name manifest ids only.
-- Do not invent recordings, do not add a 126th lesson, and do not wire these units into the app until a native pass and a small player hook have been reviewed.
+- Do not invent recordings and do not add a 126th lesson. The Practical route is a preview: it shows the draft units with a native-review badge.
 
 ## Where the code already is
 

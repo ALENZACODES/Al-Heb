@@ -258,6 +258,9 @@ test('one Rimon: a Rimon drawn into the page (in-page animation, Brain Lab pictu
   const { QUIET_CSS, IN_PAGE_RIMON } = await import('../src/shell/rimon-stage.js');
   for (const sel of IN_PAGE_RIMON) for (const other of ['.rimon-companion.rimon-corner', '.rimon-moment', '.alef-rimon-spot']) assert.ok(QUIET_CSS.includes(`body:has(#main ${sel}) ${other}`), sel + ' ' + other);
   assert.ok(IN_PAGE_RIMON.includes('.lab-art.hero') && IN_PAGE_RIMON.includes('.rimon-inline'));
+  const companion = await import('../src/shell/rimon.js');
+  assert.equal(IN_PAGE_RIMON, companion.IN_PAGE_RIMON, 'one list for the corner Rimon and the stage');
+  for (const sel of ['.alef-continue-rimon', '.alef-celebrate-rimon']) assert.ok(IN_PAGE_RIMON.includes(sel), sel);
   // and the stage tells the other Rimon pictures to stay away while it is there
   const s = setup({ route: 'lab' });
   await s.stage.ready;

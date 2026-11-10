@@ -44,7 +44,7 @@ export function presentFiles(json) {
  */
 export const QUIET_DAYS = Object.freeze(['yom-hashoah', 'yom-hazikaron', 'tisha-bav']);
 /** Screens with prayer, Torah and the service: Rimon steps aside so the text has the screen to itself. */
-export const QUIET_ROUTES = Object.freeze(['torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'listen-shelf', 'morning', 'text']);
+export const QUIET_ROUTES = Object.freeze(['torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'listen-shelf', 'morning', 'text', 'ask']);
 
 // ---------------------------------------------------------------- triggers
 const L = (en, he) => (he ? Object.freeze({ en, he }) : Object.freeze({ en }));

@@ -1,5 +1,8 @@
 import { mountSpeechBubble } from './rimon-speech.js';
 import { projectStreak } from '../curriculum/streak.js';
+/** Rimon pictures that screens draw into the page themselves: the corner Rimon steps aside while one is there, and the stage keeps
+ * its pop-ups away (src/shell/rimon-stage.js). The in-page animation, the Learn card, the lesson cheer and the Brain Lab pictures that show Rimon. */
+export const IN_PAGE_RIMON=Object.freeze(['.rimon-inline','.alef-continue-rimon','.alef-celebrate-rimon','.lab-rimon','.lab-art.hero','.lab-art.win','.lab-art.done']);
 // Twelve drawings per action: start, ten in-betweens, finish.
 export const ACTIONS = Object.freeze({
   blink:{ms:45,label:'Ready to learn',priority:0},
@@ -143,7 +146,7 @@ export function mountRimon({store,doc=document}={}) {
   };
   const reduce=()=>{reset();host.classList.toggle('rimon-static',!!media?.matches);};
   // One Rimon per screen: when the page draws its own Rimon (a lesson summary, the Learn card, a say-bubble) the corner one steps aside, without counting as dismissed.
-  const OWN='.rimon-inline,.alef-continue-rimon,.alef-celebrate-rimon';
+  const OWN=IN_PAGE_RIMON.join(',');
   let yielded=false;
   const yieldCheck=()=>{
     if(!alive)return;

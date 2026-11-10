@@ -98,6 +98,7 @@ export function isJunkToken(raw) {
 /** True when the reader returned noise on this line besides its words (part of the sign may be hidden or unreadable). */
 export function lineHadNoise(text) {
   const part = String(text ?? '').split('/').find((x) => isHebrew(x)) ?? '';
+  // a stray mark standing on its own (a dash, a bar) is noise too; a word with punctuation attached is not
   return part.split(/\s+/).filter(Boolean).some((raw) => { const t = stripMarks(raw).replace(EDGE_PUNCT, ''); return !LATIN_RE.test(t) && isJunkToken(raw); });
 }
 
@@ -211,7 +212,7 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
   function closestPhrase(raw) {
     const words = raw.filter((t) => !NUM_RE.test(t)); const letters = words.join(''); const numbers = raw.filter((t) => NUM_RE.test(t) && [...t].length > 1);
     // One whole word on its own goes through the word rules only; a real word is never part of a guess.
-    if (words.length < 2 || [...letters].length < 4 || words.some((w) => realWords.has(w))) return null;
+    if (words.length < 2 || [...letters].length < 4 || words.some((w) => [...w].length >= 3 && !vocabSet.has(w) && realWords.has(w))) return null;
     let best = null; let bestD = Infinity; let second = Infinity;
     for (const t of targets) {
       const limit = Math.max(1, Math.floor(t.joined.length / 4));
@@ -346,15 +347,16 @@ export function regionsFromBoxes(boxes, glossary) {
     const t = held ? { en: null, status: 'none', translit: null, pointed: null } : glossary.translate(line.text);
     if (!held && !t.en && tokens(line.text).join('').length < 2) continue; // a lone letter is almost always noise
     const he = side === line.words ? line.text : side.map((w) => w.text).join(' ');
-    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, partial: !held && lineHadNoise(line.text),
+    const confs = words.map((w) => w.conf).filter((c) => Number.isFinite(c));
+    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, partial: !held && lineHadNoise(line.text), conf: confs.length ? confs.reduce((a, c) => a + c, 0) / confs.length : null,
       translationSource: t.en ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
   }
   return out;
 }
 
 function makeRegion(r) {
-  if (r.held) return { id: r.id, box: r.box, held: true, he: null, en: null, translationSource: null, translit: null, pointed: null, drawn: false, note: HELD_NOTE };
-  return { id: r.id, box: r.box, held: false, he: r.he, en: r.en || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
+  if (r.held) return { id: r.id, box: r.box, conf: r.conf ?? null, held: true, he: null, en: null, translationSource: null, translit: null, pointed: null, drawn: false, note: HELD_NOTE };
+  return { id: r.id, box: r.box, conf: r.conf ?? null, held: false, he: r.he, en: r.en || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
     translit: r.translit || null, pointed: r.pointed || null, drawn: !!r.drawn };
 }
 

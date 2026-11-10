@@ -1,6 +1,6 @@
 # Camera Translator (`#/camera`): What It Is, What Was Reused, What Was Measured
 
-Last updated 2026-11-10 (fourth pass).
+Last updated 2026-11-10 (fifth pass).
 
 ## In One Paragraph
 
@@ -10,7 +10,7 @@ A learner photographs a Hebrew sign or menu and sees the English drawn over the 
 
 1. The photo is redrawn through a canvas: upright, at most 2000 px on the long side, no location or camera details.
 2. A tilted sign is levelled (`deskew` in `src/photo/preprocess.js`).
-3. For the reader only, the picture is enlarged if small, its letters are made black on white whatever the sign's colours were, and a white frame is added so letters at the edge of a tight crop are not lost. Two page modes are tried and the more confident reading is kept.
+3. For the reader only, the picture's letters are made black on white whatever the sign's colours were, and a white frame is added so letters at the edge of a tight crop are not lost. The picture is read at a standard size (two page modes, the more confident kept), then read again at the size that makes its letters about 44 pixels tall. The reader makes different mistakes at different letter sizes; line by line, the reading the word list recognises is kept. A line still untranslated after that is cut out and read once more on its own.
 4. Words are put in right-to-left reading order and grouped into lines (`src/photo/order-lines.js`).
 5. Each Hebrew line is translated:
    - reader noise is dropped first (letters mixed with digits or symbols, a number with punctuation stuck to it), and on a line with a slash only the Hebrew side is used;
@@ -53,24 +53,33 @@ Every number below is on **computer-made sign images**, in headless desktop Chro
 
 ### The App's Own Path (In The Browser)
 
-`node tools/camera-translate/e2e-batch.mjs <folder>`. Results files in `tools/camera-translate/tests/signs/`: `results-browser.json`, `results-browser-wear.json`, `results-browser-hard.json`.
+`node tools/camera-translate/e2e-batch.mjs <folder>`. Results files in `tools/camera-translate/tests/signs/`: `results-browser.json`, `-wear.json`, `-hard.json`, `-review-phrases.json`.
 
 | Set | Images | Lines | Character error rate | Lines read exactly | Lines with the right English on the photo | Wrong English drawn |
 |---|---|---|---|---|---|---|
-| Stored 20 signs | 20 | 28 | 2.9% | 23 | 27 (96.4%) | 0 |
-| Wear: noise, blur, 4-degree tilt, perspective, low contrast, clean | 120 | 168 | 4.0% | 132 | 159 (94.6%) | 0 |
-| Hard: dark, bright, a pole in front, tight crop, 8-degree tilt, bilingual, vowel-pointed | 133 | 185 | 8.2% | 119 | 162 (87.6%) | 2 |
+| Stored 20 signs | 20 | 28 | 1.9% | 25 | 27 (96.4%) | 0 |
+| Wear: clean, noise, blur, 4-degree tilt, perspective, low contrast | 120 | 168 | 1.9% | 150 | 162 (96.4%) | 0 |
+| Hard: dark, bright, a pole in front, tight crop, 8-degree tilt, bilingual, vowel-pointed | 133 | 185 | 5.9% | 137 | 169 (91.4%) | 2 |
+| Review phrases: the 48 sign phrases named in the two review files, each under twelve conditions | 576 | 576 | 4.4% | 495 | 545 (94.6%) | 7 |
+| All four | 849 | 957 | | 807 | 903 (94.4%) | 9 |
 
-Hard set by condition, lines with the right English: dark 27 of 28, bright 27 of 28, tight crop 27 of 28, 8-degree tilt 26 of 28, bilingual 27 of 28, vowel-pointed 15 of 17, a pole in front 13 of 28.
+The same figures split by whether something is in front of the sign:
+
+| | Lines | Right English | Wrong English drawn |
+|---|---|---|---|
+| Every condition except the pole | 881 | 863 (98.0%) | 1 |
+| A pole hiding about 7% of the sign's width | 76 | 40 (52.6%) | 8 |
 
 How to read this:
 
-- **The hard set is below the 92 bar** because of the pole. With a grey bar hiding about 7% of the sign's width, the reader loses one or two letters or the whole line; 13 of 28 lines were recovered, 15 were left untranslated. Without that condition the hard set is 149 of 157 (94.9%).
-- The 2 wrong drawings are both from the pole condition and both are partial readings: "Store" where the sign said shoe shop and only the first word was readable, and "Forbidden" where the sign said no smoking and only the first word was readable. Each is a correct translation of what was read and a wrong translation of the sign. Such lines are now marked "partly read" when the reader also returned noise.
-- One sign (`shoe-shop`) is kept outside the word list on purpose and is never translated: 1 of the 28, 6 of the 168, 6 of the 185.
-- 18 of the 20 base signs were written from the same list of sign words as the word list. This measures reading and lookup. It does not measure how many real-world signs the list covers.
-- The hard set was built after reading the second review file, to copy its conditions. It is the builder's own imitation of those conditions, not the review's images.
-- Mean time per image was about 0.3 s on this desktop, after the reader had loaded. Phone speed was not measured.
+- **A partly hidden sign is the unsolved case.** About half of those lines are recovered. The 8 wrong drawings there are translations of the part that could be read ("Store" for a shoe shop sign, "Forbidden 2" where the pole was read as a digit). They are right for what was read and wrong for the sign.
+- The one wrong drawing elsewhere is a tight crop that the reader turned into a different real word that the phrasebook holds.
+- One sign in the first three sets (`shoe-shop`) is kept outside the word list on purpose and is never translated: 13 of the 381 lines in those sets.
+- The review-phrases set uses phrases chosen by the review, not by the builder, but every one of them is now in the word list, and the images are the builder's renderings, not the review's.
+- None of this measures how many real-world signs the word list covers.
+- Mean time per image was 0.2 to 0.3 s on this desktop, after the reader had loaded. Phone speed was not measured.
+
+What this pass changed, on the wear and hard sets: lines read exactly went from 132 to 150 of 168 and from 119 to 137 of 185; lines with the right English from 159 to 162 and from 162 to 169. The gain came from reading at a second, letter-height-matched size (the first size alone was also changed from 1800 to 1200 pixels after a sweep: character error 4.0% at 1800, 2.7% at 1200, 3.0% at 900, 3.1% at 600 on the wear set).
 
 ### Review Rows (Text Level)
 
@@ -94,7 +103,10 @@ The two review files list example failures with the reader's raw output. Those r
 
 ### Things Tried And Not Kept
 
+
 - A third reading pass on a grey (not black-and-white) picture when the first two were not confident: 156 of 168 lines against 158 without it on the set as it then was. Removed.
+- A looser limit for whole-phrase guessing (a quarter of the letters rounded up instead of down): 2 more right rows on each review fixture, but on 20,000 random pairs of real dictionary words it guessed a listed phrase 49 times against once. Kept rounded down; a unit test holds the rate.
+- Hiding a translation when unread ink sits beside the line (to stop partial translations of hidden signs): not built, because an arrow or logo beside a one-word sign would also hide a correct translation, and that could not be measured here.
 - Accepting any two-letter difference for words of six letters or more: on the review rows it produced 3 wrong answers for 2 right ones. Replaced by the narrower look-alike rule.
 
 ## Word List
@@ -103,12 +115,12 @@ The two review files list example failures with the reader's raw output. Those r
 
 `realNeighbours` (375 words) is built by `tools/camera-translate/build_real_neighbours.py` from the dictionary and phrasebook: real words that sit one letter, or two look-alike letters, from a listed word. A unit test runs all 5,184 single dictionary words through the translator and requires that none is "corrected".
 
-## Checks That Ran (2026-11-10, Fourth Pass)
+## Checks That Ran (2026-11-10, Fifth Pass)
 
-- `node --test tests/camera.model.test.js`: 16 passed.
+- `node --test tests/camera.model.test.js`: 18 passed.
 - `node --test tests/camera.browser.test.js`: 5 passed, in headless Chromium with the `_headers` Content-Security-Policy on the page. Every test asserts no policy violations, no request other than GET, and no address contacted other than the app's own.
-- `python3 -m pytest tools/camera-translate/tests -q`: 20 passed. The rig now runs the app's own word-list rules through Node (`translate-cli.mjs`), so there is one implementation.
-- `npm test` (the full unit tier): 3,326 passed, 0 failed, 10 skipped.
+- `python3 -m pytest tools/camera-translate/tests -q`: 20 passed.
+- `npm test` (the full unit tier): 3,328 passed, 0 failed, 10 skipped.
 
 ## Not Done, Not Measured
 

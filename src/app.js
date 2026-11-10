@@ -23,6 +23,7 @@ import { stampDayStart } from './awards/daystart.js';
 import { installSpeechChunker } from './shell/speech-chunker.js';
 import { sfx } from './audio/sfx.js';
 installSpeechChunker(); // the device voice never gets one long utterance (phones cut it off after a few seconds)
+document.querySelectorAll('link[data-defer-style]').forEach((link)=>{link.media='all';}); // non-critical CSS is linked with media=print so it is not render-blocking
 import('./shell/voice-help.js').then((m) => m.installVoiceHelp()).catch(() => {}); // a computer with no Hebrew voice gets one note with the fix
 
 const settings = createSettings(store);

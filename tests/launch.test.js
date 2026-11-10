@@ -53,3 +53,27 @@ test('launch: shots script lists the same 8 screens', () => {
   for (const n of NAMES) assert.ok(src.includes(`name: '${n}'`), n);
   assert.match(src, /390/); assert.match(src, /1280/);
 });
+
+test('launch: Privacy and Terms are linked from the footer, Settings and first-run', () => {
+  const html = read('index.html');
+  assert.match(html, /href="#\/privacy">Privacy</);
+  assert.match(html, /href="#\/terms">Terms &amp; sources</);
+  const settings = read('src/shell/settings.view.js');
+  assert.match(settings, /href: '#\/privacy'/);
+  assert.match(settings, /href: '#\/terms'/);
+  const first = read('src/onboarding/firstrun.view.js');
+  assert.equal((first.match(/href: '#\/privacy'/g) || []).length >= 2, true, 'first-run should link Privacy on the questions and the plan');
+  assert.equal((first.match(/href: '#\/terms'/g) || []).length >= 2, true, 'first-run should link Terms on the questions and the plan');
+});
+
+test('launch: 404.html is a self-contained not-found page that can map a path to a hash route', () => {
+  assert.ok(existsSync(join(root, '404.html')), '404.html missing');
+  const off404 = read('404.html');
+  assert.ok(!/(?:href|src)="https?:/.test(off404), '404.html must not request an external URL (it may be served from a nested path)');
+  assert.match(off404, /Page not found/);
+  assert.match(off404, /Open ALEF/);
+  assert.match(off404, /#\//);
+  assert.match(off404, /Al-Heb/);
+  assert.match(off404, /<html lang="en"/);
+  assert.match(off404, /<h1>/);
+});

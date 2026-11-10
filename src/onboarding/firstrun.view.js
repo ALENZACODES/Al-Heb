@@ -200,7 +200,7 @@ export function mount(root, ctx) {
       if (typeof ctx.route === 'function') ctx.route(href); else { try { globalThis.location.hash = startHref(); } catch { /* tests */ } }
     }
     body.replaceChildren(h('p', { class: 'ob-lede' }, 'Let’s find a comfortable place to begin. Tell us what you can read now, then choose what you want to learn.'), form,
-      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
+      h('p', { class: 'muted ob-fine' }, 'Your answer is saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. ', h('a', { href: '#/how' }, 'How this works'), '. ', h('a', { href: '#/accessibility', id: 'ob-a11y-link' }, 'Accessibility options'), '.'));
     showPage(page);
   }
 
@@ -291,7 +291,7 @@ export function mount(root, ctx) {
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-congregation', onclick: () => go('congregation') }, 'Change pronunciation style'),
         h('button', { type: 'button', class: 'btn secondary', id: 'ob-change-minutes', onclick: () => go('minutes') }, 'Change goal or minutes a day')),
       h('details', { class: 'ob-more', id: 'ob-sound-plan' }, h('summary', {}, 'Sound'), soundNote(settings.get(SETTINGS_KEY_PRONUNCIATION)), silentToggle()),
-      h('p', { class: 'muted' }, 'Saved only on this device. Settings has the full list of choices.'));
+      h('p', { class: 'muted' }, 'Saved only on this device. ', h('a', { href: '#/privacy' }, 'Privacy'), ' · ', h('a', { href: '#/terms' }, 'Terms'), '. Settings has the full list of choices.'));
   }
 
   function render() {

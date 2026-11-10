@@ -19,6 +19,7 @@ export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudfla
 /** Runtime files that are not in the precache list but that the app or the host needs. Each is [path-or-dir, why]. */
 export const EXTRAS = [
   ['sw.js', 'service worker'],
+  ['404.html', 'self-contained not-found page for static hosts (not in the first-install precache)'],
   ['_headers', 'Cloudflare Pages headers'],
   ['robots.txt', 'search crawler rules'],
   ['sitemap.xml', 'search sitemap for the app shell'],

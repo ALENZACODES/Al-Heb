@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#16301c">
+  <title>Page not found — ALEF</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 1.1rem/1.5 system-ui, -apple-system, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 max(1rem, env(safe-area-inset-left)) env(safe-area-inset-bottom); background: #16301c; color: #f3efa8; }
+    h1 { font-size: 1.6rem; color: #f3dfa6; }
+    a { color: #e8c97a; display: inline-flex; align-items: center; justify-content: center; min-block-size: 44px; min-inline-size: 44px; padding: 0.5rem 0.75rem; }
+    @media (prefers-color-scheme: light) {
+      body { background: #f6efe0; color: #16301c; }
+      h1 { color: #16301c; }
+      a { color: #1c4023; }
+    }
+  </style>
+  <script>
+    /* GitHub Pages and other static hosts serve this file for unknown paths. Hash routes live at /#/path, so a typo such as /privacy is moved there when it has no file extension. The repo folder name is used only when the site is served from /Al-Heb/. */
+    (function () {
+      var parts = (location.pathname || '/').split('/').filter(function (s) { return s && s !== 'index.html' && s !== '404.html'; });
+      var atRepo = parts[0] === 'Al-Heb';
+      var base = atRepo ? '/Al-Heb/' : '/';
+      var rest = (atRepo ? parts.slice(1) : parts).join('/');
+      window.__alefHome = base;
+      if (rest && !/\.[A-Za-z0-9]{1,8}$/.test(rest)) {
+        location.replace(base + '#/' + rest + (location.search || ''));
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Page not found</h1>
+    <p>This address is not a page of ALEF. Open ALEF from the home page, or use a link that starts with #/.</p>
+    <p><a id="alef-home" href="./">Open ALEF</a></p>
+  </main>
+  <script>
+    if (window.__alefHome) document.getElementById('alef-home').setAttribute('href', window.__alefHome);
+  </script>
+</body>
+</html>

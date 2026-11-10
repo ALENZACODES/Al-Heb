@@ -1,0 +1,134 @@
+[
+  {
+    "id": "aleph",
+    "he": "א",
+    "pick": "tilted X with a diagonal spine",
+    "score": 9.6
+  },
+  {
+    "id": "bet",
+    "he": "ב",
+    "pick": "open-left box with an extra-long floor",
+    "score": 9.7
+  },
+  {
+    "id": "gimel",
+    "he": "ג",
+    "pick": "walking stick taking a step",
+    "score": 9.5
+  },
+  {
+    "id": "dalet",
+    "he": "ד",
+    "pick": "square table corner",
+    "score": 9.7
+  },
+  {
+    "id": "he",
+    "he": "ה",
+    "pick": "doorway with detached left post",
+    "score": 9.8
+  },
+  {
+    "id": "vav",
+    "he": "ו",
+    "pick": "single hanging nail",
+    "score": 9.5
+  },
+  {
+    "id": "zayin",
+    "he": "ז",
+    "pick": "nail with a wide baseball cap",
+    "score": 9.6
+  },
+  {
+    "id": "chet",
+    "he": "ח",
+    "pick": "bridge with both legs attached",
+    "score": 9.8
+  },
+  {
+    "id": "yod",
+    "he": "י",
+    "pick": "tiny floating comma",
+    "score": 9.7
+  },
+  {
+    "id": "kaf",
+    "he": "כ",
+    "pick": "rounded open-left mitten",
+    "score": 9.7
+  },
+  {
+    "id": "kaf-final",
+    "he": "ך",
+    "pick": "long-necked hook with a straight drop",
+    "score": 9.4
+  },
+  {
+    "id": "lamed",
+    "he": "ל",
+    "pick": "flagpole sticking high above the fence",
+    "score": 9.7
+  },
+  {
+    "id": "mem-final",
+    "he": "ם",
+    "pick": "sealed square lunchbox",
+    "score": 9.8
+  },
+  {
+    "id": "nun",
+    "he": "נ",
+    "pick": "small right-backed seat",
+    "score": 9.4
+  },
+  {
+    "id": "nun-final",
+    "he": "ן",
+    "pick": "long icicle below the floor",
+    "score": 9.7
+  },
+  {
+    "id": "samekh",
+    "he": "ס",
+    "pick": "closed round life ring",
+    "score": 9.8
+  },
+  {
+    "id": "pe",
+    "he": "פ",
+    "pick": "rounded mouth with one tooth",
+    "score": 9.8
+  },
+  {
+    "id": "pe-final",
+    "he": "ף",
+    "pick": "long hanging hook with an inner tooth",
+    "score": 9.3
+  },
+  {
+    "id": "qof",
+    "he": "ק",
+    "pick": "table with a leg below the floor",
+    "score": 9.7
+  },
+  {
+    "id": "resh",
+    "he": "ר",
+    "pick": "rounded bent pipe",
+    "score": 9.7
+  },
+  {
+    "id": "shin",
+    "he": "ש",
+    "pick": "three candle flames on one holder",
+    "score": 9.8
+  },
+  {
+    "id": "tav",
+    "he": "ת",
+    "pick": "gate with a bent left boot",
+    "score": 9.5
+  }
+]

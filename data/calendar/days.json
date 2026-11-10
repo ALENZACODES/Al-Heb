@@ -1,0 +1,466 @@
+{
+ "schema": "alef-calendar-days/1",
+ "note": "Explanatory copy for the day pages (/day/<iso-date>). Written for Aleph 2026-11-07 in plain English, Reform-friendly, no halachic ruling: dates and customs are the widely shared ones; a community's own practice comes first. Keys are the holiday ids of src/curriculum/calendar.js plus the generic days (shabbat, erev-shabbat, rosh-chodesh, erev-festival). `tr` follows the app's transliteration style (data/homepage/prayers.json: Israeli reading, ch for chet and chaf, no diacritics). `words` carry pointed Hebrew written for this file; not reviewed by a Hebrew teacher. `readings` name what is read or said; `texts` are ids of data/corpus/registry.json that the app can open (shown only when the id exists in the loaded registry). `lesson` is the festival word pack id under /festivals/<id> (shown only when the route exists). Nothing here renders audio.",
+ "days": {
+  "shabbat": {
+   "he": "שַׁבָּת",
+   "tr": "Shabbat",
+   "en": "Shabbat (the Sabbath)",
+   "what": [
+    "Shabbat is the weekly day of rest, from Friday at sundown to Saturday after nightfall.",
+    "It recalls the seventh day of creation (Genesis 2:1-3) and the going out from Egypt (Deuteronomy 5:15), and the Ten Commandments ask us to remember it and keep it.",
+    "For most Jews it is the centre of the week: candles, a shared meal, a slower pace, prayer and the weekly Torah portion.",
+    "Reform Judaism treats how to rest as a personal and family choice; the invitation is to set the day apart in a way that is meaningful to you."
+   ],
+   "customs": [
+    "Friday evening: light two candles before sunset, say Kiddush over wine or grape juice and HaMotzi over two challot.",
+    "Kabbalat Shabbat (welcoming Shabbat) in the synagogue, with the song Lecha Dodi.",
+    "Saturday morning: the weekly Torah portion and its haftarah are read.",
+    "Saturday night: Havdalah with wine, spices and a braided candle marks the return to the week."
+   ],
+   "words": [
+    { "he": "שַׁבָּת שָׁלוֹם", "tr": "Shabbat shalom", "en": "a peaceful Shabbat (the greeting)" },
+    { "he": "נֵרוֹת", "tr": "nerot", "en": "candles" },
+    { "he": "קִדּוּשׁ", "tr": "kiddush", "en": "sanctification; the blessing over wine" },
+    { "he": "חַלָּה", "tr": "challah", "en": "braided Shabbat bread" },
+    { "he": "מְנוּחָה", "tr": "menuchah", "en": "rest" },
+    { "he": "הַבְדָּלָה", "tr": "havdalah", "en": "separation; the ceremony that ends Shabbat" },
+    { "he": "שָׁבוּעַ טוֹב", "tr": "shavua tov", "en": "a good week (said after Havdalah)" }
+   ],
+   "readings": ["Candle blessing, Kiddush and HaMotzi on Friday evening", "Lecha Dodi at Kabbalat Shabbat", "The weekly Torah portion and haftarah on Saturday morning", "Havdalah on Saturday night"],
+   "texts": ["candle-shabbat", "kiddush-shabbat-eve", "hamotzi", "lecha-dodi-1", "kiddush-veshamru", "havdalah-opening", "havdalah-spices", "havdalah-flame", "havdalah-hamavdil"],
+   "lesson": "shabbat-ready"
+  },
+  "erev-shabbat": {
+   "he": "עֶרֶב שַׁבָּת",
+   "tr": "erev Shabbat",
+   "en": "Friday, the eve of Shabbat",
+   "what": [
+    "The Jewish day begins at sundown, so Shabbat starts on Friday evening.",
+    "Friday is the day of getting ready: cooking, setting the table, and lighting candles before sunset.",
+    "The candle-lighting time shown on this page is a fixed number of minutes before sunset for your chosen city, the custom most communities follow."
+   ],
+   "customs": [
+    "Light the candles before the time shown, then say the blessing.",
+    "Kiddush over wine or grape juice, HaMotzi over challah, and a shared meal."
+   ],
+   "words": [
+    { "he": "עֶרֶב", "tr": "erev", "en": "evening; the eve of a day" },
+    { "he": "הַדְלָקַת נֵרוֹת", "tr": "hadlakat nerot", "en": "candle lighting" },
+    { "he": "שְׁקִיעָה", "tr": "shki'ah", "en": "sunset" }
+   ],
+   "readings": ["Candle blessing before sunset", "Kiddush for Shabbat evening", "HaMotzi"],
+   "texts": ["candle-shabbat", "kiddush-shabbat-eve", "hamotzi"],
+   "lesson": "shabbat-ready"
+  },
+  "rosh-chodesh": {
+   "he": "רֹאשׁ חֹדֶשׁ",
+   "tr": "Rosh Chodesh",
+   "en": "Rosh Chodesh (the new month)",
+   "what": [
+    "Rosh Chodesh, literally 'head of the month', marks the start of each month of the Hebrew calendar, which follows the moon.",
+    "A Hebrew month has 29 or 30 days; after a 30-day month Rosh Chodesh lasts two days (the 30th and the 1st).",
+    "In the Torah it was announced with trumpet blasts and extra offerings (Numbers 10:10, 28:11-15); today it is a small festive day with additions to the prayers.",
+    "It has long been linked with women, and many Reform and other communities hold women's Rosh Chodesh groups."
+   ],
+   "customs": [
+    "Half-Hallel (psalms of praise) and Ya'aleh V'yavo are added to the service; the Torah reading is Numbers 28:1-15.",
+    "The new month is announced in the synagogue on the Shabbat before (Birkat HaChodesh).",
+    "People wish each other 'chodesh tov', a good month."
+   ],
+   "words": [
+    { "he": "חֹדֶשׁ", "tr": "chodesh", "en": "month" },
+    { "he": "יָרֵחַ", "tr": "yare'ach", "en": "moon" },
+    { "he": "חֹדֶשׁ טוֹב", "tr": "chodesh tov", "en": "a good month (the greeting)" },
+    { "he": "הַלֵּל", "tr": "Hallel", "en": "psalms of praise (Psalms 113-118)" }
+   ],
+   "readings": ["Half-Hallel", "Ya'aleh V'yavo in the Amidah", "Torah: Numbers 28:1-15"],
+   "texts": []
+  },
+  "erev-festival": {
+   "he": "עֶרֶב חַג",
+   "tr": "erev chag",
+   "en": "Eve of a festival",
+   "what": [
+    "A festival begins at sundown the evening before its date, so this evening is when the holiday starts.",
+    "On the eve of a major festival candles are lit before sunset, as on Friday, with the festival's blessing and Shehecheyanu."
+   ],
+   "customs": ["Light candles before the time shown.", "A festive meal with Kiddush for the festival."],
+   "words": [
+    { "he": "חַג", "tr": "chag", "en": "festival" },
+    { "he": "חַג שָׂמֵחַ", "tr": "chag sameach", "en": "happy festival (the greeting)" }
+   ],
+   "readings": ["Candle blessing for the festival", "Shehecheyanu"],
+   "texts": ["shehecheyanu", "kiddush-wine-1"]
+  },
+  "rosh-hashanah": {
+   "he": "רֹאשׁ הַשָּׁנָה",
+   "tr": "Rosh HaShanah",
+   "en": "Rosh Hashanah (the Jewish New Year)",
+   "what": [
+    "Rosh Hashanah, on 1 Tishrei, is the Jewish New Year and the start of the ten Days of Awe that end on Yom Kippur.",
+    "The Torah calls it a day of sounding the shofar (Numbers 29:1); the rabbis understood it as the anniversary of creation and a day of judgement, when the world and each life are weighed.",
+    "Its mood is serious but hopeful: honest self-examination, apology and repair, together with sweet food for a sweet year.",
+    "Most North American Reform congregations keep one day; some keep two, as Israel and traditional communities do."
+   ],
+   "customs": [
+    "Hearing the shofar, a ram's horn, blown in the synagogue.",
+    "Apples dipped in honey and a round challah, for a sweet, whole year.",
+    "Tashlich: casting breadcrumbs into flowing water on the afternoon of the first day, symbolically letting go of the past year's wrongs.",
+    "Greeting: Shanah tovah, a good year, or L'shanah tovah tikateivu, may you be written for a good year."
+   ],
+   "words": [
+    { "he": "שׁוֹפָר", "tr": "shofar", "en": "ram's horn" },
+    { "he": "תַּפּוּחַ בִּדְבַשׁ", "tr": "tapuach bidvash", "en": "apple in honey" },
+    { "he": "שָׁנָה טוֹבָה", "tr": "shanah tovah", "en": "a good year (the greeting)" },
+    { "he": "תְּשׁוּבָה", "tr": "teshuvah", "en": "return, repentance" },
+    { "he": "תַּשְׁלִיךְ", "tr": "tashlich", "en": "casting away (the riverside ceremony)" }
+   ],
+   "readings": ["Torah: the binding of Isaac, Genesis 22 (read on the first day in most Reform congregations) and Genesis 21", "Haftarah: 1 Samuel 1-2:10, and Jeremiah 31 on the second day", "The shofar service: Malchuyot, Zichronot, Shofarot", "Shehecheyanu and the festival Kiddush"],
+   "texts": ["shehecheyanu", "kiddush-wine-1"],
+   "lesson": "rosh-hashanah"
+  },
+  "yom-kippur": {
+   "he": "יוֹם כִּפּוּר",
+   "tr": "Yom Kippur",
+   "en": "Yom Kippur (the Day of Atonement)",
+   "what": [
+    "Yom Kippur, on 10 Tishrei, is the holiest day of the Jewish year, a day of fasting, prayer and atonement that closes the Days of Awe.",
+    "The Torah sets it as a day to 'afflict yourselves' and do no work (Leviticus 16:29-31, 23:27-32).",
+    "Tradition teaches that it atones for wrongs between a person and God, but wrongs against other people must first be put right with them.",
+    "It is one day in every stream of Judaism, from sundown to nightfall, about 25 hours."
+   ],
+   "customs": [
+    "Fasting from food and drink (those whose health does not allow it are not expected to fast).",
+    "Wearing white; many avoid leather shoes.",
+    "Five services, from Kol Nidrei in the evening to Ne'ilah at dusk, ending with one long shofar blast.",
+    "Confession (Vidui) said together in the plural, and Yizkor, the memorial prayer.",
+    "Greeting: G'mar chatimah tovah, may you be sealed for good."
+   ],
+   "words": [
+    { "he": "צוֹם", "tr": "tzom", "en": "fast" },
+    { "he": "סְלִיחָה", "tr": "slichah", "en": "forgiveness; sorry" },
+    { "he": "כָּל נִדְרֵי", "tr": "Kol Nidrei", "en": "'all vows', the evening prayer that opens the day" },
+    { "he": "נְעִילָה", "tr": "Ne'ilah", "en": "closing; the final service" },
+    { "he": "גְּמַר חֲתִימָה טוֹבָה", "tr": "g'mar chatimah tovah", "en": "may you be sealed for good (the greeting)" }
+   ],
+   "readings": ["Kol Nidrei (evening)", "Torah: Deuteronomy 29:9-14 and 30:11-20 in Reform congregations (Leviticus 16 in traditional ones); Haftarah Isaiah 57:14-58:14", "Afternoon: Leviticus 19 (Reform) and the Book of Jonah", "Avinu Malkeinu, Vidui (confession), Yizkor, Ne'ilah"],
+   "texts": [],
+   "lesson": "yom-kippur"
+  },
+  "sukkot": {
+   "he": "סֻכּוֹת",
+   "tr": "Sukkot",
+   "en": "Sukkot (the Festival of Booths)",
+   "what": [
+    "Sukkot begins on 15 Tishrei, five days after Yom Kippur, and lasts seven days; the first day is a full festival day and the rest are Chol HaMoed, the festival's weekdays.",
+    "It recalls the forty years in the wilderness, when the Israelites lived in temporary shelters (Leviticus 23:42-43), and it is the autumn harvest festival, called 'the season of our joy'.",
+    "The sukkah, a hut with a roof of branches open to the sky, is a reminder of how fragile shelter is and how much we depend on one another.",
+    "It is one of the three pilgrimage festivals, with Pesach and Shavuot."
+   ],
+   "customs": [
+    "Building a sukkah and eating, and sometimes sleeping, in it.",
+    "Waving the four species: lulav (palm), hadas (myrtle), aravah (willow) and etrog (citron).",
+    "Inviting guests, including the symbolic ushpizin, the ancestors.",
+    "Hallel and the festival Kiddush; Shehecheyanu on the first night."
+   ],
+   "words": [
+    { "he": "סֻכָּה", "tr": "sukkah", "en": "booth, hut" },
+    { "he": "לוּלָב", "tr": "lulav", "en": "palm frond" },
+    { "he": "אֶתְרוֹג", "tr": "etrog", "en": "citron" },
+    { "he": "אֻשְׁפִּיזִין", "tr": "ushpizin", "en": "guests (Aramaic)" },
+    { "he": "חַג שָׂמֵחַ", "tr": "chag sameach", "en": "happy festival" }
+   ],
+   "readings": ["Torah: Leviticus 22:26-23:44 on the first day", "Haftarah: Zechariah 14", "Hallel each day; Kohelet (Ecclesiastes) on the Shabbat of Chol HaMoed", "Shehecheyanu and Kiddush"],
+   "texts": ["shehecheyanu", "kiddush-wine-1"],
+   "lesson": "sukkot"
+  },
+  "shemini-atzeret": {
+   "he": "שְׁמִינִי עֲצֶרֶת וְשִׂמְחַת תּוֹרָה",
+   "tr": "Shemini Atzeret veSimchat Torah",
+   "en": "Shemini Atzeret and Simchat Torah",
+   "what": [
+    "Shemini Atzeret, the 'eighth day of assembly' on 22 Tishrei, closes the Sukkot season as a festival of its own (Leviticus 23:36).",
+    "Simchat Torah, 'rejoicing in the Torah', is the day the yearly cycle of Torah reading ends and begins again: the last verses of Deuteronomy are read and then the first verses of Genesis.",
+    "In Israel and in Reform congregations the two are kept on the same day; traditional diaspora communities keep Simchat Torah on the next day, 23 Tishrei.",
+    "The prayer for rain (Geshem) is said from this day, as the rainy season begins in the Land of Israel."
+   ],
+   "customs": [
+    "Hakafot: carrying the Torah scrolls around the synagogue in seven circuits, with singing and dancing.",
+    "Every scroll is taken out; children are called up together for a blessing under a tallit.",
+    "Reading the end of Deuteronomy (V'zot HaBerachah) and the beginning of Genesis.",
+    "Yizkor is said on Shemini Atzeret."
+   ],
+   "words": [
+    { "he": "תּוֹרָה", "tr": "Torah", "en": "Torah, teaching" },
+    { "he": "הַקָּפוֹת", "tr": "hakafot", "en": "circuits with the Torah scrolls" },
+    { "he": "גֶּשֶׁם", "tr": "geshem", "en": "rain" },
+    { "he": "בְּרֵאשִׁית", "tr": "Bereshit", "en": "'In the beginning', the first word of the Torah" },
+    { "he": "שִׂמְחָה", "tr": "simchah", "en": "joy" }
+   ],
+   "readings": ["Torah: Deuteronomy 33-34 (V'zot HaBerachah), then Genesis 1:1-2:3", "Haftarah: Joshua 1", "The prayer for rain (Geshem); Yizkor", "V'zot HaTorah as each scroll is lifted"],
+   "texts": ["shehecheyanu", "vezot-hatorah", "torah-bless-1", "torah-bless-2"],
+   "lesson": "shemini-atzeret"
+  },
+  "simchat-torah": {
+   "he": "שִׂמְחַת תּוֹרָה",
+   "tr": "Simchat Torah",
+   "en": "Simchat Torah",
+   "what": [
+    "Simchat Torah, 'rejoicing in the Torah', is the day the yearly cycle of Torah reading ends and begins again.",
+    "The last verses of Deuteronomy are read and then, without a pause, the first verses of Genesis: the Torah has no end.",
+    "In traditional diaspora communities it falls on 23 Tishrei, the day after Shemini Atzeret; in Israel and in Reform congregations the two are one day."
+   ],
+   "customs": [
+    "Hakafot: seven circuits around the synagogue with every Torah scroll, singing and dancing.",
+    "Children are called up together for a blessing under a tallit.",
+    "Reading V'zot HaBerachah and Bereshit."
+   ],
+   "words": [
+    { "he": "תּוֹרָה", "tr": "Torah", "en": "Torah, teaching" },
+    { "he": "הַקָּפוֹת", "tr": "hakafot", "en": "circuits with the Torah scrolls" },
+    { "he": "שִׂמְחָה", "tr": "simchah", "en": "joy" }
+   ],
+   "readings": ["Torah: Deuteronomy 33-34, then Genesis 1:1-2:3", "Haftarah: Joshua 1"],
+   "texts": ["vezot-hatorah", "torah-bless-1", "torah-bless-2"],
+   "lesson": "shemini-atzeret"
+  },
+  "hanukkah": {
+   "he": "חֲנֻכָּה",
+   "tr": "Chanukah",
+   "en": "Hanukkah (the Festival of Lights)",
+   "what": [
+    "Hanukkah begins on 25 Kislev and lasts eight nights.",
+    "It recalls the Maccabees' victory over the Seleucid Greek empire in 164 BCE and the rededication of the Temple in Jerusalem; 'Chanukah' means dedication.",
+    "The Talmud tells of one day's oil that burned for eight days, and the eight lights also stand for the right to live and worship as Jews.",
+    "It is a minor festival (work is allowed) with a large place in family life: lights, songs, games and fried food."
+   ],
+   "customs": [
+    "Lighting the chanukiyah each night after dark: one candle the first night, adding one each night, lit from the shamash, the helper candle; the lights are placed where they can be seen.",
+    "Two blessings each night, and Shehecheyanu on the first night; Hanerot Halalu and Maoz Tzur are sung.",
+    "Foods fried in oil: latkes (levivot) and jam doughnuts (sufganiyot).",
+    "Spinning the dreidel (sevivon) and giving gelt or small gifts."
+   ],
+   "words": [
+    { "he": "חֲנֻכִּיָּה", "tr": "chanukiyah", "en": "the nine-branched Hanukkah lamp" },
+    { "he": "נֵר", "tr": "ner", "en": "candle, lamp" },
+    { "he": "שַׁמָּשׁ", "tr": "shamash", "en": "the helper candle" },
+    { "he": "סְבִיבוֹן", "tr": "sevivon", "en": "dreidel, spinning top" },
+    { "he": "נֵס", "tr": "nes", "en": "miracle" },
+    { "he": "סֻפְגָּנִיָּה", "tr": "sufganiyah", "en": "jam doughnut" },
+    { "he": "לְבִיבָה", "tr": "levivah", "en": "latke, potato pancake" }
+   ],
+   "readings": ["Blessings for lighting the candles; Shehecheyanu on the first night", "Hanerot Halalu and Maoz Tzur", "Al HaNissim added to the Amidah and to Birkat Hamazon; full Hallel each morning", "Torah: the dedication gifts of the princes, Numbers 7; Haftarah Zechariah 2:14-4:7 on Shabbat Hanukkah"],
+   "texts": ["hanukkah-candle", "hanukkah-nissim", "shehecheyanu", "hanerot-halalu", "maoz-tzur-1"],
+   "lesson": "hanukkah"
+  },
+  "tu-bishvat": {
+   "he": "ט״וּ בִּשְׁבָט",
+   "tr": "Tu BiShvat",
+   "en": "Tu BiShvat (the New Year for Trees)",
+   "what": [
+    "Tu BiShvat is the 15th of Shevat; the name is the date itself, since the letters tet and vav add up to fifteen.",
+    "The Mishnah names it the new year for trees, the date from which a tree's age was counted for tithes.",
+    "The mystics of sixteenth-century Safed gave it a seder of fruits and wine, and in modern Israel it became a day of planting trees.",
+    "Many Reform communities keep it as a Jewish Earth Day, a time to think about the natural world and our care for it."
+   ],
+   "customs": [
+    "Eating fruit, especially the seven species of the Land of Israel: wheat, barley, grapes, figs, pomegranates, olives and dates.",
+    "A Tu BiShvat seder with four cups of wine from white to red.",
+    "Planting trees, or giving towards planting."
+   ],
+   "words": [
+    { "he": "עֵץ", "tr": "etz", "en": "tree" },
+    { "he": "פְּרִי", "tr": "pri", "en": "fruit" },
+    { "he": "נְטִיעָה", "tr": "neti'ah", "en": "planting" },
+    { "he": "שִׁבְעַת הַמִּינִים", "tr": "shiv'at haminim", "en": "the seven species" },
+    { "he": "רִמּוֹן", "tr": "rimon", "en": "pomegranate" }
+   ],
+   "readings": ["No special Torah reading; a Tu BiShvat seder is a home or community custom", "Blessings over fruit and over wine", "Shehecheyanu over a fruit not yet eaten this season"],
+   "texts": ["shehecheyanu", "kiddush-wine-1"],
+   "lesson": "tu-bishvat"
+  },
+  "purim": {
+   "he": "פּוּרִים",
+   "tr": "Purim",
+   "en": "Purim",
+   "what": [
+    "Purim, on 14 Adar (Adar II in a leap year), celebrates the rescue of the Jews of Persia told in the Book of Esther.",
+    "Haman, the king's minister, plotted to destroy them; Queen Esther, with her cousin Mordechai, risked her life to reveal the plot, and the day meant for destruction became a day of joy.",
+    "The name comes from the lots (purim) Haman cast to choose the date.",
+    "It is a minor festival with the loudest, most playful mood of the year, and a serious core: gifts to the poor are one of its four duties."
+   ],
+   "customs": [
+    "Hearing the Megillah (the Book of Esther) read in the evening and again in the morning, drowning out Haman's name with noisemakers.",
+    "Mishlo'ach manot: sending gifts of food to friends; matanot la'evyonim: gifts to the poor.",
+    "A festive meal (se'udah), costumes, Purim plays (shpiels) and hamantaschen, the triangular filled pastries."
+   ],
+   "words": [
+    { "he": "מְגִלָּה", "tr": "megillah", "en": "scroll; the Book of Esther" },
+    { "he": "רַעֲשָׁן", "tr": "ra'ashan", "en": "noisemaker, grogger" },
+    { "he": "אֹזֶן הָמָן", "tr": "ozen Haman", "en": "hamantasch (literally 'Haman's ear')" },
+    { "he": "מִשְׁלוֹחַ מָנוֹת", "tr": "mishlo'ach manot", "en": "sending portions (gifts of food)" },
+    { "he": "תַּחְפֹּשֶׂת", "tr": "tachposet", "en": "costume" },
+    { "he": "אֶסְתֵּר", "tr": "Esther", "en": "Esther" }
+   ],
+   "readings": ["Megillat Esther, evening and morning, with its blessings", "Torah: Exodus 17:8-16 (Amalek)", "Al HaNissim added to the Amidah and Birkat Hamazon"],
+   "texts": [],
+   "lesson": "purim"
+  },
+  "pesach": {
+   "he": "פֶּסַח",
+   "tr": "Pesach",
+   "en": "Pesach (Passover)",
+   "what": [
+    "Pesach begins on 15 Nisan and lasts seven days (eight in traditional diaspora practice); the first and last days are full festival days.",
+    "It celebrates the Exodus, the going out of the Israelites from slavery in Egypt, and the Torah asks every generation to tell the story as if we ourselves had gone out.",
+    "Its name recalls the night God 'passed over' the Israelite houses (Exodus 12), and the matzah recalls bread that had no time to rise.",
+    "It is the spring festival and the first of the three pilgrimage festivals, and the counting of the Omer towards Shavuot begins on its second night."
+   ],
+   "customs": [
+    "The seder on the first night (many homes hold one on the second night too): the Haggadah, four cups of wine, four questions, matzah, maror (bitter herbs), charoset, the seder plate and the hidden afikoman.",
+    "Eating no chametz (leavened grain) for the whole festival; cleaning the home beforehand.",
+    "Hallel; Shir HaShirim (the Song of Songs) on the Shabbat of Chol HaMoed; Yizkor on the last day."
+   ],
+   "words": [
+    { "he": "סֵדֶר", "tr": "seder", "en": "order; the Passover meal" },
+    { "he": "מַצָּה", "tr": "matzah", "en": "unleavened bread" },
+    { "he": "הַגָּדָה", "tr": "haggadah", "en": "the telling; the seder book" },
+    { "he": "מָרוֹר", "tr": "maror", "en": "bitter herb" },
+    { "he": "חָמֵץ", "tr": "chametz", "en": "leavened food" },
+    { "he": "אֲפִיקוֹמָן", "tr": "afikoman", "en": "the hidden half-matzah eaten last" }
+   ],
+   "readings": ["Torah: Exodus 12:21-51 on the first day; the Song of the Sea, Exodus 13:17-15:26, on the seventh day", "Haftarah: Joshua 5:2-6:1 on the first day", "Kiddush, Shehecheyanu and the Haggadah at the seder; Hallel", "Yizkor on the last day"],
+   "texts": ["shehecheyanu", "kiddush-wine-1"],
+   "lesson": "pesach"
+  },
+  "yom-hashoah": {
+   "he": "יוֹם הַשּׁוֹאָה",
+   "tr": "Yom HaShoah",
+   "en": "Yom HaShoah (Holocaust Remembrance Day)",
+   "what": [
+    "Yom HaShoah, on 27 Nisan, is the day of remembrance for the six million Jews murdered in the Holocaust and for the Jewish resistance, set by Israel's Knesset in 1951.",
+    "The date falls between the anniversary of the Warsaw Ghetto uprising and Yom HaAtzmaut; it is moved a day if it would fall on Friday or Sunday.",
+    "In Israel a two-minute siren at 10:00 brings the country to a standstill.",
+    "Jewish communities everywhere hold memorial gatherings; there is no fixed liturgy, and many Reform congregations use readings, survivor testimony and the memorial prayers."
+   ],
+   "customs": [
+    "Lighting six candles, one for each million.",
+    "Reading names of the murdered; survivor and second-generation testimony.",
+    "El Malei Rachamim and the Mourner's Kaddish."
+   ],
+   "words": [
+    { "he": "שׁוֹאָה", "tr": "Shoah", "en": "catastrophe; the Holocaust" },
+    { "he": "זִכָּרוֹן", "tr": "zikaron", "en": "memory, remembrance" },
+    { "he": "נִצּוֹל", "tr": "nitzol", "en": "survivor" },
+    { "he": "לִזְכֹּר", "tr": "lizkor", "en": "to remember" }
+   ],
+   "readings": ["Memorial service: El Malei Rachamim, Mourner's Kaddish", "Readings and testimony chosen by the community"],
+   "texts": ["kaddish-1"]
+  },
+  "yom-hazikaron": {
+   "he": "יוֹם הַזִּכָּרוֹן",
+   "tr": "Yom HaZikaron",
+   "en": "Yom HaZikaron (Israel's Memorial Day)",
+   "what": [
+    "Yom HaZikaron, on 4 Iyar, is Israel's day of remembrance for fallen soldiers and for victims of terror.",
+    "It is set the day before Yom HaAtzmaut, so that independence is celebrated with its cost in mind; both days shift when they would fall next to Shabbat.",
+    "Sirens sound across Israel at 20:00 as the day begins and at 11:00 the next morning; traffic stops and people stand in silence.",
+    "Communities outside Israel mark it with memorial ceremonies, often together with Yom HaAtzmaut."
+   ],
+   "customs": [
+    "Standing in silence for the sirens.",
+    "Memorial ceremonies at military cemeteries and in schools and synagogues; Yizkor and the Mourner's Kaddish.",
+    "At nightfall a ceremony on Mount Herzl marks the passage into Yom HaAtzmaut."
+   ],
+   "words": [
+    { "he": "זִכָּרוֹן", "tr": "zikaron", "en": "memory, remembrance" },
+    { "he": "צְפִירָה", "tr": "tzfirah", "en": "siren" },
+    { "he": "חַיָּל", "tr": "chayal", "en": "soldier" },
+    { "he": "נוֹפְלִים", "tr": "noflim", "en": "the fallen" }
+   ],
+   "readings": ["Yizkor and the Mourner's Kaddish", "Memorial ceremonies"],
+   "texts": ["kaddish-1"]
+  },
+  "yom-haatzmaut": {
+   "he": "יוֹם הָעַצְמָאוּת",
+   "tr": "Yom HaAtzma'ut",
+   "en": "Yom HaAtzmaut (Israel Independence Day)",
+   "what": [
+    "Yom HaAtzmaut, on 5 Iyar, celebrates the declaration of the State of Israel on 14 May 1948.",
+    "It is moved to Thursday if it would fall on Friday or Saturday, and to Tuesday if it would fall on Monday, so that it does not run into Shabbat.",
+    "It begins the moment Yom HaZikaron ends, at nightfall, with a torch-lighting ceremony on Mount Herzl.",
+    "Many Reform and other congregations treat it as a religious as well as a national day and add Hallel and a prayer for the State of Israel."
+   ],
+   "customs": [
+    "Fireworks, concerts and the national anthem, Hatikvah; flags on balconies and cars.",
+    "Barbecues (mangal) in parks across Israel; the International Bible Contest for youth.",
+    "Hallel and the prayer for the State of Israel in many synagogues."
+   ],
+   "words": [
+    { "he": "עַצְמָאוּת", "tr": "atzma'ut", "en": "independence" },
+    { "he": "דֶּגֶל", "tr": "degel", "en": "flag" },
+    { "he": "מְדִינָה", "tr": "medinah", "en": "state, country" },
+    { "he": "הַתִּקְוָה", "tr": "Hatikvah", "en": "'the hope', Israel's anthem" },
+    { "he": "מַנְגָּל", "tr": "mangal", "en": "barbecue" }
+   ],
+   "readings": ["Hallel and the prayer for the State of Israel (in many congregations)", "Hatikvah"],
+   "texts": []
+  },
+  "shavuot": {
+   "he": "שָׁבוּעוֹת",
+   "tr": "Shavuot",
+   "en": "Shavuot (the Festival of Weeks)",
+   "what": [
+    "Shavuot, on 6 Sivan, comes seven weeks after Pesach, at the end of the counting of the Omer; the name means 'weeks'.",
+    "In the Torah it is the harvest festival of first fruits (bikkurim); the rabbis made it the day the Torah was given at Mount Sinai.",
+    "It is one of the three pilgrimage festivals, kept for one day in Israel and in Reform congregations and two in traditional diaspora practice.",
+    "Reform congregations often hold Confirmation for teenagers on Shavuot, as a renewal of the covenant at Sinai."
+   ],
+   "customs": [
+    "Tikkun Leil Shavuot: staying up through the night to study Torah.",
+    "Reading the Ten Commandments and the Book of Ruth.",
+    "Dairy food, such as cheesecake and blintzes; decorating the synagogue and home with greenery and flowers.",
+    "Yizkor."
+   ],
+   "words": [
+    { "he": "תּוֹרָה", "tr": "Torah", "en": "Torah, teaching" },
+    { "he": "בִּכּוּרִים", "tr": "bikkurim", "en": "first fruits" },
+    { "he": "עֲשֶׂרֶת הַדִּבְּרוֹת", "tr": "aseret hadibrot", "en": "the Ten Commandments (literally 'ten sayings')" },
+    { "he": "הַר סִינַי", "tr": "Har Sinai", "en": "Mount Sinai" },
+    { "he": "רוּת", "tr": "Rut", "en": "Ruth" },
+    { "he": "גְּבִינָה", "tr": "gvinah", "en": "cheese" }
+   ],
+   "readings": ["Torah: Exodus 19-20, the giving of the Torah and the Ten Commandments", "Haftarah: Ezekiel 1", "The Book of Ruth; Hallel; Yizkor", "Torah blessings before and after the reading"],
+   "texts": ["shehecheyanu", "torah-bless-1", "torah-bless-2", "kiddush-wine-1"],
+   "lesson": "shavuot"
+  },
+  "tisha-bav": {
+   "he": "תִּשְׁעָה בְּאָב",
+   "tr": "Tish'ah beAv",
+   "en": "Tisha B'Av (the Ninth of Av)",
+   "what": [
+    "Tisha B'Av, the ninth of Av, is the saddest day of the Jewish year, a full fast from sundown to nightfall.",
+    "It mourns the destruction of the First Temple by Babylon in 586 BCE and of the Second Temple by Rome in 70 CE, and tradition attaches other catastrophes to the date, including the expulsion from Spain in 1492.",
+    "When 9 Av falls on Shabbat the fast is moved to Sunday, 10 Av.",
+    "Reform observance varies: many communities keep the fast and the reading of Lamentations, others mark the day with study of Jewish history and loss, and some do not observe it."
+   ],
+   "customs": [
+    "Fasting; sitting on low stools or the floor; dim lights.",
+    "Reading Eichah (Lamentations) in the evening, chanted to its own mournful melody, and kinot (laments).",
+    "No tallit or tefillin in the morning service, worn instead in the afternoon.",
+    "The three weeks before are a period of lessening joy; the Shabbat after is Shabbat Nachamu, of comfort."
+   ],
+   "words": [
+    { "he": "צוֹם", "tr": "tzom", "en": "fast" },
+    { "he": "אֵיכָה", "tr": "Eichah", "en": "'How...', the Book of Lamentations" },
+    { "he": "קִינָה", "tr": "kinah", "en": "lament, dirge" },
+    { "he": "בֵּית הַמִּקְדָּשׁ", "tr": "Beit HaMikdash", "en": "the Temple in Jerusalem" },
+    { "he": "חֻרְבָּן", "tr": "churban", "en": "destruction" }
+   ],
+   "readings": ["Eichah (Lamentations) and kinot in the evening", "Torah: Deuteronomy 4:25-40; Haftarah Jeremiah 8:13-9:23", "Afternoon: Exodus 32:11-14 and 34:1-10; Haftarah Isaiah 55:6-56:8"],
+   "texts": [],
+   "lesson": "tisha-bav"
+  }
+ }
+}

@@ -1,0 +1,112 @@
+{
+ "generated": "2026-11-03",
+ "policy": {
+  "modernMax": 5300,
+  "readMax": 3100,
+  "readWeight": 1.5,
+  "levelBands": [
+   [
+    "A1",
+    600
+   ],
+   [
+    "A2",
+    1800
+   ],
+   [
+    "B1",
+    3600
+   ],
+   [
+    "B2",
+    null
+   ]
+  ],
+  "packSize": 48,
+  "unlockBuckets": [
+   12,
+   21
+  ]
+ },
+ "counts": {
+  "total": 6303,
+  "words": 6033,
+  "phrases": 270,
+  "packs": 146,
+  "phrasebookMergedIntoWords": 51,
+  "phrasebookAddedAsEntries": 153,
+  "lessonWordsMerged": 188,
+  "lessonWordsAdded": 117,
+  "tatoebaExamples": 5317,
+  "verseExamples": 434,
+  "noExample": 278,
+  "pointedFromSource": 6029,
+  "autoVowelized": 0
+ },
+ "files": {
+  "words.json": {
+   "bytes": 7074699,
+   "gzip": 1003052
+  },
+  "packs.json": {
+   "bytes": 113312,
+   "gzip": 39190
+  },
+  "index.json": {
+   "bytes": 930569,
+   "gzip": 275339
+  },
+  "packGzipMax": 11935,
+  "packGzipMean": 7430
+ },
+ "sources": [
+  {
+   "name": "kaikki-hebrew.jsonl",
+   "url": "https://kaikki.org/dictionary/Hebrew/kaikki.org-dictionary-Hebrew.jsonl",
+   "sha256": "c1c6abf161b8a7ff96922a95bb4ba098373b1e4217cad29b0ca9f002d9394204",
+   "bytes": 60179927
+  },
+  {
+   "name": "he_full.txt",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_full.txt",
+   "sha256": "a69a3f390eb53183bf191c4eac18282592992aef9ff184c5dcf8919f5ea0f773",
+   "bytes": 19215890
+  },
+  {
+   "name": "he_50k.txt",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_50k.txt",
+   "sha256": "0069e931eb1ca0aaf638ea806b0d9d5810d787c51ada944da564a2fb213af41d",
+   "bytes": 792853
+  },
+  {
+   "name": "FrequencyWords-LICENSE",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/LICENSE",
+   "sha256": "e08d916cc953f85f7dfa0df530f6d7931f14ce804d053602662d8649b5fac829",
+   "bytes": 1068
+  },
+  {
+   "name": "FrequencyWords-README.md",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/README.md",
+   "sha256": "a92fcc50e27f7b2d5860ec1c1ce794dc4c892d945bfa4c8c3136cdfd213ee710",
+   "bytes": 913
+  },
+  {
+   "name": "heb_sentences_detailed.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/heb/heb_sentences_detailed.tsv.bz2",
+   "sha256": "830c262048b7c9935e785ce0102ba5ba900b8156a37ef79a866d626e9441314f",
+   "bytes": 3639508
+  },
+  {
+   "name": "eng_sentences_detailed.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_detailed.tsv.bz2",
+   "sha256": "7d8a98a1322c63eb62199b0e928efc5b9afbf8f4bb9bc4b60ebde1ea99a30cda",
+   "bytes": 34969370
+  },
+  {
+   "name": "heb-eng_links.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/heb/heb-eng_links.tsv.bz2",
+   "sha256": "76673d7d8a4aa18518cd316f52430b47496abf9ad56b0b4271986c2c50b3c6ed",
+   "bytes": 1095433
+  }
+ ]
+}

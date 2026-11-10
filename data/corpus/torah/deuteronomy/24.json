@@ -1,0 +1,337 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "deuteronomy",
+ "bookHe": "דְּבָרִים",
+ "chapter": 24,
+ "ref": "Deuteronomy 24",
+ "parshaIds": [
+  "ki-teitzei"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-08",
+ "verses": [
+  {
+   "n": 1,
+   "he": "כִּי־יִקַּח אִישׁ אִשָּׁה וּבְעָלָהּ וְהָיָה אִם־לֹא תִמְצָא־חֵן בְּעֵינָיו כִּי־מָצָא בָהּ עֶרְוַת דָּבָר וְכָתַב לָהּ סֵפֶר כְּרִיתֻת וְנָתַן בְּיָדָהּ וְשִׁלְּחָהּ מִבֵּיתוֹ׃",
+   "heTrope": "כִּֽי־יִקַּ֥ח אִ֛ישׁ אִשָּׁ֖ה וּבְעָלָ֑הּ וְהָיָ֞ה אִם־לֹ֧א תִמְצָא־חֵ֣ן בְּעֵינָ֗יו כִּי־מָ֤צָא בָהּ֙ עֶרְוַ֣ת דָּבָ֔ר וְכָ֨תַב לָ֜הּ סֵ֤פֶר כְּרִיתֻת֙ וְנָתַ֣ן בְּיָדָ֔הּ וְשִׁלְּחָ֖הּ מִבֵּיתֽוֹ׃",
+   "en": "When a man taketh a wife, and marrieth her, then it cometh to pass, if she find no favour in his eyes, because he hath found some unseemly thing in her, that he writeth her a bill of divorcement, and giveth it in her hand, and sendeth her out of his house,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 2,
+   "he": "וְיָצְאָה מִבֵּיתוֹ וְהָלְכָה וְהָיְתָה לְאִישׁ־אַחֵר׃",
+   "heTrope": "וְיָצְאָ֖ה מִבֵּית֑וֹ וְהָלְכָ֖ה וְהָיְתָ֥ה לְאִישׁ־אַחֵֽר׃",
+   "en": "and she departeth out of his house, and goeth and becometh another man’s wife,",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וּשְׂנֵאָהּ הָאִישׁ הָאַחֲרוֹן וְכָתַב לָהּ סֵפֶר כְּרִיתֻת וְנָתַן בְּיָדָהּ וְשִׁלְּחָהּ מִבֵּיתוֹ אוֹ כִי יָמוּת הָאִישׁ הָאַחֲרוֹן אֲשֶׁר־לְקָחָהּ לוֹ לְאִשָּׁה׃",
+   "heTrope": "וּשְׂנֵאָהּ֮ הָאִ֣ישׁ הָאַחֲרוֹן֒ וְכָ֨תַב לָ֜הּ סֵ֤פֶר כְּרִיתֻת֙ וְנָתַ֣ן בְּיָדָ֔הּ וְשִׁלְּחָ֖הּ מִבֵּית֑וֹ א֣וֹ כִ֤י יָמוּת֙ הָאִ֣ישׁ הָאַחֲר֔וֹן אֲשֶׁר־לְקָחָ֥הּ ל֖וֹ לְאִשָּֽׁה׃",
+   "en": "and the latter husband hateth her, and writeth her a bill of divorcement, and giveth it in her hand, and sendeth her out of his house; or if the latter husband die, who took her to be his wife;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 4,
+   "he": "לֹא־יוּכַל בַּעְלָהּ הָרִאשׁוֹן אֲשֶׁר־שִׁלְּחָהּ לָשׁוּב לְקַחְתָּהּ לִהְיוֹת לוֹ לְאִשָּׁה אַחֲרֵי אֲשֶׁר הֻטַּמָּאָה כִּי־תוֹעֵבָה הִוא לִפְנֵי יְהוָה וְלֹא תַחֲטִיא אֶת־הָאָרֶץ אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לְךָ נַחֲלָה׃",
+   "heTrope": "לֹא־יוּכַ֣ל בַּעְלָ֣הּ הָרִאשׁ֣וֹן אֲשֶֽׁר־שִׁ֠לְּחָהּ לָשׁ֨וּב לְקַחְתָּ֜הּ לִהְי֧וֹת ל֣וֹ לְאִשָּׁ֗ה אַחֲרֵי֙ אֲשֶׁ֣ר הֻטַּמָּ֔אָה כִּֽי־תוֹעֵבָ֥ה הִ֖וא לִפְנֵ֣י יְהוָ֑ה וְלֹ֤א תַחֲטִיא֙ אֶת־הָאָ֔רֶץ אֲשֶׁר֙ יְהוָ֣ה אֱלֹהֶ֔יךָ נֹתֵ֥ן לְךָ֖ נַחֲלָֽה׃",
+   "en": "her former husband, who sent her away, may not take her again to be his wife, after that she is defiled; for that is abomination before the LORD; and thou shalt not cause the land to sin, which the LORD thy God giveth thee for an inheritance.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "כִּי־יִקַּח אִישׁ אִשָּׁה חֲדָשָׁה לֹא יֵצֵא בַּצָּבָא וְלֹא־יַעֲבֹר עָלָיו לְכָל־דָּבָר נָקִי יִהְיֶה לְבֵיתוֹ שָׁנָה אֶחָת וְשִׂמַּח אֶת־אִשְׁתּוֹ אֲשֶׁר־לָקָח׃",
+   "heTrope": "כִּֽי־יִקַּ֥ח אִישׁ֙ אִשָּׁ֣ה חֲדָשָׁ֔ה לֹ֤א יֵצֵא֙ בַּצָּבָ֔א וְלֹא־יַעֲבֹ֥ר עָלָ֖יו לְכָל־דָּבָ֑ר נָקִ֞י יִהְיֶ֤ה לְבֵיתוֹ֙ שָׁנָ֣ה אֶחָ֔ת וְשִׂמַּ֖ח אֶת־אִשְׁתּ֥וֹ אֲשֶׁר־לָקָֽח׃",
+   "en": "When a man taketh a new wife, he shall not go out in the host, neither shall he be charged with any business; he shall be free for his house one year, and shall cheer his wife whom he hath taken.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 6,
+   "he": "לֹא־יַחֲבֹל רֵחַיִם וָרָכֶב כִּי־נֶפֶשׁ הוּא חֹבֵל׃",
+   "heTrope": "לֹא־יַחֲבֹ֥ל רֵחַ֖יִם וָרָ֑כֶב כִּי־נֶ֖פֶשׁ ה֥וּא חֹבֵֽל׃",
+   "en": "No man shall take the mill or the upper millstone to pledge; for he taketh a man’s life to pledge.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 7,
+   "he": "כִּי־יִמָּצֵא אִישׁ גֹּנֵב נֶפֶשׁ מֵאֶחָיו מִבְּנֵי יִשְׂרָאֵל וְהִתְעַמֶּר־בּוֹ וּמְכָרוֹ וּמֵת הַגַּנָּב הַהוּא וּבִעַרְתָּ הָרָע מִקִּרְבֶּךָ׃",
+   "heTrope": "כִּי־יִמָּצֵ֣א אִ֗ישׁ גֹּנֵ֨ב נֶ֤פֶשׁ מֵאֶחָיו֙ מִבְּנֵ֣י יִשְׂרָאֵ֔ל וְהִתְעַמֶּר־בּ֖וֹ וּמְכָר֑וֹ וּמֵת֙ הַגַּנָּ֣ב הַה֔וּא וּבִֽעַרְתָּ֥ הָרָ֖ע מִקִּרְבֶּֽךָ׃",
+   "en": "If a man be found stealing any of his brethren of the children of Israel, and he deal with him as a slave, and sell him; then that thief shall die; so shalt thou put away the evil from the midst of thee.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 8,
+   "he": "הִשָּׁמֶר בְּנֶגַע־הַצָּרַעַת לִשְׁמֹר מְאֹד וְלַעֲשׂוֹת כְּכֹל אֲשֶׁר־יוֹרוּ אֶתְכֶם הַכֹּהֲנִים הַלְוִיִּם כַּאֲשֶׁר צִוִּיתִם תִּשְׁמְרוּ לַעֲשׂוֹת׃",
+   "heTrope": "הִשָּׁ֧מֶר בְּנֶֽגַע־הַצָּרַ֛עַת לִשְׁמֹ֥ר מְאֹ֖ד וְלַעֲשׂ֑וֹת כְּכֹל֩ אֲשֶׁר־יוֹר֨וּ אֶתְכֶ֜ם הַכֹּהֲנִ֧ים הַלְוִיִּ֛ם כַּאֲשֶׁ֥ר צִוִּיתִ֖ם תִּשְׁמְר֥וּ לַעֲשֽׂוֹת׃",
+   "en": "Take heed in the plague of leprosy, that thou observe diligently, and do according to all that the priests the Levites shall teach you, as I commanded them, so ye shall observe to do.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "זָכוֹר אֵת אֲשֶׁר־עָשָׂה יְהוָה אֱלֹהֶיךָ לְמִרְיָם בַּדֶּרֶךְ בְּצֵאתְכֶם מִמִּצְרָיִם׃",
+   "heTrope": "זָכ֕וֹר אֵ֧ת אֲשֶׁר־עָשָׂ֛ה יְהוָ֥ה אֱלֹהֶ֖יךָ לְמִרְיָ֑ם בַּדֶּ֖רֶךְ בְּצֵאתְכֶ֥ם מִמִּצְרָֽיִם׃",
+   "en": "Remember what the LORD thy God did unto Miriam, by the way as ye came forth out of Egypt.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 10,
+   "he": "כִּי־תַשֶּׁה בְרֵעֲךָ מַשַּׁאת מְאוּמָה לֹא־תָבֹא אֶל־בֵּיתוֹ לַעֲבֹט עֲבֹטוֹ׃",
+   "heTrope": "כִּֽי־תַשֶּׁ֥ה בְרֵֽעֲךָ מַשַּׁ֣את מְא֑וּמָה לֹא־תָבֹ֥א אֶל־בֵּית֖וֹ לַעֲבֹ֥ט עֲבֹטֽוֹ׃",
+   "en": "When thou dost lend thy neighbour any manner of loan, thou shalt not go into his house to fetch his pledge.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 11,
+   "he": "בַּחוּץ תַּעֲמֹד וְהָאִישׁ אֲשֶׁר אַתָּה נֹשֶׁה בוֹ יוֹצִיא אֵלֶיךָ אֶת־הַעֲבוֹט הַחוּצָה׃",
+   "heTrope": "בַּח֖וּץ תַּעֲמֹ֑ד וְהָאִ֗ישׁ אֲשֶׁ֤ר אַתָּה֙ נֹשֶׁ֣ה ב֔וֹ יוֹצִ֥יא אֵלֶ֛יךָ אֶֽת־הַעֲב֖וֹט הַחֽוּצָה׃",
+   "en": "Thou shalt stand without, and the man to whom thou dost lend shall bring forth the pledge without unto thee.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "וְאִם־אִישׁ עָנִי הוּא לֹא תִשְׁכַּב בַּעֲבֹטוֹ׃",
+   "heTrope": "וְאִם־אִ֥ישׁ עָנִ֖י ה֑וּא לֹ֥א תִשְׁכַּ֖ב בַּעֲבֹטֽוֹ׃",
+   "en": "And if he be a poor man, thou shalt not sleep with his pledge;",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 13,
+   "he": "הָשֵׁב תָּשִׁיב לוֹ אֶת־הַעֲבוֹט כְּבֹא הַשֶּׁמֶשׁ וְשָׁכַב בְּשַׂלְמָתוֹ וּבֵרֲכֶךָּ וּלְךָ תִּהְיֶה צְדָקָה לִפְנֵי יְהוָה אֱלֹהֶיךָ׃",
+   "heTrope": "הָשֵׁב֩ תָּשִׁ֨יב ל֤וֹ אֶֽת־הַעֲבוֹט֙ כְּבֹ֣א הַשֶּׁ֔מֶשׁ וְשָׁכַ֥ב בְּשַׂלְמָת֖וֹ וּבֵֽרֲכֶ֑ךָּ וּלְךָ֙ תִּהְיֶ֣ה צְדָקָ֔ה לִפְנֵ֖י יְהוָ֥ה אֱלֹהֶֽיךָ׃",
+   "en": "thou shalt surely restore to him the pledge when the sun goeth down, that he may sleep in his garment, and bless thee; and it shall be righteousness unto thee before the LORD thy God.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 14,
+   "he": "לֹא־תַעֲשֹׁק שָׂכִיר עָנִי וְאֶבְיוֹן מֵאַחֶיךָ אוֹ מִגֵּרְךָ אֲשֶׁר בְּאַרְצְךָ בִּשְׁעָרֶיךָ׃",
+   "heTrope": "לֹא־תַעֲשֹׁ֥ק שָׂכִ֖יר עָנִ֣י וְאֶבְי֑וֹן מֵאַחֶ֕יךָ א֧וֹ מִגֵּרְךָ֛ אֲשֶׁ֥ר בְּאַרְצְךָ֖ בִּשְׁעָרֶֽיךָ׃",
+   "en": "Thou shalt not oppress a hired servant that is poor and needy, whether he be of thy brethren, or of thy strangers that are in thy land within thy gates.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 15,
+   "he": "בְּיוֹמוֹ תִתֵּן שְׂכָרוֹ וְלֹא־תָבוֹא עָלָיו הַשֶּׁמֶשׁ כִּי עָנִי הוּא וְאֵלָיו הוּא נֹשֵׂא אֶת־נַפְשׁוֹ וְלֹא־יִקְרָא עָלֶיךָ אֶל־יְהוָה וְהָיָה בְךָ חֵטְא׃",
+   "heTrope": "בְּיוֹמוֹ֩ תִתֵּ֨ן שְׂכָר֜וֹ וְֽלֹא־תָב֧וֹא עָלָ֣יו הַשֶּׁ֗מֶשׁ כִּ֤י עָנִי֙ ה֔וּא וְאֵלָ֕יו ה֥וּא נֹשֵׂ֖א אֶת־נַפְשׁ֑וֹ וְלֹֽא־יִקְרָ֤א עָלֶ֙יךָ֙ אֶל־יְהוָ֔ה וְהָיָ֥ה בְךָ֖ חֵֽטְא׃",
+   "en": "In the same day thou shalt give him his hire, neither shall the sun go down upon it; for he is poor, and setteth his heart upon it: lest he cry against thee unto the LORD and it be sin in thee.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 16,
+   "he": "לֹא־יוּמְתוּ אָבוֹת עַל־בָּנִים וּבָנִים לֹא־יוּמְתוּ עַל־אָבוֹת אִיש בְּחֶטְאוֹ יוּמָתוּ׃",
+   "heTrope": "לֹֽא־יוּמְת֤וּ אָבוֹת֙ עַל־בָּנִ֔ים וּבָנִ֖ים לֹא־יוּמְת֣וּ עַל־אָב֑וֹת אִ֥יש בְּחֶטְא֖וֹ יוּמָֽתוּ׃",
+   "en": "The fathers shall not be put to death for the children, neither shall the children be put to death for the fathers; every man shall be put to death for his own sin.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 17,
+   "he": "לֹא תַטֶּה מִשְׁפַּט גֵּר יָתוֹם וְלֹא תַחֲבֹל בֶּגֶד אַלְמָנָה׃",
+   "heTrope": "לֹ֣א תַטֶּ֔ה מִשְׁפַּ֖ט גֵּ֣ר יָת֑וֹם וְלֹ֣א תַחֲבֹ֔ל בֶּ֖גֶד אַלְמָנָֽה׃",
+   "en": "Thou shalt not pervert the justice due to the stranger, or to the fatherless; nor take the widow’s raiment to pledge.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 18,
+   "he": "וְזָכַרְתָּ כִּי עֶבֶד הָיִיתָ בְּמִצְרַיִם וַיִּפְדְּךָ יְהוָה אֱלֹהֶיךָ מִשָּׁם עַל־כֵּן אָנֹכִי מְצַוְּךָ לַעֲשׂוֹת אֶת־הַדָּבָר הַזֶּה׃",
+   "heTrope": "וְזָכַרְתָּ֗ כִּ֣י עֶ֤בֶד הָיִ֙יתָ֙ בְּמִצְרַ֔יִם וַֽיִּפְדְּךָ֛ יְהוָ֥ה אֱלֹהֶ֖יךָ מִשָּׁ֑ם עַל־כֵּ֞ן אָנֹכִ֤י מְצַוְּךָ֙ לַעֲשׂ֔וֹת אֶת־הַדָּבָ֖ר הַזֶּֽה׃",
+   "en": "But thou shalt remember that thou wast a bondman in Egypt, and the LORD thy God redeemed thee thence; therefore I command thee to do this thing.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 19,
+   "he": "כִּי תִקְצֹר קְצִירְךָ בְשָׂדֶךָ וְשָׁכַחְתָּ עֹמֶר בַּשָּׂדֶה לֹא תָשׁוּב לְקַחְתּוֹ לַגֵּר לַיָּתוֹם וְלָאַלְמָנָה יִהְיֶה לְמַעַן יְבָרֶכְךָ יְהוָה אֱלֹהֶיךָ בְּכֹל מַעֲשֵׂה יָדֶיךָ׃",
+   "heTrope": "כִּ֣י תִקְצֹר֩ קְצִֽירְךָ֨ בְשָׂדֶ֜ךָ וְשֽׁ͏ָכַחְתָּ֧ עֹ֣מֶר בַּשָּׂדֶ֗ה לֹ֤א תָשׁוּב֙ לְקַחְתּ֔וֹ לַגֵּ֛ר לַיָּת֥וֹם וְלָאַלְמָנָ֖ה יִהְיֶ֑ה לְמַ֤עַן יְבָרֶכְךָ֙ יְהוָ֣ה אֱלֹהֶ֔יךָ בְּכֹ֖ל מַעֲשֵׂ֥ה יָדֶֽיךָ׃",
+   "en": "When thou reapest thy harvest in thy field, and hast forgot a sheaf in the field, thou shalt not go back to fetch it; it shall be for the stranger, for the fatherless, and for the widow; that the LORD thy God may bless thee in all the work of thy hands.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 20,
+   "he": "כִּי תַחְבֹּט זֵיתְךָ לֹא תְפַאֵר אַחֲרֶיךָ לַגֵּר לַיָּתוֹם וְלָאַלְמָנָה יִהְיֶה׃",
+   "heTrope": "כִּ֤י תַחְבֹּט֙ זֵֽיתְךָ֔ לֹ֥א תְפַאֵ֖ר אַחֲרֶ֑יךָ לַגֵּ֛ר לַיָּת֥וֹם וְלָאַלְמָנָ֖ה יִהְיֶֽה׃",
+   "en": "When thou beatest thine olive-tree, thou shalt not go over the boughs again; it shall be for the stranger, for the fatherless, and for the widow.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 21,
+   "he": "כִּי תִבְצֹר כַּרְמְךָ לֹא תְעוֹלֵל אַחֲרֶיךָ לַגֵּר לַיָּתוֹם וְלָאַלְמָנָה יִהְיֶה׃",
+   "heTrope": "כִּ֤י תִבְצֹר֙ כַּרְמְךָ֔ לֹ֥א תְעוֹלֵ֖ל אַחֲרֶ֑יךָ לַגֵּ֛ר לַיָּת֥וֹם וְלָאַלְמָנָ֖ה יִהְיֶֽה׃",
+   "en": "When thou gatherest the grapes of thy vineyard, thou shalt not glean it after thee; it shall be for the stranger, for the fatherless, and for the widow.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 22,
+   "he": "וְזָכַרְתָּ כִּי־עֶבֶד הָיִיתָ בְּאֶרֶץ מִצְרָיִם עַל־כֵּן אָנֹכִי מְצַוְּךָ לַעֲשׂוֹת אֶת־הַדָּבָר הַזֶּה׃",
+   "heTrope": "וְזָ֣כַרְתָּ֔ כִּי־עֶ֥בֶד הָיִ֖יתָ בְּאֶ֣רֶץ מִצְרָ֑יִם עַל־כֵּ֞ן אָנֹכִ֤י מְצַוְּךָ֙ לַעֲשׂ֔וֹת אֶת־הַדָּבָ֖ר הַזֶּֽה׃",
+   "en": "And thou shalt remember that thou wast a bondman in the land of Egypt; therefore I command thee to do this thing.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

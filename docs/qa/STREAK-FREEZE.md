@@ -1,0 +1,44 @@
+# Shabbat / Yom Tov streak freeze: QA walk (P061, 2026-11-04)
+
+Test: `tests/streak.freeze.test.js` (`node --test tests/streak.freeze.test.js`, about 20 s). Code under test: `src/curriculum/streak.js` (rules), `src/morning/engage.js` (engaged-time timer), `src/morning/model.js` (store glue), `src/curriculum/calendar.js` (festival dates). Result (after stage 5-6): 21 pass, 0 fail, 0 todo. `src/curriculum/streak.js` was not changed: the walk found no bug in it. The one defect the walk found, in `src/morning/engage.js`, was fixed in stage 5 (below).
+
+## What was walked
+
+The expected rest days are built in the test from `data/calendar/hebcal-fixtures.json` (a Hebcal snapshot), not from calendar.js, so the walk checks streak.js and calendar.js together against an outside source. Saturday = Shabbat; Reform Yom Tov = Rosh Hashanah day 1, Yom Kippur, Sukkot I, Shemini Atzeret (with Simchat Torah), Pesach I and VII, Shavuot (one day each, the convention in `docs/curriculum/calendar-notes.md`).
+
+| Check | How | Result |
+|---|---|---|
+| Full walk 2026-09-01 to 2027-09-30 (395 days), America/Toronto and America/Los_Angeles, modes reform, traditional, israel, freeze on | Each day at 08:00 local: open the app, read the projection, study 5 minutes on every non-rest day, touch nothing on rest days | Streak equals completed non-rest days on every day, `broken` never true; rest days reported exactly as the fixture says (reform: 56 Shabbatot + 7 Yom Tov, 4 of them off Shabbat; traditional: 13 Yom Tov days); best = count; the chain still stands the morning after the window |
+| Ordinary missed weekday breaks | Skip Sunday 2026-09-13 (RH day 2, ordinary for a one-day-RH user), skip Wednesday 2026-09-23 | Count shows 0 and `broken` the next morning, `best` kept; restarting counts from 1 |
+| Missed Shabbat / Yom Tov does not break | Do nothing on Sat 2026-09-19 and on Yom Kippur Mon 2026-09-21 | Count intact on the following day; with freeze off the same Yom Kippur gap breaks the chain |
+| Rosh Hashanah 2 days | traditional and israel modes: Sat 12 + Sun 13 Sep 2026 frozen, `frozenDates` persisted by rollover, week strip shows two frozen days; reform: day 2 ordinary unless declared a rest day in Progress (`withDeclaredRest` and `progress.state.rest` both repair it) | pass |
+| Shabbat + Yom Tov adjacent | Shavuot Fri 2027-06-11 + Shabbat; traditional Shavuot II on Shabbat; traditional Pesach VII Wed + VIII Thu, then Friday must be studied, Saturday frozen; reform Pesach: only I and VII freeze, Chol HaMoed is ordinary; Sukkot I and Shemini Atzeret on Shabbat (label "shabbat"); traditional Sukkot II and Simchat Torah on Sunday extend the weekend freeze | pass |
+| DST | Fall back 2026-11-01 (25-hour day): a 2-hour session across the repeated hour accrues 7200 s, day key stays 2026-11-01, Monday is not a gap. Spring forward 2027-03-14 (23-hour day): 01:50 to 03:10 is 1200 s. Every local 08:00 from 2026-10-31 to 2027-03-16 maps to consecutive day keys | pass in both zones |
+| Day crossing midnight | 23:50 to 00:10 completes both days; the new day holds only the post-midnight seconds; Fri 23:56 to Sat 00:06 leaves Friday incomplete (break shown on Saturday, which is correct: Friday is over); Fri 23:54 to 00:04 completes Friday and Saturday is a clean freeze; Sat 23:55 to Sun 00:10 gives Sunday its minutes | pass in both zones |
+| One instant, two zones | 2026-09-20 06:30 UTC is Sat 23:30 in LA (Shabbat, frozen) and Sun 02:30 in Toronto (ordinary, still open) | each zone judges by its own local day |
+| Pure streak.js walk (no timer) | `rollover` / `completeDay` / `projectStreak` over the same 395 days | agree; `frozenDates` is capped at 60 with the newest kept |
+
+The acceptance line in `docs/strategy/DUOLINGO-100.md` (P061: "a simulated 4-week calendar including a 2-day Yom Tov: streak equals the number of non-frozen days completed, zero breaks") is met by the 395-day walk in all three modes; the earlier 4-week test in `tests/morning.test.js` still passes (26/26).
+
+## Defect found by the walk and fixed (engage.js, stage 5)
+
+`src/morning/engage.js`, `save()`: the 10-second persist gate (`t - st.lastPersist < persistMs`) ran before the goal check, so reaching the 5-minute goal was written only at the next 10-second boundary. Normally that is a delay of up to 10 s. In the last seconds before local midnight the rollover in `sync()` discards the unsaved accrual first, so a learner whose ring reached 5:00 at 23:59:59 never got the day (the file header already promised a save "when the 5-minute goal is reached"). Fix: `const reached = next >= goal && st.lastSavedSec < goal;` and the gate is skipped when `reached`, so the completion is stored the moment the goal is first reached. The test "engage.js: the goal reached 0.5 s before midnight must complete the day" is now a real test; with the old gate it stored `last = 2026-11-12` (checked on a copy of the old code), with the fix `2026-11-13`.
+
+## Israel walk (stage 6)
+
+Same assertions as the North American walk, in `Asia/Jerusalem`, israel observance mode (one-day Yom Tov, two-day Rosh Hashanah), every day 2026-01-01 to 2028-12-31 (1,096 days), expected rest days from the Hebcal Israel list in the fixture (24 Yom Tov days besides the Saturdays). Results: streak equals completed non-rest days every day, zero breaks, rest days exactly the fixture days; Friday (the Israeli weekend start) is an ordinary day for the freeze and a missed Friday breaks the streak; Pesach II / VIII, Sukkot II and a separate Simchat Torah are ordinary days; DST fall back 2026-10-25 and spring forward Friday 2027-03-26 (the skipped hour is on a Friday) accrue correct seconds; Friday 23:54 to Saturday 00:04 completes Friday and leaves Saturday frozen. Israel candle reminders (Jerusalem, 40 minutes) are covered in CALENDAR-QA.md.
+
+## Freeze per candle-lighting-to-havdalah window (stage 7): proposal, NOT implemented
+
+Today the freeze is per civil day (midnight to midnight, device time zone). A Shabbat-observant learner's rest actually runs from candle lighting on Friday to havdalah on Saturday night. Consequences of the civil-day rule: Friday evening after candle lighting is still "Friday" (a lesson done then counts, which an observant user would not do; nothing is lost as long as the 5 minutes were done earlier); Saturday night after havdalah is still "Saturday" (frozen), so that first usable evening counts for nothing until midnight.
+
+Design if wanted: the frozen span runs from candle lighting to havdalah; a learner has until candle lighting on Friday to finish Friday's goal, and the next day starts at havdalah (study after havdalah on Saturday night counts for Sunday). Requirements: a location (the streak record has none, so `streak.js` would need a pure `restWindows(location, from, to)` input), a "day" that is no longer the civil date (a window-based day key, with DST and polar cases), a fallback to the civil day for users with no location, migration of `doneDates` and `frozenDates`, and a rule for sessions that straddle candle lighting. This touches `dayKey` (used by Home, Progress and the engine) and every reader, so it is not a small or safe change, and the rule itself needs a rabbi's or educator's decision (including whether using the app at all is wanted during the window; `docs/host-kit/facilitator-guide.md` already says Aleph is not meant for use on Shabbat). Cheaper interim options, none implemented: (a) show on Friday afternoon that the streak is safe tomorrow (P062); (b) let the learner declare Saturday-night study as Sunday via Progress rest days.
+
+## Not checked
+
+- Diaspora two-day Yom Tov as an option for a Reform user: the app has no such switch. A Reform user who keeps two days of Rosh Hashanah must switch to traditional mode (which also makes Pesach 8 days and Shavuot 2 days) or declare the day in Progress. Both routes were tested; a separate "two-day Rosh Hashanah only" option was not, because it does not exist.
+- Israel: walked (stage 6, above) in `Asia/Jerusalem` for 2026-2028. Not walked: a learner who travels between Israel and the diaspora (the observance mode is a setting, not derived from location). Yom HaZikaron and Yom HaAtzmaut are not rest days in any mode.
+- Candle-lighting time versus midnight: the freeze is per civil day, not candle lighting to havdalah (see the stage 7 proposal). Nobody with halachic standing has said the draft rule is right.
+- Real browser timers (setInterval drift, background-tab throttling) and a device that changes time zone mid-streak were not simulated; the tests drive the engine with a fake clock.
+- Years outside 2026-09 to 2027-09 for the walk (the festival dates themselves are checked for 2026-2028 in `docs/qa/CALENDAR-QA.md`).
+- Whether the freeze should be on by default, and the wording shown to users, remain decisions for John and a rabbi or educator (see P061's note).

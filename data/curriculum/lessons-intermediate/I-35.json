@@ -1,0 +1,369 @@
+{
+ "id": "I-35",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Shabbat-day Kiddush: V'shamru, Zachor, wine and bread",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "וְשָׁמְרוּ",
+   "en": "and they shall keep",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "veshamru",
+    "sephardi": "veshamru",
+    "ashkenazi": "veshomru"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְשָׁמְרוּ"
+    ]
+   }
+  },
+  {
+   "he": "בְּרִית עוֹלָם",
+   "en": "an everlasting covenant",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "berit olam",
+    "sephardi": "berit olam",
+    "ashkenazi": "beris olom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּרִית",
+     "עוֹלָם"
+    ]
+   }
+  },
+  {
+   "he": "אוֹת",
+   "en": "a sign",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ot",
+    "sephardi": "ot",
+    "ashkenazi": "os"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h22100765"
+   }
+  },
+  {
+   "he": "זָכוֹר",
+   "en": "remember!",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "zakhor",
+    "sephardi": "zakhor",
+    "ashkenazi": "zokhor"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "זָכוֹר"
+    ]
+   }
+  },
+  {
+   "he": "לְקַדְּשׁוֹ",
+   "en": "to keep it holy",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lekadesho",
+    "sephardi": "lekadesho",
+    "ashkenazi": "lekadesho"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְקַדְּשׁוֹ"
+    ]
+   }
+  },
+  {
+   "he": "שֵׁשֶׁת יָמִים",
+   "en": "six days",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sheshet yamim",
+    "sephardi": "sheshet yamim",
+    "ashkenazi": "sheishes yomim"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֵׁשֶׁת",
+     "יָמִים"
+    ]
+   }
+  },
+  {
+   "he": "הַשְּׁבִיעִי",
+   "en": "the seventh",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hashevi'i",
+    "sephardi": "hashevi'i",
+    "ashkenazi": "hashevi'i"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַשְּׁבִיעִי"
+    ]
+   }
+  },
+  {
+   "he": "יַיִן",
+   "en": "wine",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yayin",
+    "sephardi": "yayin",
+    "ashkenazi": "yayin"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h03763c94"
+   }
+  },
+  {
+   "he": "לֶחֶם",
+   "en": "bread",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechem",
+    "sephardi": "lechem",
+    "ashkenazi": "lechem"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf22f36ee"
+   }
+  },
+  {
+   "he": "בֵּרַךְ",
+   "en": "he blessed",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "berakh",
+    "sephardi": "berakh",
+    "ashkenazi": "beirakh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בֵּרַךְ"
+    ]
+   }
+  },
+  {
+   "he": "וַיְקַדְּשֵׁהוּ",
+   "en": "and sanctified it",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vaykadeshehu",
+    "sephardi": "vaykadeshehu",
+    "ashkenazi": "vaykadesheihu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וַיְקַדְּשֵׁהוּ"
+    ]
+   }
+  },
+  {
+   "he": "שַׁבָּת",
+   "en": "Sabbath",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shabat",
+    "sephardi": "shabat",
+    "ashkenazi": "shabos"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h0eb811da"
+   }
+  }
+ ],
+ "prayerLines": [
+  "kiddush-veshamru",
+  "kiddush-zachor",
+  "kiddush-wine-1",
+  "hamotzi"
+ ],
+ "goals": [
+  "Read V'shamru and Zachor as the Kiddush before the Shabbat lunch",
+  "Say the wine and bread blessings and answer Amen",
+  "Hear how the Shabbat-day Kiddush differs from Friday night"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-05"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-35-e01",
+   "type": "fade",
+   "line": "kiddush-veshamru",
+   "en": "And the children of Israel shall keep the Sabbath, to observe the Sabbath throughout their generations, a covenant for ever."
+  },
+  {
+   "id": "I-35-e02",
+   "type": "spot",
+   "line": "kiddush-veshamru",
+   "target": "בְּרִית",
+   "en": "covenant",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-35-e03",
+   "type": "spot",
+   "line": "kiddush-veshamru",
+   "target": "אוֹת",
+   "en": "a sign",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-35-e04",
+   "type": "order",
+   "he": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת",
+   "en": "And the children of Israel shall keep the Sabbath"
+  },
+  {
+   "id": "I-35-e05",
+   "type": "fade",
+   "line": "kiddush-zachor",
+   "en": "Remember the Sabbath day, to keep it holy."
+  },
+  {
+   "id": "I-35-e06",
+   "type": "order",
+   "he": "זָכוֹר אֶת־יוֹם הַשַׁבָּת לְקַדְּשׁוֹ",
+   "en": "Remember the Sabbath day, to keep it holy."
+  },
+  {
+   "id": "I-35-e07",
+   "type": "spot",
+   "line": "kiddush-zachor",
+   "target": "שֵׁשֶׁת",
+   "en": "six",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-35-e08",
+   "type": "order",
+   "he": "שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ",
+   "en": "Six days you shall labour and do all your work"
+  },
+  {
+   "id": "I-35-e09",
+   "type": "spot",
+   "line": "kiddush-zachor",
+   "target": "בֵּרַךְ",
+   "en": "he blessed",
+   "lineIndex": 4
+  },
+  {
+   "id": "I-35-e10",
+   "type": "fade",
+   "line": "kiddush-wine-1",
+   "en": "Blessed are you... who creates the fruit of the vine."
+  },
+  {
+   "id": "I-35-e11",
+   "type": "respond",
+   "cue": "The Kiddush ends with the wine blessing. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "בּוֹרֵא פְּרִי הַגָּפֶן",
+    "en": "who creates the fruit of the vine"
+   }
+  },
+  {
+   "id": "I-35-e12",
+   "type": "fade",
+   "line": "hamotzi",
+   "en": "Blessed are you... who brings forth bread from the earth."
+  },
+  {
+   "id": "I-35-e13",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "וְשָׁמְרוּ",
+     "en": "and they shall keep"
+    },
+    {
+     "he": "זָכוֹר",
+     "en": "remember"
+    },
+    {
+     "he": "הַשְּׁבִיעִי",
+     "en": "the seventh"
+    },
+    {
+     "he": "יַיִן",
+     "en": "wine"
+    },
+    {
+     "he": "לֶחֶם",
+     "en": "bread"
+    }
+   ]
+  },
+  {
+   "id": "I-35-e14",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שַׁבָּת שָׁלוֹם! אֶפְשָׁר לְקַדֵּשׁ?",
+     "en": "Shabbat shalom! May we make Kiddush?"
+    },
+    {
+     "speaker": "b",
+     "he": "בְּטַח. לְחַיִּים!",
+     "en": "Of course. Cheers!"
+    }
+   ],
+   "task": "Say both parts at the table."
+  },
+  {
+   "id": "I-35-e15",
+   "type": "produce",
+   "en": "remember!",
+   "options": [
+    "זָכוֹר",
+    "וְשָׁמְרוּ",
+    "בֵּרַךְ"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "'Efshar lekadesh' in the dialogue uses the infinitive of the verb in words.json; its use at the table is untested. The short Shabbat-day Kiddush text beginning 'Al ken berach' is the last line of Zachor in the registry."
+}

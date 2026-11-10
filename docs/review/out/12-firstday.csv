@@ -1,0 +1,175 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+firstday:firstday/first10:shin,firstday,שׁ,,"sound: sh
+audio.kind: letter","Record shin in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#letters.0
+firstday:firstday/first10:lamed,firstday,ל,,"sound: l
+audio.kind: letter","Record lamed in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#letters.1
+firstday:firstday/first10:vav,firstday,ו,,"sound: v (or part of the vowel o/u)
+audio.kind: letter","Record vav in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#letters.2
+firstday:firstday/first10:mem,firstday,מ,,"finalForm: ם
+sound: m
+audio.kind: letter","Record mem in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#letters.3
+firstday:firstday/first10:he,firstday,ה,,"sound: h at the start, silent at the end of a word
+audio.kind: letter","Record he in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#letters.4
+firstday:firstday/first10:kamatz,firstday,,,"example: מָ
+sound: ah
+note: Kamatz: the T-shaped sign under the letter.","Record kamatz in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#vowels.0
+firstday:firstday/first10:holam-male,firstday,,,"example: לוֹ
+sound: oh
+note: Vav with a dot above it reads as the vowel oh; the vav is not a v here.","Record holam-male in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#vowels.1
+firstday:firstday/first10:shalom,firstday,שָׁלוֹם,,"bare: שלום
+sound: shah-LOHM
+gloss: peace
+source: Priestly Blessing, Numbers 6:26 (last word); also Oseh Shalom
+letters[0]: shin
+letters[1]: lamed
+letters[2]: vav
+letters[3]: mem
+vowels[0]: kamatz
+vowels[1]: holam-male
+audio.kind: word","Record shalom in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#words.0
+firstday:firstday/first10:sham,firstday,שָׁם,,"bare: שם
+sound: shahm
+gloss: there
+source: Common word, not from the Priestly Blessing
+letters[0]: shin
+letters[1]: mem
+vowels[0]: kamatz
+audio.kind: word","Record sham in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#words.1
+firstday:firstday/first10:mah,firstday,מָה,,"bare: מה
+sound: mah
+gloss: what
+source: Common word, not from the Priestly Blessing
+letters[0]: mem
+letters[1]: he
+vowels[0]: kamatz
+audio.kind: word","Record mah in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#words.2
+firstday:firstday/first10:s1,firstday,,,"Hebrew reads right to left
+kind: intro
+body: Start at the right edge. You will learn 5 letters and 2 vowel signs, then read 3 real words.","Record s1 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.0
+firstday:firstday/first10:s2,firstday,,,"Five letters
+kind: letter
+items[0]: shin
+items[1]: lamed
+items[2]: vav
+items[3]: mem
+items[4]: he","Record s2 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.1
+firstday:firstday/first10:s3,firstday,,,"Two vowel signs
+kind: vowel
+items[0]: kamatz
+items[1]: holam-male","Record s3 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.2
+firstday:firstday/first10:s4,firstday,,,"Read your first word
+kind: read
+word: shalom","Record s4 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.3
+firstday:firstday/first10:s5,firstday,,,"Read a second word
+kind: read
+word: sham","Record s5 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.4
+firstday:firstday/first10:s6,firstday,,,"Read a third word
+kind: read
+word: mah","Record s6 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.5
+firstday:firstday/first10:s7,firstday,,,"Which one says shalom?
+kind: check
+words[0]: shalom
+words[1]: sham
+words[2]: mah","Record s7 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.6
+firstday:firstday/first10:s8,firstday,,,"You read 3 Hebrew words
+kind: done
+body: Self-reported. Nothing here has been tested with learners yet.","Record s8 in data/firstday/first10.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/first10.json#steps.7
+firstday:firstday/onramp:shin,firstday,,,"Your first letter: Shin
+kind: letter
+letter: shin
+action: Tap Hear it. Then tap Trace it and draw it once with your finger.
+win: Win 1 of 5: you know Shin.
+why: mnemonic
+source: data/letters/letters.json (shin), data/letters/mnemonics.json (shin)
+check.from: lesson
+check.cardId: letter:shin","Record shin in data/firstday/onramp.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/onramp.json#steps.0
+firstday:firstday/onramp:bet,firstday,,,"Your second letter: Bet
+kind: letter
+letter: bet
+action: Tap Hear it. Then trace it once.
+win: Win 2 of 5: two letters.
+why: mnemonic
+source: data/letters/letters.json (bet), data/letters/mnemonics.json (bet)
+check.from: lesson
+check.cardId: letter:bet","Record bet in data/firstday/onramp.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/onramp.json#steps.1
+firstday:firstday/onramp:kamatz,firstday,"בָ
+check.options.0: בָ
+check.options.1: ב",,"Your first vowel sign: the small T
+kind: vowel
+vowel: kamatz
+action: Look under the letter. The small T-shaped mark is a vowel sign. Tap Hear it.
+win: Win 3 of 5: your first vowel sign.
+why: vowel
+source: data/pronunciation/niqqud.json (kamatz.shape = base letter bet with the sign); the sound line comes from the same record in your tradition
+check.from: pick
+check.prompt: Which one has the vowel sign under it?","Record kamatz in data/firstday/onramp.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/onramp.json#steps.2
+firstday:firstday/onramp:sha,firstday,"שָׁ
+check.options.0: שָׁ
+check.options.1: בָ",,"Your first syllable
+kind: syllable
+parts[0]: shin
+parts[1]: kamatz
+action: Letter first, then the sign under it. Shin plus the small T. Say it aloud, then tap Hear it.
+win: Win 4 of 5: you read a syllable.
+why: syllable
+source: data/pronunciation/derived/_syllables-001.json (first syllable of שָׁנָה and שָׁמַע)
+check.from: pick
+check.prompt: Which one is Shin with the vowel sign?","Record sha in data/firstday/onramp.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/onramp.json#steps.3
+firstday:firstday/onramp:shav,firstday,שָׁב,,"Your first word
+he returned
+kind: word
+action: Shin with the sign, then Bet with no dot inside. Say it aloud, then tap Hear it.
+win: Win 5 of 5: you read a real Hebrew word.
+why: word
+source: data/curriculum/lessons.json r01.words[0]; respelling from data/vocab/words.json h842147e5 (translit shav) via the transliteration engine for your tradition
+check.from: lesson
+check.cardId: word:r01:1","Record shav in data/firstday/onramp.json. File note: ""draft"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,3,data/firstday/onramp.json#steps.4
+firstday:firstday/ladder:step1,firstday,שָׁלוֹם,,"peace
+stage: pointed; unpointed form: שלום",Reading ladder step 1 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.0
+firstday:firstday/ladder:step2,firstday,שָׁם,,"there
+stage: pointed; unpointed form: שם",Reading ladder step 2 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.1
+firstday:firstday/ladder:step3,firstday,מָה,,"what
+stage: pointed; unpointed form: מה",Reading ladder step 3 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.2
+firstday:firstday/ladder:step4,firstday,לֹא,,"no, not
+stage: pointed; unpointed form: לא",Reading ladder step 4 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.3
+firstday:firstday/ladder:step5,firstday,טוֹב,,"good
+stage: pointed; unpointed form: טוב",Reading ladder step 5 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.4
+firstday:firstday/ladder:step6,firstday,יוֹם,,"day
+stage: pointed; unpointed form: יום",Reading ladder step 6 (pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.5
+firstday:firstday/ladder:step7,firstday,אָב,,"father
+stage: first-letter-pointed; unpointed form: אב",Reading ladder step 7 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.6
+firstday:firstday/ladder:step8,firstday,כֹּל,,"all
+stage: first-letter-pointed; unpointed form: כל",Reading ladder step 8 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.7
+firstday:firstday/ladder:step9,firstday,גַּם,,"also
+stage: first-letter-pointed; unpointed form: גם",Reading ladder step 9 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.8
+firstday:firstday/ladder:step10,firstday,כֵּן,,"yes
+stage: first-letter-pointed; unpointed form: כן",Reading ladder step 10 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.9
+firstday:firstday/ladder:step11,firstday,אֵין,,"there is not
+stage: first-letter-pointed; unpointed form: אין",Reading ladder step 11 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.10
+firstday:firstday/ladder:step12,firstday,"יֵשׁ
+shown: יֵש",,"there is
+stage: first-letter-pointed; unpointed form: יש",Reading ladder step 12 (first-letter-pointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.11
+firstday:firstday/ladder:step13,firstday,"מַיִם
+shown: מים",,"water
+stage: unpointed-with-hint; unpointed form: מים",Reading ladder step 13 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.12
+firstday:firstday/ladder:step14,firstday,"בַּיִת
+shown: בית",,"house
+stage: unpointed-with-hint; unpointed form: בית",Reading ladder step 14 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.13
+firstday:firstday/ladder:step15,firstday,"סֵפֶר
+shown: ספר",,"book
+stage: unpointed-with-hint; unpointed form: ספר",Reading ladder step 15 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.14
+firstday:firstday/ladder:step16,firstday,"תּוֹדָה
+shown: תודה",,"thanks
+stage: unpointed-with-hint; unpointed form: תודה",Reading ladder step 16 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.15
+firstday:firstday/ladder:step17,firstday,"שָׁנָה
+shown: שנה",,"year
+stage: unpointed-with-hint; unpointed form: שנה",Reading ladder step 17 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.16
+firstday:firstday/ladder:step18,firstday,"עוֹד
+shown: עוד",,"more, still
+stage: unpointed-with-hint; unpointed form: עוד",Reading ladder step 18 (unpointed-with-hint). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.17
+firstday:firstday/ladder:step19,firstday,"אֲבָל
+shown: אבל",,"but
+stage: unpointed; unpointed form: אבל",Reading ladder step 19 (unpointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.18
+firstday:firstday/ladder:step20,firstday,"אִמָּא
+shown: אמא",,"mom
+stage: unpointed; unpointed form: אמא",Reading ladder step 20 (unpointed). Pointing of the full word; the shown form matches what the stage promises (pointed / first letter pointed / unpointed with hint / unpointed); the unpointed form is how Israelis write it; the gloss.,,,,,,3,data/firstday/ladder.json#steps.19

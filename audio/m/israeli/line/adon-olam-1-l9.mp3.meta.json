@@ -1,0 +1,22 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃",
+ "inputSha256": "636164d094b17f868db8dcf6fe366d7a15988303e2e39149dd5a5bff2c2f9b4f",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/adon-olam-1-w60.mp3",
+  "audio/m/israeli/word/adon-olam-1-w61.mp3",
+  "audio/m/israeli/word/adon-olam-1-w62.mp3",
+  "audio/m/israeli/word/adon-olam-1-w50.mp3",
+  "audio/m/israeli/word/adon-olam-1-w64.mp3",
+  "audio/m/israeli/word/adon-olam-1-w65.mp3"
+ ]
+}

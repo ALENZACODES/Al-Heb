@@ -1,0 +1,1255 @@
+{
+ "scannedFiles": 460,
+ "hebrewStrings": 242197,
+ "parseErrors": [],
+ "perRule": {
+  "mark-order": {
+   "class": "definite",
+   "reason": "Marks on one letter are not in Unicode canonical order, so equal-looking strings compare unequal and some renderers misplace them.",
+   "count": 1082,
+   "files": 7,
+   "examples": [
+    {
+     "file": "data/audio/manifest.json",
+     "path": "[330].text",
+     "detail": "U+05C2 U+05B4 -> U+05B4 U+05C2",
+     "text": "שִׂין"
+    },
+    {
+     "file": "data/corpus/registry.json",
+     "path": ".entries[43].verifiedAgainst",
+     "detail": "U+05C1 U+05B6 -> U+05B6 U+05C1",
+     "text": "...ַיֹאמֶר; משֶׁה -> מֹשֶׁ..."
+    },
+    {
+     "file": "data/corpus/source-snapshot.json",
+     "path": ".items.bless-priestly-1.rawLines[0]",
+     "detail": "U+05C1 U+05B0 -> U+05B0 U+05C1",
+     "text": "...הוָ֖ה וְיִשְׁמְרֶֽךָ׃"
+    },
+    {
+     "file": "data/photo/_benchmark/nakdan-agreement.json",
+     "path": ".rows[0].nakdan",
+     "detail": "U+05C1 U+05B8 -> U+05B8 U+05C1",
+     "text": "שָׁלוֹם"
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[10].ocrText",
+     "detail": "U+05B6 U+05B8 U+05BC U+05B8 -> U+05B6 U+05B8 U+05B8 U+05BC",
+     "text": "...נִיו לי וַיֶָָּ:"
+    }
+   ]
+  },
+  "stray-mark": {
+   "class": "definite",
+   "reason": "A point or accent has no Hebrew letter (or dotted circle) to attach to, so it renders detached or on the wrong glyph.",
+   "count": 108,
+   "files": 2,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[0].ocrText",
+     "detail": "U+05B8",
+     "text": "ָבֶרְכְּ יו..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[2].ocrText",
+     "detail": "U+05B0",
+     "text": "ְבֶרְכָר יְ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[1].ocrText",
+     "detail": "U+05B0",
+     "text": "ְברְכְּ יהו..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[2].ocrText",
+     "detail": "U+05B0",
+     "text": "ְבֶרְכָר יְ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[6].ocrText",
+     "detail": "U+05B8",
+     "text": "ָאַר יְהוָה..."
+    }
+   ]
+  },
+  "conflicting-marks": {
+   "class": "definite",
+   "reason": "Two different vowels, or both shin and sin dot, or a shin/sin dot on a non-shin letter; none is valid pointing.",
+   "count": 72,
+   "files": 19,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[10].ocrText",
+     "detail": "vowels U+05B6 U+05B8",
+     "text": "...נִיו לי וַיֶָָּ:"
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[10].ocrText",
+     "detail": "vowels U+05B6 U+05B8",
+     "text": "...נִיו לי וַיֶָָּ:"
+    },
+    {
+     "file": "data/pronunciation/derived/_ssml-006.json",
+     "path": ".records[309].ssml.israeli",
+     "detail": "vowels U+05B5 U+05B7",
+     "text": "...tiˈjeχ\">טִיֵַּח</phoneme..."
+    },
+    {
+     "file": "data/pronunciation/derived/_syllables-003.json",
+     "path": ".records[30].w[0].h",
+     "detail": "vowels U+05B5 U+05B7",
+     "text": "טִיֵַּח"
+    },
+    {
+     "file": "data/pronunciation/runtime/lookup-02.json",
+     "path": ".w.<key>",
+     "detail": "vowels U+05B5 U+05B7",
+     "text": "טִיֵַּח"
+    }
+   ]
+  },
+  "duplicate-mark": {
+   "class": "definite",
+   "reason": "The same mark appears twice on one letter, which is never intended.",
+   "count": 24,
+   "files": 5,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[10].ocrText",
+     "detail": "U+05B8",
+     "text": "...נִיו לי וַיֶָָּ:"
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[10].ocrText",
+     "detail": "U+05B8",
+     "text": "...נִיו לי וַיֶָָּ:"
+    },
+    {
+     "file": "data/vocab/packs/general-things-26.json",
+     "path": ".words[23].forms.plural",
+     "detail": "U+05B0",
+     "text": "מְְזָגִים"
+    },
+    {
+     "file": "data/vocab/themes/general-things-set02.json",
+     "path": ".words[13].forms.plural",
+     "detail": "U+05B0",
+     "text": "מְְזָגִים"
+    },
+    {
+     "file": "data/vocab/words.json",
+     "path": ".words[4695].forms.plural",
+     "detail": "U+05B0",
+     "text": "מְְזָגִים"
+    }
+   ]
+  },
+  "final-letter-mid-word": {
+   "class": "definite",
+   "reason": "A final-form letter (kaf, mem, nun, pe, tsadi) is followed by another letter in the same word.",
+   "count": 23,
+   "files": 2,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[14].ocrText",
+     "detail": "U+05DF",
+     "text": "ישָא יהןה פָּנִיו ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[14].ocrText",
+     "detail": "U+05DF",
+     "text": "ישָא יהןה פָּנִיו ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[22].ocrText",
+     "detail": "U+05DA",
+     "text": "שמע ישֶךאֶל יְהוָה..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[39].ocrText",
+     "detail": "U+05DD",
+     "text": "...רְבּה אמזוםב-"
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[46].ocrText",
+     "detail": "U+05DF",
+     "text": "...בַּאלֶם יהןה מִי כָּמ..."
+    }
+   ]
+  },
+  "nonfinal-letter-at-end": {
+   "class": "definite",
+   "reason": "A non-final kaf/mem/nun/tsadi ends a multi-letter word. Exempt: one-letter strings, letter+geresh, words with gershayim (acronyms), and fragment fields (syllables, marked segments, folded dropTokens).",
+   "count": 53,
+   "files": 4,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[0].ocrText",
+     "detail": "U+05DB",
+     "text": "ָבֶרְכְּ יוה וְי..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[4].ocrText",
+     "detail": "U+05DE",
+     "text": ".../ ע : 4 ישמ 1\n: ל"
+    },
+    {
+     "file": "data/vocab/packs/doing-verbs-14.json",
+     "path": ".words[7].example.he",
+     "detail": "U+05DB",
+     "text": "אני זקוק לכ- 20 דקות ..."
+    },
+    {
+     "file": "data/vocab/words.json",
+     "path": ".words[4530].example.he",
+     "detail": "U+05DB",
+     "text": "אני זקוק לכ- 20 דקות ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[1].ocrText",
+     "detail": "U+05DB",
+     "text": "ְברְכְּ יהוָה ו..."
+    }
+   ]
+  },
+  "nonfinal-pe-at-end": {
+   "class": "style",
+   "reason": "Plain pe ending a word is the accepted spelling of many loanwords (tip, ketchup); it is wrong only in native words.",
+   "count": 333,
+   "files": 32,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[39].ocrText",
+     "detail": "U+05E4",
+     "text": "\"יפ ויר מל לי..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[39].ocrText",
+     "detail": "U+05E4",
+     "text": "\"יפ ויר מל לי..."
+    },
+    {
+     "file": "data/pronunciation/derived/_syllables-001.json",
+     "path": ".records[85].w[0].s[0]",
+     "detail": "U+05E4",
+     "text": "לִפְ"
+    },
+    {
+     "file": "data/pronunciation/derived/_syllables-002.json",
+     "path": ".records[45].w[0].s[0]",
+     "detail": "U+05E4",
+     "text": "מִפְ"
+    },
+    {
+     "file": "data/pronunciation/derived/_syllables-003.json",
+     "path": ".records[9].w[0].s[0]",
+     "detail": "U+05E4",
+     "text": "חֻפְ"
+    }
+   ]
+  },
+  "latin-in-hebrew-word": {
+   "class": "definite",
+   "reason": "A Latin letter touches a Hebrew letter with no space or punctuation, usually a keyboard or paste slip.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "invisible-char": {
+   "class": "definite",
+   "reason": "Zero-width space/joiner, word joiner, soft hyphen or BOM inside a Hebrew string is invisible and breaks matching.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "bidi-unbalanced": {
+   "class": "definite",
+   "reason": "A bidi embedding/override/isolate is opened and never closed (or closed without opening), which can reorder following text.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "not-nfc": {
+   "class": "definite",
+   "reason": "After mark ordering, the string still changes under NFC (Hebrew presentation forms or decomposed Latin), so it is inconsistently normalised.",
+   "count": 5,
+   "files": 2,
+   "examples": [
+    {
+     "file": "data/corpus/source-snapshot.json",
+     "path": ".items.haftarah-after.rawLines[0]",
+     "detail": "changes under NFC at offset 161",
+     "text": "...בֵּר וּמְקַיֵּם, שֶׁכּ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-best.perImage[30].ocrText",
+     "detail": "changes under NFC at offset 27",
+     "text": "...ב מְְִתִי ְִראֶל:"
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-browser-deskew.perImage[54].ocrText",
+     "detail": "changes under NFC at offset 15",
+     "text": "...ו אִהָלִי ַָקב מִשְבְ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-browser.perImage[54].ocrText",
+     "detail": "changes under NFC at offset 15",
+     "text": "...ו אִהָלִי ַָקב מִשְבְ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-browser-nopre.perImage[54].ocrText",
+     "detail": "changes under NFC at offset 15",
+     "text": "...ו אִהָלִי ַָקב מִשְבְ..."
+    }
+   ]
+  },
+  "bidi-control": {
+   "class": "style",
+   "reason": "Directional marks (LRM, RLM, embeddings, isolates) are legitimate when deliberate; listed so they can be reviewed.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "bidi-mixed-direction": {
+   "class": "style",
+   "reason": "Both left-to-right and right-to-left controls in one string; may be intentional in mixed-script text.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "double-space": {
+   "class": "style",
+   "reason": "Consecutive whitespace collapses in HTML, so it is usually a layout or typing habit rather than a wrong word.",
+   "count": 2,
+   "files": 1,
+   "examples": [
+    {
+     "file": "data/torahread/words30.json",
+     "path": ".method",
+     "detail": "",
+     "text": "....us): each <w> word, with..."
+    }
+   ]
+  },
+  "sof-pasuq-space-before": {
+   "class": "style",
+   "reason": "Convention is no space before the sof pasuq; the text still reads correctly.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "sof-pasuq-no-space-after": {
+   "class": "style",
+   "reason": "Convention is one space after the sof pasuq before the next word.",
+   "count": 0,
+   "files": 0,
+   "examples": []
+  },
+  "maqaf-spacing": {
+   "class": "style",
+   "reason": "Convention is no spaces around the maqaf.",
+   "count": 111,
+   "files": 12,
+   "examples": [
+    {
+     "file": "data/corpus/reader/priestly-blessing.json",
+     "path": ".verses[0].heTrope",
+     "detail": "",
+     "text": "...ְהוָ֖ה אֶל־ מֹשֶׁ֥ה ל..."
+    },
+    {
+     "file": "data/corpus/reader/shema.json",
+     "path": ".verses[1].heTrope",
+     "detail": "",
+     "text": "...יךָ בְּכָל־ לְבָבְךָ֥..."
+    },
+    {
+     "file": "data/corpus/source-snapshot.json",
+     "path": ".items.vahavta-1.rawLines[0]",
+     "detail": "",
+     "text": "...יךָ בְּכָל־ לְבָבְךָ֥..."
+    },
+    {
+     "file": "data/corpus/trope/priestly-blessing.json",
+     "path": ".verses[0].raw",
+     "detail": "",
+     "text": "...ְהוָ֖ה אֶל־ מֹשֶׁ֥ה ל..."
+    },
+    {
+     "file": "data/corpus/trope/shema.json",
+     "path": ".verses[1].raw",
+     "detail": "",
+     "text": "...יךָ בְּכָל־ לְבָבְךָ֥..."
+    }
+   ]
+  },
+  "ascii-hyphen-in-pointed-text": {
+   "class": "style",
+   "reason": "Pointed text conventionally joins words with the maqaf; modern prose often uses a hyphen on purpose.",
+   "count": 19,
+   "files": 6,
+   "examples": [
+    {
+     "file": "data/audio/manifest.json",
+     "path": "[4340].text",
+     "detail": "",
+     "text": "רַב-קַו"
+    },
+    {
+     "file": "data/curriculum/lessons-intermediate/I-11.json",
+     "path": ".words[4].he",
+     "detail": "",
+     "text": "רַב-קַו"
+    },
+    {
+     "file": "data/curriculum/lessons-intermediate/I-25.json",
+     "path": ".exercises[13].options[1]",
+     "detail": "",
+     "text": "...ׁ לְךָ רַב-קַו?"
+    },
+    {
+     "file": "data/curriculum/lessons.json",
+     "path": ".lessons[85].words[4].he",
+     "detail": "",
+     "text": "רַב-קַו"
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[42].ocrText",
+     "detail": "",
+     "text": "מִ-כָמַכָה בָ..."
+    }
+   ]
+  },
+  "ascii-gershayim": {
+   "class": "style",
+   "reason": "A straight or curly double quote stands in for gershayim (U+05F4); readable but does not match the proper character.",
+   "count": 75,
+   "files": 21,
+   "examples": [
+    {
+     "file": "data/corpus/source-snapshot.json",
+     "path": ".items.kaddish-1.rawLines[4]",
+     "detail": "\"",
+     "text": "...small>בעשי\"ת</small> ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-fast.perImage[45].ocrText",
+     "detail": "\"",
+     "text": "מִ\"יכְּמִכָה ..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-fast.perImage[45].ocrText",
+     "detail": "\"",
+     "text": "מִ\"יכְּמִכָה ..."
+    },
+    {
+     "file": "data/vocab/packs/describing-words-7.json",
+     "path": ".words[45].example.he",
+     "detail": "\"",
+     "text": "...סור לתום ד\"ש ממני."
+    },
+    {
+     "file": "data/vocab/packs/doing-verbs-11.json",
+     "path": ".words[4].example.he",
+     "detail": "\"",
+     "text": "...גרירות ארה\"ב."
+    }
+   ]
+  },
+  "ascii-geresh": {
+   "class": "style",
+   "reason": "A straight or curly apostrophe stands in for geresh (U+05F3); readable but does not match the proper character.",
+   "count": 22,
+   "files": 12,
+   "examples": [
+    {
+     "file": "data/photo/_benchmark/results-psm-oracle.json",
+     "path": ".engines.tess-cli-best.perImage[39].ocrText",
+     "detail": "'",
+     "text": "...ְרת = נשמת' בחְמלָה ר..."
+    },
+    {
+     "file": "data/photo/_benchmark/results.json",
+     "path": ".engines.tess-cli-best.perImage[39].ocrText",
+     "detail": "'",
+     "text": "...ְרת = נשמת' בחְמלָה ר..."
+    },
+    {
+     "file": "data/vocab/packs/body-health-2.json",
+     "path": ".words[31].example.he",
+     "detail": "'",
+     "text": "האם ג'ו היה איתך..."
+    },
+    {
+     "file": "data/vocab/packs/describing-words-11.json",
+     "path": ".words[27].example.he",
+     "detail": "'",
+     "text": "אלג'יריה זו אר..."
+    },
+    {
+     "file": "data/vocab/packs/doing-verbs-4.json",
+     "path": ".words[25].example.he",
+     "detail": "'",
+     "text": "כתוש את הג'ינג'ר."
+    }
+   ]
+  }
+ },
+ "perFile": [
+  {
+   "file": "data/corpus/source-snapshot.json",
+   "hebrewStrings": 131,
+   "counts": {
+    "mark-order": 954,
+    "maqaf-spacing": 73,
+    "ascii-gershayim": 10,
+    "not-nfc": 1
+   },
+   "total": 1038
+  },
+  {
+   "file": "data/photo/_benchmark/results.json",
+   "hebrewStrings": 840,
+   "counts": {
+    "stray-mark": 84,
+    "nonfinal-letter-at-end": 43,
+    "conflicting-marks": 34,
+    "duplicate-mark": 16,
+    "mark-order": 31,
+    "final-letter-mid-word": 18,
+    "nonfinal-pe-at-end": 5,
+    "ascii-hyphen-in-pointed-text": 4,
+    "ascii-gershayim": 11,
+    "not-nfc": 4,
+    "ascii-geresh": 1
+   },
+   "total": 251
+  },
+  {
+   "file": "data/photo/_benchmark/results-psm-oracle.json",
+   "hebrewStrings": 260,
+   "counts": {
+    "stray-mark": 24,
+    "nonfinal-letter-at-end": 8,
+    "conflicting-marks": 12,
+    "duplicate-mark": 5,
+    "mark-order": 15,
+    "final-letter-mid-word": 5,
+    "nonfinal-pe-at-end": 3,
+    "ascii-hyphen-in-pointed-text": 1,
+    "ascii-gershayim": 8,
+    "ascii-geresh": 1
+   },
+   "total": 82
+  },
+  {
+   "file": "data/vocab/words.json",
+   "hebrewStrings": 35332,
+   "counts": {
+    "ascii-gershayim": 23,
+    "maqaf-spacing": 4,
+    "ascii-geresh": 10,
+    "conflicting-marks": 6,
+    "nonfinal-pe-at-end": 18,
+    "nonfinal-letter-at-end": 1,
+    "duplicate-mark": 1
+   },
+   "total": 63
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-006.json",
+   "hebrewStrings": 4587,
+   "counts": {
+    "nonfinal-pe-at-end": 39
+   },
+   "total": 39
+  },
+  {
+   "file": "data/pronunciation/variants/_corpus-1.json",
+   "hebrewStrings": 5967,
+   "counts": {
+    "nonfinal-pe-at-end": 36
+   },
+   "total": 36
+  },
+  {
+   "file": "data/photo/_benchmark/nakdan-agreement.json",
+   "hebrewStrings": 90,
+   "counts": {
+    "mark-order": 30
+   },
+   "total": 30
+  },
+  {
+   "file": "data/photo/_fixtures/nakdan-recorded.json",
+   "hebrewStrings": 126,
+   "counts": {
+    "mark-order": 30
+   },
+   "total": 30
+  },
+  {
+   "file": "data/pronunciation/variants/_vocab-3.json",
+   "hebrewStrings": 7048,
+   "counts": {
+    "nonfinal-pe-at-end": 30
+   },
+   "total": 30
+  },
+  {
+   "file": "data/pronunciation/variants/_vocab-2.json",
+   "hebrewStrings": 6541,
+   "counts": {
+    "nonfinal-pe-at-end": 28,
+    "conflicting-marks": 1
+   },
+   "total": 29
+  },
+  {
+   "file": "data/pronunciation/variants/_vocab-1.json",
+   "hebrewStrings": 6067,
+   "counts": {
+    "nonfinal-pe-at-end": 23
+   },
+   "total": 23
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-005.json",
+   "hebrewStrings": 4100,
+   "counts": {
+    "nonfinal-pe-at-end": 19
+   },
+   "total": 19
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-001.json",
+   "hebrewStrings": 3873,
+   "counts": {
+    "nonfinal-pe-at-end": 18
+   },
+   "total": 18
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-003.json",
+   "hebrewStrings": 3990,
+   "counts": {
+    "nonfinal-pe-at-end": 16,
+    "conflicting-marks": 1
+   },
+   "total": 17
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-004.json",
+   "hebrewStrings": 4021,
+   "counts": {
+    "nonfinal-pe-at-end": 17
+   },
+   "total": 17
+  },
+  {
+   "file": "data/pronunciation/variants/_vocab-4.json",
+   "hebrewStrings": 1500,
+   "counts": {
+    "nonfinal-pe-at-end": 17
+   },
+   "total": 17
+  },
+  {
+   "file": "data/corpus/registry.json",
+   "hebrewStrings": 98,
+   "counts": {
+    "mark-order": 16
+   },
+   "total": 16
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-007.json",
+   "hebrewStrings": 4738,
+   "counts": {
+    "nonfinal-pe-at-end": 14
+   },
+   "total": 14
+  },
+  {
+   "file": "data/pronunciation/derived/_syllables-002.json",
+   "hebrewStrings": 3942,
+   "counts": {
+    "nonfinal-pe-at-end": 11
+   },
+   "total": 11
+  },
+  {
+   "file": "data/vocab/index.json",
+   "hebrewStrings": 12604,
+   "counts": {
+    "maqaf-spacing": 2,
+    "conflicting-marks": 1,
+    "nonfinal-pe-at-end": 8
+   },
+   "total": 11
+  },
+  {
+   "file": "data/audio/manifest.json",
+   "hebrewStrings": 6384,
+   "counts": {
+    "mark-order": 6,
+    "ascii-hyphen-in-pointed-text": 2
+   },
+   "total": 8
+  },
+  {
+   "file": "data/corpus/reader/priestly-blessing.json",
+   "hebrewStrings": 162,
+   "counts": {
+    "maqaf-spacing": 6
+   },
+   "total": 6
+  },
+  {
+   "file": "data/corpus/reader/shema.json",
+   "hebrewStrings": 195,
+   "counts": {
+    "maqaf-spacing": 6
+   },
+   "total": 6
+  },
+  {
+   "file": "data/corpus/trope/priestly-blessing.json",
+   "hebrewStrings": 184,
+   "counts": {
+    "maqaf-spacing": 6
+   },
+   "total": 6
+  },
+  {
+   "file": "data/corpus/trope/shema.json",
+   "hebrewStrings": 214,
+   "counts": {
+    "maqaf-spacing": 6
+   },
+   "total": 6
+  },
+  {
+   "file": "data/curriculum/lessons.json",
+   "hebrewStrings": 2602,
+   "counts": {
+    "ascii-hyphen-in-pointed-text": 6
+   },
+   "total": 6
+  },
+  {
+   "file": "data/curriculum/lessons-intermediate/I-11.json",
+   "hebrewStrings": 49,
+   "counts": {
+    "ascii-hyphen-in-pointed-text": 5
+   },
+   "total": 5
+  },
+  {
+   "file": "data/vocab/vocab5000.json",
+   "hebrewStrings": 10157,
+   "counts": {
+    "maqaf-spacing": 1,
+    "conflicting-marks": 1,
+    "nonfinal-pe-at-end": 3
+   },
+   "total": 5
+  },
+  {
+   "file": "data/vocab/packs/home-things-2.json",
+   "hebrewStrings": 286,
+   "counts": {
+    "nonfinal-pe-at-end": 4
+   },
+   "total": 4
+  },
+  {
+   "file": "data/vocab/packs/moving-doing-1.json",
+   "hebrewStrings": 365,
+   "counts": {
+    "maqaf-spacing": 3,
+    "ascii-gershayim": 1
+   },
+   "total": 4
+  },
+  {
+   "file": "data/vocab/packs/small-words-1.json",
+   "hebrewStrings": 224,
+   "counts": {
+    "ascii-gershayim": 4
+   },
+   "total": 4
+  },
+  {
+   "file": "data/vocab/packs/vocab5k-tier-5000.json",
+   "hebrewStrings": 6007,
+   "counts": {
+    "conflicting-marks": 1,
+    "nonfinal-pe-at-end": 3
+   },
+   "total": 4
+  },
+  {
+   "file": "data/pronunciation/derived/_ssml-006.json",
+   "hebrewStrings": 1344,
+   "counts": {
+    "conflicting-marks": 3
+   },
+   "total": 3
+  },
+  {
+   "file": "data/vocab/packs/food-drink-2.json",
+   "hebrewStrings": 280,
+   "counts": {
+    "nonfinal-pe-at-end": 3
+   },
+   "total": 3
+  },
+  {
+   "file": "data/vocab/packs/general-things-27.json",
+   "hebrewStrings": 246,
+   "counts": {
+    "nonfinal-pe-at-end": 3
+   },
+   "total": 3
+  },
+  {
+   "file": "data/vocab/packs/tech-media-2.json",
+   "hebrewStrings": 262,
+   "counts": {
+    "nonfinal-pe-at-end": 3
+   },
+   "total": 3
+  },
+  {
+   "file": "data/vocab/themes/general-things-set06.json",
+   "hebrewStrings": 402,
+   "counts": {
+    "nonfinal-pe-at-end": 1,
+    "conflicting-marks": 2
+   },
+   "total": 3
+  },
+  {
+   "file": "data/speak/pairs.json",
+   "hebrewStrings": 488,
+   "counts": {
+    "nonfinal-pe-at-end": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/torahread/words30.json",
+   "hebrewStrings": 95,
+   "counts": {
+    "double-space": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/overrides.json",
+   "hebrewStrings": 246,
+   "counts": {
+    "maqaf-spacing": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-4.json",
+   "hebrewStrings": 352,
+   "counts": {
+    "ascii-geresh": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-6.json",
+   "hebrewStrings": 355,
+   "counts": {
+    "ascii-gershayim": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/general-things-23.json",
+   "hebrewStrings": 247,
+   "counts": {
+    "conflicting-marks": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/small-words-2.json",
+   "hebrewStrings": 226,
+   "counts": {
+    "ascii-gershayim": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/talking-asking-1.json",
+   "hebrewStrings": 333,
+   "counts": {
+    "ascii-gershayim": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/packs/time-numbers-2.json",
+   "hebrewStrings": 288,
+   "counts": {
+    "ascii-gershayim": 1,
+    "ascii-geresh": 1
+   },
+   "total": 2
+  },
+  {
+   "file": "data/vocab/themes/home-things-set01.json",
+   "hebrewStrings": 414,
+   "counts": {
+    "nonfinal-pe-at-end": 2
+   },
+   "total": 2
+  },
+  {
+   "file": "data/curriculum/lessons-intermediate/I-25.json",
+   "hebrewStrings": 52,
+   "counts": {
+    "ascii-hyphen-in-pointed-text": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/pronunciation/runtime/lookup-02.json",
+   "hebrewStrings": 1165,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/frequency.json",
+   "hebrewStrings": 6298,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/body-health-2.json",
+   "hebrewStrings": 263,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/describing-words-10.json",
+   "hebrewStrings": 233,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/describing-words-11.json",
+   "hebrewStrings": 227,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/describing-words-12.json",
+   "hebrewStrings": 208,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/describing-words-7.json",
+   "hebrewStrings": 234,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-11.json",
+   "hebrewStrings": 339,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-14.json",
+   "hebrewStrings": 345,
+   "counts": {
+    "nonfinal-letter-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-2.json",
+   "hebrewStrings": 353,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-20.json",
+   "hebrewStrings": 345,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-7.json",
+   "hebrewStrings": 347,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/doing-verbs-8.json",
+   "hebrewStrings": 347,
+   "counts": {
+    "maqaf-spacing": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/feelings-mind-1.json",
+   "hebrewStrings": 353,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/feelings-mind-2.json",
+   "hebrewStrings": 338,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-11.json",
+   "hebrewStrings": 265,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-12.json",
+   "hebrewStrings": 264,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-15.json",
+   "hebrewStrings": 231,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-17.json",
+   "hebrewStrings": 252,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-21.json",
+   "hebrewStrings": 263,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-22.json",
+   "hebrewStrings": 257,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-26.json",
+   "hebrewStrings": 244,
+   "counts": {
+    "duplicate-mark": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-30.json",
+   "hebrewStrings": 151,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-4.json",
+   "hebrewStrings": 272,
+   "counts": {
+    "ascii-geresh": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-6.json",
+   "hebrewStrings": 269,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/general-things-7.json",
+   "hebrewStrings": 264,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/nature-animals-2.json",
+   "hebrewStrings": 265,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/people-family-4.json",
+   "hebrewStrings": 213,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/read-doing-verbs-1.json",
+   "hebrewStrings": 326,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/read-society-work-law-1.json",
+   "hebrewStrings": 114,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/religion-prayer-2.json",
+   "hebrewStrings": 326,
+   "counts": {
+    "ascii-gershayim": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/school-learning-1.json",
+   "hebrewStrings": 268,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/packs/vocab5k-tier-500.json",
+   "hebrewStrings": 1141,
+   "counts": {
+    "maqaf-spacing": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/themes/describing-words-set03.json",
+   "hebrewStrings": 348,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/themes/doing-verbs-set06.json",
+   "hebrewStrings": 604,
+   "counts": {
+    "conflicting-marks": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/themes/general-things-set02.json",
+   "hebrewStrings": 401,
+   "counts": {
+    "duplicate-mark": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/themes/school-learning-set01.json",
+   "hebrewStrings": 186,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  },
+  {
+   "file": "data/vocab/themes/tech-media-set01.json",
+   "hebrewStrings": 356,
+   "counts": {
+    "nonfinal-pe-at-end": 1
+   },
+   "total": 1
+  }
+ ]
+}

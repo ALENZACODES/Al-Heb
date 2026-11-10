@@ -1,0 +1,177 @@
+{
+ "id": "book50",
+ "titleHe": "רָצָה בַּפַּארְק",
+ "titleTranslit": "Ratzah Ba-Park",
+ "titleEn": "Running in the Park",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "פַּארְק הַיַּרְקוֹן. שֵׁשׁ בַּבֹּקֶר.",
+   "translit": "Park Ha-Yarkon. Shesh ba-boker.",
+   "en": "Yarkon Park. Six in the morning.",
+   "img": "assets/books/book50/BOOK50_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p01.mp3",
+    "m": "audio/m/israeli/book/book50-p01.mp3"
+   },
+   "illustration": "a river path lined with eucalyptus, mist",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "לֵאָה רָצָה. לְאַט.",
+   "translit": "Leah ratzah. Le'at.",
+   "en": "Leah runs. Slowly.",
+   "img": "assets/books/book50/BOOK50_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p02.mp3",
+    "m": "audio/m/israeli/book/book50-p02.mp3"
+   },
+   "illustration": "a woman jogging, red-faced, headphones",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "זֶה הַשָּׁבוּעַ הָרִאשׁוֹן שֶׁלָּהּ.",
+   "translit": "Zeh ha-shavu'a ha-rishon shelah.",
+   "en": "It is her first week.",
+   "img": "assets/books/book50/BOOK50_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p03.mp3",
+    "m": "audio/m/israeli/book/book50-p03.mp3"
+   },
+   "illustration": "a running app showing day 4",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "כֻּלָּם עוֹבְרִים אוֹתָהּ.",
+   "translit": "Kulam ovrim otah.",
+   "en": "Everyone passes her.",
+   "img": "assets/books/book50/BOOK50_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p04.mp3",
+    "m": "audio/m/israeli/book/book50-p04.mp3"
+   },
+   "illustration": "lean runners streaming past, a kid on a scooter too",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "גַּם אִישׁ בֶּן שְׁמוֹנִים.",
+   "translit": "Gam ish ben shmonim.",
+   "en": "Even an eighty-year-old man.",
+   "img": "assets/books/book50/BOOK50_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p05.mp3",
+    "m": "audio/m/israeli/book/book50-p05.mp3"
+   },
+   "illustration": "an old man in a headband gliding by",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הִיא רוֹצָה לַעֲצֹר.",
+   "translit": "Hi rotzah la'atzor.",
+   "en": "She wants to stop.",
+   "img": "assets/books/book50/BOOK50_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p06.mp3",
+    "m": "audio/m/israeli/book/book50-p06.mp3"
+   },
+   "illustration": "bent over, hands on knees",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הִיא לֹא עוֹצֶרֶת.",
+   "translit": "Hi lo otzeret.",
+   "en": "She doesn't stop.",
+   "img": "assets/books/book50/BOOK50_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p07.mp3",
+    "m": "audio/m/israeli/book/book50-p07.mp3"
+   },
+   "illustration": "one more step, jaw set",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַנָּהָר. הַבַּרְוָזִים.",
+   "translit": "Ha-nahar. Ha-barvazim.",
+   "en": "The river. The ducks.",
+   "img": "assets/books/book50/BOOK50_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p08.mp3",
+    "m": "audio/m/israeli/book/book50-p08.mp3"
+   },
+   "illustration": "ducks paddling alongside her",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הָאִישׁ בֶּן הַשְּׁמוֹנִים מְחַכֶּה בַּגֶּשֶׁר.",
+   "translit": "Ha-ish ben ha-shmonim mechakeh ba-gesher.",
+   "en": "The eighty-year-old waits at the bridge.",
+   "img": "assets/books/book50/BOOK50_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p09.mp3",
+    "m": "audio/m/israeli/book/book50-p09.mp3"
+   },
+   "illustration": "the old man stretching on a footbridge",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"פַּעַם רִאשׁוֹנָה?\"",
+   "translit": "\"Pa'am rishonah?\"",
+   "en": "\"First time?\"",
+   "img": "assets/books/book50/BOOK50_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p10.mp3",
+    "m": "audio/m/israeli/book/book50-p10.mp3"
+   },
+   "illustration": "his kind look",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"שָׁבוּעַ רִאשׁוֹן.\"",
+   "translit": "\"Shavu'a rishon.\"",
+   "en": "\"First week.\"",
+   "img": "assets/books/book50/BOOK50_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p11.mp3",
+    "m": "audio/m/israeli/book/book50-p11.mp3"
+   },
+   "illustration": "her gasping answer",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "\"יוֹפִי. מָחָר שׁוּב.\"",
+   "translit": "\"Yofi. Machar shuv.\"",
+   "en": "\"Great. Again tomorrow.\"",
+   "img": "assets/books/book50/BOOK50_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book50-p12.mp3",
+    "m": "audio/m/israeli/book/book50-p12.mp3"
+   },
+   "illustration": "the two walking off the bridge together, sun up",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

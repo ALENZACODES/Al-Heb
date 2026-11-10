@@ -1,0 +1,25 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
+ "inputSha256": "b35cd2cdf8244c92fe011524e4f15232ad9f3f651d52b6f466200a08ffd1f979",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה אֲדֹנָי מָגֵן אַבְרָהָם׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/adon-olam-1-w14.mp3",
+  "audio/f/israeli/word/avot-1-w35.mp3",
+  "audio/f/israeli/word/avot-1-w36.mp3",
+  "audio/f/israeli/word/avot-1-w37.mp3",
+  "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "audio/f/israeli/word/avot-1-w2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/avot-closing-w8.mp3",
+  "audio/f/israeli/word/avot-1-w8.mp3"
+ ]
+}

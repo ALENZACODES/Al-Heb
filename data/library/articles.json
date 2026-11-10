@@ -1,0 +1,1298 @@
+{
+ "schema": "alef-library/1",
+ "note": "Aleph's own short articles on Jewish life for adult beginners. Written in Aleph's words from the sources listed with each article; every section names the sources it rests on. Run node tools/content/check-articles.mjs before shipping a change.",
+ "articles": [
+  {
+   "id": "reform-judaism",
+   "title": "Reform Judaism in Plain Words",
+   "summary": "What Reform Jews hold on to, what they leave to personal choice, and how the movement has written down its beliefs over time.",
+   "minutes": 4,
+   "dayIds": [],
+   "terms": [
+    {
+     "he": "תּוֹרָה",
+     "tr": "Torah",
+     "en": "teaching; the Five Books of Moses"
+    },
+    {
+     "he": "מִצְוָה",
+     "tr": "mitzvah",
+     "en": "a commandment; a sacred act"
+    },
+    {
+     "he": "תִּקּוּן עוֹלָם",
+     "tr": "tikkun olam",
+     "en": "repairing the world"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Three Words at the Centre",
+     "paras": [
+      "Reform Judaism keeps three old ideas at its centre: God, Torah and Israel. Israel here means the Jewish people, not only the country. Around that centre, Reform Jews believe and practise in many different ways, and the movement says so openly.",
+      "In North America the movement is led by the Union for Reform Judaism. Its rabbis belong to the Central Conference of American Rabbis, and that body has written the movement's statements of belief."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    },
+    {
+     "heading": "Beliefs Written Down, Then Rewritten",
+     "paras": [
+      "Reform rabbis have put their beliefs on paper several times. The first was the Pittsburgh Platform of 1885. Later statements came in 1937 in Columbus, in 1976 in San Francisco and in 1999, again in Pittsburgh.",
+      "Each one reads differently, and that is the point. The 1885 text set aside much of traditional ritual. The 1999 statement invited Reform Jews to look again at traditional practice and choose what gives their lives holiness. You can read every one of these documents on the rabbis' own website."
+     ],
+     "refs": [
+      1,
+      2,
+      4
+     ]
+    },
+    {
+     "heading": "Choice, Learning and Welcome",
+     "paras": [
+      "A Reform Jew is asked to learn first, then make thoughtful choices about how to live out Jewish values, weighing each mitzvah on its merits. The movement says plainly that there is more than one real way to be Jewish.",
+      "The movement also puts a lot of weight on repairing the world, which it calls tikkun olam. And it works to welcome everyone: in 2015 it affirmed full inclusion of people of all gender identities and gender expressions."
+     ],
+     "refs": [
+      0,
+      3
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Find a Reform synagogue near you",
+    "href": "#/synagogues"
+   },
+   "references": [
+    {
+     "title": "What Is Reform Judaism?",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/what-we-believe/what-reform-judaism",
+     "kind": "organization",
+     "supports": "God, Torah and Israel as central tenets; diversity of belief and practice; tikkun olam",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "page read"
+     }
+    },
+    {
+     "title": "Platforms Adopted by the CCAR",
+     "publisher": "Central Conference of American Rabbis",
+     "url": "https://www.ccarnet.org/rabbinic-voice/platforms/",
+     "kind": "primary",
+     "supports": "the CCAR and its platforms of 1885, 1937, 1976, 1997 and 1999",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "A Statement of Principles for Reform Judaism (1999)",
+     "publisher": "Central Conference of American Rabbis",
+     "url": "https://www.ccarnet.org/rabbinic-voice/platforms/article-statement-principles-reform-judaism/",
+     "kind": "primary",
+     "supports": "the 1999 statement adopted in Pittsburgh and its invitation to traditional practice",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "What Is Reform Judaism",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/what-is-reform-judaism",
+     "kind": "organization",
+     "supports": "the URJ as the umbrella body; the 2015 affirmation on gender identity and expression",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Reform Rabbis Adopt Statement of Principles",
+     "publisher": "J. The Jewish News of Northern California",
+     "url": "https://jweekly.com/?p=19793",
+     "kind": "news",
+     "supports": "the 1885 platform rejected much traditional ritual; the 1999 statement and its vote",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "shabbat-at-home",
+   "title": "Shabbat at Home",
+   "summary": "Candles, wine, two loaves and a blessing for the children: the Friday night table, step by step, and why each piece is there.",
+   "minutes": 4,
+   "dayIds": [
+    "shabbat",
+    "erev-shabbat"
+   ],
+   "terms": [
+    {
+     "he": "שַׁבָּת",
+     "tr": "Shabbat",
+     "en": "the Sabbath, the seventh day"
+    },
+    {
+     "he": "קִדּוּשׁ",
+     "tr": "Kiddush",
+     "en": "the blessing that makes the day holy, said over wine"
+    },
+    {
+     "he": "חַלָּה",
+     "tr": "challah",
+     "en": "braided Shabbat bread"
+    },
+    {
+     "he": "הַבְדָּלָה",
+     "tr": "Havdalah",
+     "en": "the short ceremony that ends Shabbat"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "From Sundown to Stars",
+     "paras": [
+      "Shabbat starts at sundown on Friday. It ends on Saturday evening with Havdalah, a few minutes of blessings over wine, spices and a braided candle that mark the line between the holy day and the week.",
+      "People greet each other with Shabbat shalom, a wish for a peaceful Sabbath."
+     ],
+     "refs": [
+      1,
+      0
+     ]
+    },
+    {
+     "heading": "Two Candles",
+     "paras": [
+      "Most homes light at least two candles. The Torah tells us about Shabbat twice, once to remember it (Exodus 20:8) and once to keep it (Deuteronomy 5:12), and each candle stands for one of those verses.",
+      "Here's a detail that surprises people: the candles are lit first and the blessing comes after. Saying the blessing is what begins Shabbat, so you light while it is still a weekday."
+     ],
+     "refs": [
+      0,
+      3
+     ]
+    },
+    {
+     "heading": "Wine, Bread and Children",
+     "paras": [
+      "Kiddush comes next, said over wine. Grape juice works just as well for children or anyone who doesn't drink.",
+      "Then two whole loaves of challah. They recall the double portion of manna that fell in the desert before each Sabbath, so no one had to gather food on the day of rest (Exodus 16). Many families also bless their children at the table, using words from Genesis 48:20.",
+      "After that, eat slowly. The meal itself is part of the day."
+     ],
+     "refs": [
+      0,
+      2
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Read the Shabbat candle blessing",
+    "href": "#/read/candle-shabbat"
+   },
+   "references": [
+    {
+     "title": "Blessings and Customs for Shabbat",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/blessings-and-customs-shabbat",
+     "kind": "organization",
+     "supports": "two candles and the two verses; lighting before the blessing; Kiddush over wine or grape juice; two challot and the manna",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Everything You Need to Know About Shabbat Services",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/shabbat/everything-you-need-know-about-shabbat-services",
+     "kind": "organization",
+     "supports": "Shabbat from Friday sundown to Havdalah on Saturday evening",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Blessings and Customs for Your Shabbat Table",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/shabbat/blessings-and-customs-your-shabbat-table",
+     "kind": "organization",
+     "supports": "blessing the children with Genesis 48:20; taking time over the meal",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Shabbat",
+     "publisher": "Jewish Virtual Library",
+     "url": "https://jewishvirtuallibrary.org/jsource/Judaism/Shabbat2.html",
+     "kind": "reference",
+     "supports": "at least two candles for remembering and keeping the Sabbath; two whole challah loaves",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "jewish-calendar",
+   "title": "How the Jewish Calendar Works",
+   "summary": "Months that follow the moon, years that follow the sun, and the extra month that keeps Passover in spring.",
+   "minutes": 3,
+   "dayIds": [
+    "rosh-chodesh"
+   ],
+   "terms": [
+    {
+     "he": "חֹדֶשׁ",
+     "tr": "chodesh",
+     "en": "month; from the word for new"
+    },
+    {
+     "he": "רֹאשׁ חֹדֶשׁ",
+     "tr": "Rosh Chodesh",
+     "en": "the first day of a Hebrew month"
+    },
+    {
+     "he": "שָׁנָה מְעֻבֶּרֶת",
+     "tr": "shanah me'uberet",
+     "en": "a leap year; literally a pregnant year"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Moon Months",
+     "paras": [
+      "A Hebrew month, a chodesh, runs from one new moon to the next, so it lasts 29 or 30 days. Its first day is called Rosh Chodesh, the head of the month. Twelve of those months add up to about 354 days.",
+      "The sun's year is longer, roughly 365 and a quarter days. Left alone, a calendar of moon months would slip about 11 days earlier every year, and the spring festival of Passover would wander into winter, then autumn."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    },
+    {
+     "heading": "The Thirteenth Month",
+     "paras": [
+      "The fix is to add a whole month now and then. Seven times in every 19 years, the year gets a second month of Adar. The two are called Adar I and Adar II, and Hebrew calls that kind of year shanah me'uberet, a pregnant year.",
+      "Tradition credits a sage named Hillel II with fixing this 19-year cycle in advance, and the same system is still used. In those years Purim, normally on the 14th of Adar, is kept in Adar II."
+     ],
+     "refs": [
+      0,
+      2
+     ]
+    },
+    {
+     "heading": "Days Start at Dusk",
+     "paras": [
+      "A Jewish day begins at sunset, not midnight. That's why Shabbat and every festival start in the evening, and why the calendar in Aleph marks the evening before each holy day."
+     ],
+     "refs": [
+      3
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Open the Hebrew calendar",
+    "href": "#/calendar"
+   },
+   "references": [
+    {
+     "title": "The Jewish Leap Year Explained",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/the-jewish-leap-year-explained/",
+     "kind": "educational",
+     "supports": "months of 29 or 30 days; Adar I and Adar II; Hillel II and the fixed 19-year cycle with seven leap years; Purim in Adar II",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "The Jewish Leap Year",
+     "publisher": "Chabad.org",
+     "url": "https://www.chabad.org/library/article_cdo/aid/3922256/jewish/The-Jewish-Leap-Year.htm",
+     "kind": "educational",
+     "supports": "12 lunar months make about 354 days, about 11 days short of the solar year",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "The Jewish Leap Year",
+     "publisher": "timeanddate.com",
+     "url": "https://www.timeanddate.com/date/jewish-leap-year.html",
+     "kind": "reference",
+     "supports": "7 leap years in 19; the name shanah me'uberet, pregnant year",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Everything You Need to Know About Shabbat Services",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/shabbat/everything-you-need-know-about-shabbat-services",
+     "kind": "organization",
+     "supports": "Shabbat begins at sundown on Friday",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "high-holy-days",
+   "title": "Rosh HaShanah and Yom Kippur",
+   "summary": "Ten days that start with a new year and end with a fast: what teshuvah means and what you'll hear and see in the synagogue.",
+   "minutes": 4,
+   "dayIds": [
+    "rosh-hashanah",
+    "yom-kippur"
+   ],
+   "terms": [
+    {
+     "he": "רֹאשׁ הַשָּׁנָה",
+     "tr": "Rosh HaShanah",
+     "en": "the new year; literally head of the year"
+    },
+    {
+     "he": "יוֹם כִּפּוּר",
+     "tr": "Yom Kippur",
+     "en": "the Day of Atonement"
+    },
+    {
+     "he": "תְּשׁוּבָה",
+     "tr": "teshuvah",
+     "en": "repentance; literally turning back"
+    },
+    {
+     "he": "שׁוֹפָר",
+     "tr": "shofar",
+     "en": "a ram's horn blown like a trumpet"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Ten Days of Awe",
+     "paras": [
+      "Rosh HaShanah, the Jewish new year, falls on the first of Tishrei. It opens ten days called the Days of Awe, and those days close with Yom Kippur on the tenth.",
+      "The theme of the whole stretch is teshuvah. The word means turning, and the idea is practical: notice where you went wrong, make it right with the people involved, and come back to the person you want to be."
+     ],
+     "refs": [
+      0,
+      2
+     ]
+    },
+    {
+     "heading": "The Sound of the Shofar",
+     "paras": [
+      "A shofar is a ram's horn, and its raw sound is the signature of the season. It is blown during the month of Elul as a reminder that the holy days are coming, on Rosh HaShanah itself, and one last time when Yom Kippur ends.",
+      "On the first day, often in the afternoon, many people go to a river or other moving water for Tashlich. They toss in bits of bread as a picture of casting away the year's wrongs."
+     ],
+     "refs": [
+      1
+     ]
+    },
+    {
+     "heading": "A Day Without Food",
+     "paras": [
+      "Yom Kippur is the most solemn day of the year. Many adults fast from evening to evening and spend much of the day in prayer. More people come to synagogue on these days than at any other time.",
+      "Most Reform congregations keep one day of Rosh HaShanah, though a growing number now keep two."
+     ],
+     "refs": [
+      2,
+      1
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Rosh HaShanah",
+    "href": "#/festivals/rosh-hashanah"
+   },
+   "references": [
+    {
+     "title": "Rosh HaShanah",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/rosh-hashanah",
+     "kind": "organization",
+     "supports": "Rosh HaShanah begins the ten Days of Awe that end with Yom Kippur; teshuvah",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Rosh HaShanah Customs, Symbols and Traditions",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://www.reformjudaism.org/jewish-holidays/rosh-hashanah/rosh-hashanah-customs-symbols-and-traditions",
+     "kind": "organization",
+     "supports": "the shofar from Elul to the end of Yom Kippur; Tashlich; Reform congregations adding a second day",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "page read"
+     }
+    },
+    {
+     "title": "Rosh Hashanah and Yom Kippur",
+     "publisher": "The Pluralism Project, Harvard University",
+     "url": "https://pluralism.org/rosh-hashanah-and-yom-kippur",
+     "kind": "academic",
+     "supports": "both days fall in Tishrei; Yom Kippur ten days later with fasting; the best-attended services of the year",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sukkot",
+   "title": "Sukkot, Shemini Atzeret and Simchat Torah",
+   "summary": "A week in a hut with a leafy roof, a bundle of branches and a citron, and a party for the Torah at the end.",
+   "minutes": 3,
+   "dayIds": [
+    "sukkot",
+    "shemini-atzeret",
+    "simchat-torah"
+   ],
+   "terms": [
+    {
+     "he": "סֻכָּה",
+     "tr": "sukkah",
+     "en": "a temporary hut with a leafy roof"
+    },
+    {
+     "he": "לוּלָב",
+     "tr": "lulav",
+     "en": "palm branch, bound with myrtle and willow"
+    },
+    {
+     "he": "אֶתְרוֹג",
+     "tr": "etrog",
+     "en": "citron, a lemon-like fruit"
+    },
+    {
+     "he": "שִׂמְחַת תּוֹרָה",
+     "tr": "Simchat Torah",
+     "en": "rejoicing in the Torah"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Living Outside",
+     "paras": [
+      "Five days after Yom Kippur comes Sukkot, a harvest festival. It also recalls the forty years the Israelites spent in the desert after leaving Egypt, living in shelters that could be taken down and moved.",
+      "So people build a sukkah, a hut with a roof of branches, and eat their meals in it for the week. The Torah's own instruction is short: live in booths for seven days (Leviticus 23:42)."
+     ],
+     "refs": [
+      1,
+      2
+     ]
+    },
+    {
+     "heading": "Four Plants",
+     "paras": [
+      "Sukkot's other symbol is held in two hands. The lulav is a palm branch bound with myrtle and willow; the etrog is a citron. After a blessing they are waved in six directions: east, south, west, north, up and down."
+     ],
+     "refs": [
+      1
+     ]
+    },
+    {
+     "heading": "Dancing With the Scrolls",
+     "paras": [
+      "On the eighth day comes Shemini Atzeret. Reform congregations and Jews in Israel celebrate Simchat Torah on that same day. The last lines of Deuteronomy are read, then the first lines of Genesis straight after, so the reading never really stops. People sing and dance with the Torah scrolls."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Sukkot",
+    "href": "#/festivals/sukkot"
+   },
+   "references": [
+    {
+     "title": "Sukkot History",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://www.reformjudaism.org/jewish-holidays/sukkot/sukkot-history",
+     "kind": "organization",
+     "supports": "Reform congregations observe Shemini Atzeret together with Simchat Torah; lulav and etrog",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Sukkot, Shemini Atzeret, and Simchat Torah",
+     "publisher": "The Pluralism Project, Harvard University",
+     "url": "https://pluralism.org/sukkot-shemini-atzeret-and-simchat-torah",
+     "kind": "academic",
+     "supports": "harvest festival recalling forty years in the desert; lulav and etrog waved in six directions; finishing Deuteronomy and starting Genesis; dancing with the Torah",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Leviticus 23:42",
+     "publisher": "Sefaria",
+     "url": "https://www.sefaria.org/Leviticus.23.42",
+     "kind": "primary",
+     "supports": "the verse about dwelling in booths for seven days",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "verse"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hanukkah",
+   "title": "Hanukkah, Then and Now",
+   "summary": "A rededicated Temple, a later story about oil, and eight nights of lights in the window.",
+   "minutes": 3,
+   "dayIds": [
+    "hanukkah"
+   ],
+   "terms": [
+    {
+     "he": "חֲנֻכָּה",
+     "tr": "Hanukkah",
+     "en": "dedication"
+    },
+    {
+     "he": "חֲנֻכִּיָּה",
+     "tr": "hanukkiyah",
+     "en": "the nine-branched Hanukkah lamp"
+    },
+    {
+     "he": "שַׁמָּשׁ",
+     "tr": "shamash",
+     "en": "the helper candle that lights the others"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "What Happened",
+     "paras": [
+      "Hanukkah means dedication. In the second century before the common era, a Jewish rebel group led by the Maccabees won Jerusalem back from its Syrian-Greek rulers and rededicated the Temple. They celebrated for eight days, matching the eight days of Sukkot.",
+      "Hanukkah isn't in the Torah. The sages added it later, and it begins on the 25th of Kislev."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    },
+    {
+     "heading": "The Oil",
+     "paras": [
+      "The famous story of a small jar of oil that burned for eight days doesn't appear in the books of the Maccabees. It shows up centuries later, in the Talmud. Both stories are part of the holiday now, and many families tell them side by side."
+     ],
+     "refs": [
+      0
+     ]
+    },
+    {
+     "heading": "Lighting the Lamp",
+     "paras": [
+      "The hanukkiyah has nine branches: eight for the nights and one, the shamash, that lights the rest. You light one candle the first night and add one each night until all eight are burning. The lamp goes in a window or by the door so people passing can see it.",
+      "Foods fried in oil, like latkes and doughnuts, belong to the same story."
+     ],
+     "refs": [
+      1,
+      2
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Hanukkah",
+    "href": "#/festivals/hanukkah"
+   },
+   "references": [
+    {
+     "title": "History: The Hanukkah Story",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/hanukkah/history-hanukkah-story",
+     "kind": "organization",
+     "supports": "the Maccabees and the Syrians; eight days paralleling Sukkot; the oil story absent from Maccabees and appearing in the Talmud centuries later",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "page read"
+     }
+    },
+    {
+     "title": "Hanukkah",
+     "publisher": "National Library of Israel",
+     "url": "https://www.nli.org.il/en/discover/judaism/holidays/hanukkah",
+     "kind": "academic",
+     "supports": "eight days from 25 Kislev; not in the Torah, added by the sages; the lamp at the entrance or in a window; the shamash",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Hanukkah",
+     "publisher": "Hillel International",
+     "url": "https://www.hillel.org/?p=9188",
+     "kind": "organization",
+     "supports": "nine candles with the shamash; foods fried in oil",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "purim",
+   "title": "Purim and the Book of Esther",
+   "summary": "A noisy reading of a scroll, food for friends and money for people in need: the four things Purim asks of you.",
+   "minutes": 3,
+   "dayIds": [
+    "purim"
+   ],
+   "terms": [
+    {
+     "he": "מְגִלָּה",
+     "tr": "megillah",
+     "en": "scroll; here, the Book of Esther"
+    },
+    {
+     "he": "מִשְׁלוֹחַ מָנוֹת",
+     "tr": "mishloach manot",
+     "en": "sending food gifts to friends"
+    },
+    {
+     "he": "מַתָּנוֹת לָאֶבְיוֹנִים",
+     "tr": "matanot la'evyonim",
+     "en": "gifts to the poor"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "The Story",
+     "paras": [
+      "The Book of Esther tells of a Persian court where an official named Haman plots to destroy the Jews. Queen Esther and her cousin Mordecai turn the plot around. Purim falls on the 14th of Adar, and in a leap year it moves to Adar II.",
+      "The book is read aloud from a scroll called the megillah, and the room makes as much noise as it can every time Haman's name comes up."
+     ],
+     "refs": [
+      1,
+      2
+     ]
+    },
+    {
+     "heading": "Four Things to Do",
+     "paras": [
+      "Four duties belong to the day, as the rabbis listed them: hear the megillah, send food to friends, give to people in need, and sit down to a festive meal.",
+      "Mishloach manot, the food gift, has a simple rule: at least two kinds of ready-to-eat food, to at least one person. Three-cornered cookies called hamantaschen are a favourite.",
+      "Matanot la'evyonim, the gifts to the poor, exist so that everyone can afford to celebrate. Many Reform families give to a food bank or volunteer at a meal program that week."
+     ],
+     "refs": [
+      1,
+      0
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Purim",
+    "href": "#/festivals/purim"
+   },
+   "references": [
+    {
+     "title": "Purim: Customs and Rituals",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://www.reformjudaism.org/purim-customs-and-rituals",
+     "kind": "organization",
+     "supports": "mishloach manot; matanot l'evyonim so that those in need can celebrate; hamantaschen",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "The Four Mitzvot of Purim",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/the-four-mitzvot-of-purim/",
+     "kind": "educational",
+     "supports": "the four obligations; at least two kinds of ready-to-eat food to at least one person",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "The Jewish Leap Year Explained",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/the-jewish-leap-year-explained/",
+     "kind": "educational",
+     "supports": "Purim on 14 Adar, in Adar II in a leap year",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "passover-seder",
+   "title": "Pesach and the Seder",
+   "summary": "A meal in a set order that walks you from slavery to freedom, with a plate of symbols in the middle of the table.",
+   "minutes": 4,
+   "dayIds": [
+    "pesach"
+   ],
+   "terms": [
+    {
+     "he": "פֶּסַח",
+     "tr": "Pesach",
+     "en": "Passover"
+    },
+    {
+     "he": "סֵדֶר",
+     "tr": "seder",
+     "en": "order"
+    },
+    {
+     "he": "הַגָּדָה",
+     "tr": "Haggadah",
+     "en": "the telling; the book used at the seder"
+    },
+    {
+     "he": "מַצָּה",
+     "tr": "matzah",
+     "en": "flat unleavened bread"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "A Meal With an Order",
+     "paras": [
+      "Pesach remembers the Exodus, the Israelites' escape from slavery in Egypt. Its heart is the seder, a festive home meal. Seder means order, because the evening follows a fixed sequence of about fifteen steps, from blessing the wine to songs at the end.",
+      "The steps are written out in a book called the Haggadah, which means the telling. Many versions exist, from traditional to playful, and many congregations also hold a community seder."
+     ],
+     "refs": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "heading": "The Seder Plate",
+     "paras": [
+      "A special plate sits near whoever leads. On it you'll usually find a roasted shank bone, an egg, a green vegetable such as parsley, a bitter herb, lettuce, and charoset, a sweet mix of fruit and nuts. Each one is pointed to and explained during the evening.",
+      "The greens are dipped in salt water, a taste of tears. A bitter herb stands for the bitterness of slavery, and charoset looks like the mortar the slaves used for bricks."
+     ],
+     "refs": [
+      0,
+      3
+     ]
+    },
+    {
+     "heading": "A Week Without Bread",
+     "paras": [
+      "For the whole festival, leavened food, called chametz, is cleared out of the home and matzah takes the place of bread."
+     ],
+     "refs": [
+      0
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Pesach",
+    "href": "#/festivals/pesach"
+   },
+   "references": [
+    {
+     "title": "Passover Customs and Rituals",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://www.reformjudaism.org/jewish-holidays/passover/passover-customs-and-rituals",
+     "kind": "organization",
+     "supports": "seder means order and has 15 traditional steps; the Haggadah; community seders; the items on the seder plate; chametz",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "What to Expect at a Passover Seder",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://www.reformjudaism.org/jewish-holidays/passover/what-expect-passover-seder",
+     "kind": "organization",
+     "supports": "the seder takes us from slavery to freedom; Haggadah means the telling",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "The 14 Key Steps of a Passover Seder",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/how-to-conduct-a-seder/",
+     "kind": "educational",
+     "supports": "the steps of the seder and the meaning of the symbolic foods",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Learn About the Passover Seder Plate",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/passover/learn-about-passover-seder-plate",
+     "kind": "organization",
+     "supports": "the six items on the seder plate and what each stands for: salt water for tears, bitter herb for slavery, charoset for mortar",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "page read"
+     }
+    }
+   ]
+  },
+  {
+   "id": "shavuot",
+   "title": "Shavuot: Seven Weeks Later",
+   "summary": "A harvest festival that became the day of the giving of the Torah, with the Book of Ruth, dairy food and confirmation.",
+   "minutes": 3,
+   "dayIds": [
+    "shavuot"
+   ],
+   "terms": [
+    {
+     "he": "שָׁבוּעוֹת",
+     "tr": "Shavuot",
+     "en": "weeks"
+    },
+    {
+     "he": "רוּת",
+     "tr": "Ruth",
+     "en": "the Book of Ruth, read on Shavuot"
+    },
+    {
+     "he": "מַתַּן תּוֹרָה",
+     "tr": "matan Torah",
+     "en": "the giving of the Torah"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Counting From Passover",
+     "paras": [
+      "Shavuot means weeks. It comes seven weeks after Pesach, which links leaving Egypt with arriving at Mount Sinai.",
+      "It began as a harvest festival, when the first fruits were brought to the Temple. The link to matan Torah, the giving of the Torah, came later, after the Temple was destroyed. The Torah itself doesn't make that connection."
+     ],
+     "refs": [
+      0,
+      2
+     ]
+    },
+    {
+     "heading": "Ruth, Cheesecake and Confirmation",
+     "paras": [
+      "Many synagogues read the Book of Ruth. Ruth chose to join the Jewish people, and one reason given for reading her story now is that, like the Israelites at Sinai, she took on the covenant herself.",
+      "Dairy food is traditional, cheesecake and blintzes especially. People connect it with the sweetness of Torah and with the land the Torah calls flowing with milk and honey (Exodus 3:8).",
+      "Reform congregations often hold confirmation on or near Shavuot, for teenagers who kept studying after their bar or bat mitzvah."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Words and texts for Shavuot",
+    "href": "#/festivals/shavuot"
+   },
+   "references": [
+    {
+     "title": "The Shavuot Story for Families",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/shavuot/shavuot-story-families",
+     "kind": "organization",
+     "supports": "the harvest origin; the Sinai link developed later and is not in the Torah; reading Ruth and why",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Shavuot Customs and Rituals",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/jewish-holidays/shavuot/shavuot-customs-and-rituals",
+     "kind": "organization",
+     "supports": "confirmation on or near Shavuot; dairy foods and Exodus 3:8",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Shavuot",
+     "publisher": "Temple Emanu-El of New York",
+     "url": "https://emanuelnyc.org/worship/holidays/shavuot/",
+     "kind": "congregation",
+     "supports": "Shavuot falls seven weeks after Passover and marks the giving of the Torah",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "how-a-service-flows",
+   "title": "How a Service Flows",
+   "summary": "Open a prayer book and it can look endless. It isn't: a service has a few big blocks, always in the same order.",
+   "minutes": 4,
+   "dayIds": [],
+   "terms": [
+    {
+     "he": "סִדּוּר",
+     "tr": "siddur",
+     "en": "prayer book; from the word for order"
+    },
+    {
+     "he": "שְׁמַע",
+     "tr": "Shema",
+     "en": "hear; the line that declares God is one"
+    },
+    {
+     "he": "עֲמִידָה",
+     "tr": "Amidah",
+     "en": "the standing prayer"
+    },
+    {
+     "he": "בָּרְכוּ",
+     "tr": "Barchu",
+     "en": "the call to prayer"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Warming Up",
+     "paras": [
+      "Open a siddur, a prayer book, at the morning service and you'll find it begins with short blessings of thanks for ordinary things and a set of psalms. These were first said at home while getting up and dressing. They help you arrive before the main prayers start."
+     ],
+     "refs": [
+      0
+     ]
+    },
+    {
+     "heading": "The Shema and Its Blessings",
+     "paras": [
+      "Then the leader calls the room to prayer with Barchu, and the congregation answers. Two blessings follow, one about creation and one about the gift of Torah. Then comes the Shema itself: Hear, O Israel, the Lord is our God, the Lord is One (Deuteronomy 6:4). One more blessing after it gives thanks for freedom from Egypt.",
+      "The Shema is said morning and evening. It isn't a request at all. It's a statement that God is one."
+     ],
+     "refs": [
+      0,
+      1,
+      4
+     ]
+    },
+    {
+     "heading": "Standing Prayer",
+     "paras": [
+      "Next is the Amidah, which means standing, because you say it on your feet. It opens with praise and closes with thanks. On weekdays the middle holds requests; on Shabbat those are left out and the middle is about the day itself.",
+      "Many people say it quietly, at their own pace. Saying it in English is fine, and so is adding words of your own."
+     ],
+     "refs": [
+      2,
+      1
+     ]
+    },
+    {
+     "heading": "Torah and the Ending",
+     "paras": [
+      "On Shabbat morning, and briefly on Mondays and Thursdays, a Torah scroll is taken out and read. The service then winds down with Aleinu, the Mourner's Kaddish and a closing song such as Adon Olam."
+     ],
+     "refs": [
+      2,
+      3
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Follow the service in Aleph",
+    "href": "#/service"
+   },
+   "references": [
+    {
+     "title": "Siddur Contents: Shabbat and Holiday Liturgy",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/siddur-contents-shabbat-holiday-liturgy/",
+     "kind": "educational",
+     "supports": "morning blessings first said at home; Barchu; two blessings before the Shema on creation and revelation, one after on redemption; Deuteronomy 6:4; Adon Olam",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Highlights of the Shabbat Morning Synagogue Service",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/highlights-of-the-shabbat-morning-synagogue-service/",
+     "kind": "educational",
+     "supports": "the Shema is an affirmation of God's unity, not a prayer; the Amidah may be said in English and from the heart",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Shacharit: The Jewish Morning Prayer Service",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/shacharit-the-jewish-morning-prayer-service/",
+     "kind": "educational",
+     "supports": "the Amidah moves from praise through requests to thanks; petitions left out on Shabbat; Torah read on Shabbat, Mondays and Thursdays",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Structure of the Siddur",
+     "publisher": "Board of Jewish Education, Sydney",
+     "url": "https://bje.org.au/?p=14564",
+     "kind": "educational",
+     "supports": "the service ends with Aleinu and the Mourner's Kaddish",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Deuteronomy 6:4",
+     "publisher": "Sefaria",
+     "url": "https://www.sefaria.org/Deuteronomy.6.4",
+     "kind": "primary",
+     "supports": "the verse of the Shema",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "verse"
+     }
+    }
+   ]
+  },
+  {
+   "id": "torah-portions",
+   "title": "The Torah, a Week at a Time",
+   "summary": "Why every Shabbat has a named reading, how the year's cycle starts again, and who gets called up.",
+   "minutes": 3,
+   "dayIds": [
+    "shabbat",
+    "simchat-torah"
+   ],
+   "terms": [
+    {
+     "he": "פָּרָשָׁה",
+     "tr": "parashah",
+     "en": "the weekly Torah portion"
+    },
+    {
+     "he": "הַפְטָרָה",
+     "tr": "haftarah",
+     "en": "a reading from the Prophets after the Torah"
+    },
+    {
+     "he": "עֲלִיָּה",
+     "tr": "aliyah",
+     "en": "going up; being called to bless the reading"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "Fifty-Four Portions",
+     "paras": [
+      "The Torah, the Five Books of Moses, is split into 54 portions. Each one is a parashah. Each one takes its name from its first distinctive word or words. The first portion is Bereishit, which means in the beginning.",
+      "One portion is chanted from the scroll each Shabbat morning. A regular year has fewer Shabbatot than portions, so a few short ones are read in pairs to finish on time."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    },
+    {
+     "heading": "Round and Round",
+     "paras": [
+      "The cycle ends and starts again on Simchat Torah. The last verses of Deuteronomy are read and the first of Genesis follow right away, so the scroll never sits finished.",
+      "After the Torah comes the haftarah, a reading from the Prophets picked to echo the week's portion."
+     ],
+     "refs": [
+      2,
+      1
+     ]
+    },
+    {
+     "heading": "Being Called Up",
+     "paras": [
+      "The reading is divided into sections, and members of the congregation are invited up to say a blessing before and after each one. That honour is called an aliyah, which means going up."
+     ],
+     "refs": [
+      1,
+      3
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Read from the Torah in Aleph",
+    "href": "#/torahread"
+   },
+   "references": [
+    {
+     "title": "What Is the Torah Portion?",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/what-is-the-torah-portion/",
+     "kind": "educational",
+     "supports": "54 portions named for their first words, chanted on Shabbat morning",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Weekly Torah Readings",
+     "publisher": "Jewish Virtual Library",
+     "url": "https://www.jewishvirtuallibrary.org/weekly-torah-readings",
+     "kind": "reference",
+     "supports": "shorter portions doubled in non-leap years; aliyah as the honour of blessing a section; the haftarah with each portion",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Sukkot, Shemini Atzeret, and Simchat Torah",
+     "publisher": "The Pluralism Project, Harvard University",
+     "url": "https://pluralism.org/sukkot-shemini-atzeret-and-simchat-torah",
+     "kind": "academic",
+     "supports": "finishing Deuteronomy and starting Genesis on Simchat Torah",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Reform Sanctuary Customs",
+     "publisher": "Union for Reform Judaism (ReformJudaism.org)",
+     "url": "https://reformjudaism.org/beliefs-practices/what-reform-judaism/intro-congregational-life/reform-sanctuary-customs",
+     "kind": "organization",
+     "supports": "congregants called to the bimah to recite the aliyah blessings",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  },
+  {
+   "id": "how-hebrew-came-back",
+   "title": "How Hebrew Came Back",
+   "summary": "For centuries Hebrew was for prayer and study. Then one stubborn family started speaking it at breakfast.",
+   "minutes": 3,
+   "dayIds": [],
+   "terms": [
+    {
+     "he": "עִבְרִית",
+     "tr": "Ivrit",
+     "en": "the Hebrew language"
+    },
+    {
+     "he": "מִלּוֹן",
+     "tr": "milon",
+     "en": "dictionary"
+    },
+    {
+     "he": "לָשׁוֹן",
+     "tr": "lashon",
+     "en": "language; also tongue"
+    }
+   ],
+   "sections": [
+    {
+     "heading": "A Language Kept for Study",
+     "paras": [
+      "Hebrew, Ivrit, never disappeared. Jews prayed in it, studied in it and wrote letters about religious questions in it. What it had lost, for many centuries, was everyday speech: nobody grew up talking about breakfast or the weather in Hebrew."
+     ],
+     "refs": [
+      0,
+      2
+     ]
+    },
+    {
+     "heading": "One Household",
+     "paras": [
+      "Eliezer Ben-Yehuda, born in 1858 in the village of Luzhky, set out to change that. He reached Jerusalem in 1881 and, with his wife Deborah, made their home a Hebrew-only home. Their son Ben-Zion became the first child in modern times raised with Hebrew as his mother tongue.",
+      "The thinking was simple. If a child could grow up speaking Hebrew, a whole people could."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    },
+    {
+     "heading": "Schools, Newspapers and New Words",
+     "paras": [
+      "Ben-Yehuda pushed for Hebrew as the language of teaching in schools, which turned out to matter most. He ran newspapers, invented words for modern things and began a huge dictionary in 1910 that took seventeen volumes and was finished long after his death in 1922.",
+      "He also helped found the Hebrew Language Committee, Va'ad HaLashon, which grew into today's Academy of the Hebrew Language. When you learn a word like milon in Aleph, you're using his work."
+     ],
+     "refs": [
+      0,
+      1
+     ]
+    }
+   ],
+   "tryIt": {
+    "label": "Start with the letters",
+    "href": "#/letters"
+   },
+   "references": [
+    {
+     "title": "Eliezer Ben-Yehuda and the Making of Modern Hebrew",
+     "publisher": "My Jewish Learning",
+     "url": "https://www.myjewishlearning.com/article/eliezer-ben-yehuda/",
+     "kind": "educational",
+     "supports": "born 1858; Jerusalem 1881; first modern Hebrew-speaking household and child; Hebrew in schools; new words and newspapers; dictionary from 1910 in 17 volumes; died 1922; the Language Council and the Academy",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Eliezer Ben-Yehuda and the Revival of Hebrew",
+     "publisher": "Jewish Virtual Library (Jack Fellman)",
+     "url": "https://www.jewishvirtuallibrary.org/eliezer-ben-yehuda-and-the-revival-of-hebrew",
+     "kind": "academic",
+     "supports": "the first all-Hebrew-speaking child; why the household mattered; Hebrew in the school as the most important step",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    },
+    {
+     "title": "Israel's Greatest Achievement: Reviving the Hebrew Language",
+     "publisher": "The Jerusalem Post",
+     "url": "https://www.jpost.com/jerusalem-report/israels-greatest-achievement-reviving-the-hebrew-language-655266",
+     "kind": "news",
+     "supports": "Hebrew never died: it was read, prayed and written in religious life",
+     "checked": {
+      "date": "2026-11-09",
+      "how": "search excerpt"
+     }
+    }
+   ]
+  }
+ ]
+}

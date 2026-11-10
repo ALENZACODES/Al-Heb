@@ -1,0 +1,760 @@
+{
+ "when": "2026-11-04T14:05:44.793Z",
+ "chromium": "153.0.8010.12",
+ "network": "slow4g",
+ "netDetail": {
+  "latency": 150,
+  "downloadThroughput": 209715.2,
+  "uploadThroughput": 96000
+ },
+ "cpuSlowdown": 4,
+ "runs": 1,
+ "note": "Emulated throttling in headless Chromium on a shared Linux machine, not a real phone; compare bytes and ordering, treat milliseconds as indicative.",
+ "routes": {
+  "/": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 1032,
+   "readyMs": 4530,
+   "manifestSettledMs": 4590,
+   "viewMs": 5613,
+   "mainNodes": 188,
+   "load": 1801.1,
+   "requests": 51,
+   "totalBytes": 558985,
+   "jsBytes": 234197,
+   "jsRequests": 38,
+   "jsBytesBeforeFcp": 12120,
+   "jsRequestsBeforeFcp": 1,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 154763,
+   "imageBytes": 0,
+   "domNodes": 266,
+   "jsHeapUsedMB": 2.7,
+   "cdpNodes": 407,
+   "cdpListeners": 48,
+   "layoutCount": 11,
+   "longTasks": {
+    "count": 8,
+    "totalMs": 1009,
+    "maxMs": 274,
+    "tbtMs": 573
+   },
+   "manifest": {
+    "requestedAtMs": 4491,
+    "finishedAtMs": 4511,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ],
+    [
+     "src/audio/player.js",
+     9947
+    ],
+    [
+     "src/curriculum/actions.js",
+     9598
+    ],
+    [
+     "src/img/resolve.js",
+     8771
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/curriculum/belts.json",
+     3816
+    ],
+    [
+     "data/curriculum/hints.json",
+     2365
+    ],
+    [
+     "data/images/approvals.json",
+     459
+    ],
+    [
+     "data/audio/manifest-words-sephardi.json",
+     0
+    ]
+   ],
+   "fcpAll": [
+    1032
+   ]
+  },
+  "/read/bless-priestly-1": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 968,
+   "readyMs": 7114,
+   "manifestSettledMs": 7223,
+   "viewMs": 8236,
+   "mainNodes": 332,
+   "load": 1997.7,
+   "requests": 49,
+   "totalBytes": 907253,
+   "jsBytes": 246170,
+   "jsRequests": 33,
+   "jsBytesBeforeFcp": 12120,
+   "jsRequestsBeforeFcp": 1,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 491058,
+   "imageBytes": 0,
+   "domNodes": 410,
+   "jsHeapUsedMB": 3.2,
+   "cdpNodes": 1024,
+   "cdpListeners": 92,
+   "layoutCount": 12,
+   "longTasks": {
+    "count": 10,
+    "totalMs": 1029,
+    "maxMs": 172,
+    "tbtMs": 445
+   },
+   "manifest": {
+    "requestedAtMs": 7091,
+    "finishedAtMs": 7101,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/corpus/read.view.js",
+     26443
+    ],
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/pronunciation/transliterate.js",
+     11213
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ],
+    [
+     "src/audio/player.js",
+     9947
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/corpus/registry.json",
+     158376
+    ],
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/corpus/phrasebook.json",
+     99475
+    ],
+    [
+     "data/corpus/prayer-meta.json",
+     54468
+    ],
+    [
+     "data/corpus/torah-service-guide.json",
+     15650
+    ],
+    [
+     "data/corpus/gaps.json",
+     14507
+    ]
+   ],
+   "fcpAll": [
+    968
+   ]
+  },
+  "/vocab": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 900,
+   "readyMs": 4515,
+   "manifestSettledMs": 4536,
+   "viewMs": 5586,
+   "mainNodes": 585,
+   "load": 1612,
+   "requests": 48,
+   "totalBytes": 662123,
+   "jsBytes": 243828,
+   "jsRequests": 36,
+   "jsBytesBeforeFcp": 12120,
+   "jsRequestsBeforeFcp": 1,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 248270,
+   "imageBytes": 0,
+   "domNodes": 664,
+   "jsHeapUsedMB": 3,
+   "cdpNodes": 1418,
+   "cdpListeners": 138,
+   "layoutCount": 12,
+   "longTasks": {
+    "count": 7,
+    "totalMs": 839,
+    "maxMs": 185,
+    "tbtMs": 449
+   },
+   "manifest": {
+    "requestedAtMs": 4499,
+    "finishedAtMs": 4503,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/vocab/vocab.view.js",
+     26870
+    ],
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/pronunciation/transliterate.js",
+     11213
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ],
+    [
+     "src/audio/player.js",
+     9947
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/vocab/packs/vocab5k-tier-500.json",
+     99688
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/images/approvals.json",
+     459
+    ],
+    [
+     "data/audio/manifest-words-sephardi.json",
+     0
+    ],
+    [
+     "data/audio/manifest.json",
+     0
+    ]
+   ],
+   "fcpAll": [
+    900
+   ]
+  },
+  "/vocab/themes": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 1544,
+   "readyMs": 5369,
+   "manifestSettledMs": 5454,
+   "viewMs": 6465,
+   "mainNodes": 169,
+   "load": 2244,
+   "requests": 50,
+   "totalBytes": 583932,
+   "jsBytes": 257254,
+   "jsRequests": 38,
+   "jsBytesBeforeFcp": 58320,
+   "jsRequestsBeforeFcp": 10,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 156653,
+   "imageBytes": 0,
+   "domNodes": 248,
+   "jsHeapUsedMB": 2.7,
+   "cdpNodes": 439,
+   "cdpListeners": 89,
+   "layoutCount": 12,
+   "longTasks": {
+    "count": 7,
+    "totalMs": 1240,
+    "maxMs": 556,
+    "tbtMs": 305
+   },
+   "manifest": {
+    "requestedAtMs": 5286,
+    "finishedAtMs": 5312,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/vocab/vocab.view.js",
+     26870
+    ],
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/vocab/themes.view.js",
+     11853
+    ],
+    [
+     "src/pronunciation/transliterate.js",
+     11213
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/vocab/themes/index.json",
+     8071
+    ],
+    [
+     "data/images/approvals.json",
+     459
+    ],
+    [
+     "data/audio/manifest-words-sephardi.json",
+     0
+    ],
+    [
+     "data/audio/manifest.json",
+     0
+    ]
+   ],
+   "fcpAll": [
+    1544
+   ]
+  },
+  "/placement": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 980,
+   "readyMs": 3648,
+   "manifestSettledMs": 3815,
+   "viewMs": 4988,
+   "mainNodes": 5,
+   "load": 1600.6,
+   "requests": 44,
+   "totalBytes": 536381,
+   "jsBytes": 193358,
+   "jsRequests": 31,
+   "jsBytesBeforeFcp": 14350,
+   "jsRequestsBeforeFcp": 2,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 172998,
+   "imageBytes": 0,
+   "domNodes": 83,
+   "jsHeapUsedMB": 2.7,
+   "cdpNodes": 151,
+   "cdpListeners": 48,
+   "layoutCount": 11,
+   "longTasks": {
+    "count": 1,
+    "totalMs": 193,
+    "maxMs": 193,
+    "tbtMs": 0
+   },
+   "manifest": {
+    "requestedAtMs": 3526,
+    "finishedAtMs": 3580,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ],
+    [
+     "src/audio/player.js",
+     9947
+    ],
+    [
+     "src/img/resolve.js",
+     8771
+    ],
+    [
+     "src/placement/model.js",
+     8166
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/pronunciation/niqqud.json",
+     23156
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/placement/config.json",
+     1260
+    ],
+    [
+     "data/images/approvals.json",
+     459
+    ],
+    [
+     "data/audio/manifest-words-sephardi.json",
+     0
+    ]
+   ],
+   "fcpAll": [
+    980
+   ]
+  },
+  "/progress": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 1060,
+   "readyMs": 11001,
+   "manifestSettledMs": 11279,
+   "viewMs": 12405,
+   "mainNodes": 291,
+   "load": 1751,
+   "requests": 69,
+   "totalBytes": 1517829,
+   "jsBytes": 354440,
+   "jsRequests": 45,
+   "jsBytesBeforeFcp": 14350,
+   "jsRequestsBeforeFcp": 2,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 993364,
+   "imageBytes": 0,
+   "domNodes": 369,
+   "jsHeapUsedMB": 3.9,
+   "cdpNodes": 854,
+   "cdpListeners": 53,
+   "layoutCount": 11,
+   "longTasks": {
+    "count": 11,
+    "totalMs": 1732,
+    "maxMs": 356,
+    "tbtMs": 1006
+   },
+   "manifest": {
+    "requestedAtMs": 10730,
+    "finishedAtMs": 10790,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/progress/model.js",
+     30640
+    ],
+    [
+     "src/progress/progress.view.js",
+     27949
+    ],
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/speak/model.js",
+     16205
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/pronunciation/transliterate.js",
+     11213
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/curriculum/lessons.json",
+     472048
+    ],
+    [
+     "data/corpus/registry.json",
+     158376
+    ],
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/corpus/phrasebook.json",
+     99475
+    ],
+    [
+     "data/corpus/prayer-meta.json",
+     54468
+    ],
+    [
+     "data/corpus/torah-service-guide.json",
+     15650
+    ]
+   ],
+   "fcpAll": [
+    1060
+   ]
+  },
+  "/speak": {
+   "runs": 1,
+   "ready": true,
+   "errors": [],
+   "fcp": 1104,
+   "readyMs": 5332,
+   "manifestSettledMs": 5443,
+   "viewMs": 6552,
+   "mainNodes": 106,
+   "load": 1806.5,
+   "requests": 49,
+   "totalBytes": 616397,
+   "jsBytes": 276613,
+   "jsRequests": 34,
+   "jsBytesBeforeFcp": 12120,
+   "jsRequestsBeforeFcp": 1,
+   "cssBytes": 27177,
+   "fontBytes": 140596,
+   "dataBytes": 169759,
+   "imageBytes": 0,
+   "domNodes": 185,
+   "jsHeapUsedMB": 2.8,
+   "cdpNodes": 608,
+   "cdpListeners": 59,
+   "layoutCount": 11,
+   "longTasks": {
+    "count": 6,
+    "totalMs": 675,
+    "maxMs": 298,
+    "tbtMs": 124
+   },
+   "manifest": {
+    "requestedAtMs": 4818,
+    "finishedAtMs": 4820,
+    "bytes": 0,
+    "afterFcp": true
+   },
+   "biggestJs": [
+    [
+     "src/speak/speak.js",
+     53285
+    ],
+    [
+     "src/shell/notify.js",
+     22497
+    ],
+    [
+     "src/curriculum/calendar.js",
+     20588
+    ],
+    [
+     "src/shell/router.js",
+     17881
+    ],
+    [
+     "src/speak/model.js",
+     16205
+    ],
+    [
+     "src/app.js",
+     12120
+    ],
+    [
+     "src/speak/pairs.js",
+     11337
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/img/index.json",
+     134546
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/speak/sets.json",
+     13118
+    ],
+    [
+     "data/speak/sets/speak-survival-greetings-1.json",
+     3113
+    ],
+    [
+     "data/speak/sets/speak-survival-lesson-israel-1.json",
+     2956
+    ],
+    [
+     "data/speak/sets/speak-survival-help-1.json",
+     1990
+    ]
+   ],
+   "fcpAll": [
+    1104
+   ]
+  }
+ },
+ "manifestEffect": {
+  "withManifest": {
+   "fcp": 1032,
+   "readyMs": 4530,
+   "viewMs": 5613,
+   "settledMs": 4590,
+   "totalBytes": 558985,
+   "longTasks": {
+    "count": 8,
+    "totalMs": 1009,
+    "maxMs": 274,
+    "tbtMs": 573
+   },
+   "manifest": {
+    "requestedAtMs": 4491,
+    "finishedAtMs": 4511,
+    "bytes": 0,
+    "afterFcp": true
+   }
+  },
+  "withoutManifest": {
+   "fcp": 964,
+   "readyMs": 3545,
+   "viewMs": 4647,
+   "settledMs": 3628,
+   "totalBytes": 558985,
+   "longTasks": {
+    "count": 5,
+    "totalMs": 420,
+    "maxMs": 124,
+    "tbtMs": 152
+   },
+   "ready": true
+  },
+  "deltaFcpMs": 68,
+  "deltaReadyMs": 985,
+  "manifestBytes": 0
+ }
+}

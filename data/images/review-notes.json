@@ -1,0 +1,3181 @@
+{
+ "_note": "Matcher/eye-check notes for Codex batch 01 (from docs/images/codex-batch-01.json). Shown on the contact sheets. Not an approval.",
+ "notes": {
+  "STYLE_sample_cup": {
+   "confidence": "medium",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": "two cup tries (idx1, idx2) for one manifest row; later one chosen by assumption",
+   "sourceUuid": "e224b98d",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_sheet": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "8efef0d9",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_sheet": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1de52592",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_neutral": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c1d7cf07",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_listen": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "067dc538",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_speak": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3230de85",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_celebrate": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6c1779ce",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_neutral": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "7a2f8d67",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_listen": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "797965db",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_speak": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d6e9548c",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_celebrate": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "72aa2e89",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_synagogue": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d6fb5af4",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_synagogue": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9ecad15d",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_ari_telaviv": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3949dcfc",
+   "sourceSize": "1254x1254"
+  },
+  "CHAR_noa_telaviv": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "26dd6174",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_ah": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "83572e2d",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_eh": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d093d430",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_ee": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c5233dbc",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_oh": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['\\\\e)'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "fe24100e",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_oo": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "69da736f",
+   "sourceSize": "1254x1254"
+  },
+  "MOUTH_none": {
+   "confidence": "high",
+   "defects": [
+    "style drift (minor): mouth set mixes peach-filled and outline-only faces"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "45b40c95",
+   "sourceSize": "1254x1254"
+  },
+  "FRAME_lettercard": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ced341bf",
+   "sourceSize": "1122x1402"
+  },
+  "FRAME_lettercard_dual": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d2c79053",
+   "sourceSize": "1122x1402"
+  },
+  "BG_jerusalem": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "534cd108",
+   "sourceSize": "1659x948"
+  },
+  "BG_telaviv": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "70dab0bb",
+   "sourceSize": "1659x948"
+  },
+  "BG_shabbat": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b0e51bc8",
+   "sourceSize": "1659x948"
+  },
+  "BG_synagogue": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0f9ceb55",
+   "sourceSize": "1659x948"
+  },
+  "BG_market": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "76fa2178",
+   "sourceSize": "1659x948"
+  },
+  "BG_cafe": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "7ac46354",
+   "sourceSize": "1659x948"
+  },
+  "TEST_consistency_1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e554795b",
+   "sourceSize": "1254x1254"
+  },
+  "TEST_consistency_2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "191e1c47",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "91ce97d5",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e30ef778",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e8c6be9d",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "51ed812b",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "478951eb",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "bc66d3d8",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "394aafa0",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4f8b4480",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c523074e",
+   "sourceSize": "1254x1254"
+  },
+  "L01_alef_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d6c2a286",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1e2bf4f3",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a5bb51a6",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "785f6e0b",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "13143391",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "365b79d8",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4d8fde01",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "268aa886",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9c324ab9",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "aa6f4b7d",
+   "sourceSize": "1254x1254"
+  },
+  "L02_bet_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fa0e17fe",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3ca1362f",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fa52e441",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3169e1e3",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ea0d841d",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "17d4b536",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "677b7a51",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4a598854",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f4320a59",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fb417a05",
+   "sourceSize": "1254x1254"
+  },
+  "L03_gimel_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3b1bc063",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a01d9751",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d43c0437",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d3a18bfc",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "7df3a54d",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fd6aa297",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5737e8c5",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3185bc01",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0066d2ff",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['vl,'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "803489c2",
+   "sourceSize": "1254x1254"
+  },
+  "L04_dalet_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "81e19a8e",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1d952f8f",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "50e26092",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "17563c21",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3e29384e",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "22e91fa9",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f0ad83ab",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9e68a091",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1fbc4ecf",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['BEE'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "6d805008",
+   "sourceSize": "1254x1254"
+  },
+  "L05_he_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e1c3bbe1",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6140426e",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a0cfc6f9",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4ca10f77",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5507eda4",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3138a426",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "83d477c4",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5b017253",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "dfa23f7b",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_synagogue instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_synagogue",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "996deb3c",
+   "sourceSize": "1254x1254"
+  },
+  "L06_vav_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d082a203",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_mnemonic": {
+   "confidence": "medium",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": "chosen over idx93 because later images reuse its shape",
+   "sourceUuid": "a9c9c185",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fa24291e",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "2a0fb4a9",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "26fcf125",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "8017d06d",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "09895dec",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "358164ed",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['ihe'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "d25a2438",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "cbdfc3e0",
+   "sourceSize": "1254x1254"
+  },
+  "L07_zayin_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e5b7dc27",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5c12952b",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "dce52a9d",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "837b43a4",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6bc24cdb",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e27e7727",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d2fed422",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c24e8dbb",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0043b0ee",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "082fe9d1",
+   "sourceSize": "1254x1254"
+  },
+  "L08_chet_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "60b750fa",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "bb70c934",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a853cc03",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c956a8d7",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1aae6360",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "210739fc",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4a5d3034",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "564b8e3f",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d91cd76b",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['WwW'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "dde3eddd",
+   "sourceSize": "1254x1254"
+  },
+  "L09_tet_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "cf6b01df",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e869f58a",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a1994526",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_noa": {
+   "confidence": "medium",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": "chosen over idx126 (two yo-yos) as the pointing pose",
+   "sourceUuid": "7a9694a5",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "content (minor): silhouette reads as a round fruit with a stem, not a yo-yo",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "bb6f6163",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "17ae71ef",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4d2375eb",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e1802556",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['Lis'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "fddc0559",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "20fbb033",
+   "sourceSize": "1254x1254"
+  },
+  "L10_yod_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5a136c06",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "8311fd40",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "25e6b497",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "bb11cb02",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "303643e1",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "31e30e6c",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e06150ae",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c232516f",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3f228c83",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "cc700074",
+   "sourceSize": "1254x1254"
+  },
+  "L11_kaf_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_synagogue instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_synagogue",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c1c14ac8",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ea08b09e",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4f985653",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "af138ad5",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1ba922df",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c7d44569",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "355347d3",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5b3eaa5a",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1f48eeca",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "16e0c4cf",
+   "sourceSize": "1254x1254"
+  },
+  "L12_lamed_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b3da6001",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "2b76d898",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1cce3e89",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c70d5a99",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b8171247",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4a809bcd",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c9cabeac",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c0e961ca",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "35a9a998",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b2f029e3",
+   "sourceSize": "1254x1254"
+  },
+  "L13_mem_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e14140bd",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6c4891f5",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c741a65b",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "21d10313",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c6cd84d1",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "14ac5824",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "71336f24",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d7f6e0a0",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "222fac93",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "03c654b7",
+   "sourceSize": "1254x1254"
+  },
+  "L14_nun_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c88d0c63",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4fb3c9ef",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "556dcc95",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6dbd1c3a",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "fdea7418",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6bf0d177",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "44fb4189",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d691c65b",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0225dea2",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a702acd7",
+   "sourceSize": "1254x1254"
+  },
+  "L15_samekh_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "043bf6af",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9cedaf48",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "30406166",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4d1f484a",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "abb9ad09",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "26df8d41",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b6415bdf",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4a495f58",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['Wan'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "a5176686",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0f9030cb",
+   "sourceSize": "1254x1254"
+  },
+  "L16_ayin_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "29d528bd",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "73032405",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "865a5bb1",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f49a7a9f",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "825c1d5d",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "51c112ca",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "285294c7",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5bef53ee",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['aya', 'ally'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "45858af3",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1ff94416",
+   "sourceSize": "1254x1254"
+  },
+  "L17_pe_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ad57340d",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "cc73f279",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "59607bd8",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ba7f65f1",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "975b39ef",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f56fdf38",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3f7a0e44",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "bff49331",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "436ed9de",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "60172b3b",
+   "sourceSize": "1254x1254"
+  },
+  "L18_tsadi_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "466980c9",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "01ee7e6c",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d08b8dad",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1fd749c6",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "cb94b093",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "737147ea",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9e86eeb4",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "09228652",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e72efb4a",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_synagogue instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_synagogue",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "64f63f9f",
+   "sourceSize": "1254x1254"
+  },
+  "L19_qof_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6a8a7c79",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4f22890a",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "24c5cd10",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "22bbe82f",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f45801a5",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c19dc8aa",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4228d79c",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9a08911a",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise; OCR noise tokens ['li;'] were checked by eye and are not text",
+   "matchNote": null,
+   "sourceUuid": "f5cc0709",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a126cfab",
+   "sourceSize": "1254x1254"
+  },
+  "L20_resh_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4ed5d3a9",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "e83e9bb7",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a2f929f6",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "58f89432",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "232e5c9d",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "419b7519",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b6fbe632",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "18705f77",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9d163d2d",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4e0aab33",
+   "sourceSize": "1254x1254"
+  },
+  "L21_shin_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1ce47d31",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_mnemonic": {
+   "confidence": "medium",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": "chosen over idx245 because later images reuse its shape",
+   "sourceUuid": "8197fc97",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ac79b4df",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "473753b5",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "6e118ab5",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1e512ea9",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "8c6a0a47",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4f5c6c1b",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_market instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_market",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "0d275bed",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "71a0bd52",
+   "sourceSize": "1254x1254"
+  },
+  "L22_tav_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_synagogue instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_synagogue",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "2bf2bd4c",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ad50f5f8",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "99135ed2",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "4deaf49b",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "a316c568",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "90c48870",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f27e2953",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_v3": {
+   "confidence": "high",
+   "defects": [
+    "content: \"go (arrow)\" shows a walking man, no arrow"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "58b3a6dc",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "364f75df",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "3ce7c8aa",
+   "sourceSize": "1254x1254"
+  },
+  "L23_kaf_final_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "dc1f59cb",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "f5ebed75",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c326250b",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "02053de7",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "90783ac4",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "416adc32",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "ff86f4b1",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "b5462014",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_cafe instead of BG_jerusalem",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_cafe",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "032059dc",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5212934d",
+   "sourceSize": "1254x1254"
+  },
+  "L24_mem_final_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_jerusalem instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "2edd07f4",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "5828f15a",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_ari": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "805d82ec",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_noa": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1b7a4e9a",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_silhouette": {
+   "confidence": "high",
+   "defects": [
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "9b90b67d",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_v1": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "d1bc1752",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_v2": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "54d2facb",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_v3": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "1a3a5cf5",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_s1": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_jerusalem",
+   "sceneExpected": "BG_jerusalem",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "2300d5bd",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_s2": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_telaviv instead of BG_market",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_telaviv",
+   "sceneExpected": "BG_market",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "155502d3",
+   "sourceSize": "1254x1254"
+  },
+  "L25_nun_final_print_s3": {
+   "confidence": "high",
+   "defects": [
+    "aspect: file 1254x1254 (1.00) vs manifest 1792x1024 (1.75)",
+    "background differs from prompt: BG_shabbat instead of BG_telaviv",
+    "style (minor): scene sits as an inset rounded panel on a cream border, not full-bleed"
+   ],
+   "sceneSeen": "BG_shabbat",
+   "sceneExpected": "BG_telaviv",
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "62ca5335",
+   "sourceSize": "1254x1254"
+  },
+  "L26_pe_final_print_mnemonic": {
+   "confidence": "high",
+   "defects": [],
+   "sceneSeen": null,
+   "sceneExpected": null,
+   "textInImage": "none found by eye on contact sheets (all 286); tesseract eng+heb reported only low-quality noise",
+   "matchNote": null,
+   "sourceUuid": "c42cf757",
+   "sourceSize": "1254x1254"
+  }
+ }
+}

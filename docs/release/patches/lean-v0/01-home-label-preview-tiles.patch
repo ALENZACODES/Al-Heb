@@ -1,0 +1,30 @@
+diff --git a/src/shell/home.view.js b/src/shell/home.view.js
+index 38a9ac0..b616c58 100644
+--- a/src/shell/home.view.js
++++ b/src/shell/home.view.js
+@@ -41,19 +41,19 @@ export function mount(root, ctx) {
+         h('h2', { id: 'h-open' }, t('home.opening.title')),
+         h('p', { class: 'draft-flag', role: 'note' }, t('home.opening.draft')),
+         h('p', {}, t('home.opening.body')),
+-        h('a', { class: 'btn secondary', href: '#/read' }, t('home.opening.link'))) : null,
++        h('a', { class: 'btn secondary', href: '#/read' }, t('home.opening.link') + previewTag('read'))) : null,
+     ctx.hasRoute?.('progress') ? h('p', {}, h('a', { class: 'btn secondary', href: '#/progress' }, 'See your progress')) : null,
+     h('nav', { class: 'card', 'aria-labelledby': 'h-quick' }, h('h2', { id: 'h-quick' }, t('home.quick')),
+-      h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
++      h('ul', { class: 'tiles' }, ...QUICK.map(([k, href]) => h('li', {}, h('a', { class: 'tile', href }, h('span', {}, t('nav.' + k) + previewTag(k)), tHe('nav.' + k) ? heSpan(tHe('nav.' + k)) : null))),
+         // optional views from other lanes: only listed when their file exists in this build
+-        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick))))))),
++        ...ROUTES.filter((r) => r.optional && r.quick && !r.group && !PREVIEW_HIDDEN.has(r.name) && (ctx.hasRoute?.(r.name) ?? false)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick) + previewTag(r.name))))))),
+     ROUTES.some((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name))
+       ? h('nav', { class: 'card', 'aria-labelledby': 'h-more' }, h('details', { id: 'home-more-box' }, h('summary', {}, h('h2', { id: 'h-more', style: 'display:inline;margin:0' }, t('home.more'))), h('p', { class: 'muted' }, t('home.more.hint')),
+-        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))
++        h('ul', { class: 'tiles' }, ...ROUTES.filter((r) => r.group === 'learn' && r.quick && !r.pattern.includes(':') && !PREVIEW_HIDDEN.has(r.name) && ctx.hasRoute?.(r.name)).map((r) => h('li', {}, h('a', { class: 'tile', href: '#' + r.pattern }, h('span', {}, t(r.quick) + previewTag(r.name)), tHe(r.quick) ? heSpan(tHe(r.quick)) : null))))))
+       : null,
+     h('section', { class: 'card', 'aria-labelledby': 'h-ref' }, h('h2', { id: 'h-ref' }, t('home.reflect')),
+-      h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link'))),
+-    h('p', {}, h('a', { href: '#/how' }, t('home.how'))),
++      h('a', { class: 'btn secondary', href: '#/calendar' }, t('home.reflect.link') + previewTag('calendar'))),
++    h('p', {}, h('a', { href: '#/how' }, t('home.how') + previewTag('how'))),
+     ctx.installPrompt?.available() ? h('button', { class: 'btn', type: 'button', onclick: () => ctx.installPrompt.prompt() }, t('home.install')) : null];
+   };
+   // Calm mode shows the Today card and one "More" button, like a first visit: one thing at a time.

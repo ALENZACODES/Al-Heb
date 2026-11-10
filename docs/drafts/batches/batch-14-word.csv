@@ -1,0 +1,101 @@
+id,kind,group,he
+i-15-w16,word,lesson-word,אֲנִי אֲבוּדָה
+i-16-w1,word,lesson-word,טֶלֶפוֹן
+i-16-w2,word,lesson-word,מִסְפָּר
+i-16-w3,word,lesson-word,מִסְפַּר טֶלֶפוֹן
+i-16-w4,word,lesson-word,הוֹדָעָה
+i-16-w5,word,lesson-word,אִינְטֶרְנֶט
+i-16-w6,word,lesson-word,סִיסְמָה
+i-16-w7,word,lesson-word,סוֹלְלָה
+i-16-w8,word,lesson-word,מִטְעָן
+i-16-w9,word,lesson-word,לְהִתְקַשֵּׁר
+i-16-w10,word,lesson-word,לִשְׁלֹחַ
+i-16-w11,word,lesson-word,שׁוֹלֵחַ
+i-16-w12,word,lesson-word,הַלּוֹ?
+i-16-w13,word,lesson-word,רֶגַע
+i-16-w14,word,lesson-word,אֲנִי לֹא שׁוֹמֵעַ
+i-17-w1,word,lesson-word,דִּירָה
+i-17-w2,word,lesson-word,חֶדֶר
+i-17-w3,word,lesson-word,חֲדָרִים
+i-17-w4,word,lesson-word,קוֹמָה
+i-17-w5,word,lesson-word,מִרְפֶּסֶת
+i-17-w6,word,lesson-word,חֲנָיָה
+i-17-w7,word,lesson-word,חוֹזֶה
+i-17-w8,word,lesson-word,בַּעַל הַבַּיִת
+i-17-w9,word,lesson-word,וַעַד בַּיִת
+i-17-w10,word,lesson-word,שָׁנָה
+i-17-w11,word,lesson-word,חֹדֶשׁ
+i-17-w12,word,lesson-word,גְּדוֹלָה
+i-17-w13,word,lesson-word,טוֹבָה
+i-17-w14,word,lesson-word,אוֹר
+i-18-w1,word,lesson-word,צָבָא
+i-18-w2,word,lesson-word,חַיָּל
+i-18-w3,word,lesson-word,חַיֶּלֶת
+i-18-w4,word,lesson-word,מִלּוּאִים
+i-18-w5,word,lesson-word,מְפַקֵּד
+i-18-w6,word,lesson-word,בָּסִיס
+i-18-w7,word,lesson-word,נֶשֶׁק
+i-18-w8,word,lesson-word,שְׁמִירָה
+i-18-w9,word,lesson-word,חֻפְשָׁה
+i-18-w10,word,lesson-word,יַאלְלָה
+i-18-w11,word,lesson-word,סַבָּבָה
+i-18-w12,word,lesson-word,אַחִי
+i-18-w13,word,lesson-word,חֲבָל עַל הַזְּמַן
+i-18-w14,word,lesson-word,מָה הַמַּצָּב?
+i-18-w15,word,lesson-word,אֵין מַצָּב
+i-18-w16,word,lesson-word,תִּרְגַּע
+i-19-w1,word,lesson-word,שַׁבָּת שָׁלוֹם
+i-19-w2,word,lesson-word,שָׁבוּעַ טוֹב
+i-19-w3,word,lesson-word,אֲרוּחָה
+i-19-w4,word,lesson-word,עֶרֶב
+i-19-w5,word,lesson-word,בְּשִׂמְחָה
+i-19-w6,word,lesson-word,לְהָבִיא
+i-19-w7,word,lesson-word,יַיִן
+i-19-w8,word,lesson-word,קִנּוּחַ
+i-19-w9,word,lesson-word,מָתַי לָבוֹא?
+i-19-w10,word,lesson-word,הַשָּׁעָה שֶׁבַע
+i-19-w11,word,lesson-word,טָעִים מְאֹד
+i-19-w12,word,lesson-word,לְחַיִּים!
+i-19-w13,word,lesson-word,תּוֹדָה רַבָּה
+i-19-w14,word,lesson-word,לְהִתְרָאוֹת
+i-20-w1,word,lesson-word,בֵּית חוֹלִים
+i-20-w2,word,lesson-word,רוֹפֵא
+i-20-w3,word,lesson-word,רוֹפְאָה
+i-20-w4,word,lesson-word,אָחוֹת
+i-20-w5,word,lesson-word,תּוֹר
+i-20-w6,word,lesson-word,בִּטּוּחַ
+i-20-w7,word,lesson-word,כּוֹאֵב
+i-20-w8,word,lesson-word,בְּדִיקָה
+i-20-w9,word,lesson-word,דָּם
+i-20-w10,word,lesson-word,חֵרוּם
+i-20-w11,word,lesson-word,אַמְבּוּלַנְס
+i-20-w12,word,lesson-word,הַדַּרְכּוֹן
+i-20-w13,word,lesson-word,מִשְׁפָּחָה
+i-21-w1,word,lesson-word,בַּנְק
+i-21-w2,word,lesson-word,חֶשְׁבּוֹן
+i-21-w3,word,lesson-word,כֶּסֶף
+i-21-w4,word,lesson-word,כַּסְפּוֹמָט
+i-21-w5,word,lesson-word,לִמְשֹׁךְ
+i-21-w6,word,lesson-word,לְהַחְלִיף
+i-21-w7,word,lesson-word,דּוֹלָר
+i-21-w8,word,lesson-word,שֶׁקֶל
+i-21-w9,word,lesson-word,כַּרְטִיס אַשְׁרַאי
+i-21-w10,word,lesson-word,חֲתִימָה
+i-21-w11,word,lesson-word,הַלְוָאָה
+i-21-w12,word,lesson-word,רִבִּית
+i-21-w13,word,lesson-word,פָּתוּחַ
+i-21-w14,word,lesson-word,סָגוּר
+i-22-w1,word,lesson-word,דֹּאַר
+i-22-w2,word,lesson-word,חֲבִילָה
+i-22-w3,word,lesson-word,מִכְתָּב
+i-22-w4,word,lesson-word,בּוּל
+i-22-w5,word,lesson-word,בּוּלִים
+i-22-w6,word,lesson-word,לִשְׁלֹחַ
+i-22-w7,word,lesson-word,לֶאֱסֹף
+i-22-w8,word,lesson-word,תּוֹר
+i-22-w9,word,lesson-word,מִסְפָּר
+i-22-w10,word,lesson-word,כְּתֹבֶת
+i-22-w11,word,lesson-word,מַעֲטָפָה
+i-22-w12,word,lesson-word,רָגִיל
+i-22-w13,word,lesson-word,דֹּאַר אֲוִיר
+i-23-w1,word,lesson-word,מוֹנִית

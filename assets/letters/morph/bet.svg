@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-bet" viewBox="0 0 200 200" role="img" aria-labelledby="bet-t bet-d">
+<title id="bet-t">Bet: a Bungalow with a Ball inside: B (no ball = Vacant = V)</title>
+<desc id="bet-d">A little house seen from the side with a peaked roof and a window. A ball with curved seams sits inside. The letter is the roof, back wall and floor of the house.</desc>
+<style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-bet .L{fill:none;stroke:var(--m-2);stroke-width:64;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-bet .o{fill:none;stroke:var(--m-ink);stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+svg.morph-bet .s{fill:var(--m-ink);fill-opacity:.3}
+svg.morph-bet .p{fill:var(--m-2);fill-opacity:.25}
+svg.morph-bet .t{fill:none;stroke:var(--m-ink);stroke-width:10;stroke-linecap:round}
+svg.morph-bet .d{fill:var(--m-ink)}
+svg.morph-bet .m{fill:none;stroke:var(--m-ink);stroke-opacity:.5;stroke-linecap:round}
+svg.morph-bet .g{fill:none;stroke:var(--m-ink);stroke-width:9;stroke-dasharray:28 22;stroke-linecap:round;opacity:.55}
+@media (forced-colors:active){svg.morph-bet .s,svg.morph-bet .p{fill:Canvas;fill-opacity:1}}</style>
+<g transform="translate(-28.65 -18.40) scale(0.2573)">
+<g class="morph-a morph-strokes"><path d="M268 253 C307 253 448 248 500 253 C552 258 561 266 580 285 C599 304 610 318 616 370 C622 422 616 545 616 600 C616 655 616 683 616 700"/><path d="M735 721 C696 721 578 721 500 721 C422 721 307 721 268 721"/></g>
+<g class="morph-b"><g class="morph-pop"><path class="p o" d="M215 255L440 135L670 255Z"/><rect class="s" x="268" y="253" width="348" height="468" rx="0"/><rect class="p o" x="440" y="330" width="95" height="95" rx="8"/><path class="t" d="M488 330V425M440 378H535"/><path class="p o" d="M268 253L212 283V700L268 721Z"/></g><path class="L" d="M268 253 C307 253 448 248 500 253 C552 258 561 266 580 285 C599 304 610 318 616 370 C622 422 616 545 616 600 C616 655 616 683 616 700"/><path class="L" d="M735 721 C696 721 578 721 500 721 C422 721 307 721 268 721"/><g class="morph-pop morph-pop-late"><circle class="s o" cx="400" cy="615" r="88"/><path class="t" d="M312 600Q400 650 488 600M400 527Q450 612 400 703"/></g><path class="g" d="M268 253 C307 253 448 248 500 253 C552 258 561 266 580 285 C599 304 610 318 616 370 C622 422 616 545 616 600 C616 655 616 683 616 700"/><path class="g" d="M735 721 C696 721 578 721 500 721 C422 721 307 721 268 721"/></g>
+</g>
+</svg>

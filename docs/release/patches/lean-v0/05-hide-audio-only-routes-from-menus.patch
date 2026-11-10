@@ -1,0 +1,38 @@
+diff --git a/docs/v0/PREVIEW-TRIAGE.md b/docs/v0/PREVIEW-TRIAGE.md
+index f098f82..9a2b8ed 100644
+--- a/docs/v0/PREVIEW-TRIAGE.md
++++ b/docs/v0/PREVIEW-TRIAGE.md
+@@ -22,7 +22,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
+ | `israel` | keep | Israel goal path. |
+ | `traditions` | keep | Target for `traditions-guide` and `traditions-hear`. |
+ | `traditions-guide` | merge | Into `traditions` (already a tab there). |
+-| `traditions-hear` | merge | Into `traditions` (already a tab there); no recorded audio yet. |
++| `traditions-hear` | hide | Into `traditions` (already a tab there); no recorded audio yet, so the page has nothing to play. |
+ | `classtrack` | keep | Teacher and class use. |
+ | `morning` | keep | Daily habit. |
+ | `timedread` | merge | Into `read` as an option; it is a timer on the same texts. |
+@@ -34,9 +34,9 @@ decision, so the More sheet stays short and the first session stays coherent (we
+ | `reminders` | keep | Study reminders. |
+ | `typing` | keep | Typing practice. |
+ | `festivals` | keep | Calendar content. |
+-| `listen` | keep | Needs audio; useful once recordings exist. |
++| `listen` | hide | Needs audio; with no recordings it is a reading drill under a listening name. Unhide once recordings exist. |
+ | `trope` | keep | Names of the marks only; no audio claims. |
+-| `tradition-quiz` | keep | Needs audio to be worth much; keep as preview. |
++| `tradition-quiz` | hide | Needs audio to be worth much; with no recordings it is an eye quiz. Unhide once recordings exist. |
+ | `read-my-way` | keep | Tradition-aware reading. |
+ | `rules` | keep | Pronunciation rules reference. |
+ | `intermediate` | keep | After r10. |
+diff --git a/src/shell/nav-model.js b/src/shell/nav-model.js
+index d833495..4fe7de8 100644
+--- a/src/shell/nav-model.js
++++ b/src/shell/nav-model.js
+@@ -40,7 +40,7 @@ const MENU_HIDDEN = new Set(['welcome']);
+  * "More ways to learn" so a new learner meets fewer half-finished screens. They still open by direct link, still carry the Preview
+  * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
+  */
+-export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare']);
++export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'torahreader', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare', 'listen', 'tradition-quiz', 'traditions-hear']);
+ 
+ export const isStatic = (r) => !r.pattern.includes(':');
+ /** Release tier of a route: 'v0' only when router.js says so; anything else is 'preview'. */

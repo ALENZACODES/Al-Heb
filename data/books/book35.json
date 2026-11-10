@@ -1,0 +1,177 @@
+{
+ "id": "book35",
+ "titleHe": "הַגַּן עַל הַגַּג",
+ "titleTranslit": "Ha-Gan Al Ha-Gag",
+ "titleEn": "The Garden on the Roof",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "בִּנְיָן יָשָׁן בְּתֵל אָבִיב.",
+   "translit": "Binyan yashan be-Tel Aviv.",
+   "en": "An old building in Tel Aviv.",
+   "img": "assets/books/book35/BOOK35_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p01.mp3",
+    "m": "audio/m/israeli/book/book35-p01.mp3"
+   },
+   "illustration": "a peeling four-storey building, laundry on balconies",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "עַל הַגַּג: כְּלוּם.",
+   "translit": "Al ha-gag: klum.",
+   "en": "On the roof: nothing.",
+   "img": "assets/books/book35/BOOK35_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p02.mp3",
+    "m": "audio/m/israeli/book/book35-p02.mp3"
+   },
+   "illustration": "a bare concrete roof, water tanks, pigeons",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "שִׁירָה רוֹצָה גַּן.",
+   "translit": "Shira rotzah gan.",
+   "en": "Shira wants a garden.",
+   "img": "assets/books/book35/BOOK35_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p03.mp3",
+    "m": "audio/m/israeli/book/book35-p03.mp3"
+   },
+   "illustration": "a woman on the roof, hands on hips, imagining",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הִיא מְבִיאָה אֲדָמָה.",
+   "translit": "Hi mevi'ah adamah.",
+   "en": "She brings soil.",
+   "img": "assets/books/book35/BOOK35_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p04.mp3",
+    "m": "audio/m/israeli/book/book35-p04.mp3"
+   },
+   "illustration": "carrying heavy bags up the stairs",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הִיא מְבִיאָה עֲצִיצִים.",
+   "translit": "Hi mevi'ah atzitzim.",
+   "en": "She brings pots.",
+   "img": "assets/books/book35/BOOK35_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p05.mp3",
+    "m": "audio/m/israeli/book/book35-p05.mp3"
+   },
+   "illustration": "a row of terracotta pots",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הִיא שׁוֹתֶלֶת.",
+   "translit": "Hi shotelet.",
+   "en": "She plants.",
+   "img": "assets/books/book35/BOOK35_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p06.mp3",
+    "m": "audio/m/israeli/book/book35-p06.mp3"
+   },
+   "illustration": "hands in the dirt, seedlings",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "עַגְבָנִיָּה. נַעְנַע. בָּזִילִיקוּם.",
+   "translit": "Agvaniyah. Na'na. Bazilikum.",
+   "en": "Tomato. Mint. Basil.",
+   "img": "assets/books/book35/BOOK35_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p07.mp3",
+    "m": "audio/m/israeli/book/book35-p07.mp3"
+   },
+   "illustration": "three labelled pots",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַשְּׁכֵנִים רוֹאִים.",
+   "translit": "Ha-shchenim ro'im.",
+   "en": "The neighbours see.",
+   "img": "assets/books/book35/BOOK35_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p08.mp3",
+    "m": "audio/m/israeli/book/book35-p08.mp3"
+   },
+   "illustration": "heads popping up from the stairwell",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"אֶפְשָׁר לַעֲזֹר?\"",
+   "translit": "\"Efshar la'azor?\"",
+   "en": "\"Can we help?\"",
+   "img": "assets/books/book35/BOOK35_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p09.mp3",
+    "m": "audio/m/israeli/book/book35-p09.mp3"
+   },
+   "illustration": "an old man with a watering can, a kid with a shovel",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "עַכְשָׁו כֻּלָּם עַל הַגַּג.",
+   "translit": "Achshav kulam al ha-gag.",
+   "en": "Now everyone is on the roof.",
+   "img": "assets/books/book35/BOOK35_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p10.mp3",
+    "m": "audio/m/israeli/book/book35-p10.mp3"
+   },
+   "illustration": "neighbours planting together, a radio playing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "קַיִץ. עַגְבָנִיּוֹת אֲדֻמּוֹת.",
+   "translit": "Kayitz. Agvaniyot adumot.",
+   "en": "Summer. Red tomatoes.",
+   "img": "assets/books/book35/BOOK35_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p11.mp3",
+    "m": "audio/m/israeli/book/book35-p11.mp3"
+   },
+   "illustration": "ripe tomatoes, the roof green",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַגַּג הוּא גַּן.",
+   "translit": "Ha-gag hu gan.",
+   "en": "The roof is a garden.",
+   "img": "assets/books/book35/BOOK35_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book35-p12.mp3",
+    "m": "audio/m/israeli/book/book35-p12.mp3"
+   },
+   "illustration": "the whole roof lush at sunset, neighbours eating together",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

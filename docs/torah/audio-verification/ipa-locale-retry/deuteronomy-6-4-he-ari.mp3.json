@@ -1,0 +1,9 @@
+{
+  "spokenText": "Shema Yisrael Adonai Eloheinu Adonai Echad.",
+  "generatedUtc": "2026-11-08T08:15:29.7597265Z",
+  "fingerprint": "1ba2cfb64e63d85b90dc288ca674dd2dc82fdb9d1cf200668ab5b38faf5467a6",
+  "audioSha256": "10212d95ae961e63b70600b5e75863083558cc828cbdca7eae6e186303f8a437",
+  "status": "pending-asr-and-listening",
+  "id": "deuteronomy-6-4-he-ari",
+  "voice": "de-DE-Chirp3-HD-Charon"
+}

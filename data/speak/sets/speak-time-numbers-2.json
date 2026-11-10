@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-time-numbers-2",
+ "title": "Time and numbers 2",
+ "theme": "time-numbers",
+ "level": "B1",
+ "track": "both",
+ "pack": "time-numbers-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h8f42d584",
+   "he": "זְמַן",
+   "translit": "zeman",
+   "en": "time",
+   "kind": "word",
+   "audioId": "h8f42d584",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h78cf1c7a",
+   "he": "צָעִיר",
+   "translit": "tza'ir",
+   "en": "Young (in the early part of life or growth)",
+   "kind": "word",
+   "audioId": "h78cf1c7a",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h50241e1c",
+   "he": "בֹּקֶר",
+   "translit": "boker",
+   "en": "a morning, dawn",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h25aa368e",
+   "he": "צׇהֳרַיִם",
+   "translit": "tzohorayim",
+   "en": "Noon, midday",
+   "kind": "word",
+   "audioId": "h25aa368e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7bd1602a",
+   "he": "הִצְבִּיעַ",
+   "translit": "hitzbi'a",
+   "en": "to point at (using one's finger)",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h47a142a6",
+   "he": "חֲצִי",
+   "translit": "chatzi",
+   "en": "half",
+   "kind": "word",
+   "audioId": "i-12-w7",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h6e9422b7",
+   "he": "מָעוֹן",
+   "translit": "ma'on",
+   "en": "day care center, crèche",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3fb7b29c",
+   "he": "סְגָן",
+   "translit": "segan",
+   "en": "a (male) deputy, a (male) second-in-command",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h5c689c60",
+   "he": "חֲמִישִׁי",
+   "translit": "chamishi",
+   "en": "fifth",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbb3bc5fd",
+   "he": "דַּקָּה",
+   "translit": "dakah",
+   "en": "minute",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc7cf1a80",
+   "he": "כָּעֵת",
+   "translit": "ka'et",
+   "en": "now, for the time being, at this point in time, as of now",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3739ff77",
+   "he": "קַיִץ",
+   "translit": "kayitz",
+   "en": "summer",
+   "kind": "word",
+   "audioId": "i-24-w10",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

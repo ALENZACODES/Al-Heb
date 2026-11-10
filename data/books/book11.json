@@ -1,0 +1,177 @@
+{
+ "id": "book11",
+ "titleHe": "הָאוֹטוֹבּוּס מְאַחֵר",
+ "titleTranslit": "Ha-Otobus Me'acher",
+ "titleEn": "The Bus Is Late",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "תַּחֲנַת אוֹטוֹבּוּס.",
+   "translit": "Tachanat otobus.",
+   "en": "A bus stop.",
+   "img": "assets/books/book11/BOOK11_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p01.mp3",
+    "m": "audio/m/israeli/book/book11-p01.mp3"
+   },
+   "illustration": "a bus shelter on a busy road, morning, a few people waiting",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "שִׁירָה מְחַכָּה.",
+   "translit": "Shira mechakah.",
+   "en": "Shira waits.",
+   "img": "assets/books/book11/BOOK11_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p02.mp3",
+    "m": "audio/m/israeli/book/book11-p02.mp3"
+   },
+   "illustration": "a woman in office clothes checking her watch",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הָאוֹטוֹבּוּס לֹא בָּא.",
+   "translit": "Ha-otobus lo ba.",
+   "en": "The bus does not come.",
+   "img": "assets/books/book11/BOOK11_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p03.mp3",
+    "m": "audio/m/israeli/book/book11-p03.mp3"
+   },
+   "illustration": "the empty road stretching away, heat haze",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "שִׁירָה מְחַכָּה עוֹד.",
+   "translit": "Shira mechakah od.",
+   "en": "Shira waits more.",
+   "img": "assets/books/book11/BOOK11_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p04.mp3",
+    "m": "audio/m/israeli/book/book11-p04.mp3"
+   },
+   "illustration": "the woman leaning on the pole, phone at ten percent",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "אִישׁ זָקֵן מְחַכֶּה.",
+   "translit": "Ish zaken mechakeh.",
+   "en": "An old man waits.",
+   "img": "assets/books/book11/BOOK11_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p05.mp3",
+    "m": "audio/m/israeli/book/book11-p05.mp3"
+   },
+   "illustration": "an elderly man with a cane sitting calmly on the bench",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "\"הָאוֹטוֹבּוּס מְאַחֵר,\" הוּא אוֹמֵר.",
+   "translit": "\"Ha-otobus me'acher,\" hu omer.",
+   "en": "\"The bus is late,\" he says.",
+   "img": "assets/books/book11/BOOK11_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p06.mp3",
+    "m": "audio/m/israeli/book/book11-p06.mp3"
+   },
+   "illustration": "the old man speaking, unbothered",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "\"תָּמִיד,\" אוֹמֶרֶת שִׁירָה.",
+   "translit": "\"Tamid,\" omeret Shira.",
+   "en": "\"Always,\" says Shira.",
+   "img": "assets/books/book11/BOOK11_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p07.mp3",
+    "m": "audio/m/israeli/book/book11-p07.mp3"
+   },
+   "illustration": "the woman rolling her eyes with a half-smile",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הַזָּקֵן נוֹתֵן לָהּ סוּכָּרִיָּה.",
+   "translit": "Ha-zaken noten lah sukariyah.",
+   "en": "The old man gives her a candy.",
+   "img": "assets/books/book11/BOOK11_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p08.mp3",
+    "m": "audio/m/israeli/book/book11-p08.mp3"
+   },
+   "illustration": "a wrinkled hand offering a wrapped candy",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "שִׁירָה צוֹחֶקֶת.",
+   "translit": "Shira tzocheket.",
+   "en": "Shira laughs.",
+   "img": "assets/books/book11/BOOK11_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p09.mp3",
+    "m": "audio/m/israeli/book/book11-p09.mp3"
+   },
+   "illustration": "the woman laughing, candy in hand",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הִנֵּה הָאוֹטוֹבּוּס!",
+   "translit": "Hineh ha-otobus!",
+   "en": "Here is the bus!",
+   "img": "assets/books/book11/BOOK11_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p10.mp3",
+    "m": "audio/m/israeli/book/book11-p10.mp3"
+   },
+   "illustration": "a green bus rounding the corner, doors opening",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "שִׁירָה עוֹלָה.",
+   "translit": "Shira olah.",
+   "en": "Shira gets on.",
+   "img": "assets/books/book11/BOOK11_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p11.mp3",
+    "m": "audio/m/israeli/book/book11-p11.mp3"
+   },
+   "illustration": "the woman stepping up, tapping her card",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַזָּקֵן מְנַפְנֵף.",
+   "translit": "Ha-zaken menafnef.",
+   "en": "The old man waves.",
+   "img": "assets/books/book11/BOOK11_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book11-p12.mp3",
+    "m": "audio/m/israeli/book/book11-p12.mp3"
+   },
+   "illustration": "the old man waving from the bench, seen through the bus window",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

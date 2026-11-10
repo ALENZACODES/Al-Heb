@@ -1,0 +1,16 @@
+{
+  "status": "draft-unreviewed",
+  "note": "DRAFT, UNREVIEWED. No Hebrew teacher has checked this placement check, and no learner has taken it. Every number below is an untested guess, not a validated cutoff. Hebrew text is never written here: all items are drawn at run time from data/letters, data/pronunciation/niqqud.json, data/vocab/words.json, data/corpus/registry.json and data/curriculum/lessons.json.",
+  "storeKey": "placement.v1",
+  "counts": { "letters": 5, "vowels": 4, "syllables": 4, "words": 4, "phrases": 3 },
+  "lessonCaps": { "letters": "r24", "vowels": "r21", "syllables": "r23", "words": "r30", "phrases": "r41" },
+  "phraseLevelLesson": { "intro-2": "r28", "intro-3": "r41" },
+  "phraseMaxChars": 80,
+  "wordMaxEnglishChars": 24,
+  "syllableMaxChars": 5,
+  "stop": { "minAsked": 6, "window": 5, "maxMissesInWindow": 3 },
+  "slipForgiveness": { "correctAfterMiss": 3 },
+  "firstLesson": "r01",
+  "optionsPerItem": 4,
+  "seed": 20261103
+}

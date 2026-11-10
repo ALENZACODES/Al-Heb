@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is Vav — VAHV. Sound: V as in van. Shape hook: single hanging nail. Tip: One narrow shaft and short hook, with neither Zayin’s broad hat nor final Nun’s greater depth; do not mix it up with Zayin, Final Nun, Yod.",
+ "inputSha256": "55d2f281248021ff9e9b4bded1cdc1dce1ea478ad06fc61554dd8d6a4d285df1",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

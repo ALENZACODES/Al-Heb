@@ -160,7 +160,10 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // rises 3 px every 2.4 s (transform only, no colour or brightness change). The global reduced-motion and calm rules switch all off.
     'ob-page-in', 'rimon-say-in', 'fd-glyph-in', 'stat-pop', 'path-here',
     // round 2: the "Today counts" toast drops in once (0.42 s) and leaves after about 4 s; reduced motion and calm switch it off
-    'stat-toast-in'];
+    'stat-toast-in',
+    // opening prayer in gold leaf: the letters brighten once (2.6 s) and a sheen of light crosses them every 9 s (background position
+    // only, no flashing: brightness peaks once and settles); reduced motion and calm mode keep steady gold
+    'prayer-gold-dawn', 'prayer-gold-sheen'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

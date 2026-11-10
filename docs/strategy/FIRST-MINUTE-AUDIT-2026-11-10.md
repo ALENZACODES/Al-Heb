@@ -70,7 +70,7 @@ Fixed this round:
 
 Still open, ranked:
 1. No real phone and no screen reader has been used on any of this; only headless Chrome at 390 x 844 and unit tests.
-2. Three ways of showing Rimon (the animated sheets here, `rimon-show.js` stills on launch-ready, the trigger map on `claude/rimon-mascot`); the stills are opaque cream squares. One map and transparent stills are needed before Rimon can appear on more screens.
+2. Three ways of showing Rimon (the animated sheets here, `rimon-show.js` stills on launch-ready, the trigger map on `lane-rimon-mascot`); the stills are opaque cream squares. One map and transparent stills are needed before Rimon can appear on more screens.
 3. The opening prayer is the very first screen on a first visit, before Rimon and setup (the owner asked for Mah Tovu on the first visit; kept, flagged).
 4. Fixed in round 3: a tap anywhere on an open stop opens its lesson (keyboard and screen readers keep the Start or Review button). Still not a pop-over card like Duolingo's.
 5. The first lesson can finish before 5 engaged minutes, so day 1 often does not light on the first visit (rule kept; the flame says how many minutes are left).

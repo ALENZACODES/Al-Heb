@@ -179,7 +179,7 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 
 *Grammar page.* Apologise, get past someone, and ask for a moment.
 
-**Grammar: Present-tense words change with who is speaking.** A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The ending ֶרֶת marks the woman's form. סְלִיחָה is the same for everyone and covers excuse me and sorry.
+**Grammar: Present-tense words change with who is speaking.** A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The woman's form ends in עֶרֶת. סְלִיחָה is the same for everyone and covers excuse me and sorry.
 
 | Hebrew | Transliteration | English | Audio |
 |---|---|---|---|

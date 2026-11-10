@@ -2391,10 +2391,10 @@
    "order": 2,
    "kind": "grammar",
    "can": "Apologise, get past someone, and ask for a moment.",
-   "grammarNote": "Present-tense words change with who is speaking. A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The ending ֶרֶת marks the woman's form. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
+   "grammarNote": "Present-tense words change with who is speaking. A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The woman's form ends in עֶרֶת. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
    "grammar": {
     "point": "Present-tense words change with who is speaking",
-    "body": "A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The ending ֶרֶת marks the woman's form. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
+    "body": "A man says אֲנִי מִצְטַעֵר; a woman says אֲנִי מִצְטַעֶרֶת. The woman's form ends in עֶרֶת. סְלִיחָה is the same for everyone and covers excuse me and sorry.",
     "examples": [
      {
       "itemId": "politeness-07-m",

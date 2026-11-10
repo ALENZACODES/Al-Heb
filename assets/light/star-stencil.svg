@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215.9 279.4" width="215.9mm" height="279.4mm">
+  <title>ALEF Star of David flash stencil</title>
+  <style>
+    text { font-family: Georgia, "Times New Roman", serif; fill: #111; }
+    .muted { fill: #333; }
+    .cut { fill: none; stroke: #000; stroke-width: 0.35; stroke-linejoin: miter; }
+    .frame { fill: none; stroke: #000; stroke-width: 0.3; stroke-dasharray: 1.2 0.8; }
+    .guide { fill: none; stroke: #000; stroke-width: 0.25; }
+    .rule { stroke: #000; stroke-width: 0.25; }
+  </style>
+  <rect x="0" y="0" width="215.9" height="279.4" fill="#fff"/>
+  <text x="107.95" y="16" text-anchor="middle" font-size="6.2" font-weight="700">ALEF - Star of David flash stencil</text>
+  <text x="107.95" y="23.2" text-anchor="middle" font-size="3.4" class="muted">Print at 100% size (actual size). Do not choose Fit to page. Cut on solid lines. Tape over the rear flash.</text>
+  <line class="rule" x1="16" y1="32" x2="36" y2="32"/>
+  <line class="rule" x1="16" y1="30.5" x2="16" y2="33.5"/>
+  <line class="rule" x1="36" y1="30.5" x2="36" y2="33.5"/>
+  <text x="26" y="37.5" text-anchor="middle" font-size="3">20 mm scale - check this is 2 cm after printing</text>
+  <rect class="frame" x="15.95" y="46.00" width="56" height="64"/>
+  <line class="guide" x1="43.95" y1="46.00" x2="43.95" y2="48.20"/>
+  <line class="guide" x1="43.95" y1="107.80" x2="43.95" y2="110.00"/>
+  <line class="guide" x1="15.95" y1="76.00" x2="18.15" y2="76.00"/>
+  <line class="guide" x1="69.75" y1="76.00" x2="71.95" y2="76.00"/>
+  <path class="cut" d="M43.950,72.000L44.950,74.268L47.414,74.000L45.950,76.000L47.414,78.000L44.950,77.732L43.950,80.000L42.950,77.732L40.486,78.000L41.950,76.000L40.486,74.000L42.950,74.268Z"/>
+  <text x="43.95" y="116.00" text-anchor="middle" font-size="3.6" font-weight="700">8 mm opening</text>
+  <text x="43.95" y="121.00" text-anchor="middle" font-size="2.8" class="muted">Cut the star, leave the frame</text>
+  <rect class="frame" x="79.95" y="46.00" width="56" height="64"/>
+  <line class="guide" x1="107.95" y1="46.00" x2="107.95" y2="48.20"/>
+  <line class="guide" x1="107.95" y1="107.80" x2="107.95" y2="110.00"/>
+  <line class="guide" x1="79.95" y1="76.00" x2="82.15" y2="76.00"/>
+  <line class="guide" x1="133.75" y1="76.00" x2="135.95" y2="76.00"/>
+  <path class="cut" d="M107.950,71.000L109.200,73.835L112.280,73.500L110.450,76.000L112.280,78.500L109.200,78.165L107.950,81.000L106.700,78.165L103.620,78.500L105.450,76.000L103.620,73.500L106.700,73.835Z"/>
+  <text x="107.95" y="116.00" text-anchor="middle" font-size="3.6" font-weight="700">10 mm opening</text>
+  <text x="107.95" y="121.00" text-anchor="middle" font-size="2.8" class="muted">Cut the star, leave the frame</text>
+  <rect class="frame" x="143.95" y="46.00" width="56" height="64"/>
+  <line class="guide" x1="171.95" y1="46.00" x2="171.95" y2="48.20"/>
+  <line class="guide" x1="171.95" y1="107.80" x2="171.95" y2="110.00"/>
+  <line class="guide" x1="143.95" y1="76.00" x2="146.15" y2="76.00"/>
+  <line class="guide" x1="197.75" y1="76.00" x2="199.95" y2="76.00"/>
+  <path class="cut" d="M171.950,70.000L173.450,73.402L177.146,73.000L174.950,76.000L177.146,79.000L173.450,78.598L171.950,82.000L170.450,78.598L166.754,79.000L168.950,76.000L166.754,73.000L170.450,73.402Z"/>
+  <text x="171.95" y="116.00" text-anchor="middle" font-size="3.6" font-weight="700">12 mm opening</text>
+  <text x="171.95" y="121.00" text-anchor="middle" font-size="2.8" class="muted">Cut the star, leave the frame</text>
+  <text x="16" y="130.00" font-size="4.4" font-weight="700">How to use</text>
+  <text x="16" y="137.00" font-size="3.3" font-weight="400">1. Print this page at 100% (Actual size) on ordinary paper. Confirm the 20 mm scale is truly 2 cm.</text>
+  <text x="16" y="144.00" font-size="3.3" font-weight="400">2. Choose the opening that matches your phone flash. 8 mm suits a small LED, 10 mm most phones, 12 mm a larger flash.</text>
+  <text x="16" y="151.00" font-size="3.3" font-weight="400">3. Cut along the solid star outline. Keep the dashed rectangle as a small paper frame.</text>
+  <text x="16" y="158.00" font-size="3.3" font-weight="400">4. Centre the star over the rear flash (use the tick marks) and tape the frame to the phone. Do not cover cameras or microphones.</text>
+  <text x="16" y="165.00" font-size="3.3" font-weight="400">5. In a dark room, shine the flash at a wall or ceiling. The star will appear in the beam.</text>
+  <text x="16" y="172.00" font-size="3.3" font-weight="400">6. This is a stencil for the phone flash only. It is not for use as a flame or with candles.</text>
+  <text x="16" y="179.00" font-size="3.3" font-weight="400">ALEF - a Hebrew-learning app by John Khan, Toronto, Ontario.</text>
+</svg>

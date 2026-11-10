@@ -170,7 +170,12 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // only, no flashing: brightness peaks once and settles); reduced motion and calm mode keep steady gold
     'prayer-gold-dawn', 'prayer-gold-sheen',
     // Retention reward panel (src/retention/retention.css): the XP chip pops once (0.25 s) and the confetti falls once (1.6 s), never looping; reduced motion and calm mode switch both off and hide the confetti
-    'ret-pop', 'ret-fall'];
+    'ret-pop', 'ret-fall',
+    // Star of David light (assets/css/light.css): the star and halo ease opacity and scale every 2.4 s while pulse is on
+    // (under two cycles per second). Animations exist only under prefers-reduced-motion: no-preference; the local reduce
+    // block and the global reduced-motion and calm rules switch both off. The phone torch flash is separately gated by
+    // reduced motion, calm mode and Shabbat/chag quiet in src/light/light.js.
+    'alef-light-breathe', 'alef-light-halo'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

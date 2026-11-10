@@ -28,6 +28,7 @@ export const GROUPS = Object.freeze([
   { id: "phrases", label: "Common phrases and sentences", test: /^(src\/phrases\/|data\/phrases\/)/, route: "#/phrases" },
   { id: "games", label: "Hebrew games", test: /^src\/games\//, route: "#/learn" },
   { id: "books", label: "Little Books (read-aloud stories)", test: /^(src\/books\/|data\/books\/)/, route: "#/books" },
+  { id: "light", label: "Star of David light", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, route: "#/light" },
   { id: "shell", label: "App shell, settings and install", test: /^(index\.html|offline\.html|manifest\.webmanifest|src\/(app|store)\.js|src\/shell\/|src\/motion\/|src\/img\/|data\/img\/|data\/images\/|data\/legal\/|src\/audio\/|data\/audio\/|src\/onboarding\/|data\/onboarding\/|assets\/)/, route: "#/" },
 ]);
 export const groupOf = (path) => GROUPS.find((g) => g.test.test(path))?.id || "other";
@@ -87,6 +88,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen, intermediate lessons, practical units and Israel units (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view|practical\.view|practical-progress|practical-written|israel-units|israel-units\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.11 },
   { id: "od-learn-practice", label: "Learn practice screens (review, loanwords, drills and dialogues)", test: /^src\/curriculum\/(review|loanwords|spotit|checkpoint|dialogues|ladder|fade|gender|scaffold)\.view\.js$/, approxMB: 0.07 },
+  { id: "od-light", label: "Star of David light (page, style and printable stencil)", test: /^(src\/light\/|assets\/light\/|assets\/css\/light\.css$)/, approxMB: 0.02 },
 ]);
 /** Group a list of ALEF_ON_DEMAND paths into optional-download entries ({id,label,urls,approxMB}); empty groups are dropped. */
 export function onDemandGroups(onDemand = []) {

@@ -25,7 +25,7 @@ export const SECTION_ROUTES = {
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
   read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'service', 'trope', 'timedread', 'morning', 'scan', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
-  speak: ['speak', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
+  speak: ['talk', 'speak', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };

@@ -1,0 +1,22 @@
+# Proposal only. Do not apply or deploy without John.
+# Suggested addition to the ALEF Render blueprint, or a standalone service.
+services:
+  - type: web
+    name: alef-talk-translator
+    runtime: python
+    plan: starter
+    region: ohio
+    buildCommand: pip install -r tools/translator/requirements.txt
+    startCommand: uvicorn tools.translator.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /v1/health
+    envVars:
+      - key: GOOGLE_TTS_API_KEY
+        sync: false
+      - key: GOOGLE_CLOUD_PROJECT
+        sync: false
+      - key: TRANSLATOR_SPEND_STOP
+        value: "90"
+      - key: TRANSLATOR_SPEND_CAP
+        value: "100"
+      - key: TRANSLATOR_CORS
+        value: "*"

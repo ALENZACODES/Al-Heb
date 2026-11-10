@@ -109,11 +109,13 @@
    "translit": "Yom echad, k'she-Moshe ra'ah et ha-tzon l'yad har gavo'ah, hu ra'ah davar mafli: s'neh bo'er ba-esh, v'ha-s'neh einenu ukal. Mi-toch ha-esh nishma kol Elohim: \"Moshe, Moshe!\" U-Moshe anah: \"Hineni.\" \"Shal n'alecha me-al raglecha, ki ha-makom ha-zeh kadosh. Lech el Par'oh v'hotze et ami mi-Mitzrayim.\" Moshe da'ag she-hu lo yode'a l'daber yafeh, aval kibel havtachah: Aharon achiv ya'azor lo.",
    "en": "One day, while Moses was shepherding the flock near a tall mountain, he saw something amazing: a bush burning with fire, yet the bush was not burned up. From inside the fire came the voice of God: \"Moses, Moses!\" And Moses answered, \"Here I am.\" \"Take your sandals off your feet, for this place is holy. Go to Pharaoh and bring my people out of Egypt.\" Moses worried that he did not know how to speak well, but he received a promise: Aaron, his brother, would help him.",
    "img": "assets/books/book63/BOOK63_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p08.mp3",
+    "m": "audio/m/israeli/book/book63-p08.mp3"
+   },
    "illustration": "Moses kneeling barefoot before the burning bush",
    "hasImg": true,
-   "hasAudio": false,
-   "audioHeld": true,
-   "audioHeldReason": "Contains Elohim; voicing is held for John. Clips exist but are not wired."
+   "hasAudio": true
   },
   {
    "n": 9,
@@ -121,11 +123,13 @@
    "translit": "Moshe v'Aharon nichn'su yachad la-armon v'amdu lifnei Par'oh. B'kol amitz u-varur amru: \"Koh amar Elohim: Shalach et ami!\" Par'oh shilev et z'ro'otav, kimet et mitzcho v'ratan: \"Lo! Ani lo ashale'ach et ha-am.\" Aval Moshe v'Aharon lo vitru, v'chazru elav shuv va-shuv.",
    "en": "Moses and Aaron went into the palace together and stood before Pharaoh. In a brave, clear voice they said, \"Thus says God: Let my people go!\" Pharaoh folded his arms, wrinkled his forehead and grumbled, \"No! I will not let the people go.\" But Moses and Aaron did not give up, and they came back to him again and again.",
    "img": "assets/books/book63/BOOK63_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p09.mp3",
+    "m": "audio/m/israeli/book/book63-p09.mp3"
+   },
    "illustration": "Moses and Aaron standing before handsome Pharaoh in the palace",
    "hasImg": true,
-   "hasAudio": false,
-   "audioHeld": true,
-   "audioHeldReason": "Contains Elohim; voicing is held for John. Clips exist but are not wired."
+   "hasAudio": true
   },
   {
    "n": 10,
@@ -147,11 +151,13 @@
    "translit": "B'nei Yisrael higi'u ad Yam Suf, u-fit'om sham'u me-achoreihem et ha-merkavot shel Par'oh. Ha-anashim pachadu, aval Moshe amar: \"Al tira'u!\" Hu natah et yado al ha-yam, v'Elohim shalach ru'ach kadim chazakah kol ha-laylah. Ha-mayim nivk'u v'amdu k'mo chomah mi-yamin u-mi-s'mol, u-v'nei Yisrael avru b'shalom ba-yabashah b'toch ha-yam. Par'oh v'chol cheilo radfu achareihem el toch ha-yam. Az amar Elohim l'Moshe: \"N'teh et yad'cha al ha-yam, v'yashuvu ha-mayim al Mitzrayim.\" Moshe natah et yado, v'lifnot boker chazar ha-yam lim'komo. Ha-galim kisu et ha-merkavot v'et ha-parashim, u-Far'oh v'chol cheilo tav'u ba-yam. Lo nishar bahem ad echad.",
    "en": "The Children of Israel reached the Sea of Reeds, and suddenly they heard Pharaoh's chariots behind them. The people were afraid, but Moses said, \"Do not be afraid!\" He stretched out his hand over the sea, and God sent a strong east wind all night long. The waters split apart and stood like a wall on the right and on the left, and the Children of Israel crossed safely on dry land through the middle of the sea. Pharaoh and his whole army chased after them into the sea. Then God said to Moses, \"Stretch out your hand over the sea, and let the waters come back over Egypt.\" Moses stretched out his hand, and at dawn the sea returned to its place. The waves covered the chariots and the horsemen, and Pharaoh and his whole army sank in the sea. Not one of them remained.",
    "img": "assets/books/book63/BOOK63_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p11.mp3",
+    "m": "audio/m/israeli/book/book63-p11.mp3"
+   },
    "illustration": "Moses stretching his hand as the sea walls fall; Israel safe on the shore",
    "hasImg": true,
-   "hasAudio": false,
-   "audioHeld": true,
-   "audioHeldReason": "Contains Elohim; voicing is held for John. Clips exist but are not wired."
+   "hasAudio": true
   },
   {
    "n": 12,
@@ -159,11 +165,13 @@
    "translit": "Al ha-chof ha-sheni, Miryam ha-n'vi'ah lak'chah tof b'yadah, v'chol ha-nashim yatz'u achareha b'tupim u-vi-m'cholot. Miryam sharah shir todah el Elohim, v'ha-y'ladim mach'u kapayim, ha-z'kenim chiyechu, v'chulam rakdu yachad, sof sof b'nei chorin. Ad ha-yom, b'chol Pesach, anachnu m'sap'rim et ha-sippur ha-zeh v'zochrim: cherut shayechet l'chulam, v'chol echad v'achat y'cholim lihyot amitzim k'mo Miryam u-Moshe.",
    "en": "On the far shore, Miriam the prophet took a drum in her hand, and all the women went out after her with drums and dancing. Miriam sang a song of thanks to God. The children clapped their hands, the elders smiled, and everyone danced together, free at last. To this day, every Passover, we tell this story and remember: freedom belongs to everyone, and every one of us can be as brave as Miriam and Moses.",
    "img": "assets/books/book63/BOOK63_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book63-p12.mp3",
+    "m": "audio/m/israeli/book/book63-p12.mp3"
+   },
    "illustration": "Miriam leading the women in dance and song on the far shore",
    "hasImg": true,
-   "hasAudio": false,
-   "audioHeld": true,
-   "audioHeldReason": "Contains Elohim; voicing is held for John. Clips exist but are not wired."
+   "hasAudio": true
   }
  ]
 }

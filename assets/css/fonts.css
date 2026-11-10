@@ -1,0 +1,5 @@
+/* Self-hosted OFL fonts (see assets/fonts/FONTS.md, docs/licenses/). woff2 conversions of the unmodified upstream files.
+   font-display: swap so text is readable immediately with the fallback stack. */
+@font-face { font-family: "Heebo"; src: url("../fonts/web/heebo.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Frank Ruhl Libre"; src: url("../fonts/web/frank-ruhl-libre.woff2") format("woff2"); font-weight: 300 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Gveret Levin"; src: url("../fonts/web/gveret-levin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }

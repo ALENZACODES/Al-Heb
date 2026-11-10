@@ -1,0 +1,336 @@
+{
+ "id": "I-37",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "University: courses, lectures, exams and scholarships",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אוּנִיבֶרְסִיטָה",
+   "en": "university",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "universitah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd53982bf"
+   }
+  },
+  {
+   "he": "מוֹרֶה",
+   "en": "teacher (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "moreh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1610dda2#forms.present"
+   }
+  },
+  {
+   "he": "מְרַצֶּה",
+   "en": "lecturer; lecturing",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "meratzeh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc683e48a#forms.present"
+   }
+  },
+  {
+   "he": "פְּרוֹפֶסוֹר",
+   "en": "professor",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "perofesor"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h6a5b4bd8"
+   }
+  },
+  {
+   "he": "מִבְחָן",
+   "en": "test, exam",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mivchan"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5f517008"
+   }
+  },
+  {
+   "he": "שִׁעוּר",
+   "en": "lesson, class",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shi'ur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc4654a6b"
+   }
+  },
+  {
+   "he": "סֵפֶר",
+   "en": "book",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sefer"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h231c624a"
+   }
+  },
+  {
+   "he": "מִלְגָּה",
+   "en": "scholarship",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "milgah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h16a54d9c"
+   }
+  },
+  {
+   "he": "קוֹרֵס",
+   "en": "course",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kores"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h130a0158#forms.present"
+   }
+  },
+  {
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hayom"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5350449f"
+   }
+  },
+  {
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "machar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he1c16e99"
+   }
+  },
+  {
+   "he": "חָבֵר",
+   "en": "friend (m)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chaver"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2280b9b6"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Say what you study and where",
+  "Ask when a class or exam is and where a room is",
+  "Ask about a scholarship"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-36"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-37-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "אוּנִיבֶרְסִיטָה",
+     "en": "university"
+    },
+    {
+     "he": "פְּרוֹפֶסוֹר",
+     "en": "professor"
+    },
+    {
+     "he": "מִבְחָן",
+     "en": "exam"
+    },
+    {
+     "he": "סֵפֶר",
+     "en": "book"
+    },
+    {
+     "he": "מִלְגָּה",
+     "en": "scholarship"
+    }
+   ]
+  },
+  {
+   "id": "I-37-e02",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה קוֹרֵס",
+   "f": "אֲנִי רוֹצָה קוֹרֵס",
+   "en": "I want a course"
+  },
+  {
+   "id": "I-37-e03",
+   "type": "order",
+   "he": "מָתַי יֵשׁ מִבְחָן?",
+   "en": "When is the exam?"
+  },
+  {
+   "id": "I-37-e04",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "מָתַי יֵשׁ מִבְחָן?",
+     "en": "When is the exam?"
+    },
+    {
+     "speaker": "b",
+     "he": "מָחָר.",
+     "en": "Tomorrow."
+    },
+    {
+     "speaker": "a",
+     "he": "אֵיפֹה?",
+     "en": "Where?"
+    },
+    {
+     "speaker": "b",
+     "he": "כָּאן.",
+     "en": "Here."
+    }
+   ],
+   "task": "Ask about the exam."
+  },
+  {
+   "id": "I-37-e05",
+   "type": "produce",
+   "en": "when is the exam?",
+   "options": [
+    "מָתַי יֵשׁ מִבְחָן?",
+    "מָה הַמְּחִיר?",
+    "אֵיפֹה הַשֵּׁרוּתִים?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-37-e06",
+   "type": "respond",
+   "cue": "Ask whether there is a scholarship.",
+   "answer": {
+    "he": "יֵשׁ מִלְגָּה?",
+    "en": "Is there a scholarship?"
+   }
+  },
+  {
+   "id": "I-37-e07",
+   "type": "recall",
+   "he": "מִלְגָּה",
+   "en": "scholarship"
+  },
+  {
+   "id": "I-37-e08",
+   "type": "produce",
+   "en": "professor",
+   "options": [
+    "פְּרוֹפֶסוֹר",
+    "מוֹרֶה",
+    "מִבְחָן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-37-e09",
+   "type": "respond",
+   "cue": "Say you study here.",
+   "answer": {
+    "he": "אֲנִי לוֹמֵד כָּאן",
+    "en": "I study here"
+   },
+   "prompt": {
+    "he": "מָה אַתָּה עוֹשֶׂה?",
+    "en": "What do you do?"
+   }
+  },
+  {
+   "id": "I-37-e10",
+   "type": "recall",
+   "he": "מְרַצֶּה",
+   "en": "lecturer"
+  },
+  {
+   "id": "I-37-e11",
+   "type": "respond",
+   "cue": "Ask where the lecture is.",
+   "answer": {
+    "he": "אֵיפֹה יֵשׁ שִׁעוּר?",
+    "en": "Where is the class?"
+   }
+  },
+  {
+   "id": "I-37-e12",
+   "type": "produce",
+   "en": "book",
+   "options": [
+    "סֵפֶר",
+    "מִבְחָן",
+    "מִלְגָּה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-37-e13",
+   "type": "respond",
+   "cue": "Say you don't understand the question.",
+   "answer": {
+    "he": "אֲנִי לֹא מֵבִין",
+    "en": "I don't understand"
+   }
+  },
+  {
+   "id": "I-37-e14",
+   "type": "recall",
+   "he": "שִׁעוּר",
+   "en": "lesson, class"
+  }
+ ],
+ "note": "'Degree', 'semester', 'assignment' and 'library' as pointed tokens are missing or doubtful in the sources and are left out."
+}

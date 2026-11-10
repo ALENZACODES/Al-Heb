@@ -1,0 +1,179 @@
+{
+ "id": "book2",
+ "titleHe": "שָׁרָשִׁים שֶׁל כֶּסֶף",
+ "titleTranslit": "Shorashim shel Kesef",
+ "titleEn": "Roots of Silver",
+ "level": "Grade 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הָעֵץ עוֹמֵד בַּשֶּׁמֶשׁ.",
+   "translit": "Ha-etz omed ba-shemesh.",
+   "en": "The tree stands in the sun.",
+   "img": "assets/books/book2/BOOK2_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p01.mp3",
+    "m": "audio/m/israeli/book/book2-p01.mp3"
+   },
+   "illustration": "an ancient, gnarled olive tree in golden morning light.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "סָבָא אֱלִי עוֹמֵד עַל הָאֶבֶן.",
+   "translit": "Saba Eli omed al ha-even.",
+   "en": "Grandfather Eli stands on the stone.",
+   "img": "assets/books/book2/BOOK2_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p02.mp3",
+    "m": "audio/m/israeli/book/book2-p02.mp3"
+   },
+   "illustration": "an elderly man with a white beard stands barefoot on weathered sandstone, looking up.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "הָרוּחַ בָּאָה. עָלֶה אֶחָד יוֹרֵד.",
+   "translit": "Ha-ruach ba-ah. Aleh echad yored.",
+   "en": "The wind comes. One leaf descends.",
+   "img": "assets/books/book2/BOOK2_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p03.mp3",
+    "m": "audio/m/israeli/book/book2-p03.mp3"
+   },
+   "illustration": "swirling indigo and gold strokes; a single silver-green leaf floats down.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "בֹּקֶר טוֹב, עֵץ שֶׁלִּי.",
+   "translit": "Boker tov, etz sheli.",
+   "en": "Good morning, my tree.",
+   "img": "assets/books/book2/BOOK2_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p04.mp3",
+    "m": "audio/m/israeli/book/book2-p04.mp3"
+   },
+   "illustration": "Eli rests both palms flat against the wide trunk.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "עָלֶה עַל הָאֶבֶן.",
+   "translit": "Aleh al ha-even.",
+   "en": "A leaf on the stone.",
+   "img": "assets/books/book2/BOOK2_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p05.mp3",
+    "m": "audio/m/israeli/book/book2-p05.mp3"
+   },
+   "illustration": "close view — one silver-green leaf resting on the warm stone.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "סָבָא אֱלִי שׁוֹתֶה מַיִם.",
+   "translit": "Saba Eli shoteh mayim.",
+   "en": "Grandfather Eli drinks water.",
+   "img": "assets/books/book2/BOOK2_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p06.mp3",
+    "m": "audio/m/israeli/book/book2-p06.mp3"
+   },
+   "illustration": "Eli cups water from a small stone basin beside the tree.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "הַשֶּׁמֶשׁ חַמָּה. הָעֵץ נוֹתֵן צֵל.",
+   "translit": "Ha-shemesh chamah. Ha-etz noten tzel.",
+   "en": "The sun is warm. The tree gives shade.",
+   "img": "assets/books/book2/BOOK2_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p07.mp3",
+    "m": "audio/m/israeli/book/book2-p07.mp3"
+   },
+   "illustration": "half the courtyard in gold light, half in deep olive shade under the canopy.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "צִפּוֹר עַל הָעֵץ.",
+   "translit": "Tzipor al ha-etz.",
+   "en": "A bird on the tree.",
+   "img": "assets/books/book2/BOOK2_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p08.mp3",
+    "m": "audio/m/israeli/book/book2-p08.mp3"
+   },
+   "illustration": "a small bird on a high branch, the courtyard quiet below.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הָרוּחַ שָׁרָה בָּעֵץ.",
+   "translit": "Ha-ruach sharah ba-etz.",
+   "en": "The wind sings in the tree.",
+   "img": "assets/books/book2/BOOK2_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p09.mp3",
+    "m": "audio/m/israeli/book/book2-p09.mp3"
+   },
+   "illustration": "leaves streaming sideways in one long gust, Eli's beard lifted by it.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "סָבָא אֱלִי יוֹשֵׁב עַל הָאֶבֶן.",
+   "translit": "Saba Eli yoshev al ha-even.",
+   "en": "Grandfather Eli sits on the stone.",
+   "img": "assets/books/book2/BOOK2_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p10.mp3",
+    "m": "audio/m/israeli/book/book2-p10.mp3"
+   },
+   "illustration": "Eli seated on the stone blocks, hands on his knees, eyes closed.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הָעַלִּים רוֹקְדִים בָּרוּחַ.",
+   "translit": "Ha-alim rokdim ba-ruach.",
+   "en": "The leaves dance in the wind.",
+   "img": "assets/books/book2/BOOK2_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p11.mp3",
+    "m": "audio/m/israeli/book/book2-p11.mp3"
+   },
+   "illustration": "a scatter of silver-green leaves turning in the air above the courtyard.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "מָחָר גַּם כֵּן. בֹּקֶר טוֹב, עֵץ שֶׁלִּי.",
+   "translit": "Machar gam ken. Boker tov, etz sheli.",
+   "en": "Tomorrow too. Good morning, my tree.",
+   "img": "assets/books/book2/BOOK2_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book2-p12.mp3",
+    "m": "audio/m/israeli/book/book2-p12.mp3"
+   },
+   "illustration": "the tree at first light again, Eli's footprints in the dust of the courtyard.",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ],
+ "hasImages": true,
+ "hasAudio": true
+}

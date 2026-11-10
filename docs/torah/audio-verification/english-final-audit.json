@@ -1,0 +1,32 @@
+{
+  "createdUtc": "2026-11-08T09:13:11.085435+00:00",
+  "chapters": 187,
+  "verses": 5846,
+  "voices": [
+    "Ari / Charon",
+    "Noa / Kore"
+  ],
+  "chapterTracks": 374,
+  "requestChunks": 502,
+  "sourceCoverage": "All source verses represented in original order for both voices; exact JPS source retained separately, with LORD spoken for the written Hebrew name in Exodus 6:3; no missing or duplicate chapter tracks.",
+  "provider": "Google Chirp 3 HD",
+  "nominalCharacters": 1634994,
+  "audioBytes": 386890302,
+  "audioHours": 26.85894111111111,
+  "asrChunksAtAudit": 204,
+  "asrModel": "Systran/faster-whisper-tiny.en",
+  "asrModelRevision": "0d3d19a32d3338f10357c0889762bd8d64bbdeba",
+  "asrCaveat": "Unprompted recognition includes differences on names, archaic numbers and homophones; not human-reviewed pronunciation certification.",
+  "sourceAndHashChecks": "passed",
+  "fullDecodeChecks": "All chapter tracks were fully decoded by assemble.py; this audit rechecked their saved audio hashes.",
+  "postAuditCorrection": {
+    "dateUtc": "2026-11-08T09:12:42.988957+00:00",
+    "chapters": [
+      "Ari Exodus 6",
+      "Noa Exodus 6"
+    ],
+    "reason": "Verse 3 English speech uses LORD; JPS source preserved",
+    "checks": "Full replacement decode, exact request/hash provenance, targeted independent ASR",
+    "evidence": "exodus6-correction/README.md"
+  }
+}

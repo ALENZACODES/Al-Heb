@@ -1,0 +1,177 @@
+{
+ "id": "book40",
+ "titleHe": "הַמִּכְתָּב",
+ "titleTranslit": "Ha-Michtav",
+ "titleEn": "The Letter",
+ "level": "Beginner 2",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יֵשׁ מִכְתָּב בַּתֵּבָה.",
+   "translit": "Yesh michtav ba-tevah.",
+   "en": "There is a letter in the mailbox.",
+   "img": "assets/books/book40/BOOK40_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p01.mp3",
+    "m": "audio/m/israeli/book/book40-p01.mp3"
+   },
+   "illustration": "a hand pulling an envelope from a dented mailbox",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "מִכְתָּב אֲמִתִּי. עַל נְיָר.",
+   "translit": "Michtav amiti. Al niyar.",
+   "en": "A real letter. On paper.",
+   "img": "assets/books/book40/BOOK40_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p02.mp3",
+    "m": "audio/m/israeli/book/book40-p02.mp3"
+   },
+   "illustration": "a cream envelope with a handwritten address",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "לֵאָה מִסְתַּכֶּלֶת.",
+   "translit": "Leah mistakelet.",
+   "en": "Leah looks.",
+   "img": "assets/books/book40/BOOK40_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p03.mp3",
+    "m": "audio/m/israeli/book/book40-p03.mp3"
+   },
+   "illustration": "a woman turning it over, no return address",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "מִי כּוֹתֵב מִכְתָּבִים הַיּוֹם?",
+   "translit": "Mi kotev michtavim ha-yom?",
+   "en": "Who writes letters today?",
+   "img": "assets/books/book40/BOOK40_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p04.mp3",
+    "m": "audio/m/israeli/book/book40-p04.mp3"
+   },
+   "illustration": "her puzzled face",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הִיא פּוֹתַחַת.",
+   "translit": "Hi potachat.",
+   "en": "She opens it.",
+   "img": "assets/books/book40/BOOK40_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p05.mp3",
+    "m": "audio/m/israeli/book/book40-p05.mp3"
+   },
+   "illustration": "tearing the envelope carefully",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "כְּתַב יָד יָפֶה.",
+   "translit": "Ktav yad yafeh.",
+   "en": "Beautiful handwriting.",
+   "img": "assets/books/book40/BOOK40_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p06.mp3",
+    "m": "audio/m/israeli/book/book40-p06.mp3"
+   },
+   "illustration": "looping blue ink on the page",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "\"לֵאָה שֶׁלִּי,\"",
+   "translit": "\"Leah sheli,\"",
+   "en": "\"My Leah,\"",
+   "img": "assets/books/book40/BOOK40_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p07.mp3",
+    "m": "audio/m/israeli/book/book40-p07.mp3"
+   },
+   "illustration": "the letter unfolded in her hands, its lines soft pencil strokes, no readable words",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "הִיא קוֹרֵאת לְאַט.",
+   "translit": "Hi koret le'at.",
+   "en": "She reads slowly.",
+   "img": "assets/books/book40/BOOK40_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p08.mp3",
+    "m": "audio/m/israeli/book/book40-p08.mp3"
+   },
+   "illustration": "the woman sitting down on the stairs",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הַמִּכְתָּב מֵהַסָּבָא שֶׁלָּהּ.",
+   "translit": "Ha-michtav me-ha-saba shelah.",
+   "en": "The letter is from her grandfather.",
+   "img": "assets/books/book40/BOOK40_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p09.mp3",
+    "m": "audio/m/israeli/book/book40-p09.mp3"
+   },
+   "illustration": "a photo of an old man tucked in the fold",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הוּא כָּתַב לִפְנֵי שָׁנָה.",
+   "translit": "Hu katav lifnei shanah.",
+   "en": "He wrote it a year ago.",
+   "img": "assets/books/book40/BOOK40_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p10.mp3",
+    "m": "audio/m/israeli/book/book40-p10.mp3"
+   },
+   "illustration": "a date at the top, a year back",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"פִּתְחִי כְּשֶׁאַתְּ בַּת שְׁלוֹשִׁים.\"",
+   "translit": "\"Pitchi kshe-at bat shloshim.\"",
+   "en": "\"Open when you are thirty.\"",
+   "img": "assets/books/book40/BOOK40_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p11.mp3",
+    "m": "audio/m/israeli/book/book40-p11.mp3"
+   },
+   "illustration": "the words on the envelope flap",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הַיּוֹם יוֹם הַהֻלֶּדֶת שֶׁלָּהּ.",
+   "translit": "Ha-yom yom ha-huledet shelah.",
+   "en": "Today is her birthday.",
+   "img": "assets/books/book40/BOOK40_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book40-p12.mp3",
+    "m": "audio/m/israeli/book/book40-p12.mp3"
+   },
+   "illustration": "the woman on the stairs, letter to her chest, eyes shining",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

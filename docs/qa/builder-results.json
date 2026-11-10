@@ -1,0 +1,20 @@
+{
+  "words": 162,
+  "threeLetter": 76,
+  "completion": {
+    "built": 162,
+    "tally": "162 different words built · 1620 points"
+  },
+  "playbackCount": 408,
+  "failed": [],
+  "errors": [],
+  "missing": [],
+  "viewportWidths": [
+    1280,
+    375
+  ],
+  "shalomReplacementPlayback": 40,
+  "phoneTouch": true,
+  "phoneLongPress": true,
+  "defaultAutoplayPolicy": true
+}

@@ -1,0 +1,13 @@
+{
+ "inputText": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+ "tradition": "israeli",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "stitchedFromText": "יְבָרֶכְךָ יְהוָה וְיִשְׁמְרֶךָ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/bless-priestly-1-w1.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/bless-priestly-1-w3.mp3"
+ ],
+ "note": "Joined from word clips; flagged words replaced by fresh takes that both reviewers heard best (tools/audio/asr-check/take-scores.jsonl, rebuild-both-log.jsonl)."
+}

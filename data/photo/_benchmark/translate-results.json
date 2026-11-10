@@ -1,0 +1,285 @@
+{
+ "note": "phrasebook en field is a proxy ground truth; phrases are project-owned public text",
+ "n": 30,
+ "engines": {
+  "argos-he-en-1.5": {
+   "meanF1": 0.532,
+   "meanRatio": 0.645,
+   "share_f1_ge_0.5": 0.6,
+   "share_f1_eq_0": 0.233,
+   "totalSeconds": 3.0,
+   "rows": [
+    {
+     "id": "greetings-01",
+     "he": "שלום",
+     "ref": "hello / goodbye / peace",
+     "hyp": "Peace of peace",
+     "f1": 0.5,
+     "ratio": 0.526,
+     "ms": 1529
+    },
+    {
+     "id": "greetings-07",
+     "he": "שבת שלום",
+     "ref": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+     "hyp": "Saturday Peace",
+     "f1": 0.2,
+     "ratio": 0.213,
+     "ms": 46
+    },
+    {
+     "id": "greetings-13",
+     "he": "מה קורה?",
+     "ref": "what's happening?",
+     "hyp": "What happens?",
+     "f1": 0.0,
+     "ratio": 0.8,
+     "ms": 64
+    },
+    {
+     "id": "greetings-19",
+     "he": "נעים מאד",
+     "ref": "nice to meet you",
+     "hyp": "Very pleasant.",
+     "f1": 0.0,
+     "ratio": 0.133,
+     "ms": 40
+    },
+    {
+     "id": "greetings-25",
+     "he": "בהצלחה",
+     "ref": "good luck / all the best",
+     "hyp": "Good luck.",
+     "f1": 1.0,
+     "ratio": 0.947,
+     "ms": 47
+    },
+    {
+     "id": "politeness-04",
+     "he": "אין בעיה",
+     "ref": "no problem",
+     "hyp": "No problem.",
+     "f1": 1.0,
+     "ratio": 0.952,
+     "ms": 56
+    },
+    {
+     "id": "politeness-10",
+     "he": "אולי",
+     "ref": "maybe",
+     "hyp": "Possibly",
+     "f1": 0.0,
+     "ratio": 0.154,
+     "ms": 35
+    },
+    {
+     "id": "politeness-16",
+     "he": "יופי",
+     "ref": "great / nice",
+     "hyp": "beauty.",
+     "f1": 0.0,
+     "ratio": 0.5,
+     "ms": 30
+    },
+    {
+     "id": "politeness-22",
+     "he": "יהיה בסדר",
+     "ref": "it'll be OK",
+     "hyp": "It will be okay.",
+     "f1": 0.286,
+     "ratio": 0.741,
+     "ms": 69
+    },
+    {
+     "id": "fillers-06",
+     "he": "באמת?",
+     "ref": "really?",
+     "hyp": "Really?",
+     "f1": 1.0,
+     "ratio": 1.0,
+     "ms": 33
+    },
+    {
+     "id": "fillers-12",
+     "he": "אבל",
+     "ref": "but",
+     "hyp": "But but",
+     "f1": 0.667,
+     "ratio": 0.6,
+     "ms": 32
+    },
+    {
+     "id": "fillers-18",
+     "he": "אפשר לדבר לאט?",
+     "ref": "can you speak slowly?",
+     "hyp": "Can I talk slowly?",
+     "f1": 0.5,
+     "ratio": 0.769,
+     "ms": 69
+    },
+    {
+     "id": "cafe-01",
+     "he": "שלחן לשנים, בבקשה",
+     "ref": "a table for two, please",
+     "hyp": "Sending for years, please.",
+     "f1": 0.444,
+     "ratio": 0.571,
+     "ms": 83
+    },
+    {
+     "id": "cafe-07",
+     "he": "קפה עם חלב",
+     "ref": "coffee with milk",
+     "hyp": "Coffee with Milk",
+     "f1": 1.0,
+     "ratio": 1.0,
+     "ms": 58
+    },
+    {
+     "id": "cafe-13",
+     "he": "לחיים!",
+     "ref": "cheers!",
+     "hyp": "Life!",
+     "f1": 0.0,
+     "ratio": 0.333,
+     "ms": 54
+    },
+    {
+     "id": "cafe-19",
+     "he": "פיתה",
+     "ref": "pita bread",
+     "hyp": "Her mouth",
+     "f1": 0.0,
+     "ratio": 0.105,
+     "ms": 51
+    },
+    {
+     "id": "cafe-25",
+     "he": "לאכל כאן או לקחת?",
+     "ref": "eat here or take away?",
+     "hyp": "Eat here or take it?",
+     "f1": 0.8,
+     "ratio": 0.857,
+     "ms": 82
+    },
+    {
+     "id": "shop-04",
+     "he": "זה זול",
+     "ref": "it's cheap",
+     "hyp": "It's cheap.",
+     "f1": 1.0,
+     "ratio": 0.952,
+     "ms": 50
+    },
+    {
+     "id": "shop-10",
+     "he": "מה המדה?",
+     "ref": "what size?",
+     "hyp": "What is the uniform?",
+     "f1": 0.333,
+     "ratio": 0.533,
+     "ms": 66
+    },
+    {
+     "id": "shop-16",
+     "he": "פתוח",
+     "ref": "open",
+     "hyp": "Open open",
+     "f1": 0.667,
+     "ratio": 0.615,
+     "ms": 42
+    },
+    {
+     "id": "taxi-02",
+     "he": "לאן?",
+     "ref": "where to?",
+     "hyp": "Where?",
+     "f1": 0.667,
+     "ratio": 0.8,
+     "ms": 40
+    },
+    {
+     "id": "taxi-08",
+     "he": "כמה זה יעלה?",
+     "ref": "how much will it cost?",
+     "hyp": "How much will it cost?",
+     "f1": 1.0,
+     "ratio": 1.0,
+     "ms": 75
+    },
+    {
+     "id": "taxi-14",
+     "he": "האם זה האוטובוס ל...?",
+     "ref": "is this the bus to ...?",
+     "hyp": "Is this the bus to...?",
+     "f1": 1.0,
+     "ratio": 0.978,
+     "ms": 83
+    },
+    {
+     "id": "directions-05",
+     "he": "ישר",
+     "ref": "straight ahead",
+     "hyp": "straight.",
+     "f1": 0.667,
+     "ratio": 0.696,
+     "ms": 43
+    },
+    {
+     "id": "directions-11",
+     "he": "על יד",
+     "ref": "next to",
+     "hyp": "by hand",
+     "f1": 0.0,
+     "ratio": 0.143,
+     "ms": 39
+    },
+    {
+     "id": "directions-17",
+     "he": "איפה בית החולים?",
+     "ref": "where is the hospital?",
+     "hyp": "Where is the hospital?",
+     "f1": 1.0,
+     "ratio": 1.0,
+     "ms": 64
+    },
+    {
+     "id": "numbers-03",
+     "he": "שלושה",
+     "ref": "three (3)",
+     "hyp": "Three three.",
+     "f1": 0.5,
+     "ratio": 0.571,
+     "ms": 37
+    },
+    {
+     "id": "numbers-09",
+     "he": "תשעה",
+     "ref": "nine (9)",
+     "hyp": "Nine.",
+     "f1": 0.667,
+     "ratio": 0.615,
+     "ms": 31
+    },
+    {
+     "id": "numbers-15",
+     "he": "אלף",
+     "ref": "one thousand (1000)",
+     "hyp": "A thousand",
+     "f1": 0.4,
+     "ratio": 0.621,
+     "ms": 45
+    },
+    {
+     "id": "numbers-21",
+     "he": "מחר",
+     "ref": "tomorrow",
+     "hyp": "Tomorrow tomorrow.",
+     "f1": 0.667,
+     "ratio": 0.615,
+     "ms": 48
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,2002 @@
+{
+ "tool": "tools/a11y/blind.mjs",
+ "when": "2026-11-05T02:44:49.700Z",
+ "note": "Chromium accessibility tree and DOM only. No screen reader, braille display, magnifier software or blind user was involved.",
+ "routes": {
+  "/": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 2,
+     "nav": 3
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "ALEF אלף"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:ALEF אלף",
+     "h2:Today's lesson",
+     "h2:Opening prayer",
+     "h2:Go to",
+     "h2:More ways to learn",
+     "h2:Morning and evening reflection"
+    ],
+    "liveRegions": 0,
+    "interactive": 5,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 39,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 2,
+     "nav": 3
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "ALEF אלף"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:ALEF אלף",
+     "h2:Today's lesson",
+     "h2:Opening prayer",
+     "h2:Go to",
+     "h2:More ways to learn",
+     "h2:Morning and evening reflection"
+    ],
+    "liveRegions": 0,
+    "interactive": 5,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 39,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/learn": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Lessons"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Lessons"
+    ],
+    "liveRegions": 2,
+    "interactive": 75,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 15,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Lessons"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Lessons"
+    ],
+    "liveRegions": 2,
+    "interactive": 75,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 15,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/letters": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letters"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letters"
+    ],
+    "liveRegions": 6,
+    "interactive": 42,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 26,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letters"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letters"
+    ],
+    "liveRegions": 6,
+    "interactive": 42,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 26,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/letters/atlas": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letter atlas"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letter atlas"
+    ],
+    "liveRegions": 1,
+    "interactive": 33,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 41,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letter atlas"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letter atlas"
+    ],
+    "liveRegions": 1,
+    "interactive": 33,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 41,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/letters/alef": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letter"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letter"
+    ],
+    "liveRegions": 6,
+    "interactive": 42,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 26,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Letter"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Letter"
+    ],
+    "liveRegions": 6,
+    "interactive": 42,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 26,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/progress": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Your progress"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Your progress",
+     "h2:What can I read now?",
+     "h2:Lines and words you can sound ",
+     "h2:Today",
+     "h2:This week",
+     "h3:Dated activity, last 8 weeks",
+     "h2:Milestones",
+     "h2:Your path: Read the prayer boo",
+     "h2:Belts",
+     "h2:Worth another look",
+     "h2:Your numbers",
+     "h2:Back up your progress",
+     "h3:Progress only"
+    ],
+    "liveRegions": 2,
+    "interactive": 7,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 29,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Your progress"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Your progress",
+     "h2:What can I read now?",
+     "h2:Lines and words you can sound ",
+     "h2:Today",
+     "h2:This week",
+     "h3:Dated activity, last 8 weeks",
+     "h2:Milestones",
+     "h2:Your path: Read the prayer boo",
+     "h2:Belts",
+     "h2:Worth another look",
+     "h2:Your numbers",
+     "h2:Back up your progress",
+     "h3:Progress only"
+    ],
+    "liveRegions": 2,
+    "interactive": 7,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 29,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/firstday": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Your first 10 minutes"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Your first 10 minutes",
+     "h2:Your first letter: Shin"
+    ],
+    "liveRegions": 4,
+    "interactive": 6,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 17,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Your first 10 minutes"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Your first 10 minutes",
+     "h2:Your first letter: Shin"
+    ],
+    "liveRegions": 4,
+    "interactive": 6,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 17,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/install": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Install ALEF"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Install ALEF"
+    ],
+    "liveRegions": 1,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 9,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Install ALEF"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Install ALEF"
+    ],
+    "liveRegions": 1,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 9,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/credits": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Credits and licences"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Credits and licences",
+     "h2:Vocabulary",
+     "h2:Scripture text",
+     "h2:Prayer text",
+     "h2:Calendar data",
+     "h2:Pronunciation traditions",
+     "h2:Fonts",
+     "h2:Software and data files",
+     "h2:Online services",
+     "h2:Images",
+     "h2:Audio",
+     "h2:Written for this project"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Credits and licences"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Credits and licences",
+     "h2:Vocabulary",
+     "h2:Scripture text",
+     "h2:Prayer text",
+     "h2:Calendar data",
+     "h2:Pronunciation traditions",
+     "h2:Fonts",
+     "h2:Software and data files",
+     "h2:Online services",
+     "h2:Images",
+     "h2:Audio",
+     "h2:Written for this project"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/privacy": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 2,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Privacy"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Privacy",
+     "h2:What can leave your device",
+     "h2:What stays on your device",
+     "h2:What was searched for and not ",
+     "h2:What is stored in your browser",
+     "h2:Export and delete your data"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 2,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Privacy"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Privacy",
+     "h2:What can leave your device",
+     "h2:What stays on your device",
+     "h2:What was searched for and not ",
+     "h2:What is stored in your browser",
+     "h2:Export and delete your data"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/offline": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Use ALEF offline"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Use ALEF offline",
+     "h2:What works without a connectio",
+     "h3:Optional downloads",
+     "h2:Storage"
+    ],
+    "liveRegions": 1,
+    "interactive": 2,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 11,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Use ALEF offline"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Use ALEF offline",
+     "h2:What works without a connectio",
+     "h3:Optional downloads",
+     "h2:Storage"
+    ],
+    "liveRegions": 1,
+    "interactive": 2,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 11,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/settings": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Settings"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Settings"
+    ],
+    "liveRegions": 3,
+    "interactive": 58,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 22,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Settings"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Settings"
+    ],
+    "liveRegions": 3,
+    "interactive": 58,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 22,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/welcome": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Welcome to ALEF אלף"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Welcome to ALEF אלף"
+    ],
+    "liveRegions": 1,
+    "interactive": 6,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Welcome to ALEF אלף"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Welcome to ALEF אלף"
+    ],
+    "liveRegions": 1,
+    "interactive": 6,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 13,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/search": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Search"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Search"
+    ],
+    "liveRegions": 1,
+    "interactive": 1,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 9,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Search"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Search"
+    ],
+    "liveRegions": 1,
+    "interactive": 1,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 9,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/about": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "About ALEF"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:About ALEF",
+     "h2:Credits & licences"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "About ALEF"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:About ALEF",
+     "h2:Credits & licences"
+    ],
+    "liveRegions": 0,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/learn?lesson=r01": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Shin and Bet: your first two letters"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Shin and Bet: your first two l",
+     "h2:Goals",
+     "h2:Letters",
+     "h2:How these sounds are said, in ",
+     "h2:Vowels and marks",
+     "h2:Words"
+    ],
+    "liveRegions": 2,
+    "interactive": 7,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 21,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Shin and Bet: your first two letters"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Shin and Bet: your first two l",
+     "h2:Goals",
+     "h2:Letters",
+     "h2:How these sounds are said, in ",
+     "h2:Vowels and marks",
+     "h2:Words"
+    ],
+    "liveRegions": 2,
+    "interactive": 7,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 21,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/learn?review=1": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Review"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Review",
+     "h2:Nothing due"
+    ],
+    "liveRegions": 1,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 10,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Review"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Review",
+     "h2:Nothing due"
+    ],
+    "liveRegions": 1,
+    "interactive": 0,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 10,
+     "trap": false
+    },
+    "errors": []
+   },
+   "zoom200%": {
+    "sideways": false,
+    "scrollWidth": 640,
+    "clientWidth": 640,
+    "clipped": [],
+    "wide": []
+   },
+   "zoom400%": {
+    "sideways": false,
+    "scrollWidth": 320,
+    "clientWidth": 320,
+    "clipped": [],
+    "wide": []
+   }
+  },
+  "/firstday/ladder": {
+   "375x667": {
+    "focusOnNav": "h1#ladder-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Pointed to unpointed ladder"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Pointed to unpointed ladder"
+    ],
+    "liveRegions": 1,
+    "interactive": 5,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#ladder-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Pointed to unpointed ladder"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Pointed to unpointed ladder"
+    ],
+    "liveRegions": 1,
+    "interactive": 5,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/torahread": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Torah reading"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Torah reading",
+     "h2:Reading without vowels",
+     "h3:Priestly Blessing, line 1 Numb",
+     "h3:Check yourself"
+    ],
+    "liveRegions": 2,
+    "interactive": 18,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 22,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Torah reading"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Torah reading",
+     "h2:Reading without vowels",
+     "h3:Priestly Blessing, line 1 Numb",
+     "h3:Check yourself"
+    ],
+    "liveRegions": 2,
+    "interactive": 18,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 22,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/torahreader": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Torah reader: Priestly Blessing and Shema"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Torah reader: Priestly Blessin"
+    ],
+    "liveRegions": 1,
+    "interactive": 55,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 14,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Torah reader: Priestly Blessing and Shema"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Torah reader: Priestly Blessin"
+    ],
+    "liveRegions": 1,
+    "interactive": 55,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 14,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/sounds": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Sounds"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Sounds",
+     "h2:Vowels and sounds",
+     "h3:Vowel chart",
+     "h3:Letters whose sound depends on",
+     "h3:How each sound is said, in wor",
+     "h3:Why this is easier than it loo",
+     "h3:Sound like a local: drills",
+     "h3:Switching between Ashkenazi an",
+     "h3:Same word, two traditions"
+    ],
+    "liveRegions": 1,
+    "interactive": 18,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 80,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Sounds"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Sounds",
+     "h2:Vowels and sounds",
+     "h3:Vowel chart",
+     "h3:Letters whose sound depends on",
+     "h3:How each sound is said, in wor",
+     "h3:Why this is easier than it loo",
+     "h3:Sound like a local: drills",
+     "h3:Switching between Ashkenazi an",
+     "h3:Same word, two traditions"
+    ],
+    "liveRegions": 1,
+    "interactive": 18,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 80,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/vocab": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Vocabulary"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Vocabulary"
+    ],
+    "liveRegions": 2,
+    "interactive": 89,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Vocabulary"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Vocabulary"
+    ],
+    "liveRegions": 2,
+    "interactive": 89,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 12,
+     "trap": false
+    },
+    "errors": []
+   }
+  },
+  "/read": {
+   "375x667": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Read"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Read",
+     "h2:The Priestly Blessing (Birkat ",
+     "h3:About: Priestly Blessing, line",
+     "h3:About: Priestly Blessing, line",
+     "h3:About: Priestly Blessing, line"
+    ],
+    "liveRegions": 2,
+    "interactive": 41,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 23,
+     "trap": false
+    },
+    "errors": []
+   },
+   "1280x800": {
+    "focusOnNav": "h1#view-title",
+    "landmarks": {
+     "main": 1,
+     "banner": 1,
+     "nav": 1
+    },
+    "skipLink": {
+     "text": "Skip to main content",
+     "href": "#main",
+     "targetExists": true
+    },
+    "h1": [
+     "Read"
+    ],
+    "headingSkips": [],
+    "headings": [
+     "h1:Read",
+     "h2:The Priestly Blessing (Birkat ",
+     "h3:About: Priestly Blessing, line",
+     "h3:About: Priestly Blessing, line",
+     "h3:About: Priestly Blessing, line"
+    ],
+    "liveRegions": 2,
+    "interactive": 41,
+    "imgNoAlt": [],
+    "svgUnnamed": [],
+    "canvasUnnamed": [],
+    "imgRoleNoName": [],
+    "hebrew": [],
+    "hebrewCount": 0,
+    "tree": {
+     "unnamed": []
+    },
+    "tab": {
+     "stops": 23,
+     "trap": false
+    },
+    "errors": []
+   }
+  }
+ },
+ "scenarios": {
+  "strokes-in-words panel exists on the letter page": {
+   "ok": true,
+   "detail": ""
+  },
+  "stepper: Enter on Next stroke in words reads stroke 1 (keyboard only)": {
+   "ok": true,
+   "detail": "Stroke 1 of 3: It starts at the top right. Go down, in a straight line. Then ben"
+  },
+  "stepper: second press reads stroke 2": {
+   "ok": true,
+   "detail": "Stroke 2 of 3: Lift your finger and move. It starts at the top left. Go down and"
+  },
+  "stepper: Previous goes back to stroke 1": {
+   "ok": true,
+   "detail": ""
+  },
+  "stepper: focus stays on the pressed button (no focus move)": {
+   "ok": true,
+   "detail": ""
+  },
+  "stepper text sits in a polite live region": {
+   "ok": true,
+   "detail": ""
+  },
+  "the drawing area points to the text version (aria-describedby resolves to text)": {
+   "ok": true,
+   "detail": ""
+  },
+  "the honest note about tracing being visual is on the panel": {
+   "ok": true,
+   "detail": ""
+  },
+  "memory card: pressing the picture gives a text description (why the shape fits)": {
+   "ok": true,
+   "detail": "A silent mime in a handstand. The handstand body is the letter. A mime in a striped shirt "
+  },
+  "memory card: the picture and glyph are hidden from a screen reader (decorative)": {
+   "ok": true,
+   "detail": ""
+  },
+  "memory card: hook and word are text in the list": {
+   "ok": true,
+   "detail": ""
+  },
+  "look-alike drill: each glyph option has a shape description for a screen reader": {
+   "ok": true,
+   "detail": "Hebrew letter. Shape: A house seen from the side: flat roof, back wall on the right, floor that sticks out past the wall"
+  },
+  "lesson: pointed words show a respelling as text": {
+   "ok": true,
+   "detail": ""
+  },
+  "quiz: the glyph in the question has a text equivalent (role img + label)": {
+   "ok": true,
+   "detail": ""
+  },
+  "quiz: the verdict is a polite live region AND the focused Continue button carries it as its description": {
+   "ok": true,
+   "detail": "Continue: Not quite. The answer is Shin. This is Shin, which sounds like sh with the right"
+  },
+  "review: a letter card front has a text equivalent that does not name the letter": {
+   "ok": true,
+   "detail": ""
+  },
+  "review: Show answer moves focus to the answer box (new content), ratings are labelled": {
+   "ok": true,
+   "detail": ""
+  }
+ },
+ "findings": [
+  {
+   "route": "/",
+   "vp": "375x667",
+   "kind": "no-live-region",
+   "detail": "main has buttons or fields but no live region"
+  },
+  {
+   "route": "/",
+   "vp": "1280x800",
+   "kind": "no-live-region",
+   "detail": "main has buttons or fields but no live region"
+  }
+ ],
+ "summary": {
+  "routes": 23,
+  "findings": 2,
+  "byKind": {
+   "no-live-region": 2
+  }
+ }
+}

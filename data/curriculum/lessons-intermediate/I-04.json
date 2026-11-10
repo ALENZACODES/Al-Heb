@@ -1,0 +1,347 @@
+{
+ "id": "I-04",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Kaddish responses: Amen, Yehei shmei raba, Brich hu",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אָמֵן",
+   "en": "amen",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "amen",
+    "sephardi": "amen",
+    "ashkenazi": "omein"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hebf7495d"
+   }
+  },
+  {
+   "he": "שְׁמֵהּ רַבָּא",
+   "en": "his great name (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shemeh raba",
+    "sephardi": "shemeh raba",
+    "ashkenazi": "shemeih rabo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁמֵהּ",
+     "רַבָּא"
+    ]
+   }
+  },
+  {
+   "he": "בְּעָלְמָא",
+   "en": "in the world (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "be'alema",
+    "sephardi": "be'alema",
+    "ashkenazi": "be'olemo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּעָלְמָא"
+    ]
+   }
+  },
+  {
+   "he": "יִשְׂרָאֵל",
+   "en": "Israel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yisra'el",
+    "sephardi": "yisra'el",
+    "ashkenazi": "yisro'eil"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p41545921"
+   }
+  },
+  {
+   "he": "וְאִמְרוּ אָמֵן",
+   "en": "and say: Amen",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ve'imru amen",
+    "sephardi": "ve'imru amen",
+    "ashkenazi": "ve'imru omein"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְאִמְרוּ",
+     "אָמֵן"
+    ]
+   }
+  },
+  {
+   "he": "מְבָרַךְ",
+   "en": "blessed (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mevarakh",
+    "sephardi": "mevarakh",
+    "ashkenazi": "mevorakh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "מְבָרַךְ"
+    ]
+   }
+  },
+  {
+   "he": "בְּרִיךְ הוּא",
+   "en": "blessed is he (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "berikh hu",
+    "sephardi": "berikh hu",
+    "ashkenazi": "berikh hu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּרִיךְ",
+     "הוּא"
+    ]
+   }
+  },
+  {
+   "he": "שְׁלָמָא רַבָּא",
+   "en": "great peace (Aramaic)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shelama raba",
+    "sephardi": "shelama raba",
+    "ashkenazi": "shelomo rabo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁלָמָא",
+     "רַבָּא"
+    ]
+   }
+  },
+  {
+   "he": "עוֹשֶׂה שָׁלוֹם",
+   "en": "who makes peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "oseh shalom",
+    "sephardi": "oseh shalom",
+    "ashkenazi": "oseh sholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עוֹשֶׂה",
+     "שָׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "עָלֵינוּ",
+   "en": "it is upon us",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "aleinu",
+    "sephardi": "aleinu",
+    "ashkenazi": "oleinu"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p52c330da"
+   }
+  }
+ ],
+ "prayerLines": [
+  "kaddish-1",
+  "oseh-shalom"
+ ],
+ "goals": [
+  "Answer Amen at each 'v'imru amen'",
+  "Say the big response 'Yehei shmei raba...' from memory",
+  "Answer 'Brich hu' after 'shmei d'kudsha'"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-01"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-04-e01",
+   "type": "respond",
+   "cue": "The mourner begins: 'Yitgadal v'yitkadash shmei raba'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "יִתְגַּדַּל וְיִתְקַדַּשׁ שְׁמֵהּ רַבָּא",
+    "en": "Magnified and sanctified be his great name."
+   }
+  },
+  {
+   "id": "I-04-e02",
+   "type": "respond",
+   "cue": "The first paragraph ends 'ba'agala uvizman kariv, v'imru'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "וְאִמְרוּ אָמֵן",
+    "en": "and say: Amen"
+   }
+  },
+  {
+   "id": "I-04-e03",
+   "type": "respond",
+   "cue": "The congregation's big response, said aloud together.",
+   "answer": {
+    "he": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא",
+    "en": "May his great name be blessed for ever and for all eternities."
+   }
+  },
+  {
+   "id": "I-04-e04",
+   "type": "order",
+   "he": "יְהֵא שְׁמֵהּ רַבָּא מְבָרַךְ לְעָלַם וּלְעָלְמֵי עָלְמַיָּא",
+   "en": "May his great name be blessed for ever and for all eternities."
+  },
+  {
+   "id": "I-04-e05",
+   "type": "fade",
+   "line": "kaddish-1",
+   "en": "May his great name be blessed for ever and for all eternities.",
+   "lineIndex": 3
+  },
+  {
+   "id": "I-04-e06",
+   "type": "respond",
+   "cue": "After the list of praises the mourner says 'shmei d'kudsha'. Answer.",
+   "answer": {
+    "he": "בְּרִיךְ הוּא",
+    "en": "Blessed is he."
+   },
+   "prompt": {
+    "he": "שְׁמֵהּ דְקוּדְשָׁא בְּרִיךְ הוּא",
+    "en": "the name of the Holy One, blessed is he"
+   }
+  },
+  {
+   "id": "I-04-e07",
+   "type": "spot",
+   "line": "kaddish-1",
+   "target": "בְּרִיךְ",
+   "en": "blessed (Aramaic)",
+   "lineIndex": 4
+  },
+  {
+   "id": "I-04-e08",
+   "type": "respond",
+   "cue": "'...da'amiran b'alma, v'imru'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   }
+  },
+  {
+   "id": "I-04-e09",
+   "type": "respond",
+   "cue": "'Yehei shlama raba min shmaya... v'imru'. Answer.",
+   "answer": {
+    "he": "אָמֵן",
+    "en": "Amen"
+   },
+   "prompt": {
+    "he": "יְהֵא שְׁלָמָא רַבָּא מִן־שְׁמַיָּא וְחַיִּים עָלֵינוּ וְעַל־כָּל־יִשְׂרָאֵל וְאִמְרוּ אָמֵן",
+    "en": "May there be great peace from heaven, and life, for us and for all Israel; and say: Amen."
+   }
+  },
+  {
+   "id": "I-04-e10",
+   "type": "fade",
+   "line": "oseh-shalom",
+   "en": "He who makes peace in his heights, may he make peace for us and for all Israel; and say: Amen."
+  },
+  {
+   "id": "I-04-e11",
+   "type": "order",
+   "he": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ",
+   "en": "He who makes peace in his heights, may he make peace for us"
+  },
+  {
+   "id": "I-04-e12",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "שְׁמֵהּ רַבָּא",
+     "en": "his great name"
+    },
+    {
+     "he": "בְּעָלְמָא",
+     "en": "in the world"
+    },
+    {
+     "he": "שְׁלָמָא רַבָּא",
+     "en": "great peace"
+    },
+    {
+     "he": "בְּרִיךְ הוּא",
+     "en": "blessed is he"
+    }
+   ]
+  },
+  {
+   "id": "I-04-e13",
+   "type": "produce",
+   "en": "and say: Amen",
+   "options": [
+    "וְאִמְרוּ אָמֵן",
+    "בְּרִיךְ הוּא",
+    "אָמֵן אָמֵן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-04-e14",
+   "type": "recall",
+   "he": "עָלֵינוּ",
+   "en": "upon us"
+  },
+  {
+   "id": "I-04-e15",
+   "type": "recall",
+   "he": "מְבָרַךְ",
+   "en": "blessed (Aramaic)"
+  }
+ ],
+ "note": "The Kaddish is Aramaic except its last line. The registry text is Nusach Ashkenaz and omits the Ten Days of Repentance insertion; Sephardi texts add 'v'yatzmach purkanei' which is not in the corpus."
+}

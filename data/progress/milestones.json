@@ -1,0 +1,52 @@
+{
+  "schema": "alef-progress-milestones/1",
+  "status": "draft-needs-expert-review",
+  "note": "Milestones are Aleph's own, derived from what the app can measure (lessons, tracing, SRS cards, Spot It, checkpoints, decodability of registry texts). They are not an external standard. Kinds are resolved by src/progress/model.js evaluateMilestone().",
+  "settings": {
+    "matureStabilityDays": 21,
+    "vocabBandStartedMin": 10,
+    "spotItMinTrials": 10,
+    "weakSpotsMax": 6,
+    "defaultGoal": { "kind": "cards", "target": 10 },
+    "goalChoices": [5, 10, 20, 40]
+  },
+  "paths": {
+    "read": {
+      "title": "Read the prayer book and Torah",
+      "milestones": [
+        { "id": "rd-words", "kind": "decodeWords", "words": ["שַׁבָּת", "שָׁלוֹם"], "label": "Read Shabbat and Shalom yourself", "href": "#/learn" },
+        { "id": "rd-l9", "kind": "letters", "count": 9, "label": "Know your first 9 letters", "href": "#/learn" },
+        { "id": "rd-cp1", "kind": "checkpoint", "stage": 1, "label": "Pass look-alike checkpoint 1", "href": "#/checkpoint" },
+        { "id": "rd-bless1", "kind": "decode", "entries": ["bless-priestly-1"], "label": "Decode the first line of the Priestly Blessing", "href": "#/read/bless-priestly-1" },
+        { "id": "rd-l18", "kind": "letters", "count": 18, "label": "Know 18 letters", "href": "#/learn" },
+        { "id": "rd-cp2", "kind": "checkpoint", "stage": 2, "label": "Pass look-alike checkpoint 2", "href": "#/checkpoint" },
+        { "id": "rd-shema1", "kind": "decode", "entries": ["shema-1"], "label": "Decode the first line of the Shema", "href": "#/read/shema-1" },
+        { "id": "rd-l27", "kind": "letters", "count": 27, "label": "Know all 27 letter shapes (finals included)", "href": "#/learn" },
+        { "id": "rd-cp3", "kind": "checkpoint", "stage": 3, "label": "Pass look-alike checkpoint 3", "href": "#/checkpoint" },
+        { "id": "rd-s15", "kind": "signs", "count": 15, "label": "Know all 15 vowel and dot signs", "href": "#/learn" },
+        { "id": "rd-bless3", "kind": "decode", "entries": ["bless-priestly-1", "bless-priestly-2", "bless-priestly-3"], "label": "Decode the whole Priestly Blessing", "href": "#/read/bless-priestly-1" },
+        { "id": "rd-spot", "kind": "spotit", "accuracy": 0.85, "label": "Spot It: at least 85% clean rounds", "href": "#/spotit/bet" },
+        { "id": "rd-mature", "kind": "srsMature", "count": 30, "label": "30 review cards well settled (mature)", "href": "#/learn?review=1" },
+        { "id": "rd-basic", "kind": "decode", "entries": ["shema-1", "vahavta-full", "torah-bless-1", "modeh-ani-1", "mah-tovu-1", "kiddush-wine-1"], "label": "Decode the basic prayers (Shema through Kiddush)", "href": "#/read" },
+        { "id": "rd-r41", "kind": "lessonsThrough", "track": "read", "through": "r41", "label": "Finish the lessons through the basic prayers", "href": "#/learn" }
+      ]
+    },
+    "israel": {
+      "title": "Get by in Israel",
+      "milestones": [
+        { "id": "il-3", "kind": "lessonsThrough", "track": "israel", "through": "il03", "label": "Greetings, fillers and introducing yourself", "href": "#/learn" },
+        { "id": "il-5", "kind": "lessonsThrough", "track": "israel", "through": "il05", "label": "Numbers and shekel prices", "href": "#/learn" },
+        { "id": "il-lw", "kind": "loanwords", "count": 10, "label": "Mark 10 loanwords you already read", "href": "#/loanwords" },
+        { "id": "il-9", "kind": "lessonsThrough", "track": "israel", "through": "il09", "label": "Cafe and shop", "href": "#/learn" },
+        { "id": "il-12", "kind": "lessonsThrough", "track": "israel", "through": "il12", "label": "Getting around, days and dates", "href": "#/learn" },
+        { "id": "il-v500", "kind": "vocabBand", "band": 500, "started": 50, "label": "Start 50 words from the first 500", "href": "#/vocab" },
+        { "id": "il-15", "kind": "lessonsThrough", "track": "israel", "through": "il15", "label": "Small talk, family, weather", "href": "#/learn" },
+        { "id": "il-ph", "kind": "phrases", "count": 10, "label": "Read 10 phrasebook phrases yourself (needs the alphabet)", "href": "#/read" },
+        { "id": "il-mature", "kind": "srsMature", "count": 30, "label": "30 review cards well settled (mature)", "href": "#/learn?review=1" },
+        { "id": "il-20", "kind": "lessonsThrough", "track": "israel", "through": "il20", "label": "Present, past and future", "href": "#/learn" },
+        { "id": "il-v1000", "kind": "vocabBand", "band": 1000, "started": 50, "label": "Start 50 words from 501 to 1,000", "href": "#/vocab" },
+        { "id": "il-24", "kind": "lessonsThrough", "track": "israel", "through": "il24", "label": "Capstone conversation", "href": "#/learn" }
+      ]
+    }
+  }
+}

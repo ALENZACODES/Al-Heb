@@ -1,0 +1,2326 @@
+{
+  "batch": 2,
+  "short": false,
+  "count": 100,
+  "status": "DRAFT, not reviewed",
+  "files": [
+    {
+      "file": "ayin-k3.svg",
+      "phase": "A",
+      "item": "ayin",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "ayin — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "ayin-k4.svg",
+      "phase": "A",
+      "item": "ayin",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "ayin — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "ayin-k5.svg",
+      "phase": "A",
+      "item": "ayin",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "ayin — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "ayin-k6.svg",
+      "phase": "A",
+      "item": "ayin",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "ayin — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "ayin-k7.svg",
+      "phase": "A",
+      "item": "ayin",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "ayin — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k1.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k2.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k3.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k4.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k5.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k6.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "pe-k7.svg",
+      "phase": "A",
+      "item": "pe",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "pe — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k1.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k2.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k3.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k4.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k5.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k6.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tsadi-k7.svg",
+      "phase": "A",
+      "item": "tsadi",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tsadi — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k1.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k2.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k3.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k4.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k5.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k6.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "qof-k7.svg",
+      "phase": "A",
+      "item": "qof",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "qof — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k1.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k2.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k3.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k4.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k5.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k6.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "gimel-k7.svg",
+      "phase": "A",
+      "item": "gimel",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "gimel — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k1.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k2.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k3.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k4.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k5.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k6.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "zayin-k7.svg",
+      "phase": "A",
+      "item": "zayin",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 11,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "zayin — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k1.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k2.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k3.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k4.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k5.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k6.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "chet-k7.svg",
+      "phase": "A",
+      "item": "chet",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "chet — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k1.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k2.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k3.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k4.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k5.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k6.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "tet-k7.svg",
+      "phase": "A",
+      "item": "tet",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tet — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k1.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k2.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k3.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k4.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k5.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k6.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-kaf-k7.svg",
+      "phase": "A",
+      "item": "final-kaf",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "final kaf — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k1.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k2.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k3.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k4.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k5.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k6.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-mem-k7.svg",
+      "phase": "A",
+      "item": "final-mem",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        98,
+        49,
+        49
+      ],
+      "title": "final mem — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k1.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k2.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k3.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k4.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k5.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k6.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-nun-k7.svg",
+      "phase": "A",
+      "item": "final-nun",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final nun — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k1.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k2.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k3.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k4.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k5.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k6.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-pe-k7.svg",
+      "phase": "A",
+      "item": "final-pe",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final pe — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k1.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 1",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k2.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 2",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k3.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 3,
+      "time_ms": 800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 3",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k4.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 4,
+      "time_ms": 1300,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 4",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k5.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 5,
+      "time_ms": 1800,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 5",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k6.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 6,
+      "time_ms": 2200,
+      "easing": "ease-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 6",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "final-tsadi-k7.svg",
+      "phase": "A",
+      "item": "final-tsadi",
+      "pose": 7,
+      "time_ms": 2600,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "final tsadi — pose 7",
+      "doubt": "Letter-to-picture morph and letter contours need native-reader and designer review."
+    },
+    {
+      "file": "patach-k1.svg",
+      "phase": "B",
+      "item": "patach",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "patach — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "patach-k2.svg",
+      "phase": "B",
+      "item": "patach",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "patach — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "patach-k3.svg",
+      "phase": "B",
+      "item": "patach",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "patach — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "patach-k4.svg",
+      "phase": "B",
+      "item": "patach",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "patach — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "patach-k5.svg",
+      "phase": "B",
+      "item": "patach",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "patach — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kamatz-k1.svg",
+      "phase": "B",
+      "item": "kamatz",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kamatz — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kamatz-k2.svg",
+      "phase": "B",
+      "item": "kamatz",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kamatz — pose 2",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kamatz-k3.svg",
+      "phase": "B",
+      "item": "kamatz",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kamatz — pose 3",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kamatz-k4.svg",
+      "phase": "B",
+      "item": "kamatz",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kamatz — pose 4",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "kamatz-k5.svg",
+      "phase": "B",
+      "item": "kamatz",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "kamatz — pose 5",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    },
+    {
+      "file": "tzere-k1.svg",
+      "phase": "B",
+      "item": "tzere",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tzere — pose 1",
+      "doubt": "Schematic mouth is not articulation instruction; mark placement and context need native review."
+    }
+  ],
+  "doubts": [
+    {
+      "file": "ayin-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "ayin-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "ayin-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "ayin-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "ayin-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "pe-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tsadi-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "qof-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "gimel-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "zayin-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "chet-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tet-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-kaf-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-mem-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-nun-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-pe-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k1.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k2.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k3.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k4.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k5.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k6.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "final-tsadi-k7.svg",
+      "what": "Letter-to-picture morph and letter contours need native-reader and designer review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "patach-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "patach-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "patach-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "patach-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "patach-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kamatz-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kamatz-k2.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kamatz-k3.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kamatz-k4.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "kamatz-k5.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tzere-k1.svg",
+      "what": "Schematic mouth is not articulation instruction; mark placement and context need native review.",
+      "tag": "?? CHECK"
+    }
+  ]
+}

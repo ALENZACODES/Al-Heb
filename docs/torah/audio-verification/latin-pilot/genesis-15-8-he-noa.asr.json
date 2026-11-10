@@ -1,0 +1,26 @@
+{
+  "id": "genesis-15-8-he-noa",
+  "fingerprint": "8e65d9a81bbf12a439155eb2a26c14514e56ac2d69741ae86dc60043ae87a4ac",
+  "audioSha256": "70b519718216782c9593f4df87e3b9fad857ee88c3dfe26a507959d2f1e16c3d",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "ויאמר אדני אלוהים במה אדע כי אירשנה",
+  "speechInput": "Vayomar Adonai Elohim, bamah eda ki irashena?",
+  "transcript": "ויאמר אדוני אלוהים במה עדה כאירה שנה?",
+  "wordEdits": 4,
+  "referenceWords": 7,
+  "wer": 0.5714285714285714,
+  "asrExact": false,
+  "orthographicWordEdits": 4,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

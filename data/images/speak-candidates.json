@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "bucket": "candidate",
+  "freeze_cast": true,
+  "note": "Overnight DECISIONS \u2014 SPEAK_04/05/08 only. Not approved.",
+  "count": 3,
+  "images": [
+    {
+      "id": "SPEAK_04_table_shabbat",
+      "filename": "SPEAK_04_table_shabbat.png",
+      "path": "assets/speak-candidates/SPEAK_04_table_shabbat.png",
+      "bucket": "candidate",
+      "approved": false,
+      "status": "candidate_only",
+      "screens": [
+        "SpeakTable",
+        "SpeakStreet",
+        "GamesPhraseEcho"
+      ]
+    },
+    {
+      "id": "SPEAK_05_table_welcome",
+      "filename": "SPEAK_05_table_welcome.png",
+      "path": "assets/speak-candidates/SPEAK_05_table_welcome.png",
+      "bucket": "candidate",
+      "approved": false,
+      "status": "candidate_only",
+      "screens": [
+        "SpeakTable",
+        "SpeakStreet",
+        "GamesPhraseEcho"
+      ]
+    },
+    {
+      "id": "SPEAK_08_street_taxi",
+      "filename": "SPEAK_08_street_taxi.png",
+      "path": "assets/speak-candidates/SPEAK_08_street_taxi.png",
+      "bucket": "candidate",
+      "approved": false,
+      "status": "candidate_only",
+      "screens": [
+        "SpeakTable",
+        "SpeakStreet",
+        "GamesPhraseEcho"
+      ]
+    }
+  ]
+}

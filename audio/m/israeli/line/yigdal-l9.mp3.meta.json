@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃",
+ "inputSha256": "0c65e986ea18b0f843db459cb60e9b69594a6f648a3fc4d5f42f813ab8058953",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/aleinu-1-w29.mp3",
+  "audio/m/israeli/word/yigdal-w70.mp3",
+  "audio/m/israeli/word/avot-1-w13.mp3",
+  "audio/m/israeli/word/adon-olam-1-w71.mp3",
+  "audio/m/israeli/word/yigdal-w73.mp3",
+  "audio/m/israeli/word/yigdal-w74.mp3",
+  "audio/m/israeli/word/yigdal-w75.mp3",
+  "audio/m/israeli/word/yigdal-w76.mp3"
+ ]
+}

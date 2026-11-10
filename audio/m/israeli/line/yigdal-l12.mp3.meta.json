@@ -1,0 +1,24 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃",
+ "inputSha256": "c60d925c84f09b7d1534dbc4fff77aa380fab75f980490e6773ce2fae16a7dc8",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/yigdal-w92.mp3",
+  "audio/m/israeli/word/yigdal-w93.mp3",
+  "audio/m/israeli/word/yigdal-w94.mp3",
+  "audio/m/israeli/word/yigdal-w95.mp3",
+  "audio/m/israeli/word/yigdal-w96.mp3",
+  "audio/m/israeli/word/yigdal-w97.mp3",
+  "audio/m/israeli/word/h0849ff56.mp3",
+  "audio/m/israeli/word/yigdal-w99.mp3"
+ ]
+}

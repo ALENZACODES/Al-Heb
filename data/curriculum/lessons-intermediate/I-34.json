@@ -1,0 +1,356 @@
+{
+ "id": "I-34",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Before and after a journey: Hagomel, peace and the vocabulary of the road",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "הַגּוֹמֵל",
+   "en": "who bestows good",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "hagomel",
+    "sephardi": "hagomel",
+    "ashkenazi": "hagomeil"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "הַגּוֹמֵל"
+    ]
+   }
+  },
+  {
+   "he": "לְחַיָּבִים טוֹבוֹת",
+   "en": "good things on the undeserving",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lechayavim tovot",
+    "sephardi": "lechayavim tovot",
+    "ashkenazi": "lechayovim tovos"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְחַיָּבִים",
+     "טוֹבוֹת"
+    ]
+   }
+  },
+  {
+   "he": "שֶׁגְּמָלַנִי כָּל טוֹב",
+   "en": "who has bestowed every good on me",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shegemalani kol tov",
+    "sephardi": "shegemalani kol tov",
+    "ashkenazi": "shegemolani kol tov"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁגְּמָלַנִי",
+     "כָּל",
+     "טוֹב"
+    ]
+   }
+  },
+  {
+   "he": "דֶּרֶךְ",
+   "en": "road, way",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "derekh",
+    "sephardi": "derekh",
+    "ashkenazi": "derekh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5ae20314"
+   }
+  },
+  {
+   "he": "נְסִיעָה",
+   "en": "journey, ride",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nesi'ah",
+    "sephardi": "nesi'ah",
+    "ashkenazi": "nesi'oh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h2cdd3e7d"
+   }
+  },
+  {
+   "he": "לְשָׁלוֹם",
+   "en": "to peace, in peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "leshalom",
+    "sephardi": "leshalom",
+    "ashkenazi": "lesholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לְשָׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "בַּשָּׁלוֹם",
+   "en": "in peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bashalom",
+    "sephardi": "bashalom",
+    "ashkenazi": "basholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בַּשָּׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "עֹשֶׂה שָׁלוֹם",
+   "en": "who makes peace",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "oseh shalom",
+    "sephardi": "oseh shalom",
+    "ashkenazi": "oseh sholom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "עֹשֶׂה",
+     "שָׁלוֹם"
+    ]
+   }
+  },
+  {
+   "he": "יִשָּׂא יְהוָה פָּנָיו",
+   "en": "may the LORD lift his face",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "yisa adonai panav",
+    "sephardi": "yisa adonai panav",
+    "ashkenazi": "yiso adonoy ponov"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "יִשָּׂא",
+     "יְהוָה",
+     "פָּנָיו"
+    ]
+   }
+  },
+  {
+   "he": "כֵּן יְהִי רָצוֹן",
+   "en": "may it be so",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ken yehi ratzon",
+    "sephardi": "ken yehi ratzon",
+    "ashkenazi": "kein yehi rotzon"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "כֵּן",
+     "יְהִי",
+     "רָצוֹן"
+    ]
+   }
+  },
+  {
+   "he": "שֶׁהֶחֱיָינוּ",
+   "en": "who has kept us alive",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shehecheyainu",
+    "sephardi": "shehecheyainu",
+    "ashkenazi": "shehecheyoynu"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שֶׁהֶחֱיָינוּ"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "hagomel",
+  "oseh-shalom",
+  "bless-priestly-3",
+  "shehecheyanu"
+ ],
+ "goals": [
+  "Say Hagomel after a safe journey and answer the congregation's reply",
+  "Wish a traveller peace in Hebrew",
+  "Know that Tefillat HaDerekh is not yet in the corpus"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-10"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-34-e01",
+   "type": "fade",
+   "line": "hagomel",
+   "en": "Blessed are you... who bestows good things on the undeserving, and has bestowed every good on me."
+  },
+  {
+   "id": "I-34-e02",
+   "type": "respond",
+   "cue": "A traveller says Hagomel. Answer with the congregation's line.",
+   "answer": {
+    "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב סֶלָה",
+    "en": "May the one who bestowed good on you bestow every good on you. Selah."
+   },
+   "prompt": {
+    "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת שֶׁגְּמָלַנִי כָּל טוֹב",
+    "en": "who bestows good things on the undeserving, and has bestowed every good on me"
+   }
+  },
+  {
+   "id": "I-34-e03",
+   "type": "order",
+   "he": "הַגּוֹמֵל לְחַיָּבִים טוֹבוֹת",
+   "en": "who bestows good things on the undeserving"
+  },
+  {
+   "id": "I-34-e04",
+   "type": "order",
+   "he": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל־טוֹב",
+   "en": "May the one who bestowed good on you bestow on you every good"
+  },
+  {
+   "id": "I-34-e05",
+   "type": "spot",
+   "line": "hagomel",
+   "target": "סֶלָה",
+   "en": "selah",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-34-e06",
+   "type": "produce",
+   "en": "a journey, a ride",
+   "options": [
+    "נְסִיעָה",
+    "דֶּרֶךְ",
+    "תַּחֲנָה"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-34-e07",
+   "type": "produce",
+   "en": "in peace",
+   "options": [
+    "בַּשָּׁלוֹם",
+    "עֹשֶׂה שָׁלוֹם",
+    "שַׁבָּת שָׁלוֹם"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-34-e08",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "נְסִיעָה טוֹבָה!",
+     "en": "Have a good journey!"
+    },
+    {
+     "speaker": "b",
+     "he": "תּוֹדָה, לְהִתְרָאוֹת!",
+     "en": "Thanks, see you!"
+    }
+   ],
+   "task": "Wish a friend a good journey and answer as the traveller."
+  },
+  {
+   "id": "I-34-e09",
+   "type": "fade",
+   "line": "oseh-shalom",
+   "en": "He who makes peace in his heights, may he make peace for us and for all Israel."
+  },
+  {
+   "id": "I-34-e10",
+   "type": "fade",
+   "line": "bless-priestly-3",
+   "en": "May the LORD lift his face to you and give you peace."
+  },
+  {
+   "id": "I-34-e11",
+   "type": "spot",
+   "line": "bless-priestly-3",
+   "target": "שָׁלוֹם",
+   "en": "peace"
+  },
+  {
+   "id": "I-34-e12",
+   "type": "respond",
+   "cue": "A friend says 'may it be so'. Reply with the wish.",
+   "answer": {
+    "he": "כֵּן יְהִי רָצוֹן",
+    "en": "So may it be his will"
+   }
+  },
+  {
+   "id": "I-34-e13",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "הַגּוֹמֵל",
+     "en": "who bestows good"
+    },
+    {
+     "he": "דֶּרֶךְ",
+     "en": "road, way"
+    },
+    {
+     "he": "לְשָׁלוֹם",
+     "en": "in peace"
+    },
+    {
+     "he": "כֵּן יְהִי רָצוֹן",
+     "en": "may it be so"
+    }
+   ]
+  },
+  {
+   "id": "I-34-e14",
+   "type": "recall",
+   "he": "נְסִיעָה",
+   "en": "journey, ride"
+  }
+ ],
+ "note": "Tefillat HaDerekh (the traveller's prayer) is not in any source file and is not a registry entry; list it as a gap (g-tefilat-haderech, proposed). The phrase 'nesiah tovah' is composed from two vocabulary tokens and is not an attested phrasebook line; a native speaker should check it. Hagomel in the registry is the original text; some communities change the response."
+}

@@ -1,0 +1,546 @@
+{
+ "schema": "alef-letter-videos/1",
+ "note": "Made by tools/video/letter_videos.py from the letter strokes and the recorded letter clips.",
+ "videos": [
+  {
+   "id": "alef",
+   "name": "Aleph",
+   "nameHe": "אָלֶף",
+   "he": "א",
+   "voice": "f",
+   "seconds": 8.1,
+   "src": "assets/videos/letters/f/alef.mp4",
+   "poster": "assets/videos/letters/f/alef.jpg"
+  },
+  {
+   "id": "bet",
+   "name": "Bet",
+   "nameHe": "בֵּית",
+   "he": "ב",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/bet.mp4",
+   "poster": "assets/videos/letters/f/bet.jpg"
+  },
+  {
+   "id": "gimel",
+   "name": "Gimel",
+   "nameHe": "גִּימֶל",
+   "he": "ג",
+   "voice": "f",
+   "seconds": 7.1,
+   "src": "assets/videos/letters/f/gimel.mp4",
+   "poster": "assets/videos/letters/f/gimel.jpg"
+  },
+  {
+   "id": "dalet",
+   "name": "Dalet",
+   "nameHe": "דָּלֶת",
+   "he": "ד",
+   "voice": "f",
+   "seconds": 7.1,
+   "src": "assets/videos/letters/f/dalet.mp4",
+   "poster": "assets/videos/letters/f/dalet.jpg"
+  },
+  {
+   "id": "he",
+   "name": "He",
+   "nameHe": "הֵא",
+   "he": "ה",
+   "voice": "f",
+   "seconds": 6.8,
+   "src": "assets/videos/letters/f/he.mp4",
+   "poster": "assets/videos/letters/f/he.jpg"
+  },
+  {
+   "id": "vav",
+   "name": "Vav",
+   "nameHe": "וָו",
+   "he": "ו",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/vav.mp4",
+   "poster": "assets/videos/letters/f/vav.jpg"
+  },
+  {
+   "id": "zayin",
+   "name": "Zayin",
+   "nameHe": "זַיִן",
+   "he": "ז",
+   "voice": "f",
+   "seconds": 7.1,
+   "src": "assets/videos/letters/f/zayin.mp4",
+   "poster": "assets/videos/letters/f/zayin.jpg"
+  },
+  {
+   "id": "chet",
+   "name": "Chet",
+   "nameHe": "חֵית",
+   "he": "ח",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/chet.mp4",
+   "poster": "assets/videos/letters/f/chet.jpg"
+  },
+  {
+   "id": "tet",
+   "name": "Tet",
+   "nameHe": "טֵית",
+   "he": "ט",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/tet.mp4",
+   "poster": "assets/videos/letters/f/tet.jpg"
+  },
+  {
+   "id": "yod",
+   "name": "Yod",
+   "nameHe": "יוֹד",
+   "he": "י",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/yod.mp4",
+   "poster": "assets/videos/letters/f/yod.jpg"
+  },
+  {
+   "id": "kaf",
+   "name": "Kaf",
+   "nameHe": "כַּף",
+   "he": "כ",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/kaf.mp4",
+   "poster": "assets/videos/letters/f/kaf.jpg"
+  },
+  {
+   "id": "lamed",
+   "name": "Lamed",
+   "nameHe": "לָמֶד",
+   "he": "ל",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/lamed.mp4",
+   "poster": "assets/videos/letters/f/lamed.jpg"
+  },
+  {
+   "id": "mem",
+   "name": "Mem",
+   "nameHe": "מֵם",
+   "he": "מ",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/mem.mp4",
+   "poster": "assets/videos/letters/f/mem.jpg"
+  },
+  {
+   "id": "nun",
+   "name": "Nun",
+   "nameHe": "נוּן",
+   "he": "נ",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/nun.mp4",
+   "poster": "assets/videos/letters/f/nun.jpg"
+  },
+  {
+   "id": "samekh",
+   "name": "Samekh",
+   "nameHe": "סָמֶךְ",
+   "he": "ס",
+   "voice": "f",
+   "seconds": 7.2,
+   "src": "assets/videos/letters/f/samekh.mp4",
+   "poster": "assets/videos/letters/f/samekh.jpg"
+  },
+  {
+   "id": "ayin",
+   "name": "Ayin",
+   "nameHe": "עַיִן",
+   "he": "ע",
+   "voice": "f",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/f/ayin.mp4",
+   "poster": "assets/videos/letters/f/ayin.jpg"
+  },
+  {
+   "id": "pe",
+   "name": "Pe",
+   "nameHe": "פֵא",
+   "he": "פ",
+   "voice": "f",
+   "seconds": 6.6,
+   "src": "assets/videos/letters/f/pe.mp4",
+   "poster": "assets/videos/letters/f/pe.jpg"
+  },
+  {
+   "id": "tsadi",
+   "name": "Tsadi",
+   "nameHe": "צָדִי",
+   "he": "צ",
+   "voice": "f",
+   "seconds": 7.1,
+   "src": "assets/videos/letters/f/tsadi.mp4",
+   "poster": "assets/videos/letters/f/tsadi.jpg"
+  },
+  {
+   "id": "qof",
+   "name": "Qof",
+   "nameHe": "קוֹף",
+   "he": "ק",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/qof.mp4",
+   "poster": "assets/videos/letters/f/qof.jpg"
+  },
+  {
+   "id": "resh",
+   "name": "Resh",
+   "nameHe": "רֵישׁ",
+   "he": "ר",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/resh.mp4",
+   "poster": "assets/videos/letters/f/resh.jpg"
+  },
+  {
+   "id": "shin",
+   "name": "Shin",
+   "nameHe": "שִׁין",
+   "he": "ש",
+   "voice": "f",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/f/shin.mp4",
+   "poster": "assets/videos/letters/f/shin.jpg"
+  },
+  {
+   "id": "tav",
+   "name": "Tav",
+   "nameHe": "תָּו",
+   "he": "ת",
+   "voice": "f",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/f/tav.mp4",
+   "poster": "assets/videos/letters/f/tav.jpg"
+  },
+  {
+   "id": "kaf-final",
+   "name": "Final Kaf",
+   "nameHe": "כַּף סוֹפִית",
+   "he": "ך",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/kaf-final.mp4",
+   "poster": "assets/videos/letters/f/kaf-final.jpg"
+  },
+  {
+   "id": "mem-final",
+   "name": "Final Mem",
+   "nameHe": "מֵם סוֹפִית",
+   "he": "ם",
+   "voice": "f",
+   "seconds": 7.4,
+   "src": "assets/videos/letters/f/mem-final.mp4",
+   "poster": "assets/videos/letters/f/mem-final.jpg"
+  },
+  {
+   "id": "nun-final",
+   "name": "Final Nun",
+   "nameHe": "נוּן סוֹפִית",
+   "he": "ן",
+   "voice": "f",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/f/nun-final.mp4",
+   "poster": "assets/videos/letters/f/nun-final.jpg"
+  },
+  {
+   "id": "pe-final",
+   "name": "Final Pe",
+   "nameHe": "פֵא סוֹפִית",
+   "he": "ף",
+   "voice": "f",
+   "seconds": 7.2,
+   "src": "assets/videos/letters/f/pe-final.mp4",
+   "poster": "assets/videos/letters/f/pe-final.jpg"
+  },
+  {
+   "id": "tsadi-final",
+   "name": "Final Tsadi",
+   "nameHe": "צָדִי סוֹפִית",
+   "he": "ץ",
+   "voice": "f",
+   "seconds": 7.5,
+   "src": "assets/videos/letters/f/tsadi-final.mp4",
+   "poster": "assets/videos/letters/f/tsadi-final.jpg"
+  },
+  {
+   "id": "alef",
+   "name": "Aleph",
+   "nameHe": "אָלֶף",
+   "he": "א",
+   "voice": "m",
+   "seconds": 7.9,
+   "src": "assets/videos/letters/m/alef.mp4",
+   "poster": "assets/videos/letters/m/alef.jpg"
+  },
+  {
+   "id": "bet",
+   "name": "Bet",
+   "nameHe": "בֵּית",
+   "he": "ב",
+   "voice": "m",
+   "seconds": 6.7,
+   "src": "assets/videos/letters/m/bet.mp4",
+   "poster": "assets/videos/letters/m/bet.jpg"
+  },
+  {
+   "id": "gimel",
+   "name": "Gimel",
+   "nameHe": "גִּימֶל",
+   "he": "ג",
+   "voice": "m",
+   "seconds": 6.7,
+   "src": "assets/videos/letters/m/gimel.mp4",
+   "poster": "assets/videos/letters/m/gimel.jpg"
+  },
+  {
+   "id": "dalet",
+   "name": "Dalet",
+   "nameHe": "דָּלֶת",
+   "he": "ד",
+   "voice": "m",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/m/dalet.mp4",
+   "poster": "assets/videos/letters/m/dalet.jpg"
+  },
+  {
+   "id": "he",
+   "name": "He",
+   "nameHe": "הֵא",
+   "he": "ה",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/he.mp4",
+   "poster": "assets/videos/letters/m/he.jpg"
+  },
+  {
+   "id": "vav",
+   "name": "Vav",
+   "nameHe": "וָו",
+   "he": "ו",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/vav.mp4",
+   "poster": "assets/videos/letters/m/vav.jpg"
+  },
+  {
+   "id": "zayin",
+   "name": "Zayin",
+   "nameHe": "זַיִן",
+   "he": "ז",
+   "voice": "m",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/m/zayin.mp4",
+   "poster": "assets/videos/letters/m/zayin.jpg"
+  },
+  {
+   "id": "chet",
+   "name": "Chet",
+   "nameHe": "חֵית",
+   "he": "ח",
+   "voice": "m",
+   "seconds": 6.8,
+   "src": "assets/videos/letters/m/chet.mp4",
+   "poster": "assets/videos/letters/m/chet.jpg"
+  },
+  {
+   "id": "tet",
+   "name": "Tet",
+   "nameHe": "טֵית",
+   "he": "ט",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/tet.mp4",
+   "poster": "assets/videos/letters/m/tet.jpg"
+  },
+  {
+   "id": "yod",
+   "name": "Yod",
+   "nameHe": "יוֹד",
+   "he": "י",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/yod.mp4",
+   "poster": "assets/videos/letters/m/yod.jpg"
+  },
+  {
+   "id": "kaf",
+   "name": "Kaf",
+   "nameHe": "כַּף",
+   "he": "כ",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/kaf.mp4",
+   "poster": "assets/videos/letters/m/kaf.jpg"
+  },
+  {
+   "id": "lamed",
+   "name": "Lamed",
+   "nameHe": "לָמֶד",
+   "he": "ל",
+   "voice": "m",
+   "seconds": 6.8,
+   "src": "assets/videos/letters/m/lamed.mp4",
+   "poster": "assets/videos/letters/m/lamed.jpg"
+  },
+  {
+   "id": "mem",
+   "name": "Mem",
+   "nameHe": "מֵם",
+   "he": "מ",
+   "voice": "m",
+   "seconds": 6.7,
+   "src": "assets/videos/letters/m/mem.mp4",
+   "poster": "assets/videos/letters/m/mem.jpg"
+  },
+  {
+   "id": "nun",
+   "name": "Nun",
+   "nameHe": "נוּן",
+   "he": "נ",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/nun.mp4",
+   "poster": "assets/videos/letters/m/nun.jpg"
+  },
+  {
+   "id": "samekh",
+   "name": "Samekh",
+   "nameHe": "סָמֶךְ",
+   "he": "ס",
+   "voice": "m",
+   "seconds": 7.0,
+   "src": "assets/videos/letters/m/samekh.mp4",
+   "poster": "assets/videos/letters/m/samekh.jpg"
+  },
+  {
+   "id": "ayin",
+   "name": "Ayin",
+   "nameHe": "עַיִן",
+   "he": "ע",
+   "voice": "m",
+   "seconds": 6.7,
+   "src": "assets/videos/letters/m/ayin.mp4",
+   "poster": "assets/videos/letters/m/ayin.jpg"
+  },
+  {
+   "id": "pe",
+   "name": "Pe",
+   "nameHe": "פֵא",
+   "he": "פ",
+   "voice": "m",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/m/pe.mp4",
+   "poster": "assets/videos/letters/m/pe.jpg"
+  },
+  {
+   "id": "tsadi",
+   "name": "Tsadi",
+   "nameHe": "צָדִי",
+   "he": "צ",
+   "voice": "m",
+   "seconds": 6.8,
+   "src": "assets/videos/letters/m/tsadi.mp4",
+   "poster": "assets/videos/letters/m/tsadi.jpg"
+  },
+  {
+   "id": "qof",
+   "name": "Qof",
+   "nameHe": "קוֹף",
+   "he": "ק",
+   "voice": "m",
+   "seconds": 6.8,
+   "src": "assets/videos/letters/m/qof.mp4",
+   "poster": "assets/videos/letters/m/qof.jpg"
+  },
+  {
+   "id": "resh",
+   "name": "Resh",
+   "nameHe": "רֵישׁ",
+   "he": "ר",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/resh.mp4",
+   "poster": "assets/videos/letters/m/resh.jpg"
+  },
+  {
+   "id": "shin",
+   "name": "Shin",
+   "nameHe": "שִׁין",
+   "he": "ש",
+   "voice": "m",
+   "seconds": 6.6,
+   "src": "assets/videos/letters/m/shin.mp4",
+   "poster": "assets/videos/letters/m/shin.jpg"
+  },
+  {
+   "id": "tav",
+   "name": "Tav",
+   "nameHe": "תָּו",
+   "he": "ת",
+   "voice": "m",
+   "seconds": 6.7,
+   "src": "assets/videos/letters/m/tav.mp4",
+   "poster": "assets/videos/letters/m/tav.jpg"
+  },
+  {
+   "id": "kaf-final",
+   "name": "Final Kaf",
+   "nameHe": "כַּף סוֹפִית",
+   "he": "ך",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/kaf-final.mp4",
+   "poster": "assets/videos/letters/m/kaf-final.jpg"
+  },
+  {
+   "id": "mem-final",
+   "name": "Final Mem",
+   "nameHe": "מֵם סוֹפִית",
+   "he": "ם",
+   "voice": "m",
+   "seconds": 7.2,
+   "src": "assets/videos/letters/m/mem-final.mp4",
+   "poster": "assets/videos/letters/m/mem-final.jpg"
+  },
+  {
+   "id": "nun-final",
+   "name": "Final Nun",
+   "nameHe": "נוּן סוֹפִית",
+   "he": "ן",
+   "voice": "m",
+   "seconds": 6.5,
+   "src": "assets/videos/letters/m/nun-final.mp4",
+   "poster": "assets/videos/letters/m/nun-final.jpg"
+  },
+  {
+   "id": "pe-final",
+   "name": "Final Pe",
+   "nameHe": "פֵא סוֹפִית",
+   "he": "ף",
+   "voice": "m",
+   "seconds": 6.9,
+   "src": "assets/videos/letters/m/pe-final.mp4",
+   "poster": "assets/videos/letters/m/pe-final.jpg"
+  },
+  {
+   "id": "tsadi-final",
+   "name": "Final Tsadi",
+   "nameHe": "צָדִי סוֹפִית",
+   "he": "ץ",
+   "voice": "m",
+   "seconds": 7.3,
+   "src": "assets/videos/letters/m/tsadi-final.mp4",
+   "poster": "assets/videos/letters/m/tsadi-final.jpg"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
+ "inputSha256": "80f2c4e6be5d349aee83fb82ec82c7efd0167405aefcadfa53446565875804c8",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ אֲדֹנָי צוּרִי וְגוֹאֲלִי׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/amidah-elohai-netzor-w48.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w49.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w50.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w51.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w52.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w16.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w54.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w56.mp3",
+  "audio/m/israeli/word/amidah-elohai-netzor-w57.mp3"
+ ]
+}

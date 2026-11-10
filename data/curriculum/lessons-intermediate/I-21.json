@@ -1,0 +1,371 @@
+{
+ "id": "I-21",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Bank: accounts, cash machines, exchanging money and signing",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "בַּנְק",
+   "en": "bank",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "bank"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hf19f0a88"
+   }
+  },
+  {
+   "he": "חֶשְׁבּוֹן",
+   "en": "account; bill",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "cheshbon"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h64706707"
+   }
+  },
+  {
+   "he": "כֶּסֶף",
+   "en": "money",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kesef"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h215beb3e"
+   }
+  },
+  {
+   "he": "כַּסְפּוֹמָט",
+   "en": "cash machine (ATM)",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kaspomat"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h36f204f4"
+   }
+  },
+  {
+   "he": "לִמְשֹׁךְ",
+   "en": "to withdraw",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "limshokh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h7efc375e#forms.infinitive"
+   }
+  },
+  {
+   "he": "לְהַחְלִיף",
+   "en": "to exchange",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lehachlif"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8f0ac707#forms.infinitive"
+   }
+  },
+  {
+   "he": "דּוֹלָר",
+   "en": "dollar",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "dolar"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h845d92fd"
+   }
+  },
+  {
+   "he": "שֶׁקֶל",
+   "en": "shekel",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shekel"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h90377d47"
+   }
+  },
+  {
+   "he": "כַּרְטִיס אַשְׁרַאי",
+   "en": "credit card",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kartis ashray"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p41740a5e"
+   }
+  },
+  {
+   "he": "חֲתִימָה",
+   "en": "signature",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "chatimah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hed321842"
+   }
+  },
+  {
+   "he": "הַלְוָאָה",
+   "en": "loan",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "halva'ah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h1844d777"
+   }
+  },
+  {
+   "he": "רִבִּית",
+   "en": "interest",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ribit"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h69e91f72"
+   }
+  },
+  {
+   "he": "פָּתוּחַ",
+   "en": "open",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "patuach"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "he6d29dfd"
+   }
+  },
+  {
+   "he": "סָגוּר",
+   "en": "closed",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "sagur"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h32f2e046"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask where a bank or cash machine is and when it closes",
+  "Say you want to open an account, withdraw or exchange money",
+  "Understand 'sign here' and ask about fees and interest"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-11"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-21-e01",
+   "type": "produce",
+   "en": "where is there a bank?",
+   "options": [
+    "אֵיפֹה יֵשׁ בַּנְק?",
+    "אֵיפֹה יֵשׁ כַּסְפּוֹמָט?",
+    "אֵיפֹה הַתַּחֲנָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-21-e02",
+   "type": "recall",
+   "he": "כַּסְפּוֹמָט",
+   "en": "cash machine (ATM)"
+  },
+  {
+   "id": "I-21-e03",
+   "type": "gender",
+   "m": "אֲנִי רוֹצֶה לִפְתֹּחַ חֶשְׁבּוֹן",
+   "f": "אֲנִי רוֹצָה לִפְתֹּחַ חֶשְׁבּוֹן",
+   "en": "I want to open an account"
+  },
+  {
+   "id": "I-21-e04",
+   "type": "order",
+   "he": "אֲנִי רוֹצֶה לִמְשֹׁךְ כֶּסֶף",
+   "en": "I want to withdraw money"
+  },
+  {
+   "id": "I-21-e05",
+   "type": "produce",
+   "en": "to exchange dollars",
+   "options": [
+    "לְהַחְלִיף דּוֹלָרִים",
+    "לִמְשֹׁךְ כֶּסֶף",
+    "לִפְתֹּחַ חֶשְׁבּוֹן"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-21-e06",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "שָׁלוֹם, אֲנִי רוֹצֶה לְהַחְלִיף דּוֹלָרִים.",
+     "en": "Hello, I want to exchange dollars."
+    },
+    {
+     "speaker": "b",
+     "he": "כַּמָּה?",
+     "en": "How much?"
+    },
+    {
+     "speaker": "a",
+     "he": "מֵאָה דּוֹלָר.",
+     "en": "A hundred dollars."
+    },
+    {
+     "speaker": "b",
+     "he": "חֲתִימָה",
+     "en": "The passport, please. Signature here."
+    }
+   ],
+   "task": "Say the customer's lines."
+  },
+  {
+   "id": "I-21-e07",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "חֶשְׁבּוֹן",
+     "en": "account"
+    },
+    {
+     "he": "כֶּסֶף",
+     "en": "money"
+    },
+    {
+     "he": "חֲתִימָה",
+     "en": "signature"
+    },
+    {
+     "he": "הַלְוָאָה",
+     "en": "loan"
+    },
+    {
+     "he": "רִבִּית",
+     "en": "interest"
+    }
+   ]
+  },
+  {
+   "id": "I-21-e08",
+   "type": "produce",
+   "en": "credit card",
+   "options": [
+    "כַּרְטִיס אַשְׁרַאי",
+    "מְזֻמָּן",
+    "כַּסְפּוֹמָט"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-21-e09",
+   "type": "respond",
+   "cue": "The clerk points at the form. Ask whether to sign here.",
+   "answer": {
+    "he": "חֲתִימָה כָּאן?",
+    "en": "Signature here?"
+   }
+  },
+  {
+   "id": "I-21-e10",
+   "type": "produce",
+   "en": "when do you close?",
+   "options": [
+    "מָתַי אַתֶּם סוֹגְרִים?",
+    "מָתַי הָרַכֶּבֶת הַבָּאָה?",
+    "מָה הַשָּׁעָה?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-21-e11",
+   "type": "produce",
+   "en": "closed",
+   "options": [
+    "סָגוּר",
+    "פָּתוּחַ",
+    "תָּפוּס"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-21-e12",
+   "type": "order",
+   "he": "מָתַי אַתֶּם סוֹגְרִים הַיּוֹם?",
+   "en": "When do you close today?"
+  },
+  {
+   "id": "I-21-e13",
+   "type": "recall",
+   "he": "הַלְוָאָה",
+   "en": "loan"
+  },
+  {
+   "id": "I-21-e14",
+   "type": "respond",
+   "cue": "Ask what the interest is.",
+   "answer": {
+    "he": "כַּמָּה רִבִּית?",
+    "en": "How much interest?"
+   }
+  },
+  {
+   "id": "I-21-e15",
+   "type": "produce",
+   "en": "a hundred shekels",
+   "options": [
+    "מֵאָה שְׁקָלִים",
+    "מֵאָה דּוֹלָר",
+    "עֶשְׂרִים שְׁקָלִים"
+   ],
+   "answer": 0
+  }
+ ],
+ "note": "'fee' (amla) and 'transfer' have no pointed token in the sources; the lesson asks about interest instead."
+}

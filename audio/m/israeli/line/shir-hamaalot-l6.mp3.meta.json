@@ -1,0 +1,25 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
+ "inputSha256": "03b6b30c2f76fc9040c70570a77de833050ff7e55741b7b4786301b2c6939c7d",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from word clips; weak words swapped for the take the sound review heard best (docs/audio/PHONEME-REVIEW.md, tools/audio/asr-check/word-pick-log.jsonl).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "הָלוֹךְ יֵלֵךְ וּבָכֹה נֹשֵׂא מֶשֶׁךְ־הַזָּרַע בֹּא־יָבוֹא בְרִנָּה נֹשֵׂא אֲלֻמֹּתָיו׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/shir-hamaalot-w37.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w38.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w39.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w40.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w41.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w42.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w43.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w40.mp3",
+  "audio/m/israeli/word/shir-hamaalot-w45.mp3"
+ ]
+}

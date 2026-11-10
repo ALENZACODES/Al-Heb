@@ -1,0 +1,9 @@
+{
+  "audioSha256": "537ce6c6c3bee9761cd89398a1de2376d888bd90b19f847e73d381c1266b66c2",
+  "generatedUtc": "2026-11-08T08:18:49.4351026Z",
+  "voice": "de-DE-Chirp3-HD-Charon",
+  "fingerprint": "788089afa603360d75ea8d9593981d06b09034c79832563e3a718512b937acb0",
+  "spokenText": "Shema. Yisrael Adonai Eloheinu Adonai Echad.",
+  "id": "shema-ari-plain-a",
+  "status": "pending-asr-and-listening"
+}

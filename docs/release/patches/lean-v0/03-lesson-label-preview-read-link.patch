@@ -1,0 +1,21 @@
+diff --git a/src/curriculum/lesson.view.js b/src/curriculum/lesson.view.js
+index f1f24df..77dc537 100644
+--- a/src/curriculum/lesson.view.js
++++ b/src/curriculum/lesson.view.js
+@@ -11,6 +11,7 @@ import { playButton } from "./audio-ui.js";
+ import { saySound, respell, LABELS } from "../pronunciation/forTradition.js";
+ import { loadSoundTextData, letterSoundText, vowelSoundText, soundTextNode } from "../pronunciation/soundtext.js";
+ import { isAudioFree } from "../shell/audiofree.js";
++import { ROUTES } from "../shell/router.js";
+ import { plain } from "../shell/plain-copy.js";
+ import { chunkedLessons } from "../shell/comfort.js";
+ import { RESUME_KEY, getResume, setResume, clearResume } from "./chunks.js";
+@@ -122,7 +123,7 @@ export function mountLesson(root, ctx, lessonId) {
+           r ? heText(r.he.split("\n")[0], "alef-he alef-word") : el("span", { class: "muted" }, `(${id}: text not in the corpus yet)`),
+           el("div", { class: "alef-item-body" }, el("span", {}, r?.title || id), el("div", { class: "muted" }, r?.ref || "")),
+           el("div", { class: "alef-item-actions" }, r ? playButton(ctx, "line", r.lines > 1 ? `${id}-l1` : id, `Listen to ${r.title}`, note) : null,
+-            el("a", { class: "alef-link", href: `#/read/${id}` }, "Read")));
++            el("a", { class: "alef-link", href: `#/read/${id}` }, "Read" + (ROUTES.find((x) => x.name === "text")?.tier === "v0" ? "" : " (Preview)"))));
+       }))));
+     parts.push(note);
+ 

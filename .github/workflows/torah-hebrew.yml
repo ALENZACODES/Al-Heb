@@ -1,0 +1,75 @@
+name: torah-hebrew
+# Records the Hebrew Torah verses listed in tools/torah/audio/ipa/queue.txt with the Ari and Noa voices, puts them in the app
+# and commits them as John Khan on the branch john/torah-hebrew-audio (main is protected). Starts when queue.txt changes on main (or by hand from the Actions tab).
+# Verses already in the app are skipped, so a rerun only pays for what is missing.
+# Needs the repository secret GOOGLE_TTS_API_KEY (Settings -> Secrets and variables -> Actions -> New repository secret).
+on:
+  push:
+    branches: [main]
+    paths: ['tools/torah/audio/ipa/queue.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: torah-hebrew
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    env:
+      LANG: C.UTF-8
+      TZ: UTC
+      GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version: 22 }
+      - name: Key present
+        run: if [ -z "$GOOGLE_TTS_API_KEY" ]; then echo "::notice::No GOOGLE_TTS_API_KEY secret yet, so nothing was recorded"; fi
+      - name: ffmpeg (clip length)
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: sudo apt-get update -y && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Which sounds Google accepts (one small request)
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: python3 tools/torah/audio/ipa/probe.py
+      - name: Record and install each queued chapter
+        if: env.GOOGLE_TTS_API_KEY != ''
+        shell: bash
+        run: |
+          set -eu
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          first=1
+          cd tools/torah/audio/ipa
+          grep -v '^\s*#' queue.txt | sed '/^\s*$/d' | while read -r book chapter; do
+            args="--skip-installed"
+            if [ "$book" != "all" ]; then args="$args --book $book"; fi
+            if [ -n "${chapter:-}" ]; then args="$args --chapter $chapter"; fi
+            echo "== $book ${chapter:-}"
+            python3 plan.py $args
+            # four workers, each paced to about one request a second
+            pids=""; for s in 0 1 2 3; do pwsh -NoProfile -File render.ps1 -Shard $s -Shards 4 & pids="$pids $!"; done
+            failed=0; for p in $pids; do wait $p || failed=1; done
+            if [ "$book" = "all" ]; then python3 install.py; else python3 install.py --book "$book" ${chapter:+--chapter "$chapter"}; fi
+            if [ "$failed" = 1 ]; then echo "::error::Some requests failed; the clips that worked were kept"; fi
+            # save after every queue line, so a later failure keeps what is done
+            ( cd "$GITHUB_WORKSPACE"
+              node tools/audio/summary.mjs && node tools/build-precache.mjs
+              # The verses are copied from the Torah source text, whose cantillation mark order the Hebrew lint already accepts
+              # there; record the new copies too, so the main test run does not flag every chapter (this job touches only Torah clips).
+              node tools/hebrew-lint/cli.mjs --update-baseline > /dev/null
+              git add audio data/audio precache-manifest.js tools/hebrew-lint/baseline.json tools/torah/audio/ipa/installed.json
+              if ! git diff --cached --quiet; then
+                n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
+                git commit -q -m "Torah Hebrew reading: $book ${chapter:-}: $n verse clips (Ari and Noa)"
+                if [ "$first" = 1 ]; then git push --force origin HEAD:refs/heads/john/torah-hebrew-audio; else git push origin HEAD:refs/heads/john/torah-hebrew-audio; fi
+                echo "::notice::$book ${chapter:-}: $n clips pushed to john/torah-hebrew-audio"
+              fi )
+            first=0
+          done
+      - name: Torah tests on the result
+        if: env.GOOGLE_TTS_API_KEY != ''
+        run: |
+          node --test tests/torahreader.model.test.js tests/torahreader.view.test.js
+          node tools/audio/summary.mjs --check

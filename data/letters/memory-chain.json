@@ -1,0 +1,1213 @@
+{
+ "meta": {
+  "generated": "2026-11-04",
+  "builtBy": "tools/letters/build_memory_chain.mjs from tools/letters/memory-chain.source.json",
+  "needsNativeReview": true,
+  "rules": [
+   "Three beats per letter, same order every time: SEE (the letter shape becomes one picture), SAY (one English hook word), SEAL (one Hebrew example word from data/vocab/words.json that the same picture can show).",
+   "Word: a noun record in words.json, not hidden, frequencyRank <= 1500, pointing and gloss copied from the record, first letter (last letter for the five final forms) is the letter.",
+   "Sound claims are machine-checked per tradition against data/pronunciation/consonants.json; where a tradition differs or the hook is only a spelling cue, the perTradition line says so.",
+   "Story: at most 14 words, contains the hook, the word's transliteration and its gloss.",
+   "Picture concepts come from data/letters/mnemonics.json; changes are listed in risk.",
+   "No Hebrew is typed in the source table; nothing here is proofread by a native speaker."
+  ],
+  "maxRank": 1500,
+  "maxStoryWords": 14
+ },
+ "letters": [
+  {
+   "id": "alef",
+   "hebrew": "א",
+   "name": "Aleph",
+   "picture": {
+    "idea": "A silent mime in a handstand. The handstand body is the letter.",
+    "alt": "Aleph becomes a silent mime doing a handstand",
+    "svg": "assets/letters/morph/alef.svg"
+   },
+   "sound": {
+    "hook": "uh-oh",
+    "hookPosition": "initial",
+    "line": "Silent. It only holds a vowel, like the little pause in uh-oh.",
+    "perTradition": {
+     "israeli": "Same sound: silent / a glottal stop between vowels (uh-oh)",
+     "sephardi": "Same sound: silent / a glottal stop between vowels (uh-oh)",
+     "ashkenazi": "Same sound: silent"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "אַבָּא",
+    "vocabId": "h0a70642a",
+    "rank": 115,
+    "gloss": "father",
+    "translit": "aba",
+    "position": "initial"
+   },
+   "story": "A mime's silent handstand. Uh-oh! Father cheers: aba!",
+   "storyByTradition": {
+    "israeli": "A mime's silent handstand. Uh-oh! Father cheers: aba!",
+    "sephardi": "A mime's silent handstand. Uh-oh! Father cheers: aba!",
+    "ashkenazi": "A mime's silent handstand. Uh-oh! Father cheers: abo!"
+   },
+   "tip": "Silent twin: ayin is a curved cup with no crossing diagonal.",
+   "risk": [
+    "Silent letter: the hook is a pause, not a consonant.",
+    "Ashkenazi: fully silent, no glottal stop (consonants.json)."
+   ]
+  },
+  {
+   "id": "bet",
+   "hebrew": "ב",
+   "name": "Bet",
+   "picture": {
+    "idea": "A bungalow seen from the side with a ball inside; the floor sticks out at the back.",
+    "alt": "Bet becomes a bungalow with a ball inside",
+    "svg": "assets/letters/morph/bet.svg"
+   },
+   "sound": {
+    "hook": "ball",
+    "hookPosition": "initial",
+    "line": "B like Ball (the dot inside is the ball). No dot: V.",
+    "perTradition": {
+     "israeli": "Same sound: b with dagesh, v without",
+     "sephardi": "Same sound: b with dagesh, v without",
+     "ashkenazi": "Same sound: b with dagesh, v without"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "בַּיִת",
+    "vocabId": "h9c8ddecf",
+    "rank": 35,
+    "gloss": "house",
+    "translit": "bayit",
+    "position": "initial"
+   },
+   "story": "A bungalow with a ball inside: B! Bayit is a house.",
+   "storyByTradition": {
+    "israeli": "A bungalow with a ball inside: B! Bayit is a house.",
+    "sephardi": "A bungalow with a ball inside: B! Bayit is a house.",
+    "ashkenazi": "A bungalow with a ball inside: B! Bayis is a house."
+   },
+   "tip": "Not kaf: bet has sharp corners and its floor sticks out at the back.",
+   "risk": [
+    "The chain teaches the dotted sound (b); the undotted v is shown only as the no-ball rule."
+   ]
+  },
+  {
+   "id": "gimel",
+   "hebrew": "ג",
+   "name": "Gimel",
+   "picture": {
+    "idea": "A grumpy camel stomping forward, one foot kicked out ahead: the foot is gimel's foot.",
+    "alt": "Gimel becomes a grumpy camel stomping with one foot kicked out",
+    "svg": "assets/letters/morph/gimel.svg"
+   },
+   "sound": {
+    "hook": "grumpy",
+    "hookPosition": "initial",
+    "line": "Hard G like Grumpy, never a J sound.",
+    "perTradition": {
+     "israeli": "Same sound: hard g as in game, never soft",
+     "sephardi": "Same sound: hard g as in game, never soft",
+     "ashkenazi": "Same sound: hard g as in game, never soft"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "גָּמָל",
+    "vocabId": "h3a77b486",
+    "rank": 905,
+    "gloss": "camel",
+    "translit": "gamal",
+    "position": "initial"
+   },
+   "story": "A grumpy camel stomps off: G! Gamal is a camel.",
+   "storyByTradition": {
+    "israeli": "A grumpy camel stomps off: G! Gamal is a camel.",
+    "sephardi": "A grumpy camel stomps off: G! Gamal is a camel.",
+    "ashkenazi": "A grumpy camel stomps off: G! Gomol is a camel."
+   },
+   "tip": "Not nun: gimel has a foot kicked out at the bottom left.",
+   "risk": [
+    "Camel hooks can read as a regional stereotype; flagged earlier for reviewers (tools/review/questions.mjs).",
+    "Some Sephardi communities have a gh sound; consonants.json says hard g, so only that is claimed.",
+    "Vocabulary record h3a77b486 is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "dalet",
+   "hebrew": "ד",
+   "name": "Dalet",
+   "picture": {
+    "idea": "A diving board sticking out from one post over a pool.",
+    "alt": "Dalet becomes a diving board on one post over a pool",
+    "svg": "assets/letters/morph/dalet.svg"
+   },
+   "sound": {
+    "hook": "dive",
+    "hookPosition": "initial",
+    "line": "D like Dive.",
+    "perTradition": {
+     "israeli": "Same sound: d",
+     "sephardi": "Same sound: d",
+     "ashkenazi": "Same sound: d"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "דֶּלֶת",
+    "vocabId": "h80c0273d",
+    "rank": 428,
+    "gloss": "door",
+    "translit": "delet",
+    "position": "initial"
+   },
+   "story": "Dive off the board: D! Delet is a door.",
+   "storyByTradition": {
+    "israeli": "Dive off the board: D! Delet is a door.",
+    "sephardi": "Dive off the board: D! Delet is a door.",
+    "ashkenazi": "Dive off the board: D! Deles is a door."
+   },
+   "tip": "Not resh: dalet has a sharp corner; resh is one rounded curve.",
+   "risk": [
+    "Sephardi: some communities say a soft d (consonants.json); not claimed here."
+   ]
+  },
+  {
+   "id": "he",
+   "hebrew": "ה",
+   "name": "He",
+   "picture": {
+    "idea": "A small hut on a mountain with a gap in the left wall.",
+    "alt": "He becomes a small hut on a mountain with a gap in the wall",
+    "svg": "assets/letters/morph/he.svg"
+   },
+   "sound": {
+    "hook": "hut",
+    "hookPosition": "initial",
+    "line": "H like Hut: just a breath. Silent at the very end of a word.",
+    "perTradition": {
+     "israeli": "Same sound: h; silent at the end of a word unless it has mappiq",
+     "sephardi": "Same sound: h; silent at the end of a word unless it has mappiq",
+     "ashkenazi": "Same sound: h; silent at the end of a word unless it has mappiq"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "הַר",
+    "vocabId": "hc91c0d80",
+    "rank": 132,
+    "gloss": "mountain",
+    "translit": "har",
+    "position": "initial"
+   },
+   "story": "A hut up on a mountain: hhh! Har is a mountain.",
+   "storyByTradition": {
+    "israeli": "A hut up on a mountain: hhh! Har is a mountain.",
+    "sephardi": "A hut up on a mountain: hhh! Har is a mountain.",
+    "ashkenazi": "A hut up on a mountain: hhh! Har is a mountain."
+   },
+   "tip": "Not chet: he has a gap in the left wall; chet is closed.",
+   "risk": [
+    "Final he without mappiq is silent; this chain uses a word-initial he."
+   ]
+  },
+  {
+   "id": "vav",
+   "hebrew": "ו",
+   "name": "Vav",
+   "picture": {
+    "idea": "One straight vine hanging from a hook: the letter is the vine, the hook is the ceiling hook.",
+    "alt": "Vav becomes a single straight vine hanging from a hook",
+    "svg": "assets/letters/morph/vav.svg"
+   },
+   "sound": {
+    "hook": "vine",
+    "hookPosition": "initial",
+    "line": "V like Vine. (It also writes the vowels o and u in other words.)",
+    "perTradition": {
+     "israeli": "Same sound: v; also the vowel letter for o (cholam malei) and u (shuruk)",
+     "sephardi": "Same sound: v; also the vowel letter for o (cholam malei) and u (shuruk)",
+     "ashkenazi": "Same sound: v; also the vowel letter for o (cholam malei) and u (shuruk)"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "וָו",
+    "vocabId": "h29a2e2b8",
+    "rank": 602,
+    "gloss": "hook",
+    "translit": "vav",
+    "position": "initial"
+   },
+   "story": "A vine hangs from a hook: vvv! Vav means hook.",
+   "storyByTradition": {
+    "israeli": "A vine hangs from a hook: vvv! Vav means hook.",
+    "sephardi": "A vine hangs from a hook: vvv! Vav means hook.",
+    "ashkenazi": "A vine hangs from a hook: vvv! Vov means hook."
+   },
+   "tip": "Not zayin: zayin has a bar on top; vav is a plain single stroke.",
+   "risk": [
+    "The word is the letter's own name (vav, hook, rank 602). The older example, the rose, is rank 1694 and outside the 1500 limit.",
+    "Sephardi: some say a w sound (consonants.json); not claimed."
+   ]
+  },
+  {
+   "id": "zayin",
+   "hebrew": "ז",
+   "name": "Zayin",
+   "picture": {
+    "idea": "A zipper pull on a zipper with gold teeth: a short bar on top and a straight stem down.",
+    "alt": "Zayin becomes a zipper pull on a zipper with gold teeth",
+    "svg": "assets/letters/morph/zayin.svg"
+   },
+   "sound": {
+    "hook": "zipper",
+    "hookPosition": "initial",
+    "line": "Z like Zipper: zzzip.",
+    "perTradition": {
+     "israeli": "Same sound: z",
+     "sephardi": "Same sound: z",
+     "ashkenazi": "Same sound: z"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "זָהָב",
+    "vocabId": "h761c6cb9",
+    "rank": 211,
+    "gloss": "gold",
+    "translit": "zahav",
+    "position": "initial"
+   },
+   "story": "A gold zipper goes zzzip! Zahav means gold.",
+   "storyByTradition": {
+    "israeli": "A gold zipper goes zzzip! Zahav means gold.",
+    "sephardi": "A gold zipper goes zzzip! Zahav means gold.",
+    "ashkenazi": "A gold zipper goes zzzip! Zohov means gold."
+   },
+   "tip": "Not vav: zayin is short and has a bar across the top.",
+   "risk": [
+    "The letter name is also slang in Israeli speech (flagged earlier for reviewers); the picture and hook stay clean.",
+    "consonants.json marks z as a standard value not in its fetched table."
+   ]
+  },
+  {
+   "id": "chet",
+   "hebrew": "ח",
+   "name": "Chet",
+   "picture": {
+    "idea": "A closed gate at the edge of a loch (a lake), with a jug of milk standing at the gate.",
+    "alt": "Chet becomes a closed gate beside a loch with a jug of milk",
+    "svg": "assets/letters/morph/chet.svg"
+   },
+   "sound": {
+    "hook": "loch",
+    "hookPosition": "final",
+    "line": "A scrape from the throat, like the ch in loch said the Scottish way. Not lock, not the ch of chair.",
+    "perTradition": {
+     "israeli": "Same sound: ch as in Bach / loch (back-of-throat, no English chair sound)",
+     "sephardi": "Differs: pharyngeal [ħ], a throat sound (the ch of Bach / loch is the Israeli merged value). Strict Sephardi reading uses a deeper throat sound; the loch scrape is the common Israeli value.",
+     "ashkenazi": "Same sound: ch as in Bach / loch (back-of-throat, no English chair sound); the pharyngeal is seldom observed in practice"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": false,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "חָלָב",
+    "vocabId": "h35be21c5",
+    "rank": 1139,
+    "gloss": "milk",
+    "translit": "chalav",
+    "position": "initial"
+   },
+   "story": "A closed gate by the loch: chhh! A jug of milk, chalav.",
+   "storyByTradition": {
+    "israeli": "A closed gate by the loch: chhh! A jug of milk, chalav.",
+    "sephardi": "A closed gate by the loch: chhh! A jug of milk, chalav.",
+    "ashkenazi": "A closed gate by the loch: chhh! A jug of milk, cholov."
+   },
+   "tip": "Not he: chet is closed all round; he has a gap in the left wall.",
+   "risk": [
+    "Many English speakers say loch as lock; teach the scrape, not the k.",
+    "No cat here: the one cat picture in the set is nun.",
+    "Sephardi differs: see perTradition.",
+    "Vocabulary record h35be21c5 is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "tet",
+   "hebrew": "ט",
+   "name": "Tet",
+   "picture": {
+    "idea": "A round teapot full of tea, its top curling inward.",
+    "alt": "Tet becomes a round teapot full of tea with its top curling in",
+    "svg": "assets/letters/morph/tet.svg"
+   },
+   "sound": {
+    "hook": "tea",
+    "hookPosition": "initial",
+    "line": "T like Tea.",
+    "perTradition": {
+     "israeli": "Same sound: t",
+     "sephardi": "Same sound: t",
+     "ashkenazi": "Same sound: t"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "טֶלֶפוֹן",
+    "vocabId": "he15e52d3",
+    "rank": 440,
+    "gloss": "telephone",
+    "translit": "telefon",
+    "position": "initial"
+   },
+   "story": "A teapot full of tea, then a telephone call: telefon.",
+   "storyByTradition": {
+    "israeli": "A teapot full of tea, then a telephone call: telefon.",
+    "sephardi": "A teapot full of tea, then a telephone call: telefon.",
+    "ashkenazi": "A teapot full of tea, then a telephone call: telefon."
+   },
+   "tip": "Not mem or samekh: tet is one round bowl with a curl at the top.",
+   "risk": [
+    "The word is a loanword (telefon), chosen for picturability; it is not drawn, the teapot is the hook.",
+    "consonants.json says it was not sourced which Sephardi or Mizrahi communities keep an emphatic tet; only plain t is claimed."
+   ]
+  },
+  {
+   "id": "yod",
+   "hebrew": "י",
+   "name": "Yod",
+   "picture": {
+    "idea": "A tiny hand at the top of the line flicking a yo-yo on its string.",
+    "alt": "Yod becomes a tiny hand at the top flicking a yo-yo on a string",
+    "svg": "assets/letters/morph/yod.svg"
+   },
+   "sound": {
+    "hook": "yo-yo",
+    "hookPosition": "initial",
+    "line": "Y like Yo-yo.",
+    "perTradition": {
+     "israeli": "Same sound: y as in yes; vowel letter for i/ei",
+     "sephardi": "Same sound: y as in yes; vowel letter for i/ei",
+     "ashkenazi": "Same sound: y as in yes; vowel letter for i/ei"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "יָד",
+    "vocabId": "h1a3574d3",
+    "rank": 49,
+    "gloss": "arm",
+    "translit": "yad",
+    "position": "initial"
+   },
+   "story": "A yo-yo bobs from your arm: Yo! Yad.",
+   "storyByTradition": {
+    "israeli": "A yo-yo bobs from your arm: Yo! Yad.",
+    "sephardi": "A yo-yo bobs from your arm: Yo! Yad.",
+    "ashkenazi": "A yo-yo bobs from your arm: Yo! Yod."
+   },
+   "tip": "Not vav: yod is tiny and floats at the top.",
+   "risk": [
+    "The vocabulary record glosses yad as arm; the picture shows the hand at its end (hand is the record's second sense).",
+    "Yod also writes the vowels i and ei in other words."
+   ]
+  },
+  {
+   "id": "kaf",
+   "hebrew": "כ",
+   "name": "Kaf",
+   "picture": {
+    "idea": "A cup lying on its side: the C-shape is the letter.",
+    "alt": "Kaf becomes a cup lying on its side",
+    "svg": "assets/letters/morph/kaf.svg"
+   },
+   "sound": {
+    "hook": "cup",
+    "hookPosition": "initial",
+    "line": "K like Cup, with the dot inside. No dot: KH like loch.",
+    "perTradition": {
+     "israeli": "Same sound: k with dagesh; kh (loch) without",
+     "sephardi": "Same sound: k with dagesh; kh (loch) without",
+     "ashkenazi": "Same sound: k with dagesh; kh (loch) without"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "כַּף",
+    "vocabId": "h4646b41c",
+    "rank": 505,
+    "gloss": "palm",
+    "translit": "kaf",
+    "position": "initial"
+   },
+   "story": "A cup, shaped like a cupped palm: kaf.",
+   "storyByTradition": {
+    "israeli": "A cup, shaped like a cupped palm: kaf.",
+    "sephardi": "A cup, shaped like a cupped palm: kaf.",
+    "ashkenazi": "A cup, shaped like a cupped palm: kaf."
+   },
+   "tip": "Not bet: kaf is one soft curve. Not pe: no curl inside.",
+   "risk": [
+    "Gloss in the vocabulary is palm, paw; the cupped-palm sense ties to the cup.",
+    "Hook cup starts with the letter c but the sound k.",
+    "qof also says K: the kite picture keeps them apart."
+   ]
+  },
+  {
+   "id": "lamed",
+   "hebrew": "ל",
+   "name": "Lamed",
+   "picture": {
+    "idea": "A tall lamp post with a bent arm reaching high, lighting the ground below.",
+    "alt": "Lamed becomes a tall bent lamp post with a cone of light",
+    "svg": "assets/letters/morph/lamed.svg"
+   },
+   "sound": {
+    "hook": "lamp",
+    "hookPosition": "initial",
+    "line": "L like Lamp.",
+    "perTradition": {
+     "israeli": "Same sound: l",
+     "sephardi": "Same sound: l",
+     "ashkenazi": "Same sound: l"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "לֶחֶם",
+    "vocabId": "hf22f36ee",
+    "rank": 252,
+    "gloss": "bread",
+    "translit": "lechem",
+    "position": "initial"
+   },
+   "story": "A tall bent lamp shines: lechem means bread.",
+   "storyByTradition": {
+    "israeli": "A tall bent lamp shines: lechem means bread.",
+    "sephardi": "A tall bent lamp shines: lechem means bread.",
+    "ashkenazi": "A tall bent lamp shines: lechem means bread."
+   },
+   "tip": "Only lamed rises above the line, so it is rarely confused.",
+   "risk": [
+    "The vocabulary record is flagged for review (pointing source).",
+    "Vocabulary record hf22f36ee is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "mem",
+   "hebrew": "מ",
+   "name": "Mem",
+   "picture": {
+    "idea": "A mailbox on a post with a letter sticking out and a small flag.",
+    "alt": "Mem becomes a mailbox on a post with a letter and a flag",
+    "svg": "assets/letters/morph/mem.svg"
+   },
+   "sound": {
+    "hook": "mailbox",
+    "hookPosition": "initial",
+    "line": "M like Mailbox: mmm.",
+    "perTradition": {
+     "israeli": "Same sound: m",
+     "sephardi": "Same sound: m",
+     "ashkenazi": "Same sound: m"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "מַיִם",
+    "vocabId": "p7f7d7b8f",
+    "rank": 530,
+    "gloss": "water",
+    "translit": "mayim",
+    "position": "initial"
+   },
+   "story": "A mailbox keeps letters safe from mayim, water.",
+   "storyByTradition": {
+    "israeli": "A mailbox keeps letters safe from mayim, water.",
+    "sephardi": "A mailbox keeps letters safe from mayim, water.",
+    "ashkenazi": "A mailbox keeps letters safe from mayim, water."
+   },
+   "tip": "Not final mem: open mem has a gap at the bottom left.",
+   "risk": [
+    "The pointing of this vocabulary record came from the phrasebook and is not native-reviewed.",
+    "Vocabulary record p7f7d7b8f is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "nun",
+   "hebrew": "נ",
+   "name": "Nun",
+   "picture": {
+    "idea": "A cat curled up asleep, side view, with a Z for its snore. The only cat picture in the set.",
+    "alt": "Nun becomes a cat curled up asleep",
+    "svg": "assets/letters/morph/nun.svg"
+   },
+   "sound": {
+    "hook": "nap",
+    "hookPosition": "initial",
+    "line": "N like Nap.",
+    "perTradition": {
+     "israeli": "Same sound: n",
+     "sephardi": "Same sound: n",
+     "ashkenazi": "Same sound: n"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "נֵר",
+    "vocabId": "h64fb7d35",
+    "rank": 1318,
+    "gloss": "candle",
+    "translit": "ner",
+    "position": "initial"
+   },
+   "story": "A cat takes a nap. Ner is a candle.",
+   "storyByTradition": {
+    "israeli": "A cat takes a nap. Ner is a candle.",
+    "sephardi": "A cat takes a nap. Ner is a candle.",
+    "ashkenazi": "A cat takes a nap. Neir is a candle."
+   },
+   "tip": "Not gimel: nun has a flat base and no kicked-out foot.",
+   "risk": [
+    "This is the one cat picture in the set; the candle is only in the word, not drawn.",
+    "Keep the drawing clearly different from any other animal picture."
+   ]
+  },
+  {
+   "id": "samekh",
+   "hebrew": "ס",
+   "name": "Samekh",
+   "picture": {
+    "idea": "A striped swim ring floating on water: the closed ring is the letter.",
+    "alt": "Samekh becomes a striped swim ring floating on water",
+    "svg": "assets/letters/morph/samekh.svg"
+   },
+   "sound": {
+    "hook": "swim ring",
+    "hookPosition": "initial",
+    "line": "S like Swim ring.",
+    "perTradition": {
+     "israeli": "Same sound: s",
+     "sephardi": "Same sound: s",
+     "ashkenazi": "Same sound: s"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "סֵפֶר",
+    "vocabId": "h231c624a",
+    "rank": 389,
+    "gloss": "book",
+    "translit": "sefer",
+    "position": "initial"
+   },
+   "story": "A swim ring floats: sss! Sefer is a book.",
+   "storyByTradition": {
+    "israeli": "A swim ring floats: sss! Sefer is a book.",
+    "sephardi": "A swim ring floats: sss! Sefer is a book.",
+    "ashkenazi": "A swim ring floats: sss! Seifer is a book."
+   },
+   "tip": "Not final mem: samekh is round all over; final mem is a box.",
+   "risk": [
+    "Sin (shin with the left dot) also says S; it is not one of the 27 forms here. See shin.",
+    "Vocabulary record h231c624a is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "ayin",
+   "hebrew": "ע",
+   "name": "Ayin",
+   "picture": {
+    "idea": "A big open eye: the sweeping lid curve is the letter.",
+    "alt": "Ayin becomes a big open eye whose lid curve is the letter",
+    "svg": "assets/letters/morph/ayin.svg"
+   },
+   "sound": {
+    "hook": "eye",
+    "hookPosition": "initial",
+    "line": "Silent in Israel, like alef: you hear only the vowel.",
+    "perTradition": {
+     "israeli": "Same sound: silent / glottal stop; do not try a pharyngeal in Israel",
+     "sephardi": "Differs: pharyngeal [ʕ] (Western Sephardim [ŋ]); silent in Israeli and Ashkenazi. Some Sephardi readers say a deep throat sound; do not try it in Israeli speech.",
+     "ashkenazi": "Same sound: silent"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": false,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "עַיִן",
+    "vocabId": "h9d6352ee",
+    "rank": 100,
+    "gloss": "eye",
+    "translit": "ayin",
+    "position": "initial"
+   },
+   "story": "A big eye blinks slowly: ayin means eye.",
+   "storyByTradition": {
+    "israeli": "A big eye blinks slowly: ayin means eye.",
+    "sephardi": "A big eye blinks slowly: ayin means eye.",
+    "ashkenazi": "A big eye blinks slowly: ayin means eye."
+   },
+   "tip": "Not tsadi: ayin sweeps in one curve; tsadi has a flat base and a fork.",
+   "risk": [
+    "The word is the letter's own name.",
+    "Sephardi differs: see perTradition."
+   ]
+  },
+  {
+   "id": "pe",
+   "hebrew": "פ",
+   "name": "Pe",
+   "picture": {
+    "idea": "A wide-open mouth blowing one big bubble, the curl inside the letter being the tongue.",
+    "alt": "Pe becomes a mouth blowing a bubble with the tongue curled inside",
+    "svg": "assets/letters/morph/pe.svg"
+   },
+   "sound": {
+    "hook": "pop",
+    "hookPosition": "initial",
+    "line": "P like Pop, with the dot inside. No dot: F.",
+    "perTradition": {
+     "israeli": "Same sound: p with dagesh, f without",
+     "sephardi": "Same sound: p with dagesh, f without",
+     "ashkenazi": "Same sound: p with dagesh, f without"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "פֶּה",
+    "vocabId": "h60b16793",
+    "rank": 221,
+    "gloss": "mouth",
+    "translit": "peh",
+    "position": "initial"
+   },
+   "story": "Pop! A mouth blows a bubble: peh.",
+   "storyByTradition": {
+    "israeli": "Pop! A mouth blows a bubble: peh.",
+    "sephardi": "Pop! A mouth blows a bubble: peh.",
+    "ashkenazi": "Pop! A mouth blows a bubble: peh."
+   },
+   "tip": "Not kaf: pe has a curl tucked inside at the top left.",
+   "risk": [
+    "The vocabulary record is flagged for review (pointing source).",
+    "Vocabulary record h60b16793 is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "tsadi",
+   "hebrew": "צ",
+   "name": "Tsadi",
+   "picture": {
+    "idea": "A slice of pizza with a bird perched on the pizza box; the leaning body is the letter.",
+    "alt": "Tsadi becomes a bird on a pizza box beside a slice of pizza",
+    "svg": "assets/letters/morph/tsadi.svg"
+   },
+   "sound": {
+    "hook": "pizza",
+    "hookPosition": "medial",
+    "line": "TS like the middle of pizza and the end of cats.",
+    "perTradition": {
+     "israeli": "Same sound: ts / tz as in cats",
+     "sephardi": "Same sound: ts / tz as in cats",
+     "ashkenazi": "Same sound: ts / tz as in cats"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "צִפּוֹר",
+    "vocabId": "h817ec28c",
+    "rank": 1302,
+    "gloss": "bird",
+    "translit": "tzipor",
+    "position": "initial"
+   },
+   "story": "A bird sits by a slice of pizza: tzipor.",
+   "storyByTradition": {
+    "israeli": "A bird sits by a slice of pizza: tzipor.",
+    "sephardi": "A bird sits by a slice of pizza: tzipor.",
+    "ashkenazi": "A bird sits by a slice of pizza: tzipor."
+   },
+   "tip": "Not ayin: tsadi has a flat base; its second stroke comes from the top right.",
+   "risk": [
+    "No common English word starts with ts, so the hook sound is in the middle of pizza (not first).",
+    "Some traditional Sephardi communities say s (consonants.json); only ts is claimed.",
+    "The word is written tzipor in the vocabulary data and ts here for the letter."
+   ]
+  },
+  {
+   "id": "qof",
+   "hebrew": "ק",
+   "name": "Qof",
+   "picture": {
+    "idea": "A red kite in the sky with its long string dangling below the line.",
+    "alt": "Qof becomes a red kite with a long string dangling below the line",
+    "svg": "assets/letters/morph/qof.svg"
+   },
+   "sound": {
+    "hook": "kite",
+    "hookPosition": "initial",
+    "line": "K like Kite: the same sound as kaf with a dot.",
+    "perTradition": {
+     "israeli": "Same sound: k",
+     "sephardi": "Same sound: k",
+     "ashkenazi": "Same sound: k"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "קַו",
+    "vocabId": "h7f894a5c",
+    "rank": 768,
+    "gloss": "line",
+    "translit": "kav",
+    "position": "initial"
+   },
+   "story": "A kite flies on a long line: kav.",
+   "storyByTradition": {
+    "israeli": "A kite flies on a long line: kav.",
+    "sephardi": "A kite flies on a long line: kav.",
+    "ashkenazi": "A kite flies on a long line: kav."
+   },
+   "tip": "Not kaf: qof has a leg below the line. Same K sound.",
+   "risk": [
+    "The older example, the monkey, is rank 1706 and outside the 1500 limit; kav (line) ties to the kite string.",
+    "Some Mizrahi communities say a deeper q (consonants.json); only k is claimed."
+   ]
+  },
+  {
+   "id": "resh",
+   "hebrew": "ר",
+   "name": "Resh",
+   "picture": {
+    "idea": "A smooth round head in profile, growling; no corners.",
+    "alt": "Resh becomes a smooth round head in profile, growling",
+    "svg": "assets/letters/morph/resh.svg"
+   },
+   "sound": {
+    "hook": "round",
+    "hookPosition": "initial",
+    "line": "A growl at the back of the throat. English R only spells the letter.",
+    "perTradition": {
+     "israeli": "Hook is a spelling cue only. Real sound: back-of-the-throat r (like French or German r), not the English r",
+     "sephardi": "Hook is a spelling cue only. Real sound: front r, rolled or tapped (like Spanish r)",
+     "ashkenazi": "Hook is a spelling cue only. Real sound: r varies by regional dialect: front (alveolar) or back-of-the-throat (uvular)"
+    },
+    "matches": {
+     "israeli": false,
+     "sephardi": false,
+     "ashkenazi": false
+    }
+   },
+   "word": {
+    "he": "רֹאשׁ",
+    "vocabId": "h4fed6814",
+    "rank": 144,
+    "gloss": "head",
+    "translit": "rosh",
+    "position": "initial"
+   },
+   "story": "A round head growls rrr: rosh means head.",
+   "storyByTradition": {
+    "israeli": "A round head growls rrr: rosh means head.",
+    "sephardi": "A round head growls rrr: rosh means head.",
+    "ashkenazi": "A round head growls rrr: rosh means head."
+   },
+   "tip": "Not dalet: resh is one rounded curve; dalet has a sharp corner.",
+   "risk": [
+    "The English R of round is not the Hebrew sound in any tradition: it is a spelling cue only (consonants.json).",
+    "The growl is Israeli; Sephardi is a rolled front r; Ashkenazi varies by region."
+   ]
+  },
+  {
+   "id": "shin",
+   "hebrew": "ש",
+   "name": "Shin",
+   "picture": {
+    "idea": "A birthday shortcake with three candle flames: the three prongs are the letter.",
+    "alt": "Shin becomes a shortcake with three candle flames",
+    "svg": "assets/letters/morph/shin.svg"
+   },
+   "sound": {
+    "hook": "shortcake",
+    "hookPosition": "initial",
+    "line": "SH like Shortcake, with the dot on the upper right. Dot on the left: S (sin).",
+    "perTradition": {
+     "israeli": "Same sound: sh with the right dot (shin), s with the left dot (sin)",
+     "sephardi": "Same sound: sh with the right dot (shin), s with the left dot (sin)",
+     "ashkenazi": "Same sound: sh with the right dot (shin), s with the left dot (sin)"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "שָׁלוֹם",
+    "vocabId": "hf8c8316a",
+    "rank": 441,
+    "gloss": "peace",
+    "translit": "shalom",
+    "position": "initial"
+   },
+   "story": "Three flames glow on a shortcake: sh! Shalom is peace.",
+   "storyByTradition": {
+    "israeli": "Three flames glow on a shortcake: sh! Shalom is peace.",
+    "sephardi": "Three flames glow on a shortcake: sh! Shalom is peace.",
+    "ashkenazi": "Three flames glow on a shortcake: sh! Sholom is peace."
+   },
+   "tip": "Dot on the right says sh; dot on the left (sin) says s.",
+   "risk": [
+    "Lithuanian Ashkenazi historically merged sh and s (consonants.json); not taught here.",
+    "The vocabulary record is flagged for review.",
+    "Vocabulary record hf8c8316a is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "tav",
+   "hebrew": "ת",
+   "name": "Tav",
+   "picture": {
+    "idea": "A small table with a baby beside it; the leg with a little foot is the letter.",
+    "alt": "Tav becomes a small table with a baby beside it",
+    "svg": "assets/letters/morph/tav.svg"
+   },
+   "sound": {
+    "hook": "table",
+    "hookPosition": "initial",
+    "line": "T like Table (this word has the dot inside).",
+    "perTradition": {
+     "israeli": "Same sound: t",
+     "sephardi": "Same sound: t",
+     "ashkenazi": "Same for this word: s without dagesh (Shabbos), t with dagesh. Ashkenazi reads tav WITHOUT the dot as s (Shabbos); this word has the dot, so it is t."
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "תִּינוֹק",
+    "vocabId": "hd522984d",
+    "rank": 628,
+    "gloss": "baby",
+    "translit": "tinok",
+    "position": "initial"
+   },
+   "story": "A baby sits by a table: tinok.",
+   "storyByTradition": {
+    "israeli": "A baby sits by a table: tinok.",
+    "sephardi": "A baby sits by a table: tinok.",
+    "ashkenazi": "A baby sits by a table: tinok."
+   },
+   "tip": "Not he or chet: tav has a little foot at the bottom left.",
+   "risk": [
+    "Undotted tav is s in Ashkenazi reading and th in some Sephardi communities (consonants.json); the chain teaches the dotted t only.",
+    "The vocabulary gloss is infant, baby (male)."
+   ]
+  },
+  {
+   "id": "kaf-final",
+   "hebrew": "ך",
+   "name": "Final Kaf",
+   "picture": {
+    "idea": "A king in a long robe whose cloak trails behind him into a loch (a lake).",
+    "alt": "Final kaf becomes a king whose long cloak trails into a loch",
+    "svg": "assets/letters/morph/kaf-final.svg"
+   },
+   "sound": {
+    "hook": "loch",
+    "hookPosition": "final",
+    "line": "KH like the end of loch, same as kaf without a dot.",
+    "perTradition": {
+     "israeli": "Same sound: kh as in loch",
+     "sephardi": "Same sound: kh as in loch",
+     "ashkenazi": "Same sound: kh as in loch"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "מֶלֶךְ",
+    "vocabId": "h58d8d8fe",
+    "rank": 460,
+    "gloss": "king",
+    "translit": "melekh",
+    "position": "final"
+   },
+   "story": "A king's cloak trails into the loch: melekh, king.",
+   "storyByTradition": {
+    "israeli": "A king's cloak trails into the loch: melekh, king.",
+    "sephardi": "A king's cloak trails into the loch: melekh, king.",
+    "ashkenazi": "A king's cloak trails into the loch: melekh, king."
+   },
+   "tip": "Not dalet or resh: final kaf drops a tail below the line.",
+   "risk": [
+    "Final forms end a word, so the word ENDS with the letter (cannot begin with it).",
+    "Many English speakers say loch as lock (the k of kaf with a dot): teach the scrape.",
+    "A dagesh in rare words makes it k (consonants.json).",
+    "The vocabulary record is flagged for review.",
+    "Vocabulary record h58d8d8fe is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "mem-final",
+   "hebrew": "ם",
+   "name": "Final Mem",
+   "picture": {
+    "idea": "A camping tent zipped shut beside the sea, with mom at the door.",
+    "alt": "Final mem becomes a zipped tent by the sea with mom at the door",
+    "svg": "assets/letters/morph/mem-final.svg"
+   },
+   "sound": {
+    "hook": "mom",
+    "hookPosition": "initial",
+    "line": "M like Mom, same as mem.",
+    "perTradition": {
+     "israeli": "Same sound: m",
+     "sephardi": "Same sound: m",
+     "ashkenazi": "Same sound: m"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "יָם",
+    "vocabId": "h4692cd32",
+    "rank": 39,
+    "gloss": "sea",
+    "translit": "yam",
+    "position": "final"
+   },
+   "story": "Mom zips the tent shut and swims in the sea: yam.",
+   "storyByTradition": {
+    "israeli": "Mom zips the tent shut and swims in the sea: yam.",
+    "sephardi": "Mom zips the tent shut and swims in the sea: yam.",
+    "ashkenazi": "Mom zips the tent shut and swims in the sea: yom."
+   },
+   "tip": "Not samekh: final mem is a hard box; samekh is round.",
+   "risk": [
+    "Final forms end a word, so the word ENDS with the letter."
+   ]
+  },
+  {
+   "id": "nun-final",
+   "hebrew": "ן",
+   "name": "Final Nun",
+   "picture": {
+    "idea": "One tall nail hammered upright into a big stone.",
+    "alt": "Final nun becomes one tall nail hammered upright into a stone",
+    "svg": "assets/letters/morph/nun-final.svg"
+   },
+   "sound": {
+    "hook": "nail",
+    "hookPosition": "initial",
+    "line": "N like Nail, same as nun.",
+    "perTradition": {
+     "israeli": "Same sound: n",
+     "sephardi": "Same sound: n",
+     "ashkenazi": "Same sound: n"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "אֶבֶן",
+    "vocabId": "he53d1d1d",
+    "rank": 305,
+    "gloss": "stone",
+    "translit": "even",
+    "position": "final"
+   },
+   "story": "Hammer a tall nail into a stone: even.",
+   "storyByTradition": {
+    "israeli": "Hammer a tall nail into a stone: even.",
+    "sephardi": "Hammer a tall nail into a stone: even.",
+    "ashkenazi": "Hammer a tall nail into a stone: even."
+   },
+   "tip": "Not vav: final nun drops below the line.",
+   "risk": [
+    "Final forms end a word, so the word ENDS with the letter.",
+    "The older example (garden, gan) is not in the vocabulary data; the nail is kept, the stone replaces the garden bed.",
+    "Vocabulary record he53d1d1d is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "pe-final",
+   "hebrew": "ף",
+   "name": "Final Pe",
+   "picture": {
+    "idea": "A big feather held off the tip of a nose; the long stem is the tail of the letter.",
+    "alt": "Final pe becomes a big feather held off the tip of a nose",
+    "svg": "assets/letters/morph/pe-final.svg"
+   },
+   "sound": {
+    "hook": "feather",
+    "hookPosition": "initial",
+    "line": "F like Feather: same as pe with no dot.",
+    "perTradition": {
+     "israeli": "Same sound: f as in fluff",
+     "sephardi": "Same sound: f as in fluff",
+     "ashkenazi": "Same sound: f as in fluff"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "אַף",
+    "vocabId": "h21e009ad",
+    "rank": 250,
+    "gloss": "nose",
+    "translit": "af",
+    "position": "final"
+   },
+   "story": "Blow a feather off your nose: fff, af.",
+   "storyByTradition": {
+    "israeli": "Blow a feather off your nose: fff, af.",
+    "sephardi": "Blow a feather off your nose: fff, af.",
+    "ashkenazi": "Blow a feather off your nose: fff, af."
+   },
+   "tip": "Not final tsadi: final pe has a round top with a curl inside.",
+   "risk": [
+    "Final forms end a word, so the word ENDS with the letter.",
+    "The nose ties to the word af.",
+    "Vocabulary record h21e009ad is flagged needsReview in words.json."
+   ]
+  },
+  {
+   "id": "tsadi-final",
+   "hebrew": "ץ",
+   "name": "Final Tsadi",
+   "picture": {
+    "idea": "A tall tree with Y-shaped branches and a long straight trunk, nuts hanging from the branches.",
+    "alt": "Final tsadi becomes a tall Y-branched tree with nuts hanging from it",
+    "svg": "assets/letters/morph/tsadi-final.svg"
+   },
+   "sound": {
+    "hook": "nuts",
+    "hookPosition": "final",
+    "line": "TS like the end of nuts, same as tsadi.",
+    "perTradition": {
+     "israeli": "Same sound: ts / tz as in cats",
+     "sephardi": "Same sound: ts / tz as in cats",
+     "ashkenazi": "Same sound: ts / tz as in cats"
+    },
+    "matches": {
+     "israeli": true,
+     "sephardi": true,
+     "ashkenazi": true
+    }
+   },
+   "word": {
+    "he": "עֵץ",
+    "vocabId": "hd2fac0d2",
+    "rank": 254,
+    "gloss": "tree",
+    "translit": "etz",
+    "position": "final"
+   },
+   "story": "Nuts hang on the tall Y-branched tree: ts! Etz means tree.",
+   "storyByTradition": {
+    "israeli": "Nuts hang on the tall Y-branched tree: ts! Etz means tree.",
+    "sephardi": "Nuts hang on the tall Y-branched tree: ts! Etz means tree.",
+    "ashkenazi": "Nuts hang on the tall Y-branched tree: ts! Eitz means tree."
+   },
+   "tip": "Not final pe: final tsadi forks like a Y on top.",
+   "risk": [
+    "Final forms end a word, so the word ENDS with the letter."
+   ]
+  }
+ ]
+}

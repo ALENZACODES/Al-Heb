@@ -1,0 +1,4 @@
+faster-whisper==1.2.1
+transformers==4.57.6
+torch==2.15.0
+accelerate==1.15.0

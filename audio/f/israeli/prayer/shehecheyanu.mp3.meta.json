@@ -1,0 +1,27 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃",
+ "inputSha256": "b330a052e03ab6f8a5a6922479e415590df2a4f16786b88dfdef83f586256844",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/aleinu-1-w38.mp3",
+  "audio/f/israeli/word/avot-1-w2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/aleinu-1-w54.mp3",
+  "audio/f/israeli/word/adon-olam-1-w14.mp3",
+  "audio/f/israeli/word/birkat-hamazon-1-w6.mp3",
+  "audio/f/israeli/word/i-10-w9.mp3",
+  "audio/f/israeli/word/shehecheyanu-w8.mp3",
+  "audio/f/israeli/word/shehecheyanu-w9.mp3",
+  "audio/f/israeli/word/shehecheyanu-w10.mp3",
+  "audio/f/israeli/word/haftarah-after-w113.mp3"
+ ]
+}

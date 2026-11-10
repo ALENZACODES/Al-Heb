@@ -1,0 +1,182 @@
+{
+ "schemaVersion": 1,
+ "rulesVersion": 1,
+ "proofread": false,
+ "status": "rule-generated from the niqqud text; not verified by a native speaker; no audio exists",
+ "description": "Derived from data/pronunciation/variants (see docs/pronunciation/DERIVED.md and SSML.md). Syllable record: {i: record id, w: [{h: pointed word, s: syllables, st: [stressed syllable index (0-based) in traditions order], sr: [index into stressRules], p: [IPA syllables per tradition, stress mark removed]}]}. A word without niqqud has no s/st/sr/p.",
+ "traditions": [
+  "israeli",
+  "sephardi",
+  "ashkenazi"
+ ],
+ "counts": {
+  "records": 6636,
+  "words": 8764
+ },
+ "stressRules": [
+  "default milra (final)",
+  "monosyllable",
+  "default penultimate (Ashkenazi natural register)",
+  "milra (words.json ipa agrees)",
+  "final (no full-vowel syllable before it)",
+  "words.json ipa stress mark",
+  "stress.json (other)",
+  "stress.json (segolate)",
+  "prayerwords.json (Israeli)",
+  "prayerwords.json (Ashkenazi, unreviewed)",
+  "furtive patach never stressed",
+  "words.json ipa stress mark (counted from the end; that ipa drops a shva)"
+ ],
+ "shards": [
+  {
+   "file": "_syllables-001.json",
+   "kind": "syllables",
+   "count": 1302,
+   "first": "h7c9d2ffe"
+  },
+  {
+   "file": "_syllables-002.json",
+   "kind": "syllables",
+   "count": 1245,
+   "first": "hc04987b4"
+  },
+  {
+   "file": "_syllables-003.json",
+   "kind": "syllables",
+   "count": 1215,
+   "first": "h023cbac3"
+  },
+  {
+   "file": "_syllables-004.json",
+   "kind": "syllables",
+   "count": 1181,
+   "first": "hd157f6b6"
+  },
+  {
+   "file": "_syllables-005.json",
+   "kind": "syllables",
+   "count": 1120,
+   "first": "h18ea9933"
+  },
+  {
+   "file": "_syllables-006.json",
+   "kind": "syllables",
+   "count": 492,
+   "first": "p1ac844f7"
+  },
+  {
+   "file": "_syllables-007.json",
+   "kind": "syllables",
+   "count": 81,
+   "first": "kaddish-1-l2"
+  },
+  {
+   "file": "_ssml-001.json",
+   "kind": "ssml",
+   "count": 460,
+   "first": "h7c9d2ffe"
+  },
+  {
+   "file": "_ssml-002.json",
+   "kind": "ssml",
+   "count": 455,
+   "first": "hfa69f51c"
+  },
+  {
+   "file": "_ssml-003.json",
+   "kind": "ssml",
+   "count": 452,
+   "first": "h9a0d2435"
+  },
+  {
+   "file": "_ssml-004.json",
+   "kind": "ssml",
+   "count": 450,
+   "first": "h00ac99b7"
+  },
+  {
+   "file": "_ssml-005.json",
+   "kind": "ssml",
+   "count": 449,
+   "first": "hfda1e0b1"
+  },
+  {
+   "file": "_ssml-006.json",
+   "kind": "ssml",
+   "count": 448,
+   "first": "h90af1040"
+  },
+  {
+   "file": "_ssml-007.json",
+   "kind": "ssml",
+   "count": 447,
+   "first": "h680df322"
+  },
+  {
+   "file": "_ssml-008.json",
+   "kind": "ssml",
+   "count": 446,
+   "first": "h0e6b206c"
+  },
+  {
+   "file": "_ssml-009.json",
+   "kind": "ssml",
+   "count": 445,
+   "first": "hbd9812a4"
+  },
+  {
+   "file": "_ssml-010.json",
+   "kind": "ssml",
+   "count": 442,
+   "first": "h8daaf3f4"
+  },
+  {
+   "file": "_ssml-011.json",
+   "kind": "ssml",
+   "count": 441,
+   "first": "haf8a82db"
+  },
+  {
+   "file": "_ssml-012.json",
+   "kind": "ssml",
+   "count": 438,
+   "first": "h50366cb1"
+  },
+  {
+   "file": "_ssml-013.json",
+   "kind": "ssml",
+   "count": 437,
+   "first": "h25dbc177"
+  },
+  {
+   "file": "_ssml-014.json",
+   "kind": "ssml",
+   "count": 361,
+   "first": "hcee7349a"
+  },
+  {
+   "file": "_ssml-015.json",
+   "kind": "ssml",
+   "count": 330,
+   "first": "p98dde51c"
+  },
+  {
+   "file": "_ssml-016.json",
+   "kind": "ssml",
+   "count": 81,
+   "first": "help-04"
+  },
+  {
+   "file": "_ssml-017.json",
+   "kind": "ssml",
+   "count": 45,
+   "first": "ashrei-145-1-3-l3"
+  },
+  {
+   "file": "_ssml-018.json",
+   "kind": "ssml",
+   "count": 9,
+   "first": "havdalah-opening"
+  }
+ ]
+}

@@ -82,8 +82,9 @@ try {
   const drillIds = expect('lab.drill.gematria');
   ok(`lab drill still (${drillIds.length ? 'one of ' + drillIds.join(' ') : 'none drawn: animated Rimon'})`, drillIds.length ? await cornerIs(drillIds) : true);
 
-  // 4. answers: a right answer poses for a moment, then the page still comes back
-  await go('#/learn', 'learn');
+  // 4. answers: a right answer poses for a moment. On a screen with no Rimon of its own (Learn's Continue card has one, so
+  // nothing else shows there): the credits page.
+  await go('#/credits', 'credits');
   await page.evaluate(() => { document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'correct' } })); document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'bounce' } })); });
   await page.waitForTimeout(300);
   // one Rimon answers: the corner pose, or (when the big-moment module runs) its pop-up with a picture chosen by the stage
@@ -95,7 +96,7 @@ try {
   ok(`right answer: one Rimon shows a stage-chosen still (${ans.by}: ${ans.id || ans.src})`, ans.by === 'corner' ? answerIds.includes(ans.id) : src_blob_or(ans.src, idOf, answerIds));
   await page.screenshot({ path: SHOTS + '/4-answer.png' });
   await page.waitForTimeout(3000);
-  ok('the answer moment ends (learn has no page still)', await page.evaluate(() => { const s = document.querySelector('.rimon-corner .rimon-still'); return (!s || s.hidden) && !document.querySelector('.rimon-moment:not([hidden])'); }));
+  ok('the answer moment ends (credits has no page still)', await page.evaluate(() => { const s = document.querySelector('.rimon-corner .rimon-still'); return (!s || s.hidden) && !document.querySelector('.rimon-moment:not([hidden])'); }));
 
   // 5. a badge lands: card at the bottom
   await page.evaluate(() => window.alef.store.set('awards.v1', { awards: { 'qa-badge': { at: Date.now() } } }));
@@ -103,8 +104,12 @@ try {
   ok('first badge toast', (await page.locator('.rimon-toast').getAttribute('data-rimon-trigger')) === 'first.badge');
   await page.waitForTimeout(450);
   ok('one Rimon: companion steps aside while the card shows', await page.locator('.rimon-companion').evaluate((e) => getComputedStyle(e).visibility === 'hidden' || getComputedStyle(e).display === 'none'));
-  ok('one Rimon on Learn: the swapped Continue-card picture replaces the corner one', (await page.evaluate(() => document.body.dataset.rimonInpage)) === '1' && !(await page.locator('.rimon-corner').isVisible()));
-  ok('continue card shows a learn.continue.first still', STILL_IDS['learn.continue.first'].includes(await page.locator('.alef-continue-rimon').getAttribute('data-rimon-shown')));
+  await go('#/learn', 'learn'); await page.waitForTimeout(900);
+  const card = await page.evaluate(() => { const c = document.querySelector('#main .alef-continue-rimon'); return c ? { tag: c.tagName, shown: c.getAttribute('data-rimon-shown') } : null; });
+  ok('Learn: the Continue card has its own Rimon', !!card);
+  ok('one Rimon on Learn: the corner Rimon and the pop-ups stay away while the card shows Rimon', !(await page.locator('.rimon-corner').isVisible()) && !(await page.evaluate(() => [...document.querySelectorAll('.rimon-moment:not([hidden]), .alef-rimon-spot')].some((e) => getComputedStyle(e).visibility !== 'hidden'))));
+  // the card is the animated Rimon (src/curriculum/learn.view.js); only its picture fallback (an img) takes a stage still
+  if (card?.tag === 'IMG') ok('continue card picture is a learn.continue.first still', STILL_IDS['learn.continue.first'].includes(card.shown));
   await page.screenshot({ path: SHOTS + '/5-toast-desktop.png' });
   await page.locator('.rimon-toast-x').click();
 
@@ -117,6 +122,8 @@ try {
   // 7. quiet route: Torah reader has no Rimon
   await go('#/torahread', 'torahread');
   ok('Torah reader is quiet', (await page.evaluate(() => document.body.dataset.rimonQuiet)) === 'route' && !(await page.locator('.rimon-companion').isVisible()));
+  await go('#/ask', 'ask');
+  ok('Ask the Torah is quiet', (await page.evaluate(() => document.body.dataset.rimonQuiet)) === 'route' && !(await page.locator('.rimon-companion').isVisible()));
 
   // 8. phone: dressed Rimon in the corner and a toast above the bottom bar
   await page.setViewportSize({ width: 375, height: 812 });

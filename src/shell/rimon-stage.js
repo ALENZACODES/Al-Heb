@@ -13,11 +13,12 @@ import {
   awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES, seasonTrigger,
 } from './rimon-triggers.js';
 import { projectStreak } from '../curriculum/streak.js';
+import { IN_PAGE_RIMON } from './rimon.js';
 
 export const SEEN_KEY = 'rimon.seen.v1';
 /** Quiet days and screens (QUIET_DAYS, QUIET_ROUTES): Rimon and every still step aside. Injected by the stage so it works before any still exists. */
-/** Rimon pictures that other screens draw into the page (src/shell/rimon-inline.js, src/lab/lab.view.js). */
-export const IN_PAGE_RIMON = Object.freeze(['.rimon-inline', '.lab-rimon', '.lab-art.hero', '.lab-art.win', '.lab-art.done']);
+/** Rimon pictures that other screens draw into the page: one list, kept in src/shell/rimon.js. */
+export { IN_PAGE_RIMON };
 export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero,body[data-rimon-quiet] .rimon-moment{display:none!important}body[data-rimon-quiet=day] img[data-rimon-still],body[data-rimon-quiet=day] img.alef-celebrate-rimon,body[data-rimon-quiet=day] .rimon-inline,body[data-rimon-quiet=day] .alef-rimon-spot{visibility:hidden}'
   // one Rimon on screen: another branch's floating Rimon (.alef-rimon-spot, .rimon-moment) sends the corner one away while it shows
   + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}'

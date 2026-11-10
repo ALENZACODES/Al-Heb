@@ -198,3 +198,15 @@ test('Hebrew in the lines is pointed; English lines are short enough for a bubbl
     assert.doesNotMatch(def.line.en, /\*|AI\b/, t);
   }
 });
+
+test('a screen that says Rimon stays away is a quiet route (Ask the Torah, the Torah and prayer screens)', async () => {
+  const fs = await import('node:fs');
+  const { ROUTES } = await import('../src/shell/router.js');
+  assert.ok(QUIET_ROUTES.includes('ask'));
+  for (const r of ROUTES) {
+    if (!r.module) continue;
+    const file = new URL(r.module.replace(/^\.\.\//, '../src/').replace(/^\.\//, '../src/shell/'), import.meta.url);
+    let head = ''; try { head = fs.readFileSync(file, 'utf8').slice(0, 3000); } catch { continue; }
+    if (/Rimon (does not|doesn't|never) (appear|show)/i.test(head)) assert.ok(QUIET_ROUTES.includes(r.name), `${r.name} (${r.module}) says Rimon stays away but is not quiet`);
+  }
+});

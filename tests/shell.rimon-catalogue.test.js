@@ -151,3 +151,14 @@ test('catalogue file names travel in present.json (drawn ones only), not in the 
   for (const id of drawnA) assert.equal(json.files[id], fileStem(Number(id.slice(1))));
   assert.doesNotMatch(read(OUT.js), /STILL_FILES|v2\/rimon-/);
 });
+
+test('every line Rimon says and every image prompt is free of he/she/his/her, and the crown is the three-point one', async () => {
+  const { linesForReview } = await import('../tools/images/rimon/build.mjs');
+  const PRONOUN = /\b(he|she|him|his|her|hers|himself|herself)\b/i;
+  const lines = linesForReview();
+  assert.ok(lines.some((l) => l.source === 'retention/rimon.js'), 'the retention moments are on the review sheet');
+  for (const l of lines) assert.doesNotMatch(l.en, PRONOUN, l.key);
+  for (const s of STILLS) assert.doesNotMatch(promptFor(s), PRONOUN, s.slug);
+  assert.match(CHARACTER, /three rounded points/);
+  assert.doesNotMatch([CHARACTER, NEVER].join(' '), /five[- ](rounded )?point/i);
+});

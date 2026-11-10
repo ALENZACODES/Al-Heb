@@ -17,6 +17,7 @@ import { ART, ART_SOURCE, HOLD, REDRAW } from './art-map.mjs';
 import { TRIGGERS, QUIET_DAYS, QUIET_ROUTES, STILL_COUNT, STILL_ID, lineFor } from '../../../src/shell/rimon-triggers.js';
 import { toCsv, parseCsv } from '../ingest_lib.mjs';
 import * as SPEECH_MOD from '../../../src/shell/rimon-speech.js';
+import { LINES as RETENTION_LINES } from '../../../src/retention/rimon.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const ROOT = path.resolve(here, '..', '..', '..');
@@ -133,7 +134,7 @@ function markdown(rows) {
   L.push('- **Never.** ' + NEVER, '');
   L.push('Festival, Shabbat and synagogue stills add: ' + RESPECT, '');
   L.push('### Checklist Before a Still Is Saved', '');
-  L.push('- Crown: gold, five rounded points, middle one tallest; two olive leaves behind it, one each side.');
+  L.push('- Crown: gold, three rounded points (never five), middle one tallest; two olive leaves behind it, one each side.');
   L.push('- Face: two dot eyes (or the expression the row asks for), small maroon mouth, two pink oval cheeks. No nose, no teeth, no eyebrows unless asked.');
   L.push('- Sash: deep blue, tied at the front, knot and two short tails.');
   L.push('- Limbs: thin red arms, mitten hands with four fingers, short red legs, round feet.');
@@ -171,7 +172,8 @@ function markdown(rows) {
 
 /**
  * Every line Rimon can say, for a Hebrew teacher to check: the moment lines (src/shell/rimon-triggers.js) and the
- * speech-bubble lines (src/shell/rimon-speech.js). The last three columns are left empty for the reviewer.
+ * speech-bubble lines (src/shell/rimon-speech.js) and the retention moments' lines (src/retention/rimon.js; its English-only
+ * reminders in messages.js are checked by their own tests). The last three columns are left empty for the reviewer.
  */
 export function linesForReview() {
   const out = [];
@@ -183,6 +185,7 @@ export function linesForReview() {
   };
   for (const [k, v] of Object.entries(SPEECH_MOD)) if (typeof v !== 'function') walk(k, v);
   for (const n of [1, 3]) { walk(`streakLine(${n})`, SPEECH_MOD.streakLine?.(n)); walk(`doneLine(${n})`, SPEECH_MOD.doneLine?.(n)); }
+  for (const [k, v] of Object.entries(RETENTION_LINES || {})) out.push({ source: 'retention/rimon.js', key: k, he: v.he || '', en: v.en });
   return out;
 }
 

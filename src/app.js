@@ -392,13 +392,11 @@ async function boot() {
   // Rimon's study reminders: armed at boot only when the learner turned them on (src/shell/notify.js; nothing is asked here).
   Promise.resolve().then(() => store.get('notify.prefs')).then((p) => { if (p && p.enabled === true) return import('./shell/notify.js').then((m) => m.armFromPrefs(ctxBase)); }).catch(() => {});
   router.start();
-  if (firstIsHome) {
-    // Deferring the optional resolver avoids blocking the hero and the first
-    // usable lesson. A later route sees the loaded resolver in the shared ctx.
-    shownFirst.then(() => afterPaint(async () => {
-      try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
-    })).catch(() => {});
-  }
+  // No route waits for picture approvals or the image index before first paint (fix/launch-readiness ca33bdf59): after the first
+  // view has painted, load the resolver and fill the teacher band; the next navigation (or a quiet refresh) can draw pictures.
+  shownFirst.then(() => afterPaint(async () => {
+    try { images = await resolveImages(); ctxBase.images = images; try { updateCompanions(document.body.dataset.route, { R: images, voice: settings.get('voice') }); } catch { /* band fills on next navigation */ } } catch { images = null; }
+  }, { waitMs: 4000 })).catch(() => {});
   import('./shell/boot-hooks.js').then((m) => m.armReminders(ctxBase)).catch(() => {});
   shownFirst.then(() => import('./shell/boot-hooks.js')).then((m) => m.armRetention(ctxBase)).catch(() => {}); // streak freezes, XP, gems, hearts, league (src/retention/, lazy)
   import('./morning/boot.js').then((m) => m.startMorning({ store, audio })).catch(() => {});

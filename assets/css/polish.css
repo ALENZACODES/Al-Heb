@@ -124,7 +124,7 @@ body.ob-player {
 body.ob-player .site-header, body.ob-player .site-nav, body.ob-player .companions, body.ob-player .sound-bar,
 body.ob-player .fine-print, body.ob-player #game-music, body.ob-player .rimon-corner, body.ob-player .rimon-bubble,
 body.ob-player .rimon-restore { display: none !important; }
-body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; padding: 0 var(--s-4) calc(7.5rem + env(safe-area-inset-bottom)); }
+body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; padding: 0 var(--s-4) calc(12rem + env(safe-area-inset-bottom)); } /* room for Continue + Start now stacked in the foot */
 .card.onboarding.ob-v2 { background: transparent; border: 0; box-shadow: none; padding: 0; overflow: visible; border-radius: 0; color: var(--cream); }
 .card.onboarding.ob-v2::before { display: none; }
 .ob-top {

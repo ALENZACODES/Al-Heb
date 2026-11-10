@@ -217,14 +217,12 @@
   }
  ],
  "prayerLines": [
-  "birkat-hamazon-1",
-  "yehalelu",
-  "havdalah-opening"
+  "yehalelu"
  ],
  "goals": [
   "Sing back 'ki l'olam chasdo' and 'halleluyah' at the right moments",
   "Recognise the Psalm 118 lines that are sung responsively",
-  "Know that the full Hallel text is not yet in the corpus"
+  "Know that the full Hallel text is not yet in the corpus (gap g-hallel). Yehalelu, a praise verse from the Torah service, is attached only so this synagogue lesson has a real corpus line; it is not a stand-in for Hallel itself"
  ],
  "estMinutes": 30,
  "prerequisites": [
@@ -252,10 +250,9 @@
   },
   {
    "id": "I-07-e02",
-   "type": "spot",
-   "line": "birkat-hamazon-1",
-   "target": "חַסְדּוֹ",
-   "en": "his kindness"
+   "type": "order",
+   "he": "כִּי לְעוֹלָם חַסְדּוֹ",
+   "en": "for his kindness is for ever"
   },
   {
    "id": "I-07-e03",
@@ -278,11 +275,14 @@
   },
   {
    "id": "I-07-e05",
-   "type": "spot",
-   "line": "yehalelu",
-   "target": "הַלְלוּ",
-   "en": "praise! (plural command)",
-   "lineIndex": 2
+   "type": "produce",
+   "en": "halleluyah: praise the LORD",
+   "options": [
+    "הַלְלוּ־יָהּ",
+    "כִּי לְעוֹלָם חַסְדּוֹ",
+    "אֵלִי אַתָּה"
+   ],
+   "answer": 0
   },
   {
    "id": "I-07-e06",
@@ -343,10 +343,9 @@
   },
   {
    "id": "I-07-e12",
-   "type": "spot",
-   "line": "havdalah-opening",
-   "target": "יְשׁוּעוֹת",
-   "en": "salvations"
+   "type": "order",
+   "he": "כּוֹס יְשׁוּעוֹת אֶשָּׂא",
+   "en": "I will lift the cup of salvation"
   },
   {
    "id": "I-07-e13",

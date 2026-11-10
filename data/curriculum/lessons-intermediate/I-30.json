@@ -198,14 +198,12 @@
  "prayerLines": [
   "shehecheyanu",
   "kiddush-wine-1",
-  "hamotzi",
-  "havdalah-opening",
-  "kiddush-veshamru"
+  "hamotzi"
  ],
  "goals": [
   "Greet people with chag sameach and recognise the word sukkah",
   "Say Shehecheyanu and the wine blessing at the sukkah",
-  "Know which Sukkot texts (lulav, Hallel) are not yet in the corpus"
+  "Know that the sukkah blessing, lulav blessing and Hallel are not yet in the corpus, so this lesson does not borrow prayers from other days to stand in for them"
  ],
  "estMinutes": 25,
  "prerequisites": [

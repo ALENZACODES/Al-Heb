@@ -3,7 +3,7 @@
  "track": "israel",
  "level": "B1",
  "unit": "israel",
- "title": "Holiday greetings by festival: who says what, and when",
+ "title": "Holiday greetings by festival, plus everyday wishes",
  "status": "draft",
  "proofread": false,
  "needsNativeReview": true,
@@ -59,6 +59,18 @@
    }
   },
   {
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-gmar"
+   },
+   "pronunciation": {
+    "israeli": "gemar chatimah tovah"
+   }
+  },
+  {
    "he": "מַזָּל טוֹב",
    "en": "congratulations",
    "translit": null,
@@ -96,7 +108,7 @@
   },
   {
    "he": "תִּשְׁמֹר עַל עַצְמְךָ",
-   "en": "take care of yourself",
+   "en": "take care of yourself (said to a man)",
    "translit": null,
    "pronunciation": {
     "israeli": "tishmor al atzmekha"
@@ -104,6 +116,18 @@
    "source": {
     "file": "data/vocab/words.json",
     "id": "pf23d9047"
+   }
+  },
+  {
+   "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+   "en": "take care of yourself (said to a woman)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-tishmeri"
+   },
+   "pronunciation": {
+    "israeli": "tishmeri al atzmekh"
    }
   },
   {
@@ -157,9 +181,9 @@
  ],
  "prayerLines": [],
  "goals": [
-  "Choose the right greeting for Shabbat, a holiday, the new year and after Shabbat",
+  "Choose the right greeting for Shabbat, a festival, Rosh Hashana, Yom Kippur and after Shabbat",
   "Know which greetings are for a person and which are for a time",
-  "Reply naturally and keep the register neutral"
+  "Reply naturally; when a greeting is gendered, use the form that matches the person you are speaking to"
  ],
  "estMinutes": 25,
  "prerequisites": [
@@ -329,7 +353,7 @@
    "id": "I-50-e14",
    "type": "register",
    "he": "תִּשְׁמֹר עַל עַצְמְךָ",
-   "en": "take care of yourself",
+   "en": "take care of yourself (said to a man)",
    "answer": "neutral",
    "options": [
     "formal",
@@ -342,6 +366,26 @@
    "type": "recall",
    "he": "בְּעֶזְרַת הַשֵּׁם",
    "en": "God willing"
+  },
+  {
+   "id": "I-50-e16",
+   "type": "respond",
+   "cue": "It is Yom Kippur. Greet your neighbour.",
+   "answer": {
+    "he": "גְּמַר חֲתִימָה טוֹבָה",
+    "en": "A good final sealing."
+   }
+  },
+  {
+   "id": "I-50-e17",
+   "type": "produce",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "options": [
+    "גְּמַר חֲתִימָה טוֹבָה",
+    "שָׁנָה טוֹבָה",
+    "שָׁבוּעַ טוֹב"
+   ],
+   "answer": 0
   }
  ],
  "note": "Greetings for Hanukkah, Purim, Pesach, Sukkot, Yom HaAtzmaut and Yom HaZikaron specific to each festival (for example 'chag Hanukkah sameach' or 'chag Pesach kasher vesameach') have no pointed tokens in the sources except the generic 'chag sameach'; they are listed as gaps in docs/curriculum/INTERMEDIATE.md. Use 'shana tova' only for Rosh Hashana and the days around it."

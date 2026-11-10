@@ -194,6 +194,20 @@
      "קִדּוּשׁ"
     ]
    }
+  },
+  {
+   "he": "חַג כָּשֵׁר וְשָׂמֵחַ",
+   "en": "a kosher and happy holiday (Pesach greeting)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-kasher"
+   },
+   "pronunciation": {
+    "israeli": "chag kasher vesameach",
+    "sephardi": "chag kasher vesameach",
+    "ashkenazi": "chag kosheir vesomeiach"
+   }
   }
  ],
  "prayerLines": [
@@ -205,8 +219,8 @@
  ],
  "goals": [
   "Say the wine blessing and the Shehecheyanu that open the seder",
-  "Find 'the exodus from Egypt' in the Kiddush text",
-  "Wish 'chag sameach' and know which seder texts the corpus does not hold"
+  "Find 'the exodus from Egypt' in the Friday-night Kiddush you already know (the festival Kiddush itself is not yet in the corpus)",
+  "Wish people 'chag kasher vesameach' or 'chag sameach', and know which seder texts the corpus does not hold"
  ],
  "estMinutes": 30,
  "prerequisites": [
@@ -354,7 +368,7 @@
   {
    "id": "I-29-e13",
    "type": "respond",
-   "cue": "The seder begins with Kiddush over wine, then the long Kiddush blessing ends 'mekadesh'. Answer.",
+   "cue": "The first cup at the seder starts with the wine blessing. The leader finishes 'borei pri hagafen'. Answer. (The festival Kiddush that follows, which ends 'who sanctifies Israel and the seasons', is not yet in the corpus.)",
    "answer": {
     "he": "אָמֵן",
     "en": "Amen"
@@ -365,6 +379,17 @@
    "type": "fade",
    "line": "hamotzi",
    "en": "Blessed are you... who brings forth bread from the earth."
+  },
+  {
+   "id": "I-29-e15",
+   "type": "produce",
+   "en": "a kosher and happy holiday (Pesach greeting)",
+   "options": [
+    "חַג כָּשֵׁר וְשָׂמֵחַ",
+    "שָׁנָה טוֹבָה",
+    "שַׁבָּת שָׁלוֹם"
+   ],
+   "answer": 0
   }
  ],
  "note": "The Haggadah (Mah Nishtanah, the four sons, Dayenu, Hallel, the Four Questions) is not in any source file; g-hallel, g-festival-kiddush and the matzo blessings are gaps, and the festival Kiddush text is replaced here by the Shabbat Kiddush lines in the registry. The holiday Kiddush is a gap (g-festival-kiddush); do not treat I-29 as a seder guide."

@@ -48,14 +48,14 @@
   },
   {
    "he": "מִלּוּאִים",
-   "en": "reserve duty",
+   "en": "reserve duty (IDF)",
    "translit": null,
    "pronunciation": {
     "israeli": "milu'im"
    },
    "source": {
-    "file": "data/vocab/words.json",
-    "id": "h8601ee5c"
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-miluim"
    }
   },
   {

@@ -162,6 +162,10 @@ Checks this round: the new unit test for the run of right answers and the browse
 3. Hero images generated from the orders; gold lettering stills checked by a Hebrew reader.
 4. Owner decision: the opening prayer before setup on day one, and before a shared deep link such as `#/ask?q=...`.
 
+## Final polish pass (2026-11-10, about 6 AM)
+
+Headless sweep at phone size of Home, Learn, Progress, Brain Lab, Games, Settings and Read: no script errors, no sideways scrolling. One fix: Brain Lab's "Your Skills" heading sat against the workout card; it now has the standard 1.5 rem gap.
+
 ## Score
 
 Round 7: 94/100 (before this round: 93; the a83e7132d commit reviewed at 93). Round 6: 93/100 (before this round: 91; the 10cc015 commit reviewed at 91). Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

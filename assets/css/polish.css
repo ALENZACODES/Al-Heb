@@ -296,3 +296,35 @@ body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; 
 .alef-summary .rimon-inline { --rimon-size: 132px; position: relative; z-index: 1; }
 .alef-summary .fd-flame { color: inherit; }
 :root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-celebrate-cheer { color: var(--gold-400); }
+
+/* ---------- 12. Round 3: the path reads as stops, not a stack of cards ---------- */
+/* Only the next lesson is a card. Finished and locked lessons are round stops on the dotted trail with their title beside them;
+   a locked stop shows a lock and no dead Start button (the button stays in the page, disabled, for screen readers). */
+.alef-lesson:not(.alef-lesson-available) { background: transparent; border-color: transparent; box-shadow: none; }
+.alef-lesson:not(.alef-lesson-available) .alef-level { display: none; }
+.alef-lesson-locked .alef-btn[disabled] { display: none; }
+.alef-lesson-locked > strong { color: var(--muted); font-weight: var(--fw-medium); }
+.alef-lesson::before { inline-size: 3.2rem; block-size: 3.2rem; inset-inline-start: .4rem; }
+.alef-lesson { padding-inline-start: 4.4rem; min-block-size: 4rem; }
+.alef-lesson-list::before { inset-inline-start: 2rem; }
+:root .alef-lesson-done::before {
+  content: ""; background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2313301a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>") center / 52% no-repeat, var(--gold-500);
+  box-shadow: inset 0 -5px 0 #a97b25;
+}
+:root .alef-lesson-available::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23fff8e6' d='M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z'/></svg>") center / 55% no-repeat, var(--gold-500);
+  box-shadow: inset 0 -5px 0 #a97b25, 0 0 0 6px rgba(217, 164, 65, .3);
+}
+:root:not([data-theme="light"]):not([data-theme^="contrast"]) .alef-lesson-locked::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237f9a7f' stroke-width='2.4' stroke-linecap='round'><rect x='5.5' y='11' width='13' height='9' rx='2'/><path d='M8.5 11V8a3.5 3.5 0 0 1 7 0v3'/></svg>") center / 46% no-repeat, #24402b;
+  border: 0; box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .35);
+}
+:root[data-theme="light"] .alef-lesson-locked::before {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23857f70' stroke-width='2.4' stroke-linecap='round'><rect x='5.5' y='11' width='13' height='9' rx='2'/><path d='M8.5 11V8a3.5 3.5 0 0 1 7 0v3'/></svg>") center / 46% no-repeat, #d9d4c7;
+}
+@media (forced-colors: active) { .alef-lesson::before { forced-color-adjust: none; border: 2px solid CanvasText; } }
+
+/* setup: room under the last option for the two pinned buttons (Continue and the quick start) */
+body.ob-player main { padding-block-end: calc(11rem + env(safe-area-inset-bottom)); scroll-padding-block-end: 11rem; }
+html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
+.alef-lesson-done, .alef-lesson-available { cursor: pointer; }

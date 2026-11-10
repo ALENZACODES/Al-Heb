@@ -58,6 +58,26 @@ Not fixed here, for later rounds: the opening prayer appears before the welcome 
 - Locked path stops and the cheer line are readable on dark green.
 - Branch review round 1: [BRANCH-REVIEW-R1-2026-11-10.md](BRANCH-REVIEW-R1-2026-11-10.md).
 
+## Round 3 (2026-11-10, about 2 AM): self-review against GitHub
+
+Checked against `main` at b574744 (merged in; no conflicts) and `overnight/launch-ready-2026-11-10` at c9e9e17 (already merged). Scripted phone-size walk repeated after the changes.
+
+Fixed this round:
+1. The lesson list still read as a stack of cards. Now only the next lesson is a card; finished lessons are gold stops with a check, the next stop has a star and the Start tag, locked stops show a lock and no dead Start button (the disabled button stays in the page for screen readers).
+2. If a Rimon sheet could not load, the page showed an empty box. Rimon now falls back to his single picture, still.
+3. On the first setup question the two pinned buttons (Continue and the quick start) covered the last answer. The page now leaves room for both.
+4. The branch was three commits behind `main`; merged.
+
+Still open, ranked:
+1. No real phone and no screen reader has been used on any of this; only headless Chrome at 390 x 844 and unit tests.
+2. Three ways of showing Rimon (the animated sheets here, `rimon-show.js` stills on launch-ready, the trigger map on `claude/rimon-mascot`); the stills are opaque cream squares. One map and transparent stills are needed before Rimon can appear on more screens.
+3. The opening prayer is the very first screen on a first visit, before Rimon and setup (the owner asked for Mah Tovu on the first visit; kept, flagged).
+4. Fixed in round 3: a tap anywhere on an open stop opens its lesson (keyboard and screen readers keep the Start or Review button). Still not a pop-over card like Duolingo's.
+5. The first lesson can finish before 5 engaged minutes, so day 1 often does not light on the first visit (rule kept; the flame says how many minutes are left).
+6. Two buttons on the first setup screen (Continue and "New to Hebrew? Start now") split attention; one may be enough.
+7. Progress and Brain Lab use the tokens but were not reworked screen by screen.
+8. No browser-tier test drives the new setup flow; it is covered by fake-DOM unit tests and scripted walks only.
+
 ## Score
 
-Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

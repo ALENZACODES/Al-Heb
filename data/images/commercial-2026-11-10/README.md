@@ -30,3 +30,6 @@ Use these in place of the first versions when ingesting. The originals stay in t
 | `STREAK_v2_lamp_lit_r2.webp` | `STREAK_v2_lamp_lit.webp` | Removed about 6,800 stray magenta pixels around the lamp |
 
 The empty states keep every subject inside the central 80%, so the app can still crop them to a circle. The manifest rows above keep the original order text. The r2 files are delivery fixes against those same orders.
+
+## Third pass (r3), 2026-11-10
+`ONB_v2_letters_r3.webp` replaces `ONB_v2_letters_r2.webp` when ingesting. The r2 file stays on disk. Noa now stands behind the middle stepping stone, so she has a ground line; she is the same on-model bust, unflipped. Rimon, the tree and the three stones are unchanged. Metadata stripped.

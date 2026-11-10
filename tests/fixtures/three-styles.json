@@ -1,0 +1,79 @@
+{
+ "note": "Expected Latin in the app's default spelling scheme (kh=khaf, ch=chet, no doubling). Held flags sephardiPharyngeals and geminateDisplay stay off.",
+ "rows": [
+  {
+   "id": 1,
+   "he": "שַׁבָּת",
+   "israeli": "shabat",
+   "sephardi": "shabat",
+   "ashkenazi": "shabos",
+   "notes": "default geminate off"
+  },
+  {
+   "id": 2,
+   "he": "בָּרוּךְ",
+   "israeli": "barukh",
+   "sephardi": "barukh",
+   "ashkenazi": "borukh"
+  },
+  {
+   "id": 3,
+   "he": "תּוֹרָה",
+   "israeli": "torah",
+   "sephardi": "torah",
+   "ashkenazi": "toroh"
+  },
+  {
+   "id": 4,
+   "he": "אֱמֶת",
+   "israeli": "emet",
+   "sephardi": "emet",
+   "ashkenazi": "emes"
+  },
+  {
+   "id": 5,
+   "he": "בֹּקֶר טוֹב",
+   "israeli": "boker tov",
+   "sephardi": "boker tov",
+   "ashkenazi": "boker tov"
+  },
+  {
+   "id": 6,
+   "he": "שָׁלוֹם",
+   "israeli": "shalom",
+   "sephardi": "shalom",
+   "ashkenazi": "sholom"
+  },
+  {
+   "id": 7,
+   "he": "עוֹלָם",
+   "israeli": "olam",
+   "sephardi": "olam",
+   "ashkenazi": "olom",
+   "notes": "Sephardi ʿ withheld behind STYLE_FLAGS.sephardiPharyngeals"
+  },
+  {
+   "id": 8,
+   "he": "לֶחֶם",
+   "israeli": "lechem",
+   "sephardi": "lechem",
+   "ashkenazi": "lechem",
+   "notes": "Sephardi ḥ withheld behind STYLE_FLAGS.sephardiPharyngeals"
+  },
+  {
+   "id": 9,
+   "he": "אָמֵן",
+   "israeli": "amen",
+   "sephardi": "amen",
+   "ashkenazi": "omein"
+  },
+  {
+   "id": 10,
+   "he": "צָהֳרַיִם",
+   "israeli": "tzohorayim",
+   "sephardi": "tzohorayim",
+   "ashkenazi": "tzohorayim",
+   "notes": "kamatz before chataf kamatz is katan"
+  }
+ ]
+}

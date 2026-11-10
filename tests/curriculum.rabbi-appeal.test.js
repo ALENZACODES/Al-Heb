@@ -133,3 +133,12 @@ test("I-11 and I-19 point at the synagogue companions and still do not cross-req
   assert.ok(!byId["I-19"].prerequisites.includes("I-05"));
   assert.ok(!byId["I-19"].prerequisites.includes("I-06"));
 });
+
+test('r34 names a sourced gershayim example from the calendar, and does not invent an abbreviation', () => {
+  const r34 = byId.r34;
+  assert.ok(r34?.note);
+  assert.match(r34.note, /ט״וּ בִּשְׁבָט/);
+  assert.match(r34.note, /data\/calendar\/days\.json/);
+  assert.doesNotMatch(r34.note, /תנ״ך|בס״ד/);
+  assert.equal((r34.words || []).length, 2);
+});

@@ -133,9 +133,7 @@ None of these was changed. Each needs a decision; a recommendation is given wher
    the second; the phrasebook line uses the first, so it was not changed); `אַרוּחַת בֹּקֶר` (il17) should be `אֲרוּחַת`, but it is the shared
    vocabulary record `pe9c62881` with its own audio, so it belongs to the vocabulary lane; Adon Olam `אִישָׁן` (registry) vs `אִישַׁן`
    (I-09 word and exercise); I-22 `מָה כְּתֹבֶת?` should be `מָה הַכְּתֹבֶת?`, but `הַכְּתֹבֶת` is not attested in the data.
-5. **Content gaps a rabbi will notice**: the Yom Kippur greetings ("g'mar chatimah tovah", which the day page has, and "tzom kal") are not in
-   I-28 or I-50 (adding them was tried: `גְּמַר` is in no vocabulary or corpus source the lessons may draw on, so the
-   no-invented-Hebrew test rightly refused it; it needs a sourced entry first); I-31 (Purim) uses the Hagomel line only to spot a word; r34 says it teaches abbreviation marks but has no example word.
+5. **Content gaps a rabbi will notice**: I-50 now teaches `גְּמַר חֲתִימָה טוֹבָה` (moved to the end of that lesson's word list so existing audio ids stay stable) as the Yom Kippur greeting, alongside `שָׁנָה טוֹבָה` for Rosh Hashana. `צוֹם קַל` is still absent: it is not in the sources the lessons may draw on, so it stays a named gap rather than invented Hebrew. I-31 (Purim) still uses the Hagomel line only to spot a word. r34 now points at the already-sourced calendar date `ט״וּ בִּשְׁבָט` as a gershayim example and does not invent a siddur abbreviation.
 6. **Lesson titles are sentence case** ("Shin and Bet: your first two letters"); the house rule is Title Case. Left for the copy lane.
 7. **Branch name.** This work sits on the lane branch the brief named, which does not follow the `john/<topic>-<date>` pattern in
    `CONTRIBUTING.md`; `sh tools/git/branch-cleanup.sh --apply` renames it when the work is merged.
@@ -151,14 +149,12 @@ synagogue lessons (I-01 to I-10, I-26 to I-35) by a cantor; the prayer notes in 
 
 ## Score
 
-Lane C, rabbi appeal and lesson sense: **78 / 100** after this pass (an estimate, not a measurement; before it, about 68: the course order
-was already sound, but the leader's Priestly Blessing, the Birkat Hamazon Amen, "Gentlemen", "shavua tov" on Friday night and dev wording
-in goals are the kind of slips a rabbi stops at).
+Lane C, rabbi appeal and lesson sense: **81 / 100** after the later 10 November 2026 passes (an estimate, not a measurement; the 78 was from the first overnight pass, and about 68 before that). The later lift is the I-50 Yom Kippur greeting, the r34 gershayim example, named tradition wording on I-08 / I-32 / I-28, and the Judaic-to-Israeli companion notes on il01, r51, I-11 and I-19. None of those lines is clergy-reviewed.
 
-What would raise it:
+What would still raise it:
 - One Ashkenazi-based prayer text, re-sourced with network access (+6).
 - John's decisions on the eight name items above, then applied (+4).
 - Reform optional lines (matriarchs, Aleinu alternative) from a licensed source (+4).
 - A cantor's pass over the 20 synagogue lessons and a native speaker's over the 30 Israel lessons (+6, and it is the only thing that
   lets any line be marked reviewed).
-- Yom Kippur and festival greetings in I-28 and I-50, and an example word in r34 (+2).
+- A sourced `צוֹם קַל` and festival-specific greetings that still have no pointed tokens (+1).

@@ -1305,7 +1305,8 @@
    "estMinutes": 20,
    "prerequisites": [
     "r33"
-   ]
+   ],
+   "note": "The second goal is to recognise geresh (׳) and gershayim (״) when they appear in a printed siddur. A pointed example already in this project is the calendar date ט״וּ בִּשְׁבָט (the 15th of Shevat, in data/calendar/days.json), where the gershayim mark the number 15. Siddur abbreviations use the same marks. This lesson does not add a new Hebrew word of its own."
   },
   {
    "id": "r35",

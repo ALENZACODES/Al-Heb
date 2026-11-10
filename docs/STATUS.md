@@ -236,3 +236,30 @@ This section is a working hand-off for the overnight lesson-integrity branch. It
 - CI run `42777285310` on `e2e93d76a`: `build-dist` green; Unit tier failed 22 tests (not the 22 local audio-only misses). The `-unrecorded.mp3` paths and remapped lesson-word files broke the canonical path contract (`path` must be `audio/{voice}/{tradition}/{kind}/{id}.mp3`, and two ids may not share a path). Fix: move the new I-28 / I-50 greetings to the end of those word lists so existing files keep their original ids; new slots (`i-28-w13`, `i-50-w13`, `i-50-w14`) are `missing` with canonical paths. I-50 w14 aliases `line/greetings-27-f`. The Name line stays on its existing clip. Practical holiday items were remapped by their Hebrew so none points at `i-50-w10` (now בְּעֶזְרַת הַשֵּׁם). The 188 Hallel / Kiddush / leshev word ids were restored as `missing` with `aliasOf` the real parent line (or `-l1` when the registry splits a psalm into lines), so the reader and recording lists have a row and Sephardi playback is not silent. `gcloud-results.json` is skipped by the precache tool because the file is not committed. Privacy now lists `practical.progress` against `practical-progress.js`.
 - Continuity notes (no new Hebrew, no cross-track prerequisites) on `il01`, `r51`, `I-11` and `I-19`, pinned in `tests/curriculum.rabbi-appeal.test.js`.
 - Practical Cloud test still running (PID 2536209): about 460/677 unique items, ~$0.085, cap $15. Tradition-style STT still waiting so the two Vertex jobs do not collide. Disk 3.4 GB free.
+
+
+## Overnight hand-off (10 November 2026, about 3:13 AM ET)
+
+Lesson-integrity lane, still on `feature/lesson-integrity-2026-11-10`. Nothing was merged to `main` or deployed. Disk was brought back above 2.5 GB (about 4.9 GB free after clearing unused `/tmp` lighthouse profiles).
+
+### Practical Cloud test
+Finished (`--resume`, then `--redecide`). Spend **US$0.447** of the US$15 cap, logged in the Practical spend ledger. After `--redecide`: **645 pass / 105 fail / 0 blocked** (95 unique `failing_keys`). Results: `data/curriculum/practical/gcloud-results.json`. Fails for Claude: `overnight-2026-11-10/claude-lanes/PRACTICAL-FAILS-FOR-CLAUDE.md`. The Practical UI already hides failing keys once that results file is present. New leftover-lesson pages (`pu-verbs-now`, `pu-past`, `pu-decide`, extra `pu-fillers` page) were not in this Cloud run (curriculum is now 36 units / 166 pages / 750 sourced items).
+
+### Tradition styles (STYLES-G-r1 applied in part)
+Claude's verdict was right that the styles were not distinct in **playback**. As of this pass the Sephardi and Ashkenazi settings play their **own present bank clips** (the existing paid-cloud / on-disk mp3s). Missing own rows still fall back to the Israeli file of the same voice, and the caption says so. These clips are not claimed as human recordings or as a certified accent. `:mock` sources stay retired.
+
+Ashkenazi Latin already uses **s** for tav without dagesh (pinned in `tests/pronunciation.three-styles.test.js`).
+
+**Held for John, built behind flags, default off, not decided:** `STYLE_FLAGS.sephardiPharyngeals` (ḥ / ʿ) and `STYLE_FLAGS.geminateDisplay` (Shabbos / Sukkot). `src/pronunciation/transliterate.js`.
+
+Clear engine fix applied: kamatz before chataf-kamatz, and `אָזְנַיִם` on the kamatz-katan list, so צָהֳרַיִם / אָזְנַיִם read **tzohorayim** / **oznayim** in all three styles.
+
+Vertex STT of the 50×3 existing clips is running (`--stt`, cap US$5). The report will be finalized in `overnight-2026-11-10/TRADITION-STYLES-TEST-2026-11-10.md` when that job exits. Accent *rendering* (Claude fixes 4–5) was not started (spend and listen gate).
+
+### CI
+`094ca93af` `test` job failed. Besides the usual audio-only / docs-coverage set that also fails on `main`, it correctly caught a stale `word-vocab-map.json` after the I-28 / I-50 word moves (`I-28:11`). That map has been rebuilt locally. Playback tests that assumed retired Sephardi/Ashkenazi files have been updated locally and are not on the remote tip yet. Browser job may still be running. Do not force-push.
+
+### Other
+- r34 now points at the sourced calendar date ט״וּ בִּשְׁבָט as a gershayim example (no new invented abbreviation).
+- Lesson-integrity score note updated to **81 / 100** (estimate) in `docs/review/LESSON-INTEGRITY-2026-11-10.md`.
+- Local unpushed work is ahead of origin; next push should include the map rebuild, precache for the new Practical pages, style playback change, r34 note, and tests. `gcloud-results.json` must stay out of the commit.

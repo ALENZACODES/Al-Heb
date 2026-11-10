@@ -22,10 +22,29 @@ A line that differs from a stored line by a real word is refused, not matched. "
 
 | File | Use |
 |---|---|
-| `data/talk/pack.json` | About 200 sentence pairs with their English wordings, 130 nouns, 24 places, 40 names and the numbers 0 to 12. Written for this project. Not yet checked by a native speaker. |
+| `data/talk/pack.json` | 311 sentence pairs with their English wordings, 234 nouns with gender and plural where needed, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
 | `data/corpus/phrasebook.json` | The 204 phrasebook lines. |
 | `data/curriculum/dialogues.json`, `data/israel/scenarios.json` | Dialogue lines and the natural option of each scene. |
-| `data/vocab/index.json` | The dictionary index. Fetched only when a line needs it. Dictionary answers are always marked low. |
+| `data/vocab/index.json` | The dictionary index. Fetched only when a line needs it. Only a word's first meaning is used, only for nouns inside a pattern or for a single word, and the answer is always marked low. Dictionary glosses are never strung into a sentence. |
+
+## What The Patterns Cover
+
+- Where is, how do I get to, how long does it take to get to, turn left or right after or at.
+- I want, I need, we want, we need, can I have, do you have, is there, how much is, I lost my, I am looking for, I don't eat, I don't drink, thank you for.
+- To-forms after want, need, can I and where can I ("I want to pay", "Where can I park?"). A to-form that cannot take a thing refuses one.
+- Counted things with the right number form ("two beers", "three rooms"), money ("It costs twenty shekels"), clock hours, "in ten minutes", a table or a reservation for a number.
+- Open, closed and late with the noun's gender ("When does the store close?").
+- Things joined by with, without, and, of, to a place, outside, inside, in English.
+
+## Lines As They Are Heard
+
+Speech recognisers drop the article, swap near words and sometimes return a non-word. The engine allows for three of these and no more.
+
+- A dropped article: "איפה בית חולים" is read as "איפה בית החולים".
+- A known swap that keeps the request the same: "ניפגש" for "נתראה", "שמאל" for "שמאלה", "תתקשר" for "תתקשרו".
+- One word that is not a word, within one letter of a stored line (two letters for long words): "שקיד" is read as "שקית". The screen shows the correction.
+
+A misheard word that is itself a real word is a different request. It is translated as heard or refused. "בלי ביצים" stays "No eggs" even if the speaker said "בלי בצל".
 
 ## Code
 
@@ -57,17 +76,31 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on two files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0.
+`tests/talk.engine.test.js` scores the engine on four files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
-| `tests/fixtures/talk.utterances.json` | 100 | 97.3 | 0 | The pack was written with these lines in view, so this is a regression check. It is not a held-out result. |
-| `tests/fixtures/talk.fresh.json` | 60 | 69.6 | 16 | Lines written after the pack. This is the honest number for everyday lines near the pack's topics. |
+| `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack was written with these lines in view. A regression check. |
+| `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1. It scored 69.6 then and has since been used to widen the pack. A regression check. |
+| `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
+| `tests/fixtures/talk.fresh3.json` | 40 | 74.4 | 10 | Written at the end of round 2. No line from it was added. This is the honest number for everyday lines near the pack's topics. It gave no wrong answer after two refusals were added. |
 
-On open conversation outside these topics the engine will mostly refuse. The measured scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+
+## Scoring The Shipped Engine From A Speech Review
+
+`tools/talk/translate.mjs` runs the engine as the screen does, with no network. A speech review can synthesize a line, transcribe it with any recogniser, and pass the transcript through it.
+
+```
+node tools/talk/translate.mjs "Where is the hotel?"
+node tools/talk/translate.mjs --jsonl < transcripts.jsonl > results.jsonl
+node tools/talk/translate.mjs --score tests/fixtures/talk.fresh3.json
+```
+
+Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text": "<transcript>", "reference": "<expected>"}`. Refusals come back with `ok: false` and score 0.
 
 ## Not Built
 
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
-- Number and noun agreement beyond tickets ("two coffees").
+- Past and future sentences, and anything said about a third person ("The children are hungry").
 - Playing the recorded phrasebook clips for stored lines. Today every line uses the device voice.

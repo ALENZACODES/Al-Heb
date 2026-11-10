@@ -2,28 +2,33 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  GAMES, CLASSIC_GAMES, STUDIO_GAMES, CLAUDE_GAMES, SKILLS, MAX_LEVEL, STUDIO_SECONDS, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
-  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords, sessionSeconds,
+  GAMES, CLASSIC_GAMES, STUDIO_GAMES, CLAUDE_GAMES, WORKOUT_GAMES, SKILLS, MAX_LEVEL, STUDIO_SECONDS, dailyWorkout, step, trialPoints, startLevel, summarize, recordSession, emptyState, readState,
+  workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords, sessionSeconds, comboBonus, comboLabel,
 } from '../src/lab/lab.core.js';
 import { DRILLS, _test } from '../src/lab/lab.games.js';
+import { NEW_DRILLS } from '../src/lab/lab.games2.js';
 import { HOLIDAY_DEFS } from '../src/curriculum/calendar.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-test('classic pack stays ten drills; studio adds ten more; every drill has code', () => {
+test('classic pack stays ten drills; Claude adds six; studio adds eleven; every drill has code', () => {
   assert.equal(CLASSIC_GAMES.length, 10);
-  assert.equal(STUDIO_GAMES.length, 10);
-  assert.equal(CLAUDE_GAMES.length, 0);
-  assert.equal(GAMES.length, 20);
+  assert.equal(CLAUDE_GAMES.length, 6);
+  assert.equal(STUDIO_GAMES.length, 11);
+  assert.equal(GAMES.length, 27);
   for (const s of SKILLS) {
     assert.ok(CLASSIC_GAMES.some((g) => g.skill === s.id), s.id);
     assert.ok(STUDIO_GAMES.some((g) => g.skill === s.id), `studio ${s.id}`);
+    assert.ok(GAMES.filter((g) => g.skill === s.id).length >= 2, s.id);
   }
+  const all = { ...DRILLS, ...NEW_DRILLS };
   for (const g of GAMES) {
-    assert.equal(typeof DRILLS[g.id]?.trial, 'function', g.id);
+    assert.equal(typeof all[g.id]?.trial, 'function', g.id);
     assert.ok(['classic', 'studio', 'claude'].includes(g.pack), g.id);
   }
+  assert.deepEqual(Object.keys(NEW_DRILLS).sort(), CLAUDE_GAMES.map((g) => g.id).sort(), 'Claude\'s six are marked as added and live in lab.games2.js');
   for (const g of CLASSIC_GAMES) assert.equal(sessionSeconds(g.id), 45);
+  for (const g of CLAUDE_GAMES) assert.equal(sessionSeconds(g.id), 45);
   for (const g of STUDIO_GAMES) assert.equal(sessionSeconds(g.id), STUDIO_SECONDS);
 });
 
@@ -33,8 +38,18 @@ test('daily workout: three drills, three different skills, same all day, changes
   assert.equal(new Set(a.map((id) => GAMES.find((g) => g.id === id).skill)).size, 3);
   const week = new Set(['2026-11-09', '2026-11-10', '2026-11-11', '2026-11-12'].map((d) => dailyWorkout(d).join()));
   assert.ok(week.size > 1);
-  const classicIds = new Set(CLASSIC_GAMES.map((g) => g.id));
-  for (const id of dailyWorkout('2026-11-10')) assert.ok(classicIds.has(id), id);
+  const workoutIds = new Set(WORKOUT_GAMES.map((g) => g.id));
+  for (const id of dailyWorkout('2026-11-10')) assert.ok(workoutIds.has(id), id);
+  assert.ok(!STUDIO_GAMES.some((g) => dailyWorkout('2026-11-10').includes(g.id)));
+});
+
+test('studio combo bonus starts at three in a row and the label stays empty before that', () => {
+  assert.equal(comboBonus(0), 0); assert.equal(comboBonus(2), 0); assert.equal(comboBonus(3), 5);
+  assert.equal(comboBonus(10, 1), comboBonus(12, 1), 'bonus steps cap at eight (a run of ten)');
+  assert.ok(comboBonus(3, 4) > comboBonus(3, 1));
+  assert.equal(comboLabel(2), '');
+  assert.equal(comboLabel(3), 'Combo ×3');
+  assert.match(comboLabel(8), /Combo ×8/);
 });
 
 test('staircase: two right goes up, a miss goes down, bounded', () => {
@@ -126,4 +141,21 @@ test('number recordings: each linked clip says exactly the same Hebrew, in both 
   for (const n of json('data/lab/numbers.json').numbers.filter((x) => x.clip)) {
     for (const v of ['m', 'f']) assert.ok(words.some((r) => r.id === n.clip && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === n.he), `${n.value} ${v}`);
   }
+});
+
+test('readState: a partial, older or broken saved record can never stop the Brain Lab page from drawing', () => {
+  const st = readState({ games: { hunt: { best: 40 }, matrix: { history: null }, gematria: 'x', pattern: { history: [null, { s: 12, d: '2026-11-09' }], best: 'NaN' } }, workouts: { '2026-11-09': {}, '2026-11-08': { done: 'hunt' }, '2026-11-07': null } });
+  assert.deepEqual(st.games.hunt, { best: 40, plays: 0, lastMax: 1, history: [] });
+  assert.deepEqual(st.games.matrix.history, []);
+  assert.equal(st.games.gematria, undefined, 'a non-object record is dropped');
+  assert.deepEqual(st.games.pattern.history, [{ s: 12, d: '2026-11-09' }]);
+  assert.equal(st.games.pattern.best, 0); assert.equal(st.games.pattern.plays, 1);
+  for (const d of ['2026-11-09', '2026-11-08', '2026-11-07']) assert.deepEqual(st.workouts[d].done, [], d);
+  // everything the hub draws from that record works
+  for (const s of SKILLS) assert.doesNotThrow(() => skillScore(st, s.id));
+  assert.doesNotThrow(() => overallScore(st));
+  assert.doesNotThrow(() => workoutStreak(st, '2026-11-09'));
+  assert.doesNotThrow(() => dailyWorkout('2026-11-09', st));
+  assert.doesNotThrow(() => recordSession(st, 'hunt', summarize([{ ok: true, ms: 800, level: 1, pts: 15 }]), '2026-11-09'));
+  for (const junk of [null, 'oops', 7, [], { games: [], workouts: [] }]) assert.deepEqual(readState(junk), { games: {}, workouts: {} }, JSON.stringify(junk));
 });

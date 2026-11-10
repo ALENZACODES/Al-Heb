@@ -7,7 +7,7 @@ import { hebrewNumeral } from '../src/curriculum/calendar.js';
 import {
   holdsDivineName, wordBurstPuzzle, migrationPuzzle, starSearchPuzzle, rootForgePuzzle, rootForgeNextOk,
   letterSequencePuzzle, speedMatchPuzzle, letterSpanPuzzle, letterSpanOk, vowelRainPuzzle, tileTurnPuzzle,
-  pathWordPuzzle, pathWordFollows, pathWordReads,
+  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, shortEnglish,
 } from '../src/lab/lab.studio.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
@@ -29,11 +29,13 @@ for (const f of famRaw.families || []) {
   if (withRoot.length) fams.push({ root, rootHe: f.root, words: withRoot, easy: withRoot.filter((w) => w.level === 'A1' || w.level === 'A2') });
 }
 
-test('studio games: ten Lumosity-style trainers, every skill, unique ids, drills registered', () => {
-  assert.equal(STUDIO_GAMES.length, 10);
+test('studio games: eleven Lumosity-style trainers, every skill, unique ids, drills registered', () => {
+  assert.equal(STUDIO_GAMES.length, 11);
   const ids = STUDIO_GAMES.map((g) => g.id);
-  assert.deepEqual(ids, ['wordburst', 'migration', 'starsearch', 'rootforge', 'letterseq', 'speedmatch', 'letterspan', 'vowelrain', 'tileturn', 'pathword']);
-  assert.equal(new Set(ids).size, 10);
+  assert.deepEqual(ids, ['wordburst', 'migration', 'starsearch', 'rootforge', 'letterseq', 'speedmatch', 'letterspan', 'vowelrain', 'tileturn', 'pathword', 'echo']);
+  assert.equal(new Set(ids).size, 11);
+  assert.equal(STUDIO_GAMES.find((g) => g.id === 'vowelrain').title, 'Vowel Storm');
+  assert.equal(STUDIO_GAMES.find((g) => g.id === 'echo').listening, true);
   for (const s of SKILLS) assert.ok(STUDIO_GAMES.some((g) => g.skill === s.id), s.id);
   assert.ok(STUDIO_GAMES.filter((g) => g.skill === 'problem').length >= 2);
   for (const g of STUDIO_GAMES) {
@@ -201,5 +203,32 @@ test('Path Word: the embedded path is connected, spells a verified word, and nev
       assert.equal(pathWordReads(pz.grid, pz.path), pz.spelling.join(''));
       assert.equal(pathWordFollows([[0, 0], [2, 2]]), false);
     }
+  }
+});
+
+test('Word Burst English meanings stay short (about three words or 22 characters)', () => {
+  assert.equal(shortEnglish('water'), 'water');
+  assert.equal(shortEnglish('to write a long official letter; correspondence'), 'to write a');
+  assert.ok(shortEnglish('a very long dictionary gloss that keeps going and going').length <= 22
+    || shortEnglish('a very long dictionary gloss that keeps going and going').split(/\s+/).length <= 3);
+  for (let lv = 1; lv <= 3; lv++) {
+    const pz = wordBurstPuzzle(allWords, lv, seeded(4400 + lv));
+    assert.ok(pz.target.en.length <= 22 || pz.target.en.split(/\s+/).length <= 3, pz.target.en);
+    assert.doesNotMatch(pz.target.en, /;/);
+  }
+});
+
+test('Echo Hunt: a unique target from the verified lists, no divine name, choices include the target once', () => {
+  const cafe = json('data/lab/words.json').cafe.map((w) => ({ ...w, en: w.en, tr: w.tr, clip: w.clip }));
+  const dirs = json('data/lab/words.json').directions.map((w) => ({ ...w, en: w.en, tr: w.tr, clip: w.clip }));
+  const words = [...cafe, ...dirs].filter((w) => w.he && !holdsDivineName(w.he));
+  assert.ok(words.length >= 20);
+  for (let lv = 1; lv <= MAX_LEVEL; lv++) {
+    const pz = echoHuntPuzzle(words, lv, seeded(8800 + lv));
+    assert.equal(holdsDivineName(pz.target.he), false);
+    assert.ok(pz.choices.some((c) => c.he === pz.target.he));
+    assert.equal(pz.choices.filter((c) => c.he === pz.target.he).length, 1);
+    assert.equal(new Set(pz.choices.map((c) => c.he)).size, pz.choices.length);
+    assert.ok(pz.choices.length >= 3);
   }
 });

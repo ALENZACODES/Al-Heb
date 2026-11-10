@@ -86,6 +86,9 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/audio/synth-music.js',
   // Songs page and the celebration sting: loaded on first open / first lesson finished with music on, then runtime-cached.
   'src/listen/songs.view.js', 'src/audio/sting.js',
+  // Optional 'Sound like a local' view (18 KB): loaded when #/israel first opens, runtime-cached.
+  // Restores 0.05 MiB of first-install headroom after the Brain Lab warm-up landed on a tighter main.
+  'src/israel/israel.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).

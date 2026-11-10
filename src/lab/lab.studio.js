@@ -39,7 +39,7 @@ const loadFamilies = (env) => once('families', async () => {
   for (const f of raw.families || []) {
     const root = consonants(f.root);
     const words = (f.words || []).filter((w) => w.he && w.en && !holdsDivineName(w.he)).map((w) => ({
-      id: w.id, he: w.he, en: String(w.en).split(/[;,]/)[0].trim(), unpointed: w.unpointed || consonants(w.he),
+      id: w.id, he: w.he, en: shortEnglish(w.en), unpointed: w.unpointed || consonants(w.he),
       level: w.level, translit: w.translit, root, rootHe: f.root,
     }));
     allWords.push(...words);
@@ -87,6 +87,23 @@ const uniqueBy = (arr, key) => {
   return out;
 };
 
+/** Cap a dictionary gloss at about three words or 22 characters, cutting only at a word boundary. Never invents wording. */
+export function shortEnglish(en, maxChars = 22, maxWords = 3) {
+  const s = String(en || '').split(/[;,]/)[0].trim();
+  if (!s) return '';
+  const words = s.split(/\s+/).slice(0, maxWords);
+  const joined = words.join(' ');
+  if (joined.length <= maxChars) return joined;
+  let out = '';
+  for (const w of words) {
+    const next = out ? `${out} ${w}` : w;
+    if (out && next.length > maxChars) break;
+    out = next;
+  }
+  return out || words[0];
+}
+
+
 // ---------- Pure puzzle builders (tested) ----------
 
 /** Word Burst: a grid with one target word hidden among other verified words. */
@@ -101,7 +118,8 @@ export function wordBurstPuzzle(words, level, rnd = Math.random) {
   const others = sample(src.filter((w) => consonants(w.he) !== consonants(target.he)), n - targets, rnd);
   const board = shuffle([...Array(targets).fill(target), ...others], rnd);
   const showEn = level <= 3;
-  return { target, board, cols: side, targets, showEn };
+  const targetShort = { ...target, en: shortEnglish(target.en) };
+  return { target: targetShort, board: board.map((w) => (w === target ? targetShort : { ...w, en: shortEnglish(w.en) })), cols: side, targets, showEn };
 }
 
 /** Migration Birds: a flock with a unique highest value, labelled as a Hebrew numeral or a number word. */
@@ -365,6 +383,37 @@ export function pathWordFollows(path) {
 }
 export function pathWordReads(grid, path) {
   return path.map(([x, y]) => grid[y][x]).join('');
+}
+
+
+const loadLabWords = (env) => once('lab-words', async () => {
+  const raw = await getJSON(env, 'data/lab/words.json');
+  const nums = await loadNumbers(env);
+  const out = [];
+  for (const row of [...(raw.cafe || []), ...(raw.directions || [])]) {
+    if (!row?.he || holdsDivineName(row.he)) continue;
+    const clip = row.clip && row.clip.kind && row.clip.id ? row.clip : null;
+    out.push({ id: row.id, he: row.he, en: shortEnglish(row.en), tr: row.tr || '', clip, level: row.tier === 1 ? 'A1' : 'A2' });
+  }
+  for (const n of nums) {
+    if (!n?.he || holdsDivineName(n.he)) continue;
+    // Number clips in numbers.json are a bare id (the word recording). Kind is always "word".
+    const clip = n.clip ? (typeof n.clip === 'string' ? { kind: 'word', id: n.clip } : n.clip) : null;
+    out.push({ id: n.id, he: n.he, en: shortEnglish(n.en || ''), tr: n.tr || '', clip, level: 'A1' });
+  }
+  return uniqueBy(out, (w) => consonants(w.he));
+});
+
+/** Echo Hunt: one recorded (or written) target word among other verified words from the same lists. */
+export function echoHuntPuzzle(words, level, rnd = Math.random) {
+  const pool = uniqueBy(words.filter((w) => w.he && !holdsDivineName(w.he) && (w.tr || w.en)), (w) => consonants(w.he));
+  const n = level <= 3 ? 3 : level <= 6 ? 4 : 5;
+  const withClip = pool.filter((w) => w.clip && w.clip.kind && w.clip.id);
+  const src = withClip.length >= n ? withClip : pool;
+  const target = src[randInt(rnd, src.length)];
+  const others = sample(src.filter((w) => consonants(w.he) !== consonants(target.he)), Math.min(n - 1, src.length - 1), rnd);
+  const choices = shuffle([target, ...others], rnd);
+  return { target, choices, cols: choices.length, hasClip: !!(target.clip && target.clip.kind && target.clip.id) };
 }
 
 // ---------- Drills ----------
@@ -700,12 +749,51 @@ const pathword = {
   },
 };
 
+
+const echo = {
+  load: loadLabWords,
+  async trial(env, level) {
+    const pz = echoHuntPuzzle(env.data, level, env.rnd);
+    const t0 = env.now();
+    const clip = pz.target.clip;
+    let heard = false;
+    if (clip && env.hasClip?.(clip.kind, clip.id)) {
+      heard = !!(await env.playClip(clip.kind, clip.id, pz.target.he));
+    }
+    // Sound off, a missing file, or a failed play: the written sound of the same word is shown instead. Never invented.
+    const sound = pz.target.tr || pz.target.en;
+    env.prompt(heard
+      ? env.h('span', {}, 'Tap the word you heard.')
+      : env.h('span', {}, 'Sound is off or this clip is missing. Tap the word that sounds like ', env.h('b', {}, sound), '.'));
+    const replay = (clip && env.hasClip?.(clip.kind, clip.id))
+      ? env.h('button', { type: 'button', class: 'btn secondary', 'aria-label': 'Hear the word again', onclick: () => env.playClip(clip.kind, clip.id, pz.target.he) }, 'Hear again')
+      : null;
+    return new Promise((resolve) => {
+      const g = grid(env, pz.choices.length, pz.cols, (i, b) => {
+        b.append(big(env, pz.choices[i].he, 'lab-word'));
+        b.setAttribute('aria-label', pz.choices[i].he);
+      }, (i, b) => {
+        const ok = consonants(pz.choices[i].he) === consonants(pz.target.he);
+        mark(b, ok);
+        if (ok) burst(b);
+        else env.say(`It was ${pz.target.he}${pz.target.en ? `, ${pz.target.en}` : ''}.`);
+        resolve({ ok, ms: env.now() - t0, par: 2200 });
+      }, 'Heard word', 'lab-cell lab-tile3d lab-wordcell');
+      env.board.replaceChildren(...[replay, g.el].filter(Boolean));
+      env.keys((k) => {
+        const n = Number(k);
+        if (n >= 1 && n <= g.cells.length) g.cells[n - 1].click();
+      });
+    });
+  },
+};
+
 export const STUDIO_DRILLS = Object.freeze({
-  wordburst, migration, starsearch, rootforge, letterseq, speedmatch, letterspan, vowelrain, tileturn, pathword,
+  wordburst, migration, starsearch, rootforge, letterseq, speedmatch, letterspan, vowelrain, tileturn, pathword, echo,
 });
 
 export const _studioTest = {
   holdsDivineName, VOWEL_SAY, wordBurstPuzzle, migrationPuzzle, starSearchPuzzle, rootForgePuzzle, rootForgeNextOk,
   letterSequencePuzzle, speedMatchPuzzle, letterSpanPuzzle, letterSpanOk, vowelRainPuzzle, tileTurnPuzzle,
-  pathWordPuzzle, pathWordFollows, pathWordReads,
+  pathWordPuzzle, pathWordFollows, pathWordReads, echoHuntPuzzle, shortEnglish,
 };

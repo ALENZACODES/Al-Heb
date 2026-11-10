@@ -1,0 +1,569 @@
+{
+  "title": "ALEF Brain Lab picture orders: the six new games",
+  "date": "2026-11-10",
+  "basedOn": "the Brain Lab games branch, 2026-11-10",
+  "status": "orders only; every picture already has a slot in the code and shows once ingested and approved",
+  "houseStyle": "You are drawing a matching set of pictures for ALEF, a Hebrew-learning app for adults.\nKeep the look of the app's existing pictures: the golden olive tree, the green-and-gold medallions,\nand the characters Ari, Noa and Rimon exactly as on the attached sheets.\n\nHOUSE STYLE (\"Tree\"): flat vector illustration, thick rounded charcoal outlines (#2B2B2B), flat fills,\nno gradients, no gloss, no photo-realism, no 3D render, gentle light from the upper left.\nEvery subject is centred with a 10% margin unless the row says otherwise.\n\nPALETTE: deep green #1E4634, darkest green #16301C, olive #6B7F3A, warm gold #D9A441,\nlight gold #E9C46A, paper cream #F6F1E7, warm white #FFFAF0, pomegranate red #B0373B (small accents only).\nNavy #1F3A5F only where a character already wears it (Ari's T-shirt, Rimon's scarf). No other colours.\n\nCHARACTERS (never redesign them):\n- Ari: a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin,\n  navy T-shirt, simple silver chain; no kippah unless the row says \"synagogue look\".\n- Noa: a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin,\n  terracotta blouse, small gold hoop earrings.\n- Rimon: a round red pomegranate mascot with the pomegranate's own small gold crown on top,\n  a navy scarf, rosy cheeks, a simple smile, short stick arms and legs.\n\nRULES FOR EVERY PICTURE\n- No text of any kind: no letters in any alphabet, no numbers, no words in speech bubbles,\n  no captions, no logos, no pseudo-Hebrew. Books, prayer books, cards, signs, maps and screens\n  are closed, blank, or show plain lines only. Hebrew is added later by the app as real type.\n- Everyday modest clothing. No depiction of God. No open Torah scroll. No Temple objects.\n- Draw exactly one picture per row, at the size the row gives. No border or frame unless the row asks.\n- When a row says \"transparent\": a PNG with a transparent background. If transparency is not\n  available, use one flat solid magenta #FF00FF background with no shadow, and no magenta in the subject.",
+  "count": 41,
+  "games": [
+    {
+      "id": "twins",
+      "title": "Sound Twins",
+      "skill": "Speed",
+      "howItPlays": "Letters appear one at a time; say whether each makes the same sound as the one before (two before from level 7). Twins such as Tet and Tav, Kaf and Qof, Vet and Vav.",
+      "images": [
+        {
+          "id": "LAB_v2_twins",
+          "file": "LAB_v2_twins.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "Two blank cream cards standing side by side, joined by one gold sound wave that passes through both.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "Two blank cream cards standing side by side, joined by one gold sound wave that passes through both. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_twins_cover",
+          "file": "LAB_v2_twins_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "Ari and Noa face each other in a sunny Jerusalem-stone courtyard, each holding up one blank cream card at chest height; matching gold sound waves rise from both cards and meet in the middle. Rimon stands between them, turning his head from one card to the other with a delighted smile. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari and Noa face each other in a sunny Jerusalem-stone courtyard, each holding up one blank cream card at chest height; matching gold sound waves rise from both cards and meet in the middle. Rimon stands between them, turning his head from one card to the other with a delighted smile. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_twins_play",
+          "file": "LAB_v2_twins_play.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "The face of a game card, full-bleed square with no background around it: warm white #FFFAF0 field, a thin warm-gold inset border 5% from the edge, a tiny olive sprig in each corner. The centre 70% is plain and evenly lit (a big Hebrew letter sits on it at about 130 px).",
+          "screen": "Behind the letter on each Sound Twins card (.lab-twin background, about 130 px); switched off under high contrast",
+          "refs": [],
+          "prompt": "The face of a game card, full-bleed square with no background around it: warm white #FFFAF0 field, a thin warm-gold inset border 5% from the edge, a tiny olive sprig in each corner. The centre 70% is plain and evenly lit (a big Hebrew letter sits on it at about 130 px). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_twins_win",
+          "file": "LAB_v2_twins_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon holding two identical blank cream cards high above his head, one in each hand, grinning, two small gold sound arcs between the cards.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon holding two identical blank cream cards high above his head, one in each hand, grinning, two small gold sound arcs between the cards. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "rain",
+      "title": "Vowel Rain",
+      "skill": "Speed",
+      "howItPlays": "A syllable falls from the sky; tap its vowel sound (a, e, i, o, u) before it lands. New vowel signs arrive as the level climbs.",
+      "images": [
+        {
+          "id": "LAB_v2_rain",
+          "file": "LAB_v2_rain.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "One cream raindrop with a small gold dot just under it (like a vowel point), two smaller cream drops behind it.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "One cream raindrop with a small gold dot just under it (like a vowel point), two smaller cream drops behind it. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_rain_cover",
+          "file": "LAB_v2_rain_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "A light sunny shower over a Jerusalem-stone street: Noa holds a deep-green umbrella and smiles up at falling cream raindrops, each drop with one small gold dot under it; Rimon holds out a small cup to catch a drop. The drops are blank: no marks inside them. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "A light sunny shower over a Jerusalem-stone street: Noa holds a deep-green umbrella and smiles up at falling cream raindrops, each drop with one small gold dot under it; Rimon holds out a small cup to catch a drop. The drops are blank: no marks inside them. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_rain_play",
+          "file": "LAB_v2_rain_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "transparent": false,
+          "shows": "Portrait sky backdrop: pale mint-to-cream sky, three soft cream clouds in the top 15%, a low olive-green hill with two small olive trees along the bottom 10%. The middle 75% is plain open sky, evenly lit and low in contrast (syllable drops fall through it).",
+          "screen": "Behind the falling drops (.lab-sky background, about 350 x 210 px, cover-fitted); switched off under high contrast",
+          "refs": [],
+          "prompt": "Portrait sky backdrop: pale mint-to-cream sky, three soft cream clouds in the top 15%, a low olive-green hill with two small olive trees along the bottom 10%. The middle 75% is plain open sky, evenly lit and low in contrast (syllable drops fall through it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_rain_drop",
+          "file": "LAB_v2_rain_drop.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "One big friendly raindrop shape, warm white fill, thick deep-green #1E4634 outline, a small gold highlight at the upper left; plain and empty inside (the app writes a Hebrew syllable on it at about 60 px). No face.",
+          "screen": "Each falling drop (.lab-drop, about 72 px)",
+          "refs": [],
+          "prompt": "One big friendly raindrop shape, warm white fill, thick deep-green #1E4634 outline, a small gold highlight at the upper left; plain and empty inside (the app writes a Hebrew syllable on it at about 60 px). No face. House style. Transparent background (PNG with alpha). Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_rain_win",
+          "file": "LAB_v2_rain_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon holding a small deep-green umbrella and splashing happily in a tiny puddle, a few cream raindrops with gold dots around him.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon holding a small deep-green umbrella and splashing happily in a tiny puddle, a few cream raindrops with gold dots around him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "middle",
+      "title": "Middle Letter",
+      "skill": "Attention",
+      "howItPlays": "A row of five (later seven) letters; name only the middle one, even when its neighbours are its look-alikes.",
+      "images": [
+        {
+          "id": "LAB_v2_middle",
+          "file": "LAB_v2_middle.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "Five blank cream tiles in a row; the middle tile is gold and a little raised.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "Five blank cream tiles in a row; the middle tile is gold and a little raised. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_middle_cover",
+          "file": "LAB_v2_middle_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "Ari in a cosy bookshop studies a shelf of identical cream book spines with one gold spine exactly in the middle; Rimon stands on a small footstool and points at the gold one. Every spine is blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Ari in a cosy bookshop studies a shelf of identical cream book spines with one gold spine exactly in the middle; Rimon stands on a small footstool and points at the gold one. Every spine is blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_middle_win",
+          "file": "LAB_v2_middle_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon standing on top of the middle tile of a row of five blank cream tiles, arms raised in a V; the middle tile glows gold.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon standing on top of the middle tile of a row of five blank cream tiles, arms raised in a V; the middle tile glows gold. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": "Taxi Turns",
+      "skill": "Flexibility",
+      "howItPlays": "A Hebrew sign says right, left or straight on, and stands on one side of the road. Follow the word or the side, as the rule switches.",
+      "images": [
+        {
+          "id": "LAB_v2_taxi",
+          "file": "LAB_v2_taxi.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A gold road sign on a short post with one thick curved arrow bending to the right.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "A gold road sign on a short post with one thick curved arrow bending to the right. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_taxi_cover",
+          "file": "LAB_v2_taxi_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "Golden hour on a Tel Aviv street with low white buildings and palm trees: a warm-gold taxi seen from behind at a junction; Ari leans out of the back window pointing right, Noa on the pavement points left and laughs; Rimon sits on the taxi roof, holding on to its blank roof sign. Every street sign is blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Golden hour on a Tel Aviv street with low white buildings and palm trees: a warm-gold taxi seen from behind at a junction; Ari leans out of the back window pointing right, Noa on the pavement points left and laughs; Rimon sits on the taxi roof, holding on to its blank roof sign. Every street sign is blank. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_taxi_play",
+          "file": "LAB_v2_taxi_play.png",
+          "role": "in-game",
+          "size": "1024x1536",
+          "transparent": false,
+          "shows": "Driver's-eye view of a straight three-lane road going ahead in perspective: charcoal asphalt, cream lane lines, low white buildings and palm trees at the far left and right edges only, soft evening sky in the top 15%. The road in the middle 70% is plain and calm (a sign with a Hebrew word and a small taxi sit on it).",
+          "screen": "Behind the road board (.lab-road background, about 380 x 180 px); switched off under high contrast",
+          "refs": [],
+          "prompt": "Driver's-eye view of a straight three-lane road going ahead in perspective: charcoal asphalt, cream lane lines, low white buildings and palm trees at the far left and right edges only, soft evening sky in the top 15%. The road in the middle 70% is plain and calm (a sign with a Hebrew word and a small taxi sit on it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1024x1536. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_taxi_cab",
+          "file": "LAB_v2_taxi_cab.png",
+          "role": "in-game",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "A friendly small taxi seen straight from behind: warm gold #E9C46A body, deep-green rear window, a blank cream roof sign, two small red tail lights; simple and bold so it reads at 48 px. No people, no plate numbers.",
+          "screen": "The taxi that moves left, right or ahead after each answer (.lab-cab, about 48 px)",
+          "refs": [],
+          "prompt": "A friendly small taxi seen straight from behind: warm gold #E9C46A body, deep-green rear window, a blank cream roof sign, two small red tail lights; simple and bold so it reads at 48 px. No people, no plate numbers. House style. Transparent background (PNG with alpha). Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_taxi_win",
+          "file": "LAB_v2_taxi_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon driving a small warm-gold taxi seen from the front at three-quarters, waving one hand out of the window, the roof sign blank.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon driving a small warm-gold taxi seen from the front at three-quarters, waving one hand out of the window, the roof sign blank. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "title": "Café Order",
+      "skill": "Memory",
+      "howItPlays": "Noa or Ari orders food and drink in Hebrew; remember the order and bring it from the menu in the same order.",
+      "images": [
+        {
+          "id": "LAB_v2_cafe",
+          "file": "LAB_v2_cafe.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A cream coffee cup on a gold saucer with a small olive sprig beside it.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "A cream coffee cup on a gold saucer with a small olive sprig beside it. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_cafe_cover",
+          "file": "LAB_v2_cafe_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "A sunny Tel Aviv street café: Noa at the counter ordering with a friendly open-hand gesture, Ari behind the counter in a deep-green apron holding a blank notepad, Rimon carrying a small tray with a coffee cup and a pita. A blank chalkboard menu on the wall. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_ari_sheet.800.webp",
+            "assets/img/gen/CHAR_noa_sheet.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "A sunny Tel Aviv street café: Noa at the counter ordering with a friendly open-hand gesture, Ari behind the counter in a deep-green apron holding a blank notepad, Rimon carrying a small tray with a coffee cup and a pita. A blank chalkboard menu on the wall. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_sheet.800.webp, assets/img/gen/CHAR_noa_sheet.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_cafe_play",
+          "file": "LAB_v2_cafe_play.png",
+          "role": "in-game",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "A café counter seen from the customer's side: warm olive-wood counter top across the bottom 20%, a blank cream chalkboard frame along the very top, a potted olive plant at the far left and a glass jar of biscuits at the far right. The middle is a plain warm-cream wall, evenly lit (the order card and the menu sit on it).",
+          "screen": "Behind the order card and menu (.lab-cafe background, about 360 x 300 px); switched off under high contrast",
+          "refs": [],
+          "prompt": "A café counter seen from the customer's side: warm olive-wood counter top across the bottom 20%, a blank cream chalkboard frame along the very top, a potted olive plant at the far left and a glass jar of biscuits at the far right. The middle is a plain warm-cream wall, evenly lit (the order card and the menu sit on it). House style. No characters. Calm and low in contrast so the Hebrew on top stays easy to read. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_cafe_win",
+          "file": "LAB_v2_cafe_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon as a proud waiter: a small deep-green apron below his navy scarf (the scarf stays fully visible), holding up a tray with a coffee cup, a glass of water and a pita, big smile.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon as a proud waiter: a small deep-green apron below his navy scarf (the scarf stays fully visible), holding up a tray with a coffee cup, a glass of water and a pita, big smile. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "chain",
+      "title": "Prayer Chain",
+      "skill": "Memory",
+      "howItPlays": "A blessing or prayer starts; tap its next words in order. The divine name is filled in for the learner and is never a choice.",
+      "images": [
+        {
+          "id": "LAB_v2_chain",
+          "file": "LAB_v2_chain.png",
+          "role": "token",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "Three linked gold chain links in a row, slightly curved.",
+          "screen": "Brain Lab page: the 56 px round token beside the game (lab.view.js token()), and in Today's Workout (40 px)",
+          "refs": [
+            "assets/img/gen/BADGE_streak-7.800.webp"
+          ],
+          "prompt": "Three linked gold chain links in a row, slightly curved. TOKEN RECIPE (the same as the ten Brain Lab tokens already drawn; attach LAB_v2_hunt and LAB_v2_switch from data/images/commercial-2026-11-10/ on the commercial images branch so the set matches): one round token centred on paper cream #F6F1E7, filling about 88% of the square; deep green #1E4634 disc, one thin warm-gold ring (no wreath), one simple symbol in gold #D9A441 and warm white #FFFAF0 with thick rounded outlines; no text, no numerals. Must read at 56 px. Attach as reference: assets/img/gen/BADGE_streak-7.800.webp. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_chain_cover",
+          "file": "LAB_v2_chain_cover.png",
+          "role": "cover",
+          "size": "1536x1024",
+          "transparent": false,
+          "shows": "Inside a warm, simple synagogue with tall windows and soft light (no Torah scroll, no ark curtain with writing, nothing written anywhere): Ari in his synagogue look and Noa stand side by side holding closed deep-green prayer books; above them a gently curving chain of small blank cream tiles joined by gold links floats in the light; Rimon at the front looks up at it with a calm smile. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1).",
+          "screen": "Intro card above the game title (lab.view.js intro(), 2:1 crop, full card width)",
+          "refs": [
+            "assets/img/gen/CHAR_ari_synagogue.800.webp",
+            "assets/img/gen/CHAR_noa_synagogue.800.webp",
+            "assets/img/gen/MASCOT_rimon.800.webp"
+          ],
+          "prompt": "Inside a warm, simple synagogue with tall windows and soft light (no Torah scroll, no ark curtain with writing, nothing written anywhere): Ari in his synagogue look and Noa stand side by side holding closed deep-green prayer books; above them a gently curving chain of small blank cream tiles joined by gold links floats in the light; Rimon at the front looks up at it with a calm smile. Keep every character and the key object inside the band y=128 to y=896 (the app crops it to 2:1). House style. Attach as reference: assets/img/gen/CHAR_ari_synagogue.800.webp, assets/img/gen/CHAR_noa_synagogue.800.webp, assets/img/gen/MASCOT_rimon.800.webp. Size: 1536x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_chain_win",
+          "file": "LAB_v2_chain_win.png",
+          "role": "win",
+          "size": "1024x1024",
+          "transparent": true,
+          "shows": "Rimon hugging a closed deep-green prayer book with gold-edged pages (cover blank), eyes in happy arcs, a short chain of three gold links curling beside him.",
+          "screen": "Results card above the stars (lab.view.js results(), about 180 px)",
+          "refs": [
+            "assets/img/gen/MASCOT_rimon.800.webp",
+            "assets/img/rimon/rimon-sprite.png"
+          ],
+          "prompt": "Rimon hugging a closed deep-green prayer book with gold-edged pages (cover blank), eyes in happy arcs, a short chain of three gold links curling beside him. House style. Transparent background (PNG with alpha). Attach as reference: assets/img/gen/MASCOT_rimon.800.webp, assets/img/rimon/rimon-sprite.png. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    },
+    {
+      "id": "cafe-menu",
+      "title": "Café Order menu pictures",
+      "skill": "Memory",
+      "howItPlays": "The menu tiles show the English word; a picture helps beginners find it fast. Twelve café words already have a picture ordered in Block J (J-0961 tea and others); these are the other seventeen.",
+      "images": [
+        {
+          "id": "LAB_v2_menu_water",
+          "file": "LAB_v2_menu_water.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a clear glass of cold water.",
+          "screen": "Café Order menu tile for \"water\" (lab.games2.js, about 56 px; dictionary word p7f7d7b8f)",
+          "refs": [],
+          "prompt": "A single picture of a clear glass of cold water. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_coffee",
+          "file": "LAB_v2_menu_coffee.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a cup of coffee on a saucer.",
+          "screen": "Café Order menu tile for \"coffee\" (lab.games2.js, about 56 px; dictionary word h06440deb)",
+          "refs": [],
+          "prompt": "A single picture of a cup of coffee on a saucer. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_falafel",
+          "file": "LAB_v2_menu_falafel.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a few golden falafel balls on a small plate.",
+          "screen": "Café Order menu tile for \"falafel\" (lab.games2.js, about 56 px; dictionary word pa04b1f3c)",
+          "refs": [],
+          "prompt": "A single picture of a few golden falafel balls on a small plate. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_pita-bread",
+          "file": "LAB_v2_menu_pita-bread.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of one round pita bread.",
+          "screen": "Café Order menu tile for \"pita bread\" (lab.games2.js, about 56 px; dictionary word pf8630913)",
+          "refs": [],
+          "prompt": "A single picture of one round pita bread. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_salad",
+          "file": "LAB_v2_menu_salad.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a bowl of chopped Israeli salad (tomato and cucumber).",
+          "screen": "Café Order menu tile for \"salad\" (lab.games2.js, about 56 px; dictionary word p5e953ba9)",
+          "refs": [],
+          "prompt": "A single picture of a bowl of chopped Israeli salad (tomato and cucumber). WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_shakshuka",
+          "file": "LAB_v2_menu_shakshuka.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a small pan of shakshuka: eggs in tomato sauce.",
+          "screen": "Café Order menu tile for \"shakshuka\" (lab.games2.js, about 56 px; dictionary word p43836f09)",
+          "refs": [],
+          "prompt": "A single picture of a small pan of shakshuka: eggs in tomato sauce. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_espresso",
+          "file": "LAB_v2_menu_espresso.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a tiny espresso cup on a saucer.",
+          "screen": "Café Order menu tile for \"espresso\" (lab.games2.js, about 56 px; dictionary word p6296527a)",
+          "refs": [],
+          "prompt": "A single picture of a tiny espresso cup on a saucer. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_latte-style-milky-coffee",
+          "file": "LAB_v2_menu_latte-style-milky-coffee.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a tall glass of milky coffee with foam on top (hafuch).",
+          "screen": "Café Order menu tile for \"latte-style milky coffee\" (lab.games2.js, about 56 px; dictionary word p80064ddc)",
+          "refs": [],
+          "prompt": "A single picture of a tall glass of milky coffee with foam on top (hafuch). WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_soup",
+          "file": "LAB_v2_menu_soup.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a bowl of hot soup.",
+          "screen": "Café Order menu tile for \"soup\" (lab.games2.js, about 56 px; dictionary word h1efbc546)",
+          "refs": [],
+          "prompt": "A single picture of a bowl of hot soup. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_orange",
+          "file": "LAB_v2_menu_orange.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of one whole orange (the fruit) with a leaf.",
+          "screen": "Café Order menu tile for \"orange\" (lab.games2.js, about 56 px; dictionary word hec23eb47)",
+          "refs": [],
+          "prompt": "A single picture of one whole orange (the fruit) with a leaf. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_black-coffee",
+          "file": "LAB_v2_menu_black-coffee.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a cup of black coffee, no milk.",
+          "screen": "Café Order menu tile for \"black coffee\" (lab.games2.js, about 56 px; dictionary word pce477866)",
+          "refs": [],
+          "prompt": "A single picture of a cup of black coffee, no milk. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_coffee-with-milk",
+          "file": "LAB_v2_menu_coffee-with-milk.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a cup of coffee with a small milk jug beside it.",
+          "screen": "Café Order menu tile for \"coffee with milk\" (lab.games2.js, about 56 px; dictionary word p7ec62c43)",
+          "refs": [],
+          "prompt": "A single picture of a cup of coffee with a small milk jug beside it. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_tea-with-mint",
+          "file": "LAB_v2_menu_tea-with-mint.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a glass of tea with fresh mint leaves in it.",
+          "screen": "Café Order menu tile for \"tea with mint\" (lab.games2.js, about 56 px; dictionary word p2de095da)",
+          "refs": [],
+          "prompt": "A single picture of a glass of tea with fresh mint leaves in it. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_sugar",
+          "file": "LAB_v2_menu_sugar.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a small sugar bowl with a spoon.",
+          "screen": "Café Order menu tile for \"sugar\" (lab.games2.js, about 56 px; dictionary word h7631737e)",
+          "refs": [],
+          "prompt": "A single picture of a small sugar bowl with a spoon. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_cheese",
+          "file": "LAB_v2_menu_cheese.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a wedge of yellow cheese.",
+          "screen": "Café Order menu tile for \"cheese\" (lab.games2.js, about 56 px; dictionary word h4ef6ec03)",
+          "refs": [],
+          "prompt": "A single picture of a wedge of yellow cheese. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_sandwich",
+          "file": "LAB_v2_menu_sandwich.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a sandwich cut in half.",
+          "screen": "Café Order menu tile for \"sandwich\" (lab.games2.js, about 56 px; dictionary word h08c16650)",
+          "refs": [],
+          "prompt": "A single picture of a sandwich cut in half. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        },
+        {
+          "id": "LAB_v2_menu_lemonade",
+          "file": "LAB_v2_menu_lemonade.png",
+          "role": "menu",
+          "size": "1024x1024",
+          "transparent": false,
+          "shows": "A single picture of a glass of lemonade with a lemon slice.",
+          "screen": "Café Order menu tile for \"lemonade\" (lab.games2.js, about 56 px; dictionary word h8417ff6d)",
+          "refs": [],
+          "prompt": "A single picture of a glass of lemonade with a lemon slice. WORD PICTURE RECIPE (the same as the Block J vocabulary pictures, docs/images/BLOCK-J.md): STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal; every object centred with 10% margin; consistent 3/4 top-down light from upper left. One clear, instantly recognisable object centred on the plain background, nothing else competing. Square 1:1. Size: 1024x1024. No text, letters or numerals anywhere."
+        }
+      ]
+    }
+  ]
+}

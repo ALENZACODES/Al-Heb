@@ -11,7 +11,7 @@ const KINDS = new Set(['cover', 'play', 'win']);
 /** Repo-relative path of one drill's picture, or null for an unknown drill or kind. */
 export function artPath(gameId, kind) {
   if (!GAME_IDS.includes(gameId) || !KINDS.has(kind)) return null;
-  const pack = gameById(gameId)?.pack === 'studio' || gameById(gameId)?.pack === 'claude' ? STUDIO_ART_DIR : CLASSIC_ART_DIR;
+  const pack = gameById(gameId)?.pack === 'studio' ? STUDIO_ART_DIR : CLASSIC_ART_DIR;
   const prefix = pack === STUDIO_ART_DIR ? 'LAB_v3' : 'LAB_v2';
   return `${pack}/${prefix}_${gameId}_${kind}.webp`;
 }

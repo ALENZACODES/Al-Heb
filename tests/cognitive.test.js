@@ -158,7 +158,10 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // Brain Lab 3D Studio (src/lab/lab.view.js, 2026-11-10): birds cross the sky once (lab-fly), syllables fall once (lab-fall),
     // a card turns in once (lab-flipin, 0.35 s), and gold particles fade out once on a right answer (lab-pop, 0.45 s, no flashing).
     // None loops; the global reduced-motion and calm-mode rules switch all four off, and the games show a still layout instead.
-    'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop'];
+    'lab-fly', 'lab-fall', 'lab-flipin', 'lab-pop',
+    // Combo meter pop and floating +points (src/lab/lab.view.js, 2026-11-10): both one-shot, under 0.75 s, no flashing.
+    // Reduced motion switches them off. The on-demand 3D particle field in lab.fx3d.js is canvas-only and has no keyframes.
+    'lab-combo-pop', 'lab-float-up'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

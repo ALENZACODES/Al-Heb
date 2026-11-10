@@ -97,6 +97,26 @@ export function watchForUpdates(g = globalThis, opt = {}) {
   };
 }
 
+/**
+ * The learner is on "Page not found" for an address this build does not have. A newer build may have it, so: if an update is waiting,
+ * or a newer worker already controls the page ("activated"), apply it now; otherwise ask the server once and apply if one turns up
+ * within `waitMs`. Nothing is in progress on a "Page not found" screen, so this does not wait for Reload. Returns a cancel function.
+ * @param {ReturnType<typeof watchForUpdates>} handle
+ * @param {{onUpdating?:()=>void, waitMs?:number, setTimeout?:Function, clearTimeout?:Function}} [o]
+ */
+export function updateForMissingPage(handle, { onUpdating = () => {}, waitMs = 8000, setTimeout: st = (f, ms) => globalThis.setTimeout(f, ms), clearTimeout: ct = (h) => globalThis.clearTimeout(h) } = {}) {
+  if (!handle?.supported) return () => {};
+  let done = false, off = () => {}, timer = null;
+  const stop = () => { done = true; off(); if (timer != null) ct(timer); };
+  const go = () => { if (done) return; stop(); try { onUpdating(); } catch { /* the label is optional */ } handle.apply(); };
+  const ready = (s) => s === "waiting" || s === "activated";
+  if (ready(handle.state())) { go(); return stop; }
+  off = handle.onChange((s) => { if (ready(s)) go(); });
+  timer = st(stop, waitMs);
+  Promise.resolve().then(() => handle.check()).catch(() => {});
+  return stop;
+}
+
 /** Set/clear the "exercise in progress" flag on <body>. Views call this when an exercise starts and when it ends. */
 export function markBusy(on, doc = globalThis.document) { try { if (on) doc?.body?.setAttribute("data-busy", "true"); else doc?.body?.removeAttribute("data-busy"); } catch { /* ignore */ } }
 

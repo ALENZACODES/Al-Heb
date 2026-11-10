@@ -1,0 +1,281 @@
+{
+ "schema": "alef-practical-curriculum/2",
+ "generated": "2026-11-10",
+ "proofread": false,
+ "nativeReview": "required",
+ "note": "Draft Babbel-style practical curriculum. Every Hebrew line is copied from the phrasebook, lessons.json, or dialogues.json. No new Hebrew was composed. Native review required. Not a 126th lesson. Name-bearing and goy lines were left out of these pages.",
+ "levels": [
+  {
+   "id": "L0",
+   "title": "First conversations",
+   "order": 0
+  },
+  {
+   "id": "L1",
+   "title": "Town and table",
+   "order": 1
+  },
+  {
+   "id": "L2",
+   "title": "Daily life",
+   "order": 2
+  },
+  {
+   "id": "L3",
+   "title": "Work and services",
+   "order": 3
+  },
+  {
+   "id": "L4",
+   "title": "Shabbat and holiday conversation",
+   "order": 4
+  }
+ ],
+ "units": [
+  {
+   "id": "pu-greetings",
+   "title": "Greetings and courtesy",
+   "level": "L0",
+   "file": "data/curriculum/practical/pu-greetings.json",
+   "pageCount": 7,
+   "itemCount": 32,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-politeness",
+   "title": "Please, sorry and being polite",
+   "level": "L0",
+   "file": "data/curriculum/practical/pu-politeness.json",
+   "pageCount": 5,
+   "itemCount": 23,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-fillers",
+   "title": "Sounding local: fillers",
+   "level": "L0",
+   "file": "data/curriculum/practical/pu-fillers.json",
+   "pageCount": 6,
+   "itemCount": 28,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-numbers",
+   "title": "Numbers, prices and shekels",
+   "level": "L0",
+   "file": "data/curriculum/practical/pu-numbers.json",
+   "pageCount": 7,
+   "itemCount": 34,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-cafe",
+   "title": "Ordering at a cafe",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-cafe.json",
+   "pageCount": 11,
+   "itemCount": 51,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-restaurant",
+   "title": "Ordering at a restaurant",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-restaurant.json",
+   "pageCount": 13,
+   "itemCount": 63,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-shop",
+   "title": "Shopping and paying",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-shop.json",
+   "pageCount": 11,
+   "itemCount": 51,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-directions",
+   "title": "Asking for and following directions",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-directions.json",
+   "pageCount": 7,
+   "itemCount": 34,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-transport",
+   "title": "Transport: taxi, bus and train",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-transport.json",
+   "pageCount": 10,
+   "itemCount": 46,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-small-talk",
+   "title": "Small talk",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-small-talk.json",
+   "pageCount": 11,
+   "itemCount": 52,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-family",
+   "title": "Family and who you are",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-family.json",
+   "pageCount": 4,
+   "itemCount": 16,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-home",
+   "title": "Home, repairs and the landlord",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-home.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-time",
+   "title": "Days, time and dates",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-time.json",
+   "pageCount": 2,
+   "itemCount": 6,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-weather",
+   "title": "Weather and what to take",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-weather.json",
+   "pageCount": 3,
+   "itemCount": 15,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-hotel",
+   "title": "Hotel and booking",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-hotel.json",
+   "pageCount": 3,
+   "itemCount": 13,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-phone",
+   "title": "Phone, SIM and messages",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-phone.json",
+   "pageCount": 4,
+   "itemCount": 17,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-work",
+   "title": "Work, office and a course",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-work.json",
+   "pageCount": 5,
+   "itemCount": 22,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-health",
+   "title": "Doctor, clinic and pharmacy",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-health.json",
+   "pageCount": 7,
+   "itemCount": 32,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-bank",
+   "title": "Bank, cash and forms",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-bank.json",
+   "pageCount": 5,
+   "itemCount": 21,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-post",
+   "title": "Post office and parcels",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-post.json",
+   "pageCount": 3,
+   "itemCount": 13,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-emergencies",
+   "title": "Emergencies and calling for help",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-emergencies.json",
+   "pageCount": 5,
+   "itemCount": 25,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-delivery",
+   "title": "Ordering delivery",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-delivery.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-shabbat",
+   "title": "Being invited for Shabbat",
+   "level": "L4",
+   "file": "data/curriculum/practical/pu-shabbat.json",
+   "pageCount": 3,
+   "itemCount": 14,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-holidays",
+   "title": "Holiday greetings and everyday wishes",
+   "level": "L4",
+   "file": "data/curriculum/practical/pu-holidays.json",
+   "pageCount": 3,
+   "itemCount": 13,
+   "status": "built-draft",
+   "nativeReview": true
+  }
+ ],
+ "totals": {
+  "units": 24,
+  "pages": 141,
+  "items": 645
+ }
+}

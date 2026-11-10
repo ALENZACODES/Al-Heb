@@ -1,0 +1,668 @@
+{
+ "id": "pu-shabbat",
+ "title": "Being invited for Shabbat",
+ "level": "L4",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-19",
+   "title": "Shabbat invitation: being invited, what to bring, saying thanks",
+   "track": "israel",
+   "wordCount": 14
+  }
+ ],
+ "speakSets": [
+  "speak-religion-prayer-2"
+ ],
+ "grammarNote": "I-19 already stores invitation language: שַׁבָּת שָׁלוֹם, בְּשִׂמְחָה, לְהָבִיא, מָתַי לָבוֹא and תּוֹדָה רַבָּה. This unit is conversation around a meal invitation, not a liturgy lesson. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "i-19-w1",
+   "source": "data/curriculum/lessons.json#I-19.words[0]",
+   "he": "שַׁבָּת שָׁלוֹם",
+   "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+   "translit": "shabat shalom",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w1"
+   }
+  },
+  {
+   "id": "i-19-w2",
+   "source": "data/curriculum/lessons.json#I-19.words[1]",
+   "he": "שָׁבוּעַ טוֹב",
+   "en": "a good week (said once Shabbat ends)",
+   "translit": "shavu'a tov",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w2"
+   }
+  },
+  {
+   "id": "i-19-w3",
+   "source": "data/curriculum/lessons.json#I-19.words[2]",
+   "he": "אֲרוּחָה",
+   "en": "meal",
+   "translit": "aruchah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w3"
+   }
+  },
+  {
+   "id": "i-19-w4",
+   "source": "data/curriculum/lessons.json#I-19.words[3]",
+   "he": "עֶרֶב",
+   "en": "evening",
+   "translit": "erev",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w4"
+   }
+  },
+  {
+   "id": "i-19-w5",
+   "source": "data/curriculum/lessons.json#I-19.words[4]",
+   "he": "בְּשִׂמְחָה",
+   "en": "gladly, with pleasure",
+   "translit": "besimchah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w5"
+   }
+  },
+  {
+   "id": "i-19-w6",
+   "source": "data/curriculum/lessons.json#I-19.words[5]",
+   "he": "לְהָבִיא",
+   "en": "to bring",
+   "translit": "lehavi",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w6"
+   }
+  },
+  {
+   "id": "i-19-w7",
+   "source": "data/curriculum/lessons.json#I-19.words[6]",
+   "he": "יַיִן",
+   "en": "wine",
+   "translit": "yayin",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w7"
+   }
+  },
+  {
+   "id": "i-19-w8",
+   "source": "data/curriculum/lessons.json#I-19.words[7]",
+   "he": "קִנּוּחַ",
+   "en": "dessert",
+   "translit": "kinuach",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w8"
+   }
+  },
+  {
+   "id": "i-19-w9",
+   "source": "data/curriculum/lessons.json#I-19.words[8]",
+   "he": "מָתַי לָבוֹא?",
+   "en": "when should I come?",
+   "translit": "matai lavo?",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w9"
+   }
+  },
+  {
+   "id": "i-19-w10",
+   "source": "data/curriculum/lessons.json#I-19.words[9]",
+   "he": "הַשָּׁעָה שֶׁבַע",
+   "en": "seven o'clock",
+   "translit": "hasha'ah sheva",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w10"
+   }
+  },
+  {
+   "id": "i-19-w11",
+   "source": "data/curriculum/lessons.json#I-19.words[10]",
+   "he": "טָעִים מְאֹד",
+   "en": "very tasty",
+   "translit": "ta'im me'od",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w11"
+   }
+  },
+  {
+   "id": "i-19-w12",
+   "source": "data/curriculum/lessons.json#I-19.words[11]",
+   "he": "לְחַיִּים!",
+   "en": "cheers!",
+   "translit": "lechayim!",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w12"
+   }
+  },
+  {
+   "id": "i-19-w13",
+   "source": "data/curriculum/lessons.json#I-19.words[12]",
+   "he": "תּוֹדָה רַבָּה",
+   "en": "thank you very much",
+   "translit": "todah rabah",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w13"
+   }
+  },
+  {
+   "id": "i-19-w14",
+   "source": "data/curriculum/lessons.json#I-19.words[13]",
+   "he": "לְהִתְרָאוֹת",
+   "en": "see you",
+   "translit": "lehitra'ot",
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "i-19-w14"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-19-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-19-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-19-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-19-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-19-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-19-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-19-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-19-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-19-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-19-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-19-w11",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-19-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-19-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-19-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-19-w1",
+    "i-19-w2",
+    "i-19-w3",
+    "i-19-w4",
+    "i-19-w5",
+    "i-19-w6",
+    "i-19-w7",
+    "i-19-w8",
+    "i-19-w9",
+    "i-19-w10",
+    "i-19-w11",
+    "i-19-w12",
+    "i-19-w13",
+    "i-19-w14"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-religion-prayer-2.json.",
+   "set": "speak-religion-prayer-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-shabbat-p01",
+   "title": "Peaceful Sabbath (greeting from Friday afternoon to Satu",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שַׁבָּת שָׁלוֹם. I-19 already stores invitation language: שַׁבָּת שָׁלוֹם, בְּשִׂמְחָה, לְהָבִיא, מָתַי לָבוֹא and תּוֹדָה רַבָּה.",
+   "items": [
+    {
+     "id": "i-19-w1",
+     "source": "data/curriculum/lessons.json#I-19.words[0]",
+     "he": "שַׁבָּת שָׁלוֹם",
+     "en": "peaceful Sabbath (greeting from Friday afternoon to Saturday)",
+     "translit": "shabat shalom",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w1"
+     }
+    },
+    {
+     "id": "i-19-w2",
+     "source": "data/curriculum/lessons.json#I-19.words[1]",
+     "he": "שָׁבוּעַ טוֹב",
+     "en": "a good week (said once Shabbat ends)",
+     "translit": "shavu'a tov",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w2"
+     }
+    },
+    {
+     "id": "i-19-w3",
+     "source": "data/curriculum/lessons.json#I-19.words[2]",
+     "he": "אֲרוּחָה",
+     "en": "meal",
+     "translit": "aruchah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w3"
+     }
+    },
+    {
+     "id": "i-19-w4",
+     "source": "data/curriculum/lessons.json#I-19.words[3]",
+     "he": "עֶרֶב",
+     "en": "evening",
+     "translit": "erev",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w4"
+     }
+    },
+    {
+     "id": "i-19-w5",
+     "source": "data/curriculum/lessons.json#I-19.words[4]",
+     "he": "בְּשִׂמְחָה",
+     "en": "gladly, with pleasure",
+     "translit": "besimchah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-19-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-19-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-19-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-19-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-19-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-19-w1",
+    "i-19-w2",
+    "i-19-w3",
+    "i-19-w4",
+    "i-19-w5"
+   ],
+   "speakSet": "speak-religion-prayer-2"
+  },
+  {
+   "id": "pu-shabbat-p02",
+   "title": "To bring",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: לְהָבִיא. I-19 already stores invitation language: שַׁבָּת שָׁלוֹם, בְּשִׂמְחָה, לְהָבִיא, מָתַי לָבוֹא and תּוֹדָה רַבָּה.",
+   "items": [
+    {
+     "id": "i-19-w6",
+     "source": "data/curriculum/lessons.json#I-19.words[5]",
+     "he": "לְהָבִיא",
+     "en": "to bring",
+     "translit": "lehavi",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w6"
+     }
+    },
+    {
+     "id": "i-19-w7",
+     "source": "data/curriculum/lessons.json#I-19.words[6]",
+     "he": "יַיִן",
+     "en": "wine",
+     "translit": "yayin",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w7"
+     }
+    },
+    {
+     "id": "i-19-w8",
+     "source": "data/curriculum/lessons.json#I-19.words[7]",
+     "he": "קִנּוּחַ",
+     "en": "dessert",
+     "translit": "kinuach",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w8"
+     }
+    },
+    {
+     "id": "i-19-w9",
+     "source": "data/curriculum/lessons.json#I-19.words[8]",
+     "he": "מָתַי לָבוֹא?",
+     "en": "when should I come?",
+     "translit": "matai lavo?",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w9"
+     }
+    },
+    {
+     "id": "i-19-w10",
+     "source": "data/curriculum/lessons.json#I-19.words[9]",
+     "he": "הַשָּׁעָה שֶׁבַע",
+     "en": "seven o'clock",
+     "translit": "hasha'ah sheva",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-19-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-19-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-19-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-19-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-19-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-19-w6",
+    "i-19-w7",
+    "i-19-w8",
+    "i-19-w9",
+    "i-19-w10"
+   ],
+   "speakSet": "speak-religion-prayer-2"
+  },
+  {
+   "id": "pu-shabbat-p03",
+   "title": "Very tasty",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: טָעִים מְאֹד. I-19 already stores invitation language: שַׁבָּת שָׁלוֹם, בְּשִׂמְחָה, לְהָבִיא, מָתַי לָבוֹא and תּוֹדָה רַבָּה.",
+   "items": [
+    {
+     "id": "i-19-w11",
+     "source": "data/curriculum/lessons.json#I-19.words[10]",
+     "he": "טָעִים מְאֹד",
+     "en": "very tasty",
+     "translit": "ta'im me'od",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w11"
+     }
+    },
+    {
+     "id": "i-19-w12",
+     "source": "data/curriculum/lessons.json#I-19.words[11]",
+     "he": "לְחַיִּים!",
+     "en": "cheers!",
+     "translit": "lechayim!",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w12"
+     }
+    },
+    {
+     "id": "i-19-w13",
+     "source": "data/curriculum/lessons.json#I-19.words[12]",
+     "he": "תּוֹדָה רַבָּה",
+     "en": "thank you very much",
+     "translit": "todah rabah",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w13"
+     }
+    },
+    {
+     "id": "i-19-w14",
+     "source": "data/curriculum/lessons.json#I-19.words[13]",
+     "he": "לְהִתְרָאוֹת",
+     "en": "see you",
+     "translit": "lehitra'ot",
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "i-19-w14"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-19-w11",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-19-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-19-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-19-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-19-w11",
+    "i-19-w12",
+    "i-19-w13",
+    "i-19-w14"
+   ],
+   "speakSet": "speak-religion-prayer-2"
+  }
+ ]
+}

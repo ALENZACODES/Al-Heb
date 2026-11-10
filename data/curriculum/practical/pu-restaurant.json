@@ -1,0 +1,2891 @@
+{
+  "id": "pu-restaurant",
+  "title": "Ordering at a restaurant",
+  "level": "L1",
+  "status": "built-draft",
+  "proofread": false,
+  "nativeReview": true,
+  "lessons": [
+    {
+      "id": "il06",
+      "title": "Cafe: ordering a coffee",
+      "track": "israel",
+      "wordCount": 6
+    },
+    {
+      "id": "il07",
+      "title": "Cafe and menu words",
+      "track": "israel",
+      "wordCount": 6
+    },
+    {
+      "id": "I-13",
+      "title": "Cafe ordering: milk, sugar, sizes and the bill",
+      "track": "israel",
+      "wordCount": 14
+    },
+    {
+      "id": "I-38",
+      "title": "Dating and going out: asking someone out, plans and compliments",
+      "track": "israel",
+      "wordCount": 12
+    }
+  ],
+  "speakSets": [
+    "speak-survival-cafe-1"
+  ],
+  "grammarNote": "The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request. ALEF has no separate restaurant phrasebook: every Hebrew line here is copied from the cafe situation, from I-13 / I-38, or from the existing restaurant dialogue.",
+  "items": [
+    {
+      "id": "cafe-01",
+      "source": "data/corpus/phrasebook.json",
+      "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+      "en": "a table for two, please",
+      "translit": "shulchan lishnayim, bevakasha",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-01"
+      }
+    },
+    {
+      "id": "cafe-02",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+      "en": "can I see the menu?",
+      "translit": "efshar lir'ot et hatafrit?",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-02"
+      }
+    },
+    {
+      "id": "cafe-14",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֶפְשָׁר לְהַזְמִין?",
+      "en": "can I order?",
+      "translit": "efshar lehazmin?",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-14"
+      }
+    },
+    {
+      "id": "cafe-16",
+      "source": "data/corpus/phrasebook.json",
+      "he": "חוּמוּס",
+      "en": "hummus",
+      "translit": "humus",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-16"
+      }
+    },
+    {
+      "id": "cafe-17",
+      "source": "data/corpus/phrasebook.json",
+      "he": "פָלָאפֶל",
+      "en": "falafel",
+      "translit": "falafel",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-17"
+      }
+    },
+    {
+      "id": "cafe-20",
+      "source": "data/corpus/phrasebook.json",
+      "he": "סָלָט",
+      "en": "salad",
+      "translit": "salat",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-20"
+      }
+    },
+    {
+      "id": "cafe-21",
+      "source": "data/corpus/phrasebook.json",
+      "he": "טָעִים מְאֹד",
+      "en": "very tasty",
+      "translit": "taim meod",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-21"
+      }
+    },
+    {
+      "id": "cafe-22",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֲנִי צִמְחוֹנִי",
+      "en": "I'm vegetarian",
+      "translit": "ani tsimchoni",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-22"
+      }
+    },
+    {
+      "id": "cafe-25",
+      "source": "data/corpus/phrasebook.json",
+      "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+      "en": "eat here or take away?",
+      "translit": "le'echol kan o lakachat?",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-25"
+      }
+    },
+    {
+      "id": "cafe-26",
+      "source": "data/corpus/phrasebook.json",
+      "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+      "en": "the bill, please",
+      "translit": "hacheshbon, bevakasha",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-26"
+      }
+    },
+    {
+      "id": "cafe-27",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+      "en": "can I pay by card?",
+      "translit": "efshar leshalem bekartis?",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-27"
+      }
+    },
+    {
+      "id": "cafe-10",
+      "source": "data/corpus/phrasebook.json",
+      "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+      "en": "cold water, please",
+      "translit": "mayim karim, bevakasha",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-10"
+      }
+    },
+    {
+      "id": "cafe-18",
+      "source": "data/corpus/phrasebook.json",
+      "he": "שַׁקְשׁוּקָה",
+      "en": "shakshuka (eggs poached in tomato sauce)",
+      "translit": "shakshuka",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-18"
+      }
+    },
+    {
+      "id": "cafe-19",
+      "source": "data/corpus/phrasebook.json",
+      "he": "פִּיתָה",
+      "en": "pita bread",
+      "translit": "pita",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-19"
+      }
+    },
+    {
+      "id": "cafe-11",
+      "source": "data/corpus/phrasebook.json",
+      "he": "בִּירָה",
+      "en": "beer",
+      "translit": "bira",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-11"
+      }
+    },
+    {
+      "id": "cafe-12",
+      "source": "data/corpus/phrasebook.json",
+      "he": "יַיִן",
+      "en": "wine",
+      "translit": "yayin",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-12"
+      }
+    },
+    {
+      "id": "cafe-13",
+      "source": "data/corpus/phrasebook.json",
+      "he": "לְחַיִּים!",
+      "en": "cheers!",
+      "translit": "lechayim!",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-13"
+      }
+    },
+    {
+      "id": "cafe-15",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֶפְשָׁר עוֹד אֶחָד?",
+      "en": "can I have another one?",
+      "translit": "efshar od echad?",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-15"
+      }
+    },
+    {
+      "id": "cafe-23",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֲנִי טִבְעוֹנִי",
+      "en": "I'm vegan",
+      "translit": "ani tiv'oni",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-23"
+      }
+    },
+    {
+      "id": "cafe-24",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֲנִי אָלֶרְגִּי לְ",
+      "en": "I'm allergic to ...",
+      "translit": "ani alergi le-",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-24"
+      }
+    },
+    {
+      "id": "cafe-03",
+      "source": "data/corpus/phrasebook.json",
+      "he": "אֲנִי רוֹצֶה קָפֶה",
+      "en": "I would like a coffee",
+      "translit": "ani rotse kafe",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-03"
+      }
+    },
+    {
+      "id": "cafe-08",
+      "source": "data/corpus/phrasebook.json",
+      "he": "תֵּה עִם נַעֲנָע",
+      "en": "tea with mint",
+      "translit": "te im na'ana",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "line",
+        "id": "cafe-08"
+      }
+    },
+    {
+      "id": "cafe-09",
+      "source": "data/corpus/phrasebook.json",
+      "he": "מַיִם",
+      "en": "water",
+      "translit": "mayim",
+      "review": "native-speaker-needed: pointing and register",
+      "listen": {
+        "kind": "word",
+        "id": "cafe-09"
+      }
+    },
+    {
+      "id": "il06-w1",
+      "source": "data/curriculum/lessons.json#il06.words[0]",
+      "he": "אֶפְשָׁר",
+      "en": "may I; is it possible",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il06-w1"
+      }
+    },
+    {
+      "id": "il06-w2",
+      "source": "data/curriculum/lessons.json#il06.words[1]",
+      "he": "קָפֶה",
+      "en": "coffee",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il06-w2"
+      }
+    },
+    {
+      "id": "il06-w3",
+      "source": "data/curriculum/lessons.json#il06.words[2]",
+      "he": "הָפוּךְ",
+      "en": "latte-style coffee",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il06-w3"
+      }
+    },
+    {
+      "id": "il06-w5",
+      "source": "data/curriculum/lessons.json#il06.words[4]",
+      "he": "לְהַזְמִין",
+      "en": "to order",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il06-w5"
+      }
+    },
+    {
+      "id": "il06-w6",
+      "source": "data/curriculum/lessons.json#il06.words[5]",
+      "he": "חֶשְׁבּוֹן",
+      "en": "bill; check",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il06-w6"
+      }
+    },
+    {
+      "id": "il07-w1",
+      "source": "data/curriculum/lessons.json#il07.words[0]",
+      "he": "אֹכֶל",
+      "en": "food",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il07-w1"
+      }
+    },
+    {
+      "id": "il07-w2",
+      "source": "data/curriculum/lessons.json#il07.words[1]",
+      "he": "לֶחֶם",
+      "en": "bread",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il07-w2"
+      }
+    },
+    {
+      "id": "il07-w3",
+      "source": "data/curriculum/lessons.json#il07.words[2]",
+      "he": "גְּבִינָה",
+      "en": "cheese",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il07-w3"
+      }
+    },
+    {
+      "id": "il07-w4",
+      "source": "data/curriculum/lessons.json#il07.words[3]",
+      "he": "בֵּיצָה",
+      "en": "egg",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il07-w4"
+      }
+    },
+    {
+      "id": "il07-w6",
+      "source": "data/curriculum/lessons.json#il07.words[5]",
+      "he": "תֵּה",
+      "en": "tea",
+      "translit": null,
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "il07-w6"
+      }
+    },
+    {
+      "id": "i-13-w2",
+      "source": "data/curriculum/lessons.json#I-13.words[1]",
+      "he": "קָפֶה הָפוּךְ",
+      "en": "milky coffee (hafuch)",
+      "translit": "kafeh hafukh",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w2"
+      }
+    },
+    {
+      "id": "i-13-w3",
+      "source": "data/curriculum/lessons.json#I-13.words[2]",
+      "he": "אֶסְפְּרֶסוֹ",
+      "en": "espresso",
+      "translit": "espereso",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w3"
+      }
+    },
+    {
+      "id": "i-13-w4",
+      "source": "data/curriculum/lessons.json#I-13.words[3]",
+      "he": "קָפֶה שָׁחוֹר",
+      "en": "black coffee",
+      "translit": "kafeh shachor",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w4"
+      }
+    },
+    {
+      "id": "i-13-w6",
+      "source": "data/curriculum/lessons.json#I-13.words[5]",
+      "he": "חָלָב",
+      "en": "milk",
+      "translit": "chalav",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w6"
+      }
+    },
+    {
+      "id": "i-13-w7",
+      "source": "data/curriculum/lessons.json#I-13.words[6]",
+      "he": "סֻכָּר",
+      "en": "sugar",
+      "translit": "sukar",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w7"
+      }
+    },
+    {
+      "id": "i-13-w8",
+      "source": "data/curriculum/lessons.json#I-13.words[7]",
+      "he": "בְּלִי",
+      "en": "without",
+      "translit": "beli",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w8"
+      }
+    },
+    {
+      "id": "i-13-w9",
+      "source": "data/curriculum/lessons.json#I-13.words[8]",
+      "he": "גָּדוֹל",
+      "en": "big (m)",
+      "translit": "gadol",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w9"
+      }
+    },
+    {
+      "id": "i-13-w10",
+      "source": "data/curriculum/lessons.json#I-13.words[9]",
+      "he": "קָטָן",
+      "en": "small (m)",
+      "translit": "katan",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w10"
+      }
+    },
+    {
+      "id": "i-13-w13",
+      "source": "data/curriculum/lessons.json#I-13.words[12]",
+      "he": "צִמְחוֹנִי",
+      "en": "vegetarian (m)",
+      "translit": "tzimchoni",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w13"
+      }
+    },
+    {
+      "id": "i-13-w14",
+      "source": "data/curriculum/lessons.json#I-13.words[13]",
+      "he": "צִמְחוֹנִית",
+      "en": "vegetarian (f)",
+      "translit": "tzimchonit",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-13-w14"
+      }
+    },
+    {
+      "id": "i-38-w1",
+      "source": "data/curriculum/lessons.json#I-38.words[0]",
+      "he": "יָפֶה",
+      "en": "beautiful, nice",
+      "translit": "yafeh",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w1"
+      }
+    },
+    {
+      "id": "i-38-w2",
+      "source": "data/curriculum/lessons.json#I-38.words[1]",
+      "he": "חָמוּד",
+      "en": "cute, sweet, charming",
+      "translit": "chamud",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w2"
+      }
+    },
+    {
+      "id": "i-38-w3",
+      "source": "data/curriculum/lessons.json#I-38.words[2]",
+      "he": "מִסְעָדָה",
+      "en": "restaurant",
+      "translit": "mis'adah",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w3"
+      }
+    },
+    {
+      "id": "i-38-w4",
+      "source": "data/curriculum/lessons.json#I-38.words[3]",
+      "he": "סֶרֶט",
+      "en": "film",
+      "translit": "seret",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w4"
+      }
+    },
+    {
+      "id": "i-38-w5",
+      "source": "data/curriculum/lessons.json#I-38.words[4]",
+      "he": "חָבֵר",
+      "en": "friend (m)",
+      "translit": "chaver",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w5"
+      }
+    },
+    {
+      "id": "i-38-w6",
+      "source": "data/curriculum/lessons.json#I-38.words[5]",
+      "he": "חֲבֵרָה",
+      "en": "friend (f)",
+      "translit": "chaverah",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w6"
+      }
+    },
+    {
+      "id": "i-38-w7",
+      "source": "data/curriculum/lessons.json#I-38.words[6]",
+      "he": "אֶפְשָׁר לָצֵאת",
+      "en": "can we go out?",
+      "translit": "efshar latzet",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w7"
+      }
+    },
+    {
+      "id": "i-38-w8",
+      "source": "data/curriculum/lessons.json#I-38.words[7]",
+      "he": "בֶּאֱמֶת?",
+      "en": "really?",
+      "translit": "be'emet?",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w8"
+      }
+    },
+    {
+      "id": "i-38-w9",
+      "source": "data/curriculum/lessons.json#I-38.words[8]",
+      "he": "מָתַי?",
+      "en": "when?",
+      "translit": "matai?",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w9"
+      }
+    },
+    {
+      "id": "i-38-w10",
+      "source": "data/curriculum/lessons.json#I-38.words[9]",
+      "he": "הָעֶרֶב",
+      "en": "this evening",
+      "translit": "ha'erev",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w10"
+      }
+    },
+    {
+      "id": "i-38-w11",
+      "source": "data/curriculum/lessons.json#I-38.words[10]",
+      "he": "מָחָר",
+      "en": "tomorrow",
+      "translit": "machar",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w11"
+      }
+    },
+    {
+      "id": "i-38-w12",
+      "source": "data/curriculum/lessons.json#I-38.words[11]",
+      "he": "בְּשִׂמְחָה",
+      "en": "gladly, with pleasure",
+      "translit": "besimchah",
+      "review": "needs-native-review: lesson word, not native-checked",
+      "listen": {
+        "kind": "word",
+        "id": "i-38-w12"
+      }
+    },
+    {
+      "id": "d-restaurant-l1",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+      "en": "Hello. For how many people?",
+      "translit": "shalom. lekama anashim?",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l1"
+      },
+      "speaker": "a"
+    },
+    {
+      "id": "d-restaurant-l2",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+      "en": "For two, please.",
+      "translit": "lishnayim, bevakasha.",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l2"
+      },
+      "speaker": "b"
+    },
+    {
+      "id": "d-restaurant-l3",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+      "en": "Please, here. Here is the menu.",
+      "translit": "bevakasha, po. hine hatafrit.",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l3"
+      },
+      "speaker": "a"
+    },
+    {
+      "id": "d-restaurant-l4",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+      "en": "I'd like a schnitzel and a salad.",
+      "translit": "ani rotse shnitsel vesalat.",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l4"
+      },
+      "speaker": "b"
+    },
+    {
+      "id": "d-restaurant-l5",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "וְלִשְׁתּוֹת?",
+      "en": "And to drink?",
+      "translit": "velishtot?",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l5"
+      },
+      "speaker": "a"
+    },
+    {
+      "id": "d-restaurant-l6",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "מַיִם, בְּבַקָּשָׁה.",
+      "en": "Water, please.",
+      "translit": "mayim, bevakasha.",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l6"
+      },
+      "speaker": "b"
+    },
+    {
+      "id": "d-restaurant-l7",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+      "en": "Excuse me, can I have the bill?",
+      "translit": "slicha, efshar et hacheshbon?",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l7"
+      },
+      "speaker": "b"
+    },
+    {
+      "id": "d-restaurant-l8",
+      "source": "data/curriculum/dialogues.json#d-restaurant",
+      "he": "בֶּטַח, רֶגַע.",
+      "en": "Sure, one moment.",
+      "translit": "betach, rega.",
+      "review": "needs-native-review: dialogue line, not native-checked",
+      "listen": {
+        "kind": "line",
+        "id": "d-restaurant-l8"
+      },
+      "speaker": "a"
+    }
+  ],
+  "srsQueue": [
+    {
+      "position": 1,
+      "kind": "line",
+      "id": "cafe-01",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 2,
+      "kind": "line",
+      "id": "cafe-02",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 3,
+      "kind": "line",
+      "id": "cafe-14",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 4,
+      "kind": "word",
+      "id": "cafe-16",
+      "source": "item",
+      "srsKind": "word",
+      "band": "core"
+    },
+    {
+      "position": 5,
+      "kind": "word",
+      "id": "cafe-17",
+      "source": "item",
+      "srsKind": "word",
+      "band": "core"
+    },
+    {
+      "position": 6,
+      "kind": "word",
+      "id": "cafe-20",
+      "source": "item",
+      "srsKind": "word",
+      "band": "core"
+    },
+    {
+      "position": 7,
+      "kind": "line",
+      "id": "cafe-21",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 8,
+      "kind": "line",
+      "id": "cafe-22",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 9,
+      "kind": "line",
+      "id": "cafe-25",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 10,
+      "kind": "line",
+      "id": "cafe-26",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 11,
+      "kind": "line",
+      "id": "cafe-27",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 12,
+      "kind": "line",
+      "id": "cafe-10",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "core"
+    },
+    {
+      "position": 13,
+      "kind": "word",
+      "id": "cafe-18",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 14,
+      "kind": "word",
+      "id": "cafe-19",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 15,
+      "kind": "word",
+      "id": "cafe-11",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 16,
+      "kind": "word",
+      "id": "cafe-12",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 17,
+      "kind": "line",
+      "id": "cafe-13",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 18,
+      "kind": "line",
+      "id": "cafe-15",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 19,
+      "kind": "line",
+      "id": "cafe-23",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 20,
+      "kind": "line",
+      "id": "cafe-24",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 21,
+      "kind": "line",
+      "id": "cafe-03",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 22,
+      "kind": "line",
+      "id": "cafe-08",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 23,
+      "kind": "word",
+      "id": "cafe-09",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 24,
+      "kind": "word",
+      "id": "il06-w1",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 25,
+      "kind": "word",
+      "id": "il06-w2",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 26,
+      "kind": "word",
+      "id": "il06-w3",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 27,
+      "kind": "word",
+      "id": "il06-w5",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 28,
+      "kind": "word",
+      "id": "il06-w6",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 29,
+      "kind": "word",
+      "id": "il07-w1",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 30,
+      "kind": "word",
+      "id": "il07-w2",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 31,
+      "kind": "word",
+      "id": "il07-w3",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 32,
+      "kind": "word",
+      "id": "il07-w4",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 33,
+      "kind": "word",
+      "id": "il07-w6",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 34,
+      "kind": "word",
+      "id": "i-13-w2",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 35,
+      "kind": "word",
+      "id": "i-13-w3",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 36,
+      "kind": "word",
+      "id": "i-13-w4",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 37,
+      "kind": "word",
+      "id": "i-13-w6",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 38,
+      "kind": "word",
+      "id": "i-13-w7",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 39,
+      "kind": "word",
+      "id": "i-13-w8",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 40,
+      "kind": "word",
+      "id": "i-13-w9",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 41,
+      "kind": "word",
+      "id": "i-13-w10",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 42,
+      "kind": "word",
+      "id": "i-13-w13",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 43,
+      "kind": "word",
+      "id": "i-13-w14",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 44,
+      "kind": "word",
+      "id": "i-38-w1",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 45,
+      "kind": "word",
+      "id": "i-38-w2",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 46,
+      "kind": "word",
+      "id": "i-38-w3",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 47,
+      "kind": "word",
+      "id": "i-38-w4",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 48,
+      "kind": "word",
+      "id": "i-38-w5",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 49,
+      "kind": "word",
+      "id": "i-38-w6",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 50,
+      "kind": "word",
+      "id": "i-38-w7",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 51,
+      "kind": "word",
+      "id": "i-38-w8",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 52,
+      "kind": "word",
+      "id": "i-38-w9",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 53,
+      "kind": "word",
+      "id": "i-38-w10",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 54,
+      "kind": "word",
+      "id": "i-38-w11",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 55,
+      "kind": "word",
+      "id": "i-38-w12",
+      "source": "item",
+      "srsKind": "word",
+      "band": "extend"
+    },
+    {
+      "position": 56,
+      "kind": "line",
+      "id": "d-restaurant-l1",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 57,
+      "kind": "line",
+      "id": "d-restaurant-l2",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 58,
+      "kind": "line",
+      "id": "d-restaurant-l3",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 59,
+      "kind": "line",
+      "id": "d-restaurant-l4",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 60,
+      "kind": "line",
+      "id": "d-restaurant-l5",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 61,
+      "kind": "line",
+      "id": "d-restaurant-l6",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 62,
+      "kind": "line",
+      "id": "d-restaurant-l7",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    },
+    {
+      "position": 63,
+      "kind": "line",
+      "id": "d-restaurant-l8",
+      "source": "item",
+      "srsKind": "prayerLine",
+      "band": "extend"
+    }
+  ],
+  "listenDrills": [
+    {
+      "goal": "Hear the sourced lines and words already in the audio manifest.",
+      "items": [
+        "cafe-01",
+        "cafe-02",
+        "cafe-14",
+        "cafe-16",
+        "cafe-17",
+        "cafe-20",
+        "cafe-21",
+        "cafe-22",
+        "cafe-25",
+        "cafe-26",
+        "cafe-27",
+        "cafe-10",
+        "cafe-18",
+        "cafe-19",
+        "cafe-11",
+        "cafe-12",
+        "cafe-13",
+        "cafe-15",
+        "cafe-23",
+        "cafe-24",
+        "cafe-03",
+        "cafe-08",
+        "cafe-09",
+        "il06-w1",
+        "il06-w2",
+        "il06-w3",
+        "il06-w5",
+        "il06-w6",
+        "il07-w1",
+        "il07-w2",
+        "il07-w3",
+        "il07-w4",
+        "il07-w6",
+        "i-13-w2",
+        "i-13-w3",
+        "i-13-w4",
+        "i-13-w6",
+        "i-13-w7",
+        "i-13-w8",
+        "i-13-w9",
+        "i-13-w10",
+        "i-13-w13",
+        "i-13-w14",
+        "i-38-w1",
+        "i-38-w2",
+        "i-38-w3",
+        "i-38-w4",
+        "i-38-w5",
+        "i-38-w6",
+        "i-38-w7",
+        "i-38-w8",
+        "i-38-w9",
+        "i-38-w10",
+        "i-38-w11",
+        "i-38-w12",
+        "d-restaurant-l1",
+        "d-restaurant-l2",
+        "d-restaurant-l3",
+        "d-restaurant-l4",
+        "d-restaurant-l5",
+        "d-restaurant-l6",
+        "d-restaurant-l7",
+        "d-restaurant-l8"
+      ],
+      "source": "audio manifest, phrasebook and lesson-word ids"
+    }
+  ],
+  "speakDrills": [
+    {
+      "goal": "Repeat the existing set data/speak/sets/speak-survival-cafe-1.json.",
+      "set": "speak-survival-cafe-1",
+      "note": "That set is machine-built and also unverified."
+    }
+  ],
+  "pages": [
+    {
+      "id": "pu-restaurant-p01",
+      "title": "A table for two, please",
+      "order": 1,
+      "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "cafe-01",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שֻׁלְחָן לִשְׁנַיִם, בְּבַקָּשָׁה",
+          "en": "a table for two, please",
+          "translit": "shulchan lishnayim, bevakasha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-01"
+          }
+        },
+        {
+          "id": "cafe-02",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לִרְאוֹת אֶת הַתַּפְרִיט?",
+          "en": "can I see the menu?",
+          "translit": "efshar lir'ot et hatafrit?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-02"
+          }
+        },
+        {
+          "id": "cafe-14",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לְהַזְמִין?",
+          "en": "can I order?",
+          "translit": "efshar lehazmin?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-14"
+          }
+        },
+        {
+          "id": "cafe-16",
+          "source": "data/corpus/phrasebook.json",
+          "he": "חוּמוּס",
+          "en": "hummus",
+          "translit": "humus",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-16"
+          }
+        },
+        {
+          "id": "cafe-17",
+          "source": "data/corpus/phrasebook.json",
+          "he": "פָלָאפֶל",
+          "en": "falafel",
+          "translit": "falafel",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-17"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "cafe-01",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "cafe-02",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "cafe-14",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "cafe-16",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "cafe-17",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "cafe-01",
+        "cafe-02",
+        "cafe-14",
+        "cafe-16",
+        "cafe-17"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p02",
+      "title": "Salad",
+      "order": 2,
+      "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: סָלָט. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "cafe-20",
+          "source": "data/corpus/phrasebook.json",
+          "he": "סָלָט",
+          "en": "salad",
+          "translit": "salat",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-20"
+          }
+        },
+        {
+          "id": "cafe-21",
+          "source": "data/corpus/phrasebook.json",
+          "he": "טָעִים מְאֹד",
+          "en": "very tasty",
+          "translit": "taim meod",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-21"
+          }
+        },
+        {
+          "id": "cafe-22",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֲנִי צִמְחוֹנִי",
+          "en": "I'm vegetarian",
+          "translit": "ani tsimchoni",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-22"
+          }
+        },
+        {
+          "id": "cafe-25",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לֶאֱכֹל כָּאן אוֹ לָקַחַת?",
+          "en": "eat here or take away?",
+          "translit": "le'echol kan o lakachat?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-25"
+          }
+        },
+        {
+          "id": "cafe-26",
+          "source": "data/corpus/phrasebook.json",
+          "he": "הַחֶשְׁבּוֹן, בְּבַקָּשָׁה",
+          "en": "the bill, please",
+          "translit": "hacheshbon, bevakasha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-26"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "cafe-20",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "cafe-21",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "cafe-22",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "cafe-25",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "cafe-26",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "cafe-20",
+        "cafe-21",
+        "cafe-22",
+        "cafe-25",
+        "cafe-26"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p03",
+      "title": "Can I pay by card?",
+      "order": 3,
+      "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "cafe-27",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר לְשַׁלֵּם בְּכַרְטִיס?",
+          "en": "can I pay by card?",
+          "translit": "efshar leshalem bekartis?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-27"
+          }
+        },
+        {
+          "id": "cafe-10",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+          "en": "cold water, please",
+          "translit": "mayim karim, bevakasha",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-10"
+          }
+        },
+        {
+          "id": "cafe-18",
+          "source": "data/corpus/phrasebook.json",
+          "he": "שַׁקְשׁוּקָה",
+          "en": "shakshuka (eggs poached in tomato sauce)",
+          "translit": "shakshuka",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-18"
+          }
+        },
+        {
+          "id": "cafe-19",
+          "source": "data/corpus/phrasebook.json",
+          "he": "פִּיתָה",
+          "en": "pita bread",
+          "translit": "pita",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-19"
+          }
+        },
+        {
+          "id": "cafe-11",
+          "source": "data/corpus/phrasebook.json",
+          "he": "בִּירָה",
+          "en": "beer",
+          "translit": "bira",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-11"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "cafe-27",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "cafe-10",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "cafe-18",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "cafe-19",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "cafe-11",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "cafe-27",
+        "cafe-10",
+        "cafe-18",
+        "cafe-19",
+        "cafe-11"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p04",
+      "title": "Wine",
+      "order": 4,
+      "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json. First line: יַיִן. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "cafe-12",
+          "source": "data/corpus/phrasebook.json",
+          "he": "יַיִן",
+          "en": "wine",
+          "translit": "yayin",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-12"
+          }
+        },
+        {
+          "id": "cafe-13",
+          "source": "data/corpus/phrasebook.json",
+          "he": "לְחַיִּים!",
+          "en": "cheers!",
+          "translit": "lechayim!",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-13"
+          }
+        },
+        {
+          "id": "cafe-15",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֶפְשָׁר עוֹד אֶחָד?",
+          "en": "can I have another one?",
+          "translit": "efshar od echad?",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-15"
+          }
+        },
+        {
+          "id": "cafe-23",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֲנִי טִבְעוֹנִי",
+          "en": "I'm vegan",
+          "translit": "ani tiv'oni",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-23"
+          }
+        },
+        {
+          "id": "cafe-24",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֲנִי אָלֶרְגִּי לְ",
+          "en": "I'm allergic to ...",
+          "translit": "ani alergi le-",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-24"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "cafe-12",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "cafe-13",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "cafe-15",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "cafe-23",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "cafe-24",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "cafe-12",
+        "cafe-13",
+        "cafe-15",
+        "cafe-23",
+        "cafe-24"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p05",
+      "title": "I would like a coffee",
+      "order": 5,
+      "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json, data/curriculum/lessons.json. First line: אֲנִי רוֹצֶה קָפֶה. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "cafe-03",
+          "source": "data/corpus/phrasebook.json",
+          "he": "אֲנִי רוֹצֶה קָפֶה",
+          "en": "I would like a coffee",
+          "translit": "ani rotse kafe",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-03"
+          }
+        },
+        {
+          "id": "cafe-08",
+          "source": "data/corpus/phrasebook.json",
+          "he": "תֵּה עִם נַעֲנָע",
+          "en": "tea with mint",
+          "translit": "te im na'ana",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "line",
+            "id": "cafe-08"
+          }
+        },
+        {
+          "id": "cafe-09",
+          "source": "data/corpus/phrasebook.json",
+          "he": "מַיִם",
+          "en": "water",
+          "translit": "mayim",
+          "review": "native-speaker-needed: pointing and register",
+          "listen": {
+            "kind": "word",
+            "id": "cafe-09"
+          }
+        },
+        {
+          "id": "il06-w1",
+          "source": "data/curriculum/lessons.json#il06.words[0]",
+          "he": "אֶפְשָׁר",
+          "en": "may I; is it possible",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il06-w1"
+          }
+        },
+        {
+          "id": "il06-w2",
+          "source": "data/curriculum/lessons.json#il06.words[1]",
+          "he": "קָפֶה",
+          "en": "coffee",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il06-w2"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "cafe-03",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "cafe-08",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "cafe-09",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "il06-w1",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "il06-w2",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "cafe-03",
+        "cafe-08",
+        "cafe-09",
+        "il06-w1",
+        "il06-w2"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p06",
+      "title": "Latte-style coffee",
+      "order": 6,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הָפוּךְ. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "il06-w3",
+          "source": "data/curriculum/lessons.json#il06.words[2]",
+          "he": "הָפוּךְ",
+          "en": "latte-style coffee",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il06-w3"
+          }
+        },
+        {
+          "id": "il06-w5",
+          "source": "data/curriculum/lessons.json#il06.words[4]",
+          "he": "לְהַזְמִין",
+          "en": "to order",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il06-w5"
+          }
+        },
+        {
+          "id": "il06-w6",
+          "source": "data/curriculum/lessons.json#il06.words[5]",
+          "he": "חֶשְׁבּוֹן",
+          "en": "bill; check",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il06-w6"
+          }
+        },
+        {
+          "id": "il07-w1",
+          "source": "data/curriculum/lessons.json#il07.words[0]",
+          "he": "אֹכֶל",
+          "en": "food",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il07-w1"
+          }
+        },
+        {
+          "id": "il07-w2",
+          "source": "data/curriculum/lessons.json#il07.words[1]",
+          "he": "לֶחֶם",
+          "en": "bread",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il07-w2"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "il06-w3",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "il06-w5",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "il06-w6",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "il07-w1",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "il07-w2",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "il06-w3",
+        "il06-w5",
+        "il06-w6",
+        "il07-w1",
+        "il07-w2"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p07",
+      "title": "Cheese",
+      "order": 7,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: גְּבִינָה. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "il07-w3",
+          "source": "data/curriculum/lessons.json#il07.words[2]",
+          "he": "גְּבִינָה",
+          "en": "cheese",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il07-w3"
+          }
+        },
+        {
+          "id": "il07-w4",
+          "source": "data/curriculum/lessons.json#il07.words[3]",
+          "he": "בֵּיצָה",
+          "en": "egg",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il07-w4"
+          }
+        },
+        {
+          "id": "il07-w6",
+          "source": "data/curriculum/lessons.json#il07.words[5]",
+          "he": "תֵּה",
+          "en": "tea",
+          "translit": null,
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "il07-w6"
+          }
+        },
+        {
+          "id": "i-13-w2",
+          "source": "data/curriculum/lessons.json#I-13.words[1]",
+          "he": "קָפֶה הָפוּךְ",
+          "en": "milky coffee (hafuch)",
+          "translit": "kafeh hafukh",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w2"
+          }
+        },
+        {
+          "id": "i-13-w3",
+          "source": "data/curriculum/lessons.json#I-13.words[2]",
+          "he": "אֶסְפְּרֶסוֹ",
+          "en": "espresso",
+          "translit": "espereso",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w3"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "il07-w3",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "il07-w4",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "il07-w6",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "i-13-w2",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "i-13-w3",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "il07-w3",
+        "il07-w4",
+        "il07-w6",
+        "i-13-w2",
+        "i-13-w3"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p08",
+      "title": "Black coffee",
+      "order": 8,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: קָפֶה שָׁחוֹר. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "i-13-w4",
+          "source": "data/curriculum/lessons.json#I-13.words[3]",
+          "he": "קָפֶה שָׁחוֹר",
+          "en": "black coffee",
+          "translit": "kafeh shachor",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w4"
+          }
+        },
+        {
+          "id": "i-13-w6",
+          "source": "data/curriculum/lessons.json#I-13.words[5]",
+          "he": "חָלָב",
+          "en": "milk",
+          "translit": "chalav",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w6"
+          }
+        },
+        {
+          "id": "i-13-w7",
+          "source": "data/curriculum/lessons.json#I-13.words[6]",
+          "he": "סֻכָּר",
+          "en": "sugar",
+          "translit": "sukar",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w7"
+          }
+        },
+        {
+          "id": "i-13-w8",
+          "source": "data/curriculum/lessons.json#I-13.words[7]",
+          "he": "בְּלִי",
+          "en": "without",
+          "translit": "beli",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w8"
+          }
+        },
+        {
+          "id": "i-13-w9",
+          "source": "data/curriculum/lessons.json#I-13.words[8]",
+          "he": "גָּדוֹל",
+          "en": "big (m)",
+          "translit": "gadol",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w9"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "i-13-w4",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "i-13-w6",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "i-13-w7",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "i-13-w8",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "i-13-w9",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "i-13-w4",
+        "i-13-w6",
+        "i-13-w7",
+        "i-13-w8",
+        "i-13-w9"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p09",
+      "title": "Small (m)",
+      "order": 9,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: קָטָן. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "i-13-w10",
+          "source": "data/curriculum/lessons.json#I-13.words[9]",
+          "he": "קָטָן",
+          "en": "small (m)",
+          "translit": "katan",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w10"
+          }
+        },
+        {
+          "id": "i-13-w13",
+          "source": "data/curriculum/lessons.json#I-13.words[12]",
+          "he": "צִמְחוֹנִי",
+          "en": "vegetarian (m)",
+          "translit": "tzimchoni",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w13"
+          }
+        },
+        {
+          "id": "i-13-w14",
+          "source": "data/curriculum/lessons.json#I-13.words[13]",
+          "he": "צִמְחוֹנִית",
+          "en": "vegetarian (f)",
+          "translit": "tzimchonit",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-13-w14"
+          }
+        },
+        {
+          "id": "i-38-w1",
+          "source": "data/curriculum/lessons.json#I-38.words[0]",
+          "he": "יָפֶה",
+          "en": "beautiful, nice",
+          "translit": "yafeh",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w1"
+          }
+        },
+        {
+          "id": "i-38-w2",
+          "source": "data/curriculum/lessons.json#I-38.words[1]",
+          "he": "חָמוּד",
+          "en": "cute, sweet, charming",
+          "translit": "chamud",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w2"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "i-13-w10",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "i-13-w13",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "i-13-w14",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "i-38-w1",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "i-38-w2",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "i-13-w10",
+        "i-13-w13",
+        "i-13-w14",
+        "i-38-w1",
+        "i-38-w2"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p10",
+      "title": "Restaurant",
+      "order": 10,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מִסְעָדָה. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "i-38-w3",
+          "source": "data/curriculum/lessons.json#I-38.words[2]",
+          "he": "מִסְעָדָה",
+          "en": "restaurant",
+          "translit": "mis'adah",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w3"
+          }
+        },
+        {
+          "id": "i-38-w4",
+          "source": "data/curriculum/lessons.json#I-38.words[3]",
+          "he": "סֶרֶט",
+          "en": "film",
+          "translit": "seret",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w4"
+          }
+        },
+        {
+          "id": "i-38-w5",
+          "source": "data/curriculum/lessons.json#I-38.words[4]",
+          "he": "חָבֵר",
+          "en": "friend (m)",
+          "translit": "chaver",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w5"
+          }
+        },
+        {
+          "id": "i-38-w6",
+          "source": "data/curriculum/lessons.json#I-38.words[5]",
+          "he": "חֲבֵרָה",
+          "en": "friend (f)",
+          "translit": "chaverah",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w6"
+          }
+        },
+        {
+          "id": "i-38-w7",
+          "source": "data/curriculum/lessons.json#I-38.words[6]",
+          "he": "אֶפְשָׁר לָצֵאת",
+          "en": "can we go out?",
+          "translit": "efshar latzet",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w7"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "i-38-w3",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "i-38-w4",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "i-38-w5",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "i-38-w6",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "i-38-w7",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "i-38-w3",
+        "i-38-w4",
+        "i-38-w5",
+        "i-38-w6",
+        "i-38-w7"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p11",
+      "title": "Really?",
+      "order": 11,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: בֶּאֱמֶת?. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "i-38-w8",
+          "source": "data/curriculum/lessons.json#I-38.words[7]",
+          "he": "בֶּאֱמֶת?",
+          "en": "really?",
+          "translit": "be'emet?",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w8"
+          }
+        },
+        {
+          "id": "i-38-w9",
+          "source": "data/curriculum/lessons.json#I-38.words[8]",
+          "he": "מָתַי?",
+          "en": "when?",
+          "translit": "matai?",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w9"
+          }
+        },
+        {
+          "id": "i-38-w10",
+          "source": "data/curriculum/lessons.json#I-38.words[9]",
+          "he": "הָעֶרֶב",
+          "en": "this evening",
+          "translit": "ha'erev",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w10"
+          }
+        },
+        {
+          "id": "i-38-w11",
+          "source": "data/curriculum/lessons.json#I-38.words[10]",
+          "he": "מָחָר",
+          "en": "tomorrow",
+          "translit": "machar",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w11"
+          }
+        },
+        {
+          "id": "i-38-w12",
+          "source": "data/curriculum/lessons.json#I-38.words[11]",
+          "he": "בְּשִׂמְחָה",
+          "en": "gladly, with pleasure",
+          "translit": "besimchah",
+          "review": "needs-native-review: lesson word, not native-checked",
+          "listen": {
+            "kind": "word",
+            "id": "i-38-w12"
+          }
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "word",
+          "id": "i-38-w8",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "word",
+          "id": "i-38-w9",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "word",
+          "id": "i-38-w10",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "word",
+          "id": "i-38-w11",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "word",
+          "id": "i-38-w12",
+          "source": "item",
+          "srsKind": "word",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "i-38-w8",
+        "i-38-w9",
+        "i-38-w10",
+        "i-38-w11",
+        "i-38-w12"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p12",
+      "title": "Hello. For how many people?",
+      "order": 12,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: שָׁלוֹם. לְכַמָּה אֲנָשִׁים?. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "d-restaurant-l1",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+          "en": "Hello. For how many people?",
+          "translit": "shalom. lekama anashim?",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l1"
+          },
+          "speaker": "a"
+        },
+        {
+          "id": "d-restaurant-l2",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+          "en": "For two, please.",
+          "translit": "lishnayim, bevakasha.",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l2"
+          },
+          "speaker": "b"
+        },
+        {
+          "id": "d-restaurant-l3",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+          "en": "Please, here. Here is the menu.",
+          "translit": "bevakasha, po. hine hatafrit.",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l3"
+          },
+          "speaker": "a"
+        },
+        {
+          "id": "d-restaurant-l4",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+          "en": "I'd like a schnitzel and a salad.",
+          "translit": "ani rotse shnitsel vesalat.",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l4"
+          },
+          "speaker": "b"
+        },
+        {
+          "id": "d-restaurant-l5",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "וְלִשְׁתּוֹת?",
+          "en": "And to drink?",
+          "translit": "velishtot?",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l5"
+          },
+          "speaker": "a"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "d-restaurant-l1",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "d-restaurant-l2",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "d-restaurant-l3",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 4,
+          "kind": "line",
+          "id": "d-restaurant-l4",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 5,
+          "kind": "line",
+          "id": "d-restaurant-l5",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "d-restaurant-l1",
+        "d-restaurant-l2",
+        "d-restaurant-l3",
+        "d-restaurant-l4",
+        "d-restaurant-l5"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    },
+    {
+      "id": "pu-restaurant-p13",
+      "title": "Water, please.",
+      "order": 13,
+      "grammarNote": "This page uses only Hebrew already stored in data/curriculum/dialogues.json. First line: מַיִם, בְּבַקָּשָׁה.. The same אֶפְשָׁר + infinitive used at a cafe also opens a restaurant request.",
+      "items": [
+        {
+          "id": "d-restaurant-l6",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "מַיִם, בְּבַקָּשָׁה.",
+          "en": "Water, please.",
+          "translit": "mayim, bevakasha.",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l6"
+          },
+          "speaker": "b"
+        },
+        {
+          "id": "d-restaurant-l7",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+          "en": "Excuse me, can I have the bill?",
+          "translit": "slicha, efshar et hacheshbon?",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l7"
+          },
+          "speaker": "b"
+        },
+        {
+          "id": "d-restaurant-l8",
+          "source": "data/curriculum/dialogues.json#d-restaurant",
+          "he": "בֶּטַח, רֶגַע.",
+          "en": "Sure, one moment.",
+          "translit": "betach, rega.",
+          "review": "needs-native-review: dialogue line, not native-checked",
+          "listen": {
+            "kind": "line",
+            "id": "d-restaurant-l8"
+          },
+          "speaker": "a"
+        }
+      ],
+      "srsQueue": [
+        {
+          "position": 1,
+          "kind": "line",
+          "id": "d-restaurant-l6",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 2,
+          "kind": "line",
+          "id": "d-restaurant-l7",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        },
+        {
+          "position": 3,
+          "kind": "line",
+          "id": "d-restaurant-l8",
+          "source": "item",
+          "srsKind": "prayerLine",
+          "band": "core"
+        }
+      ],
+      "listenIds": [
+        "d-restaurant-l6",
+        "d-restaurant-l7",
+        "d-restaurant-l8"
+      ],
+      "speakSet": "speak-survival-cafe-1"
+    }
+  ],
+  "note": "There is no separate restaurant phrasebook; these lines come from the cafe situation, I-38 מִסְעָדָה, and dialogue d-restaurant. No new Hebrew was composed."
+}

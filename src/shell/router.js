@@ -137,6 +137,7 @@ export const ROUTES = [
   { name: 'intermediatelesson', pattern: '/intermediate/:id', module: '../curriculum/intermediate.view.js', title: 'Intermediate lesson',  owner: 'intermediate', optional: true, paramQuery: { id: 'id' } },
   { name: 'practical',     pattern: '/practical',     module: '../curriculum/practical.view.js', title: 'Practical',      owner: 'curriculum', optional: true, group: 'learn', quick: 'nav.practical' },
   { name: 'practicalunit', pattern: '/practical/:id', module: '../curriculum/practical.view.js', title: 'Practical unit', owner: 'curriculum', optional: true, paramQuery: { id: 'id' } },
+  { name: 'practicalpage', pattern: '/practical/:id/:page', module: '../curriculum/practical.view.js', title: 'Practical page', owner: 'curriculum', optional: true, paramQuery: { id: 'id', page: 'page' } },
   { name: 'grammar', pattern: '/grammar', module: '../grammar/grammar.view.js', title: 'Grammar notes', owner: 'grammar', optional: true, group: 'learn', quick: 'nav.grammar' },
   { name: 'grammartopic', pattern: '/grammar/:topic', module: '../grammar/grammar.view.js', title: 'Grammar topic', owner: 'grammar', optional: true, paramQuery: { topic: 'topic' } },
   { name: 'credits', pattern: '/credits', module: './credits.view.js', tier: 'v0', title: 'Credits and licences', owner: 'legal', optional: true, group: 'learn', quick: 'nav.credits' },

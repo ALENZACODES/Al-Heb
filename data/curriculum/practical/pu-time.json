@@ -1,0 +1,319 @@
+{
+ "id": "pu-time",
+ "title": "Days, time and dates",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "il12",
+   "title": "Days, time and dates",
+   "track": "israel",
+   "wordCount": 6
+  }
+ ],
+ "speakSets": [
+  "speak-time-numbers-2"
+ ],
+ "grammarNote": "il12 already stores הַיּוֹם, מָחָר, אֶתְמוֹל, שָׁעָה, the weekday יוֹם רִאשׁוֹן, and שַׁבָּת as the seventh day. These notes only name forms already in that lesson.",
+ "items": [
+  {
+   "id": "il12-w1",
+   "source": "data/curriculum/lessons.json#il12.words[0]",
+   "he": "הַיּוֹם",
+   "en": "today",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w1"
+   }
+  },
+  {
+   "id": "il12-w2",
+   "source": "data/curriculum/lessons.json#il12.words[1]",
+   "he": "מָחָר",
+   "en": "tomorrow",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w2"
+   }
+  },
+  {
+   "id": "il12-w3",
+   "source": "data/curriculum/lessons.json#il12.words[2]",
+   "he": "אֶתְמוֹל",
+   "en": "yesterday",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w3"
+   }
+  },
+  {
+   "id": "il12-w4",
+   "source": "data/curriculum/lessons.json#il12.words[3]",
+   "he": "שָׁעָה",
+   "en": "hour; time",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w4"
+   }
+  },
+  {
+   "id": "il12-w5",
+   "source": "data/curriculum/lessons.json#il12.words[4]",
+   "he": "יוֹם רִאשׁוֹן",
+   "en": "Sunday (first day)",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w5"
+   }
+  },
+  {
+   "id": "il12-w6",
+   "source": "data/curriculum/lessons.json#il12.words[5]",
+   "he": "שַׁבָּת",
+   "en": "Saturday; Sabbath",
+   "translit": null,
+   "review": "needs-native-review: lesson word, not native-checked",
+   "listen": {
+    "kind": "word",
+    "id": "il12-w6"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "il12-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "il12-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "il12-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "il12-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "il12-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "il12-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "il12-w1",
+    "il12-w2",
+    "il12-w3",
+    "il12-w4",
+    "il12-w5",
+    "il12-w6"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-time-numbers-2.json.",
+   "set": "speak-time-numbers-2",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-time-p01",
+   "title": "Today",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: הַיּוֹם. il12 already stores הַיּוֹם, מָחָר, אֶתְמוֹל, שָׁעָה, the weekday יוֹם רִאשׁוֹן, and שַׁבָּת as the seventh day.",
+   "items": [
+    {
+     "id": "il12-w1",
+     "source": "data/curriculum/lessons.json#il12.words[0]",
+     "he": "הַיּוֹם",
+     "en": "today",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w1"
+     }
+    },
+    {
+     "id": "il12-w2",
+     "source": "data/curriculum/lessons.json#il12.words[1]",
+     "he": "מָחָר",
+     "en": "tomorrow",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w2"
+     }
+    },
+    {
+     "id": "il12-w3",
+     "source": "data/curriculum/lessons.json#il12.words[2]",
+     "he": "אֶתְמוֹל",
+     "en": "yesterday",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w3"
+     }
+    },
+    {
+     "id": "il12-w4",
+     "source": "data/curriculum/lessons.json#il12.words[3]",
+     "he": "שָׁעָה",
+     "en": "hour; time",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w4"
+     }
+    },
+    {
+     "id": "il12-w5",
+     "source": "data/curriculum/lessons.json#il12.words[4]",
+     "he": "יוֹם רִאשׁוֹן",
+     "en": "Sunday (first day)",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il12-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "il12-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "il12-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "il12-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "il12-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il12-w1",
+    "il12-w2",
+    "il12-w3",
+    "il12-w4",
+    "il12-w5"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  },
+  {
+   "id": "pu-time-p02",
+   "title": "Saturday; Sabbath",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: שַׁבָּת. il12 already stores הַיּוֹם, מָחָר, אֶתְמוֹל, שָׁעָה, the weekday יוֹם רִאשׁוֹן, and שַׁבָּת as the seventh day.",
+   "items": [
+    {
+     "id": "il12-w6",
+     "source": "data/curriculum/lessons.json#il12.words[5]",
+     "he": "שַׁבָּת",
+     "en": "Saturday; Sabbath",
+     "translit": null,
+     "review": "needs-native-review: lesson word, not native-checked",
+     "listen": {
+      "kind": "word",
+      "id": "il12-w6"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "il12-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "il12-w6"
+   ],
+   "speakSet": "speak-time-numbers-2"
+  }
+ ]
+}

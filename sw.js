@@ -1,7 +1,8 @@
 /* ALEF service worker. Precache list comes from the generated precache-manifest.js
    (node tools/build-precache.mjs). Strategies:
    - navigation: network first, fall back to cached index.html, then offline.html
-   - audio/images/fonts: cache first, filled at runtime (audio in alef-runtime-v1; the rest in the per-version alef-data-<version>, dropped on activate) 
+   - audio/images/fonts: cache first, filled at runtime (audio in alef-runtime-v1; the rest in the per-version alef-data-<version>, dropped on activate)
+     Music (audio/music/*) goes to its own alef-music-v1 cache: larger cap (MAX_MUSIC_BYTES), never trimmed by MAX_CLIPS.
      Range requests for audio (what <audio> sends): answered from a cached full copy as a 206 slice; otherwise passed to the network and the clip is
      then fetched in full in the background and cached, small files only (MAX_CLIP_BYTES) and at most MAX_CLIPS clips (oldest dropped). Never at install.
      Range requests for anything else bypass the worker. See docs/audio/RANGE-AND-OFFLINE.md.
@@ -21,12 +22,20 @@ const DATA = `alef-data-${VERSION}`;  // every other runtime-cached file (vocab 
 const AUDIO = /\.(mp3|m4a|ogg|wav)$/i;
 const MAX_CLIP_BYTES = 2048 * 1024; // 2 MiB, so the longest prayer recordings (about 1.8 MiB) also work offline; a clip bigger than this is never cached by the worker (plain network, no offline copy)
 const MAX_CLIPS = 600;             // audio entries kept in RUNTIME; past this the oldest-inserted are deleted
+// Music beds and songs (audio/music/*.mp3, 0.2 to 5.1 MB each, 13 files) get their own cache: over MAX_CLIP_BYTES they were never
+// stored (no offline music), and in RUNTIME the word clips would push them out. Not trimmed; same per-lifetime revalidation.
+const MUSIC = 'alef-music-v1';
+const MUSIC_PATH = /\/audio\/music\/[^/]+\.(mp3|ogg)$/i;
+const MAX_MUSIC_BYTES = 8 * 1024 * 1024;
+const isMusic = (u) => MUSIC_PATH.test(new URL(u, self.location.origin).pathname);
+const capFor = (u) => (isMusic(u) ? MAX_MUSIC_BYTES : MAX_CLIP_BYTES);
+const clipCache = (u) => caches.open(isMusic(u) ? MUSIC : RUNTIME);
 
 /** Drop the oldest clips beyond MAX_CLIPS (Cache keys() is in insertion order); putClip = put + trim. */
 async function trimClips() {
   try { const c = await caches.open(RUNTIME); const keys = await c.keys(); for (let i = 0; i < keys.length - MAX_CLIPS; i++) await c.delete(keys[i]); } catch { /* ignore */ }
 }
-async function putClip(req, res) { await (await caches.open(RUNTIME)).put(req, res); await trimClips(); }
+async function putClip(req, res) { const u = typeof req === 'string' ? req : req.url; await (await clipCache(u)).put(req, res); if (!isMusic(u)) await trimClips(); }
 const revalidated = new Set();
 /** Background conditional GET for a clip served from the cache. Replaces the copy when the host has different bytes; never throws, never blocks the answer. */
 async function revalidateClip(url, hit) {
@@ -40,7 +49,7 @@ async function revalidateClip(url, hit) {
     const res = await fetch(url, { headers, cache: 'no-cache' });
     if (res.status !== 200) return; // 304: unchanged; anything else: keep what we have
     const fresh = new Uint8Array(await res.clone().arrayBuffer());
-    if (fresh.byteLength > MAX_CLIP_BYTES) { await (await caches.open(RUNTIME)).delete(url); return; }
+    if (fresh.byteLength > capFor(url)) { await (await clipCache(url)).delete(url); return; }
     const old = new Uint8Array(await hit.clone().arrayBuffer());
     if (old.byteLength === fresh.byteLength && old.every((b, i) => b === fresh[i])) return;
     await putClip(url, res);
@@ -50,14 +59,14 @@ const inFlight = new Set();
 /** Background full GET for a clip the page is reading with Range requests. Small files only; never throws. */
 async function fillClip(url, total) {
   if (inFlight.has(url)) return;
-  if (!(total > 0 && total <= MAX_CLIP_BYTES)) return; // unknown or too big: leave it to the network
+  if (!(total > 0 && total <= capFor(url))) return; // unknown or too big: leave it to the network
   inFlight.add(url);
   try {
-    if (await (await caches.open(RUNTIME)).match(url)) return;
+    if (await (await clipCache(url)).match(url)) return;
     const res = await fetch(url);
     if (res.status !== 200) return;
     const buf = await res.clone().arrayBuffer();
-    if (buf.byteLength > MAX_CLIP_BYTES) return;
+    if (buf.byteLength > capFor(url)) return;
     await putClip(url, res);
   } catch { /* offline or aborted: the next play tries again */ } finally { inFlight.delete(url); }
 }
@@ -71,7 +80,7 @@ function parseRange(h, len) {
   return a >= len || a > b ? 'unsat' : { a, b };
 }
 async function audioRange(req, event) {
-  const cache = await caches.open(RUNTIME);
+  const cache = await clipCache(req.url);
   const hit = await cache.match(req.url); // by URL: the Range header is not part of the key
   if (hit && hit.status === 200) {
     if (event) event.waitUntil(revalidateClip(req.url, hit.clone()));
@@ -143,7 +152,7 @@ self.addEventListener('fetch', (event) => {
       const hit = await caches.match(req);
       if (hit) { if (AUDIO.test(url.pathname) && hit.status === 200) event.waitUntil(revalidateClip(req.url, hit.clone())); return hit; }
       const res = await fetch(req);
-      if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > MAX_CLIP_BYTES)) { const c = await caches.open(AUDIO.test(url.pathname) ? RUNTIME : DATA); c.put(req, res.clone()); if (AUDIO.test(url.pathname)) event.waitUntil(trimClips()); }
+      if (res.ok && !(AUDIO.test(url.pathname) && +(res.headers.get('content-length') || 0) > capFor(req.url))) { const name = AUDIO.test(url.pathname) ? RUNTIME : DATA; const c = await caches.open(isMusic(req.url) ? MUSIC : name); c.put(req, res.clone()); if (AUDIO.test(url.pathname) && !isMusic(req.url)) event.waitUntil(trimClips()); }
       return res;
     })());
     return;

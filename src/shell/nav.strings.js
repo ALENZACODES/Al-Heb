@@ -13,6 +13,7 @@ export const NAV_EN = {
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
   'nav.phrases': 'Common phrases',
   'nav.route.awards': 'Awards and certificate',
+  'nav.route.songs': 'Songs',
   // games hub and every game
   'nav.route.games': 'Games',
   'nav.route.library': 'Library', 'nav.route.libraryarticle': 'Library article',

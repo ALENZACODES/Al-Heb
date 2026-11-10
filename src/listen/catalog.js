@@ -54,12 +54,12 @@ export const MUSIC_TRACKS = [
 
 /** Original instrumental beds (John Khan / ALENZA CODES, All rights reserved). Optional game beds only. */
 export const ORIGINAL_MUSIC_TRACKS = [
-  { id: 'klezmer-loop-a', file: 'klezmer-loop-a.mp3', title: 'Klezmer Loop A', role: 'Folk dance bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '99d39681805811f7' },
-  { id: 'klezmer-loop-b', file: 'klezmer-loop-b.mp3', title: 'Klezmer Loop B', role: 'Folk dance bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'fae669f8680e2f17' },
-  { id: 'niggun-calm-loop-a', file: 'niggun-calm-loop-a.mp3', title: 'Niggun Calm Loop A', role: 'Contemplative bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'd3bc2adad0cfede9' },
-  { id: 'niggun-calm-loop-b', file: 'niggun-calm-loop-b.mp3', title: 'Niggun Calm Loop B', role: 'Contemplative bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '9888ade5ff442415' },
-  { id: 'cantor-strings-a', file: 'cantor-strings-a.mp3', title: 'Cantor Strings A', role: 'Strings bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'b2e635cfff7193d0' },
-  { id: 'cantor-strings-b', file: 'cantor-strings-b.mp3', title: 'Cantor Strings B', role: 'Strings bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'ab146f25dff6d195' },
+  { id: 'klezmer-loop-a', file: 'klezmer-loop-a.mp3', title: 'Klezmer Loop A', role: 'Folk dance bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '4559f10529db04d8' },
+  { id: 'klezmer-loop-b', file: 'klezmer-loop-b.mp3', title: 'Klezmer Loop B', role: 'Folk dance bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'edf80c547bde5b4d' },
+  { id: 'niggun-calm-loop-a', file: 'niggun-calm-loop-a.mp3', title: 'Niggun Calm Loop A', role: 'Contemplative bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '541e80c5bc5bf33f' },
+  { id: 'niggun-calm-loop-b', file: 'niggun-calm-loop-b.mp3', title: 'Niggun Calm Loop B', role: 'Contemplative bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'a3b4bae2e1e1ad1b' },
+  { id: 'cantor-strings-a', file: 'cantor-strings-a.mp3', title: 'Cantor Strings A', role: 'Strings bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: 'db2250d3b78ff5a1' },
+  { id: 'cantor-strings-b', file: 'cantor-strings-b.mp3', title: 'Cantor Strings B', role: 'Strings bed', author: 'John Khan / ALENZA CODES', licence: 'All rights reserved', sha256_16: '320aaefe1676e2a8' },
 ];
 
 /** Original songs (same owner). Selectable on game routes only; never under prayer / sacred listen / learner speech. */

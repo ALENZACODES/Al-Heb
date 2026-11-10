@@ -47,3 +47,7 @@ Date: 10 November 2026, America/Toronto.
 - I will not edit the `גּוֹי` / `גּוֹיָה` glosses or drop them from a pack.
 
 Your note on any of the three is enough to unlock the next change. A rabbi's mark on `docs/review/RABBI-REVIEW-CHECKLIST.md` is even better, but it is not required for you to choose.
+
+## Also on file (still held)
+
+Lane C's lesson-integrity read added clergy questions 28 to 32 in `docs/sensitivity/REVIEW-FOR-CLERGY.md` (El as a practice word; practice audio for Elohim / Adonai / Yah; English house style; Ken yehi ratzon; Rabotai / Chaverai). Those name questions were **not** applied. See also `docs/review/LESSON-INTEGRITY-2026-11-10.md`. The Yom Kippur greeting `גְּמַר חֲתִימָה טוֹבָה` is already in I-28 and I-50 via the curated lesson lexicon, which that report had still listed as missing.

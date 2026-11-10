@@ -358,17 +358,20 @@ async function boot() {
 /**
  * The address is not a page in this build. It may be a page a newer build has (Nov 9: the newer Games page linked to Brain Lab for
  * learners still running the build before it). If an update is waiting, or turns up within a few seconds, apply it now: nothing is in
- * progress on this screen, and the reload opens the same address in the new build. Once per address per minute, so it never loops.
+ * progress on this screen, and the reload opens the same address in the new build. It cannot loop: after the reload no update is
+ * waiting, so an address the new build lacks too just shows "Page not found". Nothing is stored.
  */
+let missingPageStop = () => {};
 function updateForMissingPage(path, onUpdating) {
-  const KEY = 'alef:missing-page-update', now = Date.now();
-  try { const [p, at] = (sessionStorage.getItem(KEY) || '').split('|'); if (p === path && now - Number(at) < 60000) return; } catch { /* no session storage: still try */ }
+  missingPageStop(); missingPageStop = () => {};
   const handleNow = () => window.alef?.update;
   const waitHandle = async () => { for (let i = 0; i < 20 && !handleNow(); i++) await new Promise((r) => setTimeout(r, 250)); return handleNow(); };
   import('./shell/update.js').then(async (m) => {
     const handle = await waitHandle();
-    if (!handle || location.hash.split('?')[0] !== '#' + path) return;
-    m.updateForMissingPage(handle, { onUpdating: () => { try { sessionStorage.setItem(KEY, `${path}|${Date.now()}`); } catch { /* ignore */ } onUpdating(); } });
+    if (!handle || location.hash.split('?')[0] !== '#' + path) return; // the learner has moved on
+    missingPageStop = m.updateForMissingPage(handle, { onUpdating });
+    const stopOnLeave = () => { window.removeEventListener('hashchange', stopOnLeave); missingPageStop(); };
+    window.addEventListener('hashchange', stopOnLeave);
   }).catch(() => {});
 }
 

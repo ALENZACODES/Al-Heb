@@ -37,10 +37,12 @@ test('no update yet: it asks the server once and applies if one turns up; otherw
   assert.doesNotThrow(() => updateForMissingPage(null)); assert.doesNotThrow(() => updateForMissingPage({ supported: false }));
 });
 
-test('the shell calls it from Page not found, at most once per address per minute, and says so on screen', () => {
+test('the shell calls it from Page not found, stops when the learner leaves, stores nothing, and says so on screen', () => {
   const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
   assert.match(app, /updateForMissingPage\(path, \(\) => \{ updating\.textContent = t\('notfound\.updating'\); \}\);/);
-  assert.match(app, /if \(p === path && now - Number\(at\) < 60000\) return;/);
+  assert.match(app, /window\.addEventListener\('hashchange', stopOnLeave\)/);
+  const fn = app.slice(app.indexOf('function updateForMissingPage'), app.indexOf('function updateForMissingPage') + 900);
+  assert.doesNotMatch(fn, /Storage|localStorage|sessionStorage/);
   assert.equal(t('notfound.updating'), 'A newer version has this page. Updating now…');
 });
 

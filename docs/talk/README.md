@@ -107,5 +107,5 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
 - Past and future sentences, and anything said about a third person ("The children are hungry").
-- Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (23 lines today).
+- Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (93 of the 204 today).
 - "My wife", "we are from", "per night", "a bigger room", "on Sunday": the round 3 held-out file lists what is still refused.

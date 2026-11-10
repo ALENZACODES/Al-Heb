@@ -149,7 +149,7 @@ test('refuses instead of guessing: a near line with a different thing in it is n
     assert.equal(r.ok, false, src);
     assert.equal(r.method, 'none');
   }
-  for (const src of ['הילדים רעבים', 'תן לי רגע', 'אני גר בטורונטו', 'החשבון בפרטנר, בבקשה']) assert.equal(en(src).ok, false, src);
+  for (const src of ['הילד נפל', 'תן לי רגע', 'אתמול הלכתי לים', 'החשבון בפרטנר, בבקשה']) assert.equal(en(src).ok, false, src);
 });
 
 test('small extra words do not block a stored line, and the match is named', () => {
@@ -225,6 +225,66 @@ test('to-forms after want, need and may I; a to-form that cannot take a thing re
   assert.equal(en('אני לא אוכלת בשר').translation, "I don't eat meat");
 });
 
+test('describing words follow the noun or the speaker; clock times; when things start and end', () => {
+  const cases = [
+    ['The children are hungry', 'הילדים רעבים'],
+    ['The room is very dirty', 'החדר מלוכלך מאוד'],
+    ['The soup was cold', 'המרק היה קר'],
+    ['The shoes are too small', 'הנעליים קטנות מדי'],
+    ['The door is open', 'הדלת פתוחה'],
+    ['It is not far', 'זה לא רחוק'],
+    ['We are ready', 'אנחנו מוכנים'],
+    ['I live in Toronto', 'אני גר בטורונטו'],
+    ['I am thirty five years old', 'אני בן שלושים וחמש'],
+    ['I have two children', 'יש לי שני ילדים'],
+    ['At half past eight', 'בשמונה וחצי'],
+    ['The service starts at nine', 'התפילה מתחילה בתשע'],
+    ['When does the concert start?', 'מתי הקונצרט מתחיל?'],
+    ['See you tomorrow at eight thirty', 'נתראה מחר בשמונה וחצי'],
+    ['It cost twenty shekels', 'זה עלה עשרים שקלים'],
+  ];
+  for (const [src, want] of cases) assert.equal(he(src).translation, want, src);
+  const tired = he('I am very tired');
+  assert.equal(tired.translation, 'אני עייף מאוד');
+  assert.deepEqual(tired.variants, [{ label: 'Said by a woman', text: 'אני עייפה מאוד' }]);
+  assert.equal(he('I am very tired', { speaker: 'f' }).translation, 'אני עייפה מאוד');
+  const back = [
+    ['הילדים רעבים', 'The children are hungry'],
+    ['החדר לא נקי', 'The room is not clean'],
+    ['האוכל היה קר מאוד', 'The food was very cold'],
+    ['אני גר בטורונטו', 'I live in Toronto'],
+    ['התפילה מתחילה בתשע', 'The service starts at nine'],
+    ['בשמונה וחצי', 'At half past eight'],
+    ['זה עלה עשרים שקלים', 'It cost twenty shekels'],
+  ];
+  for (const [src, want] of back) assert.equal(en(src).translation, want, src);
+});
+
+test('a refused line that sounds like a stored line is offered as "did you mean", never given as the answer', () => {
+  const cases = [
+    ['מי בא לי קרח?', 'he-en', 'מים, בלי קרח'],
+    ['יש לכם אפשרויות סינכרוניות?', 'he-en', 'יש לכם אפשרויות צמחוניות?'],
+    ['החשבון בפרטנר, בבקשה.', 'he-en', 'החשבון נפרד, בבקשה'],
+    ['איפה השאלמונית לשדה תעופה?', 'he-en', 'אפשר מונית לשדה התעופה?'],
+    ['See you at show.', 'en-he', 'נתראה בבית הכנסת'],
+  ];
+  for (const [src, direction, want] of cases) {
+    const r = engine.translate(src, { direction });
+    assert.equal(r.ok, false, src);
+    assert.equal(r.translation, '', src);
+    assert.equal(r.soundsLike, true, src);
+    assert.equal(r.suggestions[0].he, want, src);
+  }
+  assert.notEqual(he('The quarterly report is late again').soundsLike, true);
+});
+
+test('a stored phrasebook line names its recorded clip; a changed line does not', () => {
+  const r = he('Good morning');
+  assert.deepEqual(r.clip, { kind: 'line', id: 'greetings-03' });
+  assert.equal(he('Where is the museum?').clip, undefined, 'a pattern has no clip');
+  assert.deepEqual(he('Good morning, please').clip, undefined, 'a line with words added is not the recorded line');
+});
+
 test('dictionary: used only after it is loaded, first meanings only, always marked low', async () => {
   assert.equal(engine.hasDictionary, false);
   assert.equal(he('Where is the forest?').ok, false);
@@ -296,9 +356,15 @@ test('score: the round 1 and round 2 fresh sets, both since used to widen the en
   assert.ok(r2.score >= 86, `round 2 set ${r2.score.toFixed(2)}`);
 });
 
-test('score: 40 held-out lines written at the end of round 2 (the honest number; must not fall)', () => {
+test('score: the round 2 end set, since used to guide new frames (a regression check)', () => {
   const r = score('tests/fixtures/talk.fresh3.json');
   assert.equal(r.n, 40);
-  assert.ok(r.score >= 73, `score ${r.score.toFixed(2)}`);
-  assert.ok(r.refused <= 10, `refused ${r.refused}`);
+  assert.ok(r.score >= 82, `score ${r.score.toFixed(2)}`);
+});
+
+test('score: 40 held-out lines written at the end of round 3 (the honest number; must not fall)', () => {
+  const r = score('tests/fixtures/talk.fresh4.json');
+  assert.equal(r.n, 40);
+  assert.ok(r.score >= 59, `score ${r.score.toFixed(2)}`);
+  assert.ok(r.refused <= 14, `refused ${r.refused}`);
 });

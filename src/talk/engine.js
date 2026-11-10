@@ -120,10 +120,10 @@ const PREFIX_GLOSS = { 'ו': 'and', 'ה': 'the', 'ב': 'in', 'ל': 'to' };
 const SMALL_WORDS = new Map([['אפשר', 'may I'], ['עוד', 'more'], ['בלי', 'without'], ['עם', 'with'], ['יש', 'there is'], ['אין', 'there is no'], ['מה', 'what'], ['אתה', 'you'], ['את', 'you'], ['אתם', 'you'], ['אני', 'I'], ['אנחנו', 'we'], ['הוא', 'he'], ['היא', 'she'], ['זה', 'this'], ['זאת', 'this'], ['כאן', 'here'], ['פה', 'here'], ['שם', 'there'], ['לא', 'not'], ['כן', 'yes'], ['גם', 'also'], ['רק', 'only'], ['מאוד', 'very'], ['עכשיו', 'now'], ['היום', 'today'], ['מחר', 'tomorrow'], ['של', 'of'], ['שלי', 'my'], ['על', 'on'], ['אחרי', 'after'], ['לפני', 'before'], ['ליד', 'next to'], ['בבקשה', 'please'], ['תודה', 'thanks'], ['איפה', 'where'], ['מתי', 'when'], ['כמה', 'how much'], ['למה', 'why'], ['מי', 'who'], ['איך', 'how'], ['או', 'or'], ['אבל', 'but'], ['כי', 'because'], ['אם', 'if'], ['לי', 'to me'], ['לך', 'to you'], ['לנו', 'to us'], ['צריך', 'need'], ['צריכה', 'need'], ['רוצה', 'want'], ['יכול', 'can'], ['יכולה', 'can']]);
 
 /**
- * @typedef {{id:string, src:string, en:string[], he:string, pointed?:string, f?:string, toF?:string, alt?:string[], other?:string}} Pair
+ * @typedef {{id:string, src:string, en:string[], he:string, pointed?:string, f?:string, toF?:string, alt?:string[], other?:string, clip?:string}} Pair
  * @typedef {{ok:boolean, held?:boolean, direction:'en-he'|'he-en', source:string, translation:string, pointed?:string,
  *   method:'phrase'|'pattern'|'close'|'word'|'words'|'none'|'held', confidence:'high'|'medium'|'low'|'none',
- *   matched?:{id:string, en:string, he:string}, variants?:{label:string, text:string}[], note?:string,
+ *   matched?:{id:string, en:string, he:string}, variants?:{label:string, text:string}[], note?:string, clip?:{kind:string, id:string}, soundsLike?:boolean,
  *   suggestions?:{id:string, en:string, he:string}[]}} TalkResult
  */
 
@@ -136,7 +136,7 @@ export function pairsFromPhrasebook(phrasebook) {
     const en = String(e.en).split(' / ').map((x) => x.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim()).filter(Boolean);
     if (!en.length) continue;
     /** @type {Pair} */
-    const p = { id: `pb-${e.id}`, src: 'phrasebook', en, he: stripNikkud(e.he).replace(/[.]$/, ''), pointed: e.he.replace(/[.]$/, '') };
+    const p = { id: `pb-${e.id}`, src: 'phrasebook', clip: String(e.id), en, he: stripNikkud(e.he).replace(/[.]$/, ''), pointed: e.he.replace(/[.]$/, '') };
     const f = e.forms?.f?.he; const m = e.forms?.m?.he;
     if (f && m && stripNikkud(f) !== stripNikkud(m)) p.other = stripNikkud(f);
     out.push(p);
@@ -231,6 +231,10 @@ export function createEngine(data) {
   /** @type {Map<string,string>} */ const verbHe = new Map();
   /** @type {Set<string>} */ const takesThing = new Set(); // to-forms that can be followed by a thing ("buy a ticket"); the rest stand alone ("sit", "leave")
   for (const v of pack.verbs || []) { if (!verbEn.has(v.en)) verbEn.set(v.en, v.he); if (!verbHe.has(v.he)) verbHe.set(v.he, v.en); if (v.thing) { takesThing.add(v.en); takesThing.add(v.he); } }
+  /** @type {Map<string, any>} */ const adjEn = new Map();
+  /** @type {Map<string, any>} */ const adjHe = new Map();
+  for (const a of pack.adjectives || []) { for (const e of a.en) if (!adjEn.has(e)) adjEn.set(e, a); for (const f of [a.m, a.f, a.mp, a.fp]) if (!adjHe.has(f)) adjHe.set(f, a); }
+  const adjFor = (a, g) => (g === 'f' ? a.f : g === 'pf' ? a.fp : g === 'p' ? a.mp : a.m);
   const ADV = [['here', 'כאן'], ['now', 'עכשיו'], ['today', 'היום'], ['tomorrow', 'מחר'], ['tonight', 'הערב'], ['outside', 'בחוץ'], ['inside', 'בפנים'], ['later', 'אחר כך'], ['there', 'שם']];
   const CONTAINER = new Map([['bottle', 'בקבוק'], ['glass', 'כוס'], ['cup', 'כוס'], ['plate', 'צלחת'], ['bowl', 'קערה']]);
   const CONTAINER_HE = new Map([['בקבוק', 'bottle'], ['כוס', 'glass'], ['צלחת', 'plate'], ['קערה', 'bowl']]);
@@ -432,6 +436,23 @@ export function createEngine(data) {
     return out.join(' ');
   };
 
+  /** A clock time in words: "eight", "eight oclock", "eight thirty", "half past eight", "quarter past eight". */
+  function clock(text) {
+    const t = String(text).replace(/ oclock$/, '');
+    let m;
+    if ((m = /^half past (\w+)$/.exec(t)) || (m = /^(\w+) (?:30|thirty)$/.exec(t))) { const n = numEn.get(m[1]); return n && n.n >= 1 && n.n <= 12 ? `${n.count} וחצי` : null; }
+    if ((m = /^(?:a )?quarter past (\w+)$/.exec(t)) || (m = /^(\w+) (?:15|fifteen)$/.exec(t))) { const n = numEn.get(m[1]); return n && n.n >= 1 && n.n <= 12 ? `${n.count} ורבע` : null; }
+    const n = numEn.get(t);
+    return n && n.n >= 1 && n.n <= 12 ? n.count : null;
+  }
+  /** Hebrew clock words -> English ("שמונה וחצי" -> "half past eight"). */
+  function clockEn(text) {
+    const m = /^(.+?)( וחצי| ורבע)?$/.exec(normHe(text));
+    const n = m ? numHe.get(m[1]) : null;
+    if (!n || n.n < 1 || n.n > 12) return null;
+    return m[2] === ' וחצי' ? `half past ${n.en[0]}` : m[2] === ' ורבע' ? `quarter past ${n.en[0]}` : n.en[0];
+  }
+
   // ---- English -> Hebrew patterns ---------------------------------------------------------------------------------
   /** @returns {{he:string, f?:string, toF?:string, from:'table'|'dictionary', note?:string}|null} */
   function patternEnHe(q) {
@@ -445,8 +466,8 @@ export function createEngine(data) {
     if ((m = /^i am from (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'place') return { he: `אני מ${n.he}`, from: 'table' }; }
     if ((m = /^it is (\w+) oclock$/.exec(q))) { const n = numEn.get(m[1]); if (n && n.n >= 1) return { he: `השעה ${n.count}`, from: 'table' }; }
     if ((m = /^the number is (.+)$/.exec(q))) { const he = numbersToHe(m[1]); if (he) return { he: `המספר הוא ${he}`, from: 'table' }; }
-    if ((m = /^see you tomorrow at (\w+)(?: oclock)?$/.exec(q))) { const n = numEn.get(m[1]); if (n && n.n >= 1) return { he: `נתראה מחר ב${n.count}`, from: 'table' }; }
-    if ((m = /^see you at (\w+)(?: oclock)?$/.exec(q))) { const n = numEn.get(m[1]); if (n && n.n >= 1) return { he: `נתראה ב${n.count}`, from: 'table' }; }
+    if ((m = /^see you tomorrow at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `נתראה מחר ב${t}`, from: 'table' }; }
+    if ((m = /^see you at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `נתראה ב${t}`, from: 'table' }; }
     // agreement with a stored noun's gender (dictionary nouns have no stored gender, so these frames need a noun from the Talk list)
     const byG = (n, mas, fem, plu, pluF = plu) => (n.g === 'f' ? fem : n.g === 'pf' ? pluF : n.g === 'p' ? plu : mas);
     const listed = (text) => { const n = np(/^the /.test(text) ? text : 'the ' + text); return n && n.from === 'table' && n.kind === 'noun' && n.g ? n : null; };
@@ -454,6 +475,47 @@ export function createEngine(data) {
     if ((m = /^we have a (?:reservation|booking) for (\w+)(?: people)?$/.exec(q))) { const x = forN(m[1]); if (x) return { he: `יש לנו הזמנה ל${x}`, from: 'table' }; }
     if ((m = /^(?:a )?table for (\w+)(?: people)?$/.exec(q))) { const x = forN(m[1]); if (x) return { he: `שולחן ל${x}`, from: 'table' }; }
     if ((m = /^(?:it|that|this) (?:costs|is) (.+ (?:shekels?|dollars?))$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'count') return { he: `זה עולה ${n.he}`, from: 'table' }; }
+    if ((m = /^(?:it|that|this) cost (.+ (?:shekels?|dollars?))$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'count') return { he: `זה עלה ${n.he}`, from: 'table' }; }
+    // who or what a describing word is about: I, we, you, it, or a noun from the Talk list (its gender picks the form)
+    const subject = (text) => {
+      if (text === 'i') return { he: 'אני', g: 'm', who: 'i' };
+      if (text === 'we') return { he: 'אנחנו', g: 'p', who: 'we' };
+      if (text === 'you') return { he: 'אתה', g: 'm', who: 'you' };
+      if (text === 'it' || text === 'this' || text === 'that') return { he: 'זה', g: 'm', who: 'it' };
+      const n = listed(text);
+      return n ? { he: n.he, g: n.g, who: 'noun' } : null;
+    };
+    const described = (subjText, verb, not, degree, adjWord, when, ask) => {
+      const sj = subject(subjText); const a = adjEn.get(adjWord);
+      if (!sj || !a) return null;
+      const past = verb === 'was' || verb === 'were';
+      const tail = `${degree === 'too' ? ' מדי' : degree ? ' מאוד' : ''}${when === 'today' ? ' היום' : when === 'now' ? ' עכשיו' : ''}${ask ? '?' : ''}`;
+      const line = (g, subj) => {
+        const was = !past ? '' : sj.who === 'i' ? 'הייתי ' : sj.who === 'we' ? 'היינו ' : g === 'f' ? 'הייתה ' : g.startsWith('p') ? 'היו ' : 'היה ';
+        return `${subj} ${was}${not ? 'לא ' : ''}${adjFor(a, g)}${tail}`;
+      };
+      /** @type {{he:string, f?:string, toF?:string, from:'table'}} */
+      const out = { he: line(sj.g, sj.he), from: 'table' };
+      if (sj.who === 'i' && a.f !== a.m) out.f = line('f', 'אני');
+      if (sj.who === 'you') out.toF = line('f', 'את');
+      return out;
+    };
+    if ((m = /^(is|are|was|were|am) (.+?) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now))?$/.exec(q))) { const r = described(m[2], m[1], m[3], m[4], m[5], m[6], true); if (r) return r; }
+    if ((m = /^(.+?) (is|are|was|were|am) (not )?(?:(very|really|so|too) )?(\w+)(?: (today|now))?$/.exec(q))) { const r = described(m[1], m[2], m[3], m[4], m[5], m[6], false); if (r) return r; }
+    if ((m = /^i live in (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.from === 'table') return { he: `אני גר ${withPrep(n, 'ב')}`, f: `אני גרה ${withPrep(n, 'ב')}`, from: 'table' }; }
+    if ((m = /^i work (?:in|at) (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.from === 'table') return { he: `אני עובד ${withPrep(n, 'ב')}`, f: `אני עובדת ${withPrep(n, 'ב')}`, from: 'table' }; }
+    if ((m = /^i am (\w+) years old$/.exec(q))) { const N = numEn.get(m[1]); if (N && N.n >= 1) return { he: `אני בן ${N.count}`, f: `אני בת ${N.count}`, from: 'table' }; }
+    // clock times and when things start and end
+    if ((m = /^at (.+)$/.exec(q))) { const t = clock(m[1]); if (t) return { he: `ב${t}`, from: 'table' }; }
+    if ((m = /^it is (.+)$/.exec(q)) && / oclock$|half past|quarter past| 30$| thirty$| 15$| fifteen$/.test(m[1])) { const t = clock(m[1]); if (t) return { he: `השעה ${t}`, from: 'table' }; }
+    if ((m = /^(.+) (starts|begins|ends|is) at (.+)$/.exec(q))) {
+      const n = listed(m[1]); const t = clock(m[3]);
+      if (n && t) { const v = m[2] === 'is' ? '' : m[2] === 'ends' ? byG(n, 'נגמר ', 'נגמרת ', 'נגמרים ', 'נגמרות ') : byG(n, 'מתחיל ', 'מתחילה ', 'מתחילים ', 'מתחילות '); return { he: `${n.he} ${v}ב${t}`, from: 'table' }; }
+    }
+    if ((m = /^(?:when|what time) does (.+) (start|begin|end)$/.exec(q))) {
+      const n = listed(m[1]);
+      if (n) return { he: `מתי ${n.he} ${m[2] === 'end' ? byG(n, 'נגמר', 'נגמרת', 'נגמרים', 'נגמרות') : byG(n, 'מתחיל', 'מתחילה', 'מתחילים', 'מתחילות')}?`, from: 'table' };
+    }
     if ((m = /^in (.+ (?:minutes?|hours?|days?|weeks?))$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'count') return { he: `בעוד ${n.he}`, from: 'table' }; }
     if ((m = /^for (.+)$/.exec(q))) { const n = np(m[1]); if (n && n.kind === 'count') return { he: `ל${n.he}`, from: 'table' }; }
     if ((m = /^does (?:this|it) (?:have|contain) (.+)$/.exec(q)) || (m = /^(?:is|are) there (.+) in (?:this|it)$/.exec(q))) { const n = np(m[1]); if (n) return { he: `יש בזה ${n.he}?`, from: lvl(n) }; }
@@ -545,6 +607,19 @@ export function createEngine(data) {
     }
     const the = (x) => enOf(x);
     const afterPrep = (x) => enOf('ה' + x) || enOf(x);
+    if ((m = /^זה עלה (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && /shekel|dollar/.test(n.bare)) return { en: `It cost ${n.en}`, from: 'table' }; }
+    if ((m = /^אני (?:גר|גרה) ב(.+)$/.exec(q))) { const n = enOf(m[1]) || afterPrep(m[1]); if (n && n.from === 'table') return { en: `I live in ${n.en}`, from: 'table' }; }
+    if ((m = /^אני (?:עובד|עובדת) ב(.+)$/.exec(q))) { const n = enOf(m[1]) || afterPrep(m[1]); if (n && n.from === 'table') return { en: `I work in ${n.en}`, from: 'table' }; }
+    if ((m = /^אני (?:בן|בת) (.+)$/.exec(q))) { const n = numbersToEn(m[1]); if (n) return { en: `I am ${n} years old`, from: 'table' }; }
+    if ((m = /^נתראה מחר ב(.+)$/.exec(q))) { const t = clockEn(m[1]); if (t) return { en: `See you tomorrow at ${t}`, from: 'table' }; }
+    if ((m = /^נתראה ב(.+)$/.exec(q))) { const t = clockEn(m[1]); if (t) return { en: `See you at ${t}`, from: 'table' }; }
+    if ((m = /^השעה (.+ ו(?:חצי|רבע))$/.exec(q))) { const t = clockEn(m[1]); if (t) return { en: `It is ${t}`, from: 'table' }; }
+    if ((m = /^מתי (.+) (מתחיל|מתחילה|מתחילים|מתחילות|נגמר|נגמרת|נגמרים|נגמרות)$/.exec(q))) { const n = the(m[1]); if (n) return { en: `When does ${n.en} ${/^מת/.test(m[2]) ? 'start' : 'end'}?`, from: n.from }; }
+    if ((m = /^(.+?) (מתחיל |מתחילה |מתחילים |מתחילות |נגמר |נגמרת |נגמרים |נגמרות )?ב(\S+(?: ו(?:חצי|רבע))?)$/.exec(q))) {
+      const n = the(m[1]); const t = clockEn(m[3]);
+      if (n && n.definite && t) return { en: `${cap(n.en)} ${!m[2] ? 'is' : /^מת/.test(m[2]) ? 'starts' : 'ends'} at ${t}`, from: n.from };
+    }
+    if ((m = /^ב(\S+(?: ו(?:חצי|רבע))?)$/.exec(q))) { const t = clockEn(m[1]); if (t) return { en: `At ${t}`, from: 'table' }; }
     if ((m = /^זה עולה (.+)$/.exec(q))) { const n = enOf(m[1]); if (n && /shekel|dollar/.test(n.bare)) return { en: `It costs ${n.en}`, from: 'table' }; }
     if ((m = /^יש לנו הזמנה ל(.+)$/.exec(q))) { const n = numbersToEn(m[1]); if (n) return { en: `We have a reservation for ${n}`, from: 'table' }; }
     if ((m = /^שולחן ל(.+)$/.exec(q))) { const n = numbersToEn(m[1]); if (n) return { en: `A table for ${n}`, from: 'table' }; }
@@ -566,6 +641,30 @@ export function createEngine(data) {
     if ((m = /^אני (?:צריך|צריכה) להגיע ל(.+)$/.exec(q))) { const n = afterPrep(m[1]); if (n) return { en: `I need to get to ${n.en}`, from: n.from }; }
     if ((m = /^אני לא (?:אוכל|אוכלת) (.+)$/.exec(q))) { const n = enOf(m[1]); if (n) return { en: `I don't eat ${n.bare}`, from: n.from }; }
     if ((m = /^אני לא שותה (.+)$/.exec(q))) { const n = enOf(m[1]); if (n) return { en: `I don't drink ${n.bare}`, from: n.from }; }
+    {
+      // "הילדים רעבים", "החדר לא נקי", "האוכל היה קר מאוד", "אני עייפה", "זה יקר מדי"
+      const toks = q.split(' ');
+      let end = toks.length; let when = ''; let degree = '';
+      if (toks[end - 1] === 'היום' || toks[end - 1] === 'עכשיו') { when = toks[end - 1] === 'היום' ? ' today' : ' now'; end -= 1; }
+      if (toks[end - 1] === 'מאוד' || toks[end - 1] === 'מדי') { degree = toks[end - 1] === 'מאוד' ? 'very ' : 'too '; end -= 1; }
+      const adj = end >= 2 ? adjHe.get(toks[end - 1]) : null;
+      if (adj) {
+        let k = end - 1; let not = '';
+        if (toks[k - 1] === 'לא') { not = 'not '; k -= 1; }
+        let past = false;
+        if (['היה', 'הייתה', 'היו', 'הייתי', 'היינו'].includes(toks[k - 1])) { past = true; k -= 1; }
+        const st = toks.slice(0, k).join(' ');
+        const plural = /^(?:ים|ות)$/.test(toks[end - 1].slice(-2)) && toks[end - 1] !== adj.m && toks[end - 1] !== adj.f;
+        const be = (sing, plu) => (past ? (plu ? 'were' : 'was') : (plu ? 'are' : sing));
+        let subj = '';
+        if (st === 'אני') subj = `I ${past ? 'was' : 'am'}`;
+        else if (st === 'אנחנו') subj = `We ${past ? 'were' : 'are'}`;
+        else if (st === 'אתה' || st === 'את' || st === 'אתם') subj = `You ${past ? 'were' : 'are'}`;
+        else if (st === 'זה' || st === 'זאת') subj = `It ${past ? 'was' : 'is'}`;
+        else { const n = st ? enOf(st) : null; if (n && n.definite && n.from === 'table') subj = `${cap(n.en)} ${be('is', plural)}`; }
+        if (subj) return { en: `${subj} ${not}${degree}${adj.en[0]}${when}`, from: /** @type {'table'} */ ('table') };
+      }
+    }
     if ((m = /^כמה זמן לוקח להגיע ל(.+)$/.exec(q))) { const n = afterPrep(m[1]); if (n) return { en: `How long does it take to get to ${n.en}?`, from: n.from }; }
     if ((m = /^תודה על (.+)$/.exec(q))) { const n = enOf(m[1]); if (n) return { en: `Thank you for ${n.en}`, from: n.from }; }
     if ((m = /^בלי (.+)$/.exec(q))) { const n = enOf(m[1]); if (n) return { en: `No ${n.bare}`, from: n.from }; }
@@ -635,6 +734,34 @@ export function createEngine(data) {
     return scored;
   }
   const brief = (p) => ({ id: p.id, en: p.en[0], he: p.he });
+  /**
+   * Stored lines that sound or look like the request (letters compared with the spaces taken out), nearest first.
+   * Used only to offer "Did you mean" choices: a line found this way is never given as the answer.
+   */
+  function soundsLike(text, lang) {
+    const flat = (x) => (lang === 'he' ? normHe(x) : normEn(x)).replace(/ /g, '');
+    const want = flat(text);
+    if (want.length < 4) return [];
+    /** @type {{pair:Pair, sim:number}[]} */ const out = [];
+    for (const p of pairs) {
+      let best = 0;
+      for (const c of (lang === 'he' ? [p.he, p.f, p.toF, ...(p.alt || [])] : p.en)) {
+        if (!c) continue;
+        const f = flat(c); const cap2 = Math.ceil(Math.max(want.length, f.length) * 0.3);
+        const d = editDistance(want, f, cap2);
+        if (d <= cap2) { const sim = 1 - d / Math.max(want.length, f.length); if (sim > best) best = sim; }
+      }
+      if (best >= 0.7) out.push({ pair: p, sim: best });
+    }
+    return out.sort((x, y) => y.sim - x.sim);
+  }
+  /** Suggestions for a refused line: lines that sound like it first, then lines that share its words. */
+  function suggest(text, lang, near) {
+    const like = soundsLike(text, lang).slice(0, 3);
+    const seen = new Set(like.map((x) => x.pair.id));
+    const rest = near.filter((x) => x.score >= 0.5 && !seen.has(x.pair.id)).slice(0, 3 - like.length);
+    return { suggestions: [...like, ...rest].map((x) => brief(x.pair)), soundsLike: like.length > 0 };
+  }
 
   /**
    * One word that is not a word (a slip of the ear or the keyboard) next to a stored line that is otherwise the same:
@@ -751,7 +878,7 @@ export function createEngine(data) {
       if (near.length && near[0].safe) return fromPair(near[0].pair, 'close', 'medium', `Closest line I know: “${near[0].pair.en[0]}”`);
       const fixed = snap(toks, 'en');
       if (fixed) return fromPair(fixed.pair, 'close', 'medium', `Read “${fixed.heard}” as “${fixed.as}”. Closest line I know: “${fixed.pair.en[0]}”`);
-      return none({ suggestions: near.filter((x) => x.score >= 0.5).slice(0, 3).map((x) => brief(x.pair)) });
+      return none(suggest(source, 'en', near));
     }
 
     // Hebrew -> English
@@ -782,7 +909,7 @@ export function createEngine(data) {
     if (fixed) return { ok: true, direction, source, translation: polite(cap(fixed.pair.en[0])), method: 'close', confidence: 'medium', matched: brief(fixed.pair), note: `Read “${fixed.heard}” as “${fixed.as}”. Closest line I know: “${fixed.pair.he}”` };
     const words = wordByWord(q);
     if (words) return { ok: true, direction, source, translation: words, method: toks.length <= 1 ? 'word' : 'words', confidence: 'low', note: toks.length <= 1 ? 'One dictionary word. It may not be the sense you meant.' : 'Word by word, not a sentence. Use it to get the gist only.' };
-    return none({ suggestions: near.filter((x) => x.score >= 0.5).slice(0, 3).map((x) => brief(x.pair)) });
+    return none(suggest(source, 'he', near));
   }
 
   /** A line with commas or several short sentences: every part must translate on its own, or the whole is refused. */
@@ -800,8 +927,20 @@ export function createEngine(data) {
       note: low ? 'Put together from parts, one of them a dictionary word. Check it before you rely on it.' : 'Put together from stored parts.' });
   }
 
+  // A Hebrew answer that is word for word a phrasebook line carries that line's clip id, whichever stored pair produced it.
+  /** @type {Map<string,string>} */ const clipByHe = new Map();
+  // Pointed phrasebook text drops the vowel letters everyday spelling adds ("בקר" for "בוקר"), so the comparison leaves ו and י out.
+  const spine = (x) => normHe(x).replace(/[וי]/g, '');
+  for (const p of pairs) if (p.clip) { const k = spine(p.he); if (k && !clipByHe.has(k)) clipByHe.set(k, p.clip); }
+  /** @type {typeof translate} */
+  const translateWithClip = (text, o) => {
+    const r = translate(text, o);
+    if (r.ok && r.direction === 'en-he') { const id = clipByHe.get(spine(r.translation)); if (id) r.clip = { kind: 'line', id }; }
+    return r;
+  };
+
   return {
-    translate,
+    translate: translateWithClip,
     setDictionary,
     get hasDictionary() { return hasDict; },
     size: { pairs: pairs.length, nouns: nounEn.size, names: nameEn.size },

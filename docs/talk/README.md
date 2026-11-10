@@ -22,7 +22,7 @@ A line that differs from a stored line by a real word is refused, not matched. "
 
 | File | Use |
 |---|---|
-| `data/talk/pack.json` | 311 sentence pairs with their English wordings, 234 nouns with gender and plural where needed, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
+| `data/talk/pack.json` | 311 sentence pairs with their English wordings, 258 nouns with gender and plural where needed, 56 describing words in their four forms, 62 to-forms, 24 places, 40 names and the numbers 0 to 100. Written for this project. Not yet checked by a native speaker. |
 | `data/corpus/phrasebook.json` | The 204 phrasebook lines. |
 | `data/curriculum/dialogues.json`, `data/israel/scenarios.json` | Dialogue lines and the natural option of each scene. |
 | `data/vocab/index.json` | The dictionary index. Fetched only when a line needs it. Only a word's first meaning is used, only for nouns inside a pattern or for a single word, and the answer is always marked low. Dictionary glosses are never strung into a sentence. |
@@ -35,6 +35,9 @@ A line that differs from a stored line by a real word is refused, not matched. "
 - Counted things with the right number form ("two beers", "three rooms"), money ("It costs twenty shekels"), clock hours, "in ten minutes", a table or a reservation for a number.
 - Open, closed and late with the noun's gender ("When does the store close?").
 - Things joined by with, without, and, of, to a place, outside, inside, in English.
+- Describing words that follow the noun or the speaker ("The room is very dirty", "I am tired", "The soup was cold").
+- Clock times with half and quarter past, and when things start and end ("The service starts at nine").
+- I live in, I work in, I am a number of years old.
 
 ## Lines As They Are Heard
 
@@ -44,7 +47,7 @@ Speech recognisers drop the article, swap near words and sometimes return a non-
 - A known swap that keeps the request the same: "ניפגש" for "נתראה", "שמאל" for "שמאלה", "תתקשר" for "תתקשרו".
 - One word that is not a word, within one letter of a stored line (two letters for long words): "שקיד" is read as "שקית". The screen shows the correction.
 
-A misheard word that is itself a real word is a different request. It is translated as heard or refused. "בלי ביצים" stays "No eggs" even if the speaker said "בלי בצל".
+A misheard word that is itself a real word is a different request. It is translated as heard or refused. When a refused line sounds like a stored line, the screen offers that line under "Did You Mean" for the learner to tap. It is never given as the answer. "בלי ביצים" stays "No eggs" even if the speaker said "בלי בצל".
 
 ## Code
 
@@ -60,7 +63,7 @@ A misheard word that is itself a real word is a different request. It is transla
 
 Listening uses the browser's speech recognition. ALEF uploads nothing itself. Some browsers send the sound to the browser maker to turn it into text; the screen says this beside the buttons, and the privacy page lists it. Browsers without speech recognition get typing only, with a sentence that says so. Typing works offline once the screen has been opened.
 
-The translation is read by the device voice and labelled as the device voice. Speaking the translation in the learner's own voice is not built. The screen calls it a future feature.
+When the Hebrew answer is word for word a phrasebook line that has a clip in the audio manifest, that clip plays and is labelled as what it is. Every other answer is read by the device voice and labelled as the device voice. Speaking the translation in the learner's own voice is not built. The screen calls it a future feature.
 
 ## Who Is Speaking
 
@@ -76,16 +79,17 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on four files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
+`tests/talk.engine.test.js` scores the engine on five files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
 | `tests/fixtures/talk.utterances.json` | 100 | 96.3 | 0 | The pack was written with these lines in view. A regression check. |
 | `tests/fixtures/talk.fresh.json` | 60 | 95.5 | 1 | Written after round 1. It scored 69.6 then and has since been used to widen the pack. A regression check. |
 | `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
-| `tests/fixtures/talk.fresh3.json` | 40 | 74.4 | 10 | Written at the end of round 2. No line from it was added. This is the honest number for everyday lines near the pack's topics. It gave no wrong answer after two refusals were added. |
+| `tests/fixtures/talk.fresh3.json` | 40 | 84.4 | 6 | Written at the end of round 2. It scored 74.4 then; its refusals guided the round 3 frames. A regression check. |
+| `tests/fixtures/talk.fresh4.json` | 40 | 60.3 | 14 | Written at the end of round 3. Nothing was changed after it was scored. This is the honest number for everyday lines near the pack's topics. |
 
-On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+Each new held-out file has scored between 60 and 75 when first run, whatever the earlier files had reached by then. That range is the fair expectation for a new everyday line. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
 
 ## Scoring The Shipped Engine From A Speech Review
 
@@ -103,4 +107,5 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
 - Past and future sentences, and anything said about a third person ("The children are hungry").
-- Playing the recorded phrasebook clips for stored lines. Today every line uses the device voice.
+- Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (23 lines today).
+- "My wife", "we are from", "per night", "a bigger room", "on Sunday": the round 3 held-out file lists what is still refused.

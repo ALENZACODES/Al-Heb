@@ -119,3 +119,20 @@ These are JSON parse failures in the harness's call to the hosted model, not phr
 
 - The extra-001 to extra-0xx source lines are not in the repository. If they are added under `tests/fixtures/`, they can be scored on every push.
 - Hebrew in `data/talk/pack.json` has not been checked by a native speaker.
+
+## Round 3 Addendum
+
+The fail list sent for round 3 is the same file as before: same tip, same 20,000 lines, same examples. No new failure was in it. The cases refused in round 2 were revisited.
+
+| Case | Text given to the engine | Round 3 result |
+|---|---|---|
+| extra-040, male voice | It cost twenty shekels. | זה עלה עשרים שקלים (a past frame for cost was added) |
+| heen-20 | מי בא לי קרח? | Refused. Offered under "Did You Mean": מים, בלי קרח |
+| heen-19, noise | יש לכם אפשרויות סינכרוניות? | Refused. Offered: יש לכם אפשרויות צמחוניות? |
+| extra-018, noise | החשבון בפרטנר, בבקשה. | Refused. Offered: החשבון נפרד, בבקשה |
+| extra-008, noise | איפה השאלמונית לשדה תעופה? | Refused. Offered: אפשר מונית לשדה התעופה? |
+| enhe-42, male voice | See you at show. | Refused. Offered: See you at shul |
+
+A line made of real words that were misheard is still not given as the answer. The engine now ranks stored lines by how they sound, and the screen shows the nearest ones for the learner to tap. In the command-line tool these still come back as `ok: false` and score 0.
+
+With these changes the 37 example lines score 83.8 with 5 refusals (81.8 with 6 in round 2).

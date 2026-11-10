@@ -5,6 +5,7 @@
 // device voice. Where the browser cannot listen, typing still works, online or offline.
 import { h } from '../shell/ui.js';
 import { speakEnglish, stopEnglish } from '../shell/speak-english.js';
+import { fileLabel } from '../shell/audio-labels.js';
 import {
   hasHebrew, pushHistory, stripNikkud, uid, HISTORY_KEY, SETTINGS_KEY, loadSettings, loadHistory,
 } from './talk.model.js';
@@ -23,6 +24,7 @@ export const HELD_LINE = 'A sacred Name is in that line. ALEF does not speak it 
 export const LISTEN_NOTE = 'Listening uses your browser’s own speech service. Some browsers send the sound to the browser maker to turn it into text. ALEF sends nothing anywhere and keeps only the text of your last lines on this device.';
 export const NO_LISTEN = 'This browser cannot listen. Type your line instead; on most phones the keyboard has its own microphone key.';
 export const DEVICE_VOICE = 'Read aloud by your device voice, not by a recorded teacher.';
+export const DID_YOU_MEAN = 'Did You Mean';
 export const VOICE_KEEP = 'Speaking the translation in your own voice is a future feature.';
 const CAT_LABEL = { greetings: 'Greetings', politeness: 'Polite Words', language: 'Language Help', directions: 'Directions', ordering: 'Food and Drink', shopping: 'Shopping', emergencies: 'Emergencies', shul: 'Synagogue', numbers: 'Time and Questions', hotel: 'Hotel', smalltalk: 'Small Talk' };
 
@@ -154,8 +156,9 @@ export function mount(root, ctx = {}) {
   const shownHebrew = (r) => (settings.nikkud && r.pointed ? r.pointed : stripNikkud(r.translation));
   const setText = (el, text) => { const he = hasHebrew(text); el.textContent = text; el.dir = he ? 'rtl' : 'ltr'; el.lang = he ? 'he' : 'en'; };
 
-  function lineButton(item, label) {
-    return h('li', {}, h('button', { type: 'button', class: 'btn secondary', onclick: () => { ta.value = item.en; run(item.en, 'en-he'); title.scrollIntoView?.({ block: 'start' }); } },
+  function lineButton(item, label, direction = 'en-he') {
+    const text = direction === 'he-en' ? item.he : item.en;
+    return h('li', {}, h('button', { type: 'button', class: 'btn secondary', onclick: () => { ta.value = text; run(text, direction); title.scrollIntoView?.({ block: 'start' }); } },
       h('span', { lang: 'en' }, item.en), h('span', { lang: 'he', dir: 'rtl' }, item.he), label ? h('span', { class: 'muted talk-small' }, label) : null));
   }
 
@@ -178,7 +181,8 @@ export function mount(root, ctx = {}) {
     said.textContent = '';
     const sug = !r.ok && !r.held ? (r.suggestions || []) : [];
     suggestTitle.hidden = !sug.length; suggest.hidden = !sug.length;
-    suggest.replaceChildren(...sug.map((s) => lineButton(s)));
+    suggestTitle.textContent = r.soundsLike ? DID_YOU_MEAN : 'Lines ALEF Knows';
+    suggest.replaceChildren(...sug.map((s) => lineButton(s, '', r.direction)));
   }
 
   async function run(text, forced) {
@@ -213,6 +217,12 @@ export function mount(root, ctx = {}) {
         stopEnglish();
         if (!ctx.audio || typeof ctx.audio.play !== 'function') { if (asked) said.textContent = 'No Hebrew voice is available on this device.'; return; }
         const voice = ctx.settings?.get?.('voice');
+        if (r.clip) {
+          // a stored phrasebook line may have a clip of its own: play that, and say what it is; otherwise fall through to the device voice
+          const clip = await ctx.audio.play(r.clip.kind, r.clip.id, { voice, tradition: 'israeli' });
+          if (!alive) return;
+          if (clip && clip.source === 'file') { said.textContent = `${fileLabel(clip.entryStatus, clip.fileTradition || 'israeli', clip.entrySource)}.`; return; }
+        }
         const res = await ctx.audio.play('line', 'talk-device-voice', { text: stripNikkud(r.translation), tradition: 'israeli', voice, allowMismatchedTts: true });
         if (!alive) return;
         said.textContent = res && res.source === 'tts-fallback' ? DEVICE_VOICE : (asked ? 'No Hebrew voice is available on this device.' : '');

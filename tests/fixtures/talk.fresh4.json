@@ -1,0 +1,246 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "40 everyday lines written at the end of round 3, after every engine and pack change of that round. The reference is one acceptable answer.",
+ "samples": [
+  {
+   "id": "k-en-01",
+   "direction": "en-he",
+   "source": "The coffee is cold.",
+   "reference": "הקפה קר."
+  },
+  {
+   "id": "k-en-02",
+   "direction": "en-he",
+   "source": "Is the water safe to drink?",
+   "reference": "בטוח לשתות את המים?"
+  },
+  {
+   "id": "k-en-03",
+   "direction": "en-he",
+   "source": "My wife is tired.",
+   "reference": "אשתי עייפה."
+  },
+  {
+   "id": "k-en-04",
+   "direction": "en-he",
+   "source": "The room is too small.",
+   "reference": "החדר קטן מדי."
+  },
+  {
+   "id": "k-en-05",
+   "direction": "en-he",
+   "source": "When does the movie start?",
+   "reference": "מתי הסרט מתחיל?"
+  },
+  {
+   "id": "k-en-06",
+   "direction": "en-he",
+   "source": "I am forty years old.",
+   "reference": "אני בן ארבעים."
+  },
+  {
+   "id": "k-en-07",
+   "direction": "en-he",
+   "source": "We are from Canada.",
+   "reference": "אנחנו מקנדה."
+  },
+  {
+   "id": "k-en-08",
+   "direction": "en-he",
+   "source": "The lesson starts at ten thirty.",
+   "reference": "השיעור מתחיל בעשר וחצי."
+  },
+  {
+   "id": "k-en-09",
+   "direction": "en-he",
+   "source": "Can I have another towel?",
+   "reference": "אפשר עוד מגבת?"
+  },
+  {
+   "id": "k-en-10",
+   "direction": "en-he",
+   "source": "Where is my room?",
+   "reference": "איפה החדר שלי?"
+  },
+  {
+   "id": "k-en-11",
+   "direction": "en-he",
+   "source": "The elevator is broken.",
+   "reference": "המעלית שבורה."
+  },
+  {
+   "id": "k-en-12",
+   "direction": "en-he",
+   "source": "How much is the room per night?",
+   "reference": "כמה עולה החדר ללילה?"
+  },
+  {
+   "id": "k-en-13",
+   "direction": "en-he",
+   "source": "I want to rent a car.",
+   "reference": "אני רוצה לשכור מכונית."
+  },
+  {
+   "id": "k-en-14",
+   "direction": "en-he",
+   "source": "Is the beach far?",
+   "reference": "חוף הים רחוק?"
+  },
+  {
+   "id": "k-en-15",
+   "direction": "en-he",
+   "source": "Do you have a bigger room?",
+   "reference": "יש לכם חדר יותר גדול?"
+  },
+  {
+   "id": "k-en-16",
+   "direction": "en-he",
+   "source": "I don't have cash.",
+   "reference": "אין לי מזומן."
+  },
+  {
+   "id": "k-en-17",
+   "direction": "en-he",
+   "source": "Excuse me, is this seat free?",
+   "reference": "סליחה, המקום הזה פנוי?"
+  },
+  {
+   "id": "k-en-18",
+   "direction": "en-he",
+   "source": "The music is too loud.",
+   "reference": "המוזיקה רועשת מדי."
+  },
+  {
+   "id": "k-en-19",
+   "direction": "en-he",
+   "source": "Five shekels.",
+   "reference": "חמישה שקלים."
+  },
+  {
+   "id": "k-en-20",
+   "direction": "en-he",
+   "source": "What is the weather today?",
+   "reference": "מה מזג האוויר היום?"
+  },
+  {
+   "id": "k-en-21",
+   "direction": "en-he",
+   "source": "I need to buy medicine.",
+   "reference": "אני צריך לקנות תרופה."
+  },
+  {
+   "id": "k-en-22",
+   "direction": "en-he",
+   "source": "See you on Sunday.",
+   "reference": "נתראה ביום ראשון."
+  },
+  {
+   "id": "k-en-23",
+   "direction": "en-he",
+   "source": "The children want ice cream.",
+   "reference": "הילדים רוצים גלידה."
+  },
+  {
+   "id": "k-en-24",
+   "direction": "en-he",
+   "source": "Please call a doctor now.",
+   "reference": "תקראו לרופא עכשיו, בבקשה."
+  },
+  {
+   "id": "k-en-25",
+   "direction": "en-he",
+   "source": "Is the tour in English?",
+   "reference": "הסיור באנגלית?"
+  },
+  {
+   "id": "k-he-26",
+   "direction": "he-en",
+   "source": "הקפה קר.",
+   "reference": "The coffee is cold."
+  },
+  {
+   "id": "k-he-27",
+   "direction": "he-en",
+   "source": "החדר קטן מדי.",
+   "reference": "The room is too small."
+  },
+  {
+   "id": "k-he-28",
+   "direction": "he-en",
+   "source": "מתי הסרט מתחיל?",
+   "reference": "When does the movie start?"
+  },
+  {
+   "id": "k-he-29",
+   "direction": "he-en",
+   "source": "אני רוצה לשכור מכונית.",
+   "reference": "I want to rent a car."
+  },
+  {
+   "id": "k-he-30",
+   "direction": "he-en",
+   "source": "המעלית שבורה.",
+   "reference": "The elevator is broken."
+  },
+  {
+   "id": "k-he-31",
+   "direction": "he-en",
+   "source": "אין לי מזומן.",
+   "reference": "I don't have cash."
+  },
+  {
+   "id": "k-he-32",
+   "direction": "he-en",
+   "source": "השיעור מתחיל בעשר וחצי.",
+   "reference": "The lesson starts at half past ten."
+  },
+  {
+   "id": "k-he-33",
+   "direction": "he-en",
+   "source": "יש לכם חדר יותר גדול?",
+   "reference": "Do you have a bigger room?"
+  },
+  {
+   "id": "k-he-34",
+   "direction": "he-en",
+   "source": "אנחנו מקנדה.",
+   "reference": "We are from Canada."
+  },
+  {
+   "id": "k-he-35",
+   "direction": "he-en",
+   "source": "המוזיקה רועשת מדי.",
+   "reference": "The music is too loud."
+  },
+  {
+   "id": "k-he-36",
+   "direction": "he-en",
+   "source": "אני בת ארבעים.",
+   "reference": "I am forty years old."
+  },
+  {
+   "id": "k-he-37",
+   "direction": "he-en",
+   "source": "איפה החדר שלי?",
+   "reference": "Where is my room?"
+  },
+  {
+   "id": "k-he-38",
+   "direction": "he-en",
+   "source": "נתראה ביום ראשון.",
+   "reference": "See you on Sunday."
+  },
+  {
+   "id": "k-he-39",
+   "direction": "he-en",
+   "source": "הילדים רוצים גלידה.",
+   "reference": "The children want ice cream."
+  },
+  {
+   "id": "k-he-40",
+   "direction": "he-en",
+   "source": "אפשר עוד מגבת?",
+   "reference": "Can I have another towel?"
+  }
+ ]
+}

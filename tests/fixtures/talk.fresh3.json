@@ -1,6 +1,6 @@
 {
  "schema": "alef-talk-utterances/1",
- "note": "40 everyday lines written at the end of round 2, after every engine and pack change of that round. It scored 76.5 when first run. Two wrong answers it exposed were then fixed by making the engine refuse (a to-form that cannot take a thing, and word-by-word reading from the big dictionary), and one agreement slip was corrected; no line from this file was added to the pack. The reference is one acceptable answer.",
+ "note": "40 everyday lines written at the end of round 2, after every engine and pack change of that round. It scored 76.5 when first run. Two wrong answers it exposed were then fixed by making the engine refuse (a to-form that cannot take a thing, and word-by-word reading from the big dictionary), and one agreement slip was corrected; no line from this file was added to the pack. In round 3 its refusals guided new frames (describing words, I live in, counted children), so it is now a regression check. The reference is one acceptable answer.",
  "samples": [
   {
    "id": "h-en-01",

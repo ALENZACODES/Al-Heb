@@ -142,8 +142,18 @@ def main():
     from onnxruntime.quantization import quantize_dynamic, QuantType
     for f in ('encoder', 'decoder'):
         quantize_dynamic(os.path.join(tmp, f + '.onnx'), os.path.join(out, f + '.onnx'), weight_type=QuantType.QUInt8, op_types_to_quantize=['MatMul'])
+    for f in ('encoder', 'decoder'): strip(os.path.join(out, f + '.onnx'))
     for f in ('table', 'encoder', 'decoder'): print(f, os.path.getsize(os.path.join(out, f + '.onnx')))
     if '--check' in sys.argv: check(out, tok, m)
+
+
+def strip(path):
+    """Drops the producer name, version, notes and metadata entries from a graph file."""
+    model = onnx.load(path)
+    model.producer_name = ''; model.producer_version = ''; model.doc_string = ''; model.domain = ''; model.graph.doc_string = ''
+    del model.metadata_props[:]
+    for n in model.graph.node: n.doc_string = ''
+    onnx.save(model, path)
 
 
 def greedy(out, ids, vocab, sessions, max_new=96):

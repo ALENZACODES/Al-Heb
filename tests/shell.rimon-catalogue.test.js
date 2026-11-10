@@ -6,9 +6,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { STILLS, TRIGGER_DOCS, CHARACTER, STYLE, FRAMING, NEVER, RESPECT, PALETTE, REFERENCE, promptFor, pathOf, fileId, fileStem } from '../tools/images/rimon/stills.mjs';
-import { ART } from '../tools/images/rimon/art-map.mjs';
+import { ART, HOLD, REDRAW } from '../tools/images/rimon/art-map.mjs';
 import { validate, buildOutputs, stillIds, scanPresent, presentText, OUT, shortPrompt, MASTER_PROMPT } from '../tools/images/rimon/build.mjs';
-import { TRIGGERS, SURFACES, STILL_COUNT, stillPath, QUIET_DAYS } from '../src/shell/rimon-triggers.js';
+import { TRIGGERS, SURFACES, STILL_COUNT, stillPath, QUIET_DAYS, pickStill, presentSet, lineFor } from '../src/shell/rimon-triggers.js';
 import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
 import { parseCsv } from '../tools/images/ingest_lib.mjs';
 import { specFor, loadTargets } from '../tools/images/ingest_queue.mjs';
@@ -78,7 +78,7 @@ test('the order sheet feeds the image ingest: 200 rows, every path has the 512 x
   assert.equal(rows.length, 200);
   const pi = head.indexOf('path'), qi = head.indexOf('prompt'), si = head.indexOf('prompt_short');
   rows.forEach((r, i) => {
-    assert.equal(r[pi], pathOf(i + 1)); assert.equal(r[pi], stillPath(fileId(i + 1)));
+    assert.equal(r[pi], pathOf(i + 1)); assert.equal(r[pi], stillPath(fileId(i + 1), { [fileId(i + 1)]: fileStem(i + 1) }));
     assert.equal(r[si], shortPrompt(STILLS[i]));
     assert.deepEqual(specFor(r[pi]), { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' });
     assert.equal(r[qi], promptFor(STILLS[i]));
@@ -92,7 +92,8 @@ test('two sets, one map: drawn pictures keep plain numbers and come first; catal
   for (const [t, drawn] of Object.entries(ART)) assert.deepEqual(ids[t].slice(0, drawn.length), drawn, t);
   for (const s of STILLS) { assert.match(fileId(s.n), /^a\d{3}$/); assert.ok(ids[s.trigger].includes(fileId(s.n))); assert.equal(pathOf(s.n), `data/images/rimon/v2/rimon-${String(s.n).padStart(3, '0')}-${s.slug}.webp`); }
   // the catalogue pictures already drawn into v2/ are found by their exact file name and listed as present
-  for (const id of scanPresent().filter((x) => x.startsWith('a'))) assert.ok(fs.existsSync(path.join(ROOT, stillPath(id))), id);
+  const files = JSON.parse(read('data/images/rimon/present.json')).files;
+  for (const id of scanPresent().filter((x) => x.startsWith('a'))) assert.ok(fs.existsSync(path.join(ROOT, stillPath(id, files))), id);
   assert.ok(Object.keys(ART).length >= 90, 'most triggers already have a drawn picture');
   for (const block of [CHARACTER, STYLE, FRAMING, NEVER, RESPECT]) assert.ok(MASTER_PROMPT.includes(block));
 });
@@ -100,7 +101,8 @@ test('two sets, one map: drawn pictures keep plain numbers and come first; catal
 test('stills and present.json ship with the app; the catalogue and prompts do not', () => {
   const ship = new Set(listShipFiles());
   assert.ok(ship.has('data/images/rimon/present.json'));
-  for (const n of scanPresent()) assert.ok(ship.has(stillPath(n)), stillPath(n));
+  const listed = JSON.parse(read('data/images/rimon/present.json')).files;
+  for (const n of scanPresent()) assert.ok(ship.has(stillPath(n, listed)), stillPath(n, listed));
   for (const f of [OUT.md, OUT.csv, OUT.json, 'tools/images/rimon/stills.mjs']) assert.ok(!ship.has(f), f);
 });
 
@@ -109,4 +111,43 @@ test('the contact sheet reads the generated JSON and the present list', () => {
   assert.match(html, /rimon-stills\.json/);
   assert.match(html, /present\.json/);
   assert.doesNotMatch(html, /<script[^>]+src=["']https?:/, 'no outside scripts');
+});
+
+test('held stills stay off screen; held and redraw notes name real catalogue stills', () => {
+  const present = JSON.parse(read('data/images/rimon/present.json')).ids;
+  for (const id of Object.keys(HOLD)) {
+    assert.ok(!present.includes(id), `${id} is held but listed in present.json`);
+    assert.ok(!scanPresent().includes(id), `${id} is held but scanPresent returns it`);
+  }
+  for (const id of [...Object.keys(HOLD), ...Object.keys(REDRAW)]) assert.match(id, /^a\d{3}$/);
+  assert.match(read(OUT.md), /## Held and To Redraw/);
+  assert.deepEqual(validate(), []);
+});
+
+test('every line Rimon can say has a picture to say it with (its own or a fallback), so no written line goes dark', () => {
+  const present = presentSet(JSON.parse(read('data/images/rimon/present.json')));
+  const dark = Object.keys(TRIGGERS).filter((t) => TRIGGERS[t].line && !pickStill(t, { present }));
+  assert.deepEqual(dark, []);
+});
+
+test('a festival with no drawing of its own still greets with its own words, on a borrowed picture', () => {
+  const present = presentSet(JSON.parse(read('data/images/rimon/present.json')));
+  const own = (STILL_IDS['holiday.hanukkah'] || []).filter((id) => present.has(id));
+  const p = pickStill('holiday.hanukkah', { present });
+  assert.ok(p, 'Hanukkah gets a picture');
+  assert.equal(p.trigger === 'holiday.hanukkah', own.length > 0, 'its own drawing when there is one, a borrowed one otherwise');
+  assert.equal(lineFor('holiday.hanukkah').en, 'Happy Hanukkah!');
+  // with only the borrowed pictures listed it borrows; add one of its own and that one wins
+  const mine = STILL_IDS['holiday.hanukkah'].find((id) => id.startsWith('a'));
+  const borrowedOnly = new Set([...present].filter((id) => !STILL_IDS['holiday.hanukkah'].includes(id)));
+  assert.notEqual(pickStill('holiday.hanukkah', { present: borrowedOnly })?.trigger, 'holiday.hanukkah');
+  assert.equal(pickStill('holiday.hanukkah', { present: new Set([...borrowedOnly, mine]) }).id, mine);
+});
+
+test('catalogue file names travel in present.json (drawn ones only), not in the code every visitor loads', () => {
+  const json = JSON.parse(read('data/images/rimon/present.json'));
+  const drawnA = json.ids.filter((x) => x.startsWith('a'));
+  assert.deepEqual(Object.keys(json.files).sort(), [...drawnA].sort());
+  for (const id of drawnA) assert.equal(json.files[id], fileStem(Number(id.slice(1))));
+  assert.doesNotMatch(read(OUT.js), /STILL_FILES|v2\/rimon-/);
 });

@@ -4,8 +4,7 @@ import assert from 'node:assert/strict';
 import {
   TRIGGERS, QUIET_DAYS, QUIET_ROUTES, stillPath, holidaysOn, dayContext, seasonTrigger, dateTrigger, greetingCandidates,
   routeTrigger, routeParams, createAnswerTracker, ANSWER_WINDOW_MS, streakChangeTrigger, labChangeTrigger, labStreak,
-  booksChangeTrigger, awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, pickStill, alreadySeen, presentSet, lineFor, crossed,
-} from '../src/shell/rimon-triggers.js';
+  booksChangeTrigger, awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, pickStill, alreadySeen, presentSet, lineFor, crossed, presentFiles } from '../src/shell/rimon-triggers.js';
 import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
 import { candleLighting, havdalah, parseISO, fromHebrew, isoDate } from '../src/curriculum/calendar.js';
 
@@ -13,8 +12,11 @@ const all = (ids = STILL_IDS) => new Set(Object.values(ids).flat());
 const TORONTO = { lat: 43.6532, lon: -79.3832 };
 
 test('still paths are data/images/rimon/rimon-NNN.webp', () => {
-  assert.equal(stillPath('a007'), 'data/images/rimon/v2/rimon-007-starting-line.webp');
-  assert.equal(stillPath('a999'), 'data/images/rimon/rimon-a999.webp', 'unknown catalogue id: a plain name that will not be listed as present');
+  const files = presentFiles({ files: { a007: 'v2/rimon-007-starting-line', a008: '../../etc/passwd', b001: 'v2/rimon-001-x' } });
+  assert.deepEqual(files, { a007: 'v2/rimon-007-starting-line' }, 'only well-formed catalogue entries are kept');
+  assert.equal(stillPath('a007', files), 'data/images/rimon/v2/rimon-007-starting-line.webp');
+  assert.equal(stillPath('a007'), 'data/images/rimon/rimon-a007.webp', 'no file name listed: a plain name that is never present');
+  assert.equal(stillPath('a999', files), 'data/images/rimon/rimon-a999.webp');
   assert.equal(stillPath('025b'), 'data/images/rimon/rimon-025b.webp');
 });
 

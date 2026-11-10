@@ -21,6 +21,25 @@ The pictures already drawn on feature/rimon-stills-2026-11-10 (data/images/rimon
 
 The drawn set has a cream background; the app cuts it out in the browser (src/shell/rimon-stage.js) so Rimon sits cleanly on any page colour. New catalogue stills should have a transparent background.
 
+## Held and To Redraw
+
+Held pictures exist on disk but the app does not show them; their triggers use the drawn set until a fixed drawing replaces them (edit HOLD in tools/images/rimon/art-map.mjs). Pictures to redraw are shown, but should be drawn again from the same prompt plus the note.
+
+| Still | Status | What to fix |
+| --- | --- | --- |
+| a012 | held | A thin cream bar floats above the crown (left over from a frame). Redraw with nothing above the confetti. |
+| a014 | held | A broken cream corner bracket sits right of and below Rimon (left over from a frame). Redraw with no frame lines. |
+| a067 | held | A thin cream bar joins the tips of the laurel wreath (left over from a frame). Redraw with nothing between the tips. |
+| a117 | held | Faint thin lines box in the grogger (left over from a frame). Redraw with no lines around the prop. |
+| a149 | held | A thin light vertical line runs from the sash down to the step (left over from a frame). Redraw with no frame lines. |
+| a158 | held | Frame lines sit around the tambourine, and its skin came out see-through. Redraw with a solid cream skin and no lines. |
+| a019 | redraw | Fist pump reads weakly: the raised fist is small and sits against the body. Raise it clear of the body outline. |
+| a021 | redraw | Clapping hands overlap the sash and blend into it. Keep both hands above the sash, clearly apart from it. |
+| a030 | redraw | Hands blend into the sash. Move them clear of the sash so the gesture reads at small sizes. |
+| a033 | redraw | The pinching hand sits on the sash and is hard to see. Lift it to cheek height, clear of the sash. |
+| a035 | redraw | Hands blend into the sash. Keep them out to the sides, clear of the sash. |
+| a045 | redraw | The dark mortarboard almost disappears on dark backgrounds. Keep it, but add a gold tassel and a thin gold edge. |
+
 ## Rimon, On Model
 
 Reference: `assets/img/gen/MASCOT_rimon.800.webp`. Colours sampled from it: body #DA2933, crown #D59E31, leaves #908B2A, sash #0A567C, cheeks #E95F67, eyes and mouth #633839.
@@ -59,9 +78,9 @@ Festival, Shabbat and synagogue stills add: Respect: Rimon never wears a prayer 
 - **swap:** An existing picture of Rimon in that screen is replaced by the still.
 - **toast:** A small card at the bottom of the screen with the still and one line; it goes away by itself.
 
-Only one Rimon is on screen at a time: a large Rimon in the page, a card at the bottom, or a swapped Rimon picture inside the page each send the corner Rimon away until they are gone. A still the learner has already seen once (first answer, milestones) is not shown again, and each daily greeting comes once a day. Hide Rimon hides every still too.
+Only one Rimon is on screen at a time: a large Rimon in the page, a card at the bottom, or a swapped Rimon picture inside the page each send the corner Rimon away until they are gone. So does a Rimon drawn into the page by another screen (the animated in-page Rimon, the Brain Lab pictures with Rimon in them: IN_PAGE_RIMON in src/shell/rimon-stage.js), which also keeps the big-moment and floating Rimon away. A still the learner has already seen once (first answer, milestones) is not shown again, and each daily greeting comes once a day. Hide Rimon hides every still too.
 
-Hebrew in the lines below is pointed and has not yet been checked by a Hebrew teacher.
+Hebrew in the lines below is pointed and has not yet been checked by a Hebrew teacher. Every line Rimon can say, in both languages, is in `docs/images/rimon-lines-review.csv` with empty checked_by, ok and fix columns for the reviewer; the build keeps those columns for any line whose words have not changed.
 
 ## Onboarding and the first minutes (17)
 

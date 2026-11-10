@@ -2,13 +2,15 @@
 import test, { afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { mountRimonStage, SEEN_KEY } from '../src/shell/rimon-stage.js';
-import { STILL_IDS, STILL_FILES } from '../src/shell/rimon-stills.generated.js';
+import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
+import { fileStem } from '../tools/images/rimon/stills.mjs';
 import { createDocument, createWindow, createStore, ev, flush } from './rimon.fakedom.js';
 
 const ALL = Object.values(STILL_IDS).flat();
 const live = [];
 afterEach(() => { for (const st of live.splice(0)) st.destroy(); }); // a failed assertion must not leave timers running
-const BY_FILE = Object.fromEntries(Object.entries(STILL_FILES).map(([id, f]) => [f, id]));
+const FILES = Object.fromEntries(Array.from({ length: 200 }, (_, i) => [`a${String(i + 1).padStart(3, '0')}`, fileStem(i + 1)])); // as present.json lists them
+const BY_FILE = Object.fromEntries(Object.entries(FILES).map(([id, f]) => [f, id]));
 /** Still id from a URL: v2/rimon-007-starting-line.webp -> 'a007'; rimon-023.webp -> '023'. */
 const num = (src) => { const m = String(src).match(/rimon\/(v2\/rimon-\d{3}-[a-z0-9-]+|rimon-[a-z0-9]+)\.webp/); if (!m) return null; return m[1].startsWith('v2/') ? BY_FILE[m[1]] ?? null : m[1].slice(6); };
 
@@ -21,7 +23,7 @@ function setup({ present = ALL, store = createStore(), date = new Date(2026, 10,
   const calls = [];
   const companion = { showStill: (src, o = {}) => { calls.push({ id: src ? num(src) : null, ms: o.ms || 0, line: o.line || null }); return true; }, clearPose: () => calls.push({ clear: true }) };
   let clock = date;
-  const stage = mountRimonStage({ store, companion, doc, win, present, now: () => clock, loadImage: async (src) => !/missing/.test(src) });
+  const stage = mountRimonStage({ store, companion, doc, win, present: { ids: [...present], files: FILES }, now: () => clock, loadImage: async (src) => !/missing/.test(src) });
   live.push(stage);
   return { doc, win, main, h1, store, stage, calls, setNow: (d) => { clock = d; }, ready: () => { doc.dispatchEvent(ev('alef:ready')); return flush(5); } };
 }
@@ -242,9 +244,33 @@ test('the shared showRimon hook can ask the stage: URLs for a situation, none on
   assert.deepEqual(q.stage.urlsForSituation('correct'), []);
 });
 
+test('present.json is the whole truth: with nothing listed for a moment the hook is told no still, not left to its own pick', async () => {
+  const s = setup({ route: 'learn', present: ['001'] }); // only a greeting picture is listed
+  await s.stage.ready;
+  assert.deepEqual(s.stage.urlsForSituation('brainLab'), [], 'nothing listed for Brain Lab: no still');
+  assert.equal(s.stage.urlsForSituation('no-such-situation'), null, 'a moment the stage does not know is still the hook\'s own');
+  const none = setup({ route: 'learn', present: [] }); // no stills at all yet
+  await none.stage.ready;
+  assert.deepEqual(none.stage.urlsForSituation('correct'), []);
+});
+
+test('one Rimon: a Rimon drawn into the page (in-page animation, Brain Lab pictures) sends the corner one away', async () => {
+  const { QUIET_CSS, IN_PAGE_RIMON } = await import('../src/shell/rimon-stage.js');
+  for (const sel of IN_PAGE_RIMON) for (const other of ['.rimon-companion.rimon-corner', '.rimon-moment', '.alef-rimon-spot']) assert.ok(QUIET_CSS.includes(`body:has(#main ${sel}) ${other}`), sel + ' ' + other);
+  assert.ok(IN_PAGE_RIMON.includes('.lab-art.hero') && IN_PAGE_RIMON.includes('.rimon-inline'));
+  // and the stage tells the other Rimon pictures to stay away while it is there
+  const s = setup({ route: 'lab' });
+  await s.stage.ready;
+  assert.ok(s.stage.urlsForSituation('brainLab').length > 0);
+  const art = s.doc.createElement('img'); art.className = 'lab-art hero'; s.main.append(art);
+  assert.deepEqual(s.stage.urlsForSituation('brainLab'), []);
+});
+
 test('quiet-day rules are carried by the stage itself (no stylesheet edit needed)', async () => {
   const { QUIET_CSS } = await import('../src/shell/rimon-stage.js');
   for (const sel of ['.rimon-companion', '.rimon-bubble', '.rimon-toast', '.rimon-hero', '.rimon-moment']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet] ${sel}`), sel);
+  // on a day of mourning every Rimon picture goes, including the animated one inside pages and the floating one
+  for (const sel of ['img[data-rimon-still]', 'img.alef-celebrate-rimon', '.rimon-inline', '.alef-rimon-spot']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet=day] ${sel}`), sel);
 });
 
 test('living with the shared showRimon hook: its slots and marks are left alone, and its floating Rimon answers instead of the corner one', async () => {
@@ -262,4 +288,22 @@ test('living with the shared showRimon hook: its slots and marks are left alone,
   spot.remove();
   s.setNow(new Date(2026, 10, 12, 14, 6)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); await flush(160);
   assert.equal(s.calls.length, 1);
+});
+
+test('section-home screens (settings, vocab, games) get a page still, and urlsForSituation names them', async () => {
+  for (const [route, situation, trigger] of [
+    ['settings', 'settings', 'settings.home'],
+    ['vocab', 'vocab', 'vocab.home'],
+    ['games', 'games', 'games.hub'],
+  ]) {
+    const s = setup({ route, store: createStore({ 'curriculum.progress': { completed: { l1: 1 } } }) });
+    await s.stage.ready; await s.ready();
+    const page = s.calls.find((c) => c.ms === 0);
+    assert.ok(page, route + ' should dress the companion');
+    assert.ok(STILL_IDS[trigger].includes(page.id), `${route} got ${page?.id}, want one of ${STILL_IDS[trigger]}`);
+    const urls = s.stage.urlsForSituation(situation);
+    assert.ok(Array.isArray(urls) && urls.length === 1, situation + ' urls');
+    assert.ok(STILL_IDS[trigger].includes(num(urls[0])), `${situation} url ${urls[0]}`);
+    s.stage.destroy();
+  }
 });

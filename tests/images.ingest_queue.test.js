@@ -151,22 +151,25 @@ test('run: resizes to spec, strips metadata, flags, rejects bad aspect, dry-run 
   fs.rmSync(root, { recursive: true, force: true });
 });
 
-test('Rimon stills: rimon-007-starting-line.png becomes a 512 x 512 WebP with transparency, and present.json lists it', { skip: engine ? false : 'no Pillow and no ffmpeg on this machine' }, async () => {
+test('Rimon stills: rimon-007-starting-line.png becomes a 512 x 512 WebP with transparency, and present.json lists it (held stills stay off the list)', { skip: engine ? false : 'no Pillow and no ffmpeg on this machine' }, async () => {
   const root = tmpRoot();
   const drop = path.join(root, 'drop'); fs.mkdirSync(drop);
   fs.writeFileSync(path.join(drop, 'rimon-007-starting-line.png'), png(96, 96, { alpha: true, text: 'made somewhere' }));
   fs.writeFileSync(path.join(drop, 'Rimon-012-first-correct-gasp (1).png'), png(64, 64, { alpha: true }));
+  fs.writeFileSync(path.join(drop, 'rimon-013-first-mistake-shrug.png'), png(64, 64, { alpha: true }));
   const t = loadTargets(root);
   assert.equal(matchName('rimon-007-starting-line.png', t).path, 'data/images/rimon/v2/rimon-007-starting-line.webp');
   const rep = await run({ inputs: [drop], root, dryRun: false, replace: false, crop: false, engine: 'auto', quiet: true });
   assert.equal(rep.summary.failed, 0, JSON.stringify(rep.rows.map((r) => r.note)));
-  assert.equal(rep.summary.written, 2);
+  assert.equal(rep.summary.written, 3);
   const out = path.join(root, 'data/images/rimon/v2/rimon-007-starting-line.webp');
   const b = fs.readFileSync(out);
   assert.equal(b.toString('latin1', 0, 4), 'RIFF'); assert.equal(b.toString('latin1', 8, 12), 'WEBP');
   assert.deepEqual(scanFile(out, {}).findings, []);
   const present = JSON.parse(fs.readFileSync(path.join(root, 'data/images/rimon/present.json'), 'utf8'));
-  assert.deepEqual(present.ids, ['a007', 'a012']);
+  // a012 is on the hold list (tools/images/rimon/art-map.mjs): saved, but not shown until a fixed drawing replaces it
+  assert.ok(fs.existsSync(path.join(root, 'data/images/rimon/v2/rimon-012-first-correct-gasp.webp')));
+  assert.deepEqual(present.ids, ['a007', 'a013']);
   assert.equal(rep.summary.rimonPresent, 2);
   fs.rmSync(root, { recursive: true, force: true });
 });

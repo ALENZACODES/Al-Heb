@@ -15,15 +15,27 @@
 //   swap  - an existing picture of Rimon in a view (img[data-rimon-still]) is replaced by the still
 //   toast - a small card with the still and one line, at the bottom of the screen, gone after a few seconds
 import { holidaysBetween, roshChodeshInHebrewYear, toHebrew, parseISO, weekday, candleLighting, havdalah } from '../curriculum/calendar.js';
-import { STILL_IDS, STILL_FILES } from './rimon-stills.generated.js';
+import { STILL_IDS } from './rimon-stills.generated.js';
 
 export const STILL_DIR = 'data/images/rimon';
 export const PRESENT_URL = 'data/images/rimon/present.json';
 export const STILL_COUNT = 200;
 /** Still ids are file stems: '023' and '025b' (drawn set, tools/images/rimon/art-map.mjs) or 'a023' (the 200-still catalogue). */
 export const STILL_ID = /^a?\d{3}[a-z]?$/;
-/** 'a007' -> data/images/rimon/v2/rimon-007-starting-line.webp (catalogue); '023' -> data/images/rimon/rimon-023.webp (drawn set). */
-export const stillPath = (id, files = STILL_FILES) => `${STILL_DIR}/${(id.startsWith('a') && files[id]) || `rimon-${id}`}.webp`;
+/** A catalogue still's file under STILL_DIR, without .webp: v2/rimon-007-starting-line. */
+export const STILL_STEM = /^v2\/rimon-\d{3}-[a-z0-9-]+$/;
+/**
+ * 'a007' -> data/images/rimon/v2/rimon-007-starting-line.webp (catalogue; its file name comes from present.json's `files`,
+ * so the names of the 200 catalogue stills are not shipped in the code); '023' -> data/images/rimon/rimon-023.webp (drawn set).
+ */
+export const stillPath = (id, files = {}) => `${STILL_DIR}/${(id.startsWith('a') && STILL_STEM.test(files?.[id] || '') && files[id]) || `rimon-${id}`}.webp`;
+/** present.json `files` -> { a007: 'v2/rimon-007-starting-line' }, keeping only well-formed entries. */
+export function presentFiles(json) {
+  const out = {};
+  const f = json?.files;
+  if (f && typeof f === 'object') for (const [k, v] of Object.entries(f)) if (/^a\d{3}$/.test(k) && typeof v === 'string' && STILL_STEM.test(v)) out[k] = v;
+  return out;
+}
 
 // ---------------------------------------------------------------- respect rules
 /**
@@ -102,9 +114,9 @@ export const TRIGGERS = Object.freeze({
   // idle and breaks
   'idle.fidget': { surface: 'pose', ms: 4500 },
   'idle.sleep': { surface: 'pose', ms: 20000, fallback: 'idle.fidget' },
-  'idle.water': { surface: 'toast', ms: 5000, line: L("Half an hour in. Water break? I'll wait.") },
+  'idle.water': { surface: 'toast', fallback: 'idle.break', ms: 5000, line: L("Half an hour in. Water break? I'll wait.") },
   'idle.break': { surface: 'toast', ms: 5500, line: L('A whole hour of Hebrew! Stand up and stretch.') },
-  'idle.snack': { surface: 'toast', ms: 5500, line: L('Snack time. Pomegranate seeds, anyone?') },
+  'idle.snack': { surface: 'toast', fallback: 'idle.break', ms: 5500, line: L('Snack time. Pomegranate seeds, anyone?') },
 
   // greetings (Home, first visit of the day)
   'greet.morning': { surface: 'pose', ms: 4500, once: 'day', pick: 'day' },
@@ -126,21 +138,21 @@ export const TRIGGERS = Object.freeze({
   'holiday.rosh-hashanah': { surface: 'page', pick: 'day', line: L('Shanah tovah! A sweet new year.', 'שָׁנָה טוֹבָה!') },
   'holiday.yom-kippur': { surface: 'page', pick: 'day', line: L('May you be sealed for good.', 'גְּמַר חֲתִימָה טוֹבָה') },
   'holiday.sukkot': { surface: 'page', pick: 'day', line: L('Chag sameach! Happy Sukkot.', 'חַג שָׂמֵחַ!') },
-  'holiday.shemini-atzeret': { surface: 'page', line: L('Chag sameach!', 'חַג שָׂמֵחַ!') },
-  'holiday.simchat-torah': { surface: 'page', pick: 'day', line: L('Chag sameach! Time to dance.', 'חַג שָׂמֵחַ!') },
-  'holiday.hanukkah': { surface: 'page', pick: 'day', line: L('Happy Hanukkah!', 'חַג חֲנֻכָּה שָׂמֵחַ!') },
-  'holiday.tu-bishvat': { surface: 'page', pick: 'day', line: L('Happy New Year of the Trees!', 'טוּ בִּשְׁבָט שָׂמֵחַ!') },
-  'holiday.purim': { surface: 'page', pick: 'day', line: L('Happy Purim!', 'פּוּרִים שָׂמֵחַ!') },
-  'holiday.pesach': { surface: 'page', pick: 'day', line: L('Happy Passover!', 'חַג שָׂמֵחַ!') },
-  'holiday.yom-haatzmaut': { surface: 'page', pick: 'day', line: L('Happy Independence Day, Israel!', 'חַג עַצְמָאוּת שָׂמֵחַ!') },
-  'holiday.shavuot': { surface: 'page', pick: 'day', line: L('Chag sameach! Happy Shavuot.', 'חַג שָׂמֵחַ!') },
-  'holiday.rosh-chodesh': { surface: 'page', line: L('Chodesh tov! A good new month.', 'חֹדֶשׁ טוֹב!') },
-  'holiday.erev-festival': { surface: 'page', line: L('A festival begins tonight.') },
-  'holiday.lag-baomer': { surface: 'page', pick: 'day', line: L('Happy Lag BaOmer!') },
-  'holiday.tu-bav': { surface: 'page', line: L("Happy Tu B'Av!") },
+  'holiday.shemini-atzeret': { surface: 'page', fallback: 'greet.first', line: L('Chag sameach!', 'חַג שָׂמֵחַ!') },
+  'holiday.simchat-torah': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Chag sameach! Time to dance.', 'חַג שָׂמֵחַ!') },
+  'holiday.hanukkah': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy Hanukkah!', 'חַג חֲנֻכָּה שָׂמֵחַ!') },
+  'holiday.tu-bishvat': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy New Year of the Trees!', 'טוּ בִּשְׁבָט שָׂמֵחַ!') },
+  'holiday.purim': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy Purim!', 'פּוּרִים שָׂמֵחַ!') },
+  'holiday.pesach': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy Passover!', 'חַג שָׂמֵחַ!') },
+  'holiday.yom-haatzmaut': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy Independence Day, Israel!', 'חַג עַצְמָאוּת שָׂמֵחַ!') },
+  'holiday.shavuot': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Chag sameach! Happy Shavuot.', 'חַג שָׂמֵחַ!') },
+  'holiday.rosh-chodesh': { surface: 'page', fallback: 'greet.first', line: L('Chodesh tov! A good new month.', 'חֹדֶשׁ טוֹב!') },
+  'holiday.erev-festival': { surface: 'page', fallback: 'greet.evening', line: L('A festival begins tonight.') },
+  'holiday.lag-baomer': { surface: 'page', fallback: 'greet.first', pick: 'day', line: L('Happy Lag BaOmer!') },
+  'holiday.tu-bav': { surface: 'page', fallback: 'greet.first', line: L("Happy Tu B'Av!") },
 
   // Brain Lab
-  'lab.home': { surface: 'page', pick: 'day', line: L('Three short drills a day keep your Hebrew sharp.') },
+  'lab.home': { surface: 'page', fallback: 'learn.continue.next', pick: 'day', line: L('Three short drills a day keep your Hebrew sharp.') },
   'lab.drill.hunt': { surface: 'page', fallback: 'lab.home' },
   'lab.drill.matrix': { surface: 'page', fallback: 'lab.home' },
   'lab.drill.soundmatch': { surface: 'page', fallback: 'lab.home' },
@@ -151,21 +163,21 @@ export const TRIGGERS = Object.freeze({
   'lab.drill.numberear': { surface: 'page', fallback: 'lab.home' },
   'lab.drill.calendar': { surface: 'page', fallback: 'lab.home' },
   'lab.drill.pattern': { surface: 'page', fallback: 'lab.home' },
-  'lab.result.best': { surface: 'toast', ms: 5000, line: L('New personal best!') },
-  'lab.result.good': { surface: 'pose', ms: 2600 },
+  'lab.result.best': { surface: 'toast', fallback: 'award.new', ms: 5000, line: L('New personal best!') },
+  'lab.result.good': { surface: 'pose', fallback: 'answer.correct', ms: 2600 },
   'lab.levelup': { surface: 'pose', ms: 2600, fallback: 'lab.result.good' },
-  'lab.workout.done': { surface: 'toast', ms: 5000, once: 'day', line: L("Today's workout is done. Strong work.") },
-  'lab.streak': { surface: 'toast', ms: 5000, line: L('{n} days of Brain Lab in a row!') },
+  'lab.workout.done': { surface: 'toast', fallback: 'lesson.complete.done', ms: 5000, once: 'day', line: L("Today's workout is done. Strong work.") },
+  'lab.streak': { surface: 'toast', fallback: 'learn.continue.streak', ms: 5000, line: L('{n} days of Brain Lab in a row!') },
 
   // books, library, listening
-  'books.shelf': { surface: 'page', pick: 'day', line: L('Pick a little book. Each one is a short story.') },
-  'book.finished': { surface: 'toast', ms: 5000, line: L('Another book finished!') },
-  'books.milestone': { surface: 'toast', ms: 5500, line: L('{n} books read in Hebrew!') },
+  'books.shelf': { surface: 'page', fallback: 'lesson.next', pick: 'day', line: L('Pick a little book. Each one is a short story.') },
+  'book.finished': { surface: 'toast', fallback: 'lesson.complete.done', ms: 5000, line: L('Another book finished!') },
+  'books.milestone': { surface: 'toast', fallback: 'award.new', ms: 5500, line: L('{n} books read in Hebrew!') },
   'library.home': { surface: 'page' },
   'songs.home': { surface: 'page' },
   'listen.home': { surface: 'page' },
   'phrases.home': { surface: 'page' },
-  'dialogues.home': { surface: 'page', line: L('Real conversations, the way Israelis talk.') },
+  'dialogues.home': { surface: 'page', fallback: 'listen.home', line: L('Real conversations, the way Israelis talk.') },
   'israel.home': { surface: 'page' },
 
   // awards and progress
@@ -203,7 +215,7 @@ export const TRIGGERS = Object.freeze({
   'games.hub': { surface: 'swap' },
   'synagogues.home': { surface: 'page' },
   'grammar.home': { surface: 'page' },
-  'roots.home': { surface: 'page', line: L('Most Hebrew words grow from a three-letter root.') },
+  'roots.home': { surface: 'page', fallback: 'letters.home', line: L('Most Hebrew words grow from a three-letter root.') },
   'vocab.home': { surface: 'page' },
   'speak.home': { surface: 'page' },
   'traditions.home': { surface: 'page' },
@@ -232,7 +244,7 @@ export function lineFor(trigger, vars = {}) {
 export const ROUTE_TRIGGERS = Object.freeze({
   firstday: 'firstday.start', 'firstday-ladder': 'firstday.ladder', placement: 'placement.start', install: 'install.page',
   checkpoint: 'checkpoint.home', scheduler: 'review.home',
-  lab: 'lab.home',
+  lab: 'lab.home', games: 'games.hub', arcade: 'games.hub',
   labgame: (_c, _f, p) => (LAB_DRILLS.includes(p.game) ? `lab.drill.${p.game}` : 'lab.home'),
   books: 'books.shelf', library: 'library.home', songs: 'songs.home', listen: 'listen.home',
   phrases: 'phrases.home', dialogues: 'dialogues.home', israel: 'israel.home',

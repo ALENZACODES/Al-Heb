@@ -384,7 +384,7 @@ export async function mount(root, ctx) {
 
   // ---------- the builder ----------
   function rimonNode() {
-    const img = h('img', { class: 'fw-rimon', src: RIMON_SRC, alt: 'Rimon the pomegranate, smiling', width: '96', height: '96', loading: 'lazy', decoding: 'async' });
+    const img = h('img', { class: 'fw-rimon', src: RIMON_SRC, alt: 'Rimon the pomegranate, smiling', width: '96', height: '96', loading: 'lazy', decoding: 'async', 'data-rimon-still': 'firstwin.builder' });
     img.addEventListener('error', () => img.remove());
     return img;
   }

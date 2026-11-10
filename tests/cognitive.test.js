@@ -154,7 +154,9 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     // Learn continue card and lesson-finished celebration (assets/css/learn.css): Rimon bobs every 3.2 s, the next stop pulses every 2 s, the confetti and hop play once; reduced motion and calm mode switch all of them off
     'alef-continue-bob', 'alef-pulse', 'alef-burst', 'alef-hop',
     // Brain Lab (src/lab/lab.view.js): a 0.3 s one-shot shake on a wrong tile, never looping; reduced motion switches it off
-    'lab-shake'];
+    'lab-shake',
+    // Rimon stills card (assets/css/rimon.css): a 0.3 s one-shot slide-in, never looping; reduced motion and calm mode switch it off
+    'rimon-toast-in'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

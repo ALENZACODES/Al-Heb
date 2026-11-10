@@ -36,3 +36,7 @@
 .rimon-corner{transition:transform .35s ease}
 @media(max-width:600px){.rimon-corner.rimon-peek{transform:translateY(calc(100% - 1px));cursor:pointer}.rimon-corner.rimon-peek .rimon-dismiss{visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.rimon-corner{transition:none}}
+
+/* Quiet: prayer, Torah and service screens, and days of mourning and remembrance (QUIET_DAYS, QUIET_ROUTES in rimon-triggers.js). */
+body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero{display:none!important}
+body[data-rimon-quiet=day] img[data-rimon-still]{visibility:hidden}

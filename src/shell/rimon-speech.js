@@ -61,8 +61,9 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const schedule=createSpeechSchedule({greet:(t)=>greetingFor(new Date(t)),followUp:()=>{const st=streak?.();if(!st||!st.count)return null;return st.activeToday?doneLine(st.count):streakLine(st.count);}});let message=null,expires=0,friday=isFriday(now()),key='';
   function pair(line,cls){
     const group=doc.createElement('span');group.className=cls;
-    const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
     const en=doc.createElement('span');en.className='rimon-bubble-en';en.lang='en';en.dir='ltr';en.textContent=line.en;
+    if(!line.he){group.append(en);return group;}
+    const he=doc.createElement('span');he.className='rimon-bubble-he';he.lang='he';he.dir='rtl';he.textContent=line.he;
     group.append(he,en);return group;
   }
   function position(){
@@ -81,7 +82,7 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
     const nextKey=(friday?'friday':'')+'|'+(message?.en||'')+'|'+host.hidden;
     if(nextKey!==key){
       key=nextKey;bubble.replaceChildren();
-      if(friday)bubble.append(pair(SHABBAT,'rimon-shabbat'));
+      if(friday&&message?.he!==SHABBAT.he)bubble.append(pair(SHABBAT,'rimon-shabbat'));
       if(message)bubble.append(pair(message,'rimon-encouragement'));
       bubble.hidden=host.hidden || (!friday&&!message);
       if(!bubble.hidden){bubble.classList.remove('is-popping');void bubble.offsetWidth;bubble.classList.add('is-popping');}
@@ -91,6 +92,11 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   function say(action){
     schedule.reaction(action);
   }
+  /** Say one line now (a still's line from src/shell/rimon-stage.js); it stays as long as a scheduled message. */
+  function line(l){
+    if(!l||!l.en)return;
+    message=l;expires=now().getTime()+Math.max(6500,l.en.length*160);render();
+  }
   // Any tap, key or scroll also clears a visible bubble, so it never sits on top of a button the learner wants.
   const activity=(e)=>{schedule.activity(now().getTime());if(message && e && e.type!=='pointermove'){message=null;render();}};
   const activityEvents=['pointerdown','pointermove','keydown','touchstart','scroll'];
@@ -99,5 +105,5 @@ export function mountSpeechBubble(host,{doc=document,now=()=>new Date(),streak=n
   const visibility=()=>render();doc.addEventListener('visibilitychange',visibility);
   globalThis.addEventListener('resize',position);globalThis.addEventListener('scroll',position,{passive:true,capture:true});
   render();
-  return {say,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
+  return {say,line,refresh:render,element:bubble,destroy(){clearInterval(interval);bubble.remove();for(const event of activityEvents)doc.removeEventListener(event,activity,true);doc.removeEventListener('visibilitychange',visibility);globalThis.removeEventListener('resize',position);globalThis.removeEventListener('scroll',position,true);}};
 }

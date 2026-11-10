@@ -28,7 +28,9 @@ export function mount(root, ctx) {
   const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to Aleph'), ' ', heSpan('אלף'));
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
-  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, body, status));
+  // Rimon for each step (src/shell/rimon-stage.js fills it once his still exists; empty slots take no space).
+  const rimonSlot = h('div', { class: 'ob-rimon', 'data-rimon-slot': 'onboarding.letters' });
+  root.replaceChildren(h('article', { class: 'card onboarding' }, h1, rimonSlot, body, status));
   const say = (m) => { status.textContent = m; };
   const focus = (n) => { try { n?.focus?.({ preventScroll: true }); } catch { try { n?.focus?.(); } catch { /* ignore */ } } };
   const save = () => { try { store.set(STORE_KEY, rec); } catch { /* best effort */ } };
@@ -184,6 +186,7 @@ export function mount(root, ctx) {
 
   function render() {
     if (!rec) step = 'letters';
+    rimonSlot.setAttribute('data-rimon-slot', `onboarding.${['letters', 'congregation', 'minutes'].includes(step) ? step : 'plan'}`);
     if (step === 'letters') renderLetters();
     else if (step === 'congregation') renderCongregation();
     else if (step === 'minutes') renderMinutes();

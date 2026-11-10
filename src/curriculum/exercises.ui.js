@@ -29,7 +29,7 @@ export function summaryNode(d) {
   const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
-    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", "data-rimon-still": st.accuracy >= 0.9 ? "lesson.complete.perfect" : st.accuracy >= 0.7 ? "lesson.complete.great" : "lesson.complete.done", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),

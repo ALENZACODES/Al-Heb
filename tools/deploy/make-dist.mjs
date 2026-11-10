@@ -37,6 +37,7 @@ export const EXTRAS = [
   ['assets/img/gen/HERO_tree_of_life_realistic.webp', 'home astral-tree hero, named literally in src/shell/astral-tree.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/gen/HERO_home_tree.webp', 'Welcome hero, named literally in src/shell/home-hero.js (fix #11); runtime-cached on first view, not precached'],
   ['assets/img/rimon', 'Rimon animation sheets, loaded by the mascot on every route'],
+  ['data/images/rimon', 'Rimon stills (rimon-NNN.webp) and present.json, the list of the ones that exist (src/shell/rimon-stage.js); fetched on demand, runtime-cached'],
   ...['PORTAL_words_clay.webp', 'PORTAL_games_shofar.webp', 'MASCOT_rimon.800.webp'].map((name) => [`assets/img/gen/${name}`, 'Runtime portal and mascot art']),
   ...['ari', 'noa'].flatMap((voice) => ['neutral', 'speak', 'listen', 'celebrate', 'synagogue', 'telaviv'].map((pose) => [`assets/img/gen/CHAR_${voice}_${pose}.800.webp`, 'Route-specific companion portrait'])),
   ['assets/img/gen/HERO_olive_harvest_astral.1600.webp', 'olive-harvest home hero (large), named literally in src/shell/astral-tree.js; runtime-cached on first view, not precached'],

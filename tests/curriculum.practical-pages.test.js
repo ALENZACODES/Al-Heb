@@ -32,13 +32,16 @@ function sourceHebrew(it) {
   return undefined;
 }
 
-test("written pages: at least 30, in course order, unique ids that the outline marks written", () => {
+test("written pages: at least 30, in outline order, unique ids that the outline marks written", () => {
   const n = pages.pages.length;
   assert.ok(n >= 30, `written pages: ${n}`);
   const ids = pages.pages.map((p) => p.id);
   assert.equal(new Set(ids).size, n);
   const outlineIds = outline.units.flatMap((u) => u.pages.map((p) => p.id));
-  assert.deepEqual(ids, outlineIds.slice(0, n), "the written pages are the first pages of the outline, in order");
+  const pos = ids.map((id) => outlineIds.indexOf(id));
+  assert.ok(pos.every((x) => x >= 0), "every written page is in the outline");
+  assert.ok(pos.every((x, i) => i === 0 || x > pos[i - 1]), "written pages are in outline order");
+  assert.deepEqual(ids.slice(0, 30), outlineIds.slice(0, 30), "level 0 is written in full");
   for (const p of pages.pages) assert.equal(p.kind, outline.units.flatMap((u) => u.pages).find((o) => o.id === p.id).kind, `${p.id}: kind matches the outline`);
   const written = outline.units.flatMap((u) => u.pages.filter((p) => p.status === "written").map((p) => p.id));
   assert.deepEqual(written, ids);
@@ -167,11 +170,11 @@ test("outline covers every Israel-track lesson (il01-il24 and the Israel I- less
   assert.deepEqual(missing, []);
 });
 
-test("holds stay in place: politeness-21 held for John, pu-army off the live set", () => {
+test("John's decisions of 2026-11-10: politeness-21 shown, army slang live", () => {
   const p05 = pages.pages.find((p) => p.id === "pu-politeness-p05");
-  assert.deepEqual(p05.heldForJohn, ["politeness-21"]);
-  assert.equal(p05.items.find((it) => it.id === "politeness-21").heldForJohn, true);
+  assert.ok(!p05.heldForJohn);
+  assert.ok(p05.items.some((it) => it.id === "politeness-21" && !it.heldForJohn));
   const army = outline.units.find((u) => u.id === "pu-army");
-  assert.equal(army.live, false);
-  assert.equal(army.heldForJohn, true);
+  assert.notEqual(army.live, false);
+  assert.ok(army.pages.every((p) => p.status === "written"));
 });

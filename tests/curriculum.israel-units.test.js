@@ -82,7 +82,7 @@ test("speaking drill: every Hebrew line comes from the unit's lessons", () => {
   }
 });
 
-test("routes: the unit list and unit pages are registered as preview", async () => {
+test("routes: the old unit list and unit pages stay registered (as redirects)", async () => {
   const { ROUTES } = await import("../src/shell/router.js");
   const r = ROUTES.filter((x) => x.module === "../curriculum/israel-units.view.js");
   assert.deepEqual(r.map((x) => x.pattern), ["/israel-units", "/israel-units/:id"]);
@@ -106,19 +106,18 @@ globalThis.document ||= { createElement: (t) => new N(t), createTextNode: (d) =>
 const wait = async (pred) => { for (let i = 0; i < 200 && !pred(); i++) await new Promise((r) => setTimeout(r, 5)); assert.ok(pred()); };
 const ctxWith = (m, query = {}) => ({ query, t: (k) => k, store: { get: (k) => m[k], set: (k, v) => { m[k] = JSON.parse(JSON.stringify(v)); } }, settings: { get: () => undefined }, audio: { play: async () => ({ source: "file" }), status: () => ({ source: "file", entryStatus: "tts" }) } });
 
-test("view: the list shows 13 units; a unit page shows lessons, grammar and three working drills", async () => {
+test("the retired route sends old links to #/practical and is not in the nav", async () => {
   const V = await import("../src/curriculum/israel-units.view.js");
-  const root = new N("main");
-  V.mount(root, ctxWith({}));
-  await wait(() => root.find((n) => n.attrs["data-unit"]).length === 13);
-  assert.match(root.text, /Cafe and Ordering Food/);
-  const root2 = new N("main");
-  V.mount(root2, ctxWith({}, { id: "u04" }));
-  await wait(() => root2.find((n) => n.attrs["data-drill"]).length === 3);
-  assert.match(root2.text, /il06/); assert.match(root2.text, /I-13/); assert.match(root2.text, /אֶפְשָׁר לְהַזְמִין\?/);
-  for (const d of ["review", "listening", "speaking"]) {
-    await root2.find((n) => n.attrs["data-drill"] === d)[0].click();
-    const body = root2.find((n) => n.className === "alef-unit-drill")[0];
-    assert.ok(body.text.length > 10, `${d} drill shows a first item`);
+  const { ROUTES } = await import("../src/shell/router.js");
+  for (const r of ROUTES.filter((x) => x.module === "../curriculum/israel-units.view.js")) {
+    assert.ok(!r.quick && !r.group, `${r.name} must not appear in the nav`);
+  }
+  for (const query of [{}, { id: "u04" }]) {
+    const root = new N("main");
+    let went = null;
+    V.mount(root, { ...ctxWith({}, query), location: { replace: (h) => { went = h; } } });
+    assert.equal(went, "#/practical");
+    assert.equal(root.find((n) => n.attrs["data-redirect"] === "#/practical").length, 1);
+    assert.match(root.text, /Hebrew for Israel has moved/);
   }
 });

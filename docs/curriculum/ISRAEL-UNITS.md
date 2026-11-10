@@ -1,5 +1,9 @@
 # Hebrew for Israel, Unit by Unit
 
+> **Retired on 2026-11-10 by John's decision.** The Israel units were merged into the Practical course, so there is one Israel
+> course. `#/israel-units` and `#/israel-units/:id` now redirect to `#/practical`. The data and helpers stay for the review
+> history in `israelUnits.v1`. The rest of this page describes the retired grouping.
+
 This page is lane C's Babbel-style grouping of the existing Israel-track lessons (core il01–il24, go-further Israel B1). It does not add a 126th lesson and does not replace `#/practical`, which is extra situation practice drawn from the phrasebook and cited lessons (including synagogue-track greetings). Folded onto `feature/lesson-integrity-2026-11-10` from the lane C branch on 10 November 2026 after a source check of every Hebrew example.
 
 The Israel track rearranged as practical units, the way a structured conversation course (Babbel is the usual example) is built:

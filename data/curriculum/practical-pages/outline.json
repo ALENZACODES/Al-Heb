@@ -2,7 +2,7 @@
  "schema": "alef-practical-outline/1",
  "compatibleWith": "alef-practical-units/2",
  "generated": "2026-11-10",
- "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. pu-army (I-18 army slang) is outlined so every Israel-track lesson has a home, but it is held off the live Practical set until John decides. #/israel-units is not removed until John approves a single-course merge.",
+ "note": "The planned page outline for the Practical course. Unit ids match data/curriculum/practical-units.json. Pages marked written are in data/curriculum/practical-pages/written.json. John's decisions of 2026-11-10: #/israel-units is merged into this course and redirects to #/practical; army slang (pu-army) is live; בְּעֶזְרַת הַשֵּׁם on pu-politeness-p05 is shown; the Shabbat and holiday units stay at the end.",
  "levels": {
   "L0": "First words",
   "L1": "Getting around",
@@ -28,7 +28,7 @@
  "totals": {
   "units": 37,
   "pages": 189,
-  "written": 101
+  "written": 104
  },
  "units": [
   {
@@ -1903,15 +1903,13 @@
    "dialogue": null,
    "file": "data/curriculum/practical/pu-army.json",
    "route": "#/practical/pu-army",
-   "heldForJohn": true,
-   "live": false,
    "pages": [
     {
      "id": "pu-army-p01",
      "order": 1,
      "kind": "learn",
      "title": "Words From the Army",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p01"
     },
     {
@@ -1919,15 +1917,15 @@
      "order": 2,
      "kind": "listen",
      "title": "Hear It in Conversation",
-     "status": "planned",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p02"
     },
     {
      "id": "pu-army-p03",
      "order": 3,
      "kind": "review",
-     "title": "Unit Review",
-     "status": "planned",
+     "title": "Slang You Already Know, and Unit Review",
+     "status": "written",
      "route": "#/practical/pu-army/pu-army-p03"
     }
    ]

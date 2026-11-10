@@ -16,9 +16,9 @@ There are two drafts of this idea on GitHub. `feature/lesson-integrity-2026-11-1
 33 units and 162 pages in `data/curriculum/practical/<unit>.json`, with a working view, progress and a clip map. This branch has
 `#/israel-units`, 13 units built from whole lessons. They should not both ship. The plan:
 
-1. **`#/practical` is the home.** Its unit ids, file layout and v2 page shape stay. Every page id in this plan uses its pattern
+1. **`#/practical` is the home** (decided by John on 2026-11-10). Its unit ids, file layout and v2 page shape stay. Every page id in this plan uses its pattern
    (`pu-<unit>-pNN`), and the written pages replace the matching v2 pages one for one.
-2. **`#/israel-units` retires when the branches merge.** Its grammar points move into the grammar pages listed below. The route
+2. **`#/israel-units` is retired** and redirects to `#/practical` (done in round 11). Its grammar points move into the grammar pages listed below. The route
    then redirects to `#/practical`, and `israelUnits.v1` progress is dropped (it only records review dates). It stays until then
    so the branch keeps a working Israel course on its own.
 3. **Every Israel-track lesson has a unit.** il16 and il19 sit in the live units `pu-verbs-now` and `pu-past`, il23 and il24 in
@@ -434,16 +434,17 @@ Found while writing; nothing changed in the sources:
 - `d-smalltalk-l7` has מְאוֹד; the phrasebook has מְאֹד. Both spellings are in use; one course should pick one.
 - Counting-set numbers come first, which matches how numbers are said aloud. A teacher may prefer the other order.
 
-## For John
+## John's Decisions (2026-11-10)
 
-1. **Which branch owns Practical.** The recommendation is the Practical branch's route and files, with this branch's 20 pages and
-   outline merged in, and `#/israel-units` retired. Nothing merges without you.
-2. **בְּעֶזְרַת הַשֵּׁם on `pu-politeness-p05`.** The page explains that הַשֵּׁם (the Name) is how speakers refer to God in
-   daily speech without saying a divine name. It contains no divine name, but it is a decision about how God is spoken of, so it
-   is held for you. Delete the page's grammar block to drop it.
-3. **The eight divine-name holds from round 1 are unchanged** (see `docs/review/LESSON-INTEGRITY-2026-11-10.md`).
-4. **L4 (Shabbat and holidays)** sits at the end of the Israel course. Another option is to link it to the synagogue track.
-5. **Native review** of the 30 pages, the 30 written transliterations, and the items above, before any page leaves draft.
+1. **One Israel course.** `#/israel-units` is merged into `#/practical`, and its routes redirect there.
+2. **The eight divine-name items stay held** (see `docs/review/LESSON-INTEGRITY-2026-11-10.md`).
+3. **בְּעֶזְרַת הַשֵּׁם on `pu-politeness-p05` is kept and shown.**
+4. **Army slang is live.** `pu-army` (I-18) is in the live index, and its three pages are written. The word for weapon is not
+   used on any page.
+5. **Both festival greetings are kept:** גְּמַר חֲתִימָה טוֹבָה and חַג כָּשֵׁר וְשָׂמֵחַ.
+6. **The Shabbat and holiday units stay at the end** of the Israel course.
+
+Still open: native-speaker and cantor review of every written page and transliteration.
 
 ## What Is Left
 

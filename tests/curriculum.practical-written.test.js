@@ -26,16 +26,14 @@ test("units without written pages are unchanged", () => {
   assert.equal(applyWritten(cafe, written), cafe);
 });
 
-test("held items never reach the learner: politeness-21 and its grammar point are dropped", () => {
+test("held items never reach the learner (none are held now: John decided to show politeness-21)", () => {
   const p05 = written.pages.find((p) => p.id === "pu-politeness-p05");
-  assert.ok(p05.items.some((it) => it.id === "politeness-21" && it.heldForJohn));
   const live = livePage(p05);
-  assert.ok(!live.items.some((it) => it.id === "politeness-21"));
-  assert.equal(live.grammar, null);
-  assert.ok(!JSON.stringify(live).includes("הַשֵּׁם"), "no held Hebrew left anywhere on the live page");
-  const u = applyWritten(unitOf("pu-politeness"), written);
-  assert.ok(!JSON.stringify(u.pages).includes("politeness-21"));
-  assert.ok(!u.items.some((it) => it.id === "politeness-21"));
+  assert.ok(live.items.some((it) => it.id === "politeness-21"), "shown by decision");
+  assert.ok(live.grammar && /הַשֵּׁם/.test(live.grammar.body));
+  // The mechanism still works if an item is held again.
+  const held = { ...p05, items: p05.items.map((it) => (it.id === "politeness-21" ? { ...it, heldForJohn: true } : it)) };
+  assert.ok(!livePage(held).items.some((it) => it.id === "politeness-21"));
 });
 
 test("review items come from earlier written pages", () => {
@@ -127,7 +125,7 @@ test("a hidden item's speaking prompt is left out of the rendered page", async (
   if (typeof un === "function") un();
 });
 
-test("every outline unit is a live Practical unit, so its written pages can show (pu-army is held off)", () => {
+test("every outline unit is a live Practical unit, so its written pages can show", () => {
   const outline = read("data/curriculum/practical-pages/outline.json");
   const live = new Set(index.units.map((u) => u.id));
   const missing = outline.units.filter((u) => !live.has(u.id) && u.live !== false).map((u) => u.id);

@@ -4,7 +4,7 @@
  "generated": "2026-11-10",
  "proofread": false,
  "nativeReview": "required",
- "note": "The written pages of the Practical course, in course order. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json, data/curriculum/lessons.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones. בְּעֶזְרַת הַשֵּׁם on pu-politeness-p05 (politeness-21) is held for John (keep or drop); this lane did not decide.",
+ "note": "The written pages of the Practical course, in course order. Every Hebrew line is copied by id from data/corpus/phrasebook.json, data/audio/manifest*.json, data/curriculum/lessons.json or data/curriculum/dialogues.json. Page fields extend the v2 page shape; v2 readers can ignore the new ones. בְּעֶזְרַת הַשֵּׁם on pu-politeness-p05 (politeness-21) is shown, by John's decision of 2026-11-10.",
  "reviewDays": [
   1,
   3,
@@ -3449,8 +3449,7 @@
        "m"
       ],
       "tradition": "israeli"
-     },
-     "heldForJohn": true
+     }
     }
    ],
    "srsQueue": [
@@ -3581,9 +3580,6 @@
     "politeness-07-m",
     "politeness-10",
     "politeness-12"
-   ],
-   "heldForJohn": [
-    "politeness-21"
    ]
   },
   {
@@ -27815,6 +27811,792 @@
     "i-24-w10",
     "i-24-w15"
    ]
+  },
+  {
+   "id": "pu-army-p01",
+   "title": "Words From the Army",
+   "order": 1,
+   "kind": "learn",
+   "can": "Understand the army words you will hear in everyday talk.",
+   "grammarNote": "A man's and a woman's form again: חַיָּל and חַיֶּלֶת. A soldier is חַיָּל, and a woman soldier is חַיֶּלֶת, with the same -et ending as מִסְתַּכֶּלֶת. מִלּוּאִים, reserve duty, is a plural form used as one word.",
+   "grammar": {
+    "point": "A man's and a woman's form again: חַיָּל and חַיֶּלֶת",
+    "body": "A soldier is חַיָּל, and a woman soldier is חַיֶּלֶת, with the same -et ending as מִסְתַּכֶּלֶת. מִלּוּאִים, reserve duty, is a plural form used as one word.",
+    "examples": [
+     {
+      "itemId": "i-18-w2",
+      "he": "חַיָּל",
+      "en": "soldier (m)"
+     },
+     {
+      "itemId": "i-18-w3",
+      "he": "חַיֶּלֶת",
+      "en": "soldier (f)"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-18-w1",
+     "source": "data/curriculum/lessons.json#I-18.words[0]",
+     "he": "צָבָא",
+     "en": "army",
+     "translit": "tsava",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w1"
+     },
+     "audio": {
+      "clipId": "i-18-w1",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w2",
+     "source": "data/curriculum/lessons.json#I-18.words[1]",
+     "he": "חַיָּל",
+     "en": "soldier (m)",
+     "translit": "chayal",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w2"
+     },
+     "audio": {
+      "clipId": "i-18-w2",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w3",
+     "source": "data/curriculum/lessons.json#I-18.words[2]",
+     "he": "חַיֶּלֶת",
+     "en": "soldier (f)",
+     "translit": "chayelet",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w3"
+     },
+     "audio": {
+      "clipId": "i-18-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w4",
+     "source": "data/curriculum/lessons.json#I-18.words[3]",
+     "he": "מִלּוּאִים",
+     "en": "reserve duty (IDF)",
+     "translit": "milu'im",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w4"
+     },
+     "audio": {
+      "clipId": "i-18-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w6",
+     "source": "data/curriculum/lessons.json#I-18.words[5]",
+     "he": "בָּסִיס",
+     "en": "base",
+     "translit": "basis",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w6"
+     },
+     "audio": {
+      "clipId": "i-18-w6",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-18-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-18-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-18-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-18-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-18-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "shop-06-f",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-42-w3",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-18-w1",
+    "i-18-w2",
+    "i-18-w3",
+    "i-18-w4",
+    "i-18-w6"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w1"
+     },
+     "answer": "i-18-w1",
+     "options": [
+      "i-18-w2",
+      "i-18-w3",
+      "i-18-w1"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w2"
+     },
+     "answer": "i-18-w2",
+     "options": [
+      "i-18-w1",
+      "i-18-w3",
+      "i-18-w2"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w3"
+     },
+     "answer": "i-18-w3",
+     "options": [
+      "i-18-w1",
+      "i-18-w2",
+      "i-18-w3"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w4"
+     },
+     "answer": "i-18-w4",
+     "options": [
+      "i-18-w1",
+      "i-18-w2",
+      "i-18-w4"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w6"
+     },
+     "answer": "i-18-w6",
+     "options": [
+      "i-18-w1",
+      "i-18-w2",
+      "i-18-w6"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Say: a woman soldier.",
+     "answer": "i-18-w3",
+     "he": "חַיֶּלֶת",
+     "translit": "chayelet",
+     "en": "soldier (f)",
+     "audio": {
+      "clipId": "i-18-w3",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: reserve duty.",
+     "answer": "i-18-w4",
+     "he": "מִלּוּאִים",
+     "translit": "milu'im",
+     "en": "reserve duty (IDF)",
+     "audio": {
+      "clipId": "i-18-w4",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "shop-06-f",
+    "i-42-w3"
+   ],
+   "culture": "Army service is part of life for most Israeli families, so these words come up at the dinner table, not only on a base."
+  },
+  {
+   "id": "pu-army-p02",
+   "title": "Hear It in Conversation",
+   "order": 2,
+   "kind": "listen",
+   "can": "Catch army and slang words in quick speech.",
+   "grammarNote": "One word, two phrases: מַצָּב. מַצָּב is the situation. מָה הַמַּצָּב? asks how's it going; אֵין מַצָּב means no way, there's no chance. חֻפְשָׁה is leave from the army, and also a vacation.",
+   "grammar": {
+    "point": "One word, two phrases: מַצָּב",
+    "body": "מַצָּב is the situation. מָה הַמַּצָּב? asks how's it going; אֵין מַצָּב means no way, there's no chance. חֻפְשָׁה is leave from the army, and also a vacation.",
+    "examples": [
+     {
+      "itemId": "i-18-w14",
+      "he": "מָה הַמַּצָּב?",
+      "en": "how's it going?"
+     },
+     {
+      "itemId": "i-18-w15",
+      "he": "אֵין מַצָּב",
+      "en": "no way"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-18-w9",
+     "source": "data/curriculum/lessons.json#I-18.words[8]",
+     "he": "חֻפְשָׁה",
+     "en": "leave, vacation",
+     "translit": "chufsha",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w9"
+     },
+     "audio": {
+      "clipId": "i-18-w9",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w8",
+     "source": "data/curriculum/lessons.json#I-18.words[7]",
+     "he": "שְׁמִירָה",
+     "en": "guard duty",
+     "translit": "shmira",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w8"
+     },
+     "audio": {
+      "clipId": "i-18-w8",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w5",
+     "source": "data/curriculum/lessons.json#I-18.words[4]",
+     "he": "מְפַקֵּד",
+     "en": "commander (m)",
+     "translit": "mefaked",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w5"
+     },
+     "audio": {
+      "clipId": "i-18-w5",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w14",
+     "source": "data/curriculum/lessons.json#I-18.words[13]",
+     "he": "מָה הַמַּצָּב?",
+     "en": "how's it going?",
+     "translit": "ma hamatsav?",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w14"
+     },
+     "audio": {
+      "clipId": "i-18-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "id": "i-18-w15",
+     "source": "data/curriculum/lessons.json#I-18.words[14]",
+     "he": "אֵין מַצָּב",
+     "en": "no way",
+     "translit": "ein matsav",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w15"
+     },
+     "audio": {
+      "clipId": "i-18-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-18-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-18-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-18-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-18-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-18-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "line",
+     "id": "small-talk-16",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "politeness-14",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-18-w9",
+    "i-18-w8",
+    "i-18-w5",
+    "i-18-w14",
+    "i-18-w15"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w9"
+     },
+     "answer": "i-18-w9",
+     "options": [
+      "i-18-w8",
+      "i-18-w5",
+      "i-18-w9"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w8"
+     },
+     "answer": "i-18-w8",
+     "options": [
+      "i-18-w9",
+      "i-18-w5",
+      "i-18-w8"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w5"
+     },
+     "answer": "i-18-w5",
+     "options": [
+      "i-18-w9",
+      "i-18-w8",
+      "i-18-w5"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w14"
+     },
+     "answer": "i-18-w14",
+     "options": [
+      "i-18-w9",
+      "i-18-w8",
+      "i-18-w14"
+     ]
+    },
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w15"
+     },
+     "answer": "i-18-w15",
+     "options": [
+      "i-18-w9",
+      "i-18-w8",
+      "i-18-w15"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Greet a friend the army way.",
+     "answer": "i-18-w14",
+     "he": "מָה הַמַּצָּב?",
+     "translit": "ma hamatsav?",
+     "en": "how's it going?",
+     "audio": {
+      "clipId": "i-18-w14",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    },
+    {
+     "prompt": "Say: no way.",
+     "answer": "i-18-w15",
+     "he": "אֵין מַצָּב",
+     "translit": "ein matsav",
+     "en": "no way",
+     "audio": {
+      "clipId": "i-18-w15",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "small-talk-16",
+    "politeness-14"
+   ]
+  },
+  {
+   "id": "pu-army-p03",
+   "title": "Slang You Already Know, and Unit Review",
+   "order": 3,
+   "kind": "review",
+   "can": "See which army words became everyday slang, then review the unit.",
+   "grammarNote": "Slang travels. Many words young Israelis bring home from the army are now everyday slang. You already met several on the politeness and small-talk pages; this one is chill, calm down, to a man.",
+   "grammar": {
+    "point": "Slang travels",
+    "body": "Many words young Israelis bring home from the army are now everyday slang. You already met several on the politeness and small-talk pages; this one is chill, calm down, to a man.",
+    "examples": [
+     {
+      "itemId": "i-18-w16",
+      "he": "תִּרְגַּע",
+      "en": "chill, calm down"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "i-18-w16",
+     "source": "data/curriculum/lessons.json#I-18.words[15]",
+     "he": "תִּרְגַּע",
+     "en": "chill, calm down",
+     "translit": "tirga",
+     "translitSource": "spoken style written for this page; native check",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w16"
+     },
+     "audio": {
+      "clipId": "i-18-w16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-18-w16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "politeness-12",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "politeness-13",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 4,
+     "kind": "line",
+     "id": "politeness-17",
+     "source": "review",
+     "srsKind": "prayerLine",
+     "band": "review"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "small-talk-15-m",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-18-w2",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-18-w4",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "i-18-w14",
+     "source": "review",
+     "srsKind": "word",
+     "band": "review"
+    }
+   ],
+   "listenIds": [
+    "i-18-w16"
+   ],
+   "listen": [
+    {
+     "type": "pick-meaning",
+     "clip": {
+      "kind": "word",
+      "id": "i-18-w16"
+     },
+     "answer": "i-18-w16",
+     "options": [
+      "i-18-w16"
+     ]
+    }
+   ],
+   "speak": [
+    {
+     "prompt": "Tell a man to chill.",
+     "answer": "i-18-w16",
+     "he": "תִּרְגַּע",
+     "translit": "tirga",
+     "en": "chill, calm down",
+     "audio": {
+      "clipId": "i-18-w16",
+      "status": "tts",
+      "voices": [
+       "f",
+       "m"
+      ],
+      "tradition": "israeli"
+     }
+    }
+   ],
+   "reviewDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+   ],
+   "reviewOf": [
+    "politeness-12",
+    "politeness-13",
+    "politeness-17",
+    "small-talk-15-m",
+    "i-18-w2",
+    "i-18-w4",
+    "i-18-w14"
+   ]
   }
  ],
  "completeUnits": [
@@ -27834,6 +28616,7 @@
   "pu-family",
   "pu-home",
   "pu-time",
-  "pu-weather"
+  "pu-weather",
+  "pu-army"
  ]
 }

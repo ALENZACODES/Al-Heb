@@ -112,6 +112,10 @@
     {
       "path": "tools/curriculum/write_practical_fails.py",
       "reason": "Writes the fails packet into the shared lane hub; the packet addresses the lane by its hub name."
+    },
+    {
+      "path": "tools/audio/asr-check/review3_shard.py",
+      "reason": "Audio review tool from main: names the speech-to-text engines it can call (a command-line option), which are product names, not authorship."
     }
   ]
 }

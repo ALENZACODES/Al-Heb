@@ -1,0 +1,514 @@
+{
+ "id": "pu-army",
+ "title": "Army slang basics",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "lessons": [
+  {
+   "id": "I-18",
+   "title": "Army slang basics: how soldiers and their friends talk",
+   "track": "israel",
+   "wordCount": 16
+  }
+ ],
+ "speakSets": [
+  "speak-survival-small-talk-1"
+ ],
+ "grammarNote": "A soldier is חַיָּל, a woman soldier חַיֶּלֶת. Several army words are now everyday slang.",
+ "items": [
+  {
+   "id": "i-18-w1",
+   "source": "data/curriculum/lessons.json#I-18.words[0]",
+   "he": "צָבָא",
+   "en": "army",
+   "translit": "tsava",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w1"
+   }
+  },
+  {
+   "id": "i-18-w2",
+   "source": "data/curriculum/lessons.json#I-18.words[1]",
+   "he": "חַיָּל",
+   "en": "soldier (m)",
+   "translit": "chayal",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w2"
+   }
+  },
+  {
+   "id": "i-18-w3",
+   "source": "data/curriculum/lessons.json#I-18.words[2]",
+   "he": "חַיֶּלֶת",
+   "en": "soldier (f)",
+   "translit": "chayelet",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w3"
+   }
+  },
+  {
+   "id": "i-18-w4",
+   "source": "data/curriculum/lessons.json#I-18.words[3]",
+   "he": "מִלּוּאִים",
+   "en": "reserve duty (IDF)",
+   "translit": "milu'im",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w4"
+   }
+  },
+  {
+   "id": "i-18-w6",
+   "source": "data/curriculum/lessons.json#I-18.words[5]",
+   "he": "בָּסִיס",
+   "en": "base",
+   "translit": "basis",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w6"
+   }
+  },
+  {
+   "id": "i-18-w9",
+   "source": "data/curriculum/lessons.json#I-18.words[8]",
+   "he": "חֻפְשָׁה",
+   "en": "leave, vacation",
+   "translit": "chufsha",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w9"
+   }
+  },
+  {
+   "id": "i-18-w8",
+   "source": "data/curriculum/lessons.json#I-18.words[7]",
+   "he": "שְׁמִירָה",
+   "en": "guard duty",
+   "translit": "shmira",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w8"
+   }
+  },
+  {
+   "id": "i-18-w5",
+   "source": "data/curriculum/lessons.json#I-18.words[4]",
+   "he": "מְפַקֵּד",
+   "en": "commander (m)",
+   "translit": "mefaked",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w5"
+   }
+  },
+  {
+   "id": "i-18-w14",
+   "source": "data/curriculum/lessons.json#I-18.words[13]",
+   "he": "מָה הַמַּצָּב?",
+   "en": "how's it going?",
+   "translit": "ma hamatsav?",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w14"
+   }
+  },
+  {
+   "id": "i-18-w15",
+   "source": "data/curriculum/lessons.json#I-18.words[14]",
+   "he": "אֵין מַצָּב",
+   "en": "no way",
+   "translit": "ein matsav",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w15"
+   }
+  },
+  {
+   "id": "i-18-w16",
+   "source": "data/curriculum/lessons.json#I-18.words[15]",
+   "he": "תִּרְגַּע",
+   "en": "chill, calm down",
+   "translit": "tirga",
+   "review": "native-speaker-needed: lesson word",
+   "listen": {
+    "kind": "word",
+    "id": "i-18-w16"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-18-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-18-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-18-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-18-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-18-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-18-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-18-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-18-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-18-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-18-w15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "word",
+   "id": "i-18-w16",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the army words and slang in the audio manifest.",
+   "items": [
+    "i-18-w1",
+    "i-18-w2",
+    "i-18-w3",
+    "i-18-w4",
+    "i-18-w6",
+    "i-18-w9",
+    "i-18-w8",
+    "i-18-w5",
+    "i-18-w14",
+    "i-18-w15",
+    "i-18-w16"
+   ]
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Say the army words and slang aloud.",
+   "set": "speak-survival-small-talk-1"
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-army-p01",
+   "title": "Words from the army",
+   "order": 1,
+   "grammarNote": "A soldier is חַיָּל, and a woman soldier is חַיֶּלֶת, with the -et ending.",
+   "items": [
+    {
+     "id": "i-18-w1",
+     "source": "data/curriculum/lessons.json#I-18.words[0]",
+     "he": "צָבָא",
+     "en": "army",
+     "translit": "tsava",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w1"
+     }
+    },
+    {
+     "id": "i-18-w2",
+     "source": "data/curriculum/lessons.json#I-18.words[1]",
+     "he": "חַיָּל",
+     "en": "soldier (m)",
+     "translit": "chayal",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w2"
+     }
+    },
+    {
+     "id": "i-18-w3",
+     "source": "data/curriculum/lessons.json#I-18.words[2]",
+     "he": "חַיֶּלֶת",
+     "en": "soldier (f)",
+     "translit": "chayelet",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w3"
+     }
+    },
+    {
+     "id": "i-18-w4",
+     "source": "data/curriculum/lessons.json#I-18.words[3]",
+     "he": "מִלּוּאִים",
+     "en": "reserve duty (IDF)",
+     "translit": "milu'im",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w4"
+     }
+    },
+    {
+     "id": "i-18-w6",
+     "source": "data/curriculum/lessons.json#I-18.words[5]",
+     "he": "בָּסִיס",
+     "en": "base",
+     "translit": "basis",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w6"
+     }
+    },
+    {
+     "id": "i-18-w9",
+     "source": "data/curriculum/lessons.json#I-18.words[8]",
+     "he": "חֻפְשָׁה",
+     "en": "leave, vacation",
+     "translit": "chufsha",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w9"
+     }
+    },
+    {
+     "id": "i-18-w8",
+     "source": "data/curriculum/lessons.json#I-18.words[7]",
+     "he": "שְׁמִירָה",
+     "en": "guard duty",
+     "translit": "shmira",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w8"
+     }
+    },
+    {
+     "id": "i-18-w5",
+     "source": "data/curriculum/lessons.json#I-18.words[4]",
+     "he": "מְפַקֵּד",
+     "en": "commander (m)",
+     "translit": "mefaked",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w5"
+     }
+    },
+    {
+     "id": "i-18-w14",
+     "source": "data/curriculum/lessons.json#I-18.words[13]",
+     "he": "מָה הַמַּצָּב?",
+     "en": "how's it going?",
+     "translit": "ma hamatsav?",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w14"
+     }
+    },
+    {
+     "id": "i-18-w15",
+     "source": "data/curriculum/lessons.json#I-18.words[14]",
+     "he": "אֵין מַצָּב",
+     "en": "no way",
+     "translit": "ein matsav",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w15"
+     }
+    },
+    {
+     "id": "i-18-w16",
+     "source": "data/curriculum/lessons.json#I-18.words[15]",
+     "he": "תִּרְגַּע",
+     "en": "chill, calm down",
+     "translit": "tirga",
+     "review": "native-speaker-needed: lesson word",
+     "listen": {
+      "kind": "word",
+      "id": "i-18-w16"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-18-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-18-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-18-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-18-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-18-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 6,
+     "kind": "word",
+     "id": "i-18-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 7,
+     "kind": "word",
+     "id": "i-18-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 8,
+     "kind": "word",
+     "id": "i-18-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 9,
+     "kind": "word",
+     "id": "i-18-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 10,
+     "kind": "word",
+     "id": "i-18-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 11,
+     "kind": "word",
+     "id": "i-18-w16",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-18-w1",
+    "i-18-w2",
+    "i-18-w3",
+    "i-18-w4",
+    "i-18-w6",
+    "i-18-w9",
+    "i-18-w8",
+    "i-18-w5",
+    "i-18-w14",
+    "i-18-w15",
+    "i-18-w16"
+   ],
+   "speakSet": "speak-survival-small-talk-1"
+  }
+ ]
+}

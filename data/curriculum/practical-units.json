@@ -311,6 +311,16 @@
    "nativeReview": true
   },
   {
+   "id": "pu-army",
+   "title": "Army slang basics",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-army.json",
+   "pageCount": 1,
+   "itemCount": 11,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
    "id": "pu-news",
    "title": "Reading a headline",
    "level": "L3",
@@ -372,8 +382,8 @@
   }
  ],
  "totals": {
-  "units": 36,
-  "pages": 166,
-  "items": 750
+  "units": 37,
+  "pages": 167,
+  "items": 761
  }
 }

@@ -138,8 +138,9 @@ export const ROUTES = [
   { name: 'practical',     pattern: '/practical',     module: '../curriculum/practical.view.js', title: 'Practical',      owner: 'curriculum', optional: true, group: 'learn', quick: 'nav.practical' },
   { name: 'practicalunit', pattern: '/practical/:id', module: '../curriculum/practical.view.js', title: 'Practical unit', owner: 'curriculum', optional: true, paramQuery: { id: 'id' } },
   { name: 'practicalpage', pattern: '/practical/:id/:page', module: '../curriculum/practical.view.js', title: 'Practical page', owner: 'curriculum', optional: true, paramQuery: { id: 'id', page: 'page' } },
-  { name: 'israelunits',        pattern: '/israel-units',     module: '../curriculum/israel-units.view.js', title: 'Hebrew for Israel, unit by unit', owner: 'intermediate', optional: true, group: 'learn', quick: 'nav.israelunits', tier: 'preview' },
-  { name: 'israelunit',         pattern: '/israel-units/:id', module: '../curriculum/israel-units.view.js', title: 'Israel unit', owner: 'intermediate', optional: true, tier: 'preview', paramQuery: { id: 'id' } },
+  // Retired: merged into #/practical. Kept only so old links redirect there.
+  { name: 'israelunits',        pattern: '/israel-units',     module: '../curriculum/israel-units.view.js', title: 'Moved to Practical', owner: 'intermediate', optional: true, tier: 'preview' },
+  { name: 'israelunit',         pattern: '/israel-units/:id', module: '../curriculum/israel-units.view.js', title: 'Moved to Practical', owner: 'intermediate', optional: true, tier: 'preview', paramQuery: { id: 'id' } },
   { name: 'grammar', pattern: '/grammar', module: '../grammar/grammar.view.js', title: 'Grammar notes', owner: 'grammar', optional: true, group: 'learn', quick: 'nav.grammar' },
   { name: 'grammartopic', pattern: '/grammar/:topic', module: '../grammar/grammar.view.js', title: 'Grammar topic', owner: 'grammar', optional: true, paramQuery: { topic: 'topic' } },
   { name: 'credits', pattern: '/credits', module: './credits.view.js', tier: 'v0', title: 'Credits and licences', owner: 'legal', optional: true, group: 'learn', quick: 'nav.credits' },

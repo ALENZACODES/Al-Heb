@@ -1,4 +1,4 @@
-# Practical Hebrew: The Written Pages (101)
+# Practical Hebrew: The Written Pages (104)
 
 Generated from `data/curriculum/practical-pages/written.json` by the page builder. Do not edit by hand.
 
@@ -2055,3 +2055,63 @@ Spaced review: each page queues its new items, plus earlier items marked review.
 - Say: rain. → גֶּשֶׁם (geshem) · audio `il15-w3`
 
 **Review queue from earlier pages:** `i-24-w1`, `i-24-w2`, `i-24-w3`, `i-24-w6`, `i-24-w10`, `i-24-w15`
+
+## pu-army-p01: Words From the Army
+
+*Learn page.* Understand the army words you will hear in everyday talk.
+
+**Grammar: A man's and a woman's form again: חַיָּל and חַיֶּלֶת.** A soldier is חַיָּל, and a woman soldier is חַיֶּלֶת, with the same -et ending as מִסְתַּכֶּלֶת. מִלּוּאִים, reserve duty, is a plural form used as one word.
+
+**Culture.** Army service is part of life for most Israeli families, so these words come up at the dinner table, not only on a base.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| צָבָא | tsava \* | army | `i-18-w1` tts, f+m |
+| חַיָּל | chayal \* | soldier (m) | `i-18-w2` tts, f+m |
+| חַיֶּלֶת | chayelet \* | soldier (f) | `i-18-w3` tts, f+m |
+| מִלּוּאִים | milu'im \* | reserve duty (IDF) | `i-18-w4` tts, f+m |
+| בָּסִיס | basis \* | base | `i-18-w6` tts, f+m |
+
+**Speak.**
+
+- Say: a woman soldier. → חַיֶּלֶת (chayelet) · audio `i-18-w3`
+- Say: reserve duty. → מִלּוּאִים (milu'im) · audio `i-18-w4`
+
+**Review queue from earlier pages:** `shop-06-f`, `i-42-w3`
+
+## pu-army-p02: Hear It in Conversation
+
+*Listen page.* Catch army and slang words in quick speech.
+
+**Grammar: One word, two phrases: מַצָּב.** מַצָּב is the situation. מָה הַמַּצָּב? asks how's it going; אֵין מַצָּב means no way, there's no chance. חֻפְשָׁה is leave from the army, and also a vacation.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| חֻפְשָׁה | chufsha \* | leave, vacation | `i-18-w9` tts, f+m |
+| שְׁמִירָה | shmira \* | guard duty | `i-18-w8` tts, f+m |
+| מְפַקֵּד | mefaked \* | commander (m) | `i-18-w5` tts, f+m |
+| מָה הַמַּצָּב? | ma hamatsav? \* | how's it going? | `i-18-w14` tts, f+m |
+| אֵין מַצָּב | ein matsav \* | no way | `i-18-w15` tts, f+m |
+
+**Speak.**
+
+- Greet a friend the army way. → מָה הַמַּצָּב? (ma hamatsav?) · audio `i-18-w14`
+- Say: no way. → אֵין מַצָּב (ein matsav) · audio `i-18-w15`
+
+**Review queue from earlier pages:** `small-talk-16`, `politeness-14`
+
+## pu-army-p03: Slang You Already Know, and Unit Review
+
+*Review page.* See which army words became everyday slang, then review the unit.
+
+**Grammar: Slang travels.** Many words young Israelis bring home from the army are now everyday slang. You already met several on the politeness and small-talk pages; this one is chill, calm down, to a man.
+
+| Hebrew | Transliteration | English | Audio |
+|---|---|---|---|
+| תִּרְגַּע | tirga \* | chill, calm down | `i-18-w16` tts, f+m |
+
+**Speak.**
+
+- Tell a man to chill. → תִּרְגַּע (tirga) · audio `i-18-w16`
+
+**Review queue from earlier pages:** `politeness-12`, `politeness-13`, `politeness-17`, `small-talk-15-m`, `i-18-w2`, `i-18-w4`, `i-18-w14`

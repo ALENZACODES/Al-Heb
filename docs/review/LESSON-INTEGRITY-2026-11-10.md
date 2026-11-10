@@ -309,3 +309,17 @@ are original, unreviewed sentences with no clips yet, and the pages mark them fo
 - **Two more units.** `pu-time` and `pu-weather` are written, for 101 live Practical pages.
 - **Score: 93 / 100** (estimate). See the launch-check pass in
   [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md).
+
+## Round 11: John's Decisions Applied (2026-11-10)
+
+1. **One Israel course.** `#/israel-units` and `#/israel-units/:id` now redirect to `#/practical`. The routes are out of the nav,
+   and a test checks the redirect.
+2. **The eight divine-name items stay held.** No change.
+3. **בְּעֶזְרַת הַשֵּׁם is shown** on `pu-politeness-p05`, with its note on הַשֵּׁם. The hold mechanism stays in the code, tested,
+   in case an item is held again.
+4. **Army slang is live.**
+   - `pu-army` is in the live index (`data/curriculum/practical/pu-army.json`), and its three pages are written from I-18.
+   - Each page is sourced and checked against I-18.
+   - The word for weapon is left off the pages; the unit teaches soldier, reserve duty, base, leave and the slang.
+5. **Both festival greetings kept.** No change to the data.
+6. **Shabbat and holiday units stay at the end.** No change.

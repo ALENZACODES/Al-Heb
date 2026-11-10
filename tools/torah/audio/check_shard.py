@@ -37,7 +37,7 @@ def main():
             text = spoken(text)   # as read aloud: the divine name as Adonai, maqaf as a space
             heard = S.transcribe(f)
             acc, iss, nw = S.compare(text, heard)
-            ipa = P.hear(f, a.model)
+            ipa = P.hear(f, a.model, max_tokens=300)
             ratio, ws = P.review(text, ipa)
             weak = [w['word'] for w in ws if w['match'] < 0.6]
             r = {'file': rel, 'sha': hashlib.sha256(open(f, 'rb').read()).hexdigest(), 'text': text, 'words': nw,

@@ -38,7 +38,7 @@ def spoken(he):
 
 
 def judge(path, text, model):
-    ratio, ws = P.review(text, P.hear(path, model))
+    ratio, ws = P.review(text, P.hear(path, model, max_tokens=300))
     _, iss, _ = S.compare(text, S.transcribe(path))
     return {'ratio': ratio, 'weak': [w['word'] for w in ws if w['match'] < 0.6], 'issues': [i['say'] for i in iss]}
 

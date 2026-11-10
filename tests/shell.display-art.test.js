@@ -77,3 +77,55 @@ test('Talk, Camera, Light and Welcome have Rimon page triggers that resolve a st
     assert.ok(still?.id, 'still for ' + trigger);
   }
 });
+
+// ---- second pass: tab coins, arcade card pictures, lesson stop coins, relief coins ----
+import { firstHebrewLetter } from '../src/shell/ui.js';
+import { ARCADE_GAMES } from '../src/games/arcade.catalog.js';
+
+test('the four tab sections and More draw a gold coin that exists, with the SVG mask kept for forced colours', () => {
+  const css = read('assets/css/polish.css');
+  for (const id of ['learn', 'read', 'speak', 'progress', 'more']) {
+    const m = css.match(new RegExp(`\\.nav-ico-${id} \\{ --coin: url\\("\\.\\./img/icons/(ICON_home_${id}\\.112\\.webp)"\\)`));
+    assert.ok(m, 'coin for tab ' + id);
+    assert.ok(existsSync(join(root, 'assets/img/icons', m[1])), m[1]);
+    assert.match(css, new RegExp(`\\.nav-ico-${id} \\{ --ico: url\\(`), 'mask fallback for ' + id);
+  }
+  assert.match(css, /@media \(forced-colors: active\) \{\s*\.site-nav \.nav-ico \{ -webkit-mask: var\(--ico\)/);
+});
+
+test('every arcade game has a light lazy WebP card picture from its own scene', async () => {
+  const { arcadeThumb } = await import('../src/games/games.view.js');
+  for (const { id } of ARCADE_GAMES) {
+    for (const w of [480, 800]) {
+      const rel = `assets/img/arcade-thumbs/${id}.${w}.webp`;
+      assert.ok(existsSync(join(root, rel)), rel);
+      const bytes = readFileSync(join(root, rel));
+      assert.equal(bytes.slice(8, 12).toString('ascii'), 'WEBP', rel);
+      assert.ok(bytes.length < 60_000, rel + ' stays small');
+      assert.ok(!bytes.includes(Buffer.from('Exif')) && !bytes.includes(Buffer.from('XMP ')), rel + ' carries no metadata');
+    }
+    const img = arcadeThumb(id);
+    assert.equal(img.attrs.loading, 'lazy');
+    assert.match(img.attrs.src, new RegExp(`arcade-thumbs/${id}\\.480\\.webp$`));
+  }
+  assert.doesNotMatch(read('src/games/games.view.js'), /['"`][^'"`\n]*env\.png['"`]/, 'no card loads the 850 KB scene PNG');
+  assert.doesNotMatch(read('tools/build-precache.mjs').match(/const SKIP = [^\n]+/)[0], /arcade-thumbs/); // covered by the assets/img/ rule
+});
+
+test('lesson stops carry their first Hebrew letter as live text (never a picture of a letter)', () => {
+  assert.equal(firstHebrewLetter('שַׁבָּת'), 'ש');
+  assert.equal(firstHebrewLetter('Bet בּ'), 'ב');
+  assert.equal(firstHebrewLetter('no hebrew'), null);
+  assert.equal(firstHebrewLetter(undefined), null);
+  assert.match(read('src/curriculum/learn.view.js'), /"data-glyph": firstHebrewLetter\(/);
+  assert.match(read('assets/css/polish.css'), /\.alef-lesson\[data-glyph\]::before[^{]*\{\s*content: attr\(data-glyph\)/);
+});
+
+test('home coins (including More) are struck relief, not flat, and carry no metadata', () => {
+  assert.ok(existsSync(join(root, 'tools/images/relief-coins.py')));
+  for (const id of [...NEW_HOME, 'more']) {
+    const a = readFileSync(join(root, `assets/img/icons/ICON_home_${id}.320.webp`));
+    assert.ok(a.length > 15_000, id + ' carries shaded detail');
+    assert.ok(!a.includes(Buffer.from('Exif')) && !a.includes(Buffer.from('XMP ')), id + ' carries no metadata');
+  }
+});

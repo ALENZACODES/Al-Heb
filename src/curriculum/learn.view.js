@@ -17,6 +17,8 @@ import { loadState, completeLesson } from "./actions.js";
 import { streakVisible } from "../shell/comfort.js";
 import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
 import { rimonInline } from "../shell/rimon-inline.js";
+import { firstHebrewLetter } from "../shell/ui.js";
+
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -103,7 +105,7 @@ function mountMap(root, ctx) {
           const ready = l.prerequisites.every((p) => done.has(p));
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
-          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null,
+          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, "data-glyph": firstHebrewLetter(l.teaser || l.words?.[0]?.he), hidden: far(idx) ? "" : null,
             // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
             onclick: (e) => {
               if (e?.target?.closest?.("button, a, summary")) return;

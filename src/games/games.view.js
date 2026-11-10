@@ -93,7 +93,8 @@ export function mount(root, ctx) {
           id === 'wordfinder' ? h('span', { class: 'wf-try-first' }, 'Start with five words →') : null);
         if (envId) { thumbs.push({ a, envId }); a.append(medal('word', id, 56)); }
         else if (ARCADE_GAMES.some((game) => game.id === id)) {
-          a.prepend(medal('arcade', id, 96));
+          a.prepend(arcadeThumb(id));
+          a.append(medal('arcade', id, 56));
         }
         return h('li', {}, a);
       })));
@@ -118,6 +119,13 @@ export function mount(root, ctx) {
     try { const r = rimonInline({ action: 'wave', size: 88, label: 'Rimon waving' }); r.el.classList?.add?.('wf-hub-mascot'); article.insertBefore(r.el, article.children[1] || null); r.play('wave'); } catch { /* the picture is optional */ }
   }).catch(() => {});
   return () => {};
+}
+
+/** Light WebP card picture from the arcade game's own scene (assets/img/arcade-thumbs, made from assets/games/arcade/<id>/env.png
+ *  by tools/images/arcade-thumbs.py; 14-27 KB instead of ~850 KB, never precached). Lazy; removes itself if the file is missing. */
+export function arcadeThumb(id) {
+  const b = `assets/img/arcade-thumbs/${id}`;
+  return h('img', { class: 'wf-game-thumb wf-arcade-thumb', src: b + '.480.webp', srcset: `${b}.480.webp 480w, ${b}.800.webp 800w`, sizes: '(max-width: 719px) 92vw, 320px', width: 480, height: 180, alt: '', loading: 'lazy', decoding: 'async', onerror: (e) => e.target.remove() });
 }
 
 /** The arcade strip: today's featured quick game, the learner's streak, and the count of arcade games. */

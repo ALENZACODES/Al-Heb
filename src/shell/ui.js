@@ -34,6 +34,9 @@ export { audioAccess, audioButton, deviceVoiceState, DEVICE_LABEL, NO_AUDIO } fr
 export const medal = (g, id, z = 48, b = `assets/img/icons/ICON_${g}_${id}`) => h('img', { class: 'alef-medal', src: b + '.112.webp', srcset: [112, 160, 224, 320].map((w) => `${b}.${w}.webp ${w}w`).join(), sizes: z + 'px', width: z, height: z, alt: '', loading: 'lazy', decoding: 'async', onerror: (e) => e.target.remove() });
 export const coin = (t, z = 56) => h('span', { class: 'alef-coin' + (t.replace(/[\u0591-\u05C7]/g, '').length > 2 ? ' is-long' : ''), style: `--z:${z}px`, 'aria-hidden': 'true' }, heSpan(t));
 
+/** First Hebrew letter of a string, points and cantillation removed, or null. Lesson stops draw it as live text on the blank coin. */
+export const firstHebrewLetter = (s) => (String(s || '').normalize('NFC').replace(/[\u0591-\u05C7]/g, '').match(/[\u05D0-\u05EA]/) || [null])[0];
+
 /** Route or feature name -> [group, id] for medal(). Unknown names return null (no broken image). */
 export const MEDAL_FOR = Object.freeze({
   letters: ['home', 'letters'], vocab: ['home', 'vocab'], read: ['home', 'read'], progress: ['home', 'progress'],

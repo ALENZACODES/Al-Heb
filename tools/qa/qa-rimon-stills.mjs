@@ -110,6 +110,12 @@ try {
   ok('one Rimon on Learn: the corner Rimon and the pop-ups stay away while the card shows Rimon', !(await page.locator('.rimon-corner').isVisible()) && !(await page.evaluate(() => [...document.querySelectorAll('.rimon-moment:not([hidden]), .alef-rimon-spot')].some((e) => getComputedStyle(e).visibility !== 'hidden'))));
   // the card is the animated Rimon (src/curriculum/learn.view.js); only its picture fallback (an img) takes a stage still
   if (card?.tag === 'IMG') ok('continue card picture is a learn.continue.first still', STILL_IDS['learn.continue.first'].includes(card.shown));
+  // with reduced motion the animated card would stand still anyway: it shows the still drawn for its moment
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await go('#/credits', 'credits'); await go('#/learn', 'learn'); await page.waitForTimeout(900);
+  const calmCard = await page.evaluate(() => { const c = document.querySelector('#main .alef-continue-rimon'); return c ? { want: c.getAttribute('data-rimon-still'), shown: c.dataset.rimonShown || null, bg: getComputedStyle(c).backgroundImage } : null; });
+  ok(`reduced motion: the Learn card shows its moment's still (${calmCard?.shown})`, !!calmCard?.shown && (STILL_IDS[calmCard.want] || []).includes(calmCard.shown) && /blob:|rimon/.test(calmCard.bg));
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.screenshot({ path: SHOTS + '/5-toast-desktop.png' });
   await page.locator('.rimon-toast-x').click();
 

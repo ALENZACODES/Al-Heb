@@ -86,6 +86,7 @@ export function createDocument() {
   doc.createElement = (tag) => new El(doc, tag);
   doc.createTextNode = (d) => new Text(doc, d);
   doc.body = new El(doc, 'body'); doc.append(doc.body);
+  doc.documentElement = new El(doc, 'html'); // for data-calm (src/shell/comfort.js)
   doc.getElementById = (id) => doc.querySelector('#' + id);
   return doc;
 }

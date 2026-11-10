@@ -326,7 +326,7 @@ body.ob-player main { max-inline-size: var(--measure-app); margin-inline: auto; 
 
 /* setup: room under the last option for the two pinned buttons (Continue and the quick start) */
 body.ob-player main { padding-block-end: calc(12rem + env(safe-area-inset-bottom)); scroll-padding-block-end: 12rem; }
-html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
+html:has(body.ob-player) { scroll-padding-block-end: 12rem; }
 .alef-lesson-done, .alef-lesson-available { cursor: pointer; }
 
 /* ---------- 13. Opening prayer: the Hebrew in gold leaf (real text, never an image) ----------

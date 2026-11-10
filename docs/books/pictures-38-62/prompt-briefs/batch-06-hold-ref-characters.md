@@ -3,7 +3,7 @@ John's wishes:
 (2) About 30 books, 12 pictures each.
 (3) Spread the books across these styles: crayon drawn, oil painting, watercolour, animation and 3D.
 (4) John's 6 reference characters appear in exactly 2 books. The karate man in the white gi is the bad guy in those 2 books if there is a bad guy, kept kid-friendly.
-(5) Claude decides each picture's scene and writes the full image prompt for you to make exactly as written.
+(5) The prompt writer decides each picture's scene and writes the full image prompt for you to make exactly as written.
 (6) All metadata is stripped from every image.
 (7) Every change is saved to GitHub. Build on the current GitHub state and never rewrite or overwrite existing work.
 

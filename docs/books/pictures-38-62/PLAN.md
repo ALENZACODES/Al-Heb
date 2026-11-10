@@ -15,7 +15,7 @@ Add page pictures for books **38–62** only (25 books × 12 pages = 300 JPEGs).
 
 ## Style assignment
 
-Chosen by Claude (per book, from: crayon drawing, oil painting, watercolour, 2D cartoon animation, 3D style). Spread about equally across the 25 books; neighbouring books should differ when possible.
+Chosen by the prompt writer (per book, from: crayon drawing, oil painting, watercolour, 2D cartoon animation, 3D style). Spread about equally across the 25 books; neighbouring books should differ when possible.
 
 Books **52** and **60** are held for John's 6 reference characters (photos pending). Briefs for those two are in the hold batch.
 
@@ -60,9 +60,9 @@ That flips `hasImg` / `picturedPages` from what exists on disk and refreshes `da
 
 Then commit on `books/pictures-38-62` only (plain message, no tool or vendor names in the message or paths).
 
-## Claude briefs (paste batches)
+## Prompt briefs (paste batches)
 
-Under `/workspace/shared/al-heb/storybooks/claude-briefs/`:
+Under the shared storybooks briefs folder on the box:
 
 | File | Books |
 | --- | --- |

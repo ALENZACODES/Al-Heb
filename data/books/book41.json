@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book41-p01.mp3"
    },
    "illustration": "a man looking in the mirror, finding a grey hair",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book41-p02.mp3"
    },
    "illustration": "close on his face, raised eyebrow",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book41-p03.mp3"
    },
    "illustration": "the mirror, the man, silence",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book41-p04.mp3"
    },
    "illustration": "a phone held up, one short message bubble left blank, the man's face firm",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book41-p05.mp3"
    },
    "illustration": "the man alone with a book and tea",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book41-p06.mp3"
    },
    "illustration": "walking along an empty beach",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book41-p07.mp3"
    },
    "illustration": "floating on his back, sky above",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book41-p08.mp3"
    },
    "illustration": "the man on the sand, chin on his knees, thoughtful",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book41-p09.mp3"
    },
    "illustration": "a slow smile",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book41-p10.mp3"
    },
    "illustration": "his apartment door, key turning",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book41-p11.mp3"
    },
    "illustration": "every friend and relative bursting out, balloons",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book41-p12.mp3"
    },
    "illustration": "the man laughing, a cake with a 4 and a 0",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

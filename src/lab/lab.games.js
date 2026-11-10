@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME, familyClipRows } from './lab.core.js';
 import { STUDIO_DRILLS } from './lab.studio.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
@@ -345,15 +345,11 @@ const pattern = {
     const raw = await getJSON(env, 'data/roots/families.json');
     // Recordings of the family words (data/lab/words.json familyClips): a word or line clip the player knows, or a dictionary
     // file whose two rows (Ari and Noa) are handed to the player here. A word without one stays silent.
-    const clips = new Map();
+    let clips = new Map();
     try {
       const he = new Map((raw.families || []).flatMap((f) => (f.words || []).map((w) => [w.id, w.he])));
-      const extra = [];
-      for (const [wid, k, cid] of (await getJSON(env, 'data/lab/words.json')).familyClips || []) {
-        if (k === 'd') { const id = `dict-${cid}`; clips.set(wid, { kind: 'word', id }); for (const v of ['m', 'f']) extra.push({ path: `audio/${v}/israeli/dictionary/${id}.mp3`, voice: v, tradition: 'israeli', kind: 'word', id, text: he.get(wid), status: 'tts' }); }
-        else clips.set(wid, { kind: k === 'l' ? 'line' : 'word', id: cid });
-      }
-      env.ctx?.audio?.extend?.(extra);
+      const rows = familyClipRows((await getJSON(env, 'data/lab/words.json')).familyClips, he);
+      clips = rows.clips; env.ctx?.audio?.extend?.(rows.extra);
     } catch { /* the words stay silent */ }
     const fams = [];
     for (const f of raw.families || []) {

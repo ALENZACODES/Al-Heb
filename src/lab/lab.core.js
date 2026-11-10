@@ -442,3 +442,36 @@ export function chainTrial(lines, level, rnd = Math.random) {
   });
   return { line, given, steps: out };
 }
+
+/**
+ * Recordings of the word-family words (data/lab/words.json familyClips), shared by Letter Pattern and the studio word games.
+ * Each row is [wordId, k, id]: k 'w' a word clip and 'l' a line clip the player already knows, 'd' a dictionary file
+ * (dict-<id>) whose Ari and Noa rows must be handed to the player (ctx.audio.extend), because games do not load the dictionary list.
+ */
+export function familyClipRows(list, heById) {
+  const clips = new Map(), extra = [];
+  for (const row of list || []) {
+    const [wid, k, cid] = row || [];
+    if (!wid || !cid) continue;
+    if (k === 'd') {
+      const id = `dict-${cid}`;
+      clips.set(wid, { kind: 'word', id });
+      for (const v of ['m', 'f']) extra.push({ path: `audio/${v}/israeli/dictionary/${id}.mp3`, voice: v, tradition: 'israeli', kind: 'word', id, text: heById?.get?.(wid) || '', status: 'tts' });
+    } else clips.set(wid, { kind: k === 'l' ? 'line' : 'word', id: cid });
+  }
+  return { clips, extra };
+}
+
+const POINTS = /[֑-ֻֽ-׀׃-ׇ]/g; // vowels and cantillation; keeps the dagesh and the shin and sin dots
+/**
+ * The traditions that say a syllable's consonant the way the Israeli recording does (data/lab/words.json cards, from
+ * data/pronunciation/consonants.json). A syllable recording plays only for these, as in Sound Twins: a Sephardi learner
+ * never hears an Israeli חַ as if it were theirs.
+ */
+export function syllableTraditions(he, cards) {
+  let base = String(he || '').replace(POINTS, '');
+  if (base.length > 1) base = base.replace(/\u05d5\u05bc?$/, ''); // a shuruk or full cholam vav is the vowel, not the consonant
+  const card = (cards || []).find((c) => c.he === base);
+  if (!card?.sound) return ['israeli'];
+  return ['israeli', 'sephardi', 'ashkenazi'].filter((t) => card.sound[t] === card.sound.israeli);
+}

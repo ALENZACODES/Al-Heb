@@ -19,7 +19,7 @@ The integration branch `overnight/launch-ready-2026-11-10` has since merged the 
 | Branch | Ahead / behind `main` | Holds | Next step |
 |---|---|---|---|
 | `overnight/launch-ready-2026-11-10` | 7 / 1 | Launch polish, Brain Lab alias and search tags, PR #40, install headroom | PR to `main` first |
-| the Brain Lab games branch (this one) | 9 / 1 | Six new games, art slots, dark-mode fixes, tests; built on PR #40 | Merge after launch-ready |
+| the Brain Lab games branch (this one) | see PR #44 | 27 games in three packs: the six synagogue-and-Israel games, the ten classic drills and the eleven 3D Studio games (merged from `feature/brain-lab-games-2026-11-10` at `8cef9ebc`, which this branch now replaces); spoken Hebrew in every pack; tests | Merge after launch-ready |
 | `feature/lesson-integrity-2026-11-10` | 3 / 1 | Lesson nikkud, Yom Kippur greetings, misplaced prayers, gloss fixes | PR to `main` |
 | `feature/rimon-stills-2026-11-10` | 2 / 1 | Rimon stills 1 to 50 of 200 | Keep going; PR once wired |
 | `feature/commercial-images-2026-11-10` | 1 / 1 | 46 pictures, including the Brain Lab hero and ten tokens | Ingest and approve: Brain Lab shows them with no code change |

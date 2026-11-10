@@ -8,14 +8,14 @@ Every Hebrew item a Brain Lab game shows, checked against the recordings the gam
 |---|---|---|---|---|---|
 | Prayer Chain, Siddur Flash | 48 | 37 | 6 | 5 | 0 |
 | Café Order | 29 | 28 | 0 | 1 | 0 |
-| Letter Pattern | 929 | 803 | 0 | 126 | 0 |
-| Sound Match, Vowel Rain | 110 | 83 | 0 | 27 | 0 |
+| Letter Pattern, Word Burst, Root Forge, Path Word | 929 | 803 | 0 | 126 | 0 |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | 110 | 83 | 0 | 27 | 0 |
 | Taxi Turns | 5 | 4 | 0 | 1 | 0 |
 | Vowel Rain | 73 | 39 | 0 | 15 | 19 |
 | Calendar Puzzle | 27 | 14 | 0 | 0 | 13 |
 | Sound Twins | 32 | 26 | 0 | 0 | 6 |
-| Count Up, Number Ear | 18 | 18 | 0 | 0 | 0 |
-| Letter Hunt, Letter Matrix, Middle Letter, Gematria | 27 | 27 | 0 | 0 | 0 |
+| Count Up, Number Ear, Migration Birds | 18 | 18 | 0 | 0 | 0 |
+| Letter Hunt, Letter Matrix, Middle Letter, Gematria, Letter Sequence, Tile Turn | 27 | 27 | 0 | 0 | 0 |
 
 Priority 1: a game plays it, or asks for it by sound, and beginners meet it first. Priority 2: a game plays it but higher up, or shows it silently to beginners. Priority 3: everything else.
 
@@ -42,33 +42,33 @@ Priority 1: a game plays it, or asks for it by sound, and beginners meet it firs
 | Prayer Chain, Siddur Flash | `haftarah-after` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם צוּר כָּל־הָעוֹלָמִים צַדִּיק בְּכָל־הַדּוֹרוֹת הָאֵל הַנֶּאֱמָן הָאֹמֵר וְעֹשֶׂה הַמְדַבֵּר וּמְקַיֵּם שֶׁכָּל־דְּבָרָיו אֱמֶת וָצֶדֶק נֶאֱמָן אַתָּה הוּא יְהוָה אֱלֹהֵינוּ וְנֶאֱמָנִים דְּבָרֶיךָ וְדָבָר אֶחָד מִדְּבָרֶיךָ אָחוֹר לֹא יָשׁוּב רֵיקָם כִּי אֵל מֶלֶךְ נֶאֱמָן וְרַחֲמָן אָתָּה בָּרוּךְ אַתָּה יְהוָה הָאֵל הַנֶּאֱמָן בְּכָל־דְּבָרָיו׃ | Haftarah blessings after the reading (Shabbat) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
 | Prayer Chain, Siddur Flash | `kiddush-festival-eve-open` | בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר בָּחַר בָּנוּ מִכָּל עָם וְרוֹמְמָנוּ מִכָּל לָשׁוֹן וְקִדְּשָׁנוּ בְּמִצְוֹתָיו וַתִּתֶּן לָנוּ יְהוָה אֱלֹהֵינוּ בְּאַהֲבָה מוֹעֲדִים לְשִׂמְחָה חַגִּים וּזְמַנִּים לְשָׂשׂוֹן אֶת יוֹם׃ | Festival evening Kiddush: opening (weekday form) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
 | Prayer Chain, Siddur Flash | `kiddush-festival-eve-close` | מִקְרָא קֹדֶשׁ זֵכֶר לִיצִיאַת מִצְרָיִם כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים וּמוֹעֲדֵי קָדְשֶׁךָ בְּשִׂמְחָה וּבְשָׂשׂוֹן הִנְחַלְתָּנוּ׃ בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ יִשְׂרָאֵל וְהַזְּמַנִּים׃ | Festival evening Kiddush: close (weekday form) | missing | missing | Holds the divine name: recording held for John's decision; when recorded, the name is spoken as Adonai |
-| Sound Match, Vowel Rain | `alef-i` | אִ | syllable "i" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `bet-u` | בֻּ | syllable "bu" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `gimel-a` | גַ | syllable "ga" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `gimel-o` | גֹ | syllable "go" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `dalet-e` | דֶ | syllable "de" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `dalet-o` | דֹ | syllable "do" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `dalet-u` | דֻ | syllable "du" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `zayin-a` | זַ | syllable "za" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `chet-u` | חֻ | syllable "chu" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tet-e` | טֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tet-i` | טִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tet-u` | טֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `yod-i` | יִ | syllable "yi" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `yod-u` | יֻ | syllable "yu" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `samekh-o` | סֹ | syllable "so" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `ayin-i` | עִ | syllable "i" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `pe-a` | פַּ | syllable "pa" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `pe-o` | פֹּ | syllable "po" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tsadi-i` | צִ | syllable "tzi" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tsadi-o` | צֹ | syllable "tzo" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tsadi-u` | צֻ | syllable "tzu" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `qof-u` | קֻ | syllable "ku" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `resh-o` | רֹ | syllable "ro" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `resh-u` | רֻ | syllable "ru" | held: needs a listen | recorded | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tav-e` | תֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tav-i` | תִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings |
-| Sound Match, Vowel Rain | `tav-u` | תֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `alef-i` | אִ | syllable "i" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `bet-u` | בֻּ | syllable "bu" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `gimel-a` | גַ | syllable "ga" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `gimel-o` | גֹ | syllable "go" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `dalet-e` | דֶ | syllable "de" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `dalet-o` | דֹ | syllable "do" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `dalet-u` | דֻ | syllable "du" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `zayin-a` | זַ | syllable "za" | held: needs a listen | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `chet-u` | חֻ | syllable "chu" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tet-e` | טֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tet-i` | טִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tet-u` | טֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `yod-i` | יִ | syllable "yi" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `yod-u` | יֻ | syllable "yu" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `samekh-o` | סֹ | syllable "so" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `ayin-i` | עִ | syllable "i" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `pe-a` | פַּ | syllable "pa" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `pe-o` | פֹּ | syllable "po" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tsadi-i` | צִ | syllable "tzi" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tsadi-o` | צֹ | syllable "tzo" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tsadi-u` | צֻ | syllable "tzu" | held: needs a listen | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `qof-u` | קֻ | syllable "ku" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `resh-o` | רֹ | syllable "ro" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `resh-u` | רֻ | syllable "ru" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tav-e` | תֶ | syllable "te" | recorded | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tav-i` | תִ | syllable "ti" | held: needs a listen | held: needs a listen | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
+| Sound Match, Vowel Rain, Speed Match, Vowel Storm | `tav-u` | תֻ | syllable "tu" | held: needs a listen | recorded | Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way |
 | Taxi Turns | `p84a865c5` | לֵךְ יָשָׁר | go straight | held: needs a listen | recorded | Israeli clip for all three settings |
 | Vowel Rain | `gimel+kamatz` | גָ | gimel with kamatz, says "a" | held: needs a listen | recorded | Israeli and Sephardi: plays gimel-a, the same sound. Ashkenazi says "o": own Ashkenazi clip needed |
 | Vowel Rain | `zayin+kamatz` | זָ | zayin with kamatz, says "a" | held: needs a listen | held: needs a listen | Israeli and Sephardi: plays zayin-a, the same sound. Ashkenazi says "o": own Ashkenazi clip needed |

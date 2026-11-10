@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES } from '../../src/curriculum/calendar.js';
+const LP = 'Letter Pattern, Word Burst, Root Forge, Path Word';
 import { lineWords, consonants, hasPattern, NOT_A_GAME, hasDivineName } from '../../src/lab/lab.core.js';
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..', '..');
@@ -44,10 +45,10 @@ export function build() {
   const W = J('data/lab/words.json');
   for (const c of W.cafe) add({ game: 'Café Order', what: 'word', id: c.id, he: c.he, tr: c.tr, en: c.en, tier: c.tier, spoken: 'each ordered item as it is shown; listen button on results', trad: 'Israeli clip for all three settings' });
   for (const d of W.directions) add({ game: 'Taxi Turns', what: 'word', id: d.id, he: d.he, tr: d.tr, en: d.en, tier: d.tier, spoken: 'after a right answer; listen button on results', trad: 'Israeli clip for all three settings' });
-  for (const n of J('data/lab/numbers.json').numbers) add({ game: 'Count Up, Number Ear', what: 'number', id: n.id, he: n.he, tr: n.tr, en: `${n.value} (${n.en})`, tier: n.value <= 10 ? 1 : 2, kind: 'word', clipId: n.clip, spoken: 'Number Ear asks by sound; Count Up says each number tapped', trad: 'Israeli clip for all three settings' });
+  for (const n of J('data/lab/numbers.json').numbers) add({ game: 'Count Up, Number Ear, Migration Birds', what: 'number', id: n.id, he: n.he, tr: n.tr, en: `${n.value} (${n.en})`, tier: n.value <= 10 ? 1 : 2, kind: 'word', clipId: n.clip, spoken: 'Number Ear asks by sound; Count Up says each number tapped; Migration Birds says the highest when it is caught', trad: 'Israeli clip for all three settings' });
   // Letter names (Letter Hunt, Letter Matrix, Middle Letter, Gematria) and the letter sounds (Sound Twins).
   const raw = J('data/letters/letters.json'); const letters = Array.isArray(raw) ? raw : raw.letters;
-  for (const l of letters) add({ game: 'Letter Hunt, Letter Matrix, Middle Letter, Gematria', what: 'letter name', id: l.id, he: l.nameHe || l.he, tr: l.name, en: `the letter ${l.name}`, tier: 1, kind: 'letter', clipId: l.id, spoken: 'the letter to find or name; listen button on results', trad: 'Israeli clip; Ashkenazi letter names differ (for example Sov for Tav): own clips only if John wants them' });
+  for (const l of letters) add({ game: 'Letter Hunt, Letter Matrix, Middle Letter, Gematria, Letter Sequence, Tile Turn', what: 'letter name', id: l.id, he: l.nameHe || l.he, tr: l.name, en: `the letter ${l.name}`, tier: 1, kind: 'letter', clipId: l.id, spoken: 'the letter to find or name; listen button on results', trad: 'Israeli clip; Ashkenazi letter names differ (for example Sov for Tav): own clips only if John wants them' });
   const soundClip = (c) => ({ 'bet-plain': 'vet', 'bet-dagesh': 'bet', 'kaf-plain': 'khaf', 'kaf-dagesh': 'kaf', 'pe-plain': 'fe', 'pe-dagesh': 'pe', 'shin-shin': 'shin', 'shin-sin': 'sin', 'tav-plain': 'tav', 'tav-dagesh': 'tav', 'kaf-final': 'khaf', 'mem-final': 'mem', 'nun-final': 'nun', 'pe-final': 'fe', 'tsadi-final': 'tsadi' }[c.id] || c.letter) + '-sound';
   for (const c of W.cards) {
     const differs = c.sound.ashkenazi !== c.sound.israeli || c.sound.sephardi !== c.sound.israeli;
@@ -56,7 +57,7 @@ export function build() {
   }
   // Syllables: Sound Match and Vowel Rain.
   const syl = J('data/lab/syllables.json').syllables;
-  for (const s of syl) add({ game: 'Sound Match, Vowel Rain', what: 'syllable', id: s.id, he: s.he, tr: s.tr, en: `syllable "${s.tr}"`, tier: 1, kind: 'syllable', clipId: s.id, spoken: 'Sound Match plays it as the question; Vowel Rain after a right answer', trad: 'Israeli clip for all three settings' });
+  for (const s of syl) add({ game: 'Sound Match, Vowel Rain, Speed Match, Vowel Storm', what: 'syllable', id: s.id, he: s.he, tr: s.tr, en: `syllable "${s.tr}"`, tier: 1, kind: 'syllable', clipId: s.id, spoken: 'Sound Match plays it as the question; Vowel Rain, and Speed Match and Vowel Storm to level 3, after a right answer', trad: 'Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way' });
   for (const v of W.vowels.filter((x) => !x.syllable)) {
     const ash = v.sound.ashkenazi !== v.sound.israeli;
     if (v.sayAs) { out.push({ game: 'Vowel Rain', what: 'syllable', id: `${v.letter}+${v.sign}`, he: v.he, tr: '', en: `${v.letter} with ${v.sign}, says "${v.sound.israeli}"`, tier: v.from <= 4 ? 1 : 2, spoken: 'after a right answer',
@@ -70,14 +71,14 @@ export function build() {
   for (const e of J('data/corpus/registry.json').entries.filter((x) => x.category === 'siddur' && x.he && !NOT_A_GAME.has(x.id)))
     add({ game: 'Prayer Chain, Siddur Flash', what: 'prayer line', id: e.id, he: e.he.split('\n')[0], tr: '', en: e.title, tier: lineWords(e.he).length <= 16 ? 1 : 2, kind: 'line', clipId: e.id, spoken: 'Prayer Chain plays the whole line when it is finished (levels 1 to 3)',
       trad: hasDivineName(e.he) ? 'Holds the divine name: recording held for John\'s decision; when recorded, the name is spoken as Adonai' : 'Israeli clip (prayer voice)' });
-  // Letter Pattern: the root-family words the game can show.
+  // Letter Pattern and the studio word games: the root-family words they can show.
   const fam = J('data/roots/families.json').families || [];
   const seen = new Set();
   for (const f of fam) {
     const root = consonants(f.root); if (root.length !== 3) continue;
     for (const w of f.words || []) {
       if (!w.he || seen.has(w.he) || hasDivineName(w.he)) continue; seen.add(w.he);
-      add({ game: 'Letter Pattern', what: 'word', id: w.id || '', he: w.he, tr: w.translit || '', en: String(w.en).split(/[;,]/)[0], tier: w.level === 'A1' || w.level === 'A2' ? 1 : 2, spoken: 'when a right word is tapped; listen button on results', trad: 'Israeli clip for all three settings', inRoot: hasPattern(w.he, root) });
+      add({ game: LP, what: 'word', id: w.id || '', he: w.he, tr: w.translit || '', en: String(w.en).split(/[;,]/)[0], tier: w.level === 'A1' || w.level === 'A2' ? 1 : 2, spoken: 'when a right word is tapped or built; listen button on results', trad: 'Israeli clip for all three settings', inRoot: hasPattern(w.he, root) });
     }
   }
   // Priority: 1 = a game plays it (or asks for it by sound) and it cannot be heard yet; 2 = beginner words the game shows silently;
@@ -117,12 +118,12 @@ export function writeMd(rows) {
   const table = (list) => { L.push('| Game | Id | Hebrew | English | Ari (m) | Noa (f) | Traditions |', '|---|---|---|---|---|---|---|'); for (const r of list) L.push(`| ${r.game} | \`${r.id}\` | ${r.he} | ${r.en} | ${r.m} | ${r.f} | ${r.trad} |`); L.push(''); };
   const heldRows = rows.filter((r) => /held/.test(r.m + r.f));
   L.push(`**Held:** ${heldRows.length} recordings failed 2 of 3 transcription checks and are not played in Brain Lab (\`data/lab/clip-holds.json\`); the game shows the written sound instead. Each needs a person to listen before it is replaced or released. They are the rows marked "held: needs a listen" in the CSV.`, '');
-  L.push('## Record First', ''); const first = by(1).filter((r) => r.game !== 'Letter Pattern'); if (first.length) table(first); else L.push('Nothing: every item a game plays to beginners can be heard.', '');
-  const next = by(2).filter((r) => r.game !== 'Letter Pattern');
-  const lpFirst = by(1).filter((r) => r.game === 'Letter Pattern');
+  L.push('## Record First', ''); const first = by(1).filter((r) => r.game !== LP); if (first.length) table(first); else L.push('Nothing: every item a game plays to beginners can be heard.', '');
+  const next = by(2).filter((r) => r.game !== LP);
+  const lpFirst = by(1).filter((r) => r.game === LP);
   if (lpFirst.length) { L.push(`### Letter Pattern beginner words (${lpFirst.length})`, ''); table(lpFirst); }
   L.push('## Next', ''); table(next);
-  L.push(`Letter Pattern words without a recording are listed only in the CSV: ${rows.filter((r) => r.game === 'Letter Pattern' && r.priority === 1).length} beginner words (level A1 or A2, priority 1), ${by(2).filter((r) => r.game === 'Letter Pattern').length} at priority 2.`, '');
+  L.push(`Letter Pattern words without a recording are listed only in the CSV: ${rows.filter((r) => r.game === LP && r.priority === 1).length} beginner words (level A1 or A2, priority 1), ${by(2).filter((r) => r.game === LP).length} at priority 2.`, '');
   const ash = rows.filter((r) => /Ashkenazi[^.]*own (Ashkenazi )?clip needed|own clip needed/.test(r.trad));
   L.push('## For the Ashkenazi and Sephardi Settings', '', `${ash.length} items are said differently in a tradition (for example kamatz is "o" in Ashkenazi, and Chet and Ayin are their own sounds in Sephardi). Those settings do not play the Israeli clip for them; recording them in the Ashkenazi or Sephardi way would let them be heard there. They are the rows whose \`traditions\` column says "own clip needed".`, '');
   writeFileSync(join(ROOT, OUT + '.md'), L.join('\n'));

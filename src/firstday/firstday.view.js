@@ -121,9 +121,12 @@ export function mount(root, ctx) {
     if (s.kind === 'vowel') nodes.push(el('p', { class: 'fd-say' }, el('strong', {}, V?.name || s.vowel), ': ', vowelSound(V, tradition).en, ` (${LABELS[tradition]} sound)`));
     if (s.kind === 'syllable' || s.kind === 'word') nodes.push(el('p', { class: 'fd-say' }, el('strong', {}, respell(s.he, tradition) || s.id), s.en ? `, "${s.en}"` : '', ` (how it sounds in English letters, ${LABELS[tradition]} style)`));
     const hook = s.kind === 'letter' ? { kind: 'letter', id: s.letter } : s.kind === 'vowel' ? { kind: 'vowel', id: s.vowel } : { kind: 'word', id: `firstday-${s.id}` };
-    const buddy = rimonInline({ action: s.kind === 'letter' ? 'wave' : 'point', size: 104, label: 'Rimon' }).el;
-    buddy.classList.add('fd-learn-rimon');
-    nodes.push(buddy);
+    try {
+      const doc = root?.ownerDocument || globalThis.document;
+      const buddy = rimonInline({ action: s.kind === 'letter' ? 'wave' : 'point', size: 104, label: 'Rimon', doc }).el;
+      buddy.classList?.add?.('fd-learn-rimon');
+      nodes.push(buddy);
+    } catch { /* test DOMs and missing document: the letter still renders without the drawing */ }
     const tools = el('div', { class: 'fd-foot-tools' }, listen(hook));
     if (s.kind === 'letter') tools.append(el('a', { class: 'btn secondary', href: `#/letters/${s.letter}`, id: 'fd-trace' }, 'Trace it'));
     // Instruction stays in the lesson body; Hear it / Trace it sit in the footer so Continue cannot cover them.

@@ -201,7 +201,7 @@
   {"id": "t-good", "cat": "smalltalk", "en": ["Good", "Fine"], "he": "טוב"},
   {"id": "t-i-think-so", "cat": "smalltalk", "en": ["I think so"], "he": "אני חושב שכן", "f": "אני חושבת שכן"},
   {"id": "t-love-you", "cat": "smalltalk", "en": ["I love you"], "he": "אני אוהב אותך", "f": "אני אוהבת אותך"},
-  {"id": "t-happy-birthday", "cat": "smalltalk", "en": ["Happy birthday"], "he": "יום הולדת שמח"},
+  {"id": "t-happy-birthday", "cat": "smalltalk", "en": ["Happy birthday", "Happy birthday to you"], "he": "יום הולדת שמח"},
   {"id": "t-have-nice-day", "cat": "smalltalk", "en": ["Have a nice day", "Have a good day"], "he": "יום טוב", "alt": ["יום נעים", "שיהיה לך יום טוב"]},
   {"id": "t-taxi-airport", "cat": "directions", "en": ["Can I get a taxi to the airport?", "A taxi to the airport, please", "I need a taxi to the airport", "Can I have a taxi to the airport?"], "he": "אפשר מונית לשדה התעופה?", "alt": ["מונית לשדה התעופה, בבקשה"]},
   {"id": "t-central-station", "cat": "directions", "en": ["Where is the central bus station?", "Where is the bus station?", "Where is the central station?"], "he": "איפה התחנה המרכזית?"},
@@ -326,9 +326,18 @@
   {"id": "t-back-hour", "cat": "smalltalk", "en": ["I'll be back in an hour", "I will be back in an hour"], "he": "אני חוזר בעוד שעה", "f": "אני חוזרת בעוד שעה"},
   {"id": "t-wake-me", "cat": "hotel", "en": ["Can you wake me at six?", "Please wake me at six"], "he": "אפשר להעיר אותי בשש?"},
   {"id": "t-what-drink", "cat": "ordering", "en": ["What do you want to drink?", "What would you like to drink?"], "he": "מה אתה רוצה לשתות?", "toF": "מה את רוצה לשתות?", "alt": ["מה תרצו לשתות?"]},
-  {"id": "t-what-eat", "cat": "ordering", "en": ["What do you want to eat?", "What would you like to eat?"], "he": "מה אתה רוצה לאכול?", "toF": "מה את רוצה לאכול?"}
+  {"id": "t-what-eat", "cat": "ordering", "en": ["What do you want to eat?", "What would you like to eat?"], "he": "מה אתה רוצה לאכול?", "toF": "מה את רוצה לאכול?"},
+  {"id": "t-too-far-walk", "cat": "directions", "en": ["It's too far to walk", "It is too far to walk", "That's too far to walk"], "he": "זה רחוק מדי ללכת ברגל"},
+  {"id": "t-think-lost", "cat": "directions", "en": ["I think I'm lost", "I think I am lost"], "he": "אני חושב שהלכתי לאיבוד", "f": "אני חושבת שהלכתי לאיבוד"}
  ],
  "nouns": [
+  {"en": ["women s section", "womens section"], "back": "women's section", "he": "עזרת נשים", "def": "עזרת הנשים", "g": "f"},
+  {"en": ["stamps"], "he": "בולים", "g": "p"},
+  {"en": ["postcard"], "he": "גלויה", "g": "f", "pl": "גלויות"},
+  {"en": ["souvenir"], "he": "מזכרת", "g": "f", "pl": "מזכרות"},
+  {"en": ["battery"], "he": "סוללה", "g": "f", "pl": "סוללות"},
+  {"en": ["sim card"], "he": "כרטיס סים", "def": "כרטיס הסים"},
+  {"en": ["adapter"], "he": "מתאם"},
   {"en": ["my husband"], "he": "בעלי", "def": "בעלי", "own": true},
   {"en": ["my wife"], "he": "אשתי", "def": "אשתי", "g": "f", "own": true},
   {"en": ["platform"], "he": "רציף", "pl": "רציפים"},

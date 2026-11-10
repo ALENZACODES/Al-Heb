@@ -1,0 +1,246 @@
+{
+ "schema": "alef-talk-utterances/1",
+ "note": "40 everyday lines written after the final pass, after every engine and pack change. Nothing was changed after it was scored. The reference is one acceptable answer.",
+ "samples": [
+  {
+   "id": "q-en-01",
+   "direction": "en-he",
+   "source": "Is there a supermarket near the hotel?",
+   "reference": "יש סופרמרקט ליד המלון?"
+  },
+  {
+   "id": "q-en-02",
+   "direction": "en-he",
+   "source": "I'd like to check out.",
+   "reference": "אני רוצה לעשות צ'ק-אאוט."
+  },
+  {
+   "id": "q-en-03",
+   "direction": "en-he",
+   "source": "The window doesn't close.",
+   "reference": "החלון לא נסגר."
+  },
+  {
+   "id": "q-en-04",
+   "direction": "en-he",
+   "source": "Can I borrow a pen?",
+   "reference": "אפשר לשאול עט?"
+  },
+  {
+   "id": "q-en-05",
+   "direction": "en-he",
+   "source": "We'd like three coffees and a tea.",
+   "reference": "אנחנו רוצים שלושה קפה ותה."
+  },
+  {
+   "id": "q-en-06",
+   "direction": "en-he",
+   "source": "How far is the beach?",
+   "reference": "כמה רחוק חוף הים?"
+  },
+  {
+   "id": "q-en-07",
+   "direction": "en-he",
+   "source": "My phone isn't working.",
+   "reference": "הטלפון שלי לא עובד."
+  },
+  {
+   "id": "q-en-08",
+   "direction": "en-he",
+   "source": "Do you have this in blue?",
+   "reference": "יש לכם את זה בכחול?"
+  },
+  {
+   "id": "q-en-09",
+   "direction": "en-he",
+   "source": "Where should I sit?",
+   "reference": "איפה לשבת?"
+  },
+  {
+   "id": "q-en-10",
+   "direction": "en-he",
+   "source": "I'm here for a bar mitzvah.",
+   "reference": "אני כאן בשביל בר מצווה."
+  },
+  {
+   "id": "q-en-11",
+   "direction": "en-he",
+   "source": "Is the tap water cold?",
+   "reference": "המים מהברז קרים?"
+  },
+  {
+   "id": "q-en-12",
+   "direction": "en-he",
+   "source": "The taxi is waiting outside.",
+   "reference": "המונית מחכה בחוץ."
+  },
+  {
+   "id": "q-en-13",
+   "direction": "en-he",
+   "source": "I'll pay in cash.",
+   "reference": "אני אשלם במזומן."
+  },
+  {
+   "id": "q-en-14",
+   "direction": "en-he",
+   "source": "Can I see the room?",
+   "reference": "אפשר לראות את החדר?"
+  },
+  {
+   "id": "q-en-15",
+   "direction": "en-he",
+   "source": "What's your name?",
+   "reference": "איך קוראים לך?"
+  },
+  {
+   "id": "q-en-16",
+   "direction": "en-he",
+   "source": "It's my birthday today.",
+   "reference": "היום יום ההולדת שלי."
+  },
+  {
+   "id": "q-en-17",
+   "direction": "en-he",
+   "source": "Where is the nearest bus stop?",
+   "reference": "איפה יש תחנת אוטובוס באזור?"
+  },
+  {
+   "id": "q-en-18",
+   "direction": "en-he",
+   "source": "I need a doctor for my son.",
+   "reference": "אני צריך רופא לבן שלי."
+  },
+  {
+   "id": "q-en-19",
+   "direction": "en-he",
+   "source": "Is dinner at seven?",
+   "reference": "ארוחת הערב בשבע?"
+  },
+  {
+   "id": "q-en-20",
+   "direction": "en-he",
+   "source": "Please bring the bill.",
+   "reference": "את החשבון, בבקשה."
+  },
+  {
+   "id": "q-en-21",
+   "direction": "en-he",
+   "source": "The room is on the third floor.",
+   "reference": "החדר בקומה השלישית."
+  },
+  {
+   "id": "q-en-22",
+   "direction": "en-he",
+   "source": "Are there any vegetarian dishes?",
+   "reference": "יש מנות צמחוניות?"
+  },
+  {
+   "id": "q-en-23",
+   "direction": "en-he",
+   "source": "I'm sorry, I don't speak Hebrew well.",
+   "reference": "סליחה, אני לא מדבר עברית טוב."
+  },
+  {
+   "id": "q-en-24",
+   "direction": "en-he",
+   "source": "When does the next train leave?",
+   "reference": "מתי הרכבת הבאה יוצאת?"
+  },
+  {
+   "id": "q-en-25",
+   "direction": "en-he",
+   "source": "Can you write the address?",
+   "reference": "אפשר לכתוב את הכתובת?"
+  },
+  {
+   "id": "q-he-26",
+   "direction": "he-en",
+   "source": "יש סופרמרקט ליד המלון?",
+   "reference": "Is there a supermarket near the hotel?"
+  },
+  {
+   "id": "q-he-27",
+   "direction": "he-en",
+   "source": "הטלפון שלי לא עובד.",
+   "reference": "My phone doesn't work."
+  },
+  {
+   "id": "q-he-28",
+   "direction": "he-en",
+   "source": "אפשר לראות את החדר?",
+   "reference": "Can I see the room?"
+  },
+  {
+   "id": "q-he-29",
+   "direction": "he-en",
+   "source": "המונית מחכה בחוץ.",
+   "reference": "The taxi is waiting outside."
+  },
+  {
+   "id": "q-he-30",
+   "direction": "he-en",
+   "source": "אני צריך רופא לבן שלי.",
+   "reference": "I need a doctor for my son."
+  },
+  {
+   "id": "q-he-31",
+   "direction": "he-en",
+   "source": "יש לכם את זה בכחול?",
+   "reference": "Do you have this in blue?"
+  },
+  {
+   "id": "q-he-32",
+   "direction": "he-en",
+   "source": "החלון לא נסגר.",
+   "reference": "The window doesn't close."
+  },
+  {
+   "id": "q-he-33",
+   "direction": "he-en",
+   "source": "ארוחת הערב בשבע?",
+   "reference": "Is dinner at seven?"
+  },
+  {
+   "id": "q-he-34",
+   "direction": "he-en",
+   "source": "אנחנו רוצים שלושה קפה ותה.",
+   "reference": "We want three coffees and a tea."
+  },
+  {
+   "id": "q-he-35",
+   "direction": "he-en",
+   "source": "מתי הרכבת הבאה יוצאת?",
+   "reference": "When does the next train leave?"
+  },
+  {
+   "id": "q-he-36",
+   "direction": "he-en",
+   "source": "איפה לשבת?",
+   "reference": "Where should I sit?"
+  },
+  {
+   "id": "q-he-37",
+   "direction": "he-en",
+   "source": "אני אשלם במזומן.",
+   "reference": "I'll pay in cash."
+  },
+  {
+   "id": "q-he-38",
+   "direction": "he-en",
+   "source": "יש מנות צמחוניות?",
+   "reference": "Are there vegetarian dishes?"
+  },
+  {
+   "id": "q-he-39",
+   "direction": "he-en",
+   "source": "אפשר לכתוב את הכתובת?",
+   "reference": "Can you write the address?"
+  },
+  {
+   "id": "q-he-40",
+   "direction": "he-en",
+   "source": "כמה רחוק חוף הים?",
+   "reference": "How far is the beach?"
+  }
+ ]
+}

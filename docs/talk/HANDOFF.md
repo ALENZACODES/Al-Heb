@@ -16,14 +16,14 @@ An English and Hebrew phrase helper that runs in the browser with no server. It 
 | Listening with a microphone | Not tested |
 | iPhone, Android, Firefox | Not tested |
 | Hebrew checked by a native speaker | Not done (322 lines, 265 nouns, 62 describing words, 62 to-forms) |
-| GitHub Actions `ci` run for this branch | Passed for the round 2, 3 and 4 pushes; the round 5 run was still in progress when last looked at |
+| GitHub Actions `ci` run for this branch | Passed for every push from round 2 through the hardening push; the run for the final pass had not finished when last looked at |
 | Odd input (empty, very long, symbols, mixed scripts, words such as "constructor") | No error and no empty answer over 56 inputs in every direction |
 
 ## The Number That Matters
 
-Six held-out sets were written, one per stage, each after the work of that stage. On first run they scored 69.6, 62.7, 74.4, 60.3, 47.5 and 48.5. Each rose above 88 once the engine was widened against it. The next new set started low again.
+Seven held-out sets were written, one per stage, each after the work of that stage. On first run they scored 69.6, 62.7, 74.4, 60.3, 47.5, 48.5 and 27.8. Each of the first six rose above 88 once the engine was widened against it. The next new set started low again, and the last started lowest.
 
-So: on the topics and frames it holds, Talk answers well. On a new everyday line it answers about half the time and refuses the rest. Five rounds of adding lines and frames did not change that, and more of the same will not.
+So: on the topics and frames it holds, Talk answers well. On a new everyday line it answers between a third and two thirds of the time and refuses the rest. Six passes of adding lines and frames did not change that, and more of the same will not.
 
 ## The Speech Review
 
@@ -48,5 +48,5 @@ So: on the topics and frames it holds, Talk answers well. On a new everyday line
 | `data/talk/pack.json` | Stored lines and word lists |
 | `tools/talk/translate.mjs` | Command-line runner and scorer |
 | `tests/talk.test.js`, `tests/talk.engine.test.js` | Tests |
-| `tests/fixtures/talk.*.json` | The seven scored sets |
+| `tests/fixtures/talk.*.json` | The eight scored sets |
 | `docs/talk/replies/` | Replies to the speech review |

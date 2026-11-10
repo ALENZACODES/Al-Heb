@@ -345,6 +345,32 @@ test('hardening: round trips and small faults from the last review', () => {
   assert.equal(he('It is 99 oclock').ok, false);
 });
 
+test('final pass frames: whose, more of, take me to, waiting for, do you sell, is this, times of day', () => {
+  const cases = [
+    ['We need two more chairs', 'אנחנו צריכים עוד שני כיסאות'],
+    ['Can you take me to the hotel?', 'אפשר לקחת אותי למלון?'],
+    ["I'm waiting for my friend", 'אני מחכה לחבר שלי'],
+    ['Where does this bus go?', 'לאן האוטובוס הזה נוסע?'],
+    ['Do you sell stamps?', 'אתם מוכרים בולים?'],
+    ['Is this the train to Haifa?', 'זאת הרכבת לחיפה?'],
+    ["Where is the women's section?", 'איפה עזרת הנשים?'],
+    ["The rabbi's sermon was interesting", 'הדרשה של הרב הייתה מעניינת'],
+    ['Eight thirty tomorrow morning', 'מחר בבוקר בשמונה וחצי'],
+    ['Happy birthday to you!', 'יום הולדת שמח'],
+    ["I think I'm lost", 'אני חושב שהלכתי לאיבוד'],
+  ];
+  for (const [src, want] of cases) assert.equal(he(src).translation, want, src);
+  const back = [
+    ['יש לכם שולחן לחמישה?', 'Do you have a table for five?'],
+    ['לאן האוטובוס הזה נוסע?', 'Where does this bus go?'],
+    ['אתם מוכרים בולים?', 'Do you sell stamps?'],
+    ['אפשר לקחת אותי למלון?', 'Can you take me to the hotel?'],
+    ['זאת הרכבת לחיפה?', 'Is this the train to Haifa?'],
+    ['זאת הרכבת לחיפה', 'This is the train to Haifa'],
+  ];
+  for (const [src, want] of back) assert.equal(en(src).translation, want, src);
+});
+
 test('a refused line that sounds like a stored line is offered as "did you mean", never given as the answer', () => {
   const cases = [
     ['מי בא לי קרח?', 'he-en', 'מים, בלי קרח'],
@@ -461,9 +487,15 @@ test('score: the round 4 end set, since used to guide new frames (a regression c
   assert.equal(en('הרב כאן היום').translation, 'The rabbi is here today');
 });
 
-test('score: 40 held-out lines written at the end of round 5 (the honest number; must not fall)', () => {
+test('score: the round 5 end set, since used to guide new frames (a regression check)', () => {
   const r = score('tests/fixtures/talk.fresh6.json');
   assert.equal(r.n, 40);
-  assert.ok(r.score >= 48, `score ${r.score.toFixed(2)}`);
+  assert.ok(r.score >= 90, `score ${r.score.toFixed(2)}`);
   assert.equal(en('אני רוצה כוס יין לבן').translation, 'I want a glass of white wine');
+});
+
+test('score: 40 held-out lines written after the final pass (the honest number; must not fall)', () => {
+  const r = score('tests/fixtures/talk.fresh7.json');
+  assert.equal(r.n, 40);
+  assert.ok(r.score >= 27, `score ${r.score.toFixed(2)}`);
 });

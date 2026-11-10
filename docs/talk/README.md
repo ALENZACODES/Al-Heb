@@ -38,6 +38,7 @@ A line that differs from a stored line by a real word is refused, not matched. "
 - Describing words that follow the noun or the speaker ("The room is very dirty", "I am tired", "The soup was cold").
 - Clock times with half and quarter past, and when things start and end ("The service starts at nine").
 - I live in, I work in, I am a number of years old, we are from.
+- Whose a thing is ("the rabbi's sermon"), more of a counted thing, take me to, waiting for, do you sell, is this, a time tomorrow morning.
 - Not wanting or needing, a thing that does not work, where a thing is ("The prayer book is on the chair"), which, our and this, colours.
 - A describing word beside a noun ("cold water", "a bigger room"), my, another, per night, and someone else wanting or needing ("The children want ice cream").
 
@@ -81,7 +82,7 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 
 ## Scores
 
-`tests/talk.engine.test.js` scores the engine on seven files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
+`tests/talk.engine.test.js` scores the engine on eight files. An exact match after normalizing scores 1; otherwise the score is 1 minus the word error rate against the reference; a refusal scores 0. A correct answer worded differently from the reference loses points.
 
 | File | Lines | Score | Refused | What it shows |
 |---|---|---|---|---|
@@ -90,10 +91,11 @@ A line that holds the four-letter Name, in Hebrew or in English letters, is held
 | `tests/fixtures/talk.fresh2.json` | 75 | 88.4 | 7 | Written during round 2. It scored 62.7 when first run and was then used to add patterns. A regression check. |
 | `tests/fixtures/talk.fresh3.json` | 40 | 94.4 | 2 | Written at the end of round 2. It scored 74.4 then. A regression check. |
 | `tests/fixtures/talk.fresh4.json` | 40 | 97.6 | 0 | Written at the end of round 3. It scored 60.3 then. A regression check. |
-| `tests/fixtures/talk.fresh5.json` | 40 | 95.2 | 0 | Written at the end of round 4. It scored 47.5 then; its refusals guided the round 5 frames. A regression check. |
-| `tests/fixtures/talk.fresh6.json` | 40 | 49.2 | 19 | Written at the end of round 5. It scored 48.5 when first run. No line or frame was added for it. This is the honest number for a new everyday line. |
+| `tests/fixtures/talk.fresh5.json` | 40 | 98.4 | 0 | Written at the end of round 4. It scored 47.5 then. A regression check. |
+| `tests/fixtures/talk.fresh6.json` | 40 | 92.1 | 2 | Written at the end of round 5. It scored 48.5 then; its refusals guided the final pass. A regression check. |
+| `tests/fixtures/talk.fresh7.json` | 40 | 27.8 | 27 | Written after the final pass. Nothing was changed after it was scored. This is the honest number for a new everyday line. |
 
-The held-out files scored 69.6, 62.7, 74.4, 60.3, 47.5 and 48.5 when first run, whatever the earlier files had reached by then. Widening the stored lines and frames lifts the files it was done against and does not lift the next new file. A new everyday line has roughly an even chance of being answered. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
+The held-out files scored 69.6, 62.7, 74.4, 60.3, 47.5, 48.5 and 27.8 when first run, whatever the earlier files had reached by then. Widening the stored lines and frames lifts the files it was done against and does not lift the next new file. A new everyday line is answered somewhere between a third and two thirds of the time, and the later sets, written to reach past the frames already built, sit at the low end. On open conversation outside these topics the engine will mostly refuse. All scores were taken on typed text. Nothing here has been tested with real speech in a browser.
 
 ## Scoring The Shipped Engine From A Speech Review
 
@@ -112,7 +114,7 @@ Each line of `transcripts.jsonl` is `{"id": "...", "direction": "he-en", "text":
 - A small translation model that runs in the browser. It would lift the score on new sentences. It needs a model of a workable size hosted with the site and a test in real browsers first.
 - Past and future sentences, and anything said about a third person ("The children are hungry").
 - Clips for the Talk pack's own lines. Only phrasebook lines that already have a clip play one (93 of the 204 today).
-- "Two more chairs", "take me to", "I'm waiting for", "where does this bus go", "do you sell", "the rabbi's sermon": the round 5 held-out file lists what is still refused.
+- "Near the hotel", "doesn't close", "is waiting", "I'll pay", "the next train", "on the third floor", "how far is": the last held-out file lists what is still refused.
 
 ## How Hebrew Is Shown
 

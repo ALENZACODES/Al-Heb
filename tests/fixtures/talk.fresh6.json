@@ -1,6 +1,6 @@
 {
  "schema": "alef-talk-utterances/1",
- "note": "40 everyday lines written at the end of round 5, after every engine and pack change of that round. It scored 48.5 when first run, with 19 of 40 refused. Two faults it exposed were then fixed (a describing word attached to the glass and not the wine, and phrasebook lines shown in a spelling nobody writes); no line or frame was added for it. The reference is one acceptable answer.",
+ "note": "40 everyday lines written at the end of round 5, after every engine and pack change of that round. It scored 48.5 when first run, with 19 of 40 refused. Two faults it exposed were then fixed (a describing word attached to the glass and not the wine, and phrasebook lines shown in a spelling nobody writes); no line or frame was added for it in that round. In the final pass its refusals guided new frames and two of its lines were stored, so it is now a regression check. The reference is one acceptable answer.",
  "samples": [
   {
    "id": "n-en-01",

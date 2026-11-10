@@ -79,6 +79,7 @@ export const ON_DEMAND_GROUPS = Object.freeze([
   { id: "od-fonts", label: "Cursive display font (used only with the cursive script setting)", test: /^assets\/fonts\//, approxMB: 0.03 },
   { id: "od-traditions-code", label: "Traditions pages (preview-route code)", test: /^src\/traditions\//, approxMB: 0.04 },
   { id: "od-vocab-code", label: "Vocabulary browser (preview-route code)", test: /^src\/vocab\//, approxMB: 0.06 },
+  { id: "od-talk", label: "Talk page and its stored lines", test: /^(src\/talk\/|data\/talk\/)/, approxMB: 0.12 },
   { id: "od-speak-code", label: "Say it page (preview-route code)", test: /^src\/speak\/speak\.js$/, approxMB: 0.06 },
   { id: "od-music", label: "Game music player, Songs page and English read-aloud", test: /^src\/(audio\/(synth-music|sting)|shell\/speak-english|listen\/songs\.view)\.js$/, approxMB: 0.04 },
   { id: "od-day-code", label: "Calendar day pages, add-to-calendar box, morning screen and intermediate lessons (preview-route code)", test: /^(src\/curriculum\/(day\.view|calendar\.day|calendar\.addpanel|calendar\.quickadd|intermediate\.view)\.js|src\/morning\/morning\.view\.js)$/, approxMB: 0.09 },

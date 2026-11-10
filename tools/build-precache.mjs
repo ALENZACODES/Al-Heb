@@ -35,7 +35,7 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
 export const FIRST_DAY_LETTERS = ['shin', 'bet', 'lamed', 'vav', 'mem', 'he', 'tav', 'mem-final', 'alef'];
 const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronunciation/niqqud.json', 'data/calendar/locations.json', 'data/audio/equivalence.json',
   ...FIRST_DAY_LETTERS.map((id) => `assets/letters/morph/${id}.svg`)]);
-const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
+const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/talk/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
@@ -76,6 +76,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/curriculum/intermediate.view.js',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
+  // Talk screen (preview route /talk): route code and its on-device phrase engine, fetched on first open and runtime-cached (keeps first install under 3.95 MiB). Its sentence pairs are data/talk/.
+  'src/talk/talk.view.js', 'src/talk/talk.model.js', 'src/talk/engine.js', 'src/talk/data.js', 'src/talk/speech.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).
   'src/torahreader/torahreader.view.js',
   'data/corpus/prayer-meta.json', 'data/corpus/torah-service-guide.json', 'data/corpus/gaps.json',

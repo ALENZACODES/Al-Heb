@@ -58,6 +58,7 @@ export const he = {
   'nav.read': 'קריאה', 'nav.scan': 'סריקה', 'nav.calendar': 'לוח שנה', 'nav.settings': 'הגדרות', 'nav.about': 'אודות', 'nav.help': 'עזרה', 'nav.workbook': 'חוברת',
   // DRAFT, unreviewed machine-assisted labels for the new Learn sub-screens:
   'nav.loanwords': 'מילים שאפשר לקרוא', 'nav.checkpoint': 'בדיקת אותיות דומות', 'nav.dialogues': 'שיחות בישראל',
+  'nav.talk': 'שיחה',
   'app.name': 'אלף',
 };
 export const HEBREW_REVIEW_NEEDED = Object.keys(he);

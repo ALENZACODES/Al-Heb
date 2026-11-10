@@ -6,7 +6,7 @@ import { h } from './ui.js';
 export const FLOWS = [
   { id: 'own-site', what: 'Pages, scripts, fonts, lesson and corpus data files, and audio files if they exist', to: 'The site that serves Aleph (fetch of relative URLs, plus the service worker in sw.js)', sendsUserData: false, when: 'Whenever the app loads or updates. The request carries no progress or settings.', files: ['sw.js', 'src/app.js'] },
   { id: 'local-helper', what: 'Recognised Hebrew text to translate (and the photo itself only if you also choose the local OCR option)', to: 'A helper program on your own computer (loopback address only: 127.0.0.1, localhost or [::1])', sendsUserData: false, when: 'Only if you enter a helper address on the Scan screen. Addresses that are not loopback are refused. It leaves your browser but not your machine.', files: ['src/photo/engines/local-server.js', 'src/photo/scan.view.js'] },
-  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen', to: 'Decided by your browser, not by Aleph. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. Aleph does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(self), which does not block the recogniser on Aleph\'s own address; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', '_headers'] },
+  { id: 'speech-recognition', what: 'Your voice, if the browser\'s speech recogniser is used on the Say it screen or the Talk screen', to: 'Decided by your browser, not by Aleph. Some browsers send the audio to the browser maker\'s servers.', sendsUserData: true, when: 'Only after you press the button. Aleph does not upload audio itself. The Permissions-Policy header in _headers sets microphone=(self), which does not block the recogniser on Aleph\'s own address; read in the file, not tested live.', files: ['src/speak/recognizer.js', 'src/speak/model.js', 'src/talk/speech.js', '_headers'] },
 ];
 
 /** Things the code does on your device only. */
@@ -138,6 +138,8 @@ export const STORE_KEYS = [
   ['listen.v1', 'Listen-and-pick and read-and-match tallies', 'src/listen/listen.view.js'],
   ['timedread.v1', 'Timed read-aloud results', 'src/progress/model.js'],
   ['speak.v1', 'Say-it results (not recordings)', 'src/speak/model.js'],
+  ['talk.history', 'The text of your last Talk lines and their translations (no sound)', 'src/talk/talk.model.js'],
+  ['talk.settings', 'Talk choices: direction, read aloud, vowel marks, who is speaking', 'src/talk/talk.model.js'],
   ['sprint.last', 'Last word sprint', 'src/sprint/model.js'],
   ['typing.v1', 'Typing practice results', 'src/typing/typing.js'],
   ['trope.v1', 'Chanting-mark trainer results', 'src/trope/trope.view.js'],

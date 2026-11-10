@@ -543,6 +543,9 @@ function drill(root, ctx, id) {
       S.set(nextState);
       if (isBest && sum.score > 0) { try { sfx.play('streak'); } catch { /* optional */ } }
       results(sum, prevGame, isBest, nextState, day, uniqueMet(met));
+      // A finished game counts toward the daily goal like the other games: src/retention/ listens and pays game XP
+      // (with its own daily cap) for one star or more. Nothing listens when retention is not loaded.
+      try { globalThis.document?.dispatchEvent?.(new CustomEvent('alef:game-finished', { detail: { stars: starsFor(sum), game: id, source: 'lab' } })); } catch { /* optional */ }
     };
     next();
   };

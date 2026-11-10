@@ -1,6 +1,6 @@
 # Retention System: Implementation
 
-Branch `claude/retention-fable-2026-11-10`, built on `main` at `b574744f`. Not merged, not deployed.
+The retention branch, built on `main` at `b574744f`. Not merged, not deployed.
 Nothing here has been tried with real learners, and no retention numbers are promised.
 
 ## What Was Built

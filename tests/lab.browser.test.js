@@ -11,9 +11,13 @@ import { createAppServer } from '../tools/serve.mjs';
 import { GAMES } from '../src/lab/lab.core.js';
 
 const require = createRequire(import.meta.url);
-let chromium = null;
-for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { ({ chromium } = require(p)); break; } catch { /* next */ } }
+// LAB_ENGINE=webkit runs the same checks in WebKit (Safari's engine) with an iPhone's screen, touch and user agent.
+const ENGINE = process.env.LAB_ENGINE === 'webkit' ? 'webkit' : 'chromium';
+let chromium = null, devices = {};
+for (const p of ['playwright', '/opt/npm-tools/node_modules/playwright', '/usr/lib/node_modules/playwright']) { try { const pw = require(p); chromium = pw[ENGINE]; devices = pw.devices || {}; break; } catch { /* next */ } }
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+// Tiles animate in; Playwright waits for them to settle before a click. WebKit under a long run needs longer than Chromium.
+const CLICK_MS = ENGINE === 'webkit' ? 1500 : 400;
 const skip = !chromium;
 
 async function withLab(settings, fn) {
@@ -22,7 +26,7 @@ async function withLab(settings, fn) {
   const base = `http://127.0.0.1:${server.address().port}/`;
   const browser = await chromium.launch({ headless: true });
   try {
-    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
+    const ctx = await browser.newContext(ENGINE === 'webkit' ? { ...devices['iPhone 13'], serviceWorkers: 'block' } : { viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
     await ctx.addInitScript((s) => { localStorage.setItem('alef:settings', JSON.stringify(s)); }, { onboarded: true, veilOptOut: true, ...settings });
     await fn(ctx, base);
   } finally { await browser.close(); server.close(); }
@@ -33,7 +37,12 @@ async function playToResults(page, maxMs) {
   while (Date.now() < until) {
     if (await page.$('.lab-results')) return true;
     const btns = await page.$$('.lab-board button:not([disabled])');
-    if (btns.length) { try { await btns[Math.floor(Math.random() * btns.length)].click({ timeout: 400 }); } catch { /* the round moved on */ } }
+    if (btns.length) {
+      const b = btns[Math.floor(Math.random() * btns.length)];
+      // A falling syllable or a flying bird never holds still, and WebKit then never counts it as ready for a click:
+      // tap where it is, as a finger would.
+      try { await b.click({ timeout: CLICK_MS }); } catch { try { const box = await b.boundingBox(); if (box) await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2); } catch { /* the round moved on */ } }
+    }
     await page.waitForTimeout(250);
   }
   return !!(await page.$('.lab-results'));
@@ -58,7 +67,9 @@ test('browser: the Brain Lab page lists every game in its pack, with a token or 
 
 test('browser: every game (all packs) plays to its results card with No time limits on: stars, score and the Hebrew you met, no page error', { skip, timeout: 900000 }, async () => {
   await withLab({ untimed: true }, async (ctx, base) => {
-    for (const g of GAMES) {
+    // LAB_GAMES=hunt,twins limits the run to those games (for a quick re-check on one engine).
+    const only = (process.env.LAB_GAMES || '').split(',').filter(Boolean);
+    for (const g of GAMES.filter((x) => !only.length || only.includes(x.id))) {
       const page = await ctx.newPage(); const errors = [];
       page.on('pageerror', (e) => errors.push(String(e)));
       page.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) errors.push(m.text()); });
@@ -73,5 +84,28 @@ test('browser: every game (all packs) plays to its results card with No time lim
       assert.deepEqual(errors, [], g.id);
       await page.close();
     }
+  });
+});
+
+test('browser: a finished Brain Lab game with a star counts toward the daily goal (retention game XP)', { skip, timeout: 120000 }, async () => {
+  await withLab({ untimed: true }, async (ctx, base) => {
+    const page = await ctx.newPage(); const errors = [];
+    page.on('pageerror', (e) => errors.push(String(e)));
+    const xp = () => page.evaluate(() => { try { const v = JSON.parse(localStorage.getItem('alef:retention.v1') || 'null'); return (v?.value || v)?.xp?.total ?? 0; } catch { return 0; } });
+    await page.goto(base + '#/lab/hunt', { waitUntil: 'load' });
+    await page.waitForSelector('.lab-intro .lab-go', { timeout: 30000 });
+    await page.waitForTimeout(1500); // retention arms after first paint
+    const before = await xp();
+    await page.click('.lab-intro .lab-go');
+    const until = Date.now() + 60000; // play it right: tap every copy of the letter asked for
+    while (Date.now() < until && !(await page.$('.lab-results'))) {
+      await page.evaluate(() => { const want = (document.querySelector('#main .lab-play')?.textContent.match(/Find every\s*(\S)/) || [])[1]; for (const b of document.querySelectorAll('.lab-board button:not([disabled])')) if (want && b.textContent.trim() === want) { b.click(); return; } });
+      await page.waitForTimeout(200);
+    }
+    assert.ok(await page.$('.lab-results'), 'reached the results card');
+    assert.notEqual(await page.locator('.lab-stars').getAttribute('aria-label'), '0 of 3 stars');
+    await page.waitForTimeout(500);
+    assert.ok((await xp()) > before, `game XP paid (${before} before)`);
+    assert.deepEqual(errors, []);
   });
 });

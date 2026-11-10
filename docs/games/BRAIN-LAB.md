@@ -4,6 +4,8 @@ Brain Lab (`#/lab`) is ALEF's brain-training page: twenty-seven games in three p
 
 Calm mode and Settings > No time limits both take the clocks away: rounds wait for you and a game ends after ten rounds.
 
+A finished game with at least one star counts toward the daily goal: the results card sends `alef:game-finished`, and the retention code pays game XP, with its own daily cap (`src/retention/xp.js`).
+
 ## The Games
 
 | Game | Skill | What it teaches | Hebrew comes from | Added |
@@ -72,7 +74,7 @@ Review rounds for this work, with scores and what would raise them: [`BRAIN-LAB-
 
 ## Spoken Hebrew
 
-Every Brain Lab game can now say its Hebrew in the learner's chosen voice (Ari or Noa): café orders and taxi directions as they appear, letter names in Middle Letter and on the results list, both letter sounds after a Sound Twins answer while learning, each caught syllable in Vowel Rain (kamatz and tzere syllables play the recorded syllable that sounds the same), holy-day names in Calendar Puzzle where recorded, and every item on the "Hebrew You Met" list that has a recording. A letter sound or syllable plays only where the learner's tradition says it the Israeli way. Ten café words and the number 90 were recorded only in the large dictionary list; their rows now travel in `data/lab/words.json` (`extraClips`). Holy-day names in Calendar Puzzle now have their own recordings.
+Every Brain Lab game can now say its Hebrew in the learner's chosen voice (Ari or Noa): café orders and taxi directions as they appear, letter names in Middle Letter and on the results list, both letter sounds after a Sound Twins answer while learning, each caught syllable in Vowel Rain (kamatz and tzere syllables play the recorded syllable that sounds the same), holy-day names in Calendar Puzzle where recorded, and every item on the "Hebrew You Met" list that has a recording. A letter sound or syllable plays only where the learner's tradition says it the Israeli way. Sound Match, which asks by sound, only asks for those syllables (95 of 110 for the Sephardi and for the Ashkenazi setting); the 3D Studio's Speed Match and Vowel Storm follow the same rule. Ten café words and the number 90 were recorded only in the large dictionary list; their rows now travel in `data/lab/words.json` (`extraClips`). Holy-day names in Calendar Puzzle now have their own recordings.
 
 **Held recordings.** 35 recordings failed at least two of three independent transcription checks. Brain Lab does not play them (`data/lab/clip-holds.json`, read by `src/lab/lab.holds.js`) and shows the written sound instead until a person has listened. The files stay in the app for other screens.
 
@@ -86,5 +88,5 @@ Brain Lab tells the companion what is happening (`alef:rimon` with `{ action, mo
 
 - `node tools/lab/build-lab-words.mjs` rebuilds `data/lab/words.json` from the dictionary, the clip list and the sound tables. Run it after any of those change; a test fails if the file drifts from a fresh build.
 - `node --test tests/lab.core.test.js tests/lab.games2.test.js tests/warm-routes.test.js` checks the rules, the data against its sources, and that tapping at random scores at chance in every new game.
-- `node --test tests/lab.browser.test.js` (browser tier, about 5 minutes) plays all twenty-seven games to their results card in Chromium (about 10 minutes).
+- `node --test tests/lab.browser.test.js` (browser tier, about 10 minutes) plays all twenty-seven games to their results card in Chromium and checks that a finished game pays XP. `LAB_ENGINE=webkit` runs the same test in WebKit, Safari's engine, with an iPhone 13's screen and touch; `LAB_GAMES=hunt,twins` limits it to some games.
 - Brain Lab's code and data are not in the first install; the shell keeps them on the device once per build (`src/shell/warm-routes.js`, about 525 KB).

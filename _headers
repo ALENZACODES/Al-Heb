@@ -34,6 +34,8 @@
   Cache-Control: no-cache
 /404.html
   Cache-Control: no-cache
+/404.js
+  Cache-Control: no-cache
 /synagogues/
   Cache-Control: no-cache
 /synagogues/index.html

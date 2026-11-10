@@ -17,19 +17,6 @@
       a { color: #1c4023; }
     }
   </style>
-  <script>
-    /* GitHub Pages and other static hosts serve this file for unknown paths. Hash routes live at /#/path, so a typo such as /privacy is moved there when it has no file extension. The repo folder name is used only when the site is served from /Al-Heb/. */
-    (function () {
-      var parts = (location.pathname || '/').split('/').filter(function (s) { return s && s !== 'index.html' && s !== '404.html'; });
-      var atRepo = parts[0] === 'Al-Heb';
-      var base = atRepo ? '/Al-Heb/' : '/';
-      var rest = (atRepo ? parts.slice(1) : parts).join('/');
-      window.__alefHome = base;
-      if (rest && !/\.[A-Za-z0-9]{1,8}$/.test(rest)) {
-        location.replace(base + '#/' + rest + (location.search || ''));
-      }
-    })();
-  </script>
 </head>
 <body>
   <main>
@@ -37,8 +24,7 @@
     <p>This address is not a page of ALEF. Open ALEF from the home page, or use a link that starts with #/.</p>
     <p><a id="alef-home" href="./">Open ALEF</a></p>
   </main>
-  <script>
-    if (window.__alefHome) document.getElementById('alef-home').setAttribute('href', window.__alefHome);
-  </script>
+  <!-- Path-to-hash mapping lives in /404.js so it stays inside script-src 'self'. The file comments the /Al-Heb/ GitHub Pages case. -->
+  <script src="/404.js"></script>
 </body>
 </html>

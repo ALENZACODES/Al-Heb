@@ -45,7 +45,7 @@ test('specFor pins the four specs and refuses anything else', () => {
 
 test('every path in every order sheet has a spec (loadTargets would throw otherwise)', () => {
   const t = loadTargets(REPO);
-  assert.equal(t.size, 67 + 13 + 19 + 684, `${t.size} targets`); // arcade + calendar + rimon + books
+  assert.equal(t.size, 67 + 13 + 19 + 696, `${t.size} targets`); // arcade + calendar + rimon + books (6-62 and 63)
   for (const p of t.keys()) assert.ok(specFor(p), p);
 });
 

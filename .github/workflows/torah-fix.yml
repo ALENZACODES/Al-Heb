@@ -55,14 +55,20 @@ jobs:
           mkdir -p docs/torah/audio-verification/fix
           python tools/torah/audio/fix_shard.py --list tools/torah/audio/fix-list.txt --shard ${{ matrix.shard }} --of 20 \
             --model phoneme-ct2 --log docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
-      - name: Push to john/torah-fix-${{ matrix.shard }}
+      - name: Push to john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
         if: always()
         run: |
           git config user.name "John Khan"
           git config user.email "johnnykhan1@gmail.com"
           f=docs/torah/audio-verification/fix/fix-${{ matrix.shard }}.jsonl
           [ -f "$f" ] || exit 0
-          git checkout -q -B john/torah-fix-${{ matrix.shard }}
-          git add "$f" audio/*/israeli/line/torah-*.mp3
-          git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed)"
-          git push -q --force origin HEAD:refs/heads/john/torah-fix-${{ matrix.shard }}
+          b=john/torah-fix-r${{ github.run_number }}-${{ matrix.shard }}
+          mkdir -p /tmp/keep && cp "$f" /tmp/keep/log.jsonl
+          changed=$(git diff --name-only -- 'audio/*/israeli/line/torah-*.mp3')
+          for c in $changed; do mkdir -p "/tmp/keep/$(dirname "$c")"; cp "$c" "/tmp/keep/$c"; done
+          git checkout -q --orphan "$b"
+          git rm -rq --cached . && git clean -fdq -e phoneme-ct2
+          mkdir -p "$(dirname "$f")" && cp /tmp/keep/log.jsonl "$f" && git add "$f"
+          for c in $changed; do mkdir -p "$(dirname "$c")"; cp "/tmp/keep/$c" "$c"; git add "$c"; done
+          git commit -q -m "Torah audio fix: slice ${{ matrix.shard }} ($(wc -l < "$f") clips reviewed, $(echo $changed | wc -w) replaced)"
+          for i in 1 2 3 4 5; do git push -q --force origin HEAD:refs/heads/$b && break; sleep $((i*20)); done

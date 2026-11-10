@@ -63,3 +63,6 @@
 /* Phone bubble: compact, above Rimon at the right edge; the tail points down at Rimon. */
 .rimon-bubble.rimon-bubble-phone{max-inline-size:min(60vw,210px);padding:.35rem .6rem;font-size:.85rem}
 .rimon-bubble.rimon-bubble-phone::after,.rimon-bubble.rimon-bubble-phone::before{display:none}
+/* Quiet: prayer, Torah and service screens, and days of mourning and remembrance (QUIET_DAYS, QUIET_ROUTES in rimon-triggers.js). */
+body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero{display:none!important}
+body[data-rimon-quiet=day] img[data-rimon-still]{visibility:hidden}

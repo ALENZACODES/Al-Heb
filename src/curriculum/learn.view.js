@@ -121,9 +121,11 @@ function mountMap(root, ctx) {
   /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
   function continueCard(next, doneCount, total, st) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
     const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
+    // Rimon's still for this moment replaces the picture once it exists (src/shell/rimon-stage.js).
+    const still = !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next";
+    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const say = !next ? "You finished every lesson in this track. Amazing!"
       : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`

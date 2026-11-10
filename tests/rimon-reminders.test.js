@@ -58,7 +58,7 @@ test('frequency cap: one a day, five a week, slower after a break, silent after 
 test('the right kind of line for the moment, with the streak filled in', () => {
   const now = at(2026, 11, 10, 19); // Tuesday
   assert.equal(R.composeReminder(now, { streak: { count: 4, activeToday: false } }).kind, 'streak-risk');
-  assert.match(R.composeReminder(now, { streak: { count: 4 } }).title + R.composeReminder(now, { streak: { count: 4 } }).body, /4|lesson|streak|flame/i);
+  for (const l of R.LINES.filter((x) => x.kind === 'streak-risk')) assert.match(l.title + ' ' + l.body, /\{n\}|lesson|streak|flame/i, l.id);
   assert.equal(R.composeReminder(now, { streak: { count: 3, activeToday: false } }).body.includes('{n}'), false);
   assert.equal(R.composeReminder(now, { daysAway: 1 }).kind, 'comeback-1');
   assert.equal(R.composeReminder(now, { daysAway: 3 }).kind, 'comeback-3');

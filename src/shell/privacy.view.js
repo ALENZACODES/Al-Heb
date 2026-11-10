@@ -32,6 +32,7 @@ export const STORE_KEYS = [
   ['home.builder.v1', 'Built word ids, timestamps and points', 'src/home/builder-model.js'],
   ['games.homebuilder.v1', 'Home word builder game results', 'src/home/builder-model.js'],
   ['rimon.dismissed', 'Whether you hid Rimon; included in your backup', 'src/shell/rimon.js'],
+  ['rimon.seen.v1', 'Rimon: which one-time moments he has already shown (first answer, streak milestones, daily greetings) and the day you last visited, so he does not repeat himself', 'src/shell/rimon-stage.js'],
 
   ['firstwin.v1', 'First ten minutes: your answers (motivation, level, minutes a day) and the promise date', 'src/firstday/minuteone.model.js'],
   ['firstday.builder.v1', 'Word builder: which words you have built (their ids), how many builds, and when the last one was', 'src/firstday/minuteone.model.js'],

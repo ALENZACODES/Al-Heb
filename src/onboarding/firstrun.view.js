@@ -56,6 +56,9 @@ export function mount(root, ctx) {
   const meter = h('div', { class: 'ob-meter', role: 'progressbar', 'aria-label': 'Setup progress', 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': '0' }, meterFill);
   const topSlot = h('span', { class: 'ob-top-slot' });
   const top = h('div', { class: 'ob-top' }, topSlot, meter);
+  // Lane A's still slot (src/shell/rimon-stage.js). Kept detached: every setup screen already has Rimon asking the question
+  // in a speech bubble (lane B), so a second Rimon would double up. Attach it here if the stills should replace the bubble Rimon.
+  const rimonSlot = h('div', { class: 'ob-rimon', 'data-rimon-slot': 'onboarding.letters' });
   const card = h('article', { class: 'card onboarding ob-v2', 'data-stage': step }, top, h1, body, status);
   root.replaceChildren(card);
   const bodyEl = globalThis.document?.body;
@@ -290,6 +293,7 @@ export function mount(root, ctx) {
 
   function render() {
     if (!rec) step = 'letters';
+    rimonSlot.setAttribute('data-rimon-slot', `onboarding.${['letters', 'congregation', 'minutes'].includes(step) ? step : 'plan'}`);
     if (step === 'letters') renderLetters();
     else if (step === 'congregation') renderCongregation();
     else if (step === 'minutes') renderMinutes();

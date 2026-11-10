@@ -45,15 +45,21 @@ async function tabTo(page, match, max = 120) {
   const { ctx, page } = await open('/', { fresh: true });
   const f = 'onboarding';
   note(f, 'a first visit lands on the welcome screen', await page.evaluate(() => location.hash === '#/welcome'));
-  // the first screen asks the goal question (a preselected radio group) and then the letters question; this walk answers the letters one
-  const n0 = await tabTo(page, (a) => a.type === 'radio' && /^ob-goal-/.test(a.id));
-  note(f, 'Tab reaches the goal question radio group (a choice is preselected)', n0 > 0 && await page.evaluate(() => document.querySelectorAll('input[name=goal]:checked').length === 1), `${n0} Tab presses`);
+  // Setup asks one question per screen (2026-11-10): reading level, then goal (a preselected radio group), then daily goal; the form submits on the last one.
   const n1 = await tabTo(page, (a) => a.type === 'radio' && /^ob-letters-/.test(a.id));
   note(f, 'Tab reaches the letters question radio group', n1 > 0, `${n1} Tab presses`);
   const before = await page.evaluate(() => [...document.querySelectorAll('input[name=letters]:checked')].map((i) => i.value).join(','));
   await page.keyboard.press('ArrowDown');
   const after = await page.evaluate(() => [...document.querySelectorAll('input[name=letters]:checked')].map((i) => i.value).join(','));
   note(f, 'arrow keys change the radio choice', before !== after, `${before} -> ${after}`);
+  const nNext = await tabTo(page, (a) => a.tag === 'button' && a.id === 'ob-page-next', 40);
+  note(f, 'Tab reaches "Continue" on the first question (no trap)', nNext > 0, `${nNext} more presses`);
+  await page.keyboard.press('Enter'); await page.waitForTimeout(400);
+  const g = await active(page);
+  note(f, 'Tab reaches the goal question radio group (a choice is preselected)', /^ob-goal-/.test(g?.id || '') && await page.evaluate(() => document.querySelectorAll('input[name=goal]:checked').length === 1), JSON.stringify(g));
+  const nGoal = await tabTo(page, (a) => a.tag === 'button' && a.id === 'ob-goal-next', 40);
+  note(f, 'Tab reaches "Continue" on the goal question (no trap)', nGoal > 0, `${nGoal} more presses`);
+  await page.keyboard.press('Enter'); await page.waitForTimeout(400);
   const n2 = await tabTo(page, (a) => a.tag === 'button' && a.id === 'ob-letters-continue', 40);
   note(f, 'Tab reaches "Continue" (no trap)', n2 > 0, `${n2} more presses`);
   await page.keyboard.press('Enter'); await page.waitForTimeout(800);
@@ -242,7 +248,7 @@ async function tabTo(page, match, max = 120) {
         // a visually hidden input that stands for a visible label (file picker, radio) shows its ring on the label
         const lab = a.labels?.[0]; const lcs = lab ? getComputedStyle(lab) : null;
         const labelRing = !!lcs && ((lcs.outlineStyle !== 'none' && parseFloat(lcs.outlineWidth) > 0) || lcs.boxShadow !== 'none');
-        return { name: (a.getAttribute('aria-label') || a.textContent || a.value || a.id || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 40), tag: a.tagName.toLowerCase(), top: r.top + scrollY, left: r.left, inMain: !!a.closest('main'), floating: ['sticky', 'fixed', 'absolute'].includes(cs.position) || !!a.closest('.alef-actionbar'), ring: ring || labelRing || a.matches('input[type=time], input[type=date]'), hidden: r.width === 0 && r.height === 0 };
+        return { name: (a.getAttribute('aria-label') || a.textContent || a.value || a.id || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 40), tag: a.tagName.toLowerCase(), top: r.top + scrollY, left: r.left, inMain: !!a.closest('main'), floating: ['sticky', 'fixed', 'absolute'].includes(cs.position) || !!a.closest('.alef-actionbar') || (() => { for (let p = a.parentElement; p && p !== document.body; p = p.parentElement) { if (['fixed', 'sticky'].includes(getComputedStyle(p).position)) return true; } return false; })(), // a control inside a bar pinned to the screen (the lesson and setup bottom bars) is reached last by design, ring: ring || labelRing || a.matches('input[type=time], input[type=date]'), hidden: r.width === 0 && r.height === 0 };
       });
       if (st.end) { done = true; break; }
       stops.push(st);

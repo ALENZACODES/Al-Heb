@@ -78,6 +78,32 @@ Still open, ranked:
 7. Progress and Brain Lab use the tokens but were not reworked screen by screen.
 8. No browser-tier test drives the new setup flow; it is covered by fake-DOM unit tests and scripted walks only.
 
+## Round 4 (2026-11-10, about 3 AM): weaknesses found and the plan fixed
+
+New checks this round: the repo's accessibility gate (`node tools/a11y/gate.mjs`: keyboard walk, axe on 15 routes in light and dark, 200% zoom reflow), a keyboard-only run of setup, the light theme, and a new browser test (`tests/firstminute.browser.test.js`: setup by keyboard, no page jump, chips and path after setup, axe A/AA on all six screens).
+
+Weaknesses found, and what was done:
+
+| # | Weakness | Found by | Fix |
+|---|---|---|---|
+| 1 | Header chips: the spoken name did not contain the number shown ("0" was read as "No streak yet"), on every page | axe label-content-name-mismatch | Fixed: names start with the visible text ("0-day streak...", "0/10 minutes today") |
+| 2 | At 200% zoom the header was 260 px wide on a 195 px screen; on setup Rimon and his bubble did not fit | gate reflow check | Fixed: header wraps; below 300 px Rimon stacks above a smaller bubble |
+| 3 | First lesson: the memory card's main button was white on gold in the dark theme | axe color-contrast | Fixed: it uses the accent text colour |
+| 4 | The keyboard walk still expected the old one-page setup | gate keyboard walk | Fixed: the walk now answers the three questions one screen at a time |
+| 5 | Two big buttons on the first question | review | Fixed: the quick start is a quiet text link under Continue |
+| 6 | The Learn card's Rimon was a still picture while every other screen had the animated Rimon | review | Fixed: he waves (first lesson) or points to the next one |
+| 7 | No browser test drove the new setup | review | Fixed: tests/firstminute.browser.test.js |
+
+The plan from here (each item says what done looks like):
+
+1. **Real phone and screen reader (owner or tester, about 30 minutes).** Done when: setup, the first lesson and Learn are walked once on an iPhone with VoiceOver and once on Android with TalkBack, and anything found is fixed. Nothing else on this list replaces it.
+2. **One Rimon (Rimon lanes, then this lane).** Done when: the stills have transparent backgrounds, one situation map is shared, and `rimonInline` uses a still where one exists and the animated sheet otherwise. Until then this lane keeps the animated sheets, which are on-model.
+3. **Opening prayer before setup on a first visit (owner decision).** Kept as ordered. Option if wanted: show the welcome first and the prayer after setup on day one only.
+4. **First-visit streak.** Kept: 5 engaged minutes lights a day. The flame says how many minutes are left; the next lesson button is under it.
+5. **Path stop card on tap.** A tap now opens the lesson. A small pop-over card (title, minutes, Start) like Duolingo's is the next step if testers miss it.
+6. **Progress and Brain Lab screen by screen.** They use the tokens; a pass on each with the same eye as setup is next.
+7. **Hero images.** Orders written (docs/images/orders/HERO-HOME-PRAYER-2026-11-10.md); swap-in code is written there for when the files land.
+
 ## Score
 
-Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

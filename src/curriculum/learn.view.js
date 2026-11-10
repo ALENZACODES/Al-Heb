@@ -26,6 +26,7 @@ import { mountGender } from "./gender.view.js";
 import { mountScaffold } from "./scaffold.view.js";
 import { streakVisible } from "../shell/comfort.js";
 import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
+import { rimonInline } from "../shell/rimon-inline.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -123,7 +124,9 @@ function mountMap(root, ctx) {
   /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
   function continueCard(next, doneCount, total, st) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
+    // Rimon waves (first lesson) or points to the next one, from the same animated sheets as setup and the lesson finish
+    let pic; try { pic = rimonInline({ action: doneCount === 0 ? "wave" : "point", size: 96, label: "Rimon" }).el; pic.setAttribute("class", "rimon-inline alef-continue-rimon"); } catch { pic = null; }
+    if (!pic) pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
     const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
     const say = !next ? "You finished every lesson in this track. Amazing!"

@@ -19,9 +19,10 @@ export function statModel({ streak = null, dailyGoal = null, now = Date.now() } 
   const todayMin = Math.max(0, Math.floor((p.todaySeconds || 0) / 60));
   const pct = Math.max(0, Math.min(100, Math.round((todayMin / goalMin) * 100)));
   const count = p.count || 0, lit = !!p.activeToday && count > 0, met = todayMin >= goalMin;
-  const streakLabel = count === 0 ? 'No streak yet. Study 5 minutes today to start one.'
+  // Each spoken name starts with the number the chip shows (WCAG 2.5.3 label in name): "0" -> "0-day streak...", "3/10" -> "3/10 minutes today...".
+  const streakLabel = count === 0 ? '0-day streak. Study 5 minutes today to start one.'
     : `${count}-day streak${lit ? ', today counts' : p.restToday ? ', today is a rest day' : '. Study 5 minutes today to keep it'}.`;
-  const goalLabel = met ? `Daily goal met: ${todayMin} of ${goalMin} minutes today.` : `${todayMin} of ${goalMin} minutes today.`;
+  const goalLabel = `${todayMin}/${goalMin} minutes today${met ? ', daily goal met' : ''}.`;
   return { count, lit, rest: !!p.restToday, todayMin, goalMin, pct, met, streakLabel, goalLabel };
 }
 

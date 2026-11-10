@@ -19,7 +19,7 @@ const v2 = (o) => ({ v: 2, count: 0, best: 0, last: null, todayDate: today, toda
 test('stat bar: no streak yet, minutes against the daily goal from setup', () => {
   const m = statModel({ streak: null, dailyGoal: 10, now: NOW });
   assert.equal(m.count, 0); assert.equal(m.lit, false); assert.equal(m.goalMin, 10); assert.equal(m.todayMin, 0); assert.equal(m.pct, 0);
-  assert.match(m.streakLabel, /No streak yet/);
+  assert.match(m.streakLabel, /^0-day streak/); assert.match(m.goalLabel, /^0\/10 minutes today/, 'the spoken name starts with the visible text');
 });
 test('stat bar: a lit day, minutes rounded down, goal met at the goal', () => {
   const m = statModel({ streak: v2({ count: 3, best: 3, last: today, todaySeconds: 10 * 60 + 59 }), dailyGoal: 10, now: NOW });

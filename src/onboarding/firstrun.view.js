@@ -142,7 +142,7 @@ export function mount(root, ctx) {
       pageBox('daily', dailyFs),
       next,
       h('div', { class: 'ob-foot' },
-        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'btn secondary ob-quick-go', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Start now')),
+        h('div', { class: 'ob-foot-page', 'data-page': 'level' }, levelNext, rec ? h('button', { type: 'button', class: 'btn secondary', onclick: () => go('plan') }, 'Keep my current starting point') : h('button', { type: 'button', class: 'ob-quick-link', id: 'ob-quick-start', onclick: () => quickStart() }, 'New to Hebrew? Skip the questions and start')),
         h('div', { class: 'ob-foot-page', 'data-page': 'goal' }, goalNext),
         h('div', { class: 'ob-foot-page', 'data-page': 'daily' }, h('button', { type: 'submit', class: 'btn ob-cta', id: 'ob-letters-continue' }, 'Continue'))));
     const showPage = (name) => {

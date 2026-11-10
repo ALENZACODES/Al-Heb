@@ -354,3 +354,21 @@ html:has(body.ob-player) { scroll-padding-block-end: 11rem; }
 @media (prefers-reduced-motion: reduce) { .prayer-he { animation: none !important; filter: drop-shadow(0 0 8px rgba(217, 164, 65, .3)); background-position: 50% 0; } }
 :root[data-calm] .prayer-he { animation: none !important; background-position: 50% 0; }
 @media (forced-colors: active) { .prayer-he { -webkit-text-fill-color: CanvasText; background: none; filter: none; } }
+/* setup: the quick start is a quiet text link under Continue, so one big button leads */
+.ob-v2 .ob-quick-link { background: none; border: 0; padding: var(--s-2); min-block-size: 44px; color: var(--gold-400); font: inherit; font-size: var(--fs-sm); font-weight: var(--fw-bold); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.ob-v2 .ob-quick-link:focus-visible { outline: 3px solid var(--gold-400); outline-offset: 2px; border-radius: var(--r-sm); }
+/* Learn card: the animated Rimon keeps the old round frame */
+.alef-continue .rimon-inline.alef-continue-rimon { --rimon-size: 96px; background-color: #fbf3dc; background-size: 400% 300%; }
+
+/* ---------- 14. Round 4: accessibility gate fixes ---------- */
+/* reflow at 200% zoom (195 px wide): the header wraps instead of pushing the page sideways; Rimon stacks above his bubble */
+.site-header { flex-wrap: wrap; row-gap: 0; }
+@media (max-width: 300px) {
+  .statbar { margin-inline-start: auto; }
+  .stat-chip { padding-inline: .3rem; font-size: var(--fs-sm); }
+  .rimon-say { flex-direction: column; align-items: flex-start; }
+  .rimon-say .rimon-inline { --rimon-size: 72px !important; }
+  .rimon-say-bubble::before { display: none; }
+}
+/* memory card on dark green: the primary button text follows the accent pair (white on gold failed contrast) */
+:root .mc .mc-btn.primary { color: var(--accent-fg); }

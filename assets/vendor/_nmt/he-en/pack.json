@@ -1,0 +1,72 @@
+{
+ "schema": "alef.talk.nmt.pack.v1",
+ "direction": "he-en",
+ "model": "OPUS-MT Tatoeba heb-eng (opus-2021-02-19)",
+ "licence": "Apache-2.0",
+ "bytes": 80904865,
+ "files": [
+  {
+   "name": "table.onnx",
+   "bytes": 32737378,
+   "sha256": "e4d6851b6074b3985679207a1927fbfdf9117b9503a52571aa48f9739b770e6c",
+   "parts": [
+    {
+     "path": "he-en/table.p0.bin",
+     "bytes": 16777216,
+     "sha256": "e6e55476d3ce8852e6bf3835512b6de765152c37cb0e73fad12a7e4589b053df"
+    },
+    {
+     "path": "he-en/table.p1.bin",
+     "bytes": 15960162,
+     "sha256": "fa47f451933018974d34884ed04b8382a1994629746f160e7c5223293d7a082d"
+    }
+   ]
+  },
+  {
+   "name": "encoder.onnx",
+   "bytes": 23435438,
+   "sha256": "8de9ea9e92a9247faf4992c428f1205769f542a49f9630ef8570d794c48537ba",
+   "parts": [
+    {
+     "path": "he-en/encoder.p0.bin",
+     "bytes": 16777216,
+     "sha256": "4e75c71d5021fa387158223b1721ce4a935ea8559bb2bfd55fd1eed53f79a908"
+    },
+    {
+     "path": "he-en/encoder.p1.bin",
+     "bytes": 6658222,
+     "sha256": "4f2fa1dd58250386385d3370b1552d2fbe92dd62e84d73582aa551f6a2062e63"
+    }
+   ]
+  },
+  {
+   "name": "decoder.onnx",
+   "bytes": 23476736,
+   "sha256": "7a934851980113a8f8b76d1f6db71e600032722077414dcba7993f95aa64273d",
+   "parts": [
+    {
+     "path": "he-en/decoder.p0.bin",
+     "bytes": 16777216,
+     "sha256": "a94fa1a042e0bf1525451b27833da2032b40dd0fa85f52031ab82906254d2fd7"
+    },
+    {
+     "path": "he-en/decoder.p1.bin",
+     "bytes": 6699520,
+     "sha256": "e56b73dc5b2d7c0f9da9fcf74d093882acc54ca564123f1bec3af24790c63b2d"
+    }
+   ]
+  },
+  {
+   "name": "vocab.json",
+   "bytes": 1255313,
+   "sha256": "384dc6ccdee32af477f807abdad674e9214c7ad3cfeb661dd0ed323e7efed6c9",
+   "parts": [
+    {
+     "path": "he-en/vocab.json",
+     "bytes": 1255313,
+     "sha256": "384dc6ccdee32af477f807abdad674e9214c7ad3cfeb661dd0ed323e7efed6c9"
+    }
+   ]
+  }
+ ]
+}

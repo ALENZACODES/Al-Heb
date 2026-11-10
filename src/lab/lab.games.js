@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName } from './lab.core.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -79,7 +79,7 @@ const matrix = {
     const at = new Map(spots.map((s, k) => [s, k < targets ? target : (level >= 5 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)])]));
     let found = 0, open = false, t0 = 0;
     return new Promise((resolve) => {
-      env.prompt('Remember the letters…');
+      env.prompt('Remember the letters…'); env.rimon?.('thinking');
       const g = grid(env, n, side, (i, b) => { const l = at.get(i); if (l) b.append(big(env, l.he, 'lab-glyph')); b.setAttribute('aria-label', l ? l.name : 'empty'); b.disabled = true; }, (i, b) => {
         if (!open || b.disabled) return;
         const l = at.get(i);
@@ -139,8 +139,10 @@ const siddurflash = {
     let words = first.words.slice(0, Math.min(first.words.length, 4 + level));
     if (level >= 6) { const second = lines[randInt(env.rnd, lines.length)]; words = words.concat(second.words.slice(0, 3 + Math.floor(level / 3))); }
     const counts = new Map(); for (const w of words) counts.set(w, (counts.get(w) || 0) + 1);
-    const unique = words.map((w, i) => [w, i]).filter(([w, i]) => counts.get(w) === 1 && i >= 1);
-    const [targetWord, targetIndex] = unique.length ? unique[randInt(env.rnd, unique.length)] : [words.at(-1), words.length - 1];
+    // The divine name is never the word to catch: it is read, not raced (src/shell/names.js convention).
+    const unique = words.map((w, i) => [w, i]).filter(([w, i]) => counts.get(w) === 1 && i >= 1 && !hasDivineName(w));
+    const fallback = words.map((w, i) => [w, i]).filter(([w, i]) => i >= 1 && !hasDivineName(w));
+    const [targetWord, targetIndex] = unique.length ? unique[randInt(env.rnd, unique.length)] : fallback.length ? fallback.at(-1) : [words.at(-1), words.length - 1];
     const step = Math.max(330, 1150 - level * 70);
     return new Promise((resolve) => {
       let shownAt = null, hiddenAt = null, done = false, idx = -1;
@@ -366,4 +368,6 @@ const pattern = {
 };
 
 export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern });
+/** Shared pieces for the games in lab.games2.js. */
+export const kit = Object.freeze({ getJSON, once, grid, big, mark, loadLetters });
 export const _test = { SWITCH_ITEMS, dateEn, dateHe, shortName };

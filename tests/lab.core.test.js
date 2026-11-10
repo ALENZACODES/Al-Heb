@@ -6,14 +6,17 @@ import {
   workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords,
 } from '../src/lab/lab.core.js';
 import { DRILLS, _test } from '../src/lab/lab.games.js';
+import { NEW_DRILLS } from '../src/lab/lab.games2.js';
 import { HOLIDAY_DEFS } from '../src/curriculum/calendar.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-test('ten drills, every skill has at least one, every drill has code', () => {
-  assert.equal(GAMES.length, 10);
-  for (const s of SKILLS) assert.ok(GAMES.some((g) => g.skill === s.id), s.id);
-  for (const g of GAMES) assert.equal(typeof DRILLS[g.id]?.trial, 'function', g.id);
+test('sixteen games, every skill has at least two, every game has code (the first ten here, the six added 2026-11-10 in lab.games2.js)', () => {
+  assert.equal(GAMES.length, 16);
+  for (const s of SKILLS) assert.ok(GAMES.filter((g) => g.skill === s.id).length >= 2, s.id);
+  const all = { ...DRILLS, ...NEW_DRILLS };
+  for (const g of GAMES) assert.equal(typeof all[g.id]?.trial, 'function', g.id);
+  assert.deepEqual(Object.keys(NEW_DRILLS).sort(), GAMES.filter((g) => g.added).map((g) => g.id).sort(), 'every new game is marked with the day it was added');
 });
 
 test('daily workout: three drills, three different skills, same all day, changes across days', () => {

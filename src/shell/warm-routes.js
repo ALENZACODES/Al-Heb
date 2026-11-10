@@ -17,11 +17,11 @@ const ROOT = new URL('../../', import.meta.url);
 /**
  * Brain Lab files that are not in the first install: the on-demand modules Brain Lab imports, and the data files its drills
  * load. tests/warm-routes.test.js rebuilds this list from the code and the precache rules, and fails if it drifts.
- * About 360 KB, fetched once per build.
+ * About 430 KB, fetched once per build (the six games added 2026-11-10 brought about 70 KB: their code and data/lab/words.json).
  */
 export const LAB_FILES = Object.freeze([
-  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/games/engine.js',
-  'data/lab/syllables.json', 'data/lab/numbers.json', 'data/roots/families.json',
+  'src/lab/lab.view.js', 'src/lab/lab.core.js', 'src/lab/lab.games.js', 'src/lab/lab.games2.js', 'src/games/engine.js',
+  'data/lab/syllables.json', 'data/lab/numbers.json', 'data/lab/words.json', 'data/roots/families.json',
 ]);
 
 /**

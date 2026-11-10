@@ -99,15 +99,15 @@ const CSS = `
 .lab-tile3d:active{transform:translateY(1px) rotateX(0)}
 .lab-tile3d.is-static{pointer-events:none;cursor:default}
 .lab-tile3d.is-ask{background:linear-gradient(180deg,#1e4634,#16301C);color:#f2d27c;border-color:#d4a647}
-.lab-seq{display:flex;gap:.45rem;justify-content:center;flex-wrap:wrap;inline-size:100%}
+.lab-seq{display:flex;gap:.45rem;justify-content:center;flex-wrap:wrap;inline-size:100%;direction:rtl}
 .lab-seq .lab-cell{inline-size:3.4rem;block-size:3.4rem;aspect-ratio:auto}
 .lab-sky,.lab-rain{position:relative;overflow:hidden;inline-size:min(100%,28rem);min-block-size:16rem;border-radius:18px;background:linear-gradient(180deg,#1e4634 0%,#16301C 70%,#102818 100%);border:2px solid #d4a647;box-shadow:inset 0 0 40px #0005}
-.lab-bird{position:absolute;inset-block-start:calc(10% + var(--lane) * 8%);inset-inline-start:0;display:flex;align-items:center;gap:.25rem;min-inline-size:4.6rem;padding:.25rem .5rem;border-radius:999px;animation:lab-fly var(--ms) linear forwards;color:#16301C}
+.lab-bird{position:absolute;top:var(--top,10%);left:-30%;display:flex;align-items:center;gap:.25rem;min-inline-size:4.6rem;min-block-size:44px;padding:.25rem .55rem;border-radius:999px;border:1px solid #d4a647;animation:lab-fly var(--ms) linear var(--delay,0ms) both;color:#16301C;cursor:pointer;font:inherit}
 .lab-bird-body{color:#d4a647;font-size:1.1rem}
 .lab-bird-he{font-size:1.15rem !important;color:#16301C}
-.lab-sky.is-still .lab-bird,.lab-rain.is-still .lab-drop{animation:none;position:relative;inset:auto;display:inline-flex;margin:.3rem}
+.lab-sky.is-still .lab-bird,.lab-rain.is-still .lab-drop{animation:none;position:relative;inset:auto;left:auto;top:auto;display:inline-flex;margin:.3rem}
 .lab-sky.is-still,.lab-rain.is-still{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.4rem}
-.lab-drop{position:absolute;inset-block-start:0;inset-inline-start:var(--x);inline-size:3.6rem;block-size:3.6rem;animation:lab-fall var(--ms) var(--delay,0ms) linear forwards}
+.lab-drop{position:absolute;top:0;left:var(--x);inline-size:3.6rem;block-size:3.6rem;animation:lab-fall var(--ms) var(--delay,0ms) linear forwards}
 .lab-star{clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);background:linear-gradient(180deg,#f8e7a2,#d4a647)}
 .lab-star.is-four{clip-path:polygon(50% 0%,80% 50%,50% 100%,20% 50%)}
 .lab-star.is-six{clip-path:polygon(50% 0%,80% 20%,100% 50%,80% 80%,50% 100%,20% 80%,0 50%,20% 20%)}
@@ -116,7 +116,7 @@ const CSS = `
 .lab-spark-bit{position:absolute;inline-size:8px;block-size:8px;border-radius:50%;background:#d4a647;box-shadow:0 0 6px #f2d27c;offset-path:none;animation:lab-pop .45s ease-out forwards;top:50%;left:50%;transform:rotate(var(--a)) translateY(calc(-1 * var(--d))) scale(1)}
 .lab-cell.is-burst{position:relative;overflow:visible}
 .lab-built{font-size:1.4rem;direction:rtl}
-@keyframes lab-fly{from{transform:translate3d(-30%,0,0)}to{transform:translate3d(170%,0,40px)}}
+@keyframes lab-fly{0%{left:-30%;transform:translateY(0) rotateZ(-2deg)}50%{transform:translateY(-10px) rotateZ(2deg)}100%{left:105%;transform:translateY(0) rotateZ(-2deg)}}
 @keyframes lab-fall{from{transform:translate3d(0,-20%,0) rotateX(0)}to{transform:translate3d(0,16rem,20px) rotateX(16deg)}}
 @keyframes lab-pop{to{opacity:0;transform:rotate(var(--a)) translateY(calc(-3 * var(--d))) scale(.2)}}
 @keyframes lab-flipin{from{transform:rotateY(90deg)}to{transform:rotateY(0)}}

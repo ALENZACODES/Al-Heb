@@ -295,7 +295,7 @@ export function vowelRainPuzzle(syllables, level, rnd = Math.random) {
   const hit = sample(syllables.filter((s) => s.vowel === targetVowel), matchesWanted, rnd);
   const miss = sample(syllables.filter((s) => s.vowel !== targetVowel), n - matchesWanted, rnd);
   const falling = shuffle([...hit.map((s) => ({ ...s, match: true })), ...miss.map((s) => ({ ...s, match: false }))], rnd)
-    .map((s, i) => ({ ...s, i, x: 8 + Math.round((i / Math.max(1, n - 1)) * 78) }));
+    .map((s, i) => ({ ...s, i, x: 3 + Math.round((i / Math.max(1, n - 1)) * 72) }));
   const fallMs = Math.max(2400, 7200 - level * 360);
   return { targetVowel, label: VOWEL_SAY[targetVowel], falling, matchCount: hit.length, fallMs };
 }
@@ -377,9 +377,9 @@ const wordburst = {
       const t0 = env.now(); let found = 0;
       env.prompt(env.h('span', {}, 'Find every ', big(env, pz.target.he, 'lab-inline'), pz.showEn ? `  ${pz.target.en}` : ''));
       const g = grid(env, pz.board.length, pz.cols, (i, b) => {
+        // Tiles show Hebrew only, so the search is a reading task; the English meaning stays in the prompt on easy levels.
         b.append(big(env, pz.board[i].he, 'lab-word'));
-        if (pz.showEn) b.append(env.h('span', { class: 'lab-val' }, pz.board[i].en));
-        b.setAttribute('aria-label', `${pz.board[i].en}, ${pz.board[i].he}`);
+        b.setAttribute('aria-label', pz.board[i].he);
       }, (i, b) => {
         if (b.disabled) return;
         const hit = consonants(pz.board[i].he) === consonants(pz.target.he);
@@ -410,7 +410,8 @@ const migration = {
         const btn = env.h('button', {
           type: 'button',
           class: 'lab-bird lab-tile3d',
-          style: `--i:${i};--n:${pz.birds.length};--ms:${pz.speedMs}ms;--lane:${i}`,
+          // Each bird gets its own lane and a staggered start, so the flock is spread across the sky from the first frame.
+          style: `--ms:${pz.speedMs}ms;--top:${4 + ((i * 37) % 80)}%;--delay:${-Math.round((i / pz.birds.length) * pz.speedMs * 0.45)}ms`,
           'aria-label': `${b.tr}, ${b.value}${b.asNumeral ? ', Hebrew numeral' : ''}`,
           onclick: () => {
             const ok = b.value === pz.answerValue;
@@ -470,7 +471,7 @@ const rootforge = {
     return new Promise((resolve) => {
       const t0 = env.now(); const soFar = [];
       const built = env.h('p', { class: 'lab-sum lab-built', 'aria-live': 'polite' }, '…');
-      env.prompt(env.h('span', {}, 'Build ', env.h('b', {}, pz.target.en), ' from the root ', big(env, pz.rootHe, 'lab-inline')));
+      env.prompt(env.h('span', {}, 'Build the word for ', env.h('b', {}, `“${pz.target.en}”`), ' from the root ', big(env, pz.rootHe, 'lab-inline')));
       const g = grid(env, pz.tiles.length, Math.min(6, pz.tiles.length), (i, b) => {
         b.append(big(env, pz.tiles[i].ch, 'lab-glyph'));
         b.setAttribute('aria-label', pz.tiles[i].ch);

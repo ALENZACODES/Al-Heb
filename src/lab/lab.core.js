@@ -475,3 +475,10 @@ export function syllableTraditions(he, cards) {
   if (!card?.sound) return ['israeli'];
   return ['israeli', 'sephardi', 'ashkenazi'].filter((t) => card.sound[t] === card.sound.israeli);
 }
+
+/** The syllables a listening question may ask for: those the learner's tradition says the Israeli way (all of them if none). */
+export function askableSyllables(all, tradition) {
+  const t = normTradition(tradition);
+  const ok = (all || []).filter((s) => (s.says || ['israeli']).includes(t));
+  return ok.length ? ok : (all || []);
+}

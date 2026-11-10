@@ -57,7 +57,7 @@ export function build() {
   }
   // Syllables: Sound Match and Vowel Rain.
   const syl = J('data/lab/syllables.json').syllables;
-  for (const s of syl) add({ game: 'Sound Match, Vowel Rain, Speed Match, Vowel Storm', what: 'syllable', id: s.id, he: s.he, tr: s.tr, en: `syllable "${s.tr}"`, tier: 1, kind: 'syllable', clipId: s.id, spoken: 'Sound Match plays it as the question; Vowel Rain, and Speed Match and Vowel Storm to level 3, after a right answer', trad: 'Israeli clip for all three settings; Speed Match and Vowel Storm play it only where the tradition says the consonant the Israeli way' });
+  for (const s of syl) add({ game: 'Sound Match, Vowel Rain, Speed Match, Vowel Storm', what: 'syllable', id: s.id, he: s.he, tr: s.tr, en: `syllable "${s.tr}"`, tier: 1, kind: 'syllable', clipId: s.id, spoken: 'Sound Match plays it as the question; Vowel Rain, and Speed Match and Vowel Storm to level 3, after a right answer', trad: 'Israeli clip; Sound Match asks for it, and Speed Match and Vowel Storm play it, only where the tradition says the consonant the Israeli way (95 of 110 for Sephardi and for Ashkenazi)' });
   for (const v of W.vowels.filter((x) => !x.syllable)) {
     const ash = v.sound.ashkenazi !== v.sound.israeli;
     if (v.sayAs) { out.push({ game: 'Vowel Rain', what: 'syllable', id: `${v.letter}+${v.sign}`, he: v.he, tr: '', en: `${v.letter} with ${v.sign}, says "${v.sound.israeli}"`, tier: v.from <= 4 ? 1 : 2, spoken: 'after a right answer',

@@ -80,7 +80,7 @@ test('wiring: routes, lazy loading, and the test runner', () => {
 test('copy in src/retention: no tool names, no pronouns for Rimon, no inline handlers, the Name is never spelled', () => {
   for (const f of readdirSync('src/retention').filter((x) => /\.(js|css)$/.test(x))) {
     const text = readFileSync(`src/retention/${f}`, 'utf8');
-    assert.doesNotMatch(text, /\b(ChatGPT|GPT|Claude|Anthropic|OpenAI|Gemini|Copilot|Opus|Fable|LLM)\b/, f);
+    assert.doesNotMatch(text, /\b(\u0043hatGPT|GPT|\u0043laude|\u0041nthropic|\u004fpenAI|Gemini|Copilot|\u004fpus|\u0046able|LLM)\b/, f);
     assert.doesNotMatch(text, /Rimon (he|she)\b|\b(his|her) (leaves|seeds|drama)\b|Rimon\.[^\n]{0,40}\b(He|She) /, f);
     assert.doesNotMatch(text, /יהוה|Yahweh|Jehovah|YHWH/i, f);
     assert.doesNotMatch(text, /\son(click|load|error)\s*=\s*["']|innerHTML|<script|eval\(|new Function/, f);

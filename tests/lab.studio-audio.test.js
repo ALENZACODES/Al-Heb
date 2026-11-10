@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { familyClipRows, syllableTraditions } from '../src/lab/lab.core.js';
+import { familyClipRows, syllableTraditions, askableSyllables } from '../src/lab/lab.core.js';
 import { DRILLS } from '../src/lab/lab.games.js';
 import { migrationPuzzle, vowelSignsFor } from '../src/lab/lab.studio.js';
 
@@ -67,4 +67,15 @@ test('Vowel Storm names kamatz and tzere beside "a" and "e" only where they say 
   assert.match(vowelSignsFor('a', 'israeli'), /קָמַץ/); assert.match(vowelSignsFor('e', 'sephardi'), /צֵירֵי/);
   assert.doesNotMatch(vowelSignsFor('a', 'ashkenazi'), /קָמַץ/); assert.doesNotMatch(vowelSignsFor('e', 'ashkenazi'), /צֵירֵי/);
   assert.equal(vowelSignsFor('i', 'ashkenazi'), vowelSignsFor('i', 'israeli'));
+});
+
+test('Sound Match asks only for syllables the learner\'s tradition says as recorded; every tradition keeps most of them', async () => {
+  const syl = await DRILLS.soundmatch.load(env);
+  const ids = (t) => new Set(askableSyllables(syl, t).map((s) => s.id));
+  assert.equal(ids('israeli').size, syl.length);
+  const sep = ids('sephardi'), ash = ids('ashkenazi');
+  for (const id of ['chet-a', 'resh-i']) assert.ok(!sep.has(id), `${id} not asked of a Sephardi learner`);
+  assert.ok(!ash.has('tav-a') && ash.has('bet-a') && sep.has('bet-a') && sep.has('tav-a'));
+  assert.ok(sep.size > syl.length * 0.7 && ash.size > syl.length * 0.7);
+  assert.deepEqual(askableSyllables([{ id: 'x', says: ['israeli'] }], 'sephardi').map((s) => s.id), ['x'], 'never an empty game');
 });

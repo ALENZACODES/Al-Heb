@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME, familyClipRows } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME, familyClipRows, syllableTraditions, askableSyllables } from './lab.core.js';
 import { STUDIO_DRILLS } from './lab.studio.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
@@ -101,10 +101,19 @@ const matrix = {
 
 // ---------------------------------------------------------------- Sound Match (speed, listening)
 const soundmatch = {
-  load: (env) => once('syllables', async () => (await getJSON(env, 'data/lab/syllables.json')).syllables),
+  // Each syllable carries the traditions that say its consonant the way the Israeli recording does (syllableTraditions).
+  load: (env) => once('syllables', async () => {
+    const list = (await getJSON(env, 'data/lab/syllables.json')).syllables;
+    let cards = [];
+    try { cards = (await getJSON(env, 'data/lab/words.json')).cards || []; } catch { /* then every syllable counts as Israeli only */ }
+    return list.map((s) => ({ ...s, says: syllableTraditions(s.he, cards) }));
+  }),
   trial(env, level) {
     const all = env.data;
-    const target = all[randInt(env.rnd, all.length)];
+    // The syllable to find is one the learner's tradition says as it is recorded and written here, so a Sephardi learner
+    // is never asked to pick an Israeli Chet or Resh as theirs. Any syllable can still be a wrong choice.
+    const from = askableSyllables(all, env.tradition);
+    const target = from[randInt(env.rnd, from.length)];
     const n = level <= 1 ? 2 : level <= 3 ? 3 : level <= 6 ? 4 : 6;
     const near = all.filter((s) => s.tr !== target.tr && (s.letter === target.letter || s.vowel === target.vowel));
     const pool = level >= 4 && near.length >= n - 1 ? near : all.filter((s) => s.tr !== target.tr);

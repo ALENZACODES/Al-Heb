@@ -82,3 +82,43 @@ Checked in Chromium: Word Burst, Migration Birds, Letter Sequence, Speed Match, 
 4. **Pictures:** the 23 still on order for the six synagogue-and-Israel games, and studio covers redrawn without letters.
 5. **A native speaker** checks the game titles and the café and direction transliterations.
 6. **A real phone and a screen reader.** Everything here ran in headless Chromium.
+
+## Review of the Pushed Branch at `54a87d11` (Review Round 4 of 5)
+
+Checked for this review:
+- merged against the current integration branch (`overnight/launch-ready` at `1134fb94`, which adds retention: XP, a daily goal, hearts and a practice league) and against `main` (`81f9fc45`);
+- read the code of every game that plays a recording;
+- ran the Brain Lab browser test for the first time in WebKit, Safari's engine, with an iPhone 13's screen, touch and user agent.
+
+**Score for `54a87d11`: 92/100.** That is lower than the 95 given in round 9, because this review found four things round 9 did not check:
+
+1. **Brain Lab earned nothing toward the new daily goal.** The arcade and lesson games send `alef:game-finished`, which retention pays as game XP. Brain Lab never sent it, so once the branches meet, a learner's Brain Lab games would not move the goal ring. Fixed: the results card sends it, and retention pays as for any game (3 XP for one star or more, its own daily cap of 15). A browser test checks the XP rises, in Chromium and WebKit.
+2. **Sound Match asked every tradition for the Israeli recording.** A Sephardi learner could be asked to pick an Israeli Chet or Resh as the sound they heard, which the studio games already avoided. Fixed: the syllable to find is one the learner's tradition says the way it is recorded (95 of 110 syllables for Sephardi, 95 for Ashkenazi, all 110 for Israeli). Any syllable can still be a wrong choice.
+3. **Never run in Safari's engine.** In WebKit with iPhone settings, every game started and played normally. The test's random tapper sometimes timed out, though: Playwright waits for tiles that animate in to settle, and 400 ms was not enough under a long WebKit run. Falling syllables and flying birds never stop moving, so WebKit never treats them as ready, and Vowel Storm stalled under the tapper. A real touchscreen tap on a moving syllable in WebKit did register: with No time limits on, Vowel Storm finished in 12 seconds. Fixed in the test only: 1.5 s per tap on WebKit, then a tap at the element's position, as a finger would. `LAB_ENGINE=webkit` runs the whole test there, and `LAB_GAMES=hunt,twins` limits a run to some games.
+4. **Behind the integration branch** by its five retention commits. Merging them brought three meta-scan findings from the retention files: a branch name in `docs/retention/IMPLEMENTATION.md`, and tool names written out in two retention tests. Fixed here, without changing what those tests check. The retention lane should know.
+
+Not in Brain Lab, but seen in the Calendar Puzzle screenshot: Rimon sits on an opaque cream square over the dark page. That is for the Rimon lane.
+
+`main` (`81f9fc45`) merges into this branch with conflicts in `.github/workflows/torah-fix.yml` and `docs/INDEX.md`. The workflow file is not this lane's, so `main` is not merged here. The integration branch should take `main` first.
+
+## Round 10: Brain Lab Counts Toward the Daily Goal
+
+| Round | Commit | Score | What changed | What would raise it |
+|---|---|---|---|---|
+| 10 | this push | 96 | Merged the integration branch (retention). Finished Brain Lab games pay game XP toward the daily goal. Sound Match asks only for syllables the learner's tradition says as recorded. The Brain Lab browser test runs in WebKit with iPhone settings as well as Chromium, and a new test checks the XP. Three meta-scan findings from the retention merge fixed. | Below. |
+
+Checked after the changes:
+- full unit tier: 3,567 tests, 0 failures;
+- axe: nothing on the page or in Letter Hunt, Sound Match, Word Burst and Café Order, in light or dark, with the retention top bar on the page;
+- the browser test in Chromium and in WebKit (results in the commit message).
+
+WebKit in this workspace is the Safari engine, not an iPhone: real Safari on a real phone, and a screen reader, are still untried.
+
+## What Would Take It From 96 to 98 and Up
+
+1. **John's held decisions** on the prayer items that hold a divine name (Barchu, Hagomel, Sim Shalom, the after-Haftarah blessing, Elohim and Eloheinu in Prayer Chain, Mourner's Kaddish).
+2. **A person listens** to the 35 held recordings.
+3. **Recordings not made here** (no voice service in this workspace): the 14 month names, then the priority-2 list. The 28 Sephardi and Ashkenazi items need checked respellings first.
+4. **Pictures:** the 23 on order, and the studio covers redrawn without letters.
+5. **A native speaker** checks titles and transliterations.
+6. **Real Safari on an iPhone, and VoiceOver.**

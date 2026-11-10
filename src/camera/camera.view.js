@@ -147,9 +147,11 @@ export function mount(root, ctx = {}) {
     detail.replaceChildren(...[
       h('p', {}, heSpan(r.pointed || r.he)),
       say ? h('p', {}, h('strong', {}, 'Sounds like: '), say) : h('p', { class: 'muted' }, 'This line has no vowel points and is not in the built-in word list, so a reliable way to say it cannot be shown.'),
-      r.en ? h('p', {}, h('strong', {}, 'English: '), r.en) : h('p', {}, 'No English is available for this line here.'),
+      r.en ? h('p', {}, h('strong', {}, 'English: '), r.en)
+        : r.maybe ? h('p', { class: 'camera-maybe' }, h('strong', {}, 'Possibly: '), r.maybe, '. Part of this line looks hidden or cut off, so this was not drawn on the photo.')
+          : h('p', {}, 'No English is available for this line here.'),
       r.en ? h('p', { class: 'muted' }, sourceLabel(r.translationSource)) : null,
-      r.partial ? h('p', { class: 'muted camera-partial' }, 'Part of this line could not be read, so the English may be incomplete.') : null,
+      r.partial && !r.maybe ? h('p', { class: 'muted camera-partial' }, 'Part of this line could not be read, so the English may be incomplete.') : null,
       h('div', { class: 'row' }, h('button', { type: 'button', class: 'btn', onclick: hear }, 'Hear The Hebrew'),
         h('button', { type: 'button', class: 'btn secondary camera-words-btn', onclick: (e) => showWords(r, e.currentTarget) }, 'Word By Word')),
       audioNote, wordsBox].filter(Boolean));
@@ -165,7 +167,7 @@ export function mount(root, ctx = {}) {
     const stage = h('div', { class: 'stage' }, img);
     result.regions.forEach((r, i) => {
       const p = percentBox(english ? r.box : (r.boxOriginal || r.box), result.width, result.height);
-      const label = r.held ? `Line ${i + 1}: sacred text` : `Line ${i + 1}: ${r.en || 'not translated'}. Hear the Hebrew.`;
+      const label = r.held ? `Line ${i + 1}: sacred text` : `Line ${i + 1}: ${r.en || (r.maybe ? `possibly ${r.maybe}` : 'not translated')}. Hear the Hebrew.`;
       const b = h('button', { type: 'button', class: 'hit', 'data-region': r.id, 'aria-label': label, 'aria-pressed': 'false', onclick: () => showDetail(r, !r.held) });
       b.style.left = p.left; b.style.top = p.top; b.style.width = p.width; b.style.height = p.height;
       stage.append(b);
@@ -185,7 +187,7 @@ export function mount(root, ctx = {}) {
       out.append(h('h2', {}, 'Lines Found'),
         h('ul', { class: 'regions' }, ...result.regions.map((r, i) => h('li', {},
           h('button', { type: 'button', class: 'btn secondary camera-region-btn', 'data-region': r.id, 'aria-pressed': 'false', onclick: () => showDetail(r, !r.held) },
-            r.held ? `${i + 1}. Sacred text` : `${i + 1}. ${r.en || 'Not translated'}`)))),
+            r.held ? `${i + 1}. Sacred text` : `${i + 1}. ${r.en || (r.maybe ? `Possibly: ${r.maybe}` : 'Not translated')}`)))),
         detail);
       detail.replaceChildren(h('p', { class: 'muted' }, 'Tap a line on the photo, or a button above, to hear the Hebrew and see how to say it.'));
     }

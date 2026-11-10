@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { containsSacredName, tokens, hebrewTokens, isJunkToken, lineHadNoise, editDistance, createGlossary, regionsFromBoxes, percentBox, sourceLabel, createDictionary, wordBreakdown, wordForWord, shortGloss,
-  PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, hiddenLetterDistance, readerImage, otsuThreshold, boxOnOriginal,
+  PREFIX_MEANING, LOOK_ALIKE, twoLookAlikes, repairNumber, hiddenLetterDistance, unsureOfLine, readerImage, otsuThreshold, boxOnOriginal,
   fitText, wrapWords, chooseAlignment, groupBlocks, boxColours, contrastRatio, HELD_NOTE } from '../src/camera/camera-model.js';
 import { loadGlossaryData, loadPhrasebook, loadDictionaryIndex } from '../src/camera/camera-client.js';
 import { mergeReadings, LETTER_HEIGHT, READER_TARGET_SIDE } from '../src/camera/on-device.js';
@@ -308,4 +308,24 @@ test('camera: screen wording, privacy page and the way in from Scan', async () =
   assert.ok(!FLOWS.some((f) => /camera/i.test(f.id)), 'the Camera Translator makes no request that carries anything of the learner\'s');
   assert.ok(LOCAL_ONLY.some((l) => /Camera Translator reads and translates your photo in your browser/.test(l) && /It has no server/.test(l)));
   assert.ok(read('src/photo/scan.view.js').includes("href: '#/camera'"));
+});
+
+test('camera: a reading that looks cut off is offered as a possibility and not drawn on the photo', () => {
+  const box = (text, x) => ({ text, x, y: 10, w: 80, h: 40, conf: 90 });
+  const one = (...b) => regionsFromBoxes(b, glossary)[0];
+  // a kind-of-place word with a stray mark beside it: its companion was probably hidden
+  let r = one(box('חנות', 300), box(':21', 200));
+  assert.deepEqual([r.en, r.maybe, r.partial, r.translationSource], [null, 'Store', true, null]);
+  // the same word alone and clean is a whole sign
+  r = one(box('חנות', 300)); assert.deepEqual([r.en, r.maybe], ['Store', null]);
+  // a kind-of-place word with only a number is missing its companion, unless it is a word that takes a number
+  r = one(box('בית', 300), box('2', 200)); assert.deepEqual([r.en, r.maybe], [null, 'House 2']);
+  r = one(box('שער', 300), box('2', 200)); assert.deepEqual([r.en, r.maybe], ['Gate 2', null]);
+  // a stray mark beside a number: a digit may be hidden too ("24" read as "4")
+  r = one(box('-]', 400), box('4', 300), box('שעות', 200)); assert.deepEqual([r.en, r.partial], [null, true]); assert.ok(r.maybe);
+  // two listed words with a stray mark are still drawn, and marked as partly read
+  r = one(box('חנות', 400), box('ספרים', 300), box(':2', 200)); assert.deepEqual([r.en, r.maybe, r.partial], ['Bookshop', null, true]);
+  assert.equal(unsureOfLine({ en: 'Exit', status: 'full', wordCount: 1, numberCount: 0 }, false), false);
+  assert.equal(unsureOfLine({ en: 'Exit', status: 'near', wordCount: 2, numberCount: 0 }, true), true);
+  assert.equal(unsureOfLine(null, true), false);
 });

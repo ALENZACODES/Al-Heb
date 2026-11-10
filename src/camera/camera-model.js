@@ -277,7 +277,8 @@ export function createGlossary(data, { phrasebook = [] } = {}) {
     const en = patterns.has(head) && words.length >= 2
       ? patterns.get(head).replace('{x}', segs.slice(1).map((s) => s.en).join(' '))
       : englishOrder(segs).join(' ');
-    return { en, status: usedNear ? 'near' : 'full',
+    return { en, status: usedNear ? 'near' : 'full', wordCount: words.reduce((n, w) => n + w.he.split(' ').length, 0), numberCount: segs.length - words.length,
+      loneHead: words.length === 1 && !!entries.get(words[0].he)?.head && !entries.get(words[0].he)?.numbered,
       translit: segs.filter((s) => s.translit).map((s) => s.translit).join(' '),
       pointed: segs.map((s) => s.pointed || s.he).join(' ') };
   }
@@ -364,6 +365,19 @@ export function wordBreakdown(he, glossary, dictionary) {
  * OCR word boxes -> line regions in reading order, translated with the word list. Lines without Hebrew are dropped.
  * @param {Array<{text:string,x:number,y:number,w:number,h:number,conf?:number}>} boxes
  */
+/**
+ * True when a word-list reading should not be drawn on the photo because part of the sign was probably hidden or cut off.
+ * Two cases. (1) The line had reader noise beside it (a stray mark where a letter or digit should be) and what is left is
+ * a guess, a single word, or includes a number: the hidden piece could change the meaning ("24 Hours" read as "4 Hours").
+ * (2) A kind-of-place word that needs a companion ("Store", "House") stands alone with only a number: the companion is
+ * missing. The reading is still offered in the list below the photo as a possibility.
+ */
+export function unsureOfLine(t, partial) {
+  if (!t?.en) return false;
+  if (t.loneHead && (partial || t.numberCount > 0)) return true;
+  return !!partial && (t.status === 'near' || (t.wordCount ?? 0) < 2 || (t.numberCount ?? 0) > 0);
+}
+
 export function regionsFromBoxes(boxes, glossary) {
   const out = [];
   for (const line of orderLines(boxes)) {
@@ -379,16 +393,18 @@ export function regionsFromBoxes(boxes, glossary) {
     const t = held ? { en: null, status: 'none', translit: null, pointed: null } : glossary.translate(line.text);
     if (!held && !t.en && tokens(line.text).join('').length < 2) continue; // a lone letter is almost always noise
     const he = side === line.words ? line.text : side.map((w) => w.text).join(' ');
+    const partial = !held && lineHadNoise(line.text);
+    const unsure = !held && !!t.en && t.from !== 'phrasebook' && unsureOfLine(t, partial);
     const confs = words.map((w) => w.conf).filter((c) => Number.isFinite(c));
-    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: t.en, partial: !held && lineHadNoise(line.text), conf: confs.length ? confs.reduce((a, c) => a + c, 0) / confs.length : null,
-      translationSource: t.en ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
+    out.push(makeRegion({ id: `r${out.length + 1}`, box, he, held, en: unsure ? null : t.en, maybe: unsure ? t.en : null, partial, shape: t.en && t.from !== 'phrasebook' ? { en: t.en, status: t.status, wordCount: t.wordCount, numberCount: t.numberCount, loneHead: t.loneHead } : null, conf: confs.length ? confs.reduce((a, c) => a + c, 0) / confs.length : null,
+      translationSource: t.en && !unsure ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
   }
   return out;
 }
 
 function makeRegion(r) {
   if (r.held) return { id: r.id, box: r.box, conf: r.conf ?? null, held: true, he: null, en: null, translationSource: null, translit: null, pointed: null, drawn: false, note: HELD_NOTE };
-  return { id: r.id, box: r.box, conf: r.conf ?? null, held: false, he: r.he, en: r.en || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
+  return { id: r.id, box: r.box, conf: r.conf ?? null, held: false, he: r.he, en: r.en || null, maybe: r.maybe || null, shape: r.shape || null, partial: !!r.partial, translationSource: r.en ? r.translationSource : null,
     translit: r.translit || null, pointed: r.pointed || null, drawn: !!r.drawn };
 }
 

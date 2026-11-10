@@ -898,7 +898,7 @@
    "translit": "cheder",
    "en": "Room",
    "checked": "app-dictionary",
-   "head": true
+   "head": true, "numbered": true
   },
   {
    "he": "שער",
@@ -906,7 +906,7 @@
    "translit": "sha'ar",
    "en": "Gate",
    "checked": "app-dictionary",
-   "head": true
+   "head": true, "numbered": true
   },
   {
    "he": "חלון",

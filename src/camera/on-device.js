@@ -4,7 +4,7 @@
 // Translation: the sign word list, then the app phrasebook, then (only if a line is still untranslated) the app dictionary
 // word for word. The English is then drawn over the Hebrew on the levelled photo.
 import { deskew } from '../photo/preprocess.js';
-import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, LINE_HEIGHT } from './camera-model.js';
+import { regionsFromBoxes, chooseAlignment, fitText, boxColours, readerImage, wordForWord, boxOnOriginal, LINE_HEIGHT, unsureOfLine } from './camera-model.js';
 import { isHebrew } from '../photo/hebrew.js';
 
 const FONT_STACK = '"Alef", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif';
@@ -151,7 +151,10 @@ export async function retryLines(levelled, eng, regions, glossary, doc) {
     try { words = (await eng.ocr(await toBlob(framed, 'image/png'), { mode: 'sign', psm: 7 })).filter((wd) => !(wd.conf < 0)); } catch { continue; }
     const again = regionsFromBoxes(words.map((wd) => ({ ...wd, x: (wd.x - pad) / scale + x, y: (wd.y - pad) / scale + y, w: wd.w / scale, h: wd.h / scale })), glossary);
     const better = again.find((a) => a.en && !a.held);
-    if (better && again.length === 1) regions[i] = { ...better, id: r.id };
+    if (!better || again.length !== 1) continue;
+    // the first look saw a stray mark beside this line, so a cleaner second look is held to the same rule: no single words, guesses or numbers
+    if (r.partial && better.shape && unsureOfLine(better.shape, true)) { regions[i] = { ...r, maybe: r.maybe || better.en }; continue; }
+    regions[i] = { ...better, id: r.id };
   }
 }
 
@@ -184,7 +187,7 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, onP
   if (dictionaryLoader && regions.some((r) => !r.held && !r.en)) {
     try { dictionary = await dictionaryLoader(); } catch { dictionary = null; }
     if (dictionary) for (const r of regions) {
-      if (r.held || r.en || r.partial) continue;      // a partly read line is never translated word for word
+      if (r.held || r.en || r.partial || r.maybe) continue;      // a partly read line is never translated word for word
       const w = wordForWord(r.he, glossary, dictionary);
       if (w) Object.assign(r, { en: w.en, translationSource: 'word-for-word', translit: r.translit || w.translit, pointed: r.pointed || w.pointed });
     }
@@ -193,7 +196,9 @@ export async function translateOnDevice(photo, { glossary, dictionaryLoader, onP
   drawOverlay(canvas, regions);
   const notices = [];
   if (!regions.length) notices.push('No Hebrew text was found in this photo.');
+  else if (!regions.some((r) => r.drawn) && regions.some((r) => r.maybe)) notices.push('Part of this sign looks hidden or cut off, so nothing was drawn on the photo. Tap a line below to see what it may say.');
   else if (!regions.some((r) => r.drawn)) notices.push('Hebrew was found, but none of it could be translated on this device.');
+  if (regions.some((r) => r.drawn) && regions.some((r) => r.maybe)) notices.push('One line looks partly hidden and was left as it is on the photo. Tap it below to see what it may say.');
   if (levelled.applied && regions.some((r) => r.drawn)) notices.push('The sign was tilted, so the translated photo has been straightened.');
   const blob = regions.some((r) => r.drawn) ? await toBlob(canvas, 'image/jpeg', 0.9) : null;
   return { width: canvas.width, height: canvas.height, regions, blob, notices, engine: eng, levelled, dictionary };

@@ -4,12 +4,12 @@
  "reader": "in-browser reader, mode binary",
  "total": {
   "images": 133,
-  "cerPooled": 0.0577,
+  "cerPooled": 0.0585,
   "lines": 185,
   "linesReadExactly": 137,
   "linesTranslatedEndToEnd": 168,
-  "wrongEnglishDrawn": 2,
-  "meanMs": 284
+  "wrongEnglishDrawn": 1,
+  "meanMs": 619
  },
  "byWear": {
   "dark": {
@@ -19,7 +19,7 @@
    "linesReadExactly": 26,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 288
+   "meanMs": 772
   },
   "bright": {
    "images": 20,
@@ -28,16 +28,16 @@
    "linesReadExactly": 24,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 264
+   "meanMs": 591
   },
   "occlude": {
    "images": 20,
-   "cerPooled": 0.2464,
+   "cerPooled": 0.2512,
    "lines": 28,
    "linesReadExactly": 3,
    "linesTranslatedEndToEnd": 16,
-   "wrongEnglishDrawn": 2,
-   "meanMs": 342
+   "wrongEnglishDrawn": 1,
+   "meanMs": 645
   },
   "tight": {
    "images": 20,
@@ -46,7 +46,7 @@
    "linesReadExactly": 23,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 156
+   "meanMs": 300
   },
   "angle": {
    "images": 20,
@@ -55,7 +55,7 @@
    "linesReadExactly": 26,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 297
+   "meanMs": 654
   },
   "bilingual": {
    "images": 20,
@@ -64,7 +64,7 @@
    "linesReadExactly": 23,
    "linesTranslatedEndToEnd": 27,
    "wrongEnglishDrawn": 0,
-   "meanMs": 303
+   "meanMs": 583
   },
   "nikkud": {
    "images": 13,
@@ -73,7 +73,7 @@
    "linesReadExactly": 12,
    "linesTranslatedEndToEnd": 17,
    "wrongEnglishDrawn": 0,
-   "meanMs": 371
+   "meanMs": 876
   }
  },
  "rows": [
@@ -81,7 +81,7 @@
    "id": "optical-store__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 753,
+   "ms": 5539,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -95,7 +95,7 @@
    "id": "optical-store__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 218,
+   "ms": 1078,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -109,7 +109,7 @@
    "id": "optical-store__occlude",
    "variant": "occlude",
    "cer": 0,
-   "ms": 242,
+   "ms": 911,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -123,7 +123,7 @@
    "id": "optical-store__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 159,
+   "ms": 357,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -137,7 +137,7 @@
    "id": "optical-store__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 279,
+   "ms": 859,
    "levelled": -7.9,
    "read": [
     "חנות אופטיקה"
@@ -151,7 +151,7 @@
    "id": "optical-store__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 347,
+   "ms": 1111,
    "levelled": 0,
    "read": [
     "חנות אופטיקה"
@@ -165,7 +165,7 @@
    "id": "optical-store__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 419,
+   "ms": 3480,
    "levelled": 0,
    "read": [
     "חַנוּת אוּפָטִיקָה"
@@ -179,7 +179,7 @@
    "id": "bakery__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 294,
+   "ms": 1314,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -193,7 +193,7 @@
    "id": "bakery__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 193,
+   "ms": 660,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -207,7 +207,7 @@
    "id": "bakery__occlude",
    "variant": "occlude",
    "cer": 0.1667,
-   "ms": 389,
+   "ms": 1687,
    "levelled": 0,
    "read": [
     "מאפויה"
@@ -221,7 +221,7 @@
    "id": "bakery__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 113,
+   "ms": 925,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -235,7 +235,7 @@
    "id": "bakery__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 243,
+   "ms": 798,
    "levelled": 8,
    "read": [
     "מאפייה"
@@ -249,7 +249,7 @@
    "id": "bakery__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 208,
+   "ms": 482,
    "levelled": 0,
    "read": [
     "מאפייה"
@@ -263,7 +263,7 @@
    "id": "bakery__nikkud",
    "variant": "nikkud",
    "cer": 0.1667,
-   "ms": 420,
+   "ms": 2191,
    "levelled": 0,
    "read": [
     "מַאַָפִּיָה"
@@ -277,7 +277,7 @@
    "id": "pharmacy__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 195,
+   "ms": 365,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -291,7 +291,7 @@
    "id": "pharmacy__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 158,
+   "ms": 430,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -305,7 +305,7 @@
    "id": "pharmacy__occlude",
    "variant": "occlude",
    "cer": 0.125,
-   "ms": 279,
+   "ms": 525,
    "levelled": 0,
    "read": [
     "בית מ יקחת"
@@ -319,7 +319,7 @@
    "id": "pharmacy__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 117,
+   "ms": 202,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -333,7 +333,7 @@
    "id": "pharmacy__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 211,
+   "ms": 515,
    "levelled": 8,
    "read": [
     "בית מרקחת"
@@ -347,7 +347,7 @@
    "id": "pharmacy__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 248,
+   "ms": 681,
    "levelled": 0,
    "read": [
     "בית מרקחת"
@@ -361,7 +361,7 @@
    "id": "pharmacy__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 317,
+   "ms": 358,
    "levelled": 0,
    "read": [
     "בִּית מִרְקֶחַת"
@@ -375,7 +375,7 @@
    "id": "exit__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 430,
+   "ms": 836,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -389,7 +389,7 @@
    "id": "exit__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 426,
+   "ms": 925,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -403,7 +403,7 @@
    "id": "exit__occlude",
    "variant": "occlude",
    "cer": 0.2,
-   "ms": 498,
+   "ms": 579,
    "levelled": 0,
    "read": [
     "יצי ה"
@@ -417,7 +417,7 @@
    "id": "exit__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 97,
+   "ms": 147,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -431,7 +431,7 @@
    "id": "exit__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 421,
+   "ms": 836,
    "levelled": 8,
    "read": [
     "יציאה"
@@ -445,7 +445,7 @@
    "id": "exit__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 277,
+   "ms": 327,
    "levelled": 0,
    "read": [
     "יציאה"
@@ -459,7 +459,7 @@
    "id": "exit__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 429,
+   "ms": 505,
    "levelled": 0,
    "read": [
     "יְצִיאֶה"
@@ -473,7 +473,7 @@
    "id": "closed__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 219,
+   "ms": 282,
    "levelled": 0,
    "read": [
     "סגור"
@@ -487,7 +487,7 @@
    "id": "closed__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 230,
+   "ms": 342,
    "levelled": 0,
    "read": [
     "סגור"
@@ -501,7 +501,7 @@
    "id": "closed__occlude",
    "variant": "occlude",
    "cer": 1,
-   "ms": 381,
+   "ms": 488,
    "levelled": 0,
    "read": [],
    "english": [],
@@ -511,7 +511,7 @@
    "id": "closed__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 67,
+   "ms": 88,
    "levelled": 0,
    "read": [
     "סגור"
@@ -525,7 +525,7 @@
    "id": "closed__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 231,
+   "ms": 488,
    "levelled": -7.7,
    "read": [
     "סגור"
@@ -539,7 +539,7 @@
    "id": "closed__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 191,
+   "ms": 407,
    "levelled": 0,
    "read": [
     "סגור"
@@ -553,7 +553,7 @@
    "id": "closed__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 386,
+   "ms": 715,
    "levelled": 0,
    "read": [
     "סָגוּר"
@@ -567,7 +567,7 @@
    "id": "shoe-shop__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 256,
+   "ms": 515,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -581,7 +581,7 @@
    "id": "shoe-shop__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 196,
+   "ms": 323,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -595,23 +595,21 @@
    "id": "shoe-shop__occlude",
    "variant": "occlude",
    "cer": 0.6,
-   "ms": 195,
+   "ms": 304,
    "levelled": 0,
    "read": [
     "חנות :2"
    ],
    "english": [
-    "Store"
+    null
    ],
-   "wrong": [
-    "חנות :2 -> Store (word-list)"
-   ]
+   "wrong": []
   },
   {
    "id": "shoe-shop__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 170,
+   "ms": 310,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -625,7 +623,7 @@
    "id": "shoe-shop__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 190,
+   "ms": 687,
    "levelled": -7.9,
    "read": [
     "חנות נעליים"
@@ -639,7 +637,7 @@
    "id": "shoe-shop__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 322,
+   "ms": 1047,
    "levelled": 0,
    "read": [
     "חנות נעליים"
@@ -653,7 +651,7 @@
    "id": "new-price__dark",
    "variant": "dark",
    "cer": 0.1429,
-   "ms": 280,
+   "ms": 454,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -667,7 +665,7 @@
    "id": "new-price__bright",
    "variant": "bright",
    "cer": 0.1429,
-   "ms": 293,
+   "ms": 1477,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -681,7 +679,7 @@
    "id": "new-price__occlude",
    "variant": "occlude",
    "cer": 0.2857,
-   "ms": 286,
+   "ms": 881,
    "levelled": 0,
    "read": [
     "מחירו דשו"
@@ -695,7 +693,7 @@
    "id": "new-price__tight",
    "variant": "tight",
    "cer": 0.1429,
-   "ms": 149,
+   "ms": 427,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -709,7 +707,7 @@
    "id": "new-price__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 292,
+   "ms": 708,
    "levelled": -8,
    "read": [
     "מחיר חדש"
@@ -723,7 +721,7 @@
    "id": "new-price__bilingual",
    "variant": "bilingual",
    "cer": 0.1429,
-   "ms": 292,
+   "ms": 461,
    "levelled": 0,
    "read": [
     "מחיר חדשו"
@@ -737,7 +735,7 @@
    "id": "no-entry__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 216,
+   "ms": 298,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -751,7 +749,7 @@
    "id": "no-entry__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 226,
+   "ms": 420,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -765,7 +763,7 @@
    "id": "no-entry__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 190,
+   "ms": 287,
    "levelled": 0,
    "read": [
     "אי בניסה"
@@ -779,7 +777,7 @@
    "id": "no-entry__tight",
    "variant": "tight",
    "cer": 0.125,
-   "ms": 111,
+   "ms": 169,
    "levelled": 0,
    "read": [
     "אין בניסה"
@@ -793,7 +791,7 @@
    "id": "no-entry__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 338,
+   "ms": 439,
    "levelled": 8,
    "read": [
     "אין כניסה"
@@ -807,7 +805,7 @@
    "id": "no-entry__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 302,
+   "ms": 387,
    "levelled": 0,
    "read": [
     "אין כניסה"
@@ -821,7 +819,7 @@
    "id": "no-entry__nikkud",
    "variant": "nikkud",
    "cer": 0.25,
-   "ms": 314,
+   "ms": 530,
    "levelled": 0,
    "read": [
     "אִיך בְּנִיסָה"
@@ -835,7 +833,7 @@
    "id": "restrooms__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 185,
+   "ms": 373,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -849,7 +847,7 @@
    "id": "restrooms__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 207,
+   "ms": 418,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -863,7 +861,7 @@
    "id": "restrooms__occlude",
    "variant": "occlude",
    "cer": 0.4286,
-   "ms": 329,
+   "ms": 698,
    "levelled": 0,
    "read": [
     "וותים"
@@ -877,7 +875,7 @@
    "id": "restrooms__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 113,
+   "ms": 142,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -891,7 +889,7 @@
    "id": "restrooms__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 211,
+   "ms": 389,
    "levelled": -7.9,
    "read": [
     "שירותים"
@@ -905,7 +903,7 @@
    "id": "restrooms__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 194,
+   "ms": 358,
    "levelled": 0,
    "read": [
     "שירותים"
@@ -919,7 +917,7 @@
    "id": "restrooms__nikkud",
    "variant": "nikkud",
    "cer": 0.1429,
-   "ms": 336,
+   "ms": 617,
    "levelled": 0,
    "read": [
     "שרוּתים"
@@ -933,7 +931,7 @@
    "id": "herzl-street__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 255,
+   "ms": 453,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -947,7 +945,7 @@
    "id": "herzl-street__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 180,
+   "ms": 491,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -961,7 +959,7 @@
    "id": "herzl-street__occlude",
    "variant": "occlude",
    "cer": 0.125,
-   "ms": 175,
+   "ms": 184,
    "levelled": 0,
    "read": [
     "רח ב הרצל"
@@ -975,7 +973,7 @@
    "id": "herzl-street__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 130,
+   "ms": 352,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -989,7 +987,7 @@
    "id": "herzl-street__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 226,
+   "ms": 452,
    "levelled": -7.9,
    "read": [
     "רחוב הרצל"
@@ -1003,7 +1001,7 @@
    "id": "herzl-street__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 109,
+   "ms": 334,
    "levelled": 0,
    "read": [
     "רחוב הרצל"
@@ -1017,7 +1015,7 @@
    "id": "ben-yehuda-blvd__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 199,
+   "ms": 221,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -1031,7 +1029,7 @@
    "id": "ben-yehuda-blvd__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 170,
+   "ms": 337,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -1045,7 +1043,7 @@
    "id": "ben-yehuda-blvd__occlude",
    "variant": "occlude",
    "cer": 0.1667,
-   "ms": 313,
+   "ms": 1084,
    "levelled": 0,
    "read": [
     "שדרות 1 יהודה"
@@ -1059,7 +1057,7 @@
    "id": "ben-yehuda-blvd__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 101,
+   "ms": 418,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -1073,7 +1071,7 @@
    "id": "ben-yehuda-blvd__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 293,
+   "ms": 732,
    "levelled": 8,
    "read": [
     "שדרות בן יהודה"
@@ -1087,7 +1085,7 @@
    "id": "ben-yehuda-blvd__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 254,
+   "ms": 475,
    "levelled": 0,
    "read": [
     "שדרות בן יהודה"
@@ -1101,7 +1099,7 @@
    "id": "dizengoff-square__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 234,
+   "ms": 591,
    "levelled": 0,
    "read": [
     "כיכר דיזנגוף"
@@ -1115,7 +1113,7 @@
    "id": "dizengoff-square__bright",
    "variant": "bright",
    "cer": 0.1818,
-   "ms": 337,
+   "ms": 939,
    "levelled": 0,
    "read": [
     "ביבר דיזנגוף"
@@ -1129,7 +1127,7 @@
    "id": "dizengoff-square__occlude",
    "variant": "occlude",
    "cer": 0.1818,
-   "ms": 388,
+   "ms": 725,
    "levelled": 0,
    "read": [
     "ביו ר דיזנגוף"
@@ -1143,7 +1141,7 @@
    "id": "dizengoff-square__tight",
    "variant": "tight",
    "cer": 0.1818,
-   "ms": 159,
+   "ms": 249,
    "levelled": 0,
    "read": [
     "ביבר דיזנגוף"
@@ -1157,7 +1155,7 @@
    "id": "dizengoff-square__angle",
    "variant": "angle",
    "cer": 0.1818,
-   "ms": 310,
+   "ms": 1159,
    "levelled": 8,
    "read": [
     "ביבר דיזנגוף"
@@ -1171,7 +1169,7 @@
    "id": "dizengoff-square__bilingual",
    "variant": "bilingual",
    "cer": 0.0909,
-   "ms": 215,
+   "ms": 539,
    "levelled": 0,
    "read": [
     "ביכר דיזנגוף"
@@ -1185,7 +1183,7 @@
    "id": "bus-stop__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 259,
+   "ms": 322,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1199,7 +1197,7 @@
    "id": "bus-stop__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 257,
+   "ms": 528,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1213,7 +1211,7 @@
    "id": "bus-stop__occlude",
    "variant": "occlude",
    "cer": 0.1818,
-   "ms": 308,
+   "ms": 686,
    "levelled": 0,
    "read": [
     "תחנ וטובוס"
@@ -1227,7 +1225,7 @@
    "id": "bus-stop__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 188,
+   "ms": 314,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1241,7 +1239,7 @@
    "id": "bus-stop__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 245,
+   "ms": 499,
    "levelled": 8,
    "read": [
     "תחנת אוטובוס"
@@ -1255,7 +1253,7 @@
    "id": "bus-stop__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 197,
+   "ms": 377,
    "levelled": 0,
    "read": [
     "תחנת אוטובוס"
@@ -1269,7 +1267,7 @@
    "id": "bus-stop__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 252,
+   "ms": 466,
    "levelled": 0,
    "read": [
     "תחִנת אוטובּוס"
@@ -1283,7 +1281,7 @@
    "id": "synagogue__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 189,
+   "ms": 384,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1297,7 +1295,7 @@
    "id": "synagogue__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 187,
+   "ms": 251,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1311,7 +1309,7 @@
    "id": "synagogue__occlude",
    "variant": "occlude",
    "cer": 0.4286,
-   "ms": 388,
+   "ms": 489,
    "levelled": 0,
    "read": [
     "| כנסת"
@@ -1325,7 +1323,7 @@
    "id": "synagogue__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 170,
+   "ms": 245,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1339,7 +1337,7 @@
    "id": "synagogue__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 260,
+   "ms": 837,
    "levelled": 8.1,
    "read": [
     "בית כנסת"
@@ -1353,7 +1351,7 @@
    "id": "synagogue__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 300,
+   "ms": 709,
    "levelled": 0,
    "read": [
     "בית כנסת"
@@ -1367,7 +1365,7 @@
    "id": "synagogue__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 351,
+   "ms": 580,
    "levelled": 0,
    "read": [
     "בִּית כְנָסֶת"
@@ -1381,7 +1379,7 @@
    "id": "menu-drinks__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 288,
+   "ms": 595,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1399,7 +1397,7 @@
    "id": "menu-drinks__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 296,
+   "ms": 480,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1417,7 +1415,7 @@
    "id": "menu-drinks__occlude",
    "variant": "occlude",
    "cer": 0.5714,
-   "ms": 288,
+   "ms": 438,
    "levelled": 0,
    "read": [
     "ריט",
@@ -1433,7 +1431,7 @@
    "id": "menu-drinks__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 154,
+   "ms": 293,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1451,7 +1449,7 @@
    "id": "menu-drinks__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 508,
+   "ms": 1359,
    "levelled": -7.6,
    "read": [
     "תפריט",
@@ -1469,7 +1467,7 @@
    "id": "menu-drinks__bilingual",
    "variant": "bilingual",
    "cer": 0.1429,
-   "ms": 444,
+   "ms": 739,
    "levelled": 0,
    "read": [
     "תפריט",
@@ -1487,7 +1485,7 @@
    "id": "menu-food__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 335,
+   "ms": 609,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1505,7 +1503,7 @@
    "id": "menu-food__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 330,
+   "ms": 871,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1522,28 +1520,28 @@
   {
    "id": "menu-food__occlude",
    "variant": "occlude",
-   "cer": 0.1053,
-   "ms": 621,
+   "cer": 0.1579,
+   "ms": 1034,
    "levelled": 0,
    "read": [
-    "חומ!ו +18",
+    "חומו 181",
     "פלא יל 22",
     "סלט 25"
    ],
    "english": [
-    "Hummus",
+    "Hummus 181",
     "Falafel 22",
     "Salad 25"
    ],
    "wrong": [
-    "חומ!ו +18 -> Hummus (word-list-near)"
+    "חומו 181 -> Hummus 181 (word-list-near)"
    ]
   },
   {
    "id": "menu-food__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 241,
+   "ms": 266,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1561,7 +1559,7 @@
    "id": "menu-food__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 418,
+   "ms": 894,
    "levelled": 8,
    "read": [
     "חומוס 18",
@@ -1579,7 +1577,7 @@
    "id": "menu-food__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 674,
+   "ms": 1546,
    "levelled": 0,
    "read": [
     "חומוס 18",
@@ -1597,7 +1595,7 @@
    "id": "menu-courses__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 276,
+   "ms": 1197,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1615,7 +1613,7 @@
    "id": "menu-courses__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 334,
+   "ms": 535,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1633,7 +1631,7 @@
    "id": "menu-courses__occlude",
    "variant": "occlude",
    "cer": 0.1053,
-   "ms": 523,
+   "ms": 579,
    "levelled": 0,
    "read": [
     "מנה ראטונה",
@@ -1651,7 +1649,7 @@
    "id": "menu-courses__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 194,
+   "ms": 210,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1669,7 +1667,7 @@
    "id": "menu-courses__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 323,
+   "ms": 434,
    "levelled": 8.1,
    "read": [
     "מנה ראשונה",
@@ -1687,7 +1685,7 @@
    "id": "menu-courses__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 486,
+   "ms": 503,
    "levelled": 0,
    "read": [
     "מנה ראשונה",
@@ -1705,7 +1703,7 @@
    "id": "menu-courses__nikkud",
    "variant": "nikkud",
    "cer": 0.0526,
-   "ms": 424,
+   "ms": 438,
    "levelled": 0,
    "read": [
     "מנָה ראשונה",
@@ -1723,7 +1721,7 @@
    "id": "kosher-restaurant__dark",
    "variant": "dark",
    "cer": 0.05,
-   "ms": 408,
+   "ms": 465,
    "levelled": 0,
    "read": [
     "מסעדה כשרה",
@@ -1739,7 +1737,7 @@
    "id": "kosher-restaurant__bright",
    "variant": "bright",
    "cer": 0.1,
-   "ms": 454,
+   "ms": 643,
    "levelled": 0,
    "read": [
     "מסעדה כבשרה",
@@ -1755,7 +1753,7 @@
    "id": "kosher-restaurant__occlude",
    "variant": "occlude",
    "cer": 0.1,
-   "ms": 374,
+   "ms": 398,
    "levelled": 0,
    "read": [
     "מסי דה כשרה",
@@ -1771,7 +1769,7 @@
    "id": "kosher-restaurant__tight",
    "variant": "tight",
    "cer": 0.1,
-   "ms": 310,
+   "ms": 377,
    "levelled": 0,
    "read": [
     "מסעדה בשרה",
@@ -1787,7 +1785,7 @@
    "id": "kosher-restaurant__angle",
    "variant": "angle",
    "cer": 0.05,
-   "ms": 421,
+   "ms": 452,
    "levelled": 8.1,
    "read": [
     "מסעדה כשרה",
@@ -1803,7 +1801,7 @@
    "id": "kosher-restaurant__bilingual",
    "variant": "bilingual",
    "cer": 0.1,
-   "ms": 305,
+   "ms": 318,
    "levelled": 0,
    "read": [
     "מסעדה בשרה",
@@ -1819,7 +1817,7 @@
    "id": "kosher-restaurant__nikkud",
    "variant": "nikkud",
    "cer": 0.05,
-   "ms": 454,
+   "ms": 521,
    "levelled": 0,
    "read": [
     "מִסְעָדָה בְּשָרֶה",
@@ -1835,7 +1833,7 @@
    "id": "no-smoking__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 202,
+   "ms": 275,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1849,7 +1847,7 @@
    "id": "no-smoking__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 307,
+   "ms": 314,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1863,7 +1861,7 @@
    "id": "no-smoking__occlude",
    "variant": "occlude",
    "cer": 0.5,
-   "ms": 199,
+   "ms": 197,
    "levelled": 0,
    "read": [
     "אסור -"
@@ -1877,7 +1875,7 @@
    "id": "no-smoking__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 214,
+   "ms": 208,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1891,7 +1889,7 @@
    "id": "no-smoking__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 191,
+   "ms": 212,
    "levelled": 8,
    "read": [
     "אסור לעשן"
@@ -1905,7 +1903,7 @@
    "id": "no-smoking__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 242,
+   "ms": 299,
    "levelled": 0,
    "read": [
     "אסור לעשן"
@@ -1919,7 +1917,7 @@
    "id": "no-smoking__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 299,
+   "ms": 382,
    "levelled": 0,
    "read": [
     "אִסוּר לְעשַן"
@@ -1933,7 +1931,7 @@
    "id": "caution-stairs__dark",
    "variant": "dark",
    "cer": 0,
-   "ms": 291,
+   "ms": 356,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1949,7 +1947,7 @@
    "id": "caution-stairs__bright",
    "variant": "bright",
    "cer": 0,
-   "ms": 289,
+   "ms": 349,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1965,7 +1963,7 @@
    "id": "caution-stairs__occlude",
    "variant": "occlude",
    "cer": 0.25,
-   "ms": 480,
+   "ms": 721,
    "levelled": 0,
    "read": [
     "זהזרות",
@@ -1981,7 +1979,7 @@
    "id": "caution-stairs__tight",
    "variant": "tight",
    "cer": 0,
-   "ms": 161,
+   "ms": 295,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -1997,7 +1995,7 @@
    "id": "caution-stairs__angle",
    "variant": "angle",
    "cer": 0,
-   "ms": 320,
+   "ms": 335,
    "levelled": 7.8,
    "read": [
     "זהירות",
@@ -2013,7 +2011,7 @@
    "id": "caution-stairs__bilingual",
    "variant": "bilingual",
    "cer": 0,
-   "ms": 455,
+   "ms": 553,
    "levelled": 0,
    "read": [
     "זהירות",
@@ -2029,7 +2027,7 @@
    "id": "caution-stairs__nikkud",
    "variant": "nikkud",
    "cer": 0,
-   "ms": 421,
+   "ms": 599,
    "levelled": 0,
    "read": [
     "זְהִירוּת",

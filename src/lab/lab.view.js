@@ -443,6 +443,25 @@ function drill(root, ctx, id) {
       prompt, trialBar, board, feedback, figure);
     wrap.replaceChildren(back, playEl);
     applyMat(id, { board, root: wrap });
+    // Keyboard, switch and screen-reader play: a new round replaces the board, which takes away the button that had focus,
+    // and focus would fall back to the page. While the player is on the board, it moves to the new round's first choice
+    // instead, so Tab and Enter keep their place. Nothing moves when focus is elsewhere (the back link, the settings).
+    let onBoard = false;
+    board.addEventListener('focusin', () => { onBoard = true; });
+    playEl.addEventListener('focusin', (e) => { if (!board.contains(e.target)) onBoard = false; });
+    // A tapped tile that becomes disabled (Count Up, Root Forge, Word Burst) loses focus too: the next free choice takes it.
+    const keepPlace = new MutationObserver(() => {
+      const a = document.activeElement;
+      if (!onBoard || !alive) return;
+      const lost = !a || a === document.body || !a.isConnected || (board.contains(a) && a.disabled);
+      if (!lost) return; // still on a live choice, or the player moved on to something outside the board
+      board.querySelector('button:not([disabled])')?.focus({ preventScroll: true });
+    });
+    keepPlace.observe(board, { childList: true, subtree: true, attributes: true, attributeFilter: ['disabled'] });
+    // Once a round is decided its tiles stay on screen for a moment (the right one shown, the feedback said), but a second
+    // tap or key press must not run the round's handler again. Taps on the board are ignored until the next round starts.
+    let decided = false;
+    board.addEventListener('click', (e) => { if (decided) { e.stopPropagation(); e.preventDefault(); } }, true);
     // 3D scene (tilt, light, depth, particles) for studio games; absent or failed, the game plays the same in flat 2D.
     const fx = isStudio(id) ? await loadFx().then((mod) => mod?.createScene?.(playEl, board, { reduceMotion: !!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches || noClock() }) || null).catch(() => null) : null;
     const rnd = seeded(`${id}:${Date.now()}`);
@@ -500,7 +519,9 @@ function drill(root, ctx, id) {
       trialBar.hidden = true; keyHandler = null;
       const level = ladder.level;
       feedback.textContent = '';
+      decided = false; board.classList.remove('is-decided');
       const r = await impl.trial(env, level);
+      decided = true; board.classList.add('is-decided');
       endRound();
       if (over || !alive) return;
       keyHandler = null;
@@ -528,7 +549,9 @@ function drill(root, ctx, id) {
         runEl.textContent = run >= 3 ? `${run} in a row` : ''; runEl.classList.toggle('is-on', run >= 3);
       }
       try { sfx.play(r.ok ? (ladder.level > before || (isStudio(id) && run >= 3 && run % 5 === 0) ? 'streak' : 'success') : 'error_soft'); } catch { /* sound is optional */ }
-      if (r.ok) feedback.textContent = ladder.level > before ? `Level ${ladder.level}!` : bonus ? `+${pts}, combo ×${run}` : `+${pts}`;
+      // Say right or wrong in words, not only by colour and sound: the feedback line is a polite live region.
+      if (r.ok) feedback.textContent = ladder.level > before ? `Right. Level ${ladder.level}!` : bonus ? `Right. +${pts}, combo ×${run}` : `Right. +${pts}`;
+      else if (!/^(Not quite|Out of time)/.test(feedback.textContent)) feedback.textContent = `Not quite. ${feedback.textContent}`.trim();
       if (r.ok && ladder.level > before && ladder.level % 2 === 0) rimon('bounce', 'levelup', id);
       if (calm && trials.length >= CALM_ROUNDS) { over = true; finish(); return; }
       later(next, r.ok ? 380 : 1100);
@@ -566,7 +589,12 @@ function drill(root, ctx, id) {
     const again = h('button', { type: 'button', class: 'btn secondary', onclick: () => intro() }, 'Play again');
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
-    wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
+    // Focus lands on the next step, so a screen reader would hear only its name: it also hears how the game went.
+    const best = isBest && sum.score > 0 ? (prevGame ? ' A new best score.' : ' Your first score in this game.') : '';
+    const spoken = h('p', { id: 'lab-result-said', class: 'visually-hidden' },
+      `${game.title}: ${stars} of 3 stars, ${sum.score} points, ${sum.correct} of ${sum.trials} right.${best}`);
+    primary.setAttribute('aria-describedby', 'lab-result-said');
+    wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' }, spoken,
       winSlot,
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),

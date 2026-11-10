@@ -109,3 +109,36 @@ test('browser: a finished Brain Lab game with a star counts toward the daily goa
     assert.deepEqual(errors, []);
   });
 });
+
+test('browser: keyboard play keeps its place every round, says right or wrong in words, and ends on a link that says how it went', { skip, timeout: 600000 }, async () => {
+  await withLab({ untimed: true }, async (ctx, base) => {
+    // One game per board style: one answer a round, several taps a round (tiles disabled as they are used), a memory phase.
+    for (const id of ['middle', 'countup', 'rootforge', 'cafe', 'letterspan', 'wordburst']) {
+      const page = await ctx.newPage(); const errors = [];
+      page.on('pageerror', (e) => errors.push(String(e)));
+      await page.goto(base + `#/lab/${id}`, { waitUntil: 'load' });
+      await page.waitForSelector('.lab-intro .lab-go', { timeout: 30000 });
+      await page.focus('.lab-intro .lab-go'); await page.keyboard.press('Enter');
+      await page.waitForSelector('.lab-board button:not([disabled])', { timeout: 20000 });
+      await page.focus('.lab-board button:not([disabled])');
+      const said = new Set(); let presses = 0;
+      const until = Date.now() + 120000;
+      while (Date.now() < until && !(await page.$('.lab-results'))) {
+        await page.keyboard.press('Enter'); presses++;
+        await page.waitForTimeout(150);
+        const fb = await page.locator('.lab-feedback').innerText().catch(() => '');
+        if (/^Right\./.test(fb)) said.add('right'); if (/^(Not quite|Out of time)/.test(fb)) said.add('wrong');
+        // Focus comes back to a live choice (after any memory phase), or the game is over.
+        const back = await page.waitForFunction(() => !!document.querySelector('.lab-results')
+          || (!!document.activeElement?.closest('.lab-board') && !document.activeElement.disabled && !document.querySelector('.lab-board.is-decided')), null, { timeout: 15000 }).then(() => true, () => false);
+        assert.ok(back, `${id}: focus is on a choice after press ${presses}`);
+      }
+      assert.ok(await page.$('.lab-results'), `${id}: reached the results card by keyboard`);
+      assert.ok(said.size >= 1, `${id}: right or wrong was said in words`);
+      const summary = await page.evaluate(() => { const a = document.activeElement; const d = a?.getAttribute('aria-describedby'); return d ? document.getElementById(d)?.textContent : null; });
+      assert.match(summary || '', /^.+: [0-3] of 3 stars, \d+ points, \d+ of \d+ right\./, `${id}: the focused link says how it went`);
+      assert.deepEqual(errors, [], id);
+      await page.close();
+    }
+  });
+});

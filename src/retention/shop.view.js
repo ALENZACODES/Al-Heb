@@ -31,7 +31,7 @@ export function mount(root, ctx) {
   let sig = '';
   function draw() {
     const rec = R.get(), st = R.status(), bal = rec.gems.balance, offer = repairOffer(rec), calm = R.calm();
-    const next = JSON.stringify([st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
+    const next = JSON.stringify([rec.xp.total, rec.lessonsFinished, st.best, st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
     if (next === sig) return; // unchanged: leave the page (and the focus) alone
     sig = next;
     const focusKey = body.contains(document.activeElement) ? document.activeElement.getAttribute('data-k') : null;
@@ -59,6 +59,9 @@ export function mount(root, ctx) {
       h('section', { class: 'card' }, h('h2', {}, 'Recent'), rec.gems.ledger.length
         ? h('ul', { class: 'ret-ledger' }, ...rec.gems.ledger.slice(-10).reverse().map((e) => h('li', {}, `${e.d > 0 ? '+' : ''}${e.d} ${whyLabel(e.why)}, ${DAY[new Date(e.at).getDay()]}`)))
         : h('p', { class: 'muted' }, 'Nothing yet. Finish a lesson to earn your first gems.')),
+      h('section', { class: 'card ret-numbers' }, h('h2', {}, 'Your Numbers'),
+        h('dl', {}, ...[['Total XP', rec.xp.total], ['Lessons finished', rec.lessonsFinished], ['Best streak', `${st.best} day${st.best === 1 ? '' : 's'}`], ['Streak freezes used', rec.freezes.used.length]]
+          .flatMap(([k, v]) => [h('dt', {}, k), h('dd', {}, String(v))]))),
       h('details', { class: 'card ret-how' }, h('summary', {}, 'How It All Works'),
         h('ul', {},
           h('li', {}, 'XP: 10 for a lesson, a little more for a sharp one or a run of right answers, 1 for each old card you review. XP is never taken away.'),

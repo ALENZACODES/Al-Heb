@@ -149,6 +149,25 @@ export function questsNode(R) {
   return wrap;
 }
 
+// ---------- the month's challenge (Home) ----------
+export function monthNode(R) {
+  const wrap = h('section', { class: 'card ret-month alef-retention', 'aria-labelledby': 'ret-month-h' });
+  let sig = '';
+  const draw = () => {
+    const v = R.monthView(), next = JSON.stringify(v);
+    if (next === sig) return; sig = next;
+    wrap.hidden = !v.on;
+    const pct = Math.round(v.fraction * 100);
+    setKids(wrap, h('h2', { id: 'ret-month-h' }, v.title, v.he ? ' ' : null, v.he ? h('span', { lang: 'he', dir: 'rtl', class: 'he' }, v.he) : null),
+      h('div', { class: 'ret-month-bar', role: 'progressbar', 'aria-label': v.title, 'aria-valuemin': '0', 'aria-valuemax': String(v.target), 'aria-valuenow': String(v.xp), 'aria-valuetext': `${v.xp} of ${v.target} XP` }, h('span', { style: `--w:${pct}` })),
+      h('p', {}, v.done ? `Done: ${v.target} XP this month. +${gemsText(50)}.` : `${v.xp} of ${v.target} XP. ${v.daysLeft === 0 ? 'Last day of the month.' : `${v.daysLeft} day${v.daysLeft === 1 ? '' : 's'} left.`}`));
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on);
+  draw();
+  return wrap;
+}
+
 // ---------- out of hearts ----------
 const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
 /** The block shown instead of "Next lesson" when hearts are gone, and as the gate on a new lesson. */
@@ -184,7 +203,7 @@ export function routeShown(R, g = globalThis, gate = false) {
     const head = main.querySelector('.stack > header') || main.querySelector('header');
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
-    ring.after(questsNode(R));
+    const quests = questsNode(R); ring.after(quests); quests.after(monthNode(R));
     const back = comebackNode(R); ring.before(back);
     const recap = recapNode(R); if (recap) ring.before(recap); // welcome first, then last week, then today's goal
     // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.
@@ -257,6 +276,7 @@ export function showReward(R, out, g = globalThis) {
     if (out.streak.grew) lines.push(out.streak.milestone ? `${out.streak.count}-day streak! A milestone.` : `${out.streak.count}-day streak!`);
     for (const q of out.quests || []) lines.push(`Quest done: ${q}`);
     if (out.chest) lines.push('All three quests done!');
+    if (out.month) lines.push(`${out.month} complete!`);
     if (out.gems) lines.push(`+${gemsText(out.gems)}`);
     if (out.league) lines.push(`Practice league: number ${out.league.rank} of 30 in ${out.league.tier}.${out.league.toPromote ? ` ${out.league.toPromote} XP to the move-up line.` : ' You are above the move-up line.'}`);
     const sentence = `Lesson finished. ${out.xp} XP.${out.goalCrossed ? ' Daily goal reached.' : ''}${out.streak.grew ? ` ${out.streak.count}-day streak.` : ''}${out.gems ? ` ${gemsText(out.gems)} earned.` : ''}`;

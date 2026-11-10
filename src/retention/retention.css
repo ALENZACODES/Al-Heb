@@ -108,6 +108,14 @@
 .ret-how li { margin-block: .35rem; }
 .ret-shop-status:focus { outline: none; }
 
+.ret-month[hidden] { display: none; }
+.ret-month h2, .ret-numbers h2 { margin: 0 0 .4rem; font-size: 1.1rem; }
+.ret-month p { margin: .4rem 0 0; }
+.ret-month-bar { block-size: .8rem; border-radius: 999px; background: var(--border); overflow: hidden; }
+.ret-month-bar span { display: block; block-size: 100%; inline-size: calc(var(--w) * 1%); background: #c9a227; border-radius: 999px; }
+.ret-numbers dl { display: grid; grid-template-columns: 1fr auto; gap: .3rem 1rem; margin: 0; }
+.ret-numbers dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; text-align: end; }
+
 @media (prefers-reduced-motion: reduce) {
   .alef-retention, .alef-retention * { animation: none !important; transition: none !important; }
   .ret-confetti { display: none; }

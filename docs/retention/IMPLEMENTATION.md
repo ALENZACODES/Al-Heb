@@ -42,6 +42,7 @@ New code, all under `src/retention/` and all loaded on demand (none of it is in 
 | `notify.js`, `messages.js`, `quiet.js` | Timing, tone ladder, message pick, in-page scheduler, plan file for the service worker, quiet hours |
 | `rimon.js` | `showRimon(situation)`: sends the app's `alef:rimon` event using the twelve drawn actions only |
 | `recap.js` | Weekly recap and welcome back: `lastWeek`, `recapDue`, `welcomeBack` |
+| `month.js` | The Hebrew-month challenge: `monthOf`, `monthProgress`, `monthView` |
 | `quests.js` | Daily quests: `dailyQuests`, `questProgress`, `questView` |
 | `boot.js` | Controller: listens for lesson, review and game events, rolls the day over, arms reminders |
 | `ui.js`, `dom.js`, `retention.css` | Top bar, goal ring, reward panel, out-of-hearts block |
@@ -168,6 +169,11 @@ The app's 25 badges (`src/awards/`) already include the streak medallions, and t
 - **Owner switch for repairs.** `STREAK.repairCountsToday` in `streak.js` (off). Turn it on and buying a repair also counts today, so the streak cannot break again that night; the shop's line changes to match.
 - The three cases that had only been checked by hand (goal picker focus, a finished lesson staying open at zero hearts, a new lesson gated) are now a browser test. Only the axe scan is still run by hand.
 - Measured in Chrome on this machine: the retention code is 18 files, about 135 KB unminified, fetched after first paint; every button and link on Home, Shop and League is at least 44 px and has a name.
+
+## Added in the Ninth Pass
+
+- **The month's challenge.** One longer goal that runs with the Hebrew month, Rosh Chodesh to Rosh Chodesh, and is named after it ("Kislev Challenge"). The target is the learner's daily goal on 15 days of the month (300 XP at 20 a day), fixed when the month is first seen and smaller for a late start. Reaching it pays 50 gems once. Opens after 5 lessons; never in calm mode. Month names and dates come from the app's own calendar, so no new Hebrew was written. Code: `month.js`; numbers in `MONTH`.
+- **"Your Numbers"** on the Shop: total XP, lessons finished, best streak, freezes used.
 
 ## Hebrew
 

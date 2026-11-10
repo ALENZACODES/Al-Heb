@@ -370,6 +370,8 @@ self.ALEF_PRECACHE = [
  "data/timedread/gates.json"
 ];
 self.ALEF_ON_DEMAND = [
+ "src/ask/ask.view.js",
+ "src/ask/model.js",
  "src/audio/sting.js",
  "src/audio/synth-music.js",
  "src/awards/certificate.js",

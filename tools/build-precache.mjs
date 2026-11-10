@@ -10,7 +10,7 @@ const repoRoot = join(fileURLToPath(new URL('.', import.meta.url)), '..');
 const INCLUDE_DIRS = ['src', 'assets', 'data'];
 // Files bigger than this are runtime-cached (or not cached) instead of installed up front, so first install stays small.
 export const MAX_FILE_BYTES = 2 * 1024 * 1024;
-const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
+const SKIP = (rel) => (rel.startsWith('assets/img/') && !rel.startsWith('assets/img/rimon/web/')) || rel.startsWith('assets/images/') || rel.startsWith('data/images/sheets/') || rel.startsWith('assets/vendor/') /* OCR engine + language data: opt-in, runtime-cached */
   || rel.startsWith('assets/workbook/') /* printable PDFs (several MB): downloaded on demand */ || /\.pdf$/i.test(rel)
   || rel.startsWith('data/vocab/packs/') /* ~150 pack files: fetched when a pack is opened, then cached at runtime */ /* big, runtime-cached */ || rel.split('/').some((p) => p.startsWith('_') || p === 'node_modules')
   || rel.endsWith('.py') || rel.endsWith('.md') || (rel.startsWith('src/') && rel.endsWith('.mjs')) /* node build/dev scripts that live under src/ (data builders, tier splitter): run by hand, never loaded by the app */
@@ -38,6 +38,8 @@ const KEEP_DATA = new Set(['data/pronunciation/consonants.json', 'data/pronuncia
 const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'data/nikkudfade/', 'data/gender/', 'data/pronunciation/', 'data/speak/', 'data/israel/', 'data/calendar/', 'data/festivals/', 'data/torahread/', 'data/corpus/torah/', 'data/typing/',
   'data/traditions/', 'data/trope-trainer/', 'data/listen/', 'data/grammar/', 'data/wordtrace/', 'data/corpus/reader/', 'data/corpus/trope/', 'data/curriculum/lessons-intermediate/',
   'assets/screens/', 'assets/screenshots/', 'assets/letters/morph/',
+  // Light WebP copies of Rimon's animated sheets and still sprite (originals stay as PNG under assets/img/rimon/ and are not listed).
+  'assets/img/rimon/web/',
   // Large image sets: runtime-cached on first view (and listed for "Download everything"), never installed up front (fix #4 / R39).
   'assets/game-art/', 'assets/letter-cartoons/', 'assets/books/', 'assets/speak-hold/', 'assets/speak-candidates/',
   // Lazy preview-route code + book content + image indexes: fetched on first view, runtime-cached (fix #4; #8 groups).
@@ -56,7 +58,12 @@ const ON_DEMAND_PREFIXES = ['data/vocab/', 'data/roots/', 'data/knownwords/', 'd
   'src/library/', 'data/library/',
   // Letter videos (about 70 KB each) and their list: streamed when watched, runtime-cached.
   'assets/videos/', 'data/videos/'];
-const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
+const ON_DEMAND_FILES = new Set([
+  // Rimon's stills (src/app.js imports the stage after boot; it shows nothing until the pictures exist, and the pictures are fetched on demand too),
+  // and two older Rimon modules no screen imports (kept for reference and their tests).
+  'src/shell/rimon-stage.js', 'src/shell/rimon-triggers.js', 'src/shell/rimon-stills.generated.js', 'assets/css/rimon-stills.css',
+  'src/shell/rimon-model.js', 'src/shell/mascot.js',
+  'data/audio/manifest.json', 'data/audio/manifest-kind-word.json', 'data/audio/manifest-torah.json', 'data/audio/manifest-torah-he.json', 'src/shell/torah-he-index.js', 'data/curriculum/intermediate-index.json', 'data/curriculum/intermediate-image-slots.json', 'data/curriculum/class-track.json',
   // Non-v0 data (the integration test's must-install list is the v0 offline contract; these are fetched on first use, then runtime-cached).
   'data/audio/english-glosses.json',
   // Word Finder bank (51 KB): preview-game data, fetched when the game first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB).
@@ -86,8 +93,19 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/audio/synth-music.js',
   // Songs page and the celebration sting: loaded on first open / first lesson finished with music on, then runtime-cached.
   'src/listen/songs.view.js', 'src/audio/sting.js',
+  // Optional 'Sound like a local' view (18 KB): loaded when #/israel first opens, runtime-cached.
+  // Restores 0.05 MiB of first-install headroom after the Brain Lab warm-up landed on a tighter main.
+  'src/israel/israel.view.js',
+  // Calendar view (30 KB): loaded when #/calendar first opens, runtime-cached. Keeps first-install headroom for the overnight feedback layer.
+  'src/curriculum/calendar.view.js',
+  // Privacy screen (26 KB): loaded on first open, runtime-cached; offline group od-preview-pages.
+  'src/shell/privacy.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
+  // Preview-route view code only (their models and data stay as they were): the word builder (#/firstwin, its data was already on demand),
+  // Sound like a local (#/israel) and Common phrases (#/phrases). Fetched on first open and runtime-cached; moved here when the
+  // first-minute pass added the design tokens, the polish layer, the header stat bar and Rimon in the page (keeps first install under 3.95 MiB).
+  'src/firstday/minuteone.view.js', 'src/israel/israel.view.js', 'src/phrases/phrases.view.js',
   // Cursive display font: only fetched when the cursive script setting is on (font-display: swap falls back otherwise).
   'assets/fonts/web/gveret-levin.woff2']);
 export const isOnDemand = (rel) => !KEEP_DATA.has(rel) && (ON_DEMAND_FILES.has(rel) || /^data\/curriculum\/resource-concepts-/.test(rel) || ON_DEMAND_PREFIXES.some((p) => rel.startsWith(p)));

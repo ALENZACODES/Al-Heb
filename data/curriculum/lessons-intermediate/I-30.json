@@ -205,7 +205,7 @@
  "goals": [
   "Greet people with chag sameach and recognise the word sukkah",
   "Say Shehecheyanu and the wine blessing at the sukkah",
-  "Know which Sukkot texts (lulav, Hallel) are not yet in the corpus"
+  "Know that the lulav blessing and Hallel are not in ALEF yet"
  ],
  "estMinutes": 25,
  "prerequisites": [

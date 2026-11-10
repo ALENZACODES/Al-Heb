@@ -1,0 +1,5 @@
+{
+ "schema": "alef-rimon-present/1",
+ "note": "Rimon stills that exist in this folder. Written by tools/images/rimon/build.mjs --present and by tools/images/ingest_queue.mjs; the app shows only these.",
+ "ids": []
+}

@@ -29,8 +29,12 @@ export function artImg(h, path, cls) {
 // (#fffaf0, the same colour as the tiles), so every letter, number and word keeps the contrast it has without a mat.
 // The mat shows only in the margins around them. Three drills use a figure instead of a mat, and Letter Matrix uses
 // its picture as the back of a hidden tile.
+// Four of the new games place their picture themselves, where its order put it ('own'): Sound Twins on the card face,
+// Vowel Rain as the sky the syllables fall through, Taxi Turns as the road, Café Order as the café counter
+// (src/lab/lab.games2.js, applyBackground below). A board mat there would hide the road and the sky.
 const MAT = Object.freeze({
   hunt: 'mat', siddurflash: 'mat', switch: 'mat', countup: 'mat', calendar: 'mat', pattern: 'mat',
+  middle: 'mat', chain: 'mat', twins: 'own', rain: 'own', taxi: 'own', cafe: 'own',
   matrix: 'tileback', soundmatch: 'figure', gematria: 'figure', numberear: 'figure',
 });
 /** Revised pictures that replace a first version (the first version stays on disk). */
@@ -52,8 +56,8 @@ function saveData() {
  * to save data, or if there is no DOM. Returns true when loading was started.
  */
 export function applyMat(gameId, { board, root, ImageCtor = globalThis.Image } = {}) {
-  const kind = matKind(gameId), path = kind === 'figure' ? null : playArtPath(gameId);
-  if (!kind || kind === 'figure' || !path || typeof ImageCtor !== 'function' || saveData()) return false;
+  const kind = matKind(gameId), path = kind === 'figure' || kind === 'own' ? null : playArtPath(gameId);
+  if (!kind || kind === 'figure' || kind === 'own' || !path || typeof ImageCtor !== 'function' || saveData()) return false;
   try {
     const img = new ImageCtor();
     img.decoding = 'async';
@@ -63,6 +67,30 @@ export function applyMat(gameId, { board, root, ImageCtor = globalThis.Image } =
         if (kind === 'tileback' && root?.style) root.style.setProperty('--lab-tileback', `url("${path}")`);
       } catch { /* decoration only */ }
     };
+    img.onerror = () => {};
+    img.src = path;
+    return true;
+  } catch { return false; }
+}
+
+// ------------------------------------------------------------------ Tokens, the hero, and pictures a game places itself
+// The round tokens of the first ten games and the Brain Lab hero are in the commercial pack (data/images/commercial-2026-11-10).
+// The six new games' tokens are still on order; until they arrive their token is the game's letter on a green-and-gold disc.
+export const TOKEN_DIR = 'data/images/commercial-2026-11-10';
+const TOKENS = new Set(['hunt', 'matrix', 'soundmatch', 'siddurflash', 'switch', 'gematria', 'countup', 'numberear', 'calendar', 'pattern']);
+export const tokenArtPath = (gameId) => (TOKENS.has(gameId) ? `${TOKEN_DIR}/LAB_v2_${gameId}.webp` : null);
+export const HERO_ART = `${TOKEN_DIR}/LAB_v2_hero.webp`;
+/**
+ * Show a picture as an element's background once it has loaded, and add a class (default lab-has-art). Nothing changes if the
+ * picture fails, if the device asks to save data, or without a DOM, so the element keeps its plain look. Returns true when
+ * loading was started.
+ */
+export function applyBackground(el, path, { cls = 'lab-has-art', ImageCtor = globalThis.Image } = {}) {
+  if (!el?.style || !path || typeof ImageCtor !== 'function' || saveData()) return false;
+  try {
+    const img = new ImageCtor();
+    img.decoding = 'async';
+    img.onload = () => { try { el.style.backgroundImage = `url("${path}")`; el.classList?.add(cls); } catch { /* decoration only */ } };
     img.onerror = () => {};
     img.src = path;
     return true;

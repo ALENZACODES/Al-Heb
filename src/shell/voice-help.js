@@ -10,10 +10,10 @@ export const VOICE_HELP_TEXT = 'This word has no recording yet, and this compute
 /** Plain steps for the device in front of the learner. */
 export function voiceHelpSteps(ua = globalThis.navigator?.userAgent || '') {
   if (/Edg\//.test(ua)) return ['In Edge, Hebrew voices usually appear after a moment. Reload the page and try again.'];
-  if (/Windows/.test(ua)) return ['Easiest: open Aleph in Microsoft Edge, which comes with Hebrew voices.', 'Or add a Hebrew voice to Windows: Settings, Time and language, Speech, Add voices, Hebrew. Then restart the browser.'];
+  if (/Windows/.test(ua)) return ['Easiest: open ALEF in Microsoft Edge, which comes with Hebrew voices.', 'Or add a Hebrew voice to Windows: Settings, Time and language, Speech, Add voices, Hebrew. Then restart the browser.'];
   if (/Mac OS X|Macintosh/.test(ua)) return ['On a Mac: System Settings, Accessibility, Spoken Content, System voice, Manage Voices, then add Hebrew (Carmit). Then restart the browser.'];
-  if (/Linux/.test(ua) && !/Android/.test(ua)) return ['Open Aleph on a phone or in Microsoft Edge, which have Hebrew voices.'];
-  return ['Open Aleph on a phone, or in Microsoft Edge on a computer.'];
+  if (/Linux/.test(ua) && !/Android/.test(ua)) return ['Open ALEF on a phone or in Microsoft Edge, which have Hebrew voices.'];
+  return ['Open ALEF on a phone, or in Microsoft Edge on a computer.'];
 }
 
 const isHebrew = (u) => /^he/i.test(u?.lang || '') || /[֐-׿]/.test(u?.text || '');

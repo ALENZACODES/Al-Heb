@@ -6,7 +6,7 @@ keys listed in EXTRA below, each stamped with its own fetchedAt. Re-running repl
 
 Original docstring of fetch_sources.py follows.
 
-Fetch the raw source strings used by the Aleph corpus and write data/corpus/source-snapshot.json.
+Fetch the raw source strings used by the ALEF corpus and write data/corpus/source-snapshot.json.
 
 Run:  python3 -I src/corpus/tools/fetch_sources.py   (needs outbound HTTPS; uses stdlib only)
 Then: node src/corpus/tools/build-registry.mjs        (normalises + writes registry.json)

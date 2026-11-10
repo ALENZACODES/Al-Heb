@@ -25,6 +25,7 @@ import { mountFade } from "./fade.view.js";
 import { mountGender } from "./gender.view.js";
 import { mountScaffold } from "./scaffold.view.js";
 import { streakVisible } from "../shell/comfort.js";
+import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -120,13 +121,18 @@ function mountMap(root, ctx) {
   /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
   function continueCard(next, doneCount, total, st) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
+    const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
+    // Rimon's still for this moment replaces the picture once it exists (src/shell/rimon-stage.js).
+    const still = !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next";
+    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const say = !next ? "You finished every lesson in this track. Amazing!"
-      : doneCount === 0 ? "Let's start! Your first lesson takes about " + next.estMinutes + " minutes."
+      : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
       : "Ready for the next one? You're doing great.";
-    const goal = st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
+    // the ring is the learner's own daily goal (chosen at setup, the same number the header shows); the streak still counts a day at 5 minutes
+    let goalSec = 0; try { const g = ctx?.store?.get?.(DAILY_GOAL_KEY); if (g != null) goalSec = normalizeDailyGoal(g) * 60; } catch { /* no store: the streak goal */ }
+    const goal = goalSec || st?.streak?.goal || 300, secs = Math.min(goal, st?.streak?.todaySeconds || 0);
     const goalPct = Math.round((secs / goal) * 100), mins = Math.floor(secs / 60), goalMin = Math.round(goal / 60);
     const ring = el("div", { class: "alef-goal-ring", style: `--p:${goalPct}`, role: "img", "aria-label": goalPct >= 100 ? "Daily goal reached" : `Today: ${mins} of ${goalMin} minutes` },
       el("span", {}, goalPct >= 100 ? "✓" : `${mins}/${goalMin}`), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));
@@ -142,7 +148,7 @@ function mountMap(root, ctx) {
 
   function beltStrip(done) {
     const current = belts.belts.find((b) => b.lessons && !lessonsOfBelt(b).every((id) => done.has(id)));
-    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are Aleph's own levels, like in martial arts. Each one covers a set of lessons."));
+    return el("p", { class: "alef-belt" }, `${tr(ctx, "learn.belt", "Your level")}: ${current ? current.name + " belt" : "Black belt (all belts finished; keep practising)"}. `, el("span", { class: "muted" }, "Belts are ALEF's own levels, like in martial arts. Each one covers a set of lessons."));
   }
   render();
   return () => { alive = false; wrap.remove(); };

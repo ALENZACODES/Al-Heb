@@ -116,6 +116,17 @@ self.addEventListener('activate', (event) => {
 
 const MEDIA = /\.(mp3|m4a|ogg|wav|png|jpe?g|webp|gif|svg|woff2?|ttf|otf)$/i;
 
+// Tapping a reminder opens (or focuses) ALEF at the reminder's route. Notifications are shown by the page (src/shell/notify.js).
+self.addEventListener('notificationclick', (event) => {
+  const route = (event.notification && event.notification.data && event.notification.data.route) || '#/learn';
+  event.notification.close();
+  event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+    const url = new URL('./' + (String(route).startsWith('#') ? route : '#/learn'), self.registration.scope).href;
+    for (const c of list) { if ('focus' in c) { try { c.navigate && c.navigate(url); } catch (e) { /* cross-origin or old browser */ } return c.focus(); } }
+    return self.clients.openWindow ? self.clients.openWindow(url) : undefined;
+  }).catch(() => {}));
+});
+
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;

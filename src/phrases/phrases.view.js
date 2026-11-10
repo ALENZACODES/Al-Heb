@@ -55,7 +55,7 @@ export function mount(root, ctx) {
 
     const intro = () => [
       h('p', { class: 'draft-flag', role: 'note' }, contentHonesty(phrases[0]?.review) + ' A listed clip is the catalogue row for this exact line, this pronunciation style, and this voice. Tap Listen to hear it.'),
-      h('p', { class: 'muted' }, 'This is a first set from Aleph’s phrasebook, plus one role-play line. It is not every Hebrew phrase. If the catalogue has no row for this style and voice, the page offers another voice’s own clip, or the device voice — each labelled as what it is.'),
+      h('p', { class: 'muted' }, 'This is a first set from ALEF’s phrasebook, plus one role-play line. It is not every Hebrew phrase. If the catalogue has no row for this style and voice, the page offers another voice’s own clip, or the device voice — each labelled as what it is.'),
       h('p', { class: 'muted' }, 'Israel dialogues stay on their own page. They are not repeated here. The role-play line “Can I help you?” has no catalogue row.'),
     ];
 

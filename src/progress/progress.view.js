@@ -108,7 +108,7 @@ export async function mount(root, ctx) {
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
     const sections = [];
-    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are Aleph\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
+    sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are ALEF\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)
     const HREF_ROUTE = { '#/learn': 'learn', '#/read': 'read', '#/vocab': 'vocab', '#/timedread': 'timedread', '#/service': 'service', '#/firstday': 'firstday', '#/firstday/ladder': 'firstday-ladder' };
@@ -146,7 +146,7 @@ export async function mount(root, ctx) {
     const sc = siddurCoverage(s, d, c);
     if (sc) readSec.append(h('p', { class: 'pg-siddur', 'data-pct': String(sc.pct), 'data-order': sc.orderId },
       `Prayer book coverage: ${sc.pct}% of the phrases in ${sc.title} use signs you have practised`, ' ', h('a', { href: '#/service' }, 'See the service')),
-      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines Aleph holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in Aleph yet.`));
+      h('p', { class: 'small muted' }, `${sc.full} of the ${sc.lines} lines ALEF holds for ${sc.title.toLowerCase()} use only letters and signs from your completed activities. This is content coverage, not a reading assessment; ${plural(sc.gaps, 'part', 'parts')} of a typical service ${sc.gaps === 1 ? 'is' : 'are'} not in ALEF yet.`));
     sections.push(readSec);
 
     // 2. today, then this week
@@ -234,7 +234,7 @@ export async function mount(root, ctx) {
     const stateText = { earned: 'Earned', ready: 'Ready: only a check the app cannot make is left', current: 'Working on', later: 'Later' };
     const timedBelts = belts.filter((b) => b.gates.some((g) => g.kind === 'timedRead'));
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-belts' }, h('h2', { id: 'pg-h-belts' }, 'Belts'),
-      h('p', { class: 'small muted' }, `Belts are Aleph's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
+      h('p', { class: 'small muted' }, `Belts are ALEF's own levels, named after colours, like in martial arts. A belt means you have met every letter and vowel sign in its texts and finished its lessons.${timedBelts.length ? ` The ${timedBelts.map((b) => b.name).join(' and ')} belt${timedBelts.length === 1 ? '' : 's'} also ask for timed read-alouds, which you time and mark yourself (self-reported, not measured by the app).` : ''}`),
       ...belts.map((b) => h('details', { open: b.state === 'current' ? true : null }, h('summary', {}, `${b.name} belt: ${stateText[b.state]}`),
         h('p', { class: 'small' }, b.gate),
         h('ul', {}, ...b.gates.map((g) => h('li', { class: 'small', 'data-gate': g.kind }, `${g.label}: `, g.measurable ? (g.done ? 'met' : `${g.have} of ${g.need}`) : 'cannot be checked in the app yet',
@@ -254,7 +254,7 @@ export async function mount(root, ctx) {
     const k = c.know, bands = c.vocab, sp = c.spot, cp = c.cp, tr = timedReadSummary(c.timedRead);
     const row = (a, b) => [h('dt', {}, a), h('dd', {}, b)];
     sections.push(h('section', { class: 'card', 'aria-labelledby': 'pg-h-num' }, h('h2', { id: 'pg-h-num' }, 'Your numbers'),
-      h('p', { class: 'small muted' }, `Aleph has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
+      h('p', { class: 'small muted' }, `ALEF has ${cnt.read.total + cnt.israel.total} lessons in all: ${cnt.read.total} on the reading path and ${cnt.israel.total} on the Israel path. Both counts below are right — one counts a single path, the other counts the whole course.`),
       h('dl', {},
         ...row('Letters traced', `${k.traced.size} of ${ALL_LETTERS.length}`),
         ...row('Letters taught by lessons', `${k.taughtLetters.size} of ${ALL_LETTERS.length}`),

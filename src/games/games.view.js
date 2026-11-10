@@ -115,7 +115,7 @@ export function mount(root, ctx) {
     }
     const mascot = imgOf(R, 'id', 'MASCOT_rimon');
     if (mascot?.src) article.insertBefore(
-      h('img', { class: 'wf-hub-mascot', src: mascot.src, alt: mascot.alt, width: mascot.width, height: mascot.height }),
+      h('img', { class: 'wf-hub-mascot', src: mascot.src, alt: mascot.alt, width: mascot.width, height: mascot.height, 'data-rimon-still': 'games.hub' }),
       article.children[1] || null);
   }).catch(() => {});
   return () => {};

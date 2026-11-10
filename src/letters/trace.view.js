@@ -178,6 +178,8 @@ export function mount(root, ctx = {}) {
     const tabs = h('div', { class: 'tabs', role: 'tablist', 'aria-label': t('trace.tabs', 'Letter practice') },
       ...[['trace', t('trace.tabTrace', 'Trace')], ['drill', t('trace.tabDrill', 'Look-alikes')], ['typing', t('trace.tabTyping', 'Typing')]].map(([id, label]) =>
         h('button', { role: 'tab', 'aria-selected': state.tab === id, onclick: () => { state.tab = id; render(); } }, label)));
+    { const cur = letterById(state.letterId) || state.letters[0];
+      if (cur) body.appendChild(h('h1', { id: 'view-title', tabindex: '-1', class: 'alef-letter-title' }, cur.name + ' ', he(cur.he, { class: 'he' }))); }
     body.appendChild(tabs);
     
     if (state.tab === 'trace') { renderTrace(); inVisualOrder(body); }
@@ -192,7 +194,7 @@ export function mount(root, ctx = {}) {
   function inVisualOrder(host) {
     if (typeof host.append !== 'function' || !host.children?.[0]?.matches) return; // a stripped-down DOM (unit tests) has no sibling/selector API
     const kids = [...host.children]; const last = kids[kids.length - 1];
-    const rank = (e) => e.classList.contains('tabs') ? 1 : e.classList.contains('grid') ? 2
+    const rank = (e) => e.tagName === 'H1' ? 0 : e.classList.contains('tabs') ? 1 : e.classList.contains('grid') ? 2
       : e.matches('.row') && e.querySelector(':scope > .big') ? 3 : e.classList.contains('stage') ? 5 : e.classList.contains('feedback') ? 6
       : e.matches('.row') && e.previousElementSibling && e.previousElementSibling.classList.contains('feedback') ? 7
       : e.matches('.row') && e.previousElementSibling && e.previousElementSibling.matches('.row') && e.previousElementSibling.previousElementSibling && e.previousElementSibling.previousElementSibling.classList.contains('feedback') ? 7

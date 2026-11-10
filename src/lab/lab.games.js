@@ -2,7 +2,7 @@
 // and resolves {ok, ms, par}. The runner in lab.view.js owns the clock, the difficulty staircase and the score.
 // All Hebrew here comes from Aleph's own data files: letters, syllable recordings, the prayer corpus, the number words in
 // the dictionary, the holiday table and the word families. Nothing is typed in by hand.
-import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords } from './lab.core.js';
+import { randInt, shuffle, sample, choices, gematriaPuzzle, hasPattern, consonants, lineWords, hasDivineName, NOT_A_GAME } from './lab.core.js';
 import { HOLIDAY_DEFS, HEBREW_MONTH_NAMES, hebrewNumeral } from '../curriculum/calendar.js';
 
 const url = (p) => new URL(`../../${p}`, import.meta.url);
@@ -49,6 +49,7 @@ const hunt = {
     const fill = Array.from({ length: n - targets }, () => (level >= 3 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)]));
     const board = shuffle([...Array(targets).fill(target), ...fill], env.rnd);
     let found = 0;
+    env.met?.({ he: target.he, en: target.name });
     return new Promise((resolve) => {
       const t0 = env.now();
       env.prompt(env.h('span', {}, 'Find every ', big(env, target.he, 'lab-inline'), ` ${target.name}`));
@@ -78,8 +79,9 @@ const matrix = {
     const spots = sample([...Array(n).keys()], shown, env.rnd);
     const at = new Map(spots.map((s, k) => [s, k < targets ? target : (level >= 5 && twins.length && env.rnd() < 0.5 ? twins[randInt(env.rnd, twins.length)] : others[randInt(env.rnd, others.length)])]));
     let found = 0, open = false, t0 = 0;
+    env.met?.({ he: target.he, en: target.name });
     return new Promise((resolve) => {
-      env.prompt('Remember the letters…');
+      env.prompt('Remember the letters…'); env.rimon?.('thinking');
       const g = grid(env, n, side, (i, b) => { const l = at.get(i); if (l) b.append(big(env, l.he, 'lab-glyph')); b.setAttribute('aria-label', l ? l.name : 'empty'); b.disabled = true; }, (i, b) => {
         if (!open || b.disabled) return;
         const l = at.get(i);
@@ -109,6 +111,7 @@ const soundmatch = {
     const uniq = []; for (const s of shuffle(pool, env.rnd)) if (!uniq.some((u) => u.tr === s.tr)) uniq.push(s);
     const opts = shuffle([target, ...uniq.slice(0, n - 1)], env.rnd);
     const limit = Math.max(1800, 6500 - level * 380);
+    env.met?.({ he: target.he, en: `"${target.tr}"`, clip: { kind: 'syllable', id: target.id } });
     return new Promise((resolve) => {
       let t0 = env.now(), done = false;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -131,7 +134,7 @@ const soundmatch = {
 const siddurflash = {
   load: (env) => once('siddurlines', async () => {
     const reg = await getJSON(env, 'data/corpus/registry.json');
-    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
+    return reg.entries.filter((e) => (e.category === 'siddur' || e.category === 'torah') && e.he && !NOT_A_GAME.has(e.id)).map((e) => ({ id: e.id, title: e.title, words: lineWords(e.he) })).filter((e) => e.words.length >= 3);
   }),
   trial(env, level) {
     const lines = env.data;
@@ -139,9 +142,12 @@ const siddurflash = {
     let words = first.words.slice(0, Math.min(first.words.length, 4 + level));
     if (level >= 6) { const second = lines[randInt(env.rnd, lines.length)]; words = words.concat(second.words.slice(0, 3 + Math.floor(level / 3))); }
     const counts = new Map(); for (const w of words) counts.set(w, (counts.get(w) || 0) + 1);
-    const unique = words.map((w, i) => [w, i]).filter(([w, i]) => counts.get(w) === 1 && i >= 1);
-    const [targetWord, targetIndex] = unique.length ? unique[randInt(env.rnd, unique.length)] : [words.at(-1), words.length - 1];
+    // The divine name is never the word to catch: it is read, not raced (src/shell/names.js convention).
+    const unique = words.map((w, i) => [w, i]).filter(([w, i]) => counts.get(w) === 1 && i >= 1 && !hasDivineName(w));
+    const fallback = words.map((w, i) => [w, i]).filter(([w, i]) => i >= 1 && !hasDivineName(w));
+    const [targetWord, targetIndex] = unique.length ? unique[randInt(env.rnd, unique.length)] : fallback.length ? fallback.at(-1) : [words.at(-1), words.length - 1];
     const step = Math.max(330, 1150 - level * 70);
+    env.met?.({ he: targetWord, en: `from ${String(first.title).replace(/\s*\(.*\)\s*$/, '')}` });
     return new Promise((resolve) => {
       let shownAt = null, hiddenAt = null, done = false, idx = -1;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -189,6 +195,7 @@ const ruleswitch = {
     const item = env.data[randInt(env.rnd, env.data.length)];
     const answer = item[RULES[rule].key];
     const limit = Math.max(900, 3600 - level * 230);
+    env.met?.({ he: item.he, en: item.name });
     return new Promise((resolve) => {
       const t0 = env.now(); let done = false;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -210,6 +217,7 @@ const gematria = {
   trial(env, level) {
     const pz = gematriaPuzzle(env.data, level, env.rnd);
     const showValues = level <= 3;
+    for (const l of pz.solution) env.met?.({ he: l.he, en: `${l.name} = ${l.gematria}` });
     return new Promise((resolve) => {
       const t0 = env.now(); let sum = 0; const chosen = new Set();
       const total = env.h('p', { class: 'lab-sum', 'aria-live': 'polite' }, 'Your total: 0');
@@ -243,6 +251,7 @@ const countup = {
     const n = Math.min(pool.length, level <= 2 ? 3 : level <= 4 ? 4 : level <= 7 ? 5 : 6);
     const set = sample(pool, n, env.rnd), order = set.slice().sort((a, b) => a.value - b.value);
     const showTr = level <= 3;
+    for (const x of order) env.met?.({ he: x.he, en: `${x.value}, ${x.tr}`, clip: x.clip ? { kind: 'word', id: x.clip } : null });
     return new Promise((resolve) => {
       const t0 = env.now(); let k = 0;
       env.prompt('Tap the numbers from smallest to largest.');
@@ -269,6 +278,7 @@ const numberear = {
     const n = level <= 3 ? 3 : level <= 6 ? 4 : 6;
     const opts = choices(target, env.data, n, env.rnd, (a, b) => a.value === b.value).sort((a, b) => a.value - b.value);
     const limit = Math.max(2000, 6500 - level * 330);
+    env.met?.({ he: target.he, en: `${target.value}, ${target.tr}`, clip: target.clip ? { kind: 'word', id: target.clip } : null });
     return new Promise((resolve) => {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -300,6 +310,7 @@ const calendar = {
     const kind = level <= 2 ? 'which' : level <= 5 ? (env.rnd() < 0.5 ? 'which' : 'when') : (env.rnd() < 0.5 ? 'when' : 'whenHe');
     const opts = choices(d, days, n, env.rnd, (a, b) => a.id === b.id || (a.month === b.month && a.day === b.day));
     const limit = Math.max(3200, 9500 - level * 480);
+    env.met?.({ he: d.he, en: `${shortName(d)}: ${dateEn(d)}` });
     return new Promise((resolve) => {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
@@ -347,6 +358,7 @@ const pattern = {
     for (const w of shuffle(level <= 4 ? allWords.filter((x) => x.level === 'A1' || x.level === 'A2') : allWords, env.rnd)) { if (others.length >= tiles - k) break; const c = consonants(w.he); if (!hasPattern(w.he, fam.root) && !seen.has(c)) { seen.add(c); others.push(w); } }
     const board = shuffle([...targets.map((w) => ({ ...w, hit: true })), ...others.map((w) => ({ ...w, hit: false }))], env.rnd);
     const showEn = level <= 4;
+    for (const w of targets) env.met?.({ he: w.he, en: String(w.en).split(/[;,]/)[0] });
     return new Promise((resolve) => {
       const t0 = env.now(); let found = 0;
       env.prompt(env.h('span', {}, 'Tap every word with ', big(env, fam.rootHe, 'lab-inline'), ' in this order'));
@@ -366,4 +378,6 @@ const pattern = {
 };
 
 export const DRILLS = Object.freeze({ hunt, matrix, soundmatch, siddurflash, switch: ruleswitch, gematria, countup, numberear, calendar, pattern });
+/** Shared pieces for the games in lab.games2.js. */
+export const kit = Object.freeze({ getJSON, once, grid, big, mark, loadLetters });
 export const _test = { SWITCH_ITEMS, dateEn, dateHe, shortName };

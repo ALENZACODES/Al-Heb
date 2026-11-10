@@ -6,7 +6,8 @@ const M = await import('../src/onboarding/model.js');
 const { loadOnboardingData } = await import('../src/onboarding/loader.js');
 const { matchRoute, ROUTES } = await import('../src/shell/router.js');
 const { createSettings, ENUMS } = await import('../src/shell/settings.js');
-const { mount, DRAFT_NOTE } = await import('../src/onboarding/firstrun.view.js');
+const FR = await import('../src/onboarding/firstrun.view.js');
+const { mount, DRAFT_NOTE } = FR;
 const D = await loadOnboardingData();
 const read = D.lessons.filter((l) => l.track === 'read');
 const lessonIds = new Set(D.lessons.map((l) => l.id));
@@ -119,14 +120,14 @@ const statusText = (root) => root.querySelector('#ob-status').textContent;
 test('view, first run: the letters question with five labelled radios; Continue without an answer saves nothing', async () => {
   const { root, store, settings, ctx } = mk();
   mount(root, ctx); await ready(root);
-  assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to Aleph אלף'); // t() returned the key, so the English fallback is used
+  assert.equal(root.querySelector('#view-title').textContent.replace(/\s+/g, ' ').trim(), 'Welcome to ALEF אלף'); // t() returned the key, so the English fallback is used
   assert.match(root.textContent, /How much Hebrew can you read today\?/);
   const rs = radios(root, 'letters');
   assert.deepEqual(rs.map((r) => r.attrs.value), ['none', 'some', 'letters', 'vowels', 'sentences']);
   for (const r of rs) { const l = labelFor(root, r.attrs.id); assert.ok(l, r.attrs.id); assert.ok(l.textContent.length > 3); }
   const labels = rs.map((r) => labelFor(root, r.attrs.id).textContent);
   assert.ok(labels.every((label, i) => label.startsWith(M.LETTER_ANSWERS[i].label)));
-  assert.equal(root.queryAll('fieldset legend').length, 2, 'reading level then learning goal');
+  assert.equal(root.queryAll('fieldset legend').length, 3, 'reading level, then learning goal, then daily goal (one per screen)');
   assert.match(root.textContent, /What would you like to use Hebrew for\?/);
   assert.deepEqual(radios(root, 'goal').map((r) => r.attrs.value), ['read', 'israel', 'both']);
   assert.ok(radios(root, 'goal')[0].attrs.checked !== undefined && radios(root, 'goal')[0].attrs.checked !== null, 'the current goal (read by default) is preselected');
@@ -344,4 +345,56 @@ test('first step puts ability before purpose and explains the selected next acti
   assert.match(root.querySelector('#ob-next-step').textContent, /short reading check/);
   await check(root, 'goal', 'israel');
   assert.match(root.querySelector('#ob-next-step').textContent, /everyday words and phrases/);
+});
+
+// ---------- first-minute pass (2026-11-10): one question per screen ----------
+test('first run: three pages in one form, Rimon asks each question, and the daily goal is saved with the answer', async () => {
+  const { root, store, ctx } = mk();
+  mount(root, ctx); await ready(root);
+  const form = root.querySelector('#ob-form-letters');
+  assert.equal(form.attrs['data-page'], 'level', 'opens on the reading-level page');
+  assert.deepEqual(root.queryAll('.ob-page').map((p) => p.attrs['data-page']), ['level', 'goal', 'daily']);
+  assert.equal(root.queryAll('.rimon-say').length, 3, 'Rimon on every page');
+  assert.ok(root.textContent.includes(FR.RIMON_LINES.level));
+  assert.deepEqual(radios(root, 'daily').map((r) => Number(r.attrs.value)), [5, 10, 15, 20]);
+  assert.equal(radios(root, 'daily').find((r) => r.attrs.checked === '')?.attrs.value, '10', 'the plan default is preselected');
+  // Continue on page 1 without a level asks for one and stays put
+  await root.querySelector('#ob-page-next').click();
+  assert.equal(form.attrs['data-page'], 'level');
+  assert.match(statusText(root), /Choose one answer/);
+  await check(root, 'letters', 'none');
+  await root.querySelector('#ob-page-next').click();
+  assert.equal(form.attrs['data-page'], 'goal');
+  assert.ok(root.querySelector('#ob-back'), 'Back is offered from page 2');
+  await root.querySelector('#ob-goal-next').click();
+  assert.equal(form.attrs['data-page'], 'daily');
+  await root.querySelector('#ob-back').click();
+  assert.equal(form.attrs['data-page'], 'goal', 'Back returns one page');
+  await root.querySelector('#ob-goal-next').click();
+  await check(root, 'daily', '15');
+  await submit(root, 'ob-form-letters');
+  assert.equal(store.m[M.STORE_KEY].minutesPerDay, 15);
+  assert.equal(store.m['onboarding.v1.dailyGoal'], 15, 'Home and the header show the same goal');
+  assert.ok(root.querySelector('#ob-form-congregation'));
+});
+test('first run: the progress bar counts the screens, and Israel has one fewer', () => {
+  assert.deepEqual(FR.firstRunPages('read'), ['level', 'goal', 'daily', 'congregation', 'plan']);
+  assert.deepEqual(FR.firstRunPages('israel'), ['level', 'goal', 'daily', 'plan']);
+  assert.ok(FR.DAILY_CHOICES.every((c) => [5, 10, 15, 20, 30].includes(c.min)));
+});
+test('first run: Back from the pronunciation screen returns to the daily goal page with the earlier answers kept', async () => {
+  const { root, ctx } = mk();
+  mount(root, ctx); await ready(root);
+  await check(root, 'letters', 'some'); await submit(root, 'ob-form-letters');
+  assert.ok(root.querySelector('#ob-form-congregation'));
+  await root.querySelector('#ob-back').click();
+  assert.equal(root.querySelector('#ob-form-letters').attrs['data-page'], 'daily');
+  assert.equal(radios(root, 'letters').find((r) => r.attrs.checked === '')?.attrs.value, 'some');
+});
+test('plan screen: Rimon cheers, the Start button is pinned at the bottom, and a close button leads Home', async () => {
+  const { root, ctx } = mk({ [M.STORE_KEY]: rec('none', 10, { step: 'plan' }) });
+  mount(root, ctx); await ready(root);
+  assert.ok(root.querySelector('.ob-foot #ob-start'));
+  assert.equal(root.querySelector('#ob-close').attrs.href, '#/');
+  assert.match(root.querySelector('.rimon-say').textContent, /all set/);
 });

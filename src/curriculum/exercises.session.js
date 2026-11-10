@@ -8,6 +8,7 @@
  *    never also correct.
  *  - feedback hooks (haptics, sound) that are off unless the learner turned them on, and never vibrate under reduced motion.
  */
+import { showAnswerBand } from "../shell/answer-band.js";
 import { plain } from "../shell/plain-copy.js";
 import { rng, shuffled, decoysFor } from "./spotit.js";
 import { letterSound } from "../pronunciation/forTradition.js";
@@ -126,6 +127,7 @@ export function fireFeedback(ctx, correct, win = globalThis) {
   const did = { haptic: false, sound: false };
   try { if (hapticsOn(ctx, win)) { win.navigator.vibrate(correct ? [12] : [30, 40, 30]); did.haptic = true; } } catch { /* ignore */ }
   try { if (soundOn(ctx)) { ctx.sfx.play(correct ? "correct" : "wrong"); did.sound = true; } } catch { /* ignore */ }
+  try { if (win?.document?.body && ctx?.settings?.get?.("calmMode") !== true) showAnswerBand(!!correct, { doc: win.document, win, settings: ctx?.settings }); } catch { /* ignore */ }
   return did;
 }
 

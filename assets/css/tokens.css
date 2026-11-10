@@ -1,0 +1,37 @@
+/* ALEF design tokens: one scale for spacing, type, corners, depth and motion, shared by every screen.
+   Loaded first (after fonts), so app.css and the themed sheets can use them; assets/css/polish.css applies them
+   to the shared pieces (buttons, cards, headings, header, tabs, the first-run screens and lesson finish).
+   Colours: the dark green and gold brand (owner's order, 2026-11-08) plus the two feedback colours. */
+:root {
+  /* brand */
+  --green-950: #0b1a0f; --green-900: #0e1f12; --green-850: #122a17; --green-800: #16301c; --green-700: #1c4023; --green-600: #24502d; --green-500: #2f6a3b;
+  --gold-600: #b8862b; --gold-500: #d9a441; --gold-400: #e8c97a; --gold-300: #f3dfa6;
+  --cream: #f6f1e7; --cream-dim: #d8e2c4; --ink: #122a17;
+  --ok: #8fd18a; --ok-deep: #3f8a43; --ok-bg: #1f4a27;
+  --bad: #f08a6c; --bad-deep: #b4492c; --bad-bg: #4a2620;
+  --flame: #ff9a3c; --flame-deep: #e25c1d;
+
+  /* spacing: 4 px steps up to 16, then wider */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.25rem; --s-6: 1.5rem; --s-7: 2rem; --s-8: 3rem;
+
+  /* type: one scale (rem, so Settings > text size still works) */
+  --fs-xs: .8125rem; --fs-sm: .9375rem; --fs-md: 1.0625rem; --fs-lg: 1.25rem; --fs-xl: 1.5rem; --fs-2xl: 1.875rem; --fs-3xl: 2.25rem;
+  --fw-regular: 400; --fw-medium: 500; --fw-bold: 700; --fw-heavy: 800;
+  --lh-tight: 1.2; --lh-body: 1.55;
+
+  /* corners */
+  --r-sm: 10px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
+
+  /* depth: the press-down "lip" under buttons and tiles, and two soft shadows */
+  --lip: 4px;
+  --shadow-1: 0 2px 10px rgba(0, 0, 0, .18);
+  --shadow-2: 0 14px 40px rgba(0, 0, 0, .35);
+
+  /* motion */
+  --dur-1: 120ms; --dur-2: 220ms; --dur-3: 420ms; --dur-4: 700ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+
+  /* layout */
+  --measure-app: 40rem; --tabbar-h: 64px;
+}

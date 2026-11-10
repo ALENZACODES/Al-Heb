@@ -29,10 +29,22 @@ export function summaryNode(d) {
   const cheer = st.accuracy >= 0.9 ? "Perfect lesson! Rimon is dancing." : st.accuracy >= 0.7 ? "Great job! Keep it going." : "You finished! Every lesson counts.";
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
-    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+    el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", "data-rimon-still": st.accuracy >= 0.9 ? "lesson.complete.perfect" : st.accuracy >= 0.7 ? "lesson.complete.great" : "lesson.complete.done", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+  // Streak flame (Duolingo-style), filled from the curriculum state when the caller passes ctx; hidden when the learner turned streaks off.
+  const flame = el("p", { class: "alef-streak-flame", "data-streak-slot": "summary", hidden: "" });
+  if (d.ctx && d.ctx?.settings?.get?.("showStreak") !== false) {
+    import("./state.js").then((m) => m.loadState(d.ctx)).then((s) => {
+      const n = s?.streak?.count || 0; if (!n) return;
+      flame.replaceChildren(el("span", { class: "alef-flame", "aria-hidden": "true" }, "🔥"), el("strong", {}, `${n}-day streak`), s.streak.activeToday ? " · today counts" : "");
+      flame.hidden = false; flame.removeAttribute?.("hidden");
+    }).catch(() => {});
+  }
+  const remindSlot = el("div", { class: "alef-remind-slot" });
+  if (d.ctx) import("../shell/reminder-ask.js").then((m) => m.offerReminders(remindSlot, d.ctx)).catch(() => {});
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),
+    flame,
     el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Lesson finished"),
     el("p", { role: "status" }, d.countText),
     el("dl", { class: "alef-summary-stats" },
@@ -43,6 +55,7 @@ export function summaryNode(d) {
     d.missedLabels.length ? el("div", {}, el("p", {}, "To review:"), el("ul", { "data-list": "review" }, ...d.missedLabels.map((t) => el("li", {}, t)))) : el("p", {}, "Nothing to review."),
     d.skippedN ? el("p", { class: "muted", "data-skipped": String(d.skippedN) }, plain("skippedNote", { n: d.skippedN })) : null,
     el("p", { class: "muted" }, d.cardsUpdated ? `${d.cardsUpdated} review card${d.cardsUpdated === 1 ? "" : "s"} updated.` : "No review cards needed updating."),
+    remindSlot,
     el("div", { class: "row alef-summary-actions" }, next, d.dueCount === 0 ? null : el("a", { class: next ? "btn secondary" : "btn", href: "#/learn?review=1" }, "Review now"), ...(d.extraLinks || [])));
 }
 

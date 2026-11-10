@@ -91,7 +91,7 @@ export function mount(root, ctx) {
     // Torah portion (Shabbat) and times
     if (p.parsha || p.noPortion) kids.push(el("section", { class: "alef-day-sec", "aria-labelledby": "alef-day-parsha" },
       el("h2", { id: "alef-day-parsha" }, "Torah portion"),
-      p.parsha ? el("p", {}, el("strong", {}, p.parsha.href ? el("a", { href: p.parsha.href, "aria-label": `Practise reading the Torah portion ${p.parsha.en}` }, p.parsha.en) : p.parsha.en), " ", heText(p.parsha.he), " ", el("span", { class: "muted" }, "(The full portion text is not in Aleph yet; the link opens the Torah reading practice.)"))
+      p.parsha ? el("p", {}, el("strong", {}, p.parsha.href ? el("a", { href: p.parsha.href, "aria-label": `Practise reading the Torah portion ${p.parsha.en}` }, p.parsha.en) : p.parsha.en), " ", heText(p.parsha.he), " ", el("span", { class: "muted" }, "(The full portion text is not in ALEF yet; the link opens the Torah reading practice.)"))
         : el("p", {}, p.noPortion)));
 
     if (p.times.length || p.needsLocation) {
@@ -113,12 +113,12 @@ export function mount(root, ctx) {
       el("a", { class: "alef-cal-btn", href: `#/day/${n.next}`, rel: "next" }, "Next day ›"),
       n.prevNotable ? el("a", { class: "alef-cal-btn", href: `#/day/${n.prevNotable.iso}` }, `‹ ${n.prevNotable.en} (${n.prevNotable.iso})`) : null,
       n.nextNotable ? el("a", { class: "alef-cal-btn", href: `#/day/${n.nextNotable.iso}` }, `${n.nextNotable.en} (${n.nextNotable.iso}) ›`) : null));
-    kids.push(el("p", { class: "alef-cal-note" }, "Draft explanations written for Aleph in plain language; not reviewed by clergy. Customs differ between communities: your own congregation's practice comes first."));
+    kids.push(el("p", { class: "alef-cal-note" }, "Draft explanations written for ALEF in plain language; not reviewed by clergy. Customs differ between communities: your own congregation's practice comes first."));
     // the shell focused the loading heading when the route opened; keep focus on the real heading once it is replaced
     const hadFocus = typeof document !== "undefined" && document.activeElement && wrap.contains?.(document.activeElement);
     wrap.replaceChildren(...kids);
     if (hadFocus) { const h1 = head.querySelector?.("h1"); h1?.focus?.({ preventScroll: true }); }
-    if (typeof document !== "undefined" && document.title != null) document.title = `${p.dateLabel} - Aleph`;
+    if (typeof document !== "undefined" && document.title != null) document.title = `${p.dateLabel} - ALEF`;
   }
 
   function sectionView(s) {
@@ -139,8 +139,8 @@ export function mount(root, ctx) {
       kids.push(el("h3", {}, "Prayers and readings"));
       if (s.readings.length) kids.push(el("ul", {}, ...s.readings.map((t) => el("li", {}, E(t)))));
       kids.push(s.links.length
-        ? el("div", {}, el("p", { class: "alef-cal-note" }, "In Aleph:"), el("ul", { class: "alef-day-links" }, ...s.links.map((l) => el("li", {}, el("a", { href: l.href }, l.label)))))
-        : el("p", { class: "alef-cal-note" }, "None of these texts is in Aleph yet."));
+        ? el("div", {}, el("p", { class: "alef-cal-note" }, "In ALEF:"), el("ul", { class: "alef-day-links" }, ...s.links.map((l) => el("li", {}, el("a", { href: l.href }, l.label)))))
+        : el("p", { class: "alef-cal-note" }, "None of these texts is in ALEF yet."));
     }
     if (s.learnMore) kids.push(el("p", {}, el("a", { class: "btn", href: s.learnMore.href }, `Learn more: ${s.learnMore.label}`)));
     return el("section", { class: `alef-day-sec alef-day-${s.key}`, "aria-labelledby": id, "data-day-section": s.key }, ...kids);

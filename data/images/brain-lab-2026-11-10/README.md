@@ -24,3 +24,10 @@ Contact sheets: `docs/images/brain-lab-contact-{covers,play,wins}.jpg`.
 - Contrast: text never sits on a mat. On a board with a mat, each direct child (the tile grid, the flash card, the rule card, the totals) gets an opaque `#fffaf0` backing, so every letter and number keeps the contrast it has today. A scrim was measured as an alternative: the lightest text colour (`#8a6d1f`) only reached 3.1:1 at an 80% warm-white scrim, below the 4.5:1 AA level, so the backing approach was used instead.
 - Fail-safe: a mat is set only after its picture has loaded; on an error nothing changes. Mats are skipped when the device asks to save data and are hidden in forced-colours mode. No picture is in the install precache.
 - Contact sheet: `docs/images/brain-lab-contact-r2.jpg`.
+
+
+## Six new games, 2026-11-10
+
+Cover, board-mat and win pictures for Sound Twins, Vowel Rain, Middle Letter, Taxi Turns, Café Order and Prayer Chain, following `docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`. Covers are 1536x1024. Wins are 1024x1024 with alpha. Play mats keep a calm centre so Hebrew type sits on them. Ari, Noa and Rimon follow the official character sheets. Metadata is stripped. These files stay out of the first-install precache.
+
+Tokens, café menu pictures, `LAB_v2_rain_drop` and `LAB_v2_taxi_cab` are still ordered for the commercial ingest path; the six games work without them (letter tokens and plain boards).

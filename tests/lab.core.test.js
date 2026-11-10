@@ -6,14 +6,17 @@ import {
   workoutProgress, workoutStreak, skillScore, overallScore, comparison, seeded, consonants, hasPattern, gematriaPuzzle, choices, lineWords,
 } from '../src/lab/lab.core.js';
 import { DRILLS, _test } from '../src/lab/lab.games.js';
+import { NEW_DRILLS } from '../src/lab/lab.games2.js';
 import { HOLIDAY_DEFS } from '../src/curriculum/calendar.js';
 
 const json = (p) => JSON.parse(readFileSync(p, 'utf8'));
 
-test('ten drills, every skill has at least one, every drill has code', () => {
-  assert.equal(GAMES.length, 10);
-  for (const s of SKILLS) assert.ok(GAMES.some((g) => g.skill === s.id), s.id);
-  for (const g of GAMES) assert.equal(typeof DRILLS[g.id]?.trial, 'function', g.id);
+test('sixteen games, every skill has at least two, every game has code (the first ten here, the six added 2026-11-10 in lab.games2.js)', () => {
+  assert.equal(GAMES.length, 16);
+  for (const s of SKILLS) assert.ok(GAMES.filter((g) => g.skill === s.id).length >= 2, s.id);
+  const all = { ...DRILLS, ...NEW_DRILLS };
+  for (const g of GAMES) assert.equal(typeof all[g.id]?.trial, 'function', g.id);
+  assert.deepEqual(Object.keys(NEW_DRILLS).sort(), GAMES.filter((g) => g.added).map((g) => g.id).sort(), 'every new game is marked with the day it was added');
 });
 
 test('daily workout: three drills, three different skills, same all day, changes across days', () => {
@@ -113,4 +116,21 @@ test('number recordings: each linked clip says exactly the same Hebrew, in both 
   for (const n of json('data/lab/numbers.json').numbers.filter((x) => x.clip)) {
     for (const v of ['m', 'f']) assert.ok(words.some((r) => r.id === n.clip && r.voice === v && r.tradition === 'israeli' && r.status !== 'missing' && r.text === n.he), `${n.value} ${v}`);
   }
+});
+
+test('readState: a partial, older or broken saved record can never stop the Brain Lab page from drawing', () => {
+  const st = readState({ games: { hunt: { best: 40 }, matrix: { history: null }, gematria: 'x', pattern: { history: [null, { s: 12, d: '2026-11-09' }], best: 'NaN' } }, workouts: { '2026-11-09': {}, '2026-11-08': { done: 'hunt' }, '2026-11-07': null } });
+  assert.deepEqual(st.games.hunt, { best: 40, plays: 0, lastMax: 1, history: [] });
+  assert.deepEqual(st.games.matrix.history, []);
+  assert.equal(st.games.gematria, undefined, 'a non-object record is dropped');
+  assert.deepEqual(st.games.pattern.history, [{ s: 12, d: '2026-11-09' }]);
+  assert.equal(st.games.pattern.best, 0); assert.equal(st.games.pattern.plays, 1);
+  for (const d of ['2026-11-09', '2026-11-08', '2026-11-07']) assert.deepEqual(st.workouts[d].done, [], d);
+  // everything the hub draws from that record works
+  for (const s of SKILLS) assert.doesNotThrow(() => skillScore(st, s.id));
+  assert.doesNotThrow(() => overallScore(st));
+  assert.doesNotThrow(() => workoutStreak(st, '2026-11-09'));
+  assert.doesNotThrow(() => dailyWorkout('2026-11-09', st));
+  assert.doesNotThrow(() => recordSession(st, 'hunt', summarize([{ ok: true, ms: 800, level: 1, pts: 15 }]), '2026-11-09'));
+  for (const junk of [null, 'oops', 7, [], { games: [], workouts: [] }]) assert.deepEqual(readState(junk), { games: {}, workouts: {} }, JSON.stringify(junk));
 });

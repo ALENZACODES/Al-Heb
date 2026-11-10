@@ -35,7 +35,7 @@ import { matKind, playArtPath, coverArtPath, applyMat } from '../src/lab/lab.art
 
 test('every drill has a mat plan, and every planned picture is on disk', () => {
   for (const g of GAMES) {
-    assert.ok(['mat', 'tileback', 'figure'].includes(matKind(g.id)), g.id);
+    assert.ok(['mat', 'tileback', 'figure', 'own'].includes(matKind(g.id)), g.id);
     assert.ok(existsSync(playArtPath(g.id)), playArtPath(g.id));
     assert.ok(existsSync(coverArtPath(g.id)), coverArtPath(g.id));
   }
@@ -70,4 +70,27 @@ test('the tile back goes on the drill root; figures and unknown drills start no 
   assert.equal(applyMat('nope', { board: fakeBoard(), ImageCtor: Img }), false);
   assert.equal(applyMat('hunt', { board: fakeBoard(), ImageCtor: undefined }), false);
   assert.equal(made.length, 1);
+});
+
+import { applyBackground, tokenArtPath, HERO_ART } from '../src/lab/lab.art.js';
+
+test('four new games place their own picture (card face, sky, road, café counter) and get no board mat', () => {
+  const { Img, made } = fakeImage();
+  for (const id of ['twins', 'rain', 'taxi', 'cafe']) { assert.equal(matKind(id), 'own'); assert.equal(applyMat(id, { board: fakeBoard(), ImageCtor: Img }), false, id); }
+  assert.equal(made.length, 0);
+  assert.equal(matKind('middle'), 'mat'); assert.equal(matKind('chain'), 'mat');
+});
+
+test('applyBackground sets the picture only after it loads, never on error; tokens and the hero are on disk', () => {
+  const { Img, made } = fakeImage();
+  const el = { style: {}, classList: { add(c) { this.c = c; } } };
+  assert.equal(applyBackground(el, 'x.webp', { ImageCtor: Img }), true);
+  assert.equal(el.style.backgroundImage, undefined); made[0].onload();
+  assert.equal(el.style.backgroundImage, 'url("x.webp")'); assert.equal(el.classList.c, 'lab-has-art');
+  const bad = { style: {}, classList: { add() { throw new Error('no'); } } };
+  applyBackground(bad, 'y.webp', { ImageCtor: Img }); made[1].onerror(); assert.equal(bad.style.backgroundImage, undefined);
+  assert.equal(applyBackground(null, 'x.webp', { ImageCtor: Img }), false);
+  for (const g of GAMES) { const p = tokenArtPath(g.id); if (p) assert.ok(existsSync(p), p); }
+  assert.equal(GAMES.filter((g) => tokenArtPath(g.id)).length, 10);
+  assert.ok(existsSync(HERO_ART));
 });

@@ -3,7 +3,7 @@
 Status: PLAN ONLY. Nothing in this document has been built or tested. It is written against `main` at commit `907caadc3`.
 Audience: the engineer who builds it. Every rule, number, key, file and string is fixed here. Where a product choice was open, a default is set in section 0.3 so the build never stops for a question.
 
-Revision: review round 3 of 5 (2026-11-10). Round 1 gaps: section 8 (G1–G38). Round 2 gaps: section 9 (G39–G66), checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at `8102de323`. Round 3: section 10 (G67–G92) reconciles this spec with the build on `claude/retention-fable-2026-11-10` (`ab7a979e6`, `c5280dc77`, `bd985a7dd`, `f0a6220e3`, built on `main` at `b574744f6`), decides each of its departures, and lists every point the build misses or contradicts as a fix list (10.4). Where an older section and section 10 disagree, section 10 wins; the older text has been corrected in place where the change was small.
+Revision: review round 4 of 5 (2026-11-10). Sections 8–11 record the review rounds: 8 (G1–G38), 9 (G39–G66), 10 (G67–G92, Fable build reconciliation and fix list F1–F24), 11 (G93–G116: merge order, Fable's second pass at `78a4f3138`, fix-list status, every default in one table, state transitions, edge cases, acceptance criteria). Where sections disagree, the highest-numbered section wins; small corrections were also made in place.
 
 Scope: the three groups John listed.
 1. Streak and loss aversion: streak, streak freezes bought with gems, 3-minute lessons.
@@ -141,8 +141,8 @@ Each milestone is paid once per install, ever (round 3 adopts the built list, G6
 
 ### 1.6 Low friction: the 3-minute short lesson
 
-- Home's primary button reads "3-minute lesson" (`aria-label="Start a three-minute lesson"`). It opens the learner's next lesson with `?short=1`.
-- `?short=1` reuses the existing short-session chunking (`comfort.chunkedLessons`): the lesson runs one chunk of at most 8 questions, then the end card. Target median 180 s; the build does not enforce a timer and never shows a countdown.
+- Home's primary button reads "3-minute lesson" (`aria-label="Start a three-minute lesson"`). It opens the learner's next lesson with `?quick=1`.
+- `?quick=1` (round 4, G95–G96) opens the existing short-parts player (`mountChunkedLesson`) even when the learner's short-session setting is off. After 4 parts are done in one sitting (same route, not left) a "Three Minutes Done" card pays 10 XP, completes the streak day and counts as a finished lesson, without completing the lesson; it offers "Keep going" or "Done for today". A lesson of 4 parts or fewer simply ends with its normal end card. The build never enforces a timer and never shows a countdown.
 - Finishing the chunk calls `completeDay` (D1), pays XP (2.1) and fires `lesson_complete`.
 - First-run: the very first quick lesson never costs hearts and never shows a league.
 
@@ -551,8 +551,8 @@ The send log is the existing `notify.log` (`[{at, id}]`, last 30). Whether the a
 
 | key | type | default | meaning |
 |---|---|---|---|
-| `hearts` | auto, on, off | auto | D2. `auto` = on from the 3rd finished lesson. `on` before lesson 3 still waits for lesson 3. |
-| `leagues` | auto, on, off | auto | `auto` = on from the 5th finished lesson. `off` stops tracking; `unlockedAt` is kept. |
+| (removed in round 4, G101) `hearts` | auto, on, off | auto | D2. `auto` = on from the 3rd finished lesson. `on` before lesson 3 still waits for lesson 3. |
+| (removed in round 4, G101) `leagues` | auto, on, off | auto | `auto` = on from the 5th finished lesson. `off` stops tracking; `unlockedAt` is kept. |
 
 No `dailyGoalXp` key: the XP goal is derived from the existing minutes goal (2.1). Settings is the only place hearts and leagues are switched; `retention.v1` holds no enabled flags.
 
@@ -594,11 +594,11 @@ No `dailyGoalXp` key: the XP goal is derived from the existing minutes goal (2.1
 |---|---|
 | `src/curriculum/exercises.ui.js` line 92 (main) / 104 (overnight) | `signalRimon(ok ? 'correct' : 'wrong', { source: /[?&]review=1/.test(location.hash) ? 'review' : 'lesson', questionId: <the question's id or its index in the quiz> })` (keep the same actions; check which id field the question objects carry before writing this line) |
 | `src/curriculum/exercises.ui.js` `mountQuiz` | at mount dispatch `alef:quiz-start {quizId}` (`quizId` = random 12-char id); include `quizId` and `qIndex` in the line-92 `signalRimon` detail (G5) |
-| `src/curriculum/exercises.ui.js` `summaryNode` | `d.final` (optional, default `true`) and `d.short` (optional, default `false`) are passed through; add to the `alef:celebrate` detail: `eventId`, `final`, `short`, `answered`, `right`, `ms: d.ms`, `route: location.hash`; append `xpPayoutNode(...)` (the opt-in stays the existing `.alef-remind-slot`) via a lazy import that fails silently (same pattern as `preview/loops/hook.js`); hide "Next lesson" when `!canStartLesson` and show the hearts block instead |
+| `src/curriculum/exercises.ui.js` `summaryNode` | `d.final` (optional, default `true`) and `d.quick` (optional, default `false`) are passed through; add to the `alef:celebrate` detail: `eventId`, `final`, `quick`, `answered`, `right`, `ms: d.ms`, `route: location.hash`; append `xpPayoutNode(...)` (the opt-in stays the existing `.alef-remind-slot`) via a lazy import that fails silently (same pattern as `preview/loops/hook.js`); hide "Next lesson" when `!canStartLesson` and show the hearts block instead |
 | `src/curriculum/intermediate.view.js` line 365 | pass `final: all` to `summaryNode` (G2) |
 | `src/curriculum/review.view.js` | after a successful `rateCard` in `rate(n)` dispatch `alef:card-rated {cardId, rating:n}`; when `?refill=1`, build the queue with `limit: 5` instead of 20 and, when the queue empties, dispatch `alef:review-finished {refill:true, ratings:[…]}` (G3, G4) |
 | `src/curriculum/lesson.view.js`, `src/curriculum/intermediate.view.js` | on mount, if `canStartLesson` is false and the lesson has no resume record, render the hearts block instead of the lesson (G7); `lesson.view.js` also honours `?short=1` (G8) |
-| `src/curriculum/lesson.parts.js` | `short` option: stop after part 1 and pass `final:true, short:true` to `summaryNode` without calling `completeLesson` (G8) |
+| `src/curriculum/lesson.parts.js` | dispatch `alef:lesson-part {lessonId, part, of}` when a part changes (built in 78a4f3138); retention counts done parts (G96, F26) |
 | `src/shell/notify.view.js` | tone radio (Off is the existing switch; Kind / Playful (for adults)), "Match my usual study time" switch (3.4), calendar line (3.5) |
 | `src/shell/rimon-reminders.js` | add the 70 lines (3.6); `kindFor`: first line `if (state.kind) return state.kind;`; `pickLine`: drop ids in `state.excludeIds`; `composeReminder`: nothing else changes (G45, G52) |
 | `src/shell/notify.js` `armFromPrefs` show path | before `R.composeReminder`, stop if calm mode or `stopped`; add `kind` from `tone.js` and `excludeIds` (G52) to the state; after a `final` send set `stopped` (G46) |
@@ -753,7 +753,7 @@ Each entry gives the gap (what an engineer would have had to ask) and the rule t
 
 **G7. Where the 0-heart gate lives.** Hiding "Next lesson" on the end card was not enough: lessons also open from Learn, Home and links. Rule: `lesson.view.js` and `intermediate.view.js` check `canStartLesson` on mount. If false AND the lesson has no resume record (the existing `RESUME_KEY` in `lesson.parts.js` / intermediate progress), they render the hearts block (2.3) instead of the lesson. A lesson already in progress always opens. Home's "3-minute lesson" button is replaced by "Practise to earn a heart" while hearts are 0.
 
-**G8. How `?short=1` works** (renamed from `quick` in round 2, G55). Checked: `lesson.view.js` line 30 mounts `mountChunkedLesson` only when `chunkedLessons(ctx)` is true. Rule: `?short=1` forces the chunked path regardless of that setting and stops after part 1. The end card is a real end card (`final:true, short:true`) so it pays 10 XP, counts toward `lessonsFinished` and completes the streak day. It does NOT call `completeLesson`; the lesson stays open, and the end card's primary button is "Keep going" → the same lesson at part 2 (resume record). Home's quick button targets the next lesson from `src/home/nextlesson.js` `nextLesson(...)`, with the same arguments Home already passes.
+**G8. How the 3-minute lesson works** (param is `?quick=1` and it pays after 4 parts since round 4, G95–G96; text below is the round-1 rule). Checked: `lesson.view.js` line 30 mounts `mountChunkedLesson` only when `chunkedLessons(ctx)` is true. Rule: `?short=1` forces the chunked path regardless of that setting and stops after part 1. The end card is a real end card (`final:true, short:true`) so it pays 10 XP, counts toward `lessonsFinished` and completes the streak day. It does NOT call `completeLesson`; the lesson stays open, and the end card's primary button is "Keep going" → the same lesson at part 2 (resume record). Home's quick button targets the next lesson from `src/home/nextlesson.js` `nextLesson(...)`, with the same arguments Home already passes.
 
 **G9. Two daily goals.** Checked: Home already stores a minutes goal (`today.js`, 5/10/15/20/30). Rule: no XP goal setting; XP goal = minutes × 4 (2.1). `dailyGoalXp` and `retention.v1.goal` are removed.
 
@@ -878,7 +878,7 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 
 **G54. Flame copy ignores D1.** `flame.js` says "N more minutes of study today keeps your streak", but with D1 a finished lesson also completes the day. Rule: the not-lit sub line ends with " Or finish one lesson." (6.2).
 
-**G55. "Quick" already means something.** The lesson page has a "quick check" (`#alef-quick-start`) that completes a lesson. Rule: the 3-minute lesson parameter is `?short=1` and the flag is `short`; learner-facing copy says "3-minute lesson" (1.6, 6.2, G8).
+**G55. "Quick" already means something.** (Reversed in round 4 by G95: `?quick=1` is used.) The lesson page has a "quick check" (`#alef-quick-start`) that completes a lesson. Rule: the 3-minute lesson parameter is `?short=1` and the flag is `short`; learner-facing copy says "3-minute lesson" (1.6, 6.2, G8).
 
 ### 9.2 Contradictions removed from the file
 
@@ -888,7 +888,7 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 
 **G58. Solemn days.** The spec never mentioned them; reminders and cues are now silent on Yom HaShoah, Yom HaZikaron and Tisha B'Av (3.2 rule 3, G44).
 
-**G59. Notification click route.** 3.5 said `#/learn?short=1` in one place and `#/` in another; the default is now `#/learn` (the existing reminder route) and a click never starts a lesson on its own.
+**G59. Notification click route.** 3.5 said `#/learn?quick=1` in one place and `#/` in another; the default is now `#/learn` (the existing reminder route) and a click never starts a lesson on its own.
 
 **G60. `{next}` placeholder.** The existing `pickLine` fills only `{n}`. D09 rewritten without it; test 47 updated.
 
@@ -913,7 +913,7 @@ Checked against `main` at `b574744f6` and `overnight/launch-ready-2026-11-10` at
 91. On `alef:celebrate {kind:'lesson', final:true}`, `hooks.js` dispatches no `alef:rimon` event (only `daily_goal` if the XP goal was crossed).
 92. With `body[data-rimon-quiet]` set, `cueRimon('league_up')` returns false and dispatches nothing.
 93. `flameState` for an unlit day: `sub` ends with "Or finish one lesson."
-94. `#/learn?lesson=<id>` (no `short`) still renders `#alef-quick-start`; `#/learn?lesson=<id>&short=1` renders part 1 of the chunked flow.
+94. Replaced by test 104 (round 4).
 95. `reminderAskCard` with calm mode on → null.
 96. Ask card: tone radio defaults to Kind; pressing No saves no tone.
 97. Auto time with `quietFrom` 22: typical 21:50 → 21:30; with `quietTo` 7: typical 06:40 → 07:30.
@@ -927,7 +927,7 @@ Checked by reading the code on `claude/retention-fable-2026-11-10`, not only its
 
 ### 10.1 Where the fix-up work happens
 
-**G67. Base for the fix-up.** New branch `retention/fixup-2026-11-10`, created from `claude/retention-fable-2026-11-10` at `f0a6220e3`. Then, in that order: (1) merge `overnight/launch-ready-2026-11-10` into it with a normal merge commit (no rebase, no force-push); (2) resolve the expected conflicts in `src/curriculum/exercises.ui.js` (both branches edit the answer line and `summaryNode`; keep both sides' additions), `src/shell/router.js`, `src/app.js`; (3) apply the 10.4 fix list, one commit per item. Nothing goes to `main` and nothing is deployed. If `main` already contains the overnight branch when work starts, merge `main` instead of the overnight branch. This replaces G39.
+**G67. Base for the fix-up.** (Replaced in round 4 by G94.) New branch `retention/fixup-2026-11-10`, created from `claude/retention-fable-2026-11-10` at `f0a6220e3`. Then, in that order: (1) merge `overnight/launch-ready-2026-11-10` into it with a normal merge commit (no rebase, no force-push); (2) resolve the expected conflicts in `src/curriculum/exercises.ui.js` (both branches edit the answer line and `summaryNode`; keep both sides' additions), `src/shell/router.js`, `src/app.js`; (3) apply the 10.4 fix list, one commit per item. Nothing goes to `main` and nothing is deployed. If `main` already contains the overnight branch when work starts, merge `main` instead of the overnight branch. This replaces G39.
 
 ### 10.2 Departures in the build: decided
 
@@ -978,11 +978,11 @@ Each item: what the build does now (checked in the code) → what it must do. On
 | F12 | G53 | Top bar has its own streak flame; overnight Home already shows one under the title | Top bar keeps gems, hearts and league; its flame is hidden on Home when `.alef-streak-flame` exists |
 | F13 | G58 | No solemn-day rule in retention quiet | Covered by G80's `isRestTime` after the merge; on `main` add Yom HaShoah, Yom HaZikaron, Tisha B'Av to `quiet.js` (via `holidaysBetween`) |
 | F14 | G77 | No Settings entry | Settings row "Rewards and reminders" → `#/shop` |
-| F15 | 1.6, G8, G55 | 3-minute lesson not built | Build it as `?short=1` (never `quick`, which is the lesson's quick check) |
+| F15 | 1.6, G8 | 3-minute lesson not built | Built in 78a4f3138 as `?quick=1` (G95); remaining fixes F25, F26 |
 | F16 | 3.6 bubble table | `line` is sent but `rimon.js` ignores it; no `goal`, `heartBack`, `moveUp` text | Add `LINES` and `sayLine` to `rimon-speech.js`, and the `detail.line` branch to `rimon.js` |
 | F17 | 1.1 | Streak states shown inside the goal card; no `at-risk`/`freeze-used`/`broken` wording rules, no snowflake on the Progress strip | Add the 1.1 states (with G26: no `at-risk` Friday 18:00 to Saturday 21:00) as one line under the Home flame; snowflake on covered days in `weekStrip` rendering |
 | F18 | 3.1, G32 | No iPhone calendar card | Build it (once, `BYDAY=SU,MO,TU,WE,TH`) |
-| F19 | 3.6 | S02, S05, S07, S08 in the catalogue but never sent; S01, S02, S05 duplicate overnight lines | Drop S01, S02, S05 (G56). Wire S07 (Thursday, within 30 XP of promotion) and S08 (hearts back to 5 after being 0) |
+| F19 (replaced in round 4 by G100) | 3.6 | S02, S05, S07, S08 in the catalogue but never sent; S01, S02, S05 duplicate overnight lines | Drop S01, S02, S05 (G56). Wire S07 (Thursday, within 30 XP of promotion) and S08 (hearts back to 5 after being 0) |
 | F20 | G54 | (overnight) flame says only "N more minutes", but a finished lesson now completes the day | Add " Or finish one lesson." to the unlit line in `flame.js` |
 | F21 | G52 | (overnight) line `d16` "No hearts to lose" can be sent while hearts are on | Exclude `d16` while hearts are on (only relevant where overnight lines are used, G80) |
 | F22 | 6.3 browser tests 58–68 | Not automated; checked by hand at 360 px | Add them under `tests/retention/*.browser.test.js` using the existing Playwright pattern (advisory in CI) |
@@ -1003,3 +1003,155 @@ Each item: what the build does now (checked in the code) → what it must do. On
 **G90.** G4's dedicated 5-card refill queue is replaced by "any 5 review ratings" (G74).
 **G91.** G37 (precache everything) is replaced by on-demand loading (G78).
 **G92.** Test names follow the build (`tests/retention/`). Tests whose numbers or names changed with these decisions: 14 and 26 (prices unchanged, currency name), 18 (milestone list), 25 (any 5 ratings), 29–30 (now checked against `paceOf`), 58 and 64 (`#/shop`). New tests for the fix list: one per item F1–F21, each asserting the "Required" column, plus F22's browser set.
+
+---
+
+## 11. Review round 4: final reconciliation, defaults, state transitions, acceptance (G93–G116)
+
+Checked on 2026-11-10 against: `claude/retention-fable-2026-11-10` at `78a4f3138` (Fable's second pass); `overnight/launch-ready-2026-11-10` at `1134fb949`, which now carries Fable's first four commits as `924d7a975`, `aac8027ef`, `3c4f68a80`, `1134fb949` (the `src/retention` and `tests/retention` trees are byte-identical to Fable's `f0a6220e3`, checked with `git diff`); `main` at `b574744f6` (unchanged). Where this section and an older one disagree, this section wins.
+
+### 11.1 Branch state that matters
+
+**G93. Two reminder offers and two schedulers are already live on the overnight branch.** Checked in the code at `1134fb949`: the lesson end card shows the overnight `reminder-ask.js` card in `.alef-remind-slot` AND retention's `optInCard` inside the reward panel (`src/retention/ui.js` line 147); `src/app.js` arms the overnight study reminder (lines 396 and 405) AND retention's scheduler (line 406). F7/G80 are therefore the first fixes, not later ones (11.2 step 4).
+
+**G94. Merge order** (replaces G67). Branch `retention/fixup-2026-11-10`:
+1. Create it from `origin/overnight/launch-ready-2026-11-10` at its current head (at least `1134fb949`). Do not merge `claude/retention-fable-2026-11-10` into it (its first four commits are already there as copies, so a merge would replay them).
+2. `git cherry-pick 78a4f3138`. A trial cherry-pick (not pushed) conflicts in exactly two files: `src/shell/rimon-speech.js` (keep the overnight file; add Fable's `sayLine(line)` function and add `sayLine` to the object that `mountSpeechBubble` returns) and `precache-manifest.js` (take the overnight side; it is regenerated in step 6). `src/shell/rimon.js` merges cleanly.
+3. `npm test` must pass before step 4.
+4. Fix commits in this order (each one commit, each followed by `npm test`): F7 → F8 → F9 → F10 → F11 → F2 → F3 → F4 → F5 → F6 → F1 → F12 → F13 → F14 → F17 → F19 → F20 → F21 → F25 → F26 → F27 → F28. F8 comes before F9–F11 because they edit the same file; F2 before F5 because both touch the lesson counter.
+5. Browser tests (`tests/retention/retention.browser.test.js` plus 11.8) run locally with Playwright.
+6. Last commit: `npm run precache`.
+7. Push only `retention/fixup-2026-11-10`. Never push to `main`, `overnight/…` or `claude/retention-fable-…`; never force-push; never deploy. Author John Khan, no AI attribution.
+If `main` contains the overnight branch when work starts, step 1 uses `main` instead; nothing else changes.
+
+### 11.2 Fable's second pass: decided
+
+| G | Build does (78a4f3138) | Decision |
+|---|---|---|
+| G95 | 3-minute lesson uses `?quick=1` | **Adopt `quick=1`** (reverses G55/F15 naming). Checked: the lesson page's quick check is an element id (`#alef-quick-start`), not a query key, so nothing collides. Sections saying `short` read `quick`. |
+| G96 | Pays after 4 parts shown in one sitting (`QUICK_PARTS = 4`); a lesson of ≤ 4 parts ends with its normal end card | **Adopt with two fixes** (F25, F26 below). "One sitting" = same route hash without leaving it. The quick payout is `final:true, quick:true`: 10 XP, completes the streak day, `lessonsFinished + 1`, does not complete the lesson. |
+| G97 | Rimon's bubble line arrives as `detail.say = {he, en}` | **Adopt** (replaces `detail.line`). `cueRimon` puts the pair in `say`. |
+| G98 | Seven-day strip with snowflake in the Home goal card | **Adopt** the place (F17 satisfied for the strip). The one streak line in that card must still use the 1.1 state table and G26 (no `at-risk` Friday 18:00–Saturday 21:00). |
+| G99 | Calendar fallback on `#/shop` and on the iPhone opt-in card, Sunday–Thursday | **Adopt** (F18 done). |
+| G100 | S02 and S07 wired; S05 and S08 not sent | **Decided:** S01, S02 kept (retention is the sender, G80, and its fallback to overnight lines covers only `holiday`, `milestone`, `welcome`; `holiday` includes the overnight `erev-shabbat` line, which replaces S05). S05 and S08 are removed from `messages.js`. This replaces F19 and the S-line parts of G56. Catalogue: 24 E + 20 D + 20 R + 7 S = 71 lines. |
+| G101 | Hearts and league switches stored in the record (`hearts.enabled`, `league.enabled`: `true`, `false` or `null` = automatic), set on `#/shop` | **Adopt.** Replaces G10 and the 5.4 `hearts`/`leagues` settings keys (they are not added to `settings.js`). Calm mode stays the settings key that overrides both. |
+| G102 | Repair offer window: 48 h from the rollover that detects the break (`until = now + 48 h`), offered only when missed days ≤ 3 and the streak was ≥ 2 | **Adopt** and specify (11.4). |
+
+### 11.3 Fix list status after the second pass
+
+| # | Status at 78a4f3138 | Still required |
+|---|---|---|
+| F1 | Open (`shabbatCoversFriday: true`) | Set `false` (D9) |
+| F2 | Open (no `final` flag) | As written in 10.4 |
+| F3 | Open (`isLessonHash` only `#/learn?…lesson=`) | Add `^#\/intermediate\/[^/?]+` |
+| F4 | Open | The resume record is store key `lesson.resume.v1` (`RESUME_KEY` in `src/curriculum/chunks.js`): no gate when it has an entry for this lesson id; for `#/intermediate/:id`, no gate when that lesson has saved progress |
+| F5 | Open | As written in 10.4 |
+| F6 | Open (`GOAL_CHOICES` 10/20/30/50 picker) | As written; the goal ring stays, the picker goes |
+| F7 | Open and live on overnight (G93) | G80; also do not show retention's `optInCard` when `src/shell/reminder-ask.js` exists |
+| F8–F14 | Open | As written in 10.4 |
+| F15 | Done as `?quick=1` (G95) | F25, F26 |
+| F16 | Done as `detail.say` (G97) | None |
+| F17 | Strip done; state wording unchecked | Streak line uses 1.1 states and G26 |
+| F18 | Done | None |
+| F19 | Replaced by G100 | Remove S05, S08 |
+| F20, F21 | Overnight files; open | As written |
+| F22 | Done (`retention.browser.test.js`) | Add 11.8 browser cases |
+| F23 | Not applicable | None |
+| F24 | Ten tier names plus the new bubble lines are in `docs/retention/HEBREW-REVIEW.md` | Native review (not code) |
+| F25 | `partShown` returns null in calm mode, so a calm learner's 3-minute lesson pays nothing and does not count the day | Calm mode still pays XP and completes the day; it only skips the card animation and Rimon |
+| F26 | Parts are counted when shown, so the payout comes when part 4 opens (3 parts done) | Count a part when the NEXT part is shown or the lesson ends; pay when 4 parts are done |
+| F27 | `EXEMPT` hearts routes list `/pray` and `/siddur` (no such routes) and miss `/trope` and `/text`-style reading routes | Use the route list in 2.3 exactly |
+| F28 | `maxAsks: 2` | `maxAsks: 1` (G88) |
+
+### 11.4 Defaults (single table; values are the build's unless marked changed)
+
+| Constant | Value |
+|---|---|
+| Streak day | 300 engaged seconds (existing) OR a `final` lesson end OR a quick payout |
+| Milestones / gems | 3:5, 7:25, 14:30, 30:50, 50:75, 100:100, 365:200, once per install |
+| Freezes | price 200, hold max 2, all-or-nothing, judged once (`evaluatedThrough`) |
+| Repair | 150 gems per missed day, missed days ≤ 3, streak before break ≥ 2, window 48 h from detection |
+| Travel grace | one missed day free when zone changed and < 36 h real time passed |
+| Free rest days | Saturday and Yom Tov for everyone; Friday and Yom Tov eves NOT (changed by F1) |
+| At-risk line | from 18:00 local, never Friday 18:00 to Saturday 21:00 |
+| XP | lesson 10; accuracy ≥ 0.9 +5; combo +2 per 5 in a row, cap +6; review 1 (20/day); refill round 5; game with ≥ 1 star 3 (15/day); quick payout 10 |
+| Daily XP goal | Home minutes goal × 4 (changed by F6): 5→20, 10→40, 15→60, 20→80, 30→120 |
+| Gems earned | goal 10/day, accuracy 2, first lesson 50 (only if no lesson was finished before install of retention, F5), promote 50, rank 1 100, tier-10 top 3 100 (one per week) |
+| Hearts | max 5, +1 per 4 h, +1 per 5 review ratings (+5 XP if ≥ 4 rated Good/Easy), refill all 350 gems, unlock after 3 lessons |
+| League | 29 pretend players, baseline 120 until 2 joined weeks, week Sunday 00:00 to Friday 14:00, unlock after 5 lessons, `paceOf` curve |
+| Reminders | sender: retention scheduler; 08:00–21:00 only; also the overnight `isRestTime` gate; first fire about 23.5 h after the last session, moved to the typical half-hour when within 2 h; at most 1 a day, ≥ 3 h apart; no repeat in last 10; stop after 14 days away; ask once (changed by F28) |
+| Service worker | Periodic Sync tag `alef-rimon`, min interval 12 h, plan in cache `alef-retention` at `__alef/rimon-plan.json` |
+| Quick lesson | `?quick=1`, 4 parts done (F26) |
+| Storage | one key `retention.v1` (`alef:retention.v1` in localStorage), in every backup |
+
+### 11.5 State transitions
+
+**Streak day (per local date).** `open` → (300 s engaged, or `final` end card, or quick payout) → `done`. At rollover, each unjudged past day is: `done`; `rest` (Saturday/Yom Tov, engine freeze, declared rest); `travel` (G-rule above); `frozen` (freezes cover the whole gap); else the gap is `missed` and the streak shows broken. Rollover runs at boot, on becoming visible, and at local midnight + 5 s; it is idempotent.
+
+**Repair offer.** `none` → (rollover finds a break with ≤ 3 missed days and streak ≥ 2) → `offered {days, prev, until = now + 48 h}` → (learner pays) → `none`, missed days marked rest, count = prev + days earned since → or (`now > until`) → `none`. Buying a freeze during `offered` does not repair.
+
+**Hearts.** Off (calm, switch off, < 3 lessons) ↔ On. On: `n` 5..0. Wrong first answer on a lesson route → n − 1 (n = 5 → set `lastRefillAt`). Every read applies time refill. `n = 0` → new lessons gated (resume exempt, F4); current lesson continues. +1 per 5 review ratings, or all 5 for 350 gems. Turning hearts off at 0 removes the gate at once and keeps `n` for later.
+
+**League week.** `locked` (< 5 lessons or switched off) → `unjoined` (week started, 0 XP) → (first XP) → `joined` → (Friday 14:00) → `ended` → (next open) → `settled` (one payout, tier change, `resultUnseen`) → (results card seen) → next week. XP earned Friday 14:00 to Saturday 23:59 is carried into the next week.
+
+**Reminder opt-in.** `never asked` → (first `final` lesson, not calm, supported) → ask card → `yes(tone)` / `denied` / `later`. `later` and `denied` are final (ask once). iPhone tab → calendar card once. `yes` → scheduler armed, old study reminder disarmed (G80).
+
+**Reminder ladder.** daysAway 0–2 Encourage; 3–4 Disappointed; 5–13 Disappointed (Kind) or Roast/Disappointed (Playful); 14 the `final` line, then `stopped` until the next streak day.
+
+**Quick lesson.** `?quick=1` opened → parts done counted per route hash → 4 done → quick payout card ("Keep going" / "Done for today") → if the learner keeps going, the lesson's own end card later pays normally (a second payout for the same lesson on the same day is a duplicate and pays nothing).
+
+### 11.6 Edge cases (each needs a test, 11.8)
+
+| Case | Required behaviour |
+|---|---|
+| Two tabs | Store `update` merges per key; at most one reminder per day (G18 lock); rollover idempotent |
+| Clock moved back | Nothing spent, nothing broken, no reminder resent |
+| Zone change mid-league-week | Week boundaries use the zone at settlement; no double settlement |
+| DST change | Wall-clock times built in local time; "23.5 h" is elapsed time on purpose (G34) |
+| Storage unavailable or full | Store's memory fallback; retention never throws; no gem spend is shown as done unless saved |
+| Corrupt `retention.v1` | Defaults; raw copy in `.corrupt` once |
+| Backup from before retention restored | Record recreated; F5 counts completed lessons again; no first-lesson gems if any lesson is complete |
+| Backup with a newer `v` | Read only, never written |
+| Permission revoked | Scheduler stops; ask card not shown again |
+| Calm mode turned on mid-lesson | Hearts stop counting at once; payouts still saved, no animation |
+| Hearts switched off at 0 | Gate removed immediately |
+| Learner on `#/torahread` with 0 hearts | Never gated |
+| Lesson with ≤ 4 parts in quick mode | Normal end card only; one payout |
+| App closed for 20 days | Rollover scans at most 45 days; reminders: final line at 14, then silent; repair not offered (> 3 missed) |
+| Yom HaShoah, Yom HaZikaron, Tisha B'Av | No reminder, no Rimon cue (G44, F13) |
+
+### 11.7 Acceptance criteria for `retention/fixup-2026-11-10`
+
+1. `npm test` passes with all `tests/retention/*.test.js` and the existing suite.
+2. The Playwright file passes locally at 320, 360 and 390 px, with reduced motion and calm mode cases.
+3. Exactly one reminder offer card appears on the first lesson end card (overnight `reminder-ask.js`, with the tone radio).
+4. In a 21-day simulated run (fake clock, no study after day 1, Playful tone), the sent log has at most one entry per day, none Friday 12:00 to Saturday 23:59, none outside 08:00–21:00, none on solemn days, the `final` line on day 14 and nothing after.
+5. A stage fed a full lesson plus every retention cue records only the lesson's real answers.
+6. Each F item in 11.3 has a passing test named after it (`F1 …` in the test title).
+7. `docs/retention/IMPLEMENTATION.md` "Where This Differs From the Spec" lists only D9/D10 if John has not decided them, and nothing else.
+8. Nothing is merged or deployed; John reviews the branch.
+
+### 11.8 Tests added in round 4 (99–116)
+
+99. G94: cherry-picked tree has `sayLine` exported from `mountSpeechBubble` and the overnight `again` line unchanged.
+100. G93/F7: end card contains exactly one `.remind-ask` card and no `.ret-optin` when `reminder-ask.js` exists.
+101. F7: after `turnOnReminders('kind')`, `notify.prefs.enabled` is false and the overnight `cancelAll` was called.
+102. F25: calm mode, `?quick=1`, 4 parts done → +10 XP, streak day done, no card animation.
+103. F26: parts shown 1,2,3,4 with no finish → no payout; part 5 shown → payout.
+104. G95: `#/learn?lesson=x&quick=1` mounts the short-parts player; `#/learn?lesson=x` still renders `#alef-quick-start` when the lesson is not chunked.
+105. G96: quick payout then the lesson's end card on the same day → second lesson XP paid, no duplicate quick payout; streak counted once.
+106. G100: `messages.js` has 71 lines, no `S05`, no `S08`.
+107. G101: `hearts.enabled = false` removes the gate at `n = 0`; `null` follows the 3-lesson rule.
+108. G102: break found at t0 with 2 missed days → offer until t0 + 48 h at 300 gems; at t0 + 48 h + 1 ms → no offer; 4 missed days → no offer.
+109. F27: hearts never apply on `#/trope`, `#/read/x`, `#/service`, `#/morning`; apply on `#/learn?lesson=x` and `#/intermediate/I-01`.
+110. F28: after one `later` answer, `shouldAsk` is false forever.
+111. 11.6 two tabs: two schedulers firing 1 s apart → one log entry.
+112. 11.6 zone change mid-week: settlement once, week id unchanged.
+113. 11.6 backup restore without `retention.v1` and 3 completed lessons → `lessonsFinished = 3`, no first-lesson gems.
+114. 11.6 20 days away: rollover scans ≤ 45 days; no repair offer.
+115. Acceptance 4 as an automated unit test with a fake clock.
+116. Acceptance 5 as an automated unit test feeding the stage tracker.
+
+### 11.9 Contradictions removed in round 4
+
+G55/F15 naming (`short`) → `quick` (G95). G8's "stops after part 1" → 4 parts (G96). `detail.line` → `detail.say` (G97). F19 and the S-line part of G56 → G100. G10 and 5.4 `hearts`/`leagues` settings → record switches (G101). G67 merge order → G94. Round-1 test 70 ("quick lesson end → 10 XP after part 1") → test 102/103 rules. Round-2 tests 94 (`short=1`) → test 104.

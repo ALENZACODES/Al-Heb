@@ -10,6 +10,8 @@ import { setRestDay, setGoalTarget, exportProgressJSON, progressFileName, inspec
 import { weakReport } from './weak.js';
 import { weeklySummary, weeklySentences, sparklineSVG, WEEKS } from './weekly.js';
 import { evaluateMilestones, milestoneRows } from './milestones.js';
+import { statModel } from '../shell/statbar.js';
+import { DAILY_GOAL_KEY } from '../home/today.js';
 
 const CSS = `
 .pg { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap, 1rem); max-inline-size: 100%; overflow-wrap: anywhere; }
@@ -52,6 +54,7 @@ const CSS = `
 
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
+
 export async function mount(root, ctx) {
   let alive = true;
   const { store } = ctx;
@@ -78,6 +81,7 @@ export async function mount(root, ctx) {
 
   const showStreak = streakVisible(ctx);
   const todaySection = h('section', { class: 'card', 'aria-labelledby': 'pg-h-today' });
+  const heroSlot = h('div', { class: 'pg-hero-slot' }); // above the cards: the header's two numbers, large (filled by renderToday)
   function renderToday(focusId) {
     const s = readSnapshot(store), t = now(), st = streakInfo(s, t), g = goalInfo(s, t, d.milestones.settings.defaultGoal);
     const today = dayKey(t), yesterday = addDays(today, -1);
@@ -85,11 +89,17 @@ export async function mount(root, ctx) {
     const streakLine = st.count > 0
       ? `${plural(st.count, 'day', 'days')} in a row${st.restToday ? ' (resting today)' : st.activeToday ? ', including today' : ''}. Best so far: ${st.best}.`
       : st.restToday ? 'Resting today. Your streak is waiting for you.' : plain('progressNoStreak');
-    const goalLine = g.lessonsToday > 0 ? `Today's goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
-      : g.cards >= g.target ? `Today's goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
+    const goalLine = g.lessonsToday > 0 ? `Today's review goal is met: you finished ${plural(g.lessonsToday, 'lesson', 'lessons')}.`
+      : g.cards >= g.target ? `Today's review goal is met: ${plural(g.cards, 'card', 'cards')} reviewed.`
       : `${g.cards} of ${g.target} cards today. Any amount counts.`;
-    const sel = h('select', { id: 'pg-goal', onchange: (e) => { try { setGoalTarget(store, Number(e.target.value)); status.textContent = `Daily goal set to ${e.target.value} cards.`; renderToday('pg-goal'); } catch { status.textContent = 'Could not save the goal.'; } } },
+    const sel = h('select', { id: 'pg-goal', onchange: (e) => { try { setGoalTarget(store, Number(e.target.value)); status.textContent = `Review goal set to ${e.target.value} cards.`; renderToday('pg-goal'); } catch { status.textContent = 'Could not save the goal.'; } } },
       ...[...new Set([...d.milestones.settings.goalChoices, g.target])].sort((a, b) => a - b).map((n) => h('option', { value: String(n), selected: n === g.target ? true : null }, `${n} cards a day`)));
+    // The same two numbers as the header: the streak flame and today's study minutes against the daily goal chosen at setup.
+    let sm = null; try { sm = statModel({ streak: store.get('streak'), dailyGoal: store.get(DAILY_GOAL_KEY), now: t }); } catch { sm = null; }
+    const hero = sm ? h('div', { class: 'pg-hero', role: 'group', 'aria-label': 'Streak and study time today' },
+      showStreak ? h('div', { class: `pg-hero-flame${sm.lit ? ' is-lit' : ''}` }, h('span', { class: 'stat-flame', 'aria-hidden': 'true' }), h('strong', {}, String(sm.count)), h('span', {}, sm.count === 1 ? 'day streak' : 'day streak')) : null,
+      h('div', { class: `pg-hero-goal${sm.met ? ' is-met' : ''}`, style: `--p:${sm.pct}` }, h('span', { class: 'pg-hero-ring', 'aria-hidden': 'true' }), h('strong', {}, `${sm.todayMin}/${sm.goalMin}`), h('span', {}, 'minutes today'))) : null;
+    heroSlot.replaceChildren(...(hero ? [hero] : []));
     todaySection.replaceChildren(
       h('h2', { id: 'pg-h-today' }, 'Today'),
       showStreak ? h('p', { class: 'pg-big' }, streakLine) : null,
@@ -97,7 +107,7 @@ export async function mount(root, ctx) {
       h('progress', { max: String(g.target), value: String(g.met ? g.target : Math.min(g.cards, g.target)), 'aria-label': 'Cards reviewed today' }),
       showStreak ? h('p', { class: 'small muted' }, plain('progressRestNote')) : null,
       h('div', { class: 'pg-row' },
-        h('label', { for: 'pg-goal' }, 'Daily goal '), sel),
+        h('label', { for: 'pg-goal' }, 'Review goal '), sel),
       !showStreak ? null : h('div', { class: 'pg-row' },
         h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest', 'aria-pressed': st.restToday ? 'true' : 'false', onclick: () => { setRestDay(store, today, !st.restToday); status.textContent = st.restToday ? 'Rest day removed for today.' : 'Today is a rest day. Your streak is safe.'; renderToday('pg-rest'); } }, st.restToday ? 'Today is a rest day (tap to undo)' : 'Take today as a rest day'),
         missedYesterday ? h('button', { type: 'button', class: 'btn secondary', id: 'pg-rest-y', onclick: () => { setRestDay(store, yesterday, true); status.textContent = 'Yesterday counted as a rest day.'; renderToday('pg-rest-y'); } }, 'Count yesterday as a rest day') : null),
@@ -107,7 +117,7 @@ export async function mount(root, ctx) {
 
   function build() {
     const s = readSnapshot(store), c = makeContext(s, d, now());
-    const sections = [];
+    const sections = [heroSlot];
     sections.push(h('p', { class: 'draft-flag', role: 'note' }, 'Draft: the milestones and levels here are ALEF\'s own, and no expert has reviewed them. A native Hebrew speaker has not yet checked the vowel marks.'));
 
     // 1. what can I read now: one summary over every lane (letters, lines, vocabulary, timed reads, siddur, first day)

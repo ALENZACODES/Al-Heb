@@ -78,6 +78,53 @@ Still open, ranked:
 7. Progress and Brain Lab use the tokens but were not reworked screen by screen.
 8. No browser-tier test drives the new setup flow; it is covered by fake-DOM unit tests and scripted walks only.
 
+## Round 4 (2026-11-10, about 3 AM): weaknesses found and the plan fixed
+
+New checks this round: the repo's accessibility gate (`node tools/a11y/gate.mjs`: keyboard walk, axe on 15 routes in light and dark, 200% zoom reflow), a keyboard-only run of setup, the light theme, and a new browser test (`tests/firstminute.browser.test.js`: setup by keyboard, no page jump, chips and path after setup, axe A/AA on all six screens).
+
+Weaknesses found, and what was done:
+
+| # | Weakness | Found by | Fix |
+|---|---|---|---|
+| 1 | Header chips: the spoken name did not contain the number shown ("0" was read as "No streak yet"), on every page | axe label-content-name-mismatch | Fixed: names start with the visible text ("0-day streak...", "0/10 minutes today") |
+| 2 | At 200% zoom the header was 260 px wide on a 195 px screen; on setup Rimon and his bubble did not fit | gate reflow check | Fixed: header wraps; below 300 px Rimon stacks above a smaller bubble |
+| 3 | First lesson: the memory card's main button was white on gold in the dark theme | axe color-contrast | Fixed: it uses the accent text colour |
+| 4 | The keyboard walk still expected the old one-page setup | gate keyboard walk | Fixed: the walk now answers the three questions one screen at a time |
+| 5 | Two big buttons on the first question | review | Fixed: the quick start is a quiet text link under Continue |
+| 6 | The Learn card's Rimon was a still picture while every other screen had the animated Rimon | review | Fixed: he waves (first lesson) or points to the next one |
+| 7 | No browser test drove the new setup | review | Fixed: tests/firstminute.browser.test.js |
+
+After the fixes the gate passes: keyboard walk with no failures, axe and 200% zoom on 15 routes in light and dark with 0 findings, colour pairs as in the baseline. Not this lane's code, found on the way: `/calendar` has 12 axe label-in-name findings ("Download file" buttons whose spoken name omits those words, and day links), which `tests/a11y.fixes.test.js` reports once axe-core is installed in `tools/a11y`.
+
+The plan from here (each item says what done looks like):
+
+1. **Real phone and screen reader (owner or tester, about 30 minutes).** Done when: setup, the first lesson and Learn are walked once on an iPhone with VoiceOver and once on Android with TalkBack, and anything found is fixed. Nothing else on this list replaces it.
+2. **One Rimon (Rimon lanes, then this lane).** Done when: the stills have transparent backgrounds, one situation map is shared, and `rimonInline` uses a still where one exists and the animated sheet otherwise. Until then this lane keeps the animated sheets, which are on-model.
+3. **Opening prayer before setup on a first visit (owner decision).** Kept as ordered. Option if wanted: show the welcome first and the prayer after setup on day one only.
+4. **First-visit streak.** Kept: 5 engaged minutes lights a day. The flame says how many minutes are left; the next lesson button is under it.
+5. **Path stop card on tap.** A tap now opens the lesson. A small pop-over card (title, minutes, Start) like Duolingo's is the next step if testers miss it.
+6. **Progress and Brain Lab screen by screen.** They use the tokens; a pass on each with the same eye as setup is next.
+7. **Hero images.** Orders written (docs/images/orders/HERO-HOME-PRAYER-2026-11-10.md); swap-in code is written there for when the files land.
+
+## Round 5 (2026-11-10, about 4 AM): review of 587b503 (review round 3 of 5) and the next build
+
+**Review of the branch at 587b503 (score 84/100).** What it got right: one question per screen with Rimon, the lesson path as stops, every lesson ending with Rimon and the live flame, the gold prayer lettering as real text, hero orders that keep lettering out of generated images. What was wrong at that commit, found by the accessibility gate and fixed in e8de60b: header chips spoken without their number (every page), the header 260 px wide at 200% zoom, the memory-card button below contrast on dark green, the keyboard walk still on the old setup. Still wrong at that commit and fixed now:
+
+| # | Weakness | Fix (this round) |
+|---|---|---|
+| 1 | Progress had its own "daily goal" counted in review cards, next to the minutes goal shown in setup, Home, Learn and the header | Progress opens with the header's two numbers, large (streak and minutes against the setup goal); its card goal is now called the review goal |
+| 2 | A tapped locked stop did nothing | It now says which lesson opens it ("Opens after you finish ...") |
+| 3 | A new badge was saved silently (only the corner Rimon stretched) | A toast names the badge with a link to Awards, the moment it is saved |
+
+Checks this round: unit tier 3,368 tests, 1 failure (the `/calendar` axe finding outside this lane, listed in round 4); `tests/firstminute.browser.test.js` passes; the accessibility gate passes with no regression (keyboard, axe and zoom on 15 routes including Progress, contrast).
+
+**Plan to 95 to 100** (what done looks like):
+1. Real iPhone with VoiceOver and Android with TalkBack through setup, the first lesson, Learn and Progress (a person, about 30 minutes). Biggest remaining risk; no amount of headless checking replaces it.
+2. One Rimon: transparent stills plus one situation map; `rimonInline` uses a still where one exists.
+3. Hero images generated from the orders and swapped in; gold lettering stills checked by a Hebrew reader.
+4. The opening prayer after setup on day one (owner decision; kept as ordered until then).
+5. The `/calendar` label-in-name findings fixed by the calendar's owner.
+
 ## Score
 
-Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.
+Round 5: 91/100 (before this round: 89; the 587b503 commit reviewed at 84). Round 4: 89/100 (before this round: 86). Round 3: 86/100 (before this round: 82). Round 2: 82/100. Round 1: 72/100 for this round (first minute, look and consistency against Duolingo). What would raise it: the path as true round stops with a tap-to-open card; a lesson-complete screen for every lesson (not just the first) with Rimon and the flame; Rimon's move set used across Home, Progress and Brain Lab; a real-phone and screen-reader pass; streak-freeze and badge moments shown at the moment they happen.

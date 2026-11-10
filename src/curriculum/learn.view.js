@@ -16,6 +16,7 @@ import { el, heText, tr, replaceKeepingFocus, levelLabel, showSaveFailure, refoc
 import { loadState, completeLesson } from "./actions.js";
 import { streakVisible } from "../shell/comfort.js";
 import { DAILY_GOAL_KEY, normalizeDailyGoal } from "../home/today.js";
+import { rimonInline } from "../shell/rimon-inline.js";
 
 export function mount(root, ctx) {
   const q = ctx?.query || {};
@@ -104,7 +105,12 @@ function mountMap(root, ctx) {
           const state = isDone ? "done" : ready ? "available" : "locked";
           return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null,
             // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
-            onclick: state === "locked" ? null : (e) => { if (e?.target?.closest?.("button, a, summary")) return; ctx?.route?.(`/learn?lesson=${l.id}`); } },
+            onclick: (e) => {
+              if (e?.target?.closest?.("button, a, summary")) return;
+              if (state !== "locked") { ctx?.route?.(`/learn?lesson=${l.id}`); return; }
+              // a locked stop says what opens it, instead of doing nothing
+              const note = e?.currentTarget?.querySelector?.(".alef-locked-note"); if (note) { note.hidden = !note.hidden; if (note.hidden) note.setAttribute("hidden", ""); else note.removeAttribute("hidden"); }
+            } },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",
@@ -116,6 +122,7 @@ function mountMap(root, ctx) {
             // U-13: completing a lesson without opening it is a test-out, and
             // the button says so — the lesson itself is completed by its
             // quick check, after looking through it.
+            state === "locked" ? el("p", { class: "alef-locked-note", hidden: "", role: "note" }, (() => { const need = l.prerequisites.filter((p) => !done.has(p)).map((p) => `“${lessons.find((x) => x.id === p)?.title || p}”`); return need.length ? `Opens after you finish ${need.join(" and ")}.` : "Opens after the lesson before it."; })()) : null,
             state === "available" ? el("button", { type: "button", class: "alef-btn alef-btn-secondary", "aria-label": `Mark complete without studying it (test out): ${l.title}`,
               onclick: async function markDone() { try { await completeLesson(ctx, l); } catch (e) { if (alive) showSaveFailure(wrap, e, markDone); return; } await render(); if (alive) { h1.focus?.({ preventScroll: true }); refocusIfLost(wrap, "#view-title", h1); } } }, tr(ctx, "learn.markDone", "Test out")) : null);
         })),
@@ -127,9 +134,11 @@ function mountMap(root, ctx) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
     const streak = st?.streak?.count || 0;
     const goalMinutes = Math.round((st?.streak?.goal || 300) / 60);
-    // Rimon's still for this moment replaces the picture once it exists (src/shell/rimon-stage.js).
+    // Rimon waves (first lesson) or points to the next one, from the same animated sheets as setup and the lesson finish.
+    // When a still for this moment exists, rimon-stage.js can replace the picture (data-rimon-still).
     const still = !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next";
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
+    let pic; try { pic = rimonInline({ action: doneCount === 0 ? "wave" : "point", size: 96, label: "Rimon" }).el; pic.setAttribute("class", "rimon-inline alef-continue-rimon"); pic.setAttribute("data-rimon-still", still); } catch { pic = null; }
+    if (!pic) pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const say = !next ? "You finished every lesson in this track. Amazing!"
       : doneCount === 0 ? "Let's start! " + goalMinutes + " minutes counts for today. The whole first lesson takes about " + next.estMinutes + ", and you can stop and come back."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`

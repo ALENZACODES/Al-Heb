@@ -19,7 +19,7 @@ const v2 = (o) => ({ v: 2, count: 0, best: 0, last: null, todayDate: today, toda
 test('stat bar: no streak yet, minutes against the daily goal from setup', () => {
   const m = statModel({ streak: null, dailyGoal: 10, now: NOW });
   assert.equal(m.count, 0); assert.equal(m.lit, false); assert.equal(m.goalMin, 10); assert.equal(m.todayMin, 0); assert.equal(m.pct, 0);
-  assert.match(m.streakLabel, /No streak yet/);
+  assert.match(m.streakLabel, /^0-day streak/); assert.match(m.goalLabel, /^0\/10 minutes today/, 'the spoken name starts with the visible text');
 });
 test('stat bar: a lit day, minutes rounded down, goal met at the goal', () => {
   const m = statModel({ streak: v2({ count: 3, best: 3, last: today, todaySeconds: 10 * 60 + 59 }), dailyGoal: 10, now: NOW });
@@ -144,4 +144,16 @@ test('Rimon in the page falls back to the single picture when a sheet cannot loa
     assert.equal(r.el.attrs['data-fallback'], '1');
     assert.match(r.el.attrs.style, /MASCOT_rimon\.800\.webp/);
   } finally { globalThis.Image = saved; }
+});
+
+// ---------- round 5 ----------
+test('Progress opens with the header numbers (streak, minutes against the setup goal) and calls its card goal the review goal', () => {
+  const src = read('src/progress/progress.view.js');
+  assert.match(src, /statModel\(\{ streak: store\.get\('streak'\), dailyGoal: store\.get\(DAILY_GOAL_KEY\)/);
+  assert.match(src, /'Review goal '/); assert.doesNotMatch(src, /'Daily goal '\), sel/);
+});
+test('a tapped locked stop names the lesson that opens it; a new badge gets a toast with its name', () => {
+  assert.match(read('src/curriculum/learn.view.js'), /alef-locked-note[\s\S]*Opens after you finish/);
+  const sb = read('src/shell/statbar.js');
+  assert.match(sb, /key === 'awards\.v1'/); assert.match(sb, /New badge: \$\{name\}/);
 });

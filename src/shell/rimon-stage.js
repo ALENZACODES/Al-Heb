@@ -10,11 +10,28 @@
 import {
   TRIGGERS, stillPath, presentSet, pickStill, alreadySeen, lineFor, dayContext, greetingCandidates, routeTrigger,
   createAnswerTracker, ACTION_TRIGGERS, ANSWER_WINDOW_MS, streakChangeTrigger, labChangeTrigger, booksChangeTrigger,
-  awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES,
+  awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES, seasonTrigger,
 } from './rimon-triggers.js';
 import { projectStreak } from '../curriculum/streak.js';
 
 export const SEEN_KEY = 'rimon.seen.v1';
+/** Quiet days and screens (QUIET_DAYS, QUIET_ROUTES): Rimon and every still step aside. Injected by the stage so it works before any still exists. */
+export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero,body[data-rimon-quiet] .rimon-moment{display:none!important}body[data-rimon-quiet=day] img[data-rimon-still],body[data-rimon-quiet=day] img.alef-celebrate-rimon{visibility:hidden}'
+  // one Rimon on screen: another branch's floating Rimon (.alef-rimon-spot, .rimon-moment) sends the corner one away while it shows
+  + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}';
+/** Rimon pictures that views draw without a mark: the selector and how to pick the trigger. */
+const IMPLICIT = [['img.alef-celebrate-rimon', (acc) => (acc >= 0.9 ? 'lesson.complete.perfect' : acc >= 0.7 ? 'lesson.complete.great' : 'lesson.complete.done')]];
+/**
+ * Situations used by the shared showRimon(situation) hook (src/shell/rimon-show.js on overnight/launch-ready-2026-11-10)
+ * mapped to triggers, so that hook can ask the stage: registerRimonProvider(stage.urlsForSituation).
+ */
+export const SITUATION_TRIGGERS = Object.freeze({
+  home: 'greet.day', welcome: 'greet.first', onboarding: 'onboarding.letters', 'welcome-back': 'greet.back', 'lesson-start': 'learn.continue.next',
+  correct: 'answer.correct', wrong: 'answer.wrong', hint: 'answer.wrong.repeat', streak: 'goal.reached', 'streak-risk': 'streak.atrisk',
+  comeback: 'answer.comeback', 'lesson-complete': 'lesson.complete.great', 'next-lesson': 'lesson.next', idle: 'idle.fidget', loading: 'loading.slow',
+  empty: 'awards.empty', error: 'error.view', offline: 'offline.lost', shabbat: 'shabbat.day', 'brain-lab': 'lab.home', library: 'library.home',
+  award: 'award.new', reminder: 'reminder.streak',
+});
 const WATCHED = ['streak', 'awards.v1', 'lab.v1', 'books.finished.v1', 'curriculum.progress'];
 const IDLE_FIDGET_MS = 45000, IDLE_REPEAT_MS = 40000, IDLE_SLEEP_MS = 180000, LOADING_MS = 700, FLUSH_MS = 120;
 const CORRECT = /^answer\.(correct|comeback)/;
@@ -39,7 +56,8 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   const last = Object.fromEntries(WATCHED.map((k) => [k, read(k)]));
   let lastActivity = now().getTime(), fidgets = 0, lastFidget = 0, slept = false, activeMs = 0, lastTick = lastActivity, wasOffline = false;
   const breaksShown = new Set();
-  let toastEl = null, toastTimer = 0;
+  let toastEl = null, toastTimer = 0, lastAccuracy = null;
+  const onCelebrate = (e) => { const a = Number(e?.detail?.accuracy); if (Number.isFinite(a)) lastAccuracy = a; };
 
   function read(key, dflt = null) { try { const v = store?.get?.(key, dflt); return v === undefined ? dflt : v; } catch { return dflt; } }
   function seen() { const s = read(SEEN_KEY, null); return s && typeof s === 'object' ? s : {}; }
@@ -77,13 +95,47 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     if (q) body.dataset.rimonQuiet = q; else delete body.dataset.rimonQuiet;
   }
 
+  /** Load a still; resolves to the URL to show (a cut-out copy for the cream-background drawings) or null when it fails. */
   function preload(src) {
-    if (loadImage) return loadImage(src);
-    if (!images.has(src)) images.set(src, new Promise((resolve) => {
+    if (!images.has(src)) images.set(src, (loadImage ? Promise.resolve(loadImage(src)) : new Promise((resolve) => {
       const Img = win?.Image; if (typeof Img !== 'function') { resolve(false); return; }
-      const im = new Img(); im.onload = () => resolve(true); im.onerror = () => resolve(false); im.src = src;
-    }));
+      const im = new Img(); im.decoding = 'async'; im.onload = () => resolve(im); im.onerror = () => resolve(false); im.src = src;
+    })).then((r) => (r === true ? src : typeof r === 'string' ? r : r ? cutout(r, src) : null)).catch(() => null));
     return images.get(src);
+  }
+  /**
+   * The drawn set (art-map.mjs) has a flat cream background. Clear it to transparent by flood fill from the edges, with a
+   * soft rim, so Rimon sits cleanly on dark green pages and over the corner companion. Already transparent: unchanged.
+   */
+  async function cutout(im, src) {
+    try {
+      const w = im.naturalWidth, h = im.naturalHeight;
+      if (!w || !h || w * h > 1200 * 1200) return src;
+      const c = doc.createElement('canvas'); c.width = w; c.height = h;
+      const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(im, 0, 0);
+      const img = g.getImageData(0, 0, w, h), d = img.data;
+      const br = d[0], bg = d[1], bb = d[2];
+      if (d[3] < 250 || br + bg + bb < 600) return src; // transparent already, or not a light paper background
+      const dist = (i) => Math.abs(d[i] - br) + Math.abs(d[i + 1] - bg) + Math.abs(d[i + 2] - bb);
+      const NEAR = 48, EDGE = 120, seen = new Uint8Array(w * h), stack = [];
+      for (let x = 0; x < w; x++) stack.push(x, (h - 1) * w + x);
+      for (let y = 0; y < h; y++) stack.push(y * w, y * w + w - 1);
+      while (stack.length) {
+        const p = stack.pop();
+        if (seen[p]) continue;
+        const k = dist(p * 4);
+        if (k >= EDGE) continue;
+        seen[p] = 1;
+        d[p * 4 + 3] = k < NEAR ? 0 : Math.round(255 * (k - NEAR) / (EDGE - NEAR));
+        if (k >= NEAR) continue; // a rim pixel: softened, the fill stops here
+        const x = p % w;
+        if (x > 0) stack.push(p - 1); if (x < w - 1) stack.push(p + 1);
+        if (p >= w) stack.push(p - w); if (p < w * (h - 1)) stack.push(p + w);
+      }
+      g.putImageData(img, 0, 0);
+      const blob = await new Promise((r) => c.toBlob(r, 'image/png'));
+      return blob && win?.URL?.createObjectURL ? win.URL.createObjectURL(blob) : src;
+    } catch { return src; }
   }
 
   /** The still for a trigger, or null (no drawing yet, already shown, or Rimon is away). */
@@ -104,8 +156,9 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   async function pose(trigger, { vars = {}, ms = null, line = true } = {}) {
     if (!alive || hidden() || quiet() || typeof companion?.showStill !== 'function') return false;
     const p = choose(trigger);
-    if (!p || !(await preload(p.src)) || !alive) return false;
-    const shown = companion.showStill(p.src, { ms: ms ?? TRIGGERS[trigger].ms ?? 2000, line: line ? lineFor(trigger, vars) : null });
+    const url = p ? await preload(p.src) : null;
+    if (!url || !alive) return false;
+    const shown = companion.showStill(url, { id: p.id, ms: ms ?? TRIGGERS[trigger].ms ?? 2000, line: line ? lineFor(trigger, vars) : null });
     if (shown !== false) remember(trigger, p.iso);
     return shown !== false;
   }
@@ -115,16 +168,18 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     const p = choose(trigger, { ignoreSeen: true });
     if (!p) return false;
     const route = doc?.body?.dataset?.route;
-    if (!(await preload(p.src)) || !alive || doc?.body?.dataset?.route !== route) return false;
+    const url = await preload(p.src);
+    if (!url || !alive || doc?.body?.dataset?.route !== route) return false;
     const s = seen(), key = `line:${trigger}`, line = s[key] === p.iso ? null : lineFor(trigger);
-    companion.showStill(p.src, { line });
+    companion.showStill(url, { id: p.id, line });
     if (line) writeSeen({ [key]: p.iso });
     return true;
   }
   function figure(trigger, p, cls) {
     const fig = doc.createElement('figure'); fig.className = cls; fig.dataset.rimonTrigger = trigger;
-    const img = doc.createElement('img'); img.alt = ''; img.width = 200; img.height = 200; img.decoding = 'async'; img.src = p.src;
+    const img = doc.createElement('img'); img.alt = ''; img.width = 200; img.height = 200; img.decoding = 'async'; img.src = p.src; img.setAttribute('data-rimon-id', p.id);
     img.addEventListener?.('error', () => fig.remove());
+    preload(p.src).then((u) => { if (u && u !== p.src && img.getAttribute('src') === p.src) img.src = u; });
     fig.append(img);
     const l = lineFor(trigger);
     if (l) {
@@ -166,9 +221,10 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   async function nextToast() {
     const item = toasts.shift();
     if (!item || !alive) return;
-    if (!(await preload(item.p.src)) || !alive) { nextToast(); return; }
+    const url = await preload(item.p.src);
+    if (!url || !alive) { nextToast(); return; }
     const box = doc.createElement('div'); box.className = 'rimon-toast'; box.setAttribute('role', 'status'); box.setAttribute('aria-live', 'polite'); box.dataset.rimonTrigger = item.trigger;
-    const img = doc.createElement('img'); img.alt = ''; img.width = 72; img.height = 72; img.src = item.p.src;
+    const img = doc.createElement('img'); img.alt = ''; img.width = 72; img.height = 72; img.src = url; img.setAttribute('data-rimon-id', item.p.id);
     const text = doc.createElement('p'); text.className = 'rimon-toast-line';
     const l = lineFor(item.trigger, item.vars);
     if (l?.he) { const he = doc.createElement('span'); he.lang = 'he'; he.dir = 'rtl'; he.className = 'rimon-toast-he'; he.textContent = l.he; text.append(he); }
@@ -184,7 +240,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   /** Swap one marked picture for its still (or put it back). */
   function swap(img) {
     const want = img.getAttribute('data-rimon-still') || '';
-    if (img.dataset.rimonDone === want) return;
+    if (!TRIGGERS[want] || img.dataset.rimonDone === want) return; // not one of ours (another hook's mark): leave it alone
     img.dataset.rimonDone = want;
     let trigger = want;
     const f = facts(ctxNow());
@@ -194,17 +250,19 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     if (!p) { if (img.dataset.rimonShown) { img.src = img.dataset.rimonFallback; delete img.dataset.rimonShown; } return; }
     img.addEventListener('error', function back() { img.removeEventListener('error', back); if (img.dataset.rimonFallback) img.src = img.dataset.rimonFallback; delete img.dataset.rimonShown; });
     img.src = p.src; img.dataset.rimonShown = String(p.id);
+    preload(p.src).then((u) => { if (u && u !== p.src && img.dataset.rimonShown === String(p.id)) img.src = u; });
     remember(trigger, p.iso);
   }
   function fillSlot(el) {
     const want = el.getAttribute('data-rimon-slot') || '';
-    if (el.dataset.rimonDone === want) return;
+    if (!TRIGGERS[want] || el.dataset.rimonDone === want) return; // e.g. rimonSlot('welcome') from the shared hook fills itself
     el.dataset.rimonDone = want;
     if (!hero(want, el)) el.replaceChildren();
   }
   function scan() {
     scanTimer = 0;
     if (!alive || !doc?.querySelectorAll) return;
+    for (const [sel, pick] of IMPLICIT) for (const img of doc.querySelectorAll(sel)) if (!img.hasAttribute('data-rimon-still') && lastAccuracy != null) img.setAttribute('data-rimon-still', pick(lastAccuracy));
     for (const img of doc.querySelectorAll('img[data-rimon-still]')) swap(img);
     for (const el of doc.querySelectorAll('[data-rimon-slot]')) fillSlot(el);
     // one Rimon on screen: a swapped picture inside the page stands in for the corner companion
@@ -254,6 +312,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
       else if (/^answer\.wrong/.test(t) && !s['first.mistake']) trigger = 'first.mistake';
     }
     const line = trigger !== t || /^answer\.wrong\.(repeat|many)$/.test(t);
+    if (doc?.querySelector?.('.alef-rimon-spot, .rimon-moment:not([hidden])')) { if (TRIGGERS[trigger]?.once) remember(trigger, ctxNow().iso); return; } // a floating Rimon already answers
     pose(trigger, { line });
   }
   function onRimon(e) {
@@ -335,6 +394,8 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
   const unsub = store?.subscribe?.(onStore);
   doc?.addEventListener?.('alef:ready', onReady);
   doc?.addEventListener?.('alef:rimon', onRimon);
+  doc?.addEventListener?.('alef:celebrate', onCelebrate);
+  if (doc?.head && !doc.querySelector?.('style[data-rimon-quiet]')) { const st = doc.createElement('style'); st.setAttribute('data-rimon-quiet', ''); st.textContent = QUIET_CSS; doc.head.append(st); }
   for (const ev of actEvents) doc?.addEventListener?.(ev, activity, { passive: true, capture: true });
   win?.addEventListener?.('offline', onOffline);
   win?.addEventListener?.('online', onOnline);
@@ -368,7 +429,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     return true;
   });
 
-  return {
+  const handle = {
     ready,
     /** Show a trigger now (used by views and tests): returns whatever the surface returns. */
     show(trigger, vars = {}) {
@@ -380,6 +441,14 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
       return false;
     },
     get present() { return new Set(present); },
+    /** For the shared showRimon hook: still URLs for a situation, best first; [] means "show no Rimon now" (hidden, quiet, or none drawn). */
+    urlsForSituation(situation) {
+      const t = SITUATION_TRIGGERS[situation];
+      if (!t || hidden() || quiet()) return [];
+      const ctx = ctxNow(), season = situation === 'shabbat' || situation === 'home' ? seasonTrigger(ctx) : null;
+      const p = choose(season || t, { ignoreSeen: true });
+      return p ? [new URL(`../../${stillPath(p.id)}`, import.meta.url).href] : [];
+    },
     _test: { onReady, onRimon, onStore, tick, scan, greet, facts, ctxNow, get activeMs() { return activeMs; }, set activeMs(v) { activeMs = v; }, set lastActivity(v) { lastActivity = v; lastTick = v; } },
     destroy() {
       alive = false;
@@ -387,10 +456,15 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
       observer?.disconnect(); mainObserver?.disconnect(); unsub?.();
       doc?.removeEventListener?.('alef:ready', onReady);
       doc?.removeEventListener?.('alef:rimon', onRimon);
+      doc?.removeEventListener?.('alef:celebrate', onCelebrate);
       for (const ev of actEvents) doc?.removeEventListener?.(ev, activity, { capture: true });
       win?.removeEventListener?.('offline', onOffline);
       win?.removeEventListener?.('online', onOnline);
       toastEl?.remove();
     },
   };
+  // The shared showRimon hook (overnight/launch-ready-2026-11-10, src/shell/rimon-show.js) can ask for stills:
+  //   const p = globalThis.alefRimonStage?.urlsForSituation?.(situation); if (Array.isArray(p)) return p;   ([] = show no Rimon now)
+  if (doc && doc === globalThis.document) globalThis.alefRimonStage = handle;
+  return handle;
 }

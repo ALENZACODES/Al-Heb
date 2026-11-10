@@ -271,9 +271,7 @@ async function show(match, ctxBase, { quiet = false } = {}) {
 
 async function boot() {
   try { watchTitleCase(document.body); } catch { /* casing is cosmetic */ }
-  const rimon = mountRimon({store});
-  // Rimon's 200 stills (src/shell/rimon-stage.js): loaded after boot; shows nothing until the pictures exist.
-  import('./shell/rimon-stage.js').then((m) => m.mountRimonStage({ store, companion: rimon })).catch(() => {});
+  mountRimon({store});
   // Day-start stamp (Early Bird / Night Owl evidence): first opening of the day, before any study can happen.
   try { stampDayStart(store, Date.now()); } catch { /* stamp is an addition */ }
   // The skip link's #main href would be read by the hash router as the route "/main"; focus <main> directly instead.

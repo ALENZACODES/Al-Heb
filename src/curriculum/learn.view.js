@@ -120,10 +120,8 @@ function mountMap(root, ctx) {
   /** Duolingo-style "pick up where you left off": Rimon, the next lesson, one big button and a progress bar. */
   function continueCard(next, doneCount, total, st) {
     const pct = total ? Math.round((doneCount / total) * 100) : 0;
+    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const streak = st?.streak?.count || 0;
-    // Rimon's still for this moment replaces the picture once it exists (src/shell/rimon-stage.js).
-    const still = !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next";
-    const pic = el("img", { class: "alef-continue-rimon", alt: "", width: "96", height: "96", "data-rimon-still": still, src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href });
     const say = !next ? "You finished every lesson in this track. Amazing!"
       : doneCount === 0 ? "Let's start! Your first lesson takes about " + next.estMinutes + " minutes."
       : streak > 1 && !st.streak.activeToday ? `${streak} days in a row! One lesson keeps it going.`
@@ -132,6 +130,7 @@ function mountMap(root, ctx) {
     const goalPct = Math.round((secs / goal) * 100), mins = Math.floor(secs / 60), goalMin = Math.round(goal / 60);
     const ring = el("div", { class: "alef-goal-ring", style: `--p:${goalPct}`, role: "img", "aria-label": goalPct >= 100 ? "Daily goal reached" : `Today: ${mins} of ${goalMin} minutes` },
       el("span", {}, goalPct >= 100 ? "✓" : `${mins}/${goalMin}`), el("small", {}, goalPct >= 100 ? "Goal!" : "min today"));
+    pic.setAttribute("data-rimon-still", !next ? "learn.continue.alldone" : doneCount === 0 ? "learn.continue.first" : streak > 1 && !st.streak.activeToday ? "learn.continue.streak" : "learn.continue.next"); // Rimon's still for this moment (src/shell/rimon-stage.js)
     return el("div", { class: "alef-continue", role: "group", "aria-label": "Continue learning" },
       pic, ring,
       el("div", { class: "alef-continue-body" },

@@ -13,8 +13,8 @@ const all = (ids = STILL_IDS) => new Set(Object.values(ids).flat());
 const TORONTO = { lat: 43.6532, lon: -79.3832 };
 
 test('still paths are data/images/rimon/rimon-NNN.webp', () => {
-  assert.equal(stillPath(7), 'data/images/rimon/rimon-007.webp');
-  assert.equal(stillPath(200), 'data/images/rimon/rimon-200.webp');
+  assert.equal(stillPath('a007'), 'data/images/rimon/rimon-a007.webp');
+  assert.equal(stillPath('025b'), 'data/images/rimon/rimon-025b.webp');
 });
 
 test('festival days from the app calendar, plus Rosh Chodesh, Lag BaOmer, Tu B\'Av and festival eves', () => {
@@ -181,7 +181,7 @@ test('once rules and present.json parsing', () => {
   assert.equal(alreadySeen('streak.atrisk', { 'streak.atrisk': '2026-11-09' }, '2026-11-10'), false);
   assert.equal(alreadySeen('streak.atrisk', { 'streak.atrisk': '2026-11-10' }, '2026-11-10'), true);
   assert.equal(alreadySeen('answer.correct', { 'answer.correct': true }, '2026-11-10'), false);
-  assert.deepEqual([...presentSet({ ids: [1, 2, 2, 0, 201, 'x', 3.5] })], [1, 2]);
+  assert.deepEqual([...presentSet({ ids: ['023', '025b', 'a007', 'a007', 7, 'x', 'b001', '1234', '../x'] })], ['023', '025b', 'a007']);
   assert.deepEqual([...presentSet(null)], []);
   assert.deepEqual(lineFor('lab.streak', { n: 7 }), { en: '7 days of Brain Lab in a row!' });
   assert.equal(lineFor('answer.correct'), null);

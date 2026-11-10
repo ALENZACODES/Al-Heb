@@ -5,8 +5,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { STILLS, TRIGGER_DOCS, CHARACTER, STYLE, FRAMING, NEVER, RESPECT, PALETTE, REFERENCE, promptFor, pathOf } from '../tools/images/rimon/stills.mjs';
-import { validate, buildOutputs, stillIds, scanPresent, presentText, OUT } from '../tools/images/rimon/build.mjs';
+import { STILLS, TRIGGER_DOCS, CHARACTER, STYLE, FRAMING, NEVER, RESPECT, PALETTE, REFERENCE, promptFor, pathOf, fileId } from '../tools/images/rimon/stills.mjs';
+import { ART } from '../tools/images/rimon/art-map.mjs';
+import { validate, buildOutputs, stillIds, scanPresent, presentText, OUT, shortPrompt, MASTER_PROMPT } from '../tools/images/rimon/build.mjs';
 import { TRIGGERS, SURFACES, STILL_COUNT, stillPath, QUIET_DAYS } from '../src/shell/rimon-triggers.js';
 import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
 import { parseCsv } from '../tools/images/ingest_lib.mjs';
@@ -48,7 +49,8 @@ test('each prompt carries the four character blocks word for word, the still num
   for (const s of STILLS) {
     const p = promptFor(s);
     for (const block of [CHARACTER, STYLE, FRAMING, NEVER]) assert.ok(p.includes(block), `#${s.n} lost a block`);
-    assert.ok(p.includes(`#${String(s.n).padStart(3, '0')}`) && p.includes(REFERENCE));
+    assert.ok(p.includes(`still ${fileId(s.n)} `) && p.includes(REFERENCE));
+    assert.ok(shortPrompt(s).includes(s.pose) && shortPrompt(s).length < promptFor(s).length / 3, `#${s.n} short prompt`);
     assert.equal(p.includes(RESPECT), !!s.respect, `#${s.n} respect line`);
   }
   for (const c of Object.values(PALETTE)) assert.match(CHARACTER + STYLE, new RegExp(c));
@@ -74,14 +76,23 @@ test('no assistant, tool or vendor names in the catalogue, prompts or Rimon code
 test('the order sheet feeds the image ingest: 200 rows, every path has the 512 x 512 WebP spec', () => {
   const [head, ...rows] = parseCsv(read(OUT.csv));
   assert.equal(rows.length, 200);
-  const pi = head.indexOf('path'), qi = head.indexOf('prompt');
+  const pi = head.indexOf('path'), qi = head.indexOf('prompt'), si = head.indexOf('prompt_short');
   rows.forEach((r, i) => {
-    assert.equal(r[pi], pathOf(i + 1)); assert.equal(r[pi], stillPath(i + 1));
+    assert.equal(r[pi], pathOf(i + 1)); assert.equal(r[pi], stillPath(fileId(i + 1)));
+    assert.equal(r[si], shortPrompt(STILLS[i]));
     assert.deepEqual(specFor(r[pi]), { format: 'webp', width: 512, height: 512, alpha: true, quality: 88, kind: 'still' });
     assert.equal(r[qi], promptFor(STILLS[i]));
   });
   const targets = loadTargets(ROOT);
   assert.equal([...targets.values()].filter((t) => t.group === 'rimon-stills').length, 200);
+});
+
+test('two sets, one map: drawn pictures keep plain numbers and come first; catalogue stills are the a set', () => {
+  const ids = stillIds();
+  for (const [t, drawn] of Object.entries(ART)) assert.deepEqual(ids[t].slice(0, drawn.length), drawn, t);
+  for (const s of STILLS) { assert.match(fileId(s.n), /^a\d{3}$/); assert.ok(ids[s.trigger].includes(fileId(s.n))); }
+  assert.ok(Object.keys(ART).length >= 90, 'most triggers already have a drawn picture');
+  for (const block of [CHARACTER, STYLE, FRAMING, NEVER, RESPECT]) assert.ok(MASTER_PROMPT.includes(block));
 });
 
 test('stills and present.json ship with the app; the catalogue and prompts do not', () => {

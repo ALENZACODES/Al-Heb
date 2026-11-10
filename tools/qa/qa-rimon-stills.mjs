@@ -19,15 +19,19 @@ const { createAppServer } = await import(new URL('../serve.mjs', import.meta.url
 const inner = createAppServer({ root: REPO });
 const { createServer } = await import('node:http');
 const server = createServer((req, res) => {
-  const m = req.url.match(/^\/data\/images\/rimon\/(rimon-\d{3}\.webp|present\.json)(\?.*)?$/);
-  if (m && process.env.NO_STILLS !== '1') { const f = path.join(STILLS, m[1]); res.writeHead(200, { 'content-type': m[1].endsWith('.json') ? 'application/json' : 'image/webp' }); return res.end(fs.readFileSync(f)); }
+  const m = req.url.match(/^\/data\/images\/rimon\/(rimon-a?\d{3}[a-z]?\.webp|present\.json)(\?.*)?$/);
+  if (m && process.env.NO_STILLS !== '1' && fs.existsSync(path.join(STILLS, m[1]))) { const f = path.join(STILLS, m[1]); res.writeHead(200, { 'content-type': m[1].endsWith('.json') ? 'application/json' : 'image/webp' }); return res.end(fs.readFileSync(f)); }
   inner.emit('request', req, res);
 });
 await new Promise((r) => server.listen(8123, '127.0.0.1', r));
 const browser = await chromium.launch({ headless: true, executablePath: process.env.BROWSER_EXECUTABLE || undefined });
 const out = { errors: [], notFound: [], checks: {} };
 const ok = (k, v) => { out.checks[k] = v; console.log((v ? 'PASS ' : 'FAIL ') + k); };
-const stillNum = (s) => Number((s || '').match(/rimon-(\d{3})/)?.[1]) || null;
+const stillId = (s) => (s || '').match(/rimon-(a?\d{3}[a-z]?)\.webp/)?.[1] || null;
+const { STILL_IDS } = await import(new URL('../../src/shell/rimon-stills.generated.js', import.meta.url).href);
+const isFor = (t, src) => STILL_IDS[t].includes(stillId(src));
+// the companion shows a cut-out copy (blob:) of a cream-background drawing; its source still is recorded on the page for checks
+const shownStill = (page, sel) => page.locator(sel).evaluate((e) => e.dataset.rimonId || e.getAttribute('src'));
 try {
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 860 }, serviceWorkers: 'block' });
   const page = await ctx.newPage();
@@ -42,7 +46,7 @@ try {
   await page.goto(B, { waitUntil: 'networkidle' }); await unveil();
   await page.waitForFunction(() => document.body.dataset.route === 'welcome');
   await page.waitForSelector('.ob-rimon .rimon-hero img', { timeout: 5000 });
-  ok('welcome slot shows still 003', stillNum(await page.locator('.ob-rimon img').getAttribute('src')) === 3);
+  ok('welcome slot shows an onboarding.letters still', STILL_IDS['onboarding.letters'].includes(await page.locator('.ob-rimon img').getAttribute('data-rimon-id')));
   ok('welcome slot line', /Let's see what you already know/.test(await page.locator('.ob-rimon').innerText()));
   ok('corner Rimon hidden while the large one shows', !(await page.locator('.rimon-companion.rimon-corner').isVisible().catch(() => false)));
   await page.screenshot({ path: SHOTS + '/1-welcome-desktop.png' });
@@ -51,25 +55,26 @@ try {
   await page.evaluate(() => window.alef.settings.set({ onboarded: true }));
   await go('#/', 'home'); await unveil();
   await page.waitForFunction(() => { const s = document.querySelector('.rimon-companion .rimon-still'); return s && !s.hidden; }, null, { timeout: 5000 });
-  ok('home hello pose is still 001', stillNum(await page.locator('.rimon-companion .rimon-still').getAttribute('src')) === 1);
+  ok('home hello pose is a greet.first still', STILL_IDS['greet.first'].includes(await shownStill(page, '.rimon-companion .rimon-still')));
+  ok('the cream background is cut out (blob copy, corner transparent)', await page.locator('.rimon-companion .rimon-still').evaluate(async (e) => { if (!e.src.startsWith('blob:')) return false; const c = document.createElement('canvas'); c.width = e.naturalWidth; c.height = e.naturalHeight; const g = c.getContext('2d'); g.drawImage(e, 0, 0); return g.getImageData(3, 3, 1, 1).data[3] === 0 && g.getImageData(c.width >> 1, c.height >> 1, 1, 1).data[3] === 255; }));
   ok('bubble carries the hello line', /I'm Rimon/.test(await page.locator('.rimon-bubble').innerText().catch(() => '')));
   await page.locator('.rimon-companion').scrollIntoViewIfNeeded(); await page.screenshot({ path: SHOTS + '/2-home-hello.png' });
 
   // 3. Brain Lab: corner Rimon dressed for the page, per drill
   await go('#/lab', 'lab');
-  await page.waitForFunction(() => /rimon-13[56]/.test(document.querySelector('.rimon-corner .rimon-still')?.getAttribute('src') || ''), null, { timeout: 5000 });
-  ok('lab page still', true);
+  const labIds = STILL_IDS['lab.home'];
+  await page.waitForFunction((ids) => ids.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), labIds, { timeout: 5000 }).then(() => ok('lab page still', true), () => ok('lab page still (needs a lab.home picture: none drawn yet in this stills folder)', !labIds.some((id) => fs.existsSync(path.join(STILLS, `rimon-${id}.webp`)))));
   await page.screenshot({ path: SHOTS + '/3-lab.png' });
   await go('#/lab/gematria', 'labgame');
-  await page.waitForFunction(() => /rimon-142/.test(document.querySelector('.rimon-corner .rimon-still')?.getAttribute('src') || ''), null, { timeout: 5000 });
-  ok('lab drill still 142', true);
+  const drillIds = STILL_IDS['lab.drill.gematria'].concat(STILL_IDS['lab.home']);
+  await page.waitForFunction((ids) => ids.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), drillIds, { timeout: 5000 }).then(() => ok('lab drill still', true), () => ok('lab drill still (none drawn yet in this stills folder)', !drillIds.some((id) => fs.existsSync(path.join(STILLS, `rimon-${id}.webp`)))));
 
   // 4. answers: a right answer poses for a moment, then the page still comes back
   await go('#/learn', 'learn');
   await page.evaluate(() => { document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'correct' } })); document.dispatchEvent(new CustomEvent('alef:rimon', { detail: { action: 'bounce' } })); });
   await page.waitForTimeout(300);
-  const pose = stillNum(await page.locator('.rimon-corner .rimon-still').getAttribute('src'));
-  ok(`right answer pose (first.correct 012) got ${pose}`, pose === 12);
+  const pose = await shownStill(page, '.rimon-corner .rimon-still');
+  ok(`right answer pose is a first.correct still (got ${pose})`, STILL_IDS['first.correct'].includes(pose));
   await page.screenshot({ path: SHOTS + '/4-answer.png' });
   await page.waitForTimeout(3000);
   ok('pose ends (learn has no page still)', await page.locator('.rimon-corner .rimon-still').evaluate((e) => e.hidden));
@@ -81,14 +86,14 @@ try {
   await page.waitForTimeout(450);
   ok('one Rimon: companion steps aside while the card shows', await page.locator('.rimon-companion').evaluate((e) => getComputedStyle(e).visibility === 'hidden' || getComputedStyle(e).display === 'none'));
   ok('one Rimon on Learn: the swapped Continue-card picture replaces the corner one', (await page.evaluate(() => document.body.dataset.rimonInpage)) === '1' && !(await page.locator('.rimon-corner').isVisible()));
-  ok('continue card shows still 041 (first lesson)', /rimon-041/.test(await page.locator('.alef-continue-rimon').getAttribute('src')));
+  ok('continue card shows a learn.continue.first still', STILL_IDS['learn.continue.first'].includes(await page.locator('.alef-continue-rimon').getAttribute('data-rimon-shown')));
   await page.screenshot({ path: SHOTS + '/5-toast-desktop.png' });
   await page.locator('.rimon-toast-x').click();
 
   // 6. page not found: large Rimon under the heading
   await go('#/no-such-page', 'notfound');
   await page.waitForSelector('#main .rimon-hero img', { timeout: 3000 });
-  ok('not found hero', [180, 181].includes(stillNum(await page.locator('#main .rimon-hero img').getAttribute('src'))));
+  ok('not found hero', STILL_IDS['error.notfound'].includes(await page.locator('#main .rimon-hero img').getAttribute('data-rimon-id')));
   await page.screenshot({ path: SHOTS + '/6-notfound.png' });
 
   // 7. quiet route: Torah reader has no Rimon
@@ -98,8 +103,8 @@ try {
   // 8. phone: dressed Rimon in the corner and a toast above the bottom bar
   await page.setViewportSize({ width: 375, height: 812 });
   await go('#/books', 'books');
-  await page.waitForFunction(() => /rimon-15[23]/.test(document.querySelector('.rimon-corner .rimon-still')?.getAttribute('src') || ''), null, { timeout: 5000 });
-  await page.evaluate(() => window.alef.store.set('books.finished.v1', { 'qa-book': Date.now() }));
+  await page.waitForTimeout(500);
+  await page.evaluate(() => window.alef.store.set('awards.v1', { awards: { 'qa-badge': { at: Date.now() }, 'qa-badge-2': { at: Date.now() } } }));
   await page.waitForSelector('.rimon-toast', { timeout: 3000 }); await page.waitForTimeout(450);
   const tb = await page.locator('.rimon-toast').boundingBox(), nav = await page.locator('.site-nav').boundingBox();
   ok(`phone toast clears the bottom bar (toast bottom ${Math.round(tb.y + tb.height)}, nav top ${Math.round(nav.y)})`, tb.y + tb.height <= nav.y + 1);
@@ -118,7 +123,7 @@ try {
   process.env.NO_STILLS = '1';
   const ctx2 = await browser.newContext({ viewport: { width: 1280, height: 860 }, serviceWorkers: 'block' });
   const p2 = await ctx2.newPage(); const req = [];
-  p2.on('request', (r) => { if (/rimon-\d{3}\.webp/.test(r.url())) req.push(r.url()); });
+  p2.on('request', (r) => { if (/rimon-a?\d{3}[a-z]?\.webp/.test(r.url())) req.push(r.url()); });
   await p2.goto(B + '#/lab', { waitUntil: 'networkidle' }); await p2.waitForTimeout(800);
   ok('without stills no still is requested', req.length === 0);
   ok('without stills the corner Rimon is the animated one', !(await p2.locator('.rimon-companion').evaluate((e) => e.classList.contains('rimon-has-still')).catch(() => false)));

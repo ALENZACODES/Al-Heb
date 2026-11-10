@@ -77,25 +77,26 @@ export function mountRimon({store,doc=document}={}) {
     sprite.setAttribute('aria-label',`Rimon: ${caption.textContent}`);
   }
   let pageStill=null,posing=false,poseTimer=0,liftTimer=0;
-  function applyStill(src){
-    if(src){if(still.getAttribute('src')!==src)still.src=src;still.hidden=false;host.classList.add('rimon-has-still');}
-    else{still.hidden=true;host.classList.remove('rimon-has-still');}
+  let pageId='';
+  function applyStill(src,id=''){
+    if(src){if(still.getAttribute('src')!==src)still.src=src;still.dataset.rimonId=id;still.hidden=false;host.classList.add('rimon-has-still');}
+    else{still.hidden=true;still.dataset.rimonId='';host.classList.remove('rimon-has-still');}
   }
   /** Show a still: ms > 0 for a moment, then back to the page still (or the sprite); ms 0 sets the page still (null clears it). */
-  function showStill(src,{ms=0,line=null}={}){
+  function showStill(src,{ms=0,line=null,id=''}={}){
     if(!alive||hidden)return false;
     clearTimeout(liftTimer);
-    if(ms>0){clearTimeout(poseTimer);posing=true;applyStill(src);if(src)peekSoon();poseTimer=setTimeout(()=>{posing=false;applyStill(pageStill);},ms);}
-    else{pageStill=src||null;if(!posing)applyStill(pageStill);}
+    if(ms>0){clearTimeout(poseTimer);posing=true;applyStill(src,id);if(src)peekSoon();poseTimer=setTimeout(()=>{posing=false;applyStill(pageStill,pageId);},ms);}
+    else{pageStill=src||null;pageId=src?id:'';if(!posing)applyStill(pageStill,pageId);}
     if(line)speech.line(line);
     return true;
   }
-  function clearPose(){if(!posing)return;clearTimeout(poseTimer);posing=false;applyStill(pageStill);}
+  function clearPose(){if(!posing)return;clearTimeout(poseTimer);posing=false;applyStill(pageStill,pageId);}
   async function play(name){
     if(!ACTIONS[name] || hidden || !alive) return;
     if(name!=='blink'&&name!=='yawn'&&name!=='thinking'&&typeof peekSoon==='function')peekSoon();
     // Dressed for the page: step out of the still while a reaction plays, so the move is seen.
-    if(pageStill&&!posing&&!media?.matches&&ACTIONS[name].priority>0){applyStill(null);clearTimeout(liftTimer);liftTimer=setTimeout(()=>{if(!posing)applyStill(pageStill);},actionDuration(name));}
+    if(pageStill&&!posing&&!media?.matches&&ACTIONS[name].priority>0){applyStill(null);clearTimeout(liftTimer);liftTimer=setTimeout(()=>{if(!posing)applyStill(pageStill,pageId);},actionDuration(name));}
     if(media?.matches){speech.say(name);return;}
     const id=requestId;
     if(await load(name) && alive && id===requestId && !hidden && !media?.matches){animator.request(name,Date.now());paint();}
@@ -155,5 +156,9 @@ export function mountRimon({store,doc=document}={}) {
     else if(now>=nextBlink){nextBlink=now+6000;play('blink');}
   },32);
   const readyPromise=load('blink').then(ok=>{if(!alive)return false;if(!ok){sprite.style.backgroundImage=`url("${new URL('../../assets/img/gen/MASCOT_rimon.800.webp',import.meta.url).href}")`;sprite.style.backgroundSize='contain';clearInterval(timer);return false;}reduce();place();play('wave');return true;});
-  return {element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  let stage=null;
+  const api={element:host,play,showStill,clearPose,get pageStill(){return pageStill;},ready:readyPromise,destroy(){stage?.destroy?.();speech.destroy();observer?.disconnect();offStore?.();alive=false;requestId++;clearInterval(timer);clearTimeout(peekTimer);clearTimeout(poseTimer);clearTimeout(liftTimer);doc.defaultView?.removeEventListener?.('hashchange',onRoute);host.remove();restore.remove();doc.removeEventListener('alef:rimon',event);doc.removeEventListener('alef:ready',ready);doc.removeEventListener('pointerdown',activity);doc.removeEventListener('keydown',activity);media?.removeEventListener('change',reduce);}};
+  // Rimon's 200 stills (src/shell/rimon-stage.js) load after boot, on demand; until a picture exists nothing changes on screen.
+  if(doc===globalThis.document)import('./rimon-stage.js').then(m=>{if(alive)stage=m.mountRimonStage({store,companion:api});}).catch(()=>{});
+  return api;
 }

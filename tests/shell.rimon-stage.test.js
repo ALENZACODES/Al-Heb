@@ -8,7 +8,7 @@ import { createDocument, createWindow, createStore, ev, flush } from './rimon.fa
 const ALL = Object.values(STILL_IDS).flat();
 const live = [];
 afterEach(() => { for (const st of live.splice(0)) st.destroy(); }); // a failed assertion must not leave timers running
-const num = (src) => Number(String(src).match(/rimon-(\d{3})\.webp/)?.[1]);
+const num = (src) => String(src).match(/rimon-(a?\d{3}[a-z]?)\.webp/)?.[1] ?? null;
 
 function setup({ present = ALL, store = createStore(), date = new Date(2026, 10, 12, 14), route = 'home', hash = '#/' } = {}) {
   const doc = createDocument(), win = createWindow();
@@ -47,12 +47,12 @@ test('a missing present.json is the same as no drawings', async () => {
 test('Home: the first visit gets the hello still with its line, once', async () => {
   const s = setup();
   await s.stage.ready; await flush(5);
-  assert.equal(s.calls[0].id, 1);
+  assert.ok(STILL_IDS['greet.first'].includes(s.calls[0].id), 'greet.first');
   assert.match(s.calls[0].line.en, /I'm Rimon/);
   const seen = s.store.get(SEEN_KEY);
   assert.equal(seen['greet.first'], true); assert.equal(seen.firstDay, '2026-11-12');
   s.calls.length = 0; await s.ready();
-  assert.notEqual(s.calls[0]?.id, 1, 'hello is not repeated');
+  assert.ok(!STILL_IDS['greet.first'].includes(s.calls[0]?.id), 'hello is not repeated');
   s.stage.destroy();
 });
 
@@ -117,14 +117,14 @@ test('answers: echoes merge into one pose; the first answers of a new learner ge
   s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); s.doc.dispatchEvent(ev('alef:rimon', { action: 'bounce' }));
   await flush(160);
   assert.equal(s.calls.length, 1);
-  assert.equal(s.calls[0].id, STILL_IDS['first.correct'][0]); assert.ok(s.calls[0].ms > 0);
+  assert.ok(STILL_IDS['first.correct'].includes(s.calls[0].id), 'first.correct'); assert.ok(s.calls[0].ms > 0);
   const t0 = new Date(2026, 10, 12, 14).getTime();
   s.setNow(new Date(t0 + 5000)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); await flush(160);
   assert.ok(STILL_IDS['answer.correct'].includes(s.calls[1].id), 'then the ordinary right-answer stills');
   s.setNow(new Date(t0 + 10000)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'wrong' })); await flush(160);
-  assert.equal(s.calls[2].id, STILL_IDS['first.mistake'][0]);
+  assert.ok(STILL_IDS['first.mistake'].includes(s.calls[2].id), 'first.mistake');
   s.setNow(new Date(t0 + 15000)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'nervous' })); await flush(10);
-  assert.equal(s.calls[3].id, STILL_IDS['game.timelow'][0]);
+  assert.ok(STILL_IDS['game.timelow'].includes(s.calls[3].id), 'game.timelow');
   s.stage.destroy();
 });
 
@@ -164,7 +164,7 @@ test('marked pictures: lesson complete swaps by accuracy (first lesson ever gets
   const fresh = setup({ route: 'learn' }); await fresh.stage.ready;
   const im2 = fresh.doc.createElement('img'); im2.setAttribute('src', 'x.webp'); im2.setAttribute('data-rimon-still', 'lesson.complete.great'); fresh.main.append(im2);
   fresh.stage._test.scan();
-  assert.equal(num(im2.src), STILL_IDS['first.lesson'][0]);
+  assert.ok(STILL_IDS['first.lesson'].includes(num(im2.src)), 'first.lesson');
   s.stage.destroy(); fresh.stage.destroy();
 });
 
@@ -174,10 +174,10 @@ test('slots: the onboarding slot follows the step and empties when Rimon is hidd
   await s.stage.ready;
   const slot = s.doc.createElement('div'); slot.setAttribute('data-rimon-slot', 'onboarding.letters'); s.main.append(slot);
   s.stage._test.scan();
-  assert.equal(num(slot.querySelector('img').src), STILL_IDS['onboarding.letters'][0]);
+  assert.ok(STILL_IDS['onboarding.letters'].includes(num(slot.querySelector('img').src)), 'onboarding.letters');
   assert.match(slot.textContent, /Shalom/);
   slot.setAttribute('data-rimon-slot', 'onboarding.minutes'); s.stage._test.scan();
-  assert.equal(num(slot.querySelector('img').src), STILL_IDS['onboarding.minutes'][0]);
+  assert.ok(STILL_IDS['onboarding.minutes'].includes(num(slot.querySelector('img').src)), 'onboarding.minutes');
   store.set('rimon.dismissed', true);
   slot.setAttribute('data-rimon-slot', 'onboarding.plan'); s.stage._test.scan();
   assert.equal(slot.childNodes.length, 0);
@@ -194,7 +194,7 @@ test('idle: a fidget after 45 seconds, at most three, sleep after 3 minutes; act
   const fidgets = s.calls.filter((c) => STILL_IDS['idle.fidget'].includes(c.id));
   assert.equal(fidgets.length, 3);
   s.setNow(new Date(t0 + 181000)); s.stage._test.tick(); await flush(5);
-  assert.equal(s.calls.at(-1).id, STILL_IDS['idle.sleep'][0]);
+  assert.ok(STILL_IDS['idle.sleep'].includes(s.calls.at(-1).id), 'idle.sleep');
   s.doc.dispatchEvent(ev('pointerdown'));
   assert.equal(s.calls.at(-1).clear, true);
   s.stage.destroy();
@@ -214,4 +214,49 @@ test('offline and back online each get a card; Hide Rimon silences every card', 
   s.win.dispatch('offline'); await flush(450);
   assert.equal(s.doc.querySelector('.rimon-toast'), null);
   s.stage.destroy();
+});
+
+test('lesson complete without a mark: the celebration picture is found and matched to the score', async () => {
+  const s = setup({ route: 'learn', store: createStore({ 'curriculum.progress': { completed: { l1: 1, l2: 2, l3: 3 } } }) });
+  await s.stage.ready;
+  s.doc.dispatchEvent(ev('alef:celebrate', { kind: 'lesson', accuracy: 0.95 }));
+  const img = s.doc.createElement('img'); img.className = 'alef-celebrate-rimon'; img.setAttribute('src', 'm.webp'); s.main.append(img);
+  s.stage._test.scan();
+  assert.equal(img.getAttribute('data-rimon-still'), 'lesson.complete.perfect');
+  assert.ok(STILL_IDS['lesson.complete.perfect'].includes(num(img.src)));
+});
+
+test('the shared showRimon hook can ask the stage: URLs for a situation, none on a quiet day or when hidden', async () => {
+  const s = setup({ route: 'learn' });
+  await s.stage.ready;
+  const [u] = s.stage.urlsForSituation('correct');
+  assert.ok(STILL_IDS['answer.correct'].includes(num(u)));
+  assert.deepEqual(s.stage.urlsForSituation('no-such-situation'), []);
+  s.store.set('rimon.dismissed', true);
+  assert.deepEqual(s.stage.urlsForSituation('correct'), []);
+  const q = setup({ route: 'learn', date: new Date(2027, 7, 12, 10) }); // Tisha B'Av
+  await q.stage.ready;
+  assert.deepEqual(q.stage.urlsForSituation('correct'), []);
+});
+
+test('quiet-day rules are carried by the stage itself (no stylesheet edit needed)', async () => {
+  const { QUIET_CSS } = await import('../src/shell/rimon-stage.js');
+  for (const sel of ['.rimon-companion', '.rimon-bubble', '.rimon-toast', '.rimon-hero', '.rimon-moment']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet] ${sel}`), sel);
+});
+
+test('living with the shared showRimon hook: its slots and marks are left alone, and its floating Rimon answers instead of the corner one', async () => {
+  const s = setup({ route: 'welcome', store: createStore({ 'curriculum.progress': { completed: { l1: 1 } } }) });
+  await s.stage.ready; await flush(5);
+  const slot = s.doc.createElement('div'); slot.setAttribute('data-rimon-slot', 'welcome'); const theirs = s.doc.createElement('img'); slot.append(theirs); s.main.append(slot);
+  const mark = s.doc.createElement('img'); mark.setAttribute('data-rimon-still', 'correct'); mark.setAttribute('src', 'x.webp'); s.main.append(mark);
+  s.stage._test.scan();
+  assert.equal(slot.firstChild, theirs, 'their slot keeps its picture');
+  assert.equal(mark.getAttribute('src'), 'x.webp');
+  s.calls.length = 0;
+  const spot = s.doc.createElement('div'); spot.className = 'alef-rimon-spot'; s.doc.body.append(spot);
+  s.setNow(new Date(2026, 10, 12, 14, 5)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); await flush(160);
+  assert.equal(s.calls.length, 0, 'no second Rimon');
+  spot.remove();
+  s.setNow(new Date(2026, 10, 12, 14, 6)); s.doc.dispatchEvent(ev('alef:rimon', { action: 'correct' })); await flush(160);
+  assert.equal(s.calls.length, 1);
 });

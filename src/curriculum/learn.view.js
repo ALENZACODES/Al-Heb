@@ -100,7 +100,9 @@ function mountMap(root, ctx) {
           const ready = l.prerequisites.every((p) => done.has(p));
           const isDone = done.has(l.id);
           const state = isDone ? "done" : ready ? "available" : "locked";
-          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null },
+          return el("li", { class: `alef-lesson alef-lesson-${state}`, "data-lesson": l.id, hidden: far(idx) ? "" : null,
+            // a tap anywhere on an open stop opens it, like the round stops of a path (keyboard and screen readers use its Start or Review button)
+            onclick: state === "locked" ? null : (e) => { if (e?.target?.closest?.("button, a, summary")) return; ctx?.route?.(`/learn?lesson=${l.id}`); } },
             el("span", { class: "alef-level" }, levelLabel(l.level)), " ",
             el("strong", {}, l.title), " ",
             el("span", { class: "alef-min" }, `about ${l.estMinutes} min`), " ",

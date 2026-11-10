@@ -110,3 +110,20 @@ export const ART = Object.freeze({
   'listen.home': ['015'],
   'songs.home': ['094'],
 });
+
+// Catalogue stills that exist but must not be shown yet, with the reason. The app skips them (present.json leaves them
+// out) and each trigger falls back to the drawn set above. Remove an id once its fixed drawing is saved.
+export const HOLD = Object.freeze({
+  a012: 'A thin cream bar floats above the crown (left over from a frame). Redraw with nothing above the confetti.',
+  a014: 'A broken cream corner bracket sits right of and below Rimon (left over from a frame). Redraw with no frame lines.',
+});
+
+// Shown, but worth a second drawing when the next batch is made. Same prompt, plus the note.
+export const REDRAW = Object.freeze({
+  a019: 'Fist pump reads weakly: the raised fist is small and sits against the body. Raise it clear of the body outline.',
+  a021: 'Clapping hands overlap the sash and blend into it. Keep both hands above the sash, clearly apart from it.',
+  a030: 'Hands blend into the sash. Move them clear of the sash so the gesture reads at small sizes.',
+  a033: 'The pinching hand sits on the sash and is hard to see. Lift it to cheek height, clear of the sash.',
+  a035: 'Hands blend into the sash. Keep them out to the sides, clear of the sash.',
+  a045: 'The dark mortarboard almost disappears on dark backgrounds. Keep it, but add a gold tassel and a thin gold edge.',
+});

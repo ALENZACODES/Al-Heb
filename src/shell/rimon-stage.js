@@ -8,7 +8,7 @@
 // Nothing here changes scores, streaks or saved progress. Only stills listed in data/images/rimon/present.json are
 // ever requested, so until the pictures exist the app looks and behaves exactly as before. Every failure is silent.
 import {
-  TRIGGERS, stillPath, presentSet, pickStill, alreadySeen, lineFor, dayContext, greetingCandidates, routeTrigger,
+  TRIGGERS, stillPath, presentSet, presentFiles, pickStill, alreadySeen, lineFor, dayContext, greetingCandidates, routeTrigger,
   createAnswerTracker, ACTION_TRIGGERS, ANSWER_WINDOW_MS, streakChangeTrigger, labChangeTrigger, booksChangeTrigger,
   awardsChangeTrigger, lessonsChangeTrigger, breakTrigger, QUIET_ROUTES, seasonTrigger,
 } from './rimon-triggers.js';
@@ -16,7 +16,7 @@ import { projectStreak } from '../curriculum/streak.js';
 
 export const SEEN_KEY = 'rimon.seen.v1';
 /** Quiet days and screens (QUIET_DAYS, QUIET_ROUTES): Rimon and every still step aside. Injected by the stage so it works before any still exists. */
-export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero,body[data-rimon-quiet] .rimon-moment{display:none!important}body[data-rimon-quiet=day] img[data-rimon-still],body[data-rimon-quiet=day] img.alef-celebrate-rimon{visibility:hidden}'
+export const QUIET_CSS = 'body[data-rimon-quiet] .rimon-companion,body[data-rimon-quiet] .rimon-restore,body[data-rimon-quiet] .rimon-bubble,body[data-rimon-quiet] .rimon-toast,body[data-rimon-quiet] .rimon-hero,body[data-rimon-quiet] .rimon-moment{display:none!important}body[data-rimon-quiet=day] img[data-rimon-still],body[data-rimon-quiet=day] img.alef-celebrate-rimon,body[data-rimon-quiet=day] .rimon-inline,body[data-rimon-quiet=day] .alef-rimon-spot{visibility:hidden}'
   // one Rimon on screen: another branch's floating Rimon (.alef-rimon-spot, .rimon-moment) sends the corner one away while it shows
   + 'body:has(.alef-rimon-spot) .rimon-companion.rimon-corner,body:has(.alef-rimon-spot) .rimon-bubble,body:has(.rimon-moment:not([hidden])) .rimon-companion.rimon-corner,body:has(.rimon-moment:not([hidden])) .rimon-bubble{visibility:hidden}';
 /** Rimon pictures that views draw without a mark: the selector and how to pick the trigger. */
@@ -43,7 +43,7 @@ const IDLE_FIDGET_MS = 45000, IDLE_REPEAT_MS = 40000, IDLE_SLEEP_MS = 180000, LO
 const CORRECT = /^answer\.(correct|comeback)/;
 
 /** Root-relative URL of a still, resolved against this module so a sub-path deploy still works. */
-const urlOf = (id) => new URL(`../../${stillPath(id)}`, import.meta.url).href;
+const urlOf = (id, files) => new URL(`../../${stillPath(id, files)}`, import.meta.url).href;
 const presentUrl = () => new URL('../../data/images/rimon/present.json', import.meta.url).href;
 
 async function defaultFetchJson(url) {
@@ -54,10 +54,10 @@ async function defaultFetchJson(url) {
 
 /**
  * @param {{store:any, companion?:{showStill?:Function, clearPose?:Function}|null, doc?:Document, win?:any,
- *          fetchJson?:(url:string)=>Promise<any>, now?:()=>Date, present?:Iterable<number>|null, loadImage?:(src:string)=>Promise<boolean>}} opt
+ *          fetchJson?:(url:string)=>Promise<any>, now?:()=>Date, present?:Iterable<string>|{ids:string[], files?:Object<string,string>}|null, loadImage?:(src:string)=>Promise<boolean>}} opt
  */
 export function mountRimonStage({ store, companion = null, doc = globalThis.document, win = globalThis, fetchJson = defaultFetchJson, now = () => new Date(), present: given = null, loadImage = null } = {}) {
-  let alive = true, present = new Set(), observer = null, scanTimer = 0, flushTimer = 0, idleTimer = 0, loadTimer = 0, mainObserver = null;
+  let alive = true, present = new Set(), files = {}, observer = null, scanTimer = 0, flushTimer = 0, idleTimer = 0, loadTimer = 0, mainObserver = null;
   const counters = new Map(), tracker = createAnswerTracker(), images = new Map(), toasts = [], ready2 = new Map();
   const last = Object.fromEntries(WATCHED.map((k) => [k, read(k)]));
   let lastActivity = now().getTime(), fidgets = 0, lastFidget = 0, slept = false, activeMs = 0, lastTick = lastActivity, wasOffline = false;
@@ -150,7 +150,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     const ctx = ctxNow();
     if (!ignoreSeen && alreadySeen(trigger, seen(), ctx.iso)) return null;
     const p = pickStill(trigger, { present, now: now(), counters });
-    return p ? { ...p, src: urlOf(p.id), iso: ctx.iso } : null;
+    return p ? { ...p, src: urlOf(p.id, files), iso: ctx.iso } : null;
   }
   function remember(trigger, iso) {
     const once = TRIGGERS[trigger]?.once;
@@ -418,10 +418,11 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     return loaded;
   }
 
-  const ready = (given ? Promise.resolve({ ids: [...given] }) : fetchJson(presentUrl()).catch(() => null)).then((json) => {
+  const ready = (given ? Promise.resolve(given.ids ? given : { ids: [...given] }) : fetchJson(presentUrl()).catch(() => null)).then((json) => {
     if (!alive) return false;
     try { applyQuiet(ctxNow()); } catch { /* the calendar is optional here */ }
-    const listed = presentSet(json);
+    files = presentFiles(json);
+    const listed = new Set([...presentSet(json)].filter((id) => !id.startsWith('a') || files[id])); // a catalogue still needs its file name
     if (!listed.size) return false; // no stills yet: stay out of the way entirely
     // without the stylesheet a still would sit in the wrong place, so stills switch on only once it has loaded
     return Promise.resolve(styles()).then((ok) => { if (ok) present = listed; return ok; });

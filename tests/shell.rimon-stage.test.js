@@ -2,13 +2,15 @@
 import test, { afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { mountRimonStage, SEEN_KEY } from '../src/shell/rimon-stage.js';
-import { STILL_IDS, STILL_FILES } from '../src/shell/rimon-stills.generated.js';
+import { STILL_IDS } from '../src/shell/rimon-stills.generated.js';
+import { fileStem } from '../tools/images/rimon/stills.mjs';
 import { createDocument, createWindow, createStore, ev, flush } from './rimon.fakedom.js';
 
 const ALL = Object.values(STILL_IDS).flat();
 const live = [];
 afterEach(() => { for (const st of live.splice(0)) st.destroy(); }); // a failed assertion must not leave timers running
-const BY_FILE = Object.fromEntries(Object.entries(STILL_FILES).map(([id, f]) => [f, id]));
+const FILES = Object.fromEntries(Array.from({ length: 200 }, (_, i) => [`a${String(i + 1).padStart(3, '0')}`, fileStem(i + 1)])); // as present.json lists them
+const BY_FILE = Object.fromEntries(Object.entries(FILES).map(([id, f]) => [f, id]));
 /** Still id from a URL: v2/rimon-007-starting-line.webp -> 'a007'; rimon-023.webp -> '023'. */
 const num = (src) => { const m = String(src).match(/rimon\/(v2\/rimon-\d{3}-[a-z0-9-]+|rimon-[a-z0-9]+)\.webp/); if (!m) return null; return m[1].startsWith('v2/') ? BY_FILE[m[1]] ?? null : m[1].slice(6); };
 
@@ -21,7 +23,7 @@ function setup({ present = ALL, store = createStore(), date = new Date(2026, 10,
   const calls = [];
   const companion = { showStill: (src, o = {}) => { calls.push({ id: src ? num(src) : null, ms: o.ms || 0, line: o.line || null }); return true; }, clearPose: () => calls.push({ clear: true }) };
   let clock = date;
-  const stage = mountRimonStage({ store, companion, doc, win, present, now: () => clock, loadImage: async (src) => !/missing/.test(src) });
+  const stage = mountRimonStage({ store, companion, doc, win, present: { ids: [...present], files: FILES }, now: () => clock, loadImage: async (src) => !/missing/.test(src) });
   live.push(stage);
   return { doc, win, main, h1, store, stage, calls, setNow: (d) => { clock = d; }, ready: () => { doc.dispatchEvent(ev('alef:ready')); return flush(5); } };
 }
@@ -245,6 +247,8 @@ test('the shared showRimon hook can ask the stage: URLs for a situation, none on
 test('quiet-day rules are carried by the stage itself (no stylesheet edit needed)', async () => {
   const { QUIET_CSS } = await import('../src/shell/rimon-stage.js');
   for (const sel of ['.rimon-companion', '.rimon-bubble', '.rimon-toast', '.rimon-hero', '.rimon-moment']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet] ${sel}`), sel);
+  // on a day of mourning every Rimon picture goes, including the animated one inside pages and the floating one
+  for (const sel of ['img[data-rimon-still]', 'img.alef-celebrate-rimon', '.rimon-inline', '.alef-rimon-spot']) assert.ok(QUIET_CSS.includes(`body[data-rimon-quiet=day] ${sel}`), sel);
 });
 
 test('living with the shared showRimon hook: its slots and marks are left alone, and its floating Rimon answers instead of the corner one', async () => {

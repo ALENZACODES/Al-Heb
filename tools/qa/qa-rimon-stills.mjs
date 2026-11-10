@@ -1,6 +1,6 @@
 // Browser check for Rimon's stills (src/shell/rimon-stage.js). Serves the app with a stills folder of your choice in place of
 // data/images/rimon, then walks the moments: onboarding slot, Home hello, Brain Lab, an answer, a badge card, page not found,
-// a quiet Torah screen, a phone card, reduced motion, and the app with no stills at all. Nothing is written into the repo.
+// a quiet Torah screen, a phone card, reduced motion, the app with no stills at all, and a day of mourning. Nothing is written into the repo.
 //   python3 -I tools/qa/rimon-placeholders.py assets/img/gen/MASCOT_rimon.800.webp /tmp/rimon-stills   (or use real stills:
 //   RIMON_STILLS=data/images/rimon, after the pictures exist)
 //   RIMON_STILLS=/tmp/rimon-stills RIMON_SHOTS=/tmp/rimon-shots node tools/qa/qa-rimon-stills.mjs
@@ -66,12 +66,17 @@ try {
 
   // 3. Brain Lab: corner Rimon dressed for the page, per drill
   await go('#/lab', 'lab');
-  const labIds = STILL_IDS['lab.home'];
-  await page.waitForFunction((ids) => ids.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), labIds, { timeout: 5000 }).then(() => ok('lab page still', true), () => ok('lab page still (needs a lab.home picture: none drawn yet in this stills folder)', !labIds.some((id) => fs.existsSync(path.join(STILLS, `rimon-${id}.webp`)))));
+  // the stills the app may show for a trigger: its own drawn ones, else the first trigger down its fallback chain that has some
+  const { TRIGGERS, presentSet } = await import(new URL('../../src/shell/rimon-triggers.js', import.meta.url).href);
+  let present = new Set(); try { present = presentSet(JSON.parse(fs.readFileSync(path.join(STILLS, 'present.json'), 'utf8'))); } catch { /* no list: nothing drawn */ }
+  const expect = (t) => { for (let x = t, n = 0; x && n < 10; x = TRIGGERS[x].fallback, n++) { const l = (STILL_IDS[x] || []).filter((id) => present.has(id)); if (l.length) return l; } return []; };
+  const cornerIs = (ids) => page.waitForFunction((l) => l.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), ids, { timeout: 5000 }).then(() => true, () => false);
+  const labIds = expect('lab.home');
+  ok(`lab page still (${labIds.length ? 'one of ' + labIds.join(' ') : 'none drawn: animated Rimon'})`, labIds.length ? await cornerIs(labIds) : true);
   await page.screenshot({ path: SHOTS + '/3-lab.png' });
   await go('#/lab/gematria', 'labgame');
-  const drillIds = STILL_IDS['lab.drill.gematria'].concat(STILL_IDS['lab.home']);
-  await page.waitForFunction((ids) => ids.includes(document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId), drillIds, { timeout: 5000 }).then(() => ok('lab drill still', true), () => ok('lab drill still (none drawn yet in this stills folder)', !drillIds.some((id) => fs.existsSync(path.join(STILLS, `rimon-${id}.webp`)))));
+  const drillIds = expect('lab.drill.gematria');
+  ok(`lab drill still (${drillIds.length ? 'one of ' + drillIds.join(' ') : 'none drawn: animated Rimon'})`, drillIds.length ? await cornerIs(drillIds) : true);
 
   // 4. answers: a right answer poses for a moment, then the page still comes back
   await go('#/learn', 'learn');
@@ -80,7 +85,7 @@ try {
   // one Rimon answers: the corner pose, or (when the big-moment module runs) its pop-up with a picture chosen by the stage
   const ans = await page.evaluate(() => { const m = document.querySelector('.rimon-moment:not([hidden]) img'); return m ? { by: 'moment', src: m.getAttribute('src') } : { by: 'corner', id: document.querySelector('.rimon-corner .rimon-still')?.dataset.rimonId }; });
   const fileOf = (src) => (src || '').replace(/^.*data\/images\/rimon\//, '').replace(/\.webp$/, '');
-  const { STILL_FILES } = await import(new URL('../../src/shell/rimon-stills.generated.js', import.meta.url).href);
+  const STILL_FILES = JSON.parse(fs.readFileSync(path.join(STILLS, 'present.json'), 'utf8')).files || {};
   const idOf = (src) => { const f = fileOf(src); return f.startsWith('v2/') ? Object.keys(STILL_FILES).find((k) => STILL_FILES[k] === f) : f.replace(/^rimon-/, ''); };
   const answerIds = [...STILL_IDS['first.correct'], ...STILL_IDS['answer.correct']];
   ok(`right answer: one Rimon shows a stage-chosen still (${ans.by}: ${ans.id || ans.src})`, ans.by === 'corner' ? answerIds.includes(ans.id) : src_blob_or(ans.src, idOf, answerIds));
@@ -137,6 +142,20 @@ try {
   ok('without stills listed, no catalogue still is requested', req.length === 0);
   ok('without stills the corner Rimon is the animated one', !(await p2.locator('.rimon-companion').evaluate((e) => e.classList.contains('rimon-has-still')).catch(() => false)));
   await ctx2.close();
+  delete process.env.NO_STILLS;
+
+  // 11. a day of mourning (Tisha B'Av 5787, 12 Aug 2027): no Rimon anywhere, the animated in-page one included
+  const ctx3 = await browser.newContext({ viewport: { width: 1280, height: 860 }, serviceWorkers: 'block' });
+  const p3 = await ctx3.newPage();
+  p3.on('pageerror', (e) => out.errors.push(e.message));
+  await p3.clock.install({ time: new Date(2027, 7, 12, 10, 0) });
+  await p3.goto(B, { waitUntil: 'networkidle' }); await p3.evaluate(() => document.getElementById('alef-prayer-veil')?.remove());
+  await p3.evaluate(() => window.alef.settings.set({ onboarded: true }));
+  await p3.evaluate(() => { location.hash = '#/learn'; }); await p3.waitForFunction(() => document.body.dataset.route === 'learn'); await p3.waitForTimeout(800);
+  await p3.evaluate(() => { const a = document.createElement('span'); a.className = 'rimon-inline qa-probe'; a.textContent = 'x'; document.querySelector('#main')?.append(a); const b = document.createElement('div'); b.className = 'alef-rimon-spot qa-probe'; b.textContent = 'x'; document.body.append(b); });
+  const q = await p3.evaluate(() => ({ flag: document.body.dataset.rimonQuiet, companion: [...document.querySelectorAll('.rimon-companion')].some((e) => e.offsetParent && getComputedStyle(e).visibility !== 'hidden'), probes: [...document.querySelectorAll('.qa-probe')].map((e) => getComputedStyle(e).visibility) }));
+  ok(`mourning day: quiet flag set, no corner Rimon, in-page and floating Rimon hidden (${JSON.stringify(q)})`, q.flag === 'day' && !q.companion && q.probes.length === 2 && q.probes.every((v) => v === 'hidden'));
+  await ctx3.close();
 } catch (e) { console.log('ERROR', e.message); out.fatal = e.message; }
 finally { await browser.close(); server.close(); }
 const real404 = out.notFound.filter((u) => !/favicon/.test(u));

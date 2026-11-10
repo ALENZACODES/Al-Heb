@@ -116,16 +116,35 @@ function showTwin(kind) {
     if (node) node.textContent = text;
   } catch { /* a missing status line must not block the game */ }
 }
+/** Action sounds (a tick, a whoosh, a pop) may not repeat faster than this, so a busy game never rattles. */
+export const ACTION_GAP_MS = 90;
+/**
+ * The player games call. Two kinds of sound go through it:
+ *  - feedback (correct, gentle miss, streak): also writes the screen-reader line and moves Rimon;
+ *  - action sounds a game asks for by name (tick, whoosh, pop, collect, drop and the rest of SFX_FILES).
+ * Both obey the same media rules (src/audio/policy.js): nothing in the first minute, nothing before a first win, nothing while
+ * a voice is speaking, a cantor is singing or a prayer screen is open, and nothing when the learner has sound effects off.
+ * Injectable so Node can test it without audio.
+ */
+export function createGameSfx({ raw, policy = mediaPolicy, twin = showTwin, react = reactRimon, now = () => Date.now() } = {}) {
+  const last = new Map();
+  return Object.freeze({
+    ...raw,
+    pause: () => raw.pause(),
+    play(name) {
+      const kind = policy.feedbackName(name);
+      policy.observe(name);
+      if (kind) { twin(kind); react(kind === 'success' ? 'bounce' : kind === 'miss' ? 'sad' : 'stretch'); }
+      if (!policy.allowsSfx()) return false;
+      if (kind) return raw.play(kind);
+      if (!Object.hasOwn(SFX_FILES, name)) return false;
+      const t = now();
+      if (t - (last.get(name) ?? -Infinity) < ACTION_GAP_MS) return false;
+      last.set(name, t);
+      return raw.play(name);
+    },
+  });
+}
 const rawSfx = createSfxController();
-/** Games call this singleton. The small feedback set is correct, gentle miss, and streak. */
-export const sfx = Object.freeze({
-  ...rawSfx,
-  pause: () => rawSfx.pause(),
-  play(name) {
-    const kind = mediaPolicy.feedbackName(name);
-    mediaPolicy.observe(name);
-    if (kind) { showTwin(kind); reactRimon(kind === 'success' ? 'bounce' : kind === 'miss' ? 'sad' : 'stretch'); }
-    if (!kind || !mediaPolicy.allowsSfx()) return false;
-    return rawSfx.play(kind);
-  },
-});
+/** Games call this singleton. */
+export const sfx = createGameSfx({ raw: rawSfx });

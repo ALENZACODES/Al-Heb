@@ -79,3 +79,32 @@ test('exploratory ideas stay unbuilt: no three-mouth drill, no stress metronome,
   assert.equal(LISTEN_ITEMS.some((row) => row.timings), false);
   assert.equal(feedbackName('tick'), null);
 });
+
+test('game action sounds play by name once the media rules allow effects, and never rattle', async () => {
+  const { createGameSfx, ACTION_GAP_MS } = await import('../src/audio/sfx.js');
+  let t = 0; const played = []; const twins = []; const moves = [];
+  const policy = createMediaPolicy({ now: () => t });
+  const raw = { enter: () => () => {}, play: (n) => { played.push(n); return true; }, pause() {}, mute() {}, volume: (v) => v, preload() {}, enabled: () => true };
+  const game = createGameSfx({ raw, policy, twin: (k) => twins.push(k), react: (m) => moves.push(m), now: () => t });
+  assert.equal(game.play('whoosh'), false, 'nothing in the first minute');
+  t = QUIET_MS;
+  assert.equal(game.play('whoosh'), false, 'nothing before a first win');
+  assert.equal(game.play('success'), true);
+  assert.deepEqual(played, ['success']);
+  t += 1000;
+  assert.equal(game.play('whoosh'), true);
+  assert.equal(game.play('whoosh'), false, 'the same sound does not repeat at once');
+  assert.equal(game.play('tick'), true, 'a different sound may follow straight away');
+  t += ACTION_GAP_MS;
+  assert.equal(game.play('whoosh'), true);
+  assert.equal(game.play('error_soft'), true);
+  assert.equal(game.play('not-a-sound'), false);
+  assert.deepEqual(played, ['success', 'whoosh', 'tick', 'whoosh', 'miss']);
+  assert.deepEqual(twins, ['success', 'miss'], 'only feedback writes the status line');
+  assert.deepEqual(moves, ['bounce', 'sad'], 'only feedback moves Rimon');
+  policy.setSpeech(true);
+  t += 1000;
+  assert.equal(game.play('pop'), false, 'silent while a voice is speaking');
+  policy.clearSpeech(); policy.setRoute('listen-shelf');
+  assert.equal(game.play('pop'), false, 'silent on prayer screens');
+});

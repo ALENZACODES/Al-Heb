@@ -160,7 +160,10 @@ function renderNav(current) {
 }
 function setMore(open) {
   const more = document.getElementById('nav-more'), btn = document.getElementById('more-btn');
+  const was = more.classList.contains('open');
   more.classList.toggle('open', open); btn.setAttribute('aria-expanded', String(open));
+  // a soft sound when the sheet really opens or closes; the media rules (first minute, voice, prayer screens, the learner's setting) still decide
+  if (was !== !!open) { try { sfx.enter({ settings }); sfx.play(open ? 'open' : 'close'); } catch { /* sound is never required */ } }
 }
 function wireChrome() {
   const btn = document.getElementById('more-btn'), more = document.getElementById('nav-more');

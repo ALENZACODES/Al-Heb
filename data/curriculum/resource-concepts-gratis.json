@@ -1,0 +1,1169 @@
+{
+ "version": 1,
+ "generated": "2026-11-03",
+ "note": "Scores 0-1000 are the author's judgement of expected learner value, not measured outcomes. improvedScore equals score when no improvement was specced. riskAxis: higher is worse. evidence says how much of each source I actually saw. Only ideas are used; no text, vocabulary lists, audio or lyrics are copied.",
+ "axesKey": {
+  "r": "reading siddur or Torah aloud",
+  "i": "Israeli functional Hebrew",
+  "c": "beginner clarity",
+  "f": "fit with Aleph",
+  "risk": "originality risk, higher is worse"
+ },
+ "sources": {
+  "tmh": {
+   "name": "TeachMeHebrew.com",
+   "url": "https://www.teachmehebrew.com/",
+   "reached": true,
+   "licence": "Footer on every page: Copyright 2026 TeachMeHebrew, All Rights Reserved. Anki decks are described as free but no licence is stated.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "home",
+    "about",
+    "500 words",
+    "frequency list",
+    "lessons 1, 11, 14",
+    "dialogs 1, 8",
+    "R and KH page",
+    "alefbet song",
+    "phrasebook",
+    "signage",
+    "Anki page"
+   ]
+  },
+  "learn101": {
+   "name": "Learn101",
+   "url": "https://learn101.org/hebrew.php",
+   "reached": true,
+   "licence": "Copyright page: viewing for personal, non-commercial use only; electronic storage, modification, reproduction, distribution or any public or commercial use forbidden without permission.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "overview",
+    "alphabet",
+    "vocabulary 500",
+    "phrases",
+    "word practice guide",
+    "copyright"
+   ],
+   "notes": "Plain requests get HTTP 409/406 from a bot cookie challenge; it worked with the cookie header set."
+  },
+  "ben": {
+   "name": "Hebrew With Ben",
+   "url": "https://www.hebrewwithben.com/",
+   "reached": false,
+   "licence": "Unknown, not reachable",
+   "openlyLicensed": false,
+   "pagesRead": [],
+   "notes": "The session proxy refused the host (not on the allow list). No concepts recorded. Search results did not describe it."
+  },
+  "storyolive": {
+   "name": "StoryOlive (formerly StoryHebrew)",
+   "url": "https://storyolive.com/en/hebrew/stories",
+   "reached": true,
+   "licence": "Not stated on the listing page; terms and privacy are linked but not read. Some stories free, premium behind login.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "stories listing"
+   ]
+  },
+  "alh": {
+   "name": "A Little Hebrew reading trainer",
+   "url": "https://www.alittlehebrew.com/read/",
+   "reached": true,
+   "licence": "Not stated on the page or script I read (unstated).",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "trainer page",
+    "its public script",
+    "a few card JSON responses"
+   ]
+  },
+  "fsi": {
+   "name": "FSI Hebrew Basic Course via LiveLingua",
+   "url": "https://www.livelingua.com/project/fsi/Hebrew/",
+   "reached": false,
+   "licence": "A mirror (fsi-language-courses.org) states these courses are in the public domain. FSI courses are US government works; I did not confirm for this course or for the audio and I did not read the PDF.",
+   "openlyLicensed": "claimed by mirror, not verified",
+   "pagesRead": [
+    "mirror course page"
+   ],
+   "notes": "The LiveLingua page returned 403 to me, so I used the mirror's description."
+  },
+  "dli": {
+   "name": "DLI Hebrew Language Survival Kit",
+   "url": "https://fieldsupport.dliflc.edu/products/hebrew/he_bc_LSK/default.html",
+   "reached": true,
+   "licence": "Not stated on the pages I read. US government product; public domain status not verified.",
+   "openlyLicensed": "unverified",
+   "pagesRead": [
+    "menu",
+    "sounds",
+    "modules 1, 2, 10, 22"
+   ]
+  },
+  "goethe": {
+   "name": "Goethe-Verlag Book2 (50languages)",
+   "url": "https://www.goethe-verlag.com/book2/EN/ENHE/ENHE002.HTM",
+   "reached": true,
+   "licence": "Footer: copyright Goethe Verlag, all rights reserved. Free MP3 download is offered but no reuse licence appears on the pages I read.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "lesson 2",
+    "lesson 6 contents and exercise"
+   ]
+  },
+  "loecsen": {
+   "name": "Loecsen",
+   "url": "https://www.loecsen.com/en/learn-hebrew",
+   "reached": true,
+   "licence": "Footer: all rights reserved. A legal page exists but returned a bot-challenge error, so terms were not read.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "course landing page"
+   ]
+  },
+  "laits": {
+   "name": "University of Texas at Austin Hebrew (LAITS)",
+   "url": "https://hebrew.laits.utexas.edu/",
+   "reached": true,
+   "licence": "Materials may be used, quoted or linked for educational purposes without prior permission with credit to Dr. Raizen and UT Austin. Commercial use and duplication are strictly prohibited.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "home",
+    "tutorials index",
+    "video clips list",
+    "sound bites list"
+   ]
+  },
+  "wikibooks": {
+   "name": "Wikibooks Hebrew (Israeli Hebrew)",
+   "url": "https://en.wikibooks.org/wiki/Hebrew",
+   "reached": true,
+   "licence": "Creative Commons Attribution-ShareAlike (additional terms may apply), stated in the page footer.",
+   "openlyLicensed": true,
+   "pagesRead": [
+    "book home",
+    "contents",
+    "introduction alphabet",
+    "elementary lesson 1"
+   ]
+  },
+  "top625": {
+   "name": "User-supplied top-625 words sheet (structure only)",
+   "url": "research_notes/resources/words/top625-user-supplied.csv",
+   "reached": true,
+   "licence": "Unknown; supplied by the user, origin not recorded.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "whole file structure"
+   ],
+   "notes": "722 data rows in 27 blocks, so more than the 625 in the title. Used as an organisation reference only; no words reused."
+  },
+  "jewishmiami": {
+   "name": "Greater Miami Jewish Federation, Common Hebrew Words and Phrases",
+   "url": "https://jewishmiami.org/about/departments/missions/common_hebrew_words_and_phrases",
+   "reached": true,
+   "licence": "No content licence stated; the site has terms of service not read.",
+   "openlyLicensed": false,
+   "pagesRead": [
+    "phrase page"
+   ]
+  }
+ },
+ "concepts": [
+  {
+   "id": "gr-tmh-01",
+   "source": "tmh",
+   "name": "Four-step path: alphabet, basic words and phrases, grammar by example, dialogs",
+   "what": "The home page orders the site as Step 0 alphabet, Step 1 basic vocabulary (words, phrases, verbs, numbers, time), Step 2 thirty grammar-by-example lessons, Step 3 fifteen dialogs. Communicate first, rules after.",
+   "axes": {
+    "r": 300,
+    "i": 800,
+    "c": 700,
+    "f": 750,
+    "risk": 150
+   },
+   "score": 690,
+   "improvedScore": 690,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-tmh-02",
+   "source": "tmh",
+   "name": "Grammar by example with masculine and feminine versions of the same sentence side by side",
+   "what": "A grammar lesson opens with two or three lines of rule (for instance that the present-tense verb to be is not written) and then lists many parallel sentences, repeating each one in its masculine and feminine form with English, transliteration and Hebrew in three columns.",
+   "axes": {
+    "r": 250,
+    "i": 950,
+    "c": 850,
+    "f": 900,
+    "risk": 120
+   },
+   "score": 860,
+   "improvedScore": 965,
+   "improvedName": "Gender pair cards with both voices",
+   "spec": {
+    "screen": "Sentence pair card: the same sentence twice, one tinted per speaker/addressee gender, the differing letters highlighted. A voice button for Ari and one for Noa on each.",
+    "data": "genderPairs[] = {id, en, forms:{m:{he, translit}, f:{he, translit}}, differsAt:[charIndex...], grammarTag}. All sentences authored for Aleph; none copied from the site.",
+    "interaction": "Learner picks 'I am...' (m/f) in settings; the card shows their own form first. A quiz plays a voice and asks which gender was meant, then a second quiz asks to produce the other form by tapping the changed ending.",
+    "test": "Unit: every pair differs in at least one letter, differsAt indices point at real differing characters, both voices exist in the manifest or are flagged, and no sentence string is a copy of a TeachMeHebrew line (checked by a fixture of forbidden strings)."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Lesson pages 1, 11 and 14 read."
+  },
+  {
+   "id": "gr-tmh-03",
+   "source": "tmh",
+   "name": "Ten-thousand word frequency list kept in natural inflected and prefixed forms",
+   "what": "The list ranks 10,000 words from about five million words of mostly news and encyclopedia text. It leaves prefixes and suffixes attached on purpose, so the same lexeme appears many times, and it says its own order would differ for speech.",
+   "axes": {
+    "r": 450,
+    "i": 700,
+    "c": 650,
+    "f": 700,
+    "risk": 300
+   },
+   "score": 740,
+   "improvedScore": 940,
+   "improvedName": "Coverage meter on an owned frequency list",
+   "spec": {
+    "screen": "Vocabulary screen with a coverage meter: 'you can now read N% of the running words in the Israeli track texts'. Tap the meter to see the next five highest value words.",
+    "data": "Frequency source must be Aleph's own licence-clean list (spoken-style subtitles or Aleph corpus counts), computed in tools/, stored as word->rank with a provenance and licence field. Do not import this site's list.",
+    "interaction": "Each lesson reports newly covered words; the learner can mark words as known to adjust coverage; unknown high-rank words are queued as SRS cards.",
+    "test": "Unit: coverage is monotonic when a word is added, equals 100 for the full list, and every rank row has provenance and licence filled."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Page read (about 447 thousand characters of text). The corpus is written text; Aleph would want a spoken source for the Israel track and a prayer-text source for the read track."
+  },
+  {
+   "id": "gr-tmh-04",
+   "source": "tmh",
+   "name": "Five hundred basic words ordered alphabetically by Hebrew spelling",
+   "what": "The 500-word page lists English, transliteration and Hebrew in Hebrew alphabetical order, so a watermelon, a dad, and the word for but sit next to each other. It is a reference, not a learning order.",
+   "axes": {
+    "r": 150,
+    "i": 350,
+    "c": 400,
+    "f": 300,
+    "risk": 100
+   },
+   "score": 320,
+   "improvedScore": 320,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Anti-pattern for sequencing. Fine as a lookup index. The first words on the page alphabetically are mixed everyday and rare items, so frequency or theme is a better teaching order."
+  },
+  {
+   "id": "gr-tmh-05",
+   "source": "tmh",
+   "name": "Transliteration with hyphenated syllables and the stressed syllable marked",
+   "what": "Every transliteration on the site breaks words into hyphenated syllables and marks the stressed syllable by emphasis, with a stated rule that stress is final unless marked. Learners can see stress without knowing the script.",
+   "axes": {
+    "r": 780,
+    "i": 880,
+    "c": 850,
+    "f": 880,
+    "risk": 200
+   },
+   "score": 860,
+   "improvedScore": 960,
+   "improvedName": "Syllable chips with stress marking",
+   "spec": {
+    "screen": "Word line shows syllable chips (RTL order) with a stress dot or accent bar under the stressed chip; tapping a chip plays just that syllable; a toggle hides the Latin letters entirely.",
+    "data": "syllables[] and stressIndex on each word record, made by src/photo/syllabify.js plus a stress exceptions table (default final, milel exceptions listed); validated against audio syllable files where present.",
+    "interaction": "Learner taps chips; a drill plays a word and asks which chip is stressed; a second drill removes chips one by one.",
+    "test": "Unit: syllable join equals the word; stressIndex in range; the default-final rule yields the listed stress for the fixture words; exceptions table entries all appear in the corpus."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Prayer stress (milel/milra) matters for reading aloud and for cantillation readiness."
+  },
+  {
+   "id": "gr-tmh-06",
+   "source": "tmh",
+   "name": "A page that only drills the two hardest sounds, each with every vowel before and after",
+   "what": "One page drills ר and the ח/כ/ך sound with a grid: sound plus each of five vowels (onset) and each of five vowels plus sound (coda), all recorded by a native speaker, explained as the sounds learners find hardest.",
+   "axes": {
+    "r": 880,
+    "i": 860,
+    "c": 880,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 870,
+   "improvedScore": 965,
+   "improvedName": "Hard-sound lab grid with contrast words",
+   "spec": {
+    "screen": "Hard-sound lab: grid with rows for the target sound and columns for a, e, i, o, u in onset and coda. Alongside each cell a minimal-pair 'sounds like' contrast (for example chet versus he, resh versus lamed) drawn from Aleph's own word list.",
+    "data": "drills.json extension: {sound, cell:{position: onset|coda, vowel}, audioIds, contrastWith:[ids]}; audio per voice and tradition; fallback flags honest about TTS.",
+    "interaction": "Tap a cell to hear it; record-yourself (no scoring claimed) then compare waveform lengths only if a recording exists; a listen-and-pick test with the contrast word.",
+    "test": "Unit: 20 cells exist per sound (10 vowel cells onset and coda); every cell has a manifest id or a missing flag; contrastWith ids resolve in the corpus."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-tmh-07",
+   "source": "tmh",
+   "name": "Letter-order song using a picture for each early letter",
+   "what": "The page gives the lyrics of the Israeli children's alefbet song, mapping early letters to pictures (tent, house, camel, door) and then verse-chunking the rest of the order. Memorising order by melody and image.",
+   "axes": {
+    "r": 550,
+    "i": 650,
+    "c": 700,
+    "f": 600,
+    "risk": 600
+   },
+   "score": 620,
+   "improvedScore": 620,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "The lyrics are a copyrighted song; Aleph must write its own chant. Not reproduced here."
+  },
+  {
+   "id": "gr-tmh-08",
+   "source": "tmh",
+   "name": "Fifteen short scripted dialogs on everyday scenes (restaurant, directions, phone, family...)",
+   "what": "Each dialog is a short back-and-forth about one scene, shown line by line in three columns. The restaurant one runs from the host's greeting to ordering. Speaker labels are not visible in the page text, so turns are inferred.",
+   "axes": {
+    "r": 150,
+    "i": 900,
+    "c": 750,
+    "f": 850,
+    "risk": 150
+   },
+   "score": 820,
+   "improvedScore": 955,
+   "improvedName": "Role-swap dialogs with two voices",
+   "spec": {
+    "screen": "Two-lane chat view: Noa and Ari alternate; the learner takes one lane and the app voices the other. Tap any line for syllable chips and a gloss; a Swap button switches roles and re-inflects gendered forms.",
+    "data": "dialogs[] = {id, scene, turns:[{speaker: A|B, he, translit, en, gendered:[forms]}]} original Aleph scenes only; Aleph tags 20 scenes with the words they teach.",
+    "interaction": "Learner reads their lines aloud (no scoring claim), advances on tap or on a recognised phrase if speech recognition is added later; a cloze round hides the learner's own line.",
+    "test": "Unit: each dialog alternates speakers, gendered forms exist for both voices, every word is in the lesson word list or flagged new, and no turn matches a TeachMeHebrew line."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Dialog 1 and 8 read."
+  },
+  {
+   "id": "gr-tmh-09",
+   "source": "tmh",
+   "name": "Song and joke pages as reading and listening extras",
+   "what": "Twenty-odd song lyric pages and fourteen joke pages offer authentic Hebrew entertainment texts, listed as optional extras after the core steps.",
+   "axes": {
+    "r": 150,
+    "i": 500,
+    "c": 450,
+    "f": 350,
+    "risk": 750
+   },
+   "score": 380,
+   "improvedScore": 380,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "listing only; pages not opened",
+   "notes": "Lyrics are third-party copyrighted; Aleph should link out, not embed."
+  },
+  {
+   "id": "gr-tmh-10",
+   "source": "tmh",
+   "name": "Israeli signage page (photo plus reading plus translation)",
+   "what": "A page of real signs with the Hebrew, a transliteration and an English gloss (the page I read had one entry: the red shield of David sign). A small idea: teach reading from real signs.",
+   "axes": {
+    "r": 250,
+    "i": 820,
+    "c": 700,
+    "f": 800,
+    "risk": 200
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Pairs with the photo-scan lane. Aleph would need its own photographs."
+  },
+  {
+   "id": "gr-tmh-11",
+   "source": "tmh",
+   "name": "Request-a-phrase loop and colloquial register notes",
+   "what": "The phrasebook page collects requested everyday phrases in both genders (an informal screw-up phrase, an around-nine-thirty phrase, a request for a lift) with English glosses and some notes in brackets. Real spoken register, driven by user requests.",
+   "axes": {
+    "r": 100,
+    "i": 900,
+    "c": 700,
+    "f": 700,
+    "risk": 200
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "An in-app 'request a phrase' would need a backend or at least an email link; no claim is made that Aleph has one."
+  },
+  {
+   "id": "gr-tmh-12",
+   "source": "tmh",
+   "name": "Anki decks for the alphabet, words, verbs, phrases and numbers, with audio",
+   "what": "The site offers downloadable flash card decks with audio so the learner can use their own spaced repetition tool.",
+   "axes": {
+    "r": 350,
+    "i": 650,
+    "c": 600,
+    "f": 550,
+    "risk": 300
+   },
+   "score": 560,
+   "improvedScore": 560,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Aleph has its own FSRS-style scheduler. A CSV export of the learner's deck would be a trust feature."
+  },
+  {
+   "id": "gr-tmh-13",
+   "source": "tmh",
+   "name": "A frequency list built from one single text (Harry Potter in Hebrew)",
+   "what": "The menu lists a separate word-frequency list for one book. The idea, inferred from the title only, is a vocabulary list for one text.",
+   "axes": {
+    "r": 880,
+    "i": 300,
+    "c": 700,
+    "f": 880,
+    "risk": 200
+   },
+   "score": 780,
+   "improvedScore": 955,
+   "improvedName": "Pre-reading new-word list per prayer or portion",
+   "spec": {
+    "screen": "Text preview before reading: 'This prayer has 41 distinct words; you know 33; here are the 8 new ones with sound and meaning.'",
+    "data": "perText[] = {textId, tokens, lexemes:[{lemma, count, firstPosition}]} computed from the corpus registry, not from any external list.",
+    "interaction": "Learner studies the new words as a mini deck, then reads the text with those words highlighted on first appearance.",
+    "test": "Unit: lexeme counts sum to the text length; known/unknown counts add up; each new-word card links to an existing audio or a missing flag."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "title and menu entry only; page not opened"
+  },
+  {
+   "id": "gr-l101-01",
+   "source": "learn101",
+   "name": "Visible fourteen-step learning path in a side panel",
+   "what": "Every lesson page shows the whole path: alphabet, adjectives, nouns, plural, gender, numbers, phrases, grammar, vocabulary, a 500-word list, verbs, listening, a quiz, translation. The learner always sees where they are.",
+   "axes": {
+    "r": 200,
+    "i": 600,
+    "c": 700,
+    "f": 600,
+    "risk": 200
+   },
+   "score": 520,
+   "improvedScore": 520,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-l101-02",
+   "source": "learn101",
+   "name": "Alphabet table with a rough English keyword for each letter and finals listed as rows",
+   "what": "Each letter is given with a bracketed sound and an English example word (like moon, like town). Final forms get their own rows. It is unpointed and claims 26 letters, which does not match 22 plus 5 finals.",
+   "axes": {
+    "r": 350,
+    "i": 400,
+    "c": 500,
+    "f": 450,
+    "risk": 200
+   },
+   "score": 480,
+   "improvedScore": 480,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Counting error noted; vav is shown only as v, with no mention of o/u uses on the page snippet I read."
+  },
+  {
+   "id": "gr-l101-03",
+   "source": "learn101",
+   "name": "Short practice guides that move words from recognition to recall using concrete pictures",
+   "what": "Study-guide pages (3 minutes) advise: pick a small set, attach a concrete mental image to each word, copy the form exactly, then test by speaking the answers. Generic but sound practice.",
+   "axes": {
+    "r": 250,
+    "i": 550,
+    "c": 650,
+    "f": 550,
+    "risk": 200
+   },
+   "score": 520,
+   "improvedScore": 520,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Pages read; the advice is generic study technique."
+  },
+  {
+   "id": "gr-l101-04",
+   "source": "learn101",
+   "name": "Phrases grouped by situation on one page (greetings, emergency, directions, introductions, holiday wishes, travel)",
+   "what": "A single phrases lesson groups lines by situation with English and Hebrew side by side, including holiday wishes and hotel phrases.",
+   "axes": {
+    "r": 150,
+    "i": 780,
+    "c": 650,
+    "f": 650,
+    "risk": 300
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-sh-01",
+   "source": "storyolive",
+   "name": "Graded short stories labelled A1 to C2, filterable by topic, some free",
+   "what": "The site (renamed from StoryHebrew to StoryOlive) lists dozens of stories with level tags, topic tags (daily life, food, travel, holidays...) and a free flag. Content sits behind login and premium. I read only the listing.",
+   "axes": {
+    "r": 500,
+    "i": 850,
+    "c": 700,
+    "f": 800,
+    "risk": 350
+   },
+   "score": 780,
+   "improvedScore": 780,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "listing only; story texts not read",
+   "notes": "Aleph would write its own tiny pointed readers using only taught words."
+  },
+  {
+   "id": "gr-sh-02",
+   "source": "storyolive",
+   "name": "Placement test and free tools (alphabet, numbers, level test)",
+   "what": "Free tools include an alphabet page, numbers page and a Hebrew level test. A placement check lets a returning learner skip known material.",
+   "axes": {
+    "r": 400,
+    "i": 650,
+    "c": 650,
+    "f": 700,
+    "risk": 200
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "listing only; level test content not seen"
+  },
+  {
+   "id": "gr-alh-01",
+   "source": "alh",
+   "name": "Hear a syllable, pick the matching written card from two, with a tiny alphabet that grows",
+   "what": "The reading trainer plays a sound and shows two written cards; the learner picks the match as fast as they can, with guessing allowed. Sampling its card data showed it starts with two consonants on one vowel, then repeats syllables, then closes syllables and short words, adding one idea per level.",
+   "axes": {
+    "r": 950,
+    "i": 500,
+    "c": 950,
+    "f": 900,
+    "risk": 150
+   },
+   "score": 900,
+   "improvedScore": 975,
+   "improvedName": "Syllable ladder with confusable-aware distractors",
+   "spec": {
+    "screen": "Full-screen card pair (RTL), speaker button, level bar. After each answer the correct card flashes and its syllable is shown with letter-by-letter highlight. Tradition and voice follow settings.",
+    "data": "readLadder[] = {level, newLetters, newVowels, items:[{audioId, target, distractors:[near-miss ids]}]} generated from letters/niqqud data so distractors are real confusables (bet/vet, dalet/resh, qamats/patach).",
+    "interaction": "Sound plays; learner taps the match; correct streaks advance; two wrong in a row drops back a step. Items missed return in SRS. Ends with a real verse unlocked (Priestly Blessing opener).",
+    "test": "Unit: each level introduces at most one new letter or vowel, distractors are never homophones within the selected tradition, every item has an audio id, and ladder reaches all 27 letters and the 5 vowel families."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Idea is general decoding practice; no card data is copied. No licence stated on the page."
+  },
+  {
+   "id": "gr-alh-02",
+   "source": "alh",
+   "name": "Ladder graduates to real text (invites reading Genesis 1)",
+   "what": "At the end of all levels the trainer says the learner is ready to read and links to the first chapter of Genesis. A clear 'you can now read something real' moment.",
+   "axes": {
+    "r": 900,
+    "i": 300,
+    "c": 800,
+    "f": 900,
+    "risk": 150
+   },
+   "score": 760,
+   "improvedScore": 760,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Genesis 1 would be pointed text from a PD source in Aleph; the fit here is graduation to the priestly blessing opener."
+  },
+  {
+   "id": "gr-alh-03",
+   "source": "alh",
+   "name": "Sound effects and badges for levels and achievements",
+   "what": "Short ding sounds, a level-up reward and an achievements row give feedback without accounts; progress is kept in the address and a cookie.",
+   "axes": {
+    "r": 300,
+    "i": 300,
+    "c": 500,
+    "f": 500,
+    "risk": 200
+   },
+   "score": 400,
+   "improvedScore": 400,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-fsi-01",
+   "source": "fsi",
+   "name": "Transliteration scaffold removed over the course (script introduced alongside, then transliteration dropped)",
+   "what": "A description of the 40-unit FSI Basic Hebrew course (1965) says dialogs are transliterated in the early units, an alphabet introduction sits near the back and is meant to be studied in parallel, and later sections drop transliteration. The idea is to fade the scaffold.",
+   "axes": {
+    "r": 820,
+    "i": 850,
+    "c": 800,
+    "f": 900,
+    "risk": 100
+   },
+   "score": 850,
+   "improvedScore": 960,
+   "improvedName": "Per-word transliteration fading",
+   "spec": {
+    "screen": "Per-word scaffold dial: Latin letters shown, shown faintly, shown on tap, hidden. The dial position per word is set by that word's SRS strength, not by the lesson number.",
+    "data": "scaffold:{wordId, level 0-3} in learner store, updated by review outcomes; transliterate.js provides schemes; no new text data needed.",
+    "interaction": "As a word is answered correctly across days its transliteration fades; a miss raises the scaffold again. Learner can pin the scaffold on for a word.",
+    "test": "Unit: level never drops without a correct review, never exceeds bounds, and a fresh word starts at level 0 or 1 by setting."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "description of the course from a mirror page (fsi-language-courses.org); the FSI Hebrew PDF itself was not opened",
+   "notes": "The livelingua page returned a 403 to me."
+  },
+  {
+   "id": "gr-fsi-02",
+   "source": "fsi",
+   "name": "Unit shape of dialog, then drills, then exercises with audio per unit",
+   "what": "The mirror describes 40 units, each containing dialogs, drills and exercises, with over 22 hours of audio, designed for 1960s diplomats and aimed at informal educated spoken Hebrew. Pattern drilling after a dialog.",
+   "axes": {
+    "r": 150,
+    "i": 820,
+    "c": 650,
+    "f": 750,
+    "risk": 100
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "mirror description only",
+   "notes": "Vocabulary and register are from 1965; Aleph would treat the form (dialog then substitution drill) as the idea."
+  },
+  {
+   "id": "gr-dli-01",
+   "source": "dli",
+   "name": "A first module of sounds unfamiliar to English speakers, each with a like-as-in guide",
+   "what": "The survival kit opens its menu with a sounds-unfamiliar-to-English-speakers module, listing a handful of hard sounds with English approximations written in its own letter scheme.",
+   "axes": {
+    "r": 700,
+    "i": 780,
+    "c": 700,
+    "f": 800,
+    "risk": 200
+   },
+   "score": 740,
+   "improvedScore": 740,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Content is a short list of sounds; overlaps with the TeachMeHebrew sound page and Aleph's lane-3 drills."
+  },
+  {
+   "id": "gr-dli-02",
+   "source": "dli",
+   "name": "Survival-first topic ordering: commands, helpful words, greetings, emergencies, then niche vocabulary",
+   "what": "The 22-module kit starts with commands and warnings, then helpful words and questions, greetings, numbers, days and time, directions, emergency terms, food, medical terms. Military topics (ranks, mine warfare) make most of it irrelevant to a civilian learner.",
+   "axes": {
+    "r": 150,
+    "i": 700,
+    "c": 600,
+    "f": 550,
+    "risk": 100
+   },
+   "score": 560,
+   "improvedScore": 560,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Idea worth keeping: a small emergency card. Audio and PDF are offered as zip downloads; licence is not stated on the pages I read."
+  },
+  {
+   "id": "gr-gv-01",
+   "source": "goethe",
+   "name": "Progressive letter hiding: show all, every second letter, first letters only, none",
+   "what": "Each model sentence has four display levels in which the Hebrew and transliteration are masked more and more, so the learner reconstructs the line from partial cues.",
+   "axes": {
+    "r": 880,
+    "i": 820,
+    "c": 800,
+    "f": 900,
+    "risk": 120
+   },
+   "score": 860,
+   "improvedScore": 965,
+   "improvedName": "Fade-out recall for prayer lines and phrases",
+   "spec": {
+    "screen": "Retrieval strip for any pointed line: four stops (full, alternate letters, initials, blank) on a slider; tap a gap to fill with the on-screen Hebrew keyboard or a letter choice; syllable audio plays on completion.",
+    "data": "fadeLevels derived from the line's consonant skeleton and niqqud at render time (no new data); hiding rules keep niqqud with its letter; level stored per line in SRS.",
+    "interaction": "A correct full recall moves the line to the next fade level at its next review; a miss returns it to the previous level. Works for prayer lines and Israeli phrases.",
+    "test": "Unit: masking never hides a niqqud mark separately from its letter, level 3 is the empty string, reversing the fade restores the original line, and masked lines still render RTL."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Mechanic seen on a lesson page. Content is all rights reserved on the page footer."
+  },
+  {
+   "id": "gr-gv-02",
+   "source": "goethe",
+   "name": "One hundred short lessons built on a few model sentences each, travel-first themes",
+   "what": "The course has 100 lessons on themes from people and family through hotel, train, doctor and bank, then past tense, imperatives and conjunctions. Each lesson shows a run of model sentences with native audio.",
+   "axes": {
+    "r": 100,
+    "i": 780,
+    "c": 750,
+    "f": 700,
+    "risk": 200
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Free MP3 download exists but no reuse licence was stated on the pages I read; footer says all rights reserved."
+  },
+  {
+   "id": "gr-lo-01",
+   "source": "loecsen",
+   "name": "Staged lesson ladder: listen and repeat, pick meaning, reorder, find phrase from native language, type the missing word",
+   "what": "Every lesson walks the learner from comprehension to production with a fixed sequence of five test types, plus a speech recognition option in one browser and a certificate. It converts passive exposure into recall.",
+   "axes": {
+    "r": 500,
+    "i": 880,
+    "c": 850,
+    "f": 880,
+    "risk": 200
+   },
+   "score": 820,
+   "improvedScore": 955,
+   "improvedName": "Five-rung item ladder with gender-aware typing",
+   "spec": {
+    "screen": "Lesson progress rail with five rungs. Each rung is a different exercise on the same eight items; the rail shows which rungs have been cleared for each item.",
+    "data": "exerciseLadder[] = {itemId, rung: hear|meaning|order|produce|type, passedAt}; item pool authored by Aleph; the type exercise accepts gendered variants via accepted[].",
+    "interaction": "Items climb one rung per success and drop one on miss; the last rung feeds SRS. Reorder rung uses RTL word tiles; produce rung uses a prompt in the learner's language.",
+    "test": "Unit: ladder state machine never skips a rung, accepted[] answers are normalised for niqqud and final forms, and reorder tiles are shuffled but always solvable."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "course page read; exercises not run"
+  },
+  {
+   "id": "gr-lo-02",
+   "source": "loecsen",
+   "name": "Can-do level goals and a CEFR A1 claim (6 levels, 17 chapters, 40-65 hours)",
+   "what": "Levels are named by what the learner can do (say the essentials on arrival, find your way, order at a table, handle trouble) and linked to a certificate. Forty to sixty-five hours is the site's own estimate.",
+   "axes": {
+    "r": 100,
+    "i": 800,
+    "c": 750,
+    "f": 700,
+    "risk": 150
+   },
+   "score": 640,
+   "improvedScore": 640,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Time estimate and A1 claim are the site's, not checked by me."
+  },
+  {
+   "id": "gr-lo-03",
+   "source": "loecsen",
+   "name": "Word-tile reordering of a sentence (up to seven words)",
+   "what": "A rung asks the learner to put shuffled words into the right order. Hebrew puts the verb or adjective in places English does not.",
+   "axes": {
+    "r": 400,
+    "i": 800,
+    "c": 750,
+    "f": 750,
+    "risk": 250
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-la-01",
+   "source": "laits",
+   "name": "Units named for letters of the alphabet, each with flashcards then a cumulative vocabulary review every two to three units",
+   "what": "The tutorials page lists Unit Aleph, Unit Bet, Unit Gimel and so on, each with small flashcard sets, followed by review activities that combine the last two or three units (Aleph to Gimel, Dalet to Vav).",
+   "axes": {
+    "r": 200,
+    "i": 750,
+    "c": 700,
+    "f": 750,
+    "risk": 200
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "index page only; tutorial content not opened",
+   "notes": "Free for educational use with credit; commercial use prohibited."
+  },
+  {
+   "id": "gr-la-02",
+   "source": "laits",
+   "name": "Listening-first video scenes with transcripts held back",
+   "what": "The video page lists scenes (before class, a restaurant, buying clothes, planning a trip) and says transcripts are given only on accessibility request, so the learner must listen to understand. Not safe to copy; the mechanic is portable.",
+   "axes": {
+    "r": 100,
+    "i": 820,
+    "c": 700,
+    "f": 780,
+    "risk": 300
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "listing only; videos not watched",
+   "notes": "Accessibility transcripts must still be available in Aleph; reveal-after-attempt is the compromise."
+  },
+  {
+   "id": "gr-la-03",
+   "source": "laits",
+   "name": "Authentic voices: interviews with children, second-language learners and radio announcers",
+   "what": "A sound bites collection of interviews exposes learners to varied real speakers. Aleph would need its own consented recordings.",
+   "axes": {
+    "r": 50,
+    "i": 700,
+    "c": 500,
+    "f": 500,
+    "risk": 500
+   },
+   "score": 450,
+   "improvedScore": 450,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "listing only"
+  },
+  {
+   "id": "gr-wb-01",
+   "source": "wikibooks",
+   "name": "Alphabet table: letter, IPA, name, English keyword",
+   "what": "A four-column alphabet table gives each letter, IPA, name in Hebrew script and a keyword. Community text; some letter names are spelled in odd non-standard ways, and the IPA for resh follows a French r.",
+   "axes": {
+    "r": 400,
+    "i": 450,
+    "c": 550,
+    "f": 500,
+    "risk": 200
+   },
+   "score": 520,
+   "improvedScore": 520,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "CC BY-SA text; Aleph should not import the table, its own letters.json is the source."
+  },
+  {
+   "id": "gr-wb-02",
+   "source": "wikibooks",
+   "name": "Lesson page with four columns (English, pointed Hebrew, transliteration, IPA) and a short culture note",
+   "what": "Lesson 1 of the elementary course tabulates greeting words and pronouns in four columns, then gives notes such as the two usual replies to thanks.",
+   "axes": {
+    "r": 350,
+    "i": 800,
+    "c": 750,
+    "f": 800,
+    "risk": 250
+   },
+   "score": 740,
+   "improvedScore": 740,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Share-alike applies to copied text and tables; the structure is free to reuse."
+  },
+  {
+   "id": "gr-wb-03",
+   "source": "wikibooks",
+   "name": "Introduction unit on sounds, syllables, dagesh, vowel reduction, shva, spelling",
+   "what": "The contents page has a pronunciation and spelling block with those named topics before greetings. Only the contents were seen, not the pages.",
+   "axes": {
+    "r": 750,
+    "i": 500,
+    "c": 650,
+    "f": 800,
+    "risk": 200
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "contents page only"
+  },
+  {
+   "id": "gr-t625-01",
+   "source": "top625",
+   "name": "Domain-based topic blocks with Hebrew headings (27 blocks)",
+   "what": "The sheet groups words into 27 labelled blocks (animals, transport, location, clothing, colours, people, society, food, home, body, nature, directions, time, verbs, adjectives, pronouns, numbers...). Verbs, adjectives, pronouns and numbers get the biggest blocks.",
+   "axes": {
+    "r": 350,
+    "i": 780,
+    "c": 750,
+    "f": 800,
+    "risk": 100
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Block sizes counted from the file: 722 entries over 27 blocks, largest verbs 86, adjectives 67, numbers 61, pronouns 57. The title says top 625; the file has more rows."
+  },
+  {
+   "id": "gr-t625-02",
+   "source": "top625",
+   "name": "Unpointed Hebrew column beside a fully pointed column",
+   "what": "Each row has the English gloss, an everyday unpointed Hebrew form (partly pointed in places) and a fully pointed form. In the file 519 of 722 rows differ between the two Hebrew columns.",
+   "axes": {
+    "r": 920,
+    "i": 950,
+    "c": 850,
+    "f": 900,
+    "risk": 150
+   },
+   "score": 900,
+   "improvedScore": 975,
+   "improvedName": "Niqqud dial with plene check",
+   "spec": {
+    "screen": "Word card with a Niqqud dial: Unpointed (as Israelis write), Partial (vowel letters shown), Full (siddur style). The dial reveals marks with an animation and a tradition badge for any mark whose sound differs by tradition.",
+    "data": "words[].forms = {unpointed, full}; the partial level is computed (adds only matres lectionis). Forms validated by code point and by a check that stripping niqqud from full equals unpointed (modulo plene spelling).",
+    "interaction": "Learner reads in unpointed mode, taps to reveal; later tests show an unpointed word and ask for the sound; a siddur round shows full niqqud and asks for the sound by tradition.",
+    "test": "Unit: strip(full) equals unpointed for every word, or the difference is explained in a plene flag; the dial renders in RTL with marks attached to their letters."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Structure only; the words themselves are not reused. Source and licence of the sheet are not known to me."
+  },
+  {
+   "id": "gr-t625-03",
+   "source": "top625",
+   "name": "Slash-joined alternatives in one cell (car as two words, road as two words)",
+   "what": "Several rows give two Hebrew words separated by a slash for one English gloss, without saying which is colloquial or formal, or which is gendered.",
+   "axes": {
+    "r": 100,
+    "i": 850,
+    "c": 600,
+    "f": 700,
+    "risk": 100
+   },
+   "score": 700,
+   "improvedScore": 880,
+   "improvedName": "Register-tagged alternates",
+   "spec": {
+    "screen": "Word card shows primary and alternate with a register chip (everyday, formal, loan) and a short 'when' line.",
+    "data": "alternates[] = {he, register, note}; register assigned by Aleph's author, flagged unverified until a native reviewer signs off.",
+    "interaction": "Learner chooses which form fits a short context sentence; cards remember the choice.",
+    "test": "Unit: every slash row in the source style maps to an alternates[] list with a register value from the allowed set."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "Do not claim register accuracy without native review."
+  },
+  {
+   "id": "gr-t625-04",
+   "source": "top625",
+   "name": "Number words as built forms (102, 110, 111, 1,000, 10,000, ordinals)",
+   "what": "The numbers block spells out compound numbers and ordinals rather than just digits, so learners see how larger numbers are built.",
+   "axes": {
+    "r": 150,
+    "i": 850,
+    "c": 700,
+    "f": 750,
+    "risk": 100
+   },
+   "score": 720,
+   "improvedScore": 720,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-jm-01",
+   "source": "jewishmiami",
+   "name": "One-page travel card organised by situation (greetings and courtesies, shopping and dining, emergencies, getting around, days, seasons, numbers)",
+   "what": "A federation mission page lists words and phrases under seven situation headings with English and a transliteration. Compact enough to print as a pocket card.",
+   "axes": {
+    "r": 100,
+    "i": 820,
+    "c": 700,
+    "f": 800,
+    "risk": 150
+   },
+   "score": 680,
+   "improvedScore": 680,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-jm-02",
+   "source": "jewishmiami",
+   "name": "Speaker gender and addressee gender marked inline (male/female) for questions and statements",
+   "what": "Phrases that change by gender give both forms in one line, for example what is your name and how are you, and I want, so the traveller must pick the right one for themselves or the person they address.",
+   "axes": {
+    "r": 50,
+    "i": 950,
+    "c": 800,
+    "f": 950,
+    "risk": 100
+   },
+   "score": 840,
+   "improvedScore": 960,
+   "improvedName": "Say-as-me / hear-as-you gender selector",
+   "spec": {
+    "screen": "Settings-aware phrase card: 'You say' shows the form for the learner's gender, 'You hear' shows the form for the other person, and a small swap toggles who is addressed.",
+    "data": "gendered[] = {speaker: m|f, addressee: m|f, he, translit} for each phrase; derived from a short list of paradigms (verb, adjective, pronoun suffix) so errors are systematic.",
+    "interaction": "Learner chooses speaker and addressee in a two-chip control; audio plays in a matching voice (Ari or Noa); drills ask to switch the form when roles swap.",
+    "test": "Unit: every paradigm covers all four speaker/addressee pairs where grammar allows, forms differ only in the expected letters, and settings default to speaker form."
+   },
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read",
+   "notes": "The page's own labels are inconsistent (some pairs list female first); Aleph's control removes that ambiguity."
+  },
+  {
+   "id": "gr-jm-03",
+   "source": "jewishmiami",
+   "name": "Transliteration only, with no Hebrew script",
+   "what": "The phrase list shows English and an ad hoc Latin spelling for every item, with inconsistent spellings across the page. The learner never meets the script.",
+   "axes": {
+    "r": 0,
+    "i": 450,
+    "c": 350,
+    "f": 200,
+    "risk": 100
+   },
+   "score": 250,
+   "improvedScore": 250,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  },
+  {
+   "id": "gr-jm-04",
+   "source": "jewishmiami",
+   "name": "Culture notes inside the vocabulary (shared taxi versus regular taxi, corner grocery, change literally as leftovers)",
+   "what": "Some items carry a short gloss that explains how the thing works in Israel. Taxi has two kinds, change is an idiom, a small local grocery has its own word.",
+   "axes": {
+    "r": 50,
+    "i": 880,
+    "c": 650,
+    "f": 750,
+    "risk": 100
+   },
+   "score": 700,
+   "improvedScore": 700,
+   "improvedName": null,
+   "spec": null,
+   "printable": null,
+   "status": "proposed",
+   "evidence": "read"
+  }
+ ]
+}

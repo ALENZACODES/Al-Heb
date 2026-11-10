@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "path": "data/images/provenance.json",
+      "reason": "Intentional repo provenance record for images (licence/source trail). Its json-key and text-pattern findings are reported as allowlisted and do not fail the scan. The file is never edited by strip.mjs. Binary metadata inside any image is still a finding.",
+      "kinds": [
+        "json-key",
+        "text-pattern"
+      ]
+    },
+    {
+      "path": "data/pronunciation/variants/_vocab-3.json",
+      "reason": "The word dalleket (a real Hebrew vocabulary transliteration) matches the image-model text pattern; it is a false positive.",
+      "kinds": [
+        "text-pattern"
+      ]
+    },
+    {
+      "path": "data/pronunciation/runtime/lookup-01.json",
+      "reason": "The word dalleket (a real Hebrew vocabulary transliteration) matches the image-model text pattern; it is a false positive.",
+      "kinds": [
+        "text-pattern"
+      ]
+    }
+  ]
+}

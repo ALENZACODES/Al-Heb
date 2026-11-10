@@ -1,0 +1,139 @@
+name: render-accents
+# Sephardi / Ashkenazi clips made by the Israeli he-IL voices reading the tradition's English-letter respelling (owner decision
+# 2026-11-07 22:56, docs/audio/ACCENT-VOICES-2026-11-08.md). Manual only (workflow_dispatch): never on push, never on a schedule.
+# Needs the repository secret GOOGLE_TTS_API_KEY (Settings -> Secrets and variables -> Actions -> New repository secret).
+# Dispatch it FROM main: the result is committed as John Khan and pushed back to the branch it was dispatched on.
+# Steps: renderer (dry run or --execute) -> tempo cap on existing clips -> manifest marking (done by those two tools) -> summary and
+# dictionary lookup refresh -> targeted tests -> commit + push. With dry_run=true nothing is written or pushed; the log shows the
+# clip counts, characters and cost per tradition and every existing file over the cap.
+on:
+  workflow_dispatch:
+    inputs:
+      tradition:
+        description: 'Which tradition to render: sephardi, ashkenazi or both'
+        type: choice
+        options: [sephardi, ashkenazi, both]
+        default: both
+      kinds:
+        description: 'Manifest kinds, comma separated (letter,vowel,syllable,word,line,prayer)'
+        type: string
+        default: 'letter,vowel,syllable,word,line,prayer'
+      voice:
+        description: 'Voice slots: both (Ari and Noa), m or f'
+        type: choice
+        options: [both, m, f]
+        default: both
+      redo:
+        description: 'Re-render rows that already have a file (the retired respelled clips). false = missing rows only'
+        type: boolean
+        default: false
+      cap_existing:
+        description: 'After rendering, run the tempo cap over the existing clips of the tradition (re-admits capped files)'
+        type: boolean
+        default: true
+      dry_run:
+        description: 'true = print what would be sent, cost and the files over the cap; write and push nothing'
+        type: boolean
+        default: true
+      chirp:
+        description: 'Use the Chirp 3 HD voices instead of the approved WaveNet pair (reads Latin letters differently: listen first). Names below are unverified picks'
+        type: boolean
+        default: false
+      chirp_voice_m:
+        type: string
+        default: 'he-IL-Chirp3-HD-Charon'
+      chirp_voice_f:
+        type: string
+        default: 'he-IL-Chirp3-HD-Kore'
+permissions:
+  contents: write
+concurrency:
+  group: render-accents
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      LANG: C.UTF-8
+      TZ: UTC
+      TRADITION: ${{ inputs.tradition }}
+      KINDS: ${{ inputs.kinds }}
+      VOICE: ${{ inputs.voice }}
+      REDO: ${{ inputs.redo }}
+      CAP_EXISTING: ${{ inputs.cap_existing }}
+      DRY_RUN: ${{ inputs.dry_run }}
+      CHIRP: ${{ inputs.chirp }}
+      CHIRP_M: ${{ inputs.chirp_voice_m }}
+      CHIRP_F: ${{ inputs.chirp_voice_f }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with: { node-version: 22 }
+      - name: ffmpeg (loudness pass, duration measurement, tempo cap)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+      - name: Key present
+        if: ${{ inputs.dry_run == false }}
+        env:
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+        run: |
+          if [ -z "$GOOGLE_TTS_API_KEY" ]; then echo "GOOGLE_TTS_API_KEY secret is not set"; exit 1; fi
+      - name: Render (tools/audio/render_tts.mjs)
+        env:
+          GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
+        run: |
+          set -eu
+          args="--provider google --tradition $TRADITION --voice $VOICE --kinds $KINDS"
+          if [ "$REDO" = "true" ]; then args="$args --redo"; fi
+          if [ "$CHIRP" = "true" ]; then
+            export GOOGLE_TTS_ALLOW_HD=1 GOOGLE_TTS_VOICE_M="$CHIRP_M" GOOGLE_TTS_VOICE_F="$CHIRP_F"
+            echo "Chirp 3 HD voices requested: $CHIRP_M / $CHIRP_F (listen to a handful before trusting the batch)"
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            node tools/audio/render_tts.mjs $args
+          else
+            node tools/audio/render_tts.mjs $args --execute
+          fi
+      - name: Tempo cap on existing clips (tools/audio/tempo_cap.mjs)
+        if: ${{ inputs.cap_existing == true }}
+        run: |
+          set -eu
+          if [ "$TRADITION" = "both" ]; then list="sephardi ashkenazi"; else list="$TRADITION"; fi
+          for t in $list; do
+            if [ "$DRY_RUN" = "true" ]; then
+              node tools/audio/tempo_cap.mjs --tradition "$t" --voice "$VOICE" --kinds "$KINDS"
+            else
+              node tools/audio/tempo_cap.mjs --tradition "$t" --voice "$VOICE" --kinds "$KINDS" --execute
+            fi
+          done
+      - name: Manifest rows, summary and dictionary lookup
+        if: ${{ inputs.dry_run == false }}
+        run: |
+          set -eu
+          # The renderer and tempo_cap.mjs mark the manifest rows themselves (tools/audio/accent.mjs markAccentRows: status
+          # synthetic-unreviewed, source tts-respelled-israeli-voice / tts-respelled-tempo-capped). tools/tts/manifest_update.mjs is
+          # the local-pipeline marker (needs its render log and verify report) and does not apply here. Refresh what derives from the rows:
+          node tools/audio/summary.mjs
+          node tools/vocab/build-clip-lookup.mjs
+          git status --short | head -50
+          echo "admitted accent rows now in the manifests:"
+          node -e "import('./tools/audio/manifest_io.mjs').then(async (m) => { const { isAccentClip } = await import('./src/audio/player.js'); const all = m.loadManifestFull(); const n = {}; for (const e of all) if (isAccentClip(e)) n[e.tradition + '|' + e.kind + '|' + e.source] = (n[e.tradition + '|' + e.kind + '|' + e.source] || 0) + 1; console.log(n); })"
+      - name: Targeted tests
+        run: |
+          node --test tests/audio.accent-render.test.js tests/audio.tempo-cap.test.js tests/audio.tradition-playback.test.js \
+            tests/audio.player.test.js tests/audio.access.test.js tests/audio.labels.test.js tests/audio.tts.test.js tests/vocab.search.test.js tests/phrases.test.js
+          node tools/audio/summary.mjs --check
+      - name: Commit and push as John Khan
+        if: ${{ inputs.dry_run == false }}
+        run: |
+          set -eu
+          git config user.name "John Khan"
+          git config user.email "johnnykhan1@gmail.com"
+          git add audio data/audio data/vocab/clip-lookup.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          n=$(git diff --cached --name-only | grep -c '\.mp3$' || true)
+          git commit -m "Accent clips: $TRADITION ($KINDS, voice $VOICE): $n clip files rendered by the Israeli voices from the tradition's respelling or tempo-capped to 1.26x the Israeli clip; manifest rows admitted (unreviewed: nobody has listened yet)"
+          git push origin HEAD:${{ github.ref_name }}

@@ -1,0 +1,776 @@
+{
+"schema": "alef-lab-syllables/1",
+"source": "data/audio/manifest.json (Israeli syllable clips present in both voices)",
+"syllables": [
+{
+"id": "alef-a",
+"letter": "alef",
+"vowel": "a",
+"he": "אַ",
+"tr": "a"
+},
+{
+"id": "alef-e",
+"letter": "alef",
+"vowel": "e",
+"he": "אֶ",
+"tr": "e"
+},
+{
+"id": "alef-i",
+"letter": "alef",
+"vowel": "i",
+"he": "אִ",
+"tr": "i"
+},
+{
+"id": "alef-o",
+"letter": "alef",
+"vowel": "o",
+"he": "אֹ",
+"tr": "o"
+},
+{
+"id": "alef-u",
+"letter": "alef",
+"vowel": "u",
+"he": "אֻ",
+"tr": "u"
+},
+{
+"id": "bet-a",
+"letter": "bet",
+"vowel": "a",
+"he": "בַּ",
+"tr": "ba"
+},
+{
+"id": "bet-e",
+"letter": "bet",
+"vowel": "e",
+"he": "בֶּ",
+"tr": "be"
+},
+{
+"id": "bet-i",
+"letter": "bet",
+"vowel": "i",
+"he": "בִּ",
+"tr": "bi"
+},
+{
+"id": "bet-o",
+"letter": "bet",
+"vowel": "o",
+"he": "בֹּ",
+"tr": "bo"
+},
+{
+"id": "bet-u",
+"letter": "bet",
+"vowel": "u",
+"he": "בֻּ",
+"tr": "bu"
+},
+{
+"id": "gimel-a",
+"letter": "gimel",
+"vowel": "a",
+"he": "גַ",
+"tr": "ga"
+},
+{
+"id": "gimel-e",
+"letter": "gimel",
+"vowel": "e",
+"he": "גֶ",
+"tr": "ge"
+},
+{
+"id": "gimel-i",
+"letter": "gimel",
+"vowel": "i",
+"he": "גִ",
+"tr": "gi"
+},
+{
+"id": "gimel-o",
+"letter": "gimel",
+"vowel": "o",
+"he": "גֹ",
+"tr": "go"
+},
+{
+"id": "gimel-u",
+"letter": "gimel",
+"vowel": "u",
+"he": "גֻ",
+"tr": "gu"
+},
+{
+"id": "dalet-a",
+"letter": "dalet",
+"vowel": "a",
+"he": "דַ",
+"tr": "da"
+},
+{
+"id": "dalet-e",
+"letter": "dalet",
+"vowel": "e",
+"he": "דֶ",
+"tr": "de"
+},
+{
+"id": "dalet-i",
+"letter": "dalet",
+"vowel": "i",
+"he": "דִ",
+"tr": "di"
+},
+{
+"id": "dalet-o",
+"letter": "dalet",
+"vowel": "o",
+"he": "דֹ",
+"tr": "do"
+},
+{
+"id": "dalet-u",
+"letter": "dalet",
+"vowel": "u",
+"he": "דֻ",
+"tr": "du"
+},
+{
+"id": "he-a",
+"letter": "he",
+"vowel": "a",
+"he": "הַ",
+"tr": "ha"
+},
+{
+"id": "he-e",
+"letter": "he",
+"vowel": "e",
+"he": "הֶ",
+"tr": "he"
+},
+{
+"id": "he-i",
+"letter": "he",
+"vowel": "i",
+"he": "הִ",
+"tr": "hi"
+},
+{
+"id": "he-o",
+"letter": "he",
+"vowel": "o",
+"he": "הֹ",
+"tr": "ho"
+},
+{
+"id": "he-u",
+"letter": "he",
+"vowel": "u",
+"he": "הֻ",
+"tr": "hu"
+},
+{
+"id": "vav-a",
+"letter": "vav",
+"vowel": "a",
+"he": "וַ",
+"tr": "va"
+},
+{
+"id": "vav-e",
+"letter": "vav",
+"vowel": "e",
+"he": "וֶ",
+"tr": "ve"
+},
+{
+"id": "vav-i",
+"letter": "vav",
+"vowel": "i",
+"he": "וִ",
+"tr": "vi"
+},
+{
+"id": "vav-o",
+"letter": "vav",
+"vowel": "o",
+"he": "וֹ",
+"tr": "vo"
+},
+{
+"id": "vav-u",
+"letter": "vav",
+"vowel": "u",
+"he": "וֻ",
+"tr": "vu"
+},
+{
+"id": "zayin-a",
+"letter": "zayin",
+"vowel": "a",
+"he": "זַ",
+"tr": "za"
+},
+{
+"id": "zayin-e",
+"letter": "zayin",
+"vowel": "e",
+"he": "זֶ",
+"tr": "ze"
+},
+{
+"id": "zayin-i",
+"letter": "zayin",
+"vowel": "i",
+"he": "זִ",
+"tr": "zi"
+},
+{
+"id": "zayin-o",
+"letter": "zayin",
+"vowel": "o",
+"he": "זֹ",
+"tr": "zo"
+},
+{
+"id": "zayin-u",
+"letter": "zayin",
+"vowel": "u",
+"he": "זֻ",
+"tr": "zu"
+},
+{
+"id": "chet-a",
+"letter": "chet",
+"vowel": "a",
+"he": "חַ",
+"tr": "cha"
+},
+{
+"id": "chet-e",
+"letter": "chet",
+"vowel": "e",
+"he": "חֶ",
+"tr": "che"
+},
+{
+"id": "chet-i",
+"letter": "chet",
+"vowel": "i",
+"he": "חִ",
+"tr": "chi"
+},
+{
+"id": "chet-o",
+"letter": "chet",
+"vowel": "o",
+"he": "חֹ",
+"tr": "cho"
+},
+{
+"id": "chet-u",
+"letter": "chet",
+"vowel": "u",
+"he": "חֻ",
+"tr": "chu"
+},
+{
+"id": "tet-a",
+"letter": "tet",
+"vowel": "a",
+"he": "טַ",
+"tr": "ta"
+},
+{
+"id": "tet-e",
+"letter": "tet",
+"vowel": "e",
+"he": "טֶ",
+"tr": "te"
+},
+{
+"id": "tet-i",
+"letter": "tet",
+"vowel": "i",
+"he": "טִ",
+"tr": "ti"
+},
+{
+"id": "tet-o",
+"letter": "tet",
+"vowel": "o",
+"he": "טֹ",
+"tr": "to"
+},
+{
+"id": "tet-u",
+"letter": "tet",
+"vowel": "u",
+"he": "טֻ",
+"tr": "tu"
+},
+{
+"id": "yod-a",
+"letter": "yod",
+"vowel": "a",
+"he": "יַ",
+"tr": "ya"
+},
+{
+"id": "yod-e",
+"letter": "yod",
+"vowel": "e",
+"he": "יֶ",
+"tr": "ye"
+},
+{
+"id": "yod-i",
+"letter": "yod",
+"vowel": "i",
+"he": "יִ",
+"tr": "yi"
+},
+{
+"id": "yod-o",
+"letter": "yod",
+"vowel": "o",
+"he": "יֹ",
+"tr": "yo"
+},
+{
+"id": "yod-u",
+"letter": "yod",
+"vowel": "u",
+"he": "יֻ",
+"tr": "yu"
+},
+{
+"id": "kaf-a",
+"letter": "kaf",
+"vowel": "a",
+"he": "כַּ",
+"tr": "ka"
+},
+{
+"id": "kaf-e",
+"letter": "kaf",
+"vowel": "e",
+"he": "כֶּ",
+"tr": "ke"
+},
+{
+"id": "kaf-i",
+"letter": "kaf",
+"vowel": "i",
+"he": "כִּ",
+"tr": "ki"
+},
+{
+"id": "kaf-o",
+"letter": "kaf",
+"vowel": "o",
+"he": "כֹּ",
+"tr": "ko"
+},
+{
+"id": "kaf-u",
+"letter": "kaf",
+"vowel": "u",
+"he": "כֻּ",
+"tr": "ku"
+},
+{
+"id": "lamed-a",
+"letter": "lamed",
+"vowel": "a",
+"he": "לַ",
+"tr": "la"
+},
+{
+"id": "lamed-e",
+"letter": "lamed",
+"vowel": "e",
+"he": "לֶ",
+"tr": "le"
+},
+{
+"id": "lamed-i",
+"letter": "lamed",
+"vowel": "i",
+"he": "לִ",
+"tr": "li"
+},
+{
+"id": "lamed-o",
+"letter": "lamed",
+"vowel": "o",
+"he": "לֹ",
+"tr": "lo"
+},
+{
+"id": "lamed-u",
+"letter": "lamed",
+"vowel": "u",
+"he": "לֻ",
+"tr": "lu"
+},
+{
+"id": "mem-a",
+"letter": "mem",
+"vowel": "a",
+"he": "מַ",
+"tr": "ma"
+},
+{
+"id": "mem-e",
+"letter": "mem",
+"vowel": "e",
+"he": "מֶ",
+"tr": "me"
+},
+{
+"id": "mem-i",
+"letter": "mem",
+"vowel": "i",
+"he": "מִ",
+"tr": "mi"
+},
+{
+"id": "mem-o",
+"letter": "mem",
+"vowel": "o",
+"he": "מֹ",
+"tr": "mo"
+},
+{
+"id": "mem-u",
+"letter": "mem",
+"vowel": "u",
+"he": "מֻ",
+"tr": "mu"
+},
+{
+"id": "nun-a",
+"letter": "nun",
+"vowel": "a",
+"he": "נַ",
+"tr": "na"
+},
+{
+"id": "nun-e",
+"letter": "nun",
+"vowel": "e",
+"he": "נֶ",
+"tr": "ne"
+},
+{
+"id": "nun-i",
+"letter": "nun",
+"vowel": "i",
+"he": "נִ",
+"tr": "ni"
+},
+{
+"id": "nun-o",
+"letter": "nun",
+"vowel": "o",
+"he": "נֹ",
+"tr": "no"
+},
+{
+"id": "nun-u",
+"letter": "nun",
+"vowel": "u",
+"he": "נֻ",
+"tr": "nu"
+},
+{
+"id": "samekh-a",
+"letter": "samekh",
+"vowel": "a",
+"he": "סַ",
+"tr": "sa"
+},
+{
+"id": "samekh-e",
+"letter": "samekh",
+"vowel": "e",
+"he": "סֶ",
+"tr": "se"
+},
+{
+"id": "samekh-i",
+"letter": "samekh",
+"vowel": "i",
+"he": "סִ",
+"tr": "si"
+},
+{
+"id": "samekh-o",
+"letter": "samekh",
+"vowel": "o",
+"he": "סֹ",
+"tr": "so"
+},
+{
+"id": "samekh-u",
+"letter": "samekh",
+"vowel": "u",
+"he": "סֻ",
+"tr": "su"
+},
+{
+"id": "ayin-a",
+"letter": "ayin",
+"vowel": "a",
+"he": "עַ",
+"tr": "a"
+},
+{
+"id": "ayin-e",
+"letter": "ayin",
+"vowel": "e",
+"he": "עֶ",
+"tr": "e"
+},
+{
+"id": "ayin-i",
+"letter": "ayin",
+"vowel": "i",
+"he": "עִ",
+"tr": "i"
+},
+{
+"id": "ayin-o",
+"letter": "ayin",
+"vowel": "o",
+"he": "עֹ",
+"tr": "o"
+},
+{
+"id": "ayin-u",
+"letter": "ayin",
+"vowel": "u",
+"he": "עֻ",
+"tr": "u"
+},
+{
+"id": "pe-a",
+"letter": "pe",
+"vowel": "a",
+"he": "פַּ",
+"tr": "pa"
+},
+{
+"id": "pe-e",
+"letter": "pe",
+"vowel": "e",
+"he": "פֶּ",
+"tr": "pe"
+},
+{
+"id": "pe-i",
+"letter": "pe",
+"vowel": "i",
+"he": "פִּ",
+"tr": "pi"
+},
+{
+"id": "pe-o",
+"letter": "pe",
+"vowel": "o",
+"he": "פֹּ",
+"tr": "po"
+},
+{
+"id": "pe-u",
+"letter": "pe",
+"vowel": "u",
+"he": "פֻּ",
+"tr": "pu"
+},
+{
+"id": "tsadi-a",
+"letter": "tsadi",
+"vowel": "a",
+"he": "צַ",
+"tr": "tza"
+},
+{
+"id": "tsadi-e",
+"letter": "tsadi",
+"vowel": "e",
+"he": "צֶ",
+"tr": "tze"
+},
+{
+"id": "tsadi-i",
+"letter": "tsadi",
+"vowel": "i",
+"he": "צִ",
+"tr": "tzi"
+},
+{
+"id": "tsadi-o",
+"letter": "tsadi",
+"vowel": "o",
+"he": "צֹ",
+"tr": "tzo"
+},
+{
+"id": "tsadi-u",
+"letter": "tsadi",
+"vowel": "u",
+"he": "צֻ",
+"tr": "tzu"
+},
+{
+"id": "qof-a",
+"letter": "qof",
+"vowel": "a",
+"he": "קַ",
+"tr": "ka"
+},
+{
+"id": "qof-e",
+"letter": "qof",
+"vowel": "e",
+"he": "קֶ",
+"tr": "ke"
+},
+{
+"id": "qof-i",
+"letter": "qof",
+"vowel": "i",
+"he": "קִ",
+"tr": "ki"
+},
+{
+"id": "qof-o",
+"letter": "qof",
+"vowel": "o",
+"he": "קֹ",
+"tr": "ko"
+},
+{
+"id": "qof-u",
+"letter": "qof",
+"vowel": "u",
+"he": "קֻ",
+"tr": "ku"
+},
+{
+"id": "resh-a",
+"letter": "resh",
+"vowel": "a",
+"he": "רַ",
+"tr": "ra"
+},
+{
+"id": "resh-e",
+"letter": "resh",
+"vowel": "e",
+"he": "רֶ",
+"tr": "re"
+},
+{
+"id": "resh-i",
+"letter": "resh",
+"vowel": "i",
+"he": "רִ",
+"tr": "ri"
+},
+{
+"id": "resh-o",
+"letter": "resh",
+"vowel": "o",
+"he": "רֹ",
+"tr": "ro"
+},
+{
+"id": "resh-u",
+"letter": "resh",
+"vowel": "u",
+"he": "רֻ",
+"tr": "ru"
+},
+{
+"id": "shin-a",
+"letter": "shin",
+"vowel": "a",
+"he": "שַׁ",
+"tr": "sha"
+},
+{
+"id": "shin-e",
+"letter": "shin",
+"vowel": "e",
+"he": "שֶׁ",
+"tr": "she"
+},
+{
+"id": "shin-i",
+"letter": "shin",
+"vowel": "i",
+"he": "שִׁ",
+"tr": "shi"
+},
+{
+"id": "shin-o",
+"letter": "shin",
+"vowel": "o",
+"he": "שֹׁ",
+"tr": "sho"
+},
+{
+"id": "shin-u",
+"letter": "shin",
+"vowel": "u",
+"he": "שֻׁ",
+"tr": "shu"
+},
+{
+"id": "tav-a",
+"letter": "tav",
+"vowel": "a",
+"he": "תַ",
+"tr": "ta"
+},
+{
+"id": "tav-e",
+"letter": "tav",
+"vowel": "e",
+"he": "תֶ",
+"tr": "te"
+},
+{
+"id": "tav-i",
+"letter": "tav",
+"vowel": "i",
+"he": "תִ",
+"tr": "ti"
+},
+{
+"id": "tav-o",
+"letter": "tav",
+"vowel": "o",
+"he": "תֹ",
+"tr": "to"
+},
+{
+"id": "tav-u",
+"letter": "tav",
+"vowel": "u",
+"he": "תֻ",
+"tr": "tu"
+}
+]
+}

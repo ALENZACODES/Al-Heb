@@ -1,0 +1,12 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "כַּ",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Letter sound replaced 2026-11-08 by the kaf-a syllable (כַּ): the old clip was rendered from the bare letter, which the voice read as a clipped letter name (shin heard as 'shi'). Copied from audio/m/israeli/syllable/kaf-a.mp3; heard back as the syllable by tools/audio/asr-check.",
+ "inputTextKind": "hebrew"
+}

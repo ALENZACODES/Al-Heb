@@ -1,0 +1,179 @@
+{
+ "id": "book3",
+ "titleHe": "מַה יֵּשׁ בַּתִּיק?",
+ "titleTranslit": "Mah Yesh Ba-Tik?",
+ "titleEn": "What's in the Bag?",
+ "level": "Grade 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "מַה יֵּשׁ בַּתִּיק?",
+   "translit": "Mah yesh ba-tik?",
+   "en": "What is in the bag?",
+   "img": "assets/books/book3/BOOK3_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p01.mp3",
+    "m": "audio/m/israeli/book/book3-p01.mp3"
+   },
+   "illustration": "a worn leather messenger bag on a wooden bench at a Tel Aviv train station.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "יֵשׁ פּוֹ תַּפּוּחַ אָדֹם.",
+   "translit": "Yesh po tapuach adom.",
+   "en": "There is a red apple here.",
+   "img": "assets/books/book3/BOOK3_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p02.mp3",
+    "m": "audio/m/israeli/book/book3-p02.mp3"
+   },
+   "illustration": "a polished red apple lifted out of the bag against a crisp teal background.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "וְגַם סֵפֶר גָּדוֹל.",
+   "translit": "Ve-gam sefer gadol.",
+   "en": "And also a big book.",
+   "img": "assets/books/book3/BOOK3_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p03.mp3",
+    "m": "audio/m/israeli/book/book3-p03.mp3"
+   },
+   "illustration": "a thick hardcover book resting beside the apple.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "אֲבָל אֵיפֹה הַמַּפְתֵּחַ? הַמַּפְתֵּחַ פּוֹ!",
+   "translit": "Aval eifo ha-mafteach? Ha-mafteach po!",
+   "en": "But where is the key? The key is here!",
+   "img": "assets/books/book3/BOOK3_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p04.mp3",
+    "m": "audio/m/israeli/book/book3-p04.mp3"
+   },
+   "illustration": "an old brass key glinting in sunlight on top of the open bag.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "יֵשׁ פּוֹ גַּם עִפָּרוֹן.",
+   "translit": "Yesh po gam iparon.",
+   "en": "There is also a pencil here.",
+   "img": "assets/books/book3/BOOK3_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p05.mp3",
+    "m": "audio/m/israeli/book/book3-p05.mp3"
+   },
+   "illustration": "a single yellow pencil laid across the open bag's flap.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "וְגַם בָּנָנָה.",
+   "translit": "Ve-gam banana.",
+   "en": "And also a banana.",
+   "img": "assets/books/book3/BOOK3_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p06.mp3",
+    "m": "audio/m/israeli/book/book3-p06.mp3"
+   },
+   "illustration": "a banana curved over the apple like a smile.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "מַה עוֹד? מִשְׁקָפַיִם!",
+   "translit": "Mah od? Mishkafayim!",
+   "en": "What else? Glasses!",
+   "img": "assets/books/book3/BOOK3_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p07.mp3",
+    "m": "audio/m/israeli/book/book3-p07.mp3"
+   },
+   "illustration": "round reading glasses folded on top of the big book.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "אֲבָל אֵיפֹה הַסֵּפֶר? הִנֵּה הַסֵּפֶר!",
+   "translit": "Aval eifo ha-sefer? Hineh ha-sefer!",
+   "en": "But where is the book? Here is the book!",
+   "img": "assets/books/book3/BOOK3_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p08.mp3",
+    "m": "audio/m/israeli/book/book3-p08.mp3"
+   },
+   "illustration": "the bag stands open and empty-looking; a hand lifts the book from behind it.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "הַסֵּפֶר לֹא בַּתִּיק. הַסֵּפֶר עַל הַסַּפְסָל.",
+   "translit": "Ha-sefer lo ba-tik. Ha-sefer al ha-safsal.",
+   "en": "The book is not in the bag. The book is on the bench.",
+   "img": "assets/books/book3/BOOK3_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p09.mp3",
+    "m": "audio/m/israeli/book/book3-p09.mp3"
+   },
+   "illustration": "wide view of the bench — the book sits at its far end, in a patch of sun.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "וְאֵיפֹה אֲנִי? אֲנִי פּוֹ!",
+   "translit": "Ve-eifo ani? Ani po!",
+   "en": "And where am I? I am here!",
+   "img": "assets/books/book3/BOOK3_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p10.mp3",
+    "m": "audio/m/israeli/book/book3-p10.mp3"
+   },
+   "illustration": "the traveller steps into frame at the bench, waving at the reader.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "הַכֹּל בַּתִּיק. הַכֹּל טוֹב.",
+   "translit": "Ha-kol ba-tik. Ha-kol tov.",
+   "en": "Everything is in the bag. Everything is good.",
+   "img": "assets/books/book3/BOOK3_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p11.mp3",
+    "m": "audio/m/israeli/book/book3-p11.mp3"
+   },
+   "illustration": "the bag packed neatly — apple, book, key, pencil, banana, glasses in a row above it.",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "שָׁלוֹם, תִּיק! עַד מָחָר.",
+   "translit": "Shalom, tik! Ad machar.",
+   "en": "Goodbye, bag! Until tomorrow.",
+   "img": "assets/books/book3/BOOK3_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book3-p12.mp3",
+    "m": "audio/m/israeli/book/book3-p12.mp3"
+   },
+   "illustration": "the traveller walks down the platform, bag on shoulder, train lights ahead.",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ],
+ "hasImages": true,
+ "hasAudio": true
+}

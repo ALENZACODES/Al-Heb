@@ -1,0 +1,541 @@
+{
+ "version": 1,
+ "status": "draft-needs-native-review",
+ "proofread": false,
+ "needsNativeReview": true,
+ "note": "Original short dialogues written from topics only (nothing copied from any course, book or website). Pointing, grammar, gender agreement and transliteration are unchecked by a native speaker; transliteration is a plain Israeli-style spelling written by hand. Prices and place names are made up for practice. No audio exists for these lines. Nothing here was tested with learners.",
+ "dialogues": [
+  {
+   "id": "d-cafe",
+   "track": "israel",
+   "title": "At the cafe",
+   "topic": "ordering food and drink",
+   "level": "A1",
+   "unlockAfter": "il07",
+   "setting": "A woman orders a coffee and a cake at a cafe counter.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Waiter (man)"
+    },
+    {
+     "id": "b",
+     "name": "Dana (woman)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-cafe-l1",
+     "speaker": "a",
+     "he": "שָׁלוֹם! מָה תִּרְצִי?",
+     "translit": "shalom! ma tirtsi?",
+     "en": "Hello! What would you like?"
+    },
+    {
+     "id": "d-cafe-l2",
+     "speaker": "b",
+     "he": "אֲנִי רוֹצָה קָפֶה הָפוּךְ, בְּבַקָּשָׁה.",
+     "translit": "ani rotsa kafe hafuch, bevakasha.",
+     "en": "I'd like a cafe hafuch (a milky coffee), please."
+    },
+    {
+     "id": "d-cafe-l3",
+     "speaker": "a",
+     "he": "עוֹד מַשֶּׁהוּ?",
+     "translit": "od mashehu?",
+     "en": "Anything else?"
+    },
+    {
+     "id": "d-cafe-l4",
+     "speaker": "b",
+     "he": "כֵּן, גַּם עוּגָה. כַּמָּה זֶה?",
+     "translit": "ken, gam uga. kama ze?",
+     "en": "Yes, a cake too. How much is it?"
+    },
+    {
+     "id": "d-cafe-l5",
+     "speaker": "a",
+     "he": "אַרְבָּעִים וּשְׁמוֹנָה שְׁקָלִים.",
+     "translit": "arba'im ushmone shekalim.",
+     "en": "Forty-eight shekels."
+    },
+    {
+     "id": "d-cafe-l6",
+     "speaker": "b",
+     "he": "אֶפְשָׁר בְּכַרְטִיס?",
+     "translit": "efshar bekartis?",
+     "en": "Can I pay by card?"
+    },
+    {
+     "id": "d-cafe-l7",
+     "speaker": "a",
+     "he": "בֶּטַח. תּוֹדָה רַבָּה!",
+     "translit": "betach. toda raba!",
+     "en": "Of course. Thanks a lot!"
+    }
+   ]
+  },
+  {
+   "id": "d-restaurant",
+   "track": "israel",
+   "title": "A table for two",
+   "topic": "ordering food",
+   "level": "A2",
+   "unlockAfter": "il09",
+   "setting": "Two people get a table, order, and ask for the bill.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Host and waiter (woman)"
+    },
+    {
+     "id": "b",
+     "name": "Guest (man)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-restaurant-l1",
+     "speaker": "a",
+     "he": "שָׁלוֹם. לְכַמָּה אֲנָשִׁים?",
+     "translit": "shalom. lekama anashim?",
+     "en": "Hello. For how many people?"
+    },
+    {
+     "id": "d-restaurant-l2",
+     "speaker": "b",
+     "he": "לִשְׁנַיִם, בְּבַקָּשָׁה.",
+     "translit": "lishnayim, bevakasha.",
+     "en": "For two, please."
+    },
+    {
+     "id": "d-restaurant-l3",
+     "speaker": "a",
+     "he": "בְּבַקָּשָׁה, פֹּה. הִנֵּה הַתַּפְרִיט.",
+     "translit": "bevakasha, po. hine hatafrit.",
+     "en": "Please, here. Here is the menu."
+    },
+    {
+     "id": "d-restaurant-l4",
+     "speaker": "b",
+     "he": "אֲנִי רוֹצֶה שְׁנִיצֶל וְסָלָט.",
+     "translit": "ani rotse shnitsel vesalat.",
+     "en": "I'd like a schnitzel and a salad."
+    },
+    {
+     "id": "d-restaurant-l5",
+     "speaker": "a",
+     "he": "וְלִשְׁתּוֹת?",
+     "translit": "velishtot?",
+     "en": "And to drink?"
+    },
+    {
+     "id": "d-restaurant-l6",
+     "speaker": "b",
+     "he": "מַיִם, בְּבַקָּשָׁה.",
+     "translit": "mayim, bevakasha.",
+     "en": "Water, please."
+    },
+    {
+     "id": "d-restaurant-l7",
+     "speaker": "b",
+     "he": "סְלִיחָה, אֶפְשָׁר אֶת הַחֶשְׁבּוֹן?",
+     "translit": "slicha, efshar et hacheshbon?",
+     "en": "Excuse me, can I have the bill?"
+    },
+    {
+     "id": "d-restaurant-l8",
+     "speaker": "a",
+     "he": "בֶּטַח, רֶגַע.",
+     "translit": "betach, rega.",
+     "en": "Sure, one moment."
+    }
+   ]
+  },
+  {
+   "id": "d-directions",
+   "track": "israel",
+   "title": "Where is the bus station?",
+   "topic": "directions",
+   "level": "A2",
+   "unlockAfter": "il11",
+   "setting": "A tourist asks a passer-by for the way.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Tourist (man)"
+    },
+    {
+     "id": "b",
+     "name": "Passer-by (woman)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-directions-l1",
+     "speaker": "a",
+     "he": "סְלִיחָה, אֵיפֹה הַתַּחֲנָה הַמֶּרְכָּזִית?",
+     "translit": "slicha, eifo hatachana hamerkazit?",
+     "en": "Excuse me, where is the central station?"
+    },
+    {
+     "id": "d-directions-l2",
+     "speaker": "b",
+     "he": "לֵךְ יָשָׁר, וְאַחַר כָּךְ פְּנֵה שְׂמֹאלָה.",
+     "translit": "lech yashar, ve'achar kach pne smola.",
+     "en": "Go straight, and then turn left."
+    },
+    {
+     "id": "d-directions-l3",
+     "speaker": "a",
+     "he": "זֶה רָחוֹק?",
+     "translit": "ze rachok?",
+     "en": "Is it far?"
+    },
+    {
+     "id": "d-directions-l4",
+     "speaker": "b",
+     "he": "לֹא, חָמֵשׁ דַּקּוֹת.",
+     "translit": "lo, chamesh dakot.",
+     "en": "No, five minutes."
+    },
+    {
+     "id": "d-directions-l5",
+     "speaker": "a",
+     "he": "תּוֹדָה רַבָּה!",
+     "translit": "toda raba!",
+     "en": "Thank you very much!"
+    },
+    {
+     "id": "d-directions-l6",
+     "speaker": "b",
+     "he": "בְּבַקָּשָׁה.",
+     "translit": "bevakasha.",
+     "en": "You're welcome."
+    }
+   ]
+  },
+  {
+   "id": "d-smalltalk",
+   "track": "israel",
+   "title": "Nice to meet you",
+   "topic": "small talk",
+   "level": "A2",
+   "unlockAfter": "il13",
+   "setting": "Two people meet at a party and chat.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Yossi (man)"
+    },
+    {
+     "id": "b",
+     "name": "Maya (woman)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-smalltalk-l1",
+     "speaker": "a",
+     "he": "הַיי, מָה נִשְׁמָע?",
+     "translit": "hai, ma nishma?",
+     "en": "Hi, how's it going?"
+    },
+    {
+     "id": "d-smalltalk-l2",
+     "speaker": "b",
+     "he": "הַכֹּל בְּסֵדֶר, תּוֹדָה. וְאַתָּה?",
+     "translit": "hakol beseder, toda. ve'ata?",
+     "en": "All fine, thanks. And you?"
+    },
+    {
+     "id": "d-smalltalk-l3",
+     "speaker": "a",
+     "he": "הַכֹּל טוֹב. מֵאֵיפֹה אַתְּ?",
+     "translit": "hakol tov. me'eifo at?",
+     "en": "All good. Where are you from?"
+    },
+    {
+     "id": "d-smalltalk-l4",
+     "speaker": "b",
+     "he": "אֲנִי מִתֵּל אָבִיב. וְאַתָּה?",
+     "translit": "ani mitel aviv. ve'ata?",
+     "en": "I'm from Tel Aviv. And you?"
+    },
+    {
+     "id": "d-smalltalk-l5",
+     "speaker": "a",
+     "he": "אֲנִי מִקָּנָדָה. אֲנִי מְדַבֵּר עִבְרִית קְצָת.",
+     "translit": "ani mikanada. ani medaber ivrit ktsat.",
+     "en": "I'm from Canada. I speak a little Hebrew."
+    },
+    {
+     "id": "d-smalltalk-l6",
+     "speaker": "b",
+     "he": "מְצֻיָּן! אַתָּה מְדַבֵּר טוֹב.",
+     "translit": "metsuyan! ata medaber tov.",
+     "en": "Excellent! You speak well."
+    },
+    {
+     "id": "d-smalltalk-l7",
+     "speaker": "a",
+     "he": "נָעִים מְאוֹד.",
+     "translit": "na'im me'od.",
+     "en": "Very nice to meet you."
+    }
+   ]
+  },
+  {
+   "id": "d-shop",
+   "track": "israel",
+   "title": "Trying on a shirt",
+   "topic": "shopping",
+   "level": "A2",
+   "unlockAfter": "il09",
+   "setting": "A woman buys a shirt in a small shop.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Shop assistant (man)"
+    },
+    {
+     "id": "b",
+     "name": "Customer (woman)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-shop-l1",
+     "speaker": "a",
+     "he": "שָׁלוֹם. אֲנִי יָכוֹל לַעֲזֹר?",
+     "translit": "shalom. ani yachol la'azor?",
+     "en": "Hello. Can I help?"
+    },
+    {
+     "id": "d-shop-l2",
+     "speaker": "b",
+     "he": "כַּמָּה הַחֻלְצָה הַזֹּאת?",
+     "translit": "kama hachultsa hazot?",
+     "en": "How much is this shirt?"
+    },
+    {
+     "id": "d-shop-l3",
+     "speaker": "a",
+     "he": "מֵאָה וַעֲשָׂרָה שְׁקָלִים.",
+     "translit": "me'a va'asara shekalim.",
+     "en": "A hundred and ten shekels."
+    },
+    {
+     "id": "d-shop-l4",
+     "speaker": "b",
+     "he": "יֵשׁ מִדָּה קְטַנָּה?",
+     "translit": "yesh mida ktana?",
+     "en": "Do you have a small size?"
+    },
+    {
+     "id": "d-shop-l5",
+     "speaker": "a",
+     "he": "כֵּן, רֶגַע. הִנֵּה.",
+     "translit": "ken, rega. hine.",
+     "en": "Yes, one moment. Here."
+    },
+    {
+     "id": "d-shop-l6",
+     "speaker": "b",
+     "he": "אֶפְשָׁר לְהִתְנַסּוֹת?",
+     "translit": "efshar lehitnasot?",
+     "en": "Can I try it on?"
+    },
+    {
+     "id": "d-shop-l7",
+     "speaker": "a",
+     "he": "בֶּטַח. חֲדַר הַלְבָּשָׁה שָׁם.",
+     "translit": "betach. chadar halbasha sham.",
+     "en": "Of course. The fitting room is there."
+    },
+    {
+     "id": "d-shop-l8",
+     "speaker": "b",
+     "he": "אֲנִי לוֹקַחַת אֶת זֶה. בְּכַרְטִיס, בְּבַקָּשָׁה.",
+     "translit": "ani lokachat et ze. bekartis, bevakasha.",
+     "en": "I'll take it. By card, please."
+    }
+   ]
+  },
+  {
+   "id": "d-taxi",
+   "track": "israel",
+   "title": "A taxi to the airport",
+   "topic": "taxi",
+   "level": "A2",
+   "unlockAfter": "il10",
+   "setting": "A passenger takes a taxi to the airport.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Passenger (man)"
+    },
+    {
+     "id": "b",
+     "name": "Driver (man)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-taxi-l1",
+     "speaker": "a",
+     "he": "שָׁלוֹם. לַשְּׂדֵה הַתְּעוּפָה, בְּבַקָּשָׁה.",
+     "translit": "shalom. lasde hate'ufa, bevakasha.",
+     "en": "Hello. To the airport, please."
+    },
+    {
+     "id": "d-taxi-l2",
+     "speaker": "b",
+     "he": "בְּסֵדֶר. עֲלֵה.",
+     "translit": "beseder. ale.",
+     "en": "OK. Get in."
+    },
+    {
+     "id": "d-taxi-l3",
+     "speaker": "a",
+     "he": "עִם מוֹנֶה, בְּבַקָּשָׁה.",
+     "translit": "im mone, bevakasha.",
+     "en": "With the meter, please."
+    },
+    {
+     "id": "d-taxi-l4",
+     "speaker": "b",
+     "he": "כֵּן, בְּלִי בְּעָיָה.",
+     "translit": "ken, bli be'aya.",
+     "en": "Yes, no problem."
+    },
+    {
+     "id": "d-taxi-l5",
+     "speaker": "a",
+     "he": "כַּמָּה זְמַן?",
+     "translit": "kama zman?",
+     "en": "How long will it take?"
+    },
+    {
+     "id": "d-taxi-l6",
+     "speaker": "b",
+     "he": "בְּעֵרֶךְ עֶשְׂרִים דַּקּוֹת.",
+     "translit": "be'erech esrim dakot.",
+     "en": "About twenty minutes."
+    },
+    {
+     "id": "d-taxi-l7",
+     "speaker": "b",
+     "he": "הִגַּעְנוּ.",
+     "translit": "higanu.",
+     "en": "We've arrived."
+    },
+    {
+     "id": "d-taxi-l8",
+     "speaker": "a",
+     "he": "כַּמָּה אֲנִי חַיָּב?",
+     "translit": "kama ani chayav?",
+     "en": "How much do I owe?"
+    },
+    {
+     "id": "d-taxi-l9",
+     "speaker": "b",
+     "he": "מֵאָה שְׁקָלִים.",
+     "translit": "me'a shekalim.",
+     "en": "A hundred shekels."
+    },
+    {
+     "id": "d-taxi-l10",
+     "speaker": "a",
+     "he": "הִנֵּה, תּוֹדָה. יוֹם טוֹב!",
+     "translit": "hine, toda. yom tov!",
+     "en": "Here you go, thanks. Have a good day!"
+    }
+   ]
+  },
+  {
+   "id": "d-hotel",
+   "track": "israel",
+   "title": "Checking in",
+   "topic": "hotel",
+   "level": "A2",
+   "unlockAfter": "il17",
+   "setting": "A guest checks in at a hotel desk.",
+   "proofread": false,
+   "speakers": [
+    {
+     "id": "a",
+     "name": "Guest (woman)"
+    },
+    {
+     "id": "b",
+     "name": "Receptionist (man)"
+    }
+   ],
+   "lines": [
+    {
+     "id": "d-hotel-l1",
+     "speaker": "a",
+     "he": "שָׁלוֹם. יֵשׁ לִי הַזְמָנָה.",
+     "translit": "shalom. yesh li hazmana.",
+     "en": "Hello. I have a reservation."
+    },
+    {
+     "id": "d-hotel-l2",
+     "speaker": "b",
+     "he": "בְּאֵיזֶה שֵׁם?",
+     "translit": "be'eize shem?",
+     "en": "Under what name?"
+    },
+    {
+     "id": "d-hotel-l3",
+     "speaker": "a",
+     "he": "לֵוִי.",
+     "translit": "levi.",
+     "en": "Levi."
+    },
+    {
+     "id": "d-hotel-l4",
+     "speaker": "b",
+     "he": "כֵּן, אֲנִי רוֹאֶה. שְׁלוֹשָׁה לֵילוֹת.",
+     "translit": "ken, ani ro'e. shlosha leilot.",
+     "en": "Yes, I see it. Three nights."
+    },
+    {
+     "id": "d-hotel-l5",
+     "speaker": "a",
+     "he": "מָתַי אֲרוּחַת הַבֹּקֶר?",
+     "translit": "matai aruchat haboker?",
+     "en": "When is breakfast?"
+    },
+    {
+     "id": "d-hotel-l6",
+     "speaker": "b",
+     "he": "מִשֶּׁבַע עַד עֶשֶׂר.",
+     "translit": "mishe'va ad eser.",
+     "en": "From seven to ten."
+    },
+    {
+     "id": "d-hotel-l7",
+     "speaker": "b",
+     "he": "הַחֶדֶר בַּקּוֹמָה הַשְּׁנִיָּה. הִנֵּה הַמַּפְתֵּחַ.",
+     "translit": "hacheder bakoma hashniya. hine hamafteach.",
+     "en": "The room is on the second floor. Here is the key."
+    },
+    {
+     "id": "d-hotel-l8",
+     "speaker": "a",
+     "he": "תּוֹדָה רַבָּה!",
+     "translit": "toda raba!",
+     "en": "Thank you very much!"
+    }
+   ]
+  }
+ ]
+}

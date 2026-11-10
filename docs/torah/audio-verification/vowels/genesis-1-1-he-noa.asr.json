@@ -1,0 +1,25 @@
+{
+  "id": "genesis-1-1-he-noa",
+  "fingerprint": "5407afcefef260c105294370b4301bdd637e85dbf1e2d807400414e232dca9e2",
+  "audioSha256": "7c9cebd4c8ac4c1abfdbe96b6fbe0f5b1dc6373ec0bcf81d40891500fc7559f4",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5",
+  "verifierPolicy": "ab0a5ae364f695690548be25dc3c0d200beb2f452bee3b2296d7cb80dd17f320",
+  "reference": "בְרֵאשִית בָרָא אֱלֹהִים אֵת הַשָמַיִם וְאֵת הָאָרֶץ",
+  "transcript": "בראשית ברעל הים את השמיים ואת הארץ.",
+  "wordEdits": 3,
+  "referenceWords": 7,
+  "wer": 0.42857142857142855,
+  "asrExact": false,
+  "orthographicWordEdits": 3,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention."
+}

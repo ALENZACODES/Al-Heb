@@ -1,0 +1,334 @@
+{
+ "fetched": "2026-11-03",
+ "files": [
+  {
+   "name": "kaikki-hebrew.jsonl",
+   "url": "https://kaikki.org/dictionary/Hebrew/kaikki.org-dictionary-Hebrew.jsonl",
+   "role": "dictionary",
+   "bytes": 60179927,
+   "sha256": "c1c6abf161b8a7ff96922a95bb4ba098373b1e4217cad29b0ca9f002d9394204"
+  },
+  {
+   "name": "he_full.txt",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_full.txt",
+   "role": "frequency",
+   "bytes": 19215890,
+   "sha256": "a69a3f390eb53183bf191c4eac18282592992aef9ff184c5dcf8919f5ea0f773"
+  },
+  {
+   "name": "he_50k.txt",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_50k.txt",
+   "role": "frequency",
+   "bytes": 792853,
+   "sha256": "0069e931eb1ca0aaf638ea806b0d9d5810d787c51ada944da564a2fb213af41d"
+  },
+  {
+   "name": "FrequencyWords-LICENSE",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/LICENSE",
+   "role": "licence",
+   "bytes": 1068,
+   "sha256": "e08d916cc953f85f7dfa0df530f6d7931f14ce804d053602662d8649b5fac829"
+  },
+  {
+   "name": "FrequencyWords-README.md",
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/README.md",
+   "role": "licence",
+   "bytes": 913,
+   "sha256": "a92fcc50e27f7b2d5860ec1c1ce794dc4c892d945bfa4c8c3136cdfd213ee710"
+  },
+  {
+   "name": "heb_sentences_detailed.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/heb/heb_sentences_detailed.tsv.bz2",
+   "role": "examples",
+   "bytes": 3639508,
+   "sha256": "830c262048b7c9935e785ce0102ba5ba900b8156a37ef79a866d626e9441314f"
+  },
+  {
+   "name": "eng_sentences_detailed.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_detailed.tsv.bz2",
+   "role": "examples",
+   "bytes": 34969370,
+   "sha256": "7d8a98a1322c63eb62199b0e928efc5b9afbf8f4bb9bc4b60ebde1ea99a30cda"
+  },
+  {
+   "name": "heb-eng_links.tsv.bz2",
+   "url": "https://downloads.tatoeba.org/exports/per_language/heb/heb-eng_links.tsv.bz2",
+   "role": "examples",
+   "bytes": 1095433,
+   "sha256": "76673d7d8a4aa18518cd316f52430b47496abf9ad56b0b4271986c2c50b3c6ed"
+  },
+  {
+   "name": "tanach/Genesis.xml",
+   "url": "https://tanach.us/Books/Genesis.xml",
+   "role": "tanakh",
+   "bytes": 782086,
+   "sha256": "6c1aa3a69b57b77332d054f3ae9a01faa79b5fb1c2e7d08995a1ace82ff5a92b"
+  },
+  {
+   "name": "tanach/Exodus.xml",
+   "url": "https://tanach.us/Books/Exodus.xml",
+   "role": "tanakh",
+   "bytes": 644350,
+   "sha256": "863d34307358ae5adbb16c2b1085aa9058cc2f2f49d5bd1f1a69a5c2bfaed538"
+  },
+  {
+   "name": "tanach/Leviticus.xml",
+   "url": "https://tanach.us/Books/Leviticus.xml",
+   "role": "tanakh",
+   "bytes": 454464,
+   "sha256": "300f2dd9164e581af55e40c2bd854e855bc063b06bfd47c5343ba5e9e8189734"
+  },
+  {
+   "name": "tanach/Numbers.xml",
+   "url": "https://tanach.us/Books/Numbers.xml",
+   "role": "tanakh",
+   "bytes": 630744,
+   "sha256": "a73aa7a198c012d05bad4c2627a4db7dac80394d1d926aa90b20e072bfdd03f2"
+  },
+  {
+   "name": "tanach/Deuteronomy.xml",
+   "url": "https://tanach.us/Books/Deuteronomy.xml",
+   "role": "tanakh",
+   "bytes": 557506,
+   "sha256": "7615f0b872e99c47327fec856bc07ff6fcd8a7cfc814121fecda696522f1067f"
+  },
+  {
+   "name": "tanach/Joshua.xml",
+   "url": "https://tanach.us/Books/Joshua.xml",
+   "role": "tanakh",
+   "bytes": 394916,
+   "sha256": "17081d939dcd693545f48cef9b5ccc404ee7c0670cfc8c53757f09fc4642f91c"
+  },
+  {
+   "name": "tanach/Judges.xml",
+   "url": "https://tanach.us/Books/Judges.xml",
+   "role": "tanakh",
+   "bytes": 383737,
+   "sha256": "532b6964f2613db04b96de3c4385b3a128074d0911e55fe4b089188306275080"
+  },
+  {
+   "name": "tanach/Samuel_1.xml",
+   "url": "https://tanach.us/Books/Samuel_1.xml",
+   "role": "tanakh",
+   "bytes": 514162,
+   "sha256": "ce8e2eb1d02562db291edc7f041a8cf3f9f2ad5344022c3011406665ef1d9dd3"
+  },
+  {
+   "name": "tanach/Samuel_2.xml",
+   "url": "https://tanach.us/Books/Samuel_2.xml",
+   "role": "tanakh",
+   "bytes": 433589,
+   "sha256": "f6c8645a818c6d0a3b0dc8786b475fa889ee1725c349cad1d0ba1d2328ed24e3"
+  },
+  {
+   "name": "tanach/Kings_1.xml",
+   "url": "https://tanach.us/Books/Kings_1.xml",
+   "role": "tanakh",
+   "bytes": 506630,
+   "sha256": "bed15c0c99580c9826bfc8ed8f74e7b206b07730220c9cb0c743407c2991bba5"
+  },
+  {
+   "name": "tanach/Kings_2.xml",
+   "url": "https://tanach.us/Books/Kings_2.xml",
+   "role": "tanakh",
+   "bytes": 475240,
+   "sha256": "f0849de16f5d8e3a783f5e567592d18220f0a0fe8c806a9fd00e7adf206fdf5f"
+  },
+  {
+   "name": "tanach/Isaiah.xml",
+   "url": "https://tanach.us/Books/Isaiah.xml",
+   "role": "tanakh",
+   "bytes": 653748,
+   "sha256": "ec54be0765a51bb6b32490f96554b43107a0a4298ca37236d88b9aab2d4b449a"
+  },
+  {
+   "name": "tanach/Jeremiah.xml",
+   "url": "https://tanach.us/Books/Jeremiah.xml",
+   "role": "tanakh",
+   "bytes": 842600,
+   "sha256": "f79549d3cc8374a3d7a9500ed2ace94b50244d97564db7f547765fc90e24f126"
+  },
+  {
+   "name": "tanach/Ezekiel.xml",
+   "url": "https://tanach.us/Books/Ezekiel.xml",
+   "role": "tanakh",
+   "bytes": 725538,
+   "sha256": "7e17e73dde510eeeba97673078a91faa398c7a5b7fb2185fc755f0e6155bc275"
+  },
+  {
+   "name": "tanach/Hosea.xml",
+   "url": "https://tanach.us/Books/Hosea.xml",
+   "role": "tanakh",
+   "bytes": 99655,
+   "sha256": "566f1997b796b3bc98b450190951dc6a0f695fb1ede6b01e619f406f35864c48"
+  },
+  {
+   "name": "tanach/Joel.xml",
+   "url": "https://tanach.us/Books/Joel.xml",
+   "role": "tanakh",
+   "bytes": 44600,
+   "sha256": "0531e0b3e710e63e7fbd065d5b1891313e87fdac702d8f2330968a21ed7e3191"
+  },
+  {
+   "name": "tanach/Amos.xml",
+   "url": "https://tanach.us/Books/Amos.xml",
+   "role": "tanakh",
+   "bytes": 85382,
+   "sha256": "43992ae93b4ee89ecc4377fd4b42a60521861811560bc769352b70f6aad5665b"
+  },
+  {
+   "name": "tanach/Obadiah.xml",
+   "url": "https://tanach.us/Books/Obadiah.xml",
+   "role": "tanakh",
+   "bytes": 20457,
+   "sha256": "c459204f51a1c831c45a7aaeec5f1792fe056a0622659f5c3cb85c5a2c930cfb"
+  },
+  {
+   "name": "tanach/Jonah.xml",
+   "url": "https://tanach.us/Books/Jonah.xml",
+   "role": "tanakh",
+   "bytes": 34117,
+   "sha256": "a5ed0a5aa6fbaba5190415daf803c7b80b8592514680e6e9444c27143e8e3fa7"
+  },
+  {
+   "name": "tanach/Micah.xml",
+   "url": "https://tanach.us/Books/Micah.xml",
+   "role": "tanakh",
+   "bytes": 63028,
+   "sha256": "147d7c72decf6f2592f2e75edb2c6b50ae88a95687476fddea5c1b0e7bb2d80a"
+  },
+  {
+   "name": "tanach/Nahum.xml",
+   "url": "https://tanach.us/Books/Nahum.xml",
+   "role": "tanakh",
+   "bytes": 29664,
+   "sha256": "23b81bc3198798874fe513e0cc4703ad1b1696556901f239668509f456d9f715"
+  },
+  {
+   "name": "tanach/Habakkuk.xml",
+   "url": "https://tanach.us/Books/Habakkuk.xml",
+   "role": "tanakh",
+   "bytes": 33396,
+   "sha256": "54d84c561b7d5483207cf7643a5424c7ef71dc892ae699aeeb9a7e5bd312d7de"
+  },
+  {
+   "name": "tanach/Zephaniah.xml",
+   "url": "https://tanach.us/Books/Zephaniah.xml",
+   "role": "tanakh",
+   "bytes": 37289,
+   "sha256": "95bfb3faf4e7d8c6dd5d233c1f3fe86b7922c1a2f69928e79b7e08cc4697a7cf"
+  },
+  {
+   "name": "tanach/Haggai.xml",
+   "url": "https://tanach.us/Books/Haggai.xml",
+   "role": "tanakh",
+   "bytes": 30611,
+   "sha256": "82d0b3f85fca2401b6e798ed44173a516ceb199c8106b524c76516c9af6c99a0"
+  },
+  {
+   "name": "tanach/Zechariah.xml",
+   "url": "https://tanach.us/Books/Zechariah.xml",
+   "role": "tanakh",
+   "bytes": 125775,
+   "sha256": "83c3502694bfa7d49612c41da53b1fd7d3d159224644d341a3537c2eb5864af6"
+  },
+  {
+   "name": "tanach/Malachi.xml",
+   "url": "https://tanach.us/Books/Malachi.xml",
+   "role": "tanakh",
+   "bytes": 41347,
+   "sha256": "0fb5b657c73916c3e17117350b6b1edb9ebb4d6a7ccbce457852b7706f7b3276"
+  },
+  {
+   "name": "tanach/Psalms.xml",
+   "url": "https://tanach.us/Books/Psalms.xml",
+   "role": "tanakh",
+   "bytes": 856872,
+   "sha256": "c03e54c556b7b0c97ae0c28ff55caab72d05e8e4b954ce464d8a4ace033431ff"
+  },
+  {
+   "name": "tanach/Proverbs.xml",
+   "url": "https://tanach.us/Books/Proverbs.xml",
+   "role": "tanakh",
+   "bytes": 296224,
+   "sha256": "79b8f8510459e4a3a72e08d120473f481f6728759f6d4cbff582c49421852b82"
+  },
+  {
+   "name": "tanach/Job.xml",
+   "url": "https://tanach.us/Books/Job.xml",
+   "role": "tanakh",
+   "bytes": 363377,
+   "sha256": "b69ad54618768c9a0a3babaf713515c746cd37fb55ded3e59c716d034b157e1c"
+  },
+  {
+   "name": "tanach/Song_of_Songs.xml",
+   "url": "https://tanach.us/Books/Song_of_Songs.xml",
+   "role": "tanakh",
+   "bytes": 59264,
+   "sha256": "858dc816ef97b51e5a0794cde9cf8d9ef11e6d8dc81317c0c6d96f86bb80ac01"
+  },
+  {
+   "name": "tanach/Ruth.xml",
+   "url": "https://tanach.us/Books/Ruth.xml",
+   "role": "tanakh",
+   "bytes": 56434,
+   "sha256": "70cf33f4e35545174f1ba08d3325cdb7e51989757598c077e0237a12afe64630"
+  },
+  {
+   "name": "tanach/Lamentations.xml",
+   "url": "https://tanach.us/Books/Lamentations.xml",
+   "role": "tanakh",
+   "bytes": 72694,
+   "sha256": "9c13c5fb3858f6f090ebcff18996647e844732e8e674af4b86f8074df253769d"
+  },
+  {
+   "name": "tanach/Ecclesiastes.xml",
+   "url": "https://tanach.us/Books/Ecclesiastes.xml",
+   "role": "tanakh",
+   "bytes": 121693,
+   "sha256": "59b4a280e7e5fabb6fa307c802726b03224ade1ed099378d117c9e744b5966ed"
+  },
+  {
+   "name": "tanach/Esther.xml",
+   "url": "https://tanach.us/Books/Esther.xml",
+   "role": "tanakh",
+   "bytes": 125445,
+   "sha256": "d862b6d6ccb02d917c77b875af9d81b4a10bc668abba6e27fe47f1933139664c"
+  },
+  {
+   "name": "tanach/Daniel.xml",
+   "url": "https://tanach.us/Books/Daniel.xml",
+   "role": "tanakh",
+   "bytes": 246666,
+   "sha256": "5d899d396ddee0a04968f0ac69e95e2d7ab7d22e0ff08a0a5bcbb2800c715290"
+  },
+  {
+   "name": "tanach/Ezra.xml",
+   "url": "https://tanach.us/Books/Ezra.xml",
+   "role": "tanakh",
+   "bytes": 162235,
+   "sha256": "785cbf2a2e4e96cfb9ee8a4d97a79f2edd1b59311a1371fdf4115f51afff389c"
+  },
+  {
+   "name": "tanach/Nehemiah.xml",
+   "url": "https://tanach.us/Books/Nehemiah.xml",
+   "role": "tanakh",
+   "bytes": 222362,
+   "sha256": "45dd7756a690998feeb35ce4c9b1d1c727598632f701d343e9a8c11ea0d2cbca"
+  },
+  {
+   "name": "tanach/Chronicles_1.xml",
+   "url": "https://tanach.us/Books/Chronicles_1.xml",
+   "role": "tanakh",
+   "bytes": 434486,
+   "sha256": "7be4fe2dba1b8c69d9d65a3a30ab878f39919396c50f15cb8a69265829b98d3b"
+  },
+  {
+   "name": "tanach/Chronicles_2.xml",
+   "url": "https://tanach.us/Books/Chronicles_2.xml",
+   "role": "tanakh",
+   "bytes": 527237,
+   "sha256": "63fe92e487090cd2ab02c297d1d3e3bef0318e6d37833044e448130ff0cfcbaa"
+  }
+ ]
+}

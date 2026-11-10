@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-3-he-noa",
+  "fingerprint": "48cba9d43f05b86658a2cf702d123d72afd198673edc82448ab100a7997b7cdc",
+  "audioSha256": "74283fa1ef32ef8d1c8eb0a451766fb0cacb44b6918553773a4d9a9b7cb377e6",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר",
+  "transcript": "ויאמר אליהם יהי אור ויהי אור.",
+  "wordEdits": 1,
+  "referenceWords": 6,
+  "wer": 0.16666666666666666,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

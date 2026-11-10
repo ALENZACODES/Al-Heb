@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-1-he-noa",
+  "fingerprint": "44b61ae7533a3a72518f6ddaa318485b742416ea2fbe0b39727f7d1dee44cd9c",
+  "audioSha256": "c73701fff40ef2708be466c33945f02173626bb2528e183dd934dcfcf2a30d02",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
+  "transcript": "ברשיסית בר עליהם את השוס מים ואת הארץ.",
+  "wordEdits": 5,
+  "referenceWords": 7,
+  "wer": 0.7142857142857143,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

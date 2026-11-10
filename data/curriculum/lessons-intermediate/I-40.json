@@ -1,0 +1,335 @@
+{
+ "id": "I-40",
+ "track": "israel",
+ "level": "B1",
+ "unit": "israel",
+ "title": "Hiking: trail, mountain, stream, water and the map",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "טִיּוּל",
+   "en": "trip, hike",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "tiyul"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h6f66cc99"
+   }
+  },
+  {
+   "he": "מַסְלוּל",
+   "en": "route",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "maslul"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd1c3a40b"
+   }
+  },
+  {
+   "he": "הַר",
+   "en": "mountain",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "har"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hc91c0d80"
+   }
+  },
+  {
+   "he": "נַחַל",
+   "en": "stream",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nachal"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd0bb45f0"
+   }
+  },
+  {
+   "he": "שְׁבִיל",
+   "en": "trail",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shevil"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h8ccd0ca9"
+   }
+  },
+  {
+   "he": "מַיִם",
+   "en": "water",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mayim"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "p7f7d7b8f"
+   }
+  },
+  {
+   "he": "מִפָּה",
+   "en": "map",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "mipah"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hb63f1e69"
+   }
+  },
+  {
+   "he": "כּוֹבַע",
+   "en": "hat",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "kova"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h60aa7df9"
+   }
+  },
+  {
+   "he": "שֶׁמֶשׁ",
+   "en": "sun",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shemesh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h86027352"
+   }
+  },
+  {
+   "he": "חַם",
+   "en": "hot",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "cham"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h5c2548dc"
+   }
+  },
+  {
+   "he": "רָחוֹק",
+   "en": "far",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "rachok"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h372b7277"
+   }
+  },
+  {
+   "he": "קָרוֹב",
+   "en": "near",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "karov"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "hd53e0a60"
+   }
+  }
+ ],
+ "prayerLines": [],
+ "goals": [
+  "Ask the way to a trail and how long it is",
+  "Say you need water and a hat",
+  "Read a map request and the simple words for a hike"
+ ],
+ "estMinutes": 25,
+ "prerequisites": [
+  "I-24"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Modern spoken Hebrew: only the Israeli value is given. Latin forms are machine output of the project's transliterator, not a native speaker's."
+ },
+ "exercises": [
+  {
+   "id": "I-40-e01",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "הַר",
+     "en": "mountain"
+    },
+    {
+     "he": "נַחַל",
+     "en": "stream"
+    },
+    {
+     "he": "שְׁבִיל",
+     "en": "trail"
+    },
+    {
+     "he": "מַסְלוּל",
+     "en": "route"
+    },
+    {
+     "he": "מִפָּה",
+     "en": "map"
+    }
+   ]
+  },
+  {
+   "id": "I-40-e02",
+   "type": "respond",
+   "cue": "Ask where the trail is.",
+   "answer": {
+    "he": "אֵיפֹה יֵשׁ שְׁבִיל?",
+    "en": "Where is the trail?"
+   }
+  },
+  {
+   "id": "I-40-e03",
+   "type": "order",
+   "he": "אֶפְשָׁר לְהַרְאוֹת לִי עַל הַמַּפָּה?",
+   "en": "Can you show me on the map?"
+  },
+  {
+   "id": "I-40-e04",
+   "type": "produce",
+   "en": "how long does it take?",
+   "options": [
+    "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+    "כַּמָּה זֶה עוֹלֶה?",
+    "מָתַי אַתֶּם סוֹגְרִים?"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-40-e05",
+   "type": "dialogue",
+   "lines": [
+    {
+     "speaker": "a",
+     "he": "כַּמָּה זְמַן זֶה לוֹקֵחַ?",
+     "en": "How long does it take?"
+    },
+    {
+     "speaker": "b",
+     "he": "שָׁעָה.",
+     "en": "An hour."
+    },
+    {
+     "speaker": "a",
+     "he": "זֶה רָחוֹק?",
+     "en": "Is it far?"
+    },
+    {
+     "speaker": "b",
+     "he": "לֹא, זֶה קָרוֹב.",
+     "en": "No, it's near."
+    }
+   ],
+   "task": "Ask about the hike."
+  },
+  {
+   "id": "I-40-e06",
+   "type": "produce",
+   "en": "hot",
+   "options": [
+    "חַם",
+    "קַר",
+    "רָחוֹק"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-40-e07",
+   "type": "respond",
+   "cue": "It is very hot. Say so.",
+   "answer": {
+    "he": "חַם לִי",
+    "en": "I'm hot"
+   }
+  },
+  {
+   "id": "I-40-e08",
+   "type": "respond",
+   "cue": "Ask for cold water.",
+   "answer": {
+    "he": "מַיִם קָרִים, בְּבַקָּשָׁה",
+    "en": "Cold water, please"
+   }
+  },
+  {
+   "id": "I-40-e09",
+   "type": "recall",
+   "he": "כּוֹבַע",
+   "en": "hat"
+  },
+  {
+   "id": "I-40-e10",
+   "type": "produce",
+   "en": "sun",
+   "options": [
+    "שֶׁמֶשׁ",
+    "מַיִם",
+    "הַר"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-40-e11",
+   "type": "respond",
+   "cue": "You are lost on the trail.",
+   "answer": {
+    "he": "אֲנִי אָבוּד",
+    "en": "I'm lost"
+   }
+  },
+  {
+   "id": "I-40-e12",
+   "type": "gender",
+   "m": "אֲנִי אָבוּד",
+   "f": "אֲנִי אֲבוּדָה",
+   "en": "I'm lost"
+  },
+  {
+   "id": "I-40-e13",
+   "type": "respond",
+   "cue": "Ask where the stream is.",
+   "answer": {
+    "he": "אֵיפֹה יֵשׁ נַחַל?",
+    "en": "Where is the stream?"
+   }
+  },
+  {
+   "id": "I-40-e14",
+   "type": "recall",
+   "he": "טִיּוּל",
+   "en": "trip, hike"
+  }
+ ],
+ "note": "'Backpack', 'boots' (naalayim is unpointed in the sources), 'campsite', 'summit' and trail-marking terms are left out. Safety phrases are limited to what the phrasebook holds."
+}

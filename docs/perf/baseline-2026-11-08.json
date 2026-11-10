@@ -1,0 +1,387 @@
+{
+ "when": "2026-11-08T09:08:09.159Z",
+ "chromium": "157.0.4341.42",
+ "network": "slow4g",
+ "netDetail": {
+  "latency": 150,
+  "downloadThroughput": 209715.2,
+  "uploadThroughput": 96000
+ },
+ "cpuSlowdown": 4,
+ "runs": 3,
+ "platform": "win32",
+ "note": "Emulated throttling in headless Chromium on a shared machine, not a real phone; compare bytes and ordering, treat milliseconds as indicative.",
+ "routes": {
+  "/": {
+   "runs": 3,
+   "ready": true,
+   "errors": [],
+   "fcp": 1524,
+   "readyMs": 6363,
+   "manifestSettledMs": 6467,
+   "viewMs": 7521,
+   "mainNodes": 329,
+   "load": 0,
+   "requests": 89,
+   "totalBytes": 1055584,
+   "jsBytes": 502448,
+   "jsRequests": 66,
+   "jsBytesBeforeFcp": 44393,
+   "jsRequestsBeforeFcp": 3,
+   "cssBytes": 126277,
+   "fontBytes": 140596,
+   "dataBytes": 142209,
+   "imageBytes": 94660,
+   "domNodes": 845,
+   "longTasks": {
+    "count": 5,
+    "totalMs": 785,
+    "maxMs": 404,
+    "tbtMs": 535
+   },
+   "manifest": null,
+   "biggestJs": [
+    [
+     "src/shell/router.js",
+     33297
+    ],
+    [
+     "src/audio/player.js",
+     25972
+    ],
+    [
+     "src/app.js",
+     25213
+    ],
+    [
+     "src/audio/synth-music.js",
+     22604
+    ],
+    [
+     "src/curriculum/calendar.js",
+     21052
+    ],
+    [
+     "src/store.js",
+     17852
+    ],
+    [
+     "src/shell/audio.js",
+     16242
+    ],
+    [
+     "src/shell/prayer-veil.js",
+     15535
+    ]
+   ],
+   "biggestData": [
+    [
+     "data/builder_words.json",
+     65257
+    ],
+    [
+     "data/homepage/prayers.json",
+     48028
+    ],
+    [
+     "data/calendar/locations.json",
+     13577
+    ],
+    [
+     "data/builder_symbols.json",
+     11531
+    ],
+    [
+     "data/curriculum/belts.json",
+     3816
+    ]
+   ],
+   "fcpAll": [
+    2848,
+    1524,
+    1472
+   ],
+   "jsBytesAll": [
+    502448,
+    502448,
+    502448
+   ],
+   "jsRequestsAll": [
+    66,
+    66,
+    66
+   ],
+   "jsResources": [
+    [
+     "src/shell/prayer-veil.js",
+     15535
+    ],
+    [
+     "src/app.js",
+     25213
+    ],
+    [
+     "src/shell/install-notice.js",
+     3645
+    ],
+    [
+     "src/shell/rimon.js",
+     8525
+    ],
+    [
+     "src/store.js",
+     17852
+    ],
+    [
+     "src/shell/settings.js",
+     10962
+    ],
+    [
+     "src/shell/comfort.js",
+     4682
+    ],
+    [
+     "src/shell/router.js",
+     33297
+    ],
+    [
+     "src/shell/views.generated.js",
+     4428
+    ],
+    [
+     "src/shell/nav.js",
+     2071
+    ],
+    [
+     "src/shell/i18n.js",
+     7228
+    ],
+    [
+     "src/shell/audio.js",
+     16242
+    ],
+    [
+     "src/shell/audio-shards.js",
+     5469
+    ],
+    [
+     "src/shell/persist-gate.js",
+     935
+    ],
+    [
+     "src/shell/audio-manifest.js",
+     2922
+    ],
+    [
+     "src/shell/ui.js",
+     2110
+    ],
+    [
+     "src/img/resolve.js",
+     10846
+    ],
+    [
+     "src/shell/companions.js",
+     3968
+    ],
+    [
+     "src/shell/motor.js",
+     3421
+    ],
+    [
+     "src/audio/media-prompt.js",
+     1451
+    ],
+    [
+     "src/audio/music.js",
+     9036
+    ],
+    [
+     "src/audio/music-bar.js",
+     5610
+    ],
+    [
+     "src/awards/daystart.js",
+     2407
+    ],
+    [
+     "src/shell/rimon-speech.js",
+     6060
+    ],
+    [
+     "src/shell/nav.strings.js",
+     9102
+    ],
+    [
+     "src/shell/nav-model.js",
+     9680
+    ],
+    [
+     "src/shell/menu.js",
+     4488
+    ],
+    [
+     "src/shell/audio-access.js",
+     13718
+    ],
+    [
+     "src/shell/audio-labels.js",
+     7153
+    ],
+    [
+     "src/shell/audio-truth.js",
+     5879
+    ],
+    [
+     "src/audio/sfx.js",
+     5509
+    ],
+    [
+     "src/audio/policy.js",
+     2108
+    ],
+    [
+     "src/audio/player.js",
+     25972
+    ],
+    [
+     "src/listen/catalog.js",
+     8675
+    ],
+    [
+     "src/audio/synth-music.js",
+     22604
+    ],
+    [
+     "src/curriculum/streak.js",
+     10492
+    ],
+    [
+     "src/shell/audiofree.js",
+     3489
+    ],
+    [
+     "src/shell/rimon-events.js",
+     847
+    ],
+    [
+     "src/curriculum/calendar.js",
+     21052
+    ],
+    [
+     "src/shell/names.js",
+     9541
+    ],
+    [
+     "src/shell/scroll-restore.js",
+     3867
+    ],
+    [
+     "src/shell/backup.js",
+     3869
+    ],
+    [
+     "src/shell/home.view.js",
+     10281
+    ],
+    [
+     "src/shell/boot-hooks.js",
+     1262
+    ],
+    [
+     "src/morning/boot.js",
+     1783
+    ],
+    [
+     "src/shell/update.js",
+     12778
+    ],
+    [
+     "src/morning/engage.js",
+     5243
+    ],
+    [
+     "src/morning/model.js",
+     3354
+    ],
+    [
+     "src/shell/showcase.js",
+     6208
+    ],
+    [
+     "src/home/today.js",
+     15496
+    ],
+    [
+     "src/shell/settings.data.js",
+     5096
+    ],
+    [
+     "src/curriculum/dom.js",
+     6764
+    ],
+    [
+     "src/curriculum/calendar.locations.js",
+     6077
+    ],
+    [
+     "src/morning/plan.js",
+     6515
+    ],
+    [
+     "src/shell/astral-tree.js",
+     4015
+    ],
+    [
+     "src/home/builder.js",
+     9721
+    ],
+    [
+     "src/curriculum/data.js",
+     1280
+    ],
+    [
+     "src/shell/plain-copy.js",
+     3851
+    ],
+    [
+     "src/placement/start.js",
+     1499
+    ],
+    [
+     "src/home/nextlesson.js",
+     2105
+    ],
+    [
+     "src/morning/verses.js",
+     3802
+    ],
+    [
+     "src/games/engine.js",
+     10124
+    ],
+    [
+     "src/home/builder-model.js",
+     1910
+    ],
+    [
+     "src/curriculum/lessons.js",
+     2275
+    ],
+    [
+     "src/curriculum/state.js",
+     2014
+    ],
+    [
+     "src/curriculum/srs.js",
+     7035
+    ]
+   ]
+  }
+ },
+ "budget": {
+  "budgetBytes": 532480,
+  "measuredBytes": 502448,
+  "ok": true
+ }
+}

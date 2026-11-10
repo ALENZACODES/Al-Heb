@@ -1,0 +1,243 @@
+{
+ "schema": "alef-torah-chapter/1",
+ "book": "genesis",
+ "bookHe": "בְּרֵאשִׁית",
+ "chapter": 16,
+ "ref": "Genesis 16",
+ "parshaIds": [
+  "lech-lecha"
+ ],
+ "source": "Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)",
+ "license": "Public Domain / copy without restriction (tanach.us/License.html)",
+ "attribution": "Hebrew text: Unicode/XML Leningrad Codex (UXLC), Tanach.us Inc. (tanach.us; \"may be viewed or copied without restriction\"). Not the WLC. English: JPS 1917, public domain.",
+ "englishSource": "The Holy Scriptures: A New Translation (JPS 1917)",
+ "englishLicense": "Public Domain",
+ "retrieved": "2026-11-07",
+ "verses": [
+  {
+   "n": 1,
+   "he": "וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר׃",
+   "heTrope": "וְשָׂרַי֙ אֵ֣שֶׁת אַבְרָ֔ם לֹ֥א יָלְדָ֖ה ל֑וֹ וְלָ֛הּ שִׁפְחָ֥ה מִצְרִ֖ית וּשְׁמָ֥הּ הָגָֽר׃",
+   "en": "Now Sarai Abram’s wife bore him no children; and she had a handmaid, an Egyptian, whose name was Hagar.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   },
+   "breakBefore": "closed"
+  },
+  {
+   "n": 2,
+   "he": "וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם הִנֵּה־נָא עֲצָרַנִי יְהוָה מִלֶּדֶת בֹּא־נָא אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֵּנָּה וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי׃",
+   "heTrope": "וַתֹּ֨אמֶר שָׂרַ֜י אֶל־אַבְרָ֗ם הִנֵּה־נָ֞א עֲצָרַ֤נִי יְהוָה֙ מִלֶּ֔דֶת בֹּא־נָא֙ אֶל־שִׁפְחָתִ֔י אוּלַ֥י אִבָּנֶ֖ה מִמֵּ֑נָּה וַיִּשְׁמַ֥ע אַבְרָ֖ם לְק֥וֹל שָׂרָֽי׃",
+   "en": "And Sarai said unto Abram: ‘Behold now, the LORD hath restrained me from bearing; go in, I pray thee, unto my handmaid; it may be that I shall be builded up through her.’ And Abram hearkened to the voice of Sarai.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 3,
+   "he": "וַתִּקַּח שָׂרַי אֵשֶׁת־אַבְרָם אֶת־הָגָר הַמִּצְרִית שִׁפְחָתָהּ מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה׃",
+   "heTrope": "וַתִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת־אַבְרָ֗ם אֶת־הָגָ֤ר הַמִּצְרִית֙ שִׁפְחָתָ֔הּ מִקֵּץ֙ עֶ֣שֶׂר שָׁנִ֔ים לְשֶׁ֥בֶת אַבְרָ֖ם בְּאֶ֣רֶץ כְּנָ֑עַן וַתִּתֵּ֥ן אֹתָ֛הּ לְאַבְרָ֥ם אִישָׁ֖הּ ל֥וֹ לְאִשָּֽׁה׃",
+   "en": "And Sarai Abram’s wife took Hagar the Egyptian, her handmaid, after Abram had dwelt ten years in the land of Canaan, and gave her to Abram her husband to be his wife.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 4,
+   "he": "וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ׃",
+   "heTrope": "וַיָּבֹ֥א אֶל־הָגָ֖ר וַתַּ֑הַר וַתֵּ֙רֶא֙ כִּ֣י הָרָ֔תָה וַתֵּקַ֥ל גְּבִרְתָּ֖הּ בְּעֵינֶֽיהָ׃",
+   "en": "And he went in unto Hagar, and she conceived; and when she saw that she had conceived, her mistress was despised in her eyes.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 5,
+   "he": "וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ וַתֵּרֶא כִּי הָרָתָה וָאֵקַל בְּעֵינֶיהָ יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ׃",
+   "heTrope": "וַתֹּ֨אמֶר שָׂרַ֣י אֶל־אַבְרָם֮ חֲמָסִ֣י עָלֶיךָ֒ אָנֹכִ֗י נָתַ֤תִּי שִׁפְחָתִי֙ בְּחֵיקֶ֔ךָ וַתֵּ֙רֶא֙ כִּ֣י הָרָ֔תָה וָאֵקַ֖ל בְּעֵינֶ֑יהָ יִשְׁפֹּ֥ט יְהוָ֖ה בֵּינִ֥י וּבֵינֶֽיׄךָ׃",
+   "en": "And Sarai said unto Abram: ‘My wrong be upon thee: I gave my handmaid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the LORD judge between me and thee.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 6,
+   "he": "וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי וַתִּבְרַח מִפָּנֶיהָ׃",
+   "heTrope": "וַיֹּ֨אמֶר אַבְרָ֜ם אֶל־שָׂרַ֗י הִנֵּ֤ה שִׁפְחָתֵךְ֙ בְּיָדֵ֔ךְ עֲשִׂי־לָ֖הּ הַטּ֣וֹב בְּעֵינָ֑יִךְ וַתְּעַנֶּ֣הָ שָׂרַ֔י וַתִּבְרַ֖ח מִפָּנֶֽיהָ׃",
+   "en": "But Abram said unto Sarai: ‘Behold, thy maid is in thy hand; do to her that which is good in thine eyes.’ And Sarai dealt harshly with her, and she fled from her face.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 7,
+   "he": "וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן בְּדֶרֶךְ שׁוּר׃",
+   "heTrope": "וַֽיִּמְצָאָ֞הּ מַלְאַ֧ךְ יְהוָ֛ה עַל־עֵ֥ין הַמַּ֖יִם בַּמִּדְבָּ֑ר עַל־הָעַ֖יִן בְּדֶ֥רֶךְ שֽׁוּר׃",
+   "en": "And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 8,
+   "he": "וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת׃",
+   "heTrope": "וַיֹּאמַ֗ר הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי־מִזֶּ֥ה בָ֖את וְאָ֣נָה תֵלֵ֑כִי וַתֹּ֕אמֶר מִפְּנֵי֙ שָׂרַ֣י גְּבִרְתִּ֔י אָנֹכִ֖י בֹּרַֽחַת׃",
+   "en": "And he said: ‘Hagar, Sarai’s handmaid, whence camest thou? and whither goest thou?’ And she said: ‘I flee from the face of my mistress Sarai.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 9,
+   "he": "וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ׃",
+   "heTrope": "וַיֹּ֤אמֶר לָהּ֙ מַלְאַ֣ךְ יְהוָ֔ה שׁ֖וּבִי אֶל־גְּבִרְתֵּ֑ךְ וְהִתְעַנִּ֖י תַּ֥חַת יָדֶֽיהָ׃",
+   "en": "And the angel of the LORD said unto her: ‘Return to thy mistress, and submit thyself under her hands.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 10,
+   "he": "וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב׃",
+   "heTrope": "וַיֹּ֤אמֶר לָהּ֙ מַלְאַ֣ךְ יְהוָ֔ה הַרְבָּ֥ה אַרְבֶּ֖ה אֶת־זַרְעֵ֑ךְ וְלֹ֥א יִסָּפֵ֖ר מֵרֹֽב׃",
+   "en": "And the angel of the LORD said unto her: ‘I will greatly multiply thy seed, that it shall not be numbered for multitude.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 11,
+   "he": "וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ׃",
+   "heTrope": "וַיֹּ֤אמֶר לָהּ֙ מַלְאַ֣ךְ יְהוָ֔ה הִנָּ֥ךְ הָרָ֖ה וְיֹלַ֣דְתְּ בֵּ֑ן וְקָרָ֤את שְׁמוֹ֙ יִשְׁמָעֵ֔אל כִּֽי־שָׁמַ֥ע יְהוָ֖ה אֶל־עָנְיֵֽךְ׃",
+   "en": "And the angel of the LORD said unto her: ‘Behold, thou art with child, and shalt bear a son; and thou shalt call his name Ishmael, because the LORD hath heard thy affliction.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 12,
+   "he": "וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו יִשְׁכֹּן׃",
+   "heTrope": "וְה֤וּא יִהְיֶה֙ פֶּ֣רֶא אָדָ֔ם יָד֣וֹ בַכֹּ֔ל וְיַ֥ד כֹּ֖ל בּ֑וֹ וְעַל־פְּנֵ֥י כָל־אֶחָ֖יו יִשְׁכֹּֽן׃",
+   "en": "And he shall be a wild ass of a man: his hand shall be against every man, and every man’s hand against him; and he shall dwell in the face of all his brethren.’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 13,
+   "he": "וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי׃",
+   "heTrope": "וַתִּקְרָ֤א שֵׁם־יְהוָה֙ הַדֹּבֵ֣ר אֵלֶ֔יהָ אַתָּ֖ה אֵ֣ל רֳאִ֑י כִּ֣י אֽ͏ָמְרָ֗ה הֲגַ֥ם הֲלֹ֛ם רָאִ֖יתִי אַחֲרֵ֥י רֹאִֽי׃",
+   "en": "And she called the name of the LORD that spoke unto her, Thou art a God of seeing; for she said: ‘Have I even here seen Him that seeth Me?’",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 14,
+   "he": "עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד׃",
+   "heTrope": "עַל־כֵּן֙ קָרָ֣א לַבְּאֵ֔ר בְּאֵ֥ר לַחַ֖י רֹאִ֑י הִנֵּ֥ה בֵין־קָדֵ֖שׁ וּבֵ֥ין בָּֽרֶד׃",
+   "en": "Wherefore the well was called Beer-lahai-roi; behold, it is between Kadesh and Bered.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 15,
+   "he": "וַתֵּלֶד הָגָר לְאַבְרָם בֵּן וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ אֲשֶׁר־יָלְדָה הָגָר יִשְׁמָעֵאל׃",
+   "heTrope": "וַתֵּ֧לֶד הָגָ֛ר לְאַבְרָ֖ם בֵּ֑ן וַיִּקְרָ֨א אַבְרָ֧ם שֶׁם־בְּנ֛וֹ אֲשֶׁר־יָלְדָ֥ה הָגָ֖ר יִשְׁמָעֵֽאל׃",
+   "en": "And Hagar bore Abram a son; and Abram called the name of his son, whom Hagar bore, Ishmael.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  },
+  {
+   "n": 16,
+   "he": "וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים בְּלֶדֶת־הָגָר אֶת־יִשְׁמָעֵאל לְאַבְרָם׃",
+   "heTrope": "וְאַבְרָ֕ם בֶּן־שְׁמֹנִ֥ים שָׁנָ֖ה וְשֵׁ֣שׁ שָׁנִ֑ים בְּלֶֽדֶת־הָגָ֥ר אֶת־יִשְׁמָעֵ֖אל לְאַבְרָֽם׃",
+   "en": "And Abram was fourscore and six years old, when Hagar bore Ishmael to Abram.",
+   "durMs": {
+    "m": null,
+    "f": null
+   },
+   "durMsEn": {
+    "m": null,
+    "f": null
+   }
+  }
+ ]
+}

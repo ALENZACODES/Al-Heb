@@ -1,0 +1,7 @@
+# Exodus 6 English speech correction
+
+The original public-domain JPS 1917 English source includes the written four-letter Hebrew divine name in verse 3. The displayed source corpus is unchanged. Both original chapter requests incorrectly passed that Hebrew spelling to English Chirp. Independent ASR transcribed the original name approximately as Joahoe (Ari) and Yevor (Noa), rather than LORD.
+
+Both complete chapter tracks were regenerated with their original Google Chirp voices, en-US-Chirp3-HD-Charon and en-US-Chirp3-HD-Kore. The only source-to-speech word change is the conventional English substitute LORD. Raw source, exact request, old/new audio hashes and durations remain in receipts.json. Both replacements were fully decoded. Independent unprompted Hugging Face base.en ASR on the opening 45 seconds recognizes “by my name Lord” in both replacements. This targeted check does not certify every word of the full chapter; cutoff artifacts elsewhere in a 45-second transcript are retained unchanged.
+
+replacement-manifest.json contains the two replacement entries to merge by path into the existing manifest. Source translation attribution remains JPS 1917; speech normalization is explicitly identified separately. The reusable planner now separates sourceText from speech text and rejects any remaining untranslated Hebrew in an English request. The corpus regression verifies that exactly Exodus 6:3, out of 5,846 verses, receives this substitution.

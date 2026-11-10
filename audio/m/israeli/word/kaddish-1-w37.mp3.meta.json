@@ -1,0 +1,12 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "דְקוּדְשָׁא",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "2026-11-08: built from Ari's own clips: his דֶ syllable (audio/m/israeli/syllable/dalet-e.mp3) + 'kud' from his re-recorded take of this word + his שַׁ syllable (audio/m/israeli/syllable/shin-a.mp3). Every voice merged d+sh into 'ch'. Heard as 'דה קודשה' by the Hebrew model and a general Whisper model, and 'dekudsha' in English letters.",
+ "inputTextKind": "hebrew"
+}

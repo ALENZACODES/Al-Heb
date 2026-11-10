@@ -1,0 +1,177 @@
+{
+ "id": "book58",
+ "titleHe": "הַסִּפְרִיָּה",
+ "titleTranslit": "Ha-Sifriyah",
+ "titleEn": "The Library",
+ "level": "Beginner 3",
+ "pages": [
+  {
+   "n": 1,
+   "he": "הַסִּפְרִיָּה הָעִירוֹנִית.",
+   "translit": "Ha-sifriyah ha-ironit.",
+   "en": "The city library.",
+   "img": "assets/books/book58/BOOK58_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p01.mp3",
+    "m": "audio/m/israeli/book/book58-p01.mp3"
+   },
+   "illustration": "a quiet reading hall, tall windows",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "שֶׁקֶט.",
+   "translit": "Sheket.",
+   "en": "Quiet.",
+   "img": "assets/books/book58/BOOK58_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p02.mp3",
+    "m": "audio/m/israeli/book/book58-p02.mp3"
+   },
+   "illustration": "a sign: quiet please, a librarian's glance",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "רוֹנִי בָּא כָּל יוֹם.",
+   "translit": "Roni ba kol yom.",
+   "en": "Roni comes every day.",
+   "img": "assets/books/book58/BOOK58_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p03.mp3",
+    "m": "audio/m/israeli/book/book58-p03.mp3"
+   },
+   "illustration": "a man at the same table, same chair",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "הוּא לֹא קוֹרֵא.",
+   "translit": "Hu lo koreh.",
+   "en": "He doesn't read.",
+   "img": "assets/books/book58/BOOK58_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p04.mp3",
+    "m": "audio/m/israeli/book/book58-p04.mp3"
+   },
+   "illustration": "an open book he isn't looking at",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "הוּא מְחַפֵּשׂ עֲבוֹדָה.",
+   "translit": "Hu mechapes avodah.",
+   "en": "He is looking for a job.",
+   "img": "assets/books/book58/BOOK58_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p05.mp3",
+    "m": "audio/m/israeli/book/book58-p05.mp3"
+   },
+   "illustration": "a laptop with job listings, a worn CV",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "הַסַּפְרָנִית רוֹאָה.",
+   "translit": "Ha-safranit ro'ah.",
+   "en": "The librarian sees.",
+   "img": "assets/books/book58/BOOK58_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p06.mp3",
+    "m": "audio/m/israeli/book/book58-p06.mp3"
+   },
+   "illustration": "a librarian watching kindly over her glasses",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "יוֹם אֶחָד הִיא שָׂמָה סֵפֶר עַל הַשֻּׁלְחָן.",
+   "translit": "Yom echad hi samah sefer al ha-shulchan.",
+   "en": "One day she puts a book on his table.",
+   "img": "assets/books/book58/BOOK58_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p07.mp3",
+    "m": "audio/m/israeli/book/book58-p07.mp3"
+   },
+   "illustration": "a slim book placed silently",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"אֵיךְ לִכְתֹּב קוֹרוֹת חַיִּים.\"",
+   "translit": "\"Eich lichtov korot chayim.\"",
+   "en": "\"How to Write a CV.\"",
+   "img": "assets/books/book58/BOOK58_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p08.mp3",
+    "m": "audio/m/israeli/book/book58-p08.mp3"
+   },
+   "illustration": "the title on the cover",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "רוֹנִי צוֹחֵק בְּשֶׁקֶט.",
+   "translit": "Roni tzochek be-sheket.",
+   "en": "Roni laughs quietly.",
+   "img": "assets/books/book58/BOOK58_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p09.mp3",
+    "m": "audio/m/israeli/book/book58-p09.mp3"
+   },
+   "illustration": "the man covering his mouth",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הוּא קוֹרֵא. הוּא כּוֹתֵב מֵחָדָשׁ.",
+   "translit": "Hu koreh. Hu kotev me-chadash.",
+   "en": "He reads. He writes it again.",
+   "img": "assets/books/book58/BOOK58_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p10.mp3",
+    "m": "audio/m/israeli/book/book58-p10.mp3"
+   },
+   "illustration": "the CV reworked, red pen everywhere",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "שְׁבוּעַיִם אַחֲרֵי: טֶלֶפוֹן.",
+   "translit": "Shvu'ayim acharei: telefon.",
+   "en": "Two weeks later: a phone call.",
+   "img": "assets/books/book58/BOOK58_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p11.mp3",
+    "m": "audio/m/israeli/book/book58-p11.mp3"
+   },
+   "illustration": "his phone lighting up in the hall, a rush to the door",
+   "hasImg": false,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "הוּא מֵבִיא לָהּ פְּרָחִים. בְּשֶׁקֶט.",
+   "translit": "Hu mevi lah prachim. Be-sheket.",
+   "en": "He brings her flowers. Quietly.",
+   "img": "assets/books/book58/BOOK58_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book58-p12.mp3",
+    "m": "audio/m/israeli/book/book58-p12.mp3"
+   },
+   "illustration": "a bouquet set on the librarian's desk, a thumbs up",
+   "hasImg": false,
+   "hasAudio": true
+  }
+ ]
+}

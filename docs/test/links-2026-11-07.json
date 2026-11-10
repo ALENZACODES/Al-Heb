@@ -1,0 +1,3530 @@
+{
+ "files": 1521,
+ "internal": 32552,
+ "planned": {
+  "audio manifest status missing": 5664,
+  "book hasImages false": 552,
+  "image pipeline inventory, originals not in git": 3
+ },
+ "broken": [
+  {
+   "file": "data/curriculum/resource-concepts-gratis.json",
+   "line": 152,
+   "kind": "json:url",
+   "raw": "research_notes/resources/words/top625-user-supplied.csv",
+   "resolved": "research_notes/resources/words/top625-user-supplied.csv"
+  }
+ ],
+ "external": [
+  {
+   "url": "http://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "https://opensiddur.org/2010/08/%D7%AA%D7%A0%D7%B4%D7%9A-the-holy-scriptures-a-new-translation-jps-1917/",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:152"
+   ]
+  },
+  {
+   "url": "http://www.toratemetfreeware.com/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:16"
+   ]
+  },
+  {
+   "url": "http://www.w3.org/1999/xlink",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.w3.org/1999/xlink",
+   "where": [
+    "src/letters/memorycard.js:100"
+   ]
+  },
+  {
+   "url": "http://www.w3.org/2000/svg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.w3.org/2000/svg",
+   "where": [
+    "src/awards/icons.js:75",
+    "src/curriculum/calendar.markers.js:92",
+    "src/games/archbuilder.view.js:44",
+    "src/letters/memorycard.js:99",
+    "src/letters/trace.js:339",
+    "src/letters/tween.js:128",
+    "src/morning/morning.view.js:33",
+    "src/progress/weekly.js:103",
+    "docs/letters/MORPH-USAGE.md:10",
+    "preview/loops/badges.art.js:56",
+    "preview/loops/points.js:35"
+   ]
+  },
+  {
+   "url": "https://",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "Invalid URL",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:38",
+    "docs/qa/SVG-SANITISER-REVIEW.md:42",
+    "docs/qa/SVG-SANITISER-REVIEW.md:45",
+    "docs/qa/SVG-SANITISER-REVIEW.md:46"
+   ]
+  },
+  {
+   "url": "https://...&quot",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND ...&quot",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:45"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/DECISIONS-NEEDED.md:7",
+    "docs/DEPLOY.md:5",
+    "docs/HANDOFF.md:35",
+    "docs/NEXT-STEPS-JOHN.md:7",
+    "docs/STATUS.md:85",
+    "docs/deploy/CI-BILLING-2026-11-07.md:34",
+    "docs/deploy/CLOUDFLARE-PAGES.md:3",
+    "docs/deploy/GO-LIVE-CHECKLIST.md:3",
+    "docs/deploy/GO-LIVE-CHECKLIST.md:13",
+    "docs/deploy/GO-LIVE-CHECKLIST.md:21",
+    "docs/deploy/LIVE-CHECK-2026-11-07.md:3",
+    "docs/deploy/LIVE-CHECK-2026-11-07.md:7",
+    "docs/launch/TESTER-KIT.md:3",
+    "docs/release/OWNER-NEEDS.md:81"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/_headers",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:25"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/assets/fonts/web/heebo.woff2",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:24"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/manifest.webmanifest",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:22"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/nope.js",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:26"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/precache-manifest.js",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:12",
+    "docs/deploy/LIVE-CHECK-2026-11-07.md:28"
+   ]
+  },
+  {
+   "url": "https://alef-review.onrender.com/sw.js",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/deploy/GO-LIVE-CHECKLIST.md:23"
+   ]
+  },
+  {
+   "url": "https://alephchamp.com/about/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:9",
+    "docs/verification/VERIFICATION.md:204",
+    "docs/verification/VERIFICATION.md:205",
+    "docs/verification/VERIFICATION.md:206",
+    "docs/verification/VERIFICATION.md:207"
+   ]
+  },
+  {
+   "url": "https://alephchamp.com/about/faqs/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:9",
+    "docs/verification/VERIFICATION.md:203"
+   ]
+  },
+  {
+   "url": "https://api.ies.ed.gov/eric/?search=title%3A%22Embedded%20Picture%20Mnemonics%20to%20Learn%20Letters%22&format=json",
+   "status": 200,
+   "ok": true,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:209"
+   ]
+  },
+  {
+   "url": "https://aws.amazon.com/blogs/ai/powering-language-learning-on-duolingo-with-amazon-polly",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://aws.amazon.com/blogs/machine-learning/powering-language-learning-on-duolingo-with-amazon-polly/",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:113"
+   ]
+  },
+  {
+   "url": "https://aws.amazon.com/textract/faqs/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:11",
+    "docs/verification/VERIFICATION.md:100"
+   ]
+  },
+  {
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "The operation was aborted due to timeout",
+   "where": [
+    "docs/verification/VERIFICATION.md:99"
+   ]
+  },
+  {
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "The operation was aborted due to timeout",
+   "where": [
+    "docs/verification/VERIFICATION.md:123"
+   ]
+  },
+  {
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/translator/",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "The operation was aborted due to timeout",
+   "where": [
+    "docs/verification/DATA-FIXES.md:26",
+    "docs/verification/VERIFICATION.md:106"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/achievement-badges/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:94"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:95"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/duolingo-energy/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:107"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/duolingo-leagues-leaderboards/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:93"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/duolingo-max",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://blog.duolingo.com/duolingo-max/",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:108"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/friend-streak/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:92"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/friends-quests/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:91"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/how-duolingo-streak-builds-habit",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://blog.duolingo.com/how-duolingo-streak-builds-habit/",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:90"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/tips-for-maintaining-streak/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:97"
+   ]
+  },
+  {
+   "url": "https://blog.duolingo.com/ways-to-practice-in-duolingo/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:96"
+   ]
+  },
+  {
+   "url": "https://bnaiisraelcong.org/event/hebrewreading2022",
+   "status": 200,
+   "ok": true,
+   "method": "GET (browser user agent)",
+   "final": "https://www.bnaiisraelcong.org/event/hebrewreading2022",
+   "where": [
+    "docs/curriculum/class-track/SOURCES.md:10"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/terms/service-terms",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:128"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/text-to-speech/docs/chirp3-hd",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd",
+   "where": [
+    "docs/verification/DATA-FIXES.md:28",
+    "docs/verification/VERIFICATION.md:138"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/text-to-speech/docs/list-voices-and-types",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://docs.cloud.google.com/text-to-speech/docs/list-voices-and-types",
+   "where": [
+    "docs/verification/VERIFICATION.md:126",
+    "docs/verification/VERIFICATION.md:139"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/text-to-speech/pricing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:127"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/translate/pricing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://cloud.google.com/products/translate/pricing",
+   "where": [
+    "docs/verification/DATA-FIXES.md:26",
+    "docs/verification/VERIFICATION.md:104",
+    "docs/verification/VERIFICATION.md:105"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/vision/docs/languages",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://docs.cloud.google.com/vision/docs/languages",
+   "where": [
+    "docs/verification/DATA-FIXES.md:25",
+    "docs/verification/VERIFICATION.md:96"
+   ]
+  },
+  {
+   "url": "https://cloud.google.com/vision/pricing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:25",
+    "docs/verification/VERIFICATION.md:97"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Ab_Genesis_No%27a%E1%B8%A5-0c-Yisra%27el_Asael_Ashkenaz.oga",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:30"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Adoin_oilom_(1903).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:19"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Birchos_kohanim_(1908).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:22"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Cantillation_Example_Haftarah_Ashkenazi.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:27"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Cantillation_Example_Torah_Ashkenazi.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:26"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Gershon_Sirota._Jisgadal_w%C4%9Bjiskadasch._1903.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:23"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Kawokores_rohe_adre_(1908).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:21"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Mimkoimoi_hu_jifen_(1902).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:20"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Odom_yasoido_meator_(1903).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:25"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Taamim_Haftara_SuperJew.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:29"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Taamim_Torah_SuperJew.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:28"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:The_National_Library_of_Israel_-_Shofar_Prayer,_Ashkenazi_version_-_1785188_SHOFAR78.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:31"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Traditional_Chad_Gadya.ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:32"
+   ]
+  },
+  {
+   "url": "https://commons.wikimedia.org/wiki/File:Zadik_katomor_(1908).ogg",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:24"
+   ]
+  },
+  {
+   "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:12"
+   ]
+  },
+  {
+   "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:13",
+    "src/vocab/vocab.view.js:109"
+   ]
+  },
+  {
+   "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:44",
+    "src/listen/catalog.js:45",
+    "src/listen/catalog.js:46"
+   ]
+  },
+  {
+   "url": "https://developer.apple.com/app-store/review/guidelines/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:29",
+    "docs/verification/VERIFICATION.md:146"
+   ]
+  },
+  {
+   "url": "https://developer.apple.com/programs/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:29",
+    "docs/verification/VERIFICATION.md:150"
+   ]
+  },
+  {
+   "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:156"
+   ]
+  },
+  {
+   "url": "https://developers.cloudflare.com/pages/platform/limits/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:59",
+    "docs/verification/VERIFICATION.md:154"
+   ]
+  },
+  {
+   "url": "https://developers.deepl.com/docs/getting-started/supported-languages",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:13",
+    "docs/verification/VERIFICATION.md:107"
+   ]
+  },
+  {
+   "url": "https://developers.google.com/ml-kit/language/translation/translation-language-support",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://developers.google.com/ml-kit/language/translation/translation-language-support?hl=bn",
+   "where": [
+    "docs/verification/VERIFICATION.md:115"
+   ]
+  },
+  {
+   "url": "https://developers.google.com/ml-kit/vision/text-recognition/v2",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://developers.google.com/ml-kit/vision/text-recognition/v2?hl=ar",
+   "where": [
+    "docs/verification/DATA-FIXES.md:60",
+    "docs/verification/VERIFICATION.md:101"
+   ]
+  },
+  {
+   "url": "https://developers.sefaria.org/docs/usage-of-our-name-and-logo",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:11"
+   ]
+  },
+  {
+   "url": "https://developers.sefaria.org/docs/welcome",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:80"
+   ]
+  },
+  {
+   "url": "https://developers.sefaria.org/reference/getting-started",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:79"
+   ]
+  },
+  {
+   "url": "https://digitalcommons.usf.edu/psy_facpub/1767/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:101"
+   ]
+  },
+  {
+   "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:59",
+    "docs/verification/VERIFICATION.md:155"
+   ]
+  },
+  {
+   "url": "https://docs.google.com/document/d/e/2PACX-1vQHQfHUVMNugNyPyJRucHa9cEU9VUdFD8DAcLFAsUmBORodDmIO2YG85-m01OtF3FUlIgmaSxW_YWSc/pub",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:77"
+   ]
+  },
+  {
+   "url": "https://docs.midjourney.com/docs/terms-of-service",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+   "where": [
+    "docs/verification/VERIFICATION.md:173"
+   ]
+  },
+  {
+   "url": "https://duolingodata.com/dat/hefen96.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:104"
+   ]
+  },
+  {
+   "url": "https://elevenlabs.io/docs/eleven-api/guides/how-to/text-to-speech/pronunciation-dictionaries",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:131"
+   ]
+  },
+  {
+   "url": "https://elevenlabs.io/docs/overview/models",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:129"
+   ]
+  },
+  {
+   "url": "https://elevenlabs.io/terms-of-use",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:130"
+   ]
+  },
+  {
+   "url": "https://en.wikibooks.org/wiki/Hebrew",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:159"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Ashkenazi_Hebrew",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/review/ASHKENAZI-CHOLAM.md:30"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Duolingo",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:109"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Modern_Hebrew_phonology",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:198",
+    "docs/verification/VERIFICATION.md:199"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Qamets",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:14",
+    "docs/verification/VERIFICATION.md:191",
+    "docs/verification/VERIFICATION.md:194",
+    "docs/verification/VERIFICATION.md:195"
+   ]
+  },
+  {
+   "url": "https://en.wiktionary.org/wiki/%D7%91%D7%95%D7%A7%D7%A8",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:196"
+   ]
+  },
+  {
+   "url": "https://en.wiktionary.org/wiki/%D7%99%D7%9C%D7%93%D7%94",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:197"
+   ]
+  },
+  {
+   "url": "https://evil/",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND evil",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:34"
+   ]
+  },
+  {
+   "url": "https://evil/esc.png",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND evil",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:39"
+   ]
+  },
+  {
+   "url": "https://evil/is.png",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND evil",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:41"
+   ]
+  },
+  {
+   "url": "https://evil/x",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND evil",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:43",
+    "docs/qa/SVG-SANITISER-REVIEW.md:44"
+   ]
+  },
+  {
+   "url": "https://evil/x.svg#a",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND evil",
+   "where": [
+    "docs/qa/SVG-SANITISER-REVIEW.md:35"
+   ]
+  },
+  {
+   "url": "https://fieldsupport.dliflc.edu/products/hebrew/he_bc_LSK/default.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "data/curriculum/resource-concepts-gratis.json:93",
+    "docs/resources/gratis-directory.md:113"
+   ]
+  },
+  {
+   "url": "https://fonts.adobe.com/fonts/gisha",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:182"
+   ]
+  },
+  {
+   "url": "https://fonts.adobe.com/fonts/myriad-hebrew",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:31",
+    "docs/verification/VERIFICATION.md:181"
+   ]
+  },
+  {
+   "url": "https://github.com/ALENZACODES/Al-Heb.git",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "https://github.com/ALENZACODES/Al-Heb",
+   "where": [
+    "docs/release/MERGE-PLAN.md:124",
+    "docs/release/MERGE-PLAN.md:213",
+    "docs/release/PRE-PUSH-INVENTORY.md:9"
+   ]
+  },
+  {
+   "url": "https://github.com/ALENZACODES/Al-Heb/actions/runs/42349174248",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/qa/site-quality-2026-11-07.md:49"
+   ]
+  },
+  {
+   "url": "https://github.com/ALENZACODES/Al-Heb/pull/30",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/qa/site-quality-2026-11-07.md:49"
+   ]
+  },
+  {
+   "url": "https://github.com/hermitdave/FrequencyWords",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/vocab/vocab.view.js:110"
+   ]
+  },
+  {
+   "url": "https://github.com/resemble-ai/chatterbox",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/tts/README.md:41"
+   ]
+  },
+  {
+   "url": "https://goo.gl/UNyp2t",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.youtube.com/watch?v=BubU0qL9y8o&feature=youtu.be",
+   "where": [
+    "docs/youtube/top100.md:57"
+   ]
+  },
+  {
+   "url": "https://gratisglobal.com/learn-hebrew-free",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:5"
+   ]
+  },
+  {
+   "url": "https://groups.google.com/g/jewish-languages/c/z-PqGYNdU3w",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/review/ASHKENAZI-CHOLAM.md:32"
+   ]
+  },
+  {
+   "url": "https://groups.google.com/g/leining/c/6BMUm6KGftc/m/5xErLf7NAgAJ",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/review/ASHKENAZI-CHOLAM.md:33"
+   ]
+  },
+  {
+   "url": "https://he.wikipedia.org/wiki/%D7%A7%D7%9E%D7%A5_%D7%A7%D7%98%D7%9F",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:14",
+    "docs/verification/VERIFICATION.md:190",
+    "docs/verification/VERIFICATION.md:193"
+   ]
+  },
+  {
+   "url": "https://hebrew.laits.utexas.edu/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:147"
+   ]
+  },
+  {
+   "url": "https://help.apple.com/itc/booksassetguide/en.lproj/static.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:183"
+   ]
+  },
+  {
+   "url": "https://help.sefaria.org/hc/en-us/articles/18490043237148-How-to-Find-and-Understand-Licensing-or-Copyright-Information",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:12"
+   ]
+  },
+  {
+   "url": "https://helpx.adobe.com/indesign/using/arabic-hebrew.html",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:180"
+   ]
+  },
+  {
+   "url": "https://huggingface.co/api/models/facebook/nllb-200-distilled-600M",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:109"
+   ]
+  },
+  {
+   "url": "https://huggingface.co/api/models/google/madlad400-3b-mt",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:110"
+   ]
+  },
+  {
+   "url": "https://huggingface.co/api/models/Helsinki-NLP/opus-mt-en-he",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:111"
+   ]
+  },
+  {
+   "url": "https://integraliah.com/can-you-learn-hebrew-on-duolingo-an-in-depth-look/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:111"
+   ]
+  },
+  {
+   "url": "https://jewfaq.org/translitguide.htm",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.jewfaq.org/translitguide.htm",
+   "where": [
+    "docs/review/ASHKENAZI-CHOLAM.md:31"
+   ]
+  },
+  {
+   "url": "https://jewishmiami.org/about/departments/missions/common_hebrew_words_and_phrases",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://jewishmiami.org/about/departments/missions/common_hebrew_words_and_phrases/",
+   "where": [
+    "docs/resources/gratis-directory.md:185"
+   ]
+  },
+  {
+   "url": "https://kaikki.org/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/vocab/vocab.view.js:112"
+   ]
+  },
+  {
+   "url": "https://kdp.amazon.com/en_US/help/topic/GML3FXP998V8WS4U",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:31",
+    "docs/verification/VERIFICATION.md:175"
+   ]
+  },
+  {
+   "url": "https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:177"
+   ]
+  },
+  {
+   "url": "https://kenney.nl/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/listen/catalog.js:44",
+    "src/listen/catalog.js:45",
+    "src/listen/catalog.js:46"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/language-support",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:25",
+    "docs/verification/VERIFICATION.md:98"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/language-support?tabs=tts",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:121"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-ssml-phonetic-sets",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:28",
+    "docs/verification/VERIFICATION.md:122",
+    "docs/verification/VERIFICATION.md:140"
+   ]
+  },
+  {
+   "url": "https://learn101.org/hebrew.php",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:53"
+   ]
+  },
+  {
+   "url": "https://lingoly.io/units-each-duolingo-language/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:105"
+   ]
+  },
+  {
+   "url": "https://lr.psf.lt/r/hebrew/comments/12gvpvb/i_tried_duolingos_placement_test_for_hebrew_as_a",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://auth.p.projectsegfau.lt/if/flow/default-authentication-flow/?client_id=sCCQ1GnXVuVKZGedO5m40UCqFfEMaV1Q5CvJSGD6&redirect_uri=https%3A%2F%2Flr.psf.lt%2Foutpost.goauthentik.io%2Fcallback%3FX-authentik-auth-callback%3Dtrue&response_type=code&scope=entitlements+email+ak_proxy+openid+profile&state=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnb2F1dGhlbnRpay5pby9vdXRwb3N0L3NDQ1ExR25YVnVWS1pHZWRPNW00MFVDcUZmRU1hVjFRNUN2SlNHRDYiLCJzaWQiOiJMS0VVS0dQMzVFWUNGU1pETkFOQVpSUE5JSllTMkxGUlZVREpEN0tZU0s3UDJQWFEyWFlRIiwic3RhdGUiOiJtSEVEYU9YTmtMSXc0TzZndWh1WXNUOUdBT0ttRXY5Vl9adE0wZDJvSjZFIiwicmVkaXJlY3QiOiJodHRwczovL2xyLnBzZi5sdC9yL2hlYnJldy9jb21tZW50cy8xMmd2cHZiL2lfdHJpZWRfZHVvbGluZ29zX3BsYWNlbWVudF90ZXN0X2Zvcl9oZWJyZXdfYXNfYSJ9.V3lnNGC9gw1cL-3LeVMXflulSOW_SY9Ix5aK-aJv_2c&next=%2Fapplication%2Fo%2Fauthorize%2F%3Fclient_id%3DsCCQ1GnXVuVKZGedO5m40UCqFfEMaV1Q5CvJSGD6%26redirect_uri%3Dhttps%253A%252F%252Flr.psf.lt%252Foutpost.goauthentik.io%252Fcallback%253FX-authentik-auth-callback%253Dtrue%26response_type%3Dcode%26scope%3Dentitlements%2Bemail%2Bak_proxy%2Bopenid%2Bprofile%26state%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnb2F1dGhlbnRpay5pby9vdXRwb3N0L3NDQ1ExR25YVnVWS1pHZWRPNW00MFVDcUZmRU1hVjFRNUN2SlNHRDYiLCJzaWQiOiJMS0VVS0dQMzVFWUNGU1pETkFOQVpSUE5JSllTMkxGUlZVREpEN0tZU0s3UDJQWFEyWFlRIiwic3RhdGUiOiJtSEVEYU9YTmtMSXc0TzZndWh1WXNUOUdBT0ttRXY5Vl9adE0wZDJvSjZFIiwicmVkaXJlY3QiOiJodHRwczovL2xyLnBzZi5sdC9yL2hlYnJldy9jb21tZW50cy8xMmd2cHZiL2lfdHJpZWRfZHVvbGluZ29zX3BsYWNlbWVudF90ZXN0X2Zvcl9oZWJyZXdfYXNfYSJ9.V3lnNGC9gw1cL-3LeVMXflulSOW_SY9Ix5aK-aJv_2c",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:112"
+   ]
+  },
+  {
+   "url": "https://nakdan-u2-1a.loadbalancer.dicta.org.il/api",
+   "status": 500,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/photo/BENCHMARK.md:56",
+    "docs/review/ENGAGEMENT-CHECK.md:22"
+   ]
+  },
+  {
+   "url": "https://nakdan.dicta.org.il/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:137"
+   ]
+  },
+  {
+   "url": "https://njop.org/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:208"
+   ]
+  },
+  {
+   "url": "https://openai.com/policies/row-terms-of-use/",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:169"
+   ]
+  },
+  {
+   "url": "https://openai.com/policies/terms-of-use/",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/images/RIGHTS.md:6",
+    "docs/verification/DATA-FIXES.md:32",
+    "docs/verification/VERIFICATION.md:168"
+   ]
+  },
+  {
+   "url": "https://opensiddur.org/",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:89"
+   ]
+  },
+  {
+   "url": "https://opensiddur.org/prayers/solilunar/everyday/daytime/baqashot/yigdal-by-daniel-ben-yehudah-translation-by-tsvi-hirsch-filipowski-1862",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:105"
+   ]
+  },
+  {
+   "url": "https://opensiddur.org/shared/prayers/solilunar/everyday/kaddish",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:113"
+   ]
+  },
+  {
+   "url": "https://opensiddur.org/tagged/kaddish-yatom",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:113"
+   ]
+  },
+  {
+   "url": "https://platform.openai.com/docs/guides/image-generation",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://developers.openai.com/api/docs/guides/image-generation",
+   "where": [
+    "docs/verification/DATA-FIXES.md:10",
+    "docs/verification/VERIFICATION.md:170",
+    "docs/verification/VERIFICATION.md:172",
+    "docs/verification/VERIFICATION.md:184"
+   ]
+  },
+  {
+   "url": "https://platform.openai.com/docs/guides/text-to-speech",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://developers.openai.com/api/docs/guides/text-to-speech",
+   "where": [
+    "docs/verification/VERIFICATION.md:132"
+   ]
+  },
+  {
+   "url": "https://platform.openai.com/docs/pricing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://developers.openai.com/api/docs/pricing",
+   "where": [
+    "docs/verification/VERIFICATION.md:171"
+   ]
+  },
+  {
+   "url": "https://prod.sefaria.org.il/sheets/228381",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND prod.sefaria.org.il",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:13"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/argosopentech/argospm-index/main/index.json",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:112"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/datalab-to/surya/master/README.md",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:12",
+    "docs/verification/VERIFICATION.md:103"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifhebrew/OFL.txt",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/book/QA.md:85"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_50k.txt",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "data/vocab/meta.json:77",
+    "data/vocab/sources.lock.json:20"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/he/he_full.txt",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "data/vocab/meta.json:71",
+    "data/vocab/sources.lock.json:13"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/README.md",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "data/vocab/meta.json:89",
+    "data/vocab/sources.lock.json:34"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/heb.traineddata",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/photo/BENCHMARK.md:88"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata/main/LICENSE",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:102"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/thewh1teagle/phonikud/main/LICENSE",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:62",
+    "docs/verification/VERIFICATION.md:136"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/wiki/open-spaced-repetition/awesome-fsrs/The-Algorithm.md",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:30",
+    "docs/verification/VERIFICATION.md:158"
+   ]
+  },
+  {
+   "url": "https://raw.githubusercontent.com/wiki/open-spaced-repetition/fsrs4anki/The-Algorithm.md",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:162"
+   ]
+  },
+  {
+   "url": "https://red.ks32.dev/r/hebrew/comments/1jqyujg/duolingo_hebrew_sucks_alternatives",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND red.ks32.dev",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:101"
+   ]
+  },
+  {
+   "url": "https://reddit.sentinel-team.org/posts/1rbzyn5/snapshots/2026-02-23T15%3A13%3A45.558517Z",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:102"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/rosh-chodesh",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:48"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/rosh-hashanah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:49"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/shavuot",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:43"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/simchat-torah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://reformjudaism.org/jewish-holidays/shmini-atzeret-and-simchat-torah",
+   "where": [
+    "docs/verification/DATA-FIXES.md:22",
+    "docs/verification/VERIFICATION.md:41"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/sukkot",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:42"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/tishah-bav",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:21",
+    "docs/verification/VERIFICATION.md:45"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/jewish-holidays/tu-bishvat/tu-bishvat-history",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:44"
+   ]
+  },
+  {
+   "url": "https://reformjudaism.org/learning/judaism-classes/hebrew-classes/learn-read-hebrew",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/curriculum/class-track/SOURCES.md:9"
+   ]
+  },
+  {
+   "url": "https://registry.npmjs.org/ts-fsrs/latest",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:157"
+   ]
+  },
+  {
+   "url": "https://storyolive.com/en/hebrew/stories",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:78"
+   ]
+  },
+  {
+   "url": "https://support.google.com/googleplay/android-developer/answer/6112435",
+   "status": 200,
+   "ok": true,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:29",
+    "docs/verification/VERIFICATION.md:151"
+   ]
+  },
+  {
+   "url": "https://support.google.com/googleplay/android-developer/answer/9799150",
+   "status": 200,
+   "ok": true,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:148"
+   ]
+  },
+  {
+   "url": "https://tanach.us/License.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/corpus/tools/build-licenses.mjs:55",
+    "docs/corpus/LICENSES.md:13",
+    "docs/torahread/SOURCES.md:7",
+    "docs/verification/DATA-FIXES.md:58",
+    "docs/verification/VERIFICATION.md:87",
+    "docs/verification/VERIFICATION.md:88"
+   ]
+  },
+  {
+   "url": "https://texttospeech.googleapis.com/v1/voices?languageCode=he-IL",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/audio/RENDER-QUEUE-2026-11-07.md:10"
+   ]
+  },
+  {
+   "url": "https://turtledovethoughts.blogspot.com/2026/02/duolingo-hebrew-2026-review-honest.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:110"
+   ]
+  },
+  {
+   "url": "https://unpkg.com/@hebcal/leyning@5.2.0/dist/index.mjs",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/torah/SOURCES.md:12"
+   ]
+  },
+  {
+   "url": "https://users.cs.jmu.edu/abzugcx/Public/Biblical-Hebrew/HEBR-&-REL-131/Alef-Bet-Instructions-for-Writing.pdf",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/letters/REVIEW-LIST.md:41"
+   ]
+  },
+  {
+   "url": "https://vercel.com/pricing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:152"
+   ]
+  },
+  {
+   "url": "https://vision.googleapis.com/v1/images:annotate",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/review/ENGAGEMENT-CHECK.md:23"
+   ]
+  },
+  {
+   "url": "https://web.ma.utexas.edu/users/sadun/DuoHebrew.pdf",
+   "status": 503,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:103"
+   ]
+  },
+  {
+   "url": "https://www.adobe.com/legal/terms.html",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:174"
+   ]
+  },
+  {
+   "url": "https://www.alittlehebrew.com/read/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:89"
+   ]
+  },
+  {
+   "url": "https://www.apple.com/ios/feature-availability/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:13",
+    "docs/verification/DATA-FIXES.md:60",
+    "docs/verification/VERIFICATION.md:95",
+    "docs/verification/VERIFICATION.md:108",
+    "docs/verification/VERIFICATION.md:134"
+   ]
+  },
+  {
+   "url": "https://www.bjpa.org/content/upload/bjpa/c__w/Survey%20popular%20paper%20final.pdf",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "data/traditions/sources.json:75",
+    "docs/verification/VERIFICATION.md:201"
+   ]
+  },
+  {
+   "url": "https://www.clozemaster.com/blog/?p=7597",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:100"
+   ]
+  },
+  {
+   "url": "https://www.clozemaster.com/blog/?p=7907",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:99"
+   ]
+  },
+  {
+   "url": "https://www.geonames.org/export/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:36"
+   ]
+  },
+  {
+   "url": "https://www.goethe-verlag.com/book2/EN/ENHE/ENHE002.HTM",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:124"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/hebcal?v=1&cfg=json&c=on&geo=geoname&geonameid=6167865",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:38"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/hebcal?v=1&cfg=json&maj=on&min=on&mod=on&nx=on&year=5787&yt=H",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:39",
+    "docs/verification/VERIFICATION.md:50"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/holidays/tisha-bav-2027",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:21",
+    "docs/verification/VERIFICATION.md:40"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/holidays/yom-haatzmaut-2027",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:47"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/holidays/yom-hashoah-2027",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:46"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/home/195/shabbat-times-rest-api",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.hebcal.com/home/195/jewish-calendar-rest-api",
+   "where": [
+    "docs/verification/VERIFICATION.md:35",
+    "docs/verification/VERIFICATION.md:37"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/home/about/terms",
+   "status": 404,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:33"
+   ]
+  },
+  {
+   "url": "https://www.hebcal.com/home/developer-apis",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:24",
+    "docs/verification/VERIFICATION.md:30",
+    "docs/verification/VERIFICATION.md:31",
+    "docs/verification/VERIFICATION.md:32",
+    "docs/verification/VERIFICATION.md:34"
+   ]
+  },
+  {
+   "url": "https://www.hebrewwithben.com/",
+   "status": 0,
+   "ok": false,
+   "method": "fetch",
+   "error": "getaddrinfo ENOTFOUND www.hebrewwithben.com",
+   "where": [
+    "docs/resources/gratis-directory.md:67"
+   ]
+  },
+  {
+   "url": "https://www.ingramspark.com/hubfs/downloads/file-creation-guide.pdf",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/DATA-FIXES.md:31",
+    "docs/verification/VERIFICATION.md:178"
+   ]
+  },
+  {
+   "url": "https://www.livelingua.com/project/fsi/Hebrew/",
+   "status": 202,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:101"
+   ]
+  },
+  {
+   "url": "https://www.loecsen.com/en/learn-hebrew",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:135"
+   ]
+  },
+  {
+   "url": "https://www.mindomax.com/duolingo-cost",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/strategy/DUOLINGO-100.md:106"
+   ]
+  },
+  {
+   "url": "https://www.myjewishlearning.com/article/ashkenazic-and-sephardic-hebrew/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/review/ASHKENAZI-CHOLAM.md:34"
+   ]
+  },
+  {
+   "url": "https://www.netlify.com/pricing/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:153"
+   ]
+  },
+  {
+   "url": "https://www.nli.org.il/en/books/NNL_ALEPH990003580480205171/NLI",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:15"
+   ]
+  },
+  {
+   "url": "https://www.nli.org.il/he/books/NNL_ALEPH002211687",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:9"
+   ]
+  },
+  {
+   "url": "https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2006.01693.x/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:100"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.sefaria.org/texts",
+   "where": [
+    "docs/verification/VERIFICATION.md:82"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/Numbers.6.24",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:85"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Adon_Olam",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:83"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:82"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/Siddur_Sefard%2C_Shabbat_Candle_Lighting",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:81"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/versions/Genesis",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:84"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/versions/Siddur_Ashkenaz",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:10"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/texts/versions/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:86"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/api/v3/texts/Siddur%20Ashkenaz%2C%20Weekday%2C%20Shacharit%2C%20Preparatory%20Prayers%2C%20Modeh%20Ani?version=hebrew%7CThe%20Metsudah%20siddur%2C%201981",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:9"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Shabbat%2C_Kabbalat_Shabbat%2C_Lekha_Dodi",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:136",
+    "docs/corpus/VERIFY-REPORT.md:166"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Concluding_Passage",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:132",
+    "docs/corpus/VERIFY-REPORT.md:164"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Amidah%2C_Peace",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:134",
+    "docs/corpus/VERIFY-REPORT.md:165"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Concluding_Prayers%2C_Mourner%27s_Kaddish",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:122",
+    "docs/corpus/VERIFY-REPORT.md:161"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Modeh_Ani",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:120",
+    "docs/corpus/VERIFY-REPORT.md:160"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Preparatory_Prayers%2C_Yigdal",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:137",
+    "docs/corpus/VERIFY-REPORT.md:167"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Berich_Shmei",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:128",
+    "docs/corpus/VERIFY-REPORT.md:163"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Ashkenaz%2C_Weekday%2C_Shacharit%2C_Torah_Reading%2C_Removing_the_Torah_from_Ark%2C_Vayehi_Binsoa",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:124",
+    "docs/corpus/VERIFY-REPORT.md:162"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Hanukkah%2C_Menorah_Lighting",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:146",
+    "docs/corpus/VERIFY-REPORT.md:147",
+    "docs/corpus/VERIFY-REPORT.md:148",
+    "docs/corpus/VERIFY-REPORT.md:149",
+    "docs/corpus/VERIFY-REPORT.md:150"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Havdalah%2C_Havdala",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:144",
+    "docs/corpus/VERIFY-REPORT.md:145"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Preparatory_Prayers%2C_Torah_Blessings",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:114"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Shabbat_Evening%2C_First_Meal",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:110",
+    "docs/corpus/VERIFY-REPORT.md:112"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Shabbat_Shacharit%2C_Haftarah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:139",
+    "docs/corpus/VERIFY-REPORT.md:140"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Alenu",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:119"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Amida",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:117",
+    "docs/corpus/VERIFY-REPORT.md:118"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Edot_HaMizrach%2C_Weekday_Shacharit%2C_Torah_Reading",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:115"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Birchat_HaMazon",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:123",
+    "docs/corpus/VERIFY-REPORT.md:138",
+    "docs/corpus/VERIFY-REPORT.md:168"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Birchat_HaMazon%2C_Blessing_on_Foods",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:111"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Motzaei_Shabbat_%2C_Havdala",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:142",
+    "docs/corpus/VERIFY-REPORT.md:143"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Musaf",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:121"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Rosh_Chodesh%2C_Torah_Reading",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:126",
+    "docs/corpus/VERIFY-REPORT.md:127"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Candle_Lighting",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:113"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Amidah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:133"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Eve_Mincha%2C_Mincha",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:109"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Evening_Meal%2C_Shabbat_Eve_Kiddush",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:135"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Amidah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:130"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Blessings_on_Torah_Reading",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:116"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Prayer_for_Oleh",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:141"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Shabbat_Torah_Reading",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:125"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Shabbat_Morning_Services%2C_Thanksgiving_Blessing",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:129"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/Siddur_Sefard%2C_Various_Prayers_%26_Segulot%2C_Prayer_of_the_Shelah",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/VERIFY-REPORT.md:131"
+   ]
+  },
+  {
+   "url": "https://www.sefaria.org/terms",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/corpus/RESOURCE-METSUDAH.md:14",
+    "docs/verification/VERIFICATION.md:77"
+   ]
+  },
+  {
+   "url": "https://www.tandfonline.com/doi/abs/10.1080/10888431003623470",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "",
+   "where": [
+    "docs/verification/VERIFICATION.md:210"
+   ]
+  },
+  {
+   "url": "https://www.teachmehebrew.com/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/resources/gratis-directory.md:31"
+   ]
+  },
+  {
+   "url": "https://www.tisrael.org/event/learn-to-read-hebrew-level-1-25",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "https://www.tisrael.org/event-details/?id=2583631&date=1679443200&schedule_id=4267394",
+   "where": [
+    "docs/curriculum/class-track/SOURCES.md:12"
+   ]
+  },
+  {
+   "url": "https://www.urj.org/blog/new-2021-learn-read-hebrew-adults-online",
+   "status": 403,
+   "ok": false,
+   "method": "GET (browser user agent)",
+   "final": "https://urj.org/blog/new-2021-learn-read-hebrew-adults-online",
+   "where": [
+    "docs/curriculum/class-track/SOURCES.md:11"
+   ]
+  },
+  {
+   "url": "https://www.wiktionary.org/",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "src/vocab/vocab.view.js:111"
+   ]
+  },
+  {
+   "url": "https://www.yorku.ca/ncepeda/publications/CPVWR2006.html",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/feel/LOOPS-PARITY.md:99"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/@cantorsarahlevine",
+   "status": 200,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/research/ijl-sarah-levine.md:7"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=_UU6Fe7lqIo",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:37"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=1ft5XW3AoA8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:100"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=2-9MMghUsLo",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:88"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=29w8qj8EnAE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:58"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=3J21KaBlaVM",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:129"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=59HRxQfb3CE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:78"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=66VslIqvi60",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:76"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=6i9J3kuJoWo",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:119"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=6KQLOuIKaRA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:38"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=8jBoMImEpC0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:45"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=8r4o79gj7-U",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:115"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=8wi_uPY9uZA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:108"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=91w_UiE_Uyg",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:69"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=A8ppeKh5FM8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:133"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=AnCPYRGc5MA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:106"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=aOjSPa_WlLM",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:125"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=b5dUVhQxLDM",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:49"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=BubU0qL9y8o",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:90"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=BUhGnuwmJ4E",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:83"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=C3ruTV0Ig2c",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:68"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=cbyBHvtW_E0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:110"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=cc4ZomhXN3k",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:120"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=cfyu0dSDDxc",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:116"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=cp_pLn1Q368",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:70"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=daan5UaTZiA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:92"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=dKPKtvrXEfM",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:42"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=dqa5muIFzcw",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:99"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=dXRqhHPKiZY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:66"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Ekc3lIVdHEU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:48"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=F2KXs1yYRH4",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:131"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=f8R6QL0dNTU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:71"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=FBd9QdpqUz0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:82"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=FhSnPHfytmU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:102"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=fJKiaieyxIY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:50"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=fpnr013cImA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:136"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=FsEH_cw_o5Q",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:130"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=FUZ_ewKA-eE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:72"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=fX2StowxCs8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:117"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=gLD96nmmgp8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:128"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=GrRuqF21myQ",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:91"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=gYK-oddASe4",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:51"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=h5o3LPXNeXI",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:111"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=HIE4PZBzAAU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:86"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=hVcKV2QJ6dY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:75"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Hz67LL7FEmY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:80"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=HZAE1P6w64A",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:104"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=i9TcrcpILeg",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:105"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=iauSBrv7MEQ",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:109"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=iCibVi3p-D0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:134"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=ie8ZuWV6tpg",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:87"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=iZUH_vq-pW0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:123"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=JBVpQzvrJ4w",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:39"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=jcb-xAvJKqE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:60"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=jKYQoWouQG0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:122"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Jud7_ByFqHc",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:132"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=jvDCEXbxxL0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:43"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=kkxvqIxTE3A",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:40"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=KTSlu-ij_nU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:57"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=l-cuIBv225E",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:114"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=LCRIPntvZzs",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:63"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Lf0ZDAvYInU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:62"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=luk85AVuHCg",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:47"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=M9t_hqFDB6E",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:85"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=MvTuyxuuW0U",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:103"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=NsuxdbK0LhI",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:56"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=nTzyRdoXlbs",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:113"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=owXngEqxw5A",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:89"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=PgDtKfjXYc0",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:46"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=pKQFMy9-6IE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:54"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=PlmbiM_ASIE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:97"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Pvt-F2QZx3E",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:79"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=q8n1qfxrD7w",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:55"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Qcfzn5D_Vn4",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:93"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=R4sB7dWIy9A",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:118"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=RVMRKLKVgSw",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:121"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=SAKzu6TWqoU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:52"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=sEuRdbtQNYE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:44"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=SEZlELiD9xI",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:124"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=SlvEOlbK7Uw",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:65"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Sw-HyDtAYxY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:73"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=tk1njVL723w",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:41"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=UbX1NrKvvHM",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:59"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=UD_Swu-TvBA",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:61"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=uiGXh2BFKUo",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:67"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=UMdr0bhgUw8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:112"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=vB58oyck-C8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:53"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=VIkeeaUZ8p4",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:127"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=VnhdOk0UsTE",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:135"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=Vp0vK3tVHHY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:84"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=WKrQISeFhlU",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:126"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=WwU-fXZVtqI",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:94"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=X63gQiMDtNY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:98"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=xFNZ4aojgv8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:96"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=XMJZf2Szlao",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:74"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=y7t-r7pdYtY",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:95"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=yNJtAibUeOc",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:64"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=YYTJFqJjOYg",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:77"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=zg43ITkdl5M",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:101"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=zsFiSQRUUX8",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:81"
+   ]
+  },
+  {
+   "url": "https://www.youtube.com/watch?v=ZWlm2vyEnc4",
+   "status": 204,
+   "ok": true,
+   "method": "HEAD",
+   "final": "",
+   "where": [
+    "docs/youtube/top100.md:107"
+   ]
+  }
+ ]
+}

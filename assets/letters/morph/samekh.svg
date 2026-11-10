@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="morph morph-samekh" viewBox="0 0 200 200" role="img" aria-labelledby="samekh-t samekh-d"><title id="samekh-t">Samekh becomes a striped swim ring floating on water</title><desc id="samekh-d">The closed ring of samekh is a red and white swim ring floating on the water. Its round tube is striped, the open water shows through the middle, and wavy lines lap along the bottom.</desc><style>/*morph-contract 1*/
+svg.morph{--m-ink:var(--morph-ink,currentColor);--m-1:var(--morph-1,#d9480f);--m-2:var(--morph-2,#1b3a6b);--m-3:var(--morph-3,#ffd966);--m-4:var(--morph-4,#2f9e44)}
+@media (prefers-color-scheme:dark){svg.morph{--m-ink:var(--morph-ink,#f3ecdc);--m-1:var(--morph-1,#ff8a4c);--m-2:var(--morph-2,#8db8ff);--m-3:var(--morph-3,#ffe08a);--m-4:var(--morph-4,#69db7c)}}
+@media (forced-colors:active){svg.morph{--m-ink:CanvasText;--m-1:Highlight;--m-2:CanvasText;--m-3:GrayText;--m-4:LinkText}}
+svg.morph .morph-a{opacity:0}
+svg.morph .morph-b{opacity:1}
+svg.morph.morph-show-a .morph-a{opacity:1}
+svg.morph.morph-show-a .morph-b{opacity:0}
+svg.morph .morph-strokes{fill:none;stroke:var(--m-ink);stroke-width:85;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .morph-trace{opacity:.6;stroke-width:14}
+svg.morph.morph-show-a .morph-trace{opacity:1;stroke-width:85}
+svg.morph .mk,svg.morph .ml{fill:none;stroke-linecap:round;stroke-linejoin:round}
+svg.morph .mk{stroke-width:85}
+svg.morph .ml{stroke-width:var(--w,24)}
+svg.morph .mfi{fill:var(--m-ink)}
+svg.morph .mf1{fill:var(--m-1)}
+svg.morph .mf2{fill:var(--m-2)}
+svg.morph .mf3{fill:var(--m-3)}
+svg.morph .mf4{fill:var(--m-4)}
+svg.morph .msi{stroke:var(--m-ink)}
+svg.morph .ms1{stroke:var(--m-1)}
+svg.morph .ms2{stroke:var(--m-2)}
+svg.morph .ms3{stroke:var(--m-3)}
+svg.morph .ms4{stroke:var(--m-4)}
+svg.morph .mb{stroke-linecap:butt}
+svg.morph .mtile{fill:var(--m-ink);fill-opacity:.09}
+svg.morph .mshade{fill:var(--m-ink);fill-opacity:.3}
+svg.morph .morph-pop{transform-box:fill-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){
+svg.morph.morph-play .morph-a{animation:morph-a 8s ease-in-out infinite}
+svg.morph.morph-play .morph-a.morph-trace{animation-name:morph-trace}
+svg.morph.morph-play .morph-b{animation:morph-b 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop{animation:morph-pop 8s ease-in-out infinite}
+svg.morph.morph-play .morph-pop-late{animation-delay:.2s}
+svg.morph.morph-show-a *{animation:none!important}}
+@keyframes morph-a{0%,18%{opacity:1}38%,86%{opacity:0}100%{opacity:1}}
+@keyframes morph-b{0%,18%{opacity:0}38%,86%{opacity:1}100%{opacity:0}}
+@keyframes morph-trace{0%,18%{opacity:1;stroke-width:85}38%,86%{opacity:.6;stroke-width:14}100%{opacity:1;stroke-width:85}}
+@keyframes morph-pop{0%,22%{opacity:0;transform:scale(.3)}42%,86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.3)}}
+@media (prefers-reduced-motion:reduce){svg.morph,svg.morph *{animation:none!important;transition:none!important}}
+svg.morph-samekh .morph-pop{transform-origin:50% 100%}</style><defs><path id="samekh-1" d="M690 253 C658 253 566 253 500 253 C434 253 331 215 297 253 C263 291 295 416 297 480 C299 544 293 599 310 640 C327 681 368 708 400 725 C432 742 483 738 500 740" pathLength="100"/><path id="samekh-2" d="M690 262 C692 288 698 364 700 420 C702 476 710 552 700 600 C690 648 670 682 640 705 C610 728 540 734 520 740" pathLength="100"/></defs><g transform="scale(.2)"><g class="morph-b"><rect x="297" y="253" width="403" height="487" rx="200" class="mf2" style="fill-opacity:.2"/><rect x="297" y="253" width="403" height="487" rx="200" pathLength="100" class="ml ms2" style="stroke-width:165"/><rect x="297" y="253" width="403" height="487" rx="200" pathLength="100" class="ml ms3" style="stroke-width:120"/><rect x="297" y="253" width="403" height="487" rx="200" pathLength="100" class="ml ms1 mb" style="stroke-width:120;stroke-dasharray:12.5 12.5;stroke-dashoffset:-6"/><g class="morph-pop"><path d="M60 880Q130 840 200 880T340 880T480 880T620 880T760 880T900 880" class="ml ms2" style="--w:22"/></g></g><g class="morph-a morph-strokes morph-trace"><use href="#samekh-1"/><use href="#samekh-2"/></g></g></svg>

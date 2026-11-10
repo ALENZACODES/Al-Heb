@@ -1,0 +1,20 @@
+{
+ "source": "Research Key Question 5 (Hebrew4Christians 'Similar Letters' rules, Mezzoguild, Hebrewversity, Wikipedia: Cursive Hebrew). Hints paraphrase those rules.",
+ "sets": [
+  {"id": "bet-kaf-pe", "letters": ["bet","kaf","pe"], "hint": "Bet's base sticks out to the right past the back; kaf is a single curved stroke like a reversed c; pe has a curl inside."},
+  {"id": "gimel-nun", "letters": ["gimel","nun"], "hint": "Gimel has a foot at the bottom left; nun has a flat base and no foot."},
+  {"id": "dalet-resh-kaf-final", "letters": ["dalet","resh","kaf-final"], "hint": "Dalet has a sharp corner and its top bar sticks out past the stem; resh is one rounded curve; final kaf is a resh with a long tail."},
+  {"id": "vav-zayin-nun-final", "letters": ["vav","zayin","nun-final","yod"], "hint": "Vav is a plain single stroke; zayin has a bar that sticks out to the right at the top; final nun is an extra-long vav that drops below the line; yod is short and floats at the top."},
+  {"id": "he-chet-tav", "letters": ["he","chet","tav"], "hint": "He has a gap (window) at the upper left; chet is closed; tav has a foot that points left."},
+  {"id": "samekh-mem-final", "letters": ["samekh","mem-final"], "hint": "Samekh is rounded; final mem is square."},
+  {"id": "tsadi-ayin", "letters": ["tsadi","ayin"], "hint": "Tsadi's second stroke comes from the top right; ayin's second stroke comes from the top left."},
+  {"id": "pe-final-tsadi-final", "letters": ["pe-final","tsadi-final"], "hint": "Final pe curls inward at the top left; final tsadi forks upward like a Y."},
+  {"id": "shin-sin", "letters": ["shin"], "marks": ["shin-dot","sin-dot"], "hint": "Shin has its dot on the upper right (sh); sin has its dot on the upper left (s). Dots are often left off in handwriting."}
+ ],
+ "cursiveExtra": [
+  {"id": "cursive-dalet-resh", "letters": ["dalet","resh"], "hint": "Rapid cursive dalet and resh look alike; dalet leans and is angled."},
+  {"id": "cursive-kaf-final-qof", "letters": ["kaf-final","qof"], "hint": "Final kaf and qof transformed alike in cursive; qof has a descender at the left."},
+  {"id": "cursive-shin-tsadi", "letters": ["shin","tsadi"], "hint": "Shin's central stroke was lengthened like tsadi's right arm."}
+ ],
+ "status": "hints paraphrased from English-language learner sites, not from an Israeli teacher"
+}

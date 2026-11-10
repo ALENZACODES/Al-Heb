@@ -1,0 +1,8 @@
+{
+  "_note": "ONE place for the companion-app host used by every QR code and printed URL. alef.example.org is a PLACEHOLDER (RFC 2606 reserved name, never resolves). Replace with the real domain once chosen, then rebuild: node book/build.mjs --pdf. Override per-run with --host or env ALEF_HOST.",
+  "host": "alef.example.org",
+  "hostIsPlaceholder": true,
+  "scheme": "https",
+  "letterPath": "/#/letters/",
+  "readPath": "/#/read/"
+}

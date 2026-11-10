@@ -1,0 +1,25 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מְאוֹרֵי הָאֵשׁ׃",
+ "inputSha256": "c245b1b9b4f67190d31aa2817a784cb9dd721bb6e1142c9693610ac35c4e706c",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מְאוֹרֵי הָאֵשׁ׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/aleinu-1-w38.mp3",
+  "audio/m/israeli/word/avot-1-w2.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/aleinu-1-w54.mp3",
+  "audio/m/israeli/word/adon-olam-1-w14.mp3",
+  "audio/m/israeli/word/birkat-hamazon-1-w6.mp3",
+  "audio/m/israeli/word/havdalah-flame-w7.mp3",
+  "audio/m/israeli/word/havdalah-flame-w8.mp3",
+  "audio/m/israeli/word/havdalah-flame-w9.mp3"
+ ]
+}

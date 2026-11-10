@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-general-things-1",
+ "title": "More everyday nouns 1",
+ "theme": "general-things",
+ "level": "A2",
+ "track": "both",
+ "pack": "general-things-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h5c96df63",
+   "he": "מָן",
+   "translit": "man",
+   "en": "manna",
+   "kind": "word",
+   "audioId": "h5c96df63",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h65a05fb2",
+   "he": "שֵׁם",
+   "translit": "shem",
+   "en": "a name",
+   "kind": "word",
+   "audioId": "r36-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc444e8d9",
+   "he": "יְכֹלֶת",
+   "translit": "yekholet",
+   "en": "ability, capability, power",
+   "kind": "word",
+   "audioId": "hc444e8d9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9034f8b8",
+   "he": "מָוֶת",
+   "translit": "mavet",
+   "en": "death",
+   "kind": "word",
+   "audioId": "h9034f8b8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he9d6c9ab",
+   "he": "כַּר",
+   "translit": "kar",
+   "en": "cushion",
+   "kind": "word",
+   "audioId": "he9d6c9ab",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hbe4076c4",
+   "he": "כִי",
+   "translit": "khi",
+   "en": "chi",
+   "kind": "word",
+   "audioId": "hbe4076c4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hdd46eaf9",
+   "he": "רֶכֶב",
+   "translit": "rekhev",
+   "en": "vehicle, chariot",
+   "kind": "word",
+   "audioId": "hdd46eaf9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h22100765",
+   "he": "אוֹת",
+   "translit": "ot",
+   "en": "a sign, an omen",
+   "kind": "word",
+   "audioId": "i-35-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h29a2e2b8",
+   "he": "וָו",
+   "translit": "vav",
+   "en": "hook",
+   "kind": "word",
+   "audioId": "h29a2e2b8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h15263a4c",
+   "he": "רֹב",
+   "translit": "rov",
+   "en": "majority",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h26f014a5",
+   "he": "שׁוֹר",
+   "translit": "shor",
+   "en": "ox",
+   "kind": "word",
+   "audioId": "h26f014a5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9e95ccc3",
+   "he": "מֹר",
+   "translit": "mor",
+   "en": "myrrh",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

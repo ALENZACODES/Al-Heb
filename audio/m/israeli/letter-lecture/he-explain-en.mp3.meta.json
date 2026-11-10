@@ -1,0 +1,13 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "google-cloud-tts",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "This is He — HEY. Sound: H as in hat. Shape hook: doorway with detached left post. Tip: Left post is visibly detached below the roof; Chet and Tav attach differently; do not mix it up with Chet, Tav.",
+ "inputSha256": "7f996448b85b1a4e7e7caa442af6ba32abbe9b4a9e4ee74a02bbf40241d69734",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Backfilled from the manifest (fix #21): paid-cloud library rendered on Google Cloud TTS with the Israeli WaveNet pair the owner passed for production 2026-11-05 (m he-IL-Wavenet-B, f he-IL-Wavenet-A; docs/audio/CASTING-REPORT.md). Slot-level provenance, not per-clip verified; render date not recorded.",
+ "inputTextKind": "hebrew"
+}

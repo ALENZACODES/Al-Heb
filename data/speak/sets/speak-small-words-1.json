@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-small-words-1",
+ "title": "Little words 1",
+ "theme": "small-words",
+ "level": "A1",
+ "track": "both",
+ "pack": "small-words-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "h7c9d2ffe",
+   "he": "אֵת",
+   "translit": "et",
+   "en": "(marks a definite direct object; not translated)",
+   "kind": "word",
+   "audioId": "vahavta-1-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "he9919e02",
+   "he": "לְ־",
+   "translit": "le",
+   "en": "to",
+   "kind": "word",
+   "audioId": "he9919e02",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h103e7d27",
+   "he": "אֲנִי",
+   "translit": "ani",
+   "en": "I",
+   "kind": "word",
+   "audioId": "r21-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha8f1d06f",
+   "he": "אֲשֶׁר",
+   "translit": "asher",
+   "en": "introduces a subordinate clause",
+   "kind": "word",
+   "audioId": "vahavta-2-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h364cadf4",
+   "he": "מָה",
+   "translit": "mah",
+   "en": "what",
+   "kind": "word",
+   "audioId": "h364cadf4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h7d05bcca",
+   "he": "עַל",
+   "translit": "al",
+   "en": "on, on top of",
+   "kind": "word",
+   "audioId": "vezot-hatorah-w9",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h1ef19acb",
+   "he": "הוּא",
+   "translit": "hu",
+   "en": "he",
+   "kind": "word",
+   "audioId": "r13-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h32c69c06",
+   "he": "שֶׁל",
+   "translit": "shel",
+   "en": "of; belonging to",
+   "kind": "word",
+   "audioId": "candle-shabbat-w13",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h68843f80",
+   "he": "אֶל",
+   "translit": "el",
+   "en": "to, towards, into",
+   "kind": "word",
+   "audioId": "yigdal-w8",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb7b6cc8b",
+   "he": "כִּי",
+   "translit": "ki",
+   "en": "because, for, since",
+   "kind": "word",
+   "audioId": "r10-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0f231144",
+   "he": "אִם",
+   "translit": "im",
+   "en": "if, whether",
+   "kind": "word",
+   "audioId": "h0f231144",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hb8b78e51",
+   "he": "בְּ־",
+   "translit": "be",
+   "en": "in (a place or time)",
+   "kind": "word",
+   "audioId": "hb8b78e51",
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

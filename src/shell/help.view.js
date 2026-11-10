@@ -13,7 +13,7 @@ export function mount(root, ctx) {
 
     sec('start', 'Where do I start?',
       h('p', {}, 'Start with ', h('a', { href: '#/firstday' }, 'Your first 10 minutes'), ': one letter at a time until you have built a real word. You can do those steps again whenever you like — practising never takes away a finished mark.'),
-      h('p', {}, 'Aleph has two paths. ', h('strong', {}, 'Read the prayer book'), ' teaches you to read Hebrew aloud — prayers and Torah. ', h('strong', {}, 'Speak in Israel'), ' teaches everyday Hebrew for travel and conversation. You pick one in ', h('a', { href: '#/settings' }, 'Settings'), ' (your goal), and you can use both.'))
+      h('p', {}, 'ALEF has two paths. ', h('strong', {}, 'Read the prayer book'), ' teaches you to read Hebrew aloud — prayers and Torah. ', h('strong', {}, 'Speak in Israel'), ' teaches everyday Hebrew for travel and conversation. You pick one in ', h('a', { href: '#/settings' }, 'Settings'), ' (your goal), and you can use both.'))
 
     , sec('sound', 'Why can I not hear some words?',
       h('p', {}, 'Three things can happen when you tap Listen:'),
@@ -23,11 +23,11 @@ export function mount(root, ctx) {
         li(h('strong', {}, 'The device voice reads it. '), 'Where no clip exists, your device’s own Hebrew voice reads the word in Israeli pronunciation.')),
       h('p', {}, 'If a button says “No audio yet”, the written spelling under the Hebrew shows how to say it. In ', h('a', { href: '#/settings' }, 'Settings'), ' you choose the voice (Noa, the woman’s voice, or Ari, the man’s) and the pronunciation style; pages follow those choices.'))
 
-    , sec('words', 'Words Aleph uses',
+    , sec('words', 'Words ALEF uses',
       h('ul', {},
         li(h('strong', {}, 'Siddur'), ' — the Jewish prayer book. “Read the prayers” works through it line by line.'),
-        li(h('strong', {}, 'Style (tradition)'), ' — how Hebrew is pronounced in your community: Israeli, Sephardi or Ashkenazi. Aleph follows the one you choose, and labels any sound that only exists in Israeli style.'),
-        li(h('strong', {}, 'Belts'), ' — Aleph’s own levels, named after colours like in martial arts. A belt means you have met every letter and sign in its texts and finished its lessons. They are Aleph’s invention, not an outside qualification.'),
+        li(h('strong', {}, 'Style (tradition)'), ' — how Hebrew is pronounced in your community: Israeli, Sephardi or Ashkenazi. ALEF follows the one you choose, and labels any sound that only exists in Israeli style.'),
+        li(h('strong', {}, 'Belts'), ' — ALEF’s own levels, named after colours like in martial arts. A belt means you have met every letter and sign in its texts and finished its lessons. They are ALEF’s invention, not an outside qualification.'),
         li(h('strong', {}, 'Parsha'), ' — the weekly Torah portion, named on the ', h('a', { href: '#/calendar' }, 'Calendar'), ' page.')))
 
     , sec('progress', 'Is my progress saved?',

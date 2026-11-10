@@ -128,7 +128,7 @@ function hub(root, ctx) {
       })),
       prog.complete ? h('a', { class: 'lab-go', href: `#/lab/${plan[0]}` }, 'Play again') : h('a', { class: 'lab-go', href: `#/lab/${next}?workout=1` }, prog.done.length ? 'Continue workout' : 'Start workout')),
     h('h2', {}, 'Your Skills'),
-    h('p', { class: 'lab-note' }, overall == null ? 'Play any drill to see your first skill score.' : `Aleph brain score: ${overall}. Each skill score is your recent form in its drills, compared only with your own past games.`),
+    h('p', { class: 'lab-note' }, overall == null ? 'Play any drill to see your first skill score.' : `ALEF brain score: ${overall}. Each skill score is your recent form in its drills, compared only with your own past games.`),
     h('div', { class: 'lab-skills' }, ...SKILLS.map((s) => {
       const v = skillScore(st, s.id);
       return h('div', { class: 'lab-skill', style: `--sk:${SKILL_COLOR[s.id]}` }, h('span', {}, s.name, ' ', heSpan(s.he, 'he lab-val')), h('b', {}, v == null ? '–' : String(v)), h('small', {}, s.blurb));

@@ -26,7 +26,7 @@ export function mount(root, ctx) {
   let rec = normalize(store.get(STORE_KEY));
   let step = rec ? rec.step : 'letters';
   const nowISO = () => new Date(ctx?.clock?.now ? ctx.clock.now() : Date.now()).toISOString();
-  const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to Aleph'), ' ', heSpan('אלף'));
+  const h1 = h('h1', { id: 'view-title', tabindex: '-1' }, t('welcome.title', 'Welcome to ALEF'), ' ', heSpan('אלף'));
   const body = h('div', { class: 'ob-body' });
   const status = h('p', { role: 'status', 'aria-live': 'polite', class: 'muted', id: 'ob-status' });
   root.replaceChildren(h('article', { class: 'card onboarding' }, h1, body, status));

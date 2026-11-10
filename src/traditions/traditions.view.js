@@ -239,7 +239,7 @@ export function mount(root, ctx = {}) {
     const b = h('button', { type: 'button' }, tr('trad.seeSounds', 'See the sound table'));
     on(b, 'click', () => go('sounds'));
     return h('p', { class: 'muted' }, h('strong', {}, tr('trad.also', 'Also exists: ')),
-      'Yemenite and other Mizrahi or Sephardi readings (for example a throaty het and ayin). Aleph has no respelling or audio for them. ', b);
+      'Yemenite and other Mizrahi or Sephardi readings (for example a throaty het and ayin). ALEF has no respelling or audio for them. ', b);
   };
 
   const soundChips = (he) => {
@@ -343,7 +343,7 @@ export function mount(root, ctx = {}) {
       h('thead', {}, h('tr', { role: 'row' }, cols.map((c) => th(c[0])))), h('tbody', {}, trs))));
 
     body.append(h('h3', {}, tr('trad.alsoTitle', 'Also exists')),
-      h('p', {}, 'These readings are real but Aleph does not teach or play them. Listed so nobody assumes the three settings are the whole picture.'),
+      h('p', {}, 'These readings are real but ALEF does not teach or play them. Listed so nobody assumes the three settings are the whole picture.'),
       sounds.alsoExists.map((a) => h('div', { class: 'card' },
         h('h4', {}, a.who, ' ', confidenceBadge(a.confidence)),
         h('ul', {}, a.claims.map((c) => h('li', {}, c))),

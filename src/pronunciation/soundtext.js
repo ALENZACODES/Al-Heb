@@ -30,7 +30,7 @@ export function letterSoundText(letterId, data, tradition) {
     summary: String(rec.say?.[t] || ''),
     english: String(rec.english?.[t] || rec.english?.american_synagogue || ''),
     mouth, hasMouthSteps: mouth.length > 0, changes: !!rec.changesSound,
-    note: mouth.length ? '' : 'Aleph has no step-by-step mouth description for this letter yet. The line above is the closest English comparison in its notes.',
+    note: mouth.length ? '' : 'ALEF has no step-by-step mouth description for this letter yet. The line above is the closest English comparison in its notes.',
   };
 }
 
@@ -48,7 +48,7 @@ export function vowelSoundText(vowelId, data, tradition) {
     english: String(rec.english?.[t] || rec.english?.american_synagogue || ''),
     position: String(rec.position || ''),
     mouth: [], hasMouthSteps: false,
-    note: 'Aleph has no mouth-position description for vowels yet. The line above compares the vowel with an English word, and the position says where the mark is written.',
+    note: 'ALEF has no mouth-position description for vowels yet. The line above compares the vowel with an English word, and the position says where the mark is written.',
   };
 }
 

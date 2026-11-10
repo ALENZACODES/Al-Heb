@@ -523,7 +523,7 @@ export async function mount(root, ctx) {
     if (celebrateStep >= 4) {
       kids.push(h('div', { class: 'card fw-share', id: 'fw-share-card', style: 'text-align:center' },
         h('p', { class: 'he', lang: 'he', dir: 'rtl', style: 'font-size:2.2rem;margin:0' }, word.bare),
-        h('p', { class: 'muted' }, data.shareLine || 'My first Hebrew word on Aleph')));
+        h('p', { class: 'muted' }, data.shareLine || 'My first Hebrew word on ALEF')));
     }
     // Beat 5: siyum open-next / Zeigarnik
     if (celebrateStep >= 5) {

@@ -212,7 +212,7 @@ export function createMusicController({
  *  The original songs (vocals) are not game beds: sung words would sit between the Hebrew clips a game plays and stop-start on
  *  every clip. They live on the Songs page (#/songs, src/listen/songs.view.js). Group labels name no vendor or artist (credits: Terms page). */
 export const GAME_TRACKS = [
-  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for Aleph' })),
+  ...SYNTH_STYLE_LIST.map((st) => ({ id: st.id, file: `synth:${st.id}`, title: st.title, role: st.role, group: 'Made for ALEF' })),
   ...MUSIC_TRACKS.map((t) => ({ ...t, group: 'Arcade loops' })),
   ...ORIGINAL_MUSIC_TRACKS.map((t) => ({ ...t, group: 'Original beds' })),
 ];

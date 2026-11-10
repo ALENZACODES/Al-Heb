@@ -44,7 +44,7 @@ copies and 764 draft animation poses, none approved and none wired into the app)
 | [`awards/`](awards/) | 1 | Beginner awards and sample certificate (`beginner-certificate.md`) |
 | [`book/`](book/) | 5 | Image run: how to produce the 797 images (766 from the doc + 31 quirky mnemonics) (`IMAGE-RUN.md`) |
 | [`books/`](books/) | 5 | Aleph little books 6 to 62 (`BOOKS-6-62.md`) |
-| [`corpus/`](corpus/) | 6 | Aleph corpus: sources, licences and reuse status (`LICENSES.md`) |
+| [`corpus/`](corpus/) | 6 | ALEF corpus: sources, licences and reuse status (`LICENSES.md`) |
 | [`curriculum/`](curriculum/) | 12 | Curriculum integrity (`INTEGRITY.md`) |
 | [`data/`](data/) | 1 | Learner data safety (store, backup, restore, delete, update) (`README.md`) |
 | [`deploy/`](deploy/) | 8 | GitHub Actions is not running: a billing block, not a code failure (2026-11-07) (`CI-BILLING-2026-11-07.md`) |

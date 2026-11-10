@@ -13,7 +13,7 @@ const regById = new Map(registry.entries.map((e) => [e.id, e]));
 
 export const PRAYER_CARDS = cards;
 export const PRAYER_STATUS = cards.status; // "draft-not-clergy-reviewed"
-export const PRAYER_DISCLAIMER = "Draft reflection written for Aleph; not reviewed by a rabbi or clergy. The Hebrew line is copied from the app's text registry.";
+export const PRAYER_DISCLAIMER = "Draft reflection written for ALEF; not reviewed by a rabbi or clergy. The Hebrew line is copied from the app's text registry.";
 
 /**
  * @param {{y,m,d}} g local civil date

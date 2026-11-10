@@ -91,6 +91,8 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   'src/israel/israel.view.js',
   // Calendar view (30 KB): loaded when #/calendar first opens, runtime-cached. Keeps first-install headroom for the overnight feedback layer.
   'src/curriculum/calendar.view.js',
+  // Privacy screen (26 KB): loaded on first open, runtime-cached; offline group od-preview-pages.
+  'src/shell/privacy.view.js',
   // English read-aloud helper (~4 KB): imported when "Hear ... in English" is first pressed, then runtime-cached.
   'src/shell/speak-english.js',
   // Preview-route view code only (their models and data stay as they were): the word builder (#/firstwin, its data was already on demand),

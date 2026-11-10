@@ -59,18 +59,6 @@
    }
   },
   {
-   "he": "גְּמַר חֲתִימָה טוֹבָה",
-   "en": "a good final sealing (Yom Kippur greeting)",
-   "translit": null,
-   "source": {
-    "file": "data/curriculum/lesson-lexicon.json",
-    "id": "lex-gmar"
-   },
-   "pronunciation": {
-    "israeli": "gemar chatimah tovah"
-   }
-  },
-  {
    "he": "מַזָּל טוֹב",
    "en": "congratulations",
    "translit": null,
@@ -119,18 +107,6 @@
    }
   },
   {
-   "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
-   "en": "take care of yourself (said to a woman)",
-   "translit": null,
-   "source": {
-    "file": "data/curriculum/lesson-lexicon.json",
-    "id": "lex-tishmeri"
-   },
-   "pronunciation": {
-    "israeli": "tishmeri al atzmekh"
-   }
-  },
-  {
    "he": "לִבְרִיאוּת",
    "en": "to your health",
    "translit": null,
@@ -176,6 +152,30 @@
    "source": {
     "file": "data/vocab/words.json",
     "id": "h33cf0d1b"
+   }
+  },
+  {
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-gmar"
+   },
+   "pronunciation": {
+    "israeli": "gemar chatimah tovah"
+   }
+  },
+  {
+   "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+   "en": "take care of yourself (said to a woman)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-tishmeri"
+   },
+   "pronunciation": {
+    "israeli": "tishmeri al atzmekh"
    }
   }
  ],

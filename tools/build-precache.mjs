@@ -18,7 +18,8 @@ const SKIP = (rel) => rel.startsWith('assets/img/') || rel.startsWith('assets/im
   || rel.split('/').includes('tools')
   || (rel.startsWith('data/images/') && rel !== 'data/images/approvals.json' && rel !== 'data/images/word-cues.json' /* read live by the image resolver */) || rel === 'data/corpus/source-snapshot.json' || rel === 'data/audio/tts-prices.json'
   || rel.startsWith('data/tts/') /* respelling files for the offline TTS factory: build-time inputs, never fetched by the app */
-  || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
+  || /^data\/audio\/manifest-words-[a-z]+\.json$/.test(rel)
+  || rel === 'data/curriculum/practical/gcloud-results.json' || rel.endsWith('/_gcloud-checkpoint.json'); /* lazy per-tradition word shards: fetched after first paint, runtime-cached by sw.js */ /* tts-prices: build-time cost plan input */ // build-time inputs, not fetched by the app
 // ON-DEMAND (not installed up front): data that only preview routes read, plus the audio manifest (every clip is still "missing", so it
 // buys nothing offline). sw.js already stale-while-revalidates every same-origin non-media GET into the runtime cache, so these files
 // are cached the first time a learner opens the page that needs them, or all at once from "Use Aleph offline" -> Download everything
@@ -77,6 +78,7 @@ const ON_DEMAND_FILES = new Set(['data/audio/manifest.json', 'data/audio/manifes
   // Intermediate lessons view (optional preview route /intermediate, 30 KB): route code only, loaded lazily on first open and runtime-cached; its adapter and data stay as they were.
   'src/curriculum/intermediate.view.js',
   'src/curriculum/practical.view.js', 'src/curriculum/practical-progress.js',
+  'src/curriculum/israel-units.view.js', 'src/curriculum/israel-units.js', 'data/curriculum/israel-units.json',
   // Speak screen engine (preview route /speak, 58 KB): imported only by speak.view.js, which the router loads lazily; fetched on first open and runtime-cached (keeps first install under 3.95 MiB after the tracing pointer fix).
   'src/speak/speak.js',
   // Torah reader view: route code only (the router loads views lazily; its model/loader files stay installed), fetched when the reader first opens, runtime-cached by sw.js (keeps first install under 3.95 MiB after the full-Torah reader landed).

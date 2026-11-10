@@ -111,3 +111,25 @@ test("I-28 names Kol Nidrei as a gap, and I-08 names the Edot HaMizrach wording 
   assert.ok(byId["I-28"].goals.some((g) => /Kol Nidrei/.test(g)));
   assert.ok(byId["I-08"].goals.some((g) => /Edot HaMizrach/.test(g)));
 });
+
+test("il01 and r51 name the Judaic-to-Israeli companions without adding a cross-track prerequisite", () => {
+  assert.match(byId["il01"].note, /I-19/);
+  assert.match(byId["il01"].note, /I-50/);
+  assert.match(byId["il01"].note, /r51/);
+  assert.deepEqual(byId["il01"].prerequisites || [], []);
+  assert.match(byId["r51"].note, /il01/);
+  assert.match(byId["r51"].note, /I-19/);
+  assert.match(byId["r51"].note, /I-50/);
+  assert.deepEqual(byId["r51"].prerequisites, ["r50"]);
+});
+
+test("I-11 and I-19 point at the synagogue companions and still do not cross-require them", () => {
+  assert.match(byId["I-11"].note, /I-19/);
+  assert.match(byId["I-11"].note, /I-50/);
+  assert.deepEqual(byId["I-11"].prerequisites, ["il24"]);
+  assert.match(byId["I-19"].note, /I-05/);
+  assert.match(byId["I-19"].note, /I-06/);
+  assert.match(byId["I-19"].note, /companions/);
+  assert.ok(!byId["I-19"].prerequisites.includes("I-05"));
+  assert.ok(!byId["I-19"].prerequisites.includes("I-06"));
+});

@@ -1979,7 +1979,8 @@
    "estMinutes": 30,
    "prerequisites": [
     "r50"
-   ]
+   ],
+   "note": "After this belt, the recommended next step for someone who also wants everyday Israeli Hebrew is the Israel path beginning at il01. I-19 and I-50 are where the two paths meet. This lesson does not require them."
   },
   {
    "id": "il01",
@@ -2030,7 +2031,8 @@
     "Greet and thank in Hebrew without switching to English"
    ],
    "estMinutes": 20,
-   "prerequisites": []
+   "prerequisites": [],
+   "note": "If you already finished the read path through r51, you will meet some of the same words here as everyday speech. This path does not teach how to follow a new siddur page; r50 and r51 do that. Shabbat invitations and holiday greetings that connect the two paths come later, in I-19 and I-50."
   },
   {
    "id": "il02",
@@ -7297,7 +7299,7 @@
      ]
     }
    ],
-   "note": "'Rav-Kav' and 'platform' are from the vocabulary file; there is no source line for 'validate' or 'to load the card', so those are not taught."
+   "note": "'Rav-Kav' and 'platform' are from the vocabulary file; there is no source line for 'validate' or 'to load the card', so those are not taught. This is the first intermediate lesson on the Israel path. Shabbat invitations (I-19) and holiday greetings (I-50) are the later lessons that meet the synagogue path; this lesson cannot list those synagogue lessons as prerequisites."
   },
   {
    "id": "I-12",
@@ -10457,7 +10459,7 @@
      ]
     }
    ],
-   "note": "'kosher' and 'shomer Shabbat' have no pointed token in the sources and are not taught."
+   "note": "'kosher' and 'shomer Shabbat' have no pointed token in the sources and are not taught. Friday-night Kiddush and Havdalah, as they are said in the service, are taught on the read path in I-05 and I-06. This Israel-path lesson cannot list them as prerequisites; treat them as companions."
   },
   {
    "id": "I-20",
@@ -13619,20 +13621,6 @@
      }
     },
     {
-     "he": "גְּמַר חֲתִימָה טוֹבָה",
-     "en": "a good final sealing (Yom Kippur greeting)",
-     "translit": null,
-     "source": {
-      "file": "data/curriculum/lesson-lexicon.json",
-      "id": "lex-gmar"
-     },
-     "pronunciation": {
-      "israeli": "gemar chatimah tovah",
-      "sephardi": "gemar chatimah tovah",
-      "ashkenazi": "gemar chasimoh tovoh"
-     }
-    },
-    {
      "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ",
      "en": "blessed is the name of his glorious kingdom",
      "translit": null,
@@ -13708,6 +13696,20 @@
      "source": {
       "file": "data/vocab/words.json",
       "id": "h9a1ab3f5"
+     }
+    },
+    {
+     "he": "גְּמַר חֲתִימָה טוֹבָה",
+     "en": "a good final sealing (Yom Kippur greeting)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-gmar"
+     },
+     "pronunciation": {
+      "israeli": "gemar chatimah tovah",
+      "sephardi": "gemar chatimah tovah",
+      "ashkenazi": "gemar chasimoh tovoh"
      }
     }
    ],
@@ -21186,18 +21188,6 @@
      }
     },
     {
-     "he": "גְּמַר חֲתִימָה טוֹבָה",
-     "en": "a good final sealing (Yom Kippur greeting)",
-     "translit": null,
-     "source": {
-      "file": "data/curriculum/lesson-lexicon.json",
-      "id": "lex-gmar"
-     },
-     "pronunciation": {
-      "israeli": "gemar chatimah tovah"
-     }
-    },
-    {
      "he": "מַזָּל טוֹב",
      "en": "congratulations",
      "translit": null,
@@ -21246,18 +21236,6 @@
      }
     },
     {
-     "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
-     "en": "take care of yourself (said to a woman)",
-     "translit": null,
-     "source": {
-      "file": "data/curriculum/lesson-lexicon.json",
-      "id": "lex-tishmeri"
-     },
-     "pronunciation": {
-      "israeli": "tishmeri al atzmekh"
-     }
-    },
-    {
      "he": "לִבְרִיאוּת",
      "en": "to your health",
      "translit": null,
@@ -21303,6 +21281,30 @@
      "source": {
       "file": "data/vocab/words.json",
       "id": "h33cf0d1b"
+     }
+    },
+    {
+     "he": "גְּמַר חֲתִימָה טוֹבָה",
+     "en": "a good final sealing (Yom Kippur greeting)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-gmar"
+     },
+     "pronunciation": {
+      "israeli": "gemar chatimah tovah"
+     }
+    },
+    {
+     "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
+     "en": "take care of yourself (said to a woman)",
+     "translit": null,
+     "source": {
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-tishmeri"
+     },
+     "pronunciation": {
+      "israeli": "tishmeri al atzmekh"
      }
     }
    ],

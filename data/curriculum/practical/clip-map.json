@@ -6060,11 +6060,20 @@
    "via": "listen-id",
    "status": "tts"
   },
+  "pu-holidays|i-50-w13": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w13",
+   "kind": "word",
+   "clipId": "i-50-w5",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
   "pu-holidays|i-50-w5": {
    "unitId": "pu-holidays",
    "itemId": "i-50-w5",
    "kind": "word",
-   "clipId": "i-50-w5",
+   "clipId": "i-50-w6",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6073,7 +6082,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w6",
    "kind": "word",
-   "clipId": "i-50-w6",
+   "clipId": "i-50-w7",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6082,7 +6091,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w7",
    "kind": "word",
-   "clipId": "i-50-w7",
+   "clipId": "i-50-w8",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6091,7 +6100,16 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w8",
    "kind": "word",
-   "clipId": "i-50-w8",
+   "clipId": "i-50-w9",
+   "tradition": "israeli",
+   "via": "listen-id",
+   "status": "tts"
+  },
+  "pu-holidays|i-50-w14": {
+   "unitId": "pu-holidays",
+   "itemId": "i-50-w14",
+   "kind": "word",
+   "clipId": "i-50-w10",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6100,16 +6118,7 @@
    "unitId": "pu-holidays",
    "itemId": "i-50-w9",
    "kind": "word",
-   "clipId": "i-50-w9",
-   "tradition": "israeli",
-   "via": "listen-id",
-   "status": "tts"
-  },
-  "pu-holidays|i-50-w10": {
-   "unitId": "pu-holidays",
-   "itemId": "i-50-w10",
-   "kind": "word",
-   "clipId": "i-50-w10",
+   "clipId": "i-50-w11",
    "tradition": "israeli",
    "via": "listen-id",
    "status": "tts"
@@ -6120,25 +6129,16 @@
    "kind": "word",
    "clipId": "i-50-w11",
    "tradition": "israeli",
-   "via": "listen-id",
+   "via": "same-pointed-text",
    "status": "tts"
   },
-  "pu-holidays|i-50-w13": {
+  "pu-holidays|i-50-w12": {
    "unitId": "pu-holidays",
-   "itemId": "i-50-w13",
+   "itemId": "i-50-w12",
    "kind": "word",
-   "clipId": "i-50-w13",
+   "clipId": "il01-w4",
    "tradition": "israeli",
-   "via": "listen-id",
-   "status": "tts"
-  },
-  "pu-holidays|i-50-w14": {
-   "unitId": "pu-holidays",
-   "itemId": "i-50-w14",
-   "kind": "word",
-   "clipId": "i-50-w14",
-   "tradition": "israeli",
-   "via": "listen-id",
+   "via": "same-pointed-text",
    "status": "tts"
   }
  },

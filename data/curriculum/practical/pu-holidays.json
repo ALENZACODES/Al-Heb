@@ -67,7 +67,7 @@
    }
   },
   {
-   "id": "i-50-w5",
+   "id": "i-50-w13",
    "source": "data/curriculum/lessons.json#I-50.words[4]",
    "he": "גְּמַר חֲתִימָה טוֹבָה",
    "en": "a good final sealing (Yom Kippur greeting)",
@@ -79,7 +79,7 @@
    }
   },
   {
-   "id": "i-50-w6",
+   "id": "i-50-w5",
    "source": "data/curriculum/lessons.json#I-50.words[5]",
    "he": "מַזָּל טוֹב",
    "en": "congratulations",
@@ -91,7 +91,7 @@
    }
   },
   {
-   "id": "i-50-w7",
+   "id": "i-50-w6",
    "source": "data/curriculum/lessons.json#I-50.words[6]",
    "he": "לְחַיִּים",
    "en": "cheers!",
@@ -103,7 +103,7 @@
    }
   },
   {
-   "id": "i-50-w8",
+   "id": "i-50-w7",
    "source": "data/curriculum/lessons.json#I-50.words[7]",
    "he": "בְּהַצְלָחָה",
    "en": "good luck",
@@ -115,7 +115,7 @@
    }
   },
   {
-   "id": "i-50-w9",
+   "id": "i-50-w8",
    "source": "data/curriculum/lessons.json#I-50.words[8]",
    "he": "תִּשְׁמֹר עַל עַצְמְךָ",
    "en": "take care of yourself (said to a man)",
@@ -127,7 +127,7 @@
    }
   },
   {
-   "id": "i-50-w10",
+   "id": "i-50-w14",
    "source": "data/curriculum/lessons.json#I-50.words[9]",
    "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
    "en": "take care of yourself (said to a woman)",
@@ -139,7 +139,7 @@
    }
   },
   {
-   "id": "i-50-w11",
+   "id": "i-50-w9",
    "source": "data/curriculum/lessons.json#I-50.words[10]",
    "he": "לִבְרִיאוּת",
    "en": "to your health",
@@ -151,7 +151,7 @@
    }
   },
   {
-   "id": "i-50-w13",
+   "id": "i-50-w11",
    "source": "data/curriculum/lessons.json#I-50.words[12]",
    "he": "יוֹם נָעִים",
    "en": "have a nice day",
@@ -163,7 +163,7 @@
    }
   },
   {
-   "id": "i-50-w14",
+   "id": "i-50-w12",
    "source": "data/curriculum/lessons.json#I-50.words[13]",
    "he": "סְלִיחָה",
    "en": "forgiveness, pardon",
@@ -289,15 +289,15 @@
     "i-50-w2",
     "i-50-w3",
     "i-50-w4",
-    "i-50-w5",
+    "i-50-w13",
     "i-50-w6",
     "i-50-w7",
     "i-50-w8",
     "i-50-w9",
-    "i-50-w10",
+    "i-50-w14",
     "i-50-w11",
-    "i-50-w13",
-    "i-50-w14"
+    "i-50-w11",
+    "i-50-w12"
    ],
    "source": "audio manifest, phrasebook and lesson-word ids"
   }
@@ -365,7 +365,7 @@
      }
     },
     {
-     "id": "i-50-w5",
+     "id": "i-50-w13",
      "source": "data/curriculum/lessons.json#I-50.words[4]",
      "he": "גְּמַר חֲתִימָה טוֹבָה",
      "en": "a good final sealing (Yom Kippur greeting)",
@@ -424,7 +424,7 @@
     "i-50-w2",
     "i-50-w3",
     "i-50-w4",
-    "i-50-w5"
+    "i-50-w13"
    ],
    "speakSet": "speak-religion-prayer-2"
   },
@@ -435,7 +435,7 @@
    "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: מַזָּל טוֹב. I-50 already stores חַג שָׂמֵחַ, שָׁנָה טוֹבָה, גְּמַר חֲתִימָה טוֹבָה and everyday wishes.",
    "items": [
     {
-     "id": "i-50-w6",
+     "id": "i-50-w5",
      "source": "data/curriculum/lessons.json#I-50.words[5]",
      "he": "מַזָּל טוֹב",
      "en": "congratulations",
@@ -447,7 +447,7 @@
      }
     },
     {
-     "id": "i-50-w7",
+     "id": "i-50-w6",
      "source": "data/curriculum/lessons.json#I-50.words[6]",
      "he": "לְחַיִּים",
      "en": "cheers!",
@@ -459,7 +459,7 @@
      }
     },
     {
-     "id": "i-50-w8",
+     "id": "i-50-w7",
      "source": "data/curriculum/lessons.json#I-50.words[7]",
      "he": "בְּהַצְלָחָה",
      "en": "good luck",
@@ -471,7 +471,7 @@
      }
     },
     {
-     "id": "i-50-w9",
+     "id": "i-50-w8",
      "source": "data/curriculum/lessons.json#I-50.words[8]",
      "he": "תִּשְׁמֹר עַל עַצְמְךָ",
      "en": "take care of yourself (said to a man)",
@@ -483,7 +483,7 @@
      }
     },
     {
-     "id": "i-50-w10",
+     "id": "i-50-w14",
      "source": "data/curriculum/lessons.json#I-50.words[9]",
      "he": "תִּשְׁמְרִי עַל עַצְמֵךְ",
      "en": "take care of yourself (said to a woman)",
@@ -542,7 +542,7 @@
     "i-50-w7",
     "i-50-w8",
     "i-50-w9",
-    "i-50-w10"
+    "i-50-w14"
    ],
    "speakSet": "speak-religion-prayer-2"
   },
@@ -553,7 +553,7 @@
    "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json. First line: לִבְרִיאוּת. I-50 already stores חַג שָׂמֵחַ, שָׁנָה טוֹבָה, גְּמַר חֲתִימָה טוֹבָה and everyday wishes.",
    "items": [
     {
-     "id": "i-50-w11",
+     "id": "i-50-w9",
      "source": "data/curriculum/lessons.json#I-50.words[10]",
      "he": "לִבְרִיאוּת",
      "en": "to your health",
@@ -565,7 +565,7 @@
      }
     },
     {
-     "id": "i-50-w13",
+     "id": "i-50-w11",
      "source": "data/curriculum/lessons.json#I-50.words[12]",
      "he": "יוֹם נָעִים",
      "en": "have a nice day",
@@ -577,7 +577,7 @@
      }
     },
     {
-     "id": "i-50-w14",
+     "id": "i-50-w12",
      "source": "data/curriculum/lessons.json#I-50.words[13]",
      "he": "סְלִיחָה",
      "en": "forgiveness, pardon",
@@ -617,8 +617,8 @@
    ],
    "listenIds": [
     "i-50-w11",
-    "i-50-w13",
-    "i-50-w14"
+    "i-50-w11",
+    "i-50-w12"
    ],
    "speakSet": "speak-religion-prayer-2"
   }

@@ -109,20 +109,6 @@
    }
   },
   {
-   "he": "גְּמַר חֲתִימָה טוֹבָה",
-   "en": "a good final sealing (Yom Kippur greeting)",
-   "translit": null,
-   "source": {
-    "file": "data/curriculum/lesson-lexicon.json",
-    "id": "lex-gmar"
-   },
-   "pronunciation": {
-    "israeli": "gemar chatimah tovah",
-    "sephardi": "gemar chatimah tovah",
-    "ashkenazi": "gemar chasimoh tovoh"
-   }
-  },
-  {
    "he": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ",
    "en": "blessed is the name of his glorious kingdom",
    "translit": null,
@@ -198,6 +184,20 @@
    "source": {
     "file": "data/vocab/words.json",
     "id": "h9a1ab3f5"
+   }
+  },
+  {
+   "he": "גְּמַר חֲתִימָה טוֹבָה",
+   "en": "a good final sealing (Yom Kippur greeting)",
+   "translit": null,
+   "source": {
+    "file": "data/curriculum/lesson-lexicon.json",
+    "id": "lex-gmar"
+   },
+   "pronunciation": {
+    "israeli": "gemar chatimah tovah",
+    "sephardi": "gemar chatimah tovah",
+    "ashkenazi": "gemar chasimoh tovoh"
    }
   }
  ],

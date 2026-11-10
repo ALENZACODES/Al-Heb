@@ -9,3 +9,5 @@ Contact sheets: `docs/images/rimon-stills-contact-001-025.webp` and later sheets
 These files are new. Existing `assets/img/rimon/` sprite sheets and `MASCOT_rimon.*` are not modified. No main merge, no deploy.
 
 Character lock: round pomegranate-red body, gold three-point calyx, two olive-green leaf ears, black oval dot eyes, pink blush, blue sash with a front bow, tiny red arms and feet. No text in any image.
+
+Starting at still 049, new poses use bigger, bolder, show-up-everywhere energy (Kool-Aid-Man-like motion only — no branding, pitcher, or slogan). Placement map: `docs/images/rimon-placements.md`. Bold addendum: `docs/images/rimon-stills-catalogue-bold-049-200.md`.

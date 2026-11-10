@@ -112,6 +112,10 @@
     {
       "path": "tools/curriculum/write_practical_fails.py",
       "reason": "Writes the fails packet into the shared lane hub; the packet addresses the lane by its hub name."
+    },
+    {
+      "path": "assets/vendor/_nmt/*/vocab.json",
+      "reason": "Translation word tables: tens of thousands of word pieces, some of which happen to spell a tool name."
     }
   ]
 }

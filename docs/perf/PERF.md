@@ -88,7 +88,7 @@ Lighthouse 13 is in `tools/lighthouse/node_modules` but it dropped its PWA categ
 
 ## First-Load JS Back Under The Budget (2026-11-10)
 
-Branch `claude/fable-big-fixes-2026-11-10`. Same tool, same machine, slow 4G, 4x CPU, three cold loads each (`node tools/qa/perf.mjs --runs 3 --routes /`). The budget is unchanged: 532,480 bytes from the 502448-byte baseline.
+The big fixes branch (2026-11-10). Same tool, same machine, slow 4G, 4x CPU, three cold loads each (`node tools/qa/perf.mjs --runs 3 --routes /`). The budget is unchanged: 532,480 bytes from the 502448-byte baseline.
 
 | | JS bytes on first load of / | Requests |
 |---|---|---|

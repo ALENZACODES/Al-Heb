@@ -152,7 +152,7 @@ The guard list of real words (`data/camera/real-neighbours.json`, 3,264 words, C
 
 ## A Pole In Front Of The Sign, And The Language Pack (2026-11-10)
 
-Two changes on branch `claude/fable-big-fixes-2026-11-10`. Both run in the browser; nothing new is sent anywhere.
+Two changes on the big fixes branch (2026-11-10). Both run in the browser; nothing new is sent anywhere.
 
 ### A Pole Or Post Across The Lettering
 

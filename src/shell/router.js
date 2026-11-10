@@ -208,8 +208,15 @@ export function parseHash(hash) {
 }
 
 /** @param {string} hash @returns {{route:RouteDef|null, params:Record<string,string>, path:string, query:Record<string,string>}} */
+export function canonicalPath(path) {
+  if (path === '/brainlab' || path.startsWith('/brainlab/')) return '/lab' + path.slice('/brainlab'.length);
+  return path;
+}
+
 export function matchRoute(hash) {
-  const { path, query } = parseHash(hash);
+  const parsed = parseHash(hash);
+  const path = canonicalPath(parsed.path);
+  const query = parsed.query;
   const segs = path.split('/').filter(Boolean);
   for (const route of ROUTES) {
     const ps = route.pattern.split('/').filter(Boolean);

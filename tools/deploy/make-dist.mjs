@@ -20,6 +20,8 @@ export const LIMITS = { maxFileBytes: 25 * 1024 * 1024 }; // developers.cloudfla
 export const EXTRAS = [
   ['sw.js', 'service worker'],
   ['_headers', 'Cloudflare Pages headers'],
+  ['robots.txt', 'search crawler rules'],
+  ['sitemap.xml', 'search sitemap for the app shell'],
   ['_redirects', 'Cloudflare Pages redirects (only if the file exists)'],
   ['assets/vendor', 'vendored Tesseract OCR (lazy, runtime-cached; includes licence texts)'],
   ['assets/workbook', 'printable workbook PDFs + manifest (linked from the app, downloaded on demand)'],

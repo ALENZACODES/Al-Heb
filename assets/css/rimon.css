@@ -40,7 +40,7 @@
 /* showRimon(situation) — shared, fail-safe Rimon stills (src/shell/rimon-show.js). Big and bold by default. */
 .alef-rimon{display:block;inline-size:100%;block-size:auto;max-inline-size:100%;pointer-events:none;user-select:none}
 .alef-rimon[hidden]{display:none}
-.alef-rimon-spot{position:fixed;z-index:60;inset-inline-end:max(.5rem,env(safe-area-inset-right));inset-block-end:calc(84px + env(safe-area-inset-bottom));inline-size:min(42vw,190px);pointer-events:none;filter:drop-shadow(0 10px 18px rgba(18,61,42,.35))}
+.alef-rimon-spot{position:fixed;z-index:60;inset-inline-end:max(.5rem,env(safe-area-inset-right));inset-block-end:calc(168px + env(safe-area-inset-bottom));inline-size:min(42vw,190px);pointer-events:none;filter:drop-shadow(0 10px 18px rgba(18,61,42,.35))}
 .alef-rimon-slot{display:grid;place-items:center;margin-inline:auto}
 .alef-rimon-slot:empty,.alef-rimon-slot:has(> .alef-rimon[hidden]){display:none}
 .alef-rimon-slot-big{inline-size:min(56vw,220px)}

@@ -1,0 +1,47 @@
+rank,order,filename,shape,pixels,transparent,screen,status
+1,1.1,ICON_v2_plate.png,1:1,1024x1024,no,"Home screen and app launcher, install prompt, App Store and Google Play listings",not drawn
+2,2.1,CUT_v2_noa_point.png,1:1,1024x1024,yes,Store screenshot 01 (Home),not drawn
+2,2.2,CUT_v2_rimon_cheer.png,1:1,1024x1024,yes,Store screenshot 02 (first letter),not drawn
+2,2.3,CUT_v2_ari_trace.png,1:1,1024x1024,yes,Store screenshot 03 (letters),not drawn
+2,2.4,CUT_v2_rimon_run.png,1:1,1024x1024,yes,Store screenshot 04 (Brain Lab),not drawn
+2,2.5,CUT_v2_ari_siddur.png,1:1,1024x1024,yes,Store screenshot 05 (prayers),not drawn
+2,2.6,CUT_v2_noa_medal.png,1:1,1024x1024,yes,Store screenshot 06 (awards),not drawn
+2,2.7,PATTERN_v2_olive.png,1:1,1024x1024,no,Background texture for store screenshots and launch screens,not drawn
+3,3.1,KEYART_v2_tree.png,3:2,1536x1024,no,Google Play listing header; link previews,not drawn
+4,4.1,ONB_v2_welcome.png,3:2,1536x1024,no,"#/welcome: top of the ""Welcome to Aleph"" card",not drawn
+4,4.2,ONB_v2_letters.png,1:1,1024x1024,no,"#/welcome step 1: ""How much Hebrew can you read today?""",not drawn
+4,4.3,ONB_v2_congregation.png,1:1,1024x1024,no,#/welcome step 2: synagogue and pronunciation,not drawn
+4,4.4,ONB_v2_minutes.png,1:1,1024x1024,no,"#/welcome step 3: ""Your goal and time""",not drawn
+4,4.5,ONB_v2_week.png,1:1,1024x1024,no,"#/welcome step 4: ""Your week""",not drawn
+5,5.1,SPLASH_v2_band.png,3:2,1536x1024,no,iOS launch screen (installed ALEF on iPhone and iPad),not drawn
+6,6.1,EMPTY_v2_review.png,1:1,1024x1024,no,"Review, nothing due (src/curriculum/review.view.js)",not drawn
+6,6.2,EMPTY_v2_search.png,1:1,1024x1024,no,"Search, no matches (src/shell/search.view.js)",not drawn
+6,6.3,EMPTY_v2_progress.png,1:1,1024x1024,no,"Progress, nothing practised yet (src/progress/progress.view.js)",not drawn
+6,6.4,EMPTY_v2_awards.png,1:1,1024x1024,no,"Awards, first visit (src/awards/gallery.view.js)",not drawn
+6,6.5,EMPTY_v2_notfound.png,1:1,1024x1024,no,Page not found (src/app.js),not drawn
+6,6.6,EMPTY_v2_offline.png,1:1,1024x1024,no,"""Needs a connection the first time"" card (src/shell/ui.js, kind ""offline"", from PR #40)",not drawn
+6,6.7,EMPTY_v2_error.png,1:1,1024x1024,no,"Error card (src/shell/ui.js unavailableCard, kind ""error"")",not drawn
+7,7.1,CELEB_v2_lesson.png,1:1,1024x1024,yes,Lesson complete panel (replaces MASCOT_rimon there),not drawn
+7,7.2,STREAK_v2_lamp_unlit.png,1:1,1024x1024,yes,Home Today card and Progress: no study yet today,not drawn
+7,7.3,STREAK_v2_lamp_lit.png,1:1,1024x1024,yes,Home Today card and Progress: studied today,not drawn
+7,7.4,STREAK_v2_lamp_gold.png,1:1,1024x1024,yes,Home Today card and Progress: a streak of 7 days or more,not drawn
+7,7.5,STREAK_v2_lamp_rest.png,1:1,1024x1024,yes,Home Today card and Progress: a resting day (Shabbat or Yom Tov) that keeps the streak,not drawn
+8,8.1,BADGE_game-session.png,1:1,1024x1024,no,"Awards gallery: ""Practice game session""",not drawn
+8,8.2,BADGE_game-return.png,1:1,1024x1024,no,"Awards gallery: ""Returned to a practice game""",not drawn
+8,8.3,BADGE_beginner-completion.png,1:1,1024x1024,no,"Awards gallery: ""Beginner checklist""",not drawn
+8,8.4,BADGE_mastery-matte.png,1:1,1024x1024,no,"Awards gallery: mastery slot ""Matte""",not drawn
+8,8.5,BADGE_mastery-polished.png,1:1,1024x1024,no,"Awards gallery: mastery slot ""Polished""",not drawn
+8,8.6,BADGE_mastery-foil.png,1:1,1024x1024,no,"Awards gallery: mastery slot ""Foil""",not drawn
+9,9.1,LAB_v2_hero.png,3:2,1536x1024,no,#/brainlab: top of the page,not drawn
+9,9.2,LAB_v2_hunt.png,1:1,1024x1024,no,"#/brainlab: ""Letter Hunt"" row",not drawn
+9,9.3,LAB_v2_matrix.png,1:1,1024x1024,no,"#/brainlab: ""Letter Matrix"" row",not drawn
+9,9.4,LAB_v2_soundmatch.png,1:1,1024x1024,no,"#/brainlab: ""Sound Match"" row",not drawn
+9,9.5,LAB_v2_siddurflash.png,1:1,1024x1024,no,"#/brainlab: ""Siddur Flash"" row",not drawn
+9,9.6,LAB_v2_switch.png,1:1,1024x1024,no,"#/brainlab: ""Rule Switch"" row",not drawn
+9,9.7,LAB_v2_gematria.png,1:1,1024x1024,no,"#/brainlab: ""Gematria"" row",not drawn
+9,9.8,LAB_v2_countup.png,1:1,1024x1024,no,"#/brainlab: ""Count Up"" row",not drawn
+9,9.9,LAB_v2_numberear.png,1:1,1024x1024,no,"#/brainlab: ""Number Ear"" row",not drawn
+9,9.10,LAB_v2_calendar.png,1:1,1024x1024,no,"#/brainlab: ""Calendar Puzzle"" row",not drawn
+9,9.11,LAB_v2_pattern.png,1:1,1024x1024,no,"#/brainlab: ""Letter Pattern"" row",not drawn
+10,10.1,TRACK_v2_prayer.png,3:2,1536x1024,no,"Learn: ""Read the prayer book"" track",not drawn
+10,10.2,TRACK_v2_israel.png,3:2,1536x1024,no,"Learn: ""Speak in Israel"" track",not drawn

@@ -10,8 +10,8 @@
   "ashkenazi"
  ],
  "counts": {
-  "records": 6636,
-  "words": 8764
+  "records": 6659,
+  "words": 8973
  },
  "stressRules": [
   "default milra (final)",
@@ -67,8 +67,14 @@
   {
    "file": "_syllables-007.json",
    "kind": "syllables",
-   "count": 81,
+   "count": 89,
    "first": "kaddish-1-l2"
+  },
+  {
+   "file": "_syllables-008.json",
+   "kind": "syllables",
+   "count": 15,
+   "first": "hallel-118-1-4-l4"
   },
   {
    "file": "_ssml-001.json",
@@ -175,7 +181,7 @@
   {
    "file": "_ssml-018.json",
    "kind": "ssml",
-   "count": 9,
+   "count": 32,
    "first": "havdalah-opening"
   }
  ]

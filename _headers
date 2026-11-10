@@ -87,6 +87,8 @@
   Cache-Control: public, max-age=604800
 /assets/speak-candidates/*
   Cache-Control: public, max-age=604800
+/assets/light/*
+  Cache-Control: public, max-age=604800
 /assets/vendor/*
   Cache-Control: public, max-age=604800
 /assets/workbook/*

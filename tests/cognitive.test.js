@@ -168,7 +168,12 @@ test("motion audit: animations match the reviewed inventory, loops are slow, and
     'stat-toast-in',
     // opening prayer in gold leaf: the letters brighten once (2.6 s) and a sheen of light crosses them every 9 s (background position
     // only, no flashing: brightness peaks once and settles); reduced motion and calm mode keep steady gold
-    'prayer-gold-dawn', 'prayer-gold-sheen'];
+    'prayer-gold-dawn', 'prayer-gold-sheen',
+    // Star of David light (assets/css/light.css): the star and halo ease opacity and scale every 2.4 s while pulse is on
+    // (under two cycles per second). Animations exist only under prefers-reduced-motion: no-preference; the local reduce
+    // block and the global reduced-motion and calm rules switch both off. The phone torch flash is separately gated by
+    // reduced motion, calm mode and Shabbat/chag quiet in src/light/light.js.
+    'alef-light-breathe', 'alef-light-halo'];
   assert.deepEqual(frames.sort(), reviewed.sort(), 'new animations require a motion review');
   for (const animation of anims) {
     if (!/\binfinite\b/.test(animation)) continue;

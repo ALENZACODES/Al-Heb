@@ -3,7 +3,11 @@
   position: fixed; inset: 0; z-index: 9999; display: grid;
   place-items: center; overflow: hidden; isolation: isolate;
   padding: max(1.5rem, env(safe-area-inset-top)) 1.1rem max(1.5rem, env(safe-area-inset-bottom));
-  background: #1E4634; color: #F6F1E7; text-align: center;
+  color: #F6F1E7; text-align: center;
+  background:
+    radial-gradient(60% 45% at 50% 45%, rgba(22, 48, 28, .35), rgba(13, 31, 18, .82) 100%),
+    image-set(url("../img/gen/HERO_prayer_light.1536x1024.webp") 1x) center / cover no-repeat,
+    #16301c;
   transition: opacity .15s ease; cursor: pointer;
 }
 .prayer-veil--leaving { opacity: 0; pointer-events: none; }
@@ -258,7 +262,7 @@
   display: block; position: relative; aspect-ratio: 4/3; width: 100%;
   background-image: linear-gradient(180deg,
     rgba(31,58,95,.05) 30%,rgba(31,58,95,.20) 70%,rgba(31,58,95,.65) 100%),
-    url("../img/gen/HERO_olive_harvest_astral.1600.webp");
+    url("../img/gen/HERO_home_heaven.1536x1024.webp");
   background-repeat: no-repeat;
   background-size: cover, 220% auto;
 }
@@ -357,7 +361,7 @@
   .show-portal-art {
     background-image: linear-gradient(180deg,
       rgba(31,58,95,.05) 30%,rgba(31,58,95,.2) 70%,rgba(31,58,95,.65)),
-      url("../img/gen/HERO_olive_harvest_astral.900.webp");
+      url("../img/gen/HERO_home_heaven.1024x1536.webp");
   }
   .show-portal-grid { gap: .6rem; }
   .show-portal-copy { padding: .72rem; }
@@ -400,3 +404,34 @@ main:has(.showcase) .show-hero-text { display:flex; gap:1rem; align-items:flex-s
 .show-mascot-box { flex:0 0 auto; width:6rem; height:6rem; }
 .show-mascot-box:empty { display:none; }
 .show-mascot { display:block; width:100%; height:100%; object-fit:contain; margin:0; }
+
+@media (max-width: 700px) and (orientation: portrait) {
+  .prayer-veil {
+    background:
+      radial-gradient(70% 40% at 50% 45%, rgba(22, 48, 28, .35), rgba(13, 31, 18, .82) 100%),
+      url("../img/gen/HERO_prayer_light.1024x1536.webp") center / cover no-repeat,
+      #16301c;
+  }
+}
+
+/* Opening prayer: live Hebrew in gold leaf (never drawn into the backdrop image). */
+.prayer-he {
+  color: #e8c97a;
+  background: linear-gradient(100deg, #d9a441 0%, #f3dfa6 22%, #e0b052 38%, #fff4d0 50%, #e0b052 62%, #f3dfa6 78%, #d9a441 100%);
+  background-size: 250% 100%; background-position: 100% 0;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(217, 164, 65, .35));
+  animation: prayer-gold-dawn 2.6s ease-out .25s both, prayer-gold-sheen 9s ease-in-out 3s infinite;
+}
+@keyframes prayer-gold-dawn {
+  from { filter: drop-shadow(0 0 0 rgba(217, 164, 65, 0)) brightness(.7); opacity: .4; }
+  60% { filter: drop-shadow(0 0 18px rgba(243, 223, 166, .55)) brightness(1.15); opacity: 1; }
+  to { filter: drop-shadow(0 0 10px rgba(217, 164, 65, .35)) brightness(1); opacity: 1; }
+}
+@keyframes prayer-gold-sheen { 0%, 20% { background-position: 100% 0; } 70%, 100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .prayer-he { animation: none !important; filter: drop-shadow(0 0 8px rgba(217, 164, 65, .3)); background-position: 50% 0; }
+}
+:root[data-calm] .prayer-he { animation: none !important; background-position: 50% 0; }
+@media (forced-colors: active) { .prayer-he { -webkit-text-fill-color: CanvasText; background: none; filter: none; } }
+

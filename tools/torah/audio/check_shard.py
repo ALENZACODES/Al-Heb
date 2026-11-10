@@ -9,6 +9,8 @@ import argparse, glob, hashlib, json, os, sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
 sys.path.insert(0, os.path.join(ROOT, 'tools', 'audio', 'asr-check'))
 import scan_lines as S, phoneme_review as P
+sys.path.insert(0, os.path.dirname(__file__))
+from fix_shard import spoken
 
 
 def main():
@@ -32,6 +34,7 @@ def main():
             cid = os.path.basename(f)[:-4]
             mp = f + '.meta.json'
             text = (json.load(open(mp, encoding='utf-8')).get('stitchedFromText') if os.path.exists(mp) else None) or S.torah_he(cid)
+            text = spoken(text)   # as read aloud: the divine name as Adonai, maqaf as a space
             heard = S.transcribe(f)
             acc, iss, nw = S.compare(text, heard)
             ipa = P.hear(f, a.model)

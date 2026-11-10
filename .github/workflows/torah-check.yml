@@ -61,7 +61,10 @@ jobs:
           git config user.email "johnnykhan1@gmail.com"
           f=docs/torah/audio-verification/check/shard-${{ matrix.shard }}.jsonl
           [ -f "$f" ] || exit 0
-          git checkout -q -B john/torah-check-${{ matrix.shard }}
+          cp "$f" /tmp/result.jsonl
+          git checkout -q --orphan john/torah-check-${{ matrix.shard }}
+          git rm -rq --cached . && git clean -fdq -e phoneme-ct2
+          mkdir -p "$(dirname "$f")" && cp /tmp/result.jsonl "$f"
           git add "$f"
           git commit -q -m "Torah audio check: slice ${{ matrix.shard }} ($(wc -l < "$f") clips)"
-          git push -q --force origin HEAD:refs/heads/john/torah-check-${{ matrix.shard }}
+          for i in 1 2 3 4 5; do git push -q --force origin HEAD:refs/heads/john/torah-check-${{ matrix.shard }} && break; sleep $((i*15)); done

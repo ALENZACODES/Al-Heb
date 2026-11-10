@@ -1,1 +1,2 @@
 run 1: every Hebrew verse clip, both voices, 2026-11-10
+run 2: fixes for numbers, the divine name and the result upload, 2026-11-10

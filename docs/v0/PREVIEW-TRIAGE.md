@@ -48,6 +48,7 @@ decision, so the More sheet stays short and the first session stays coherent (we
 | `compare` | keep | Target for `record-compare`. |
 | `vocab-themes` | keep | Theme packs (shared audio button). |
 | `speak` | keep | Say it. |
+| `talk` | keep | Talk: short everyday lines between English and Hebrew, from stored lines on the device. Supports the Israel and synagogue goals. |
 | `sprint` | keep | Word Sprint. |
 | `gender` | merge | With `roles` and `gender-drill` into one gender page. |
 | `roles` | merge | Into the gender page. |

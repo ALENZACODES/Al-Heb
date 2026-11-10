@@ -12,6 +12,7 @@ export const NAV_EN = {
   'nav.section.progress.desc': 'What you have done, what to review, and the Jewish calendar.',
   'nav.section.more.desc': 'Settings, search, install, offline use, credits and privacy.',
   'nav.more': 'More', 'nav.search': 'Search', 'nav.menu.label': 'All sections',
+  'nav.talk': 'Talk',
   'nav.phrases': 'Common phrases',
   'nav.practical': 'Practical',
   'nav.route.awards': 'Awards and certificate',

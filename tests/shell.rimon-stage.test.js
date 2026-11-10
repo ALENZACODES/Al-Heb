@@ -330,3 +330,17 @@ test('one greeting line a day the other way round: after a retention greeting, t
   assert.equal(hello.line, null, 'but says no second greeting line');
   assert.equal(s.stage.greetedToday(), true);
 });
+
+test('the animated Learn-card Rimon keeps its animation; in calm or reduced motion it shows the still drawn for its moment', async () => {
+  for (const calm of [false, true]) {
+    const s = setup({ route: 'learn' });
+    if (calm) s.doc.documentElement.setAttribute('data-calm', '');
+    const card = s.doc.createElement('span'); card.setAttribute('class', 'rimon-inline alef-continue-rimon'); card.setAttribute('data-rimon-still', 'learn.continue.first'); s.main.append(card);
+    await s.stage.ready; s.stage._test.scan(); await flush(5);
+    if (calm) {
+      assert.ok(STILL_IDS['learn.continue.first'].includes(card.dataset.rimonShown), 'calm: the learn.continue.first still');
+      assert.match(card.style.backgroundImage, /rimon/);
+    } else assert.equal(card.dataset.rimonShown, undefined, 'moving: the animation stays');
+    s.stage.destroy();
+  }
+});

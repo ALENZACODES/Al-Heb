@@ -271,6 +271,24 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     preload(p.src).then((u) => { if (u && u !== p.src && img.dataset.rimonShown === String(p.id)) img.src = u; });
     remember(trigger, p.iso);
   }
+  /** The animated in-page Rimon (src/shell/rimon-inline.js) keeps its animation. Only when it stands still anyway (reduced motion,
+   * calm mode) does it show the still drawn for its moment instead of a frozen first frame of the sheet. */
+  function staticMotion() {
+    try {
+      if (doc?.documentElement?.hasAttribute?.('data-calm')) return true;
+      return typeof win?.matchMedia === 'function' ? !!win.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
+    } catch { return false; }
+  }
+  function swapInline(el) {
+    const want = el.getAttribute('data-rimon-still') || '';
+    if (!TRIGGERS[want] || el.dataset.rimonDone === want || !staticMotion()) return;
+    const p = hidden() || quiet() ? null : choose(want);
+    if (!p) return;
+    el.dataset.rimonDone = want;
+    const paint = (u) => { el.style.backgroundImage = `url("${u}")`; el.style.backgroundSize = 'contain'; el.style.backgroundPosition = 'center'; el.style.backgroundRepeat = 'no-repeat'; el.dataset.rimonShown = String(p.id); };
+    preload(p.src).then((u) => { if (u && alive && el.dataset.rimonDone === want) paint(u); });
+    remember(want, p.iso);
+  }
   function fillSlot(el) {
     const want = el.getAttribute('data-rimon-slot') || '';
     if (!TRIGGERS[want] || el.dataset.rimonDone === want) return; // e.g. rimonSlot('welcome') from the shared hook fills itself
@@ -282,6 +300,7 @@ export function mountRimonStage({ store, companion = null, doc = globalThis.docu
     if (!alive || !doc?.querySelectorAll) return;
     for (const [sel, pick] of IMPLICIT) for (const img of doc.querySelectorAll(sel)) if (!img.hasAttribute('data-rimon-still') && lastAccuracy != null) img.setAttribute('data-rimon-still', pick(lastAccuracy));
     for (const img of doc.querySelectorAll('img[data-rimon-still]')) swap(img);
+    for (const el of doc.querySelectorAll('.rimon-inline[data-rimon-still]')) swapInline(el);
     for (const el of doc.querySelectorAll('[data-rimon-slot]')) fillSlot(el);
     // one Rimon on screen: a swapped picture inside the page stands in for the corner companion
     const main = doc.getElementById?.('main');

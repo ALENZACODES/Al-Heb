@@ -6,12 +6,16 @@
  "byWear": {
   "clean": {
    "images": 20,
-   "edits": 7,
-   "ref": 206,
+   "edits": 9,
+   "ref": 207,
    "lines": 28,
-   "linesReadExactly": 22,
-   "linesTranslatedEndToEnd": 24,
+   "linesReadExactly": 21,
+   "linesTranslatedEndToEnd": 26,
    "worst": [
+    [
+     "new-price",
+     0.286
+    ],
     [
      "dizengoff-square",
      0.182
@@ -27,25 +31,25 @@
     [
      "kosher-restaurant",
      0.1
-    ],
-    [
-     "bus-stop",
-     0.091
     ]
    ],
-   "cerPooled": 0.034
+   "cerPooled": 0.0435
   },
   "noise": {
    "images": 20,
-   "edits": 8,
-   "ref": 206,
+   "edits": 9,
+   "ref": 207,
    "lines": 28,
-   "linesReadExactly": 21,
-   "linesTranslatedEndToEnd": 23,
+   "linesReadExactly": 20,
+   "linesTranslatedEndToEnd": 27,
    "worst": [
     [
      "dizengoff-square",
      0.182
+    ],
+    [
+     "new-price",
+     0.143
     ],
     [
      "no-entry",
@@ -58,21 +62,17 @@
     [
      "kosher-restaurant",
      0.1
-    ],
-    [
-     "bus-stop",
-     0.091
     ]
    ],
-   "cerPooled": 0.0388
+   "cerPooled": 0.0435
   },
   "blur": {
    "images": 20,
    "edits": 5,
-   "ref": 206,
+   "ref": 207,
    "lines": 28,
    "linesReadExactly": 25,
-   "linesTranslatedEndToEnd": 24,
+   "linesTranslatedEndToEnd": 26,
    "worst": [
     [
      "menu-drinks",
@@ -83,19 +83,23 @@
      0.091
     ]
    ],
-   "cerPooled": 0.0243
+   "cerPooled": 0.0242
   },
   "rotate": {
    "images": 20,
-   "edits": 5,
-   "ref": 206,
+   "edits": 6,
+   "ref": 207,
    "lines": 28,
-   "linesReadExactly": 24,
-   "linesTranslatedEndToEnd": 25,
+   "linesReadExactly": 23,
+   "linesTranslatedEndToEnd": 27,
    "worst": [
     [
      "dizengoff-square",
      0.182
+    ],
+    [
+     "new-price",
+     0.143
     ],
     [
      "no-entry",
@@ -110,16 +114,20 @@
      0.05
     ]
    ],
-   "cerPooled": 0.0243
+   "cerPooled": 0.029
   },
   "perspective": {
    "images": 20,
-   "edits": 4,
-   "ref": 206,
+   "edits": 6,
+   "ref": 207,
    "lines": 28,
-   "linesReadExactly": 25,
-   "linesTranslatedEndToEnd": 25,
+   "linesReadExactly": 24,
+   "linesTranslatedEndToEnd": 26,
    "worst": [
+    [
+     "new-price",
+     0.286
+    ],
     [
      "dizengoff-square",
      0.182
@@ -133,23 +141,23 @@
      0.05
     ]
    ],
-   "cerPooled": 0.0194
+   "cerPooled": 0.029
   },
   "lowcontrast": {
    "images": 20,
-   "edits": 6,
-   "ref": 206,
+   "edits": 7,
+   "ref": 207,
    "lines": 28,
    "linesReadExactly": 23,
-   "linesTranslatedEndToEnd": 24,
+   "linesTranslatedEndToEnd": 26,
    "worst": [
+    [
+     "new-price",
+     0.286
+    ],
     [
      "dizengoff-square",
      0.182
-    ],
-    [
-     "no-entry",
-     0.125
     ],
     [
      "kosher-restaurant",
@@ -160,7 +168,7 @@
      0.091
     ]
    ],
-   "cerPooled": 0.0291
+   "cerPooled": 0.0338
   }
  }
 }

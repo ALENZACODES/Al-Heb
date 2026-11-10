@@ -1,106 +1,120 @@
-# Camera Translator (`#/camera`): What Was Built, What Was Reused, What Was Measured
+# Camera Translator (`#/camera`): What It Is, What Was Reused, What Was Measured
 
-Date: 2026-11-10.
+Last updated 2026-11-10 (third pass).
 
 ## In One Paragraph
 
-A learner photographs a Hebrew sign or menu and sees the English drawn over the Hebrew on the photo itself, can switch between the original and the translated photo, and can tap any line to hear the Hebrew and see how to say it. With no service configured (the state this branch ships in) everything runs on the device: the app's existing in-browser Hebrew reader plus an 87-entry word list of common sign and menu words. When `data/camera/config.json` names the service in `tools/camera-translate`, the photo is sent there after an explicit notice and button, and the service uses Google Cloud Vision and Google Cloud Translation when it has credentials. **The Google path has not been run against Google**: no credentials were available. Its request and response handling is tested against the real library types with a stand-in client only.
+A learner photographs a Hebrew sign or menu and sees the English drawn over the Hebrew on the photo itself, can switch between the photo as taken and the translated photo, and can tap any line to hear the Hebrew and see how to say it, with word-by-word help one button deeper. **Everything runs in the browser. There is no server and nothing is uploaded** (owner decision, 2026-11-10). Reading uses the app's existing in-browser Hebrew reader. Translation uses a 155-entry sign word list, then the app phrasebook, then the app dictionary word for word.
 
-## Existing OCR Code Found (GitHub code search across the ALENZACODES account, 2026-11-10)
+## How A Photo Is Handled
 
-Search terms: tesseract, pytesseract, ocr, paddleocr, easyocr, docling, surya, text detection, DOCUMENT_TEXT_DETECTION, image_to_string, createWorker, heb.traineddata, vision. Code search covers default branches only.
+1. The photo is redrawn through a canvas: upright, at most 2000 px on the long side, no location or camera details.
+2. A tilted sign is levelled (`deskew` in `src/photo/preprocess.js`).
+3. For the reader only, the picture is enlarged if small and its letters are made black on white whatever the sign's colours were. Two page modes are tried and the more confident reading is kept.
+4. Words are put in right-to-left reading order and grouped into lines (`src/photo/order-lines.js`).
+5. Each Hebrew line is translated:
+   - the sign word list (phrases first, longest match);
+   - if a word is not listed: a listed other form (a plural), "the" joined to a listed word, or a closest match (one letter different, one letter added or removed, or two letters different when both are look-alike pairs such as bet and kaf). A closest match is always labelled as one. A real Hebrew word is never "corrected" into a listed word unless the result forms a listed phrase with the word beside it;
+   - the app phrasebook, for a whole line it holds;
+   - the app dictionary word for word, only if every word on the line is found exactly as written. Labelled as word for word.
+6. A line that is still untranslated is left untouched on the photo. So is a line that contains the four-letter name, whose text is never shown, drawn or spoken.
+7. Each translated line is painted out with the sign's own colour (shaded when light falls across it) and the English is drawn in the sign's letter colour, sized to the line. Hebrew that was flush right becomes English flush left.
+
+## Existing OCR Code Found And Reused
+
+Found by GitHub code search across the ALENZACODES account on 2026-11-10 (default branches only).
 
 | Repo | Path | What it does | Licence | Used here |
 |---|---|---|---|---|
-| Al-Heb | `src/photo/engines/tesseract-browser.js` | Hebrew OCR in the browser: vendored tesseract.js 7 + `heb` model, lazy, word boxes | repo: all rights reserved (John Khan); vendored engine Apache-2.0 | **Yes**: the on-device reader for `#/camera` |
-| Al-Heb | `src/photo/order-lines.js` | right-to-left reading order from word boxes | repo licence | **Yes**: imported by the app code; ported line for line into `camera_translate/ocr.py` |
-| Al-Heb | `src/photo/hebrew.js`, `src/photo/preprocess.js` | mark stripping, contrast and deskew before OCR | repo licence | **Yes**: `stripMarks`, `isHebrew`, `isPointed`; preprocessing runs inside the reused reader |
-| Al-Heb | `src/shell/names.js` | sacred-name rules | repo licence | **Yes**: imported in the app; mirrored in `camera_translate/hebrew.py` |
-| Al-Heb | `tools/ocr-server.mjs` | local helper: Tesseract CLI `heb` + Argos translation over loopback HTTP | repo licence | Pattern reused (raw image body, loopback-only CORS, Tesseract TSV parsing); not called |
-| Al-Heb | `tools/ocr-bench/gen.py`, `bench.mjs`, `e2e-scan.mjs` | synthetic image generator, benchmark, browser check for `#/scan` | repo licence | Method reused for `tests/make_signs.py` and `e2e-camera.mjs` |
-| Al-Heb | `src/photo/engines/local-server.js`, `web.js`, `pipeline.js`, `scan.view.js` | the `#/scan` screen and its adapters | repo licence | Not changed; `#/scan` is untouched |
-| renewal-radar | `backend/renewal/ocr/camera.py` | bounded intake for photographed documents (size, signature, pixel budget, quality) | MIT (John Khan) | Approach reused in `camera_translate/intake.py` (same order of checks), rewritten smaller |
-| renewal-radar | `backend/renewal/ocr/engines.py`, `engine_registry.py`, `tempfiles.py`, `documents/text.py` | Tesseract engine with provenance, optional Docling/Paddle/EasyOCR adapters, temp-dir cleanup | MIT | Not used: built for English mortgage documents; this service avoids temp files altogether |
-| decision-ladder | `modules/renewal-radar/...` | a copy of the renewal-radar OCR module | not checked | Not used |
-| beljour, beljour-app | `web/src/vision/*`, `js/vision/*` | matched the word "vision" only; by path these are camera/face pipelines, not text recognition | not opened | Not used |
+| Al-Heb | `src/photo/engines/tesseract-browser.js` | Hebrew OCR in the browser: vendored tesseract.js 7 + `heb` model, lazy, word boxes | repo: all rights reserved (John Khan); vendored engine Apache-2.0 | **Yes**: the reader. One optional argument was added (page mode per call) |
+| Al-Heb | `src/photo/preprocess.js` | contrast, skew estimate, levelling | repo | **Yes**: `deskew` |
+| Al-Heb | `src/photo/order-lines.js`, `src/photo/hebrew.js` | reading order, mark stripping | repo | **Yes** |
+| Al-Heb | `src/shell/names.js` | sacred-name rules | repo | **Yes** |
+| Al-Heb | `data/vocab/index.json`, `data/corpus/phrasebook.json` | the app dictionary (6,303 rows) and phrasebook (204 lines) | see `data/vocab/LICENSE-NOTES.md`; phrasebook project-owned | **Yes**: translation tiers and word-by-word help |
+| Al-Heb | `tools/ocr-server.mjs`, `tools/ocr-bench/*` | local helper, synthetic image generator, browser check for `#/scan` | repo | Method reused for the test rig |
+| renewal-radar | `backend/renewal/ocr/camera.py` | bounded intake for photographed documents | MIT (John Khan) | Approach reused in the offline test rig's intake |
+| renewal-radar | rest of `backend/renewal/ocr/` | OCR engines for English mortgage documents | MIT | No |
+| decision-ladder | `modules/renewal-radar/...` | a copy of the above | not checked | No |
+| beljour, beljour-app | `*/vision/*` | matched the word "vision" only; not opened | not checked | No |
 
-## What Is New
+## Files
 
-App (all loaded only when `#/camera` opens; nothing added to the first-install precache):
+App (loaded only when `#/camera` opens; nothing in the first-install precache):
+`src/camera/camera.view.js`, `camera-model.js`, `camera-client.js`, `on-device.js`; `data/camera/sign-glossary.json`, `glossary-cases.json`, `sample-sign.jpg`.
 
-- `src/camera/camera.view.js`: the screen.
-- `src/camera/camera-model.js`: service-address rules, word-list translation, answer checking, text fitting and alignment, colour sampling.
-- `src/camera/camera-client.js`: config and service calls.
-- `src/camera/on-device.js`: on-device reading and canvas overlay.
-- `data/camera/sign-glossary.json`, `config.json`, `glossary-cases.json`, `sample-sign.jpg`.
-- One line each in `src/shell/router.js`, `nav.strings.js`, `search.js`, `nav-model.js`, `offline.js`, `tools/build-precache.mjs`; `precache-manifest.js` and `views.generated.js` regenerated.
-
-Service: `tools/camera-translate/` (see its README).
+Offline test rig (never called by the app): `tools/camera-translate/`. It holds the 20 test signs and their generator, the measuring scripts, a Python copy of the word-list rules held to the same cases file, and a FastAPI service with Tesseract and Google Cloud adapters that was built before the no-server decision. The service is not deployed and the app has no code that can reach one. The Google adapters have never been run against Google.
 
 ## Measured Results
 
-All numbers are on **20 computer-made sign images** (28 lines): shop, door and street signs and three menus, in five fonts, 12 clean and 8 with simulated wear (noise, blur, 4-degree tilt, perspective, low contrast, one thin-lettered sign). They are not photographs. Real photos will do worse, by an amount nobody has measured.
+Every number below is on **computer-made sign images**, in headless desktop Chromium. They are not photographs and it was not a phone. Real photos will do worse, by an amount nobody has measured.
 
-Reader: Tesseract `heb` on the server. Translator: the built-in word list. Run: `python3 eval.py`, 2026-11-10.
+### The App's Own Path (In The Browser)
 
-| Measure | Result |
-|---|---|
-| OCR character error rate, pooled | 2.9% (letters and digits; vowel points, spaces and punctuation ignored) |
-| OCR character error rate, mean per image | 2.5% |
-| Images read with no error | 16 of 20 |
-| Lines read with no error | 23 of 28 |
-| Lines translated correctly, end to end | 24 of 28 (21 of 28 with exact word-list matches only; 3 more through the one-letter near-match rule) |
-| Lines translated correctly when given the true Hebrew | 26 of 28 |
+`node tools/camera-translate/e2e-batch.mjs <folder>`. Results files: `tools/camera-translate/tests/signs/results-browser.json` and `results-browser-wear.json`.
 
-The first run of this table, before tilted text was levelled, gave 2.4% and 25 of 28. Levelling changed how one tilted sign was resampled and it picked up a second wrong letter. The wider run below is why levelling was kept.
+| Set | Images | Lines | Character error rate | Lines read exactly | Lines with the right English on the photo | Wrong English drawn |
+|---|---|---|---|---|---|---|
+| Stored 20 signs | 20 | 28 | 2.9% | 23 | 27 (96.4%) | 0 |
+| Every sign under six kinds of wear | 120 | 168 | 4.0% | 132 | 156 (92.9%) | 0 |
 
-### Every Sign Under Every Kind Of Wear (120 Images)
+By wear, lines with the right English out of 28: clean 27, noise 27, blur 25, tilt 26, perspective 25, low contrast 26.
 
-`python3 eval.py --wear` renders each of the 20 signs six ways in memory. Same reader and translator.
+How to read this:
 
-| Wear | Character error rate before levelling | After levelling | Lines read exactly (of 28) | Lines translated end to end (of 28) |
-|---|---|---|---|---|
-| clean | 3.4% | 3.4% | 22 | 24 |
-| noise + heavy JPEG | 3.9% | 3.9% | 21 | 23 |
-| blur | 2.4% | 2.4% | 25 | 24 |
-| tilt of 4 degrees | 11.2% | 2.4% | 24 | 25 |
-| perspective | 2.4% | 1.9% | 25 | 25 |
-| low contrast, uneven light | 2.9% | 2.9% | 23 | 24 |
+- One sign in the set (`shoe-shop`) is kept outside the word list on purpose and is never translated: it accounts for 1 of the 28 and 6 of the 168. Counting only lines whose words are listed, the wear run is 156 of 162 (96.3%).
+- 18 of the 20 signs were written from the same list of sign words that the word list was written from. This measures reading and lookup. It does not measure how many real-world signs the list covers.
+- The six other misses on the wear run: a price read as letters (`10` read as two letters, twice), one word read with extra or wrong letters beyond what the closest-match rules accept (three times), and another with two wrong letters (once).
+- "Wrong English drawn" counts any English put on the photo that is not the expected English. It was 0 on both sets.
+- Mean time per image was about 0.27 s on this desktop, after the reader had loaded. Phone speed was not measured.
 
-The last two columns are after levelling. Tilt was the weak point (20 lines read exactly before, 24 after). The "clean" row is not the main table: it is all 20 signs rendered without wear, including the ones the main set stores with wear.
+Before this pass the same path gave 24 of 28 on the stored set as it then was. The set changed in this pass (two out-of-list signs were replaced, because the old two were added to the word list), so the figures are not a like-for-like comparison.
 
-Reading the translation numbers honestly:
+### Review Round 1 Rows (Text Level)
 
-- 18 of the 20 signs use words that are in the word list, and two (`חנות ספרים`, `תחנת דלק`) were chosen from outside it. So "26 of 28 given the true Hebrew" shows the lookup works and that the list has gaps. It says nothing about translation quality on signs in general.
-- The five misread lines were all look-alike letters (kaf read as bet, samekh as tet, an extra vav). Three were recovered by the near-match rule and are labelled "closest match" in the app. One was left untranslated because two listed words were one letter away, and one because two letters were wrong.
-- An earlier render of one sign at a hairline font weight was read as nonsense. The generator now uses weight 600 for variable fonts and keeps one sign at weight 300.
+The round 1 review ran a cloud vision model, not the in-browser reader, over other computer-made signs and listed 80 example failures. Those 80 reader outputs are kept in `tools/camera-translate/tests/fixtures/review-r1-fails.json` and run through the word-list rules in the unit tests.
 
-The on-device path of the app (the in-browser reader plus the same word list) was also run on the same 20 images in headless Chromium on a desktop machine: 24 of 28 lines came out with the correct English on the photo, with no page errors. Its character error rate was not computed separately.
+| | Right English | Wrong English | Left untranslated |
+|---|---|---|---|
+| Rules as reviewed | 15 | 12 | 53 |
+| Rules now | 43 | 4 | 33 |
 
-Not measured: Google Cloud Vision accuracy, Google Cloud Translation accuracy, any real photograph, any phone, speed on a phone.
+All 80 source phrases now translate when read correctly (60 did before). The 4 wrong ones are cases where that reader returned a different real listed word (for example the word for entrance where the sign said danger); nothing after the reader can catch that. The 33 left untranslated are misreadings two or more letters away from anything listed, where the rules refuse to guess.
 
-## Checks That Ran
+### Offline Test Rig (Tesseract On A Server, Word List Only)
 
-- `python3 -m pytest tools/camera-translate/tests -q`: 19 passed.
-- `node --test tests/camera.model.test.js`: 11 passed.
-- `node --test tests/camera.browser.test.js`: 3 passed in headless Chromium with the `_headers` Content-Security-Policy applied to the page: no policy violations, on-device path contacts only the app's own origin, the service path posts exactly one JPEG with no EXIF block.
+`python3 eval.py` and `python3 eval.py --wear` in `tools/camera-translate`. Kept as a second measuring stick; it is not the app's path.
 
-## Added In The Second Pass (2026-11-10)
+| Set | Character error rate | Lines translated end to end |
+|---|---|---|
+| Stored 20 signs | 3.9% | 26 of 28 |
+| Wear run, by wear | clean 4.3%, noise 4.3%, blur 2.4%, tilt 2.9%, perspective 2.9%, low contrast 3.4% | 26, 27, 26, 27, 26, 26 of 28 |
 
-- **Word By Word.** In the panel for a tapped line, a second button looks up each word: the sign list first (listed phrases stay together), then the app's own 6,303-entry dictionary (`data/vocab/index.json`, fetched only when the button is pressed), then one attached prefix letter (the, and, in, to, from), then a possible joined form or plural. The last three are shown as possibilities, never as fact. A spelling with several meanings shows up to three, things before verbs. This means a sign outside the word list (for example the bookshop test sign) still gets each word explained, although nothing is drawn on the photo.
-- **Tilted text.** The service levels tilted text before reading and draws the English at the sign's own tilt (table above).
-- **Privacy page.** `#/privacy` now lists the camera service among the requests that can carry something of the learner's, says no address is set in this build, and describes the on-device path.
-- **Way in.** The Scan screen links to the Camera Translator.
-- **Word list check.** The 87 entries were compared with the app's sourced dictionary: of the 59 words found there, 46 have identical pointing, 12 differ because the sign form is a joined form, a command or carries "the" (for example `בֵּית` beside the dictionary's `בַּיִת`), and 1 (`פיתה`) was corrected to the dictionary's and phrasebook's spelling. 50 words in the list (place names, plurals, joined forms) are not in the dictionary and remain unchecked.
-- **Fixed.** A stray "null" appeared in the tap panel for lines with no English.
-- **First-install size.** The privacy and Scan additions are in installed files: the first install is now 3.948 MiB, about 1.7 KB under the 3.95 MiB limit the tests enforce.
+### Things Tried And Not Kept
 
-## Open Items For John
+- A third reading pass on a grey (not black-and-white) picture when the first two were not confident: 156 of 168 lines against 158 without it on the set as it then was. Removed.
+- Accepting any two-letter difference for words of six letters or more: on the review rows it produced 3 wrong answers for 2 right ones. Replaced by the narrower look-alike rule.
 
-1. **Credentials and hosting.** Create a Google Cloud project with the Vision and Translation APIs, set a budget cap, deploy the service, then set `backendUrl`. If the service is on another origin, add that origin to `connect-src` in `_headers`.
-2. **Run `python3 eval.py --ocr vision --translate google`** once credentials exist, and record the numbers here.
-3. **Privacy page.** `#/privacy` now describes the camera service and says no address is set. When `backendUrl` is set, change that sentence ("No address is set in this build") and the short version at the top of the page.
-4. **Word list review.** The pointing and Latin spellings of the 87 entries were written for this project and have not been checked by a native speaker (`review` field in the file). The dictionary comparison above covers 59 words' pointing only.
-5. **Naming Google in the send notice.** The notice tells the learner the photo may be passed to Google Cloud. That is a disclosure of where the photo goes; say so if you would rather word it differently.
-6. **Sacred text.** A line with the four-letter name is left as photographed and listed as "Sacred text" with no Hebrew, English or audio. This is the strictest reading of the rule and is yours to relax.
-7. **Real photos.** Ten to twenty phone photos of real signs, with the correct text typed out, would turn the numbers above into something that can be quoted.
+## Word List
+
+155 entries. 51 take their vowel pointing and Latin spelling from the app dictionary (`checked: app-dictionary`; a unit test keeps them identical). The other 104 were written for this project and have not been checked by a native speaker. Of the first 87 entries, 59 words were compared with the dictionary earlier: 46 identical, 12 differ only because the sign uses a joined, command or "the" form, 1 was corrected.
+
+`realNeighbours` (374 words) is built by `tools/camera-translate/build_real_neighbours.py` from the dictionary and phrasebook: real words that sit one letter, or two look-alike letters, from a listed word. A unit test runs all 5,184 single dictionary words through the translator and requires that none is "corrected".
+
+## Checks That Ran (2026-11-10, Third Pass)
+
+- `node --test tests/camera.model.test.js`: 15 passed.
+- `node --test tests/camera.browser.test.js`: 4 passed, in headless Chromium with the `_headers` Content-Security-Policy on the page. Every test asserts no policy violations, no request other than GET, and no address contacted other than the app's own. One test saves the translated photo from a phone-style photo that carries camera details and a position, and checks the saved file carries none.
+- `python3 -m pytest tools/camera-translate/tests -q`: 20 passed.
+- `npm test` (the full unit tier): 3,325 passed, 0 failed, 10 skipped.
+
+## Not Done, Not Measured
+
+- No real photograph and no phone has been through this.
+- The Hebrew voice is the device's own; nothing was recorded for sign words, and playback was not verified by ear.
+- The 104 project-written word-list entries are unchecked.
+- Coverage of real-world signs by the word list is unknown.
+- The word-for-word tier draws dictionary glosses in reading order (a describing word is moved before its noun). It was exercised by tests on a handful of phrases only.
+
+## Examples
+
+`docs/photo/camera-examples/` holds three before and after pairs (optical store, bakery, exit) saved from the app's own path in headless Chromium. The files carry no metadata.

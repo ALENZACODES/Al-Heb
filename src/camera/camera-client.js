@@ -1,50 +1,24 @@
-// Camera translator: the two network calls. Both are same-origin or to the configured service only.
-import { normaliseResponse, decodeJpegDataUrl, resolveBackend } from './camera-model.js';
+// Camera translator: the only network requests it makes. All three fetch the app's own data files from the app's own
+// address. No photo, text or anything else of the learner's is sent anywhere: the Camera Translator has no server.
 
-/** Read data/camera/config.json. A missing or broken file means "not set up". */
-export async function loadConfig(fetchImpl = globalThis.fetch, pageHref = globalThis.location?.href) {
-  try {
-    const r = await fetchImpl(new URL('../../data/camera/config.json', import.meta.url));
-    if (!r.ok) return resolveBackend('', pageHref);
-    return resolveBackend((await r.json())?.backendUrl, pageHref);
-  } catch { return resolveBackend('', pageHref); }
-}
-
+/** The sign word list (about 25 KB). */
 export async function loadGlossaryData(fetchImpl = globalThis.fetch) {
   const r = await fetchImpl(new URL('../../data/camera/sign-glossary.json', import.meta.url));
   if (!r.ok) throw new Error('word list missing');
   return r.json();
 }
 
-/** The app's own dictionary index (about 0.9 MB, already used by the vocabulary pages). Fetched only when the learner asks for word-by-word help. */
+/** The app's own phrasebook entries (already installed with the app). An empty list if it cannot be read. */
+export async function loadPhrasebook(fetchImpl = globalThis.fetch) {
+  try {
+    const r = await fetchImpl(new URL('../../data/corpus/phrasebook.json', import.meta.url));
+    return r.ok ? ((await r.json())?.entries || []) : [];
+  } catch { return []; }
+}
+
+/** The app's own dictionary index (about 0.9 MB, already used by the vocabulary pages). Fetched only when a line needs it or the learner asks for word-by-word help. */
 export async function loadDictionaryIndex(fetchImpl = globalThis.fetch) {
   const r = await fetchImpl(new URL('../../data/vocab/index.json', import.meta.url));
   if (!r.ok) throw new Error('dictionary missing');
   return r.json();
-}
-
-export class ServiceError extends Error {
-  /** @param {'blocked'|'offline'|'busy'|'rejected'|'failed'} kind */
-  constructor(kind, message) { super(message); this.kind = kind; }
-}
-
-/**
- * Send one metadata-free JPEG to the service and return its tidied answer plus the translated picture as a Blob.
- * @param {string} baseUrl from resolveBackend
- * @param {Blob} photo
- */
-export async function translateViaService(baseUrl, photo, fetchImpl = globalThis.fetch) {
-  let res;
-  try {
-    res = await fetchImpl(`${baseUrl}/translate-image`, { method: 'POST', headers: { 'Content-Type': 'image/jpeg' }, body: photo,
-      credentials: 'omit', cache: 'no-store', referrerPolicy: 'no-referrer' });
-  } catch { throw new ServiceError('offline', 'The translation service could not be reached.'); }
-  if (res.status === 429) throw new ServiceError('busy', 'Too many photos in a short time. Please wait a minute and try again.');
-  if (res.status === 413 || res.status === 415 || res.status === 400) throw new ServiceError('rejected', 'The service could not accept this photo. Try a smaller or clearer one.');
-  if (!res.ok) throw new ServiceError('failed', 'The translation service is not available right now.');
-  let json; try { json = await res.json(); } catch { throw new ServiceError('failed', 'The translation service sent an answer that could not be read.'); }
-  const tidy = normaliseResponse(json);
-  const bytes = tidy.image ? decodeJpegDataUrl(tidy.image) : null;
-  return { width: tidy.width, height: tidy.height, regions: tidy.regions, notices: tidy.notices,
-    blob: bytes && tidy.regions.some((r) => r.drawn) ? new Blob([bytes], { type: 'image/jpeg' }) : null };
 }

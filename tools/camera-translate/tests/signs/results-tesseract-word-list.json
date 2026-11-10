@@ -6,12 +6,12 @@
   "lines": 28,
   "ocr": "Tesseract heb (on this server, no cloud)",
   "translate": "built-in sign word list",
-  "cerPooled": 0.0291,
-  "cerMeanPerImage": 0.0249,
-  "imagesReadPerfectly": 16,
-  "linesReadExactly": 23,
-  "linesTranslatedEndToEnd": 24,
-  "linesTranslatedGivenCorrectText": 26
+  "cerPooled": 0.0386,
+  "cerMeanPerImage": 0.0392,
+  "imagesReadPerfectly": 15,
+  "linesReadExactly": 22,
+  "linesTranslatedEndToEnd": 26,
+  "linesTranslatedGivenCorrectText": 27
  },
  "rows": [
   {
@@ -120,19 +120,19 @@
    ]
   },
   {
-   "id": "bookshop",
+   "id": "shoe-shop",
    "variant": "clean",
    "cer": 0.0,
    "read": [
-    "חנות ספרים"
+    "חנות נעליים"
    ],
    "english": [
     null
    ],
    "lines": [
     {
-     "he": "חנות ספרים",
-     "expected": "Bookshop",
+     "he": "חנות נעליים",
+     "expected": "Shoe Shop",
      "readExactly": true,
      "translatedEndToEnd": false,
      "translatedGivenCorrectText": false,
@@ -141,23 +141,23 @@
    ]
   },
   {
-   "id": "petrol-station",
+   "id": "new-price",
    "variant": "clean",
-   "cer": 0.0,
+   "cer": 0.2857,
    "read": [
-    "תחנת דלק"
+    "מחיר חדששו"
    ],
    "english": [
     null
    ],
    "lines": [
     {
-     "he": "תחנת דלק",
-     "expected": "Petrol Station",
-     "readExactly": true,
+     "he": "מחיר חדש",
+     "expected": "New Price",
+     "readExactly": false,
      "translatedEndToEnd": false,
-     "translatedGivenCorrectText": false,
-     "translationGivenCorrectText": null
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "New Price"
     }
    ]
   },
@@ -253,14 +253,14 @@
     "ביבר דיזנגוף"
    ],
    "english": [
-    null
+    "Dizengoff Square"
    ],
    "lines": [
     {
      "he": "כיכר דיזנגוף",
      "expected": "Dizengoff Square",
      "readExactly": false,
-     "translatedEndToEnd": false,
+     "translatedEndToEnd": true,
      "translatedGivenCorrectText": true,
      "translationGivenCorrectText": "Dizengoff Square"
     }
@@ -440,7 +440,7 @@
     "ברובים הבאים"
    ],
    "english": [
-    null,
+    "Kosher Restaurant",
     "Welcome"
    ],
    "lines": [
@@ -448,7 +448,7 @@
      "he": "מסעדה כשרה",
      "expected": "Kosher Restaurant",
      "readExactly": false,
-     "translatedEndToEnd": false,
+     "translatedEndToEnd": true,
      "translatedGivenCorrectText": true,
      "translationGivenCorrectText": "Kosher Restaurant"
     },

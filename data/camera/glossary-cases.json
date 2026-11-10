@@ -57,7 +57,7 @@
    "status": "full"
   },
   {
-   "he": "חנות ספרים",
+   "he": "חנות נעליים",
    "en": null,
    "status": "none"
   },
@@ -83,9 +83,9 @@
   },
   {
    "he": "מסעדה בשרה",
-   "en": null,
-   "status": "none",
-   "why": "two listed words are one letter away, so no guess is made"
+   "en": "Kosher Restaurant",
+   "status": "near",
+   "why": "two listed words are one letter away; only one of them forms a listed phrase with the word beside it"
   },
   {
    "he": "בשר",
@@ -96,6 +96,140 @@
    "he": "אבג",
    "en": null,
    "status": "none"
+  },
+  {
+   "he": "בשרה",
+   "en": null,
+   "status": "none",
+   "why": "two listed words are one letter away and nothing beside it decides"
+  },
+  {
+   "he": "חנות ספרים",
+   "en": "Bookshop",
+   "status": "full"
+  },
+  {
+   "he": "חנויות אופטיקה",
+   "en": "Optical Store",
+   "status": "near",
+   "why": "listed other form (plural)"
+  },
+  {
+   "he": "ספריה",
+   "en": "Library",
+   "status": "full",
+   "why": "listed spelling"
+  },
+  {
+   "he": "השירותים",
+   "en": "Restrooms",
+   "status": "full",
+   "why": "\"the\" joined to a listed word"
+  },
+  {
+   "he": "Bus Stop / תחנת אוטובוס Bus Stop / תחנת אוטובוס",
+   "en": "Bus Stop",
+   "status": "full",
+   "why": "bilingual line read twice"
+  },
+  {
+   "he": "פתוח 24 שעות Open 24 Hours",
+   "en": "Open 24 Hours",
+   "status": "full"
+  },
+  {
+   "he": "Menu / הפריט",
+   "en": "Menu",
+   "status": "near"
+  },
+  {
+   "he": "OPEN 24",
+   "en": null,
+   "status": "none",
+   "why": "no Hebrew on the line"
+  },
+  {
+   "he": "12",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "יהורות",
+   "en": null,
+   "status": "none",
+   "why": "two letters away from a listed word: never guessed"
+  },
+  {
+   "he": "מסעדה בְּשֵׁרָה",
+   "en": "Kosher Restaurant",
+   "status": "near"
+  },
+  {
+   "he": "טופרמרקט",
+   "en": "Supermarket",
+   "status": "near"
+  },
+  {
+   "he": "בית קפה",
+   "en": "Coffee Shop",
+   "status": "full"
+  },
+  {
+   "he": "איפה",
+   "en": null,
+   "status": "none",
+   "why": "a real word one letter from a listed place name: never corrected"
+  },
+  {
+   "he": "אזור לעשן",
+   "en": "No Smoking",
+   "status": "near",
+   "why": "a real word, but the corrected word forms a listed phrase with the next word"
+  },
+  {
+   "he": "אזור",
+   "en": null,
+   "status": "none"
+  },
+  {
+   "he": "ביבר דיזנגוף",
+   "en": "Dizengoff Square",
+   "status": "near",
+   "why": "two letters different, both the look-alike pair bet/kaf"
+  },
+  {
+   "he": "קפה 2ו",
+   "en": "Coffee 12",
+   "status": "near",
+   "why": "the digit 1 read as the letter vav"
+  },
+  {
+   "he": "מזדגות",
+   "en": null,
+   "status": "none",
+   "why": "two letters different but not both look-alike pairs"
+  },
+  {
+   "he": "מחיר חדש",
+   "en": "New Price",
+   "status": "full",
+   "why": "a describing word follows its noun in Hebrew and comes before it in English"
+  },
+  {
+   "he": "קפה חם",
+   "en": "Hot Coffee",
+   "status": "full"
+  },
+  {
+   "he": "פתוח היום",
+   "en": "Open Today",
+   "status": "full",
+   "why": "no swap when the describing word comes first"
+  },
+  {
+   "he": "קפה חם 12",
+   "en": "Hot Coffee 12",
+   "status": "full"
   }
  ]
 }

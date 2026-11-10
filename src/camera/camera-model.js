@@ -3,32 +3,10 @@
 // are held to the same cases (data/camera/glossary-cases.json).
 import { stripMarks, isHebrew } from '../photo/hebrew.js';
 import { orderLines } from '../photo/order-lines.js';
-import { findName, hasLatinName } from '../shell/names.js';
+import { findName } from '../shell/names.js';
 
 export const HELD_NOTE = 'Sacred text. It is left exactly as written.';
-export const MAX_UPLOAD_SIDE = 2000;
-
-// ---------------------------------------------------------------- service address
-
-/**
- * Decide what the configured service address means for this page.
- * @param {unknown} raw value of backendUrl in data/camera/config.json
- * @param {string} pageHref location.href
- * @returns {{mode:'none'|'same-origin'|'loopback'|'remote'|'invalid', url:string|null, origin:string|null}}
- */
-export function resolveBackend(raw, pageHref) {
-  const v = typeof raw === 'string' ? raw.trim() : '';
-  if (!v) return { mode: 'none', url: null, origin: null };
-  let u;
-  try { u = new URL(v, pageHref); } catch { return { mode: 'invalid', url: null, origin: null }; }
-  if (u.protocol !== 'https:' && u.protocol !== 'http:') return { mode: 'invalid', url: null, origin: null };
-  const url = u.href.replace(/\/+$/, '');
-  let page; try { page = new URL(pageHref); } catch { page = null; }
-  if (page && u.origin === page.origin) return { mode: 'same-origin', url, origin: u.origin };
-  if (['localhost', '127.0.0.1', '[::1]'].includes(u.hostname)) return { mode: 'loopback', url, origin: u.origin };
-  if (u.protocol !== 'https:') return { mode: 'invalid', url: null, origin: null }; // a photo is never sent over plain http
-  return { mode: 'remote', url, origin: u.origin };
-}
+export const MAX_PHOTO_SIDE = 2000;
 
 // ---------------------------------------------------------------- sacred-name guard
 
@@ -56,59 +34,145 @@ export function tokens(text) {
   return out;
 }
 
-function oneEditApart(a, b) {
-  if (a === b || Math.abs(a.length - b.length) > 1) return false;
-  if (a.length === b.length) { let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++; return d === 1; }
+/** Number of differing letters when a and b have the same length, else Infinity. */
+function substitutions(a, b) {
+  if (a.length !== b.length) return Infinity;
+  let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++;
+  return d;
+}
+/** Letter pairs the reader mixes up because they look alike in print. */
+export const LOOK_ALIKE = Object.freeze(['בכ', 'דר', 'הח', 'חת', 'הת', 'וז', 'וי', 'ון', 'סם', 'סט', 'גנ']);
+const ALIKE = new Set(LOOK_ALIKE.flatMap((p) => [p, p[1] + p[0]]));
+/** True when a and b have the same length and differ in exactly two letters, both of them look-alike pairs. */
+export function twoLookAlikes(a, b) {
+  if (a.length !== b.length) return false;
+  let d = 0;
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) { if (!ALIKE.has(a[i] + b[i])) return false; d++; }
+  return d === 2;
+}
+/** "2ו" -> "12": a price whose digit 1 or 0 was read as a look-alike Hebrew letter (the mixed token comes out reversed). Null if not that. */
+export function repairNumber(tok) {
+  if (!/[0-9]/.test(tok) || !/^[0-9וןס.,:]+$/.test(tok) || /^[0-9.,:]+$/.test(tok)) return null;
+  const fixed = [...tok].reverse().join('').replace(/[ון]/g, '1').replace(/ס/g, '0');
+  return NUM_RE.test(fixed) ? fixed : null;
+}
+/** True when b is a with exactly one letter added or removed. */
+function oneLetterAddedOrRemoved(a, b) {
+  if (Math.abs(a.length - b.length) !== 1) return false;
   const [s, l] = a.length < b.length ? [a, b] : [b, a];
   for (let i = 0; i < l.length; i++) if (l.slice(0, i) + l.slice(i + 1) === s) return true;
   return false;
 }
 
+/** English glosses in English order: a describing word that follows its noun in Hebrew ("price new") goes before it. */
+function englishOrder(segs) {
+  const en = segs.map((s) => s.en);
+  for (let i = 0; i + 1 < segs.length; i++) if (segs[i].kind === 'word' && !segs[i].describes && segs[i + 1].describes) { [en[i], en[i + 1]] = [en[i + 1], en[i]]; i++; }
+  return en;
+}
+
 /**
- * @param {{entries:Array<{he:string,en:string,pointed?:string,translit?:string}>, patterns?:Array<{head:string,en:string}>}} data
- * @returns {{translate:(text:string)=>{en:string|null,status:'full'|'near'|'none',translit:string|null,pointed:string|null}}}
+ * Hebrew part of a line, as tokens. On a bilingual sign the reader returns both languages on one line; the English is
+ * already English, so Latin words (and a number that follows one) are dropped. A line that repeats itself is halved.
+ * Returns [] when the line has no Hebrew word at all.
  */
-export function createGlossary(data) {
+export function hebrewTokens(text) {
+  const all = tokens(text);
+  if (!all.some((t) => isHebrew(t))) return [];
+  const out = []; let inLatin = false;
+  for (const t of all) {
+    if (LATIN_RE.test(t)) { inLatin = true; continue; }
+    if (NUM_RE.test(t)) { if (!inLatin) out.push(t); continue; }
+    inLatin = false; out.push(t);
+  }
+  const half = out.length / 2;
+  if (out.length >= 2 && out.length % 2 === 0 && out.slice(0, half).join(' ') === out.slice(half).join(' ')) return out.slice(0, half);
+  return out;
+}
+
+/**
+ * @param {{entries:Array<{he:string,en:string,pointed?:string,translit?:string}>, patterns?:Array<{head:string,en:string}>, variants?:Array<{he:string,of:string,exact?:boolean}>}} data
+ * @param {{phrasebook?:Array<{he:string,en:string,translit?:string}>}} [extra] the app's own phrasebook: whole-line matches only;
+ *   its words also count as real words, which are never treated as a misreading of a listed word
+ * @returns {{translate:(text:string)=>{en:string|null,status:'full'|'near'|'none',translit:string|null,pointed:string|null,from?:string}}}
+ *
+ * Near matches (always marked 'near', never 'full'), for a word of four or more letters that is not listed:
+ *   1. a listed other form of a listed word (data.variants, for example a plural);
+ *   2. exactly one listed word with one letter different (readers confuse look-alike letters far more often than they add or drop one);
+ *   3. failing that, exactly one listed word with one letter added or removed;
+ *   4. failing that, exactly one listed word with two letters different where BOTH are look-alike pairs (LOOK_ALIKE).
+ * Two candidates at the same step means no guess is made, unless exactly one of them forms a listed phrase with the word
+ * beside it. Any other two-letter difference is never accepted: on the round 1 review rows a general two-letter rule
+ * produced more wrong answers than right ones.
+ */
+export function createGlossary(data, { phrasebook = [] } = {}) {
   const entries = new Map();
   for (const e of data?.entries || []) entries.set(tokens(e.he).join(' '), e);
   const maxLen = Math.max(1, ...[...entries.keys()].map((k) => k.split(' ').length));
   const patterns = new Map((data?.patterns || []).map((p) => [p.head, p.en]));
   const vocab = [...new Set([...entries.keys()].flatMap((k) => k.split(' ')))].sort();
   const vocabSet = new Set(vocab);
-  const near = (tok) => {
+  const variants = new Map((data?.variants || []).map((v) => [v.he, v]));
+  const phrases = new Map();
+  // Real words that sit one letter from a listed word (built by tools/camera-translate/build_real_neighbours.py from the app
+  // dictionary and phrasebook), plus the phrasebook's own words. A real word is "corrected" into a listed one only when the
+  // result forms a listed phrase with the word beside it.
+  const realWords = new Set(data?.realNeighbours || []);
+  for (const e of phrasebook || []) {
+    const ts = tokens(e.he); const key = ts.join(' '); const en = String(e.en ?? '').split(' / ')[0].trim();
+    for (const t of ts) realWords.add(t);
+    if (key && en && !entries.has(key) && !phrases.has(key) && !containsSacredName(e.he)) phrases.set(key, { he: e.he, en: en[0].toUpperCase() + en.slice(1), translit: e.translit || null });
+  }
+  const phraseWith = (cand, prev, next) => (prev && entries.has(`${prev} ${cand}`)) || (next && entries.has(`${cand} ${next}`));
+  const near = (tok, prev, next) => {
     if ([...tok].length < 4) return null;
-    const hits = vocab.filter((v) => v.length >= 3 && oneEditApart(tok, v));
-    return hits.length === 1 ? hits[0] : null;
+    const real = realWords.has(tok);
+    const pool = vocab.filter((v) => v.length >= 3);
+    for (const hits of [pool.filter((v) => substitutions(tok, v) === 1), pool.filter((v) => oneLetterAddedOrRemoved(tok, v)), pool.filter((v) => twoLookAlikes(tok, v))]) {
+      const fit = hits.filter((h) => phraseWith(h, prev, next));
+      if (real) { if (fit.length === 1) return fit[0]; continue; }
+      if (hits.length === 1) return hits[0];
+      if (hits.length > 1) return fit.length === 1 ? fit[0] : null;
+    }
+    return null;
   };
   function translate(text) {
     const none = { en: null, status: 'none', translit: null, pointed: null };
-    let toks = tokens(text);
+    let toks = hebrewTokens(text);
     if (!toks.length) return none;
+    const whole = phrases.get(toks.join(' '));
+    const asPhrase = whole ? { en: whole.en, status: 'full', translit: whole.translit, pointed: whole.he, from: 'phrasebook' } : null;
     let usedNear = false;
-    toks = toks.map((t) => {
-      if (vocabSet.has(t) || NUM_RE.test(t) || LATIN_RE.test(t)) return t;
-      const n = near(t); if (n) usedNear = true; return n || t;
+    const raw = toks;
+    toks = raw.map((t, i) => {
+      if (vocabSet.has(t) || NUM_RE.test(t)) return t;
+      const fixedNumber = repairNumber(t); if (fixedNumber) { usedNear = true; return fixedNumber; }
+      if (t.length > 3 && t[0] === 'ה' && vocabSet.has(t.slice(1))) return t.slice(1);   // "the" joined to a listed word
+      const v = variants.get(t); if (v && vocabSet.has(v.of)) { if (!v.exact) usedNear = true; return v.of; }
+      const n = near(t, raw[i - 1], raw[i + 1]); if (n) usedNear = true; return n || t;
     });
     const segs = [];
     for (let i = 0; i < toks.length;) {
-      if (NUM_RE.test(toks[i]) || LATIN_RE.test(toks[i])) { segs.push({ he: toks[i], en: toks[i], pointed: null, translit: toks[i], kind: 'literal' }); i++; continue; }
+      if (NUM_RE.test(toks[i])) { segs.push({ he: toks[i], en: toks[i], pointed: null, translit: toks[i], kind: 'literal' }); i++; continue; }
       let hit = null; let n = Math.min(maxLen, toks.length - i);
       for (; n > 0; n--) { hit = entries.get(toks.slice(i, i + n).join(' ')); if (hit) break; }
-      if (!hit) return none;
-      segs.push({ he: hit.he, en: hit.en, pointed: hit.pointed || null, translit: hit.translit || null, kind: 'word' });
+      if (!hit) return asPhrase || none;
+      segs.push({ he: hit.he, en: hit.en, pointed: hit.pointed || null, translit: hit.translit || null, kind: 'word', describes: !!hit.describes });
       i += n;
     }
+    if (!segs.some((x) => x.kind === 'word')) return none;
+    if (usedNear && asPhrase) return asPhrase;   // an exact phrasebook line beats a guess
     const words = segs.filter((s) => s.kind === 'word');
     const head = segs[0].he;
     const en = patterns.has(head) && words.length >= 2
       ? patterns.get(head).replace('{x}', segs.slice(1).map((s) => s.en).join(' '))
-      : segs.map((s) => s.en).join(' ');
+      : englishOrder(segs).join(' ');
     return { en, status: usedNear ? 'near' : 'full',
       translit: segs.filter((s) => s.translit).map((s) => s.translit).join(' '),
       pointed: segs.map((s) => s.pointed || s.he).join(' ') };
   }
   /** One listed word (single-word entries only), or null. */
-  const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null } : null; };
+  const entry = (tok) => { const e = entries.get(tok); return e ? { he: e.he, en: e.en, pointed: e.pointed || null, translit: e.translit || null, describes: !!e.describes } : null; };
   /** Longest listed phrase starting at toks[i]: {n, entry} or null. */
   const longest = (toks, i) => {
     for (let n = Math.min(maxLen, toks.length - i); n > 0; n--) { const e = entry(toks.slice(i, i + n).join(' ')); if (e) return { n, entry: e }; }
@@ -133,13 +197,13 @@ export function createDictionary(index) {
   if (iHe >= 0 && iKey >= 0 && iEn >= 0) {
     for (const r of index.rows || []) {
       const key = String(r[iKey] ?? '').trim(); if (!key || key.includes(' ')) continue;
-      const list = by.get(key) || []; list.push({ he: r[iHe], en: String(r[iEn] ?? '').slice(0, 80), translit: iTr >= 0 ? r[iTr] || null : null, rank: Number.isFinite(r[iRank]) ? r[iRank] : Infinity, verb: iPos >= 0 && r[iPos] === 'verb' });
+      const list = by.get(key) || []; list.push({ he: r[iHe], en: String(r[iEn] ?? '').slice(0, 80), translit: iTr >= 0 ? r[iTr] || null : null, rank: Number.isFinite(r[iRank]) ? r[iRank] : Infinity, verb: iPos >= 0 && r[iPos] === 'verb', pos: iPos >= 0 ? r[iPos] : null });
       by.set(key, list);
     }
     // Signs and menus name things: nouns and describing words come before verbs, then the more frequent word first.
     for (const list of by.values()) list.sort((a, b) => (a.verb - b.verb) || (a.rank - b.rank));
   }
-  const senses = (key) => (by.get(key) || []).slice(0, 3).map(({ he, en, translit }) => ({ he, en, translit }));
+  const senses = (key) => (by.get(key) || []).slice(0, 3).map(({ he, en, translit, pos }) => ({ he, en, translit, pos }));
   return { size: by.size, senses };
 }
 
@@ -156,7 +220,7 @@ export function wordBreakdown(he, glossary, dictionary) {
     const word = toks[i];
     if (NUM_RE.test(word) || LATIN_RE.test(word)) { out.push({ word, kind: 'number', senses: [] }); i++; continue; }
     const listed = glossary?.longest?.(toks, i);          // a listed phrase ("kosher restaurant") stays together
-    if (listed) { out.push({ word: toks.slice(i, i + listed.n).join(' '), kind: 'sign-list', senses: [{ he: listed.entry.pointed || listed.entry.he, en: listed.entry.en, translit: listed.entry.translit }] }); i += listed.n; continue; }
+    if (listed) { out.push({ word: toks.slice(i, i + listed.n).join(' '), kind: 'sign-list', senses: [{ he: listed.entry.pointed || listed.entry.he, en: listed.entry.en, translit: listed.entry.translit, pos: listed.entry.describes ? 'adj' : 'noun' }] }); i += listed.n; continue; }
     i++;
     const exact = dictionary?.senses(word) || [];
     if (exact.length) { out.push({ word, kind: 'dictionary', senses: exact }); continue; }
@@ -191,7 +255,7 @@ export function regionsFromBoxes(boxes, glossary) {
     const t = held ? { en: null, status: 'none', translit: null, pointed: null } : glossary.translate(line.text);
     if (!held && !t.en && tokens(line.text).join('').length < 2) continue; // a lone letter is almost always noise
     out.push(makeRegion({ id: `r${out.length + 1}`, box: line.bbox, he: line.text, held, en: t.en,
-      translationSource: t.en ? (t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
+      translationSource: t.en ? (t.from === 'phrasebook' ? 'phrasebook' : t.status === 'near' ? 'word-list-near' : 'word-list') : null, translit: t.translit, pointed: t.pointed }));
   }
   return out;
 }
@@ -202,40 +266,6 @@ function makeRegion(r) {
     translit: r.translit || null, pointed: r.pointed || null, drawn: !!r.drawn };
 }
 
-const num = (v) => (Number.isFinite(+v) ? +v : 0);
-const str = (v, max = 400) => (typeof v === 'string' ? v.slice(0, max) : null);
-
-/**
- * Check and tidy a service answer before anything is shown. Unknown fields are dropped, boxes are clamped to the picture,
- * and the sacred-name rule is applied again on this side whatever the service did.
- * @returns {{width:number,height:number,regions:object[],image:string|null,notices:string[]}}
- */
-export function normaliseResponse(json) {
-  const width = Math.max(1, Math.round(num(json?.width))); const height = Math.max(1, Math.round(num(json?.height)));
-  const regions = [];
-  for (const r of Array.isArray(json?.regions) ? json.regions.slice(0, 200) : []) {
-    const x = Math.min(Math.max(0, num(r?.box?.x)), width); const y = Math.min(Math.max(0, num(r?.box?.y)), height);
-    const w = Math.min(Math.max(1, num(r?.box?.w)), width - x || 1); const h = Math.min(Math.max(1, num(r?.box?.h)), height - y || 1);
-    const he = str(r?.he); const en = str(r?.en);
-    const held = !!r?.held || (he ? containsSacredName(he) : false) || (en ? hasLatinName(en) : false);
-    const src = ['machine', 'word-list', 'word-list-near'].includes(r?.translationSource) ? r.translationSource : (en ? 'machine' : null);
-    regions.push(makeRegion({ id: `r${regions.length + 1}`, box: { x, y, w, h }, he, en, held, translationSource: src,
-      translit: str(r?.translit), pointed: str(r?.pointed), drawn: !!r?.drawn }));
-  }
-  const image = typeof json?.image === 'string' && /^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(json.image) ? json.image : null;
-  const notices = (Array.isArray(json?.notices) ? json.notices : []).map((n) => str(n, 300)).filter(Boolean).slice(0, 5);
-  return { width, height, regions, image, notices };
-}
-
-/** data:image/jpeg;base64,... -> Uint8Array (null if it is anything else). */
-export function decodeJpegDataUrl(dataUrl) {
-  const m = /^data:image\/jpeg;base64,([A-Za-z0-9+/=]+)$/.exec(String(dataUrl ?? ''));
-  if (!m) return null;
-  const bin = atob(m[1]); const out = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
-  return out;
-}
-
 /** Box in picture pixels -> CSS percentages for a tap target laid over the picture. */
 export function percentBox(box, width, height) {
   const pc = (v, total) => `${Math.round((v / total) * 10000) / 100}%`;
@@ -244,10 +274,92 @@ export function percentBox(box, width, height) {
 
 /** Human label for where a translation came from. */
 export function sourceLabel(src) {
-  if (src === 'machine') return 'Machine translation. It can be wrong.';
-  if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
   if (src === 'word-list') return 'From the built-in word list.';
+  if (src === 'word-list-near') return 'Closest match in the built-in word list. A letter may have been misread, so check it.';
+  if (src === 'phrasebook') return 'From the Aleph phrasebook.';
+  if (src === 'word-for-word') return 'Word for word from the Aleph dictionary. The word order and the exact meaning can be off.';
   return '';
+}
+
+/** Dictionary gloss -> a short label fit to draw on a sign: first meaning only, no brackets, no leading "a" or "to", Title Case. */
+export function shortGloss(en) {
+  let g = String(en ?? '').replace(/\([^)]*\)/g, ' ').split(/[;,]/)[0].replace(/\s+/g, ' ').trim();
+  g = g.replace(/^(?:an?|the|to)\s+/i, '');
+  if (!g || g.length > 28 || !/^[A-Za-z][A-Za-z '\-]*$/.test(g)) return null;
+  return g.split(' ').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
+}
+
+/**
+ * Last resort for a line the word list and phrasebook cannot translate: every word looked up as written in the sign list or
+ * the app dictionary, glosses joined in the order read. Returns null unless EVERY word is found exactly (no prefix, plural or
+ * joined-form guesses are drawn on a photo). Always labelled word-for-word.
+ */
+export function wordForWord(he, glossary, dictionary) {
+  const words = wordBreakdown(he, glossary, dictionary);
+  if (!words.some((w) => w.kind !== 'number')) return null;
+  const parts = [];
+  for (const w of words) {
+    if (w.kind === 'number') { parts.push({ en: w.word, he: w.word, translit: w.word }); continue; }
+    if (w.kind !== 'sign-list' && w.kind !== 'dictionary') return null;
+    const en = w.kind === 'sign-list' ? w.senses[0].en : shortGloss(w.senses[0].en);
+    if (!en) return null;
+    parts.push({ en, he: w.senses[0].he, translit: w.senses[0].translit, pos: w.senses[0].pos || null });
+  }
+  // Hebrew puts a describing word after its noun ("price new"); English puts it before. Only the English order changes.
+  const english = parts.map((x) => x.en);
+  for (let i = 0; i + 1 < parts.length; i++) if (parts[i].pos === 'noun' && parts[i + 1].pos === 'adj') { [english[i], english[i + 1]] = [english[i + 1], english[i]]; i++; }
+  return { en: english.join(' '), pointed: parts.map((x) => x.he).join(' '),
+    translit: parts.every((x) => x.translit) ? parts.map((x) => x.translit).join(' ') : null };
+}
+
+// ---------------------------------------------------------------- reading preparation (pure pixel work)
+
+/** Otsu threshold of a 256-bin histogram. */
+export function otsuThreshold(hist, total) {
+  let sum = 0; for (let t = 0; t < 256; t++) sum += t * hist[t];
+  let sB = 0; let wB = 0; let best = -1; let thr = 127;
+  for (let t = 0; t < 256; t++) {
+    wB += hist[t]; if (!wB) continue; const wF = total - wB; if (!wF) break;
+    sB += t * hist[t]; const mB = sB / wB; const mF = (sum - sB) / wF; const v = wB * wF * (mB - mF) * (mB - mF);
+    if (v > best) { best = v; thr = t; }
+  }
+  return thr;
+}
+
+/**
+ * Make a sign easy for the reader, in place: grey, then black letters on white whatever the sign's colours were
+ * (white-on-blue street signs are flipped). `mode` 'binary' also thresholds; 'grey' keeps the grey levels.
+ * @returns {{inverted:boolean, threshold:number}}
+ */
+export function readerImage(img, mode = 'binary') {
+  const { data, width: w, height: h } = img; const n = w * h;
+  const grey = new Uint8Array(n); const hist = new Uint32Array(256);
+  for (let i = 0, p = 0; i < n; i++, p += 4) { const v = (0.299 * data[p] + 0.587 * data[p + 1] + 0.114 * data[p + 2]) | 0; grey[i] = v; hist[v]++; }
+  const threshold = otsuThreshold(hist, n);
+  let dark = 0; let count = 0;      // is the frame's edge mostly dark? then the letters are the light part
+  const edge = (i) => { count++; if (grey[i] <= threshold) dark++; };
+  for (let x = 0; x < w; x++) { edge(x); edge((h - 1) * w + x); }
+  for (let y = 0; y < h; y++) { edge(y * w); edge(y * w + w - 1); }
+  const inverted = dark > count / 2;
+  for (let i = 0, p = 0; i < n; i++, p += 4) {
+    let v = inverted ? 255 - grey[i] : grey[i];
+    if (mode === 'binary') v = (inverted ? grey[i] > threshold : grey[i] <= threshold) ? 0 : 255;
+    data[p] = data[p + 1] = data[p + 2] = v; data[p + 3] = 255;
+  }
+  return { inverted, threshold };
+}
+
+/**
+ * A box found on the levelled photo -> the same box on the photo as taken (centre turned back, size kept).
+ * `angle` is what deskew() in src/photo/preprocess.js reported (the levelled photo is the original turned by -angle).
+ */
+export function boxOnOriginal(box, width, height, angle) {
+  if (!angle) return { ...box };
+  const a = (-angle * Math.PI) / 180; const cos = Math.cos(a); const sin = Math.sin(a);
+  const dx = box.x + box.w / 2 - width / 2; const dy = box.y + box.h / 2 - height / 2;
+  const cx = dx * cos + dy * sin + width / 2; const cy = -dx * sin + dy * cos + height / 2;
+  const x = Math.min(Math.max(0, cx - box.w / 2), Math.max(0, width - box.w)); const y = Math.min(Math.max(0, cy - box.h / 2), Math.max(0, height - box.h));
+  return { x, y, w: box.w, h: box.h };
 }
 
 // ---------------------------------------------------------------- drawing layout (used by the on-device overlay)

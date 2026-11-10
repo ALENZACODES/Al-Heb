@@ -19,11 +19,15 @@ export function mountTopBar(R, g = globalThis) {
   const live = h('p', { class: 'visually-hidden ret-live', role: 'status', 'aria-live': 'polite' });
   const bar = h('div', { class: 'ret-bar alef-retention', role: 'group', 'aria-label': 'Your streak, gems and hearts' });
   header.append(bar, live);
+  let sig = '';
   const draw = () => {
     try {
-      if (R.calm()) { bar.hidden = true; return; }
+      if (R.calm() || !R.revealed()) { bar.hidden = true; sig = ''; return; }
       bar.hidden = false;
       const rec = R.get(), st = R.status(), kids = [];
+      const next = [st.count, st.activeToday, rec.gems.balance, rec.hearts.n, R.streakShown(), R.heartsShown(), R.leagueShown()].join('|');
+      if (next === sig) return; // nothing changed: leave the chips (and any focus on them) alone
+      sig = next;
       if (R.streakShown()) kids.push(h('a', { class: `ret-chip ret-flame${st.activeToday ? ' is-lit' : ''}`, href: '#/shop', 'aria-label': `${st.count}-day streak${st.activeToday ? ', done today' : ''}. Open the shop.` },
         h('span', { class: 'ret-ico ret-ico-flame', 'aria-hidden': 'true' }), h('span', { class: 'ret-num' }, String(st.count))));
       kids.push(h('a', { class: 'ret-chip ret-gems', href: '#/shop', 'aria-label': `${gemsText(rec.gems.balance)}. Open the shop.` },
@@ -42,15 +46,20 @@ export function mountTopBar(R, g = globalThis) {
 // ---------- daily-goal ring (Home) ----------
 export function goalRingNode(R) {
   const wrap = h('section', { class: 'card ret-goal alef-retention', 'aria-labelledby': 'ret-goal-h' });
+  let sig = '';
   const draw = () => {
     const rec = R.get(), p = goalProgress(rec), st = R.status();
+    const next = JSON.stringify([p, st, rec.freezes, rec.gems.balance, R.streakShown(), R.weekDots().map((d) => d.state)]);
+    if (next === sig) return; // unchanged: keep the open goal picker and the focus where they are
+    sig = next;
+    const wasOpen = wrap.querySelector('.ret-goal-pick')?.open === true, focusGoal = wrap.contains(document.activeElement) ? document.activeElement.getAttribute('data-goal') : null;
     const ring = svg('svg', { class: 'ret-ring', viewBox: '0 0 64 64', width: 72, height: 72, 'aria-hidden': 'true', focusable: 'false' });
     ring.append(svg('circle', { class: 'ret-ring-track', cx: 32, cy: 32, r: RING_R }), svg('circle', { class: `ret-ring-fill${p.done ? ' is-done' : ''}`, cx: 32, cy: 32, r: RING_R, 'stroke-dasharray': RING_C.toFixed(1), 'stroke-dashoffset': (RING_C * (1 - p.fraction)).toFixed(1), transform: 'rotate(-90 32 32)' }));
-    const picker = h('details', { class: 'ret-goal-pick' }, h('summary', {}, 'Change daily goal'),
-      h('div', { class: 'row', role: 'group', 'aria-label': 'Daily goal' }, ...GOALS.map((gl) => h('button', { type: 'button', class: 'btn secondary', 'aria-pressed': String(rec.goal === gl.xp), onclick: () => { R.update((r) => setGoal(r, gl.xp)); R.say(`Daily goal set to ${gl.xp} XP.`); } }, `${gl.label} · ${gl.xp} XP`))));
+    const picker = h('details', { class: 'ret-goal-pick' }, h('summary', {}, 'Change XP goal'),
+      h('div', { class: 'row', role: 'group', 'aria-label': 'Daily XP goal' }, ...GOALS.map((gl) => h('button', { type: 'button', class: 'btn secondary', 'data-goal': gl.xp, 'aria-pressed': String(rec.goal === gl.xp), onclick: () => { R.update((r) => setGoal(r, gl.xp)); R.say(`Daily goal set to ${gl.xp} XP.`); } }, `${gl.label} · ${gl.xp} XP`))));
     wrap.replaceChildren(
       h('div', { class: 'ret-goal-row' }, ring,
-        h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily Goal'),
+        h('div', {}, h('h2', { id: 'ret-goal-h' }, 'Daily XP Goal'),
           h('p', { class: 'ret-goal-text' }, p.done ? `Goal reached: ${p.xp} of ${p.goal} XP today.` : `${p.xp} of ${p.goal} XP today.`),
           R.streakShown() ? h('p', { class: 'muted' }, streakLine(st)) : null)),
       R.streakShown() ? stripNode(R) : null,
@@ -59,10 +68,12 @@ export function goalRingNode(R) {
         R.streakShown() && !st.repair && rec.freezes.held < STREAK.freezeMax && rec.gems.balance >= PRICES.freeze ? h('a', { class: 'btn secondary', href: '#/shop' }, 'Get a streak freeze') : null),
       picker);
     wrap.setAttribute('data-state', st.state);
+    if (wasOpen) picker.open = true;
+    if (focusGoal) wrap.querySelector(`[data-goal="${focusGoal}"]`)?.focus({ preventScroll: true });
     if (st.state === 'freeze-used') R.freezeNoteShown();
   };
   // The low-friction start: the learner's next lesson in short parts. The link is filled in once the lesson list has loaded.
-  const quick = h('a', { class: 'btn ret-quick', href: '#/learn', 'aria-label': 'Start a three-minute lesson' }, '3-minute lesson');
+  const quick = h('a', { class: 'btn ret-quick', href: '#/learn' }, '3-minute lesson');
   nextLessonId(R.ctx).then((id) => { if (id) quick.setAttribute('href', `#/learn?lesson=${encodeURIComponent(id)}&quick=1`); }).catch(() => {});
   const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
   document.addEventListener('alef:retention', on);
@@ -89,6 +100,27 @@ export async function downloadReminder(R) {
 }
 const onIphoneTab = (g = globalThis) => { try { const n = g.navigator, ua = String(n?.userAgent || ''); const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && (n?.maxTouchPoints || 0) > 1); return ios && !(n?.standalone === true || g.matchMedia?.('(display-mode: standalone)')?.matches); } catch { return false; } };
 
+// ---------- daily quests (Home) ----------
+export function questsNode(R) {
+  const wrap = h('section', { class: 'card ret-quests alef-retention', 'aria-labelledby': 'ret-quests-h' });
+  let sig = '';
+  const draw = () => {
+    const v = R.questView(), next = JSON.stringify(v);
+    if (next === sig) return; sig = next;
+    wrap.hidden = !v.on;
+    wrap.replaceChildren(h('h2', { id: 'ret-quests-h' }, "Today's Quests"),
+      v.rest ? h('p', {}, 'A rest day. No quests today.')
+        : h('ul', { class: 'ret-quest-list' }, ...v.items.map((q) => h('li', { class: q.done ? 'is-done' : '' },
+          h('span', { class: 'ret-quest-mark', 'aria-hidden': 'true' }, q.done ? '\u2713' : ''), h('span', { class: 'ret-quest-text' }, q.text),
+          h('span', { class: 'ret-quest-count' }, q.done ? 'Done, +5 gems' : `${q.p} of ${q.n}`)))),
+      v.rest ? null : h('p', { class: 'muted' }, v.chest ? 'All three done. +10 gems. New quests tomorrow.' : `Finish all three for ${gemsText(10)} more.`));
+  };
+  const on = () => { if (wrap.isConnected) { try { draw(); } catch { /* keep the last drawing */ } } else document.removeEventListener('alef:retention', on); };
+  document.addEventListener('alef:retention', on);
+  draw();
+  return wrap;
+}
+
 // ---------- out of hearts ----------
 const hm = (ms) => { const m = Math.ceil(ms / 60000); return `${Math.floor(m / 60)} h ${m % 60} min`; };
 /** The block shown instead of "Next lesson" when hearts are gone, and as the gate on a new lesson. */
@@ -113,11 +145,18 @@ export function heartsBlock(R, { gate = false } = {}) {
 export function routeShown(R, g = globalThis, gate = false) {
   const doc = g.document, main = doc.getElementById('main');
   if (!main || R.calm()) return;
-  if (gate) { main.replaceChildren(heartsBlock(R, { gate: true })); showRimon('hearts_empty'); return; }
-  if (doc.body.dataset.route === 'home' && !main.querySelector('.ret-goal')) {
+  if (gate) {
+    // Old material is always open: a lesson the learner already finished is never gated, only a new one.
+    const hash = g.location.hash, id = (/[?&]lesson=([^&]+)/.exec(hash) || [])[1];
+    const shut = () => { if (g.location.hash !== hash) return; main.replaceChildren(heartsBlock(R, { gate: true })); showRimon('hearts_empty'); };
+    import('../curriculum/state.js').then((m) => m.loadState(R.ctx)).then((st) => { if (st?.completed?.[decodeURIComponent(id || '')]) R.admit(hash); else shut(); }).catch(shut);
+    return;
+  }
+  if (doc.body.dataset.route === 'home' && !main.querySelector('.ret-goal') && R.revealed()) {
     const head = main.querySelector('.stack > header') || main.querySelector('header');
     const ring = goalRingNode(R);
     if (head?.parentNode) head.parentNode.insertBefore(ring, head.nextSibling); else main.prepend(ring);
+    ring.after(questsNode(R));
     // Once a day, in the evening, Rimon looks a little worried about an unfinished streak day. Never on a rest day.
     const st = R.status(), today = new Date().toDateString();
     if (st.state === 'at-risk' && R.streakShown() && R.get().lastRiskDay !== today) { R.update((r) => { r.lastRiskDay = today; return r; }); g.setTimeout(() => showRimon('streak_at_risk'), 3000); }
@@ -166,6 +205,8 @@ export function showReward(R, out, g = globalThis) {
     if (out.parts.combo) lines.push(`Combo bonus: +${out.parts.combo} XP`);
     if (out.goalCrossed) lines.push('Daily goal reached!');
     if (out.streak.grew) lines.push(out.streak.milestone ? `${out.streak.count}-day streak! A milestone.` : `${out.streak.count}-day streak!`);
+    for (const q of out.quests || []) lines.push(`Quest done: ${q}`);
+    if (out.chest) lines.push('All three quests done!');
     if (out.gems) lines.push(`+${gemsText(out.gems)}`);
     const sentence = `Lesson finished. ${out.xp} XP.${out.goalCrossed ? ' Daily goal reached.' : ''}${out.streak.grew ? ` ${out.streak.count}-day streak.` : ''}${out.gems ? ` ${gemsText(out.gems)} earned.` : ''}`;
     const panel = h('section', { class: 'ret-reward alef-retention', 'aria-label': 'Your reward' },

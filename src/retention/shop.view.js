@@ -6,7 +6,8 @@ import { retention } from './boot.js';
 import { CURRENCY, PRICES, gemsText, whyLabel } from './gems.js';
 import { STREAK, buyFreeze, repairOffer, repairStreak, streakLine } from './streak.js';
 import { HEARTS, refillByGems, nextHeartInMs } from './hearts.js';
-import { setReminders } from './notify.js';
+import { setReminders, usualTimeText, pickMessage } from './notify.js';
+import { isRestQuiet } from './quiet.js';
 import { showRimon } from './rimon.js';
 import { downloadReminder } from './ui.js';
 
@@ -25,15 +26,20 @@ export function mount(root, ctx) {
     status.after(confirmEl); confirmEl.querySelector('button')?.focus();
   };
   const item = (title, text, price, btn) => h('section', { class: 'card ret-item' }, h('h2', {}, title), h('p', {}, text), h('p', { class: 'ret-price' }, price), btn);
+  let sig = '';
   function draw() {
     const rec = R.get(), st = R.status(), bal = rec.gems.balance, offer = repairOffer(rec), calm = R.calm();
+    const next = JSON.stringify([st.state, st.count, rec.gems, rec.freezes.held, rec.hearts.n, rec.hearts.enabled, rec.league.enabled, rec.notify.optedIn, rec.notify.tone, !!offer, calm]);
+    if (next === sig) return; // unchanged: leave the page (and the focus) alone
+    sig = next;
+    const focusKey = body.contains(document.activeElement) ? document.activeElement.getAttribute('data-k') : null;
     const freezeBtn = rec.freezes.held >= STREAK.freezeMax ? h('p', { class: 'muted' }, `You hold ${STREAK.freezeMax}, the most allowed.`)
-      : h('button', { type: 'button', class: 'btn', 'data-buy': 'freeze', disabled: bal < PRICES.freeze, onclick: () => ask(`Spend ${gemsText(PRICES.freeze)} on a streak freeze?`, 'Yes, buy it', () => {
+      : h('button', { type: 'button', class: 'btn', 'data-buy': 'freeze', 'data-k': 'freeze', disabled: bal < PRICES.freeze, onclick: () => ask(`Spend ${gemsText(PRICES.freeze)} on a streak freeze?`, 'Yes, buy it', () => {
         const out = buyFreeze(R.get()); if (!out.ok) { status.textContent = out.reason === 'max' ? 'You already hold the most freezes allowed.' : `You need ${gemsText(PRICES.freeze)}.`; return; }
         R.update(() => out.rec); status.textContent = "Freeze ready. Rimon's keeping it cold."; showRimon('freeze_bought');
       }) }, bal < PRICES.freeze ? `Needs ${gemsText(PRICES.freeze)}` : 'Buy a streak freeze');
     const heartsOn = R.heartsShown();
-    const sw = (label, on, set) => h('button', { type: 'button', class: 'btn secondary', role: 'switch', 'aria-checked': String(on), onclick: set }, `${label}: ${on ? 'On' : 'Off'}`);
+    const sw = (label, on, set) => h('button', { type: 'button', class: 'btn secondary', role: 'switch', 'data-k': label, 'aria-checked': String(on), onclick: set }, `${label}: ${on ? 'On' : 'Off'}`);
     body.replaceChildren(
       h('p', { class: 'ret-balance' }, h('span', { class: 'ret-ico ret-ico-gem', 'aria-hidden': 'true' }), ` You have ${gemsText(bal)}. `, h('span', { class: 'muted' }, `${CURRENCY.title} are earned in lessons. They are never sold.`)),
       R.streakShown() ? h('p', {}, streakLine(st)) : null,
@@ -62,7 +68,15 @@ export function mount(root, ctx) {
           }),
           rec.notify.optedIn ? sw('Playful Rimon (for adults)', rec.notify.tone === 'playful', () => { R.update((r) => setReminders(r, true, r.notify.tone === 'playful' ? 'kind' : 'playful')); R.rearm(); }) : null),
         h('p', { class: 'muted' }, 'Reminders only arrive while ALEF is open on this device, or on Android with ALEF installed. Never on Shabbat or holidays. For a reminder that always arrives, add one to your calendar.'),
-        h('button', { type: 'button', class: 'btn secondary', 'data-act': 'calendar', onclick: async () => { status.textContent = (await downloadReminder(R)) ? 'Calendar reminder downloaded: Sunday to Thursday, at the time you usually study.' : 'This browser could not make the calendar file.'; } }, 'Add a daily reminder to my calendar')));
+        rec.notify.optedIn ? h('p', {}, `Rimon usually nudges around ${usualTimeText(rec)}, the time you tend to study.`) : null,
+        rec.notify.optedIn ? h('button', { type: 'button', class: 'btn secondary', 'data-k': 'test', onclick: async () => {
+          if (isRestQuiet(Date.now(), R.quietOpt())) { status.textContent = 'Reminders rest on Shabbat and holidays. Try again afterwards.'; return; }
+          const N = await import('../shell/notify.js'), m = pickMessage({ tier: 'E', sent: R.get().notify.sent, installId: rec.installId, n: st.count });
+          const res = await N.showNow('Rimon', m.body, { tag: 'alef-rimon-test', route: '#/shop' });
+          status.textContent = res.ok ? 'Test reminder sent. Look for it in your notifications.' : 'This browser did not show the reminder. Check that notifications are allowed for ALEF.';
+        } }, 'Send a test reminder') : null,
+        h('button', { type: 'button', class: 'btn secondary', 'data-act': 'calendar', 'data-k': 'calendar', onclick: async () => { status.textContent = (await downloadReminder(R)) ? 'Calendar reminder downloaded: Sunday to Thursday, at the time you usually study.' : 'This browser could not make the calendar file.'; } }, 'Add a daily reminder to my calendar')));
+    if (focusKey) body.querySelector(`[data-k="${focusKey}"]`)?.focus({ preventScroll: true });
   }
   root.replaceChildren(h('div', { class: 'stack ret-shop alef-retention' }, h('h1', { id: 'view-title', tabindex: '-1' }, 'Shop'), status, body));
   const on = () => { try { draw(); } catch { /* keep the last drawing */ } };

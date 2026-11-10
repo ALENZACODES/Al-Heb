@@ -8,6 +8,7 @@ export const PRICES = Object.freeze({ freeze: 200, hearts: 350, repairPerDay: 15
 export const EARN = Object.freeze({ goal: 10, accuracy: 2, first: 50, promote: 50, rank1: 100, top3: 100 });
 export const WHY = Object.freeze({
   goal: 'Daily goal', accuracy: 'Sharp lesson', first: 'First lesson', promote: 'Moved up a league', rank1: 'First place', top3: 'Top three',
+  quest: 'Daily quest', chest: 'All three quests',
   'buy-freeze': 'Streak freeze', 'buy-hearts': 'Hearts refill', 'buy-repair': 'Streak repair',
 });
 export const whyLabel = (why) => WHY[why] || (/^streak(\d+)$/.test(why) ? `${why.slice(6)}-day streak` : 'Reward');

@@ -41,6 +41,7 @@ New code, all under `src/retention/` and all loaded on demand (none of it is in 
 | `leagues.js`, `league.names.js` | Tiers, seeded cohort, standings, `settle`, 120 names |
 | `notify.js`, `messages.js`, `quiet.js` | Timing, tone ladder, message pick, in-page scheduler, plan file for the service worker, quiet hours |
 | `rimon.js` | `showRimon(situation)`: sends the app's `alef:rimon` event using the twelve drawn actions only |
+| `quests.js` | Daily quests: `dailyQuests`, `questProgress`, `questView` |
 | `boot.js` | Controller: listens for lesson, review and game events, rolls the day over, arms reminders |
 | `ui.js`, `dom.js`, `retention.css` | Top bar, goal ring, reward panel, out-of-hearts block |
 | `league.view.js`, `shop.view.js` | The two screens |
@@ -130,6 +131,14 @@ The lane rules win over the spec where they disagree.
 ### Badges
 
 The app's 25 badges (`src/awards/`) already include the streak medallions, and they still come from the streak engine; a retention milestone and its badge arrive together. No new badges were added for leagues or daily goals, because each badge needs its own medallion picture.
+
+## Added in the Fourth Pass
+
+- **Daily quests.** Three small goals a day on Home ("Earn 20 XP", "Review 5 old cards", "Get 5 right in a row" and so on), the same three all day, chosen on the device from a seeded shuffle. Each pays 5 gems and all three pay 10 more. None on Saturday or Yom Tov, none in calm mode, and they open after the 2nd finished lesson. Code: `quests.js`; numbers in `QUESTS` and `POOL`.
+- **A first visit is left alone.** The top bar and the Home cards stay hidden until the learner has earned something (XP, a gem or a streak day), so the first screen is as simple as before. The lesson reward panel is where the system introduces itself.
+- **Reminder transparency.** The shop says when Rimon usually nudges ("around 7:15 pm") and has a "Send a test reminder" button, which also rests on Shabbat and holidays.
+- The Home card is headed "Daily XP Goal", because Home's own lesson card already has a "Daily goal" in minutes.
+- Review round 2 fixes are listed in `REVIEW-ROUND-2.md`.
 
 ## Hebrew
 

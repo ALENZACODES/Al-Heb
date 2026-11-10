@@ -40,6 +40,7 @@ test('top bar, daily-goal ring, shop purchase and league table at 320, 360 and 3
       assert.deepEqual(chips.slice(0, 3), ['4-day streak. Open the shop.', '450 gems. Open the shop.', '3 of 5 hearts. Open the shop.']);
       assert.equal(await a.page.$eval('.ret-goal-text', (n) => n.textContent), '0 of 20 XP today.');
       assert.equal(await a.page.$$eval('.ret-strip .ret-dot', (n) => n.length), 7);
+      assert.equal(await a.page.$$eval('.ret-quests .ret-quest-list li', (n) => n.length), new Date().getDay() === 6 ? 0 : 3, 'three quests (none on Saturday)');
       assert.ok(await noSideScroll(a.page), `home ${width}`);
       if (width === 360) {
         await a.page.waitForFunction(() => /quick=1/.test(document.querySelector('.ret-quick')?.getAttribute('href') || ''), null, { timeout: 15000 });
@@ -83,18 +84,33 @@ test('lesson events: hearts, combo, one reward panel, streak day; the 3-minute s
     assert.match(await a.page.$eval('.ret-xp-chip', (n) => n.textContent), /^\+17 XP$/);
     const r = await stored(a.page, 'alef:retention.v1'), s = await stored(a.page, 'alef:streak');
     assert.deepEqual([r.xp.total, r.hearts.n, r.lessonsFinished, s.count], [17, 2, 7, 5]);
+    // one round of a longer lesson pays XP but is not a finished lesson
+    await a.page.evaluate(() => { location.hash = '#/learn?lesson=zz-round'; });
+    await a.page.waitForTimeout(700);
+    await a.page.evaluate(() => document.dispatchEvent(new CustomEvent('alef:celebrate', { detail: { kind: 'lesson', accuracy: 0.5, ms: 999, title: 'Round finished' } })));
+    const round = await stored(a.page, 'alef:retention.v1');
+    assert.deepEqual([round.xp.total, round.lessonsFinished], [27, 7]);
     // 3-minute lesson: the fourth part of one sitting is the stopping point
     await a.go('#/learn?lesson=r02&quick=1', 'body[data-ready="1"]');
     await a.page.waitForTimeout(800);
     await a.page.evaluate(() => { for (let i = 1; i <= 4; i++) document.dispatchEvent(new CustomEvent('alef:lesson-part', { detail: { lessonId: 'r02', part: i, of: 9 } })); });
     await a.page.waitForSelector('.ret-quick-done');
-    assert.equal((await stored(a.page, 'alef:retention.v1')).xp.total, 27);
+    assert.equal((await stored(a.page, 'alef:retention.v1')).xp.total, 37);
     // review: five rated cards win a heart back
     await a.go('#/learn?review=1', 'body[data-ready="1"]');
     await a.page.evaluate(() => { for (let i = 0; i < 5; i++) document.dispatchEvent(new CustomEvent('alef:review-rated', { detail: { rating: 3 } })); });
     assert.equal((await stored(a.page, 'alef:retention.v1')).hearts.n, 3);
     assert.deepEqual(a.errors, []);
     await a.close();
+  });
+});
+
+test('a first visit is left alone: no top bar and no Home cards until something has been earned', { skip: !chromium, timeout: 120000 }, async () => {
+  await withApp(async (browser, base) => {
+    const a = await open(browser, base, {});
+    await a.go('#/', 'body[data-ready="1"]'); await a.page.waitForSelector('.ret-bar', { state: 'attached' });
+    assert.deepEqual(await a.page.evaluate(() => [document.querySelector('.ret-bar').hidden, !!document.querySelector('.ret-goal'), !!document.querySelector('.ret-quests')]), [true, false, false]);
+    assert.deepEqual(a.errors, []); await a.close();
   });
 });
 

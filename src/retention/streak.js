@@ -45,8 +45,8 @@ export function applyRollover(streakRaw, ret, now = Date.now(), opt = {}) {
   const events = []; let r = clone(ret);
   let streak = normalizeRecord(streakRaw).v === STREAK_V ? streakRaw : rollover(streakRaw, now);
   const rec = normalizeRecord(streak), today = dayKey(now), to = addDaysISO(today, -1);
-  if (opt.tz) { if (r.lastTz && r.lastTz !== opt.tz) r._tzChanged = true; }
-  const finish = () => { if (opt.tz) r.lastTz = opt.tz; delete r._tzChanged; if (r.repair && now > r.repair.until) r.repair = null; return { streak, ret: r, events }; };
+  if (opt.tz) { if (r.lastTz && r.lastTz !== opt.tz) r.tzChangedAt = now; r.lastTz = opt.tz; } // remembered until the next missed day is judged, not only for this one call
+  const finish = () => { if (r.repair && now > r.repair.until) r.repair = null; return { streak, ret: r, events }; };
   if (!rec.last) { r.freezes.evaluatedThrough = maxISO(r.freezes.evaluatedThrough, to); return finish(); }
   const from = maxISO(addDaysISO(rec.last, 1), r.freezes.evaluatedThrough ? addDaysISO(r.freezes.evaluatedThrough, 1) : null);
   if (from > to) return finish(); // nothing new to judge (also: active today, or the clock moved back)
@@ -61,7 +61,7 @@ export function applyRollover(streakRaw, ret, now = Date.now(), opt = {}) {
   missed = missed.filter((d) => !rest.includes(d));
   // 2. Travel: one missed day is free when the zone changed and less than 36 real hours passed.
   const end = lastSessionEnd(r);
-  if (missed.length === 1 && r._tzChanged && end && now - end < STREAK.travelGraceHours * 3600000 && wasAlive) {
+  if (missed.length === 1 && r.tzChangedAt >= end && end && now - end < STREAK.travelGraceHours * 3600000 && wasAlive) {
     streak = withDeclaredRest(streak, missed[0], true); r.travelCovered = [...r.travelCovered, missed[0]].slice(-CAPS.travel); missed = []; events.push('travel_covered');
   }
   // 3. Freezes, all or nothing. 4. Otherwise the streak is broken and a repair window opens.

@@ -208,7 +208,7 @@ export function createScheduler(env) {
     const t = now(), rec = env.load(), o = env.opt?.() || {};
     for (const e of entries) {
       if (!mayShow(rec, e, t, o)) continue;
-      try { await env.show(e.title, e.body, { tag: NOTIFY.tag, icon: NOTIFY.icon, route: e.route }); env.save((r) => recordSent(r, e.id, t)); } catch { /* showing is best effort */ }
+      try { const res = await env.show(e.title, e.body, { tag: NOTIFY.tag, icon: NOTIFY.icon, route: e.route }); if (!res || res.ok !== false) env.save((r) => recordSent(r, e.id, t)); } catch { /* showing is best effort */ }
       break;
     }
     arm();
@@ -233,7 +233,8 @@ const p2 = (n) => String(n).padStart(2, '0');
  * Saturday). Floating local time, so it follows the phone's own zone. Returns text/calendar with CRLF line endings.
  */
 export function reminderICS(rec, now = Date.now()) {
-  const min = clampDay(typicalMinute(rec.sessions, now)), d = new Date(now);
+  const min = clampDay(typicalMinute(rec.sessions, now)); let d = new Date(now);
+  while (d.getDay() === 5 || d.getDay() === 6) d = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1, 12); // the first event is never on a Friday or Saturday
   const day = `${d.getFullYear()}${p2(d.getMonth() + 1)}${p2(d.getDate())}`, hhmm = `${p2(Math.floor(min / 60))}${p2(min % 60)}00`;
   const end = min + 5, stamp = new Date(now).toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
   return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Aleph//Rimon reminder 1.0//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
@@ -241,4 +242,6 @@ export function reminderICS(rec, now = Date.now()) {
     'RRULE:FREQ=DAILY;BYDAY=SU,MO,TU,WE,TH', 'SUMMARY:ALEF: a 3-minute Hebrew lesson', 'DESCRIPTION:A short reminder from Rimon. Open ALEF for one quick lesson.', 'TRANSP:TRANSPARENT',
     'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:ALEF: a 3-minute Hebrew lesson', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
 }
+/** "7:15 pm": the time Rimon usually nudges, for the shop screen. */
+export function usualTimeText(rec, now = Date.now()) { const m = clampDay(typicalMinute(rec.sessions, now)), h = Math.floor(m / 60); return `${((h + 11) % 12) + 1}:${p2(m % 60)} ${h < 12 ? 'am' : 'pm'}`; }
 export { MESSAGES };

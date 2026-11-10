@@ -14,6 +14,7 @@ export const NAV_EN = {
   'nav.phrases': 'Common phrases',
   'nav.route.awards': 'Awards and certificate',
   'nav.route.songs': 'Songs',
+  'nav.route.camera': 'Camera Translator',
   // games hub and every game
   'nav.route.games': 'Games',
   'nav.route.library': 'Library', 'nav.route.libraryarticle': 'Library article',

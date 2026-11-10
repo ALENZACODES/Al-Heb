@@ -1,0 +1,518 @@
+{
+ "summary": {
+  "synthetic": true,
+  "note": "Rendered text with simulated wear. NOT photographs. Do not quote results as real-photo accuracy.",
+  "images": 20,
+  "lines": 28,
+  "ocr": "Tesseract heb (on this server, no cloud)",
+  "translate": "built-in sign word list",
+  "cerPooled": 0.0243,
+  "cerMeanPerImage": 0.0203,
+  "imagesReadPerfectly": 16,
+  "linesReadExactly": 23,
+  "linesTranslatedEndToEnd": 25,
+  "linesTranslatedGivenCorrectText": 26
+ },
+ "rows": [
+  {
+   "id": "optical-store",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "חנות אופטיקה"
+   ],
+   "english": [
+    "Optical Store"
+   ],
+   "lines": [
+    {
+     "he": "חנות אופטיקה",
+     "expected": "Optical Store",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Optical Store"
+    }
+   ]
+  },
+  {
+   "id": "bakery",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "מאפייה"
+   ],
+   "english": [
+    "Bakery"
+   ],
+   "lines": [
+    {
+     "he": "מאפייה",
+     "expected": "Bakery",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Bakery"
+    }
+   ]
+  },
+  {
+   "id": "pharmacy",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "בית מרקחת"
+   ],
+   "english": [
+    "Pharmacy"
+   ],
+   "lines": [
+    {
+     "he": "בית מרקחת",
+     "expected": "Pharmacy",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Pharmacy"
+    }
+   ]
+  },
+  {
+   "id": "exit",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "יציאה"
+   ],
+   "english": [
+    "Exit"
+   ],
+   "lines": [
+    {
+     "he": "יציאה",
+     "expected": "Exit",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Exit"
+    }
+   ]
+  },
+  {
+   "id": "closed",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "סגור"
+   ],
+   "english": [
+    "Closed"
+   ],
+   "lines": [
+    {
+     "he": "סגור",
+     "expected": "Closed",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Closed"
+    }
+   ]
+  },
+  {
+   "id": "bookshop",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "חנות ספרים"
+   ],
+   "english": [
+    null
+   ],
+   "lines": [
+    {
+     "he": "חנות ספרים",
+     "expected": "Bookshop",
+     "readExactly": true,
+     "translatedEndToEnd": false,
+     "translatedGivenCorrectText": false,
+     "translationGivenCorrectText": null
+    }
+   ]
+  },
+  {
+   "id": "petrol-station",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "תחנת דלק"
+   ],
+   "english": [
+    null
+   ],
+   "lines": [
+    {
+     "he": "תחנת דלק",
+     "expected": "Petrol Station",
+     "readExactly": true,
+     "translatedEndToEnd": false,
+     "translatedGivenCorrectText": false,
+     "translationGivenCorrectText": null
+    }
+   ]
+  },
+  {
+   "id": "no-entry",
+   "variant": "noise",
+   "cer": 0.0,
+   "read": [
+    "אין כניסה"
+   ],
+   "english": [
+    "No Entry"
+   ],
+   "lines": [
+    {
+     "he": "אין כניסה",
+     "expected": "No Entry",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "No Entry"
+    }
+   ]
+  },
+  {
+   "id": "restrooms",
+   "variant": "blur",
+   "cer": 0.0,
+   "read": [
+    "שירותים"
+   ],
+   "english": [
+    "Restrooms"
+   ],
+   "lines": [
+    {
+     "he": "שירותים",
+     "expected": "Restrooms",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Restrooms"
+    }
+   ]
+  },
+  {
+   "id": "herzl-street",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "רחוב הרצל"
+   ],
+   "english": [
+    "Herzl Street"
+   ],
+   "lines": [
+    {
+     "he": "רחוב הרצל",
+     "expected": "Herzl Street",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Herzl Street"
+    }
+   ]
+  },
+  {
+   "id": "ben-yehuda-blvd",
+   "variant": "perspective",
+   "cer": 0.0,
+   "read": [
+    "שדרות בן יהודה"
+   ],
+   "english": [
+    "Ben Yehuda Boulevard"
+   ],
+   "lines": [
+    {
+     "he": "שדרות בן יהודה",
+     "expected": "Ben Yehuda Boulevard",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Ben Yehuda Boulevard"
+    }
+   ]
+  },
+  {
+   "id": "dizengoff-square",
+   "variant": "rotate",
+   "cer": 0.0909,
+   "read": [
+    "ביכר דיזנגוף"
+   ],
+   "english": [
+    "Dizengoff Square"
+   ],
+   "lines": [
+    {
+     "he": "כיכר דיזנגוף",
+     "expected": "Dizengoff Square",
+     "readExactly": false,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Dizengoff Square"
+    }
+   ]
+  },
+  {
+   "id": "bus-stop",
+   "variant": "clean",
+   "cer": 0.0909,
+   "read": [
+    "תחנת אוטובוט"
+   ],
+   "english": [
+    "Bus Stop"
+   ],
+   "lines": [
+    {
+     "he": "תחנת אוטובוס",
+     "expected": "Bus Stop",
+     "readExactly": false,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Bus Stop"
+    }
+   ]
+  },
+  {
+   "id": "synagogue",
+   "variant": "noise",
+   "cer": 0.0,
+   "read": [
+    "בית כנסת"
+   ],
+   "english": [
+    "Synagogue"
+   ],
+   "lines": [
+    {
+     "he": "בית כנסת",
+     "expected": "Synagogue",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Synagogue"
+    }
+   ]
+  },
+  {
+   "id": "menu-drinks",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "תפריט",
+    "קפה 12",
+    "תה 10"
+   ],
+   "english": [
+    "Menu",
+    "Coffee 12",
+    "Tea 10"
+   ],
+   "lines": [
+    {
+     "he": "תפריט",
+     "expected": "Menu",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Menu"
+    },
+    {
+     "he": "קפה 12",
+     "expected": "Coffee 12",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Coffee 12"
+    },
+    {
+     "he": "תה 10",
+     "expected": "Tea 10",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Tea 10"
+    }
+   ]
+  },
+  {
+   "id": "menu-food",
+   "variant": "clean",
+   "cer": 0.0,
+   "read": [
+    "חומוס 18",
+    "פלאפל 22",
+    "סלט 25"
+   ],
+   "english": [
+    "Hummus 18",
+    "Falafel 22",
+    "Salad 25"
+   ],
+   "lines": [
+    {
+     "he": "חומוס 18",
+     "expected": "Hummus 18",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Hummus 18"
+    },
+    {
+     "he": "פלאפל 22",
+     "expected": "Falafel 22",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Falafel 22"
+    },
+    {
+     "he": "סלט 25",
+     "expected": "Salad 25",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Salad 25"
+    }
+   ]
+  },
+  {
+   "id": "menu-courses",
+   "variant": "blur",
+   "cer": 0.0,
+   "read": [
+    "מנה ראשונה",
+    "מרק",
+    "קינוחים"
+   ],
+   "english": [
+    "Starter",
+    "Soup",
+    "Desserts"
+   ],
+   "lines": [
+    {
+     "he": "מנה ראשונה",
+     "expected": "Starter",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Starter"
+    },
+    {
+     "he": "מרק",
+     "expected": "Soup",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Soup"
+    },
+    {
+     "he": "קינוחים",
+     "expected": "Desserts",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Desserts"
+    }
+   ]
+  },
+  {
+   "id": "kosher-restaurant",
+   "variant": "clean",
+   "cer": 0.1,
+   "read": [
+    "מסעדה בשרה",
+    "ברובים הבאים"
+   ],
+   "english": [
+    null,
+    "Welcome"
+   ],
+   "lines": [
+    {
+     "he": "מסעדה כשרה",
+     "expected": "Kosher Restaurant",
+     "readExactly": false,
+     "translatedEndToEnd": false,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Kosher Restaurant"
+    },
+    {
+     "he": "ברוכים הבאים",
+     "expected": "Welcome",
+     "readExactly": false,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Welcome"
+    }
+   ]
+  },
+  {
+   "id": "no-smoking",
+   "variant": "lowcontrast",
+   "cer": 0.125,
+   "read": [
+    "אסור לעשון"
+   ],
+   "english": [
+    "No Smoking"
+   ],
+   "lines": [
+    {
+     "he": "אסור לעשן",
+     "expected": "No Smoking",
+     "readExactly": false,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "No Smoking"
+    }
+   ]
+  },
+  {
+   "id": "caution-stairs",
+   "variant": "rotate",
+   "cer": 0.0,
+   "read": [
+    "זהירות",
+    "מדרגות"
+   ],
+   "english": [
+    "Caution",
+    "Stairs"
+   ],
+   "lines": [
+    {
+     "he": "זהירות",
+     "expected": "Caution",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Caution"
+    },
+    {
+     "he": "מדרגות",
+     "expected": "Stairs",
+     "readExactly": true,
+     "translatedEndToEnd": true,
+     "translatedGivenCorrectText": true,
+     "translationGivenCorrectText": "Stairs"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+ "schema": 1,
+ "backendUrl": "",
+ "note": "Address of the camera translation service (tools/camera-translate). Empty = not set up: the Camera Translator then works on this device only, with the small built-in word list. A relative path (for example /api/camera) or a loopback address works with the site security policy as shipped; any other origin must also be added to connect-src in _headers."
+}

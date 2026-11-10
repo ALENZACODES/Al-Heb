@@ -1,0 +1,4 @@
+{"schema":"alef-listen/1","poolSize":600,"rounds":10,"choices":4,"minLetters":2,"maxLetters":6,
+ "draftNotice":"Draft: the word list was built by a program and no Hebrew teacher has checked it. A gloss or vowel point may be wrong.",
+ "noAudio":"Audio not recorded yet",
+ "noAudioHelp":"No recording exists for these words, so this is a reading drill, not a listening drill. Read the meaning and pick the written word."}

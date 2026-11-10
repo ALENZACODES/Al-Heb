@@ -1,0 +1,25 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-A",
+ "tradition": "israeli",
+ "inputText": "לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃",
+ "inputSha256": "73001a51da51afe5410fd217c548ed216af957e227723d1cda6071bbc36abe0f",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "לְעֵלָּא מִן־כָּל־בִּרְכָתָא וְשִׁירָתָא תֻּשְׁבְּחָתָא וְנֶחָמָתָא דַּאֲמִירָן בְּעָלְמָא וְאִמְרוּ אָמֵן׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/kaddish-1-w40.mp3",
+  "audio/f/israeli/word/kaddish-1-w41.mp3",
+  "audio/f/israeli/word/kaddish-1-w42.mp3",
+  "audio/f/israeli/word/kaddish-1-w43.mp3",
+  "audio/f/israeli/word/kaddish-1-w44.mp3",
+  "audio/f/israeli/word/kaddish-1-w45.mp3",
+  "audio/f/israeli/word/i-04-w3.mp3",
+  "audio/f/israeli/word/kaddish-1-w19.mp3",
+  "audio/f/israeli/word/haftarah-after-w143.mp3"
+ ]
+}

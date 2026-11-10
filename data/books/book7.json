@@ -1,0 +1,177 @@
+{
+ "id": "book7",
+ "titleHe": "אֵיפֹה הַמַּפְתֵּחַ?",
+ "titleTranslit": "Eifoh Ha-Mafteach?",
+ "titleEn": "Where Is the Key?",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "יוֹסִי בָּא הַבַּיְתָה.",
+   "translit": "Yossi ba ha-baitah.",
+   "en": "Yossi comes home.",
+   "img": "assets/books/book7/BOOK7_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p01.mp3",
+    "m": "audio/m/israeli/book/book7-p01.mp3"
+   },
+   "illustration": "a man in his forties at an apartment door at dusk, grocery bag in arm",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "אֵיפֹה הַמַּפְתֵּחַ?",
+   "translit": "Eifoh ha-mafteach?",
+   "en": "Where is the key?",
+   "img": "assets/books/book7/BOOK7_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p02.mp3",
+    "m": "audio/m/israeli/book/book7-p02.mp3"
+   },
+   "illustration": "the man patting his coat pockets, puzzled",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "לֹא בַּתִּיק.",
+   "translit": "Lo ba-tik.",
+   "en": "Not in the bag.",
+   "img": "assets/books/book7/BOOK7_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p03.mp3",
+    "m": "audio/m/israeli/book/book7-p03.mp3"
+   },
+   "illustration": "an open messenger bag on the floor, papers spilling out",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "לֹא בַּמְּעִיל.",
+   "translit": "Lo ba-me'il.",
+   "en": "Not in the coat.",
+   "img": "assets/books/book7/BOOK7_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p04.mp3",
+    "m": "audio/m/israeli/book/book7-p04.mp3"
+   },
+   "illustration": "the coat turned inside out, pockets hanging empty",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "לֹא בָּאוֹטוֹ.",
+   "translit": "Lo ba-oto.",
+   "en": "Not in the car.",
+   "img": "assets/books/book7/BOOK7_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p05.mp3",
+    "m": "audio/m/israeli/book/book7-p05.mp3"
+   },
+   "illustration": "the man peering through a car window in the parking lot",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "יוֹסִי מִתְקַשֵּׁר.",
+   "translit": "Yossi mitkasher.",
+   "en": "Yossi calls.",
+   "img": "assets/books/book7/BOOK7_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p06.mp3",
+    "m": "audio/m/israeli/book/book7-p06.mp3"
+   },
+   "illustration": "the man on the phone in the stairwell, one hand on his forehead",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "\"מָאיָה, יֵשׁ לָךְ מַפְתֵּחַ?\"",
+   "translit": "\"Maya, yesh lach mafteach?\"",
+   "en": "\"Maya, do you have a key?\"",
+   "img": "assets/books/book7/BOOK7_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p07.mp3",
+    "m": "audio/m/israeli/book/book7-p07.mp3"
+   },
+   "illustration": "split frame: the man on the stairs, a woman at an office desk answering",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "\"לֹא. סְלִיחָה.\"",
+   "translit": "\"Lo. Slichah.\"",
+   "en": "\"No. Sorry.\"",
+   "img": "assets/books/book7/BOOK7_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p08.mp3",
+    "m": "audio/m/israeli/book/book7-p08.mp3"
+   },
+   "illustration": "the woman shrugging apologetically into her phone",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "יוֹסִי יוֹשֵׁב.",
+   "translit": "Yossi yoshev.",
+   "en": "Yossi sits down.",
+   "img": "assets/books/book7/BOOK7_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p09.mp3",
+    "m": "audio/m/israeli/book/book7-p09.mp3"
+   },
+   "illustration": "the man sitting on the stairs, groceries beside him, a cat watching",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "הַשָּׁכֵן בָּא.",
+   "translit": "Ha-shachen ba.",
+   "en": "The neighbour comes.",
+   "img": "assets/books/book7/BOOK7_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p10.mp3",
+    "m": "audio/m/israeli/book/book7-p10.mp3"
+   },
+   "illustration": "an older neighbour climbing the stairs with a dog",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "\"הַמַּפְתֵּחַ בַּדֶּלֶת!\"",
+   "translit": "\"Ha-mafteach ba-delet!\"",
+   "en": "\"The key is in the door!\"",
+   "img": "assets/books/book7/BOOK7_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p11.mp3",
+    "m": "audio/m/israeli/book/book7-p11.mp3"
+   },
+   "illustration": "the neighbour pointing: the key sitting in the lock the whole time",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "יוֹסִי צוֹחֵק.",
+   "translit": "Yossi tzochek.",
+   "en": "Yossi laughs.",
+   "img": "assets/books/book7/BOOK7_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book7-p12.mp3",
+    "m": "audio/m/israeli/book/book7-p12.mp3"
+   },
+   "illustration": "the man laughing with his head back, neighbour grinning, dog wagging",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

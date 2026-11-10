@@ -1,0 +1,14 @@
+dist/
+node_modules/
+tools/a11y/node_modules/
+__pycache__/
+
+# regenerable image-ingest working files
+data/images/sheets/
+data/images/ingest-report.json
+data/images/unmatched-assignment.csv
+dist-test/
+data/images/review/
+tools/torah/snapshot/
+audio/_review/
+.env

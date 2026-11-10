@@ -1,0 +1,21 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
+ "inputSha256": "de1d3ff03d6dcf803163444c410cca8b4fa4519de33dce24e92b731ca04512cc",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֵין־כָּמוֹךָ בָאֱלֹהִים אֲדֹנָי וְאֵין כְּמַעֲשֶׂיךָ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/ein-kamocha-w1.mp3",
+  "audio/f/israeli/word/ein-kamocha-w2.mp3",
+  "audio/f/israeli/word/adon-olam-1-w69.mp3",
+  "audio/f/israeli/word/adon-olam-1-w32.mp3",
+  "audio/f/israeli/word/ein-kamocha-w5.mp3"
+ ]
+}

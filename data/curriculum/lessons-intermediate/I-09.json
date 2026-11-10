@@ -1,0 +1,434 @@
+{
+ "id": "I-09",
+ "track": "read",
+ "level": "intermediate",
+ "unit": "synagogue",
+ "title": "Adon Olam: the closing hymn line by line",
+ "status": "draft",
+ "proofread": false,
+ "needsNativeReview": true,
+ "letters": [],
+ "vowels": [],
+ "words": [
+  {
+   "he": "אֲדוֹן עוֹלָם",
+   "en": "Lord of the world",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "adon olam",
+    "sephardi": "adon olam",
+    "ashkenazi": "adon olom"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אֲדוֹן",
+     "עוֹלָם"
+    ]
+   }
+  },
+  {
+   "he": "מָלַךְ",
+   "en": "reigned",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "malakh",
+    "sephardi": "malakh",
+    "ashkenazi": "molakh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "heba57078"
+   }
+  },
+  {
+   "he": "מֶלֶךְ",
+   "en": "king",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "melekh",
+    "sephardi": "melekh",
+    "ashkenazi": "melekh"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h58d8d8fe"
+   }
+  },
+  {
+   "he": "שְׁמוֹ",
+   "en": "his name",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "shemo",
+    "sephardi": "shemo",
+    "ashkenazi": "shemo"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "שְׁמוֹ"
+    ]
+   }
+  },
+  {
+   "he": "נִקְרָא",
+   "en": "was called",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "nikra",
+    "sephardi": "nikra",
+    "ashkenazi": "nikro"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h40bd6f51"
+   }
+  },
+  {
+   "he": "וְהוּא הָיָה",
+   "en": "and he was",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vehu hayah",
+    "sephardi": "vehu hayah",
+    "ashkenazi": "vehu hoyoh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְהוּא",
+     "הָיָה"
+    ]
+   }
+  },
+  {
+   "he": "וְהוּא הֹוֶה",
+   "en": "and he is",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vehu hoveh",
+    "sephardi": "vehu hoveh",
+    "ashkenazi": "vehu hoveh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְהוּא",
+     "הֹוֶה"
+    ]
+   }
+  },
+  {
+   "he": "וְהוּא יִהְיֶה",
+   "en": "and he will be",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "vehu yihyeh",
+    "sephardi": "vehu yihyeh",
+    "ashkenazi": "vehu yihyeh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְהוּא",
+     "יִהְיֶה"
+    ]
+   }
+  },
+  {
+   "he": "אֶחָד",
+   "en": "one",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "echad",
+    "sephardi": "echad",
+    "ashkenazi": "echod"
+   },
+   "source": {
+    "file": "data/vocab/words.json",
+    "id": "h66252016"
+   }
+  },
+  {
+   "he": "וְאֵין שֵׁנִי",
+   "en": "and there is no second",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ve'ein sheni",
+    "sephardi": "ve'ein sheni",
+    "ashkenazi": "ve'ein sheini"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְאֵין",
+     "שֵׁנִי"
+    ]
+   }
+  },
+  {
+   "he": "בְּלִי רֵאשִׁית",
+   "en": "without beginning",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "beli reshit",
+    "sephardi": "beli reshit",
+    "ashkenazi": "beli reishis"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "בְּלִי",
+     "רֵאשִׁית"
+    ]
+   }
+  },
+  {
+   "he": "גּוֹאֲלִי",
+   "en": "my redeemer",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "go'ali",
+    "sephardi": "go'ali",
+    "ashkenazi": "go'ali"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "גּוֹאֲלִי"
+    ]
+   }
+  },
+  {
+   "he": "רוּחִי",
+   "en": "my spirit",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ruchi",
+    "sephardi": "ruchi",
+    "ashkenazi": "ruchi"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "רוּחִי"
+    ]
+   }
+  },
+  {
+   "he": "אִישַׁן",
+   "en": "I sleep",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ishan",
+    "sephardi": "ishan",
+    "ashkenazi": "ishan"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "אִישַׁן"
+    ]
+   }
+  },
+  {
+   "he": "וְאָעִירָה",
+   "en": "and I wake",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "ve'a'irah",
+    "sephardi": "ve'a'irah",
+    "ashkenazi": "ve'o'iroh"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "וְאָעִירָה"
+    ]
+   }
+  },
+  {
+   "he": "לֹא אִירָא",
+   "en": "I will not fear",
+   "translit": null,
+   "pronunciation": {
+    "israeli": "lo ira",
+    "sephardi": "lo ira",
+    "ashkenazi": "lo iro"
+   },
+   "source": {
+    "file": "composed",
+    "tokens": [
+     "לֹא",
+     "אִירָא"
+    ]
+   }
+  }
+ ],
+ "prayerLines": [
+  "adon-olam-1",
+  "yigdal"
+ ],
+ "goals": [
+  "Sing the first and last verses of Adon Olam from the page without stopping",
+  "Recognise the three-tense line 'hayah, hoveh, yihyeh'",
+  "Know Yigdal as the other hymn that often opens or closes a service"
+ ],
+ "estMinutes": 30,
+ "prerequisites": [
+  "I-02"
+ ],
+ "pronunciation": {
+  "traditions": [
+   "israeli",
+   "sephardi",
+   "ashkenazi"
+  ],
+  "scheme": "siddur",
+  "generatedBy": "src/pronunciation/transliterate.js",
+  "note": "Latin forms are machine output of the project's transliterator, not a native speaker's; israeli and sephardi are identical in that scheme."
+ },
+ "exercises": [
+  {
+   "id": "I-09-e01",
+   "type": "order",
+   "he": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא",
+   "en": "Lord of the world, who reigned before any form was created."
+  },
+  {
+   "id": "I-09-e02",
+   "type": "fade",
+   "line": "adon-olam-1",
+   "en": "Lord of the world, who reigned before any form was created.",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-09-e03",
+   "type": "spot",
+   "line": "adon-olam-1",
+   "target": "מֶלֶךְ",
+   "en": "king",
+   "lineIndex": 2
+  },
+  {
+   "id": "I-09-e04",
+   "type": "order",
+   "he": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה",
+   "en": "And he was, and he is, and he will be, in glory."
+  },
+  {
+   "id": "I-09-e05",
+   "type": "fade",
+   "line": "adon-olam-1",
+   "en": "And he was, and he is, and he will be, in glory.",
+   "lineIndex": 4
+  },
+  {
+   "id": "I-09-e06",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "וְהוּא הָיָה",
+     "en": "and he was"
+    },
+    {
+     "he": "וְהוּא הֹוֶה",
+     "en": "and he is"
+    },
+    {
+     "he": "וְהוּא יִהְיֶה",
+     "en": "and he will be"
+    }
+   ]
+  },
+  {
+   "id": "I-09-e07",
+   "type": "spot",
+   "line": "adon-olam-1",
+   "target": "אֶחָד",
+   "en": "one",
+   "lineIndex": 5
+  },
+  {
+   "id": "I-09-e08",
+   "type": "produce",
+   "en": "without beginning, without end",
+   "options": [
+    "בְּלִי רֵאשִׁית בְּלִי תַכְלִית",
+    "וְהוּא אֶחָד וְאֵין שֵׁנִי",
+    "וְהוּא אֵלִי וְחַי גּוֹאֲלִי"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "I-09-e09",
+   "type": "recall",
+   "he": "גּוֹאֲלִי",
+   "en": "my redeemer"
+  },
+  {
+   "id": "I-09-e10",
+   "type": "order",
+   "he": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישַׁן וְאָעִירָה",
+   "en": "Into his hand I entrust my spirit when I sleep and when I wake."
+  },
+  {
+   "id": "I-09-e11",
+   "type": "fade",
+   "line": "adon-olam-1",
+   "en": "Into his hand I entrust my spirit when I sleep and when I wake.",
+   "lineIndex": 9
+  },
+  {
+   "id": "I-09-e12",
+   "type": "order",
+   "he": "וְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא",
+   "en": "And with my spirit, my body: the LORD is with me, I will not fear."
+  },
+  {
+   "id": "I-09-e13",
+   "type": "fade",
+   "line": "adon-olam-1",
+   "en": "And with my spirit, my body: the LORD is with me, I will not fear.",
+   "lineIndex": 10
+  },
+  {
+   "id": "I-09-e14",
+   "type": "match",
+   "pairs": [
+    {
+     "he": "אִישַׁן",
+     "en": "I sleep"
+    },
+    {
+     "he": "וְאָעִירָה",
+     "en": "and I wake"
+    },
+    {
+     "he": "רוּחִי",
+     "en": "my spirit"
+    },
+    {
+     "he": "לֹא אִירָא",
+     "en": "I will not fear"
+    }
+   ]
+  },
+  {
+   "id": "I-09-e15",
+   "type": "spot",
+   "line": "yigdal",
+   "target": "חַי",
+   "en": "living",
+   "lineIndex": 1
+  },
+  {
+   "id": "I-09-e16",
+   "type": "order",
+   "he": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח",
+   "en": "May the living God be magnified and praised"
+  }
+ ],
+ "note": "Yigdal's registry text is 'transcribed-needs-check'; only its first line is used here."
+}

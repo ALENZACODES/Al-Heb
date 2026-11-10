@@ -1,0 +1,62 @@
+{
+  "sheets": 12,
+  "frames": 144,
+  "errors": [],
+  "missing": [],
+  "captureFrames": 157,
+  "builder": "correct and wrong",
+  "arcade": "score miss finish",
+  "mobile": "375px dismiss restore",
+  "reducedMotion": "static",
+  "gameEnds": [
+    {
+      "game": "tugowar",
+      "width": 960
+    },
+    {
+      "game": "wordbuilder",
+      "width": 960
+    },
+    {
+      "game": "wordfinder",
+      "width": 960
+    },
+    {
+      "game": "tugowar",
+      "width": 375
+    },
+    {
+      "game": "wordbuilder",
+      "width": 375
+    },
+    {
+      "game": "wordfinder",
+      "width": 375
+    }
+  ],
+  "gameErrors": [],
+  "distinctFramesPerAction": {
+    "blink": 12,
+    "bounce": 12,
+    "highfive": 12,
+    "laugh": 12,
+    "nervous": 12,
+    "point": 12,
+    "sad": 12,
+    "stretch": 12,
+    "thinking": 12,
+    "wave": 12,
+    "wink": 12,
+    "yawn": 12
+  },
+  "previewDurationSeconds": 21.98,
+  "lessonLink": true,
+  "idleYawnVirtualClock": true,
+  "dismissSurvivesReload": true,
+  "routes": [
+    "home",
+    "awards",
+    "progress",
+    "daily"
+  ]
+}

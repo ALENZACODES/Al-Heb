@@ -1,0 +1,21 @@
+{
+ "status": "tts",
+ "source": "tts:google",
+ "engine": "stitched-from-word-clips",
+ "voiceId": null,
+ "tradition": "israeli",
+ "inputText": "אֵל נָא רְפָא נָא לָהּ׃",
+ "inputSha256": "ee8d1c9c100dfdfad4cf7bc3c22932178fafbdaaf76f75cc12e46474ec7e7cbb",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "אֵל נָא רְפָא נָא לָהּ׃",
+ "stitchedFrom": [
+  "audio/f/israeli/word/avot-1-w17.mp3",
+  "audio/f/israeli/word/h1be64280.mp3",
+  "audio/f/israeli/word/num-12-13-w3.mp3",
+  "audio/f/israeli/word/h1be64280.mp3",
+  "audio/f/israeli/word/num-12-13-w5.mp3"
+ ]
+}

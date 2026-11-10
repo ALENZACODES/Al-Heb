@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-survival-small-talk-1",
+ "title": "Survival: small talk",
+ "theme": "talking-asking",
+ "level": "A1",
+ "track": "israel",
+ "pack": "survival-small-talk-1",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "p89595761",
+   "he": "חַם לִי",
+   "translit": "cham li",
+   "en": "I'm hot",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p87f0d72b",
+   "he": "קַר לִי",
+   "translit": "kar li",
+   "en": "I'm cold",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pe8db5142",
+   "he": "תִּרְגַּע",
+   "translit": "tirga",
+   "en": "chill / calm down",
+   "kind": "word",
+   "audioId": "i-18-w16",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6733231d",
+   "he": "אֲנִי עָיֵף",
+   "translit": "ani ayef",
+   "en": "I'm tired",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pa3b52619",
+   "he": "אֲנִי רָעֵב",
+   "translit": "ani ra'ev",
+   "en": "I'm hungry",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pf40963c1",
+   "he": "אֲנִי צָמֵא",
+   "translit": "ani tzame",
+   "en": "I'm thirsty",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p13070783",
+   "he": "מַה שִּׁמְךָ?",
+   "translit": "mah shimkha?",
+   "en": "what's your name?",
+   "kind": "phrase",
+   "audioId": "i-25-w1",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p4d7ae7ad",
+   "he": "אֲנִי תַּיָּר",
+   "translit": "ani tayar",
+   "en": "I'm a tourist",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "paf26ae56",
+   "he": "מָה הַמַּצָּב?",
+   "translit": "mah hamatzav?",
+   "en": "how's it going? (lit. what's the situation)",
+   "kind": "phrase",
+   "audioId": "i-18-w14",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p6db860f8",
+   "he": "מֵאֵיפֹה אַתָּה?",
+   "translit": "me'eifoh atah?",
+   "en": "where are you from?",
+   "kind": "phrase",
+   "audioId": "i-25-w3",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "p381cd549",
+   "he": "אֲנִי מִקָּנָדָה",
+   "translit": "ani mikanadah",
+   "en": "I'm from Canada",
+   "kind": "phrase",
+   "audioId": "i-25-w4",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "pa41bbdd2",
+   "he": "קוֹרְאִים לִי ...",
+   "translit": "kore'im li ...",
+   "en": "my name is ... (lit. they call me ...)",
+   "kind": "phrase",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

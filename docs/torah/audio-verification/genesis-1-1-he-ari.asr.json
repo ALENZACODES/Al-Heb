@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-1-he-ari",
+  "fingerprint": "6ec46f84cdefc23e2660245b174c0a6b745a467a88cf449782e5f05f09cce4b2",
+  "audioSha256": "1d35e241a733b45d8c32da916d02ad92e3799e86375384b0c986f81fa16ebf1f",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
+  "transcript": "ברשיסית ברל הים את השוס מים ואת הארץ.",
+  "wordEdits": 5,
+  "referenceWords": 7,
+  "wer": 0.7142857142857143,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

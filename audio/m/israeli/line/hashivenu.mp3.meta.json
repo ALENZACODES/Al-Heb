@@ -1,0 +1,23 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "הֲשִׁיבֵנוּ אֲדֹנָי אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+ "inputSha256": "a6ded0c2a712fcd2e8d6844b5db363c63776cf93703fbfb490609473a119cf11",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "הֲשִׁיבֵנוּ אֲדֹנָי אֵלֶיךָ וְנָשׁוּבָה חַדֵּשׁ יָמֵינוּ כְּקֶדֶם׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/hashivenu-w1.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/bless-priestly-2-w4.mp3",
+  "audio/m/israeli/word/hashivenu-w4.mp3",
+  "audio/m/israeli/word/hashivenu-w5.mp3",
+  "audio/m/israeli/word/hashivenu-w6.mp3",
+  "audio/m/israeli/word/hashivenu-w7.mp3"
+ ]
+}

@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aleph//Hebrew calendar 1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Aleph Bedtime Shema
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+BEGIN:VEVENT
+UID:aleph-daily-bedtime-2230@aleph
+DTSTAMP:20261108T000000Z
+DTSTART:20260901T223000
+DTEND:20260901T223500
+RRULE:FREQ=DAILY
+SUMMARY:Shema at Bedtime
+DESCRIPTION:שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינ
+ וּ יְהוָה אֶחָד׃\nShma Yisrael\, Adonai Eloheinu\, Adonai Ec
+ had.\nHear\, O Israel: the Lord is our God\, the Lord is One. (Deuteronomy
+  6:4)\n\nThe Torah says to speak these words "when you lie down and when y
+ ou rise up" (Deuteronomy 6:7)\, so many people say the Shema just before s
+ leep.\n\nPlease keep your streak going. You're doing awesome!\nOpen Aleph:
+  https://alef-review.onrender.com/#/read/shema
+TRANSP:TRANSPARENT
+CATEGORIES:Aleph
+URL:https://alef-review.onrender.com/#/read/shema
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Shema at Bedtime
+TRIGGER:PT0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

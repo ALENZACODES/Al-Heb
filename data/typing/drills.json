@@ -1,0 +1,1623 @@
+{
+ "schema": "alef-typing-drills/1",
+ "note": "Built by src/typing/build.mjs; do not edit by hand. Unpointed forms are machine-derived from the pointed source text; the word list inherits deck-order.json's not-native-reviewed status.",
+ "source": {
+  "deckOrder": "data/vocab/deck-order.json (first 200 entries)",
+  "registry": "data/corpus/registry.json (category siddur, Hebrew)"
+ },
+ "words": [
+  {
+   "id": "h5c96df63",
+   "he": "מן",
+   "pointed": "מָן",
+   "en": "manna"
+  },
+  {
+   "id": "ha3cf2c46",
+   "he": "הוה",
+   "pointed": "הִוָּה",
+   "en": "to constitute"
+  },
+  {
+   "id": "h8e3e6f50",
+   "he": "לא",
+   "pointed": "לֹא",
+   "en": "not"
+  },
+  {
+   "id": "h7c9d2ffe",
+   "he": "את",
+   "pointed": "אֵת",
+   "en": "(marks a definite direct object; not translated)"
+  },
+  {
+   "id": "pefce5ddb",
+   "he": "כל",
+   "pointed": "כָּל",
+   "en": "all, whole, everything"
+  },
+  {
+   "id": "hc6c367ff",
+   "he": "עבד",
+   "pointed": "עָבַד",
+   "en": "to work, labor"
+  },
+  {
+   "id": "h51ed2ee5",
+   "he": "חיים",
+   "pointed": "חַיִּים",
+   "en": "life"
+  },
+  {
+   "id": "h4aa6ad2a",
+   "he": "בן",
+   "pointed": "בֵּן",
+   "en": "son"
+  },
+  {
+   "id": "h4692cd32",
+   "he": "ים",
+   "pointed": "יָם",
+   "en": "sea"
+  },
+  {
+   "id": "h81e8c0d1",
+   "he": "הלך",
+   "pointed": "הָלַךְ",
+   "en": "to walk, go, especially on foot"
+  },
+  {
+   "id": "h788c5f0a",
+   "he": "עצם",
+   "pointed": "עֶצֶם",
+   "en": "bone"
+  },
+  {
+   "id": "h2cd963e3",
+   "he": "היה",
+   "pointed": "הָיָה",
+   "en": "to be"
+  },
+  {
+   "id": "h1a3574d3",
+   "he": "יד",
+   "pointed": "יָד",
+   "en": "arm"
+  },
+  {
+   "id": "hcb5a058a",
+   "he": "עכשו",
+   "pointed": "עַכְשָׁו",
+   "en": "now"
+  },
+  {
+   "id": "hf28ba308",
+   "he": "ידע",
+   "pointed": "יָדַע",
+   "en": "to know (a fact)"
+  },
+  {
+   "id": "h28a30a60",
+   "he": "אמר",
+   "pointed": "אָמַר",
+   "en": "to say, tell"
+  },
+  {
+   "id": "hf63de22c",
+   "he": "כן",
+   "pointed": "כֵּן",
+   "en": "yes"
+  },
+  {
+   "id": "hd82a3079",
+   "he": "ארץ",
+   "pointed": "אֶרֶץ",
+   "en": "country, land"
+  },
+  {
+   "id": "ha39cf3c9",
+   "he": "עולם",
+   "pointed": "עוֹלָם",
+   "en": "world"
+  },
+  {
+   "id": "h11b691b9",
+   "he": "אכל",
+   "pointed": "אָכַל",
+   "en": "to eat"
+  },
+  {
+   "id": "hdd2efa8e",
+   "he": "עשה",
+   "pointed": "עָשָׂה",
+   "en": "to do (to perform an action, to accomplish a thing)"
+  },
+  {
+   "id": "hcbafeb66",
+   "he": "שלם",
+   "pointed": "שִׁלֵּם",
+   "en": "to pay"
+  },
+  {
+   "id": "h1301ecc3",
+   "he": "ילד",
+   "pointed": "יֶלֶד",
+   "en": "child, a kid, a boy"
+  },
+  {
+   "id": "h5aed8aaa",
+   "he": "יכל",
+   "pointed": "יָכֹל",
+   "en": "can, to be able to"
+  },
+  {
+   "id": "ha18100a8",
+   "he": "יש",
+   "pointed": "יֵשׁ",
+   "en": "there is or are"
+  },
+  {
+   "id": "h50cf3648",
+   "he": "יום",
+   "pointed": "יוֹם",
+   "en": "day"
+  },
+  {
+   "id": "h2280b9b6",
+   "he": "חבר",
+   "pointed": "חָבֵר",
+   "en": "a (male) friend"
+  },
+  {
+   "id": "h8f6944f1",
+   "he": "רגע",
+   "pointed": "רֶגַע",
+   "en": "a moment"
+  },
+  {
+   "id": "h93bb64ad",
+   "he": "חשב",
+   "pointed": "חָשַׁב",
+   "en": "to think"
+  },
+  {
+   "id": "hf5a50e5d",
+   "he": "אי",
+   "pointed": "אִי",
+   "en": "an island"
+  },
+  {
+   "id": "h66c2ffb6",
+   "he": "בא",
+   "pointed": "בָּא",
+   "en": "to come"
+  },
+  {
+   "id": "hd4a691d3",
+   "he": "דבר",
+   "pointed": "דָּבָר",
+   "en": "thing"
+  },
+  {
+   "id": "h761c6cb9",
+   "he": "זהב",
+   "pointed": "זָהָב",
+   "en": "gold (metal)"
+  },
+  {
+   "id": "h28ecb454",
+   "he": "ראה",
+   "pointed": "רָאָה",
+   "en": "to see, to have vision"
+  },
+  {
+   "id": "h67c6be75",
+   "he": "זה",
+   "pointed": "זֶה",
+   "en": "this, this one"
+  },
+  {
+   "id": "hf07c1580",
+   "he": "שנה",
+   "pointed": "שָׁנָה",
+   "en": "year"
+  },
+  {
+   "id": "hbd0751bc",
+   "he": "פנים",
+   "pointed": "פָּנִים",
+   "en": "face"
+  },
+  {
+   "id": "h36fae7b2",
+   "he": "אדן",
+   "pointed": "אֶדֶן",
+   "en": "base, pedestal, socket"
+  },
+  {
+   "id": "h645365e7",
+   "he": "רצה",
+   "pointed": "רָצָה",
+   "en": "to want"
+  },
+  {
+   "id": "h7121d7fe",
+   "he": "אז",
+   "pointed": "אָז",
+   "en": "so, therefore, then, thus"
+  },
+  {
+   "id": "h19eb6a83",
+   "he": "שמר",
+   "pointed": "שָׁמַר",
+   "en": "to guard"
+  },
+  {
+   "id": "h8982ad83",
+   "he": "נתן",
+   "pointed": "נָתַן",
+   "en": "to give"
+  },
+  {
+   "id": "h342fd0de",
+   "he": "מקום",
+   "pointed": "מָקוֹם",
+   "en": "place (location or position)"
+  },
+  {
+   "id": "hf1ccd0e6",
+   "he": "אלוה",
+   "pointed": "אֱלוֹהַּ",
+   "en": "a god"
+  },
+  {
+   "id": "h103e7d27",
+   "he": "אני",
+   "pointed": "אֲנִי",
+   "en": "I"
+  },
+  {
+   "id": "hc06c43b6",
+   "he": "טוב",
+   "pointed": "טוֹב",
+   "en": "good, fair, fine"
+  },
+  {
+   "id": "h9c8ddecf",
+   "he": "בית",
+   "pointed": "בַּיִת",
+   "en": "house"
+  },
+  {
+   "id": "h1be0a47a",
+   "he": "ספר",
+   "pointed": "סִפֵּר",
+   "en": "to tell (a story), to narrate, to recount"
+  },
+  {
+   "id": "h131877e3",
+   "he": "הכיר",
+   "pointed": "הִכִּיר",
+   "en": "to recognize (a country or legal entity)"
+  },
+  {
+   "id": "hddb5189f",
+   "he": "שער",
+   "pointed": "שַׁעַר",
+   "en": "gateway (entrance)"
+  },
+  {
+   "id": "h6a0c1de1",
+   "he": "קדש",
+   "pointed": "קֹדֶשׁ",
+   "en": "sanctity, holiness"
+  },
+  {
+   "id": "h93f568f7",
+   "he": "שה",
+   "pointed": "שֶׂה",
+   "en": "lamb, kid (young of Caprinae)"
+  },
+  {
+   "id": "hdbd6764a",
+   "he": "סדר",
+   "pointed": "סִדֵּר",
+   "en": "to organize"
+  },
+  {
+   "id": "hc91c0d80",
+   "he": "הר",
+   "pointed": "הַר",
+   "en": "mountain (mass of earth and rock)"
+  },
+  {
+   "id": "hc81786d2",
+   "he": "קרה",
+   "pointed": "קָרָה",
+   "en": "to happen, occur, go on"
+  },
+  {
+   "id": "h0073b076",
+   "he": "פרעה",
+   "pointed": "פַּרְעֹה",
+   "en": "pharaoh"
+  },
+  {
+   "id": "hb91b24f9",
+   "he": "מר",
+   "pointed": "מַר",
+   "en": "bitter (having an acrid taste)"
+  },
+  {
+   "id": "hbb24a2a3",
+   "he": "שחק",
+   "pointed": "שִׂחֵק",
+   "en": "to play"
+  },
+  {
+   "id": "h67e9e6f3",
+   "he": "הודה",
+   "pointed": "הוֹדָה",
+   "en": "to admit, acknowledge, confess"
+  },
+  {
+   "id": "h8f42d584",
+   "he": "זמן",
+   "pointed": "זְמַן",
+   "en": "time"
+  },
+  {
+   "id": "h9d6352ee",
+   "he": "עין",
+   "pointed": "עַיִן",
+   "en": "eye"
+  },
+  {
+   "id": "h64c48ca3",
+   "he": "כאן",
+   "pointed": "כָּאן",
+   "en": "here, at this place"
+  },
+  {
+   "id": "ha1f4dcc0",
+   "he": "חכם",
+   "pointed": "חָכַם",
+   "en": "to be wise, become wise, learn"
+  },
+  {
+   "id": "h215beb3e",
+   "he": "כסף",
+   "pointed": "כֶּסֶף",
+   "en": "silver"
+  },
+  {
+   "id": "h4b81aad7",
+   "he": "צריך",
+   "pointed": "צָרִיךְ",
+   "en": "needing, in need of (something)"
+  },
+  {
+   "id": "ha8f1d06f",
+   "he": "אשר",
+   "pointed": "אֲשֶׁר",
+   "en": "introduces a subordinate clause"
+  },
+  {
+   "id": "hb5913147",
+   "he": "נפש",
+   "pointed": "נֶפֶשׁ",
+   "en": "a soul, psyche"
+  },
+  {
+   "id": "h24f17330",
+   "he": "מת",
+   "pointed": "מֵת",
+   "en": "to die"
+  },
+  {
+   "id": "he1a5e616",
+   "he": "בגד",
+   "pointed": "בֶּגֶד",
+   "en": "clothing, garment"
+  },
+  {
+   "id": "he945f31c",
+   "he": "חרב",
+   "pointed": "חֶרֶב",
+   "en": "sword"
+  },
+  {
+   "id": "h2d1e4a74",
+   "he": "סוף",
+   "pointed": "סוֹף",
+   "en": "an end, a finish"
+  },
+  {
+   "id": "hef6e1613",
+   "he": "איש",
+   "pointed": "אִישׁ",
+   "en": "a man, adult male human being"
+  },
+  {
+   "id": "h9ea65725",
+   "he": "רק",
+   "pointed": "רַק",
+   "en": "only"
+  },
+  {
+   "id": "h35a8fcbe",
+   "he": "קר",
+   "pointed": "קַר",
+   "en": "cold"
+  },
+  {
+   "id": "h5d62592f",
+   "he": "שמע",
+   "pointed": "שָׁמַע",
+   "en": "to hear, to be able to hear"
+  },
+  {
+   "id": "h39d32f55",
+   "he": "שם",
+   "pointed": "שָׂם",
+   "en": "to put, place"
+  },
+  {
+   "id": "hcfccb5de",
+   "he": "בעיה",
+   "pointed": "בְּעָיָה",
+   "en": "problem"
+  },
+  {
+   "id": "h364cadf4",
+   "he": "מה",
+   "pointed": "מָה",
+   "en": "what"
+  },
+  {
+   "id": "hcd826bec",
+   "he": "שר",
+   "pointed": "שָׁר",
+   "en": "to sing"
+  },
+  {
+   "id": "hfaefa59a",
+   "he": "קבל",
+   "pointed": "קִבֵּל",
+   "en": "to receive, to get"
+  },
+  {
+   "id": "he3b1acbd",
+   "he": "עיר",
+   "pointed": "עִיר",
+   "en": "city"
+  },
+  {
+   "id": "h00fd9c4f",
+   "he": "פעם",
+   "pointed": "פַּעַם",
+   "en": "a time"
+  },
+  {
+   "id": "hdcd31646",
+   "he": "אולי",
+   "pointed": "אוּלַי",
+   "en": "maybe"
+  },
+  {
+   "id": "h8ff6123b",
+   "he": "קרא",
+   "pointed": "קָרָא",
+   "en": "to read"
+  },
+  {
+   "id": "h4fed6814",
+   "he": "ראש",
+   "pointed": "רֹאשׁ",
+   "en": "head"
+  },
+  {
+   "id": "h2b39dcf2",
+   "he": "בד",
+   "pointed": "בַּד",
+   "en": "fabric, cloth, linen"
+  },
+  {
+   "id": "habcfc77f",
+   "he": "חר",
+   "pointed": "חֹר",
+   "en": "hole"
+  },
+  {
+   "id": "h1b96f9f4",
+   "he": "אהב",
+   "pointed": "אָהַב",
+   "en": "to love"
+  },
+  {
+   "id": "h0fde2ff0",
+   "he": "צבא",
+   "pointed": "צָבָא",
+   "en": "a military (armed forces)"
+  },
+  {
+   "id": "h22a20328",
+   "he": "כון",
+   "pointed": "כִּוֵּן",
+   "en": "to direct (as traffic)"
+  },
+  {
+   "id": "hd6219bc1",
+   "he": "חוץ",
+   "pointed": "חוּץ",
+   "en": "outside (of)"
+  },
+  {
+   "id": "he943571e",
+   "he": "אשה",
+   "pointed": "אִשָּׁה",
+   "en": "woman (an adult female human)"
+  },
+  {
+   "id": "h7d05bcca",
+   "he": "על",
+   "pointed": "עַל",
+   "en": "on, on top of"
+  },
+  {
+   "id": "h04c271fe",
+   "he": "גם",
+   "pointed": "גַּם",
+   "en": "also, too, additionally"
+  },
+  {
+   "id": "hf1da5ea6",
+   "he": "אש",
+   "pointed": "אֵשׁ",
+   "en": "fire"
+  },
+  {
+   "id": "h448b5d1a",
+   "he": "ירה",
+   "pointed": "יָרָה",
+   "en": "to flow as water (that is, to rain)"
+  },
+  {
+   "id": "h4f9b4058",
+   "he": "לקח",
+   "pointed": "לָקַח",
+   "en": "to take (grasp with the hands)"
+  },
+  {
+   "id": "hd8a5c2cf",
+   "he": "מצא",
+   "pointed": "מָצָא",
+   "en": "to find"
+  },
+  {
+   "id": "h7439bf9d",
+   "he": "מכל",
+   "pointed": "מְכָל",
+   "en": "container, bin"
+  },
+  {
+   "id": "h9f3ab68a",
+   "he": "חיב",
+   "pointed": "חַיָּב",
+   "en": "obligated, required, bound, must"
+  },
+  {
+   "id": "h640d9686",
+   "he": "קול",
+   "pointed": "קוֹל",
+   "en": "voice"
+  },
+  {
+   "id": "hac94b307",
+   "he": "שדה",
+   "pointed": "שָׂדֶה",
+   "en": "field (wide space for crops)"
+  },
+  {
+   "id": "h29e4f547",
+   "he": "די",
+   "pointed": "דַּי",
+   "en": "enough, sufficient, adequate"
+  },
+  {
+   "id": "h8d0e13f2",
+   "he": "ברר",
+   "pointed": "בָּרַר",
+   "en": "to select, to pick, to sort"
+  },
+  {
+   "id": "h1ef19acb",
+   "he": "הוא",
+   "pointed": "הוּא",
+   "en": "he"
+  },
+  {
+   "id": "heaa07285",
+   "he": "אחר",
+   "pointed": "אִחֵר",
+   "en": "to be late"
+  },
+  {
+   "id": "h720b8d19",
+   "he": "אמה",
+   "pointed": "אַמָּה",
+   "en": "forearm"
+  },
+  {
+   "id": "h524e52f1",
+   "he": "מצב",
+   "pointed": "מַצָּב",
+   "en": "a shape, a situation, a state"
+  },
+  {
+   "id": "hb4ccc0e9",
+   "he": "עדה",
+   "pointed": "עֵדָה",
+   "en": "a group (as in ethnic group)"
+  },
+  {
+   "id": "h821319f2",
+   "he": "אב",
+   "pointed": "אָב",
+   "en": "father"
+  },
+  {
+   "id": "heb070da2",
+   "he": "קנה",
+   "pointed": "קָנָה",
+   "en": "to buy, to purchase"
+  },
+  {
+   "id": "h5ad6806e",
+   "he": "עזר",
+   "pointed": "עָזַר",
+   "en": "to help, to assist"
+  },
+  {
+   "id": "ha7e901e9",
+   "he": "ירא",
+   "pointed": "יָרֵא",
+   "en": "to fear, be afraid"
+  },
+  {
+   "id": "h0902557b",
+   "he": "הגיד",
+   "pointed": "הִגִּיד",
+   "en": "to tell, say"
+  },
+  {
+   "id": "h81024165",
+   "he": "מאוד",
+   "pointed": "מְאוֹד",
+   "en": "very, quite"
+  },
+  {
+   "id": "h5ae20314",
+   "he": "דרך",
+   "pointed": "דֶּרֶךְ",
+   "en": "a road, a path, a way"
+  },
+  {
+   "id": "hd2fac0d2",
+   "he": "עץ",
+   "pointed": "עֵץ",
+   "en": "tree"
+  },
+  {
+   "id": "h5385f0f3",
+   "he": "סבה",
+   "pointed": "סִבָּה",
+   "en": "cause"
+  },
+  {
+   "id": "h320463c0",
+   "he": "חזר",
+   "pointed": "חָזַר",
+   "en": "to return"
+  },
+  {
+   "id": "h32c69c06",
+   "he": "של",
+   "pointed": "שֶׁל",
+   "en": "of; belonging to"
+  },
+  {
+   "id": "he6287163",
+   "he": "זבח",
+   "pointed": "זָבַח",
+   "en": "to slaughter, to kill"
+  },
+  {
+   "id": "h5cae87cc",
+   "he": "בטח",
+   "pointed": "בָּטַח",
+   "en": "to rely on, to have faith in, to depend on"
+  },
+  {
+   "id": "he15e52d3",
+   "he": "טלפון",
+   "pointed": "טֶלֶפוֹן",
+   "en": "telephone, phone"
+  },
+  {
+   "id": "h29ebe493",
+   "he": "קשה",
+   "pointed": "קָשֶׁה",
+   "en": "hard (resistant to pressure)"
+  },
+  {
+   "id": "h1c9d2f5e",
+   "he": "יחיד",
+   "pointed": "יָחִיד",
+   "en": "individual"
+  },
+  {
+   "id": "hf95a2330",
+   "he": "נסה",
+   "pointed": "נִסָּה",
+   "en": "to try, to attempt"
+  },
+  {
+   "id": "h35fcbc75",
+   "he": "נצח",
+   "pointed": "נִצֵּחַ",
+   "en": "to win (in a game, an election, or the like)"
+  },
+  {
+   "id": "hea4f6fcc",
+   "he": "חן",
+   "pointed": "חֵן",
+   "en": "charm, grace, likeability"
+  },
+  {
+   "id": "h14635975",
+   "he": "עוד",
+   "pointed": "עוֹד",
+   "en": "again, once more"
+  },
+  {
+   "id": "h890d1505",
+   "he": "לב",
+   "pointed": "לֵב",
+   "en": "heart"
+  },
+  {
+   "id": "ha7545fff",
+   "he": "אח",
+   "pointed": "אָח",
+   "en": "brother"
+  },
+  {
+   "id": "hf22f36ee",
+   "he": "לחם",
+   "pointed": "לֶחֶם",
+   "en": "bread"
+  },
+  {
+   "id": "h68843f80",
+   "he": "אל",
+   "pointed": "אֶל",
+   "en": "to, towards, into"
+  },
+  {
+   "id": "hf94d4d72",
+   "he": "אד",
+   "pointed": "אֵד",
+   "en": "a vapour, a fume"
+  },
+  {
+   "id": "h69ab7cef",
+   "he": "הצטער",
+   "pointed": "הִצְטַעֵר",
+   "en": "to be sorry, remorseful"
+  },
+  {
+   "id": "h72ac53a6",
+   "he": "צאן",
+   "pointed": "צֹאן",
+   "en": "sheep, flock of sheep"
+  },
+  {
+   "id": "hfa746c05",
+   "he": "עדין",
+   "pointed": "עֲדַיִן",
+   "en": "still, yet"
+  },
+  {
+   "id": "h511bbb6f",
+   "he": "הרגיש",
+   "pointed": "הִרְגִּישׁ",
+   "en": "to feel, sense"
+  },
+  {
+   "id": "h3fbb59c8",
+   "he": "קדם",
+   "pointed": "קָדַם",
+   "en": "to precede, to come before"
+  },
+  {
+   "id": "h3c9f9b9b",
+   "he": "אהל",
+   "pointed": "אֹהֶל",
+   "en": "tent"
+  },
+  {
+   "id": "hc444e8d9",
+   "he": "יכלת",
+   "pointed": "יְכֹלֶת",
+   "en": "ability, capability, power"
+  },
+  {
+   "id": "h1797f84f",
+   "he": "צר",
+   "pointed": "צָר",
+   "en": "to shape"
+  },
+  {
+   "id": "hb7b6cc8b",
+   "he": "כי",
+   "pointed": "כִּי",
+   "en": "because, for, since"
+  },
+  {
+   "id": "hf4b5a979",
+   "he": "איפה",
+   "pointed": "אֵיפֹה",
+   "en": "where"
+  },
+  {
+   "id": "hb5f05782",
+   "he": "בקש",
+   "pointed": "בִּקֵּשׁ",
+   "en": "to ask for, request"
+  },
+  {
+   "id": "hba98874f",
+   "he": "נכון",
+   "pointed": "נָכוֹן",
+   "en": "right, correct"
+  },
+  {
+   "id": "h58023e1f",
+   "he": "חל",
+   "pointed": "חָל",
+   "en": "to apply (of a law, method, etc.)"
+  },
+  {
+   "id": "hbbbfa9a7",
+   "he": "סרט",
+   "pointed": "סֶרֶט",
+   "en": "ribbon"
+  },
+  {
+   "id": "h9034f8b8",
+   "he": "מות",
+   "pointed": "מָוֶת",
+   "en": "death"
+  },
+  {
+   "id": "h95c52e9c",
+   "he": "מלה",
+   "pointed": "מִלָּה",
+   "en": "word"
+  },
+  {
+   "id": "h0a70642a",
+   "he": "אבא",
+   "pointed": "אַבָּא",
+   "en": "father"
+  },
+  {
+   "id": "hf14f89e0",
+   "he": "יבא",
+   "pointed": "יִבֵּא",
+   "en": "to import"
+  },
+  {
+   "id": "hf9a1a55b",
+   "he": "שנים",
+   "pointed": "שְׁנַיִם",
+   "en": "two"
+  },
+  {
+   "id": "hc43effe9",
+   "he": "דם",
+   "pointed": "דָּם",
+   "en": "blood"
+  },
+  {
+   "id": "he9d6c9ab",
+   "he": "כר",
+   "pointed": "כַּר",
+   "en": "cushion"
+  },
+  {
+   "id": "hfb819565",
+   "he": "רוח",
+   "pointed": "רוּחַ",
+   "en": "wind, a wind"
+  },
+  {
+   "id": "h9dabc184",
+   "he": "ברך",
+   "pointed": "בֵּרֵךְ",
+   "en": "to bless"
+  },
+  {
+   "id": "h352b83f7",
+   "he": "כה",
+   "pointed": "כֹּה",
+   "en": "thus, in this way"
+  },
+  {
+   "id": "h0fc2ca76",
+   "he": "התחיל",
+   "pointed": "הִתְחִיל",
+   "en": "to start, to begin"
+  },
+  {
+   "id": "hfd3118ed",
+   "he": "הגיע",
+   "pointed": "הִגִּיעַ",
+   "en": "to arrive, to get, to reach"
+  },
+  {
+   "id": "h0f231144",
+   "he": "אם",
+   "pointed": "אִם",
+   "en": "if, whether"
+  },
+  {
+   "id": "h69a35691",
+   "he": "פר",
+   "pointed": "פַּר",
+   "en": "bull, ox"
+  },
+  {
+   "id": "hd83852fd",
+   "he": "הבין",
+   "pointed": "הֵבִין",
+   "en": "to understand"
+  },
+  {
+   "id": "hadfa84bd",
+   "he": "קל",
+   "pointed": "קַל",
+   "en": "light (of low weight)"
+  },
+  {
+   "id": "h2d58afb3",
+   "he": "חי",
+   "pointed": "חַי",
+   "en": "to live (to be alive, to have life)"
+  },
+  {
+   "id": "hf8c8316a",
+   "he": "שלום",
+   "pointed": "שָׁלוֹם",
+   "en": "peace"
+  },
+  {
+   "id": "hc086f897",
+   "he": "מתק",
+   "pointed": "מֹתֶק",
+   "en": "sweetness"
+  },
+  {
+   "id": "he0448a86",
+   "he": "פה",
+   "pointed": "פֹּה",
+   "en": "here, this place, at this place, in this place"
+  },
+  {
+   "id": "h6b636d7b",
+   "he": "ארוחה",
+   "pointed": "אֲרוּחָה",
+   "en": "meal"
+  },
+  {
+   "id": "hc6cdec2b",
+   "he": "דוד",
+   "pointed": "דּוֹד",
+   "en": "uncle"
+  },
+  {
+   "id": "h7e5cc0c5",
+   "he": "עבודה",
+   "pointed": "עֲבוֹדָה",
+   "en": "worship, service"
+  },
+  {
+   "id": "h13c6683f",
+   "he": "הכיל",
+   "pointed": "הֵכִיל",
+   "en": "to contain"
+  },
+  {
+   "id": "hba22ae3e",
+   "he": "חסד",
+   "pointed": "חֶסֶד",
+   "en": "loving kindness, benevolence, goodness"
+  },
+  {
+   "id": "h139c94a9",
+   "he": "שהה",
+   "pointed": "שָׁהָה",
+   "en": "to stay, spend (time)"
+  },
+  {
+   "id": "h85ac8666",
+   "he": "שן",
+   "pointed": "שֵׁן",
+   "en": "tooth"
+  },
+  {
+   "id": "hddb7aae9",
+   "he": "אדון",
+   "pointed": "אָדוֹן",
+   "en": "lord"
+  },
+  {
+   "id": "he53d1d1d",
+   "he": "אבן",
+   "pointed": "אֶבֶן",
+   "en": "stone"
+  },
+  {
+   "id": "p580df509",
+   "he": "בבקשה",
+   "pointed": "בְּבַקָּשָׁה",
+   "en": "please / you're welcome"
+  },
+  {
+   "id": "hd0a91fd4",
+   "he": "ממש",
+   "pointed": "מַמָּשׁ",
+   "en": "really, very, truly"
+  },
+  {
+   "id": "h13673f80",
+   "he": "צדק",
+   "pointed": "צָדַק",
+   "en": "to be right"
+  },
+  {
+   "id": "hce5d4d38",
+   "he": "אפן",
+   "pointed": "אֹפֶן",
+   "en": "way, manner"
+  },
+  {
+   "id": "h1561ca15",
+   "he": "עבר",
+   "pointed": "עָבַר",
+   "en": "to pass, to cross"
+  },
+  {
+   "id": "hc30c99f6",
+   "he": "חכה",
+   "pointed": "חִכָּה",
+   "en": "to wait, wait for"
+  },
+  {
+   "id": "h10798813",
+   "he": "למד",
+   "pointed": "לָמַד",
+   "en": "to learn, to study"
+  },
+  {
+   "id": "ha4595016",
+   "he": "שוטר",
+   "pointed": "שׁוֹטֵר",
+   "en": "policeman, cop"
+  },
+  {
+   "id": "he5c23387",
+   "he": "אמת",
+   "pointed": "אֱמֶת",
+   "en": "truth"
+  },
+  {
+   "id": "hfd4bf43b",
+   "he": "זכר",
+   "pointed": "זָכַר",
+   "en": "to remember"
+  },
+  {
+   "id": "hdee3e527",
+   "he": "אנחנו",
+   "pointed": "אֲנַחְנוּ",
+   "en": "we"
+  },
+  {
+   "id": "h3676c260",
+   "he": "נשא",
+   "pointed": "נָשָׂא",
+   "en": "to lift"
+  },
+  {
+   "id": "hfe4ebf2c",
+   "he": "אדם",
+   "pointed": "אָדָם",
+   "en": "a man, a human"
+  },
+  {
+   "id": "h3e375762",
+   "he": "רע",
+   "pointed": "רַע",
+   "en": "bad"
+  },
+  {
+   "id": "hde82cf75",
+   "he": "הטה",
+   "pointed": "הִטָּה",
+   "en": "to tilt, slant"
+  },
+  {
+   "id": "h6554536b",
+   "he": "פלשתי",
+   "pointed": "פְּלִשְׁתִּי",
+   "en": "a Philistine"
+  },
+  {
+   "id": "h3b32dc48",
+   "he": "גוי",
+   "pointed": "גּוֹי",
+   "en": "gentile (a non-Jewish person), goy"
+  },
+  {
+   "id": "h95fec412",
+   "he": "אבל",
+   "pointed": "אָבַל",
+   "en": "to bewail"
+  }
+ ],
+ "lines": [
+  {
+   "id": "shema-2",
+   "title": "Baruch shem (said after Shema line)",
+   "he": "ברוך שם כבוד מלכותו לעולם ועד",
+   "pointed": "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד",
+   "en": "Blessed is the name of the glory of his kingship for ever and ever."
+  },
+  {
+   "id": "bless-formula-1",
+   "title": "Blessing formula (Baruch atah Adonai Eloheinu Melech ha'olam)",
+   "he": "ברוך אתה יהוה אלהינו מלך העולם",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם",
+   "en": "Blessed are you, LORD our God, king of the world,"
+  },
+  {
+   "id": "kiddush-wine-1",
+   "title": "Blessing over wine",
+   "he": "ברוך אתה יהוה אלהינו מלך העולם בורא פרי הגפן",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן",
+   "en": "Blessed are you, LORD our God, king of the world, who creates the fruit of the vine."
+  },
+  {
+   "id": "hamotzi",
+   "title": "HaMotzi (blessing over bread)",
+   "he": "ברוך אתה יהוה אלהינו מלך העולם המוציא לחם מן הארץ",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ",
+   "en": "Blessed are you, LORD our God, king of the world, who brings forth bread from the earth."
+  },
+  {
+   "id": "torah-barchu#1",
+   "title": "Barchu (call to the Torah blessing)",
+   "he": "ברכו את יהוה המברך",
+   "pointed": "בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ",
+   "en": "From: Barchu (call to the Torah blessing)"
+  },
+  {
+   "id": "torah-barchu#2",
+   "title": "Barchu (call to the Torah blessing)",
+   "he": "ברוך יהוה המברך לעולם ועד",
+   "pointed": "בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד",
+   "en": "From: Barchu (call to the Torah blessing)"
+  },
+  {
+   "id": "torah-bless-2#2",
+   "title": "Torah blessing (after reading)",
+   "he": "ברוך אתה יהוה נותן התורה",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה נוֹתֵן הַתּוֹרָה",
+   "en": "From: Torah blessing (after reading)"
+  },
+  {
+   "id": "amidah-lips",
+   "title": "Amidah preface: open my lips",
+   "he": "אדני שפתי תפתח ופי יגיד תהלתך",
+   "pointed": "אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ",
+   "en": "My Lord, open my lips, and my mouth will declare your praise."
+  },
+  {
+   "id": "avot-1#2",
+   "title": "Amidah opening (Avot)",
+   "he": "מלך עוזר ומושיע ומגן",
+   "pointed": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן",
+   "en": "From: Amidah opening (Avot)"
+  },
+  {
+   "id": "adon-olam-1#1",
+   "title": "Adon Olam",
+   "he": "אדון עולם אשר מלך בטרם כל יציר נברא",
+   "pointed": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ בְּטֶרֶם כָּל יְצִיר נִבְרָא",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#2",
+   "title": "Adon Olam",
+   "he": "לעת נעשה בחפצו כל אזי מלך שמו נקרא",
+   "pointed": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#3",
+   "title": "Adon Olam",
+   "he": "ואחרי ככלות הכל לבדו ימלך נורא",
+   "pointed": "וְאַחֲרֵי כִּכְלוֹת הַכֹּל לְבַדּוֹ יִמְלֹךְ נוֹרָא",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#4",
+   "title": "Adon Olam",
+   "he": "והוא היה והוא הוה והוא יהיה בתפארה",
+   "pointed": "וְהוּא הָיָה וְהוּא הֹוֶה וְהוּא יִהְיֶה בְּתִפְאָרָה",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#5",
+   "title": "Adon Olam",
+   "he": "והוא אחד ואין שני להמשיל לו להחבירה",
+   "pointed": "וְהוּא אֶחָד וְאֵין שֵׁנִי לְהַמְשִׁיל לוֹ לְהַחְבִּירָה",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#6",
+   "title": "Adon Olam",
+   "he": "בלי ראשית בלי תכלית ולו העז והמשרה",
+   "pointed": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית וְלוֹ הָעֹז וְהַמִּשְׂרָה",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#7",
+   "title": "Adon Olam",
+   "he": "והוא אלי וחי גואלי וצור חבלי בעת צרה",
+   "pointed": "וְהוּא אֵלִי וְחַי גוֹאֲלִי וְצוּר חֶבְלִי בְּעֵת צָרָה",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#8",
+   "title": "Adon Olam",
+   "he": "והוא נסי ומנוס לי מנת כוסי ביום אקרא",
+   "pointed": "וְהוּא נִסִּי וּמָנוֹס לִי מְנָת כּוֹסִי בְּיוֹם אֶקְרָא",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#9",
+   "title": "Adon Olam",
+   "he": "בידו אפקיד רוחי בעת אישן ואעירה",
+   "pointed": "בְּיָדוֹ אַפְקִיד רוּחִי בְּעֵת אִישָׁן וְאָעִירָה",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "adon-olam-1#10",
+   "title": "Adon Olam",
+   "he": "ועם רוחי גויתי יהוה לי ולא אירא",
+   "pointed": "וְעִם רוּחִי גְּוִיָּתִי יְהוָה לִי וְלֹא אִירָא",
+   "en": "From: Adon Olam"
+  },
+  {
+   "id": "vayehi-binsoa#2",
+   "title": "Vayehi binsoa ha-aron (opening the ark)",
+   "he": "כי מציון תצא תורה ודבר יהוה מירושלם",
+   "pointed": "כִּי מִצִּיּוֹן תֵּצֵא תוֹרָה וּדְבַר יְהוָה מִירוּשָׁלָםִ",
+   "en": "From: Vayehi binsoa ha-aron (opening the ark)"
+  },
+  {
+   "id": "vayehi-binsoa#3",
+   "title": "Vayehi binsoa ha-aron (opening the ark)",
+   "he": "ברוך שנתן תורה לעמו ישראל בקדשתו",
+   "pointed": "בָּרוּךְ שֶׁנָּתַן תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל בִּקְדֻשָּׁתוֹ",
+   "en": "From: Vayehi binsoa ha-aron (opening the ark)"
+  },
+  {
+   "id": "lecha-hashem#2",
+   "title": "Lecha Adonai hagedulah (carrying the Torah around)",
+   "he": "לך יהוה הממלכה והמתנשא לכל לראש",
+   "pointed": "לְךָ יְהוָה הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ",
+   "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
+  },
+  {
+   "id": "lecha-hashem#3",
+   "title": "Lecha Adonai hagedulah (carrying the Torah around)",
+   "he": "רוממו יהוה אלהינו והשתחוו להדם רגליו קדוש הוא",
+   "pointed": "רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לַהֲדֹם רַגְלָיו קָדוֹשׁ הוּא",
+   "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
+  },
+  {
+   "id": "lecha-hashem#4",
+   "title": "Lecha Adonai hagedulah (carrying the Torah around)",
+   "he": "רוממו יהוה אלהינו והשתחוו להר קדשו כי קדוש יהוה אלהינו",
+   "pointed": "רוֹמְמוּ יְהוָה אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ לְהַר קָדְשׁוֹ כִּי קָדוֹשׁ יְהוָה אֱלֹהֵינוּ",
+   "en": "From: Lecha Adonai hagedulah (carrying the Torah around)"
+  },
+  {
+   "id": "vezot-hatorah#1",
+   "title": "V'zot haTorah (said when the Torah is lifted)",
+   "he": "וזאת התורה אשר שם משה לפני בני ישראל",
+   "pointed": "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל",
+   "en": "From: V'zot haTorah (said when the Torah is lifted)"
+  },
+  {
+   "id": "vezot-hatorah#2",
+   "title": "V'zot haTorah (said when the Torah is lifted)",
+   "he": "על פי יהוה ביד משה",
+   "pointed": "עַל פִּי יְהוָה בְּיַד מֹשֶׁה",
+   "en": "From: V'zot haTorah (said when the Torah is lifted)"
+  },
+  {
+   "id": "etz-chaim#1",
+   "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
+   "he": "עץ חיים היא למחזיקים בה ותומכיה מאשר",
+   "pointed": "עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ וְתוֹמְכֶיהָ מְאֻשָּׁר",
+   "en": "From: Etz chaim hi (sung as the Torah is returned to the ark)"
+  },
+  {
+   "id": "etz-chaim#2",
+   "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
+   "he": "דרכיה דרכי נעם וכל נתיבותיה שלום",
+   "pointed": "דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם",
+   "en": "From: Etz chaim hi (sung as the Torah is returned to the ark)"
+  },
+  {
+   "id": "etz-chaim#3",
+   "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
+   "he": "ארך ימים בימינה בשמאלה עשר וכבוד",
+   "pointed": "אֹרֶךְ יָמִים בִּימִינָהּ בִּשְׂמֹאלָהּ עֹשֶׁר וְכָבוֹד",
+   "en": "From: Etz chaim hi (sung as the Torah is returned to the ark)"
+  },
+  {
+   "id": "etz-chaim#4",
+   "title": "Etz chaim hi (sung as the Torah is returned to the ark)",
+   "he": "יהוה חפץ למען צדקו יגדיל תורה ויאדיר",
+   "pointed": "יְהוָה חָפֵץ לְמַעַן צִדְקוֹ יַגְדִּיל תּוֹרָה וְיַאְדִּיר",
+   "en": "From: Etz chaim hi (sung as the Torah is returned to the ark)"
+  },
+  {
+   "id": "hagomel#2",
+   "title": "Birkat Hagomel (after recovery or safe travel) and the congregation's response",
+   "he": "מי שגמלך טוב הוא יגמלך כל טוב סלה",
+   "pointed": "מִי שֶׁגְּמָלְךָ טוֹב הוּא יִגְמָלְךָ כָּל טוֹב סֶלָה",
+   "en": "From: Birkat Hagomel (after recovery or safe travel) and the congregation's response"
+  },
+  {
+   "id": "avot-closing",
+   "title": "Amidah first blessing, closing (Magen Avraham)",
+   "he": "מלך עוזר ומושיע ומגן ברוך אתה יהוה מגן אברהם",
+   "pointed": "מֶלֶךְ עוֹזֵר וּמוֹשִׁיעַ וּמָגֵן בָּרוּךְ אַתָּה יְהוָה מָגֵן אַבְרָהָם",
+   "en": "King, helper, saviour and shield. Blessed are you, LORD, shield of Abraham."
+  },
+  {
+   "id": "amidah-yihyu",
+   "title": "Yihyu leratzon imrei fi (verse that closes the Amidah)",
+   "he": "יהיו לרצון אמרי פי והגיון לבי לפניך יהוה צורי וגואלי",
+   "pointed": "יִהְיוּ לְרָצוֹן אִמְרֵי פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ יְהוָה צוּרִי וְגוֹאֲלִי",
+   "en": "May the words of my mouth and the thoughts of my heart be acceptable before you, LORD, my rock and my redeemer."
+  },
+  {
+   "id": "sim-shalom#2",
+   "title": "Sim shalom (peace blessing of the morning Amidah)",
+   "he": "ברוך אתה יהוה המברך את עמו ישראל בשלום",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה הַמְבָרֵךְ אֶת־עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם",
+   "en": "From: Sim shalom (peace blessing of the morning Amidah)"
+  },
+  {
+   "id": "kiddush-shabbat-eve#2",
+   "title": "Kiddush for Shabbat evening (the sanctification blessing)",
+   "he": "ברוך אתה יהוה מקדש השבת",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה מְקַדֵּשׁ הַשַּׁבָּת",
+   "en": "From: Kiddush for Shabbat evening (the sanctification blessing)"
+  },
+  {
+   "id": "lecha-dodi-1#1",
+   "title": "Lecha Dodi (refrain and first verse)",
+   "he": "לכה דודי לקראת כלה פני שבת נקבלה",
+   "pointed": "לְכָה דוֹדִי לִקְרַאת כַּלָּה פְּנֵי שַׁבָּת נְקַבְּלָה",
+   "en": "From: Lecha Dodi (refrain and first verse)"
+  },
+  {
+   "id": "yigdal#1",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "יגדל אלהים חי וישתבח נמצא ואין עת אל מציאותו",
+   "pointed": "יִגְדַּל אֱלֹהִים חַי וְיִשְׁתַּבַּח נִמְצָא וְאֵין עֵת אֶל מְצִיאוּתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#2",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "אחד ואין יחיד כיחודו נעלם וגם אין סוף לאחדותו",
+   "pointed": "אֶחָד וְאֵין יָחִיד כְּיִחוּדוֹ נֶעְלָם וְגַם אֵין סוֹף לְאַחְדּוּתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#3",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "אין לו דמות הגוף ואינו גוף לא נערך אליו קדשתו",
+   "pointed": "אֵין לוֹ דְמוּת הַגּוּף וְאֵינוֹ גוּף לֹא נַעֲרֹךְ אֵלָיו קְדֻשָּׁתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#4",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "קדמון לכל דבר אשר נברא ראשון ואין ראשית לראשיתו",
+   "pointed": "קַדְמוֹן לְכָל־דָּבָר אֲשֶׁר נִבְרָא רִאשׁוֹן וְאֵין רֵאשִׁית לְרֵאשִׁיתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#5",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "הנו אדון עולם לכל נוצר יורה גדלתו ומלכותו",
+   "pointed": "הִנּוֹ אֲדוֹן עוֹלָם לְכָל־נוֹצָר יוֹרֶה גְדֻלָּתוֹ וּמַלְכוּתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#6",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "שפע נבואתו נתנו אל אנשי סגלתו ותפארתו",
+   "pointed": "שֶׁפַע נְבוּאָתוֹ נְתָנוֹ אֶל אַנְשֵׁי סְגֻלָּתוֹ וְתִפְאַרְתּוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#7",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "לא קם בישראל כמשה עוד נביא ומביט את תמונתו",
+   "pointed": "לֹא קָם בְּיִשְׂרָאֵל כְּמֹשֶׁה עוֹד נָבִיא וּמַבִּיט אֶת־תְּמוּנָתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#8",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "תורת אמת נתן לעמו אל על יד נביאו נאמן ביתו",
+   "pointed": "תּוֹרַת אֱמֶת נָתַן לְעַמּוֹ אֵל עַל יַד נְבִיאוֹ נֶאֱמַן בֵּיתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#9",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "לא יחליף האל ולא ימיר דתו לעולמים לזולתו",
+   "pointed": "לֹא יַחֲלִיף הָאֵל וְלֹא יָמִיר דָּתוֹ לְעוֹלָמִים לְזוּלָתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#10",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "צופה ויודע סתרינו מביט לסוף דבר בקדמתו",
+   "pointed": "צוֹפֶה וְיוֹדֵעַ סְתָרֵינוּ מַבִּיט לְסוֹף דָּבָר בְּקַדְמָתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#11",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "גומל לאיש חסד כמפעלו נותן לרשע רע כרשעתו",
+   "pointed": "גּוֹמֵל לְאִישׁ חֶסֶד כְּמִפְעָלוֹ נוֹתֵן לְרָשָׁע רָע כְּרִשְׁעָתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#12",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "ישלח לקץ הימין משיחנו לפדות מחכי קץ ישועתו",
+   "pointed": "יִשְׁלַח לְקֵץ הַיָּמִין מְשִׁיחֵנוּ לִפְדּוֹת מְחַכֵּי קֵץ יְשׁוּעָתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "yigdal#13",
+   "title": "Yigdal (hymn of the Thirteen Principles)",
+   "he": "מתים יחיה אל ברב חסדו ברוך עדי עד שם תהלתו",
+   "pointed": "מֵתִים יְחַיֶּה אֵל בְּרֹב חַסְדּוֹ בָּרוּךְ עֲדֵי עַד שֵׁם תְּהִלָּתוֹ",
+   "en": "From: Yigdal (hymn of the Thirteen Principles)"
+  },
+  {
+   "id": "zimun-opening#1",
+   "title": "Zimun: \"Rabotai nevarech\" and the response",
+   "he": "רבותי נברך",
+   "pointed": "רַבּוֹתַי נְבָרֵךְ",
+   "en": "From: Zimun: \"Rabotai nevarech\" and the response"
+  },
+  {
+   "id": "zimun-opening#2",
+   "title": "Zimun: \"Rabotai nevarech\" and the response",
+   "he": "יהי שם יהוה מברך מעתה ועד עולם",
+   "pointed": "יְהִי שֵׁם יְהוָה מְבֹרָךְ מֵעַתָּה וְעַד־עוֹלָם",
+   "en": "From: Zimun: \"Rabotai nevarech\" and the response"
+  },
+  {
+   "id": "mi-sheberach-opening",
+   "title": "Mi sheberach avoteinu (opening words only)",
+   "he": "מי שברך אבותינו אברהם יצחק ויעקב",
+   "pointed": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ אַבְרָהָם יִצְחָק וְיַעֲקֹב",
+   "en": "He who blessed our ancestors Abraham, Isaac and Jacob"
+  },
+  {
+   "id": "havdalah-opening#1",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "הנה אל ישועתי אבטח ולא אפחד",
+   "pointed": "הִנֵּה אֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#2",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "כי עזי וזמרת יה יהוה ויהי לי לישועה",
+   "pointed": "כִּי עָזִּי וְזִמְרָת יָהּ יְהוָה וַיְהִי לִי לִישׁוּעָה",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#3",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "ושאבתם מים בששון ממעיני הישועה",
+   "pointed": "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׁוֹן מִמַּעַיְנֵי הַיְשׁוּעָה",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#4",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "ליהוה הישועה על עמך ברכתך סלה",
+   "pointed": "לַיהֹוָה הַיְשׁוּעָה עַל עַמְּךָ בִרְכָתֶךָ סֶּלָה",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#5",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "יהוה צבאות עמנו משגב לנו אלהי יעקב סלה",
+   "pointed": "יְהוָה צְבָאוֹת עִמָּנוּ מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#6",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "יהוה צבאות אשרי אדם בטח בך",
+   "pointed": "יְהוָה צְבָאוֹת אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#7",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "יהוה הושיעה המלך יעננו ביום קראנו",
+   "pointed": "יְהוָה הוֹשִׁיעָה הַמֶּלֶךְ יַעֲנֵנוּ בְּיוֹם קָרְאֵנוּ",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#8",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "ליהודים היתה אורה ושמחה וששון ויקר כן תהיה לנו",
+   "pointed": "לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה וְשָׂשׁוֹן וִיקָר כֵּן תִּהְיֶה לָנוּ",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-opening#9",
+   "title": "Hinei El yeshuati (opening of Havdalah)",
+   "he": "כוס ישועות אשא ובשם יהוה אקרא",
+   "pointed": "כּוֹס יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְהוָה אֶקְרָא",
+   "en": "From: Hinei El yeshuati (opening of Havdalah)"
+  },
+  {
+   "id": "havdalah-spices",
+   "title": "Havdalah: blessing over spices (besamim)",
+   "he": "ברוך אתה יהוה אלהינו מלך העולם בורא מיני בשמים",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מִינֵי בְשָׂמִים",
+   "en": "Blessed are you, LORD our God, king of the world, who creates kinds of spices."
+  },
+  {
+   "id": "havdalah-flame",
+   "title": "Havdalah: blessing over the flame",
+   "he": "ברוך אתה יהוה אלהינו מלך העולם בורא מאורי האש",
+   "pointed": "בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא מְאוֹרֵי הָאֵשׁ",
+   "en": "Blessed are you, LORD our God, king of the world, who creates the lights of the fire."
+  }
+ ]
+}

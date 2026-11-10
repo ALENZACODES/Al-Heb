@@ -1,0 +1,558 @@
+{
+ "schema": "alef-vocab-audit-baseline/1",
+ "note": "Known hits of tools/vocab/audit_checks.mjs on data/vocab/vocab5000.json and words.json. Every key here is listed and explained in docs/vocab/AUDIT-RESPONSE.md; tests/vocab.audit.test.js fails on any hit outside this list and on a stale entry. Rewrite with --write-baseline after fixing data.",
+ "counts": {
+  "null-pointed": 3,
+  "hebrew-in-gloss": 0,
+  "verb-gloss-form": 3,
+  "duplicate-lemma-pointed": 62,
+  "circular-gloss": 21,
+  "furtive-patach-translit": 0
+ },
+ "hits": {
+  "null-pointed": [
+   {
+    "key": "v66f62b1a",
+    "lemma": "עכשיו",
+    "pointed": null,
+    "detail": "now"
+   },
+   {
+    "key": "vdf2737fe",
+    "lemma": "יום שישי",
+    "pointed": null,
+    "detail": "Friday"
+   },
+   {
+    "key": "vba010668",
+    "lemma": "שחור",
+    "pointed": null,
+    "detail": "black"
+   }
+  ],
+  "hebrew-in-gloss": [],
+  "verb-gloss-form": [
+   {
+    "key": "vaa2ad51d",
+    "lemma": "הוה",
+    "pointed": "הֹוֶה",
+    "detail": "is, are (present-tense form of 'to be')"
+   },
+   {
+    "key": "vf4f042e6",
+    "lemma": "יכל",
+    "pointed": "יָכֹל",
+    "detail": "can, to be able to"
+   },
+   {
+    "key": "vb667e8ae",
+    "lemma": "הוא",
+    "pointed": "הֱוֵא",
+    "detail": "be! (rare imperative of 'to be')"
+   }
+  ],
+  "duplicate-lemma-pointed": [
+   {
+    "key": "את|אֵת",
+    "lemma": "את",
+    "pointed": "אֵת",
+    "detail": "1:particle:(marks a definite direct object; not translated) / 1462:noun:shovel"
+   },
+   {
+    "key": "אני|אֲנִי",
+    "lemma": "אני",
+    "pointed": "אֲנִי",
+    "detail": "6:pron:I / 701:noun:ego, the self"
+   },
+   {
+    "key": "כי|כִּי",
+    "lemma": "כי",
+    "pointed": "כִּי",
+    "detail": "22:conj:because, for, since / 2613:noun:cauterization, branding"
+   },
+   {
+    "key": "יש|יֵשׁ",
+    "lemma": "יש",
+    "pointed": "יֵשׁ",
+    "detail": "23:particle:there is, there are; (with the prefix 'to') to have / 1801:noun:being, existence"
+   },
+   {
+    "key": "טוב|טוֹב",
+    "lemma": "טוב",
+    "pointed": "טוֹב",
+    "detail": "30:adj:good, fair, fine / 332:adv:well, good"
+   },
+   {
+    "key": "כאן|כָּאן",
+    "lemma": "כאן",
+    "pointed": "כָּאן",
+    "detail": "37:adv:here, at this place / 2135:adj:here, at this place / 2136:noun:here, this place"
+   },
+   {
+    "key": "רק|רַק",
+    "lemma": "רק",
+    "pointed": "רַק",
+    "detail": "40:adv:only / 3660:adj:thin, emaciated"
+   },
+   {
+    "key": "אחד|אֶחָד",
+    "lemma": "אחד",
+    "pointed": "אֶחָד",
+    "detail": "41:pron:one, one of / 1229:num:one"
+   },
+   {
+    "key": "בא|בָּא",
+    "lemma": "בא",
+    "pointed": "בָּא",
+    "detail": "45:verb:to come / 4385:adj:coming, next, upcoming"
+   },
+   {
+    "key": "איש|אִישׁ",
+    "lemma": "איש",
+    "pointed": "אִישׁ",
+    "detail": "53:noun:man, adult male human being / 410:pron:anyone"
+   },
+   {
+    "key": "עד|עַד",
+    "lemma": "עד",
+    "pointed": "עַד",
+    "detail": "57:prep:until, till, up until (a time) / 4459:noun:eternity"
+   },
+   {
+    "key": "קרה|קָרָה",
+    "lemma": "קרה",
+    "pointed": "קָרָה",
+    "detail": "59:verb:to happen, occur, go on / 4292:noun:frost, cold weather"
+   },
+   {
+    "key": "שנה|שָׁנָה",
+    "lemma": "שנה",
+    "pointed": "שָׁנָה",
+    "detail": "61:noun:year / 419:verb:to repeat"
+   },
+   {
+    "key": "אי|אִי",
+    "lemma": "אי",
+    "pointed": "אִי",
+    "detail": "66:noun:island / 1799:conj:if / 2852:particle:not, un-, non- (negating prefix)"
+   },
+   {
+    "key": "מת|מֵת",
+    "lemma": "מת",
+    "pointed": "מֵת",
+    "detail": "83:verb:to die / 3925:adj:dead, having died"
+   },
+   {
+    "key": "שם|שָׁם",
+    "lemma": "שם",
+    "pointed": "שָׁם",
+    "detail": "102:verb:to assess, appraise / 328:adv:there"
+   },
+   {
+    "key": "רגע|רֶגַע",
+    "lemma": "רגע",
+    "pointed": "רֶגַע",
+    "detail": "116:noun:moment / 4936:intj:wait a moment, hold on"
+   },
+   {
+    "key": "מאוד|מְאוֹד",
+    "lemma": "מאוד",
+    "pointed": "מְאוֹד",
+    "detail": "125:adv:very, quite / 2292:noun:strength, ability, power"
+   },
+   {
+    "key": "אל|אַל",
+    "lemma": "אל",
+    "pointed": "אַל",
+    "detail": "136:particle:do not (negative command, with future form) / 3575:noun:naught, nothing"
+   },
+   {
+    "key": "חי|חַי",
+    "lemma": "חי",
+    "pointed": "חַי",
+    "detail": "150:verb:to live (to be alive, to have life) / 985:adj:alive"
+   },
+   {
+    "key": "אף|אַף",
+    "lemma": "אף",
+    "pointed": "אַף",
+    "detail": "161:particle:even; also / 250:noun:nose"
+   },
+   {
+    "key": "ממש|מַמָּשׁ",
+    "lemma": "ממש",
+    "pointed": "מַמָּשׁ",
+    "detail": "174:adv:really, very, truly / 4469:noun:reality, substance, concreteness"
+   },
+   {
+    "key": "מאה|מֵאָה",
+    "lemma": "מאה",
+    "pointed": "מֵאָה",
+    "detail": "185:num:hundred, one hundred / 2642:noun:century"
+   },
+   {
+    "key": "תמיד|תָּמִיד",
+    "lemma": "תמיד",
+    "pointed": "תָּמִיד",
+    "detail": "192:adv:always, regularly / 3887:noun:always, ever"
+   },
+   {
+    "key": "נא|נָא",
+    "lemma": "נא",
+    "pointed": "נָא",
+    "detail": "200:adv:please, if you please / 3903:adj:undercooked"
+   },
+   {
+    "key": "פשוט|פָּשׁוּט",
+    "lemma": "פשוט",
+    "pointed": "פָּשׁוּט",
+    "detail": "206:adv:simply (merely) / 297:adj:simple"
+   },
+   {
+    "key": "דרך|דֶּרֶךְ",
+    "lemma": "דרך",
+    "pointed": "דֶּרֶךְ",
+    "detail": "222:noun:road, a path, a way / 228:prep:through, via, by way of"
+   },
+   {
+    "key": "שעה|שָׁעָה",
+    "lemma": "שעה",
+    "pointed": "שָׁעָה",
+    "detail": "264:noun:hour / 3198:verb:to look, gaze at or about"
+   },
+   {
+    "key": "נכון|נָכוֹן",
+    "lemma": "נכון",
+    "pointed": "נָכוֹן",
+    "detail": "266:adj:right, correct / 442:adv:correctly"
+   },
+   {
+    "key": "אלף|אֶלֶף",
+    "lemma": "אלף",
+    "pointed": "אֶלֶף",
+    "detail": "284:num:thousand, one thousand / 519:noun:millennium; (also) thousand"
+   },
+   {
+    "key": "צבא|צָבָא",
+    "lemma": "צבא",
+    "pointed": "צָבָא",
+    "detail": "288:noun:military (armed forces) / 738:verb:to assemble, particularly to muster for military service"
+   },
+   {
+    "key": "נח|נָח",
+    "lemma": "נח",
+    "pointed": "נָח",
+    "detail": "396:verb:to rest / 2544:adj:resting"
+   },
+   {
+    "key": "קרוב|קָרוֹב",
+    "lemma": "קרוב",
+    "pointed": "קָרוֹב",
+    "detail": "454:noun:relative, a family member / 735:adv:close, near"
+   },
+   {
+    "key": "פנה|פִּנָּה",
+    "lemma": "פנה",
+    "pointed": "פִּנָּה",
+    "detail": "458:verb:to clear / 2157:noun:corner"
+   },
+   {
+    "key": "פרה|פָּרָה",
+    "lemma": "פרה",
+    "pointed": "פָּרָה",
+    "detail": "466:noun:cow, heifer / 1739:verb:to bear fruit, be fruitful"
+   },
+   {
+    "key": "רעה|רָעָה",
+    "lemma": "רעה",
+    "pointed": "רָעָה",
+    "detail": "492:verb:to herd / 2533:noun:something bad"
+   },
+   {
+    "key": "יפה|יָפֶה",
+    "lemma": "יפה",
+    "pointed": "יָפֶה",
+    "detail": "514:adj:beautiful, comely, fair, goodly, pleasant / 550:adv:beautifully, nicely"
+   },
+   {
+    "key": "שום|שׁוּם",
+    "lemma": "שום",
+    "pointed": "שׁוּם",
+    "detail": "517:det:some, any / 4703:noun:garlic"
+   },
+   {
+    "key": "מלא|מָלֵא",
+    "lemma": "מלא",
+    "pointed": "מָלֵא",
+    "detail": "531:verb:to fill, to become full / 4626:adj:full (of), filled (with)"
+   },
+   {
+    "key": "אור|אוֹר",
+    "lemma": "אור",
+    "pointed": "אוֹר",
+    "detail": "544:verb:to shine, be illuminated / 1728:noun:light, visible light"
+   },
+   {
+    "key": "יפי|יֹפִי",
+    "lemma": "יפי",
+    "pointed": "יֹפִי",
+    "detail": "553:noun:beauty / 4312:intj:well done, good"
+   },
+   {
+    "key": "מנה|מָנָה",
+    "lemma": "מנה",
+    "pointed": "מָנָה",
+    "detail": "590:verb:to count / 3326:noun:portion"
+   },
+   {
+    "key": "סך|סָךְ",
+    "lemma": "סך",
+    "pointed": "סָךְ",
+    "detail": "628:verb:to anoint oneself / 4903:noun:sum, total"
+   },
+   {
+    "key": "כלל|כְּלָל",
+    "lemma": "כלל",
+    "pointed": "כְּלָל",
+    "detail": "669:adv:at all / 1138:noun:rule, a norm"
+   },
+   {
+    "key": "כנה|כִּנָּה",
+    "lemma": "כנה",
+    "pointed": "כִּנָּה",
+    "detail": "1116:verb:to name, designate / 1121:noun:louse"
+   },
+   {
+    "key": "הורה|הוֹרָה",
+    "lemma": "הורה",
+    "pointed": "הוֹרָה",
+    "detail": "1146:verb:to instruct, teach / 3109:noun:hora"
+   },
+   {
+    "key": "רחוק|רָחוֹק",
+    "lemma": "רחוק",
+    "pointed": "רָחוֹק",
+    "detail": "1244:adj:far, distant / 1614:adv:far"
+   },
+   {
+    "key": "עור|עִוֵּר",
+    "lemma": "עור",
+    "pointed": "עִוֵּר",
+    "detail": "1266:verb:to blind / 1940:adj:blind"
+   },
+   {
+    "key": "דג|דָּג",
+    "lemma": "דג",
+    "pointed": "דָּג",
+    "detail": "1270:verb:to fish / 1565:noun:fish"
+   },
+   {
+    "key": "פקח|פִּקֵּחַ",
+    "lemma": "פקח",
+    "pointed": "פִּקֵּחַ",
+    "detail": "1278:verb:to supervise / 4728:noun:someone sighted (not blind)"
+   },
+   {
+    "key": "נדה|נִדָּה",
+    "lemma": "נדה",
+    "pointed": "נִדָּה",
+    "detail": "1322:verb:to exclude / 4038:noun:state or condition of being separate or avoided"
+   },
+   {
+    "key": "נורא|נוֹרָא",
+    "lemma": "נורא",
+    "pointed": "נוֹרָא",
+    "detail": "1383:adv:very / 2170:adj:terrible, awful"
+   },
+   {
+    "key": "תחלה|תְּחִלָּה",
+    "lemma": "תחלה",
+    "pointed": "תְּחִלָּה",
+    "detail": "1549:noun:beginning / 2393:adv:at first"
+   },
+   {
+    "key": "גרה|גֵּרָה",
+    "lemma": "גרה",
+    "pointed": "גֵּרָה",
+    "detail": "1812:verb:to sexually stimulate, arouse, tease / 3312:noun:female convert to Judaism"
+   },
+   {
+    "key": "בודד|בּוֹדֵד",
+    "lemma": "בודד",
+    "pointed": "בּוֹדֵד",
+    "detail": "2085:verb:to isolate, cause to be isolated / 2766:adj:lonely"
+   },
+   {
+    "key": "גז|גָּז",
+    "lemma": "גז",
+    "pointed": "גָּז",
+    "detail": "2380:verb:to pass by / 3730:noun:gas"
+   },
+   {
+    "key": "חזרה|חֲזָרָה",
+    "lemma": "חזרה",
+    "pointed": "חֲזָרָה",
+    "detail": "2403:noun:return, returning, going back / 4318:adv:back"
+   },
+   {
+    "key": "אלם|אִלֵּם",
+    "lemma": "אלם",
+    "pointed": "אִלֵּם",
+    "detail": "2740:verb:to bundle, bind / 2951:adj:mute / 3827:noun:mute (person unable to speak)"
+   },
+   {
+    "key": "גנה|גִּנָּה",
+    "lemma": "גנה",
+    "pointed": "גִּנָּה",
+    "detail": "2813:noun:garden / 2846:verb:to denounce"
+   },
+   {
+    "key": "תאר|תֹּאַר",
+    "lemma": "תאר",
+    "pointed": "תֹּאַר",
+    "detail": "3150:noun:title, classification, rank / 3164:verb:to be described"
+   },
+   {
+    "key": "חרש|חֶרֶשׁ",
+    "lemma": "חרש",
+    "pointed": "חֶרֶשׁ",
+    "detail": "4216:noun:surreptitiously / 4755:adv:surreptitiously, silently, without making noise, in secret"
+   },
+   {
+    "key": "חפה|חֻפָּה",
+    "lemma": "חפה",
+    "pointed": "חֻפָּה",
+    "detail": "4420:noun:chuppah, wedding canopy / 4949:verb:to be covered"
+   }
+  ],
+  "circular-gloss": [
+   {
+    "key": "v390aa9b9",
+    "lemma": "בנק",
+    "pointed": "בַּנְק",
+    "detail": "bank = bank"
+   },
+   {
+    "key": "vcdca8789",
+    "lemma": "גנרל",
+    "pointed": "גֶּנֶרָל",
+    "detail": "general = general"
+   },
+   {
+    "key": "vdee4ee61",
+    "lemma": "פין",
+    "pointed": "פִּין",
+    "detail": "pin = pin"
+   },
+   {
+    "key": "v6cee62cc",
+    "lemma": "וירוס",
+    "pointed": "וִירוּס",
+    "detail": "virus = virus"
+   },
+   {
+    "key": "v226998f0",
+    "lemma": "רובוט",
+    "pointed": "רוֹבּוֹט",
+    "detail": "robot = robot"
+   },
+   {
+    "key": "v8851f2d6",
+    "lemma": "דיסק",
+    "pointed": "דִּיסְק",
+    "detail": "disk = disk"
+   },
+   {
+    "key": "v472cb9ff",
+    "lemma": "וטו",
+    "pointed": "וֵטוֹ",
+    "detail": "veto = veto"
+   },
+   {
+    "key": "vce471926",
+    "lemma": "פסטיבל",
+    "pointed": "פֶסְטִיבָל",
+    "detail": "festival = festival"
+   },
+   {
+    "key": "vb6540579",
+    "lemma": "אגו",
+    "pointed": "אֶגוֹ",
+    "detail": "ego = ego"
+   },
+   {
+    "key": "v1d519995",
+    "lemma": "גו",
+    "pointed": "גּוֹ",
+    "detail": "go = go"
+   },
+   {
+    "key": "v3b0e96d6",
+    "lemma": "ביט",
+    "pointed": "בִּיט",
+    "detail": "bit = bit"
+   },
+   {
+    "key": "vd6cf7228",
+    "lemma": "סמסטר",
+    "pointed": "סֵמֶסְטֶר",
+    "detail": "semester = semester"
+   },
+   {
+    "key": "vc44b02ed",
+    "lemma": "גולף",
+    "pointed": "גּוֹלְף",
+    "detail": "golf = golf"
+   },
+   {
+    "key": "v92bbb2f2",
+    "lemma": "טנק",
+    "pointed": "טַנְק",
+    "detail": "tank = tank"
+   },
+   {
+    "key": "vdd742b63",
+    "lemma": "אידאל",
+    "pointed": "אִידֵאָל",
+    "detail": "ideal = ide'al"
+   },
+   {
+    "key": "vf67a73d2",
+    "lemma": "מגנט",
+    "pointed": "מַגְנֵט",
+    "detail": "magnet = magnet"
+   },
+   {
+    "key": "v92ecad47",
+    "lemma": "מינימום",
+    "pointed": "מִינִימוּם",
+    "detail": "minimum = minimum"
+   },
+   {
+    "key": "v28796fcc",
+    "lemma": "מטאור",
+    "pointed": "מֵטֵאוֹר",
+    "detail": "meteor = mete'or"
+   },
+   {
+    "key": "vb3bf34ba",
+    "lemma": "סושי",
+    "pointed": "סוּשִׁי",
+    "detail": "sushi = sushi"
+   },
+   {
+    "key": "va7a80a91",
+    "lemma": "אלמנט",
+    "pointed": "אֵלֵמֶנְט",
+    "detail": "element = element"
+   },
+   {
+    "key": "v35787d85",
+    "lemma": "סלמון",
+    "pointed": "סַלְמוֹן",
+    "detail": "salmon = salmon"
+   }
+  ],
+  "furtive-patach-translit": []
+ }
+}

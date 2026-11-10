@@ -1,0 +1,601 @@
+{
+ "when": "2026-11-04T03:14:18.853Z",
+ "chromium": "153.0.8010.12",
+ "routeCount": 8,
+ "routes": [
+  "/",
+  "/learn",
+  "/letters/atlas",
+  "/sounds",
+  "/read/bless-priestly-1",
+  "/vocab",
+  "/letters/alef",
+  "/nope"
+ ],
+ "walk": [
+  {
+   "route": "/",
+   "name": "home",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Aleph אלף",
+   "unavailable": false,
+   "textLength": 974,
+   "hash": "#/",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "a \"Open the reader\"",
+     "a \"Start\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/learn",
+   "name": "learn",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Lessons",
+   "unavailable": false,
+   "textLength": 3082,
+   "hash": "#/learn",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "button#alef-tab-read \"Read the siddur\"",
+     "button#alef-tab-israel \"Speak in Israel\"",
+     "a \"Words you can alre\"",
+     "a \"Look-alike checkpo\"",
+     "a \"Syllable ladder\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/letters/atlas",
+   "name": "atlas",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Letter atlas",
+   "unavailable": false,
+   "textLength": 496,
+   "hash": "#/letters/atlas",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "button \"Quiz me: find the \"",
+     "button \"Alef, /ʔ/\"",
+     "button \"Bet, /b/\"",
+     "button \"Vet, /v/\"",
+     "button \"Gimel, /ɡ/\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/sounds",
+   "name": "sounds",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Sounds",
+   "unavailable": false,
+   "textLength": 5890,
+   "hash": "#/sounds",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "input",
+     "button \"Kamatz (kamatz gad\"",
+     "summary \"Variants\"",
+     "button \"Patach: play sound\"",
+     "button \"Tzere: play sound\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/read/bless-priestly-1",
+   "name": "text",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Text not found",
+   "unavailable": false,
+   "textLength": 77,
+   "hash": "#/read/bless-priestly-1",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "a \"Back to all texts\"",
+     "(body)",
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/vocab",
+   "name": "vocab",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Vocabulary",
+   "unavailable": false,
+   "textLength": 8323,
+   "hash": "#/vocab",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "button \"Browse\"",
+     "button \"Review\"",
+     "select#vc-tier \"All 5,000 wordsWor\"",
+     "select#vc-topic \"All topicsAdjectiv\"",
+     "select#vc-tag \"All kinds of words\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/letters/alef",
+   "name": "extra",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Letter",
+   "unavailable": false,
+   "textLength": 1193,
+   "hash": "#/letters/alef",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "button \"Trace\"",
+     "button \"Look-alikes\"",
+     "button \"Typing\"",
+     "button \"Alef\"",
+     "button \"Bet\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  },
+  {
+   "route": "/nope",
+   "name": "extra",
+   "vp": "phone",
+   "scheme": "light",
+   "profile": "seeded",
+   "heading": "Page not found",
+   "unavailable": false,
+   "textLength": 27,
+   "hash": "#/nope",
+   "ready": true,
+   "errors": [],
+   "consoleErrors": [],
+   "failedRequests": [],
+   "clipped": [],
+   "overflow": null,
+   "badText": [],
+   "noName": [],
+   "heNoLang": [],
+   "heNoDir": [],
+   "small": [],
+   "offscreen": [],
+   "h1": 1,
+   "tabs": {
+    "order": [
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\"",
+     "a \"Learnלימוד\"",
+     "a \"Lettersאותיות\"",
+     "a \"Soundsצלילים\"",
+     "a \"Readקריאה\"",
+     "button#more-btn \"Moreעוד\"",
+     "a \"How this works\"",
+     "a \"Home\"",
+     "(body)",
+     "a \"Skip to main conte\"",
+     "a \"Aleph אלף, home\"",
+     "a \"Homeבית\""
+    ],
+    "issues": [],
+    "trap": false
+   }
+  }
+ ],
+ "offline": [
+  {
+   "route": "/",
+   "ok": true,
+   "why": "",
+   "h1": "Aleph אלף",
+   "unavailable": false,
+   "len": 985,
+   "pageErrors": [],
+   "failedRequests": [
+    "/data/audio/manifest-words-sephardi.json",
+    "/data/audio/manifest-words-sephardi.json"
+   ]
+  },
+  {
+   "route": "/learn",
+   "ok": true,
+   "why": "",
+   "h1": "Lessons",
+   "unavailable": false,
+   "len": 3056,
+   "pageErrors": [],
+   "failedRequests": [
+    "/data/audio/manifest-words-sephardi.json",
+    "/data/audio/manifest-words-sephardi.json"
+   ]
+  },
+  {
+   "route": "/letters/alef",
+   "ok": true,
+   "why": "",
+   "h1": "Letter",
+   "unavailable": false,
+   "len": 1193,
+   "pageErrors": [],
+   "failedRequests": [
+    "/data/audio/manifest-words-sephardi.json",
+    "/data/audio/manifest-words-sephardi.json"
+   ]
+  },
+  {
+   "route": "/sounds",
+   "ok": true,
+   "why": "",
+   "h1": "Sounds",
+   "unavailable": false,
+   "len": 5890,
+   "pageErrors": [],
+   "failedRequests": [
+    "/data/audio/manifest-words-sephardi.json",
+    "/data/audio/manifest-words-sephardi.json"
+   ]
+  },
+  {
+   "route": "/read/bless-priestly-1",
+   "ok": true,
+   "why": "",
+   "h1": "Text not found",
+   "unavailable": false,
+   "len": 77,
+   "pageErrors": [],
+   "failedRequests": [
+    "/data/audio/manifest-words-sephardi.json",
+    "/data/audio/manifest-words-sephardi.json"
+   ]
+  }
+ ],
+ "interact": [
+  {
+   "name": "trace alef (print): 3 median drags counted",
+   "ok": true,
+   "detail": "progress after each stroke: 1,2,3; feedback \"Perfect! Alef\""
+  },
+  {
+   "name": "trace alef: completion badge persisted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace alef: wrong stroke not counted",
+   "ok": true,
+   "detail": "0 / 3 strokes | Check the direction of the arrow."
+  },
+  {
+   "name": "trace alef: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace bet (print): 2 median drags counted",
+   "ok": true,
+   "detail": "progress after each stroke: 1,2; feedback \"Perfect! Bet\""
+  },
+  {
+   "name": "trace bet: completion badge persisted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace bet: wrong stroke not counted",
+   "ok": true,
+   "detail": "0 / 2 strokes | Start at the green dot and finish at the arrow."
+  },
+  {
+   "name": "trace bet: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace shin (print): 2 median drags counted",
+   "ok": true,
+   "detail": "progress after each stroke: 1,2; feedback \"Perfect! Shin\""
+  },
+  {
+   "name": "trace shin: completion badge persisted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace shin: wrong stroke not counted",
+   "ok": true,
+   "detail": "0 / 2 strokes | Start at the green dot and finish at the arrow."
+  },
+  {
+   "name": "trace shin: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "trace alef: synthetic touch (CDP) drag counts stroke 1",
+   "ok": true,
+   "detail": "1 / 3 strokes"
+  },
+  {
+   "name": "atlas: 31 tiles",
+   "ok": true,
+   "detail": "tiles=31"
+  },
+  {
+   "name": "atlas: tap tile opens detail panel",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "atlas: quiz starts",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "atlas: quiz answer gives feedback",
+   "ok": true,
+   "detail": "target Yod"
+  },
+  {
+   "name": "atlas: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "soundgap: controls present",
+   "ok": true,
+   "detail": "controls=3"
+  },
+  {
+   "name": "soundgap: no horizontal page overflow after interaction",
+   "ok": true,
+   "detail": "scrollWidth=390"
+  },
+  {
+   "name": "soundgap: tables inside scroll regions",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "soundgap: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "vowelboard: mounts with tray and modes",
+   "ok": true,
+   "detail": "tray=0 modes=Study|Sort the signs|Quick round"
+  },
+  {
+   "name": "vowelboard: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "vocab: search filters list",
+   "ok": true,
+   "detail": "rows before=40"
+  },
+  {
+   "name": "vocab: Add to reviews persists a card",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "vocab: review show-answer + rate by key",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "vocab: no page errors",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "workbook: lists PDF downloads",
+   "ok": true,
+   "detail": "links=8"
+  },
+  {
+   "name": "workbook: every PDF link returns 200 application/pdf",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "workbook: no page errors",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "offlineSw": {
+  "scope": "http://localhost:43833/",
+  "caches": [
+   "alef-shell-e2344ed501ab"
+  ],
+  "cached": 149
+ },
+ "hardFailures": 0
+}

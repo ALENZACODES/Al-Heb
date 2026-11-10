@@ -1,0 +1,120 @@
+{
+ "schema": "alef-speak-set/1",
+ "id": "speak-body-health-2",
+ "title": "Body and health 2",
+ "theme": "body-health",
+ "level": "B1",
+ "track": "israel",
+ "pack": "body-health-2",
+ "note": "Draft built by src/speak/build.mjs from data/vocab/words.json (machine-built, not native-reviewed). Pointing, transliteration and glosses are unverified.",
+ "items": [
+  {
+   "id": "hc0616a4b",
+   "he": "אֹזֶן",
+   "translit": "ozen",
+   "en": "ear",
+   "kind": "word",
+   "audioId": "hc0616a4b",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "ha319beb5",
+   "he": "חֵךְ",
+   "translit": "chekh",
+   "en": "palate, roof of the mouth",
+   "kind": "word",
+   "audioId": "ha319beb5",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h0047024c",
+   "he": "תְּרוּפָה",
+   "translit": "terufah",
+   "en": "medicine, medication, medicament, drug",
+   "kind": "word",
+   "audioId": "i-14-w2",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h14d8720e",
+   "he": "רִיס",
+   "translit": "ris",
+   "en": "eyelash",
+   "kind": "word",
+   "audioId": "h14d8720e",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc0cdd8d1",
+   "he": "הִגִּישׁ",
+   "translit": "higish",
+   "en": "to submit (something), to hand (something) in",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hd5fd5e2d",
+   "he": "מְעִי",
+   "translit": "me'i",
+   "en": "intestine, gut, innard, entrail, bowel",
+   "kind": "word",
+   "audioId": "hd5fd5e2d",
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "hc04987b4",
+   "he": "דָּחָה",
+   "translit": "dachah",
+   "en": "to push away, push aside",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h9c77a32f",
+   "he": "רִפֵּא",
+   "translit": "ripe",
+   "en": "to heal, to cure",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h41425dbf",
+   "he": "שָׁד",
+   "translit": "shad",
+   "en": "breast",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3fc254f5",
+   "he": "גַּב",
+   "translit": "gav",
+   "en": "back",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h3ce0fc6a",
+   "he": "חִמֵּשׁ",
+   "translit": "chimesh",
+   "en": "to arm, to equip with weapons",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  },
+  {
+   "id": "h127c6e1e",
+   "he": "נִתּוּחַ",
+   "translit": "nituach",
+   "en": "operation, surgery",
+   "kind": "word",
+   "audioId": null,
+   "source": "data/vocab/words.json"
+  }
+ ]
+}

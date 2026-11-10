@@ -1,0 +1,61 @@
+Aleph IMAGE RUN - INTERMEDIATE 04 (command 204): lesson scenes I-28 to I-36
+
+No attachments are needed; everything is described in words below. These are the opening and closing scene pictures of the intermediate prayer lessons.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+SCENE RULES (apply to every image):
+- ABSOLUTELY NO TEXT OF ANY KIND anywhere in the image: no Hebrew, no nikkud, no Latin letters, no numerals, no writing, no lettering-like marks, no logos, no signage, no labels, no price tags. Every sign, board, awning, screen, page, book, scroll and label must be completely blank.
+- No identifiable or real people: any person is a generic stylised figure seen from behind, from the side or at a distance, with no individual face; no portraits and no likenesses of anyone real.
+- Sacred books and scrolls are never shown with legible writing: pages and parchment stay blank; ritual objects are drawn plainly and respectfully.
+- Same flat-vector style, line weight and palette in every image; calm, warm, respectful mood.
+
+FILE NAMES: each item gives the exact FILENAME (the slot id plus .png). Save every image under exactly that name; the name is how the picture is matched to its lesson slot. Label each image with its filename in your reply, never inside the image.
+
+TASK: generate 18 separate images in STYLE GUIDE v1, in this order.
+
+1. FILENAME: I-28-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-28, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A synagogue at dusk with white-clad worshippers standing in a long silent line. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+2. FILENAME: I-28-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-28, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A ram's horn resting on a white cloth beside a prayer book. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+3. FILENAME: I-29-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-29, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A festive table with matzo, a seder plate of small dishes and a cup of wine. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+4. FILENAME: I-29-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-29, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A child's wide eyes at a holiday table lit by candlelight. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+5. FILENAME: I-30-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-30, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A leafy hut built on a balcony with fruit hanging from its roof and a table set inside. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+6. FILENAME: I-30-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-30, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A family eating together inside a temporary booth with the night sky visible through the branches. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+7. FILENAME: I-31-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-31, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): Children in colourful homemade costumes in a street parade, faces turned to a noise-maker. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+8. FILENAME: I-31-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-31, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A table of triangular pastries and gift baskets wrapped in ribbon. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+9. FILENAME: I-32-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-32, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A window sill with a candelabrum of lit candles and a dark street beyond. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+10. FILENAME: I-32-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-32, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A child lighting a candle with the helper flame while a parent watches. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+11. FILENAME: I-33-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-33, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A table after a meal with empty plates, crumbs and people leaning back and singing softly. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+12. FILENAME: I-33-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-33, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): Hands passing a small book around a table of friends after dinner. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+13. FILENAME: I-34-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-34, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A traveller at an airport window with a bag at their feet and a plane on the runway. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+14. FILENAME: I-34-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-34, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A quiet road at dawn with a lone car and hills in the distance. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+15. FILENAME: I-35-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-35, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A long Saturday lunch table in a garden with wine, bread and a crowd of guests. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+16. FILENAME: I-35-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-35, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A kiddush cup being passed along a table of smiling neighbours. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+17. FILENAME: I-36-img1.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-36, opening scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A modern shared office with colleagues around a table and a window onto the city. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+18. FILENAME: I-36-img2.png | SIZE: use 3:2 (wide) (target 1792x1024) | LESSON: I-36, closing scene
+   PROMPT: Wide scene, flat vector illustration (not a photograph): A job interview seen from the side, two people across a desk, handshake just ending. Wide 3:2, clearly wider than tall, never square. No text of any kind anywhere: no letters, numerals, writing, logos or signage; every sign, board, awning and label completely blank. No real people, no individual faces; sacred books and scrolls stay blank.
+
+RULES (again):
+- NEVER put any text in any image. ABSOLUTELY NO TEXT OF ANY KIND anywhere in the image: no Hebrew, no nikkud, no Latin letters, no numerals, no writing, no lettering-like marks, no logos, no signage, no labels, no price tags. Every sign, board, awning, screen, page, book, scroll and label must be completely blank.
+- Allowed aspects are ONLY 1:1, 3:2 and 2:3: every item here is 3:2 (wide); never deliver a square.
+- No identifiable or real people: any person is a generic stylised figure seen from behind, from the side or at a distance, with no individual face; no portraits and no likenesses of anyone real.
+- Generate exactly 18 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+
+When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

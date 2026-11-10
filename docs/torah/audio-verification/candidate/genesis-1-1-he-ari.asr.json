@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-1-he-ari",
+  "fingerprint": "a5cc6e20b9760ccbe6bd0b707dd632d5ab3ed98fbab344e3c5d2187e7aa21e0b",
+  "audioSha256": "364fd92cfe808d56d917d442c8a220eaef184526ddb2dc35c901584fbb3a9dca",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "בראשית ברא אלוהים את השמים ואת הארץ",
+  "transcript": "בראשית ברא אלוהים את השמים ואת הארץ.",
+  "wordEdits": 0,
+  "referenceWords": 7,
+  "wer": 0,
+  "asrExact": true,
+  "status": "needs-listening",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

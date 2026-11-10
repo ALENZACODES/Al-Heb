@@ -1,0 +1,16 @@
+audio/f/israeli/prayer/adon-olam-1.mp3
+audio/f/israeli/prayer/aleinu-1.mp3
+audio/f/israeli/prayer/amidah-elohai-netzor.mp3
+audio/f/israeli/prayer/brich-shmei.mp3
+audio/f/israeli/prayer/haftarah-after.mp3
+audio/f/israeli/prayer/havdalah-opening.mp3
+audio/f/israeli/prayer/kaddish-1.mp3
+audio/f/israeli/prayer/yigdal.mp3
+audio/m/israeli/prayer/adon-olam-1.mp3
+audio/m/israeli/prayer/aleinu-1.mp3
+audio/m/israeli/prayer/amidah-elohai-netzor.mp3
+audio/m/israeli/prayer/brich-shmei.mp3
+audio/m/israeli/prayer/haftarah-after.mp3
+audio/m/israeli/prayer/havdalah-opening.mp3
+audio/m/israeli/prayer/kaddish-1.mp3
+audio/m/israeli/prayer/yigdal.mp3

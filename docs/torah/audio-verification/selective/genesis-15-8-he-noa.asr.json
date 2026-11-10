@@ -1,0 +1,24 @@
+{
+  "id": "genesis-15-8-he-noa",
+  "fingerprint": "3f9ffdac717c4d72a964f90030533becf9fb1556c50762a7e4933947ef2d7231",
+  "audioSha256": "5e59bf608d588ef0f71af803111a01ee12e12521bdb49730b9bba32b9e51c3e4",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "ויאמר אֲדֹנָי אלוהים במה אֵדַע כי אִירָשֶׁנָּה",
+  "transcript": "ויאמר אדוני אלוהים במה עדע כי הרשבנו.",
+  "wordEdits": 3,
+  "referenceWords": 7,
+  "wer": 0.42857142857142855,
+  "asrExact": false,
+  "orthographicWordEdits": 3,
+  "orthographicEquivalences": {
+    "היתה": "הייתה",
+    "אלהים": "אלוהים",
+    "תהו": "תוהו",
+    "ובהו": "ובוהו"
+  },
+  "wordsMatch": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

@@ -1,0 +1,57 @@
+Aleph IMAGE RUN - COMMAND 97: Level badges
+
+No attachments are needed otherwise; everything is described in words below.
+
+STYLE GUIDE v1 (applies to EVERY image below):
+STYLE GUIDE v1: flat vector illustration, thick rounded outlines, soft paper-cream background (#F6F1E7), palette of deep sea blue (#1F3A5F), pomegranate red (#B0373B), olive green (#6B7F3A), warm gold (#D9A441) and charcoal (#2B2B2B); no gradients, no photoreal, no text of any kind (no Hebrew, no nikkud, no Latin letters, no numerals); square 1024x1024 unless stated; every object centred with 10% margin; consistent 3/4 top-down light from upper left.
+
+CHARACTERS (keep identical across images):
+CHARACTER SHEET A 'Ari': a friendly Israeli man around 35, short dark curly hair, trimmed beard, warm brown skin tone, navy T-shirt, simple silver chain; expression open and encouraging; no kippah by default.
+CHARACTER SHEET B 'Noa': a friendly Israeli woman around 32, shoulder-length wavy dark hair, olive skin, terracotta blouse, small gold hoop earrings; expression warm and confident.
+MASCOT 'Rimon': a small round pomegranate-red sprite with a gold crown-shaped calyx on top, two olive-green leaf ears, big friendly dot eyes, tiny arms and feet, thick charcoal outline; expressive but never any writing.
+
+BACKGROUND SCENES (when a prompt mentions BG_...): BG_jerusalem = a blank Jerusalem street scene (warm limestone walls, arched doorways, no signs); BG_market = a blank open-air market scene (stalls with plain striped awnings, no signs); BG_telaviv = a blank Tel Aviv seaside street scene (white modernist buildings, palms, no signs). Reuse the same scene if already generated in this chat.
+
+REFERENCES: where a prompt says "attached" or "the same object", it means the image already generated in this chat for the same set (usually item 1, the mnemonic), or the file attached above. Keep the object identical.
+
+TASK: generate 16 separate images in STYLE GUIDE v1, in this order. Each item gives the exact filename (label the image with it in your reply, never inside the image), the aspect hint and the full prompt.
+
+1. FILENAME: BADGE_01.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 1 of 8: a single candle. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 1). No text, letters or numerals anywhere in the image.
+2. FILENAME: BADGE_02.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 2 of 8: two candles. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 2). No text, letters or numerals anywhere in the image.
+3. FILENAME: BADGE_03.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 3 of 8: an open book. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 3). No text, letters or numerals anywhere in the image.
+4. FILENAME: BADGE_04.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 4 of 8: a reading glass over a page. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 4). No text, letters or numerals anywhere in the image.
+5. FILENAME: BADGE_05.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 5 of 8: a pomegranate. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 5). No text, letters or numerals anywhere in the image.
+6. FILENAME: BADGE_06.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 6 of 8: a shofar. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 6). No text, letters or numerals anywhere in the image.
+7. FILENAME: BADGE_07.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 7 of 8: a Torah pointer (yad). Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 7). No text, letters or numerals anywhere in the image.
+8. FILENAME: BADGE_08.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: Round enamel-pin style level badge 8 of 8: a crown. Same ring and ribbon on every badge; colour progression cream > gold > blue > red across levels (level 8). No text, letters or numerals anywhere in the image.
+9. FILENAME: BADGE_01_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+10. FILENAME: BADGE_02_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+11. FILENAME: BADGE_03_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+12. FILENAME: BADGE_04_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+13. FILENAME: BADGE_05_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+14. FILENAME: BADGE_06_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+15. FILENAME: BADGE_07_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+16. FILENAME: BADGE_08_locked.png | SIZE: use 1:1 (target 1024x1024)
+   PROMPT: The attached badge as a greyed-out 'locked' version (desaturated, same shape). No text, letters or numerals anywhere in the image.
+
+RULES (again):
+- NEVER put any text in any image: no Hebrew, no nikkud, no Latin letters, no numerals, no logos. Signs, screens, pages, books, labels and scrolls stay completely blank.
+- Your image tool may only offer 1:1, 3:2 and 2:3: follow the size hint on each item.
+- Generate exactly 16 separate images, one per numbered item, each as its own image (never a collage or grid). Do not skip or merge items.
+
+When all images are done, reply ONLY with the numbered list of filenames (item number, exact filename) and the count, then STOP and wait for me to say "next". Do not start any other command.

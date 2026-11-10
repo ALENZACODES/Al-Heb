@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "bucket": "candidate",
+  "note": "Overnight review DECISIONS.json \u2014 candidate_only; not approved; not ship",
+  "files": [
+    "SPEAK_04_table_shabbat.png",
+    "SPEAK_05_table_welcome.png",
+    "SPEAK_08_street_taxi.png"
+  ],
+  "unlock": "John/runbook \u2014 then optionally promote toward approvals.json",
+  "freeze_cast": true
+}

@@ -1,0 +1,1896 @@
+﻿id,area,hebrew,transliteration,english,what_to_check,status,corrected_text,reviewer_notes,reviewer,review_date,priority,source
+speak:speak/minimal-pairs:bet-vet,speak,,,"Bet or vet
+feature: dagesh on ב
+heard.israeli: b with the dot, v without
+heard.sephardi: b with the dot, v without (Spanish-Portuguese [b~β] not generated)
+heard.ashkenazi: b with the dot, v without","Record bet-vet in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.0
+speak:speak/minimal-pairs:kaf-khaf,speak,"pairs.0.a: כִּי
+pairs.0.b: כִי
+pairs.1.a: כִּי
+pairs.1.b: כִי",,"Kaf or khaf
+pairs.0.a: because, for, since
+pairs.0.b: chi
+pairs.1.a: cauterization, branding
+pairs.1.b: chi
+feature: dagesh on כ / ך
+heard.israeli: k with the dot, throaty kh [χ] without
+heard.sephardi: k with the dot, [x] without
+heard.ashkenazi: k with the dot, [x] without
+pairs.0.a.is: k
+pairs.0.a.ipa[0]: ˈki
+pairs.0.a.ipa[1]: ˈki
+pairs.0.a.ipa[2]: ˈki
+pairs.0.a.simple[0]: ki
+pairs.0.a.simple[1]: ki
+pairs.0.a.simple[2]: ki
+pairs.0.b.is: kh
+pairs.0.b.ipa[0]: ˈχi
+pairs.0.b.ipa[1]: ˈxi
+pairs.0.b.ipa[2]: ˈxi
+pairs.0.b.simple[0]: khi
+pairs.0.b.simple[1]: khi
+pairs.0.b.simple[2]: khi
+pairs.1.a.is: k
+pairs.1.a.ipa[0]: ˈki
+pairs.1.a.ipa[1]: ˈki
+pairs.1.a.ipa[2]: ˈki
+pairs.1.a.simple[0]: ki
+pairs.1.a.simple[1]: ki
+pairs.1.a.simple[2]: ki
+pairs.1.b.is: kh
+pairs.1.b.ipa[0]: ˈχi
+pairs.1.b.ipa[1]: ˈxi
+pairs.1.b.ipa[2]: ˈxi
+pairs.1.b.simple[0]: khi
+pairs.1.b.simple[1]: khi
+pairs.1.b.simple[2]: khi","Record kaf-khaf in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.1
+speak:speak/minimal-pairs:pe-fe,speak,"pairs.0.a: פֶן
+pairs.0.b: פֶּן
+pairs.1.a: אִפֵר
+pairs.1.b: אִפֵּר",,"Pe or fe
+pairs.0.a: hair dryer
+pairs.0.b: lest, in order that … not, for otherwise
+pairs.1.a: to turn into or cover in ash
+pairs.1.b: to apply makeup (to someone)
+feature: dagesh on פ / ף
+heard.israeli: p with the dot, f without
+heard.sephardi: p with the dot, f without
+heard.ashkenazi: p with the dot, f without
+pairs.0.a.is: f
+pairs.0.a.ipa[0]: ˈfen
+pairs.0.a.ipa[1]: ˈfen
+pairs.0.a.ipa[2]: ˈfen
+pairs.0.a.simple[0]: fen
+pairs.0.a.simple[1]: fen
+pairs.0.a.simple[2]: fen
+pairs.0.b.is: p
+pairs.0.b.ipa[0]: ˈpen
+pairs.0.b.ipa[1]: ˈpen
+pairs.0.b.ipa[2]: ˈpen
+pairs.0.b.simple[0]: pen
+pairs.0.b.simple[1]: pen
+pairs.0.b.simple[2]: pen
+pairs.1.a.is: f
+pairs.1.a.ipa[0]: i.ˈfeʁ
+pairs.1.a.ipa[1]: ʔi.ˈfer
+pairs.1.a.ipa[2]: ˈi.fejr
+pairs.1.a.simple[0]: ifer
+pairs.1.a.simple[1]: ifer
+pairs.1.a.simple[2]: ifeir
+pairs.1.b.is: p
+pairs.1.b.ipa[0]: i.ˈpeʁ
+pairs.1.b.ipa[1]: ʔi.ˈper
+pairs.1.b.ipa[2]: ˈi.pejr
+pairs.1.b.simple[0]: iper
+pairs.1.b.simple[1]: iper
+pairs.1.b.simple[2]: ipeir","Record pe-fe in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.2
+speak:speak/minimal-pairs:shin-sin,speak,"pairs.0.a: שָׁם
+pairs.0.b: שָׂם
+pairs.1.a: שָׁם
+pairs.1.b: שָׂם
+pairs.2.a: שָׁרָה
+pairs.2.b: שָׂרָה
+pairs.3.a: פָּרַשׁ
+pairs.3.b: פָּרַשׂ
+pairs.4.a: פֶּשַׁע
+pairs.4.b: פֶּשַׂע
+pairs.5.a: שִׁבֵּר
+pairs.5.b: שִׂבֵּר
+pairs.6.a: שָׁרִיף
+pairs.6.b: שָׂרִיף
+pairs.7.a: שָׁגָה
+pairs.7.b: שָׂגָה
+pairs.8.a: הִשְׁתַּכֵּר
+pairs.8.b: הִשְׂתַּכֵּר",,"Shin or sin
+pairs.0.a: to assess, appraise
+pairs.0.b: to put, place
+pairs.1.a: there
+pairs.1.b: to put, place
+pairs.2.a: to let loose
+pairs.2.b: to be or become great, prince-like
+pairs.3.a: to retire
+pairs.3.b: to spread
+pairs.4.a: felony, transgression
+pairs.4.b: pace, step
+pairs.5.a: to shatter (break violently)
+pairs.5.b: to wait
+pairs.6.a: a sharif
+pairs.6.b: flammable, combustible
+pairs.7.a: to err
+pairs.7.b: to prosper, to flourish
+pairs.8.a: to become drunk
+pairs.8.b: to profit, make money
+feature: dot on ש
+heard.israeli: sh [ʃ] with the right dot, s with the left dot
+heard.sephardi: same
+heard.ashkenazi: same
+pairs.0.a.is: shin
+pairs.0.a.ipa[0]: ˈʃam
+pairs.0.a.ipa[1]: ˈʃam
+pairs.0.a.ipa[2]: ˈʃɔm
+pairs.0.a.simple[0]: sham
+pairs.0.a.simple[1]: sham
+pairs.0.a.simple[2]: shom
+pairs.0.b.is: sin
+pairs.0.b.ipa[0]: ˈsam
+pairs.0.b.ipa[1]: ˈsam
+pairs.0.b.ipa[2]: ˈsɔm
+pairs.0.b.simple[0]: sam
+pairs.0.b.simple[1]: sam
+pairs.0.b.simple[2]: som
+pairs.1.a.is: shin
+pairs.1.a.ipa[0]: ˈʃam
+pairs.1.a.ipa[1]: ˈʃam
+pairs.1.a.ipa[2]: ˈʃɔm
+pairs.1.a.simple[0]: sham
+pairs.1.a.simple[1]: sham
+pairs.1.a.simple[2]: shom
+pairs.1.b.is: sin
+pairs.1.b.ipa[0]: ˈsam
+pairs.1.b.ipa[1]: ˈsam
+pairs.1.b.ipa[2]: ˈsɔm
+pairs.1.b.simple[0]: sam
+pairs.1.b.simple[1]: sam
+pairs.1.b.simple[2]: som
+pairs.2.a.is: shin
+pairs.2.a.ipa[0]: ʃa.ˈʁa
+pairs.2.a.ipa[1]: ʃa.ˈra
+pairs.2.a.ipa[2]: ˈʃɔ.rə
+pairs.2.a.simple[0]: sharah
+pairs.2.a.simple[1]: sharah
+pairs.2.a.simple[2]: shoreh
+pairs.2.b.is: sin
+pairs.2.b.ipa[0]: sa.ˈʁa
+pairs.2.b.ipa[1]: sa.ˈra
+pairs.2.b.ipa[2]: ˈsɔ.rə
+pairs.2.b.simple[0]: sarah
+pairs.2.b.simple[1]: sarah
+pairs.2.b.simple[2]: soreh
+pairs.3.a.is: shin
+pairs.3.a.ipa[0]: pa.ˈʁaʃ
+pairs.3.a.ipa[1]: pa.ˈraʃ
+pairs.3.a.ipa[2]: ˈpɔ.raʃ
+pairs.3.a.simple[0]: parash
+pairs.3.a.simple[1]: parash
+pairs.3.a.simple[2]: porash
+pairs.3.b.is: sin
+pairs.3.b.ipa[0]: pa.ˈʁas
+pairs.3.b.ipa[1]: pa.ˈras
+pairs.3.b.ipa[2]: ˈpɔ.ras
+pairs.3.b.simple[0]: paras
+pairs.3.b.simple[1]: paras
+pairs.3.b.simple[2]: poras
+pairs.4.a.is: shin
+pairs.4.a.ipa[0]: pe.ˈʃa
+pairs.4.a.ipa[1]: pe.ˈʃaʕ
+pairs.4.a.ipa[2]: ˈpe.ʃa
+pairs.4.a.simple[0]: pesha
+pairs.4.a.simple[1]: pesha
+pairs.4.a.simple[2]: pesha
+pairs.4.b.is: sin
+pairs.4.b.ipa[0]: pe.ˈsa
+pairs.4.b.ipa[1]: pe.ˈsaʕ
+pairs.4.b.ipa[2]: ˈpe.sa
+pairs.4.b.simple[0]: pesa
+pairs.4.b.simple[1]: pesa
+pairs.4.b.simple[2]: pesa
+pairs.5.a.is: shin
+pairs.5.a.ipa[0]: ʃi.ˈbeʁ
+pairs.5.a.ipa[1]: ʃi.ˈber
+pairs.5.a.ipa[2]: ˈʃi.bejr
+pairs.5.a.simple[0]: shiber
+pairs.5.a.simple[1]: shiber
+pairs.5.a.simple[2]: shibeir
+pairs.5.b.is: sin
+pairs.5.b.ipa[0]: si.ˈbeʁ
+pairs.5.b.ipa[1]: si.ˈber
+pairs.5.b.ipa[2]: ˈsi.bejr
+pairs.5.b.simple[0]: siber
+pairs.5.b.simple[1]: siber
+pairs.5.b.simple[2]: sibeir
+pairs.6.a.is: shin
+pairs.6.a.ipa[0]: ʃa.ˈʁif
+pairs.6.a.ipa[1]: ʃa.ˈrif
+pairs.6.a.ipa[2]: ˈʃɔ.rif
+pairs.6.a.simple[0]: sharif
+pairs.6.a.simple[1]: sharif
+pairs.6.a.simple[2]: shorif
+pairs.6.b.is: sin
+pairs.6.b.ipa[0]: sa.ˈʁif
+pairs.6.b.ipa[1]: sa.ˈrif
+pairs.6.b.ipa[2]: ˈsɔ.rif
+pairs.6.b.simple[0]: sarif
+pairs.6.b.simple[1]: sarif
+pairs.6.b.simple[2]: sorif
+pairs.7.a.is: shin
+pairs.7.a.ipa[0]: ʃa.ˈɡa
+pairs.7.a.ipa[1]: ʃa.ˈɡa
+pairs.7.a.ipa[2]: ˈʃɔ.ɡə
+pairs.7.a.simple[0]: shagah
+pairs.7.a.simple[1]: shagah
+pairs.7.a.simple[2]: shogeh
+pairs.7.b.is: sin
+pairs.7.b.ipa[0]: sa.ˈɡa
+pairs.7.b.ipa[1]: sa.ˈɡa
+pairs.7.b.ipa[2]: ˈsɔ.ɡə
+pairs.7.b.simple[0]: sagah
+pairs.7.b.simple[1]: sagah
+pairs.7.b.simple[2]: sogeh
+pairs.8.a.is: shin
+pairs.8.a.ipa[0]: hiʃ.ta.ˈkeʁ
+pairs.8.a.ipa[1]: hiʃ.ta.ˈker
+pairs.8.a.ipa[2]: hiʃ.ˈta.kejr
+pairs.8.a.simple[0]: hishtaker
+pairs.8.a.simple[1]: hishtaker
+pairs.8.a.simple[2]: hishtakeir
+pairs.8.b.is: sin
+pairs.8.b.ipa[0]: his.ta.ˈkeʁ
+pairs.8.b.ipa[1]: his.ta.ˈker
+pairs.8.b.ipa[2]: his.ˈta.kejr
+pairs.8.b.simple[0]: histaker
+pairs.8.b.simple[1]: histaker
+pairs.8.b.simple[2]: histakeir","Record shin-sin in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.3
+speak:speak/minimal-pairs:het-khaf,speak,"pairs.0.a: סָחַר
+pairs.0.b: סָכַר",,"Het or khaf
+pairs.0.a: to trade
+pairs.0.b: to dam, to block, to close
+feature: ח vs כ / ך (no dagesh)
+heard.israeli: NOT audible: both are [χ] (merged)
+heard.sephardi: het is pharyngeal [ħ], khaf is velar [x]; only for speakers who keep the pharyngeal
+heard.ashkenazi: NOT audible: both are [x] (pharyngeal het is ""seldom observed in practice"")
+pairs.0.a.is: het
+pairs.0.a.ipa[0]: sa.ˈχaʁ
+pairs.0.a.ipa[1]: sa.ˈħar
+pairs.0.a.ipa[2]: ˈsɔ.xar
+pairs.0.a.simple[0]: sachar
+pairs.0.a.simple[1]: sachar
+pairs.0.a.simple[2]: sochar
+pairs.0.b.is: khaf
+pairs.0.b.ipa[0]: sa.ˈχaʁ
+pairs.0.b.ipa[1]: sa.ˈxar
+pairs.0.b.ipa[2]: ˈsɔ.xar
+pairs.0.b.simple[0]: sakhar
+pairs.0.b.simple[1]: sakhar
+pairs.0.b.simple[2]: sokhar","Record het-khaf in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.4
+speak:speak/minimal-pairs:tav-sav,speak,,,"Tav or sav (dagesh on ת)
+feature: dagesh on ת
+heard.israeli: NOT audible: both [t]
+heard.sephardi: NOT audible: both [t] (θ / d communities not generated)
+heard.ashkenazi: t with the dot, s without the dot","Record tav-sav in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.5
+speak:speak/minimal-pairs:alef-ayin,speak,"pairs.0.a: אִם
+pairs.0.b: עִם
+pairs.1.a: אַל
+pairs.1.b: עַל
+pairs.2.a: אֵת
+pairs.2.b: עֵת
+pairs.3.a: אַתָּה
+pairs.3.b: עַתָּה
+pairs.4.a: רָאָה
+pairs.4.b: רָעָה
+pairs.5.a: נָא
+pairs.5.b: נָע
+pairs.6.a: אָבַד
+pairs.6.b: עָבַד
+pairs.7.a: אֵבֶר
+pairs.7.b: עֵבֶר
+pairs.8.a: אוֹר
+pairs.8.b: עוֹר
+pairs.9.a: אֵד
+pairs.9.b: עֵד
+pairs.10.a: אָנָה
+pairs.10.b: עָנָה
+pairs.11.a: אֵת
+pairs.11.b: עֵת
+pairs.12.a: אַיִן
+pairs.12.b: עַיִן
+pairs.13.a: אָרַב
+pairs.13.b: עָרַב
+pairs.14.a: אוֹר
+pairs.14.b: עוֹר
+pairs.15.a: אָב
+pairs.15.b: עָב
+pairs.16.a: רָאָה
+pairs.16.b: רָעָה
+pairs.17.a: אֹמֶר
+pairs.17.b: עֹמֶר
+pairs.18.a: אָז
+pairs.18.b: עָז
+pairs.19.a: הֵאִיר
+pairs.19.b: הֵעִיר
+pairs.20.a: אָצַר
+pairs.20.b: עָצַר
+pairs.21.a: אִוָּה
+pairs.21.b: עִוָּה
+pairs.22.a: אַל
+pairs.22.b: עַל
+pairs.23.a: הֶאֱרִיךְ
+pairs.23.b: הֶעֱרִיךְ
+pairs.24.a: אִבֵּד
+pairs.24.b: עִבֵּד
+pairs.25.a: נָא
+pairs.25.b: נָע
+pairs.26.a: אֹשֶׁר
+pairs.26.b: עֹשֶׁר
+pairs.27.a: הוֹאִיל
+pairs.27.b: הוֹעִיל
+pairs.28.a: נָא
+pairs.28.b: נָע
+pairs.29.a: אָמַד
+pairs.29.b: עָמַד
+pairs.30.a: אִכֵּל
+pairs.30.b: עִכֵּל
+pairs.31.a: נִגְאַל
+pairs.31.b: נִגְעַל
+pairs.32.a: אִלֵּף
+pairs.32.b: עִלֵּף
+pairs.33.a: אֵדֶר
+pairs.33.b: עֵדֶר
+pairs.34.a: אָרַג
+pairs.34.b: עָרַג
+pairs.35.a: הוֹאִיל
+pairs.35.b: הוֹעִיל
+pairs.36.a: אִירוֹנִי
+pairs.36.b: עִירוֹנִי
+pairs.37.a: אוּד
+pairs.37.b: עוּד
+pairs.38.a: יָאֶה
+pairs.38.b: יָעֶה
+pairs.39.a: אַרְמוֹן
+pairs.39.b: עַרְמוֹן",,"Alef or ayin
+pairs.0.a: if, whether
+pairs.0.b: with
+pairs.1.a: not, do not
+pairs.1.b: on, on top of
+pairs.2.a: used to introduce a semantically definite direct object
+pairs.2.b: a time
+pairs.3.a: you, thou
+pairs.3.b: now
+pairs.4.a: to see, to have vision
+pairs.4.b: to herd
+pairs.5.a: please, if you please
+pairs.5.b: to move
+pairs.6.a: to be pressed
+pairs.6.b: to work, labor
+pairs.7.a: limb, organ
+pairs.7.b: side, direction, way
+pairs.8.a: to shine, be illuminated
+pairs.8.b: skin
+pairs.9.a: a vapour, a fume
+pairs.9.b: a witness
+pairs.10.a: whither, to where
+pairs.10.b: to answer, to reply
+pairs.11.a: shovel
+pairs.11.b: a time
+pairs.12.a: nothing
+pairs.12.b: eye
+pairs.13.a: to lie in wait
+pairs.13.b: to guarantee, promise vow
+pairs.14.a: light, visible light
+pairs.14.b: skin
+pairs.15.a: father
+pairs.15.b: cloud
+pairs.16.a: to see, to have vision
+pairs.16.b: something bad
+pairs.17.a: utterance, word, speech
+pairs.17.b: omer
+pairs.18.a: so, therefore, then, thus
+pairs.18.b: to seek protection or shelter
+pairs.19.a: to illuminate, light, light up, brighten
+pairs.19.b: to wake, awaken, wake up
+pairs.20.a: to store, to stockpile, to hoard
+pairs.20.b: to stop, to stop moving, to halt, to stop the motion of
+pairs.21.a: to greatly desire, want, long for, lust for
+pairs.21.b: to twist, to distort
+pairs.22.a: naught, nothing
+pairs.22.b: on, on top of
+pairs.23.a: to lengthen, to prolong
+pairs.23.b: to value, esteem, regard, respect, prize
+pairs.24.a: to lose
+pairs.24.b: to process
+pairs.25.a: undercooked
+pairs.25.b: to move
+pairs.26.a: happiness
+pairs.26.b: richness, wealth
+pairs.27.a: to continue, keep doing something
+pairs.27.b: to be useful, beneficial, of use
+pairs.28.a: please, if you please
+pairs.28.b: mobile, moving
+pairs.29.a: to evaluate, to estimate
+pairs.29.b: to stand
+pairs.30.a: to corrode
+pairs.30.b: to digest
+pairs.31.a: to be redeemed
+pairs.31.b: to be disgusted
+pairs.32.a: to tame, to train
+pairs.32.b: to cause to faint or otherwise lose consciousness
+pairs.33.a: a mounted animal
+pairs.33.b: a flock, a herd, a drove
+pairs.34.a: to weave
+pairs.34.b: to long or yearn for
+pairs.35.a: since, inasmuch as
+pairs.35.b: to be useful, beneficial, of use
+pairs.36.a: ironic
+pairs.36.b: municipal, urban, civic
+pairs.37.a: a burning piece of wood, a firebrand, an ember
+pairs.37.b: oud
+pairs.38.a: becoming, suitable, worthy
+pairs.38.b: dustpan
+pairs.39.a: palace
+pairs.39.b: chestnut tree
+feature: א vs ע
+heard.israeli: NOT audible: both silent or a glottal stop
+heard.sephardi: alef is a glottal stop [ʔ], ayin is pharyngeal [ʕ]
+heard.ashkenazi: NOT audible: both silent
+pairs.0.a.is: alef
+pairs.0.a.ipa[0]: ˈim
+pairs.0.a.ipa[1]: ˈʔim
+pairs.0.a.ipa[2]: ˈim
+pairs.0.a.simple[0]: im
+pairs.0.a.simple[1]: im
+pairs.0.a.simple[2]: im
+pairs.0.b.is: ayin
+pairs.0.b.ipa[0]: ˈim
+pairs.0.b.ipa[1]: ˈʕim
+pairs.0.b.ipa[2]: ˈim
+pairs.0.b.simple[0]: im
+pairs.0.b.simple[1]: im
+pairs.0.b.simple[2]: im
+pairs.1.a.is: alef
+pairs.1.a.ipa[0]: ˈal
+pairs.1.a.ipa[1]: ˈʔal
+pairs.1.a.ipa[2]: ˈal
+pairs.1.a.simple[0]: al
+pairs.1.a.simple[1]: al
+pairs.1.a.simple[2]: al
+pairs.1.b.is: ayin
+pairs.1.b.ipa[0]: ˈal
+pairs.1.b.ipa[1]: ˈʕal
+pairs.1.b.ipa[2]: ˈal
+pairs.1.b.simple[0]: al
+pairs.1.b.simple[1]: al
+pairs.1.b.simple[2]: al
+pairs.2.a.is: alef
+pairs.2.a.ipa[0]: ˈet
+pairs.2.a.ipa[1]: ˈʔet
+pairs.2.a.ipa[2]: ˈejs
+pairs.2.a.simple[0]: et
+pairs.2.a.simple[1]: et
+pairs.2.a.simple[2]: eis
+pairs.2.b.is: ayin
+pairs.2.b.ipa[0]: ˈet
+pairs.2.b.ipa[1]: ˈʕet
+pairs.2.b.ipa[2]: ˈejs
+pairs.2.b.simple[0]: et
+pairs.2.b.simple[1]: et
+pairs.2.b.simple[2]: eis
+pairs.3.a.is: alef
+pairs.3.a.ipa[0]: a.ˈta
+pairs.3.a.ipa[1]: ʔa.ˈta
+pairs.3.a.ipa[2]: ˈa.tə
+pairs.3.a.simple[0]: atah
+pairs.3.a.simple[1]: atah
+pairs.3.a.simple[2]: ateh
+pairs.3.b.is: ayin
+pairs.3.b.ipa[0]: a.ˈta
+pairs.3.b.ipa[1]: ʕa.ˈta
+pairs.3.b.ipa[2]: ˈa.tə
+pairs.3.b.simple[0]: atah
+pairs.3.b.simple[1]: atah
+pairs.3.b.simple[2]: ateh
+pairs.4.a.is: alef
+pairs.4.a.ipa[0]: ʁa.ˈa
+pairs.4.a.ipa[1]: ra.ˈʔa
+pairs.4.a.ipa[2]: ˈrɔ.ə
+pairs.4.a.simple[0]: ra'ah
+pairs.4.a.simple[1]: ra'ah
+pairs.4.a.simple[2]: ro'eh
+pairs.4.b.is: ayin
+pairs.4.b.ipa[0]: ʁa.ˈa
+pairs.4.b.ipa[1]: ra.ˈʕa
+pairs.4.b.ipa[2]: ˈrɔ.ə
+pairs.4.b.simple[0]: ra'ah
+pairs.4.b.simple[1]: ra'ah
+pairs.4.b.simple[2]: ro'eh
+pairs.5.a.is: alef
+pairs.5.a.ipa[0]: ˈna
+pairs.5.a.ipa[1]: ˈna
+pairs.5.a.ipa[2]: ˈnɔ
+pairs.5.a.simple[0]: na
+pairs.5.a.simple[1]: na
+pairs.5.a.simple[2]: no
+pairs.5.b.is: ayin
+pairs.5.b.ipa[0]: ˈna
+pairs.5.b.ipa[1]: ˈnaʕ
+pairs.5.b.ipa[2]: ˈnɔ
+pairs.5.b.simple[0]: na
+pairs.5.b.simple[1]: na
+pairs.5.b.simple[2]: no
+pairs.6.a.is: alef
+pairs.6.a.ipa[0]: a.ˈvad
+pairs.6.a.ipa[1]: ʔa.ˈvad
+pairs.6.a.ipa[2]: ˈɔ.vad
+pairs.6.a.simple[0]: avad
+pairs.6.a.simple[1]: avad
+pairs.6.a.simple[2]: ovad
+pairs.6.b.is: ayin
+pairs.6.b.ipa[0]: a.ˈvad
+pairs.6.b.ipa[1]: ʕa.ˈvad
+pairs.6.b.ipa[2]: ˈɔ.vad
+pairs.6.b.simple[0]: avad
+pairs.6.b.simple[1]: avad
+pairs.6.b.simple[2]: ovad
+pairs.7.a.is: alef
+pairs.7.a.ipa[0]: e.ˈveʁ
+pairs.7.a.ipa[1]: ʔe.ˈver
+pairs.7.a.ipa[2]: ˈej.ver
+pairs.7.a.simple[0]: ever
+pairs.7.a.simple[1]: ever
+pairs.7.a.simple[2]: eiver
+pairs.7.b.is: ayin
+pairs.7.b.ipa[0]: ˈe.veʁ
+pairs.7.b.ipa[1]: ˈʕe.ver
+pairs.7.b.ipa[2]: ˈej.ver
+pairs.7.b.simple[0]: ever
+pairs.7.b.simple[1]: ever
+pairs.7.b.simple[2]: eiver
+pairs.8.a.is: alef
+pairs.8.a.ipa[0]: ˈoʁ
+pairs.8.a.ipa[1]: ˈʔor
+pairs.8.a.ipa[2]: ˈojr
+pairs.8.a.simple[0]: or
+pairs.8.a.simple[1]: or
+pairs.8.a.simple[2]: oyr
+pairs.8.b.is: ayin
+pairs.8.b.ipa[0]: ˈoʁ
+pairs.8.b.ipa[1]: ˈʕor
+pairs.8.b.ipa[2]: ˈojr
+pairs.8.b.simple[0]: or
+pairs.8.b.simple[1]: or
+pairs.8.b.simple[2]: oyr
+pairs.9.a.is: alef
+pairs.9.a.ipa[0]: ˈed
+pairs.9.a.ipa[1]: ˈʔed
+pairs.9.a.ipa[2]: ˈejd
+pairs.9.a.simple[0]: ed
+pairs.9.a.simple[1]: ed
+pairs.9.a.simple[2]: eid
+pairs.9.b.is: ayin
+pairs.9.b.ipa[0]: ˈed
+pairs.9.b.ipa[1]: ˈʕed
+pairs.9.b.ipa[2]: ˈejd
+pairs.9.b.simple[0]: ed
+pairs.9.b.simple[1]: ed
+pairs.9.b.simple[2]: eid
+pairs.10.a.is: alef
+pairs.10.a.ipa[0]: a.ˈna
+pairs.10.a.ipa[1]: ʔa.ˈna
+pairs.10.a.ipa[2]: ˈɔ.nə
+pairs.10.a.simple[0]: anah
+pairs.10.a.simple[1]: anah
+pairs.10.a.simple[2]: oneh
+pairs.10.b.is: ayin
+pairs.10.b.ipa[0]: a.ˈna
+pairs.10.b.ipa[1]: ʕa.ˈna
+pairs.10.b.ipa[2]: ˈɔ.nə
+pairs.10.b.simple[0]: anah
+pairs.10.b.simple[1]: anah
+pairs.10.b.simple[2]: oneh
+pairs.11.a.is: alef
+pairs.11.a.ipa[0]: ˈet
+pairs.11.a.ipa[1]: ˈʔet
+pairs.11.a.ipa[2]: ˈejs
+pairs.11.a.simple[0]: et
+pairs.11.a.simple[1]: et
+pairs.11.a.simple[2]: eis
+pairs.11.b.is: ayin
+pairs.11.b.ipa[0]: ˈet
+pairs.11.b.ipa[1]: ˈʕet
+pairs.11.b.ipa[2]: ˈejs
+pairs.11.b.simple[0]: et
+pairs.11.b.simple[1]: et
+pairs.11.b.simple[2]: eis
+pairs.12.a.is: alef
+pairs.12.a.ipa[0]: a.ˈjin
+pairs.12.a.ipa[1]: ʔa.ˈjin
+pairs.12.a.ipa[2]: ˈa.jin
+pairs.12.a.simple[0]: ayin
+pairs.12.a.simple[1]: ayin
+pairs.12.a.simple[2]: ayin
+pairs.12.b.is: ayin
+pairs.12.b.ipa[0]: ˈa.jin
+pairs.12.b.ipa[1]: ˈʕa.jin
+pairs.12.b.ipa[2]: ˈa.jin
+pairs.12.b.simple[0]: ayin
+pairs.12.b.simple[1]: ayin
+pairs.12.b.simple[2]: ayin
+pairs.13.a.is: alef
+pairs.13.a.ipa[0]: a.ˈʁav
+pairs.13.a.ipa[1]: ʔa.ˈrav
+pairs.13.a.ipa[2]: ˈɔ.rav
+pairs.13.a.simple[0]: arav
+pairs.13.a.simple[1]: arav
+pairs.13.a.simple[2]: orav
+pairs.13.b.is: ayin
+pairs.13.b.ipa[0]: a.ˈʁav
+pairs.13.b.ipa[1]: ʕa.ˈrav
+pairs.13.b.ipa[2]: ˈɔ.rav
+pairs.13.b.simple[0]: arav
+pairs.13.b.simple[1]: arav
+pairs.13.b.simple[2]: orav
+pairs.14.a.is: alef
+pairs.14.a.ipa[0]: ˈoʁ
+pairs.14.a.ipa[1]: ˈʔor
+pairs.14.a.ipa[2]: ˈojr
+pairs.14.a.simple[0]: or
+pairs.14.a.simple[1]: or
+pairs.14.a.simple[2]: oyr
+pairs.14.b.is: ayin
+pairs.14.b.ipa[0]: ˈoʁ
+pairs.14.b.ipa[1]: ˈʕor
+pairs.14.b.ipa[2]: ˈojr
+pairs.14.b.simple[0]: or
+pairs.14.b.simple[1]: or
+pairs.14.b.simple[2]: oyr
+pairs.15.a.is: alef
+pairs.15.a.ipa[0]: ˈav
+pairs.15.a.ipa[1]: ˈʔav
+pairs.15.a.ipa[2]: ˈɔv
+pairs.15.a.simple[0]: av
+pairs.15.a.simple[1]: av
+pairs.15.a.simple[2]: ov
+pairs.15.b.is: ayin
+pairs.15.b.ipa[0]: ˈav
+pairs.15.b.ipa[1]: ˈʕav
+pairs.15.b.ipa[2]: ˈɔv
+pairs.15.b.simple[0]: av
+pairs.15.b.simple[1]: av
+pairs.15.b.simple[2]: ov
+pairs.16.a.is: alef
+pairs.16.a.ipa[0]: ʁa.ˈa
+pairs.16.a.ipa[1]: ra.ˈʔa
+pairs.16.a.ipa[2]: ˈrɔ.ə
+pairs.16.a.simple[0]: ra'ah
+pairs.16.a.simple[1]: ra'ah
+pairs.16.a.simple[2]: ro'eh
+pairs.16.b.is: ayin
+pairs.16.b.ipa[0]: ʁa.ˈa
+pairs.16.b.ipa[1]: ra.ˈʕa
+pairs.16.b.ipa[2]: ˈrɔ.ə
+pairs.16.b.simple[0]: ra'ah
+pairs.16.b.simple[1]: ra'ah
+pairs.16.b.simple[2]: ro'eh
+pairs.17.a.is: alef
+pairs.17.a.ipa[0]: o.ˈmeʁ
+pairs.17.a.ipa[1]: ʔo.ˈmer
+pairs.17.a.ipa[2]: ˈoj.mer
+pairs.17.a.simple[0]: omer
+pairs.17.a.simple[1]: omer
+pairs.17.a.simple[2]: oymer
+pairs.17.b.is: ayin
+pairs.17.b.ipa[0]: ˈo.meʁ
+pairs.17.b.ipa[1]: ˈʕo.mer
+pairs.17.b.ipa[2]: ˈoj.mer
+pairs.17.b.simple[0]: omer
+pairs.17.b.simple[1]: omer
+pairs.17.b.simple[2]: oymer
+pairs.18.a.is: alef
+pairs.18.a.ipa[0]: ˈaz
+pairs.18.a.ipa[1]: ˈʔaz
+pairs.18.a.ipa[2]: ˈɔz
+pairs.18.a.simple[0]: az
+pairs.18.a.simple[1]: az
+pairs.18.a.simple[2]: oz
+pairs.18.b.is: ayin
+pairs.18.b.ipa[0]: ˈaz
+pairs.18.b.ipa[1]: ˈʕaz
+pairs.18.b.ipa[2]: ˈɔz
+pairs.18.b.simple[0]: az
+pairs.18.b.simple[1]: az
+pairs.18.b.simple[2]: oz
+pairs.19.a.is: alef
+pairs.19.a.ipa[0]: he.ˈiʁ
+pairs.19.a.ipa[1]: he.ˈʔir
+pairs.19.a.ipa[2]: ˈhej.ir
+pairs.19.a.simple[0]: he'ir
+pairs.19.a.simple[1]: he'ir
+pairs.19.a.simple[2]: hei'ir
+pairs.19.b.is: ayin
+pairs.19.b.ipa[0]: he.ˈiʁ
+pairs.19.b.ipa[1]: he.ˈʕir
+pairs.19.b.ipa[2]: ˈhej.ir
+pairs.19.b.simple[0]: he'ir
+pairs.19.b.simple[1]: he'ir
+pairs.19.b.simple[2]: hei'ir
+pairs.20.a.is: alef
+pairs.20.a.ipa[0]: a.ˈtsaʁ
+pairs.20.a.ipa[1]: ʔa.ˈtsar
+pairs.20.a.ipa[2]: ˈɔ.tsar
+pairs.20.a.simple[0]: atzar
+pairs.20.a.simple[1]: atzar
+pairs.20.a.simple[2]: otzar
+pairs.20.b.is: ayin
+pairs.20.b.ipa[0]: a.ˈtsaʁ
+pairs.20.b.ipa[1]: ʕa.ˈtsar
+pairs.20.b.ipa[2]: ˈɔ.tsar
+pairs.20.b.simple[0]: atzar
+pairs.20.b.simple[1]: atzar
+pairs.20.b.simple[2]: otzar
+pairs.21.a.is: alef
+pairs.21.a.ipa[0]: i.ˈva
+pairs.21.a.ipa[1]: ʔi.ˈva
+pairs.21.a.ipa[2]: ˈi.və
+pairs.21.a.simple[0]: ivah
+pairs.21.a.simple[1]: ivah
+pairs.21.a.simple[2]: iveh
+pairs.21.b.is: ayin
+pairs.21.b.ipa[0]: ˈi.va
+pairs.21.b.ipa[1]: ˈʕi.va
+pairs.21.b.ipa[2]: ˈi.və
+pairs.21.b.simple[0]: ivah
+pairs.21.b.simple[1]: ivah
+pairs.21.b.simple[2]: iveh
+pairs.22.a.is: alef
+pairs.22.a.ipa[0]: ˈal
+pairs.22.a.ipa[1]: ˈʔal
+pairs.22.a.ipa[2]: ˈal
+pairs.22.a.simple[0]: al
+pairs.22.a.simple[1]: al
+pairs.22.a.simple[2]: al
+pairs.22.b.is: ayin
+pairs.22.b.ipa[0]: ˈal
+pairs.22.b.ipa[1]: ˈʕal
+pairs.22.b.ipa[2]: ˈal
+pairs.22.b.simple[0]: al
+pairs.22.b.simple[1]: al
+pairs.22.b.simple[2]: al
+pairs.23.a.is: alef
+pairs.23.a.ipa[0]: he.e.ˈʁiχ
+pairs.23.a.ipa[1]: he.ʔe.ˈrix
+pairs.23.a.ipa[2]: ˈhe.e.rix
+pairs.23.a.simple[0]: he'erikh
+pairs.23.a.simple[1]: he'erikh
+pairs.23.a.simple[2]: he'erikh
+pairs.23.b.is: ayin
+pairs.23.b.ipa[0]: he.e.ˈʁiχ
+pairs.23.b.ipa[1]: he.ʕe.ˈrix
+pairs.23.b.ipa[2]: ˈhe.e.rix
+pairs.23.b.simple[0]: he'erikh
+pairs.23.b.simple[1]: he'erikh
+pairs.23.b.simple[2]: he'erikh
+pairs.24.a.is: alef
+pairs.24.a.ipa[0]: i.ˈbed
+pairs.24.a.ipa[1]: ʔi.ˈbed
+pairs.24.a.ipa[2]: ˈi.bejd
+pairs.24.a.simple[0]: ibed
+pairs.24.a.simple[1]: ibed
+pairs.24.a.simple[2]: ibeid
+pairs.24.b.is: ayin
+pairs.24.b.ipa[0]: i.ˈbed
+pairs.24.b.ipa[1]: ʕi.ˈbed
+pairs.24.b.ipa[2]: ˈi.bejd
+pairs.24.b.simple[0]: ibed
+pairs.24.b.simple[1]: ibed
+pairs.24.b.simple[2]: ibeid
+pairs.25.a.is: alef
+pairs.25.a.ipa[0]: ˈna
+pairs.25.a.ipa[1]: ˈna
+pairs.25.a.ipa[2]: ˈnɔ
+pairs.25.a.simple[0]: na
+pairs.25.a.simple[1]: na
+pairs.25.a.simple[2]: no
+pairs.25.b.is: ayin
+pairs.25.b.ipa[0]: ˈna
+pairs.25.b.ipa[1]: ˈnaʕ
+pairs.25.b.ipa[2]: ˈnɔ
+pairs.25.b.simple[0]: na
+pairs.25.b.simple[1]: na
+pairs.25.b.simple[2]: no
+pairs.26.a.is: alef
+pairs.26.a.ipa[0]: o.ˈʃeʁ
+pairs.26.a.ipa[1]: ʔo.ˈʃer
+pairs.26.a.ipa[2]: ˈoj.ʃer
+pairs.26.a.simple[0]: osher
+pairs.26.a.simple[1]: osher
+pairs.26.a.simple[2]: oysher
+pairs.26.b.is: ayin
+pairs.26.b.ipa[0]: o.ˈʃeʁ
+pairs.26.b.ipa[1]: ʕo.ˈʃer
+pairs.26.b.ipa[2]: ˈoj.ʃer
+pairs.26.b.simple[0]: osher
+pairs.26.b.simple[1]: osher
+pairs.26.b.simple[2]: oysher
+pairs.27.a.is: alef
+pairs.27.a.ipa[0]: ho.ˈil
+pairs.27.a.ipa[1]: ho.ˈʔil
+pairs.27.a.ipa[2]: ˈhoj.il
+pairs.27.a.simple[0]: ho'il
+pairs.27.a.simple[1]: ho'il
+pairs.27.a.simple[2]: hoy'il
+pairs.27.b.is: ayin
+pairs.27.b.ipa[0]: ho.ˈil
+pairs.27.b.ipa[1]: ho.ˈʕil
+pairs.27.b.ipa[2]: ˈhoj.il
+pairs.27.b.simple[0]: ho'il
+pairs.27.b.simple[1]: ho'il
+pairs.27.b.simple[2]: hoy'il
+pairs.28.a.is: alef
+pairs.28.a.ipa[0]: ˈna
+pairs.28.a.ipa[1]: ˈna
+pairs.28.a.ipa[2]: ˈnɔ
+pairs.28.a.simple[0]: na
+pairs.28.a.simple[1]: na
+pairs.28.a.simple[2]: no
+pairs.28.b.is: ayin
+pairs.28.b.ipa[0]: ˈna
+pairs.28.b.ipa[1]: ˈnaʕ
+pairs.28.b.ipa[2]: ˈnɔ
+pairs.28.b.simple[0]: na
+pairs.28.b.simple[1]: na
+pairs.28.b.simple[2]: no
+pairs.29.a.is: alef
+pairs.29.a.ipa[0]: a.ˈmad
+pairs.29.a.ipa[1]: ʔa.ˈmad
+pairs.29.a.ipa[2]: ˈɔ.mad
+pairs.29.a.simple[0]: amad
+pairs.29.a.simple[1]: amad
+pairs.29.a.simple[2]: omad
+pairs.29.b.is: ayin
+pairs.29.b.ipa[0]: a.ˈmad
+pairs.29.b.ipa[1]: ʕa.ˈmad
+pairs.29.b.ipa[2]: ˈɔ.mad
+pairs.29.b.simple[0]: amad
+pairs.29.b.simple[1]: amad
+pairs.29.b.simple[2]: omad
+pairs.30.a.is: alef
+pairs.30.a.ipa[0]: i.ˈkel
+pairs.30.a.ipa[1]: ʔi.ˈkel
+pairs.30.a.ipa[2]: ˈi.kejl
+pairs.30.a.simple[0]: ikel
+pairs.30.a.simple[1]: ikel
+pairs.30.a.simple[2]: ikeil
+pairs.30.b.is: ayin
+pairs.30.b.ipa[0]: i.ˈkel
+pairs.30.b.ipa[1]: ʕi.ˈkel
+pairs.30.b.ipa[2]: ˈi.kejl
+pairs.30.b.simple[0]: ikel
+pairs.30.b.simple[1]: ikel
+pairs.30.b.simple[2]: ikeil
+pairs.31.a.is: alef
+pairs.31.a.ipa[0]: niɡ.ˈal
+pairs.31.a.ipa[1]: niɡ.ˈʔal
+pairs.31.a.ipa[2]: ˈniɡ.al
+pairs.31.a.simple[0]: nig'al
+pairs.31.a.simple[1]: nig'al
+pairs.31.a.simple[2]: nig'al
+pairs.31.b.is: ayin
+pairs.31.b.ipa[0]: niɡ.ˈal
+pairs.31.b.ipa[1]: niɡ.ˈʕal
+pairs.31.b.ipa[2]: ˈniɡ.al
+pairs.31.b.simple[0]: nig'al
+pairs.31.b.simple[1]: nig'al
+pairs.31.b.simple[2]: nig'al
+pairs.32.a.is: alef
+pairs.32.a.ipa[0]: i.ˈlef
+pairs.32.a.ipa[1]: ʔi.ˈlef
+pairs.32.a.ipa[2]: ˈi.lejf
+pairs.32.a.simple[0]: ilef
+pairs.32.a.simple[1]: ilef
+pairs.32.a.simple[2]: ileif
+pairs.32.b.is: ayin
+pairs.32.b.ipa[0]: i.ˈlef
+pairs.32.b.ipa[1]: ʕi.ˈlef
+pairs.32.b.ipa[2]: ˈi.lejf
+pairs.32.b.simple[0]: ilef
+pairs.32.b.simple[1]: ilef
+pairs.32.b.simple[2]: ileif
+pairs.33.a.is: alef
+pairs.33.a.ipa[0]: e.ˈdeʁ
+pairs.33.a.ipa[1]: ʔe.ˈder
+pairs.33.a.ipa[2]: ˈej.der
+pairs.33.a.simple[0]: eder
+pairs.33.a.simple[1]: eder
+pairs.33.a.simple[2]: eider
+pairs.33.b.is: ayin
+pairs.33.b.ipa[0]: e.ˈdeʁ
+pairs.33.b.ipa[1]: ʕe.ˈder
+pairs.33.b.ipa[2]: ˈej.der
+pairs.33.b.simple[0]: eder
+pairs.33.b.simple[1]: eder
+pairs.33.b.simple[2]: eider
+pairs.34.a.is: alef
+pairs.34.a.ipa[0]: a.ˈʁaɡ
+pairs.34.a.ipa[1]: ʔa.ˈraɡ
+pairs.34.a.ipa[2]: ˈɔ.raɡ
+pairs.34.a.simple[0]: arag
+pairs.34.a.simple[1]: arag
+pairs.34.a.simple[2]: orag
+pairs.34.b.is: ayin
+pairs.34.b.ipa[0]: a.ˈʁaɡ
+pairs.34.b.ipa[1]: ʕa.ˈraɡ
+pairs.34.b.ipa[2]: ˈɔ.raɡ
+pairs.34.b.simple[0]: arag
+pairs.34.b.simple[1]: arag
+pairs.34.b.simple[2]: orag
+pairs.35.a.is: alef
+pairs.35.a.ipa[0]: ho.ˈil
+pairs.35.a.ipa[1]: ho.ˈʔil
+pairs.35.a.ipa[2]: ˈhoj.il
+pairs.35.a.simple[0]: ho'il
+pairs.35.a.simple[1]: ho'il
+pairs.35.a.simple[2]: hoy'il
+pairs.35.b.is: ayin
+pairs.35.b.ipa[0]: ho.ˈil
+pairs.35.b.ipa[1]: ho.ˈʕil
+pairs.35.b.ipa[2]: ˈhoj.il
+pairs.35.b.simple[0]: ho'il
+pairs.35.b.simple[1]: ho'il
+pairs.35.b.simple[2]: hoy'il
+pairs.36.a.is: alef
+pairs.36.a.ipa[0]: i.ʁo.ˈni
+pairs.36.a.ipa[1]: ʔi.ro.ˈni
+pairs.36.a.ipa[2]: i.ˈroj.ni
+pairs.36.a.simple[0]: ironi
+pairs.36.a.simple[1]: ironi
+pairs.36.a.simple[2]: iroyni
+pairs.36.b.is: ayin
+pairs.36.b.ipa[0]: i.ʁo.ˈni
+pairs.36.b.ipa[1]: ʕi.ro.ˈni
+pairs.36.b.ipa[2]: i.ˈroj.ni
+pairs.36.b.simple[0]: ironi
+pairs.36.b.simple[1]: ironi
+pairs.36.b.simple[2]: iroyni
+pairs.37.a.is: alef
+pairs.37.a.ipa[0]: ˈud
+pairs.37.a.ipa[1]: ˈʔud
+pairs.37.a.ipa[2]: ˈud
+pairs.37.a.simple[0]: ud
+pairs.37.a.simple[1]: ud
+pairs.37.a.simple[2]: ud
+pairs.37.b.is: ayin
+pairs.37.b.ipa[0]: ˈud
+pairs.37.b.ipa[1]: ˈʕud
+pairs.37.b.ipa[2]: ˈud
+pairs.37.b.simple[0]: ud
+pairs.37.b.simple[1]: ud
+pairs.37.b.simple[2]: ud
+pairs.38.a.is: alef
+pairs.38.a.ipa[0]: ja.ˈe
+pairs.38.a.ipa[1]: ja.ˈʔe
+pairs.38.a.ipa[2]: ˈjɔ.e
+pairs.38.a.simple[0]: ya'eh
+pairs.38.a.simple[1]: ya'eh
+pairs.38.a.simple[2]: yo'eh
+pairs.38.b.is: ayin
+pairs.38.b.ipa[0]: ja.ˈe
+pairs.38.b.ipa[1]: ja.ˈʕe
+pairs.38.b.ipa[2]: ˈjɔ.e
+pairs.38.b.simple[0]: ya'eh
+pairs.38.b.simple[1]: ya'eh
+pairs.38.b.simple[2]: yo'eh
+pairs.39.a.is: alef
+pairs.39.a.ipa[0]: aʁ.ˈmon
+pairs.39.a.ipa[1]: ʔar.ˈmon
+pairs.39.a.ipa[2]: ˈar.mojn
+pairs.39.a.simple[0]: armon
+pairs.39.a.simple[1]: armon
+pairs.39.a.simple[2]: armoyn
+pairs.39.b.is: ayin
+pairs.39.b.ipa[0]: aʁ.ˈmon
+pairs.39.b.ipa[1]: ʕar.ˈmon
+pairs.39.b.ipa[2]: ˈar.mojn
+pairs.39.b.simple[0]: armon
+pairs.39.b.simple[1]: armon
+pairs.39.b.simple[2]: armoyn","Record alef-ayin in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.6
+speak:speak/minimal-pairs:kamatz-patach,speak,"pairs.0.a: רָב
+pairs.0.b: רַב
+pairs.1.a: צָר
+pairs.1.b: צַר
+pairs.2.a: זָכָר
+pairs.2.b: זָכַר
+pairs.3.a: פָּעַם
+pairs.3.b: פַּעַם
+pairs.4.a: צָד
+pairs.4.b: צַד
+pairs.5.a: נָחַל
+pairs.5.b: נַחַל
+pairs.6.a: חָלָק
+pairs.6.b: חָלַק
+pairs.7.a: אָשָׁם
+pairs.7.b: אָשַׁם
+pairs.8.a: נוֹסָף
+pairs.8.b: נוֹסַף
+pairs.9.a: חָג
+pairs.9.b: חַג
+pairs.10.a: נָעַר
+pairs.10.b: נַעַר
+pairs.11.a: נָעַל
+pairs.11.b: נַעַל
+pairs.12.a: נָבָל
+pairs.12.b: נָבַל
+pairs.13.a: בָּר
+pairs.13.b: בַּר
+pairs.14.a: נָהָר
+pairs.14.b: נָהַר
+pairs.15.a: חָם
+pairs.15.b: חַם
+pairs.16.a: גָּמָל
+pairs.16.b: גָּמַל
+pairs.17.a: עָבָר
+pairs.17.b: עָבַר
+pairs.18.a: גָּד
+pairs.18.b: גַּד
+pairs.19.a: פָּרָשׁ
+pairs.19.b: פָּרַשׁ
+pairs.20.a: חָרָשׁ
+pairs.20.b: חָרַשׁ
+pairs.21.a: כָּעַס
+pairs.21.b: כַּעַס
+pairs.22.a: חָד
+pairs.22.b: חַד
+pairs.23.a: יָשָׁן
+pairs.23.b: יָשַׁן
+pairs.24.a: זָקָן
+pairs.24.b: זָקַן
+pairs.25.a: זָן
+pairs.25.b: זַן
+pairs.26.a: עָז
+pairs.26.b: עַז
+pairs.27.a: נֶאֱמָן
+pairs.27.b: נֶאֱמַן
+pairs.28.a: טָס
+pairs.28.b: טַס
+pairs.29.a: מָסָךְ
+pairs.29.b: מָסַךְ
+pairs.30.a: חָמָס
+pairs.30.b: חָמַס
+pairs.31.a: רָעַשׁ
+pairs.31.b: רַעַשׁ
+pairs.32.a: זָעַם
+pairs.32.b: זַעַם
+pairs.33.a: שָׂבָע
+pairs.33.b: שָׂבַע
+pairs.34.a: תָּם
+pairs.34.b: תַּם
+pairs.35.a: מָשָׁל
+pairs.35.b: מָשַׁל
+pairs.36.a: דָּחַף
+pairs.36.b: דַּחַף
+pairs.37.a: נִצָּב
+pairs.37.b: נִצַּב
+pairs.38.a: בָּז
+pairs.38.b: בַּז
+pairs.39.a: דָּר
+pairs.39.b: דַּר",,"Kamatz or patach
+pairs.0.a: to contend, dispute
+pairs.0.b: many, much
+pairs.1.a: to shape
+pairs.1.b: narrow (not wide)
+pairs.2.a: man, male
+pairs.2.b: to remember
+pairs.3.a: to beat, to strike, to knock
+pairs.3.b: a time
+pairs.4.a: to hunt
+pairs.4.b: a side
+pairs.5.a: to receive, take possession of, inherit
+pairs.5.b: a stream (small river)
+pairs.6.a: smooth
+pairs.6.b: to divide, to partition, to split
+pairs.7.a: guilt
+pairs.7.b: to be guilty
+pairs.8.a: additional
+pairs.8.b: to be added
+pairs.9.a: to circle
+pairs.9.b: holiday
+pairs.10.a: to bray (donkey)
+pairs.10.b: non-infant child
+pairs.11.a: to put on
+pairs.11.b: shoe
+pairs.12.a: villain, vile person, miscreant, scoundrel
+pairs.12.b: to wither, wilt, dry out
+pairs.13.a: grain
+pairs.13.b: clean, pure
+pairs.14.a: river
+pairs.14.b: to flow
+pairs.15.a: father-in-law, in relation to the bride
+pairs.15.b: Hot
+pairs.16.a: camel
+pairs.16.b: to wean (from mother's milk)
+pairs.17.a: the past
+pairs.17.b: to pass, to cross
+pairs.18.a: luck
+pairs.18.b: coriander
+pairs.19.a: horseman, cavalier, dragoon
+pairs.19.b: to retire
+pairs.20.a: a craftsman
+pairs.20.b: to plow, plough
+pairs.21.a: to be angry
+pairs.21.b: anger
+pairs.22.a: to pose a riddle, to quiz
+pairs.22.b: sharp
+pairs.23.a: old, having existed for a long time
+pairs.23.b: to sleep, to be asleep
+pairs.24.a: beard
+pairs.24.b: to grow old, to grow elderly, to age
+pairs.25.a: to sustain, to nurture, to feed
+pairs.25.b: breed (of animal)
+pairs.26.a: to seek protection or shelter
+pairs.26.b: mighty, strong
+pairs.27.a: loyal, faithful, devoted
+pairs.27.b: to be true or reliable
+pairs.28.a: to fly
+pairs.28.b: tray, platter
+pairs.29.a: screen, display
+pairs.29.b: to mix, produce by mixing
+pairs.30.a: robbery, theft
+pairs.30.b: to rob
+pairs.31.a: to be noisy
+pairs.31.b: noise, noisiness
+pairs.32.a: to be furious
+pairs.32.b: fury
+pairs.33.a: satiety
+pairs.33.b: to be sated
+pairs.34.a: complete, perfect
+pairs.34.b: to be finished, completed
+pairs.35.a: allegory, morality play, fable, parable
+pairs.35.b: to rule, to reign, to govern
+pairs.36.a: to push
+pairs.36.b: impulse, urge, compulsion, desire
+pairs.37.a: perpendicular
+pairs.37.b: to stand, position oneself
+pairs.38.a: to despise, to loathe
+pairs.38.b: to take spoil
+pairs.39.a: to dwell
+pairs.39.b: mother-of-pearl, nacre
+feature: ָ vs ַ
+heard.israeli: NOT audible: both [a]
+heard.sephardi: NOT audible: both [a] (length not generated)
+heard.ashkenazi: kamatz [ɔ] (o as in ""saw""), patach [a]
+pairs.0.a.is: kamatz
+pairs.0.a.ipa[0]: ˈʁav
+pairs.0.a.ipa[1]: ˈrav
+pairs.0.a.ipa[2]: ˈrɔv
+pairs.0.a.simple[0]: rav
+pairs.0.a.simple[1]: rav
+pairs.0.a.simple[2]: rov
+pairs.0.b.is: patach
+pairs.0.b.ipa[0]: ˈʁav
+pairs.0.b.ipa[1]: ˈrav
+pairs.0.b.ipa[2]: ˈrav
+pairs.0.b.simple[0]: rav
+pairs.0.b.simple[1]: rav
+pairs.0.b.simple[2]: rav
+pairs.1.a.is: kamatz
+pairs.1.a.ipa[0]: ˈtsaʁ
+pairs.1.a.ipa[1]: ˈtsar
+pairs.1.a.ipa[2]: ˈtsɔr
+pairs.1.a.simple[0]: tzar
+pairs.1.a.simple[1]: tzar
+pairs.1.a.simple[2]: tzor
+pairs.1.b.is: patach
+pairs.1.b.ipa[0]: ˈtsaʁ
+pairs.1.b.ipa[1]: ˈtsar
+pairs.1.b.ipa[2]: ˈtsar
+pairs.1.b.simple[0]: tzar
+pairs.1.b.simple[1]: tzar
+pairs.1.b.simple[2]: tzar
+pairs.2.a.is: kamatz
+pairs.2.a.ipa[0]: za.ˈχaʁ
+pairs.2.a.ipa[1]: za.ˈxar
+pairs.2.a.ipa[2]: ˈzɔ.xɔr
+pairs.2.a.simple[0]: zakhar
+pairs.2.a.simple[1]: zakhar
+pairs.2.a.simple[2]: zokhor
+pairs.2.b.is: patach
+pairs.2.b.ipa[0]: za.ˈχaʁ
+pairs.2.b.ipa[1]: za.ˈxar
+pairs.2.b.ipa[2]: ˈzɔ.xar
+pairs.2.b.simple[0]: zakhar
+pairs.2.b.simple[1]: zakhar
+pairs.2.b.simple[2]: zokhar
+pairs.3.a.is: kamatz
+pairs.3.a.ipa[0]: ˈpa.am
+pairs.3.a.ipa[1]: ˈpa.ʕam
+pairs.3.a.ipa[2]: ˈpɔ.am
+pairs.3.a.simple[0]: pa'am
+pairs.3.a.simple[1]: pa'am
+pairs.3.a.simple[2]: po'am
+pairs.3.b.is: patach
+pairs.3.b.ipa[0]: ˈpa.am
+pairs.3.b.ipa[1]: ˈpa.ʕam
+pairs.3.b.ipa[2]: ˈpa.am
+pairs.3.b.simple[0]: pa'am
+pairs.3.b.simple[1]: pa'am
+pairs.3.b.simple[2]: pa'am
+pairs.4.a.is: kamatz
+pairs.4.a.ipa[0]: ˈtsad
+pairs.4.a.ipa[1]: ˈtsad
+pairs.4.a.ipa[2]: ˈtsɔd
+pairs.4.a.simple[0]: tzad
+pairs.4.a.simple[1]: tzad
+pairs.4.a.simple[2]: tzod
+pairs.4.b.is: patach
+pairs.4.b.ipa[0]: ˈtsad
+pairs.4.b.ipa[1]: ˈtsad
+pairs.4.b.ipa[2]: ˈtsad
+pairs.4.b.simple[0]: tzad
+pairs.4.b.simple[1]: tzad
+pairs.4.b.simple[2]: tzad
+pairs.5.a.is: kamatz
+pairs.5.a.ipa[0]: na.ˈχal
+pairs.5.a.ipa[1]: na.ˈħal
+pairs.5.a.ipa[2]: ˈnɔ.xal
+pairs.5.a.simple[0]: nachal
+pairs.5.a.simple[1]: nachal
+pairs.5.a.simple[2]: nochal
+pairs.5.b.is: patach
+pairs.5.b.ipa[0]: na.ˈχal
+pairs.5.b.ipa[1]: na.ˈħal
+pairs.5.b.ipa[2]: ˈna.xal
+pairs.5.b.simple[0]: nachal
+pairs.5.b.simple[1]: nachal
+pairs.5.b.simple[2]: nachal
+pairs.6.a.is: kamatz
+pairs.6.a.ipa[0]: χa.ˈlak
+pairs.6.a.ipa[1]: ħa.ˈlak
+pairs.6.a.ipa[2]: ˈxɔ.lɔk
+pairs.6.a.simple[0]: chalak
+pairs.6.a.simple[1]: chalak
+pairs.6.a.simple[2]: cholok
+pairs.6.b.is: patach
+pairs.6.b.ipa[0]: χa.ˈlak
+pairs.6.b.ipa[1]: ħa.ˈlak
+pairs.6.b.ipa[2]: ˈxɔ.lak
+pairs.6.b.simple[0]: chalak
+pairs.6.b.simple[1]: chalak
+pairs.6.b.simple[2]: cholak
+pairs.7.a.is: kamatz
+pairs.7.a.ipa[0]: a.ˈʃam
+pairs.7.a.ipa[1]: ʔa.ˈʃam
+pairs.7.a.ipa[2]: ˈɔ.ʃɔm
+pairs.7.a.simple[0]: asham
+pairs.7.a.simple[1]: asham
+pairs.7.a.simple[2]: oshom
+pairs.7.b.is: patach
+pairs.7.b.ipa[0]: a.ˈʃam
+pairs.7.b.ipa[1]: ʔa.ˈʃam
+pairs.7.b.ipa[2]: ˈɔ.ʃam
+pairs.7.b.simple[0]: asham
+pairs.7.b.simple[1]: asham
+pairs.7.b.simple[2]: osham
+pairs.8.a.is: kamatz
+pairs.8.a.ipa[0]: no.ˈsaf
+pairs.8.a.ipa[1]: no.ˈsaf
+pairs.8.a.ipa[2]: ˈnoj.sɔf
+pairs.8.a.simple[0]: nosaf
+pairs.8.a.simple[1]: nosaf
+pairs.8.a.simple[2]: noysof
+pairs.8.b.is: patach
+pairs.8.b.ipa[0]: no.ˈsaf
+pairs.8.b.ipa[1]: no.ˈsaf
+pairs.8.b.ipa[2]: ˈnoj.saf
+pairs.8.b.simple[0]: nosaf
+pairs.8.b.simple[1]: nosaf
+pairs.8.b.simple[2]: noysaf
+pairs.9.a.is: kamatz
+pairs.9.a.ipa[0]: ˈχaɡ
+pairs.9.a.ipa[1]: ˈħaɡ
+pairs.9.a.ipa[2]: ˈxɔɡ
+pairs.9.a.simple[0]: chag
+pairs.9.a.simple[1]: chag
+pairs.9.a.simple[2]: chog
+pairs.9.b.is: patach
+pairs.9.b.ipa[0]: ˈχaɡ
+pairs.9.b.ipa[1]: ˈħaɡ
+pairs.9.b.ipa[2]: ˈxaɡ
+pairs.9.b.simple[0]: chag
+pairs.9.b.simple[1]: chag
+pairs.9.b.simple[2]: chag
+pairs.10.a.is: kamatz
+pairs.10.a.ipa[0]: na.ˈaʁ
+pairs.10.a.ipa[1]: na.ˈʕar
+pairs.10.a.ipa[2]: ˈnɔ.ar
+pairs.10.a.simple[0]: na'ar
+pairs.10.a.simple[1]: na'ar
+pairs.10.a.simple[2]: no'ar
+pairs.10.b.is: patach
+pairs.10.b.ipa[0]: ˈna.aʁ
+pairs.10.b.ipa[1]: ˈna.ʕar
+pairs.10.b.ipa[2]: ˈna.ar
+pairs.10.b.simple[0]: na'ar
+pairs.10.b.simple[1]: na'ar
+pairs.10.b.simple[2]: na'ar
+pairs.11.a.is: kamatz
+pairs.11.a.ipa[0]: na.ˈal
+pairs.11.a.ipa[1]: na.ˈʕal
+pairs.11.a.ipa[2]: ˈnɔ.al
+pairs.11.a.simple[0]: na'al
+pairs.11.a.simple[1]: na'al
+pairs.11.a.simple[2]: no'al
+pairs.11.b.is: patach
+pairs.11.b.ipa[0]: na.ˈal
+pairs.11.b.ipa[1]: na.ˈʕal
+pairs.11.b.ipa[2]: ˈna.al
+pairs.11.b.simple[0]: na'al
+pairs.11.b.simple[1]: na'al
+pairs.11.b.simple[2]: na'al
+pairs.12.a.is: kamatz
+pairs.12.a.ipa[0]: na.ˈval
+pairs.12.a.ipa[1]: na.ˈval
+pairs.12.a.ipa[2]: ˈnɔ.vɔl
+pairs.12.a.simple[0]: naval
+pairs.12.a.simple[1]: naval
+pairs.12.a.simple[2]: novol
+pairs.12.b.is: patach
+pairs.12.b.ipa[0]: na.ˈval
+pairs.12.b.ipa[1]: na.ˈval
+pairs.12.b.ipa[2]: ˈnɔ.val
+pairs.12.b.simple[0]: naval
+pairs.12.b.simple[1]: naval
+pairs.12.b.simple[2]: noval
+pairs.13.a.is: kamatz
+pairs.13.a.ipa[0]: ˈbaʁ
+pairs.13.a.ipa[1]: ˈbar
+pairs.13.a.ipa[2]: ˈbɔr
+pairs.13.a.simple[0]: bar
+pairs.13.a.simple[1]: bar
+pairs.13.a.simple[2]: bor
+pairs.13.b.is: patach
+pairs.13.b.ipa[0]: ˈbaʁ
+pairs.13.b.ipa[1]: ˈbar
+pairs.13.b.ipa[2]: ˈbar
+pairs.13.b.simple[0]: bar
+pairs.13.b.simple[1]: bar
+pairs.13.b.simple[2]: bar
+pairs.14.a.is: kamatz
+pairs.14.a.ipa[0]: na.ˈhaʁ
+pairs.14.a.ipa[1]: na.ˈhar
+pairs.14.a.ipa[2]: ˈnɔ.hɔr
+pairs.14.a.simple[0]: nahar
+pairs.14.a.simple[1]: nahar
+pairs.14.a.simple[2]: nohor
+pairs.14.b.is: patach
+pairs.14.b.ipa[0]: na.ˈhaʁ
+pairs.14.b.ipa[1]: na.ˈhar
+pairs.14.b.ipa[2]: ˈnɔ.har
+pairs.14.b.simple[0]: nahar
+pairs.14.b.simple[1]: nahar
+pairs.14.b.simple[2]: nohar
+pairs.15.a.is: kamatz
+pairs.15.a.ipa[0]: ˈχam
+pairs.15.a.ipa[1]: ˈħam
+pairs.15.a.ipa[2]: ˈxɔm
+pairs.15.a.simple[0]: cham
+pairs.15.a.simple[1]: cham
+pairs.15.a.simple[2]: chom
+pairs.15.b.is: patach
+pairs.15.b.ipa[0]: ˈχam
+pairs.15.b.ipa[1]: ˈħam
+pairs.15.b.ipa[2]: ˈxam
+pairs.15.b.simple[0]: cham
+pairs.15.b.simple[1]: cham
+pairs.15.b.simple[2]: cham
+pairs.16.a.is: kamatz
+pairs.16.a.ipa[0]: ɡa.ˈmal
+pairs.16.a.ipa[1]: ɡa.ˈmal
+pairs.16.a.ipa[2]: ˈɡɔ.mɔl
+pairs.16.a.simple[0]: gamal
+pairs.16.a.simple[1]: gamal
+pairs.16.a.simple[2]: gomol
+pairs.16.b.is: patach
+pairs.16.b.ipa[0]: ɡa.ˈmal
+pairs.16.b.ipa[1]: ɡa.ˈmal
+pairs.16.b.ipa[2]: ˈɡɔ.mal
+pairs.16.b.simple[0]: gamal
+pairs.16.b.simple[1]: gamal
+pairs.16.b.simple[2]: gomal
+pairs.17.a.is: kamatz
+pairs.17.a.ipa[0]: a.ˈvaʁ
+pairs.17.a.ipa[1]: ʕa.ˈvar
+pairs.17.a.ipa[2]: ˈɔ.vɔr
+pairs.17.a.simple[0]: avar
+pairs.17.a.simple[1]: avar
+pairs.17.a.simple[2]: ovor
+pairs.17.b.is: patach
+pairs.17.b.ipa[0]: a.ˈvaʁ
+pairs.17.b.ipa[1]: ʕa.ˈvar
+pairs.17.b.ipa[2]: ˈɔ.var
+pairs.17.b.simple[0]: avar
+pairs.17.b.simple[1]: avar
+pairs.17.b.simple[2]: ovar
+pairs.18.a.is: kamatz
+pairs.18.a.ipa[0]: ˈɡad
+pairs.18.a.ipa[1]: ˈɡad
+pairs.18.a.ipa[2]: ˈɡɔd
+pairs.18.a.simple[0]: gad
+pairs.18.a.simple[1]: gad
+pairs.18.a.simple[2]: god
+pairs.18.b.is: patach
+pairs.18.b.ipa[0]: ˈɡad
+pairs.18.b.ipa[1]: ˈɡad
+pairs.18.b.ipa[2]: ˈɡad
+pairs.18.b.simple[0]: gad
+pairs.18.b.simple[1]: gad
+pairs.18.b.simple[2]: gad
+pairs.19.a.is: kamatz
+pairs.19.a.ipa[0]: pa.ˈʁaʃ
+pairs.19.a.ipa[1]: pa.ˈraʃ
+pairs.19.a.ipa[2]: ˈpɔ.rɔʃ
+pairs.19.a.simple[0]: parash
+pairs.19.a.simple[1]: parash
+pairs.19.a.simple[2]: porosh
+pairs.19.b.is: patach
+pairs.19.b.ipa[0]: pa.ˈʁaʃ
+pairs.19.b.ipa[1]: pa.ˈraʃ
+pairs.19.b.ipa[2]: ˈpɔ.raʃ
+pairs.19.b.simple[0]: parash
+pairs.19.b.simple[1]: parash
+pairs.19.b.simple[2]: porash
+pairs.20.a.is: kamatz
+pairs.20.a.ipa[0]: χa.ˈʁaʃ
+pairs.20.a.ipa[1]: ħa.ˈraʃ
+pairs.20.a.ipa[2]: ˈxɔ.rɔʃ
+pairs.20.a.simple[0]: charash
+pairs.20.a.simple[1]: charash
+pairs.20.a.simple[2]: chorosh
+pairs.20.b.is: patach
+pairs.20.b.ipa[0]: χa.ˈʁaʃ
+pairs.20.b.ipa[1]: ħa.ˈraʃ
+pairs.20.b.ipa[2]: ˈxɔ.raʃ
+pairs.20.b.simple[0]: charash
+pairs.20.b.simple[1]: charash
+pairs.20.b.simple[2]: chorash
+pairs.21.a.is: kamatz
+pairs.21.a.ipa[0]: ˈka.as
+pairs.21.a.ipa[1]: ˈka.ʕas
+pairs.21.a.ipa[2]: ˈkɔ.as
+pairs.21.a.simple[0]: ka'as
+pairs.21.a.simple[1]: ka'as
+pairs.21.a.simple[2]: ko'as
+pairs.21.b.is: patach
+pairs.21.b.ipa[0]: ˈka.as
+pairs.21.b.ipa[1]: ˈka.ʕas
+pairs.21.b.ipa[2]: ˈka.as
+pairs.21.b.simple[0]: ka'as
+pairs.21.b.simple[1]: ka'as
+pairs.21.b.simple[2]: ka'as
+pairs.22.a.is: kamatz
+pairs.22.a.ipa[0]: ˈχad
+pairs.22.a.ipa[1]: ˈħad
+pairs.22.a.ipa[2]: ˈxɔd
+pairs.22.a.simple[0]: chad
+pairs.22.a.simple[1]: chad
+pairs.22.a.simple[2]: chod
+pairs.22.b.is: patach
+pairs.22.b.ipa[0]: ˈχad
+pairs.22.b.ipa[1]: ˈħad
+pairs.22.b.ipa[2]: ˈxad
+pairs.22.b.simple[0]: chad
+pairs.22.b.simple[1]: chad
+pairs.22.b.simple[2]: chad
+pairs.23.a.is: kamatz
+pairs.23.a.ipa[0]: ja.ˈʃan
+pairs.23.a.ipa[1]: ja.ˈʃan
+pairs.23.a.ipa[2]: ˈjɔ.ʃɔn
+pairs.23.a.simple[0]: yashan
+pairs.23.a.simple[1]: yashan
+pairs.23.a.simple[2]: yoshon
+pairs.23.b.is: patach
+pairs.23.b.ipa[0]: ja.ˈʃan
+pairs.23.b.ipa[1]: ja.ˈʃan
+pairs.23.b.ipa[2]: ˈjɔ.ʃan
+pairs.23.b.simple[0]: yashan
+pairs.23.b.simple[1]: yashan
+pairs.23.b.simple[2]: yoshan
+pairs.24.a.is: kamatz
+pairs.24.a.ipa[0]: za.ˈkan
+pairs.24.a.ipa[1]: za.ˈkan
+pairs.24.a.ipa[2]: ˈzɔ.kɔn
+pairs.24.a.simple[0]: zakan
+pairs.24.a.simple[1]: zakan
+pairs.24.a.simple[2]: zokon
+pairs.24.b.is: patach
+pairs.24.b.ipa[0]: za.ˈkan
+pairs.24.b.ipa[1]: za.ˈkan
+pairs.24.b.ipa[2]: ˈzɔ.kan
+pairs.24.b.simple[0]: zakan
+pairs.24.b.simple[1]: zakan
+pairs.24.b.simple[2]: zokan
+pairs.25.a.is: kamatz
+pairs.25.a.ipa[0]: ˈzan
+pairs.25.a.ipa[1]: ˈzan
+pairs.25.a.ipa[2]: ˈzɔn
+pairs.25.a.simple[0]: zan
+pairs.25.a.simple[1]: zan
+pairs.25.a.simple[2]: zon
+pairs.25.b.is: patach
+pairs.25.b.ipa[0]: ˈzan
+pairs.25.b.ipa[1]: ˈzan
+pairs.25.b.ipa[2]: ˈzan
+pairs.25.b.simple[0]: zan
+pairs.25.b.simple[1]: zan
+pairs.25.b.simple[2]: zan
+pairs.26.a.is: kamatz
+pairs.26.a.ipa[0]: ˈaz
+pairs.26.a.ipa[1]: ˈʕaz
+pairs.26.a.ipa[2]: ˈɔz
+pairs.26.a.simple[0]: az
+pairs.26.a.simple[1]: az
+pairs.26.a.simple[2]: oz
+pairs.26.b.is: patach
+pairs.26.b.ipa[0]: ˈaz
+pairs.26.b.ipa[1]: ˈʕaz
+pairs.26.b.ipa[2]: ˈaz
+pairs.26.b.simple[0]: az
+pairs.26.b.simple[1]: az
+pairs.26.b.simple[2]: az
+pairs.27.a.is: kamatz
+pairs.27.a.ipa[0]: ne.e.ˈman
+pairs.27.a.ipa[1]: ne.ʔe.ˈman
+pairs.27.a.ipa[2]: ˈne.e.mɔn
+pairs.27.a.simple[0]: ne'eman
+pairs.27.a.simple[1]: ne'eman
+pairs.27.a.simple[2]: ne'emon
+pairs.27.b.is: patach
+pairs.27.b.ipa[0]: ne.e.ˈman
+pairs.27.b.ipa[1]: ne.ʔe.ˈman
+pairs.27.b.ipa[2]: ˈne.e.man
+pairs.27.b.simple[0]: ne'eman
+pairs.27.b.simple[1]: ne'eman
+pairs.27.b.simple[2]: ne'eman
+pairs.28.a.is: kamatz
+pairs.28.a.ipa[0]: ˈtas
+pairs.28.a.ipa[1]: ˈtas
+pairs.28.a.ipa[2]: ˈtɔs
+pairs.28.a.simple[0]: tas
+pairs.28.a.simple[1]: tas
+pairs.28.a.simple[2]: tos
+pairs.28.b.is: patach
+pairs.28.b.ipa[0]: ˈtas
+pairs.28.b.ipa[1]: ˈtas
+pairs.28.b.ipa[2]: ˈtas
+pairs.28.b.simple[0]: tas
+pairs.28.b.simple[1]: tas
+pairs.28.b.simple[2]: tas
+pairs.29.a.is: kamatz
+pairs.29.a.ipa[0]: ma.ˈsaχ
+pairs.29.a.ipa[1]: ma.ˈsax
+pairs.29.a.ipa[2]: ˈmɔ.sɔx
+pairs.29.a.simple[0]: masakh
+pairs.29.a.simple[1]: masakh
+pairs.29.a.simple[2]: mosokh
+pairs.29.b.is: patach
+pairs.29.b.ipa[0]: ma.ˈsaχ
+pairs.29.b.ipa[1]: ma.ˈsax
+pairs.29.b.ipa[2]: ˈmɔ.sax
+pairs.29.b.simple[0]: masakh
+pairs.29.b.simple[1]: masakh
+pairs.29.b.simple[2]: mosakh
+pairs.30.a.is: kamatz
+pairs.30.a.ipa[0]: χa.ˈmas
+pairs.30.a.ipa[1]: ħa.ˈmas
+pairs.30.a.ipa[2]: ˈxɔ.mɔs
+pairs.30.a.simple[0]: chamas
+pairs.30.a.simple[1]: chamas
+pairs.30.a.simple[2]: chomos
+pairs.30.b.is: patach
+pairs.30.b.ipa[0]: χa.ˈmas
+pairs.30.b.ipa[1]: ħa.ˈmas
+pairs.30.b.ipa[2]: ˈxɔ.mas
+pairs.30.b.simple[0]: chamas
+pairs.30.b.simple[1]: chamas
+pairs.30.b.simple[2]: chomas
+pairs.31.a.is: kamatz
+pairs.31.a.ipa[0]: ˈʁa.aʃ
+pairs.31.a.ipa[1]: ˈra.ʕaʃ
+pairs.31.a.ipa[2]: ˈrɔ.aʃ
+pairs.31.a.simple[0]: ra'ash
+pairs.31.a.simple[1]: ra'ash
+pairs.31.a.simple[2]: ro'ash
+pairs.31.b.is: patach
+pairs.31.b.ipa[0]: ˈʁa.aʃ
+pairs.31.b.ipa[1]: ˈra.ʕaʃ
+pairs.31.b.ipa[2]: ˈra.aʃ
+pairs.31.b.simple[0]: ra'ash
+pairs.31.b.simple[1]: ra'ash
+pairs.31.b.simple[2]: ra'ash
+pairs.32.a.is: kamatz
+pairs.32.a.ipa[0]: za.ˈam
+pairs.32.a.ipa[1]: za.ˈʕam
+pairs.32.a.ipa[2]: ˈzɔ.am
+pairs.32.a.simple[0]: za'am
+pairs.32.a.simple[1]: za'am
+pairs.32.a.simple[2]: zo'am
+pairs.32.b.is: patach
+pairs.32.b.ipa[0]: za.ˈam
+pairs.32.b.ipa[1]: za.ˈʕam
+pairs.32.b.ipa[2]: ˈza.am
+pairs.32.b.simple[0]: za'am
+pairs.32.b.simple[1]: za'am
+pairs.32.b.simple[2]: za'am
+pairs.33.a.is: kamatz
+pairs.33.a.ipa[0]: sa.ˈva
+pairs.33.a.ipa[1]: sa.ˈvaʕ
+pairs.33.a.ipa[2]: ˈsɔ.vɔ
+pairs.33.a.simple[0]: sava
+pairs.33.a.simple[1]: sava
+pairs.33.a.simple[2]: sovo
+pairs.33.b.is: patach
+pairs.33.b.ipa[0]: sa.ˈva
+pairs.33.b.ipa[1]: sa.ˈvaʕ
+pairs.33.b.ipa[2]: ˈsɔ.va
+pairs.33.b.simple[0]: sava
+pairs.33.b.simple[1]: sava
+pairs.33.b.simple[2]: sova
+pairs.34.a.is: kamatz
+pairs.34.a.ipa[0]: ˈtam
+pairs.34.a.ipa[1]: ˈtam
+pairs.34.a.ipa[2]: ˈtɔm
+pairs.34.a.simple[0]: tam
+pairs.34.a.simple[1]: tam
+pairs.34.a.simple[2]: tom
+pairs.34.b.is: patach
+pairs.34.b.ipa[0]: ˈtam
+pairs.34.b.ipa[1]: ˈtam
+pairs.34.b.ipa[2]: ˈtam
+pairs.34.b.simple[0]: tam
+pairs.34.b.simple[1]: tam
+pairs.34.b.simple[2]: tam
+pairs.35.a.is: kamatz
+pairs.35.a.ipa[0]: ma.ˈʃal
+pairs.35.a.ipa[1]: ma.ˈʃal
+pairs.35.a.ipa[2]: ˈmɔ.ʃɔl
+pairs.35.a.simple[0]: mashal
+pairs.35.a.simple[1]: mashal
+pairs.35.a.simple[2]: moshol
+pairs.35.b.is: patach
+pairs.35.b.ipa[0]: ma.ˈʃal
+pairs.35.b.ipa[1]: ma.ˈʃal
+pairs.35.b.ipa[2]: ˈmɔ.ʃal
+pairs.35.b.simple[0]: mashal
+pairs.35.b.simple[1]: mashal
+pairs.35.b.simple[2]: moshal
+pairs.36.a.is: kamatz
+pairs.36.a.ipa[0]: da.ˈχaf
+pairs.36.a.ipa[1]: da.ˈħaf
+pairs.36.a.ipa[2]: ˈdɔ.xaf
+pairs.36.a.simple[0]: dachaf
+pairs.36.a.simple[1]: dachaf
+pairs.36.a.simple[2]: dochaf
+pairs.36.b.is: patach
+pairs.36.b.ipa[0]: ˈda.χaf
+pairs.36.b.ipa[1]: ˈda.ħaf
+pairs.36.b.ipa[2]: ˈda.xaf
+pairs.36.b.simple[0]: dachaf
+pairs.36.b.simple[1]: dachaf
+pairs.36.b.simple[2]: dachaf
+pairs.37.a.is: kamatz
+pairs.37.a.ipa[0]: ni.ˈtsav
+pairs.37.a.ipa[1]: ni.ˈtsav
+pairs.37.a.ipa[2]: ˈni.tsɔv
+pairs.37.a.simple[0]: nitzav
+pairs.37.a.simple[1]: nitzav
+pairs.37.a.simple[2]: nitzov
+pairs.37.b.is: patach
+pairs.37.b.ipa[0]: ni.ˈtsav
+pairs.37.b.ipa[1]: ni.ˈtsav
+pairs.37.b.ipa[2]: ˈni.tsav
+pairs.37.b.simple[0]: nitzav
+pairs.37.b.simple[1]: nitzav
+pairs.37.b.simple[2]: nitzav
+pairs.38.a.is: kamatz
+pairs.38.a.ipa[0]: ˈbaz
+pairs.38.a.ipa[1]: ˈbaz
+pairs.38.a.ipa[2]: ˈbɔz
+pairs.38.a.simple[0]: baz
+pairs.38.a.simple[1]: baz
+pairs.38.a.simple[2]: boz
+pairs.38.b.is: patach
+pairs.38.b.ipa[0]: ˈbaz
+pairs.38.b.ipa[1]: ˈbaz
+pairs.38.b.ipa[2]: ˈbaz
+pairs.38.b.simple[0]: baz
+pairs.38.b.simple[1]: baz
+pairs.38.b.simple[2]: baz
+pairs.39.a.is: kamatz
+pairs.39.a.ipa[0]: ˈdaʁ
+pairs.39.a.ipa[1]: ˈdar
+pairs.39.a.ipa[2]: ˈdɔr
+pairs.39.a.simple[0]: dar
+pairs.39.a.simple[1]: dar
+pairs.39.a.simple[2]: dor
+pairs.39.b.is: patach
+pairs.39.b.ipa[0]: ˈdaʁ
+pairs.39.b.ipa[1]: ˈdar
+pairs.39.b.ipa[2]: ˈdar
+pairs.39.b.simple[0]: dar
+pairs.39.b.simple[1]: dar
+pairs.39.b.simple[2]: dar","Record kamatz-patach in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.7
+speak:speak/minimal-pairs:tzere-segol,speak,"pairs.0.a: אֶל
+pairs.0.b: אֵל
+pairs.1.a: עֶרֶב
+pairs.1.b: עֵרֶב
+pairs.2.a: אֶדֶר
+pairs.2.b: אֵדֶר
+pairs.3.a: נֶצַח
+pairs.3.b: נֵצַח",,"Tzere or segol
+pairs.0.a: to, towards, into
+pairs.0.b: god
+pairs.1.a: evening, night
+pairs.1.b: mixture
+pairs.2.a: a maple tree, a maple
+pairs.2.b: a mounted animal
+pairs.3.a: splendor, glory
+pairs.3.b: eternity (infinite time)
+feature: ֵ vs ֶ
+heard.israeli: NOT audible: both [e]
+heard.sephardi: NOT audible: both [e] (length not generated)
+heard.ashkenazi: tzere [ej] (""ay""), segol [e]
+pairs.0.a.is: segol
+pairs.0.a.ipa[0]: ˈel
+pairs.0.a.ipa[1]: ˈʔel
+pairs.0.a.ipa[2]: ˈel
+pairs.0.a.simple[0]: el
+pairs.0.a.simple[1]: el
+pairs.0.a.simple[2]: el
+pairs.0.b.is: tzere
+pairs.0.b.ipa[0]: ˈel
+pairs.0.b.ipa[1]: ˈʔel
+pairs.0.b.ipa[2]: ˈejl
+pairs.0.b.simple[0]: el
+pairs.0.b.simple[1]: el
+pairs.0.b.simple[2]: eil
+pairs.1.a.is: segol
+pairs.1.a.ipa[0]: ˈe.ʁev
+pairs.1.a.ipa[1]: ˈʕe.rev
+pairs.1.a.ipa[2]: ˈe.rev
+pairs.1.a.simple[0]: erev
+pairs.1.a.simple[1]: erev
+pairs.1.a.simple[2]: erev
+pairs.1.b.is: tzere
+pairs.1.b.ipa[0]: ˈe.ʁev
+pairs.1.b.ipa[1]: ˈʕe.rev
+pairs.1.b.ipa[2]: ˈej.rev
+pairs.1.b.simple[0]: erev
+pairs.1.b.simple[1]: erev
+pairs.1.b.simple[2]: eirev
+pairs.2.a.is: segol
+pairs.2.a.ipa[0]: e.ˈdeʁ
+pairs.2.a.ipa[1]: ʔe.ˈder
+pairs.2.a.ipa[2]: ˈe.der
+pairs.2.a.simple[0]: eder
+pairs.2.a.simple[1]: eder
+pairs.2.a.simple[2]: eder
+pairs.2.b.is: tzere
+pairs.2.b.ipa[0]: e.ˈdeʁ
+pairs.2.b.ipa[1]: ʔe.ˈder
+pairs.2.b.ipa[2]: ˈej.der
+pairs.2.b.simple[0]: eder
+pairs.2.b.simple[1]: eder
+pairs.2.b.simple[2]: eider
+pairs.3.a.is: segol
+pairs.3.a.ipa[0]: ˈne.tsaχ
+pairs.3.a.ipa[1]: ˈne.tsaħ
+pairs.3.a.ipa[2]: ˈne.tsax
+pairs.3.a.simple[0]: netzach
+pairs.3.a.simple[1]: netzach
+pairs.3.a.simple[2]: netzach
+pairs.3.b.is: tzere
+pairs.3.b.ipa[0]: ˈne.tsaχ
+pairs.3.b.ipa[1]: ˈne.tsaħ
+pairs.3.b.ipa[2]: ˈnej.tsax
+pairs.3.b.simple[0]: netzach
+pairs.3.b.simple[1]: netzach
+pairs.3.b.simple[2]: neitzach","Record tzere-segol in data/speak/minimal-pairs.json. File note: ""Rule-generated from the niqqud text of existing data/vocab/words.json entries; not verified by a native speaker; no recordings exist. A pair"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/minimal-pairs.json#contrasts.8
+speak:speak/prayers:shema-1,speak,,,"Shema Yisrael
+ref: Deuteronomy 6:4
+level: intro-1
+lines[0]: שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד׃
+english: HEAR, O ISRAEL: THE LORD OUR GOD, THE LORD IS ONE.
+registryStatus: verified
+license: Public Domain / copy without restriction (tanach.us/License.html)
+attribution: Hebrew text: Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026), Tanach.us Inc., West Redding, CT, USA (tanach.us; ""may be viewed or copied without restriction""). Cantillation marks removed. Not the WLC. English: JPS 1917, public domain.
+source: Unicode/XML Leningrad Codex (UXLC) UXLC 2.6 (file dated 19 Oct 2026)
+lineAudio.kind: line","Record shema-1 in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.0
+speak:speak/prayers:shema-2,speak,,,"Baruch shem (said after Shema line)
+ref: Siddur: Baruch shem kevod malchuto
+level: intro-1
+lines[0]: בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃
+english: Blessed is the name of the glory of his kingship for ever and ever.
+registryStatus: verified
+license: Public Domain
+attribution: Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.
+source: Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Mincha
+lineAudio.kind: line","Record shema-2 in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.1
+speak:speak/prayers:hamotzi,speak,,,"HaMotzi (blessing over bread)
+ref: Siddur: HaMotzi
+level: intro-2
+lines[0]: בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ׃
+english: Blessed are you, LORD our God, king of the world, who brings forth bread from the earth.
+registryStatus: verified
+license: CC0
+attribution: Hebrew text: Siddur Edot HaMizrach, ""Shaliehsaboo Edition"", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.
+source: Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Shabbat Evening, First Meal
+lineAudio.kind: line","Record hamotzi in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.2
+speak:speak/prayers:kiddush-wine-1,speak,,,"Blessing over wine
+ref: Siddur: blessing over wine
+level: intro-2
+lines[0]: בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם בּוֹרֵא פְּרִי הַגָּפֶן׃
+english: Blessed are you, LORD our God, king of the world, who creates the fruit of the vine.
+registryStatus: verified
+license: Public Domain
+attribution: Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified. English: original literal gloss.
+source: Torat Emet 357 via Sefaria: Siddur Sefard, Birchat HaMazon, Blessing on Foods
+lineAudio.kind: line","Record kiddush-wine-1 in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.3
+speak:speak/prayers:candle-shabbat,speak,,,"Shabbat candle blessing
+ref: Siddur: Shabbat candle blessing
+level: intro-2
+lines[0]: בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת׃
+english: Blessed are you, LORD our God, king of the world, who made us holy with his commandments and commanded us to light the lamp of Shabbat.
+registryStatus: verified
+license: Public Domain
+attribution: Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified. English: original literal gloss.
+source: Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Candle Lighting
+lineAudio.kind: line","Record candle-shabbat in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.4
+speak:speak/prayers:modeh-ani-1,speak,,,"Modeh Ani (on waking)
+ref: Siddur: Modeh Ani
+level: intro-2
+lines[0]: מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה רַבָּה אֱמוּנָתֶךָ׃
+english: I give thanks before you, living and enduring king, that you have returned my soul to me in mercy; great is your faithfulness.
+registryStatus: verified
+license: CC-BY
+attribution: Hebrew text: The Metsudah siddur (Metsudah Publications, 1981), as digitised on Sefaria where it is labelled CC-BY. Attribute to Metsudah Publications and credit Sefaria as the source. THE LICENCE LABEL IS SEFARIA'S AND IS NOT INDEPENDENTLY VERIFIED. English: original literal gloss.
+source: The Metsudah siddur, 1981 via Sefaria: Siddur Ashkenaz, Weekday, Shacharit, Preparatory Prayers, Modeh Ani
+lineAudio.kind: line","Record modeh-ani-1 in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.5
+speak:speak/prayers:torah-barchu,speak,,,"Barchu (call to the Torah blessing)
+ref: Siddur: Barchu before the Torah reading
+level: intro-3
+lines[0]: בָּרְכוּ אֶת יְהוָה הַמְּבֹרָךְ׃
+lines[1]: בָּרוּךְ יְהוָה הַמְּבֹרָךְ לְעוֹלָם וָעֶד׃
+english: Bless the LORD, the blessed one.
+Blessed is the LORD, the blessed one, for ever and ever.
+registryStatus: verified
+license: CC0
+attribution: Hebrew text: Siddur Edot HaMizrach, ""Shaliehsaboo Edition"", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.
+source: Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Weekday Shacharit, Torah Reading
+lineClips.0.kind: line
+lineClips.1.kind: line","Record torah-barchu in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.6
+speak:speak/prayers:oseh-shalom,speak,,,"Oseh shalom (end of the Amidah and of Kaddish)
+ref: Siddur: Oseh shalom
+level: intro-3
+lines[0]: עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו הוּא יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃
+english: He who makes peace in his high places, may he make peace for us and for all Israel; and say: Amen.
+registryStatus: verified
+license: Public Domain
+attribution: Hebrew text: Torat Emet 357 (toratemetfreeware.com), as digitised on Sefaria where it is labelled Public Domain. Label not independently verified; the toratemetfreeware.com home page carries an all-rights-reserved footer (read 2026-11-04). English: original literal gloss.
+source: Torat Emet 357 via Sefaria: Siddur Sefard, Shabbat Eve Mincha, Amidah
+lineAudio.kind: line","Record oseh-shalom in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.7
+speak:speak/prayers:shehecheyanu,speak,,,"Shehecheyanu (first-time and festival blessing)
+ref: Siddur: Shehecheyanu
+level: intro-2
+lines[0]: בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָינוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה׃
+english: Blessed are you, LORD our God, king of the world, who has kept us alive, sustained us, and brought us to this time.
+registryStatus: verified
+license: CC0
+attribution: Hebrew text: Siddur Edot HaMizrach, ""Shaliehsaboo Edition"", from Sefaria where it is labelled CC0 (no attribution required; credit given as a courtesy). Label not independently verified. English: original literal gloss.
+source: Shaliehsaboo Edition via Sefaria: Siddur Edot HaMizrach, Hanukkah, Menorah Lighting
+lineAudio.kind: line","Record shehecheyanu in data/speak/prayers.json. File note: ""Hebrew lines are copied verbatim from data/corpus/registry.json (Sefaria Metsudah siddur text, machine-compared to the source, NOT proofread"". Check every Hebrew line: pointing, spelling, gender agreement, whether Israelis would really say it, the transliteration (capitals = stress) and that the English matches.",,,,,,4,data/speak/prayers.json#prayers.8

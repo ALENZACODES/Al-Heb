@@ -1,0 +1,7215 @@
+{
+ "schema": "alef-wordtrace-bank/1",
+ "levels": [
+  "two",
+  "three",
+  "prayer"
+ ],
+ "lessonLetters": {
+  "r01": [
+   "shin",
+   "bet"
+  ],
+  "r02": [
+   "tav"
+  ],
+  "r03": [
+   "lamed",
+   "mem-final",
+   "vav"
+  ],
+  "r06": [
+   "yod"
+  ],
+  "r07": [
+   "alef",
+   "he"
+  ],
+  "r09": [
+   "resh",
+   "mem"
+  ],
+  "r10": [
+   "kaf",
+   "kaf-final"
+  ],
+  "r12": [
+   "nun",
+   "nun-final"
+  ],
+  "r16": [
+   "pe",
+   "pe-final"
+  ],
+  "r17": [
+   "chet"
+  ],
+  "r18": [
+   "dalet",
+   "gimel"
+  ],
+  "r19": [
+   "ayin"
+  ],
+  "r20": [
+   "samekh"
+  ],
+  "r23": [
+   "zayin",
+   "tet"
+  ],
+  "r24": [
+   "tsadi",
+   "tsadi-final",
+   "qof"
+  ]
+ },
+ "words": [
+  {
+   "he": "אָח",
+   "plain": "אח",
+   "en": "brother",
+   "letters": [
+    "alef",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il14",
+   "audio": "il14-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֵל",
+   "plain": "אל",
+   "en": "God",
+   "letters": [
+    "alef",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r08",
+   "audio": "r08-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אַף",
+   "plain": "אף",
+   "en": "also; nose",
+   "letters": [
+    "alef",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r16",
+   "audio": "r16-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֶת",
+   "plain": "את",
+   "en": "(object marker)",
+   "letters": [
+    "alef",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r11",
+   "audio": "r11-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בָּא",
+   "plain": "בא",
+   "en": "he came",
+   "letters": [
+    "bet",
+    "alef"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r07",
+   "audio": "r07-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בִּי",
+   "plain": "בי",
+   "en": "in me",
+   "letters": [
+    "bet",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r06",
+   "audio": "r06-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בֵּן",
+   "plain": "בן",
+   "en": "son",
+   "letters": [
+    "bet",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r12",
+   "audio": "r12-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בַּת",
+   "plain": "בת",
+   "en": "daughter",
+   "letters": [
+    "bet",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r02",
+   "audio": "r02-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גַּל",
+   "plain": "גל",
+   "en": "wave",
+   "letters": [
+    "gimel",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-41",
+   "audio": "I-41-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גַּן",
+   "plain": "גן",
+   "en": "garden",
+   "letters": [
+    "gimel",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r18",
+   "audio": "r18-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "דָּם",
+   "plain": "דם",
+   "en": "blood",
+   "letters": [
+    "dalet",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-20",
+   "audio": "I-20-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַר",
+   "plain": "הר",
+   "en": "mountain",
+   "letters": [
+    "he",
+    "resh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-40",
+   "audio": "I-40-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "זֶה",
+   "plain": "זה",
+   "en": "this",
+   "letters": [
+    "zayin",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r23",
+   "audio": "r23-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַג",
+   "plain": "חג",
+   "en": "holiday",
+   "letters": [
+    "chet",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-30",
+   "audio": "I-30-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַי",
+   "plain": "חי",
+   "en": "alive",
+   "letters": [
+    "chet",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r17",
+   "audio": "r17-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַם",
+   "plain": "חם",
+   "en": "hot",
+   "letters": [
+    "chet",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il15",
+   "audio": "il15-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֹם",
+   "plain": "חם",
+   "en": "fever",
+   "letters": [
+    "chet",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-14",
+   "audio": "I-14-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֵן",
+   "plain": "חן",
+   "en": "grace",
+   "letters": [
+    "chet",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r47",
+   "audio": "r47-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "טַל",
+   "plain": "טל",
+   "en": "dew",
+   "letters": [
+    "tet",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r23",
+   "audio": "r23-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יָם",
+   "plain": "ים",
+   "en": "sea",
+   "letters": [
+    "yod",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-41",
+   "audio": "I-41-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יֵשׁ",
+   "plain": "יש",
+   "en": "there is",
+   "letters": [
+    "yod",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il08",
+   "audio": "il08-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כִּי",
+   "plain": "כי",
+   "en": "because",
+   "letters": [
+    "kaf",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r10",
+   "audio": "r10-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כָּל",
+   "plain": "כל",
+   "en": "all",
+   "letters": [
+    "kaf",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r32",
+   "audio": "r32-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כֵּן",
+   "plain": "כן",
+   "en": "yes",
+   "letters": [
+    "kaf",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il01",
+   "audio": "il01-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לֹא",
+   "plain": "לא",
+   "en": "no; not",
+   "letters": [
+    "lamed",
+    "alef"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r07",
+   "audio": "r07-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לֵב",
+   "plain": "לב",
+   "en": "heart",
+   "letters": [
+    "lamed",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r08",
+   "audio": "r08-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לוֹ",
+   "plain": "לו",
+   "en": "to him",
+   "letters": [
+    "lamed",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r03",
+   "audio": "r03-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לַח",
+   "plain": "לח",
+   "en": "humid",
+   "letters": [
+    "lamed",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לִי",
+   "plain": "לי",
+   "en": "to me",
+   "letters": [
+    "lamed",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r06",
+   "audio": "r06-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְךָ",
+   "plain": "לך",
+   "en": "to you",
+   "letters": [
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r14",
+   "audio": "r14-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לֵךְ",
+   "plain": "לך",
+   "en": "go (m)",
+   "letters": [
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-15",
+   "audio": "I-15-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לָךְ",
+   "plain": "לך",
+   "en": "to you",
+   "letters": [
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r10",
+   "audio": "r10-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מַה",
+   "plain": "מה",
+   "en": "how",
+   "letters": [
+    "mem",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r40",
+   "audio": "r40-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מִי",
+   "plain": "מי",
+   "en": "who",
+   "letters": [
+    "mem",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r43",
+   "audio": "r43-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נֵר",
+   "plain": "נר",
+   "en": "oil lamp, candle",
+   "letters": [
+    "nun",
+    "resh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "I-05",
+   "audio": "I-05-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עַם",
+   "plain": "עם",
+   "en": "people",
+   "letters": [
+    "ayin",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r19",
+   "audio": "r19-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "פֶּה",
+   "plain": "פה",
+   "en": "mouth",
+   "letters": [
+    "pe",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r16",
+   "audio": "r16-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קַר",
+   "plain": "קר",
+   "en": "cold",
+   "letters": [
+    "qof",
+    "resh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il15",
+   "audio": "il15-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רָם",
+   "plain": "רם",
+   "en": "high",
+   "letters": [
+    "resh",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r09",
+   "audio": "r09-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׁב",
+   "plain": "שב",
+   "en": "he returned",
+   "letters": [
+    "shin",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r01",
+   "audio": "r01-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֵׁם",
+   "plain": "שם",
+   "en": "name",
+   "letters": [
+    "shin",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "r36",
+   "audio": "r36-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֵׁשׁ",
+   "plain": "שש",
+   "en": "six",
+   "letters": [
+    "shin",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תֵּה",
+   "plain": "תה",
+   "en": "tea",
+   "letters": [
+    "tav",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "lesson",
+   "lesson": "il07",
+   "audio": "il07-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עַל",
+   "plain": "על",
+   "en": "on, on top of",
+   "letters": [
+    "ayin",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 10,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שֶׁל",
+   "plain": "של",
+   "en": "of",
+   "letters": [
+    "shin",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r11",
+   "rank": 13,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָא",
+   "plain": "יא",
+   "en": "vocative particle preceding a noun, especially a slur or pejorative",
+   "letters": [
+    "yod",
+    "alef"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 43,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שֶׂה",
+   "plain": "שה",
+   "en": "lamb, kid (young of Caprinae)",
+   "letters": [
+    "shin",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 44,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אוֹ",
+   "plain": "או",
+   "en": "or",
+   "letters": [
+    "alef",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 48,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָד",
+   "plain": "יד",
+   "en": "arm",
+   "letters": [
+    "yod",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 49,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מָן",
+   "plain": "מן",
+   "en": "manna",
+   "letters": [
+    "mem",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 74,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גַּם",
+   "plain": "גם",
+   "en": "also, too, additionally",
+   "letters": [
+    "gimel",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 87,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כֹּה",
+   "plain": "כה",
+   "en": "thus, in this way",
+   "letters": [
+    "kaf",
+    "he"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 149,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אֵשׁ",
+   "plain": "אש",
+   "en": "fire",
+   "letters": [
+    "alef",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r08",
+   "rank": 230,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שֵׁן",
+   "plain": "שן",
+   "en": "tooth",
+   "letters": [
+    "shin",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 239,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בַּד",
+   "plain": "בד",
+   "en": "fabric, cloth, linen",
+   "letters": [
+    "bet",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 246,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עֵץ",
+   "plain": "עץ",
+   "en": "tree",
+   "letters": [
+    "ayin",
+    "tsadi-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 254,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עֵת",
+   "plain": "עת",
+   "en": "a time",
+   "letters": [
+    "ayin",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 309,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כֹּחַ",
+   "plain": "כח",
+   "en": "strength",
+   "letters": [
+    "kaf",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 319,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "טָח",
+   "plain": "טח",
+   "en": "to daub",
+   "letters": [
+    "tet",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 327,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בַּל",
+   "plain": "בל",
+   "en": "expresses a warning not to do something",
+   "letters": [
+    "bet",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 329,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חֹק",
+   "plain": "חק",
+   "en": "law, statute",
+   "letters": [
+    "chet",
+    "qof"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 334,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זָז",
+   "plain": "זז",
+   "en": "to move",
+   "letters": [
+    "zayin",
+    "zayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 338,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אֵד",
+   "plain": "אד",
+   "en": "a vapour, a fume",
+   "letters": [
+    "alef",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 347,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כַּר",
+   "plain": "כר",
+   "en": "cushion",
+   "letters": [
+    "kaf",
+    "resh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 360,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דַּק",
+   "plain": "דק",
+   "en": "thin",
+   "letters": [
+    "dalet",
+    "qof"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 362,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קַל",
+   "plain": "קל",
+   "en": "light (of low weight)",
+   "letters": [
+    "qof",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 369,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָל",
+   "plain": "חל",
+   "en": "to apply (of a law, method, etc.)",
+   "letters": [
+    "chet",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 437,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לָן",
+   "plain": "לן",
+   "en": "to stay overnight (at a hotel or other lodging)",
+   "letters": [
+    "lamed",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 504,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כַּף",
+   "plain": "כף",
+   "en": "palm, paw",
+   "letters": [
+    "kaf",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 505,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סַם",
+   "plain": "סם",
+   "en": "drug, narcotic",
+   "letters": [
+    "samekh",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 580,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לֹג",
+   "plain": "לג",
+   "en": "a unit of liquid measurement",
+   "letters": [
+    "lamed",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 592,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָף",
+   "plain": "עף",
+   "en": "to fly (by one's own power, like a bird)",
+   "letters": [
+    "ayin",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 594,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "וָו",
+   "plain": "וו",
+   "en": "hook",
+   "letters": [
+    "vav",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 602,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רֹב",
+   "plain": "רב",
+   "en": "majority",
+   "letters": [
+    "resh",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 636,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מַס",
+   "plain": "מס",
+   "en": "tax",
+   "letters": [
+    "mem",
+    "samekh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 642,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לָשׁ",
+   "plain": "לש",
+   "en": "to knead",
+   "letters": [
+    "lamed",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 662,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תָּא",
+   "plain": "תא",
+   "en": "cell, cubicle, locker, stall",
+   "letters": [
+    "tav",
+    "alef"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 678,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עֹז",
+   "plain": "עז",
+   "en": "might, strength",
+   "letters": [
+    "ayin",
+    "zayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 759,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בֹּשׁ",
+   "plain": "בש",
+   "en": "to feel embarrassed, be ashamed",
+   "letters": [
+    "bet",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 767,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קַו",
+   "plain": "קו",
+   "en": "line",
+   "letters": [
+    "qof",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 768,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תָּר",
+   "plain": "תר",
+   "en": "to explore",
+   "letters": [
+    "tav",
+    "resh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 791,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תָּו",
+   "plain": "תו",
+   "en": "character, mark, sign (symbol)",
+   "letters": [
+    "tav",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 827,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָשׁ",
+   "plain": "חש",
+   "en": "to sense, to feel",
+   "letters": [
+    "chet",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 919,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צָב",
+   "plain": "צב",
+   "en": "turtle, tortoise",
+   "letters": [
+    "tsadi",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 926,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אַט",
+   "plain": "אט",
+   "en": "slowly",
+   "letters": [
+    "alef",
+    "tet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 1019,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חֵץ",
+   "plain": "חץ",
+   "en": "arrow",
+   "letters": [
+    "chet",
+    "tsadi-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1041,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שַׂק",
+   "plain": "שק",
+   "en": "a sack",
+   "letters": [
+    "shin",
+    "qof"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1103,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סַף",
+   "plain": "סף",
+   "en": "threshold, verge",
+   "letters": [
+    "samekh",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 1181,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רַךְ",
+   "plain": "רך",
+   "en": "soft",
+   "letters": [
+    "resh",
+    "kaf-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 1195,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דַּד",
+   "plain": "דד",
+   "en": "breast",
+   "letters": [
+    "dalet",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1235,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דֹּב",
+   "plain": "דב",
+   "en": "bear",
+   "letters": [
+    "dalet",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1251,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גַּג",
+   "plain": "גג",
+   "en": "roof",
+   "letters": [
+    "gimel",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1313,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שַׁי",
+   "plain": "שי",
+   "en": "gift (present)",
+   "letters": [
+    "shin",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r06",
+   "rank": 1325,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁד",
+   "plain": "שד",
+   "en": "breast",
+   "letters": [
+    "shin",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1385,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רֹעַ",
+   "plain": "רע",
+   "en": "evil, badness, cruelty",
+   "letters": [
+    "resh",
+    "ayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 1479,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צֵל",
+   "plain": "צל",
+   "en": "a shadow",
+   "letters": [
+    "tsadi",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1529,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סַל",
+   "plain": "סל",
+   "en": "basket",
+   "letters": [
+    "samekh",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 1560,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צַו",
+   "plain": "צו",
+   "en": "decree, court order, injunction",
+   "letters": [
+    "tsadi",
+    "vav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1585,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רַן",
+   "plain": "רן",
+   "en": "to sing",
+   "letters": [
+    "resh",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 1667,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כַּת",
+   "plain": "כת",
+   "en": "cult, sect",
+   "letters": [
+    "kaf",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 1696,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נָד",
+   "plain": "נד",
+   "en": "to wander, to roam",
+   "letters": [
+    "nun",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1749,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קֵן",
+   "plain": "קן",
+   "en": "nest (bird-built structure)",
+   "letters": [
+    "qof",
+    "nun-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1760,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דַּף",
+   "plain": "דף",
+   "en": "a sheet of paper",
+   "letters": [
+    "dalet",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1848,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צָץ",
+   "plain": "צץ",
+   "en": "to pop up",
+   "letters": [
+    "tsadi",
+    "tsadi-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1857,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דָּת",
+   "plain": "דת",
+   "en": "religion",
+   "letters": [
+    "dalet",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1880,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תָּג",
+   "plain": "תג",
+   "en": "serif, tag",
+   "letters": [
+    "tav",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1881,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קָט",
+   "plain": "קט",
+   "en": "tiny",
+   "letters": [
+    "qof",
+    "tet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 1907,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כַּד",
+   "plain": "כד",
+   "en": "jar, pitcher, pot",
+   "letters": [
+    "kaf",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1936,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מָג",
+   "plain": "מג",
+   "en": "a mage, a sorcerer",
+   "letters": [
+    "mem",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 1995,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פֹּת",
+   "plain": "פת",
+   "en": "vulva, female genitalia",
+   "letters": [
+    "pe",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 2057,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דַּל",
+   "plain": "דל",
+   "en": "weak, poor",
+   "letters": [
+    "dalet",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 2070,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רַף",
+   "plain": "רף",
+   "en": "bar",
+   "letters": [
+    "resh",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 2138,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צָף",
+   "plain": "צף",
+   "en": "to float",
+   "letters": [
+    "tsadi",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2166,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הֵד",
+   "plain": "הד",
+   "en": "echo",
+   "letters": [
+    "he",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 2238,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צָם",
+   "plain": "צם",
+   "en": "to fast",
+   "letters": [
+    "tsadi",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2276,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גַּס",
+   "plain": "גס",
+   "en": "coarse, rough",
+   "letters": [
+    "gimel",
+    "samekh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 2303,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תֹּף",
+   "plain": "תף",
+   "en": "drum",
+   "letters": [
+    "tav",
+    "pe-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 2309,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צִי",
+   "plain": "צי",
+   "en": "a navy",
+   "letters": [
+    "tsadi",
+    "yod"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2317,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁט",
+   "plain": "שט",
+   "en": "to drift, to float",
+   "letters": [
+    "shin",
+    "tet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 2318,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָב",
+   "plain": "עב",
+   "en": "cloud",
+   "letters": [
+    "ayin",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 2429,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תֹּם",
+   "plain": "תם",
+   "en": "innocence, simplicity",
+   "letters": [
+    "tav",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r03",
+   "rank": 2488,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פָּג",
+   "plain": "פג",
+   "en": "to expire",
+   "letters": [
+    "pe",
+    "gimel"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 2627,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קַשׁ",
+   "plain": "קש",
+   "en": "straw",
+   "letters": [
+    "qof",
+    "shin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2735,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סָב",
+   "plain": "סב",
+   "en": "an elderly man",
+   "letters": [
+    "samekh",
+    "bet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 2805,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קַת",
+   "plain": "קת",
+   "en": "haft, handle",
+   "letters": [
+    "qof",
+    "tav"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2824,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נָם",
+   "plain": "נם",
+   "en": "to slumber",
+   "letters": [
+    "nun",
+    "mem-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 2838,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פַּס",
+   "plain": "פס",
+   "en": "band, bar, stripe",
+   "letters": [
+    "pe",
+    "samekh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 2853,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נֵץ",
+   "plain": "נץ",
+   "en": "hawk",
+   "letters": [
+    "nun",
+    "tsadi-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 2990,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פַּז",
+   "plain": "פז",
+   "en": "the color gold",
+   "letters": [
+    "pe",
+    "zayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 3241,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רָז",
+   "plain": "רז",
+   "en": "a secret",
+   "letters": [
+    "resh",
+    "zayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 3341,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צַח",
+   "plain": "צח",
+   "en": "pure, clear, unblemished",
+   "letters": [
+    "tsadi",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 3372,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זֵד",
+   "plain": "זד",
+   "en": "a wicked person",
+   "letters": [
+    "zayin",
+    "dalet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 3430,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אָץ",
+   "plain": "אץ",
+   "en": "to hurry",
+   "letters": [
+    "alef",
+    "tsadi-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 3478,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בָּס",
+   "plain": "בס",
+   "en": "bass",
+   "letters": [
+    "bet",
+    "samekh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 3590,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לֹעַ",
+   "plain": "לע",
+   "en": "pharynx",
+   "letters": [
+    "lamed",
+    "ayin"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 3759,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גֵּט",
+   "plain": "גט",
+   "en": "a get, a document effecting the divorce of a wife from her husband",
+   "letters": [
+    "gimel",
+    "tet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 3761,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָח",
+   "plain": "חח",
+   "en": "hook, ring",
+   "letters": [
+    "chet",
+    "chet"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 3868,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הֶל",
+   "plain": "הל",
+   "en": "cardamom",
+   "letters": [
+    "he",
+    "lamed"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r11",
+   "rank": 3870,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הַס",
+   "plain": "הס",
+   "en": "silence! quiet!",
+   "letters": [
+    "he",
+    "samekh"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 4551,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פַּךְ",
+   "plain": "פך",
+   "en": "a jar, a jug, a flask",
+   "letters": [
+    "pe",
+    "kaf-final"
+   ],
+   "n": 2,
+   "level": "two",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 4575,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אַבָּא",
+   "plain": "אבא",
+   "en": "dad",
+   "letters": [
+    "alef",
+    "bet",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r07",
+   "audio": "r07-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אוֹר",
+   "plain": "אור",
+   "en": "light",
+   "letters": [
+    "alef",
+    "vav",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אוֹת",
+   "plain": "אות",
+   "en": "a sign",
+   "letters": [
+    "alef",
+    "vav",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-35",
+   "audio": "I-35-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֶחָד",
+   "plain": "אחד",
+   "en": "one",
+   "letters": [
+    "alef",
+    "chet",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r18",
+   "audio": "r18-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אַחִי",
+   "plain": "אחי",
+   "en": "bro (my brother)",
+   "letters": [
+    "alef",
+    "chet",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-18",
+   "audio": "I-18-w12",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אַחַת",
+   "plain": "אחת",
+   "en": "one (f., counting)",
+   "letters": [
+    "alef",
+    "chet",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֵין",
+   "plain": "אין",
+   "en": "there isn't",
+   "letters": [
+    "alef",
+    "yod",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il08",
+   "audio": "il08-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֹכֶל",
+   "plain": "אכל",
+   "en": "food",
+   "letters": [
+    "alef",
+    "kaf",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il07",
+   "audio": "il07-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אִמָּא",
+   "plain": "אמא",
+   "en": "mom",
+   "letters": [
+    "alef",
+    "mem",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r09",
+   "audio": "r09-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֱמֶת",
+   "plain": "אמת",
+   "en": "truth",
+   "letters": [
+    "alef",
+    "mem",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r21",
+   "audio": "r21-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֲנִי",
+   "plain": "אני",
+   "en": "I",
+   "letters": [
+    "alef",
+    "nun",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r21",
+   "audio": "r21-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אָנִי",
+   "plain": "אני",
+   "en": "I",
+   "letters": [
+    "alef",
+    "nun",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r12",
+   "audio": "r12-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֶרֶץ",
+   "plain": "ארץ",
+   "en": "land",
+   "letters": [
+    "alef",
+    "resh",
+    "tsadi-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r24",
+   "audio": "r24-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אָרֶץ",
+   "plain": "ארץ",
+   "en": "earth",
+   "letters": [
+    "alef",
+    "resh",
+    "tsadi-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-08",
+   "audio": "I-08-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בֶּגֶד",
+   "plain": "בגד",
+   "en": "garment",
+   "letters": [
+    "bet",
+    "gimel",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-41",
+   "audio": "I-41-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בָּחַר",
+   "plain": "בחר",
+   "en": "He chose",
+   "letters": [
+    "bet",
+    "chet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r38",
+   "audio": "r38-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בֵּית",
+   "plain": "בית",
+   "en": "house of",
+   "letters": [
+    "bet",
+    "yod",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r08",
+   "audio": "r08-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּלִי",
+   "plain": "בלי",
+   "en": "without",
+   "letters": [
+    "bet",
+    "lamed",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-13",
+   "audio": "I-13-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בַּנְק",
+   "plain": "בנק",
+   "en": "bank",
+   "letters": [
+    "bet",
+    "nun",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-21",
+   "audio": "I-21-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בֵּרַךְ",
+   "plain": "ברך",
+   "en": "he blessed",
+   "letters": [
+    "bet",
+    "resh",
+    "kaf-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-35",
+   "audio": "I-35-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גַּנָּב",
+   "plain": "גנב",
+   "en": "thief",
+   "letters": [
+    "gimel",
+    "nun",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-46",
+   "audio": "I-46-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גֶּשֶׁם",
+   "plain": "גשם",
+   "en": "rain",
+   "letters": [
+    "gimel",
+    "shin",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il15",
+   "audio": "il15-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גֶּשֶׁר",
+   "plain": "גשר",
+   "en": "bridge",
+   "letters": [
+    "gimel",
+    "shin",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-15",
+   "audio": "I-15-w12",
+   "pointing": "course-data"
+  },
+  {
+   "he": "דֹּאַר",
+   "plain": "דאר",
+   "en": "post, mail",
+   "letters": [
+    "dalet",
+    "alef",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-22",
+   "audio": "I-22-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "דֶּלֶק",
+   "plain": "דלק",
+   "en": "fuel",
+   "letters": [
+    "dalet",
+    "lamed",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-39",
+   "audio": "I-39-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "דֶּלֶת",
+   "plain": "דלת",
+   "en": "door",
+   "letters": [
+    "dalet",
+    "lamed",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-44",
+   "audio": "I-44-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "דֶּרֶךְ",
+   "plain": "דרך",
+   "en": "way",
+   "letters": [
+    "dalet",
+    "resh",
+    "kaf-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r18",
+   "audio": "r18-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַזָּן",
+   "plain": "הזן",
+   "en": "who feeds",
+   "letters": [
+    "he",
+    "zayin",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r47",
+   "audio": "r47-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הָיָה",
+   "plain": "היה",
+   "en": "he was",
+   "letters": [
+    "he",
+    "yod",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r07",
+   "audio": "r07-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַכֹּל",
+   "plain": "הכל",
+   "en": "the all",
+   "letters": [
+    "he",
+    "kaf",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r44",
+   "audio": "r44-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַלּוֹ",
+   "plain": "הלו",
+   "en": "hello (on the phone)",
+   "letters": [
+    "he",
+    "lamed",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il22",
+   "audio": "il22-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וָעֶד",
+   "plain": "ועד",
+   "en": "and ever",
+   "letters": [
+    "vav",
+    "ayin",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r36",
+   "audio": "r36-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "זָהָב",
+   "plain": "זהב",
+   "en": "gold",
+   "letters": [
+    "zayin",
+    "he",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r23",
+   "audio": "r23-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "זוֹל",
+   "plain": "זול",
+   "en": "cheap",
+   "letters": [
+    "zayin",
+    "vav",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il08",
+   "audio": "il08-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חָבֵר",
+   "plain": "חבר",
+   "en": "friend (m)",
+   "letters": [
+    "chet",
+    "bet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-37",
+   "audio": "I-37-w12",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֶדֶר",
+   "plain": "חדר",
+   "en": "room",
+   "letters": [
+    "chet",
+    "dalet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il17",
+   "audio": "il17-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַדֵּשׁ",
+   "plain": "חדש",
+   "en": "renew",
+   "letters": [
+    "chet",
+    "dalet",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-03",
+   "audio": "I-03-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֹדֶשׁ",
+   "plain": "חדש",
+   "en": "month",
+   "letters": [
+    "chet",
+    "dalet",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-17",
+   "audio": "I-17-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חוֹל",
+   "plain": "חול",
+   "en": "sand",
+   "letters": [
+    "chet",
+    "vav",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-41",
+   "audio": "I-41-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חוֹף",
+   "plain": "חוף",
+   "en": "beach",
+   "letters": [
+    "chet",
+    "vav",
+    "pe-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-41",
+   "audio": "I-41-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַיָּל",
+   "plain": "חיל",
+   "en": "soldier (m)",
+   "letters": [
+    "chet",
+    "yod",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-18",
+   "audio": "I-18-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חָכָם",
+   "plain": "חכם",
+   "en": "wise",
+   "letters": [
+    "chet",
+    "kaf",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r17",
+   "audio": "r17-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חָלָב",
+   "plain": "חלב",
+   "en": "milk",
+   "letters": [
+    "chet",
+    "lamed",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-13",
+   "audio": "I-13-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חָמֵץ",
+   "plain": "חמץ",
+   "en": "leavened bread",
+   "letters": [
+    "chet",
+    "mem",
+    "tsadi-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חָמֵשׁ",
+   "plain": "חמש",
+   "en": "five (f.)",
+   "letters": [
+    "chet",
+    "mem",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֶסֶד",
+   "plain": "חסד",
+   "en": "kindness",
+   "letters": [
+    "chet",
+    "samekh",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r47",
+   "audio": "r47-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֲצִי",
+   "plain": "חצי",
+   "en": "half",
+   "letters": [
+    "chet",
+    "tsadi",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-12",
+   "audio": "I-12-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֹרֶף",
+   "plain": "חרף",
+   "en": "winter",
+   "letters": [
+    "chet",
+    "resh",
+    "pe-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֹשֶׁךְ",
+   "plain": "חשך",
+   "en": "darkness",
+   "letters": [
+    "chet",
+    "shin",
+    "kaf-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "טֹּבוּ",
+   "plain": "טבו",
+   "en": "good are",
+   "letters": [
+    "tet",
+    "bet",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r40",
+   "audio": "r40-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "טוֹב",
+   "plain": "טוב",
+   "en": "good",
+   "letters": [
+    "tet",
+    "vav",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r23",
+   "audio": "r23-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "טָרִי",
+   "plain": "טרי",
+   "en": "fresh",
+   "letters": [
+    "tet",
+    "resh",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-12",
+   "audio": "I-12-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יָאֵר",
+   "plain": "יאר",
+   "en": "may He shine",
+   "letters": [
+    "yod",
+    "alef",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r25",
+   "audio": "r25-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יַיִן",
+   "plain": "יין",
+   "en": "wine",
+   "letters": [
+    "yod",
+    "yod",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r41",
+   "audio": "r41-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יֶלֶד",
+   "plain": "ילד",
+   "en": "boy; child",
+   "letters": [
+    "yod",
+    "lamed",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il14",
+   "audio": "il14-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יָפֶה",
+   "plain": "יפה",
+   "en": "beautiful, nice",
+   "letters": [
+    "yod",
+    "pe",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-38",
+   "audio": "I-38-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יָקָר",
+   "plain": "יקר",
+   "en": "expensive",
+   "letters": [
+    "yod",
+    "qof",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il08",
+   "audio": "il08-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יִשָּׂא",
+   "plain": "ישא",
+   "en": "may He lift",
+   "letters": [
+    "yod",
+    "shin",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r26",
+   "audio": "r26-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יָשָׁר",
+   "plain": "ישר",
+   "en": "straight",
+   "letters": [
+    "yod",
+    "shin",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il11",
+   "audio": "il11-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כּוֹס",
+   "plain": "כוס",
+   "en": "cup",
+   "letters": [
+    "kaf",
+    "vav",
+    "samekh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כֻּלּוֹ",
+   "plain": "כלו",
+   "en": "all of it",
+   "letters": [
+    "kaf",
+    "lamed",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r30",
+   "audio": "r30-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כֻּלָּם",
+   "plain": "כלם",
+   "en": "all of them",
+   "letters": [
+    "kaf",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r13",
+   "audio": "r13-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כַּמָּה",
+   "plain": "כמה",
+   "en": "how much",
+   "letters": [
+    "kaf",
+    "mem",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il05",
+   "audio": "il05-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כֶּסֶף",
+   "plain": "כסף",
+   "en": "money",
+   "letters": [
+    "kaf",
+    "samekh",
+    "pe-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-21",
+   "audio": "I-21-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כָּתַב",
+   "plain": "כתב",
+   "en": "he wrote",
+   "letters": [
+    "kaf",
+    "tav",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r30",
+   "audio": "r30-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְאַט",
+   "plain": "לאט",
+   "en": "slowly",
+   "letters": [
+    "lamed",
+    "alef",
+    "tet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-23",
+   "audio": "I-23-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לֶחֶם",
+   "plain": "לחם",
+   "en": "bread",
+   "letters": [
+    "lamed",
+    "chet",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il07",
+   "audio": "il07-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מֵאָה",
+   "plain": "מאה",
+   "en": "hundred",
+   "letters": [
+    "mem",
+    "alef",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il05",
+   "audio": "il05-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מָגֵן",
+   "plain": "מגן",
+   "en": "shield",
+   "letters": [
+    "mem",
+    "gimel",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מָחָר",
+   "plain": "מחר",
+   "en": "tomorrow",
+   "letters": [
+    "mem",
+    "chet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il12",
+   "audio": "il12-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מַיִם",
+   "plain": "מים",
+   "en": "water",
+   "letters": [
+    "mem",
+    "yod",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il06",
+   "audio": "il06-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מָלַךְ",
+   "plain": "מלך",
+   "en": "He reigned",
+   "letters": [
+    "mem",
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r46",
+   "audio": "r46-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מִפָּה",
+   "plain": "מפה",
+   "en": "map",
+   "letters": [
+    "mem",
+    "pe",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-40",
+   "audio": "I-40-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מַצָּה",
+   "plain": "מצה",
+   "en": "matzo",
+   "letters": [
+    "mem",
+    "tsadi",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נֶגֶד",
+   "plain": "נגד",
+   "en": "against, for (a symptom)",
+   "letters": [
+    "nun",
+    "gimel",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-14",
+   "audio": "I-14-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נַהָג",
+   "plain": "נהג",
+   "en": "driver",
+   "letters": [
+    "nun",
+    "he",
+    "gimel"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-11",
+   "audio": "I-11-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נַחַל",
+   "plain": "נחל",
+   "en": "stream",
+   "letters": [
+    "nun",
+    "chet",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-40",
+   "audio": "I-40-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נֶשֶׁק",
+   "plain": "נשק",
+   "en": "weapon",
+   "letters": [
+    "nun",
+    "shin",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-18",
+   "audio": "I-18-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נָתַן",
+   "plain": "נתן",
+   "en": "He gave",
+   "letters": [
+    "nun",
+    "tav",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r38",
+   "audio": "r38-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סֵדֶר",
+   "plain": "סדר",
+   "en": "order; the seder",
+   "letters": [
+    "samekh",
+    "dalet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סֻכָּה",
+   "plain": "סכה",
+   "en": "booth, sukkah",
+   "letters": [
+    "samekh",
+    "kaf",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-30",
+   "audio": "I-30-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סֻכָּר",
+   "plain": "סכר",
+   "en": "sugar",
+   "letters": [
+    "samekh",
+    "kaf",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-13",
+   "audio": "I-13-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סָלָט",
+   "plain": "סלט",
+   "en": "salad",
+   "letters": [
+    "samekh",
+    "lamed",
+    "tet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il07",
+   "audio": "il07-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סֵפֶר",
+   "plain": "ספר",
+   "en": "book",
+   "letters": [
+    "samekh",
+    "pe",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r20",
+   "audio": "r20-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סֶרֶט",
+   "plain": "סרט",
+   "en": "film",
+   "letters": [
+    "samekh",
+    "resh",
+    "tet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-38",
+   "audio": "I-38-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "סְתָו",
+   "plain": "סתו",
+   "en": "autumn",
+   "letters": [
+    "samekh",
+    "tav",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עָנָן",
+   "plain": "ענן",
+   "en": "cloud",
+   "letters": [
+    "ayin",
+    "nun",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עֲצֹר",
+   "plain": "עצר",
+   "en": "stop!",
+   "letters": [
+    "ayin",
+    "tsadi",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-39",
+   "audio": "I-39-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עֶרֶב",
+   "plain": "ערב",
+   "en": "evening",
+   "letters": [
+    "ayin",
+    "resh",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-19",
+   "audio": "I-19-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עֶשֶׂר",
+   "plain": "עשר",
+   "en": "ten (f.)",
+   "letters": [
+    "ayin",
+    "shin",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "פְּנֵה",
+   "plain": "פנה",
+   "en": "turn (m)",
+   "letters": [
+    "pe",
+    "nun",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-15",
+   "audio": "I-15-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "פֶּסַח",
+   "plain": "פסח",
+   "en": "Passover",
+   "letters": [
+    "pe",
+    "samekh",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "פְּרִי",
+   "plain": "פרי",
+   "en": "fruit of",
+   "letters": [
+    "pe",
+    "resh",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r41",
+   "audio": "r41-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "צָבָא",
+   "plain": "צבא",
+   "en": "army",
+   "letters": [
+    "tsadi",
+    "bet",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-18",
+   "audio": "I-18-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "צֶדֶק",
+   "plain": "צדק",
+   "en": "justice",
+   "letters": [
+    "tsadi",
+    "dalet",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r24",
+   "audio": "r24-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "צוֹם",
+   "plain": "צום",
+   "en": "fast",
+   "letters": [
+    "tsadi",
+    "vav",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-28",
+   "audio": "I-28-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קֹדֶשׁ",
+   "plain": "קדש",
+   "en": "holy",
+   "letters": [
+    "qof",
+    "dalet",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קוֹל",
+   "plain": "קול",
+   "en": "voice",
+   "letters": [
+    "qof",
+    "vav",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r24",
+   "audio": "r24-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קָטָן",
+   "plain": "קטן",
+   "en": "small (m)",
+   "letters": [
+    "qof",
+    "tet",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-13",
+   "audio": "I-13-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קַיִץ",
+   "plain": "קיץ",
+   "en": "summer",
+   "letters": [
+    "qof",
+    "yod",
+    "tsadi-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קִיר",
+   "plain": "קיר",
+   "en": "wall",
+   "letters": [
+    "qof",
+    "yod",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-44",
+   "audio": "I-44-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קָפֶה",
+   "plain": "קפה",
+   "en": "coffee",
+   "letters": [
+    "qof",
+    "pe",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il06",
+   "audio": "il06-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רֹאשׁ",
+   "plain": "ראש",
+   "en": "head",
+   "letters": [
+    "resh",
+    "alef",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r09",
+   "audio": "r09-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רַבָּא",
+   "plain": "רבא",
+   "en": "great",
+   "letters": [
+    "resh",
+    "bet",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r45",
+   "audio": "r45-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רֶגַע",
+   "plain": "רגע",
+   "en": "one moment",
+   "letters": [
+    "resh",
+    "gimel",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-16",
+   "audio": "I-16-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רוּחַ",
+   "plain": "רוח",
+   "en": "spirit; wind",
+   "letters": [
+    "resh",
+    "vav",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r17",
+   "audio": "r17-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֶׁבַע",
+   "plain": "שבע",
+   "en": "seven (f.)",
+   "letters": [
+    "shin",
+    "bet",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שִׁיר",
+   "plain": "שיר",
+   "en": "song",
+   "letters": [
+    "shin",
+    "yod",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r09",
+   "audio": "r09-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֶׁלֶג",
+   "plain": "שלג",
+   "en": "snow",
+   "letters": [
+    "shin",
+    "lamed",
+    "gimel"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-24",
+   "audio": "I-24-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שְׁמֵהּ",
+   "plain": "שמה",
+   "en": "His name (Aramaic)",
+   "letters": [
+    "shin",
+    "mem",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r30",
+   "audio": "r30-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שְׁמוֹ",
+   "plain": "שמו",
+   "en": "his name",
+   "letters": [
+    "shin",
+    "mem",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׂמֵחַ",
+   "plain": "שמח",
+   "en": "happy",
+   "letters": [
+    "shin",
+    "mem",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-31",
+   "audio": "I-31-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שְׁמִי",
+   "plain": "שמי",
+   "en": "my name is",
+   "letters": [
+    "shin",
+    "mem",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il03",
+   "audio": "il03-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שְׁמַע",
+   "plain": "שמע",
+   "en": "hear!",
+   "letters": [
+    "shin",
+    "mem",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r19",
+   "audio": "r19-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֶׁמֶשׁ",
+   "plain": "שמש",
+   "en": "sun",
+   "letters": [
+    "shin",
+    "mem",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il15",
+   "audio": "il15-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׁנָה",
+   "plain": "שנה",
+   "en": "year",
+   "letters": [
+    "shin",
+    "nun",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "r12",
+   "audio": "r12-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׁעָה",
+   "plain": "שעה",
+   "en": "hour; time",
+   "letters": [
+    "shin",
+    "ayin",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il12",
+   "audio": "il12-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שֶׁקֶל",
+   "plain": "שקל",
+   "en": "shekel",
+   "letters": [
+    "shin",
+    "qof",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il05",
+   "audio": "il05-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תּוֹר",
+   "plain": "תור",
+   "en": "appointment, turn",
+   "letters": [
+    "tav",
+    "vav",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "I-20",
+   "audio": "I-20-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תֵּשַׁע",
+   "plain": "תשע",
+   "en": "nine (f.)",
+   "letters": [
+    "tav",
+    "shin",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "lesson",
+   "lesson": "il04",
+   "audio": "il04-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הִוָּה",
+   "plain": "הוה",
+   "en": "to constitute",
+   "letters": [
+    "he",
+    "vav",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 5,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אֲשֶׁר",
+   "plain": "אשר",
+   "en": "introduces a subordinate clause",
+   "letters": [
+    "alef",
+    "shin",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r21",
+   "rank": 8,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אָמַר",
+   "plain": "אמר",
+   "en": "to say, tell",
+   "letters": [
+    "alef",
+    "mem",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 14,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָשָׂה",
+   "plain": "עשה",
+   "en": "to do (to perform an action, to accomplish a thing)",
+   "letters": [
+    "ayin",
+    "shin",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 16,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָכֹל",
+   "plain": "יכל",
+   "en": "can, to be able to",
+   "letters": [
+    "yod",
+    "kaf",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 17,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רָאָה",
+   "plain": "ראה",
+   "en": "to see, to have vision",
+   "letters": [
+    "resh",
+    "alef",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 21,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רָצָה",
+   "plain": "רצה",
+   "en": "to want",
+   "letters": [
+    "resh",
+    "tsadi",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 24,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יוֹם",
+   "plain": "יום",
+   "en": "day",
+   "letters": [
+    "yod",
+    "vav",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r06",
+   "rank": 31,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כְּמוֹ",
+   "plain": "כמו",
+   "en": "like, as",
+   "letters": [
+    "kaf",
+    "mem",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 52,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דִּבֵּר",
+   "plain": "דבר",
+   "en": "to speak (say words)",
+   "letters": [
+    "dalet",
+    "bet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 63,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זְמַן",
+   "plain": "זמן",
+   "en": "time",
+   "letters": [
+    "zayin",
+    "mem",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 64,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אָהַב",
+   "plain": "אהב",
+   "en": "to love",
+   "letters": [
+    "alef",
+    "he",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 69,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָזַר",
+   "plain": "חזר",
+   "en": "to return",
+   "letters": [
+    "chet",
+    "zayin",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 79,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אִחֵר",
+   "plain": "אחר",
+   "en": "to be late",
+   "letters": [
+    "alef",
+    "chet",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 90,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קִבֵּל",
+   "plain": "קבל",
+   "en": "to receive, to get",
+   "letters": [
+    "qof",
+    "bet",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 91,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מָצָא",
+   "plain": "מצא",
+   "en": "to find",
+   "letters": [
+    "mem",
+    "tsadi",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 98,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עַיִן",
+   "plain": "עין",
+   "en": "eye",
+   "letters": [
+    "ayin",
+    "yod",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 100,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָצָא",
+   "plain": "יצא",
+   "en": "to come out, come away",
+   "letters": [
+    "yod",
+    "tsadi",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 104,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בָּרַר",
+   "plain": "ברר",
+   "en": "to select, to pick, to sort",
+   "letters": [
+    "bet",
+    "resh",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 106,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קָרָא",
+   "plain": "קרא",
+   "en": "to read",
+   "letters": [
+    "qof",
+    "resh",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 109,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זָבַח",
+   "plain": "זבח",
+   "en": "to slaughter, to kill",
+   "letters": [
+    "zayin",
+    "bet",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 117,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נִסָּה",
+   "plain": "נסה",
+   "en": "to try, to attempt",
+   "letters": [
+    "nun",
+    "samekh",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 118,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁהָה",
+   "plain": "שהה",
+   "en": "to stay, spend (time)",
+   "letters": [
+    "shin",
+    "he",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 122,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בֵּין",
+   "plain": "בין",
+   "en": "between, among, amid",
+   "letters": [
+    "bet",
+    "yod",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 127,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "קָשֶׁה",
+   "plain": "קשה",
+   "en": "hard (resistant to pressure)",
+   "letters": [
+    "qof",
+    "shin",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 129,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חֻשַּׁב",
+   "plain": "חשב",
+   "en": "to be calculated",
+   "letters": [
+    "chet",
+    "shin",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 138,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָרֵא",
+   "plain": "ירא",
+   "en": "to fear, be afraid",
+   "letters": [
+    "yod",
+    "resh",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 139,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בִּקֵּשׁ",
+   "plain": "בקש",
+   "en": "to ask for, request",
+   "letters": [
+    "bet",
+    "qof",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 143,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שִׁלֵּם",
+   "plain": "שלם",
+   "en": "to pay",
+   "letters": [
+    "shin",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r08",
+   "rank": 158,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חִכָּה",
+   "plain": "חכה",
+   "en": "to wait, wait for",
+   "letters": [
+    "chet",
+    "kaf",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 159,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נָשָׂא",
+   "plain": "נשא",
+   "en": "to lift",
+   "letters": [
+    "nun",
+    "shin",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 170,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אֹהֶל",
+   "plain": "אהל",
+   "en": "tent",
+   "letters": [
+    "alef",
+    "he",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r11",
+   "rank": 173,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָמַד",
+   "plain": "עמד",
+   "en": "to stand",
+   "letters": [
+    "ayin",
+    "mem",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 175,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דָּמַם",
+   "plain": "דמם",
+   "en": "to pause",
+   "letters": [
+    "dalet",
+    "mem",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 182,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָזַב",
+   "plain": "עזב",
+   "en": "to leave, leave behind, depart",
+   "letters": [
+    "ayin",
+    "zayin",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 186,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יֻדַּע",
+   "plain": "ידע",
+   "en": "to be informed",
+   "letters": [
+    "yod",
+    "dalet",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 199,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָרַד",
+   "plain": "ירד",
+   "en": "to go down, descend",
+   "letters": [
+    "yod",
+    "resh",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 212,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סָלַח",
+   "plain": "סלח",
+   "en": "to forgive",
+   "letters": [
+    "samekh",
+    "lamed",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 215,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צִוָּה",
+   "plain": "צוה",
+   "en": "to command",
+   "letters": [
+    "tsadi",
+    "vav",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 217,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שִׂחֵק",
+   "plain": "שחק",
+   "en": "to play",
+   "letters": [
+    "shin",
+    "chet",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 224,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יָרָה",
+   "plain": "ירה",
+   "en": "to flow as water (that is, to rain)",
+   "letters": [
+    "yod",
+    "resh",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 231,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עַתָּה",
+   "plain": "עתה",
+   "en": "now",
+   "letters": [
+    "ayin",
+    "tav",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 240,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דָּאַג",
+   "plain": "דאג",
+   "en": "to worry",
+   "letters": [
+    "dalet",
+    "alef",
+    "gimel"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 256,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חִפֵּשׂ",
+   "plain": "חפש",
+   "en": "to look for, search for, seek",
+   "letters": [
+    "chet",
+    "pe",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 258,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "פָּגַשׁ",
+   "plain": "פגש",
+   "en": "to meet",
+   "letters": [
+    "pe",
+    "gimel",
+    "shin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 260,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָנָה",
+   "plain": "חנה",
+   "en": "to camp",
+   "letters": [
+    "chet",
+    "nun",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 263,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁאַל",
+   "plain": "שאל",
+   "en": "to ask (a question), to query",
+   "letters": [
+    "shin",
+    "alef",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 267,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צֹאן",
+   "plain": "צאן",
+   "en": "sheep, flock of sheep",
+   "letters": [
+    "tsadi",
+    "alef",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 275,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סִבָּה",
+   "plain": "סבה",
+   "en": "cause",
+   "letters": [
+    "samekh",
+    "bet",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 276,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "עָנָה",
+   "plain": "ענה",
+   "en": "to answer, to reply",
+   "letters": [
+    "ayin",
+    "nun",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 277,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָצָה",
+   "plain": "חצה",
+   "en": "to halve",
+   "letters": [
+    "chet",
+    "tsadi",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 279,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הִכָּה",
+   "plain": "הכה",
+   "en": "to hit, smite, strike",
+   "letters": [
+    "he",
+    "kaf",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 287,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אָנוּ",
+   "plain": "אנו",
+   "en": "we",
+   "letters": [
+    "alef",
+    "nun",
+    "vav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r13",
+   "rank": 289,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נָסַע",
+   "plain": "נסע",
+   "en": "to travel",
+   "letters": [
+    "nun",
+    "samekh",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 299,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מְכָל",
+   "plain": "מכל",
+   "en": "container, bin",
+   "letters": [
+    "mem",
+    "kaf",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 303,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "דֵּעָה",
+   "plain": "דעה",
+   "en": "opinion, point of view",
+   "letters": [
+    "dalet",
+    "ayin",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r19",
+   "rank": 311,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אַתֶּם",
+   "plain": "אתם",
+   "en": "you, y'all, you guys",
+   "letters": [
+    "alef",
+    "tav",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r11",
+   "rank": 314,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הֵגֵן",
+   "plain": "הגן",
+   "en": "to protect, to defend",
+   "letters": [
+    "he",
+    "gimel",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 321,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נָפַל",
+   "plain": "נפל",
+   "en": "to fall",
+   "letters": [
+    "nun",
+    "pe",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 323,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בָּדַק",
+   "plain": "בדק",
+   "en": "to check, examine, verify",
+   "letters": [
+    "bet",
+    "dalet",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 330,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אִבֵּד",
+   "plain": "אבד",
+   "en": "to lose",
+   "letters": [
+    "alef",
+    "bet",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 339,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גִּדֵּל",
+   "plain": "גדל",
+   "en": "to grow, make bigger, magnify",
+   "letters": [
+    "gimel",
+    "dalet",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 343,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "רֶגֶל",
+   "plain": "רגל",
+   "en": "foot, leg",
+   "letters": [
+    "resh",
+    "gimel",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 349,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "וִתֵּר",
+   "plain": "ותר",
+   "en": "to give up (on)",
+   "letters": [
+    "vav",
+    "tav",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r09",
+   "rank": 352,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מָוֶת",
+   "plain": "מות",
+   "en": "death",
+   "letters": [
+    "mem",
+    "vav",
+    "tav"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r11",
+   "rank": 356,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מֹתֶק",
+   "plain": "מתק",
+   "en": "sweetness",
+   "letters": [
+    "mem",
+    "tav",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 363,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "טָמֵא",
+   "plain": "טמא",
+   "en": "ritually unclean",
+   "letters": [
+    "tet",
+    "mem",
+    "alef"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 377,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מְעַט",
+   "plain": "מעט",
+   "en": "little, few (not much)",
+   "letters": [
+    "mem",
+    "ayin",
+    "tet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 380,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צָחַק",
+   "plain": "צחק",
+   "en": "to laugh",
+   "letters": [
+    "tsadi",
+    "chet",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 381,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "טִפֵּל",
+   "plain": "טפל",
+   "en": "to care for, to look after, to take care of",
+   "letters": [
+    "tet",
+    "pe",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 388,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "סִיֵּם",
+   "plain": "סים",
+   "en": "to finish, to complete",
+   "letters": [
+    "samekh",
+    "yod",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 394,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מַצָּב",
+   "plain": "מצב",
+   "en": "a shape, a situation, a state",
+   "letters": [
+    "mem",
+    "tsadi",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 397,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אִוָּה",
+   "plain": "אוה",
+   "en": "to greatly desire, want, long for, lust for",
+   "letters": [
+    "alef",
+    "vav",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 401,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זִהָה",
+   "plain": "זהה",
+   "en": "to identify",
+   "letters": [
+    "zayin",
+    "he",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 407,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "יַחַד",
+   "plain": "יחד",
+   "en": "together",
+   "letters": [
+    "yod",
+    "chet",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 417,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁכַב",
+   "plain": "שכב",
+   "en": "to lie down, to be lying down, to recline",
+   "letters": [
+    "shin",
+    "kaf",
+    "bet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r10",
+   "rank": 425,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נִצֵּחַ",
+   "plain": "נצח",
+   "en": "to win (in a game, an election, or the like)",
+   "letters": [
+    "nun",
+    "tsadi",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 426,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁכַח",
+   "plain": "שכח",
+   "en": "to forget",
+   "letters": [
+    "shin",
+    "kaf",
+    "chet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r17",
+   "rank": 432,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לֵוִי",
+   "plain": "לוי",
+   "en": "Levite",
+   "letters": [
+    "lamed",
+    "vav",
+    "yod"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r08",
+   "rank": 434,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אָסַף",
+   "plain": "אסף",
+   "en": "to gather, to collect",
+   "letters": [
+    "alef",
+    "samekh",
+    "pe-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 436,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בָּנָה",
+   "plain": "בנה",
+   "en": "to build, to construct, to raise, to erect",
+   "letters": [
+    "bet",
+    "nun",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 439,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לְאָן",
+   "plain": "לאן",
+   "en": "whither",
+   "letters": [
+    "lamed",
+    "alef",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 445,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁתָה",
+   "plain": "שתה",
+   "en": "to drink",
+   "letters": [
+    "shin",
+    "tav",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r07",
+   "rank": 464,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מִיֵּן",
+   "plain": "מין",
+   "en": "to sort",
+   "letters": [
+    "mem",
+    "yod",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 465,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בִּקֵּר",
+   "plain": "בקר",
+   "en": "to visit",
+   "letters": [
+    "bet",
+    "qof",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 466,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "נִהֵל",
+   "plain": "נהל",
+   "en": "to manage",
+   "letters": [
+    "nun",
+    "he",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r12",
+   "rank": 472,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אֹזֶן",
+   "plain": "אזן",
+   "en": "ear",
+   "letters": [
+    "alef",
+    "zayin",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 482,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "גָּלַל",
+   "plain": "גלל",
+   "en": "to roll (literally or figuratively)",
+   "letters": [
+    "gimel",
+    "lamed",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 483,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "טִהֵר",
+   "plain": "טהר",
+   "en": "to purify",
+   "letters": [
+    "tet",
+    "he",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 490,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "מַזָּל",
+   "plain": "מזל",
+   "en": "astrological sign",
+   "letters": [
+    "mem",
+    "zayin",
+    "lamed"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 491,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "לָמַד",
+   "plain": "למד",
+   "en": "to learn, to study",
+   "letters": [
+    "lamed",
+    "mem",
+    "dalet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r18",
+   "rank": 497,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "חָצֵר",
+   "plain": "חצר",
+   "en": "yard, courtyard",
+   "letters": [
+    "chet",
+    "tsadi",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 508,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "הִטָּה",
+   "plain": "הטה",
+   "en": "to tilt, slant",
+   "letters": [
+    "he",
+    "tet",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 510,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׁפַט",
+   "plain": "שפט",
+   "en": "to judge",
+   "letters": [
+    "shin",
+    "pe",
+    "tet"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r23",
+   "rank": 514,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "תִּיק",
+   "plain": "תיק",
+   "en": "bag, satchel",
+   "letters": [
+    "tav",
+    "yod",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 521,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "כִּפֵּר",
+   "plain": "כפר",
+   "en": "to cover",
+   "letters": [
+    "kaf",
+    "pe",
+    "resh"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r16",
+   "rank": 524,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "צִלֵּם",
+   "plain": "צלם",
+   "en": "to photograph, to take a photograph of",
+   "letters": [
+    "tsadi",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 525,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "זָרַק",
+   "plain": "זרק",
+   "en": "to throw, to toss",
+   "letters": [
+    "zayin",
+    "resh",
+    "qof"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 528,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "שָׂפָה",
+   "plain": "שפה",
+   "en": "lip",
+   "letters": [
+    "shin",
+    "pe",
+    "he"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r20",
+   "rank": 535,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "בִּצֵּעַ",
+   "plain": "בצע",
+   "en": "to implement",
+   "letters": [
+    "bet",
+    "tsadi",
+    "ayin"
+   ],
+   "n": 3,
+   "level": "three",
+   "src": "vocab",
+   "lesson": "r24",
+   "rank": 537,
+   "pointing": "wiktionary"
+  },
+  {
+   "he": "אַבְרָהָם",
+   "plain": "אברהם",
+   "en": "Abraham",
+   "letters": [
+    "alef",
+    "bet",
+    "resh",
+    "he",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r42",
+   "audio": "r42-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֲדוֹן",
+   "plain": "אדון",
+   "en": "lord of",
+   "letters": [
+    "alef",
+    "dalet",
+    "vav",
+    "nun-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r46",
+   "audio": "r46-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֲדֹנָי",
+   "plain": "אדני",
+   "en": "Adonai (my Lord; read aloud in place of the Name)",
+   "letters": [
+    "alef",
+    "dalet",
+    "nun",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אִישַׁן",
+   "plain": "אישן",
+   "en": "I sleep",
+   "letters": [
+    "alef",
+    "yod",
+    "shin",
+    "nun-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w14",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֱלֹהֵי",
+   "plain": "אלהי",
+   "en": "God of",
+   "letters": [
+    "alef",
+    "lamed",
+    "he",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r42",
+   "audio": "r42-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֱלֹהִים",
+   "plain": "אלהים",
+   "en": "God",
+   "letters": [
+    "alef",
+    "lamed",
+    "he",
+    "yod",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r21",
+   "audio": "r21-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֱלֹהֵינוּ",
+   "plain": "אלהינו",
+   "en": "our God",
+   "letters": [
+    "alef",
+    "lamed",
+    "he",
+    "yod",
+    "nun",
+    "vav"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אֱמוּנָתֶךָ",
+   "plain": "אמונתך",
+   "en": "your faithfulness",
+   "letters": [
+    "alef",
+    "mem",
+    "vav",
+    "nun",
+    "tav",
+    "kaf-final"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r39",
+   "audio": "r39-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אָמֵן",
+   "plain": "אמן",
+   "en": "amen",
+   "letters": [
+    "alef",
+    "mem",
+    "nun-final"
+   ],
+   "n": 3,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "אַתָּה",
+   "plain": "אתה",
+   "en": "you (m.)",
+   "letters": [
+    "alef",
+    "tav",
+    "he"
+   ],
+   "n": 3,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בַּבַּיִת",
+   "plain": "בבית",
+   "en": "in the house",
+   "letters": [
+    "bet",
+    "bet",
+    "yod",
+    "tav"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r33",
+   "audio": "r33-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בּוֹרֵא",
+   "plain": "בורא",
+   "en": "creator",
+   "letters": [
+    "bet",
+    "vav",
+    "resh",
+    "alef"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r41",
+   "audio": "r41-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּחֶמְלָה",
+   "plain": "בחמלה",
+   "en": "with compassion",
+   "letters": [
+    "bet",
+    "chet",
+    "mem",
+    "lamed",
+    "he"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r39",
+   "audio": "r39-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּטוּבוֹ",
+   "plain": "בטובו",
+   "en": "in His goodness",
+   "letters": [
+    "bet",
+    "tet",
+    "vav",
+    "bet",
+    "vav"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r47",
+   "audio": "r47-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּטֶרֶם",
+   "plain": "בטרם",
+   "en": "before",
+   "letters": [
+    "bet",
+    "tet",
+    "resh",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r46",
+   "audio": "r46-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּעָלְמָא",
+   "plain": "בעלמא",
+   "en": "in the world (Aramaic)",
+   "letters": [
+    "bet",
+    "ayin",
+    "lamed",
+    "mem",
+    "alef"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-04",
+   "audio": "I-04-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְּרֵאשִׁית",
+   "plain": "בראשית",
+   "en": "in the beginning",
+   "letters": [
+    "bet",
+    "resh",
+    "alef",
+    "shin",
+    "yod",
+    "tav"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r14",
+   "audio": "r14-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בָּרוּךְ",
+   "plain": "ברוך",
+   "en": "blessed",
+   "letters": [
+    "bet",
+    "resh",
+    "vav",
+    "kaf-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בָּרְכוּ",
+   "plain": "ברכו",
+   "en": "bless! (the leader's call)",
+   "letters": [
+    "bet",
+    "resh",
+    "kaf",
+    "vav"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-01",
+   "audio": "I-01-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בָּרְכֵנוּ",
+   "plain": "ברכנו",
+   "en": "bless us",
+   "letters": [
+    "bet",
+    "resh",
+    "kaf",
+    "nun",
+    "vav"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-27",
+   "audio": "I-27-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בַּשָּׁלוֹם",
+   "plain": "בשלום",
+   "en": "in peace",
+   "letters": [
+    "bet",
+    "shin",
+    "lamed",
+    "vav",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-34",
+   "audio": "I-34-w7",
+   "pointing": "course-data"
+  },
+  {
+   "he": "בְשָׂמִים",
+   "plain": "בשמים",
+   "en": "spices",
+   "letters": [
+    "bet",
+    "shin",
+    "mem",
+    "yod",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גְּדֻלָּה",
+   "plain": "גדלה",
+   "en": "greatness",
+   "letters": [
+    "gimel",
+    "dalet",
+    "lamed",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-08",
+   "audio": "I-08-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "גּוֹאֲלִי",
+   "plain": "גואלי",
+   "en": "my redeemer",
+   "letters": [
+    "gimel",
+    "vav",
+    "alef",
+    "lamed",
+    "yod"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w12",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַגִּבּוֹר",
+   "plain": "הגבור",
+   "en": "the mighty",
+   "letters": [
+    "he",
+    "gimel",
+    "bet",
+    "vav",
+    "resh"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַגָּדוֹל",
+   "plain": "הגדול",
+   "en": "the great",
+   "letters": [
+    "he",
+    "gimel",
+    "dalet",
+    "vav",
+    "lamed"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַגְּדֻלָּה",
+   "plain": "הגדלה",
+   "en": "the greatness",
+   "letters": [
+    "he",
+    "gimel",
+    "dalet",
+    "lamed",
+    "he"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-03",
+   "audio": "I-03-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַגּוֹמֵל",
+   "plain": "הגומל",
+   "en": "who bestows good",
+   "letters": [
+    "he",
+    "gimel",
+    "vav",
+    "mem",
+    "lamed"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-10",
+   "audio": "I-10-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַגָּפֶן",
+   "plain": "הגפן",
+   "en": "the vine",
+   "letters": [
+    "he",
+    "gimel",
+    "pe",
+    "nun-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r41",
+   "audio": "r41-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הוֹשִׁיעָה",
+   "plain": "הושיעה",
+   "en": "save! (as in hoshia)",
+   "letters": [
+    "he",
+    "vav",
+    "shin",
+    "yod",
+    "ayin",
+    "he"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-30",
+   "audio": "I-30-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַיּוֹם",
+   "plain": "היום",
+   "en": "today",
+   "letters": [
+    "he",
+    "yod",
+    "vav",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "il12",
+   "audio": "il12-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַמַּבְדִּיל",
+   "plain": "המבדיל",
+   "en": "who separates",
+   "letters": [
+    "he",
+    "mem",
+    "bet",
+    "dalet",
+    "yod",
+    "lamed"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַמְּבֹרָךְ",
+   "plain": "המברך",
+   "en": "the blessed one",
+   "letters": [
+    "he",
+    "mem",
+    "bet",
+    "resh",
+    "kaf-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-01",
+   "audio": "I-01-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַמּוֹצִיא",
+   "plain": "המוציא",
+   "en": "who brings forth",
+   "letters": [
+    "he",
+    "mem",
+    "vav",
+    "tsadi",
+    "yod",
+    "alef"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-05",
+   "audio": "I-05-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הָעוֹלָם",
+   "plain": "העולם",
+   "en": "the world",
+   "letters": [
+    "he",
+    "ayin",
+    "vav",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הָעַמִּים",
+   "plain": "העמים",
+   "en": "the peoples",
+   "letters": [
+    "he",
+    "ayin",
+    "mem",
+    "yod",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r38",
+   "audio": "r38-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "הַשְּׁבִיעִי",
+   "plain": "השביעי",
+   "en": "the seventh",
+   "letters": [
+    "he",
+    "shin",
+    "bet",
+    "yod",
+    "ayin",
+    "yod"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-05",
+   "audio": "I-05-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וְאָהַבְתָּ",
+   "plain": "ואהבת",
+   "en": "and you shall love",
+   "letters": [
+    "vav",
+    "alef",
+    "he",
+    "bet",
+    "tav"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r37",
+   "audio": "r37-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וַאֲנַחְנוּ",
+   "plain": "ואנחנו",
+   "en": "and we",
+   "letters": [
+    "vav",
+    "alef",
+    "nun",
+    "chet",
+    "nun",
+    "vav"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-08",
+   "audio": "I-08-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וְאָעִירָה",
+   "plain": "ואעירה",
+   "en": "and I wake",
+   "letters": [
+    "vav",
+    "alef",
+    "ayin",
+    "yod",
+    "resh",
+    "he"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w15",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וְהַנּוֹרָא",
+   "plain": "והנורא",
+   "en": "and the awesome",
+   "letters": [
+    "vav",
+    "he",
+    "nun",
+    "vav",
+    "resh",
+    "alef"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "וְיִתְקַדַּשׁ",
+   "plain": "ויתקדש",
+   "en": "and sanctified",
+   "letters": [
+    "vav",
+    "yod",
+    "tav",
+    "qof",
+    "dalet",
+    "shin"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r45",
+   "audio": "r45-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חַיִּים",
+   "plain": "חיים",
+   "en": "life (chet, not kaf)",
+   "letters": [
+    "chet",
+    "yod",
+    "yod",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "il23",
+   "audio": "il23-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "חֲנֻכָּה",
+   "plain": "חנכה",
+   "en": "Hanukkah",
+   "letters": [
+    "chet",
+    "nun",
+    "kaf",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-32",
+   "audio": "I-32-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "טוֹבָה",
+   "plain": "טובה",
+   "en": "good (f)",
+   "letters": [
+    "tet",
+    "vav",
+    "bet",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-17",
+   "audio": "I-17-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יִמְלֹךְ",
+   "plain": "ימלך",
+   "en": "he will reign",
+   "letters": [
+    "yod",
+    "mem",
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w15",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יַעֲקֹב",
+   "plain": "יעקב",
+   "en": "Jacob",
+   "letters": [
+    "yod",
+    "ayin",
+    "qof",
+    "bet"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r40",
+   "audio": "r40-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יִצְחָק",
+   "plain": "יצחק",
+   "en": "Isaac",
+   "letters": [
+    "yod",
+    "tsadi",
+    "chet",
+    "qof"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r42",
+   "audio": "r42-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יְצִיר",
+   "plain": "יציר",
+   "en": "creature",
+   "letters": [
+    "yod",
+    "tsadi",
+    "yod",
+    "resh"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r46",
+   "audio": "r46-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יְשׁוּעָתִי",
+   "plain": "ישועתי",
+   "en": "my salvation",
+   "letters": [
+    "yod",
+    "shin",
+    "vav",
+    "ayin",
+    "tav",
+    "yod"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-32",
+   "audio": "I-32-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יִשְׂרָאֵל",
+   "plain": "ישראל",
+   "en": "Israel",
+   "letters": [
+    "yod",
+    "shin",
+    "resh",
+    "alef",
+    "lamed"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r20",
+   "audio": "r20-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "יִתְגַּדַּל",
+   "plain": "יתגדל",
+   "en": "may it be magnified",
+   "letters": [
+    "yod",
+    "tav",
+    "gimel",
+    "dalet",
+    "lamed"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r45",
+   "audio": "r45-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כְּבוֹד",
+   "plain": "כבוד",
+   "en": "glory",
+   "letters": [
+    "kaf",
+    "bet",
+    "vav",
+    "dalet"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r36",
+   "audio": "r36-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כְּבוֹדוֹ",
+   "plain": "כבודו",
+   "en": "his glory",
+   "letters": [
+    "kaf",
+    "bet",
+    "vav",
+    "dalet",
+    "vav"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "כֹּהֲנֶיךָ",
+   "plain": "כהניך",
+   "en": "your priests",
+   "letters": [
+    "kaf",
+    "he",
+    "nun",
+    "yod",
+    "kaf-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-32",
+   "audio": "I-32-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לַאֲדוֹן",
+   "plain": "לאדון",
+   "en": "to the Lord",
+   "letters": [
+    "lamed",
+    "alef",
+    "dalet",
+    "vav",
+    "nun-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r44",
+   "audio": "r44-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְהַדְלִיק",
+   "plain": "להדליק",
+   "en": "to light",
+   "letters": [
+    "lamed",
+    "he",
+    "dalet",
+    "lamed",
+    "yod",
+    "qof"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-32",
+   "audio": "I-32-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְחוֹל",
+   "plain": "לחול",
+   "en": "from the ordinary (weekday)",
+   "letters": [
+    "lamed",
+    "chet",
+    "vav",
+    "lamed"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w8",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְעוֹלָם",
+   "plain": "לעולם",
+   "en": "forever",
+   "letters": [
+    "lamed",
+    "ayin",
+    "vav",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r36",
+   "audio": "r36-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְעַמּוֹ",
+   "plain": "לעמו",
+   "en": "to his people",
+   "letters": [
+    "lamed",
+    "ayin",
+    "mem",
+    "vav"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-26",
+   "audio": "I-26-w10",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לִפְנֵי",
+   "plain": "לפני",
+   "en": "before",
+   "letters": [
+    "lamed",
+    "pe",
+    "nun",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-14",
+   "audio": "I-14-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "לְשַׁבֵּחַ",
+   "plain": "לשבח",
+   "en": "to praise",
+   "letters": [
+    "lamed",
+    "shin",
+    "bet",
+    "chet"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r44",
+   "audio": "r44-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מְבָרַךְ",
+   "plain": "מברך",
+   "en": "blessed (Aramaic)",
+   "letters": [
+    "mem",
+    "bet",
+    "resh",
+    "kaf-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-04",
+   "audio": "I-04-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מוֹדֶה",
+   "plain": "מודה",
+   "en": "grateful (m.)",
+   "letters": [
+    "mem",
+    "vav",
+    "dalet",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r39",
+   "audio": "r39-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מוֹדָה",
+   "plain": "מודה",
+   "en": "grateful (f.)",
+   "letters": [
+    "mem",
+    "vav",
+    "dalet",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r39",
+   "audio": "r39-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מִינֵי",
+   "plain": "מיני",
+   "en": "kinds of",
+   "letters": [
+    "mem",
+    "yod",
+    "nun",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-06",
+   "audio": "I-06-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מֶלֶךְ",
+   "plain": "מלך",
+   "en": "king",
+   "letters": [
+    "mem",
+    "lamed",
+    "kaf-final"
+   ],
+   "n": 3,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מַלְכוּתוֹ",
+   "plain": "מלכותו",
+   "en": "His kingdom",
+   "letters": [
+    "mem",
+    "lamed",
+    "kaf",
+    "vav",
+    "tav",
+    "vav"
+   ],
+   "n": 6,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r36",
+   "audio": "r36-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "מִצְרַיִם",
+   "plain": "מצרים",
+   "en": "Egypt",
+   "letters": [
+    "mem",
+    "tsadi",
+    "resh",
+    "yod",
+    "mem-final"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נִבְרָא",
+   "plain": "נברא",
+   "en": "was created",
+   "letters": [
+    "nun",
+    "bet",
+    "resh",
+    "alef"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r46",
+   "audio": "r46-w6",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נִסִּים",
+   "plain": "נסים",
+   "en": "miracles",
+   "letters": [
+    "nun",
+    "samekh",
+    "yod",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-31",
+   "audio": "I-31-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נִקְרָא",
+   "plain": "נקרא",
+   "en": "was called",
+   "letters": [
+    "nun",
+    "qof",
+    "resh",
+    "alef"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w5",
+   "pointing": "course-data"
+  },
+  {
+   "he": "נִשְׁמָתִי",
+   "plain": "נשמתי",
+   "en": "my soul",
+   "letters": [
+    "nun",
+    "shin",
+    "mem",
+    "tav",
+    "yod"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r39",
+   "audio": "r39-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עוֹלָם",
+   "plain": "עולם",
+   "en": "world; forever",
+   "letters": [
+    "ayin",
+    "vav",
+    "lamed",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r19",
+   "audio": "r19-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "עָלֵינוּ",
+   "plain": "עלינו",
+   "en": "it is upon us",
+   "letters": [
+    "ayin",
+    "lamed",
+    "yod",
+    "nun",
+    "vav"
+   ],
+   "n": 5,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r44",
+   "audio": "r44-w1",
+   "pointing": "course-data"
+  },
+  {
+   "he": "צִיּוֹן",
+   "plain": "ציון",
+   "en": "Zion",
+   "letters": [
+    "tsadi",
+    "yod",
+    "vav",
+    "nun-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-33",
+   "audio": "I-33-w11",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קִדּוּשׁ",
+   "plain": "קדוש",
+   "en": "Kiddush",
+   "letters": [
+    "qof",
+    "dalet",
+    "vav",
+    "shin"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-29",
+   "audio": "I-29-w12",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קָדוֹשׁ",
+   "plain": "קדוש",
+   "en": "holy",
+   "letters": [
+    "qof",
+    "dalet",
+    "vav",
+    "shin"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r24",
+   "audio": "r24-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קָדְשׁוֹ",
+   "plain": "קדשו",
+   "en": "His holiness",
+   "letters": [
+    "qof",
+    "dalet",
+    "shin",
+    "vav"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "r32",
+   "audio": "r32-w3",
+   "pointing": "course-data"
+  },
+  {
+   "he": "קוֹמָה",
+   "plain": "קומה",
+   "en": "story, floor",
+   "letters": [
+    "qof",
+    "vav",
+    "mem",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-17",
+   "audio": "I-17-w4",
+   "pointing": "course-data"
+  },
+  {
+   "he": "רוּחִי",
+   "plain": "רוחי",
+   "en": "my spirit",
+   "letters": [
+    "resh",
+    "vav",
+    "chet",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-09",
+   "audio": "I-09-w13",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שַׁבָּת",
+   "plain": "שבת",
+   "en": "Sabbath",
+   "letters": [
+    "shin",
+    "bet",
+    "tav"
+   ],
+   "n": 3,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׁלוֹם",
+   "plain": "שלום",
+   "en": "peace",
+   "letters": [
+    "shin",
+    "lamed",
+    "vav",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שָׁמַיִם",
+   "plain": "שמים",
+   "en": "heaven",
+   "letters": [
+    "shin",
+    "mem",
+    "yod",
+    "mem-final"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-08",
+   "audio": "I-08-w9",
+   "pointing": "course-data"
+  },
+  {
+   "he": "שְׂפָתַי",
+   "plain": "שפתי",
+   "en": "my lips",
+   "letters": [
+    "shin",
+    "pe",
+    "tav",
+    "yod"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תּוֹדָה",
+   "plain": "תודה",
+   "en": "thanks",
+   "letters": [
+    "tav",
+    "vav",
+    "dalet",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "il01",
+   "audio": "il01-w2",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תּוֹרָה",
+   "plain": "תורה",
+   "en": "Torah, teaching",
+   "letters": [
+    "tav",
+    "vav",
+    "resh",
+    "he"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "prayerwords",
+   "pointing": "course-data"
+  },
+  {
+   "he": "תִּפְתָּח",
+   "plain": "תפתח",
+   "en": "open (you will open)",
+   "letters": [
+    "tav",
+    "pe",
+    "tav",
+    "chet"
+   ],
+   "n": 4,
+   "level": "prayer",
+   "src": "lesson",
+   "lesson": "I-02",
+   "audio": "I-02-w3",
+   "pointing": "course-data"
+  }
+ ]
+}

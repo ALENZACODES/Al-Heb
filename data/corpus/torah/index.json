@@ -1,0 +1,6192 @@
+{
+ "schema": "alef-torah-index/1",
+ "generated": "2026-11-08",
+ "counts": {
+  "books": 5,
+  "chapters": 187,
+  "verses": 5846,
+  "words": 68511,
+  "letters": 304879
+ },
+ "books": [
+  {
+   "id": "genesis",
+   "en": "Genesis",
+   "he": "בְּרֵאשִׁית",
+   "chapters": 50,
+   "verses": 1533,
+   "chapterVerses": [
+    31,
+    25,
+    24,
+    26,
+    32,
+    22,
+    24,
+    22,
+    29,
+    32,
+    32,
+    20,
+    18,
+    24,
+    21,
+    16,
+    27,
+    33,
+    38,
+    18,
+    34,
+    24,
+    20,
+    67,
+    34,
+    35,
+    46,
+    22,
+    35,
+    43,
+    54,
+    33,
+    20,
+    31,
+    29,
+    43,
+    36,
+    30,
+    23,
+    23,
+    57,
+    38,
+    34,
+    34,
+    28,
+    34,
+    31,
+    22,
+    33,
+    26
+   ],
+   "chaptersAvailable": 50
+  },
+  {
+   "id": "exodus",
+   "en": "Exodus",
+   "he": "שְׁמוֹת",
+   "chapters": 40,
+   "verses": 1210,
+   "chapterVerses": [
+    22,
+    25,
+    22,
+    31,
+    23,
+    30,
+    29,
+    28,
+    35,
+    29,
+    10,
+    51,
+    22,
+    31,
+    27,
+    36,
+    16,
+    27,
+    25,
+    23,
+    37,
+    30,
+    33,
+    18,
+    40,
+    37,
+    21,
+    43,
+    46,
+    38,
+    18,
+    35,
+    23,
+    35,
+    35,
+    38,
+    29,
+    31,
+    43,
+    38
+   ],
+   "chaptersAvailable": 40
+  },
+  {
+   "id": "leviticus",
+   "en": "Leviticus",
+   "he": "וַיִּקְרָא",
+   "chapters": 27,
+   "verses": 859,
+   "chapterVerses": [
+    17,
+    16,
+    17,
+    35,
+    26,
+    23,
+    38,
+    36,
+    24,
+    20,
+    47,
+    8,
+    59,
+    57,
+    33,
+    34,
+    16,
+    30,
+    37,
+    27,
+    24,
+    33,
+    44,
+    23,
+    55,
+    46,
+    34
+   ],
+   "chaptersAvailable": 27
+  },
+  {
+   "id": "numbers",
+   "en": "Numbers",
+   "he": "בְּמִדְבַּר",
+   "chapters": 36,
+   "verses": 1288,
+   "chapterVerses": [
+    54,
+    34,
+    51,
+    49,
+    31,
+    27,
+    89,
+    26,
+    23,
+    36,
+    35,
+    16,
+    33,
+    45,
+    41,
+    35,
+    28,
+    32,
+    22,
+    29,
+    35,
+    41,
+    30,
+    25,
+    18,
+    65,
+    23,
+    31,
+    39,
+    17,
+    54,
+    42,
+    56,
+    29,
+    34,
+    13
+   ],
+   "chaptersAvailable": 36
+  },
+  {
+   "id": "deuteronomy",
+   "en": "Deuteronomy",
+   "he": "דְּבָרִים",
+   "chapters": 34,
+   "verses": 956,
+   "chapterVerses": [
+    46,
+    37,
+    29,
+    49,
+    30,
+    25,
+    26,
+    20,
+    29,
+    22,
+    32,
+    31,
+    19,
+    29,
+    23,
+    22,
+    20,
+    22,
+    21,
+    20,
+    23,
+    29,
+    26,
+    22,
+    19,
+    19,
+    26,
+    69,
+    28,
+    20,
+    30,
+    52,
+    29,
+    12
+   ],
+   "chaptersAvailable": 34
+  }
+ ],
+ "parshiyot": [
+  {
+   "id": "bereshit",
+   "en": "Bereshit",
+   "he": "בראשית",
+   "num": 1,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 1,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 6,
+    "verse": 8
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 1,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 3
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 4
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 19
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 2,
+      "verse": 20
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 3,
+      "verse": 21
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 3,
+      "verse": 22
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 4,
+      "verse": 18
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 4,
+      "verse": 19
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 4,
+      "verse": 22
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 4,
+      "verse": 23
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 5,
+      "verse": 24
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 5,
+      "verse": 25
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 6,
+      "verse": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "noach",
+   "en": "Noach",
+   "he": "נח",
+   "num": 2,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 6,
+    "verse": 9
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 11,
+    "verse": 32
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 6,
+      "verse": 9
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 6,
+      "verse": 22
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 7,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 7,
+      "verse": 16
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 7,
+      "verse": 17
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 8,
+      "verse": 14
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 8,
+      "verse": 15
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 9,
+      "verse": 7
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 9,
+      "verse": 8
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 9,
+      "verse": 17
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 9,
+      "verse": 18
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 10,
+      "verse": 32
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 11,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 11,
+      "verse": 32
+     }
+    }
+   ]
+  },
+  {
+   "id": "lech-lecha",
+   "en": "Lech-Lecha",
+   "he": "לך־לך",
+   "num": 3,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 12,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 17,
+    "verse": 27
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 12,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 12,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 12,
+      "verse": 14
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 13,
+      "verse": 4
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 13,
+      "verse": 5
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 13,
+      "verse": 18
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 14,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 14,
+      "verse": 20
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 14,
+      "verse": 21
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 15,
+      "verse": 6
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 15,
+      "verse": 7
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 17,
+      "verse": 6
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 17,
+      "verse": 7
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 17,
+      "verse": 27
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayera",
+   "en": "Vayera",
+   "he": "וירא",
+   "num": 4,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 18,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 22,
+    "verse": 24
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 18,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 18,
+      "verse": 14
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 18,
+      "verse": 15
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 18,
+      "verse": 33
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 19,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 19,
+      "verse": 20
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 19,
+      "verse": 21
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 4
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 5
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 21
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 22
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 21,
+      "verse": 34
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 22,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 22,
+      "verse": 24
+     }
+    }
+   ]
+  },
+  {
+   "id": "chayei-sara",
+   "en": "Chayei Sara",
+   "he": "חיי שרה",
+   "num": 5,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 23,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 18
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 23,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 23,
+      "verse": 16
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 23,
+      "verse": 17
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 9
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 10
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 26
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 27
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 52
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 53
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 24,
+      "verse": 67
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 11
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 12
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 18
+     }
+    }
+   ]
+  },
+  {
+   "id": "toldot",
+   "en": "Toldot",
+   "he": "תולדות",
+   "num": 6,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 25,
+    "verse": 19
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 28,
+    "verse": 9
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 25,
+      "verse": 19
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 5
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 6
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 12
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 13
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 22
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 23
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 29
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 26,
+      "verse": 30
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 27,
+      "verse": 27
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 27,
+      "verse": 28
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 4
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 5
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 9
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayetzei",
+   "en": "Vayetzei",
+   "he": "ויצא",
+   "num": 7,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 28,
+    "verse": 10
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 32,
+    "verse": 3
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 10
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 28,
+      "verse": 22
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 29,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 29,
+      "verse": 17
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 29,
+      "verse": 18
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 30,
+      "verse": 13
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 30,
+      "verse": 14
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 30,
+      "verse": 27
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 30,
+      "verse": 28
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 31,
+      "verse": 16
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 31,
+      "verse": 17
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 31,
+      "verse": 42
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 31,
+      "verse": 43
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 3
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayishlach",
+   "en": "Vayishlach",
+   "he": "וישלח",
+   "num": 8,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 32,
+    "verse": 4
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 36,
+    "verse": 43
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 4
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 14
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 30
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 32,
+      "verse": 31
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 33,
+      "verse": 5
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 33,
+      "verse": 6
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 33,
+      "verse": 20
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 34,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 35,
+      "verse": 11
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 35,
+      "verse": 12
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 36,
+      "verse": 19
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 36,
+      "verse": 20
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 36,
+      "verse": 43
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayeshev",
+   "en": "Vayeshev",
+   "he": "וישב",
+   "num": 9,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 37,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 40,
+    "verse": 23
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 11
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 12
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 22
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 23
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 37,
+      "verse": 36
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 38,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 38,
+      "verse": 30
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 39,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 39,
+      "verse": 6
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 39,
+      "verse": 7
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 39,
+      "verse": 23
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 40,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 40,
+      "verse": 23
+     }
+    }
+   ]
+  },
+  {
+   "id": "miketz",
+   "en": "Miketz",
+   "he": "מקץ",
+   "num": 10,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 41,
+    "verse": 1
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 44,
+    "verse": 17
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 14
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 15
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 38
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 39
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 52
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 41,
+      "verse": 53
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 42,
+      "verse": 18
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 42,
+      "verse": 19
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 43,
+      "verse": 15
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 43,
+      "verse": 16
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 43,
+      "verse": 29
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 43,
+      "verse": 30
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 44,
+      "verse": 17
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayigash",
+   "en": "Vayigash",
+   "he": "ויגש",
+   "num": 11,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 44,
+    "verse": 18
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 47,
+    "verse": 27
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 44,
+      "verse": 18
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 44,
+      "verse": 30
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 44,
+      "verse": 31
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 7
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 8
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 18
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 19
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 27
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 45,
+      "verse": 28
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 46,
+      "verse": 27
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 46,
+      "verse": 28
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 47,
+      "verse": 10
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 47,
+      "verse": 11
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 47,
+      "verse": 27
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayechi",
+   "en": "Vayechi",
+   "he": "ויחי",
+   "num": 12,
+   "book": "genesis",
+   "from": {
+    "book": "genesis",
+    "chapter": 47,
+    "verse": 28
+   },
+   "to": {
+    "book": "genesis",
+    "chapter": 50,
+    "verse": 26
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "genesis",
+      "chapter": 47,
+      "verse": 28
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 48,
+      "verse": 9
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "genesis",
+      "chapter": 48,
+      "verse": 10
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 48,
+      "verse": 16
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "genesis",
+      "chapter": 48,
+      "verse": 17
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 48,
+      "verse": 22
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "genesis",
+      "chapter": 49,
+      "verse": 1
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 49,
+      "verse": 18
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "genesis",
+      "chapter": 49,
+      "verse": 19
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 49,
+      "verse": 26
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "genesis",
+      "chapter": 49,
+      "verse": 27
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 50,
+      "verse": 20
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "genesis",
+      "chapter": 50,
+      "verse": 21
+     },
+     "to": {
+      "book": "genesis",
+      "chapter": 50,
+      "verse": 26
+     }
+    }
+   ]
+  },
+  {
+   "id": "shemot",
+   "en": "Shemot",
+   "he": "שמות",
+   "num": 13,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 1,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 6,
+    "verse": 1
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 1,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 1,
+      "verse": 17
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 1,
+      "verse": 18
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 2,
+      "verse": 10
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 2,
+      "verse": 11
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 2,
+      "verse": 25
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 3,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 3,
+      "verse": 15
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 3,
+      "verse": 16
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 4,
+      "verse": 17
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 4,
+      "verse": 18
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 4,
+      "verse": 31
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 5,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "vaera",
+   "en": "Vaera",
+   "he": "וארא",
+   "num": 14,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 6,
+    "verse": 2
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 9,
+    "verse": 35
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 2
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 14
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 28
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 6,
+      "verse": 29
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 7,
+      "verse": 7
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 7,
+      "verse": 8
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 8,
+      "verse": 6
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 8,
+      "verse": 7
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 8,
+      "verse": 18
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 8,
+      "verse": 19
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 9,
+      "verse": 16
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 9,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 9,
+      "verse": 35
+     }
+    }
+   ]
+  },
+  {
+   "id": "bo",
+   "en": "Bo",
+   "he": "בא",
+   "num": 15,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 10,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 13,
+    "verse": 16
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 10,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 10,
+      "verse": 11
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 10,
+      "verse": 12
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 10,
+      "verse": 23
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 10,
+      "verse": 24
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 11,
+      "verse": 3
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 11,
+      "verse": 4
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 20
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 21
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 28
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 29
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 12,
+      "verse": 51
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 13,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 13,
+      "verse": 16
+     }
+    }
+   ]
+  },
+  {
+   "id": "beshalach",
+   "en": "Beshalach",
+   "he": "בשלח",
+   "num": 16,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 13,
+    "verse": 17
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 17,
+    "verse": 16
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 13,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 8
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 9
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 14
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 15
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 25
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 14,
+      "verse": 26
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 15,
+      "verse": 26
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 15,
+      "verse": 27
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 16,
+      "verse": 10
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 16,
+      "verse": 11
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 16,
+      "verse": 36
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 17,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 17,
+      "verse": 16
+     }
+    }
+   ]
+  },
+  {
+   "id": "yitro",
+   "en": "Yitro",
+   "he": "יתרו",
+   "num": 17,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 18,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 20,
+    "verse": 23
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 12
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 13
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 23
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 24
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 18,
+      "verse": 27
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 6
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 7
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 19
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 19,
+      "verse": 20
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 20,
+      "verse": 14
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 20,
+      "verse": 15
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 20,
+      "verse": 23
+     }
+    }
+   ]
+  },
+  {
+   "id": "mishpatim",
+   "en": "Mishpatim",
+   "he": "משפטים",
+   "num": 18,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 21,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 24,
+    "verse": 18
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 21,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 21,
+      "verse": 19
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 21,
+      "verse": 20
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 22,
+      "verse": 3
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 22,
+      "verse": 4
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 22,
+      "verse": 26
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 22,
+      "verse": 27
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 5
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 6
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 19
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 20
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 25
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 23,
+      "verse": 26
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 24,
+      "verse": 18
+     }
+    }
+   ]
+  },
+  {
+   "id": "terumah",
+   "en": "Terumah",
+   "he": "תרומה",
+   "num": 19,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 25,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 27,
+    "verse": 19
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 25,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 25,
+      "verse": 16
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 25,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 25,
+      "verse": 30
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 25,
+      "verse": 31
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 26,
+      "verse": 14
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 26,
+      "verse": 15
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 26,
+      "verse": 30
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 26,
+      "verse": 31
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 26,
+      "verse": 37
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 27,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 27,
+      "verse": 8
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 27,
+      "verse": 9
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 27,
+      "verse": 19
+     }
+    }
+   ]
+  },
+  {
+   "id": "tetzaveh",
+   "en": "Tetzaveh",
+   "he": "תצוה",
+   "num": 20,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 27,
+    "verse": 20
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 30,
+    "verse": 10
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 27,
+      "verse": 20
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 28,
+      "verse": 12
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 28,
+      "verse": 13
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 28,
+      "verse": 30
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 28,
+      "verse": 31
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 28,
+      "verse": 43
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 18
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 19
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 37
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 38
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 29,
+      "verse": 46
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 30,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 30,
+      "verse": 10
+     }
+    }
+   ]
+  },
+  {
+   "id": "ki-tisa",
+   "en": "Ki Tisa",
+   "he": "כי תשא",
+   "num": 21,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 30,
+    "verse": 11
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 34,
+    "verse": 35
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 30,
+      "verse": 11
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 31,
+      "verse": 17
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 31,
+      "verse": 18
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 33,
+      "verse": 11
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 33,
+      "verse": 12
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 33,
+      "verse": 16
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 33,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 33,
+      "verse": 23
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 9
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 10
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 26
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 27
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 34,
+      "verse": 35
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayakhel",
+   "en": "Vayakhel",
+   "he": "ויקהל",
+   "num": 22,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 35,
+    "verse": 1
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 38,
+    "verse": 20
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 35,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 35,
+      "verse": 20
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 35,
+      "verse": 21
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 35,
+      "verse": 29
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 35,
+      "verse": 30
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 36,
+      "verse": 7
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 36,
+      "verse": 8
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 36,
+      "verse": 19
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 36,
+      "verse": 20
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 37,
+      "verse": 16
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 37,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 37,
+      "verse": 29
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 38,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 38,
+      "verse": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "pekudei",
+   "en": "Pekudei",
+   "he": "פקודי",
+   "num": 23,
+   "book": "exodus",
+   "from": {
+    "book": "exodus",
+    "chapter": 38,
+    "verse": 21
+   },
+   "to": {
+    "book": "exodus",
+    "chapter": 40,
+    "verse": 38
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "exodus",
+      "chapter": 38,
+      "verse": 21
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 1
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 2
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 21
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 22
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 32
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 33
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 39,
+      "verse": 43
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 1
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 16
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 17
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 27
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 28
+     },
+     "to": {
+      "book": "exodus",
+      "chapter": 40,
+      "verse": 38
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayikra",
+   "en": "Vayikra",
+   "he": "ויקרא",
+   "num": 24,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 1,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 5,
+    "verse": 26
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 1,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 1,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 1,
+      "verse": 14
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 2,
+      "verse": 6
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 2,
+      "verse": 7
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 2,
+      "verse": 16
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 3,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 3,
+      "verse": 17
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 4,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 4,
+      "verse": 26
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 4,
+      "verse": 27
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 5,
+      "verse": 10
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 5,
+      "verse": 11
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 5,
+      "verse": 26
+     }
+    }
+   ]
+  },
+  {
+   "id": "tzav",
+   "en": "Tzav",
+   "he": "צו",
+   "num": 25,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 6,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 8,
+    "verse": 36
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 6,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 6,
+      "verse": 11
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 6,
+      "verse": 12
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 7,
+      "verse": 10
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 7,
+      "verse": 11
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 7,
+      "verse": 38
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 13
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 14
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 21
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 22
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 29
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 30
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 8,
+      "verse": 36
+     }
+    }
+   ]
+  },
+  {
+   "id": "shmini",
+   "en": "Shmini",
+   "he": "שמיני",
+   "num": 26,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 9,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 11,
+    "verse": 47
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 9,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 9,
+      "verse": 16
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 9,
+      "verse": 17
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 9,
+      "verse": 23
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 9,
+      "verse": 24
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 10,
+      "verse": 11
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 10,
+      "verse": 12
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 10,
+      "verse": 15
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 10,
+      "verse": 16
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 10,
+      "verse": 20
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 11,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 11,
+      "verse": 32
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 11,
+      "verse": 33
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 11,
+      "verse": 47
+     }
+    }
+   ]
+  },
+  {
+   "id": "tazria",
+   "en": "Tazria",
+   "he": "תזריע",
+   "num": 27,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 12,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 13,
+    "verse": 59
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 12,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 5
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 6
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 17
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 18
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 23
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 24
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 28
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 29
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 39
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 40
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 54
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 55
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 13,
+      "verse": 59
+     }
+    }
+   ]
+  },
+  {
+   "id": "metzora",
+   "en": "Metzora",
+   "he": "מצרע",
+   "num": 28,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 14,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 15,
+    "verse": 33
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 12
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 13
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 20
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 21
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 32
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 33
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 53
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 14,
+      "verse": 54
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 15,
+      "verse": 15
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 15,
+      "verse": 16
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 15,
+      "verse": 28
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 15,
+      "verse": 29
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 15,
+      "verse": 33
+     }
+    }
+   ]
+  },
+  {
+   "id": "achrei-mot",
+   "en": "Achrei Mot",
+   "he": "אחרי מות",
+   "num": 29,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 16,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 18,
+    "verse": 30
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 17
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 18
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 24
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 25
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 16,
+      "verse": 34
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 17,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 17,
+      "verse": 7
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 17,
+      "verse": 8
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 18,
+      "verse": 5
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 18,
+      "verse": 6
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 18,
+      "verse": 21
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 18,
+      "verse": 22
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 18,
+      "verse": 30
+     }
+    }
+   ]
+  },
+  {
+   "id": "kedoshim",
+   "en": "Kedoshim",
+   "he": "קדשים",
+   "num": 30,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 19,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 20,
+    "verse": 27
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 14
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 15
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 22
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 23
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 32
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 33
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 19,
+      "verse": 37
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 7
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 8
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 22
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 23
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 20,
+      "verse": 27
+     }
+    }
+   ]
+  },
+  {
+   "id": "emor",
+   "en": "Emor",
+   "he": "אמור",
+   "num": 31,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 21,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 24,
+    "verse": 23
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 21,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 21,
+      "verse": 15
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 21,
+      "verse": 16
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 22,
+      "verse": 16
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 22,
+      "verse": 17
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 22,
+      "verse": 33
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 22
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 23
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 32
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 33
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 23,
+      "verse": 44
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 24,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 24,
+      "verse": 23
+     }
+    }
+   ]
+  },
+  {
+   "id": "behar",
+   "en": "Behar",
+   "he": "בהר",
+   "num": 32,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 25,
+    "verse": 1
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 26,
+    "verse": 2
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 14
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 18
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 19
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 24
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 25
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 28
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 29
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 38
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 39
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 46
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 25,
+      "verse": 47
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 2
+     }
+    }
+   ]
+  },
+  {
+   "id": "bechukotai",
+   "en": "Bechukotai",
+   "he": "בחקתי",
+   "num": 33,
+   "book": "leviticus",
+   "from": {
+    "book": "leviticus",
+    "chapter": 26,
+    "verse": 3
+   },
+   "to": {
+    "book": "leviticus",
+    "chapter": 27,
+    "verse": 34
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 3
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 5
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 6
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 9
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 10
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 26,
+      "verse": 46
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 1
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 15
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 16
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 21
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 22
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 28
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 29
+     },
+     "to": {
+      "book": "leviticus",
+      "chapter": 27,
+      "verse": 34
+     }
+    }
+   ]
+  },
+  {
+   "id": "bamidbar",
+   "en": "Bamidbar",
+   "he": "במדבר",
+   "num": 34,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 1,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 4,
+    "verse": 20
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 1,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 1,
+      "verse": 19
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 1,
+      "verse": 20
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 1,
+      "verse": 54
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 2,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 2,
+      "verse": 34
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 13
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 14
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 39
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 40
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 3,
+      "verse": 51
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "nasso",
+   "en": "Nasso",
+   "he": "נשא",
+   "num": 35,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 4,
+    "verse": 21
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 7,
+    "verse": 89
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 21
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 37
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 38
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 4,
+      "verse": 49
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 5,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 5,
+      "verse": 10
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 5,
+      "verse": 11
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 6,
+      "verse": 27
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 41
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 42
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 71
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 72
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 7,
+      "verse": 89
+     }
+    }
+   ]
+  },
+  {
+   "id": "behaalotcha",
+   "en": "Beha'alotcha",
+   "he": "בהעלתך",
+   "num": 36,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 8,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 12,
+    "verse": 16
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 8,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 8,
+      "verse": 14
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 8,
+      "verse": 15
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 8,
+      "verse": 26
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 9,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 9,
+      "verse": 14
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 9,
+      "verse": 15
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 10,
+      "verse": 10
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 10,
+      "verse": 11
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 10,
+      "verse": 34
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 10,
+      "verse": 35
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 11,
+      "verse": 29
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 11,
+      "verse": 30
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 12,
+      "verse": 16
+     }
+    }
+   ]
+  },
+  {
+   "id": "shlach",
+   "en": "Sh'lach",
+   "he": "שלח־לך",
+   "num": 37,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 13,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 15,
+    "verse": 41
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 13,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 13,
+      "verse": 20
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 13,
+      "verse": 21
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 14,
+      "verse": 7
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 14,
+      "verse": 8
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 14,
+      "verse": 25
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 14,
+      "verse": 26
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 7
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 8
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 16
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 17
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 26
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 27
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 15,
+      "verse": 41
+     }
+    }
+   ]
+  },
+  {
+   "id": "korach",
+   "en": "Korach",
+   "he": "קורח",
+   "num": 38,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 16,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 18,
+    "verse": 32
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 16,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 16,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 16,
+      "verse": 14
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 16,
+      "verse": 19
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 16,
+      "verse": 20
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 8
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 9
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 15
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 16
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 24
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 17,
+      "verse": 25
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 18,
+      "verse": 20
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 18,
+      "verse": 21
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 18,
+      "verse": 32
+     }
+    }
+   ]
+  },
+  {
+   "id": "chukat",
+   "en": "Chukat",
+   "he": "חוקת",
+   "num": 39,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 19,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 22,
+    "verse": 1
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 19,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 19,
+      "verse": 17
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 19,
+      "verse": 18
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 6
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 7
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 13
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 14
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 21
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 20,
+      "verse": 22
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 21,
+      "verse": 9
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 21,
+      "verse": 10
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 21,
+      "verse": 20
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 21,
+      "verse": 21
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "balak",
+   "en": "Balak",
+   "he": "בלק",
+   "num": 40,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 22,
+    "verse": 2
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 25,
+    "verse": 9
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 2
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 12
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 13
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 20
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 21
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 38
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 22,
+      "verse": 39
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 23,
+      "verse": 12
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 23,
+      "verse": 13
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 23,
+      "verse": 26
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 23,
+      "verse": 27
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 24,
+      "verse": 13
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 24,
+      "verse": 14
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 25,
+      "verse": 9
+     }
+    }
+   ]
+  },
+  {
+   "id": "pinchas",
+   "en": "Pinchas",
+   "he": "פינחס",
+   "num": 41,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 25,
+    "verse": 10
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 30,
+    "verse": 1
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 25,
+      "verse": 10
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 26,
+      "verse": 4
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 26,
+      "verse": 5
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 26,
+      "verse": 51
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 26,
+      "verse": 52
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 27,
+      "verse": 5
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 27,
+      "verse": 6
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 27,
+      "verse": 23
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 28,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 28,
+      "verse": 15
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 28,
+      "verse": 16
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 29,
+      "verse": 11
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 29,
+      "verse": 12
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 30,
+      "verse": 1
+     }
+    }
+   ]
+  },
+  {
+   "id": "matot",
+   "en": "Matot",
+   "he": "מטות",
+   "num": 42,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 30,
+    "verse": 2
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 32,
+    "verse": 42
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 30,
+      "verse": 2
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 30,
+      "verse": 17
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 12
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 13
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 24
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 25
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 41
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 42
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 31,
+      "verse": 54
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 32,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 32,
+      "verse": 19
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 32,
+      "verse": 20
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 32,
+      "verse": 42
+     }
+    }
+   ]
+  },
+  {
+   "id": "masei",
+   "en": "Masei",
+   "he": "מסעי",
+   "num": 43,
+   "book": "numbers",
+   "from": {
+    "book": "numbers",
+    "chapter": 33,
+    "verse": 1
+   },
+   "to": {
+    "book": "numbers",
+    "chapter": 36,
+    "verse": 13
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "numbers",
+      "chapter": 33,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 33,
+      "verse": 10
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "numbers",
+      "chapter": 33,
+      "verse": 11
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 33,
+      "verse": 49
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "numbers",
+      "chapter": 33,
+      "verse": 50
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 34,
+      "verse": 15
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "numbers",
+      "chapter": 34,
+      "verse": 16
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 34,
+      "verse": 29
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "numbers",
+      "chapter": 35,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 35,
+      "verse": 8
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "numbers",
+      "chapter": 35,
+      "verse": 9
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 35,
+      "verse": 34
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "numbers",
+      "chapter": 36,
+      "verse": 1
+     },
+     "to": {
+      "book": "numbers",
+      "chapter": 36,
+      "verse": 13
+     }
+    }
+   ]
+  },
+  {
+   "id": "devarim",
+   "en": "Devarim",
+   "he": "דברים",
+   "num": 44,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 1,
+    "verse": 1
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 3,
+    "verse": 22
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 10
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 11
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 21
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 22
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 38
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 1,
+      "verse": 39
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 2,
+      "verse": 1
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 2,
+      "verse": 2
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 2,
+      "verse": 30
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 2,
+      "verse": 31
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 3,
+      "verse": 14
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 3,
+      "verse": 15
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 3,
+      "verse": 22
+     }
+    }
+   ]
+  },
+  {
+   "id": "vaetchanan",
+   "en": "Vaetchanan",
+   "he": "ואתחנן",
+   "num": 45,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 3,
+    "verse": 23
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 7,
+    "verse": 11
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 3,
+      "verse": 23
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 4,
+      "verse": 4
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 4,
+      "verse": 5
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 4,
+      "verse": 40
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 4,
+      "verse": 41
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 4,
+      "verse": 49
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 5,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 5,
+      "verse": 18
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 5,
+      "verse": 19
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 6,
+      "verse": 3
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 6,
+      "verse": 4
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 6,
+      "verse": 25
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 7,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 7,
+      "verse": 11
+     }
+    }
+   ]
+  },
+  {
+   "id": "eikev",
+   "en": "Eikev",
+   "he": "עקב",
+   "num": 46,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 7,
+    "verse": 12
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 11,
+    "verse": 25
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 7,
+      "verse": 12
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 8,
+      "verse": 10
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 8,
+      "verse": 11
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 9,
+      "verse": 3
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 9,
+      "verse": 4
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 9,
+      "verse": 29
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 10,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 10,
+      "verse": 11
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 10,
+      "verse": 12
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 9
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 10
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 21
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 22
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 25
+     }
+    }
+   ]
+  },
+  {
+   "id": "reeh",
+   "en": "Re'eh",
+   "he": "ראה",
+   "num": 47,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 11,
+    "verse": 26
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 16,
+    "verse": 17
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 11,
+      "verse": 26
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 12,
+      "verse": 10
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 12,
+      "verse": 11
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 12,
+      "verse": 28
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 12,
+      "verse": 29
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 13,
+      "verse": 19
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 14,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 14,
+      "verse": 21
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 14,
+      "verse": 22
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 14,
+      "verse": 29
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 15,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 15,
+      "verse": 18
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 15,
+      "verse": 19
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 16,
+      "verse": 17
+     }
+    }
+   ]
+  },
+  {
+   "id": "shoftim",
+   "en": "Shoftim",
+   "he": "שופטים",
+   "num": 48,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 16,
+    "verse": 18
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 21,
+    "verse": 9
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 16,
+      "verse": 18
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 17,
+      "verse": 13
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 17,
+      "verse": 14
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 17,
+      "verse": 20
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 18,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 18,
+      "verse": 5
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 18,
+      "verse": 6
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 18,
+      "verse": 13
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 18,
+      "verse": 14
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 19,
+      "verse": 13
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 19,
+      "verse": 14
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 20,
+      "verse": 9
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 20,
+      "verse": 10
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 21,
+      "verse": 9
+     }
+    }
+   ]
+  },
+  {
+   "id": "ki-teitzei",
+   "en": "Ki Teitzei",
+   "he": "כי־תצא",
+   "num": 49,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 21,
+    "verse": 10
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 25,
+    "verse": 19
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 21,
+      "verse": 10
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 21,
+      "verse": 21
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 21,
+      "verse": 22
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 22,
+      "verse": 7
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 22,
+      "verse": 8
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 23,
+      "verse": 7
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 23,
+      "verse": 8
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 23,
+      "verse": 24
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 23,
+      "verse": 25
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 24,
+      "verse": 4
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 24,
+      "verse": 5
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 24,
+      "verse": 13
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 24,
+      "verse": 14
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 25,
+      "verse": 19
+     }
+    }
+   ]
+  },
+  {
+   "id": "ki-tavo",
+   "en": "Ki Tavo",
+   "he": "כי־תבוא",
+   "num": 50,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 26,
+    "verse": 1
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 29,
+    "verse": 8
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 11
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 12
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 15
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 16
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 26,
+      "verse": 19
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 27,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 27,
+      "verse": 10
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 27,
+      "verse": 11
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 28,
+      "verse": 6
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 28,
+      "verse": 7
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 28,
+      "verse": 69
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "nitzavim",
+   "en": "Nitzavim",
+   "he": "נצבים",
+   "num": 51,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 29,
+    "verse": 9
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 30,
+    "verse": 20
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 9
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 11
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 12
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 14
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 15
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 29,
+      "verse": 28
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 6
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 7
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 10
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 11
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 14
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 15
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 30,
+      "verse": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "vayeilech",
+   "en": "Vayeilech",
+   "he": "וילך",
+   "num": 52,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 31,
+    "verse": 1
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 31,
+    "verse": 30
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 3
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 4
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 6
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 7
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 9
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 10
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 13
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 14
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 19
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 20
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 24
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 25
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 31,
+      "verse": 30
+     }
+    }
+   ]
+  },
+  {
+   "id": "haazinu",
+   "en": "Ha'azinu",
+   "he": "האזינו",
+   "num": 53,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 32,
+    "verse": 1
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 32,
+    "verse": 52
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 6
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 7
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 12
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 13
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 18
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 19
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 28
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 29
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 39
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 40
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 43
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 44
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 32,
+      "verse": 52
+     }
+    }
+   ]
+  },
+  {
+   "id": "vezot-haberakhah",
+   "en": "Vezot Haberakhah",
+   "he": "וזאת הברכה",
+   "num": 54,
+   "book": "deuteronomy",
+   "from": {
+    "book": "deuteronomy",
+    "chapter": 33,
+    "verse": 1
+   },
+   "to": {
+    "book": "deuteronomy",
+    "chapter": 34,
+    "verse": 12
+   },
+   "aliyot": [
+    {
+     "n": 1,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 7
+     }
+    },
+    {
+     "n": 2,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 8
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 12
+     }
+    },
+    {
+     "n": 3,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 13
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 17
+     }
+    },
+    {
+     "n": 4,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 18
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 21
+     }
+    },
+    {
+     "n": 5,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 22
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 26
+     }
+    },
+    {
+     "n": 6,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 27
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 33,
+      "verse": 29
+     }
+    },
+    {
+     "n": 7,
+     "from": {
+      "book": "deuteronomy",
+      "chapter": 34,
+      "verse": 1
+     },
+     "to": {
+      "book": "deuteronomy",
+      "chapter": 34,
+      "verse": 12
+     }
+    }
+   ]
+  }
+ ]
+}

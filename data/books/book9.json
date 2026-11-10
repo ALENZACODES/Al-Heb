@@ -1,0 +1,177 @@
+{
+ "id": "book9",
+ "titleHe": "כֵּן, לֹא, אוּלַי",
+ "titleTranslit": "Ken, Lo, Ulai",
+ "titleEn": "Yes, No, Maybe",
+ "level": "Beginner 1",
+ "pages": [
+  {
+   "n": 1,
+   "he": "תָּמָר יוֹשֶׁבֶת.",
+   "translit": "Tamar yoshevet.",
+   "en": "Tamar sits.",
+   "img": "assets/books/book9/BOOK9_p01.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p01.mp3",
+    "m": "audio/m/israeli/book/book9-p01.mp3"
+   },
+   "illustration": "a woman at a kitchen table at night, laptop open, tea going cold",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 2,
+   "he": "יֵשׁ מִכְתָּב.",
+   "translit": "Yesh michtav.",
+   "en": "There is a letter.",
+   "img": "assets/books/book9/BOOK9_p02.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p02.mp3",
+    "m": "audio/m/israeli/book/book9-p02.mp3"
+   },
+   "illustration": "an email on the screen, subject line glowing",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 3,
+   "he": "עֲבוֹדָה חֲדָשָׁה.",
+   "translit": "Avodah chadashah.",
+   "en": "A new job.",
+   "img": "assets/books/book9/BOOK9_p03.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p03.mp3",
+    "m": "audio/m/israeli/book/book9-p03.mp3"
+   },
+   "illustration": "the email says offer, a company logo, a map pin in another city",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 4,
+   "he": "בְּחֵיפָה.",
+   "translit": "Be-Cheifah.",
+   "en": "In Haifa.",
+   "img": "assets/books/book9/BOOK9_p04.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p04.mp3",
+    "m": "audio/m/israeli/book/book9-p04.mp3"
+   },
+   "illustration": "Haifa's terraced hillside and bay seen from above",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 5,
+   "he": "כֵּן?",
+   "translit": "Ken?",
+   "en": "Yes?",
+   "img": "assets/books/book9/BOOK9_p05.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p05.mp3",
+    "m": "audio/m/israeli/book/book9-p05.mp3"
+   },
+   "illustration": "the woman nodding slowly, hand on her chin",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 6,
+   "he": "לֹא?",
+   "translit": "Lo?",
+   "en": "No?",
+   "img": "assets/books/book9/BOOK9_p06.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p06.mp3",
+    "m": "audio/m/israeli/book/book9-p06.mp3"
+   },
+   "illustration": "the woman shaking her head, looking at family photos on the fridge",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 7,
+   "he": "אוּלַי.",
+   "translit": "Ulai.",
+   "en": "Maybe.",
+   "img": "assets/books/book9/BOOK9_p07.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p07.mp3",
+    "m": "audio/m/israeli/book/book9-p07.mp3"
+   },
+   "illustration": "the woman pacing, the cat watching from the counter",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 8,
+   "he": "תָּמָר מִתְקַשֶּׁרֶת לְאִמָּא.",
+   "translit": "Tamar mitkasheret le-Ima.",
+   "en": "Tamar calls her mother.",
+   "img": "assets/books/book9/BOOK9_p08.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p08.mp3",
+    "m": "audio/m/israeli/book/book9-p08.mp3"
+   },
+   "illustration": "phone to her ear, late-night window reflection",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 9,
+   "he": "\"אִמָּא, מָה אַתְּ אוֹמֶרֶת?\"",
+   "translit": "\"Ima, mah at omeret?\"",
+   "en": "\"Mom, what do you say?\"",
+   "img": "assets/books/book9/BOOK9_p09.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p09.mp3",
+    "m": "audio/m/israeli/book/book9-p09.mp3"
+   },
+   "illustration": "split frame: an older woman in a robe answering with a smile",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 10,
+   "he": "\"אַתְּ יוֹדַעַת.\"",
+   "translit": "\"At yoda'at.\"",
+   "en": "\"You know.\"",
+   "img": "assets/books/book9/BOOK9_p10.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p10.mp3",
+    "m": "audio/m/israeli/book/book9-p10.mp3"
+   },
+   "illustration": "the mother's knowing look, a raised eyebrow",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 11,
+   "he": "תָּמָר כּוֹתֶבֶת.",
+   "translit": "Tamar kotevet.",
+   "en": "Tamar writes.",
+   "img": "assets/books/book9/BOOK9_p11.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p11.mp3",
+    "m": "audio/m/israeli/book/book9-p11.mp3"
+   },
+   "illustration": "her fingers on the keyboard, one word typed: yes",
+   "hasImg": true,
+   "hasAudio": true
+  },
+  {
+   "n": 12,
+   "he": "כֵּן.",
+   "translit": "Ken.",
+   "en": "Yes.",
+   "img": "assets/books/book9/BOOK9_p12.jpg",
+   "audio": {
+    "f": "audio/f/israeli/book/book9-p12.mp3",
+    "m": "audio/m/israeli/book/book9-p12.mp3"
+   },
+   "illustration": "the woman closing the laptop, a small smile, the window showing dawn",
+   "hasImg": true,
+   "hasAudio": true
+  }
+ ]
+}

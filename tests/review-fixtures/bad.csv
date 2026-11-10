@@ -1,0 +1,6 @@
+id,hebrew,transliteration,english,tradition,where_used,verdict,correction,notes
+core:r01:w1,שָׁב,,he returned,unspecified,x,ok,,
+nope:1,שָׁב,,,,,OK,,
+core:r02:w1,שַׁבָּת,,,,,Fix,,
+core:r02:w2,WRONG,,,,,OK,,
+core:r04:w1,x,,,,,maybe,,

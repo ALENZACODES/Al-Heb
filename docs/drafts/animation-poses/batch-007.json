@@ -1,0 +1,2109 @@
+{
+  "batch": 7,
+  "short": false,
+  "count": 100,
+  "status": "DRAFT, not reviewed",
+  "files": [
+    {
+      "file": "closed-k2.svg",
+      "phase": "C",
+      "item": "closed",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "closed — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "closed-k3.svg",
+      "phase": "C",
+      "item": "closed",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "closed — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "closed-k4.svg",
+      "phase": "C",
+      "item": "closed",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "closed — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "closed-k5.svg",
+      "phase": "C",
+      "item": "closed",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "closed — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "full-k1.svg",
+      "phase": "C",
+      "item": "full",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "full — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "full-k2.svg",
+      "phase": "C",
+      "item": "full",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "full — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "full-k3.svg",
+      "phase": "C",
+      "item": "full",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "full — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "full-k4.svg",
+      "phase": "C",
+      "item": "full",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "full — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "full-k5.svg",
+      "phase": "C",
+      "item": "full",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "full — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "empty-k1.svg",
+      "phase": "C",
+      "item": "empty",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "empty — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "empty-k2.svg",
+      "phase": "C",
+      "item": "empty",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "empty — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "empty-k3.svg",
+      "phase": "C",
+      "item": "empty",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "empty — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "empty-k4.svg",
+      "phase": "C",
+      "item": "empty",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "empty — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "empty-k5.svg",
+      "phase": "C",
+      "item": "empty",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "empty — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "one-k1.svg",
+      "phase": "C",
+      "item": "one",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "one — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "one-k2.svg",
+      "phase": "C",
+      "item": "one",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "one — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "one-k3.svg",
+      "phase": "C",
+      "item": "one",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "one — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "one-k4.svg",
+      "phase": "C",
+      "item": "one",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "one — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "one-k5.svg",
+      "phase": "C",
+      "item": "one",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 1,
+      "commands_per_path": [
+        49
+      ],
+      "title": "one — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "two-k1.svg",
+      "phase": "C",
+      "item": "two",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "two — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "two-k2.svg",
+      "phase": "C",
+      "item": "two",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "two — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "two-k3.svg",
+      "phase": "C",
+      "item": "two",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "two — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "two-k4.svg",
+      "phase": "C",
+      "item": "two",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "two — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "two-k5.svg",
+      "phase": "C",
+      "item": "two",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "two — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "three-k1.svg",
+      "phase": "C",
+      "item": "three",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "three — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "three-k2.svg",
+      "phase": "C",
+      "item": "three",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "three — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "three-k3.svg",
+      "phase": "C",
+      "item": "three",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "three — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "three-k4.svg",
+      "phase": "C",
+      "item": "three",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "three — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "three-k5.svg",
+      "phase": "C",
+      "item": "three",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 3,
+      "commands_per_path": [
+        49,
+        49,
+        49
+      ],
+      "title": "three — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "four-k1.svg",
+      "phase": "C",
+      "item": "four",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "four — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "four-k2.svg",
+      "phase": "C",
+      "item": "four",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "four — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "four-k3.svg",
+      "phase": "C",
+      "item": "four",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "four — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "four-k4.svg",
+      "phase": "C",
+      "item": "four",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "four — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "four-k5.svg",
+      "phase": "C",
+      "item": "four",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 4,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "four — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "five-k1.svg",
+      "phase": "C",
+      "item": "five",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "five — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "five-k2.svg",
+      "phase": "C",
+      "item": "five",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "five — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "five-k3.svg",
+      "phase": "C",
+      "item": "five",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "five — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "five-k4.svg",
+      "phase": "C",
+      "item": "five",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "five — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "five-k5.svg",
+      "phase": "C",
+      "item": "five",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 5,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "five — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "six-k1.svg",
+      "phase": "C",
+      "item": "six",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "six — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "six-k2.svg",
+      "phase": "C",
+      "item": "six",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "six — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "six-k3.svg",
+      "phase": "C",
+      "item": "six",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "six — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "six-k4.svg",
+      "phase": "C",
+      "item": "six",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "six — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "six-k5.svg",
+      "phase": "C",
+      "item": "six",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 6,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "six — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "seven-k1.svg",
+      "phase": "C",
+      "item": "seven",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "seven — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "seven-k2.svg",
+      "phase": "C",
+      "item": "seven",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "seven — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "seven-k3.svg",
+      "phase": "C",
+      "item": "seven",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "seven — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "seven-k4.svg",
+      "phase": "C",
+      "item": "seven",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "seven — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "seven-k5.svg",
+      "phase": "C",
+      "item": "seven",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 7,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "seven — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "eight-k1.svg",
+      "phase": "C",
+      "item": "eight",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 8,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "eight — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "eight-k2.svg",
+      "phase": "C",
+      "item": "eight",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 8,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "eight — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "eight-k3.svg",
+      "phase": "C",
+      "item": "eight",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 8,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "eight — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "eight-k4.svg",
+      "phase": "C",
+      "item": "eight",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 8,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "eight — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "eight-k5.svg",
+      "phase": "C",
+      "item": "eight",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 8,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "eight — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "nine-k1.svg",
+      "phase": "C",
+      "item": "nine",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "nine — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "nine-k2.svg",
+      "phase": "C",
+      "item": "nine",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "nine — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "nine-k3.svg",
+      "phase": "C",
+      "item": "nine",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "nine — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "nine-k4.svg",
+      "phase": "C",
+      "item": "nine",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "nine — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "nine-k5.svg",
+      "phase": "C",
+      "item": "nine",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 9,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "nine — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ten-k1.svg",
+      "phase": "C",
+      "item": "ten",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ten — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ten-k2.svg",
+      "phase": "C",
+      "item": "ten",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ten — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ten-k3.svg",
+      "phase": "C",
+      "item": "ten",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ten — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ten-k4.svg",
+      "phase": "C",
+      "item": "ten",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ten — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "ten-k5.svg",
+      "phase": "C",
+      "item": "ten",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 10,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "ten — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "morning-k1.svg",
+      "phase": "C",
+      "item": "morning",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "morning — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "morning-k2.svg",
+      "phase": "C",
+      "item": "morning",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "morning — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "morning-k3.svg",
+      "phase": "C",
+      "item": "morning",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "morning — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "morning-k4.svg",
+      "phase": "C",
+      "item": "morning",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "morning — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "morning-k5.svg",
+      "phase": "C",
+      "item": "morning",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "morning — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "evening-k1.svg",
+      "phase": "C",
+      "item": "evening",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "evening — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "evening-k2.svg",
+      "phase": "C",
+      "item": "evening",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "evening — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "evening-k3.svg",
+      "phase": "C",
+      "item": "evening",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "evening — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "evening-k4.svg",
+      "phase": "C",
+      "item": "evening",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "evening — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "evening-k5.svg",
+      "phase": "C",
+      "item": "evening",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "evening — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "night-k1.svg",
+      "phase": "C",
+      "item": "night",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "night — pose 1",
+      "doubt": "n/a"
+    },
+    {
+      "file": "night-k2.svg",
+      "phase": "C",
+      "item": "night",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "night — pose 2",
+      "doubt": "n/a"
+    },
+    {
+      "file": "night-k3.svg",
+      "phase": "C",
+      "item": "night",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "night — pose 3",
+      "doubt": "n/a"
+    },
+    {
+      "file": "night-k4.svg",
+      "phase": "C",
+      "item": "night",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "night — pose 4",
+      "doubt": "n/a"
+    },
+    {
+      "file": "night-k5.svg",
+      "phase": "C",
+      "item": "night",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 2,
+      "commands_per_path": [
+        49,
+        49
+      ],
+      "title": "night — pose 5",
+      "doubt": "n/a"
+    },
+    {
+      "file": "today-k1.svg",
+      "phase": "C",
+      "item": "today",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "today — pose 1",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "today-k2.svg",
+      "phase": "C",
+      "item": "today",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "today — pose 2",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "today-k3.svg",
+      "phase": "C",
+      "item": "today",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "today — pose 3",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "today-k4.svg",
+      "phase": "C",
+      "item": "today",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "today — pose 4",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "today-k5.svg",
+      "phase": "C",
+      "item": "today",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "today — pose 5",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "tomorrow-k1.svg",
+      "phase": "C",
+      "item": "tomorrow",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 14,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tomorrow — pose 1",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "tomorrow-k2.svg",
+      "phase": "C",
+      "item": "tomorrow",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 14,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tomorrow — pose 2",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "tomorrow-k3.svg",
+      "phase": "C",
+      "item": "tomorrow",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 14,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tomorrow — pose 3",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "tomorrow-k4.svg",
+      "phase": "C",
+      "item": "tomorrow",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 14,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tomorrow — pose 4",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "tomorrow-k5.svg",
+      "phase": "C",
+      "item": "tomorrow",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 14,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "tomorrow — pose 5",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Sunday-k1.svg",
+      "phase": "C",
+      "item": "Sunday",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Sunday — pose 1",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Sunday-k2.svg",
+      "phase": "C",
+      "item": "Sunday",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Sunday — pose 2",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Sunday-k3.svg",
+      "phase": "C",
+      "item": "Sunday",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Sunday — pose 3",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Sunday-k4.svg",
+      "phase": "C",
+      "item": "Sunday",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Sunday — pose 4",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Sunday-k5.svg",
+      "phase": "C",
+      "item": "Sunday",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Sunday — pose 5",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Monday-k1.svg",
+      "phase": "C",
+      "item": "Monday",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Monday — pose 1",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Monday-k2.svg",
+      "phase": "C",
+      "item": "Monday",
+      "pose": 2,
+      "time_ms": 400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Monday — pose 2",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Monday-k3.svg",
+      "phase": "C",
+      "item": "Monday",
+      "pose": 3,
+      "time_ms": 900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Monday — pose 3",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Monday-k4.svg",
+      "phase": "C",
+      "item": "Monday",
+      "pose": 4,
+      "time_ms": 1400,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Monday — pose 4",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Monday-k5.svg",
+      "phase": "C",
+      "item": "Monday",
+      "pose": 5,
+      "time_ms": 1900,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Monday — pose 5",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    },
+    {
+      "file": "Tuesday-k1.svg",
+      "phase": "C",
+      "item": "Tuesday",
+      "pose": 1,
+      "time_ms": 0,
+      "easing": "ease-in-out",
+      "paths": 12,
+      "commands_per_path": [
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49,
+        49
+      ],
+      "title": "Tuesday — pose 1",
+      "doubt": "Sunday-first calendar positions need a learned convention and accessible labels."
+    }
+  ],
+  "doubts": [
+    {
+      "file": "today-k1.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "today-k2.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "today-k3.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "today-k4.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "today-k5.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tomorrow-k1.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tomorrow-k2.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tomorrow-k3.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tomorrow-k4.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "tomorrow-k5.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Sunday-k1.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Sunday-k2.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Sunday-k3.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Sunday-k4.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Sunday-k5.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Monday-k1.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Monday-k2.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Monday-k3.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Monday-k4.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Monday-k5.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    },
+    {
+      "file": "Tuesday-k1.svg",
+      "what": "Sunday-first calendar positions need a learned convention and accessible labels.",
+      "tag": "?? CHECK"
+    }
+  ]
+}

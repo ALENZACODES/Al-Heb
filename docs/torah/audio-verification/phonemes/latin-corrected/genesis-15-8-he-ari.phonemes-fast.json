@@ -1,0 +1,13 @@
+{
+  "clip": "genesis-15-8-he-ari.mp3",
+  "audioSha256": "e95b67120206a40521f8b84536bed113a8cc8acbbe9efacc2ff9f03b9a9565e5",
+  "model": "renikud/whisper-he-ipa",
+  "modelRevision": "e709a907f8e0e6ebcb83340b8563818dd1bc3bee",
+  "sourceWeightsSha256": "07827941fe5bbdadc5ee3563bf218e9683ee328e2e6e6bc88b51cea7cc1e3fb9",
+  "inferencePolicy": "ct2-int8-beam1-no-source-prompt",
+  "asciiPhonemes": "v'aj qom'ar qadon'aj, qeloh'im, b'a meh'ida keq'ir haSen'a.",
+  "ipa": "vˈaj ʔomˈaʁ ʔadonˈaj, ʔelohˈim, bˈa mehˈida keʔˈiʁ haʃenˈa.",
+  "status": "supplemental-phoneme-evidence",
+  "publishable": false,
+  "limitation": "Model-predicted phonemes, not a human listening certification; compare against separately established source pronunciation."
+}

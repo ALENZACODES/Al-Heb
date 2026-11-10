@@ -1,0 +1,16 @@
+{
+  "id": "genesis-1-2-he-ari",
+  "fingerprint": "b7a2a9344823206f0ba1d846c80b27a289b86db243025e10f14f6f1ceac45a1b",
+  "audioSha256": "29a83801e4dc034e6e9106ab28d9bbe30797dca49c8256b32ea2e89fefed6502",
+  "model": "ivrit-ai/whisper-large-v3-turbo-ct2",
+  "reference": "וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל פְּנֵי הַמָּיִם",
+  "transcript": "והארץ הייתה תוהו ובוהו וכושסך על פני תהום ורוח אלו היא מרחפת על פני המים.",
+  "wordEdits": 6,
+  "referenceWords": 14,
+  "wer": 0.42857142857142855,
+  "asrExact": false,
+  "status": "asr-mismatch",
+  "publishable": false,
+  "limitation": "Unpointed ASR cannot verify vowels, stress, qere, or divine-name convention.",
+  "modelRevision": "72ad623a37947395efcc3933132353790e5a12f5"
+}

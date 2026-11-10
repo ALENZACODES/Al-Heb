@@ -1,0 +1,23 @@
+{
+ "status": "tts",
+ "source": "paid-cloud",
+ "engine": "stitched-from-word-clips",
+ "voiceId": "he-IL-Wavenet-B",
+ "tradition": "israeli",
+ "inputText": "גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+ "inputSha256": "633daa3b6a979693be41836ba5240b2f57f2a0c88eaccc9e0d872c426c9172eb",
+ "ingestedAt": null,
+ "licence": "customer-owned",
+ "note": "Joined from its word clips because the whole-sentence render misread words; the joined version had fewer misheard words in the speech-to-text check (docs/audio/ASR-LINES-FIX.md).",
+ "inputTextKind": "hebrew",
+ "stitchedFromText": "גָּדוֹל אֲדֹנָי וּמְהֻלָּל מְאֹד וְלִגְדֻלָּתוֹ אֵין חֵקֶר׃",
+ "stitchedFrom": [
+  "audio/m/israeli/word/ashrei-145-1-3-w16.mp3",
+  "audio/m/israeli/word/adon-olam-1-w69.mp3",
+  "audio/m/israeli/word/ashrei-145-1-3-w18.mp3",
+  "audio/m/israeli/word/ashrei-145-1-3-w19.mp3",
+  "audio/m/israeli/word/ashrei-145-1-3-w20.mp3",
+  "audio/m/israeli/word/aleinu-1-w76.mp3",
+  "audio/m/israeli/word/ashrei-145-1-3-w22.mp3"
+ ]
+}

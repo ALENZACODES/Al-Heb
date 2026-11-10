@@ -55,6 +55,7 @@ export const CLAIMS = [
   { area: 'lessons', match: /^data\/curriculum\/intermediate-index\.json$/, reason: 'index of the same lessons (titles, prerequisites, prayer line ids); nothing to read that the lessons rows do not show.' },
   { area: 'vocab-top1000', match: /^data\/vocab\/(words|corrections)\.json$/, reason: 'carries the replacement example sentences flagged needsNativeReview (flags on the example). They are reviewer rows vocab-example:<id> in docs/review/packs/03-vocab-top-1000, not rows here, because the sheet there has no example column.' },
   { area: 'vocab-top1000', match: /^data\/vocab\/packs\/(?!vocab5k-tier-)[a-z-]+-\d+\.json$/, reason: 'themed word packs: copies of the same flagged example sentences as data/vocab/words.json (see that claim).' },
+  { area: 'lessons', match: /^data\/curriculum\/lesson-lexicon\.json$/, reason: 'three curated pointed forms used as lesson words in I-16, I-37 and I-40 (charger, course, map), replacing words that meant something else. Not generated vocabulary; native review outstanding.' },
   { area: 'dialogues', match: /^data\/curriculum\/practical-pages\//, reason: 'Practical course outline and first written pages: every Hebrew line is copied by id from the phrasebook, audio manifests or dialogues, and a test checks it; English grammar notes and spoken-style transliteration of the woman\'s forms need a native read (nativeReview: required).' },
 ];
 export const claimFor = (file) => CLAIMS.find((c) => c.match.test(file)) || null;

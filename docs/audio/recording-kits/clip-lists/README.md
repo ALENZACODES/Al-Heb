@@ -10,10 +10,10 @@ Reconciliation with `node tools/audio/coverage.mjs` (required clips, state missi
 
 | slot | listed | prayer words listed / missing | prayer lines listed / missing | lesson+vocab words listed / missing | coverage missing (all groups) |
 |---|---|---|---|---|---|
-| m-israeli | 307 | 0 / 0 | 0 / 0 | 307 / 307 | 307 |
+| m-israeli | 310 | 0 / 0 | 0 / 0 | 310 / 310 | 310 |
 | m-sephardi | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
 | m-ashkenazi | 700 | 0 / 0 | 0 / 0 | 700 / 998 | 1215 |
-| f-israeli | 307 | 0 / 0 | 0 / 0 | 307 / 307 | 307 |
+| f-israeli | 310 | 0 / 0 | 0 / 0 | 310 / 310 | 310 |
 | f-sephardi | 0 | 0 / 0 | 0 / 0 | 0 / 0 | 0 |
 | f-ashkenazi | 160 | 0 / 0 | 0 / 0 | 160 / 160 | 377 |
 

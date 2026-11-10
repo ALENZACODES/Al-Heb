@@ -94,13 +94,13 @@
  "summary": {
   "items": 5675,
   "byConfidence": {
-   "high": 1670,
-   "medium": 3358,
+   "high": 1671,
+   "medium": 3357,
    "low": 551,
    "unvoiced": 96
   },
   "byFlag": {
-   "final-stress-assumed": 3317,
+   "final-stress-assumed": 3316,
    "mobile-shva": 1531,
    "stress-from-small-list": 493,
    "possible-segolate": 205,
@@ -212,8 +212,8 @@
     "unvoiced": 8
    },
    "lesson-word": {
-    "high": 293,
-    "medium": 596,
+    "high": 294,
+    "medium": 595,
     "low": 47,
     "unvoiced": 4
    },
@@ -1422,7 +1422,7 @@
   {"id":"i-16-w5","kind":"word","group":"lesson-word","voices":["m","f"],"he":"אִינְטֶרְנֶט","soundtext":"i-ne-ter-nét","confidence":"low","flags":["final-stress-assumed","mobile-shva","shva-heuristic-L3"]},
   {"id":"i-16-w6","kind":"word","group":"lesson-word","voices":["m","f"],"he":"סִיסְמָה","soundtext":"si-se-má","confidence":"low","flags":["final-stress-assumed","mobile-shva","shva-heuristic-L3"]},
   {"id":"i-16-w7","kind":"word","group":"lesson-word","voices":["m","f"],"he":"סוֹלְלָה","soundtext":"so-le-lá","confidence":"medium","flags":["mobile-shva"]},
-  {"id":"i-16-w8","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מִטְעָן","soundtext":"mit-án","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-16-w8","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מַטְעֵן","soundtext":"mat-én","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-16-w9","kind":"word","group":"lesson-word","voices":["m","f"],"he":"לְהִתְקַשֵּׁר","soundtext":"le-hit-ka-shér","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-16-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"לִשְׁלֹחַ","soundtext":"lish-ló-aj","confidence":"medium","flags":["furtive-stress-own-rule"]},
   {"id":"i-16-w11","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שׁוֹלֵחַ","soundtext":"sho-lé-aj","confidence":"medium","flags":["furtive-stress-own-rule"]},
@@ -1695,7 +1695,7 @@
   {"id":"i-37-w6","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שִׁעוּר","soundtext":"shi-úr","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-37-w7","kind":"word","group":"lesson-word","voices":["m","f"],"he":"סֵפֶר","soundtext":"sé-fer","confidence":"medium","flags":["stress-from-small-list"]},
   {"id":"i-37-w8","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מִלְגָּה","soundtext":"mil-gá","confidence":"medium","flags":["final-stress-assumed"]},
-  {"id":"i-37-w9","kind":"word","group":"lesson-word","voices":["m","f"],"he":"קוֹרֵס","soundtext":"ko-rés","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-37-w9","kind":"word","group":"lesson-word","voices":["m","f"],"he":"קוּרְס","soundtext":"kúrs","confidence":"high","flags":[]},
   {"id":"i-37-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"הַיּוֹם","soundtext":"ha-yóm","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-37-w11","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מָחָר","soundtext":"ma-jár","confidence":"high","flags":[]},
   {"id":"i-37-w12","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חָבֵר","soundtext":"ja-vér","confidence":"high","flags":[]},
@@ -1729,7 +1729,7 @@
   {"id":"i-40-w4","kind":"word","group":"lesson-word","voices":["m","f"],"he":"נַחַל","soundtext":"na-jál","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-40-w5","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שְׁבִיל","soundtext":"she-víl","confidence":"medium","flags":["final-stress-assumed","mobile-shva"]},
   {"id":"i-40-w6","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מַיִם","soundtext":"ma-yím","confidence":"medium","flags":["final-stress-assumed"]},
-  {"id":"i-40-w7","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מִפָּה","soundtext":"mi-pá","confidence":"medium","flags":["final-stress-assumed"]},
+  {"id":"i-40-w7","kind":"word","group":"lesson-word","voices":["m","f"],"he":"מַפָּה","soundtext":"ma-pá","confidence":"medium","flags":["final-stress-assumed"]},
   {"id":"i-40-w8","kind":"word","group":"lesson-word","voices":["m","f"],"he":"כּוֹבַע","soundtext":"kó-va","confidence":"high","flags":[]},
   {"id":"i-40-w9","kind":"word","group":"lesson-word","voices":["m","f"],"he":"שֶׁמֶשׁ","soundtext":"shé-mesh","confidence":"high","flags":[]},
   {"id":"i-40-w10","kind":"word","group":"lesson-word","voices":["m","f"],"he":"חַם","soundtext":"jám","confidence":"high","flags":[]},

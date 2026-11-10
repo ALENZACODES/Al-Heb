@@ -6,7 +6,7 @@ Reading this table: "required" counts the clips the app can ask for (optional wh
 
 Status labels (the same table the app shows, src/shell/audio-labels.js): recorded = "Recorded by a human reader"; tts = "Israeli voice"; missing = "No audio yet".
 
-**Overall: 22270 of 24476 required clips exist (91.0%); Recorded by a human reader: 0; Israeli voice: 20455; No audio yet: 2206.**
+**Overall: 22264 of 24476 required clips exist (91.0%); Recorded by a human reader: 0; Israeli voice: 20449; No audio yet: 2212.**
 
 ## By talent and group
 
@@ -54,7 +54,7 @@ Required 3485; have 2270; missing 1215.
 
 ### Noa (woman), Israeli  (voice=f, tradition=israeli)
 
-Required 5268; have 4961; missing 307.
+Required 5268; have 4958; missing 310.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -66,7 +66,7 @@ Required 5268; have 4961; missing 307.
 | niqqud | 15 | 0 | 15 | 0 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 110 | 0 | 0 | 0/0 | human only |
 | anchor-word | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| lesson-word | 940 | 0 | 940 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| lesson-word | 940 | 0 | 937 | 0 | 3 | 0/0 | human or TTS (TTS unvetted) |
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
@@ -83,7 +83,7 @@ Required 5268; have 4961; missing 307.
 
 ### Ari (man), Israeli  (voice=m, tradition=israeli)
 
-Required 5268; have 4961; missing 307.
+Required 5268; have 4958; missing 310.
 
 | group | required | recorded | tts | via equivalent | missing | optional (missing/total) | who can supply |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -95,7 +95,7 @@ Required 5268; have 4961; missing 307.
 | niqqud | 15 | 0 | 15 | 0 | 0 | 0/0 | human only |
 | syllable | 110 | 0 | 110 | 0 | 0 | 0/0 | human only |
 | anchor-word | 27 | 0 | 27 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
-| lesson-word | 940 | 0 | 940 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
+| lesson-word | 940 | 0 | 937 | 0 | 3 | 0/0 | human or TTS (TTS unvetted) |
 | phrasebook | 250 | 0 | 250 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-line | 129 | 0 | 129 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |
 | prayer-word | 1723 | 0 | 1723 | 0 | 0 | 0/0 | human or TTS (TTS unvetted) |

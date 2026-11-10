@@ -8986,15 +8986,15 @@
      }
     },
     {
-     "he": "מִטְעָן",
-     "en": "charger",
+     "he": "מַטְעֵן",
+     "en": "charger (for a phone or battery)",
      "translit": null,
      "pronunciation": {
-      "israeli": "mit'an"
+      "israeli": "mat'en"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "hed3878d2"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-maten"
      }
     },
     {
@@ -9148,7 +9148,7 @@
        "en": "battery"
       },
       {
-       "he": "מִטְעָן",
+       "he": "מַטְעֵן",
        "en": "charger"
       },
       {
@@ -9166,7 +9166,7 @@
      "type": "respond",
      "cue": "Your battery is dead. Ask for a charger.",
      "answer": {
-      "he": "יֵשׁ לְךָ מִטְעָן?",
+      "he": "יֵשׁ לְךָ מַטְעֵן?",
       "en": "Do you have a charger?"
      }
     },
@@ -9227,7 +9227,7 @@
      "options": [
       "אֶפְשָׁר לְהִשְׁתַּמֵּשׁ בַּטֶּלֶפוֹן שֶׁלְּךָ?",
       "אָבַד לִי הַטֶּלֶפוֹן",
-      "יֵשׁ לְךָ מִטְעָן?"
+      "יֵשׁ לְךָ מַטְעֵן?"
      ],
      "answer": 0
     },
@@ -16833,15 +16833,15 @@
      }
     },
     {
-     "he": "קוֹרֵס",
-     "en": "course",
+     "he": "קוּרְס",
+     "en": "a course (a class)",
      "translit": null,
      "pronunciation": {
-      "israeli": "kores"
+      "israeli": "kurs"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "h130a0158#forms.present"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-kurs"
      }
     },
     {
@@ -16929,8 +16929,8 @@
     {
      "id": "I-37-e02",
      "type": "gender",
-     "m": "אֲנִי רוֹצֶה קוֹרֵס",
-     "f": "אֲנִי רוֹצָה קוֹרֵס",
+     "m": "אֲנִי רוֹצֶה קוּרְס",
+     "f": "אֲנִי רוֹצָה קוּרְס",
      "en": "I want a course"
     },
     {
@@ -17818,15 +17818,15 @@
      }
     },
     {
-     "he": "מִפָּה",
-     "en": "map",
+     "he": "מַפָּה",
+     "en": "a map",
      "translit": null,
      "pronunciation": {
-      "israeli": "mipah"
+      "israeli": "mapah"
      },
      "source": {
-      "file": "data/vocab/words.json",
-      "id": "hb63f1e69"
+      "file": "data/curriculum/lesson-lexicon.json",
+      "id": "lex-mapah"
      }
     },
     {
@@ -17886,7 +17886,7 @@
      },
      "source": {
       "file": "data/vocab/words.json",
-      "id": "hd53e0a60"
+      "id": "hc5d024c3"
      }
     }
    ],
@@ -17930,7 +17930,7 @@
        "en": "route"
       },
       {
-       "he": "מִפָּה",
+       "he": "מַפָּה",
        "en": "map"
       }
      ]

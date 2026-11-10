@@ -583,9 +583,9 @@
    "titleEn": "The Desert at Night",
    "level": "Beginner 3",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

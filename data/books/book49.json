@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book49-p01.mp3"
    },
    "illustration": "an endless rocky plain, a jeep track",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book49-p02.mp3"
    },
    "illustration": "a dusty car, windows down",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book49-p03.mp3"
    },
    "illustration": "a phone with no bars, held up to the sky",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book49-p04.mp3"
    },
    "illustration": "the woman tossing the phone in the back seat",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book49-p05.mp3"
    },
    "illustration": "a small tent against a huge red cliff",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book49-p06.mp3"
    },
    "illustration": "the cliffs glowing crimson",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book49-p07.mp3"
    },
    "illustration": "the two wrapped in blankets, breath visible",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book49-p08.mp3"
    },
    "illustration": "a campfire, a blackened kettle",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book49-p09.mp3"
    },
    "illustration": "two faces lit by firelight, tilted to the sky",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book49-p10.mp3"
    },
    "illustration": "the Milky Way across the whole sky",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book49-p11.mp3"
    },
    "illustration": "the silhouettes, the fire, the stars",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book49-p12.mp3"
    },
    "illustration": "the tent tiny under the sky, a shooting star",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

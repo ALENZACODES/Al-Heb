@@ -107,7 +107,7 @@ export function mountChunkedLesson(root, ctx, lessonId) {
     function drawSummary(updated, dueCount) {
       const stats = statsFromResults(results, qids);
       const label = (id) => { const q = questions.find((x) => x.id === id); return q ? `${q.promptHe ? q.promptHe + " " : ""}${q.options[q.answerIndex].text}` : id; };
-      replaceKeepingFocus(wrap, h1, summaryNode({ title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right on the first try.`, stats, ms: Date.now() - t0,
+      replaceKeepingFocus(wrap, h1, summaryNode({ ctx, title: "Lesson complete", countText: `${stats.right} of ${stats.answered} right on the first try.`, stats, ms: Date.now() - t0,
         goodLabels: Object.keys(results).filter((id) => results[id]).map(label), missedLabels: stats.missed.map(label), skippedN: stats.skipped.length, cardsUpdated: updated, dueCount,
         nextHref: next ? `#/learn?lesson=${next.id}` : "#/learn", nextLabel: next ? "Next lesson" : "All lessons",
         extraLinks: [el("a", { class: "btn secondary", href: `#/learn?lesson=${lesson.id}&review=1` }, "Review these cards")] }));

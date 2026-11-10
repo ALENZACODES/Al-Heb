@@ -189,3 +189,4 @@ main > section.card[aria-labelledby] .alef-item { row-gap: .1rem; }
 /* Letter page heading (overnight 2026-11-10): the letter's name as the page's level-one heading. */
 .alef-trace .alef-letter-title{font-size:1.5rem;margin:4px 0 8px;line-height:1.2}
 .alef-trace .alef-letter-title .he{font-size:1.15em;margin-inline-start:.25em}
+.alef-streak-flame{display:inline-flex;align-items:center;gap:.4rem;margin:.4rem 0;padding:.3rem .85rem;border-radius:999px;background:#fff1d6;color:#7a3e00;border:2px solid #f0a020;font-size:1rem}.alef-streak-flame[hidden]{display:none}.alef-streak-flame .alef-flame{font-size:1.3rem;line-height:1}.alef-summary .alef-streak-flame{display:flex;justify-content:center;inline-size:max-content;margin-inline:auto}

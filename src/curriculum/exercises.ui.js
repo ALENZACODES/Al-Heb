@@ -30,9 +30,19 @@ export function summaryNode(d) {
   const party = el("div", { class: "alef-celebrate", "aria-hidden": "true" },
     ...Array.from({ length: 18 }, (_, i) => el("i", { style: `--i:${i}` })),
     el("img", { class: "alef-celebrate-rimon", alt: "", width: "120", height: "120", src: new URL("../../assets/img/gen/MASCOT_rimon.800.webp", import.meta.url).href }));
+  // Streak flame (Duolingo-style), filled from the curriculum state when the caller passes ctx; hidden when the learner turned streaks off.
+  const flame = el("p", { class: "alef-streak-flame", "data-streak-slot": "summary", hidden: "" });
+  if (d.ctx && d.ctx?.settings?.get?.("showStreak") !== false) {
+    import("./state.js").then((m) => m.loadState(d.ctx)).then((s) => {
+      const n = s?.streak?.count || 0; if (!n) return;
+      flame.replaceChildren(el("span", { class: "alef-flame", "aria-hidden": "true" }, "🔥"), el("strong", {}, `${n}-day streak`), s.streak.activeToday ? " · today counts" : "");
+      flame.hidden = false; flame.removeAttribute?.("hidden");
+    }).catch(() => {});
+  }
   return el("div", { class: "alef-summary" },
     party,
     el("p", { class: "alef-celebrate-cheer" }, cheer),
+    flame,
     el("h2", { id: "alef-int-ex", tabindex: "-1" }, d.title || "Lesson finished"),
     el("p", { role: "status" }, d.countText),
     el("dl", { class: "alef-summary-stats" },

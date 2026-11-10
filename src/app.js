@@ -21,6 +21,7 @@ import { mountGameMusic, syncGameMusic } from './audio/music-bar.js';
 import { mountMediaPrompt } from './audio/media-prompt.js';
 import { stampDayStart } from './awards/daystart.js';
 import { installSpeechChunker } from './shell/speech-chunker.js';
+import { sfx } from './audio/sfx.js';
 installSpeechChunker(); // the device voice never gets one long utterance (phones cut it off after a few seconds)
 import('./shell/voice-help.js').then((m) => m.installVoiceHelp()).catch(() => {}); // a computer with no Hebrew voice gets one note with the fix
 
@@ -335,7 +336,8 @@ async function boot() {
   if (!firstIsHome) {
     try { images = await resolveImages(); } catch { images = null; }
   }
-  const ctxBase = { settings, store, audio, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
+  const lessonSfx = { play(name) { try { sfx.enter({ settings }); return sfx.play(name === 'correct' ? 'success' : name === 'wrong' ? 'miss' : name); } catch { return false; } } }; // lessons and First day share the games' CC0 set
+  const ctxBase = { settings, store, audio, sfx: lessonSfx, route: (p) => { scrollKeeper?.markForward(); router.go(p); }, t, installPrompt, hasRoute: (name) => available.has(name), images, img: (hh, spec) => (images ? imgEl(hh, { R: images, ...spec }) : null) };
   router = createRouter((m) => { show(m, ctxBase); });
   window.alef = { settings, store, audio, router }; // debugging handle
   router.start();

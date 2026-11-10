@@ -200,13 +200,17 @@ test('results: stars, and the "Hebrew you met" list keeps the newest distinct wo
   assert.equal(uniqueMet(Array.from({ length: 20 }, (_, i) => ({ he: String(i) })), 8).length, 8);
 });
 
-test('the Brain Lab page wires the new games: No time limits stops the clock, Rimon reacts, pictures appear only once approved', () => {
+test('the Brain Lab page wires the new games: No time limits stops the clock, Rimon reacts, pictures come from the drawn pack or wait for approval', () => {
   const v = readFileSync('src/lab/lab.view.js', 'utf8');
   assert.match(v, /untimedOn\(ctx\)/, 'Settings > No time limits works in Brain Lab, as it does in Word Sprint');
   assert.match(v, /signalRimon\(/);
-  assert.match(v, /LAB_v2_\$\{id\}_cover/); assert.match(v, /LAB_v2_\$\{id\}_win/); assert.match(v, /LAB_v2_\$\{g\.id\}/); assert.match(v, /'LAB_v2_hero'/);
-  assert.match(v, /ctx\.img\?\.\(h, \{ kind: 'id'/, 'art goes through the shared image resolver (approved pictures only)');
+  assert.match(v, /artImg\(h, coverArtPath\(id\), 'cover'\)/, 'covers come from the drawn Brain Lab pack');
+  assert.match(v, /win \|\| rimonStill\(pose\)/, 'results show the drawn picture, or Rimon from his own sprite sheets');
+  assert.match(v, /applyBackground\(disc, tokenArtPath\(g\.id\)/, 'drawn tokens cover the letter disc once loaded');
+  assert.match(v, /art\(ctx, `LAB_v2_\$\{g\.id\}`/, 'tokens still ordered go through the shared image resolver (approved pictures only)');
   assert.match(v, /shortcutsOn\(ctx\)/, 'letter keys respect the single-key shortcut setting');
+  assert.doesNotMatch(v, /--lab-back/, 'no second tile-back rule that would hide the drawn one');
   const g2 = readFileSync('src/lab/lab.games2.js', 'utf8');
   assert.match(g2, /if \(!env\.calm\)/, 'the vowel drop does not move in calm mode or with reduced motion');
+  for (const what of ['card', 'sky', 'road']) assert.match(g2, new RegExp(`env\\.playArt\\?\\.\\(${what}\\)`), `${what}: the game places its own drawn picture`);
 });

@@ -88,8 +88,6 @@ const matrix = {
         if (l && l.id === target.id) { b.disabled = true; b.replaceChildren(big(env, l.he, 'lab-glyph')); mark(b, true); found++; if (found === targets) resolve({ ok: true, ms: env.now() - t0, par: 1400 * targets }); }
         else { mark(b, false); for (const [k, v] of at) if (v.id === target.id) { g.cells[k].replaceChildren(big(env, v.he, 'lab-glyph')); g.cells[k].classList.add('is-reveal'); } resolve({ ok: false, ms: env.now() - t0 }); }
       }, 'Memory grid');
-      const back = env.artSrc?.('LAB_v2_matrix_play', 200); // the ordered tile back, once approved
-      if (back) g.el.style.setProperty('--lab-back', `url("${back}")`);
       env.board.replaceChildren(g.el);
       env.later(() => {
         for (const c of g.cells) { c.replaceChildren(); c.disabled = false; c.setAttribute('aria-label', 'hidden'); c.classList.add('is-hidden'); }
@@ -119,7 +117,7 @@ const soundmatch = {
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const again = env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.playClip('syllable', target.id, target.he) }, '▶ Hear it again');
       const readIt = () => env.prompt(env.h('span', {}, 'Tap the syllable that says ', env.h('b', { class: 'lab-say' }, `"${target.tr}"`)));
-      if (env.hasClip('syllable', target.id)) { env.prompt(env.h('span', {}, env.img?.('id', 'LAB_v2_soundmatch_play', 'lab-side-pic', 200), 'Tap the syllable you heard. ', again)); env.playClip('syllable', target.id, target.he).then((ok) => { if (!ok) readIt(); }); }
+      if (env.hasClip('syllable', target.id)) { env.prompt(env.h('span', {}, 'Tap the syllable you heard. ', again)); env.playClip('syllable', target.id, target.he).then((ok) => { if (!ok) readIt(); }); }
       else readIt();
       const g = grid(env, opts.length, opts.length <= 4 ? 2 : 3, (i, b) => { b.append(big(env, opts[i].he, 'lab-glyph')); b.setAttribute('aria-label', opts[i].tr); }, (i, b) => {
         const ok = opts[i].id === target.id; mark(b, ok);
@@ -154,7 +152,6 @@ const siddurflash = {
       let shownAt = null, hiddenAt = null, done = false, idx = -1;
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const word = env.h('div', { class: 'lab-flash', 'aria-live': 'off' });
-      env.backdrop?.(word, 'LAB_v2_siddurflash_play', 700);
       const now = env.h('button', { type: 'button', class: 'btn lab-now', onclick: () => {
         const t = env.now();
         if (idx === targetIndex) finish({ ok: true, ms: t - shownAt, par: step });
@@ -205,7 +202,6 @@ const ruleswitch = {
       const pick = (yes, b) => { const ok = yes === answer; mark(b, ok); if (!ok) env.say(`${item.name}: ${answer ? 'yes' : 'no'}.`); finish({ ok, ms: env.now() - t0, par: 1100 }); };
       env.prompt(env.h('span', { class: `lab-rule ${RULES[rule].cls}` }, RULES[rule].q));
       const card = env.h('div', { class: `lab-card ${RULES[rule].cls}` }, big(env, item.he, 'lab-glyph lab-huge'));
-      env.backdrop?.(card, 'LAB_v2_switch_play', 500);
       const no = env.h('button', { type: 'button', class: 'btn secondary lab-yn', onclick: () => pick(false, no) }, 'No');
       const yes = env.h('button', { type: 'button', class: 'btn lab-yn', onclick: () => pick(true, yes) }, 'Yes');
       env.board.replaceChildren(card, env.h('div', { class: 'lab-row' }, no, yes));
@@ -241,7 +237,7 @@ const gematria = {
           resolve({ ok: false, ms: env.now() - t0 });
         }
       }, 'Letter tiles');
-      env.board.replaceChildren(g.el, env.h('div', { class: 'lab-row' }, env.img?.('id', 'LAB_v2_gematria_play', 'lab-side-pic', 220), total));
+      env.board.replaceChildren(g.el, total);
     });
   },
 };
@@ -287,7 +283,7 @@ const numberear = {
       let done = false; const t0 = env.now();
       const finish = (r) => { if (!done) { done = true; resolve(r); } };
       const readIt = () => env.prompt(env.h('span', {}, 'Which number is ', big(env, target.he, 'lab-inline'), '?'));
-      if (env.hasClip('word', target.clip || target.id)) { env.prompt(env.h('span', {}, env.img?.('id', 'LAB_v2_numberear_play', 'lab-side-pic', 200), 'Tap the number you heard. ', env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.sayWord(target) }, '▶ Again'))); env.sayWord(target).then((ok) => { if (!ok) readIt(); }); }
+      if (env.hasClip('word', target.clip || target.id)) { env.prompt(env.h('span', {}, 'Tap the number you heard. ', env.h('button', { type: 'button', class: 'btn secondary lab-hear', onclick: () => env.sayWord(target) }, '▶ Again'))); env.sayWord(target).then((ok) => { if (!ok) readIt(); }); }
       else readIt();
       const g = grid(env, opts.length, opts.length <= 4 ? 2 : 3, (i, b) => { b.append(env.h('span', { class: 'lab-digit' }, String(opts[i].value))); }, (i, b) => {
         const ok = opts[i].value === target.value; mark(b, ok);

@@ -14,30 +14,32 @@ import { DRILLS as FIRST_TEN } from './lab.games.js';
 import { NEW_DRILLS } from './lab.games2.js';
 
 const DRILLS = Object.freeze({ ...FIRST_TEN, ...NEW_DRILLS });
-/** Games whose ordered in-game picture is a mat behind the whole board (the others place theirs inside the round). */
-const BOARD_MATS = new Set(['hunt', 'countup', 'calendar', 'pattern']);
 /** Pictures ordered for Brain Lab (docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md and the first ten games' orders): shown only once ingested and approved. */
 const art = (ctx, id, cls, width) => { try { return ctx.img?.(h, { kind: 'id', id, class: cls, width, decorative: true }) || null; } catch { return null; } };
 /** The round token beside a game: its approved picture, or its letter on a green-and-gold disc. */
 const token = (ctx, g) => {
   const glyph = GLYPHS[g.id] || 'א', letters = glyph.replace(/[\u0591-\u05C7]/g, '').length;
-  return art(ctx, `LAB_v2_${g.id}`, 'lab-token', 112) || h('span', { class: `lab-token lab-token-glyph${letters >= 5 ? ' is-longer' : letters >= 3 ? ' is-long' : ''}`, 'aria-hidden': 'true' }, heSpan(glyph, 'he'));
+  const approved = art(ctx, `LAB_v2_${g.id}`, 'lab-token', 112);
+  if (approved) return approved;
+  const disc = h('span', { class: `lab-token lab-token-glyph${letters >= 5 ? ' is-longer' : letters >= 3 ? ' is-long' : ''}`, 'aria-hidden': 'true' }, heSpan(glyph, 'he'));
+  applyBackground(disc, tokenArtPath(g.id), { cls: 'has-pic' }); // the drawn token covers the letter once it has loaded
+  return disc;
 };
 /** Rimon reacts to a Brain Lab moment; the companion decides whether it shows (dismissed, reduced motion). */
 const rimon = (action, moment, game) => { try { signalRimon(action, { moment: `lab.${moment}`, game }); } catch { /* optional */ } };
 /**
- * Rimon on the results card, drawn from his own approved sprite sheets (assets/img/rimon/<action>.png, 4 x 3 frames): one still
- * frame at the height of the gesture. Shown until the game's own results picture (LAB_v2_<game>_win) is approved.
+ * Rimon on the results card, drawn from his own sprite sheets (the light copies the companion plays, assets/img/rimon/web/<action>.webp,
+ * 4 x 3 frames): one still frame at the height of the gesture. Shown when a game has no results picture, or when it fails to load.
  */
 const RIMON_POSE = { highfive: ['highfive', 7, 'Rimon gives you a high five'], laugh: ['laugh', 7, 'Rimon laughs with joy'], wink: ['wink', 6, 'Rimon winks: well played'], nervous: ['nervous', 5, 'Rimon: you can do it'] };
 const rimonStill = (pose) => {
   const [sheet, frame, label] = RIMON_POSE[pose] || RIMON_POSE.wink;
   return h('span', { class: 'lab-rimon', role: 'img', 'aria-label': label,
-    style: `background-image:url("assets/img/rimon/${sheet}.png");background-position:${(frame % 4) * 100 / 3}% ${Math.floor(frame / 4) * 50}%` });
+    style: `background-image:url("assets/img/rimon/web/${sheet}.webp");background-position:${(frame % 4) * 100 / 3}% ${Math.floor(frame / 4) * 50}%` });
 };
 let wavedThisVisit = false; // Rimon waves when Brain Lab first opens, not every time you come back to the list
 const tradOf = (ctx) => normTradition(typeof ctx.settings?.get === 'function' ? ctx.settings.get('congregation') : ctx.settings?.congregation);
-import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath } from './lab.art.js';
+import { artPath, artImg, NEW_BEST_ART, WORKOUT_DONE_ART, applyMat, matKind, playArtPath, coverArtPath, applyBackground, tokenArtPath, HERO_ART } from './lab.art.js';
 
 const SKILL_COLOR = { speed: '#c9952c', memory: '#2f6b4f', attention: '#8a6d1f', flexibility: '#3d7457', problem: '#8a5f1c' };
 // Text on a skill chip: dark on the light gold, cream on the rest (every pair at least 4.5:1).
@@ -217,10 +219,15 @@ const CSS = `
 .lab-has-art{background-size:cover;background-position:center}
 .lab-board.lab-has-art{border-radius:14px;padding:.6rem}
 .lab-side-pic{inline-size:56px;block-size:56px;object-fit:contain;vertical-align:middle}
-.lab-grid .lab-cell.is-hidden{background-image:var(--lab-back,none);background-size:cover}
+@media (min-width:0){.lab-art.hero{aspect-ratio:3/1;inline-size:100%;object-fit:cover;object-position:center 50%;border-radius:16px;margin-block:0 .8rem}}
+.lab-token-glyph.has-pic{background-size:116%;background-position:center;border-color:transparent;box-shadow:none}.lab-token-glyph.has-pic .he{visibility:hidden}
+.lab-road.lab-has-art{background-size:cover;background-position:center bottom}
+.lab-sky.lab-has-art{background-size:cover;background-position:center bottom}.lab-sky.lab-has-art .lab-ground{display:none}
+.lab-twin.lab-has-art{border-color:transparent;box-shadow:none;background-size:cover}
+.lab-cafe.lab-has-art{background-size:cover;background-position:center bottom;border-radius:14px;padding:.6rem .5rem 1.4rem;color:#1b2a20}.lab-cafe.lab-has-art .lab-who{color:#1e4634}
 .lab-drop.lab-has-art,.lab-cab.lab-has-art{background-size:contain;background-repeat:no-repeat;background-color:transparent;border-color:transparent;box-shadow:none}
-@media (prefers-contrast:more),(forced-colors:active){.lab-has-art,.lab-grid .lab-cell.is-hidden{background-image:none!important}}
-:root[data-theme^="contrast"] .lab-has-art,:root[data-theme^="contrast"] .lab-grid .lab-cell.is-hidden{background-image:none!important}
+@media (prefers-contrast:more),(forced-colors:active){.lab-has-art,.lab-token-glyph.has-pic{background-image:none!important}.lab-token-glyph.has-pic .he{visibility:visible}}
+:root[data-theme^="contrast"] .lab-has-art,:root[data-theme^="contrast"] .lab-token-glyph.has-pic{background-image:none!important}:root[data-theme^="contrast"] .lab-token-glyph.has-pic .he{visibility:visible}
 @keyframes lab-shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 @media (prefers-reduced-motion:reduce){.lab-cell,.lab-time>span,.lab-twin,.lab-cab{transition:none!important}.lab-cell.is-wrong{animation:none}}
 `;
@@ -261,7 +268,7 @@ function hub(root, ctx) {
         gs ? spark(gs.history.map((x) => x.s)) : null));
   };
   const wrap = h('div', { class: 'lab' },
-    (prog.complete && art(ctx, 'LAB_v2_workout_done', 'lab-hero-art', 1200)) || art(ctx, 'LAB_v2_hero', 'lab-hero-art', 1200),
+    prog.complete ? null : artImg(h, HERO_ART, 'hero'),
     h('h1', { id: 'view-title', tabindex: '-1' }, 'Brain Lab ', heSpan('מַעְבָּדָה', 'he')),
     h('p', { class: 'lab-sub' }, 'Short, fast games that train your Hebrew eyes, ears and memory. Each one takes 45 seconds and gets harder as you get better.'),
     newOnes.length ? h('section', { class: 'lab-fresh', 'aria-labelledby': 'lab-fresh-h' },
@@ -323,7 +330,6 @@ function drill(root, ctx, id) {
     const start = h('button', { type: 'button', class: 'lab-go', onclick: () => countdown() }, 'Start');
     wrap.replaceChildren(back,
       h('div', { class: 'lab-play lab-intro' },
-        art(ctx, `LAB_v2_${id}_cover`, 'lab-cover', 900),
         h('h1', { id: 'view-title', tabindex: '-1' }, game.title, ' ', heSpan(game.titleHe, 'he')),
         artImg(h, coverArtPath(id), 'cover'),
         h('p', {}, h('span', { class: 'lab-lvl', style: `background:${SKILL_COLOR[game.skill]};color:${SKILL_INK[game.skill] || '#fffaf0'}` }, skillOf(game.skill).name), workout && pos >= 0 ? `  Workout game ${pos + 1} of 3` : ''),
@@ -381,6 +387,9 @@ function drill(root, ctx, id) {
       tradition: tradOf(ctx), calm: calm || reduceMotion,
       // An approved picture from the shared image resolver, or null (the game then shows text only).
       img: (kind, imgId, cls, width) => { try { return ctx.img?.(h, { kind, id: imgId, class: cls, width, decorative: true }) || null; } catch { return null; } },
+      // The game's own drawn picture (data/images/brain-lab-2026-11-10) behind one element: the card face, the sky, the road,
+      // the counter. Shown once loaded; the element keeps its plain look until then or if it fails.
+      playArt: (el) => { if (matKind(id) === 'own') applyBackground(el, playArtPath(id)); return el; },
       // The file of an approved picture, for a board backdrop (CSS background); null when it is not in the app yet.
       artSrc: (imgId, width) => { try { return ctx.images?.resolve?.('id', imgId, { width })?.src || null; } catch { return null; } },
       backdrop: (el, imgId, width = 900) => { const src = env.artSrc(imgId, width); if (src && el) { el.style.backgroundImage = `url("${src}")`; el.classList.add('lab-has-art'); } return el; },
@@ -401,7 +410,6 @@ function drill(root, ctx, id) {
       playClip: (kind, cid, text) => (audioOn ? playRecordedClip(ctx, kind, cid, { text }) : Promise.resolve(false)),
       sayWord: (w) => (audioOn && (w?.clip || w?.id) ? playRecordedClip(ctx, 'word', w.clip || w.id, { text: w.he }) : Promise.resolve(false)),
     };
-    if (BOARD_MATS.has(id)) env.backdrop(board, `LAB_v2_${id}_play`, 900);
     const t0 = Date.now(), total = SESSION_SECONDS * 1000;
     const clock = setInterval(() => {
       if (calm) { timeBar.style.transform = `scaleX(${1 - trials.length / CALM_ROUNDS})`; return; }
@@ -449,8 +457,12 @@ function drill(root, ctx, id) {
     const plan = dailyWorkout(day, st), prog = workoutProgress(st, day, plan);
     const nextId = workout ? plan.find((g) => !prog.done.includes(g)) : null;
     const stars = starsFor(sum);
+    // One picture: the game's drawn results picture (the rosette for a new best), or Rimon if there is none or it fails to load.
     const pose = workout && prog.complete ? 'laugh' : isBest && sum.score > 0 ? 'highfive' : stars >= 2 ? 'wink' : 'nervous';
     rimon(pose, workout && prog.complete ? 'workout-done' : 'results', id);
+    const win = artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win');
+    const winSlot = h('div', { class: 'lab-win-slot' }, win || rimonStill(pose));
+    if (win) win.addEventListener?.('error', () => winSlot.append(rimonStill(pose)), { once: true });
     const audioOn = !isAudioFree(ctx);
     const listen = (it) => (audioOn && it.clip && hasRecordedClip(ctx, it.clip.kind, it.clip.id)
       ? h('button', { type: 'button', class: 'btn secondary', 'aria-label': `Hear ${it.en}`, onclick: () => playRecordedClip(ctx, it.clip.kind, it.clip.id, { text: it.he }) }, '▶') : null);
@@ -458,12 +470,11 @@ function drill(root, ctx, id) {
     const primary = nextId ? h('a', { class: 'lab-go', href: `#/lab/${nextId}?workout=1` }, `Next: ${gameById(nextId).title}`)
       : h('a', { class: 'lab-go', href: '#/lab' }, workout && prog.complete ? 'Workout done: see your skills' : 'Back to Brain Lab');
     wrap.replaceChildren(back, h('div', { class: 'lab-play lab-results' },
-      art(ctx, `LAB_v2_${id}_win`, 'lab-win-art', 360) || rimonStill(pose),
+      winSlot,
       h('h1', { id: 'view-title', tabindex: '-1' }, game.title),
-      artImg(h, isBest && sum.score > 0 ? NEW_BEST_ART : artPath(id, 'win'), 'win'),
       h('p', { class: 'lab-stars', role: 'img', 'aria-label': `${stars} of 3 stars` }, '★'.repeat(stars) + '☆'.repeat(3 - stars)),
       h('p', { class: 'score' }, String(sum.score)),
-      h('p', {}, isBest && sum.score > 0 && prevGame ? art(ctx, 'LAB_v2_new_best', 'lab-side-pic', 200) : null, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
+      h('p', {}, isBest && sum.score > 0 ? (prevGame ? 'A new best score!' : 'Your first score in this game.') : `Best: ${prevGame?.best ?? sum.score}`),
       h('div', { class: 'lab-actions' }, primary, again),
       h('div', { class: 'lab-stats' },
         h('div', {}, h('b', {}, `${sum.accuracy}%`), 'right'),

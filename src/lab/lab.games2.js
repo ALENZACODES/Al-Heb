@@ -26,7 +26,8 @@ const twins = {
     const back = twinsBack(level);
     return new Promise((resolve) => {
       const finish = once1(resolve);
-      const card = env.backdrop?.(env.h('div', { class: 'lab-twin', 'aria-live': 'polite' }), 'LAB_v2_twins_play', 400) || env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
+      const card = env.h('div', { class: 'lab-twin', 'aria-live': 'polite' });
+      env.playArt?.(card); // the drawn card face
       const before = env.h('div', { class: 'lab-twin-before', 'aria-hidden': 'true' });
       const row = env.h('div', { class: 'lab-row' });
       env.board.replaceChildren(env.h('div', { class: 'lab-twin-stage' }, before, card), row);
@@ -82,7 +83,7 @@ const rain = {
       const d = env.h('div', { class: 'lab-drop', role: 'img', 'aria-label': `Syllable ${drop.he}` }, big(env, drop.he, 'lab-glyph'));
       env.backdrop?.(d, 'LAB_v2_rain_drop', 200);
       const sky = env.h('div', { class: 'lab-sky' }, d, env.h('div', { class: 'lab-ground', 'aria-hidden': 'true' }));
-      env.backdrop?.(sky, 'LAB_v2_rain_play', 700);
+      env.playArt?.(sky); // the drawn sky
       const row = env.h('div', { class: 'lab-row lab-vowels' });
       env.prompt(env.h('span', {}, 'Tap the vowel sound before it lands.'));
       env.board.replaceChildren(sky, row);
@@ -160,7 +161,7 @@ const taxi = {
       const road = env.h('div', { class: 'lab-road', 'data-side': tr.side, role: 'img', 'aria-label': `A sign on the ${tr.side === 'straight' ? 'middle' : tr.side} of the road says ${tr.word.tr}` },
         env.h('div', { class: 'lab-lane' }, tr.side === 'left' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'straight' ? sign : null), env.h('div', { class: 'lab-lane' }, tr.side === 'right' ? sign : null),
         env.backdrop?.(env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }), 'LAB_v2_taxi_cab', 200) || env.h('div', { class: 'lab-cab', 'aria-hidden': 'true' }));
-      env.backdrop?.(road, 'LAB_v2_taxi_play', 700);
+      env.playArt?.(road); // the drawn road
       const row = env.h('div', { class: 'lab-row lab-turns' });
       const pick = (k, b) => {
         const ok = k === tr.answer; mark(b, ok);
@@ -191,7 +192,7 @@ const cafe = {
       const ticket = env.h('div', { class: 'lab-ticket', 'aria-live': 'polite' });
       // Noa or Ari, speaking (their approved portraits), takes the order; text only if the picture is not available.
       const face = env.img?.('id', who === 'Noa' ? 'CHAR_noa_speak' : 'CHAR_ari_speak', 'lab-face', 160);
-      env.board.replaceChildren(env.backdrop?.(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots), 'LAB_v2_cafe_play', 900)
+      env.board.replaceChildren(env.playArt?.(env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots))
         || env.h('div', { class: 'lab-cafe' }, env.h('p', { class: 'lab-who' }, face, `${who} orders`), ticket, slots));
       env.prompt(env.h('span', {}, `${who} is ordering. Remember it, in order.`));
       env.rimon?.('thinking');

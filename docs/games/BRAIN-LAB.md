@@ -49,6 +49,8 @@ Each game has a slot for a round token (`LAB_v2_<game>`), a cover (`LAB_v2_<game
 - First ten games: `docs/images/BRAIN-LAB-ORDERS-2026-11-09.md` and rank 9 of `docs/images/COMMERCIAL-ORDERS-2026-11-09.md` (PR #41). The hero and the ten tokens are already drawn on `feature/commercial-images-2026-11-10`.
 - Six new games and the café menu: [`docs/images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md`](../images/BRAIN-LAB-NEW-GAMES-ORDERS-2026-11-10.md) (41 pictures).
 
+Review rounds for this work, with scores and what would raise them: [`BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md`](BRAIN-LAB-REVIEW-ROUNDS-2026-11-10.md).
+
 ## Rimon
 
 Brain Lab tells the companion what is happening (`alef:rimon` with `{ action, moment, game }`): a wave when the page opens, thinking during the memory phase of Letter Matrix and Café Order, a bounce on every second level reached, and a high five, wink or "you can do it" on the results card by how the game went. The moments and the Rimon stills they can map to are listed at the end of the new games' picture orders.

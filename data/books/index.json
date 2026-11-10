@@ -463,9 +463,9 @@
    "titleEn": "Traffic Jam",
    "level": "Beginner 2",
    "pageCount": 12,
-   "hasImages": false,
+   "hasImages": true,
    "hasAudio": true,
-   "picturedPages": 0,
+   "picturedPages": 12,
    "audioPages": 12
   },
   {

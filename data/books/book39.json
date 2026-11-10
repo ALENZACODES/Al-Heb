@@ -16,7 +16,7 @@
     "m": "audio/m/israeli/book/book39-p01.mp3"
    },
    "illustration": "a highway packed with cars, towers behind",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -30,7 +30,7 @@
     "m": "audio/m/israeli/book/book39-p02.mp3"
    },
    "illustration": "bumper to bumper, red tail lights",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -44,7 +44,7 @@
     "m": "audio/m/israeli/book/book39-p03.mp3"
    },
    "illustration": "a man gripping the wheel, radio on",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -58,7 +58,7 @@
     "m": "audio/m/israeli/book/book39-p04.mp3"
    },
    "illustration": "the speedometer at zero",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -72,7 +72,7 @@
     "m": "audio/m/israeli/book/book39-p05.mp3"
    },
    "illustration": "the radio: traffic report",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -86,7 +86,7 @@
     "m": "audio/m/israeli/book/book39-p06.mp3"
    },
    "illustration": "the man giving the radio a look",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -100,7 +100,7 @@
     "m": "audio/m/israeli/book/book39-p07.mp3"
    },
    "illustration": "the man saying thanks to the dashboard, deadpan, still not moving",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -114,7 +114,7 @@
     "m": "audio/m/israeli/book/book39-p08.mp3"
    },
    "illustration": "the neighbouring driver, also stuck",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -128,7 +128,7 @@
     "m": "audio/m/israeli/book/book39-p09.mp3"
    },
    "illustration": "the other driver belting out a song, eyes closed",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -142,7 +142,7 @@
     "m": "audio/m/israeli/book/book39-p10.mp3"
    },
    "illustration": "the man laughing despite himself",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -156,7 +156,7 @@
     "m": "audio/m/israeli/book/book39-p11.mp3"
    },
    "illustration": "both drivers singing in their cars, windows down",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   },
   {
@@ -170,7 +170,7 @@
     "m": "audio/m/israeli/book/book39-p12.mp3"
    },
    "illustration": "a whole lane of singing drivers at sunrise",
-   "hasImg": false,
+   "hasImg": true,
    "hasAudio": true
   }
  ]

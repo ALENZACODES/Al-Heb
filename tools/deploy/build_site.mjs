@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { pathToFileURL } from 'node:url';
-// Cloudflare Pages build command: node tools/deploy/build_site.mjs [--out dist] [--with-img]
+// Cloudflare Pages build command: node tools/deploy/build_site.mjs [--out dist] [--no-img]
 // Copies exactly the runtime files into dist/ (see make-dist.mjs for the list and the exclusions), prints a size report, then
 // verifies that every URL in dist/precache-manifest.js exists in dist/ (one missing file makes the service worker install fail).
 import { existsSync, readFileSync } from 'node:fs';
@@ -19,7 +19,7 @@ export function missingPrecache(dist) {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = process.argv.slice(2);
   const out = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'dist';
-  const r = makeDist({ out, img: args.includes('--with-img') });
+  const r = makeDist({ out, img: !args.includes('--no-img') });
   console.log(`dist ready: ${r.dist}`);
   console.log(`files ${r.files} (no host file-count cap; Render); total ${mib(r.bytes)}; precache ${r.precacheFiles} files, ${mib(r.precacheBytes)} (version ${r.version})`);
   for (const [g, v] of r.groups) console.log(`  ${g.padEnd(28)} ${String(v.files).padStart(5)} files ${mib(v.bytes).padStart(11)}`);

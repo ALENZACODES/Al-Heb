@@ -1,0 +1,105 @@
+{
+ "schema": "alef-practical-covers/1",
+ "note": "Each unit cover is an already-approved image id from data/images/approvals.json. No new art was generated.",
+ "units": {
+  "pu-greetings": {
+   "imageId": "VOC_greetings_01"
+  },
+  "pu-politeness": {
+   "imageId": "VOC_greetings_02"
+  },
+  "pu-fillers": {
+   "imageId": "CHAR_noa_speak"
+  },
+  "pu-numbers": {
+   "imageId": "VOC_numbers_01"
+  },
+  "pu-introducing": {
+   "imageId": "CHAR_ari_speak"
+  },
+  "pu-cafe": {
+   "imageId": "BG_cafe"
+  },
+  "pu-restaurant": {
+   "imageId": "CTX_food_01"
+  },
+  "pu-shop": {
+   "imageId": "BG_market"
+  },
+  "pu-directions": {
+   "imageId": "VOC_directions_01"
+  },
+  "pu-transport": {
+   "imageId": "VOC_transport_01"
+  },
+  "pu-small-talk": {
+   "imageId": "CHAR_noa_neutral"
+  },
+  "pu-family": {
+   "imageId": "VOC_home_01"
+  },
+  "pu-home": {
+   "imageId": "VOC_home_02"
+  },
+  "pu-time": {
+   "imageId": "VOC_numbers_02"
+  },
+  "pu-weather": {
+   "imageId": "GAME_weatherstudio_env"
+  },
+  "pu-hotel": {
+   "imageId": "PLACE_telaviv_01"
+  },
+  "pu-phone": {
+   "imageId": "CHAR_ari_listen"
+  },
+  "pu-apartment": {
+   "imageId": "CTX_house_02"
+  },
+  "pu-plans": {
+   "imageId": "VOC_greetings_03"
+  },
+  "pu-opinions": {
+   "imageId": "CHAR_noa_listen"
+  },
+  "pu-driving": {
+   "imageId": "VOC_transport_02"
+  },
+  "pu-hiking": {
+   "imageId": "CTX_nature_08"
+  },
+  "pu-beach": {
+   "imageId": "PLACE_eilat_01"
+  },
+  "pu-work": {
+   "imageId": "PLACE_everyday_01"
+  },
+  "pu-health": {
+   "imageId": "VOC_body_01"
+  },
+  "pu-bank": {
+   "imageId": "NUM_money_01"
+  },
+  "pu-post": {
+   "imageId": "PLACE_everyday_03"
+  },
+  "pu-emergencies": {
+   "imageId": "CHAR_ari_neutral"
+  },
+  "pu-delivery": {
+   "imageId": "CTX_food_02"
+  },
+  "pu-social": {
+   "imageId": "CHAR_noa_telaviv"
+  },
+  "pu-news": {
+   "imageId": "BG_telaviv"
+  },
+  "pu-shabbat": {
+   "imageId": "BG_shabbat"
+  },
+  "pu-holidays": {
+   "imageId": "BG_synagogue"
+  }
+ }
+}

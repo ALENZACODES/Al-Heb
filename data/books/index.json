@@ -752,9 +752,9 @@
    "level": "Advanced",
    "pageCount": 12,
    "hasImages": true,
-   "hasAudio": false,
+   "hasAudio": true,
    "picturedPages": 12,
-   "audioPages": 0
+   "audioPages": 8
   }
  ]
 }

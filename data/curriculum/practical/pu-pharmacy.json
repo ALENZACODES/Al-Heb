@@ -1,0 +1,772 @@
+{
+ "id": "pu-pharmacy",
+ "title": "At the pharmacy",
+ "level": "L3",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-14",
+   "title": "Pharmacy: pain, fever, prescriptions and how often to take it",
+   "track": "israel",
+   "wordCount": 15
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [
+  "speak-body-health-1"
+ ],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-14-w1",
+   "source": "data/curriculum/lessons.json#I-14.words[0]",
+   "he": "בֵּית מֶרְקַחַת",
+   "en": "pharmacy",
+   "translit": "beit merkachat",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w1"
+   }
+  },
+  {
+   "id": "i-14-w2",
+   "source": "data/curriculum/lessons.json#I-14.words[1]",
+   "he": "תְּרוּפָה",
+   "en": "medicine",
+   "translit": "terufah",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w2"
+   }
+  },
+  {
+   "id": "i-14-w3",
+   "source": "data/curriculum/lessons.json#I-14.words[2]",
+   "he": "כַּדּוּרִים",
+   "en": "pills",
+   "translit": "kadurim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w3"
+   }
+  },
+  {
+   "id": "i-14-w4",
+   "source": "data/curriculum/lessons.json#I-14.words[3]",
+   "he": "מִרְשָׁם",
+   "en": "prescription",
+   "translit": "mirsham",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w4"
+   }
+  },
+  {
+   "id": "i-14-w5",
+   "source": "data/curriculum/lessons.json#I-14.words[4]",
+   "he": "כְּאֵב רֹאשׁ",
+   "en": "headache",
+   "translit": "ke'ev rosh",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w5"
+   }
+  },
+  {
+   "id": "i-14-w6",
+   "source": "data/curriculum/lessons.json#I-14.words[5]",
+   "he": "כְּאֵב גָּרוֹן",
+   "en": "sore throat",
+   "translit": "ke'ev garon",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w6"
+   }
+  },
+  {
+   "id": "i-14-w7",
+   "source": "data/curriculum/lessons.json#I-14.words[6]",
+   "he": "כְּאֵב בֶּטֶן",
+   "en": "stomach ache",
+   "translit": "ke'ev beten",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w7"
+   }
+  },
+  {
+   "id": "i-14-w8",
+   "source": "data/curriculum/lessons.json#I-14.words[7]",
+   "he": "חֹם",
+   "en": "fever",
+   "translit": "chom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w8"
+   }
+  },
+  {
+   "id": "i-14-w9",
+   "source": "data/curriculum/lessons.json#I-14.words[8]",
+   "he": "נֶגֶד",
+   "en": "against, for (a symptom)",
+   "translit": "neged",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w9"
+   }
+  },
+  {
+   "id": "i-14-w10",
+   "source": "data/curriculum/lessons.json#I-14.words[9]",
+   "he": "פַּעַם בְּיוֹם",
+   "en": "once a day",
+   "translit": "pa'am beyom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w10"
+   }
+  },
+  {
+   "id": "i-14-w11",
+   "source": "data/curriculum/lessons.json#I-14.words[10]",
+   "he": "פַּעֲמַיִם בְּיוֹם",
+   "en": "twice a day",
+   "translit": "pa'amayim beyom",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-14-w11"
+   }
+  },
+  {
+   "id": "i-14-w12",
+   "source": "data/curriculum/lessons.json#I-14.words[11]",
+   "he": "אַחֲרֵי",
+   "en": "after",
+   "translit": "acharei",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w12"
+   }
+  },
+  {
+   "id": "i-14-w13",
+   "source": "data/curriculum/lessons.json#I-14.words[12]",
+   "he": "לִפְנֵי",
+   "en": "before",
+   "translit": "lifnei",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w13"
+   }
+  },
+  {
+   "id": "i-14-w14",
+   "source": "data/curriculum/lessons.json#I-14.words[13]",
+   "he": "אָלֶרְגִּי",
+   "en": "allergic (m)",
+   "translit": "alergi",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w14"
+   }
+  },
+  {
+   "id": "i-14-w15",
+   "source": "data/curriculum/lessons.json#I-14.words[14]",
+   "he": "אַנְטִיבְּיוֹטִיקָה",
+   "en": "antibiotics",
+   "translit": "antibeyotikah",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-14-w15"
+   }
+  },
+  {
+   "id": "directions-18",
+   "source": "data/corpus/phrasebook.json",
+   "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+   "en": "where is the pharmacy?",
+   "translit": "eifo beit hamirkachat?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "directions-18"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "line",
+   "id": "i-14-w1",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-14-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-14-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-14-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "line",
+   "id": "i-14-w5",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "line",
+   "id": "i-14-w6",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "line",
+   "id": "i-14-w7",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-14-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-14-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "line",
+   "id": "i-14-w10",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "i-14-w11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-14-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 13,
+   "kind": "word",
+   "id": "i-14-w13",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 14,
+   "kind": "word",
+   "id": "i-14-w14",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 15,
+   "kind": "word",
+   "id": "i-14-w15",
+   "source": "item",
+   "srsKind": "word",
+   "band": "extend"
+  },
+  {
+   "position": 16,
+   "kind": "line",
+   "id": "directions-18",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "extend"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-14-w1",
+    "i-14-w2",
+    "i-14-w3",
+    "i-14-w4",
+    "i-14-w5",
+    "i-14-w6",
+    "i-14-w7",
+    "i-14-w8",
+    "i-14-w9",
+    "i-14-w10",
+    "i-14-w11",
+    "i-14-w12",
+    "i-14-w13",
+    "i-14-w14",
+    "i-14-w15",
+    "directions-18"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-body-health-1.json.",
+   "set": "speak-body-health-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-pharmacy-p01",
+   "title": "Words at the pharmacy",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-14-w1",
+     "source": "data/curriculum/lessons.json#I-14.words[0]",
+     "he": "בֵּית מֶרְקַחַת",
+     "en": "pharmacy",
+     "translit": "beit merkachat",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w1"
+     }
+    },
+    {
+     "id": "i-14-w2",
+     "source": "data/curriculum/lessons.json#I-14.words[1]",
+     "he": "תְּרוּפָה",
+     "en": "medicine",
+     "translit": "terufah",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w2"
+     }
+    },
+    {
+     "id": "i-14-w3",
+     "source": "data/curriculum/lessons.json#I-14.words[2]",
+     "he": "כַּדּוּרִים",
+     "en": "pills",
+     "translit": "kadurim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w3"
+     }
+    },
+    {
+     "id": "i-14-w4",
+     "source": "data/curriculum/lessons.json#I-14.words[3]",
+     "he": "מִרְשָׁם",
+     "en": "prescription",
+     "translit": "mirsham",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w4"
+     }
+    },
+    {
+     "id": "i-14-w5",
+     "source": "data/curriculum/lessons.json#I-14.words[4]",
+     "he": "כְּאֵב רֹאשׁ",
+     "en": "headache",
+     "translit": "ke'ev rosh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-14-w1",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "i-14-w5",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-14-w1",
+    "i-14-w2",
+    "i-14-w3",
+    "i-14-w4",
+    "i-14-w5"
+   ],
+   "speakSet": "speak-body-health-1"
+  },
+  {
+   "id": "pu-pharmacy-p02",
+   "title": "Pain, fever and how often",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-14-w6",
+     "source": "data/curriculum/lessons.json#I-14.words[5]",
+     "he": "כְּאֵב גָּרוֹן",
+     "en": "sore throat",
+     "translit": "ke'ev garon",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w6"
+     }
+    },
+    {
+     "id": "i-14-w7",
+     "source": "data/curriculum/lessons.json#I-14.words[6]",
+     "he": "כְּאֵב בֶּטֶן",
+     "en": "stomach ache",
+     "translit": "ke'ev beten",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w7"
+     }
+    },
+    {
+     "id": "i-14-w8",
+     "source": "data/curriculum/lessons.json#I-14.words[7]",
+     "he": "חֹם",
+     "en": "fever",
+     "translit": "chom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w8"
+     }
+    },
+    {
+     "id": "i-14-w9",
+     "source": "data/curriculum/lessons.json#I-14.words[8]",
+     "he": "נֶגֶד",
+     "en": "against, for (a symptom)",
+     "translit": "neged",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w9"
+     }
+    },
+    {
+     "id": "i-14-w10",
+     "source": "data/curriculum/lessons.json#I-14.words[9]",
+     "he": "פַּעַם בְּיוֹם",
+     "en": "once a day",
+     "translit": "pa'am beyom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-14-w6",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "line",
+     "id": "i-14-w7",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "line",
+     "id": "i-14-w10",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-14-w6",
+    "i-14-w7",
+    "i-14-w8",
+    "i-14-w9",
+    "i-14-w10"
+   ],
+   "speakSet": "speak-body-health-1"
+  },
+  {
+   "id": "pu-pharmacy-p03",
+   "title": "Where is the pharmacy?",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-14-w11",
+     "source": "data/curriculum/lessons.json#I-14.words[10]",
+     "he": "פַּעֲמַיִם בְּיוֹם",
+     "en": "twice a day",
+     "translit": "pa'amayim beyom",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-14-w11"
+     }
+    },
+    {
+     "id": "i-14-w12",
+     "source": "data/curriculum/lessons.json#I-14.words[11]",
+     "he": "אַחֲרֵי",
+     "en": "after",
+     "translit": "acharei",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w12"
+     }
+    },
+    {
+     "id": "i-14-w13",
+     "source": "data/curriculum/lessons.json#I-14.words[12]",
+     "he": "לִפְנֵי",
+     "en": "before",
+     "translit": "lifnei",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w13"
+     }
+    },
+    {
+     "id": "i-14-w14",
+     "source": "data/curriculum/lessons.json#I-14.words[13]",
+     "he": "אָלֶרְגִּי",
+     "en": "allergic (m)",
+     "translit": "alergi",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w14"
+     }
+    },
+    {
+     "id": "i-14-w15",
+     "source": "data/curriculum/lessons.json#I-14.words[14]",
+     "he": "אַנְטִיבְּיוֹטִיקָה",
+     "en": "antibiotics",
+     "translit": "antibeyotikah",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-14-w15"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-14-w11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-14-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-14-w13",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-14-w14",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-14-w15",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-14-w11",
+    "i-14-w12",
+    "i-14-w13",
+    "i-14-w14",
+    "i-14-w15"
+   ],
+   "speakSet": "speak-body-health-1"
+  },
+  {
+   "id": "pu-pharmacy-p04",
+   "title": "Where is the pharmacy?",
+   "order": 4,
+   "grammarNote": "This page uses only Hebrew already stored in data/corpus/phrasebook.json.",
+   "items": [
+    {
+     "id": "directions-18",
+     "source": "data/corpus/phrasebook.json",
+     "he": "אֵיפֹה בֵּית הַמִּרְקַחַת?",
+     "en": "where is the pharmacy?",
+     "translit": "eifo beit hamirkachat?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "directions-18"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "directions-18",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "directions-18"
+   ],
+   "speakSet": "speak-body-health-1"
+  }
+ ],
+ "relatedBook": {
+  "id": "book36",
+  "titleEn": "Doctor, I'm Fine",
+  "href": "#/book/book36"
+ }
+}

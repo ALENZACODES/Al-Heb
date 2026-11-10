@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
+  "engine": "google-cloud-tts",
+  "voiceId": "he-IL-Wavenet-B",
+  "tradition": "sephardi",
+  "inputText": "sam",
+  "inputTextKind": "respelling",
+  "hebrew": "סַם",
+  "spokenText": "sam",
+  "renderedAt": "2026-11-10T16:41:37.990Z",
+  "redistributionCleared": false,
+  "normalized": true,
+  "provider": "google",
+  "madeFrom": "respelling",
+  "voiceName": "he-IL-Wavenet-B",
+  "languageCode": "he-IL",
+  "israeliRef": "audio/m/israeli/word/h9720c378.mp3",
+  "tempo": {
+    "applied": false,
+    "factor": 1,
+    "cap": 1.26,
+    "before": 0.6480045351473923,
+    "after": 0.6480045351473923,
+    "israeliSec": 0.9519954648526077,
+    "israeliRef": "audio/m/israeli/word/h9720c378.mp3"
+  },
+  "speakingRate": 1.33,
+  "batch": "ari-missing-ash-seph-2026-11-10",
+  "metadataStripped": true,
+  "licence": "customer-owned"
+}

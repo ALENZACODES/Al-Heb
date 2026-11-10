@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
+  "engine": "google-cloud-tts",
+  "voiceId": "he-IL-Wavenet-B",
+  "tradition": "sephardi",
+  "inputText": "yeled",
+  "inputTextKind": "respelling",
+  "hebrew": "יֶלֶד",
+  "spokenText": "yeled",
+  "renderedAt": "2026-11-10T16:37:11.602Z",
+  "redistributionCleared": false,
+  "normalized": true,
+  "provider": "google",
+  "madeFrom": "respelling",
+  "voiceName": "he-IL-Wavenet-B",
+  "languageCode": "he-IL",
+  "israeliRef": "audio/m/israeli/word/h1301ecc3.mp3",
+  "tempo": {
+    "applied": false,
+    "factor": 1,
+    "cap": 1.26,
+    "before": 0.6,
+    "after": 0.6,
+    "israeliSec": 1,
+    "israeliRef": "audio/m/israeli/word/h1301ecc3.mp3"
+  },
+  "speakingRate": 1.33,
+  "batch": "ari-missing-ash-seph-2026-11-10",
+  "metadataStripped": true,
+  "licence": "customer-owned"
+}

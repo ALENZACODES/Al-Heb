@@ -1,0 +1,586 @@
+{
+ "id": "pu-school",
+ "title": "Kids: school and play",
+ "level": "L2",
+ "status": "built-draft",
+ "proofread": false,
+ "nativeReview": true,
+ "note": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "lessons": [
+  {
+   "id": "I-42",
+   "title": "Kids: asking about children, school and play",
+   "track": "israel",
+   "wordCount": 12
+  }
+ ],
+ "phrasebookSituation": null,
+ "speakSets": [
+  "speak-school-learning-1"
+ ],
+ "grammarNote": "Draft. Every Hebrew line is copied from an existing lesson or the phrasebook. Native review is still required. No new Hebrew was written for these pages.",
+ "items": [
+  {
+   "id": "i-42-w1",
+   "source": "data/curriculum/lessons.json#I-42.words[0]",
+   "he": "יֶלֶד",
+   "en": "boy, child",
+   "translit": "yeled",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w1"
+   }
+  },
+  {
+   "id": "i-42-w2",
+   "source": "data/curriculum/lessons.json#I-42.words[1]",
+   "he": "יַלְדָּה",
+   "en": "girl",
+   "translit": "yaldah",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w2"
+   }
+  },
+  {
+   "id": "i-42-w3",
+   "source": "data/curriculum/lessons.json#I-42.words[2]",
+   "he": "יְלָדִים",
+   "en": "children",
+   "translit": "yeladim",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w3"
+   }
+  },
+  {
+   "id": "i-42-w4",
+   "source": "data/curriculum/lessons.json#I-42.words[3]",
+   "he": "תִּינוֹק",
+   "en": "baby",
+   "translit": "tinok",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w4"
+   }
+  },
+  {
+   "id": "i-42-w5",
+   "source": "data/curriculum/lessons.json#I-42.words[4]",
+   "he": "גַּן",
+   "en": "garden, kindergarten",
+   "translit": "gan",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w5"
+   }
+  },
+  {
+   "id": "i-42-w6",
+   "source": "data/curriculum/lessons.json#I-42.words[5]",
+   "he": "מוֹרָה",
+   "en": "teacher (f)",
+   "translit": "morah",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w6"
+   }
+  },
+  {
+   "id": "i-42-w7",
+   "source": "data/curriculum/lessons.json#I-42.words[6]",
+   "he": "מוֹרֶה",
+   "en": "teacher (m)",
+   "translit": "moreh",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w7"
+   }
+  },
+  {
+   "id": "i-42-w8",
+   "source": "data/curriculum/lessons.json#I-42.words[7]",
+   "he": "מִשְׂחָק",
+   "en": "game",
+   "translit": "mischak",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w8"
+   }
+  },
+  {
+   "id": "i-42-w9",
+   "source": "data/curriculum/lessons.json#I-42.words[8]",
+   "he": "אִמָּא",
+   "en": "mother",
+   "translit": "ima",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w9"
+   }
+  },
+  {
+   "id": "i-42-w10",
+   "source": "data/curriculum/lessons.json#I-42.words[9]",
+   "he": "אַבָּא",
+   "en": "father",
+   "translit": "aba",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w10"
+   }
+  },
+  {
+   "id": "i-42-w11",
+   "source": "data/curriculum/lessons.json#I-42.words[10]",
+   "he": "בֶּן כַּמָּה?",
+   "en": "how old (lit. son of how much)?",
+   "translit": "ben kamah?",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "line",
+    "id": "i-42-w11"
+   }
+  },
+  {
+   "id": "i-42-w12",
+   "source": "data/curriculum/lessons.json#I-42.words[11]",
+   "he": "חָמוּד",
+   "en": "cute, sweet, charming",
+   "translit": "chamud",
+   "review": "native-speaker-needed: pointing and register",
+   "listen": {
+    "kind": "word",
+    "id": "i-42-w12"
+   }
+  }
+ ],
+ "srsQueue": [
+  {
+   "position": 1,
+   "kind": "word",
+   "id": "i-42-w1",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 2,
+   "kind": "word",
+   "id": "i-42-w2",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 3,
+   "kind": "word",
+   "id": "i-42-w3",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 4,
+   "kind": "word",
+   "id": "i-42-w4",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 5,
+   "kind": "word",
+   "id": "i-42-w5",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 6,
+   "kind": "word",
+   "id": "i-42-w6",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 7,
+   "kind": "word",
+   "id": "i-42-w7",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 8,
+   "kind": "word",
+   "id": "i-42-w8",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 9,
+   "kind": "word",
+   "id": "i-42-w9",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 10,
+   "kind": "word",
+   "id": "i-42-w10",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  },
+  {
+   "position": 11,
+   "kind": "line",
+   "id": "i-42-w11",
+   "source": "item",
+   "srsKind": "prayerLine",
+   "band": "core"
+  },
+  {
+   "position": 12,
+   "kind": "word",
+   "id": "i-42-w12",
+   "source": "item",
+   "srsKind": "word",
+   "band": "core"
+  }
+ ],
+ "listenDrills": [
+  {
+   "goal": "Hear the sourced lines and words already in the audio manifest.",
+   "items": [
+    "i-42-w1",
+    "i-42-w2",
+    "i-42-w3",
+    "i-42-w4",
+    "i-42-w5",
+    "i-42-w6",
+    "i-42-w7",
+    "i-42-w8",
+    "i-42-w9",
+    "i-42-w10",
+    "i-42-w11",
+    "i-42-w12"
+   ],
+   "source": "audio manifest, phrasebook and lesson-word ids"
+  }
+ ],
+ "speakDrills": [
+  {
+   "goal": "Repeat the existing set data/speak/sets/speak-school-learning-1.json.",
+   "set": "speak-school-learning-1",
+   "note": "That set is machine-built and also unverified."
+  }
+ ],
+ "pages": [
+  {
+   "id": "pu-school-p01",
+   "title": "Children and family",
+   "order": 1,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-42-w1",
+     "source": "data/curriculum/lessons.json#I-42.words[0]",
+     "he": "יֶלֶד",
+     "en": "boy, child",
+     "translit": "yeled",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w1"
+     }
+    },
+    {
+     "id": "i-42-w2",
+     "source": "data/curriculum/lessons.json#I-42.words[1]",
+     "he": "יַלְדָּה",
+     "en": "girl",
+     "translit": "yaldah",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w2"
+     }
+    },
+    {
+     "id": "i-42-w3",
+     "source": "data/curriculum/lessons.json#I-42.words[2]",
+     "he": "יְלָדִים",
+     "en": "children",
+     "translit": "yeladim",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w3"
+     }
+    },
+    {
+     "id": "i-42-w4",
+     "source": "data/curriculum/lessons.json#I-42.words[3]",
+     "he": "תִּינוֹק",
+     "en": "baby",
+     "translit": "tinok",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w4"
+     }
+    },
+    {
+     "id": "i-42-w5",
+     "source": "data/curriculum/lessons.json#I-42.words[4]",
+     "he": "גַּן",
+     "en": "garden, kindergarten",
+     "translit": "gan",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w5"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-42-w1",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-42-w2",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-42-w3",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-42-w4",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-42-w5",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-42-w1",
+    "i-42-w2",
+    "i-42-w3",
+    "i-42-w4",
+    "i-42-w5"
+   ],
+   "speakSet": "speak-school-learning-1"
+  },
+  {
+   "id": "pu-school-p02",
+   "title": "School, the teacher and play",
+   "order": 2,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-42-w6",
+     "source": "data/curriculum/lessons.json#I-42.words[5]",
+     "he": "מוֹרָה",
+     "en": "teacher (f)",
+     "translit": "morah",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w6"
+     }
+    },
+    {
+     "id": "i-42-w7",
+     "source": "data/curriculum/lessons.json#I-42.words[6]",
+     "he": "מוֹרֶה",
+     "en": "teacher (m)",
+     "translit": "moreh",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w7"
+     }
+    },
+    {
+     "id": "i-42-w8",
+     "source": "data/curriculum/lessons.json#I-42.words[7]",
+     "he": "מִשְׂחָק",
+     "en": "game",
+     "translit": "mischak",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w8"
+     }
+    },
+    {
+     "id": "i-42-w9",
+     "source": "data/curriculum/lessons.json#I-42.words[8]",
+     "he": "אִמָּא",
+     "en": "mother",
+     "translit": "ima",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w9"
+     }
+    },
+    {
+     "id": "i-42-w10",
+     "source": "data/curriculum/lessons.json#I-42.words[9]",
+     "he": "אַבָּא",
+     "en": "father",
+     "translit": "aba",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w10"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "word",
+     "id": "i-42-w6",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-42-w7",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 3,
+     "kind": "word",
+     "id": "i-42-w8",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 4,
+     "kind": "word",
+     "id": "i-42-w9",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    },
+    {
+     "position": 5,
+     "kind": "word",
+     "id": "i-42-w10",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-42-w6",
+    "i-42-w7",
+    "i-42-w8",
+    "i-42-w9",
+    "i-42-w10"
+   ],
+   "speakSet": "speak-school-learning-1"
+  },
+  {
+   "id": "pu-school-p03",
+   "title": "How old (lit. son of how much)?",
+   "order": 3,
+   "grammarNote": "This page uses only Hebrew already stored in data/curriculum/lessons.json.",
+   "items": [
+    {
+     "id": "i-42-w11",
+     "source": "data/curriculum/lessons.json#I-42.words[10]",
+     "he": "בֶּן כַּמָּה?",
+     "en": "how old (lit. son of how much)?",
+     "translit": "ben kamah?",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "line",
+      "id": "i-42-w11"
+     }
+    },
+    {
+     "id": "i-42-w12",
+     "source": "data/curriculum/lessons.json#I-42.words[11]",
+     "he": "חָמוּד",
+     "en": "cute, sweet, charming",
+     "translit": "chamud",
+     "review": "native-speaker-needed: pointing and register",
+     "listen": {
+      "kind": "word",
+      "id": "i-42-w12"
+     }
+    }
+   ],
+   "srsQueue": [
+    {
+     "position": 1,
+     "kind": "line",
+     "id": "i-42-w11",
+     "source": "item",
+     "srsKind": "prayerLine",
+     "band": "core"
+    },
+    {
+     "position": 2,
+     "kind": "word",
+     "id": "i-42-w12",
+     "source": "item",
+     "srsKind": "word",
+     "band": "core"
+    }
+   ],
+   "listenIds": [
+    "i-42-w11",
+    "i-42-w12"
+   ],
+   "speakSet": "speak-school-learning-1"
+  }
+ ]
+}

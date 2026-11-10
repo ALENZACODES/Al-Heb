@@ -46,7 +46,9 @@ export async function loadIndex() {
 export async function loadUnit(id, index) {
   const row = (index?.units || []).find((u) => u.id === id);
   const file = row?.file || `data/curriculum/practical/${id}.json`;
-  return loadJson(file);
+  const unit = await loadJson(file);
+  if (row?.relatedBook && !unit.relatedBook) unit.relatedBook = row.relatedBook;
+  return unit;
 }
 
 async function loadOptional(url) {
@@ -134,6 +136,7 @@ function renderList(root, ctx, index, covers, progress, results, written) {
   root.replaceChildren(
     el("article", { class: "card alef-practical", "aria-labelledby": "view-title" },
       el("h1", { id: "view-title", tabindex: "-1" }, "Practical"),
+      el("p", {}, el("a", { href: "#/books" }, "Little books"), " · ", el("a", { href: "#/phrases" }, "Common phrases")),
       el("p", {}, DRAFT_TEXT),
       el("p", { class: "muted" },
         `${totals.units ?? ""} units of short pages, grouped by level. Each page has a grammar note, spaced review, listening and speaking.`),
@@ -237,6 +240,7 @@ function renderUnit(root, ctx, index, unit, { covers, progress, results } = {}) 
   root.replaceChildren(
     el("article", { class: "card alef-practical", "aria-labelledby": "view-title", "data-unit": unit.id },
       el("p", {}, el("a", { href: "#/practical" }, "All practical units")),
+      unit.relatedBook ? el("p", {}, "Related little book: ", el("a", { href: unit.relatedBook.href || ("#/book/" + unit.relatedBook.id) }, unit.relatedBook.titleEn || "Open book")) : null,
       coverNode(ctx, imgId, unit.title),
       el("h1", { id: "view-title", tabindex: "-1" }, unit.title),
       ring(progressFraction(doneN, pages.length), `${doneN} of ${pages.length} pages done`),

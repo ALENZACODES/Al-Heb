@@ -110,7 +110,12 @@
    "pageCount": 11,
    "itemCount": 51,
    "status": "built-draft",
-   "nativeReview": true
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book53",
+    "titleEn": "The Bakery",
+    "href": "#/book/book53"
+   }
   },
   {
    "id": "pu-directions",
@@ -130,7 +135,12 @@
    "pageCount": 10,
    "itemCount": 46,
    "status": "built-draft",
-   "nativeReview": true
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book42",
+    "titleEn": "The Taxi Driver",
+    "href": "#/book/book42"
+   }
   },
   {
    "id": "pu-small-talk",
@@ -190,7 +200,12 @@
    "pageCount": 3,
    "itemCount": 13,
    "status": "built-draft",
-   "nativeReview": true
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book44",
+    "titleEn": "The Café on the Corner",
+    "href": "#/book/book44"
+   }
   },
   {
    "id": "pu-phone",
@@ -280,7 +295,12 @@
    "pageCount": 7,
    "itemCount": 32,
    "status": "built-draft",
-   "nativeReview": true
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book36",
+    "titleEn": "Doctor, I'm Fine",
+    "href": "#/book/book36"
+   }
   },
   {
    "id": "pu-bank",
@@ -290,7 +310,12 @@
    "pageCount": 5,
    "itemCount": 21,
    "status": "built-draft",
-   "nativeReview": true
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book22",
+    "titleEn": "At the Bank",
+    "href": "#/book/book22"
+   }
   },
   {
    "id": "pu-post",
@@ -329,6 +354,16 @@
    "file": "data/curriculum/practical/pu-social.json",
    "pageCount": 3,
    "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-army",
+   "title": "Army slang basics",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-army.json",
+   "pageCount": 3,
+   "itemCount": 15,
    "status": "built-draft",
    "nativeReview": true
   },
@@ -391,11 +426,111 @@
    "itemCount": 13,
    "status": "built-draft",
    "nativeReview": true
+  },
+  {
+   "id": "pu-pharmacy",
+   "title": "At the pharmacy",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-pharmacy.json",
+   "pageCount": 4,
+   "itemCount": 16,
+   "status": "built-draft",
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book36",
+    "titleEn": "Doctor, I'm Fine",
+    "href": "#/book/book36"
+   }
+  },
+  {
+   "id": "pu-hospital",
+   "title": "Hospital and clinic",
+   "level": "L3",
+   "file": "data/curriculum/practical/pu-hospital.json",
+   "pageCount": 4,
+   "itemCount": 15,
+   "status": "built-draft",
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book36",
+    "titleEn": "Doctor, I'm Fine",
+    "href": "#/book/book36"
+   }
+  },
+  {
+   "id": "pu-shuk",
+   "title": "At the shuk",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-shuk.json",
+   "pageCount": 3,
+   "itemCount": 15,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-supermarket",
+   "title": "At the supermarket",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-supermarket.json",
+   "pageCount": 3,
+   "itemCount": 11,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-university",
+   "title": "At the university",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-university.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-school",
+   "title": "Kids: school and play",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-school.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true
+  },
+  {
+   "id": "pu-going-out",
+   "title": "Going out",
+   "level": "L2",
+   "file": "data/curriculum/practical/pu-going-out.json",
+   "pageCount": 3,
+   "itemCount": 12,
+   "status": "built-draft",
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book44",
+    "titleEn": "The Café on the Corner",
+    "href": "#/book/book44"
+   }
+  },
+  {
+   "id": "pu-airport-taxi",
+   "title": "A taxi to the airport",
+   "level": "L1",
+   "file": "data/curriculum/practical/pu-airport-taxi.json",
+   "pageCount": 4,
+   "itemCount": 14,
+   "status": "built-draft",
+   "nativeReview": true,
+   "relatedBook": {
+    "id": "book42",
+    "titleEn": "The Taxi Driver",
+    "href": "#/book/book42"
+   }
   }
  ],
  "totals": {
-  "units": 36,
-  "pages": 166,
-  "items": 750
+  "units": 45,
+  "pages": 196,
+  "items": 872
  }
 }

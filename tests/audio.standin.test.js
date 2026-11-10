@@ -30,7 +30,7 @@ test('manifest: every sephardi letter, vowel, syllable and prayer without a clip
   }
   assert.ok(standIns >= 500, `stand-ins: ${standIns}`);
   const missingWords = words.filter((e) => e.status === 'missing');
-  assert.ok(missingWords.length > 2000);
+  assert.ok(missingWords.length > 1800); /* 606 of the man's words gained their own Sephardi clip on 2026-11-10 */
   assert.ok(missingWords.filter((e) => e.equivalentTo?.[0] === 'israeli').length > 1400);
   for (const e of words.filter((e) => e.status !== 'missing')) assert.equal(e.equivalentTo, undefined, e.path);
 });

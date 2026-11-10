@@ -5,8 +5,8 @@
 
 export const SECTIONS = [
   { id: 'learn',    labelKey: 'nav.section.learn',    descKey: 'nav.section.learn.desc',    heKey: 'nav.learn', primary: ['learn'] },
-  { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['read'] },
-  { id: 'speak',    labelKey: 'nav.section.speak',    descKey: 'nav.section.speak.desc',    primary: ['speak', 'listen', 'compare', 'tradition-quiz'] },
+  { id: 'read',     labelKey: 'nav.section.read',     descKey: 'nav.section.read.desc',     heKey: 'nav.read',  primary: ['readhub', 'read'] },
+  { id: 'speak',    labelKey: 'nav.section.speak',    descKey: 'nav.section.speak.desc',    primary: ['speakhub', 'speak', 'listen', 'compare', 'tradition-quiz'] },
   { id: 'progress', labelKey: 'nav.section.progress', descKey: 'nav.section.progress.desc', heKey: 'nav.progress', primary: ['progress', 'calendar'] },
   { id: 'more',     labelKey: 'nav.section.more',     descKey: 'nav.section.more.desc',     heKey: null, primary: [] },
 ];
@@ -26,8 +26,8 @@ export const SECTION_ROUTES = {
     'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
     'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',
     'shuktaxi', 'barter', 'submarinesonar', 'rhymelab', 'bumperverbs', 'bumpercar', 'traintrack', 'weatherpresenter', 'karaoke', 'cipher', 'fleamarket'],
-  read: ['read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
-  speak: ['speak', 'talk', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
+  read: ['readhub', 'read', 'text', 'torahread', 'torahreadsec', 'torahreader', 'ask', 'service', 'trope', 'timedread', 'morning', 'scan', 'camera', 'books', 'book', 'listen-shelf', 'synagogues', 'synagogue'],
+  speak: ['speakhub', 'speak', 'talk', 'listen', 'songs', 'compare', 'tradition-quiz', 'read-my-way', 'traditions', 'traditions-guide', 'traditions-hear', 'record-compare'],
   progress: ['progress', 'awards', 'placement', 'calendar', 'day', 'festivals', 'festival', 'reminders', 'share', 'classsummary', 'syllabus', 'time-budget', 'daily'],
   more: ['search', 'settings', 'accessibility', 'help', 'workbook', 'light', 'install', 'offline', 'about', 'how', 'credits', 'privacy', 'terms', 'welcome'],
 };
@@ -50,6 +50,7 @@ const MENU_HIDDEN = new Set(['welcome']);
  * banner and are still found by search (labelled Preview). Only preview routes may be listed here (tests/v0.test.js).
  */
 export const PREVIEW_HIDDEN = new Set(['scheduler', 'known-words', 'time-budget', 'classsummary', 'niqquddial', 'dottile', 'nikkud-fade', 'record-compare',
+  'israelunits',
   // The individual games stay out of the More sheet (the Games hub is the one listed door); search still finds each by name.
   'tugowar', 'vowelcatcher', 'pinball', 'prefixblast', 'memorypalace', 'shabbatrush', 'typewriter', 'petclinic', 'trainswitch', 'weatherstudio',
   'rentalagent', 'echochamber', 'museumcurator', 'karaokebeat', 'archbuilder', 'lasermaze', 'roottree', 'letterbridge', 'shadowcraft', 'ciphergrid',

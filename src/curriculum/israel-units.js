@@ -7,6 +7,30 @@ import { wordAudioId } from "./progress.js";
 
 export const STORE_KEY = "israelUnits.v1"; // { reviews: { [unitId]: { step, last } } }
 
+/** Old #/israel-units ids → the live Practical unit that now carries that situation. */
+export const PRACTICAL_BY_ISRAEL = {
+  u01: "pu-greetings",
+  u02: "pu-fillers",
+  u03: "pu-numbers",
+  u04: "pu-cafe",
+  u05: "pu-shop",
+  u06: "pu-directions",
+  u07: "pu-time",
+  u08: "pu-verbs-now",
+  u09: "pu-family",
+  u10: "pu-health",
+  u11: "pu-home",
+  u12: "pu-weather",
+  u13: "pu-decide",
+};
+
+/** Hash path for the live Practical course (list, or a mapped unit). */
+export const practicalHref = (israelUnitId) => {
+  const dest = PRACTICAL_BY_ISRAEL[israelUnitId];
+  return dest ? `#/practical/${dest}` : "#/practical";
+};
+
+
 export const lessonsOf = (unit) => [...unit.core, ...unit.more];
 export const unitForLesson = (data, id) => data.units.find((u) => lessonsOf(u).includes(id)) || null;
 

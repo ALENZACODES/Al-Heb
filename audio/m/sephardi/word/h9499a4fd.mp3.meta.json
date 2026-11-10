@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
+  "engine": "google-cloud-tts",
+  "voiceId": "he-IL-Wavenet-B",
+  "tradition": "sephardi",
+  "inputText": "chamutz",
+  "inputTextKind": "respelling",
+  "hebrew": "חָמוּץ",
+  "spokenText": "chamutz",
+  "renderedAt": "2026-11-10T16:41:33.223Z",
+  "redistributionCleared": false,
+  "normalized": true,
+  "provider": "google",
+  "madeFrom": "respelling",
+  "voiceName": "he-IL-Wavenet-B",
+  "languageCode": "he-IL",
+  "israeliRef": "audio/m/israeli/word/h9499a4fd.mp3",
+  "tempo": {
+    "applied": false,
+    "factor": 1,
+    "cap": 1.26,
+    "before": 0.7920181405895692,
+    "after": 0.7920181405895692,
+    "israeliSec": 1.12,
+    "israeliRef": "audio/m/israeli/word/h9499a4fd.mp3"
+  },
+  "speakingRate": 1.33,
+  "batch": "ari-missing-ash-seph-2026-11-10",
+  "metadataStripped": true,
+  "licence": "customer-owned"
+}

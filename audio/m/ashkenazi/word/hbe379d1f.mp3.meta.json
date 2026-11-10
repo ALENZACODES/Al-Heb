@@ -1,0 +1,32 @@
+{
+  "status": "synthetic-unreviewed",
+  "source": "tts-respelled-israeli-voice",
+  "engine": "google-cloud-tts",
+  "voiceId": "he-IL-Wavenet-B",
+  "tradition": "ashkenazi",
+  "inputText": "hisetoreyoh",
+  "inputTextKind": "respelling",
+  "hebrew": "הִיסְטוֹרְיָה",
+  "spokenText": "hisetoreyoh",
+  "renderedAt": "2026-11-10T16:35:33.510Z",
+  "redistributionCleared": false,
+  "normalized": true,
+  "provider": "google",
+  "madeFrom": "respelling",
+  "voiceName": "he-IL-Wavenet-B",
+  "languageCode": "he-IL",
+  "israeliRef": "audio/m/israeli/word/hbe379d1f.mp3",
+  "tempo": {
+    "applied": false,
+    "factor": 1,
+    "cap": 1.26,
+    "before": 1.0560090702947846,
+    "after": 1.0560090702947846,
+    "israeliSec": 1.1440136054421768,
+    "israeliRef": "audio/m/israeli/word/hbe379d1f.mp3"
+  },
+  "speakingRate": 1.15,
+  "batch": "ari-missing-ash-seph-2026-11-10",
+  "metadataStripped": true,
+  "licence": "customer-owned"
+}

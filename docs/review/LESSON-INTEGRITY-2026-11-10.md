@@ -302,3 +302,10 @@ not have. Any page written for them would never have shown. They now use the liv
 are original, unreviewed sentences with no clips yet, and the pages mark them for native review.
 
 **93 / 100** (estimate). Levels 2 to 4 still have 97 pages to write.
+
+## Round 10 (Launch Check)
+
+- **Up to date with `main`.** `main` (the Torah audio fix rounds) is merged into this branch, with no conflicts.
+- **Two more units.** `pu-time` and `pu-weather` are written, for 101 live Practical pages.
+- **Score: 93 / 100** (estimate). See the launch-check pass in
+  [`BRANCH-REVIEW-2026-11-10-R5.md`](BRANCH-REVIEW-2026-11-10-R5.md).
